@@ -2,41 +2,38 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Ai Incident Response Playbooks 2025</title>
-        <meta
-          name='description'
-          content='Learn about ai incident response playbooks 2025 and how it can benefit your enterprise.'
+        <title>AiIncidentResponse Playbooks2025</title>
+        <meta name='description'
+          content='Learnaboutai incidentresponseplaybooks 2025andhow itcanbenefit yourenterprise.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-incident-response-playbooks-2025'
+        <linkrel='canonical'
+          href='https: //ziontechgroup.com/blog/ai-incident-response-playbooks-2025'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Ai Incident Response Playbooks 2025
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          AiIncidentResponse Playbooks2025
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Learn about ai incident response playbooks 2025 and how it can benefit
-          your enterprise.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Learnaboutai incidentresponseplaybooks 2025andhow itcanbenefit
+          yourenterprise.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            This comprehensive guide covers ai incident response playbooks 2025
-            and provides practical insights for enterprise implementation.
+            Thiscomprehensiveguide coversaiincident responseplaybooks2025
+            andprovidespractical insightsforenterprise implementation.
           </p>
         </div>
-        <div className='mt-8'>
-          <Link to='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName='mt-8'>
+          <Linkto='/blog' className='text-cyan-300hover:underline'>
+            ← BacktoBlog
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

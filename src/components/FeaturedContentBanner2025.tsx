@@ -1,164 +1,154 @@
 import React from 'react';
 
-export default function FeaturedContentBanner2025() {
-  const featuredContent = [
+exportdefaultfunction FeaturedContentBanner2025() {
+  constfeaturedContent = [
     {
-      type: 'blog',
-      title: 'AI Autonomous Enterprise Operations: Complete 2025 Guide',
-      excerpt: 'Master autonomous AI operations with proven frameworks achieving 95% automation rates, $2M+ annual savings, and 99.99% uptime through comprehensive implementation strategies.',
-      href: '/blog/ai-autonomous-enterprise-operations-2025',
-      image: '🤖',
-      category: 'Latest AI Innovation',
-      readTime: '45 min read',
-      publishDate: 'Jan 30, 2025'
-    },
-    {
-      type: 'blog',
-      title: 'AI Enterprise Transformation: $50M Annual Savings Blueprint',
-      excerpt: 'Discover how Fortune 500 companies achieve $50M annual savings, 95% process automation, and 300% ROI through comprehensive AI transformation strategies.',
-      href: '/blog/ai-enterprise-transformation-2025',
-      image: '💰',
-      category: 'Success Story',
-      readTime: '50 min read',
-      publishDate: 'Jan 28, 2025'
-    },
-    {
-      type: 'blog',
-      title: 'AI Innovation Labs: Product Development Revolution',
-      excerpt: 'Revolutionize product development with AI Innovation Labs achieving 10x faster time-to-market, 85% cost reduction, and 300% innovation acceleration.',
-      href: '/blog/ai-innovation-labs-product-development-2025',
-      image: '🚀',
-      category: 'Innovation Lab',
-      readTime: '40 min read',
-      publishDate: 'Jan 25, 2025'
+      type: 'blog'
+      title: 'AIAutonomousEnterprise Operations: Complete2025Guide'
+      excerpt: 'MasterautonomousAI operationswithproven frameworksachieving95% automationrates$2M+ annualsavingsand99.99% uptimethroughcomprehensive implementationstrategies.'
+      href: '/blog/ai-autonomous-enterprise-operations-2025'
+      image: '🤖'
+      category: 'LatestAIInnovation'
+      readTime: '45minread'
+      publishDate: 'Jan302025'
     }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-slate-900/80 to-blue-900/80 backdrop-blur-lg">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
-              🚀 Latest AI Breakthroughs & Innovations
+    {
+      type: 'blog'
+      title: 'AIEnterpriseTransformation: $50MAnnualSavings Blueprint'
+      excerpt: 'DiscoverhowFortune 500companiesachieve $50Mannualsavings95% processautomationand300% ROIthroughcomprehensive AItransformationstrategies.'
+      href: '/blog/ai-enterprise-transformation-2025'
+      image: '💰'
+      category: 'SuccessStory'
+      readTime: '50minread'
+      publishDate: 'Jan282025'
+    }
+    {
+      type: 'blog'
+      title: 'AIInnovationLabs: ProductDevelopmentRevolution'
+      excerpt: 'Revolutionizeproductdevelopment withAIInnovation Labsachieving10x fastertime-to-market85% costreductionand300% innovationacceleration.'
+      href: '/blog/ai-innovation-labs-product-development-2025'
+      image: '🚀'
+      category: 'InnovationLab'
+      readTime: '40minread'
+      publishDate: 'Jan252025'
+    }
+  ]; return (
+    <sectionclassName = "py-20bg-gradient-to-brfrom-slate-900/80to-blue-900/80backdrop-blur-lg">
+      <divclassName="containermx-autopx-6">
+        <divclassName="text-centermb-16">
+          <divclassName="inline-flexitems-centergap-2px-6py-3rounded-fullbg-gradient-to-rfrom-blue-500/20to-purple-500/20borderborder-blue-500/30mb-6">
+            <spanclassName="text-blue-400font-boldtext-smtracking-wideruppercase">
+              🚀 LatestAIBreakthroughs & Innovations
             </span>
           </div>
-          <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Featured Content
+          <h2className="text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-blue-400via-cyan-400to-purple-400bg-clip-texttext-transparent">
+            FeaturedContent
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover breakthrough AI innovations, $50M+ savings strategies, and revolutionary product development frameworks that are transforming Fortune 500 companies worldwide.
+          <pclassName="text-xltext-gray-300max-w-3xlmx-auto">
+            DiscoverbreakthroughAI innovations$50M+ savingsstrategiesandrevolutionaryproduct developmentframeworksthat aretransformingFortune 500companiesworldwide.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) => (
-            <a
-              key={index}
-              href={content.href}
-              className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+        <divclassName = "gridmd: grid-cols-3gap-8mb-12">
+          { featuredContent.map((contentindex) = > (
+            <akey = { index  }href={ content.href } className="groupbg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-blue-500/50transition-allduration-300hover:transformhover:scale-105hover:shadow-2xlhover:shadow-blue-500/20"
             >
-              <div className="flex items-start gap-4 mb-6">
-                <div className="text-4xl flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+              <divclassName="flexitems-startgap-4mb-6">
+                <divclassName="text-4xlflex-shrink-0group-hover:scale-110transition-transformduration-300">
                   {content.image}
                 </div>
-                <div className="flex-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-3">
-                    <span className="text-blue-400 font-semibold text-xs tracking-wider uppercase">
+                <divclassName = "flex-1">
+                  <divclassName="inline-flexitems-centergap-2px-3py-1rounded-fullbg-gradient-to-rfrom-blue-500/20to-purple-500/20borderborder-blue-500/30mb-3">
+                    <spanclassName="text-blue-400font-semiboldtext-xstracking-wideruppercase">
                       {content.category}
                     </span>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                  <h3className="text-xlfont-boldtext-whitemb-3group-hover: text-blue-400transition-colorsduration-300">
                     {content.title}
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                  <pclassName = "text-gray-400text-smleading-relaxedmb-4">
                     {content.excerpt}
                   </p>
-                  <div className="flex items-center gap-4 text-xs text-gray-500">
+                  <divclassName="flexitems-centergap-4text-xstext-gray-500">
                     <span>📅 {content.publishDate}</span>
                     <span>⏱️ {content.readTime}</span>
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-between">
-                <span className="text-blue-400 font-semibold text-sm group-hover:text-blue-300 transition-colors duration-300">
-                  Read More →
+              <divclassName="flexitems-centerjustify-between">
+                <spanclassName="text-blue-400font-semiboldtext-smgroup-hover: text-blue-300transition-colorsduration-300">
+                  ReadMore →
                 </span>
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-white text-sm">→</span>
+                <divclassName="w-8 h-8bg-gradient-to-rfrom-blue-500to-purple-600rounded-fullflexitems-centerjustify-centergroup-hover:scale-110transition-transformduration-300">
+                  <spanclassName="text-whitetext-sm">→</span>
                 </div>
               </div>
             </a>
           ))}
         </div>
 
-        {/* Additional Promotional Content */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-green-400">🎯 Free AI Assessment</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Discover your enterprise's AI automation potential with our comprehensive assessment. 
-              Get personalized recommendations and ROI projections in just 30 minutes.
+        {/* AdditionalPromotionalContent */}
+        <divclassName = "gridmd: grid-cols-2gap-8">
+          <divclassName="bg-gradient-to-rfrom-green-500/10to-blue-500/10borderborder-green-500/30rounded-2xlp-8">
+            <h3className="text-2xlfont-boldmb-4text-green-400">🎯 FreeAIAssessment</h3>
+            <pclassName="text-gray-300mb-6leading-relaxed">
+              Discoveryourenterprise'sAIautomation potentialwithour comprehensiveassessment. 
+              Getpersonalizedrecommendations andROIprojections injust30 minutes.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+            <divclassName="flexflex-colsm:flex-rowgap-4">
+              <ahref="/contact" 
+                className="bg-gradient-to-rfrom-green-500to-blue-600hover:from-green-400hover:to-blue-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300text-center"
               >
-                Get Free Assessment
+                GetFreeAssessment
               </a>
-              <a 
-                href="/case-studies" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+              <ahref="/case-studies" 
+                className="border-2border-green-500text-green-400hover:bg-green-500hover:text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300text-center"
               >
-                View Success Stories
+                ViewSuccessStories
               </a>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 AI Innovation Lab</h3>
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              Join our exclusive AI Innovation Lab and get early access to breakthrough technologies, 
-              pilot programs, and direct access to our AI experts.
+          <divclassName="bg-gradient-to-rfrom-purple-500/10to-pink-500/10borderborder-purple-500/30rounded-2xlp-8">
+            <h3className="text-2xlfont-boldmb-4text-purple-400">🚀 AIInnovationLab</h3>
+            <pclassName="text-gray-300mb-6leading-relaxed">
+              Joinourexclusive AIInnovationLab andgetearly accesstobreakthrough technologies
+              pilotprogramsanddirectaccess toourAI experts.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+            <divclassName = "flexflex-colsm: flex-rowgap-4">
+              <ahref="/contact" 
+                className="bg-gradient-to-rfrom-purple-500to-pink-600hover:from-purple-400hover:to-pink-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300text-center"
               >
-                Join Innovation Lab
+                JoinInnovationLab
               </a>
-              <a 
-                href="/services" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+              <ahref="/services" 
+                className="border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300text-center"
               >
-                Explore Services
+                ExploreServices
               </a>
             </div>
           </div>
         </div>
 
-        {/* Newsletter Signup */}
-        <div className="mt-16 bg-gradient-to-r from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-8 text-center">
-          <h3 className="text-2xl font-bold mb-4 text-white">Stay Ahead of the AI Revolution</h3>
-          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Get exclusive insights, latest AI trends, and breakthrough technologies delivered to your inbox. 
-            Join 10,000+ enterprise leaders already subscribed.
+        {/* NewsletterSignup */}
+        <divclassName = "mt-16bg-gradient-to-rfrom-slate-800/50to-slate-900/50borderborder-white/10rounded-2xlp-8text-center">
+          <h3className="text-2xlfont-boldmb-4text-white">StayAheadof theAIRevolution</h3>
+          <pclassName="text-gray-300mb-6max-w-2xlmx-auto">
+            GetexclusiveinsightslatestAItrendsandbreakthroughtechnologies deliveredtoyour inbox. 
+            Join10000+ enterpriseleadersalready subscribed.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
+          <divclassName = "flexflex-colsm: flex-rowgap-4max-w-mdmx-auto">
+            <inputtype="email" 
+              placeholder="Enteryouremail address"
+              className="flex-1px-4py-3bg-white/10borderborder-white/20rounded-lgtext-whiteplaceholder-gray-400focus:border-blue-500focus:outline-none"
 />
 
-<button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+<buttonclassName="bg-gradient-to-rfrom-blue-500to-purple-600hover:from-blue-400hover:to-purple-500text-whitefont-boldpy-3px-6rounded-lgtransition-allduration-300">
               Subscribe
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-4">
-            No spam. Unsubscribe anytime. Privacy policy applies.
+          <pclassName="text-xstext-gray-500mt-4">
+            Nospam. Unsubscribeanytime. Privacypolicyapplies.
           </p>
         </div>
       </div>

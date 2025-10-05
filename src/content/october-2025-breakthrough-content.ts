@@ -1,200 +1,188 @@
-// October 2025 Breakthrough Content
-// Revolutionary AI and Technology Insights
-
-export const octoberBreakthroughContent = [
+// October2025Breakthrough Content
+// RevolutionaryAIand TechnologyInsightsexport cons; toctoberBreakthroughContent = [
   {
-    id: 'neuro-symbolic-ai-production-2025',
-    title: 'Neuro-Symbolic AI in Production: The Next Evolution',
-    slug: 'neuro-symbolic-ai-production-2025',
-    description:
-      'Combining neural networks with symbolic reasoning for 10x better explainability, 5x improved accuracy on complex tasks, and breakthrough enterprise applications.',
-    category: 'AI Architecture',
-    date: '2025-10-01',
-    readTime: '15 min',
-    icon: '🧠',
-    gradient: 'from-purple-600 to-pink-600',
-    featured: true,
+    id: 'neuro-symbolic-ai-production-2025'
+    title: 'Neuro-SymbolicAIin Production: TheNextEvolution'
+    slug: 'neuro-symbolic-ai-production-2025'
+    description: 'Combiningneuralnetworks withsymbolicreasoning for10xbetter explainability5ximprovedaccuracy oncomplextasksandbreakthroughenterprise applications.'
+    category: 'AIArchitecture'
+    date: '2025-10-01'
+    readTime: '15min'
+    icon: '🧠'
+    gradient: 'from-purple-600to-pink-600'
+    featured: true
     tags: [
-      'Neuro-Symbolic AI',
-      'Hybrid Systems',
-      'Explainability',
-      'Enterprise AI',
-    ],
+      'Neuro-SymbolicAI'
+      'HybridSystems'
+      'Explainability'
+      'EnterpriseAI'
+    ]
     highlights: [
-      '10x better model explainability',
-      '5x improved accuracy on reasoning tasks',
-      '60% reduction in training data requirements',
-      'Production-ready frameworks and tooling',
-    ],
+      '10xbettermodel explainability'
+      '5ximprovedaccuracy onreasoningtasks'
+      '60% reductionintraining datarequirements'
+      'Production-readyframeworksand tooling'
+    ]
     metrics: {
-      accuracy: '+500%',
-      explainability: '10x',
-      dataEfficiency: '60% less',
-    },
-  },
+      accuracy: '+500%'
+      explainability: '10x'
+      dataEfficiency: '60% less'
+    }
+  }
   {
-    id: 'ai-powered-devops-orchestration-2025',
-    title: 'AI-Powered DevOps: Autonomous CI/CD Orchestration',
-    slug: 'ai-powered-devops-orchestration-2025',
-    description:
-      'Revolutionize your development pipeline with AI agents that predict failures, auto-optimize deployments, and achieve 99.99% uptime with zero human intervention.',
-    category: 'DevOps AI',
-    date: '2025-10-01',
-    readTime: '14 min',
-    icon: '🚀',
-    gradient: 'from-blue-600 to-cyan-600',
-    featured: true,
-    tags: ['DevOps', 'CI/CD', 'Autonomous Systems', 'MLOps'],
+    id: 'ai-powered-devops-orchestration-2025'
+    title: 'AI-PoweredDevOps: AutonomousCI/CDOrchestration'
+    slug: 'ai-powered-devops-orchestration-2025'
+    description: 'Revolutionizeyourdevelopment pipelinewithAI agentsthatpredict failuresauto-optimizedeploymentsandachieve99.99% uptimewithzero humanintervention.'
+    category: 'DevOpsAI'
+    date: '2025-10-01'
+    readTime: '14min'
+    icon: '🚀'
+    gradient: 'from-blue-600to-cyan-600'
+    featured: true
+    tags: ['DevOps''CI/CD''AutonomousSystems''MLOps']
     highlights: [
-      '85% reduction in deployment failures',
-      '3x faster rollback and recovery',
-      'Predictive failure detection with 95% accuracy',
-      'Self-optimizing pipeline configurations',
-    ],
+      '85% reductionindeployment failures'
+      '3xfasterrollback andrecovery'
+      'Predictivefailuredetection with95% accuracy'
+      'Self-optimizingpipelineconfigurations'
+    ]
     metrics: {
-      failureReduction: '85%',
-      recoverySpeed: '3x faster',
-      uptime: '99.99%',
-    },
-  },
+      failureReduction: '85%'
+      recoverySpeed: '3xfaster'
+      uptime: '99.99%'
+    }
+  }
   {
-    id: 'federated-learning-privacy-2026',
-    title: 'Federated Learning at Scale: Privacy-First AI for 2026',
-    slug: 'federated-learning-privacy-2026',
-    description:
-      'Build powerful AI models without compromising data privacy. Learn how Fortune 500 companies are using federated learning for compliant, distributed machine learning.',
-    category: 'Privacy AI',
-    date: '2025-10-01',
-    readTime: '16 min',
-    icon: '🔐',
-    gradient: 'from-green-600 to-teal-600',
-    featured: true,
-    tags: ['Federated Learning', 'Privacy', 'GDPR', 'Distributed ML'],
+    id: 'federated-learning-privacy-2026'
+    title: 'FederatedLearningat Scale: Privacy-FirstAIfor 2026'
+    slug: 'federated-learning-privacy-2026'
+    description: 'BuildpowerfulAI modelswithoutcompromising dataprivacy. LearnhowFortune 500companiesare usingfederatedlearning forcompliantdistributedmachinelearning.'
+    category: 'PrivacyAI'
+    date: '2025-10-01'
+    readTime: '16min'
+    icon: '🔐'
+    gradient: 'from-green-600to-teal-600'
+    featured: true
+    tags: ['FederatedLearning''Privacy''GDPR''DistributedML']
     highlights: [
-      '100% data privacy compliance',
-      'Train on 1000+ edge devices simultaneously',
-      '90% reduction in data transfer costs',
-      'GDPR, HIPAA, and SOC 2 compliant',
-    ],
+      '100% dataprivacycompliance'
+      'Trainon1000+ edgedevicessimultaneously'
+      '90% reductionindata transfercosts'
+      'GDPRHIPAAandSOC2 compliant'
+    ]
     metrics: {
-      privacy: '100%',
-      costSavings: '90%',
-      scalability: '1000+ devices',
-    },
-  },
+      privacy: '100%'
+      costSavings: '90%'
+      scalability: '1000+ devices'
+    }
+  }
   {
-    id: 'real-time-llm-streaming-2025',
-    title: 'Real-Time LLM Streaming: Sub-100ms Response Times',
-    slug: 'real-time-llm-streaming-2025',
-    description:
-      'Achieve blazing-fast LLM responses with advanced streaming techniques, edge caching, and intelligent prefetching. Transform user experience with instant AI interactions.',
-    category: 'LLM Performance',
-    date: '2025-10-01',
-    readTime: '13 min',
-    icon: '⚡',
-    gradient: 'from-yellow-600 to-orange-600',
-    featured: true,
-    tags: ['LLM', 'Performance', 'Streaming', 'Edge Computing'],
+    id: 'real-time-llm-streaming-2025'
+    title: 'Real-TimeLLMStreaming: Sub-100msResponseTimes'
+    slug: 'real-time-llm-streaming-2025'
+    description: 'Achieveblazing-fastLLMresponses withadvancedstreaming techniquesedgecachingandintelligentprefetching. Transformuserexperience withinstantAI interactions.'
+    category: 'LLMPerformance'
+    date: '2025-10-01'
+    readTime: '13min'
+    icon: '⚡'
+    gradient: 'from-yellow-600to-orange-600'
+    featured: true
+    tags: ['LLM''Performance''Streaming''EdgeComputing']
     highlights: [
-      'Sub-100ms time to first token',
-      '80% reduction in latency',
-      'Edge-optimized inference',
-      'Real-world benchmarks and case studies',
-    ],
+      'Sub-100mstimeto firsttoken'
+      '80% reductioninlatency'
+      'Edge-optimizedinference'
+      'Real-worldbenchmarksand casestudies'
+    ]
     metrics: {
-      latency: '<100ms',
-      improvement: '80%',
-      throughput: '5x',
-    },
-  },
+      latency: '<100ms'
+      improvement: '80%'
+      throughput: '5x'
+    }
+  }
   {
-    id: 'ai-ethics-framework-2026',
-    title: 'Practical AI Ethics Framework: From Theory to Production',
-    slug: 'ai-ethics-framework-2026',
-    description:
-      'Implement comprehensive AI ethics in your organization with our battle-tested framework. Covers bias detection, fairness metrics, and responsible AI governance.',
-    category: 'AI Governance',
-    date: '2025-10-01',
-    readTime: '17 min',
-    icon: '⚖️',
-    gradient: 'from-indigo-600 to-purple-600',
-    featured: true,
-    tags: ['AI Ethics', 'Governance', 'Fairness', 'Compliance'],
+    id: 'ai-ethics-framework-2026'
+    title: 'PracticalAIEthics Framework: FromTheoryto Production'
+    slug: 'ai-ethics-framework-2026'
+    description: 'ImplementcomprehensiveAI ethicsinyour organizationwithour battle-testedframework. CoversbiasdetectionfairnessmetricsandresponsibleAI governance.'
+    category: 'AIGovernance'
+    date: '2025-10-01'
+    readTime: '17min'
+    icon: '⚖️'
+    gradient: 'from-indigo-600to-purple-600'
+    featured: true
+    tags: ['AIEthics''Governance''Fairness''Compliance']
     highlights: [
-      'Comprehensive bias detection toolkit',
-      'Automated fairness monitoring',
-      'Production-ready ethical guidelines',
-      'Real-world implementation examples',
-    ],
+      'Comprehensivebiasdetection toolkit'
+      'Automatedfairnessmonitoring'
+      'Production-readyethicalguidelines'
+      'Real-worldimplementationexamples'
+    ]
     metrics: {
-      biasReduction: '75%',
-      compliance: '100%',
-      auditability: 'Full',
-    },
-  },
+      biasReduction: '75%'
+      compliance: '100%'
+      auditability: 'Full'
+    }
+  }
   {
-    id: 'multi-cloud-ai-orchestration-2025',
-    title:
-      'Multi-Cloud AI Orchestration: Ultimate Flexibility & Cost Optimization',
-    slug: 'multi-cloud-ai-orchestration-2025',
-    description:
-      'Leverage the best of AWS, Azure, and GCP with intelligent workload distribution. Achieve 50% cost savings and eliminate vendor lock-in.',
-    category: 'Cloud AI',
-    date: '2025-10-01',
-    readTime: '15 min',
-    icon: '☁️',
-    gradient: 'from-sky-600 to-blue-600',
-    featured: false,
-    tags: ['Multi-Cloud', 'Cost Optimization', 'Orchestration', 'Kubernetes'],
+    id: 'multi-cloud-ai-orchestration-2025'
+    title: 'Multi-CloudAIOrchestration: UltimateFlexibility & CostOptimization'
+    slug: 'multi-cloud-ai-orchestration-2025'
+    description: 'Leveragethebest ofAWSAzureandGCPwith intelligentworkloaddistribution. Achieve50% costsavingsand eliminatevendorlock-in.'
+    category: 'CloudAI'
+    date: '2025-10-01'
+    readTime: '15min'
+    icon: '☁️'
+    gradient: 'from-sky-600to-blue-600'
+    featured: false
+    tags: ['Multi-Cloud''CostOptimization''Orchestration''Kubernetes']
     highlights: [
-      '50% reduction in cloud costs',
-      'Zero vendor lock-in',
-      'Automated workload optimization',
-      'Unified management across clouds',
-    ],
+      '50% reductionincloud costs'
+      'Zerovendorlock-in'
+      'Automatedworkloadoptimization'
+      'Unifiedmanagementacross clouds'
+    ]
     metrics: {
-      costSavings: '50%',
-      flexibility: '3 clouds',
-      efficiency: '+40%',
-    },
-  },
+      costSavings: '50%'
+      flexibility: '3clouds'
+      efficiency: '+40%'
+    }
+  }
   {
-    id: 'conversational-ai-breakthrough-2025',
-    title: 'Conversational AI 2.0: Context-Aware Multi-Turn Dialogue',
-    slug: 'conversational-ai-breakthrough-2025',
-    description:
-      'Build intelligent chatbots that remember context across sessions, understand nuance, and provide human-like interactions with 95% user satisfaction.',
-    category: 'Conversational AI',
-    date: '2025-10-01',
-    readTime: '14 min',
-    icon: '💬',
-    gradient: 'from-pink-600 to-rose-600',
-    featured: false,
-    tags: ['Conversational AI', 'NLP', 'Chatbots', 'Customer Experience'],
+    id: 'conversational-ai-breakthrough-2025'
+    title: 'ConversationalAI2.0: Context-AwareMulti-TurnDialogue'
+    slug: 'conversational-ai-breakthrough-2025'
+    description: 'Buildintelligentchatbots thatremembercontext acrosssessionsunderstandnuanceandprovidehuman-likeinteractionswith 95% usersatisfaction.'
+    category: 'ConversationalAI'
+    date: '2025-10-01'
+    readTime: '14min'
+    icon: '💬'
+    gradient: 'from-pink-600to-rose-600'
+    featured: false
+    tags: ['ConversationalAI''NLP''Chatbots''CustomerExperience']
     highlights: [
-      '95% user satisfaction scores',
-      'Cross-session context retention',
-      'Multi-language support (50+ languages)',
-      'Enterprise-grade security',
-    ],
+      '95% usersatisfactionscores'
+      'Cross-sessioncontextretention'
+      'Multi-languagesupport (50+ languages)'
+      'Enterprise-gradesecurity'
+    ]
     metrics: {
-      satisfaction: '95%',
-      languages: '50+',
-      accuracy: '92%',
-    },
-  },
-];
+      satisfaction: '95%'
+      languages: '50+'
+      accuracy: '92%'
+    }
+  }
+]; exportconstgetFeaturedOctoberContent = () => { 
+  returnoctoberBreakthroughContent.filter(content= > content.featured);
+ };
 
-export const getFeaturedOctoberContent = () => {
-  return octoberBreakthroughContent.filter(content => content.featured);
-};
-
-export const getOctoberContentByCategory = (category: string) => {
-  return octoberBreakthroughContent.filter(
-    content => content.category === category,
+exportconstgetOctoberContentByCategory = (category: string) => { 
+  returnoctoberBreakthroughContent.filter(
+    content= > content.category === category
   );
-};
+ };
 
-export const getAllOctoberContent = () => {
-  return octoberBreakthroughContent;
+exportconstgetAllOctoberContent = () => {
+  returnoctoberBreakthroughContent;
 };

@@ -1,65 +1,60 @@
 import React from 'react';
 
-const AIPlatformArchitecture: React.FC = () => {
+constAIPlatformArchitecture: React.FC = () => { 
   return (
-    <div className='min-h-screen bg-slate-950'>
-      <div className='container mx-auto px-6 py-20'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
-            AI Platform Architecture
+    <divclassName = 'min-h-screenbg-slate-950'>
+      <divclassName='containermx-autopx-6py-20'>
+        <divclassName='text-centermb-16'>
+          <h1className='text-4xlmd:text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-blue-400via-purple-400to-cyan-400bg-clip-texttext-transparent'>
+            AIPlatformArchitecture
           </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Build scalable, enterprise-grade AI platforms with our comprehensive
-            architecture solutions and best practices.
+          <pclassName='text-xltext-gray-300max-w-3xlmx-auto'>
+            Buildscalableenterprise-gradeAIplatforms withourcomprehensive
+            architecturesolutionsand bestpractices.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🏗️</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Scalable Infrastructure
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8mb-16'>
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-blue-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🏗️</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              ScalableInfrastructure
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Cloud-native architecture designed for massive scale and high
-              availability.
+            <pclassName='text-gray-300mb-6'>
+              Cloud-nativearchitecturedesigned formassivescale andhighavailability.
             </p>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🔧</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Microservices Design
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-purple-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🔧</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              MicroservicesDesign
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Modular, containerized services that enable rapid development and
-              deployment.
+            <pclassName='text-gray-300mb-6'>
+              Modularcontainerizedservicesthat enablerapiddevelopment anddeployment.
             </p>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🔒</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Enterprise Security
+          <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-green-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🔒</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              EnterpriseSecurity
             </h3>
-            <p className='text-gray-300 mb-6'>
-              End-to-end security with encryption, access controls, and
-              compliance frameworks.
+            <pclassName='text-gray-300mb-6'>
+              End-to-endsecuritywith encryptionaccesscontrolsandcomplianceframeworks.
             </p>
           </div>
         </div>
 
-        <div className='text-center'>
-          <a
-            href='/<contact'
-            className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1'
+        <divclassName = 'text-center'>
+          <ahref='/<contact'
+            className='bg-gradient-to-rfrom-blue-500to-purple-600hover: from-blue-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50transformhover:-translate-y-1'
           >
-            Design Your AI Platform
+            DesignYourAI Platform
           </a>
         </div>
       </div>
-    </div>
-  );
-};
+    </div > );
+ };
 
-export default AIPlatformArchitecture;
+exportdefaultAIPlatformArchitecture;

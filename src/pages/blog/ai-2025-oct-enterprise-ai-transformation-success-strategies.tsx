@@ -1,99 +1,91 @@
 import { Link } from 'react-router-dom';
 import {
-  ArrowLeft,
-  TrendingUp,
-  Users,
-  Target,
-  Rocket,
+  ArrowLeft
+  TrendingUp
+  Users
+  Target
+  Rocket
   CheckCircle,
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+importHeaderfrom '../../components/Header';
 
-const EnterpriseAITransformationSuccessStrategies = () => {
+constEnterpriseAITransformationSuccessStrategies = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Enterprise AI Transformation Success Strategies: 2025 Playbook | Zion
-          Tech Group
+          EnterpriseAITransformation SuccessStrategies: 2025Playbook | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Master enterprise AI transformation with proven strategies achieving 10x ROI and 40% cost reductions. Comprehensive playbook from Fortune 500 companies in 2025.'
+        <metaname = 'description'
+          content='MasterenterpriseAI transformationwithproven strategiesachieving10x ROIand40% costreductions. Comprehensiveplaybookfrom Fortune500companies in2025.'
         />
-        <meta
-          name='keywords'
-          content='AI transformation, enterprise AI, digital transformation, AI strategy, business innovation, AI implementation'
+        <meta name='keywords'
+          content='AItransformationenterpriseAIdigitaltransformationAIstrategybusinessinnovationAIimplementation'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-dark'>
         <Header />
 
-        <article className='container mx-auto px-6 py-20'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <articleclassName='containermx-autopx-6py-20'>
+          <Linkto='/blog'
+            className='inline-flexitems-centertext-zion-cyanhover: text-zion-blue-lightmb-8transition-colors'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Blog
+            <ArrowLeftclassName='w-4 h-4mr-2' />
+            BacktoBlog
           </Link>
 
-          <div className='max-w-4xl mx-auto'>
-            <div className='flex items-center gap-4 mb-6 flex-wrap'>
-              <span className='px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30'>
+          <divclassName='max-w-4xlmx-auto'>
+            <divclassName='flexitems-centergap-4mb-6flex-wrap'>
+              <spanclassName='px-4py-2bg-purple-500/20text-purple-300rounded-fulltext-smfont-semiboldborderborder-purple-500/30'>
                 ⭐ FEATURED
               </span>
-              <span className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30'>
-                AI Strategy
+              <spanclassName='px-4py-2bg-blue-500/20text-blue-300rounded-fulltext-smfont-semiboldborderborder-blue-500/30'>
+                AIStrategy
               </span>
-              <span className='text-zion-slate-light'>
-                October 1, 2025 • 25 min read
+              <spanclassName='text-zion-slate-light'>
+                October 12025 • 25minread
               </span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Enterprise AI Transformation Success Strategies
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2 text-4xl'>
-                A Comprehensive 2025 Playbook
+            <h1className = 'text-5xlmd: text-6xlfont-boldtext-whitemb-6leading-tight'>
+              EnterpriseAITransformation SuccessStrategies
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-purple-400to-cyan-400mt-2text-4xl'>
+                AComprehensive2025 Playbook
               </span>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed mb-8'>
-              Master enterprise AI transformation with proven strategies,
-              frameworks, and real-world success patterns from Fortune 500
-              companies achieving 10x ROI and transforming operations in 2025.
+            <pclassName='text-xltext-zion-slate-lightleading-relaxedmb-8'>
+              MasterenterpriseAI transformationwithproven strategies
+              frameworksandreal-worldsuccesspatterns fromFortune500
+              companiesachieving10x ROIandtransforming operationsin2025.
             </p>
 
-            <div className='flex items-center gap-4 mb-12'>
-              <div className='w-12 h-12 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center'>
-                <Users className='w-6 h-6 text-white' />
+            <divclassName = 'flexitems-centergap-4mb-12'>
+              <divclassName='w-12h-12rounded-fullbg-gradient-to-rfrom-purple-500to-cyan-500flexitems-centerjustify-center'>
+                <UsersclassName='w-6 h-6text-white' />
               </div>
               <div>
-                <div className='text-white font-semibold'>Dr. Sarah Chen</div>
-                <div className='text-zion-slate-light text-sm'>
-                  Chief AI Strategy Officer, Zion Tech Group
+                <divclassName='text-whitefont-semibold'>Dr. SarahChen</div>
+                <divclassName='text-zion-slate-lighttext-sm'>
+                  ChiefAIStrategy OfficerZionTechGroup
                 </div>
               </div>
-            </div>
-
-            {/* Key Metrics */}
-            <div className='grid md:grid-cols-4 gap-4 mb-12'>
+            </div > {/* KeyMetrics */ }
+            <divclassName = 'gridmd: grid-cols-4gap-4mb-12'>
               {[
-                { value: '$2.9T', label: 'AI Business Value 2025' },
-                { value: '10x', label: 'Average ROI' },
-                { value: '40%', label: 'Cost Reduction' },
-                { value: '73%', label: 'Initiatives That Fail' },
-              ].map((metric, index) => (
-                <div
-                  key={index}
-                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center'
+                { value: '$2.9T'label: 'AIBusinessValue 2025' }
+                { value: '10x'label: 'AverageROI' }
+                { value: '40%'label: 'CostReduction' }
+                { value: '73%'label: 'InitiativesThatFail' }
+              ].map((metricindex) => (
+                <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/30text-center'
                 >
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
+                  <divclassName='text-3xlfont-boldtext-cyan-400mb-2'>
                     {metric.value}
                   </div>
-                  <div className='text-sm text-zion-slate-light'>
+                  <divclassName='text-smtext-zion-slate-light'>
                     {metric.label}
                   </div>
                 </div>
@@ -101,103 +93,93 @@ const EnterpriseAITransformationSuccessStrategies = () => {
             </div>
 
             {/* Content */}
-            <div className='prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light'>
+            <divclassName = 'proseprose-invertprose-lgmax-w-nonespace-y-8text-zion-slate-light'>
               <section>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <TrendingUp className='w-8 h-8 text-green-400' />
-                  Executive Summary
+                <h2className='text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                  <TrendingUpclassName='w-8 h-8text-green-400' />
+                  ExecutiveSummary
                 </h2>
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                  <p className='mb-4'>
-                    Enterprise AI transformation is no longer optional—it's a{' '}
-                    <strong className='text-white'>
-                      competitive imperative
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-zion-cyan/30'>
+                  <pclassName='mb-4'>
+                    EnterpriseAItransformation isnolonger optional—it's a{' '}
+                    <strongclassName='text-white'>
+                      competitiveimperative
                     </strong>
-                    . In 2025, companies that successfully implement AI are
+                    . In2025companiesthatsuccessfully implementAIare
                     achieving{' '}
-                    <strong className='text-green-400'>10x ROI</strong>,
-                    <strong className='text-green-400'>
+                    <strongclassName = 'text-green-400'>10xROI</strong>
+                    <strongclassName = 'text-green-400'>
                       {' '}
-                      40% cost reductions
+                      40% costreductions
                     </strong>
-                    , and{' '}
-                    <strong className='text-green-400'>
-                      transformative business growth
+                    and{' '}
+                    <strongclassName = 'text-green-400'>
+                      transformativebusinessgrowth
                     </strong>
-                    . However,{' '}
-                    <strong className='text-red-400'>
-                      73% of AI initiatives still fail
+                    . However{' '}
+                    <strongclassName = 'text-red-400'>
+                      73% ofAIinitiatives stillfail
                     </strong>{' '}
-                    to deliver expected value.
+                    todeliverexpected value.
                   </p>
                   <p>
-                    This comprehensive playbook reveals the proven strategies
-                    that separate AI winners from the rest.
+                    Thiscomprehensiveplaybook revealstheproven strategiesthatseparate AIwinnersfrom therest.
                   </p>
                 </div>
               </section>
 
               <section>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <Target className='w-8 h-8 text-purple-400' />
-                  The 7 Pillars of AI Success
+                <h2className='text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                  <TargetclassName='w-8 h-8text-purple-400' />
+                  The7Pillars ofAISuccess
                 </h2>
-                <div className='grid gap-6'>
+                <divclassName='gridgap-6'>
                   {[
                     {
-                      pillar: '1. Strategic Vision & Executive Alignment',
-                      description:
-                        'Start with clear vision and top-down commitment. Define compelling AI vision, secure executive sponsorship, and build comprehensive business case.',
-                      icon: '🎯',
-                    },
+                      pillar: '1. StrategicVision & ExecutiveAlignment'
+                      description: 'Startwithclear visionandtop-downcommitment. DefinecompellingAI visionsecureexecutivesponsorshipandbuildcomprehensive businesscase.'
+                      icon: '🎯'
+                    }
                     {
-                      pillar: '2. Data Excellence Foundation',
-                      description:
-                        'Treat data as strategic asset. Establish data governance, break down silos, ensure privacy & security, and build data engineering capability.',
-                      icon: '📊',
-                    },
+                      pillar: '2. DataExcellenceFoundation'
+                      description: 'Treatdataas strategicasset. Establishdatagovernancebreakdownsilosensureprivacy & securityandbuilddata engineeringcapability.'
+                      icon: '📊'
+                    }
                     {
-                      pillar: '3. AI-Ready Infrastructure',
-                      description:
-                        'Invest in scalable, flexible infrastructure. Cloud-first architecture, MLOps platform, compute optimization, and security & compliance.',
-                      icon: '🏗️',
-                    },
+                      pillar: '3. AI-ReadyInfrastructure'
+                      description: 'Investinscalableflexibleinfrastructure. Cloud-firstarchitectureMLOpsplatformcomputeoptimizationandsecurity & compliance.'
+                      icon: '🏗️'
+                    }
                     {
-                      pillar: '4. Talent & Organizational Design',
-                      description:
-                        'Build diverse, collaborative teams. Create AI Center of Excellence, implement hybrid operating model, upskill workforce, and retain talent.',
-                      icon: '👥',
-                    },
+                      pillar: '4. Talent & OrganizationalDesign'
+                      description: 'Builddiversecollaborativeteams. CreateAICenter ofExcellenceimplementhybridoperating modelupskillworkforceandretaintalent.'
+                      icon: '👥'
+                    }
                     {
-                      pillar: '5. Agile AI Development',
-                      description:
-                        'Use iterative, business-driven approach. Start with quick wins, implement agile methodology, embrace experimentation, and measure everything.',
-                      icon: '⚡',
-                    },
+                      pillar: '5. AgileAIDevelopment'
+                      description: 'Useiterativebusiness-drivenapproach. Startwithquick winsimplementagilemethodologyembraceexperimentationandmeasureeverything.'
+                      icon: '⚡'
+                    }
                     {
-                      pillar: '6. Responsible AI & Governance',
-                      description:
-                        'Embed ethics and governance from day one. Establish ethics framework, implement governance, ensure compliance, and build trust through transparency.',
-                      icon: '⚖️',
-                    },
+                      pillar: '6. ResponsibleAI & Governance'
+                      description: 'Embedethicsand governancefromday one. Establishethicsframeworkimplementgovernanceensurecomplianceandbuildtrust throughtransparency.'
+                      icon: '⚖️'
+                    }
                     {
-                      pillar: '7. Continuous Innovation',
-                      description:
-                        'Continuously evolve AI capabilities. Stay current with advances, pilot emerging technologies, foster innovation culture, and build AI ecosystem.',
-                      icon: '🚀',
-                    },
-                  ].map((pillar, index) => (
-                    <div
-                      key={index}
-                      className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all'
+                      pillar: '7. ContinuousInnovation'
+                      description: 'ContinuouslyevolveAI capabilities. Staycurrentwith advancespilotemergingtechnologiesfosterinnovationcultureandbuildAI ecosystem.'
+                      icon: '🚀'
+                    }
+                  ].map((pillarindex) => (
+                    <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/20hover: border-zion-cyan/50transition-all'
                     >
-                      <div className='flex items-start gap-4'>
-                        <div className='text-4xl'>{pillar.icon}</div>
-                        <div className='flex-1'>
-                          <h3 className='text-xl font-bold text-white mb-3'>
+                      <divclassName='flexitems-startgap-4'>
+                        <divclassName='text-4xl'>{pillar.icon}</div>
+                        <divclassName = 'flex-1'>
+                          <h3className='text-xlfont-boldtext-whitemb-3'>
                             {pillar.pillar}
                           </h3>
-                          <p className='text-zion-slate-light'>
+                          <pclassName='text-zion-slate-light'>
                             {pillar.description}
                           </p>
                         </div>
@@ -208,81 +190,78 @@ const EnterpriseAITransformationSuccessStrategies = () => {
               </section>
 
               <section>
-                <h2 className='text-3xl font-bold text-white mb-6'>
-                  📈 Implementation Roadmap
+                <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                  📈 ImplementationRoadmap
                 </h2>
-                <div className='space-y-6'>
+                <divclassName='space-y-6'>
                   {[
                     {
-                      phase: 'Phase 1: Foundation',
-                      duration: 'Months 1-6',
-                      investment: '$2-5M',
-                      roi: '1-2x',
+                      phase: 'Phase1: Foundation'
+                      duration: 'Months1-6'
+                      investment: '$2-5M'
+                      roi: '1-2x'
                       milestones: [
-                        'AI strategy approved',
-                        'Core team hired',
-                        'Infrastructure deployed',
-                        'Data platform operational',
-                        'First models in production',
-                      ],
-                    },
+                        'AIstrategyapproved'
+                        'Coreteamhired'
+                        'Infrastructuredeployed'
+                        'Dataplatformoperational'
+                        'Firstmodelsin production'
+                      ]
+                    }
                     {
-                      phase: 'Phase 2: Scaling',
-                      duration: 'Months 7-18',
-                      investment: '$5-15M',
-                      roi: '3-5x',
+                      phase: 'Phase2: Scaling'
+                      duration: 'Months7-18'
+                      investment: '$5-15M'
+                      roi: '3-5x'
                       milestones: [
-                        '10+ models in production',
-                        'All business units engaged',
-                        'MLOps fully operational',
-                        'Governance framework implemented',
-                      ],
-                    },
+                        '10+ modelsinproduction'
+                        'Allbusinessunits engaged'
+                        'MLOpsfullyoperational'
+                        'Governanceframeworkimplemented'
+                      ]
+                    }
                     {
-                      phase: 'Phase 3: Transformation',
-                      duration: 'Months 19-36',
-                      investment: '$15-30M',
-                      roi: '8-10x+',
+                      phase: 'Phase3: Transformation'
+                      duration: 'Months19-36'
+                      investment: '$15-30M'
+                      roi: '8-10x+'
                       milestones: [
-                        '50+ models in production',
-                        'AI-first operating model',
-                        'Measurable business transformation',
-                      ],
-                    },
-                  ].map((phase, index) => (
-                    <div
-                      key={index}
-                      className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30'
+                        '50+ modelsinproduction'
+                        'AI-firstoperatingmodel'
+                        'Measurablebusinesstransformation'
+                      ]
+                    }
+                  ].map((phaseindex) => (
+                    <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/30'
                     >
-                      <div className='flex flex-wrap items-center justify-between gap-4 mb-4'>
-                        <h3 className='text-2xl font-bold text-white'>
+                      <divclassName='flexflex-wrapitems-centerjustify-betweengap-4mb-4'>
+                        <h3className='text-2xlfont-boldtext-white'>
                           {phase.phase}
                         </h3>
-                        <div className='flex gap-4'>
-                          <span className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold'>
+                        <divclassName='flexgap-4'>
+                          <spanclassName='px-4py-2bg-blue-500/20text-blue-300rounded-lgtext-smfont-semibold'>
                             {phase.duration}
                           </span>
-                          <span className='px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold'>
+                          <spanclassName='px-4py-2bg-green-500/20text-green-300rounded-lgtext-smfont-semibold'>
                             {phase.roi} ROI
                           </span>
                         </div>
                       </div>
-                      <div className='mb-4'>
-                        <span className='text-zion-slate-light'>
+                      <divclassName='mb-4'>
+                        <spanclassName='text-zion-slate-light'>
                           Investment:{' '}
                         </span>
-                        <span className='text-white font-semibold'>
+                        <spanclassName='text-whitefont-semibold'>
                           {phase.investment}
                         </span>
                       </div>
                       <div>
-                        <h4 className='text-white font-semibold mb-2'>
-                          Key Milestones:
-                        </h4>
-                        <ul className='space-y-2'>
-                          {phase.milestones.map((milestone, mIndex) => (
-                            <li key={mIndex} className='flex items-start gap-2'>
-                              <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                        <h4className='text-whitefont-semiboldmb-2'>
+                          KeyMilestones: </h4>
+                        <ulclassName='space-y-2'>
+                          { phase.milestones.map((milestonemIndex) = > (
+                            <likey = { mIndex  }className = 'flexitems-startgap-2'>
+                              <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                               <span>{milestone}</span>
                             </li>
                           ))}
@@ -294,88 +273,86 @@ const EnterpriseAITransformationSuccessStrategies = () => {
               </section>
 
               <section>
-                <h2 className='text-3xl font-bold text-white mb-6'>
-                  💡 Real-World Success Stories
+                <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                  💡 Real-WorldSuccessStories
                 </h2>
-                <div className='grid gap-6'>
+                <divclassName='gridgap-6'>
                   {[
                     {
-                      company: 'Global Retail Chain',
-                      industry: 'Fortune 100 Retailer',
-                      investment: '$45M',
-                      value: '$680M annual value',
-                      roi: '15x ROI',
+                      company: 'GlobalRetailChain'
+                      industry: 'Fortune100Retailer'
+                      investment: '$45M'
+                      value: '$680Mannualvalue'
+                      roi: '15xROI'
                       highlights: [
-                        '40% reduction in inventory costs',
-                        '28% increase in customer lifetime value',
-                        '18% revenue growth attributed to AI',
-                      ],
-                    },
+                        '40% reductionininventory costs'
+                        '28% increaseincustomer lifetimevalue'
+                        '18% revenuegrowthattributed toAI'
+                      ]
+                    }
                     {
-                      company: 'Healthcare Provider',
-                      industry: 'Multi-hospital system',
-                      investment: '$28M',
-                      value: '$420M annual savings',
-                      roi: '15x ROI',
+                      company: 'HealthcareProvider'
+                      industry: 'Multi-hospitalsystem'
+                      investment: '$28M'
+                      value: '$420Mannualsavings'
+                      roi: '15xROI'
                       highlights: [
-                        '23% reduction in readmissions',
-                        '19% improvement in patient outcomes',
-                        '$127M in operational efficiencies',
-                      ],
-                    },
+                        '23% reductioninreadmissions'
+                        '19% improvementinpatient outcomes'
+                        '$127Minoperational efficiencies'
+                      ]
+                    }
                     {
-                      company: 'Manufacturing Enterprise',
-                      industry: 'Global manufacturer',
-                      investment: '$38M',
-                      value: '$580M annual value',
-                      roi: '15.3x ROI',
+                      company: 'ManufacturingEnterprise'
+                      industry: 'Globalmanufacturer'
+                      investment: '$38M'
+                      value: '$580Mannualvalue'
+                      roi: '15.3xROI'
                       highlights: [
-                        '47% reduction in unplanned downtime',
-                        '34% improvement in first-pass quality',
-                        '$180M in inventory optimization',
-                      ],
-                    },
-                  ].map((story, index) => (
-                    <div
-                      key={index}
-                      className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30'
+                        '47% reductioninunplanned downtime'
+                        '34% improvementinfirst-passquality'
+                        '$180Mininventory optimization'
+                      ]
+                    }
+                  ].map((storyindex) => (
+                    <divkey = { index }className = 'bg-gradient-to-rfrom-purple-900/40to-blue-900/40rounded-xlp-8borderborder-purple-500/30'
                     >
-                      <h3 className='text-2xl font-bold text-white mb-2'>
+                      <h3className='text-2xlfont-boldtext-whitemb-2'>
                         {story.company}
                       </h3>
-                      <p className='text-zion-slate-light mb-4'>
+                      <pclassName='text-zion-slate-lightmb-4'>
                         {story.industry}
                       </p>
-                      <div className='grid md:grid-cols-3 gap-4 mb-4'>
-                        <div className='bg-white/10 rounded-lg p-3'>
-                          <div className='text-lg font-bold text-cyan-400'>
+                      <divclassName='gridmd: grid-cols-3gap-4mb-4'>
+                        <divclassName='bg-white/10rounded-lgp-3'>
+                          <divclassName='text-lgfont-boldtext-cyan-400'>
                             {story.investment}
                           </div>
-                          <div className='text-sm text-zion-slate-light'>
+                          <divclassName = 'text-smtext-zion-slate-light'>
                             Investment
                           </div>
                         </div>
-                        <div className='bg-white/10 rounded-lg p-3'>
-                          <div className='text-lg font-bold text-green-400'>
+                        <divclassName='bg-white/10rounded-lgp-3'>
+                          <divclassName='text-lgfont-boldtext-green-400'>
                             {story.value}
                           </div>
-                          <div className='text-sm text-zion-slate-light'>
-                            Value Created
+                          <divclassName='text-smtext-zion-slate-light'>
+                            ValueCreated
                           </div>
                         </div>
-                        <div className='bg-white/10 rounded-lg p-3'>
-                          <div className='text-lg font-bold text-purple-400'>
+                        <divclassName='bg-white/10rounded-lgp-3'>
+                          <divclassName='text-lgfont-boldtext-purple-400'>
                             {story.roi}
                           </div>
-                          <div className='text-sm text-zion-slate-light'>
-                            Return on Investment
+                          <divclassName='text-smtext-zion-slate-light'>
+                            ReturnonInvestment
                           </div>
                         </div>
                       </div>
-                      <ul className='space-y-2'>
-                        {story.highlights.map((highlight, hIndex) => (
-                          <li key={hIndex} className='flex items-start gap-2'>
-                            <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                      <ulclassName='space-y-2'>
+                        { story.highlights.map((highlighthIndex) = > (
+                          <likey = { hIndex  }className = 'flexitems-startgap-2'>
+                            <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                             <span>{highlight}</span>
                           </li>
                         ))}
@@ -385,31 +362,27 @@ const EnterpriseAITransformationSuccessStrategies = () => {
                 </div>
               </section>
 
-              <section className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50'>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <Rocket className='w-8 h-8 text-purple-400' />
-                  Start Your AI Transformation Journey
+              <sectionclassName = 'bg-gradient-to-rfrom-purple-900/40via-pink-900/40to-cyan-900/40rounded-xlp-8border-2border-purple-500/50'>
+                <h2className='text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                  <RocketclassName='w-8 h-8text-purple-400' />
+                  StartYourAI TransformationJourney
                 </h2>
-                <p className='text-xl text-zion-slate-light mb-6'>
-                  The opportunity is enormous—
-                  <strong className='text-white'>$2.9 trillion</strong> in value
-                  creation by 2030. The question is not whether to transform,
-                  but <strong className='text-white'>how fast</strong> you can
-                  execute.
+                <pclassName='text-xltext-zion-slate-lightmb-6'>
+                  Theopportunityis enormous—
+                  <strongclassName='text-white'>$2.9trillion</strong> invaluecreation by2030. Thequestionis notwhetherto transform
+                  but <strongclassName = 'text-white'>howfast</strong> youcanexecute.
                 </p>
-                <div className='grid md:grid-cols-2 gap-4'>
-                  <Link
-                    to='/contact'
-                    className='inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all'
+                <divclassName='gridmd: grid-cols-2gap-4'>
+                  <Linkto='/contact'
+                    className='inline-flexitems-centerjustify-centergap-2px-6py-3bg-gradient-to-rfrom-purple-500to-cyan-500text-whitefont-boldrounded-lghover:from-purple-600hover:to-cyan-600transition-all'
                   >
-                    Schedule AI Assessment
-                    <Rocket className='w-5 h-5' />
+                    ScheduleAIAssessment
+                    <RocketclassName='w-5 h-5' />
                   </Link>
-                  <Link
-                    to='/services'
-                    className='inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all'
+                  <Linkto='/services'
+                    className='inline-flexitems-centerjustify-centergap-2px-6py-3bg-white/10backdrop-blur-smtext-whitefont-boldrounded-lgborderborder-zion-cyan/30hover:bg-white/20transition-all'
                   >
-                    View Our Services
+                    ViewOurServices
                   </Link>
                 </div>
               </section>
@@ -421,4 +394,4 @@ const EnterpriseAITransformationSuccessStrategies = () => {
   );
 };
 
-export default EnterpriseAITransformationSuccessStrategies;
+exportdefaultEnterpriseAITransformationSuccessStrategies;

@@ -1,24 +1,24 @@
-import React, { useState, useEffect, useCallback } from "react";
+importReact{ useStateuseEffectuseCallback } from "react";
 import {
-  performanceOptimizer,
-  PerformanceMetrics,
-  OptimizationSuggestion,
+  performanceOptimizer
+  PerformanceMetrics
+  OptimizationSuggestion
 } from "../utils/performanceOptimizer";
 import {
-  accessibilityEnhancer,
-  AccessibilityMetrics,
-  AccessibilityIssue,
+  accessibilityEnhancer
+  AccessibilityMetrics
+  AccessibilityIssue
 } from "../utils/accessibilityEnhancer";
-import { seoOptimizer, SEOMetrics, SEOIssue } from "../utils/seoOptimizer";
+import { seoOptimizerSEOMetricsSEOIssue } from "../utils/seoOptimizer";
 
-interface SystemHealth {
+interfaceSystemHealth {
   performance: number;
   accessibility: number;
   seo: number;
   overall: number;
 }
 
-interface DashboardData {
+interfaceDashboardData {
   systemHealth: SystemHealth;
   performanceMetrics: PerformanceMetrics | null;
   accessibilityMetrics: AccessibilityMetrics;
@@ -29,287 +29,239 @@ interface DashboardData {
   lastUpdated: number;
 }
 
-const ComprehensiveSystemDashboard: React.FC = () => {
-  const [data, setData] = useState<DashboardData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeTab, setActiveTab] = useState<
+constComprehensiveSystemDashboard: React.FC = () => { 
+  const [datasetData] = useState<DashboardData | null>(null); const [isLoadingsetIsLoading] = useState(true);
+  const [activeTabsetActiveTab] = useState<
     "overview" | "performance" | "accessibility" | "seo"
   >("overview");
-  const [isMonitoring, setIsMonitoring] = useState(false);
+  const [isMonitoringsetIsMonitoring] = useState(false);
 
-  // Initialize monitoring systems
-  const initializeMonitoring = useCallback(() => {
+  // Initializemonitoringsystems
+  constinitializeMonitoring = useCallback(() = > {
     try {
-    } catch (error) {
-      console.error("Error initializing monitoring systems:", error);
+     } catch (error) {
+      console.error("Errorinitializingmonitoring systems:"error);
     }
-  }, []);
+  }[]);
 
-  // Stop monitoring systems
-  const stopMonitoring = useCallback(() => {
+  // Stopmonitoringsystems
+  conststopMonitoring = useCallback(() => {
     try {
-      performanceOptimizer.stopMonitoring();
-      accessibilityEnhancer.stopMonitoring();
+      performanceOptimizer.stopMonitoring(); accessibilityEnhancer.stopMonitoring();
       seoOptimizer.stopMonitoring();
       setIsMonitoring(false);
     } catch (error) {
-      console.error("Error stopping monitoring systems:", error);
+      console.error("Errorstoppingmonitoring systems:"error);
     }
-  }, []);
+  }[]);
 
-  // Update dashboard data
-  const updateDashboardData = useCallback(() => {
+  // Updatedashboarddata
+  constupdateDashboardData = useCallback(() => {
     try {
-      const performanceMetrics = performanceOptimizer.getMetrics();
-      const performanceReport = performanceOptimizer.generateReport();
-      const accessibilityMetrics = accessibilityEnhancer.getMetrics();
-      const accessibilityIssues = accessibilityEnhancer.getIssues();
-      const seoMetrics = seoOptimizer.getMetrics();
-      const seoIssues = seoOptimizer.getIssues();
-
-      const systemHealth: SystemHealth = {
-        performance: performanceReport.score,
-        accessibility: accessibilityMetrics.score,
-        seo: seoMetrics.score,
+      constperformanceMetrics = performanceOptimizer.getMetrics(); constperformanceReport = performanceOptimizer.generateReport(); constaccessibilityMetrics = accessibilityEnhancer.getMetrics(); constaccessibilityIssues = accessibilityEnhancer.getIssues(); constseoMetrics = seoOptimizer.getMetrics(); constseoIssues = seoOptimizer.getIssues(); constsystemHealth: SystemHealth = {
+        performance: performanceReport.score
+        accessibility: accessibilityMetrics.score
+        seo: seoMetrics.score
         overall: Math.round(
           (performanceReport.score +
             accessibilityMetrics.score +
             seoMetrics.score) /
-            3,
-        ),
-      };
-
-      setData({
-        systemHealth,
-        performanceMetrics,
-        accessibilityMetrics,
-        seoMetrics,
-        optimizationSuggestions: performanceReport.suggestions,
-        accessibilityIssues,
-        seoIssues,
-        lastUpdated: Date.now(),
+            3
+        )
+      }; setData({
+        systemHealth
+        performanceMetrics
+        accessibilityMetrics
+        seoMetrics
+        optimizationSuggestions: performanceReport.suggestions
+        accessibilityIssues
+        seoIssues
+        lastUpdated: Date.now()
       });
     } catch (error) {
-      console.error("Error updating dashboard data:", error);
+      console.error("Errorupdatingdashboard data:"error);
     }
-  }, []);
+  }[]);
 
-  // Load initial data
-  useEffect(() => {
-    const loadData = async () => {
-      setIsLoading(true);
-      initializeMonitoring();
+  // Loadinitialdata
+  useEffect(() => { 
+    constloadData = async () => {
+      setIsLoading(true); initializeMonitoring();
 
-      // Wait a bit for monitoring to initialize
-      setTimeout(() => {
+      // Waitabit formonitoringto initializesetTimeout(() = > {
         updateDashboardData();
         setIsLoading(false);
-      }, 1000);
+       }1000);
     };
 
     loadData();
 
-    // Set up periodic updates
-    const interval = setInterval(updateDashboardData, 5000);
-
-    return () => {
+    // Setupperiodic updatesconstinterval = setInterval(updateDashboardData5000); return () => {
       clearInterval(interval);
       stopMonitoring();
     };
-  }, [initializeMonitoring, updateDashboardData, stopMonitoring]);
+  }[initializeMonitoringupdateDashboardDatastopMonitoring]);
 
-  // Handle tab change
-  const handleTabChange = (
-    tab: "overview" | "performance" | "accessibility" | "seo",
+  // Handletabchange
+  consthandleTabChange = (
+    tab: "overview" | "performance" | "accessibility" | "seo"
   ) => {
     setActiveTab(tab);
   };
 
-  // Get health status color
-  const getHealthColor = (score: number): string => {
-    if (score >= 90) return "text-green-600";
-    if (score >= 70) return "text-yellow-600";
+  // Gethealthstatus colorconstgetHealthColor = (score: number): string = > { 
+    if (score >= 90) return "text-green-600"; if (score  > = 70) return "text-yellow-600";
     return "text-red-600";
-  };
+   };
 
-  // Get health status text
-  const getHealthStatus = (score: number): string => {
-    if (score >= 90) return "Excellent";
-    if (score >= 70) return "Good";
-    if (score >= 50) return "Needs Improvement";
+  // Gethealthstatus textconstgetHealthStatus = (score: number): string = > { 
+    if (score >= 90) return "Excellent"; if (score >= 70) return "Good";
+    if (score  > = 50) return "NeedsImprovement";
     return "Poor";
-  };
+   };
 
-  if (isLoading) {
+  if() { return (
+      <divclassName = "flexitems-centerjustify-centerh-64">
+        <divclassName="animate-spinrounded-fullh-12w-12border-b-2border-blue-600" />
+      </div > );
+    }if (!data) { 
     return (
-      <div className="flex items-center justify-center h-64">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className="text-center py-8">
-        <p className="text-gray-500">Unable to load dashboard data</p>
-      </div>
-    );
-  }
+      <divclassName = "text-centerpy-8">
+        <pclassName="text-gray-500">Unabletoload dashboarddata</p>
+      </div > );
+   }
 
   return (
-    <div className="max-w-7xl mx-auto p-6">
+    <divclassName = "max-w-7xlmx-autop-6">
       {/* Header */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-900 mb-2">
-          Comprehensive System Dashboard
+      <divclassName="mb-8">
+        <h1className="text-3xlfont-boldtext-gray-900mb-2">
+          ComprehensiveSystemDashboard
         </h1>
-        <p className="text-gray-600">
-          Real-time monitoring of performance, accessibility, and SEO metrics
+        <pclassName="text-gray-600">
+          Real-timemonitoringof performanceaccessibilityandSEOmetrics
         </p>
-        <div className="mt-4 flex items-center space-x-4">
-          <div
-            className={`px-3 py-1 rounded-full text-sm font-medium ${
+        <divclassName = "mt-4flexitems-centerspace-x-4">
+          <divclassName={ `px-3py-1rounded-fulltext-smfont-medium ${
               isMonitoring
-                ? "bg-green-100 text-green-800"
-                : "bg-red-100 text-red-800"
-            }`}
+                 ? "bg-green-100text-green-800"
+                 : "bg-red-100text-red-800"
+             }`}
           >
-            {isMonitoring ? "Monitoring Active" : "Monitoring Inactive"}
+            { isMonitoring  ? "MonitoringActive"  : "MonitoringInactive" }
           </div>
-          <span className="text-sm text-gray-500">
-            Last updated: {new Date(data.lastUpdated).toLocaleTimeString()}
+          <spanclassName="text-smtext-gray-500">
+            Lastupdated: {newDate(data.lastUpdated).toLocaleTimeString()}
           </span>
         </div>
       </div>
 
-      {/* System Health Overview */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
+      {/* SystemHealthOverview */}
+      <divclassName = "gridgrid-cols-1md: grid-cols-4gap-6mb-8">
+        <divclassName="bg-whiterounded-lgshadowp-6">
+          <divclassName="flexitems-centerjustify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">
-                Overall Health
-              </p>
-              <p
-                className={`text-2xl font-bold ${getHealthColor(data.systemHealth.overall)}`}
+              <pclassName="text-smfont-mediumtext-gray-600">
+                OverallHealth
+              </p > <pclassName={`text-2xlfont-bold ${getHealthColor(data.systemHealth.overall)}`}
               >
                 {data.systemHealth.overall}%
               </p>
-              <p className="text-sm text-gray-500">
+              <pclassName = "text-smtext-gray-500">
                 {getHealthStatus(data.systemHealth.overall)}
               </p>
             </div>
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-blue-600"
+            <divclassName = "w-12h-12bg-blue-100rounded-fullflexitems-centerjustify-center">
+              <svgclassName="w-6 h-6text-blue-600"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0024 24"
               >
-                <path
-                  strokeLinecap="round"
+                <pathstrokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                  strokeWidth = { 2 }d = "M919v-6a220 00-2-2H5a220 00-22v6a22 00022h2a2 20002-2zm00V9a22 0012-2h2a220 0122v10m-60a22 00022h2a2 20002-2m00V5a22 0012-2h2a220 0122v14a22 001-22h-2a220 01-2-2z"
                 />
               </svg>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
+        <divclassName="bg-whiterounded-lgshadowp-6">
+          <divclassName="flexitems-centerjustify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Performance</p>
-              <p
-                className={`text-2xl font-bold ${getHealthColor(data.systemHealth.performance)}`}
+              <pclassName="text-smfont-mediumtext-gray-600">Performance</p > <pclassName={`text-2xlfont-bold ${getHealthColor(data.systemHealth.performance)}`}
               >
                 {data.systemHealth.performance}%
               </p>
-              <p className="text-sm text-gray-500">
+              <pclassName = "text-smtext-gray-500">
                 {getHealthStatus(data.systemHealth.performance)}
               </p>
             </div>
-            <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-green-600"
+            <divclassName = "w-12h-12bg-green-100rounded-fullflexitems-centerjustify-center">
+              <svgclassName="w-6 h-6text-green-600"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0024 24"
               >
-                <path
-                  strokeLinecap="round"
+                <pathstrokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                  strokeWidth = { 2 }d = "M1310V3L414h7v7l9-11h-7z"
                 />
               </svg>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
+        <divclassName="bg-whiterounded-lgshadowp-6">
+          <divclassName="flexitems-centerjustify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">Accessibility</p>
-              <p
-                className={`text-2xl font-bold ${getHealthColor(data.systemHealth.accessibility)}`}
+              <pclassName="text-smfont-mediumtext-gray-600">Accessibility</p > <pclassName={`text-2xlfont-bold ${getHealthColor(data.systemHealth.accessibility)}`}
               >
                 {data.systemHealth.accessibility}%
               </p>
-              <p className="text-sm text-gray-500">
+              <pclassName = "text-smtext-gray-500">
                 {getHealthStatus(data.systemHealth.accessibility)}
               </p>
             </div>
-            <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-purple-600"
+            <divclassName = "w-12h-12bg-purple-100rounded-fullflexitems-centerjustify-center">
+              <svgclassName="w-6 h-6text-purple-600"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0024 24"
               >
-                <path
-                  strokeLinecap="round"
+                <pathstrokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  strokeWidth = { 2 }d = "M1512a33 011-603 30016 0z"
                 />
-                <path
-                  strokeLinecap="round"
+                <pathstrokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  strokeWidth = { 2 }d = "M2.45812C3.7327.9437.523512 5c4.47808.2682.9439.5427-1.2744.057-5.0647-9.5427-4.4770-8.268-2.943-9.542-7z"
                 />
               </svg>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-lg shadow p-6">
-          <div className="flex items-center justify-between">
+        <divclassName="bg-whiterounded-lgshadowp-6">
+          <divclassName="flexitems-centerjustify-between">
             <div>
-              <p className="text-sm font-medium text-gray-600">SEO</p>
-              <p
-                className={`text-2xl font-bold ${getHealthColor(data.systemHealth.seo)}`}
+              <pclassName="text-smfont-mediumtext-gray-600">SEO</p > <pclassName={`text-2xlfont-bold ${getHealthColor(data.systemHealth.seo)}`}
               >
                 {data.systemHealth.seo}%
               </p>
-              <p className="text-sm text-gray-500">
+              <pclassName = "text-smtext-gray-500">
                 {getHealthStatus(data.systemHealth.seo)}
               </p>
             </div>
-            <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-              <svg
-                className="w-6 h-6 text-orange-600"
+            <divclassName = "w-12h-12bg-orange-100rounded-fullflexitems-centerjustify-center">
+              <svgclassName="w-6 h-6text-orange-600"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24"
+                viewBox="0024 24"
               >
-                <path
-                  strokeLinecap="round"
+                <pathstrokeLinecap="round"
                   strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  strokeWidth = { 2 }d = "M2121l-6-6m2-5a770 11-1407 700114 0z"
                 />
               </svg>
             </div>
@@ -318,22 +270,19 @@ const ComprehensiveSystemDashboard: React.FC = () => {
       </div>
 
       {/* Tabs */}
-      <div className="mb-6">
-        <nav className="flex space-x-8">
+      <divclassName="mb-6">
+        <navclassName="flexspace-x-8">
           {[
-            { id: "overview", label: "Overview" },
-            { id: "performance", label: "Performance" },
-            { id: "accessibility", label: "Accessibility" },
-            { id: "seo", label: "SEO" },
+            { id: "overview"label: "Overview" }
+            { id: "performance"label: "Performance" }
+            { id: "accessibility"label: "Accessibility" }
+            { id: "seo"label: "SEO" }
           ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => handleTabChange(tab.id as any)}
-              className={`py-2 px-1 border-b-2 font-medium text-sm ${
+            <buttonkey = { tab.id }onClick={  () =  > handleTabChange(tab.idasany)  } className = { `py-2px-1border-b-2font-mediumtext-sm ${
                 activeTab === tab.id
-                  ? "border-blue-500 text-blue-600"
-                  : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
-              }`}
+                   ? "border-blue-500text-blue-600"
+                  : "border-transparenttext-gray-500hover: text-gray-700hover : border-gray-300"
+               }`}
             >
               {tab.label}
             </button>
@@ -341,53 +290,47 @@ const ComprehensiveSystemDashboard: React.FC = () => {
         </nav>
       </div>
 
-      {/* Tab Content */}
-      <div className="bg-white rounded-lg shadow">
-        {activeTab === "overview" && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">System Overview</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* TabContent */}
+      <divclassName = "bg-whiterounded-lgshadow">
+        {  activeTab === "overview"  && (
+          <divclassName="p-6">
+            <h2className="text-xlfont-semiboldmb-4">SystemOverview</h2>
+            <divclassName="gridgrid-cols-1md: grid-cols-2gap-6">
               <div>
-                <h3 className="text-lg font-medium mb-3">Issues Summary</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">
-                      Performance Issues:
+                <h3className="text-lgfont-mediummb-3">IssuesSummary</h3>
+                <divclassName="space-y-2">
+                  <divclassName="flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">
+                      PerformanceIssues:
                     </span>
-                    <span className="text-sm font-medium">
-                      {data.optimizationSuggestions.length}
+                    <spanclassName="text-smfont-medium" > {data.optimizationSuggestions.length  }
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">
-                      Accessibility Issues:
-                    </span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">
+                      AccessibilityIssues: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.accessibilityIssues.length}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">SEO Issues:</span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">SEOIssues: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.seoIssues.length}
                     </span>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">Quick Actions</h3>
-                <div className="space-y-2">
-                  <button
-                    onClick={() => accessibilityEnhancer.fixCommonIssues()}
-                    className="w-full text-left px-3 py-2 text-sm bg-blue-50 text-blue-700 rounded hover:bg-blue-100"
+                <h3className = "text-lgfont-mediummb-3">QuickActions</h3>
+                <divclassName="space-y-2">
+                  <buttononClick = {  () = > accessibilityEnhancer.fixCommonIssues()  }className = "w-fulltext-leftpx-3py-2text-smbg-blue-50text-blue-700roundedhover: bg-blue-100"
                   >
-                    Fix Common Accessibility Issues
+                    FixCommonAccessibility Issues
                   </button>
-                  <button
-                    onClick={() => seoOptimizer.optimizePage()}
-                    className="w-full text-left px-3 py-2 text-sm bg-green-50 text-green-700 rounded hover:bg-green-100"
+                  <buttononClick = {  () = > seoOptimizer.optimizePage()  }className = "w-fulltext-leftpx-3py-2text-smbg-green-50text-green-700roundedhover: bg-green-100"
                   >
-                    Optimize SEO
+                    OptimizeSEO
                   </button>
                 </div>
               </div>
@@ -395,53 +338,51 @@ const ComprehensiveSystemDashboard: React.FC = () => {
           </div>
         )}
 
-        {activeTab === "performance" && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">Performance Metrics</h2>
-            {data.performanceMetrics ? (
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {   activeTab = == "performance"  && (
+          <divclassName="p-6">
+            <h2className="text-xlfont-semiboldmb-4">PerformanceMetrics</h2>
+            {data.performanceMetrics  ? (
+              <divclassName="gridgrid-cols-1md: grid-cols-3gap-6">
                 <div>
-                  <h3 className="text-lg font-medium mb-3">Core Web Vitals</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">LCP:</span>
-                      <span className="text-sm font-medium">
-                        {data.performanceMetrics.largestContentfulPaint.toFixed(
-                          0,
-                        )}
+                  <h3className="text-lgfont-mediummb-3">CoreWebVitals</h3>
+                  <divclassName="space-y-2">
+                    <divclassName="flexjustify-between">
+                      <spanclassName="text-smtext-gray-600">LCP : </span>
+                      <spanclassName="text-smfont-medium" > {data.performanceMetrics.largestContentfulPaint.toFixed(
+                          0
+                        )   }
                         ms
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">FID:</span>
-                      <span className="text-sm font-medium">
+                    <divclassName = "flexjustify-between">
+                      <spanclassName="text-smtext-gray-600">FID: </span>
+                      <spanclassName="text-smfont-medium">
                         {data.performanceMetrics.firstInputDelay.toFixed(0)}ms
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">CLS:</span>
-                      <span className="text-sm font-medium">
+                    <divclassName = "flexjustify-between">
+                      <spanclassName="text-smtext-gray-600">CLS: </span>
+                      <spanclassName="text-smfont-medium">
                         {data.performanceMetrics.cumulativeLayoutShift.toFixed(
-                          3,
+                          3
                         )}
                       </span>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium mb-3">Resource Metrics</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">Load Time:</span>
-                      <span className="text-sm font-medium">
+                  <h3className = "text-lgfont-mediummb-3">ResourceMetrics</h3>
+                  <divclassName="space-y-2">
+                    <divclassName="flexjustify-between">
+                      <spanclassName="text-smtext-gray-600">LoadTime: </span>
+                      <spanclassName="text-smfont-medium">
                         {data.performanceMetrics.loadTime.toFixed(0)}ms
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">
-                        Memory Usage:
-                      </span>
-                      <span className="text-sm font-medium">
+                    <divclassName = "flexjustify-between">
+                      <spanclassName="text-smtext-gray-600">
+                        MemoryUsage: </span>
+                      <spanclassName="text-smfont-medium">
                         {(
                           data.performanceMetrics.memoryUsage /
                           1024 /
@@ -450,30 +391,27 @@ const ComprehensiveSystemDashboard: React.FC = () => {
                         MB
                       </span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-sm text-gray-600">
-                        Network Requests:
-                      </span>
-                      <span className="text-sm font-medium">
+                    <divclassName = "flexjustify-between">
+                      <spanclassName="text-smtext-gray-600">
+                        NetworkRequests: </span>
+                      <spanclassName="text-smfont-medium">
                         {data.performanceMetrics.networkRequests}
                       </span>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-lg font-medium mb-3">
-                    Optimization Suggestions
+                  <h3className = "text-lgfont-mediummb-3">
+                    OptimizationSuggestions
                   </h3>
-                  <div className="space-y-2 max-h-48 overflow-y-auto">
-                    {data.optimizationSuggestions.map((suggestion, index) => (
-                      <div
-                        key={index}
-                        className="p-2 bg-yellow-50 rounded text-sm"
+                  <divclassName="space-y-2max-h-48overflow-y-auto">
+                    { data.optimizationSuggestions.map((suggestionindex) = > (
+                      <divkey = { index  }className = "p-2bg-yellow-50roundedtext-sm"
                       >
-                        <div className="font-medium text-yellow-800">
+                        <divclassName="font-mediumtext-yellow-800">
                           {suggestion.title}
                         </div>
-                        <div className="text-yellow-700">
+                        <divclassName="text-yellow-700">
                           {suggestion.description}
                         </div>
                       </div>
@@ -482,55 +420,54 @@ const ComprehensiveSystemDashboard: React.FC = () => {
                 </div>
               </div>
             ) : (
-              <p className="text-gray-500">Performance metrics not available</p>
+              <pclassName = "text-gray-500">Performancemetricsnot available</p>
             )}
           </div>
         )}
 
-        {activeTab === "accessibility" && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">
-              Accessibility Metrics
+        {  activeTab = == "accessibility"  && (
+          <divclassName="p-6">
+            <h2className="text-xlfont-semiboldmb-4">
+              AccessibilityMetrics
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <divclassName="gridgrid-cols-1md: grid-cols-2gap-6">
               <div>
-                <h3 className="text-lg font-medium mb-3">Issues Breakdown</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Total Issues:</span>
-                    <span className="text-sm font-medium">
-                      {data.accessibilityMetrics.totalIssues}
+                <h3className="text-lgfont-mediummb-3">IssuesBreakdown</h3>
+                <divclassName="space-y-2">
+                  <divclassName="flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">TotalIssues:</span>
+                    <spanclassName="text-smfont-medium" > {data.accessibilityMetrics.totalIssues  }
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-red-600">Errors:</span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-red-600">Errors: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.accessibilityMetrics.errors}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-yellow-600">Warnings:</span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-yellow-600">Warnings: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.accessibilityMetrics.warnings}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-blue-600">Info:</span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-blue-600">Info: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.accessibilityMetrics.info}
                     </span>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">Recent Issues</h3>
-                <div className="space-y-2 max-h-48 overflow-y-auto">
-                  {data.accessibilityIssues.slice(0, 5).map((issue, index) => (
-                    <div key={index} className="p-2 bg-red-50 rounded text-sm">
-                      <div className="font-medium text-red-800">
+                <h3className = "text-lgfont-mediummb-3">RecentIssues</h3>
+                <divclassName="space-y-2max-h-48overflow-y-auto">
+                  { data.accessibilityIssues.slice(05).map((issueindex) = > (
+                    <divkey = { index  }className = "p-2bg-red-50roundedtext-sm">
+                      <divclassName="font-mediumtext-red-800">
                         {issue.message}
                       </div>
-                      <div className="text-red-700">{issue.suggestion}</div>
+                      <divclassName="text-red-700">{issue.suggestion}</div>
                     </div>
                   ))}
                 </div>
@@ -539,53 +476,49 @@ const ComprehensiveSystemDashboard: React.FC = () => {
           </div>
         )}
 
-        {activeTab === "seo" && (
-          <div className="p-6">
-            <h2 className="text-xl font-semibold mb-4">SEO Metrics</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {  activeTab = == "seo"  && (
+          <divclassName="p-6">
+            <h2className="text-xlfont-semiboldmb-4">SEOMetrics</h2>
+            <divclassName="gridgrid-cols-1md: grid-cols-2gap-6">
               <div>
-                <h3 className="text-lg font-medium mb-3">Page Analysis</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Page Title:</span>
-                    <span className="text-sm font-medium truncate max-w-xs">
-                      {data.seoMetrics.pageTitle}
+                <h3className="text-lgfont-mediummb-3">PageAnalysis</h3>
+                <divclassName="space-y-2">
+                  <divclassName="flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">PageTitle:</span>
+                    <spanclassName="text-smfont-mediumtruncatemax-w-xs" > {data.seoMetrics.pageTitle  }
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">
-                      Meta Description:
-                    </span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">
+                      MetaDescription: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.seoMetrics.metaDescription.length} chars
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Images:</span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">Images: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.seoMetrics.imageCount}
                     </span>
                   </div>
-                  <div className="flex justify-between">
-                    <span className="text-sm text-gray-600">Links:</span>
-                    <span className="text-sm font-medium">
+                  <divclassName = "flexjustify-between">
+                    <spanclassName="text-smtext-gray-600">Links: </span>
+                    <spanclassName="text-smfont-medium">
                       {data.seoMetrics.linkCount}
                     </span>
                   </div>
                 </div>
               </div>
               <div>
-                <h3 className="text-lg font-medium mb-3">SEO Issues</h3>
-                <div className="space-y-2 max-h-48 overflow-y-auto">
-                  {data.seoIssues.slice(0, 5).map((issue, index) => (
-                    <div
-                      key={index}
-                      className="p-2 bg-orange-50 rounded text-sm"
+                <h3className = "text-lgfont-mediummb-3">SEOIssues</h3>
+                <divclassName="space-y-2max-h-48overflow-y-auto">
+                  { data.seoIssues.slice(05).map((issueindex) = > (
+                    <divkey = { index  }className = "p-2bg-orange-50roundedtext-sm"
                     >
-                      <div className="font-medium text-orange-800">
+                      <divclassName="font-mediumtext-orange-800">
                         {issue.message}
                       </div>
-                      <div className="text-orange-700">{issue.suggestion}</div>
+                      <divclassName="text-orange-700">{issue.suggestion}</div>
                     </div>
                   ))}
                 </div>
@@ -598,4 +531,4 @@ const ComprehensiveSystemDashboard: React.FC = () => {
   );
 };
 
-export default ComprehensiveSystemDashboard;
+exportdefaultComprehensiveSystemDashboard;

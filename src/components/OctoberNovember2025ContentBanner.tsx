@@ -1,91 +1,86 @@
-export default function OctoberNovember2025ContentBanner() {
+exportdefaultfunction OctoberNovember2025ContentBanner() { 
   return (
-    <section className='bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20 px-6'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <p className='text-sm uppercase tracking-widest font-bold text-blue-100 mb-3'>
-            🚀 FRESH INSIGHTS · OCTOBER-NOVEMBER 2025
+    <sectionclassName = 'bg-gradient-to-brfrom-blue-600via-purple-600to-pink-600text-whitepy-20px-6'>
+      <divclassName='max-w-7xlmx-auto'>
+        <divclassName='text-centermb-12'>
+          <pclassName='text-smuppercasetracking-widestfont-boldtext-blue-100mb-3'>
+            🚀 FRESHINSIGHTS · OCTOBER-NOVEMBER2025
           </p>
-          <h2 className='text-5xl md:text-6xl font-extrabold leading-tight mb-6'>
-            Latest Enterprise AI Strategies
+          <h2className='text-5xlmd: text-6xlfont-extraboldleading-tightmb-6'>
+            LatestEnterpriseAI Strategies
           </h2>
-          <p className='text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto leading-relaxed'>
-            Production-ready frameworks for AI supply chains, multi-agent
-            systems, governance, and real-time inference optimization
+          <pclassName='text-xlmd:text-2xltext-blue-50max-w-3xlmx-autoleading-relaxed'>
+            Production-readyframeworksfor AIsupplychainsmulti-agentsystemsgovernanceandreal-timeinferenceoptimization
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12'>
-          {' '}
-          {/* Article 1 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-blue-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              October 2025
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-4gap-6mt-12' > {' ' }
+          {/* Article1 */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105cursor-pointerborderborder-white/20'>
+            <divclassName='text-blue-300text-smfont-semiboldmb-3uppercasetracking-wide'>
+              October2025
             </div>
-            <h3 className='text-2xl font-bold mb-3'>
-              AI Supply Chain Resilience 2.0
+            <h3className='text-2xlfont-boldmb-3'>
+              AISupplyChain Resilience2.0
             </h3>
-            <p className='text-blue-100 mb-4 text-sm leading-relaxed'>
-              Predictive disruption management, autonomous inventory
-              optimization, and real-time supplier risk scoring
+            <pclassName='text-blue-100mb-4text-smleading-relaxed'>
+              Predictivedisruptionmanagementautonomousinventoryoptimizationandreal-timesupplierrisk scoring
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-blue-200'>22 min read</span>
-              <div className='text-blue-300 font-semibold'>→</div>
+            <divclassName = 'flexitems-centerjustify-between'>
+              <spanclassName='text-xstext-blue-200'>22minread</span>
+              <divclassName='text-blue-300font-semibold'>→</div>
             </div>
           </div>
-          {/* Article 2 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-purple-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              October 2025
+          {/* Article2 */}
+          <divclassName='bg-white/10backdrop-blur-lgrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105cursor-pointerborderborder-white/20'>
+            <divclassName='text-purple-300text-smfont-semiboldmb-3uppercasetracking-wide'>
+              October2025
             </div>
-            <h3 className='text-2xl font-bold mb-3'>
-              Multi-Agent Systems Architecture
+            <h3className='text-2xlfont-boldmb-3'>
+              Multi-AgentSystemsArchitecture
             </h3>
-            <p className='text-purple-100 mb-4 text-sm leading-relaxed'>
-              Production patterns for orchestrating autonomous agents with
-              safety, observability, and cost control
+            <pclassName='text-purple-100mb-4text-smleading-relaxed'>
+              Productionpatternsfor orchestratingautonomousagents withsafetyobservabilityandcostcontrol
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-purple-200'>28 min read</span>
-              <div className='text-purple-300 font-semibold'>→</div>
+            <divclassName = 'flexitems-centerjustify-between'>
+              <spanclassName='text-xstext-purple-200'>28minread</span>
+              <divclassName='text-purple-300font-semibold'>→</div>
             </div>
           </div>
-          {/* Article 3 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-pink-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              November 2025
+          {/* Article3 */}
+          <divclassName='bg-white/10backdrop-blur-lgrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105cursor-pointerborderborder-white/20'>
+            <divclassName='text-pink-300text-smfont-semiboldmb-3uppercasetracking-wide'>
+              November2025
             </div>
-            <h3 className='text-2xl font-bold mb-3'>AI Governance Framework</h3>
-            <p className='text-pink-100 mb-4 text-sm leading-relaxed'>
-              Compliance automation, risk management, audit trails, and
-              board-level reporting for autonomous AI
+            <h3className='text-2xlfont-boldmb-3'>AIGovernanceFramework</h3>
+            <pclassName='text-pink-100mb-4text-smleading-relaxed'>
+              Complianceautomationriskmanagementaudittrailsandboard-levelreportingfor autonomousAI
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-pink-200'>32 min read</span>
-              <div className='text-pink-300 font-semibold'>→</div>
+            <divclassName = 'flexitems-centerjustify-between'>
+              <spanclassName='text-xstext-pink-200'>32minread</span>
+              <divclassName='text-pink-300font-semibold'>→</div>
             </div>
           </div>
-          {/* Article 4 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-orange-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              November 2025
+          {/* Article4 */}
+          <divclassName='bg-white/10backdrop-blur-lgrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105cursor-pointerborderborder-white/20'>
+            <divclassName='text-orange-300text-smfont-semiboldmb-3uppercasetracking-wide'>
+              November2025
             </div>
-            <h3 className='text-2xl font-bold mb-3'>Real-Time AI Inference</h3>
-            <p className='text-orange-100 mb-4 text-sm leading-relaxed'>
-              Sub-50ms inference at scale: quantization, edge deployment,
-              caching, and hardware acceleration
+            <h3className='text-2xlfont-boldmb-3'>Real-TimeAIInference</h3>
+            <pclassName='text-orange-100mb-4text-smleading-relaxed'>
+              Sub-50msinferenceat scale: quantizationedgedeployment
+              cachingandhardwareacceleration
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-orange-200'>26 min read</span>
-              <div className='text-orange-300 font-semibold'>→</div>
+            <divclassName = 'flexitems-centerjustify-between'>
+              <spanclassName='text-xstext-orange-200'>26minread</span>
+              <divclassName='text-orange-300font-semibold'>→</div>
             </div>
           </div>
         </div>
 
-        <div className='text-center mt-12'>
-          <div className='inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors cursor-pointer shadow-xl'>
-            Explore All Latest Insights →
+        <divclassName='text-centermt-12'>
+          <divclassName='inline-blockbg-whitetext-blue-600px-8py-4rounded-fullfont-boldtext-lghover: bg-blue-50transition-colorscursor-pointershadow-xl'>
+            ExploreAllLatest Insights →
           </div>
         </div>
       </div>

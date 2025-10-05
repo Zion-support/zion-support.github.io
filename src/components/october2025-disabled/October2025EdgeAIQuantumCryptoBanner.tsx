@@ -1,169 +1,160 @@
 import { Link } from 'react-router-dom';
-export default function October2025EdgeAIQuantumCryptoBanner() {
+exportdefaultfunction October2025EdgeAIQuantumCryptoBanner() { 
   return (
-    <section className='bg-gradient-to-r from-cyan-900/30 via-purple-900/30 to-pink-900/30 border-y border-cyan-500/30 py-12'>
-      <div className='container mx-auto px-6'>
-        <div className='max-w-7xl mx-auto'>
-          {' '}
+    <sectionclassName = 'bg-gradient-to-rfrom-cyan-900/30via-purple-900/30to-pink-900/30border-yborder-cyan-500/30py-12'>
+      <divclassName='containermx-autopx-6'>
+        <divclassName='max-w-7xlmx-auto' > {' ' }
           {/* Header */}
-          <div className='flex items-center justify-center gap-3 mb-6'>
-            <Sparkles className='w-6 h-6 text-cyan-400 animate-pulse' />
-            <span className='text-lg md:text-xl font-bold text-cyan-400 uppercase tracking-wider'>
-              🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides
+          <divclassName='flexitems-centerjustify-centergap-3mb-6'>
+            <SparklesclassName='w-6 h-6text-cyan-400animate-pulse' />
+            <spanclassName='text-lgmd: text-xlfont-boldtext-cyan-400uppercasetracking-wider'>
+              🚀 JUSTRELEASEDOCTOBER 12025: RevolutionaryTechnologyGuides
             </span>
-            <Sparkles className='w-6 h-6 text-cyan-400 animate-pulse' />
+            <SparklesclassName = 'w-6 h-6text-cyan-400animate-pulse' />
           </div>
-          {/* Main Content */}
-          <div className='text-center mb-8'>
-            <h2 className='text-3xl md:text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-              Edge AI + 5G Networks & Quantum-Safe Cryptography
+          {/* MainContent */}
+          <divclassName = 'text-centermb-8'>
+            <h2className='text-3xlmd: text-5xlfont-extraboldtext-whitemb-4bg-gradient-to-rfrom-cyan-400via-purple-400to-pink-400bg-clip-texttext-transparent'>
+              EdgeAI + 5GNetworks & Quantum-SafeCryptography
             </h2>
-            <p className='text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-6'>
-              ⚡ Master ultra-low latency AI at the edge with 5G networks
-              (sub-10ms response, 80% bandwidth savings) and protect your
-              enterprise from quantum threats with NIST-approved post-quantum
-              cryptography (PQC). Build the future-proof infrastructure your
-              organization needs today!
+            <pclassName='text-lgmd:text-xltext-gray-300max-w-4xlmx-automb-6'>
+              ⚡ Masterultra-lowlatencyAI attheedge with5Gnetworks
+              (sub-10msresponse80% bandwidthsavings) andprotectyour
+              enterprisefromquantum threatswithNIST-approvedpost-quantumcryptography (PQC). Buildthefuture-proofinfrastructureyour
+              organizationneedstoday!
             </p>
           </div>
-          {/* Feature Cards */}
-          <div className='grid md:grid-cols-2 gap-6 mb-8'>
-            {/* Edge AI + 5G Card */}
-            <div className='bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl'>
-              <div className='flex items-center gap-4 mb-4'>
-                <div className='bg-cyan-500/20 p-3 rounded-lg'>
-                  <Zap className='w-8 h-8 text-cyan-400' />
+          {/* FeatureCards */}
+          <divclassName = 'gridmd: grid-cols-2gap-6mb-8'>
+            {/* EdgeAI + 5GCard */}
+            <divclassName = 'bg-gradient-to-brfrom-cyan-500/10to-blue-500/10backdrop-blur-smrounded-2xlp-8borderborder-cyan-500/30hover: scale-105transition-allduration-300hover:shadow-2xl'>
+              <divclassName='flexitems-centergap-4mb-4'>
+                <divclassName='bg-cyan-500/20p-3rounded-lg'>
+                  <ZapclassName='w-8 h-8text-cyan-400' />
                 </div>
                 <div>
-                  <h3 className='text-2xl font-bold text-cyan-400'>
-                    AI at the Edge with 5G
+                  <h3className='text-2xlfont-boldtext-cyan-400'>
+                    AIatthe Edgewith5G
                   </h3>
-                  <p className='text-cyan-300 text-sm'>
-                    Ultra-Low Latency Real-Time Intelligence
+                  <pclassName='text-cyan-300text-sm'>
+                    Ultra-LowLatencyReal-TimeIntelligence
                   </p>
                 </div>
               </div>
-              <p className='text-gray-300 mb-4'>
-                Deploy intelligent edge computing systems with 5G networks
-                achieving sub-10ms latency, 80% bandwidth reduction, and 99.999%
-                availability for mission-critical operations.
+              <pclassName='text-gray-300mb-4'>
+                Deployintelligentedge computingsystemswith 5Gnetworksachieving sub-10mslatency80% bandwidthreductionand99.999%
+                availabilityformission-criticaloperations.
               </p>
-              <div className='flex flex-wrap gap-2 mb-4'>
-                <span className='bg-cyan-500/20 px-3 py-1 rounded-full text-cyan-300 text-xs font-medium'>
-                  Sub-10ms Latency
+              <divclassName = 'flexflex-wrapgap-2mb-4'>
+                <spanclassName='bg-cyan-500/20px-3py-1rounded-fulltext-cyan-300text-xsfont-medium'>
+                  Sub-10msLatency
                 </span>
-                <span className='bg-blue-500/20 px-3 py-1 rounded-full text-blue-300 text-xs font-medium'>
-                  5G Networks
+                <spanclassName='bg-blue-500/20px-3py-1rounded-fulltext-blue-300text-xsfont-medium'>
+                  5GNetworks
                 </span>
-                <span className='bg-indigo-500/20 px-3 py-1 rounded-full text-indigo-300 text-xs font-medium'>
-                  Edge AI
+                <spanclassName='bg-indigo-500/20px-3py-1rounded-fulltext-indigo-300text-xsfont-medium'>
+                  EdgeAI
                 </span>
-                <span className='bg-violet-500/20 px-3 py-1 rounded-full text-violet-300 text-xs font-medium'>
-                  IoT Intelligence
+                <spanclassName='bg-violet-500/20px-3py-1rounded-fulltext-violet-300text-xsfont-medium'>
+                  IoTIntelligence
                 </span>
               </div>
-              <ul className='space-y-2 text-gray-300 text-sm mb-6'>
-                <li>✓ Autonomous vehicles & smart manufacturing</li>
-                <li>✓ Healthcare IoT & remote patient monitoring</li>
-                <li>✓ Smart cities & public safety analytics</li>
-                <li>✓ 80% bandwidth cost reduction</li>
+              <ulclassName='space-y-2text-gray-300text-smmb-6'>
+                <li>✓ Autonomousvehicles & smartmanufacturing</li>
+                <li>✓ HealthcareIoT & remotepatientmonitoring</li>
+                <li>✓ Smartcities & publicsafetyanalytics</li>
+                <li>✓ 80% bandwidthcostreduction</li>
               </ul>
-              <Link
-                to='/blog/ai-edge-computing-5g-networks-2025'
-                className='bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105'
+              <Linkto='/blog/ai-edge-computing-5g-networks-2025'
+                className='bg-cyan-500hover: bg-cyan-600text-whitepx-6py-3rounded-lgfont-semiboldinline-flexitems-centergap-2transition-allduration-300hover:scale-105'
               >
-                Read Edge AI Guide
-                <ArrowRight className='w-4 h-4' />
+                ReadEdgeAI Guide
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
-            {/* Quantum-Safe Cryptography Card */}
-            <div className='bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl'>
-              <div className='flex items-center gap-4 mb-4'>
-                <div className='bg-purple-500/20 p-3 rounded-lg'>
-                  <Shield className='w-8 h-8 text-purple-400' />
+            {/* Quantum-SafeCryptographyCard */}
+            <divclassName = 'bg-gradient-to-brfrom-purple-500/10to-pink-500/10backdrop-blur-smrounded-2xlp-8borderborder-purple-500/30hover: scale-105transition-allduration-300hover:shadow-2xl'>
+              <divclassName='flexitems-centergap-4mb-4'>
+                <divclassName='bg-purple-500/20p-3rounded-lg'>
+                  <ShieldclassName='w-8 h-8text-purple-400' />
                 </div>
                 <div>
-                  <h3 className='text-2xl font-bold text-purple-400'>
-                    Quantum-Safe Cryptography
+                  <h3className='text-2xlfont-boldtext-purple-400'>
+                    Quantum-SafeCryptography
                   </h3>
-                  <p className='text-purple-300 text-sm'>
-                    Protect Against Q-Day with PQC
+                  <pclassName='text-purple-300text-sm'>
+                    ProtectAgainstQ-DaywithPQC
                   </p>
                 </div>
               </div>
-              <p className='text-gray-300 mb-4'>
-                Implement NIST-approved post-quantum cryptography to secure your
-                enterprise against quantum computing threats. Complete 18-month
-                migration roadmap to achieve 100% quantum resistance.
+              <pclassName='text-gray-300mb-4'>
+                ImplementNIST-approvedpost-quantumcryptographyto secureyourenterprise againstquantumcomputing threats. Complete18-monthmigrationroadmap toachieve100% quantumresistance.
               </p>
-              <div className='flex flex-wrap gap-2 mb-4'>
-                <span className='bg-purple-500/20 px-3 py-1 rounded-full text-purple-300 text-xs font-medium'>
-                  NIST PQC
+              <divclassName='flexflex-wrapgap-2mb-4'>
+                <spanclassName='bg-purple-500/20px-3py-1rounded-fulltext-purple-300text-xsfont-medium'>
+                  NISTPQC
                 </span>
-                <span className='bg-pink-500/20 px-3 py-1 rounded-full text-pink-300 text-xs font-medium'>
+                <spanclassName='bg-pink-500/20px-3py-1rounded-fulltext-pink-300text-xsfont-medium'>
                   CRYSTALS-Kyber
                 </span>
-                <span className='bg-rose-500/20 px-3 py-1 rounded-full text-rose-300 text-xs font-medium'>
-                  Quantum Security
+                <spanclassName='bg-rose-500/20px-3py-1rounded-fulltext-rose-300text-xsfont-medium'>
+                  QuantumSecurity
                 </span>
-                <span className='bg-fuchsia-500/20 px-3 py-1 rounded-full text-fuchsia-300 text-xs font-medium'>
-                  Zero Trust
+                <spanclassName='bg-fuchsia-500/20px-3py-1rounded-fulltext-fuchsia-300text-xsfont-medium'>
+                  ZeroTrust
                 </span>
               </div>
-              <ul className='space-y-2 text-gray-300 text-sm mb-6'>
-                <li>✓ NIST-approved algorithms (FIPS 203-205)</li>
-                <li>✓ Hybrid classical + PQC implementation</li>
-                <li>✓ Protect harvest-now-decrypt-later attacks</li>
-                <li>✓ 18-month migration roadmap included</li>
+              <ulclassName='space-y-2text-gray-300text-smmb-6'>
+                <li>✓ NIST-approvedalgorithms (FIPS203-205)</li>
+                <li>✓ Hybridclassical + PQCimplementation</li>
+                <li>✓ Protectharvest-now-decrypt-laterattacks</li>
+                <li>✓ 18-monthmigrationroadmap included</li>
               </ul>
-              <Link
-                to='/blog/quantum-safe-cryptography-implementation-2025'
-                className='bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105'
+              <Linkto = '/blog/quantum-safe-cryptography-implementation-2025'
+                className='bg-purple-500hover:bg-purple-600text-whitepx-6py-3rounded-lgfont-semiboldinline-flexitems-centergap-2transition-allduration-300hover:scale-105'
               >
-                Read Quantum Security Guide
-                <ArrowRight className='w-4 h-4' />
+                ReadQuantumSecurity Guide
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
-          {/* Key Metrics Section */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-8'>
-            <div className='bg-cyan-500/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30 text-center'>
-              <div className='text-3xl font-extrabold text-cyan-400 mb-1'>
-                &lt;10ms
+          {/* KeyMetricsSection */}
+          <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-4mb-8'>
+            <divclassName='bg-cyan-500/10backdrop-blur-smrounded-xlp-4borderborder-cyan-500/30text-center'>
+              <divclassName='text-3xlfont-extraboldtext-cyan-400mb-1'>
+                &lt; 10ms
               </div>
-              <div className='text-cyan-300 text-sm'>Edge AI Latency</div>
+              <divclassName='text-cyan-300text-sm'>EdgeAILatency</div>
             </div>
-            <div className='bg-blue-500/10 backdrop-blur-sm rounded-xl p-4 border border-blue-500/30 text-center'>
-              <div className='text-3xl font-extrabold text-blue-400 mb-1'>
+            <divclassName='bg-blue-500/10backdrop-blur-smrounded-xlp-4borderborder-blue-500/30text-center'>
+              <divclassName='text-3xlfont-extraboldtext-blue-400mb-1'>
                 80%
               </div>
-              <div className='text-blue-300 text-sm'>Bandwidth Savings</div>
+              <divclassName='text-blue-300text-sm'>BandwidthSavings</div>
             </div>
-            <div className='bg-purple-500/10 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30 text-center'>
-              <div className='text-purple-300 text-sm'>Est. Q-Day Arrival</div>
+            <divclassName='bg-purple-500/10backdrop-blur-smrounded-xlp-4borderborder-purple-500/30text-center'>
+              <divclassName='text-purple-300text-sm'>Est. Q-DayArrival</div>
             </div>
-            <div className='bg-pink-500/10 backdrop-blur-sm rounded-xl p-4 border border-pink-500/30 text-center'>
-              <div className='text-3xl font-extrabold text-pink-400 mb-1'>
+            <divclassName='bg-pink-500/10backdrop-blur-smrounded-xlp-4borderborder-pink-500/30text-center'>
+              <divclassName='text-3xlfont-extraboldtext-pink-400mb-1'>
                 100%
               </div>
-              <div className='text-pink-300 text-sm'>Quantum Resistance</div>
+              <divclassName='text-pink-300text-sm'>QuantumResistance</div>
             </div>
           </div>
-          {/* CTA Buttons */}
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              to='/blog'
-              className='bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2'
+          {/* CTAButtons */}
+          <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+            <Linkto='/blog'
+              className='bg-gradient-to-rfrom-cyan-500to-purple-500hover:from-cyan-600hover:to-purple-600text-whitepx-8py-4rounded-lgfont-boldtext-lgtransition-allduration-300hover:scale-105inline-flexitems-centerjustify-centergap-2'
             >
-              <Sparkles className='w-5 h-5' />
-              Explore All Guides
+              <SparklesclassName='w-5 h-5' />
+              ExploreAllGuides
             </Link>
-            <Link
-              to='/contact'
-              className='border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2'
+            <Linkto='/contact'
+              className='border-2border-cyan-400text-cyan-400hover:bg-cyan-400hover:text-whitepx-8py-4rounded-lgfont-boldtext-lgtransition-allduration-300hover:scale-105inline-flexitems-centerjustify-centergap-2'
             >
-              <ArrowRight className='w-5 h-5' />
-              Get Expert Consultation
+              <ArrowRight,className='w-5 h-5' />
+              GetExpertConsultation
             </Link>
           </div>
         </div>

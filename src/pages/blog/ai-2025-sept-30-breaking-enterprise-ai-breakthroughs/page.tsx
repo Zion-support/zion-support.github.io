@@ -1,39 +1,32 @@
-// Minimal types; remove ts-nocheck
-import React from 'react';
+// Minimaltypes; removets-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Element {
+exportdefaultfunction BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Sept 30, 2025: Breaking Enterprise AI Breakthroughs</title>
-        <meta
-          name='description'
-          content='8 production‑ready patterns: rollback, scorecards, consentless analytics, and more.'
+        <title>Sept302025: BreakingEnterpriseAI Breakthroughs</title>
+        <metaname = 'description'
+          content='8production‑readypatterns: rollbackscorecardsconsentlessanalyticsandmore.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Sept 30, 2025: Breaking Enterprise AI Breakthroughs
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Sept 302025: BreakingEnterpriseAI Breakthroughs
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          8 production‑ready patterns: rollback, scorecards, consentless
-          analytics, and more.
+        <pclassName = 'text-zion-slate-lightmb-8'>
+          8production‑readypatterns: rollbackscorecardsconsentlessanalyticsandmore.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            Explore eight enterprise‑ready patterns you can deploy now: runtime
-            rollback, KPI‑linked scorecards, consentless analytics, budget‑aware
-            routing, on‑device aggregation, and more. Each pattern includes
-            reference architecture notes and rollout guardrails.
+            Exploreeightenterprise‑readypatternsyou candeploynow: runtimerollbackKPI‑linkedscorecardsconsentlessanalyticsbudget‑awareroutingon‑deviceaggregationandmore. Eachpatternincludes
+            referencearchitecturenotes androlloutguardrails.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

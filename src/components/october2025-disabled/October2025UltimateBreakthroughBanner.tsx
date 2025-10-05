@@ -1,208 +1,195 @@
 import { Link } from 'react-router-dom';
-const October2025UltimateBreakthroughBanner = () => {
+constOctober2025UltimateBreakthroughBanner = () => { 
   return (
-    <div className='relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden border-b border-white/10'>
-      {' '}
-      {/* Animated Background */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px] animate-shimmer'></div>
+    <divclassName = 'relativebg-gradient-to-rfrom-purple-900via-blue-900to-indigo-900overflow-hiddenborder-bborder-white/10' > {' ' }
+      {/* AnimatedBackground */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absoluteinset-0bg-[linear-gradient(45degtransparent_25%rgba(255255255.05)_50%transparent_75%transparent_100%)] bg-[length: 250px_250px] animate-shimmer' />
       </div>
-      {/* Glowing Orbs */}
-      <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse'></div>
-      <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-700'></div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        {/* Header Badge */}
-        <div className='flex justify-center mb-6'>
-          <div className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/50 rounded-full'>
-            <Sparkles className='w-5 h-5 text-yellow-400 animate-pulse' />
-            <span className='text-yellow-400 font-bold text-sm sm:text-base'>
-              🔥 BREAKING: OCTOBER 2025 — 5 REVOLUTIONARY AI BREAKTHROUGHS JUST
-              RELEASED! 🔥
+      {/* GlowingOrbs */}
+      <divclassName = 'absolutetop-0left-1/4 w-96h-96bg-purple-500/20rounded-fullblur-3xlanimate-pulse' />
+      <divclassName='absolutebottom-0right-1/4 w-96h-96bg-blue-500/20rounded-fullblur-3xlanimate-pulsedelay-700' />
+      <divclassName='relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-12'>
+        {/* HeaderBadge */}
+        <divclassName = 'flexjustify-centermb-6'>
+          <divclassName='inline-flexitems-centergap-2px-6py-3bg-gradient-to-rfrom-yellow-400/20to-orange-500/20borderborder-yellow-400/50rounded-full'>
+            <SparklesclassName='w-5 h-5text-yellow-400animate-pulse' />
+            <spanclassName='text-yellow-400font-boldtext-smsm: text-base'>
+              🔥 BREAKING: OCTOBER2025 — 5REVOLUTIONARYAI BREAKTHROUGHSJUSTRELEASED! 🔥
             </span>
-            <Sparkles className='w-5 h-5 text-yellow-400 animate-pulse' />
+            <SparklesclassName='w-5 h-5text-yellow-400animate-pulse' />
           </div>
         </div>
-        {/* Main Headline */}
-        <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight'>
-          Ultimate AI Innovation Suite:
+        {/* MainHeadline */}
+        <h2className = 'text-3xlsm: text-4xllg:text-5xlfont-boldtext-centermb-6bg-gradient-to-rfrom-whitevia-blue-100to-purple-100bg-clip-texttext-transparentleading-tight'>
+          UltimateAIInnovation Suite:
           <br />
-          $945M+ Combined Value Creation
+          $945M+ CombinedValueCreation
         </h2>
         {/* Subtitle */}
-        <p className='text-center text-lg sm:text-xl text-blue-100 mb-10 max-w-4xl mx-auto'>
-          💎 Deploy 5 game-changing AI technologies transforming enterprises
-          worldwide: Agentic Mesh Networks, Quantum-AI Optimization, Cognitive
-          Digital Twins, Neuromorphic Edge AI, and Autonomous Security
-          Orchestration — delivering unprecedented performance, efficiency, and
-          competitive advantage!
+        <pclassName = 'text-centertext-lgsm: text-xltext-blue-100mb-10max-w-4xlmx-auto'>
+          💎 Deploy5game-changingAItechnologies transformingenterprisesworldwide: AgenticMeshNetworksQuantum-AIOptimizationCognitiveDigitalTwinsNeuromorphicEdgeAIandAutonomousSecurity
+          Orchestration — deliveringunprecedentedperformanceefficiencyandcompetitiveadvantage!
         </p>
-        {/* Feature Grid */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10'>
+        {/* FeatureGrid */}
+        <divclassName = 'gridgrid-cols-1md: grid-cols-2lg:grid-cols-3gap-4mb-10'>
           {/* Feature 1 */}
-          <Link
-            to='/blog/ai-agentic-mesh-networks-2025-oct'
-            className='group relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300'
+          <Linkto = '/blog/ai-agentic-mesh-networks-2025-oct'
+            className='grouprelativebg-gradient-to-brfrom-purple-500/10to-blue-500/10backdrop-blur-smborderborder-purple-400/30rounded-xlp-6hover: border-purple-400hover:shadow-lghover:shadow-purple-500/20transition-allduration-300'
           >
-            <div className='flex items-start gap-3 mb-3'>
-              <div className='p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors'>
-                <Zap className='w-5 h-5 text-purple-300' />
+            <divclassName='flexitems-startgap-3mb-3'>
+              <divclassName='p-2bg-purple-500/20rounded-lggroup-hover:bg-purple-500/30transition-colors'>
+                <ZapclassName='w-5 h-5text-purple-300' />
               </div>
-              <div className='flex-1'>
-                <h3 className='font-bold text-white text-lg mb-1 group-hover:text-purple-200 transition-colors'>
-                  Agentic Mesh Networks
+              <divclassName='flex-1'>
+                <h3className='font-boldtext-whitetext-lgmb-1group-hover:text-purple-200transition-colors'>
+                  AgenticMeshNetworks
                 </h3>
-                <p className='text-blue-200 text-sm'>
-                  Self-organizing AI infrastructure • 99.98% reliability • 78%
-                  latency reduction • $134M+ savings
+                <pclassName='text-blue-200text-sm'>
+                  Self-organizingAIinfrastructure • 99.98% reliability • 78%
+                  latencyreduction • $134M+ savings
                 </p>
               </div>
             </div>
-            <div className='flex items-center text-purple-300 text-sm font-semibold group-hover:gap-2 transition-all'>
-              Explore Technology{' '}
-              <ArrowRight className='w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-purple-300text-smfont-semiboldgroup-hover:gap-2transition-all'>
+              ExploreTechnology{' '}
+              <ArrowRight,className = 'w-4 h-4ml-1group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
           {/* Feature 2 */}
-          <Link
-            to='/blog/quantum-ai-optimization-breakthrough-2025-oct'
-            className='group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300'
+          <Linkto = '/blog/quantum-ai-optimization-breakthrough-2025-oct'
+            className='grouprelativebg-gradient-to-brfrom-blue-500/10to-cyan-500/10backdrop-blur-smborderborder-blue-400/30rounded-xlp-6hover: border-blue-400hover:shadow-lghover:shadow-blue-500/20transition-allduration-300'
           >
-            <div className='flex items-start gap-3 mb-3'>
-              <div className='p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors'>
-                <TrendingUp className='w-5 h-5 text-blue-300' />
+            <divclassName='flexitems-startgap-3mb-3'>
+              <divclassName='p-2bg-blue-500/20rounded-lggroup-hover:bg-blue-500/30transition-colors'>
+                <TrendingUpclassName='w-5 h-5text-blue-300' />
               </div>
-              <div className='flex-1'>
-                <h3 className='font-bold text-white text-lg mb-1 group-hover:text-blue-200 transition-colors'>
-                  Quantum-AI Optimization
+              <divclassName='flex-1'>
+                <h3className='font-boldtext-whitetext-lgmb-1group-hover:text-blue-200transition-colors'>
+                  Quantum-AIOptimization
                 </h3>
-                <p className='text-blue-200 text-sm'>
-                  10,000x performance breakthrough • Enterprise-grade quantum
-                  computing • $247M+ value • Real-time optimization
+                <pclassName='text-blue-200text-sm'>
+                  10000xperformancebreakthrough • Enterprise-gradequantumcomputing • $247M+ value • Real-timeoptimization
                 </p>
               </div>
             </div>
-            <div className='flex items-center text-blue-300 text-sm font-semibold group-hover:gap-2 transition-all'>
-              Discover Innovation{' '}
-              <ArrowRight className='w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform' />
+            <divclassName = 'flexitems-centertext-blue-300text-smfont-semiboldgroup-hover: gap-2transition-all'>
+              DiscoverInnovation{' '}
+              <ArrowRight,className = 'w-4 h-4ml-1group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
           {/* Feature 3 */}
-          <Link
-            to='/blog/cognitive-digital-twins-2025-oct'
-            className='group relative bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm border border-indigo-400/30 rounded-xl p-6 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300'
+          <Linkto = '/blog/cognitive-digital-twins-2025-oct'
+            className='grouprelativebg-gradient-to-brfrom-indigo-500/10to-purple-500/10backdrop-blur-smborderborder-indigo-400/30rounded-xlp-6hover: border-indigo-400hover:shadow-lghover:shadow-indigo-500/20transition-allduration-300'
           >
-            <div className='flex items-start gap-3 mb-3'>
-              <div className='p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors'>
-                <Sparkles className='w-5 h-5 text-indigo-300' />
+            <divclassName='flexitems-startgap-3mb-3'>
+              <divclassName='p-2bg-indigo-500/20rounded-lggroup-hover:bg-indigo-500/30transition-colors'>
+                <SparklesclassName='w-5 h-5text-indigo-300' />
               </div>
-              <div className='flex-1'>
-                <h3 className='font-bold text-white text-lg mb-1 group-hover:text-indigo-200 transition-colors'>
-                  Cognitive Digital Twins
+              <divclassName='flex-1'>
+                <h3className='font-boldtext-whitetext-lgmb-1group-hover:text-indigo-200transition-colors'>
+                  CognitiveDigitalTwins
                 </h3>
-                <p className='text-blue-200 text-sm'>
-                  AI-powered virtual replicas • 99.3% prediction accuracy • 76%
-                  cost savings • $218M+ annual value
+                <pclassName='text-blue-200text-sm'>
+                  AI-poweredvirtualreplicas • 99.3% predictionaccuracy • 76%
+                  costsavings • $218M+ annualvalue
                 </p>
               </div>
             </div>
-            <div className='flex items-center text-indigo-300 text-sm font-semibold group-hover:gap-2 transition-all'>
-              Learn More{' '}
-              <ArrowRight className='w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-indigo-300text-smfont-semiboldgroup-hover:gap-2transition-all'>
+              LearnMore{' '}
+              <ArrowRight,className = 'w-4 h-4ml-1group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
           {/* Feature 4 */}
-          <Link
-            to='/blog/neuromorphic-edge-ai-2025-oct'
-            className='group relative bg-gradient-to-br from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300'
+          <Linkto = '/blog/neuromorphic-edge-ai-2025-oct'
+            className='grouprelativebg-gradient-to-brfrom-cyan-500/10to-teal-500/10backdrop-blur-smborderborder-cyan-400/30rounded-xlp-6hover: border-cyan-400hover:shadow-lghover:shadow-cyan-500/20transition-allduration-300'
           >
-            <div className='flex items-start gap-3 mb-3'>
-              <div className='p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors'>
-                <Zap className='w-5 h-5 text-cyan-300' />
+            <divclassName='flexitems-startgap-3mb-3'>
+              <divclassName='p-2bg-cyan-500/20rounded-lggroup-hover:bg-cyan-500/30transition-colors'>
+                <ZapclassName='w-5 h-5text-cyan-300' />
               </div>
-              <div className='flex-1'>
-                <h3 className='font-bold text-white text-lg mb-1 group-hover:text-cyan-200 transition-colors'>
-                  Neuromorphic Edge AI
+              <divclassName='flex-1'>
+                <h3className='font-boldtext-whitetext-lgmb-1group-hover:text-cyan-200transition-colors'>
+                  NeuromorphicEdgeAI
                 </h3>
-                <p className='text-blue-200 text-sm'>
-                  Brain-inspired computing • 10,000x energy efficiency •
-                  Real-time learning • $157M+ savings
+                <pclassName='text-blue-200text-sm'>
+                  Brain,-inspiredcomputing • 10000xenergyefficiency •
+                  Real-timelearning • $157M+ savings
                 </p>
               </div>
             </div>
-            <div className='flex items-center text-cyan-300 text-sm font-semibold group-hover:gap-2 transition-all'>
-              Read Guide{' '}
-              <ArrowRight className='w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform' />
+            <divclassName = 'flexitems-centertext-cyan-300text-smfont-semiboldgroup-hover: gap-2transition-all'>
+              ReadGuide{' '}
+              <ArrowRight,className = 'w-4 h-4ml-1group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
           {/* Feature 5 */}
-          <Link
-            to='/blog/autonomous-security-orchestration-2025-oct'
-            className='group relative bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm border border-red-400/30 rounded-xl p-6 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300'
+          <Linkto = '/blog/autonomous-security-orchestration-2025-oct'
+            className='grouprelativebg-gradient-to-brfrom-red-500/10to-orange-500/10backdrop-blur-smborderborder-red-400/30rounded-xlp-6hover: border-red-400hover:shadow-lghover:shadow-red-500/20transition-allduration-300'
           >
-            <div className='flex items-start gap-3 mb-3'>
-              <div className='p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors'>
-                <TrendingUp className='w-5 h-5 text-red-300' />
+            <divclassName='flexitems-startgap-3mb-3'>
+              <divclassName='p-2bg-red-500/20rounded-lggroup-hover:bg-red-500/30transition-colors'>
+                <TrendingUpclassName='w-5 h-5text-red-300' />
               </div>
-              <div className='flex-1'>
-                <h3 className='font-bold text-white text-lg mb-1 group-hover:text-red-200 transition-colors'>
-                  Autonomous Security
+              <divclassName='flex-1'>
+                <h3className='font-boldtext-whitetext-lgmb-1group-hover:text-red-200transition-colors'>
+                  AutonomousSecurity
                 </h3>
-                <p className='text-blue-200 text-sm'>
-                  Machine-speed threat response • 99.97% accuracy • 94% faster
-                  response • $189M+ savings
+                <pclassName='text-blue-200text-sm'>
+                  Machine-speedthreatresponse • 99.97% accuracy • 94% fasterresponse • $189M+ savings
                 </p>
               </div>
             </div>
-            <div className='flex items-center text-red-300 text-sm font-semibold group-hover:gap-2 transition-all'>
-              View Solution{' '}
-              <ArrowRight className='w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-red-300text-smfont-semiboldgroup-hover:gap-2transition-all'>
+              ViewSolution{' '}
+              <ArrowRight,className = 'w-4 h-4ml-1group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
-          {/* CTA Card */}
-          <div className='group relative bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border-2 border-yellow-400/50 rounded-xl p-6 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300'>
-            <div className='flex items-start gap-3 mb-3'>
-              <div className='p-2 bg-yellow-500/20 rounded-lg group-hover:bg-yellow-500/30 transition-colors'>
-                <Sparkles className='w-5 h-5 text-yellow-300 animate-pulse' />
+          {/* CTACard */}
+          <divclassName = 'grouprelativebg-gradient-to-brfrom-yellow-500/10to-orange-500/10backdrop-blur-smborder-2border-yellow-400/50rounded-xlp-6hover: border-yellow-400hover:shadow-lghover:shadow-yellow-500/20transition-allduration-300'>
+            <divclassName='flexitems-startgap-3mb-3'>
+              <divclassName='p-2bg-yellow-500/20rounded-lggroup-hover:bg-yellow-500/30transition-colors'>
+                <SparklesclassName='w-5 h-5text-yellow-300animate-pulse' />
               </div>
-              <div className='flex-1'>
-                <h3 className='font-bold text-white text-lg mb-1'>
-                  Explore All Breakthroughs
+              <divclassName='flex-1'>
+                <h3className='font-boldtext-whitetext-lgmb-1'>
+                  ExploreAllBreakthroughs
                 </h3>
-                <p className='text-blue-200 text-sm'>
-                  View complete guides, case studies, implementation roadmaps,
-                  and ROI calculators for all 5 revolutionary technologies
+                <pclassName='text-blue-200text-sm'>
+                  Viewcompleteguidescasestudiesimplementationroadmaps
+                  andROIcalculators forall5 revolutionarytechnologies
                 </p>
               </div>
             </div>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl'
+            <Linkto = '/blog'
+              className='inline-flexitems-centergap-2px-6py-3bg-gradient-to-rfrom-yellow-400to-orange-500text-gray-900font-boldrounded-lghover: from-yellow-300hover:to-orange-400transition-allduration-300shadow-lghover:shadow-xl'
             >
-              View All Innovations <ArrowRight className='w-5 h-5' />
+              ViewAllInnovations <ArrowRight,className='w-5 h-5' />
             </Link>
           </div>
         </div>
-        {/* Bottom Stats */}
-        <div className='flex flex-wrap justify-center gap-8 pt-8 border-t border-white/10'>
-          <div className='text-center'>
-            <div className='text-3xl font-bold text-white mb-1'>$945M+</div>
-            <div className='text-blue-200 text-sm'>Combined Annual Value</div>
+        {/* BottomStats */}
+        <divclassName = 'flexflex-wrapjustify-centergap-8pt-8border-tborder-white/10'>
+          <divclassName='text-center'>
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>$945M+</div>
+            <divclassName='text-blue-200text-sm'>CombinedAnnualValue</div>
           </div>
-          <div className='text-center'>
-            <div className='text-3xl font-bold text-white mb-1'>99.9%+</div>
-            <div className='text-blue-200 text-sm'>Average Accuracy</div>
+          <divclassName='text-center'>
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>99.9%+</div>
+            <divclassName='text-blue-200text-sm'>AverageAccuracy</div>
           </div>
-          <div className='text-center'>
-            <div className='text-3xl font-bold text-white mb-1'>85%+</div>
-            <div className='text-blue-200 text-sm'>Cost Reduction</div>
+          <divclassName='text-center'>
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>85%+</div>
+            <divclassName='text-blue-200text-sm'>CostReduction</div>
           </div>
-          <div className='text-center'>
-            <div className='text-3xl font-bold text-white mb-1'>20-35x</div>
-            <div className='text-blue-200 text-sm'>Average ROI</div>
+          <divclassName='text-center'>
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>20-35x</div>
+            <divclassName='text-blue-200text-sm'>AverageROI</div>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default October2025UltimateBreakthroughBanner;
+exportdefaultOctober2025UltimateBreakthroughBanner;

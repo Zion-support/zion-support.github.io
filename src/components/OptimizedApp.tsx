@@ -1,123 +1,111 @@
-import React, { Suspense, useState, useEffect } from 'react';
+importReact{ SuspenseuseStateuseEffect } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
 import { motion } from 'framer-motion';
 
-// Loading component
-const LoadingSpinner: React.FC = () => (
-  <div className='flex items-center justify-center min-h-screen'>
-    <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
+// Loadingcomponentconst LoadingSpinner: React.FC = () => (
+  <divclassName = 'flexitems-centerjustify-centermin-h-screen'>
+    <divclassName='animate-spinrounded-fullh-12w-12border-b-2border-blue-600' />
   </div>
 );
 
-// Error fallback component
-const ErrorFallback: React.FC<{
+// Errorfallbackcomponent
+constErrorFallback: React.FC<{ 
   error: Error;
-  resetErrorBoundary: () => void;
-}> = ({ error, resetErrorBoundary }) => (
-  <div className='min-h-screen flex items-center justify-center bg-gray-50'>
-    <div className='max-w-md mx-auto text-center p-6'>
-      <div className='text-red-600 text-6xl mb-4'>⚠️</div>
-      <h1 className='text-2xl font-bold text-gray-900 mb-2'>
-        Something went wrong
+  resetErrorBoundary: () = > void;
+ }> = ({ errorresetErrorBoundary }) => (
+  <divclassName = 'min-h-screenflexitems-centerjustify-centerbg-gray-50'>
+    <divclassName='max-w-mdmx-autotext-centerp-6'>
+      <divclassName='text-red-600text-6xlmb-4'>⚠️</div>
+      <h1className='text-2xlfont-boldtext-gray-900mb-2'>
+        Somethingwentwrong
       </h1>
-      <p className='text-gray-600 mb-4'>
-        We encountered an unexpected error. Please try refreshing the page.
+      <pclassName='text-gray-600mb-4'>
+        Weencounteredan unexpectederror. Pleasetryrefreshing thepage.
       </p>
-      {process.env.NODE_ENV === 'development' && (
-        <details className='mt-4 text-left'>
-          <summary className='cursor-pointer text-sm text-gray-500'>
-            Error details
+      {  process.env.NODE_ENV === 'development'  && (
+        <detailsclassName='mt-4text-left'>
+          <summaryclassName='cursor-pointertext-smtext-gray-500'>
+            Errordetails
           </summary>
-          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>
-            {error.message}
+          <preclassName='mt-2text-xstext-red-600bg-red-50p-2roundedoverflow-auto' > {error.message  }
           </pre>
         </details>
       )}
-      <button
-        onClick={resetErrorBoundary}
-        className='mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
+      <buttononClick = { resetErrorBoundary }className = 'mt-4bg-blue-600text-whitepx-4py-2roundedhover: bg-blue-700'
       >
-        Try again
+        Tryagain
       </button>
     </div>
   </div>
 );
 
-// Main content component
-const MainContent: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
+// Maincontentcomponent
+constMainContent: React.FC = () => { 
+  const [isLoadedsetIsLoaded] = useState(false); useEffect(() => {
+    consttimer = setTimeout(() = > {
       setIsLoaded(true);
-    }, 1000);
+     }1000);
     return () => clearTimeout(timer);
-  }, []);
+  }[]);
 
-  if (!isLoaded) {
-    return <LoadingSpinner />;
-  }
-
-  return (
-    <motion.main
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className='min-h-screen'
+  if() { return <LoadingSpinner / > ;
+    }return (
+    <motion.maininitial = {{ opacity:  0y: 20 }}
+      animate = {{ opacity:  1y:  0 }}
+      transition = {{ duration: 0.6 }}
+      className = 'min-h-screen'
     >
-      {/* Hero Section */}
-      <section className='bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center max-w-4xl mx-auto'>
-            <h1 className='text-4xl md:text-6xl font-bold mb-6'>
-              Zion Tech Group
+      {/* HeroSection */}
+      <sectionclassName='bg-gradient-to-brfrom-blue-900via-blue-800to-purple-900text-whitepy-20'>
+        <divclassName='containermx-autopx-4'>
+          <divclassName='text-centermax-w-4xlmx-auto'>
+            <h1className='text-4xlmd: text-6xlfont-boldmb-6'>
+              ZionTechGroup
             </h1>
-            <p className='text-xl md:text-2xl mb-8 opacity-90'>
-              Advanced AI and IT Solutions for the Future
+            <pclassName='text-xlmd:text-2xlmb-8opacity-90'>
+              AdvancedAIand ITSolutionsfor theFuture
             </p>
-            <p className='text-lg mb-12 opacity-80'>
-              Transform your business with cutting-edge AI, quantum computing,
-              and automation solutions.
+            <pclassName='text-lgmb-12opacity-80'>
+              Transformyourbusiness withcutting-edge AIquantumcomputing
+              andautomationsolutions.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Featured Solutions Section */}
-      <section className='py-16 bg-gray-50'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-              Featured Solutions
+      {/* FeaturedSolutionsSection */}
+      <sectionclassName = 'py-16bg-gray-50'>
+        <divclassName='containermx-autopx-4'>
+          <divclassName='text-centermb-12'>
+            <h2className='text-3xlmd: text-4xlfont-boldtext-gray-900mb-4'>
+              FeaturedSolutions
             </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
-              Discover our latest innovations and breakthrough technologies
+            <pclassName='text-lgtext-gray-600max-w-2xlmx-auto'>
+              Discoverourlatest innovationsandbreakthrough technologies
             </p>
           </div>
-          <Suspense fallback={<LoadingSpinner />}>
-            <div className='grid md:grid-cols-3 gap-8'>
-              <div className='text-center p-6'>
-                <div className='text-4xl mb-4'>🤖</div>
-                <h3 className='text-xl font-bold mb-3'>AI Solutions</h3>
-                <p className='text-gray-600'>
-                  Advanced artificial intelligence and machine learning
-                  solutions for enterprise applications.
+          <Suspensefallback={ <LoadingSpinner / >  }>
+            <divclassName = 'gridmd: grid-cols-3gap-8'>
+              <divclassName='text-centerp-6'>
+                <divclassName='text-4xlmb-4'>🤖</div>
+                <h3className='text-xlfont-boldmb-3'>AISolutions</h3>
+                <pclassName='text-gray-600'>
+                  Advancedartificialintelligence andmachinelearning
+                  solutionsforenterprise applications.
                 </p>
               </div>
-              <div className='text-center p-6'>
-                <div className='text-4xl mb-4'>⚡</div>
-                <h3 className='text-xl font-bold mb-3'>Quantum Computing</h3>
-                <p className='text-gray-600'>
-                  Revolutionary quantum-enhanced computing platforms for
-                  unprecedented performance.
+              <divclassName='text-centerp-6'>
+                <divclassName='text-4xlmb-4'>⚡</div>
+                <h3className='text-xlfont-boldmb-3'>QuantumComputing</h3>
+                <pclassName='text-gray-600'>
+                  Revolutionaryquantum-enhancedcomputingplatforms forunprecedentedperformance.
                 </p>
               </div>
-              <div className='text-center p-6'>
-                <div className='text-4xl mb-4'>🔄</div>
-                <h3 className='text-xl font-bold mb-3'>Automation</h3>
-                <p className='text-gray-600'>
-                  Complete automation suites for enterprise operations and
-                  workflows.
+              <divclassName='text-centerp-6'>
+                <divclassName='text-4xlmb-4'>🔄</div>
+                <h3className='text-xlfont-boldmb-3'>Automation</h3>
+                <pclassName='text-gray-600'>
+                  Completeautomationsuites forenterpriseoperations andworkflows.
                 </p>
               </div>
             </div>
@@ -128,24 +116,20 @@ const MainContent: React.FC = () => {
   );
 };
 
-// OptimizedApp Component
-const OptimizedApp: React.FC = () => {
+// OptimizedAppComponentconst OptimizedApp: React.FC = () => {
   return (
-    <ErrorBoundary
-      FallbackComponent={ErrorFallback}
-      onError={(error, errorInfo) => {
-        console.error('Application Error:', error, errorInfo);
-        if (process.env.NODE_ENV === 'production') {
-          // Send error to monitoring service in production
-          // Example: errorReportingService.captureException(error, { extra: errorInfo });
+    <ErrorBoundaryFallbackComponent = { ErrorFallback }onError = { (errorerrorInfo) = > {
+        console.error('ApplicationError:'errorerrorInfo); if (process.env.NODE_ENV = == 'production') {
+          // Senderrorto monitoringservicein production
+          // Example: errorReportingService.captureException(error{ extra: errorInfo  });
         }
       }}
     >
-      <Suspense fallback={<LoadingSpinner />}>
+      <Suspensefallback = { <LoadingSpinner / >  }>
         <MainContent />
       </Suspense>
     </ErrorBoundary>
   );
 };
 
-export default OptimizedApp;
+exportdefaultOptimizedApp;

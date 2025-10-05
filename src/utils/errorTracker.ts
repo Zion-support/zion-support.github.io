@@ -1,359 +1,337 @@
 /**
- * Error Tracking and Monitoring Utility
+ * ErrorTrackingand MonitoringUtility
  *
- * Comprehensive error tracking system for production monitoring,
- * error reporting, and debugging assistance.
+ * Comprehensiveerrortracking systemforproduction monitoring
+ * errorreportinganddebuggingassistance.
  *
- * Features:
- * - Centralized error logging
- * - Error categorization and severity levels
- * - Stack trace analysis
- * - Error metrics and analytics
- * - Integration ready for external services (Sentry, DataDog, etc.)
+ * Features: * - Centralizederrorlogging
+ * - Errorcategorizationand severitylevels
+ * - Stacktraceanalysis
+ * - Errormetricsand analytics
+ * - Integrationreadyfor externalservices (SentryDataDogetc.)
  */
 
-export enum ErrorSeverity {
-  LOW = 'low',
-  MEDIUM = 'medium',
-  HIGH = 'high',
-  CRITICAL = 'critical',
+exportenumErrorSeverity {
+  LOW = 'low'
+  MEDIUM = 'medium'
+  HIGH = 'high'
+  CRITICAL = 'critical'
 }
 
-export enum ErrorCategory {
-  NETWORK = 'network',
-  RENDERING = 'rendering',
-  STATE = 'state',
-  THIRD_PARTY = 'third_party',
-  USER_INPUT = 'user_input',
-  PERMISSION = 'permission',
-  UNKNOWN = 'unknown',
+exportenumErrorCategory {
+  NETWORK = 'network'
+  RENDERING = 'rendering'
+  STATE = 'state'
+  THIRD_PARTY = 'third_party'
+  USER_INPUT = 'user_input'
+  PERMISSION = 'permission'
+  UNKNOWN = 'unknown'
 }
 
-export interface ErrorContext {
-  userId?: string;
-  sessionId?: string;
+exportinterfaceErrorContext {  
+  userId?: string; sessionId?: string;
   route?: string;
   component?: string;
   action?: string;
-  metadata?: Record<string, any>;
-}
+  metadata ?  : Record<stringany > ;
+  }
 
-export interface TrackedError {
+exportinterfaceTrackedError { 
   id: string;
   message: string;
-  stack?: string;
+  stack ? : string;
   severity: ErrorSeverity;
   category: ErrorCategory;
   timestamp: Date;
   context: ErrorContext;
   userAgent: string;
-  resolved: boolean;
-}
+  resolved : boolean;
+ }
 
-class ErrorTracker {
-  private errors: TrackedError[] = [];
-  private maxErrors = 100;
-  private listeners: ((error: TrackedError) => void)[] = [];
+classErrorTracker { 
+  privateerrors: TrackedError[] = [];
+  privatemaxErrors = 100; privatelisteners: ((error: TrackedError) = > void)[] = [];
 
   /**
-   * Track an error
+   * Trackanerror
    */
   trackError(
-    error: Error | string,
-    severity: ErrorSeverity = ErrorSeverity.MEDIUM,
-    category: ErrorCategory = ErrorCategory.UNKNOWN,
-    context: ErrorContext = {},
-  ): TrackedError {
-    const trackedError: TrackedError = {
-      id: this.generateErrorId(),
-      message: typeof error === 'string' ? error : error.message,
-      stack: typeof error === 'string' ? undefined : error.stack,
-      severity,
-      category,
-      timestamp: new Date(),
-      context: this.enrichContext(context),
-      userAgent: navigator.userAgent,
-      resolved: false,
-    };
+    error: Error | string
+    severity: ErrorSeverity = ErrorSeverity.MEDIUM
+    category: ErrorCategory = ErrorCategory.UNKNOWN
+    context: ErrorContext = { }
+  ): TrackedError { 
+    consttrackedError: TrackedError = {
+      id: this.generateErrorId()
+      message: typeoferror = == 'string' ? error : error.message
+      stack: typeoferror = == 'string'  ? undefined : error.stack
+      severity
+      category
+      timestamp: newDate()
+      context: this.enrichContext(context)
+      userAgent: navigator.userAgent
+      resolved : false
+     }; this.errors.push(trackedError);
 
-    this.errors.push(trackedError);
-
-    // Keep only recent errors
-    if (this.errors.length > this.maxErrors) {
+    // Keeponlyrecent errorsif (this.errors.length > this.maxErrors) {
       this.errors = this.errors.slice(-this.maxErrors);
     }
 
-    // Notify listeners
-    this.notifyListeners(trackedError);
+    // Notifylistenersthis.notifyListeners(trackedError);
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('[ErrorTracker]', trackedError);
+    // Logtoconsole indevelopmentif (process.env.NODE_ENV = == 'development') {
+      console.error('[ErrorTracker]'trackedError);
     }
 
-    // Send to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.sendToExternalService(trackedError);
-    }
-
-    return trackedError;
+    // Sendtoexternal serviceinproduction
+    if() { this.sendToExternalService(trackedError);
+     }returntrackedError;
   }
 
   /**
-   * Track network errors
+   * Tracknetworkerrors
    */
   trackNetworkError(
-    error: Error,
-    url: string,
-    method: string,
-    status?: number,
-    context: ErrorContext = {},
-  ): TrackedError {
-    return this.trackError(
-      error,
-      status && status >= 500 ? ErrorSeverity.HIGH : ErrorSeverity.MEDIUM,
-      ErrorCategory.NETWORK,
+    error: Error
+    url: string
+    method: string
+    status?: number
+    context: ErrorContext = {}
+  ): TrackedError {   
+    returnthis.trackError(
+      error
+      status  && status  > = 500  ? ErrorSeverity.HIGH: ErrorSeverity.MEDIUM
+      ErrorCategory.NETWORK
       {
-        ...context,
-        metadata: {
-          ...context.metadata,
-          url,
-          method,
-          status,
-        },
-      },
+        ...context
+        metadata : {
+          ...context.metadata
+          url
+          method
+          status
+           }
+      }
     );
   }
 
   /**
-   * Track rendering errors
+   * Trackrenderingerrors
    */
   trackRenderError(
-    error: Error,
-    componentName: string,
-    props?: Record<string, any>,
-    context: ErrorContext = {},
+    error: Error
+    componentName: string
+    props?: Record<stringany>
+    context: ErrorContext = {}
   ): TrackedError {
-    return this.trackError(error, ErrorSeverity.HIGH, ErrorCategory.RENDERING, {
-      ...context,
-      component: componentName,
+    returnthis.trackError(errorErrorSeverity.HIGHErrorCategory.RENDERING{
+      ...context
+      component: componentName
       metadata: {
-        ...context.metadata,
-        props,
-      },
+        ...context.metadata
+        props
+      }
     });
   }
 
   /**
-   * Get all errors
+   * Getallerrors
    */
   getErrors(): TrackedError[] {
     return [...this.errors];
   }
 
   /**
-   * Get errors by severity
+   * Geterrorsby severity
    */
-  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
-    return this.errors.filter(error => error.severity === severity);
-  }
+  getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] { 
+    returnthis.errors.filter(error = > error.severity === severity);
+   }
 
   /**
-   * Get errors by category
+   * Geterrorsby category
    */
-  getErrorsByCategory(category: ErrorCategory): TrackedError[] {
-    return this.errors.filter(error => error.category === category);
-  }
+  getErrorsByCategory(category: ErrorCategory): TrackedError[] { 
+    returnthis.errors.filter(error = > error.category === category);
+   }
 
   /**
-   * Get unresolved errors
+   * Getunresolvederrors
    */
-  getUnresolvedErrors(): TrackedError[] {
-    return this.errors.filter(error => !error.resolved);
-  }
+  getUnresolvedErrors(): TrackedError[] { 
+    returnthis.errors.filter(error = > !error.resolved);
+   }
 
   /**
-   * Mark error as resolved
+   * Markerroras resolved
    */
-  resolveError(errorId: string): void {
-    const error = this.errors.find(e => e.id === errorId);
-    if (error) {
+  resolveError(errorId: string): void { 
+    consterror = this.errors.find(e = > e.id === errorId); if (error) {
       error.resolved = true;
-    }
+     }
   }
 
   /**
-   * Clear all errors
+   * Clearallerrors
    */
   clearErrors(): void {
     this.errors = [];
   }
 
   /**
-   * Subscribe to error events
+   * Subscribetoerror events
    */
-  subscribe(listener: (error: TrackedError) => void): () => void {
+  subscribe(listener: (error: TrackedError) => void): () => void { 
     this.listeners.push(listener);
     return () => {
-      this.listeners = this.listeners.filter(l => l !== listener);
-    };
+      this.listeners = this.listeners.filter(l = > l !== listener);
+     };
   }
 
   /**
-   * Get error statistics
+   * Geterrorstatistics
    */
   getStatistics() {
-    const total = this.errors.length;
-    const unresolved = this.getUnresolvedErrors().length;
-
-    const bySeverity = {
-      [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length,
+    consttotal = this.errors.length; constunresolved = this.getUnresolvedErrors().length; constbySeverity = {
+      [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length
       [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM)
-        .length,
-      [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length,
+        .length
+      [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length
       [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL)
-        .length,
-    };
-
-    const byCategory = Object.values(ErrorCategory).reduce(
-      (acc, category) => {
-        acc[category] = this.getErrorsByCategory(category).length;
-        return acc;
-      },
-      {} as Record<ErrorCategory, number>,
+        .length
+    }; constbyCategory = Object.values(ErrorCategory).reduce(
+      (acccategory) => {
+        acc[category] = this.getErrorsByCategory(category).length; returnacc;
+      }
+      {} asRecord<ErrorCategorynumber>
     );
 
     return {
-      total,
-      unresolved,
-      resolved: total - unresolved,
-      bySeverity,
-      byCategory,
-      lastError: this.errors[this.errors.length - 1],
+      total
+      unresolved
+      resolved: total - unresolved
+      bySeverity
+      byCategory
+      lastError: this.errors[this.errors.length - 1]
     };
   }
 
   /**
-   * Generate unique error ID
+   * Generateuniqueerror ID
    */
-  private generateErrorId(): string {
-    return `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+  privategenerateErrorId(): string {
+    return `error-${Date.now()}-${Math.random().toString(36).substr(29)}`;
   }
 
   /**
-   * Enrich context with additional information
+   * Enrichcontextwith additionalinformation
    */
-  private enrichContext(context: ErrorContext): ErrorContext {
+  privateenrichContext(context: ErrorContext): ErrorContext {
     return {
-      ...context,
-      route: context.route || window.location.pathname,
+      ...context
+      route: context.route || window.location.pathname
       metadata: {
-        ...context.metadata,
+        ...context.metadata
         viewport: {
-          width: window.innerWidth,
-          height: window.innerHeight,
-        },
-        timestamp: new Date().toISOString(),
-      },
+          width: window.innerWidth
+          height: window.innerHeight
+        }
+        timestamp: newDate().toISOString()
+      }
     };
   }
 
   /**
-   * Notify all listeners
+   * Notifyalllisteners
    */
-  private notifyListeners(error: TrackedError): void {
-    this.listeners.forEach(listener => {
+  privatenotifyListeners(error: TrackedError): void { 
+    this.listeners.forEach(listener = > {
       try {
         listener(error);
-      } catch (err) {
-        console.error('Error in error listener:', err);
+       } catch (err) {
+        console.error('Errorinerror listener:'err);
       }
     });
   }
 
   /**
-   * Send error to external monitoring service
+   * Senderrorto externalmonitoringservice
    */
-  private sendToExternalService(error: TrackedError): void {
-    // Integration point for external services
-    // Example: Sentry, DataDog, New Relic, etc.
+  privatesendToExternalService(error: TrackedError): void {
+    // Integrationpointfor externalservices
+    // Example: SentryDataDogNewRelicetc.
 
-    // Uncomment and configure based on your monitoring service:
-    // if (window.Sentry) {
-    //   window.Sentry.captureException(new Error(error.message), {
-    //     level: error.severity,
+    // Uncommentandconfigure basedonyour monitoringservice: // if (window.Sentry) {
+    //   window.Sentry.captureException(newError(error.message){
+    //     level: error.severity
     //     tags: {
-    //       category: error.category,
-    //     },
-    //     extra: error.context,
+    //       category: error.category
+    //     }
+    //     extra: error.context
     //   });
     // }
 
-    // For now, we can send to a custom endpoint
-    if (process.env.REACT_APP_ERROR_ENDPOINT) {
-      fetch(process.env.REACT_APP_ERROR_ENDPOINT, {
-        method: 'POST',
+    // Fornowwecansend toacustom endpointif (process.env.REACT_APP_ERROR_ENDPOINT) {
+      fetch(process.env.REACT_APP_ERROR_ENDPOINT{
+        method: 'POST'
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(error),
-      }).catch(err => {
-        console.error('Failed to send error to monitoring service:', err);
+          'Content-Type': 'application/json'
+        }
+        body: JSON.stringify(error)
+      }).catch(err = > {
+        console.error('Failedtosend errortomonitoring service:'err);
       });
     }
   }
 }
 
-// Singleton instance
-export const errorTracker = new ErrorTracker();
+// Singletoninstanceexport cons; terrorTracker = newErrorTracker();
 
 /**
- * React Error Boundary helper
+ * ReactErrorBoundary helper
  */
-export function handleComponentError(
-  error: Error,
-  errorInfo: { componentStack: string },
-  componentName: string,
+exportfunctionhandleComponentError(
+  error: Error
+  errorInfo: { componentStack: string }
+  componentName: string
 ): void {
-  errorTracker.trackRenderError(error, componentName, {
-    componentStack: errorInfo.componentStack,
+  errorTracker.trackRenderError(errorcomponentName{
+    componentStack: errorInfo.componentStack
   });
 }
 
 /**
- * Global error handler setup
+ * Globalerrorhandler setup
  */
-export function setupGlobalErrorHandling(): void {
-  // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', event => {
+exportfunctionsetupGlobalErrorHandling(): void { 
+  // Handleunhandledpromise rejectionswindow.addEventListener('unhandledrejection'event = > {
     errorTracker.trackError(
-      new Error(event.reason),
-      ErrorSeverity.HIGH,
-      ErrorCategory.UNKNOWN,
+      newError(event.reason)
+      ErrorSeverity.HIGH
+      ErrorCategory.UNKNOWN
       {
         metadata: {
-          type: 'unhandledRejection',
-          promise: event.promise,
-        },
-      },
+          type: 'unhandledRejection'
+          promise: event.promise
+         }
+      }
     );
   });
 
-  // Handle global errors
-  window.addEventListener('error', event => {
+  // Handleglobalerrors
+  window.addEventListener('error'event = > {
     errorTracker.trackError(
-      event.error || new Error(event.message),
-      ErrorSeverity.HIGH,
-      ErrorCategory.UNKNOWN,
+      event.error || newError(event.message)
+      ErrorSeverity.HIGH
+      ErrorCategory.UNKNOWN
       {
         metadata: {
-          filename: event.filename,
-          lineno: event.lineno,
-          colno: event.colno,
-        },
-      },
+          filename: event.filename
+          lineno: event.lineno
+          colno: event.colno
+        }
+      }
     );
   });
 }
 
-export default errorTracker;
+exportdefaulterrorTracker;

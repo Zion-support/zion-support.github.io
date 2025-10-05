@@ -1,248 +1,214 @@
 import {
   ArrowRight,
   CheckCircle,
-  Globe,
-  Rocket,
-  Shield,
-  Star,
-  Target,
-  Users,
-  Zap,
+  Globe
+  Rocket
+  Shield
+  Star
+  Target
+  Users
+  Zap
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { lazy, Suspense } from 'react';
-import Header from '../components/Header';
-import BannerRotationManager from '../components/BannerRotationManager';
+import { lazySuspense } from 'react';
+importHeaderfrom '../components/Header';
+importBannerRotationManagerfrom '../components/BannerRotationManager';
 import { latestInsights } from '../content/insights';
 
-// Lazy load heavy components
-const EnhancedTestimonials = lazy(
-  () => import('../components/EnhancedTestimonials'),
-);
-const ModernFeatures = lazy(() => import('../components/ModernFeatures'));
-const LatestInsights = lazy(() => import('../components/LatestInsights'));
-
-const LoadingSection = () => (
-  <div className='animate-pulse bg-white/5 rounded-xl h-64 w-full'></div>
-);
-
-const HomeOptimized = () => {
+// Lazyloadheavy componentsconstEnhancedTestimonials = lazy(
+  () => import('../components/EnhancedTestimonials')
+); constModernFeatures = lazy(() => import('../components/ModernFeatures')); constLatestInsights = lazy(() => import('../components/LatestInsights')); const LoadingSection = () => (
+  <divclassName = 'animate-pulsebg-white/5rounded-xlh-64w-full'></div>
+); constHomeOptimized = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Zion Tech Group - Leading AI & IT Solutions | Transform Your Business
+          ZionTechGroup - LeadingAI & ITSolutions | TransformYourBusiness
         </title>
-        <meta
-          name='description'
-          content='Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Enterprise security, AI innovation, and expert consulting services.'
+        <metaname = 'description'
+          content='ZionTechGroup deliverscutting-edgeAIand ITsolutionsthat transformbusinesses. EnterprisesecurityAIinnovationandexpertconsulting services.'
         />
-        <meta
-          name='keywords'
-          content='AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation'
+        <metaname = 'keywords'
+          content='AIsolutionsITconsultingcybersecuritymachinelearningcloudinfrastructuredigitaltransformation'
         />
-        <meta
-          property='og:title'
-          content='Zion Tech Group - Leading AI & IT Solutions'
+        <metaproperty = 'og: title'
+          content='ZionTechGroup - LeadingAI & ITSolutions'
         />
-        <meta
-          property='og:description'
-          content='Transform your business with cutting-edge AI and IT solutions'
+        <metaproperty='og:description'
+          content='Transformyourbusiness withcutting-edgeAIand ITsolutions'
         />
-        <meta property='og:type' content='website' />
-        <meta property='og:url' content='https://ziontechgroup.com' />
+        <metaproperty='og:type' content='website' />
+        <metaproperty='og:url' content='https://ziontechgroup.com' />
         <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='Zion Tech Group - Leading AI & IT Solutions'
+        <meta name='twitter:title'
+          content='ZionTechGroup - LeadingAI & ITSolutions'
         />
-        <meta
-          name='twitter:description'
-          content='Transform your business with cutting-edge AI and IT solutions'
+        <meta name='twitter:description'
+          content='Transformyourbusiness withcutting-edgeAIand ITsolutions'
         />
-        <link rel='canonical' href='https://ziontechgroup.com' />
+        <linkrel='canonical' href='https://ziontechgroup.com' />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark relative overflow-hidden'>
-        <Header />
-
-        {/* Animated background elements */}
-        <div className='absolute inset-0 overflow-hidden pointer-events-none'>
-          <div className='absolute -top-40 -right-40 w-80 h-80 bg-zion-blue rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'></div>
-          <div
-            className='absolute -bottom-40 -left-40 w-80 h-80 bg-zion-purple rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'
+      <divclassName='min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darkrelativeoverflow-hidden'>
+        <Header / > {/* Animatedbackgroundelements */ }
+        <divclassName = 'absoluteinset-0overflow-hiddenpointer-events-none'>
+          <divclassName='absolute -top-40 -right-40w-80h-80bg-zion-bluerounded-fullmix-blend-multiplyfilterblur-xlopacity-20animate-float' />
+          <divclassName='absolute -bottom-40 -left-40w-80h-80bg-zion-purplerounded-fullmix-blend-multiplyfilterblur-xlopacity-20animate-float'
             style={{ animationDelay: '2s' }}
-          ></div>
-          <div
-            className='absolute top-40 left-1/2 w-60 h-60 bg-zion-cyan rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float'
+           />
+          <divclassName = 'absolutetop-40left-1/2 w-60h-60bg-zion-cyanrounded-fullmix-blend-multiplyfilterblur-xlopacity-20animate-float'
             style={{ animationDelay: '4s' }}
-          ></div>
+           />
         </div>
 
-        {/* Hero Section */}
-        <section className='container mx-auto px-6 py-20 relative z-10'>
-          <div className='text-center max-w-5xl mx-auto'>
+        {/* HeroSection */}
+        <sectionclassName = 'containermx-autopx-6py-20relativez-10'>
+          <divclassName='text-centermax-w-5xlmx-auto'>
             {/* Badge */}
-            <div className='inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover:shadow-xl transition-all duration-300'>
-              <Rocket className='w-4 h-4 mr-2 animate-pulse' />
-              Trusted by 500+ companies worldwide
-              <Rocket className='w-4 h-4 ml-2 animate-bounce' />
+            <divclassName='inline-flexitems-centerpx-6py-3rounded-fullbg-zion-cyan/20text-zion-cyantext-smfont-mediummb-8animate-fade-inborderborder-zion-cyan/30shadow-lghover: shadow-xltransition-allduration-300'>
+              <RocketclassName='w-4 h-4mr-2animate-pulse' />
+              Trustedby500+ companiesworldwide
+              <RocketclassName='w-4 h-4ml-2animate-bounce' />
             </div>
 
-            <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-up'>
-              <span className='bg-gradient-to-r from-zion-blue-light to-zion-purple-light bg-clip-text text-transparent animate-gradient bg-300%'>
-                Zion Tech Group
+            <h1className='text-5xlmd:text-7xlfont-boldtext-whitemb-6animate-slide-up'>
+              <spanclassName='bg-gradient-to-rfrom-zion-blue-lightto-zion-purple-lightbg-clip-texttext-transparentanimate-gradientbg-300%'>
+                ZionTechGroup
               </span>
             </h1>
 
-            <p className='text-xl md:text-2xl text-zion-slate-light mb-8 leading-relaxed max-w-3xl mx-auto animate-fade-in'>
-              Transform your business with cutting-edge AI solutions,
-              enterprise-grade security, and next-generation cloud
-              infrastructure. Join 500+ companies already scaling with us!
+            <pclassName='text-xlmd:text-2xltext-zion-slate-lightmb-8leading-relaxedmax-w-3xlmx-autoanimate-fade-in'>
+              Transformyourbusiness withcutting-edgeAIsolutions
+              enterprise-gradesecurityandnext-generationcloudinfrastructure. Join500+ companiesalreadyscaling withus!
             </p>
 
             {/* Stats */}
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-2xl mx-auto'>
+            <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-8mb-12max-w-2xlmx-auto'>
               {[
-                { value: '500+', label: 'Projects Delivered' },
-                { value: '99.9%', label: 'Uptime SLA' },
-                { value: '24/7', label: 'Support' },
-                { value: '5★', label: 'Client Rating' },
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className='text-center group hover:scale-105 transition-all duration-300'
+                { value: '500+'label: 'ProjectsDelivered' }
+                { value: '99.9%'label: 'UptimeSLA' }
+                { value: '24/7'label: 'Support' }
+                { value: '5★'label: 'ClientRating' }
+              ].map((statindex) => (
+                <divkey = { index }className = 'text-centergrouphover: scale-105transition-allduration-300'
                 >
-                  <div className='text-3xl font-bold text-zion-cyan group-hover:text-zion-blue-light transition-colors'>
+                  <divclassName='text-3xlfont-boldtext-zion-cyangroup-hover:text-zion-blue-lighttransition-colors'>
                     {stat.value}
                   </div>
-                  <div className='text-sm text-zion-slate-light'>
+                  <divclassName = 'text-smtext-zion-slate-light'>
                     {stat.label}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/services'
-                className='btn-primary flex items-center justify-center gap-2 group'
+            <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+              <Linkto='/services'
+                className='btn-primaryflexitems-centerjustify-centergap-2group'
               >
-                Explore Services
-                <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+                ExploreServices
+                <ArrowRight,className='w-5 h-5group-hover:translate-x-1transition-transform' />
               </Link>
-              <Link to='/contact' className='btn-secondary'>
-                Get Started
+              <Linkto='/contact' className='btn-secondary'>
+                GetStarted
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Banner Rotation Section */}
-        <section className='container mx-auto px-6 py-16 relative z-10'>
-          <BannerRotationManager
-            banners={[
-              'october2025-new-breakthrough',
-              'october2025-tech-breakthrough',
-              'october2025-next-gen-ai',
-            ]}
-            maxBanners={3}
-            autoRotate={false}
+        {/* BannerRotationSection */}
+        <sectionclassName = 'containermx-autopx-6py-16relativez-10'>
+          <BannerRotationManagerbanners = { [
+              'october2025-new-breakthrough'
+              'october2025-tech-breakthrough'
+              'october2025-next-gen-ai'
+            ] }maxBanners={ 3 } autoRotate={false}
           />
         </section>
 
-        {/* Latest Insights Section */}
-        <section className='container mx-auto px-6 py-16 relative z-10'>
-          <Suspense fallback={<LoadingSection />}>
+        {/* LatestInsightsSection */}
+        <sectionclassName='containermx-autopx-6py-16relativez-10'>
+          <Suspensefallback={ <LoadingSection / >  }>
             <LatestInsights />
           </Suspense>
         </section>
 
-        {/* Features Section */}
-        <section className='container mx-auto px-6 py-20 relative z-10'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl font-bold text-white mb-4 animate-slide-up'>
-              Why Choose Zion Tech Group?
+        {/* FeaturesSection */}
+        <sectionclassName='containermx-autopx-6py-20relativez-10'>
+          <divclassName='text-centermb-16'>
+            <h2className='text-4xlfont-boldtext-whitemb-4animate-slide-up'>
+              WhyChooseZion TechGroup?
             </h2>
-            <p className='text-xl text-zion-slate-light max-w-2xl mx-auto'>
-              We deliver exceptional technology solutions that drive business
-              growth and innovation.
+            <pclassName='text-xltext-zion-slate-lightmax-w-2xlmx-auto'>
+              Wedeliverexceptional technologysolutionsthat drivebusinessgrowth andinnovation.
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>
+          <divclassName='gridmd: grid-cols-2lg:grid-cols-4gap-8'>
             {[
               {
-                icon: Shield,
-                title: 'Enterprise Security',
-                description:
-                  'Advanced cybersecurity solutions protecting your business from evolving threats.',
+                icon: Shield
+                title: 'EnterpriseSecurity'
+                description: 'Advancedcybersecuritysolutions protectingyourbusiness fromevolvingthreats.'
                 features: [
-                  'SOC 2 Compliance',
-                  'Penetration Testing',
-                  '24/7 Monitoring',
-                ],
-                color: 'blue',
-              },
+                  'SOC2Compliance'
+                  'PenetrationTesting'
+                  '24/7Monitoring'
+                ]
+                color: 'blue'
+              }
               {
-                icon: Zap,
-                title: 'AI Innovation',
-                description:
-                  'Cutting-edge artificial intelligence solutions that transform your operations.',
+                icon: Zap
+                title: 'AIInnovation'
+                description: 'Cutting-edgeartificialintelligence solutionsthattransform youroperations.'
                 features: [
-                  'Machine Learning',
-                  'Natural Language Processing',
-                  'Computer Vision',
-                ],
-                color: 'purple',
-              },
+                  'MachineLearning'
+                  'NaturalLanguageProcessing'
+                  'ComputerVision'
+                ]
+                color: 'purple'
+              }
               {
-                icon: Users,
-                title: 'Expert Team',
-                description:
-                  'World-class engineers and consultants dedicated to your success.',
+                icon: Users
+                title: 'ExpertTeam'
+                description: 'World-classengineersand consultantsdedicatedto yoursuccess.'
                 features: [
-                  '10+ Years Experience',
-                  'Certified Professionals',
-                  'Dedicated Support',
-                ],
-                color: 'cyan',
-              },
+                  '10+ YearsExperience'
+                  'CertifiedProfessionals'
+                  'DedicatedSupport'
+                ]
+                color: 'cyan'
+              }
               {
-                icon: Globe,
-                title: 'Global Reach',
-                description:
-                  'Serving clients worldwide with localized expertise and support.',
+                icon: Globe
+                title: 'GlobalReach'
+                description: 'Servingclientsworldwide withlocalizedexpertise andsupport.'
                 features: [
-                  '50+ Countries',
-                  'Local Support',
-                  '24/7 Availability',
-                ],
-                color: 'blue-light',
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className='card group hover:scale-105 transition-all duration-300 hover:shadow-2xl'
+                  '50+ Countries'
+                  'LocalSupport'
+                  '24/7Availability'
+                ]
+                color: 'blue-light'
+              }
+            ].map((featureindex) => (
+              <divkey = { index }className = 'cardgrouphover: scale-105transition-allduration-300hover:shadow-2xl'
               >
-                <div
-                  className={`bg-zion-${feature.color}/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-zion-${feature.color}/30 transition-colors border border-zion-${feature.color}/30 shadow-lg`}
-                >
-                  <feature.icon
-                    className={`w-8 h-8 text-zion-${feature.color}-light group-hover:scale-110 transition-transform duration-300`}
+                <divclassName={`bg-zion-${feature.color}/20w-16h-16rounded-lgflexitems-centerjustify-centermb-6group-hover: bg-zion-${feature.color}/30transition-colorsborderborder-zion-${feature.color}/30shadow-lg`}
+                 > <feature.iconclassName = {`w-8 h-8text-zion-${feature.color}-lightgroup-hover: scale-110transition-transformduration-300`}
                   />
                 </div>
-                <h3 className='text-xl font-semibold text-white mb-4'>
+                <h3className = 'text-xlfont-semiboldtext-whitemb-4'>
                   {feature.title}
                 </h3>
-                <p className='text-zion-slate-light mb-4'>
+                <pclassName='text-zion-slate-lightmb-4'>
                   {feature.description}
                 </p>
-                <ul className='space-y-2 text-sm text-zion-slate'>
-                  {feature.features.map((item, i) => (
-                    <li key={i} className='flex items-center'>
-                      <CheckCircle className='w-4 h-4 mr-2 text-zion-cyan' />
+                <ulclassName='space-y-2text-smtext-zion-slate'>
+                  { feature.features.map((itemi) = > (
+                    <likey = { i  }className = 'flexitems-center'>
+                      <CheckCircle,className='w-4 h-4mr-2text-zion-cyan' />
                       {item}
                     </li>
                   ))}
@@ -252,31 +218,29 @@ const HomeOptimized = () => {
           </div>
         </section>
 
-        {/* Latest Insights Preview */}
-        <section className='container mx-auto px-6 py-16 relative z-10'>
-          <div className='flex items-center justify-between mb-8'>
-            <h3 className='text-3xl font-bold text-white'>Latest Insights</h3>
-            <Link to='/insights' className='text-zion-cyan hover:underline'>
-              View all
+        {/* LatestInsightsPreview */}
+        <sectionclassName = 'containermx-autopx-6py-16relativez-10'>
+          <divclassName='flexitems-centerjustify-betweenmb-8'>
+            <h3className='text-3xlfont-boldtext-white'>LatestInsights</h3>
+            <Linkto='/insights' className='text-zion-cyanhover: underline'>
+              Viewall
             </Link>
           </div>
-          <div className='grid md:grid-cols-4 gap-6'>
-            {latestInsights.slice(0, 4).map(item => (
-              <article
-                key={item.id}
-                className='card hover:scale-105 transition-all duration-300 hover:shadow-2xl'
+          <divclassName='gridmd:grid-cols-4gap-6'>
+            { latestInsights.slice(04).map(item = > (
+              <articlekey = { item.id  }className = 'cardhover: scale-105transition-allduration-300hover:shadow-2xl'
               >
-                <div className='p-6'>
-                  <div className='text-xs uppercase tracking-wider text-zion-cyan mb-2'>
+                <divclassName='p-6'>
+                  <divclassName='text-xsuppercasetracking-widertext-zion-cyanmb-2'>
                     {item.category}
                   </div>
-                  <h4 className='text-xl font-semibold text-white mb-2'>
+                  <h4className = 'text-xlfont-semiboldtext-whitemb-2'>
                     {item.title}
                   </h4>
-                  <p className='text-zion-slate-light mb-4'>{item.summary}</p>
-                  <div className='text-sm text-zion-slate flex items-center justify-between'>
-                    <span>{new Date(item.date).toLocaleDateString()}</span>
-                    <span>{item.readMinutes} min read</span>
+                  <pclassName='text-zion-slate-lightmb-4'>{item.summary}</p>
+                  <divclassName='text-smtext-zion-slateflexitems-centerjustify-between'>
+                    <span>{newDate(item.date).toLocaleDateString()}</span>
+                    <span>{item.readMinutes} minread</span>
                   </div>
                 </div>
               </article>
@@ -284,62 +248,55 @@ const HomeOptimized = () => {
           </div>
         </section>
 
-        {/* Testimonials Section */}
-        <section className='bg-zion-slate-dark py-20 relative overflow-hidden'>
-          <div className='absolute inset-0 bg-gradient-to-r from-zion-blue/10 to-zion-purple/10 opacity-50'></div>
-          <div className='container mx-auto px-6 relative z-10'>
-            <div className='text-center mb-16'>
-              <h2 className='text-4xl font-bold text-white mb-4 animate-slide-up'>
-                What Our Clients Say
+        {/* TestimonialsSection */}
+        <sectionclassName = 'bg-zion-slate-darkpy-20relativeoverflow-hidden'>
+          <divclassName='absoluteinset-0bg-gradient-to-rfrom-zion-blue/10to-zion-purple/10opacity-50' />
+          <divclassName='containermx-autopx-6relativez-10'>
+            <divclassName='text-centermb-16'>
+              <h2className='text-4xlfont-boldtext-whitemb-4animate-slide-up'>
+                WhatOurClients Say
               </h2>
-              <p className='text-xl text-zion-slate-light max-w-2xl mx-auto animate-fade-in'>
-                Don&apos;t just take our word for it. Here&apos;s what our
-                clients have to say about working with us.
+              <pclassName='text-xltext-zion-slate-lightmax-w-2xlmx-autoanimate-fade-in'>
+                Don&apos; tjusttake ourwordfor it. Here&apos;swhatour
+                clientshaveto sayaboutworking withus.
               </p>
             </div>
 
-            <div className='grid md:grid-cols-3 gap-8'>
+            <divclassName='gridmd: grid-cols-3gap-8'>
               {[
                 {
-                  name: 'Sarah Johnson',
-                  role: 'CEO, TechCorp',
-                  quote:
-                    'Zion Tech Group transformed our entire digital infrastructure. Their AI solutions increased our efficiency by 300%.',
-                },
+                  name: 'SarahJohnson'
+                  role: 'CEOTechCorp'
+                  quote: 'ZionTechGroup transformedourentire digitalinfrastructure. TheirAIsolutions increasedourefficiency by300%.'
+                }
                 {
-                  name: 'Michael Chen',
-                  role: 'CTO, InnovateLab',
-                  quote:
-                    'Outstanding team and exceptional results. They delivered our mobile app ahead of schedule and under budget.',
-                },
+                  name: 'MichaelChen'
+                  role: 'CTOInnovateLab'
+                  quote: 'Outstandingteamand exceptionalresults. Theydeliveredour mobileappahead ofscheduleand underbudget.'
+                }
                 {
-                  name: 'Emily Rodriguez',
-                  role: 'Security Director, FinanceFirst',
-                  quote:
-                    'The security solutions they implemented gave us complete peace of mind. Highly recommended!',
-                },
-              ].map((testimonial, index) => (
-                <div
-                  key={index}
-                  className='card text-center hover:scale-105 transition-all duration-300 hover:shadow-2xl'
+                  name: 'EmilyRodriguez'
+                  role: 'SecurityDirectorFinanceFirst'
+                  quote: 'Thesecuritysolutions theyimplementedgave uscompletepeace ofmind. Highlyrecommended!'
+                }
+              ].map((testimonialindex) => (
+                <divkey = { index }className = 'cardtext-centerhover: scale-105transition-allduration-300hover:shadow-2xl'
                 >
-                  <div className='flex justify-center mb-4'>
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className='w-5 h-5 text-yellow-400 fill-current animate-pulse'
-                        style={{ animationDelay: `${i * 0.1}s` }}
+                  <divclassName='flexjustify-centermb-4'>
+                    { [...Array(5)].map((_i) =  > (
+                      <Starkey = { i  }className = 'w-5 h-5text-yellow-400fill-currentanimate-pulse'
+                        style = { { animationDelay: `${i * 0.1 }s` }}
                       />
                     ))}
                   </div>
-                  <p className='text-zion-slate-light mb-6 italic'>
+                  <pclassName = 'text-zion-slate-lightmb-6italic'>
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div>
-                    <div className='font-semibold text-white'>
+                    <divclassName = 'font-semiboldtext-white'>
                       {testimonial.name}
                     </div>
-                    <div className='text-sm text-zion-slate'>
+                    <divclassName='text-smtext-zion-slate'>
                       {testimonial.role}
                     </div>
                   </div>
@@ -349,40 +306,37 @@ const HomeOptimized = () => {
           </div>
         </section>
 
-        {/* Modern Features Section */}
-        <Suspense fallback={<LoadingSection />}>
+        {/* ModernFeaturesSection */}
+        <Suspensefallback = { <LoadingSection / >  }>
           <ModernFeatures />
         </Suspense>
 
-        {/* Enhanced Testimonials Section */}
-        <Suspense fallback={<LoadingSection />}>
+        {/* EnhancedTestimonialsSection */}
+        <Suspensefallback={ <LoadingSection / >  }>
           <EnhancedTestimonials />
         </Suspense>
 
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-zion-blue to-zion-purple relative overflow-hidden'>
-          <div className='absolute inset-0 bg-black opacity-10'></div>
-          <div className='container mx-auto px-6 text-center relative z-10'>
-            <h2 className='text-4xl font-bold text-white mb-6 animate-slide-up'>
-              Ready to Transform Your Business?
+        {/* CTASection */}
+        <sectionclassName='py-20bg-gradient-to-rfrom-zion-blueto-zion-purplerelativeoverflow-hidden'>
+          <divclassName='absoluteinset-0bg-blackopacity-10' />
+          <divclassName='containermx-autopx-6text-centerrelativez-10'>
+            <h2className='text-4xlfont-boldtext-whitemb-6animate-slide-up'>
+              ReadytoTransform YourBusiness?
             </h2>
-            <p className='text-xl text-zion-slate-light mb-8 max-w-2xl mx-auto animate-fade-in'>
-              Join thousands of companies that trust Zion Tech Group for their
-              technology needs. Let&apos;s build something amazing together.
+            <pclassName='text-xltext-zion-slate-lightmb-8max-w-2xlmx-autoanimate-fade-in'>
+              Jointhousandsof companiesthattrust ZionTechGroup fortheirtechnology needs. Let&apos; sbuildsomething amazingtogether.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group'
+            <divclassName='flexflex-colsm: flex-rowgap-4justify-center'>
+              <Linkto='/contact'
+                className='bg-whitetext-zion-bluehover:bg-zion-slate-lightpx-8py-4rounded-lgfont-semiboldtext-lgtransition-allduration-300hover:scale-105hover:shadow-2xlflexitems-centerjustify-centergap-2group'
               >
-                <Target className='w-5 h-5 group-hover:rotate-12 transition-transform duration-300' />
-                Start Your Journey Today
+                <TargetclassName='w-5 h-5group-hover:rotate-12transition-transformduration-300' />
+                StartYourJourney Today
               </Link>
-              <Link
-                to='/contact'
-                className='border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl'
+              <Linkto='/contact'
+                className='border-2border-whitetext-whitehover:bg-whitehover:text-zion-bluepx-8py-4rounded-lgfont-semiboldtext-lgtransition-allduration-300hover:scale-105hover:shadow-2xl'
               >
-                Schedule a Call
+                ScheduleaCall
               </Link>
             </div>
           </div>
@@ -392,4 +346,4 @@ const HomeOptimized = () => {
   );
 };
 
-export default HomeOptimized;
+exportdefaultHomeOptimized;

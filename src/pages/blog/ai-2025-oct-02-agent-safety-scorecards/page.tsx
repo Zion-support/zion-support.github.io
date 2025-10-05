@@ -1,39 +1,32 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function AgentSafetyScorecards(): React.JSX.Element {
+exportdefaultfunction AgentSafetyScorecards(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>AI 2025: Agent Safety Scorecards</title>
-        <meta
-          name='description'
-          content='KPIs, budgets, and rollback triggers that keep autonomous agents safe at speed.'
+        <title>AI2025: AgentSafetyScorecards</title>
+        <meta name='description'
+          content='KPIsbudgetsandrollbacktriggers thatkeepautonomous agentssafeat speed.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          AI 2025: Agent Safety Scorecards
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          AI2025: AgentSafetyScorecards
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Design scorecards for agents with KPI-linked budgets, canaries, and
-          deterministic rollback.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Designscorecardsfor agentswithKPI-linkedbudgetscanariesanddeterministicrollback.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            Keep autonomous agents safe without slowing teams. Wire KPIs to
-            scorecards and budgeted actions. Use live canaries to detect
-            regressions and trigger instant rollback when thresholds are
-            crossed.
+            Keepautonomousagents safewithoutslowing teams. WireKPIsto
+            scorecardsandbudgeted actions. Uselivecanaries todetectregressions andtriggerinstant rollbackwhenthresholds arecrossed.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

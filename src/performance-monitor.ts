@@ -1,19 +1,17 @@
-// Performance Monitoring Script
-const performanceObserver = new PerformanceObserver(list => {
-  for (const entry of list.getEntries()) {
-    if (entry.entryType === 'navigation') {
-      console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart);
-    }
-    if (entry.entryType === 'paint') {
-      console.log('Paint Time:', entry.startTime);
+// PerformanceMonitoringScript
+constperformanceObserver = newPerformanceObserver(list => { 
+  for (constentryof list.getEntries()) {
+    if (entry.entryType = == 'navigation') {
+      console.log('PageLoadTime:'entry.loadEventEnd - entry.loadEventStart);
+     }if (entry.entryType = == 'paint') {
+      console.log('PaintTime:'entry.startTime);
     }
   }
 });
 
-performanceObserver.observe({ entryTypes: ['navigation', 'paint'] });
+performanceObserver.observe({ entryTypes: ['navigation''paint'] });
 
-// Web Vitals
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+// WebVitalsimport { getCLSgetFIDgetFCPgetLCPgetTTFB } from 'web-vitals';
 
 getCLS(console.log);
 getFID(console.log);

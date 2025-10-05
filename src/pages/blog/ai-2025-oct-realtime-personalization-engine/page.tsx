@@ -1,318 +1,276 @@
-import { ArrowLeft, DollarSign, Target, Users, Zap } from 'lucide-react';
+import { ArrowLeftDollarSignTargetUsersZap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
-export default function RealtimePersonalizationEngine2025() {
+exportdefaultfunction RealtimePersonalizationEngine2025() { 
   return (
     <>
       <Helmet>
         <title>
-          Real-Time AI Personalization Engine 2025 — 98.4% Relevance, 8.7x
-          Conversion Lift, $234M+ Revenue Growth | Zion Tech Group
+          Real-TimeAIPersonalization Engine2025 — 98.4% Relevance8.7xConversionLift$234M+ RevenueGrowth | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Deploy real-time AI personalization that adapts to user behavior in milliseconds. Achieve 98.4% relevance scoring, 8.7x conversion improvements, and drive $234M+ incremental revenue growth.'
+        <metaname = 'description'
+          content='Deployreal-timeAIpersonalization thatadaptsto userbehaviorin milliseconds. Achieve98.4% relevancescoring8.7xconversionimprovementsanddrive $234M+ incrementalrevenuegrowth.'
         />
-        <meta
-          name='keywords'
-          content='AI personalization, real-time personalization, recommendation engine, customer experience, conversion optimization, behavioral targeting, predictive personalization, marketing AI'
+        <metaname = 'keywords'
+          content='AIpersonalizationreal-timepersonalizationrecommendationenginecustomerexperienceconversionoptimizationbehavioraltargetingpredictivepersonalizationmarketingAI'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-realtime-personalization-engine'
         />
       </Helmet>
 
-      <article className='min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900 text-white'>
-        <div className='container mx-auto px-4 py-12 max-w-4xl'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center text-rose-400 hover:text-rose-300 mb-8 transition-colors'
+      <articleclassName='min-h-screenbg-gradient-to-brfrom-slate-900via-rose-900to-slate-900text-white'>
+        <divclassName='containermx-autopx-4py-12max-w-4xl'>
+          <Linkto='/blog'
+            className='inline-flexitems-centertext-rose-400hover:text-rose-300mb-8transition-colors'
           >
-            <ArrowLeft className='mr-2 h-4 w-4' />
-            Back to Blog
+            <ArrowLeftclassName='mr-2 h-4 w-4' />
+            BacktoBlog
           </Link>
 
-          <header className='mb-12'>
-            <div className='flex items-center gap-4 mb-6'>
-              <span className='px-4 py-2 bg-rose-500/20 text-rose-300 rounded-full text-sm font-semibold border border-rose-500/30'>
-                Personalization AI
+          <headerclassName='mb-12'>
+            <divclassName='flexitems-centergap-4mb-6'>
+              <spanclassName='px-4py-2bg-rose-500/20text-rose-300rounded-fulltext-smfont-semiboldborderborder-rose-500/30'>
+                PersonalizationAI
               </span>
-              <span className='text-gray-400'>October 1, 2025</span>
+              <spanclassName='text-gray-400'>October 12025</span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-rose-400 via-pink-400 to-purple-400 text-transparent bg-clip-text leading-tight'>
-              Real-Time AI Personalization: The Revenue Multiplication Engine
+            <h1className = 'text-5xlmd: text-6xlfont-boldmb-6bg-gradient-to-rfrom-rose-400via-pink-400to-purple-400text-transparentbg-clip-textleading-tight'>
+              Real-TimeAIPersonalization: TheRevenueMultiplication Engine
             </h1>
 
-            <p className='text-xl text-gray-300 leading-relaxed'>
-              Deploy AI personalization that adapts to every user interaction in
-              real-time. Achieve 98.4% relevance accuracy, multiply conversions
-              by 8.7x, and unlock $234M+ in incremental revenue.
+            <pclassName='text-xltext-gray-300leading-relaxed'>
+              DeployAIpersonalization thatadaptsto everyuserinteraction inreal-time. Achieve98.4% relevanceaccuracymultiplyconversionsby 8.7xandunlock $234M+ inincrementalrevenue.
             </p>
           </header>
 
-          <div className='prose prose-invert prose-lg max-w-none'>
-            <div className='bg-gradient-to-r from-rose-500/10 to-purple-500/10 border border-rose-500/20 rounded-xl p-8 mb-12'>
-              <h2 className='text-3xl font-bold mb-6 flex items-center gap-3'>
-                <Target className='h-8 w-8 text-rose-400' />
-                Revenue Impact
+          <divclassName = 'proseprose-invertprose-lgmax-w-none'>
+            <divclassName='bg-gradient-to-rfrom-rose-500/10to-purple-500/10borderborder-rose-500/20rounded-xlp-8mb-12'>
+              <h2className='text-3xlfont-boldmb-6flexitems-centergap-3'>
+                <TargetclassName='h-8 w-8text-rose-400' />
+                RevenueImpact
               </h2>
-              <ul className='space-y-4 text-lg'>
-                <li className='flex items-start gap-3'>
-                  <Zap className='h-6 w-6 text-yellow-400 mt-1 flex-shrink-0' />
+              <ulclassName='space-y-4text-lg'>
+                <liclassName='flexitems-startgap-3'>
+                  <ZapclassName='h-6 w-6text-yellow-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>98.4% Relevance:</strong> AI predicts user intent
-                    and preferences with near-perfect accuracy
+                    <strong>98.4% Relevance: </strong> AIpredictsuser intentandpreferences withnear-perfectaccuracy
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <Users className='h-6 w-6 text-blue-400 mt-1 flex-shrink-0' />
+                <liclassName='flexitems-startgap-3'>
+                  <UsersclassName='h-6 w-6text-blue-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>8.7x Conversion Lift:</strong> Personalized
-                    experiences drive dramatic engagement increases
+                    <strong>8.7xConversionLift:</strong> Personalizedexperiencesdrive dramaticengagementincreases
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <DollarSign className='h-6 w-6 text-green-400 mt-1 flex-shrink-0' />
+                <liclassName='flexitems-startgap-3'>
+                  <DollarSignclassName='h-6 w-6text-green-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>$234M+ Revenue:</strong> Average incremental revenue
-                    for enterprise deployments
+                    <strong>$234M+ Revenue:</strong> Averageincrementalrevenue
+                    forenterprisedeployments
                   </span>
                 </li>
               </ul>
             </div>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-rose-300'>
-                The Personalization Imperative
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-rose-300'>
+                ThePersonalizationImperative
               </h2>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Generic, one-size-fits-all experiences no longer work. 78% of
-                customers expect personalized interactions and abandon brands
-                that fail to deliver. Yet traditional personalization based on
-                simple rules and segmentation achieves only 23% relevance on
-                average—barely better than random.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Genericone-size-fits-allexperiencesno longerwork. 78% ofcustomersexpect personalizedinteractionsand abandonbrandsthat failtodeliver. Yettraditionalpersonalization basedonsimple rulesandsegmentation achievesonly23% relevanceonaverage—barelybetterthan random.
               </p>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Real-time AI personalization represents a quantum leap forward.
-                These systems process thousands of signals per user per
-                second—behavioral patterns, contextual factors, intent signals,
-                and predictive models—to deliver perfectly tailored experiences
-                that feel magical yet natural.
+              <pclassName = 'text-gray-300mb-4leading-relaxed'>
+                Real-timeAIpersonalization representsaquantum leapforward.
+                Thesesystemsprocess thousandsofsignals peruserper
+                second—behavioralpatternscontextualfactorsintentsignals
+                andpredictivemodels—todeliverperfectly tailoredexperiencesthat feelmagicalyet natural.
               </p>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-rose-300'>
-                The Personalization Engine Architecture
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-rose-300'>
+                ThePersonalizationEngine Architecture
               </h2>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  1. Real-Time Signal Processing
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-rose-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  1. Real-TimeSignalProcessing
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Stream processing infrastructure ingests and analyzes user
-                  interactions in under 50ms. Behavioral signals, contextual
-                  data, and intent markers flow through the system continuously,
-                  building dynamic user models that evolve with every action.
+                <pclassName='text-gray-300mb-4'>
+                  Streamprocessinginfrastructure ingestsandanalyzes userinteractionsin under50ms. Behavioralsignalscontextualdataandintentmarkers flowthroughthe systemcontinuously
+                  buildingdynamicuser modelsthatevolve witheveryaction.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
-                  <li>Event stream processing at 10M+ events/second scale</li>
-                  <li>Feature computation pipelines with sub-100ms latency</li>
-                  <li>Real-time user state synchronization across channels</li>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
+                  <li>Eventstreamprocessing at10M+ events/secondscale</li>
+                  <li>Featurecomputationpipelines withsub-100mslatency</li>
+                  <li>Real-timeuserstate synchronizationacrosschannels</li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  2. Predictive Intent Modeling
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-rose-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  2. PredictiveIntentModeling
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Deep learning models predict user goals, preferences, and
-                  likelihood of conversion based on behavioral patterns and
-                  contextual signals. Multi-task learning enables simultaneous
-                  optimization for engagement, conversion, and long-term value.
+                <pclassName='text-gray-300mb-4'>
+                  Deeplearningmodels predictusergoalspreferencesandlikelihoodof conversionbasedon behavioralpatternsand
+                  contextualsignals. Multi-tasklearningenables simultaneousoptimizationfor engagementconversionandlong-termvalue.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Transformer models capture long-range behavioral
-                    dependencies
+                    Transformermodelscapture long-rangebehavioraldependencies
                   </li>
                   <li>
-                    Intent classification with 96% accuracy across 200+
+                    Intentclassificationwith 96% accuracyacross200+
                     categories
                   </li>
                   <li>
-                    Next-action prediction guides experience orchestration
+                    Next-actionpredictionguides experienceorchestration
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  3. Dynamic Content Optimization
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-rose-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  3. DynamicContentOptimization
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  AI agents orchestrate content, layout, messaging, and offers
-                  in real-time based on predicted user preferences. Multi-armed
-                  bandit algorithms balance exploration and exploitation to
-                  continuously improve personalization performance.
+                <pclassName='text-gray-300mb-4'>
+                  AIagentsorchestrate contentlayoutmessagingandoffersin real-timebasedon predicteduserpreferences. Multi-armedbanditalgorithms balanceexplorationand exploitationtocontinuously improvepersonalizationperformance.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Contextual bandits optimize for immediate and long-term
-                    value
+                    Contextualbanditsoptimize forimmediateand long-termvalue
                   </li>
                   <li>
-                    A/B testing automation discovers winning variations
+                    A/Btestingautomation discoverswinningvariations
                     automatically
                   </li>
                   <li>
-                    Causal inference ensures changes drive true lift, not
-                    correlation
+                    Causalinferenceensures changesdrivetrue liftnotcorrelation
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-rose-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  4. Cross-Channel Orchestration
+              <divclassName = 'bg-slate-800/50rounded-xlp-6mb-6borderborder-rose-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  4. Cross-ChannelOrchestration
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Unified customer profiles enable consistent personalization
-                  across web, mobile, email, and in-store. Journey optimization
-                  determines the best message, channel, and timing to move
-                  customers toward high-value outcomes.
+                <pclassName='text-gray-300mb-4'>
+                  Unifiedcustomerprofiles enableconsistentpersonalization
+                  acrosswebmobileemailandin-store. Journeyoptimizationdetermines thebestmessagechannelandtimingto movecustomerstoward high-valueoutcomes.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Identity resolution links anonymous and known user sessions
+                    Identityresolutionlinks anonymousandknown usersessions
                   </li>
                   <li>
-                    Channel attribution models optimize cross-channel strategies
+                    Channelattributionmodels optimizecross-channelstrategies
                   </li>
                   <li>
-                    Real-time decisioning APIs enable personalization anywhere
+                    Real-timedecisioningAPIs enablepersonalizationanywhere
                   </li>
                 </ul>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-rose-300'>
-                Enterprise Success Stories
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-rose-300'>
+                EnterpriseSuccessStories
               </h2>
-              <div className='grid md:grid-cols-2 gap-6 mb-8'>
-                <div className='bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-xl p-6 border border-rose-500/30'>
-                  <h3 className='text-2xl font-bold mb-4 text-rose-300'>
-                    Global Retail Leader
+              <divclassName='gridmd: grid-cols-2gap-6mb-8'>
+                <divclassName='bg-gradient-to-brfrom-rose-500/20to-pink-500/20rounded-xlp-6borderborder-rose-500/30'>
+                  <h3className='text-2xlfont-boldmb-4text-rose-300'>
+                    GlobalRetailLeader
                   </h3>
-                  <ul className='space-y-3 text-gray-300'>
-                    <li>• 12.4x increase in conversion rates</li>
-                    <li>• $387M incremental annual revenue</li>
-                    <li>• 94% improvement in customer satisfaction</li>
-                    <li>• 67% higher customer lifetime value</li>
+                  <ulclassName='space-y-3text-gray-300'>
+                    <li>• 12.4xincreasein conversionrates</li>
+                    <li>• $387Mincrementalannual revenue</li>
+                    <li>• 94% improvementincustomer satisfaction</li>
+                    <li>• 67% highercustomerlifetime value</li>
                   </ul>
                 </div>
-                <div className='bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-xl p-6 border border-pink-500/30'>
-                  <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                    Financial Services Platform
+                <divclassName='bg-gradient-to-brfrom-pink-500/20to-purple-500/20rounded-xlp-6borderborder-pink-500/30'>
+                  <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                    FinancialServicesPlatform
                   </h3>
-                  <ul className='space-y-3 text-gray-300'>
-                    <li>• 9.2x lift in product adoption</li>
-                    <li>• $156M additional cross-sell revenue</li>
-                    <li>• 82% reduction in customer churn</li>
-                    <li>• 23x ROI in first 18 months</li>
+                  <ulclassName='space-y-3text-gray-300'>
+                    <li>• 9.2xliftin productadoption</li>
+                    <li>• $156Madditionalcross-sellrevenue</li>
+                    <li>• 82% reductionincustomer churn</li>
+                    <li>• 23xROIin first18months</li>
                   </ul>
                 </div>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-rose-300'>
-                Advanced Personalization Capabilities
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-rose-300'>
+                AdvancedPersonalizationCapabilities
               </h2>
-              <div className='space-y-6'>
-                <div className='bg-slate-800/50 rounded-xl p-6 border-l-4 border-rose-500'>
-                  <h3 className='text-xl font-bold mb-3 text-rose-300'>
-                    Micro-Moment Personalization
+              <divclassName='space-y-6'>
+                <divclassName='bg-slate-800/50rounded-xlp-6border-l-4border-rose-500'>
+                  <h3className='text-xlfont-boldmb-3text-rose-300'>
+                    Micro-MomentPersonalization
                   </h3>
-                  <p className='text-gray-300'>
-                    Detect and respond to high-intent micro-moments—brief
-                    windows where users are receptive to specific messages. AI
-                    identifies these opportunities in real-time and delivers
-                    perfectly timed interventions that feel helpful, not
-                    intrusive.
+                  <pclassName='text-gray-300'>
+                    Detectandrespond tohigh-intentmicro-moments—briefwindowswhere usersarereceptive tospecificmessages. AIidentifiesthese opportunitiesinreal-timeanddelivers
+                    perfectlytimedinterventions thatfeelhelpfulnotintrusive.
                   </p>
                 </div>
-                <div className='bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500'>
-                  <h3 className='text-xl font-bold mb-3 text-pink-300'>
-                    Affinity-Based Recommendations
+                <divclassName = 'bg-slate-800/50rounded-xlp-6border-l-4border-pink-500'>
+                  <h3className='text-xlfont-boldmb-3text-pink-300'>
+                    Affinity-BasedRecommendations
                   </h3>
-                  <p className='text-gray-300'>
-                    Graph neural networks model complex relationships between
-                    users, products, and content. Collaborative filtering
-                    combines with deep learning to surface non-obvious
-                    recommendations that surprise and delight.
+                  <pclassName='text-gray-300'>
+                    Graphneuralnetworks modelcomplexrelationships betweenusersproductsandcontent. Collaborativefilteringcombines withdeeplearning tosurfacenon-obviousrecommendationsthat surpriseanddelight.
                   </p>
                 </div>
-                <div className='bg-slate-800/50 rounded-xl p-6 border-l-4 border-purple-500'>
-                  <h3 className='text-xl font-bold mb-3 text-purple-300'>
-                    Privacy-Preserving Personalization
+                <divclassName = 'bg-slate-800/50rounded-xlp-6border-l-4border-purple-500'>
+                  <h3className='text-xlfont-boldmb-3text-purple-300'>
+                    Privacy-PreservingPersonalization
                   </h3>
-                  <p className='text-gray-300'>
-                    Federated learning and differential privacy enable powerful
-                    personalization while protecting user data. GDPR and CCPA
-                    compliant by design, with transparent data usage and user
+                  <pclassName='text-gray-300'>
+                    Federatedlearningand differentialprivacyenable powerfulpersonalizationwhile protectinguserdata. GDPRandCCPA
+                    compliantbydesignwithtransparentdata usageanduser
                     control.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-rose-300'>
-                The Personalization Competitive Moat
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-rose-300'>
+                ThePersonalizationCompetitive Moat
               </h2>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Real-time personalization creates a compounding advantage. As
-                more users interact with your system, AI models become more
-                accurate. Better personalization drives higher engagement,
-                generating more data to improve further. This virtuous cycle
-                accelerates over time, making it increasingly difficult for
-                competitors to match your relevance.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Real-timepersonalizationcreates acompoundingadvantage. Asmoreusers interactwithyour systemAImodelsbecome moreaccurate. Betterpersonalizationdrives higherengagement
+                generatingmoredata toimprovefurther. Thisvirtuouscycle
+                acceleratesovertimemakingitincreasingly difficultforcompetitors tomatchyour relevance.
               </p>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Organizations deploying AI personalization report 340% faster
-                growth than competitors. Early adopters establish market
-                leadership positions that compound quarterly as their
-                personalization engines continuously improve while competitors
-                struggle with static, rule-based approaches.
+              <pclassName = 'text-gray-300mb-4leading-relaxed'>
+                OrganizationsdeployingAI personalizationreport340% fastergrowththan competitors. Earlyadoptersestablish marketleadershippositions thatcompoundquarterly astheirpersonalization enginescontinuouslyimprove whilecompetitorsstruggle withstaticrule-basedapproaches.
               </p>
             </section>
 
-            <div className='bg-gradient-to-r from-rose-600 to-purple-600 rounded-xl p-8 text-center'>
-              <h2 className='text-3xl font-bold mb-4'>
-                Multiply Your Revenue with AI Personalization
+            <divclassName = 'bg-gradient-to-rfrom-rose-600to-purple-600rounded-xlp-8text-center'>
+              <h2className='text-3xlfont-boldmb-4'>
+                MultiplyYourRevenue withAIPersonalization
               </h2>
-              <p className='text-xl mb-6 text-rose-100'>
-                Deploy real-time personalization and transform every customer
-                interaction into revenue opportunity.
+              <pclassName='text-xlmb-6text-rose-100'>
+                Deployreal-timepersonalizationand transformeverycustomer
+                interactionintorevenue opportunity.
               </p>
-              <Link
-                to='/contact'
-                className='inline-flex items-center px-8 py-4 bg-white text-rose-600 rounded-lg font-bold text-lg hover:bg-rose-50 transition-colors'
+              <Linkto='/contact'
+                className='inline-flexitems-centerpx-8py-4bg-whitetext-rose-600rounded-lgfont-boldtext-lghover: bg-rose-50transition-colors'
               >
-                Start Your Personalization Journey
-                <Target className='ml-2 h-5 w-5' />
+                StartYourPersonalization Journey
+                <TargetclassName='ml-2 h-5 w-5' />
               </Link>
             </div>
           </div>
         </div>
       </article>
-    </>
-  );
-}
+    </ > );
+ }

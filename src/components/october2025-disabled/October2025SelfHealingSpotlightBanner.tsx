@@ -1,81 +1,78 @@
 import { Link } from 'react-router-dom';
 
-export default function October2025SelfHealingSpotlightBanner() {
+exportdefaultfunction October2025SelfHealingSpotlightBanner() { 
   return (
-    <div className='bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white py-12 px-4'>
-      <div className='max-w-6xl mx-auto'>
-        <div className='flex flex-col md:flex-row items-center gap-8'>
-          <div className='flex-1'>
-            <div className='inline-block bg-red-500 text-white px-3 py-1 rounded-full text-xs font-bold mb-3 animate-bounce'>
-              🔥 HOT - JUST PUBLISHED TODAY
+    <divclassName = 'bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900text-whitepy-12px-4'>
+      <divclassName='max-w-6xlmx-auto'>
+        <divclassName='flexflex-colmd: flex-rowitems-centergap-8'>
+          <divclassName='flex-1'>
+            <divclassName='inline-blockbg-red-500text-whitepx-3py-1rounded-fulltext-xsfont-boldmb-3animate-bounce'>
+              🔥 HOT - JUSTPUBLISHEDTODAY
             </div>
-            <h3 className='text-4xl font-bold mb-4'>
-              Agentic Self-Healing Infrastructure
+            <h3className='text-4xlfont-boldmb-4'>
+              AgenticSelf-HealingInfrastructure
             </h3>
-            <p className='text-xl text-gray-300 mb-4'>
-              AI agents that autonomously detect, diagnose, and resolve
-              infrastructure issues before they impact your business
+            <pclassName='text-xltext-gray-300mb-4'>
+              AIagentsthat autonomouslydetectdiagnoseandresolveinfrastructure issuesbeforethey impactyourbusiness
             </p>
-            <div className='grid grid-cols-2 gap-4 mb-6'>
-              <div className='bg-white/10 p-3 rounded-lg'>
-                <div className='text-3xl font-bold text-green-400'>$5.4B</div>
-                <div className='text-sm text-gray-300'>Operational Savings</div>
+            <divclassName = 'gridgrid-cols-2gap-4mb-6'>
+              <divclassName='bg-white/10p-3rounded-lg'>
+                <divclassName='text-3xlfont-boldtext-green-400'>$5.4B</div>
+                <divclassName='text-smtext-gray-300'>OperationalSavings</div>
               </div>
-              <div className='bg-white/10 p-3 rounded-lg'>
-                <div className='text-3xl font-bold text-green-400'>99.999%</div>
-                <div className='text-sm text-gray-300'>Uptime Achieved</div>
+              <divclassName='bg-white/10p-3rounded-lg'>
+                <divclassName='text-3xlfont-boldtext-green-400'>99.999%</div>
+                <divclassName='text-smtext-gray-300'>UptimeAchieved</div>
               </div>
-              <div className='bg-white/10 p-3 rounded-lg'>
-                <div className='text-3xl font-bold text-green-400'>2.3 min</div>
-                <div className='text-sm text-gray-300'>
-                  Mean Time to Resolution
+              <divclassName='bg-white/10p-3rounded-lg'>
+                <divclassName='text-3xlfont-boldtext-green-400'>2.3min</div>
+                <divclassName='text-smtext-gray-300'>
+                  MeanTimeto Resolution
                 </div>
               </div>
-              <div className='bg-white/10 p-3 rounded-lg'>
-                <div className='text-3xl font-bold text-green-400'>94%</div>
-                <div className='text-sm text-gray-300'>
-                  Auto-Resolution Rate
+              <divclassName='bg-white/10p-3rounded-lg'>
+                <divclassName='text-3xlfont-boldtext-green-400'>94%</div>
+                <divclassName='text-smtext-gray-300'>
+                  Auto-ResolutionRate
                 </div>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution'
-              className='inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl'
+            <Linkto='/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution'
+              className='inline-blockbg-gradient-to-rfrom-purple-500to-pink-500text-whitepx-8py-4rounded-xlfont-boldtext-lghover: from-purple-600hover:to-pink-600transition-allshadow-lghover:shadow-xl'
             >
-              Read Complete Guide + Fortune 500 Case Study →
+              ReadCompleteGuide + Fortune500Case Study →
             </Link>
           </div>
-          <div className='flex-1'>
-            <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-8 rounded-2xl border-2 border-purple-500/50'>
-              <h4 className='text-2xl font-bold mb-4'>🎯 Key Innovations</h4>
-              <ul className='space-y-3 text-lg'>
-                <li className='flex items-start'>
-                  <span className='text-green-400 mr-3'>✓</span>
+          <divclassName='flex-1'>
+            <divclassName='bg-gradient-to-brfrom-purple-500/20to-pink-500/20p-8rounded-2xlborder-2border-purple-500/50'>
+              <h4className='text-2xlfont-boldmb-4'>🎯 KeyInnovations</h4>
+              <ulclassName='space-y-3text-lg'>
+                <liclassName='flexitems-start'>
+                  <spanclassName='text-green-400mr-3'>✓</span>
                   <span>
-                    Predictive anomaly detection 15-30 min before failure
+                    Predictiveanomalydetection 15-30minbefore failure
                   </span>
                 </li>
-                <li className='flex items-start'>
-                  <span className='text-green-400 mr-3'>✓</span>
-                  <span>Multi-agent coordination for complex issues</span>
+                <liclassName='flexitems-start'>
+                  <spanclassName='text-green-400mr-3'>✓</span>
+                  <span>Multi-agentcoordinationfor complexissues</span>
                 </li>
-                <li className='flex items-start'>
-                  <span className='text-green-400 mr-3'>✓</span>
-                  <span>Self-learning runbooks that improve over time</span>
+                <liclassName='flexitems-start'>
+                  <spanclassName='text-green-400mr-3'>✓</span>
+                  <span>Self-learningrunbooksthat improveovertime</span>
                 </li>
-                <li className='flex items-start'>
-                  <span className='text-green-400 mr-3'>✓</span>
-                  <span>Zero-touch operations with safety mechanisms</span>
+                <liclassName='flexitems-start'>
+                  <spanclassName='text-green-400mr-3'>✓</span>
+                  <span>Zero-touchoperationswith safetymechanisms</span>
                 </li>
-                <li className='flex items-start'>
-                  <span className='text-green-400 mr-3'>✓</span>
-                  <span>Cross-cloud orchestration and optimization</span>
+                <liclassName='flexitems-start'>
+                  <spanclassName='text-green-400mr-3'>✓</span>
+                  <span>Cross-cloudorchestrationand optimization</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

@@ -1,5 +1,5 @@
 import React from 'react';
-interface FeaturedContent {
+interfaceFeaturedContent {
   id: number;
   title: string;
   category: string;
@@ -11,241 +11,229 @@ interface FeaturedContent {
   icon: React.ReactNode;
   link: string;
 }
-const NewContentAdvertisingBanner: React.FC = () => {
-  const featuredContent: FeaturedContent[] = [
+constNewContentAdvertisingBanner: React.FC = () => { 
+  constfeaturedContent: FeaturedContent[] = [
     {
-      id: 0,
-      title: 'Governed Agent Rollbacks',
-      category: 'AI Operations',
-      readTime: '7 min',
-      rating: 5.0,
-      readers: '25K+',
-      badge: 'NEW',
-      gradient: 'from-pink-500 to-red-500',
-      icon: <Sparkles className="w-6 h-6" />,
+      id: 0
+      title: 'GovernedAgentRollbacks'
+      category: 'AIOperations'
+      readTime: '7min'
+      rating: 5.0
+      readers: '25K+'
+      badge: 'NEW'
+      gradient: 'from-pink-500to-red-500'
+      icon: <SparklesclassName = "w-6 h-6" / > 
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
-    },
-    {
-      id: 7,
-      title: 'Consentless Personalization (Edge)',
-      category: 'Edge Computing',
-      readTime: '6 min',
-      rating: 4.9,
-      readers: '19K+',
-      badge: 'FEATURED',
-      gradient: 'from-teal-500 to-cyan-500',
-      icon: <TrendingUp className="w-6 h-6" />,
+     }
+    { 
+      id:  7
+      title: 'ConsentlessPersonalization (Edge)'
+      category: 'EdgeComputing'
+      readTime: '6min'
+      rating: 4.9
+      readers: '19K+'
+      badge: 'FEATURED'
+      gradient: 'from-teal-500to-cyan-500'
+      icon: <TrendingUpclassName = "w-6 h-6" / > 
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
-    },
-    {
-      id: 1,
-      title: 'AI 2027: Operational Trust Blueprint',
-      category: 'AI Strategy',
-      readTime: '8 min',
-      rating: 4.9,
-      readers: '58K+',
-      badge: 'NEW',
-      gradient: 'from-blue-500 to-purple-500',
-      icon: <Star className="w-6 h-6" />,
+     }
+    { 
+      id:  1
+      title: 'AI2027: OperationalTrustBlueprint'
+      category: 'AIStrategy'
+      readTime: '8min'
+      rating: 4.9
+      readers: '58K+'
+      badge: 'NEW'
+      gradient: 'from-blue-500to-purple-500'
+      icon: <StarclassName = "w-6 h-6" / > 
       link: '/blog/ai-2027-operational-trust-blueprint'
-    },
-    {
-      id: 2,
-      title: 'Edge 2026: Private Feature Flags',
-      category: 'Architecture',
-      readTime: '7 min',
-      rating: 4.8,
-      readers: '41K+',
-      badge: 'TRENDING',
-      gradient: 'from-cyan-500 to-blue-500',
-      icon: <TrendingUp className="w-6 h-6" />,
+     }
+    { 
+      id:  2
+      title: 'Edge2026: PrivateFeatureFlags'
+      category: 'Architecture'
+      readTime: '7min'
+      rating: 4.8
+      readers: '41K+'
+      badge: 'TRENDING'
+      gradient: 'from-cyan-500to-blue-500'
+      icon: <TrendingUpclassName = "w-6 h-6" / > 
       link: '/blog/edge-2026-private-feature-flags'
-    },
-    {
-      id: 3,
-      title: 'GenAI Quality Tiers v2 (2026)',
-      category: 'GenAI',
-      readTime: '8 min',
-      rating: 4.9,
-      readers: '47K+',
-      badge: 'FEATURED',
-      gradient: 'from-green-500 to-emerald-500',
-      icon: <Award className="w-6 h-6" />,
+     }
+    { 
+      id:  3
+      title: 'GenAIQualityTiers v2 (2026)'
+      category: 'GenAI'
+      readTime: '8min'
+      rating: 4.9
+      readers: '47K+'
+      badge: 'FEATURED'
+      gradient: 'from-green-500to-emerald-500'
+      icon: <AwardclassName = "w-6 h-6" / > 
       link: '/blog/genai-quality-tiers-v2-2026'
-    }
-  ];
-  const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
-    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
-    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
-    { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
-  ];
-  return (
-    <div className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+     }
+  ]; constachievements = [
+    {  value: '500K+'label: 'MonthlyReaders'icon: <UsersclassName = "w-8 h-8" / >  }
+    {  value: '98%'label: 'CustomerSatisfaction'icon: <StarclassName = "w-8 h-8" / >  }
+    {  value: '200+'label: 'ExpertArticles'icon: <AwardclassName = "w-8 h-8" / >  }
+    {  value: '50+'label: 'IndustryAwards'icon: <TargetclassName = "w-8 h-8" / >  }
+  ]; return (
+    <divclassName = "py-20bg-gradient-to-brfrom-indigo-900via-purple-900to-pink-900relativeoverflow-hidden">
+      {/* Animatedbackgroundeffects */}
+      <divclassName="absoluteinset-0overflow-hiddenopacity-20">
+        <divclassName="absolutetop-0left-1/4 w-96h-96bg-indigo-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-0right-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '2s' }} />
+        <divclassName = "absolutetop-1/2left-1/2 w-96h-96bg-pink-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '4s' }} />
       </div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
-            <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
-              🚀 NEW CONTENT LAUNCH • Sept 30, 2025
+      <divclassName = "containermx-autopx-6relativez-10">
+        {/* HeaderSection */}
+        <divclassName="text-centermb-16">
+          <divclassName="inline-flexitems-centergap-3px-6py-3rounded-fullbg-gradient-to-rfrom-indigo-500/20to-pink-500/20borderborder-indigo-500/30mb-8animate-fade-in">
+            <SparklesclassName="w-5 h-5text-indigo-400animate-pulse" />
+            <spanclassName="text-indigo-400font-boldtext-smtracking-wideruppercase">
+              🚀 NEWCONTENTLAUNCH • Sept302025
             </span>
-            <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
+            <SparklesclassName = "w-5 h-5text-pink-400animate-pulse" />
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
-            Revolutionary New Content Hub
+          <h2className="text-5xlmd: text-6xlfont-extraboldmb-6bg-gradient-to-rfrom-indigo-400via-purple-400to-pink-400bg-clip-texttext-transparentanimate-fade-in">
+            RevolutionaryNewContent Hub
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover groundbreaking insights, cutting-edge research, and revolutionary AI breakthroughs. 
-            Join 500K+ professionals who trust our content to stay ahead of the technology curve.
+          <pclassName="text-xltext-gray-300max-w-4xlmx-autoleading-relaxedmb-8">
+            Discovergroundbreakinginsightscutting-edgeresearchandrevolutionaryAI breakthroughs. 
+            Join500K+ professionalswhotrust ourcontentto stayaheadof thetechnologycurve.
           </p>
-          {/* Achievement Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {achievements.map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className="text-indigo-400 mb-2 flex justify-center">
+          {/* AchievementStats */}
+          <divclassName = "gridgrid-cols-2md: grid-cols-4gap-6max-w-4xlmx-auto">
+            { achievements.map((achievementindex) = > (
+              <divkey = { index  }className = "text-center">
+                <divclassName="text-indigo-400mb-2flexjustify-center">
                   {achievement.icon}
                 </div>
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-indigo-400 to-pink-400 bg-clip-text text-transparent mb-1">
+                <divclassName="text-3xlfont-extraboldbg-gradient-to-rfrom-indigo-400to-pink-400bg-clip-texttext-transparentmb-1">
                   {achievement.value}
                 </div>
-                <div className="text-gray-400 text-sm font-medium">
+                <divclassName="text-gray-400text-smfont-medium">
                   {achievement.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <div
-key={content.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              <div className="relative p-8">
+        {/* FeaturedContentCards */}
+        <divclassName = "gridmd: grid-cols-3gap-8mb-16">
+          { featuredContent.map((contentindex) = > (
+            <divkey = { content.id  }className = "grouprelativebg-white/5backdrop-blur-lgrounded-2xlborderborder-white/10hover: border-indigo-500/50transition-allduration-500overflow-hiddenhover:transformhover:scale-105hover:shadow-2xlhover:shadow-indigo-500/20"
+              style = { { animationDelay: `${index * 200 }ms` }}
+             > {/* Cardgloweffect */}
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${content.gradient }opacity-0group-hover: opacity-10transition-allduration-500`} />
+              <divclassName = "relativep-8">
                 {/* Badge */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-2 text-indigo-400">
+                <divclassName="flexitems-centerjustify-betweenmb-6">
+                  <divclassName="flexitems-centergap-2text-indigo-400">
                     {content.icon}
-                  </div>
-                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
+                  </div > <divclassName = { `px-3py-1.5rounded-fullbg-gradient-to-r ${content.gradient }text-whitetext-xsfont-boldborderborder-white/30`}>
                     {content.badge}
                   </div>
                 </div>
                 {/* Category */}
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400 text-xs font-semibold border border-indigo-500/30">
+                <divclassName = "mb-4">
+                  <spanclassName="inline-blockpx-3py-1rounded-fullbg-gradient-to-rfrom-indigo-500/20to-purple-500/20text-indigo-400text-xsfont-semiboldborderborder-indigo-500/30">
                     {content.category}
                   </span>
                 </div>
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors duration-300 leading-tight">
+                <h3className="text-2xlfont-boldtext-whitemb-4group-hover: text-indigo-400transition-colorsduration-300leading-tight">
                   {content.title}
                 </h3>
-                {/* Meta Info */}
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
-                  <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-indigo-400" />
+                {/* MetaInfo */}
+                <divclassName = "flexitems-centerjustify-betweentext-smtext-gray-500mb-6pb-6border-bborder-white/10">
+                  <spanclassName="flexitems-centergap-2">
+                    <ZapclassName="w-4 h-4text-indigo-400" />
                     {content.readTime}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <spanclassName="flexitems-centergap-1">
+                    <StarclassName="w-4 h-4text-yellow-400fill-current" />
                     {content.rating}
                   </span>
                 </div>
-                {/* Reader Count */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-2 text-gray-400">
-                    <Users className="w-4 h-4" />
-                    <span className="text-sm">{content.readers} readers</span>
+                {/* ReaderCount */}
+                <divclassName="mb-6">
+                  <divclassName="flexitems-centergap-2text-gray-400">
+                    <UsersclassName="w-4 h-4" />
+                    <spanclassName="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
-                {/* CTA Button */}
-                <a
-                  href={content.link || '/blog'}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
+                </div > {/* CTAButton */}
+                <ahref = { content.link || '/blog' }className={ `group/btnflexitems-centerjustify-centergap-2 w-fullbg-gradient-to-r ${content.gradient } hover: opacity-90text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-indigo-500/50transformhover:-translate-y-1`}
                 >
-                  <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <span>ReadNow</span>
+                  <ArrowRight,className = "w-4 h-4group-hover/btn: translate-x-1transition-transformduration-300" />
                 </a>
               </div>
             </div>
           ))}
         </div>
-        {/* Special Offer Section */}
-        <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
-              <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
-                LIMITED TIME OFFER
+        {/* SpecialOfferSection */}
+        <divclassName = "bg-gradient-to-rfrom-indigo-500/10to-purple-500/10rounded-3xlp-8md: p-12borderborder-indigo-500/20mb-16">
+          <divclassName="text-center">
+            <divclassName="inline-flexitems-centergap-2px-4py-2rounded-fullbg-gradient-to-rfrom-yellow-500/20to-orange-500/20borderborder-yellow-500/30mb-6">
+              <StarclassName="w-5 h-5text-yellow-400fill-current" />
+              <spanclassName="text-yellow-400font-boldtext-smtracking-wideruppercase">
+                LIMITEDTIMEOFFER
               </span>
             </div>
-            <h3 className="text-4xl font-extrabold text-white mb-4">
-              Get Premium Access to All Content
+            <h3className="text-4xlfont-extraboldtext-whitemb-4">
+              GetPremiumAccess toAllContent
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Unlock exclusive articles, early access to new content, and premium research reports. 
-              Join our elite community of technology leaders and innovators.
+            <pclassName="text-xltext-gray-300mb-8max-w-2xlmx-auto">
+              Unlockexclusivearticlesearlyaccessto newcontentandpremiumresearch reports. 
+              Joinourelite communityoftechnology leadersandinnovators.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="text-center">
-                <div className="text-3xl font-extrabold text-indigo-400 line-through opacity-50">$299/month</div>
-                <div className="text-2xl font-bold text-white">$99/month</div>
-                <div className="text-sm text-gray-400">First 3 months</div>
+            <divclassName = "flexflex-colsm: flex-rowgap-4justify-centeritems-center">
+              <divclassName="text-center">
+                <divclassName="text-3xlfont-extraboldtext-indigo-400line-throughopacity-50">$299/month</div>
+                <divclassName="text-2xlfont-boldtext-white">$99/month</div>
+                <divclassName="text-smtext-gray-400">First3months</div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/subscribe"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
+              <divclassName="flexflex-colsm:flex-rowgap-4">
+                <ahref="/subscribe"
+                  className="bg-gradient-to-rfrom-indigo-500to-purple-600hover:from-indigo-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-indigo-500/50flexitems-centerjustify-centergap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
-                  <span>Get Premium Access</span>
+                  <SparklesclassName="w-5 h-5" />
+                  <span>GetPremiumAccess</span>
                 </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                <ahref="/contact"
+                  className="border-2border-indigo-500text-indigo-400hover:bg-indigo-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2"
                 >
-                  <span>Contact Sales</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span>ContactSales</span>
+                  <ArrowRight,className="w-5 h-5" />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        {/* Newsletter Signup */}
-        <div className="text-center">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Stay Ahead with Our Newsletter
+        {/* NewsletterSignup */}
+        <divclassName = "text-center">
+          <divclassName="inline-blockp-1rounded-2xlbg-gradient-to-rfrom-indigo-500via-purple-500to-pink-500">
+            <divclassName="bg-slate-900rounded-xlpx-12py-10">
+              <h3className="text-3xlfont-boldtext-whitemb-4">
+                StayAheadwith OurNewsletter
               </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Get weekly insights, exclusive content previews, and early access to new articles. 
-                Join 100K+ subscribers who never miss a breakthrough.
+              <pclassName="text-gray-400mb-8max-w-2xlmx-auto">
+                Getweeklyinsightsexclusivecontentpreviewsandearlyaccess tonewarticles. 
+                Join100K+ subscriberswhonever missabreakthrough.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300" />
-                <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
+              <divclassName = "flexflex-colsm: flex-rowgap-4justify-centermax-w-mdmx-auto">
+                <inputtype="email"
+                  placeholder="Enteryouremail"
+                  className="flex-1px-6py-4rounded-xlbg-white/10borderborder-white/20text-whiteplaceholder-gray-400focus:outline-nonefocus:border-indigo-500focus:bg-white/20transition-allduration-300" />
+                <buttonclassName="bg-gradient-to-rfrom-indigo-500to-purple-600hover:from-indigo-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-indigo-500/50flexitems-centerjustify-centergap-2">
                   <span>Subscribe</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight,className="w-5 h-5" />
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-4">
-                No spam, unsubscribe at any time. We respect your privacy.
+              <pclassName="text-xstext-gray-500mt-4">
+                Nospamunsubscribeatany time. Werespectyour privacy.
               </p>
             </div>
           </div>
@@ -254,4 +242,4 @@ key={content.id}
     </div>
   );
 };
-export default NewContentAdvertisingBanner;
+exportdefaultNewContentAdvertisingBanner;

@@ -1,109 +1,104 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const SuccessStoriesShowcase: React.FC = () => {
-  const stories = [
+constSuccessStoriesShowcase: React.FC = () => { 
+  conststories = [
     {
-      company: "TechCorp International",
-      industry: "Technology",
-      icon: '🚀',
-      icon: <TrendingUp className="w-8 h-8" />,
-      result: "300% Revenue Growth",
-      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
+      company: "TechCorpInternational"
+      industry: "Technology"
+      icon: '🚀'
+      icon: <TrendingUpclassName = "w-8 h-8" / > 
+      result: "300% RevenueGrowth"
+      description: "ImplementedmultimodalAI achievingunprecedentedcustomer engagementandconversion rates.""
       metrics: [
-        "98% prediction accuracy",
-        "60% cost reduction",
-        "2M users impacted"
-      ],",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {",
-      company: "Global Manufacturing Inc",
-      industry: "Manufacturing",
-      icon: '🚀',
-      icon: <Target className="w-8 h-8" />,
-      result: "85% Downtime Reduction",
-      description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
+        "98% predictionaccuracy"
+        "60% costreduction"
+        "2Musersimpacted"
+      ]"
+      color: "from-blue-500to-cyan-500"
+     }
+    { "
+      company: "GlobalManufacturingInc"
+      industry: "Manufacturing"
+      icon: '🚀'
+      icon: <TargetclassName = "w-8 h-8" / > 
+      result: "85% DowntimeReduction"
+      description: "AIpredictivemaintenance transformedoperationseliminatingunplanneddowntime andreducingcosts.""
       metrics: [
-        "$2M annual savings",
-        "40% lower maintenance costs",
-        "99.9% uptime achieved"
-      ],",
-      color: "from-green-500 to-emerald-500"
-    },
-    {",
-      company: "FinanceFirst Bank",
-      industry: "Financial Services",
-      icon: '🚀',
-      icon: <Users className="w-8 h-8" />,
-      result: "99.95% Fraud Detection",
-      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
+        "$2Mannualsavings"
+        "40% lowermaintenancecosts"
+        "99.9% uptimeachieved"
+      ]"
+      color: "from-green-500to-emerald-500"
+     }
+    { "
+      company: "FinanceFirstBank"
+      industry: "FinancialServices"
+      icon: '🚀'
+      icon: <UsersclassName = "w-8 h-8" / > 
+      result: "99.95% FraudDetection"
+      description: "AIfraudprevention systemachievedindustry-leadingaccuracywhile reducingfalsepositives by95%.""
       metrics: [
-        "$5M fraud prevented",
-        "Sub-100ms detection",
-        "95% fewer false positives"
-      ],",
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
-  return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Success Stories
+        "$5Mfraudprevented"
+        "Sub-100msdetection"
+        "95% fewerfalsepositives"
+      ]"
+      color: "from-purple-500to-pink-500"
+     }
+  ]; return (
+    <sectionclassName = "py-20bg-gradient-to-brfrom-gray-50to-blue-50">
+      <divclassName="containermx-autopx-6">
+        <divclassName="text-centermb-16">
+          <h2className="text-4xlfont-boldtext-gray-900mb-4">
+            SuccessStories
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how leading companies are transforming their operations with our AI solutions
+          <pclassName="text-xltext-gray-600max-w-3xlmx-auto">
+            Seehowleading companiesaretransforming theiroperationswith ourAIsolutions
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
-          {stories.map((story, index) => (
-            <div
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
+        <divclassName="gridmd: grid-cols-3gap-8max-w-7xlmx-automb-12">
+          { stories.map((storyindex) = > (
+            <divkey = { index  }className = "bg-whiterounded-2xlshadow-xloverflow-hiddenhover: scale-105transition-allduration-300"
             >
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
-                <div className="flex items-center gap-3 mb-4">
+              <divclassName = { `bg-gradient-to-r ${story.color }text-whitep-6`}>
+                <divclassName = "flexitems-centergap-3mb-4">
                   {story.icon}
                   <div>
-                    <h3 className="font-bold text-xl">{story.company}</h3>
-                    <p className="text-sm opacity-90">{story.industry}</p>
+                    <h3className="font-boldtext-xl">{story.company}</h3>
+                    <pclassName="text-smopacity-90">{story.industry}</p>
                   </div>
                 </div>
-                <div className="text-3xl font-bold">{story.result}</div>
+                <divclassName="text-3xlfont-bold">{story.result}</div>
               </div>
-              <div className="p-6">
-                <p className="text-gray-600 mb-6">{story.description}</p>
-                <div className="space-y-2 mb-6">
-                  {story.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-gray-700">{metric}</span>
+              <divclassName="p-6">
+                <pclassName="text-gray-600mb-6">{story.description}</p>
+                <divclassName="space-y-2mb-6">
+                  { story.metrics.map((metricidx) = > (
+                    <divkey = { idx  }className = "flexitems-centergap-2">
+                      <divclassName="w-2 h-2bg-green-500rounded-full" />
+                      <spanclassName="text-smtext-gray-700">{metric}</span>
                     </div>
                   ))}
                 </div>
-                <Link
-                  to="/case-studies"
-                  className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
+                <Linkto = "/case-studies"
+                  className="text-indigo-600font-semiboldhover: text-indigo-800flexitems-centergap-2"
                 >
-                  Read Full Story
-                  <ArrowRight className="w-4 h-4" />
+                  ReadFullStory
+                  <ArrowRight,className="w-4 h-4" />
                 </Link>
               </div>
             </div>
           ))}
         </div>
-        <div className="text-center">
-          <Link
-            to="/case-studies"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
+        <divclassName = "text-center">
+          <Linkto="/case-studies"
+            className="inline-flexitems-centergap-2bg-indigo-600text-whitepx-8py-4rounded-xlfont-boldtext-lghover: bg-indigo-700transition-allhover:scale-105shadow-lg"
           >
-            View All Success Stories
-            <ArrowRight className="w-6 h-6" />
+            ViewAllSuccess Stories
+            <ArrowRight,className="w-6 h-6" />
           </Link>
         </div>
       </div>
     </section>
   );
 };
-export default SuccessStoriesShowcase;
+exportdefaultSuccessStoriesShowcase;

@@ -1,286 +1,261 @@
 /**
- * Performance Metrics Dashboard Utility
+ * PerformanceMetricsDashboard Utility
  *
- * Comprehensive performance monitoring and metrics collection for
- * web vitals, resource timing, and custom performance markers.
+ * Comprehensiveperformancemonitoring andmetricscollection for
+ * webvitalsresourcetimingandcustomperformance markers.
  *
- * Features:
- * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
- * - Custom performance markers
- * - Resource timing analysis
- * - Performance budgets and alerts
- * - Real-time performance dashboard data
+ * Features: * - CoreWebVitals tracking (LCPFIDCLSFCPTTFB)
+ * - Customperformancemarkers
+ * - Resourcetiminganalysis
+ * - Performancebudgetsand alerts
+ * - Real-timeperformancedashboard data
  */
 
-export interface PerformanceMetric {
+exportinterfacePerformanceMetric {
   name: string;
   value: number;
   rating: 'good' | 'needs-improvement' | 'poor';
   timestamp: number;
 }
 
-export interface ResourceTiming {
+exportinterfaceResourceTiming {
   name: string;
   duration: number;
   size: number;
   type: string;
 }
 
-export interface PerformanceBudget {
+exportinterfacePerformanceBudget {
   metric: string;
   budget: number;
   current: number;
   status: 'pass' | 'warn' | 'fail';
 }
 
-export interface PerformanceReport {
+exportinterfacePerformanceReport { 
   webVitals: {
     lcp?: PerformanceMetric;
     fid?: PerformanceMetric;
     cls?: PerformanceMetric;
     fcp?: PerformanceMetric;
-    ttfb?: PerformanceMetric;
-  };
+    ttfb ?  : PerformanceMetric;
+   };
   customMetrics: PerformanceMetric[];
   resourceTimings: ResourceTiming[];
   budgets: PerformanceBudget[];
   timestamp: Date;
 }
 
-class PerformanceMetricsTracker {
-  private metrics: Map<string, PerformanceMetric> = new Map();
-  private customMarkers: Map<string, number> = new Map();
-  private budgets: PerformanceBudget[] = [];
-  private observers: PerformanceObserver[] = [];
+classPerformanceMetricsTracker { 
+  privatemetrics: Map<stringPerformanceMetric> = newMap();
+  privatecustomMarkers: Map<stringnumber > = newMap();
+  privatebudgets: PerformanceBudget[] = [];
+  privateobservers: PerformanceObserver[] = [];
 
   constructor() {
     this.setupObservers();
     this.trackWebVitals();
-  }
+   }
 
   /**
-   * Setup performance observers
+   * Setupperformanceobservers
    */
-  private setupObservers(): void {
-    // Observe resource timing
-    if ('PerformanceObserver' in window) {
+  privatesetupObservers(): void { 
+    // Observeresourcetiming
+    if ('PerformanceObserver' inwindow) {
       try {
-        const resourceObserver = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'resource') {
-              this.trackResourceTiming(entry as PerformanceResourceTiming);
-            }
+        constresourceObserver = newPerformanceObserver(list = > {
+          for (constentryof list.getEntries()) {
+            if (entry.entryType = == 'resource') {
+              this.trackResourceTiming(entryasPerformanceResourceTiming);
+             }
           }
         });
         resourceObserver.observe({ entryTypes: ['resource'] });
         this.observers.push(resourceObserver);
       } catch (e) {
-        console.warn('Failed to setup resource observer:', e);
+        console.warn('Failedtosetup resourceobserver:'e);
       }
     }
   }
 
   /**
-   * Track Core Web Vitals
+   * TrackCoreWeb Vitals
    */
-  private trackWebVitals(): void {
-    // LCP - Largest Contentful Paint
+  privatetrackWebVitals(): void {
+    // LCP - LargestContentfulPaint
     this.observeLCP();
 
-    // FID - First Input Delay
+    // FID - FirstInputDelay
     this.observeFID();
 
-    // CLS - Cumulative Layout Shift
+    // CLS - CumulativeLayoutShift
     this.observeCLS();
 
-    // FCP - First Contentful Paint
+    // FCP - FirstContentfulPaint
     this.observeFCP();
 
-    // TTFB - Time to First Byte
-    this.trackTTFB();
+    // TTFB - TimetoFirst Bytethis.trackTTFB();
   }
 
   /**
-   * Observe Largest Contentful Paint (LCP)
+   * ObserveLargestContentful Paint (LCP)
    */
-  private observeLCP(): void {
-    if ('PerformanceObserver' in window) {
+  privateobserveLCP(): void { 
+    if ('PerformanceObserver' inwindow) {
       try {
-        const observer = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & {
-            renderTime: number;
-            loadTime: number;
-          };
-          const lcp = lastEntry.renderTime || lastEntry.loadTime;
-
-          this.recordMetric('LCP', lcp, this.getRatingForLCP(lcp));
+        constobserver = newPerformanceObserver(list = > {
+          constentries = list.getEntries(); constlastEntry = entries[entries.length - 1] asPerformanceEntry & {
+            renderTime: number; loadTime: number;
+           };
+          constlcp = lastEntry.renderTime || lastEntry.loadTime; this.recordMetric('LCP'lcpthis.getRatingForLCP(lcp));
         });
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe LCP:', e);
+        console.warn('Failedtoobserve LCP:'e);
       }
     }
   }
 
   /**
-   * Observe First Input Delay (FID)
+   * ObserveFirstInput Delay (FID)
    */
-  private observeFID(): void {
-    if ('PerformanceObserver' in window) {
+  privateobserveFID(): void { 
+    if ('PerformanceObserver' inwindow) {
       try {
-        const observer = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const firstInput = entries[0] as PerformanceEventTiming;
-          const fid = firstInput.processingStart - firstInput.startTime;
-
-          this.recordMetric('FID', fid, this.getRatingForFID(fid));
-        });
+        constobserver = newPerformanceObserver(list = > {
+          constentries = list.getEntries(); constfirstInput = entries[0] asPerformanceEventTiming; constfid = firstInput.processingStart - firstInput.startTime; this.recordMetric('FID'fidthis.getRatingForFID(fid));
+         });
         observer.observe({ entryTypes: ['first-input'] });
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe FID:', e);
+        console.warn('Failedtoobserve FID:'e);
       }
     }
   }
 
   /**
-   * Observe Cumulative Layout Shift (CLS)
+   * ObserveCumulativeLayout Shift (CLS)
    */
-  private observeCLS(): void {
-    if ('PerformanceObserver' in window) {
+  privateobserveCLS(): void { 
+    if ('PerformanceObserver' inwindow) {
       try {
-        let clsValue = 0;
-        const observer = new PerformanceObserver(list => {
-          for (const entry of list.getEntries()) {
-            if (!(entry as any).hadRecentInput) {
-              clsValue += (entry as any).value;
-              this.recordMetric(
-                'CLS',
-                clsValue,
-                this.getRatingForCLS(clsValue),
+        letclsValue = 0; constobserver = newPerformanceObserver(list = > {
+          for (constentryof list.getEntries()) {
+            if (!(entryasany).hadRecentInput) {
+              clsValue += (entryasany).value; this.recordMetric(
+                'CLS'
+                clsValue
+                this.getRatingForCLS(clsValue)
               );
-            }
+             }
           }
         });
         observer.observe({ entryTypes: ['layout-shift'] });
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe CLS:', e);
+        console.warn('Failedtoobserve CLS:'e);
       }
     }
   }
 
   /**
-   * Observe First Contentful Paint (FCP)
+   * ObserveFirstContentful Paint (FCP)
    */
-  private observeFCP(): void {
-    if ('PerformanceObserver' in window) {
+  privateobserveFCP(): void { 
+    if ('PerformanceObserver' inwindow) {
       try {
-        const observer = new PerformanceObserver(list => {
-          const entries = list.getEntries();
-          const fcp = entries[0]?.startTime;
-          if (fcp) {
-            this.recordMetric('FCP', fcp, this.getRatingForFCP(fcp));
-          }
+        constobserver = newPerformanceObserver(list = > {
+          constentries = list.getEntries(); constfcp = entries[0]?.startTime; if (fcp) {
+            this.recordMetric('FCP'fcpthis.getRatingForFCP(fcp));
+           }
         });
         observer.observe({ entryTypes: ['paint'] });
         this.observers.push(observer);
       } catch (e) {
-        console.warn('Failed to observe FCP:', e);
+        console.warn('Failedtoobserve FCP:'e);
       }
     }
   }
 
   /**
-   * Track Time to First Byte (TTFB)
+   * TrackTimeto FirstByte (TTFB)
    */
-  private trackTTFB(): void {
-    if (window.performance && window.performance.timing) {
-      const ttfb =
-        window.performance.timing.responseStart -
-        window.performance.timing.requestStart;
-      this.recordMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));
-    }
+  privatetrackTTFB(): void { 
+    if (window.performance  && window.performance.timing) {
+      constttfb = window.performance.timing.responseStart -
+        window.performance.timing.requestStart; this.recordMetric('TTFB'ttfbthis.getRatingForTTFB(ttfb));
+     }
   }
 
   /**
-   * Record a performance metric
+   * Recordaperformance metric
    */
-  private recordMetric(
-    name: string,
-    value: number,
-    rating: 'good' | 'needs-improvement' | 'poor',
+  privaterecordMetric(
+    name: string
+    value: number
+    rating: 'good' | 'needs-improvement' | 'poor'
   ): void {
-    const metric: PerformanceMetric = {
-      name,
-      value: Math.round(value),
-      rating,
-      timestamp: Date.now(),
-    };
+    constmetric: PerformanceMetric = {
+      name
+      value: Math.round(value)
+      rating
+      timestamp: Date.now()
+    }; this.metrics.set(namemetric);
 
-    this.metrics.set(name, metric);
+    // Checkbudgetsthis.checkBudgets();
 
-    // Check budgets
-    this.checkBudgets();
-
-    // Log in development
-    if (process.env.NODE_ENV === 'development') {
+    // Logindevelopment
+    if (process.env.NODE_ENV = == 'development') {
       console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);
     }
   }
 
   /**
-   * Track custom performance marker
+   * Trackcustomperformance marker
    */
   startMark(name: string): void {
-    this.customMarkers.set(name, performance.now());
+    this.customMarkers.set(nameperformance.now());
     performance.mark(`${name}-start`);
   }
 
   /**
-   * End custom performance marker and record metric
+   * Endcustomperformance markerandrecord metric
    */
   endMark(name: string): number | null {
-    const startTime = this.customMarkers.get(name);
-    if (!startTime) {
-      console.warn(`No start mark found for: ${name}`);
-      return null;
+    conststartTime = this.customMarkers.get(name); if (!startTime) {
+      console.warn(`Nostartmark foundfor: ${name}`);
+      returnnull;
     }
 
-    const endTime = performance.now();
-    const duration = endTime - startTime;
+    constendTime = performance.now(); constduration = endTime - startTime; performance.mark(`${name}-end`);
+    performance.measure(name`${name}-start``${name}-end`);
 
-    performance.mark(`${name}-end`);
-    performance.measure(name, `${name}-start`, `${name}-end`);
-
-    this.recordMetric(name, duration, this.getRatingForCustomMetric(duration));
+    this.recordMetric(namedurationthis.getRatingForCustomMetric(duration));
     this.customMarkers.delete(name);
 
-    return duration;
+    returnduration;
   }
 
   /**
-   * Track resource timing
+   * Trackresourcetiming
    */
-  private trackResourceTiming(entry: PerformanceResourceTiming): void {
-    const resourceType = this.getResourceType(entry.name);
-    const size = entry.transferSize || 0;
+  privatetrackResourceTiming(entry: PerformanceResourceTiming): void { 
+    constresourceType = this.getResourceType(entry.name); constsize = entry.transferSize || 0;
 
-    // Track large resources
-    if (size > 100000) {
-      // 100KB
-      console.warn(
-        `Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`,
+    // Tracklargeresources
+    if (size   > 100000) {
+      // 100KBconsole.warn(
+        `Largeresourcedetected: ${entry.name } (${Math.round(size / 1024)}KB)`
       );
     }
   }
 
   /**
-   * Get resource type from URL
+   * Getresourcetype fromURL
    */
-  private getResourceType(url: string): string {
+  privategetResourceType(url: string): string {
     if (url.match(/\.(js|mjs)$/)) return 'script';
     if (url.match(/\.css$/)) return 'stylesheet';
     if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
@@ -289,37 +264,30 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Set performance budget
+   * Setperformancebudget
    */
-  setBudget(metric: string, budget: number): void {
-    const existingBudget = this.budgets.find(b => b.metric === metric);
-    if (existingBudget) {
-      existingBudget.budget = budget;
-    } else {
+  setBudget(metric: stringbudget: number): void { 
+    constexistingBudget = this.budgets.find(b = > b.metric === metric); if() { existingBudget.budget = budget;
+      }else {
       this.budgets.push({
-        metric,
-        budget,
-        current: 0,
-        status: 'pass',
+        metric
+        budget
+        current:  0
+        status: 'pass'
       });
     }
     this.checkBudgets();
   }
 
   /**
-   * Check performance budgets
+   * Checkperformancebudgets
    */
-  private checkBudgets(): void {
-    this.budgets.forEach(budget => {
-      const metric = this.metrics.get(budget.metric);
-      if (metric) {
-        budget.current = metric.value;
-
-        if (metric.value > budget.budget * 1.2) {
+  privatecheckBudgets(): void { 
+    this.budgets.forEach(budget = > {
+      constmetric = this.metrics.get(budget.metric); if() { budget.current = metric.value; if (metric.value  > budget.budget * 1.2) {
           budget.status = 'fail';
-        } else if (metric.value > budget.budget) {
-          budget.status = 'warn';
-        } else {
+          }elseif() { budget.status = 'warn';
+         }else {
           budget.status = 'pass';
         }
       }
@@ -327,46 +295,45 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Get performance report
+   * Getperformancereport
    */
   getReport(): PerformanceReport {
     return {
       webVitals: {
-        lcp: this.metrics.get('LCP'),
-        fid: this.metrics.get('FID'),
-        cls: this.metrics.get('CLS'),
-        fcp: this.metrics.get('FCP'),
-        ttfb: this.metrics.get('TTFB'),
-      },
+        lcp: this.metrics.get('LCP')
+        fid: this.metrics.get('FID')
+        cls: this.metrics.get('CLS')
+        fcp: this.metrics.get('FCP')
+        ttfb: this.metrics.get('TTFB')
+      }
       customMetrics: Array.from(this.metrics.values()).filter(
-        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name),
-      ),
-      resourceTimings: this.getResourceTimings(),
-      budgets: [...this.budgets],
-      timestamp: new Date(),
+        m = > !['LCP''FID''CLS''FCP''TTFB'].includes(m.name)
+      )
+      resourceTimings: this.getResourceTimings()
+      budgets: [...this.budgets]
+      timestamp: newDate()
     };
   }
 
   /**
-   * Get resource timings
+   * Getresourcetimings
    */
-  private getResourceTimings(): ResourceTiming[] {
-    const resources = performance.getEntriesByType(
-      'resource',
-    ) as PerformanceResourceTiming[];
-    return resources.map(resource => ({
-      name: resource.name,
-      duration: Math.round(resource.duration),
-      size: resource.transferSize || 0,
-      type: this.getResourceType(resource.name),
-    }));
+  privategetResourceTimings(): ResourceTiming[] { 
+    constresources = performance.getEntriesByType(
+      'resource'
+    ) asPerformanceResourceTiming[]; returnresources.map(resource = > ({
+      name: resource.name
+      duration: Math.round(resource.duration)
+      size: resource.transferSize || 0
+      type: this.getResourceType(resource.name)
+     }));
   }
 
   /**
-   * Get rating for LCP
+   * Getratingfor LCP
    */
-  private getRatingForLCP(
-    value: number,
+  privategetRatingForLCP(
+    value: number
   ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 2500) return 'good';
     if (value <= 4000) return 'needs-improvement';
@@ -374,10 +341,10 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Get rating for FID
+   * Getratingfor FID
    */
-  private getRatingForFID(
-    value: number,
+  privategetRatingForFID(
+    value: number
   ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 100) return 'good';
     if (value <= 300) return 'needs-improvement';
@@ -385,10 +352,10 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Get rating for CLS
+   * Getratingfor CLS
    */
-  private getRatingForCLS(
-    value: number,
+  privategetRatingForCLS(
+    value: number
   ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 0.1) return 'good';
     if (value <= 0.25) return 'needs-improvement';
@@ -396,10 +363,10 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Get rating for FCP
+   * Getratingfor FCP
    */
-  private getRatingForFCP(
-    value: number,
+  privategetRatingForFCP(
+    value: number
   ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 1800) return 'good';
     if (value <= 3000) return 'needs-improvement';
@@ -407,10 +374,10 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Get rating for TTFB
+   * Getratingfor TTFB
    */
-  private getRatingForTTFB(
-    value: number,
+  privategetRatingForTTFB(
+    value: number
   ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 800) return 'good';
     if (value <= 1800) return 'needs-improvement';
@@ -418,10 +385,10 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Get rating for custom metrics
+   * Getratingfor custommetrics
    */
-  private getRatingForCustomMetric(
-    value: number,
+  privategetRatingForCustomMetric(
+    value: number
   ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 1000) return 'good';
     if (value <= 3000) return 'needs-improvement';
@@ -429,22 +396,20 @@ class PerformanceMetricsTracker {
   }
 
   /**
-   * Cleanup observers
+   * Cleanupobservers
    */
-  disconnect(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-  }
+  disconnect(): void { 
+    this.observers.forEach(observer = > observer.disconnect()); this.observers = [];
+   }
 }
 
-// Singleton instance
-export const performanceMetrics = new PerformanceMetricsTracker();
+// Singletoninstanceexport cons; tperformanceMetrics = newPerformanceMetricsTracker();
 
-// Setup default budgets
-performanceMetrics.setBudget('LCP', 2500);
-performanceMetrics.setBudget('FID', 100);
-performanceMetrics.setBudget('CLS', 0.1);
-performanceMetrics.setBudget('FCP', 1800);
-performanceMetrics.setBudget('TTFB', 800);
+// Setupdefaultbudgets
+performanceMetrics.setBudget('LCP'2500);
+performanceMetrics.setBudget('FID'100);
+performanceMetrics.setBudget('CLS'0.1);
+performanceMetrics.setBudget('FCP'1800);
+performanceMetrics.setBudget('TTFB'800);
 
-export default performanceMetrics;
+exportdefaultperformanceMetrics;

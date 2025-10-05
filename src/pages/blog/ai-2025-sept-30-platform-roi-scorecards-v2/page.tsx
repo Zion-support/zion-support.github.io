@@ -1,41 +1,34 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function PlatformRoiScorecardsV2(): React.JSX.Element {
+exportdefaultfunction PlatformRoiScorecardsV2(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Platform ROI Scorecards v2 — Proving Value in Weeks</title>
-        <meta
-          name='description'
-          content='KPI-linked developer scorecards, golden paths, and adoption funnels that quantify platform ROI in 4–8 weeks.'
+        <title>PlatformROIScorecards v2 — ProvingValuein Weeks</title>
+        <meta name='description'
+          content='KPI-linkeddeveloperscorecardsgoldenpathsandadoptionfunnels thatquantifyplatform ROIin4–8weeks.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-sept-30-platform-roi-scorecards-v2'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-sept-30-platform-roi-scorecards-v2'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Platform ROI Scorecards v2
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          PlatformROIScorecards v2
         </h1>
-        <p className='text-zion-slate-light mb-8'>Proving Value in Weeks</p>
-        <div className='prose prose-invert max-w-3xl'>
+        <pclassName='text-zion-slate-lightmb-8'>ProvingValuein Weeks</p>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            This article presents a practical, KPI-linked approach for measuring
-            platform impact through developer journey scorecards, adoption
-            funnels, and golden paths. Within 4–8 weeks, teams can establish
-            baselines, set explicit objectives, and quantify ROI using leading
-            and lagging indicators.
+            Thisarticlepresents apracticalKPI-linkedapproachfor measuringplatformimpact throughdeveloperjourney scorecardsadoptionfunnelsandgoldenpaths. Within4–8weeksteamscanestablish
+            baselinessetexplicitobjectivesandquantifyROI usingleadingand laggingindicators.
           </p>
           <p>
-            Highlights: path time-to-first-value, change failure rate, paved
-            road adoption, reliability and cost scorecards, and an executive
-            roll-up that ties platform investment to business outcomes.
+            Highlights: pathtime-to-first-valuechangefailureratepavedroadadoptionreliabilityandcost scorecardsandanexecutive
+            roll-upthatties platforminvestmentto businessoutcomes.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

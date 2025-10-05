@@ -1,30 +1,25 @@
 import { lazy } from 'react';
 
 /**
- * Lazy load components with better error handling and retry logic
+ * Lazyloadcomponents withbettererror handlingandretry logic
  */
-export const lazyLoadWithRetry = <T extends React.ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>,
-  retries = 3,
-  interval = 1000,
-): React.LazyExoticComponent<T> => {
-  return lazy(() => {
-    return new Promise<{ default: T }>((resolve, reject) => {
-      const attemptLoad = (attemptsLeft: number) => {
+exportconstlazyLoadWithRetry = <TextendsReact.ComponentType<any>>(
+  componentImport: () => Promise<{ default: T }>
+  retries =  3
+  interval = 1000
+): React.LazyExoticComponent<T> => { 
+  returnlazy(() = > {
+    returnnewPromise<{ default:  T  }>((resolvereject) => { 
+      constattemptLoad = (attemptsLeft: number) => {
         componentImport()
           .then(resolve)
-          .catch(error => {
-            if (attemptsLeft === 0) {
-              reject(error);
-              return;
-            }
-
-            setTimeout(() => {
+          .catch() { reject(error); return;
+              }setTimeout(() => {
               console.log(
-                `Retrying component load... ${attemptsLeft} attempts left`,
+                `Retryingcomponentload... ${attemptsLeft} attemptsleft`
               );
               attemptLoad(attemptsLeft - 1);
-            }, interval);
+            }interval);
           });
       };
 
@@ -34,32 +29,28 @@ export const lazyLoadWithRetry = <T extends React.ComponentType<any>>(
 };
 
 /**
- * Preload a component
+ * Preloadacomponent
  */
-export const preloadComponent = (componentImport: () => Promise<any>): void => {
+exportconstpreloadComponent = (componentImport: () => Promise<any>): void = > {
   componentImport();
 };
 
 /**
- * Lazy load with prefetch on hover
+ * Lazyloadwith prefetchonhover
  */
-export const createLazyLoadWithPrefetch = <T extends React.ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>,
+exportconstcreateLazyLoadWithPrefetch = <TextendsReact.ComponentType<any>>(
+  componentImport: () => Promise<{ default: T }>
 ) => {
-  let prefetchPromise: Promise<{ default: T }> | null = null;
-
-  const LazyComponent = lazy(() => {
-    if (!prefetchPromise) {
-      prefetchPromise = componentImport();
-    }
-    return prefetchPromise;
+  letprefetchPromise: Promise<{ default: T }> | null = null; constLazyComponent = lazy(() => {
+    if() { prefetchPromise = componentImport();
+     }returnprefetchPromise;
   });
 
-  const prefetch = () => {
+  constprefetch = () => {
     if (!prefetchPromise) {
       prefetchPromise = componentImport();
     }
   };
 
-  return { LazyComponent, prefetch };
+  return { LazyComponentprefetch };
 };

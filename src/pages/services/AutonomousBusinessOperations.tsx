@@ -1,402 +1,388 @@
 import {
   ArrowRight,
   CheckCircle,
-  Clock,
-  DollarSign,
-  Rocket,
-  Shield,
-  TrendingUp,
-  Users,
-  Zap,
+  Clock
+  DollarSign
+  Rocket
+  Shield
+  TrendingUp
+  Users
+  Zap
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const AutonomousBusinessOperations = () => {
+constAutonomousBusinessOperations = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Autonomous Business Operations Platform | 85% Cost Reduction in 90
-          Days | Zion Tech Group
+          AutonomousBusinessOperations Platform | 85% CostReductionin 90Days | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Transform your enterprise with AI-powered autonomous operations. Deploy 40+ self-managing workflows in 90 days. $500M+ value creation. 300-500% ROI. Get started with a free consultation.'
+        <metaname = 'description'
+          content='Transformyourenterprise withAI-poweredautonomousoperations. Deploy40+ self-managingworkflowsin 90days. $500M+ valuecreation. 300-500% ROI. Getstartedwith afreeconsultation.'
         />
-        <meta
-          name='keywords'
-          content='autonomous business operations, AI automation platform, enterprise automation, business process automation, operational efficiency, AI transformation, ROI guarantee'
+        <meta name='keywords'
+          content='autonomousbusinessoperationsAIautomationplatformenterpriseautomationbusinessprocessautomationoperationalefficiencyAItransformationROIguarantee'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/services/autonomous-business-operations'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/services/autonomous-business-operations'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900'>
-        {/* Hero Section */}
-        <section className='relative py-24 overflow-hidden'>
-          <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'></div>
+      <divclassName='min-h-screenbg-gradient-to-brfrom-slate-900via-blue-900to-purple-900' > {/* HeroSection */ }
+        <sectionclassName = 'relativepy-24overflow-hidden'>
+          <divclassName='absoluteinset-0bg-gradient-to-rfrom-blue-600/20to-purple-600/20' />
 
-          {/* Animated background elements */}
-          <div className='absolute inset-0 overflow-hidden opacity-30'>
-            <div className='absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl animate-float'></div>
-            <div
-              className='absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl animate-float'
+          {/* Animatedbackgroundelements */}
+          <divclassName='absoluteinset-0overflow-hiddenopacity-30'>
+            <divclassName='absolute -top-40 -right-40w-80h-80bg-blue-500rounded-fullmix-blend-multiplyfilterblur-xlanimate-float' />
+            <divclassName='absolute -bottom-40 -left-40w-80h-80bg-purple-500rounded-fullmix-blend-multiplyfilterblur-xlanimate-float'
               style={{ animationDelay: '2s' }}
-            ></div>
+             />
           </div>
 
-          <div className='container mx-auto px-6 relative z-10'>
-            {/* Limited Time Banner */}
-            <div className='flex justify-center mb-8'>
-              <div className='inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse'>
-                <Rocket className='w-5 h-5 mr-2' />
-                🔥 LIMITED OFFER: 50% OFF THROUGH DECEMBER 2025
+          <divclassName = 'containermx-autopx-6relativez-10'>
+            {/* LimitedTimeBanner */}
+            <divclassName='flexjustify-centermb-8'>
+              <divclassName='inline-flexitems-centerpx-6py-3rounded-fullbg-green-500/20border-2border-green-400/50text-green-300text-smfont-bolduppercasetracking-wideranimate-pulse'>
+                <RocketclassName='w-5 h-5mr-2' />
+                🔥 LIMITEDOFFER: 50% OFFTHROUGHDECEMBER 2025
               </div>
             </div>
 
-            <div className='max-w-5xl mx-auto text-center'>
-              <h1 className='text-5xl md:text-7xl font-bold text-white mb-6 leading-tight'>
-                Autonomous Business Operations Platform
+            <divclassName='max-w-5xlmx-autotext-center'>
+              <h1className='text-5xlmd:text-7xlfont-boldtext-whitemb-6leading-tight'>
+                AutonomousBusinessOperations Platform
               </h1>
-              <p className='text-2xl md:text-3xl text-blue-200 mb-8 font-semibold'>
-                Transform Your Enterprise in 90 Days with Self-Managing AI
-                Systems
+              <pclassName='text-2xlmd:text-3xltext-blue-200mb-8font-semibold'>
+                TransformYourEnterprise in90Days withSelf-ManagingAISystems
               </p>
-              <p className='text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed'>
-                Deploy 40+ autonomous workflows that eliminate manual processes,
-                reduce costs by 85%, and create $500M+ in annual value.
-                Guaranteed ROI or your money back.
+              <pclassName='text-xltext-blue-100mb-12max-w-3xlmx-autoleading-relaxed'>
+                Deploy40+ autonomousworkflowsthat eliminatemanualprocesses
+                reducecostsby 85%andcreate $500M+ inannualvalue.
+                GuaranteedROIor yourmoneyback.
               </p>
 
-              {/* Key Metrics */}
-              <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
-                <div className='bg-gradient-to-br from-green-600/30 to-emerald-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-green-400/50'>
-                  <div className='text-5xl font-bold text-green-300 mb-2'>
+              {/* KeyMetrics */}
+              <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-6mb-12'>
+                <divclassName='bg-gradient-to-brfrom-green-600/30to-emerald-600/30backdrop-blur-smrounded-xlp-6border-2border-green-400/50'>
+                  <divclassName='text-5xlfont-boldtext-green-300mb-2'>
                     85%
                   </div>
-                  <div className='text-green-100 font-semibold'>
-                    Cost Reduction
+                  <divclassName='text-green-100font-semibold'>
+                    CostReduction
                   </div>
                 </div>
-                <div className='bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-blue-400/50'>
-                  <div className='text-5xl font-bold text-blue-300 mb-2'>
+                <divclassName='bg-gradient-to-brfrom-blue-600/30to-cyan-600/30backdrop-blur-smrounded-xlp-6border-2border-blue-400/50'>
+                  <divclassName='text-5xlfont-boldtext-blue-300mb-2'>
                     90
                   </div>
-                  <div className='text-blue-100 font-semibold'>
-                    Days to Launch
+                  <divclassName='text-blue-100font-semibold'>
+                    DaystoLaunch
                   </div>
                 </div>
-                <div className='bg-gradient-to-br from-purple-600/30 to-pink-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-purple-400/50'>
-                  <div className='text-5xl font-bold text-purple-300 mb-2'>
+                <divclassName='bg-gradient-to-brfrom-purple-600/30to-pink-600/30backdrop-blur-smrounded-xlp-6border-2border-purple-400/50'>
+                  <divclassName='text-5xlfont-boldtext-purple-300mb-2'>
                     $500M+
                   </div>
-                  <div className='text-purple-100 font-semibold'>
-                    Annual Value
+                  <divclassName='text-purple-100font-semibold'>
+                    AnnualValue
                   </div>
                 </div>
-                <div className='bg-gradient-to-br from-orange-600/30 to-red-600/30 backdrop-blur-sm rounded-xl p-6 border-2 border-orange-400/50'>
-                  <div className='text-5xl font-bold text-orange-300 mb-2'>
+                <divclassName='bg-gradient-to-brfrom-orange-600/30to-red-600/30backdrop-blur-smrounded-xlp-6border-2border-orange-400/50'>
+                  <divclassName='text-5xlfont-boldtext-orange-300mb-2'>
                     99.7%
                   </div>
-                  <div className='text-orange-100 font-semibold'>
-                    Accuracy Rate
+                  <divclassName='text-orange-100font-semibold'>
+                    AccuracyRate
                   </div>
                 </div>
               </div>
 
-              {/* CTA Buttons */}
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center justify-center gap-2 bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-2xl hover:shadow-green-500/50 hover:scale-105'
+              {/* CTAButtons */}
+              <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+                <Linkto='/contact'
+                  className='inline-flexitems-centerjustify-centergap-2bg-gradient-to-rfrom-green-500to-emerald-500hover:from-green-600hover:to-emerald-600text-whitepx-8py-4rounded-lgfont-boldtext-lgtransition-allshadow-2xlhover:shadow-green-500/50hover:scale-105'
                 >
-                  <Rocket className='w-6 h-6' />
-                  Start Free Consultation
-                  <ArrowRight className='w-5 h-5' />
+                  <RocketclassName='w-6 h-6' />
+                  StartFreeConsultation
+                  <ArrowRight,className='w-5 h-5' />
                 </Link>
-                <Link
-                  to='/case-studies/fortune-100-autonomous-operations-transformation-2025'
-                  className='inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg font-bold text-lg transition-all'
+                <Linkto='/case-studies/fortune-100-autonomous-operations-transformation-2025'
+                  className='inline-flexitems-centerjustify-centergap-2border-2border-whitetext-whitehover:bg-whitehover:text-blue-900px-8py-4rounded-lgfont-boldtext-lgtransition-all'
                 >
-                  View $650M Case Study
+                  View $650MCaseStudy
                 </Link>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Trust Indicators */}
-        <section className='py-12 bg-black/20'>
-          <div className='container mx-auto px-6'>
-            <div className='flex flex-wrap justify-center items-center gap-8 text-blue-200'>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>50+ Fortune 500 Clients</span>
+        {/* TrustIndicators */}
+        <sectionclassName = 'py-12bg-black/20'>
+          <divclassName='containermx-autopx-6'>
+            <divclassName='flexflex-wrapjustify-centeritems-centergap-8text-blue-200'>
+              <divclassName='flexitems-centergap-2'>
+                <CheckCircle,className='w-5 h-5text-green-400' />
+                <spanclassName='font-semibold'>50+ Fortune500Clients</span>
               </div>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>$5B+ Value Created</span>
+              <divclassName='flexitems-centergap-2'>
+                <CheckCircle,className='w-5 h-5text-green-400' />
+                <spanclassName='font-semibold'>$5B+ ValueCreated</span>
               </div>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>SOC 2 Type II Certified</span>
+              <divclassName='flexitems-centergap-2'>
+                <CheckCircle,className='w-5 h-5text-green-400' />
+                <spanclassName='font-semibold'>SOC2Type IICertified</span>
               </div>
-              <div className='flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5 text-green-400' />
-                <span className='font-semibold'>99.97% Uptime SLA</span>
+              <divclassName='flexitems-centergap-2'>
+                <CheckCircle,className='w-5 h-5text-green-400' />
+                <spanclassName='font-semibold'>99.97% UptimeSLA</span>
               </div>
             </div>
           </div>
         </section>
 
-        {/* What You Get */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              What's Included in Your Platform
+        {/* WhatYouGet */}
+        <sectionclassName='containermx-autopx-6py-20max-w-6xl'>
+          <divclassName='text-centermb-16'>
+            <h2className='text-4xlmd: text-5xlfont-boldtext-whitemb-4'>
+              What'sIncludedin YourPlatform
             </h2>
-            <p className='text-xl text-blue-200 max-w-3xl mx-auto'>
-              A complete enterprise-grade autonomous operations solution,
-              deployed and optimized for your business
+            <pclassName='text-xltext-blue-200max-w-3xlmx-auto'>
+              Acompleteenterprise-gradeautonomousoperations solution
+              deployedandoptimized foryourbusiness
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+          <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8'>
             {/* Feature 1 */}
-            <div className='bg-gradient-to-br from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50 hover:border-blue-400/80 transition-all hover:scale-105'>
-              <div className='bg-blue-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-blue-400/30'>
-                <Zap className='w-8 h-8 text-blue-300' />
+            <divclassName = 'bg-gradient-to-brfrom-blue-900/60to-cyan-900/60backdrop-blur-smrounded-2xlp-8border-2border-blue-400/50hover: border-blue-400/80transition-allhover:scale-105'>
+              <divclassName='bg-blue-500/20w-16h-16rounded-xlflexitems-centerjustify-centermb-6borderborder-blue-400/30'>
+                <ZapclassName='w-8 h-8text-blue-300' />
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                40+ Autonomous Workflows
+              <h3className='text-2xlfont-boldtext-whitemb-4'>
+                40+ AutonomousWorkflows
               </h3>
-              <p className='text-blue-100 mb-4'>
-                Pre-built workflows for finance, HR, operations, sales, support,
-                and compliance. Fully customizable to your needs.
+              <pclassName='text-blue-100mb-4'>
+                Pre-builtworkflowsfor financeHRoperationssalessupport
+                andcompliance. Fullycustomizableto yourneeds.
               </p>
-              <ul className='space-y-2 text-blue-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Invoice processing & payment automation</span>
+              <ulclassName = 'space-y-2text-blue-200text-sm'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-blue-400mt-1flex-shrink-0' />
+                  <span>Invoiceprocessing & paymentautomation</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Employee onboarding & offboarding</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-blue-400mt-1flex-shrink-0' />
+                  <span>Employeeonboarding & offboarding</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Customer support triage & routing</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-blue-400mt-1flex-shrink-0' />
+                  <span>Customersupporttriage & routing</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Sales lead qualification & nurturing</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-blue-400mt-1flex-shrink-0' />
+                  <span>Salesleadqualification & nurturing</span>
                 </li>
               </ul>
             </div>
 
-            {/* Feature 2 */}
-            <div className='bg-gradient-to-br from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50 hover:border-purple-400/80 transition-all hover:scale-105'>
-              <div className='bg-purple-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-purple-400/30'>
-                <TrendingUp className='w-8 h-8 text-purple-300' />
+            {/* Feature2 */}
+            <divclassName='bg-gradient-to-brfrom-purple-900/60to-pink-900/60backdrop-blur-smrounded-2xlp-8border-2border-purple-400/50hover: border-purple-400/80transition-allhover:scale-105'>
+              <divclassName='bg-purple-500/20w-16h-16rounded-xlflexitems-centerjustify-centermb-6borderborder-purple-400/30'>
+                <TrendingUpclassName='w-8 h-8text-purple-300' />
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                AI Decision Engine
+              <h3className='text-2xlfont-boldtext-whitemb-4'>
+                AIDecisionEngine
               </h3>
-              <p className='text-purple-100 mb-4'>
-                Real-time decision-making with 99.7% accuracy. Learns from every
-                interaction and continuously improves.
+              <pclassName='text-purple-100mb-4'>
+                Real-timedecision-makingwith99.7% accuracy. Learnsfromevery
+                interactionandcontinuously improves.
               </p>
-              <ul className='space-y-2 text-purple-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>&lt;100ms inference latency</span>
+              <ulclassName='space-y-2text-purple-200text-sm'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-purple-400mt-1flex-shrink-0' />
+                  <span>&lt; 100msinferencelatency</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>Multi-model ensemble for complex decisions</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-purple-400mt-1flex-shrink-0' />
+                  <span>Multi-modelensemblefor complexdecisions</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>Explainable AI for compliance</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-purple-400mt-1flex-shrink-0' />
+                  <span>ExplainableAIfor compliance</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-purple-400 mt-1 flex-shrink-0' />
-                  <span>Automatic model retraining</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-purple-400mt-1flex-shrink-0' />
+                  <span>Automaticmodelretraining</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 3 */}
-            <div className='bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50 hover:border-green-400/80 transition-all hover:scale-105'>
-              <div className='bg-green-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-green-400/30'>
-                <Shield className='w-8 h-8 text-green-300' />
+            <divclassName = 'bg-gradient-to-brfrom-green-900/60to-emerald-900/60backdrop-blur-smrounded-2xlp-8border-2border-green-400/50hover: border-green-400/80transition-allhover:scale-105'>
+              <divclassName='bg-green-500/20w-16h-16rounded-xlflexitems-centerjustify-centermb-6borderborder-green-400/30'>
+                <ShieldclassName='w-8 h-8text-green-300' />
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Enterprise Security
+              <h3className='text-2xlfont-boldtext-whitemb-4'>
+                EnterpriseSecurity
               </h3>
-              <p className='text-green-100 mb-4'>
-                Zero Trust architecture with SOC 2 Type II compliance. Your data
-                stays secure and compliant.
+              <pclassName='text-green-100mb-4'>
+                ZeroTrustarchitecture withSOC2 TypeIIcompliance. Yourdatastays secureandcompliant.
               </p>
-              <ul className='space-y-2 text-green-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>End-to-end encryption</span>
+              <ulclassName='space-y-2text-green-200text-sm'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-green-400mt-1flex-shrink-0' />
+                  <span>End-to-endencryption</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Multi-factor authentication</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-green-400mt-1flex-shrink-0' />
+                  <span>Multi-factorauthentication</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Role-based access controls</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-green-400mt-1flex-shrink-0' />
+                  <span>Role-basedaccesscontrols</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Full audit trail & compliance reporting</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-green-400mt-1flex-shrink-0' />
+                  <span>Fullaudittrail & compliancereporting</span>
                 </li>
               </ul>
             </div>
 
             {/* Feature 4 */}
-            <div className='bg-gradient-to-br from-orange-900/60 to-red-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-orange-400/50 hover:border-orange-400/80 transition-all hover:scale-105'>
-              <div className='bg-orange-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-orange-400/30'>
-                <Users className='w-8 h-8 text-orange-300' />
+            <divclassName = 'bg-gradient-to-brfrom-orange-900/60to-red-900/60backdrop-blur-smrounded-2xlp-8border-2border-orange-400/50hover: border-orange-400/80transition-allhover:scale-105'>
+              <divclassName='bg-orange-500/20w-16h-16rounded-xlflexitems-centerjustify-centermb-6borderborder-orange-400/30'>
+                <UsersclassName='w-8 h-8text-orange-300' />
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Expert Implementation Team
+              <h3className='text-2xlfont-boldtext-whitemb-4'>
+                ExpertImplementationTeam
               </h3>
-              <p className='text-orange-100 mb-4'>
-                Dedicated team of AI engineers, data scientists, and consultants
-                to ensure successful deployment.
+              <pclassName='text-orange-100mb-4'>
+                Dedicatedteamof AIengineersdatascientistsandconsultantsto ensuresuccessfuldeployment.
               </p>
-              <ul className='space-y-2 text-orange-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>90-day deployment timeline</span>
+              <ulclassName = 'space-y-2text-orange-200text-sm'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-orange-400mt-1flex-shrink-0' />
+                  <span>90-daydeploymenttimeline</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>Custom workflow development</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-orange-400mt-1flex-shrink-0' />
+                  <span>Customworkflowdevelopment</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>Change management & training</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-orange-400mt-1flex-shrink-0' />
+                  <span>Changemanagement & training</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-orange-400 mt-1 flex-shrink-0' />
-                  <span>24/7 dedicated support</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-orange-400mt-1flex-shrink-0' />
+                  <span>24/7dedicatedsupport</span>
                 </li>
               </ul>
             </div>
 
-            {/* Feature 5 */}
-            <div className='bg-gradient-to-br from-cyan-900/60 to-blue-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-cyan-400/50 hover:border-cyan-400/80 transition-all hover:scale-105'>
-              <div className='bg-cyan-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30'>
-                <Clock className='w-8 h-8 text-cyan-300' />
+            {/* Feature5 */}
+            <divclassName='bg-gradient-to-brfrom-cyan-900/60to-blue-900/60backdrop-blur-smrounded-2xlp-8border-2border-cyan-400/50hover: border-cyan-400/80transition-allhover:scale-105'>
+              <divclassName='bg-cyan-500/20w-16h-16rounded-xlflexitems-centerjustify-centermb-6borderborder-cyan-400/30'>
+                <ClockclassName='w-8 h-8text-cyan-300' />
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Real-Time Observability
+              <h3className='text-2xlfont-boldtext-whitemb-4'>
+                Real-TimeObservability
               </h3>
-              <p className='text-cyan-100 mb-4'>
-                Complete visibility into all operations with real-time
-                dashboards, alerts, and analytics.
+              <pclassName='text-cyan-100mb-4'>
+                Completevisibilityinto alloperationswith real-timedashboardsalertsandanalytics.
               </p>
-              <ul className='space-y-2 text-cyan-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>Live KPI dashboards</span>
+              <ulclassName = 'space-y-2text-cyan-200text-sm'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-cyan-400mt-1flex-shrink-0' />
+                  <span>LiveKPIdashboards</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>Anomaly detection & alerting</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-cyan-400mt-1flex-shrink-0' />
+                  <span>Anomalydetection & alerting</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>Performance analytics</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-cyan-400mt-1flex-shrink-0' />
+                  <span>Performanceanalytics</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-cyan-400 mt-1 flex-shrink-0' />
-                  <span>ROI tracking & reporting</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-cyan-400mt-1flex-shrink-0' />
+                  <span>ROItracking & reporting</span>
                 </li>
               </ul>
             </div>
 
-            {/* Feature 6 */}
-            <div className='bg-gradient-to-br from-indigo-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-indigo-400/50 hover:border-indigo-400/80 transition-all hover:scale-105'>
-              <div className='bg-indigo-500/20 w-16 h-16 rounded-xl flex items-center justify-center mb-6 border border-indigo-400/30'>
-                <DollarSign className='w-8 h-8 text-indigo-300' />
+            {/* Feature6 */}
+            <divclassName='bg-gradient-to-brfrom-indigo-900/60to-purple-900/60backdrop-blur-smrounded-2xlp-8border-2border-indigo-400/50hover: border-indigo-400/80transition-allhover:scale-105'>
+              <divclassName='bg-indigo-500/20w-16h-16rounded-xlflexitems-centerjustify-centermb-6borderborder-indigo-400/30'>
+                <DollarSignclassName='w-8 h-8text-indigo-300' />
               </div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                ROI Guarantee
+              <h3className='text-2xlfont-boldtext-whitemb-4'>
+                ROIGuarantee
               </h3>
-              <p className='text-indigo-100 mb-4'>
-                We're so confident in our platform that we guarantee 300% ROI
-                within 18 months, or your money back.
+              <pclassName='text-indigo-100mb-4'>
+                We'resoconfident inourplatform thatweguarantee 300% ROIwithin18 monthsoryourmoney back.
               </p>
-              <ul className='space-y-2 text-indigo-200 text-sm'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Detailed ROI modeling upfront</span>
+              <ulclassName = 'space-y-2text-indigo-200text-sm'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-indigo-400mt-1flex-shrink-0' />
+                  <span>DetailedROImodeling upfront</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Continuous value tracking</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-indigo-400mt-1flex-shrink-0' />
+                  <span>Continuousvaluetracking</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Performance-based pricing options</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-indigo-400mt-1flex-shrink-0' />
+                  <span>Performance-basedpricingoptions</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-4 h-4 text-indigo-400 mt-1 flex-shrink-0' />
-                  <span>Money-back guarantee</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-4 h-4text-indigo-400mt-1flex-shrink-0' />
+                  <span>Money-backguarantee</span>
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Implementation Timeline */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-              90-Day Implementation Timeline
+        {/* ImplementationTimeline */}
+        <sectionclassName='containermx-autopx-6py-20max-w-6xl'>
+          <divclassName='text-centermb-16'>
+            <h2className='text-4xlmd: text-5xlfont-boldtext-whitemb-4'>
+              90-DayImplementationTimeline
             </h2>
-            <p className='text-xl text-blue-200'>
-              From contract to production in just three months
+            <pclassName='text-xltext-blue-200'>
+              Fromcontractto productioninjust threemonths
             </p>
           </div>
 
-          <div className='space-y-8'>
+          <divclassName='space-y-8'>
             {/* Phase 1 */}
-            <div className='bg-gradient-to-r from-blue-900/60 to-cyan-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50'>
-              <div className='flex items-start gap-6'>
-                <div className='bg-blue-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0'>
+            <divclassName = 'bg-gradient-to-rfrom-blue-900/60to-cyan-900/60backdrop-blur-smrounded-2xlp-8border-2border-blue-400/50'>
+              <divclassName='flexitems-startgap-6'>
+                <divclassName='bg-blue-500text-whitefont-boldtext-2xlw-16h-16rounded-fullflexitems-centerjustify-centerflex-shrink-0'>
                   1
                 </div>
-                <div className='flex-1'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    Discovery & Assessment (Days 1-30)
+                <divclassName='flex-1'>
+                  <h3className='text-2xlfont-boldtext-whitemb-2'>
+                    Discovery & Assessment (Days1-30)
                   </h3>
-                  <p className='text-blue-100 mb-4'>
-                    Process mapping, data assessment, and ROI modeling with your
-                    team
+                  <pclassName = 'text-blue-100mb-4'>
+                    ProcessmappingdataassessmentandROImodeling withyourteam
                   </p>
-                  <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                    <div className='flex items-center gap-2 text-blue-200'>
-                      <CheckCircle className='w-4 h-4 text-blue-400' />
-                      <span>Process workshops</span>
+                  <divclassName = 'gridmd: grid-cols-3gap-4text-sm'>
+                    <divclassName='flexitems-centergap-2text-blue-200'>
+                      <CheckCircle,className='w-4 h-4text-blue-400' />
+                      <span>Processworkshops</span>
                     </div>
-                    <div className='flex items-center gap-2 text-blue-200'>
-                      <CheckCircle className='w-4 h-4 text-blue-400' />
-                      <span>Data quality audit</span>
+                    <divclassName='flexitems-centergap-2text-blue-200'>
+                      <CheckCircle,className='w-4 h-4text-blue-400' />
+                      <span>Dataqualityaudit</span>
                     </div>
-                    <div className='flex items-center gap-2 text-blue-200'>
-                      <CheckCircle className='w-4 h-4 text-blue-400' />
-                      <span>Custom ROI model</span>
+                    <divclassName='flexitems-centergap-2text-blue-200'>
+                      <CheckCircle,className='w-4 h-4text-blue-400' />
+                      <span>CustomROImodel</span>
                     </div>
                   </div>
                 </div>
@@ -404,31 +390,30 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Phase 2 */}
-            <div className='bg-gradient-to-r from-purple-900/60 to-pink-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-purple-400/50'>
-              <div className='flex items-start gap-6'>
-                <div className='bg-purple-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0'>
+            <divclassName = 'bg-gradient-to-rfrom-purple-900/60to-pink-900/60backdrop-blur-smrounded-2xlp-8border-2border-purple-400/50'>
+              <divclassName='flexitems-startgap-6'>
+                <divclassName='bg-purple-500text-whitefont-boldtext-2xlw-16h-16rounded-fullflexitems-centerjustify-centerflex-shrink-0'>
                   2
                 </div>
-                <div className='flex-1'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    Platform Build (Days 31-60)
+                <divclassName='flex-1'>
+                  <h3className='text-2xlfont-boldtext-whitemb-2'>
+                    PlatformBuild (Days31-60)
                   </h3>
-                  <p className='text-purple-100 mb-4'>
-                    Infrastructure deployment, model training, and system
-                    integration
+                  <pclassName = 'text-purple-100mb-4'>
+                    Infrastructuredeploymentmodeltrainingandsystemintegration
                   </p>
-                  <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                    <div className='flex items-center gap-2 text-purple-200'>
-                      <CheckCircle className='w-4 h-4 text-purple-400' />
-                      <span>Cloud infrastructure</span>
+                  <divclassName = 'gridmd: grid-cols-3gap-4text-sm'>
+                    <divclassName='flexitems-centergap-2text-purple-200'>
+                      <CheckCircle,className='w-4 h-4text-purple-400' />
+                      <span>Cloudinfrastructure</span>
                     </div>
-                    <div className='flex items-center gap-2 text-purple-200'>
-                      <CheckCircle className='w-4 h-4 text-purple-400' />
-                      <span>AI model training</span>
+                    <divclassName='flexitems-centergap-2text-purple-200'>
+                      <CheckCircle,className='w-4 h-4text-purple-400' />
+                      <span>AImodeltraining</span>
                     </div>
-                    <div className='flex items-center gap-2 text-purple-200'>
-                      <CheckCircle className='w-4 h-4 text-purple-400' />
-                      <span>API integrations</span>
+                    <divclassName='flexitems-centergap-2text-purple-200'>
+                      <CheckCircle,className='w-4 h-4text-purple-400' />
+                      <span>APIintegrations</span>
                     </div>
                   </div>
                 </div>
@@ -436,30 +421,30 @@ const AutonomousBusinessOperations = () => {
             </div>
 
             {/* Phase 3 */}
-            <div className='bg-gradient-to-r from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50'>
-              <div className='flex items-start gap-6'>
-                <div className='bg-green-500 text-white font-bold text-2xl w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0'>
+            <divclassName = 'bg-gradient-to-rfrom-green-900/60to-emerald-900/60backdrop-blur-smrounded-2xlp-8border-2border-green-400/50'>
+              <divclassName='flexitems-startgap-6'>
+                <divclassName='bg-green-500text-whitefont-boldtext-2xlw-16h-16rounded-fullflexitems-centerjustify-centerflex-shrink-0'>
                   3
                 </div>
-                <div className='flex-1'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
-                    Launch & Scale (Days 61-90)
+                <divclassName='flex-1'>
+                  <h3className='text-2xlfont-boldtext-whitemb-2'>
+                    Launch & Scale (Days61-90)
                   </h3>
-                  <p className='text-green-100 mb-4'>
-                    Pilot deployment, validation, and full-scale rollout
+                  <pclassName = 'text-green-100mb-4'>
+                    Pilotdeploymentvalidationandfull-scalerollout
                   </p>
-                  <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                    <div className='flex items-center gap-2 text-green-200'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>Pilot workflows</span>
+                  <divclassName = 'gridmd: grid-cols-3gap-4text-sm'>
+                    <divclassName='flexitems-centergap-2text-green-200'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>Pilotworkflows</span>
                     </div>
-                    <div className='flex items-center gap-2 text-green-200'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>User training</span>
+                    <divclassName='flexitems-centergap-2text-green-200'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>Usertraining</span>
                     </div>
-                    <div className='flex items-center gap-2 text-green-200'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>Full production launch</span>
+                    <divclassName='flexitems-centergap-2text-green-200'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>Fullproductionlaunch</span>
                     </div>
                   </div>
                 </div>
@@ -468,152 +453,147 @@ const AutonomousBusinessOperations = () => {
           </div>
         </section>
 
-        {/* Pricing Section */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='text-center mb-16'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
+        {/* PricingSection */}
+        <sectionclassName = 'containermx-autopx-6py-20max-w-6xl'>
+          <divclassName='text-centermb-16'>
+            <h2className='text-4xlmd: text-5xlfont-boldtext-whitemb-4'>
               Investment & ROI
             </h2>
-            <p className='text-xl text-blue-200'>
-              Transparent pricing with guaranteed returns
+            <pclassName='text-xltext-blue-200'>
+              Transparentpricingwith guaranteedreturns
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8 max-w-4xl mx-auto'>
+          <divclassName='gridmd:grid-cols-2gap-8max-w-4xlmx-auto'>
             {/* Investment */}
-            <div className='bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-blue-400/50'>
-              <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-                Total Investment
+            <divclassName = 'bg-gradient-to-brfrom-blue-900/60to-purple-900/60backdrop-blur-smrounded-2xlp-8border-2border-blue-400/50'>
+              <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+                TotalInvestment
               </h3>
-              <div className='text-center mb-6'>
-                <div className='text-5xl font-bold text-white mb-2'>
+              <divclassName='text-centermb-6'>
+                <divclassName='text-5xlfont-boldtext-whitemb-2'>
                   $10-25M
                 </div>
-                <div className='text-blue-200'>3-Year Total Cost</div>
+                <divclassName='text-blue-200'>3-YearTotalCost</div>
               </div>
-              <ul className='space-y-3 text-blue-100'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Platform licensing</span>
+              <ulclassName='space-y-3text-blue-100'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-blue-400mt-1flex-shrink-0' />
+                  <span>Platformlicensing</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Implementation services</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-blue-400mt-1flex-shrink-0' />
+                  <span>Implementationservices</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Training & change management</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-blue-400mt-1flex-shrink-0' />
+                  <span>Training & changemanagement</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                  <span>Ongoing support & optimization</span>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-blue-400mt-1flex-shrink-0' />
+                  <span>Ongoingsupport & optimization</span>
                 </li>
               </ul>
             </div>
 
             {/* Return */}
-            <div className='bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/50'>
-              <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-                Expected Returns
+            <divclassName='bg-gradient-to-brfrom-green-900/60to-emerald-900/60backdrop-blur-smrounded-2xlp-8border-2border-green-400/50'>
+              <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+                ExpectedReturns
               </h3>
-              <div className='text-center mb-6'>
-                <div className='text-5xl font-bold text-white mb-2'>
+              <divclassName='text-centermb-6'>
+                <divclassName='text-5xlfont-boldtext-whitemb-2'>
                   $90-330M
                 </div>
-                <div className='text-green-200'>3-Year Value Creation</div>
+                <divclassName='text-green-200'>3-YearValueCreation</div>
               </div>
-              <ul className='space-y-3 text-green-100'>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Cost savings (labor, errors, infrastructure)</span>
+              <ulclassName='space-y-3text-green-100'>
+                <liclassName='flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                  <span>Costsavings (laborerrorsinfrastructure)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Revenue acceleration (faster cycles)</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                  <span>Revenueacceleration (fastercycles)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Risk reduction (compliance, fraud)</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                  <span>Riskreduction (compliancefraud)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                  <span>Customer retention & satisfaction</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                  <span>Customerretention & satisfaction</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className='mt-12 text-center'>
-            <div className='inline-block bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-2 border-yellow-400/50 rounded-2xl p-8'>
-              <div className='text-3xl font-bold text-yellow-300 mb-2'>
-                300-1,200% Net ROI
+          <divclassName='mt-12text-center'>
+            <divclassName='inline-blockbg-gradient-to-rfrom-yellow-500/20to-orange-500/20border-2border-yellow-400/50rounded-2xlp-8'>
+              <divclassName='text-3xlfont-boldtext-yellow-300mb-2'>
+                300-1200% NetROI
               </div>
-              <div className='text-yellow-100 text-lg'>
-                Guaranteed or your money back
+              <divclassName = 'text-yellow-100text-lg'>
+                Guaranteedoryour moneyback
               </div>
             </div>
           </div>
         </section>
 
-        {/* Success Story CTA */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-12 text-center'>
-            <h2 className='text-4xl font-bold text-white mb-4'>
-              See It In Action: $650M Success Story
+        {/* SuccessStoryCTA */}
+        <sectionclassName='containermx-autopx-6py-20max-w-6xl'>
+          <divclassName='bg-gradient-to-rfrom-green-600to-emerald-600rounded-2xlp-12text-center'>
+            <h2className='text-4xlfont-boldtext-whitemb-4'>
+              SeeItIn Action: $650MSuccessStory
             </h2>
-            <p className='text-xl text-green-100 mb-8 max-w-2xl mx-auto'>
-              Read how a Fortune 100 financial services company transformed
-              their operations and created $650M in annual value in just 12
-              months.
+            <pclassName='text-xltext-green-100mb-8max-w-2xlmx-auto'>
+              Readhowa Fortune100financial servicescompanytransformed
+              theiroperationsand created $650Minannual valueinjust 12months.
             </p>
-            <Link
-              to='/case-studies/fortune-100-autonomous-operations-transformation-2025'
-              className='inline-flex items-center gap-2 bg-white text-green-600 hover:bg-green-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl'
+            <Linkto='/case-studies/fortune-100-autonomous-operations-transformation-2025'
+              className='inline-flexitems-centergap-2bg-whitetext-green-600hover:bg-green-50px-8py-4rounded-lgfont-boldtext-lgtransition-allshadow-xlhover:shadow-2xl'
             >
-              Read Complete Case Study
-              <ArrowRight className='w-5 h-5' />
+              ReadCompleteCase Study
+              <ArrowRight,className='w-5 h-5' />
             </Link>
           </div>
         </section>
 
-        {/* Final CTA */}
-        <section className='container mx-auto px-6 py-20 max-w-6xl'>
-          <div className='bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12 text-center'>
-            <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-              Ready to Transform Your Business?
+        {/* FinalCTA */}
+        <sectionclassName = 'containermx-autopx-6py-20max-w-6xl'>
+          <divclassName='bg-gradient-to-rfrom-blue-600to-purple-600rounded-2xlp-12text-center'>
+            <h2className='text-4xlmd: text-5xlfont-boldtext-whitemb-6'>
+              ReadytoTransform YourBusiness?
             </h2>
-            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-              Get started with a free 90-minute strategy consultation and custom
-              ROI analysis.
+            <pclassName='text-xltext-blue-100mb-8max-w-2xlmx-auto'>
+              Getstartedwith afree90-minutestrategyconsultation andcustomROI analysis.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4 justify-center mb-8'>
-              <Link
-                to='/contact'
-                className='inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-xl hover:shadow-2xl'
+            <divclassName='flexflex-colsm:flex-rowgap-4justify-centermb-8'>
+              <Linkto='/contact'
+                className='inline-flexitems-centerjustify-centergap-2bg-whitetext-blue-600hover:bg-blue-50px-8py-4rounded-lgfont-boldtext-lgtransition-allshadow-xlhover:shadow-2xl'
               >
-                <Rocket className='w-5 h-5' />
-                Schedule Free Consultation
-                <ArrowRight className='w-5 h-5' />
+                <RocketclassName='w-5 h-5' />
+                ScheduleFreeConsultation
+                <ArrowRight,className='w-5 h-5' />
               </Link>
-              <Link
-                to='/blog/ai-autonomous-business-operations-revolution-2025'
-                className='inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-bold text-lg transition-all'
+              <Linkto='/blog/ai-autonomous-business-operations-revolution-2025'
+                className='inline-flexitems-centerjustify-centergap-2border-2border-whitetext-whitehover:bg-whitehover:text-blue-600px-8py-4rounded-lgfont-boldtext-lgtransition-all'
               >
-                Read Complete Guide
+                ReadCompleteGuide
               </Link>
             </div>
 
-            <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-xl mx-auto'>
-              <p className='text-white font-bold text-lg mb-2'>
-                🎁 Limited Time Offer
+            <divclassName='bg-white/10backdrop-blur-smrounded-xlp-6max-w-xlmx-auto'>
+              <pclassName='text-whitefont-boldtext-lgmb-2'>
+                🎁 LimitedTimeOffer
               </p>
-              <p className='text-blue-100 mb-2'>
-                <strong>50% OFF</strong> implementation services through
-                December 2025
+              <pclassName='text-blue-100mb-2'>
+                <strong>50% OFF</strong> implementationservicesthrough
+                December2025
               </p>
-              <p className='text-blue-200 text-sm'>
-                + FREE 30-day proof of concept + FREE ROI analysis
+              <pclassName='text-blue-200text-sm'>
+                + FREE30-dayproofof concept + FREEROIanalysis
               </p>
             </div>
           </div>
@@ -623,4 +603,4 @@ const AutonomousBusinessOperations = () => {
   );
 };
 
-export default AutonomousBusinessOperations;
+exportdefaultAutonomousBusinessOperations;

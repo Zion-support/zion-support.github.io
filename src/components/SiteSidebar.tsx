@@ -1,140 +1,134 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLinkuseLocation } from 'react-router-dom';
 
-const linkClass = ({ isActive }: { isActive: boolean }) =>
-  `block px-3 py-2 rounded-md text-sm ${
+constlinkClass = ({ isActive }: { isActive: boolean }) =>
+  `blockpx-3py-2rounded-mdtext-sm ${ 
     isActive
-      ? 'bg-blue-100 text-blue-700 font-medium'
-      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-  }`;
-
-const SiteSidebar: React.FC = () => {
-  const location = useLocation();
-  void location; // suppress unused for build
-
-  return (
-    <aside className='hidden xl:block w-64 shrink-0 border-r border-gray-200 bg-gray-50'>
-      <div className='p-6'>
-        <h2 className='text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4'>
+       ? 'bg-blue-100text-blue-700font-medium'
+      : 'text-gray-700hover: text-gray-900hover : bg-gray-100'
+   }`; constSiteSidebar: React.FC = () => { 
+  constlocation = useLocation(); voidlocation; // suppressunusedfor buildreturn (
+    <asideclassName = 'hiddenxl:blockw-64shrink-0border-rborder-gray-200bg-gray-50'>
+      <divclassName='p-6'>
+        <h2className='text-smfont-semiboldtext-gray-700uppercasetracking-widermb-4'>
           Navigation
         </h2>
 
-        <div className='space-y-6'>
+        <divclassName='space-y-6'>
           <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
+            <h3className='text-xsfont-mediumtext-gray-600uppercasemb-2'>
               Explore
             </h3>
-            <nav className='space-y-1'>
-              {' '}
-              <NavLink to='/' className={linkClass}>
+            <navclassName='space-y-1' > {' ' }
+              <NavLinkto = '/' className={linkClass}>
                 Home
               </NavLink>
-              <NavLink to='/solutions' className={linkClass}>
+              <NavLinkto='/solutions' className={linkClass}>
                 Solutions
               </NavLink>
-              <NavLink to='/services' className={linkClass}>
+              <NavLinkto='/services' className={linkClass}>
                 Services
               </NavLink>
-              <NavLink to='/marketplace' className={linkClass}>
+              <NavLinkto='/marketplace' className={linkClass}>
                 Marketplace
               </NavLink>
-              <NavLink to='/resources' className={linkClass}>
+              <NavLinkto='/resources' className={linkClass}>
                 Resources
               </NavLink>
-              <NavLink to='/case-studies' className={linkClass}>
-                Case Studies
+              <NavLinkto='/case-studies' className={linkClass}>
+                CaseStudies
               </NavLink>
-              <NavLink to='/blog' className={linkClass}>
+              <NavLinkto='/blog' className={linkClass}>
                 Blog
               </NavLink>
-              <NavLink to='/about' className={linkClass}>
+              <NavLinkto='/about' className={linkClass}>
                 About
               </NavLink>
             </nav>
           </div>
 
           <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
+            <h3className='text-xsfont-mediumtext-gray-600uppercasemb-2'>
               Solutions
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/solutions/enterprise' className={linkClass}>
+            <navclassName='space-y-1'>
+              <NavLinkto='/solutions/enterprise' className={linkClass}>
                 Enterprise
               </NavLink>
-              <NavLink to='/solutions/smb' className={linkClass}>
+              <NavLinkto='/solutions/smb' className={linkClass}>
                 SMB
               </NavLink>
-              <NavLink to='/solutions/startup' className={linkClass}>
+              <NavLinkto='/solutions/startup' className={linkClass}>
                 Startup
               </NavLink>
-              <NavLink to='/solutions/healthcare' className={linkClass}>
+              <NavLinkto='/solutions/healthcare' className={linkClass}>
                 Healthcare
               </NavLink>
-              <NavLink to='/solutions/financial' className={linkClass}>
+              <NavLinkto='/solutions/financial' className={linkClass}>
                 Financial
               </NavLink>
-              <NavLink to='/solutions/retail' className={linkClass}>
+              <NavLinkto='/solutions/retail' className={linkClass}>
                 Retail
               </NavLink>
-              <NavLink to='/solutions/manufacturing' className={linkClass}>
+              <NavLinkto='/solutions/manufacturing' className={linkClass}>
                 Manufacturing
               </NavLink>
             </nav>
           </div>
 
           <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
+            <h3className='text-xsfont-mediumtext-gray-600uppercasemb-2'>
               Services
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/services/ai-services' className={linkClass}>
-                AI Services
+            <navclassName='space-y-1'>
+              <NavLinkto='/services/ai-services' className={linkClass}>
+                AIServices
               </NavLink>
-              <NavLink to='/services/it-services' className={linkClass}>
-                IT Services
+              <NavLinkto='/services/it-services' className={linkClass}>
+                ITServices
               </NavLink>
-              <NavLink to='/services/micro-saas' className={linkClass}>
-                Micro SaaS
+              <NavLinkto='/services/micro-saas' className={linkClass}>
+                MicroSaaS
               </NavLink>
-              <NavLink to='/services/cloud' className={linkClass}>
+              <NavLinkto='/services/cloud' className={linkClass}>
                 Cloud
               </NavLink>
-              <NavLink to='/services/analytics' className={linkClass}>
+              <NavLinkto='/services/analytics' className={linkClass}>
                 Analytics
               </NavLink>
-              <NavLink to='/services/security' className={linkClass}>
+              <NavLinkto='/services/security' className={linkClass}>
                 Security
               </NavLink>
-              <NavLink to='/services/automation' className={linkClass}>
+              <NavLinkto='/services/automation' className={linkClass}>
                 Automation
               </NavLink>
             </nav>
           </div>
 
           <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
+            <h3className='text-xsfont-mediumtext-gray-600uppercasemb-2'>
               Company
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/contact' className={linkClass}>
+            <navclassName='space-y-1'>
+              <NavLinkto='/contact' className={linkClass}>
                 Contact
               </NavLink>
-              <NavLink to='/partners' className={linkClass}>
+              <NavLinkto='/partners' className={linkClass}>
                 Partners
               </NavLink>
-              <NavLink to='/pricing' className={linkClass}>
+              <NavLinkto='/pricing' className={linkClass}>
                 Pricing
               </NavLink>
-              <NavLink to='/careers' className={linkClass}>
+              <NavLinkto='/careers' className={linkClass}>
                 Careers
               </NavLink>
-              <NavLink to='/faq' className={linkClass}>
+              <NavLinkto='/faq' className={linkClass}>
                 FAQ
               </NavLink>
-              <NavLink to='/privacy' className={linkClass}>
+              <NavLinkto='/privacy' className={linkClass}>
                 Privacy
               </NavLink>
-              <NavLink to='/terms' className={linkClass}>
+              <NavLinkto='/terms' className={linkClass}>
                 Terms
               </NavLink>
             </nav>
@@ -145,4 +139,4 @@ const SiteSidebar: React.FC = () => {
   );
 };
 
-export default SiteSidebar;
+exportdefaultSiteSidebar;

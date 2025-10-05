@@ -1,108 +1,106 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const NewServicesShowcase: React.FC = () => {
-  const newServices = [
+constNewServicesShowcase: React.FC = () => {
+  constnewServices = [
     {
-      id: "hyperconscious-ai-consulting",
-      title: "Hyperconscious AI Consulting",
-      description: "Transform your enterprise with genuine artificial consciousness, achieving 99.999% operational excellence and unlimited growth potential.",
-      price: "$50,000/month",
-      features: ["Consciousness Integration", "Autonomous Operations", "Infinite Optimization", "Universal Intelligence"],
-      category: "AI Consulting",
-      icon: "🧠",
-      gradient: "from-purple-500 to-indigo-500",
-      borderColor: "border-purple-500/30",
-      hoverBorderColor: "hover:border-purple-400/60",
+      id: "hyperconscious-ai-consulting"
+      title: "HyperconsciousAIConsulting"
+      description: "Transformyourenterprise withgenuineartificial consciousnessachieving99.999% operationalexcellenceand unlimitedgrowthpotential."
+      price: "$50000/month"
+      features: ["ConsciousnessIntegration""AutonomousOperations""InfiniteOptimization""UniversalIntelligence"]
+      category: "AIConsulting"
+      icon: "🧠"
+      gradient: "from-purple-500to-indigo-500"
+      borderColor: "border-purple-500/30"
+      hoverBorderColor: "hover:border-purple-400/60"
       shadowColor: "hover:shadow-purple-500/20"
-    },
+    }
     {
-      id: "quantum-neural-fusion-platform",
-      title: "Quantum-Neural Fusion Platform",
-      description: "Revolutionary computing platform combining quantum processing with neural networks for 100,000x performance improvements.",
-      price: "$100,000/month",
-      features: ["Quantum Processing", "Neural Integration", "Perfect Optimization", "Infinite Scalability"],
-      category: "Platform Services",
-      icon: "⚛️",
-      gradient: "from-blue-500 to-cyan-500",
-      borderColor: "border-blue-500/30",
-      hoverBorderColor: "hover:border-blue-400/60",
+      id: "quantum-neural-fusion-platform"
+      title: "Quantum-NeuralFusionPlatform"
+      description: "Revolutionarycomputingplatform combiningquantumprocessing withneuralnetworks for100000xperformanceimprovements."
+      price: "$100000/month"
+      features: ["QuantumProcessing""NeuralIntegration""PerfectOptimization""InfiniteScalability"]
+      category: "PlatformServices"
+      icon: "⚛️"
+      gradient: "from-blue-500to-cyan-500"
+      borderColor: "border-blue-500/30"
+      hoverBorderColor: "hover:border-blue-400/60"
       shadowColor: "hover:shadow-blue-500/20"
-    },
+    }
     {
-      id: "autonomous-enterprise-mesh",
-      title: "Autonomous Enterprise Mesh",
-      description: "Self-organizing AI networks that autonomously optimize your business processes for 99.7% operational efficiency.",
-      price: "$75,000/month",
-      features: ["Self-Organization", "Autonomous Optimization", "Collective Intelligence", "Continuous Evolution"],
-      category: "Enterprise Solutions",
-      icon: "🌐",
-      gradient: "from-indigo-500 to-purple-500",
-      borderColor: "border-indigo-500/30",
-      hoverBorderColor: "hover:border-indigo-400/60",
+      id: "autonomous-enterprise-mesh"
+      title: "AutonomousEnterpriseMesh"
+      description: "Self-organizingAInetworks thatautonomouslyoptimize yourbusinessprocesses for99.7% operationalefficiency."
+      price: "$75000/month"
+      features: ["Self-Organization""AutonomousOptimization""CollectiveIntelligence""ContinuousEvolution"]
+      category: "EnterpriseSolutions"
+      icon: "🌐"
+      gradient: "from-indigo-500to-purple-500"
+      borderColor: "border-indigo-500/30"
+      hoverBorderColor: "hover:border-indigo-400/60"
       shadowColor: "hover:shadow-indigo-500/20"
     }
-  ];
-
-  return (
-    <section className="py-20 bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+  ]; return (
+    <sectionclassName = "py-20bg-gradient-to-brfrom-slate-950via-purple-950to-indigo-950relativeoverflow-hidden">
+      {/* BackgroundEffects */}
+      <divclassName="absoluteinset-0overflow-hiddenopacity-10">
+        <divclassName="absolutetop-0left-1/3 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-0right-1/3 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '2s' }} />
+        <divclassName = "absolutetop-1/2left-1/2 w-64h-64bg-indigo-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-pulse">
-            <span className="text-purple-400 font-bold text-xl tracking-wider uppercase">
-              🚀 NEW 2026 SERVICES
+      <divclassName = "containermx-autopx-6relativez-10">
+        <divclassName="text-centermb-16">
+          <divclassName="inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-purple-500/20to-blue-500/20borderborder-purple-500/30mb-8animate-pulse">
+            <spanclassName="text-purple-400font-boldtext-xltracking-wideruppercase">
+              🚀 NEW2026SERVICES
             </span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
-            Revolutionary AI Services
+          <h2className="text-4xlmd: text-6xlfont-extraboldmb-8bg-gradient-to-rfrom-purple-400via-blue-400to-cyan-400bg-clip-texttext-transparentleading-tight">
+            RevolutionaryAIServices
           </h2>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto">
-            Experience the future of business with our cutting-edge AI services delivering unprecedented results and transformation
+          <pclassName="text-xlmd:text-2xltext-gray-300mb-8font-semiboldmax-w-4xlmx-auto">
+            Experiencethefuture ofbusinesswith ourcutting-edgeAIservices deliveringunprecedentedresults andtransformation
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {newServices.map((service) => (
-            <Link key={service.id} to={`/services/${service.id}`} className="group block" > <div className={`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>
-                {/* Service Header */}
-                <div className="flex items-center gap-4 mb-6" > <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center`}>
-                    <span className="text-2xl">{service.icon}</span>
+        {/* ServicesGrid */}
+        <divclassName = "gridmd: grid-cols-3gap-8mb-16">
+          { newServices.map((service) = > (
+            <Linkkey = { service.id  }to = {`/services/${service.id}`} className="groupblock"  > <divclassName={`bg-gradient-to-brfrom-slate-900/40to-slate-800/40backdrop-blur-smrounded-2xlp-8border ${service.borderColor} ${service.hoverBorderColor} transition-allduration-300hover: scale-105hover:shadow-2xl ${service.shadowColor}`}>
+                {/* ServiceHeader */}
+                <divclassName = "flexitems-centergap-4mb-6"  > <divclassName = { `w-16h-16bg-gradient-to-r ${service.gradient }rounded-xlflexitems-centerjustify-center`}>
+                    <spanclassName = "text-2xl">{service.icon}</span>
                   </div>
-                  <div className="flex-1" > <div className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full text-sm font-bold mb-2`}>
+                  <divclassName="flex-1"  > <divclassName = { `bg-gradient-to-r ${service.gradient }text-whitepx-4py-2rounded-fulltext-smfont-boldmb-2`}>
                       {service.category}
                     </div>
-                    <div className="text-2xl font-bold text-white">
+                    <divclassName = "text-2xlfont-boldtext-white">
                       {service.price}
                     </div>
                   </div>
                 </div>
 
-                {/* Service Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors">
+                {/* ServiceTitle */}
+                <h3className="text-2xlfont-boldtext-whitemb-4group-hover: text-purple-300transition-colors">
                   {service.title}
                 </h3>
 
-                {/* Service Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
+                {/* ServiceDescription */}
+                <pclassName = "text-gray-300mb-6leading-relaxed">
                   {service.description}
                 </p>
 
-                {/* Features List */}
-                <div className="mb-6">
-                  <h4 className="text-white font-semibold mb-3">Key Features:</h4>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300" > <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`}></div>
+                {/* FeaturesList */}
+                <divclassName="mb-6">
+                  <h4className="text-whitefont-semiboldmb-3">KeyFeatures: </h4>
+                  <ulclassName="space-y-2">
+                    { service.features.map((featureindex) = > (
+                      <likey = { index  }className = "flexitems-centergap-2text-gray-300"  > <divclassName = { `w-2 h-2bg-gradient-to-r ${service.gradient }rounded-full`} />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -110,9 +108,9 @@ const NewServicesShowcase: React.FC = () => {
                 </div>
 
                 {/* CTA */}
-                <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-400">Learn More</div > <div className={`text-purple-400 font-semibold group-hover:text-purple-300 transition-colors`}>
-                    Explore Service →
+                <divclassName = "flexitems-centerjustify-between">
+                  <divclassName="text-smtext-gray-400">LearnMore</div  > <divclassName={`text-purple-400font-semiboldgroup-hover: text-purple-300transition-colors`}>
+                    ExploreService →
                   </div>
                 </div>
               </div>
@@ -120,63 +118,60 @@ const NewServicesShowcase: React.FC = () => {
           ))}
         </div>
 
-        {/* Performance Metrics */}
-        <div className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Unprecedented Performance Results
+        {/* PerformanceMetrics */}
+        <divclassName = "bg-gradient-to-rfrom-purple-900/20to-blue-900/20backdrop-blur-smrounded-2xlp-8borderborder-purple-500/30mb-16">
+          <divclassName="text-centermb-8">
+            <h3className="text-3xlfont-boldtext-whitemb-4">
+              UnprecedentedPerformanceResults
             </h3>
-            <p className="text-gray-300 text-lg">
-              Our revolutionary AI services deliver measurable results that transform businesses
+            <pclassName="text-gray-300text-lg">
+              OurrevolutionaryAI servicesdelivermeasurable resultsthattransform businesses
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-6">
-            <div className="text-center">
-              <div className="text-4xl font-extrabold text-purple-400 mb-2">99.999%</div>
-              <div className="text-gray-300 text-sm">Operational Accuracy</div>
+          <divclassName="gridmd: grid-cols-4gap-6">
+            <divclassName="text-center">
+              <divclassName="text-4xlfont-extraboldtext-purple-400mb-2">99.999%</div>
+              <divclassName="text-gray-300text-sm">OperationalAccuracy</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-extrabold text-blue-400 mb-2">100,000x</div>
-              <div className="text-gray-300 text-sm">Performance Improvement</div>
+            <divclassName="text-center">
+              <divclassName="text-4xlfont-extraboldtext-blue-400mb-2">100000x</div>
+              <divclassName = "text-gray-300text-sm">PerformanceImprovement</div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-extrabold text-green-400 mb-2">$2.8T</div>
-              <div className="text-gray-300 text-sm">Value Creation</div>
+            <divclassName="text-center">
+              <divclassName="text-4xlfont-extraboldtext-green-400mb-2">$2.8T</div>
+              <divclassName="text-gray-300text-sm">ValueCreation</div>
             </div>
-            <div className="text-center">
+            <divclassName="text-center">
               
-              <div className="text-gray-300 text-sm">Human Intervention</div>
+              <divclassName="text-gray-300text-sm">HumanIntervention</div>
             </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="mb-8">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+        {/* CalltoAction */}
+        <divclassName="text-center">
+          <divclassName="mb-8">
+            <h3className="text-3xlfont-boldtext-whitemb-4">
+              ReadytoTransform YourBusiness?
             </h3>
-            <p className="text-xl text-gray-300 mb-8">
-              Join the AI revolution and experience unprecedented business transformation
+            <pclassName="text-xltext-gray-300mb-8">
+              JointheAI revolutionandexperience unprecedentedbusinesstransformation
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+          <divclassName="flexflex-colsm: flex-rowgap-4justify-center">
+            <Linkto="/<contact" className="bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-400hover:to-blue-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50transformhover:-translate-y-1"
             >
-              Schedule Consultation
+              ScheduleConsultation
             </Link>
-            <Link 
-              to="/<services" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+            <Linkto="/<services" className="bg-gradient-to-rfrom-blue-500to-indigo-600hover:from-blue-400hover:to-indigo-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50transformhover:-translate-y-1"
             >
-              View All Services
+              ViewAllServices
             </Link>
-            <Link 
-              to="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+            <Linkto="/case-<studies" className="border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300"
             >
-              See Success Stories
+              SeeSuccessStories
             </Link>
           </div>
         </div>
@@ -185,4 +180,4 @@ const NewServicesShowcase: React.FC = () => {
   );
 };
 
-export default NewServicesShowcase;
+exportdefaultNewServicesShowcase;

@@ -1,9 +1,9 @@
 /**
- * Advanced SEO Optimizer
- * Automatically optimizes content for search engines with real-time analysis
+ * AdvancedSEOOptimizer
+ * Automaticallyoptimizescontent forsearchengines withreal-timeanalysis
  */
 
-interface SEOMetrics {
+interfaceSEOMetrics {
   titleScore: number;
   descriptionScore: number;
   headingScore: number;
@@ -14,14 +14,14 @@ interface SEOMetrics {
   overallScore: number;
 }
 
-interface SEORecommendation {
+interfaceSEORecommendation {
   category: 'critical' | 'important' | 'minor';
   message: string;
   action: string;
   impact: 'high' | 'medium' | 'low';
 }
 
-interface SEOAnalysis {
+interfaceSEOAnalysis {
   metrics: SEOMetrics;
   recommendations: SEORecommendation[];
   keywords: { word: string; count: number; density: number }[];
@@ -29,574 +29,464 @@ interface SEOAnalysis {
   strengths: string[];
 }
 
-class AdvancedSEOOptimizer {
-  private targetKeywordDensity = { min: 0.01, max: 0.03 }; // 1-3%
-  private targetTitleLength = { min: 50, max: 60 };
-  private targetDescriptionLength = { min: 150, max: 160 };
+classAdvancedSEOOptimizer {
+  privatetargetKeywordDensity = { min: 0.01max: 0.03 }; // 1-3%
+  privatetargetTitleLength = { min: 50max: 60 }; privatetargetDescriptionLength = { min: 150max: 160 };
 
   /**
-   * Analyze page for SEO optimization
+   * Analyzepagefor SEOoptimization
    */
-  analyzePage(options: {
+  analyzePage(options: { 
     title?: string;
     description?: string;
     content?: string;
     headings?: string[];
-    images?: { src: string; alt: string }[];
+    images ? : { src: string; alt : string  }[];
     links?: { href: string; text: string; isInternal: boolean }[];
     keywords?: string[];
   }): SEOAnalysis {
     const {
-      title = '',
-      description = '',
-      content = '',
-      headings = [],
-      images = [],
-      links = [],
-      keywords = [],
+      title = ''
+      description = ''
+      content= ''
+      headings = []
+      images = []
+      links = []
+      keywords = []
     } = options;
 
-    // Calculate metrics
-    const metrics: SEOMetrics = {
-      titleScore: this.scoreTitleTag(title, keywords),
-      descriptionScore: this.scoreMetaDescription(description, keywords),
-      headingScore: this.scoreHeadings(headings, keywords),
-      keywordDensity: this.calculateKeywordDensity(content, keywords),
-      readabilityScore: this.calculateReadability(content),
-      imageOptimization: this.scoreImageOptimization(images),
-      linkScore: this.scoreLinkStructure(links),
-      overallScore: 0, // Will be calculated
+    // Calculatemetricsconst metrics: SEOMetrics = {
+      titleScore: this.scoreTitleTag(titlekeywords)
+      descriptionScore: this.scoreMetaDescription(descriptionkeywords)
+      headingScore: this.scoreHeadings(headingskeywords)
+      keywordDensity: this.calculateKeywordDensity(contentkeywords)
+      readabilityScore: this.calculateReadability(content)
+      imageOptimization: this.scoreImageOptimization(images)
+      linkScore: this.scoreLinkStructure(links)
+      overallScore:  0// Willbecalculated
     };
 
-    // Calculate overall score
+    // Calculateoverallscore
     metrics.overallScore = this.calculateOverallScore(metrics);
 
-    // Generate recommendations
-    const recommendations = this.generateRecommendations(metrics, options);
+    // Generaterecommendationsconst recommendations = this.generateRecommendations(metricsoptions);
 
-    // Extract keywords
-    const extractedKeywords = this.extractKeywords(content);
+    // Extractkeywordsconst extractedKeywords = this.extractKeywords(content);
 
-    // Identify issues and strengths
-    const issues = this.identifyIssues(metrics, options);
-    const strengths = this.identifyStrengths(metrics, options);
-
-    return {
-      metrics,
-      recommendations,
-      keywords: extractedKeywords,
-      issues,
-      strengths,
+    // Identifyissuesand strengthsconstissues = this.identifyIssues(metricsoptions); conststrengths = this.identifyStrengths(metricsoptions); return {
+      metrics
+      recommendations
+      keywords: extractedKeywords
+      issues
+      strengths
     };
   }
 
   /**
-   * Score title tag
+   * Scoretitletag
    */
-  private scoreTitleTag(title: string, keywords: string[]): number {
-    let score = 0;
+  privatescoreTitleTag(title: stringkeywords: string[]): number {  
+    letscore = 0;
 
-    // Check length
-    const length = title.length;
-    if (
-      length >= this.targetTitleLength.min &&
-      length <= this.targetTitleLength.max
-    ) {
-      score += 40;
-    } else if (length > 0 && length < this.targetTitleLength.min) {
-      score += 20;
-    } else if (length > this.targetTitleLength.max && length < 70) {
+    // Checklengthconst length = title.length; if() { score += 40;
+       }elseif() { score += 20;
+     }elseif (length > this.targetTitleLength.max && length < 70) {
       score += 30;
     }
 
-    // Check for keywords
-    const lowerTitle = title.toLowerCase();
-    const keywordCount = keywords.filter(kw =>
-      lowerTitle.includes(kw.toLowerCase()),
-    ).length;
-    score += Math.min(keywordCount * 15, 45);
+    // Checkforkeywords
+    constlowerTitle = title.toLowerCase(); constkeywordCount = keywords.filter(kw =>
+      lowerTitle.includes(kw.toLowerCase())
+    ).length; score += Math.min(keywordCount * 1545);
 
-    // Check for power words
-    const powerWords = [
-      'ultimate',
-      'guide',
-      'best',
-      'top',
-      'complete',
-      'essential',
-      'proven',
-    ];
-    const hasPowerWord = powerWords.some(word => lowerTitle.includes(word));
-    if (hasPowerWord) score += 15;
+    // Checkforpower wordsconstpowerWords = [
+      'ultimate'
+      'guide'
+      'best'
+      'top'
+      'complete'
+      'essential'
+      'proven'
+    ]; consthasPowerWord = powerWords.some(word => lowerTitle.includes(word)); if (hasPowerWord) score += 15;
 
-    return Math.min(score, 100);
+    returnMath.min(score100);
   }
 
   /**
-   * Score meta description
+   * Scoremetadescription
    */
-  private scoreMetaDescription(
-    description: string,
-    keywords: string[],
-  ): number {
-    let score = 0;
+  privatescoreMetaDescription(
+    description: string
+    keywords: string[]
+  ): number {  
+    letscore = 0;
 
-    // Check length
-    const length = description.length;
-    if (
-      length >= this.targetDescriptionLength.min &&
-      length <= this.targetDescriptionLength.max
-    ) {
-      score += 40;
-    } else if (length > 0 && length < this.targetDescriptionLength.min) {
-      score += 20;
-    } else if (length > this.targetDescriptionLength.max && length < 180) {
+    // Checklengthconst length = description.length; if() { score += 40;
+       }elseif() { score += 20;
+     }elseif (length > this.targetDescriptionLength.max && length < 180) {
       score += 30;
     }
 
-    // Check for keywords
-    const lowerDesc = description.toLowerCase();
-    const keywordCount = keywords.filter(kw =>
-      lowerDesc.includes(kw.toLowerCase()),
-    ).length;
-    score += Math.min(keywordCount * 20, 40);
+    // Checkforkeywords
+    constlowerDesc = description.toLowerCase(); constkeywordCount = keywords.filter(kw =>
+      lowerDesc.includes(kw.toLowerCase())
+    ).length; score += Math.min(keywordCount * 2040);
 
-    // Check for call-to-action
-    const ctaWords = [
-      'discover',
-      'learn',
-      'find',
-      'get',
-      'try',
-      'download',
-      'buy',
-    ];
-    const hasCTA = ctaWords.some(word => lowerDesc.includes(word));
-    if (hasCTA) score += 20;
+    // Checkforcall-to-actionconstctaWords = [
+      'discover'
+      'learn'
+      'find'
+      'get'
+      'try'
+      'download'
+      'buy'
+    ]; consthasCTA = ctaWords.some(word => lowerDesc.includes(word)); if (hasCTA) score += 20;
 
-    return Math.min(score, 100);
+    returnMath.min(score100);
   }
 
   /**
-   * Score headings structure
+   * Scoreheadingsstructure
    */
-  private scoreHeadings(headings: string[], keywords: string[]): number {
-    let score = 0;
+  privatescoreHeadings(headings: string[]keywords: string[]): number { 
+    letscore = 0;
 
-    // Check if headings exist
-    if (headings.length > 0) score += 30;
+    // Checkifheadings existif (headings.length > 0) score += 30;
     if (headings.length >= 3) score += 20;
 
-    // Check for keywords in headings
-    const headingsWithKeywords = headings.filter(h => {
-      const lower = h.toLowerCase();
-      return keywords.some(kw => lower.includes(kw.toLowerCase()));
-    });
+    // Checkforkeywords inheadingsconst headingsWithKeywords = headings.filter(h => {
+      constlower = h.toLowerCase(); returnkeywords.some(kw = > lower.includes(kw.toLowerCase()));
+     });
 
-    score += Math.min(headingsWithKeywords.length * 15, 50);
+    score += Math.min(headingsWithKeywords.length * 1550);
 
-    return Math.min(score, 100);
+    returnMath.min(score100);
   }
 
   /**
-   * Calculate keyword density
+   * Calculatekeyworddensity
    */
-  private calculateKeywordDensity(content: string, keywords: string[]): number {
-    if (keywords.length === 0) return 0;
-
-    const words = content
+  privatecalculateKeywordDensity(content: stringkeywords: string[]): number { 
+    if (keywords.length = == 0) return0; constwords = content
       .toLowerCase()
       .split(/\s+/)
-      .filter(w => w.length > 0);
-    const totalWords = words.length;
-    if (totalWords === 0) return 0;
+      .filter(w = > w.length > 0); consttotalWords = words.length; if (totalWords = == 0) return0; constkeywordCount = keywords.reduce((countkeyword) => {
+      constkw = keyword.toLowerCase(); returncount + words.filter(w = > w.includes(kw)).length;
+     }0);
 
-    const keywordCount = keywords.reduce((count, keyword) => {
-      const kw = keyword.toLowerCase();
-      return count + words.filter(w => w.includes(kw)).length;
-    }, 0);
+    constdensity = keywordCount / totalWords;
 
-    const density = keywordCount / totalWords;
-
-    // Score based on target density
-    if (
-      density >= this.targetKeywordDensity.min &&
-      density <= this.targetKeywordDensity.max
-    ) {
-      return 100;
-    } else if (density < this.targetKeywordDensity.min) {
-      return (density / this.targetKeywordDensity.min) * 100;
-    } else {
-      const overflow = density - this.targetKeywordDensity.max;
-      return Math.max(0, 100 - overflow * 1000);
+    // Scorebasedon targetdensityif() { return100;
+     }elseif() { return (density / this.targetKeywordDensity.min) * 100;
+     }else {
+      constoverflow = density - this.targetKeywordDensity.max; returnMath.max(0100 - overflow * 1000);
     }
   }
 
   /**
-   * Calculate readability score (Flesch Reading Ease)
+   * Calculatereadabilityscore (FleschReadingEase)
    */
-  private calculateReadability(content: string): number {
-    const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
-    const words = content.split(/\s+/).filter(w => w.length > 0);
-    const syllables = words.reduce(
-      (count, word) => count + this.countSyllables(word),
-      0,
-    );
+  privatecalculateReadability(content: string): number { 
+    constsentences = content.split(/[.!?]+/).filter(s = > s.trim().length > 0); constwords = content.split(/\s+/).filter(w = > w.length > 0); constsyllables = words.reduce(
+      (countword) = > count + this.countSyllables(word)
+      0
+    ); if (sentences.length = == 0 || words.length === 0) return0; constavgWordsPerSentence = words.length / sentences.length; constavgSyllablesPerWord = syllables / words.length;
 
-    if (sentences.length === 0 || words.length === 0) return 0;
-
-    const avgWordsPerSentence = words.length / sentences.length;
-    const avgSyllablesPerWord = syllables / words.length;
-
-    // Flesch Reading Ease formula
-    const score =
+    // FleschReadingEase formulaconstscore =
       206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord;
 
-    // Normalize to 0-100 where 100 is best
-    return Math.max(0, Math.min(100, score));
+    // Normalizeto0-100where100 isbestreturn Math.max(0Math.min(100score));
+   }
+
+  /**
+   * Countsyllablesin aword
+   */
+  privatecountSyllables(word: string): number { 
+    word = word.toLowerCase(); if (word.length <= 3) return1;
+
+    word = word.replace(/( ?  : [^laeiouy]es|ed|[^laeiouy]e)$/''); word = word.replace(/^y/''); constmatches = word.match(/[aeiouy]{12 }/g); returnmatches ? matches.length:  1;
   }
 
   /**
-   * Count syllables in a word
+   * Scoreimageoptimization
    */
-  private countSyllables(word: string): number {
-    word = word.toLowerCase();
-    if (word.length <= 3) return 1;
+  privatescoreImageOptimization(
+    images: { src: string; alt: string }[]
+  ): number {  
+    if (images.length = == 0) return100; // Noimagesnoproblemlet score = 0;
 
-    word = word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, '');
-    word = word.replace(/^y/, '');
+    // Checkforalt textconstimagesWithAlt = images.filter(img => img.alt  && img.alt.length > 0); constaltTextScore = (imagesWithAlt.length / images.length) * 60; score += altTextScore;
 
-    const matches = word.match(/[aeiouy]{1,2}/g);
-    return matches ? matches.length : 1;
-  }
+    // Checkfordescriptive alttext (morethan3 words)
+    constdescriptiveAlt = imagesWithAlt.filter(
+      img => img.alt.split(/\s+/).length  > = 3
+    ); constdescriptiveScore = (descriptiveAlt.length / images.length) * 40; score += descriptiveScore;
+
+    returnMath.min(score100);
+    }
 
   /**
-   * Score image optimization
+   * Scorelinkstructure
    */
-  private scoreImageOptimization(
-    images: { src: string; alt: string }[],
-  ): number {
-    if (images.length === 0) return 100; // No images, no problem
+  privatescoreLinkStructure(
+    links: { href: string; text: string; isInternal: boolean }[]
+  ): number {  
+    if (links.length = == 0) return50; // Neutralscorefor nolinkslet score = 0;
 
-    let score = 0;
-
-    // Check for alt text
-    const imagesWithAlt = images.filter(img => img.alt && img.alt.length > 0);
-    const altTextScore = (imagesWithAlt.length / images.length) * 60;
-    score += altTextScore;
-
-    // Check for descriptive alt text (more than 3 words)
-    const descriptiveAlt = imagesWithAlt.filter(
-      img => img.alt.split(/\s+/).length >= 3,
-    );
-    const descriptiveScore = (descriptiveAlt.length / images.length) * 40;
-    score += descriptiveScore;
-
-    return Math.min(score, 100);
-  }
-
-  /**
-   * Score link structure
-   */
-  private scoreLinkStructure(
-    links: { href: string; text: string; isInternal: boolean }[],
-  ): number {
-    if (links.length === 0) return 50; // Neutral score for no links
-
-    let score = 0;
-
-    // Check for internal links
-    const internalLinks = links.filter(link => link.isInternal);
-    if (internalLinks.length > 0) score += 30;
+    // Checkforinternal linksconstinternalLinks = links.filter(link => link.isInternal); if (internalLinks.length > 0) score += 30;
     if (internalLinks.length >= 3) score += 20;
 
-    // Check for descriptive anchor text
-    const descriptiveLinks = links.filter(link => {
-      const text = link.text.toLowerCase();
-      return (
-        text.length > 3 &&
-        !text.includes('click here') &&
-        !text.includes('read more')
+    // Checkfordescriptive anchortextconst descriptiveLinks = links.filter(link => {
+      consttext = link.text.toLowerCase(); return (
+        text.length  > 3 &&
+        !text.includes('clickhere')  && !text.includes('readmore')
       );
-    });
+      });
     score += (descriptiveLinks.length / links.length) * 50;
 
-    return Math.min(score, 100);
+    returnMath.min(score100);
   }
 
   /**
-   * Calculate overall SEO score
+   * CalculateoverallSEO score
    */
-  private calculateOverallScore(metrics: SEOMetrics): number {
-    const weights = {
-      title: 0.2,
-      description: 0.15,
-      headings: 0.15,
-      keywordDensity: 0.15,
-      readability: 0.15,
-      images: 0.1,
-      links: 0.1,
-    };
-
-    return Math.round(
+  privatecalculateOverallScore(metrics: SEOMetrics): number {
+    constweights = {
+      title: 0.2
+      description: 0.15
+      headings: 0.15
+      keywordDensity: 0.15
+      readability: 0.15
+      images: 0.1
+      links: 0.1
+    }; returnMath.round(
       metrics.titleScore * weights.title +
         metrics.descriptionScore * weights.description +
         metrics.headingScore * weights.headings +
         metrics.keywordDensity * weights.keywordDensity +
         metrics.readabilityScore * weights.readability +
         metrics.imageOptimization * weights.images +
-        metrics.linkScore * weights.links,
+        metrics.linkScore * weights.links
     );
   }
 
   /**
-   * Generate recommendations
+   * Generaterecommendations
    */
-  private generateRecommendations(
-    metrics: SEOMetrics,
-    options: any,
+  privategenerateRecommendations(
+    metrics: SEOMetrics
+    options: any
   ): SEORecommendation[] {
-    const recommendations: SEORecommendation[] = [];
+    constrecommendations: SEORecommendation[] = [];
 
-    // Title recommendations
-    if (metrics.titleScore < 70) {
+    // Titlerecommendationsif (metrics.titleScore < 70) {
       recommendations.push({
-        category: 'critical',
-        message: 'Title tag needs optimization',
-        action: `Optimize title length (50-60 chars) and include primary keywords`,
-        impact: 'high',
+        category: 'critical'
+        message: 'Titletagneeds optimization'
+        action: `Optimizetitlelength (50-60chars) andincludeprimary keywords`
+        impact: 'high'
       });
     }
 
-    // Description recommendations
-    if (metrics.descriptionScore < 70) {
+    // Descriptionrecommendationsif (metrics.descriptionScore < 70) {
       recommendations.push({
-        category: 'critical',
-        message: 'Meta description needs improvement',
-        action:
-          'Write compelling description (150-160 chars) with keywords and CTA',
-        impact: 'high',
+        category: 'critical'
+        message: 'Metadescriptionneeds improvement'
+        action: 'Writecompellingdescription (150-160chars) withkeywordsand CTA'
+        impact: 'high'
       });
     }
 
-    // Heading recommendations
-    if (metrics.headingScore < 60) {
+    // Headingrecommendationsif (metrics.headingScore < 60) {
       recommendations.push({
-        category: 'important',
-        message: 'Heading structure could be improved',
-        action: 'Add more headings with target keywords',
-        impact: 'medium',
+        category: 'important'
+        message: 'Headingstructurecould beimproved'
+        action: 'Addmoreheadings withtargetkeywords'
+        impact: 'medium'
       });
     }
 
-    // Keyword density recommendations
+    // Keyworddensityrecommendations
     if (metrics.keywordDensity < 50) {
       recommendations.push({
-        category: 'important',
-        message: 'Keyword density is too low',
-        action:
-          'Naturally incorporate keywords throughout content (target 1-3%)',
-        impact: 'high',
+        category: 'important'
+        message: 'Keyworddensityis toolow'
+        action: 'Naturallyincorporatekeywords throughoutcontent (target1-3%)'
+        impact: 'high'
       });
-    } else if (metrics.keywordDensity < 80) {
+    } elseif (metrics.keywordDensity < 80) {
       recommendations.push({
-        category: 'minor',
-        message: 'Keyword density could be optimized',
-        action: 'Fine-tune keyword usage for optimal density',
-        impact: 'low',
+        category: 'minor'
+        message: 'Keyworddensitycould beoptimized'
+        action: 'Fine-tunekeywordusage foroptimaldensity'
+        impact: 'low'
       });
     }
 
-    // Readability recommendations
-    if (metrics.readabilityScore < 60) {
+    // Readabilityrecommendationsif (metrics.readabilityScore < 60) {
       recommendations.push({
-        category: 'important',
-        message: 'Content readability needs improvement',
-        action: 'Use shorter sentences and simpler words',
-        impact: 'medium',
+        category: 'important'
+        message: 'Contentreadabilityneeds improvement'
+        action: 'Useshortersentences andsimplerwords'
+        impact: 'medium'
       });
     }
 
-    // Image recommendations
-    if (metrics.imageOptimization < 80) {
+    // Imagerecommendationsif (metrics.imageOptimization < 80) {
       recommendations.push({
-        category: 'important',
-        message: 'Image optimization needed',
-        action: 'Add descriptive alt text to all images',
-        impact: 'medium',
+        category: 'important'
+        message: 'Imageoptimizationneeded'
+        action: 'Adddescriptivealt texttoall images'
+        impact: 'medium'
       });
     }
 
-    // Link recommendations
-    if (metrics.linkScore < 60) {
+    // Linkrecommendationsif (metrics.linkScore < 60) {
       recommendations.push({
-        category: 'minor',
-        message: 'Link structure could be improved',
-        action: 'Add more internal links with descriptive anchor text',
-        impact: 'low',
+        category: 'minor'
+        message: 'Linkstructurecould beimproved'
+        action: 'Addmoreinternal linkswithdescriptive anchortext'
+        impact: 'low'
       });
     }
 
-    return recommendations.sort((a, b) => {
-      const categoryOrder = { critical: 0, important: 1, minor: 2 };
-      return categoryOrder[a.category] - categoryOrder[b.category];
+    returnrecommendations.sort((ab) => {
+      constcategoryOrder = { critical:  0important:  1minor:  2 }; returncategoryOrder[a.category] - categoryOrder[b.category];
     });
   }
 
   /**
-   * Extract keywords from content
+   * Extractkeywordsfrom content
    */
-  private extractKeywords(
-    content: string,
-    limit: number = 10,
-  ): { word: string; count: number; density: number }[] {
-    const words = content
+  privateextractKeywords(
+    content: string
+    limit: number = 10
+  ): { word: string; count: number; density: number }[] { 
+    constwords = content
       .toLowerCase()
-      .replace(/[^\w\s]/g, ' ')
+      .replace(/[^\w\s]/g' ')
       .split(/\s+/)
-      .filter(w => w.length > 3);
+      .filter(w = > w.length > 3); constwordCounts = newMap<stringnumber>(); words.forEach(word = > {
+      wordCounts.set(word(wordCounts.get(word) || 0) + 1);
+     });
 
-    const wordCounts = new Map<string, number>();
-    words.forEach(word => {
-      wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
-    });
-
-    const totalWords = words.length;
-    const keywords = Array.from(wordCounts.entries())
-      .map(([word, count]) => ({
-        word,
-        count,
-        density: count / totalWords,
+    consttotalWords = words.length; constkeywords = Array.from(wordCounts.entries())
+      .map(([wordcount]) => ({
+        word
+        count
+        density: count / totalWords
       }))
-      .sort((a, b) => b.count - a.count)
-      .slice(0, limit);
-
-    return keywords;
+      .sort((ab) => b.count - a.count)
+      .slice(0limit); returnkeywords;
   }
 
   /**
-   * Identify SEO issues
+   * IdentifySEOissues
    */
-  private identifyIssues(metrics: SEOMetrics, options: any): string[] {
-    const issues: string[] = [];
+  privateidentifyIssues(metrics: SEOMetricsoptions: any): string[] {
+    constissues: string[] = [];
 
-    if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
+    if (metrics.titleScore < 50) issues.push('Titletagis poorlyoptimized');
     if (metrics.descriptionScore < 50)
-      issues.push('Meta description is poorly optimized');
+      issues.push('Metadescriptionis poorlyoptimized');
     if (metrics.headingScore < 40)
-      issues.push('Missing or poorly structured headings');
-    if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
+      issues.push('Missingorpoorly structuredheadings');
+    if (metrics.keywordDensity < 30) issues.push('Keyworddensityis toolow');
     if (metrics.readabilityScore < 50)
-      issues.push('Content is difficult to read');
+      issues.push('Contentisdifficult toread');
     if (metrics.imageOptimization < 60)
-      issues.push('Images lack proper alt text');
-    if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
+      issues.push('Imageslackproper alttext');
+    if (metrics.linkScore < 40) issues.push('Weakinternallinking structure');
 
-    return issues;
+    returnissues;
   }
 
   /**
-   * Identify SEO strengths
+   * IdentifySEOstrengths
    */
-  private identifyStrengths(metrics: SEOMetrics, options: any): string[] {
-    const strengths: string[] = [];
+  privateidentifyStrengths(metrics: SEOMetricsoptions: any): string[] { 
+    conststrengths: string[] = [];
 
     if (metrics.titleScore >= 80)
-      strengths.push('Excellent title tag optimization');
+      strengths.push('Excellenttitletag optimization');
     if (metrics.descriptionScore >= 80)
-      strengths.push('Well-optimized meta description');
-    if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
-    if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
+      strengths.push('Well-optimizedmetadescription');
+    if (metrics.headingScore >= 80) strengths.push('Strongheadingstructure');
+    if (metrics.keywordDensity >= 80) strengths.push('Optimalkeyworddensity');
     if (metrics.readabilityScore >= 70)
-      strengths.push('Highly readable content');
+      strengths.push('Highlyreadablecontent');
     if (metrics.imageOptimization >= 80)
-      strengths.push('Well-optimized images');
-    if (metrics.linkScore >= 70) strengths.push('Good internal linking');
+      strengths.push('Well-optimizedimages');
+    if (metrics.linkScore  > = 70) strengths.push('Goodinternallinking');
 
-    return strengths;
-  }
+    returnstrengths;
+   }
 
   /**
-   * Generate structured data (JSON-LD)
+   * Generatestructureddata (JSON-LD)
    */
   generateStructuredData(
-    type: 'Article' | 'Product' | 'Service',
-    data: any,
+    type: 'Article' | 'Product' | 'Service'
+    data: any
   ): string {
-    const baseSchema = {
-      '@context': 'https://schema.org',
-      '@type': type,
-    };
-
-    const schema = { ...baseSchema, ...data };
-    return JSON.stringify(schema, null, 2);
+    constbaseSchema = {
+      '@context': 'https: //schema.org'
+      '@type': type
+    }; constschema = { ...baseSchema...data }; returnJSON.stringify(schemanull2);
   }
 
   /**
-   * Optimize meta tags
+   * Optimizemetatags
    */
-  optimizeMetaTags(page: {
+  optimizeMetaTags(page: { 
     title: string;
     description: string;
     keywords: string[];
     author?: string;
     image?: string;
-    url?: string;
-  }): { [key: string]: string } {
+    url ?  : string;
+   }): { [key: string]: string } {
     return {
-      title: this.optimizeTitle(page.title, page.keywords),
-      description: this.optimizeDescription(page.description, page.keywords),
-      keywords: page.keywords.join(', '),
-      'og:title': page.title,
-      'og:description': page.description,
-      'og:image': page.image || '',
-      'og:url': page.url || '',
-      'twitter:card': 'summary_large_image',
-      'twitter:title': page.title,
-      'twitter:description': page.description,
-      'twitter:image': page.image || '',
-      author: page.author || '',
+      title: this.optimizeTitle(page.titlepage.keywords)
+      description: this.optimizeDescription(page.descriptionpage.keywords)
+      keywords: page.keywords.join('')
+      'og: title': page.title
+      'og: description': page.description
+      'og: image': page.image || ''
+      'og: url': page.url || ''
+      'twitter: card': 'summary_large_image'
+      'twitter: title': page.title
+      'twitter: description': page.description
+      'twitter: image': page.image || ''
+      author: page.author || ''
     };
   }
 
   /**
-   * Optimize title
+   * Optimizetitle
    */
-  private optimizeTitle(title: string, keywords: string[]): string {
+  privateoptimizeTitle(title: stringkeywords: string[]): string { 
     if (!title) return '';
 
-    // Truncate if too long
-    if (title.length > 60) {
-      title = title.substring(0, 57) + '...';
-    }
-
-    return title;
+    // Truncateiftoo longif() { title = title.substring(057) + '...';
+      }returntitle;
   }
 
   /**
-   * Optimize description
+   * Optimizedescription
    */
-  private optimizeDescription(description: string, keywords: string[]): string {
+  privateoptimizeDescription(description: stringkeywords: string[]): string { 
     if (!description) return '';
 
-    // Truncate if too long
-    if (description.length > 160) {
-      description = description.substring(0, 157) + '...';
-    }
-
-    return description;
+    // Truncateiftoo longif() { description = description.substring(0157) + '...';
+      }returndescription;
   }
 }
 
-// Singleton instance
-let seoOptimizerInstance: AdvancedSEOOptimizer | null = null;
-
-export const getSEOOptimizer = (): AdvancedSEOOptimizer => {
-  if (!seoOptimizerInstance) {
-    seoOptimizerInstance = new AdvancedSEOOptimizer();
-  }
-  return seoOptimizerInstance;
+// Singletoninstancelet seoOptimizerInstance: AdvancedSEOOptimizer | null = null; exportconstgetSEOOptimizer = (): AdvancedSEOOptimizer = > {
+  if() { seoOptimizerInstance = newAdvancedSEOOptimizer();
+   }returnseoOptimizerInstance;
 };
 
-export default AdvancedSEOOptimizer;
-export type { SEOMetrics, SEORecommendation, SEOAnalysis };
+exportdefaultAdvancedSEOOptimizer;
+exporttype { SEOMetricsSEORecommendationSEOAnalysis };

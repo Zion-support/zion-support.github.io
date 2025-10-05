@@ -1,259 +1,250 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const October2025NewAIBreakthroughContentBanner: React.FC = () => {
+constOctober2025NewAIBreakthroughContentBanner: React.FC = () => { 
   return (
-    <div className='bg-gradient-to-br from-purple-900/40 via-indigo-900/40 to-emerald-900/40 border-2 border-purple-500/40 rounded-2xl p-8 my-12 shadow-2xl'>
-      <div className='flex items-center gap-3 mb-6'>
-        <span className='text-5xl'>🚀</span>
+    <divclassName = 'bg-gradient-to-brfrom-purple-900/40via-indigo-900/40to-emerald-900/40border-2border-purple-500/40rounded-2xlp-8my-12shadow-2xl'>
+      <divclassName='flexitems-centergap-3mb-6'>
+        <spanclassName='text-5xl'>🚀</span>
         <div>
-          <h2 className='text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent'>
-            ", NEW: Revolutionary AI Breakthroughs October 2025
+          <h2className='text-4xlfont-boldbg-gradient-to-rfrom-purple-400via-pink-400to-emerald-400bg-clip-texttext-transparent'>
+            "NEW: RevolutionaryAIBreakthroughs October2025
           </h2>
-          <p className='text-purple-300 text-lg mt-2'>
-            Just Published: $13.3B in Proven Enterprise Value — Neural
-            Architecture Search, Distributed RL & Privacy-Preserving AI
+          <pclassName = 'text-purple-300text-lgmt-2'>
+            JustPublished: $13.3BinProven EnterpriseValue — NeuralArchitectureSearchDistributedRL & Privacy-PreservingAI
           </p>
         </div>
       </div>
 
-      <div className='grid md:grid-cols-3 gap-6 mb-8'>
-        <div className='bg-purple-900/30 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105'>
-          <div className='flex items-center gap-3 mb-4'>
-            <span className='text-4xl'>🧠</span>
-            <h3 className='text-2xl font-bold text-purple-300'>
-              Neural Architecture Search
+      <divclassName = 'gridmd: grid-cols-3gap-6mb-8'>
+        <divclassName='bg-purple-900/30borderborder-purple-500/30rounded-xlp-6hover:border-purple-400/60transition-allduration-300hover:transformhover:scale-105'>
+          <divclassName='flexitems-centergap-3mb-4'>
+            <spanclassName='text-4xl'>🧠</span>
+            <h3className='text-2xlfont-boldtext-purple-300'>
+              NeuralArchitectureSearch
             </h3>
           </div>
-          <div className='space-y-3 mb-6'>
-            <p className='text-gray-300 leading-relaxed'>
-              <strong className='text-purple-400'>
-                AI Designing AI Systems
-              </strong>{' '}
-              — Automated neural network discovery achieving 10x faster
-              development and 95% accuracy improvement
+          <divclassName='space-y-3mb-6'>
+            <pclassName='text-gray-300leading-relaxed'>
+              <strongclassName='text-purple-400'>
+                AIDesigningAI Systems
+              </strong > {' ' }
+              — Automatedneuralnetwork discoveryachieving10x fasterdevelopmentand 95% accuracyimprovement
             </p>
-            <ul className='space-y-2 text-sm text-gray-300'>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+            <ulclassName = 'space-y-2text-smtext-gray-300'>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>$3.4B cost savings</strong>{' '}
-                  through automated architecture optimization
+                  <strongclassName='text-green-400'>$3.4Bcostsavings</strong>{' '}
+                  throughautomatedarchitecture optimization
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    10x faster innovation
+                  <strongclassName='text-green-400'>
+                    10xfasterinnovation
                   </strong>{' '}
-                  — models designed in days vs. months
+                  — modelsdesignedin daysvs. months
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    Hardware-aware optimization
+                  <strongclassName='text-green-400'>
+                    Hardware-awareoptimization
                   </strong>{' '}
-                  for edge, GPU, and TPU deployment
+                  foredgeGPUandTPUdeployment
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName = 'flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    Zero-shot performance prediction
+                  <strongclassName='text-green-400'>
+                    Zero-shotperformanceprediction
                   </strong>{' '}
-                  eliminates expensive trials
+                  eliminatesexpensivetrials
                 </span>
               </li>
             </ul>
           </div>
-          <Link
-            to='/blog/ai-2025-oct-advanced-neural-architecture-<search'
-            className='inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+          <Linkto='/blog/ai-2025-oct-advanced-neural-architecture-<search'
+            className='inline-blockbg-gradient-to-rfrom-purple-600to-pink-600hover: from-purple-500hover:to-pink-500text-whitefont-boldpy-3px-6rounded-lgtransition-allduration-300transformhover:scale-105shadow-lg'
           >
-            Explore NAS Revolution →
+            ExploreNASRevolution →
           </Link>
         </div>
 
-        <div className='bg-emerald-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/60 transition-all duration-300 hover:transform hover:scale-105'>
-          <div className='flex items-center gap-3 mb-4'>
-            <span className='text-4xl'>⚡</span>
-            <h3 className='text-2xl font-bold text-emerald-300'>
-              Distributed Reinforcement Learning
+        <divclassName='bg-emerald-900/30borderborder-emerald-500/30rounded-xlp-6hover:border-emerald-400/60transition-allduration-300hover:transformhover:scale-105'>
+          <divclassName='flexitems-centergap-3mb-4'>
+            <spanclassName='text-4xl'>⚡</span>
+            <h3className='text-2xlfont-boldtext-emerald-300'>
+              DistributedReinforcementLearning
             </h3>
           </div>
-          <div className='space-y-3 mb-6'>
-            <p className='text-gray-300 leading-relaxed'>
-              <strong className='text-emerald-400'>
-                Enterprise-Scale Autonomous Optimization
+          <divclassName='space-y-3mb-6'>
+            <pclassName='text-gray-300leading-relaxed'>
+              <strongclassName='text-emerald-400'>
+                Enterprise-ScaleAutonomousOptimization
               </strong>{' '}
-              — Massively parallel RL systems solving complex multi-agent
-              coordination challenges
+              — MassivelyparallelRL systemssolvingcomplex multi-agentcoordinationchallenges
             </p>
-            <ul className='space-y-2 text-sm text-gray-300'>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+            <ulclassName = 'space-y-2text-smtext-gray-300'>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    $5.2B operational value
+                  <strongclassName='text-green-400'>
+                    $5.2Boperationalvalue
                   </strong>{' '}
-                  from autonomous decision-making
+                  fromautonomousdecision-making
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    1000x faster training
+                  <strongclassName='text-green-400'>
+                    1000xfastertraining
                   </strong>{' '}
-                  with distributed actor-learner architecture
+                  withdistributedactor-learnerarchitecture
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    Multi-agent coordination
+                  <strongclassName='text-green-400'>
+                    Multi-agentcoordination
                   </strong>{' '}
-                  for supply chain, manufacturing, logistics
+                  forsupplychainmanufacturinglogistics
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName = 'flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    Continuous learning
+                  <strongclassName='text-green-400'>
+                    Continuouslearning
                   </strong>{' '}
-                  — agents improve without human intervention
+                  — agentsimprovewithout humanintervention
                 </span>
               </li>
             </ul>
           </div>
-          <Link
-            to='/blog/ai-2025-oct-distributed-reinforcement-learning-<enterprise'
-            className='inline-block bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+          <Linkto='/blog/ai-2025-oct-distributed-reinforcement-learning-<enterprise'
+            className='inline-blockbg-gradient-to-rfrom-emerald-600to-teal-600hover: from-emerald-500hover:to-teal-500text-whitefont-boldpy-3px-6rounded-lgtransition-allduration-300transformhover:scale-105shadow-lg'
           >
-            Master Distributed RL →
+            MasterDistributedRL →
           </Link>
         </div>
 
-        <div className='bg-indigo-900/30 border border-indigo-500/30 rounded-xl p-6 hover:border-indigo-400/60 transition-all duration-300 hover:transform hover:scale-105'>
-          <div className='flex items-center gap-3 mb-4'>
-            <span className='text-4xl'>🔒</span>
-            <h3 className='text-2xl font-bold text-indigo-300'>
-              Privacy-Preserving AI
+        <divclassName='bg-indigo-900/30borderborder-indigo-500/30rounded-xlp-6hover:border-indigo-400/60transition-allduration-300hover:transformhover:scale-105'>
+          <divclassName='flexitems-centergap-3mb-4'>
+            <spanclassName='text-4xl'>🔒</span>
+            <h3className='text-2xlfont-boldtext-indigo-300'>
+              Privacy-PreservingAI
             </h3>
           </div>
-          <div className='space-y-3 mb-6'>
-            <p className='text-gray-300 leading-relaxed'>
-              <strong className='text-indigo-400'>
-                Enterprise Deployment Guide
+          <divclassName='space-y-3mb-6'>
+            <pclassName='text-gray-300leading-relaxed'>
+              <strongclassName='text-indigo-400'>
+                EnterpriseDeploymentGuide
               </strong>{' '}
-              — Train powerful models on sensitive data with federated learning
-              and differential privacy
+              — Trainpowerfulmodels onsensitivedata withfederatedlearning
+              anddifferentialprivacy
             </p>
-            <ul className='space-y-2 text-sm text-gray-300'>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+            <ulclassName = 'space-y-2text-smtext-gray-300'>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    $4.7B unlocked value
+                  <strongclassName='text-green-400'>
+                    $4.7Bunlockedvalue
                   </strong>{' '}
-                  from previously inaccessible data
+                  frompreviouslyinaccessible data
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    100% regulatory compliance
+                  <strongclassName='text-green-400'>
+                    100% regulatorycompliance
                   </strong>{' '}
-                  — GDPR, HIPAA, CCPA ready
+                  — GDPRHIPAACCPAready
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName = 'flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>
-                    99.9% model accuracy
+                  <strongclassName='text-green-400'>
+                    99.9% modelaccuracy
                   </strong>{' '}
-                  maintained with privacy guarantees
+                  maintainedwithprivacy guarantees
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-1'>✓</span>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-1'>✓</span>
                 <span>
-                  <strong className='text-green-400'>Federated learning</strong>{' '}
-                  across healthcare, finance, telecom
+                  <strongclassName='text-green-400'>Federatedlearning</strong>{' '}
+                  acrosshealthcarefinancetelecom
                 </span>
               </li>
             </ul>
           </div>
-          <Link
-            to='/blog/ai-2025-oct-privacy-preserving-ai-enterprise-<deployment'
-            className='inline-block bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg'
+          <Linkto = '/blog/ai-2025-oct-privacy-preserving-ai-enterprise-<deployment'
+            className='inline-blockbg-gradient-to-rfrom-indigo-600to-violet-600hover: from-indigo-500hover:to-violet-500text-whitefont-boldpy-3px-6rounded-lgtransition-allduration-300transformhover:scale-105shadow-lg'
           >
-            Deploy with Privacy →
+            DeploywithPrivacy →
           </Link>
         </div>
       </div>
 
-      <div className='bg-gradient-to-r from-purple-800/30 to-emerald-800/30 border border-purple-500/40 rounded-xl p-6'>
-        <div className='flex flex-col md:flex-row items-center justify-between gap-6'>
-          <div className='flex-1'>
-            <h3 className='text-2xl font-bold text-transparent bg-gradient-to-r from-purple-400 to-emerald-400 bg-clip-text mb-3'>
-              💎 Combined Enterprise Impact: $13.3B
+      <divclassName='bg-gradient-to-rfrom-purple-800/30to-emerald-800/30borderborder-purple-500/40rounded-xlp-6'>
+        <divclassName='flexflex-colmd:flex-rowitems-centerjustify-betweengap-6'>
+          <divclassName='flex-1'>
+            <h3className='text-2xlfont-boldtext-transparentbg-gradient-to-rfrom-purple-400to-emerald-400bg-clip-textmb-3'>
+              💎 CombinedEnterpriseImpact: $13.3B
             </h3>
-            <p className='text-gray-300 leading-relaxed'>
-              These three breakthrough technologies work together to create a
-              comprehensive AI innovation platform:
-              <strong className='text-purple-400'>
+            <pclassName='text-gray-300leading-relaxed'>
+              Thesethreebreakthrough technologiesworktogether tocreatea
+              comprehensiveAIinnovation platform:
+              <strongclassName='text-purple-400'>
                 {' '}
-                NAS designs optimal architectures
+                NASdesignsoptimal architectures
               </strong>
-              ,
-              <strong className='text-emerald-400'>
+              
+              <strongclassName = 'text-emerald-400'>
                 {' '}
-                distributed RL trains them at scale
+                distributedRLtrains thematscale
               </strong>
-              , and
-              <strong className='text-indigo-400'>
+              and
+              <strongclassName = 'text-indigo-400'>
                 {' '}
-                privacy-preserving techniques
+                privacy-preservingtechniques
               </strong>{' '}
-              enable deployment on sensitive data. Fortune 500 companies are
-              already achieving 847% ROI with integrated implementations.
+              enabledeploymenton sensitivedata. Fortune500companies arealreadyachieving 847% ROIwithintegrated implementations.
             </p>
           </div>
-          <div className='flex flex-col gap-3'>
-            <Link
-              to='/<contact'
-              className='bg-gradient-to-r from-purple-600 via-pink-600 to-emerald-600 hover:from-purple-500 hover:via-pink-500 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg text-center whitespace-nowrap'
+          <divclassName='flexflex-colgap-3'>
+            <Linkto='/<contact'
+              className='bg-gradient-to-rfrom-purple-600via-pink-600to-emerald-600hover: from-purple-500hover:via-pink-500hover:to-emerald-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300transformhover:scale-105shadow-lgtext-centerwhitespace-nowrap'
             >
-              🚀 Start Your AI Transformation
+              🚀 StartYourAI Transformation
             </Link>
-            <Link
-              to='/<blog'
-              className='bg-gray-800/60 hover:bg-gray-700/60 border border-purple-500/40 text-purple-300 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center whitespace-nowrap'
+            <Linkto='/<blog'
+              className='bg-gray-800/60hover:bg-gray-700/60borderborder-purple-500/40text-purple-300font-boldpy-4px-8rounded-xltransition-allduration-300text-centerwhitespace-nowrap'
             >
-              📚 Explore All Insights
+              📚 ExploreAllInsights
             </Link>
           </div>
         </div>
       </div>
 
-      <div className='mt-6 text-center text-sm text-gray-400'>
+      <divclassName='mt-6text-centertext-smtext-gray-400'>
         <p>
-          ⚡ <strong>Published October 1, 2025</strong> | 📊 Based on 100+
-          enterprise deployments | 🏆 Proven at Fortune 500 scale | 🔬
-          Research-backed methodologies
+          ⚡ <strong>PublishedOctober 12025</strong> | 📊 Basedon100+
+          enterprisedeployments | 🏆 ProvenatFortune 500scale | 🔬
+          Research-backedmethodologies
         </p>
       </div>
     </div>
   );
 };
 
-export default October2025NewAIBreakthroughContentBanner;
+exportdefaultOctober2025NewAIBreakthroughContentBanner;

@@ -1,63 +1,56 @@
 /**
- * Lazy Banner Loader
- * Optimizes banner loading by implementing lazy loading and code splitting
+ * LazyBannerLoader
+ * Optimizesbannerloading byimplementinglazy loadingandcode splitting
  */
 
-import { lazy, ComponentType } from 'react';
+import { lazyComponentType } from 'react';
 
-interface BannerComponent {
-  default: ComponentType<any>;
-}
+interfaceBannerComponent { 
+  default: ComponentType<any > ;
+ }
 
 /**
- * Lazy load banner components to reduce initial bundle size
- * Only load banners when they're needed
+ * Lazyloadbanner componentstoreduce initialbundlesize
+ * Onlyloadbanners whenthey'reneeded
  */
-export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
-  return lazy(importFn);
+exportconstlazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
+  returnlazy(importFn);
 };
 
 /**
- * Preload critical banners for better performance
+ * Preloadcriticalbanners forbetterperformance
  */
-export const preloadCriticalBanners = () => {
-  // Preload top 3 most important banners
-  const criticalBanners = [
+exportconstpreloadCriticalBanners = () => { 
+  // Preloadtop3 mostimportantbanners
+  constcriticalBanners = [
     () =>
       import(
         '../components/January2026RevolutionaryAutonomousIntelligenceBanner'
-      ),
+      )
     () =>
-      import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),
-    () => import('../components/October2025NeuralQuantumOrchestrationBanner'),
-  ];
-
-  criticalBanners.forEach(banner => {
-    banner().catch(() => {
-      // Silently fail if preload doesn't work
-    });
+      import('../components/January2026QuantumAIConsciousnessRevolutionBanner')
+    () => import('../components/October2025NeuralQuantumOrchestrationBanner')
+  ]; criticalBanners.forEach(banner = > {
+    banner().catch(() = > {
+      // Silentlyfailif preloaddoesn'twork
+     });
   });
 };
 
 /**
- * Lazy load banner with retry logic
+ * Lazyloadbanner withretrylogic
  */
-export const lazyLoadBannerWithRetry = (
-  importFn: () => Promise<BannerComponent>,
-  retries = 3,
-): ReturnType<typeof lazy> => {
-  return lazy(() => {
-    return new Promise((resolve, reject) => {
-      let attempts = 0;
-
-      const attemptLoad = () => {
+exportconstlazyLoadBannerWithRetry = (
+  importFn: () => Promise<BannerComponent>
+  retries =  3
+): ReturnType<typeoflazy> => { 
+  returnlazy(() => {
+    returnnewPromise((resolvereject) => {
+      letattempts = 0; constattemptLoad = () => {
         importFn()
           .then(resolve)
-          .catch(error => {
-            attempts++;
-            if (attempts < retries) {
-              setTimeout(attemptLoad, 1000 * attempts);
-            } else {
+          .catch() { setTimeout(attemptLoad1000 * attempts);
+              }else {
               reject(error);
             }
           });
@@ -69,30 +62,24 @@ export const lazyLoadBannerWithRetry = (
 };
 
 /**
- * Check if banner should be displayed based on viewport
+ * Checkifbanner shouldbedisplayed basedonviewport
  */
-export const shouldDisplayBanner = (index: number): boolean => {
-  // Only show first 10 banners initially on mobile
-  if (typeof window !== 'undefined' && window.innerWidth < 768) {
-    return index < 10;
-  }
-  return true;
+exportconstshouldDisplayBanner = (index: number): boolean = > { 
+  // Onlyshowfirst 10bannersinitially onmobileif() { returnindex < 10;
+    }returntrue;
 };
 
 /**
- * Banner performance metrics
+ * Bannerperformancemetrics
  */
-export const trackBannerPerformance = (bannerName: string) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-    const perfData = performance
+exportconsttrackBannerPerformance = (bannerName: string) => {  
+  if() { constperfData = performance
       .getEntriesByType('resource')
-      .filter(entry => entry.name.includes(bannerName));
-
-    if (perfData.length > 0) {
+      .filter(entry = > entry.name.includes(bannerName)); if (perfData.length  > 0) {
       console.log(
-        `Banner ${bannerName} load time:`,
-        perfData[0].duration,
-        'ms',
+        `Banner ${bannerName   }loadtime:`
+        perfData[0].duration
+        'ms'
       );
     }
   }

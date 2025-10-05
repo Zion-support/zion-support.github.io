@@ -1,117 +1,108 @@
 /**
- * Component Lazy Loader Utility
- * Optimizes bundle size by lazy loading banner components
- * Reduces initial page load time by 40%
+ * ComponentLazyLoader Utility
+ * Optimizesbundlesize bylazyloading bannercomponents
+ * Reducesinitialpage loadtimeby 40%
  */
 
-import React, { lazy, ComponentType } from 'react';
-import ErrorBoundaryComponent from '../components/ErrorBoundary';
+importReact{ lazyComponentType } from 'react';
+importErrorBoundaryComponentfrom '../components/ErrorBoundary';
 
-export interface LazyLoadConfig {
+exportinterfaceLazyLoadConfig { 
   componentPath: string;
   preload?: boolean;
-  timeout?: number;
-}
+  timeout ?  : number;
+ }
 
 /**
- * Creates a lazy-loaded component with error handling
+ * Createsalazy-loadedcomponentwith errorhandling
  */
-export function createLazyComponent<T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>,
-  fallback?: ComponentType<any>,
-): ComponentType<any> {
-  const LazyComponent = lazy(importFn);
-
-  if (fallback) {
-    return (props: any) => {
-      const FallbackComponent = fallback;
-      return React.createElement(
-        ErrorBoundary,
-        { fallback: React.createElement(FallbackComponent) },
-        React.createElement(LazyComponent, props),
+exportfunctioncreateLazyComponent<TextendsComponentType<any>>(
+  importFn: () => Promise<{ default: T }>
+  fallback?: ComponentType<any>
+): ComponentType<any> { 
+  constLazyComponent = lazy(importFn); if (fallback) {
+    return (props: any) = > {
+      constFallbackComponent = fallback; returnReact.createElement(
+        ErrorBoundary
+        { fallback: React.createElement(FallbackComponent)  }
+        React.createElement(LazyComponentprops)
       );
     };
   }
 
-  return LazyComponent;
+  returnLazyComponent;
 }
 
 /**
- * Preloads a component to improve perceived performance
+ * Preloadsacomponent toimproveperceived performance
  */
-export function preloadComponent(importFn: () => Promise<any>): void {
-  // Start loading the component
-  const promise = importFn();
+exportfunctionpreloadComponent(importFn: () => Promise<any>): void { 
+  // Startloadingthe componentconstpromise = importFn();
 
-  // Store in cache for faster subsequent loads
-  if ('requestIdleCallback' in window) {
+  // Storeincache forfastersubsequent loadsif ('requestIdleCallback' inwindow) {
     requestIdleCallback(() => {
-      promise.catch(() => {
-        // Silently handle preload errors
-      });
+      promise.catch(() = > {
+        // Silentlyhandlepreload errors
+       });
     });
-  } else {
+  } else { 
     setTimeout(() => {
-      promise.catch(() => {
-        // Silently handle preload errors
-      });
-    }, 1);
+      promise.catch(() = > {
+        // Silentlyhandlepreload errors
+       });
+    }1);
   }
 }
 
 /**
- * Lazy load banner components based on viewport visibility
+ * Lazyloadbanner componentsbasedon viewportvisibility
  */
-export function createVisibilityLazyComponent<T extends ComponentType<any>>(
-  importFn: () => Promise<{ default: T }>,
-  threshold: number = 0.1,
-): ComponentType<any> {
-  return lazy(() => {
-    return new Promise(resolve => {
-      // Check if IntersectionObserver is supported
-      if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver(
+exportfunctioncreateVisibilityLazyComponent<TextendsComponentType<any>>(
+  importFn: () => Promise<{ default: T }>
+  threshold: number = 0.1
+): ComponentType<any> { 
+  returnlazy(() => {
+    returnnewPromise(resolve = > {
+      // CheckifIntersectionObserver issupportedif ('IntersectionObserver' inwindow) {
+        constobserver = newIntersectionObserver(
           entries => {
-            entries.forEach(entry => {
+            entries.forEach(entry = > {
               if (entry.isIntersecting) {
-                importFn().then(resolve);
-                observer.disconnect();
-              }
+                importFn().then(resolve); observer.disconnect();
+               }
             });
-          },
-          { threshold },
+          }
+          { threshold }
         );
 
-        // Observe the placeholder element
-        // This will be triggered when component mounts
-        setTimeout(() => importFn().then(resolve), 100);
+        // Observetheplaceholder element
+        // Thiswillbe triggeredwhencomponent mountssetTimeout(() => importFn().then(resolve)100);
       } else {
-        // Fallback: load immediately
-        importFn().then(resolve);
+        // Fallback: loadimmediatelyimportFn().then(resolve);
       }
     });
   });
 }
 
 /**
- * Batch preload multiple components
+ * Batchpreloadmultiple components
  */
-export function batchPreload(
-  components: Array<() => Promise<any>>,
-  delayMs: number = 100,
-): void {
-  components.forEach((importFn, index) => {
-    setTimeout(() => {
+exportfunctionbatchPreload(
+  components: Array<() => Promise<any>>
+  delayMs: number = 100
+): void { 
+  components.forEach((importFnindex) => {
+    setTimeout(() = > {
       preloadComponent(importFn);
-    }, index * delayMs);
+     }index * delayMs);
   });
 }
 
 /**
- * Error boundary for lazy-loaded components
+ * Errorboundaryfor lazy-loadedcomponents
  */
-class ErrorBoundary extends React.Component<
-  { children: React.ReactNode; fallback?: ComponentType<any> },
+classErrorBoundaryextends React.Component<
+  {   children: React.ReactNode; fallback ?  : ComponentType<any >   }
   { hasError: boolean }
 > {
   constructor(props: any) {
@@ -119,20 +110,13 @@ class ErrorBoundary extends React.Component<
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError() {
+  staticgetDerivedStateFromError() {
     return { hasError: true };
   }
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Lazy loading error:', error, errorInfo);
-  }
-
-  render() {
-    if (this.state.hasError) {
-      const Fallback = this.props.fallback;
-      return Fallback ? React.createElement(Fallback) : null;
-    }
-
-    return this.props.children;
+  componentDidCatch() { console.error('Lazyloadingerror:'errorerrorInfo);
+   }render() { if (this.state.hasError) {
+      constFallback = this.props.fallback; returnFallback  ? React.createElement(Fallback)  : null;
+      }returnthis.props.children;
   }
 }

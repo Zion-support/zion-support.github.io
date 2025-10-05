@@ -1,139 +1,130 @@
 import { Link } from 'react-router-dom';
-const October2025BreakthroughBanner = () => {
+constOctober2025BreakthroughBanner = () => { 
   return (
-    <section className='relative py-20 overflow-hidden'>
-      {/* Background Effects */}
-      <div className='absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20' />
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Main Banner */}
-        <div className='bg-gradient-to-br from-purple-900/50 via-indigo-900/50 to-emerald-900/50 rounded-2xl border-2 border-purple-500/30 backdrop-blur-sm p-8 md:p-12 mb-8 shadow-2xl'>
-          <div className='flex items-center gap-3 mb-6'>
-            <Sparkles className='w-8 h-8 text-purple-400 animate-pulse' />
-            <span className='px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold border border-purple-400/30'>
-              🔥 OCTOBER 2025 BREAKTHROUGH
+    <sectionclassName = 'relativepy-20overflow-hidden' > {/* BackgroundEffects */ }
+      <divclassName='absoluteinset-0bg-gradient-to-rfrom-purple-900/20via-indigo-900/20to-emerald-900/20' />
+      <divclassName="absoluteinset-0bg-[url('/grid.svg')] opacity-10" />
+      <divclassName = 'containermx-autopx-6relativez-10'>
+        {/* MainBanner */}
+        <divclassName='bg-gradient-to-brfrom-purple-900/50via-indigo-900/50to-emerald-900/50rounded-2xlborder-2border-purple-500/30backdrop-blur-smp-8md: p-12mb-8shadow-2xl'>
+          <divclassName='flexitems-centergap-3mb-6'>
+            <SparklesclassName='w-8 h-8text-purple-400animate-pulse' />
+            <spanclassName='px-4py-2bg-purple-500/20text-purple-300rounded-fulltext-smfont-boldborderborder-purple-400/30'>
+              🔥 OCTOBER2025BREAKTHROUGH
             </span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-300 via-indigo-300 to-emerald-300 bg-clip-text text-transparent'>
-            Revolutionary AI Technologies Transforming Enterprise Operations
+          <h2className='text-4xlmd:text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-purple-300via-indigo-300to-emerald-300bg-clip-texttext-transparent'>
+            RevolutionaryAITechnologies TransformingEnterpriseOperations
           </h2>
-          <p className='text-xl text-white/80 mb-8 max-w-4xl leading-relaxed'>
-            Explore three groundbreaking AI innovations delivering unprecedented
-            results: Sovereign Agents with 94% decision accuracy, Quantum ML
-            achieving 1000x speedup, and Neuromorphic Edge Computing at 10,000x
-            energy efficiency.
+          <pclassName='text-xltext-white/80mb-8max-w-4xlleading-relaxed'>
+            Explorethreegroundbreaking AIinnovationsdelivering unprecedentedresults: SovereignAgentswith 94% decisionaccuracyQuantumMLachieving 1000xspeedupandNeuromorphicEdge Computingat10000xenergyefficiency.
           </p>
-          {/* Featured Articles Grid */}
-          <div className='grid md:grid-cols-3 gap-6 mb-8'>
-            {/* Article 1: Sovereign Agents */}
-            <div className='bg-gradient-to-br from-purple-900/60 to-purple-800/60 p-6 rounded-xl border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 group'>
-              <div className='flex items-center gap-2 mb-3'>
-                <Brain className='w-6 h-6 text-purple-400' />
-                <span className='text-xs font-semibold text-purple-300 uppercase tracking-wide'>
-                  AI Sovereign Agents
+          {/* FeaturedArticlesGrid */}
+          <divclassName = 'gridmd: grid-cols-3gap-6mb-8'>
+            {/* Article1: SovereignAgents */}
+            <divclassName = 'bg-gradient-to-brfrom-purple-900/60to-purple-800/60p-6rounded-xlborderborder-purple-400/30hover: border-purple-400/60transition-allhover:scale-105group'>
+              <divclassName='flexitems-centergap-2mb-3'>
+                <Brain,className='w-6 h-6text-purple-400' />
+                <spanclassName='text-xsfont-semiboldtext-purple-300uppercasetracking-wide'>
+                  AISovereignAgents
                 </span>
               </div>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors'>
-                Autonomous Decision-Making Revolution
+              <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-purple-300transition-colors'>
+                AutonomousDecision-MakingRevolution
               </h3>
-              <p className='text-white/70 text-sm mb-4'>
-                94% accuracy • $45M+ savings • 10x efficiency gains
+              <pclassName='text-white/70text-smmb-4'>
+                94% accuracy • $45M+ savings • 10xefficiencygains
               </p>
-              <Link
-                to='/blog/ai-sovereign-agents-enterprise-2025'
-                className='inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-semibold text-sm group-hover:gap-3 transition-all'
+              <Linkto='/blog/ai-sovereign-agents-enterprise-2025'
+                className='inline-flexitems-centergap-2text-purple-300hover:text-purple-200font-semiboldtext-smgroup-hover:gap-3transition-all'
               >
-                Read Article <ArrowRight className='w-4 h-4' />
+                ReadArticle <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
-            {/* Article 2: Quantum ML */}
-            <div className='bg-gradient-to-br from-indigo-900/60 to-indigo-800/60 p-6 rounded-xl border border-indigo-400/30 hover:border-indigo-400/60 transition-all hover:scale-105 group'>
-              <div className='flex items-center gap-2 mb-3'>
-                <Zap className='w-6 h-6 text-indigo-400' />
-                <span className='text-xs font-semibold text-indigo-300 uppercase tracking-wide'>
-                  Quantum ML
+            {/* Article2: Quantum ML */}
+            <divclassName = 'bg-gradient-to-brfrom-indigo-900/60to-indigo-800/60p-6rounded-xlborderborder-indigo-400/30hover: border-indigo-400/60transition-allhover:scale-105group'>
+              <divclassName='flexitems-centergap-2mb-3'>
+                <ZapclassName='w-6 h-6text-indigo-400' />
+                <spanclassName='text-xsfont-semiboldtext-indigo-300uppercasetracking-wide'>
+                  QuantumML
                 </span>
               </div>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors'>
-                1000x Computational Speed Breakthrough
+              <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-indigo-300transition-colors'>
+                1000xComputationalSpeed Breakthrough
               </h3>
-              <p className='text-white/70 text-sm mb-4'>
-                1000x speedup • $89M savings • Impossible problems solved
+              <pclassName='text-white/70text-smmb-4'>
+                1000xspeedup • $89Msavings • Impossibleproblemssolved
               </p>
-              <Link
-                to='/blog/ai-quantum-machine-learning-2025'
-                className='inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-semibold text-sm group-hover:gap-3 transition-all'
+              <Linkto='/blog/ai-quantum-machine-learning-2025'
+                className='inline-flexitems-centergap-2text-indigo-300hover:text-indigo-200font-semiboldtext-smgroup-hover:gap-3transition-all'
               >
-                Read Article <ArrowRight className='w-4 h-4' />
+                ReadArticle <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
-            {/* Article 3: Neuromorphic Edge */}
-            <div className='bg-gradient-to-br from-emerald-900/60 to-emerald-800/60 p-6 rounded-xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 group'>
-              <div className='flex items-center gap-2 mb-3'>
-                <Sparkles className='w-6 h-6 text-emerald-400' />
-                <span className='text-xs font-semibold text-emerald-300 uppercase tracking-wide'>
-                  Neuromorphic Edge
+            {/* Article3: NeuromorphicEdge */}
+            <divclassName = 'bg-gradient-to-brfrom-emerald-900/60to-emerald-800/60p-6rounded-xlborderborder-emerald-400/30hover: border-emerald-400/60transition-allhover:scale-105group'>
+              <divclassName='flexitems-centergap-2mb-3'>
+                <SparklesclassName='w-6 h-6text-emerald-400' />
+                <spanclassName='text-xsfont-semiboldtext-emerald-300uppercasetracking-wide'>
+                  NeuromorphicEdge
                 </span>
               </div>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors'>
-                Brain-Inspired AI at 0.001W Power
+              <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-emerald-300transition-colors'>
+                Brain,-InspiredAIat 0.001WPower
               </h3>
-              <p className='text-white/70 text-sm mb-4'>
-                10,000x energy efficiency • 100M+ devices • Real-time learning
+              <pclassName='text-white/70text-smmb-4'>
+                10000xenergyefficiency • 100M+ devices • Real-timelearning
               </p>
-              <Link
-                to='/blog/ai-neuromorphic-edge-computing-2025'
-                className='inline-flex items-center gap-2 text-emerald-300 hover:text-emerald-200 font-semibold text-sm group-hover:gap-3 transition-all'
+              <Linkto = '/blog/ai-neuromorphic-edge-computing-2025'
+                className='inline-flexitems-centergap-2text-emerald-300hover: text-emerald-200font-semiboldtext-smgroup-hover:gap-3transition-all'
               >
-                Read Article <ArrowRight className='w-4 h-4' />
+                ReadArticle <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
-          {/* CTA Section */}
-          <div className='flex flex-wrap gap-4 items-center'>
-            <Link
-              to='/blog'
-              className='bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-purple-500/50 inline-flex items-center gap-2'
+          {/* CTASection */}
+          <divclassName = 'flexflex-wrapgap-4items-center'>
+            <Linkto='/blog'
+              className='bg-gradient-to-rfrom-purple-600to-indigo-600hover: from-purple-700hover:to-indigo-700text-whitepx-8py-4rounded-lgfont-boldtext-lgtransition-allshadow-lghover:shadow-purple-500/50inline-flexitems-centergap-2'
             >
-              Explore All Articles <ArrowRight className='w-5 h-5' />
+              ExploreAllArticles <ArrowRight,className='w-5 h-5' />
             </Link>
-            <Link
-              to='/contact'
-              className='bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg transition-all border border-white/20 hover:border-white/40 inline-flex items-center gap-2'
+            <Linkto='/contact'
+              className='bg-white/10hover:bg-white/20backdrop-blur-smtext-whitepx-8py-4rounded-lgfont-boldtext-lgtransition-allborderborder-white/20hover:border-white/40inline-flexitems-centergap-2'
             >
-              Schedule Consultation
+              ScheduleConsultation
             </Link>
           </div>
         </div>
-        {/* Stats Banner */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-          <div className='bg-purple-900/30 backdrop-blur-sm p-6 rounded-xl border border-purple-400/20 text-center'>
-            <div className='text-3xl md:text-4xl font-extrabold text-purple-400 mb-2'>
+        {/* StatsBanner */}
+        <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-4'>
+          <divclassName='bg-purple-900/30backdrop-blur-smp-6rounded-xlborderborder-purple-400/20text-center'>
+            <divclassName='text-3xlmd:text-4xlfont-extraboldtext-purple-400mb-2'>
               $174M+
             </div>
-            <div className='text-white/70 text-sm'>Combined Annual Savings</div>
+            <divclassName='text-white/70text-sm'>CombinedAnnualSavings</div>
           </div>
-          <div className='bg-indigo-900/30 backdrop-blur-sm p-6 rounded-xl border border-indigo-400/20 text-center'>
-            <div className='text-3xl md:text-4xl font-extrabold text-indigo-400 mb-2'>
-              10,000x
+          <divclassName='bg-indigo-900/30backdrop-blur-smp-6rounded-xlborderborder-indigo-400/20text-center'>
+            <divclassName='text-3xlmd:text-4xlfont-extraboldtext-indigo-400mb-2'>
+              10000x
             </div>
-            <div className='text-white/70 text-sm'>Maximum Efficiency Gain</div>
+            <divclassName = 'text-white/70text-sm'>MaximumEfficiencyGain</div>
           </div>
-          <div className='bg-emerald-900/30 backdrop-blur-sm p-6 rounded-xl border border-emerald-400/20 text-center'>
-            <div className='text-3xl md:text-4xl font-extrabold text-emerald-400 mb-2'>
+          <divclassName='bg-emerald-900/30backdrop-blur-smp-6rounded-xlborderborder-emerald-400/20text-center'>
+            <divclassName='text-3xlmd: text-4xlfont-extraboldtext-emerald-400mb-2'>
               100M+
             </div>
-            <div className='text-white/70 text-sm'>Devices Deployed</div>
+            <divclassName='text-white/70text-sm'>DevicesDeployed</div>
           </div>
-          <div className='bg-cyan-900/30 backdrop-blur-sm p-6 rounded-xl border border-cyan-400/20 text-center'>
-            <div className='text-3xl md:text-4xl font-extrabold text-cyan-400 mb-2'>
+          <divclassName='bg-cyan-900/30backdrop-blur-smp-6rounded-xlborderborder-cyan-400/20text-center'>
+            <divclassName='text-3xlmd:text-4xlfont-extraboldtext-cyan-400mb-2'>
               94%
             </div>
-            <div className='text-white/70 text-sm'>Decision Accuracy</div>
+            <divclassName='text-white/70text-sm'>DecisionAccuracy</div>
           </div>
         </div>
       </div>
     </section>
   );
 };
-export default October2025BreakthroughBanner;
+exportdefaultOctober2025BreakthroughBanner;

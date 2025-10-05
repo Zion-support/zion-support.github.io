@@ -1,159 +1,146 @@
 import React from 'react';
 
-const AITrendsInsightsBanner2026: React.FC = () => {
-  const trendingTopics = [
+constAITrendsInsightsBanner2026: React.FC = () => {
+  consttrendingTopics = [
     {
-      id: 1,
-      title: 'Generative AI Enterprise Adoption',
-      category: 'Enterprise AI',
-      trend: '+450%',
-      growth: 'Rapid Growth',
-      description:
-        'Enterprise adoption of generative AI has increased by 450% in Q1 2026, with 78% of Fortune 500 companies implementing AI-powered content generation.',
-      icon: '🚀',
-      gradient: 'from-purple-500 to-pink-500',
-      badge: 'TRENDING',
+      id: 1
+      title: 'GenerativeAIEnterprise Adoption'
+      category: 'EnterpriseAI'
+      trend: '+450%'
+      growth: 'RapidGrowth'
+      description: 'Enterpriseadoptionof generativeAIhas increasedby450% inQ12026with78% ofFortune500 companiesimplementingAI-poweredcontentgeneration.'
+      icon: '🚀'
+      gradient: 'from-purple-500to-pink-500'
+      badge: 'TRENDING'
       insights: [
-        '78% Fortune 500 adoption',
-        '450% growth rate',
-        '$12B market size',
-      ],
-    },
+        '78% Fortune500adoption'
+        '450% growthrate'
+        '$12Bmarketsize'
+      ]
+    }
     {
-      id: 2,
-      title: 'Quantum Computing Breakthroughs',
-      category: 'Quantum Tech',
-      trend: '+300%',
-      growth: 'Exponential',
-      description:
-        'Quantum computing achieves practical applications in AI optimization, with 300% improvement in processing complex machine learning algorithms.',
-      icon: '🚀',
-      gradient: 'from-cyan-500 to-blue-500',
-      badge: 'BREAKTHROUGH',
+      id:  2
+      title: 'QuantumComputingBreakthroughs'
+      category: 'QuantumTech'
+      trend: '+300%'
+      growth: 'Exponential'
+      description: 'Quantumcomputingachieves practicalapplicationsin AIoptimizationwith300% improvementinprocessing complexmachinelearning algorithms.'
+      icon: '🚀'
+      gradient: 'from-cyan-500to-blue-500'
+      badge: 'BREAKTHROUGH'
       insights: [
-        '1000x speed boost',
-        '300% efficiency gain',
-        'Commercial viability',
-      ],
-    },
+        '1000xspeedboost'
+        '300% efficiencygain'
+        'Commercialviability'
+      ]
+    }
     {
-      id: 3,
-      title: 'Autonomous Business Operations',
-      category: 'Automation',
-      trend: '+280%',
-      growth: 'Accelerating',
-      description:
-        'Business process automation reaches new heights with 95% autonomous operations across multiple industries, reducing operational costs by 60%.',
-      icon: '🚀',
-      gradient: 'from-green-500 to-emerald-500',
-      badge: 'AUTOMATION',
+      id:  3
+      title: 'AutonomousBusinessOperations'
+      category: 'Automation'
+      trend: '+280%'
+      growth: 'Accelerating'
+      description: 'Businessprocessautomation reachesnewheights with95% autonomousoperationsacross multipleindustriesreducingoperationalcosts by60%.'
+      icon: '🚀'
+      gradient: 'from-green-500to-emerald-500'
+      badge: 'AUTOMATION'
       insights: [
-        '95% automation rate',
-        '60% cost reduction',
-        '24/7 operations',
-      ],
-    },
+        '95% automationrate'
+        '60% costreduction'
+        '24/7operations'
+      ]
+    }
     {
-      id: 4,
-      title: 'AI-Powered Predictive Analytics',
-      category: 'Business Intelligence',
-      trend: '+350%',
-      growth: 'High Growth',
-      description:
-        'Advanced predictive analytics using AI achieves 99.9% accuracy in forecasting business trends, customer behavior, and market dynamics.',
-      icon: '🚀',
-      gradient: 'from-orange-500 to-red-500',
-      badge: 'PREDICTIVE',
-      insights: ['99.9% accuracy', '350% adoption growth', '$8B market value'],
-    },
+      id:  4
+      title: 'AI-PoweredPredictiveAnalytics'
+      category: 'BusinessIntelligence'
+      trend: '+350%'
+      growth: 'HighGrowth'
+      description: 'Advancedpredictiveanalytics usingAIachieves 99.9% accuracyinforecasting businesstrendscustomerbehaviorandmarketdynamics.'
+      icon: '🚀'
+      gradient: 'from-orange-500to-red-500'
+      badge: 'PREDICTIVE'
+      insights: ['99.9% accuracy''350% adoptiongrowth''$8Bmarketvalue']
+    }
     {
-      id: 5,
-      title: 'Edge AI Computing Revolution',
-      category: 'Edge Computing',
-      trend: '+420%',
-      growth: 'Rapid Expansion',
-      description:
-        'Edge AI computing transforms real-time decision making with 420% increase in deployment, enabling instant AI processing at the network edge.',
-      icon: '🚀',
-      gradient: 'from-indigo-500 to-purple-500',
-      badge: 'EDGE AI',
+      id:  5
+      title: 'EdgeAIComputing Revolution'
+      category: 'EdgeComputing'
+      trend: '+420%'
+      growth: 'RapidExpansion'
+      description: 'EdgeAIcomputing transformsreal-timedecisionmaking with420% increaseindeploymentenablinginstantAI processingatthe networkedge.'
+      icon: '🚀'
+      gradient: 'from-indigo-500to-purple-500'
+      badge: 'EDGEAI'
       insights: [
-        '420% deployment growth',
-        'Real-time processing',
-        'IoT integration',
-      ],
-    },
+        '420% deploymentgrowth'
+        'Real-timeprocessing'
+        'IoTintegration'
+      ]
+    }
     {
-      id: 6,
-      title: 'AI Ethics and Governance',
-      category: 'AI Governance',
-      trend: '+380%',
-      growth: 'Critical Growth',
-      description:
-        'AI ethics and governance frameworks become essential with 380% increase in regulatory compliance requirements and ethical AI implementation.',
-      icon: '🚀',
-      gradient: 'from-teal-500 to-cyan-500',
-      badge: 'GOVERNANCE',
+      id:  6
+      title: 'AIEthicsand Governance'
+      category: 'AIGovernance'
+      trend: '+380%'
+      growth: 'CriticalGrowth'
+      description: 'AIethicsand governanceframeworksbecome essentialwith380% increaseinregulatory compliancerequirementsand ethicalAIimplementation.'
+      icon: '🚀'
+      gradient: 'from-teal-500to-cyan-500'
+      badge: 'GOVERNANCE'
       insights: [
-        '380% compliance growth',
-        'Ethical frameworks',
-        'Regulatory alignment',
-      ],
-    },
-  ];
-
-  const marketInsights = [
-    { value: '$2.5T', label: 'Global AI Market Size', icon: '📈' },
-    { value: '85%', label: 'Enterprise AI Adoption', icon: '🏢' },
-    { value: '500M+', label: 'AI-Powered Devices', icon: '📱' },
-    { value: '2.3M', label: 'AI Job Openings', icon: '💼' },
-  ];
-
-  return (
-    <div className='py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-cyan-900 relative overflow-hidden'>
-      {/* Animated background effects */}
-      <div className='absolute inset-0 overflow-hidden opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+        '380% compliancegrowth'
+        'Ethicalframeworks'
+        'Regulatoryalignment'
+      ]
+    }
+  ]; constmarketInsights = [
+    { value: '$2.5T'label: 'GlobalAIMarket Size'icon: '📈' }
+    { value: '85%'label: 'EnterpriseAIAdoption'icon: '🏢' }
+    { value: '500M+'label: 'AI-PoweredDevices'icon: '📱' }
+    { value: '2.3M'label: 'AIJobOpenings'icon: '💼' }
+  ]; return (
+    <divclassName = 'py-20bg-gradient-to-brfrom-slate-900via-purple-900to-cyan-900relativeoverflow-hidden'>
+      {/* Animatedbackgroundeffects */}
+      <divclassName='absoluteinset-0overflow-hiddenopacity-20'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-cyan-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+         />
+        <divclassName = 'absolutetop-1/2left-1/2 w-96h-96bg-pink-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '4s' }}
-        ></div>
+         />
       </div>
 
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Header Section */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in'>
-            <span className='text-purple-400 font-bold text-sm tracking-wider uppercase'>
-              📊 AI TRENDS & INSIGHTS • Q1 2026
+      <divclassName = 'containermx-autopx-6relativez-10'>
+        {/* HeaderSection */}
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-flexitems-centergap-3px-6py-3rounded-fullbg-gradient-to-rfrom-purple-500/20to-cyan-500/20borderborder-purple-500/30mb-8animate-fade-in'>
+            <spanclassName='text-purple-400font-boldtext-smtracking-wideruppercase'>
+              📊 AITRENDS & INSIGHTS • Q12026
             </span>
           </div>
 
-          <h2 className='text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in'>
-            AI Trends & Insights 2026
+          <h2className='text-5xlmd: text-6xlfont-extraboldmb-6bg-gradient-to-rfrom-purple-400via-cyan-400to-pink-400bg-clip-texttext-transparentanimate-fade-in'>
+            AITrends & Insights2026
           </h2>
 
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Stay ahead of the curve with the latest AI trends, market insights,
-            and breakthrough technologies. Discover what's shaping the future of
-            artificial intelligence and how it impacts your business.
+          <pclassName='text-xltext-gray-300max-w-4xlmx-autoleading-relaxedmb-8'>
+            Stayaheadof thecurvewith thelatestAI trendsmarketinsights
+            andbreakthroughtechnologies. Discoverwhat'sshapingthe futureofartificial intelligenceandhow itimpactsyour business.
           </p>
 
-          {/* Market Insights */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto'>
-            {marketInsights.map((insight, index) => (
-              <div key={index} className='text-center'>
-                <div className='text-purple-400 mb-2 flex justify-center'>
+          {/* MarketInsights */}
+          <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-6max-w-4xlmx-auto'>
+            { marketInsights.map((insightindex) = > (
+              <divkey = { index  }className = 'text-center'>
+                <divclassName='text-purple-400mb-2flexjustify-center'>
                   {insight.icon}
                 </div>
-                <div className='text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent mb-1'>
+                <divclassName='text-3xlfont-extraboldbg-gradient-to-rfrom-purple-400to-cyan-400bg-clip-texttext-transparentmb-1'>
                   {insight.value}
                 </div>
-                <div className='text-gray-400 text-sm font-medium'>
+                <divclassName='text-gray-400text-smfont-medium'>
                   {insight.label}
                 </div>
               </div>
@@ -161,36 +148,30 @@ const AITrendsInsightsBanner2026: React.FC = () => {
           </div>
         </div>
 
-        {/* Trending Topics Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {trendingTopics.map((topic, index) => (
-            <div
-              key={topic.id}
-              className='group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}
-              ></div>
+        {/* TrendingTopicsGrid */}
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8mb-16'>
+          { trendingTopics.map((topicindex) = > (
+            <divkey = { topic.id  }className = 'grouprelativebg-white/5backdrop-blur-lgrounded-2xlborderborder-white/10hover: border-purple-500/50transition-allduration-500overflow-hiddenhover:transformhover:scale-105hover:shadow-2xlhover:shadow-purple-500/20'
+              style = { { animationDelay: `${index * 150 }ms` }}
+             > {/* Cardgloweffect */}
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${topic.gradient }opacity-0group-hover: opacity-10transition-allduration-500`}
+               />
 
-              <div className='relative p-8'>
+              <divclassName = 'relativep-8'>
                 {/* Icon & Badge */}
-                <div className='flex items-start justify-between mb-6'>
-                  <div className='text-purple-400 group-hover:scale-110 transition-transform duration-300'>
+                <divclassName='flexitems-startjustify-betweenmb-6'>
+                  <divclassName='text-purple-400group-hover: scale-110transition-transformduration-300'>
                     {topic.icon}
                   </div>
-                  <div className='flex flex-col gap-2'>
-                    <div
-                      className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${topic.gradient} text-white text-xs font-bold border border-white/30`}
+                  <divclassName = 'flexflex-colgap-2' > <divclassName = { `px-3py-1.5rounded-fullbg-gradient-to-r ${topic.gradient }text-whitetext-xsfont-boldborderborder-white/30`}
                     >
                       {topic.badge}
                     </div>
-                    <div className='text-right'>
-                      <div className='text-green-400 font-bold text-lg'>
+                    <divclassName = 'text-right'>
+                      <divclassName='text-green-400font-boldtext-lg'>
                         {topic.trend}
                       </div>
-                      <div className='text-gray-400 text-xs'>
+                      <divclassName='text-gray-400text-xs'>
                         {topic.growth}
                       </div>
                     </div>
@@ -198,111 +179,98 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                 </div>
 
                 {/* Category */}
-                <div className='mb-4'>
-                  <span className='inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30'>
+                <divclassName='mb-4'>
+                  <spanclassName='inline-blockpx-3py-1rounded-fullbg-gradient-to-rfrom-purple-500/20to-cyan-500/20text-purple-400text-xsfont-semiboldborderborder-purple-500/30'>
                     {topic.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight'>
+                <h3className='text-2xlfont-boldtext-whitemb-4group-hover: text-purple-400transition-colorsduration-300leading-tight'>
                   {topic.title}
                 </h3>
 
                 {/* Description */}
-                <p className='text-gray-400 mb-6 leading-relaxed text-sm'>
+                <pclassName = 'text-gray-400mb-6leading-relaxedtext-sm'>
                   {topic.description}
                 </p>
 
-                {/* Key Insights */}
-                <div className='mb-6'>
-                  <div className='text-gray-400 text-xs mb-3 font-semibold'>
-                    Key Insights:
-                  </div>
-                  <div className='space-y-1'>
-                    {topic.insights.map((insight, idx) => (
-                      <div
-                        key={idx}
-                        className='flex items-center gap-2 text-gray-300 text-xs'
+                {/* KeyInsights */}
+                <divclassName='mb-6'>
+                  <divclassName='text-gray-400text-xsmb-3font-semibold'>
+                    KeyInsights: </div>
+                  <divclassName='space-y-1'>
+                    { topic.insights.map((insightidx) = > (
+                      <divkey = { idx  }className = 'flexitems-centergap-2text-gray-300text-xs'
                       >
-                        <div className='w-1.5 h-1.5 rounded-full bg-purple-400'></div>
+                        <divclassName='w-1.5 h-1.5rounded-fullbg-purple-400' />
                         {insight}
                       </div>
                     ))}
                   </div>
-                </div>
-
-                {/* CTA Button */}
-                <a
-                  href={`/insights/${topic.id}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${topic.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
+                </div > {/* CTAButton */}
+                <ahref = {`/insights/${topic.id}`}
+                  className = { `group/btnflexitems-centerjustify-centergap-2 w-fullbg-gradient-to-r ${topic.gradient }hover: opacity-90text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50transformhover:-translate-y-1`}
                 >
-                  <span>Explore Trend</span>
+                  <span>ExploreTrend</span>
                 </a>
               </div>
             </div>
           ))}
         </div>
 
-        {/* Newsletter & Updates Section */}
-        <div className='bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16'>
-          <div className='text-center'>
-            <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6'>
-              <span className='text-yellow-400 font-bold text-sm tracking-wider uppercase'>
-                REAL-TIME UPDATES
+        {/* Newsletter & UpdatesSection */}
+        <divclassName = 'bg-gradient-to-rfrom-purple-500/10to-cyan-500/10rounded-3xlp-8md: p-12borderborder-purple-500/20mb-16'>
+          <divclassName='text-center'>
+            <divclassName='inline-flexitems-centergap-2px-4py-2rounded-fullbg-gradient-to-rfrom-yellow-500/20to-orange-500/20borderborder-yellow-500/30mb-6'>
+              <spanclassName='text-yellow-400font-boldtext-smtracking-wideruppercase'>
+                REAL-TIMEUPDATES
               </span>
             </div>
 
-            <h3 className='text-4xl font-extrabold text-white mb-4'>
-              Get Weekly AI Trends & Insights
+            <h3className='text-4xlfont-extraboldtext-whitemb-4'>
+              GetWeeklyAI Trends & Insights
             </h3>
-            <p className='text-xl text-gray-300 mb-8 max-w-2xl mx-auto'>
-              Stay informed with our weekly AI trends newsletter. Get exclusive
-              insights, market analysis, and early access to breakthrough
-              technologies.
+            <pclassName='text-xltext-gray-300mb-8max-w-2xlmx-auto'>
+              Stayinformedwith ourweeklyAI trendsnewsletter. Getexclusiveinsightsmarketanalysisandearlyaccess tobreakthroughtechnologies.
             </p>
 
-            <div className='flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto'>
-              <input
-                type='email'
-                placeholder='Enter your email'
-                className='flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300'
+            <divclassName = 'flexflex-colsm: flex-rowgap-4justify-centermax-w-mdmx-auto'>
+              <inputtype='email'
+                placeholder='Enteryouremail'
+                className='flex-1px-6py-4rounded-xlbg-white/10borderborder-white/20text-whiteplaceholder-gray-400focus:outline-nonefocus:border-purple-500focus:bg-white/20transition-allduration-300'
               />
 
-              <button className='bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2'>
+              <buttonclassName='bg-gradient-to-rfrom-purple-500to-cyan-600hover:from-purple-400hover:to-cyan-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50flexitems-centerjustify-centergap-2'>
                 <span>Subscribe</span>
               </button>
             </div>
-            <p className='text-xs text-gray-500 mt-4'>
-              Join 250K+ professionals. No spam, unsubscribe anytime.
+            <pclassName='text-xstext-gray-500mt-4'>
+              Join250K+ professionals. Nospamunsubscribeanytime.
             </p>
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className='text-center'>
-          <div className='inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500'>
-            <div className='bg-slate-900 rounded-xl px-12 py-10'>
-              <h3 className='text-3xl font-bold text-white mb-4'>
-                Lead the AI Revolution
+        {/* CTASection */}
+        <divclassName = 'text-center'>
+          <divclassName='inline-blockp-1rounded-2xlbg-gradient-to-rfrom-purple-500via-cyan-500to-pink-500'>
+            <divclassName='bg-slate-900rounded-xlpx-12py-10'>
+              <h3className='text-3xlfont-boldtext-whitemb-4'>
+                LeadtheAI Revolution
               </h3>
-              <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
-                Don't just follow trends – create them. Get exclusive access to
-                our AI insights, early technology previews, and strategic
-                guidance for your organization.
+              <pclassName='text-gray-400mb-8max-w-2xlmx-auto'>
+                Don'tjustfollow trends – createthem. Getexclusiveaccess toourAI insightsearlytechnologypreviewsandstrategicguidance foryourorganization.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='/insights'
-                  className='bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2'
+              <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+                <ahref='/insights'
+                  className='bg-gradient-to-rfrom-purple-500to-cyan-600hover:from-purple-400hover:to-cyan-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50flexitems-centerjustify-centergap-2'
                 >
-                  <span>Explore All Insights</span>
+                  <span>ExploreAllInsights</span>
                 </a>
-                <a
-                  href='/contact'
-                  className='border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
+                <ahref='/contact'
+                  className='border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2'
                 >
-                  <span>Get Expert Consultation</span>
+                  <span>GetExpertConsultation</span>
                 </a>
               </div>
             </div>
@@ -313,4 +281,4 @@ const AITrendsInsightsBanner2026: React.FC = () => {
   );
 };
 
-export default AITrendsInsightsBanner2026;
+exportdefaultAITrendsInsightsBanner2026;

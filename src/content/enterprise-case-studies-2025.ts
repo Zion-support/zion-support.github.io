@@ -1,8 +1,6 @@
-// Enterprise case studies showcasing real-world AI implementations and results
-
-export interface EnterpriseCaseStudy {
+// Enterprisecasestudies showcasingreal-worldAIimplementations andresultsexport interfac; eEnterpriseCaseStudy { 
   id: string;
-  slug?: string;
+  slug ? : string;
   title: string;
   company: string;
   industry: string;
@@ -14,8 +12,8 @@ export interface EnterpriseCaseStudy {
       performance: string;
       savings: string;
       accuracy: string;
-      roi: string;
-    };
+      roi : string;
+     };
     timeframe: string;
     scale: string;
   };
@@ -28,225 +26,205 @@ export interface EnterpriseCaseStudy {
   trending?: boolean;
 }
 
-export const enterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
+exportconstenterpriseCaseStudies2025: EnterpriseCaseStudy[] = [
   {
-    id: 'fortune-500-ai-transformation',
-    slug: 'fortune-500-ai-transformation',
-    title: 'Fortune 500 Global Manufacturing: Complete AI Transformation',
-    company: 'Global Manufacturing Corp',
-    industry: 'Manufacturing',
-    description:
-      'Complete enterprise AI transformation achieving 99.99% operational autonomy, $3.7B value creation, and zero human error operations.',
-    challenge:
-      'Manual processes, operational inefficiencies, and high error rates across 450 global facilities',
-    solution:
-      'Implemented comprehensive AI mesh network with autonomous decision-making and self-healing infrastructure',
+    id: 'fortune-500-ai-transformation'
+    slug: 'fortune-500-ai-transformation'
+    title: 'Fortune500Global Manufacturing: CompleteAITransformation'
+    company: 'GlobalManufacturingCorp'
+    industry: 'Manufacturing'
+    description: 'CompleteenterpriseAI transformationachieving99.99% operationalautonomy$3.7Bvaluecreationandzerohuman erroroperations.'
+    challenge: 'Manualprocessesoperationalinefficienciesandhigherror ratesacross450 globalfacilities'
+    solution: 'ImplementedcomprehensiveAI meshnetworkwith autonomousdecision-makingandself-healinginfrastructure'
     results: {
       metrics: {
-        performance: '99.99% uptime',
-        savings: '$3.7B annually',
-        accuracy: 'Zero errors',
-        roi: '2,400%',
-      },
-      timeframe: '18 months',
-      scale: '450 facilities globally',
-    },
+        performance: '99.99% uptime'
+        savings: '$3.7Bannually'
+        accuracy: 'Zeroerrors'
+        roi: '2400%'
+      }
+      timeframe: '18months'
+      scale: '450facilitiesglobally'
+    }
     technologies: [
-      'Autonomous AI',
-      'Self-Healing Infrastructure',
-      'Predictive Analytics',
-      'IoT Integration',
-    ],
-    featured: true,
-    date: '2025-01-20',
-    author: 'Zion Tech Group Team',
-    image: '/images/fortune-500-ai-transformation.jpg',
-    newBadge: true,
-    trending: true,
-  },
+      'AutonomousAI'
+      'Self-HealingInfrastructure'
+      'PredictiveAnalytics'
+      'IoTIntegration'
+    ]
+    featured: true
+    date: '2025-01-20'
+    author: 'ZionTechGroup Team'
+    image: '/images/fortune-500-ai-transformation.jpg'
+    newBadge: true
+    trending: true
+  }
   {
-    id: 'financial-services-fraud-prevention',
-    slug: 'financial-services-fraud-prevention',
-    title: 'Leading Financial Services: AI-Powered Fraud Prevention',
-    company: 'Global Financial Services',
-    industry: 'Financial Services',
-    description:
-      'Advanced AI fraud detection system preventing $47B in fraudulent transactions with 99.94% accuracy and real-time processing.',
-    challenge:
-      'Sophisticated fraud schemes causing $200M+ annual losses and regulatory compliance requirements',
-    solution:
-      'Deployed quantum-enhanced neural networks with real-time behavioral analysis and predictive modeling',
+    id: 'financial-services-fraud-prevention'
+    slug: 'financial-services-fraud-prevention'
+    title: 'LeadingFinancialServices: AI-PoweredFraudPrevention'
+    company: 'GlobalFinancialServices'
+    industry: 'FinancialServices'
+    description: 'AdvancedAIfraud detectionsystempreventing $47Binfraudulent transactionswith99.94% accuracyandreal-timeprocessing.'
+    challenge: 'Sophisticatedfraudschemes causing $200M+ annuallossesand regulatorycompliancerequirements'
+    solution: 'Deployedquantum-enhancedneuralnetworks withreal-timebehavioralanalysis andpredictivemodeling'
     results: {
       metrics: {
-        performance: '99.94% accuracy',
-        savings: '$47B prevented',
-        accuracy: 'Sub-1ms detection',
-        roi: '3,200%',
-      },
-      timeframe: '12 months',
-      scale: '50M+ transactions daily',
-    },
+        performance: '99.94% accuracy'
+        savings: '$47Bprevented'
+        accuracy: 'Sub-1msdetection'
+        roi: '3200%'
+      }
+      timeframe: '12months'
+      scale: '50M+ transactionsdaily'
+    }
     technologies: [
-      'Quantum AI',
-      'Real-time Analytics',
-      'Behavioral Analysis',
-      'Predictive Modeling',
-    ],
-    featured: true,
-    date: '2025-01-20',
-    author: 'Zion Tech Group Team',
-    image: '/images/financial-fraud-prevention.jpg',
-    newBadge: true,
-    trending: true,
-  },
+      'QuantumAI'
+      'Real-timeAnalytics'
+      'BehavioralAnalysis'
+      'PredictiveModeling'
+    ]
+    featured: true
+    date: '2025-01-20'
+    author: 'ZionTechGroup Team'
+    image: '/images/financial-fraud-prevention.jpg'
+    newBadge: true
+    trending: true
+  }
   {
-    id: 'healthcare-ai-diagnostic-system',
-    slug: 'healthcare-ai-diagnostic-system',
-    title: 'Major Healthcare System: AI Diagnostic Excellence',
-    company: 'Regional Healthcare Network',
-    industry: 'Healthcare',
-    description:
-      'AI-powered diagnostic system achieving 94% diagnostic accuracy, 252 lives saved, and 497% ROI in healthcare delivery.',
-    challenge:
-      'Diagnostic delays, accuracy issues, and resource constraints affecting patient outcomes',
-    solution:
-      'Implemented multimodal AI diagnostic platform with real-time analysis and clinical decision support',
+    id: 'healthcare-ai-diagnostic-system'
+    slug: 'healthcare-ai-diagnostic-system'
+    title: 'MajorHealthcareSystem: AIDiagnosticExcellence'
+    company: 'RegionalHealthcareNetwork'
+    industry: 'Healthcare'
+    description: 'AI-powereddiagnosticsystem achieving94% diagnosticaccuracy252livessavedand497% ROIinhealthcare delivery.'
+    challenge: 'Diagnosticdelaysaccuracyissuesandresourceconstraints affectingpatientoutcomes'
+    solution: 'ImplementedmultimodalAI diagnosticplatformwith real-timeanalysisand clinicaldecisionsupport'
     results: {
       metrics: {
-        performance: '94% accuracy',
-        savings: '$1.5B value',
-        accuracy: '252 lives saved',
-        roi: '497%',
-      },
-      timeframe: '15 months',
-      scale: '25 hospitals, 500K patients',
-    },
+        performance: '94% accuracy'
+        savings: '$1.5Bvalue'
+        accuracy: '252livessaved'
+        roi: '497%'
+      }
+      timeframe: '15months'
+      scale: '25hospitals500Kpatients'
+    }
     technologies: [
-      'Multimodal AI',
-      'Diagnostic Imaging',
-      'Clinical Decision Support',
-      'Real-time Analytics',
-    ],
-    featured: true,
-    date: '2025-01-20',
-    author: 'Zion Tech Group Team',
-    image: '/images/healthcare-ai-diagnostics.jpg',
-    newBadge: true,
-    trending: true,
-  },
+      'MultimodalAI'
+      'DiagnosticImaging'
+      'ClinicalDecisionSupport'
+      'Real-timeAnalytics'
+    ]
+    featured: true
+    date: '2025-01-20'
+    author: 'ZionTechGroup Team'
+    image: '/images/healthcare-ai-diagnostics.jpg'
+    newBadge: true
+    trending: true
+  }
   {
-    id: 'retail-supply-chain-optimization',
-    slug: 'retail-supply-chain-optimization',
-    title: 'Global Retail Chain: AI Supply Chain Revolution',
-    company: 'Global Retail Corporation',
-    industry: 'Retail',
-    description:
-      'AI-driven supply chain optimization achieving 65% faster deliveries, 40% cost reduction, and 95% inventory accuracy.',
-    challenge:
-      'Supply chain inefficiencies, stockouts, and delivery delays affecting customer satisfaction',
-    solution:
-      'Deployed autonomous supply chain AI with predictive analytics and dynamic optimization',
+    id: 'retail-supply-chain-optimization'
+    slug: 'retail-supply-chain-optimization'
+    title: 'GlobalRetailChain: AISupplyChain Revolution'
+    company: 'GlobalRetailCorporation'
+    industry: 'Retail'
+    description: 'AI-drivensupplychain optimizationachieving65% fasterdeliveries40% costreductionand95% inventoryaccuracy.'
+    challenge: 'Supplychaininefficienciesstockoutsanddeliverydelays affectingcustomersatisfaction'
+    solution: 'Deployedautonomoussupply chainAIwith predictiveanalyticsand dynamicoptimization'
     results: {
       metrics: {
-        performance: '65% faster delivery',
-        savings: '40% cost reduction',
-        accuracy: '95% inventory accuracy',
-        roi: '2,800%',
-      },
-      timeframe: '10 months',
-      scale: '2,000+ stores globally',
-    },
+        performance: '65% fasterdelivery'
+        savings: '40% costreduction'
+        accuracy: '95% inventoryaccuracy'
+        roi: '2800%'
+      }
+      timeframe: '10months'
+      scale: '2000+ storesglobally'
+    }
     technologies: [
-      'Supply Chain AI',
-      'Predictive Analytics',
-      'Autonomous Optimization',
-      'IoT Sensors',
-    ],
-    featured: true,
-    date: '2025-01-20',
-    author: 'Zion Tech Group Team',
-    image: '/images/retail-supply-chain-ai.jpg',
-    newBadge: true,
-    trending: true,
-  },
+      'SupplyChainAI'
+      'PredictiveAnalytics'
+      'AutonomousOptimization'
+      'IoTSensors'
+    ]
+    featured: true
+    date: '2025-01-20'
+    author: 'ZionTechGroup Team'
+    image: '/images/retail-supply-chain-ai.jpg'
+    newBadge: true
+    trending: true
+  }
   {
-    id: 'energy-sector-smart-grid',
-    slug: 'energy-sector-smart-grid',
-    title: 'Energy Utility: Smart Grid AI Implementation',
-    company: 'Regional Energy Utility',
-    industry: 'Energy',
-    description:
-      'Smart grid AI system achieving 99.97% uptime, 60% energy efficiency improvement, and $890M annual savings.',
-    challenge:
-      'Grid instability, energy waste, and maintenance inefficiencies in aging infrastructure',
-    solution:
-      'Implemented AI-powered smart grid with predictive maintenance and autonomous energy distribution',
+    id: 'energy-sector-smart-grid'
+    slug: 'energy-sector-smart-grid'
+    title: 'EnergyUtility: SmartGridAI Implementation'
+    company: 'RegionalEnergyUtility'
+    industry: 'Energy'
+    description: 'SmartgridAI systemachieving99.97% uptime60% energyefficiencyimprovementand $890Mannualsavings.'
+    challenge: 'Gridinstabilityenergywasteandmaintenanceinefficiencies inaginginfrastructure'
+    solution: 'ImplementedAI-poweredsmartgrid withpredictivemaintenance andautonomousenergy distribution'
     results: {
       metrics: {
-        performance: '99.97% uptime',
-        savings: '$890M annually',
-        accuracy: '60% efficiency gain',
-        roi: '1,600%',
-      },
-      timeframe: '20 months',
-      scale: '5M+ customers served',
-    },
+        performance: '99.97% uptime'
+        savings: '$890Mannually'
+        accuracy: '60% efficiencygain'
+        roi: '1600%'
+      }
+      timeframe: '20months'
+      scale: '5M+ customersserved'
+    }
     technologies: [
-      'Smart Grid AI',
-      'Predictive Maintenance',
-      'Energy Optimization',
-      'IoT Integration',
-    ],
-    featured: true,
-    date: '2025-01-20',
-    author: 'Zion Tech Group Team',
-    image: '/images/energy-smart-grid-ai.jpg',
-    newBadge: true,
-    trending: true,
-  },
+      'SmartGridAI'
+      'PredictiveMaintenance'
+      'EnergyOptimization'
+      'IoTIntegration'
+    ]
+    featured: true
+    date: '2025-01-20'
+    author: 'ZionTechGroup Team'
+    image: '/images/energy-smart-grid-ai.jpg'
+    newBadge: true
+    trending: true
+  }
   {
-    id: 'logistics-autonomous-fleet',
-    slug: 'logistics-autonomous-fleet',
-    title: 'Logistics Company: Autonomous Fleet Management',
-    company: 'Global Logistics Provider',
-    industry: 'Logistics',
-    description:
-      'Autonomous fleet management achieving 99.8% delivery accuracy, 45% fuel savings, and $2.3B operational value.',
-    challenge:
-      'Fleet inefficiencies, fuel costs, and delivery accuracy issues across global operations',
-    solution:
-      'Deployed autonomous fleet AI with route optimization and predictive maintenance systems',
+    id: 'logistics-autonomous-fleet'
+    slug: 'logistics-autonomous-fleet'
+    title: 'LogisticsCompany: AutonomousFleetManagement'
+    company: 'GlobalLogisticsProvider'
+    industry: 'Logistics'
+    description: 'Autonomousfleetmanagement achieving99.8% deliveryaccuracy45% fuelsavingsand $2.3Boperationalvalue.'
+    challenge: 'Fleetinefficienciesfuelcostsanddeliveryaccuracy issuesacrossglobal operations'
+    solution: 'Deployedautonomousfleet AIwithroute optimizationandpredictive maintenancesystems'
     results: {
       metrics: {
-        performance: '99.8% accuracy',
-        savings: '$2.3B value',
-        accuracy: '45% fuel savings',
-        roi: '1,900%',
-      },
-      timeframe: '14 months',
-      scale: '50,000+ vehicles globally',
-    },
+        performance: '99.8% accuracy'
+        savings: '$2.3Bvalue'
+        accuracy: '45% fuelsavings'
+        roi: '1900%'
+      }
+      timeframe: '14months'
+      scale: '50000+ vehiclesglobally'
+    }
     technologies: [
-      'Autonomous Fleet',
-      'Route Optimization',
-      'Predictive Maintenance',
-      'IoT Sensors',
-    ],
-    featured: true,
-    date: '2025-01-20',
-    author: 'Zion Tech Group Team',
-    image: '/images/logistics-autonomous-fleet.jpg',
-    newBadge: true,
-    trending: true,
-  },
+      'AutonomousFleet'
+      'RouteOptimization'
+      'PredictiveMaintenance'
+      'IoTSensors'
+    ]
+    featured: true
+    date: '2025-01-20'
+    author: 'ZionTechGroup Team'
+    image: '/images/logistics-autonomous-fleet.jpg'
+    newBadge: true
+    trending: true
+  }
 ];
 
-export const featuredCaseStudies = enterpriseCaseStudies2025.filter(
-  caseStudy => caseStudy.featured,
-);
-export const trendingCaseStudies = enterpriseCaseStudies2025.filter(
-  caseStudy => caseStudy.trending,
-);
-export const newCaseStudies = enterpriseCaseStudies2025.filter(
-  caseStudy => caseStudy.newBadge,
+exportconstfeaturedCaseStudies = enterpriseCaseStudies2025.filter(
+  caseStudy => caseStudy.featured
+); exportconsttrendingCaseStudies = enterpriseCaseStudies2025.filter(
+  caseStudy => caseStudy.trending
+); exportconstnewCaseStudies = enterpriseCaseStudies2025.filter(
+  caseStudy => caseStudy.newBadge
 );

@@ -1,38 +1,32 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function ConsentlessFeatureFlagsV4(): React.JSX.Element {
+exportdefaultfunction ConsentlessFeatureFlagsV4(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Consentless Feature Flags v4 — Private Global Rollouts</title>
-        <meta
-          name='description'
-          content='Scoped IDs, signed configs, and on‑device metrics for zero‑PII progressive delivery worldwide.'
+        <title>ConsentlessFeatureFlags v4 — PrivateGlobalRollouts</title>
+        <meta name='description'
+          content='ScopedIDssignedconfigsandon‑devicemetricsfor zero‑PIIprogressivedelivery worldwide.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-feature-flags-v4'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2025-oct-01-consentless-feature-flags-v4'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Consentless Feature Flags v4
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          ConsentlessFeatureFlags v4
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Private rollouts at &lt;100ms with scoped IDs, signed configs, and
-          on‑device metrics.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Privaterolloutsat &lt; 100mswithscoped IDssignedconfigsandon‑devicemetrics.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            Deliver global, privacy‑preserving rollouts by segment, geo, and
-            SLA. Use attestations, DP‑hardened telemetry, and budgeted actions
-            to keep velocity high without PII.
+            Deliverglobalprivacy‑preservingrolloutsby segmentgeoandSLA. UseattestationsDP‑hardenedtelemetryandbudgetedactions
+            tokeepvelocity highwithoutPII.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

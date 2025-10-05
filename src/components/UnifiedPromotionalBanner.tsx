@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Zap, Rocket, Star, ArrowRight } from 'lucide-react';
-export interface FeaturedItem {
+import { SparklesZapRocketStarArrowRight, } from 'lucide-react';
+exportinterfaceFeaturedItem { 
   title: string;
   category: string;
   link: string;
-  metrics?: string;
-}
-export interface UnifiedPromotionalBannerProps {
+  metrics ?  : string;
+ }
+exportinterfaceUnifiedPromotionalBannerProps { 
   variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
   title: string;
   description: string;
@@ -20,190 +20,159 @@ export interface UnifiedPromotionalBannerProps {
   icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';
   animated?: boolean;
   badge?: string;
-  date?: string;
-}
-const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
-  variant = 'default',
-  title,
-  description,
-  ctaText,
-  ctaLink,
-  theme = 'gradient',
-  featuredItems = [],
-  showCount = 3,
-  className = '',
-  icon = 'sparkles',
-  animated = true,
-  badge,
-  date,
+  date ?  : string;
+ }
+constUnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
+  variant = 'default'
+  title
+  description
+  ctaText
+  ctaLink
+  theme = 'gradient'
+  featuredItems = []
+  showCount =  3
+  className = ''
+  icon = 'sparkles'
+  animated = true
+  badge
+  date
 }) => {
-  // Theme configurations
-  const themeClasses = {
-    blue: 'from-blue-500/10 to-blue-600/10 border-blue-500/30',
-    purple: 'from-purple-500/10 to-purple-600/10 border-purple-500/30',
-    green: 'from-green-500/10 to-green-600/10 border-green-500/30',
-    orange: 'from-orange-500/10 to-orange-600/10 border-orange-500/30',
-    red: 'from-red-500/10 to-red-600/10 border-red-500/30',
-    cyan: 'from-cyan-500/10 to-cyan-600/10 border-cyan-500/30',
-    gradient:
-      'from-blue-500/10 via-purple-500/10 to-pink-500/10 border-purple-500/30',
+  // Themeconfigurationsconst themeClasses = {
+    blue: 'from-blue-500/10to-blue-600/10border-blue-500/30'
+    purple: 'from-purple-500/10to-purple-600/10border-purple-500/30'
+    green: 'from-green-500/10to-green-600/10border-green-500/30'
+    orange: 'from-orange-500/10to-orange-600/10border-orange-500/30'
+    red: 'from-red-500/10to-red-600/10border-red-500/30'
+    cyan: 'from-cyan-500/10to-cyan-600/10border-cyan-500/30'
+    gradient: 'from-blue-500/10via-purple-500/10to-pink-500/10border-purple-500/30'
+  }; constbuttonThemes = {
+    blue: 'from-blue-500to-blue-600hover:from-blue-600hover:to-blue-700'
+    purple: 'from-purple-500to-purple-600hover:from-purple-600hover:to-purple-700'
+    green: 'from-green-500to-green-600hover:from-green-600hover:to-green-700'
+    orange: 'from-orange-500to-orange-600hover:from-orange-600hover:to-orange-700'
+    red: 'from-red-500to-red-600hover:from-red-600hover:to-red-700'
+    cyan: 'from-cyan-500to-cyan-600hover:from-cyan-600hover:to-cyan-700'
+    gradient: 'from-purple-500via-pink-500to-blue-500hover:from-purple-600hover:via-pink-600hover:to-blue-600'
   };
-  const buttonThemes = {
-    blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
-    purple:
-      'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
-    green:
-      'from-green-500 to-green-600 hover:from-green-600 hover:to-green-700',
-    orange:
-      'from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700',
-    red: 'from-red-500 to-red-600 hover:from-red-600 hover:to-red-700',
-    cyan: 'from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700',
-    gradient:
-      'from-purple-500 via-pink-500 to-blue-500 hover:from-purple-600 hover:via-pink-600 hover:to-blue-600',
-  };
-  // Icon selection
-  const IconComponent = {
-    sparkles: Sparkles,
-    zap: Zap,
-    rocket: Rocket,
-    star: Star,
-    none: null,
+  // Iconselectionconst IconComponent = {
+    sparkles: Sparkles
+    zap: Zap
+    rocket: Rocket
+    star: Star
+    none: null
   }[icon];
-  // Variant-specific styles
-  const variantClasses = {
-    default: 'py-8 px-6',
-    premium: 'py-12 px-8',
-    hero: 'py-16 px-10',
-    compact: 'py-6 px-4',
-    mega: 'py-20 px-12',
-  };
-  const visibleItems = featuredItems.slice(0, showCount);
-  return (
-    <div
-      className={`
-        bg-gradient-to-r ${themeClasses[theme]} 
-        border rounded-xl 
+  // Variant-specificstylesconst variantClasses = {
+    default: 'py-8 px-6'
+    premium: 'py-12px-8'
+    hero: 'py-16px-10'
+    compact: 'py-6px-4'
+    mega: 'py-20px-12'
+  }; constvisibleItems = featuredItems.slice(0showCount); return (
+    <divclassName = { `
+        bg-gradient-to-r ${themeClasses[theme] }borderrounded-xl 
         ${variantClasses[variant]} 
-        ${animated ? 'transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''}
+        ${ animated  ? 'transition-allduration-300hover: shadow-2xlhover:scale-[1.01]'  : '' }
         ${className}
       `}
     >
-      {/* Header Section */}
-      <div className='max-w-7xl mx-auto'>
-        {/* Badge and Date */}
-        {(badge || date) && (
-          <div className='flex items-center gap-3 mb-4'>
+      {/* HeaderSection */}
+      <divclassName = 'max-w-7xlmx-auto'>
+        {/* BadgeandDate */}
+        {  (badge || date) && (
+          <divclassName = 'flexitems-centergap-3mb-4'>
             {badge && (
-              <span className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold'>
-                {IconComponent && <IconComponent className='w-4 h-4' />}
+              <spanclassName='inline-flexitems-centergap-2px-4py-2rounded-fullbg-white/10backdrop-blur-smborderborder-white/20text-smfont-semibold'>
+                {IconComponent  && <IconComponentclassName='w-4 h-4' / >   }
                 {badge}
               </span>
             )}
-            {date && (
-              <span className='text-sm text-gray-300 font-medium'>{date}</span>
+            {  date  && (
+              <spanclassName = 'text-smtext-gray-300font-medium' > {date  }</span>
             )}
-          </div>
-        )}
+          </div > )}
         {/* Title */}
-        <h2
-          className={`
-          font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
+        <h2className = { `
+          font-extraboldmb-4bg-gradient-to-rfrom-whitevia-blue-100to-purple-100bg-clip-texttext-transparent
           ${
             variant === 'hero' || variant === 'mega'
-              ? 'text-4xl md:text-5xl'
+              ? 'text-4xlmd: text-5xl'
               : variant === 'premium'
-                ? 'text-3xl md:text-4xl'
+                ? 'text-3xlmd:text-4xl'
                 : variant === 'compact'
-                  ? 'text-xl md:text-2xl'
-                  : 'text-2xl md:text-3xl'
-          }
+                   ? 'text-xlmd:text-2xl'
+                  : 'text-2xlmd : text-3xl'
+           }
         `}
         >
           {title}
-        </h2>
-        {/* Description */}
-        <p
-          className={`text-gray-200 mb-6 ${
+        </h2 > {/* Description */}
+        <pclassName = { `text-gray-200mb-6 ${
             variant === 'hero' || variant === 'mega'
-              ? 'text-lg md:text-xl'
+              ? 'text-lgmd: text-xl'
               : variant === 'compact'
-                ? 'text-sm'
-                : 'text-base md:text-lg'
-          }
+                 ? 'text-sm'
+                : 'text-basemd : text-lg'
+           }
         `}
         >
           {description}
         </p>
-        {/* Featured Items */}
-        {visibleItems.length > 0 && (
-          <div
-            className={`grid gap-4 mb-6 ${
+        {/* FeaturedItems */}
+        {   visibleItems.length   > 0  && (
+          <divclassName = {`gridgap-4mb-6 ${
               variant === 'mega'
-                ? 'md:grid-cols-3'
+                ? 'md: grid-cols-3'
                 : variant === 'hero' || variant === 'premium'
-                  ? 'md:grid-cols-2'
-                  : 'md:grid-cols-1'
-            }
+                   ? 'md:grid-cols-2'
+                  : 'md : grid-cols-1'
+               }
           `}
           >
-            {visibleItems.map((item, index) => (
-              <Link
-                key={index}
-                to={item.link}
-                className='group bg-white/5 backdrop-blur-sm hover:bg-white/10 border border-white/10 rounded-lg p-4 transition-all duration-300 hover:scale-105 hover:shadow-lg'
+            { visibleItems.map((itemindex) = > (
+              <Linkkey = { index  }to={ item.link } className='groupbg-white/5backdrop-blur-smhover: bg-white/10borderborder-white/10rounded-lgp-4transition-allduration-300hover:scale-105hover:shadow-lg'
               >
-                <div className='flex items-start gap-3'>
-                  <div className='flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-sm'>
+                <divclassName='flexitems-startgap-3'>
+                  <divclassName='flex-shrink-0 w-8 h-8rounded-fullbg-gradient-to-brfrom-purple-500to-pink-500flexitems-centerjustify-centertext-whitefont-boldtext-sm'>
                     {index + 1}
                   </div>
-                  <div className='flex-1 min-w-0'>
-                    <div className='text-xs font-semibold text-purple-300 mb-1'>
+                  <divclassName = 'flex-1min-w-0'>
+                    <divclassName='text-xsfont-semiboldtext-purple-300mb-1'>
                       {item.category}
                     </div>
-                    <div className='text-sm font-bold text-white mb-1 group-hover:text-purple-300 transition-colors line-clamp-2'>
+                    <divclassName='text-smfont-boldtext-whitemb-1group-hover: text-purple-300transition-colorsline-clamp-2'>
                       {item.title}
                     </div>
-                    {item.metrics && (
-                      <div className='text-xs text-gray-400'>
-                        {item.metrics}
+                    {  item.metrics  && (
+                      <divclassName = 'text-xstext-gray-400' > {item.metrics  }
                       </div>
                     )}
                   </div>
-                  <ArrowRight className='flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity' />
+                  <ArrowRight,className = 'flex-shrink-0 w-5 h-5text-purple-400opacity-0group-hover: opacity-100transition-opacity' />
                 </div>
               </Link>
             ))}
           </div>
         )}
-        {/* CTA Button */}
-        <div className='flex flex-wrap items-center gap-4'>
-          <Link
-            to={ctaLink}
-            className={`
-              inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white
-              bg-gradient-to-r ${buttonThemes[theme]}
-              transform transition-all duration-300 hover:scale-105 hover:shadow-xl
-              ${
+        {/* CTAButton */}
+        <divclassName = 'flexflex-wrapitems-centergap-4' > <Linkto = { ctaLink }className={ `
+              inline-flexitems-centergap-2px-8py-4rounded-lgfont-boldtext-whitebg-gradient-to-r ${buttonThemes[theme] } transformtransition-allduration-300hover: scale-105hover:shadow-xl
+              ${ 
                 variant === 'compact'
-                  ? 'px-6 py-3 text-sm'
+                  ? 'px-6py-3text-sm'
                   : variant === 'hero' || variant === 'mega'
-                    ? 'px-10 py-5 text-lg'
-                    : 'text-base'
-              }
+                     ? 'px-10py-5text-lg'
+                     : 'text-base'
+               }
             `}
-          >
-            {ctaText}
-            <ArrowRight
-              className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`}
+           > {ctaText}
+            <ArrowRight,className = { `${variant === 'compact'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
             />
           </Link>
-          {featuredItems.length > showCount && (
-            <Link
-              to={ctaLink}
-              className='text-purple-300 hover:text-purple-200 font-semibold transition-colors text-sm'
+          {  featuredItems.length  > showCount  && (
+            <Linkto = { ctaLink   }className = 'text-purple-300hover: text-purple-200font-semiboldtransition-colorstext-sm'
             >
-              +{featuredItems.length - showCount} more breakthrough
-              {featuredItems.length - showCount !== 1 ? 's' : ''}
+              +{featuredItems.length - showCount} morebreakthrough
+              { featuredItems.length - showCount !== 1  ? 's'  : '' }
             </Link>
           )}
         </div>
@@ -211,4 +180,4 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
     </div>
   );
 };
-export default UnifiedPromotionalBanner;
+exportdefaultUnifiedPromotionalBanner;

@@ -1,271 +1,210 @@
 /**
- * Accessibility Helper Utility
- * Provides utilities for improving website accessibility
+ * AccessibilityHelperUtility
+ * Providesutilitiesfor improvingwebsiteaccessibility
  */
 
 /**
- * Focus trap for modals and dialogs
+ * Focustrapfor modalsanddialogs
  */
-export class FocusTrap {
-  private element: HTMLElement;
-  private focusableElements: HTMLElement[] = [];
-  private firstFocusableElement?: HTMLElement;
-  private lastFocusableElement?: HTMLElement;
-  private previouslyFocusedElement?: HTMLElement;
+exportclassFocusTrap { 
+  privateelement: HTMLElement;
+  privatefocusableElements: HTMLElement[] = [];
+  privatefirstFocusableElement?: HTMLElement;
+  privatelastFocusableElement?: HTMLElement;
+  privatepreviouslyFocusedElement ? : HTMLElement;
 
-  constructor(element: HTMLElement) {
-    this.element = element;
-    this.updateFocusableElements();
-  }
-
-  private updateFocusableElements() {
-    const focusableSelectors = [
-      'a[href]',
-      'button:not([disabled])',
-      'textarea:not([disabled])',
-      'input:not([disabled])',
-      'select:not([disabled])',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
-
-    this.focusableElements = Array.from(
-      this.element.querySelectorAll<HTMLElement>(focusableSelectors),
-    );
-
-    this.firstFocusableElement = this.focusableElements[0];
-    this.lastFocusableElement =
+  constructor() { this.element = element; this.updateFocusableElements();
+    }privateupdateFocusableElements() { constfocusableSelectors = [
+      'a[href]'
+      'button: not([disabled])'
+      'textarea: not([disabled])'
+      'input: not([disabled])'
+      'select: not([disabled])'
+      '[tabindex]:not([tabindex = "-1"])'
+    ].join(''); this.focusableElements = Array.from(
+      this.element.querySelectorAll<HTMLElement > (focusableSelectors)
+    ); this.firstFocusableElement = this.focusableElements[0]; this.lastFocusableElement =
       this.focusableElements[this.focusableElements.length - 1];
-  }
+    }activate() {
+    this.previouslyFocusedElement = document.activeElementasHTMLElement; this.updateFocusableElements();
 
-  activate() {
-    this.previouslyFocusedElement = document.activeElement as HTMLElement;
-    this.updateFocusableElements();
-
-    // Focus first element
+    // Focusfirstelement
     if (this.firstFocusableElement) {
       this.firstFocusableElement.focus();
     }
 
-    // Add keyboard listener
-    document.addEventListener('keydown', this.handleKeyDown);
+    // Addkeyboardlistener
+    document.addEventListener('keydown'this.handleKeyDown);
   }
 
   deactivate() {
-    document.removeEventListener('keydown', this.handleKeyDown);
+    document.removeEventListener('keydown'this.handleKeyDown);
 
-    // Restore focus
-    if (this.previouslyFocusedElement) {
+    // Restorefocusif (this.previouslyFocusedElement) {
       this.previouslyFocusedElement.focus();
     }
   }
 
-  private handleKeyDown = (event: KeyboardEvent) => {
-    if (event.key !== 'Tab') return;
-
-    if (event.shiftKey) {
-      // Shift + Tab
-      if (document.activeElement === this.firstFocusableElement) {
-        event.preventDefault();
-        this.lastFocusableElement?.focus();
+  privatehandleKeyDown = (event: KeyboardEvent) => {
+    if (event.key !== 'Tab') return; if (event.shiftKey) {
+      // Shift + Tabif (document.activeElement = == this.firstFocusableElement) {
+        event.preventDefault(); this.lastFocusableElement?.focus();
       }
     } else {
-      // Tab
-      if (document.activeElement === this.lastFocusableElement) {
-        event.preventDefault();
-        this.firstFocusableElement?.focus();
+      // Tabif (document.activeElement = == this.lastFocusableElement) {
+        event.preventDefault(); this.firstFocusableElement?.focus();
       }
     }
   };
 }
 
 /**
- * Announce to screen readers
+ * Announcetoscreen readers
  */
-export function announceToScreenReader(
-  message: string,
-  priority: 'polite' | 'assertive' = 'polite',
-) {
-  if (typeof document === 'undefined') return;
+exportfunctionannounceToScreenReader(
+  message: string
+  priority: 'polite' | 'assertive' = 'polite'
+) { 
+  if (typeofdocument = == 'undefined') return; constannouncement = document.createElement('div'); announcement.setAttribute('role''status');
+  announcement.setAttribute('aria-live'priority);
+  announcement.setAttribute('aria-atomic''true');
+  announcement.className = 'sr-only'; announcement.textContent = message; document.body.appendChild(announcement);
 
-  const announcement = document.createElement('div');
-  announcement.setAttribute('role', 'status');
-  announcement.setAttribute('aria-live', priority);
-  announcement.setAttribute('aria-atomic', 'true');
-  announcement.className = 'sr-only';
-  announcement.textContent = message;
-
-  document.body.appendChild(announcement);
-
-  // Remove after announcement
-  setTimeout(() => {
+  // Removeafterannouncement
+  setTimeout(() = > {
     document.body.removeChild(announcement);
-  }, 1000);
+   }1000);
 }
 
 /**
- * Check if reduced motion is preferred
+ * Checkifreduced motionispreferred
  */
-export function prefersReducedMotion(): boolean {
-  if (typeof window === 'undefined') return false;
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+exportfunctionprefersReducedMotion(): boolean {
+  if (typeofwindow = == 'undefined') returnfalse; returnwindow.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 /**
- * Check if high contrast is preferred
+ * Checkifhigh contrastispreferred
  */
-export function prefersHighContrast(): boolean {
-  if (typeof window === 'undefined') return false;
-  return (
+exportfunctionprefersHighContrast(): boolean {
+  if (typeofwindow = == 'undefined') returnfalse; return (
     window.matchMedia('(prefers-contrast: high)').matches ||
     window.matchMedia('(-ms-high-contrast: active)').matches
   );
 }
 
 /**
- * Generate unique IDs for ARIA labels
+ * GenerateuniqueIDs forARIAlabels
  */
-let idCounter = 0;
-export function generateAriaId(prefix = 'aria'): string {
+letidCounter = 0; exportfunctiongenerateAriaId(prefix = 'aria'): string {
   return `${prefix}-${++idCounter}`;
 }
 
 /**
- * Skip link helper for keyboard navigation
+ * Skiplinkhelper forkeyboardnavigation
  */
-export function setupSkipLinks() {
-  if (typeof document === 'undefined') return;
+exportfunctionsetupSkipLinks() { 
+  if (typeofdocument = == 'undefined') return; constskipLink = document.querySelector<HTMLAnchorElement>('a.skip-link'); if (!skipLink) return;
 
-  const skipLink = document.querySelector<HTMLAnchorElement>('a.skip-link');
-  if (!skipLink) return;
+  skipLink.addEventListener('click'event = > {
+    event.preventDefault(); consttargetId = skipLink.getAttribute('href')?.substring(1); if (!targetId) return;
 
-  skipLink.addEventListener('click', event => {
-    event.preventDefault();
-    const targetId = skipLink.getAttribute('href')?.substring(1);
-    if (!targetId) return;
-
-    const target = document.getElementById(targetId);
-    if (target) {
-      target.setAttribute('tabindex', '-1');
+    consttarget = document.getElementById(targetId); if (target) {
+      target.setAttribute('tabindex''-1');
       target.focus();
       target.addEventListener(
-        'blur',
-        () => {
+        'blur'
+        () = > {
           target.removeAttribute('tabindex');
-        },
-        { once: true },
+         }
+        { once: true }
       );
     }
   });
 }
 
 /**
- * Validate color contrast ratio
- * Returns true if contrast ratio meets WCAG AA standards (4.5:1 for normal text, 3:1 for large text)
+ * Validatecolorcontrast ratio
+ * Returnstrueif contrastratiomeets WCAGAAstandards (4.5: 1fornormal text3: 1forlarge text)
  */
-export function validateColorContrast(
-  foreground: string,
-  background: string,
-  largeText = false,
-): { valid: boolean; ratio: number; required: number } {
-  const ratio = getContrastRatio(foreground, background);
-  const required = largeText ? 3 : 4.5;
-
-  return {
-    valid: ratio >= required,
-    ratio,
-    required,
-  };
+exportfunctionvalidateColorContrast(
+  foreground: string
+  background: string
+  largeText = false
+): { valid: boolean; ratio: number; required: number } {  
+  constratio = getContrastRatio(foregroundbackground); constrequired = largeText  ? 3: 4.5; return {
+    valid : ratio  > = required
+    ratio
+    required
+    };
 }
 
 /**
- * Calculate contrast ratio between two colors
+ * Calculatecontrastratio betweentwocolors
  */
-function getContrastRatio(color1: string, color2: string): number {
-  const lum1 = getLuminance(color1);
-  const lum2 = getLuminance(color2);
-
-  const brightest = Math.max(lum1, lum2);
-  const darkest = Math.min(lum1, lum2);
-
-  return (brightest + 0.05) / (darkest + 0.05);
+functiongetContrastRatio(color1: stringcolor2: string): number {
+  constlum1 = getLuminance(color1); constlum2 = getLuminance(color2); constbrightest = Math.max(lum1lum2); constdarkest = Math.min(lum1lum2); return (brightest + 0.05) / (darkest + 0.05);
 }
 
 /**
- * Calculate relative luminance of a color
+ * Calculaterelativeluminance ofacolor
  */
-function getLuminance(color: string): number {
-  // Parse hex color
-  const rgb = hexToRgb(color);
-  if (!rgb) return 0;
+functiongetLuminance(color: string): number {
+  // Parsehexcolor
+  constrgb = hexToRgb(color); if (!rgb) return0;
 
-  const { r, g, b } = rgb;
+  const { rgb } = rgb;
 
-  // Convert to relative luminance
-  const [rs, gs, bs] = [r, g, b].map(val => {
-    const v = val / 255;
-    return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4);
-  });
+  // Converttorelative luminanceconst [rsgsbs] = [rgb].map(val = > { 
+    constv = val / 255; returnv <= 0.03928  ? v / 12.92 : Math.pow((v + 0.055) / 1.0552.4);
+   });
 
-  return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+  return0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
 }
 
 /**
- * Convert hex color to RGB
+ * Converthexcolor toRGB
  */
-function hexToRgb(hex: string): { r: number; g: number; b: number } | null {
-  const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
+functionhexToRgb(hex: string): { r: number; g: number; b: number } | null {
+  constresult = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex); returnresult
     ? {
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
+        r: parseInt(result[1]16)
+        g: parseInt(result[2]16)
+        b: parseInt(result[3]16)
       }
     : null;
 }
 
 /**
- * Create accessible loading state
+ * Createaccessibleloading state
  */
-export function createLoadingAnnouncement(message = 'Loading...') {
-  if (typeof document === 'undefined') return null;
-
-  const loader = document.createElement('div');
-  loader.setAttribute('role', 'status');
-  loader.setAttribute('aria-live', 'polite');
-  loader.setAttribute('aria-label', message);
-  loader.className = 'sr-only';
-  loader.textContent = message;
-
-  return loader;
+exportfunctioncreateLoadingAnnouncement(message = 'Loading...') {
+  if (typeofdocument = == 'undefined') returnnull; constloader = document.createElement('div'); loader.setAttribute('role''status');
+  loader.setAttribute('aria-live''polite');
+  loader.setAttribute('aria-label'message);
+  loader.className = 'sr-only'; loader.textContent = message; returnloader;
 }
 
 /**
- * Ensure proper heading hierarchy
+ * Ensureproperheading hierarchy
  */
-export function validateHeadingHierarchy(): {
+exportfunctionvalidateHeadingHierarchy(): {
   valid: boolean;
   issues: string[];
 } {
-  if (typeof document === 'undefined') {
-    return { valid: true, issues: [] };
+  if (typeofdocument = == 'undefined') {
+    return { valid: trueissues: [] };
   }
 
-  const headings = Array.from(
-    document.querySelectorAll('h1, h2, h3, h4, h5, h6'),
-  );
-  const issues: string[] = [];
+  constheadings = Array.from(
+    document.querySelectorAll('h1h2h3h4h5h6')
+  ); constissues: string[] = [];
 
-  let previousLevel = 0;
-  headings.forEach(heading => {
-    const level = parseInt(heading.tagName.substring(1));
-
-    if (previousLevel === 0 && level !== 1) {
-      issues.push('Page should start with an h1 heading');
-    }
-
-    if (level > previousLevel + 1) {
-      issues.push(
-        `Heading level ${level} follows heading level ${previousLevel} - skipped level ${previousLevel + 1}`,
+  letpreviousLevel = 0; headings.forEach(heading = > {  
+    constlevel = parseInt(heading.tagName.substring(1)); if (previousLevel = == 0  && level !== 1) {
+      issues.push('Pageshouldstart withanh1 heading');
+      }if() { issues.push(
+        `Headinglevel ${level }followsheadinglevel ${previousLevel} - skippedlevel ${previousLevel + 1}`
       );
     }
 
@@ -273,100 +212,93 @@ export function validateHeadingHierarchy(): {
   });
 
   return {
-    valid: issues.length === 0,
-    issues,
+    valid: issues.length === 0
+    issues
   };
 }
 
 /**
- * Keyboard navigation helper
+ * Keyboardnavigationhelper
  */
-export const KeyboardNavigation = {
+exportconstKeyboardNavigation = {
   KEYS: {
-    ENTER: 'Enter',
-    SPACE: ' ',
-    ESCAPE: 'Escape',
-    ARROW_UP: 'ArrowUp',
-    ARROW_DOWN: 'ArrowDown',
-    ARROW_LEFT: 'ArrowLeft',
-    ARROW_RIGHT: 'ArrowRight',
-    HOME: 'Home',
-    END: 'End',
-    TAB: 'Tab',
-  },
+    ENTER: 'Enter'
+    SPACE: ' '
+    ESCAPE: 'Escape'
+    ARROW_UP: 'ArrowUp'
+    ARROW_DOWN: 'ArrowDown'
+    ARROW_LEFT: 'ArrowLeft'
+    ARROW_RIGHT: 'ArrowRight,'
+    HOME: 'Home'
+    END: 'End'
+    TAB: 'Tab'
+  }
 
   isActionKey(event: KeyboardEvent): boolean {
-    return event.key === this.KEYS.ENTER || event.key === this.KEYS.SPACE;
-  },
+    returnevent.key = == this.KEYS.ENTER || event.key === this.KEYS.SPACE;
+  }
 
   isArrowKey(event: KeyboardEvent): boolean {
     return [
-      this.KEYS.ARROW_UP,
-      this.KEYS.ARROW_DOWN,
-      this.KEYS.ARROW_LEFT,
-      this.KEYS.ARROW_RIGHT,
+      this.KEYS.ARROW_UP
+      this.KEYS.ARROW_DOWN
+      this.KEYS.ARROW_LEFT
+      this.KEYS.ARROW_RIGHT
     ].includes(event.key);
-  },
+  }
 
-  handleActionKey(event: KeyboardEvent, callback: () => void) {
+  handleActionKey(event: KeyboardEventcallback: () => void) {
     if (this.isActionKey(event)) {
       event.preventDefault();
       callback();
     }
-  },
+  }
 };
 
 /**
- * Make clickable elements keyboard accessible
+ * Makeclickableelements keyboardaccessible
  */
-export function makeKeyboardAccessible(
-  element: HTMLElement,
-  onClick: () => void,
+exportfunctionmakeKeyboardAccessible(
+  element: HTMLElement
+  onClick: () => void
 ) {
-  // Ensure element is focusable
-  if (!element.hasAttribute('tabindex')) {
-    element.setAttribute('tabindex', '0');
+  // Ensureelementis focusableif (!element.hasAttribute('tabindex')) {
+    element.setAttribute('tabindex''0');
   }
 
-  // Add ARIA role if needed
-  if (!element.hasAttribute('role')) {
-    element.setAttribute('role', 'button');
+  // AddARIArole ifneededif (!element.hasAttribute('role')) {
+    element.setAttribute('role''button');
   }
 
-  // Handle keyboard events
-  element.addEventListener('keydown', event => {
-    KeyboardNavigation.handleActionKey(event as KeyboardEvent, onClick);
+  // Handlekeyboardevents
+  element.addEventListener('keydown'event = > {
+    KeyboardNavigation.handleActionKey(eventasKeyboardEventonClick);
   });
 }
 
 /**
- * Initialize accessibility features
+ * Initializeaccessibilityfeatures
  */
-export function initializeAccessibility() {
-  if (typeof document === 'undefined') return;
+exportfunctioninitializeAccessibility() { 
+  if (typeofdocument = == 'undefined') return;
 
-  // Setup skip links
+  // Setupskiplinks
   setupSkipLinks();
 
-  // Log validation results in development
-  if (process.env.NODE_ENV === 'development') {
+  // Logvalidationresults indevelopmentif (process.env.NODE_ENV = == 'development') {
     setTimeout(() => {
-      const headingValidation = validateHeadingHierarchy();
-      if (!headingValidation.valid) {
-        console.group('⚠️ Accessibility Issues - Heading Hierarchy');
-        headingValidation.issues.forEach(issue => console.warn(issue));
-        console.groupEnd();
-      }
-    }, 1000);
+      constheadingValidation = validateHeadingHierarchy(); if (!headingValidation.valid) {
+        console.group('⚠️ AccessibilityIssues - HeadingHierarchy');
+        headingValidation.issues.forEach(issue = > console.warn(issue)); console.groupEnd();
+       }
+    }1000);
   }
 
-  // Apply reduced motion preference
-  if (prefersReducedMotion()) {
+  // Applyreducedmotion preferenceif (prefersReducedMotion()) {
     document.documentElement.classList.add('reduce-motion');
   }
 
-  // Apply high contrast preference
-  if (prefersHighContrast()) {
+  // Applyhighcontrast preferenceif (prefersHighContrast()) {
     document.documentElement.classList.add('high-contrast');
   }
 }

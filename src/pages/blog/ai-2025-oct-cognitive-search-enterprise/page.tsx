@@ -1,321 +1,283 @@
-import { ArrowLeft, Brain, Search, TrendingUp, Zap } from 'lucide-react';
+import { ArrowLeftBrain,SearchTrendingUpZap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
-export default function CognitiveSearchEnterprise2025() {
+exportdefaultfunction CognitiveSearchEnterprise2025() { 
   return (
     <>
       <Helmet>
         <title>
-          Cognitive Enterprise Search 2025 — 97% Answer Accuracy, 12x Faster
-          Discovery, $124M+ Productivity Gains | Zion Tech Group
+          CognitiveEnterpriseSearch 2025 — 97% AnswerAccuracy12xFasterDiscovery$124M+ ProductivityGains | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Transform enterprise knowledge discovery with AI-powered cognitive search. Achieve 97% answer accuracy, 12x faster information retrieval, and unlock $124M+ in productivity gains across your organization.'
+        <metaname = 'description'
+          content='Transformenterpriseknowledge discoverywithAI-poweredcognitivesearch. Achieve97% answeraccuracy12xfasterinformation retrievalandunlock $124M+ inproductivitygains acrossyourorganization.'
         />
-        <meta
-          name='keywords'
-          content='cognitive search, enterprise search, AI search, semantic search, knowledge management, information retrieval, enterprise AI, vector search, RAG systems'
+        <metaname = 'keywords'
+          content='cognitivesearchenterprisesearchAIsearchsemanticsearchknowledgemanagementinformationretrievalenterpriseAIvectorsearchRAGsystems'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-cognitive-search-enterprise'
         />
       </Helmet>
 
-      <article className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white'>
-        <div className='container mx-auto px-4 py-12 max-w-4xl'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors'
+      <articleclassName='min-h-screenbg-gradient-to-brfrom-slate-900via-indigo-900to-slate-900text-white'>
+        <divclassName='containermx-autopx-4py-12max-w-4xl'>
+          <Linkto='/blog'
+            className='inline-flexitems-centertext-indigo-400hover:text-indigo-300mb-8transition-colors'
           >
-            <ArrowLeft className='mr-2 h-4 w-4' />
-            Back to Blog
+            <ArrowLeftclassName='mr-2 h-4 w-4' />
+            BacktoBlog
           </Link>
 
-          <header className='mb-12'>
-            <div className='flex items-center gap-4 mb-6'>
-              <span className='px-4 py-2 bg-indigo-500/20 text-indigo-300 rounded-full text-sm font-semibold border border-indigo-500/30'>
-                Cognitive AI
+          <headerclassName='mb-12'>
+            <divclassName='flexitems-centergap-4mb-6'>
+              <spanclassName='px-4py-2bg-indigo-500/20text-indigo-300rounded-fulltext-smfont-semiboldborderborder-indigo-500/30'>
+                CognitiveAI
               </span>
-              <span className='text-gray-400'>October 1, 2025</span>
+              <spanclassName='text-gray-400'>October 12025</span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-tight'>
-              Cognitive Enterprise Search: Unlocking Institutional Knowledge at
-              Scale
+            <h1className = 'text-5xlmd: text-6xlfont-boldmb-6bg-gradient-to-rfrom-indigo-400via-purple-400to-pink-400text-transparentbg-clip-textleading-tight'>
+              CognitiveEnterpriseSearch: UnlockingInstitutionalKnowledge atScale
             </h1>
 
-            <p className='text-xl text-gray-300 leading-relaxed'>
-              Deploy AI-powered cognitive search that understands context,
-              intent, and relationships. Achieve 97% answer accuracy, accelerate
-              discovery by 12x, and unlock $124M+ in productivity gains.
+            <pclassName='text-xltext-gray-300leading-relaxed'>
+              DeployAI-poweredcognitivesearch thatunderstandscontext
+              intentandrelationships. Achieve97% answeraccuracyacceleratediscoveryby 12xandunlock $124M+ inproductivitygains.
             </p>
           </header>
 
-          <div className='prose prose-invert prose-lg max-w-none'>
-            <div className='bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 mb-12'>
-              <h2 className='text-3xl font-bold mb-6 flex items-center gap-3'>
-                <Brain className='h-8 w-8 text-indigo-400' />
-                Transformative Results
+          <divclassName = 'proseprose-invertprose-lgmax-w-none'>
+            <divclassName='bg-gradient-to-rfrom-indigo-500/10to-purple-500/10borderborder-indigo-500/20rounded-xlp-8mb-12'>
+              <h2className='text-3xlfont-boldmb-6flexitems-centergap-3'>
+                <Brain,className='h-8 w-8text-indigo-400' />
+                TransformativeResults
               </h2>
-              <ul className='space-y-4 text-lg'>
-                <li className='flex items-start gap-3'>
-                  <Search className='h-6 w-6 text-purple-400 mt-1 flex-shrink-0' />
+              <ulclassName='space-y-4text-lg'>
+                <liclassName='flexitems-startgap-3'>
+                  <SearchclassName='h-6 w-6text-purple-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>97% Answer Accuracy:</strong> AI understands context
-                    and delivers precise answers, not just documents
+                    <strong>97% AnswerAccuracy: </strong> AIunderstandscontext
+                    anddeliversprecise answersnotjustdocuments
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <Zap className='h-6 w-6 text-yellow-400 mt-1 flex-shrink-0' />
+                <liclassName = 'flexitems-startgap-3'>
+                  <ZapclassName='h-6 w-6text-yellow-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>12x Faster Discovery:</strong> Find critical
-                    information in seconds instead of hours
+                    <strong>12xFasterDiscovery: </strong> Findcriticalinformation insecondsinstead ofhours
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <TrendingUp className='h-6 w-6 text-green-400 mt-1 flex-shrink-0' />
+                <liclassName='flexitems-startgap-3'>
+                  <TrendingUpclassName='h-6 w-6text-green-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>$124M+ Productivity:</strong> Employees save 8.5
-                    hours weekly finding information
+                    <strong>$124M+ Productivity:</strong> Employeessave8.5hoursweekly findinginformation
                   </span>
                 </li>
               </ul>
             </div>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-indigo-300'>
-                The Enterprise Knowledge Problem
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-indigo-300'>
+                TheEnterpriseKnowledge Problem
               </h2>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Enterprise employees spend 19.8% of their time—nearly one full
-                day per week—searching for information. Traditional
-                keyword-based search fails to understand context, intent, or
-                relationships between documents. Critical knowledge remains
-                siloed across 47 different systems on average, inaccessible when
-                decisions matter most.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Enterpriseemployeesspend 19.8% oftheirtime—nearlyonefull
+                dayperweek—searchingforinformation. Traditionalkeyword-basedsearchfails tounderstandcontextintentorrelationshipsbetween documents. Criticalknowledgeremains
+                siloedacross47 differentsystemson averageinaccessiblewhendecisions mattermost.
               </p>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Cognitive search powered by large language models and advanced
-                RAG (Retrieval-Augmented Generation) architectures transforms
-                how organizations access institutional knowledge. These systems
-                understand natural language, reason about relationships, and
-                provide precise answers with full source attribution.
+              <pclassName = 'text-gray-300mb-4leading-relaxed'>
+                Cognitivesearchpowered bylargelanguage modelsandadvanced
+                RAG (Retrieval-AugmentedGeneration) architecturestransformshow organizationsaccessinstitutional knowledge. Thesesystemsunderstand naturallanguagereasonaboutrelationshipsandprovideprecise answerswithfull sourceattribution.
               </p>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-indigo-300'>
-                Cognitive Search Architecture
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-indigo-300'>
+                CognitiveSearchArchitecture
               </h2>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-indigo-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-purple-300'>
-                  1. Semantic Understanding Layer
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-indigo-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-purple-300'>
+                  1. SemanticUnderstandingLayer
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Advanced embedding models transform documents and queries into
-                  high-dimensional vector representations that capture semantic
-                  meaning. This enables understanding of synonyms, related
-                  concepts, and contextual nuances that keyword matching misses.
+                <pclassName='text-gray-300mb-4'>
+                  Advancedembeddingmodels transformdocumentsand queriesintohigh-dimensionalvectorrepresentations thatcapturesemantic
+                  meaning. Thisenablesunderstanding ofsynonymsrelatedconceptsandcontextualnuances thatkeywordmatching misses.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Domain-specific embeddings trained on your enterprise corpus
+                    Domain-specificembeddingstrained onyourenterprise corpus
                   </li>
                   <li>
-                    Multi-lingual support across 95+ languages with
-                    cross-lingual retrieval
+                    Multi-lingualsupportacross 95+ languageswithcross-lingualretrieval
                   </li>
                   <li>
-                    Query expansion automatically includes related terms and
-                    concepts
+                    Queryexpansionautomatically includesrelatedterms andconcepts
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-indigo-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-purple-300'>
-                  2. Hybrid Retrieval System
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-indigo-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-purple-300'>
+                  2. HybridRetrievalSystem
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Combines vector similarity search with traditional keyword
-                  matching and graph-based knowledge traversal. Multi-stage
-                  ranking ensures the most relevant information surfaces first,
-                  with explainable relevance scoring.
+                <pclassName='text-gray-300mb-4'>
+                  Combinesvectorsimilarity searchwithtraditional keywordmatchingand graph-basedknowledgetraversal. Multi-stagerankingensures themostrelevant informationsurfacesfirst
+                  withexplainablerelevance scoring.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Dense + sparse retrieval achieves 94% recall on enterprise
+                    Dense + sparseretrievalachieves 94% recallonenterprise
                     benchmarks
                   </li>
                   <li>
-                    Knowledge graph enrichment surfaces implicit relationships
+                    Knowledgegraphenrichment surfacesimplicitrelationships
                   </li>
                   <li>
-                    Temporal relevance boosts recent and frequently accessed
-                    content
-                  </li>
-                </ul>
-              </div>
-
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-indigo-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-purple-300'>
-                  3. AI-Powered Answer Generation
-                </h3>
-                <p className='text-gray-300 mb-4'>
-                  LLMs synthesize information from multiple sources to generate
-                  comprehensive answers with citations. The system explains its
-                  reasoning and confidence level, enabling users to trust and
-                  validate results.
-                </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
-                  <li>
-                    Abstractive summarization condenses multi-document insights
-                  </li>
-                  <li>
-                    Fact verification cross-references claims against source
-                    material
-                  </li>
-                  <li>
-                    Follow-up question handling maintains conversational context
+                    Temporalrelevanceboosts recentandfrequently accessedcontent
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-indigo-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-purple-300'>
-                  4. Continuous Learning Engine
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-indigo-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-purple-300'>
+                  3. AI-PoweredAnswerGeneration
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Machine learning models improve from user interactions,
-                  learning which results are most valuable and adapting to
-                  evolving information needs. Feedback loops ensure search
-                  quality continuously improves.
+                <pclassName='text-gray-300mb-4'>
+                  LLMssynthesizeinformation frommultiplesources togeneratecomprehensive answerswithcitations. Thesystemexplains itsreasoningand confidencelevelenablingusersto trustandvalidate results.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
-                  <li>Click-through analysis optimizes ranking models</li>
-                  <li>Query understanding learns from successful searches</li>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Personalization adapts results to role and expertise level
+                    Abstractivesummarizationcondenses multi-documentinsights
+                  </li>
+                  <li>
+                    Factverificationcross-referencesclaimsagainst sourcematerial
+                  </li>
+                  <li>
+                    Follow-upquestionhandling maintainsconversationalcontext
+                  </li>
+                </ul>
+              </div>
+
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-indigo-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-purple-300'>
+                  4. ContinuousLearningEngine
+                </h3>
+                <pclassName='text-gray-300mb-4'>
+                  Machinelearningmodels improvefromuser interactions
+                  learningwhichresults aremostvaluable andadaptingto
+                  evolvinginformationneeds. Feedbackloopsensure searchqualitycontinuously improves.
+                </p>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
+                  <li>Click-throughanalysisoptimizes rankingmodels</li>
+                  <li>Queryunderstandinglearns fromsuccessfulsearches</li>
+                  <li>
+                    Personalizationadaptsresults toroleand expertiselevel
                   </li>
                 </ul>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-indigo-300'>
-                Enterprise Deployment Success
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-indigo-300'>
+                EnterpriseDeploymentSuccess
               </h2>
-              <div className='grid md:grid-cols-2 gap-6 mb-8'>
-                <div className='bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30'>
-                  <h3 className='text-2xl font-bold mb-4 text-indigo-300'>
-                    Professional Services Firm
+              <divclassName='gridmd: grid-cols-2gap-6mb-8'>
+                <divclassName='bg-gradient-to-brfrom-indigo-500/20to-purple-500/20rounded-xlp-6borderborder-indigo-500/30'>
+                  <h3className='text-2xlfont-boldmb-4text-indigo-300'>
+                    ProfessionalServicesFirm
                   </h3>
-                  <ul className='space-y-3 text-gray-300'>
-                    <li>• 89% reduction in time finding information</li>
-                    <li>• $156M productivity gains annually</li>
-                    <li>• 96% employee adoption within 3 months</li>
-                    <li>• 14x ROI in first year</li>
+                  <ulclassName='space-y-3text-gray-300'>
+                    <li>• 89% reductionintime findinginformation</li>
+                    <li>• $156Mproductivitygains annually</li>
+                    <li>• 96% employeeadoptionwithin 3months</li>
+                    <li>• 14xROIin firstyear</li>
                   </ul>
                 </div>
-                <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30'>
-                  <h3 className='text-2xl font-bold mb-4 text-purple-300'>
-                    Healthcare System
+                <divclassName='bg-gradient-to-brfrom-purple-500/20to-pink-500/20rounded-xlp-6borderborder-purple-500/30'>
+                  <h3className='text-2xlfont-boldmb-4text-purple-300'>
+                    HealthcareSystem
                   </h3>
-                  <ul className='space-y-3 text-gray-300'>
-                    <li>• 94% accuracy in clinical knowledge retrieval</li>
-                    <li>• 82% faster care protocol discovery</li>
-                    <li>• $67M saved from improved efficiency</li>
-                    <li>• HIPAA-compliant with full audit trails</li>
+                  <ulclassName='space-y-3text-gray-300'>
+                    <li>• 94% accuracyinclinical knowledgeretrieval</li>
+                    <li>• 82% fastercareprotocol discovery</li>
+                    <li>• $67Msavedfrom improvedefficiency</li>
+                    <li>• HIPAA-compliantwithfull audittrails</li>
                   </ul>
                 </div>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-indigo-300'>
-                Advanced Capabilities
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-indigo-300'>
+                AdvancedCapabilities
               </h2>
-              <div className='space-y-6'>
-                <div className='bg-slate-800/50 rounded-xl p-6 border-l-4 border-indigo-500'>
-                  <h3 className='text-xl font-bold mb-3 text-indigo-300'>
-                    Multimodal Search
+              <divclassName='space-y-6'>
+                <divclassName='bg-slate-800/50rounded-xlp-6border-l-4border-indigo-500'>
+                  <h3className='text-xlfont-boldmb-3text-indigo-300'>
+                    MultimodalSearch
                   </h3>
-                  <p className='text-gray-300'>
-                    Search across text, images, videos, and audio with unified
-                    interfaces. Find charts in presentations, quotes in recorded
-                    meetings, or technical diagrams in documentation with
-                    natural language queries.
+                  <pclassName='text-gray-300'>
+                    Searchacrosstextimagesvideosandaudiowith unifiedinterfaces. Findchartsin presentationsquotesinrecorded
+                    meetingsortechnicaldiagrams indocumentationwith
+                    naturallanguagequeries.
                   </p>
                 </div>
-                <div className='bg-slate-800/50 rounded-xl p-6 border-l-4 border-purple-500'>
-                  <h3 className='text-xl font-bold mb-3 text-purple-300'>
-                    Proactive Knowledge Delivery
+                <divclassName = 'bg-slate-800/50rounded-xlp-6border-l-4border-purple-500'>
+                  <h3className='text-xlfont-boldmb-3text-purple-300'>
+                    ProactiveKnowledgeDelivery
                   </h3>
-                  <p className='text-gray-300'>
-                    AI agents surface relevant information before users even
-                    search. Context-aware recommendations deliver insights based
-                    on current tasks, upcoming meetings, or project activities.
+                  <pclassName='text-gray-300'>
+                    AIagentssurface relevantinformationbefore usersevensearch. Context-awarerecommendationsdeliver insightsbasedon currenttasksupcomingmeetingsorprojectactivities.
                   </p>
                 </div>
-                <div className='bg-slate-800/50 rounded-xl p-6 border-l-4 border-pink-500'>
-                  <h3 className='text-xl font-bold mb-3 text-pink-300'>
-                    Enterprise Security & Compliance
+                <divclassName = 'bg-slate-800/50rounded-xlp-6border-l-4border-pink-500'>
+                  <h3className='text-xlfont-boldmb-3text-pink-300'>
+                    EnterpriseSecurity & Compliance
                   </h3>
-                  <p className='text-gray-300'>
-                    Row-level security ensures users only access information
-                    they're authorized to see. Complete audit trails track all
-                    searches and access for compliance. Sensitive data remains
-                    encrypted and on-premises if required.
+                  <pclassName='text-gray-300'>
+                    Row-levelsecurityensures usersonlyaccess informationthey'reauthorizedto see. Completeaudittrails trackallsearches andaccessfor compliance. Sensitivedataremains
+                    encryptedandon-premisesifrequired.
                   </p>
                 </div>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-indigo-300'>
-                The Knowledge Competitive Advantage
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-indigo-300'>
+                TheKnowledgeCompetitive Advantage
               </h2>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Organizations that effectively leverage institutional knowledge
-                make better decisions faster. Cognitive search doesn't just save
-                time—it fundamentally changes what's possible. Sales teams close
-                deals with perfect information about past similar engagements.
-                Engineers solve problems by finding solutions from across the
-                organization. Leaders make data-driven decisions with
-                comprehensive context.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Organizationsthateffectively leverageinstitutionalknowledge
+                makebetterdecisions faster. Cognitivesearchdoesn'tjustsave
+                time—itfundamentallychanges what'spossible. Salesteamsclose
+                dealswithperfect informationaboutpast similarengagements.
+                Engineerssolveproblems byfindingsolutions fromacrossthe
+                organization. Leadersmakedata-drivendecisionswith
+                comprehensivecontext.
               </p>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                The competitive moat grows over time as the system learns from
-                every search, continuously improving its understanding of your
-                domain. Early adopters report 340% faster onboarding for new
-                employees and 67% improvement in cross-functional collaboration
-                as knowledge barriers dissolve.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Thecompetitivemoat growsovertime asthesystem learnsfromevery searchcontinuouslyimprovingits understandingofyour
+                domain. Earlyadoptersreport 340% fasteronboardingfor newemployeesand 67% improvementincross-functionalcollaborationas knowledgebarriersdissolve.
               </p>
             </section>
 
-            <div className='bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 text-center'>
-              <h2 className='text-3xl font-bold mb-4'>
-                Unlock Your Institutional Knowledge
+            <divclassName = 'bg-gradient-to-rfrom-indigo-600to-purple-600rounded-xlp-8text-center'>
+              <h2className='text-3xlfont-boldmb-4'>
+                UnlockYourInstitutional Knowledge
               </h2>
-              <p className='text-xl mb-6 text-indigo-100'>
-                Deploy cognitive search and transform how your organization
-                discovers and leverages information.
+              <pclassName='text-xlmb-6text-indigo-100'>
+                Deploycognitivesearch andtransformhow yourorganizationdiscovers andleveragesinformation.
               </p>
-              <Link
-                to='/contact'
-                className='inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors'
+              <Linkto='/contact'
+                className='inline-flexitems-centerpx-8py-4bg-whitetext-indigo-600rounded-lgfont-boldtext-lghover: bg-indigo-50transition-colors'
               >
-                Start Your Knowledge Transformation
-                <Brain className='ml-2 h-5 w-5' />
+                StartYourKnowledge Transformation
+                <Brain,className='ml-2 h-5 w-5' />
               </Link>
             </div>
           </div>
         </div>
       </article>
-    </>
-  );
-}
+    </ > );
+ }

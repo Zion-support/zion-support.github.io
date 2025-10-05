@@ -1,297 +1,286 @@
 import {
   ArrowRight,
   CheckCircle,
-  Shield,
-  TrendingUp,
-  Users,
-  Zap,
+  Shield
+  TrendingUp
+  Users
+  Zap
 } from 'lucide-react';
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const AIMLOpsAutomation = () => {
+constAIMLOpsAutomation = () => { 
   return (
     <>
       <Helmet>
-        <title>AI MLOps Automation Services | Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Enterprise MLOps automation with 99.9% reliability. Deploy, monitor, and scale ML models with automated pipelines, real-time monitoring, and intelligent optimization.'
+        <title>AIMLOpsAutomation Services | ZionTechGroup</title>
+        <metaname = 'description'
+          content='EnterpriseMLOpsautomation with99.9% reliability. DeploymonitorandscaleML modelswithautomated pipelinesreal-timemonitoringandintelligentoptimization.'
         />
-        <meta
-          name='keywords'
-          content='MLOps, AI automation, ML deployment, model monitoring, CI/CD for ML, automated ML pipelines'
+        <metaname = 'keywords'
+          content='MLOpsAIautomationMLdeploymentmodelmonitoringCI/CDforMLautomatedMLpipelines'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800'>
-        {/* Hero Section */}
-        <section className='relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20'>
-          <div className='absolute inset-0 bg-black opacity-10'></div>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-            <div className='text-center'>
-              <h1 className='text-5xl md:text-6xl font-bold mb-6'>
-                AI MLOps Automation
+      <divclassName = 'min-h-screenbg-gradient-to-bfrom-gray-50to-whitedark: from-gray-900dark:to-gray-800' > {/* HeroSection */ }
+        <sectionclassName = 'relativeoverflow-hiddenbg-gradient-to-rfrom-blue-600to-purple-600text-whitepy-20'>
+          <divclassName='absoluteinset-0bg-blackopacity-10' />
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8relativez-10'>
+            <divclassName='text-center'>
+              <h1className='text-5xlmd:text-6xlfont-boldmb-6'>
+                AIMLOpsAutomation
               </h1>
-              <p className='text-xl md:text-2xl mb-8 max-w-3xl mx-auto'>
-                Deploy, monitor, and scale ML models with enterprise-grade
-                automation achieving 99.9% reliability
+              <pclassName='text-xlmd:text-2xlmb-8max-w-3xlmx-auto'>
+                DeploymonitorandscaleML modelswithenterprise-gradeautomationachieving 99.9% reliability
               </p>
-              <div className='flex flex-wrap justify-center gap-4'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+              <divclassName = 'flexflex-wrapjustify-centergap-4'>
+                <Linkto='/contact'
+                  className='inline-flexitems-centerpx-8py-3bg-whitetext-blue-600rounded-lgfont-semiboldhover: bg-gray-100transition-colors'
                 >
-                  Get Started
-                  <ArrowRight className='ml-2 h-5 w-5' />
+                  GetStarted
+                  <ArrowRight,className='ml-2 h-5 w-5' />
                 </Link>
-                <a
-                  href='#features'
-                  className='inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
+                <ahref='#features'
+                  className='inline-flexitems-centerpx-8py-3bg-transparentborder-2border-whitetext-whiterounded-lgfont-semiboldhover:bg-whitehover:text-blue-600transition-colors'
                 >
-                  Learn More
+                  LearnMore
                 </a>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Key Metrics */}
-        <section className='py-16 bg-white dark:bg-gray-800'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-1 md:grid-cols-4 gap-8 text-center'>
-              <div className='p-6'>
-                <div className='text-4xl font-bold text-blue-600 mb-2'>
+        {/* KeyMetrics */}
+        <sectionclassName = 'py-16bg-whitedark: bg-gray-800'>
+          <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+            <divclassName='gridgrid-cols-1md:grid-cols-4gap-8text-center'>
+              <divclassName='p-6'>
+                <divclassName='text-4xlfont-boldtext-blue-600mb-2'>
                   99.9%
                 </div>
-                <div className='text-gray-600 dark:text-gray-300'>
-                  Uptime SLA
+                <divclassName='text-gray-600dark:text-gray-300'>
+                  UptimeSLA
                 </div>
               </div>
-              <div className='p-6'>
-                <div className='text-4xl font-bold text-blue-600 mb-2'>85%</div>
-                <div className='text-gray-600 dark:text-gray-300'>
-                  Faster Deployments
+              <divclassName='p-6'>
+                <divclassName='text-4xlfont-boldtext-blue-600mb-2'>85%</div>
+                <divclassName='text-gray-600dark:text-gray-300'>
+                  FasterDeployments
                 </div>
               </div>
-              <div className='p-6'>
-                <div className='text-4xl font-bold text-blue-600 mb-2'>
+              <divclassName='p-6'>
+                <divclassName='text-4xlfont-boldtext-blue-600mb-2'>
                   $2.4M
                 </div>
-                <div className='text-gray-600 dark:text-gray-300'>
-                  Avg Annual Savings
+                <divclassName='text-gray-600dark:text-gray-300'>
+                  AvgAnnualSavings
                 </div>
               </div>
-              <div className='p-6'>
-                <div className='text-4xl font-bold text-blue-600 mb-2'>72%</div>
-                <div className='text-gray-600 dark:text-gray-300'>
-                  Cost Reduction
+              <divclassName='p-6'>
+                <divclassName='text-4xlfont-boldtext-blue-600mb-2'>72%</div>
+                <divclassName='text-gray-600dark:text-gray-300'>
+                  CostReduction
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Features Section */}
-        <section id='features' className='py-20 bg-gray-50 dark:bg-gray-900'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-4xl font-bold mb-4'>
-                Comprehensive MLOps Platform
+        {/* FeaturesSection */}
+        <sectionid = 'features' className='py-20bg-gray-50dark: bg-gray-900'>
+          <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+            <divclassName='text-centermb-16'>
+              <h2className='text-4xlfont-boldmb-4'>
+                ComprehensiveMLOpsPlatform
               </h2>
-              <p className='text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto'>
-                End-to-end automation for the entire ML lifecycle - from
-                development to production
+              <pclassName='text-xltext-gray-600dark:text-gray-300max-w-3xlmx-auto'>
+                End-to-endautomationfor theentireML lifecycle - fromdevelopmentto production
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {/* Automated Pipelines */}
-              <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow'>
-                <Zap className='h-12 w-12 text-blue-600 mb-4' />
-                <h3 className='text-2xl font-bold mb-4'>
-                  Automated CI/CD Pipelines
+            <divclassName='gridgrid-cols-1md:grid-cols-2lg:grid-cols-3gap-8'>
+              {/* AutomatedPipelines */}
+              <divclassName = 'bg-whitedark: bg-gray-800p-8rounded-xlshadow-lghover:shadow-2xltransition-shadow'>
+                <ZapclassName='h-12w-12text-blue-600mb-4' />
+                <h3className='text-2xlfont-boldmb-4'>
+                  AutomatedCI/CDPipelines
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                  Fully automated build, test, and deployment pipelines with
-                  integrated quality gates and rollback capabilities.
+                <pclassName='text-gray-600dark:text-gray-300mb-4'>
+                  Fullyautomatedbuildtestanddeploymentpipelines withintegratedquality gatesandrollback capabilities.
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Automated testing and validation
+                <ulclassName = 'space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark: text-gray-300'>
+                      Automatedtestingand validation
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Blue-green deployments
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Blue-greendeployments
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Instant rollback on failure
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Instantrollbackon failure
                     </span>
                   </li>
                 </ul>
               </div>
 
-              {/* Real-time Monitoring */}
-              <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow'>
-                <TrendingUp className='h-12 w-12 text-blue-600 mb-4' />
-                <h3 className='text-2xl font-bold mb-4'>
-                  Real-time Model Monitoring
+              {/* Real-timeMonitoring */}
+              <divclassName = 'bg-whitedark: bg-gray-800p-8rounded-xlshadow-lghover:shadow-2xltransition-shadow'>
+                <TrendingUpclassName='h-12w-12text-blue-600mb-4' />
+                <h3className='text-2xlfont-boldmb-4'>
+                  Real-timeModelMonitoring
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                  Continuous monitoring of model performance, data drift, and
-                  prediction quality with automated alerting.
+                <pclassName='text-gray-600dark:text-gray-300mb-4'>
+                  Continuousmonitoringof modelperformancedatadriftandpredictionquality withautomatedalerting.
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Performance metrics dashboard
+                <ulclassName = 'space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark: text-gray-300'>
+                      Performancemetricsdashboard
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Data drift detection
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Datadriftdetection
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Automated retraining triggers
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Automatedretrainingtriggers
                     </span>
                   </li>
                 </ul>
               </div>
 
-              {/* Model Registry */}
-              <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow'>
-                <Shield className='h-12 w-12 text-blue-600 mb-4' />
-                <h3 className='text-2xl font-bold mb-4'>
-                  Centralized Model Registry
+              {/* ModelRegistry */}
+              <divclassName = 'bg-whitedark: bg-gray-800p-8rounded-xlshadow-lghover:shadow-2xltransition-shadow'>
+                <ShieldclassName='h-12w-12text-blue-600mb-4' />
+                <h3className='text-2xlfont-boldmb-4'>
+                  CentralizedModelRegistry
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                  Version-controlled model registry with lineage tracking,
-                  approval workflows, and compliance auditing.
+                <pclassName='text-gray-600dark:text-gray-300mb-4'>
+                  Version-controlledmodelregistry withlineagetracking
+                  approvalworkflowsandcomplianceauditing.
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Version control and lineage
+                <ulclassName = 'space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark: text-gray-300'>
+                      Versioncontroland lineage
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Approval workflows
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Approvalworkflows
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Compliance audit trails
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Complianceaudittrails
                     </span>
                   </li>
                 </ul>
               </div>
 
-              {/* Feature Store */}
-              <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow'>
-                <Users className='h-12 w-12 text-blue-600 mb-4' />
-                <h3 className='text-2xl font-bold mb-4'>
-                  Enterprise Feature Store
+              {/* FeatureStore */}
+              <divclassName = 'bg-whitedark: bg-gray-800p-8rounded-xlshadow-lghover:shadow-2xltransition-shadow'>
+                <UsersclassName='h-12w-12text-blue-600mb-4' />
+                <h3className='text-2xlfont-boldmb-4'>
+                  EnterpriseFeatureStore
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                  Centralized feature management with versioning, sharing, and
-                  real-time serving capabilities.
+                <pclassName='text-gray-600dark:text-gray-300mb-4'>
+                  Centralizedfeaturemanagement withversioningsharingandreal-timeservingcapabilities.
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Feature reusability
+                <ulclassName = 'space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark: text-gray-300'>
+                      Featurereusability
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Low-latency serving
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Low-latencyserving
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Training-serving consistency
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Training-servingconsistency
                     </span>
                   </li>
                 </ul>
               </div>
 
               {/* Auto-scaling */}
-              <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow'>
-                <Zap className='h-12 w-12 text-blue-600 mb-4' />
-                <h3 className='text-2xl font-bold mb-4'>
-                  Intelligent Auto-scaling
+              <divclassName = 'bg-whitedark: bg-gray-800p-8rounded-xlshadow-lghover:shadow-2xltransition-shadow'>
+                <ZapclassName='h-12w-12text-blue-600mb-4' />
+                <h3className='text-2xlfont-boldmb-4'>
+                  IntelligentAuto-scaling
                 </h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                  Predictive auto-scaling based on traffic patterns, ensuring
-                  optimal performance and cost efficiency.
+                <pclassName='text-gray-600dark:text-gray-300mb-4'>
+                  Predictiveauto-scalingbasedon trafficpatternsensuringoptimalperformance andcostefficiency.
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Predictive scaling
+                <ulclassName = 'space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark: text-gray-300'>
+                      Predictivescaling
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Cost optimization
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Costoptimization
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Zero downtime scaling
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Zerodowntimescaling
                     </span>
                   </li>
                 </ul>
               </div>
 
-              {/* Experiment Tracking */}
-              <div className='bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow'>
-                <TrendingUp className='h-12 w-12 text-blue-600 mb-4' />
-                <h3 className='text-2xl font-bold mb-4'>Experiment Tracking</h3>
-                <p className='text-gray-600 dark:text-gray-300 mb-4'>
-                  Comprehensive experiment tracking with parameter logging,
-                  metric visualization, and model comparison.
+              {/* ExperimentTracking */}
+              <divclassName = 'bg-whitedark: bg-gray-800p-8rounded-xlshadow-lghover:shadow-2xltransition-shadow'>
+                <TrendingUpclassName='h-12w-12text-blue-600mb-4' />
+                <h3className='text-2xlfont-boldmb-4'>ExperimentTracking</h3>
+                <pclassName='text-gray-600dark:text-gray-300mb-4'>
+                  Comprehensiveexperimenttracking withparameterlogging
+                  metricvisualizationandmodelcomparison.
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Parameter logging
+                <ulclassName = 'space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark: text-gray-300'>
+                      Parameterlogging
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
-                      Visual comparison
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
+                      Visualcomparison
                     </span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1' />
-                    <span className='text-gray-700 dark:text-gray-300'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-500mr-2flex-shrink-0mt-1' />
+                    <spanclassName='text-gray-700dark:text-gray-300'>
                       Reproducibility
                     </span>
                   </li>
@@ -301,57 +290,55 @@ const AIMLOpsAutomation = () => {
           </div>
         </section>
 
-        {/* Use Cases */}
-        <section className='py-20 bg-white dark:bg-gray-800'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-4xl font-bold mb-4'>Proven Use Cases</h2>
-              <p className='text-xl text-gray-600 dark:text-gray-300'>
-                Real-world results from enterprise deployments
+        {/* UseCases */}
+        <sectionclassName = 'py-20bg-whitedark: bg-gray-800'>
+          <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+            <divclassName='text-centermb-16'>
+              <h2className='text-4xlfont-boldmb-4'>ProvenUseCases</h2>
+              <pclassName='text-xltext-gray-600dark:text-gray-300'>
+                Real-worldresultsfrom enterprisedeployments
               </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-              <div className='bg-gradient-to-br from-blue-50 to-purple-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-xl'>
-                <h3 className='text-2xl font-bold mb-4'>Financial Services</h3>
-                <p className='text-gray-700 dark:text-gray-200 mb-4'>
-                  Leading bank deployed 450+ ML models with automated monitoring
-                  and compliance
+            <divclassName='gridgrid-cols-1md:grid-cols-2gap-8'>
+              <divclassName='bg-gradient-to-brfrom-blue-50to-purple-50dark:from-gray-700dark:to-gray-600p-8rounded-xl'>
+                <h3className='text-2xlfont-boldmb-4'>FinancialServices</h3>
+                <pclassName='text-gray-700dark:text-gray-200mb-4'>
+                  Leadingbankdeployed 450+ MLmodelswith automatedmonitoringand compliance
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1' />
-                    <span>99.97% uptime across all models</span>
+                <ulclassName='space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-600mr-2flex-shrink-0mt-1' />
+                    <span>99.97% uptimeacrossall models</span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1' />
-                    <span>85% reduction in deployment time</span>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-600mr-2flex-shrink-0mt-1' />
+                    <span>85% reductionindeployment time</span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1' />
-                    <span>Full regulatory compliance</span>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-600mr-2flex-shrink-0mt-1' />
+                    <span>Fullregulatorycompliance</span>
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-gradient-to-br from-green-50 to-blue-50 dark:from-gray-700 dark:to-gray-600 p-8 rounded-xl'>
-                <h3 className='text-2xl font-bold mb-4'>E-Commerce</h3>
-                <p className='text-gray-700 dark:text-gray-200 mb-4'>
-                  Global retailer scaled recommendation systems to 50M+ daily
-                  predictions
+              <divclassName='bg-gradient-to-brfrom-green-50to-blue-50dark:from-gray-700dark:to-gray-600p-8rounded-xl'>
+                <h3className='text-2xlfont-boldmb-4'>E-Commerce</h3>
+                <pclassName='text-gray-700dark:text-gray-200mb-4'>
+                  Globalretailerscaled recommendationsystemsto 50M+ dailypredictions
                 </p>
-                <ul className='space-y-2'>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1' />
-                    <span>32% increase in conversion rate</span>
+                <ulclassName='space-y-2'>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-600mr-2flex-shrink-0mt-1' />
+                    <span>32% increaseinconversion rate</span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1' />
-                    <span>$4.2M annual cost savings</span>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-600mr-2flex-shrink-0mt-1' />
+                    <span>$4.2Mannualcost savings</span>
                   </li>
-                  <li className='flex items-start'>
-                    <CheckCircle className='h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1' />
-                    <span>Sub-100ms prediction latency</span>
+                  <liclassName='flexitems-start'>
+                    <CheckCircle,className='h-5 w-5text-green-600mr-2flex-shrink-0mt-1' />
+                    <span>Sub-100mspredictionlatency</span>
                   </li>
                 </ul>
               </div>
@@ -359,29 +346,26 @@ const AIMLOpsAutomation = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white'>
-          <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>
-            <h2 className='text-4xl font-bold mb-6'>
-              Ready to Transform Your ML Operations?
+        {/* CTASection */}
+        <sectionclassName = 'py-20bg-gradient-to-rfrom-blue-600to-purple-600text-white'>
+          <divclassName='max-w-4xlmx-autotext-centerpx-4sm: px-6lg:px-8'>
+            <h2className='text-4xlfont-boldmb-6'>
+              ReadytoTransform YourMLOperations?
             </h2>
-            <p className='text-xl mb-8'>
-              Join leading enterprises achieving 99.9% reliability and 72% cost
-              reduction
+            <pclassName='text-xlmb-8'>
+              Joinleadingenterprises achieving99.9% reliabilityand72% costreduction
             </p>
-            <div className='flex flex-wrap justify-center gap-4'>
-              <Link
-                to='/contact'
-                className='inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+            <divclassName='flexflex-wrapjustify-centergap-4'>
+              <Linkto='/contact'
+                className='inline-flexitems-centerpx-8py-3bg-whitetext-blue-600rounded-lgfont-semiboldhover:bg-gray-100transition-colors'
               >
-                Schedule Consultation
-                <ArrowRight className='ml-2 h-5 w-5' />
+                ScheduleConsultation
+                <ArrowRight,className='ml-2 h-5 w-5' />
               </Link>
-              <Link
-                to='/blog'
-                className='inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors'
+              <Linkto='/blog'
+                className='inline-flexitems-centerpx-8py-3bg-transparentborder-2border-whitetext-whiterounded-lgfont-semiboldhover:bg-whitehover:text-blue-600transition-colors'
               >
-                Read Our Blog
+                ReadOurBlog
               </Link>
             </div>
           </div>
@@ -391,4 +375,4 @@ const AIMLOpsAutomation = () => {
   );
 };
 
-export default AIMLOpsAutomation;
+exportdefaultAIMLOpsAutomation;

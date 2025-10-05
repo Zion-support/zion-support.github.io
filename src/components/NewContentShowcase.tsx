@@ -2,93 +2,83 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
-const NewContentShowcase: React.FC = () => {
-  const topArticles = newArticles2025.slice(0, 3);
-  const topServices = newServices2026.slice(0, 3);
-  return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold mb-4">
-            🌟 JUST RELEASED
+constNewContentShowcase: React.FC = () => { 
+  consttopArticles = newArticles2025.slice(03); consttopServices = newServices2026.slice(03); return (
+    <sectionclassName = "py-20bg-gradient-to-brfrom-indigo-50via-purple-50to-pink-50">
+      <divclassName="containermx-autopx-6">
+        <divclassName="text-centermb-16">
+          <divclassName="inline-flexitems-centerpx-4py-2bg-purple-100rounded-fulltext-purple-700font-semiboldmb-4">
+            🌟 JUSTRELEASED
           </div>
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">
-            New Content & Services
+          <h2className="text-5xlfont-boldtext-gray-900mb-4">
+            NewContent & Services
           </h2>
-          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest breakthrough articles and revolutionary services
+          <pclassName="text-2xltext-gray-600max-w-3xlmx-auto">
+            Exploreourlatest breakthrougharticlesand revolutionaryservices
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12 mb-12" > {/* Articles Section */}
+        <divclassName="gridlg: grid-cols-2gap-12mb-12"  > {/* ArticlesSection */ }
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="w-8 h-8 text-indigo-600" />
-              <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
+            <divclassName = "flexitems-centergap-3mb-6">
+              <BookOpenclassName="w-8 h-8text-indigo-600" />
+              <h3className="text-3xlfont-boldtext-gray-900">LatestArticles</h3>
             </div>
-            <div className="space-y-4">
-              {topArticles.map((article) => (
-                <Link
-                  key={article.id}
-                  to={article.link}
-                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
+            <divclassName="space-y-4">
+              { topArticles.map((article) = > (
+                <Linkkey = { article.id  }to={ article.link } className="blockbg-whiterounded-xlp-6shadow-mdhover: shadow-2xltransition-allhover:scale-105"
                 >
-                  <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">{article.title}</h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{article.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">{article.readTime}</span>
-                    <span className="text-indigo-600 font-semibold flex items-center gap-1">
-                      Read More <ArrowRight className="w-4 h-4" />
+                  <divclassName="text-smtext-indigo-600font-semiboldmb-2">{article.category}</div>
+                  <h4className = "text-xlfont-boldtext-gray-900mb-2">{article.title}</h4>
+                  <pclassName="text-gray-600text-smmb-3line-clamp-2">{article.description}</p>
+                  <divclassName="flexitems-centerjustify-betweentext-sm">
+                    <spanclassName="text-gray-500">{article.readTime}</span>
+                    <spanclassName="text-indigo-600font-semiboldflexitems-centergap-1">
+                      ReadMore <ArrowRight,className="w-4 h-4" />
                     </span>
                   </div>
                 </Link>
               ))}
             </div>
-            <div className="mt-6 text-center">
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
+            <divclassName = "mt-6text-center">
+              <Linkto="/blog"
+                className="inline-flexitems-centergap-2text-indigo-600font-boldhover: text-indigo-800"
               >
-                View All Articles
-                <ArrowRight className="w-5 h-5" />
+                ViewAllArticles
+                <ArrowRight,className="w-5 h-5" />
               </Link>
             </div>
           </div>
-          {/* Services Section */}
+          {/* ServicesSection */}
           <div>
-            <div className="flex items-center gap-3 mb-6">
-              <Rocket className="w-8 h-8 text-purple-600" />
-              <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
+            <divclassName = "flexitems-centergap-3mb-6">
+              <RocketclassName="w-8 h-8text-purple-600" />
+              <h3className="text-3xlfont-boldtext-gray-900">NewServices</h3>
             </div>
-            <div className="space-y-4">
-              {topServices.map((service) => (
-                <Link
-                  key={service.id}
-                  to={service.link}
-                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
+            <divclassName="space-y-4">
+              { topServices.map((service) = > (
+                <Linkkey = { service.id  }to={ service.link } className="blockbg-whiterounded-xlp-6shadow-mdhover: shadow-2xltransition-allhover:scale-105"
                 >
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{service.icon}</span>
-                    <span className="text-sm text-purple-600 font-semibold">{service.category}</span>
+                  <divclassName="flexitems-centergap-2mb-2">
+                    <spanclassName="text-2xl">{service.icon}</span>
+                    <spanclassName = "text-smtext-purple-600font-semibold">{service.category}</span>
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-700 font-semibold">{service.pricing}</span>
-                    <span className="text-purple-600 font-semibold flex items-center gap-1">
-                      Learn More <ArrowRight className="w-4 h-4" />
+                  <h4className="text-xlfont-boldtext-gray-900mb-2">{service.name}</h4>
+                  <pclassName="text-gray-600text-smmb-3line-clamp-2">{service.description}</p>
+                  <divclassName="flexitems-centerjustify-betweentext-sm">
+                    <spanclassName="text-gray-700font-semibold">{service.pricing}</span>
+                    <spanclassName="text-purple-600font-semiboldflexitems-centergap-1">
+                      LearnMore <ArrowRight,className="w-4 h-4" />
                     </span>
                   </div>
                 </Link>
               ))}
             </div>
-            <div className="mt-6 text-center">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
+            <divclassName = "mt-6text-center">
+              <Linkto="/services"
+                className="inline-flexitems-centergap-2text-purple-600font-boldhover: text-purple-800"
               >
-                View All Services
-                <ArrowRight className="w-5 h-5" />
+                ViewAllServices
+                <ArrowRight,className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -97,4 +87,4 @@ const NewContentShowcase: React.FC = () => {
     </section>
   );
 };
-export default NewContentShowcase;
+exportdefaultNewContentShowcase;

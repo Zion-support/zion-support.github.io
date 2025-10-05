@@ -1,70 +1,63 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-bfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
         <title>
-          Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback
+          AgentReliabilityRunbooks v5 — BudgetsCanariesRollback
         </title>
-        <meta
-          name='description'
-          content='Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback.'
+        <metaname = 'description'
+          content='Executesafebudget-awareagentoperations usingKPI-linkedplaybookscanaryscorecardsandinstantrollback.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-12'>
-        <div className='max-w-3xl mx-auto'>
-          <div className='mb-6 text-sm text-zion-slate-light'>
-            AI Operations • 9 min read • 2025-10-01
+      <divclassName='containermx-autopx-6py-12'>
+        <divclassName='max-w-3xlmx-auto'>
+          <divclassName='mb-6text-smtext-zion-slate-light'>
+            AIOperations • 9minread • 2025-10-01
           </div>
-          <h1 className='text-4xl font-bold mb-4'>
-            Agent Reliability Runbooks v5
+          <h1className='text-4xlfont-boldmb-4'>
+            AgentReliabilityRunbooks v5
           </h1>
-          <p className='text-zion-slate-light mb-6'>
-            Practical runbooks for governing autonomous agents with budgeted
-            actions, KPI‑linked canaries, and deterministic rollback that
-            preserve customer experience while accelerating delivery.
+          <pclassName='text-zion-slate-lightmb-6'>
+            Practicalrunbooksfor governingautonomousagents withbudgetedactionsKPI‑linkedcanariesanddeterministicrollback thatpreservecustomer experiencewhileaccelerating delivery.
           </p>
 
-          <div className='space-y-6'>
-            <h2 className='text-2xl font-semibold'>Runbook Patterns</h2>
-            <ul className='list-disc pl-6 text-zion-slate-light'>
+          <divclassName = 'space-y-6'>
+            <h2className='text-2xlfont-semibold'>RunbookPatterns</h2>
+            <ulclassName='list-discpl-6text-zion-slate-light'>
               <li>
-                Budget guards per intent with escalation thresholds and
-                approvals.
+                Budgetguardsper intentwithescalation thresholdsandapprovals.
               </li>
               <li>
-                Scorecard canaries with rollback hooks when KPIs dip beyond
+                Scorecardcanarieswith rollbackhookswhen KPIsdipbeyond
                 tolerance.
               </li>
               <li>
-                Trace everything from token to KPI with cost and risk telemetry.
+                Traceeverythingfrom tokentoKPI withcostand risktelemetry.
               </li>
-              <li>Drills and chaos tests to validate failure modes weekly.</li>
+              <li>Drillsandchaos teststovalidate failuremodesweekly.</li>
             </ul>
 
-            <h2 className='text-2xl font-semibold'>Adoption Guide</h2>
-            <p className='text-zion-slate-light'>
-              Start with a single critical flow, wire in KPIs, define budgets,
-              and ship a canary runbook. Expand coverage as telemetry validates
-              stability. Automate rollback after two consecutive score
+            <h2className='text-2xlfont-semibold'>AdoptionGuide</h2>
+            <pclassName='text-zion-slate-light'>
+              Startwitha singlecriticalflowwireinKPIsdefinebudgets
+              andshipa canaryrunbook. Expandcoverageas telemetryvalidatesstability. Automaterollbackafter twoconsecutivescore
               violations.
             </p>
 
-            <div className='mt-8'>
-              <a href='/blog' className='text-cyan-300 hover:underline'>
-                ← Back to Blog
+            <divclassName = 'mt-8'>
+              <ahref='/blog' className='text-cyan-300hover: underline'>
+                ← BacktoBlog
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

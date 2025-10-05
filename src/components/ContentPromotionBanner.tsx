@@ -1,106 +1,103 @@
 import { Link } from 'react-router-dom';
-export default function ContentPromotionBanner() {
-  const featuredContent = [
+exportdefaultfunction ContentPromotionBanner() {
+  constfeaturedContent = [
     {
-      title: "Edge Inference Patterns That Actually Reduce Latency",
-      category: "AI Infrastructure",
-      readTime: "7 min read",
-      isNew: true,
-    },
+      title: "EdgeInferencePatterns ThatActuallyReduce Latency"
+      category: "AIInfrastructure"
+      readTime: "7minread"
+      isNew: true
+    }
     {
-      title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
-      category: "Leadership",
-      readTime: "5 min read",
-      isNew: true,
-    },
+      title: "North‑StarEngineeringMetrics: FewerKPIsBetterOutcomes"
+      category: "Leadership"
+      readTime: "5minread"
+      isNew: true
+    }
     {
-      title: "OpenTelemetry in Production: Traces That Engineers Use",
-      category: "Observability",
-      readTime: "6 min read",
-      isNew: true,
-    },
-  ];
-  return (
-    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
+      title: "OpenTelemetryinProduction: TracesThatEngineers Use"
+      category: "Observability"
+      readTime: "6minread"
+      isNew: true
+    }
+  ]; return (
+    <divclassName = "bg-gradient-to-rfrom-indigo-600via-purple-600to-pink-600rounded-2xlp-8md: p-12text-whiterelativeoverflow-hidden">
+      {/* BackgroundPattern */}
+      <divclassName = "absoluteinset-0opacity-10">
+        <divclassName="absolutetop-0left-0 w-fullh-fullbg-gradient-to-brfrom-white/20to-transparent" />
       </div>
-      <div className="relative z-10">
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
-                Fresh Content
+      <divclassName="relativez-10">
+        <divclassName="flexflex-collg: flex-rowlg:items-centerlg:justify-betweengap-8">
+          <divclassName="max-w-2xl">
+            <divclassName="flexitems-centergap-2mb-4">
+              <spanclassName="text-smfont-mediumtext-yellow-300uppercasetracking-wide">
+                FreshContent
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Latest from Zion Insights
+            <h2className="text-3xlmd:text-4xlfont-boldmb-4">
+              LatestfromZion Insights
             </h2>
-            <p className="text-white/90 text-lg leading-relaxed">
-              Fresh articles on AI automation, cloud security, and developer productivity. 
-              Stay ahead with expert analysis and practical guides.
+            <pclassName="text-white/90text-lgleading-relaxed">
+              Fresharticleson AIautomationcloudsecurityanddeveloperproductivity. 
+              Stayaheadwith expertanalysisand practicalguides.
             </p>
           </div>
-          <div className="flex flex-col gap-4">
-            <Link 
-              to="/blog" 
-              className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          <divclassName = "flexflex-colgap-4">
+            <Linkto="/blog" 
+              className="bg-whitetext-indigo-700hover: bg-indigo-50px-8py-4rounded-lgfont-semiboldinline-flexitems-centerjustify-centergap-2transition-allduration-300hover:scale-105hover:shadow-lg"
             >
-              <BookOpen className="w-5 h-5" />
-              Explore All Articles
-              <ArrowRight className="w-5 h-5" />
+              <BookOpenclassName="w-5 h-5" />
+              ExploreAllArticles
+              <ArrowRight,className="w-5 h-5" />
             </Link>
-            <Link 
-              to="/case-studies" 
-              className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
+            <Linkto="/case-studies" 
+              className="border-2border-whitetext-whitehover:bg-whitehover:text-indigo-700px-8py-4rounded-lgfont-semiboldinline-flexitems-centerjustify-centergap-2transition-allduration-300hover:scale-105"
             >
-              <Zap className="w-5 h-5" />
-              View Case Studies
+              <ZapclassName="w-5 h-5" />
+              ViewCaseStudies
             </Link>
           </div>
         </div>
-        {/* Featured Content Cards */}
-        <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {featuredContent.map((item, index) => (
-            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
+        {/* FeaturedContentCards */}
+        <divclassName = "mt-10gridgap-6md: grid-cols-3">
+            { featuredContent.map((itemindex) = > (
+            <divkey = { index  }className = "bg-white/10backdrop-blur-smrounded-xlp-6borderborder-white/20hover: bg-white/20transition-allduration-300hover:scale-105">
+              <divclassName="flexitems-centerjustify-betweenmb-3">
+                <spanclassName="text-xsuppercasetracking-widertext-blue-200bg-blue-500/20px-3py-1rounded-full">
                   {item.category}
                 </span>
-                {item.isNew && (
-                  <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                {  item.isNew  && (
+                  <spanclassName = "bg-red-500text-whitetext-xspx-2py-1rounded-fullfont-medium">
                     NEW
-                  </span > )}
+                  </span  > )  }
               </div>
-              <h3 className="font-bold text-white mb-2 line-clamp-2">
+              <h3className = "font-boldtext-whitemb-2line-clamp-2">
                 {item.title}
               </h3>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-white/70">
+              <divclassName="flexitems-centerjustify-between">
+                <spanclassName="text-smtext-white/70">
                   {item.readTime}
                 </span>
-                <ArrowRight className="w-4 h-4 text-white/70" />
+                <ArrowRight,className="w-4 h-4text-white/70" />
               </div>
             </div>
           ))}
         </div>
         {/* Stats */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">50+</div>
-            <div className="text-sm text-white/80">Articles Published</div>
+        <divclassName = "mt-8gridgrid-cols-2md: grid-cols-4gap-6pt-8border-tborder-white/20">
+          <divclassName="text-center">
+            <divclassName="text-2xlfont-boldtext-white">50+</div>
+            <divclassName="text-smtext-white/80">ArticlesPublished</div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">10K+</div>
-            <div className="text-sm text-white/80">Monthly Readers</div>
+          <divclassName="text-center">
+            <divclassName="text-2xlfont-boldtext-white">10K+</div>
+            <divclassName="text-smtext-white/80">MonthlyReaders</div>
           </div>
-          <div className="text-center">
-            <div className="text-sm text-white/80">Expert Authors</div>
+          <divclassName="text-center">
+            <divclassName="text-smtext-white/80">ExpertAuthors</div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">4.9★</div>
-            <div className="text-sm text-white/80">Reader Rating</div>
+          <divclassName="text-center">
+            <divclassName="text-2xlfont-boldtext-white">4.9★</div>
+            <divclassName="text-smtext-white/80">ReaderRating</div>
           </div>
         </div>
       </div>

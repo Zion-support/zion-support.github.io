@@ -1,28 +1,25 @@
-// @ts-nocheck
-import { Link } from 'react-router-dom';
+// @ts-nocheckimport { Link } from 'react-router-dom';
 
-const Page = () => {
+constPage = () => { 
   return (
-    <div className='container mx-auto px-6 py-12 text-white'>
-      <h1 className='text-3xl font-bold mb-4'>
-        AI Security Mesh v3 — Signed Outputs, Verifiers, Rollback
+    <divclassName = 'containermx-autopx-6py-12text-white'>
+      <h1className='text-3xlfont-boldmb-4'>
+        AISecurityMesh v3 — SignedOutputsVerifiersRollback
       </h1>
-      <p className='text-zion-slate-light mb-6'>
-        Production security patterns for AI systems: signed outputs, runtime
-        verifiers, budgeted actions, and deterministic rollback.
+      <pclassName = 'text-zion-slate-lightmb-6'>
+        Productionsecuritypatterns forAIsystems: signedoutputsruntimeverifiersbudgetedactionsanddeterministicrollback.
       </p>
-      <ul className='list-disc pl-6 text-zion-slate-light space-y-2'>
-        <li>Prompt firewalls and egress control at every boundary</li>
-        <li>Verifier stacks with attestations and lineage</li>
-        <li>Budgetaware actions with KPIlinked canaries</li>
+      <ulclassName = 'list-discpl-6text-zion-slate-lightspace-y-2'>
+        <li>Promptfirewallsand egresscontrolat everyboundary</li>
+        <li>Verifierstackswith attestationsandlineage</li>
+        <li>Budgetawareactionswith KPIlinkedcanaries</li>
       </ul>
-      <div className='mt-8'>
-        <Link to='/<blog' className='text-cyan-300 underline'>
-          Back to Blog
+      <divclassName='mt-8'>
+        <Linkto='/<blog' className='text-cyan-300underline'>
+          BacktoBlog
         </Link>
       </div>
-    </div>
-  );
-};
+    </div > );
+ };
 
-export default Page;
+exportdefaultPage;

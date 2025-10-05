@@ -1,81 +1,76 @@
 import {
-  AlertTriangle,
-  ArrowLeft,
-  Calendar,
-  Clock,
-  Lock,
-  Shield,
-  ShieldCheck,
-  TrendingUp,
+  AlertTriangle
+  ArrowLeft
+  Calendar
+  Clock
+  Lock
+  Shield
+  ShieldCheck
+  TrendingUp
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
-const ZeroTrustAISecurityFramework2025 = () => {
+constZeroTrustAISecurityFramework2025 = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Zero-Trust AI Security Framework: Enterprise Implementation Guide |
-          Zion Tech Group
+          Zero-TrustAISecurity Framework: EnterpriseImplementationGuide |
+          ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Comprehensive zero-trust security framework for AI systems. Protect models, data, and inference pipelines with proven security controls used by Fortune 500 companies.'
+        <metaname = 'description'
+          content='Comprehensivezero-trustsecurityframework forAIsystems. Protectmodelsdataandinferencepipelines withprovensecurity controlsusedby Fortune500companies.'
         />
-        <meta
-          name='keywords'
-          content='AI security, zero trust, model security, ML security, AI governance, enterprise security'
+        <metaname = 'keywords'
+          content='AIsecurityzerotrustmodelsecurityMLsecurityAIgovernanceenterprisesecurity'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/zero-trust-ai-security-framework-2025'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-red-900/30 to-slate-900'>
-        {/* Hero Section */}
-        <div className='relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 py-16'>
-          <div className='absolute inset-0 bg-black/20'></div>
-          <div className='container mx-auto px-6 relative z-10'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors'
+      <divclassName='min-h-screenbg-gradient-to-brfrom-slate-900via-red-900/30to-slate-900' > {/* HeroSection */ }
+        <divclassName = 'relativeoverflow-hiddenbg-gradient-to-rfrom-red-600to-orange-600py-16'>
+          <divclassName='absoluteinset-0bg-black/20' />
+          <divclassName='containermx-autopx-6relativez-10'>
+            <Linkto='/blog'
+              className='inline-flexitems-centertext-white/90hover: text-whitemb-8transition-colors'
             >
-              <ArrowLeft className='w-4 h-4 mr-2' />
-              Back to Blog
+              <ArrowLeftclassName='w-4 h-4mr-2' />
+              BacktoBlog
             </Link>
 
-            <div className='max-w-4xl'>
-              <div className='flex flex-wrap gap-3 mb-6'>
-                <span className='px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+            <divclassName='max-w-4xl'>
+              <divclassName='flexflex-wrapgap-3mb-6'>
+                <spanclassName='px-4py-2bg-white/20backdrop-blur-smrounded-fulltext-whitetext-smfont-medium'>
                   🔒 Security
                 </span>
-                <span className='px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
-                  🛡️ Zero Trust
+                <spanclassName='px-4py-2bg-white/20backdrop-blur-smrounded-fulltext-whitetext-smfont-medium'>
+                  🛡️ ZeroTrust
                 </span>
-                <span className='px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                <spanclassName='px-4py-2bg-emerald-500/30backdrop-blur-smrounded-fulltext-whitetext-smfont-medium'>
                   ⭐ Featured
                 </span>
               </div>
 
-              <h1 className='text-4xl md:text-5xl font-bold text-white mb-6 leading-tight'>
-                Zero-Trust AI Security Framework: Protecting Models, Data &
-                Inference Pipelines
+              <h1className='text-4xlmd:text-5xlfont-boldtext-whitemb-6leading-tight'>
+                Zero-TrustAISecurity Framework: ProtectingModelsData &
+                InferencePipelines
               </h1>
 
-              <div className='flex flex-wrap items-center gap-6 text-white/90'>
-                <div className='flex items-center'>
-                  <Calendar className='w-5 h-5 mr-2' />
-                  <span>October 1, 2025</span>
+              <divclassName = 'flexflex-wrapitems-centergap-6text-white/90'>
+                <divclassName='flexitems-center'>
+                  <CalendarclassName='w-5 h-5mr-2' />
+                  <span>October 12025</span>
                 </div>
-                <div className='flex items-center'>
-                  <Clock className='w-5 h-5 mr-2' />
-                  <span>14 min read</span>
+                <divclassName = 'flexitems-center'>
+                  <ClockclassName='w-5 h-5mr-2' />
+                  <span>14minread</span>
                 </div>
-                <div className='flex items-center'>
-                  <TrendingUp className='w-5 h-5 mr-2' />
-                  <span>Mission Critical</span>
+                <divclassName='flexitems-center'>
+                  <TrendingUpclassName='w-5 h-5mr-2' />
+                  <span>MissionCritical</span>
                 </div>
               </div>
             </div>
@@ -83,242 +78,226 @@ const ZeroTrustAISecurityFramework2025 = () => {
         </div>
 
         {/* Content */}
-        <article className='container mx-auto px-6 py-16 max-w-4xl'>
-          <div className='prose prose-invert prose-lg max-w-none'>
-            {/* Threat Landscape */}
-            <div className='bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12'>
-              <h2 className='text-2xl font-bold text-white mb-4 flex items-center'>
-                <AlertTriangle className='w-6 h-6 mr-2 text-red-400' />
-                The AI Security Crisis
+        <articleclassName='containermx-autopx-6py-16max-w-4xl'>
+          <divclassName='proseprose-invertprose-lgmax-w-none'>
+            {/* ThreatLandscape */}
+            <divclassName='bg-gradient-to-rfrom-red-500/10to-orange-500/10border-l-4border-red-500p-6rounded-r-lgmb-12'>
+              <h2className='text-2xlfont-boldtext-whitemb-4flexitems-center'>
+                <AlertTriangleclassName='w-6 h-6mr-2text-red-400' />
+                TheAISecurity Crisis
               </h2>
-              <p className='text-gray-300 leading-relaxed mb-4'>
-                AI systems face unprecedented security challenges: model theft,
-                data poisoning, adversarial attacks, and prompt injection.
-                Traditional perimeter security fails for distributed AI
-                architectures. Zero-trust frameworks are now mandatory for
-                enterprise AI deployments.
+              <pclassName='text-gray-300leading-relaxedmb-4'>
+                AIsystemsface unprecedentedsecuritychallenges: modeltheft
+                datapoisoningadversarialattacksandpromptinjection.
+                Traditionalperimetersecurity failsfordistributed AIarchitectures. Zero-trustframeworksare nowmandatoryfor
+                enterpriseAIdeployments.
               </p>
-              <div className='bg-red-500/20 border border-red-500/30 rounded p-4'>
-                <p className='text-red-300 font-semibold'>
-                  🚨 67% of enterprises report AI-related security incidents in
-                  2025 (Gartner)
+              <divclassName = 'bg-red-500/20borderborder-red-500/30roundedp-4'>
+                <pclassName='text-red-300font-semibold'>
+                  🚨 67% ofenterprisesreport AI-relatedsecurityincidents in2025 (Gartner)
                 </p>
               </div>
             </div>
 
-            {/* Core Principles */}
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center'>
-                <ShieldCheck className='w-8 h-8 mr-3 text-emerald-400' />
-                Zero-Trust AI: Core Principles
+            {/* CorePrinciples */}
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-center'>
+                <ShieldCheckclassName='w-8 h-8mr-3text-emerald-400' />
+                Zero-TrustAI: CorePrinciples
               </h2>
 
-              <div className='space-y-6'>
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3 flex items-center'>
-                    <span className='text-2xl mr-2'>1️⃣</span>
-                    Never Trust, Always Verify
+              <divclassName='space-y-6'>
+                <divclassName='bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3flexitems-center'>
+                    <spanclassName='text-2xlmr-2'>1️⃣</span>
+                    NeverTrustAlwaysVerify
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Every request to models, data stores, and inference
-                    endpoints requires authentication, authorization, and
-                    continuous validation—even from internal services.
+                  <pclassName = 'text-gray-300mb-4'>
+                    Everyrequestto modelsdatastoresandinferenceendpoints requiresauthenticationauthorizationandcontinuousvalidation—evenfrominternal services.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-emerald-400 font-mono mb-1'>
-                      ✓ Mutual TLS (mTLS) for all service-to-service
-                      communication
+                  <divclassName = 'bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-emerald-400font-monomb-1'>
+                      ✓ MutualTLS (mTLS) forallservice-to-servicecommunication
                     </p>
-                    <p className='text-sm text-emerald-400 font-mono mb-1'>
-                      ✓ Short-lived JWT tokens (5-15 minute expiry) with refresh
-                      rotation
+                    <pclassName = 'text-smtext-emerald-400font-monomb-1'>
+                      ✓ Short-livedJWTtokens (5-15minuteexpiry) withrefreshrotation
                     </p>
-                    <p className='text-sm text-emerald-400 font-mono'>
-                      ✓ Continuous authentication with behavioral analysis
+                    <pclassName = 'text-smtext-emerald-400font-mono'>
+                      ✓ Continuousauthenticationwith behavioralanalysis
                     </p>
                   </div>
                 </div>
 
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3 flex items-center'>
-                    <span className='text-2xl mr-2'>2️⃣</span>
-                    Least-Privilege Access
+                <divclassName='bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3flexitems-center'>
+                    <spanclassName='text-2xlmr-2'>2️⃣</span>
+                    Least-PrivilegeAccess
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Grant minimum permissions required for each component. AI
-                    agents should not have blanket access to entire databases or
-                    model repositories.
+                  <pclassName='text-gray-300mb-4'>
+                    Grantminimumpermissions requiredforeach component. AIagentsshould nothaveblanket accesstoentire databasesormodel repositories.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-cyan-400 font-mono mb-1'>
-                      → Fine-grained RBAC with attribute-based access control
+                  <divclassName='bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-cyan-400font-monomb-1'>
+                      → Fine-grainedRBACwith attribute-basedaccesscontrol
                       (ABAC)
                     </p>
-                    <p className='text-sm text-cyan-400 font-mono mb-1'>
-                      → Policy-as-Code with Open Policy Agent (OPA)
+                    <pclassName = 'text-smtext-cyan-400font-monomb-1'>
+                      → Policy-as-CodewithOpen PolicyAgent (OPA)
                     </p>
-                    <p className='text-sm text-cyan-400 font-mono'>
-                      → Just-in-time (JIT) privilege escalation with approval
-                      workflows
+                    <pclassName = 'text-smtext-cyan-400font-mono'>
+                      → Just-in-time (JIT) privilegeescalationwith approvalworkflows
                     </p>
                   </div>
                 </div>
 
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3 flex items-center'>
-                    <span className='text-2xl mr-2'>3️⃣</span>
-                    Assume Breach
+                <divclassName = 'bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3flexitems-center'>
+                    <spanclassName='text-2xlmr-2'>3️⃣</span>
+                    AssumeBreach
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Design systems expecting compromise. Implement detection,
-                    containment, and recovery mechanisms to minimize blast
-                    radius when breaches occur.
+                  <pclassName='text-gray-300mb-4'>
+                    Designsystemsexpecting compromise. Implementdetection
+                    containmentandrecoverymechanisms tominimizeblast
+                    radiuswhenbreaches occur.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-orange-400 font-mono mb-1'>
-                      🔥 Network segmentation with micro-segmentation (Cilium,
+                  <divclassName = 'bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-orange-400font-monomb-1'>
+                      🔥 Networksegmentationwith micro-segmentation (Cilium
                       Calico)
                     </p>
-                    <p className='text-sm text-orange-400 font-mono mb-1'>
-                      🔥 Real-time anomaly detection with SIEM integration
+                    <pclassName = 'text-smtext-orange-400font-monomb-1'>
+                      🔥 Real-timeanomalydetection withSIEMintegration
                     </p>
-                    <p className='text-sm text-orange-400 font-mono'>
-                      🔥 Automated incident response playbooks (PagerDuty,
+                    <pclassName='text-smtext-orange-400font-mono'>
+                      🔥 Automatedincidentresponse playbooks (PagerDuty
                       Tines)
                     </p>
                   </div>
                 </div>
 
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3 flex items-center'>
-                    <span className='text-2xl mr-2'>4️⃣</span>
-                    End-to-End Encryption
+                <divclassName = 'bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3flexitems-center'>
+                    <spanclassName='text-2xlmr-2'>4️⃣</span>
+                    End-to-EndEncryption
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Protect data in transit, at rest, and during inference. Use
-                    homomorphic encryption or confidential computing for
-                    sensitive workloads.
+                  <pclassName='text-gray-300mb-4'>
+                    Protectdatain transitatrestandduringinference. Usehomomorphicencryption orconfidentialcomputing forsensitiveworkloads.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-purple-400 font-mono mb-1'>
-                      🔐 TLS 1.3+ for all network traffic
+                  <divclassName = 'bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-purple-400font-monomb-1'>
+                      🔐 TLS1.3+ forallnetwork traffic
                     </p>
-                    <p className='text-sm text-purple-400 font-mono mb-1'>
-                      🔐 AES-256 encryption for data at rest (S3, EBS, GCS)
+                    <pclassName='text-smtext-purple-400font-monomb-1'>
+                      🔐 AES-256encryptionfor dataatrest (S3EBSGCS)
                     </p>
-                    <p className='text-sm text-purple-400 font-mono'>
-                      🔐 Confidential VMs (AMD SEV, Intel TDX) for sensitive
-                      inference
+                    <pclassName = 'text-smtext-purple-400font-mono'>
+                      🔐 ConfidentialVMs (AMDSEVIntelTDX) forsensitiveinference
                     </p>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* Implementation Architecture */}
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center'>
-                <Lock className='w-8 h-8 mr-3 text-blue-400' />
-                Reference Architecture
+            {/* ImplementationArchitecture */}
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-center'>
+                <LockclassName='w-8 h-8mr-3text-blue-400' />
+                ReferenceArchitecture
               </h2>
 
-              <div className='bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6'>
-                <h3 className='text-2xl font-semibold text-white mb-6'>
-                  Five-Layer Security Model
+              <divclassName='bg-gradient-to-brfrom-slate-800to-slate-900p-8rounded-lgborderborder-slate-700mb-6'>
+                <h3className='text-2xlfont-semiboldtext-whitemb-6'>
+                  Five-LayerSecurityModel
                 </h3>
 
-                <div className='space-y-6'>
-                  <div className='flex items-start'>
-                    <div className='flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-lg flex items-center justify-center mr-4'>
-                      <span className='text-3xl'>🚪</span>
+                <divclassName='space-y-6'>
+                  <divclassName='flexitems-start'>
+                    <divclassName='flex-shrink-0 w-16h-16bg-red-500/20rounded-lgflexitems-centerjustify-centermr-4'>
+                      <spanclassName='text-3xl'>🚪</span>
                     </div>
                     <div>
-                      <h4 className='text-lg font-semibold text-white mb-2'>
-                        Layer 1: Identity & Access Management
+                      <h4className='text-lgfont-semiboldtext-whitemb-2'>
+                        Layer1: Identity & AccessManagement
                       </h4>
-                      <p className='text-gray-400 mb-2'>
-                        Centralized identity provider (Okta, Auth0) with SSO,
-                        MFA, and adaptive authentication. All humans and
-                        services get unique identities.
+                      <pclassName='text-gray-400mb-2'>
+                        Centralizedidentityprovider (OktaAuth0) withSSO
+                        MFAandadaptiveauthentication. Allhumansand
+                        servicesgetunique identities.
                       </p>
-                      <p className='text-sm text-emerald-400'>
-                        Tools: Keycloak, Okta, AWS IAM Identity Center
+                      <pclassName = 'text-smtext-emerald-400'>
+                        Tools: KeycloakOktaAWSIAMIdentity Center
                       </p>
                     </div>
                   </div>
 
-                  <div className='flex items-start'>
-                    <div className='flex-shrink-0 w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mr-4'>
-                      <span className='text-3xl'>🛡️</span>
+                  <divclassName = 'flexitems-start'>
+                    <divclassName='flex-shrink-0 w-16h-16bg-orange-500/20rounded-lgflexitems-centerjustify-centermr-4'>
+                      <spanclassName='text-3xl'>🛡️</span>
                     </div>
                     <div>
-                      <h4 className='text-lg font-semibold text-white mb-2'>
-                        Layer 2: Network Security
+                      <h4className='text-lgfont-semiboldtext-whitemb-2'>
+                        Layer2: NetworkSecurity
                       </h4>
-                      <p className='text-gray-400 mb-2'>
-                        Service mesh (Istio, Linkerd) with mTLS, traffic
-                        encryption, and zero-trust networking. Every
-                        microservice authenticated before communication.
+                      <pclassName='text-gray-400mb-2'>
+                        Servicemesh (IstioLinkerd) withmTLStrafficencryptionandzero-trustnetworking. Everymicroserviceauthenticated beforecommunication.
                       </p>
-                      <p className='text-sm text-cyan-400'>
-                        Tools: Istio, Linkerd, Cilium, Consul Connect
+                      <pclassName = 'text-smtext-cyan-400'>
+                        Tools: IstioLinkerdCiliumConsulConnect
                       </p>
                     </div>
                   </div>
 
-                  <div className='flex items-start'>
-                    <div className='flex-shrink-0 w-16 h-16 bg-yellow-500/20 rounded-lg flex items-center justify-center mr-4'>
-                      <span className='text-3xl'>📋</span>
+                  <divclassName = 'flexitems-start'>
+                    <divclassName='flex-shrink-0 w-16h-16bg-yellow-500/20rounded-lgflexitems-centerjustify-centermr-4'>
+                      <spanclassName='text-3xl'>📋</span>
                     </div>
                     <div>
-                      <h4 className='text-lg font-semibold text-white mb-2'>
-                        Layer 3: Policy Enforcement
+                      <h4className='text-lgfont-semiboldtext-whitemb-2'>
+                        Layer3: PolicyEnforcement
                       </h4>
-                      <p className='text-gray-400 mb-2'>
-                        Declarative policies as code. API gateway enforces rate
-                        limits, quotas, and access controls. OPA evaluates
-                        policies in real-time.
+                      <pclassName='text-gray-400mb-2'>
+                        Declarativepoliciesas code. APIgatewayenforces ratelimitsquotasandaccesscontrols. OPAevaluatespolicies inreal-time.
                       </p>
-                      <p className='text-sm text-blue-400'>
-                        Tools: Open Policy Agent, Kong Gateway, AWS API Gateway
+                      <pclassName = 'text-smtext-blue-400'>
+                        Tools: OpenPolicyAgentKongGatewayAWSAPIGateway
                       </p>
                     </div>
                   </div>
 
-                  <div className='flex items-start'>
-                    <div className='flex-shrink-0 w-16 h-16 bg-green-500/20 rounded-lg flex items-center justify-center mr-4'>
-                      <span className='text-3xl'>🔍</span>
+                  <divclassName = 'flexitems-start'>
+                    <divclassName='flex-shrink-0 w-16h-16bg-green-500/20rounded-lgflexitems-centerjustify-centermr-4'>
+                      <spanclassName='text-3xl'>🔍</span>
                     </div>
                     <div>
-                      <h4 className='text-lg font-semibold text-white mb-2'>
-                        Layer 4: Monitoring & Detection
+                      <h4className='text-lgfont-semiboldtext-whitemb-2'>
+                        Layer4: Monitoring & Detection
                       </h4>
-                      <p className='text-gray-400 mb-2'>
-                        Continuous monitoring with behavioral baselines.
-                        ML-powered anomaly detection flags suspicious patterns
-                        (unusual data access, model queries).
+                      <pclassName='text-gray-400mb-2'>
+                        Continuousmonitoringwith behavioralbaselines.
+                        ML-poweredanomalydetection flagssuspiciouspatterns
+                        (unusualdataaccessmodelqueries).
                       </p>
-                      <p className='text-sm text-purple-400'>
-                        Tools: Datadog Security, Splunk SIEM, Wiz, Lacework
+                      <pclassName = 'text-smtext-purple-400'>
+                        Tools: DatadogSecuritySplunkSIEMWizLacework
                       </p>
                     </div>
                   </div>
 
-                  <div className='flex items-start'>
-                    <div className='flex-shrink-0 w-16 h-16 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4'>
-                      <span className='text-3xl'>📜</span>
+                  <divclassName = 'flexitems-start'>
+                    <divclassName='flex-shrink-0 w-16h-16bg-purple-500/20rounded-lgflexitems-centerjustify-centermr-4'>
+                      <spanclassName='text-3xl'>📜</span>
                     </div>
                     <div>
-                      <h4 className='text-lg font-semibold text-white mb-2'>
-                        Layer 5: Audit & Compliance
+                      <h4className='text-lgfont-semiboldtext-whitemb-2'>
+                        Layer5: Audit & Compliance
                       </h4>
-                      <p className='text-gray-400 mb-2'>
-                        Immutable audit logs for every model access, data query,
-                        and inference request. Automated compliance reporting
-                        (SOC 2, ISO 27001, GDPR).
+                      <pclassName='text-gray-400mb-2'>
+                        Immutableauditlogs foreverymodel accessdataquery
+                        andinferencerequest. Automatedcompliancereporting
+                        (SOC2ISO27001GDPR).
                       </p>
-                      <p className='text-sm text-pink-400'>
-                        Tools: AWS CloudTrail, GCP Audit Logs, Vanta, Drata
+                      <pclassName = 'text-smtext-pink-400'>
+                        Tools: AWSCloudTrailGCPAuditLogsVantaDrata
                       </p>
                     </div>
                   </div>
@@ -326,103 +305,90 @@ const ZeroTrustAISecurityFramework2025 = () => {
               </div>
             </section>
 
-            {/* Attack Vectors & Mitigations */}
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center'>
-                <Shield className='w-8 h-8 mr-3 text-red-400' />
-                Common AI Attack Vectors & Mitigations
+            {/* AttackVectors & Mitigations */}
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-center'>
+                <ShieldclassName='w-8 h-8mr-3text-red-400' />
+                CommonAIAttack Vectors & Mitigations
               </h2>
 
-              <div className='space-y-6'>
-                <div className='bg-red-500/10 border-l-4 border-red-500 p-6 rounded-r-lg'>
-                  <h3 className='text-xl font-bold text-white mb-3'>
-                    🎯 Prompt Injection Attacks
+              <divclassName='space-y-6'>
+                <divclassName='bg-red-500/10border-l-4border-red-500p-6rounded-r-lg'>
+                  <h3className='text-xlfont-boldtext-whitemb-3'>
+                    🎯 PromptInjectionAttacks
                   </h3>
-                  <p className='text-gray-300 mb-3'>
-                    Malicious users manipulate prompts to extract training data,
-                    bypass safety filters, or execute unauthorized actions.
+                  <pclassName='text-gray-300mb-3'>
+                    Malicioususersmanipulate promptstoextract trainingdata
+                    bypasssafetyfiltersorexecuteunauthorized actions.
                   </p>
-                  <div className='bg-slate-900/70 p-4 rounded'>
-                    <p className='text-emerald-400 font-semibold mb-2'>
-                      Mitigations:
-                    </p>
-                    <ul className='text-sm text-gray-300 space-y-1'>
+                  <divclassName = 'bg-slate-900/70p-4rounded'>
+                    <pclassName='text-emerald-400font-semiboldmb-2'>
+                      Mitigations: </p>
+                    <ulclassName='text-smtext-gray-300space-y-1'>
                       <li>
-                        • Input sanitization with LLM guardrails (NeMo
-                        Guardrails, Llama Guard)
+                        • Inputsanitizationwith LLMguardrails (NeMoGuardrailsLlamaGuard)
                       </li>
                       <li>
-                        • Prompt templates with variable substitution (no direct
-                        user input)
+                        • Prompttemplateswith variablesubstitution (nodirectuser input)
                       </li>
                       <li>
-                        • Separate system prompts from user prompts with clear
-                        delimiters
+                        • Separatesystemprompts fromuserprompts withcleardelimiters
                       </li>
                       <li>
-                        • Output validation to detect leaked system instructions
+                        • Outputvalidationto detectleakedsystem instructions
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <div className='bg-orange-500/10 border-l-4 border-orange-500 p-6 rounded-r-lg'>
-                  <h3 className='text-xl font-bold text-white mb-3'>
-                    ☠️ Data Poisoning
+                <divclassName = 'bg-orange-500/10border-l-4border-orange-500p-6rounded-r-lg'>
+                  <h3className='text-xlfont-boldtext-whitemb-3'>
+                    ☠️ DataPoisoning
                   </h3>
-                  <p className='text-gray-300 mb-3'>
-                    Attackers inject malicious data during training to create
-                    backdoors or degrade model performance.
+                  <pclassName='text-gray-300mb-3'>
+                    Attackersinjectmalicious dataduringtraining tocreatebackdoors ordegrademodel performance.
                   </p>
-                  <div className='bg-slate-900/70 p-4 rounded'>
-                    <p className='text-cyan-400 font-semibold mb-2'>
-                      Mitigations:
-                    </p>
-                    <ul className='text-sm text-gray-300 space-y-1'>
+                  <divclassName='bg-slate-900/70p-4rounded'>
+                    <pclassName='text-cyan-400font-semiboldmb-2'>
+                      Mitigations: </p>
+                    <ulclassName='text-smtext-gray-300space-y-1'>
                       <li>
-                        • Data provenance tracking with cryptographic signatures
+                        • Dataprovenancetracking withcryptographicsignatures
                       </li>
                       <li>
-                        • Outlier detection on training datasets (Isolation
-                        Forest, LOF)
+                        • Outlierdetectionon trainingdatasets (IsolationForestLOF)
                       </li>
                       <li>
-                        • Differential privacy during training (DP-SGD) to limit
-                        single-sample impact
+                        • Differentialprivacyduring training (DP-SGD) tolimitsingle-sampleimpact
                       </li>
                       <li>
-                        • Model behavioral testing pre/post training for drift
-                        detection
+                        • Modelbehavioraltesting pre/posttrainingfor driftdetection
                       </li>
                     </ul>
                   </div>
                 </div>
 
-                <div className='bg-purple-500/10 border-l-4 border-purple-500 p-6 rounded-r-lg'>
-                  <h3 className='text-xl font-bold text-white mb-3'>
-                    🕵️ Model Extraction
+                <divclassName = 'bg-purple-500/10border-l-4border-purple-500p-6rounded-r-lg'>
+                  <h3className='text-xlfont-boldtext-whitemb-3'>
+                    🕵️ ModelExtraction
                   </h3>
-                  <p className='text-gray-300 mb-3'>
-                    Adversaries query models repeatedly to reverse-engineer
-                    weights or steal intellectual property.
+                  <pclassName='text-gray-300mb-3'>
+                    Adversariesquerymodels repeatedlytoreverse-engineerweightsor stealintellectualproperty.
                   </p>
-                  <div className='bg-slate-900/70 p-4 rounded'>
-                    <p className='text-blue-400 font-semibold mb-2'>
-                      Mitigations:
-                    </p>
-                    <ul className='text-sm text-gray-300 space-y-1'>
+                  <divclassName='bg-slate-900/70p-4rounded'>
+                    <pclassName='text-blue-400font-semiboldmb-2'>
+                      Mitigations: </p>
+                    <ulclassName='text-smtext-gray-300space-y-1'>
                       <li>
-                        • Rate limiting (per user/API key) with adaptive
-                        throttling
+                        • Ratelimiting (peruser/APIkey) withadaptivethrottling
                       </li>
                       <li>
-                        • Query pattern analysis to detect scraping (abnormal
-                        distributions)
+                        • Querypatternanalysis todetectscraping (abnormaldistributions)
                       </li>
-                      <li>• Watermarking model outputs for traceability</li>
+                      <li>• Watermarkingmodeloutputs fortraceability</li>
                       <li>
-                        • Model obfuscation with knowledge distillation to
-                        smaller variants
+                        • Modelobfuscationwith knowledgedistillationto
+                        smallervariants
                       </li>
                     </ul>
                   </div>
@@ -431,42 +397,42 @@ const ZeroTrustAISecurityFramework2025 = () => {
             </section>
 
             {/* Results */}
-            <section className='mb-12'>
-              <div className='bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30'>
-                <h2 className='text-3xl font-bold text-white mb-6'>
-                  Security Posture Improvements
+            <sectionclassName = 'mb-12'>
+              <divclassName='bg-gradient-to-rfrom-emerald-500/20to-blue-500/20p-8rounded-lgborderborder-emerald-500/30'>
+                <h2className='text-3xlfont-boldtext-whitemb-6'>
+                  SecurityPostureImprovements
                 </h2>
-                <div className='grid md:grid-cols-2 gap-6'>
+                <divclassName='gridmd: grid-cols-2gap-6'>
                   <div>
-                    <p className='text-5xl font-bold text-emerald-400 mb-2'>
+                    <pclassName='text-5xlfont-boldtext-emerald-400mb-2'>
                       92%
                     </p>
-                    <p className='text-gray-300'>
-                      Reduction in security incidents post-implementation
+                    <pclassName='text-gray-300'>
+                      Reductioninsecurity incidentspost-implementation
                     </p>
                   </div>
                   <div>
-                    <p className='text-5xl font-bold text-blue-400 mb-2'>
-                      23 min
+                    <pclassName='text-5xlfont-boldtext-blue-400mb-2'>
+                      23min
                     </p>
-                    <p className='text-gray-300'>
-                      Mean time to detect (MTTD) security anomalies
+                    <pclassName='text-gray-300'>
+                      Meantimeto detect (MTTD) securityanomalies
                     </p>
                   </div>
                   <div>
-                    <p className='text-5xl font-bold text-purple-400 mb-2'>
+                    <pclassName = 'text-5xlfont-boldtext-purple-400mb-2'>
                       100%
                     </p>
-                    <p className='text-gray-300'>
-                      Compliance audit pass rate (SOC 2 Type II)
+                    <pclassName='text-gray-300'>
+                      Complianceauditpass rate (SOC2Type II)
                     </p>
                   </div>
                   <div>
-                    <p className='text-5xl font-bold text-cyan-400 mb-2'>
+                    <pclassName = 'text-5xlfont-boldtext-cyan-400mb-2'>
                       $4.8M
                     </p>
-                    <p className='text-gray-300'>
-                      Average prevented breach costs per year
+                    <pclassName='text-gray-300'>
+                      Averagepreventedbreach costsperyear
                     </p>
                   </div>
                 </div>
@@ -474,21 +440,19 @@ const ZeroTrustAISecurityFramework2025 = () => {
             </section>
 
             {/* CTA */}
-            <section className='text-center'>
-              <div className='bg-gradient-to-r from-red-600 to-orange-600 p-8 rounded-lg'>
-                <h2 className='text-3xl font-bold text-white mb-4'>
-                  Secure Your AI Infrastructure
+            <sectionclassName = 'text-center'>
+              <divclassName='bg-gradient-to-rfrom-red-600to-orange-600p-8rounded-lg'>
+                <h2className='text-3xlfont-boldtext-whitemb-4'>
+                  SecureYourAI Infrastructure
                 </h2>
-                <p className='text-xl text-white/90 mb-6'>
-                  Get a comprehensive security audit of your AI systems from our
-                  experts.
+                <pclassName='text-xltext-white/90mb-6'>
+                  Getacomprehensive securityauditof yourAIsystems fromourexperts.
                 </p>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors'
+                <Linkto='/contact'
+                  className='inline-flexitems-centerpx-8py-4bg-whitetext-red-600font-semiboldrounded-lghover: bg-gray-100transition-colors'
                 >
-                  Request Security Assessment
-                  <ArrowLeft className='w-5 h-5 ml-2 rotate-180' />
+                  RequestSecurityAssessment
+                  <ArrowLeftclassName='w-5 h-5ml-2rotate-180' />
                 </Link>
               </div>
             </section>
@@ -499,4 +463,4 @@ const ZeroTrustAISecurityFramework2025 = () => {
   );
 };
 
-export default ZeroTrustAISecurityFramework2025;
+exportdefaultZeroTrustAISecurityFramework2025;

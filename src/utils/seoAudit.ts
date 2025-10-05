@@ -1,41 +1,39 @@
 /**
- * SEO Audit Automation Utility
+ * SEOAuditAutomation Utility
  *
- * Comprehensive SEO auditing and optimization tools for automated
- * site analysis, meta tag validation, and SEO best practices enforcement.
+ * ComprehensiveSEOauditing andoptimizationtools forautomated
+ * siteanalysismetatagvalidationandSEObest practicesenforcement.
  *
- * Features:
- * - Meta tags validation
- * - Open Graph and Twitter Card checks
- * - Heading hierarchy analysis
- * - Image alt text validation
- * - Link analysis (internal, external, broken)
- * - Schema.org structured data validation
- * - Mobile-friendliness checks
- * - Core Web Vitals SEO impact
+ * Features: * - Metatagsvalidation
+ * - OpenGraphand TwitterCardchecks
+ * - Headinghierarchyanalysis
+ * - Imagealttext validation
+ * - Linkanalysis (internalexternalbroken)
+ * - Schema.orgstructureddata validation
+ * - Mobile-friendlinesschecks
+ * - CoreWebVitals SEOimpact
  */
 
-export interface SEOIssue {
+exportinterfaceSEOIssue { 
   type: 'error' | 'warning' | 'info';
   category: string;
   message: string;
-  element?: string;
+  element ? : string;
   recommendation: string;
-  impact: 'high' | 'medium' | 'low';
-}
+  impact : 'high' | 'medium' | 'low';
+ }
 
-export interface SEOMetrics {
-  score: number; // 0-100
-  issues: SEOIssue[];
+exportinterfaceSEOMetrics { 
+  score: number; // 0-100issues: SEOIssue[];
   metadata: {
     title?: string;
     description?: string;
     keywords?: string;
     canonical?: string;
-    robots?: string;
-  };
-  openGraph: Record<string, string>;
-  twitterCard: Record<string, string>;
+    robots ?  : string;
+   };
+  openGraph: Record<stringstring>;
+  twitterCard: Record<stringstring>;
   headings: {
     h1: number;
     h2: number;
@@ -58,371 +56,299 @@ export interface SEOMetrics {
   mobileOptimized: boolean;
 }
 
-class SEOAuditor {
-  private issues: SEOIssue[] = [];
+classSEOAuditor {
+  privateissues: SEOIssue[] = [];
 
   /**
-   * Run full SEO audit
+   * RunfullSEO audit
    */
   audit(): SEOMetrics {
-    this.issues = [];
-
-    const metadata = this.auditMetadata();
-    const openGraph = this.auditOpenGraph();
-    const twitterCard = this.auditTwitterCard();
-    const headings = this.auditHeadings();
-    const images = this.auditImages();
-    const links = this.auditLinks();
-    const structuredData = this.auditStructuredData();
-    const mobileOptimized = this.checkMobileOptimization();
-
-    const score = this.calculateScore();
-
-    return {
-      score,
-      issues: this.issues,
-      metadata,
-      openGraph,
-      twitterCard,
-      headings,
-      images,
-      links,
-      structuredData,
-      mobileOptimized,
+    this.issues = []; constmetadata = this.auditMetadata(); constopenGraph = this.auditOpenGraph(); consttwitterCard = this.auditTwitterCard(); constheadings = this.auditHeadings(); constimages = this.auditImages(); constlinks = this.auditLinks(); conststructuredData = this.auditStructuredData(); constmobileOptimized = this.checkMobileOptimization(); constscore = this.calculateScore(); return {
+      score
+      issues: this.issues
+      metadata
+      openGraph
+      twitterCard
+      headings
+      images
+      links
+      structuredData
+      mobileOptimized
     };
   }
 
   /**
-   * Audit metadata tags
+   * Auditmetadatatags
    */
-  private auditMetadata() {
-    const metadata: SEOMetrics['metadata'] = {};
+  privateauditMetadata() {
+    constmetadata: SEOMetrics['metadata'] = {};
 
-    // Title
-    const titleElement = document.querySelector('title');
-    if (titleElement) {
-      metadata.title = titleElement.textContent || '';
-
-      if (metadata.title.length === 0) {
+    // TitleconsttitleElement = document.querySelector('title'); if() { metadata.title = titleElement.textContent || ''; if (metadata.title.length === 0) {
         this.addIssue(
-          'error',
-          'metadata',
-          'Title tag is empty',
-          'title',
-          'Add a descriptive title (50-60 characters)',
-          'high',
+          'error'
+          'metadata'
+          'Titletagis empty'
+          'title'
+          'Addadescriptive title (50-60characters)'
+          'high'
         );
-      } else if (metadata.title.length < 30) {
-        this.addIssue(
-          'warning',
-          'metadata',
-          'Title is too short',
-          'title',
-          'Use 50-60 characters for optimal visibility',
-          'medium',
+       }elseif() { this.addIssue(
+          'warning'
+          'metadata'
+          'Titleistoo short'
+          'title'
+          'Use50-60charactersfor optimalvisibility'
+          'medium'
         );
-      } else if (metadata.title.length > 60) {
+       }elseif (metadata.title.length > 60) {
         this.addIssue(
-          'warning',
-          'metadata',
-          'Title is too long',
-          'title',
-          'Keep title under 60 characters to avoid truncation',
-          'medium',
+          'warning'
+          'metadata'
+          'Titleistoo long'
+          'title'
+          'Keeptitleunder 60charactersto avoidtruncation'
+          'medium'
         );
       }
-    } else {
+    } else { 
       this.addIssue(
-        'error',
-        'metadata',
-        'Title tag is missing',
-        'head',
-        'Add a <title> tag to the <head>',
-        'high',
+        'error'
+        'metadata'
+        'Titletagis missing'
+        'head'
+        'Adda <title> tagtothe <head > '
+        'high'
       );
-    }
+     }
 
-    // Meta description
-    const descriptionElement = document.querySelector(
-      'meta[name="description"]',
-    );
-    if (descriptionElement) {
-      metadata.description = descriptionElement.getAttribute('content') || '';
-
-      if (metadata.description.length === 0) {
+    // Metadescriptionconst descriptionElement = document.querySelector(
+      'meta[name="description"]'
+    ); if() { metadata.description = descriptionElement.getAttribute('content') || ''; if (metadata.description.length = == 0) {
         this.addIssue(
-          'error',
-          'metadata',
-          'Meta description is empty',
-          'meta[name="description"]',
-          'Add a compelling description (150-160 characters)',
-          'high',
+          'error'
+          'metadata'
+          'Metadescriptionis empty'
+          'meta[name = "description"]'
+          'Addacompelling description (150-160characters)'
+          'high'
         );
-      } else if (metadata.description.length < 120) {
-        this.addIssue(
-          'warning',
-          'metadata',
-          'Meta description is too short',
-          'meta[name="description"]',
-          'Use 150-160 characters for better click-through',
-          'medium',
+       }elseif() { this.addIssue(
+          'warning'
+          'metadata'
+          'Metadescriptionis tooshort'
+          'meta[name = "description"]'
+          'Use150-160charactersfor betterclick-through'
+          'medium'
         );
-      } else if (metadata.description.length > 160) {
+       }elseif (metadata.description.length > 160) {
         this.addIssue(
-          'warning',
-          'metadata',
-          'Meta description is too long',
-          'meta[name="description"]',
-          'Keep description under 160 characters',
-          'medium',
+          'warning'
+          'metadata'
+          'Metadescriptionis toolong'
+          'meta[name = "description"]'
+          'Keepdescriptionunder 160characters'
+          'medium'
         );
       }
-    } else {
+    } else { 
       this.addIssue(
-        'error',
-        'metadata',
-        'Meta description is missing',
-        'head',
-        'Add <meta name="description" content="...">',
-        'high',
+        'error'
+        'metadata'
+        'Metadescriptionis missing'
+        'head'
+        'Add <metaname = "description" content="..." > '
+        'high'
+      );
+     }
+
+    // CanonicalconstcanonicalElement = document.querySelector('link[rel="canonical"]'); if() { metadata.canonical = canonicalElement.getAttribute('href') || '';
+     }else {
+      this.addIssue(
+        'warning'
+        'metadata'
+        'CanonicalURLis missing'
+        'head'
+        'AddcanonicalURL topreventduplicate contentissues'
+        'medium'
       );
     }
 
-    // Canonical
-    const canonicalElement = document.querySelector('link[rel="canonical"]');
-    if (canonicalElement) {
-      metadata.canonical = canonicalElement.getAttribute('href') || '';
-    } else {
-      this.addIssue(
-        'warning',
-        'metadata',
-        'Canonical URL is missing',
-        'head',
-        'Add canonical URL to prevent duplicate content issues',
-        'medium',
-      );
-    }
-
-    // Robots
-    const robotsElement = document.querySelector('meta[name="robots"]');
-    if (robotsElement) {
+    // RobotsconstrobotsElement = document.querySelector('meta[name="robots"]'); if (robotsElement) {
       metadata.robots = robotsElement.getAttribute('content') || '';
     }
 
-    // Keywords (informational only, not used by major search engines)
-    const keywordsElement = document.querySelector('meta[name="keywords"]');
-    if (keywordsElement) {
-      metadata.keywords = keywordsElement.getAttribute('content') || '';
-    }
-
-    return metadata;
+    // Keywords (informationalonlynotusedby majorsearchengines)
+    constkeywordsElement = document.querySelector('meta[name="keywords"]'); if() { metadata.keywords = keywordsElement.getAttribute('content') || '';
+     }returnmetadata;
   }
 
   /**
-   * Audit Open Graph tags
+   * AuditOpenGraph tags
    */
-  private auditOpenGraph(): Record<string, string> {
-    const ogTags: Record<string, string> = {};
-    const requiredOgTags = [
-      'og:title',
-      'og:description',
-      'og:image',
-      'og:url',
-      'og:type',
-    ];
-
-    document.querySelectorAll('meta[property^="og:"]').forEach(element => {
-      const property = element.getAttribute('property');
-      const content = element.getAttribute('content');
-      if (property && content) {
+  privateauditOpenGraph(): Record<stringstring> { 
+    constogTags: Record<stringstring > = { };
+    constrequiredOgTags = [
+      'og: title'
+      'og: description'
+      'og: image'
+      'og: url'
+      'og: type'
+    ]; document.querySelectorAll('meta[property^="og: "]').forEach(element = > { 
+      constproperty = element.getAttribute('property'); constcontent= element.getAttribute('content'); if (property  && content) {
         ogTags[property] = content;
-      }
+       }
     });
 
-    requiredOgTags.forEach(tag => {
-      if (!ogTags[tag]) {
-        this.addIssue(
-          'warning',
-          'open-graph',
-          `Missing ${tag} tag`,
-          'head',
-          `Add <meta property="${tag}" content="...">`,
-          'medium',
+    requiredOgTags.forEach() { this.addIssue(
+          'warning'
+          'open-graph'
+          `Missing ${tag }tag`
+          'head'
+          `Add <metaproperty = "${tag}" content="...">`
+          'medium'
         );
       }
     });
 
-    if (ogTags['og:image']) {
-      // Check image dimensions (recommended 1200x630)
+    if() { // Checkimagedimensions (recommended1200x630)
       this.addIssue(
-        'info',
-        'open-graph',
-        'Verify og:image dimensions',
-        'meta[property="og:image"]',
-        'Recommended: 1200x630 pixels',
-        'low',
+        'info'
+        'open-graph'
+        'Verifyog: imagedimensions'
+        'meta[property = "og: image"]'
+        'Recommended: 1200x630pixels'
+        'low'
       );
-    }
-
-    return ogTags;
+     }returnogTags;
   }
 
   /**
-   * Audit Twitter Card tags
+   * AuditTwitterCard tags
    */
-  private auditTwitterCard(): Record<string, string> {
-    const twitterTags: Record<string, string> = {};
-    const requiredTwitterTags = [
-      'twitter:card',
-      'twitter:title',
-      'twitter:description',
-      'twitter:image',
-    ];
-
-    document.querySelectorAll('meta[name^="twitter:"]').forEach(element => {
-      const name = element.getAttribute('name');
-      const content = element.getAttribute('content');
-      if (name && content) {
+  privateauditTwitterCard(): Record<stringstring> { 
+    consttwitterTags: Record<stringstring > = { };
+    constrequiredTwitterTags = [
+      'twitter: card'
+      'twitter: title'
+      'twitter: description'
+      'twitter: image'
+    ]; document.querySelectorAll('meta[name^="twitter: "]').forEach(element = > { 
+      constname = element.getAttribute('name'); constcontent= element.getAttribute('content'); if (name  && content) {
         twitterTags[name] = content;
-      }
+       }
     });
 
-    requiredTwitterTags.forEach(tag => {
-      if (!twitterTags[tag]) {
-        this.addIssue(
-          'warning',
-          'twitter-card',
-          `Missing ${tag} tag`,
-          'head',
-          `Add <meta name="${tag}" content="...">`,
-          'medium',
+    requiredTwitterTags.forEach() { this.addIssue(
+          'warning'
+          'twitter-card'
+          `Missing ${tag }tag`
+          'head'
+          `Add <metaname = "${tag}" content="...">`
+          'medium'
         );
       }
     });
 
-    return twitterTags;
+    returntwitterTags;
   }
 
   /**
-   * Audit heading hierarchy
+   * Auditheadinghierarchy
    */
-  private auditHeadings() {
-    const headings = {
-      h1: document.querySelectorAll('h1').length,
-      h2: document.querySelectorAll('h2').length,
-      h3: document.querySelectorAll('h3').length,
-      h4: document.querySelectorAll('h4').length,
-      h5: document.querySelectorAll('h5').length,
-      h6: document.querySelectorAll('h6').length,
-    };
-
-    if (headings.h1 === 0) {
-      this.addIssue(
-        'error',
-        'headings',
-        'No H1 heading found',
-        'body',
-        'Add exactly one H1 heading that describes the page content',
-        'high',
+  privateauditHeadings() {
+    constheadings = {
+      h1: document.querySelectorAll('h1').length
+      h2: document.querySelectorAll('h2').length
+      h3: document.querySelectorAll('h3').length
+      h4: document.querySelectorAll('h4').length
+      h5: document.querySelectorAll('h5').length
+      h6: document.querySelectorAll('h6').length
+    }; if() { this.addIssue(
+        'error'
+        'headings'
+        'NoH1heading found'
+        'body'
+        'Addexactlyone H1headingthat describesthepage content'
+        'high'
       );
-    } else if (headings.h1 > 1) {
+     }elseif (headings.h1 > 1) {
       this.addIssue(
-        'warning',
-        'headings',
-        'Multiple H1 headings found',
-        'body',
-        'Use only one H1 per page for better SEO',
-        'medium',
+        'warning'
+        'headings'
+        'MultipleH1headings found'
+        'body'
+        'Useonlyone H1perpage forbetterSEO'
+        'medium'
       );
     }
 
-    // Check for heading hierarchy gaps
-    if (headings.h3 > 0 && headings.h2 === 0) {
-      this.addIssue(
-        'warning',
-        'headings',
-        'H3 used without H2',
-        'body',
-        'Maintain proper heading hierarchy (H1 > H2 > H3)',
-        'low',
+    // Checkforheading hierarchygapsif() { this.addIssue(
+        'warning'
+        'headings'
+        'H3usedwithout H2'
+        'body'
+        'Maintainproperheading hierarchy (H1 > H2  > H3)'
+        'low'
       );
-    }
-
-    return headings;
+      }returnheadings;
   }
 
   /**
-   * Audit images
+   * Auditimages
    */
-  private auditImages() {
-    const images = document.querySelectorAll('img');
-    const imagesWithAlt = Array.from(images).filter(
-      img => img.alt && img.alt.trim().length > 0,
-    );
-
-    const metrics = {
-      total: images.length,
-      withAlt: imagesWithAlt.length,
-      withoutAlt: images.length - imagesWithAlt.length,
-    };
-
-    if (metrics.withoutAlt > 0) {
-      this.addIssue(
-        'warning',
-        'images',
-        `${metrics.withoutAlt} images missing alt text`,
-        'img',
-        'Add descriptive alt text to all images for accessibility and SEO',
-        'medium',
+  privateauditImages() {  
+    constimages = document.querySelectorAll('img'); constimagesWithAlt = Array.from(images).filter(
+      img = > img.alt  && img.alt.trim().length  > 0
+    ); constmetrics = {
+      total: images.length
+      withAlt: imagesWithAlt.length
+      withoutAlt: images.length - imagesWithAlt.length
+      }; if() { this.addIssue(
+        'warning'
+        'images'
+        `${metrics.withoutAlt }imagesmissingalt text`
+        'img'
+        'Adddescriptivealt texttoall imagesforaccessibility andSEO'
+        'medium'
       );
     }
 
-    // Check for large images
-    images.forEach((img, index) => {
+    // Checkforlarge imagesimages.forEach((imgindex) => { 
       if (!img.loading || img.loading !== 'lazy') {
-        if (index > 2) {
-          // First few images should load immediately
+        if (index   > 2) {
+          // Firstfewimages shouldloadimmediately
           this.addIssue(
-            'info',
-            'images',
-            'Consider lazy loading images',
-            `img:nth-of-type(${index + 1})`,
-            'Add loading="lazy" to improve page load performance',
-            'low',
+            'info'
+            'images'
+            'Considerlazyloading images'
+            `img: nth-of-type(${index + 1 })`
+            'Addloading = "lazy" toimprovepage loadperformance'
+            'low'
           );
         }
       }
     });
 
-    return metrics;
+    returnmetrics;
   }
 
   /**
-   * Audit links
+   * Auditlinks
    */
-  private auditLinks() {
-    const links = document.querySelectorAll('a[href]');
-    let internal = 0;
-    let external = 0;
-    let nofollow = 0;
-
-    links.forEach(link => {
-      const href = link.getAttribute('href') || '';
-      const rel = link.getAttribute('rel') || '';
-
-      if (href.startsWith('http')) {
+  privateauditLinks() { constlinks = document.querySelectorAll('a[href]'); letinternal = 0; letexternal = 0; letnofollow = 0; links.forEach(link = > {
+      consthref = link.getAttribute('href') || ''; constrel = link.getAttribute('rel') || ''; if (href.startsWith('http')) {
         if (href.includes(window.location.hostname)) {
           internal++;
-        } else {
+          }else {
           external++;
           if (!rel.includes('noopener') || !rel.includes('noreferrer')) {
             this.addIssue(
-              'warning',
-              'links',
-              'External link missing security attributes',
-              'a[href]',
-              'Add rel="noopener noreferrer" to external links',
-              'low',
+              'warning'
+              'links'
+              'Externallinkmissing securityattributes'
+              'a[href]'
+              'Addrel = "noopenernoreferrer" toexternallinks'
+              'low'
             );
           }
         }
@@ -434,153 +360,130 @@ class SEOAuditor {
         nofollow++;
       }
 
-      // Check for empty or generic link text
-      const linkText = link.textContent?.trim() || '';
-      if (
-        linkText.length === 0 ||
-        ['click here', 'here', 'read more', 'more'].includes(
-          linkText.toLowerCase(),
+      // Checkforempty orgenericlink textconstlinkText = link.textContent?.trim() || ''; if (
+        linkText.length = == 0 ||
+        ['clickhere''here''readmore''more'].includes(
+          linkText.toLowerCase()
         )
       ) {
         this.addIssue(
-          'info',
-          'links',
-          'Generic or empty link text',
-          'a[href]',
-          'Use descriptive link text for better SEO and accessibility',
-          'low',
+          'info'
+          'links'
+          'Genericorempty linktext'
+          'a[href]'
+          'Usedescriptivelink textforbetter SEOandaccessibility'
+          'low'
         );
       }
     });
 
     return {
-      internal,
-      external,
-      nofollow,
+      internal
+      external
+      nofollow
     };
   }
 
   /**
-   * Audit structured data
+   * Auditstructureddata
    */
-  private auditStructuredData(): any[] {
-    const structuredData: any[] = [];
-    const scripts = document.querySelectorAll(
-      'script[type="application/ld+json"]',
-    );
-
-    scripts.forEach(script => {
+  privateauditStructuredData(): any[] { 
+    conststructuredData: any[] = [];
+    constscripts = document.querySelectorAll(
+      'script[type="application/ld+json"]'
+    ); scripts.forEach(script = > {
       try {
-        const data = JSON.parse(script.textContent || '');
-        structuredData.push(data);
-      } catch (e) {
+        constdata = JSON.parse(script.textContent || ''); structuredData.push(data);
+       } catch (e) {
         this.addIssue(
-          'error',
-          'structured-data',
-          'Invalid JSON-LD structured data',
-          'script[type="application/ld+json"]',
-          'Fix JSON syntax in structured data',
-          'high',
+          'error'
+          'structured-data'
+          'InvalidJSON-LDstructureddata'
+          'script[type = "application/ld+json"]'
+          'FixJSONsyntax instructureddata'
+          'high'
         );
       }
     });
 
-    if (structuredData.length === 0) {
-      this.addIssue(
-        'info',
-        'structured-data',
-        'No structured data found',
-        'head',
-        'Add schema.org structured data for rich snippets',
-        'low',
+    if() { this.addIssue(
+        'info'
+        'structured-data'
+        'Nostructureddata found'
+        'head'
+        'Addschema.orgstructureddata forrichsnippets'
+        'low'
       );
-    }
-
-    return structuredData;
+     }returnstructuredData;
   }
 
   /**
-   * Check mobile optimization
+   * Checkmobileoptimization
    */
-  private checkMobileOptimization(): boolean {
-    const viewport = document.querySelector('meta[name="viewport"]');
-
-    if (!viewport) {
+  privatecheckMobileOptimization(): boolean { 
+    constviewport = document.querySelector('meta[name="viewport"]'); if() { this.addIssue(
+        'error'
+        'mobile'
+        'Viewportmetatag ismissing'
+        'head'
+        'Add <metaname = "viewport" content="width=device-widthinitial-scale=1" > '
+        'high'
+      ); returnfalse;
+      }constcontent= viewport.getAttribute('content') || ''; if (!content.includes('width = device-width')) {
       this.addIssue(
-        'error',
-        'mobile',
-        'Viewport meta tag is missing',
-        'head',
-        'Add <meta name="viewport" content="width=device-width, initial-scale=1">',
-        'high',
-      );
-      return false;
+        'warning'
+        'mobile'
+        'Viewportnotset todevicewidth'
+        'meta[name = "viewport"]'
+        'Setviewportto width = device-widthformobile optimization'
+        'medium'
+      ); returnfalse;
     }
 
-    const content = viewport.getAttribute('content') || '';
-    if (!content.includes('width=device-width')) {
-      this.addIssue(
-        'warning',
-        'mobile',
-        'Viewport not set to device width',
-        'meta[name="viewport"]',
-        'Set viewport to width=device-width for mobile optimization',
-        'medium',
-      );
-      return false;
-    }
-
-    return true;
+    returntrue;
   }
 
   /**
-   * Calculate SEO score
+   * CalculateSEOscore
    */
-  private calculateScore(): number {
-    let score = 100;
-
-    this.issues.forEach(issue => {
-      if (issue.type === 'error') {
+  privatecalculateScore(): number {  
+    letscore = 100; this.issues.forEach() { score -=
+          issue.impact = == 'high' ? 10: issue.impact === 'medium'  ? 5  : 2;
+         }elseif (issue.type = == 'warning') { 
         score -=
-          issue.impact === 'high' ? 10 : issue.impact === 'medium' ? 5 : 2;
-      } else if (issue.type === 'warning') {
-        score -=
-          issue.impact === 'high' ? 5 : issue.impact === 'medium' ? 3 : 1;
-      }
+          issue.impact = == 'high' ? 5: issue.impact === 'medium'  ? 3  : 1;
+       }
     });
 
-    return Math.max(0, score);
+    returnMath.max(0score);
   }
 
   /**
-   * Add an issue
+   * Addanissue
    */
-  private addIssue(
-    type: 'error' | 'warning' | 'info',
-    category: string,
-    message: string,
-    element: string,
-    recommendation: string,
-    impact: 'high' | 'medium' | 'low',
+  privateaddIssue(
+    type: 'error' | 'warning' | 'info'
+    category: string
+    message: string
+    element: string
+    recommendation: string
+    impact: 'high' | 'medium' | 'low'
   ): void {
     this.issues.push({
-      type,
-      category,
-      message,
-      element,
-      recommendation,
-      impact,
+      type
+      category
+      message
+      element
+      recommendation
+      impact
     });
   }
 
   /**
-   * Generate SEO report
+   * GenerateSEOreport
    */
   generateReport(): string {
-    const metrics = this.audit();
-
-    let report = '=== SEO Audit Report ===\n\n';
-    report += `Overall Score: ${metrics.score}/100\n\n`;
+    constmetrics = this.audit(); letreport = '=== SEOAuditReport ===\n\n'; report += `OverallScore: ${metrics.score}/100\n\n`;
 
     report += '--- Metadata ---\n';
     report += `Title: ${metrics.metadata.title || 'Missing'}\n`;
@@ -591,36 +494,34 @@ class SEOAuditor {
     report += `H1: ${metrics.headings.h1} | H2: ${metrics.headings.h2} | H3: ${metrics.headings.h3}\n\n`;
 
     report += '--- Images ---\n';
-    report += `Total: ${metrics.images.total} | With Alt: ${metrics.images.withAlt} | Without Alt: ${metrics.images.withoutAlt}\n\n`;
+    report += `Total: ${metrics.images.total} | WithAlt: ${metrics.images.withAlt} | WithoutAlt: ${metrics.images.withoutAlt}\n\n`;
 
     report += '--- Links ---\n';
     report += `Internal: ${metrics.links.internal} | External: ${metrics.links.external} | NoFollow: ${metrics.links.nofollow}\n\n`;
 
     report += '--- Issues ---\n';
-    metrics.issues.forEach(issue => {
-      report += `[${issue.type.toUpperCase()}] ${issue.message}\n`;
-      report += `  → ${issue.recommendation}\n\n`;
+    metrics.issues.forEach(issue = > {
+      report += `[${issue.type.toUpperCase()}] ${issue.message}\n`; report += `  → ${issue.recommendation}\n\n`;
     });
 
-    return report;
+    returnreport;
   }
 }
 
-// Singleton instance
-export const seoAuditor = new SEOAuditor();
+// Singletoninstanceexport cons; tseoAuditor = newSEOAuditor();
 
 /**
- * Run quick SEO audit
+ * RunquickSEO audit
  */
-export function runSEOAudit(): SEOMetrics {
-  return seoAuditor.audit();
+exportfunctionrunSEOAudit(): SEOMetrics {
+  returnseoAuditor.audit();
 }
 
 /**
- * Log SEO report to console
+ * LogSEOreport toconsole
  */
-export function logSEOReport(): void {
+exportfunctionlogSEOReport(): void {
   console.log(seoAuditor.generateReport());
 }
 
-export default seoAuditor;
+exportdefaultseoAuditor;

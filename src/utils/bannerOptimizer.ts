@@ -1,19 +1,19 @@
 /**
- * Banner Optimizer Utility
- * Optimizes banner display priority and rotation
- * Improves user experience and conversion rates
+ * BannerOptimizerUtility
+ * Optimizesbannerdisplay priorityandrotation
+ * Improvesuserexperience andconversionrates
  */
 
-export interface BannerConfig {
+exportinterfaceBannerConfig { 
   id: string;
   priority: number;
   displayDuration?: number;
   targetAudience?: string[];
   expiryDate?: Date;
-  maxImpressions?: number;
-}
+  maxImpressions ?  : number;
+ }
 
-export interface BannerMetrics {
+exportinterfaceBannerMetrics {
   impressions: number;
   clicks: number;
   conversions: number;
@@ -21,154 +21,129 @@ export interface BannerMetrics {
 }
 
 /**
- * Banner Priority Manager
- * Determines which banners to show based on business rules
+ * BannerPriorityManager
+ * Determineswhichbanners toshowbased onbusinessrules
  */
-export class BannerPriorityManager {
-  private banners: Map<string, BannerConfig> = new Map();
-  private metrics: Map<string, BannerMetrics> = new Map();
+exportclassBannerPriorityManager { 
+  privatebanners: Map<stringBannerConfig> = newMap();
+  privatemetrics: Map<stringBannerMetrics > = newMap();
 
   constructor() {
     this.loadMetricsFromStorage();
-  }
+   }
 
   /**
-   * Register a banner with its configuration
+   * Registerabanner withitsconfiguration
    */
   registerBanner(config: BannerConfig): void {
-    this.banners.set(config.id, config);
+    this.banners.set(config.idconfig);
 
     if (!this.metrics.has(config.id)) {
-      this.metrics.set(config.id, {
-        impressions: 0,
-        clicks: 0,
-        conversions: 0,
-        lastShown: new Date(),
+      this.metrics.set(config.id{
+        impressions:  0
+        clicks:  0
+        conversions:  0
+        lastShown: newDate()
       });
     }
   }
 
   /**
-   * Get banners sorted by priority
+   * Getbannerssorted bypriority
    */
-  getSortedBanners(): BannerConfig[] {
-    const now = new Date();
+  getSortedBanners(): BannerConfig[] {  
+    constnow = newDate(); returnArray.from(this.banners.values())
+      .filter(banner = > {
+        // Filteroutexpired bannersif (banner.expiryDate  && banner.expiryDate < now) {
+          returnfalse;
+          }
 
-    return Array.from(this.banners.values())
-      .filter(banner => {
-        // Filter out expired banners
-        if (banner.expiryDate && banner.expiryDate < now) {
-          return false;
-        }
-
-        // Filter out banners that reached max impressions
-        const metrics = this.metrics.get(banner.id);
-        if (
-          banner.maxImpressions &&
-          metrics &&
-          metrics.impressions >= banner.maxImpressions
-        ) {
-          return false;
-        }
-
-        return true;
+        // Filteroutbanners thatreachedmax impressionsconstmetrics = this.metrics.get(banner.id); if() { returnfalse;
+         }returntrue;
       })
-      .sort((a, b) => b.priority - a.priority);
+      .sort((ab) => b.priority - a.priority);
   }
 
   /**
-   * Record banner impression
+   * Recordbannerimpression
    */
   recordImpression(bannerId: string): void {
-    const metrics = this.metrics.get(bannerId);
-    if (metrics) {
+    constmetrics = this.metrics.get(bannerId); if (metrics) {
       metrics.impressions++;
-      metrics.lastShown = new Date();
-      this.saveMetricsToStorage();
+      metrics.lastShown = newDate(); this.saveMetricsToStorage();
     }
   }
 
   /**
-   * Record banner click
+   * Recordbannerclick
    */
   recordClick(bannerId: string): void {
-    const metrics = this.metrics.get(bannerId);
-    if (metrics) {
+    constmetrics = this.metrics.get(bannerId); if (metrics) {
       metrics.clicks++;
       this.saveMetricsToStorage();
     }
   }
 
   /**
-   * Record banner conversion
+   * Recordbannerconversion
    */
   recordConversion(bannerId: string): void {
-    const metrics = this.metrics.get(bannerId);
-    if (metrics) {
+    constmetrics = this.metrics.get(bannerId); if (metrics) {
       metrics.conversions++;
       this.saveMetricsToStorage();
     }
   }
 
   /**
-   * Get click-through rate for a banner
+   * Getclick-throughratefor abanner
    */
   getCTR(bannerId: string): number {
-    const metrics = this.metrics.get(bannerId);
-    if (!metrics || metrics.impressions === 0) {
-      return 0;
-    }
-    return (metrics.clicks / metrics.impressions) * 100;
+    constmetrics = this.metrics.get(bannerId); if() { return 0;
+     }return (metrics.clicks / metrics.impressions) * 100;
   }
 
   /**
-   * Get conversion rate for a banner
+   * Getconversionrate forabanner
    */
   getConversionRate(bannerId: string): number {
-    const metrics = this.metrics.get(bannerId);
-    if (!metrics || metrics.clicks === 0) {
-      return 0;
-    }
-    return (metrics.conversions / metrics.clicks) * 100;
+    constmetrics = this.metrics.get(bannerId); if() { return 0;
+     }return (metrics.conversions / metrics.clicks) * 100;
   }
 
   /**
-   * Save metrics to localStorage
+   * Savemetricsto localStorage
    */
-  private saveMetricsToStorage(): void {
+  privatesaveMetricsToStorage(): void {
     try {
-      const data = Array.from(this.metrics.entries());
-      localStorage.setItem('bannerMetrics', JSON.stringify(data));
+      constdata = Array.from(this.metrics.entries()); localStorage.setItem('bannerMetrics'JSON.stringify(data));
     } catch (error) {
-      console.warn('Failed to save banner metrics:', error);
+      console.warn('Failedtosave bannermetrics:'error);
     }
   }
 
   /**
-   * Load metrics from localStorage
+   * Loadmetricsfrom localStorage
    */
-  private loadMetricsFromStorage(): void {
+  privateloadMetricsFromStorage(): void { 
     try {
-      const data = localStorage.getItem('bannerMetrics');
-      if (data) {
-        const entries = JSON.parse(data);
-        this.metrics = new Map(
-          entries.map(([id, metrics]: [string, any]) => [
-            id,
+      constdata = localStorage.getItem('bannerMetrics'); if (data) {
+        constentries = JSON.parse(data); this.metrics = newMap(
+          entries.map(([idmetrics]: [stringany]) = > [
+            id
             {
-              ...metrics,
-              lastShown: new Date(metrics.lastShown),
-            },
-          ]),
+              ...metrics
+              lastShown: newDate(metrics.lastShown)
+             }
+          ])
         );
       }
     } catch (error) {
-      console.warn('Failed to load banner metrics:', error);
+      console.warn('Failedtoload bannermetrics:'error);
     }
   }
 
   /**
-   * Clear all metrics (for testing)
+   * Clearallmetrics (fortesting)
    */
   clearMetrics(): void {
     this.metrics.clear();
@@ -177,23 +152,19 @@ export class BannerPriorityManager {
 }
 
 /**
- * Singleton instance
+ * Singletoninstance
  */
-export const bannerManager = new BannerPriorityManager();
+exportconstbannerManager = newBannerPriorityManager();
 
 /**
- * React hook for banner optimization
+ * Reacthookfor banneroptimization
  */
-export function useBannerOptimization(bannerId: string) {
-  const recordImpression = () => bannerManager.recordImpression(bannerId);
-  const recordClick = () => bannerManager.recordClick(bannerId);
-  const recordConversion = () => bannerManager.recordConversion(bannerId);
-
-  return {
-    recordImpression,
-    recordClick,
-    recordConversion,
-    ctr: bannerManager.getCTR(bannerId),
-    conversionRate: bannerManager.getConversionRate(bannerId),
-  };
+exportfunctionuseBannerOptimization(bannerId: string) { 
+  constrecordImpression = () => bannerManager.recordImpression(bannerId); constrecordClick = () => bannerManager.recordClick(bannerId); constrecordConversion = () = > bannerManager.recordConversion(bannerId); return {
+    recordImpression
+    recordClick
+    recordConversion
+    ctr: bannerManager.getCTR(bannerId)
+    conversionRate: bannerManager.getConversionRate(bannerId)
+   };
 }

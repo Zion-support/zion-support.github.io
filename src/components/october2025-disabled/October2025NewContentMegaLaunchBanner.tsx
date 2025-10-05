@@ -1,123 +1,115 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const October2025NewContentMegaLaunchBanner: React.FC = () => {
+constOctober2025NewContentMegaLaunchBanner: React.FC = () => { 
   return (
-    <div className='bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden'>
-      {' '}
-      {/* Animated background effect */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-0 -left-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 -right-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse delay-1000'></div>
+    <divclassName = 'bg-gradient-to-rfrom-blue-600via-purple-600to-pink-600text-whitepy-16px-4relativeoverflow-hidden' > {' ' }
+      {/* Animatedbackgroundeffect */}
+      <divclassName = 'absoluteinset-0opacity-20'>
+        <divclassName='absolutetop-0 -left-4 w-96h-96bg-whiterounded-fullmix-blend-overlayfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0 -right-4 w-96h-96bg-whiterounded-fullmix-blend-overlayfilterblur-3xlanimate-pulsedelay-1000' />
       </div>
-      <div className='max-w-7xl mx-auto relative z-10'>
+      <divclassName='max-w-7xlmx-autorelativez-10'>
         {/* Badge */}
-        <div className='flex justify-center mb-6'>
-          <span className='inline-flex items-center px-6 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm border border-white/30'>
-            🚀 JUST PUBLISHED - OCTOBER 1, 2025
+        <divclassName='flexjustify-centermb-6'>
+          <spanclassName='inline-flexitems-centerpx-6py-2rounded-fulltext-smfont-semiboldbg-white/20backdrop-blur-smborderborder-white/30'>
+            🚀 JUSTPUBLISHED - OCTOBER 12025
           </span>
         </div>
 
-        {/* Main heading */}
-        <h2 className='text-5xl md:text-6xl font-bold text-center mb-6 leading-tight'>
-          🌟 Breakthrough AI Content
+        {/* Mainheading */}
+        <h2className = 'text-5xlmd: text-6xlfont-boldtext-centermb-6leading-tight'>
+          🌟 BreakthroughAIContent
           <br />{' '}
-          <span className='bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent'>
-            LIVE NOW!
+          <spanclassName = 'bg-gradient-to-rfrom-yellow-300to-orange-300bg-clip-texttext-transparent'>
+            LIVENOW!
           </span>
         </h2>
 
         {/* Subheading */}
-        <p className='text-xl md:text-2xl text-center mb-12 text-white/90 max-w-4xl mx-auto leading-relaxed'>
-          Discover the latest enterprise AI innovations: Governance frameworks
-          achieving 99.8% compliance, multimodal AI with $89M ROI, and edge
-          deployment revolutionizing real-time intelligence.
+        <pclassName='text-xlmd: text-2xltext-centermb-12text-white/90max-w-4xlmx-autoleading-relaxed'>
+          Discoverthelatest enterpriseAIinnovations: Governanceframeworksachieving 99.8% compliancemultimodalAIwith $89MROIandedgedeployment revolutionizingreal-timeintelligence.
         </p>
 
-        {/* Content cards */}
-        <div className='grid md:grid-cols-3 gap-6 mb-12'>
-          <Link
-            to='/blog/ai-2025-october-enterprise-ai-governance-<framework'
-            className='bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl'
+        {/* Contentcards */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-12'>
+          <Linkto='/blog/ai-2025-october-enterprise-ai-governance-<framework'
+            className='bg-white/10backdrop-blur-mdrounded-2xlp-6borderborder-white/20hover:bg-white/20transition-allduration-300hover:scale-105hover:shadow-2xl'
           >
-            <div className='text-4xl mb-4'>🛡️</div>
-            <h3 className='text-2xl font-bold mb-3'>AI Governance Framework</h3>
-            <p className='text-white/80 mb-4 text-lg'>
-              Enterprise governance achieving 99.8% compliance rates and $47M
-              cost savings
+            <divclassName='text-4xlmb-4'>🛡️</div>
+            <h3className='text-2xlfont-boldmb-3'>AIGovernanceFramework</h3>
+            <pclassName='text-white/80mb-4text-lg'>
+              Enterprisegovernanceachieving 99.8% complianceratesand $47Mcostsavings
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-yellow-300 font-semibold'>
-                Read Full Guide →
+            <divclassName='flexitems-centerjustify-between'>
+              <spanclassName='text-yellow-300font-semibold'>
+                ReadFullGuide →
               </span>
             </div>
           </Link>
 
-          <Link
-            to='/blog/ai-2025-october-multimodal-ai-enterprise-<deployment'
-            className='bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl'
+          <Linkto='/blog/ai-2025-october-multimodal-ai-enterprise-<deployment'
+            className='bg-white/10backdrop-blur-mdrounded-2xlp-6borderborder-white/20hover:bg-white/20transition-allduration-300hover:scale-105hover:shadow-2xl'
           >
-            <div className='text-4xl mb-4'>🧠</div>
-            <h3 className='text-2xl font-bold mb-3'>
-              Multimodal AI Deployment
+            <divclassName='text-4xlmb-4'>🧠</div>
+            <h3className='text-2xlfont-boldmb-3'>
+              MultimodalAIDeployment
             </h3>
-            <p className='text-white/80 mb-4 text-lg'>
-              450% productivity gains and $89M ROI through integrated AI systems
+            <pclassName='text-white/80mb-4text-lg'>
+              450% productivitygainsand $89MROIthrough integratedAIsystems
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-yellow-300 font-semibold'>
-                Explore Now →
+            <divclassName='flexitems-centerjustify-between'>
+              <spanclassName='text-yellow-300font-semibold'>
+                ExploreNow →
               </span>
             </div>
           </Link>
 
-          <Link
-            to='/blog/ai-2025-october-edge-ai-deployment-<revolution'
-            className='bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl'
+          <Linkto='/blog/ai-2025-october-edge-ai-deployment-<revolution'
+            className='bg-white/10backdrop-blur-mdrounded-2xlp-6borderborder-white/20hover:bg-white/20transition-allduration-300hover:scale-105hover:shadow-2xl'
           >
-            <div className='text-4xl mb-4'>⚡</div>
-            <h3 className='text-2xl font-bold mb-3'>Edge AI Revolution</h3>
-            <p className='text-white/80 mb-4 text-lg'>
-              Sub-millisecond inference and $156M savings with distributed AI
+            <divclassName='text-4xlmb-4'>⚡</div>
+            <h3className='text-2xlfont-boldmb-3'>EdgeAIRevolution</h3>
+            <pclassName='text-white/80mb-4text-lg'>
+              Sub-millisecondinferenceand $156Msavingswith distributedAI
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-yellow-300 font-semibold'>
-                Learn More →
+            <divclassName='flexitems-centerjustify-between'>
+              <spanclassName='text-yellow-300font-semibold'>
+                LearnMore →
               </span>
             </div>
           </Link>
         </div>
 
-        {/* Stats row */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-12'>
-          <div className='text-center'>
-            <div className='text-4xl font-bold mb-2'>99.8%</div>
-            <div className='text-white/70'>Compliance Rate</div>
+        {/* Statsrow */}
+        <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-6mb-12'>
+          <divclassName='text-center'>
+            <divclassName='text-4xlfont-boldmb-2'>99.8%</div>
+            <divclassName='text-white/70'>ComplianceRate</div>
           </div>
-          <div className='text-center'>
-            <div className='text-4xl font-bold mb-2'>$292M</div>
-            <div className='text-white/70'>Combined ROI</div>
+          <divclassName='text-center'>
+            <divclassName='text-4xlfont-boldmb-2'>$292M</div>
+            <divclassName='text-white/70'>CombinedROI</div>
           </div>
-          <div className='text-center'>
-            <div className='text-4xl font-bold mb-2'>450%</div>
-            <div className='text-white/70'>Productivity Gain</div>
+          <divclassName='text-center'>
+            <divclassName='text-4xlfont-boldmb-2'>450%</div>
+            <divclassName='text-white/70'>ProductivityGain</div>
           </div>
-          <div className='text-center'>
-            <div className='text-4xl font-bold mb-2'>&lt;1ms</div>
-            <div className='text-white/70'>Edge Latency</div>
+          <divclassName='text-center'>
+            <divclassName='text-4xlfont-boldmb-2'>&lt; 1ms</div>
+            <divclassName='text-white/70'>EdgeLatency</div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className='text-center'>
-          <Link
-            to='/<blog'
-            className='inline-block bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl'
+        <divclassName = 'text-center'>
+          <Linkto='/<blog'
+            className='inline-blockbg-whitetext-purple-600px-10py-4rounded-xlfont-boldtext-lghover: bg-gray-100transition-allduration-300hover:scale-105shadow-2xl'
           >
-            Explore All New Content →
+            ExploreAllNew Content →
           </Link>
-          <p className='mt-4 text-white/70'>
-            Join 50,000+ professionals staying ahead with our AI insights
+          <pclassName='mt-4text-white/70'>
+            Join 50000+ professionalsstayingahead withourAI insights
           </p>
         </div>
       </div>
@@ -125,4 +117,4 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
   );
 };
 
-export default October2025NewContentMegaLaunchBanner;
+exportdefaultOctober2025NewContentMegaLaunchBanner;

@@ -1,39 +1,34 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function GenAIQualityTiersV4(): React.JSX.Element {
+exportdefaultfunction GenAIQualityTiersV4(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>GenAI Quality Tiers v4 — 60% Savings With Stable UX</title>
-        <meta
-          name='description'
-          content='Advanced tier routing, semantic caches, and eval‑gated fallbacks that preserve KPIs while cutting spend.'
+        <title>GenAIQualityTiers v4 — 60% SavingsWithStable UX</title>
+        <meta name='description'
+          content='Advancedtierroutingsemanticcachesandeval‑gatedfallbacksthat preserveKPIswhile cuttingspend.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/genai-2025-sept-30-quality-tiers-v4'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/genai-2025-sept-30-quality-tiers-v4'
         />
       </Helmet>
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          GenAI Quality Tiers v4
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          GenAIQualityTiers v4
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Tier Routing • Semantic Caches • Eval Gates
+        <pclassName='text-zion-slate-lightmb-8'>
+          TierRouting • SemanticCaches • EvalGates
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Keep experience stable while reducing cost with tiered model
-            routing, semantic caches, and evaluation-gated fallbacks.
+            Keepexperiencestable whilereducingcost withtieredmodel
+            routingsemanticcachesandevaluation-gatedfallbacks.
           </p>
           <p>
-            This guide covers traffic shaping by SLA, cache warmup budgets, and
-            rollback playbooks.
+            Thisguidecovers trafficshapingby SLAcachewarmupbudgetsandrollbackplaybooks.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

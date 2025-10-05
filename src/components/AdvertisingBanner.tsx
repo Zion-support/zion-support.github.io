@@ -1,45 +1,42 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const AdvertisingBanner: React.FC = () => {
+constAdvertisingBanner: React.FC = () => { 
   return (
-    <div className='bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white py-3 shadow-lg animate-gradient-x'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex items-center justify-center gap-4 flex-wrap'>
-          <div className='flex items-center gap-2'>
-            <Sparkles className='w-5 h-5 animate-pulse' />
-            <span className='text-sm font-bold uppercase tracking-wide'>
-              🚀 NEW - October 1, 2025
+    <divclassName = 'bg-gradient-to-rfrom-blue-600via-purple-600to-indigo-600text-whitepy-3shadow-lganimate-gradient-x'>
+      <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+        <divclassName='flexitems-centerjustify-centergap-4flex-wrap'>
+          <divclassName='flexitems-centergap-2'>
+            <SparklesclassName='w-5 h-5animate-pulse' />
+            <spanclassName='text-smfont-bolduppercasetracking-wide'>
+              🚀 NEW - October 12025
             </span>
           </div>
 
-          <div className='hidden sm:block h-6 w-px bg-white/30'></div>
+          <divclassName = 'hiddensm: blockh-6 w-pxbg-white/30' />
 
-          <p className='text-sm font-medium'>
-            <span className='font-bold'>NEW THIS WEEK: </span>
-            Vector DB Optimization at 100B+ scale & Enterprise Agent Uptime
+          <pclassName='text-smfont-medium'>
+            <spanclassName='font-bold'>NEWTHISWEEK: </span>
+            VectorDBOptimization at100B+ scale & EnterpriseAgentUptime
             99.9%
           </p>
 
-          <Link
-            to='/blog/ai-2025-oct-01-vector-database-optimization-enterprise'
-            className='inline-flex items-center gap-1 bg-white text-purple-700 hover:bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md'
+          <Linkto='/blog/ai-2025-oct-01-vector-database-optimization-enterprise'
+            className='inline-flexitems-centergap-1bg-whitetext-purple-700hover:bg-purple-50px-4py-1rounded-fulltext-smfont-semiboldtransition-allduration-300hover:scale-105shadow-md'
           >
-            <Zap className='w-4 h-4' />
-            Vector DB Guide
+            <ZapclassName='w-4 h-4' />
+            VectorDBGuide
           </Link>
 
-          <Link
-            to='/blog/ai-2025-oct-02-enterprise-agent-systems-uptime-999'
-            className='inline-flex items-center gap-1 bg-white text-purple-700 hover:bg-purple-50 px-4 py-1 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-md'
+          <Linkto='/blog/ai-2025-oct-02-enterprise-agent-systems-uptime-999'
+            className='inline-flexitems-centergap-1bg-whitetext-purple-700hover:bg-purple-50px-4py-1rounded-fulltext-smfont-semiboldtransition-allduration-300hover:scale-105shadow-md'
           >
-            <Shield className='w-4 h-4' />
-            Agent Uptime
+            <ShieldclassName='w-4 h-4' />
+            AgentUptime
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
+    </div > );
+ };
 
-export default AdvertisingBanner;
+exportdefaultAdvertisingBanner;

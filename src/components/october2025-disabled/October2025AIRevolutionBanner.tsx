@@ -1,181 +1,170 @@
 import { Link } from 'react-router-dom';
 import {
-  ArrowLeft,
+  ArrowLeft
   ArrowRight,
-  Award,
+  Award
   Brain,
-  Calendar,
+  Calendar
   CheckCircle,
-  Clock,
-  DollarSign,
-  Globe,
-  Rocket,
-  Satellite,
-  Share2,
-  Bookmark,
-  Tag,
-  Target,
-  TrendingUp,
-  Users,
-  User,
-  Zap,
-  BarChart3,
-  BookOpen,
+  Clock
+  DollarSign
+  Globe
+  Rocket
+  Satellite
+  Share2
+  Bookmark
+  Tag
+  Target
+  TrendingUp
+  Users
+  User
+  Zap
+  BarChart3
+  BookOpen
 } from 'lucide-react';
-interface October2025AIRevolutionBannerProps {
-  className?: string;
-}
-export default function October2025AIRevolutionBanner({
-  className = '',
+interfaceOctober2025AIRevolutionBannerProps { 
+  className ?  : string;
+ }
+exportdefaultfunction October2025AIRevolutionBanner({
+  className = ''
 }: October2025AIRevolutionBannerProps) {
   return (
-    <div
-      className={`bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-cyan-900/40 border-y border-purple-500/30 ${className}`}
+    <divclassName = {`bg-gradient-to-rfrom-purple-900/40via-indigo-900/40to-cyan-900/40border-yborder-purple-500/30 ${className}`}
     >
-      <div className='container mx-auto px-6 py-12'>
+      <divclassName='containermx-autopx-6py-12'>
         {/* Header */}
-        <div className='text-center mb-10'>
-          <div className='inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-4'>
-            <Sparkles className='w-5 h-5 text-yellow-400 animate-pulse' />
-            <span className='text-purple-300 font-semibold text-sm uppercase tracking-wider'>
-              🚀 JUST PUBLISHED - October 1, 2025
+        <divclassName='text-centermb-10'>
+          <divclassName='inline-flexitems-centergap-2bg-gradient-to-rfrom-purple-500/20to-cyan-500/20px-6py-2rounded-fullborderborder-purple-500/30mb-4'>
+            <SparklesclassName='w-5 h-5text-yellow-400animate-pulse' />
+            <spanclassName='text-purple-300font-semiboldtext-smuppercasetracking-wider'>
+              🚀 JUSTPUBLISHED - October 12025
             </span>
-            <Sparkles className='w-5 h-5 text-yellow-400 animate-pulse' />
+            <SparklesclassName = 'w-5 h-5text-yellow-400animate-pulse' />
           </div>
-          <h2 className='text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent'>
-            The Complete AI Revolution: 3 Essential Guides
+          <h2className='text-4xlmd: text-5xlfont-extraboldmb-4bg-gradient-to-rfrom-purple-400via-indigo-400to-cyan-400bg-clip-texttext-transparent'>
+            TheCompleteAI Revolution: 3EssentialGuides
           </h2>
-          <p className='text-xl text-white/80 max-w-4xl mx-auto leading-relaxed'>
-            <strong className='text-white'>NEW TODAY:</strong> Master autonomous
-            AI agents (94% task automation), AI-powered development tools (5x
-            faster coding), and enterprise AI safety (99.2% compliance). The
-            definitive guides for forward-thinking organizations transforming
-            with AI in 2025.
+          <pclassName='text-xltext-white/80max-w-4xlmx-autoleading-relaxed'>
+            <strongclassName='text-white'>NEWTODAY:</strong> MasterautonomousAI agents (94% taskautomation)AI-powereddevelopmenttools (5xfastercoding)andenterpriseAI safety (99.2% compliance). Thedefinitiveguides forforward-thinkingorganizationstransforming
+            withAIin 2025.
           </p>
         </div>
-        {/* Featured Articles Grid */}
-        <div className='grid md:grid-cols-3 gap-6 mb-8'>
-          {/* Article 1: Autonomous AI Agents */}
-          <Link
-            to='/blog/ai-2025-october-autonomous-ai-agents-production-deployment'
-            className='group bg-gradient-to-br from-purple-900/30 to-purple-800/20 rounded-2xl p-6 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20'
+        {/* FeaturedArticlesGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-8'>
+          {/* Article1: AutonomousAIAgents */}
+          <Linkto = '/blog/ai-2025-october-autonomous-ai-agents-production-deployment'
+            className='groupbg-gradient-to-brfrom-purple-900/30to-purple-800/20rounded-2xlp-6borderborder-purple-500/30hover: border-purple-400/60transition-allduration-300hover:transformhover:scale-105hover:shadow-xlhover:shadow-purple-500/20'
           >
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-purple-500/20 rounded-xl border border-purple-400/30 group-hover:bg-purple-500/30 transition-colors'>
-                <Bot className='w-6 h-6 text-purple-400' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-purple-500/20rounded-xlborderborder-purple-400/30group-hover:bg-purple-500/30transition-colors'>
+                <BotclassName='w-6 h-6text-purple-400' />
               </div>
-              <span className='px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/30'>
-                AUTONOMOUS AGENTS
+              <spanclassName='px-3py-1bg-purple-500/20text-purple-300text-xsfont-semiboldrounded-fullborderborder-purple-500/30'>
+                AUTONOMOUSAGENTS
               </span>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors'>
-              Autonomous AI Agents in Production 2025
+            <h3className='text-2xlfont-boldtext-whitemb-3group-hover:text-purple-300transition-colors'>
+              AutonomousAIAgents inProduction2025
             </h3>
-            <p className='text-white/70 mb-4 leading-relaxed'>
-              Deploy production-grade AI agents that automate 94% of routine
-              tasks, reduce costs by 78%, and deliver 10x productivity gains.
-              Complete guide from planning to production.
+            <pclassName='text-white/70mb-4leading-relaxed'>
+              Deployproduction-gradeAIagents thatautomate94% ofroutinetasksreducecostsby 78%anddeliver10x productivitygains.
+              Completeguidefrom planningtoproduction.
             </p>
-            <div className='grid grid-cols-3 gap-3 mb-4'>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-purple-400'>94%</div>
+            <divclassName = 'gridgrid-cols-3gap-3mb-4'>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-purple-400'>94%</div>
               </div>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-green-400'>78%</div>
-                <div className='text-xs text-white/60'>Cost Cut</div>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-green-400'>78%</div>
+                <divclassName='text-xstext-white/60'>CostCut</div>
               </div>
-              <div className='bg-black/30 rounded-lg p-3 text-center'></div>
+              <divclassName='bg-black/30rounded-lgp-3text-center' />
             </div>
-            <div className='flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-3 transition-all'>
-              <span>Read Complete Guide</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2text-purple-400font-semiboldgroup-hover: gap-3transition-all'>
+              <span>ReadCompleteGuide</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
-          {/* Article 2: LLM Development Tools */}
-          <Link
-            to='/blog/ai-2025-october-llm-powered-development-tools-revolution'
-            className='group bg-gradient-to-br from-indigo-900/30 to-indigo-800/20 rounded-2xl p-6 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-indigo-500/20'
+          {/* Article2: LLMDevelopmentTools */}
+          <Linkto = '/blog/ai-2025-october-llm-powered-development-tools-revolution'
+            className='groupbg-gradient-to-brfrom-indigo-900/30to-indigo-800/20rounded-2xlp-6borderborder-indigo-500/30hover: border-indigo-400/60transition-allduration-300hover:transformhover:scale-105hover:shadow-xlhover:shadow-indigo-500/20'
           >
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-indigo-500/20 rounded-xl border border-indigo-400/30 group-hover:bg-indigo-500/30 transition-colors'>
-                <Code2 className='w-6 h-6 text-indigo-400' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-indigo-500/20rounded-xlborderborder-indigo-400/30group-hover:bg-indigo-500/30transition-colors'>
+                <Code2className='w-6 h-6text-indigo-400' />
               </div>
-              <span className='px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full border border-indigo-500/30'>
-                AI DEVELOPMENT
+              <spanclassName='px-3py-1bg-indigo-500/20text-indigo-300text-xsfont-semiboldrounded-fullborderborder-indigo-500/30'>
+                AIDEVELOPMENT
               </span>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors'>
-              LLM-Powered Development Tools Revolution
+            <h3className='text-2xlfont-boldtext-whitemb-3group-hover:text-indigo-300transition-colors'>
+              LLM-PoweredDevelopmentTools Revolution
             </h3>
-            <p className='text-white/70 mb-4 leading-relaxed'>
-              Transform your engineering workflow with AI-native tools. Top
-              teams achieve 5x faster development, 80% fewer bugs, and 92%
-              developer satisfaction. The complete AI coding toolkit.
+            <pclassName='text-white/70mb-4leading-relaxed'>
+              Transformyourengineering workflowwithAI-nativetools. Topteamsachieve 5xfasterdevelopment80% fewerbugsand92%
+              developersatisfaction. ThecompleteAI codingtoolkit.
             </p>
-            <div className='grid grid-cols-3 gap-3 mb-4'>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-xs text-white/60'>Dev Speed</div>
+            <divclassName = 'gridgrid-cols-3gap-3mb-4'>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-xstext-white/60'>DevSpeed</div>
               </div>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-green-400'>80%</div>
-                <div className='text-xs text-white/60'>Fewer Bugs</div>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-green-400'>80%</div>
+                <divclassName='text-xstext-white/60'>FewerBugs</div>
               </div>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-cyan-400'>92%</div>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-cyan-400'>92%</div>
               </div>
             </div>
-            <div className='flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-3 transition-all'>
-              <span>Read Complete Guide</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2text-indigo-400font-semiboldgroup-hover: gap-3transition-all'>
+              <span>ReadCompleteGuide</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
-          {/* Article 3: AI Safety & Alignment */}
-          <Link
-            to='/blog/ai-2025-october-ai-safety-alignment-enterprise-deployment'
-            className='group bg-gradient-to-br from-emerald-900/30 to-cyan-800/20 rounded-2xl p-6 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-xl hover:shadow-emerald-500/20'
+          {/* Article3: AISafety & Alignment */}
+          <Linkto = '/blog/ai-2025-october-ai-safety-alignment-enterprise-deployment'
+            className='groupbg-gradient-to-brfrom-emerald-900/30to-cyan-800/20rounded-2xlp-6borderborder-emerald-500/30hover: border-emerald-400/60transition-allduration-300hover:transformhover:scale-105hover:shadow-xlhover:shadow-emerald-500/20'
           >
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-emerald-500/20 rounded-xl border border-emerald-400/30 group-hover:bg-emerald-500/30 transition-colors'>
-                <Shield className='w-6 h-6 text-emerald-400' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-emerald-500/20rounded-xlborderborder-emerald-400/30group-hover:bg-emerald-500/30transition-colors'>
+                <ShieldclassName='w-6 h-6text-emerald-400' />
               </div>
-              <span className='px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-500/30'>
-                AI SAFETY
+              <spanclassName='px-3py-1bg-emerald-500/20text-emerald-300text-xsfont-semiboldrounded-fullborderborder-emerald-500/30'>
+                AISAFETY
               </span>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors'>
-              AI Safety & Alignment for Enterprise 2025
+            <h3className='text-2xlfont-boldtext-whitemb-3group-hover:text-emerald-300transition-colors'>
+              AISafety & AlignmentforEnterprise 2025
             </h3>
-            <p className='text-white/70 mb-4 leading-relaxed'>
-              Deploy AI safely and responsibly. Leading organizations achieve
-              99.2% safety compliance, prevent costly failures, and build
-              stakeholder trust. Your complete responsible AI framework.
+            <pclassName='text-white/70mb-4leading-relaxed'>
+              DeployAIsafely andresponsibly. Leadingorganizationsachieve
+              99.2% safetycompliancepreventcostlyfailuresandbuildstakeholder trust. Yourcompleteresponsible AIframework.
             </p>
-            <div className='grid grid-cols-3 gap-3 mb-4'>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-emerald-400'>99.2%</div>
+            <divclassName = 'gridgrid-cols-3gap-3mb-4'>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-emerald-400'>99.2%</div>
               </div>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-green-400'>87%</div>
-                <div className='text-xs text-white/60'>Less Risk</div>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-green-400'>87%</div>
+                <divclassName='text-xstext-white/60'>LessRisk</div>
               </div>
-              <div className='bg-black/30 rounded-lg p-3 text-center'>
-                <div className='text-2xl font-bold text-cyan-400'>4.7x</div>
+              <divclassName='bg-black/30rounded-lgp-3text-center'>
+                <divclassName='text-2xlfont-boldtext-cyan-400'>4.7x</div>
               </div>
             </div>
-            <div className='flex items-center gap-2 text-emerald-400 font-semibold group-hover:gap-3 transition-all'>
-              <span>Read Complete Guide</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2text-emerald-400font-semiboldgroup-hover: gap-3transition-all'>
+              <span>ReadCompleteGuide</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
         </div>
-        {/* Call to Action */}
-        <div className='text-center'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30'
+        {/* CalltoAction */}
+        <divclassName = 'text-center'>
+          <Linkto='/blog'
+            className='inline-flexitems-centergap-3bg-gradient-to-rfrom-purple-600to-cyan-600hover: from-purple-700hover:to-cyan-700text-whitefont-boldpx-8py-4rounded-xltransition-allduration-300transformhover:scale-105hover:shadow-xlhover:shadow-purple-500/30'
           >
-            <span>Explore All Latest AI Insights</span>
-            <ArrowRight className='w-5 h-5' />
+            <span>ExploreAllLatest AIInsights</span>
+            <ArrowRight,className='w-5 h-5' />
           </Link>
         </div>
       </div>

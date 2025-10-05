@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function EnterpriseAISolutions(): React.JSX.Element {
+exportdefaultfunction EnterpriseAISolutions(): React.JSX.Element {
   return (
-    <main style={{ padding: '2rem' }}>
-      <h1>Enterprise AI Solutions</h1>
+    <mainstyle = {{ padding: '2rem' }}>
+      <h1>EnterpriseAISolutions</h1>
     </main>
   );
 }

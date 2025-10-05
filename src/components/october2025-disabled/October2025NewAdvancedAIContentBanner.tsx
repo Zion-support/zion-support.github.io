@@ -1,218 +1,204 @@
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-export default function October2025NewAdvancedAIContentBanner() {
+exportdefaultfunction October2025NewAdvancedAIContentBanner() { 
   return (
-    <div className='relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700'></div>
+    <divclassName = 'relativebg-gradient-to-brfrom-purple-900via-indigo-800to-blue-900border-bborder-white/10overflow-hidden' > {' ' }
+      {/* Animatedbackgroundelements */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absolutetop-0left-0 w-96h-96bg-purple-500rounded-fullfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-0 w-96h-96bg-blue-500rounded-fullfilterblur-3xlanimate-pulsedelay-700' />
       </div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
-        {/* Header Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className='text-center mb-8'
+      <divclassName='relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-8'>
+        {/* HeaderSection */}
+        <motion.divinitial = {{ opacity:  0y: 20 }}
+          animate = {{ opacity:  1y:  0 }}
+          transition = {{ duration: 0.6 }}
+          className = 'text-centermb-8'
         >
-          <div className='inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-6 py-2 rounded-full font-bold text-sm mb-4'>
-            <Sparkles className='w-5 h-5 animate-pulse' />
-            OCTOBER 2025 BREAKTHROUGH
-            <Sparkles className='w-5 h-5 animate-pulse' />
+          <divclassName='inline-flexitems-centergap-2bg-gradient-to-rfrom-yellow-400to-orange-500text-gray-900px-6py-2rounded-fullfont-boldtext-smmb-4'>
+            <SparklesclassName='w-5 h-5animate-pulse' />
+            OCTOBER2025BREAKTHROUGH
+            <SparklesclassName='w-5 h-5animate-pulse' />
           </div>
-          <h2 className='text-4xl md:text-5xl font-extrabold text-white mb-4'>
-            🚀 3 Revolutionary AI Platform Breakthroughs
+          <h2className='text-4xlmd: text-5xlfont-extraboldtext-whitemb-4'>
+            🚀 3RevolutionaryAI PlatformBreakthroughs
           </h2>
-          <p className='text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto font-semibold'>
-            Privacy-First Federated AI • Unlimited Synthetic Data • Enterprise
-            AI Governance
+          <pclassName='text-xlmd:text-2xltext-blue-100max-w-4xlmx-autofont-semibold'>
+            Privacy-FirstFederatedAI • UnlimitedSyntheticData • EnterpriseAIGovernance
           </p>
-          <div className='flex flex-wrap justify-center gap-4 mt-6 text-yellow-300 font-bold'>
-            <div className='flex items-center gap-2'>
-              <TrendingUp className='w-5 h-5' />
-              <span>$1.02B Combined Value</span>
+          <divclassName='flexflex-wrapjustify-centergap-4mt-6text-yellow-300font-bold'>
+            <divclassName='flexitems-centergap-2'>
+              <TrendingUpclassName='w-5 h-5' />
+              <span>$1.02BCombinedValue</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <Zap className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2'>
+              <ZapclassName='w-5 h-5' />
               <span>100% Compliance</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <Shield className='w-5 h-5' />
-              <span>99.8% Privacy Protection</span>
+            <divclassName='flexitems-centergap-2'>
+              <ShieldclassName='w-5 h-5' />
+              <span>99.8% PrivacyProtection</span>
             </div>
           </div>
         </motion.div>
-        {/* Content Grid */}
-        <div className='grid md:grid-cols-3 gap-6 mb-8'>
+        {/* ContentGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-8'>
           {/* Federated AI */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          <motion.divinitial = {{ opacity:  0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.6delay: 0.1 }}
           >
-            <Link
-              to='/blog/ai-2025-oct-advanced-federated-ai-enterprise-revolution'
-              className='block group'
+            <Linkto = '/blog/ai-2025-oct-advanced-federated-ai-enterprise-revolution'
+              className='blockgroup'
             >
-              <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full'>
-                <div className='flex items-center gap-3 mb-4'>
-                  <div className='p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg'>
-                    <Brain className='w-6 h-6 text-white' />
+              <divclassName='bg-white/10backdrop-blur-smrounded-xlp-6borderborder-white/20hover: border-purple-400transition-allduration-300hover:shadow-2xlhover:shadow-purple-500/50h-full'>
+                <divclassName='flexitems-centergap-3mb-4'>
+                  <divclassName='p-3bg-gradient-to-brfrom-purple-500to-pink-500rounded-lg'>
+                    <Brain,className='w-6 h-6text-white' />
                   </div>
-                  <span className='text-xs font-bold text-purple-300 uppercase tracking-wider'>
-                    Federated AI
+                  <spanclassName='text-xsfont-boldtext-purple-300uppercasetracking-wider'>
+                    FederatedAI
                   </span>
                 </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors'>
-                  Advanced Federated AI Enterprise Revolution
+                <h3className='text-xlfont-boldtext-whitemb-3group-hover:text-purple-300transition-colors'>
+                  AdvancedFederatedAI EnterpriseRevolution
                 </h3>
-                <p className='text-blue-100 text-sm mb-4 leading-relaxed'>
-                  Privacy-first distributed intelligence across 250+ nodes.{' '}
-                  <span className='text-yellow-300 font-bold'>$287M value</span>
-                  , 99.8% privacy compliance, 67% faster training — zero data
-                  movement.
+                <pclassName='text-blue-100text-smmb-4leading-relaxed'>
+                  Privacy-firstdistributedintelligence across250+ nodes.{' '}
+                  <spanclassName = 'text-yellow-300font-bold'>$287Mvalue</span>
+                  99.8% privacycompliance67% fastertraining — zerodatamovement.
                 </p>
-                <div className='space-y-2 text-xs text-blue-200'>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>47 Fortune 500 deployments across 42 countries</span>
+                <divclassName = 'space-y-2text-xstext-blue-200'>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>47Fortune500 deploymentsacross42 countries</span>
                   </div>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>47M patients served without data centralization</span>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>47Mpatientsserved withoutdatacentralization</span>
                   </div>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                     <span>
-                      94.7% model accuracy matching centralized training
+                      94.7% modelaccuracymatching centralizedtraining
                     </span>
                   </div>
                 </div>
-                <div className='mt-6 flex items-center text-purple-300 font-semibold group-hover:text-white transition-colors'>
-                  <span>Explore Privacy-First AI</span>
-                  <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
+                <divclassName='mt-6flexitems-centertext-purple-300font-semiboldgroup-hover: text-whitetransition-colors'>
+                  <span>ExplorePrivacy-FirstAI</span>
+                  <ArrowRight,className='w-4 h-4ml-2group-hover:translate-x-1transition-transform' />
                 </div>
               </div>
             </Link>
           </motion.div>
-          {/* Synthetic Data */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          {/* SyntheticData */}
+          <motion.divinitial = {{ opacity:  0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.6delay: 0.2 }}
           >
-            <Link
-              to='/blog/ai-2025-oct-synthetic-data-generation-enterprise-breakthrough'
-              className='block group'
+            <Linkto = '/blog/ai-2025-oct-synthetic-data-generation-enterprise-breakthrough'
+              className='blockgroup'
             >
-              <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full'>
-                <div className='flex items-center gap-3 mb-4'>
-                  <div className='p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg'>
-                    <Database className='w-6 h-6 text-white' />
+              <divclassName='bg-white/10backdrop-blur-smrounded-xlp-6borderborder-white/20hover: border-blue-400transition-allduration-300hover:shadow-2xlhover:shadow-blue-500/50h-full'>
+                <divclassName='flexitems-centergap-3mb-4'>
+                  <divclassName='p-3bg-gradient-to-brfrom-blue-500to-cyan-500rounded-lg'>
+                    <DatabaseclassName='w-6 h-6text-white' />
                   </div>
-                  <span className='text-xs font-bold text-blue-300 uppercase tracking-wider'>
-                    Synthetic Data
+                  <spanclassName='text-xsfont-boldtext-blue-300uppercasetracking-wider'>
+                    SyntheticData
                   </span>
                 </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors'>
-                  Synthetic Data Generation Enterprise Breakthrough
+                <h3className='text-xlfont-boldtext-whitemb-3group-hover:text-blue-300transition-colors'>
+                  SyntheticDataGeneration EnterpriseBreakthrough
                 </h3>
-                <p className='text-blue-100 text-sm mb-4 leading-relaxed'>
-                  Unlimited privacy-safe data generation.{' '}
-                  <span className='text-yellow-300 font-bold'>$312M value</span>
-                  , 10x data availability, 99.4% statistical fidelity — solve
-                  data scarcity.
+                <pclassName='text-blue-100text-smmb-4leading-relaxed'>
+                  Unlimitedprivacy-safedatageneration.{' '}
+                  <spanclassName = 'text-yellow-300font-bold'>$312Mvalue</span>
+                  10xdataavailability99.4% statisticalfidelity — solvedatascarcity.
                 </p>
-                <div className='space-y-2 text-xs text-blue-200'>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>470M synthetic transactions for top-3 bank</span>
+                <divclassName = 'space-y-2text-xstext-blue-200'>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>470Msynthetictransactions fortop-3bank</span>
                   </div>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>1000x fraud examples — 94.7% detection accuracy</span>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>1000xfraudexamples — 94.7% detectionaccuracy</span>
                   </div>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>100% privacy compliance across 67 countries</span>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>100% privacycomplianceacross 67countries</span>
                   </div>
                 </div>
-                <div className='mt-6 flex items-center text-blue-300 font-semibold group-hover:text-white transition-colors'>
-                  <span>Unlock Unlimited Data</span>
-                  <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
+                <divclassName='mt-6flexitems-centertext-blue-300font-semiboldgroup-hover: text-whitetransition-colors'>
+                  <span>UnlockUnlimitedData</span>
+                  <ArrowRight,className='w-4 h-4ml-2group-hover:translate-x-1transition-transform' />
                 </div>
               </div>
             </Link>
           </motion.div>
-          {/* AI Governance */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+          {/* AIGovernance */}
+          <motion.divinitial = {{ opacity:  0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.6delay: 0.3 }}
           >
-            <Link
-              to='/blog/ai-2025-oct-ai-model-governance-compliance-breakthrough'
-              className='block group'
+            <Linkto = '/blog/ai-2025-oct-ai-model-governance-compliance-breakthrough'
+              className='blockgroup'
             >
-              <div className='bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full'>
-                <div className='flex items-center gap-3 mb-4'>
-                  <div className='p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg'>
-                    <Shield className='w-6 h-6 text-white' />
+              <divclassName='bg-white/10backdrop-blur-smrounded-xlp-6borderborder-white/20hover: border-green-400transition-allduration-300hover:shadow-2xlhover:shadow-green-500/50h-full'>
+                <divclassName='flexitems-centergap-3mb-4'>
+                  <divclassName='p-3bg-gradient-to-brfrom-green-500to-emerald-500rounded-lg'>
+                    <ShieldclassName='w-6 h-6text-white' />
                   </div>
-                  <span className='text-xs font-bold text-green-300 uppercase tracking-wider'>
-                    AI Governance
+                  <spanclassName='text-xsfont-boldtext-green-300uppercasetracking-wider'>
+                    AIGovernance
                   </span>
                 </div>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors'>
-                  AI Model Governance & Compliance Breakthrough
+                <h3className='text-xlfont-boldtext-whitemb-3group-hover:text-green-300transition-colors'>
+                  AIModelGovernance & ComplianceBreakthrough
                 </h3>
-                <p className='text-blue-100 text-sm mb-4 leading-relaxed'>
-                  Enterprise-scale AI risk management.{' '}
-                  <span className='text-yellow-300 font-bold'>$421M value</span>
-                  , 100% audit compliance, 840+ models governed — complete
-                  accountability.
+                <pclassName='text-blue-100text-smmb-4leading-relaxed'>
+                  Enterprise-scaleAIrisk management.{' '}
+                  <spanclassName = 'text-yellow-300font-bold'>$421Mvalue</span>
+                  100% auditcompliance840+ modelsgoverned — completeaccountability.
                 </p>
-                <div className='space-y-2 text-xs text-blue-200'>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>340 models governed for top-10 insurer</span>
+                <divclassName = 'space-y-2text-xstext-blue-200'>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>340modelsgoverned fortop-10insurer</span>
                   </div>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>$87M penalties avoided — 100% audit pass rate</span>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>$87Mpenaltiesavoided — 100% auditpassrate</span>
                   </div>
-                  <div className='flex items-center gap-2'>
-                    <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
-                    <span>92% risk reduction with automated governance</span>
+                  <divclassName='flexitems-centergap-2'>
+                    <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
+                    <span>92% riskreductionwith automatedgovernance</span>
                   </div>
                 </div>
-                <div className='mt-6 flex items-center text-green-300 font-semibold group-hover:text-white transition-colors'>
-                  <span>Ensure AI Compliance</span>
-                  <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />
+                <divclassName='mt-6flexitems-centertext-green-300font-semiboldgroup-hover: text-whitetransition-colors'>
+                  <span>EnsureAICompliance</span>
+                  <ArrowRight,className='w-4 h-4ml-2group-hover:translate-x-1transition-transform' />
                 </div>
               </div>
             </Link>
           </motion.div>
         </div>
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className='text-center'
+        {/* CalltoAction */}
+        <motion.divinitial = {{ opacity:  0y: 20 }}
+          animate = {{ opacity:  1y:  0 }}
+          transition = {{ duration: 0.6delay: 0.4 }}
+          className = 'text-center'
         >
-          <Link
-            to='/blog'
-            className='inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white px-8 py-4 rounded-full font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105'
+          <Linkto='/blog'
+            className='inline-flexitems-centergap-3bg-gradient-to-rfrom-purple-600to-blue-600hover: from-purple-500hover:to-blue-500text-whitepx-8py-4rounded-fullfont-boldtext-lgshadow-2xlhover:shadow-purple-500/50transition-allduration-300transformhover:scale-105'
           >
-            <span>Explore All October 2025 Breakthroughs</span>
-            <ArrowRight className='w-5 h-5' />
+            <span>ExploreAllOctober 2025Breakthroughs</span>
+            <ArrowRight,className='w-5 h-5' />
           </Link>
-          <p className='mt-4 text-blue-200 text-sm'>
-            Join 127+ Fortune 500 companies transforming with privacy-first AI,
-            synthetic data, and enterprise governance
+          <pclassName='mt-4text-blue-200text-sm'>
+            Join127+ Fortune500companies transformingwithprivacy-first AI
+            syntheticdataandenterprisegovernance
           </p>
         </motion.div>
       </div>

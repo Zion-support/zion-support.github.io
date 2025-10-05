@@ -1,297 +1,289 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const October2025NextGenAIBanner = () => {
+constOctober2025NextGenAIBanner = () => { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
-        <div className='absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl animate-pulse delay-500'></div>
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-cyan-900via-blue-900to-purple-900py-20px-6rounded-3xlmb-12shadow-2xl' > {' ' }
+      {/* Animatedbackgroundelements */}
+      <divclassName='absoluteinset-0overflow-hidden'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-cyan-500/20rounded-fullblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-purple-500/20rounded-fullblur-3xlanimate-pulsedelay-1000' />
+        <divclassName='absolutetop-1/2left-1/2 w-96h-96bg-blue-500/15rounded-fullblur-3xlanimate-pulsedelay-500' />
       </div>
-      <div className='relative z-10 max-w-7xl mx-auto'>
-        {/* Breaking News Badge */}
-        <div className='text-center mb-8'>
-          <div className='inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500/30 via-blue-500/30 to-purple-500/30 border-2 border-cyan-400/50 rounded-full px-8 py-3 mb-6 shadow-lg backdrop-blur-sm'>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-pulse' />
-            <span className='text-cyan-200 font-bold text-lg uppercase tracking-wider'>
-              🚀 October 2025 — Next-Gen AI Breakthroughs
+      <divclassName='relativez-10max-w-7xlmx-auto'>
+        {/* BreakingNewsBadge */}
+        <divclassName='text-centermb-8'>
+          <divclassName='inline-flexitems-centergap-3bg-gradient-to-rfrom-cyan-500/30via-blue-500/30to-purple-500/30border-2border-cyan-400/50rounded-fullpx-8py-3mb-6shadow-lgbackdrop-blur-sm'>
+            <SparklesclassName='w-6 h-6text-yellow-300animate-pulse' />
+            <spanclassName='text-cyan-200font-boldtext-lguppercasetracking-wider'>
+              🚀 October2025 — Next-GenAIBreakthroughs
             </span>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-pulse' />
+            <SparklesclassName='w-6 h-6text-yellow-300animate-pulse' />
           </div>
-          <h2 className='text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent leading-tight'>
-            Revolutionary AI Systems Transforming Enterprises
+          <h2className='text-6xlfont-extraboldmb-6bg-gradient-to-rfrom-cyan-300via-blue-300to-purple-300bg-clip-texttext-transparentleading-tight'>
+            RevolutionaryAISystems TransformingEnterprises
           </h2>
-          <p className='text-2xl text-blue-200 max-w-4xl mx-auto leading-relaxed'>
-            Discover the cutting-edge AI innovations powering Fortune 500
-            success:
-            <span className='text-cyan-300 font-semibold'>
+          <pclassName='text-2xltext-blue-200max-w-4xlmx-autoleading-relaxed'>
+            Discoverthecutting-edgeAIinnovations poweringFortune500
+            success: <spanclassName='text-cyan-300font-semibold'>
               {' '}
-              Collaborative Agent Teams
+              CollaborativeAgentTeams
             </span>
-            ,
-            <span className='text-blue-300 font-semibold'>
+            
+            <spanclassName = 'text-blue-300font-semibold'>
               {' '}
-              Real-Time Adaptive AI
+              Real-TimeAdaptiveAI
             </span>
-            , and
-            <span className='text-purple-300 font-semibold'>
+            and
+            <spanclassName = 'text-purple-300font-semibold'>
               {' '}
-              Hybrid Human-AI Intelligence
+              HybridHuman-AIIntelligence
             </span>
           </p>
         </div>
-        {/* Key Metrics Showcase */}
-        <div className='grid md:grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto'>
-          <div className='bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-cyan-300 mb-2'>
+        {/* KeyMetricsShowcase */}
+        <divclassName='gridmd: grid-cols-4gap-4mb-12max-w-6xlmx-auto'>
+          <divclassName='bg-gradient-to-brfrom-cyan-800/40to-cyan-900/40backdrop-blur-smborderborder-cyan-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-cyan-300mb-2'>
               580%
             </div>
-            <div className='text-cyan-200 font-semibold text-sm uppercase tracking-wide'>
-              Cognitive Amplification
+            <divclassName='text-cyan-200font-semiboldtext-smuppercasetracking-wide'>
+              CognitiveAmplification
             </div>
           </div>
-          <div className='bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-blue-300 mb-2'>
+          <divclassName='bg-gradient-to-brfrom-blue-800/40to-blue-900/40backdrop-blur-smborderborder-blue-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-blue-300mb-2'>
               $17B
             </div>
-            <div className='text-blue-200 font-semibold text-sm uppercase tracking-wide'>
-              Annual Value Created
+            <divclassName='text-blue-200font-semiboldtext-smuppercasetracking-wide'>
+              AnnualValueCreated
             </div>
           </div>
-          <div className='bg-gradient-to-br from-purple-800/40 to-purple-900/40 backdrop-blur-sm border border-purple-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-purple-300 mb-2'>
+          <divclassName='bg-gradient-to-brfrom-purple-800/40to-purple-900/40backdrop-blur-smborderborder-purple-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-purple-300mb-2'>
               98.7%
             </div>
-            <div className='text-purple-200 font-semibold text-sm uppercase tracking-wide'>
-              Prediction Accuracy
+            <divclassName='text-purple-200font-semiboldtext-smuppercasetracking-wide'>
+              PredictionAccuracy
             </div>
           </div>
-          <div className='bg-gradient-to-br from-pink-800/40 to-pink-900/40 backdrop-blur-sm border border-pink-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-pink-300 mb-2'>
+          <divclassName='bg-gradient-to-brfrom-pink-800/40to-pink-900/40backdrop-blur-smborderborder-pink-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-pink-300mb-2'>
               11.7x
             </div>
-            <div className='text-pink-200 font-semibold text-sm uppercase tracking-wide'>
-              Average ROI
+            <divclassName='text-pink-200font-semiboldtext-smuppercasetracking-wide'>
+              AverageROI
             </div>
           </div>
         </div>
-        {/* Featured Articles Grid */}
-        <div className='grid md:grid-cols-3 gap-6 mb-10'>
-          {/* Article 1 - Collaborative AI Agent Teams */}
-          <Link
-            to='/blog/ai-2025-oct-01-collaborative-ai-agent-teams-enterprise'
-            className='group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300'
+        {/* FeaturedArticlesGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-10'>
+          {/* Article1 - CollaborativeAIAgent Teams */}
+          <Linkto = '/blog/ai-2025-oct-01-collaborative-ai-agent-teams-enterprise'
+            className='groupbg-gradient-to-brfrom-cyan-800/50to-cyan-900/50backdrop-blur-smborder-2border-cyan-400/40rounded-2xlp-8hover: scale-105hover:shadow-2xlhover:shadow-cyan-500/50transition-allduration-300'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg'>
-                <Users className='w-10 h-10 text-cyan-200' />
+            <divclassName='flexitems-centergap-4mb-6'>
+              <divclassName='p-4bg-cyan-500/30rounded-2xlgroup-hover:bg-cyan-500/40transition-colorsshadow-lg'>
+                <UsersclassName='w-10h-10text-cyan-200' />
               </div>
-              <div className='flex-1'>
-                <span className='text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full'>
-                  Multi-Agent Systems
+              <divclassName='flex-1'>
+                <spanclassName='text-xstext-cyan-300font-bolduppercasetracking-widerbg-cyan-500/20px-3py-1rounded-full'>
+                  Multi-AgentSystems
                 </span>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors leading-tight'>
-              Collaborative AI Agent Teams: Enterprise Coordination Revolution
+            <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-cyan-200transition-colorsleading-tight'>
+              CollaborativeAIAgent Teams: EnterpriseCoordinationRevolution
             </h3>
-            <p className='text-blue-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Discover how collaborative agent teams achieve{' '}
-              <span className='text-cyan-300 font-semibold'>
-                340% productivity gains
+            <pclassName='text-blue-200text-basemb-6leading-relaxedline-clamp-4'>
+              Discoverhowcollaborative agentteamsachieve{' '}
+              <spanclassName = 'text-cyan-300font-semibold'>
+                340% productivitygains
               </span>{' '}
-              through parallel execution, specialized expertise, and autonomous
-              coordination. Proven architectures from Fortune 500 deployments.
+              throughparallelexecutionspecializedexpertiseandautonomouscoordination. Provenarchitecturesfrom Fortune500deployments.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>
-                  $4.2B annual value creation
+            <divclassName = 'space-y-2mb-6'>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <TrendingUpclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  $4.2Bannualvalue creation
                 </span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>96% task completion rate</span>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <AwardclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>96% taskcompletionrate</span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>4.7x ROI within 6 months</span>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <ZapclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>4.7xROIwithin 6months</span>
               </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-cyan-400/30'>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <span className='font-medium'>18 min read</span>
+            <divclassName='flexitems-centerjustify-betweenpt-4border-tborder-cyan-400/30'>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <spanclassName='font-medium'>18minread</span>
                 <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
+                <spanclassName='font-medium'>Oct 12025</span>
               </div>
-              <ArrowRight className='w-6 h-6 text-cyan-300 group-hover:translate-x-2 transition-transform' />
+              <ArrowRight,className = 'w-6 h-6text-cyan-300group-hover: translate-x-2transition-transform' />
             </div>
           </Link>
-          {/* Article 2 - Real-Time Adaptive AI */}
-          <Link
-            to='/blog/ai-2025-oct-01-real-time-adaptive-ai-enterprise-systems'
-            className='group bg-gradient-to-br from-blue-800/50 to-blue-900/50 backdrop-blur-sm border-2 border-blue-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300'
+          {/* Article2 - Real-TimeAdaptive AI */}
+          <Linkto = '/blog/ai-2025-oct-01-real-time-adaptive-ai-enterprise-systems'
+            className='groupbg-gradient-to-brfrom-blue-800/50to-blue-900/50backdrop-blur-smborder-2border-blue-400/40rounded-2xlp-8hover: scale-105hover:shadow-2xlhover:shadow-blue-500/50transition-allduration-300'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-blue-500/30 rounded-2xl group-hover:bg-blue-500/40 transition-colors shadow-lg'>
-                <Zap className='w-10 h-10 text-blue-200' />
+            <divclassName='flexitems-centergap-4mb-6'>
+              <divclassName='p-4bg-blue-500/30rounded-2xlgroup-hover:bg-blue-500/40transition-colorsshadow-lg'>
+                <ZapclassName='w-10h-10text-blue-200' />
               </div>
-              <div className='flex-1'>
-                <span className='text-xs text-blue-300 font-bold uppercase tracking-wider bg-blue-500/20 px-3 py-1 rounded-full'>
-                  Adaptive AI
+              <divclassName='flex-1'>
+                <spanclassName='text-xstext-blue-300font-bolduppercasetracking-widerbg-blue-500/20px-3py-1rounded-full'>
+                  AdaptiveAI
                 </span>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-200 transition-colors leading-tight'>
-              Real-Time Adaptive AI: Self-Learning Enterprise Systems
+            <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-blue-200transition-colorsleading-tight'>
+              Real-TimeAdaptiveAI: Self-LearningEnterpriseSystems
             </h3>
-            <p className='text-blue-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Transform your enterprise with AI that learns and adapts
+            <pclassName='text-blue-200text-basemb-6leading-relaxedline-clamp-4'>
+              Transformyourenterprise withAIthat learnsandadapts
               continuously. Achieve{' '}
-              <span className='text-blue-300 font-semibold'>
-                420% faster response times
+              <spanclassName = 'text-blue-300font-semibold'>
+                420% fasterresponsetimes
               </span>{' '}
               and
-              <span className='text-blue-300 font-semibold'>
+              <spanclassName='text-blue-300font-semibold'>
                 {' '}
                 98.7% accuracy
               </span>{' '}
-              through real-time self-optimization without manual retraining.
+              throughreal-timeself-optimizationwithoutmanual retraining.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-blue-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>
-                  $5.9B annual value creation
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-centergap-2text-blue-300text-sm'>
+                <TrendingUpclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  $5.9Bannualvalue creation
                 </span>
               </div>
-              <div className='flex items-center gap-2 text-blue-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>
-                  91% reduction in model staleness
+              <divclassName='flexitems-centergap-2text-blue-300text-sm'>
+                <AwardclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  91% reductioninmodel staleness
                 </span>
               </div>
-              <div className='flex items-center gap-2 text-blue-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>8.3x ROI within 18 months</span>
+              <divclassName='flexitems-centergap-2text-blue-300text-sm'>
+                <ZapclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>8.3xROIwithin 18months</span>
               </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-blue-400/30'>
-              <div className='flex items-center gap-2 text-blue-300 text-sm'>
-                <span className='font-medium'>20 min read</span>
+            <divclassName='flexitems-centerjustify-betweenpt-4border-tborder-blue-400/30'>
+              <divclassName='flexitems-centergap-2text-blue-300text-sm'>
+                <spanclassName='font-medium'>20minread</span>
                 <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
+                <spanclassName='font-medium'>Oct 12025</span>
               </div>
-              <ArrowRight className='w-6 h-6 text-blue-300 group-hover:translate-x-2 transition-transform' />
+              <ArrowRight,className = 'w-6 h-6text-blue-300group-hover: translate-x-2transition-transform' />
             </div>
           </Link>
-          {/* Article 3 - Hybrid Human-AI Intelligence */}
-          <Link
-            to='/blog/ai-2025-oct-01-hybrid-human-ai-intelligence-augmentation'
-            className='group bg-gradient-to-br from-purple-800/50 to-purple-900/50 backdrop-blur-sm border-2 border-purple-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300'
+          {/* Article3 - HybridHuman-AIIntelligence */}
+          <Linkto = '/blog/ai-2025-oct-01-hybrid-human-ai-intelligence-augmentation'
+            className='groupbg-gradient-to-brfrom-purple-800/50to-purple-900/50backdrop-blur-smborder-2border-purple-400/40rounded-2xlp-8hover: scale-105hover:shadow-2xlhover:shadow-purple-500/50transition-allduration-300'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-purple-500/30 rounded-2xl group-hover:bg-purple-500/40 transition-colors shadow-lg'>
-                <Brain className='w-10 h-10 text-purple-200' />
+            <divclassName='flexitems-centergap-4mb-6'>
+              <divclassName='p-4bg-purple-500/30rounded-2xlgroup-hover:bg-purple-500/40transition-colorsshadow-lg'>
+                <Brain,className='w-10h-10text-purple-200' />
               </div>
-              <div className='flex-1'>
-                <span className='text-xs text-purple-300 font-bold uppercase tracking-wider bg-purple-500/20 px-3 py-1 rounded-full'>
-                  Hybrid Intelligence
+              <divclassName='flex-1'>
+                <spanclassName='text-xstext-purple-300font-bolduppercasetracking-widerbg-purple-500/20px-3py-1rounded-full'>
+                  HybridIntelligence
                 </span>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-purple-200 transition-colors leading-tight'>
-              Hybrid Human-AI Intelligence: Cognitive Augmentation Revolution
+            <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-purple-200transition-colorsleading-tight'>
+              HybridHuman-AIIntelligence: CognitiveAugmentationRevolution
             </h3>
-            <p className='text-purple-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Amplify human intelligence by{' '}
-              <span className='text-purple-300 font-semibold'>580%</span>{' '}
-              through seamless human-AI collaboration. Create{' '}
-              <span className='text-purple-300 font-semibold'>$7.3B value</span>{' '}
-              with systems that combine human creativity and AI computational
+            <pclassName='text-purple-200text-basemb-6leading-relaxedline-clamp-4'>
+              Amplifyhumanintelligence by{' '}
+              <spanclassName = 'text-purple-300font-semibold'>580%</span>{' '}
+              throughseamlesshuman-AIcollaboration. Create{' '}
+              <spanclassName='text-purple-300font-semibold'>$7.3Bvalue</span>{' '}
+              withsystemsthat combinehumancreativity andAIcomputational
               power.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-purple-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>
-                  $7.3B annual value creation
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-centergap-2text-purple-300text-sm'>
+                <TrendingUpclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  $7.3Bannualvalue creation
                 </span>
               </div>
-              <div className='flex items-center gap-2 text-purple-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>
-                  94% improvement in decisions
+              <divclassName='flexitems-centergap-2text-purple-300text-sm'>
+                <AwardclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  94% improvementindecisions
                 </span>
               </div>
-              <div className='flex items-center gap-2 text-purple-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>
-                  14.7x ROI within 24 months
+              <divclassName='flexitems-centergap-2text-purple-300text-sm'>
+                <ZapclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  14.7xROIwithin 24months
                 </span>
               </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-purple-400/30'>
-              <div className='flex items-center gap-2 text-purple-300 text-sm'>
-                <span className='font-medium'>19 min read</span>
+            <divclassName='flexitems-centerjustify-betweenpt-4border-tborder-purple-400/30'>
+              <divclassName='flexitems-centergap-2text-purple-300text-sm'>
+                <spanclassName='font-medium'>19minread</span>
                 <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
+                <spanclassName='font-medium'>Oct 12025</span>
               </div>
-              <ArrowRight className='w-6 h-6 text-purple-300 group-hover:translate-x-2 transition-transform' />
+              <ArrowRight,className = 'w-6 h-6text-purple-300group-hover: translate-x-2transition-transform' />
             </div>
           </Link>
         </div>
-        {/* Call to Action Section */}
-        <div className='bg-gradient-to-r from-cyan-800/30 via-blue-800/30 to-purple-800/30 backdrop-blur-sm border-2 border-blue-400/40 rounded-2xl p-8 text-center shadow-xl'>
-          <h3 className='text-3xl font-bold text-white mb-4'>
-            Transform Your Enterprise with Next-Gen AI
+        {/* CalltoAction Section */}
+        <divclassName = 'bg-gradient-to-rfrom-cyan-800/30via-blue-800/30to-purple-800/30backdrop-blur-smborder-2border-blue-400/40rounded-2xlp-8text-centershadow-xl'>
+          <h3className='text-3xlfont-boldtext-whitemb-4'>
+            TransformYourEnterprise withNext-GenAI
           </h3>
-          <p className='text-xl text-blue-200 mb-8 max-w-3xl mx-auto'>
-            Zion Tech Group has deployed these revolutionary AI systems across{' '}
-            <span className='text-cyan-300 font-semibold'>
-              47 Fortune 500 companies
+          <pclassName='text-xltext-blue-200mb-8max-w-3xlmx-auto'>
+            ZionTechGroup hasdeployedthese revolutionaryAIsystems across{' '}
+            <spanclassName='text-cyan-300font-semibold'>
+              47Fortune500 companies
             </span>
-            , creating{' '}
-            <span className='text-blue-300 font-semibold'>
-              $18.7B in measurable value
+            creating{' '}
+            <spanclassName = 'text-blue-300font-semibold'>
+              $18.7Binmeasurable value
             </span>{' '}
-            with an average{' '}
-            <span className='text-purple-300 font-semibold'>11.7x ROI</span>.
+            withanaverage{' '}
+            <spanclassName='text-purple-300font-semibold'>11.7xROI</span>.
           </p>
-          <div className='flex flex-wrap gap-4 justify-center'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'
+          <divclassName='flexflex-wrapgap-4justify-center'>
+            <Linkto='/blog'
+              className='inline-flexitems-centergap-2bg-gradient-to-rfrom-cyan-500to-blue-500hover: from-cyan-400hover:to-blue-400text-whitefont-boldpx-8py-4rounded-xltransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105'
             >
-              <span>Explore All Articles</span>
-              <ArrowRight className='w-5 h-5' />
+              <span>ExploreAllArticles</span>
+              <ArrowRight,className='w-5 h-5' />
             </Link>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'
+            <Linkto='/contact'
+              className='inline-flexitems-centergap-2bg-white/10hover:bg-white/20backdrop-blur-smborder-2border-white/30text-whitefont-boldpx-8py-4rounded-xltransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105'
             >
-              <span>Schedule Consultation</span>
-              <ArrowRight className='w-5 h-5' />
+              <span>ScheduleConsultation</span>
+              <ArrowRight,className='w-5 h-5' />
             </Link>
           </div>
         </div>
-        {/* Trust Indicators */}
-        <div className='mt-10 text-center'>
-          <div className='flex flex-wrap gap-6 justify-center items-center text-blue-300 text-sm'>
-            <div className='flex items-center gap-2'>
-              <Award className='w-5 h-5 text-yellow-400' />
-              <span className='font-semibold'>47 Fortune 500 Deployments</span>
+        {/* TrustIndicators */}
+        <divclassName = 'mt-10text-center'>
+          <divclassName='flexflex-wrapgap-6justify-centeritems-centertext-blue-300text-sm'>
+            <divclassName='flexitems-centergap-2'>
+              <AwardclassName='w-5 h-5text-yellow-400' />
+              <spanclassName='font-semibold'>47Fortune500 Deployments</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <Sparkles className='w-5 h-5 text-cyan-400' />
-              <span className='font-semibold'>98% Project Success Rate</span>
+            <divclassName='flexitems-centergap-2'>
+              <SparklesclassName='w-5 h-5text-cyan-400' />
+              <spanclassName='font-semibold'>98% ProjectSuccessRate</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <TrendingUp className='w-5 h-5 text-green-400' />
-              <span className='font-semibold'>$18.7B Client Value Created</span>
+            <divclassName='flexitems-centergap-2'>
+              <TrendingUpclassName='w-5 h-5text-green-400' />
+              <spanclassName='font-semibold'>$18.7BClientValue Created</span>
             </div>
           </div>
         </div>
@@ -299,4 +291,4 @@ const October2025NextGenAIBanner = () => {
     </div>
   );
 };
-export default October2025NextGenAIBanner;
+exportdefaultOctober2025NextGenAIBanner;

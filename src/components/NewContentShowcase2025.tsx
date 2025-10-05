@@ -1,55 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const NewContentShowcase2025: React.FC = () => {
-  const highlights = [
+constNewContentShowcase2025: React.FC = () => {
+  consthighlights = [
     {
-      title: "🎭 Multimodal AI Revolution",
-      description: "Unified vision-language-audio processing with 98% accuracy",
-      link: "/blog/multimodal-ai-revolution-2025",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "⛓️ Blockchain-AI Integration",
-      description: "Trustless intelligence with decentralized governance",
-      link: "/blog/blockchain-ai-integration-2025",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "🌱 Green AI & Sustainability",
-      description: "Carbon-neutral ML with 90% emissions reduction",
-      link: "/blog/green-ai-sustainability-2025",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "⚙️ AI Predictive Maintenance",
-      description: "85% downtime reduction with 98% prediction accuracy",
-      link: "/services/ai-predictive-maintenance",
-      color: "from-orange-500 to-red-500"
+      title: "🎭 MultimodalAIRevolution"
+      description: "Unifiedvision-language-audioprocessingwith 98% accuracy"
+      link: "/blog/multimodal-ai-revolution-2025"
+      color: "from-purple-500to-pink-500"
     }
-  ];
-  return (
-    <section className="py-16 bg-gray-900 text-white">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
-            <h2 className="text-4xl font-bold">2025 Breakthrough Content</h2>
-            <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
+    {
+      title: "⛓️ Blockchain-AIIntegration"
+      description: "Trustlessintelligencewith decentralizedgovernance"
+      link: "/blog/blockchain-ai-integration-2025"
+      color: "from-blue-500to-cyan-500"
+    }
+    {
+      title: "🌱 GreenAI & Sustainability"
+      description: "Carbon-neutralMLwith 90% emissionsreduction"
+      link: "/blog/green-ai-sustainability-2025"
+      color: "from-green-500to-emerald-500"
+    }
+    {
+      title: "⚙️ AIPredictiveMaintenance"
+      description: "85% downtimereductionwith 98% predictionaccuracy"
+      link: "/services/ai-predictive-maintenance"
+      color: "from-orange-500to-red-500"
+    }
+  ]; return (
+    <sectionclassName = "py-16bg-gray-900text-white">
+      <divclassName="containermx-autopx-6">
+        <divclassName="text-centermb-12">
+          <divclassName="flexitems-centerjustify-centergap-2mb-4">
+            <SparklesclassName="w-6 h-6text-yellow-400animate-pulse" />
+            <h2className="text-4xlfont-bold">2025BreakthroughContent</h2>
+            <SparklesclassName="w-6 h-6text-yellow-400animate-pulse" />
           </div>
-          <p className="text-xl text-gray-300">
-            The most innovative AI content of the year
+          <pclassName="text-xltext-gray-300">
+            Themostinnovative AIcontentof theyear
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((item, index) => (
-            <Link
-              key={index}
-              to={item.link}
-              className="group relative overflow-hidden rounded-2xl p-6 bg-gray-800 hover:scale-105 transition-all duration-300"
+        <divclassName="gridmd: grid-cols-2lg:grid-cols-4gap-6">
+          { highlights.map((itemindex) = > (
+            <Linkkey = { index  }to={ item.link } className="grouprelativeoverflow-hiddenrounded-2xlp-6bg-gray-800hover: scale-105transition-allduration-300"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-20 transition-opacity`}></div>
-              <h3 className="text-xl font-bold mb-3 relative z-10">{item.title}</h3>
-              <p className="text-gray-300 text-sm relative z-10">{item.description}</p>
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${item.color }opacity-0group-hover: opacity-20transition-opacity`} />
+              <h3className = "text-xlfont-boldmb-3relativez-10">{item.title}</h3>
+              <pclassName="text-gray-300text-smrelativez-10">{item.description}</p>
             </Link>
           ))}
         </div>
@@ -57,4 +53,4 @@ const NewContentShowcase2025: React.FC = () => {
     </section>
   );
 };
-export default NewContentShowcase2025;
+exportdefaultNewContentShowcase2025;

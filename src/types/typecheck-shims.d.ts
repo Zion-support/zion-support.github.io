@@ -1,35 +1,34 @@
-// Shims to relax CI type-check by treating page modules as React components
-declare module '../pages/*' {
-  const Component: React.ComponentType;
-  export default Component;
+// Shimstorelax CItype-checkbytreating pagemodulesas Reactcomponentsdeclare module '../pages/*' {
+  constComponent: React.ComponentType;
+  exportdefaultComponent;
 }
 
-declare module '../content/*' {
-  const Content: Record<string, unknown>;
+declaremodule '../content/*' { 
+  constContent: Record<stringunknown > ;
   export = Content;
+ }
+
+declaremodule '../components/*' {
+  constComponent: React.ComponentType;
+  exportdefaultComponent;
 }
 
-declare module '../components/*' {
-  const Component: React.ComponentType;
-  export default Component;
-}
+declaremodule 'lucide-react' { 
+  exportconstTrendingUp: React.ComponentType;
+  exportconstShield: React.ComponentType;
+  exportconstZap: React.ComponentType;
+  exportconstActivity: React.ComponentType;
+  exportconstAlertTriangle: React.ComponentType;
+  exportconstRefreshCw: React.ComponentType;
+  exportconstHome: React.ComponentType;
+  constall: Record<stringReact.ComponentType > ;
+  exportdefaultall;
+ }
 
-declare module 'lucide-react' {
-  export const TrendingUp: React.ComponentType;
-  export const Shield: React.ComponentType;
-  export const Zap: React.ComponentType;
-  export const Activity: React.ComponentType;
-  export const AlertTriangle: React.ComponentType;
-  export const RefreshCw: React.ComponentType;
-  export const Home: React.ComponentType;
-  const all: Record<string, React.ComponentType>;
-  export default all;
-}
-
-declare module 'web-vitals' {
-  export const onCLS: (callback: (metric: unknown) => void) => void;
-  export const onFCP: (callback: (metric: unknown) => void) => void;
-  export const onLCP: (callback: (metric: unknown) => void) => void;
-  export const onTTFB: (callback: (metric: unknown) => void) => void;
-  export type Metric = Record<string, unknown>;
-}
+declaremodule 'web-vitals' { 
+  exportconstonCLS: (callback: (metric: unknown) => void) => void;
+  exportconstonFCP: (callback: (metric: unknown) => void) => void;
+  exportconstonLCP: (callback: (metric: unknown) => void) => void;
+  exportconstonTTFB: (callback: (metric: unknown) => void) => void;
+  exporttypeMetric = Record<stringunknown > ;
+ }

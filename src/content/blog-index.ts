@@ -1,9 +1,9 @@
 /**
- * Blog Content Index
- * Centralized index of all blog posts for easy discovery and navigation
+ * BlogContentIndex
+ * Centralizedindexof allblogposts foreasydiscovery andnavigation
  */
 
-export interface BlogPost {
+exportinterfaceBlogPost { 
   slug: string;
   title: string;
   description: string;
@@ -11,264 +11,246 @@ export interface BlogPost {
   date: string;
   readTime: string;
   tags: string[];
-  featured?: boolean;
-  valueProposition: string;
-}
+  featured ? : boolean;
+  valueProposition : string;
+ }
 
 /**
- * October 2025 Breakthrough Content
+ * October2025Breakthrough Content
  */
-export const october2025Breakthroughs: BlogPost[] = [
+exportconstoctober2025Breakthroughs: BlogPost[] = [
   {
-    slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough',
-    title: 'Neural Architecture Evolution 2025',
-    description:
-      'Self-designing AI models achieving 10,000x faster development, 97% accuracy improvement, and $25M annual savings through autonomous model evolution.',
-    category: 'AI Innovation',
-    date: '2025-10-01',
-    readTime: '25 min',
+    slug: 'ai-2025-oct-01-neural-architecture-evolution-breakthrough'
+    title: 'NeuralArchitectureEvolution 2025'
+    description: 'Self-designingAImodels achieving10000xfasterdevelopment97% accuracyimprovementand $25Mannualsavings throughautonomousmodel evolution.'
+    category: 'AIInnovation'
+    date: '2025-10-01'
+    readTime: '25min'
     tags: [
-      'neural architecture search',
-      'AutoML',
-      'model optimization',
-      'AI evolution',
-      'machine learning',
-      'enterprise AI',
-    ],
-    featured: true,
-    valueProposition: '$25M annual savings',
-  },
+      'neuralarchitecturesearch'
+      'AutoML'
+      'modeloptimization'
+      'AIevolution'
+      'machinelearning'
+      'enterpriseAI'
+    ]
+    featured: true
+    valueProposition: '$25Mannualsavings'
+  }
   {
-    slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise',
-    title: 'Quantum-Inspired Optimization 2025',
-    description:
-      'Revolutionary quantum-inspired algorithms solving enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value.',
-    category: 'Quantum Computing',
-    date: '2025-10-01',
-    readTime: '22 min',
+    slug: 'ai-2025-oct-01-quantum-inspired-optimization-enterprise'
+    title: 'Quantum-InspiredOptimization2025'
+    description: 'Revolutionaryquantum-inspiredalgorithmssolving enterpriseproblems1000x fasterwith99.8% optimalitydelivering $42Mannualvalue.'
+    category: 'QuantumComputing'
+    date: '2025-10-01'
+    readTime: '22min'
     tags: [
-      'quantum optimization',
-      'quantum computing',
-      'enterprise optimization',
-      'quantum algorithms',
-      'supply chain',
-      'portfolio optimization',
-    ],
-    featured: true,
-    valueProposition: '$42M annual value creation',
-  },
+      'quantumoptimization'
+      'quantumcomputing'
+      'enterpriseoptimization'
+      'quantumalgorithms'
+      'supplychain'
+      'portfoliooptimization'
+    ]
+    featured: true
+    valueProposition: '$42Mannualvalue creation'
+  }
   {
-    slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform',
-    title: 'Intelligent Automation Orchestration 2025',
-    description:
-      'AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration.',
-    category: 'Enterprise Automation',
-    date: '2025-10-01',
-    readTime: '28 min',
+    slug: 'ai-2025-oct-01-intelligent-automation-orchestration-platform'
+    title: 'IntelligentAutomationOrchestration 2025'
+    description: 'AI-poweredautomationplatform achieving98% processautomation85% costreductionand $67Mannualsavings throughintelligentorchestration.'
+    category: 'EnterpriseAutomation'
+    date: '2025-10-01'
+    readTime: '28min'
     tags: [
-      'intelligent automation',
-      'process automation',
-      'RPA',
-      'AI orchestration',
-      'workflow automation',
-      'digital transformation',
-    ],
-    featured: true,
-    valueProposition: '$67M annual savings',
-  },
+      'intelligentautomation'
+      'processautomation'
+      'RPA'
+      'AIorchestration'
+      'workflowautomation'
+      'digitaltransformation'
+    ]
+    featured: true
+    valueProposition: '$67Mannualsavings'
+  }
   {
-    slug: 'ai-2025-oct-03-continuous-intelligence-platforms',
-    title: 'Continuous Intelligence 2025',
-    description:
-      '100M+ events/sec with sub-50ms decisions, KPI scorecards, and safe rollback.',
-    category: 'Real-Time AI',
-    date: '2025-10-03',
-    readTime: '10 min',
-    tags: ['streaming', 'decisioning', 'feature store', 'KPIs'],
-    featured: true,
-    valueProposition: '$215M annual value',
-  },
+    slug: 'ai-2025-oct-03-continuous-intelligence-platforms'
+    title: 'ContinuousIntelligence2025'
+    description: '100M+ events/secwithsub-50msdecisionsKPIscorecardsandsaferollback.'
+    category: 'Real-TimeAI'
+    date: '2025-10-03'
+    readTime: '10min'
+    tags: ['streaming''decisioning''featurestore''KPIs']
+    featured: true
+    valueProposition: '$215Mannualvalue'
+  }
   {
-    slug: 'ai-2025-oct-03-autonomous-cloud-security',
-    title: 'Autonomous Cloud Security 2025',
-    description:
-      '99.98% threat neutralization under 5 seconds with policy-backed automations.',
-    category: 'Security',
-    date: '2025-10-03',
-    readTime: '9 min',
-    tags: ['security', 'zero trust', 'automation', 'rollback'],
-    featured: true,
-    valueProposition: '$42M annual savings',
-  },
+    slug: 'ai-2025-oct-03-autonomous-cloud-security'
+    title: 'AutonomousCloudSecurity 2025'
+    description: '99.98% threatneutralizationunder 5secondswith policy-backedautomations.'
+    category: 'Security'
+    date: '2025-10-03'
+    readTime: '9min'
+    tags: ['security''zerotrust''automation''rollback']
+    featured: true
+    valueProposition: '$42Mannualsavings'
+  }
   {
-    slug: 'ai-2025-oct-03-quantum-supply-chain-optimization',
-    title: 'Quantum Supply Chain 2025',
-    description:
-      '10,000x faster plans with hybrid quantum-inspired optimization and ML heuristics.',
-    category: 'Quantum Computing',
-    date: '2025-10-03',
-    readTime: '11 min',
-    tags: ['quantum', 'optimization', 'supply chain'],
-    featured: true,
-    valueProposition: '$127M annual savings',
-  },
+    slug: 'ai-2025-oct-03-quantum-supply-chain-optimization'
+    title: 'QuantumSupplyChain 2025'
+    description: '10000xfasterplans withhybridquantum-inspiredoptimizationand MLheuristics.'
+    category: 'QuantumComputing'
+    date: '2025-10-03'
+    readTime: '11min'
+    tags: ['quantum''optimization''supplychain']
+    featured: true
+    valueProposition: '$127Mannualsavings'
+  }
 ];
 
 /**
- * All blog posts collection
+ * Allblogposts collection
  */
-export const allBlogPosts: BlogPost[] = [
-  ...october2025Breakthroughs,
-  // Newly added October 2025 posts
+exportconstallBlogPosts: BlogPost[] = [
+  ...october2025Breakthroughs
+  // NewlyaddedOctober 2025posts
   {
-    slug: 'ai-2025-oct-01-private-feature-flags-zero-pii',
-    title: 'Private Feature Flags: Zero‑PII Experiments Under 100ms',
-    description:
-      'Run high‑velocity A/B tests without centralizing PII using signed configs, scoped IDs, and edge analytics.',
-    category: 'Experimentation',
-    date: '2025-10-01',
-    readTime: '8 min',
-    tags: ['Feature Flags', 'Privacy', 'Edge', 'A/B', 'DP'],
-    featured: true,
-    valueProposition: 'Zero PII, <100ms at edge',
-  },
+    slug: 'ai-2025-oct-01-private-feature-flags-zero-pii'
+    title: 'PrivateFeatureFlags: Zero‑PIIExperimentsUnder 100ms'
+    description: 'Runhigh‑velocityA/Btestswithout centralizingPIIusing signedconfigsscopedIDsandedgeanalytics.'
+    category: 'Experimentation'
+    date: '2025-10-01'
+    readTime: '8min'
+    tags: ['FeatureFlags''Privacy''Edge''A/B''DP']
+    featured: true
+    valueProposition: 'ZeroPII<100msatedge'
+  }
   {
-    slug: 'ai-2025-oct-01-runtime-rollback-guardrails',
-    title: 'Runtime Rollback Guardrails: Ship Faster With Reversible Changes',
-    description:
-      'Blueprint for instant rollbacks, canary scorecards, and budgeted routes—move fast without breakage.',
-    category: 'Reliability',
-    date: '2025-10-01',
-    readTime: '7 min',
-    tags: ['Rollback', 'Canary', 'Guardrails', 'Deploy', 'SRE'],
-    featured: true,
-    valueProposition: 'Faster deploys, safer rollbacks',
-  },
-  // October 1, 2025 additions (this branch)
+    slug: 'ai-2025-oct-01-runtime-rollback-guardrails'
+    title: 'RuntimeRollbackGuardrails: ShipFasterWith ReversibleChanges'
+    description: 'Blueprintforinstant rollbackscanaryscorecardsandbudgetedroutes—movefastwithout breakage.'
+    category: 'Reliability'
+    date: '2025-10-01'
+    readTime: '7min'
+    tags: ['Rollback''Canary''Guardrails''Deploy''SRE']
+    featured: true
+    valueProposition: 'Fasterdeployssaferrollbacks'
+  }
+  // October12025additions (thisbranch)
   {
-    slug: 'edge-2025-oct-01-zero-pii-telemetry-v2',
-    title:
-      'Zero‑PII Telemetry v2: Decision‑Grade Signals Without Centralized IDs',
-    description:
-      'Scoped identifiers, on‑device redaction, and DP noise for rich insights with zero PII risk.',
-    category: 'Observability',
-    date: '2025-10-01',
-    readTime: '9 min',
-    tags: ['Privacy', 'Telemetry', 'Edge', 'DP'],
-    featured: true,
-    valueProposition: '$8M+ savings via safe analytics',
-  },
+    slug: 'edge-2025-oct-01-zero-pii-telemetry-v2'
+    title: 'Zero‑PIITelemetryv2: Decision‑GradeSignalsWithout CentralizedIDs'
+    description: 'Scopedidentifierson‑deviceredactionandDPnoise forrichinsights withzeroPII risk.'
+    category: 'Observability'
+    date: '2025-10-01'
+    readTime: '9min'
+    tags: ['Privacy''Telemetry''Edge''DP']
+    featured: true
+    valueProposition: '$8M+ savingsviasafe analytics'
+  }
   {
-    slug: 'genai-2025-oct-01-eval-scorecards-live-canaries',
-    title: 'Live Evals & Scorecards: Ship GenAI Fast Without Regressions',
-    description:
-      'Online evals tied to KPIs with canary gates and auto‑rollback when quality dips.',
-    category: 'GenAI',
-    date: '2025-10-01',
-    readTime: '10 min',
-    tags: ['Evals', 'Scorecards', 'Canaries', 'Guardrails'],
-    featured: true,
-    valueProposition: 'Protect velocity, prevent regressions',
-  },
-  // October 2, 2025 additions (from main)
+    slug: 'genai-2025-oct-01-eval-scorecards-live-canaries'
+    title: 'LiveEvals & Scorecards: ShipGenAIFast WithoutRegressions'
+    description: 'Onlineevalstied toKPIswith canarygatesand auto‑rollbackwhenquality dips.'
+    category: 'GenAI'
+    date: '2025-10-01'
+    readTime: '10min'
+    tags: ['Evals''Scorecards''Canaries''Guardrails']
+    featured: true
+    valueProposition: 'Protectvelocitypreventregressions'
+  }
+  // October22025additions (frommain)
   {
-    slug: 'ai-2025-oct-02-private-experiments-blueprint',
-    title: 'Private Experiments Blueprint: Zero‑PII Testing at the Edge',
-    description:
-      'Run A/B tests without PII using signed configs, scoped IDs, and edge analytics under 100ms.',
-    category: 'Experimentation',
-    date: '2025-10-02',
-    readTime: '10 min',
-    tags: ['Privacy', 'Edge', 'Experiments', 'Feature Flags'],
-    featured: true,
-    valueProposition: 'Zero‑PII experiments at the edge',
-  },
+    slug: 'ai-2025-oct-02-private-experiments-blueprint'
+    title: 'PrivateExperimentsBlueprint: Zero‑PIITestingat theEdge'
+    description: 'RunA/Btestswithout PIIusingsigned configsscopedIDsandedgeanalytics under100ms.'
+    category: 'Experimentation'
+    date: '2025-10-02'
+    readTime: '10min'
+    tags: ['Privacy''Edge''Experiments''FeatureFlags']
+    featured: true
+    valueProposition: 'Zero‑PIIexperimentsat theedge'
+  }
   {
-    slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
-    title: 'Runtime Rollback Guardrails Blueprint',
-    description:
-      'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
-    category: 'Reliability',
-    date: '2025-10-02',
-    readTime: '9 min',
-    tags: ['Rollback', 'Canary', 'Guardrails', 'Budgets'],
-    featured: true,
-    valueProposition: 'Instant reversibility, resilient releases',
-  },
+    slug: 'ai-2025-oct-02-rollback-guardrails-blueprint'
+    title: 'RuntimeRollbackGuardrails Blueprint'
+    description: 'Implementinstantrollbackscanaryscorecardsandobjectivequality budgets.'
+    category: 'Reliability'
+    date: '2025-10-02'
+    readTime: '9min'
+    tags: ['Rollback''Canary''Guardrails''Budgets']
+    featured: true
+    valueProposition: 'Instantreversibilityresilientreleases'
+  }
 ];
 
 /**
- * Get featured blog posts
+ * Getfeaturedblog posts
  */
-export function getFeaturedPosts(): BlogPost[] {
-  return allBlogPosts.filter(post => post.featured);
-}
+exportfunctiongetFeaturedPosts(): BlogPost[] { 
+  returnallBlogPosts.filter(post = > post.featured);
+ }
 
 /**
- * Get posts by category
+ * Getpostsby category
  */
-export function getPostsByCategory(category: string): BlogPost[] {
-  return allBlogPosts.filter(post => post.category === category);
-}
+exportfunctiongetPostsByCategory(category: string): BlogPost[] { 
+  returnallBlogPosts.filter(post = > post.category === category);
+ }
 
 /**
- * Get posts by tag
+ * Getpostsby tag
  */
-export function getPostsByTag(tag: string): BlogPost[] {
-  return allBlogPosts.filter(post => post.tags.includes(tag));
-}
+exportfunctiongetPostsByTag(tag: string): BlogPost[] { 
+  returnallBlogPosts.filter(post = > post.tags.includes(tag));
+ }
 
 /**
- * Search posts by query
+ * Searchpostsby query
  */
-export function searchPosts(query: string): BlogPost[] {
-  const lowerQuery = query.toLowerCase();
-  return allBlogPosts.filter(
-    post =>
+exportfunctionsearchPosts(query: string): BlogPost[] { 
+  constlowerQuery = query.toLowerCase(); returnallBlogPosts.filter(
+    post = >
       post.title.toLowerCase().includes(lowerQuery) ||
       post.description.toLowerCase().includes(lowerQuery) ||
-      post.tags.some(tag => tag.toLowerCase().includes(lowerQuery)),
+      post.tags.some(tag = > tag.toLowerCase().includes(lowerQuery))
   );
-}
+ }
 
 /**
- * Get all unique categories
+ * Getallunique categories
  */
-export function getAllCategories(): string[] {
-  return Array.from(new Set(allBlogPosts.map(post => post.category)));
-}
+exportfunctiongetAllCategories(): string[] { 
+  returnArray.from(newSet(allBlogPosts.map(post = > post.category)));
+ }
 
 /**
- * Get all unique tags
+ * Getallunique tags
  */
-export function getAllTags(): string[] {
-  const tags = allBlogPosts.flatMap(post => post.tags);
-  return Array.from(new Set(tags));
-}
+exportfunctiongetAllTags(): string[] { 
+  consttags = allBlogPosts.flatMap(post = > post.tags); returnArray.from(newSet(tags));
+ }
 
 /**
- * Get total value proposition across all posts
+ * Gettotalvalue propositionacrossall posts
  */
-export function getTotalValueProposition(): string {
-  // Extract numerical values from value propositions
-  const total = allBlogPosts.reduce((sum, post) => {
-    const match = post.valueProposition.match(/\$(\d+)M/);
-    if (match) {
-      return sum + parseInt(match[1], 10);
-    }
-    return sum;
-  }, 0);
+exportfunctiongetTotalValueProposition(): string { 
+  // Extractnumericalvalues fromvaluepropositions
+  consttotal = allBlogPosts.reduce((sumpost) = > {
+    constmatch = post.valueProposition.match(/\$(\d+)M/); if() { returnsum + parseInt(match[1]10);
+      }returnsum;
+  }0);
 
   return `$${total}M+`;
 }
 
 /**
- * Blog post statistics
+ * Blogpoststatistics
  */
-export const blogStats = {
-  totalPosts: allBlogPosts.length,
-  featuredPosts: getFeaturedPosts().length,
-  categories: getAllCategories().length,
-  tags: getAllTags().length,
-  totalValue: getTotalValueProposition(),
+exportconstblogStats = {
+  totalPosts: allBlogPosts.length
+  featuredPosts: getFeaturedPosts().length
+  categories: getAllCategories().length
+  tags: getAllTags().length
+  totalValue: getTotalValueProposition()
 };

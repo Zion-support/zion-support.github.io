@@ -1,207 +1,199 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const October2025NewTechBannerMega = () => {
+constOctober2025NewTechBannerMega = () => { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 px-6 my-12 rounded-2xl shadow-2xl'>
-      {' '}
-      {/* Animated Background Effects */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute w-96 h-96 bg-purple-500/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse'></div>
-        <div className='absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000'></div>
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-purple-900via-indigo-900to-blue-900py-16px-6my-12rounded-2xlshadow-2xl' > {' ' }
+      {/* AnimatedBackgroundEffects */}
+      <divclassName='absoluteinset-0overflow-hidden'>
+        <divclassName='absolutew-96h-96bg-purple-500/30rounded-fullblur-3xl -top-48 -left-48animate-pulse' />
+        <divclassName='absolutew-96h-96bg-blue-500/30rounded-fullblur-3xl -bottom-48 -right-48animate-pulsedelay-1000' />
       </div>
-      <div className='relative max-w-7xl mx-auto'>
+      <divclassName='relativemax-w-7xlmx-auto'>
         {/* Header */}
-        <div className='text-center mb-12'>
-          <div className='inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-semibold mb-4 animate-pulse'>
-            <Sparkles className='w-4 h-4' />
-            🔥 JUST PUBLISHED: OCTOBER 2025 AI BREAKTHROUGH SERIES 🔥
-            <Sparkles className='w-4 h-4' />
+        <divclassName='text-centermb-12'>
+          <divclassName='inline-flexitems-centergap-2bg-yellow-400/20text-yellow-300px-4py-2rounded-fulltext-smfont-semiboldmb-4animate-pulse'>
+            <SparklesclassName='w-4 h-4' />
+            🔥 JUSTPUBLISHED: OCTOBER2025AI BREAKTHROUGHSERIES 🔥
+            <SparklesclassName='w-4 h-4' />
           </div>
-          <h2 className='text-5xl md:text-6xl font-bold text-white mb-4 leading-tight'>
-            Revolutionary AI Solutions
+          <h2className='text-5xlmd:text-6xlfont-boldtext-whitemb-4leading-tight'>
+            RevolutionaryAISolutions
             <br />{' '}
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400'>
-              Transform Your Enterprise Today
+            <spanclassName = 'text-transparentbg-clip-textbg-gradient-to-rfrom-yellow-400via-pink-400to-purple-400'>
+              TransformYourEnterprise Today
             </span>
           </h2>
-          <p className='text-xl text-gray-200 max-w-3xl mx-auto'>
-            Three game-changing guides delivering{' '}
-            <strong className='text-yellow-300'>$3.75 BILLION</strong> in proven
-            value. Master multimodal AI, zero-trust security, and production RAG
+          <pclassName='text-xltext-gray-200max-w-3xlmx-auto'>
+            Threegame-changingguidesdelivering{' '}
+            <strongclassName='text-yellow-300'>$3.75BILLION</strong> inprovenvalue. MastermultimodalAIzero-trustsecurityandproductionRAG
             systems.
           </p>
         </div>
-        {/* Three Content Cards */}
-        <div className='grid md:grid-cols-3 gap-8 mb-12'>
-          {/* Card 1: Multimodal AI */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg'>
-                <Brain className='w-6 h-6 text-white' />
+        {/* ThreeContentCards */}
+        <divclassName = 'gridmd: grid-cols-3gap-8mb-12'>
+          {/* Card1: Multimodal AI */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-xlp-6borderborder-white/20hover: border-purple-400transition-allduration-300hover:scale-105hover:shadow-2xl'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-gradient-to-brfrom-purple-500to-pink-500rounded-lg'>
+                <Brain,className='w-6 h-6text-white' />
               </div>
-              <div className='text-sm font-semibold text-purple-300 uppercase tracking-wide'>
-                NEW GUIDE #1
+              <divclassName='text-smfont-semiboldtext-purple-300uppercasetracking-wide'>
+                NEWGUIDE #1
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3'>
-              Multimodal AI Enterprise Breakthrough
+            <h3className='text-2xlfont-boldtext-whitemb-3'>
+              MultimodalAIEnterprise Breakthrough
             </h3>
-            <p className='text-gray-300 mb-4 text-sm leading-relaxed'>
-              Unify vision, language & audio processing.{' '}
-              <strong className='text-yellow-300'>$2.8B value</strong> with 97%
-              accuracy at Fortune 500 scale.
+            <pclassName='text-gray-300mb-4text-smleading-relaxed'>
+              Unifyvisionlanguage & audioprocessing.{' '}
+              <strongclassName = 'text-yellow-300'>$2.8Bvalue</strong> with97%
+              accuracyatFortune 500scale.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>94% automation</strong> of complex workflows
+                  <strong>94% automation</strong> ofcomplexworkflows
                 </span>
               </div>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>$47M savings</strong> in document processing
+                  <strong>$47Msavings</strong> indocumentprocessing
                 </span>
               </div>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>3.7x faster</strong> customer service
+                  <strong>3.7xfaster</strong> customerservice
                 </span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-oct-multimodal-ai-enterprise-breakthrough'
-              className='inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 group'
+            <Linkto='/blog/ai-2025-oct-multimodal-ai-enterprise-breakthrough'
+              className='inline-flexitems-centergap-2 w-fulljustify-centerbg-gradient-to-rfrom-purple-500to-pink-500text-whitepx-6py-3rounded-lgfont-semiboldhover: from-purple-600hover:to-pink-600transition-allduration-300group'
             >
-              Read Full Guide
-              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              ReadFullGuide
+              <ArrowRight,className='w-5 h-5group-hover:translate-x-1transition-transform' />
             </Link>
           </div>
-          {/* Card 2: AI Security */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg'>
-                <Shield className='w-6 h-6 text-white' />
+          {/* Card2: AISecurity */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-xlp-6borderborder-white/20hover: border-blue-400transition-allduration-300hover:scale-105hover:shadow-2xl'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-gradient-to-brfrom-blue-500to-cyan-500rounded-lg'>
+                <ShieldclassName='w-6 h-6text-white' />
               </div>
-              <div className='text-sm font-semibold text-blue-300 uppercase tracking-wide'>
-                NEW GUIDE #2
+              <divclassName='text-smfont-semiboldtext-blue-300uppercasetracking-wide'>
+                NEWGUIDE #2
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3'>
-              AI Security Zero Trust Framework
+            <h3className='text-2xlfont-boldtext-whitemb-3'>
+              AISecurityZero TrustFramework
             </h3>
-            <p className='text-gray-300 mb-4 text-sm leading-relaxed'>
+            <pclassName='text-gray-300mb-4text-smleading-relaxed'>
               Prevent{' '}
-              <strong className='text-yellow-300'>$1.8B in breaches</strong>{' '}
-              with enterprise-grade AI security. Protect $127B infrastructure at
+              <strongclassName = 'text-yellow-300'>$1.8Binbreaches</strong>{' '}
+              withenterprise-gradeAIsecurity. Protect $127Binfrastructureat
               99.97% uptime.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>Zero breaches</strong> in 24 months
+                  <strong>Zerobreaches</strong> in24months
                 </span>
               </div>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
                   <strong>99.97% availability</strong> maintained
                 </span>
               </div>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>725% ROI</strong> over 3 years
+                  <strong>725% ROI</strong> over3years
                 </span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-oct-ai-security-zero-trust-framework'
-              className='inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group'
+            <Linkto='/blog/ai-2025-oct-ai-security-zero-trust-framework'
+              className='inline-flexitems-centergap-2 w-fulljustify-centerbg-gradient-to-rfrom-blue-500to-cyan-500text-whitepx-6py-3rounded-lgfont-semiboldhover: from-blue-600hover:to-cyan-600transition-allduration-300group'
             >
-              Read Full Guide
-              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              ReadFullGuide
+              <ArrowRight,className='w-5 h-5group-hover:translate-x-1transition-transform' />
             </Link>
           </div>
-          {/* Card 3: RAG Architecture */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg'>
-                <Sparkles className='w-6 h-6 text-white' />
+          {/* Card3: RAGArchitecture */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-xlp-6borderborder-white/20hover: border-green-400transition-allduration-300hover:scale-105hover:shadow-2xl'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-gradient-to-brfrom-green-500to-emerald-500rounded-lg'>
+                <SparklesclassName='w-6 h-6text-white' />
               </div>
-              <div className='text-sm font-semibold text-green-300 uppercase tracking-wide'>
-                NEW GUIDE #3
+              <divclassName='text-smfont-semiboldtext-green-300uppercasetracking-wide'>
+                NEWGUIDE #3
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3'>
-              Enterprise RAG Production Architecture
+            <h3className='text-2xlfont-boldtext-whitemb-3'>
+              EnterpriseRAGProduction Architecture
             </h3>
-            <p className='text-gray-300 mb-4 text-sm leading-relaxed'>
-              Deploy RAG at scale. Process{' '}
-              <strong className='text-yellow-300'>10M+ queries/day</strong> with
-              94% accuracy delivering $470M value.
+            <pclassName='text-gray-300mb-4text-smleading-relaxed'>
+              DeployRAGat scale. Process{' '}
+              <strongclassName = 'text-yellow-300'>10M+ queries/day</strong> with94% accuracydelivering $470Mvalue.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>94% accuracy</strong> vs 67% pure LLM
+                  <strong>94% accuracy</strong> vs67% pureLLM
                 </span>
               </div>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>$470M annual value</strong> Fortune 500
+                  <strong>$470Mannualvalue</strong> Fortune500
                 </span>
               </div>
-              <div className='flex items-start gap-2 text-sm text-gray-200'>
-                <TrendingUp className='w-4 h-4 text-green-400 mt-0.5 flex-shrink-0' />
+              <divclassName='flexitems-startgap-2text-smtext-gray-200'>
+                <TrendingUpclassName='w-4 h-4text-green-400mt-0.5flex-shrink-0' />
                 <span>
-                  <strong>2,840% ROI</strong> in 3 years
+                  <strong>2840% ROI</strong> in3years
                 </span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-oct-rag-production-architecture-guide'
-              className='inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 group'
+            <Linkto = '/blog/ai-2025-oct-rag-production-architecture-guide'
+              className='inline-flexitems-centergap-2 w-fulljustify-centerbg-gradient-to-rfrom-green-500to-emerald-500text-whitepx-6py-3rounded-lgfont-semiboldhover: from-green-600hover:to-emerald-600transition-allduration-300group'
             >
-              Read Full Guide
-              <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
+              ReadFullGuide
+              <ArrowRight,className='w-5 h-5group-hover:translate-x-1transition-transform' />
             </Link>
           </div>
         </div>
-        {/* Bottom CTA */}
-        <div className='text-center'>
-          <div className='inline-flex flex-col sm:flex-row gap-4'>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 shadow-2xl hover:shadow-yellow-500/50 hover:scale-105'
+        {/* BottomCTA */}
+        <divclassName = 'text-center'>
+          <divclassName='inline-flexflex-colsm: flex-rowgap-4'>
+            <Linkto='/contact'
+              className='inline-flexitems-centergap-2bg-gradient-to-rfrom-yellow-400to-orange-500text-gray-900px-8py-4rounded-xlfont-boldtext-lghover:from-yellow-500hover:to-orange-600transition-allduration-300shadow-2xlhover:shadow-yellow-500/50hover:scale-105'
             >
-              <Sparkles className='w-6 h-6' />
-              Get Free Expert Consultation
-              <ArrowRight className='w-6 h-6' />
+              <SparklesclassName='w-6 h-6' />
+              GetFreeExpert Consultation
+              <ArrowRight,className='w-6 h-6' />
             </Link>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/20 transition-all duration-300'
+            <Linkto='/blog'
+              className='inline-flexitems-centergap-2bg-white/10backdrop-blur-lgtext-whitepx-8py-4rounded-xlfont-boldtext-lgborderborder-white/30hover:bg-white/20transition-allduration-300'
             >
-              Explore All AI Insights
-              <ArrowRight className='w-6 h-6' />
+              ExploreAllAI Insights
+              <ArrowRight,className='w-6 h-6' />
             </Link>
           </div>
-          <p className='text-sm text-gray-300 mt-6'>
+          <pclassName='text-smtext-gray-300mt-6'>
             Join{' '}
-            <strong className='text-yellow-300'>
-              1,247 Fortune 500 companies
+            <strongclassName = 'text-yellow-300'>
+              1247Fortune500 companies
             </strong>{' '}
-            transforming with Zion Tech Group AI solutions
+            transformingwithZion TechGroupAI solutions
           </p>
         </div>
       </div>
     </div>
   );
 };
-export default October2025NewTechBannerMega;
+exportdefaultOctober2025NewTechBannerMega;

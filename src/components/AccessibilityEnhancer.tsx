@@ -1,68 +1,61 @@
-import React, { useEffect } from 'react';
+importReact{ useEffect } from 'react';
 
-interface AccessibilityEnhancerProps {
+interfaceAccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
-  children,
-}) => {
+constAccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children
+}) => { 
   useEffect(() => {
-    // Add accessibility enhancements
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'skip-link';
-      skipLink.style.cssText = `
-        position: absolute;
-  top: -40px;
+    // Addaccessibilityenhancements
+    constaddSkipLinks = () => {
+      constskipLink = document.createElement('a'); skipLink.href = '#main-content'; skipLink.textContent = 'Skiptomain content'; skipLink.className = 'skip-link'; skipLink.style.cssText = `
+        position: absolute; top: -40px;
         left: 6px;
   background: #000;
         color: #fff;
   padding: 8px;
         text-decoration: none;
         z-index: 1000;
-        transition: top 0.3s;
+        transition: top0.3s;
       `;
 
-      skipLink.addEventListener('focus', () => {
+      skipLink.addEventListener('focus'() = > {
         skipLink.style.top = '6px';
-      });
+       });
 
-      skipLink.addEventListener('blur', () => {
+      skipLink.addEventListener('blur'() => {
         skipLink.style.top = '-40px';
       });
 
-      document.body.insertBefore(skipLink, document.body.firstChild);
+      document.body.insertBefore(skipLinkdocument.body.firstChild);
     };
 
-    // Add ARIA labels to interactive elements
-    const enhanceInteractiveElements = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(button => {
-        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
+    // AddARIAlabels tointeractiveelements
+    constenhanceInteractiveElements = () => {  
+      constbuttons = document.querySelectorAll('button: not([aria-label])'); buttons.forEach(button = > {
+        if (!button.getAttribute('aria-label')  && !button.textContent?.trim()) {
+          button.setAttribute('aria-label''Button');
+          }
       });
 
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.getAttribute('aria-label') && !link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
-        }
+      constlinks = document.querySelectorAll('a: not([aria-label])'); links.forEach(link = > { 
+        if (!link.getAttribute('aria-label')  && !link.textContent?.trim()) {
+          link.setAttribute('aria-label''Link');
+         }
       });
     };
 
-    // Add focus management
-    const enhanceFocusManagement = () => {
-      document.addEventListener('keydown', e => {
+    // Addfocusmanagement
+    constenhanceFocusManagement = () => { 
+      document.addEventListener('keydown'e = > {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
-        }
+         }
       });
 
-      document.addEventListener('mousedown', () => {
+      document.addEventListener('mousedown'() => {
         document.body.classList.remove('keyboard-navigation');
       });
     };
@@ -71,22 +64,21 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enhanceInteractiveElements();
     enhanceFocusManagement();
 
-    // Re-run enhancements when DOM changes
-    const observer = new MutationObserver(() => {
+    // Re-runenhancementswhen DOMchangesconst observer = newMutationObserver(() => {
       enhanceInteractiveElements();
     });
 
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
+    observer.observe(document.body{
+      childList: true
+      subtree: true
     });
 
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }[]);
 
   return <>{children}</>;
 };
 
-export default AccessibilityEnhancer;
+exportdefaultAccessibilityEnhancer;

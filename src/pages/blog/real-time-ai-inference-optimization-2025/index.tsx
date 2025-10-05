@@ -1,304 +1,284 @@
 import { Helmet } from 'react-helmet-async';
-import ArrowLeft from 'lucide-react';
-import Calendar from 'lucide-react';
-import Clock from 'lucide-react';
-import Cpu from 'lucide-react';
-import Database from 'lucide-react';
-import Gauge from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
+importArrowLeftfrom 'lucide-react';
+importCalendarfrom 'lucide-react';
+importClockfrom 'lucide-react';
+importCpufrom 'lucide-react';
+importDatabasefrom 'lucide-react';
+importGaugefrom 'lucide-react';
+importTrendingUpfrom 'lucide-react';
+importZapfrom 'lucide-react';
 import { Link } from 'react-router-dom';
-const RealTimeAIInferenceOptimization2025 = () => {
+constRealTimeAIInferenceOptimization2025 = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Real-Time AI Inference Optimization: Cut Latency by 85% | Zion Tech
-          Group
+          Real-TimeAIInference Optimization: CutLatencyby 85% | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Production-tested techniques to reduce AI inference latency by 85%. Model quantization, batching strategies, and hardware acceleration for sub-50ms response times.'
+        <metaname = 'description'
+          content='Production-testedtechniquesto reduceAIinference latencyby85%. Modelquantizationbatchingstrategiesandhardwareacceleration forsub-50msresponsetimes.'
         />
-        <meta
-          name='keywords'
-          content='AI inference, model optimization, latency reduction, quantization, GPU optimization, real-time AI'
+        <metaname = 'keywords'
+          content='AIinferencemodeloptimizationlatencyreductionquantizationGPUoptimizationreal-timeAI'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/real-time-ai-inference-optimization-2025'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/real-time-ai-inference-optimization-2025'
         />
       </Helmet>
-      <div className='min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900'>
-        {/* Hero Section */}
-        <div className='relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16'>
-          <div className='absolute inset-0 bg-black/20'></div>
-          <div className='container mx-auto px-6 relative z-10'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors'
+      <divclassName='min-h-screenbg-gradient-to-brfrom-slate-900via-indigo-900to-slate-900' > {/* HeroSection */ }
+        <divclassName = 'relativeoverflow-hiddenbg-gradient-to-rfrom-indigo-600to-cyan-600py-16'>
+          <divclassName='absoluteinset-0bg-black/20' />
+          <divclassName='containermx-autopx-6relativez-10'>
+            <Linkto='/blog'
+              className='inline-flexitems-centertext-white/90hover: text-whitemb-8transition-colors'
             >
-              <ArrowLeft className='w-4 h-4 mr-2' />
-              Back to Blog
+              <ArrowLeftclassName='w-4 h-4mr-2' />
+              BacktoBlog
             </Link>
-            <div className='max-w-4xl'>
-              <div className='flex flex-wrap gap-3 mb-6'>
-                <span className='px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+            <divclassName='max-w-4xl'>
+              <divclassName='flexflex-wrapgap-3mb-6'>
+                <spanclassName='px-4py-2bg-white/20backdrop-blur-smrounded-fulltext-whitetext-smfont-medium'>
                   ⚡ Performance
                 </span>
-                <span className='px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                <spanclassName='px-4py-2bg-white/20backdrop-blur-smrounded-fulltext-whitetext-smfont-medium'>
                   🚀 Optimization
                 </span>
-                <span className='px-4 py-2 bg-emerald-500/30 backdrop-blur-sm rounded-full text-white text-sm font-medium'>
+                <spanclassName='px-4py-2bg-emerald-500/30backdrop-blur-smrounded-fulltext-whitetext-smfont-medium'>
                   ⭐ Featured
                 </span>
               </div>
-              <h1 className='text-4xl md:text-5xl font-bold text-white mb-6 leading-tight'>
-                Real-Time AI Inference Optimization: Achieving Sub-50ms Latency
-                at Scale
+              <h1className='text-4xlmd:text-5xlfont-boldtext-whitemb-6leading-tight'>
+                Real-TimeAIInference Optimization: AchievingSub-50msLatencyat Scale
               </h1>
-              <div className='flex flex-wrap items-center gap-6 text-white/90'>
-                <div className='flex items-center'>
-                  <Calendar className='w-5 h-5 mr-2' />
-                  <span>October 1, 2025</span>
+              <divclassName='flexflex-wrapitems-centergap-6text-white/90'>
+                <divclassName='flexitems-center'>
+                  <CalendarclassName='w-5 h-5mr-2' />
+                  <span>October 12025</span>
                 </div>
-                <div className='flex items-center'>
-                  <Clock className='w-5 h-5 mr-2' />
-                  <span>10 min read</span>
+                <divclassName = 'flexitems-center'>
+                  <ClockclassName='w-5 h-5mr-2' />
+                  <span>10minread</span>
                 </div>
-                <div className='flex items-center'>
-                  <TrendingUp className='w-5 h-5 mr-2' />
-                  <span>High Impact</span>
+                <divclassName='flexitems-center'>
+                  <TrendingUpclassName='w-5 h-5mr-2' />
+                  <span>HighImpact</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
         {/* Content */}
-        <article className='container mx-auto px-6 py-16 max-w-4xl'>
-          <div className='prose prose-invert prose-lg max-w-none'>
-            {/* Executive Summary */}
-            <div className='bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 border-l-4 border-indigo-500 p-6 rounded-r-lg mb-12'>
-              <h2 className='text-2xl font-bold text-white mb-4 flex items-center'>
-                <Zap className='w-6 h-6 mr-2 text-yellow-400' />
-                The Latency Challenge
+        <articleclassName='containermx-autopx-6py-16max-w-4xl'>
+          <divclassName='proseprose-invertprose-lgmax-w-none'>
+            {/* ExecutiveSummary */}
+            <divclassName='bg-gradient-to-rfrom-indigo-500/10to-cyan-500/10border-l-4border-indigo-500p-6rounded-r-lgmb-12'>
+              <h2className='text-2xlfont-boldtext-whitemb-4flexitems-center'>
+                <ZapclassName='w-6 h-6mr-2text-yellow-400' />
+                TheLatencyChallenge
               </h2>
-              <p className='text-gray-300 leading-relaxed'>
-                Real-time AI applications demand sub-50ms inference latency to
-                maintain user experience. This guide reveals production-tested
-                optimization techniques used by hyperscalers to reduce inference
-                latency by 85% while maintaining model accuracy and cutting
-                infrastructure costs by 60%.
+              <pclassName='text-gray-300leading-relaxed'>
+                Real-timeAIapplications demandsub-50msinferencelatency tomaintainuser experience. Thisguidereveals production-testedoptimizationtechniques usedbyhyperscalers toreduceinference
+                latencyby85% whilemaintainingmodel accuracyandcutting
+                infrastructurecostsby 60%.
               </p>
             </div>
-            {/* Performance Bottlenecks */}
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center'>
-                <Gauge className='w-8 h-8 mr-3 text-red-400' />
-                Critical Performance Bottlenecks
+            {/* PerformanceBottlenecks */}
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-center'>
+                <GaugeclassName='w-8 h-8mr-3text-red-400' />
+                CriticalPerformanceBottlenecks
               </h2>
-              <div className='space-y-6'>
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    1. Model Loading Overhead
+              <divclassName='space-y-6'>
+                <divclassName='bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3'>
+                    1. ModelLoadingOverhead
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Cold-start latency from loading large models (7B+
-                    parameters) can exceed 10 seconds, making serverless
-                    deployments impractical for real-time use cases.
+                  <pclassName='text-gray-300mb-4'>
+                    Cold-startlatencyfrom loadinglargemodels (7B+
+                    parameters) canexceed10 secondsmakingserverlessdeployments impracticalforreal-timeusecases.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-emerald-400 font-mono mb-1'>
-                      ✓ Keep models warm with minimum instance counts (GKE, EKS)
+                  <divclassName = 'bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-emerald-400font-monomb-1'>
+                      ✓ Keepmodelswarm withminimuminstance counts (GKEEKS)
                     </p>
-                    <p className='text-sm text-emerald-400 font-mono mb-1'>
-                      ✓ Use model servers with built-in caching (TensorRT, vLLM)
+                    <pclassName = 'text-smtext-emerald-400font-monomb-1'>
+                      ✓ Usemodelservers withbuilt-incaching (TensorRTvLLM)
                     </p>
-                    <p className='text-sm text-emerald-400 font-mono'>
-                      ✓ Implement lazy loading for multi-model deployments
+                    <pclassName = 'text-smtext-emerald-400font-mono'>
+                      ✓ Implementlazyloading formulti-modeldeployments
                     </p>
                   </div>
                 </div>
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    2. GPU Utilization
+                <divclassName='bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3'>
+                    2. GPUUtilization
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Poor batch management leads to 30-40% GPU idle time, wasting
-                    expensive compute resources.
+                  <pclassName='text-gray-300mb-4'>
+                    Poorbatchmanagement leadsto30-40% GPUidletimewastingexpensivecompute resources.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-cyan-400 font-mono mb-1'>
-                      → Dynamic batching with adaptive timeout (10-50ms windows)
+                  <divclassName = 'bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-cyan-400font-monomb-1'>
+                      → Dynamicbatchingwith adaptivetimeout (10-50mswindows)
                     </p>
-                    <p className='text-sm text-cyan-400 font-mono mb-1'>
-                      → Continuous batching for LLM inference (vLLM
-                      PagedAttention)
+                    <pclassName = 'text-smtext-cyan-400font-monomb-1'>
+                      → Continuousbatchingfor LLMinference (vLLMPagedAttention)
                     </p>
-                    <p className='text-sm text-cyan-400 font-mono'>
-                      → Multi-instance GPU (MIG) for concurrent model serving
+                    <pclassName = 'text-smtext-cyan-400font-mono'>
+                      → Multi-instanceGPU (MIG) forconcurrentmodel serving
                     </p>
                   </div>
                 </div>
-                <div className='bg-slate-800/50 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-xl font-semibold text-white mb-3'>
-                    3. Network Latency
+                <divclassName = 'bg-slate-800/50p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-xlfont-semiboldtext-whitemb-3'>
+                    3. NetworkLatency
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Round-trip network latency often dominates inference time,
-                    especially in distributed architectures.
+                  <pclassName='text-gray-300mb-4'>
+                    Round-tripnetworklatency oftendominatesinference time
+                    especiallyindistributed architectures.
                   </p>
-                  <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                    <p className='text-sm text-orange-400 font-mono mb-1'>
-                      🔥 Deploy models at edge locations (Cloudflare Workers AI)
+                  <divclassName = 'bg-slate-900/50p-4roundedborder border-slate-600'>
+                    <pclassName='text-smtext-orange-400font-monomb-1'>
+                      🔥 Deploymodelsat edgelocations (CloudflareWorkersAI)
                     </p>
-                    <p className='text-sm text-orange-400 font-mono mb-1'>
-                      🔥 Use HTTP/2 multiplexing and persistent connections
+                    <pclassName = 'text-smtext-orange-400font-monomb-1'>
+                      🔥 UseHTTP/2multiplexingand persistentconnections
                     </p>
-                    <p className='text-sm text-orange-400 font-mono'>
-                      🔥 Implement predictive prefetching for known patterns
+                    <pclassName='text-smtext-orange-400font-mono'>
+                      🔥 Implementpredictiveprefetching forknownpatterns
                     </p>
                   </div>
                 </div>
               </div>
             </section>
-            {/* Optimization Techniques */}
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center'>
-                <Cpu className='w-8 h-8 mr-3 text-purple-400' />
-                Production-Grade Optimization Techniques
+            {/* OptimizationTechniques */}
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-center'>
+                <CpuclassName='w-8 h-8mr-3text-purple-400' />
+                Production-GradeOptimizationTechniques
               </h2>
-              <div className='space-y-8'>
+              <divclassName='space-y-8'>
                 {/* Quantization */}
-                <div className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-2xl font-semibold text-white mb-4 flex items-center'>
-                    <span className='text-3xl mr-3'>📉</span>
-                    Model Quantization (INT8/INT4)
+                <divclassName='bg-gradient-to-brfrom-slate-800to-slate-900p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-2xlfont-semiboldtext-whitemb-4flexitems-center'>
+                    <spanclassName='text-3xlmr-3'>📉</span>
+                    ModelQuantization (INT8/INT4)
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Reduce model size by 75% and increase throughput by 3-4x
-                    with minimal accuracy loss.
+                  <pclassName = 'text-gray-300mb-4'>
+                    Reducemodelsize by75% andincreasethroughput by3-4xwithminimal accuracyloss.
                   </p>
-                  <div className='bg-slate-900/50 p-5 rounded-lg border border-slate-600 mb-4'>
-                    <p className='text-sm text-emerald-400 font-semibold mb-3'>
-                      Quantization Strategy:
-                    </p>
-                    <ul className='space-y-2 text-sm text-gray-300'>
+                  <divclassName='bg-slate-900/50p-5rounded-lgborderborder-slate-600mb-4'>
+                    <pclassName='text-smtext-emerald-400font-semiboldmb-3'>
+                      QuantizationStrategy: </p>
+                    <ulclassName='space-y-2text-smtext-gray-300'>
                       <li>
-                        ✓ <strong>INT8</strong>: Best for vision models (YOLO,
-                        ResNet) - 2-3% accuracy drop
+                        ✓ <strong>INT8</strong>: Bestforvision models (YOLO
+                        ResNet) - 2-3% accuracydrop
                       </li>
                       <li>
-                        ✓ <strong>INT4</strong>: LLMs with GPTQ/AWQ - 4x memory
-                        reduction, 1-2% perplexity increase
+                        ✓ <strong>INT4</strong>: LLMswithGPTQ/AWQ - 4xmemoryreduction1-2% perplexityincrease
                       </li>
                       <li>
-                        ✓ <strong>Mixed precision</strong>: Keep critical layers
-                        in FP16, quantize rest to INT8
+                        ✓ <strong>Mixedprecision</strong>: Keepcriticallayers
+                        inFP16quantizerestto INT8
                       </li>
                     </ul>
                   </div>
-                  <div className='bg-blue-500/10 border border-blue-500/30 rounded p-4'>
-                    <p className='text-blue-300 text-sm'>
-                      <strong>Real Result:</strong> Llama-70B quantized to INT4
-                      runs on single A100 (vs 4x A100 for FP16) with 3.5x
-                      throughput increase and negligible quality degradation.
+                  <divclassName = 'bg-blue-500/10borderborder-blue-500/30roundedp-4'>
+                    <pclassName='text-blue-300text-sm'>
+                      <strong>RealResult: </strong> Llama-70Bquantizedto INT4runson singleA100 (vs4xA100 forFP16) with3.5xthroughputincrease andnegligiblequality degradation.
                     </p>
                   </div>
                 </div>
-                {/* Hardware Acceleration */}
-                <div className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-2xl font-semibold text-white mb-4 flex items-center'>
-                    <span className='text-3xl mr-3'>🚀</span>
-                    Specialized Hardware Acceleration
+                {/* HardwareAcceleration */}
+                <divclassName = 'bg-gradient-to-brfrom-slate-800to-slate-900p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-2xlfont-semiboldtext-whitemb-4flexitems-center'>
+                    <spanclassName='text-3xlmr-3'>🚀</span>
+                    SpecializedHardwareAcceleration
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Choose the right hardware for your workload to maximize
-                    performance per dollar.
+                  <pclassName='text-gray-300mb-4'>
+                    Choosetheright hardwareforyour workloadtomaximize
+                    performanceperdollar.
                   </p>
-                  <div className='grid md:grid-cols-2 gap-4'>
-                    <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                      <p className='text-cyan-400 font-semibold mb-2'>
-                        NVIDIA GPUs
+                  <divclassName='gridmd: grid-cols-2gap-4'>
+                    <divclassName='bg-slate-900/50p-4roundedborder border-slate-600'>
+                      <pclassName='text-cyan-400font-semiboldmb-2'>
+                        NVIDIAGPUs
                       </p>
-                      <ul className='text-sm text-gray-300 space-y-1'>
-                        <li>• A100/H100 for training + inference</li>
-                        <li>• L4/L40 for cost-efficient inference</li>
-                        <li>• TensorRT for 5-10x speedup</li>
+                      <ulclassName='text-smtext-gray-300space-y-1'>
+                        <li>• A100/H100fortraining + inference</li>
+                        <li>• L4/L40forcost-efficientinference</li>
+                        <li>• TensorRTfor5-10xspeedup</li>
                       </ul>
                     </div>
-                    <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                      <p className='text-purple-400 font-semibold mb-2'>
-                        AWS Inferentia
+                    <divclassName='bg-slate-900/50p-4roundedborder border-slate-600'>
+                      <pclassName='text-purple-400font-semiboldmb-2'>
+                        AWSInferentia
                       </p>
-                      <ul className='text-sm text-gray-300 space-y-1'>
-                        <li>• 70% lower cost vs GPU</li>
-                        <li>• Best for transformer models</li>
-                        <li>• AWS Neuron SDK required</li>
+                      <ulclassName='text-smtext-gray-300space-y-1'>
+                        <li>• 70% lowercostvs GPU</li>
+                        <li>• Bestfortransformer models</li>
+                        <li>• AWSNeuronSDK required</li>
                       </ul>
                     </div>
-                    <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                      <p className='text-emerald-400 font-semibold mb-2'>
-                        Google TPUs
+                    <divclassName='bg-slate-900/50p-4roundedborder border-slate-600'>
+                      <pclassName='text-emerald-400font-semiboldmb-2'>
+                        GoogleTPUs
                       </p>
-                      <ul className='text-sm text-gray-300 space-y-1'>
-                        <li>• v5e for batch inference</li>
-                        <li>• Excellent for JAX/TensorFlow</li>
-                        <li>• 2x faster than A100 for LLMs</li>
+                      <ulclassName='text-smtext-gray-300space-y-1'>
+                        <li>• v5eforbatch inference</li>
+                        <li>• ExcellentforJAX/TensorFlow</li>
+                        <li>• 2xfasterthan A100forLLMs</li>
                       </ul>
                     </div>
-                    <div className='bg-slate-900/50 p-4 rounded border border-slate-600'>
-                      <p className='text-orange-400 font-semibold mb-2'>
-                        Edge Devices
+                    <divclassName='bg-slate-900/50p-4roundedborder border-slate-600'>
+                      <pclassName='text-orange-400font-semiboldmb-2'>
+                        EdgeDevices
                       </p>
-                      <ul className='text-sm text-gray-300 space-y-1'>
-                        <li>• NVIDIA Jetson for robotics</li>
-                        <li>• Apple Neural Engine (ANE)</li>
-                        <li>• Coral TPU for lightweight CV</li>
+                      <ulclassName='text-smtext-gray-300space-y-1'>
+                        <li>• NVIDIAJetsonfor robotics</li>
+                        <li>• AppleNeuralEngine (ANE)</li>
+                        <li>• CoralTPUfor lightweightCV</li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                {/* Caching Strategy */}
-                <div className='bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700'>
-                  <h3 className='text-2xl font-semibold text-white mb-4 flex items-center'>
-                    <Database className='w-6 h-6 mr-3 text-emerald-400' />
-                    Intelligent Caching Layers
+                {/* CachingStrategy */}
+                <divclassName = 'bg-gradient-to-brfrom-slate-800to-slate-900p-6rounded-lgborderborder-slate-700'>
+                  <h3className='text-2xlfont-semiboldtext-whitemb-4flexitems-center'>
+                    <DatabaseclassName='w-6 h-6mr-3text-emerald-400' />
+                    IntelligentCachingLayers
                   </h3>
-                  <p className='text-gray-300 mb-4'>
-                    Cache 60-80% of requests with semantic similarity matching
-                    to avoid redundant inference.
+                  <pclassName='text-gray-300mb-4'>
+                    Cache60-80% ofrequestswith semanticsimilaritymatching
+                    toavoidredundant inference.
                   </p>
-                  <div className='bg-slate-900/50 p-5 rounded-lg border border-slate-600'>
-                    <p className='text-emerald-400 font-semibold mb-3'>
-                      Multi-Tier Caching Strategy:
-                    </p>
-                    <div className='space-y-3'>
+                  <divclassName='bg-slate-900/50p-5rounded-lgborderborder-slate-600'>
+                    <pclassName='text-emerald-400font-semiboldmb-3'>
+                      Multi-TierCachingStrategy: </p>
+                    <divclassName='space-y-3'>
                       <div>
-                        <p className='text-white font-medium'>
-                          L1: In-Memory Cache (Redis)
+                        <pclassName='text-whitefont-medium'>
+                          L1: In-MemoryCache (Redis)
                         </p>
-                        <p className='text-sm text-gray-400'>
-                          Hash-based exact match for repeated queries. 1-2ms
-                          lookup time. TTL: 5-15 minutes.
+                        <pclassName = 'text-smtext-gray-400'>
+                          Hash-basedexactmatch forrepeatedqueries. 1-2mslookuptime. TTL: 5-15minutes.
                         </p>
                       </div>
                       <div>
-                        <p className='text-white font-medium'>
-                          L2: Vector Similarity Cache (Pinecone/Weaviate)
+                        <pclassName='text-whitefont-medium'>
+                          L2: VectorSimilarityCache (Pinecone/Weaviate)
                         </p>
-                        <p className='text-sm text-gray-400'>
-                          Semantic search with 0.95+ cosine similarity
-                          threshold. 10-30ms lookup. TTL: 1 hour.
+                        <pclassName = 'text-smtext-gray-400'>
+                          Semanticsearchwith 0.95+ cosinesimilaritythreshold. 10-30mslookup. TTL: 1hour.
                         </p>
                       </div>
                       <div>
-                        <p className='text-white font-medium'>
-                          L3: Model Inference (Fallback)
+                        <pclassName='text-whitefont-medium'>
+                          L3: ModelInference (Fallback)
                         </p>
-                        <p className='text-sm text-gray-400'>
-                          Full model execution for cache misses. Result added to
-                          L1 and L2.
+                        <pclassName = 'text-smtext-gray-400'>
+                          Fullmodelexecution forcachemisses. Resultaddedto
+                          L1andL2.
                         </p>
                       </div>
                     </div>
@@ -307,63 +287,61 @@ const RealTimeAIInferenceOptimization2025 = () => {
               </div>
             </section>
             {/* Results */}
-            <section className='mb-12'>
-              <div className='bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30'>
-                <h2 className='text-3xl font-bold text-white mb-6'>
-                  Measured Performance Improvements
+            <sectionclassName = 'mb-12'>
+              <divclassName='bg-gradient-to-rfrom-emerald-500/20to-cyan-500/20p-8rounded-lgborderborder-emerald-500/30'>
+                <h2className='text-3xlfont-boldtext-whitemb-6'>
+                  MeasuredPerformanceImprovements
                 </h2>
-                <div className='grid md:grid-cols-2 gap-6'>
+                <divclassName='gridmd: grid-cols-2gap-6'>
                   <div>
-                    <p className='text-5xl font-bold text-emerald-400 mb-2'>
+                    <pclassName='text-5xlfont-boldtext-emerald-400mb-2'>
                       85%
                     </p>
-                    <p className='text-gray-300'>
-                      Reduction in P95 latency (780ms → 120ms)
+                    <pclassName='text-gray-300'>
+                      ReductioninP95 latency (780ms → 120ms)
                     </p>
                   </div>
                   <div>
-                    <p className='text-5xl font-bold text-cyan-400 mb-2'>
+                    <pclassName = 'text-5xlfont-boldtext-cyan-400mb-2'>
                       5.2x
                     </p>
-                    <p className='text-gray-300'>
-                      Throughput increase with dynamic batching
+                    <pclassName='text-gray-300'>
+                      Throughputincreasewith dynamicbatching
                     </p>
                   </div>
                   <div>
-                    <p className='text-5xl font-bold text-blue-400 mb-2'>
+                    <pclassName='text-5xlfont-boldtext-blue-400mb-2'>
                       $87K
                     </p>
-                    <p className='text-gray-300'>
-                      Monthly GPU cost savings (per 1M requests/day)
+                    <pclassName='text-gray-300'>
+                      MonthlyGPUcost savings (per1Mrequests/day)
                     </p>
                   </div>
                   <div>
-                    <p className='text-5xl font-bold text-purple-400 mb-2'>
+                    <pclassName = 'text-5xlfont-boldtext-purple-400mb-2'>
                       99.8%
                     </p>
-                    <p className='text-gray-300'>
-                      Model accuracy retained after optimization
+                    <pclassName='text-gray-300'>
+                      Modelaccuracyretained afteroptimization
                     </p>
                   </div>
                 </div>
               </div>
             </section>
             {/* CTA */}
-            <section className='text-center'>
-              <div className='bg-gradient-to-r from-indigo-600 to-cyan-600 p-8 rounded-lg'>
-                <h2 className='text-3xl font-bold text-white mb-4'>
-                  Need Help Optimizing Your AI Infrastructure?
+            <sectionclassName = 'text-center'>
+              <divclassName='bg-gradient-to-rfrom-indigo-600to-cyan-600p-8rounded-lg'>
+                <h2className='text-3xlfont-boldtext-whitemb-4'>
+                  NeedHelpOptimizing YourAIInfrastructure?
                 </h2>
-                <p className='text-xl text-white/90 mb-6'>
-                  Our ML engineers have optimized inference systems handling
-                  10B+ daily requests.
+                <pclassName='text-xltext-white/90mb-6'>
+                  OurMLengineers haveoptimizedinference systemshandling10B+ dailyrequests.
                 </p>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors'
+                <Linkto='/contact'
+                  className='inline-flexitems-centerpx-8py-4bg-whitetext-indigo-600font-semiboldrounded-lghover: bg-gray-100transition-colors'
                 >
-                  Get Performance Audit
-                  <ArrowLeft className='w-5 h-5 ml-2 rotate-180' />
+                  GetPerformanceAudit
+                  <ArrowLeftclassName='w-5 h-5ml-2rotate-180' />
                 </Link>
               </div>
             </section>
@@ -373,4 +351,4 @@ const RealTimeAIInferenceOptimization2025 = () => {
     </>
   );
 };
-export default RealTimeAIInferenceOptimization2025;
+exportdefaultRealTimeAIInferenceOptimization2025;

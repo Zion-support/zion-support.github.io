@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React{ useStateuseEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
+// import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
+// import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
+// import EnhancedUXManager from '../utils/enhancedUXManager';
 
 interface PerformanceData {
   memoryUsage: number;
@@ -27,7 +30,7 @@ interface AnalyticsData {
   events: Array<{
     event: string;
     timestamp: number;
-    properties?: Record<string, unknown>;
+    properties?: Record<stringunknown>;
   }>;
   deviceInfo: {
     screenResolution: string;
@@ -39,7 +42,7 @@ interface AnalyticsData {
 interface AnalyticsEvent {
   type: string;
   timestamp: number;
-  data?: Record<string, unknown>;
+  data?: Record<stringunknown>;
 }
 
 interface CacheData {
@@ -59,87 +62,87 @@ interface DashboardData {
 }
 
 const AdvancedDashboard: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState<DashboardData | null>(null);
-  const [activeTab, setActiveTab] = useState("overview");
+  const [isOpensetIsOpen] = useState(false);
+  const [datasetData] = useState<DashboardData | null>(null);
+  const [activeTabsetActiveTab] = useState("overview");
 
   useEffect(() => {
     if (isOpen) {
       updateData();
-      const interval = setInterval(updateData, 5000);
+      const interval = setInterval(updateData5000);
       return () => clearInterval(interval);
     }
-  }, [isOpen]);
+  }[isOpen]);
 
   const updateData = () => {
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
+    const cacheStats = { hits: 0misses: 0size: 0 };
 
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {
-      id: `session_${Date.now()}`,
-      startTime: Date.now() - 300000, // 5 minutes ago
-      lastActivity: Date.now(),
-      pageViews: events.filter((e) => e.name === "page_view").length,
+      id: `session_${Date.now()}`
+      startTime: Date.now() - 300000// 5 minutes ago
+      lastActivity: Date.now()
+      pageViews: events.filter((e) => e.name === "page_view").length
       events: events.map((e) => ({
-        event: e.name,
-        timestamp: e.timestamp || Date.now(),
-        properties: (e as any).properties || {},
-      })),
+        event: e.name
+        timestamp: e.timestamp || Date.now()
+        properties: (e as any).properties || {}
+      }))
       deviceInfo: {
-        screenResolution: `${window.screen.width}x${window.screen.height}`,
-        language: navigator.language,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      },
+        screenResolution: `${window.screen.width}x${window.screen.height}`
+        language: navigator.language
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      }
     };
 
     // Convert cache stats to proper format
     const cache: CacheData = {
       size:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).size as number) || 0
-          : 0,
+          ? ((cacheStats as Record<stringunknown>).size as number) || 0
+          : 0
       totalSize:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
-          : 0,
+          ? ((cacheStats as Record<stringunknown>).totalSize as number) || 0
+          : 0
       maxSize:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
-          : 0,
+          ? ((cacheStats as Record<stringunknown>).maxSize as number) || 0
+          : 0
       hitRate:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
-          : 0,
+          ? ((cacheStats as Record<stringunknown>).hitRate as number) || 0
+          : 0
     };
 
     setData({
-      analytics: analyticsData || {},
-      cache: cache || {},
+      analytics: analyticsData || {}
+      cache: cache || {}
       performance: {
         memoryUsage:
           (
             performance as Performance & {
               memory?: { usedJSHeapSize?: number };
             }
-          ).memory?.usedJSHeapSize || 0,
+          ).memory?.usedJSHeapSize || 0
         memoryLimit:
           (
             performance as Performance & {
               memory?: { jsHeapSizeLimit?: number };
             }
-          ).memory?.jsHeapSizeLimit || 0,
-      },
+          ).memory?.jsHeapSizeLimit || 0
+      }
     });
   };
 
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
-    const sizes = ["Bytes", "KB", "MB", "GB"];
+    const sizes = ["Bytes""KB""MB""GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+    return parseFloat((bytes / Math.pow(ki)).toFixed(2)) + " " + sizes[i];
   };
 
   const formatDuration = (ms: number): string => {
@@ -179,12 +182,12 @@ const AdvancedDashboard: React.FC = () => {
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
             {[
-              { id: "overview", label: "Overview" },
-              { id: "analytics", label: "Analytics" },
-              { id: "performance", label: "Performance" },
-              { id: "cache", label: "Cache" },
-              { id: "security", label: "Security" },
-              { id: "accessibility", label: "Accessibility" },
+              { id: "overview"label: "Overview" }
+              { id: "analytics"label: "Analytics" }
+              { id: "performance"label: "Performance" }
+              { id: "cache"label: "Cache" }
+              { id: "security"label: "Security" }
+              { id: "accessibility"label: "Accessibility" }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -209,12 +212,12 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
                   <div>
-                    Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
+                    Session: {data.analytics?.id?.substring(012) || "N/A"}...
                   </div>
                   <div>
                     Duration:{" "}
                     {formatDuration(
-                      Date.now() - (data.analytics?.startTime || 0),
+                      Date.now() - (data.analytics?.startTime || 0)
                     )}
                   </div>
                   <div>Page Views: {data.analytics?.pageViews || 0}</div>
@@ -342,7 +345,7 @@ const AdvancedDashboard: React.FC = () => {
                   <div className="space-y-2">
                     {(data.analytics.events || [])
                       .slice(-10)
-                      .map((event, index: number) => (
+                      .map((eventindex: number) => (
                         <div
                           key={index}
                           className="bg-white p-2 rounded text-sm"
@@ -354,7 +357,7 @@ const AdvancedDashboard: React.FC = () => {
                           {event.properties &&
                             Object.keys(event.properties).length > 0 && (
                               <div className="text-gray-500 text-xs mt-1">
-                                {JSON.stringify(event.properties, null, 2)}
+                                {JSON.stringify(event.propertiesnull2)}
                               </div>
                             )}
                         </div>
@@ -382,7 +385,7 @@ const AdvancedDashboard: React.FC = () => {
                     <div
                       className="bg-blue-600 h-2 rounded-full"
                       style={{
-                        width: `${(data.performance.memoryUsage / data.performance.memoryLimit) * 100}%`,
+                        width: `${(data.performance.memoryUsage / data.performance.memoryLimit) * 100}%`
                       }}
                     ></div>
                   </div>
@@ -427,7 +430,7 @@ const AdvancedDashboard: React.FC = () => {
                       <span>
                         {formatBytes(
                           (data.cache.maxSize || 0) -
-                            (data.cache.totalSize || 0),
+                            (data.cache.totalSize || 0)
                         )}
                       </span>
                     </div>
@@ -435,7 +438,7 @@ const AdvancedDashboard: React.FC = () => {
                       <div
                         className="bg-green-600 h-2 rounded-full"
                         style={{
-                          width: `${((data.cache.totalSize || 0) / (data.cache.maxSize || 1)) * 100}%`,
+                          width: `${((data.cache.totalSize || 0) / (data.cache.maxSize || 1)) * 100}%`
                         }}
                       ></div>
                     </div>

@@ -1,4 +1,4 @@
-export interface NewService {
+exportinterfaceNewService {
   id: string;
   name: string;
   title: string;
@@ -13,432 +13,413 @@ export interface NewService {
   launchDate: string;
 }
 
-export const newServices2026: NewService[] = [
+exportconstnewServices2026: NewService[] = [
   {
-    id: 'ai-predictive-maintenance',
-    name: 'AI Predictive Maintenance Platform',
-    title: '⚙️ AI Predictive Maintenance: Zero Unplanned Downtime',
-    description:
-      'AI-powered predictive maintenance reducing equipment downtime by 85% and maintenance costs by 40%. Predict failures before they happen with 98% accuracy.',
+    id: 'ai-predictive-maintenance'
+    name: 'AIPredictiveMaintenance Platform'
+    title: '⚙️ AIPredictiveMaintenance: ZeroUnplannedDowntime'
+    description: 'AI-poweredpredictivemaintenance reducingequipmentdowntime by85% andmaintenancecosts by40%. Predictfailuresbefore theyhappenwith 98% accuracy.'
     benefits: [
-      '85% reduction in unplanned downtime',
-      '40% lower maintenance costs',
-      '98% failure prediction accuracy',
-      'ROI in 6 months',
-    ],
+      '85% reductioninunplanned downtime'
+      '40% lowermaintenancecosts'
+      '98% failurepredictionaccuracy'
+      'ROIin6 months'
+    ]
     features: [
-      'Real-time equipment monitoring',
-      'Predictive failure analysis',
-      'Automated maintenance scheduling',
-      'Asset performance optimization',
-      'IoT sensor integration',
-    ],
-    category: 'Industrial AI',
-    pricing: 'Starting at $5,000/month',
-    link: '/services/ai-predictive-maintenance',
-    icon: '⚙️',
-    featured: true,
-    launchDate: '2025-10-15',
-  },
+      'Real-timeequipmentmonitoring'
+      'Predictivefailureanalysis'
+      'Automatedmaintenancescheduling'
+      'Assetperformanceoptimization'
+      'IoTsensorintegration'
+    ]
+    category: 'IndustrialAI'
+    pricing: 'Startingat $5000/month'
+    link: '/services/ai-predictive-maintenance'
+    icon: '⚙️'
+    featured: true
+    launchDate: '2025-10-15'
+  }
   {
-    id: 'ai-talent-acquisition',
-    name: 'AI Talent Acquisition Suite',
-    title: '👥 AI Talent Acquisition: 10x Faster Hiring',
-    description:
-      'Revolutionize recruiting with AI matching candidates 10x faster with 95% accuracy. Reduce time-to-hire from weeks to days while improving candidate quality.',
+    id: 'ai-talent-acquisition'
+    name: 'AITalentAcquisition Suite'
+    title: '👥 AITalentAcquisition: 10xFasterHiring'
+    description: 'Revolutionizerecruitingwith AImatchingcandidates 10xfasterwith 95% accuracy. Reducetime-to-hirefromweeks todayswhile improvingcandidatequality.'
     benefits: [
-      '10x faster candidate matching',
-      '95% match accuracy',
-      '60% reduction in time-to-hire',
-      '50% cost savings',
-    ],
+      '10xfastercandidate matching'
+      '95% matchaccuracy'
+      '60% reductionintime-to-hire'
+      '50% costsavings'
+    ]
     features: [
-      'AI-powered candidate screening',
-      'Automated interview scheduling',
-      'Skills assessment automation',
-      'Bias-free candidate evaluation',
-      'Predictive candidate success scoring',
-    ],
-    category: 'HR Tech',
-    pricing: 'Starting at $3,000/month',
-    link: '/services/ai-talent-acquisition',
-    icon: '👥',
-    featured: true,
-    launchDate: '2025-10-15',
-  },
+      'AI-poweredcandidatescreening'
+      'Automatedinterviewscheduling'
+      'Skillsassessmentautomation'
+      'Bias-freecandidateevaluation'
+      'Predictivecandidatesuccess scoring'
+    ]
+    category: 'HRTech'
+    pricing: 'Startingat $3000/month'
+    link: '/services/ai-talent-acquisition'
+    icon: '👥'
+    featured: true
+    launchDate: '2025-10-15'
+  }
   {
-    id: 'ai-fraud-prevention',
-    name: 'AI Fraud Prevention System',
-    title: '🛡️ AI Fraud Prevention: 99.95% Detection Accuracy',
-    description:
-      'Next-generation fraud detection with AI achieving 99.95% accuracy and real-time prevention. Stop fraud before it happens with sub-100ms detection.',
+    id: 'ai-fraud-prevention'
+    name: 'AIFraudPrevention System'
+    title: '🛡️ AIFraudPrevention: 99.95% DetectionAccuracy'
+    description: 'Next-generationfrauddetection withAIachieving 99.95% accuracyandreal-timeprevention. Stopfraudbefore ithappenswith sub-100msdetection.'
     benefits: [
-      '99.95% fraud detection accuracy',
-      'Sub-100ms detection time',
-      '95% reduction in false positives',
-      '$5M+ annual savings',
-    ],
+      '99.95% frauddetectionaccuracy'
+      'Sub-100msdetectiontime'
+      '95% reductioninfalse positives'
+      '$5M+ annualsavings'
+    ]
     features: [
-      'Real-time transaction monitoring',
-      'Behavioral anomaly detection',
-      'Multi-layer authentication',
-      'Automated fraud blocking',
-      'Continuous learning AI models',
-    ],
-    category: 'FinTech Security',
-    pricing: 'Starting at $8,000/month',
-    link: '/services/ai-fraud-prevention',
-    icon: '🛡️',
-    featured: true,
-    launchDate: '2025-10-15',
-  },
+      'Real-timetransactionmonitoring'
+      'Behavioralanomalydetection'
+      'Multi-layerauthentication'
+      'Automatedfraudblocking'
+      'ContinuouslearningAI models'
+    ]
+    category: 'FinTechSecurity'
+    pricing: 'Startingat $8000/month'
+    link: '/services/ai-fraud-prevention'
+    icon: '🛡️'
+    featured: true
+    launchDate: '2025-10-15'
+  }
   {
-    id: 'ai-creative-studio',
-    name: 'AI Creative Studio',
-    title: '🎨 AI Creative Studio: 100x Faster Content Creation',
-    description:
-      'Transform creative workflows with AI generating high-quality content 100x faster. Create videos, images, copy, and designs at unprecedented scale.',
+    id: 'ai-creative-studio'
+    name: 'AICreativeStudio'
+    title: '🎨 AICreativeStudio: 100xFasterContent Creation'
+    description: 'Transformcreativeworkflows withAIgenerating high-qualitycontent100x faster. Createvideosimagescopyanddesignsat unprecedentedscale.'
     benefits: [
-      '100x faster content creation',
-      '90% cost reduction',
-      'Professional quality output',
-      'Unlimited creative variations',
-    ],
+      '100xfastercontent creation'
+      '90% costreduction'
+      'Professionalqualityoutput'
+      'Unlimitedcreativevariations'
+    ]
     features: [
-      'AI video generation',
-      'Automated image creation',
-      'Smart copywriting assistant',
-      'Design automation',
-      'Brand consistency enforcement',
-    ],
-    category: 'Creative AI',
-    pricing: 'Starting at $2,500/month',
-    link: '/services/ai-creative-studio',
-    icon: '🎨',
-    featured: true,
-    launchDate: '2025-10-15',
-  },
+      'AIvideogeneration'
+      'Automatedimagecreation'
+      'Smartcopywritingassistant'
+      'Designautomation'
+      'Brandconsistencyenforcement'
+    ]
+    category: 'CreativeAI'
+    pricing: 'Startingat $2500/month'
+    link: '/services/ai-creative-studio'
+    icon: '🎨'
+    featured: true
+    launchDate: '2025-10-15'
+  }
   {
-    id: 'ai-legal-research',
-    name: 'AI Legal Research Assistant',
-    title: '⚖️ AI Legal Research: 1000x Faster Case Analysis',
-    description:
-      'Accelerate legal research 1000x with AI analyzing millions of cases instantly. Achieve comprehensive legal insights in minutes instead of weeks.',
+    id: 'ai-legal-research'
+    name: 'AILegalResearch Assistant'
+    title: '⚖️ AILegalResearch: 1000xFasterCase Analysis'
+    description: 'Acceleratelegalresearch 1000xwithAI analyzingmillionsof casesinstantly. Achievecomprehensivelegal insightsinminutes insteadofweeks.'
     benefits: [
-      '1000x faster research',
-      '99% accuracy in case matching',
-      '85% reduction in research costs',
-      'Comprehensive precedent analysis',
-    ],
+      '1000xfasterresearch'
+      '99% accuracyincase matching'
+      '85% reductioninresearch costs'
+      'Comprehensiveprecedentanalysis'
+    ]
     features: [
-      'Instant case law search',
-      'Automated legal document analysis',
-      'Precedent recommendation engine',
-      'Regulatory compliance checking',
-      'Contract risk assessment',
-    ],
-    category: 'Legal Tech',
-    pricing: 'Starting at $4,500/month',
-    link: '/services/ai-legal-research',
-    icon: '⚖️',
-    featured: true,
-    launchDate: '2025-10-15',
-  },
+      'Instantcaselaw search'
+      'Automatedlegaldocument analysis'
+      'Precedentrecommendationengine'
+      'Regulatorycompliancechecking'
+      'Contractriskassessment'
+    ]
+    category: 'LegalTech'
+    pricing: 'Startingat $4500/month'
+    link: '/services/ai-legal-research'
+    icon: '⚖️'
+    featured: true
+    launchDate: '2025-10-15'
+  }
   {
-    id: 'ai-customer-sentiment-analysis',
-    name: 'AI Customer Sentiment Analysis',
-    title: '💬 AI Sentiment Analysis: Real-Time Customer Intelligence',
-    description:
-      'Understand customer emotions in real-time with AI achieving 97% sentiment accuracy. Transform customer feedback into actionable insights instantly.',
+    id: 'ai-customer-sentiment-analysis'
+    name: 'AICustomerSentiment Analysis'
+    title: '💬 AISentimentAnalysis: Real-TimeCustomerIntelligence'
+    description: 'Understandcustomeremotions inreal-timewithAI achieving97% sentimentaccuracy. Transformcustomerfeedback intoactionableinsights instantly.'
     benefits: [
-      '97% sentiment accuracy',
-      'Real-time feedback analysis',
-      '300% improvement in customer satisfaction',
-      'Actionable insights dashboard',
-    ],
+      '97% sentimentaccuracy'
+      'Real-timefeedbackanalysis'
+      '300% improvementincustomer satisfaction'
+      'Actionableinsightsdashboard'
+    ]
     features: [
-      'Multi-channel sentiment tracking',
-      'Emotion detection AI',
-      'Automated response recommendations',
-      'Trend analysis and forecasting',
-      'Customer churn prediction',
-    ],
-    category: 'Customer Intelligence',
-    pricing: 'Starting at $3,500/month',
-    link: '/services/ai-customer-sentiment-analysis',
-    icon: '💬',
-    featured: true,
-    launchDate: '2025-09-30',
-  },
+      'Multi-channelsentimenttracking'
+      'EmotiondetectionAI'
+      'Automatedresponserecommendations'
+      'Trendanalysisand forecasting'
+      'Customerchurnprediction'
+    ]
+    category: 'CustomerIntelligence'
+    pricing: 'Startingat $3500/month'
+    link: '/services/ai-customer-sentiment-analysis'
+    icon: '💬'
+    featured: true
+    launchDate: '2025-09-30'
+  }
   {
-    id: 'ai-supply-chain-visibility',
-    name: 'AI Supply Chain Visibility Platform',
-    title: '📦 AI Supply Chain: End-to-End Visibility & Optimization',
-    description:
-      'Complete supply chain visibility with AI optimizing logistics, inventory, and delivery. Achieve 99.9% on-time delivery and 35% cost reduction.',
+    id: 'ai-supply-chain-visibility'
+    name: 'AISupplyChain VisibilityPlatform'
+    title: '📦 AISupplyChain: End-to-EndVisibility & Optimization'
+    description: 'Completesupplychain visibilitywithAI optimizinglogisticsinventoryanddelivery. Achieve99.9% on-timedeliveryand 35% costreduction.'
     benefits: [
-      '99.9% on-time delivery',
-      '35% cost reduction',
-      'Real-time tracking',
-      'Predictive inventory management',
-    ],
+      '99.9% on-timedelivery'
+      '35% costreduction'
+      'Real-timetracking'
+      'Predictiveinventorymanagement'
+    ]
     features: [
-      'Real-time supply chain monitoring',
-      'Demand forecasting AI',
-      'Route optimization',
-      'Inventory optimization',
-      'Supplier risk assessment',
-    ],
-    category: 'Supply Chain AI',
-    pricing: 'Starting at $6,000/month',
-    link: '/services/ai-supply-chain-visibility',
-    icon: '📦',
-    featured: true,
-    launchDate: '2025-09-30',
-  },
+      'Real-timesupplychain monitoring'
+      'DemandforecastingAI'
+      'Routeoptimization'
+      'Inventoryoptimization'
+      'Supplierriskassessment'
+    ]
+    category: 'SupplyChainAI'
+    pricing: 'Startingat $6000/month'
+    link: '/services/ai-supply-chain-visibility'
+    icon: '📦'
+    featured: true
+    launchDate: '2025-09-30'
+  }
   {
-    id: 'ai-code-quality-assistant',
-    name: 'AI Code Quality Assistant',
-    title: '💻 AI Code Quality: Automated Reviews & Optimization',
-    description:
-      'Elevate code quality with AI reviewing code, detecting bugs, and suggesting optimizations. Reduce bugs by 80% and improve performance by 40%.',
+    id: 'ai-code-quality-assistant'
+    name: 'AICodeQuality Assistant'
+    title: '💻 AICodeQuality: AutomatedReviews & Optimization'
+    description: 'Elevatecodequality withAIreviewing codedetectingbugsandsuggestingoptimizations. Reducebugsby 80% andimproveperformance by40%.'
     benefits: [
-      '80% fewer bugs in production',
-      '40% performance improvement',
-      '50% faster code reviews',
-      'Automated technical debt reduction',
-    ],
+      '80% fewerbugsin production'
+      '40% performanceimprovement'
+      '50% fastercodereviews'
+      'Automatedtechnicaldebt reduction'
+    ]
     features: [
-      'Automated code reviews',
-      'Bug prediction and prevention',
-      'Performance optimization suggestions',
-      'Security vulnerability detection',
-      'Code style enforcement',
-    ],
-    category: 'Developer Tools',
-    pricing: 'Starting at $2,000/month',
-    link: '/services/ai-code-quality-assistant',
-    icon: '💻',
-    featured: true,
-    launchDate: '2025-09-30',
-  },
+      'Automatedcodereviews'
+      'Bugpredictionand prevention'
+      'Performanceoptimizationsuggestions'
+      'Securityvulnerabilitydetection'
+      'Codestyleenforcement'
+    ]
+    category: 'DeveloperTools'
+    pricing: 'Startingat $2000/month'
+    link: '/services/ai-code-quality-assistant'
+    icon: '💻'
+    featured: true
+    launchDate: '2025-09-30'
+  }
 ];
 
-// October 3, 2025 – New services to advertise prominently on homepage
-newServices2026.unshift(
+// October32025 – Newservicesto advertiseprominentlyon homepagenewServices2026.unshift(
   {
-    id: 'ai-guarded-agent-operations',
-    name: 'AI Guarded Agent Operations',
-    title: '🛡️ AI Guarded Agent Ops: Safe Autonomy at Scale',
-    description:
-      'Deploy agentic systems with budgeted tools, HIL approvals, live evals, and instant rollback. Ship 10x faster with zero incidents.',
+    id: 'ai-guarded-agent-operations'
+    name: 'AIGuardedAgent Operations'
+    title: '🛡️ AIGuardedAgent Ops: SafeAutonomyat Scale'
+    description: 'Deployagenticsystems withbudgetedtoolsHILapprovalsliveevalsandinstantrollback. Ship10xfaster withzeroincidents.'
     benefits: [
-      '10x faster feature delivery',
-      'Zero Sev‑1 incidents',
-      'Budgeted, auditable actions',
-      'Automated rollback on regressions',
-    ],
+      '10xfasterfeature delivery'
+      'ZeroSev‑1incidents'
+      'Budgetedauditableactions'
+      'Automatedrollbackon regressions'
+    ]
     features: [
-      'Per‑tool and per‑task budgets',
-      'Risk‑tiered approval workflows',
-      'Live policy tests on each PR',
-      'Action journals and tamper‑proof audit logs',
-      'One‑click rollback',
-    ],
-    category: 'AI Operations',
-    pricing: 'Custom — starts at $7,500/month',
-    link: '/services/ai-guarded-agent-operations',
-    icon: '🛡️',
-    featured: true,
-    launchDate: '2025-10-03',
-  },
+      'Per‑toolandper‑taskbudgets'
+      'Risk‑tieredapprovalworkflows'
+      'Livepolicytests oneachPR'
+      'Actionjournalsand tamper‑proofauditlogs'
+      'One‑clickrollback'
+    ]
+    category: 'AIOperations'
+    pricing: 'Custom — startsat $7500/month'
+    link: '/services/ai-guarded-agent-operations'
+    icon: '🛡️'
+    featured: true
+    launchDate: '2025-10-03'
+  }
   {
-    id: 'risk-controlled-autonomy-implementation',
-    name: 'Risk‑Controlled Autonomy Implementation',
-    title: '🤖 Risk‑Controlled Autonomy: Budgets, Approvals, Live Evals',
-    description:
-      'End‑to‑end implementation of safe autonomy: budgets, approvals, live evals, and rollback integrated into your SDLC and production ops.',
+    id: 'risk-controlled-autonomy-implementation'
+    name: 'Risk‑ControlledAutonomyImplementation'
+    title: '🤖 Risk‑ControlledAutonomy: BudgetsApprovalsLiveEvals'
+    description: 'End‑to‑endimplementationof safeautonomy: budgetsapprovalsliveevalsandrollbackintegrated intoyourSDLC andproductionops.'
     benefits: [
-      '92% reduction in risky changes reaching prod',
-      '78% cycle time reduction',
-      'Measurable reliability with eval KPIs',
-      'Compliance‑ready audit trails',
-    ],
+      '92% reductioninrisky changesreachingprod'
+      '78% cycletimereduction'
+      'Measurablereliabilitywith evalKPIs'
+      'Compliance‑readyaudittrails'
+    ]
     features: [
-      'Budget enforcer and policy engine',
-      'Approval SLAs and escalation',
-      'PR policy tests and shadow runs',
-      'Progressive delivery with canaries',
-      'Automated rollback triggers',
-    ],
-    category: 'Professional Services',
-    pricing: 'Engagements from $65,000',
-    link: '/services/risk-controlled-autonomy-implementation',
-    icon: '🤖',
-    featured: true,
-    launchDate: '2025-10-03',
-  },
+      'Budgetenforcerand policyengine'
+      'ApprovalSLAsand escalation'
+      'PRpolicytests andshadowruns'
+      'Progressivedeliverywith canaries'
+      'Automatedrollbacktriggers'
+    ]
+    category: 'ProfessionalServices'
+    pricing: 'Engagementsfrom $65000'
+    link: '/services/risk-controlled-autonomy-implementation'
+    icon: '🤖'
+    featured: true
+    launchDate: '2025-10-03'
+  }
 );
 
-// Sept 30, 2025 – New service to advertise on the homepage
-newServices2026.push({
-  id: 'edge-experimentation-suite',
-  name: 'Edge Experimentation Suite',
-  title: '🧪 Edge Experimentation Suite: Privacy‑First A/B at <100ms',
-  description:
-    'Run compliant, sub‑100ms experiments with scoped IDs, on‑device metrics, and DP noise—no PII required.',
+// Sept302025 – Newserviceto advertiseonthe homepagenewServices2026.push({
+  id: 'edge-experimentation-suite'
+  name: 'EdgeExperimentationSuite'
+  title: '🧪 EdgeExperimentationSuite: Privacy‑FirstA/Bat <100ms'
+  description: 'Runcompliantsub‑100msexperimentswith scopedIDson‑devicemetricsandDPnoise—noPIIrequired.'
   benefits: [
-    'Compliant A/B testing without PII',
-    'Sub‑100ms global latency',
-    'Reliable insights with DP noise',
-    'Geo/account targeting with budgets',
-  ],
+    'CompliantA/Btestingwithout PII'
+    'Sub‑100msgloballatency'
+    'Reliableinsightswith DPnoise'
+    'Geo/accounttargetingwith budgets'
+  ]
   features: [
-    'Scoped identifier framework',
-    'On‑device metrics aggregation',
-    'Edge flags and geo budgets',
-    'Signed configs and audit trails',
-    'Automated rollback triggers',
-  ],
-  category: 'Analytics',
-  pricing: 'Starting at $4,000/month',
-  link: '/services/edge-experimentation-suite',
-  icon: '🧪',
-  featured: true,
-  launchDate: '2025-09-30',
+    'Scopedidentifierframework'
+    'On‑devicemetricsaggregation'
+    'Edgeflagsand geobudgets'
+    'Signedconfigsand audittrails'
+    'Automatedrollbacktriggers'
+  ]
+  category: 'Analytics'
+  pricing: 'Startingat $4000/month'
+  link: '/services/edge-experimentation-suite'
+  icon: '🧪'
+  featured: true
+  launchDate: '2025-09-30'
 });
 
-// January 2026 – Fresh new services to advertise prominently
+// January2026 – Freshnewservices toadvertiseprominently
 newServices2026.push(
   {
-    id: 'ai-autonomous-infrastructure-platform',
-    name: 'AI Autonomous Infrastructure Platform',
-    title:
-      '🏗️ AI Autonomous Infrastructure: Self-Healing, Self-Optimizing Systems',
-    description:
-      'Revolutionary infrastructure that manages itself—self-healing failures, self-optimizing performance, and self-scaling resources. Achieve 99.99% uptime with zero manual intervention.',
+    id: 'ai-autonomous-infrastructure-platform'
+    name: 'AIAutonomousInfrastructure Platform'
+    title: '🏗️ AIAutonomousInfrastructure: Self-HealingSelf-OptimizingSystems'
+    description: 'Revolutionaryinfrastructurethat managesitself—self-healingfailuresself-optimizingperformanceandself-scalingresources. Achieve99.99% uptimewithzero manualintervention.'
     benefits: [
-      '99.99% uptime with zero downtime',
-      '60% reduction in operational costs',
-      'Self-healing infrastructure failures',
-      'Automated scaling and optimization',
-    ],
+      '99.99% uptimewithzero downtime'
+      '60% reductioninoperational costs'
+      'Self-healinginfrastructurefailures'
+      'Automatedscalingand optimization'
+    ]
     features: [
-      'Predictive failure detection',
-      'Automated incident response',
-      'Self-optimizing resource allocation',
-      'Intelligent capacity planning',
-      'Zero-touch deployment pipelines',
-    ],
-    category: 'Infrastructure AI',
-    pricing: 'Starting at $12,000/month',
-    link: '/services/ai-autonomous-infrastructure-platform',
-    icon: '🏗️',
-    featured: true,
-    launchDate: '2026-01-15',
-  },
+      'Predictivefailuredetection'
+      'Automatedincidentresponse'
+      'Self-optimizingresourceallocation'
+      'Intelligentcapacityplanning'
+      'Zero-touchdeploymentpipelines'
+    ]
+    category: 'InfrastructureAI'
+    pricing: 'Startingat $12000/month'
+    link: '/services/ai-autonomous-infrastructure-platform'
+    icon: '🏗️'
+    featured: true
+    launchDate: '2026-01-15'
+  }
   {
-    id: 'quantum-ai-acceleration-service',
-    name: 'Quantum AI Acceleration Service',
-    title: '⚛️ Quantum AI Acceleration: 1000x Performance Boost',
-    description:
-      'Harness quantum computing power to accelerate AI training and inference by 1000x. Solve complex optimization problems in seconds instead of hours.',
+    id: 'quantum-ai-acceleration-service'
+    name: 'QuantumAIAcceleration Service'
+    title: '⚛️ QuantumAIAcceleration: 1000xPerformanceBoost'
+    description: 'Harnessquantumcomputing powertoaccelerate AItrainingand inferenceby1000x. Solvecomplexoptimization problemsinseconds insteadofhours.'
     benefits: [
-      '1000x faster AI training',
-      'Quantum-enhanced optimization',
-      'Exponential performance gains',
-      'Breakthrough computational capabilities',
-    ],
+      '1000xfasterAI training'
+      'Quantum-enhancedoptimization'
+      'Exponentialperformancegains'
+      'Breakthroughcomputationalcapabilities'
+    ]
     features: [
-      'Quantum neural network training',
-      'Quantum optimization algorithms',
-      'Hybrid quantum-classical computing',
-      'Real-time quantum simulation',
-      'Quantum machine learning models',
-    ],
-    category: 'Quantum Computing',
-    pricing: 'Starting at $25,000/month',
-    link: '/services/quantum-ai-acceleration-service',
-    icon: '⚛️',
-    featured: true,
-    launchDate: '2026-01-15',
-  },
+      'Quantumneuralnetwork training'
+      'Quantumoptimizationalgorithms'
+      'Hybridquantum-classicalcomputing'
+      'Real-timequantumsimulation'
+      'Quantummachinelearning models'
+    ]
+    category: 'QuantumComputing'
+    pricing: 'Startingat $25000/month'
+    link: '/services/quantum-ai-acceleration-service'
+    icon: '⚛️'
+    featured: true
+    launchDate: '2026-01-15'
+  }
   {
-    id: 'ai-multimodal-content-studio',
-    name: 'AI Multimodal Content Studio',
-    title: '🎭 AI Multimodal Content Studio: Vision + Language + Audio',
-    description:
-      'Revolutionary content creation platform that combines vision, language, and audio AI to generate immersive multimedia experiences with 98% accuracy across all modalities.',
+    id: 'ai-multimodal-content-studio'
+    name: 'AIMultimodalContent Studio'
+    title: '🎭 AIMultimodalContent Studio: Vision + Language + Audio'
+    description: 'Revolutionarycontentcreation platformthatcombines visionlanguageandaudioAI togenerateimmersive multimediaexperienceswith 98% accuracyacrossall modalities.'
     benefits: [
-      '98% accuracy across all modalities',
-      '10x faster content production',
-      'Unified vision-language-audio processing',
-      'Immersive multimedia experiences',
-    ],
+      '98% accuracyacrossall modalities'
+      '10xfastercontent production'
+      'Unifiedvision-language-audioprocessing'
+      'Immersivemultimediaexperiences'
+    ]
     features: [
-      'Cross-modal content generation',
-      'Real-time audio-visual synthesis',
-      'Intelligent content adaptation',
-      'Multi-language support',
-      'Advanced content personalization',
-    ],
-    category: 'Creative AI',
-    pricing: 'Starting at $7,500/month',
-    link: '/services/ai-multimodal-content-studio',
-    icon: '🎭',
-    featured: true,
-    launchDate: '2026-01-15',
-  },
+      'Cross-modalcontentgeneration'
+      'Real-timeaudio-visualsynthesis'
+      'Intelligentcontentadaptation'
+      'Multi-languagesupport'
+      'Advancedcontentpersonalization'
+    ]
+    category: 'CreativeAI'
+    pricing: 'Startingat $7500/month'
+    link: '/services/ai-multimodal-content-studio'
+    icon: '🎭'
+    featured: true
+    launchDate: '2026-01-15'
+  }
   {
-    id: 'ai-autonomous-business-intelligence',
-    name: 'AI Autonomous Business Intelligence',
-    title: '📊 AI Autonomous BI: Self-Driving Analytics & Insights',
-    description:
-      'Revolutionary business intelligence that automatically discovers insights, generates reports, and makes data-driven recommendations without human intervention. Achieve 95% accuracy in predictive analytics.',
+    id: 'ai-autonomous-business-intelligence'
+    name: 'AIAutonomousBusiness Intelligence'
+    title: '📊 AIAutonomousBI: Self-DrivingAnalytics & Insights'
+    description: 'Revolutionarybusinessintelligence thatautomaticallydiscovers insightsgeneratesreportsandmakesdata-drivenrecommendationswithout humanintervention. Achieve95% accuracyinpredictive analytics.'
     benefits: [
-      '95% accuracy in predictive analytics',
-      'Automatic insight discovery',
-      'Real-time business recommendations',
-      'Zero-touch report generation',
-    ],
+      '95% accuracyinpredictive analytics'
+      'Automaticinsightdiscovery'
+      'Real-timebusinessrecommendations'
+      'Zero-touchreportgeneration'
+    ]
     features: [
-      'Autonomous data analysis',
-      'Predictive business modeling',
-      'Intelligent report generation',
-      'Natural language queries',
-      'Automated anomaly detection',
-    ],
-    category: 'Business Intelligence',
-    pricing: 'Starting at $6,500/month',
-    link: '/services/ai-autonomous-business-intelligence',
-    icon: '📊',
-    featured: true,
-    launchDate: '2026-01-15',
-  },
+      'Autonomousdataanalysis'
+      'Predictivebusinessmodeling'
+      'Intelligentreportgeneration'
+      'Naturallanguagequeries'
+      'Automatedanomalydetection'
+    ]
+    category: 'BusinessIntelligence'
+    pricing: 'Startingat $6500/month'
+    link: '/services/ai-autonomous-business-intelligence'
+    icon: '📊'
+    featured: true
+    launchDate: '2026-01-15'
+  }
   {
-    id: 'ai-neural-architecture-optimization',
-    name: 'AI Neural Architecture Optimization',
-    title: '🧠 AI Neural Architecture Optimization: Auto-Designing Networks',
-    description:
-      'Revolutionary service that automatically designs optimal neural architectures 1000x faster than humans, achieving state-of-the-art performance with minimal computational resources.',
+    id: 'ai-neural-architecture-optimization'
+    name: 'AINeuralArchitecture Optimization'
+    title: '🧠 AINeuralArchitecture Optimization: Auto-DesigningNetworks'
+    description: 'Revolutionaryservicethat automaticallydesignsoptimal neuralarchitectures1000x fasterthanhumansachievingstate-of-the-artperformancewith minimalcomputationalresources.'
     benefits: [
-      '1000x faster architecture design',
-      'State-of-the-art performance',
-      'Minimal computational resources',
-      'Automated optimization pipelines',
-    ],
+      '1000xfasterarchitecture design'
+      'State-of-the-artperformance'
+      'Minimalcomputationalresources'
+      'Automatedoptimizationpipelines'
+    ]
     features: [
-      'Automated neural architecture search',
-      'Multi-objective optimization',
-      'Hardware-aware design',
-      'Continuous learning algorithms',
-      'Performance benchmarking',
-    ],
-    category: 'AI Engineering',
-    pricing: 'Starting at $9,000/month',
-    link: '/services/ai-neural-architecture-optimization',
-    icon: '🧠',
-    featured: true,
-    launchDate: '2026-01-15',
-  },
+      'Automatedneuralarchitecture search'
+      'Multi-objectiveoptimization'
+      'Hardware-awaredesign'
+      'Continuouslearningalgorithms'
+      'Performancebenchmarking'
+    ]
+    category: 'AIEngineering'
+    pricing: 'Startingat $9000/month'
+    link: '/services/ai-neural-architecture-optimization'
+    icon: '🧠'
+    featured: true
+    launchDate: '2026-01-15'
+  }
 );

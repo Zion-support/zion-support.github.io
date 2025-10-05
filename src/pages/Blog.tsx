@@ -1,155 +1,134 @@
-import { ArrowRight, Calendar, Clock, Search, Tag, User } from 'lucide-react';
+import { ArrowRight,CalendarClockSearchTagUser } from 'lucide-react';
 import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const Blog: React.FC = () => {
-  const blogPosts = [
+constBlog: React.FC = () => {
+  constblogPosts = [
     {
-      id: 1,
-      title: 'The Future of AI in Business: 2025 Trends and Predictions',
-      excerpt:
-        'Explore the latest AI trends that are reshaping how businesses operate and compete in the digital landscape.',
-      author: 'Sarah Johnson',
-      date: '2025-01-15',
-      readTime: '5 min read',
-      category: 'AI & Machine Learning',
-      image: '/api/placeholder/600/400',
-      featured: true,
-    },
+      id: 1
+      title: 'TheFutureof AIinBusiness: 2025Trendsand Predictions'
+      excerpt: 'Explorethelatest AItrendsthat arereshapinghow businessesoperateand competeinthe digitallandscape.'
+      author: 'SarahJohnson'
+      date: '2025-01-15'
+      readTime: '5minread'
+      category: 'AI & MachineLearning'
+      image: '/api/placeholder/600/400'
+      featured: true
+    }
     {
-      id: 2,
-      title: 'Micro SaaS: Building Scalable Solutions for Modern Businesses',
-      excerpt:
-        'Learn how micro SaaS applications are revolutionizing software delivery and creating new opportunities for businesses.',
-      author: 'Michael Chen',
-      date: '2025-01-12',
-      readTime: '7 min read',
-      category: 'Micro SaaS',
-      image: '/api/placeholder/600/400',
-      featured: false,
-    },
+      id:  2
+      title: 'MicroSaaS: BuildingScalableSolutions forModernBusinesses'
+      excerpt: 'Learnhowmicro SaaSapplicationsare revolutionizingsoftwaredelivery andcreatingnew opportunitiesforbusinesses.'
+      author: 'MichaelChen'
+      date: '2025-01-12'
+      readTime: '7minread'
+      category: 'MicroSaaS'
+      image: '/api/placeholder/600/400'
+      featured: false
+    }
     {
-      id: 3,
-      title: 'Cloud Migration Best Practices: A Complete Guide',
-      excerpt:
-        'Comprehensive guide to successful cloud migration strategies, common pitfalls, and how to ensure smooth transitions.',
-      author: 'David Thompson',
-      date: '2025-01-10',
-      readTime: '8 min read',
-      category: 'Cloud & DevOps',
-      image: '/api/placeholder/600/400',
-      featured: false,
-    },
+      id:  3
+      title: 'CloudMigrationBest Practices: ACompleteGuide'
+      excerpt: 'Comprehensiveguideto successfulcloudmigration strategiescommonpitfallsandhowto ensuresmoothtransitions.'
+      author: 'DavidThompson'
+      date: '2025-01-10'
+      readTime: '8minread'
+      category: 'Cloud & DevOps'
+      image: '/api/placeholder/600/400'
+      featured: false
+    }
     {
-      id: 4,
-      title: 'Cybersecurity in 2025: Protecting Your Digital Assets',
-      excerpt:
-        'Essential cybersecurity strategies and tools every business needs to protect against evolving threats.',
-      author: 'Emily Rodriguez',
-      date: '2025-01-08',
-      readTime: '6 min read',
-      category: 'Cybersecurity',
-      image: '/api/placeholder/600/400',
-      featured: false,
-    },
+      id:  4
+      title: 'Cybersecurityin2025: ProtectingYourDigital Assets'
+      excerpt: 'Essentialcybersecuritystrategies andtoolsevery businessneedsto protectagainstevolving threats.'
+      author: 'EmilyRodriguez'
+      date: '2025-01-08'
+      readTime: '6minread'
+      category: 'Cybersecurity'
+      image: '/api/placeholder/600/400'
+      featured: false
+    }
     {
-      id: 5,
-      title: 'Data Analytics: Turning Information into Business Intelligence',
-      excerpt:
-        'How to leverage data analytics to make informed business decisions and gain competitive advantages.',
-      author: 'Sarah Johnson',
-      date: '2025-01-05',
-      readTime: '9 min read',
-      category: 'Data Analytics',
-      image: '/api/placeholder/600/400',
-      featured: false,
-    },
+      id:  5
+      title: 'DataAnalytics: TurningInformationinto BusinessIntelligence'
+      excerpt: 'Howtoleverage dataanalyticsto makeinformedbusiness decisionsandgain competitiveadvantages.'
+      author: 'SarahJohnson'
+      date: '2025-01-05'
+      readTime: '9minread'
+      category: 'DataAnalytics'
+      image: '/api/placeholder/600/400'
+      featured: false
+    }
     {
-      id: 6,
-      title: 'The Rise of No-Code/Low-Code Development Platforms',
-      excerpt:
-        'Exploring how no-code and low-code platforms are democratizing software development and accelerating innovation.',
-      author: 'Michael Chen',
-      date: '2025-01-03',
-      readTime: '6 min read',
-      category: 'Development',
-      image: '/api/placeholder/600/400',
-      featured: false,
-    },
-  ];
-
-  const categories = [
-    'All',
-    'AI & Machine Learning',
-    'Micro SaaS',
-    'Cloud & DevOps',
-    'Cybersecurity',
-    'Data Analytics',
-    'Development',
-  ];
-
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
-
-  return (
+      id:  6
+      title: 'TheRiseof No-Code/Low-CodeDevelopmentPlatforms'
+      excerpt: 'Exploringhowno-codeandlow-codeplatformsare democratizingsoftwaredevelopment andacceleratinginnovation.'
+      author: 'MichaelChen'
+      date: '2025-01-03'
+      readTime: '6minread'
+      category: 'Development'
+      image: '/api/placeholder/600/400'
+      featured: false
+    }
+  ]; constcategories = [
+    'All'
+    'AI & MachineLearning'
+    'MicroSaaS'
+    'Cloud & DevOps'
+    'Cybersecurity'
+    'DataAnalytics'
+    'Development'
+  ]; constfeaturedPost = blogPosts.find(post => post.featured); constregularPosts = blogPosts.filter(post => !post.featured); return (
     <>
       <Helmet>
-        <title>Blog - Zion Tech Group | AI & Technology Insights</title>
-        <meta
-          name='description'
-          content="Stay updated with the latest insights on AI, technology trends, and business transformation from Zion Tech Group's expert team."
+        <title>Blog - ZionTechGroup | AI & TechnologyInsights</title>
+        <metaname = 'description'
+          content="Stayupdatedwith thelatestinsights onAItechnologytrendsandbusinesstransformation fromZionTech Group'sexpertteam."
         />
-        <meta
-          name='keywords'
-          content='AI blog, technology insights, business transformation, machine learning, cloud computing, cybersecurity'
+        <metaname = 'keywords'
+          content='AIblogtechnologyinsightsbusinesstransformationmachinelearningcloudcomputingcybersecurity'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50'>
-        {/* Header Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-blue-50via-whiteto-teal-50'>
+        {/* HeaderSection */}
+        <sectionclassName='bg-gradient-to-rfrom-blue-600to-purple-600py-20'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8text-center'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
             >
-              <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Technology Insights & Trends
+              <h1className = 'text-4xlmd: text-5xlfont-boldtext-whitemb-6'>
+                TechnologyInsights & Trends
               </h1>
-              <p className='text-xl text-blue-100 max-w-3xl mx-auto'>
-                Stay ahead of the curve with expert insights on AI, technology
-                trends, and business transformation strategies from our team of
-                specialists.
+              <pclassName='text-xltext-blue-100max-w-3xlmx-auto'>
+                Stayaheadof thecurvewith expertinsightson AItechnologytrendsandbusinesstransformation strategiesfromour teamofspecialists.
               </p>
             </motion.div>
           </div>
         </section>
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-          {/* Search and Filter */}
-          <div className='mb-12'>
-            <div className='flex flex-col md:flex-row gap-4 items-center justify-between'>
-              <div className='relative flex-1 max-w-md'>
-                <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400' />
-                <input
-                  type='text'
-                  placeholder='Search articles...'
-                  className='w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+        <divclassName = 'max-w-7xlmx-autopx-4sm: px-6lg:px-8py-16'>
+          {/* SearchandFilter */}
+          <divclassName = 'mb-12'>
+            <divclassName='flexflex-colmd: flex-rowgap-4items-centerjustify-between'>
+              <divclassName='relativeflex-1max-w-md'>
+                <SearchclassName='absoluteleft-3top-1/2transform -translate-y-1/2 w-5 h-5text-gray-400' />
+                <inputtype='text'
+                  placeholder='Searcharticles...'
+                  className='w-fullpl-10pr-4py-3borderborder-gray-300rounded-lgfocus:ring-2focus:ring-blue-500focus:border-transparent'
                 />
               </div>
-              <div className='flex gap-2'>
-                {categories.map((category, index) => (
-                  <button
-                    key={index}
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${
+              <divclassName='flexgap-2'>
+                { categories.map((categoryindex) = > (
+                  <buttonkey = { index  }className = { `px-4py-2rounded-lgfont-mediumtransition-colors ${
                       category === 'All'
-                        ? 'bg-blue-600 text-white'
-                        : 'bg-white text-gray-600 hover:bg-gray-100 border border-gray-300'
-                    }`}
+                         ? 'bg-blue-600text-white'
+                        : 'bg-whitetext-gray-600hover : bg-gray-100borderborder-gray-300'
+                     }`}
                   >
                     {category}
                   </button>
@@ -158,54 +137,51 @@ const Blog: React.FC = () => {
             </div>
           </div>
 
-          {/* Featured Post */}
-          {featuredPost && (
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='mb-16'
+          {/* FeaturedPost */}
+          { featuredPost  && (
+            <motion.divinitial = {{ opacity:  0y: 20  }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
+              className = 'mb-16'
             >
-              <div className='bg-white rounded-xl shadow-lg overflow-hidden'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-0'>
-                  <div className='bg-gradient-to-br from-blue-500 to-purple-600 p-8 flex items-center'>
+              <divclassName='bg-whiterounded-xlshadow-lgoverflow-hidden'>
+                <divclassName='gridgrid-cols-1lg: grid-cols-2gap-0'>
+                  <divclassName='bg-gradient-to-brfrom-blue-500to-purple-600p-8flexitems-center'>
                     <div>
-                      <div className='inline-flex items-center px-3 py-1 rounded-full bg-white bg-opacity-20 text-white text-sm font-medium mb-4'>
-                        <Tag className='w-4 h-4 mr-1' />
-                        Featured Article
+                      <divclassName='inline-flexitems-centerpx-3py-1rounded-fullbg-whitebg-opacity-20text-whitetext-smfont-mediummb-4'>
+                        <TagclassName='w-4 h-4mr-1' />
+                        FeaturedArticle
                       </div>
-                      <h2 className='text-3xl font-bold text-white mb-4'>
+                      <h2className='text-3xlfont-boldtext-whitemb-4'>
                         {featuredPost.title}
                       </h2>
-                      <p className='text-blue-100 mb-6'>
+                      <pclassName = 'text-blue-100mb-6'>
                         {featuredPost.excerpt}
                       </p>
-                      <div className='flex items-center gap-4 text-blue-100 text-sm mb-6'>
-                        <div className='flex items-center gap-1'>
-                          <User className='w-4 h-4' />
+                      <divclassName='flexitems-centergap-4text-blue-100text-smmb-6'>
+                        <divclassName='flexitems-centergap-1'>
+                          <UserclassName='w-4 h-4' />
                           {featuredPost.author}
                         </div>
-                        <div className='flex items-center gap-1'>
-                          <Calendar className='w-4 h-4' />
-                          {new Date(featuredPost.date).toLocaleDateString()}
+                        <divclassName='flexitems-centergap-1'>
+                          <CalendarclassName='w-4 h-4' />
+                          {newDate(featuredPost.date).toLocaleDateString()}
                         </div>
-                        <div className='flex items-center gap-1'>
-                          <Clock className='w-4 h-4' />
+                        <divclassName = 'flexitems-centergap-1'>
+                          <ClockclassName='w-4 h-4' />
                           {featuredPost.readTime}
                         </div>
-                      </div>
-                      <Link
-                        to={`/blog/${featuredPost.id}`}
-                        className='inline-flex items-center bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+                      </div > <Linkto={`/blog/${featuredPost.id}`}
+                        className='inline-flexitems-centerbg-whitetext-blue-600px-6py-3rounded-lgfont-semiboldhover: bg-gray-100transition-colors'
                       >
-                        Read Article
-                        <ArrowRight className='w-5 h-5 ml-2' />
+                        ReadArticle
+                        <ArrowRight,className='w-5 h-5ml-2' />
                       </Link>
                     </div>
                   </div>
-                  <div className='bg-gray-100 flex items-center justify-center p-8'>
-                    <div className='w-full h-64 bg-gradient-to-br from-gray-200 to-gray-300 rounded-lg flex items-center justify-center'>
-                      <span className='text-gray-500'>Featured Image</span>
+                  <divclassName='bg-gray-100flexitems-centerjustify-centerp-8'>
+                    <divclassName='w-fullh-64bg-gradient-to-brfrom-gray-200to-gray-300rounded-lgflexitems-centerjustify-center'>
+                      <spanclassName='text-gray-500'>FeaturedImage</span>
                     </div>
                   </div>
                 </div>
@@ -213,77 +189,70 @@ const Blog: React.FC = () => {
             </motion.div>
           )}
 
-          {/* Blog Posts Grid */}
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-            {regularPosts.map((post, index) => (
-              <motion.article
-                key={post.id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'
+          {/* BlogPostsGrid */}
+          <divclassName = 'gridgrid-cols-1md: grid-cols-2lg:grid-cols-3gap-8'>
+            { regularPosts.map((postindex) = > (
+              <motion.articlekey = { post.id  }initial = {{ opacity:  0y: 20 }}
+                animate = {{ opacity:  1y:  0 }}
+                transition = {{ duration: 0.6delay: index * 0.1 }}
+                className = 'bg-whiterounded-xlshadow-lgoverflow-hiddenhover: shadow-xltransition-shadow'
               >
-                <div className='h-48 bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center'>
-                  <span className='text-gray-500'>Article Image</span>
+                <divclassName='h-48bg-gradient-to-brfrom-gray-200to-gray-300flexitems-centerjustify-center'>
+                  <spanclassName='text-gray-500'>ArticleImage</span>
                 </div>
-                <div className='p-6'>
-                  <div className='inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-4'>
+                <divclassName='p-6'>
+                  <divclassName='inline-flexitems-centerpx-3py-1rounded-fullbg-blue-100text-blue-800text-smfont-mediummb-4'>
                     {post.category}
                   </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3 line-clamp-2'>
+                  <h3className = 'text-xlfont-boldtext-gray-900mb-3line-clamp-2'>
                     {post.title}
                   </h3>
-                  <p className='text-gray-600 mb-4 line-clamp-3'>
+                  <pclassName='text-gray-600mb-4line-clamp-3'>
                     {post.excerpt}
                   </p>
-                  <div className='flex items-center gap-4 text-gray-500 text-sm mb-4'>
-                    <div className='flex items-center gap-1'>
-                      <User className='w-4 h-4' />
+                  <divclassName='flexitems-centergap-4text-gray-500text-smmb-4'>
+                    <divclassName='flexitems-centergap-1'>
+                      <UserclassName='w-4 h-4' />
                       {post.author}
                     </div>
-                    <div className='flex items-center gap-1'>
-                      <Calendar className='w-4 h-4' />
-                      {new Date(post.date).toLocaleDateString()}
+                    <divclassName='flexitems-centergap-1'>
+                      <CalendarclassName='w-4 h-4' />
+                      {newDate(post.date).toLocaleDateString()}
                     </div>
-                    <div className='flex items-center gap-1'>
-                      <Clock className='w-4 h-4' />
+                    <divclassName = 'flexitems-centergap-1'>
+                      <ClockclassName='w-4 h-4' />
                       {post.readTime}
                     </div>
-                  </div>
-                  <Link
-                    to={`/blog/${post.id}`}
-                    className='inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors'
+                  </div > <Linkto={`/blog/${post.id}`}
+                    className='inline-flexitems-centertext-blue-600font-semiboldhover: text-blue-700transition-colors'
                   >
-                    Read More
-                    <ArrowRight className='w-4 h-4 ml-1' />
+                    ReadMore
+                    <ArrowRight,className='w-4 h-4ml-1' />
                   </Link>
                 </div>
               </motion.article>
             ))}
           </div>
 
-          {/* Newsletter Subscription */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
-            className='mt-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-center'
+          {/* NewsletterSubscription */}
+          <motion.divinitial = {{ opacity:  0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.6delay: 0.8 }}
+            className = 'mt-16bg-gradient-to-rfrom-blue-600to-purple-600rounded-xlp-8text-center'
           >
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Stay Updated with Our Latest Insights
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              StayUpdatedwith OurLatestInsights
             </h3>
-            <p className='text-blue-100 mb-6 max-w-2xl mx-auto'>
-              Subscribe to our newsletter and never miss an article. Get weekly
-              insights on AI, technology trends, and business transformation
-              delivered to your inbox.
+            <pclassName='text-blue-100mb-6max-w-2xlmx-auto'>
+              Subscribetoour newsletterandnever missanarticle. Getweeklyinsights onAItechnologytrendsandbusinesstransformation
+              deliveredtoyour inbox.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 max-w-md mx-auto'>
-              <input
-                type='email'
-                placeholder='Enter your email address'
-                className='flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600'
+            <divclassName = 'flexflex-colsm: flex-rowgap-4max-w-mdmx-auto'>
+              <inputtype='email'
+                placeholder='Enteryouremail address'
+                className='flex-1px-4py-3rounded-lgborder-0focus:ring-2focus:ring-whitefocus:ring-offset-2focus:ring-offset-blue-600'
               />
-              <button className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'>
+              <buttonclassName='bg-whitetext-blue-600px-6py-3rounded-lgfont-semiboldhover:bg-gray-100transition-colors'>
                 Subscribe
               </button>
             </div>
@@ -294,4 +263,4 @@ const Blog: React.FC = () => {
   );
 };
 
-export default Blog;
+exportdefaultBlog;

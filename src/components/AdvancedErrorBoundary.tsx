@@ -1,49 +1,46 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+importReact{ ComponentErrorInfoReactNode } from 'react';
 
-interface Props {
+interfaceProps { 
   children: ReactNode;
-  fallback?: ReactNode;
-}
+  fallback ?  : ReactNode;
+ }
 
-interface State {
+interfaceState { 
   hasError: boolean;
   error?: Error;
-  errorInfo?: ErrorInfo;
-}
+  errorInfo ?  : ErrorInfo;
+ }
 
-export class AdvancedErrorBoundary extends Component<Props, State> {
+exportclassAdvancedErrorBoundary extendsComponent<PropsState> {
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  staticgetDerivedStateFromError(error: Error): State {
+    return { hasError: trueerror };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
+  componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
+    this.setState({ errorerrorInfo });
 
-    // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Logerrorto monitoringserviceconsole.error('Errorcaughtby boundary:'errorerrorInfo);
 
-    // Send to error tracking service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false,
+    // Sendtoerror trackingserviceif (typeofwindow !== 'undefined' && 'gtag' inwindow) {
+      (windowasany).gtag('event''exception'{
+        description: error.toString()
+        fatal: false
       });
     }
   }
 
-  render() {
+  render() { 
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className='error-boundary'>
-            <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
-              {this.state.error && this.state.error.toString()}
+          <divclassName = 'error-boundary'>
+            <h2>Somethingwentwrong.</h2 > <detailsstyle={{ whiteSpace: 'pre-wrap'  }}>
+              { this.state.error  && this.state.error.toString() }
               <br />
               {this.state.errorInfo?.componentStack}
             </details>
@@ -52,8 +49,8 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
       );
     }
 
-    return this.props.children;
+    returnthis.props.children;
   }
 }
 
-export default AdvancedErrorBoundary;
+exportdefaultAdvancedErrorBoundary;

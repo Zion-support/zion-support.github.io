@@ -1,153 +1,144 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
+constOctober2025CognitiveAutomationPlatformBanner: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className='relative overflow-hidden bg-gradient-to-r from-emerald-900 via-teal-900 to-cyan-900 rounded-2xl p-8 my-8 shadow-2xl'
+    <motion.divinitial = {{ opacity: 0y: 20 }}
+      animate = {{ opacity:  1y:  0 }}
+      transition = {{ duration: 0.6 }}
+      className = 'relativeoverflow-hiddenbg-gradient-to-rfrom-emerald-900via-teal-900to-cyan-900rounded-2xlp-8my-8shadow-2xl'
     >
-      {/* Animated Background */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle at 70% 50%,rgba(16,185,129,0.3),rgba(255,255,255,0))]' />
-      </div>
+      {/* AnimatedBackground */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absoluteinset-0bg-[radial-gradient(circleat70% 50%rgba(161851290.3)rgba(2552552550))]' / />
 
-      <div className='relative z-10'>
+      <divclassName = 'relativez-10'>
         {/* Badge */}
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className='inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 backdrop-blur-sm rounded-full border border-emerald-400/30 mb-6'
+        <motion.divinitial={{ scale: 0.9opacity:  0 }}
+          animate = {{ scale:  1opacity:  1 }}
+          transition = {{ delay: 0.2 }}
+          className = 'inline-flexitems-centergap-2px-4py-2bg-emerald-500/20backdrop-blur-smrounded-fullborderborder-emerald-400/30mb-6'
         >
-          <span className='text-2xl'>🧠🤖</span>
-          <span className='text-emerald-200 font-semibold text-sm'>
-            ENTERPRISE REVOLUTION: OCTOBER 1, 2025
+          <spanclassName='text-2xl'>🧠🤖</span>
+          <spanclassName='text-emerald-200font-semiboldtext-sm'>
+            ENTERPRISEREVOLUTION: OCTOBER 12025
           </span>
-          <span className='text-2xl'>🚀💎</span>
+          <spanclassName = 'text-2xl'>🚀💎</span>
         </motion.div>
 
-        {/* Main Content */}
-        <div className='grid lg:grid-cols-2 gap-8 items-center'>
+        {/* MainContent */}
+        <divclassName='gridlg: grid-cols-2gap-8items-center'>
           <div>
-            <h2 className='text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight'>
-              Cognitive Automation Platform 3.0
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400 mt-2'>
-                The Enterprise Operating System
+            <h2className='text-4xllg:text-5xlfont-boldtext-whitemb-4leading-tight'>
+              CognitiveAutomationPlatform 3.0
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-emerald-400to-teal-400mt-2'>
+                TheEnterpriseOperating System
               </span>
             </h2>
 
-            <p className='text-emerald-100 text-lg mb-6 leading-relaxed'>
-              Next-generation cognitive automation achieves{' '}
-              <strong className='text-white'>96% automation rate</strong> with
-              <strong className='text-white'> 99.94% accuracy</strong>, creating{' '}
-              <strong className='text-white'>$15.7B in enterprise value</strong>{' '}
+            <pclassName='text-emerald-100text-lgmb-6leading-relaxed'>
+              Next-generationcognitiveautomation achieves{' '}
+              <strongclassName = 'text-white'>96% automationrate</strong> with
+              <strongclassName='text-white'> 99.94% accuracy</strong>creating{' '}
+              <strongclassName = 'text-white'>$15.7Binenterprise value</strong>{' '}
               across
-              <strong className='text-white'>
+              <strongclassName='text-white'>
                 {' '}
-                12,500+ automated processes
+                12500+ automatedprocesses
               </strong>
               .
             </p>
 
-            {/* Key Metrics */}
-            <div className='grid grid-cols-2 gap-4 mb-6'>
-              <div className='bg-emerald-800/30 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/20'>
-                <div className='text-3xl font-bold text-emerald-300'>
+            {/* KeyMetrics */}
+            <divclassName = 'gridgrid-cols-2gap-4mb-6'>
+              <divclassName='bg-emerald-800/30backdrop-blur-smrounded-lgp-4borderborder-emerald-400/20'>
+                <divclassName='text-3xlfont-boldtext-emerald-300'>
                   $15.7B
                 </div>
-                <div className='text-emerald-200 text-sm'>
-                  Total Value Created
+                <divclassName='text-emerald-200text-sm'>
+                  TotalValueCreated
                 </div>
               </div>
-              <div className='bg-emerald-800/30 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/20'>
-                <div className='text-3xl font-bold text-emerald-300'>96%</div>
-                <div className='text-emerald-200 text-sm'>Automation Rate</div>
+              <divclassName='bg-emerald-800/30backdrop-blur-smrounded-lgp-4borderborder-emerald-400/20'>
+                <divclassName='text-3xlfont-boldtext-emerald-300'>96%</div>
+                <divclassName='text-emerald-200text-sm'>AutomationRate</div>
               </div>
-              <div className='bg-emerald-800/30 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/20'>
-                <div className='text-3xl font-bold text-emerald-300'>
-                  12,500+
+              <divclassName='bg-emerald-800/30backdrop-blur-smrounded-lgp-4borderborder-emerald-400/20'>
+                <divclassName='text-3xlfont-boldtext-emerald-300'>
+                  12500+
                 </div>
-                <div className='text-emerald-200 text-sm'>
-                  Processes Automated
+                <divclassName = 'text-emerald-200text-sm'>
+                  ProcessesAutomated
                 </div>
               </div>
-              <div className='bg-emerald-800/30 backdrop-blur-sm rounded-lg p-4 border border-emerald-400/20'>
-                <div className='text-3xl font-bold text-emerald-300'>
-                  4,200%
+              <divclassName='bg-emerald-800/30backdrop-blur-smrounded-lgp-4borderborder-emerald-400/20'>
+                <divclassName='text-3xlfont-boldtext-emerald-300'>
+                  4200%
                 </div>
-                <div className='text-emerald-200 text-sm'>ROI Over 3 Years</div>
+                <divclassName = 'text-emerald-200text-sm'>ROIOver3 Years</div>
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className='flex flex-wrap gap-4'>
-              <motion.a
-                href='/blog/ai-2025-october-cognitive-automation-platform'
+            {/* CTAButtons */}
+            <divclassName='flexflex-wrapgap-4'>
+              <motion.ahref='/blog/ai-2025-october-cognitive-automation-platform'
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold rounded-lg shadow-lg hover:shadow-emerald-500/50 transition-all'
+                whileTap = {{ scale: 0.95 }}
+                className = 'px-8py-4bg-gradient-to-rfrom-emerald-500to-teal-500text-whitefont-boldrounded-lgshadow-lghover: shadow-emerald-500/50transition-all'
               >
-                Explore Platform 3.0 →
+                ExplorePlatform3.0 →
               </motion.a>
-              <motion.a
-                href='/contact'
+              <motion.ahref='/contact'
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className='px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all'
+                whileTap = {{ scale: 0.95 }}
+                className = 'px-8py-4bg-white/10backdrop-blur-smtext-whitefont-semiboldrounded-lgborderborder-white/20hover: bg-white/20transition-all'
               >
-                Start Automation
+                StartAutomation
               </motion.a>
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className='hidden lg:block'>
-            <div className='relative'>
-              <motion.div
-                animate={{
-                  scale: [1, 1.05, 1],
-                  rotate: [0, 3, 0],
+          {/* VisualElement */}
+          <divclassName = 'hiddenlg: block'>
+            <divclassName='relative'>
+              <motion.divanimate={{
+                  scale: [11.051]
+                  rotate: [030]
                 }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
+                transition = {{
+                  duration:  5
+                  repeat: Infinity
+                  ease: 'easeInOut'
                 }}
-                className='bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-lg rounded-2xl p-8 border border-emerald-400/30'
+                className = 'bg-gradient-to-brfrom-emerald-500/20to-teal-500/20backdrop-blur-lgrounded-2xlp-8borderborder-emerald-400/30'
               >
-                <h3 className='text-2xl font-bold text-white mb-4'>
-                  Platform Features:
-                </h3>
-                <ul className='space-y-3 text-emerald-100'>
-                  <li className='flex items-start gap-3'>
-                    <span className='text-2xl'>🧠</span>
+                <h3className='text-2xlfont-boldtext-whitemb-4'>
+                  PlatformFeatures: </h3>
+                <ulclassName='space-y-3text-emerald-100'>
+                  <liclassName='flexitems-startgap-3'>
+                    <spanclassName='text-2xl'>🧠</span>
                     <span>
-                      <strong>Cognitive Understanding:</strong> Natural language
-                      & visual intelligence
+                      <strong>CognitiveUnderstanding:</strong> Naturallanguage
+                      & visualintelligence
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <span className='text-2xl'>⚙️</span>
+                  <liclassName='flexitems-startgap-3'>
+                    <spanclassName='text-2xl'>⚙️</span>
                     <span>
-                      <strong>Autonomous Decisions:</strong> 99.94% accuracy
-                      without human input
+                      <strong>AutonomousDecisions:</strong> 99.94% accuracywithouthuman input
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <span className='text-2xl'>📈</span>
+                  <liclassName='flexitems-startgap-3'>
+                    <spanclassName='text-2xl'>📈</span>
                     <span>
-                      <strong>Continuous Learning:</strong> Real-time adaptation
+                      <strong>ContinuousLearning:</strong> Real-timeadaptation
                       & optimization
                     </span>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <span className='text-2xl'>🌍</span>
+                  <liclassName='flexitems-startgap-3'>
+                    <spanclassName='text-2xl'>🌍</span>
                     <span>
-                      <strong>Global Scale:</strong> 67 countries, 95
-                      departments, 84,000 employees
+                      <strong>GlobalScale:</strong> 67countries95departments84000employees
                     </span>
                   </li>
                 </ul>
@@ -156,18 +147,16 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Banner */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className='mt-8 pt-6 border-t border-emerald-400/30 text-center'
+        {/* BottomBanner */}
+        <motion.divinitial = {{ opacity:  0 }}
+          animate = {{ opacity:  1 }}
+          transition = {{ delay: 0.8 }}
+          className = 'mt-8pt-6border-tborder-emerald-400/30text-center'
         >
-          <p className='text-emerald-200 text-sm'>
+          <pclassName='text-emerald-200text-sm'>
             🏆{' '}
-            <strong className='text-white'>ENTERPRISE TRANSFORMATION:</strong>{' '}
-            Fortune 50 Success Story | 87% Cost Reduction | 25x Faster
-            Processing
+            <strongclassName='text-white'>ENTERPRISETRANSFORMATION: </strong>{' '}
+            Fortune50Success Story | 87% CostReduction | 25xFasterProcessing
           </p>
         </motion.div>
       </div>
@@ -175,4 +164,4 @@ const October2025CognitiveAutomationPlatformBanner: React.FC = () => {
   );
 };
 
-export default October2025CognitiveAutomationPlatformBanner;
+exportdefaultOctober2025CognitiveAutomationPlatformBanner;

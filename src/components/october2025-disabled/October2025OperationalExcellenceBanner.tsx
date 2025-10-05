@@ -1,327 +1,320 @@
 import React from 'react';
 import {
-  ArrowLeft,
+  ArrowLeft
   ArrowRight,
-  Award,
+  Award
   Brain,
-  Calendar,
+  Calendar
   CheckCircle,
-  Clock,
-  DollarSign,
-  Globe,
-  Rocket,
-  Satellite,
-  Share2,
-  Bookmark,
-  Tag,
-  Target,
-  TrendingUp,
-  Users,
-  User,
-  Zap,
-  BarChart3,
-  BookOpen,
+  Clock
+  DollarSign
+  Globe
+  Rocket
+  Satellite
+  Share2
+  Bookmark
+  Tag
+  Target
+  TrendingUp
+  Users
+  User
+  Zap
+  BarChart3
+  BookOpen
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const October2025OperationalExcellenceBanner = () => {
+constOctober2025OperationalExcellenceBanner = () => { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
-        <div className='absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl animate-pulse delay-500'></div>
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-emerald-900via-teal-900to-cyan-900py-20px-6rounded-3xlmb-12shadow-2xl' > {' ' }
+      {/* Animatedbackgroundelements */}
+      <divclassName='absoluteinset-0overflow-hidden'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-emerald-500/20rounded-fullblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-teal-500/20rounded-fullblur-3xlanimate-pulsedelay-1000' />
+        <divclassName='absolutetop-1/2left-1/2 w-96h-96bg-cyan-500/15rounded-fullblur-3xlanimate-pulsedelay-500' />
       </div>
-      <div className='relative z-10 max-w-7xl mx-auto'>
-        {/* Breaking News Badge */}
-        <div className='text-center mb-8'>
-          <div className='inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-cyan-500/30 border-2 border-emerald-400/50 rounded-full px-8 py-3 mb-6 shadow-lg backdrop-blur-sm'>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-pulse' />
-            <span className='text-emerald-200 font-bold text-lg uppercase tracking-wider'>
-              🚀 October 2025 — Operational Excellence Revolution
+      <divclassName='relativez-10max-w-7xlmx-auto'>
+        {/* BreakingNewsBadge */}
+        <divclassName='text-centermb-8'>
+          <divclassName='inline-flexitems-centergap-3bg-gradient-to-rfrom-emerald-500/30via-teal-500/30to-cyan-500/30border-2border-emerald-400/50rounded-fullpx-8py-3mb-6shadow-lgbackdrop-blur-sm'>
+            <SparklesclassName='w-6 h-6text-yellow-300animate-pulse' />
+            <spanclassName='text-emerald-200font-boldtext-lguppercasetracking-wider'>
+              🚀 October2025 — OperationalExcellenceRevolution
             </span>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-pulse' />
+            <SparklesclassName='w-6 h-6text-yellow-300animate-pulse' />
           </div>
-          <h2 className='text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight'>
-            Transform Operations with AI-Powered Intelligence
+          <h2className='text-6xlfont-extraboldmb-6bg-gradient-to-rfrom-emerald-300via-teal-300to-cyan-300bg-clip-texttext-transparentleading-tight'>
+            TransformOperationswith AI-PoweredIntelligence
           </h2>
-          <p className='text-2xl text-teal-200 max-w-4xl mx-auto leading-relaxed'>
-            Discover breakthrough AI innovations delivering unprecedented
-            efficiency:
-            <span className='text-emerald-300 font-semibold'>
+          <pclassName='text-2xltext-teal-200max-w-4xlmx-autoleading-relaxed'>
+            DiscoverbreakthroughAI innovationsdeliveringunprecedented
+            efficiency: <spanclassName='text-emerald-300font-semibold'>
               {' '}
-              Predictive Maintenance (99.6% Accuracy)
+              PredictiveMaintenance (99.6% Accuracy)
             </span>
-            ,
-            <span className='text-teal-300 font-semibold'>
+            
+            <spanclassName = 'text-teal-300font-semibold'>
               {' '}
-              Autonomous API Orchestration (99.8% Uptime)
+              AutonomousAPIOrchestration (99.8% Uptime)
             </span>
-            , and
-            <span className='text-cyan-300 font-semibold'>
+            and
+            <spanclassName = 'text-cyan-300font-semibold'>
               {' '}
-              Customer Intent Prediction (98.2% Accuracy)
+              CustomerIntentPrediction (98.2% Accuracy)
             </span>
           </p>
         </div>
-        {/* Key Metrics Showcase */}
-        <div className='grid md:grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto'>
-          <div className='bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-emerald-300 mb-2'>
+        {/* KeyMetricsShowcase */}
+        <divclassName = 'gridmd: grid-cols-4gap-4mb-12max-w-6xlmx-auto'>
+          <divclassName='bg-gradient-to-brfrom-emerald-800/40to-emerald-900/40backdrop-blur-smborderborder-emerald-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-emerald-300mb-2'>
               $24.4B
             </div>
-            <div className='text-emerald-200 font-semibold text-sm uppercase tracking-wide'>
-              Combined Value Creation
+            <divclassName='text-emerald-200font-semiboldtext-smuppercasetracking-wide'>
+              CombinedValueCreation
             </div>
           </div>
-          <div className='bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-teal-300 mb-2'>
+          <divclassName='bg-gradient-to-brfrom-teal-800/40to-teal-900/40backdrop-blur-smborderborder-teal-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-teal-300mb-2'>
               99.2%
             </div>
-            <div className='text-teal-200 font-semibold text-sm uppercase tracking-wide'>
-              Average Accuracy
+            <divclassName='text-teal-200font-semiboldtext-smuppercasetracking-wide'>
+              AverageAccuracy
             </div>
           </div>
-          <div className='bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-cyan-300 mb-2'>
+          <divclassName='bg-gradient-to-brfrom-cyan-800/40to-cyan-900/40backdrop-blur-smborderborder-cyan-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-cyan-300mb-2'>
               92%
             </div>
-            <div className='text-cyan-200 font-semibold text-sm uppercase tracking-wide'>
-              Cost Reduction
+            <divclassName='text-cyan-200font-semiboldtext-smuppercasetracking-wide'>
+              CostReduction
             </div>
           </div>
-          <div className='bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-blue-300 mb-2'>
+          <divclassName='bg-gradient-to-brfrom-blue-800/40to-blue-900/40backdrop-blur-smborderborder-blue-400/30rounded-2xlp-6text-centerhover:scale-105transition-transformshadow-lg'>
+            <divclassName='text-5xlfont-extraboldtext-blue-300mb-2'>
               560%
             </div>
-            <div className='text-blue-200 font-semibold text-sm uppercase tracking-wide'>
-              Average ROI
+            <divclassName='text-blue-200font-semiboldtext-smuppercasetracking-wide'>
+              AverageROI
             </div>
           </div>
         </div>
-        {/* Featured Articles Grid */}
-        <div className='grid md:grid-cols-3 gap-6 mb-10'>
-          {/* Article 1 - Predictive Maintenance */}
-          <Link
-            to='/blog/ai-2025-oct-predictive-maintenance-enterprise-breakthrough'
-            className='group bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border-2 border-emerald-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300'
+        {/* FeaturedArticlesGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-10'>
+          {/* Article1 - PredictiveMaintenance */}
+          <Linkto = '/blog/ai-2025-oct-predictive-maintenance-enterprise-breakthrough'
+            className='groupbg-gradient-to-brfrom-emerald-800/50to-emerald-900/50backdrop-blur-smborder-2border-emerald-400/40rounded-2xlp-8hover: scale-105hover:shadow-2xlhover:shadow-emerald-500/50transition-allduration-300'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-emerald-500/30 rounded-2xl group-hover:bg-emerald-500/40 transition-colors shadow-lg'>
-                <Wrench className='w-10 h-10 text-emerald-200' />
+            <divclassName='flexitems-centergap-4mb-6'>
+              <divclassName='p-4bg-emerald-500/30rounded-2xlgroup-hover:bg-emerald-500/40transition-colorsshadow-lg'>
+                <WrenchclassName='w-10h-10text-emerald-200' />
               </div>
-              <div className='flex-1'>
-                <span className='text-xs text-emerald-300 font-bold uppercase tracking-wider bg-emerald-500/20 px-3 py-1 rounded-full'>
-                  Predictive Maintenance
+              <divclassName='flex-1'>
+                <spanclassName='text-xstext-emerald-300font-bolduppercasetracking-widerbg-emerald-500/20px-3py-1rounded-full'>
+                  PredictiveMaintenance
                 </span>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-emerald-200 transition-colors leading-tight'>
-              AI-Powered Predictive Maintenance: 99.6% Failure Prediction
+            <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-emerald-200transition-colorsleading-tight'>
+              AI-PoweredPredictiveMaintenance: 99.6% FailurePrediction
             </h3>
-            <p className='text-teal-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Revolutionary AI platform achieving{' '}
-              <span className='text-emerald-300 font-semibold'>
-                99.6% failure prediction accuracy
+            <pclassName='text-teal-200text-basemb-6leading-relaxedline-clamp-4'>
+              RevolutionaryAIplatform achieving{' '}
+              <spanclassName = 'text-emerald-300font-semibold'>
+                99.6% failurepredictionaccuracy
               </span>{' '}
               with
-              <span className='text-emerald-300 font-semibold'>
+              <spanclassName='text-emerald-300font-semibold'>
                 {' '}
-                94% downtime reduction
+                94% downtimereduction
               </span>{' '}
               and{' '}
-              <span className='text-emerald-300 font-semibold'>
-                $8.7B annual savings
+              <spanclassName='text-emerald-300font-semibold'>
+                $8.7Bannualsavings
               </span>
-              . Transform reactive maintenance into proactive optimization.
+              . Transformreactivemaintenance intoproactiveoptimization.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>$8.7B in annual savings</span>
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-centergap-2text-emerald-300text-sm'>
+                <TrendingUpclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>$8.7Binannual savings</span>
               </div>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>94% downtime reduction</span>
+              <divclassName='flexitems-centergap-2text-emerald-300text-sm'>
+                <AwardclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>94% downtimereduction</span>
               </div>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>450% ROI within 18 months</span>
+              <divclassName='flexitems-centergap-2text-emerald-300text-sm'>
+                <ZapclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>450% ROIwithin18 months</span>
               </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-emerald-400/30'>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <span className='font-medium'>16 min read</span>
+            <divclassName='flexitems-centerjustify-betweenpt-4border-tborder-emerald-400/30'>
+              <divclassName='flexitems-centergap-2text-emerald-300text-sm'>
+                <spanclassName='font-medium'>16minread</span>
                 <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
+                <spanclassName='font-medium'>Oct 12025</span>
               </div>
-              <ArrowRight className='w-6 h-6 text-emerald-300 group-hover:translate-x-2 transition-transform' />
+              <ArrowRight,className = 'w-6 h-6text-emerald-300group-hover: translate-x-2transition-transform' />
             </div>
           </Link>
-          {/* Article 2 - API Orchestration */}
-          <Link
-            to='/blog/ai-2025-oct-autonomous-api-orchestration-revolution'
-            className='group bg-gradient-to-br from-teal-800/50 to-teal-900/50 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/50 transition-all duration-300'
+          {/* Article2 - APIOrchestration */}
+          <Linkto = '/blog/ai-2025-oct-autonomous-api-orchestration-revolution'
+            className='groupbg-gradient-to-brfrom-teal-800/50to-teal-900/50backdrop-blur-smborder-2border-teal-400/40rounded-2xlp-8hover: scale-105hover:shadow-2xlhover:shadow-teal-500/50transition-allduration-300'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-teal-500/30 rounded-2xl group-hover:bg-teal-500/40 transition-colors shadow-lg'>
-                <Network className='w-10 h-10 text-teal-200' />
+            <divclassName='flexitems-centergap-4mb-6'>
+              <divclassName='p-4bg-teal-500/30rounded-2xlgroup-hover:bg-teal-500/40transition-colorsshadow-lg'>
+                <NetworkclassName='w-10h-10text-teal-200' />
               </div>
-              <div className='flex-1'>
-                <span className='text-xs text-teal-300 font-bold uppercase tracking-wider bg-teal-500/20 px-3 py-1 rounded-full'>
-                  API Orchestration
+              <divclassName='flex-1'>
+                <spanclassName='text-xstext-teal-300font-bolduppercasetracking-widerbg-teal-500/20px-3py-1rounded-full'>
+                  APIOrchestration
                 </span>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-teal-200 transition-colors leading-tight'>
-              Autonomous API Orchestration: Self-Healing Microservices
+            <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-teal-200transition-colorsleading-tight'>
+              AutonomousAPIOrchestration: Self-HealingMicroservices
             </h3>
-            <p className='text-teal-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Transform microservices management with{' '}
-              <span className='text-teal-300 font-semibold'>99.8% uptime</span>,
+            <pclassName='text-teal-200text-basemb-6leading-relaxedline-clamp-4'>
+              Transformmicroservicesmanagement with{' '}
+              <spanclassName = 'text-teal-300font-semibold'>99.8% uptime</span>
               managing
-              <span className='text-teal-300 font-semibold'>
+              <spanclassName = 'text-teal-300font-semibold'>
                 {' '}
-                100M+ daily requests
+                100M+ dailyrequests
               </span>{' '}
-              with self-healing capabilities and
-              <span className='text-teal-300 font-semibold'>
-                $6.4B value creation
+              withself-healingcapabilitiesand
+              <spanclassName='text-teal-300font-semibold'>
+                $6.4Bvaluecreation
               </span>
-              . Zero-touch operations at scale.
+              . Zero-touchoperationsat scale.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>$6.4B enterprise value</span>
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-centergap-2text-teal-300text-sm'>
+                <TrendingUpclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>$6.4Benterprisevalue</span>
               </div>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>
-                  95% incident auto-resolution
+              <divclassName='flexitems-centergap-2text-teal-300text-sm'>
+                <AwardclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>
+                  95% incidentauto-resolution
                 </span>
               </div>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>550% ROI within 12 months</span>
+              <divclassName='flexitems-centergap-2text-teal-300text-sm'>
+                <ZapclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>550% ROIwithin12 months</span>
               </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-teal-400/30'>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <span className='font-medium'>17 min read</span>
+            <divclassName='flexitems-centerjustify-betweenpt-4border-tborder-teal-400/30'>
+              <divclassName='flexitems-centergap-2text-teal-300text-sm'>
+                <spanclassName='font-medium'>17minread</span>
                 <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
+                <spanclassName='font-medium'>Oct 12025</span>
               </div>
-              <ArrowRight className='w-6 h-6 text-teal-300 group-hover:translate-x-2 transition-transform' />
+              <ArrowRight,className = 'w-6 h-6text-teal-300group-hover: translate-x-2transition-transform' />
             </div>
           </Link>
-          {/* Article 3 - Customer Intent Prediction */}
-          <Link
-            to='/blog/ai-2025-oct-customer-intent-prediction-breakthrough'
-            className='group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300'
+          {/* Article3 - CustomerIntentPrediction */}
+          <Linkto = '/blog/ai-2025-oct-customer-intent-prediction-breakthrough'
+            className='groupbg-gradient-to-brfrom-cyan-800/50to-cyan-900/50backdrop-blur-smborder-2border-cyan-400/40rounded-2xlp-8hover: scale-105hover:shadow-2xlhover:shadow-cyan-500/50transition-allduration-300'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg'>
-                <Target className='w-10 h-10 text-cyan-200' />
+            <divclassName='flexitems-centergap-4mb-6'>
+              <divclassName='p-4bg-cyan-500/30rounded-2xlgroup-hover:bg-cyan-500/40transition-colorsshadow-lg'>
+                <TargetclassName='w-10h-10text-cyan-200' />
               </div>
-              <div className='flex-1'>
-                <span className='text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full'>
-                  Intent Prediction
+              <divclassName='flex-1'>
+                <spanclassName='text-xstext-cyan-300font-bolduppercasetracking-widerbg-cyan-500/20px-3py-1rounded-full'>
+                  IntentPrediction
                 </span>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors leading-tight'>
-              Real-Time AI Customer Intent: 98.2% Prediction Accuracy
+            <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-cyan-200transition-colorsleading-tight'>
+              Real-TimeAICustomer Intent: 98.2% PredictionAccuracy
             </h3>
-            <p className='text-cyan-200 text-base mb-6 leading-relaxed line-clamp-4'>
+            <pclassName='text-cyan-200text-basemb-6leading-relaxedline-clamp-4'>
               Unlock{' '}
-              <span className='text-cyan-300 font-semibold'>
-                $9.3B revenue growth
+              <spanclassName = 'text-cyan-300font-semibold'>
+                $9.3Brevenuegrowth
               </span>{' '}
-              with AI achieving
-              <span className='text-cyan-300 font-semibold'>
+              withAIachieving
+              <spanclassName='text-cyan-300font-semibold'>
                 {' '}
-                98.2% intent prediction accuracy
+                98.2% intentpredictionaccuracy
               </span>{' '}
               and
-              <span className='text-cyan-300 font-semibold'>
-                850% conversion increases
+              <spanclassName='text-cyan-300font-semibold'>
+                850% conversionincreases
               </span>
-              . Hyper-personalization in real-time.
+              . Hyper-personalizationinreal-time.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>$9.3B revenue growth</span>
+            <divclassName='space-y-2mb-6'>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <TrendingUpclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>$9.3Brevenuegrowth</span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>850% conversion increase</span>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <AwardclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>850% conversionincrease</span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>680% ROI in 6 months</span>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <ZapclassName='w-4 h-4' />
+                <spanclassName='font-semibold'>680% ROIin6 months</span>
               </div>
             </div>
-            <div className='flex items-center justify-between pt-4 border-t border-cyan-400/30'>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <span className='font-medium'>18 min read</span>
+            <divclassName='flexitems-centerjustify-betweenpt-4border-tborder-cyan-400/30'>
+              <divclassName='flexitems-centergap-2text-cyan-300text-sm'>
+                <spanclassName='font-medium'>18minread</span>
                 <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
+                <spanclassName='font-medium'>Oct 12025</span>
               </div>
-              <ArrowRight className='w-6 h-6 text-cyan-300 group-hover:translate-x-2 transition-transform' />
+              <ArrowRight,className = 'w-6 h-6text-cyan-300group-hover: translate-x-2transition-transform' />
             </div>
           </Link>
         </div>
-        {/* Call to Action Section */}
-        <div className='bg-gradient-to-r from-emerald-800/30 via-teal-800/30 to-cyan-800/30 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 text-center shadow-xl'>
-          <h3 className='text-3xl font-bold text-white mb-4'>
-            Achieve Operational Excellence with AI
+        {/* CalltoAction Section */}
+        <divclassName = 'bg-gradient-to-rfrom-emerald-800/30via-teal-800/30to-cyan-800/30backdrop-blur-smborder-2border-teal-400/40rounded-2xlp-8text-centershadow-xl'>
+          <h3className='text-3xlfont-boldtext-whitemb-4'>
+            AchieveOperationalExcellence withAI
           </h3>
-          <p className='text-xl text-teal-200 mb-8 max-w-3xl mx-auto'>
-            Join enterprise leaders who have implemented these AI systems across{' '}
-            <span className='text-emerald-300 font-semibold'>
-              1,200+ global deployments
+          <pclassName='text-xltext-teal-200mb-8max-w-3xlmx-auto'>
+            Joinenterpriseleaders whohaveimplemented theseAIsystems across{' '}
+            <spanclassName='text-emerald-300font-semibold'>
+              1200+ globaldeployments
             </span>
-            , creating{' '}
-            <span className='text-teal-300 font-semibold'>
-              $24.4B in measurable value
+            creating{' '}
+            <spanclassName = 'text-teal-300font-semibold'>
+              $24.4Binmeasurable value
             </span>{' '}
-            with an average{' '}
-            <span className='text-cyan-300 font-semibold'>560% ROI</span>.
+            withanaverage{' '}
+            <spanclassName='text-cyan-300font-semibold'>560% ROI</span>.
           </p>
-          <div className='flex flex-wrap gap-4 justify-center'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'
+          <divclassName='flexflex-wrapgap-4justify-center'>
+            <Linkto='/blog'
+              className='inline-flexitems-centergap-2bg-gradient-to-rfrom-emerald-500to-teal-500hover: from-emerald-400hover:to-teal-400text-whitefont-boldpx-8py-4rounded-xltransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105'
             >
-              <span>Explore All Innovations</span>
-              <ArrowRight className='w-5 h-5' />
+              <span>ExploreAllInnovations</span>
+              <ArrowRight,className='w-5 h-5' />
             </Link>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'
+            <Linkto='/contact'
+              className='inline-flexitems-centergap-2bg-white/10hover:bg-white/20backdrop-blur-smborder-2border-white/30text-whitefont-boldpx-8py-4rounded-xltransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105'
             >
-              <span>Get Started Today</span>
-              <ArrowRight className='w-5 h-5' />
+              <span>GetStartedToday</span>
+              <ArrowRight,className='w-5 h-5' />
             </Link>
           </div>
         </div>
-        {/* Trust Indicators */}
-        <div className='mt-10 text-center'>
-          <div className='flex flex-wrap gap-6 justify-center items-center text-teal-300 text-sm'>
-            <div className='flex items-center gap-2'>
-              <Award className='w-5 h-5 text-yellow-400' />
-              <span className='font-semibold'>1,200+ Global Deployments</span>
+        {/* TrustIndicators */}
+        <divclassName = 'mt-10text-center'>
+          <divclassName='flexflex-wrapgap-6justify-centeritems-centertext-teal-300text-sm'>
+            <divclassName='flexitems-centergap-2'>
+              <AwardclassName='w-5 h-5text-yellow-400' />
+              <spanclassName='font-semibold'>1200+ GlobalDeployments</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <Sparkles className='w-5 h-5 text-emerald-400' />
-              <span className='font-semibold'>99.2% Average Accuracy</span>
+            <divclassName = 'flexitems-centergap-2'>
+              <SparklesclassName='w-5 h-5text-emerald-400' />
+              <spanclassName='font-semibold'>99.2% AverageAccuracy</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <TrendingUp className='w-5 h-5 text-green-400' />
-              <span className='font-semibold'>$24.4B Value Created</span>
+            <divclassName='flexitems-centergap-2'>
+              <TrendingUpclassName='w-5 h-5text-green-400' />
+              <spanclassName='font-semibold'>$24.4BValueCreated</span>
             </div>
           </div>
         </div>
@@ -329,4 +322,4 @@ const October2025OperationalExcellenceBanner = () => {
     </div>
   );
 };
-export default October2025OperationalExcellenceBanner;
+exportdefaultOctober2025OperationalExcellenceBanner;

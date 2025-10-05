@@ -1,40 +1,34 @@
-// Minimal types; remove ts-nocheck
-import React from 'react';
+// Minimaltypes; removets-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function EdgeSignedEvals2026(): React.JSX.Element {
+exportdefaultfunction EdgeSignedEvals2026(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Edge 2026: Signed Evals — Zero‑PII, &lt;100ms</title>
-        <meta
-          name='description'
-          content='Scoped IDs, on‑device aggregation, DP noise, and signed attestations for evals you can trust.'
+        <title>Edge2026: SignedEvals — Zero‑PII&lt; 100ms</title>
+        <metaname = 'description'
+          content='ScopedIDson‑deviceaggregationDPnoiseandsignedattestations forevalsyou cantrust.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/edge-2026-signed-evals'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2026-signed-evals'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Edge 2026: Signed Evals — Zero‑PII, &lt;100ms
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Edge2026: SignedEvals — Zero‑PII&lt; 100ms
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Scoped IDs • DP noise • Attestations
+        <pclassName = 'text-zion-slate-lightmb-8'>
+          ScopedIDs • DPnoise • Attestations
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Ship evaluation signals from the edge without collecting PII using
-            scoped identifiers, on‑device aggregation, and differential privacy.
+            Shipevaluationsignals fromtheedge withoutcollectingPII usingscopedidentifierson‑deviceaggregationanddifferentialprivacy.
           </p>
           <p>
-            Verify integrity with signed attestations and keep SLAs tight with
-            sub‑100ms latency budgets.
+            Verifyintegritywith signedattestationsand keepSLAstight withsub‑100mslatencybudgets.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

@@ -1,163 +1,152 @@
 import React from 'react';
-const NewContentPromotionalBanner2026 = () => {
-  const newContent = [
+constNewContentPromotionalBanner2026 = () => {
+  constnewContent = [
     {
-      title: 'Quantum-Conscious Intelligence',
-      date: 'January 2026',
-      impact: '$2.3B Enterprise Value',
-      readers: '500K+',
-      icon: '🧠',
-      color: 'from-violet-500 to-purple-500'
-    },
-    {
-      title: 'Autonomous Neural Networks',
-      date: 'February 2026',
-      impact: '99.97% Accuracy',
-      readers: '180K+',
-      icon: '⚡',
-      color: 'from-emerald-500 to-teal-500'
-    },
-    {
-      title: 'Neural-Synaptic Fusion AI',
-      date: 'March 2026',
-      impact: '500% Cognitive Enhancement',
-      readers: '203K+',
-      icon: '🚀',
-      color: 'from-blue-500 to-cyan-500'
+      title: 'Quantum-ConsciousIntelligence'
+      date: 'January2026'
+      impact: '$2.3BEnterpriseValue'
+      readers: '500K+'
+      icon: '🧠'
+      color: 'from-violet-500to-purple-500'
     }
-  ];
-  return (
-    <div className="py-16 bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+    {
+      title: 'AutonomousNeuralNetworks'
+      date: 'February2026'
+      impact: '99.97% Accuracy'
+      readers: '180K+'
+      icon: '⚡'
+      color: 'from-emerald-500to-teal-500'
+    }
+    {
+      title: 'Neural-SynapticFusionAI'
+      date: 'March2026'
+      impact: '500% CognitiveEnhancement'
+      readers: '203K+'
+      icon: '🚀'
+      color: 'from-blue-500to-cyan-500'
+    }
+  ]; return (
+    <divclassName = "py-16bg-gradient-to-brfrom-slate-900via-violet-900to-purple-900relativeoverflow-hidden">
+      {/* Animatedbackgroundeffects */}
+      <divclassName="absoluteinset-0overflow-hiddenopacity-20">
+        <divclassName="absolutetop-0left-1/4 w-96h-96bg-violet-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-0right-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '2s' }} />
+        <divclassName = "absolutetop-1/2left-1/2 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '4s' }} />
       </div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
-            <Globe className="w-6 h-6 text-violet-400 animate-pulse" />
-            <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">
-              🌍 NEW 2026 CONTENT REVOLUTION
+      <divclassName = "containermx-autopx-6relativez-10">
+        {/* HeaderSection */}
+        <divclassName="text-centermb-12">
+          <divclassName="inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-violet-500/20to-purple-500/20borderborder-violet-500/30mb-6">
+            <GlobeclassName="w-6 h-6text-violet-400animate-pulse" />
+            <spanclassName="text-violet-400font-boldtext-lgtracking-wideruppercase">
+              🌍 NEW2026CONTENT REVOLUTION
             </span>
-            <Globe className="w-6 h-6 text-purple-400 animate-pulse" />
+            <GlobeclassName="w-6 h-6text-purple-400animate-pulse" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Revolutionary Content Just Released
+          <h2className="text-4xlmd: text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-violet-400via-purple-400to-blue-400bg-clip-texttext-transparent">
+            RevolutionaryContentJust Released
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover the most groundbreaking AI innovations of 2026. Join millions of professionals 
-            who are already experiencing the future of technology through our revolutionary content.
+          <pclassName="text-xltext-gray-300max-w-4xlmx-autoleading-relaxedmb-8">
+            Discoverthemost groundbreakingAIinnovations of2026. Joinmillionsof professionalswhoare alreadyexperiencingthe futureoftechnology throughourrevolutionary content.
           </p>
         </div>
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((content, index) => (
-            <div
-key={index}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              <div className="relative p-8">
-                {/* Content Icon */}
-                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">
+        {/* ContentGrid */}
+        <divclassName = "gridmd: grid-cols-3gap-8mb-12">
+          { newContent.map((contentindex) = > (
+            <divkey = { index  }className = "grouprelativebg-white/5backdrop-blur-lgrounded-2xlborderborder-white/10hover: border-violet-500/50transition-allduration-500overflow-hiddenhover:transformhover:scale-105hover:shadow-2xlhover:shadow-violet-500/20"
+              style = { { animationDelay: `${index * 200 }ms` }}
+             > {/* Cardgloweffect */}
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${content.color }opacity-0group-hover: opacity-10transition-allduration-500`} />
+              <divclassName = "relativep-8">
+                {/* ContentIcon */}
+                <divclassName="text-5xlmb-6text-centergroup-hover: animate-pulse">
                   {content.icon}
                 </div>
-                {/* Date Badge */}
-                <div className="text-center mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>
+                {/* DateBadge */}
+                <divclassName = "text-centermb-4" > <spanclassName = { `inline-blockpx-3py-1rounded-fullbg-gradient-to-r ${content.color }text-whitetext-xsfont-bold`}>
                     {content.date}
                   </span>
                 </div>
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors duration-300 leading-tight text-center">
+                <h3className = "text-2xlfont-boldtext-whitemb-4group-hover: text-violet-400transition-colorsduration-300leading-tighttext-center">
                   {content.title}
                 </h3>
                 {/* Impact */}
-                <div className="text-center mb-4">
-                  <div className="text-violet-400 font-semibold text-lg">
+                <divclassName = "text-centermb-4">
+                  <divclassName="text-violet-400font-semiboldtext-lg">
                     {content.impact}
                   </div>
                 </div>
-                {/* Reader Count */}
-                <div className="text-center mb-6">
-                  <div className="flex items-center justify-center gap-2 text-gray-400">
-                    <Users className="w-4 h-4" />
-                    <span className="text-sm">{content.readers} readers</span>
+                {/* ReaderCount */}
+                <divclassName="text-centermb-6">
+                  <divclassName="flexitems-centerjustify-centergap-2text-gray-400">
+                    <UsersclassName="w-4 h-4" />
+                    <spanclassName="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
-                {/* CTA Button */}
-                <a
-                  href={`/blog/${content.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}
+                </div > {/* CTAButton */}
+                <ahref={`/blog/${content.title.toLowerCase().replace(/\s+/g'-')}`}
+                  className = { `group/btnflexitems-centerjustify-centergap-2 w-fullbg-gradient-to-r ${content.color }hover: opacity-90text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-violet-500/50transformhover:-translate-y-1`}
                 >
-                  <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <span>ReadNow</span>
+                  <ArrowRight,className = "w-4 h-4group-hover/btn: translate-x-1transition-transformduration-300" />
                 </a>
               </div>
             </div>
           ))}
         </div>
-        {/* Global Impact Stats */}
-        <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-3xl p-8 border border-violet-500/20 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-extrabold text-white mb-4">
-              Global Impact of Our Revolutionary Content
+        {/* GlobalImpactStats */}
+        <divclassName = "bg-gradient-to-rfrom-violet-500/10to-purple-500/10rounded-3xlp-8borderborder-violet-500/20mb-12">
+          <divclassName="text-centermb-8">
+            <h3className="text-3xlfont-extraboldtext-whitemb-4">
+              GlobalImpactof OurRevolutionaryContent
             </h3>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our innovative content is transforming industries worldwide and creating unprecedented value.
+            <pclassName="text-lgtext-gray-300max-w-2xlmx-auto">
+              Ourinnovativecontent istransformingindustries worldwideandcreating unprecedentedvalue.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' },
-              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
-              { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`${stat.color} mb-2 flex justify-center`}>
+          <divclassName="gridgrid-cols-2md: grid-cols-4gap-8">
+            { [
+              { value: '2.5M+'label: 'GlobalReaders'icon: <UsersclassName = "w-8 h-8" / > color: 'text-violet-400'  }
+              {  value: '$15B+'label: 'ValueCreated'icon: <TrendingUpclassName = "w-8 h-8" / > color: 'text-purple-400'  }
+              {  value: '99.9%'label: 'ContentAccuracy'icon: <StarclassName = "w-8 h-8" / > color: 'text-blue-400'  }
+              {  value: '150+'label: 'CountriesReached'icon: <GlobeclassName = "w-8 h-8" / > color: 'text-emerald-400'  }
+            ].map((statindex) => (
+              <divkey = { index }className = "text-center" > <divclassName = { `${stat.color }mb-2flexjustify-center`}>
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent mb-1">
+                <divclassName = "text-3xlfont-extraboldbg-gradient-to-rfrom-violet-400to-blue-400bg-clip-texttext-transparentmb-1">
                   {stat.value}
                 </div>
-                <div className="text-gray-400 text-sm font-medium">
+                <divclassName="text-gray-400text-smfont-medium">
                   {stat.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-violet-500 via-purple-500 to-blue-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Join the Content Revolution
+        {/* CTASection */}
+        <divclassName = "text-center">
+          <divclassName="inline-blockp-1rounded-2xlbg-gradient-to-rfrom-violet-500via-purple-500to-blue-500">
+            <divclassName="bg-slate-900rounded-xlpx-12py-10">
+              <h3className="text-3xlfont-boldtext-whitemb-4">
+                JointheContent Revolution
               </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Be among the first to access revolutionary AI insights, breakthrough research, 
-                and transformative technologies that are reshaping our world.
+              <pclassName="text-gray-400mb-8max-w-2xlmx-auto">
+                Beamongthe firsttoaccess revolutionaryAIinsightsbreakthroughresearch
+                andtransformativetechnologies thatarereshaping ourworld.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/blog"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
+              <divclassName = "flexflex-colsm: flex-rowgap-4justify-center">
+                <ahref="/blog"
+                  className="bg-gradient-to-rfrom-violet-500to-purple-600hover:from-violet-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-violet-500/50flexitems-centerjustify-centergap-2"
                 >
-                  <Rocket className="w-5 h-5" />
-                  <span>Explore All Content</span>
+                  <RocketclassName="w-5 h-5" />
+                  <span>ExploreAllContent</span>
                 </a>
-                <a
-                  href="/newsletter"
-                  className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                <ahref="/newsletter"
+                  className="border-2border-violet-500text-violet-400hover:bg-violet-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2"
                 >
-                  <span>Subscribe to Updates</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span>SubscribetoUpdates</span>
+                  <ArrowRight,className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -167,4 +156,4 @@ key={index}
     </div>
   );
 };
-export default React.memo(NewContentPromotionalBanner2026);
+exportdefaultReact.memo(NewContentPromotionalBanner2026);

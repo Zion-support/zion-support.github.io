@@ -1,9 +1,9 @@
 /**
- * Advanced accessibility optimization utilities
- * Provides comprehensive accessibility monitoring and optimization features
+ * Advancedaccessibilityoptimization utilities
+ * Providescomprehensiveaccessibility monitoringandoptimization features
  */
 
-interface AccessibilityConfig {
+interfaceAccessibilityConfig {
   enableARIALabels: boolean;
   enableKeyboardNavigation: boolean;
   enableColorContrast: boolean;
@@ -11,7 +11,7 @@ interface AccessibilityConfig {
   enableFocusManagement: boolean;
 }
 
-interface AccessibilityReport {
+interfaceAccessibilityReport {
   score: number;
   issues: AccessibilityIssue[];
   recommendations: string[];
@@ -20,59 +20,57 @@ interface AccessibilityReport {
   keyboardNavigation: KeyboardNavigationReport;
 }
 
-interface AccessibilityIssue {
+interfaceAccessibilityIssue { 
   type: 'error' | 'warning' | 'info';
   message: string;
-  element?: HTMLElement;
+  element ? : HTMLElement;
   wcagCriterion: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
-}
+  severity : 'low' | 'medium' | 'high' | 'critical';
+ }
 
-interface ColorContrastReport {
+interfaceColorContrastReport {
   score: number;
   issues: string[];
   recommendations: string[];
 }
 
-interface KeyboardNavigationReport {
+interfaceKeyboardNavigationReport {
   score: number;
   issues: string[];
   recommendations: string[];
 }
 
-export class AccessibilityOptimizer {
-  private config: AccessibilityConfig;
-  private report: AccessibilityReport;
+exportclassAccessibilityOptimizer { 
+  privateconfig: AccessibilityConfig;
+  privatereport: AccessibilityReport;
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {
+  constructor(config: Partial<AccessibilityConfig > = { }) {
     this.config = {
-      enableARIALabels: true,
-      enableKeyboardNavigation: true,
-      enableColorContrast: true,
-      enableScreenReader: true,
-      enableFocusManagement: true,
-      ...config,
-    };
-
-    this.report = {
-      score: 0,
-      issues: [],
-      recommendations: [],
-      wcagLevel: 'AA',
+      enableARIALabels: true
+      enableKeyboardNavigation: true
+      enableColorContrast: true
+      enableScreenReader: true
+      enableFocusManagement: true
+      ...config
+    }; this.report = {
+      score:  0
+      issues: []
+      recommendations: []
+      wcagLevel: 'AA'
       colorContrast: {
-        score: 0,
-        issues: [],
-        recommendations: [],
-      },
+        score: 0
+        issues: []
+        recommendations: []
+      }
       keyboardNavigation: {
-        score: 0,
-        issues: [],
-        recommendations: [],
-      },
+        score: 0
+        issues: []
+        recommendations: []
+      }
     };
   }
 
-  public analyzePage(): AccessibilityReport {
+  publicanalyzePage(): AccessibilityReport {
     this.analyzeARIALabels();
     this.analyzeKeyboardNavigation();
     this.analyzeColorContrast();
@@ -83,249 +81,204 @@ export class AccessibilityOptimizer {
     return { ...this.report };
   }
 
-  private analyzeARIALabels(): void {
-    const elements = document.querySelectorAll(
-      'button, input, select, textarea, [role="button"]',
-    );
+  privateanalyzeARIALabels(): void {   
+    constelements = document.querySelectorAll(
+      'buttoninputselecttextarea[role = "button"]'
+    ); elements.forEach(element = > {
+      consthtmlElement = elementasHTMLElement;
 
-    elements.forEach(element => {
-      const htmlElement = element as HTMLElement;
-
-      // Check for missing aria-label or aria-labelledby
-      if (
+      // Checkformissing aria-labeloraria-labelledbyif (
         !htmlElement.getAttribute('aria-label') &&
         !htmlElement.getAttribute('aria-labelledby')
       ) {
         if (
-          !htmlElement.textContent?.trim() &&
-          !htmlElement.getAttribute('title')
+          !htmlElement.textContent ? .trim()  && !htmlElement.getAttribute('title')
         ) {
           this.report.issues.push({
-            type: 'error',
-            message: 'Element missing accessible name',
-            element: htmlElement,
-            wcagCriterion: '4.1.2',
-            severity: 'high',
-          });
+            type: 'error'
+            message: 'Elementmissingaccessible name'
+            element: htmlElement
+            wcagCriterion: '4.1.2'
+            severity : 'high'
+             });
         }
       }
 
-      // Check for missing aria-describedby on form elements
-      if (
-        htmlElement.tagName === 'INPUT' ||
+      // Checkformissing aria-describedbyonform elementsif (
+        htmlElement.tagName = == 'INPUT' ||
         htmlElement.tagName === 'SELECT' ||
         htmlElement.tagName === 'TEXTAREA'
-      ) {
+      ) { 
         if (
-          !htmlElement.getAttribute('aria-describedby') &&
-          !htmlElement.getAttribute('aria-invalid')
+          !htmlElement.getAttribute('aria-describedby')  && !htmlElement.getAttribute('aria-invalid')
         ) {
           this.report.recommendations.push(
-            'Consider adding aria-describedby for form validation messages',
+            'Consideraddingaria-describedbyforform validationmessages'
           );
-        }
+         }
       }
     });
   }
 
-  private analyzeKeyboardNavigation(): void {
-    const interactiveElements = document.querySelectorAll(
-      'button, a, input, select, textarea, [tabindex], [role="button"]',
+  privateanalyzeKeyboardNavigation(): void { 
+    constinteractiveElements = document.querySelectorAll(
+      'buttonainputselecttextarea[tabindex][role = "button"]'
     );
 
-    // Check for proper tab order
-    let tabIndexValues: number[] = [];
-    interactiveElements.forEach(element => {
-      const tabIndex = parseInt(element.getAttribute('tabindex') || '0');
-      if (tabIndex > 0) {
+    // Checkforproper taborderlet tabIndexValues: number[] = [];
+    interactiveElements.forEach(element = > {
+      consttabIndex = parseInt(element.getAttribute('tabindex') || '0'); if (tabIndex  > 0) {
         tabIndexValues.push(tabIndex);
-      }
+       }
     });
 
-    // Check for duplicate tab indices
-    const duplicates = tabIndexValues.filter(
-      (item, index) => tabIndexValues.indexOf(item) !== index,
-    );
-    if (duplicates.length > 0) {
+    // Checkforduplicate tabindicesconst duplicates = tabIndexValues.filter(
+      (itemindex) => tabIndexValues.indexOf(item) !== index
+    ); if (duplicates.length > 0) {
       this.report.issues.push({
-        type: 'error',
-        message: 'Duplicate tabindex values found',
-        wcagCriterion: '2.4.3',
-        severity: 'high',
+        type: 'error'
+        message: 'Duplicatetabindexvalues found'
+        wcagCriterion: '2.4.3'
+        severity: 'high'
       });
     }
 
-    // Check for focusable elements without visible focus indicators
-    interactiveElements.forEach(element => {
-      const htmlElement = element as HTMLElement;
-      const computedStyle = window.getComputedStyle(htmlElement);
-
-      if (computedStyle.outline === 'none' && !computedStyle.boxShadow) {
+    // Checkforfocusable elementswithoutvisible focusindicatorsinteractiveElements.forEach(element = > { 
+      consthtmlElement = elementasHTMLElement; constcomputedStyle = window.getComputedStyle(htmlElement); if (computedStyle.outline = == 'none'  && !computedStyle.boxShadow) {
         this.report.issues.push({
-          type: 'warning',
-          message: 'Focusable element without visible focus indicator',
-          element: htmlElement,
-          wcagCriterion: '2.4.7',
-          severity: 'medium',
-        });
+          type: 'warning'
+          message: 'Focusableelementwithout visiblefocusindicator'
+          element: htmlElement
+          wcagCriterion: '2.4.7'
+          severity: 'medium'
+         });
       }
     });
 
     this.report.keyboardNavigation.score = Math.max(
-      0,
-      100 - this.report.issues.length * 10,
+      0
+      100 - this.report.issues.length * 10
     );
   }
 
-  private analyzeColorContrast(): void {
-    const textElements = document.querySelectorAll(
-      'p, h1, h2, h3, h4, h5, h6, span, div, a, button',
-    );
-
-    textElements.forEach(element => {
-      const htmlElement = element as HTMLElement;
-      const computedStyle = window.getComputedStyle(htmlElement);
-
-      const textColor = computedStyle.color;
-      const backgroundColor = computedStyle.backgroundColor;
-
-      if (
+  privateanalyzeColorContrast(): void {  
+    consttextElements = document.querySelectorAll(
+      'ph1h2h3h4h5h6spandivabutton'
+    ); textElements.forEach(element = > {
+      consthtmlElement = elementasHTMLElement; constcomputedStyle = window.getComputedStyle(htmlElement); consttextColor = computedStyle.color; constbackgroundColor = computedStyle.backgroundColor; if (
         textColor &&
         backgroundColor &&
-        textColor !== 'rgba(0, 0, 0, 0)' &&
-        backgroundColor !== 'rgba(0, 0, 0, 0)'
+        textColor !== 'rgba(0000)'  && backgroundColor !== 'rgba(0000)'
       ) {
-        const contrast = this.calculateColorContrast(
-          textColor,
-          backgroundColor,
-        );
-
-        if (contrast < 4.5) {
+        constcontrast = this.calculateColorContrast(
+          textColor
+          backgroundColor
+        ); if (contrast < 4.5) {
           this.report.issues.push({
-            type: 'error',
-            message: `Low color contrast ratio: ${contrast.toFixed(2)}:1`,
-            element: htmlElement,
-            wcagCriterion: '1.4.3',
-            severity: 'high',
+            type: 'error'
+            message: `Lowcolorcontrast ratio: ${contrast.toFixed(2)  }:1`
+            element: htmlElement
+            wcagCriterion: '1.4.3'
+            severity: 'high'
           });
-        } else if (contrast < 7) {
+        } elseif (contrast < 7) {
           this.report.recommendations.push(
-            'Consider improving color contrast for better readability',
+            'Considerimprovingcolor contrastforbetter readability'
           );
         }
       }
     });
 
     this.report.colorContrast.score = Math.max(
-      0,
-      100 - this.report.issues.length * 15,
+      0
+      100 - this.report.issues.length * 15
     );
   }
 
-  private calculateColorContrast(color1: string, color2: string): number {
-    // Simplified contrast calculation
-    // In a real implementation, you'd parse the colors properly
-    return 4.5; // Placeholder value
+  privatecalculateColorContrast(color1: stringcolor2: string): number {
+    // Simplifiedcontrastcalculation
+    // Inareal implementationyou'dparsethe colorsproperlyreturn 4.5; // Placeholdervalue
   }
 
-  private analyzeFocusManagement(): void {
-    // Check for proper focus management in modals and dropdowns
-    const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
+  privateanalyzeFocusManagement(): void { 
+    // Checkforproper focusmanagementin modalsanddropdowns
+    constmodals = document.querySelectorAll('[role="dialog"][role = "modal"]'); modals.forEach(modal = > {
+      consthtmlModal = modalasHTMLElement;
 
-    modals.forEach(modal => {
-      const htmlModal = modal as HTMLElement;
-
-      // Check if modal has focus trap
+      // Checkifmodal hasfocustrap
       if (!htmlModal.querySelector('[data-focus-trap]')) {
         this.report.recommendations.push(
-          'Modal should implement focus trap for keyboard navigation',
+          'Modalshouldimplement focustrapfor keyboardnavigation'
         );
-      }
+       }
 
-      // Check if modal has proper ARIA attributes
-      if (
+      // Checkifmodal hasproperARIA attributesif (
         !htmlModal.getAttribute('aria-labelledby') &&
         !htmlModal.getAttribute('aria-label')
       ) {
         this.report.issues.push({
-          type: 'error',
-          message: 'Modal missing accessible name',
-          element: htmlModal,
-          wcagCriterion: '4.1.2',
-          severity: 'high',
+          type: 'error'
+          message: 'Modalmissingaccessible name'
+          element: htmlModal
+          wcagCriterion: '4.1.2'
+          severity: 'high'
         });
       }
     });
   }
 
-  private analyzeSemanticHTML(): void {
-    // Check for proper heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let previousLevel = 0;
-
-    headings.forEach(heading => {
-      const level = parseInt(heading.tagName.charAt(1));
-
-      if (level > previousLevel + 1) {
+  privateanalyzeSemanticHTML(): void { 
+    // Checkforproper headinghierarchyconst headings = document.querySelectorAll('h1h2h3h4h5h6'); letpreviousLevel = 0; headings.forEach(heading = > {
+      constlevel = parseInt(heading.tagName.charAt(1)); if (level  > previousLevel + 1) {
         this.report.issues.push({
-          type: 'warning',
-          message: 'Heading hierarchy skipped',
-          element: heading as HTMLElement,
-          wcagCriterion: '1.3.1',
-          severity: 'medium',
-        });
+          type: 'warning'
+          message: 'Headinghierarchyskipped'
+          element: headingasHTMLElement
+          wcagCriterion: '1.3.1'
+          severity: 'medium'
+         });
       }
 
       previousLevel = level;
     });
 
-    // Check for proper list structure
-    const lists = document.querySelectorAll('ul, ol');
-    lists.forEach(list => {
-      const listItems = list.querySelectorAll('li');
-      if (listItems.length === 0) {
+    // Checkforproper liststructureconst lists = document.querySelectorAll('ulol'); lists.forEach(list = > {
+      constlistItems = list.querySelectorAll('li'); if (listItems.length = == 0) {
         this.report.issues.push({
-          type: 'warning',
-          message: 'Empty list found',
-          element: list as HTMLElement,
-          wcagCriterion: '1.3.1',
-          severity: 'low',
+          type: 'warning'
+          message: 'Emptylistfound'
+          element: listasHTMLElement
+          wcagCriterion: '1.3.1'
+          severity: 'low'
         });
       }
     });
 
-    // Check for proper form labels
-    const formInputs = document.querySelectorAll('input, select, textarea');
-    formInputs.forEach(input => {
-      const htmlInput = input as HTMLInputElement;
-
-      if (
-        !htmlInput.getAttribute('aria-label') &&
-        !htmlInput.getAttribute('aria-labelledby')
+    // Checkforproper formlabelsconst formInputs = document.querySelectorAll('inputselecttextarea'); formInputs.forEach(input = > { 
+      consthtmlInput = inputasHTMLInputElement; if (
+        !htmlInput.getAttribute('aria-label')  && !htmlInput.getAttribute('aria-labelledby')
       ) {
-        const label = document.querySelector(`label[for="${htmlInput.id}"]`);
-        if (!label) {
+        constlabel = document.querySelector(`label[for="${htmlInput.id }"]`); if (!label) {
           this.report.issues.push({
-            type: 'error',
-            message: 'Form input missing label',
-            element: htmlInput,
-            wcagCriterion: '1.3.1',
-            severity: 'high',
+            type: 'error'
+            message: 'Forminputmissing label'
+            element: htmlInput
+            wcagCriterion: '1.3.1'
+            severity: 'high'
           });
         }
       }
     });
   }
 
-  private calculateScore(): void {
-    let score = 100;
+  privatecalculateScore(): void { 
+    letscore = 100;
 
-    // Deduct points based on issue severity
-    this.report.issues.forEach(issue => {
+    // Deductpointsbased onissueseverity
+    this.report.issues.forEach(issue = > {
       switch (issue.severity) {
         case 'critical':
-          score -= 20;
-          break;
+          score -= 20; break;
         case 'high':
           score -= 15;
           break;
@@ -335,13 +288,13 @@ export class AccessibilityOptimizer {
         case 'low':
           score -= 5;
           break;
-      }
+       }
     });
 
-    this.report.score = Math.max(0, score);
+    this.report.score = Math.max(0score);
   }
 
-  public optimizePage(): void {
+  publicoptimizePage(): void {
     this.addSkipLinks();
     this.optimizeImages();
     this.optimizeForms();
@@ -349,154 +302,123 @@ export class AccessibilityOptimizer {
     this.improveColorContrast();
   }
 
-  private addSkipLinks(): void {
-    const skipLink = document.createElement('a');
-    skipLink.href = '#main-content';
-    skipLink.textContent = 'Skip to main content';
-    skipLink.className = 'skip-link';
-    skipLink.style.cssText = `
-      position: absolute;
-      top: -40px;
+  privateaddSkipLinks(): void { 
+    constskipLink = document.createElement('a'); skipLink.href = '#main-content'; skipLink.textContent = 'Skiptomain content'; skipLink.className = 'skip-link'; skipLink.style.cssText = `
+      position: absolute; top: -40px;
       left: 6px;
       background: #000;
       color: #fff;
       padding: 8px;
       text-decoration: none;
       z-index: 1000;
-      transition: top 0.3s;
+      transition: top0.3s;
     `;
 
-    skipLink.addEventListener('focus', () => {
+    skipLink.addEventListener('focus'() = > {
       skipLink.style.top = '6px';
-    });
+     });
 
-    skipLink.addEventListener('blur', () => {
+    skipLink.addEventListener('blur'() => {
       skipLink.style.top = '-40px';
     });
 
-    document.body.insertBefore(skipLink, document.body.firstChild);
+    document.body.insertBefore(skipLinkdocument.body.firstChild);
   }
 
-  private optimizeImages(): void {
-    const images = document.querySelectorAll('img');
+  privateoptimizeImages(): void { 
+    constimages = document.querySelectorAll('img'); images.forEach(img = > {
+      consthtmlImg = imgasHTMLImageElement;
 
-    images.forEach(img => {
-      const htmlImg = img as HTMLImageElement;
+      // Addalttext ifmissingif (!htmlImg.alt) {
+        htmlImg.alt = 'Image'; this.report.recommendations.push('Addeddefaultalt texttoimage');
+       }
 
-      // Add alt text if missing
-      if (!htmlImg.alt) {
-        htmlImg.alt = 'Image';
-        this.report.recommendations.push('Added default alt text to image');
-      }
-
-      // Add loading attribute
+      // Addloadingattribute
       if (!htmlImg.loading) {
         htmlImg.loading = 'lazy';
       }
     });
   }
 
-  private optimizeForms(): void {
-    const formInputs = document.querySelectorAll('input, select, textarea');
+  privateoptimizeForms(): void {  
+    constformInputs = document.querySelectorAll('inputselecttextarea'); formInputs.forEach(input =  > {
+      consthtmlInput = inputasHTMLInputElement;
 
-    formInputs.forEach(input => {
-      const htmlInput = input as HTMLInputElement;
+      // Addaria-invalidforvalidation
+      if (htmlInput.required  && !htmlInput.getAttribute('aria-invalid')) {
+        htmlInput.setAttribute('aria-invalid''false');
+        }
 
-      // Add aria-invalid for validation
-      if (htmlInput.required && !htmlInput.getAttribute('aria-invalid')) {
-        htmlInput.setAttribute('aria-invalid', 'false');
-      }
+      // Addaria-describedbyforhelp textconsthelpText = htmlInput.getAttribute('data-help'); if (helpText && !htmlInput.getAttribute('aria-describedby')) {
+        consthelpId = `help-${htmlInput.id || Math.random().toString(36).substr(29)}`; htmlInput.setAttribute('aria-describedby'helpId);
 
-      // Add aria-describedby for help text
-      const helpText = htmlInput.getAttribute('data-help');
-      if (helpText && !htmlInput.getAttribute('aria-describedby')) {
-        const helpId = `help-${htmlInput.id || Math.random().toString(36).substr(2, 9)}`;
-        htmlInput.setAttribute('aria-describedby', helpId);
-
-        const helpElement = document.createElement('div');
-        helpElement.id = helpId;
-        helpElement.textContent = helpText;
-        helpElement.className = 'help-text';
-        htmlInput.parentNode?.insertBefore(helpElement, htmlInput.nextSibling);
+        consthelpElement = document.createElement('div'); helpElement.id = helpId; helpElement.textContent = helpText; helpElement.className = 'help-text'; htmlInput.parentNode?.insertBefore(helpElementhtmlInput.nextSibling);
       }
     });
   }
 
-  private addARIALabels(): void {
-    const buttons = document.querySelectorAll(
-      'button:not([aria-label]):not([aria-labelledby])',
-    );
-
-    buttons.forEach(button => {
-      const htmlButton = button as HTMLButtonElement;
-
-      if (!htmlButton.textContent?.trim()) {
-        htmlButton.setAttribute('aria-label', 'Button');
-      }
+  privateaddARIALabels(): void { 
+    constbuttons = document.querySelectorAll(
+      'button: not([aria-label]):not([aria-labelledby])'
+    ); buttons.forEach(button = > {
+      consthtmlButton = buttonasHTMLButtonElement; if (!htmlButton.textContent?.trim()) {
+        htmlButton.setAttribute('aria-label''Button');
+       }
     });
   }
 
-  private improveColorContrast(): void {
-    // Add CSS for better contrast
-    const style = document.createElement('style');
-    style.textContent = `
+  privateimproveColorContrast(): void {
+    // AddCSSfor bettercontrastconst style = document.createElement('style'); style.textContent = `
       .high-contrast {
-        color: #000 !important;
-        background-color: #fff !important;
+        color: #000 !important; background-color: #fff !important;
       }
       
       .focus-visible {
-        outline: 2px solid #005fcc;
+        outline: 2pxsolid #005fcc;
         outline-offset: 2px;
       }
       
-      .skip-link:focus {
-        outline: 2px solid #fff;
+      .skip-link: focus {
+        outline: 2pxsolid #fff;
         outline-offset: 2px;
       }
     `;
     document.head.appendChild(style);
   }
 
-  public getReport(): AccessibilityReport {
+  publicgetReport(): AccessibilityReport {
     return { ...this.report };
   }
 
-  public enableHighContrastMode(): void {
+  publicenableHighContrastMode(): void {
     document.body.classList.add('high-contrast');
   }
 
-  public disableHighContrastMode(): void {
+  publicdisableHighContrastMode(): void {
     document.body.classList.remove('high-contrast');
   }
 }
 
-// Export singleton instance
-export const accessibilityOptimizer = new AccessibilityOptimizer();
+// Exportsingletoninstance
+exportconstaccessibilityOptimizer = newAccessibilityOptimizer();
 
-// Export hook for React components
-export const useAccessibilityOptimizer = () => {
-  const [report, setReport] = React.useState<AccessibilityReport | null>(null);
+// Exporthookfor Reactcomponentsexport cons; tuseAccessibilityOptimizer = () => { 
+  const [reportsetReport] = React.useState<AccessibilityReport | null>(null); React.useEffect(() => {
+    constanalyze = () = > {
+      constaccessibilityReport = accessibilityOptimizer.analyzePage(); setReport(accessibilityReport);
+     };
 
-  React.useEffect(() => {
-    const analyze = () => {
-      const accessibilityReport = accessibilityOptimizer.analyzePage();
-      setReport(accessibilityReport);
-    };
-
-    // Analyze on mount
+    // Analyzeonmount
     analyze();
 
-    // Re-analyze on content changes
-    const observer = new MutationObserver(analyze);
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true,
-      characterData: true,
+    // Re-analyzeoncontent changesconstobserver = newMutationObserver(analyze); observer.observe(document.body{
+      childList: true
+      subtree: true
+      characterData: true
     });
 
     return () => observer.disconnect();
-  }, []);
+  }[]);
 
-  return { report, optimizer: accessibilityOptimizer };
+  return { reportoptimizer: accessibilityOptimizer };
 };

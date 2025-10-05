@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { Zap } from 'lucide-react';
@@ -8,354 +8,346 @@ import { Award } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const October2025TechBreakthroughBanner = () => {
+constOctober2025TechBreakthroughBanner = () => { 
   return (
-    <div className='relative bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 overflow-hidden'>
-      {/* Animated Background */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle at 50% 50%,rgba(120,219,255,0.3),transparent_50%)]'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle at 80% 20%,rgba(79,209,197,0.3),transparent_50%)]'></div>
-        <div className='absolute inset-0 bg-[radial-gradient(circle at 20% 80%,rgba(99,102,241,0.3),transparent_50%)]'></div>
+    <divclassName = 'relativebg-gradient-to-brfrom-cyan-900via-blue-900to-indigo-900overflow-hidden' > {/* AnimatedBackground */ }
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absoluteinset-0bg-[radial-gradient(circleat50% 50%rgba(1202192550.3)transparent_50%)]' />
+        <divclassName = 'absoluteinset-0bg-[radial-gradient(circleat80% 20%rgba(792091970.3)transparent_50%)]' />
+        <divclassName = 'absoluteinset-0bg-[radial-gradient(circleat20% 80%rgba(991022410.3)transparent_50%)]' />
       </div>
 
-      {/* Animated Grid */}
-      <div className='absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse 80% 50% at 50% 50%,#000,transparent)]'></div>
+      {/* AnimatedGrid */}
+      <divclassName = 'absoluteinset-0bg-[linear-gradient(rgba(2552552550.03)_1pxtransparent_1px)linear-gradient(90degrgba(2552552550.03)_1pxtransparent_1px)] bg-[size: 64px_64px] [mask-image:radial-gradient(ellipse80% 50% at50% 50%#000transparent)]' />
 
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        {/* Breaking News Badge */}
-        <div className='flex items-center justify-center gap-3 mb-8'>
-          <div className='inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-cyan-500/50'>
-            <Sparkles className='w-5 h-5' />
-            <span>BREAKTHROUGH OCTOBER 1, 2025</span>
-            <Sparkles className='w-5 h-5' />
+      <divclassName = 'relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-12'>
+        {/* BreakingNewsBadge */}
+        <divclassName = 'flexitems-centerjustify-centergap-3mb-8'>
+          <divclassName='inline-flexitems-centergap-2px-6py-2rounded-fullbg-gradient-to-rfrom-cyan-500to-blue-500text-whitefont-boldtext-smanimate-pulseshadow-lgshadow-cyan-500/50'>
+            <SparklesclassName='w-5 h-5' />
+            <span>BREAKTHROUGHOCTOBER 12025</span>
+            <SparklesclassName = 'w-5 h-5' />
           </div>
         </div>
 
-        {/* Main Headline */}
-        <div className='text-center mb-10'>
-          <h2 className='text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight'>
+        {/* MainHeadline */}
+        <divclassName='text-centermb-10'>
+          <h2className='text-4xlmd: text-5xllg:text-6xlfont-boldtext-whitemb-4leading-tight'>
             🚀{' '}
-            <span className='bg-gradient-to-r from-cyan-300 via-blue-300 to-indigo-300 bg-clip-text text-transparent'>
-              3 Revolutionary Enterprise Technologies
+            <spanclassName = 'bg-gradient-to-rfrom-cyan-300via-blue-300to-indigo-300bg-clip-texttext-transparent'>
+              3RevolutionaryEnterprise Technologies
             </span>{' '}
             🚀
           </h2>
-          <p className='text-xl md:text-2xl text-cyan-100 font-medium'>
-            ⚡ Quantum-Safe Cryptography • Autonomous Risk Management •
-            AI-Powered Digital Twins
+          <pclassName='text-xlmd: text-2xltext-cyan-100font-medium'>
+            ⚡ Quantum-SafeCryptography • AutonomousRiskManagement •
+            AI-PoweredDigitalTwins
           </p>
         </div>
 
-        {/* Key Metrics Grid */}
-        <div className='grid md:grid-cols-4 gap-4 mb-10'>
-          <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105'>
-            <div className='text-cyan-300 text-4xl font-bold mb-2'>99.97%</div>
-            <div className='text-white text-sm font-medium'>
-              Quantum Attack Protection
+        {/* KeyMetricsGrid */}
+        <divclassName = 'gridmd: grid-cols-4gap-4mb-10'>
+          <divclassName='bg-white/10backdrop-blur-smrounded-2xlp-6borderborder-cyan-400/30hover:border-cyan-400/60transition-allduration-300hover:scale-105'>
+            <divclassName='text-cyan-300text-4xlfont-boldmb-2'>99.97%</div>
+            <divclassName='text-whitetext-smfont-medium'>
+              QuantumAttackProtection
             </div>
-            <div className='text-cyan-200 text-xs mt-1'>
-              Future-Proof Security
-            </div>
-          </div>
-
-          <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105'>
-            <div className='text-blue-300 text-4xl font-bold mb-2'>98.9%</div>
-            <div className='text-white text-sm font-medium'>
-              Risk Prediction Accuracy
-            </div>
-            <div className='text-blue-200 text-xs mt-1'>
-              90+ Days Early Warning
+            <divclassName='text-cyan-200text-xsmt-1'>
+              Future-ProofSecurity
             </div>
           </div>
 
-          <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover:border-indigo-400/60 transition-all duration-300 hover:scale-105'>
-            <div className='text-indigo-300 text-4xl font-bold mb-2'>99.4%</div>
-            <div className='text-white text-sm font-medium'>
-              Digital Twin Accuracy
+          <divclassName='bg-white/10backdrop-blur-smrounded-2xlp-6borderborder-blue-400/30hover:border-blue-400/60transition-allduration-300hover:scale-105'>
+            <divclassName='text-blue-300text-4xlfont-boldmb-2'>98.9%</div>
+            <divclassName='text-whitetext-smfont-medium'>
+              RiskPredictionAccuracy
             </div>
-            <div className='text-indigo-200 text-xs mt-1'>
-              Real-World Fidelity
+            <divclassName='text-blue-200text-xsmt-1'>
+              90+ DaysEarlyWarning
             </div>
           </div>
 
-          <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105'>
-            <div className='text-purple-300 text-4xl font-bold mb-2'>$151B</div>
-            <div className='text-white text-sm font-medium'>
-              Combined Annual Value
+          <divclassName='bg-white/10backdrop-blur-smrounded-2xlp-6borderborder-indigo-400/30hover:border-indigo-400/60transition-allduration-300hover:scale-105'>
+            <divclassName='text-indigo-300text-4xlfont-boldmb-2'>99.4%</div>
+            <divclassName='text-whitetext-smfont-medium'>
+              DigitalTwinAccuracy
             </div>
-            <div className='text-purple-200 text-xs mt-1'>
-              Fortune 500 Average
+            <divclassName='text-indigo-200text-xsmt-1'>
+              Real-WorldFidelity
+            </div>
+          </div>
+
+          <divclassName='bg-white/10backdrop-blur-smrounded-2xlp-6borderborder-purple-400/30hover:border-purple-400/60transition-allduration-300hover:scale-105'>
+            <divclassName='text-purple-300text-4xlfont-boldmb-2'>$151B</div>
+            <divclassName='text-whitetext-smfont-medium'>
+              CombinedAnnualValue
+            </div>
+            <divclassName='text-purple-200text-xsmt-1'>
+              Fortune500Average
             </div>
           </div>
         </div>
 
-        {/* Featured Content Cards */}
-        <div className='grid md:grid-cols-3 gap-6 mb-10'>
-          {/* Quantum-Safe Cryptography */}
-          <div className='group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 rounded-xl bg-cyan-500/20 group-hover:bg-cyan-500/30 transition-colors'>
-                <Lock className='w-8 h-8 text-cyan-300' />
+        {/* FeaturedContentCards */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-10'>
+          {/* Quantum-SafeCryptography */}
+          <divclassName = 'groupbg-gradient-to-brfrom-cyan-900/80to-cyan-950/80backdrop-blur-smrounded-2xlp-6borderborder-cyan-400/30hover: border-cyan-400transition-allduration-300hover:shadow-2xlhover:shadow-cyan-500/30hover:scale-105'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3rounded-xlbg-cyan-500/20group-hover:bg-cyan-500/30transition-colors'>
+                <LockclassName='w-8 h-8text-cyan-300' />
               </div>
-              <div className='flex-1'>
-                <div className='text-xs font-bold text-cyan-300 uppercase tracking-wide mb-1'>
-                  Quantum Security
+              <divclassName='flex-1'>
+                <divclassName='text-xsfont-boldtext-cyan-300uppercasetracking-widemb-1'>
+                  QuantumSecurity
                 </div>
-                <div className='text-sm text-cyan-100 font-medium'>
+                <divclassName='text-smtext-cyan-100font-medium'>
                   NIST-Approved • Production-Ready
                 </div>
               </div>
             </div>
-            <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors'>
-              Quantum-Safe Cryptography Revolution
+            <h3className='text-xlfont-boldtext-whitemb-3group-hover:text-cyan-300transition-colors'>
+              Quantum-SafeCryptographyRevolution
             </h3>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-cyan-100 text-sm'>
-                <Shield className='w-4 h-4 text-cyan-400' />
-                <span>99.97% Quantum Attack Protection</span>
+            <divclassName='space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-cyan-100text-sm'>
+                <ShieldclassName='w-4 h-4text-cyan-400' />
+                <span>99.97% QuantumAttackProtection</span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-100 text-sm'>
-                <Zap className='w-4 h-4 text-cyan-400' />
-                <span>67% Cost Reduction vs Legacy</span>
+              <divclassName='flexitems-centergap-2text-cyan-100text-sm'>
+                <ZapclassName='w-4 h-4text-cyan-400' />
+                <span>67% CostReductionvs Legacy</span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-100 text-sm'>
-                <Target className='w-4 h-4 text-cyan-400' />
-                <span>$78.3B Digital Assets Protected</span>
+              <divclassName='flexitems-centergap-2text-cyan-100text-sm'>
+                <TargetclassName='w-4 h-4text-cyan-400' />
+                <span>$78.3BDigitalAssets Protected</span>
               </div>
-              <div className='flex items-center gap-2 text-cyan-100 text-sm'>
-                <Award className='w-4 h-4 text-cyan-400' />
-                <span>845x ROI • 10-Year Future-Proofing</span>
+              <divclassName='flexitems-centergap-2text-cyan-100text-sm'>
+                <AwardclassName='w-4 h-4text-cyan-400' />
+                <span>845xROI • 10-YearFuture-Proofing</span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-oct-01-quantum-safe-cryptography-enterprise-<systems'
-              className='inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 group-hover:scale-105'
+            <Linkto='/blog/ai-2025-oct-01-quantum-safe-cryptography-enterprise-<systems'
+              className='inline-flexitems-centergap-2px-5py-2.5bg-gradient-to-rfrom-cyan-500to-blue-500hover:from-cyan-400hover:to-blue-400text-whitefont-semiboldrounded-lgtransition-allduration-300shadow-lghover:shadow-cyan-500/50group-hover:scale-105'
             >
-              Read Full Analysis
-              <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+              ReadFullAnalysis
+              <ArrowRight,className='w-4 h-4group-hover:translate-x-1transition-transform' />
             </Link>
           </div>
 
-          {/* Autonomous Risk Management */}
-          <div className='group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 rounded-xl bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors'>
-                <TrendingUp className='w-8 h-8 text-blue-300' />
+          {/* AutonomousRiskManagement */}
+          <divclassName = 'groupbg-gradient-to-brfrom-blue-900/80to-blue-950/80backdrop-blur-smrounded-2xlp-6borderborder-blue-400/30hover: border-blue-400transition-allduration-300hover:shadow-2xlhover:shadow-blue-500/30hover:scale-105'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3rounded-xlbg-blue-500/20group-hover:bg-blue-500/30transition-colors'>
+                <TrendingUpclassName='w-8 h-8text-blue-300' />
               </div>
-              <div className='flex-1'>
-                <div className='text-xs font-bold text-blue-300 uppercase tracking-wide mb-1'>
-                  Risk Intelligence
+              <divclassName='flex-1'>
+                <divclassName='text-xsfont-boldtext-blue-300uppercasetracking-widemb-1'>
+                  RiskIntelligence
                 </div>
-                <div className='text-sm text-blue-100 font-medium'>
+                <divclassName='text-smtext-blue-100font-medium'>
                   AI-Powered • Autonomous
                 </div>
               </div>
             </div>
-            <h3 className='text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors'>
-              Autonomous Risk Management Platform
+            <h3className='text-xlfont-boldtext-whitemb-3group-hover:text-blue-300transition-colors'>
+              AutonomousRiskManagement Platform
             </h3>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-blue-100 text-sm'>
-                <Shield className='w-4 h-4 text-blue-400' />
-                <span>98.9% Risk Prediction Accuracy</span>
+            <divclassName='space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-blue-100text-sm'>
+                <ShieldclassName='w-4 h-4text-blue-400' />
+                <span>98.9% RiskPredictionAccuracy</span>
               </div>
-              <div className='flex items-center gap-2 text-blue-100 text-sm'>
-                <Zap className='w-4 h-4 text-blue-400' />
-                <span>84% Cost Reduction in Operations</span>
+              <divclassName='flexitems-centergap-2text-blue-100text-sm'>
+                <ZapclassName='w-4 h-4text-blue-400' />
+                <span>84% CostReductionin Operations</span>
               </div>
-              <div className='flex items-center gap-2 text-blue-100 text-sm'>
-                <Target className='w-4 h-4 text-blue-400' />
-                <span>$127B Losses Prevented Annually</span>
+              <divclassName='flexitems-centergap-2text-blue-100text-sm'>
+                <TargetclassName='w-4 h-4text-blue-400' />
+                <span>$127BLossesPrevented Annually</span>
               </div>
-              <div className='flex items-center gap-2 text-blue-100 text-sm'>
-                <Award className='w-4 h-4 text-blue-400' />
-                <span>2,836% ROI • 24/7 Monitoring</span>
+              <divclassName='flexitems-centergap-2text-blue-100text-sm'>
+                <AwardclassName='w-4 h-4text-blue-400' />
+                <span>2836% ROI • 24/7Monitoring</span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-oct-01-autonomous-risk-management-platform-<revolution'
-              className='inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group-hover:scale-105'
+            <Linkto = '/blog/ai-2025-oct-01-autonomous-risk-management-platform-<revolution'
+              className='inline-flexitems-centergap-2px-5py-2.5bg-gradient-to-rfrom-blue-500to-indigo-500hover: from-blue-400hover:to-indigo-400text-whitefont-semiboldrounded-lgtransition-allduration-300shadow-lghover:shadow-blue-500/50group-hover:scale-105'
             >
-              Explore Platform
-              <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+              ExplorePlatform
+              <ArrowRight,className='w-4 h-4group-hover:translate-x-1transition-transform' />
             </Link>
           </div>
 
-          {/* AI-Powered Digital Twins */}
-          <div className='group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover:border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 rounded-xl bg-indigo-500/20 group-hover:bg-indigo-500/30 transition-colors'>
-                <Target className='w-8 h-8 text-indigo-300' />
+          {/* AI-PoweredDigitalTwins */}
+          <divclassName = 'groupbg-gradient-to-brfrom-indigo-900/80to-indigo-950/80backdrop-blur-smrounded-2xlp-6borderborder-indigo-400/30hover: border-indigo-400transition-allduration-300hover:shadow-2xlhover:shadow-indigo-500/30hover:scale-105'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3rounded-xlbg-indigo-500/20group-hover:bg-indigo-500/30transition-colors'>
+                <TargetclassName='w-8 h-8text-indigo-300' />
               </div>
-              <div className='flex-1'>
-                <div className='text-xs font-bold text-indigo-300 uppercase tracking-wide mb-1'>
-                  Digital Intelligence
+              <divclassName='flex-1'>
+                <divclassName='text-xsfont-boldtext-indigo-300uppercasetracking-widemb-1'>
+                  DigitalIntelligence
                 </div>
-                <div className='text-sm text-indigo-100 font-medium'>
+                <divclassName='text-smtext-indigo-100font-medium'>
                   Real-Time • Self-Learning
                 </div>
               </div>
             </div>
-            <h3 className='text-xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors'>
-              Next-Gen AI-Powered Digital Twins
+            <h3className='text-xlfont-boldtext-whitemb-3group-hover:text-indigo-300transition-colors'>
+              Next-GenAI-PoweredDigitalTwins
             </h3>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-indigo-100 text-sm'>
-                <Shield className='w-4 h-4 text-indigo-400' />
-                <span>99.4% Physical-Digital Accuracy</span>
+            <divclassName='space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-indigo-100text-sm'>
+                <ShieldclassName='w-4 h-4text-indigo-400' />
+                <span>99.4% Physical-DigitalAccuracy</span>
               </div>
-              <div className='flex items-center gap-2 text-indigo-100 text-sm'>
-                <Zap className='w-4 h-4 text-indigo-400' />
-                <span>87% Downtime Reduction</span>
+              <divclassName='flexitems-centergap-2text-indigo-100text-sm'>
+                <ZapclassName='w-4 h-4text-indigo-400' />
+                <span>87% DowntimeReduction</span>
               </div>
-              <div className='flex items-center gap-2 text-indigo-100 text-sm'>
-                <Target className='w-4 h-4 text-indigo-400' />
-                <span>$23.7B Annual Value Creation</span>
+              <divclassName='flexitems-centergap-2text-indigo-100text-sm'>
+                <TargetclassName='w-4 h-4text-indigo-400' />
+                <span>$23.7BAnnualValue Creation</span>
               </div>
-              <div className='flex items-center gap-2 text-indigo-100 text-sm'>
-                <Award className='w-4 h-4 text-indigo-400' />
-                <span>5,575% ROI • 94% Failure Prediction</span>
+              <divclassName='flexitems-centergap-2text-indigo-100text-sm'>
+                <AwardclassName='w-4 h-4text-indigo-400' />
+                <span>5575% ROI • 94% FailurePrediction</span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2025-oct-01-next-gen-digital-twins-enterprise-<transformation'
-              className='inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-400 hover:to-purple-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 group-hover:scale-105'
+            <Linkto = '/blog/ai-2025-oct-01-next-gen-digital-twins-enterprise-<transformation'
+              className='inline-flexitems-centergap-2px-5py-2.5bg-gradient-to-rfrom-indigo-500to-purple-500hover: from-indigo-400hover:to-purple-400text-whitefont-semiboldrounded-lgtransition-allduration-300shadow-lghover:shadow-indigo-500/50group-hover:scale-105'
             >
-              Discover Technology
-              <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+              DiscoverTechnology
+              <ArrowRight,className='w-4 h-4group-hover:translate-x-1transition-transform' />
             </Link>
           </div>
         </div>
 
-        {/* Why These Technologies Matter */}
-        <div className='bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 mb-8'>
-          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-            🎯 Why These Technologies Are Game-Changers
+        {/* WhyTheseTechnologies Matter */}
+        <divclassName = 'bg-white/10backdrop-blur-smrounded-2xlp-8borderborder-white/20mb-8'>
+          <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+            🎯 WhyTheseTechnologies AreGame-Changers
           </h3>
-          <div className='grid md:grid-cols-3 gap-6'>
-            <div className='text-center'>
-              <div className='text-cyan-300 text-3xl font-bold mb-2'>
-                3-5 Years
+          <divclassName='gridmd: grid-cols-3gap-6'>
+            <divclassName='text-center'>
+              <divclassName='text-cyan-300text-3xlfont-boldmb-2'>
+                3-5Years
               </div>
-              <div className='text-white text-sm font-medium'>
-                Quantum Threat Window
+              <divclassName='text-whitetext-smfont-medium'>
+                QuantumThreatWindow
               </div>
-              <div className='text-cyan-200 text-xs mt-1'>
-                Deploy quantum-safe security NOW before it's too late
+              <divclassName='text-cyan-200text-xsmt-1'>
+                Deployquantum-safesecurityNOW beforeit'stoolate
               </div>
             </div>
-            <div className='text-center'>
-              <div className='text-blue-300 text-3xl font-bold mb-2'>
+            <divclassName='text-center'>
+              <divclassName='text-blue-300text-3xlfont-boldmb-2'>
                 90+ Days
               </div>
-              <div className='text-white text-sm font-medium'>
-                Risk Prediction Lead Time
+              <divclassName='text-whitetext-smfont-medium'>
+                RiskPredictionLead Time
               </div>
-              <div className='text-blue-200 text-xs mt-1'>
-                Prevent crises before they happen with AI foresight
+              <divclassName='text-blue-200text-xsmt-1'>
+                Preventcrisesbefore theyhappenwith AIforesight
               </div>
             </div>
-            <div className='text-center'>
-              <div className='text-indigo-300 text-3xl font-bold mb-2'>
+            <divclassName='text-center'>
+              <divclassName='text-indigo-300text-3xlfont-boldmb-2'>
                 100ms
               </div>
-              <div className='text-white text-sm font-medium'>
-                Digital Twin Sync Speed
+              <divclassName='text-whitetext-smfont-medium'>
+                DigitalTwinSync Speed
               </div>
-              <div className='text-indigo-200 text-xs mt-1'>
-                Real-time operational intelligence at your fingertips
+              <divclassName='text-indigo-200text-xsmt-1'>
+                Real-timeoperationalintelligence atyourfingertips
               </div>
             </div>
           </div>
         </div>
 
-        {/* Industry Applications */}
-        <div className='mb-8'>
-          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-            🌐 Proven Results Across Industries
+        {/* IndustryApplications */}
+        <divclassName = 'mb-8'>
+          <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+            🌐 ProvenResultsAcross Industries
           </h3>
-          <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
-            <div className='text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105'>
-              <div className='text-2xl mb-2'>🏭</div>
-              <div className='text-white text-sm font-semibold'>
+          <divclassName='gridgrid-cols-2md: grid-cols-5gap-4'>
+            <divclassName='text-centerp-4bg-white/10backdrop-blur-smrounded-xlborderborder-white/20hover:border-cyan-400/50transition-allduration-300hover:scale-105'>
+              <divclassName='text-2xlmb-2'>🏭</div>
+              <divclassName='text-whitetext-smfont-semibold'>
                 Manufacturing
               </div>
-              <div className='text-cyan-200 text-xs mt-1'>127x ROI Average</div>
+              <divclassName='text-cyan-200text-xsmt-1'>127xROIAverage</div>
             </div>
-            <div className='text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:scale-105'>
-              <div className='text-2xl mb-2'>🏦</div>
-              <div className='text-white text-sm font-semibold'>
-                Financial Services
+            <divclassName='text-centerp-4bg-white/10backdrop-blur-smrounded-xlborderborder-white/20hover:border-blue-400/50transition-allduration-300hover:scale-105'>
+              <divclassName='text-2xlmb-2'>🏦</div>
+              <divclassName='text-whitetext-smfont-semibold'>
+                FinancialServices
               </div>
-              <div className='text-blue-200 text-xs mt-1'>845x ROI Average</div>
+              <divclassName='text-blue-200text-xsmt-1'>845xROIAverage</div>
             </div>
-            <div className='text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105'>
-              <div className='text-2xl mb-2'>🏥</div>
-              <div className='text-white text-sm font-semibold'>Healthcare</div>
-              <div className='text-indigo-200 text-xs mt-1'>
-                47x ROI Average
+            <divclassName='text-centerp-4bg-white/10backdrop-blur-smrounded-xlborderborder-white/20hover:border-indigo-400/50transition-allduration-300hover:scale-105'>
+              <divclassName='text-2xlmb-2'>🏥</div>
+              <divclassName='text-whitetext-smfont-semibold'>Healthcare</div>
+              <divclassName='text-indigo-200text-xsmt-1'>
+                47xROIAverage
               </div>
             </div>
-            <div className='text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:scale-105'>
-              <div className='text-2xl mb-2'>⚡</div>
-              <div className='text-white text-sm font-semibold'>
+            <divclassName='text-centerp-4bg-white/10backdrop-blur-smrounded-xlborderborder-white/20hover:border-purple-400/50transition-allduration-300hover:scale-105'>
+              <divclassName='text-2xlmb-2'>⚡</div>
+              <divclassName='text-whitetext-smfont-semibold'>
                 Energy & Utilities
               </div>
-              <div className='text-purple-200 text-xs mt-1'>
-                89x ROI Average
+              <divclassName='text-purple-200text-xsmt-1'>
+                89xROIAverage
               </div>
             </div>
-            <div className='text-center p-4 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:border-pink-400/50 transition-all duration-300 hover:scale-105'>
-              <div className='text-2xl mb-2'>🏙️</div>
-              <div className='text-white text-sm font-semibold'>
-                Smart Cities
+            <divclassName='text-centerp-4bg-white/10backdrop-blur-smrounded-xlborderborder-white/20hover:border-pink-400/50transition-allduration-300hover:scale-105'>
+              <divclassName='text-2xlmb-2'>🏙️</div>
+              <divclassName='text-whitetext-smfont-semibold'>
+                SmartCities
               </div>
-              <div className='text-pink-200 text-xs mt-1'>34x ROI Average</div>
+              <divclassName='text-pink-200text-xsmt-1'>34xROIAverage</div>
             </div>
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className='text-center'>
-          <div className='inline-flex flex-col sm:flex-row gap-4 items-center justify-center'>
-            <Link
-              to='/<blog'
-              className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover:from-cyan-400 hover:via-blue-400 hover:to-indigo-400 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 text-lg'
+        {/* CalltoAction */}
+        <divclassName = 'text-center'>
+          <divclassName='inline-flexflex-colsm: flex-rowgap-4items-centerjustify-center'>
+            <Linkto='/<blog'
+              className='inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-cyan-500via-blue-500to-indigo-500hover:from-cyan-400hover:via-blue-400hover:to-indigo-400text-whitefont-boldrounded-xltransition-allduration-300shadow-2xlhover:shadow-cyan-500/50hover:scale-105text-lg'
             >
-              <Sparkles className='w-6 h-6' />
-              Read All 3 Breakthrough Articles
-              <ArrowRight className='w-6 h-6' />
+              <SparklesclassName='w-6 h-6' />
+              ReadAll3 BreakthroughArticles
+              <ArrowRight,className='w-6 h-6' />
             </Link>
-            <Link
-              to='/<contact'
-              className='inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/60 hover:scale-105 text-lg'
+            <Linkto='/<contact'
+              className='inline-flexitems-centergap-2px-8py-4bg-white/10hover:bg-white/20backdrop-blur-smtext-whitefont-boldrounded-xltransition-allduration-300border-2border-white/30hover:border-white/60hover:scale-105text-lg'
             >
-              Get Free Assessment
-              <ArrowRight className='w-6 h-6' />
+              GetFreeAssessment
+              <ArrowRight,className='w-6 h-6' />
             </Link>
           </div>
-          <p className='text-cyan-200 text-sm mt-4'>
-            ⚡ <strong>Limited Time</strong>: Free technology assessment for
-            qualified enterprises • No obligation
+          <pclassName='text-cyan-200text-smmt-4'>
+            ⚡ <strong>LimitedTime</strong>: Freetechnologyassessment forqualifiedenterprises • Noobligation
           </p>
         </div>
 
-        {/* Trust Indicators */}
-        <div className='mt-10 pt-8 border-t border-white/20 text-center'>
-          <div className='text-cyan-200 text-sm mb-3'>
-            <strong>Trusted by Fortune 500 Leaders</strong> • 89+ Enterprise
-            Deployments • $251B+ Value Created
+        {/* TrustIndicators */}
+        <divclassName = 'mt-10pt-8border-tborder-white/20text-center'>
+          <divclassName='text-cyan-200text-smmb-3'>
+            <strong>TrustedbyFortune 500Leaders</strong> • 89+ EnterpriseDeployments • $251B+ ValueCreated
           </div>
-          <div className='flex flex-wrap items-center justify-center gap-6 text-white/60 text-xs'>
+          <divclassName='flexflex-wrapitems-centerjustify-centergap-6text-white/60text-xs'>
             <span>✅ NIST-Certified</span>
             <span>•</span>
-            <span>✅ ISO 27001</span>
+            <span>✅ ISO27001</span>
             <span>•</span>
-            <span>✅ SOC 2 Type II</span>
+            <span>✅ SOC2Type II</span>
             <span>•</span>
-            <span>✅ GDPR Compliant</span>
+            <span>✅ GDPRCompliant</span>
             <span>•</span>
-            <span>✅ 99.99% Uptime SLA</span>
+            <span>✅ 99.99% UptimeSLA</span>
           </div>
         </div>
       </div>
@@ -363,4 +355,4 @@ const October2025TechBreakthroughBanner = () => {
   );
 };
 
-export default October2025TechBreakthroughBanner;
+exportdefaultOctober2025TechBreakthroughBanner;

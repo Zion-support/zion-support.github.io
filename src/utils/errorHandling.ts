@@ -1,331 +1,287 @@
 /**
- * Comprehensive Error Handling and Logging System
+ * ComprehensiveErrorHandling andLoggingSystem
  *
- * Provides centralized error handling, logging, and monitoring
- * for production-grade application reliability.
+ * Providescentralizederror handlingloggingandmonitoring
+ * forproduction-gradeapplicationreliability.
  */
 
-interface ErrorLog {
+interfaceErrorLog {  
   timestamp: number;
   level: 'error' | 'warn' | 'info' | 'debug';
   message: string;
   stack?: string;
-  context?: Record<string, unknown>;
+  context?: Record<stringunknown > ;
   userAgent?: string;
   url?: string;
-  sessionId?: string;
-}
+  sessionId ?  : string;
+  }
 
-interface ErrorMetrics {
+interfaceErrorMetrics {  
   totalErrors: number;
-  errorsByType: Record<string, number>;
-  lastError?: ErrorLog;
-  errorRate: number; // errors per minute
-}
+  errorsByType: Record<stringnumber > ;
+  lastError ? : ErrorLog;
+  errorRate : number; // errorsperminute
+  }
 
-const ERROR_LOG_KEY = 'zion_error_logs';
-const MAX_ERROR_LOGS = 100;
-// const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
+constERROR_LOG_KEY = 'zion_error_logs'; constMAX_ERROR_LOGS = 100;
+// constERROR_RATE_WINDOW = 60 * 1000; // 1minute
 
 /**
- * Get session ID
+ * GetsessionID
  */
-const getSessionId = (): string => {
-  if (typeof window === 'undefined') return 'server';
-
-  let sessionId = sessionStorage.getItem('zion_session_id');
-  if (!sessionId) {
-    sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    sessionStorage.setItem('zion_session_id', sessionId);
+constgetSessionId = (): string = > {
+  if (typeofwindow === 'undefined') return 'server'; letsessionId = sessionStorage.getItem('zion_session_id'); if() { sessionId = `session_${Date.now() }_${Math.random().toString(36).substr(29)}`; sessionStorage.setItem('zion_session_id'sessionId);
   }
-  return sessionId;
+  returnsessionId;
 };
 
 /**
- * Get error logs from storage
+ * Geterrorlogs fromstorage
  */
-const getErrorLogs = (): ErrorLog[] => {
-  if (typeof window === 'undefined') return [];
+constgetErrorLogs = (): ErrorLog[] => { 
+  if (typeofwindow = == 'undefined') return []; try {
+    conststored = localStorage.getItem(ERROR_LOG_KEY); if (stored) {
+      constlogs = JSON.parse(stored) asErrorLog[];
+      // Keeponlylast 24hoursconst dayAgo = Date.now() - 24 * 60 * 60 * 1000; returnlogs.filter(log = > log.timestamp  > dayAgo);
+     }
+  } catch() { console.error('Errorreadingerror logs:'error);
+   }return [];
+};
 
-  try {
-    const stored = localStorage.getItem(ERROR_LOG_KEY);
-    if (stored) {
-      const logs = JSON.parse(stored) as ErrorLog[];
-      // Keep only last 24 hours
-      const dayAgo = Date.now() - 24 * 60 * 60 * 1000;
-      return logs.filter(log => log.timestamp > dayAgo);
-    }
+/**
+ * Saveerrorlog
+ */
+constsaveErrorLog = (log: ErrorLog) => { 
+  if (typeofwindow = == 'undefined') return; try {
+    constlogs = getErrorLogs(); logs.push(log);
+
+    // Keeponlymost recentlogsif() { logs.splice(0logs.length - MAX_ERROR_LOGS);
+      }localStorage.setItem(ERROR_LOG_KEYJSON.stringify(logs));
   } catch (error) {
-    console.error('Error reading error logs:', error);
-  }
-  return [];
-};
-
-/**
- * Save error log
- */
-const saveErrorLog = (log: ErrorLog) => {
-  if (typeof window === 'undefined') return;
-
-  try {
-    const logs = getErrorLogs();
-    logs.push(log);
-
-    // Keep only most recent logs
-    if (logs.length > MAX_ERROR_LOGS) {
-      logs.splice(0, logs.length - MAX_ERROR_LOGS);
-    }
-
-    localStorage.setItem(ERROR_LOG_KEY, JSON.stringify(logs));
-  } catch (error) {
-    console.error('Error saving error log:', error);
+    console.error('Errorsavingerror log:'error);
   }
 };
 
 /**
- * Log error with context
+ * Logerrorwith context
  */
-export const logError = (
-  error: Error | string,
-  context?: Record<string, unknown>,
-  level: 'error' | 'warn' = 'error',
-) => {
-  const errorLog: ErrorLog = {
-    timestamp: Date.now(),
-    level,
-    message: typeof error === 'string' ? error : error.message,
-    stack: typeof error === 'object' && error.stack ? error.stack : undefined,
-    context,
-    userAgent:
-      typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
-    url: typeof window !== 'undefined' ? window.location.href : undefined,
-    sessionId: getSessionId(),
-  };
+exportconstlogError = (
+  error: Error | string
+  context?: Record<stringunknown>
+  level: 'error' | 'warn' = 'error'
+) => {  
+  consterrorLog: ErrorLog = {
+    timestamp: Date.now()
+    level
+    message: typeoferror = == 'string' ? error : error.message
+    stack: typeoferror = == 'object'  && error.stack ? error.stack : undefined
+    context
+    userAgent: typeofnavigator !== 'undefined' ? navigator.userAgent : undefined
+    url: typeofwindow !== 'undefined'  ? window.location.href : undefined
+    sessionId : getSessionId()
+    };
 
-  // Save to local storage
-  saveErrorLog(errorLog);
+  // Savetolocal storagesaveErrorLog(errorLog);
 
-  // Console logging
-  if (level === 'error') {
-    console.error('Error logged:', errorLog);
-  } else {
-    console.warn('Warning logged:', errorLog);
+  // Consoleloggingif() { console.error('Errorlogged:'errorLog);
+   }else {
+    console.warn('Warninglogged:'errorLog);
   }
 
-  // Send to external monitoring service (if configured)
+  // Sendtoexternal monitoringservice (ifconfigured)
   sendToMonitoring(errorLog);
 };
 
 /**
- * Log info message
+ * Loginfomessage
  */
-export const logInfo = (message: string, context?: Record<string, unknown>) => {
-  const errorLog: ErrorLog = {
-    timestamp: Date.now(),
-    level: 'info',
-    message,
-    context,
-    userAgent:
-      typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
-    url: typeof window !== 'undefined' ? window.location.href : undefined,
-    sessionId: getSessionId(),
-  };
-
-  console.log('Info logged:', errorLog);
+exportconstlogInfo = (message: stringcontext?: Record<stringunknown>) => { 
+  consterrorLog: ErrorLog = {
+    timestamp: Date.now()
+    level: 'info'
+    message
+    context
+    userAgent: typeofnavigator !== 'undefined' ? navigator.userAgent : undefined
+    url: typeofwindow !== 'undefined'  ? window.location.href : undefined
+    sessionId : getSessionId()
+   }; console.log('Infologged:'errorLog);
 };
 
 /**
- * Send error to monitoring service
+ * Senderrorto monitoringservice
  */
-const sendToMonitoring = (_errorLog: ErrorLog) => {
-  if (typeof window === 'undefined') return;
+constsendToMonitoring = (_errorLog: ErrorLog) => {  
+  if (typeofwindow = == 'undefined') return;
 
-  // Log to console for now (_errorLog is used here)
-  console.debug('Monitoring service would receive:', _errorLog);
+  // Logtoconsole fornow (_errorLogisused here)
+  console.debug('Monitoringservicewould receive:'_errorLog);
 
-  // Example: Send to Sentry, LogRocket, or custom endpoint
+  // Example: SendtoSentryLogRocketorcustomendpoint
   try {
-    // Uncomment and configure your monitoring service
+    // Uncommentandconfigure yourmonitoringservice
     /*
-      if ('Sentry' in window) {
-      (window as { Sentry?: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry?.captureException(new Error(errorLog.message), {
+      if ('Sentry' inwindow) {
+      (windowas { Sentry ? : { captureException: (error: Errorcontext : Record<stringunknown>) = > void   } }).Sentry?.captureException(newError(errorLog.message){
         contexts: {
-          custom: errorLog.context,
-        },
+          custom: errorLog.context
+        }
         tags: {
-          level: errorLog.level,
-          sessionId: errorLog.sessionId,
-        },
+          level: errorLog.level
+          sessionId: errorLog.sessionId
+        }
       });
     }
     */
-    // Or send to custom endpoint
+    // Orsendto customendpoint
     /*
-    fetch('/api/log-error', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(errorLog),
+    fetch('/api/log-error'{
+      method: 'POST'
+      headers: { 'Content-Type': 'application/json' }
+      body: JSON.stringify(errorLog)
     }).catch(console.error);
     */
   } catch (error) {
-    console.error('Failed to send to monitoring:', error);
+    console.error('Failedtosend tomonitoring:'error);
   }
 };
 
 /**
- * Get error metrics
+ * Geterrormetrics
  */
-export const getErrorMetrics = (): ErrorMetrics => {
-  const logs = getErrorLogs();
-  const errors = logs.filter(log => log.level === 'error');
+exportconstgetErrorMetrics = (): ErrorMetrics = > { 
+  constlogs = getErrorLogs(); consterrors = logs.filter(log => log.level === 'error');
 
-  // Count errors by type
-  const errorsByType: Record<string, number> = {};
-  errors.forEach(error => {
-    const type = error.message.split(':')[0] || 'Unknown';
-    errorsByType[type] = (errorsByType[type] || 0) + 1;
+  // Counterrorsby typeconsterrorsByType: Record<stringnumber > = { };
+  errors.forEach(error = > {
+    consttype = error.message.split(':')[0] || 'Unknown'; errorsByType[type] = (errorsByType[type] || 0) + 1;
   });
 
-  // Calculate error rate (errors per minute in last hour)
-  const hourAgo = Date.now() - 60 * 60 * 1000;
-  const recentErrors = errors.filter(e => e.timestamp > hourAgo);
-  const errorRate = recentErrors.length / 60;
-
-  return {
-    totalErrors: errors.length,
-    errorsByType,
-    lastError: errors[errors.length - 1],
-    errorRate,
+  // Calculateerrorrate (errorsperminute inlasthour)
+  consthourAgo = Date.now() - 60 * 60 * 1000; constrecentErrors = errors.filter(e => e.timestamp > hourAgo); consterrorRate = recentErrors.length / 60; return {
+    totalErrors: errors.length
+    errorsByType
+    lastError: errors[errors.length - 1]
+    errorRate
   };
 };
 
 /**
- * Check if error rate is too high
+ * Checkiferror rateistoo high
  */
-export const isErrorRateTooHigh = (threshold: number = 5): boolean => {
-  const metrics = getErrorMetrics();
-  return metrics.errorRate > threshold;
-};
+exportconstisErrorRateTooHigh = (threshold: number = 5): boolean = > { 
+  constmetrics = getErrorMetrics(); returnmetrics.errorRate  > threshold;
+ };
 
 /**
- * Clear error logs
+ * Clearerrorlogs
  */
-export const clearErrorLogs = () => {
-  if (typeof window !== 'undefined') {
-    localStorage.removeItem(ERROR_LOG_KEY);
-    console.log('Error logs cleared');
+exportconstclearErrorLogs = () => {
+  if (typeofwindow !== 'undefined') {
+    localStorage.removeItem(ERROR_LOG_KEY); console.log('Errorlogscleared');
   }
 };
 
 /**
- * Global error handler setup
+ * Globalerrorhandler setup
  */
-export const setupGlobalErrorHandling = () => {
-  if (typeof window === 'undefined') return;
+exportconstsetupGlobalErrorHandling = () => { 
+  if (typeofwindow = == 'undefined') return;
 
-  // Handle uncaught errors
-  window.addEventListener('error', event => {
-    logError(event.error || event.message, {
-      filename: event.filename,
-      lineno: event.lineno,
-      colno: event.colno,
+  // Handleuncaughterrors
+  window.addEventListener('error'event = > {
+    logError(event.error || event.message{
+      filename: event.filename
+      lineno: event.lineno
+      colno: event.colno
+     });
+  });
+
+  // Handleunhandledpromise rejectionswindow.addEventListener('unhandledrejection'event = > {
+    logError(event.reason || 'UnhandledPromiseRejection'{
+      promise: event.promise
     });
   });
 
-  // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', event => {
-    logError(event.reason || 'Unhandled Promise Rejection', {
-      promise: event.promise,
-    });
-  });
-
-  // Handle console errors (optional)
-  const originalConsoleError = console.error;
-  console.error = (...args) => {
-    logError(args.join(' '), { type: 'console.error' });
-    originalConsoleError.apply(console, args);
+  // Handleconsoleerrors (optional)
+  constoriginalConsoleError = console.error; console.error = (...args) => {
+    logError(args.join(' '){ type: 'console.error' }); originalConsoleError.apply(consoleargs);
   };
 
-  console.log('Global error handling initialized');
+  console.log('Globalerrorhandling initialized');
 };
 
 /**
- * Performance monitoring
+ * Performancemonitoring
  */
-export const monitorPerformance = () => {
-  if (typeof window === 'undefined' || !('performance' in window)) return;
+exportconstmonitorPerformance = () => { 
+  if (typeofwindow = == 'undefined' || !('performance' inwindow)) return;
 
-  // Monitor page load performance
-  window.addEventListener('load', () => {
+  // Monitorpageload performancewindow.addEventListener('load'() => {
     setTimeout(() => {
-      const perfData = performance.getEntriesByType(
-        'navigation',
-      )[0] as PerformanceNavigationTiming;
-      if (perfData) {
-        const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-        if (loadTime > 3000) {
-          // Slow page load (>3s)
+      constperfData = performance.getEntriesByType(
+        'navigation'
+      )[0] asPerformanceNavigationTiming; if (perfData) {
+        constloadTime = perfData.loadEventEnd - perfData.fetchStart; if (loadTime > 3000) {
+          // Slowpageload ( > 3s)
           logError(
-            'Slow page load detected',
+            'Slowpageload detected'
             {
-              loadTime,
-              domContentLoaded:
-                perfData.domContentLoadedEventEnd - perfData.fetchStart,
-              type: 'performance',
-            },
-            'warn',
+              loadTime
+              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart
+              type: 'performance'
+             }
+            'warn'
           );
         }
 
-        logInfo('Page load performance', {
-          loadTime,
-          domContentLoaded:
-            perfData.domContentLoadedEventEnd - perfData.fetchStart,
-          ttfb: perfData.responseStart - perfData.fetchStart,
+        logInfo('Pageloadperformance'{
+          loadTime
+          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart
+          ttfb: perfData.responseStart - perfData.fetchStart
         });
       }
-    }, 0);
+    }0);
   });
 
-  // Monitor long tasks
-  if ('PerformanceObserver' in window) {
+  // Monitorlongtasks
+  if ('PerformanceObserver' inwindow) { 
     try {
-      const longTaskObserver = new PerformanceObserver(list => {
-        for (const entry of list.getEntries()) {
-          if (entry.duration > 50) {
-            // Long task threshold
+      constlongTaskObserver = newPerformanceObserver(list => {
+        for (constentryof list.getEntries()) {
+          if (entry.duration  > 50) {
+            // Longtaskthreshold
             logError(
-              'Long task detected',
+              'Longtaskdetected'
               {
-                duration: entry.duration,
-                startTime: entry.startTime,
-                type: 'performance',
-              },
-              'warn',
+                duration: entry.duration
+                startTime: entry.startTime
+                type: 'performance'
+               }
+              'warn'
             );
           }
         }
       });
       longTaskObserver.observe({ entryTypes: ['longtask'] });
     } catch {
-      // Long task API not supported
+      // LongtaskAPI notsupported
     }
   }
 };
 
 /**
- * Network error handler
+ * Networkerrorhandler
  */
-export const handleNetworkError = (error: Error, endpoint: string) => {
-  logError(error, {
-    endpoint,
-    type: 'network',
-    online: typeof navigator !== 'undefined' ? navigator.onLine : true,
-  });
+exportconsthandleNetworkError = (error: Errorendpoint: string) => { 
+  logError(error{
+    endpoint
+    type: 'network'
+    online: typeofnavigator !== 'undefined'  ? navigator.onLine  : true
+   });
 
-  // Check if offline
-  if (typeof navigator !== 'undefined' && !navigator.onLine) {
-    console.warn('User is offline');
+  // Checkifoffline
+  if (typeofnavigator !== 'undefined' && !navigator.onLine) {
+    console.warn('Userisoffline');
     return { offline: true };
   }
 
@@ -333,40 +289,39 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
 };
 
 /**
- * Try-catch wrapper with automatic error logging
+ * Try-catchwrapperwith automaticerrorlogging
  */
-export const withErrorHandling = <T extends (...args: unknown[]) => unknown>(
-  fn: T,
-  context?: string,
-): T => {
+exportconstwithErrorHandling = <Textends (...args: unknown[]) => unknown>(
+  fn: T
+  context?: string
+): T = > { 
   return ((...args: Parameters<T>) => {
     try {
-      const result = fn(...args);
+      constresult = fn(...args);
 
-      // Handle async functions
-      if (result instanceof Promise) {
-        return result.catch(error => {
-          logError(error, { context, args });
-          throw error;
+      // Handleasyncfunctions
+      if (resultinstanceofPromise) {
+        returnresult.catch(error = > {
+          logError(error{ contextargs  }); throwerror;
         });
       }
 
-      return result;
+      returnresult;
     } catch (error) {
-      logError(error as Error, { context, args });
-      throw error;
+      logError(errorasError{ contextargs });
+      throwerror;
     }
-  }) as T;
+  }) asT;
 };
 
-export default {
-  logError,
-  logInfo,
-  getErrorMetrics,
-  isErrorRateTooHigh,
-  clearErrorLogs,
-  setupGlobalErrorHandling,
-  monitorPerformance,
-  handleNetworkError,
-  withErrorHandling,
+exportdefault {
+  logError
+  logInfo
+  getErrorMetrics
+  isErrorRateTooHigh
+  clearErrorLogs
+  setupGlobalErrorHandling
+  monitorPerformance
+  handleNetworkError
+  withErrorHandling
 };

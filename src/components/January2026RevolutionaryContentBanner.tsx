@@ -1,192 +1,175 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const January2026RevolutionaryContentBanner: React.FC = () => {
-  const revolutionaryContent = [
+constJanuary2026RevolutionaryContentBanner: React.FC = () => {
+  constrevolutionaryContent = [
     {
-      title: 'Next-Generation Enterprise Automation: The 2026 AI Revolution',
-      description:
-        '98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings',
-      slug: 'ai-2026-next-generation-enterprise-automation',
-      category: 'AI Innovation',
-      emoji: '🚀',
-      highlight: 'BREAKTHROUGH',
-      impact: '98% Automation',
-      type: 'blog',
-      readTime: '15 min',
-    },
+      title: 'Next-GenerationEnterpriseAutomation: The2026AI Revolution'
+      description: '98% AutomationRate1000xProcessingSpeed$2.5BCostSavings'
+      slug: 'ai-2026-next-generation-enterprise-automation'
+      category: 'AIInnovation'
+      emoji: '🚀'
+      highlight: 'BREAKTHROUGH'
+      impact: '98% Automation'
+      type: 'blog'
+      readTime: '15min'
+    }
     {
-      title: 'Quantum AI Breakthrough: Revolutionary Computing Paradigm',
-      description: '10^18 Operations/sec, 99.9% Accuracy, $10B Market Value',
-      slug: 'quantum-ai-breakthrough-2026-revolutionary-computing',
-      category: 'Quantum Computing',
-      emoji: '⚛️',
-      highlight: 'REVOLUTIONARY',
-      impact: '10^18 Ops/sec',
-      type: 'blog',
-      readTime: '18 min',
-    },
+      title: 'QuantumAIBreakthrough: RevolutionaryComputingParadigm'
+      description: '10^18Operations/sec99.9% Accuracy$10BMarketValue'
+      slug: 'quantum-ai-breakthrough-2026-revolutionary-computing'
+      category: 'QuantumComputing'
+      emoji: '⚛️'
+      highlight: 'REVOLUTIONARY'
+      impact: '10^18Ops/sec'
+      type: 'blog'
+      readTime: '18min'
+    }
     {
-      title: 'Fortune 500 Quantum AI Transformation: $10B Revenue Impact',
-      description:
-        '500% Productivity Increase, 95% Process Automation, Market Leadership',
-      slug: 'fortune-500-quantum-ai-transformation-2026',
-      category: 'Success Story',
-      emoji: '🏆',
-      highlight: 'MEGA SUCCESS',
-      impact: '$10B Revenue',
-      type: 'case-study',
-      readTime: '12 min',
-    },
-  ];
-  return (
-    <section className='py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden'>
-      {/* Animated Background */}
-      <div className='absolute inset-0 overflow-hidden opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+      title: 'Fortune500Quantum AITransformation: $10BRevenueImpact'
+      description: '500% ProductivityIncrease95% ProcessAutomationMarketLeadership'
+      slug: 'fortune-500-quantum-ai-transformation-2026'
+      category: 'SuccessStory'
+      emoji: '🏆'
+      highlight: 'MEGASUCCESS'
+      impact: '$10BRevenue'
+      type: 'case-study'
+      readTime: '12min'
+    }
+  ]; return (
+    <sectionclassName = 'py-20bg-gradient-to-brfrom-slate-900via-blue-900to-purple-900relativeoverflow-hidden'>
+      {/* AnimatedBackground */}
+      <divclassName='absoluteinset-0overflow-hiddenopacity-20'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+         />
+        <divclassName = 'absolutetop-1/2left-1/2 w-64h-64bg-cyan-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '4s' }}
-        ></div>
+         />
       </div>
-      <div className='container mx-auto px-6 relative z-10'>
+      <divclassName = 'containermx-autopx-6relativez-10'>
         {/* Header */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8'>
-            <Sparkles className='w-5 h-5 text-blue-400' />
-            <span className='text-blue-400 font-bold text-sm tracking-wider uppercase'>
-              January 2026 • Revolutionary Content Launch
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-flexitems-centergap-2px-6py-3rounded-fullbg-gradient-to-rfrom-blue-500/20to-purple-500/20borderborder-blue-500/30mb-8'>
+            <SparklesclassName='w-5 h-5text-blue-400' />
+            <spanclassName='text-blue-400font-boldtext-smtracking-wideruppercase'>
+              January2026 • RevolutionaryContentLaunch
             </span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent'>
-            Revolutionary AI Breakthroughs: The Future is Here
+          <h2className='text-4xlmd: text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-blue-400via-cyan-400to-purple-400bg-clip-texttext-transparent'>
+            RevolutionaryAIBreakthroughs: TheFutureis Here
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            Experience the cutting-edge of AI innovation with our latest
-            breakthrough content: 98% automation rates, quantum computing
-            revolutions, and Fortune 500 transformations worth $10B.
+          <pclassName='text-xltext-gray-300max-w-3xlmx-autoleading-relaxed'>
+            Experiencethecutting-edgeofAI innovationwithour latestbreakthroughcontent: 98% automationratesquantumcomputingrevolutionsandFortune500 transformationsworth $10B.
           </p>
         </div>
-        {/* Content Grid */}
-        <div className='grid md:grid-cols-3 gap-8 mb-12'>
-          {revolutionaryContent.map((content, index) => (
-            <div
-              key={index}
-              className='group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105'
+        {/* ContentGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-8mb-12'>
+          { revolutionaryContent.map((contentindex) = > (
+            <divkey = { index  }className = 'groupbg-white/5backdrop-blur-lgrounded-2xlp-6borderborder-white/10hover: border-blue-500/50transition-allduration-300hover:transformhover:scale-105'
             >
-              {/* Content Header */}
-              <div className='flex items-start justify-between mb-4'>
-                <div className='text-4xl'>{content.emoji}</div>
-                <div className='flex flex-col items-end gap-2'>
-                  <span className='bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full'>
+              {/* ContentHeader */}
+              <divclassName = 'flexitems-startjustify-betweenmb-4'>
+                <divclassName='text-4xl'>{content.emoji}</div>
+                <divclassName='flexflex-colitems-endgap-2'>
+                  <spanclassName='bg-gradient-to-rfrom-blue-500to-purple-500text-whitetext-xsfont-boldpx-3py-1rounded-full'>
                     {content.highlight}
                   </span>
-                  <span className='text-xs text-gray-400'>
+                  <spanclassName='text-xstext-gray-400'>
                     {content.readTime}
                   </span>
                 </div>
               </div>
-              {/* Content Info */}
-              <div className='mb-4'>
-                <span className='text-blue-400 text-sm font-semibold uppercase tracking-wide'>
+              {/* ContentInfo */}
+              <divclassName='mb-4'>
+                <spanclassName='text-blue-400text-smfont-semibolduppercasetracking-wide'>
                   {content.category}
                 </span>
-                <h3 className='text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors'>
+                <h3className='text-xlfont-boldtext-whitemb-3group-hover: text-blue-300transition-colors'>
                   {content.title}
                 </h3>
-                <p className='text-gray-400 text-sm leading-relaxed mb-4'>
+                <pclassName = 'text-gray-400text-smleading-relaxedmb-4'>
                   {content.description}
                 </p>
               </div>
-              {/* Impact Badge */}
-              <div className='mb-6'>
-                <div className='inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full'>
-                  <Target className='w-4 h-4 text-green-400' />
-                  <span className='text-green-400 font-bold text-sm'>
+              {/* ImpactBadge */}
+              <divclassName='mb-6'>
+                <divclassName='inline-flexitems-centergap-2px-4py-2bg-gradient-to-rfrom-green-500/20to-emerald-500/20borderborder-green-500/30rounded-full'>
+                  <TargetclassName='w-4 h-4text-green-400' />
+                  <spanclassName='text-green-400font-boldtext-sm'>
                     Impact: {content.impact}
                   </span>
                 </div>
               </div>
-              {/* CTA Button */}
-              <Link
-                to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
-                className='w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25'
+              {/* CTAButton */}
+              <Linkto = { `/${content.type === 'blog'  ? 'blog'  : 'case-studies' }/${content.slug}`}
+                className='w-fullbg-gradient-to-rfrom-blue-500to-purple-600hover: from-blue-400hover:to-purple-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2group-hover:shadow-lggroup-hover:shadow-blue-500/25'
               >
-                {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
-                <ArrowRight className='w-4 h-4' />
+                { content.type === 'blog'  ? 'ReadArticle'  : 'ViewCaseStudy' }
+                <ArrowRight,className = 'w-4 h-4' />
               </Link>
             </div>
           ))}
         </div>
-        {/* Stats Section */}
-        <div className='grid md:grid-cols-4 gap-6 mb-12'>
+        {/* StatsSection */}
+        <divclassName = 'gridmd: grid-cols-4gap-6mb-12'>
           {[
             {
-              value: '98%',
-              label: 'Automation Rate',
-              icon: '🤖',
-              color: 'from-blue-400 to-cyan-400',
-            },
+              value: '98%'
+              label: 'AutomationRate'
+              icon: '🤖'
+              color: 'from-blue-400to-cyan-400'
+            }
             {
-              value: '10^18',
-              label: 'Quantum Ops/sec',
-              icon: '⚛️',
-              color: 'from-purple-400 to-pink-400',
-            },
+              value: '10^18'
+              label: 'QuantumOps/sec'
+              icon: '⚛️'
+              color: 'from-purple-400to-pink-400'
+            }
             {
-              value: '$10B',
-              label: 'Revenue Impact',
-              icon: '💰',
-              color: 'from-green-400 to-emerald-400',
-            },
+              value: '$10B'
+              label: 'RevenueImpact'
+              icon: '💰'
+              color: 'from-green-400to-emerald-400'
+            }
             {
-              value: '500%',
-              label: 'Productivity Gain',
-              icon: '⚡',
-              color: 'from-yellow-400 to-orange-400',
-            },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className='bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center'
+              value: '500%'
+              label: 'ProductivityGain'
+              icon: '⚡'
+              color: 'from-yellow-400to-orange-400'
+            }
+          ].map((statindex) => (
+            <divkey = { index }className = 'bg-white/5backdrop-blur-lgrounded-xlp-4borderborder-white/10text-center'
             >
-              <div className='text-3xl mb-2'>{stat.icon}</div>
-              <div
-                className={`text-2xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}
+              <divclassName='text-3xlmb-2'>{stat.icon}</div > <divclassName = { `text-2xlfont-extraboldbg-gradient-to-r ${stat.color }bg-clip-texttext-transparentmb-1`}
               >
                 {stat.value}
               </div>
-              <div className='text-gray-400 text-xs font-medium'>
+              <divclassName = 'text-gray-400text-xsfont-medium'>
                 {stat.label}
               </div>
             </div>
           ))}
         </div>
-        {/* Call to Action */}
-        <div className='text-center'>
-          <div className='bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8'>
-            <h3 className='text-2xl font-bold mb-4 text-white'>
-              Ready to Experience the AI Revolution?
+        {/* CalltoAction */}
+        <divclassName = 'text-center'>
+          <divclassName='bg-gradient-to-rfrom-blue-500/10to-purple-500/10borderborder-blue-500/20rounded-2xlp-8'>
+            <h3className='text-2xlfont-boldmb-4text-white'>
+              ReadytoExperience theAIRevolution?
             </h3>
-            <p className='text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join the Fortune 500 companies already transforming their
-              operations with Zion Tech Group's breakthrough AI solutions.
+            <pclassName='text-gray-300mb-6max-w-2xlmx-auto'>
+              JointheFortune 500companiesalready transformingtheiroperations withZionTech Group'sbreakthroughAI solutions.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1'
+            <divclassName='flexflex-colsm: flex-rowgap-4justify-center'>
+              <Linkto='/contact'
+                className='bg-gradient-to-rfrom-blue-500to-purple-600hover:from-blue-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50transformhover:-translate-y-1'
               >
-                Start Your Transformation
+                StartYourTransformation
               </Link>
-              <Link
-                to='/services'
-                className='border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300'
+              <Linkto='/services'
+                className='border-2border-blue-500text-blue-400hover:bg-blue-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300'
               >
-                Explore Our Services
+                ExploreOurServices
               </Link>
             </div>
           </div>
@@ -195,4 +178,4 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
     </section>
   );
 };
-export default January2026RevolutionaryContentBanner;
+exportdefaultJanuary2026RevolutionaryContentBanner;

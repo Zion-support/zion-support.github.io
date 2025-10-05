@@ -1,244 +1,232 @@
 import React from 'react';
 
-const NewServicesPromotionalBanner: React.FC = () => {
+constNewServicesPromotionalBanner: React.FC = () => { 
   return (
-    <section className='py-16 bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 border-y border-emerald-500/20'>
-      <div className='container mx-auto px-6'>
-        {' '}
+    <sectionclassName = 'py-16bg-gradient-to-rfrom-emerald-900/40via-teal-900/40to-cyan-900/40border-yborder-emerald-500/20'>
+      <divclassName='containermx-autopx-6' > {' ' }
         {/* Header */}
-        <div className='text-center mb-12'>
-          <div className='inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6'>
-            <span className='text-emerald-400 font-bold text-sm tracking-wider uppercase animate-pulse'>
-              🆕 NEW SERVICES LAUNCH - 2026
+        <divclassName = 'text-centermb-12'>
+          <divclassName='inline-flexitems-centergap-2px-6py-3rounded-fullbg-gradient-to-rfrom-emerald-500/20to-cyan-500/20borderborder-emerald-500/30mb-6'>
+            <spanclassName='text-emerald-400font-boldtext-smtracking-wideruppercaseanimate-pulse'>
+              🆕 NEWSERVICESLAUNCH - 2026
             </span>
           </div>
-          <h2 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
-            Revolutionary New AI Services
+          <h2className='text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-emerald-400via-teal-400to-cyan-400bg-clip-texttext-transparent'>
+            RevolutionaryNewAI Services
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
-            Introducing groundbreaking AI services that will transform how
-            enterprises operate, innovate, and compete in the digital age.
+          <pclassName='text-xltext-gray-300max-w-3xlmx-autoleading-relaxed'>
+            IntroducinggroundbreakingAI servicesthatwill transformhowenterprises operateinnovateandcompetein thedigitalage.
           </p>
         </div>
-        {/* Services Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'>
-          {/* Quantum AI Consulting */}
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-emerald-500/50 transition-all duration-300 hover:transform hover:scale-105 group'>
-            <div className='text-6xl mb-4 group-hover:animate-spin'>⚛️</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Quantum AI Consulting
+        {/* ServicesGrid */}
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8mb-12'>
+          {/* QuantumAIConsulting */}
+          <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-emerald-500/50transition-allduration-300hover:transformhover:scale-105group'>
+            <divclassName='text-6xlmb-4group-hover:animate-spin'>⚛️</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              QuantumAIConsulting
             </h3>
-            <p className='text-gray-400 mb-6 leading-relaxed'>
-              Expert guidance on implementing quantum-enhanced AI solutions for
-              maximum performance and competitive advantage.
+            <pclassName='text-gray-400mb-6leading-relaxed'>
+              Expertguidanceon implementingquantum-enhancedAIsolutions formaximumperformance andcompetitiveadvantage.
             </p>
-            <div className='space-y-3 mb-6'>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-emerald-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Quantum algorithm optimization
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-emerald-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Quantumalgorithmoptimization
                 </span>
               </div>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-emerald-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Hybrid quantum-classical systems
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-emerald-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Hybridquantum-classicalsystems
                 </span>
               </div>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-emerald-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Performance benchmarking
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-emerald-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Performancebenchmarking
                 </span>
               </div>
             </div>
-            <div className='text-emerald-400 font-bold text-lg mb-4'>
-              Starting at $25,000/month
+            <divclassName='text-emerald-400font-boldtext-lgmb-4'>
+              Startingat $25000/month
             </div>
-            <a
-              href='/services/quantum-ai-<consulting'
-              className='inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50'
+            <ahref = '/services/quantum-ai-<consulting'
+              className='inline-blockbg-gradient-to-rfrom-emerald-500to-teal-600hover: from-emerald-400hover:to-teal-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-emerald-500/50'
             >
-              Learn More →
+              LearnMore →
             </a>
           </div>
 
-          {/* AI Security Operations Center */}
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 group'>
-            <div className='text-6xl mb-4 group-hover:animate-pulse'>🛡️</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              AI Security Operations Center
+          {/* AISecurityOperations Center */}
+          <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-blue-500/50transition-allduration-300hover:transformhover:scale-105group'>
+            <divclassName='text-6xlmb-4group-hover:animate-pulse'>🛡️</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              AISecurityOperations Center
             </h3>
-            <p className='text-gray-400 mb-6 leading-relaxed'>
-              24/7 monitoring and protection for your AI systems with advanced
-              threat detection and automated response.
+            <pclassName='text-gray-400mb-6leading-relaxed'>
+              24/7monitoringand protectionforyour AIsystemswith advancedthreatdetection andautomatedresponse.
             </p>
-            <div className='space-y-3 mb-6'>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-blue-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Real-time threat monitoring
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-blue-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Real-timethreatmonitoring
                 </span>
               </div>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-blue-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Automated incident response
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-blue-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Automatedincidentresponse
                 </span>
               </div>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-blue-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Compliance management
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-blue-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Compliancemanagement
                 </span>
               </div>
             </div>
-            <div className='text-blue-400 font-bold text-lg mb-4'>
-              Starting at $15,000/month
+            <divclassName='text-blue-400font-boldtext-lgmb-4'>
+              Startingat $15000/month
             </div>
-            <a
-              href='/services/ai-security-<soc'
-              className='inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50'
+            <ahref = '/services/ai-security-<soc'
+              className='inline-blockbg-gradient-to-rfrom-blue-500to-cyan-600hover: from-blue-400hover:to-cyan-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50'
             >
-              Learn More →
+              LearnMore →
             </a>
           </div>
 
-          {/* Autonomous Operations Platform */}
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group'>
-            <div className='text-6xl mb-4 group-hover:animate-bounce'>🤖</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Autonomous Operations Platform
+          {/* AutonomousOperationsPlatform */}
+          <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-purple-500/50transition-allduration-300hover:transformhover:scale-105group'>
+            <divclassName='text-6xlmb-4group-hover:animate-bounce'>🤖</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              AutonomousOperationsPlatform
             </h3>
-            <p className='text-gray-400 mb-6 leading-relaxed'>
-              Complete automation platform with self-healing, self-optimizing,
-              and self-scaling capabilities for enterprise operations.
+            <pclassName='text-gray-400mb-6leading-relaxed'>
+              Completeautomationplatform withself-healingself-optimizing
+              andself-scalingcapabilitiesfor enterpriseoperations.
             </p>
-            <div className='space-y-3 mb-6'>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-purple-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Self-healing infrastructure
+            <divclassName = 'space-y-3mb-6'>
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-purple-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Self-healinginfrastructure
                 </span>
               </div>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-purple-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Dynamic resource optimization
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-purple-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Dynamicresourceoptimization
                 </span>
               </div>
-              <div className='flex items-center gap-3'>
-                <span className='w-2 h-2 bg-purple-400 rounded-full'></span>
-                <span className='text-gray-300 text-sm'>
-                  Predictive scaling
+              <divclassName='flexitems-centergap-3'>
+                <spanclassName='w-2 h-2bg-purple-400rounded-full' />
+                <spanclassName='text-gray-300text-sm'>
+                  Predictivescaling
                 </span>
               </div>
             </div>
-            <div className='text-purple-400 font-bold text-lg mb-4'>
-              Starting at $35,000/month
+            <divclassName='text-purple-400font-boldtext-lgmb-4'>
+              Startingat $35000/month
             </div>
-            <a
-              href='/services/autonomous-<operations'
-              className='inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50'
+            <ahref = '/services/autonomous-<operations'
+              className='inline-blockbg-gradient-to-rfrom-purple-500to-pink-600hover: from-purple-400hover:to-pink-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50'
             >
-              Learn More →
+              LearnMore →
             </a>
           </div>
         </div>
-        {/* Special Offer Banner */}
-        <div className='bg-gradient-to-r from-emerald-900/30 to-teal-900/30 rounded-2xl p-8 border border-emerald-500/20 mb-12'>
-          <div className='grid md:grid-cols-2 gap-8 items-center'>
+        {/* SpecialOfferBanner */}
+        <divclassName = 'bg-gradient-to-rfrom-emerald-900/30to-teal-900/30rounded-2xlp-8borderborder-emerald-500/20mb-12'>
+          <divclassName='gridmd: grid-cols-2gap-8items-center'>
             <div>
-              <div className='inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-4'>
-                <span className='text-red-400 font-bold text-sm'>
-                  🔥 LIMITED TIME OFFER
+              <divclassName='inline-flexitems-centergap-2px-4py-2rounded-fullbg-gradient-to-rfrom-red-500/20to-orange-500/20borderborder-red-500/30mb-4'>
+                <spanclassName='text-red-400font-boldtext-sm'>
+                  🔥 LIMITEDTIMEOFFER
                 </span>
               </div>
-              <h3 className='text-3xl font-extrabold mb-4 text-white'>
-                Bundle All Three Services
+              <h3className='text-3xlfont-extraboldmb-4text-white'>
+                BundleAllThree Services
               </h3>
-              <p className='text-xl text-gray-300 mb-6'>
-                Get Quantum AI Consulting, AI Security SOC, and Autonomous
-                Operations Platform together with massive savings.
+              <pclassName='text-xltext-gray-300mb-6'>
+                GetQuantumAI ConsultingAISecuritySOCandAutonomousOperations Platformtogetherwith massivesavings.
               </p>
-              <div className='space-y-3'>
-                <div className='flex items-center gap-3'>
-                  <span className='text-green-400'>✓</span>
-                  <span className='text-gray-300'>40% discount on bundle</span>
+              <divclassName = 'space-y-3'>
+                <divclassName='flexitems-centergap-3'>
+                  <spanclassName='text-green-400'>✓</span>
+                  <spanclassName='text-gray-300'>40% discountonbundle</span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <span className='text-green-400'>✓</span>
-                  <span className='text-gray-300'>
-                    Free implementation support
+                <divclassName='flexitems-centergap-3'>
+                  <spanclassName='text-green-400'>✓</span>
+                  <spanclassName='text-gray-300'>
+                    Freeimplementationsupport
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <span className='text-green-400'>✓</span>
-                  <span className='text-gray-300'>Priority 24/7 support</span>
+                <divclassName='flexitems-centergap-3'>
+                  <spanclassName='text-green-400'>✓</span>
+                  <spanclassName='text-gray-300'>Priority24/7support</span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <span className='text-green-400'>✓</span>
-                  <span className='text-gray-300'>
-                    Custom integration services
+                <divclassName='flexitems-centergap-3'>
+                  <spanclassName='text-green-400'>✓</span>
+                  <spanclassName='text-gray-300'>
+                    Customintegrationservices
                   </span>
                 </div>
               </div>
             </div>
-            <div className='text-center'>
-              <div className='text-6xl font-extrabold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2'>
-                $45,000
+            <divclassName='text-center'>
+              <divclassName='text-6xlfont-extraboldbg-gradient-to-rfrom-emerald-400to-teal-400bg-clip-texttext-transparentmb-2'>
+                $45000
               </div>
-              <div className='text-gray-400 text-lg mb-2'>
-                per month (40% off)
+              <divclassName = 'text-gray-400text-lgmb-2'>
+                permonth (40% off)
               </div>
-              <div className='text-lg text-gray-500 line-through mb-4'>
-                $75,000/month
+              <divclassName = 'text-lgtext-gray-500line-throughmb-4'>
+                $75000/month
               </div>
-              <div className='text-2xl text-emerald-400 font-bold mb-6'>
-                Save $30,000/month!
+              <divclassName = 'text-2xltext-emerald-400font-boldmb-6'>
+                Save $30000/month!
               </div>
-              <a
-                href='/contact?offer=bundle-services-<40'
-                className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1'
+              <ahref = '/contact?offer=bundle-services-<40'
+                className='bg-gradient-to-rfrom-emerald-500to-teal-600hover: from-emerald-400hover:to-teal-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-emerald-500/50transformhover:-translate-y-1'
               >
-                Claim Bundle Offer
+                ClaimBundleOffer
               </a>
             </div>
           </div>
         </div>
         {/* Testimonials */}
-        <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10'>
-          <div className='text-center mb-8'>
-            <h3 className='text-2xl font-bold text-white mb-2'>
-              What Our Clients Say
+        <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10'>
+          <divclassName='text-centermb-8'>
+            <h3className='text-2xlfont-boldtext-whitemb-2'>
+              WhatOurClients Say
             </h3>
-            <p className='text-gray-400'>
-              Real results from enterprises using our new AI services
+            <pclassName='text-gray-400'>
+              Realresultsfrom enterprisesusingour newAIservices
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8'>
-            <div className='bg-white/5 rounded-xl p-6 border border-white/10'>
-              <div className='text-yellow-400 text-2xl mb-4'>★★★★★</div>
-              <p className='text-gray-300 mb-4 italic'>
-                "The Quantum AI Consulting transformed our computational
-                capabilities. We're seeing 300% performance improvements in our
-                AI models."
+          <divclassName='gridmd: grid-cols-2gap-8'>
+            <divclassName='bg-white/5rounded-xlp-6borderborder-white/10'>
+              <divclassName='text-yellow-400text-2xlmb-4'>★★★★★</div>
+              <pclassName='text-gray-300mb-4italic'>
+                "TheQuantumAI Consultingtransformedour computationalcapabilities. We'reseeing300% performanceimprovementsin ourAImodels."
               </p>
-              <div className='text-emerald-400 font-semibold'>
-                CTO, Fortune 100 Tech Company
+              <divclassName='text-emerald-400font-semibold'>
+                CTOFortune100Tech Company
               </div>
             </div>
 
-            <div className='bg-white/5 rounded-xl p-6 border border-white/10'>
-              <div className='text-yellow-400 text-2xl mb-4'>★★★★★</div>
-              <p className='text-gray-300 mb-4 italic'>
-                "The AI Security SOC gives us peace of mind. Zero security
-                incidents since implementation, and 24/7 protection is
+            <divclassName = 'bg-white/5rounded-xlp-6borderborder-white/10'>
+              <divclassName='text-yellow-400text-2xlmb-4'>★★★★★</div>
+              <pclassName='text-gray-300mb-4italic'>
+                "TheAISecurity SOCgivesus peaceofmind. Zerosecurityincidents sinceimplementationand24/7protectionis
                 invaluable."
               </p>
-              <div className='text-blue-400 font-semibold'>
-                CISO, Global Financial Institution
+              <divclassName = 'text-blue-400font-semibold'>
+                CISOGlobalFinancialInstitution
               </div>
             </div>
           </div>
@@ -248,4 +236,4 @@ const NewServicesPromotionalBanner: React.FC = () => {
   );
 };
 
-export default NewServicesPromotionalBanner;
+exportdefaultNewServicesPromotionalBanner;

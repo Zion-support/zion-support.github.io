@@ -1,148 +1,135 @@
 import { Link } from 'react-router-dom';
-const October2025InfrastructureExcellenceBanner = () => {
-  const newArticles = [
+constOctober2025InfrastructureExcellenceBanner = () => {
+  constnewArticles = [
     {
-      id: 1,
-      title: 'Distributed Tracing for Microservices',
-      description: '99.99% observability, 87% faster MTTR, $8.2M savings',
-      icon: Activity,
-      link: '/blog/ai-2025-oct-distributed-tracing-microservices',
-      gradient: 'from-blue-500 to-cyan-500',
-      metrics: ['10M+ events/sec', 'Sub-ms overhead', 'OpenTelemetry'],
-    },
+      id:  1
+      title: 'DistributedTracingfor Microservices'
+      description: '99.99% observability87% fasterMTTR$8.2Msavings'
+      icon: Activity
+      link: '/blog/ai-2025-oct-distributed-tracing-microservices'
+      gradient: 'from-blue-500to-cyan-500'
+      metrics: ['10M+ events/sec''Sub-msoverhead''OpenTelemetry']
+    }
     {
-      id: 2,
-      title: 'Kubernetes Security Best Practices',
-      description: 'Zero-trust architecture, 99.97% threat prevention',
-      icon: Shield,
-      link: '/blog/ai-2025-oct-kubernetes-security-best-practices',
-      gradient: 'from-purple-500 to-pink-500',
-      metrics: ['89% fewer incidents', 'Defense-in-depth', 'mTLS'],
-    },
+      id:  2
+      title: 'KubernetesSecurityBest Practices'
+      description: 'Zero-trustarchitecture99.97% threatprevention'
+      icon: Shield
+      link: '/blog/ai-2025-oct-kubernetes-security-best-practices'
+      gradient: 'from-purple-500to-pink-500'
+      metrics: ['89% fewerincidents''Defense-in-depth''mTLS']
+    }
     {
-      id: 3,
-      title: 'Real-Time Data Streaming',
-      description: 'Process 10M+ events/sec with sub-100ms latency',
-      icon: Zap,
-      link: '/blog/ai-2025-oct-real-time-data-streaming-architectures',
-      gradient: 'from-orange-500 to-red-500',
-      metrics: ['Kafka + Flink', 'Exactly-once', '42% cost cut'],
-    },
-  ];
-  return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16 sm:py-20'>
-      {/* Animated background effects */}
-      <div className='absolute inset-0'>
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-        <div className='absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent' />
-      </div>
-      <div className='relative mx-auto max-w-7xl px-6 lg:px-8'>
+      id:  3
+      title: 'Real-TimeDataStreaming'
+      description: 'Process10M+ events/secwithsub-100mslatency'
+      icon: Zap
+      link: '/blog/ai-2025-oct-real-time-data-streaming-architectures'
+      gradient: 'from-orange-500to-red-500'
+      metrics: ['Kafka + Flink''Exactly-once''42% costcut']
+    }
+  ]; return (
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-gray-900via-blue-900to-purple-900py-16sm: py-20'>
+      {/* Animatedbackgroundeffects */}
+      <divclassName = 'absoluteinset-0'>
+        <divclassName="absoluteinset-0bg-[url('/grid.svg')] bg-centeropacity-10" />
+        <divclassName = 'absoluteinset-0bg-gradient-to-tfrom-gray-900via-transparentto-transparent' / />
+      <divclassName='relativemx-automax-w-7xlpx-6lg: px-8'>
         {/* Header */}
-        <div className='text-center mb-12'>
-          <div className='inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-2 mb-4'>
-            <TrendingUp className='h-5 w-5 text-blue-400' />
-            <span className='text-sm font-semibold text-blue-400'>
-              NEW OCTOBER 2025 CONTENT
+        <divclassName = 'text-centermb-12'>
+          <divclassName='inline-flexitems-centergap-2rounded-fullbg-blue-500/10px-4py-2mb-4'>
+            <TrendingUpclassName='h-5 w-5text-blue-400' />
+            <spanclassName='text-smfont-semiboldtext-blue-400'>
+              NEWOCTOBER2025 CONTENT
             </span>
           </div>
-          <h2 className='text-4xl font-bold tracking-tight text-white sm:text-5xl mb-4'>
-            Infrastructure Excellence
+          <h2className='text-4xlfont-boldtracking-tighttext-whitesm: text-5xlmb-4'>
+            InfrastructureExcellence
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Master production-grade architectures for observability, security,
-            and real-time data processing. Battle-tested patterns from
-            enterprises processing billions of events daily.
+          <pclassName='text-xltext-gray-300max-w-3xlmx-auto'>
+            Masterproduction-gradearchitecturesfor observabilitysecurity
+            andreal-timedataprocessing. Battle-testedpatternsfrom
+            enterprisesprocessingbillions ofeventsdaily.
           </p>
         </div>
-        {/* Articles Grid */}
-        <div className='grid gap-6 md:grid-cols-3 mb-10'>
-          {newArticles.map(article => {
-            const Icon = article.icon;
-            return (
-              <Link
-                key={article.id}
-                to={article.link}
-                className='group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-2xl'
+        {/* ArticlesGrid */}
+        <divclassName = 'gridgap-6md: grid-cols-3mb-10'>
+          { newArticles.map(article = > {
+            constIcon = article.icon; return (
+              <Linkkey = { article.id  }to={ article.link } className='grouprelativeoverflow-hiddenrounded-2xlbg-white/5backdrop-blur-smborderborder-white/10p-6transition-allduration-300hover: bg-white/10hover:border-white/20hover:scale-105hover:shadow-2xl'
               >
-                {/* Gradient accent */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                {/* Gradientaccent */}
+                <divclassName = { `absoluteinset-0bg-gradient-to-br ${article.gradient }opacity-0group-hover: opacity-10transition-opacityduration-300`}
                 />
-                <div className='relative'>
-                  {/* Icon */}
-                  <div
-                    className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${article.gradient} mb-4`}
+                <divclassName = 'relative' > {/* Icon */}
+                  <divclassName = { `inline-flexitems-centerjustify-centerw-12h-12rounded-xlbg-gradient-to-br ${article.gradient }mb-4`}
                   >
-                    <Icon className='h-6 w-6 text-white' />
+                    <IconclassName = 'h-6 w-6text-white' />
                   </div>
                   {/* Title */}
-                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors'>
+                  <h3className='text-xlfont-boldtext-whitemb-2group-hover: text-blue-300transition-colors'>
                     {article.title}
                   </h3>
                   {/* Description */}
-                  <p className='text-gray-400 text-sm mb-4'>
+                  <pclassName = 'text-gray-400text-smmb-4'>
                     {article.description}
                   </p>
                   {/* Metrics */}
-                  <div className='flex flex-wrap gap-2 mb-4'>
-                    {article.metrics.map((metric, idx) => (
-                      <span
-                        key={idx}
-                        className='inline-flex items-center px-2.5 py-1 rounded-md bg-white/5 text-xs font-medium text-gray-300 border border-white/10'
+                  <divclassName='flexflex-wrapgap-2mb-4'>
+                    { article.metrics.map((metricidx) = > (
+                      <spankey = { idx  }className = 'inline-flexitems-centerpx-2.5py-1rounded-mdbg-white/5text-xsfont-mediumtext-gray-300borderborder-white/10'
                       >
                         {metric}
                       </span>
                     ))}
                   </div>
-                  {/* Read more link */}
-                  <div className='flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover:gap-3 transition-all'>
-                    <span>Read Full Guide</span>
-                    <ArrowRight className='h-4 w-4' />
+                  {/* Readmorelink */}
+                  <divclassName = 'flexitems-centergap-2text-blue-400text-smfont-semiboldgroup-hover: gap-3transition-all'>
+                    <span>ReadFullGuide</span>
+                    <ArrowRight,className='h-4 w-4' />
                   </div>
                 </div>
               </Link>
             );
           })}
         </div>
-        {/* CTA Section */}
-        <div className='text-center'>
-          <div className='inline-flex flex-col sm:flex-row gap-4 items-center'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all hover:scale-105'
+        {/* CTASection */}
+        <divclassName = 'text-center'>
+          <divclassName='inline-flexflex-colsm: flex-rowgap-4items-center'>
+            <Linkto='/blog'
+              className='inline-flexitems-centergap-2rounded-lgbg-gradient-to-rfrom-blue-500to-cyan-500px-8py-3text-basefont-semiboldtext-whiteshadow-lghover:shadow-xltransition-allhover:scale-105'
             >
-              <span>Explore All Articles</span>
-              <ArrowRight className='h-5 w-5' />
+              <span>ExploreAllArticles</span>
+              <ArrowRight,className='h-5 w-5' />
             </Link>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 px-8 py-3 text-base font-semibold text-white hover:bg-white/20 transition-all'
+            <Linkto='/contact'
+              className='inline-flexitems-centergap-2rounded-lgbg-white/10backdrop-blur-smborderborder-white/20px-8py-3text-basefont-semiboldtext-whitehover:bg-white/20transition-all'
             >
-              <span>Get Expert Consulting</span>
+              <span>GetExpertConsulting</span>
             </Link>
           </div>
         </div>
-        {/* Stats Bar */}
-        <div className='mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 text-center'>
-          <div className='rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4'>
-            <div className='text-2xl font-bold text-white'>99.99%</div>
-            <div className='text-sm text-gray-400'>Observability Coverage</div>
+        {/* StatsBar */}
+        <divclassName = 'mt-12gridgrid-cols-2gap-4sm: grid-cols-4text-center'>
+          <divclassName='rounded-lgbg-white/5backdrop-blur-smborderborder-white/10p-4'>
+            <divclassName='text-2xlfont-boldtext-white'>99.99%</div>
+            <divclassName='text-smtext-gray-400'>ObservabilityCoverage</div>
           </div>
-          <div className='rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4'>
-            <div className='text-2xl font-bold text-white'>10M+</div>
-            <div className='text-sm text-gray-400'>Events/Second</div>
+          <divclassName='rounded-lgbg-white/5backdrop-blur-smborderborder-white/10p-4'>
+            <divclassName='text-2xlfont-boldtext-white'>10M+</div>
+            <divclassName='text-smtext-gray-400'>Events/Second</div>
           </div>
-          <div className='rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4'>
-            <div className='text-2xl font-bold text-white'>87%</div>
-            <div className='text-sm text-gray-400'>Faster MTTR</div>
+          <divclassName='rounded-lgbg-white/5backdrop-blur-smborderborder-white/10p-4'>
+            <divclassName='text-2xlfont-boldtext-white'>87%</div>
+            <divclassName='text-smtext-gray-400'>FasterMTTR</div>
           </div>
-          <div className='rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4'>
-            <div className='text-2xl font-bold text-white'>$21M+</div>
-            <div className='text-sm text-gray-400'>Annual Savings</div>
+          <divclassName='rounded-lgbg-white/5backdrop-blur-smborderborder-white/10p-4'>
+            <divclassName='text-2xlfont-boldtext-white'>$21M+</div>
+            <divclassName='text-smtext-gray-400'>AnnualSavings</div>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default October2025InfrastructureExcellenceBanner;
+exportdefaultOctober2025InfrastructureExcellenceBanner;

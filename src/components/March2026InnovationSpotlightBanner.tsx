@@ -1,221 +1,201 @@
 import React from 'react';
-const March2026InnovationSpotlightBanner = () => {
-  const innovations = [
+constMarch2026InnovationSpotlightBanner = () => {
+  constinnovations = [
     {
-      title: 'Neural-Synaptic Fusion AI',
-      description:
-        'Revolutionary brain-computer interface achieving 99.98% neural accuracy',
-      impact: '500% cognitive enhancement',
-      icon: '🧠',
-      color: 'from-purple-500 to-indigo-500',
-    },
+      title: 'Neural-SynapticFusion AI'
+      description: 'Revolutionarybrain-computerinterfaceachieving 99.98% neuralaccuracy'
+      impact: '500% cognitiveenhancement'
+      icon: '🧠'
+      color: 'from-purple-500to-indigo-500'
+    }
     {
-      title: 'Quantum Temporal Computing',
-      description:
-        'Processing information across multiple time dimensions simultaneously',
-      impact: '1000x temporal efficiency',
-      icon: '⏰',
-      color: 'from-blue-500 to-cyan-500',
-    },
+      title: 'QuantumTemporalComputing'
+      description: 'Processinginformationacross multipletimedimensions simultaneously'
+      impact: '1000xtemporalefficiency'
+      icon: '⏰'
+      color: 'from-blue-500to-cyan-500'
+    }
     {
-      title: 'Autonomous Reality Synthesis',
-      description:
-        'AI systems that create and manage parallel digital realities',
-      impact: '$5.2B market creation',
-      icon: '🌌',
-      color: 'from-emerald-500 to-teal-500',
-    },
-  ];
-  return (
-    <div className='py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden'>
-      {/* Animated background effects */}
-      <div className='absolute inset-0 overflow-hidden opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+      title: 'AutonomousRealitySynthesis'
+      description: 'AIsystemsthat createandmanage paralleldigitalrealities'
+      impact: '$5.2Bmarketcreation'
+      icon: '🌌'
+      color: 'from-emerald-500to-teal-500'
+    }
+  ]; return (
+    <divclassName = 'py-20bg-gradient-to-brfrom-slate-900via-purple-900to-indigo-900relativeoverflow-hidden'>
+      {/* Animatedbackgroundeffects */}
+      <divclassName='absoluteinset-0overflow-hiddenopacity-20'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-indigo-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+         />
+        <divclassName = 'absolutetop-1/2left-1/2 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '4s' }}
-        ></div>
+         />
       </div>
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Header Section */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-8'>
-            <Rocket className='w-6 h-6 text-purple-400 animate-pulse' />
-            <span className='text-purple-400 font-bold text-lg tracking-wider uppercase'>
-              🚀 MARCH 2026: INNOVATION SPOTLIGHT
+      <divclassName = 'containermx-autopx-6relativez-10'>
+        {/* HeaderSection */}
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-purple-500/20to-indigo-500/20borderborder-purple-500/30mb-8'>
+            <RocketclassName='w-6 h-6text-purple-400animate-pulse' />
+            <spanclassName='text-purple-400font-boldtext-lgtracking-wideruppercase'>
+              🚀 MARCH2026: INNOVATIONSPOTLIGHT
             </span>
-            <Rocket className='w-6 h-6 text-indigo-400 animate-pulse' />
+            <RocketclassName='w-6 h-6text-indigo-400animate-pulse' />
           </div>
-          <h2 className='text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent'>
-            The Innovation Revolution
+          <h2className='text-5xlmd:text-6xlfont-extraboldmb-6bg-gradient-to-rfrom-purple-400via-indigo-400to-blue-400bg-clip-texttext-transparent'>
+            TheInnovationRevolution
           </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Witness the most revolutionary technological breakthroughs of our
-            time. These innovations are reshaping reality itself and creating
-            unprecedented opportunities for human advancement.
+          <pclassName='text-xltext-gray-300max-w-4xlmx-autoleading-relaxedmb-8'>
+            Witnessthemost revolutionarytechnologicalbreakthroughs ofourtime. Theseinnovationsare reshapingrealityitself andcreatingunprecedented opportunitiesforhuman advancement.
           </p>
-          {/* Innovation Stats */}
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
+          {/* InnovationStats */}
+          <divclassName = 'gridgrid-cols-2md: grid-cols-4gap-6max-w-4xlmx-automb-12'>
             {[
               {
-                value: '99.98%',
-                label: 'Neural Accuracy',
-                icon: '🧠',
-                color: 'text-purple-400',
-              },
+                value: '99.98%'
+                label: 'NeuralAccuracy'
+                icon: '🧠'
+                color: 'text-purple-400'
+              }
               {
-                value: '1000x',
-                label: 'Processing Speed',
-                icon: '⚡',
-                color: 'text-indigo-400',
-              },
+                value: '1000x'
+                label: 'ProcessingSpeed'
+                icon: '⚡'
+                color: 'text-indigo-400'
+              }
               {
-                value: '$5.2B',
-                label: 'Market Creation',
-                icon: '💰',
-                color: 'text-blue-400',
-              },
+                value: '$5.2B'
+                label: 'MarketCreation'
+                icon: '💰'
+                color: 'text-blue-400'
+              }
               {
-                value: '500%',
-                label: 'Enhancement',
-                icon: '📈',
-                color: 'text-emerald-400',
-              },
-            ].map((stat, index) => (
-              <div key={index} className='text-center'>
-                <div className='text-4xl mb-2'>{stat.icon}</div>
-                <div className='text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-1'>
+                value: '500%'
+                label: 'Enhancement'
+                icon: '📈'
+                color: 'text-emerald-400'
+              }
+            ].map((statindex) => (
+              <divkey = { index }className = 'text-center'>
+                <divclassName='text-4xlmb-2'>{stat.icon}</div>
+                <divclassName='text-3xlfont-extraboldbg-gradient-to-rfrom-purple-400to-blue-400bg-clip-texttext-transparentmb-1'>
                   {stat.value}
                 </div>
-                <div className='text-gray-400 text-sm font-medium'>
+                <divclassName='text-gray-400text-smfont-medium'>
                   {stat.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        {/* Innovation Cards */}
-        <div className='grid md:grid-cols-3 gap-8 mb-16'>
-          {innovations.map((innovation, index) => (
-            <div
-              key={index}
-              className='group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}
-              ></div>
-              <div className='relative p-8'>
-                {/* Innovation Icon */}
-                <div className='text-6xl mb-6 text-center group-hover:animate-pulse'>
+        {/* InnovationCards */}
+        <divclassName = 'gridmd: grid-cols-3gap-8mb-16'>
+          { innovations.map((innovationindex) = > (
+            <divkey = { index  }className = 'grouprelativebg-white/5backdrop-blur-lgrounded-2xlborderborder-white/10hover: border-purple-500/50transition-allduration-500overflow-hiddenhover:transformhover:scale-105hover:shadow-2xlhover:shadow-purple-500/20'
+              style = { { animationDelay: `${index * 200 }ms` }}
+             > {/* Cardgloweffect */}
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${innovation.color }opacity-0group-hover: opacity-10transition-allduration-500`}
+               />
+              <divclassName = 'relativep-8'>
+                {/* InnovationIcon */}
+                <divclassName='text-6xlmb-6text-centergroup-hover: animate-pulse'>
                   {innovation.icon}
                 </div>
                 {/* Title */}
-                <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight text-center'>
+                <h3className = 'text-2xlfont-boldtext-whitemb-4group-hover: text-purple-400transition-colorsduration-300leading-tighttext-center'>
                   {innovation.title}
                 </h3>
                 {/* Description */}
-                <p className='text-gray-400 mb-6 text-center leading-relaxed'>
+                <pclassName = 'text-gray-400mb-6text-centerleading-relaxed'>
                   {innovation.description}
                 </p>
                 {/* Impact */}
-                <div className='text-center mb-6'>
-                  <div
-                    className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}
+                <divclassName='text-centermb-6' > <divclassName = { `inline-blockpx-4py-2rounded-fullbg-gradient-to-r ${innovation.color }text-whitetext-smfont-bold`}
                   >
-                    ", Impact: {innovation.impact}
+                    "Impact: {innovation.impact}
                   </div>
-                </div>
-                {/* CTA Button */}
-                <a
-                  href={`/innovations/${innovation.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${innovation.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
+                </div > {/* CTAButton */}
+                <ahref = {`/innovations/${innovation.title.toLowerCase().replace(/\s+/g'-')}`}
+                  className = { `group/btnflexitems-centerjustify-centergap-2 w-fullbg-gradient-to-r ${innovation.color }hover: opacity-90text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50transformhover:-translate-y-1`}
                 >
-                  <span>Explore Innovation</span>
-                  <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300' />
+                  <span>ExploreInnovation</span>
+                  <ArrowRight,className = 'w-4 h-4group-hover/btn: translate-x-1transition-transformduration-300' />
                 </a>
               </div>
             </div>
           ))}
         </div>
-        {/* Success Stories */}
-        <div className='bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16'>
-          <div className='text-center mb-12'>
-            <h3 className='text-4xl font-extrabold text-white mb-4'>
-              Revolutionary Success Stories
+        {/* SuccessStories */}
+        <divclassName = 'bg-gradient-to-rfrom-purple-500/10to-indigo-500/10rounded-3xlp-8md: p-12borderborder-purple-500/20mb-16'>
+          <divclassName='text-centermb-12'>
+            <h3className='text-4xlfont-extraboldtext-whitemb-4'>
+              RevolutionarySuccessStories
             </h3>
-            <p className='text-xl text-gray-300 max-w-2xl mx-auto'>
-              See how our innovations are transforming industries and creating
-              unprecedented value.
+            <pclassName='text-xltext-gray-300max-w-2xlmx-auto'>
+              Seehowour innovationsaretransforming industriesandcreating
+              unprecedentedvalue.
             </p>
           </div>
-          <div className='grid md:grid-cols-3 gap-8'>
-            {[
+          <divclassName='gridmd:grid-cols-3gap-8'>
+            { [
               {
-                company: 'NeuroTech Global',
-                achievement: '500% Cognitive Enhancement',
-                revenue: '$2.1B Revenue Growth',
-                icon: <Brain className='w-8 h-8' />,
-              },
-              {
-                company: 'Quantum Dynamics',
-                achievement: '1000x Processing Speed',
-                revenue: '$3.8B Market Value',
-                icon: <Zap className='w-8 h-8' />,
-              },
-              {
-                company: 'Reality Synthesis Corp',
-                achievement: '$5.2B Market Creation',
-                revenue: '98% Customer Satisfaction',
-                icon: <Sparkles className='w-8 h-8' />,
-              },
-            ].map((story, index) => (
-              <div key={index} className='text-center'>
-                <div className='text-purple-400 mb-4 flex justify-center'>
+                company: 'NeuroTechGlobal'
+                achievement: '500% CognitiveEnhancement'
+                revenue: '$2.1BRevenueGrowth'
+                icon: <Brain,className = 'w-8 h-8' / > 
+               }
+              { 
+                company: 'QuantumDynamics'
+                achievement: '1000xProcessingSpeed'
+                revenue: '$3.8BMarketValue'
+                icon: <ZapclassName = 'w-8 h-8' / > 
+               }
+              { 
+                company: 'RealitySynthesisCorp'
+                achievement: '$5.2BMarketCreation'
+                revenue: '98% CustomerSatisfaction'
+                icon: <SparklesclassName = 'w-8 h-8' / > 
+               }
+            ].map((storyindex) => (
+              <divkey = { index }className = 'text-center'>
+                <divclassName='text-purple-400mb-4flexjustify-center'>
                   {story.icon}
                 </div>
-                <h4 className='text-xl font-bold text-white mb-2'>
+                <h4className='text-xlfont-boldtext-whitemb-2'>
                   {story.company}
                 </h4>
-                <p className='text-purple-400 font-semibold mb-1'>
+                <pclassName='text-purple-400font-semiboldmb-1'>
                   {story.achievement}
                 </p>
-                <p className='text-gray-400 text-sm'>{story.revenue}</p>
+                <pclassName='text-gray-400text-sm'>{story.revenue}</p>
               </div>
             ))}
           </div>
         </div>
-        {/* CTA Section */}
-        <div className='text-center'>
-          <div className='inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500'>
-            <div className='bg-slate-900 rounded-xl px-12 py-10'>
-              <h3 className='text-3xl font-bold text-white mb-4'>
-                Join the Innovation Revolution
+        {/* CTASection */}
+        <divclassName = 'text-center'>
+          <divclassName='inline-blockp-1rounded-2xlbg-gradient-to-rfrom-purple-500via-indigo-500to-blue-500'>
+            <divclassName='bg-slate-900rounded-xlpx-12py-10'>
+              <h3className='text-3xlfont-boldtext-whitemb-4'>
+                JointheInnovation Revolution
               </h3>
-              <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
-                Be part of the future. Get exclusive access to revolutionary
-                innovations, early research insights, and transformative
-                technologies that are reshaping our world.
+              <pclassName='text-gray-400mb-8max-w-2xlmx-auto'>
+                Bepartof thefuture. Getexclusiveaccess torevolutionaryinnovationsearlyresearchinsightsandtransformativetechnologies thatarereshaping ourworld.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='/innovations'
-                  className='bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2'
+              <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+                <ahref='/innovations'
+                  className='bg-gradient-to-rfrom-purple-500to-indigo-600hover:from-purple-400hover:to-indigo-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50flexitems-centerjustify-centergap-2'
                 >
-                  <Rocket className='w-5 h-5' />
-                  <span>Explore All Innovations</span>
+                  <RocketclassName='w-5 h-5' />
+                  <span>ExploreAllInnovations</span>
                 </a>
-                <a
-                  href='/contact'
-                  className='border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
+                <ahref='/contact'
+                  className='border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2'
                 >
-                  <span>Partner With Us</span>
-                  <ArrowRight className='w-5 h-5' />
+                  <span>PartnerWithUs</span>
+                  <ArrowRight,className='w-5 h-5' />
                 </a>
               </div>
             </div>
@@ -225,4 +205,4 @@ const March2026InnovationSpotlightBanner = () => {
     </div>
   );
 };
-export default March2026InnovationSpotlightBanner;
+exportdefaultMarch2026InnovationSpotlightBanner;

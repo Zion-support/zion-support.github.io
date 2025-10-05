@@ -1,28 +1,25 @@
 import React from 'react';
 
-interface LoadingSpinnerProps {
+interfaceLoadingSpinnerProps { 
   size?: 'small' | 'medium' | 'large';
   color?: 'blue' | 'white' | 'gray';
   text?: string;
-  fullScreen?: boolean;
-}
+  fullScreen ?  : boolean;
+ }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'medium',
-  text = 'Loading...',
+  size = 'medium'
+  text = 'Loading...'
 }) => {
-  const sizeClasses = {
-    small: 'w-8 h-8',
-    medium: 'w-12 h-12',
-    large: 'w-16 h-16',
-  };
-
-  return (
-    <div className='flex flex-col items-center justify-center min-h-[200px] px-4'>
-      <div className={`${sizeClasses[size]} animate-spin`}>
-        <svg className='w-full h-full' viewBox='0 0 24 24'>
-          <circle
-            className='opacity-25'
+  constsizeClasses = {
+    small: 'w-8 h-8'
+    medium: 'w-12h-12'
+    large: 'w-16h-16'
+  }; return (
+    <divclassName = 'flexflex-colitems-centerjustify-centermin-h-[200px] px-4'>
+      <divclassName = { `${sizeClasses[size] }animate-spin`}>
+        <svgclassName = 'w-fullh-full' viewBox='0024 24'>
+          <circleclassName='opacity-25'
             cx='12'
             cy='12'
             r='10'
@@ -30,18 +27,17 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
             strokeWidth='4'
             fill='none'
           />
-          <path
-            className='opacity-75'
+          <pathclassName='opacity-75'
             fill='currentColor'
-            d='M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 2.13 5.824 3 7.938l3-2.647z'
+            d='M412a88 0018-8V0C5.37300 5.373012h4zm2 5.291A7.9627.9620014 12H0c03.0422.135.82437.938l3-2.647z'
           />
         </svg>
       </div>
-      {text && (
-        <p className='mt-4 text-gray-600 text-sm font-medium'> {text}</p>
+      {  text  && (
+        <pclassName='mt-4text-gray-600text-smfont-medium' > {text  }</p>
       )}
     </div>
   );
 };
 
-export default LoadingSpinner;
+exportdefaultLoadingSpinner;

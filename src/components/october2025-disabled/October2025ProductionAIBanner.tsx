@@ -1,163 +1,151 @@
 import { Link } from 'react-router-dom';
-export default function October2025ProductionAIBanner() {
+exportdefaultfunction October2025ProductionAIBanner() { 
   return (
-    <section className='py-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl animate-pulse delay-1000'></div>
+    <sectionclassName = 'py-16bg-gradient-to-brfrom-indigo-600via-purple-600to-pink-600text-whiterelativeoverflow-hidden' > {' ' }
+      {/* Animatedbackgroundelements */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absolutetop-10left-10w-64h-64bg-whiterounded-fullblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-10right-10w-96h-96bg-blue-300rounded-fullblur-3xlanimate-pulsedelay-1000' />
       </div>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
-        <div className='text-center mb-12'>
-          <div className='inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4 animate-bounce'>
-            <Rocket className='w-4 h-4' />
-            <span>NEW: October 2025 Production AI Insights</span>
+      <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8relativez-10'>
+        <divclassName='text-centermb-12'>
+          <divclassName='inline-flexitems-centergap-2px-4py-2bg-white/20backdrop-blur-smrounded-fulltext-smfont-semiboldmb-4animate-bounce'>
+            <RocketclassName='w-4 h-4' />
+            <span>NEW: October2025Production AIInsights</span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold mb-4'>
-            Production AI Excellence: Latest Enterprise Strategies
+          <h2className='text-4xlmd:text-5xlfont-boldmb-4'>
+            ProductionAIExcellence: LatestEnterpriseStrategies
           </h2>
-          <p className='text-xl md:text-2xl text-white/90 max-w-3xl mx-auto'>
-            Master production AI deployment, real-time monitoring, and
-            multimodal RAG systems with our comprehensive October 2025 guides
+          <pclassName='text-xlmd:text-2xltext-white/90max-w-3xlmx-auto'>
+            MasterproductionAI deploymentreal-timemonitoringandmultimodalRAG systemswithour comprehensiveOctober2025 guides
           </p>
         </div>
-        <div className='grid md:grid-cols-3 gap-6 mb-10'>
-          {/* Article 1: Production AI Agents */}
-          <Link
-            to='/blog/ai-2025-october-production-ai-agents-best-practices'
-            className='group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20'
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-10'>
+          {/* Article1: ProductionAIAgents */}
+          <Linkto = '/blog/ai-2025-october-production-ai-agents-best-practices'
+            className='groupbg-white/10backdrop-blur-mdrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105borderborder-white/20'
           >
-            <div className='flex items-start gap-4 mb-4'>
-              <div className='p-3 bg-indigo-500 rounded-lg group-hover:bg-indigo-400 transition-colors'>
-                <Rocket className='w-6 h-6' />
+            <divclassName='flexitems-startgap-4mb-4'>
+              <divclassName='p-3bg-indigo-500rounded-lggroup-hover:bg-indigo-400transition-colors'>
+                <RocketclassName='w-6 h-6' />
               </div>
-              <div className='flex-1'>
-                <h3 className='text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors'>
-                  Production AI Agents: Best Practices 2025
+              <divclassName='flex-1'>
+                <h3className='text-xlfont-boldmb-2group-hover:text-yellow-300transition-colors'>
+                  ProductionAIAgents: BestPractices2025
                 </h3>
               </div>
             </div>
-            <p className='text-white/80 mb-4 leading-relaxed'>
-              Deploy AI agents with 99.9% uptime, 40% cost reduction, and 3x
-              productivity gains. Learn enterprise architecture, monitoring, and
-              governance strategies.
+            <pclassName='text-white/80mb-4leading-relaxed'>
+              DeployAIagents with99.9% uptime40% costreductionand3xproductivity gains. Learnenterprisearchitecturemonitoringandgovernancestrategies.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Multi-tier architecture patterns</span>
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Multi-tierarchitecturepatterns</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>60-80% cost optimization</span>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>60-80% costoptimization</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Real-world Fortune 500 case studies</span>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Real-worldFortune500 casestudies</span>
               </div>
             </div>
-            <div className='flex items-center gap-2 text-yellow-300 font-semibold group-hover:gap-3 transition-all'>
-              <span>Read Full Guide</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2text-yellow-300font-semiboldgroup-hover: gap-3transition-all'>
+              <span>ReadFullGuide</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
-          {/* Article 2: Real-Time AI Monitoring */}
-          <Link
-            to='/blog/ai-2025-october-realtime-ai-model-monitoring-enterprise'
-            className='group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20'
+          {/* Article2: Real-TimeAIMonitoring */}
+          <Linkto = '/blog/ai-2025-october-realtime-ai-model-monitoring-enterprise'
+            className='groupbg-white/10backdrop-blur-mdrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105borderborder-white/20'
           >
-            <div className='flex items-start gap-4 mb-4'>
-              <div className='p-3 bg-purple-500 rounded-lg group-hover:bg-purple-400 transition-colors'>
-                <Shield className='w-6 h-6' />
+            <divclassName='flexitems-startgap-4mb-4'>
+              <divclassName='p-3bg-purple-500rounded-lggroup-hover:bg-purple-400transition-colors'>
+                <ShieldclassName='w-6 h-6' />
               </div>
-              <div className='flex-1'>
-                <h3 className='text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors'>
-                  Real-Time AI Model Monitoring
+              <divclassName='flex-1'>
+                <h3className='text-xlfont-boldmb-2group-hover:text-yellow-300transition-colors'>
+                  Real-TimeAIModel Monitoring
                 </h3>
               </div>
             </div>
-            <p className='text-white/80 mb-4 leading-relaxed'>
-              Detect model drift, prevent hallucinations, ensure 99.95%
-              reliability. Enterprise observability platform reducing incident
-              response by 85%.
+            <pclassName='text-white/80mb-4leading-relaxed'>
+              Detectmodeldriftpreventhallucinationsensure99.95%
+              reliability. Enterpriseobservabilityplatform reducingincidentresponse by85%.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Silent failure detection</span>
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Silentfailuredetection</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Drift detection & alerting</span>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Driftdetection & alerting</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Complete observability stack</span>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Completeobservabilitystack</span>
               </div>
             </div>
-            <div className='flex items-center gap-2 text-yellow-300 font-semibold group-hover:gap-3 transition-all'>
-              <span>Read Full Guide</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2text-yellow-300font-semiboldgroup-hover: gap-3transition-all'>
+              <span>ReadFullGuide</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
-          {/* Article 3: Multimodal RAG */}
-          <Link
-            to='/blog/ai-2025-october-multimodal-rag-systems-revolution'
-            className='group bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20'
+          {/* Article3: MultimodalRAG */}
+          <Linkto = '/blog/ai-2025-october-multimodal-rag-systems-revolution'
+            className='groupbg-white/10backdrop-blur-mdrounded-2xlp-6hover: bg-white/20transition-allduration-300hover:scale-105borderborder-white/20'
           >
-            <div className='flex items-start gap-4 mb-4'>
-              <div className='p-3 bg-pink-500 rounded-lg group-hover:bg-pink-400 transition-colors'>
-                <TrendingUp className='w-6 h-6' />
+            <divclassName='flexitems-startgap-4mb-4'>
+              <divclassName='p-3bg-pink-500rounded-lggroup-hover:bg-pink-400transition-colors'>
+                <TrendingUpclassName='w-6 h-6' />
               </div>
-              <div className='flex-1'>
-                <h3 className='text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors'>
-                  Multimodal RAG Systems Revolution
+              <divclassName='flex-1'>
+                <h3className='text-xlfont-boldmb-2group-hover:text-yellow-300transition-colors'>
+                  MultimodalRAGSystems Revolution
                 </h3>
               </div>
             </div>
-            <p className='text-white/80 mb-4 leading-relaxed'>
-              Unlock images, video, audio, and diagrams with 68% higher
-              accuracy. Next-generation knowledge retrieval for enterprise
-              knowledge bases.
+            <pclassName='text-white/80mb-4leading-relaxed'>
+              Unlockimagesvideoaudioanddiagramswith 68% higheraccuracy. Next-generationknowledgeretrieval forenterpriseknowledge bases.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Images, video & audio search</span>
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Imagesvideo & audiosearch</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>68% higher retrieval accuracy</span>
+              <divclassName = 'flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>68% higherretrievalaccuracy</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <CheckCircle className='w-4 h-4 text-green-300' />
-                <span>Implementation architecture</span>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <CheckCircle,className='w-4 h-4text-green-300' />
+                <span>Implementationarchitecture</span>
               </div>
             </div>
-            <div className='flex items-center gap-2 text-yellow-300 font-semibold group-hover:gap-3 transition-all'>
-              <span>Read Full Guide</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName='flexitems-centergap-2text-yellow-300font-semiboldgroup-hover: gap-3transition-all'>
+              <span>ReadFullGuide</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
         </div>
-        <div className='text-center'>
-          <div className='inline-flex flex-col sm:flex-row gap-4'>
-            <Link
-              to='/blog'
-              className='px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-yellow-300 hover:text-indigo-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105'
+        <divclassName='text-center'>
+          <divclassName='inline-flexflex-colsm:flex-rowgap-4'>
+            <Linkto='/blog'
+              className='px-8py-4bg-whitetext-indigo-600rounded-lgfont-boldtext-lghover:bg-yellow-300hover:text-indigo-700transition-allduration-300shadow-xlhover:shadow-2xlhover:scale-105'
             >
-              Explore All Production AI Articles
+              ExploreAllProduction AIArticles
             </Link>
-            <Link
-              to='/contact'
-              className='px-8 py-4 bg-indigo-900/50 backdrop-blur-sm border-2 border-white/30 text-white rounded-lg font-bold text-lg hover:bg-indigo-900/70 transition-all duration-300 hover:scale-105'
+            <Linkto='/contact'
+              className='px-8py-4bg-indigo-900/50backdrop-blur-smborder-2border-white/30text-whiterounded-lgfont-boldtext-lghover:bg-indigo-900/70transition-allduration-300hover:scale-105'
             >
-              Get Expert Implementation Help
+              GetExpertImplementation Help
             </Link>
           </div>
-          <p className='mt-6 text-white/70 text-sm'>
-            🚀 Join 5,000+ enterprises implementing production-grade AI systems
+          <pclassName='mt-6text-white/70text-sm'>
+            🚀 Join 5000+ enterprisesimplementingproduction-gradeAIsystems
           </p>
         </div>
       </div>

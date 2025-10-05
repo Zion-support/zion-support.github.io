@@ -1,163 +1,159 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export default function October2025NewContentMasterBannerV2() {
+exportdefaultfunction October2025NewContentMasterBannerV2() { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow'>
-      {' '}
-      {/* Animated Background */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-10 left-10 w-80 h-80 bg-orange-400 rounded-full filter blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-10 right-10 w-80 h-80 bg-rose-400 rounded-full filter blur-3xl animate-pulse delay-1000'></div>
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-rose-900via-orange-900to-amber-900border-4border-orange-500rounded-2xlshadow-2xlmb-8animate-pulse-slow' > {' ' }
+      {/* AnimatedBackground */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absolutetop-10left-10w-80h-80bg-orange-400rounded-fullfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-10right-10w-80h-80bg-rose-400rounded-fullfilterblur-3xlanimate-pulsedelay-1000' />
       </div>
-      <div className='relative z-10 p-8 md:p-12'>
+      <divclassName='relativez-10p-8md: p-12'>
         {/* Header */}
-        <div className='text-center mb-8'>
-          <div className='inline-flex items-center gap-2 bg-orange-500/30 border-2 border-orange-400 rounded-full px-6 py-3 backdrop-blur-sm mb-4 animate-bounce-slow'>
-            <Rocket className='w-6 h-6 text-yellow-300 animate-pulse' />
-            <span className='text-yellow-300 font-black text-lg tracking-wider'>
-              🚀 MAJOR CONTENT LAUNCH • OCTOBER 2025 • BREAKTHROUGH INNOVATIONS
+        <divclassName = 'text-centermb-8'>
+          <divclassName='inline-flexitems-centergap-2bg-orange-500/30border-2border-orange-400rounded-fullpx-6py-3backdrop-blur-smmb-4animate-bounce-slow'>
+            <RocketclassName='w-6 h-6text-yellow-300animate-pulse' />
+            <spanclassName='text-yellow-300font-blacktext-lgtracking-wider'>
+              🚀 MAJORCONTENTLAUNCH • OCTOBER2025 • BREAKTHROUGHINNOVATIONS
               🚀
             </span>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-spin-slow' />
+            <SparklesclassName='w-6 h-6text-yellow-300animate-spin-slow' />
           </div>
-          <h2 className='text-4xl md:text-6xl font-black mb-4 bg-gradient-to-r from-orange-200 via-yellow-200 to-orange-200 bg-clip-text text-transparent leading-tight'>
-            Revolutionary AI Solutions Just Launched
+          <h2className='text-4xlmd: text-6xlfont-blackmb-4bg-gradient-to-rfrom-orange-200via-yellow-200to-orange-200bg-clip-texttext-transparentleading-tight'>
+            RevolutionaryAISolutions JustLaunched
           </h2>
-          <p className='text-2xl md:text-3xl font-bold text-orange-100 mb-6'>
-            Two Game-Changing Breakthroughs Available Now
+          <pclassName='text-2xlmd:text-3xlfont-boldtext-orange-100mb-6'>
+            TwoGame-ChangingBreakthroughsAvailable Now
           </p>
         </div>
-        {/* Two-Column Layout */}
-        <div className='grid md:grid-cols-2 gap-6 mb-8'>
-          {/* Cognitive Hyperautomation */}
-          <div className='bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all duration-300'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Star className='w-8 h-8 text-purple-300 animate-pulse' />
-              <h3 className='text-2xl font-black text-purple-200'>
-                Cognitive Hyperautomation
+        {/* Two-ColumnLayout */}
+        <divclassName = 'gridmd: grid-cols-2gap-6mb-8'>
+          {/* CognitiveHyperautomation */}
+          <divclassName = 'bg-gradient-to-brfrom-purple-800/60to-purple-900/60backdrop-blur-mdborder-2border-purple-400/50rounded-2xlp-6shadow-2xlhover: scale-105transition-allduration-300'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <StarclassName='w-8 h-8text-purple-300animate-pulse' />
+              <h3className='text-2xlfont-blacktext-purple-200'>
+                CognitiveHyperautomation
               </h3>
             </div>
-            <div className='space-y-3 mb-6'>
-              <div className='flex justify-between items-center'>
-                <span className='text-purple-300 font-semibold'>
-                  Total Value:
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-purple-300font-semibold'>
+                  TotalValue:
                 </span>
-                <span className='text-3xl font-black text-purple-200'>
+                <spanclassName='text-3xlfont-blacktext-purple-200'>
                   $38.5B
                 </span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-purple-300 font-semibold'>ROI:</span>
-                <span className='text-3xl font-black text-purple-200'>
-                  15,200%
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-purple-300font-semibold'>ROI:</span>
+                <spanclassName='text-3xlfont-blacktext-purple-200'>
+                  15200%
                 </span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-purple-300 font-semibold'>
-                  Automation:
-                </span>
-                <span className='text-3xl font-black text-purple-200'>
+              <divclassName = 'flexjustify-betweenitems-center'>
+                <spanclassName='text-purple-300font-semibold'>
+                  Automation: </span>
+                <spanclassName='text-3xlfont-blacktext-purple-200'>
                   98.9%
                 </span>
               </div>
             </div>
-            <div className='bg-purple-900/40 rounded-lg p-4 mb-4 border border-purple-500/30'>
-              <p className='text-purple-200 text-sm font-semibold mb-2'>
-                Fortune 50 Success:
+            <divclassName='bg-purple-900/40rounded-lgp-4mb-4borderborder-purple-500/30'>
+              <pclassName='text-purple-200text-smfont-semiboldmb-2'>
+                Fortune50Success:
               </p>
-              <p className='text-purple-100 text-lg'>
-                $14.7B business impact • 25,000+ AI agents
+              <pclassName='text-purple-100text-lg'>
+                $14.7Bbusinessimpact • 25000+ AIagents
               </p>
             </div>
-            <Link
-              to='/blog/ai-2025-october-cognitive-hyperautomation-platform'
-              className='block text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300'
+            <Linkto = '/blog/ai-2025-october-cognitive-hyperautomation-platform'
+              className='blocktext-centerbg-gradient-to-rfrom-purple-500to-pink-500hover: from-purple-600hover:to-pink-600text-whitefont-blacktext-basepx-6py-3rounded-lgshadow-lghover:shadow-xltransition-allduration-300'
             >
-              Explore Platform →
+              ExplorePlatform →
             </Link>
           </div>
-          {/* FinTech Transformation */}
-          <div className='bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-md border-2 border-blue-400/50 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all duration-300'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Star className='w-8 h-8 text-blue-300 animate-pulse' />
-              <h3 className='text-2xl font-black text-blue-200'>
-                FinTech AI Transformation
+          {/* FinTechTransformation */}
+          <divclassName = 'bg-gradient-to-brfrom-blue-800/60to-blue-900/60backdrop-blur-mdborder-2border-blue-400/50rounded-2xlp-6shadow-2xlhover: scale-105transition-allduration-300'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <StarclassName='w-8 h-8text-blue-300animate-pulse' />
+              <h3className='text-2xlfont-blacktext-blue-200'>
+                FinTechAITransformation
               </h3>
             </div>
-            <div className='space-y-3 mb-6'>
-              <div className='flex justify-between items-center'>
-                <span className='text-blue-300 font-semibold'>
-                  Business Value:
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-blue-300font-semibold'>
+                  BusinessValue:
                 </span>
-                <span className='text-3xl font-black text-blue-200'>
+                <spanclassName='text-3xlfont-blacktext-blue-200'>
                   $22.8B
                 </span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-blue-300 font-semibold'>ROI:</span>
-                <span className='text-3xl font-black text-blue-200'>
-                  18,400%
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-blue-300font-semibold'>ROI:</span>
+                <spanclassName='text-3xlfont-blacktext-blue-200'>
+                  18400%
                 </span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-blue-300 font-semibold'>Automation:</span>
-                <span className='text-3xl font-black text-blue-200'>96%</span>
+              <divclassName = 'flexjustify-betweenitems-center'>
+                <spanclassName='text-blue-300font-semibold'>Automation: </span>
+                <spanclassName='text-3xlfont-blacktext-blue-200'>96%</span>
               </div>
             </div>
-            <div className='bg-blue-900/40 rounded-lg p-4 mb-4 border border-blue-500/30'>
-              <p className='text-blue-200 text-sm font-semibold mb-2'>
-                Fortune 100 Success:
+            <divclassName='bg-blue-900/40rounded-lgp-4mb-4borderborder-blue-500/30'>
+              <pclassName='text-blue-200text-smfont-semiboldmb-2'>
+                Fortune100Success:
               </p>
-              <p className='text-blue-100 text-lg'>
-                47M customers • 92% satisfaction • 72 countries
+              <pclassName='text-blue-100text-lg'>
+                47Mcustomers • 92% satisfaction • 72countries
               </p>
             </div>
-            <Link
-              to='/case-studies/fintech-ai-transformation-2025'
-              className='block text-center bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300'
+            <Linkto='/case-studies/fintech-ai-transformation-2025'
+              className='blocktext-centerbg-gradient-to-rfrom-blue-500to-indigo-500hover:from-blue-600hover:to-indigo-600text-whitefont-blacktext-basepx-6py-3rounded-lgshadow-lghover:shadow-xltransition-allduration-300'
             >
-              Read Case Study →
+              ReadCaseStudy →
             </Link>
           </div>
         </div>
-        {/* Combined Value Proposition */}
-        <div className='bg-gradient-to-r from-orange-800/60 to-amber-800/60 backdrop-blur-md border-2 border-orange-400/50 rounded-2xl p-8 text-center shadow-2xl'>
-          <h3 className='text-3xl font-black text-orange-200 mb-4'>
-            Combined Innovation Impact
+        {/* CombinedValueProposition */}
+        <divclassName = 'bg-gradient-to-rfrom-orange-800/60to-amber-800/60backdrop-blur-mdborder-2border-orange-400/50rounded-2xlp-8text-centershadow-2xl'>
+          <h3className='text-3xlfont-blacktext-orange-200mb-4'>
+            CombinedInnovationImpact
           </h3>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-6'>
+          <divclassName='gridgrid-cols-2md: grid-cols-4gap-6mb-6'>
             <div>
-              <div className='text-4xl font-black text-orange-300 mb-2'>
+              <divclassName='text-4xlfont-blacktext-orange-300mb-2'>
                 $61.3B
               </div>
-              <div className='text-sm text-orange-200'>Total Value Created</div>
+              <divclassName='text-smtext-orange-200'>TotalValueCreated</div>
             </div>
             <div>
-              <div className='text-4xl font-black text-yellow-300 mb-2'>
-                16,800%
+              <divclassName='text-4xlfont-blacktext-yellow-300mb-2'>
+                16800%
               </div>
-              <div className='text-sm text-orange-200'>Average ROI</div>
+              <divclassName = 'text-smtext-orange-200'>AverageROI</div>
             </div>
             <div>
-              <div className='text-4xl font-black text-rose-300 mb-2'>
+              <divclassName='text-4xlfont-blacktext-rose-300mb-2'>
                 97.5%
               </div>
-              <div className='text-sm text-orange-200'>Avg Automation</div>
+              <divclassName='text-smtext-orange-200'>AvgAutomation</div>
             </div>
             <div>
-              <div className='text-sm text-orange-200'>
-                Enterprise Validated
+              <divclassName='text-smtext-orange-200'>
+                EnterpriseValidated
               </div>
             </div>
           </div>
-          <p className='text-xl text-orange-100 font-semibold mb-4'>
-            Two revolutionary solutions delivering unprecedented business
+          <pclassName='text-xltext-orange-100font-semiboldmb-4'>
+            Tworevolutionarysolutions deliveringunprecedentedbusiness
             transformation
           </p>
-          <div className='inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg border-2 border-white/20'>
-            <Sparkles className='w-6 h-6 animate-spin-slow' />
-            <span>Enterprise-Proven AI Innovation</span>
-            <Rocket className='w-6 h-6 animate-pulse' />
+          <divclassName='inline-flexitems-centergap-3bg-gradient-to-rfrom-orange-500to-rose-500text-whitefont-blacktext-lgpx-8py-4rounded-xlshadow-lgborder-2border-white/20'>
+            <SparklesclassName='w-6 h-6animate-spin-slow' />
+            <span>Enterprise-ProvenAIInnovation</span>
+            <RocketclassName='w-6 h-6animate-pulse' />
           </div>
         </div>
       </div>

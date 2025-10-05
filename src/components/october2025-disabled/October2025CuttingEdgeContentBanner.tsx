@@ -1,139 +1,134 @@
 import { Link } from 'react-router-dom';
-const October2025CuttingEdgeContentBanner = () => {
-  const featuredArticles = [
+constOctober2025CuttingEdgeContentBanner = () => { 
+  constfeaturedArticles = [
     {
-      title: "Next-Gen Autonomous Orchestration — Self-Healing Systems at Scale",
-      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",
-      category: "Autonomous Systems",
-      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
-      gradient: "from-cyan-500 to-blue-600",
-      metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
-    },
-    {
-      title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",
-      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",
-      category: "LLM Engineering",
-      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
-      gradient: "from-purple-500 to-pink-600",
-      metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
-    },
-    {
-      title: "Real-Time AI Personalization at Scale — 100M+ Users",
-      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",
-      category: "ML at Scale",
-      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
-      gradient: "from-orange-500 to-red-600",
-      metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
-    }
-  ];
-  return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 border-y border-purple-500/20">
-      {/* Animated background effect */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob"></div>
-        <div className="absolute top-0 -right-4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-20 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-4000"></div>
+      title: "Next-GenAutonomousOrchestration — Self-HealingSystemsat Scale"
+      subtitle: "99.99% Uptime85% CostReductionZero-TouchOperations"
+      category: "AutonomousSystems"
+      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration"
+      gradient: "from-cyan-500to-blue-600"
+      icon: <ZapclassName = "w-6 h-6" / > 
+      metrics: ["99.99% Uptime""85% CostCut""95% FasterRecovery"]
+     }
+    { 
+      title: "AdvancedPromptEngineering Mastery — 10xLLMPerformance"
+      subtitle: "95%+ Accuracy80% CostReductionProduction-GradeTechniques"
+      category: "LLMEngineering"
+      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery"
+      gradient: "from-purple-500to-pink-600"
+      icon: <SparklesclassName = "w-6 h-6" / > 
+      metrics: ["10xPerformance""95%+ Accuracy""$990KSavings"]
+     }
+    { 
+      title: "Real-TimeAIPersonalization atScale — 100M+ Users"
+      subtitle: "340% RevenueLiftSub-50msLatency10MDecisions/Second"
+      category: "MLatScale"
+      link: "/blog/ai-2025-oct-real-time-personalization-at-scale"
+      gradient: "from-orange-500to-red-600"
+      icon: <TrendingUpclassName = "w-6 h-6" / > 
+      metrics: ["340% Revenue""Sub-50msLatency""100M+ Users"]
+     }
+  ]; return (
+    <divclassName = "relativeoverflow-hiddenbg-gradient-to-brfrom-slate-900via-purple-900to-slate-900border-yborder-purple-500/20">
+      {/* Animatedbackgroundeffect */}
+      <divclassName="absoluteinset-0opacity-20">
+        <divclassName="absolutetop-0 -left-4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-blob" />
+        <divclassName="absolutetop-0 -right-4 w-96h-96bg-cyan-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-blobanimation-delay-2000" />
+        <divclassName="absolute -bottom-8left-20w-96h-96bg-pink-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-blobanimation-delay-4000" />
       </div>
-      <div className="relative container mx-auto px-4 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-4">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
-            <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              🔥 OCTOBER 1, 2025 — JUST PUBLISHED TODAY
+      <divclassName="relativecontainermx-autopx-4py-12">
+        {/* HeaderSection */}
+        <divclassName="text-centermb-10">
+          <divclassName="inline-flexitems-centergap-2px-4py-2bg-gradient-to-rfrom-purple-500/20to-cyan-500/20rounded-fullborderborder-purple-500/30mb-4">
+            <SparklesclassName="w-5 h-5text-cyan-400animate-pulse" />
+            <spanclassName="text-smfont-semiboldtext-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400to-purple-400">
+              🔥 OCTOBER 12025 — JUSTPUBLISHEDTODAY
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            3 Game-Changing Enterprise AI Breakthroughs
+          <h2className = "text-4xlmd: text-5xlfont-boldtext-whitemb-4leading-tight">
+            3Game-ChangingEnterpriseAI Breakthroughs
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-            🚀 <span className="font-semibold text-purple-300">Master autonomous systems</span> with self-healing capabilities, 
-            <span className="font-semibold text-cyan-300"> unlock 10x LLM performance</span> with advanced prompting, and 
-            <span className="font-semibold text-pink-300"> deliver personalization at massive scale</span> — Essential reading for technology leaders!
+          <pclassName="text-xltext-gray-300max-w-4xlmx-auto">
+            🚀 <spanclassName="font-semiboldtext-purple-300">Masterautonomoussystems</span> withself-healingcapabilities
+            <spanclassName = "font-semiboldtext-cyan-300"> unlock10xLLM performance</span> withadvancedpromptingand 
+            <spanclassName = "font-semiboldtext-pink-300"> deliverpersonalizationat massivescale</span> — Essentialreadingfor technologyleaders!
           </p>
         </div>
-        {/* Featured Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {featuredArticles.map((article, index) => (
-            <Link
-              key={index}
-              to={article.link}
-              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+        {/* FeaturedArticlesGrid */}
+        <divclassName="gridmd: grid-cols-3gap-6mb-8">
+          { featuredArticles.map((articleindex) = > (
+            <Linkkey = { index  }to={ article.link } className="grouprelativeoverflow-hiddenbg-slate-800/50backdrop-blur-smrounded-2xlborderborder-slate-700/50hover: border-purple-500/50transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-purple-500/20"
             >
-              {/* Card gradient overlay */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-              <div className="relative p-6">
-                {/* Icon and Category */}
-                <div className="flex items-center justify-between mb-4" > <div className={`p-3 rounded-xl bg-gradient-to-br ${article.gradient} text-white shadow-lg`}>
+              {/* Cardgradientoverlay */}
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${article.gradient }opacity-0group-hover: opacity-10transition-opacityduration-300`} />
+              <divclassName = "relativep-6">
+                {/* IconandCategory */}
+                <divclassName="flexitems-centerjustify-betweenmb-4"  > <divclassName = { `p-3rounded-xlbg-gradient-to-br ${article.gradient }text-whiteshadow-lg`}>
                     {article.icon}
                   </div>
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
+                  <spanclassName = "text-xsfont-semiboldpx-3py-1rounded-fullbg-purple-500/20text-purple-300borderborder-purple-500/30">
                     {article.category}
                   </span>
                 </div>
                 {/* Title */}
-                <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 transition-all duration-300">
+                <h3className="text-lgfont-boldtext-whitemb-2line-clamp-2group-hover: text-transparentgroup-hover:bg-clip-textgroup-hover:bg-gradient-to-rgroup-hover:from-purple-400group-hover:to-cyan-400transition-allduration-300">
                   {article.title}
                 </h3>
                 {/* Subtitle */}
-                <p className="text-sm text-gray-400 mb-4 line-clamp-2">
+                <pclassName = "text-smtext-gray-400mb-4line-clamp-2">
                   {article.subtitle}
                 </p>
                 {/* Metrics */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {article.metrics.map((metric, idx) => (
-                    <span
-key={idx}
-                      className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50"
+                <divclassName="flexflex-wrapgap-2mb-4">
+                  { article.metrics.map((metricidx) = > (
+                    <spankey = { idx  }className = "text-xspx-2py-1rounded-mdbg-slate-700/50text-gray-300borderborder-slate-600/50"
                     >
                       {metric}
                     </span>
                   ))}
                 </div>
-                {/* Read More Link */}
-                <div className="flex items-center text-sm font-semibold text-purple-400 group-hover:text-cyan-400 transition-colors">
-                  Read Full Article
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                {/* ReadMoreLink */}
+                <divclassName = "flexitems-centertext-smfont-semiboldtext-purple-400group-hover: text-cyan-400transition-colors">
+                  ReadFullArticle
+                  <ArrowRight,className="w-4 h-4ml-2group-hover:translate-x-1transition-transform" />
                 </div>
               </div>
             </Link>
           ))}
         </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-flex flex-col sm:flex-row gap-4">
-            <Link
-              to="/blog"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
+        {/* CTASection */}
+        <divclassName = "text-center">
+          <divclassName="inline-flexflex-colsm: flex-rowgap-4">
+            <Linkto="/blog"
+              className="grouppx-8py-4bg-gradient-to-rfrom-purple-600to-cyan-600text-whitefont-boldrounded-xlhover:from-purple-500hover:to-cyan-500transition-allduration-300shadow-lghover:shadow-purple-500/50hover:scale-105"
             >
-              <span className="flex items-center gap-2">
-                Explore All Latest Content
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <spanclassName="flexitems-centergap-2">
+                ExploreAllLatest Content
+                <ArrowRight,className="w-5 h-5group-hover:translate-x-1transition-transform" />
               </span>
             </Link>
-            <Link
-              to="/contact"
-              className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover:border-purple-500 hover:bg-slate-700/80 transition-all duration-300"
+            <Linkto="/contact"
+              className="px-8py-4bg-slate-800/80backdrop-blur-smtext-whitefont-boldrounded-xlborderborder-purple-500/30hover:border-purple-500hover:bg-slate-700/80transition-allduration-300"
             >
-              Schedule Expert Consultation
+              ScheduleExpertConsultation
             </Link>
           </div>
         </div>
-        {/* Additional Info */}
-        <div className="mt-8 text-center">
-          <p className="text-sm text-gray-400">
-            💡 <span className="text-gray-300 font-semibold">Join 50,000+ AI leaders</span> who get weekly insights on enterprise AI implementation
+        {/* AdditionalInfo */}
+        <divclassName = "mt-8text-center">
+          <pclassName="text-smtext-gray-400">
+            💡 <spanclassName="text-gray-300font-semibold">Join50000+ AIleaders</span> whogetweekly insightsonenterprise AIimplementation
           </p>
         </div>
       </div>
-      <style > {`
-        @keyframes blob {
-          0%, 100% { transform: translate(0, 0) scale(1); }
-          33% { transform: translate(30px, -50px) scale(1.1); }
-          66% { transform: translate(-20px, 20px) scale(0.9); }
+      <style  > {`
+        @keyframesblob {
+          0%100% { transform: translate(00) scale(1); }
+          33% { transform: translate(30px-50px) scale(1.1); }
+          66% { transform: translate(-20px20px) scale(0.9); }
         }
-        .animate-blob {",
-      animation: blob 7s infinite;
+        .animate-blob {"
+      animation: blob7sinfinite;
         }
         .animation-delay-2000 {
           animation-delay: 2s;
@@ -145,4 +140,4 @@ key={idx}
     </div>
   );
 };
-export default October2025CuttingEdgeContentBanner;
+exportdefaultOctober2025CuttingEdgeContentBanner;

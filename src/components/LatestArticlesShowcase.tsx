@@ -1,59 +1,51 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { newArticles2025 } from '../content/new-articles-2025';
-const LatestArticlesShowcase: React.FC = () => {
-  const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);
-  return (
-    <section className='py-20 bg-white'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-12'>
-          <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-            Latest Articles & Research
+constLatestArticlesShowcase: React.FC = () => { 
+  constlatestArticles = newArticles2025.filter(a => a.featured).slice(06); return (
+    <sectionclassName = 'py-20bg-white'>
+      <divclassName='containermx-autopx-6'>
+        <divclassName='text-centermb-12'>
+          <h2className='text-4xlfont-boldtext-gray-900mb-4'>
+            LatestArticles & Research
           </h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Explore cutting-edge insights on AI, automation, and emerging
-            technologies
+          <pclassName='text-xltext-gray-600max-w-3xlmx-auto'>
+            Explorecutting-edgeinsightson AIautomationandemergingtechnologies
           </p>
         </div>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          {latestArticles.map(article => (
-            <Link
-              key={article.id}
-              to={article.link}
-              className='group bg-white rounded-xl shadow-md hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-100 hover:border-indigo-300'
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8'>
+          {latestArticles.map(article = > (
+            <Linkkey = { article.id  }to={ article.link } className='groupbg-whiterounded-xlshadow-mdhover: shadow-2xltransition-allduration-300overflow-hiddenborderborder-gray-100hover:border-indigo-300'
             >
-              <div className='p-6'>
-                <div className='flex items-center justify-between mb-3'>
-                  <span className='text-xs font-semibold text-indigo-600 uppercase tracking-wide'>
+              <divclassName='p-6'>
+                <divclassName='flexitems-centerjustify-betweenmb-3'>
+                  <spanclassName='text-xsfont-semiboldtext-indigo-600uppercasetracking-wide'>
                     {article.category}
                   </span>
-                  {article.featured && (
-                    <span className='bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full font-medium'>
+                  {  article.featured  && (
+                    <spanclassName = 'bg-yellow-100text-yellow-800text-xspx-2py-1rounded-fullfont-medium'>
                       Featured
-                    </span>
-                  )}
+                    </span > )  }
                 </div>
-                <h3 className='text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors'>
+                <h3className = 'text-xlfont-boldtext-gray-900mb-3group-hover: text-indigo-600transition-colors'>
                   {article.title}
                 </h3>
-                <p className='text-gray-600 text-sm mb-4 line-clamp-3'>
+                <pclassName = 'text-gray-600text-smmb-4line-clamp-3'>
                   {article.description}
                 </p>
-                <div className='flex items-center justify-between text-sm'>
-                  <div className='flex items-center text-gray-500'>
-                    <Clock className='w-4 h-4 mr-1' />
+                <divclassName='flexitems-centerjustify-betweentext-sm'>
+                  <divclassName='flexitems-centertext-gray-500'>
+                    <ClockclassName='w-4 h-4mr-1' />
                     {article.readTime}
                   </div>
-                  <div className='text-indigo-600 font-semibold group-hover:gap-2 flex items-center transition-all'>
-                    Read More
-                    <ArrowRight className='w-4 h-4 group-hover:translate-x-1 transition-transform' />
+                  <divclassName='text-indigo-600font-semiboldgroup-hover: gap-2flexitems-centertransition-all'>
+                    ReadMore
+                    <ArrowRight,className='w-4 h-4group-hover:translate-x-1transition-transform' />
                   </div>
                 </div>
-                <div className='flex flex-wrap gap-2 mt-4'>
-                  {article.tags.slice(0, 3).map(tag => (
-                    <span
-                      key={tag}
-                      className='text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full'
+                <divclassName='flexflex-wrapgap-2mt-4'>
+                  { article.tags.slice(03).map(tag = > (
+                    <spankey = { tag  }className = 'text-xsbg-gray-100text-gray-700px-2py-1rounded-full'
                     >
                       {tag}
                     </span>
@@ -63,17 +55,16 @@ const LatestArticlesShowcase: React.FC = () => {
             </Link>
           ))}
         </div>
-        <div className='text-center mt-12'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg'
+        <divclassName = 'text-centermt-12'>
+          <Linkto='/blog'
+            className='inline-flexitems-centergap-2bg-indigo-600text-whitepx-8py-4rounded-xlfont-boldtext-lghover: bg-indigo-700transition-allhover:scale-105shadow-lg'
           >
-            View All Articles
-            <ArrowRight className='w-6 h-6' />
+            ViewAllArticles
+            <ArrowRight,className='w-6 h-6' />
           </Link>
         </div>
       </div>
     </section>
   );
 };
-export default LatestArticlesShowcase;
+exportdefaultLatestArticlesShowcase;

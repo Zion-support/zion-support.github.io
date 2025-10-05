@@ -1,40 +1,36 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function AI2029SelfHealingPlatforms(): React.JSX.Element {
+exportdefaultfunction AI2029SelfHealingPlatforms(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>AI 2029: Self‑Healing Platforms — Auto‑Contain in &lt;60s</title>
-        <meta
-          name='description'
-          content='Policy‑tested playbooks, budgeted actions, and live canaries that auto‑contain incidents in under a minute.'
+        <title>AI2029: Self‑HealingPlatforms — Auto‑Containin &lt; 60s</title>
+        <meta name='description'
+          content='Policy‑testedplaybooksbudgetedactionsandlivecanaries thatauto‑containincidentsin underaminute.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2029-self-healing-platforms'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2029-self-healing-platforms'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          AI 2029: Self‑Healing Platforms
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          AI2029: Self‑HealingPlatforms
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Budgeted Actions • Live Canaries • Instant Rollback
+        <pclassName='text-zion-slate-lightmb-8'>
+          BudgetedActions • LiveCanaries • InstantRollback
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Build incident‑resilient platforms that auto‑contain failures within
-            60 seconds using policy‑tested playbooks, KPI‑linked budgets, and
-            live canaries. Minimize blast radius without slowing delivery.
+            Buildincident‑resilientplatformsthat auto‑containfailureswithin
+            60secondsusing policy‑testedplaybooksKPI‑linkedbudgetsandlivecanaries. Minimizeblastradius withoutslowingdelivery.
           </p>
           <p>
-            We cover budget gates, declarative runbooks, and attested rollbacks
-            that keep reliability predictable.
+            Wecoverbudget gatesdeclarativerunbooksandattestedrollbacks
+            thatkeepreliability predictable.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

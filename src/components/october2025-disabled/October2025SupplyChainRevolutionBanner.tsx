@@ -1,320 +1,314 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  CurrencyDollarIcon, 
-  ChartBarIcon, 
-  CheckCircleIcon, 
-  TruckIcon, 
-  SparklesIcon, 
-  ClockIcon, 
-  GlobeAltIcon, 
-  ArrowRightIcon 
+  CurrencyDollarIcon
+  ChartBarIcon
+  CheckCircle,Icon
+  TruckIcon
+  SparklesIcon
+  ClockIcon
+  GlobeAltIcon
+  ArrowRight,Icon 
 } from '@heroicons/react/24/outline';
 
-const October2025SupplyChainRevolutionBanner: React.FC = () => {
+constOctober2025SupplyChainRevolutionBanner: React.FC = () => { 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-16 px-6 rounded-3xl shadow-2xl my-12 border-4 border-emerald-400/50" > {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+    <divclassName = "relativeoverflow-hiddenbg-gradient-to-brfrom-emerald-900via-teal-800to-cyan-900py-16px-6rounded-3xlshadow-2xlmy-12border-4border-emerald-400/50"  > {/* AnimatedBackgroundElements */ }
+      <divclassName = "absoluteinset-0overflow-hidden">
+        <divclassName="absolute -top-40 -right-40w-96h-96bg-emerald-500/20rounded-fullblur-3xlanimate-pulse" />
+        <divclassName="absolute -bottom-40 -left-40w-96h-96bg-cyan-500/20rounded-fullblur-3xlanimate-pulse" style={{ animationDelay: '1s' }} />
+        <divclassName = "absolutetop-1/2left-1/2transform -translate-x-1/2 -translate-y-1/2 w-64h-64bg-teal-500/10rounded-fullblur-2xlanimate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
-      <div className="container mx-auto relative z-10">
-        {/* Breaking News Badge */}
-        <div className="flex items-center justify-center gap-3 mb-6">
-          <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm border-2 border-red-400 rounded-full px-6 py-2 animate-pulse">
-            <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+      <divclassName = "containermx-autorelativez-10">
+        {/* BreakingNewsBadge */}
+        <divclassName="flexitems-centerjustify-centergap-3mb-6">
+          <divclassName="flexitems-centergap-2bg-red-500/20backdrop-blur-smborder-2border-red-400rounded-fullpx-6py-2animate-pulse">
+            <spanclassName="relativeflexh-3 w-3">
+              <spanclassName="animate-pingabsoluteinline-flexh-fullw-fullrounded-fullbg-red-400opacity-75" />
+              <spanclassName="relativeinline-flexrounded-fullh-3 w-3bg-red-500" />
             </span>
-            <span className="text-red-200 font-bold text-sm uppercase tracking-wider">🔥 Breaking News - October 1, 2025</span>
+            <spanclassName="text-red-200font-boldtext-smuppercasetracking-wider">🔥 BreakingNews - October 12025</span>
           </div>
         </div>
 
-        {/* Main Headline */}
-        <h2 className="text-5xl md:text-6xl font-extrabold text-center mb-6 text-white leading-tight">
-          <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 bg-clip-text text-transparent animate-gradient">
-            Autonomous Supply Chain Revolution
+        {/* MainHeadline */}
+        <h2className = "text-5xlmd: text-6xlfont-extraboldtext-centermb-6text-whiteleading-tight">
+          <spanclassName="bg-gradient-to-rfrom-emerald-300via-teal-200to-cyan-300bg-clip-texttext-transparentanimate-gradient">
+            AutonomousSupplyChain Revolution
           </span>
         </h2>
 
-        <p className="text-2xl md:text-3xl text-center text-emerald-100 mb-8 font-semibold max-w-5xl mx-auto">
-          Fortune 100 Retail Giant Achieves <span className="text-yellow-300">$4.2B Value Creation</span> with 
-          AI-Powered Supply Chain Intelligence
+        <pclassName="text-2xlmd:text-3xltext-centertext-emerald-100mb-8font-semiboldmax-w-5xlmx-auto">
+          Fortune100Retail GiantAchieves <spanclassName="text-yellow-300">$4.2BValueCreation</span> withAI-PoweredSupplyChain Intelligence
         </p>
 
-        {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10 max-w-6xl mx-auto">
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-2">
-              <CurrencyDollarIcon className="w-8 h-8 text-yellow-300" /> />
-                <iv className="text-4xl font-extrabold text-yellow-300">$4.2B</div>
+        {/* KeyMetricsGrid */}
+        <divclassName = "gridgrid-cols-2md: grid-cols-4gap-4mb-10max-w-6xlmx-auto">
+          <divclassName="bg-white/10backdrop-blur-mdrounded-2xlp-6border-2border-emerald-400/30hover:border-emerald-400/60transition-allduration-300hover:scale-105hover:shadow-xl">
+            <divclassName="flexitems-centergap-3mb-2">
+              <CurrencyDollarIconclassName="w-8 h-8text-yellow-300" /> />
+                <ivclassName="text-4xlfont-extraboldtext-yellow-300">$4.2B</div>
             </div>
-            <div className="text-emerald-100 text-sm font-medium">Annual Value Creation</div>
+            <divclassName="text-emerald-100text-smfont-medium">AnnualValueCreation</div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-teal-400/30 hover:border-teal-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-2">
-              <ChartBarIcon className="w-8 h-8 text-green-300" /> />
-                <iv className="text-4xl font-extrabold text-green-300">2,847%</div>
+          <divclassName="bg-white/10backdrop-blur-mdrounded-2xlp-6border-2border-teal-400/30hover:border-teal-400/60transition-allduration-300hover:scale-105hover:shadow-xl">
+            <divclassName="flexitems-centergap-3mb-2">
+              <ChartBarIconclassName="w-8 h-8text-green-300" /> />
+                <ivclassName="text-4xlfont-extraboldtext-green-300">2847%</div>
             </div>
-            <div className="text-teal-100 text-sm font-medium">ROI in 18 Months</div>
+            <divclassName = "text-teal-100text-smfont-medium">ROIin18 Months</div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-2">
-              <CheckCircleIcon className="w-8 h-8 text-cyan-300" /> />
-                <iv className="text-4xl font-extrabold text-cyan-300">98.7%</div>
+          <divclassName="bg-white/10backdrop-blur-mdrounded-2xlp-6border-2border-cyan-400/30hover: border-cyan-400/60transition-allduration-300hover:scale-105hover:shadow-xl">
+            <divclassName="flexitems-centergap-3mb-2">
+              <CheckCircle,IconclassName="w-8 h-8text-cyan-300" /> />
+                <ivclassName="text-4xlfont-extraboldtext-cyan-300">98.7%</div>
             </div>
-            <div className="text-cyan-100 text-sm font-medium">On-Time Delivery Rate</div>
+            <divclassName="text-cyan-100text-smfont-medium">On-TimeDeliveryRate</div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border-2 border-emerald-400/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="flex items-center gap-3 mb-2">
-              <TruckIcon className="w-8 h-8 text-emerald-300" /> />
-                <iv className="text-4xl font-extrabold text-emerald-300">87%</div>
+          <divclassName="bg-white/10backdrop-blur-mdrounded-2xlp-6border-2border-emerald-400/30hover:border-emerald-400/60transition-allduration-300hover:scale-105hover:shadow-xl">
+            <divclassName="flexitems-centergap-3mb-2">
+              <TruckIconclassName="w-8 h-8text-emerald-300" /> />
+                <ivclassName="text-4xlfont-extraboldtext-emerald-300">87%</div>
             </div>
-            <div className="text-emerald-100 text-sm font-medium">Cost Reduction</div>
+            <divclassName="text-emerald-100text-smfont-medium">CostReduction</div>
           </div>
         </div>
 
-        {/* Revolutionary Capabilities */}
-        <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-8 mb-10 border-2 border-emerald-400/30">
-          <h3 className="text-3xl font-bold text-white mb-6 text-center flex items-center justify-center gap-3">
-            <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse" />
-            Revolutionary AI-Powered Capabilities
-            <SparklesIcon className="w-8 h-8 text-yellow-300 animate-pulse" /> />
+        {/* RevolutionaryCapabilities */}
+        <divclassName = "bg-gradient-to-rfrom-emerald-500/20to-cyan-500/20backdrop-blur-smrounded-2xlp-8mb-10border-2border-emerald-400/30">
+          <h3className="text-3xlfont-boldtext-whitemb-6text-centerflexitems-centerjustify-centergap-3">
+            <SparklesIconclassName="w-8 h-8text-yellow-300animate-pulse" />
+            RevolutionaryAI-PoweredCapabilities
+            <SparklesIconclassName="w-8 h-8text-yellow-300animate-pulse" /> />
               </
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-emerald-400/20 hover:border-emerald-400/50 transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <ChartBarIcon className="w-6 h-6 text-emerald-400" /> />
-                <4 className="text-xl font-bold text-white">Predictive Intelligence</h4>
+          <divclassName="gridmd: grid-cols-3gap-6">
+            <divclassName="bg-white/5backdrop-blur-smrounded-xlp-6borderborder-emerald-400/20hover:border-emerald-400/50transition-all">
+              <divclassName="flexitems-centergap-3mb-3">
+                <ChartBarIconclassName="w-6 h-6text-emerald-400" /> />
+                <4className="text-xlfont-boldtext-white">PredictiveIntelligence</h4>
               </div>
-              <ul className="space-y-2 text-emerald-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
-                  <span><strong>94% Forecast Accuracy</strong> across 2.7M SKUs</span>
+              <ulclassName="space-y-2text-emerald-100">
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" /> />
+                  <span><strong>94% ForecastAccuracy</strong> across2.7MSKUs</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
-                  <span><strong>23-Day Disruption Warning</strong> for proactive response</span>
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" /> />
+                  <span><strong>23-DayDisruptionWarning</strong> forproactiveresponse</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
-                  <span><strong>Real-Time Market Intelligence</strong> beats competitors</span>
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" /> />
+                  <span><strong>Real-TimeMarketIntelligence</strong> beatscompetitors</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <ClockIcon className="w-6 h-6 text-cyan-400" /> />
-                <4 className="text-xl font-bold text-white">Autonomous Operations</h4>
+            <divclassName="bg-white/5backdrop-blur-smrounded-xlp-6borderborder-cyan-400/20hover:border-cyan-400/50transition-all">
+              <divclassName="flexitems-centergap-3mb-3">
+                <ClockIconclassName="w-6 h-6text-cyan-400" /> />
+                <4className="text-xlfont-boldtext-white">AutonomousOperations</h4>
               </div>
-              <ul className="space-y-2 text-cyan-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" /> />
-                  <span><strong>2.4M Daily Decisions</strong> fully automated</span>
+              <ulclassName="space-y-2text-cyan-100">
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" /> />
+                  <span><strong>2.4MDailyDecisions</strong> fullyautomated</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>89% Warehouse Automation</strong> with 12,400+ robots</span>
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>89% WarehouseAutomation</strong> with 12400+ robots</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>Self-Optimizing Routes</strong> reducing costs 87%</span>
+                <liclassName = "flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>Self-OptimizingRoutes</strong> reducingcosts87%</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-teal-400/20 hover:border-teal-400/50 transition-all">
-              <div className="flex items-center gap-3 mb-3">
-                <GlobeAltIcon className="w-6 h-6 text-teal-400" <h4 className="text-xl font-bold text-white">Complete Visibility</h4>
+            <divclassName="bg-white/5backdrop-blur-smrounded-xlp-6borderborder-teal-400/20hover: border-teal-400/50transition-all">
+              <divclassName="flexitems-centergap-3mb-3">
+                <GlobeAltIconclassName="w-6 h-6text-teal-400" <h4className="text-xlfont-boldtext-white">CompleteVisibility</h4>
               </div>
-              <ul className="space-y-2 text-teal-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>100% End-to-End Visibility</strong> across supply chain</span>
+              <ulclassName="space-y-2text-teal-100">
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>100% End-to-EndVisibility</strong> acrosssupplychain</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>47,000 IoT Devices</strong> for real-time monitoring</span>
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>47000IoTDevices</strong> forreal-timemonitoring</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>Blockchain Tracking</strong> complete transparency</span>
+                <liclassName = "flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>BlockchainTracking</strong> completetransparency</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Fortune 100 Success Story Spotlight */}
-        <div className="bg-gradient-to-br from-yellow-900/40 to-orange-900/40 backdrop-blur-sm rounded-2xl p-8 mb-10 border-2 border-yellow-400/50">
-          <div className="flex items-center gap-3 mb-4">
-            <div className="bg-yellow-500/20 rounded-full p-3">
-              <TruckIcon className="w-8 h-8 text-yellow-300"</div> />
+        {/* Fortune100Success StorySpotlight */}
+        <divclassName="bg-gradient-to-brfrom-yellow-900/40to-orange-900/40backdrop-blur-smrounded-2xlp-8mb-10border-2border-yellow-400/50">
+          <divclassName="flexitems-centergap-3mb-4">
+            <divclassName="bg-yellow-500/20rounded-fullp-3">
+              <TruckIconclassName="w-8 h-8text-yellow-300"</div> />
                 <iv>
-              <div className="text-yellow-300 text-sm font-semibold uppercase tracking-wider">Case Study Spotlight</div>
-              <h3 className="text-3xl font-bold text-white">Fortune 100 Retail Transformation</h3>
+              <divclassName="text-yellow-300text-smfont-semibolduppercasetracking-wider">CaseStudySpotlight</div>
+              <h3className="text-3xlfont-boldtext-white">Fortune100Retail Transformation</h3>
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
+          <divclassName="gridmd: grid-cols-2gap-6mb-6">
             <div>
-              <h4 className="text-xl font-bold text-yellow-200 mb-3">The Challenge</h4>
-              <ul className="space-y-2 text-yellow-100">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 font-bold">❌</span>
-                  <span>$7.8B annual supply chain costs (18% of revenue)</span>
+              <h4className="text-xlfont-boldtext-yellow-200mb-3">TheChallenge</h4>
+              <ulclassName="space-y-2text-yellow-100">
+                <liclassName="flexitems-startgap-2">
+                  <spanclassName="text-red-400font-bold">❌</span>
+                  <span>$7.8Bannualsupply chaincosts (18% ofrevenue)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 font-bold">❌</span>
-                  <span>73% on-time delivery (industry worst)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400font-bold">❌</span>
+                  <span>73% on-timedelivery (industryworst)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 font-bold">❌</span>
-                  <span>27% product waste rate ($4.2B lost)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400font-bold">❌</span>
+                  <span>27% productwasterate ($4.2Blost)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 font-bold">❌</span>
-                  <span>54% forecast accuracy (constant stock-outs)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400font-bold">❌</span>
+                  <span>54% forecastaccuracy (constantstock-outs)</span>
                 </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-xl font-bold text-green-200 mb-3">The Results</h4>
-              <ul className="space-y-2 text-green-100">
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>$4.2B Annual Value Creation</strong></span>
+              <h4className = "text-xlfont-boldtext-green-200mb-3">TheResults</h4>
+              <ulclassName="space-y-2text-green-100">
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>$4.2BAnnualValue Creation</strong></span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>98.7% On-Time Delivery</strong> (industry leader)</span>
+                <liclassName="flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>98.7% On-TimeDelivery</strong> (industryleader)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>2% Waste Rate</strong> (89% reduction)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>2% WasteRate</strong> (89% reduction)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" <span> />
-                <trong>94% Forecast Accuracy</strong> (perfect inventory)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <CheckCircle,IconclassName="w-5 h-5text-green-400flex-shrink-0mt-0.5" <span> />
+                <trong>94% ForecastAccuracy</strong> (perfectinventory)</span>
                 </li>
               </ul>
             </div>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-yellow-400/30">
-            <div className="flex items-center justify-between flex-wrap gap-4">
-              <div className="text-yellow-100">
-                <span className="font-bold text-2xl text-yellow-300">2,847% ROI</span> achieved in just 18 months with <span className="font-bold">3.2-month payback period</span>
+          <divclassName = "bg-white/10backdrop-blur-smrounded-xlp-4borderborder-yellow-400/30">
+            <divclassName="flexitems-centerjustify-betweenflex-wrapgap-4">
+              <divclassName="text-yellow-100">
+                <spanclassName="font-boldtext-2xltext-yellow-300">2847% ROI</span> achievedinjust 18monthswith <spanclassName = "font-bold">3.2-monthpaybackperiod</span>
               </div>
-              <Link 
-                to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
-                className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-yellow-950 px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+              <Linkto="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
+                className="inline-flexitems-centergap-2bg-yellow-500hover: bg-yellow-400text-yellow-950px-6py-3rounded-lgfont-boldtransition-allduration-300shadow-lghover:shadow-xlhover:scale-105"
               >
-                Read Full Case Study
-                <ArrowRightIcon className="w-5 h-5"</Link> />
+                ReadFullCase Study
+                <ArrowRight,IconclassName="w-5 h-5"</Link> />
               </
           </div>
         </div>
 
-        {/* Industry Applications */}
-        <div className="mb-10">
-          <h3 className="text-3xl font-bold text-white mb-6 text-center">Proven Across Industries</h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+        {/* IndustryApplications */}
+        <divclassName = "mb-10">
+          <h3className="text-3xlfont-boldtext-whitemb-6text-center">ProvenAcrossIndustries</h3>
+          <divclassName="gridgrid-cols-2md: grid-cols-5gap-4">
             {[
-              { industry: 'Retail', value: '$4.2B', roi: '2,847%' },
-              { industry: 'Manufacturing', value: '$2.7B', roi: '2,100%' },
-              { industry: 'Pharma', value: '$890M', roi: '1,800%' },
-              { industry: 'Automotive', value: '$1.4B', roi: '2,400%' },
-              { industry: 'Food & Beverage', value: '$670M', roi: '1,600%' }
-            ].map((item, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-emerald-400/20 hover:border-emerald-400/50 transition-all hover:scale-105">
-                <div className="text-emerald-300 font-bold text-lg mb-1">{item.industry}</div>
-                <div className="text-white font-extrabold text-xl mb-1">{item.value}</div>
-                <div className="text-emerald-200 text-sm">ROI: {item.roi}</div>
+              { industry: 'Retail'value: '$4.2B'roi: '2847%' }
+              { industry: 'Manufacturing'value: '$2.7B'roi: '2100%' }
+              { industry: 'Pharma'value: '$890M'roi: '1800%' }
+              { industry: 'Automotive'value: '$1.4B'roi: '2400%' }
+              { industry: 'Food & Beverage'value: '$670M'roi: '1600%' }
+            ].map((itemindex) => (
+              <divkey = { index }className = "bg-white/10backdrop-blur-smrounded-xlp-4borderborder-emerald-400/20hover: border-emerald-400/50transition-allhover:scale-105">
+                <divclassName="text-emerald-300font-boldtext-lgmb-1">{item.industry}</div>
+                <divclassName = "text-whitefont-extraboldtext-xlmb-1">{item.value}</div>
+                <divclassName="text-emerald-200text-sm">ROI: {item.roi}</div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
-          <Link
-            to="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-revolution"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+        {/* CalltoAction Buttons */}
+        <divclassName = "flexflex-colmd: flex-rowgap-4justify-centeritems-centermb-8">
+          <Linkto="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-revolution"
+            className="inline-flexitems-centergap-2bg-gradient-to-rfrom-emerald-500to-teal-500hover:from-emerald-600hover:to-teal-600text-whitepx-8py-4rounded-xlfont-boldtext-lgtransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105"
           >
-            <SparklesIcon className="w-6 h-6" />
-            Read the Revolutionary Guide
-            <ArrowRightIcon className="w-6 h-6"</Link> />
-                <ink
-            to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+            <SparklesIconclassName="w-6 h-6" />
+            ReadtheRevolutionary Guide
+            <ArrowRight,IconclassName="w-6 h-6"</Link> />
+                <inkto="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
+            className="inline-flexitems-centergap-2bg-gradient-to-rfrom-yellow-500to-orange-500hover:from-yellow-600hover:to-orange-600text-whitepx-8py-4rounded-xlfont-boldtext-lgtransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105"
           >
-            <TruckIcon className="w-6 h-6" />
-            View $4.2B Case Study
-            <ArrowRightIcon className="w-6 h-6"</Link> />
-                <ink
-            to="/content/services/autonomous-supply-chain-intelligence-platform"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+            <TruckIconclassName="w-6 h-6" />
+            View $4.2BCaseStudy
+            <ArrowRight,IconclassName="w-6 h-6"</Link> />
+                <inkto="/content/services/autonomous-supply-chain-intelligence-platform"
+            className="inline-flexitems-centergap-2bg-gradient-to-rfrom-cyan-500to-blue-500hover:from-cyan-600hover:to-blue-600text-whitepx-8py-4rounded-xlfont-boldtext-lgtransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105"
           >
-            <ChartBarIcon className="w-6 h-6" />
-            Explore Platform & Services
-            <ArrowRightIcon className="w-6 h-6"</Link> />
+            <ChartBarIconclassName="w-6 h-6" />
+            ExplorePlatform & Services
+            <ArrowRight,IconclassName="w-6 h-6"</Link> />
               </
 
-        {/* Free Assessment CTA */}
-        <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-8 border-2 border-green-400/30">
-          <div className="text-center">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              🎁 FREE 2-Week Supply Chain Assessment (No Obligation)
+        {/* FreeAssessmentCTA */}
+        <divclassName = "bg-gradient-to-rfrom-green-500/20to-blue-500/20backdrop-blur-smrounded-2xlp-8border-2border-green-400/30">
+          <divclassName="text-center">
+            <h3className="text-3xlfont-boldtext-whitemb-4">
+              🎁 FREE2-WeekSupplyChain Assessment (NoObligation)
             </h3>
-            <p className="text-xl text-green-100 mb-6 max-w-3xl mx-auto">
-              Identify your <strong className="text-yellow-300">$100M+ opportunity</strong> and get a detailed ROI projection. 
-              See how you can achieve similar results with autonomous supply chain intelligence.
+            <pclassName = "text-xltext-green-100mb-6max-w-3xlmx-auto">
+              Identifyyour <strongclassName="text-yellow-300">$100M+ opportunity</strong> andgeta detailedROIprojection. 
+              Seehowyou canachievesimilar resultswithautonomous supplychainintelligence.
             </p>
-            <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-              <Link
-                to="/contact?service=supply-chain-assessment"
-                className="inline-flex items-center gap-2 bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-emerald-50"
+            <divclassName="flexflex-colmd: flex-rowgap-4justify-centeritems-center">
+              <Linkto="/contact?service=supply-chain-assessment"
+                className="inline-flexitems-centergap-2bg-whitetext-emerald-900px-10py-5rounded-xlfont-boldtext-xltransition-allduration-300shadow-lghover:shadow-2xlhover:scale-105hover:bg-emerald-50"
               >
-                Schedule Free Assessment
-                <ArrowRightIcon className="w-6 h-6"</Link> />
-                <iv className="text-green-200 text-sm">
-                <div className="font-bold text-lg">⚡ Limited Time Offer</div>
-                <div>90-day pilot starting at $500K • 30% improvement guarantee</div>
+                ScheduleFreeAssessment
+                <ArrowRight,IconclassName="w-6 h-6"</Link> />
+                <ivclassName="text-green-200text-sm">
+                <divclassName="font-boldtext-lg">⚡ LimitedTimeOffer</div>
+                <div>90-daypilotstarting at $500K • 30% improvementguarantee</div>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Trust Indicators Footer */}
-        <div className="mt-8 pt-6 border-t border-emerald-400/30">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-emerald-200 text-sm">
-            <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>15+</strong> Fortune 500 Clients</span>
+        {/* TrustIndicatorsFooter */}
+        <divclassName = "mt-8pt-6border-tborder-emerald-400/30">
+          <divclassName="flexflex-wrapitems-centerjustify-centergap-6text-emerald-200text-sm">
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,IconclassName="w-5 h-5text-green-400" <span> />
+                <trong>15+</strong> Fortune500Clients</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>$20B+</strong> Total Value Created</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,IconclassName="w-5 h-5text-green-400" <span> />
+                <trong>$20B+</strong> TotalValueCreated</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>99.97%</strong> Platform Uptime</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,IconclassName="w-5 h-5text-green-400" <span> />
+                <trong>99.97%</strong> PlatformUptime</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> Security Breaches</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,IconclassName="w-5 h-5text-green-400" <span> SecurityBreaches</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircleIcon className="w-5 h-5 text-green-400" <span> />
-                <trong>SOC 2 Type II</strong> Certified</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,IconclassName="w-5 h-5text-green-400" <span> />
+                <trong>SOC2Type II</strong> Certified</span>
             </div>
           </div>
         </div>
@@ -323,4 +317,4 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
   );
 };
 
-export default October2025SupplyChainRevolutionBanner;
+exportdefaultOctober2025SupplyChainRevolutionBanner;

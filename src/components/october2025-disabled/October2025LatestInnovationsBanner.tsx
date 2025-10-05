@@ -1,209 +1,201 @@
 import { Link } from 'react-router-dom';
-const October2025LatestInnovationsBanner = () => {
+constOctober2025LatestInnovationsBanner = () => { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-y border-indigo-500/30'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000'></div>
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-indigo-900/40via-purple-900/40to-pink-900/40border-yborder-indigo-500/30' > {' ' }
+      {/* Animatedbackgroundelements */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-indigo-500rounded-fullfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-purple-500rounded-fullfilterblur-3xlanimate-pulsedelay-1000' />
       </div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      <divclassName='relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-12'>
         {/* Header */}
-        <div className='text-center mb-8'>
-          <div className='inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-4'>
-            <Zap className='h-5 w-5 text-yellow-400 animate-pulse' />
-            <span className='text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300'>
-              BREAKING OCTOBER 1, 2025: LATEST AI INNOVATIONS
+        <divclassName = 'text-centermb-8'>
+          <divclassName='inline-flexitems-centergap-2bg-gradient-to-rfrom-indigo-500/20to-purple-500/20borderborder-indigo-400/30rounded-fullpx-6py-2mb-4'>
+            <ZapclassName='h-5 w-5text-yellow-400animate-pulse' />
+            <spanclassName='text-lgfont-boldtext-transparentbg-clip-textbg-gradient-to-rfrom-indigo-300via-purple-300to-pink-300'>
+              BREAKINGOCTOBER 12025: LATESTAIINNOVATIONS
             </span>
-            <Zap className='h-5 w-5 text-yellow-400 animate-pulse' />
+            <ZapclassName = 'h-5 w-5text-yellow-400animate-pulse' />
           </div>
-          <h2 className='text-4xl md:text-5xl font-black text-white mb-4'>
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400'>
-              3 Revolutionary AI Breakthroughs
+          <h2className='text-4xlmd:text-5xlfont-blacktext-whitemb-4'>
+            <spanclassName='text-transparentbg-clip-textbg-gradient-to-rfrom-indigo-400via-purple-400to-pink-400'>
+              3RevolutionaryAI Breakthroughs
             </span>
           </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto'>
-            🚀 <strong className='text-white'>JUST RELEASED TODAY:</strong>{' '}
-            Deploy enterprise-grade AI governance achieving
-            <span className='text-green-400 font-bold'> 99.9% compliance</span>,
-            harness quantum-enhanced AI with
-            <span className='text-green-400 font-bold'> 10,000x speedup</span>,
-            and implement autonomous enterprise orchestration delivering{' '}
-            <span className='text-green-400 font-bold'>
-              $312M+ value creation
+          <pclassName='text-xltext-gray-300max-w-4xlmx-auto'>
+            🚀 <strongclassName='text-white'>JUSTRELEASEDTODAY:</strong>{' '}
+            Deployenterprise-gradeAIgovernance achieving
+            <spanclassName = 'text-green-400font-bold'> 99.9% compliance</span>
+            harnessquantum-enhancedAIwith
+            <spanclassName = 'text-green-400font-bold'> 10000xspeedup</span>
+            andimplementautonomous enterpriseorchestrationdelivering{' '}
+            <spanclassName = 'text-green-400font-bold'>
+              $312M+ valuecreation
             </span>
-            . Game-changing innovations transforming businesses worldwide!
+            . Game-changinginnovationstransforming businessesworldwide!
           </p>
         </div>
-        {/* Feature Cards */}
-        <div className='grid md:grid-cols-3 gap-6 mb-8'>
-          {/* Card 1: AI Governance */}
-          <Link
-            to='/blog/ai-2025-october-governance-compliance-framework-enterprise'
-            className='group relative bg-gradient-to-br from-emerald-900/30 to-blue-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20'
+        {/* FeatureCards */}
+        <divclassName='gridmd: grid-cols-3gap-6mb-8'>
+          {/* Card1: AIGovernance */}
+          <Linkto = '/blog/ai-2025-october-governance-compliance-framework-enterprise'
+            className='grouprelativebg-gradient-to-brfrom-emerald-900/30to-blue-900/30borderborder-emerald-500/30rounded-xlp-6hover: border-emerald-400/50transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-emerald-500/20'
           >
-            <div className='absolute top-4 right-4'>
-              <Shield className='h-8 w-8 text-emerald-400 group-hover:animate-pulse' />
+            <divclassName='absolutetop-4right-4'>
+              <ShieldclassName='h-8 w-8text-emerald-400group-hover:animate-pulse' />
             </div>
-            <div className='mb-4'>
-              <span className='inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full mb-3'>
-                AI GOVERNANCE
+            <divclassName='mb-4'>
+              <spanclassName='inline-blockbg-emerald-500/20text-emerald-300text-xsfont-boldpx-3py-1rounded-fullmb-3'>
+                AIGOVERNANCE
               </span>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors'>
-                AI Governance & Compliance Framework 2025
+              <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-emerald-300transition-colors'>
+                AIGovernance & ComplianceFramework2025
               </h3>
             </div>
-            <ul className='space-y-2 mb-4 text-sm'>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>
-                    99.9% regulatory compliance
+            <ulclassName='space-y-2mb-4text-sm'>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>
+                    99.9% regulatorycompliance
                   </strong>{' '}
-                  across jurisdictions
+                  acrossjurisdictions
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>94% risk reduction</strong>{' '}
-                  through automated governance
+              <liclassName = 'flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>94% riskreduction</strong>{' '}
+                  throughautomatedgovernance
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>
-                    $186M+ liability protection
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>
+                    $186M+ liabilityprotection
                   </strong>{' '}
-                  from compliance violations
+                  fromcomplianceviolations
                 </span>
               </li>
             </ul>
-            <div className='flex items-center text-emerald-400 font-semibold group-hover:gap-3 transition-all'>
-              Read Full Guide{' '}
-              <ArrowRight className='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-emerald-400font-semiboldgroup-hover: gap-3transition-all'>
+              ReadFullGuide{' '}
+              <ArrowRight,className = 'h-4 w-4ml-2group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
-          {/* Card 2: Quantum AI */}
-          <Link
-            to='/blog/ai-2025-october-quantum-enhanced-ai-hybrid-systems'
-            className='group relative bg-gradient-to-br from-violet-900/30 to-cyan-900/30 border border-violet-500/30 rounded-xl p-6 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20'
+          {/* Card2: Quantum AI */}
+          <Linkto = '/blog/ai-2025-october-quantum-enhanced-ai-hybrid-systems'
+            className='grouprelativebg-gradient-to-brfrom-violet-900/30to-cyan-900/30borderborder-violet-500/30rounded-xlp-6hover: border-violet-400/50transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-violet-500/20'
           >
-            <div className='absolute top-4 right-4'>
-              <Zap className='h-8 w-8 text-violet-400 group-hover:animate-pulse' />
+            <divclassName='absolutetop-4right-4'>
+              <ZapclassName='h-8 w-8text-violet-400group-hover:animate-pulse' />
             </div>
-            <div className='mb-4'>
-              <span className='inline-block bg-violet-500/20 text-violet-300 text-xs font-bold px-3 py-1 rounded-full mb-3'>
-                QUANTUM AI
+            <divclassName='mb-4'>
+              <spanclassName='inline-blockbg-violet-500/20text-violet-300text-xsfont-boldpx-3py-1rounded-fullmb-3'>
+                QUANTUMAI
               </span>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-violet-300 transition-colors'>
-                Quantum-Enhanced AI Hybrid Systems 2025
+              <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-violet-300transition-colors'>
+                Quantum-EnhancedAIHybrid Systems2025
               </h3>
             </div>
-            <ul className='space-y-2 mb-4 text-sm'>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>10,000x speedup</strong> for
-                  optimization problems
+            <ulclassName='space-y-2mb-4text-sm'>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>10000xspeedup</strong> foroptimizationproblems
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>
-                    98.9% accuracy improvements
+              <liclassName = 'flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>
+                    98.9% accuracyimprovements
                   </strong>{' '}
-                  vs classical AI
+                  vsclassicalAI
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>$234M+ value creation</strong>{' '}
-                  through quantum power
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>$234M+ valuecreation</strong>{' '}
+                  throughquantumpower
                 </span>
               </li>
             </ul>
-            <div className='flex items-center text-violet-400 font-semibold group-hover:gap-3 transition-all'>
-              Explore Quantum AI{' '}
-              <ArrowRight className='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-violet-400font-semiboldgroup-hover: gap-3transition-all'>
+              ExploreQuantum AI{' '}
+              <ArrowRight,className = 'h-4 w-4ml-2group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
-          {/* Card 3: Enterprise Orchestration */}
-          <Link
-            to='/blog/ai-2025-october-autonomous-enterprise-orchestration-platform'
-            className='group relative bg-gradient-to-br from-indigo-900/30 to-amber-900/30 border border-indigo-500/30 rounded-xl p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20'
+          {/* Card3: EnterpriseOrchestration */}
+          <Linkto = '/blog/ai-2025-october-autonomous-enterprise-orchestration-platform'
+            className='grouprelativebg-gradient-to-brfrom-indigo-900/30to-amber-900/30borderborder-indigo-500/30rounded-xlp-6hover: border-indigo-400/50transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-indigo-500/20'
           >
-            <div className='absolute top-4 right-4'>
-              <Building2 className='h-8 w-8 text-indigo-400 group-hover:animate-pulse' />
+            <divclassName='absolutetop-4right-4'>
+              <Building2className='h-8 w-8text-indigo-400group-hover:animate-pulse' />
             </div>
-            <div className='mb-4'>
-              <span className='inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full mb-3'>
-                ENTERPRISE AI
+            <divclassName='mb-4'>
+              <spanclassName='inline-blockbg-indigo-500/20text-indigo-300text-xsfont-boldpx-3py-1rounded-fullmb-3'>
+                ENTERPRISEAI
               </span>
-              <h3 className='text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors'>
-                Autonomous Enterprise Orchestration Platform 2025
+              <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-indigo-300transition-colors'>
+                AutonomousEnterpriseOrchestration Platform2025
               </h3>
             </div>
-            <ul className='space-y-2 mb-4 text-sm'>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>
-                    97.8% operational automation
+            <ulclassName='space-y-2mb-4text-sm'>
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>
+                    97.8% operationalautomation
                   </strong>{' '}
-                  across processes
+                  acrossprocesses
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>83% cost reduction</strong>{' '}
-                  through autonomous operations
+              <liclassName = 'flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>83% costreduction</strong>{' '}
+                  throughautonomousoperations
                 </span>
               </li>
-              <li className='flex items-start gap-2'>
-                <span className='text-green-400 font-bold mt-0.5'>✓</span>
-                <span className='text-gray-300'>
-                  <strong className='text-white'>$312M+ annual value</strong>{' '}
-                  from intelligent orchestration
+              <liclassName='flexitems-startgap-2'>
+                <spanclassName='text-green-400font-boldmt-0.5'>✓</span>
+                <spanclassName='text-gray-300'>
+                  <strongclassName='text-white'>$312M+ annualvalue</strong>{' '}
+                  fromintelligentorchestration
                 </span>
               </li>
             </ul>
-            <div className='flex items-center text-indigo-400 font-semibold group-hover:gap-3 transition-all'>
-              Discover Platform{' '}
-              <ArrowRight className='h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-indigo-400font-semiboldgroup-hover: gap-3transition-all'>
+              DiscoverPlatform{' '}
+              <ArrowRight,className = 'h-4 w-4ml-2group-hover: translate-x-1transition-transform' />
             </div>
           </Link>
         </div>
-        {/* CTA Button */}
-        <div className='text-center'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50'
+        {/* CTAButton */}
+        <divclassName = 'text-center'>
+          <Linkto='/blog'
+            className='inline-flexitems-centergap-2bg-gradient-to-rfrom-indigo-600to-purple-600hover: from-indigo-500hover:to-purple-500text-whitefont-boldpx-8py-4rounded-fulltransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-indigo-500/50'
           >
-            <span>Explore All Latest AI Innovations</span>
-            <ArrowRight className='h-5 w-5' />
+            <span>ExploreAllLatest AIInnovations</span>
+            <ArrowRight,className='h-5 w-5' />
           </Link>
         </div>
-        {/* Bottom Info */}
-        <div className='mt-8 text-center'>
-          <p className='text-sm text-gray-400'>
-            💡 <strong className='text-white'>Combined Impact:</strong> These
-            three innovations deliver
-            <span className='text-green-400 font-semibold'>
+        {/* BottomInfo */}
+        <divclassName = 'mt-8text-center'>
+          <pclassName='text-smtext-gray-400'>
+            💡 <strongclassName='text-white'>CombinedImpact: </strong> Thesethreeinnovations deliver
+            <spanclassName='text-green-400font-semibold'>
               {' '}
-              $732M+ in total annual value
+              $732M+ intotalannual value
             </span>{' '}
-            through enhanced governance, quantum-powered optimization, and
-            autonomous operations. Start your transformation today.
+            throughenhancedgovernancequantum-poweredoptimizationandautonomousoperations. Startyourtransformation today.
           </p>
         </div>
       </div>
     </div>
   );
 };
-export default October2025LatestInnovationsBanner;
+exportdefaultOctober2025LatestInnovationsBanner;

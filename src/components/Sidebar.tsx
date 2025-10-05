@@ -1,71 +1,63 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { LinkuseLocation } from 'react-router-dom';
 
-const Sidebar: React.FC = () => {
-  const location = useLocation();
-  const isActive = (path: string) => location.pathname === path;
-
-  const sections = [
+constSidebar: React.FC = () => { 
+  constlocation = useLocation(); constisActive = (path: string) = > location.pathname = == path; constsections = [
     {
-      title: 'Explore',
+      title: 'Explore'
       links: [
-        { label: 'Home', path: '/' },
-        { label: 'Solutions', path: '/solutions' },
-        { label: 'Services', path: '/services' },
-        { label: 'Resources', path: '/resources' },
-        { label: 'Case Studies', path: '/case-studies' },
-        { label: 'Blog', path: '/blog' },
-        { label: 'About', path: '/about' },
-      ],
-    },
+        { label: 'Home'path: '/'  }
+        { label: 'Solutions'path: '/solutions' }
+        { label: 'Services'path: '/services' }
+        { label: 'Resources'path: '/resources' }
+        { label: 'CaseStudies'path: '/case-studies' }
+        { label: 'Blog'path: '/blog' }
+        { label: 'About'path: '/about' }
+      ]
+    }
     {
-      title: 'AI Services',
+      title: 'AIServices'
       links: [
-        { label: 'AI Solutions', path: '/services/ai-services' },
-        { label: 'Micro SaaS', path: '/services/micro-saas' },
-        { label: 'Data Analytics', path: '/services/analytics' },
-        { label: 'Workflow Automation', path: '/services/automation' },
-      ],
-    },
+        { label: 'AISolutions'path: '/services/ai-services' }
+        { label: 'MicroSaaS'path: '/services/micro-saas' }
+        { label: 'DataAnalytics'path: '/services/analytics' }
+        { label: 'WorkflowAutomation'path: '/services/automation' }
+      ]
+    }
     {
-      title: 'IT Services',
+      title: 'ITServices'
       links: [
-        { label: 'IT Services', path: '/services/it-services' },
-        { label: 'Cloud & DevOps', path: '/services/cloud' },
-        { label: 'Cybersecurity', path: '/services/security' },
+        { label: 'ITServices'path: '/services/it-services' }
+        { label: 'Cloud & DevOps'path: '/services/cloud' }
+        { label: 'Cybersecurity'path: '/services/security' }
         {
-          label: 'Compliance Monitor',
-          path: '/services/ai-compliance-monitor',
-        },
-      ],
-    },
+          label: 'ComplianceMonitor'
+          path: '/services/ai-compliance-monitor'
+        }
+      ]
+    }
     {
-      title: 'Tools',
+      title: 'Tools'
       links: [
-        { label: 'SEO Split Testing', path: '/services/seo-split-testing' },
-        { label: 'Image CDN Optimizer', path: '/services/image-cdn-optimizer' },
-      ],
-    },
-  ];
-
-  return (
-    <aside className='bg-gray-50 rounded-lg p-6 h-fit sticky top-24'>
-      <div className='space-y-6'>
-        {sections.map((section, sectionIndex) => (
-          <div key={sectionIndex}>
-            <h3 className='text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3'>
+        { label: 'SEOSplitTesting'path: '/services/seo-split-testing' }
+        { label: 'ImageCDNOptimizer'path: '/services/image-cdn-optimizer' }
+      ]
+    }
+  ]; return (
+    <asideclassName = 'bg-gray-50rounded-lgp-6 h-fitstickytop-24'>
+      <divclassName='space-y-6'>
+        { sections.map((sectionsectionIndex) = > (
+          <divkey = {sectionIndex }>
+            <h3className='text-smfont-semiboldtext-gray-900uppercasetracking-widemb-3'>
               {section.title}
             </h3>
-            <nav className='space-y-1'>
-              {section.links.map((link, linkIndex) => (
-                <Link
-                  key={linkIndex}
-                  to={link.path}
-                  className={`block px-3 py-2 text-sm rounded-md transition-colors ${
+            <navclassName='space-y-1'>
+              { section.links.map((linklinkIndex) = > (
+                <Linkkey = { linkIndex  }to={ link.path } className={ `blockpx-3py-2text-smrounded-mdtransition-colors ${
                     isActive(link.path)
-                      ? 'bg-blue-100 text-blue-700 font-medium'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                  }`}
+                       ? 'bg-blue-100text-blue-700font-medium'
+                      : 'text-gray-600hover: text-gray-900hover : bg-gray-100'
+                   }`}
                 >
                   {link.label}
                 </Link>
@@ -74,12 +66,11 @@ const Sidebar: React.FC = () => {
           </div>
         ))}
 
-        <div className='pt-4 border-t border-gray-200'>
-          <Link
-            to='/contact'
-            className='block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium'
+        <divclassName = 'pt-4border-tborder-gray-200'>
+          <Linkto='/contact'
+            className='blockw-fullbg-blue-600text-whitetext-centerpy-2px-4rounded-mdhover: bg-blue-700transition-colorsfont-medium'
           >
-            Get Started
+            GetStarted
           </Link>
         </div>
       </div>
@@ -87,4 +78,4 @@ const Sidebar: React.FC = () => {
   );
 };
 
-export default Sidebar;
+exportdefaultSidebar;

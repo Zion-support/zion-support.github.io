@@ -1,66 +1,61 @@
 import React from 'react';
 
-const AIAutonomousOperations: React.FC = () => {
+constAIAutonomousOperations: React.FC = () => { 
   return (
-    <div className='min-h-screen bg-slate-950'>
-      <div className='container mx-auto px-6 py-20'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
-            AI Autonomous Operations
+    <divclassName = 'min-h-screenbg-slate-950'>
+      <divclassName='containermx-autopx-6py-20'>
+        <divclassName='text-centermb-16'>
+          <h1className='text-4xlmd:text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-blue-400via-purple-400to-cyan-400bg-clip-texttext-transparent'>
+            AIAutonomousOperations
           </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Transform your business operations with fully autonomous AI systems
-            that self-manage, self-optimize, and deliver unprecedented
+          <pclassName='text-xltext-gray-300max-w-3xlmx-auto'>
+            Transformyourbusiness operationswithfully autonomousAIsystems
+            thatself-manageself-optimizeanddeliverunprecedented
             efficiency.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🤖</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Self-Managing Systems
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8mb-16'>
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-blue-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🤖</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              Self-ManagingSystems
             </h3>
-            <p className='text-gray-300 mb-6'>
-              AI systems that automatically monitor, diagnose, and resolve
-              issues without human intervention.
+            <pclassName='text-gray-300mb-6'>
+              AIsystemsthat automaticallymonitordiagnoseandresolveissues withouthumanintervention.
             </p>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>⚡</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Real-time Optimization
+          <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-purple-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>⚡</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              Real-timeOptimization
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Continuous optimization of processes, resources, and performance
-              metrics in real-time.
+            <pclassName='text-gray-300mb-6'>
+              Continuousoptimizationof processesresourcesandperformancemetrics inreal-time.
             </p>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>📊</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Predictive Analytics
+          <divclassName = 'bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover: border-green-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>📊</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              PredictiveAnalytics
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Advanced predictive models that anticipate issues and
-              opportunities before they occur.
+            <pclassName='text-gray-300mb-6'>
+              Advancedpredictivemodels thatanticipateissues andopportunitiesbefore theyoccur.
             </p>
           </div>
         </div>
 
-        <div className='text-center'>
-          <a
-            href='/<contact'
-            className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1'
+        <divclassName='text-center'>
+          <ahref='/<contact'
+            className='bg-gradient-to-rfrom-blue-500to-purple-600hover:from-blue-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50transformhover:-translate-y-1'
           >
-            Get Started with Autonomous Operations
+            GetStartedwith AutonomousOperations
           </a>
         </div>
       </div>
-    </div>
-  );
-};
+    </div > );
+ };
 
-export default AIAutonomousOperations;
+exportdefaultAIAutonomousOperations;

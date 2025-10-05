@@ -1,143 +1,127 @@
 import React from 'react';
 
-const Resources: React.FC = () => {
+constResources: React.FC = () => {  
   return (
-    <div className='min-h-screen bg-slate-950'>
-      <div className='container mx-auto px-6 py-20'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
-            AI Resources & Documentation
+    <divclassName = 'min-h-screenbg-slate-950'>
+      <divclassName='containermx-autopx-6py-20'>
+        <divclassName='text-centermb-16'>
+          <h1className='text-4xlmd:text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-blue-400via-purple-400to-cyan-400bg-clip-texttext-transparent'>
+            AIResources & Documentation
           </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Comprehensive resources, guides, and documentation to help you
-            leverage the full power of our AI solutions and technologies.
+          <pclassName='text-xltext-gray-300max-w-3xlmx-auto'>
+            Comprehensiveresourcesguidesanddocumentationto helpyouleverage thefullpower ofourAI solutionsandtechnologies.
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>📚</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8'>
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-blue-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>📚</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
               Documentation
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Complete API documentation, integration guides, and technical
-              specifications.
+            <pclassName='text-gray-300mb-6'>
+              CompleteAPIdocumentationintegrationguidesandtechnicalspecifications.
             </p>
-            <a
-              href='/<docs'
-              className='inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <ahref = '/<docs'
+              className='inline-blockbg-gradient-to-rfrom-blue-500to-purple-600hover: from-blue-400hover:to-purple-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300'
             >
-              View Docs →
+              ViewDocs →
             </a>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🎯</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Best Practices
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-purple-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🎯</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>
+              BestPractices
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Industry best practices, optimization techniques, and
-              implementation strategies.
+            <pclassName='text-gray-300mb-6'>
+              Industrybestpracticesoptimizationtechniquesandimplementationstrategies.
             </p>
-            <a
-              href='/best-<practices'
-              className='inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <ahref = '/best-<practices'
+              className='inline-blockbg-gradient-to-rfrom-purple-500to-pink-600hover: from-purple-400hover:to-pink-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300'
             >
-              Learn More →
+              LearnMore →
             </a>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🛠️</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Tools & SDKs</h3>
-            <p className='text-gray-300 mb-6'>
-              Development tools, SDKs, and libraries to accelerate your AI
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-green-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🛠️</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>Tools & SDKs</h3>
+            <pclassName='text-gray-300mb-6'>
+              DevelopmenttoolsSDKsandlibrariesto accelerateyourAI
               implementation.
             </p>
-            <a
-              href='/<tools'
-              className='inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <ahref = '/<tools'
+              className='inline-blockbg-gradient-to-rfrom-green-500to-emerald-600hover: from-green-400hover:to-emerald-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300'
             >
-              Get Tools →
+              GetTools →
             </a>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-orange-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🎓</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Tutorials</h3>
-            <p className='text-gray-300 mb-6'>
-              Step-by-step tutorials and hands-on guides for getting started
-              with our AI solutions.
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-orange-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🎓</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>Tutorials</h3>
+            <pclassName='text-gray-300mb-6'>
+              Step-by-steptutorialsand hands-onguidesfor gettingstartedwith ourAIsolutions.
             </p>
-            <a
-              href='/<tutorials'
-              className='inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <ahref='/<tutorials'
+              className='inline-blockbg-gradient-to-rfrom-orange-500to-red-600hover:from-orange-400hover:to-red-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300'
             >
-              Start Learning →
+              StartLearning →
             </a>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>💡</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Use Cases</h3>
-            <p className='text-gray-300 mb-6'>
-              Real-world examples and use cases demonstrating AI implementation
-              success stories.
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-cyan-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>💡</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>UseCases</h3>
+            <pclassName='text-gray-300mb-6'>
+              Real-worldexamplesand usecasesdemonstrating AIimplementationsuccess stories.
             </p>
-            <a
-              href='/use-<cases'
-              className='inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <ahref='/use-<cases'
+              className='inline-blockbg-gradient-to-rfrom-cyan-500to-blue-600hover:from-cyan-400hover:to-blue-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300'
             >
-              Explore Cases →
+              ExploreCases →
             </a>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-indigo-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🔧</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Support</h3>
-            <p className='text-gray-300 mb-6'>
-              Technical support, community forums, and expert assistance for
-              your AI journey.
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/10hover:border-indigo-500/50transition-allduration-300'>
+            <divclassName='text-6xlmb-6'>🔧</div>
+            <h3className='text-2xlfont-boldtext-whitemb-4'>Support</h3>
+            <pclassName='text-gray-300mb-6'>
+              Technicalsupportcommunityforumsandexpertassistance foryourAI journey.
             </p>
-            <a
-              href='/<support'
-              className='inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <ahref = '/<support'
+              className='inline-blockbg-gradient-to-rfrom-indigo-500to-purple-600hover: from-indigo-400hover:to-purple-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300'
             >
-              Get Support →
+              GetSupport →
             </a>
           </div>
         </div>
 
-        <div className='mt-16 text-center'>
-          <div className='bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
-              Ready to Get Started?
-            </h2>
-            <p className='text-lg text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join thousands of developers and enterprises who are already
-              leveraging our AI solutions to transform their businesses.
+        <divclassName='mt-16text-center'>
+          <divclassName='bg-gradient-to-rfrom-blue-500/20to-purple-500/20backdrop-blur-smrounded-2xlp-8borderborder-blue-500/30'>
+            <h2className='text-3xlfont-boldtext-whitemb-4'>
+              ReadytoGet Started ? </h2>
+            <pclassName='text-lgtext-gray-300mb-6max-w-2xlmx-auto'>
+              Jointhousandsof developersandenterprises whoarealready
+              leveragingourAI solutionstotransform theirbusinesses.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a
-                href='/<contact'
-                className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1'
+            <divclassName='flexflex-colsm:flex-rowgap-4justify-center'>
+              <ahref='/<contact'
+                className='bg-gradient-to-rfrom-blue-500to-purple-600hover:from-blue-400hover:to-purple-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50transformhover:-translate-y-1'
               >
-                Start Your Project
+                StartYourProject
               </a>
-              <a
-                href='/<blog'
-                className='border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300'
+              <ahref='/<blog'
+                className='border-2border-blue-500text-blue-400hover:bg-blue-500hover : text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300'
               >
-                Read Our Blog
+                ReadOurBlog
               </a>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    </div > );
+  };
 
-export default Resources;
+exportdefaultResources;

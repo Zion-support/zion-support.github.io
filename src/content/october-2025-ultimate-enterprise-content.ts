@@ -1,110 +1,105 @@
-// October 2025 Ultimate Enterprise AI Content
-// BRAND NEW: Multi-Cloud Intelligence & Conversational AI Revolution
+// October2025Ultimate EnterpriseAIContent
+// BRANDNEW: Multi-CloudIntelligence & ConversationalAIRevolution
 
-export const octoberUltimateEnterpriseContent = [
+exportconstoctoberUltimateEnterpriseContent = [
   {
-    id: 'adaptive-multi-cloud-intelligence-2025',
-    title: '🚀 NEW: Adaptive Multi-Cloud Intelligence - 156% ROI, $89M Savings',
-    slug: 'ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution',
-    description:
-      'JUST PUBLISHED: Revolutionary multi-cloud intelligence platform achieving 156% ROI, 91% cost optimization, and $89M annual savings through AI-powered unified cloud management across AWS, Azure, GCP.',
-    category: 'Cloud Infrastructure',
-    date: '2025-10-01',
-    readTime: '18 min',
-    icon: '☁️',
-    gradient: 'from-blue-600 via-cyan-600 to-teal-600',
-    featured: true,
-    breaking: true,
-    new: true,
+    id: 'adaptive-multi-cloud-intelligence-2025'
+    title: '🚀 NEW: AdaptiveMulti-CloudIntelligence - 156% ROI$89MSavings'
+    slug: 'ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution'
+    description: 'JUSTPUBLISHED: Revolutionarymulti-cloudintelligenceplatform achieving156% ROI91% costoptimizationand $89Mannualsavings throughAI-poweredunifiedcloud managementacrossAWSAzureGCP.'
+    category: 'CloudInfrastructure'
+    date: '2025-10-01'
+    readTime: '18min'
+    icon: '☁️'
+    gradient: 'from-blue-600via-cyan-600to-teal-600'
+    featured: true
+    breaking: true
+    new: true
     tags: [
-      'Multi-Cloud',
-      'FinOps',
-      'Cloud Operations',
-      'Cost Optimization',
-      'AI Automation',
-    ],
+      'Multi-Cloud'
+      'FinOps'
+      'CloudOperations'
+      'CostOptimization'
+      'AIAutomation'
+    ]
     highlights: [
-      '156% ROI within 18 months',
-      '$89M annual savings (Fortune 100 case study)',
-      '91% cost waste elimination',
-      '4.5x operational efficiency improvement',
-      '99.7% cloud uptime guarantee',
-      '67% reduction in cloud management complexity',
-      '3.8x faster resource provisioning',
-    ],
+      '156% ROIwithin18 months'
+      '$89Mannualsavings (Fortune100case study)'
+      '91% costwasteelimination'
+      '4.5xoperationalefficiency improvement'
+      '99.7% clouduptimeguarantee'
+      '67% reductionincloud managementcomplexity'
+      '3.8xfasterresource provisioning'
+    ]
     metrics: {
-      roi: '156%',
-      savings: '$89M',
-      optimization: '91%',
-      efficiency: '4.5x',
-      uptime: '99.7%',
-      complexity: '-67%',
-    },
+      roi: '156%'
+      savings: '$89M'
+      optimization: '91%'
+      efficiency: '4.5x'
+      uptime: '99.7%'
+      complexity: '-67%'
+    }
     cta: {
-      text: 'Read the Multi-Cloud Intelligence Guide',
-      link: '/blog/ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution',
-      badge: 'NEW RELEASE',
-    },
-  },
+      text: 'ReadtheMulti-CloudIntelligenceGuide'
+      link: '/blog/ai-2025-oct-01-adaptive-multi-cloud-intelligence-revolution'
+      badge: 'NEWRELEASE'
+    }
+  }
   {
-    id: 'conversational-ai-enterprise-transformation-2025',
-    title:
-      '🎯 NEW: Conversational AI Revolution - 184% ROI, 94% Customer Satisfaction',
-    slug: 'ai-2025-oct-01-conversational-ai-enterprise-transformation-platform',
-    description:
-      'JUST PUBLISHED: Next-generation conversational AI platform delivering 184% ROI, 94% customer satisfaction, and 5.7x productivity gains through intelligent human-AI collaboration across 97 languages and 12 channels.',
-    category: 'Conversational AI',
-    date: '2025-10-01',
-    readTime: '17 min',
-    icon: '💬',
-    gradient: 'from-purple-600 via-pink-600 to-rose-600',
-    featured: true,
-    breaking: true,
-    new: true,
+    id: 'conversational-ai-enterprise-transformation-2025'
+    title: '🎯 NEW: ConversationalAIRevolution - 184% ROI94% CustomerSatisfaction'
+    slug: 'ai-2025-oct-01-conversational-ai-enterprise-transformation-platform'
+    description: 'JUSTPUBLISHED: Next-generationconversationalAI platformdelivering184% ROI94% customersatisfactionand5.7xproductivitygains throughintelligenthuman-AIcollaborationacross 97languagesand 12channels.'
+    category: 'ConversationalAI'
+    date: '2025-10-01'
+    readTime: '17min'
+    icon: '💬'
+    gradient: 'from-purple-600via-pink-600to-rose-600'
+    featured: true
+    breaking: true
+    new: true
     tags: [
-      'Conversational AI',
-      'Customer Experience',
-      'NLP',
-      'Virtual Assistants',
-      'Omnichannel',
-    ],
+      'ConversationalAI'
+      'CustomerExperience'
+      'NLP'
+      'VirtualAssistants'
+      'Omnichannel'
+    ]
     highlights: [
-      '184% ROI within 14 months',
-      '94% customer satisfaction (CSAT)',
-      '5.7x productivity improvement for support teams',
-      '$173M annual cost savings',
-      '78% automation rate for routine inquiries',
-      '2.3 minutes average response time (vs 14 min)',
-      '97 languages, 12 integrated channels',
-    ],
+      '184% ROIwithin14 months'
+      '94% customersatisfaction (CSAT)'
+      '5.7xproductivityimprovement forsupportteams'
+      '$173Mannualcost savings'
+      '78% automationratefor routineinquiries'
+      '2.3minutesaverage responsetime (vs14min)'
+      '97languages12integratedchannels'
+    ]
     metrics: {
-      roi: '184%',
-      satisfaction: '94%',
-      productivity: '5.7x',
-      savings: '$173M',
-      automation: '78%',
-      responseTime: '2.3min',
-    },
+      roi: '184%'
+      satisfaction: '94%'
+      productivity: '5.7x'
+      savings: '$173M'
+      automation: '78%'
+      responseTime: '2.3min'
+    }
     cta: {
-      text: 'Explore Conversational AI Platform',
-      link: '/blog/ai-2025-oct-01-conversational-ai-enterprise-transformation-platform',
-      badge: 'FEATURED',
-    },
-  },
-];
+      text: 'ExploreConversationalAI Platform'
+      link: '/blog/ai-2025-oct-01-conversational-ai-enterprise-transformation-platform'
+      badge: 'FEATURED'
+    }
+  }
+]; exportconstgetFeaturedUltimateContent = () => { 
+  returnoctoberUltimateEnterpriseContent.filter(content= > content.featured);
+ };
 
-export const getFeaturedUltimateContent = () => {
-  return octoberUltimateEnterpriseContent.filter(content => content.featured);
-};
+exportconstgetBreakingUltimateContent = () => { 
+  returnoctoberUltimateEnterpriseContent.filter(content= > content.breaking);
+ };
 
-export const getBreakingUltimateContent = () => {
-  return octoberUltimateEnterpriseContent.filter(content => content.breaking);
-};
+exportconstgetNewUltimateContent = () => { 
+  returnoctoberUltimateEnterpriseContent.filter(content= > content.new);
+ };
 
-export const getNewUltimateContent = () => {
-  return octoberUltimateEnterpriseContent.filter(content => content.new);
-};
-
-export const getAllUltimateEnterpriseContent = () => {
-  return octoberUltimateEnterpriseContent;
+exportconstgetAllUltimateEnterpriseContent = () => {
+  returnoctoberUltimateEnterpriseContent;
 };

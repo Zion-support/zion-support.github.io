@@ -1,354 +1,341 @@
 import { Link } from 'react-router-dom';
-const October2025MultimodalCXRevolutionBanner = () => {
+constOctober2025MultimodalCXRevolutionBanner = () => { 
   return (
-    <div className='relative bg-gradient-to-br from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-y border-cyan-500/30 overflow-hidden'>
-      {' '}
-      {/* Animated background effects */}
-      <div className='absolute inset-0 opacity-10'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+    <divclassName = 'relativebg-gradient-to-brfrom-cyan-900/20via-blue-900/20to-purple-900/20border-yborder-cyan-500/30overflow-hidden' > {' ' }
+      {/* Animatedbackgroundeffects */}
+      <divclassName='absoluteinset-0opacity-10'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-cyan-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '1s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+         />
+        <divclassName = 'absolutetop-1/2left-1/2 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '2s' }}
-        ></div>
+         />
       </div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        {/* Header Section */}
-        <div className='text-center mb-10'>
-          <div className='inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-full mb-4 animate-pulse'>
-            <Sparkles className='w-5 h-5 text-cyan-400' />
-            <span className='text-cyan-300 font-semibold text-sm'>
-              🚀 JUST LAUNCHED: OCTOBER 1, 2025 — MULTIMODAL AI CUSTOMER
-              EXPERIENCE REVOLUTION
+      <divclassName = 'relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-12'>
+        {/* HeaderSection */}
+        <divclassName = 'text-centermb-10'>
+          <divclassName='inline-flexitems-centergap-2px-4py-2bg-cyan-500/20borderborder-cyan-500/30rounded-fullmb-4animate-pulse'>
+            <SparklesclassName='w-5 h-5text-cyan-400' />
+            <spanclassName='text-cyan-300font-semiboldtext-sm'>
+              🚀 JUSTLAUNCHED: OCTOBER 12025 — MULTIMODALAICUSTOMER
+              EXPERIENCEREVOLUTION
             </span>
-            <Sparkles className='w-5 h-5 text-cyan-400' />
+            <SparklesclassName = 'w-5 h-5text-cyan-400' />
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-4 leading-tight'>
-            Multimodal AI Customer Experience Platform
+          <h2className='text-4xlmd: text-5xlfont-boldtext-whitemb-4leading-tight'>
+            MultimodalAICustomer ExperiencePlatform
             <br />{' '}
-            <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400'>
-              $340M Value Created | 287% ROI | 94% Customer Satisfaction
+            <spanclassName = 'text-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400via-blue-400to-purple-400'>
+              $340MValueCreated | 287% ROI | 94% CustomerSatisfaction
             </span>
           </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>
-            Revolutionary platform integrating{' '}
-            <strong className='text-white'>
-              Vision + Voice + Text + Emotion AI
+          <pclassName='text-xltext-gray-300max-w-4xlmx-autoleading-relaxed'>
+            Revolutionaryplatformintegrating{' '}
+            <strongclassName='text-white'>
+              Vision + Voice + Text + EmotionAI
             </strong>{' '}
-            to deliver exceptional personalized experiences at scale. Achieve
-            85% automation, 87% first-contact resolution, and transform customer
+            todeliverexceptional personalizedexperiencesat scale. Achieve85% automation87% first-contactresolutionandtransformcustomer
             satisfaction.{' '}
-            <strong className='text-cyan-400'>Fortune 100 proven</strong> with
-            127M customers globally.
+            <strongclassName = 'text-cyan-400'>Fortune100proven</strong> with127Mcustomers globally.
           </p>
         </div>
-        {/* Key Metrics Grid */}
-        <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-10'>
-          <div className='bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300'>
-            <Heart className='w-8 h-8 text-cyan-400 mx-auto mb-2' />
-            <div className='text-3xl font-bold text-white mb-1'>94%</div>
-            <div className='text-sm text-cyan-200'>Customer Satisfaction</div>
-            <div className='text-xs text-gray-400 mt-1'>+147% improvement</div>
+        {/* KeyMetricsGrid */}
+        <divclassName='gridgrid-cols-2md: grid-cols-4gap-4mb-10'>
+          <divclassName='bg-gradient-to-brfrom-cyan-900/40to-cyan-800/40backdrop-blur-smborderborder-cyan-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300'>
+            <HeartclassName='w-8 h-8text-cyan-400mx-automb-2' />
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>94%</div>
+            <divclassName='text-smtext-cyan-200'>CustomerSatisfaction</div>
+            <divclassName='text-xstext-gray-400mt-1'>+147% improvement</div>
           </div>
-          <div className='bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300'>
-            <Target className='w-8 h-8 text-blue-400 mx-auto mb-2' />
-            <div className='text-3xl font-bold text-white mb-1'>87%</div>
-            <div className='text-sm text-blue-200'>
-              First Contact Resolution
+          <divclassName='bg-gradient-to-brfrom-blue-900/40to-blue-800/40backdrop-blur-smborderborder-blue-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300'>
+            <TargetclassName='w-8 h-8text-blue-400mx-automb-2' />
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>87%</div>
+            <divclassName='text-smtext-blue-200'>
+              FirstContactResolution
             </div>
-            <div className='text-xs text-gray-400 mt-1'>+278% improvement</div>
+            <divclassName='text-xstext-gray-400mt-1'>+278% improvement</div>
           </div>
-          <div className='bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300'>
-            <TrendingUp className='w-8 h-8 text-purple-400 mx-auto mb-2' />
-            <div className='text-3xl font-bold text-white mb-1'>287%</div>
-            <div className='text-sm text-purple-200'>ROI First Year</div>
-            <div className='text-xs text-gray-400 mt-1'>$340M value</div>
+          <divclassName='bg-gradient-to-brfrom-purple-900/40to-purple-800/40backdrop-blur-smborderborder-purple-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300'>
+            <TrendingUpclassName='w-8 h-8text-purple-400mx-automb-2' />
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>287%</div>
+            <divclassName='text-smtext-purple-200'>ROIFirstYear</div>
+            <divclassName='text-xstext-gray-400mt-1'>$340Mvalue</div>
           </div>
-          <div className='bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300'>
-            <Zap className='w-8 h-8 text-green-400 mx-auto mb-2' />
-            <div className='text-3xl font-bold text-white mb-1'>85%</div>
-            <div className='text-sm text-green-200'>Automation Rate</div>
-            <div className='text-xs text-gray-400 mt-1'>$243M cost saved</div>
+          <divclassName='bg-gradient-to-brfrom-green-900/40to-green-800/40backdrop-blur-smborderborder-green-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300'>
+            <ZapclassName='w-8 h-8text-green-400mx-automb-2' />
+            <divclassName='text-3xlfont-boldtext-whitemb-1'>85%</div>
+            <divclassName='text-smtext-green-200'>AutomationRate</div>
+            <divclassName='text-xstext-gray-400mt-1'>$243Mcostsaved</div>
           </div>
         </div>
-        {/* Revolutionary Capabilities */}
-        <div className='bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10'>
-          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-            🔥 Revolutionary Multimodal Capabilities
+        {/* RevolutionaryCapabilities */}
+        <divclassName = 'bg-gradient-to-brfrom-gray-900/60to-gray-800/60backdrop-blur-smborderborder-white/10rounded-2xlp-8mb-10'>
+          <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+            🔥 RevolutionaryMultimodalCapabilities
           </h3>
-          <div className='grid md:grid-cols-3 gap-6'>
-            <div className='flex items-start gap-4'>
-              <div className='flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center'>
-                <Eye className='w-6 h-6 text-cyan-400' />
+          <divclassName='gridmd: grid-cols-3gap-6'>
+            <divclassName='flexitems-startgap-4'>
+              <divclassName='flex-shrink-0 w-12h-12bg-cyan-500/20borderborder-cyan-500/30rounded-lgflexitems-centerjustify-center'>
+                <EyeclassName='w-6 h-6text-cyan-400' />
               </div>
               <div>
-                <div className='font-semibold text-white mb-1'>
-                  Vision AI Intelligence
+                <divclassName='font-semiboldtext-whitemb-1'>
+                  VisionAIIntelligence
                 </div>
-                <div className='text-sm text-gray-300'>
-                  Product recognition across 8.7M SKUs, visual issue diagnosis,
-                  AR-guided troubleshooting — 92% resolution without human
+                <divclassName='text-smtext-gray-300'>
+                  Productrecognitionacross 8.7MSKUsvisualissuediagnosis
+                  AR-guidedtroubleshooting — 92% resolutionwithouthuman
                   agents
                 </div>
               </div>
             </div>
-            <div className='flex items-start gap-4'>
-              <div className='flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center'>
-                <MessageCircle className='w-6 h-6 text-blue-400' />
+            <divclassName = 'flexitems-startgap-4'>
+              <divclassName='flex-shrink-0 w-12h-12bg-blue-500/20borderborder-blue-500/30rounded-lgflexitems-centerjustify-center'>
+                <MessageCircleclassName='w-6 h-6text-blue-400' />
               </div>
               <div>
-                <div className='font-semibold text-white mb-1'>
-                  Voice + Emotion AI
+                <divclassName='font-semiboldtext-whitemb-1'>
+                  Voice + EmotionAI
                 </div>
-                <div className='text-sm text-gray-300'>
-                  Natural conversations in 47 languages with real-time emotion
-                  detection and adaptive responses — 94% satisfaction rate
+                <divclassName='text-smtext-gray-300'>
+                  Naturalconversationsin 47languageswith real-timeemotiondetection andadaptiveresponses — 94% satisfactionrate
                 </div>
               </div>
             </div>
-            <div className='flex items-start gap-4'>
-              <div className='flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center'>
-                <Brain className='w-6 h-6 text-purple-400' />
+            <divclassName='flexitems-startgap-4'>
+              <divclassName='flex-shrink-0 w-12h-12bg-purple-500/20borderborder-purple-500/30rounded-lgflexitems-centerjustify-center'>
+                <Brain,className='w-6 h-6text-purple-400' />
               </div>
               <div>
-                <div className='font-semibold text-white mb-1'>
-                  Predictive Intelligence
+                <divclassName='font-semiboldtext-whitemb-1'>
+                  PredictiveIntelligence
                 </div>
-                <div className='text-sm text-gray-300'>
-                  Anticipate needs before customers ask, prevent 67% of issues
-                  proactively, 87% recommendation acceptance rate
+                <divclassName='text-smtext-gray-300'>
+                  Anticipateneedsbefore customersaskprevent67% ofissuesproactively87% recommendationacceptancerate
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Fortune 100 Success Story */}
-        <div className='bg-gradient-to-r from-cyan-900/30 via-blue-900/30 to-purple-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10'>
-          <div className='flex items-center justify-center gap-3 mb-4'>
-            <Users className='w-8 h-8 text-cyan-400' />
-            <h3 className='text-2xl font-bold text-white'>
-              Global Retail: $340M Transformation Success
+        {/* Fortune100Success Story */}
+        <divclassName = 'bg-gradient-to-rfrom-cyan-900/30via-blue-900/30to-purple-900/30backdrop-blur-smborderborder-white/10rounded-2xlp-8mb-10'>
+          <divclassName='flexitems-centerjustify-centergap-3mb-4'>
+            <UsersclassName='w-8 h-8text-cyan-400' />
+            <h3className='text-2xlfont-boldtext-white'>
+              GlobalRetail: $340MTransformationSuccess
             </h3>
-            <Users className='w-8 h-8 text-cyan-400' />
+            <UsersclassName='w-8 h-8text-cyan-400' />
           </div>
-          <div className='grid md:grid-cols-2 gap-8 mb-6'>
+          <divclassName='gridmd:grid-cols-2gap-8mb-6'>
             <div>
-              <div className='text-red-400 font-semibold mb-2 flex items-center gap-2'>
-                <AlertCircle className='w-5 h-5' />
-                Before: Customer Experience Crisis
+              <divclassName='text-red-400font-semiboldmb-2flexitems-centergap-2'>
+                <AlertCircleclassName='w-5 h-5' />
+                Before: CustomerExperienceCrisis
               </div>
-              <ul className='space-y-2 text-gray-300'>
-                <li className='flex items-start gap-2'>
-                  <span className='text-red-400 mt-1'>✗</span>
-                  <span>38% CSAT score (industry: 72%)</span>
+              <ulclassName='space-y-2text-gray-300'>
+                <liclassName='flexitems-startgap-2'>
+                  <spanclassName='text-red-400mt-1'>✗</span>
+                  <span>38% CSATscore (industry: 72%)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-red-400 mt-1'>✗</span>
-                  <span>$427M annual support costs</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <spanclassName='text-red-400mt-1'>✗</span>
+                  <span>$427Mannualsupport costs</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-red-400 mt-1'>✗</span>
-                  <span>23% first-contact resolution</span>
+                <liclassName='flexitems-startgap-2'>
+                  <spanclassName='text-red-400mt-1'>✗</span>
+                  <span>23% first-contactresolution</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-red-400 mt-1'>✗</span>
-                  <span>18 minute average resolution time</span>
+                <liclassName='flexitems-startgap-2'>
+                  <spanclassName='text-red-400mt-1'>✗</span>
+                  <span>18minuteaverage resolutiontime</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-red-400 mt-1'>✗</span>
-                  <span>67% agent turnover, low satisfaction</span>
+                <liclassName='flexitems-startgap-2'>
+                  <spanclassName='text-red-400mt-1'>✗</span>
+                  <span>67% agentturnoverlowsatisfaction</span>
                 </li>
               </ul>
             </div>
             <div>
-              <div className='text-green-400 font-semibold mb-2 flex items-center gap-2'>
-                <CheckCircle className='w-5 h-5' />
-                After: Multimodal AI Excellence
+              <divclassName = 'text-green-400font-semiboldmb-2flexitems-centergap-2'>
+                <CheckCircle,className='w-5 h-5' />
+                After: MultimodalAIExcellence
               </div>
-              <ul className='space-y-2 text-gray-300'>
-                <li className='flex items-start gap-2'>
-                  <span className='text-green-400 mt-1'>✓</span>
-                  <span>94% CSAT (+147%, industry-leading)</span>
+              <ulclassName='space-y-2text-gray-300'>
+                <liclassName='flexitems-startgap-2'>
+                  <spanclassName='text-green-400mt-1'>✓</span>
+                  <span>94% CSAT (+147%industry-leading)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-green-400 mt-1'>✓</span>
-                  <span>$184M support costs ($243M saved)</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <spanclassName='text-green-400mt-1'>✓</span>
+                  <span>$184Msupportcosts ($243Msaved)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-green-400 mt-1'>✓</span>
-                  <span>87% first-contact resolution (+278%)</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <spanclassName='text-green-400mt-1'>✓</span>
+                  <span>87% first-contactresolution (+278%)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-green-400 mt-1'>✓</span>
-                  <span>2.3 minute resolution time (-87%)</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <spanclassName='text-green-400mt-1'>✓</span>
+                  <span>2.3minuteresolution time (-87%)</span>
                 </li>
-                <li className='flex items-start gap-2'>
-                  <span className='text-green-400 mt-1'>✓</span>
-                  <span>14% agent turnover, 89% satisfaction</span>
+                <liclassName = 'flexitems-startgap-2'>
+                  <spanclassName='text-green-400mt-1'>✓</span>
+                  <span>14% agentturnover89% satisfaction</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className='text-center'>
-            <div className='inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg'>
-              <TrendingUp className='w-6 h-6 text-green-400' />
+          <divclassName = 'text-center'>
+            <divclassName='inline-flexitems-centergap-3px-6py-3bg-gradient-to-rfrom-cyan-500/20to-purple-500/20borderborder-cyan-500/30rounded-lg'>
+              <TrendingUpclassName='w-6 h-6text-green-400' />
               <div>
-                <div className='text-2xl font-bold text-white'>287% ROI</div>
-                <div className='text-sm text-gray-300'>
-                  4-month payback period
+                <divclassName='text-2xlfont-boldtext-white'>287% ROI</div>
+                <divclassName='text-smtext-gray-300'>
+                  4-monthpaybackperiod
                 </div>
               </div>
-              <div className='text-white/30'>|</div>
+              <divclassName='text-white/30'>|</div>
               <div>
-                <div className='text-2xl font-bold text-white'>$340M</div>
-                <div className='text-sm text-gray-300'>
-                  Annual value created
+                <divclassName='text-2xlfont-boldtext-white'>$340M</div>
+                <divclassName='text-smtext-gray-300'>
+                  Annualvaluecreated
                 </div>
               </div>
-              <div className='text-white/30'>|</div>
+              <divclassName='text-white/30'>|</div>
               <div>
-                <div className='text-2xl font-bold text-white'>+78 NPS</div>
-                <div className='text-sm text-gray-300'>
-                  Industry-leading score
+                <divclassName='text-2xlfont-boldtext-white'>+78NPS</div>
+                <divclassName='text-smtext-gray-300'>
+                  Industry-leadingscore
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Industry Applications */}
-        <div className='bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10'>
-          <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-            🌍 Proven Across Industries — 127M Customers Globally
+        {/* IndustryApplications */}
+        <divclassName='bg-gradient-to-brfrom-gray-900/60to-gray-800/60backdrop-blur-smborderborder-white/10rounded-2xlp-8mb-10'>
+          <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+            🌍 ProvenAcrossIndustries — 127MCustomersGlobally
           </h3>
-          <div className='grid grid-cols-2 md:grid-cols-5 gap-4'>
-            <div className='text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors'>
-              <div className='text-3xl mb-2'>🛒</div>
-              <div className='text-sm font-semibold text-white'>
+          <divclassName='gridgrid-cols-2md: grid-cols-5gap-4'>
+            <divclassName='text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors'>
+              <divclassName='text-3xlmb-2'>🛒</div>
+              <divclassName='text-smfont-semiboldtext-white'>
                 Retail & E-Commerce
               </div>
-              <div className='text-xs text-gray-400 mt-1'>287% ROI avg</div>
+              <divclassName='text-xstext-gray-400mt-1'>287% ROIavg</div>
             </div>
-            <div className='text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors'>
-              <div className='text-3xl mb-2'>🏦</div>
-              <div className='text-sm font-semibold text-white'>
-                Financial Services
+            <divclassName='text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors'>
+              <divclassName='text-3xlmb-2'>🏦</div>
+              <divclassName='text-smfont-semiboldtext-white'>
+                FinancialServices
               </div>
-              <div className='text-xs text-gray-400 mt-1'>92% CSAT</div>
+              <divclassName='text-xstext-gray-400mt-1'>92% CSAT</div>
             </div>
-            <div className='text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors'>
-              <div className='text-3xl mb-2'>🏥</div>
-              <div className='text-xs text-gray-400 mt-1'>89% satisfaction</div>
+            <divclassName='text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors'>
+              <divclassName='text-3xlmb-2'>🏥</div>
+              <divclassName='text-xstext-gray-400mt-1'>89% satisfaction</div>
             </div>
-            <div className='text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors'>
-              <div className='text-3xl mb-2'>✈️</div>
-              <div className='text-xs text-gray-400 mt-1'>234% conversion</div>
+            <divclassName='text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors'>
+              <divclassName='text-3xlmb-2'>✈️</div>
+              <divclassName='text-xstext-gray-400mt-1'>234% conversion</div>
             </div>
-            <div className='text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors'>
-              <div className='text-3xl mb-2'>📱</div>
-              <div className='text-xs text-gray-400 mt-1'>67% cost cut</div>
+            <divclassName='text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors'>
+              <divclassName='text-3xlmb-2'>📱</div>
+              <divclassName='text-xstext-gray-400mt-1'>67% costcut</div>
             </div>
           </div>
         </div>
-        {/* Call to Action Section */}
-        <div className='grid md:grid-cols-3 gap-6'>
-          <Link
-            to='/blog/ai-2025-oct-multimodal-ai-customer-experience-revolution'
-            className='group bg-gradient-to-br from-cyan-600 to-cyan-700 hover:from-cyan-500 hover:to-cyan-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50'
+        {/* CalltoAction Section */}
+        <divclassName = 'gridmd: grid-cols-3gap-6'>
+          <Linkto='/blog/ai-2025-oct-multimodal-ai-customer-experience-revolution'
+            className='groupbg-gradient-to-brfrom-cyan-600to-cyan-700hover:from-cyan-500hover:to-cyan-600rounded-xlp-6text-centertransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-cyan-500/50'
           >
-            <Brain className='w-12 h-12 text-white mx-auto mb-4' />
-            <div className='text-xl font-bold text-white mb-2'>
-              Read Technical Guide
+            <Brain,className='w-12h-12text-whitemx-automb-4' />
+            <divclassName='text-xlfont-boldtext-whitemb-2'>
+              ReadTechnicalGuide
             </div>
-            <div className='text-sm text-cyan-100 mb-4'>
-              Complete guide to multimodal AI customer experience with
-              architecture, implementation roadmap, and ROI calculator
+            <divclassName='text-smtext-cyan-100mb-4'>
+              Completeguideto multimodalAIcustomer experiencewitharchitectureimplementationroadmapandROIcalculator
             </div>
-            <div className='flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all'>
-              <span>Explore Technology</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName = 'flexitems-centerjustify-centergap-2text-whitefont-semiboldgroup-hover: gap-4transition-all'>
+              <span>ExploreTechnology</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
-          <Link
-            to='/case-studies/ai-2025-oct-global-retail-multimodal-cx-transformation-340-million-success'
-            className='group bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50'
+          <Linkto='/case-studies/ai-2025-oct-global-retail-multimodal-cx-transformation-340-million-success'
+            className='groupbg-gradient-to-brfrom-blue-600to-blue-700hover:from-blue-500hover:to-blue-600rounded-xlp-6text-centertransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-blue-500/50'
           >
-            <Users className='w-12 h-12 text-white mx-auto mb-4' />
-            <div className='text-xl font-bold text-white mb-2'>
-              $340M Success Story
+            <UsersclassName='w-12h-12text-whitemx-automb-4' />
+            <divclassName='text-xlfont-boldtext-whitemb-2'>
+              $340MSuccessStory
             </div>
-            <div className='text-sm text-blue-100 mb-4'>
-              Fortune 100 transformation: 94% CSAT, 287% ROI, 85% automation —
-              complete 16-week implementation journey
+            <divclassName='text-smtext-blue-100mb-4'>
+              Fortune100transformation: 94% CSAT287% ROI85% automation —
+              complete16-weekimplementationjourney
             </div>
-            <div className='flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all'>
-              <span>See Results</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName = 'flexitems-centerjustify-centergap-2text-whitefont-semiboldgroup-hover: gap-4transition-all'>
+              <span>SeeResults</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
-          <Link
-            to='/services/multimodal-ai-customer-experience-platform-services'
-            className='group bg-gradient-to-br from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50'
+          <Linkto='/services/multimodal-ai-customer-experience-platform-services'
+            className='groupbg-gradient-to-brfrom-purple-600to-purple-700hover:from-purple-500hover:to-purple-600rounded-xlp-6text-centertransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-purple-500/50'
           >
-            <Target className='w-12 h-12 text-white mx-auto mb-4' />
-            <div className='text-xl font-bold text-white mb-2'>
-              Our CX Platform Services
+            <TargetclassName='w-12h-12text-whitemx-automb-4' />
+            <divclassName='text-xlfont-boldtext-whitemb-2'>
+              OurCXPlatform Services
             </div>
-            <div className='text-sm text-purple-100 mb-4'>
-              Enterprise platform, implementation services, managed support —
-              flexible pricing with guaranteed ROI and proven results
+            <divclassName='text-smtext-purple-100mb-4'>
+              Enterpriseplatformimplementationservicesmanagedsupport —
+              flexiblepricingwith guaranteedROIand provenresults
             </div>
-            <div className='flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all'>
-              <span>Get Started</span>
-              <ArrowRight className='w-5 h-5' />
+            <divclassName = 'flexitems-centerjustify-centergap-2text-whitefont-semiboldgroup-hover: gap-4transition-all'>
+              <span>GetStarted</span>
+              <ArrowRight,className='w-5 h-5' />
             </div>
           </Link>
         </div>
-        {/* Free Consultation CTA */}
-        <div className='mt-10 text-center'>
-          <div className='inline-flex flex-col items-center gap-4 p-8 bg-gradient-to-r from-cyan-900/40 via-blue-900/40 to-purple-900/40 backdrop-blur-sm border border-white/20 rounded-2xl'>
-            <div className='text-2xl font-bold text-white'>
-              🎁 FREE Customer Experience Assessment — No Obligation
+        {/* FreeConsultationCTA */}
+        <divclassName = 'mt-10text-center'>
+          <divclassName='inline-flexflex-colitems-centergap-4 p-8bg-gradient-to-rfrom-cyan-900/40via-blue-900/40to-purple-900/40backdrop-blur-smborderborder-white/20rounded-2xl'>
+            <divclassName='text-2xlfont-boldtext-white'>
+              🎁 FREECustomerExperience Assessment — NoObligation
             </div>
-            <div className='text-gray-300 max-w-2xl'>
-              Analyze your current CX performance, identify opportunities for
-              improvement, and receive custom ROI projections — completely free
-              and confidential
+            <divclassName='text-gray-300max-w-2xl'>
+              Analyzeyourcurrent CXperformanceidentifyopportunitiesfor
+              improvementandreceivecustom ROIprojections — completelyfreeand confidential
             </div>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50'
+            <Linkto = '/contact'
+              className='inline-flexitems-centergap-3px-8py-4bg-gradient-to-rfrom-cyan-600to-blue-600hover: from-cyan-500hover:to-blue-500rounded-lgtext-whitefont-boldtext-lgtransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-cyan-500/50'
             >
-              <Heart className='w-6 h-6' />
-              <span>Schedule Free Assessment</span>
-              <ArrowRight className='w-6 h-6' />
+              <HeartclassName='w-6 h-6' />
+              <span>ScheduleFreeAssessment</span>
+              <ArrowRight,className='w-6 h-6' />
             </Link>
           </div>
         </div>
-        {/* Trust Indicators */}
-        <div className='mt-10 pt-8 border-t border-white/10'>
-          <div className='flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400'>
-            <div className='flex items-center gap-2'>
-              <CheckCircle className='w-4 h-4 text-green-400' />
-              <span>Fortune 100 Proven</span>
+        {/* TrustIndicators */}
+        <divclassName = 'mt-10pt-8border-tborder-white/10'>
+          <divclassName='flexflex-wrapitems-centerjustify-centergap-6text-smtext-gray-400'>
+            <divclassName='flexitems-centergap-2'>
+              <CheckCircle,className='w-4 h-4text-green-400' />
+              <span>Fortune100Proven</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <CheckCircle className='w-4 h-4 text-green-400' />
-              <span>127M Customers Served</span>
+            <divclassName='flexitems-centergap-2'>
+              <CheckCircle,className='w-4 h-4text-green-400' />
+              <span>127MCustomersServed</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <CheckCircle className='w-4 h-4 text-green-400' />
-              <span>47 Languages Supported</span>
+            <divclassName='flexitems-centergap-2'>
+              <CheckCircle,className='w-4 h-4text-green-400' />
+              <span>47LanguagesSupported</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <CheckCircle className='w-4 h-4 text-green-400' />
-              <span>99.99% Uptime SLA</span>
+            <divclassName='flexitems-centergap-2'>
+              <CheckCircle,className='w-4 h-4text-green-400' />
+              <span>99.99% UptimeSLA</span>
             </div>
-            <div className='flex items-center gap-2'>
-              <CheckCircle className='w-4 h-4 text-green-400' />
-              <span>12-24 Week Implementation</span>
+            <divclassName='flexitems-centergap-2'>
+              <CheckCircle,className='w-4 h-4text-green-400' />
+              <span>12-24WeekImplementation</span>
             </div>
           </div>
         </div>
@@ -356,4 +343,4 @@ const October2025MultimodalCXRevolutionBanner = () => {
     </div>
   );
 };
-export default October2025MultimodalCXRevolutionBanner;
+exportdefaultOctober2025MultimodalCXRevolutionBanner;

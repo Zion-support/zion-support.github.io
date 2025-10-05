@@ -1,304 +1,300 @@
 import { Link } from 'react-router-dom';
-const October2025FraudDetectionBanner = () => {
+constOctober2025FraudDetectionBanner = () => { 
   return (
-    <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden" > {/* Animated background effects */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+    <divclassName = "relativebg-gradient-to-brfrom-red-900/20via-purple-900/20to-blue-900/20border-yborder-red-500/30overflow-hidden"  > {/* Animatedbackgroundeffects */ }
+      <divclassName="absoluteinset-0opacity-10">
+        <divclassName="absolutetop-0left-1/4 w-96h-96bg-red-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-0right-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '1s' }} />
+        <divclassName = "absolutetop-1/2left-1/2 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '2s' }} />
       </div>
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        {/* Header Section */}
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/30 rounded-full mb-4 animate-pulse">
-            <Shield className="w-5 h-5 text-red-400" />
-            <span className="text-red-300 font-semibold text-sm">🚨 BREAKING: OCTOBER 1, 2025 — ENTERPRISE FRAUD CRISIS SOLVED</span>
-            <Shield className="w-5 h-5 text-red-400" />
+      <divclassName = "relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-12">
+        {/* HeaderSection */}
+        <divclassName = "text-centermb-10">
+          <divclassName="inline-flexitems-centergap-2px-4py-2bg-red-500/20borderborder-red-500/30rounded-fullmb-4animate-pulse">
+            <ShieldclassName="w-5 h-5text-red-400" />
+            <spanclassName="text-red-300font-semiboldtext-sm">🚨 BREAKING: OCTOBER 12025 — ENTERPRISEFRAUDCRISIS SOLVED</span>
+            <ShieldclassName = "w-5 h-5text-red-400" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
-            AI-Powered Real-Time Fraud Detection
-            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
-              $847B in Assets Protected | 99.7% Accuracy | Sub-50ms Detection
+          <h2className="text-4xlmd: text-5xlfont-boldtext-whitemb-4leading-tight">
+            AI-PoweredReal-TimeFraudDetection
+            <br /> <spanclassName="text-transparentbg-clip-textbg-gradient-to-rfrom-red-400via-purple-400to-blue-400">
+              $847BinAssets Protected | 99.7% Accuracy | Sub-50msDetection
             </span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary AI platform combining <strong className="text-white">Graph Neural Networks, Behavioral Biometrics & Multi-Model ML</strong> to achieve 96% fraud reduction, 43x ROI, and near-zero false positives. <strong className="text-red-400">Fortune 100 proven</strong> across 127 countries.
+          <pclassName="text-xltext-gray-300max-w-4xlmx-autoleading-relaxed">
+            RevolutionaryAIplatform combining <strongclassName="text-white">GraphNeuralNetworksBehavioralBiometrics & Multi-ModelML</strong> toachieve96% fraudreduction43xROIandnear-zerofalsepositives. <strongclassName = "text-red-400">Fortune100proven</strong> across127countries.
           </p>
         </div>
-        {/* Key Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          <div className="bg-gradient-to-br from-red-900/40 to-red-800/40 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-            <Zap className="w-8 h-8 text-red-400 mx-auto mb-2" />
-            <div className="text-3xl font-bold text-white mb-1">Sub-50ms</div>
-            <div className="text-sm text-red-200">Real-Time Detection</div>
-            <div className="text-xs text-gray-400 mt-1">1,300x faster</div>
+        {/* KeyMetricsGrid */}
+        <divclassName="gridgrid-cols-2md: grid-cols-4gap-4mb-10">
+          <divclassName="bg-gradient-to-brfrom-red-900/40to-red-800/40backdrop-blur-smborderborder-red-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300">
+            <ZapclassName="w-8 h-8text-red-400mx-automb-2" />
+            <divclassName="text-3xlfont-boldtext-whitemb-1">Sub-50ms</div>
+            <divclassName="text-smtext-red-200">Real-TimeDetection</div>
+            <divclassName="text-xstext-gray-400mt-1">1300xfaster</div>
           </div>
-          <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-            <Target className="w-8 h-8 text-purple-400 mx-auto mb-2" />
-            <div className="text-3xl font-bold text-white mb-1">99.7%</div>
-            <div className="text-sm text-purple-200">Detection Accuracy</div>
-            <div className="text-xs text-gray-400 mt-1">0.003% false positives</div>
+          <divclassName = "bg-gradient-to-brfrom-purple-900/40to-purple-800/40backdrop-blur-smborderborder-purple-500/30rounded-xlp-6text-centerhover: scale-105transition-transformduration-300">
+            <TargetclassName="w-8 h-8text-purple-400mx-automb-2" />
+            <divclassName="text-3xlfont-boldtext-whitemb-1">99.7%</div>
+            <divclassName="text-smtext-purple-200">DetectionAccuracy</div>
+            <divclassName="text-xstext-gray-400mt-1">0.003% falsepositives</div>
           </div>
-          <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-            <TrendingUp className="w-8 h-8 text-blue-400 mx-auto mb-2" />
-            <div className="text-3xl font-bold text-white mb-1">96%</div>
-            <div className="text-sm text-blue-200">Fraud Reduction</div>
-            <div className="text-xs text-gray-400 mt-1">$410M saved avg</div>
+          <divclassName="bg-gradient-to-brfrom-blue-900/40to-blue-800/40backdrop-blur-smborderborder-blue-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300">
+            <TrendingUpclassName="w-8 h-8text-blue-400mx-automb-2" />
+            <divclassName="text-3xlfont-boldtext-whitemb-1">96%</div>
+            <divclassName="text-smtext-blue-200">FraudReduction</div>
+            <divclassName="text-xstext-gray-400mt-1">$410Msavedavg</div>
           </div>
-          <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-            <Shield className="w-8 h-8 text-green-400 mx-auto mb-2" />
-            <div className="text-3xl font-bold text-white mb-1">$847B</div>
-            <div className="text-sm text-green-200">Assets Protected</div>
-            <div className="text-xs text-gray-400 mt-1">Globally deployed</div>
+          <divclassName="bg-gradient-to-brfrom-green-900/40to-green-800/40backdrop-blur-smborderborder-green-500/30rounded-xlp-6text-centerhover:scale-105transition-transformduration-300">
+            <ShieldclassName="w-8 h-8text-green-400mx-automb-2" />
+            <divclassName="text-3xlfont-boldtext-whitemb-1">$847B</div>
+            <divclassName="text-smtext-green-200">AssetsProtected</div>
+            <divclassName="text-xstext-gray-400mt-1">Globallydeployed</div>
           </div>
         </div>
-        {/* Revolutionary Capabilities */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            🔥 Revolutionary AI Technology Stack
+        {/* RevolutionaryCapabilities */}
+        <divclassName = "bg-gradient-to-brfrom-gray-900/60to-gray-800/60backdrop-blur-smborderborder-white/10rounded-2xlp-8mb-10">
+          <h3className="text-2xlfont-boldtext-whitemb-6text-center">
+            🔥 RevolutionaryAITechnology Stack
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-red-500/20 border border-red-500/30 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-red-400" />
+          <divclassName="gridmd: grid-cols-3gap-6">
+            <divclassName="flexitems-startgap-4">
+              <divclassName="flex-shrink-0 w-12h-12bg-red-500/20borderborder-red-500/30rounded-lgflexitems-centerjustify-center">
+                <Brain,className="w-6 h-6text-red-400" />
               </div>
               <div>
-                <div className="font-semibold text-white mb-1">Multi-Model ML Ensemble</div>
-                <div className="text-sm text-gray-300">
-                  Graph Neural Networks + Transformers + Isolation Forest + Deep Learning working in concert for unmatched accuracy
+                <divclassName="font-semiboldtext-whitemb-1">Multi-ModelMLEnsemble</div>
+                <divclassName="text-smtext-gray-300">
+                  GraphNeuralNetworks + Transformers + IsolationForest + DeepLearningworking inconcertfor unmatchedaccuracy
                 </div>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
-                <Eye className="w-6 h-6 text-purple-400" />
+            <divclassName="flexitems-startgap-4">
+              <divclassName="flex-shrink-0 w-12h-12bg-purple-500/20borderborder-purple-500/30rounded-lgflexitems-centerjustify-center">
+                <EyeclassName="w-6 h-6text-purple-400" />
               </div>
-                <Eye className="w-6 h-6 text-purple-400" />
+                <EyeclassName="w-6 h-6text-purple-400" />
               </div>
               <div>
-                <div className="font-semibold text-white mb-1">Behavioral Biometrics</div>
-                <div className="text-sm text-gray-300">
-                  Continuous authentication via keystroke dynamics, mouse patterns, device fingerprinting — 99.4% user ID accuracy
+                <divclassName="font-semiboldtext-whitemb-1">BehavioralBiometrics</div>
+                <divclassName="text-smtext-gray-300">
+                  Continuousauthenticationvia keystrokedynamicsmousepatternsdevicefingerprinting — 99.4% userIDaccuracy
                 </div>
               </div>
             </div>
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
-                <Network className="w-6 h-6 text-blue-400" />
+            <divclassName = "flexitems-startgap-4">
+              <divclassName="flex-shrink-0 w-12h-12bg-blue-500/20borderborder-blue-500/30rounded-lgflexitems-centerjustify-center">
+                <NetworkclassName="w-6 h-6text-blue-400" />
               </div>
-                <Network className="w-6 h-6 text-blue-400" />
+                <NetworkclassName="w-6 h-6text-blue-400" />
               </div>
               <div>
-                <div className="font-semibold text-white mb-1">Graph Intelligence</div>
-                <div className="text-sm text-gray-300">
-                  Detect fraud rings and coordinated attacks across millions of entities — uncover hidden network patterns
+                <divclassName="font-semiboldtext-whitemb-1">GraphIntelligence</div>
+                <divclassName="text-smtext-gray-300">
+                  Detectfraudrings andcoordinatedattacks acrossmillionsof entities — uncoverhiddennetwork patterns
                 </div>
               </div>
             </div>
           </div>
         </div>
-        {/* Fortune 100 Success Story */}
-        <div className="bg-gradient-to-r from-red-900/30 via-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Shield className="w-8 h-8 text-red-400" />
-            <h3 className="text-2xl font-bold text-white">Fortune 100 Transformation</h3>
-            <Shield className="w-8 h-8 text-red-400" />
+        {/* Fortune100Success Story */}
+        <divclassName="bg-gradient-to-rfrom-red-900/30via-purple-900/30to-blue-900/30backdrop-blur-smborderborder-white/10rounded-2xlp-8mb-10">
+          <divclassName="flexitems-centerjustify-centergap-3mb-4">
+            <ShieldclassName="w-8 h-8text-red-400" />
+            <h3className="text-2xlfont-boldtext-white">Fortune100Transformation</h3>
+            <ShieldclassName="w-8 h-8text-red-400" />
           </div>
-          <div className="grid md:grid-cols-2 gap-8 mb-6">
+          <divclassName="gridmd: grid-cols-2gap-8mb-6">
             <div>
-              <div className="text-red-400 font-semibold mb-2 flex items-center gap-2">
-                <AlertCircle className="w-5 h-5" />
-                Before: Crisis State
+              <divclassName="text-red-400font-semiboldmb-2flexitems-centergap-2">
+                <AlertCircleclassName="w-5 h-5" />
+                Before: CrisisState
               </div>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>$427M annual fraud losses (0.34% of volume)</span>
+              <ulclassName="space-y-2text-gray-300">
+                <liclassName="flexitems-startgap-2">
+                  <spanclassName="text-red-400mt-1">✗</span>
+                  <span>$427Mannualfraud losses (0.34% ofvolume)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>82% false positive rate (massive friction)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400mt-1">✗</span>
+                  <span>82% falsepositiverate (massivefriction)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>65-90 second detection latency (too slow)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400mt-1">✗</span>
+                  <span>65-90seconddetection latency (tooslow)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>18.7% customer churn ($127M revenue loss)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400mt-1">✗</span>
+                  <span>18.7% customerchurn ($127Mrevenueloss)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-400 mt-1">✗</span>
-                  <span>NPS Score: 14 (industry-worst)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-red-400mt-1">✗</span>
+                  <span>NPSScore: 14 (industry-worst)</span>
                 </li>
               </ul>
             </div>
             <div>
-              <div className="text-green-400 font-semibold mb-2 flex items-center gap-2">
-                <CheckCircle className="w-5 h-5" />
-                After: AI-Powered Excellence
+              <divclassName = "text-green-400font-semiboldmb-2flexitems-centergap-2">
+                <CheckCircle,className="w-5 h-5" />
+                After: AI-PoweredExcellence
               </div>
-              <ul className="space-y-2 text-gray-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>$17M fraud losses (96% reduction, $410M saved)</span>
+              <ulclassName="space-y-2text-gray-300">
+                <liclassName="flexitems-startgap-2">
+                  <spanclassName="text-green-400mt-1">✓</span>
+                  <span>$17Mfraudlosses (96% reduction$410Msaved)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>0.003% false positives (27,000x improvement)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-green-400mt-1">✓</span>
+                  <span>0.003% falsepositives (27000ximprovement)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>Sub-50ms detection (1,300x faster)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-green-400mt-1">✓</span>
+                  <span>Sub-50msdetection (1300xfaster)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>1.2% churn ($120M revenue protected)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-green-400mt-1">✓</span>
+                  <span>1.2% churn ($120Mrevenueprotected)</span>
                 </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-400 mt-1">✓</span>
-                  <span>NPS Score: 74 (industry-leading, +60 points)</span>
+                <liclassName = "flexitems-startgap-2">
+                  <spanclassName="text-green-400mt-1">✓</span>
+                  <span>NPSScore: 74 (industry-leading+60points)</span>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="text-center">
-            <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-red-500/20 to-purple-500/20 border border-red-500/30 rounded-lg">
-              <TrendingUp className="w-6 h-6 text-green-400" />
+          <divclassName = "text-center">
+            <divclassName="inline-flexitems-centergap-3px-6py-3bg-gradient-to-rfrom-red-500/20to-purple-500/20borderborder-red-500/30rounded-lg">
+              <TrendingUpclassName="w-6 h-6text-green-400" />
               <div>
-                <div className="text-2xl font-bold text-white">43x ROI</div>
-                <div className="text-sm text-gray-300">6.2-week payback period</div>
+                <divclassName="text-2xlfont-boldtext-white">43xROI</div>
+                <divclassName="text-smtext-gray-300">6.2-weekpaybackperiod</div>
               </div>
-              <div className="text-white/30">|</div>
+              <divclassName="text-white/30">|</div>
               <div>
-                <div className="text-2xl font-bold text-white">$860M</div>
-                <div className="text-sm text-gray-300">Annual value created</div>
+                <divclassName="text-2xlfont-boldtext-white">$860M</div>
+                <divclassName="text-smtext-gray-300">Annualvaluecreated</div>
               </div>
             </div>
           </div>
         </div>
-        {/* Industry Applications */}
-        <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">
-            🌍 Proven Across Industries — 127 Countries Deployed
+        {/* IndustryApplications */}
+        <divclassName="bg-gradient-to-brfrom-gray-900/60to-gray-800/60backdrop-blur-smborderborder-white/10rounded-2xlp-8mb-10">
+          <h3className="text-2xlfont-boldtext-whitemb-6text-center">
+            🌍 ProvenAcrossIndustries — 127CountriesDeployed
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🏦</div>
-              <div className="text-sm font-semibold text-white">Financial Services</div>
-              <div className="text-xs text-gray-400 mt-1">$2.3B protected</div>
+          <divclassName="gridgrid-cols-2md: grid-cols-5gap-4">
+            <divclassName="text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors">
+              <divclassName="text-3xlmb-2">🏦</div>
+              <divclassName="text-smfont-semiboldtext-white">FinancialServices</div>
+              <divclassName="text-xstext-gray-400mt-1">$2.3Bprotected</div>
             </div>
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🛒</div>
-              <div className="text-sm font-semibold text-white">E-Commerce</div>
-              <div className="text-xs text-gray-400 mt-1">98.7% accuracy</div>
+            <divclassName="text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors">
+              <divclassName="text-3xlmb-2">🛒</div>
+              <divclassName="text-smfont-semiboldtext-white">E-Commerce</div>
+              <divclassName="text-xstext-gray-400mt-1">98.7% accuracy</div>
             </div>
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🏥</div>
-              <div className="text-xs text-gray-400 mt-1">$78M savings</div>
+            <divclassName="text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors">
+              <divclassName="text-3xlmb-2">🏥</div>
+              <divclassName="text-xstext-gray-400mt-1">$78Msavings</div>
             </div>
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">🏢</div>
-              <div className="text-xs text-gray-400 mt-1">$127M savings</div>
+            <divclassName="text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors">
+              <divclassName="text-3xlmb-2">🏢</div>
+              <divclassName="text-xstext-gray-400mt-1">$127Msavings</div>
             </div>
-            <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
-              <div className="text-3xl mb-2">📱</div>
-              <div className="text-xs text-gray-400 mt-1">99.2% detection</div>
+            <divclassName="text-centerp-4bg-white/5rounded-lghover:bg-white/10transition-colors">
+              <divclassName="text-3xlmb-2">📱</div>
+              <divclassName="text-xstext-gray-400mt-1">99.2% detection</div>
             </div>
           </div>
         </div>
-        {/* Call to Action Section */}
-        <div className="grid md:grid-cols-3 gap-6">
-          <Link
-            to="/blog/ai-2025-oct-real-time-fraud-detection-revolution"
-            className="group bg-gradient-to-br from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50"
+        {/* CalltoAction Section */}
+        <divclassName = "gridmd: grid-cols-3gap-6">
+          <Linkto="/blog/ai-2025-oct-real-time-fraud-detection-revolution"
+            className="groupbg-gradient-to-brfrom-red-600to-red-700hover:from-red-500hover:to-red-600rounded-xlp-6text-centertransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-red-500/50"
           >
-            <Brain className="w-12 h-12 text-white mx-auto mb-4" />
-            <div className="text-xl font-bold text-white mb-2">
-              Read Technical Deep-Dive
+            <Brain,className="w-12h-12text-whitemx-automb-4" />
+            <divclassName="text-xlfont-boldtext-whitemb-2">
+              ReadTechnicalDeep-Dive
             </div>
-            <div className="text-sm text-red-100 mb-4">
-              Complete guide to AI-powered fraud detection with code examples, architecture, and implementation roadmap
+            <divclassName="text-smtext-red-100mb-4">
+              Completeguideto AI-poweredfrauddetection withcodeexamplesarchitectureandimplementationroadmap
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>Explore Technology</span>
-              <ArrowRight className="w-5 h-5" />
+            <divclassName = "flexitems-centerjustify-centergap-2text-whitefont-semiboldgroup-hover: gap-4transition-all">
+              <span>ExploreTechnology</span>
+              <ArrowRight,className="w-5 h-5" />
             </div>
           </Link>
-          <Link
-            to="/case-studies/global-financial-fraud-detection-847b-success"
-            className="group bg-gradient-to-br from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50"
+          <Linkto="/case-studies/global-financial-fraud-detection-847b-success"
+            className="groupbg-gradient-to-brfrom-purple-600to-purple-700hover:from-purple-500hover:to-purple-600rounded-xlp-6text-centertransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-purple-500/50"
           >
-            <Shield className="w-12 h-12 text-white mx-auto mb-4" />
-            <div className="text-xl font-bold text-white mb-2">
-              $847B Success Story
+            <ShieldclassName="w-12h-12text-whitemx-automb-4" />
+            <divclassName="text-xlfont-boldtext-whitemb-2">
+              $847BSuccessStory
             </div>
-            <div className="text-sm text-purple-100 mb-4">
-              Fortune 100 case study: 96% fraud reduction, 43x ROI, 6-week payback — complete transformation journey
+            <divclassName="text-smtext-purple-100mb-4">
+              Fortune100case study: 96% fraudreduction43xROI6-weekpayback — completetransformationjourney
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>See Results</span>
-              <ArrowRight className="w-5 h-5" />
+            <divclassName = "flexitems-centerjustify-centergap-2text-whitefont-semiboldgroup-hover: gap-4transition-all">
+              <span>SeeResults</span>
+              <ArrowRight,className="w-5 h-5" />
             </div>
           </Link>
-          <Link
-            to="/services/ai-fraud-detection-services"
-            className="group bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50"
+          <Linkto="/services/ai-fraud-detection-services"
+            className="groupbg-gradient-to-brfrom-blue-600to-blue-700hover:from-blue-500hover:to-blue-600rounded-xlp-6text-centertransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-blue-500/50"
           >
-            <Target className="w-12 h-12 text-white mx-auto mb-4" />
-            <div className="text-xl font-bold text-white mb-2">
-              Our Fraud Detection Services
+            <TargetclassName="w-12h-12text-whitemx-automb-4" />
+            <divclassName="text-xlfont-boldtext-whitemb-2">
+              OurFraudDetection Services
             </div>
-            <div className="text-sm text-blue-100 mb-4">
-              Comprehensive platform, managed services, consulting — flexible pricing with guaranteed ROI and proven results
+            <divclassName="text-smtext-blue-100mb-4">
+              Comprehensiveplatformmanagedservicesconsulting — flexiblepricingwith guaranteedROIand provenresults
             </div>
-            <div className="flex items-center justify-center gap-2 text-white font-semibold group-hover:gap-4 transition-all">
-              <span>Get Protected</span>
-              <ArrowRight className="w-5 h-5" />
+            <divclassName = "flexitems-centerjustify-centergap-2text-whitefont-semiboldgroup-hover: gap-4transition-all">
+              <span>GetProtected</span>
+              <ArrowRight,className="w-5 h-5" />
             </div>
           </Link>
         </div>
-        {/* Free Assessment CTA */}
-        <div className="mt-10 text-center">
-          <div className="inline-flex flex-col items-center gap-4 p-8 bg-gradient-to-r from-red-900/40 via-purple-900/40 to-blue-900/40 backdrop-blur-sm border border-white/20 rounded-2xl">
-            <div className="text-2xl font-bold text-white">
-              🎁 FREE 2-Week Fraud Assessment — No Obligation
+        {/* FreeAssessmentCTA */}
+        <divclassName = "mt-10text-center">
+          <divclassName="inline-flexflex-colitems-centergap-4 p-8bg-gradient-to-rfrom-red-900/40via-purple-900/40to-blue-900/40backdrop-blur-smborderborder-white/20rounded-2xl">
+            <divclassName="text-2xlfont-boldtext-white">
+              🎁 FREE2-WeekFraudAssessment — NoObligation
             </div>
-            <div className="text-gray-300 max-w-2xl">
-              Discover your fraud exposure, quantify potential savings, and receive a custom ROI projection — completely free and confidential
+            <divclassName="text-gray-300max-w-2xl">
+              Discoveryourfraud exposurequantifypotentialsavingsandreceivea customROIprojection — completelyfreeand confidential
             </div>
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-red-600 to-purple-600 hover:from-red-500 hover:to-purple-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/50"
+            <Linkto = "/contact"
+              className="inline-flexitems-centergap-3px-8py-4bg-gradient-to-rfrom-red-600to-purple-600hover: from-red-500hover:to-purple-500rounded-lgtext-whitefont-boldtext-lgtransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-red-500/50"
             >
-              <Shield className="w-6 h-6" />
-              <span>Schedule Free Assessment</span>
-              <ArrowRight className="w-6 h-6" />
+              <ShieldclassName="w-6 h-6" />
+              <span>ScheduleFreeAssessment</span>
+              <ArrowRight,className="w-6 h-6" />
             </Link>
           </div>
         </div>
-        {/* Trust Indicators */}
-        <div className="mt-10 pt-8 border-t border-white/10">
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>Fortune 100 Proven</span>
+        {/* TrustIndicators */}
+        <divclassName = "mt-10pt-8border-tborder-white/10">
+          <divclassName="flexflex-wrapitems-centerjustify-centergap-6text-smtext-gray-400">
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,className="w-4 h-4text-green-400" />
+              <span>Fortune100Proven</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>127 Countries Deployed</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,className="w-4 h-4text-green-400" />
+              <span>127CountriesDeployed</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>99.99% Uptime SLA</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,className="w-4 h-4text-green-400" />
+              <span>99.99% UptimeSLA</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>100% Regulatory Compliance</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,className="w-4 h-4text-green-400" />
+              <span>100% RegulatoryCompliance</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              <span>90-Day Rapid Deployment</span>
+            <divclassName="flexitems-centergap-2">
+              <CheckCircle,className="w-4 h-4text-green-400" />
+              <span>90-DayRapidDeployment</span>
             </div>
           </div>
         </div>
@@ -306,4 +302,4 @@ const October2025FraudDetectionBanner = () => {
     </div>
   );
 };
-export default October2025FraudDetectionBanner;
+exportdefaultOctober2025FraudDetectionBanner;

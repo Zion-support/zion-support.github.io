@@ -1,44 +1,38 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
-        <meta
-          name='description'
-          content='Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant.'
+        <title>EnterpriseRAGSecurity v2 — Auth-AwareFreshSigned</title>
+        <metaname = 'description'
+          content='Auth-scopedretrievalfreshnesswindowspromptfirewallsandsignedoutputs thatkeepanswers correctandcompliant.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Enterprise RAG Security v2
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          EnterpriseRAGSecurity v2
         </h1>
-        <p className='text-zion-slate-light mb-8'>Auth-Aware, Fresh, Signed</p>
-        <div className='prose prose-invert max-w-3xl'>
+        <pclassName='text-zion-slate-lightmb-8'>Auth-AwareFreshSigned</p>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            Upgrade enterprise RAG safety with auth-aware retrieval, freshness
-            windows, prompt firewalls, and signed outputs. Prevent data leaks
-            and stale answers while maintaining performance guarantees.
+            UpgradeenterpriseRAG safetywithauth-awareretrievalfreshnesswindowspromptfirewallsandsignedoutputs. Preventdataleaks
+            andstaleanswers whilemaintainingperformance guarantees.
           </p>
           <p>
-            This guide covers retrieval scoping by user and tenant, freshness
-            and staleness windows, cache invalidation signals, and output
-            signing with verifiers that run in CI and production.
+            Thisguidecovers retrievalscopingby userandtenantfreshnessandstaleness windowscacheinvalidationsignalsandoutputsigning withverifiersthat runinCI andproduction.
           </p>
         </div>
-        <div className='mt-8'>
-          <a href='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName = 'mt-8'>
+          <ahref='/blog' className='text-cyan-300hover: underline'>
+            ← BacktoBlog
           </a>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

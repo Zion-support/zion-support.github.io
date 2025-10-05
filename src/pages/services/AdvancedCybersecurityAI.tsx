@@ -1,161 +1,155 @@
 import {
-  ArrowLeft,
+  ArrowLeft
   CheckCircle,
-  DollarSign,
-  Lock,
-  Shield,
-  TrendingUp,
-  Zap,
+  DollarSign
+  Lock
+  Shield
+  TrendingUp
+  Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+importHeaderfrom '../../components/Header';
 
-const AdvancedCybersecurityAI = () => {
+constAdvancedCybersecurityAI = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Advanced Cybersecurity AI Platform | Next-Gen Threat Detection &
-          Response | Zion Tech Group
+          AdvancedCybersecurityAI Platform | Next-GenThreatDetection &
+          Response | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='AI-powered cybersecurity platform with 99.92% threat detection accuracy. Real-time protection, autonomous incident response, and predictive security intelligence.'
+        <metaname = 'description'
+          content='AI-poweredcybersecurityplatform with99.92% threatdetectionaccuracy. Real-timeprotectionautonomousincidentresponseandpredictivesecurity intelligence.'
         />
-        <meta
-          name='keywords'
-          content='cybersecurity AI, threat detection, incident response, SIEM, EDR, security automation, AI security'
+        <metaname = 'keywords'
+          content='cybersecurityAIthreatdetectionincidentresponseSIEMEDRsecurityautomationAIsecurity'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-dark'>
         <Header />
 
-        <article className='container mx-auto px-6 py-20'>
-          {/* Back Link */}
-          <Link
-            to='/services'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <articleclassName='containermx-autopx-6py-20' > {/* BackLink */ }
+          <Linkto='/services'
+            className='inline-flexitems-centertext-zion-cyanhover: text-zion-blue-lightmb-8transition-colors'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Services
+            <ArrowLeftclassName='w-4 h-4mr-2' />
+            BacktoServices
           </Link>
 
           {/* Header */}
-          <div className='max-w-5xl mx-auto mb-16'>
-            <div className='flex items-center gap-4 mb-6 flex-wrap'>
-              <span className='px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30'>
-                🔒 NEW! October 2025
+          <divclassName = 'max-w-5xlmx-automb-16'>
+            <divclassName='flexitems-centergap-4mb-6flex-wrap'>
+              <spanclassName='px-4py-2bg-red-500/20text-red-300rounded-fulltext-smfont-semiboldborderborder-red-500/30'>
+                🔒 NEW! October2025
               </span>
-              <span className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-semibold border border-blue-500/30'>
-                🛡️ AI Security
+              <spanclassName='px-4py-2bg-blue-500/20text-blue-300rounded-fulltext-smfont-semiboldborderborder-blue-500/30'>
+                🛡️ AISecurity
               </span>
-              <span className='text-zion-slate-light'>
-                Starting at $12,999/month
+              <spanclassName='text-zion-slate-light'>
+                Startingat $12999/month
               </span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Advanced Cybersecurity AI Platform
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-blue-400 mt-2'>
-                Next-Gen Threat Detection & Response
+            <h1className = 'text-5xlmd: text-6xlfont-boldtext-whitemb-6leading-tight'>
+              AdvancedCybersecurityAI Platform
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-red-400to-blue-400mt-2'>
+                Next-GenThreatDetection & Response
               </span>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed mb-8'>
-              Protect your enterprise with AI-powered cybersecurity that
-              identifies threats 99.7% faster than traditional tools. Real-time
-              detection, autonomous response, and predictive intelligence to
-              prevent breaches before they occur.
+            <pclassName='text-xltext-zion-slate-lightleading-relaxedmb-8'>
+              Protectyourenterprise withAI-poweredcybersecuritythat
+              identifiesthreats99.7% fasterthantraditional tools. Real-timedetectionautonomousresponseandpredictiveintelligence topreventbreaches beforetheyoccur.
             </p>
 
-            {/* Key Metrics Banner */}
-            <div className='grid md:grid-cols-4 gap-6'>
-              <div className='bg-red-900/40 rounded-xl p-6 border border-red-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-red-400 mb-2'>
+            {/* KeyMetricsBanner */}
+            <divclassName = 'gridmd: grid-cols-4gap-6'>
+              <divclassName='bg-red-900/40rounded-xlp-6borderborder-red-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-red-400mb-2'>
                   99.92%
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Threat Detection
+                <divclassName='text-smtext-zion-slate-light'>
+                  ThreatDetection
                 </div>
               </div>
-              <div className='bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-blue-400 mb-2'>
-                  &lt;50ms
+              <divclassName='bg-blue-900/40rounded-xlp-6borderborder-blue-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-blue-400mb-2'>
+                  &lt; 50ms
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Detection Latency
+                <divclassName = 'text-smtext-zion-slate-light'>
+                  DetectionLatency
                 </div>
               </div>
-              <div className='bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-green-400 mb-2'>
+              <divclassName='bg-green-900/40rounded-xlp-6borderborder-green-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-green-400mb-2'>
                   95%
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  False Positive Reduction
+                <divclassName='text-smtext-zion-slate-light'>
+                  FalsePositiveReduction
                 </div>
               </div>
-              <div className='bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-purple-400 mb-2'>
-                  &lt;5s
+              <divclassName='bg-purple-900/40rounded-xlp-6borderborder-purple-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-purple-400mb-2'>
+                  &lt; 5s
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Response Time
+                <divclassName = 'text-smtext-zion-slate-light'>
+                  ResponseTime
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content */}
-          <div className='max-w-5xl mx-auto space-y-12 text-zion-slate-light'>
-            {/* Threat Landscape */}
+          <divclassName = 'max-w-5xlmx-autospace-y-12text-zion-slate-light'>
+            {/* ThreatLandscape */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <Shield className='w-8 h-8 text-red-400' />
-                The Modern Threat Landscape
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                <ShieldclassName='w-8 h-8text-red-400' />
+                TheModernThreat Landscape
               </h2>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30'>
-                <div className='grid md:grid-cols-2 gap-8'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-red-500/30'>
+                <divclassName='gridmd: grid-cols-2gap-8'>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      🔴 Security Challenges
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
+                      🔴 SecurityChallenges
                     </h3>
-                    <ul className='space-y-3'>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 font-bold'>
-                          207 days:
+                    <ulclassName='space-y-3'>
+                      <liclassName='flexitems-startgap-2'>
+                        <spanclassName='text-red-400font-bold'>
+                          207days:
                         </span>
-                        <span>Average breach detection time (industry)</span>
+                        <span>Averagebreachdetection time (industry)</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 font-bold'>$4.45M:</span>
-                        <span>Average cost per data breach</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <spanclassName='text-red-400font-bold'>$4.45M:</span>
+                        <span>Averagecostper databreach</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 font-bold'>
-                          60 seconds:
+                      <liclassName='flexitems-startgap-2'>
+                        <spanclassName='text-red-400font-bold'>
+                          60seconds:
                         </span>
-                        <span>Ransomware encryption time</span>
+                        <span>Ransomwareencryptiontime</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      ✅ Our Solution
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
+                      ✅ OurSolution
                     </h3>
-                    <ul className='space-y-3'>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>&lt;50ms detection time (real-time)</span>
+                    <ulclassName='space-y-3'>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>&lt; 50msdetectiontime (real-time)</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>Prevent breaches before they occur</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>Preventbreachesbefore theyoccur</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>Autonomous threat containment</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>Autonomousthreatcontainment</span>
                       </li>
                     </ul>
                   </div>
@@ -163,60 +157,52 @@ const AdvancedCybersecurityAI = () => {
               </div>
             </section>
 
-            {/* Platform Features */}
+            {/* PlatformFeatures */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <Lock className='w-8 h-8 text-blue-400' />
-                Platform Features
+              <h2className = 'text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                <LockclassName='w-8 h-8text-blue-400' />
+                PlatformFeatures
               </h2>
-              <div className='grid md:grid-cols-2 gap-6'>
+              <divclassName='gridmd: grid-cols-2gap-6'>
                 {[
                   {
-                    title: 'AI-Powered Threat Detection',
-                    description:
-                      '99.92% accuracy with behavioral analysis, pattern recognition, and zero-day detection. 95% fewer false positives.',
-                    icon: '🎯',
-                  },
+                    title: 'AI-PoweredThreatDetection'
+                    description: '99.92% accuracywithbehavioral analysispatternrecognitionandzero-daydetection. 95% fewerfalsepositives.'
+                    icon: '🎯'
+                  }
                   {
-                    title: 'Automated Incident Response',
-                    description:
-                      '<5 second response initiation. 99.7% faster than manual response with intelligent quarantine and self-healing.',
-                    icon: '⚡',
-                  },
+                    title: 'AutomatedIncidentResponse'
+                    description: '<5secondresponse initiation. 99.7% fasterthanmanual responsewithintelligent quarantineandself-healing.'
+                    icon: '⚡'
+                  }
                   {
-                    title: 'Predictive Security Intelligence',
-                    description:
-                      'Forecast threats before they happen with attack path analysis, vulnerability prediction, and risk scoring.',
-                    icon: '🔮',
-                  },
+                    title: 'PredictiveSecurityIntelligence'
+                    description: 'Forecastthreatsbefore theyhappenwith attackpathanalysisvulnerabilitypredictionandriskscoring.'
+                    icon: '🔮'
+                  }
                   {
-                    title: 'Unified Security Platform',
-                    description:
-                      'SIEM, EDR, NDR, SOAR, and UEBA in one platform. 500+ pre-built security integrations.',
-                    icon: '🛡️',
-                  },
+                    title: 'UnifiedSecurityPlatform'
+                    description: 'SIEMEDRNDRSOARandUEBAin oneplatform. 500+ pre-builtsecurityintegrations.'
+                    icon: '🛡️'
+                  }
                   {
-                    title: 'Advanced Analytics & Forensics',
-                    description:
-                      'Attack timeline reconstruction, root cause analysis, and threat hunting with interactive visualization.',
-                    icon: '🔬',
-                  },
+                    title: 'AdvancedAnalytics & Forensics'
+                    description: 'Attacktimelinereconstructionrootcauseanalysisandthreathunting withinteractivevisualization.'
+                    icon: '🔬'
+                  }
                   {
-                    title: 'Compliance & Governance',
-                    description:
-                      'Automated monitoring for GDPR, HIPAA, PCI DSS, SOC 2, ISO 27001 with real-time compliance reporting.',
-                    icon: '📋',
-                  },
-                ].map((feature, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all'
+                    title: 'Compliance & Governance'
+                    description: 'Automatedmonitoringfor GDPRHIPAAPCIDSSSOC2ISO27001with real-timecompliancereporting.'
+                    icon: '📋'
+                  }
+                ].map((featureindex) => (
+                  <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/20hover: border-zion-cyan/50transition-all'
                   >
-                    <div className='text-4xl mb-4'>{feature.icon}</div>
-                    <h3 className='text-xl font-bold text-white mb-3'>
+                    <divclassName='text-4xlmb-4'>{feature.icon}</div>
+                    <h3className = 'text-xlfont-boldtext-whitemb-3'>
                       {feature.title}
                     </h3>
-                    <p className='text-zion-slate-light'>
+                    <pclassName='text-zion-slate-light'>
                       {feature.description}
                     </p>
                   </div>
@@ -224,75 +210,73 @@ const AdvancedCybersecurityAI = () => {
               </div>
             </section>
 
-            {/* Industry Solutions */}
+            {/* IndustrySolutions */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🏭 Industry Solutions
+              <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                🏭 IndustrySolutions
               </h2>
-              <div className='space-y-6'>
+              <divclassName='space-y-6'>
                 {[
                   {
-                    industry: 'Financial Services',
-                    savings: '$8.4M',
-                    results: 'Zero breaches',
+                    industry: 'FinancialServices'
+                    savings: '$8.4M'
+                    results: 'Zerobreaches'
                     highlights: [
-                      '96% reduction in fraud losses',
-                      '100% PCI compliance',
-                      'Real-time transaction monitoring',
-                    ],
-                  },
+                      '96% reductioninfraud losses'
+                      '100% PCIcompliance'
+                      'Real-timetransactionmonitoring'
+                    ]
+                  }
                   {
-                    industry: 'Healthcare',
-                    savings: '$6.2M',
-                    results: '100% HIPAA',
+                    industry: 'Healthcare'
+                    savings: '$6.2M'
+                    results: '100% HIPAA'
                     highlights: [
-                      'Zero ransomware infections',
-                      '92% reduction in security incidents',
-                      'Patient data protection',
-                    ],
-                  },
+                      'Zeroransomwareinfections'
+                      '92% reductioninsecurity incidents'
+                      'Patientdataprotection'
+                    ]
+                  }
                   {
-                    industry: 'Manufacturing',
-                    savings: '$4.8M',
-                    results: 'Zero disruptions',
+                    industry: 'Manufacturing'
+                    savings: '$4.8M'
+                    results: 'Zerodisruptions'
                     highlights: [
-                      'OT/IT security convergence',
-                      'Industrial IoT protection',
-                      'IP theft prevention',
-                    ],
-                  },
+                      'OT/ITsecurityconvergence'
+                      'IndustrialIoTprotection'
+                      'IPtheftprevention'
+                    ]
+                  }
                   {
-                    industry: 'Retail & E-commerce',
-                    savings: '$5.6M',
-                    results: '94% fraud reduction',
+                    industry: 'Retail & E-commerce'
+                    savings: '$5.6M'
+                    results: '94% fraudreduction'
                     highlights: [
-                      'POS security monitoring',
-                      'DDoS mitigation',
-                      'Customer data protection',
-                    ],
-                  },
-                ].map((solution, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30'
+                      'POSsecuritymonitoring'
+                      'DDoSmitigation'
+                      'Customerdataprotection'
+                    ]
+                  }
+                ].map((solutionindex) => (
+                  <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/30'
                   >
-                    <div className='flex flex-wrap items-center justify-between gap-4 mb-4'>
-                      <h3 className='text-2xl font-bold text-white'>
+                    <divclassName='flexflex-wrapitems-centerjustify-betweengap-4mb-4'>
+                      <h3className='text-2xlfont-boldtext-white'>
                         {solution.industry}
                       </h3>
-                      <div className='flex gap-4'>
-                        <div className='px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold'>
-                          {solution.savings} annual savings
+                      <divclassName='flexgap-4'>
+                        <divclassName='px-4py-2bg-green-500/20text-green-300rounded-lgtext-smfont-semibold'>
+                          {solution.savings} annualsavings
                         </div>
-                        <div className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold'>
+                        <divclassName='px-4py-2bg-blue-500/20text-blue-300rounded-lgtext-smfont-semibold'>
                           {solution.results}
                         </div>
                       </div>
                     </div>
-                    <ul className='space-y-2'>
-                      {solution.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                    <ulclassName='space-y-2'>
+                      { solution.highlights.map((highlighthIndex) = > (
+                        <likey = { hIndex  }className = 'flexitems-startgap-2'>
+                          <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -302,71 +286,68 @@ const AdvancedCybersecurityAI = () => {
               </div>
             </section>
 
-            {/* Pricing Packages */}
+            {/* PricingPackages */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <DollarSign className='w-8 h-8 text-green-400' />
+              <h2className = 'text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                <DollarSignclassName='w-8 h-8text-green-400' />
                 Pricing & Packages
               </h2>
-              <div className='grid md:grid-cols-3 gap-6'>
+              <divclassName='gridmd: grid-cols-3gap-6'>
                 {[
                   {
-                    name: 'Business Protection',
-                    price: '$12,999',
+                    name: 'BusinessProtection'
+                    price: '$12999'
                     features: [
-                      'Up to 100 endpoints',
-                      '10 TB log storage/month',
-                      'Core threat detection',
-                      'Email support (8x5)',
-                      '99.5% SLA',
-                    ],
-                  },
+                      'Upto100 endpoints'
+                      '10TBlog storage/month'
+                      'Corethreatdetection'
+                      'Emailsupport (8x5)'
+                      '99.5% SLA'
+                    ]
+                  }
                   {
-                    name: 'Enterprise Security',
-                    price: '$29,999',
-                    popular: true,
+                    name: 'EnterpriseSecurity'
+                    price: '$29999'
+                    popular: true
                     features: [
-                      'Up to 1,000 endpoints',
-                      '50 TB log storage/month',
-                      'Advanced threat detection',
-                      '24/7 support',
-                      '99.9% SLA',
-                    ],
-                  },
+                      'Upto 1000endpoints'
+                      '50TBlog storage/month'
+                      'Advancedthreatdetection'
+                      '24/7support'
+                      '99.9% SLA'
+                    ]
+                  }
                   {
-                    name: 'Managed Security',
-                    price: '$59,999',
+                    name: 'ManagedSecurity'
+                    price: '$59999'
                     features: [
-                      'Unlimited endpoints',
-                      'Unlimited log storage',
-                      '24/7 SOC monitoring',
-                      'Dedicated analysts',
-                      '99.97% SLA',
-                    ],
-                  },
-                ].map((pkg, index) => (
-                  <div
-                    key={index}
-                    className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-red-500/50 ring-2 ring-red-500/30' : 'border-zion-cyan/30'}`}
+                      'Unlimitedendpoints'
+                      'Unlimitedlogstorage'
+                      '24/7SOCmonitoring'
+                      'Dedicatedanalysts'
+                      '99.97% SLA'
+                    ]
+                  }
+                ].map((pkgindex) => (
+                  <divkey = { index }className = { `bg-white/5backdrop-blur-smrounded-xlp-6border ${pkg.popular  ? 'border-red-500/50ring-2ring-red-500/30'  : 'border-zion-cyan/30' }`}
                   >
-                    {pkg.popular && (
-                      <div className='bg-red-500/20 text-red-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4'>
-                        MOST POPULAR
-                      </div>
-                    )}
-                    <h3 className='text-2xl font-bold text-white mb-2'>
+                    {  pkg.popular  && (
+                      <divclassName='bg-red-500/20text-red-300text-xsfont-boldpx-3py-1rounded-fullinline-blockmb-4'>
+                        MOSTPOPULAR
+                      </div > )  }
+                    <h3className = 'text-2xlfont-boldtext-whitemb-2'>
                       {pkg.name}
                     </h3>
-                    <div className='text-4xl font-bold text-green-400 mb-6'>
+                    <divclassName='text-4xlfont-boldtext-green-400mb-6'>
                       {pkg.price}
-                      <span className='text-lg text-zion-slate-light'>
+                      <spanclassName='text-lgtext-zion-slate-light'>
                         /month
                       </span>
                     </div>
-                    <ul className='space-y-3'>
-                      {pkg.features.map((feature, fIndex) => (
-                        <li key={fIndex} className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                    <ulclassName='space-y-3'>
+                      { pkg.features.map((featurefIndex) = > (
+                        <likey = { fIndex  }className = 'flexitems-startgap-2'>
+                          <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -376,76 +357,71 @@ const AdvancedCybersecurityAI = () => {
               </div>
             </section>
 
-            {/* Limited Time Offer */}
+            {/* LimitedTimeOffer */}
             <section>
-              <div className='bg-gradient-to-r from-red-900/40 via-orange-900/40 to-yellow-900/40 rounded-xl p-8 border-2 border-red-500/50'>
-                <div className='flex items-center justify-between flex-wrap gap-6'>
-                  <div className='flex-1'>
-                    <div className='flex items-center gap-3 mb-4'>
-                      <Shield className='w-8 h-8 text-red-400' />
-                      <h3 className='text-2xl font-bold text-white'>
-                        🛡️ October 2025 Security Initiative
+              <divclassName = 'bg-gradient-to-rfrom-red-900/40via-orange-900/40to-yellow-900/40rounded-xlp-8border-2border-red-500/50'>
+                <divclassName='flexitems-centerjustify-betweenflex-wrapgap-6'>
+                  <divclassName='flex-1'>
+                    <divclassName='flexitems-centergap-3mb-4'>
+                      <ShieldclassName='w-8 h-8text-red-400' />
+                      <h3className='text-2xlfont-boldtext-white'>
+                        🛡️ October2025Security Initiative
                       </h3>
                     </div>
-                    <p className='text-xl text-red-200 mb-4'>
-                      Get <strong>60 Days FREE</strong> when you start before
-                      October 31, 2025
+                    <pclassName='text-xltext-red-200mb-4'>
+                      Get <strong>60DaysFREE</strong> whenyoustart beforeOctober312025
                     </p>
-                    <ul className='space-y-2'>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>Free security assessment ($25,000 value)</span>
+                    <ulclassName = 'space-y-2'>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>Freesecurityassessment ($25000value)</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                      <liclassName = 'flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                         <span>
-                          Complimentary penetration test ($35,000 value)
+                          Complimentarypenetrationtest ($35000value)
                         </span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>90 days extended support</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>90daysextended support</span>
                       </li>
                     </ul>
-                    <p className='text-sm text-zion-slate-light mt-4'>
-                      Limited to first 25 customers. Annual contract required.
+                    <pclassName='text-smtext-zion-slate-lightmt-4'>
+                      Limitedtofirst 25customers. Annualcontractrequired.
                     </p>
                   </div>
                   <div>
-                    <Link
-                      to='/contact'
-                      className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105'
+                    <Linkto='/contact'
+                      className='inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-red-500to-orange-500text-whitefont-boldrounded-lghover: from-red-600hover:to-orange-600transition-alltransformhover:scale-105'
                     >
-                      Secure Your Enterprise
-                      <Shield className='w-5 h-5' />
+                      SecureYourEnterprise
+                      <ShieldclassName='w-5 h-5' />
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className='text-center'>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Protect Your Enterprise Today
+            {/* CTASection */}
+            <sectionclassName = 'text-center'>
+              <h2className='text-3xlfont-boldtext-whitemb-6'>
+                ProtectYourEnterprise Today
               </h2>
-              <p className='text-xl text-zion-slate-light mb-8'>
-                Schedule a security consultation to see how AI can revolutionize
-                your cybersecurity posture.
+              <pclassName='text-xltext-zion-slate-lightmb-8'>
+                Scheduleasecurity consultationtosee howAIcan revolutionizeyourcybersecurity posture.
               </p>
-              <div className='flex flex-wrap gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105'
+              <divclassName='flexflex-wrapgap-4justify-center'>
+                <Linkto='/contact'
+                  className='inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-red-500to-orange-500text-whitefont-boldrounded-lghover: from-red-600hover:to-orange-600transition-alltransformhover:scale-105'
                 >
-                  Schedule Security Assessment
-                  <Shield className='w-5 h-5' />
+                  ScheduleSecurityAssessment
+                  <ShieldclassName='w-5 h-5' />
                 </Link>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-red-500/30 hover:bg-white/20 transition-all'
+                <Linkto='/contact'
+                  className='inline-flexitems-centergap-2px-8py-4bg-white/10backdrop-blur-smtext-whitefont-boldrounded-lgborderborder-red-500/30hover:bg-white/20transition-all'
                 >
-                  Request Platform Demo
+                  RequestPlatformDemo
                 </Link>
               </div>
             </section>
@@ -456,4 +432,4 @@ const AdvancedCybersecurityAI = () => {
   );
 };
 
-export default AdvancedCybersecurityAI;
+exportdefaultAdvancedCybersecurityAI;

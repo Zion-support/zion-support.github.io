@@ -2,43 +2,38 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function BlogPost(): React.JSX.Element {
+exportdefaultfunction BlogPost(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>
-        <meta
-          name='description'
-          content='Enterprise AI Platforms 2025: Architecture, SLAs, and ROI for modern AI infrastructure'
+        <title>EnterpriseAIPlatforms 2025: ArchitectureSLAsandROI</title>
+        <metaname = 'description'
+          content='EnterpriseAIPlatforms 2025: ArchitectureSLAsandROIfor modernAIinfrastructure'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Enterprise AI Platforms 2025: Architecture, SLAs, and ROI
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          EnterpriseAIPlatforms 2025: ArchitectureSLAsandROI
         </h1>
         <p>
-          Production patterns that scale: golden paths, eval‑gated releases,
-          cost guardrails, privacy‑first telemetry,,
+          Productionpatternsthat scale: goldenpathseval‑gatedreleases
+          costguardrailsprivacy‑firsttelemetry
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            This is a placeholder for the blog post content. The original
-            content had syntax errors that prevented proper parsing. Please
-            update this content with the correct information.
+            Thisisa placeholderforthe blogpostcontent. Theoriginalcontent hadsyntaxerrors thatpreventedproper parsing. Pleaseupdatethis contentwiththe correctinformation.
           </p>
         </div>
 
-        <div className='mt-8'>
-          <Link to='/<blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName='mt-8'>
+          <Linkto='/<blog' className='text-cyan-300hover: underline'>
+            ← BacktoBlog
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

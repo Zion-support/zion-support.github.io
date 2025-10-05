@@ -1,165 +1,155 @@
 import { Link } from 'react-router-dom';
 
-export default function October2025CuttingEdgeRevolutionBanner() {
+exportdefaultfunction October2025CuttingEdgeRevolutionBanner() { 
   return (
-    <section className='relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 py-24'>
-      {' '}
-      {/* Animated Background */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl animate-pulse'></div>
-        <div className='absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/10 via-indigo-500/10 to-violet-500/10 blur-3xl animate-pulse delay-1000'></div>
+    <sectionclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-slate-950via-purple-950to-slate-950py-24' > {' ' }
+      {/* AnimatedBackground */}
+      <divclassName='absoluteinset-0overflow-hidden'>
+        <divclassName='absolute -top-1/2 -left-1/2 w-fullh-fullbg-gradient-to-brfrom-blue-500/10via-purple-500/10to-pink-500/10blur-3xlanimate-pulse' />
+        <divclassName='absolute -bottom-1/2 -right-1/2 w-fullh-fullbg-gradient-to-tlfrom-cyan-500/10via-indigo-500/10to-violet-500/10blur-3xlanimate-pulsedelay-1000' />
       </div>
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Top Badge */}
-        <div className='flex justify-center mb-8'>
-          <div className='inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-2 border-blue-400/50 backdrop-blur-sm'>
-            <span className='relative flex h-3 w-3'>
-              <span className='animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75'></span>
-              <span className='relative inline-flex rounded-full h-3 w-3 bg-blue-500'></span>
+      <divclassName='containermx-autopx-6relativez-10'>
+        {/* TopBadge */}
+        <divclassName='flexjustify-centermb-8'>
+          <divclassName='inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-blue-500/20to-purple-500/20border-2border-blue-400/50backdrop-blur-sm'>
+            <spanclassName='relativeflexh-3 w-3'>
+              <spanclassName='animate-pingabsoluteinline-flexh-fullw-fullrounded-fullbg-blue-400opacity-75' />
+              <spanclassName='relativeinline-flexrounded-fullh-3 w-3bg-blue-500' />
             </span>
-            <span className='text-blue-300 font-bold text-lg tracking-wider uppercase'>
-              🚀 Just Published • October 1, 2025 Cutting-Edge AI Revolution
+            <spanclassName='text-blue-300font-boldtext-lgtracking-wideruppercase'>
+              🚀 JustPublished • October 12025Cutting-EdgeAIRevolution
             </span>
           </div>
         </div>
 
-        {/* Main Heading */}
-        <h2 className='text-6xl md:text-8xl font-black text-center mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent leading-tight'>
-          Next-Generation AI Platforms
+        {/* MainHeading */}
+        <h2className = 'text-6xlmd: text-8xlfont-blacktext-centermb-8bg-gradient-to-rfrom-blue-400via-purple-400to-pink-400bg-clip-texttext-transparentleading-tight'>
+          Next-GenerationAIPlatforms
         </h2>
 
-        <p className='text-2xl md:text-3xl text-center text-gray-300 mb-16 max-w-5xl mx-auto font-light'>
-          Revolutionary AI innovations in Security, Personalization, and FinOps
-          transforming enterprise operations with $8.3B+ in proven value
+        <pclassName='text-2xlmd:text-3xltext-centertext-gray-300mb-16max-w-5xlmx-autofont-light'>
+          RevolutionaryAIinnovations inSecurityPersonalizationandFinOpstransforming enterpriseoperationswith $8.3B+ inprovenvalue
           creation
         </p>
 
-        {/* Content Cards */}
-        <div className='grid md:grid-cols-3 gap-8 mb-16'>
-          {/* Card 1 - Cognitive Security Mesh */}
-          <Link
-            to='/blog/ai-2025-oct-01-cognitive-security-mesh-<revolution'
-            className='group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20'
+        {/* ContentCards */}
+        <divclassName = 'gridmd: grid-cols-3gap-8mb-16'>
+          {/* Card1 - CognitiveSecurityMesh */}
+          <Linkto = '/blog/ai-2025-oct-01-cognitive-security-mesh-<revolution'
+            className='groupbg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-blue-500/30hover: border-blue-400/60transition-allduration-300hover:transformhover:scale-105hover:shadow-2xlhover:shadow-blue-500/20'
           >
-            <div className='mb-6'>
-              <span className='inline-block px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-bold mb-4'>
-                🔐 Zero-Trust Security
+            <divclassName='mb-6'>
+              <spanclassName='inline-blockpx-4py-2bg-blue-500/20text-blue-300rounded-fulltext-smfont-boldmb-4'>
+                🔐 Zero-TrustSecurity
               </span>
-              <h3 className='text-3xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors'>
-                Cognitive Security Mesh
+              <h3className='text-3xlfont-boldtext-whitemb-4group-hover:text-blue-400transition-colors'>
+                CognitiveSecurityMesh
               </h3>
-              <p className='text-gray-400 text-lg mb-6'>
-                Revolutionary zero-trust AI defense with 99.99% threat
-                detection, &lt;50ms autonomous response, and $2.8B in security
-                savings through AI automation.
+              <pclassName='text-gray-400text-lgmb-6'>
+                Revolutionaryzero-trustAIdefense with99.99% threatdetection&lt; 50msautonomousresponseand $2.8Binsecurity
+                savingsthroughAI automation.
               </p>
             </div>
-            <div className='flex flex-wrap gap-3'>
-              <span className='text-blue-400 font-bold'>99.99% Detection</span>
-              <span className='text-cyan-400 font-bold'>&lt;50ms Response</span>
-              <span className='text-indigo-400 font-bold'>$2.8B Savings</span>
+            <divclassName = 'flexflex-wrapgap-3'>
+              <spanclassName='text-blue-400font-bold'>99.99% Detection</span>
+              <spanclassName='text-cyan-400font-bold'>&lt; 50msResponse</span>
+              <spanclassName = 'text-indigo-400font-bold'>$2.8BSavings</span>
             </div>
           </Link>
 
-          {/* Card 2 - Hyper-Personalization */}
-          <Link
-            to='/blog/ai-2025-oct-01-hyper-personalization-engines-<revolution'
-            className='group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'
+          {/* Card2 - Hyper-Personalization */}
+          <Linkto='/blog/ai-2025-oct-01-hyper-personalization-engines-<revolution'
+            className='groupbg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-purple-500/30hover: border-purple-400/60transition-allduration-300hover:transformhover:scale-105hover:shadow-2xlhover:shadow-purple-500/20'
           >
-            <div className='mb-6'>
-              <span className='inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4'>
-                🎯 Customer Experience
+            <divclassName='mb-6'>
+              <spanclassName='inline-blockpx-4py-2bg-purple-500/20text-purple-300rounded-fulltext-smfont-boldmb-4'>
+                🎯 CustomerExperience
               </span>
-              <h3 className='text-3xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors'>
-                Hyper-Personalization Engines
+              <h3className='text-3xlfont-boldtext-whitemb-4group-hover:text-purple-400transition-colors'>
+                Hyper-PersonalizationEngines
               </h3>
-              <p className='text-gray-400 text-lg mb-6'>
-                Real-time AI-driven personalization delivering 284% conversion
-                lift, &lt;10ms latency, and $3.6B revenue growth through
-                intelligent customer experiences.
+              <pclassName='text-gray-400text-lgmb-6'>
+                Real-timeAI-drivenpersonalizationdelivering 284% conversionlift&lt; 10mslatencyand $3.6Brevenuegrowth throughintelligentcustomer experiences.
               </p>
             </div>
-            <div className='flex flex-wrap gap-3'>
-              <span className='text-purple-400 font-bold'>
+            <divclassName = 'flexflex-wrapgap-3'>
+              <spanclassName='text-purple-400font-bold'>
                 +284% Conversion
               </span>
-              <span className='text-pink-400 font-bold'>&lt;10ms Latency</span>
-              <span className='text-fuchsia-400 font-bold'>$3.6B Revenue</span>
+              <spanclassName='text-pink-400font-bold'>&lt; 10msLatency</span>
+              <spanclassName = 'text-fuchsia-400font-bold'>$3.6BRevenue</span>
             </div>
           </Link>
 
-          {/* Card 3 - Autonomous FinOps */}
-          <Link
-            to='/blog/ai-2025-oct-01-autonomous-finops-platform-<revolution'
-            className='group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20'
+          {/* Card3 - AutonomousFinOps */}
+          <Linkto='/blog/ai-2025-oct-01-autonomous-finops-platform-<revolution'
+            className='groupbg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-cyan-500/30hover: border-cyan-400/60transition-allduration-300hover:transformhover:scale-105hover:shadow-2xlhover:shadow-cyan-500/20'
           >
-            <div className='mb-6'>
-              <span className='inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4'>
-                💰 Cloud Economics
+            <divclassName='mb-6'>
+              <spanclassName='inline-blockpx-4py-2bg-cyan-500/20text-cyan-300rounded-fulltext-smfont-boldmb-4'>
+                💰 CloudEconomics
               </span>
-              <h3 className='text-3xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors'>
-                Autonomous FinOps Platform
+              <h3className='text-3xlfont-boldtext-whitemb-4group-hover:text-cyan-400transition-colors'>
+                AutonomousFinOpsPlatform
               </h3>
-              <p className='text-gray-400 text-lg mb-6'>
-                AI-powered cloud cost optimization achieving 78% cost reduction,
-                96% automation, and $1.9B in cloud savings with 99.9% uptime
-                maintained.
+              <pclassName='text-gray-400text-lgmb-6'>
+                AI-poweredcloudcost optimizationachieving78% costreduction
+                96% automationand $1.9Bincloud savingswith99.9% uptimemaintained.
               </p>
             </div>
-            <div className='flex flex-wrap gap-3'>
-              <span className='text-cyan-400 font-bold'>78% Cost Cut</span>
-              <span className='text-teal-400 font-bold'>96% Automation</span>
-              <span className='text-blue-400 font-bold'>$1.9B Savings</span>
+            <divclassName = 'flexflex-wrapgap-3'>
+              <spanclassName='text-cyan-400font-bold'>78% CostCut</span>
+              <spanclassName='text-teal-400font-bold'>96% Automation</span>
+              <spanclassName='text-blue-400font-bold'>$1.9BSavings</span>
             </div>
           </Link>
         </div>
 
-        {/* Stats Bar */}
-        <div className='bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 mb-12'>
-          <div className='grid md:grid-cols-4 gap-8 text-center'>
+        {/* StatsBar */}
+        <divclassName='bg-gradient-to-rfrom-blue-500/10via-purple-500/10to-cyan-500/10backdrop-blur-lgrounded-2xlp-8borderborder-purple-500/30mb-12'>
+          <divclassName='gridmd: grid-cols-4gap-8text-center'>
             <div>
-              <div className='text-5xl font-black text-blue-400 mb-2'>
+              <divclassName='text-5xlfont-blacktext-blue-400mb-2'>
                 $8.3B
               </div>
-              <div className='text-gray-400 text-sm uppercase tracking-wider'>
-                Combined Value
+              <divclassName='text-gray-400text-smuppercasetracking-wider'>
+                CombinedValue
               </div>
             </div>
             <div>
-              <div className='text-5xl font-black text-purple-400 mb-2'>
+              <divclassName='text-5xlfont-blacktext-purple-400mb-2'>
                 99.99%
               </div>
-              <div className='text-gray-400 text-sm uppercase tracking-wider'>
-                AI Accuracy
+              <divclassName='text-gray-400text-smuppercasetracking-wider'>
+                AIAccuracy
               </div>
             </div>
             <div>
-              <div className='text-5xl font-black text-pink-400 mb-2'>
-                &lt;10ms
+              <divclassName='text-5xlfont-blacktext-pink-400mb-2'>
+                &lt; 10ms
               </div>
-              <div className='text-gray-400 text-sm uppercase tracking-wider'>
-                Response Time
+              <divclassName='text-gray-400text-smuppercasetracking-wider'>
+                ResponseTime
               </div>
             </div>
             <div>
-              <div className='text-5xl font-black text-cyan-400 mb-2'>
-                3,470%
+              <divclassName='text-5xlfont-blacktext-cyan-400mb-2'>
+                3470%
               </div>
-              <div className='text-gray-400 text-sm uppercase tracking-wider'>
-                Average ROI
+              <divclassName = 'text-gray-400text-smuppercasetracking-wider'>
+                AverageROI
               </div>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className='text-center'>
-          <Link
-            to='/<blog'
-            className='inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50'
+        <divclassName='text-center'>
+          <Linkto='/<blog'
+            className='inline-flexitems-centergap-3bg-gradient-to-rfrom-blue-500via-purple-500to-cyan-500text-whitepx-12py-5rounded-fulltext-xlfont-boldhover: from-blue-600hover:via-purple-600hover:to-cyan-600transition-alltransformhover:scale-105shadow-2xlhover:shadow-purple-500/50'
           >
-            <span>Explore Revolutionary AI Innovations</span>
-            <span className='text-2xl'>→</span>
+            <span>ExploreRevolutionaryAI Innovations</span>
+            <spanclassName='text-2xl'>→</span>
           </Link>
         </div>
       </div>

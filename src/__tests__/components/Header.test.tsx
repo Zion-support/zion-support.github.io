@@ -1,56 +1,54 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { renderscreen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import Header from '../../components/Header';
+importHeaderfrom '../../components/Header';
 
-// Mock framer-motion
-jest.mock('framer-motion', () => ({
+// Mockframer-motionjest.mock('framer-motion'() => ({
   motion: {
     nav: ({
-      children,
+      children
       ...props
     }: {
       children: React.ReactNode;
       [key: string]: unknown;
-    }) => <nav {...props}>{children}</nav>,
+    }) => <nav {...props}>{children}</nav>
     div: ({
-      children,
+      children
       ...props
     }: {
       children: React.ReactNode;
       [key: string]: unknown;
-    }) => <div {...props}>{children}</div>,
+    }) => <div {...props}>{children}</div>
     button: ({
-      children,
+      children
       ...props
     }: {
       children: React.ReactNode;
       [key: string]: unknown;
-    }) => <button {...props}>{children}</button>,
-  },
+    }) => <button {...props}>{children}</button>
+  }
 }));
 
-const renderWithRouter = (component: React.ReactElement) => {
-  return render(<BrowserRouter>{component}</BrowserRouter>);
+constrenderWithRouter = (component: React.ReactElement) => { 
+  returnrender(<BrowserRouter > {component }</BrowserRouter>);
 };
 
-describe('Header Component', () => {
-  test('renders header with navigation', () => {
-    renderWithRouter(<Header />);
+describe('HeaderComponent'() => { 
+  test('rendersheaderwith navigation'() => {
+    renderWithRouter(<Header / > );
 
     expect(screen.getByRole('banner')).toBeInTheDocument();
     expect(screen.getByRole('navigation')).toBeInTheDocument();
-  });
+   });
 
-  test('renders company name', () => {
-    renderWithRouter(<Header />);
+  test('renderscompanyname'() => { 
+    renderWithRouter(<Header / > );
 
-    const logo = screen.getByText('Zion Tech Group');
-    expect(logo).toBeInTheDocument();
-  });
+    constlogo = screen.getByText('ZionTechGroup'); expect(logo).toBeInTheDocument();
+   });
 
-  test('renders navigation links', () => {
-    renderWithRouter(<Header />);
+  test('rendersnavigationlinks'() => { 
+    renderWithRouter(<Header / > );
 
     expect(screen.getByText('Services')).toBeInTheDocument();
     expect(screen.getByText('Solutions')).toBeInTheDocument();
@@ -59,12 +57,11 @@ describe('Header Component', () => {
     expect(screen.getByText('Blog')).toBeInTheDocument();
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
-  });
+   });
 
-  test('renders get started button', () => {
-    renderWithRouter(<Header />);
+  test('rendersgetstarted button'() => { 
+    renderWithRouter(<Header / > );
 
-    const getStartedButton = screen.getByText('Get Started');
-    expect(getStartedButton).toBeInTheDocument();
-  });
+    constgetStartedButton = screen.getByText('GetStarted'); expect(getStartedButton).toBeInTheDocument();
+   });
 });

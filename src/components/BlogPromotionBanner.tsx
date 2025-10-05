@@ -1,41 +1,37 @@
 import React from 'react';
 
-const BlogPromotionBanner: React.FC = () => {
+constBlogPromotionBanner: React.FC = () => { 
   return (
-    <section className='py-16 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center'>
-          <div className='inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6'>
-            <span className='text-indigo-400 font-bold text-xl tracking-wider uppercase'>
-              🚀 Latest AI Insights
+    <sectionclassName = 'py-16bg-gradient-to-brfrom-indigo-900via-purple-900to-pink-900'>
+      <divclassName='containermx-autopx-6'>
+        <divclassName='text-center'>
+          <divclassName='inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-indigo-500/20to-purple-500/20borderborder-indigo-500/30mb-6'>
+            <spanclassName='text-indigo-400font-boldtext-xltracking-wideruppercase'>
+              🚀 LatestAIInsights
             </span>
           </div>
-          <h2 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
-            Stay Ahead with AI Innovation
+          <h2className='text-4xlmd:text-5xlfont-extraboldmb-6bg-gradient-to-rfrom-indigo-400via-purple-400to-pink-400bg-clip-texttext-transparent'>
+            StayAheadwith AIInnovation
           </h2>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto mb-8'>
-            Discover cutting-edge AI breakthroughs, industry insights, and
-            practical guides to transform your business with artificial
+          <pclassName='text-xltext-gray-300max-w-3xlmx-automb-8'>
+            Discovercutting-edgeAIbreakthroughsindustryinsightsandpracticalguides totransformyour businesswithartificial
             intelligence.
           </p>
-          <div className='flex flex-wrap justify-center gap-4'>
-            <a
-              href='/<blog'
-              className='bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50'
+          <divclassName = 'flexflex-wrapjustify-centergap-4'>
+            <ahref='/<blog'
+              className='bg-gradient-to-rfrom-indigo-500to-purple-600hover: from-indigo-400hover:to-purple-500text-whitefont-boldpy-3px-8rounded-xltransition-allduration-300shadow-lghover:shadow-indigo-500/50'
             >
-              Explore All Articles →
+              ExploreAllArticles →
             </a>
-            <a
-              href='/<contact'
-              className='border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300'
+            <ahref='/<contact'
+              className='border-2border-indigo-500text-indigo-400hover:bg-indigo-500hover:text-whitefont-boldpy-3px-8rounded-xltransition-allduration-300'
             >
-              Get AI Consultation
+              GetAIConsultation
             </a>
           </div>
         </div>
       </div>
-    </section>
-  );
-};
+    </section > );
+ };
 
-export default BlogPromotionBanner;
+exportdefaultBlogPromotionBanner;

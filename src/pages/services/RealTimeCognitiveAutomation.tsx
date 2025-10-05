@@ -1,155 +1,148 @@
 import {
-  ArrowLeft,
+  ArrowLeft
   Brain,
   CheckCircle,
-  DollarSign,
-  Rocket,
-  TrendingUp,
-  Zap,
+  DollarSign
+  Rocket
+  TrendingUp
+  Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+importHeaderfrom '../../components/Header';
 
-const RealTimeCognitiveAutomation = () => {
+constRealTimeCognitiveAutomation = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Real-Time Cognitive Automation Platform | Transform Business
-          Operations with AI | Zion Tech Group
+          Real-TimeCognitiveAutomation Platform | TransformBusinessOperations withAI | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Transform operations with Real-Time Cognitive Automation Platform. 94% accuracy, 85% cost reduction, 10x productivity gains. AI-powered workflows that learn and optimize autonomously.'
+        <metaname = 'description'
+          content='Transformoperationswith Real-TimeCognitiveAutomation Platform. 94% accuracy85% costreduction10xproductivitygains. AI-poweredworkflowsthat learnandoptimize autonomously.'
         />
-        <meta
-          name='keywords'
-          content='cognitive automation, intelligent automation, RPA, AI workflows, process automation, business automation, hyperautomation'
+        <metaname = 'keywords'
+          content='cognitiveautomationintelligentautomationRPAAIworkflowsprocessautomationbusinessautomationhyperautomation'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-dark'>
         <Header />
 
-        <article className='container mx-auto px-6 py-20'>
-          {/* Back Link */}
-          <Link
-            to='/services'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <articleclassName='containermx-autopx-6py-20' > {/* BackLink */ }
+          <Linkto='/services'
+            className='inline-flexitems-centertext-zion-cyanhover: text-zion-blue-lightmb-8transition-colors'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Services
+            <ArrowLeftclassName='w-4 h-4mr-2' />
+            BacktoServices
           </Link>
 
           {/* Header */}
-          <div className='max-w-5xl mx-auto mb-16'>
-            <div className='flex items-center gap-4 mb-6 flex-wrap'>
-              <span className='px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30'>
-                🚀 NEW! October 2025
+          <divclassName = 'max-w-5xlmx-automb-16'>
+            <divclassName='flexitems-centergap-4mb-6flex-wrap'>
+              <spanclassName='px-4py-2bg-purple-500/20text-purple-300rounded-fulltext-smfont-semiboldborderborder-purple-500/30'>
+                🚀 NEW! October2025
               </span>
-              <span className='px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30'>
-                🤖 AI Automation
+              <spanclassName='px-4py-2bg-green-500/20text-green-300rounded-fulltext-smfont-semiboldborderborder-green-500/30'>
+                🤖 AIAutomation
               </span>
-              <span className='text-zion-slate-light'>
-                Starting at $7,999/month
+              <spanclassName='text-zion-slate-light'>
+                Startingat $7999/month
               </span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Real-Time Cognitive Automation Platform
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mt-2'>
-                Transform Business Operations with Intelligent Automation
+            <h1className = 'text-5xlmd: text-6xlfont-boldtext-whitemb-6leading-tight'>
+              Real-TimeCognitiveAutomation Platform
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-purple-400to-cyan-400mt-2'>
+                TransformBusinessOperations withIntelligentAutomation
               </span>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed mb-8'>
-              Revolutionize your business operations with AI-powered workflows
-              that deliver instant decision-making, self-learning automation,
-              and 99.97% accuracy. Achieve 87% cost reduction and 10x
-              productivity gains.
+            <pclassName='text-xltext-zion-slate-lightleading-relaxedmb-8'>
+              Revolutionizeyourbusiness operationswithAI-poweredworkflowsthat deliverinstantdecision-makingself-learningautomation
+              and99.97% accuracy. Achieve87% costreductionand 10xproductivitygains.
             </p>
 
-            {/* Key Metrics Banner */}
-            <div className='grid md:grid-cols-4 gap-6'>
-              <div className='bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-purple-400 mb-2'>
+            {/* KeyMetricsBanner */}
+            <divclassName = 'gridmd: grid-cols-4gap-6'>
+              <divclassName='bg-purple-900/40rounded-xlp-6borderborder-purple-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-purple-400mb-2'>
                   94%
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Process Accuracy
+                <divclassName='text-smtext-zion-slate-light'>
+                  ProcessAccuracy
                 </div>
               </div>
-              <div className='bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-green-400 mb-2'>
+              <divclassName='bg-green-900/40rounded-xlp-6borderborder-green-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-green-400mb-2'>
                   85%
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Cost Reduction
+                <divclassName='text-smtext-zion-slate-light'>
+                  CostReduction
                 </div>
               </div>
-              <div className='bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-blue-400 mb-2'>10x</div>
-                <div className='text-sm text-zion-slate-light'>
-                  Productivity Gain
+              <divclassName='bg-blue-900/40rounded-xlp-6borderborder-blue-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-blue-400mb-2'>10x</div>
+                <divclassName='text-smtext-zion-slate-light'>
+                  ProductivityGain
                 </div>
               </div>
-              <div className='bg-cyan-900/40 rounded-xl p-6 border border-cyan-500/30 text-center hover:scale-105 transition-transform'>
-                <div className='text-4xl font-bold text-cyan-400 mb-2'>
-                  6 Mo
+              <divclassName='bg-cyan-900/40rounded-xlp-6borderborder-cyan-500/30text-centerhover:scale-105transition-transform'>
+                <divclassName='text-4xlfont-boldtext-cyan-400mb-2'>
+                  6Mo
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Average ROI Time
+                <divclassName='text-smtext-zion-slate-light'>
+                  AverageROITime
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content */}
-          <div className='max-w-5xl mx-auto space-y-12 text-zion-slate-light'>
-            {/* Business Impact */}
+          <divclassName = 'max-w-5xlmx-autospace-y-12text-zion-slate-light'>
+            {/* BusinessImpact */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <TrendingUp className='w-8 h-8 text-green-400' />
-                Business Impact
+              <h2className='text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                <TrendingUpclassName='w-8 h-8text-green-400' />
+                BusinessImpact
               </h2>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                <div className='grid md:grid-cols-2 gap-8'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-zion-cyan/30'>
+                <divclassName='gridmd: grid-cols-2gap-8'>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      ⚡ Real-Time Processing
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
+                      ⚡ Real-TimeProcessing
                     </h3>
-                    <ul className='space-y-3'>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>&lt;50ms decision latency</span>
+                    <ulclassName='space-y-3'>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>&lt; 50msdecisionlatency</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>Instant workflow execution</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>Instantworkflowexecution</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>Live process optimization</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>Liveprocessoptimization</span>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      🧠 Self-Learning Systems
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
+                      🧠 Self-LearningSystems
                     </h3>
-                    <ul className='space-y-3'>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-blue-400 flex-shrink-0 mt-1' />
-                        <span>Continuous model improvement</span>
+                    <ulclassName='space-y-3'>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-blue-400flex-shrink-0mt-1' />
+                        <span>Continuousmodelimprovement</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-blue-400 flex-shrink-0 mt-1' />
-                        <span>Adaptive workflow optimization</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-blue-400flex-shrink-0mt-1' />
+                        <span>Adaptiveworkflowoptimization</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-blue-400 flex-shrink-0 mt-1' />
-                        <span>Autonomous error correction</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-blue-400flex-shrink-0mt-1' />
+                        <span>Autonomouserrorcorrection</span>
                       </li>
                     </ul>
                   </div>
@@ -157,60 +150,52 @@ const RealTimeCognitiveAutomation = () => {
               </div>
             </section>
 
-            {/* Platform Capabilities */}
+            {/* PlatformCapabilities */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <Brain className='w-8 h-8 text-purple-400' />
-                Platform Capabilities
+              <h2className = 'text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                <Brain,className='w-8 h-8text-purple-400' />
+                PlatformCapabilities
               </h2>
-              <div className='grid md:grid-cols-2 gap-6'>
+              <divclassName='gridmd: grid-cols-2gap-6'>
                 {[
                   {
-                    title: 'Intelligent Document Processing',
-                    description:
-                      '99.8% accuracy across PDF, images, scanned documents, and handwriting. Support for 127 languages.',
-                    icon: '📄',
-                  },
+                    title: 'IntelligentDocumentProcessing'
+                    description: '99.8% accuracyacrossPDFimagesscanneddocumentsandhandwriting. Supportfor127 languages.'
+                    icon: '📄'
+                  }
                   {
-                    title: 'Cognitive Decision Engine',
-                    description:
-                      'AI-powered decision-making with 94% prediction accuracy. Multi-criteria analysis in real-time.',
-                    icon: '🎯',
-                  },
+                    title: 'CognitiveDecisionEngine'
+                    description: 'AI-powereddecision-makingwith94% predictionaccuracy. Multi-criteriaanalysisin real-time.'
+                    icon: '🎯'
+                  }
                   {
-                    title: 'Workflow Orchestration',
-                    description:
-                      'Visual no-code designer with smart routing and autonomous exception handling. 10x faster deployment.',
-                    icon: '🔄',
-                  },
+                    title: 'WorkflowOrchestration'
+                    description: 'Visualno-codedesignerwith smartroutingand autonomousexceptionhandling. 10xfasterdeployment.'
+                    icon: '🔄'
+                  }
                   {
-                    title: 'Natural Language Understanding',
-                    description:
-                      '98% accuracy in intent recognition. Process and respond to human language with contextual understanding.',
-                    icon: '💬',
-                  },
+                    title: 'NaturalLanguageUnderstanding'
+                    description: '98% accuracyinintent recognition. Processandrespond tohumanlanguage withcontextualunderstanding.'
+                    icon: '💬'
+                  }
                   {
-                    title: 'Predictive Analytics',
-                    description:
-                      'Process mining and bottleneck detection. Anticipate issues before they occur with predictive maintenance.',
-                    icon: '📊',
-                  },
+                    title: 'PredictiveAnalytics'
+                    description: 'Processminingand bottleneckdetection. Anticipateissuesbefore theyoccurwith predictivemaintenance.'
+                    icon: '📊'
+                  }
                   {
-                    title: 'Enterprise Integration',
-                    description:
-                      'Pre-built connectors for 500+ systems including SAP, Salesforce, ServiceNow, and custom APIs.',
-                    icon: '🔌',
-                  },
-                ].map((capability, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all'
+                    title: 'EnterpriseIntegration'
+                    description: 'Pre-builtconnectorsfor 500+ systemsincludingSAPSalesforceServiceNowandcustomAPIs.'
+                    icon: '🔌'
+                  }
+                ].map((capabilityindex) => (
+                  <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/20hover: border-zion-cyan/50transition-all'
                   >
-                    <div className='text-4xl mb-4'>{capability.icon}</div>
-                    <h3 className='text-xl font-bold text-white mb-3'>
+                    <divclassName='text-4xlmb-4'>{capability.icon}</div>
+                    <h3className = 'text-xlfont-boldtext-whitemb-3'>
                       {capability.title}
                     </h3>
-                    <p className='text-zion-slate-light'>
+                    <pclassName='text-zion-slate-light'>
                       {capability.description}
                     </p>
                   </div>
@@ -218,75 +203,73 @@ const RealTimeCognitiveAutomation = () => {
               </div>
             </section>
 
-            {/* Industry Solutions */}
+            {/* IndustrySolutions */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🏭 Industry Solutions
+              <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                🏭 IndustrySolutions
               </h2>
-              <div className='space-y-6'>
+              <divclassName='space-y-6'>
                 {[
                   {
-                    industry: 'Financial Services',
-                    savings: '$12.4M',
-                    automation: '95%',
+                    industry: 'FinancialServices'
+                    savings: '$12.4M'
+                    automation: '95%'
                     highlights: [
-                      'Loan processing: 96% faster',
-                      'Fraud detection: 97% accuracy',
-                      'KYC/AML: 100% coverage',
-                    ],
-                  },
+                      'Loanprocessing: 96% faster'
+                      'Frauddetection: 97% accuracy'
+                      'KYC/AML: 100% coverage'
+                    ]
+                  }
                   {
-                    industry: 'Healthcare',
-                    savings: '$8.7M',
-                    automation: '92%',
+                    industry: 'Healthcare'
+                    savings: '$8.7M'
+                    automation: '92%'
                     highlights: [
-                      'Claims processing: 92% auto-adjudication',
-                      'Medical coding: 99.1% accuracy',
-                      'Patient scheduling: 100% automated',
-                    ],
-                  },
+                      'Claimsprocessing: 92% auto-adjudication'
+                      'Medicalcoding: 99.1% accuracy'
+                      'Patientscheduling: 100% automated'
+                    ]
+                  }
                   {
-                    industry: 'Manufacturing',
-                    savings: '$18.2M',
-                    automation: '94%',
+                    industry: 'Manufacturing'
+                    savings: '$18.2M'
+                    automation: '94%'
                     highlights: [
-                      'Quality control: 99.7% defect detection',
-                      'Inventory: 98% forecast accuracy',
-                      'Maintenance: 84% failures prevented',
-                    ],
-                  },
+                      'Qualitycontrol: 99.7% defectdetection'
+                      'Inventory: 98% forecastaccuracy'
+                      'Maintenance: 84% failuresprevented'
+                    ]
+                  }
                   {
-                    industry: 'Retail & E-commerce',
-                    savings: '$6.8M',
-                    automation: '89%',
+                    industry: 'Retail & E-commerce'
+                    savings: '$6.8M'
+                    automation: '89%'
                     highlights: [
-                      'Order processing: 99.8% automation',
-                      'Customer service: 89% auto-resolution',
-                      'Returns: 95% automated',
-                    ],
-                  },
-                ].map((solution, index) => (
-                  <div
-                    key={index}
-                    className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30'
+                      'Orderprocessing: 99.8% automation'
+                      'Customerservice: 89% auto-resolution'
+                      'Returns: 95% automated'
+                    ]
+                  }
+                ].map((solutionindex) => (
+                  <divkey = { index }className = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/30'
                   >
-                    <div className='flex flex-wrap items-center justify-between gap-4 mb-4'>
-                      <h3 className='text-2xl font-bold text-white'>
+                    <divclassName='flexflex-wrapitems-centerjustify-betweengap-4mb-4'>
+                      <h3className='text-2xlfont-boldtext-white'>
                         {solution.industry}
                       </h3>
-                      <div className='flex gap-4'>
-                        <div className='px-4 py-2 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold'>
-                          {solution.savings} annual savings
+                      <divclassName='flexgap-4'>
+                        <divclassName='px-4py-2bg-green-500/20text-green-300rounded-lgtext-smfont-semibold'>
+                          {solution.savings} annualsavings
                         </div>
-                        <div className='px-4 py-2 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold'>
+                        <divclassName='px-4py-2bg-blue-500/20text-blue-300rounded-lgtext-smfont-semibold'>
                           {solution.automation} automation
                         </div>
                       </div>
                     </div>
-                    <ul className='space-y-2'>
-                      {solution.highlights.map((highlight, hIndex) => (
-                        <li key={hIndex} className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                    <ulclassName='space-y-2'>
+                      { solution.highlights.map((highlighthIndex) = > (
+                        <likey = { hIndex  }className = 'flexitems-startgap-2'>
+                          <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -296,71 +279,68 @@ const RealTimeCognitiveAutomation = () => {
               </div>
             </section>
 
-            {/* Pricing Packages */}
+            {/* PricingPackages */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                <DollarSign className='w-8 h-8 text-green-400' />
+              <h2className = 'text-3xlfont-boldtext-whitemb-6flexitems-centergap-3'>
+                <DollarSignclassName='w-8 h-8text-green-400' />
                 Pricing & Packages
               </h2>
-              <div className='grid md:grid-cols-3 gap-6'>
+              <divclassName='gridmd: grid-cols-3gap-6'>
                 {[
                   {
-                    name: 'Business Starter',
-                    price: '$7,999',
+                    name: 'BusinessStarter'
+                    price: '$7999'
                     features: [
-                      '50,000 transactions/month',
-                      '10 automated workflows',
-                      'Standard integrations',
-                      'Email support',
-                      '99.5% SLA',
-                    ],
-                  },
+                      '50000transactions/month'
+                      '10automatedworkflows'
+                      'Standardintegrations'
+                      'Emailsupport'
+                      '99.5% SLA'
+                    ]
+                  }
                   {
-                    name: 'Professional',
-                    price: '$19,999',
-                    popular: true,
+                    name: 'Professional'
+                    price: '$19999'
+                    popular: true
                     features: [
-                      '250,000 transactions/month',
-                      '50 automated workflows',
-                      'Advanced integrations',
-                      '24/7 support',
-                      '99.9% SLA',
-                    ],
-                  },
+                      '250000transactions/month'
+                      '50automatedworkflows'
+                      'Advancedintegrations'
+                      '24/7support'
+                      '99.9% SLA'
+                    ]
+                  }
                   {
-                    name: 'Enterprise',
-                    price: '$49,999',
+                    name: 'Enterprise'
+                    price: '$49999'
                     features: [
-                      'Unlimited transactions',
-                      'Unlimited workflows',
-                      'Custom AI models',
-                      'Dedicated team',
-                      '99.97% SLA',
-                    ],
-                  },
-                ].map((pkg, index) => (
-                  <div
-                    key={index}
-                    className={`bg-white/5 backdrop-blur-sm rounded-xl p-6 border ${pkg.popular ? 'border-purple-500/50 ring-2 ring-purple-500/30' : 'border-zion-cyan/30'}`}
+                      'Unlimitedtransactions'
+                      'Unlimitedworkflows'
+                      'CustomAImodels'
+                      'Dedicatedteam'
+                      '99.97% SLA'
+                    ]
+                  }
+                ].map((pkgindex) => (
+                  <divkey = { index }className = { `bg-white/5backdrop-blur-smrounded-xlp-6border ${pkg.popular  ? 'border-purple-500/50ring-2ring-purple-500/30'  : 'border-zion-cyan/30' }`}
                   >
-                    {pkg.popular && (
-                      <div className='bg-purple-500/20 text-purple-300 text-xs font-bold px-3 py-1 rounded-full inline-block mb-4'>
-                        MOST POPULAR
-                      </div>
-                    )}
-                    <h3 className='text-2xl font-bold text-white mb-2'>
+                    {  pkg.popular  && (
+                      <divclassName='bg-purple-500/20text-purple-300text-xsfont-boldpx-3py-1rounded-fullinline-blockmb-4'>
+                        MOSTPOPULAR
+                      </div > )  }
+                    <h3className = 'text-2xlfont-boldtext-whitemb-2'>
                       {pkg.name}
                     </h3>
-                    <div className='text-4xl font-bold text-green-400 mb-6'>
+                    <divclassName='text-4xlfont-boldtext-green-400mb-6'>
                       {pkg.price}
-                      <span className='text-lg text-zion-slate-light'>
+                      <spanclassName='text-lgtext-zion-slate-light'>
                         /month
                       </span>
                     </div>
-                    <ul className='space-y-3'>
-                      {pkg.features.map((feature, fIndex) => (
-                        <li key={fIndex} className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                    <ulclassName='space-y-3'>
+                      { pkg.features.map((featurefIndex) = > (
+                        <likey = { fIndex  }className = 'flexitems-startgap-2'>
+                          <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -370,75 +350,72 @@ const RealTimeCognitiveAutomation = () => {
               </div>
             </section>
 
-            {/* Limited Time Offer */}
+            {/* LimitedTimeOffer */}
             <section>
-              <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-cyan-900/40 rounded-xl p-8 border-2 border-purple-500/50'>
-                <div className='flex items-center justify-between flex-wrap gap-6'>
-                  <div className='flex-1'>
-                    <div className='flex items-center gap-3 mb-4'>
-                      <Rocket className='w-8 h-8 text-purple-400' />
-                      <h3 className='text-2xl font-bold text-white'>
-                        🚀 October 2025 Launch Special
+              <divclassName = 'bg-gradient-to-rfrom-purple-900/40via-pink-900/40to-cyan-900/40rounded-xlp-8border-2border-purple-500/50'>
+                <divclassName='flexitems-centerjustify-betweenflex-wrapgap-6'>
+                  <divclassName='flex-1'>
+                    <divclassName='flexitems-centergap-3mb-4'>
+                      <RocketclassName='w-8 h-8text-purple-400' />
+                      <h3className='text-2xlfont-boldtext-white'>
+                        🚀 October2025Launch Special
                       </h3>
                     </div>
-                    <p className='text-xl text-purple-200 mb-4'>
-                      Get Your <strong>First 3 Months at 50% OFF</strong>
+                    <pclassName='text-xltext-purple-200mb-4'>
+                      GetYour <strong>First3Months at50% OFF</strong>
                     </p>
-                    <ul className='space-y-2'>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>Free process assessment ($15,000 value)</span>
+                    <ulclassName='space-y-2'>
+                      <liclassName='flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>Freeprocessassessment ($15000value)</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
+                      <liclassName = 'flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
                         <span>
-                          Complimentary pilot implementation ($25,000 value)
+                          Complimentarypilotimplementation ($25000value)
                         </span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                        <span>6 months extended support included</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0mt-1' />
+                        <span>6monthsextended supportincluded</span>
                       </li>
                     </ul>
-                    <p className='text-sm text-zion-slate-light mt-4'>
-                      Limited to first 30 customers. Annual contract required.
+                    <pclassName='text-smtext-zion-slate-lightmt-4'>
+                      Limitedtofirst 30customers. Annualcontractrequired.
                     </p>
                   </div>
                   <div>
-                    <Link
-                      to='/contact'
-                      className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-bold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105'
+                    <Linkto='/contact'
+                      className='inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-purple-500to-cyan-500text-whitefont-boldrounded-lghover: from-purple-600hover:to-cyan-600transition-alltransformhover:scale-105'
                     >
-                      Get Started Today
-                      <Zap className='w-5 h-5' />
+                      GetStartedToday
+                      <ZapclassName='w-5 h-5' />
                     </Link>
                   </div>
                 </div>
               </div>
             </section>
 
-            {/* CTA Section */}
-            <section className='text-center'>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                Ready to Transform Your Operations?
+            {/* CTASection */}
+            <sectionclassName = 'text-center'>
+              <h2className='text-3xlfont-boldtext-whitemb-6'>
+                ReadytoTransform YourOperations?
               </h2>
-              <p className='text-xl text-zion-slate-light mb-8'>
-                Schedule a consultation to see how cognitive automation can
-                revolutionize your business.
+              <pclassName='text-xltext-zion-slate-lightmb-8'>
+                Scheduleaconsultation toseehow cognitiveautomationcan
+                revolutionizeyourbusiness.
               </p>
-              <div className='flex flex-wrap gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white font-bold rounded-lg hover:from-zion-blue-light hover:to-zion-cyan transition-all transform hover:scale-105'
+              <divclassName='flexflex-wrapgap-4justify-center'>
+                <Linkto='/contact'
+                  className='inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-zion-blueto-zion-cyantext-whitefont-boldrounded-lghover: from-zion-blue-lighthover:to-zion-cyantransition-alltransformhover:scale-105'
                 >
-                  Schedule Free Assessment
-                  <Zap className='w-5 h-5' />
+                  ScheduleFreeAssessment
+                  <ZapclassName='w-5 h-5' />
                 </Link>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-zion-cyan/30 hover:bg-white/20 transition-all'
+                <Linkto='/contact'
+                  className='inline-flexitems-centergap-2px-8py-4bg-white/10backdrop-blur-smtext-whitefont-boldrounded-lgborderborder-zion-cyan/30hover:bg-white/20transition-all'
                 >
-                  Request Live Demo
+                  RequestLiveDemo
                 </Link>
               </div>
             </section>
@@ -449,4 +426,4 @@ const RealTimeCognitiveAutomation = () => {
   );
 };
 
-export default RealTimeCognitiveAutomation;
+exportdefaultRealTimeCognitiveAutomation;

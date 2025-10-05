@@ -1,40 +1,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function EdgePrivateFeatureFlags2026(): React.JSX.Element {
+exportdefaultfunction EdgePrivateFeatureFlags2026(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Edge 2026: Private Feature Flags at &lt;100ms</title>
-        <meta
-          name='description'
-          content='Signed configs, scoped IDs, and on‑device telemetry for zero‑PII rollouts worldwide under 100ms.'
+        <title>Edge2026: PrivateFeatureFlags at &lt; 100ms</title>
+        <meta name='description'
+          content='SignedconfigsscopedIDsandon‑devicetelemetryfor zero‑PIIrolloutsworldwide under100ms.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/edge-2026-private-feature-flags'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2026-private-feature-flags'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Edge 2026: Private Feature Flags
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Edge2026: PrivateFeatureFlags
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Signed configs • Scoped IDs • On‑Device Telemetry
+        <pclassName='text-zion-slate-lightmb-8'>
+          Signedconfigs • ScopedIDs • On‑DeviceTelemetry
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Deliver private, compliant rollouts at global edge latency using
-            signed configurations, scoped identifiers, and on‑device telemetry.
-            Keep user data local while preserving observability.
+            Deliverprivatecompliantrolloutsat globaledgelatency usingsignedconfigurationsscopedidentifiersandon‑devicetelemetry.
+            Keepuserdata localwhilepreserving observability.
           </p>
           <p>
-            We cover freshness windows, key derivation, and guardrails that make
-            rollouts safe and reversible.
+            Wecoverfreshness windowskeyderivationandguardrailsthat makerolloutssafe andreversible.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

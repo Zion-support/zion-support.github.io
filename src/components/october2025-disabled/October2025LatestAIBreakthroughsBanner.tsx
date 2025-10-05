@@ -1,136 +1,111 @@
 import { Link } from "react-router-dom";
-export default function October2025LatestAIBreakthroughsBanner() {
+exportdefaultfunction October2025LatestAIBreakthroughsBanner() { 
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-rose-900 border-y border-white/10">
-      <div className="container mx-auto px-4 py-12">
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-500/20 text-yellow-300 rounded-full text-sm font-bold mb-4 border border-yellow-500/30 animate-pulse">
-            <Zap className="h-4 w-4" />
-            <span>🚀 JUST PUBLISHED — OCTOBER 1, 2025</span>
-            <Zap className="h-4 w-4" />
+    <divclassName = "bg-gradient-to-rfrom-purple-900via-indigo-900to-rose-900border-yborder-white/10">
+      <divclassName="containermx-autopx-4py-12">
+        <divclassName="text-centermb-8">
+          <divclassName="inline-flexitems-centergap-2px-4py-2bg-yellow-500/20text-yellow-300rounded-fulltext-smfont-boldmb-4borderborder-yellow-500/30animate-pulse">
+            <ZapclassName="h-4 w-4" />
+            <span>🚀 JUSTPUBLISHED — OCTOBER 12025</span>
+            <ZapclassName = "h-4 w-4" />
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 text-transparent bg-clip-text">
-            3 Revolutionary AI Breakthroughs Transforming Enterprise Operations
+          <h2className="text-4xlmd: text-5xlfont-boldmb-4bg-gradient-to-rfrom-purple-400via-pink-400to-rose-400text-transparentbg-clip-text">
+            3RevolutionaryAI BreakthroughsTransformingEnterprise Operations
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            🎯 <strong>Breaking Today:</strong> Deploy autonomous self-healing infrastructure achieving 99.97% uptime and $67M+ savings, 
-            unlock cognitive search with 97% answer accuracy driving $124M+ productivity gains, and implement real-time personalization 
-            multiplying conversions by 8.7x with $234M+ revenue impact. Essential insights for forward-thinking technology leaders!
+          <pclassName="text-xltext-gray-300max-w-4xlmx-autoleading-relaxed">
+            🎯 <strong>BreakingToday:</strong> Deployautonomousself-healinginfrastructureachieving 99.97% uptimeand $67M+ savings
+            unlockcognitivesearch with97% answeraccuracydriving $124M+ productivitygainsandimplementreal-timepersonalizationmultiplying conversionsby8.7xwith $234M+ revenueimpact. Essentialinsightsfor forward-thinkingtechnologyleaders!
           </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Link
-            to="/blog/ai-2025-oct-autonomous-infrastructure-healing"
-            className="group bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-xl p-6 border border-purple-500/30 hover:border-purple-400/50 transition-all hover:scale-105"
+        <divclassName = "gridmd: grid-cols-3gap-6mb-8">
+          <Linkto="/blog/ai-2025-oct-autonomous-infrastructure-healing"
+            className="groupbg-gradient-to-brfrom-purple-500/20to-blue-500/20rounded-xlp-6borderborder-purple-500/30hover:border-purple-400/50transition-allhover:scale-105"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-purple-500/20 rounded-lg">
-                <Server className="h-6 w-6 text-purple-400" />
-              </div>
-              <span className="px-3 py-1 bg-purple-500/30 text-purple-300 rounded-full text-xs font-bold">
-                Infrastructure AI
-              </span>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-300 transition-colors">
-              Autonomous Infrastructure Self-Healing Revolution
             </h3>
-            <ul className="space-y-2 text-sm text-gray-300 mb-4">
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                <span><strong>99.97% Uptime:</strong> AI auto-resolves 94% of incidents</span>
+            <ulclassName="space-y-2text-smtext-gray-300mb-4">
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-yellow-400mt-0.5flex-shrink-0" />
+                <span><strong>99.97% Uptime:</strong> AIauto-resolves94% ofincidents</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                <span><strong>Sub-Second Response:</strong> 850ms average remediation</span>
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-green-400mt-0.5flex-shrink-0" />
+                <span><strong>Sub-SecondResponse:</strong> 850msaverageremediation</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span><strong>$67M+ Savings:</strong> 78% operational cost reduction</span>
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-blue-400mt-0.5flex-shrink-0" />
+                <span><strong>$67M+ Savings:</strong> 78% operationalcostreduction</span>
               </li>
             </ul>
-            <div className="flex items-center text-purple-400 font-semibold group-hover:gap-3 gap-2 transition-all">
-              Read Full Analysis
-              <ArrowRight className="h-4 w-4" />
+            <divclassName="flexitems-centertext-purple-400font-semiboldgroup-hover:gap-3gap-2transition-all">
+              ReadFullAnalysis
+              <ArrowRight,className="h-4 w-4" />
             </div>
           </Link>
-          <Link
-            to="/blog/ai-2025-oct-cognitive-search-enterprise"
-            className="group bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all hover:scale-105"
+          <Linkto="/blog/ai-2025-oct-cognitive-search-enterprise"
+            className="groupbg-gradient-to-brfrom-indigo-500/20to-purple-500/20rounded-xlp-6borderborder-indigo-500/30hover:border-indigo-400/50transition-allhover:scale-105"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-indigo-500/20 rounded-lg">
-                <Search className="h-6 w-6 text-indigo-400" />
-              </div>
-              <span className="px-3 py-1 bg-indigo-500/30 text-indigo-300 rounded-full text-xs font-bold">
-                Cognitive AI
-              </span>
-            </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-indigo-300 transition-colors">
-              Cognitive Enterprise Search at Scale
             </h3>
-            <ul className="space-y-2 text-sm text-gray-300 mb-4">
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                <span><strong>97% Accuracy:</strong> AI delivers precise answers, not just docs</span>
+            <ulclassName="space-y-2text-smtext-gray-300mb-4">
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-purple-400mt-0.5flex-shrink-0" />
+                <span><strong>97% Accuracy:</strong> AIdeliversprecise answersnotjustdocs</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-yellow-400 mt-0.5 flex-shrink-0" />
-                <span><strong>12x Faster:</strong> Find critical info in seconds</span>
+              <liclassName = "flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-yellow-400mt-0.5flex-shrink-0" />
+                <span><strong>12xFaster: </strong> Findcriticalinfo inseconds</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                <span><strong>$124M+ Value:</strong> Unlock productivity at scale</span>
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-green-400mt-0.5flex-shrink-0" />
+                <span><strong>$124M+ Value:</strong> Unlockproductivityat scale</span>
               </li>
             </ul>
-            <div className="flex items-center text-indigo-400 font-semibold group-hover:gap-3 gap-2 transition-all">
-              Read Full Analysis
-              <ArrowRight className="h-4 w-4" />
+            <divclassName="flexitems-centertext-indigo-400font-semiboldgroup-hover:gap-3gap-2transition-all">
+              ReadFullAnalysis
+              <ArrowRight,className="h-4 w-4" />
             </div>
           </Link>
-          <Link
-            to="/blog/ai-2025-oct-realtime-personalization-engine"
-            className="group bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl p-6 border border-rose-500/30 hover:border-rose-400/50 transition-all hover:scale-105"
+          <Linkto="/blog/ai-2025-oct-realtime-personalization-engine"
+            className="groupbg-gradient-to-brfrom-rose-500/20to-purple-500/20rounded-xlp-6borderborder-rose-500/30hover:border-rose-400/50transition-allhover:scale-105"
           >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-rose-500/20 rounded-lg">
-                <Target className="h-6 w-6 text-rose-400" />
+            <divclassName="flexitems-centergap-3mb-4">
+              <divclassName="p-3bg-rose-500/20rounded-lg">
+                <TargetclassName="h-6 w-6text-rose-400" />
               </div>
-              <span className="px-3 py-1 bg-rose-500/30 text-rose-300 rounded-full text-xs font-bold">
-                Personalization AI
+              <spanclassName="px-3py-1bg-rose-500/30text-rose-300rounded-fulltext-xsfont-bold">
+                PersonalizationAI
               </span>
             </div>
-            <h3 className="text-xl font-bold mb-3 text-white group-hover:text-rose-300 transition-colors">
-              Real-Time AI Personalization Engine
+            <h3className="text-xlfont-boldmb-3text-whitegroup-hover:text-rose-300transition-colors">
+              Real-TimeAIPersonalization Engine
             </h3>
-            <ul className="space-y-2 text-sm text-gray-300 mb-4">
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-rose-400 mt-0.5 flex-shrink-0" />
-                <span><strong>98.4% Relevance:</strong> Near-perfect intent prediction</span>
+            <ulclassName="space-y-2text-smtext-gray-300mb-4">
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-rose-400mt-0.5flex-shrink-0" />
+                <span><strong>98.4% Relevance:</strong> Near-perfectintentprediction</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span><strong>8.7x Conversion:</strong> Dramatic engagement lift</span>
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-blue-400mt-0.5flex-shrink-0" />
+                <span><strong>8.7xConversion:</strong> Dramaticengagementlift</span>
               </li>
-              <li className="flex items-start gap-2">
-                <Zap className="h-4 w-4 text-green-400 mt-0.5 flex-shrink-0" />
-                <span><strong>$234M+ Revenue:</strong> Incremental growth unlocked</span>
+              <liclassName="flexitems-startgap-2">
+                <ZapclassName="h-4 w-4text-green-400mt-0.5flex-shrink-0" />
+                <span><strong>$234M+ Revenue:</strong> Incrementalgrowthunlocked</span>
               </li>
             </ul>
-            <div className="flex items-center text-rose-400 font-semibold group-hover:gap-3 gap-2 transition-all">
-              Read Full Analysis
-              <ArrowRight className="h-4 w-4" />
+            <divclassName="flexitems-centertext-rose-400font-semiboldgroup-hover:gap-3gap-2transition-all">
+              ReadFullAnalysis
+              <ArrowRight,className="h-4 w-4" />
             </div>
           </Link>
         </div>
-        <div className="text-center">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-rose-600 text-white rounded-lg font-bold text-lg hover:from-purple-500 hover:to-rose-500 transition-all hover:scale-105 shadow-lg hover:shadow-xl"
+        <divclassName="text-center">
+          <Linkto="/blog"
+            className="inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-purple-600to-rose-600text-whiterounded-lgfont-boldtext-lghover:from-purple-500hover:to-rose-500transition-allhover:scale-105shadow-lghover:shadow-xl"
           >
-            Explore All Latest AI Innovations
-            <ArrowRight className="h-5 w-5" />
+            ExploreAllLatest AIInnovations
+            <ArrowRight,className="h-5 w-5" />
           </Link>
         </div>
       </div>
-    </div > );
-}
+    </div  > );
+ }

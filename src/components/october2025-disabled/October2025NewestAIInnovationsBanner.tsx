@@ -1,91 +1,86 @@
 import { Link } from 'react-router-dom';
 
-export default function October2025NewestAIInnovationsBanner() {
+exportdefaultfunction October2025NewestAIInnovationsBanner() { 
   return (
-    <div className='bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16 px-4'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-8'>
-          <div className='inline-block bg-yellow-400 text-black px-4 py-2 rounded-full text-sm font-bold mb-4 animate-pulse'>
-            🚀 JUST PUBLISHED - OCTOBER 2, 2025 🚀
+    <divclassName = 'bg-gradient-to-rfrom-purple-900via-blue-900to-indigo-900text-whitepy-16px-4'>
+      <divclassName='max-w-7xlmx-auto'>
+        <divclassName='text-centermb-8'>
+          <divclassName='inline-blockbg-yellow-400text-blackpx-4py-2rounded-fulltext-smfont-boldmb-4animate-pulse'>
+            🚀 JUSTPUBLISHED - OCTOBER 22025 🚀
           </div>
-          <h2 className='text-5xl font-bold mb-4'>
-            Revolutionary AI Innovations: 3 Game-Changing Technologies
+          <h2className = 'text-5xlfont-boldmb-4'>
+            RevolutionaryAIInnovations: 3Game-ChangingTechnologies
           </h2>
-          <p className='text-2xl text-blue-200 mb-6'>
-            $11.9B Combined Value Creation • 99.999% Uptime • 94% Faster
-            Operations
+          <pclassName='text-2xltext-blue-200mb-6'>
+            $11.9BCombinedValue Creation • 99.999% Uptime • 94% FasterOperations
           </p>
         </div>
 
-        <div className='grid md:grid-cols-3 gap-8 mt-12'>
-          {' '}
-          {/* Self-Healing Infrastructure */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all'>
-            <div className='text-4xl mb-4'>🔧</div>
-            <h3 className='text-2xl font-bold mb-3'>
-              Agentic Self-Healing Infrastructure
+        <divclassName='gridmd:grid-cols-3gap-8mt-12' > {' ' }
+          {/* Self-HealingInfrastructure */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-xlp-6hover: bg-white/20transition-all'>
+            <divclassName='text-4xlmb-4'>🔧</div>
+            <h3className='text-2xlfont-boldmb-3'>
+              AgenticSelf-HealingInfrastructure
             </h3>
-            <ul className='text-blue-100 space-y-2 mb-4'>
-              <li>✅ $5.4B Operational Savings</li>
-              <li>✅ 99.999% Uptime Achievement</li>
-              <li>✅ 2.3 Min MTTR (from 4.7 hours)</li>
-              <li>✅ 94% Auto-Resolution Rate</li>
-              <li>✅ Zero-Touch Operations</li>
+            <ulclassName='text-blue-100space-y-2mb-4'>
+              <li>✅ $5.4BOperationalSavings</li>
+              <li>✅ 99.999% UptimeAchievement</li>
+              <li>✅ 2.3MinMTTR (from4.7hours)</li>
+              <li>✅ 94% Auto-ResolutionRate</li>
+              <li>✅ Zero-TouchOperations</li>
             </ul>
-            <Link
-              to='/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution'
-              className='inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors'
+            <Linkto = '/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution'
+              className='inline-blockbg-yellow-400text-blackpx-6py-3rounded-lgfont-boldhover:bg-yellow-300transition-colors'
             >
-              Read Full Guide →
+              ReadFullGuide →
             </Link>
           </div>
-          {/* AI Observability */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all'>
-            <div className='text-4xl mb-4'>👁️</div>
-            <h3 className='text-2xl font-bold mb-3'>
-              Next-Gen AI Observability
+          {/* AIObservability */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-xlp-6hover: bg-white/20transition-all'>
+            <divclassName='text-4xlmb-4'>👁️</div>
+            <h3className='text-2xlfont-boldmb-3'>
+              Next-GenAIObservability
             </h3>
-            <ul className='text-blue-100 space-y-2 mb-4'>
-              <li>✅ $3.7B Value Creation</li>
-              <li>✅ 96% Faster MTTR (3.5h → 8 min)</li>
-              <li>✅ 87% Alert Reduction</li>
-              <li>✅ 98% Anomaly Detection Accuracy</li>
-              <li>✅ Predictive Analytics</li>
+            <ulclassName='text-blue-100space-y-2mb-4'>
+              <li>✅ $3.7BValueCreation</li>
+              <li>✅ 96% FasterMTTR (3.5h → 8min)</li>
+              <li>✅ 87% AlertReduction</li>
+              <li>✅ 98% AnomalyDetectionAccuracy</li>
+              <li>✅ PredictiveAnalytics</li>
             </ul>
-            <Link
-              to='/blog/ai-2025-october-2-next-gen-ai-observability-<platform'
-              className='inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors'
+            <Linkto = '/blog/ai-2025-october-2-next-gen-ai-observability-<platform'
+              className='inline-blockbg-yellow-400text-blackpx-6py-3rounded-lgfont-boldhover:bg-yellow-300transition-colors'
             >
-              Explore Platform →
+              ExplorePlatform →
             </Link>
           </div>
-          {/* ML Pipeline Optimization */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all'>
-            <div className='text-4xl mb-4'>🤖</div>
-            <h3 className='text-2xl font-bold mb-3'>Autonomous ML Pipelines</h3>
-            <ul className='text-blue-100 space-y-2 mb-4'>
-              <li>✅ $2.8B Operational Savings</li>
-              <li>✅ 94% Faster Deployment</li>
-              <li>✅ 23% Accuracy Improvement</li>
-              <li>✅ 78% Cost Reduction</li>
-              <li>✅ Self-Improving AI Systems</li>
+          {/* MLPipelineOptimization */}
+          <divclassName = 'bg-white/10backdrop-blur-lgrounded-xlp-6hover: bg-white/20transition-all'>
+            <divclassName='text-4xlmb-4'>🤖</div>
+            <h3className='text-2xlfont-boldmb-3'>AutonomousMLPipelines</h3>
+            <ulclassName='text-blue-100space-y-2mb-4'>
+              <li>✅ $2.8BOperationalSavings</li>
+              <li>✅ 94% FasterDeployment</li>
+              <li>✅ 23% AccuracyImprovement</li>
+              <li>✅ 78% CostReduction</li>
+              <li>✅ Self-ImprovingAISystems</li>
             </ul>
-            <Link
-              to='/blog/ai-2025-october-2-autonomous-ml-pipeline-<optimization'
-              className='inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors'
+            <Linkto='/blog/ai-2025-october-2-autonomous-ml-pipeline-<optimization'
+              className='inline-blockbg-yellow-400text-blackpx-6py-3rounded-lgfont-boldhover:bg-yellow-300transition-colors'
             >
-              Discover More →
+              DiscoverMore →
             </Link>
           </div>
         </div>
 
-        <div className='mt-12 text-center'>
-          <div className='bg-gradient-to-r from-yellow-400 to-orange-400 text-black px-8 py-4 rounded-xl inline-block'>
-            <p className='text-2xl font-bold mb-2'>
-              💎 Total Value: $11.9B+ in Proven Enterprise Results 💎
+        <divclassName='mt-12text-center'>
+          <divclassName='bg-gradient-to-rfrom-yellow-400to-orange-400text-blackpx-8py-4rounded-xlinline-block'>
+            <pclassName='text-2xlfont-boldmb-2'>
+              💎 TotalValue: $11.9B+ inProvenEnterprise Results 💎
             </p>
-            <p className='text-lg'>
-              Transform your operations with these revolutionary AI technologies
+            <pclassName='text-lg'>
+              Transformyouroperations withtheserevolutionary AItechnologies
             </p>
           </div>
         </div>

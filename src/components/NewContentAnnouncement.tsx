@@ -1,30 +1,28 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const NewContentAnnouncement: React.FC = () => {
+constNewContentAnnouncement: React.FC = () => { 
   return (
-    <div className='bg-gradient-to-r from-purple-700 via-pink-600 to-red-600 text-white py-3'>
-      <div className='container mx-auto px-6'>
-        <div className='flex items-center justify-center gap-4 flex-wrap'>
-          <div className='flex items-center gap-2'>
-            <Sparkles className='w-5 h-5 animate-pulse' />
-            <span className='font-bold text-lg'>
-              🔥 OCTOBER 2025: MASSIVE CONTENT DROP!
+    <divclassName = 'bg-gradient-to-rfrom-purple-700via-pink-600to-red-600text-whitepy-3'>
+      <divclassName='containermx-autopx-6'>
+        <divclassName='flexitems-centerjustify-centergap-4flex-wrap'>
+          <divclassName='flexitems-centergap-2'>
+            <SparklesclassName='w-5 h-5animate-pulse' />
+            <spanclassName='font-boldtext-lg'>
+              🔥 OCTOBER2025: MASSIVECONTENTDROP!
             </span>
-            <Sparkles className='w-5 h-5 animate-pulse' />
+            <SparklesclassName='w-5 h-5animate-pulse' />
           </div>
-          <span className='text-pink-100'>
-            10 Breakthrough Articles + 8 Revolutionary Services
+          <spanclassName='text-pink-100'>
+            10BreakthroughArticles + 8RevolutionaryServices
           </span>
-          <Link
-            to='/blog'
-            className='bg-white text-purple-700 px-4 py-1.5 rounded-full font-semibold hover:bg-pink-50 transition-colors flex items-center gap-1 text-sm'
+          <Linkto='/blog'
+            className='bg-whitetext-purple-700px-4py-1.5rounded-fullfont-semiboldhover:bg-pink-50transition-colorsflexitems-centergap-1text-sm'
           >
-            Explore Now
-            <ArrowRight className='w-4 h-4' />
+            ExploreNow
+            <ArrowRight,className='w-4 h-4' />
           </Link>
         </div>
       </div>
-    </div>
-  );
-};
-export default NewContentAnnouncement;
+    </div > );
+ };
+exportdefaultNewContentAnnouncement;

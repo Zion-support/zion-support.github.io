@@ -1,45 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
-interface EnhancedPromotionalBannerProps {
+importtype { EnhancedPromotionalBannerasBannerType } from '../content/enhanced-promotional-banners';
+interfaceEnhancedPromotionalBannerProps { 
   banner: BannerType;
-  className?: string;
-}
-const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
-  banner,
-  className = '',
+  className ?  : string;
+ }
+constEnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
+  banner
+  className = ''
 }) => {
-  const variantStyles = {
-    success: 'bg-gradient-to-r from-green-600 to-emerald-600',
-    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',
-    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
-    error: 'bg-gradient-to-r from-red-600 to-pink-600',
-  };
-  return (
-    <div
-      className={`${variantStyles[banner.variant]} text-white p-4 ${className}`}
+  constvariantStyles = {
+    success: 'bg-gradient-to-rfrom-green-600to-emerald-600'
+    warning: 'bg-gradient-to-rfrom-yellow-600to-orange-600'
+    info: 'bg-gradient-to-rfrom-blue-600to-indigo-600'
+    error: 'bg-gradient-to-rfrom-red-600to-pink-600'
+  }; return (
+    <divclassName = { `${variantStyles[banner.variant] }text-whitep-4 ${className}`}
     >
-      <div className='container mx-auto px-6'>
-        <div className='flex items-center justify-between flex-wrap gap-4'>
-          <div className='flex items-center gap-3 flex-1 min-w-0'>
-            {banner.icon && (
-              <span className='text-2xl flex-shrink-0'> {banner.icon}</span>
+      <divclassName = 'containermx-autopx-6'>
+        <divclassName='flexitems-centerjustify-betweenflex-wrapgap-4'>
+          <divclassName='flexitems-centergap-3flex-1min-w-0'>
+            {  banner.icon  && (
+              <spanclassName='text-2xlflex-shrink-0' > {banner.icon  }</span>
             )}
-            <div className='flex-1 min-w-0'>
-              <h3 className='font-bold text-lg'>{banner.title}</h3>
-              <p className='text-sm opacity-90'>{banner.description}</p>
+            <divclassName = 'flex-1min-w-0'>
+              <h3className='font-boldtext-lg'>{banner.title}</h3>
+              <pclassName='text-smopacity-90'>{banner.description}</p>
             </div>
           </div>
-          <Link
-            to={banner.ctaLink}
-            className='bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0'
+          <Linkto = { banner.ctaLink }className = 'bg-whitetext-gray-900px-6py-2rounded-lgfont-semiboldhover: bg-opacity-90transition-allflexitems-centergap-2flex-shrink-0'
           >
             {banner.ctaText}
-            <ArrowRight className='w-4 h-4' />
+            <ArrowRight,className = 'w-4 h-4' />
           </Link>
         </div>
       </div>
     </div>
   );
 };
-export default EnhancedPromotionalBanner;
+exportdefaultEnhancedPromotionalBanner;

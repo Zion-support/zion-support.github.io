@@ -1,33 +1,32 @@
 import React from 'react';
 
-const Header: React.FC = () => {
+constHeader: React.FC = () => { 
   return (
-    <header className='bg-white shadow-sm'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='flex justify-between items-center py-6'>
-          <div className='flex items-center'>
-            <h1 className='text-2xl font-bold text-gray-900'>
-              Zion Tech Group
+    <headerclassName = 'bg-whiteshadow-sm'>
+      <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+        <divclassName='flexjustify-betweenitems-centerpy-6'>
+          <divclassName='flexitems-center'>
+            <h1className='text-2xlfont-boldtext-gray-900'>
+              ZionTechGroup
             </h1>
           </div>
-          <nav className='hidden md:flex space-x-8'>
-            <a href='/' className='text-gray-500 hover:text-gray-900'>
+          <navclassName='hiddenmd:flexspace-x-8'>
+            <ahref='/' className='text-gray-500hover:text-gray-900'>
               Home
             </a>
-            <a href='/about' className='text-gray-500 hover:text-gray-900'>
+            <ahref='/about' className='text-gray-500hover:text-gray-900'>
               About
             </a>
-            <a href='/services' className='text-gray-500 hover:text-gray-900'>
+            <ahref='/services' className='text-gray-500hover:text-gray-900'>
               Services
             </a>
-            <a href='/contact' className='text-gray-500 hover:text-gray-900'>
+            <ahref='/contact' className='text-gray-500hover:text-gray-900'>
               Contact
             </a>
           </nav>
         </div>
       </div>
-    </header>
-  );
-};
+    </header > );
+ };
 
-export default Header;
+exportdefaultHeader;

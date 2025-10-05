@@ -1,42 +1,41 @@
 import React from 'react';
 
-const Footer: React.FC = () => {
+constFooter: React.FC = () => { 
   return (
-    <footer className='bg-gray-800 text-white'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
-        <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
+    <footerclassName = 'bg-gray-800text-white'>
+      <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8py-12'>
+        <divclassName='gridgrid-cols-1md:grid-cols-4gap-8'>
           <div>
-            <h3 className='text-lg font-semibold mb-4'>Zion Tech Group</h3>
-            <p className='text-gray-300'>
-              Advanced AI and IT Solutions for modern businesses.
+            <h3className='text-lgfont-semiboldmb-4'>ZionTechGroup</h3>
+            <pclassName='text-gray-300'>
+              AdvancedAIand ITSolutionsfor modernbusinesses.
             </p>
           </div>
           <div>
-            <ul className='space-y-2 text-gray-300'>
-              <li>AI Solutions</li>
-              <li>IT Infrastructure</li>
-              <li>Cloud Services</li>
+            <ulclassName='space-y-2text-gray-300'>
+              <li>AISolutions</li>
+              <li>ITInfrastructure</li>
+              <li>CloudServices</li>
             </ul>
           </div>
           <div>
-            <ul className='space-y-2 text-gray-300'>
-              <li>About Us</li>
+            <ulclassName='space-y-2text-gray-300'>
+              <li>AboutUs</li>
             </ul>
           </div>
           <div>
-            <p className='text-gray-300'>
+            <pclassName='text-gray-300'>
               Email: info@ziontechgroup.com
               <br />
               Phone: +1 (302) 464-0950
             </p>
           </div>
         </div>
-        <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-300'>
-          <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+        <divclassName = 'border-tborder-gray-700mt-8pt-8text-centertext-gray-300'>
+          <p>&copy; 2025ZionTech Group. Allrightsreserved.</p>
         </div>
       </div>
-    </footer>
-  );
-};
+    </footer > );
+ };
 
-export default Footer;
+exportdefaultFooter;

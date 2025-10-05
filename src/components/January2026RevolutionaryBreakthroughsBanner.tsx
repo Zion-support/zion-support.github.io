@@ -1,105 +1,96 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
-  const breakthroughs = [
+constJanuary2026RevolutionaryBreakthroughsBanner: React.FC = () => {
+  constbreakthroughs = [
     {
       icon: Brain,
-      title: "Synthetic Consciousness AI",
-      description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",
-      stats: "$500B Enterprise Value",
-      color: "from-purple-500 to-pink-500",
+      title: "SyntheticConsciousnessAI"
+      description: "RevolutionaryAIachieving genuineconsciousnessand emotionalintelligence"
+      stats: "$500BEnterpriseValue"
+      color: "from-purple-500to-pink-500"
       bgColor: "bg-purple-500/10"
-    },
+    }
     {
-      icon: Zap,
-      title: "Quantum Edge Computing",
-      description: "Sub-millisecond processing with 200-250x speed improvements",
-      stats: "200x Faster",
-      color: "from-blue-500 to-cyan-500",
+      icon: Zap
+      title: "QuantumEdgeComputing"
+      description: "Sub-millisecondprocessingwith 200-250xspeedimprovements"
+      stats: "200xFaster"
+      color: "from-blue-500to-cyan-500"
       bgColor: "bg-blue-500/10"
-    },
+    }
     {
-      icon: Network,
-      title: "Autonomous Enterprise Mesh",
-      description: "Self-organizing AI networks achieving 99.7% operational efficiency",
-      stats: "99.7% Efficiency",
-      color: "from-green-500 to-emerald-500",
+      icon: Network
+      title: "AutonomousEnterpriseMesh"
+      description: "Self-organizingAInetworks achieving99.7% operationalefficiency"
+      stats: "99.7% Efficiency"
+      color: "from-green-500to-emerald-500"
       bgColor: "bg-green-500/10"
-    },
+    }
     {
-      icon: Shield,
-      title: "Quantum-Safe Security",
-      description: "Unbreakable protection systems with 99.99% threat prevention",
-      stats: "$2.8B Protected",
-      color: "from-orange-500 to-red-500",
+      icon: Shield
+      title: "Quantum-SafeSecurity"
+      description: "Unbreakableprotectionsystems with99.99% threatprevention"
+      stats: "$2.8BProtected"
+      color: "from-orange-500to-red-500"
       bgColor: "bg-orange-500/10"
     }
-  ];
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 text-white"
+  ]; return (
+    <motion.divinitial = {{ opacity:  0y: 20 }}
+      animate = {{ opacity:  1y:  0 }}
+      transition = {{ duration: 0.8 }}
+      className = "relativeoverflow-hiddenbg-gradient-to-brfrom-slate-900via-purple-900to-slate-900rounded-2xlp-8text-white"
     >
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+      {/* BackgroundEffects */}
+      <divclassName="absoluteinset-0opacity-20">
+        <divclassName="absoluteinset-0bg-gradient-to-brfrom-white/5to-transparent" />
       </div>
-      <div className="relative z-10">
+      <divclassName="relativez-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <motion.div
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
-            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
+        <divclassName="text-centermb-12">
+          <motion.divinitial={{ scale: 0.9 }}
+            animate = {{ scale:  1 }}
+            transition = {{ delay: 0.2duration: 0.6 }}
+            className = "inline-flexitems-centerpx-6py-3bg-gradient-to-rfrom-purple-500/20to-blue-500/20backdrop-blur-smborderborder-purple-500/30rounded-fulltext-smfont-semiboldmb-6"
           >
-            <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
-            January 15, 2026 - Revolutionary Breakthroughs
+            <SparklesclassName="w-4 h-4mr-2text-yellow-400" />
+            January152026 - RevolutionaryBreakthroughs
           </motion.div>
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
-            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6"
+          <motion.h2initial = {{ opacity:  0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ delay: 0.3duration: 0.6 }}
+            className = "text-5xlmd: text-6xlfont-boldbg-gradient-to-rfrom-whitevia-purple-200to-blue-200bg-clip-texttext-transparentmb-6"
           >
-            AI Revolution 2026
+            AIRevolution2026
           </motion.h2>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+          <motion.pinitial={{ opacity: 0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ delay: 0.4duration: 0.6 }}
+            className = "text-xltext-gray-300max-w-4xlmx-autoleading-relaxed"
           >
-            Witness the most profound technological breakthroughs in human history. 
-            From synthetic consciousness to quantum edge computing, these innovations 
-            are reshaping the future of enterprise AI and human-computer interaction.
+            Witnessthemost profoundtechnologicalbreakthroughs inhumanhistory. 
+            Fromsyntheticconsciousness toquantumedge computingtheseinnovationsare reshapingthefuture ofenterpriseAI andhuman-computerinteraction.
           </motion.p>
         </div>
-        {/* Breakthroughs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {breakthroughs.map((breakthrough, index) => (
-            <motion.div
-              key={breakthrough.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
-              className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}
+        {/* BreakthroughsGrid */}
+        <divclassName = "gridgrid-cols-1md: grid-cols-2gap-8mb-12">
+          { breakthroughs.map((breakthroughindex) = > (
+            <motion.divkey = { breakthrough.title  }initial = {{ opacity:  0y: 30 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ delay: 0.5 + index * 0.1duration: 0.6 }}
+              className = { `${breakthrough.bgColor }backdrop-blur-smrounded-2xlp-6borderborder-white/10hover: border-white/20transition-allduration-300grouphover:transformhover:scale-105`}
             >
-              <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <breakthrough.icon className="w-6 h-6 text-white" />
+              <divclassName = "flexitems-startspace-x-4" > <divclassName={`p-3rounded-xlbg-gradient-to-r ${breakthrough.color}`}>
+                  <breakthrough.iconclassName="w-6 h-6text-white" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
+                <divclassName="flex-1">
+                  <h3className="text-xlfont-boldtext-whitemb-2group-hover: text-purple-300transition-colors">
                     {breakthrough.title}
                   </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
+                  <pclassName = "text-gray-300mb-4leading-relaxed">
                     {breakthrough.description}
                   </p>
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full">
-                    <span className="text-sm font-semibold text-purple-300">
+                  <divclassName="inline-flexitems-centerpx-4py-2bg-gradient-to-rfrom-purple-500/20to-blue-500/20rounded-full">
+                    <spanclassName="text-smfont-semiboldtext-purple-300">
                       {breakthrough.stats}
                     </span>
                   </div>
@@ -108,73 +99,69 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        {/* Key Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.6 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12"
+        {/* KeyStats */}
+        <motion.divinitial = {{ opacity:  0y: 20 }}
+          animate = {{ opacity:  1y:  0 }}
+          transition = {{ delay: 0.9duration: 0.6 }}
+          className = "gridgrid-cols-2md: grid-cols-4gap-6mb-12"
         >
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-centerp-6bg-white/5backdrop-blur-smrounded-xlborderborder-white/10">
+            <divclassName="text-4xlfont-boldbg-gradient-to-rfrom-purple-400to-pink-400bg-clip-texttext-transparentmb-2">
               99.7%
             </div>
-            <div className="text-sm text-gray-300">Operational Efficiency</div>
+            <divclassName="text-smtext-gray-300">OperationalEfficiency</div>
           </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-centerp-6bg-white/5backdrop-blur-smrounded-xlborderborder-white/10">
+            <divclassName="text-4xlfont-boldbg-gradient-to-rfrom-blue-400to-cyan-400bg-clip-texttext-transparentmb-2">
               200x
             </div>
-            <div className="text-sm text-gray-300">Speed Improvement</div>
+            <divclassName="text-smtext-gray-300">SpeedImprovement</div>
           </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-centerp-6bg-white/5backdrop-blur-smrounded-xlborderborder-white/10">
+            <divclassName="text-4xlfont-boldbg-gradient-to-rfrom-green-400to-emerald-400bg-clip-texttext-transparentmb-2">
               $500B
             </div>
-            <div className="text-sm text-gray-300">Enterprise Value</div>
+            <divclassName="text-smtext-gray-300">EnterpriseValue</div>
           </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-centerp-6bg-white/5backdrop-blur-smrounded-xlborderborder-white/10">
+            <divclassName="text-4xlfont-boldbg-gradient-to-rfrom-orange-400to-red-400bg-clip-texttext-transparentmb-2">
               95%
             </div>
-            <div className="text-sm text-gray-300">Automation Rate</div>
+            <divclassName="text-smtext-gray-300">AutomationRate</div>
           </div>
         </motion.div>
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0, duration: 0.6 }}
-          className="text-center"
+        <motion.divinitial = {{ opacity:  0y: 20 }}
+          animate = {{ opacity:  1y:  0 }}
+          transition = {{ delay: 1.0duration: 0.6 }}
+          className = "text-center"
         >
-          <div className="space-y-4">
-            <p className="text-lg text-gray-300 mb-6">
-              Ready to transform your enterprise with revolutionary AI?
+          <divclassName="space-y-4">
+            <pclassName="text-lgtext-gray-300mb-6">
+              Readytotransform yourenterprisewith revolutionaryAI?
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/blog"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            <divclassName="flexflex-colsm: flex-rowgap-4justify-center">
+              <ahref="/blog"
+                className="inline-flexitems-centerpx-8py-4bg-gradient-to-rfrom-purple-500to-blue-500hover:from-purple-600hover:to-blue-600text-whitefont-semiboldrounded-xltransition-allduration-300transformhover:scale-105shadow-lghover:shadow-xl"
               >
-                Explore All Content
-                <ArrowRight className="ml-2 w-5 h-5" />
+                ExploreAllContent
+                <ArrowRight,className="ml-2 w-5 h-5" />
               </a>
-              <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
+              <ahref="/services"
+                className="inline-flexitems-centerpx-8py-4bg-white/10hover:bg-white/20backdrop-blur-smborderborder-white/20hover:border-white/30text-whitefont-semiboldrounded-xltransition-allduration-300"
               >
-                View Services
+                ViewServices
               </a>
             </div>
           </div>
         </motion.div>
       </div>
-      {/* Floating Particles */}
-      <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse"></div>
-      <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000"></div>
-      <div className="absolute bottom-20 left-32 w-3 h-3 bg-green-400/30 rounded-full animate-pulse delay-2000"></div>
-      <div className="absolute bottom-40 right-20 w-5 h-5 bg-orange-400/30 rounded-full animate-pulse delay-500"></div>
+      {/* FloatingParticles */}
+      <divclassName = "absolutetop-20left-20w-4 h-4bg-purple-400/30rounded-fullanimate-pulse" />
+      <divclassName="absolutetop-40right-32w-6 h-6bg-blue-400/30rounded-fullanimate-pulsedelay-1000" />
+      <divclassName="absolutebottom-20left-32w-3 h-3bg-green-400/30rounded-fullanimate-pulsedelay-2000" />
+      <divclassName="absolutebottom-40right-20w-5 h-5bg-orange-400/30rounded-fullanimate-pulsedelay-500" />
     </motion.div>
   );
 };
-export default January2026RevolutionaryBreakthroughsBanner;
+exportdefaultJanuary2026RevolutionaryBreakthroughsBanner;

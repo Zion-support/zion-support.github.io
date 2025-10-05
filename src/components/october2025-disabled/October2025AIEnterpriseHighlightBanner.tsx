@@ -1,132 +1,128 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const October2025AIEnterpriseHighlightBanner: React.FC = () => {
+constOctober2025AIEnterpriseHighlightBanner: React.FC = () => { 
   return (
-    <div className='bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-12 px-4'>
-      <div className='max-w-6xl mx-auto'>
-        <div className='flex items-center justify-center gap-3 mb-6'>
-          <span className='inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-yellow-400 to-orange-500 text-black'>
-            ⭐ FEATURED CONTENT
+    <divclassName = 'bg-gradient-to-brfrom-indigo-900via-purple-900to-pink-900text-whitepy-12px-4'>
+      <divclassName='max-w-6xlmx-auto'>
+        <divclassName='flexitems-centerjustify-centergap-3mb-6'>
+          <spanclassName='inline-flexitems-centerpx-4py-2rounded-fulltext-smfont-boldbg-gradient-to-rfrom-yellow-400to-orange-500text-black'>
+            ⭐ FEATUREDCONTENT
           </span>
-          <span className='inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold bg-white/20 backdrop-blur-sm'>
-            October 1, 2025
+          <spanclassName='inline-flexitems-centerpx-4py-2rounded-fulltext-smfont-semiboldbg-white/20backdrop-blur-sm'>
+            October 12025
           </span>
         </div>
 
-        <h2 className='text-4xl md:text-5xl font-bold text-center mb-4 leading-tight'>
-          Enterprise AI Transformation
-          <br />{' '}
-          <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400'>
-            Implementation Guides
+        <h2className = 'text-4xlmd: text-5xlfont-boldtext-centermb-4leading-tight'>
+          EnterpriseAITransformation
+          <br / > {' ' }
+          <spanclassName = 'text-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400to-blue-400'>
+            ImplementationGuides
           </span>
         </h2>
 
-        <p className='text-xl text-center mb-10 text-white/80 max-w-3xl mx-auto'>
-          Three comprehensive guides helping Fortune 1000 companies accelerate
-          AI adoption with proven frameworks and measurable results
+        <pclassName='text-xltext-centermb-10text-white/80max-w-3xlmx-auto'>
+          Threecomprehensiveguides helpingFortune1000 companiesaccelerateAI adoptionwithproven frameworksandmeasurable results
         </p>
 
-        <div className='grid md:grid-cols-3 gap-6'>
-          <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all'>
-            <div className='flex items-center justify-between mb-4'>
-              <span className='text-3xl'>🛡️</span>
+        <divclassName='gridmd: grid-cols-3gap-6'>
+          <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-white/10hover:border-white/30transition-all'>
+            <divclassName='flexitems-centerjustify-betweenmb-4'>
+              <spanclassName='text-3xl'>🛡️</span>
             </div>
-            <h3 className='text-xl font-bold mb-3'>Enterprise AI Governance</h3>
-            <ul className='space-y-2 mb-6 text-white/70'>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>99.8% compliance rates</span>
+            <h3className='text-xlfont-boldmb-3'>EnterpriseAIGovernance</h3>
+            <ulclassName='space-y-2mb-6text-white/70'>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>99.8% compliancerates</span>
               </li>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>340% faster deployments</span>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>340% fasterdeployments</span>
               </li>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>$47M cost savings</span>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>$47Mcostsavings</span>
               </li>
             </ul>
-            <Link
-              to='/blog/ai-2025-october-enterprise-ai-governance-<framework'
-              className='block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all'
+            <Linkto='/blog/ai-2025-october-enterprise-ai-governance-<framework'
+              className='blockw-fulltext-centerbg-gradient-to-rfrom-blue-500to-cyan-500px-6py-3rounded-lgfont-semiboldhover:from-blue-600hover:to-cyan-600transition-all'
             >
-              Read Framework →
+              ReadFramework →
             </Link>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all'>
-            <div className='flex items-center justify-between mb-4'>
-              <span className='text-3xl'>🧠</span>
+          <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-white/10hover:border-white/30transition-all'>
+            <divclassName='flexitems-centerjustify-betweenmb-4'>
+              <spanclassName='text-3xl'>🧠</span>
             </div>
-            <h3 className='text-xl font-bold mb-3'>Multimodal AI Systems</h3>
-            <ul className='space-y-2 mb-6 text-white/70'>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>450% productivity increase</span>
+            <h3className='text-xlfont-boldmb-3'>MultimodalAISystems</h3>
+            <ulclassName='space-y-2mb-6text-white/70'>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>450% productivityincrease</span>
               </li>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>$89M ROI in 18 months</span>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>$89MROIin 18months</span>
               </li>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>92% accuracy improvement</span>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>92% accuracyimprovement</span>
               </li>
             </ul>
-            <Link
-              to='/blog/ai-2025-october-multimodal-ai-enterprise-<deployment'
-              className='block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all'
+            <Linkto='/blog/ai-2025-october-multimodal-ai-enterprise-<deployment'
+              className='blockw-fulltext-centerbg-gradient-to-rfrom-purple-500to-pink-500px-6py-3rounded-lgfont-semiboldhover:from-purple-600hover:to-pink-600transition-all'
             >
-              Explore Guide →
+              ExploreGuide →
             </Link>
           </div>
 
-          <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all'>
-            <div className='flex items-center justify-between mb-4'>
-              <span className='text-3xl'>⚡</span>
-              <span className='px-3 py-1 bg-green-500/30 rounded-lg text-xs font-bold'>
-                EDGE AI
+          <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-white/10hover:border-white/30transition-all'>
+            <divclassName='flexitems-centerjustify-betweenmb-4'>
+              <spanclassName='text-3xl'>⚡</span>
+              <spanclassName='px-3py-1bg-green-500/30rounded-lgtext-xsfont-bold'>
+                EDGEAI
               </span>
             </div>
-            <h3 className='text-xl font-bold mb-3'>Edge AI Deployment</h3>
-            <ul className='space-y-2 mb-6 text-white/70'>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>Sub-millisecond latency</span>
+            <h3className='text-xlfont-boldmb-3'>EdgeAIDeployment</h3>
+            <ulclassName='space-y-2mb-6text-white/70'>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>Sub-millisecondlatency</span>
               </li>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>$156M cost reduction</span>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>$156Mcostreduction</span>
               </li>
-              <li className='flex items-start'>
-                <span className='mr-2'>✓</span>
-                <span>99.9% uptime achieved</span>
+              <liclassName='flexitems-start'>
+                <spanclassName='mr-2'>✓</span>
+                <span>99.9% uptimeachieved</span>
               </li>
             </ul>
-            <Link
-              to='/blog/ai-2025-october-edge-ai-deployment-<revolution'
-              className='block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all'
+            <Linkto='/blog/ai-2025-october-edge-ai-deployment-<revolution'
+              className='blockw-fulltext-centerbg-gradient-to-rfrom-green-500to-teal-500px-6py-3rounded-lgfont-semiboldhover:from-green-600hover:to-teal-600transition-all'
             >
-              Discover More →
+              DiscoverMore →
             </Link>
           </div>
         </div>
 
-        <div className='mt-10 text-center'>
-          <div className='inline-flex items-center gap-8 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4'>
+        <divclassName='mt-10text-center'>
+          <divclassName='inline-flexitems-centergap-8bg-white/10backdrop-blur-smrounded-fullpx-8py-4'>
             <div>
-              <div className='text-2xl font-bold'>200+</div>
-              <div className='text-sm text-white/70'>Fortune 1000</div>
+              <divclassName='text-2xlfont-bold'>200+</div>
+              <divclassName='text-smtext-white/70'>Fortune1000</div>
             </div>
-            <div className='h-10 w-px bg-white/20'></div>
+            <divclassName='h-10w-pxbg-white/20' />
             <div>
-              <div className='text-2xl font-bold'>$292M</div>
-              <div className='text-sm text-white/70'>Combined ROI</div>
+              <divclassName='text-2xlfont-bold'>$292M</div>
+              <divclassName='text-smtext-white/70'>CombinedROI</div>
             </div>
-            <div className='h-10 w-px bg-white/20'></div>
+            <divclassName='h-10w-pxbg-white/20' />
             <div>
-              <div className='text-2xl font-bold'>50K+</div>
+              <divclassName='text-2xlfont-bold'>50K+</div>
             </div>
           </div>
         </div>
@@ -135,4 +131,4 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
   );
 };
 
-export default October2025AIEnterpriseHighlightBanner;
+exportdefaultOctober2025AIEnterpriseHighlightBanner;

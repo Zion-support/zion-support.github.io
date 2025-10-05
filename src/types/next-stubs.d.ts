@@ -1,20 +1,19 @@
-// Next.js stubs for compatibility
-declare module 'next/link' {
+// Next.jsstubsfor compatibilitydeclaremodule 'next/link' {
   import { ComponentType } from 'react';
-  interface LinkProps {
+  interfaceLinkProps { 
     href: string;
     children: React.ReactNode;
-    className?: string;
-  }
-  const Link: ComponentType<LinkProps>;
-  export default Link;
+    className ?  : string;
+   }
+  constLink: ComponentType<LinkProps>;
+  exportdefaultLink;
 }
 
-declare module 'next/head' {
+declaremodule 'next/head' {
   import { ComponentType } from 'react';
-  interface HeadProps {
+  interfaceHeadProps {
     children: React.ReactNode;
   }
-  const Head: ComponentType<HeadProps>;
-  export default Head;
+  constHead: ComponentType<HeadProps>;
+  exportdefaultHead;
 }

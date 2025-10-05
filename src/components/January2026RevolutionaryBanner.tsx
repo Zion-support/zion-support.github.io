@@ -1,213 +1,201 @@
 import React from 'react';
 import {
-  ArrowLeft,
+  ArrowLeft
   ArrowRight,
-  Award,
+  Award
   Brain,
-  Calendar,
+  Calendar
   CheckCircle,
-  Clock,
-  DollarSign,
-  Globe,
-  Rocket,
-  Satellite,
-  Share2,
-  Bookmark,
-  Tag,
-  Target,
-  TrendingUp,
-  Users,
-  User,
-  Zap,
-  BarChart3,
-  BookOpen,
+  Clock
+  DollarSign
+  Globe
+  Rocket
+  Satellite
+  Share2
+  Bookmark
+  Tag
+  Target
+  TrendingUp
+  Users
+  User
+  Zap
+  BarChart3
+  BookOpen
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
-const January2026RevolutionaryBanner: React.FC = () => {
+constJanuary2026RevolutionaryBanner: React.FC = () => { 
   return (
-    <div className='bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-6 shadow-2xl border-b-4 border-purple-500 animate-gradient-x'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-        <div className='text-center mb-6'>
-          <div className='inline-flex items-center gap-3 mb-4'>
-            <Sparkles className='w-6 h-6 text-yellow-400 animate-pulse' />
-            <span className='text-xl font-bold uppercase tracking-wider bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent'>
-              🚀 REVOLUTIONARY BREAKTHROUGH - JANUARY 2026
+    <divclassName = 'bg-gradient-to-rfrom-purple-900via-blue-900to-indigo-900text-whitepy-6shadow-2xlborder-b-4border-purple-500animate-gradient-x'>
+      <divclassName='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+        <divclassName='text-centermb-6'>
+          <divclassName='inline-flexitems-centergap-3mb-4'>
+            <SparklesclassName='w-6 h-6text-yellow-400animate-pulse' />
+            <spanclassName='text-xlfont-bolduppercasetracking-widerbg-gradient-to-rfrom-yellow-400to-orange-400bg-clip-texttext-transparent'>
+              🚀 REVOLUTIONARYBREAKTHROUGH - JANUARY2026
             </span>
-            <Sparkles className='w-6 h-6 text-yellow-400 animate-pulse' />
+            <SparklesclassName='w-6 h-6text-yellow-400animate-pulse' />
           </div>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent'>
-            Three Game-Changing AI Technologies That Will Transform Your
-            Business
+          <h2className='text-3xlmd:text-4xlfont-boldmb-4bg-gradient-to-rfrom-whitevia-blue-200to-purple-200bg-clip-texttext-transparent'>
+            ThreeGame-ChangingAITechnologies ThatWillTransform YourBusiness
           </h2>
-          <p className='text-lg text-blue-100 max-w-4xl mx-auto mb-6'>
-            Introducing the most significant AI breakthroughs since the
-            invention of artificial intelligence. These revolutionary
-            technologies are already creating{' '}
-            <span className='font-bold text-yellow-300'>
-              $2.8B+ in enterprise value
+          <pclassName='text-lgtext-blue-100max-w-4xlmx-automb-6' > Introducingthemost significantAIbreakthroughs sincetheinvention ofartificialintelligence. Theserevolutionarytechnologies arealreadycreating{' ' }
+            <spanclassName = 'font-boldtext-yellow-300'>
+              $2.8B+ inenterprisevalue
             </span>{' '}
-            and transforming how businesses operate at the highest level.
+            andtransforminghow businessesoperateat thehighestlevel.
           </p>
         </div>
-        <div className='grid md:grid-cols-3 gap-6 mb-8'>
+        <divclassName='gridmd: grid-cols-3gap-6 mb-8'>
           {' '}
-          {/* Quantum Edge Fusion */}
-          <div className='bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='bg-blue-500/20 p-2 rounded-lg border border-blue-400/30'>
-                <Zap className='w-6 h-6 text-blue-400' />
+          {/* QuantumEdgeFusion */}
+          <divclassName = 'bg-gradient-to-brfrom-blue-800/50to-purple-800/50backdrop-blur-smrounded-xlp-6borderborder-blue-400/30hover: border-blue-400/60transition-allduration-300hover:scale-105hover:shadow-xl'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='bg-blue-500/20p-2rounded-lgborderborder-blue-400/30'>
+                <ZapclassName='w-6 h-6text-blue-400' />
               </div>
               <div>
-                <h3 className='text-lg font-bold text-white'>
-                  Quantum Edge Fusion
+                <h3className='text-lgfont-boldtext-white'>
+                  QuantumEdgeFusion
                 </h3>
-                <div className='text-sm text-blue-300'>
-                  1000x Speed Improvement
+                <divclassName='text-smtext-blue-300'>
+                  1000xSpeedImprovement
                 </div>
               </div>
             </div>
-            <p className='text-blue-100 text-sm mb-4'>
-              Revolutionary quantum-edge convergence delivering sub-millisecond
-              processing with 99.99% reliability and 90% energy reduction.
+            <pclassName='text-blue-100text-smmb-4'>
+              Revolutionaryquantum-edgeconvergencedelivering sub-millisecondprocessingwith 99.99% reliabilityand90% energyreduction.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-xs text-blue-200'>
-                <TrendingUp className='w-3 h-3 text-green-400' />
-                <span>$2.8B Revenue Impact (Fortune 500 Retail)</span>
+            <divclassName='space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-xstext-blue-200'>
+                <TrendingUpclassName='w-3 h-3text-green-400' />
+                <span>$2.8BRevenueImpact (Fortune500Retail)</span>
               </div>
-              <div className='flex items-center gap-2 text-xs text-blue-200'>
-                <Shield className='w-3 h-3 text-green-400' />
-                <span>99.97% Fraud Detection (Financial Services)</span>
+              <divclassName = 'flexitems-centergap-2text-xstext-blue-200'>
+                <ShieldclassName='w-3 h-3text-green-400' />
+                <span>99.97% FraudDetection (FinancialServices)</span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2026-january-quantum-edge-fusion'
-              className='inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105'
+            <Linkto = '/blog/ai-2026-january-quantum-edge-fusion'
+              className='inline-flexitems-centergap-2bg-blue-600hover:bg-blue-700text-whitepx-4py-2rounded-lgtext-smfont-semiboldtransition-allduration-300hover:scale-105'
             >
-              Learn More <ArrowRight className='w-4 h-4' />
+              LearnMore <ArrowRight,className='w-4 h-4' />
             </Link>
           </div>
-          {/* Synthetic Consciousness */}
-          <div className='bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='bg-purple-500/20 p-2 rounded-lg border border-purple-400/30'>
-                <Brain className='w-6 h-6 text-purple-400' />
+          {/* SyntheticConsciousness */}
+          <divclassName = 'bg-gradient-to-brfrom-purple-800/50to-pink-800/50backdrop-blur-smrounded-xlp-6borderborder-purple-400/30hover: border-purple-400/60transition-allduration-300hover:scale-105hover:shadow-xl'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='bg-purple-500/20p-2rounded-lgborderborder-purple-400/30'>
+                <Brain,className='w-6 h-6text-purple-400' />
               </div>
               <div>
-                <h3 className='text-lg font-bold text-white'>
-                  Synthetic Consciousness
+                <h3className='text-lgfont-boldtext-white'>
+                  SyntheticConsciousness
                 </h3>
-                <div className='text-sm text-purple-300'>
-                  98.7% Consciousness Accuracy
+                <divclassName='text-smtext-purple-300'>
+                  98.7% ConsciousnessAccuracy
                 </div>
               </div>
             </div>
-            <p className='text-purple-100 text-sm mb-4'>
-              Genuine artificial consciousness with emotional intelligence,
-              creative autonomy, and moral reasoning capabilities.
+            <pclassName='text-purple-100text-smmb-4'>
+              Genuineartificialconsciousness withemotionalintelligence
+              creativeautonomyandmoralreasoning capabilities.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-xs text-purple-200'>
-                <TrendingUp className='w-3 h-3 text-green-400' />
-                <span>$340M Value Creation (Healthcare)</span>
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-xstext-purple-200'>
+                <TrendingUpclassName='w-3 h-3text-green-400' />
+                <span>$340MValueCreation (Healthcare)</span>
               </div>
-              <div className='flex items-center gap-2 text-xs text-purple-200'>
-                <Star className='w-3 h-3 text-green-400' />
-                <span>89% Patient Satisfaction (Emotional AI)</span>
+              <divclassName = 'flexitems-centergap-2text-xstext-purple-200'>
+                <StarclassName='w-3 h-3text-green-400' />
+                <span>89% PatientSatisfaction (EmotionalAI)</span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2026-january-synthetic-consciousness-breakthrough'
-              className='inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105'
+            <Linkto = '/blog/ai-2026-january-synthetic-consciousness-breakthrough'
+              className='inline-flexitems-centergap-2bg-purple-600hover: bg-purple-700text-whitepx-4py-2rounded-lgtext-smfont-semiboldtransition-allduration-300hover:scale-105'
             >
-              Explore Now <ArrowRight className='w-4 h-4' />
+              ExploreNow <ArrowRight,className='w-4 h-4' />
             </Link>
           </div>
-          {/* Neuromorphic Processing */}
-          <div className='bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl'>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='bg-green-500/20 p-2 rounded-lg border border-green-400/30'>
-                <Cpu className='w-6 h-6 text-green-400' />
+          {/* NeuromorphicProcessing */}
+          <divclassName = 'bg-gradient-to-brfrom-green-800/50to-teal-800/50backdrop-blur-smrounded-xlp-6borderborder-green-400/30hover: border-green-400/60transition-allduration-300hover:scale-105hover:shadow-xl'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='bg-green-500/20p-2rounded-lgborderborder-green-400/30'>
+                <CpuclassName='w-6 h-6text-green-400' />
               </div>
               <div>
-                <h3 className='text-lg font-bold text-white'>
-                  Neuromorphic Processing
+                <h3className='text-lgfont-boldtext-white'>
+                  NeuromorphicProcessing
                 </h3>
-                <div className='text-sm text-green-300'>
-                  1000x Energy Efficiency
+                <divclassName='text-smtext-green-300'>
+                  1000xEnergyEfficiency
                 </div>
               </div>
             </div>
-            <p className='text-green-100 text-sm mb-4'>
-              Brain-inspired AI architecture with real-time learning, pattern
-              recognition, and autonomous adaptation.
+            <pclassName='text-green-100text-smmb-4'>
+              Brain,-inspiredAIarchitecture withreal-timelearningpatternrecognitionandautonomousadaptation.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-xs text-green-200'>
-                <TrendingUp className='w-3 h-3 text-green-400' />
-                <span>$2.1B Value Creation (Automotive)</span>
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-xstext-green-200'>
+                <TrendingUpclassName='w-3 h-3text-green-400' />
+                <span>$2.1BValueCreation (Automotive)</span>
               </div>
-              <div className='flex items-center gap-2 text-xs text-green-200'>
-                <Shield className='w-3 h-3 text-green-400' />
-                <span>78% Accident Reduction (Autonomous Vehicles)</span>
+              <divclassName = 'flexitems-centergap-2text-xstext-green-200'>
+                <ShieldclassName='w-3 h-3text-green-400' />
+                <span>78% AccidentReduction (AutonomousVehicles)</span>
               </div>
             </div>
-            <Link
-              to='/blog/ai-2026-january-neuromorphic-processing-revolution'
-              className='inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105'
+            <Linkto = '/blog/ai-2026-january-neuromorphic-processing-revolution'
+              className='inline-flexitems-centergap-2bg-green-600hover: bg-green-700text-whitepx-4py-2rounded-lgtext-smfont-semiboldtransition-allduration-300hover:scale-105'
             >
-              Discover More <ArrowRight className='w-4 h-4' />
+              DiscoverMore <ArrowRight,className='w-4 h-4' />
             </Link>
           </div>
         </div>
-        <div className='text-center'>
-          <div className='bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-400/40 rounded-xl p-6 mb-6'>
-            <div className='flex items-center justify-center gap-3 mb-3'>
-              <Star className='w-6 h-6 text-yellow-400 animate-pulse' />
-              <span className='text-lg font-bold text-yellow-300'>
-                LIMITED TIME: Early Access Program
+        <divclassName='text-center'>
+          <divclassName='bg-gradient-to-rfrom-yellow-500/20to-orange-500/20borderborder-yellow-400/40rounded-xlp-6mb-6'>
+            <divclassName='flexitems-centerjustify-centergap-3mb-3'>
+              <StarclassName='w-6 h-6text-yellow-400animate-pulse' />
+              <spanclassName='text-lgfont-boldtext-yellow-300'>
+                LIMITEDTIME: EarlyAccessProgram
               </span>
-              <Star className='w-6 h-6 text-yellow-400 animate-pulse' />
+              <StarclassName='w-6 h-6text-yellow-400animate-pulse' />
             </div>
-            <p className='text-white text-lg font-semibold mb-2'>
-              🎯 Get 40% OFF Implementation + FREE Strategic Consultation
+            <pclassName='text-whitetext-lgfont-semiboldmb-2'>
+              🎯 Get40% OFFImplementation + FREEStrategicConsultation
             </p>
-            <p className='text-yellow-100 text-sm'>
-              Valid until March 31, 2026 • First 50 companies only • No setup
-              fees
+            <pclassName='text-yellow-100text-sm'>
+              ValiduntilMarch 312026 • First50companies only • Nosetupfees
             </p>
           </div>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
-            <Link
-              to='/services'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl'
+          <divclassName = 'flexflex-colsm: flex-rowgap-4justify-centeritems-center'>
+            <Linkto='/services'
+              className='inline-flexitems-centergap-2bg-gradient-to-rfrom-purple-600to-blue-600hover:from-purple-700hover:to-blue-700text-whitepx-8py-3rounded-lgfont-boldtext-lgtransition-allduration-300hover:scale-105shadow-lghover:shadow-xl'
             >
-              <Sparkles className='w-5 h-5' />
-              Explore All Services
-              <ArrowRight className='w-5 h-5' />
+              <SparklesclassName='w-5 h-5' />
+              ExploreAllServices
+              <ArrowRight,className='w-5 h-5' />
             </Link>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-2 border-2 border-white text-white hover:bg-white hover:text-purple-900 px-8 py-3 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105'
+            <Linkto='/contact'
+              className='inline-flexitems-centergap-2border-2border-whitetext-whitehover:bg-whitehover:text-purple-900px-8py-3rounded-lgfont-boldtext-lgtransition-allduration-300hover:scale-105'
             >
-              <Brain className='w-5 h-5' />
-              Schedule Consultation
+              <Brain,className='w-5 h-5' />
+              ScheduleConsultation
             </Link>
           </div>
-          <div className='mt-6 text-sm text-blue-200'>
-            <span className='font-bold'>
-              Trusted by 500+ companies worldwide
+          <divclassName='mt-6text-smtext-blue-200'>
+            <spanclassName='font-bold'>
+              Trustedby500+ companiesworldwide
             </span>{' '}
             •
-            <span className='font-bold text-yellow-300'>
+            <spanclassName = 'font-boldtext-yellow-300'>
               {' '}
-              $15B+ in value created
+              $15B+ invaluecreated
             </span>{' '}
-            •<span className='font-bold'> 99.9% customer satisfaction</span>
+            •<spanclassName='font-bold'> 99.9% customersatisfaction</span>
           </div>
         </div>
       </div>
     </div>
   );
 };
-export default January2026RevolutionaryBanner;
+exportdefaultJanuary2026RevolutionaryBanner;

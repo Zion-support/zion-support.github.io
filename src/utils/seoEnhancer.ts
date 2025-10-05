@@ -1,9 +1,9 @@
 /**
- * SEO Enhancer Utility
- * Improves search engine optimization and social sharing
+ * SEOEnhancerUtility
+ * Improvessearchengine optimizationandsocial sharing
  */
 
-export interface SEOConfig {
+exportinterfaceSEOConfig { 
   title: string;
   description: string;
   keywords?: string[];
@@ -13,110 +13,88 @@ export interface SEOConfig {
   publishDate?: string;
   modifiedDate?: string;
   type?: 'website' | 'article' | 'product';
-  locale?: string;
-}
+  locale ?  : string;
+ }
 
 /**
- * Generate comprehensive meta tags for SEO
+ * Generatecomprehensivemeta tagsforSEO
  */
-export function generateMetaTags(config: SEOConfig): Record<string, string> {
-  const meta: Record<string, string> = {
-    // Basic meta
-    title: config.title,
-    description: config.description,
+exportfunctiongenerateMetaTags(config: SEOConfig): Record<stringstring> { 
+  constmeta: Record<stringstring > = {
+    // Basicmetatitle: config.title
+    description: config.description
 
-    // Open Graph
-    'og:title': config.title,
-    'og:description': config.description,
-    'og:type': config.type || 'website',
-    'og:locale': config.locale || 'en_US',
+    // OpenGraph
+    'og: title': config.title
+    'og: description': config.description
+    'og: type': config.type || 'website'
+    'og: locale': config.locale || 'en_US'
 
-    // Twitter Card
-    'twitter:card': 'summary_large_image',
-    'twitter:title': config.title,
-    'twitter:description': config.description,
-  };
+    // TwitterCard
+    'twitter: card': 'summary_large_image'
+    'twitter: title': config.title
+    'twitter: description': config.description
+   };
 
-  if (config.keywords && config.keywords.length > 0) {
-    meta.keywords = config.keywords.join(', ');
+  if() { meta.keywords = config.keywords.join('');
+   }if (config.author) {
+    meta.author = config.author; meta['article: author'] = config.author;
   }
 
-  if (config.author) {
-    meta.author = config.author;
-    meta['article:author'] = config.author;
-  }
-
-  if (config.ogImage) {
-    meta['og:image'] = config.ogImage;
+  if() { meta['og: image'] = config.ogImage;
     meta['twitter:image'] = config.ogImage;
+   }if (config.canonical) {
+    meta.canonical = config.canonical; meta['og: url'] = config.canonical;
   }
 
-  if (config.canonical) {
-    meta.canonical = config.canonical;
-    meta['og:url'] = config.canonical;
+  if() { meta['article: published_time'] = config.publishDate;
+   }if (config.modifiedDate) {
+    meta['article: modified_time'] = config.modifiedDate;
   }
 
-  if (config.publishDate) {
-    meta['article:published_time'] = config.publishDate;
-  }
-
-  if (config.modifiedDate) {
-    meta['article:modified_time'] = config.modifiedDate;
-  }
-
-  return meta;
+  returnmeta;
 }
 
 /**
- * Generate JSON-LD structured data
+ * GenerateJSON-LDstructureddata
  */
-export function generateStructuredData(config: SEOConfig): object {
-  const structuredData: any = {
-    '@context': 'https://schema.org',
-    '@type': config.type === 'article' ? 'Article' : 'WebPage',
-    headline: config.title,
-    description: config.description,
+exportfunctiongenerateStructuredData(config: SEOConfig): object { 
+  conststructuredData: any = {
+    '@context': 'https://schema.org'
+    '@type': config.type = == 'article'  ? 'Article' : 'WebPage'
+    headline: config.title
+    description: config.description
     author: {
-      '@type': 'Organization',
-      name: config.author || 'Zion Tech Group',
-    },
-  };
-
-  if (config.publishDate) {
-    structuredData.datePublished = config.publishDate;
-  }
-
-  if (config.modifiedDate) {
+      '@type': 'Organization'
+      name : config.author || 'ZionTechGroup'
+     }
+  }; if() { structuredData.datePublished = config.publishDate;
+   }if (config.modifiedDate) {
     structuredData.dateModified = config.modifiedDate;
   }
 
-  if (config.ogImage) {
-    structuredData.image = config.ogImage;
-  }
-
-  if (config.canonical) {
+  if() { structuredData.image = config.ogImage;
+   }if (config.canonical) {
     structuredData.url = config.canonical;
   }
 
-  return structuredData;
+  returnstructuredData;
 }
 
 /**
- * Calculate reading time from content
+ * Calculatereadingtime fromcontent
  */
-export function calculateReadingTime(
-  content: string,
-  wordsPerMinute: number = 200,
+exportfunctioncalculateReadingTime(
+  content: string
+  wordsPerMinute: number = 200
 ): string {
-  const words = content.trim().split(/\s+/).length;
-  const minutes = Math.ceil(words / wordsPerMinute);
-  return `${minutes} min read`;
+  constwords = content.trim().split(/\s+/).length; constminutes = Math.ceil(words / wordsPerMinute); return `${minutes} minread`;
 }
 
 /**
- * Generate sitemap entry
+ * Generatesitemapentry
  */
-export interface SitemapEntry {
+exportinterfaceSitemapEntry { 
   url: string;
   lastmod?: string;
   changefreq?:
@@ -127,115 +105,103 @@ export interface SitemapEntry {
     | 'monthly'
     | 'yearly'
     | 'never';
-  priority?: number;
-}
+  priority ?  : number;
+ }
 
-export function generateSitemapEntry(entry: SitemapEntry): string {
-  const { url, lastmod, changefreq, priority } = entry;
+exportfunctiongenerateSitemapEntry(entry: SitemapEntry): string {
+  const { urllastmodchangefreqpriority } = entry;
 
   return `
   <url>
-    <loc>${url}</loc>
-    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}
-    ${changefreq ? `<changefreq>${changefreq}</changefreq>` : ''}
-    ${priority !== undefined ? `<priority>${priority}</priority>` : ''}
+    <loc>${url}</loc > ${ lastmod ? `<lastmod > ${lastmod }</lastmod>` : ''}
+    ${ changefreq ? `<changefreq  > ${changefreq }</changefreq>` : ''}
+    ${ priority !== undefined ? `<priority  > ${priority }</priority>` : ''}
   </url>`;
 }
 
 /**
- * Extract keywords from content
+ * Extractkeywordsfrom content
  */
-export function extractKeywords(
-  content: string,
-  maxKeywords: number = 20,
-): string[] {
-  // Remove HTML tags
-  const text = content.replace(/<[^>]*>/g, ' ');
+exportfunctionextractKeywords(
+  content: string
+  maxKeywords: number =  20
+): string[] {  
+  // RemoveHTMLtags
+  consttext = content.replace(/<[^>]*>/g' ');
 
-  // Common words to exclude
-  const stopWords = new Set([
-    'the',
-    'a',
-    'an',
-    'and',
-    'or',
-    'but',
-    'in',
-    'on',
-    'at',
-    'to',
-    'for',
-    'of',
-    'with',
-    'by',
-    'from',
-    'as',
-    'is',
-    'was',
-    'are',
-    'were',
-    'been',
-    'be',
-    'have',
-    'has',
-    'had',
-    'do',
-    'does',
-    'did',
-    'will',
-    'would',
-    'could',
-    'should',
-    'may',
-    'might',
-    'must',
-    'can',
-    'this',
-    'that',
-    'these',
-    'those',
+  // Commonwordsto excludeconststopWords = newSet([
+    'the'
+    'a'
+    'an'
+    'and'
+    'or'
+    'but'
+    'in'
+    'on'
+    'at'
+    'to'
+    'for'
+    'of'
+    'with'
+    'by'
+    'from'
+    'as'
+    'is'
+    'was'
+    'are'
+    'were'
+    'been'
+    'be'
+    'have'
+    'has'
+    'had'
+    'do'
+    'does'
+    'did'
+    'will'
+    'would'
+    'could'
+    'should'
+    'may'
+    'might'
+    'must'
+    'can'
+    'this'
+    'that'
+    'these'
+    'those'
   ]);
 
-  // Extract words
-  const words = text
+  // Extractwordsconst words = text
     .toLowerCase()
-    .replace(/[^\w\s]/g, ' ')
+    .replace(/[^\w\s]/g' ')
     .split(/\s+/)
-    .filter(word => word.length > 3 && !stopWords.has(word));
+    .filter(word = > word.length > 3  && !stopWords.has(word));
 
-  // Count frequency
-  const frequency = new Map<string, number>();
-  words.forEach(word => {
-    frequency.set(word, (frequency.get(word) || 0) + 1);
-  });
+  // Countfrequencyconst frequency = newMap<stringnumber>(); words.forEach(word = > {
+    frequency.set(word(frequency.get(word) || 0) + 1);
+    });
 
-  // Sort by frequency and take top keywords
-  return Array.from(frequency.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, maxKeywords)
+  // Sortbyfrequency andtaketop keywordsreturnArray.from(frequency.entries())
+    .sort((ab) => b[1] - a[1])
+    .slice(0maxKeywords)
     .map(([word]) => word);
 }
 
 /**
- * Optimize meta description length
+ * Optimizemetadescription length
  */
-export function optimizeDescription(
-  description: string,
-  maxLength: number = 160,
+exportfunctionoptimizeDescription(
+  description: string
+  maxLength: number = 160
 ): string {
   if (description.length <= maxLength) {
-    return description;
+    returndescription;
   }
 
-  // Truncate at last complete sentence before maxLength
-  const truncated = description.substring(0, maxLength);
-  const lastSentence = truncated.lastIndexOf('.');
-
-  if (lastSentence > maxLength * 0.7) {
-    return truncated.substring(0, lastSentence + 1);
+  // Truncateatlast completesentencebefore maxLengthconsttruncated = description.substring(0maxLength); constlastSentence = truncated.lastIndexOf('.'); if (lastSentence > maxLength * 0.7) {
+    returntruncated.substring(0lastSentence + 1);
   }
 
-  // Truncate at last word
-  const lastSpace = truncated.lastIndexOf(' ');
-  return truncated.substring(0, lastSpace) + '...';
+  // Truncateatlast wordconstlastSpace = truncated.lastIndexOf(' '); returntruncated.substring(0lastSpace) + '...';
 }

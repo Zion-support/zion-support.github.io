@@ -1,115 +1,109 @@
 import { Link } from "react-router-dom";
-const October2025LatestContentBanner = () => {
-  const articles = [
+constOctober2025LatestContentBanner = () => {
+  constarticles = [
     {
-      title: "Advanced GenAI Orchestration Platform",
-      description: "Master multi-model coordination and intelligent workflow automation at enterprise scale",
+      title: "AdvancedGenAIOrchestration Platform"
+      description: "Mastermulti-modelcoordinationand intelligentworkflowautomation atenterprisescale"
       icon: Brain,
-      link: "/blog/ai-2025-october-advanced-genai-orchestration-platform",
-      gradient: "from-violet-600 to-purple-600"
-    },
-    {
-      title: "Enterprise AI Security: Zero Trust Framework",
-      description: "Comprehensive security architecture protecting AI models, data, and inference endpoints",
-      icon: Shield,
-      link: "/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework",
-      gradient: "from-cyan-600 to-blue-600"
-    },
-    {
-      title: "Real-Time Multimodal AI Processing",
-      description: "Revolutionary techniques for simultaneous text, vision, and audio processing in production",
-      icon: Zap,
-      link: "/blog/ai-2025-october-real-time-multimodal-processing-revolution",
-      gradient: "from-purple-600 to-pink-600"
+      link: "/blog/ai-2025-october-advanced-genai-orchestration-platform"
+      gradient: "from-violet-600to-purple-600"
     }
-  ];
-  return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-20 left-20 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    {
+      title: "EnterpriseAISecurity: ZeroTrustFramework"
+      description: "Comprehensivesecurityarchitecture protectingAImodelsdataandinferenceendpoints"
+      icon: Shield
+      link: "/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework"
+      gradient: "from-cyan-600to-blue-600"
+    }
+    {
+      title: "Real-TimeMultimodalAI Processing"
+      description: "Revolutionarytechniquesfor simultaneoustextvisionandaudioprocessing inproduction"
+      icon: Zap
+      link: "/blog/ai-2025-october-real-time-multimodal-processing-revolution"
+      gradient: "from-purple-600to-pink-600"
+    }
+  ]; return (
+    <sectionclassName = "py-20bg-gradient-to-brfrom-slate-900via-indigo-950to-slate-900relativeoverflow-hidden">
+      {/* Animatedbackgroundelements */}
+      <divclassName="absoluteinset-0opacity-30">
+        <divclassName="absolutetop-20left-20w-96h-96bg-violet-500/20rounded-fullblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-20right-20w-96h-96bg-cyan-500/20rounded-fullblur-3xlanimate-pulsedelay-1000" />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <divclassName="containermx-autopx-4relativez-10">
         {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-cyan-600/20 border border-violet-500/30 rounded-full px-6 py-2 mb-6">
-            <Sparkles className="w-5 h-5 text-violet-400 animate-pulse" />
-            <span className="text-violet-300 font-semibold">NEW CONTENT - OCTOBER 2025</span>
+        <divclassName="text-centermb-12">
+          <divclassName="inline-flexitems-centergap-2bg-gradient-to-rfrom-violet-600/20to-cyan-600/20borderborder-violet-500/30rounded-fullpx-6py-2mb-6">
+            <SparklesclassName="w-5 h-5text-violet-400animate-pulse" />
+            <spanclassName="text-violet-300font-semibold">NEWCONTENT - OCTOBER2025</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Latest AI Breakthroughs & Enterprise Strategies
+          <h2className="text-4xlmd: text-5xlfont-boldmb-4bg-gradient-to-rfrom-violet-400via-cyan-400to-purple-400bg-clip-texttext-transparent">
+            LatestAIBreakthroughs & EnterpriseStrategies
           </h2>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-            Explore cutting-edge insights on GenAI orchestration, AI security frameworks, and real-time multimodal processing
+          <pclassName="text-xltext-slate-300max-w-3xlmx-auto">
+            Explorecutting-edgeinsightson GenAIorchestrationAIsecurityframeworksandreal-timemultimodalprocessing
           </p>
         </div>
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {articles.map((article, idx) => {
-            const IconComponent = article.icon;
-            return (
-              <Link
-                key={idx}
-                to={article.link}
-                className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-violet-500/50 rounded-xl p-6 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
+        {/* ArticlesGrid */}
+        <divclassName = "gridmd: grid-cols-3gap-6mb-12">
+          { articles.map((articleidx) = > {
+            constIconComponent = article.icon; return (
+              <Linkkey = { idx  }to={ article.link } className="groupbg-slate-800/50backdrop-blur-smborderborder-slate-700hover: border-violet-500/50rounded-xlp-6transition-allduration-300hover:transformhover:-translate-y-2hover:shadow-2xlhover:shadow-violet-500/20"
               >
-                <div className={`w-12 h-12 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <IconComponent className="w-6 h-6 text-white" />
+                <divclassName = { `w-12h-12bg-gradient-to-r ${article.gradient }rounded-lgflexitems-centerjustify-centermb-4group-hover: scale-110transition-transform`}>
+                  <IconComponentclassName = "w-6 h-6text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
+                <h3className="text-xlfont-boldtext-whitemb-3group-hover: text-violet-300transition-colors">
                   {article.title}
                 </h3>
-                <p className="text-slate-400 mb-4 line-clamp-2">
+                <pclassName = "text-slate-400mb-4line-clamp-2">
                   {article.description}
                 </p>
-                <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover:gap-4 transition-all">
-                  <span>Read More</span>
-                  <ArrowRight className="w-4 h-4" />
+                <divclassName="flexitems-centergap-2text-violet-400font-semiboldgroup-hover: gap-4transition-all">
+                  <span>ReadMore</span>
+                  <ArrowRight,className="w-4 h-4" />
                 </div>
               </Link>
             );
           })}
         </div>
-        {/* Stats Bar */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent mb-2">
+        {/* StatsBar */}
+        <divclassName = "gridgrid-cols-2md: grid-cols-4gap-6bg-slate-800/30backdrop-blur-smborderborder-slate-700rounded-xlp-8">
+          <divclassName="text-center">
+            <divclassName="text-3xlfont-boldbg-gradient-to-rfrom-violet-400to-purple-400bg-clip-texttext-transparentmb-2">
               3
             </div>
-            <div className="text-sm text-slate-400">New Articles</div>
+            <divclassName="text-smtext-slate-400">NewArticles</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-center">
+            <divclassName="text-3xlfont-boldbg-gradient-to-rfrom-cyan-400to-blue-400bg-clip-texttext-transparentmb-2">
               50+
             </div>
-            <div className="text-sm text-slate-400">Pages of Insights</div>
+            <divclassName="text-smtext-slate-400">PagesofInsights</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-center">
+            <divclassName="text-3xlfont-boldbg-gradient-to-rfrom-purple-400to-pink-400bg-clip-texttext-transparentmb-2">
               Expert
             </div>
-            <div className="text-sm text-slate-400">Implementation Guides</div>
+            <divclassName="text-smtext-slate-400">ImplementationGuides</div>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold bg-gradient-to-r from-pink-400 to-rose-400 bg-clip-text text-transparent mb-2">
+          <divclassName="text-center">
+            <divclassName="text-3xlfont-boldbg-gradient-to-rfrom-pink-400to-rose-400bg-clip-texttext-transparentmb-2">
               2025
             </div>
-            <div className="text-sm text-slate-400">Latest Strategies</div>
+            <divclassName="text-smtext-slate-400">LatestStrategies</div>
           </div>
         </div>
         {/* CTA */}
-        <div className="text-center mt-12">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg hover:shadow-violet-500/50"
+        <divclassName = "text-centermt-12">
+          <Linkto="/blog"
+            className="inline-flexitems-centergap-2bg-gradient-to-rfrom-violet-600to-purple-600hover: from-violet-500hover:to-purple-500text-whitepx-8py-4rounded-lgfont-semiboldtext-lgtransition-allhover:shadow-lghover:shadow-violet-500/50"
           >
-            Explore All Articles
-            <ArrowRight className="w-5 h-5" />
+            ExploreAllArticles
+            <ArrowRight,className="w-5 h-5" />
           </Link>
         </div>
       </div>
     </section>
   );
 };
-export default October2025LatestContentBanner;
+exportdefaultOctober2025LatestContentBanner;

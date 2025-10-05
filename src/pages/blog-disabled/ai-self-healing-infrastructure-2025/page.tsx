@@ -2,36 +2,34 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function BlogPost(): React.JSX.Element {
+exportdefaultfunction BlogPost(): React.JSX.Element { 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+    <divclassName = "min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white">
       <Helmet>
-        <title>AI Self-Healing Infrastructure 2025 — 99.99% Uptime</title>
-        <meta 
-          name="description" 
+        <title>AISelf-HealingInfrastructure2025 — 99.99% Uptime</title>
+        <meta name="description" 
           
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>" />
+        <linkrel="canonical" href="https: //ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>" />
       </Helmet>
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          AI Self-Healing Infrastructure (2025)
+      <divclassName="containermx-autopx-6py-16">
+        <h1className="text-4xlmd:text-5xlfont-boldmb-4">
+          AISelf-HealingInfrastructure (2025)
         </h1>
-        <p className="text-zion-slate-light mb-8">"
-  Build autonomous, self-recovering platforms with KPI-linked canaries, budgeted actions, and rollback playbooks
-            that maintain 99.99% uptime while cutting MTTR by 95%.
+        <pclassName = "text-zion-slate-lightmb-8">"
+  Buildautonomousself-recoveringplatformswith KPI-linkedcanariesbudgetedactionsandrollbackplaybooks
+            thatmaintain99.99% uptimewhilecutting MTTRby95%.
           </p>
-        <div className="prose prose-invert max-w-3xl">
+        <divclassName = "proseprose-invertmax-w-3xl">
           <p>
-            This is a placeholder for the blog post content. The original content had syntax errors
-            that prevented proper parsing. Please update this content with the correct information.
+            Thisisa placeholderforthe blogpostcontent. Theoriginalcontent hadsyntaxerrors
+            thatpreventedproper parsing. Pleaseupdatethis contentwiththe correctinformation.
           </p>
         </div>
         
-        <div className="mt-8">
-          <Link to="/<blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+        <divclassName="mt-8">
+          <Linkto="/<blog" className="text-cyan-300hover: underline">← BacktoBlog</Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

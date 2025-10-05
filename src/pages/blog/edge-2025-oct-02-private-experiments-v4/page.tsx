@@ -1,38 +1,32 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function PrivateExperimentsV4(): React.JSX.Element {
+exportdefaultfunction PrivateExperimentsV4(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Edge 2025: Private Experiments v4</title>
-        <meta
-          name='description'
-          content='Scoped IDs, on-device metrics, and DP noise for compliant A/B testing worldwide.'
+        <title>Edge2025: PrivateExperimentsv4</title>
+        <meta name='description'
+          content='ScopedIDson-devicemetricsandDPnoise forcompliantA/Btestingworldwide.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/edge-2025-oct-02-private-experiments-v4'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2025-oct-02-private-experiments-v4'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Edge 2025: Private Experiments v4
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Edge2025: PrivateExperimentsv4
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Stand up privacy-first experiments with edge aggregation, signed
-          configs, and budgets.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Standupprivacy-firstexperimentswith edgeaggregationsignedconfigsandbudgets.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            Build consent-safe experimentation pipelines that run under 100ms.
-            Use scoped identifiers, on-device aggregation, and differential
-            privacy to protect users while keeping signals rich.
+            Buildconsent-safeexperimentationpipelines thatrununder 100ms.
+            Usescopedidentifierson-deviceaggregationanddifferentialprivacy toprotectusers whilekeepingsignals rich.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

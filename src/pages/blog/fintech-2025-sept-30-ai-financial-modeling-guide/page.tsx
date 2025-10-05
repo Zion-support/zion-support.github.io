@@ -2,42 +2,38 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Fintech 2025 Sept 30 Ai Financial Modeling Guide</title>
-        <meta
-          name='description'
-          content='Learn about fintech 2025 sept 30 ai financial modeling guide and how it can benefit your enterprise.'
+        <title>Fintech2025Sept 30AiFinancial ModelingGuide</title>
+        <meta name='description'
+          content='Learnaboutfintech 2025sept30 aifinancialmodeling guideandhow itcanbenefit yourenterprise.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide'
+        <linkrel='canonical'
+          href='https: //ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Fintech 2025 Sept 30 Ai Financial Modeling Guide
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Fintech2025Sept 30AiFinancial ModelingGuide
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Learn about fintech 2025 sept 30 ai financial modeling guide and how
-          it can benefit your enterprise.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Learnaboutfintech 2025sept30 aifinancialmodeling guideandhow
+          itcanbenefit yourenterprise.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            This comprehensive guide covers fintech 2025 sept 30 ai financial
-            modeling guide and provides practical insights for enterprise
+            Thiscomprehensiveguide coversfintech2025 sept30ai financialmodelingguide andprovidespractical insightsforenterprise
             implementation.
           </p>
         </div>
-        <div className='mt-8'>
-          <Link to='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName='mt-8'>
+          <Linkto='/blog' className='text-cyan-300hover:underline'>
+            ← BacktoBlog
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

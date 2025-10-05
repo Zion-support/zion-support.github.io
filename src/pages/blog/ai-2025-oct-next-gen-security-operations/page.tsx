@@ -1,380 +1,343 @@
 import {
-  Activity,
-  AlertTriangle,
-  ArrowLeft,
-  DollarSign,
-  Lock,
-  Shield,
-  Zap,
+  Activity
+  AlertTriangle
+  ArrowLeft
+  DollarSign
+  Lock
+  Shield
+  Zap
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 import { Link } from 'react-router-dom';
-export default function NextGenSecurityOperations2025() {
+exportdefaultfunction NextGenSecurityOperations2025() {  
   return (
     <>
       <Helmet>
         <title>
-          Next-Gen AI Security Operations 2025 — 99.97% Threat Detection,
-          Sub-Second Response, $2.3B+ Protection | Zion Tech Group
+          Next-GenAISecurity Operations2025 — 99.97% ThreatDetection
+          Sub-SecondResponse$2.3B+ Protection | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Deploy autonomous AI security operations that detect threats in milliseconds, respond automatically, and prevent breaches before they happen. Achieve 99.97% detection accuracy, reduce incident response time by 95%, and protect $2.3B+ in enterprise assets.'
+        <metaname = 'description'
+          content='DeployautonomousAI securityoperationsthat detectthreatsin millisecondsrespondautomaticallyandpreventbreaches beforetheyhappen. Achieve99.97% detectionaccuracyreduceincidentresponse timeby95%andprotect $2.3B+ inenterpriseassets.'
         />
-        <meta
-          name='keywords'
-          content='AI security, autonomous SecOps, threat detection, incident response, cybersecurity AI, zero-day protection, security automation, AI-powered defense'
+        <metaname = 'keywords'
+          content='AIsecurityautonomousSecOpsthreatdetectionincidentresponsecybersecurityAIzero-dayprotectionsecurityautomationAI-powereddefense'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations'
         />
       </Helmet>
 
-      <article className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white'>
-        <div className='container mx-auto px-4 py-12 max-w-4xl'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors'
+      <articleclassName='min-h-screenbg-gradient-to-brfrom-slate-900via-purple-900to-slate-900text-white'>
+        <divclassName='containermx-autopx-4py-12max-w-4xl'>
+          <Linkto='/blog'
+            className='inline-flexitems-centertext-purple-400hover:text-purple-300mb-8transition-colors'
           >
-            <ArrowLeft className='mr-2 h-4 w-4' />
-            Back to Blog
+            <ArrowLeftclassName='mr-2 h-4 w-4' />
+            BacktoBlog
           </Link>
 
-          <header className='mb-12'>
-            <div className='flex items-center gap-4 mb-6'>
-              <span className='px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30'>
-                AI Security Operations
+          <headerclassName='mb-12'>
+            <divclassName='flexitems-centergap-4mb-6'>
+              <spanclassName='px-4py-2bg-purple-500/20text-purple-300rounded-fulltext-smfont-semiboldborderborder-purple-500/30'>
+                AISecurityOperations
               </span>
-              <span className='text-gray-400'>October 1, 2025</span>
+              <spanclassName='text-gray-400'>October 12025</span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 text-transparent bg-clip-text leading-tight'>
-              Next-Gen AI Security Operations: The $2.3B Defense Shield
+            <h1className = 'text-5xlmd: text-6xlfont-boldmb-6bg-gradient-to-rfrom-purple-400via-pink-400to-red-400text-transparentbg-clip-textleading-tight'>
+              Next-GenAISecurity Operations: The $2.3BDefenseShield
             </h1>
 
-            <p className='text-xl text-gray-300 leading-relaxed'>
-              Deploy autonomous AI security systems that detect threats with
-              99.97% accuracy in milliseconds, respond automatically to attacks,
-              and predict zero-day vulnerabilities before they're exploited.
-              Protect $2.3B+ in enterprise assets while reducing security
-              operations costs by 87%.
+            <pclassName='text-xltext-gray-300leading-relaxed'>
+              DeployautonomousAI securitysystemsthat detectthreatswith
+              99.97% accuracyinmillisecondsrespondautomaticallyto attacks
+              andpredictzero-dayvulnerabilitiesbefore they'reexploited.
+              Protect $2.3B+ inenterpriseassets whilereducingsecurity
+              operationscostsby 87%.
             </p>
           </header>
 
-          <div className='prose prose-invert prose-lg max-w-none'>
-            <div className='bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12'>
-              <h2 className='text-3xl font-bold mb-6 flex items-center gap-3'>
-                <Shield className='h-8 w-8 text-purple-400' />
-                Security Impact
+          <divclassName = 'proseprose-invertprose-lgmax-w-none'>
+            <divclassName='bg-gradient-to-rfrom-purple-500/10to-pink-500/10borderborder-purple-500/20rounded-xlp-8mb-12'>
+              <h2className='text-3xlfont-boldmb-6flexitems-centergap-3'>
+                <ShieldclassName='h-8 w-8text-purple-400' />
+                SecurityImpact
               </h2>
-              <ul className='space-y-4 text-lg'>
-                <li className='flex items-start gap-3'>
-                  <Lock className='h-6 w-6 text-green-400 mt-1 flex-shrink-0' />
+              <ulclassName='space-y-4text-lg'>
+                <liclassName='flexitems-startgap-3'>
+                  <LockclassName='h-6 w-6text-green-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>99.97% Threat Detection:</strong> AI identifies
-                    sophisticated attacks that evade traditional security tools
+                    <strong>99.97% ThreatDetection: </strong> AIidentifiessophisticated attacksthatevade traditionalsecuritytools
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <Zap className='h-6 w-6 text-yellow-400 mt-1 flex-shrink-0' />
+                <liclassName='flexitems-startgap-3'>
+                  <ZapclassName='h-6 w-6text-yellow-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>Sub-Second Response:</strong> Autonomous containment
-                    and remediation blocks threats instantly
+                    <strong>Sub-SecondResponse:</strong> Autonomouscontainmentand remediationblocksthreats instantly
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <DollarSign className='h-6 w-6 text-emerald-400 mt-1 flex-shrink-0' />
+                <liclassName='flexitems-startgap-3'>
+                  <DollarSignclassName='h-6 w-6text-emerald-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>$2.3B+ Protected:</strong> Average value of assets
-                    secured and breaches prevented annually
+                    <strong>$2.3B+ Protected:</strong> Averagevalueof assetssecuredand breachespreventedannually
                   </span>
                 </li>
-                <li className='flex items-start gap-3'>
-                  <AlertTriangle className='h-6 w-6 text-red-400 mt-1 flex-shrink-0' />
+                <liclassName='flexitems-startgap-3'>
+                  <AlertTriangleclassName='h-6 w-6text-red-400mt-1flex-shrink-0' />
                   <span>
-                    <strong>95% Faster MTTR:</strong> Mean time to resolution
-                    reduced from hours to minutes
+                    <strong>95% FasterMTTR:</strong> Meantimeto resolutionreducedfrom hourstominutes
                   </span>
                 </li>
               </ul>
             </div>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-purple-300'>
-                The Security Crisis
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-purple-300'>
+                TheSecurityCrisis
               </h2>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Cyber threats have evolved beyond human capacity to defend.
-                Modern attacks leverage AI, operate at machine speed, and
-                exploit vulnerabilities faster than security teams can respond.
-                The average enterprise faces 4,800+ security alerts daily, with
-                security analysts spending 73% of their time on false positives
-                while real threats slip through.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Cyberthreatshave evolvedbeyondhuman capacitytodefend.
+                Modernattacksleverage AIoperateatmachine speedandexploitvulnerabilities fasterthansecurity teamscanrespond.
+                Theaverageenterprise faces4800+ securityalertsdailywithsecurityanalysts spending73% oftheirtime onfalsepositives
+                whilerealthreats slipthrough.
               </p>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                The average data breach now costs $4.45M and takes 287 days to
-                identify and contain. Traditional Security Operations Centers
-                (SOCs) cannot scale to meet modern threat volumes. Only
-                AI-powered autonomous security operations can defend against
-                adversaries who already use AI to attack.
+              <pclassName = 'text-gray-300mb-4leading-relaxed'>
+                Theaveragedata breachnowcosts $4.45Mandtakes 287daysto
+                identifyandcontain. TraditionalSecurityOperations Centers
+                (SOCs) cannotscaleto meetmodernthreat volumes. OnlyAI-poweredautonomoussecurity operationscandefend againstadversarieswho alreadyuseAI toattack.
               </p>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-purple-300'>
-                The Autonomous SecOps Architecture
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-purple-300'>
+                TheAutonomousSecOps Architecture
               </h2>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  1. Intelligent Threat Detection
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  1. IntelligentThreatDetection
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  Advanced ML models analyze network traffic, user behavior,
-                  system logs, and threat intelligence in real-time to detect
-                  anomalies and known attack patterns. Deep learning identifies
-                  sophisticated threats including zero-days, APTs, insider
-                  threats, and novel attack techniques that signature-based
-                  systems miss completely.
+                <pclassName='text-gray-300mb-4'>
+                  AdvancedMLmodels analyzenetworktrafficuserbehavior
+                  systemlogsandthreatintelligence inreal-timetodetect
+                  anomaliesandknown attackpatterns. Deeplearningidentifies
+                  sophisticatedthreatsincluding zero-daysAPTsinsiderthreatsandnovelattack techniquesthatsignature-basedsystemsmiss completely.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Behavioral analytics baseline normal patterns across 500+
+                    Behavioralanalyticsbaseline normalpatternsacross 500+
                     dimensions
                   </li>
                   <li>
-                    Anomaly detection identifies deviations within milliseconds
+                    Anomalydetectionidentifies deviationswithinmilliseconds
                   </li>
                   <li>
-                    Threat classification categorizes attacks with 99.97%
+                    Threatclassificationcategorizes attackswith99.97%
                     accuracy
                   </li>
                   <li>
-                    False positive rate reduced to 0.03% vs 90%+ for traditional
-                    SIEM
+                    Falsepositiverate reducedto0.03% vs90%+ fortraditionalSIEM
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  2. Autonomous Incident Response
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  2. AutonomousIncidentResponse
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  AI agents automatically investigate alerts, correlate evidence
-                  across systems, determine attack scope, and execute response
-                  playbooks without human intervention. Machine-speed response
-                  contains threats in seconds rather than hours, preventing
-                  lateral movement and data exfiltration.
+                <pclassName='text-gray-300mb-4'>
+                  AIagentsautomatically investigatealertscorrelateevidenceacross systemsdetermineattackscopeandexecuteresponse
+                  playbookswithouthuman intervention. Machine-speedresponsecontains threatsinseconds ratherthanhourspreventinglateralmovement anddataexfiltration.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Automated triage and investigation reduce analyst workload
-                    by 94%
+                    Automatedtriageand investigationreduceanalyst workloadby94%
                   </li>
                   <li>
-                    Dynamic playbook execution adapts to attack characteristics
+                    Dynamicplaybookexecution adaptstoattack characteristics
                   </li>
                   <li>
-                    Intelligent containment isolates threats without disrupting
+                    Intelligentcontainmentisolates threatswithoutdisrupting
                     business
                   </li>
                   <li>
-                    Root cause analysis identifies vulnerabilities for
+                    Rootcauseanalysis identifiesvulnerabilitiesfor
                     remediation
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  3. Predictive Vulnerability Management
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  3. PredictiveVulnerabilityManagement
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  AI continuously scans infrastructure, applications, and
-                  configurations to identify vulnerabilities and
-                  misconfigurations. ML models predict which vulnerabilities are
-                  most likely to be exploited based on threat intelligence,
-                  attack trends, and asset criticality—prioritizing remediation
-                  efforts on the 2% that matter.
+                <pclassName='text-gray-300mb-4'>
+                  AIcontinuouslyscans infrastructureapplicationsandconfigurationsto identifyvulnerabilitiesand
+                  misconfigurations. MLmodelspredict whichvulnerabilitiesare
+                  mostlikelyto beexploitedbased onthreatintelligence
+                  attacktrendsandassetcriticality—prioritizingremediationefforts onthe2% thatmatter.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Continuous asset discovery maintains real-time inventory
+                    Continuousassetdiscovery maintainsreal-timeinventory
                   </li>
                   <li>
-                    Risk scoring prioritizes remediation based on exploit
-                    probability
+                    Riskscoringprioritizes remediationbasedon exploitprobability
                   </li>
                   <li>
-                    Automated patching applies fixes during maintenance windows
+                    Automatedpatchingapplies fixesduringmaintenance windows
                   </li>
                   <li>
-                    Configuration drift detection prevents security degradation
+                    Configurationdriftdetection preventssecuritydegradation
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  4. Threat Intelligence Fusion
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  4. ThreatIntelligenceFusion
                 </h3>
-                <p className='text-gray-300 mb-4'>
-                  AI aggregates and analyzes threat intelligence from hundreds
-                  of sources—commercial feeds, open source intel, dark web
-                  monitoring, and internal telemetry. NLP models extract
-                  actionable insights, identify emerging threats, and
-                  automatically update detection rules and response playbooks.
+                <pclassName='text-gray-300mb-4'>
+                  AIaggregatesand analyzesthreatintelligence fromhundredsof sources—commercialfeedsopensourceinteldarkwebmonitoringandinternaltelemetry. NLPmodelsextract
+                  actionableinsightsidentifyemergingthreatsandautomaticallyupdate detectionrulesand responseplaybooks.
                 </p>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Indicator enrichment provides full context for
+                    Indicatorenrichmentprovides fullcontextfor
                     investigations
                   </li>
-                  <li>Adversary profiling maps TTPs to known threat actors</li>
+                  <li>Adversaryprofilingmaps TTPstoknown threatactors</li>
                   <li>
-                    Predictive threat modeling anticipates next-generation
-                    attacks
+                    Predictivethreatmodeling anticipatesnext-generationattacks
                   </li>
                   <li>
-                    Automated IOC deployment updates defenses in real-time
+                    AutomatedIOCdeployment updatesdefensesin real-time
                   </li>
                 </ul>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-purple-300'>
-                Enterprise Success Stories
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-purple-300'>
+                EnterpriseSuccessStories
               </h2>
-              <div className='grid md:grid-cols-2 gap-6 mb-8'>
-                <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6 border border-purple-500/30'>
-                  <h3 className='text-2xl font-bold mb-4 text-purple-300'>
-                    Global Financial Institution
+              <divclassName='gridmd: grid-cols-2gap-6mb-8'>
+                <divclassName='bg-gradient-to-brfrom-purple-500/20to-pink-500/20rounded-xlp-6borderborder-purple-500/30'>
+                  <h3className='text-2xlfont-boldmb-4text-purple-300'>
+                    GlobalFinancialInstitution
                   </h3>
-                  <ul className='space-y-3 text-gray-300'>
+                  <ulclassName='space-y-3text-gray-300'>
                     <li>
-                      • Zero successful breaches in 24 months of operation
+                      • Zerosuccessfulbreaches in24months ofoperation
                     </li>
-                    <li>• $3.7B in protected assets and prevented fraud</li>
+                    <li>• $3.7Binprotected assetsandprevented fraud</li>
                     <li>
-                      • 97% reduction in security analyst burnout and turnover
+                      • 97% reductioninsecurity analystburnoutand turnover
                     </li>
-                    <li>• $180M annual savings from automated response</li>
-                    <li>• MTTR improved from 6 hours to 90 seconds</li>
+                    <li>• $180Mannualsavings fromautomatedresponse</li>
+                    <li>• MTTRimprovedfrom 6hoursto 90seconds</li>
                   </ul>
                 </div>
-                <div className='bg-gradient-to-br from-pink-500/20 to-red-500/20 rounded-xl p-6 border border-pink-500/30'>
-                  <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                    Healthcare Enterprise
+                <divclassName='bg-gradient-to-brfrom-pink-500/20to-red-500/20rounded-xlp-6borderborder-pink-500/30'>
+                  <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                    HealthcareEnterprise
                   </h3>
-                  <ul className='space-y-3 text-gray-300'>
-                    <li>• 99.99% ransomware prevention rate</li>
-                    <li>• $890M in avoided breach and ransom costs</li>
-                    <li>• 100% HIPAA compliance maintained automatically</li>
-                    <li>• 89% reduction in security operations costs</li>
-                    <li>• 6.8x ROI achieved within first year</li>
+                  <ulclassName='space-y-3text-gray-300'>
+                    <li>• 99.99% ransomwarepreventionrate</li>
+                    <li>• $890Minavoided breachandransom costs</li>
+                    <li>• 100% HIPAAcompliancemaintained automatically</li>
+                    <li>• 89% reductioninsecurity operationscosts</li>
+                    <li>• 6.8xROIachieved withinfirstyear</li>
                   </ul>
                 </div>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-purple-300'>
-                Implementation Roadmap
+            <sectionclassName='mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-purple-300'>
+                ImplementationRoadmap
               </h2>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  Phase 1: Assessment (Weeks 1-4)
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  Phase1: Assessment (Weeks1-4)
                 </h3>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
-                  <li>Current security posture evaluation and gap analysis</li>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
+                  <li>Currentsecurityposture evaluationandgap analysis</li>
                   <li>
-                    Data source integration planning across SIEM, EDR, firewalls
+                    Datasourceintegration planningacrossSIEMEDRfirewalls
                   </li>
-                  <li>Use case prioritization based on risk and ROI</li>
-                  <li>Team training and change management planning</li>
+                  <li>Usecaseprioritization basedonrisk andROI</li>
+                  <li>Teamtrainingand changemanagementplanning</li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  Phase 2: Deployment (Weeks 5-12)
+              <divclassName = 'bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  Phase2: Deployment (Weeks5-12)
                 </h3>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
-                  <li>AI detection models deployed in monitoring mode</li>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
+                  <li>AIdetectionmodels deployedinmonitoring mode</li>
                   <li>
-                    Behavioral baselines established across users and systems
+                    Behavioralbaselinesestablished acrossusersand systems
                   </li>
-                  <li>Automated response playbooks configured and tested</li>
-                  <li>Integration with existing security tools completed</li>
+                  <li>Automatedresponseplaybooks configuredandtested</li>
+                  <li>Integrationwithexisting securitytoolscompleted</li>
                 </ul>
               </div>
 
-              <div className='bg-slate-800/50 rounded-xl p-6 mb-6 border border-purple-500/20'>
-                <h3 className='text-2xl font-bold mb-4 text-pink-300'>
-                  Phase 3: Optimization (Weeks 13-24)
+              <divclassName='bg-slate-800/50rounded-xlp-6mb-6borderborder-purple-500/20'>
+                <h3className='text-2xlfont-boldmb-4text-pink-300'>
+                  Phase3: Optimization (Weeks13-24)
                 </h3>
-                <ul className='list-disc list-inside space-y-2 text-gray-300 ml-4'>
+                <ulclassName = 'list-disclist-insidespace-y-2text-gray-300ml-4'>
                   <li>
-                    Autonomous response activated for verified threat types
+                    Autonomousresponseactivated forverifiedthreat types
                   </li>
                   <li>
-                    Continuous model tuning based on environment specifics
+                    Continuousmodeltuning basedonenvironment specifics
                   </li>
                   <li>
-                    Advanced capabilities enabled: threat hunting, predictive
-                    analytics
+                    Advancedcapabilitiesenabled: threathuntingpredictiveanalytics
                   </li>
-                  <li>Full SOC transformation and analyst skill development</li>
+                  <li>FullSOCtransformation andanalystskill development</li>
                 </ul>
               </div>
             </section>
 
-            <section className='mb-12'>
-              <h2 className='text-3xl font-bold mb-6 text-purple-300'>
-                The Future of Security Operations
+            <sectionclassName = 'mb-12'>
+              <h2className='text-3xlfont-boldmb-6text-purple-300'>
+                TheFutureof SecurityOperations
               </h2>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                AI-powered autonomous security operations are not a luxury—they
-                are a necessity for survival in the modern threat landscape.
-                Adversaries already use AI to automate attacks at scale.
-                Defending with human-speed processes is like bringing a knife to
-                a gunfight.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                AI-poweredautonomoussecurity operationsarenot aluxury—theyarea necessityforsurvival inthemodern threatlandscape.
+                Adversariesalreadyuse AItoautomate attacksatscale.
+                Defendingwithhuman-speedprocessesis likebringinga knifetoa gunfight.
               </p>
-              <p className='text-gray-300 mb-4 leading-relaxed'>
-                Leading enterprises have achieved security postures that were
-                unimaginable just two years ago: near-perfect threat detection,
-                sub-second response times, and dramatically reduced costs. The
-                question is not whether to adopt autonomous SecOps, but how
-                quickly you can deploy it before the next breach.
+              <pclassName='text-gray-300mb-4leading-relaxed'>
+                Leadingenterpriseshave achievedsecuritypostures thatwereunimaginable justtwoyears ago: near-perfectthreatdetection
+                sub-secondresponsetimesanddramaticallyreduced costs. Thequestionis notwhetherto adoptautonomousSecOpsbuthowquickly youcandeploy itbeforethe nextbreach.
               </p>
             </section>
 
-            <div className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-xl p-8 mt-12'>
-              <h2 className='text-3xl font-bold mb-4 text-purple-300'>
-                Ready to Transform Your Security Operations?
-              </h2>
-              <p className='text-gray-300 mb-6'>
-                Discover how Zion Tech Group can deploy autonomous AI security
-                operations that protect your enterprise against modern threats.
-                Our proven implementation methodology ensures rapid deployment
-                with measurable results.
+            <divclassName = 'bg-gradient-to-rfrom-purple-500/20to-pink-500/20borderborder-purple-500/30rounded-xlp-8mt-12'>
+              <h2className='text-3xlfont-boldmb-4text-purple-300'>
+                ReadytoTransform YourSecurityOperations ? </h2>
+              <pclassName='text-gray-300mb-6'>
+                DiscoverhowZion TechGroupcan deployautonomousAI securityoperationsthat protectyourenterprise againstmodernthreats.
+                Ourprovenimplementation methodologyensuresrapid deploymentwithmeasurable results.
               </p>
-              <Link
-                to='/contact'
-                className='inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg'
+              <Linkto='/contact'
+                className='inline-flexitems-centerpx-6py-3bg-gradient-to-rfrom-purple-500to-pink-500text-whitefont-semiboldrounded-lghover: from-purple-600hover : to-pink-600transition-allshadow-lg'
               >
-                Schedule Your Security Assessment
-                <ArrowLeft className='ml-2 h-5 w-5 rotate-180' />
+                ScheduleYourSecurity Assessment
+                <ArrowLeftclassName='ml-2 h-5 w-5rotate-180' />
               </Link>
             </div>
           </div>
         </div>
       </article>
-    </>
-  );
-}
+    </ > );
+  }

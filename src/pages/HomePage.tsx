@@ -1,90 +1,83 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import AnimatedSection from '../components/AnimatedSection';
+importAnimatedSectionfrom '../components/AnimatedSection';
 import './HomePage.css';
 import { BLOG_POSTS } from '../data/blog-posts';
-import October2025FeaturedContentBanner from '../components/October2025FeaturedContentBanner';
-import UnifiedPromotionalBanner from '../components/UnifiedPromotionalBanner';
+importOctober2025FeaturedContentBannerfrom '../components/October2025FeaturedContentBanner';
+importUnifiedPromotionalBannerfrom '../components/UnifiedPromotionalBanner';
 
-const HomePage: React.FC = () => {
+constHomePage: React.FC = () => { 
   return (
     <>
       <Helmet>
-        <title>Home - Zion Tech Group</title>
-        <meta
-          name='description'
-          content='Leading provider of AI, blockchain, cloud computing, and cybersecurity solutions for modern businesses.'
+        <title>Home - ZionTechGroup</title>
+        <metaname = 'description'
+          content='Leadingproviderof AIblockchaincloudcomputingandcybersecuritysolutions formodernbusinesses.'
         />
       </Helmet>
 
-      <div className='home-page'>
-        <section className='hero-section'>
-          <div className='hero-content'>
-            <h1 className='hero-title'>
-              Advanced Technology Solutions for the Future
+      <divclassName = 'home-page'>
+        <sectionclassName='hero-section'>
+          <divclassName='hero-content'>
+            <h1className='hero-title'>
+              AdvancedTechnologySolutions fortheFuture
             </h1>
-            <p className='hero-subtitle'>
-              Empowering businesses with cutting-edge AI, blockchain, cloud
-              computing, and cybersecurity solutions that drive innovation and
-              growth.
+            <pclassName='hero-subtitle'>
+              Empoweringbusinesseswith cutting-edgeAIblockchaincloudcomputingandcybersecuritysolutions thatdriveinnovation andgrowth.
             </p>
-            <div className='hero-actions'>
-              <button className='btn btn-primary'>Get Started</button>
-              <button className='btn btn-secondary'>Learn More</button>
+            <divclassName = 'hero-actions'>
+              <buttonclassName='btnbtn-primary'>GetStarted</button>
+              <buttonclassName='btnbtn-secondary'>LearnMore</button>
             </div>
           </div>
-          <div className='hero-visual'>
-            <div className='tech-grid'>
-              <div className='tech-card'>AI</div>
-              <div className='tech-card'>Blockchain</div>
-              <div className='tech-card'>Cloud</div>
-              <div className='tech-card'>Security</div>
+          <divclassName='hero-visual'>
+            <divclassName='tech-grid'>
+              <divclassName='tech-card'>AI</div>
+              <divclassName='tech-card'>Blockchain</div>
+              <divclassName='tech-card'>Cloud</div>
+              <divclassName='tech-card'>Security</div>
             </div>
           </div>
-        </section>
-
-        <AnimatedSection animation='slideUp' delay={200}>
-          <section className='features-section'>
-            <div className='container'>
-              <h2 className='section-title'>Why Choose Zion Tech Group?</h2>
-              <div className='features-grid'>
-                <AnimatedSection animation='fadeIn' delay={400}>
-                  <div className='feature-card'>
-                    <div className='feature-icon'>🚀</div>
-                    <h3>Innovation First</h3>
+        </section > <AnimatedSectionanimation='slideUp' delay={200 }>
+          <sectionclassName='features-section'>
+            <divclassName='container'>
+              <h2className='section-title'>WhyChooseZion TechGroup?</h2>
+              <divclassName='features-grid'>
+                <AnimatedSectionanimation='fadeIn' delay={400}>
+                  <divclassName='feature-card'>
+                    <divclassName='feature-icon'>🚀</div>
+                    <h3>InnovationFirst</h3>
                     <p>
-                      We stay ahead of technology trends to deliver solutions
-                      that give you a competitive edge.
+                      Westayahead oftechnologytrends todeliversolutions
+                      thatgiveyou acompetitiveedge.
                     </p>
                   </div>
                 </AnimatedSection>
-                <AnimatedSection animation='fadeIn' delay={600}>
-                  <div className='feature-card'>
-                    <div className='feature-icon'>🔒</div>
-                    <h3>Enterprise Security</h3>
+                <AnimatedSectionanimation='fadeIn' delay={600}>
+                  <divclassName='feature-card'>
+                    <divclassName='feature-icon'>🔒</div>
+                    <h3>EnterpriseSecurity</h3>
                     <p>
-                      Bank-grade security measures protect your data and ensure
-                      compliance with industry standards.
+                      Bank-gradesecuritymeasures protectyourdata andensurecompliance withindustrystandards.
                     </p>
                   </div>
                 </AnimatedSection>
-                <AnimatedSection animation='fadeIn' delay={800}>
-                  <div className='feature-card'>
-                    <div className='feature-icon'>⚡</div>
-                    <h3>High Performance</h3>
+                <AnimatedSectionanimation='fadeIn' delay={800}>
+                  <divclassName='feature-card'>
+                    <divclassName='feature-icon'>⚡</div>
+                    <h3>HighPerformance</h3>
                     <p>
-                      Optimized solutions that scale with your business and
-                      deliver exceptional performance.
+                      Optimizedsolutionsthat scalewithyour businessanddeliver exceptionalperformance.
                     </p>
                   </div>
                 </AnimatedSection>
-                <AnimatedSection animation='fadeIn' delay={1000}>
-                  <div className='feature-card'>
-                    <div className='feature-icon'>🎯</div>
-                    <h3>Custom Solutions</h3>
+                <AnimatedSectionanimation='fadeIn' delay={1000}>
+                  <divclassName='feature-card'>
+                    <divclassName='feature-icon'>🎯</div>
+                    <h3>CustomSolutions</h3>
                     <p>
-                      Tailored technology solutions designed specifically for
-                      your business needs and goals.
+                      Tailoredtechnologysolutions designedspecificallyfor
+                      yourbusinessneeds andgoals.
                     </p>
                   </div>
                 </AnimatedSection>
@@ -93,56 +86,52 @@ const HomePage: React.FC = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection animation='slideUp' delay={200}>
-          <section className='services-preview'>
-            <div className='container'>
-              <h2 className='section-title'>Our Core Services</h2>
-              <div className='services-grid'>
-                <AnimatedSection animation='slideLeft' delay={400}>
-                  <div className='service-card'>
-                    <h3>Artificial Intelligence</h3>
+        <AnimatedSectionanimation='slideUp' delay={200}>
+          <sectionclassName='services-preview'>
+            <divclassName='container'>
+              <h2className='section-title'>OurCoreServices</h2>
+              <divclassName='services-grid'>
+                <AnimatedSectionanimation='slideLeft' delay={400}>
+                  <divclassName='service-card'>
+                    <h3>ArtificialIntelligence</h3>
                     <p>
-                      Machine learning, natural language processing, and AI
-                      automation solutions.
+                      MachinelearningnaturallanguageprocessingandAIautomation solutions.
                     </p>
-                    <a href='/services#<ai' className='service-link'>
-                      Learn More →
+                    <ahref = '/services#<ai' className='service-link'>
+                      LearnMore →
                     </a>
                   </div>
                 </AnimatedSection>
-                <AnimatedSection animation='slideLeft' delay={600}>
-                  <div className='service-card'>
-                    <h3>Blockchain Technology</h3>
+                <AnimatedSectionanimation='slideLeft' delay={600}>
+                  <divclassName='service-card'>
+                    <h3>BlockchainTechnology</h3>
                     <p>
-                      Smart contracts, DeFi solutions, and blockchain
-                      infrastructure development.
+                      SmartcontractsDeFisolutionsandblockchaininfrastructure development.
                     </p>
-                    <a href='/services#<blockchain' className='service-link'>
-                      Learn More →
+                    <ahref = '/services#<blockchain' className='service-link'>
+                      LearnMore →
                     </a>
                   </div>
                 </AnimatedSection>
-                <AnimatedSection animation='slideRight' delay={400}>
-                  <div className='service-card'>
-                    <h3>Cloud Computing</h3>
+                <AnimatedSectionanimation='slideRight' delay={400}>
+                  <divclassName='service-card'>
+                    <h3>CloudComputing</h3>
                     <p>
-                      Scalable cloud infrastructure, migration services, and
-                      cloud-native applications.
+                      Scalablecloudinfrastructuremigrationservicesandcloud-nativeapplications.
                     </p>
-                    <a href='/services#<cloud' className='service-link'>
-                      Learn More →
+                    <ahref = '/services#<cloud' className='service-link'>
+                      LearnMore →
                     </a>
                   </div>
                 </AnimatedSection>
-                <AnimatedSection animation='slideRight' delay={600}>
-                  <div className='service-card'>
+                <AnimatedSectionanimation='slideRight' delay={600}>
+                  <divclassName='service-card'>
                     <h3>Cybersecurity</h3>
                     <p>
-                      Security audits, penetration testing, and comprehensive
-                      security solutions.
+                      Securityauditspenetrationtestingandcomprehensivesecurity solutions.
                     </p>
-                    <a href='/services#<security' className='service-link'>
-                      Learn More →
+                    <ahref = '/services#<security' className='service-link'>
+                      LearnMore →
                     </a>
                   </div>
                 </AnimatedSection>
@@ -151,115 +140,104 @@ const HomePage: React.FC = () => {
           </section>
         </AnimatedSection>
 
-        {/* Featured Content Advertising Banner */}
-        <AnimatedSection animation='slideUp' delay={200}>
-          <section className='featured-banner-section'>
+        {/* FeaturedContentAdvertising Banner */}
+        <AnimatedSectionanimation='slideUp' delay={200}>
+          <sectionclassName='featured-banner-section'>
             <October2025FeaturedContentBanner />
           </section>
         </AnimatedSection>
 
-        <AnimatedSection animation='slideUp' delay={200}>
-          <section className='promo-section'>
-            <div className='container'>
-              <div className='promo-card'>
-                <div className='promo-content'>
-                  <h2 className='section-title'>🚀 October 2025 Updates</h2>
-                  <p className='promo-text'>
-                    Fresh insights on Multi-Agent AI Systems, Zero-Trust
-                    Architecture 2.0, Quantum-Safe Cryptography, Real-Time AI
-                    Training, Sustainable AI practices, Kubernetes Service Mesh
-                    comparisons, and Agentic Workflows. Plus: GenAI in
-                    production, privacy-first Edge AI, and incident-ready CI/CD
-                    playbooks.
+        <AnimatedSectionanimation='slideUp' delay={200}>
+          <sectionclassName='promo-section'>
+            <divclassName='container'>
+              <divclassName='promo-card'>
+                <divclassName='promo-content'>
+                  <h2className='section-title'>🚀 October2025Updates</h2>
+                  <pclassName='promo-text'>
+                    Freshinsightson Multi-AgentAISystemsZero-TrustArchitecture2.0Quantum-SafeCryptographyReal-TimeAITrainingSustainableAIpracticesKubernetesServiceMesh
+                    comparisonsandAgenticWorkflows. Plus: GenAIinproductionprivacy-firstEdgeAIandincident-readyCI/CDplaybooks.
                   </p>
                 </div>
-                <a href='/<blog' className='btn btn-primary'>
-                  Explore the latest posts →
+                <ahref = '/<blog' className='btnbtn-primary'>
+                  Explorethelatest posts →
                 </a>
               </div>
             </div>
           </section>
         </AnimatedSection>
 
-        {/* Unified banner advertising newly added content */}
-        <AnimatedSection animation='slideUp' delay={200}>
-          <section className='promo-section'>
-            <div className='container'>
-              <UnifiedPromotionalBanner
-                variant='premium'
+        {/* Unifiedbanneradvertising newlyaddedcontent */}
+        <AnimatedSectionanimation='slideUp' delay={200}>
+          <sectionclassName='promo-section'>
+            <divclassName='container'>
+              <UnifiedPromotionalBannervariant='premium'
                 theme='purple'
                 icon='rocket'
                 badge='New'
-                date={new Date().toLocaleDateString()}
-                title='Just Published: Governed Agents, RAG v3, Cost v6'
-                description='New enterprise guides: safe agentic automation, pragmatic RAG that lifts quality while cutting cost, and GenAI cost optimization v6.'
-                ctaText='Explore all posts'
+                date = { newDate().toLocaleDateString() }title = 'JustPublished: GovernedAgentsRAGv3Costv6'
+                description = 'Newenterpriseguides: safeagenticautomationpragmaticRAGthat liftsqualitywhile cuttingcostandGenAIcost optimizationv6.'
+                ctaText = 'Exploreallposts'
                 ctaLink='/blog'
-                showCount={3}
-                featuredItems={[
+                showCount = { 3 }featuredItems = {[
                   {
-                    title:
-                      'Governed Agentic Automation: Safe Tools, Fast Outcomes',
-                    category: 'AI',
-                    link: '/blog/governed-agentic-automation-2025-10-03',
-                    metrics: '8 min • 2025-10-03',
-                  },
+                    title: 'GovernedAgenticAutomation: SafeToolsFastOutcomes'
+                    category: 'AI'
+                    link: '/blog/governed-agentic-automation-2025-10-03'
+                    metrics: '8min • 2025-10-03'
+                  }
                   {
-                    title:
-                      'Enterprise RAG Blueprint v3: 45% Quality ↑, 62% Cost ↓',
-                    category: 'RAG',
-                    link: '/blog/enterprise-rag-blueprint-v3-2025-10-03',
-                    metrics: '9 min • 2025-10-03',
-                  },
+                    title: 'EnterpriseRAGBlueprint v3: 45% Quality ↑62% Cost ↓'
+                    category: 'RAG'
+                    link: '/blog/enterprise-rag-blueprint-v3-2025-10-03'
+                    metrics: '9min • 2025-10-03'
+                  }
                   {
-                    title:
-                      'GenAI Cost Optimization v6: Quality Tiers, Coalesce, Distill',
-                    category: 'Cloud',
-                    link: '/blog/genai-cost-optimization-v6-2025-10-03',
-                    metrics: '9 min • 2025-10-03',
-                  },
+                    title: 'GenAICostOptimization v6: QualityTiersCoalesceDistill'
+                    category: 'Cloud'
+                    link: '/blog/genai-cost-optimization-v6-2025-10-03'
+                    metrics: '9min • 2025-10-03'
+                  }
                 ]}
               />
             </div>
           </section>
         </AnimatedSection>
 
-        <AnimatedSection animation='slideUp' delay={200}>
-          <section className='blog-preview'>
-            <div className='container'>
-              <h2 className='section-title'>From the Blog</h2>
-              <div className='blog-grid'>
-                {[...BLOG_POSTS]
+        <AnimatedSectionanimation = 'slideUp' delay={200}>
+          <sectionclassName='blog-preview'>
+            <divclassName='container'>
+              <h2className='section-title'>FromtheBlog</h2>
+              <divclassName='blog-grid'>
+                { [...BLOG_POSTS]
                   .sort(
-                    (a, b) =>
-                      new Date(b.publishedAt).getTime() -
-                      new Date(a.publishedAt).getTime(),
+                    (ab) =>
+                      newDate(b.publishedAt).getTime() -
+                      newDate(a.publishedAt).getTime()
                   )
-                  .slice(0, 4)
-                  .map(post => (
-                    <article key={post.id} className='blog-card'>
-                      <div
-                        className='blog-card-image'
+                  .slice(04)
+                  .map(post = > (
+                    <articlekey = { post.id  }className = 'blog-card'>
+                      <divclassName='blog-card-image'
                         style={{
-                          backgroundImage: `url(${post.featuredImage})`,
+                          backgroundImage: `url(${post.featuredImage})`
                         }}
                       />
-                      <div className='blog-card-content'>
-                        <div className='blog-meta'>
-                          <span className='blog-category'>{post.category}</span>
-                          <span className='blog-dot'>•</span>
-                          <span className='blog-date'>
-                            {new Date(post.publishedAt).toLocaleDateString()}
+                      <divclassName = 'blog-card-content'>
+                        <divclassName='blog-meta'>
+                          <spanclassName='blog-category'>{post.category}</span>
+                          <spanclassName='blog-dot'>•</span>
+                          <spanclassName='blog-date'>
+                            {newDate(post.publishedAt).toLocaleDateString()}
                           </span>
-                          <span className='blog-dot'>•</span>
-                          <span className='blog-readtime'>
-                            {post.readTime} min read
+                          <spanclassName = 'blog-dot'>•</span>
+                          <spanclassName='blog-readtime'>
+                            {post.readTime} minread
                           </span>
                         </div>
-                        <h3 className='blog-title'>{post.title}</h3>
-                        <p className='blog-excerpt'>{post.excerpt}</p>
-                        <a href='/<blog' className='service-link'>
-                          Read on the blog →
+                        <h3className='blog-title'>{post.title}</h3>
+                        <pclassName='blog-excerpt'>{post.excerpt}</p>
+                        <ahref='/<blog' className='service-link'>
+                          Readonthe blog →
                         </a>
                       </div>
                     </article>
@@ -269,17 +247,17 @@ const HomePage: React.FC = () => {
           </section>
         </AnimatedSection>
 
-        <AnimatedSection animation='scale' delay={200}>
-          <section className='cta-section'>
-            <div className='container'>
-              <div className='cta-content'>
-                <h2>Ready to Transform Your Business?</h2>
+        <AnimatedSectionanimation = 'scale' delay={200}>
+          <sectionclassName='cta-section'>
+            <divclassName='container'>
+              <divclassName='cta-content'>
+                <h2>ReadytoTransform YourBusiness?</h2>
                 <p>
-                  Let's discuss how our technology solutions can drive your
+                  Let'sdiscusshow ourtechnologysolutions candriveyour
                   success.
                 </p>
-                <button className='btn btn-primary btn-large'>
-                  Contact Us Today
+                <buttonclassName='btnbtn-primarybtn-large'>
+                  ContactUsToday
                 </button>
               </div>
             </div>
@@ -290,4 +268,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+exportdefaultHomePage;

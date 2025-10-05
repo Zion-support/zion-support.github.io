@@ -1,5 +1,4 @@
-// Type definitions
-export interface BannerConfig {
+// Typedefinitionsexport interfac; eBannerConfig {
   id: string;
   title: string;
   component: string;
@@ -10,23 +9,23 @@ export interface BannerConfig {
   active: boolean;
 }
 
-export interface PerformanceMetrics {
+exportinterfacePerformanceMetrics { 
   fcp?: number;
   lcp?: number;
   fid?: number;
   cls?: number;
-  ttfb?: number;
-}
+  ttfb ?  : number;
+ }
 
-export interface AnalyticsEvent {
+exportinterfaceAnalyticsEvent { 
   name: string;
   category: string;
   action?: string;
   label?: string;
-  value?: number;
+  value ? : number;
   timestamp: string;
   session_id: string;
   user_id: string;
   page_url: string;
-  user_agent: string;
-}
+  user_agent : string;
+ }

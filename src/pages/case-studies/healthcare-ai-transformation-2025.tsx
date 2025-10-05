@@ -1,185 +1,176 @@
 import {
-  ArrowLeft,
+  ArrowLeft
   CheckCircle,
-  DollarSign,
-  Heart,
-  Target,
-  TrendingUp,
-  Users,
-  Zap,
+  DollarSign
+  Heart
+  Target
+  TrendingUp
+  Users
+  Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+importHeaderfrom '../../components/Header';
 
-const HealthcareAITransformation = () => {
+constHealthcareAITransformation = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Healthcare AI Transformation: $124M Saved, 3.8M Patients Served | Zion
-          Tech Group
+          HealthcareAITransformation: $124MSaved3.8MPatientsServed | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Major healthcare network achieves $124M cost savings and 87% faster patient processing through comprehensive AI transformation. 3.8M patients, 450 facilities, 96% satisfaction.'
+        <metaname = 'description'
+          content='Majorhealthcarenetwork achieves $124Mcostsavings and87% fasterpatientprocessing throughcomprehensiveAI transformation. 3.8Mpatients450facilities96% satisfaction.'
         />
-        <meta
-          name='keywords'
-          content='healthcare AI, medical AI transformation, patient care automation, healthcare cost reduction, clinical decision support'
+        <metaname = 'keywords'
+          content='healthcareAImedicalAItransformationpatientcareautomationhealthcarecostreductionclinicaldecisionsupport'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-dark'>
         <Header />
 
-        <article className='container mx-auto px-6 py-20'>
-          {/* Back Link */}
-          <Link
-            to='/case-studies'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <articleclassName='containermx-autopx-6py-20' > {/* BackLink */ }
+          <Linkto='/case-studies'
+            className='inline-flexitems-centertext-zion-cyanhover: text-zion-blue-lightmb-8transition-colors'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Case Studies
+            <ArrowLeftclassName='w-4 h-4mr-2' />
+            BacktoCase Studies
           </Link>
 
           {/* Header */}
-          <div className='max-w-5xl mx-auto mb-16'>
-            <div className='flex items-center gap-4 mb-6 flex-wrap'>
-              <span className='px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30'>
-                ✅ Completed • October 2025
+          <divclassName = 'max-w-5xlmx-automb-16'>
+            <divclassName='flexitems-centergap-4mb-6flex-wrap'>
+              <spanclassName='px-4py-2bg-green-500/20text-green-300rounded-fulltext-smfont-semiboldborderborder-green-500/30'>
+                ✅ Completed • October2025
               </span>
-              <span className='px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-semibold border border-red-500/30'>
+              <spanclassName='px-4py-2bg-red-500/20text-red-300rounded-fulltext-smfont-semiboldborderborder-red-500/30'>
                 🏥 Healthcare
               </span>
-              <span className='text-zion-slate-light'>
-                24-month transformation
+              <spanclassName='text-zion-slate-light'>
+                24-monthtransformation
               </span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Healthcare AI Transformation:
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-pink-400 to-blue-400 mt-2'>
-                $124M Saved, 3.8M Patients Served Better
+            <h1className='text-5xlmd: text-6xlfont-boldtext-whitemb-6leading-tight'>
+              HealthcareAITransformation:
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-red-400via-pink-400to-blue-400mt-2'>
+                $124MSaved3.8MPatientsServed Better
               </span>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed mb-8'>
-              How a major healthcare network with 450 facilities transformed
-              patient care, operational efficiency, and clinical outcomes
-              through enterprise AI—achieving 87% faster processing, $124M cost
-              savings, and 96% patient satisfaction while serving 3.8M patients
-              annually.
+            <pclassName = 'text-xltext-zion-slate-lightleading-relaxedmb-8'>
+              Howamajor healthcarenetworkwith 450facilitiestransformed
+              patientcareoperationalefficiencyandclinicaloutcomes
+              throughenterpriseAI—achieving87% fasterprocessing$124Mcostsavingsand96% patientsatisfactionwhile serving3.8Mpatientsannually.
             </p>
 
-            {/* Key Metrics Banner */}
-            <div className='grid md:grid-cols-4 gap-6'>
-              <div className='bg-green-900/40 rounded-xl p-6 border border-green-500/30 text-center'>
-                <div className='text-4xl font-bold text-green-400 mb-2'>
+            {/* KeyMetricsBanner */}
+            <divclassName = 'gridmd: grid-cols-4gap-6'>
+              <divclassName='bg-green-900/40rounded-xlp-6borderborder-green-500/30text-center'>
+                <divclassName='text-4xlfont-boldtext-green-400mb-2'>
                   $124M
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Annual Cost Savings
+                <divclassName='text-smtext-zion-slate-light'>
+                  AnnualCostSavings
                 </div>
               </div>
-              <div className='bg-blue-900/40 rounded-xl p-6 border border-blue-500/30 text-center'>
-                <div className='text-4xl font-bold text-blue-400 mb-2'>87%</div>
-                <div className='text-sm text-zion-slate-light'>
-                  Faster Processing
+              <divclassName='bg-blue-900/40rounded-xlp-6borderborder-blue-500/30text-center'>
+                <divclassName='text-4xlfont-boldtext-blue-400mb-2'>87%</div>
+                <divclassName='text-smtext-zion-slate-light'>
+                  FasterProcessing
                 </div>
               </div>
-              <div className='bg-pink-900/40 rounded-xl p-6 border border-pink-500/30 text-center'>
-                <div className='text-4xl font-bold text-pink-400 mb-2'>96%</div>
-                <div className='text-sm text-zion-slate-light'>
-                  Patient Satisfaction
+              <divclassName='bg-pink-900/40rounded-xlp-6borderborder-pink-500/30text-center'>
+                <divclassName='text-4xlfont-boldtext-pink-400mb-2'>96%</div>
+                <divclassName='text-smtext-zion-slate-light'>
+                  PatientSatisfaction
                 </div>
               </div>
-              <div className='bg-purple-900/40 rounded-xl p-6 border border-purple-500/30 text-center'>
-                <div className='text-4xl font-bold text-purple-400 mb-2'>
+              <divclassName='bg-purple-900/40rounded-xlp-6borderborder-purple-500/30text-center'>
+                <divclassName='text-4xlfont-boldtext-purple-400mb-2'>
                   3.8M
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Patients Served/Year
+                <divclassName='text-smtext-zion-slate-light'>
+                  PatientsServed/Year
                 </div>
               </div>
             </div>
           </div>
 
           {/* Content */}
-          <div className='max-w-5xl mx-auto space-y-12 text-zion-slate-light'>
-            {/* Client Profile */}
+          <divclassName = 'max-w-5xlmx-autospace-y-12text-zion-slate-light'>
+            {/* ClientProfile */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🏥 Client Profile
+              <h2className='text-3xlfont-boldtext-whitemb-6'>
+                🏥 ClientProfile
               </h2>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                <div className='grid md:grid-cols-2 gap-8'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-zion-cyan/30'>
+                <divclassName='gridmd: grid-cols-2gap-8'>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      Healthcare Network Overview
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
+                      HealthcareNetworkOverview
                     </h3>
-                    <ul className='space-y-2'>
+                    <ulclassName='space-y-2'>
                       <li>
-                        <strong className='text-zion-cyan'>Type:</strong>{' '}
-                        Integrated Healthcare Network
+                        <strongclassName='text-zion-cyan'>Type:</strong>{' '}
+                        IntegratedHealthcareNetwork
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Facilities:</strong>{' '}
-                        450+ (hospitals, clinics, urgent care)
+                        <strongclassName = 'text-zion-cyan'>Facilities: </strong>{' '}
+                        450+ (hospitalsclinicsurgentcare)
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>
-                          Annual Revenue:
-                        </strong>{' '}
+                        <strongclassName = 'text-zion-cyan'>
+                          AnnualRevenue: </strong>{' '}
                         $8.7B
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Employees:</strong>{' '}
-                        62,000+ healthcare professionals
+                        <strongclassName = 'text-zion-cyan'>Employees: </strong>{' '}
+                        62000+ healthcareprofessionals
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Patients:</strong>{' '}
-                        3.8M served annually
+                        <strongclassName = 'text-zion-cyan'>Patients: </strong>{' '}
+                        3.8Mservedannually
                       </li>
                       <li>
-                        <strong className='text-zion-cyan'>Coverage:</strong> 14
-                        states, urban & rural
+                        <strongclassName = 'text-zion-cyan'>Coverage: </strong> 14statesurban & rural
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
-                      Critical Challenges
+                    <h3className = 'text-xlfont-boldtext-whitemb-4'>
+                      CriticalChallenges
                     </h3>
-                    <ul className='space-y-2'>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 mt-1'>•</span>
-                        <span>Average wait times: 4.5 hours in ER</span>
+                    <ulclassName='space-y-2'>
+                      <liclassName='flexitems-startgap-2'>
+                        <spanclassName='text-red-400mt-1'>•</span>
+                        <span>Averagewaittimes: 4.5hoursin ER</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 mt-1'>•</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <spanclassName='text-red-400mt-1'>•</span>
                         <span>
-                          Claims processing: 28-day average turnaround
+                          Claimsprocessing: 28-dayaverageturnaround
                         </span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 mt-1'>•</span>
-                        <span>Administrative costs: $287M annually (32%)</span>
+                      <liclassName='flexitems-startgap-2'>
+                        <spanclassName='text-red-400mt-1'>•</span>
+                        <span>Administrativecosts: $287Mannually (32%)</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 mt-1'>•</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <spanclassName='text-red-400mt-1'>•</span>
                         <span>
-                          Readmission rate: 18.7% (above national avg)
+                          Readmissionrate: 18.7% (abovenationalavg)
                         </span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 mt-1'>•</span>
-                        <span>Patient satisfaction: 67% (industry: 78%)</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <spanclassName='text-red-400mt-1'>•</span>
+                        <span>Patientsatisfaction: 67% (industry: 78%)</span>
                       </li>
-                      <li className='flex items-start gap-2'>
-                        <span className='text-red-400 mt-1'>•</span>
+                      <liclassName = 'flexitems-startgap-2'>
+                        <spanclassName='text-red-400mt-1'>•</span>
                         <span>
-                          Staff burnout: 43% of nurses reporting severe stress
+                          Staffburnout: 43% ofnursesreporting severestress
                         </span>
                       </li>
                     </ul>
@@ -188,123 +179,115 @@ const HealthcareAITransformation = () => {
               </div>
             </section>
 
-            {/* Solution Overview */}
+            {/* SolutionOverview */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🎯 Comprehensive AI Transformation
+              <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                🎯 ComprehensiveAITransformation
               </h2>
-              <p className='text-lg leading-relaxed mb-6'>
-                Zion Tech Group deployed an integrated AI platform spanning
-                patient intake, clinical decision support, administrative
-                automation, and predictive care across all 450 facilities.
+              <pclassName='text-lgleading-relaxedmb-6'>
+                ZionTechGroup deployedanintegrated AIplatformspanning
+                patientintakeclinicaldecisionsupportadministrativeautomationandpredictivecare acrossall450 facilities.
               </p>
 
-              <div className='grid md:grid-cols-2 gap-6'>
-                <div className='bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4 flex items-center gap-2'>
-                    <Heart className='w-6 h-6 text-blue-400' />
-                    AI-Powered Patient Intake
+              <divclassName = 'gridmd: grid-cols-2gap-6'>
+                <divclassName='bg-gradient-to-brfrom-blue-900/40to-cyan-900/40rounded-xlp-6borderborder-blue-500/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-4flexitems-centergap-2'>
+                    <HeartclassName='w-6 h-6text-blue-400' />
+                    AI-PoweredPatientIntake
                   </h3>
-                  <p className='mb-4'>
-                    Intelligent intake system using NLP to automatically process
-                    patient information, insurance verification, and medical
-                    history—reducing registration time from 24 minutes to 3
-                    minutes.
+                  <pclassName='mb-4'>
+                    Intelligentintakesystem usingNLPto automaticallyprocesspatient informationinsuranceverificationandmedicalhistory—reducingregistrationtime from24minutes to3minutes.
                   </p>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>87% faster patient registration</span>
+                  <ulclassName = 'space-y-2text-sm'>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>87% fasterpatientregistration</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>98.4% insurance verification accuracy</span>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>98.4% insuranceverificationaccuracy</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>Zero paperwork—fully digital process</span>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>Zeropaperwork—fullydigitalprocess</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className='bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4 flex items-center gap-2'>
-                    <Zap className='w-6 h-6 text-purple-400' />
-                    Clinical Decision Support
+                <divclassName='bg-gradient-to-brfrom-purple-900/40to-pink-900/40rounded-xlp-6borderborder-purple-500/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-4flexitems-centergap-2'>
+                    <ZapclassName='w-6 h-6text-purple-400' />
+                    ClinicalDecisionSupport
                   </h3>
-                  <p className='mb-4'>
-                    AI-assisted diagnosis and treatment recommendations
-                    analyzing patient data, medical literature, and best
-                    practices to support physician decision-making.
+                  <pclassName='mb-4'>
+                    AI-assisteddiagnosisand treatmentrecommendationsanalyzing patientdatamedicalliteratureandbestpractices tosupportphysician decision-making.
                   </p>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>94% diagnostic accuracy improvement</span>
+                  <ulclassName = 'space-y-2text-sm'>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>94% diagnosticaccuracyimprovement</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>63% reduction in unnecessary tests</span>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>63% reductioninunnecessary tests</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
                       <span>
-                        Early detection of 12,000+ critical conditions
+                        Earlydetectionof 12000+ criticalconditions
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div className='bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4 flex items-center gap-2'>
-                    <Target className='w-6 h-6 text-green-400' />
-                    Administrative Automation
+                <divclassName = 'bg-gradient-to-brfrom-green-900/40to-teal-900/40rounded-xlp-6borderborder-green-500/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-4flexitems-centergap-2'>
+                    <TargetclassName='w-6 h-6text-green-400' />
+                    AdministrativeAutomation
                   </h3>
-                  <p className='mb-4'>
-                    Cognitive automation handling claims processing, billing,
-                    scheduling, and compliance— eliminating 78% of manual
-                    administrative work.
+                  <pclassName='mb-4'>
+                    Cognitiveautomationhandling claimsprocessingbilling
+                    schedulingandcompliance— eliminating78% ofmanualadministrative work.
                   </p>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>Claims processing: 28 days → 3.2 days</span>
+                  <ulclassName = 'space-y-2text-sm'>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>Claimsprocessing: 28days → 3.2days</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>$89M reduction in admin costs (72%)</span>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>$89Mreductionin admincosts (72%)</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>99.2% claims first-pass approval rate</span>
+                    <liclassName = 'flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>99.2% claimsfirst-passapprovalrate</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className='bg-gradient-to-br from-red-900/40 to-orange-900/40 rounded-xl p-6 border border-red-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4 flex items-center gap-2'>
-                    <Users className='w-6 h-6 text-red-400' />
-                    Predictive Care Management
+                <divclassName='bg-gradient-to-brfrom-red-900/40to-orange-900/40rounded-xlp-6borderborder-red-500/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-4flexitems-centergap-2'>
+                    <UsersclassName='w-6 h-6text-red-400' />
+                    PredictiveCareManagement
                   </h3>
-                  <p className='mb-4'>
-                    ML models predicting patient risks, readmissions, and care
-                    needs—enabling proactive interventions and personalized care
+                  <pclassName='mb-4'>
+                    MLmodelspredicting patientrisksreadmissionsandcareneeds—enablingproactiveinterventions andpersonalizedcare
                     plans.
                   </p>
-                  <ul className='space-y-2 text-sm'>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>58% reduction in readmissions (18.7% → 7.8%)</span>
+                  <ulclassName = 'space-y-2text-sm'>
+                    <liclassName='flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>58% reductioninreadmissions (18.7% → 7.8%)</span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
+                    <liclassName = 'flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
                       <span>
-                        Early intervention for 34,000+ high-risk patients
+                        Earlyinterventionfor 34000+ high-riskpatients
                       </span>
                     </li>
-                    <li className='flex items-center gap-2'>
-                      <CheckCircle className='w-4 h-4 text-green-400' />
-                      <span>$35M avoided through preventive care</span>
+                    <liclassName = 'flexitems-centergap-2'>
+                      <CheckCircle,className='w-4 h-4text-green-400' />
+                      <span>$35Mavoidedthrough preventivecare</span>
                     </li>
                   </ul>
                 </div>
@@ -313,104 +296,104 @@ const HealthcareAITransformation = () => {
 
             {/* Results */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                📊 Transformational Results
+              <h2className='text-3xlfont-boldtext-whitemb-6'>
+                📊 TransformationalResults
               </h2>
 
-              <div className='bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-green-500/40 mb-8'>
-                <h3 className='text-2xl font-bold text-white mb-6 text-center'>
-                  💰 Financial Impact (Annual)
+              <divclassName='bg-gradient-to-rfrom-green-900/40to-blue-900/40rounded-xlp-8border-2border-green-500/40mb-8'>
+                <h3className='text-2xlfont-boldtext-whitemb-6text-center'>
+                  💰 FinancialImpact (Annual)
                 </h3>
-                <div className='grid md:grid-cols-3 gap-6'>
-                  <div className='text-center'>
-                    <div className='text-5xl font-bold text-green-400 mb-2'>
+                <divclassName = 'gridmd: grid-cols-3gap-6'>
+                  <divclassName='text-center'>
+                    <divclassName='text-5xlfont-boldtext-green-400mb-2'>
                       $124M
                     </div>
-                    <div className='text-lg text-white font-semibold mb-1'>
-                      Total Savings
+                    <divclassName='text-lgtext-whitefont-semiboldmb-1'>
+                      TotalSavings
                     </div>
-                    <div className='text-sm text-zion-slate-light'>
-                      14.3% cost reduction
+                    <divclassName='text-smtext-zion-slate-light'>
+                      14.3% costreduction
                     </div>
                   </div>
-                  <div className='text-center'>
-                    <div className='text-5xl font-bold text-blue-400 mb-2'>
+                  <divclassName='text-center'>
+                    <divclassName='text-5xlfont-boldtext-blue-400mb-2'>
                       $89M
                     </div>
-                    <div className='text-lg text-white font-semibold mb-1'>
-                      Admin Cost Reduction
+                    <divclassName='text-lgtext-whitefont-semiboldmb-1'>
+                      AdminCostReduction
                     </div>
-                    <div className='text-sm text-zion-slate-light'>
-                      72% efficiency gain
+                    <divclassName='text-smtext-zion-slate-light'>
+                      72% efficiencygain
                     </div>
                   </div>
-                  <div className='text-center'>
-                    <div className='text-5xl font-bold text-cyan-400 mb-2'>
+                  <divclassName='text-center'>
+                    <divclassName='text-5xlfont-boldtext-cyan-400mb-2'>
                       $35M
                     </div>
-                    <div className='text-lg text-white font-semibold mb-1'>
-                      Preventive Care Savings
+                    <divclassName='text-lgtext-whitefont-semiboldmb-1'>
+                      PreventiveCareSavings
                     </div>
-                    <div className='text-sm text-zion-slate-light'>
-                      Readmission avoidance
+                    <divclassName='text-smtext-zion-slate-light'>
+                      Readmissionavoidance
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className='grid md:grid-cols-2 gap-6'>
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4'>
-                    ⚡ Operational Efficiency
+              <divclassName='gridmd:grid-cols-2gap-6'>
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-blue-500/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-4'>
+                    ⚡ OperationalEfficiency
                   </h3>
-                  <ul className='space-y-3'>
-                    <li className='flex justify-between'>
-                      <span>Patient Registration Time</span>
-                      <span className='text-green-400 font-bold'>87% ↓</span>
+                  <ulclassName='space-y-3'>
+                    <liclassName='flexjustify-between'>
+                      <span>PatientRegistrationTime</span>
+                      <spanclassName='text-green-400font-bold'>87% ↓</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>ER Wait Times</span>
-                      <span className='text-green-400 font-bold'>64% ↓</span>
+                    <liclassName='flexjustify-between'>
+                      <span>ERWaitTimes</span>
+                      <spanclassName='text-green-400font-bold'>64% ↓</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Claims Processing Time</span>
-                      <span className='text-green-400 font-bold'>89% ↓</span>
+                    <liclassName='flexjustify-between'>
+                      <span>ClaimsProcessingTime</span>
+                      <spanclassName='text-green-400font-bold'>89% ↓</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Administrative Work</span>
-                      <span className='text-green-400 font-bold'>78% ↓</span>
+                    <liclassName='flexjustify-between'>
+                      <span>AdministrativeWork</span>
+                      <spanclassName='text-green-400font-bold'>78% ↓</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Staff Productivity</span>
-                      <span className='text-blue-400 font-bold'>142% ↑</span>
+                    <liclassName='flexjustify-between'>
+                      <span>StaffProductivity</span>
+                      <spanclassName='text-blue-400font-bold'>142% ↑</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30'>
-                  <h3 className='text-xl font-bold text-white mb-4'>
-                    ❤️ Patient Care Quality
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-pink-500/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-4'>
+                    ❤️ PatientCareQuality
                   </h3>
-                  <ul className='space-y-3'>
-                    <li className='flex justify-between'>
-                      <span>Patient Satisfaction</span>
-                      <span className='text-pink-400 font-bold'>67% → 96%</span>
+                  <ulclassName='space-y-3'>
+                    <liclassName='flexjustify-between'>
+                      <span>PatientSatisfaction</span>
+                      <spanclassName='text-pink-400font-bold'>67% → 96%</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Readmission Rate</span>
-                      <span className='text-green-400 font-bold'>58% ↓</span>
+                    <liclassName='flexjustify-between'>
+                      <span>ReadmissionRate</span>
+                      <spanclassName='text-green-400font-bold'>58% ↓</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Diagnostic Accuracy</span>
-                      <span className='text-blue-400 font-bold'>94% ↑</span>
+                    <liclassName='flexjustify-between'>
+                      <span>DiagnosticAccuracy</span>
+                      <spanclassName='text-blue-400font-bold'>94% ↑</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Early Detection Events</span>
-                      <span className='text-purple-400 font-bold'>12,000+</span>
+                    <liclassName='flexjustify-between'>
+                      <span>EarlyDetectionEvents</span>
+                      <spanclassName='text-purple-400font-bold'>12000+</span>
                     </li>
-                    <li className='flex justify-between'>
-                      <span>Staff Burnout</span>
-                      <span className='text-green-400 font-bold'>67% ↓</span>
+                    <liclassName = 'flexjustify-between'>
+                      <span>StaffBurnout</span>
+                      <spanclassName='text-green-400font-bold'>67% ↓</span>
                     </li>
                   </ul>
                 </div>
@@ -418,54 +401,49 @@ const HealthcareAITransformation = () => {
             </section>
 
             {/* Testimonial */}
-            <section className='bg-gradient-to-r from-blue-900/60 to-purple-900/60 rounded-2xl p-10 border-2 border-blue-500/40'>
-              <div className='text-center mb-6'>
-                <div className='text-6xl mb-4'>💬</div>
-                <p className='text-2xl text-white font-semibold italic mb-6'>
-                  "This AI transformation has been nothing short of
-                  revolutionary for our network. We're providing better care,
-                  faster service, and spending $124M less per year. Our staff
-                  are happier, our patients are healthier, and our organization
-                  is thriving. Zion Tech Group didn't just deliver
-                  technology—they transformed our entire operation."
+            <sectionclassName='bg-gradient-to-rfrom-blue-900/60to-purple-900/60rounded-2xlp-10border-2border-blue-500/40'>
+              <divclassName='text-centermb-6'>
+                <divclassName='text-6xlmb-4'>💬</div>
+                <pclassName='text-2xltext-whitefont-semibolditalicmb-6'>
+                  "ThisAItransformation hasbeennothing shortofrevolutionary forournetwork. We'reprovidingbetter care
+                  fasterserviceandspending $124Mlessper year. Ourstaffare happierourpatientsare healthierandourorganization
+                  isthriving. ZionTechGroup didn'tjustdeliver
+                  technology—theytransformedour entireoperation."
                 </p>
-                <div className='text-white font-bold text-lg'>
-                  Dr. Maria Santos
+                <divclassName = 'text-whitefont-boldtext-lg'>
+                  Dr. MariaSantos
                 </div>
-                <div className='text-zion-slate-light'>
-                  Chief Medical Officer & VP of Operations
+                <divclassName='text-zion-slate-light'>
+                  ChiefMedicalOfficer & VPofOperations
                 </div>
-                <div className='text-zion-cyan text-sm mt-1'>
-                  Major Healthcare Network
+                <divclassName='text-zion-cyantext-smmt-1'>
+                  MajorHealthcareNetwork
                 </div>
               </div>
             </section>
 
-            {/* Call to Action */}
-            <section className='bg-gradient-to-r from-red-900/60 to-pink-900/60 rounded-2xl p-12 border-2 border-red-500/40 text-center'>
-              <Heart className='w-16 h-16 text-red-400 mx-auto mb-6' />
-              <h2 className='text-4xl font-bold text-white mb-6'>
-                Transform Your Healthcare Organization
+            {/* CalltoAction */}
+            <sectionclassName='bg-gradient-to-rfrom-red-900/60to-pink-900/60rounded-2xlp-12border-2border-red-500/40text-center'>
+              <HeartclassName='w-16h-16text-red-400mx-automb-6' />
+              <h2className='text-4xlfont-boldtext-whitemb-6'>
+                TransformYourHealthcare Organization
               </h2>
-              <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>
-                Ready to improve patient outcomes, reduce costs, and empower
-                your healthcare professionals with AI? Schedule a consultation
-                to explore how we can transform your organization.
+              <pclassName='text-xltext-zion-slate-lightmb-8max-w-3xlmx-auto'>
+                Readytoimprove patientoutcomesreducecostsandempoweryour healthcareprofessionalswith AI? Scheduleaconsultation
+                toexplorehow wecantransform yourorganization.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center justify-center gap-2 bg-red-500 hover:bg-red-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg'
+              <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+                <Linkto='/contact'
+                  className='inline-flexitems-centerjustify-centergap-2bg-red-500hover:bg-red-600text-whitepx-8py-4rounded-lgfont-semiboldtext-lgtransition-allduration-300hover:scale-105shadow-lg'
                 >
-                  <Heart className='w-5 h-5' />
-                  Schedule Healthcare AI Consultation
+                  <HeartclassName='w-5 h-5' />
+                  ScheduleHealthcareAI Consultation
                 </Link>
-                <Link
-                  to='/case-studies'
-                  className='inline-flex items-center justify-center gap-2 border-2 border-red-400 text-red-300 hover:bg-red-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105'
+                <Linkto='/case-studies'
+                  className='inline-flexitems-centerjustify-centergap-2border-2border-red-400text-red-300hover:bg-red-500/20px-8py-4rounded-lgfont-semiboldtext-lgtransition-allduration-300hover:scale-105'
                 >
-                  <TrendingUp className='w-5 h-5' />
-                  View More Success Stories
+                  <TrendingUpclassName='w-5 h-5' />
+                  ViewMoreSuccess Stories
                 </Link>
               </div>
             </section>
@@ -476,4 +454,4 @@ const HealthcareAITransformation = () => {
   );
 };
 
-export default HealthcareAITransformation;
+exportdefaultHealthcareAITransformation;

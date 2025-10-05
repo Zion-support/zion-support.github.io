@@ -1,300 +1,286 @@
 import {
-  ArrowLeft,
+  ArrowLeft
   CheckCircle,
-  Clock,
-  DollarSign,
-  FileText,
-  TrendingUp,
-  Zap,
+  Clock
+  DollarSign
+  FileText
+  TrendingUp
+  Zap
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+importHeaderfrom '../../components/Header';
 
-const AIIntelligentDocumentProcessing = () => {
+constAIIntelligentDocumentProcessing = () => { 
   return (
     <>
       <Helmet>
         <title>
-          AI Intelligent Document Processing | Automate 95% of Document
-          Workflows | Zion Tech Group
+          AIIntelligentDocument Processing | Automate95% ofDocumentWorkflows | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Transform document processing with AI achieving 98.5% accuracy, 95% automation, and $2.8M+ annual savings. Extract, classify, and process any document type at scale.'
+        <metaname = 'description'
+          content='Transformdocumentprocessing withAIachieving 98.5% accuracy95% automationand $2.8M+ annualsavings. Extractclassifyandprocessany documenttypeat scale.'
         />
-        <meta
-          name='keywords'
-          content='intelligent document processing, IDP, OCR, document AI, document automation, invoice processing, contract analysis, GPT-4 Vision, Claude Vision'
+        <metaname = 'keywords'
+          content='intelligentdocumentprocessingIDPOCRdocumentAIdocumentautomationinvoiceprocessingcontractanalysisGPT-4VisionClaudeVision'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-dark'>
         <Header />
 
-        <div className='container mx-auto px-6 py-20'>
-          {/* Back Link */}
-          <Link
-            to='/services'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <divclassName='containermx-autopx-6py-20' > {/* BackLink */ }
+          <Linkto='/services'
+            className='inline-flexitems-centertext-zion-cyanhover: text-zion-blue-lightmb-8transition-colors'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Services
+            <ArrowLeftclassName='w-4 h-4mr-2' />
+            BacktoServices
           </Link>
 
-          {/* Hero Section */}
-          <div className='max-w-5xl mx-auto text-center mb-16'>
-            <div className='inline-flex items-center px-6 py-3 rounded-full bg-blue-500/20 text-blue-300 text-sm font-semibold mb-8 border border-blue-500/30'>
-              <FileText className='w-5 h-5 mr-2' />
-              🚀 Enterprise Document AI • October 2025
+          {/* HeroSection */}
+          <divclassName = 'max-w-5xlmx-autotext-centermb-16'>
+            <divclassName='inline-flexitems-centerpx-6py-3rounded-fullbg-blue-500/20text-blue-300text-smfont-semiboldmb-8borderborder-blue-500/30'>
+              <FileTextclassName='w-5 h-5mr-2' />
+              🚀 EnterpriseDocumentAI • October2025
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              AI Intelligent Document Processing
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400 mt-2'>
-                Automate 95% of Document Workflows
+            <h1className='text-5xlmd: text-6xlfont-boldtext-whitemb-6leading-tight'>
+              AIIntelligentDocument Processing
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-blue-400to-cyan-400mt-2'>
+                Automate95% ofDocumentWorkflows
               </span>
             </h1>
 
-            <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto leading-relaxed'>
-              Transform manual document processing with AI achieving 98.5%
-              accuracy, 95% automation, and $2.8M+ annual savings. Extract,
-              classify, and process any document type at scale with GPT-4 Vision
-              and Claude AI.
+            <pclassName='text-xltext-zion-slate-lightmb-8max-w-3xlmx-autoleading-relaxed'>
+              Transformmanualdocument processingwithAI achieving98.5%
+              accuracy95% automationand $2.8M+ annualsavings. Extract
+              classifyandprocessany documenttypeat scalewithGPT-4Visionand ClaudeAI.
             </p>
 
-            {/* Quick Stats */}
-            <div className='grid md:grid-cols-4 gap-6 mb-8'>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30'>
-                <div className='text-3xl font-bold text-blue-400 mb-2'>
+            {/* QuickStats */}
+            <divclassName = 'gridmd: grid-cols-4gap-6mb-8'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-blue-400/30'>
+                <divclassName='text-3xlfont-boldtext-blue-400mb-2'>
                   98.5%
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Extraction Accuracy
+                <divclassName='text-smtext-zion-slate-light'>
+                  ExtractionAccuracy
                 </div>
               </div>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30'>
-                <div className='text-3xl font-bold text-cyan-400 mb-2'>95%</div>
-                <div className='text-sm text-zion-slate-light'>
-                  Process Automation
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-cyan-400/30'>
+                <divclassName='text-3xlfont-boldtext-cyan-400mb-2'>95%</div>
+                <divclassName='text-smtext-zion-slate-light'>
+                  ProcessAutomation
                 </div>
               </div>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/30'>
-                <div className='text-3xl font-bold text-green-400 mb-2'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-green-400/30'>
+                <divclassName='text-3xlfont-boldtext-green-400mb-2'>
                   $2.8M+
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Annual Savings
+                <divclassName='text-smtext-zion-slate-light'>
+                  AnnualSavings
                 </div>
               </div>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30'>
-                <div className='text-3xl font-bold text-purple-400 mb-2'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-purple-400/30'>
+                <divclassName='text-3xlfont-boldtext-purple-400mb-2'>
                   10x
                 </div>
-                <div className='text-sm text-zion-slate-light'>
-                  Faster Processing
+                <divclassName='text-smtext-zion-slate-light'>
+                  FasterProcessing
                 </div>
               </div>
             </div>
 
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 shadow-lg'
+            <divclassName='flexflex-colsm:flex-rowgap-4justify-center'>
+              <Linkto='/contact'
+                className='bg-blue-600hover:bg-blue-700text-whitepx-8py-4rounded-lgfont-semiboldtransition-allduration-300hover:scale-105inline-flexitems-centerjustify-centergap-2shadow-lg'
               >
-                <Zap className='w-5 h-5' />
-                Start Free Trial
+                <ZapclassName='w-5 h-5' />
+                StartFreeTrial
               </Link>
-              <Link
-                to='/contact'
-                className='border-2 border-blue-400 text-blue-400 hover:bg-blue-400/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105'
+              <Linkto='/contact'
+                className='border-2border-blue-400text-blue-400hover:bg-blue-400/10px-8py-4rounded-lgfont-semiboldtransition-allduration-300hover:scale-105'
               >
-                Schedule Demo
+                ScheduleDemo
               </Link>
             </div>
           </div>
 
           {/* Problem/Solution */}
-          <div className='max-w-6xl mx-auto mb-20'>
-            <div className='grid md:grid-cols-2 gap-8'>
-              <div className='bg-red-900/20 rounded-2xl p-8 border border-red-500/30'>
-                <h2 className='text-2xl font-bold text-white mb-4'>
-                  ❌ The Document Processing Crisis
+          <divclassName = 'max-w-6xlmx-automb-20'>
+            <divclassName='gridmd: grid-cols-2gap-8'>
+              <divclassName='bg-red-900/20rounded-2xlp-8borderborder-red-500/30'>
+                <h2className='text-2xlfont-boldtext-whitemb-4'>
+                  ❌ TheDocumentProcessing Crisis
                 </h2>
-                <ul className='space-y-3 text-zion-slate-light'>
-                  <li className='flex items-start gap-2'>
-                    <span className='text-red-400 mt-1'>•</span>
+                <ulclassName='space-y-3text-zion-slate-light'>
+                  <liclassName='flexitems-startgap-2'>
+                    <spanclassName='text-red-400mt-1'>•</span>
                     <span>
-                      Manual data entry costing $50-80 per hour per employee
+                      Manualdataentry costing $50-80perhour peremployee
                     </span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <span className='text-red-400 mt-1'>•</span>
-                    <span>23% error rate in manual document processing</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <spanclassName='text-red-400mt-1'>•</span>
+                    <span>23% errorratein manualdocumentprocessing</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <span className='text-red-400 mt-1'>•</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <spanclassName='text-red-400mt-1'>•</span>
                     <span>
-                      3-7 day processing times for invoices and contracts
+                      3-7dayprocessing timesforinvoices andcontracts
                     </span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <span className='text-red-400 mt-1'>•</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <spanclassName='text-red-400mt-1'>•</span>
                     <span>
-                      Bottlenecks in AP, procurement, and legal workflows
+                      Bottlenecksin APprocurementandlegalworkflows
                     </span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <span className='text-red-400 mt-1'>•</span>
-                    <span>Compliance risks from missed information</span>
+                  <liclassName = 'flexitems-startgap-2'>
+                    <spanclassName='text-red-400mt-1'>•</span>
+                    <span>Compliancerisksfrom missedinformation</span>
                   </li>
                 </ul>
               </div>
 
-              <div className='bg-green-900/20 rounded-2xl p-8 border border-green-500/30'>
-                <h2 className='text-2xl font-bold text-white mb-4'>
-                  ✅ Our AI-Powered Solution
+              <divclassName='bg-green-900/20rounded-2xlp-8borderborder-green-500/30'>
+                <h2className='text-2xlfont-boldtext-whitemb-4'>
+                  ✅ OurAI-PoweredSolution
                 </h2>
-                <ul className='space-y-3 text-zion-slate-light'>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                    <span>98.5% accuracy with GPT-4 Vision + Claude AI</span>
+                <ulclassName='space-y-3text-zion-slate-light'>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                    <span>98.5% accuracywithGPT-4Vision + ClaudeAI</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                    <span>95% automation reducing manual work by 10x</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                    <span>95% automationreducingmanual workby10x</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                    <span>Sub-5-second processing for most document types</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                    <span>Sub-5-secondprocessingfor mostdocumenttypes</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
                     <span>
-                      Seamless integration with existing ERP/CRM systems
+                      Seamlessintegrationwith existingERP/CRMsystems
                     </span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
-                    <span>100% audit trail and compliance tracking</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400mt-1flex-shrink-0' />
+                    <span>100% audittrailand compliancetracking</span>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Core Capabilities */}
-          <div className='max-w-6xl mx-auto mb-20'>
-            <h2 className='text-4xl font-bold text-white mb-12 text-center'>
-              🎯 Core Capabilities
+          {/* CoreCapabilities */}
+          <divclassName='max-w-6xlmx-automb-20'>
+            <h2className='text-4xlfont-boldtext-whitemb-12text-center'>
+              🎯 CoreCapabilities
             </h2>
-            <div className='grid md:grid-cols-3 gap-8'>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30 hover:scale-105 transition-all'>
-                <div className='bg-blue-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-blue-500/30'>
-                  <FileText className='w-8 h-8 text-blue-400' />
+            <divclassName='gridmd: grid-cols-3gap-8'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-blue-400/30hover:scale-105transition-all'>
+                <divclassName='bg-blue-500/20w-16h-16rounded-lgflexitems-centerjustify-centermb-6borderborder-blue-500/30'>
+                  <FileTextclassName='w-8 h-8text-blue-400' />
                 </div>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Intelligent Extraction
+                <h3className='text-xlfont-boldtext-whitemb-4'>
+                  IntelligentExtraction
                 </h3>
-                <p className='text-zion-slate-light mb-4'>
-                  Extract structured data from any document format—invoices,
-                  contracts, forms, receipts, emails, and more. Handles
-                  handwriting, poor scans, and complex layouts.
+                <pclassName='text-zion-slate-lightmb-4'>
+                  Extractstructureddata fromanydocument format—invoices
+                  contractsformsreceiptsemailsandmore. Handleshandwritingpoorscansandcomplexlayouts.
                 </p>
-                <ul className='space-y-2 text-sm text-zion-slate-light'>
-                  <li>• 150+ supported document types</li>
-                  <li>• Multi-language support (95+ languages)</li>
-                  <li>• Table and checkbox extraction</li>
-                  <li>• Signature and stamp detection</li>
+                <ulclassName = 'space-y-2text-smtext-zion-slate-light'>
+                  <li>• 150+ supporteddocumenttypes</li>
+                  <li>• Multi-languagesupport (95+ languages)</li>
+                  <li>• Tableandcheckbox extraction</li>
+                  <li>• Signatureandstamp detection</li>
                 </ul>
               </div>
 
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-purple-400/30 hover:scale-105 transition-all'>
-                <div className='bg-purple-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-purple-500/30'>
-                  <Zap className='w-8 h-8 text-purple-400' />
+              <divclassName = 'bg-white/5backdrop-blur-smrounded-xlp-8borderborder-purple-400/30hover: scale-105transition-all'>
+                <divclassName='bg-purple-500/20w-16h-16rounded-lgflexitems-centerjustify-centermb-6borderborder-purple-500/30'>
+                  <ZapclassName='w-8 h-8text-purple-400' />
                 </div>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Smart Classification
+                <h3className='text-xlfont-boldtext-whitemb-4'>
+                  SmartClassification
                 </h3>
-                <p className='text-zion-slate-light mb-4'>
-                  Automatically classify and route documents to appropriate
-                  workflows. AI learns your document types and routing rules,
-                  improving accuracy over time.
+                <pclassName='text-zion-slate-lightmb-4'>
+                  Automaticallyclassifyand routedocumentsto appropriateworkflows. AIlearnsyour documenttypesand routingrules
+                  improvingaccuracyover time.
                 </p>
-                <ul className='space-y-2 text-sm text-zion-slate-light'>
-                  <li>• 99.2% classification accuracy</li>
-                  <li>• Custom taxonomy support</li>
-                  <li>• Automatic workflow routing</li>
-                  <li>• Confidence-based human review</li>
+                <ulclassName = 'space-y-2text-smtext-zion-slate-light'>
+                  <li>• 99.2% classificationaccuracy</li>
+                  <li>• Customtaxonomysupport</li>
+                  <li>• Automaticworkflowrouting</li>
+                  <li>• Confidence-basedhumanreview</li>
                 </ul>
               </div>
 
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30 hover:scale-105 transition-all'>
-                <div className='bg-green-500/20 w-16 h-16 rounded-lg flex items-center justify-center mb-6 border border-green-500/30'>
-                  <CheckCircle className='w-8 h-8 text-green-400' />
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-green-400/30hover: scale-105transition-all'>
+                <divclassName='bg-green-500/20w-16h-16rounded-lgflexitems-centerjustify-centermb-6borderborder-green-500/30'>
+                  <CheckCircle,className='w-8 h-8text-green-400' />
                 </div>
-                <h3 className='text-xl font-bold text-white mb-4'>
+                <h3className='text-xlfont-boldtext-whitemb-4'>
                   Validation & Enrichment
                 </h3>
-                <p className='text-zion-slate-light mb-4'>
-                  Validate extracted data against business rules, databases, and
-                  external sources. Enrich documents with additional context and
+                <pclassName='text-zion-slate-lightmb-4'>
+                  Validateextracteddata againstbusinessrulesdatabasesandexternalsources. Enrichdocumentswith additionalcontextand
                   metadata.
                 </p>
-                <ul className='space-y-2 text-sm text-zion-slate-light'>
-                  <li>• Real-time validation rules</li>
-                  <li>• Database lookups and matching</li>
-                  <li>• Duplicate detection</li>
-                  <li>• Auto-correction and suggestions</li>
+                <ulclassName = 'space-y-2text-smtext-zion-slate-light'>
+                  <li>• Real-timevalidationrules</li>
+                  <li>• Databaselookupsand matching</li>
+                  <li>• Duplicatedetection</li>
+                  <li>• Auto-correctionandsuggestions</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Use Cases */}
-          <div className='max-w-6xl mx-auto mb-20'>
-            <h2 className='text-4xl font-bold text-white mb-12 text-center'>
-              💼 Enterprise Use Cases
+          {/* UseCases */}
+          <divclassName='max-w-6xlmx-automb-20'>
+            <h2className='text-4xlfont-boldtext-whitemb-12text-center'>
+              💼 EnterpriseUseCases
             </h2>
-            <div className='space-y-6'>
-              <div className='bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-xl p-8 border border-blue-500/30'>
-                <div className='flex items-start gap-6'>
-                  <div className='bg-blue-500/20 p-4 rounded-lg border border-blue-500/30'>
-                    <DollarSign className='w-8 h-8 text-blue-400' />
+            <divclassName='space-y-6'>
+              <divclassName='bg-gradient-to-rfrom-blue-900/40to-cyan-900/40rounded-xlp-8borderborder-blue-500/30'>
+                <divclassName='flexitems-startgap-6'>
+                  <divclassName='bg-blue-500/20p-4rounded-lgborderborder-blue-500/30'>
+                    <DollarSignclassName='w-8 h-8text-blue-400' />
                   </div>
-                  <div className='flex-1'>
-                    <h3 className='text-2xl font-bold text-white mb-3'>
-                      Accounts Payable Automation
+                  <divclassName='flex-1'>
+                    <h3className='text-2xlfont-boldtext-whitemb-3'>
+                      AccountsPayableAutomation
                     </h3>
-                    <p className='text-zion-slate-light mb-4'>
-                      Process invoices 10x faster with 98% accuracy. Extract
-                      vendor, line items, PO matching, GL coding, and approval
-                      routing automatically. Reduce processing costs from $15-20
-                      per invoice to under $1.
+                    <pclassName='text-zion-slate-lightmb-4'>
+                      Processinvoices10x fasterwith98% accuracy. ExtractvendorlineitemsPOmatchingGLcodingandapprovalrouting automatically. Reduceprocessingcosts from $15-20perinvoice tounder $1.
                     </p>
-                    <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                      <div className='bg-blue-900/30 rounded-lg p-3 border border-blue-500/20'>
-                        <div className='font-bold text-blue-400 mb-1'>
+                    <divclassName = 'gridmd: grid-cols-3gap-4text-sm'>
+                      <divclassName='bg-blue-900/30rounded-lgp-3borderborder-blue-500/20'>
+                        <divclassName='font-boldtext-blue-400mb-1'>
                           92% Faster
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Invoice Processing
+                        <divclassName='text-zion-slate-light'>
+                          InvoiceProcessing
                         </div>
                       </div>
-                      <div className='bg-blue-900/30 rounded-lg p-3 border border-blue-500/20'>
-                        <div className='font-bold text-blue-400 mb-1'>
-                          $2.1M Saved
+                      <divclassName='bg-blue-900/30rounded-lgp-3borderborder-blue-500/20'>
+                        <divclassName='font-boldtext-blue-400mb-1'>
+                          $2.1MSaved
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Annually (per 100K invoices)
+                        <divclassName='text-zion-slate-light'>
+                          Annually (per100Kinvoices)
                         </div>
                       </div>
-                      <div className='bg-blue-900/30 rounded-lg p-3 border border-blue-500/20'>
-                        <div className='font-bold text-blue-400 mb-1'>
+                      <divclassName = 'bg-blue-900/30rounded-lgp-3borderborder-blue-500/20'>
+                        <divclassName='font-boldtext-blue-400mb-1'>
                           99.1% Touchless
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Processing Rate
+                        <divclassName='text-zion-slate-light'>
+                          ProcessingRate
                         </div>
                       </div>
                     </div>
@@ -302,44 +288,42 @@ const AIIntelligentDocumentProcessing = () => {
                 </div>
               </div>
 
-              <div className='bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-xl p-8 border border-purple-500/30'>
-                <div className='flex items-start gap-6'>
-                  <div className='bg-purple-500/20 p-4 rounded-lg border border-purple-500/30'>
-                    <FileText className='w-8 h-8 text-purple-400' />
+              <divclassName='bg-gradient-to-rfrom-purple-900/40to-pink-900/40rounded-xlp-8borderborder-purple-500/30'>
+                <divclassName='flexitems-startgap-6'>
+                  <divclassName='bg-purple-500/20p-4rounded-lgborderborder-purple-500/30'>
+                    <FileTextclassName='w-8 h-8text-purple-400' />
                   </div>
-                  <div className='flex-1'>
-                    <h3 className='text-2xl font-bold text-white mb-3'>
-                      Contract Intelligence
+                  <divclassName='flex-1'>
+                    <h3className='text-2xlfont-boldtext-whitemb-3'>
+                      ContractIntelligence
                     </h3>
-                    <p className='text-zion-slate-light mb-4'>
-                      Extract key terms, obligations, dates, and risks from
-                      contracts automatically. Track renewals, compliance
-                      requirements, and financial commitments across thousands
-                      of agreements.
+                    <pclassName='text-zion-slate-lightmb-4'>
+                      Extractkeytermsobligationsdatesandrisksfrom
+                      contractsautomatically. Trackrenewalscompliancerequirementsandfinancialcommitments acrossthousandsof agreements.
                     </p>
-                    <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                      <div className='bg-purple-900/30 rounded-lg p-3 border border-purple-500/20'>
-                        <div className='font-bold text-purple-400 mb-1'>
+                    <divclassName = 'gridmd: grid-cols-3gap-4text-sm'>
+                      <divclassName='bg-purple-900/30rounded-lgp-3borderborder-purple-500/20'>
+                        <divclassName='font-boldtext-purple-400mb-1'>
                           87% Faster
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Contract Review
+                        <divclassName='text-zion-slate-light'>
+                          ContractReview
                         </div>
                       </div>
-                      <div className='bg-purple-900/30 rounded-lg p-3 border border-purple-500/20'>
-                        <div className='font-bold text-purple-400 mb-1'>
-                          $890K Saved
+                      <divclassName='bg-purple-900/30rounded-lgp-3borderborder-purple-500/20'>
+                        <divclassName='font-boldtext-purple-400mb-1'>
+                          $890KSaved
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Legal Review Costs
+                        <divclassName='text-zion-slate-light'>
+                          LegalReviewCosts
                         </div>
                       </div>
-                      <div className='bg-purple-900/30 rounded-lg p-3 border border-purple-500/20'>
-                        <div className='font-bold text-purple-400 mb-1'>
-                          Zero Missed
+                      <divclassName='bg-purple-900/30rounded-lgp-3borderborder-purple-500/20'>
+                        <divclassName='font-boldtext-purple-400mb-1'>
+                          ZeroMissed
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Renewal Deadlines
+                        <divclassName='text-zion-slate-light'>
+                          RenewalDeadlines
                         </div>
                       </div>
                     </div>
@@ -347,44 +331,44 @@ const AIIntelligentDocumentProcessing = () => {
                 </div>
               </div>
 
-              <div className='bg-gradient-to-r from-green-900/40 to-teal-900/40 rounded-xl p-8 border border-green-500/30'>
-                <div className='flex items-start gap-6'>
-                  <div className='bg-green-500/20 p-4 rounded-lg border border-green-500/30'>
-                    <Clock className='w-8 h-8 text-green-400' />
+              <divclassName='bg-gradient-to-rfrom-green-900/40to-teal-900/40rounded-xlp-8borderborder-green-500/30'>
+                <divclassName='flexitems-startgap-6'>
+                  <divclassName='bg-green-500/20p-4rounded-lgborderborder-green-500/30'>
+                    <ClockclassName='w-8 h-8text-green-400' />
                   </div>
-                  <div className='flex-1'>
-                    <h3 className='text-2xl font-bold text-white mb-3'>
-                      Customer Onboarding
+                  <divclassName='flex-1'>
+                    <h3className='text-2xlfont-boldtext-whitemb-3'>
+                      CustomerOnboarding
                     </h3>
-                    <p className='text-zion-slate-light mb-4'>
-                      Accelerate KYC, credit checks, and compliance verification
-                      by extracting and validating customer documents
-                      automatically. Reduce onboarding time from days to
+                    <pclassName='text-zion-slate-lightmb-4'>
+                      AccelerateKYCcreditchecksandcomplianceverification
+                      byextractingand validatingcustomerdocuments
+                      automatically. Reduceonboardingtime fromdaysto
                       minutes.
                     </p>
-                    <div className='grid md:grid-cols-3 gap-4 text-sm'>
-                      <div className='bg-green-900/30 rounded-lg p-3 border border-green-500/20'>
-                        <div className='font-bold text-green-400 mb-1'>
+                    <divclassName = 'gridmd: grid-cols-3gap-4text-sm'>
+                      <divclassName='bg-green-900/30rounded-lgp-3borderborder-green-500/20'>
+                        <divclassName='font-boldtext-green-400mb-1'>
                           94% Faster
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Customer Onboarding
+                        <divclassName='text-zion-slate-light'>
+                          CustomerOnboarding
                         </div>
                       </div>
-                      <div className='bg-green-900/30 rounded-lg p-3 border border-green-500/20'>
-                        <div className='font-bold text-green-400 mb-1'>
+                      <divclassName='bg-green-900/30rounded-lgp-3borderborder-green-500/20'>
+                        <divclassName='font-boldtext-green-400mb-1'>
                           78% More
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Customers Approved
+                        <divclassName='text-zion-slate-light'>
+                          CustomersApproved
                         </div>
                       </div>
-                      <div className='bg-green-900/30 rounded-lg p-3 border border-green-500/20'>
-                        <div className='font-bold text-green-400 mb-1'>
-                          $1.4M Added
+                      <divclassName='bg-green-900/30rounded-lgp-3borderborder-green-500/20'>
+                        <divclassName='font-boldtext-green-400mb-1'>
+                          $1.4MAdded
                         </div>
-                        <div className='text-zion-slate-light'>
-                          Annual Revenue
+                        <divclassName='text-zion-slate-light'>
+                          AnnualRevenue
                         </div>
                       </div>
                     </div>
@@ -394,256 +378,249 @@ const AIIntelligentDocumentProcessing = () => {
             </div>
           </div>
 
-          {/* ROI Calculator */}
-          <div className='max-w-6xl mx-auto mb-20'>
-            <h2 className='text-4xl font-bold text-white mb-12 text-center'>
-              💰 ROI Calculator
+          {/* ROICalculator */}
+          <divclassName = 'max-w-6xlmx-automb-20'>
+            <h2className='text-4xlfont-boldtext-whitemb-12text-center'>
+              💰 ROICalculator
             </h2>
-            <div className='bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-2xl p-10 border border-green-500/30'>
-              <div className='grid md:grid-cols-2 gap-10'>
+            <divclassName='bg-gradient-to-rfrom-green-900/40to-blue-900/40rounded-2xlp-10borderborder-green-500/30'>
+              <divclassName='gridmd: grid-cols-2gap-10'>
                 <div>
-                  <h3 className='text-2xl font-bold text-white mb-6'>
-                    Your Investment
+                  <h3className='text-2xlfont-boldtext-whitemb-6'>
+                    YourInvestment
                   </h3>
-                  <div className='space-y-4'>
-                    <div className='flex justify-between items-center text-lg'>
-                      <span className='text-zion-slate-light'>
-                        Platform (10K docs/month):
+                  <divclassName='space-y-4'>
+                    <divclassName='flexjustify-betweenitems-centertext-lg'>
+                      <spanclassName='text-zion-slate-light'>
+                        Platform (10Kdocs/month):
                       </span>
-                      <span className='text-white font-semibold'>
-                        $4,999/mo
-                      </span>
-                    </div>
-                    <div className='flex justify-between items-center text-lg'>
-                      <span className='text-zion-slate-light'>
-                        Implementation:
-                      </span>
-                      <span className='text-white font-semibold'>
-                        $25K one-time
+                      <spanclassName = 'text-whitefont-semibold'>
+                        $4999/mo
                       </span>
                     </div>
-                    <div className='flex justify-between items-center text-lg'>
-                      <span className='text-zion-slate-light'>
+                    <divclassName = 'flexjustify-betweenitems-centertext-lg'>
+                      <spanclassName='text-zion-slate-light'>
+                        Implementation: </span>
+                      <spanclassName='text-whitefont-semibold'>
+                        $25Kone-time
+                      </span>
+                    </div>
+                    <divclassName='flexjustify-betweenitems-centertext-lg'>
+                      <spanclassName='text-zion-slate-light'>
                         Training & support:
                       </span>
-                      <span className='text-white font-semibold'>Included</span>
+                      <spanclassName='text-whitefont-semibold'>Included</span>
                     </div>
-                    <div className='border-t border-white/20 pt-4 flex justify-between items-center text-xl'>
-                      <strong className='text-white'>First Year Total:</strong>
-                      <strong className='text-white'>$85K</strong>
+                    <divclassName='border-tborder-white/20pt-4flexjustify-betweenitems-centertext-xl'>
+                      <strongclassName='text-white'>FirstYearTotal:</strong>
+                      <strongclassName='text-white'>$85K</strong>
                     </div>
                   </div>
                 </div>
                 <div>
-                  <h3 className='text-2xl font-bold text-white mb-6'>
-                    Your Savings (Year 1)
+                  <h3className='text-2xlfont-boldtext-whitemb-6'>
+                    YourSavings (Year 1)
                   </h3>
-                  <div className='space-y-4'>
-                    <div className='flex justify-between items-center text-lg'>
-                      <span className='text-zion-slate-light'>
-                        Labor cost reduction:
+                  <divclassName = 'space-y-4'>
+                    <divclassName='flexjustify-betweenitems-centertext-lg'>
+                      <spanclassName='text-zion-slate-light'>
+                        Laborcostreduction:
                       </span>
-                      <span className='text-green-400 font-semibold'>
+                      <spanclassName='text-green-400font-semibold'>
                         $420K
                       </span>
                     </div>
-                    <div className='flex justify-between items-center text-lg'>
-                      <span className='text-zion-slate-light'>
-                        Error reduction savings:
+                    <divclassName='flexjustify-betweenitems-centertext-lg'>
+                      <spanclassName='text-zion-slate-light'>
+                        Errorreductionsavings:
                       </span>
-                      <span className='text-green-400 font-semibold'>
+                      <spanclassName='text-green-400font-semibold'>
                         $180K
                       </span>
                     </div>
-                    <div className='flex justify-between items-center text-lg'>
-                      <span className='text-zion-slate-light'>
-                        Faster processing value:
+                    <divclassName='flexjustify-betweenitems-centertext-lg'>
+                      <spanclassName='text-zion-slate-light'>
+                        Fasterprocessingvalue:
                       </span>
-                      <span className='text-green-400 font-semibold'>
+                      <spanclassName='text-green-400font-semibold'>
                         $290K
                       </span>
                     </div>
-                    <div className='border-t border-white/20 pt-4 flex justify-between items-center text-xl'>
-                      <strong className='text-white'>Total Value:</strong>
-                      <strong className='text-green-400'>$890K</strong>
+                    <divclassName='border-tborder-white/20pt-4flexjustify-betweenitems-centertext-xl'>
+                      <strongclassName='text-white'>TotalValue:</strong>
+                      <strongclassName='text-green-400'>$890K</strong>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className='mt-10 text-center'>
-                <div className='text-4xl font-bold text-green-400 mb-2'>
+              <divclassName='mt-10text-center'>
+                <divclassName='text-4xlfont-boldtext-green-400mb-2'>
                   947% ROI
                 </div>
-                <div className='text-xl text-white'>
-                  Payback Period: 1.2 months • Net Value: $805K/year
+                <divclassName='text-xltext-white'>
+                  PaybackPeriod: 1.2months • NetValue: $805K/year
                 </div>
               </div>
             </div>
           </div>
 
           {/* Pricing */}
-          <div className='max-w-6xl mx-auto mb-20'>
-            <h2 className='text-4xl font-bold text-white mb-12 text-center'>
-              💎 Transparent Pricing
+          <divclassName = 'max-w-6xlmx-automb-20'>
+            <h2className='text-4xlfont-boldtext-whitemb-12text-center'>
+              💎 TransparentPricing
             </h2>
-            <div className='grid md:grid-cols-3 gap-8'>
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-blue-400/30'>
-                <div className='text-center mb-6'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
+            <divclassName='gridmd: grid-cols-3gap-8'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-blue-400/30'>
+                <divclassName='text-centermb-6'>
+                  <h3className='text-2xlfont-boldtext-whitemb-2'>
                     Starter
                   </h3>
-                  <div className='text-4xl font-bold text-blue-400 mb-2'>
-                    $1,999
-                    <span className='text-xl text-zion-slate-light'>/mo</span>
+                  <divclassName='text-4xlfont-boldtext-blue-400mb-2'>
+                    $1999
+                    <spanclassName = 'text-xltext-zion-slate-light'>/mo</span>
                   </div>
-                  <div className='text-sm text-zion-slate-light'>
-                    Up to 2,000 documents/month
+                  <divclassName='text-smtext-zion-slate-light'>
+                    Upto 2000documents/month
                   </div>
                 </div>
-                <ul className='space-y-3 text-sm text-zion-slate-light mb-8'>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>All core extraction features</span>
+                <ulclassName = 'space-y-3text-smtext-zion-slate-lightmb-8'>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>Allcoreextraction features</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>50+ document types supported</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>50+ documenttypessupported</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>API & webhook integrations</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>API & webhookintegrations</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Email support</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>Emailsupport</span>
                   </li>
                 </ul>
-                <Link
-                  to='/contact'
-                  className='block text-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all'
+                <Linkto='/contact'
+                  className='blocktext-centerbg-blue-600hover: bg-blue-700text-whitepx-6py-3rounded-lgfont-semiboldtransition-all'
                 >
-                  Start Free Trial
+                  StartFreeTrial
                 </Link>
               </div>
 
-              <div className='bg-gradient-to-br from-purple-900/40 to-blue-900/40 rounded-xl p-8 border-2 border-purple-400 relative'>
-                <div className='absolute top-0 right-0 bg-purple-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold'>
-                  Most Popular
+              <divclassName='bg-gradient-to-brfrom-purple-900/40to-blue-900/40rounded-xlp-8border-2border-purple-400relative'>
+                <divclassName='absolutetop-0right-0bg-purple-500text-whitepx-4py-1rounded-bl-lgrounded-tr-lgtext-smfont-semibold'>
+                  MostPopular
                 </div>
-                <div className='text-center mb-6'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
+                <divclassName='text-centermb-6'>
+                  <h3className='text-2xlfont-boldtext-whitemb-2'>
                     Professional
                   </h3>
-                  <div className='text-4xl font-bold text-purple-400 mb-2'>
-                    $4,999
-                    <span className='text-xl text-zion-slate-light'>/mo</span>
+                  <divclassName='text-4xlfont-boldtext-purple-400mb-2'>
+                    $4999
+                    <spanclassName = 'text-xltext-zion-slate-light'>/mo</span>
                   </div>
-                  <div className='text-sm text-zion-slate-light'>
-                    Up to 10,000 documents/month
+                  <divclassName='text-smtext-zion-slate-light'>
+                    Upto10000documents/month
                   </div>
                 </div>
-                <ul className='space-y-3 text-sm text-zion-slate-light mb-8'>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Everything in Starter, plus:</span>
+                <ulclassName = 'space-y-3text-smtext-zion-slate-lightmb-8'>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>EverythinginStarterplus: </span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>150+ document types</span>
+                  <liclassName = 'flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>150+ documenttypes</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Custom workflows & rules</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>Customworkflows & rules</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Priority support + CSM</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>Prioritysupport + CSM</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>99.9% SLA guarantee</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>99.9% SLAguarantee</span>
                   </li>
                 </ul>
-                <Link
-                  to='/contact'
-                  className='block text-center bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all'
+                <Linkto='/contact'
+                  className='blocktext-centerbg-purple-600hover:bg-purple-700text-whitepx-6py-3rounded-lgfont-semiboldtransition-all'
                 >
-                  Start Free Trial
+                  StartFreeTrial
                 </Link>
               </div>
 
-              <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-green-400/30'>
-                <div className='text-center mb-6'>
-                  <h3 className='text-2xl font-bold text-white mb-2'>
+              <divclassName='bg-white/5backdrop-blur-smrounded-xlp-8borderborder-green-400/30'>
+                <divclassName='text-centermb-6'>
+                  <h3className='text-2xlfont-boldtext-whitemb-2'>
                     Enterprise
                   </h3>
-                  <div className='text-4xl font-bold text-green-400 mb-2'>
+                  <divclassName='text-4xlfont-boldtext-green-400mb-2'>
                     Custom
                   </div>
-                  <div className='text-sm text-zion-slate-light'>
-                    Unlimited documents
+                  <divclassName='text-smtext-zion-slate-light'>
+                    Unlimiteddocuments
                   </div>
                 </div>
-                <ul className='space-y-3 text-sm text-zion-slate-light mb-8'>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Everything in Professional, plus:</span>
+                <ulclassName='space-y-3text-smtext-zion-slate-lightmb-8'>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>EverythinginProfessionalplus: </span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Custom AI model training</span>
+                  <liclassName = 'flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>CustomAImodel training</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>On-premise deployment option</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>On-premisedeploymentoption</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>Dedicated infrastructure</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>Dedicatedinfrastructure</span>
                   </li>
-                  <li className='flex items-start gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
-                    <span>24/7 premium support</span>
+                  <liclassName='flexitems-startgap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400flex-shrink-0' />
+                    <span>24/7premiumsupport</span>
                   </li>
                 </ul>
-                <Link
-                  to='/contact'
-                  className='block text-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-all'
+                <Linkto='/contact'
+                  className='blocktext-centerbg-green-600hover:bg-green-700text-whitepx-6py-3rounded-lgfont-semiboldtransition-all'
                 >
-                  Contact Sales
+                  ContactSales
                 </Link>
               </div>
             </div>
           </div>
 
           {/* CTA */}
-          <div className='max-w-4xl mx-auto text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-12'>
-            <h2 className='text-4xl font-bold text-white mb-4'>
-              Ready to Automate Your Document Processing?
+          <divclassName = 'max-w-4xlmx-autotext-centerbg-gradient-to-rfrom-blue-600to-purple-600rounded-2xlp-12'>
+            <h2className='text-4xlfont-boldtext-whitemb-4'>
+              ReadytoAutomate YourDocumentProcessing?
             </h2>
-            <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>
-              Join 500+ enterprises achieving 98.5% accuracy, 95% automation,
-              and $2.8M+ in annual savings. Start your free 30-day trial
-              today—no credit card required.
+            <pclassName='text-xltext-white/90mb-8max-w-2xlmx-auto'>
+              Join500+ enterprisesachieving98.5% accuracy95% automation
+              and $2.8M+ inannualsavings. Startyourfree 30-daytrialtoday—nocreditcard required.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-white text-blue-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg'
+            <divclassName = 'flexflex-colsm: flex-rowgap-4justify-center'>
+              <Linkto='/contact'
+                className='bg-whitetext-blue-600hover:bg-zion-slate-lightpx-8py-4rounded-lgfont-semiboldtransition-allduration-300hover:scale-105inline-flexitems-centerjustify-centergap-2text-lg'
               >
-                <Zap className='w-6 h-6' />
-                Start Free 30-Day Trial
+                <ZapclassName='w-6 h-6' />
+                StartFree30-DayTrial
               </Link>
-              <Link
-                to='/contact'
-                className='border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg'
+              <Linkto='/contact'
+                className='border-2border-whitetext-whitehover:bg-white/10px-8py-4rounded-lgfont-semiboldtransition-allduration-300hover:scale-105text-lg'
               >
-                Schedule Demo
+                ScheduleDemo
               </Link>
             </div>
-            <p className='text-white/70 text-sm mt-6'>
-              ✓ No credit card required ✓ Full feature access ✓ Cancel anytime ✓
-              24/7 support
+            <pclassName='text-white/70text-smmt-6'>
+              ✓ Nocreditcard required ✓ Fullfeatureaccess ✓ Cancelanytime ✓
+              24/7support
             </p>
           </div>
         </div>
@@ -652,4 +629,4 @@ const AIIntelligentDocumentProcessing = () => {
   );
 };
 
-export default AIIntelligentDocumentProcessing;
+exportdefaultAIIntelligentDocumentProcessing;

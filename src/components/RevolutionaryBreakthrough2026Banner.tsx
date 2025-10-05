@@ -1,239 +1,220 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const RevolutionaryBreakthrough2026Banner: React.FC = () => {
-  const breakthroughContent = [
+constRevolutionaryBreakthrough2026Banner: React.FC = () => {
+  constbreakthroughContent = [
     {
-      id: 1,
-      title: 'AI Revolutionary Breakthrough: 10x Performance Gains',
-      slug: 'ai-revolutionary-breakthrough-january-2026',
-      excerpt:
-        'Discover the groundbreaking AI innovations delivering 10x performance gains, 95% cost reduction, and $500M+ ROI for Fortune 500 companies.',
-      category: 'Revolutionary AI Technology',
-      date: '2026-01-30',
-      readTime: '25 min',
-      trending: true,
-      icon: '🚀',
-      metrics: { value: '10x', label: 'Performance Gains' },
-    },
+      id: 1
+      title: 'AIRevolutionaryBreakthrough: 10xPerformanceGains'
+      slug: 'ai-revolutionary-breakthrough-january-2026'
+      excerpt: 'Discoverthegroundbreaking AIinnovationsdelivering 10xperformancegains95% costreductionand $500M+ ROIforFortune 500companies.'
+      category: 'RevolutionaryAITechnology'
+      date: '2026-01-30'
+      readTime: '25min'
+      trending: true
+      icon: '🚀'
+      metrics: { value: '10x'label: 'PerformanceGains' }
+    }
     {
-      id: 2,
-      title: 'Fortune 500 AI Transformation: $300M ROI Success Story',
-      slug: 'fortune-500-ai-transformation-mega-success-2026',
-      excerpt:
-        'How a Fortune 500 manufacturing giant achieved $300M ROI, 95% operational automation, and 99.9% efficiency gains through revolutionary AI transformation.',
-      category: 'Mega Success Story',
-      date: '2026-01-30',
-      readTime: '18 min',
-      trending: true,
-      icon: '🏆',
-      metrics: { value: '$300M', label: 'ROI Achieved' },
-    },
+      id:  2
+      title: 'Fortune500AI Transformation: $300MROISuccess Story'
+      slug: 'fortune-500-ai-transformation-mega-success-2026'
+      excerpt: 'HowaFortune 500manufacturinggiant achieved $300MROI95% operationalautomationand99.9% efficiencygainsthrough revolutionaryAItransformation.'
+      category: 'MegaSuccessStory'
+      date: '2026-01-30'
+      readTime: '18min'
+      trending: true
+      icon: '🏆'
+      metrics: { value: '$300M'label: 'ROIAchieved' }
+    }
     {
-      id: 3,
-      title: 'Quantum AI Computing Breakthrough: 1000x Performance',
-      slug: 'ai-quantum-computing-breakthrough-2026',
-      excerpt:
-        'Revolutionary quantum-enhanced AI delivering 1000x performance improvements, 99.9% accuracy, and $500M+ ROI for enterprise operations.',
-      category: 'Quantum AI Technology',
-      date: '2026-01-30',
-      readTime: '32 min',
-      trending: true,
-      icon: '⚛️',
-      metrics: { value: '1000x', label: 'Performance Boost' },
-    },
+      id:  3
+      title: 'QuantumAIComputing Breakthrough: 1000xPerformance'
+      slug: 'ai-quantum-computing-breakthrough-2026'
+      excerpt: 'Revolutionaryquantum-enhancedAIdelivering 1000xperformanceimprovements99.9% accuracyand $500M+ ROIforenterprise operations.'
+      category: 'QuantumAITechnology'
+      date: '2026-01-30'
+      readTime: '32min'
+      trending: true
+      icon: '⚛️'
+      metrics: { value: '1000x'label: 'PerformanceBoost' }
+    }
     {
-      id: 4,
-      title: 'Autonomous Enterprise Systems: 95% Automation',
-      slug: 'ai-autonomous-enterprise-2026',
-      excerpt:
-        'Transform your organization into a fully autonomous enterprise with AI-driven self-management achieving 95% automation and $200M+ savings.',
-      category: 'Autonomous Enterprise AI',
-      date: '2026-01-30',
-      readTime: '28 min',
-      trending: true,
-      icon: '🤖',
-      metrics: { value: '95%', label: 'Automation' },
-    },
-  ];
-  return (
-    <div className='py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden'>
-      {/* Animated background effects */}
-      <div className='absolute inset-0 overflow-hidden opacity-30'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+      id:  4
+      title: 'AutonomousEnterpriseSystems: 95% Automation'
+      slug: 'ai-autonomous-enterprise-2026'
+      excerpt: 'Transformyourorganization intoafully autonomousenterprisewith AI-drivenself-managementachieving95% automationand $200M+ savings.'
+      category: 'AutonomousEnterpriseAI'
+      date: '2026-01-30'
+      readTime: '28min'
+      trending: true
+      icon: '🤖'
+      metrics: { value: '95%'label: 'Automation' }
+    }
+  ]; return (
+    <divclassName = 'py-20bg-gradient-to-brfrom-slate-900via-purple-900to-slate-900relativeoverflow-hidden'>
+      {/* Animatedbackgroundeffects */}
+      <divclassName='absoluteinset-0overflow-hiddenopacity-30'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+         />
+        <divclassName = 'absolutetop-1/2left-1/2 w-64h-64bg-cyan-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '4s' }}
-        ></div>
+         />
       </div>
-      <div className='container mx-auto px-6 relative z-10'>
-        {/* Header Section */}
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-fade-in'>
-            <Sparkles className='w-6 h-6 text-purple-400 animate-pulse' />
-            <span className='text-purple-400 font-bold text-lg tracking-wider uppercase'>
-              🔥 REVOLUTIONARY BREAKTHROUGH • January 30, 2026
+      <divclassName = 'containermx-autopx-6relativez-10'>
+        {/* HeaderSection */}
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-purple-500/20to-blue-500/20borderborder-purple-500/30mb-8animate-fade-in'>
+            <SparklesclassName='w-6 h-6text-purple-400animate-pulse' />
+            <spanclassName='text-purple-400font-boldtext-lgtracking-wideruppercase'>
+              🔥 REVOLUTIONARYBREAKTHROUGH • January302026
             </span>
-            <Sparkles className='w-6 h-6 text-blue-400 animate-pulse' />
+            <SparklesclassName = 'w-6 h-6text-blue-400animate-pulse' />
           </div>
-          <h2 className='text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in'>
-            Revolutionary AI Breakthroughs
+          <h2className='text-6xlmd: text-7xlfont-extraboldmb-6bg-gradient-to-rfrom-purple-400via-blue-400to-cyan-400bg-clip-texttext-transparentanimate-fade-in'>
+            RevolutionaryAIBreakthroughs
           </h2>
-          <p className='text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Discover the most significant AI innovations of 2026: 10x
-            performance gains, $300M+ ROI success stories, and revolutionary
-            technologies transforming Fortune 500 operations.
+          <pclassName='text-2xltext-gray-300max-w-4xlmx-autoleading-relaxedmb-8'>
+            Discoverthemost significantAIinnovations of2026: 10xperformancegains$300M+ ROIsuccessstoriesandrevolutionarytechnologies transformingFortune500 operations.
           </p>
-          {/* Key Stats */}
-          <div className='grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12'>
+          {/* KeyStats */}
+          <divclassName = 'gridmd: grid-cols-4gap-6max-w-4xlmx-automb-12'>
             {[
-              { value: '10x', label: 'Performance Gains', icon: '⚡' },
-              { value: '$300M+', label: 'ROI Achieved', icon: '💰' },
-              { value: '95%', label: 'Automation Rate', icon: '🤖' },
-              { value: '99.9%', label: 'Efficiency Gains', icon: '🎯' },
-            ].map((stat, index) => (
-              <div
-                key={index}
-                className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300'
+              { value: '10x'label: 'PerformanceGains'icon: '⚡' }
+              { value: '$300M+'label: 'ROIAchieved'icon: '💰' }
+              { value: '95%'label: 'AutomationRate'icon: '🤖' }
+              { value: '99.9%'label: 'EfficiencyGains'icon: '🎯' }
+            ].map((statindex) => (
+              <divkey = { index }className = 'bg-white/10backdrop-blur-lgrounded-2xlp-6borderborder-white/20hover: border-purple-500/50transition-allduration-300'
               >
-                <div className='text-4xl mb-3'>{stat.icon}</div>
-                <div className='text-3xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2'>
+                <divclassName='text-4xlmb-3'>{stat.icon}</div>
+                <divclassName = 'text-3xlfont-extraboldbg-gradient-to-rfrom-purple-400to-blue-400bg-clip-texttext-transparentmb-2'>
                   {stat.value}
                 </div>
-                <div className='text-gray-300 text-sm font-medium'>
+                <divclassName='text-gray-300text-smfont-medium'>
                   {stat.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        {/* Featured Content Grid */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto'>
-          {breakthroughContent.map((content, index) => (
-            <div
-              key={content.id}
-              className='group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'
-              style={{ animationDelay: `${index * 150}ms` }}
+        {/* FeaturedContentGrid */}
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-4gap-8mb-16max-w-[1600px] mx-auto'>
+          { breakthroughContent.map((contentindex) = > (
+            <divkey = { content.id  }className = 'grouprelativebg-white/5backdrop-blur-lgrounded-2xlborderborder-white/10hover: border-purple-500/50transition-allduration-500overflow-hiddenhover:transformhover:scale-105hover:shadow-2xlhover:shadow-purple-500/20'
+              style = { { animationDelay: `${index * 150 }ms` }}
             >
-              {/* Card glow effect */}
-              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500'></div>
-              <div className='relative p-8'>
+              {/* Cardgloweffect */}
+              <divclassName = 'absoluteinset-0bg-gradient-to-brfrom-purple-500/0via-blue-500/0to-cyan-500/0group-hover: from-purple-500/10group-hover:via-blue-500/10group-hover:to-cyan-500/10transition-allduration-500' />
+              <divclassName='relativep-8'>
                 {/* Icon & Badges */}
-                <div className='flex items-start justify-between mb-6'>
-                  <div className='text-6xl group-hover:scale-110 transition-transform duration-300'>
+                <divclassName = 'flexitems-startjustify-betweenmb-6'>
+                  <divclassName='text-6xlgroup-hover: scale-110transition-transformduration-300'>
                     {content.icon}
                   </div>
-                  <div className='flex flex-col gap-2'>
-                    {content.trending && (
-                      <div className='flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg'>
-                        <TrendingUp className='w-3 h-3' />
+                  <divclassName = 'flexflex-colgap-2'>
+                    {  content.trending  && (
+                      <divclassName='flexitems-centergap-1px-3py-1.5rounded-fullbg-gradient-to-rfrom-orange-500to-red-500text-whitetext-xsfont-boldshadow-lg'>
+                        <TrendingUpclassName='w-3 h-3' />
                         <span>BREAKTHROUGH</span>
-                      </div>
-                    )}
-                    <span className='px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30'>
+                      </div > )  }
+                    <spanclassName = 'px-3py-1.5rounded-fullbg-purple-500/20text-purple-400text-xsfont-semiboldborderborder-purple-500/30'>
                       NEW
                     </span>
                   </div>
                 </div>
-                {/* Category Tag */}
-                <div className='mb-4'>
-                  <span className='inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30'>
+                {/* CategoryTag */}
+                <divclassName='mb-4'>
+                  <spanclassName='inline-blockpx-3py-1rounded-fullbg-gradient-to-rfrom-blue-500/20to-cyan-500/20text-cyan-400text-xsfont-semiboldborderborder-cyan-500/30'>
                     {content.category}
                   </span>
                 </div>
                 {/* Title */}
-                <h3 className='text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight'>
+                <h3className='text-xlfont-boldtext-whitemb-4group-hover: text-purple-400transition-colorsduration-300leading-tight'>
                   {content.title}
                 </h3>
                 {/* Excerpt */}
-                <p className='text-gray-400 mb-6 leading-relaxed text-sm'>
+                <pclassName = 'text-gray-400mb-6leading-relaxedtext-sm'>
                   {content.excerpt}
                 </p>
-                {/* Key Metric */}
-                <div className='mb-6'>
-                  <div className='bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg p-4 border border-purple-500/30'>
-                    <div className='text-center'>
-                      <div className='text-2xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
+                {/* KeyMetric */}
+                <divclassName='mb-6'>
+                  <divclassName='bg-gradient-to-rfrom-purple-500/20to-blue-500/20rounded-lgp-4borderborder-purple-500/30'>
+                    <divclassName='text-center'>
+                      <divclassName='text-2xlfont-boldbg-gradient-to-rfrom-purple-400to-blue-400bg-clip-texttext-transparent'>
                         {content.metrics.value}
                       </div>
-                      <div className='text-gray-300 text-xs font-medium'>
+                      <divclassName='text-gray-300text-xsfont-medium'>
                         {content.metrics.label}
                       </div>
                     </div>
                   </div>
                 </div>
-                {/* Meta Info */}
-                <div className='flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10'>
-                  <span className='flex items-center gap-2'>
-                    <Zap className='w-4 h-4 text-purple-400' />
+                {/* MetaInfo */}
+                <divclassName='flexitems-centerjustify-betweentext-smtext-gray-500mb-6pb-6border-bborder-white/10'>
+                  <spanclassName='flexitems-centergap-2'>
+                    <ZapclassName='w-4 h-4text-purple-400' />
                     {content.readTime}
                   </span>
                   <span>
-                    {new Date(content.date).toLocaleDateString('en-US', {
-                      month: 'short',
-                      day: 'numeric',
+                    {newDate(content.date).toLocaleDateString('en-US'{
+                      month: 'short'
+                      day: 'numeric'
                     })}
                   </span>
-                </div>
-                {/* CTA Button */}
-                <Link
-                  to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
-                  className='group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1'
+                </div > {/* CTAButton */}
+                <Linkto = { `/${content.slug.includes('case-studies')  ? 'case-studies'  : 'blog' }/${content.slug}`}
+                  className = 'group/btnflexitems-centerjustify-centergap-2 w-fullbg-gradient-to-rfrom-purple-500to-blue-600hover: from-purple-400hover:to-blue-500text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50transformhover:-translate-y-1'
                 >
-                  <span>Read Full Article</span>
-                  <ArrowRight className='w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300' />
+                  <span>ReadFullArticle</span>
+                  <ArrowRight,className='w-4 h-4group-hover/btn:translate-x-1transition-transformduration-300' />
                 </Link>
               </div>
             </div>
           ))}
         </div>
-        {/* Call-to-Action Section */}
-        <div className='text-center mt-20'>
-          <div className='inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500'>
-            <div className='bg-slate-900 rounded-xl px-12 py-10'>
-              <h3 className='text-4xl font-bold text-white mb-4'>
-                Ready to Achieve These Breakthrough Results?
+        {/* Call-to-ActionSection */}
+        <divclassName = 'text-centermt-20'>
+          <divclassName='inline-blockp-1rounded-2xlbg-gradient-to-rfrom-purple-500via-blue-500to-cyan-500'>
+            <divclassName='bg-slate-900rounded-xlpx-12py-10'>
+              <h3className='text-4xlfont-boldtext-whitemb-4'>
+                ReadytoAchieve TheseBreakthroughResults?
               </h3>
-              <p className='text-gray-400 mb-8 max-w-3xl mx-auto text-lg'>
-                Join Fortune 500 companies achieving 10x performance gains and
-                $300M+ ROI with our revolutionary AI technologies. Schedule your
-                transformation consultation today.
+              <pclassName='text-gray-400mb-8max-w-3xlmx-autotext-lg'>
+                JoinFortune500 companiesachieving10x performancegainsand
+                $300M+ ROIwithour revolutionaryAItechnologies. Scheduleyourtransformation consultationtoday.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <a
-                  href='/contact'
-                  className='bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2'
+              <divclassName='flexflex-colsm: flex-rowgap-4justify-center'>
+                <ahref='/contact'
+                  className='bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-400hover:to-blue-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50flexitems-centerjustify-centergap-2'
                 >
-                  <Sparkles className='w-5 h-5' />
-                  <span>Start Your AI Transformation</span>
+                  <SparklesclassName='w-5 h-5' />
+                  <span>StartYourAI Transformation</span>
                 </a>
-                <a
-                  href='tel:+13024640950'
-                  className='border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2'
+                <ahref='tel:+13024640950'
+                  className='border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2'
                 >
-                  <span>Call +1 302 464 0950</span>
-                  <ArrowRight className='w-5 h-5' />
+                  <span>Call +1302464 0950</span>
+                  <ArrowRight,className='w-5 h-5' />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        {/* Success Indicators */}
-        <div className='grid md:grid-cols-4 gap-8 mt-20'>
+        {/* SuccessIndicators */}
+        <divclassName = 'gridmd: grid-cols-4gap-8mt-20'>
           {[
-            { value: '500+', label: 'Enterprise Clients Transformed' },
-            { value: '$2B+', label: 'Total ROI Generated' },
-            { value: '99.9%', label: 'Success Rate' },
-            { value: '24/7', label: 'Expert Support' },
-          ].map((stat, index) => (
-            <div key={index} className='text-center'>
-              <div className='text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-2'>
+            { value: '500+'label: 'EnterpriseClientsTransformed' }
+            { value: '$2B+'label: 'TotalROIGenerated' }
+            { value: '99.9%'label: 'SuccessRate' }
+            { value: '24/7'label: 'ExpertSupport' }
+          ].map((statindex) => (
+            <divkey = { index }className = 'text-center'>
+              <divclassName='text-4xlfont-extraboldbg-gradient-to-rfrom-purple-400to-blue-400bg-clip-texttext-transparentmb-2'>
                 {stat.value}
               </div>
-              <div className='text-gray-400 text-sm font-medium'>
+              <divclassName='text-gray-400text-smfont-medium'>
                 {stat.label}
               </div>
             </div>
@@ -243,4 +224,4 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
     </div>
   );
 };
-export default RevolutionaryBreakthrough2026Banner;
+exportdefaultRevolutionaryBreakthrough2026Banner;

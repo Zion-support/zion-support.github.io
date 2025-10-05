@@ -1,120 +1,114 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const October2025QuantumEdgeFusionBanner: React.FC = () => {
+constOctober2025QuantumEdgeFusionBanner: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      className="relative overflow-hidden bg-gradient-to-r from-cyan-900 via-blue-900 to-indigo-900 rounded-2xl p-8 my-8 shadow-2xl"
+    <motion.divinitial = {{ opacity: 0y: 20 }}
+      animate = {{ opacity:  1y:  0 }}
+      transition = {{ duration: 0.6 }}
+      className = "relativeoverflow-hiddenbg-gradient-to-rfrom-cyan-900via-blue-900to-indigo-900rounded-2xlp-8my-8shadow-2xl"
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle at 30% 50%,rgba(6,182,212,0.3),rgba(255,255,255,0))]"</div>
+      {/* AnimatedBackground */}
+      <divclassName="absoluteinset-0opacity-20">
+        <divclassName="absoluteinset-0bg-[radial-gradient(circleat30% 50%rgba(61822120.3)rgba(2552552550))]"</div>
 
-      <div className="relative z-10">
+      <divclassName = "relativez-10">
         {/* Badge */}
-        <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{ delay: 0.2 }}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 backdrop-blur-sm rounded-full border border-cyan-400/30 mb-6"
+        <motion.divinitial={{ scale: 0.9opacity:  0 }}
+          animate = {{ scale:  1opacity:  1 }}
+          transition = {{ delay: 0.2 }}
+          className = "inline-flexitems-centergap-2px-4py-2bg-cyan-500/20backdrop-blur-smrounded-fullborderborder-cyan-400/30mb-6"
         >
-          <span className="text-2xl">⚛️⚡</span>
-          <span className="text-cyan-200 font-semibold text-sm">QUANTUM BREAKTHROUGH: OCTOBER 1, 2025</span>
-          <span className="text-2xl">🔬💎</span>
+          <spanclassName="text-2xl">⚛️⚡</span>
+          <spanclassName="text-cyan-200font-semiboldtext-sm">QUANTUMBREAKTHROUGH: OCTOBER 12025</span>
+          <spanclassName = "text-2xl">🔬💎</span>
         </motion.div>
 
-        {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        {/* MainContent */}
+        <divclassName="gridlg: grid-cols-2gap-8items-center">
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4 leading-tight">
-              Quantum-Edge Fusion Architecture
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400 mt-2">
-                Sub-Microsecond AI Decisions
+            <h2className="text-4xllg:text-5xlfont-boldtext-whitemb-4leading-tight">
+              Quantum-EdgeFusionArchitecture
+              <spanclassName="blocktext-transparentbg-clip-textbg-gradient-to-rfrom-cyan-400to-blue-400mt-2">
+                Sub-MicrosecondAIDecisions
               </span>
             </h2>
             
-            <p className="text-cyan-100 text-lg mb-6 leading-relaxed">
-              Revolutionary quantum-enhanced edge computing delivers <strong className="text-white">sub-microsecond intelligence</strong> with 
-              <strong className="text-white"> $12.4B in enterprise value</strong> across <strong className="text-white">50,000+ edge nodes</strong> operating 
-              at <strong className="text-white">99.97% accuracy</strong>.
+            <pclassName="text-cyan-100text-lgmb-6leading-relaxed">
+              Revolutionaryquantum-enhancededgecomputing delivers <strongclassName="text-white">sub-microsecondintelligence</strong> with 
+              <strongclassName="text-white"> $12.4Binenterprise value</strong> across <strongclassName="text-white">50000+ edgenodes</strong> operatingat <strongclassName = "text-white">99.97% accuracy</strong>.
             </p>
 
-            {/* Key Metrics */}
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="bg-cyan-800/30 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-300">$12.4B</div>
-                <div className="text-cyan-200 text-sm">Total Value Created</div>
+            {/* KeyMetrics */}
+            <divclassName="gridgrid-cols-2gap-4mb-6">
+              <divclassName="bg-cyan-800/30backdrop-blur-smrounded-lgp-4borderborder-cyan-400/20">
+                <divclassName="text-3xlfont-boldtext-cyan-300">$12.4B</div>
+                <divclassName="text-cyan-200text-sm">TotalValueCreated</div>
               </div>
-              <div className="bg-cyan-800/30 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-300">0.7μs</div>
-                <div className="text-cyan-200 text-sm">Decision Latency</div>
+              <divclassName="bg-cyan-800/30backdrop-blur-smrounded-lgp-4borderborder-cyan-400/20">
+                <divclassName="text-3xlfont-boldtext-cyan-300">0.7μs</div>
+                <divclassName="text-cyan-200text-sm">DecisionLatency</div>
               </div>
-              <div className="bg-cyan-800/30 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-300">50,000+</div>
-                <div className="text-cyan-200 text-sm">Quantum Edge Nodes</div>
+              <divclassName="bg-cyan-800/30backdrop-blur-smrounded-lgp-4borderborder-cyan-400/20">
+                <divclassName="text-3xlfont-boldtext-cyan-300">50000+</div>
+                <divclassName = "text-cyan-200text-sm">QuantumEdgeNodes</div>
               </div>
-              <div className="bg-cyan-800/30 backdrop-blur-sm rounded-lg p-4 border border-cyan-400/20">
-                <div className="text-3xl font-bold text-cyan-300">15,000%</div>
-                <div className="text-cyan-200 text-sm">ROI Over 2 Years</div>
+              <divclassName="bg-cyan-800/30backdrop-blur-smrounded-lgp-4borderborder-cyan-400/20">
+                <divclassName="text-3xlfont-boldtext-cyan-300">15000%</div>
+                <divclassName = "text-cyan-200text-sm">ROIOver2 Years</div>
               </div>
             </div>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              <motion.a
-                href="/blog/ai-2025-october-quantum-edge-fusion-architecture"
+            {/* CTAButtons */}
+            <divclassName="flexflex-wrapgap-4">
+              <motion.ahref="/blog/ai-2025-october-quantum-edge-fusion-architecture"
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-lg shadow-lg hover:shadow-cyan-500/50 transition-all"
+                whileTap = {{ scale: 0.95 }}
+                className = "px-8py-4bg-gradient-to-rfrom-cyan-500to-blue-500text-whitefont-boldrounded-lgshadow-lghover: shadow-cyan-500/50transition-all"
               >
-                Discover Quantum-Edge →
+                DiscoverQuantum-Edge →
               </motion.a>
-              <motion.a
-                href="/contact"
+              <motion.ahref="/contact"
                 whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/20 hover:bg-white/20 transition-all"
+                whileTap = {{ scale: 0.95 }}
+                className = "px-8py-4bg-white/10backdrop-blur-smtext-whitefont-semiboldrounded-lgborderborder-white/20hover: bg-white/20transition-all"
               >
-                Request Demo
+                RequestDemo
               </motion.a>
             </div>
           </div>
 
-          {/* Visual Element */}
-          <div className="hidden lg:block">
-            <div className="relative">
-              <motion.div
-                animate={{
-                  scale: [1, 1.05, 1],
-                  rotate: [0, -5, 0],
+          {/* VisualElement */}
+          <divclassName = "hiddenlg: block">
+            <divclassName="relative">
+              <motion.divanimate={{
+                  scale: [11.051]
+                  rotate: [0-50]
                 }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,",
+                transition = {{
+                  duration:  6
+                  repeat: Infinity"
       ease: "easeInOut"
                 }}
-                className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/30"
+                className = "bg-gradient-to-brfrom-cyan-500/20to-blue-500/20backdrop-blur-lgrounded-2xlp-8borderborder-cyan-400/30"
               >
-                <h3 className="text-2xl font-bold text-white mb-4">Quantum Advantages:</h3>
-                <ul className="space-y-3 text-cyan-100">
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">⚡</span>
-                    <span><strong>Ultra-Low Latency:</strong> 0.7μs average decision time</span>
+                <h3className="text-2xlfont-boldtext-whitemb-4">QuantumAdvantages: </h3>
+                <ulclassName="space-y-3text-cyan-100">
+                  <liclassName="flexitems-startgap-3">
+                    <spanclassName="text-2xl">⚡</span>
+                    <span><strong>Ultra-LowLatency:</strong> 0.7μsaveragedecision time</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🎯</span>
-                    <span><strong>Extreme Accuracy:</strong> 99.97% precision rate</span>
+                  <liclassName="flexitems-startgap-3">
+                    <spanclassName="text-2xl">🎯</span>
+                    <span><strong>ExtremeAccuracy:</strong> 99.97% precisionrate</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">🌐</span>
-                    <span><strong>Global Scale:</strong> 47,000 quantum-enhanced nodes</span>
+                  <liclassName="flexitems-startgap-3">
+                    <spanclassName="text-2xl">🌐</span>
+                    <span><strong>GlobalScale:</strong> 47000quantum-enhancednodes</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-2xl">💰</span>
-                    <span><strong>Massive ROI:</strong> $8.2B additional revenue</span>
+                  <liclassName = "flexitems-startgap-3">
+                    <spanclassName="text-2xl">💰</span>
+                    <span><strong>MassiveROI: </strong> $8.2Badditionalrevenue</span>
                   </li>
                 </ul>
               </motion.div>
@@ -122,15 +116,14 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom Banner */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-8 pt-6 border-t border-cyan-400/30 text-center"
+        {/* BottomBanner */}
+        <motion.divinitial = {{ opacity:  0 }}
+          animate = {{ opacity:  1 }}
+          transition = {{ delay: 0.8 }}
+          className = "mt-8pt-6border-tborder-cyan-400/30text-center"
         >
-          <p className="text-cyan-200 text-sm">
-            🏆 <strong className="text-white">QUANTUM COMPUTING BREAKTHROUGH:</strong> 127-Qubit Processors at Edge | Fortune 100 Success Story
+          <pclassName="text-cyan-200text-sm">
+            🏆 <strongclassName="text-white">QUANTUMCOMPUTINGBREAKTHROUGH: </strong> 127-QubitProcessorsat Edge | Fortune100Success Story
           </p>
         </motion.div>
       </div>
@@ -138,4 +131,4 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {
   );
 };
 
-export default October2025QuantumEdgeFusionBanner;
+exportdefaultOctober2025QuantumEdgeFusionBanner;

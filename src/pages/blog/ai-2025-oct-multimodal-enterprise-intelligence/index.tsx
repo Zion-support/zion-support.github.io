@@ -1,184 +1,170 @@
 import { Link } from 'react-router-dom';
 import {
-  ArrowLeft,
+  ArrowLeft
   Brain,
-  TrendingUp,
-  Zap,
-  Shield,
+  TrendingUp
+  Zap
+  Shield
   CheckCircle,
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import Header from '../../../components/Header';
+importHeaderfrom '../../../components/Header';
 
-const MultimodalEnterpriseIntelligence = () => {
+constMultimodalEnterpriseIntelligence = () => { 
   return (
     <>
       <Helmet>
         <title>
-          Multimodal Enterprise Intelligence 2025: Vision, Language & Audio AI
-          Convergence | Zion Tech Group
+          MultimodalEnterpriseIntelligence 2025: VisionLanguage & AudioAIConvergence | ZionTechGroup
         </title>
-        <meta
-          name='description'
-          content='Revolutionary multimodal AI systems combining vision, language, and audio processing for enterprise applications. Achieve 97% accuracy with unified intelligence platforms.'
+        <metaname = 'description'
+          content='RevolutionarymultimodalAI systemscombiningvisionlanguageandaudioprocessing forenterpriseapplications. Achieve97% accuracywithunified intelligenceplatforms.'
         />
-        <meta
-          name='keywords'
-          content='multimodal AI, enterprise intelligence, computer vision, NLP, audio AI, unified AI platform, GPT-4V, Claude Vision, DALL-E 3'
+        <metaname = 'keywords'
+          content='multimodalAIenterpriseintelligencecomputervisionNLPaudioAIunifiedAIplatformGPT-4VClaudeVisionDALL-E 3'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-dark'>
         <Header />
 
-        <article className='container mx-auto px-6 py-20'>
-          {/* Back Link */}
-          <Link
-            to='/blog'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <articleclassName='containermx-autopx-6py-20' > {/* BackLink */ }
+          <Linkto='/blog'
+            className='inline-flexitems-centertext-zion-cyanhover: text-zion-blue-lightmb-8transition-colors'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Blog
+            <ArrowLeftclassName='w-4 h-4mr-2' />
+            BacktoBlog
           </Link>
 
           {/* Header */}
-          <div className='max-w-4xl mx-auto mb-12'>
-            <div className='flex items-center gap-4 mb-6'>
-              <span className='px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30'>
-                🚀 Revolutionary AI • October 2025
+          <divclassName = 'max-w-4xlmx-automb-12'>
+            <divclassName='flexitems-centergap-4mb-6'>
+              <spanclassName='px-4py-2bg-purple-500/20text-purple-300rounded-fulltext-smfont-semiboldborderborder-purple-500/30'>
+                🚀 RevolutionaryAI • October2025
               </span>
-              <span className='text-zion-slate-light'>15 min read</span>
+              <spanclassName='text-zion-slate-light'>15minread</span>
             </div>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Multimodal Enterprise Intelligence 2025:
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400'>
-                Vision, Language & Audio AI Convergence
+            <h1className='text-5xlmd: text-6xlfont-boldtext-whitemb-6leading-tight'>
+              MultimodalEnterpriseIntelligence 2025:
+              <spanclassName='blocktext-transparentbg-clip-textbg-gradient-to-rfrom-purple-400to-pink-400'>
+                VisionLanguage & AudioAIConvergence
               </span>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed'>
-              Discover how unified multimodal AI systems are transforming
-              enterprise operations, achieving 97% accuracy across vision,
-              language, and audio processing with $2.3B+ in proven ROI.
+            <pclassName = 'text-xltext-zion-slate-lightleading-relaxed'>
+              Discoverhowunified multimodalAIsystems aretransformingenterprise operationsachieving97% accuracyacrossvision
+              languageandaudioprocessing with $2.3B+ inprovenROI.
             </p>
 
-            <div className='flex items-center gap-6 mt-8 text-zion-slate-light'>
-              <div className='flex items-center gap-2'>
-                <Brain className='w-5 h-5 text-zion-cyan' />
-                <span>Dr. Sarah Chen, AI Research Director</span>
+            <divclassName = 'flexitems-centergap-6mt-8text-zion-slate-light'>
+              <divclassName='flexitems-centergap-2'>
+                <Brain,className='w-5 h-5text-zion-cyan' />
+                <span>Dr. SarahChenAIResearchDirector</span>
               </div>
               <span>•</span>
-              <span>October 1, 2025</span>
+              <span>October12025</span>
             </div>
           </div>
 
           {/* Content */}
-          <div className='max-w-4xl mx-auto space-y-8 text-zion-slate-light'>
-            {/* Key Metrics */}
-            <div className='bg-gradient-to-r from-purple-900/40 to-pink-900/40 rounded-2xl p-8 border border-purple-500/30'>
-              <h2 className='text-2xl font-bold text-white mb-6'>
-                📊 Multimodal AI Impact Metrics
+          <divclassName = 'max-w-4xlmx-autospace-y-8text-zion-slate-light'>
+            {/* KeyMetrics */}
+            <divclassName='bg-gradient-to-rfrom-purple-900/40to-pink-900/40rounded-2xlp-8borderborder-purple-500/30'>
+              <h2className='text-2xlfont-boldtext-whitemb-6'>
+                📊 MultimodalAIImpact Metrics
               </h2>
-              <div className='grid md:grid-cols-3 gap-6'>
-                <div className='text-center'>
-                  <div className='text-4xl font-bold text-purple-400 mb-2'>
+              <divclassName='gridmd: grid-cols-3gap-6'>
+                <divclassName='text-center'>
+                  <divclassName='text-4xlfont-boldtext-purple-400mb-2'>
                     97%
                   </div>
-                  <div className='text-sm'>Cross-Modal Accuracy</div>
+                  <divclassName='text-sm'>Cross-ModalAccuracy</div>
                 </div>
-                <div className='text-center'>
-                  <div className='text-4xl font-bold text-pink-400 mb-2'>
+                <divclassName='text-center'>
+                  <divclassName='text-4xlfont-boldtext-pink-400mb-2'>
                     $2.3B+
                   </div>
-                  <div className='text-sm'>Enterprise Value Created</div>
+                  <divclassName='text-sm'>EnterpriseValueCreated</div>
                 </div>
-                <div className='text-center'>
-                  <div className='text-4xl font-bold text-purple-400 mb-2'>
+                <divclassName='text-center'>
+                  <divclassName='text-4xlfont-boldtext-purple-400mb-2'>
                     85%
                   </div>
-                  <div className='text-sm'>Process Automation</div>
+                  <divclassName='text-sm'>ProcessAutomation</div>
                 </div>
               </div>
             </div>
 
             {/* Introduction */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-4'>
-                The Multimodal Revolution
+              <h2className = 'text-3xlfont-boldtext-whitemb-4'>
+                TheMultimodalRevolution
               </h2>
-              <p className='text-lg leading-relaxed mb-4'>
-                In October 2025, the convergence of vision, language, and audio
-                AI has reached a transformative milestone. Enterprises are no
-                longer deploying isolated AI systems for each modality—instead,
-                unified multimodal platforms are enabling unprecedented
-                intelligence that mirrors human perception.
+              <pclassName='text-lgleading-relaxedmb-4'>
+                InOctober2025theconvergenceof visionlanguageandaudioAI hasreacheda transformativemilestone. Enterprisesareno
+                longerdeployingisolated AIsystemsfor eachmodality—instead
+                unifiedmultimodalplatforms areenablingunprecedented
+                intelligencethatmirrors humanperception.
               </p>
-              <p className='text-lg leading-relaxed'>
-                Leading organizations have reported 85% automation rates and
-                $2.3B+ in value creation by implementing multimodal AI systems
-                that seamlessly process images, text, audio, and video within
-                unified workflows.
+              <pclassName = 'text-lgleading-relaxed'>
+                Leadingorganizationshave reported85% automationratesand
+                $2.3B+ invaluecreation byimplementingmultimodal AIsystemsthat seamlesslyprocessimagestextaudioandvideowithin
+                unifiedworkflows.
               </p>
             </section>
 
-            {/* Core Capabilities */}
+            {/* CoreCapabilities */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🎯 Core Multimodal Capabilities
+              <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                🎯 CoreMultimodalCapabilities
               </h2>
-              <div className='space-y-6'>
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30'>
-                  <h3 className='text-xl font-bold text-white mb-3 flex items-center gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400' />
-                    Vision-Language Understanding
+              <divclassName='space-y-6'>
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6borderborder-zion-cyan/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-3flexitems-centergap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400' />
+                    Vision-LanguageUnderstanding
                   </h3>
-                  <p className='mb-3'>
-                    Models like GPT-4V and Claude Vision analyze images and
-                    respond to complex queries, enabling document intelligence,
-                    visual QA, and automated quality inspection with 96%
+                  <pclassName='mb-3'>
+                    ModelslikeGPT-4VandClaude Visionanalyzeimages andrespondto complexqueriesenablingdocumentintelligence
+                    visualQAandautomatedquality inspectionwith96%
                     accuracy.
                   </p>
-                  <div className='bg-zion-blue/10 rounded-lg p-4 border border-zion-blue/30'>
-                    <strong className='text-zion-cyan'>Real Impact:</strong>{' '}
-                    Fortune 500 manufacturer reduced defect detection time by
-                    92% and saved $45M annually.
+                  <divclassName = 'bg-zion-blue/10rounded-lgp-4borderborder-zion-blue/30'>
+                    <strongclassName='text-zion-cyan'>RealImpact: </strong>{' '}
+                    Fortune500manufacturer reduceddefectdetection timeby92% andsaved $45Mannually.
                   </div>
                 </div>
 
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30'>
-                  <h3 className='text-xl font-bold text-white mb-3 flex items-center gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400' />
-                    Audio-Visual Intelligence
+                <divclassName = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-purple-400/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-3flexitems-centergap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400' />
+                    Audio-VisualIntelligence
                   </h3>
-                  <p className='mb-3'>
-                    Unified models process video content with synchronized audio
-                    analysis, enabling sentiment detection, speaker
-                    identification, and context-aware transcription with 94%
+                  <pclassName='mb-3'>
+                    Unifiedmodelsprocess videocontentwith synchronizedaudioanalysisenablingsentimentdetectionspeakeridentificationandcontext-awaretranscriptionwith 94%
                     accuracy.
                   </p>
-                  <div className='bg-purple-900/20 rounded-lg p-4 border border-purple-500/30'>
-                    <strong className='text-purple-400'>Use Case:</strong>{' '}
-                    Global retailer improved customer service quality by 78%
-                    using multimodal meeting analysis.
+                  <divclassName = 'bg-purple-900/20rounded-lgp-4borderborder-purple-500/30'>
+                    <strongclassName='text-purple-400'>UseCase: </strong>{' '}
+                    Globalretailerimproved customerservicequality by78%
+                    usingmultimodalmeeting analysis.
                   </div>
                 </div>
 
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30'>
-                  <h3 className='text-xl font-bold text-white mb-3 flex items-center gap-2'>
-                    <CheckCircle className='w-5 h-5 text-green-400' />
-                    Cross-Modal Generation
+                <divclassName = 'bg-white/5backdrop-blur-smrounded-xlp-6borderborder-pink-400/30'>
+                  <h3className='text-xlfont-boldtext-whitemb-3flexitems-centergap-2'>
+                    <CheckCircle,className='w-5 h-5text-green-400' />
+                    Cross-ModalGeneration
                   </h3>
-                  <p className='mb-3'>
-                    Generate images from text (DALL-E 3), create narrated videos
-                    from documents, or produce marketing content across all
-                    formats from a single brief—all with enterprise-grade
-                    quality.
+                  <pclassName='mb-3'>
+                    Generateimagesfrom text (DALL-E 3)createnarratedvideos
+                    fromdocumentsorproducemarketing contentacrossall
+                    formatsfroma singlebrief—allwithenterprise-gradequality.
                   </p>
-                  <div className='bg-pink-900/20 rounded-lg p-4 border border-pink-500/30'>
-                    <strong className='text-pink-400'>Results:</strong>{' '}
-                    Marketing teams reduced content production time by 87% and
-                    increased campaign ROI by 340%.
+                  <divclassName = 'bg-pink-900/20rounded-lgp-4borderborder-pink-500/30'>
+                    <strongclassName='text-pink-400'>Results: </strong>{' '}
+                    Marketingteamsreduced contentproductiontime by87% andincreasedcampaign ROIby340%.
                   </div>
                 </div>
               </div>
@@ -186,204 +172,197 @@ const MultimodalEnterpriseIntelligence = () => {
 
             {/* Architecture */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-4'>
-                🏗️ Enterprise Multimodal Architecture
+              <h2className = 'text-3xlfont-boldtext-whitemb-4'>
+                🏗️ EnterpriseMultimodalArchitecture
               </h2>
-              <div className='bg-gradient-to-r from-zion-blue/10 to-purple-900/10 rounded-xl p-6 border border-zion-cyan/30'>
-                <h3 className='text-xl font-bold text-white mb-4'>
-                  Production-Ready Stack (Oct 2025)
+              <divclassName='bg-gradient-to-rfrom-zion-blue/10to-purple-900/10rounded-xlp-6borderborder-zion-cyan/30'>
+                <h3className='text-xlfont-boldtext-whitemb-4'>
+                  Production-ReadyStack (Oct2025)
                 </h3>
-                <ul className='space-y-3'>
-                  <li className='flex items-start gap-3'>
-                    <Zap className='w-5 h-5 text-zion-cyan mt-1 flex-shrink-0' />
+                <ulclassName = 'space-y-3'>
+                  <liclassName='flexitems-startgap-3'>
+                    <ZapclassName='w-5 h-5text-zion-cyanmt-1flex-shrink-0' />
                     <div>
-                      <strong className='text-white'>Vision Models:</strong>{' '}
-                      GPT-4V, Claude 3.5 Sonnet Vision, LLaVA 1.6, BLIP-2 for
-                      image understanding and generation
+                      <strongclassName='text-white'>VisionModels: </strong>{' '}
+                      GPT-4VClaude3.5SonnetVisionLLaVA1.6BLIP-2forimage understandingandgeneration
                     </div>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <Zap className='w-5 h-5 text-purple-400 mt-1 flex-shrink-0' />
+                  <liclassName = 'flexitems-startgap-3'>
+                    <ZapclassName='w-5 h-5text-purple-400mt-1flex-shrink-0' />
                     <div>
-                      <strong className='text-white'>Language Models:</strong>{' '}
-                      GPT-4 Turbo, Claude 3.5 Sonnet, Llama 3.1 405B for text
-                      processing and reasoning
+                      <strongclassName='text-white'>LanguageModels: </strong>{' '}
+                      GPT-4TurboClaude3.5SonnetLlama3.1405Bfor textprocessingand reasoning
                     </div>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <Zap className='w-5 h-5 text-pink-400 mt-1 flex-shrink-0' />
+                  <liclassName = 'flexitems-startgap-3'>
+                    <ZapclassName='w-5 h-5text-pink-400mt-1flex-shrink-0' />
                     <div>
-                      <strong className='text-white'>Audio Models:</strong>{' '}
-                      Whisper v3, AudioCraft, MusicGen for speech, sound, and
-                      audio generation
+                      <strongclassName='text-white'>AudioModels: </strong>{' '}
+                      Whisperv3AudioCraftMusicGenforspeechsoundandaudiogeneration
                     </div>
                   </li>
-                  <li className='flex items-start gap-3'>
-                    <Zap className='w-5 h-5 text-green-400 mt-1 flex-shrink-0' />
+                  <liclassName = 'flexitems-startgap-3'>
+                    <ZapclassName='w-5 h-5text-green-400mt-1flex-shrink-0' />
                     <div>
-                      <strong className='text-white'>Orchestration:</strong>{' '}
-                      LangChain, LlamaIndex, custom pipelines for unified
-                      multimodal workflows
+                      <strongclassName='text-white'>Orchestration: </strong>{' '}
+                      LangChainLlamaIndexcustompipelinesfor unifiedmultimodalworkflows
                     </div>
                   </li>
                 </ul>
               </div>
             </section>
 
-            {/* ROI Calculator */}
+            {/* ROICalculator */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                💰 Enterprise ROI: Multimodal AI
+              <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                💰 EnterpriseROI: MultimodalAI
               </h2>
-              <div className='bg-gradient-to-r from-green-900/40 to-blue-900/40 rounded-xl p-8 border border-green-500/30'>
-                <div className='grid md:grid-cols-2 gap-6'>
+              <divclassName='bg-gradient-to-rfrom-green-900/40to-blue-900/40rounded-xlp-8borderborder-green-500/30'>
+                <divclassName='gridmd:grid-cols-2gap-6'>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
                       Investment
                     </h3>
-                    <ul className='space-y-2 text-sm'>
-                      <li className='flex justify-between'>
-                        <span>Platform licensing:</span>
-                        <span className='text-white font-semibold'>
+                    <ulclassName='space-y-2text-sm'>
+                      <liclassName='flexjustify-between'>
+                        <span>Platformlicensing:</span>
+                        <spanclassName='text-whitefont-semibold'>
                           $180K/year
                         </span>
                       </li>
-                      <li className='flex justify-between'>
+                      <liclassName='flexjustify-between'>
                         <span>Implementation:</span>
-                        <span className='text-white font-semibold'>
-                          $250K one-time
+                        <spanclassName='text-whitefont-semibold'>
+                          $250Kone-time
                         </span>
                       </li>
-                      <li className='flex justify-between'>
+                      <liclassName='flexjustify-between'>
                         <span>Training & support:</span>
-                        <span className='text-white font-semibold'>
+                        <spanclassName='text-whitefont-semibold'>
                           $120K/year
                         </span>
                       </li>
-                      <li className='flex justify-between border-t border-white/20 pt-2 mt-2'>
-                        <strong>First Year Total:</strong>
-                        <strong className='text-white'>$550K</strong>
+                      <liclassName='flexjustify-betweenborder-tborder-white/20pt-2mt-2'>
+                        <strong>FirstYearTotal:</strong>
+                        <strongclassName='text-white'>$550K</strong>
                       </li>
                     </ul>
                   </div>
                   <div>
-                    <h3 className='text-xl font-bold text-white mb-4'>
+                    <h3className='text-xlfont-boldtext-whitemb-4'>
                       Returns (Year 1)
                     </h3>
-                    <ul className='space-y-2 text-sm'>
-                      <li className='flex justify-between'>
-                        <span>Process automation savings:</span>
-                        <span className='text-green-400 font-semibold'>
+                    <ulclassName = 'space-y-2text-sm'>
+                      <liclassName='flexjustify-between'>
+                        <span>Processautomationsavings:</span>
+                        <spanclassName='text-green-400font-semibold'>
                           $1.8M
                         </span>
                       </li>
-                      <li className='flex justify-between'>
-                        <span>Quality improvement value:</span>
-                        <span className='text-green-400 font-semibold'>
+                      <liclassName='flexjustify-between'>
+                        <span>Qualityimprovementvalue:</span>
+                        <spanclassName='text-green-400font-semibold'>
                           $920K
                         </span>
                       </li>
-                      <li className='flex justify-between'>
-                        <span>Productivity gains:</span>
-                        <span className='text-green-400 font-semibold'>
+                      <liclassName='flexjustify-between'>
+                        <span>Productivitygains:</span>
+                        <spanclassName='text-green-400font-semibold'>
                           $1.2M
                         </span>
                       </li>
-                      <li className='flex justify-between border-t border-white/20 pt-2 mt-2'>
-                        <strong>Total Value:</strong>
-                        <strong className='text-green-400'>$3.92M</strong>
+                      <liclassName='flexjustify-betweenborder-tborder-white/20pt-2mt-2'>
+                        <strong>TotalValue:</strong>
+                        <strongclassName='text-green-400'>$3.92M</strong>
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div className='mt-6 text-center'>
-                  <div className='text-3xl font-bold text-green-400'>
-                    613% ROI in Year 1
+                <divclassName='mt-6text-center'>
+                  <divclassName='text-3xlfont-boldtext-green-400'>
+                    613% ROIinYear 1
                   </div>
-                  <div className='text-sm mt-2'>Payback period: 2.1 months</div>
+                  <divclassName='text-smmt-2'>Paybackperiod: 2.1months</div>
                 </div>
               </div>
             </section>
 
-            {/* Implementation Guide */}
+            {/* ImplementationGuide */}
             <section>
-              <h2 className='text-3xl font-bold text-white mb-6'>
-                🚀 Implementation Roadmap
+              <h2className = 'text-3xlfont-boldtext-whitemb-6'>
+                🚀 ImplementationRoadmap
               </h2>
-              <div className='space-y-4'>
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-zion-cyan'>
-                  <h3 className='text-xl font-bold text-white mb-2'>
-                    Phase 1: Foundation (Weeks 1-4)
+              <divclassName='space-y-4'>
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6border-l-4border-zion-cyan'>
+                  <h3className='text-xlfont-boldtext-whitemb-2'>
+                    Phase1: Foundation (Weeks1-4)
                   </h3>
-                  <ul className='space-y-2 ml-4'>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-zion-cyan mt-1'>▸</span>
+                  <ulclassName = 'space-y-2ml-4'>
+                    <liclassName='flexitems-startgap-2'>
+                      <spanclassName='text-zion-cyanmt-1'>▸</span>
                       <span>
-                        Assess current systems and identify high-impact use
-                        cases
+                        Assesscurrentsystems andidentifyhigh-impactusecases
                       </span>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-zion-cyan mt-1'>▸</span>
+                    <liclassName='flexitems-startgap-2'>
+                      <spanclassName='text-zion-cyanmt-1'>▸</span>
                       <span>
-                        Select multimodal platform (GPT-4V, Claude Vision, or
-                        custom)
+                        Selectmultimodalplatform (GPT-4VClaudeVisionorcustom)
                       </span>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-zion-cyan mt-1'>▸</span>
+                    <liclassName = 'flexitems-startgap-2'>
+                      <spanclassName='text-zion-cyanmt-1'>▸</span>
                       <span>
-                        Set up data pipelines and preprocessing workflows
+                        Setupdata pipelinesandpreprocessing workflows
                       </span>
                     </li>
                   </ul>
                 </div>
 
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-purple-400'>
-                  <h3 className='text-xl font-bold text-white mb-2'>
-                    Phase 2: Pilot Deployment (Weeks 5-8)
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6border-l-4border-purple-400'>
+                  <h3className='text-xlfont-boldtext-whitemb-2'>
+                    Phase2: PilotDeployment (Weeks5-8)
                   </h3>
-                  <ul className='space-y-2 ml-4'>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-purple-400 mt-1'>▸</span>
+                  <ulclassName = 'space-y-2ml-4'>
+                    <liclassName='flexitems-startgap-2'>
+                      <spanclassName='text-purple-400mt-1'>▸</span>
                       <span>
-                        Deploy pilot in controlled environment (1-2 use cases)
+                        Deploypilotin controlledenvironment (1-2usecases)
                       </span>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-purple-400 mt-1'>▸</span>
+                    <liclassName = 'flexitems-startgap-2'>
+                      <spanclassName='text-purple-400mt-1'>▸</span>
                       <span>
-                        Gather user feedback and measure accuracy/performance
+                        Gatheruserfeedback andmeasureaccuracy/performance
                       </span>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-purple-400 mt-1'>▸</span>
-                      <span>Refine prompts and fine-tune models as needed</span>
+                    <liclassName='flexitems-startgap-2'>
+                      <spanclassName='text-purple-400mt-1'>▸</span>
+                      <span>Refinepromptsand fine-tunemodelsas needed</span>
                     </li>
                   </ul>
                 </div>
 
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border-l-4 border-green-400'>
-                  <h3 className='text-xl font-bold text-white mb-2'>
-                    Phase 3: Scale & Optimize (Weeks 9-12)
+                <divclassName='bg-white/5backdrop-blur-smrounded-xlp-6border-l-4border-green-400'>
+                  <h3className='text-xlfont-boldtext-whitemb-2'>
+                    Phase3: Scale & Optimize (Weeks9-12)
                   </h3>
-                  <ul className='space-y-2 ml-4'>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-green-400 mt-1'>▸</span>
+                  <ulclassName = 'space-y-2ml-4'>
+                    <liclassName='flexitems-startgap-2'>
+                      <spanclassName='text-green-400mt-1'>▸</span>
                       <span>
-                        Roll out to production across all identified use cases
+                        Rolloutto productionacrossall identifiedusecases
                       </span>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-green-400 mt-1'>▸</span>
+                    <liclassName='flexitems-startgap-2'>
+                      <spanclassName='text-green-400mt-1'>▸</span>
                       <span>
-                        Implement monitoring, alerting, and continuous
-                        improvement
+                        Implementmonitoringalertingandcontinuousimprovement
                       </span>
                     </li>
-                    <li className='flex items-start gap-2'>
-                      <span className='text-green-400 mt-1'>▸</span>
-                      <span>Train teams and establish best practices</span>
+                    <liclassName = 'flexitems-startgap-2'>
+                      <spanclassName='text-green-400mt-1'>▸</span>
+                      <span>Trainteamsand establishbestpractices</span>
                     </li>
                   </ul>
                 </div>
@@ -391,27 +370,25 @@ const MultimodalEnterpriseIntelligence = () => {
             </section>
 
             {/* CTA */}
-            <section className='bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-center'>
-              <h2 className='text-3xl font-bold text-white mb-4'>
-                Ready to Transform Your Enterprise with Multimodal AI?
+            <sectionclassName='bg-gradient-to-rfrom-purple-600to-pink-600rounded-2xlp-8text-center'>
+              <h2className='text-3xlfont-boldtext-whitemb-4'>
+                ReadytoTransform YourEnterprisewith MultimodalAI?
               </h2>
-              <p className='text-white/90 mb-6 max-w-2xl mx-auto'>
-                Join the Fortune 500 companies achieving 97% accuracy and $2.3B+
-                in value creation. Schedule your free consultation today.
+              <pclassName='text-white/90mb-6max-w-2xlmx-auto'>
+                JointheFortune 500companiesachieving 97% accuracyand $2.3B+
+                invaluecreation. Scheduleyourfree consultationtoday.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2'
+              <divclassName='flexflex-colsm: flex-rowgap-4justify-center'>
+                <Linkto='/contact'
+                  className='bg-whitetext-purple-600hover:bg-zion-slate-lightpx-8py-4rounded-lgfont-semiboldtransition-allduration-300hover:scale-105inline-flexitems-centerjustify-centergap-2'
                 >
-                  <TrendingUp className='w-5 h-5' />
-                  Schedule Free Consultation
+                  <TrendingUpclassName='w-5 h-5' />
+                  ScheduleFreeConsultation
                 </Link>
-                <Link
-                  to='/services'
-                  className='border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105'
+                <Linkto='/services'
+                  className='border-2border-whitetext-whitehover:bg-white/10px-8py-4rounded-lgfont-semiboldtransition-allduration-300hover:scale-105'
                 >
-                  View All AI Services
+                  ViewAllAI Services
                 </Link>
               </div>
             </section>
@@ -422,4 +399,4 @@ const MultimodalEnterpriseIntelligence = () => {
   );
 };
 
-export default MultimodalEnterpriseIntelligence;
+exportdefaultMultimodalEnterpriseIntelligence;

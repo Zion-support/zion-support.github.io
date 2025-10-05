@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function AIWorkflowAutomation(): React.JSX.Element {
+exportdefaultfunction AIWorkflowAutomation(): React.JSX.Element {
   return (
-    <main style={{ padding: '2rem' }}>
-      <h1>AI Workflow Automation</h1>
+    <mainstyle = {{ padding: '2rem' }}>
+      <h1>AIWorkflowAutomation</h1>
     </main>
   );
 }

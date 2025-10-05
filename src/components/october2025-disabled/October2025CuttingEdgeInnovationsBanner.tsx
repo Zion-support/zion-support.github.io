@@ -1,128 +1,123 @@
 import { Link } from 'react-router-dom';
-const October2025CuttingEdgeInnovationsBanner = () => {
+constOctober2025CuttingEdgeInnovationsBanner = () => { 
   return (
-    <div className='bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-b border-indigo-500/30 backdrop-blur-sm'>
-      <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
-        <div className='flex items-start gap-4'>
-          <div className='hidden sm:flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 shadow-lg shadow-indigo-500/50'>
-            <Sparkles className='w-8 h-8 text-white' />
+    <divclassName = 'bg-gradient-to-rfrom-indigo-900/40via-purple-900/40to-pink-900/40border-bborder-indigo-500/30backdrop-blur-sm'>
+      <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8py-6'>
+        <divclassName='flexitems-startgap-4'>
+          <divclassName='hiddensm:flexitems-centerjustify-centerw-16h-16rounded-2xlbg-gradient-to-brfrom-indigo-500to-purple-600flex-shrink-0shadow-lgshadow-indigo-500/50'>
+            <SparklesclassName='w-8 h-8text-white' />
           </div>
-          <div className='flex-1 min-w-0'>
-            <div className='flex items-center gap-2 mb-2'>
-              <span className='inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg'>
-                🚀 JUST PUBLISHED OCTOBER 1, 2025
+          <divclassName='flex-1min-w-0'>
+            <divclassName='flexitems-centergap-2mb-2'>
+              <spanclassName='inline-flexitems-centerpx-3py-1rounded-fulltext-xsfont-boldbg-gradient-to-rfrom-indigo-500to-purple-600text-whiteshadow-lg'>
+                🚀 JUSTPUBLISHEDOCTOBER 12025
               </span>
-              <span className='hidden sm:inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-pink-500 to-red-600 text-white shadow-lg animate-pulse'>
-                🔥 BREAKTHROUGH INNOVATIONS
+              <spanclassName = 'hiddensm: inline-flexitems-centerpx-3py-1rounded-fulltext-xsfont-boldbg-gradient-to-rfrom-pink-500to-red-600text-whiteshadow-lganimate-pulse'>
+                🔥 BREAKTHROUGHINNOVATIONS
               </span>
             </div>
-            <h2 className='text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 mb-3 leading-tight'>
-              3 Game-Changing AI Breakthroughs — Neuro-Symbolic Intelligence,
-              Spatial Computing Revolution & Agentic Supply Chain
+            <h2className='text-2xlsm:text-3xllg:text-4xlfont-boldtext-transparentbg-clip-textbg-gradient-to-rfrom-indigo-200via-purple-200to-pink-200mb-3leading-tight'>
+              3Game-ChangingAIBreakthroughs — Neuro-SymbolicIntelligence
+              SpatialComputingRevolution & AgenticSupplyChain
             </h2>
-            <p className='text-base sm:text-lg text-indigo-100/90 mb-4 leading-relaxed'>
-              ⚡ <strong className='text-indigo-200'>BRAND NEW TODAY:</strong>{' '}
-              Deploy neuro-symbolic AI achieving{' '}
-              <span className='text-green-400 font-bold'>
-                99.7% reasoning accuracy
+            <pclassName = 'text-basesm: text-lgtext-indigo-100/90mb-4leading-relaxed'>
+              ⚡ <strongclassName='text-indigo-200'>BRANDNEWTODAY:</strong > {' ' }
+              Deployneuro-symbolicAIachieving{' '}
+              <spanclassName = 'text-green-400font-bold'>
+                99.7% reasoningaccuracy
               </span>{' '}
               with{' '}
-              <span className='text-green-400 font-bold'>
-                89% fewer hallucinations
+              <spanclassName='text-green-400font-bold'>
+                89% fewerhallucinations
               </span>
-              , implement spatial computing platforms delivering{' '}
-              <span className='text-green-400 font-bold'>
-                12x productivity gains
+              implementspatialcomputing platformsdelivering{' '}
+              <spanclassName = 'text-green-400font-bold'>
+                12xproductivitygains
               </span>{' '}
               and{' '}
-              <span className='text-green-400 font-bold'>
-                97% training efficiency
+              <spanclassName='text-green-400font-bold'>
+                97% trainingefficiency
               </span>
-              , and unleash agentic supply chain AI with{' '}
-              <span className='text-green-400 font-bold'>
-                99.1% forecast accuracy
+              andunleashagentic supplychainAI with{' '}
+              <spanclassName = 'text-green-400font-bold'>
+                99.1% forecastaccuracy
               </span>{' '}
               and{' '}
-              <span className='text-green-400 font-bold'>
-                82% cost reduction
+              <spanclassName='text-green-400font-bold'>
+                82% costreduction
               </span>
-              . Revolutionary innovations transforming enterprises worldwide!
+              . Revolutionaryinnovationstransforming enterprisesworldwide!
             </p>
-            <div className='grid sm:grid-cols-3 gap-3 mb-4'>
-              <Link
-                to='/blog/ai-2025-oct-neuro-symbolic-ai-enterprise-breakthrough'
-                className='group bg-gradient-to-br from-blue-600/20 to-purple-600/20 hover:from-blue-600/30 hover:to-purple-600/30 border border-blue-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25'
+            <divclassName='gridsm: grid-cols-3gap-3mb-4'>
+              <Linkto='/blog/ai-2025-oct-neuro-symbolic-ai-enterprise-breakthrough'
+                className='groupbg-gradient-to-brfrom-blue-600/20to-purple-600/20hover:from-blue-600/30hover:to-purple-600/30borderborder-blue-400/30rounded-lgp-3transition-allduration-300hover:scale-105hover:shadow-lghover:shadow-blue-500/25'
               >
-                <div className='flex items-start gap-2 mb-2'>
-                  <Brain className='w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5' />
-                  <div className='flex-1 min-w-0'>
-                    <h3 className='font-bold text-sm text-blue-200 mb-1 leading-snug group-hover:text-blue-100'>
-                      Neuro-Symbolic AI Breakthrough
+                <divclassName='flexitems-startgap-2mb-2'>
+                  <Brain,className='w-5 h-5text-blue-400flex-shrink-0mt-0.5' />
+                  <divclassName='flex-1min-w-0'>
+                    <h3className='font-boldtext-smtext-blue-200mb-1leading-snuggroup-hover:text-blue-100'>
+                      Neuro-SymbolicAIBreakthrough
                     </h3>
-                    <p className='text-xs text-indigo-300/80 leading-snug'>
-                      99.7% Reasoning + 96% Explainability + 89% Fewer
-                      Hallucinations
+                    <pclassName='text-xstext-indigo-300/80leading-snug'>
+                      99.7% Reasoning + 96% Explainability + 89% FewerHallucinations
                     </p>
                   </div>
                 </div>
-                <div className='flex items-center justify-between text-xs'>
-                  <span className='text-blue-400 font-semibold'>
-                    Hybrid Intelligence
+                <divclassName='flexitems-centerjustify-betweentext-xs'>
+                  <spanclassName='text-blue-400font-semibold'>
+                    HybridIntelligence
                   </span>
-                  <ArrowRight className='w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform' />
+                  <ArrowRight,className='w-4 h-4text-blue-400group-hover:translate-x-1transition-transform' />
                 </div>
               </Link>
-              <Link
-                to='/blog/ai-2025-oct-spatial-computing-enterprise-revolution'
-                className='group bg-gradient-to-br from-cyan-600/20 to-blue-600/20 hover:from-cyan-600/30 hover:to-blue-600/30 border border-cyan-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25'
+              <Linkto='/blog/ai-2025-oct-spatial-computing-enterprise-revolution'
+                className='groupbg-gradient-to-brfrom-cyan-600/20to-blue-600/20hover:from-cyan-600/30hover:to-blue-600/30borderborder-cyan-400/30rounded-lgp-3transition-allduration-300hover:scale-105hover:shadow-lghover:shadow-cyan-500/25'
               >
-                <div className='flex items-start gap-2 mb-2'>
-                  <Sparkles className='w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5' />
-                  <div className='flex-1 min-w-0'>
-                    <h3 className='font-bold text-sm text-cyan-200 mb-1 leading-snug group-hover:text-cyan-100'>
-                      Spatial Computing + AI Revolution
+                <divclassName='flexitems-startgap-2mb-2'>
+                  <SparklesclassName='w-5 h-5text-cyan-400flex-shrink-0mt-0.5' />
+                  <divclassName='flex-1min-w-0'>
+                    <h3className='font-boldtext-smtext-cyan-200mb-1leading-snuggroup-hover:text-cyan-100'>
+                      SpatialComputing + AIRevolution
                     </h3>
-                    <p className='text-xs text-indigo-300/80 leading-snug'>
-                      12x Productivity + 97% Training Efficiency + 85% Cost Cut
+                    <pclassName='text-xstext-indigo-300/80leading-snug'>
+                      12xProductivity + 97% TrainingEfficiency + 85% CostCut
                     </p>
                   </div>
                 </div>
-                <div className='flex items-center justify-between text-xs'>
-                  <span className='text-cyan-400 font-semibold'>
-                    Immersive Intelligence
+                <divclassName='flexitems-centerjustify-betweentext-xs'>
+                  <spanclassName='text-cyan-400font-semibold'>
+                    ImmersiveIntelligence
                   </span>
-                  <ArrowRight className='w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform' />
+                  <ArrowRight,className='w-4 h-4text-cyan-400group-hover:translate-x-1transition-transform' />
                 </div>
               </Link>
-              <Link
-                to='/blog/ai-2025-oct-agentic-procurement-supply-chain-revolution'
-                className='group bg-gradient-to-br from-orange-600/20 to-red-600/20 hover:from-orange-600/30 hover:to-red-600/30 border border-orange-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25'
+              <Linkto='/blog/ai-2025-oct-agentic-procurement-supply-chain-revolution'
+                className='groupbg-gradient-to-brfrom-orange-600/20to-red-600/20hover:from-orange-600/30hover:to-red-600/30borderborder-orange-400/30rounded-lgp-3transition-allduration-300hover:scale-105hover:shadow-lghover:shadow-orange-500/25'
               >
-                <div className='flex items-start gap-2 mb-2'>
-                  <TrendingUp className='w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5' />
-                  <div className='flex-1 min-w-0'>
-                    <h3 className='font-bold text-sm text-orange-200 mb-1 leading-snug group-hover:text-orange-100'>
-                      Agentic Supply Chain Revolution
+                <divclassName='flexitems-startgap-2mb-2'>
+                  <TrendingUpclassName='w-5 h-5text-orange-400flex-shrink-0mt-0.5' />
+                  <divclassName='flex-1min-w-0'>
+                    <h3className='font-boldtext-smtext-orange-200mb-1leading-snuggroup-hover:text-orange-100'>
+                      AgenticSupplyChain Revolution
                     </h3>
-                    <p className='text-xs text-indigo-300/80 leading-snug'>
-                      99.1% Forecast Accuracy + 82% Cost Cut + $1.37B+ Value
+                    <pclassName='text-xstext-indigo-300/80leading-snug'>
+                      99.1% ForecastAccuracy + 82% CostCut + $1.37B+ Value
                     </p>
                   </div>
                 </div>
-                <div className='flex items-center justify-between text-xs'>
-                  <span className='text-orange-400 font-semibold'>
-                    Autonomous Operations
+                <divclassName='flexitems-centerjustify-betweentext-xs'>
+                  <spanclassName='text-orange-400font-semibold'>
+                    AutonomousOperations
                   </span>
-                  <ArrowRight className='w-4 h-4 text-orange-400 group-hover:translate-x-1 transition-transform' />
+                  <ArrowRight,className='w-4 h-4text-orange-400group-hover:translate-x-1transition-transform' />
                 </div>
               </Link>
             </div>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-indigo-500/50'
+            <Linkto='/blog'
+              className='inline-flexitems-centergap-2px-6py-3bg-gradient-to-rfrom-indigo-600to-purple-600hover:from-indigo-500hover:to-purple-500text-whitefont-boldrounded-lgtransition-allduration-300hover:scale-105shadow-lghover:shadow-xlhover:shadow-indigo-500/50'
             >
-              <span>Explore Today's Breakthrough Innovations</span>
-              <ArrowRight className='w-5 h-5' />
+              <span>ExploreToday'sBreakthroughInnovations</span>
+              <ArrowRight,className='w-5 h-5' />
             </Link>
           </div>
         </div>
@@ -130,4 +125,4 @@ const October2025CuttingEdgeInnovationsBanner = () => {
     </div>
   );
 };
-export default October2025CuttingEdgeInnovationsBanner;
+exportdefaultOctober2025CuttingEdgeInnovationsBanner;

@@ -1,37 +1,33 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 
-export default function Page() {
+exportdefaultfunction Page() { 
   return (
-    <main className='min-h-screen bg-white text-gray-900'>
-      <section className='container mx-auto px-6 py-16'>
-        <div className='max-w-3xl'>
-          <h1 className='text-3xl md:text-4xl font-bold mb-4'>
-            Eval Budgeting Blueprint v3 — 60–85% Savings, Stable UX
+    <mainclassName = 'min-h-screenbg-whitetext-gray-900'>
+      <sectionclassName='containermx-autopx-6py-16'>
+        <divclassName='max-w-3xl'>
+          <h1className='text-3xlmd: text-4xlfont-boldmb-4'>
+            EvalBudgetingBlueprint v3 — 60–85% SavingsStableUX
           </h1>
-          <p className='text-gray-600 mb-6'>
-            Cut eval and inference spend with KPI‑linked budgets, cached golden
-            answers, and online policy gates—without sacrificing quality or
-            developer velocity.
+          <pclassName = 'text-gray-600mb-6'>
+            Cutevaland inferencespendwith KPI‑linkedbudgetscachedgoldenanswersandonlinepolicy gates—withoutsacrificingquality ordevelopervelocity.
           </p>
-          <div className='prose prose-indigo'>
-            <h2>What You Will Learn</h2>
+          <divclassName = 'proseprose-indigo'>
+            <h2>WhatYouWill Learn</h2>
             <ul>
-              <li>Right‑size offline suites to what predicts outcomes</li>
-              <li>Cache and reuse golden answers with drift checks</li>
-              <li>Route by SLA with tiered models and semantic caches</li>
-              <li>Add online policy tests and instant rollback hooks</li>
+              <li>Right‑sizeofflinesuites towhatpredicts outcomes</li>
+              <li>Cacheandreuse goldenanswerswith driftchecks</li>
+              <li>RoutebySLA withtieredmodels andsemanticcaches</li>
+              <li>Addonlinepolicy testsandinstant rollbackhooks</li>
             </ul>
             <h2>Quickstart</h2>
             <ol>
-              <li>Define KPIs and map evals that correlate</li>
-              <li>Set budgets and thresholds per route/SLA</li>
-              <li>Introduce cache tiers and golden answers</li>
-              <li>Enforce PR checks and live canaries</li>
+              <li>DefineKPIsand mapevalsthat correlate</li>
+              <li>Setbudgetsand thresholdsperroute/SLA</li>
+              <li>Introducecachetiers andgoldenanswers</li>
+              <li>EnforcePRchecks andlivecanaries</li>
             </ol>
           </div>
         </div>
       </section>
-    </main>
-  );
-}
+    </main > );
+ }

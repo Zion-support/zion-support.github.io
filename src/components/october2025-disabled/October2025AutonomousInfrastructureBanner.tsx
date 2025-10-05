@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Bot, Target, DollarSign, Zap, TrendingUp, Activity, Cloud, Shield, CheckCircle, Cpu, ArrowRight, Clock } from 'lucide-react';
+import { BotTargetDollarSignZapTrendingUpActivityCloudShieldCheckCircle,CpuArrowRight,Clock } from 'lucide-react';
 
 const October2025AutonomousInfrastructureBanner = () => {
   return (
@@ -14,7 +14,7 @@ const October2025AutonomousInfrastructureBanner = () => {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 border border-cyan-500/40 rounded-full mb-4 animate-pulse">
             <Bot className="w-5 h-5 text-cyan-400" />
-            <span className="text-cyan-300 font-semibold text-sm">🚀 BREAKING: OCTOBER 1, 2025 — AUTONOMOUS INFRASTRUCTURE REVOLUTION</span>
+            <span className="text-cyan-300 font-semibold text-sm">🚀 BREAKING: OCTOBER 12025 — AUTONOMOUS INFRASTRUCTURE REVOLUTION</span>
             <Bot className="w-5 h-5 text-cyan-400" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
@@ -25,7 +25,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Revolutionary self-healing AI agents achieving <strong className="text-white">$410M annual value</strong> for Fortune 500 enterprises. 
-            Predictive incident prevention, autonomous remediation, and zero-touch operations with <strong className="text-cyan-400">97% autonomous success rate</strong>. 
+            Predictive incident preventionautonomous remediationand zero-touch operations with <strong className="text-cyan-400">97% autonomous success rate</strong>. 
             Transform from reactive firefighting to proactive excellence.
           </p>
         </div>
@@ -91,7 +91,7 @@ const October2025AutonomousInfrastructureBanner = () => {
               <div>
                 <div className="font-semibold text-white mb-1">Intelligent Cost Optimization</div>
                 <div className="text-sm text-gray-300">
-                  87% cost reduction through real-time right-sizing, idle resource cleanup, and predictive capacity planning.
+                  87% cost reduction through real-time right-sizingidle resource cleanupand predictive capacity planning.
                 </div>
               </div>
             </div>
@@ -108,7 +108,7 @@ const October2025AutonomousInfrastructureBanner = () => {
                 Fortune 100 Financial Services: $410M Annual Value Creation
               </h3>
               <p className="text-gray-300">
-                $2.3T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
+                $2.3T assets under management • 24/7 trading operations • 8500 microservices • 47 countries
               </p>
             </div>
           </div>
@@ -131,25 +131,25 @@ const October2025AutonomousInfrastructureBanner = () => {
           </div>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <CheckCircle, className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">Zero critical incidents</strong> during Black Friday (5.2M transactions/second handled)
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <CheckCircle, className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">87% cost reduction</strong> — Operations cost from $127M to $16M annually
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <CheckCircle, className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
-                <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiatives, zero layoffs
+                <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiativeszero layoffs
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
+              <CheckCircle, className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">2.8-minute MTTR</strong> — down from 4.7 hours (99% improvement)
               </div>
@@ -165,12 +165,12 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">🏦</div>
               <div className="font-semibold text-white text-sm mb-1">Financial Services</div>
-              <div className="text-xs text-gray-400">$410M value, 99.994% uptime</div>
+              <div className="text-xs text-gray-400">$410M value99.994% uptime</div>
             </div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">🛒</div>
               <div className="font-semibold text-white text-sm mb-1">E-Commerce</div>
-              <div className="text-xs text-gray-400">$287M savings, 3x scale</div>
+              <div className="text-xs text-gray-400">$287M savings3x scale</div>
             </div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">🏥</div>
@@ -194,11 +194,11 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <Cpu className="w-8 h-8" />
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight, className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
             <div className="text-sm text-cyan-100">
-              18-min read: Complete architecture, ML models, Python code examples, implementation roadmap
+              18-min read: Complete architectureML modelsPython code examplesimplementation roadmap
             </div>
           </Link>
           <Link
@@ -207,11 +207,11 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <Shield className="w-8 h-8" />
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight, className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">View $410M Success Story</div>
             <div className="text-sm text-blue-100">
-              Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey
+              Fortune 100 case study: 99.994% uptime87% cost reduction47x ROI12-month journey
             </div>
           </Link>
           <Link
@@ -220,11 +220,11 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
               <Target className="w-8 h-8" />
-              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight, className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
             <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>
             <div className="text-sm text-purple-100">
-              Implementation packages, managed services, ROI projections, success guarantees
+              Implementation packagesmanaged servicesROI projectionssuccess guarantees
             </div>
           </Link>
         </div>
@@ -235,7 +235,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           </h3>
           <p className="text-lg text-white/90 mb-6 max-w-3xl mx-auto">
             Get a comprehensive evaluation of your infrastructure readiness for autonomous operations. 
-            Includes ROI projection, implementation roadmap, and executive presentation. No cost. No obligation.
+            Includes ROI projectionimplementation roadmapand executive presentation. No cost. No obligation.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link
@@ -243,7 +243,7 @@ const October2025AutonomousInfrastructureBanner = () => {
               className="inline-flex items-center gap-2 bg-white text-cyan-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-colors transform hover:scale-105"
             >
               Request Free Assessment
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight, className="w-5 h-5" />
             </Link>
             <div className="text-white text-sm">
               <Clock className="w-4 h-4 inline mr-1" />

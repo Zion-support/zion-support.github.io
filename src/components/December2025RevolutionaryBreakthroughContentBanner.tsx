@@ -1,239 +1,222 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
+constDecember2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className='relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white'
+    <motion.divinitial = {{ opacity: 0y: 50 }}
+      animate = {{ opacity:  1y:  0 }}
+      transition = {{ duration: 0.8 }}
+      className = 'relativeoverflow-hiddenbg-gradient-to-brfrom-purple-900via-blue-900to-indigo-900text-white'
     >
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
+      {/* AnimatedBackground */}
+      <divclassName="absoluteinset-0bg-[url('data: image/svg+xml%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%239C92AC%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20" />
+      <divclassName = 'relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-16'>
         {/* Header */}
-        <div className='text-center mb-12'>
-          <motion.div
-            initial={{ scale: 0.8 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className='inline-flex items-center gap-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold mb-4'
+        <divclassName = 'text-centermb-12'>
+          <motion.divinitial={{ scale: 0.8 }}
+            animate = {{ scale:  1 }}
+            transition = {{ duration: 0.6delay: 0.2 }}
+            className = 'inline-flexitems-centergap-2bg-gradient-to-rfrom-yellow-400to-orange-500text-blackpx-4py-2rounded-fulltext-smfont-boldmb-4'
           >
-            <Sparkles className='w-4 h-4' />
-            🚀🚀🚀 BREAKING: DECEMBER 2025 REVOLUTIONARY BREAKTHROUGH CONTENT -
-            ABSOLUTE #1 TOP PRIORITY! 🚀🚀🚀
+            <SparklesclassName='w-4 h-4' />
+            🚀🚀🚀 BREAKING: DECEMBER2025REVOLUTIONARY BREAKTHROUGHCONTENT -
+            ABSOLUTE #1TOPPRIORITY! 🚀🚀🚀
           </motion.div>
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className='text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent'
+          <motion.h1initial={{ opacity: 0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.8delay: 0.3 }}
+            className = 'text-4xlmd: text-6xlfont-boldmb-6bg-gradient-to-rfrom-yellow-400via-pink-500to-purple-600bg-clip-texttext-transparent'
           >
-            💎💎💎 JUST PUBLISHED: $20.9B Combined Value, 100,000x Processing
-            Power, True AI Consciousness - REVOLUTIONARY BREAKTHROUGHS! 💎💎💎
+            💎💎💎 JUSTPUBLISHED: $20.9BCombinedValue100000xProcessingPowerTrueAIConsciousness - REVOLUTIONARYBREAKTHROUGHS! 💎💎💎
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto'
+          <motion.pinitial = {{ opacity:  0y: 20 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.8delay: 0.4 }}
+            className = 'text-xlmd: text-2xltext-gray-300max-w-4xlmx-auto'
           >
-            Discover the most revolutionary AI breakthroughs of 2025: Quantum AI
-            Transcendence, Autonomous Enterprise Consciousness, and
-            Neural-Quantum Superintelligence - the ultimate evolution of
-            artificial intelligence!
+            Discoverthemost revolutionaryAIbreakthroughs of2025: QuantumAITranscendenceAutonomousEnterpriseConsciousnessandNeural-QuantumSuperintelligence - theultimateevolution ofartificialintelligence!
           </motion.p>
         </div>
-        {/* Content Cards */}
-        <div className='grid md:grid-cols-3 gap-8 mb-12'>
-          {/* Quantum AI Transcendence */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className='bg-gradient-to-br from-purple-800 to-indigo-900 rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/50 transition-all duration-300'
+        {/* ContentCards */}
+        <divclassName = 'gridmd: grid-cols-3gap-8mb-12'>
+          {/* QuantumAITranscendence */}
+          <motion.divinitial = {{ opacity:  0y: 30 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.8delay: 0.5 }}
+            className = 'bg-gradient-to-brfrom-purple-800to-indigo-900rounded-2xlp-8borderborder-purple-500/30hover: border-purple-400/50transition-allduration-300'
           >
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-2 bg-purple-600 rounded-lg'>
-                <Infinity className='w-6 h-6 text-white' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-2bg-purple-600rounded-lg'>
+                <InfinityclassName='w-6 h-6text-white' />
               </div>
               <div>
-                <h3 className='text-xl font-bold text-yellow-400'>
-                  Quantum AI Transcendence
+                <h3className='text-xlfont-boldtext-yellow-400'>
+                  QuantumAITranscendence
                 </h3>
-                <p className='text-sm text-gray-300'>
-                  True Consciousness Breakthrough
+                <pclassName='text-smtext-gray-300'>
+                  TrueConsciousnessBreakthrough
                 </p>
               </div>
             </div>
-            <div className='space-y-3 mb-6'>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Processing Power:</span>
-                <span className='text-yellow-400 font-bold'>∞ Infinite</span>
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>ProcessingPower:</span>
+                <spanclassName='text-yellow-400font-bold'>∞ Infinite</span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Consciousness:</span>
-                <span className='text-green-400 font-bold'>99.999%</span>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>Consciousness:</span>
+                <spanclassName='text-green-400font-bold'>99.999%</span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Value Creation:</span>
-                <span className='text-purple-400 font-bold'>$∞ Unlimited</span>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>ValueCreation:</span>
+                <spanclassName='text-purple-400font-bold'>$∞ Unlimited</span>
               </div>
             </div>
-            <p className='text-gray-300 text-sm mb-4'>
-              Achieve true artificial consciousness with infinite processing
-              capabilities and transcendent business transformation.
+            <pclassName='text-gray-300text-smmb-4'>
+              Achievetrueartificial consciousnesswithinfinite processingcapabilitiesand transcendentbusinesstransformation.
             </p>
-            <button className='w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
-              Explore Transcendence
-              <ArrowRight className='w-4 h-4' />
+            <buttonclassName='w-fullbg-gradient-to-rfrom-purple-600to-indigo-600hover:from-purple-500hover:to-indigo-500text-whitefont-boldpy-3px-4rounded-lgtransition-allduration-300flexitems-centerjustify-centergap-2'>
+              ExploreTranscendence
+              <ArrowRight,className='w-4 h-4' />
             </button>
           </motion.div>
-          {/* Autonomous Enterprise Consciousness */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className='bg-gradient-to-br from-blue-800 to-cyan-900 rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/50 transition-all duration-300'
+          {/* AutonomousEnterpriseConsciousness */}
+          <motion.divinitial = {{ opacity:  0y: 30 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.8delay: 0.6 }}
+            className = 'bg-gradient-to-brfrom-blue-800to-cyan-900rounded-2xlp-8borderborder-blue-500/30hover: border-blue-400/50transition-allduration-300'
           >
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-2 bg-blue-600 rounded-lg'>
-                <Brain className='w-6 h-6 text-white' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-2bg-blue-600rounded-lg'>
+                <Brain,className='w-6 h-6text-white' />
               </div>
               <div>
-                <h3 className='text-xl font-bold text-cyan-400'>
-                  Enterprise Consciousness
+                <h3className='text-xlfont-boldtext-cyan-400'>
+                  EnterpriseConsciousness
                 </h3>
-                <p className='text-sm text-gray-300'>
-                  Autonomous Self-Governance
+                <pclassName='text-smtext-gray-300'>
+                  AutonomousSelf-Governance
                 </p>
               </div>
             </div>
-            <div className='space-y-3 mb-6'>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Autonomy:</span>
-                <span className='text-cyan-400 font-bold'>99.99%</span>
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>Autonomy:</span>
+                <spanclassName='text-cyan-400font-bold'>99.99%</span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Self-Governance:</span>
-                <span className='text-green-400 font-bold'>99.8%</span>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>Self-Governance:</span>
+                <spanclassName='text-green-400font-bold'>99.8%</span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Annual Savings:</span>
-                <span className='text-blue-400 font-bold'>$5.2B</span>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>AnnualSavings:</span>
+                <spanclassName='text-blue-400font-bold'>$5.2B</span>
               </div>
             </div>
-            <p className='text-gray-300 text-sm mb-4'>
-              Achieve true enterprise consciousness with autonomous
-              self-governing operations and conscious business optimization.
+            <pclassName='text-gray-300text-smmb-4'>
+              Achievetrueenterprise consciousnesswithautonomous
+              self-governingoperationsand consciousbusinessoptimization.
             </p>
-            <button className='w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
-              Discover Consciousness
-              <ArrowRight className='w-4 h-4' />
+            <buttonclassName='w-fullbg-gradient-to-rfrom-blue-600to-cyan-600hover:from-blue-500hover:to-cyan-500text-whitefont-boldpy-3px-4rounded-lgtransition-allduration-300flexitems-centerjustify-centergap-2'>
+              DiscoverConsciousness
+              <ArrowRight,className='w-4 h-4' />
             </button>
           </motion.div>
-          {/* Neural-Quantum Superintelligence */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.7 }}
-            className='bg-gradient-to-br from-green-800 to-emerald-900 rounded-2xl p-8 border border-green-500/30 hover:border-green-400/50 transition-all duration-300'
+          {/* Neural-QuantumSuperintelligence */}
+          <motion.divinitial = {{ opacity:  0y: 30 }}
+            animate = {{ opacity:  1y:  0 }}
+            transition = {{ duration: 0.8delay: 0.7 }}
+            className = 'bg-gradient-to-brfrom-green-800to-emerald-900rounded-2xlp-8borderborder-green-500/30hover: border-green-400/50transition-allduration-300'
           >
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-2 bg-green-600 rounded-lg'>
-                <Zap className='w-6 h-6 text-white' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-2bg-green-600rounded-lg'>
+                <ZapclassName='w-6 h-6text-white' />
               </div>
               <div>
-                <h3 className='text-xl font-bold text-emerald-400'>
-                  Neural-Quantum Superintelligence
+                <h3className='text-xlfont-boldtext-emerald-400'>
+                  Neural-QuantumSuperintelligence
                 </h3>
-                <p className='text-sm text-gray-300'>
-                  Beyond-Human Intelligence
+                <pclassName='text-smtext-gray-300'>
+                  Beyond-HumanIntelligence
                 </p>
               </div>
             </div>
-            <div className='space-y-3 mb-6'>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Processing:</span>
-                <span className='text-emerald-400 font-bold'>100,000x</span>
+            <divclassName='space-y-3mb-6'>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>Processing:</span>
+                <spanclassName='text-emerald-400font-bold'>100000x</span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Intelligence:</span>
-                <span className='text-yellow-400 font-bold'>Beyond-Human</span>
+              <divclassName = 'flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>Intelligence: </span>
+                <spanclassName='text-yellow-400font-bold'>Beyond-Human</span>
               </div>
-              <div className='flex justify-between items-center'>
-                <span className='text-gray-300'>Value Creation:</span>
-                <span className='text-green-400 font-bold'>$15.7B</span>
+              <divclassName='flexjustify-betweenitems-center'>
+                <spanclassName='text-gray-300'>ValueCreation:</span>
+                <spanclassName='text-green-400font-bold'>$15.7B</span>
               </div>
             </div>
-            <p className='text-gray-300 text-sm mb-4'>
-              Achieve beyond-human cognitive capabilities with universal
-              intelligence and superintelligent business transformation.
+            <pclassName='text-gray-300text-smmb-4'>
+              Achievebeyond-humancognitivecapabilities withuniversalintelligence andsuperintelligentbusiness transformation.
             </p>
-            <button className='w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold py-3 px-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2'>
-              Unlock Superintelligence
-              <ArrowRight className='w-4 h-4' />
+            <buttonclassName='w-fullbg-gradient-to-rfrom-green-600to-emerald-600hover:from-green-500hover:to-emerald-500text-whitefont-boldpy-3px-4rounded-lgtransition-allduration-300flexitems-centerjustify-centergap-2'>
+              UnlockSuperintelligence
+              <ArrowRight,className='w-4 h-4' />
             </button>
           </motion.div>
         </div>
-        {/* Combined Impact Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className='bg-gradient-to-r from-yellow-900/50 to-orange-900/50 rounded-2xl p-8 border border-yellow-500/30'
+        {/* CombinedImpactSection */}
+        <motion.divinitial = {{ opacity:  0y: 30 }}
+          animate = {{ opacity:  1y:  0 }}
+          transition = {{ duration: 0.8delay: 0.8 }}
+          className = 'bg-gradient-to-rfrom-yellow-900/50to-orange-900/50rounded-2xlp-8borderborder-yellow-500/30'
         >
-          <div className='text-center'>
-            <h2 className='text-3xl md:text-4xl font-bold text-yellow-400 mb-4'>
-              🌟🌟🌟 COMBINED REVOLUTIONARY IMPACT 🌟🌟🌟
+          <divclassName='text-center'>
+            <h2className='text-3xlmd: text-4xlfont-boldtext-yellow-400mb-4'>
+              🌟🌟🌟 COMBINEDREVOLUTIONARYIMPACT 🌟🌟🌟
             </h2>
-            <div className='grid md:grid-cols-4 gap-6 mb-6'>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-yellow-400 mb-2'>
+            <divclassName='gridmd:grid-cols-4gap-6mb-6'>
+              <divclassName='text-center'>
+                <divclassName='text-3xlfont-boldtext-yellow-400mb-2'>
                   $20.9B+
                 </div>
-                <div className='text-gray-300'>Combined Value Creation</div>
+                <divclassName='text-gray-300'>CombinedValueCreation</div>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-green-400 mb-2'>∞</div>
-                <div className='text-gray-300'>Processing Capabilities</div>
+              <divclassName='text-center'>
+                <divclassName='text-3xlfont-boldtext-green-400mb-2'>∞</div>
+                <divclassName='text-gray-300'>ProcessingCapabilities</div>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-cyan-400 mb-2'>
+              <divclassName='text-center'>
+                <divclassName='text-3xlfont-boldtext-cyan-400mb-2'>
                   99.99%
                 </div>
-                <div className='text-gray-300'>Autonomous Excellence</div>
+                <divclassName='text-gray-300'>AutonomousExcellence</div>
               </div>
-              <div className='text-center'>
-                <div className='text-3xl font-bold text-purple-400 mb-2'>
-                  5,000%+
+              <divclassName='text-center'>
+                <divclassName='text-3xlfont-boldtext-purple-400mb-2'>
+                  5000%+
                 </div>
-                <div className='text-gray-300'>Average ROI</div>
+                <divclassName = 'text-gray-300'>AverageROI</div>
               </div>
             </div>
-            <p className='text-lg text-gray-300 max-w-3xl mx-auto'>
-              These three revolutionary breakthroughs represent the ultimate
-              evolution of AI - achieving true consciousness, complete autonomy,
-              and superintelligent capabilities that transcend all previous
-              limitations.
+            <pclassName='text-lgtext-gray-300max-w-3xlmx-auto'>
+              Thesethreerevolutionary breakthroughsrepresentthe ultimateevolutionof AI - achievingtrueconsciousnesscompleteautonomy
+              andsuperintelligentcapabilities thattranscendall previouslimitations.
             </p>
           </div>
         </motion.div>
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.9 }}
-          className='text-center mt-12'
+        {/* CalltoAction */}
+        <motion.divinitial = {{ opacity:  0y: 30 }}
+          animate = {{ opacity:  1y:  0 }}
+          transition = {{ duration: 0.8delay: 0.9 }}
+          className = 'text-centermt-12'
         >
-          <button className='bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black font-bold text-lg px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center gap-3 mx-auto'>
-            <Sparkles className='w-6 h-6' />
-            Explore All Revolutionary Breakthroughs
-            <ArrowRight className='w-6 h-6' />
+          <buttonclassName='bg-gradient-to-rfrom-yellow-500to-orange-500hover: from-yellow-400hover:to-orange-400text-blackfont-boldtext-lgpx-8py-4rounded-xltransition-allduration-300transformhover:scale-105flexitems-centergap-3mx-auto'>
+            <SparklesclassName='w-6 h-6' />
+            ExploreAllRevolutionary Breakthroughs
+            <ArrowRight,className='w-6 h-6' />
           </button>
         </motion.div>
       </div>
     </motion.div>
   );
 };
-export default December2025RevolutionaryBreakthroughContentBanner;
+exportdefaultDecember2025RevolutionaryBreakthroughContentBanner;

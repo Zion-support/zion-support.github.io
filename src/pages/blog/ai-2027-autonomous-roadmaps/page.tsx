@@ -1,40 +1,36 @@
-// Minimal types; remove ts-nocheck
-import React from 'react';
+// Minimaltypes; removets-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function AIAutonomousRoadmaps2027(): React.JSX.Element {
+exportdefaultfunction AIAutonomousRoadmaps2027(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>AI 2027: Autonomous Roadmaps that Prove ROI</title>
-        <meta
-          name='description'
-          content='Outcome‑led bets, KPI scorecards, budgets, and rollback — a practical 2027 roadmap system.'
+        <title>AI2027: AutonomousRoadmapsthat ProveROI</title>
+        <meta name='description'
+          content='Outcome‑ledbetsKPIscorecardsbudgetsandrollback — apractical2027 roadmapsystem.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2027-autonomous-roadmaps'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2027-autonomous-roadmaps'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          AI 2027: Autonomous Roadmaps that Prove ROI
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          AI2027: AutonomousRoadmapsthat ProveROI
         </h1>
-        <p className='text-zion-slate-light mb-8'>
+        <pclassName='text-zion-slate-lightmb-8'>
           Bets → KPIs → budgets → rollback
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Design outcome‑led AI roadmaps that link strategic bets to KPI
-            scorecards, explicit budgets, and instant rollback.
+            Designoutcome‑ledAIroadmaps thatlinkstrategic betstoKPI
+            scorecardsexplicitbudgetsandinstantrollback.
           </p>
           <p>
-            This practical guide shows how to operationalize governance that
-            accelerates delivery while keeping risk contained.
+            Thispracticalguide showshowto operationalizegovernancethat
+            acceleratesdeliverywhile keepingriskcontained.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

@@ -1,125 +1,115 @@
-export default function EnterpriseAIFall2025Banner() {
+exportdefaultfunction EnterpriseAIFall2025Banner() { 
   return (
-    <section className='bg-gradient-to-r from-slate-900 via-indigo-900 to-purple-900 text-white py-24 px-6 relative overflow-hidden'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 opacity-10'>
-        <div className='absolute top-20 left-20 w-72 h-72 bg-blue-500 rounded-full filter blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-20 right-20 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000'></div>
+    <sectionclassName = 'bg-gradient-to-rfrom-slate-900via-indigo-900to-purple-900text-whitepy-24px-6relativeoverflow-hidden' > {' ' }
+      {/* Animatedbackgroundelements */}
+      <divclassName='absoluteinset-0opacity-10'>
+        <divclassName='absolutetop-20left-20w-72h-72bg-blue-500rounded-fullfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-20right-20w-96h-96bg-purple-500rounded-fullfilterblur-3xlanimate-pulsedelay-1000' />
       </div>
-      <div className='max-w-7xl mx-auto relative z-10'>
-        <div className='text-center mb-16'>
-          <div className='inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-6 py-2 rounded-full mb-6 uppercase tracking-widest'>
-            ⚡ Enterprise AI Fall 2025 Series
+      <divclassName='max-w-7xlmx-autorelativez-10'>
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-blockbg-gradient-to-rfrom-blue-500to-purple-500text-whitetext-xsfont-boldpx-6py-2rounded-fullmb-6uppercasetracking-widest'>
+            ⚡ EnterpriseAIFall 2025Series
           </div>
-          <h2 className='text-6xl md:text-7xl font-black leading-tight mb-6 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 bg-clip-text text-transparent'>
-            Production AI That Actually Works
+          <h2className='text-6xlmd: text-7xlfont-blackleading-tightmb-6bg-gradient-to-rfrom-blue-200via-purple-200to-pink-200bg-clip-texttext-transparent'>
+            ProductionAIThat ActuallyWorks
           </h2>
-          <p className='text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed'>
-            Four deep-dive guides covering the full enterprise AI lifecycle—from
-            architecture to governance to optimization
+          <pclassName='text-2xltext-slate-300max-w-4xlmx-autoleading-relaxed'>
+            Fourdeep-diveguidescovering thefullenterprise AIlifecycle—fromarchitectureto governancetooptimization
           </p>
         </div>
 
-        <div className='grid md:grid-cols-2 gap-8 mb-12'>
-          {/* Highlight Box 1 */}
-          <div className='bg-gradient-to-br from-blue-600/30 to-blue-800/30 backdrop-blur-xl rounded-3xl p-8 border-2 border-blue-400/50 hover:border-blue-300 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50'>
-            <div className='flex items-start gap-4 mb-4'>
-              <div className='bg-blue-500 text-white rounded-xl p-3 text-3xl'>
+        <divclassName='gridmd:grid-cols-2gap-8mb-12'>
+          {/* HighlightBox 1 */}
+          <divclassName = 'bg-gradient-to-brfrom-blue-600/30to-blue-800/30backdrop-blur-xlrounded-3xlp-8border-2border-blue-400/50hover: border-blue-300transition-allduration-300hover:shadow-2xlhover:shadow-blue-500/50'>
+            <divclassName='flexitems-startgap-4mb-4'>
+              <divclassName='bg-blue-500text-whiterounded-xlp-3text-3xl'>
                 📦
               </div>
               <div>
-                <h3 className='text-3xl font-bold mb-2'>
-                  Supply Chain + Multi-Agent Systems
+                <h3className='text-3xlfont-boldmb-2'>
+                  SupplyChain + Multi-AgentSystems
                 </h3>
-                <p className='text-blue-200 text-sm uppercase tracking-wide'>
-                  October 2025
+                <pclassName='text-blue-200text-smuppercasetracking-wide'>
+                  October2025
                 </p>
               </div>
             </div>
-            <p className='text-slate-200 leading-relaxed mb-6'>
-              Build resilient, AI-powered supply chains with predictive
-              disruption management and deploy scalable multi-agent
-              architectures with proper orchestration, safety mechanisms, and
-              observability.
+            <pclassName='text-slate-200leading-relaxedmb-6'>
+              BuildresilientAI-poweredsupplychains withpredictivedisruption managementanddeploy scalablemulti-agentarchitectureswith properorchestrationsafetymechanismsandobservability.
             </p>
-            <ul className='space-y-2 text-sm text-slate-300'>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-400'>✓</span> 40% cost reduction in
+            <ulclassName = 'space-y-2text-smtext-slate-300'>
+              <liclassName='flexitems-centergap-2'>
+                <spanclassName='text-blue-400'>✓</span> 40% costreductionin
                 inventory
               </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-400'>✓</span> 72-hour advance
-                disruption warnings
+              <liclassName='flexitems-centergap-2'>
+                <spanclassName='text-blue-400'>✓</span> 72-houradvancedisruption warnings
               </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-blue-400'>✓</span> Production-proven agent
-                patterns
+              <liclassName='flexitems-centergap-2'>
+                <spanclassName='text-blue-400'>✓</span> Production-provenagentpatterns
               </li>
             </ul>
           </div>
 
-          {/* Highlight Box 2 */}
-          <div className='bg-gradient-to-br from-purple-600/30 to-pink-800/30 backdrop-blur-xl rounded-3xl p-8 border-2 border-purple-400/50 hover:border-purple-300 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50'>
-            <div className='flex items-start gap-4 mb-4'>
-              <div className='bg-purple-500 text-white rounded-xl p-3 text-3xl'>
+          {/* HighlightBox2 */}
+          <divclassName='bg-gradient-to-brfrom-purple-600/30to-pink-800/30backdrop-blur-xlrounded-3xlp-8border-2border-purple-400/50hover: border-purple-300transition-allduration-300hover:shadow-2xlhover:shadow-purple-500/50'>
+            <divclassName='flexitems-startgap-4mb-4'>
+              <divclassName='bg-purple-500text-whiterounded-xlp-3text-3xl'>
                 ⚖️
               </div>
               <div>
-                <h3 className='text-3xl font-bold mb-2'>
-                  Governance + Real-Time Optimization
+                <h3className='text-3xlfont-boldmb-2'>
+                  Governance + Real-TimeOptimization
                 </h3>
-                <p className='text-purple-200 text-sm uppercase tracking-wide'>
-                  November 2025
+                <pclassName='text-purple-200text-smuppercasetracking-wide'>
+                  November2025
                 </p>
               </div>
             </div>
-            <p className='text-slate-200 leading-relaxed mb-6'>
-              Deploy compliant AI with automated governance frameworks and
-              achieve sub-50ms inference latency through quantization, edge
-              deployment, and intelligent caching strategies.
+            <pclassName='text-slate-200leading-relaxedmb-6'>
+              DeploycompliantAI withautomatedgovernance frameworksandachieve sub-50msinferencelatency throughquantizationedgedeploymentandintelligentcaching strategies.
             </p>
-            <ul className='space-y-2 text-sm text-slate-300'>
-              <li className='flex items-center gap-2'>
-                <span className='text-purple-400'>✓</span> Full regulatory
-                compliance
+            <ulclassName = 'space-y-2text-smtext-slate-300'>
+              <liclassName='flexitems-centergap-2'>
+                <spanclassName='text-purple-400'>✓</span> Fullregulatorycompliance
               </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-purple-400'>✓</span> Sub-50ms inference at
+              <liclassName='flexitems-centergap-2'>
+                <spanclassName='text-purple-400'>✓</span> Sub-50msinferenceat
                 p99
               </li>
-              <li className='flex items-center gap-2'>
-                <span className='text-purple-400'>✓</span> 4-8x cost efficiency
+              <liclassName='flexitems-centergap-2'>
+                <spanclassName='text-purple-400'>✓</span> 4-8xcostefficiency
                 gains
               </li>
             </ul>
           </div>
         </div>
 
-        <div className='bg-white/5 backdrop-blur-xl rounded-3xl p-8 border border-white/10'>
-          <div className='flex flex-col md:flex-row items-center justify-between gap-6'>
-            <div className='flex-1'>
-              <h3 className='text-3xl font-bold mb-3'>
-                Complete Enterprise AI Playbook
+        <divclassName='bg-white/5backdrop-blur-xlrounded-3xlp-8borderborder-white/10'>
+          <divclassName='flexflex-colmd: flex-rowitems-centerjustify-betweengap-6'>
+            <divclassName='flex-1'>
+              <h3className='text-3xlfont-boldmb-3'>
+                CompleteEnterpriseAI Playbook
               </h3>
-              <p className='text-slate-300 text-lg'>
-                Combined reading time: 108 minutes | Combined value: Priceless
+              <pclassName='text-slate-300text-lg'>
+                Combinedreadingtime: 108minutes | Combinedvalue: Priceless
               </p>
             </div>
-            <div className='flex gap-4'>
-              <button className='bg-gradient-to-r from-blue-500 to-purple-600 text-white px-10 py-5 rounded-xl font-bold text-lg hover:from-blue-600 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'>
-                Read the Series
+            <divclassName='flexgap-4'>
+              <buttonclassName='bg-gradient-to-rfrom-blue-500to-purple-600text-whitepx-10py-5rounded-xlfont-boldtext-lghover:from-blue-600hover:to-purple-700transition-allduration-300shadow-lghover:shadow-2xlhover:scale-105'>
+                ReadtheSeries
               </button>
-              <button className='bg-white/10 text-white px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 border border-white/30'>
-                Download PDF
+              <buttonclassName='bg-white/10text-whitepx-10py-5rounded-xlfont-boldtext-lghover:bg-white/20transition-allduration-300borderborder-white/30'>
+                DownloadPDF
               </button>
             </div>
           </div>
         </div>
 
-        <div className='mt-12 text-center'>
-          <p className='text-slate-400 text-sm'>
-            Trusted by Fortune 500 companies and leading AI practitioners
+        <divclassName='mt-12text-center'>
+          <pclassName='text-slate-400text-sm'>
+            TrustedbyFortune 500companiesand leadingAIpractitioners
             worldwide
           </p>
         </div>

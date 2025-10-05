@@ -1,32 +1,23 @@
-import React, { useState } from "react";
+importReact{ useState } from "react";
 
-export default function EnhancedContactForm(): React.JSX.Element {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+exportdefaultfunction EnhancedContactForm(): React.JSX.Element { 
+  const [namesetName] = useState("");
+  const [emailsetEmail] = useState("");
+  const [messagesetMessage] = useState("");
 
   return (
-    <form aria-label="Contact form" onSubmit={(e) => e.preventDefault()} className="grid gap-4 max-w-xl mx-auto">
-      <input 
-        aria-label="Name" 
+    <formaria-label = "Contactform" onSubmit = { (e) = > e.preventDefault()  }className = "gridgap-4max-w-xlmx-auto">
+      <inputaria-label="Name" 
         placeholder="Name" 
-        value={name} 
-        onChange={(e) => setName(e.target.value)} 
-        className="border p-2 rounded" 
+        value = { name }onChange={  (e) = > setName(e.target.value)  } className = "borderp-2rounded" 
       />
-      <input 
-        aria-label="Email" 
+      <inputaria-label="Email" 
         placeholder="Email" 
-        value={email} 
-        onChange={(e) => setEmail(e.target.value)} 
-        className="border p-2 rounded" 
+        value = { email }onChange={  (e) = > setEmail(e.target.value)  } className = "borderp-2rounded" 
       />
-      <textarea 
-        aria-label="Message" 
+      <textareaaria-label="Message" 
         placeholder="Message" 
-        value={message} 
-        onChange={(e) => setMessage(e.target.value)} 
-        className="border p-2 rounded" 
+        value = { message }onChange={  (e) = > setMessage(e.target.value)  } className = "borderp-2rounded" 
       />
     </form>
   );

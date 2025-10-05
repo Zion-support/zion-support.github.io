@@ -2,15 +2,15 @@ import {
   ArrowRight,
   Brain,
   CheckCircle,
-  Cloud,
-  Code,
-  Database,
-  Rocket,
-  Shield,
-  Star,
-  TrendingUp,
-  Users,
-  Zap,
+  Cloud
+  Code
+  Database
+  Rocket
+  Shield
+  Star
+  TrendingUp
+  Users
+  Zap
 } from 'lucide-react';
 import React from 'react';
 
@@ -18,295 +18,257 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const Services: React.FC = () => {
-  const services = [
+constServices: React.FC = () => {
+  constservices = [
     {
       icon: Brain,
-      title: 'AI & Machine Learning Solutions',
-      description:
-        'Transform your business with cutting-edge artificial intelligence and machine learning implementations.',
+      title: 'AI & MachineLearningSolutions'
+      description: 'Transformyourbusiness withcutting-edgeartificialintelligence andmachinelearning implementations.'
       features: [
-        'Custom ML Model Development',
-        'Predictive Analytics',
-        'Natural Language Processing',
-        'Computer Vision Solutions',
-        'AI Automation Workflows',
-        'Real-time Decision Making',
-      ],
-      price: 'Starting at $5,000',
-      popular: false,
-      color: 'blue',
-    },
+        'CustomMLModel Development'
+        'PredictiveAnalytics'
+        'NaturalLanguageProcessing'
+        'ComputerVisionSolutions'
+        'AIAutomationWorkflows'
+        'Real-timeDecisionMaking'
+      ]
+      price: 'Startingat $5000'
+      popular: false
+      color: 'blue'
+    }
     {
-      icon: Rocket,
-      title: 'Micro SaaS Development',
-      description:
-        'Scalable software-as-a-service applications designed for rapid deployment and exponential growth.',
+      icon: Rocket
+      title: 'MicroSaaSDevelopment'
+      description: 'Scalablesoftware-as-a-serviceapplicationsdesigned forrapiddeployment andexponentialgrowth.'
       features: [
-        'Rapid Prototyping',
-        'Scalable Architecture',
-        'API-First Design',
-        'Cloud-Native Development',
-        'User Management Systems',
-        'Payment Integration',
-      ],
-      price: 'Starting at $3,000',
-      popular: true,
-      color: 'purple',
-    },
+        'RapidPrototyping'
+        'ScalableArchitecture'
+        'API-FirstDesign'
+        'Cloud-NativeDevelopment'
+        'UserManagementSystems'
+        'PaymentIntegration'
+      ]
+      price: 'Startingat $3000'
+      popular: true
+      color: 'purple'
+    }
     {
-      icon: Shield,
-      title: 'Cybersecurity & Compliance',
-      description:
-        'Comprehensive security solutions to protect your digital assets and ensure regulatory compliance.',
+      icon: Shield
+      title: 'Cybersecurity & Compliance'
+      description: 'Comprehensivesecuritysolutions toprotectyour digitalassetsand ensureregulatorycompliance.'
       features: [
-        'Security Audits',
-        'Penetration Testing',
-        'Compliance Management',
-        'Incident Response',
-        'Security Training',
-        'Risk Assessment',
-      ],
-      price: 'Starting at $4,000',
-      popular: false,
-      color: 'green',
-    },
+        'SecurityAudits'
+        'PenetrationTesting'
+        'ComplianceManagement'
+        'IncidentResponse'
+        'SecurityTraining'
+        'RiskAssessment'
+      ]
+      price: 'Startingat $4000'
+      popular: false
+      color: 'green'
+    }
     {
-      icon: Cloud,
-      title: 'Cloud Migration & DevOps',
-      description:
-        'Seamless cloud migration and DevOps implementation for improved scalability and efficiency.',
+      icon: Cloud
+      title: 'CloudMigration & DevOps'
+      description: 'Seamlesscloudmigration andDevOpsimplementation forimprovedscalability andefficiency.'
       features: [
-        'Cloud Strategy Planning',
-        'Infrastructure as Code',
-        'CI/CD Pipeline Setup',
-        'Container Orchestration',
-        'Monitoring & Logging',
-        'Cost Optimization',
-      ],
-      price: 'Starting at $6,000',
-      popular: false,
-      color: 'indigo',
-    },
+        'CloudStrategyPlanning'
+        'InfrastructureasCode'
+        'CI/CDPipelineSetup'
+        'ContainerOrchestration'
+        'Monitoring & Logging'
+        'CostOptimization'
+      ]
+      price: 'Startingat $6000'
+      popular: false
+      color: 'indigo'
+    }
     {
-      icon: Code,
-      title: 'Custom Software Development',
-      description:
-        'Tailored software solutions built to meet your specific business requirements and goals.',
+      icon: Code
+      title: 'CustomSoftwareDevelopment'
+      description: 'Tailoredsoftwaresolutions builttomeet yourspecificbusiness requirementsandgoals.'
       features: [
-        'Web Application Development',
-        'Mobile App Development',
-        'API Development',
-        'Database Design',
-        'Third-party Integrations',
-        'Legacy System Modernization',
-      ],
-      price: 'Starting at $8,000',
-      popular: false,
-      color: 'orange',
-    },
+        'WebApplicationDevelopment'
+        'MobileAppDevelopment'
+        'APIDevelopment'
+        'DatabaseDesign'
+        'Third-partyIntegrations'
+        'LegacySystemModernization'
+      ]
+      price: 'Startingat $8000'
+      popular: false
+      color: 'orange'
+    }
     {
-      icon: Database,
-      title: 'Data Analytics & Business Intelligence',
-      description:
-        'Unlock insights from your data with advanced analytics and business intelligence solutions.',
+      icon: Database
+      title: 'DataAnalytics & BusinessIntelligence'
+      description: 'Unlockinsightsfrom yourdatawith advancedanalyticsand businessintelligencesolutions.'
       features: [
-        'Data Warehousing',
-        'ETL Pipeline Development',
-        'Dashboard Creation',
-        'Predictive Modeling',
-        'Data Visualization',
-        'Real-time Analytics',
-      ],
-      price: 'Starting at $5,500',
-      popular: false,
-      color: 'teal',
-    },
-  ];
-
-  const processSteps = [
+        'DataWarehousing'
+        'ETLPipelineDevelopment'
+        'DashboardCreation'
+        'PredictiveModeling'
+        'DataVisualization'
+        'Real-timeAnalytics'
+      ]
+      price: 'Startingat $5500'
+      popular: false
+      color: 'teal'
+    }
+  ]; constprocessSteps = [
     {
-      step: '01',
-      title: 'Discovery & Consultation',
-      description:
-        'We start by understanding your business goals, challenges, and requirements through detailed consultation.',
-    },
+      step: '01'
+      title: 'Discovery & Consultation'
+      description: 'Westartby understandingyourbusiness goalschallengesandrequirementsthrough detailedconsultation.'
+    }
     {
-      step: '02',
-      title: 'Strategy & Planning',
-      description:
-        'Our team develops a comprehensive strategy and project plan tailored to your specific needs.',
-    },
+      step: '02'
+      title: 'Strategy & Planning'
+      description: 'Ourteamdevelops acomprehensivestrategy andprojectplan tailoredtoyour specificneeds.'
+    }
     {
-      step: '03',
-      title: 'Development & Implementation',
-      description:
-        'We build and implement your solution using cutting-edge technologies and best practices.',
-    },
+      step: '03'
+      title: 'Development & Implementation'
+      description: 'Webuildand implementyoursolution usingcutting-edgetechnologiesand bestpractices.'
+    }
     {
-      step: '04',
-      title: 'Testing & Quality Assurance',
-      description:
-        'Rigorous testing ensures your solution meets the highest quality standards and performance requirements.',
-    },
+      step: '04'
+      title: 'Testing & QualityAssurance'
+      description: 'Rigoroustestingensures yoursolutionmeets thehighestquality standardsandperformance requirements.'
+    }
     {
-      step: '05',
-      title: 'Deployment & Launch',
-      description:
-        'We handle the complete deployment process and ensure a smooth launch of your solution.',
-    },
+      step: '05'
+      title: 'Deployment & Launch'
+      description: 'Wehandlethe completedeploymentprocess andensurea smoothlaunchof yoursolution.'
+    }
     {
-      step: '06',
-      title: 'Support & Maintenance',
-      description:
-        'Ongoing support and maintenance to ensure your solution continues to perform optimally.',
-    },
-  ];
-
-  const stats = [
-    { icon: Users, value: '500+', label: 'Happy Clients' },
-    { icon: Star, value: '98%', label: 'Client Satisfaction' },
-    { icon: TrendingUp, value: '150%', label: 'Average ROI' },
-    { icon: Zap, value: '24/7', label: 'Support Available' },
-  ];
-
-  return (
+      step: '06'
+      title: 'Support & Maintenance'
+      description: 'Ongoingsupportand maintenancetoensure yoursolutioncontinues toperformoptimally.'
+    }
+  ]; conststats = [
+    { icon: Usersvalue: '500+'label: 'HappyClients' }
+    { icon: Starvalue: '98%'label: 'ClientSatisfaction' }
+    { icon: TrendingUpvalue: '150%'label: 'AverageROI' }
+    { icon: Zapvalue: '24/7'label: 'SupportAvailable' }
+  ]; return (
     <>
       <Helmet>
-        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
-        <meta
-          name='description'
-          content='Comprehensive AI and IT solutions including machine learning, micro SaaS development, cybersecurity, cloud migration, and custom software development.'
+        <title>OurServices - ZionTechGroup | AI & ITSolutions</title>
+        <metaname = 'description'
+          content='ComprehensiveAIand ITsolutionsincluding machinelearningmicroSaaSdevelopmentcybersecuritycloudmigrationandcustomsoftware development.'
         />
-        <meta
-          name='keywords'
-          content='AI solutions, micro SaaS, cybersecurity, cloud migration, DevOps, custom software development, data analytics'
+        <metaname = 'keywords'
+          content='AIsolutionsmicroSaaScybersecuritycloudmigrationDevOpscustomsoftwaredevelopmentdataanalytics'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50'>
-        {/* Header Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-blue-50via-whiteto-teal-50'>
+        {/* HeaderSection */}
+        <sectionclassName='bg-gradient-to-rfrom-blue-600to-purple-600py-20'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8text-center'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
             >
-              <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Comprehensive Technology Solutions
+              <h1className = 'text-4xlmd: text-5xlfont-boldtext-whitemb-6'>
+                ComprehensiveTechnologySolutions
               </h1>
-              <p className='text-xl text-blue-100 max-w-3xl mx-auto'>
-                From AI and machine learning to cloud migration and custom
-                software development, we provide end-to-end technology solutions
-                that drive business growth.
+              <pclassName='text-xltext-blue-100max-w-3xlmx-auto'>
+                FromAIand machinelearningto cloudmigrationand customsoftwaredevelopmentweprovideend-to-endtechnologysolutions
+                thatdrivebusiness growth.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className='py-16 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-              {stats.map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='text-center'
+        {/* StatsSection */}
+        <sectionclassName = 'py-16bg-white'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <divclassName='gridgrid-cols-2md:grid-cols-4gap-8'>
+              { stats.map((statindex) = > (
+                <motion.divkey = { index  }initial = {{ opacity:  0y: 20 }}
+                  animate = {{ opacity:  1y:  0 }}
+                  transition = {{ duration: 0.6delay: index * 0.1 }}
+                  className = 'text-center'
                 >
-                  <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                    <stat.icon className='w-8 h-8 text-blue-600' />
+                  <divclassName='w-16h-16bg-blue-100rounded-lgflexitems-centerjustify-centermx-automb-4'>
+                    <stat.iconclassName='w-8 h-8text-blue-600' />
                   </div>
-                  <div className='text-3xl font-bold text-gray-900 mb-2'>
+                  <divclassName='text-3xlfont-boldtext-gray-900mb-2'>
                     {stat.value}
                   </div>
-                  <div className='text-gray-600'>{stat.label}</div>
+                  <divclassName='text-gray-600'>{stat.label}</div>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Services Grid */}
-        <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='text-center mb-16'
+        {/* ServicesGrid */}
+        <sectionclassName = 'py-20'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
+              className = 'text-centermb-16'
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                Our Core Services
+              <h2className='text-3xlmd: text-4xlfont-boldtext-gray-900mb-4'>
+                OurCoreServices
               </h2>
-              <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-                Comprehensive technology solutions designed to accelerate your
-                digital transformation
+              <pclassName='text-xltext-gray-600max-w-2xlmx-auto'>
+                Comprehensivetechnologysolutions designedtoaccelerate yourdigitaltransformation
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {services.map((service, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border ${
+            <divclassName='gridgrid-cols-1md:grid-cols-2lg:grid-cols-3gap-8'>
+              { services.map((serviceindex) = > (
+                <motion.divkey = { index  }initial = {{ opacity:  0y: 20 }}
+                  animate = {{ opacity:  1y:  0 }}
+                  transition = {{ duration: 0.6delay: index * 0.1 }}
+                  className = { `bg-whiterounded-xlshadow-lghover: shadow-xltransition-allduration-300p-6border ${
                     service.popular
-                      ? 'border-blue-300 ring-2 ring-blue-100 relative'
-                      : 'border-gray-200 hover:border-blue-300'
-                  }`}
+                       ? 'border-blue-300ring-2ring-blue-100relative'
+                      : 'border-gray-200hover : border-blue-300'
+                   }`}
                 >
-                  {service.popular && (
-                    <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
-                      <span className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold'>
-                        Most Popular
+                  {  service.popular  && (
+                    <divclassName = 'absolute -top-3left-1/2transform -translate-x-1/2'>
+                      <spanclassName='bg-gradient-to-rfrom-blue-600to-purple-600text-whitepx-4py-1rounded-fulltext-smfont-bold'>
+                        MostPopular
                       </span>
-                    </div>
-                  )}
+                    </div > )  }
 
-                  <div className='text-center mb-6'>
-                    <div
-                      className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mx-auto mb-4`}
-                    >
-                      <service.icon
-                        className={`w-8 h-8 text-${service.color}-600`}
+                  <divclassName = 'text-centermb-6' > <divclassName={`w-16h-16bg-${service.color}-100rounded-lgflexitems-centerjustify-centermx-automb-4`}
+                     > <service.iconclassName={`w-8 h-8text-${service.color}-600`}
                       />
                     </div>
-                    <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                    <h3className='text-xlfont-boldtext-gray-900mb-3'>
                       {service.title}
                     </h3>
-                    <p className='text-gray-600 mb-4'>{service.description}</p>
-                    <div className='text-2xl font-bold text-blue-600 mb-4'>
+                    <pclassName='text-gray-600mb-4'>{service.description}</p>
+                    <divclassName='text-2xlfont-boldtext-blue-600mb-4'>
                       {service.price}
                     </div>
                   </div>
 
-                  <ul className='space-y-3 mb-6'>
-                    {service.features.map((feature, featureIndex) => (
-                      <li
-                        key={featureIndex}
-                        className='flex items-center gap-3'
+                  <ulclassName='space-y-3mb-6'>
+                    { service.features.map((featurefeatureIndex) = > (
+                      <likey = { featureIndex  }className = 'flexitems-centergap-3'
                       >
-                        <CheckCircle className='w-5 h-5 text-green-600 flex-shrink-0' />
-                        <span className='text-gray-700'>{feature}</span>
+                        <CheckCircle,className='w-5 h-5text-green-600flex-shrink-0' />
+                        <spanclassName='text-gray-700'>{feature}</span>
                       </li>
                     ))}
-                  </ul>
-
-                  <Link
-                    to='/contact'
-                    className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                  </ul > <Linkto = '/contact'
+                    className={ `blockw-fulltext-centerpy-3px-4rounded-lgfont-semiboldtransition-colors ${
                       service.popular
-                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
-                        : 'bg-blue-600 text-white hover:bg-blue-700'
-                    }`}
+                         ? 'bg-gradient-to-rfrom-blue-600to-purple-600text-whitehover: from-blue-700hover:to-purple-700'
+                        : 'bg-blue-600text-whitehover : bg-blue-700'
+                     }`}
                   >
-                    Get Started
+                    GetStarted
                   </Link>
                 </motion.div>
               ))}
@@ -314,74 +276,67 @@ const Services: React.FC = () => {
           </div>
         </section>
 
-        {/* Process Section */}
-        <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='text-center mb-16'
+        {/* ProcessSection */}
+        <sectionclassName = 'py-20bg-white'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
+              className = 'text-centermb-16'
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                Our Process
+              <h2className='text-3xlmd: text-4xlfont-boldtext-gray-900mb-4'>
+                OurProcess
               </h2>
-              <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-                A proven methodology that ensures successful project delivery
-                and client satisfaction
+              <pclassName='text-xltext-gray-600max-w-2xlmx-auto'>
+                Aprovenmethodology thatensuressuccessful projectdeliveryand clientsatisfaction
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              {processSteps.map((step, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='text-center'
+            <divclassName='gridgrid-cols-1md:grid-cols-2lg:grid-cols-3gap-8'>
+              { processSteps.map((stepindex) = > (
+                <motion.divkey = { index  }initial = {{ opacity:  0y: 20 }}
+                  animate = {{ opacity:  1y:  0 }}
+                  transition = {{ duration: 0.6delay: index * 0.1 }}
+                  className = 'text-center'
                 >
-                  <div className='w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4'>
+                  <divclassName='w-16h-16bg-blue-600text-whiterounded-fullflexitems-centerjustify-centertext-xlfont-boldmx-automb-4'>
                     {step.step}
                   </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                  <h3className='text-xlfont-boldtext-gray-900mb-3'>
                     {step.title}
                   </h3>
-                  <p className='text-gray-600'>{step.description}</p>
+                  <pclassName='text-gray-600'>{step.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+        {/* CTASection */}
+        <sectionclassName = 'py-20bg-gradient-to-rfrom-blue-600to-purple-600'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8text-center'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-                Ready to Transform Your Business?
+              <h2className = 'text-3xlmd: text-4xlfont-boldtext-whitemb-4'>
+                ReadytoTransform YourBusiness?
               </h2>
-              <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-                Let's discuss your project requirements and create a solution
-                that drives real results.
+              <pclassName='text-xltext-blue-100mb-8max-w-2xlmx-auto'>
+                Let'sdiscussyour projectrequirementsand createasolution
+                thatdrivesreal results.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center'
+              <divclassName='flexflex-colsm:flex-rowgap-4justify-center'>
+                <Linkto='/contact'
+                  className='bg-whitetext-blue-600px-8py-3rounded-lgfont-semiboldhover:bg-gray-100transition-colorsflexitems-centerjustify-center'
                 >
-                  Start Your Project
-                  <ArrowRight className='w-5 h-5 ml-2' />
+                  StartYourProject
+                  <ArrowRight,className='w-5 h-5ml-2' />
                 </Link>
-                <Link
-                  to='/about'
-                  className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+                <Linkto='/about'
+                  className='borderborder-whitetext-whitepx-8py-3rounded-lgfont-semiboldhover:bg-blue-700transition-colors'
                 >
-                  Learn More About Us
+                  LearnMoreAbout Us
                 </Link>
               </div>
             </motion.div>
@@ -392,4 +347,4 @@ const Services: React.FC = () => {
   );
 };
 
-export default Services;
+exportdefaultServices;

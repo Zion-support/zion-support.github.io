@@ -1,38 +1,34 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 
-export default function Page() {
+exportdefaultfunction Page() { 
   return (
-    <main className='min-h-screen bg-white text-gray-900'>
-      <section className='container mx-auto px-6 py-16'>
-        <div className='max-w-3xl'>
-          <h1 className='text-3xl md:text-4xl font-bold mb-4'>
-            Private Insights Blueprint — Zero‑PII Analytics at &lt;100ms
+    <mainclassName = 'min-h-screenbg-whitetext-gray-900'>
+      <sectionclassName='containermx-autopx-6py-16'>
+        <divclassName='max-w-3xl'>
+          <h1className='text-3xlmd: text-4xlfont-boldmb-4'>
+            PrivateInsightsBlueprint — Zero‑PIIAnalyticsat &lt; 100ms
           </h1>
-          <p className='text-gray-600 mb-6'>
-            Build privacy‑preserving analytics with scoped IDs, on‑device
-            aggregation, and differential privacy noise. This blueprint outlines
-            production patterns that deliver trustworthy insights without
-            collecting personal data.
+          <pclassName='text-gray-600mb-6'>
+            Buildprivacy‑preservinganalyticswith scopedIDson‑deviceaggregationanddifferentialprivacy noise. Thisblueprintoutlines
+            productionpatternsthat delivertrustworthyinsights withoutcollectingpersonal data.
           </p>
-          <div className='prose prose-indigo'>
-            <h2>Key Patterns</h2>
+          <divclassName = 'proseprose-indigo'>
+            <h2>KeyPatterns</h2>
             <ul>
-              <li>Scoped identifiers with short TTL cohorts</li>
-              <li>On‑device event aggregation and sketching</li>
-              <li>Signed configs and verifiable attestations</li>
-              <li>Differential privacy noise for safe sharing</li>
+              <li>Scopedidentifierswith shortTTLcohorts</li>
+              <li>On‑deviceeventaggregation andsketching</li>
+              <li>Signedconfigsand verifiableattestations</li>
+              <li>Differentialprivacynoise forsafesharing</li>
             </ul>
-            <h2>Rollout Plan</h2>
+            <h2>RolloutPlan</h2>
             <ol>
-              <li>Instrument events locally with DP wrappers</li>
-              <li>Enable edge aggregation and tiered caches</li>
-              <li>Validate with signed canary experiments</li>
-              <li>Scale globally with predictable cost</li>
+              <li>Instrumenteventslocally withDPwrappers</li>
+              <li>Enableedgeaggregation andtieredcaches</li>
+              <li>Validatewithsigned canaryexperiments</li>
+              <li>Scalegloballywith predictablecost</li>
             </ol>
           </div>
         </div>
       </section>
-    </main>
-  );
-}
+    </main > );
+ }

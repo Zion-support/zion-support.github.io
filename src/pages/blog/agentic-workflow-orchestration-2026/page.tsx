@@ -1,47 +1,42 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
         <title>
-          Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback
+          AgenticWorkflowOrchestration 2026 — BudgetsCanariesRollback
         </title>
-        <meta
-          name='description'
-          content='Design agentic workflows with budgeted actions, KPI-linked canaries, and instant rollback for safe velocity.'
+        <metaname = 'description'
+          content='Designagenticworkflows withbudgetedactionsKPI-linkedcanariesandinstantrollback forsafevelocity.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/agentic-workflow-orchestration-2026'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Agentic Workflow Orchestration 2026
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          AgenticWorkflowOrchestration 2026
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Budgeted Actions • KPI Canaries • Instant Rollback
+        <pclassName='text-zion-slate-lightmb-8'>
+          BudgetedActions • KPICanaries • InstantRollback
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Orchestrate agentic workflows using guardrails that balance speed
-            and safety. Use budgets to limit risky actions, canary new
-            behaviors, and roll back instantly when KPIs regress.
+            Orchestrateagenticworkflows usingguardrailsthat balancespeedand safety. Usebudgetsto limitriskyactionscanarynewbehaviorsandrollback instantlywhenKPIs regress.
           </p>
           <p>
-            We cover event routing, policy tests in CI, and automated recovery
-            playbooks proven in production.
+            Wecoverevent routingpolicytestsin CIandautomatedrecovery
+            playbooksprovenin production.
           </p>
         </div>
-        <div className='mt-8'>
-          <a href='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName = 'mt-8'>
+          <ahref='/blog' className='text-cyan-300hover: underline'>
+            ← BacktoBlog
           </a>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

@@ -1,13 +1,13 @@
 import {
   ArrowRight,
-  Award,
+  Award
   CheckCircle,
-  Globe,
-  Lightbulb,
-  Shield,
-  Target,
-  Users,
-  Zap,
+  Globe
+  Lightbulb
+  Shield
+  Target
+  Users
+  Zap
 } from 'lucide-react';
 import React from 'react';
 
@@ -15,197 +15,173 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-const About: React.FC = () => {
-  const values = [
+constAbout: React.FC = () => {
+  constvalues = [
     {
-      icon: Lightbulb,
-      title: 'Innovation',
-      description:
-        'We stay at the forefront of technology, constantly exploring new solutions and methodologies.',
-    },
+      icon: Lightbulb
+      title: 'Innovation'
+      description: 'Westayat theforefrontof technologyconstantlyexploringnew solutionsandmethodologies.'
+    }
     {
-      icon: Shield,
-      title: 'Trust & Security',
-      description:
-        'Your data and projects are protected with enterprise-grade security measures and best practices.',
-    },
+      icon: Shield
+      title: 'Trust & Security'
+      description: 'Yourdataand projectsareprotected withenterprise-gradesecuritymeasures andbestpractices.'
+    }
     {
-      icon: Users,
-      title: 'Collaboration',
-      description:
-        'We work closely with our clients as partners, ensuring alignment with your business goals.',
-    },
+      icon: Users
+      title: 'Collaboration'
+      description: 'Weworkclosely withourclients aspartnersensuringalignmentwith yourbusinessgoals.'
+    }
     {
-      icon: Target,
-      title: 'Excellence',
-      description:
-        'We deliver high-quality solutions that exceed expectations and drive measurable results.',
-    },
-  ];
-
-  const team = [
+      icon: Target
+      title: 'Excellence'
+      description: 'Wedeliverhigh-qualitysolutionsthat exceedexpectationsand drivemeasurableresults.'
+    }
+  ]; constteam = [
     {
-      name: 'Sarah Johnson',
-      role: 'CEO & Founder',
-      expertise: 'AI Strategy & Business Development',
-      experience: '15+ years in AI and technology leadership',
-    },
+      name: 'SarahJohnson'
+      role: 'CEO & Founder'
+      expertise: 'AIStrategy & BusinessDevelopment'
+      experience: '15+ yearsinAI andtechnologyleadership'
+    }
     {
-      name: 'Michael Chen',
-      role: 'CTO',
-      expertise: 'Technical Architecture & Innovation',
-      experience: '12+ years in software engineering and cloud technologies',
-    },
+      name: 'MichaelChen'
+      role: 'CTO'
+      expertise: 'TechnicalArchitecture & Innovation'
+      experience: '12+ yearsinsoftware engineeringandcloud technologies'
+    }
     {
-      name: 'Emily Rodriguez',
-      role: 'Head of AI Solutions',
-      expertise: 'Machine Learning & Data Science',
-      experience: '10+ years in AI research and implementation',
-    },
+      name: 'EmilyRodriguez'
+      role: 'HeadofAI Solutions'
+      expertise: 'MachineLearning & DataScience'
+      experience: '10+ yearsinAI researchandimplementation'
+    }
     {
-      name: 'David Thompson',
-      role: 'Lead DevOps Engineer',
-      expertise: 'Cloud Infrastructure & Automation',
-      experience: '8+ years in DevOps and infrastructure management',
-    },
-  ];
-
-  const achievements = [
+      name: 'DavidThompson'
+      role: 'LeadDevOpsEngineer'
+      expertise: 'CloudInfrastructure & Automation'
+      experience: '8+ yearsinDevOps andinfrastructuremanagement'
+    }
+  ]; constachievements = [
     {
-      icon: Award,
-      title: 'Industry Recognition',
-      description:
-        'Awarded "Best AI Solutions Provider" by Tech Innovation Awards 2024',
-    },
+      icon: Award
+      title: 'IndustryRecognition'
+      description: 'Awarded "BestAISolutions Provider" byTechInnovation Awards2024'
+    }
     {
-      icon: Users,
-      title: 'Client Success',
-      description:
-        '500+ successful projects delivered across various industries',
-    },
+      icon: Users
+      title: 'ClientSuccess'
+      description: '500+ successfulprojectsdelivered acrossvariousindustries'
+    }
     {
-      icon: Globe,
-      title: 'Global Reach',
-      description: 'Serving clients in 25+ countries worldwide',
-    },
+      icon: Globe
+      title: 'GlobalReach'
+      description: 'Servingclientsin 25+ countriesworldwide'
+    }
     {
-      icon: Zap,
-      title: 'Innovation Leader',
-      description: 'First to market with several breakthrough AI solutions',
-    },
-  ];
-
-  return (
+      icon: Zap
+      title: 'InnovationLeader'
+      description: 'Firsttomarket withseveralbreakthrough AIsolutions'
+    }
+  ]; return (
     <>
       <Helmet>
         <title>
-          About Us - Zion Tech Group | Leading AI & Technology Solutions
+          AboutUs - ZionTechGroup | LeadingAI & TechnologySolutions
         </title>
-        <meta
-          name='description'
-          content="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI and technology solutions. Meet our expert team and discover our values."
+        <metaname = 'description'
+          content="LearnaboutZion TechGroup'smissionto transformbusinessesthrough cutting-edgeAIand technologysolutions. Meetourexpert teamanddiscover ourvalues."
         />
-        <meta
-          name='keywords'
-          content='about us, AI company, technology team, mission, values, leadership, innovation'
+        <meta name='keywords'
+          content='aboutusAIcompanytechnologyteammissionvaluesleadershipinnovation'
         />
       </Helmet>
 
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50'>
-        {/* Header Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+      <divclassName = 'min-h-screenbg-gradient-to-brfrom-blue-50via-whiteto-teal-50'>
+        {/* HeaderSection */}
+        <sectionclassName='bg-gradient-to-rfrom-blue-600to-purple-600py-20'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8text-center'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
             >
-              <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                About Zion Tech Group
+              <h1className = 'text-4xlmd: text-5xlfont-boldtext-whitemb-6'>
+                AboutZionTech Group
               </h1>
-              <p className='text-xl text-blue-100 max-w-3xl mx-auto'>
-                We're a team of passionate technologists dedicated to
-                transforming businesses through innovative AI and technology
-                solutions that drive real results.
+              <pclassName='text-xltext-blue-100max-w-3xlmx-auto'>
+                We'reateam ofpassionatetechnologists dedicatedtotransforming businessesthroughinnovative AIandtechnology
+                solutionsthatdrive realresults.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Mission Section */}
-        <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 items-center'>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
+        {/* MissionSection */}
+        <sectionclassName = 'py-20'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <divclassName='gridgrid-cols-1lg:grid-cols-2gap-12items-center'>
+              <motion.divinitial={{ opacity: 0x: -20 }}
+                animate = {{ opacity:  1x:  0 }}
+                transition = {{ duration: 0.6 }}
               >
-                <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-6'>
-                  Our Mission
+                <h2className = 'text-3xlmd: text-4xlfont-boldtext-gray-900mb-6'>
+                  OurMission
                 </h2>
-                <p className='text-lg text-gray-600 mb-6'>
-                  At Zion Tech Group, we believe that technology should empower
-                  businesses to achieve their full potential. Our mission is to
-                  democratize access to cutting-edge AI and technology
-                  solutions, making them accessible to businesses of all sizes.
+                <pclassName='text-lgtext-gray-600mb-6'>
+                  AtZionTech Groupwebelievethat technologyshouldempower
+                  businessestoachieve theirfullpotential. Ourmissionis todemocratizeaccess tocutting-edgeAIand technologysolutionsmakingthemaccessible tobusinessesof allsizes.
                 </p>
-                <p className='text-lg text-gray-600 mb-8'>
-                  We combine deep technical expertise with business acumen to
-                  deliver solutions that not only meet your immediate needs but
-                  also position you for long-term success in an increasingly
-                  digital world.
+                <pclassName = 'text-lgtext-gray-600mb-8'>
+                  Wecombinedeep technicalexpertisewith businessacumento
+                  deliversolutionsthat notonlymeet yourimmediateneeds butalsoposition youforlong-termsuccessin anincreasinglydigital world.
                 </p>
-                <Link
-                  to='/contact'
-                  className='inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+                <Linkto='/contact'
+                  className='inline-flexitems-centerbg-blue-600text-whitepx-6py-3rounded-lgfont-semiboldhover: bg-blue-700transition-colors'
                 >
-                  Start Your Journey
-                  <ArrowRight className='w-5 h-5 ml-2' />
+                  StartYourJourney
+                  <ArrowRight,className='w-5 h-5ml-2' />
                 </Link>
               </motion.div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
-                className='bg-white rounded-xl shadow-lg p-8'
+              <motion.divinitial={{ opacity: 0x: 20 }}
+                animate = {{ opacity:  1x:  0 }}
+                transition = {{ duration: 0.6delay: 0.2 }}
+                className = 'bg-whiterounded-xlshadow-lgp-8'
               >
-                <h3 className='text-2xl font-bold text-gray-900 mb-6'>
-                  Our Vision
+                <h3className='text-2xlfont-boldtext-gray-900mb-6'>
+                  OurVision
                 </h3>
-                <div className='space-y-4'>
-                  <div className='flex items-start gap-3'>
-                    <CheckCircle className='w-6 h-6 text-green-600 flex-shrink-0 mt-1' />
+                <divclassName='space-y-4'>
+                  <divclassName='flexitems-startgap-3'>
+                    <CheckCircle,className='w-6 h-6text-green-600flex-shrink-0mt-1' />
                     <div>
-                      <h4 className='font-semibold text-gray-900'>
-                        Transform Industries
+                      <h4className='font-semiboldtext-gray-900'>
+                        TransformIndustries
                       </h4>
-                      <p className='text-gray-600'>
-                        Revolutionize how businesses operate through AI and
-                        automation
+                      <pclassName='text-gray-600'>
+                        Revolutionizehowbusinesses operatethroughAI andautomation
                       </p>
                     </div>
                   </div>
-                  <div className='flex items-start gap-3'>
-                    <CheckCircle className='w-6 h-6 text-green-600 flex-shrink-0 mt-1' />
+                  <divclassName='flexitems-startgap-3'>
+                    <CheckCircle,className='w-6 h-6text-green-600flex-shrink-0mt-1' />
                     <div>
-                      <h4 className='font-semibold text-gray-900'>
-                        Empower Innovation
+                      <h4className='font-semiboldtext-gray-900'>
+                        EmpowerInnovation
                       </h4>
-                      <p className='text-gray-600'>
-                        Enable companies to innovate faster and more effectively
+                      <pclassName='text-gray-600'>
+                        Enablecompaniesto innovatefasterand moreeffectively
                       </p>
                     </div>
                   </div>
-                  <div className='flex items-start gap-3'>
-                    <CheckCircle className='w-6 h-6 text-green-600 flex-shrink-0 mt-1' />
+                  <divclassName='flexitems-startgap-3'>
+                    <CheckCircle,className='w-6 h-6text-green-600flex-shrink-0mt-1' />
                     <div>
-                      <h4 className='font-semibold text-gray-900'>
-                        Drive Growth
+                      <h4className='font-semiboldtext-gray-900'>
+                        DriveGrowth
                       </h4>
-                      <p className='text-gray-600'>
-                        Help businesses scale and achieve sustainable growth
+                      <pclassName='text-gray-600'>
+                        Helpbusinessesscale andachievesustainable growth
                       </p>
                     </div>
                   </div>
@@ -215,131 +191,119 @@ const About: React.FC = () => {
           </div>
         </section>
 
-        {/* Values Section */}
-        <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='text-center mb-16'
+        {/* ValuesSection */}
+        <sectionclassName='py-20bg-white'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
+              className = 'text-centermb-16'
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                Our Values
+              <h2className='text-3xlmd: text-4xlfont-boldtext-gray-900mb-4'>
+                OurValues
               </h2>
-              <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-                The principles that guide everything we do and shape our
-                relationships with clients and partners
+              <pclassName='text-xltext-gray-600max-w-2xlmx-auto'>
+                Theprinciplesthat guideeverythingwe doandshape ourrelationshipswith clientsandpartners
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {values.map((value, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='text-center'
+            <divclassName='gridgrid-cols-1md:grid-cols-2lg:grid-cols-4gap-8'>
+              { values.map((valueindex) = > (
+                <motion.divkey = { index  }initial = {{ opacity:  0y: 20 }}
+                  animate = {{ opacity:  1y:  0 }}
+                  transition = {{ duration: 0.6delay: index * 0.1 }}
+                  className = 'text-center'
                 >
-                  <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                    <value.icon className='w-8 h-8 text-blue-600' />
+                  <divclassName='w-16h-16bg-blue-100rounded-lgflexitems-centerjustify-centermx-automb-4'>
+                    <value.iconclassName='w-8 h-8text-blue-600' />
                   </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
+                  <h3className='text-xlfont-boldtext-gray-900mb-3'>
                     {value.title}
                   </h3>
-                  <p className='text-gray-600'>{value.description}</p>
+                  <pclassName='text-gray-600'>{value.description}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Team Section */}
-        <section className='py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='text-center mb-16'
+        {/* TeamSection */}
+        <sectionclassName = 'py-20'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
+              className = 'text-centermb-16'
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                Meet Our Team
+              <h2className='text-3xlmd: text-4xlfont-boldtext-gray-900mb-4'>
+                MeetOurTeam
               </h2>
-              <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-                Experienced professionals passionate about delivering
-                exceptional results
+              <pclassName='text-xltext-gray-600max-w-2xlmx-auto'>
+                Experiencedprofessionalspassionate aboutdeliveringexceptional results
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {team.map((member, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow'
+            <divclassName='gridgrid-cols-1md:grid-cols-2lg:grid-cols-4gap-8'>
+              { team.map((memberindex) = > (
+                <motion.divkey = { index  }initial = {{ opacity:  0y: 20 }}
+                  animate = {{ opacity:  1y:  0 }}
+                  transition = {{ duration: 0.6delay: index * 0.1 }}
+                  className = 'bg-whiterounded-xlshadow-lgp-6text-centerhover: shadow-xltransition-shadow'
                 >
-                  <div className='w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
-                    <span className='text-2xl font-bold text-white'>
-                      {member.name
+                  <divclassName='w-24h-24bg-gradient-to-rfrom-blue-500to-purple-600rounded-fullflexitems-centerjustify-centermx-automb-4'>
+                    <spanclassName='text-2xlfont-boldtext-white'>
+                      { member.name
                         .split(' ')
-                        .map(n => n[0])
-                        .join('')}
+                        .map(n = > n[0])
+                        .join('') }
                     </span>
                   </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-2'>
+                  <h3className = 'text-xlfont-boldtext-gray-900mb-2'>
                     {member.name}
                   </h3>
-                  <p className='text-blue-600 font-semibold mb-2'>
+                  <pclassName='text-blue-600font-semiboldmb-2'>
                     {member.role}
                   </p>
-                  <p className='text-gray-600 text-sm mb-2'>
+                  <pclassName='text-gray-600text-smmb-2'>
                     {member.expertise}
                   </p>
-                  <p className='text-gray-500 text-xs'>{member.experience}</p>
+                  <pclassName='text-gray-500text-xs'>{member.experience}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Achievements Section */}
-        <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className='text-center mb-16'
+        {/* AchievementsSection */}
+        <sectionclassName = 'py-20bg-white'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
+              className = 'text-centermb-16'
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                Our Achievements
+              <h2className='text-3xlmd: text-4xlfont-boldtext-gray-900mb-4'>
+                OurAchievements
               </h2>
-              <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-                Recognition and milestones that reflect our commitment to
-                excellence
+              <pclassName='text-xltext-gray-600max-w-2xlmx-auto'>
+                Recognitionandmilestones thatreflectour commitmenttoexcellence
               </p>
             </motion.div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-              {achievements.map((achievement, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className='text-center'
+            <divclassName='gridgrid-cols-1md:grid-cols-2lg:grid-cols-4gap-8'>
+              { achievements.map((achievementindex) = > (
+                <motion.divkey = { index  }initial = {{ opacity:  0y: 20 }}
+                  animate = {{ opacity:  1y:  0 }}
+                  transition = {{ duration: 0.6delay: index * 0.1 }}
+                  className = 'text-center'
                 >
-                  <div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                    <achievement.icon className='w-8 h-8 text-green-600' />
+                  <divclassName='w-16h-16bg-green-100rounded-lgflexitems-centerjustify-centermx-automb-4'>
+                    <achievement.iconclassName='w-8 h-8text-green-600' />
                   </div>
-                  <h3 className='text-lg font-bold text-gray-900 mb-2'>
+                  <h3className='text-lgfont-boldtext-gray-900mb-2'>
                     {achievement.title}
                   </h3>
-                  <p className='text-gray-600 text-sm'>
+                  <pclassName='text-gray-600text-sm'>
                     {achievement.description}
                   </p>
                 </motion.div>
@@ -348,34 +312,30 @@ const About: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className='py-20 bg-gradient-to-r from-blue-600 to-purple-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+        {/* CTASection */}
+        <sectionclassName = 'py-20bg-gradient-to-rfrom-blue-600to-purple-600'>
+          <divclassName='max-w-7xlmx-autopx-4sm: px-6lg:px-8text-center'>
+            <motion.divinitial={{ opacity: 0y: 20 }}
+              animate = {{ opacity:  1y:  0 }}
+              transition = {{ duration: 0.6 }}
             >
-              <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-                Ready to Work Together?
+              <h2className = 'text-3xlmd: text-4xlfont-boldtext-whitemb-4'>
+                ReadytoWork Together?
               </h2>
-              <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-                Let's discuss how we can help transform your business with
-                innovative technology solutions.
+              <pclassName='text-xltext-blue-100mb-8max-w-2xlmx-auto'>
+                Let'sdiscusshow wecanhelp transformyourbusiness withinnovativetechnology solutions.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/contact'
-                  className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center'
+              <divclassName='flexflex-colsm:flex-rowgap-4justify-center'>
+                <Linkto='/contact'
+                  className='bg-whitetext-blue-600px-8py-3rounded-lgfont-semiboldhover:bg-gray-100transition-colorsflexitems-centerjustify-center'
                 >
-                  Get in Touch
-                  <ArrowRight className='w-5 h-5 ml-2' />
+                  GetinTouch
+                  <ArrowRight,className='w-5 h-5ml-2' />
                 </Link>
-                <Link
-                  to='/services'
-                  className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+                <Linkto='/services'
+                  className='borderborder-whitetext-whitepx-8py-3rounded-lgfont-semiboldhover:bg-blue-700transition-colors'
                 >
-                  View Our Services
+                  ViewOurServices
                 </Link>
               </div>
             </motion.div>
@@ -386,4 +346,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+exportdefaultAbout;

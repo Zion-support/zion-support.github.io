@@ -1,158 +1,146 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { newServices2026 } from '../content/new-services-2026';
-interface NewServicesPromoBannerProps {
+interfaceNewServicesPromoBannerProps { 
   variant?: 'default' | 'showcase' | 'premium' | 'grid';
   showCount?: number;
   featuredOnly?: boolean;
-  className?: string;
-}
-const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
-  variant = 'default',
-  showCount = 3,
-  featuredOnly = true,
+  className ?  : string;
+ }
+constNewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
+  variant = 'default'
+  showCount =  3
+  featuredOnly = true
   className = ''
-}) => {
-  const services = featuredOnly
-    ? newServices2026.filter(s => s.featured).slice(0, showCount)
-    : newServices2026.slice(0, showCount);
-  if (variant === 'showcase') {
+}) => {  
+  constservices = featuredOnly
+     ? newServices2026.filter(s = > s.featured).slice(0showCount)
+    : newServices2026.slice(0showCount); if (variant = == 'showcase') {
     return (
-      <div className={`bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 rounded-3xl p-8 md:p-12 text-white ${className}`}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
-              <Rocket className="w-5 h-5 mr-2" />
-              <span className="font-bold">NEW SERVICES LAUNCHED</span>
+      <divclassName = {`bg-gradient-to-brfrom-emerald-600via-teal-600to-cyan-600rounded-3xlp-8md : p-12text-white ${className  }`}>
+        <divclassName = "max-w-6xlmx-auto">
+          <divclassName="text-centermb-10">
+            <divclassName="inline-flexitems-centerpx-4py-2bg-yellow-400/20rounded-fulltext-yellow-300mb-6">
+              <RocketclassName="w-5 h-5mr-2" />
+              <spanclassName="font-bold">NEWSERVICESLAUNCHED</span>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Revolutionary AI Services Now Available
+            <h2className="text-4xlmd: text-5xlfont-boldmb-4">
+              RevolutionaryAIServices NowAvailable
             </h2>
-            <p className="text-xl text-emerald-100 max-w-3xl mx-auto">
-              Transform your business with our newest AI-powered solutions delivering unprecedented results
+            <pclassName="text-xltext-emerald-100max-w-3xlmx-auto">
+              Transformyourbusiness withournewest AI-poweredsolutionsdelivering unprecedentedresults
             </p>
           </div>
-          <div className="grid md:grid-cols-3 gap-6 mb-8">
-            {services.map((service) => (
-              <div
-key={service.id}
-                className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all hover:scale-105"
+          <divclassName="gridmd:grid-cols-3gap-6mb-8">
+            { services.map((service) = > (
+              <divkey = { service.id  }className = "bg-white/10backdrop-blur-lgrounded-2xlp-6hover: bg-white/20transition-allhover:scale-105"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <div className="flex items-center gap-2 mb-3">
-                  <Star className="w-5 h-5 text-yellow-300 fill-yellow-300" />
-                  <span className="text-sm font-semibold text-yellow-300">{service.category}</span>
+                <divclassName="text-4xlmb-4">{service.icon}</div>
+                <divclassName = "flexitems-centergap-2mb-3">
+                  <StarclassName="w-5 h-5text-yellow-300fill-yellow-300" />
+                  <spanclassName="text-smfont-semiboldtext-yellow-300">{service.category}</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3">{service.name}</h3>
-                <p className="text-emerald-100 mb-4">{service.description}</p>
-                <div className="space-y-2 mb-6">
-                  {service.benefits.slice(0, 3).map((benefit, idx) => (
-                    <div key={idx} className="flex items-start gap-2">
-                      <Zap className="w-4 h-4 text-yellow-300 flex-shrink-0 mt-1" />
-                      <span className="text-sm text-white">{benefit}</span>
+                <h3className="text-2xlfont-boldmb-3">{service.name}</h3>
+                <pclassName="text-emerald-100mb-4">{service.description}</p>
+                <divclassName="space-y-2mb-6">
+                  { service.benefits.slice(03).map((benefitidx) = > (
+                    <divkey = { idx  }className = "flexitems-startgap-2">
+                      <ZapclassName="w-4 h-4text-yellow-300flex-shrink-0mt-1" />
+                      <spanclassName="text-smtext-white">{benefit}</span>
                     </div>
                   ))}
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-sm font-semibold text-emerald-200">{service.pricing}</span>
-                  <Link
-                    to={service.link}
-                    className="bg-white text-emerald-600 px-4 py-2 rounded-lg font-semibold hover:bg-emerald-50 transition-colors flex items-center gap-1"
+                <divclassName = "flexitems-centerjustify-between">
+                  <spanclassName="text-smfont-semiboldtext-emerald-200">{service.pricing}</span>
+                  <Linkto = { service.link }className = "bg-whitetext-emerald-600px-4py-2rounded-lgfont-semiboldhover: bg-emerald-50transition-colorsflexitems-centergap-1"
                   >
-                    Learn More
-                    <ArrowRight className="w-4 h-4" />
+                    LearnMore
+                    <ArrowRight,className="w-4 h-4" />
                   </Link>
                 </div>
               </div>
             ))}
           </div>
-          <div className="text-center">
-            <Link
-              to="/services"
-              className="inline-flex items-center gap-2 bg-white text-emerald-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-emerald-50 transition-all hover:scale-105"
+          <divclassName = "text-center">
+            <Linkto="/services"
+              className="inline-flexitems-centergap-2bg-whitetext-emerald-600px-8py-4rounded-xlfont-boldtext-lghover: bg-emerald-50transition-allhover:scale-105"
             >
-              View All Services
-              <ArrowRight className="w-6 h-6" />
+              ViewAllServices
+              <ArrowRight,className="w-6 h-6" />
             </Link>
           </div>
         </div>
-      </div > );
+      </div  > );
   }
-  if (variant === 'premium') {
+  if (variant = == 'premium') {
     return (
-      <div className={`bg-gradient-to-r from-orange-600 to-red-600 rounded-2xl p-8 text-white ${className}`}>
-        <div className="flex items-center gap-3 mb-6">
-          <Rocket className="w-8 h-8 text-yellow-300" />
-          <h2 className="text-3xl font-bold">New Services Available</h2>
+      <divclassName = {`bg-gradient-to-rfrom-orange-600to-red-600rounded-2xlp-8text-white ${className}`}>
+        <divclassName="flexitems-centergap-3mb-6">
+          <RocketclassName="w-8 h-8text-yellow-300" />
+          <h2className="text-3xlfont-bold">NewServicesAvailable</h2>
         </div>
-        <p className="text-orange-100 text-lg mb-8">
-          Discover our latest AI-powered solutions transforming businesses worldwide
+        <pclassName="text-orange-100text-lgmb-8">
+          Discoverourlatest AI-poweredsolutionstransforming businessesworldwide
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <div key={service.id} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
-              <div className="text-3xl mb-3">{service.icon}</div>
-              <h3 className="text-xl font-bold mb-2">{service.name}</h3>
-              <p className="text-orange-100 text-sm mb-4 line-clamp-2">{service.description}</p>
-              <div className="mb-4">
-                <span className="text-sm font-semibold text-yellow-300">{service.benefits[0]}</span>
+        <divclassName="gridmd: grid-cols-3gap-6">
+          { services.map((service) = > (
+            <divkey = { service.id  }className = "bg-white/10backdrop-blur-lgrounded-xlp-6hover: bg-white/20transition-all">
+              <divclassName="text-3xlmb-3">{service.icon}</div>
+              <h3className = "text-xlfont-boldmb-2">{service.name}</h3>
+              <pclassName="text-orange-100text-smmb-4line-clamp-2">{service.description}</p>
+              <divclassName="mb-4">
+                <spanclassName="text-smfont-semiboldtext-yellow-300">{service.benefits[0]}</span>
               </div>
-              <Link
-                to={service.link}
-                className="inline-flex items-center gap-2 text-yellow-300 font-semibold hover:text-yellow-200"
+              <Linkto = { service.link }className = "inline-flexitems-centergap-2text-yellow-300font-semiboldhover: text-yellow-200"
               >
-                Learn More <ArrowRight className="w-4 h-4" />
+                LearnMore <ArrowRight,className="w-4 h-4" />
               </Link>
             </div>
           ))}
         </div>
-      </div > );
+      </div  > );
   }
-  if (variant === 'grid') {
+  if (variant = == 'grid') {
     return (
-      <div className={`bg-white rounded-xl shadow-lg p-8 ${className}`}>
-        <div className="flex items-center justify-between mb-6">
-          <div className="flex items-center gap-3">
-            <Rocket className="w-7 h-7 text-indigo-600" />
-            <h3 className="text-2xl font-bold text-gray-900">New Services</h3>
+      <divclassName = {`bg-whiterounded-xlshadow-lgp-8 ${className}`}>
+        <divclassName="flexitems-centerjustify-betweenmb-6">
+          <divclassName="flexitems-centergap-3">
+            <RocketclassName="w-7 h-7text-indigo-600" />
+            <h3className="text-2xlfont-boldtext-gray-900">NewServices</h3>
           </div>
-          <Link to="/services" className="text-indigo-600 font-semibold hover:text-indigo-800">
-            View All →
+          <Linkto="/services" className="text-indigo-600font-semiboldhover: text-indigo-800">
+            ViewAll →
           </Link>
         </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          {services.map((service) => (
-            <Link
-              key={service.id}
-              to={service.link}
-              className="border border-gray-200 rounded-xl p-5 hover:shadow-xl hover:border-indigo-300 transition-all group"
+        <divclassName="gridmd:grid-cols-3gap-6">
+          { services.map((service) = > (
+            <Linkkey = { service.id  }to={ service.link } className="borderborder-gray-200rounded-xlp-5hover: shadow-xlhover:border-indigo-300transition-allgroup"
             >
-              <div className="text-3xl mb-3">{service.icon}</div>
-              <h4 className="font-bold text-gray-900 mb-2 group-hover:text-indigo-600">
+              <divclassName="text-3xlmb-3">{service.icon}</div>
+              <h4className = "font-boldtext-gray-900mb-2group-hover: text-indigo-600">
                 {service.name}
               </h4>
-              <p className="text-sm text-gray-600 mb-3 line-clamp-2">{service.description}</p>
-              <div className="text-sm font-semibold text-indigo-600">{service.pricing}</div>
+              <pclassName = "text-smtext-gray-600mb-3line-clamp-2">{service.description}</p>
+              <divclassName="text-smfont-semiboldtext-indigo-600">{service.pricing}</div>
             </Link>
           ))}
         </div>
-      </div > );
+      </div  > );
   }
-  // Default variant
-  return (
-    <div className={`bg-gradient-to-r from-green-600 to-teal-600 rounded-xl p-6 text-white ${className}`}>
-      <div className="flex items-center gap-3 mb-4">
-        <Rocket className="w-6 h-6 text-yellow-300" />
-        <h3 className="text-2xl font-bold">New Services Just Launched</h3>
+  // Defaultvariantreturn (
+    <divclassName = {`bg-gradient-to-rfrom-green-600to-teal-600rounded-xlp-6text-white ${className}`}>
+      <divclassName="flexitems-centergap-3mb-4">
+        <RocketclassName="w-6 h-6text-yellow-300" />
+        <h3className="text-2xlfont-bold">NewServicesJust Launched</h3>
       </div>
-      <div className="grid md:grid-cols-3 gap-4">
-        {services.map((service) => (
-          <div key={service.id} className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-all">
-            <div className="text-2xl mb-2">{service.icon}</div>
-            <h4 className="font-semibold mb-2">{service.name}</h4>
-            <p className="text-sm text-green-100 mb-3 line-clamp-2">{service.description}</p>
-            <Link to={service.link} className="text-yellow-300 text-sm font-semibold hover:underline">
-              Explore Service →
+      <divclassName="gridmd: grid-cols-3gap-4">
+        { services.map((service) = > (
+          <divkey = { service.id  }className = "bg-white/10rounded-lgp-4hover: bg-white/20transition-all">
+            <divclassName="text-2xlmb-2">{service.icon}</div>
+            <h4className = "font-semiboldmb-2">{service.name}</h4>
+            <pclassName="text-smtext-green-100mb-3line-clamp-2">{service.description}</p>
+            <Linkto = { service.link }className = "text-yellow-300text-smfont-semiboldhover: underline">
+              ExploreService →
             </Link>
           </div>
         ))}
@@ -160,4 +148,4 @@ key={service.id}
     </div>
   );
 };
-export default NewServicesPromoBanner;
+exportdefaultNewServicesPromoBanner;

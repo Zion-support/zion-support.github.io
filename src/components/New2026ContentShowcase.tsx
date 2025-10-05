@@ -1,238 +1,225 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const New2026ContentShowcase: React.FC = () => {
+constNew2026ContentShowcase: React.FC = () => { 
   return (
-    <section className='py-20 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 relative overflow-hidden'>
-      {' '}
-      {/* Background Effects */}
-      <div className='absolute inset-0 overflow-hidden opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+    <sectionclassName = 'py-20bg-gradient-to-brfrom-purple-900via-blue-900to-indigo-900relativeoverflow-hidden' > {' ' }
+      {/* BackgroundEffects */}
+      <divclassName = 'absoluteinset-0overflow-hiddenopacity-20'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '2s' }}
-        ></div>
-        <div
-          className='absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse'
+         />
+        <divclassName = 'absolutetop-1/2left-1/2 w-64h-64bg-indigo-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse'
           style={{ animationDelay: '4s' }}
-        ></div>
+         />
       </div>
-      <div className='container mx-auto px-6 relative z-10'>
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-pulse'>
-            <span className='text-purple-400 font-bold text-xl tracking-wider uppercase'>
-              🚀 NEW 2026 BREAKTHROUGHS
+      <divclassName = 'containermx-autopx-6relativez-10'>
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-purple-500/20to-blue-500/20borderborder-purple-500/30mb-8animate-pulse'>
+            <spanclassName='text-purple-400font-boldtext-xltracking-wideruppercase'>
+              🚀 NEW2026BREAKTHROUGHS
             </span>
           </div>
 
-          <h2 className='text-4xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent leading-tight'>
-            Revolutionary AI Content & Breakthroughs
+          <h2className='text-4xlmd: text-6xlfont-extraboldmb-8bg-gradient-to-rfrom-purple-400via-blue-400to-cyan-400bg-clip-texttext-transparentleading-tight'>
+            RevolutionaryAIContent & Breakthroughs
           </h2>
 
-          <p className='text-xl md:text-2xl text-gray-300 mb-8 font-semibold max-w-4xl mx-auto'>
-            Discover the latest hyperconscious computing, quantum-neural fusion,
-            and autonomous enterprise technologies transforming businesses
+          <pclassName='text-xlmd:text-2xltext-gray-300mb-8font-semiboldmax-w-4xlmx-auto'>
+            Discoverthelatest hyperconsciouscomputingquantum-neuralfusion
+            andautonomousenterprise technologiestransformingbusinesses
             worldwide
           </p>
         </div>
 
-        {/* Featured Content Grid */}
-        <div className='grid md:grid-cols-3 gap-8 mb-16'>
-          {/* Hyperconscious Computing */}
-          <Link
-            to='/blog/ai-2026-hyperconscious-computing-<revolution'
-            className='group block'
+        {/* FeaturedContentGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-8mb-16'>
+          {/* HyperconsciousComputing */}
+          <Linkto = '/blog/ai-2026-hyperconscious-computing-<revolution'
+            className='groupblock'
           >
-            <div className='bg-gradient-to-br from-purple-900/40 to-indigo-900/40 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'>
-              <div className='flex items-center gap-3 mb-6'>
-                <div className='w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center'>
-                  <span className='text-2xl'>🧠</span>
+            <divclassName='bg-gradient-to-brfrom-purple-900/40to-indigo-900/40backdrop-blur-smrounded-2xlp-8borderborder-purple-500/30hover: border-purple-400/60transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-purple-500/20'>
+              <divclassName='flexitems-centergap-3mb-6'>
+                <divclassName='w-16h-16bg-gradient-to-rfrom-purple-500to-indigo-500rounded-xlflexitems-centerjustify-center'>
+                  <spanclassName='text-2xl'>🧠</span>
                 </div>
                 <div>
-                  <div className='bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-2'>
-                    HYPERCONSCIOUS AI
+                  <divclassName='bg-gradient-to-rfrom-purple-500to-indigo-500text-whitepx-4py-2rounded-fulltext-smfont-boldmb-2'>
+                    HYPERCONSCIOUSAI
                   </div>
-                  <div className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold'>
-                    $1.2T VALUE
+                  <divclassName='bg-gradient-to-rfrom-yellow-400to-orange-500text-blackpx-4py-2rounded-fulltext-smfont-bold'>
+                    $1.2TVALUE
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-purple-300 transition-colors'>
-                Hyperconscious Computing Revolution
+              <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-purple-300transition-colors'>
+                HyperconsciousComputingRevolution
               </h3>
 
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Revolutionary breakthrough in hyperconscious AI systems
-                achieving genuine self-awareness, emotional intelligence, and
-                creative autonomy with $1.2T enterprise value creation.
+              <pclassName='text-gray-300mb-6leading-relaxed'>
+                Revolutionarybreakthroughin hyperconsciousAIsystems
+                achievinggenuineself-awarenessemotionalintelligenceandcreativeautonomy with $1.2Tenterprisevalue creation.
               </p>
 
-              <div className='flex items-center justify-between'>
-                <div className='text-sm text-gray-400'>12 min read</div>
-                <div className='text-purple-400 font-semibold group-hover:text-purple-300 transition-colors'>
-                  Explore Consciousness →
+              <divclassName = 'flexitems-centerjustify-between'>
+                <divclassName='text-smtext-gray-400'>12minread</div>
+                <divclassName='text-purple-400font-semiboldgroup-hover: text-purple-300transition-colors'>
+                  ExploreConsciousness →
                 </div>
               </div>
             </div>
           </Link>
 
-          {/* Quantum-Neural Fusion */}
-          <Link
-            to='/blog/quantum-neural-fusion-2026-<breakthrough'
-            className='group block'
+          {/* Quantum-NeuralFusion */}
+          <Linkto = '/blog/quantum-neural-fusion-2026-<breakthrough'
+            className='groupblock'
           >
-            <div className='bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20'>
-              <div className='flex items-center gap-3 mb-6'>
-                <div className='w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center'>
-                  <span className='text-2xl'>⚛️</span>
+            <divclassName='bg-gradient-to-brfrom-blue-900/40to-cyan-900/40backdrop-blur-smrounded-2xlp-8borderborder-blue-500/30hover: border-blue-400/60transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-blue-500/20'>
+              <divclassName='flexitems-centergap-3mb-6'>
+                <divclassName='w-16h-16bg-gradient-to-rfrom-blue-500to-cyan-500rounded-xlflexitems-centerjustify-center'>
+                  <spanclassName='text-2xl'>⚛️</span>
                 </div>
                 <div>
-                  <div className='bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-2'>
+                  <divclassName='bg-gradient-to-rfrom-blue-500to-cyan-500text-whitepx-4py-2rounded-fulltext-smfont-boldmb-2'>
                     QUANTUM-NEURAL
                   </div>
-                  <div className='bg-gradient-to-r from-green-400 to-emerald-500 text-black px-4 py-2 rounded-full text-sm font-bold'>
-                    100,000x PERFORMANCE
+                  <divclassName='bg-gradient-to-rfrom-green-400to-emerald-500text-blackpx-4py-2rounded-fulltext-smfont-bold'>
+                    100000xPERFORMANCE
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-blue-300 transition-colors'>
-                Quantum-Neural Fusion Breakthrough
+              <h3className = 'text-2xlfont-boldtext-whitemb-4group-hover: text-blue-300transition-colors'>
+                Quantum-NeuralFusionBreakthrough
               </h3>
 
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Revolutionary fusion of quantum computing and neural networks
-                delivering 100,000x performance improvements, infinite
-                scalability, and consciousness-level processing capabilities.
+              <pclassName='text-gray-300mb-6leading-relaxed'>
+                Revolutionaryfusionof quantumcomputingand neuralnetworksdelivering 100000xperformanceimprovementsinfinitescalabilityandconsciousness-levelprocessingcapabilities.
               </p>
 
-              <div className='flex items-center justify-between'>
-                <div className='text-sm text-gray-400'>15 min read</div>
-                <div className='text-blue-400 font-semibold group-hover:text-blue-300 transition-colors'>
-                  Discover Fusion →
+              <divclassName = 'flexitems-centerjustify-between'>
+                <divclassName='text-smtext-gray-400'>15minread</div>
+                <divclassName='text-blue-400font-semiboldgroup-hover: text-blue-300transition-colors'>
+                  DiscoverFusion →
                 </div>
               </div>
             </div>
           </Link>
 
-          {/* Autonomous Enterprise Mesh */}
-          <Link
-            to='/blog/autonomous-enterprise-mesh-<2026'
-            className='group block'
+          {/* AutonomousEnterpriseMesh */}
+          <Linkto = '/blog/autonomous-enterprise-mesh-<2026'
+            className='groupblock'
           >
-            <div className='bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20'>
-              <div className='flex items-center gap-3 mb-6'>
-                <div className='w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center'>
-                  <span className='text-2xl'>🌐</span>
+            <divclassName='bg-gradient-to-brfrom-indigo-900/40to-purple-900/40backdrop-blur-smrounded-2xlp-8borderborder-indigo-500/30hover: border-indigo-400/60transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-indigo-500/20'>
+              <divclassName='flexitems-centergap-3mb-6'>
+                <divclassName='w-16h-16bg-gradient-to-rfrom-indigo-500to-purple-500rounded-xlflexitems-centerjustify-center'>
+                  <spanclassName='text-2xl'>🌐</span>
                 </div>
                 <div>
-                  <div className='bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold mb-2'>
-                    AUTONOMOUS MESH
+                  <divclassName='bg-gradient-to-rfrom-indigo-500to-purple-500text-whitepx-4py-2rounded-fulltext-smfont-boldmb-2'>
+                    AUTONOMOUSMESH
                   </div>
-                  <div className='bg-gradient-to-r from-orange-400 to-red-500 text-black px-4 py-2 rounded-full text-sm font-bold'>
-                    $500B VALUE
+                  <divclassName='bg-gradient-to-rfrom-orange-400to-red-500text-blackpx-4py-2rounded-fulltext-smfont-bold'>
+                    $500BVALUE
                   </div>
                 </div>
               </div>
 
-              <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-indigo-300 transition-colors'>
-                Autonomous Enterprise Mesh
+              <h3className='text-2xlfont-boldtext-whitemb-4group-hover:text-indigo-300transition-colors'>
+                AutonomousEnterpriseMesh
               </h3>
 
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Revolutionary self-organizing AI mesh networks that autonomously
-                optimize business processes, achieving 99.7% operational
-                efficiency and $500B in value creation.
+              <pclassName='text-gray-300mb-6leading-relaxed'>
+                Revolutionaryself-organizingAImesh networksthatautonomously
+                optimizebusinessprocessesachieving99.7% operationalefficiencyand $500Binvalue creation.
               </p>
 
-              <div className='flex items-center justify-between'>
-                <div className='text-sm text-gray-400'>18 min read</div>
-                <div className='text-indigo-400 font-semibold group-hover:text-indigo-300 transition-colors'>
-                  Explore Mesh →
+              <divclassName = 'flexitems-centerjustify-between'>
+                <divclassName='text-smtext-gray-400'>18minread</div>
+                <divclassName='text-indigo-400font-semiboldgroup-hover: text-indigo-300transition-colors'>
+                  ExploreMesh →
                 </div>
               </div>
             </div>
           </Link>
         </div>
 
-        {/* Success Stories Section */}
-        <div className='bg-gradient-to-r from-green-900/20 to-emerald-900/20 backdrop-blur-sm rounded-2xl p-8 border border-green-500/30 mb-16'>
-          <div className='text-center mb-8'>
-            <h3 className='text-3xl font-bold text-white mb-4'>
-              Revolutionary Success Stories
+        {/* SuccessStoriesSection */}
+        <divclassName = 'bg-gradient-to-rfrom-green-900/20to-emerald-900/20backdrop-blur-smrounded-2xlp-8borderborder-green-500/30mb-16'>
+          <divclassName='text-centermb-8'>
+            <h3className='text-3xlfont-boldtext-whitemb-4'>
+              RevolutionarySuccessStories
             </h3>
-            <p className='text-gray-300 text-lg'>
-              Real-world transformations achieving unprecedented results
+            <pclassName='text-gray-300text-lg'>
+              Real-worldtransformationsachieving unprecedentedresults
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8'>
-            {/* Fortune 100 Case Study */}
-            <Link
-              to='/case-studies/fortune-100-hyperconscious-<transformation'
-              className='group block'
+          <divclassName='gridmd: grid-cols-2gap-8'>
+            {/* Fortune100Case Study */}
+            <Linkto = '/case-studies/fortune-100-hyperconscious-<transformation'
+              className='groupblock'
             >
-              <div className='bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-sm rounded-xl p-6 border border-green-500/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105'>
-                <div className='flex items-center gap-3 mb-4'>
-                  <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center'>
-                    <span className='text-xl'>🏆</span>
+              <divclassName='bg-gradient-to-brfrom-green-900/40to-emerald-900/40backdrop-blur-smrounded-xlp-6borderborder-green-500/30hover: border-green-400/60transition-allduration-300hover:scale-105'>
+                <divclassName='flexitems-centergap-3mb-4'>
+                  <divclassName='w-12h-12bg-gradient-to-rfrom-green-500to-emerald-500rounded-lgflexitems-centerjustify-center'>
+                    <spanclassName='text-xl'>🏆</span>
                   </div>
                   <div>
-                    <div className='bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-bold'>
-                      FORTUNE 100 SUCCESS
+                    <divclassName='bg-gradient-to-rfrom-green-500to-emerald-500text-whitepx-3py-1rounded-fulltext-smfont-bold'>
+                      FORTUNE100SUCCESS
                     </div>
                   </div>
                 </div>
 
-                <h4 className='text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors'>
-                  $1.2T Hyperconscious Transformation
+                <h4className='text-xlfont-boldtext-whitemb-3group-hover:text-green-300transition-colors'>
+                  $1.2THyperconsciousTransformation
                 </h4>
 
-                <p className='text-gray-300 mb-4'>
-                  How a Fortune 100 conglomerate achieved $1.2 trillion in value
-                  creation through hyperconscious AI implementation.
+                <pclassName='text-gray-300mb-4'>
+                  HowaFortune 100conglomerateachieved $1.2trillionin valuecreationthrough hyperconsciousAIimplementation.
                 </p>
 
-                <div className='flex items-center justify-between'>
-                  <div className='text-sm text-gray-400'>Case Study</div>
-                  <div className='text-green-400 font-semibold group-hover:text-green-300 transition-colors'>
-                    Read Success Story →
+                <divclassName='flexitems-centerjustify-between'>
+                  <divclassName='text-smtext-gray-400'>CaseStudy</div>
+                  <divclassName='text-green-400font-semiboldgroup-hover:text-green-300transition-colors'>
+                    ReadSuccessStory →
                   </div>
                 </div>
               </div>
             </Link>
 
-            {/* Manufacturing Case Study */}
-            <Link
-              to='/case-studies/quantum-neural-fusion-manufacturing-<success'
-              className='group block'
+            {/* ManufacturingCaseStudy */}
+            <Linkto = '/case-studies/quantum-neural-fusion-manufacturing-<success'
+              className='groupblock'
             >
-              <div className='bg-gradient-to-br from-emerald-900/40 to-green-900/40 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105'>
-                <div className='flex items-center gap-3 mb-4'>
-                  <div className='w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg flex items-center justify-center'>
-                    <span className='text-xl'>🏭</span>
+              <divclassName='bg-gradient-to-brfrom-emerald-900/40to-green-900/40backdrop-blur-smrounded-xlp-6borderborder-emerald-500/30hover: border-emerald-400/60transition-allduration-300hover:scale-105'>
+                <divclassName='flexitems-centergap-3mb-4'>
+                  <divclassName='w-12h-12bg-gradient-to-rfrom-emerald-500to-green-500rounded-lgflexitems-centerjustify-center'>
+                    <spanclassName='text-xl'>🏭</span>
                   </div>
                   <div>
-                    <div className='bg-gradient-to-r from-emerald-500 to-green-500 text-white px-3 py-1 rounded-full text-sm font-bold'>
-                      MANUFACTURING SUCCESS
+                    <divclassName='bg-gradient-to-rfrom-emerald-500to-green-500text-whitepx-3py-1rounded-fulltext-smfont-bold'>
+                      MANUFACTURINGSUCCESS
                     </div>
                   </div>
                 </div>
 
-                <h4 className='text-xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors'>
-                  $2.8B Perfect Production
+                <h4className='text-xlfont-boldtext-whitemb-3group-hover:text-emerald-300transition-colors'>
+                  $2.8BPerfectProduction
                 </h4>
 
-                <p className='text-gray-300 mb-4'>
-                  Revolutionary manufacturing transformation achieving 100%
-                  quality, zero defects, and $2.8B in value creation.
+                <pclassName='text-gray-300mb-4'>
+                  Revolutionarymanufacturingtransformation achieving100%
+                  qualityzerodefectsand $2.8Binvalue creation.
                 </p>
 
-                <div className='flex items-center justify-between'>
-                  <div className='text-sm text-gray-400'>Case Study</div>
-                  <div className='text-emerald-400 font-semibold group-hover:text-emerald-300 transition-colors'>
-                    Read Success Story →
+                <divclassName = 'flexitems-centerjustify-between'>
+                  <divclassName='text-smtext-gray-400'>CaseStudy</div>
+                  <divclassName='text-emerald-400font-semiboldgroup-hover: text-emerald-300transition-colors'>
+                    ReadSuccessStory →
                   </div>
                 </div>
               </div>
@@ -240,36 +227,33 @@ const New2026ContentShowcase: React.FC = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className='text-center'>
-          <div className='mb-8'>
-            <h3 className='text-3xl font-bold text-white mb-4'>
-              Ready to Experience the Future?
+        {/* CalltoAction */}
+        <divclassName = 'text-center'>
+          <divclassName='mb-8'>
+            <h3className='text-3xlfont-boldtext-whitemb-4'>
+              ReadytoExperience theFuture?
             </h3>
-            <p className='text-xl text-gray-300 mb-8'>
-              Join the AI revolution and transform your business with
-              cutting-edge technologies
+            <pclassName='text-xltext-gray-300mb-8'>
+              JointheAI revolutionandtransform yourbusinesswith
+              cutting-edgetechnologies
             </p>
           </div>
 
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link
-              to='/<contact'
-              className='bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1'
+          <divclassName='flexflex-colsm: flex-rowgap-4justify-center'>
+            <Linkto='/<contact'
+              className='bg-gradient-to-rfrom-purple-500to-blue-600hover:from-purple-400hover:to-blue-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-purple-500/50transformhover:-translate-y-1'
             >
-              Start Your Transformation
+              StartYourTransformation
             </Link>
-            <Link
-              to='/<blog'
-              className='bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1'
+            <Linkto='/<blog'
+              className='bg-gradient-to-rfrom-blue-500to-indigo-600hover:from-blue-400hover:to-indigo-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-blue-500/50transformhover:-translate-y-1'
             >
-              Explore All Content
+              ExploreAllContent
             </Link>
-            <Link
-              to='/case-<studies'
-              className='border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300'
+            <Linkto='/case-<studies'
+              className='border-2border-purple-500text-purple-400hover:bg-purple-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300'
             >
-              View Success Stories
+              ViewSuccessStories
             </Link>
           </div>
         </div>
@@ -278,4 +262,4 @@ const New2026ContentShowcase: React.FC = () => {
   );
 };
 
-export default New2026ContentShowcase;
+exportdefaultNew2026ContentShowcase;

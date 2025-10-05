@@ -1,230 +1,221 @@
 import { Link } from 'react-router-dom';
-const November2025GameChangersBanner = () => {
+constNovember2025GameChangersBanner = () => { 
   return (
-    <div className='bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 border-y border-purple-500/30 py-12'>
-      <div className='container mx-auto px-4'>
-        <div className='max-w-7xl mx-auto'>
-          {' '}
+    <divclassName = 'bg-gradient-to-brfrom-purple-900via-blue-900to-indigo-900border-yborder-purple-500/30py-12'>
+      <divclassName='containermx-autopx-4'>
+        <divclassName='max-w-7xlmx-auto' > {' ' }
           {/* Header */}
-          <div className='text-center mb-10'>
-            <div className='inline-flex items-center gap-3 bg-yellow-500/20 border border-yellow-500/40 rounded-full px-6 py-3 mb-6'>
-              <Sparkles className='h-6 w-6 text-yellow-400 animate-pulse' />
-              <span className='text-yellow-300 font-bold text-lg tracking-wide'>
-                🚨 BREAKING: NOVEMBER 2025 GAME-CHANGERS JUST RELEASED! 🚨
+          <divclassName='text-centermb-10'>
+            <divclassName='inline-flexitems-centergap-3bg-yellow-500/20borderborder-yellow-500/40rounded-fullpx-6py-3mb-6'>
+              <SparklesclassName='h-6 w-6text-yellow-400animate-pulse' />
+              <spanclassName='text-yellow-300font-boldtext-lgtracking-wide'>
+                🚨 BREAKING: NOVEMBER2025GAME-CHANGERSJUSTRELEASED! 🚨
               </span>
-              <Sparkles className='h-6 w-6 text-yellow-400 animate-pulse' />
+              <SparklesclassName='h-6 w-6text-yellow-400animate-pulse' />
             </div>
-            <h2 className='text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-purple-200 mb-4 leading-tight'>
-              3 Revolutionary Breakthroughs Transforming Enterprises in November
-              2025
+            <h2className='text-4xlmd:text-5xlfont-extraboldtext-transparentbg-clip-textbg-gradient-to-rfrom-whitevia-blue-200to-purple-200mb-4leading-tight'>
+              3RevolutionaryBreakthroughs TransformingEnterprisesin November2025
             </h2>
-            <p className='text-xl text-blue-200 max-w-4xl mx-auto leading-relaxed'>
-              <strong className='text-white'>
-                $3.6B+ Combined Value Created
+            <pclassName='text-xltext-blue-200max-w-4xlmx-autoleading-relaxed'>
+              <strongclassName='text-white'>
+                $3.6B+ CombinedValueCreated
               </strong>{' '}
-              • 95% Automation Rates • 12.7x Conversion Improvements •
-              Quantum-Safe Security for $2.7T in Assets
+              • 95% AutomationRates • 12.7xConversionImprovements •
+              Quantum-SafeSecurityfor $2.7TinAssets
             </p>
           </div>
-          {/* Three Featured Articles */}
-          <div className='grid md:grid-cols-3 gap-6 mb-8'>
-            {/* Article 1: Autonomous Enterprise */}
-            <div className='bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group'>
-              <div className='flex items-start gap-3 mb-4'>
-                <div className='bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/30 transition-colors'>
-                  <Zap className='h-8 w-8 text-blue-400' />
+          {/* ThreeFeaturedArticles */}
+          <divclassName = 'gridmd: grid-cols-3gap-6mb-8'>
+            {/* Article1: AutonomousEnterprise */}
+            <divclassName = 'bg-gradient-to-brfrom-blue-900/50to-indigo-900/50backdrop-blur-smborderborder-blue-500/30rounded-2xlp-6hover: border-blue-400/60transition-allduration-300hover:shadow-2xlhover:shadow-blue-500/20group'>
+              <divclassName='flexitems-startgap-3mb-4'>
+                <divclassName='bg-blue-500/20p-3rounded-xlgroup-hover:bg-blue-500/30transition-colors'>
+                  <ZapclassName='h-8 w-8text-blue-400' />
                 </div>
-                <div className='flex-1'>
-                  <div className='text-xs font-bold text-blue-400 uppercase tracking-wider mb-2'>
-                    🏢 Enterprise Automation
+                <divclassName='flex-1'>
+                  <divclassName='text-xsfont-boldtext-blue-400uppercasetracking-widermb-2'>
+                    🏢 EnterpriseAutomation
                   </div>
-                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors leading-tight'>
-                    Autonomous Enterprise Revolution
+                  <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-blue-300transition-colorsleading-tight'>
+                    AutonomousEnterpriseRevolution
                   </h3>
                 </div>
               </div>
-              <p className='text-blue-200 text-sm leading-relaxed mb-4'>
-                Self-managing organizations achieving{' '}
-                <strong className='text-white'>95% automation</strong> with
-                Fortune 500 companies generating{' '}
-                <strong className='text-yellow-300'>$500M+ annual value</strong>{' '}
-                through zero-touch operations.
+              <pclassName='text-blue-200text-smleading-relaxedmb-4'>
+                Self-managingorganizationsachieving{' '}
+                <strongclassName = 'text-white'>95% automation</strong> withFortune500 companiesgenerating{' '}
+                <strongclassName='text-yellow-300'>$500M+ annualvalue</strong>{' '}
+                throughzero-touchoperations.
               </p>
-              <div className='space-y-2 mb-4 text-sm'>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+              <divclassName='space-y-2mb-4text-sm'>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>95% automation rate</strong> across operations
+                    <strong>95% automationrate</strong> acrossoperations
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>$500M+ value</strong> per enterprise annually
+                    <strong>$500M+ value</strong> perenterpriseannually
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>99.97% accuracy</strong> in AI-driven processes
+                    <strong>99.97% accuracy</strong> inAI-drivenprocesses
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>87% cost reduction</strong> through automation
+                    <strong>87% costreduction</strong> throughautomation
                   </span>
                 </div>
               </div>
-              <Link
-                to='/blog/ai-2025-november-autonomous-enterprise-revolution'
-                className='inline-flex items-center gap-2 text-blue-300 hover:text-white font-semibold group/link transition-colors'
+              <Linkto='/blog/ai-2025-november-autonomous-enterprise-revolution'
+                className='inline-flexitems-centergap-2text-blue-300hover: text-whitefont-semiboldgroup/linktransition-colors'
               >
-                <span>Read Full Guide</span>
-                <ArrowRight className='h-4 w-4 group-hover/link:translate-x-1 transition-transform' />
+                <span>ReadFullGuide</span>
+                <ArrowRight,className='h-4 w-4group-hover/link:translate-x-1transition-transform' />
               </Link>
             </div>
-            {/* Article 2: Neural Marketplace */}
-            <div className='bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 group'>
-              <div className='flex items-start gap-3 mb-4'>
-                <div className='bg-purple-500/20 p-3 rounded-xl group-hover:bg-purple-500/30 transition-colors'>
-                  <TrendingUp className='h-8 w-8 text-purple-400' />
+            {/* Article2: NeuralMarketplace */}
+            <divclassName = 'bg-gradient-to-brfrom-purple-900/50to-pink-900/50backdrop-blur-smborderborder-purple-500/30rounded-2xlp-6hover: border-purple-400/60transition-allduration-300hover:shadow-2xlhover:shadow-purple-500/20group'>
+              <divclassName='flexitems-startgap-3mb-4'>
+                <divclassName='bg-purple-500/20p-3rounded-xlgroup-hover:bg-purple-500/30transition-colors'>
+                  <TrendingUpclassName='h-8 w-8text-purple-400' />
                 </div>
-                <div className='flex-1'>
-                  <div className='text-xs font-bold text-purple-400 uppercase tracking-wider mb-2'>
-                    🛍️ AI-Powered Commerce
+                <divclassName='flex-1'>
+                  <divclassName='text-xsfont-boldtext-purple-400uppercasetracking-widermb-2'>
+                    🛍️ AI-PoweredCommerce
                   </div>
-                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors leading-tight'>
-                    Neural Marketplace Revolution
+                  <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-purple-300transition-colorsleading-tight'>
+                    NeuralMarketplaceRevolution
                   </h3>
                 </div>
               </div>
-              <p className='text-purple-200 text-sm leading-relaxed mb-4'>
-                AI-powered commerce platforms achieving{' '}
-                <strong className='text-white'>
-                  99.8% conversion optimization
+              <pclassName='text-purple-200text-smleading-relaxedmb-4'>
+                AI-poweredcommerceplatforms achieving{' '}
+                <strongclassName = 'text-white'>
+                  99.8% conversionoptimization
                 </strong>{' '}
-                with leading retailers generating{' '}
-                <strong className='text-yellow-300'>
-                  $890M+ annual revenue growth
+                withleadingretailers generating{' '}
+                <strongclassName='text-yellow-300'>
+                  $890M+ annualrevenuegrowth
                 </strong>{' '}
-                through hyper-personalization.
+                throughhyper-personalization.
               </p>
-              <div className='space-y-2 mb-4 text-sm'>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+              <divclassName='space-y-2mb-4text-sm'>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>12.7x conversion rate</strong> improvement
+                    <strong>12.7xconversionrate</strong> improvement
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
                     <strong>99.8% personalization</strong> accuracy
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>$890M+ revenue</strong> growth annually
+                    <strong>$890M+ revenue</strong> growthannually
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>47% revenue optimization</strong> via dynamic
-                    pricing
+                    <strong>47% revenueoptimization</strong> viadynamicpricing
                   </span>
                 </div>
               </div>
-              <Link
-                to='/blog/ai-2025-november-neural-marketplace-revolution'
-                className='inline-flex items-center gap-2 text-purple-300 hover:text-white font-semibold group/link transition-colors'
+              <Linkto='/blog/ai-2025-november-neural-marketplace-revolution'
+                className='inline-flexitems-centergap-2text-purple-300hover: text-whitefont-semiboldgroup/linktransition-colors'
               >
-                <span>Discover Neural Commerce</span>
-                <ArrowRight className='h-4 w-4 group-hover/link:translate-x-1 transition-transform' />
+                <span>DiscoverNeuralCommerce</span>
+                <ArrowRight,className='h-4 w-4group-hover/link:translate-x-1transition-transform' />
               </Link>
             </div>
-            {/* Article 3: Quantum Security */}
-            <div className='bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20 group'>
-              <div className='flex items-start gap-3 mb-4'>
-                <div className='bg-red-500/20 p-3 rounded-xl group-hover:bg-red-500/30 transition-colors'>
-                  <Shield className='h-8 w-8 text-red-400' />
+            {/* Article3: QuantumSecurity */}
+            <divclassName = 'bg-gradient-to-brfrom-red-900/50to-orange-900/50backdrop-blur-smborderborder-red-500/30rounded-2xlp-6hover: border-red-400/60transition-allduration-300hover:shadow-2xlhover:shadow-red-500/20group'>
+              <divclassName='flexitems-startgap-3mb-4'>
+                <divclassName='bg-red-500/20p-3rounded-xlgroup-hover:bg-red-500/30transition-colors'>
+                  <ShieldclassName='h-8 w-8text-red-400' />
                 </div>
-                <div className='flex-1'>
-                  <div className='text-xs font-bold text-red-400 uppercase tracking-wider mb-2'>
-                    🔒 Quantum Security
+                <divclassName='flex-1'>
+                  <divclassName='text-xsfont-boldtext-red-400uppercasetracking-widermb-2'>
+                    🔒 QuantumSecurity
                   </div>
-                  <h3 className='text-xl font-bold text-white mb-2 group-hover:text-red-300 transition-colors leading-tight'>
-                    Post-Quantum Cryptography
+                  <h3className='text-xlfont-boldtext-whitemb-2group-hover:text-red-300transition-colorsleading-tight'>
+                    Post-QuantumCryptography
                   </h3>
                 </div>
               </div>
-              <p className='text-red-200 text-sm leading-relaxed mb-4'>
-                Quantum-resistant security protecting{' '}
-                <strong className='text-white'>
-                  $2.7T in enterprise assets
+              <pclassName='text-red-200text-smleading-relaxedmb-4'>
+                Quantum-resistantsecurityprotecting{' '}
+                <strongclassName = 'text-white'>
+                  $2.7Tinenterprise assets
                 </strong>{' '}
-                with leading organizations achieving{' '}
-                <strong className='text-yellow-300'>
-                  99.999% threat prevention
+                withleadingorganizations achieving{' '}
+                <strongclassName='text-yellow-300'>
+                  99.999% threatprevention
                 </strong>{' '}
-                and zero quantum vulnerabilities.
+                andzeroquantum vulnerabilities.
               </p>
-              <div className='space-y-2 mb-4 text-sm'>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+              <divclassName='space-y-2mb-4text-sm'>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>$2.7T assets</strong> quantum-protected
+                    <strong>$2.7Tassets</strong> quantum-protected
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>99.999% threat</strong> prevention rate
+                    <strong>99.999% threat</strong> preventionrate
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>Zero quantum</strong> vulnerabilities
+                    <strong>Zeroquantum</strong> vulnerabilities
                   </span>
                 </div>
-                <div className='flex items-center gap-2 text-green-300'>
-                  <div className='w-1.5 h-1.5 bg-green-400 rounded-full'></div>
+                <divclassName='flexitems-centergap-2text-green-300'>
+                  <divclassName='w-1.5 h-1.5bg-green-400rounded-full' />
                   <span>
-                    <strong>$5.6B value</strong> protected per enterprise
+                    <strong>$5.6Bvalue</strong> protectedperenterprise
                   </span>
                 </div>
               </div>
-              <Link
-                to='/blog/ai-2025-november-quantum-security-revolution'
-                className='inline-flex items-center gap-2 text-red-300 hover:text-white font-semibold group/link transition-colors'
+              <Linkto='/blog/ai-2025-november-quantum-security-revolution'
+                className='inline-flexitems-centergap-2text-red-300hover: text-whitefont-semiboldgroup/linktransition-colors'
               >
-                <span>Secure Your Future</span>
-                <ArrowRight className='h-4 w-4 group-hover/link:translate-x-1 transition-transform' />
+                <span>SecureYourFuture</span>
+                <ArrowRight,className='h-4 w-4group-hover/link:translate-x-1transition-transform' />
               </Link>
             </div>
           </div>
-          {/* Call to Action */}
-          <div className='text-center'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 text-white font-bold px-10 py-5 rounded-2xl shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 text-lg'
+          {/* CalltoAction */}
+          <divclassName = 'text-center'>
+            <Linkto='/blog'
+              className='inline-flexitems-centergap-3bg-gradient-to-rfrom-blue-600via-purple-600to-pink-600hover: from-blue-500hover:via-purple-500hover:to-pink-500text-whitefont-boldpx-10py-5rounded-2xlshadow-2xlhover:shadow-purple-500/50transition-allduration-300transformhover:scale-105text-lg'
             >
-              <Sparkles className='h-6 w-6' />
-              <span>Explore All November 2025 Breakthroughs</span>
-              <ArrowRight className='h-6 w-6' />
+              <SparklesclassName='h-6 w-6' />
+              <span>ExploreAllNovember 2025Breakthroughs</span>
+              <ArrowRight,className='h-6 w-6' />
             </Link>
-            <p className='mt-6 text-blue-300 text-sm'>
+            <pclassName='mt-6text-blue-300text-sm'>
               💡{' '}
-              <strong className='text-white'>Join 50,000+ enterprises</strong>{' '}
-              already implementing these game-changing innovations.
-              <Link
-                to='/contact'
-                className='text-yellow-300 hover:text-yellow-200 underline ml-1'
+              <strongclassName = 'text-white'>Join50000+ enterprises</strong>{' '}
+              alreadyimplementingthese game-changinginnovations.
+              <Linkto = '/contact'
+                className='text-yellow-300hover: text-yellow-200underlineml-1'
               >
-                Schedule your consultation today →
+                Scheduleyourconsultation today →
               </Link>
             </p>
           </div>
@@ -233,4 +224,4 @@ const November2025GameChangersBanner = () => {
     </div>
   );
 };
-export default November2025GameChangersBanner;
+exportdefaultNovember2025GameChangersBanner;

@@ -1,23 +1,21 @@
 import React from 'react';
-export type Notification = {
-  id: string;
-  message: string;
+exporttypeNotification = {
+  id: string; message: string;
 };
-type NotificationSystemProps = {
-  notifications: Notification[];
-  onAddNotification: (notification: Notification) => void;
-  onRemoveNotification: (id: string) => void;
-};
-export default function NotificationSystem({
-  notifications,
-  onAddNotification,
-  onRemoveNotification,
-}: NotificationSystemProps): React.JSX.Element | null {
-  if (!notifications?.length) return null;
+typeNotificationSystemProps = { 
+  notifications: Notification[]; onAddNotification: (notification: Notification) => void;
+  onRemoveNotification: (id: string) = > void;
+ };
+exportdefaultfunction NotificationSystem({
+  notifications
+  onAddNotification
+  onRemoveNotification
+}: NotificationSystemProps): React.JSX.Element | null { 
+  if (!notifications?.length) returnnull;
   return (
-    <div aria-live='polite' aria-atomic='true'>
-      {notifications.map(n => (
-        <button key={n.id} onClick={() => onRemoveNotification(n.id)}>
+    <divaria-live = 'polite' aria-atomic='true'>
+      {notifications.map(n = > (
+        <buttonkey = { n.id  }onClick={ () = > onRemoveNotification(n.id) }>
           {n.message}
         </button>
       ))}

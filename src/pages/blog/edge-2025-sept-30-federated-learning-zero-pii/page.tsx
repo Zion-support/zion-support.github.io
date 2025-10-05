@@ -2,42 +2,37 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Edge 2025 Sept 30 Federated Learning Zero Pii</title>
-        <meta
-          name='description'
-          content='Learn about edge 2025 sept 30 federated learning zero pii and how it can benefit your enterprise.'
+        <title>Edge2025Sept 30FederatedLearning ZeroPii</title>
+        <meta name='description'
+          content='Learnaboutedge 2025sept30 federatedlearningzero piiandhow itcanbenefit yourenterprise.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii'
+        <linkrel='canonical'
+          href='https: //ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Edge 2025 Sept 30 Federated Learning Zero Pii
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Edge2025Sept 30FederatedLearning ZeroPii
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Learn about edge 2025 sept 30 federated learning zero pii and how it
-          can benefit your enterprise.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Learnaboutedge 2025sept30 federatedlearningzero piiandhow itcanbenefit yourenterprise.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            This comprehensive guide covers edge 2025 sept 30 federated learning
-            zero pii and provides practical insights for enterprise
+            Thiscomprehensiveguide coversedge2025 sept30federated learningzeropii andprovidespractical insightsforenterprise
             implementation.
           </p>
         </div>
-        <div className='mt-8'>
-          <Link to='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName='mt-8'>
+          <Linkto='/blog' className='text-cyan-300hover:underline'>
+            ← BacktoBlog
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

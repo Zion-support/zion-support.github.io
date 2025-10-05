@@ -2,134 +2,124 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
-interface ComprehensivePromoBannerProps {
+interfaceComprehensivePromoBannerProps { 
   variant?: 'hero' | 'compact' | 'featured';
   showCount?: number;
-  className?: string;
-}
-const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 
-  variant = 'hero', 
-  showCount = 4,
+  className ?  : string;
+ }
+constComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 
+  variant = 'hero'
+  showCount =  4
   className = '' 
-}) => {
-  const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
-  const latestServices = newServices2026.filter(s => s.featured).slice(0, showCount);
-  if (variant === 'compact') {
+}) => { 
+  constlatestArticles = newArticles2025.filter(a => a.featured).slice(0showCount); constlatestServices = newServices2026.filter(s = > s.featured).slice(0showCount); if (variant = == 'compact') {
     return (
-      <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 ${className}`}>
-        <div className="flex items-center justify-between">
+      <divclassName = {`bg-gradient-to-rfrom-indigo-600to-purple-600rounded-xlp-6 ${className }`}>
+        <divclassName="flexitems-centerjustify-between">
           <div>
-            <h3 className="text-xl font-bold text-white mb-2">
+            <h3className="text-xlfont-boldtext-whitemb-2">
               🚀 New: {latestArticles.length} Articles + {latestServices.length} Services
             </h3>
-            <p className="text-indigo-100">
-              Multimodal AI, Blockchain-AI, Green AI, AutoML & More!
+            <pclassName = "text-indigo-100">
+              MultimodalAIBlockchain-AIGreenAIAutoML & More!
             </p>
           </div>
-          <Link
-            to="/blog"
-            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center gap-2"
+          <Linkto = "/blog"
+            className="bg-whitetext-indigo-600px-6py-3rounded-lgfont-semiboldhover: bg-indigo-50transition-colorsflexitems-centergap-2"
           >
-            Explore Now
-            <ArrowRight className="w-5 h-5" />
+            ExploreNow
+            <ArrowRight,className="w-5 h-5" />
           </Link>
         </div>
-      </div > );
+      </div  > );
   }
-  if (variant === 'featured') {
+  if (variant = == 'featured') {
     return (
-      <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-8">
-          <div className="flex items-center gap-3 mb-4">
-            <Sparkles className="w-8 h-8 text-yellow-300" />
-            <h2 className="text-3xl font-bold text-white">Latest Innovations</h2>
+      <divclassName = {`bg-whiterounded-2xlshadow-xloverflow-hidden ${className}`}>
+        <divclassName="bg-gradient-to-rfrom-purple-600to-indigo-600p-8">
+          <divclassName="flexitems-centergap-3mb-4">
+            <SparklesclassName="w-8 h-8text-yellow-300" />
+            <h2className="text-3xlfont-boldtext-white">LatestInnovations</h2>
           </div>
-          <p className="text-purple-100 text-lg">
-            Discover our newest articles and services transforming industries
+          <pclassName="text-purple-100text-lg">
+            Discoverournewest articlesandservices transformingindustries
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-6 p-8">
-          {latestArticles.slice(0, 2).map((article) => (
-            <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
-              <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
-              <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
-              <p className="text-gray-600 mb-4">{article.description}</p>
-              <Link to={article.link} className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
-                Read More <ArrowRight className="w-4 h-4" />
+        <divclassName="gridmd: grid-cols-2gap-6 p-8">
+          { latestArticles.slice(02).map((article) = > (
+            <divkey = { article.id  }className = "borderborder-gray-200rounded-xlp-6hover: shadow-lgtransition-all">
+              <divclassName="text-smtext-indigo-600font-semiboldmb-2">{article.category}</div>
+              <h4className = "text-lgfont-boldtext-gray-900mb-2">{article.title}</h4>
+              <pclassName="text-gray-600mb-4">{article.description}</p>
+              <Linkto = { article.link }className = "text-indigo-600font-semiboldhover: text-indigo-800flexitems-centergap-2">
+                ReadMore <ArrowRight,className="w-4 h-4" />
               </Link>
             </div>
           ))}
         </div>
-      </div > );
+      </div  > );
   }
-  // Hero variant (default)
+  // Herovariant (default)
   return (
-    <div className={`bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white ${className}`}>
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
-          <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
-            <Zap className="w-5 h-5 mr-2" />
-            <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>
+    <divclassName = {`bg-gradient-to-brfrom-purple-900via-indigo-900to-blue-900rounded-3xlp-8md: p-12text-white ${className}`}>
+      <divclassName = "max-w-6xlmx-auto">
+        <divclassName="text-centermb-10">
+          <divclassName="inline-flexitems-centerpx-4py-2bg-yellow-400/20rounded-fulltext-yellow-300mb-6">
+            <ZapclassName="w-5 h-5mr-2" />
+            <spanclassName="font-bold">OCTOBER2025: BREAKTHROUGHCONTENTRELEASE</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            {latestArticles.length} New Articles + {latestServices.length} Revolutionary Services
+          <h2className="text-4xlmd:text-5xlfont-boldmb-4">
+            {latestArticles.length} NewArticles + {latestServices.length} RevolutionaryServices
           </h2>
-          <p className="text-xl text-purple-200 max-w-3xl mx-auto">
-            Multimodal AI, Blockchain Integration, Green AI, AutoML, Predictive Maintenance, 
-            AI Talent Acquisition, Fraud Prevention & More!
+          <pclassName = "text-xltext-purple-200max-w-3xlmx-auto">
+            MultimodalAIBlockchainIntegrationGreenAIAutoMLPredictiveMaintenance
+            AITalentAcquisitionFraudPrevention & More!
           </p>
         </div>
-        <div className="grid md:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Sparkles className="w-6 h-6 text-yellow-300" />
-              Latest Articles
+        <divclassName = "gridmd: grid-cols-2gap-6mb-8">
+          <divclassName="bg-white/10backdrop-blur-lgrounded-xlp-6">
+            <h3className="text-2xlfont-boldmb-4flexitems-centergap-2">
+              <SparklesclassName="w-6 h-6text-yellow-300" />
+              LatestArticles
             </h3>
-            <div className="space-y-3">
-              {latestArticles.slice(0, 3).map((article) => (
-                <Link
-                  key={article.id}
-                  to={article.link}
-                  className="block bg-white/5 rounded-lg p-4 hover:bg-white/15 transition-all"
+            <divclassName="space-y-3">
+              { latestArticles.slice(03).map((article) = > (
+                <Linkkey = { article.id  }to={ article.link } className="blockbg-white/5rounded-lgp-4hover: bg-white/15transition-all"
                 >
-                  <div className="text-sm text-purple-300 mb-1">{article.category}</div>
-                  <div className="font-semibold">{article.title}</div>
-                  <div className="text-sm text-gray-300 mt-1">{article.readTime}</div>
+                  <divclassName="text-smtext-purple-300mb-1">{article.category}</div>
+                  <divclassName = "font-semibold">{article.title}</div>
+                  <divclassName="text-smtext-gray-300mt-1">{article.readTime}</div>
                 </Link>
               ))}
             </div>
           </div>
-          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Zap className="w-6 h-6 text-green-300" />
-              New Services
+          <divclassName = "bg-white/10backdrop-blur-lgrounded-xlp-6">
+            <h3className="text-2xlfont-boldmb-4flexitems-centergap-2">
+              <ZapclassName="w-6 h-6text-green-300" />
+              NewServices
             </h3>
-            <div className="space-y-3">
-              {latestServices.slice(0, 3).map((service) => (
-                <Link
-                  key={service.id}
-                  to={service.link}
-                  className="block bg-white/5 rounded-lg p-4 hover:bg-white/15 transition-all"
+            <divclassName="space-y-3">
+              { latestServices.slice(03).map((service) = > (
+                <Linkkey = { service.id  }to={ service.link } className="blockbg-white/5rounded-lgp-4hover: bg-white/15transition-all"
                 >
-                  <div className="text-sm text-green-300 mb-1">{service.category}</div>
-                  <div className="font-semibold">{service.title}</div>
-                  <div className="text-sm text-gray-300 mt-1">{service.pricing}</div>
+                  <divclassName="text-smtext-green-300mb-1">{service.category}</div>
+                  <divclassName = "font-semibold">{service.title}</div>
+                  <divclassName="text-smtext-gray-300mt-1">{service.pricing}</div>
                 </Link>
               ))}
             </div>
           </div>
         </div>
-        <div className="text-center">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all hover:scale-105"
+        <divclassName = "text-center">
+          <Linkto="/blog"
+            className="inline-flexitems-centergap-2bg-whitetext-indigo-900px-8py-4rounded-xlfont-boldtext-lghover: bg-indigo-50transition-allhover:scale-105"
           >
-            Explore All Content
-            <ArrowRight className="w-6 h-6" />
+            ExploreAllContent
+            <ArrowRight,className="w-6 h-6" />
           </Link>
         </div>
       </div>
     </div>
   );
 };
-export default ComprehensivePromoBanner;
+exportdefaultComprehensivePromoBanner;

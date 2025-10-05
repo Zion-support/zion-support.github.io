@@ -1,135 +1,131 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-export default function October2025FinTechSuccessBanner() {
+exportdefaultfunction October2025FinTechSuccessBanner() { 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 border-4 border-blue-500 rounded-2xl shadow-2xl mb-8" > {/* Animated Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+    <divclassName = "relativeoverflow-hiddenbg-gradient-to-brfrom-blue-900via-indigo-900to-purple-900border-4border-blue-500rounded-2xlshadow-2xlmb-8"  > {/* AnimatedBackground */ }
+      <divclassName="absoluteinset-0opacity-20">
+        <divclassName="absolutetop-0left-0 w-96h-96bg-blue-400rounded-fullfilterblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-0right-0 w-96h-96bg-purple-400rounded-fullfilterblur-3xlanimate-pulsedelay-1000" />
       </div>
-      <div className="relative z-10 p-8 md:p-12">
+      <divclassName="relativez-10p-8md: p-12">
         {/* Header */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          <div className="flex items-center gap-2 bg-blue-500/30 border-2 border-blue-400 rounded-full px-5 py-2 backdrop-blur-sm">
-            <Sparkles className="w-5 h-5 text-yellow-300 animate-spin-slow" />
-            <span className="text-yellow-300 font-black text-sm tracking-wider">
-              💎 NEW CASE STUDY • OCTOBER 2025 • FORTUNE 100 SUCCESS 💎
+        <divclassName = "flexflex-wrapitems-centergap-3mb-6">
+          <divclassName="flexitems-centergap-2bg-blue-500/30border-2border-blue-400rounded-fullpx-5py-2backdrop-blur-sm">
+            <SparklesclassName="w-5 h-5text-yellow-300animate-spin-slow" />
+            <spanclassName="text-yellow-300font-blacktext-smtracking-wider">
+              💎 NEWCASESTUDY • OCTOBER2025 • FORTUNE100SUCCESS 💎
             </span>
           </div>
         </div>
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          {/* Left Column */}
+        <divclassName="gridmd: grid-cols-2gap-8items-center">
+          {/* LeftColumn */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <Building2 className="w-12 h-12 text-blue-400 animate-pulse" />
-              <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
-              <Building2 className="w-12 h-12 text-blue-400 animate-pulse" />
-              <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
-                Fortune 100 FinTech Transformation
+            <divclassName = "flexitems-centergap-3mb-4">
+              <Building2className="w-12h-12text-blue-400animate-pulse" />
+              <h2className="text-3xlmd: text-5xlfont-blackbg-gradient-to-rfrom-blue-200via-indigo-200to-purple-200bg-clip-texttext-transparentleading-tight">
+              <Building2className="w-12h-12text-blue-400animate-pulse" />
+              <h2className="text-3xlmd:text-5xlfont-blackbg-gradient-to-rfrom-blue-200via-indigo-200to-purple-200bg-clip-texttext-transparentleading-tight">
+                Fortune100FinTech Transformation
               </h2>
             </div>
-            <p className="text-2xl md:text-3xl font-bold text-blue-100 mb-4">
-              AI-Powered Digital Banking Revolution
+            <pclassName="text-2xlmd:text-3xlfont-boldtext-blue-100mb-4">
+              AI-PoweredDigitalBanking Revolution
             </p>
-            <div className="flex items-center gap-3 mb-6">
-              <DollarSign className="w-8 h-8 text-green-400 animate-pulse" />
-              <p className="text-xl text-blue-200 font-semibold">
-                $22.8B Business Value • 96% Automation • 47M Customers
+            <divclassName="flexitems-centergap-3mb-6">
+              <DollarSignclassName="w-8 h-8text-green-400animate-pulse" />
+              <pclassName="text-xltext-blue-200font-semibold">
+                $22.8BBusinessValue • 96% Automation • 47MCustomers
               </p>
             </div>
-            {/* Key Results */}
-            <div className="space-y-3 mb-6">
-              <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
-                <TrendingUp className="w-6 h-6 text-green-400" />
-                <span className="text-blue-100 font-semibold">
-                  18,400% ROI • $14.1B Annual Cost Savings
+            {/* KeyResults */}
+            <divclassName = "space-y-3mb-6">
+              <divclassName="flexitems-centergap-3bg-blue-800/40backdrop-blur-smrounded-lgp-3borderborder-blue-500/30">
+                <TrendingUpclassName="w-6 h-6text-green-400" />
+                <spanclassName="text-blue-100font-semibold">
+                  18400% ROI • $14.1BAnnualCost Savings
                 </span>
               </div>
-              <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
-                <Users className="w-6 h-6 text-purple-400" />
-                <span className="text-blue-100 font-semibold">
-                  47M Active Users • 92% Customer Satisfaction
+              <divclassName = "flexitems-centergap-3bg-blue-800/40backdrop-blur-smrounded-lgp-3borderborder-blue-500/30">
+                <UsersclassName="w-6 h-6text-purple-400" />
+                <spanclassName="text-blue-100font-semibold">
+                  47MActiveUsers • 92% CustomerSatisfaction
                 </span>
               </div>
-              <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
-                <Shield className="w-6 h-6 text-yellow-400" />
-                <span className="text-blue-100 font-semibold">
-                  99.8% Fraud Detection Accuracy • $2.3B Prevented
+              <divclassName="flexitems-centergap-3bg-blue-800/40backdrop-blur-smrounded-lgp-3borderborder-blue-500/30">
+                <ShieldclassName="w-6 h-6text-yellow-400" />
+                <spanclassName="text-blue-100font-semibold">
+                  99.8% FraudDetectionAccuracy • $2.3BPrevented
                 </span>
               </div>
             </div>
             {/* CTA */}
-            <Link
-              to="/case-studies/fintech-ai-transformation-2025"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20"
+            <Linkto="/case-studies/fintech-ai-transformation-2025"
+              className="inline-flexitems-centergap-3bg-gradient-to-rfrom-blue-500to-purple-500hover: from-blue-600hover:to-purple-600text-whitefont-blacktext-lgpx-8py-4rounded-xlshadow-lghover:shadow-2xltransition-allduration-300transformhover:scale-105border-2border-white/20"
             >
-              <Building2 className="w-6 h-6" />
-              <span>Read Full Case Study</span>
-              <Building2 className="w-6 h-6" />
-              <span>Read Full Case Study</span>
-              <Sparkles className="w-6 h-6 animate-pulse" />
+              <Building2className="w-6 h-6" />
+              <span>ReadFullCase Study</span>
+              <Building2className="w-6 h-6" />
+              <span>ReadFullCase Study</span>
+              <SparklesclassName="w-6 h-6animate-pulse" />
             </Link>
           </div>
-          {/* Right Column - Metrics Dashboard */}
-          <div className="space-y-4">
-            {/* Main Value */}
-            <div className="bg-gradient-to-br from-blue-800/60 to-indigo-900/60 backdrop-blur-md border-2 border-blue-400/50 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
-              <div className="text-5xl md:text-6xl font-black text-transparent bg-gradient-to-r from-green-300 to-blue-300 bg-clip-text mb-2">
+          {/* RightColumn - MetricsDashboard */}
+          <divclassName = "space-y-4">
+            {/* MainValue */}
+            <divclassName="bg-gradient-to-brfrom-blue-800/60to-indigo-900/60backdrop-blur-mdborder-2border-blue-400/50rounded-2xlp-6shadow-2xltransformhover: scale-105transition-allduration-300">
+              <divclassName="text-5xlmd:text-6xlfont-blacktext-transparentbg-gradient-to-rfrom-green-300to-blue-300bg-clip-textmb-2">
                 $22.8B
               </div>
-              <div className="text-xl font-bold text-blue-200">Total Business Value</div>
-              <div className="text-sm text-blue-300 mt-2">
-                3-year transformation results • 85,000 employees • 72 countries
+              <divclassName="text-xlfont-boldtext-blue-200">TotalBusinessValue</div>
+              <divclassName="text-smtext-blue-300mt-2">
+                3-yeartransformationresults • 85000employees • 72countries
               </div>
             </div>
-            {/* Grid Metrics */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-gradient-to-br from-indigo-800/60 to-purple-900/60 backdrop-blur-md border-2 border-indigo-400/50 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl md:text-4xl font-black text-indigo-300 mb-1">96%</div>
-                <div className="text-sm font-bold text-blue-200">Automation Rate</div>
-                <div className="text-xs text-blue-300 mt-1">Customer interactions</div>
+            {/* GridMetrics */}
+            <divclassName = "gridgrid-cols-2gap-4">
+              <divclassName="bg-gradient-to-brfrom-indigo-800/60to-purple-900/60backdrop-blur-mdborder-2border-indigo-400/50rounded-xlp-4shadow-xl">
+                <divclassName="text-3xlmd: text-4xlfont-blacktext-indigo-300mb-1">96%</div>
+                <divclassName="text-smfont-boldtext-blue-200">AutomationRate</div>
+                <divclassName="text-xstext-blue-300mt-1">Customerinteractions</div>
               </div>
-              <div className="bg-gradient-to-br from-blue-800/60 to-indigo-900/60 backdrop-blur-md border-2 border-blue-400/50 rounded-xl p-4 shadow-xl">
-                <div className="text-3xl md:text-4xl font-black text-blue-300 mb-1">18,400%</div>
-                <div className="text-xs text-blue-300 mt-1">Within 30 months</div>
+              <divclassName="bg-gradient-to-brfrom-blue-800/60to-indigo-900/60backdrop-blur-mdborder-2border-blue-400/50rounded-xlp-4shadow-xl">
+                <divclassName="text-3xlmd:text-4xlfont-blacktext-blue-300mb-1">18400%</div>
+                <divclassName = "text-xstext-blue-300mt-1">Within30months</div>
               </div>
             </div>
-            {/* Customer Impact */}
-            <div className="bg-gradient-to-br from-purple-800/60 to-blue-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-xl p-4 shadow-xl">
-              <div className="flex items-center gap-2 mb-2">
-                <Users className="w-5 h-5 text-purple-400" />
-                <div className="text-lg font-bold text-blue-200">Customer Success</div>
+            {/* CustomerImpact */}
+            <divclassName="bg-gradient-to-brfrom-purple-800/60to-blue-900/60backdrop-blur-mdborder-2border-purple-400/50rounded-xlp-4shadow-xl">
+              <divclassName="flexitems-centergap-2mb-2">
+                <UsersclassName="w-5 h-5text-purple-400" />
+                <divclassName="text-lgfont-boldtext-blue-200">CustomerSuccess</div>
               </div>
-              <div className="text-2xl font-black text-purple-300">47M Active Users</div>
-              <div className="text-sm text-blue-300 mt-1">92% satisfaction • 24/7 AI assistance</div>
+              <divclassName="text-2xlfont-blacktext-purple-300">47MActiveUsers</div>
+              <divclassName="text-smtext-blue-300mt-1">92% satisfaction • 24/7AIassistance</div>
             </div>
-            {/* Security Impact */}
-            <div className="bg-gradient-to-br from-green-800/60 to-blue-900/60 backdrop-blur-md border-2 border-green-400/50 rounded-xl p-4 shadow-xl">
-              <div className="flex items-center gap-2 mb-2">
-                <Shield className="w-5 h-5 text-green-400" />
-                <div className="text-lg font-bold text-blue-200">Security Excellence</div>
+            {/* SecurityImpact */}
+            <divclassName="bg-gradient-to-brfrom-green-800/60to-blue-900/60backdrop-blur-mdborder-2border-green-400/50rounded-xlp-4shadow-xl">
+              <divclassName="flexitems-centergap-2mb-2">
+                <ShieldclassName="w-5 h-5text-green-400" />
+                <divclassName="text-lgfont-boldtext-blue-200">SecurityExcellence</div>
               </div>
-              <div className="text-2xl font-black text-green-300">99.8% Accuracy</div>
-              <div className="text-sm text-blue-300 mt-1">Fraud detection • $2.3B prevented</div>
+              <divclassName="text-2xlfont-blacktext-green-300">99.8% Accuracy</div>
+              <divclassName="text-smtext-blue-300mt-1">Frauddetection • $2.3Bprevented</div>
             </div>
           </div>
         </div>
-        {/* Bottom Stats Bar */}
-        <div className="mt-8 pt-6 border-t-2 border-blue-500/30">
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+        {/* BottomStatsBar */}
+        <divclassName="mt-8pt-6border-t-2border-blue-500/30">
+          <divclassName="gridgrid-cols-2md: grid-cols-5gap-4text-center">
             <div>
-              <div className="text-2xl font-black text-blue-300 mb-1">85,000</div>
+              <divclassName="text-2xlfont-blacktext-blue-300mb-1">85000</div>
             </div>
+            <div  />
+            <div  />
             <div>
+              <divclassName = "text-2xlfont-blacktext-green-300mb-1">$14.1B</div>
+              <divclassName="text-smtext-blue-200">AnnualSavings</div>
             </div>
-            <div>
-            </div>
-            <div>
-              <div className="text-2xl font-black text-green-300 mb-1">$14.1B</div>
-              <div className="text-sm text-blue-200">Annual Savings</div>
-            </div>
-            <div>
-            </div>
+            <div  />
           </div>
         </div>
       </div>

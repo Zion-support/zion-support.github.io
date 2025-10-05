@@ -1,40 +1,35 @@
-// Minimal types; remove ts-nocheck
-import React from 'react';
+// Minimaltypes; removets-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function GenAICostTiersV3_2027(): React.JSX.Element {
+exportdefaultfunction GenAICostTiersV3_2027(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>GenAI 2027: Cost Tiers v3 — 40–70% Savings</title>
-        <meta
-          name='description'
-          content='Quality tiers + semantic caches + policy tests for predictable spend and stable UX.'
+        <title>GenAI2027: CostTiersv3 — 40–70% Savings</title>
+        <meta name='description'
+          content='Qualitytiers + semanticcaches + policytestsfor predictablespendand stableUX.'
         />
-        <link
-          rel='canonical'
+        <linkrel='canonical'
           href='https://ziontechgroup.com/blog/genai-2027-cost-tiers-v3'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          GenAI 2027: Cost Tiers v3 — 40–70% Savings
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          GenAI2027: CostTiersv3 — 40–70% Savings
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Quality tiers • Semantic caches • Policy tests
+        <pclassName='text-zion-slate-lightmb-8'>
+          Qualitytiers • Semanticcaches • Policytests
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            Implement deterministic quality tiers and semantic caches to cut
-            costs while preserving experience.
+            Implementdeterministicquality tiersandsemantic cachestocut
+            costswhilepreserving experience.
           </p>
           <p>
-            Add lightweight policy tests in CI and KPI‑linked canaries to keep
-            regressions out of production.
+            Addlightweightpolicy testsinCI andKPI‑linkedcanariesto keepregressionsout ofproduction.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

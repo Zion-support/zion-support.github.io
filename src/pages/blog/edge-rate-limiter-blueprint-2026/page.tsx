@@ -1,44 +1,36 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function EdgeRateLimiterBlueprint2026(): React.JSX.Element {
+exportdefaultfunction EdgeRateLimiterBlueprint2026(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
         <title>
-          Edge Rate Limiter 2026: Globally Consistent, Sub‑10ms Budgets
+          EdgeRateLimiter 2026: GloballyConsistentSub‑10msBudgets
         </title>
-        <meta
-          name='description'
-          content='Design a multi‑region, token‑bucket limiter with consistent hashing and KV to protect APIs and GenAI tools without hurting UX.'
+        <metaname = 'description'
+          content='Designamulti‑regiontoken‑bucketlimiterwith consistenthashingand KVtoprotect APIsandGenAI toolswithouthurting UX.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/edge-rate-limiter-blueprint-2026'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-rate-limiter-blueprint-2026'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Edge Rate Limiter 2026
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          EdgeRateLimiter 2026
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Globally Consistent, Sub‑10ms Budgets
+        <pclassName='text-zion-slate-lightmb-8'>
+          GloballyConsistentSub‑10msBudgets
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            This article outlines a globally consistent token‑bucket design
-            using consistent hashing and edge KV to enforce budgets under 10ms
-            P95. It includes fallback behavior, replay protection, and fairness
-            across regions for API and GenAI tool invocations.
+            Thisarticleoutlines agloballyconsistent token‑bucketdesignusing consistenthashingand edgeKVto enforcebudgetsunder 10msP95. Itincludesfallback behaviorreplayprotectionandfairnessacross regionsforAPI andGenAItool invocations.
           </p>
           <p>
-            Highlights: KV sharded buckets, leaky bucket smoothing, multi‑writer
-            safeguards, deterministic fallbacks, and observability hooks for
-            real‑time budget tracking.
+            Highlights: KVshardedbucketsleakybucketsmoothingmulti‑writersafeguardsdeterministicfallbacksandobservabilityhooks forreal‑timebudgettracking.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

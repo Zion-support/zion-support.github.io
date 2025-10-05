@@ -1,222 +1,211 @@
 import React from 'react';
-const February2026ContentShowcaseBanner = () => {
-  const featuredContent = [
+constFebruary2026ContentShowcaseBanner = () => { 
+  constfeaturedContent = [
     {
-      id: 1,
-      title: 'Autonomous Neural Networks 2026',
-      category: 'AI Architecture',
-      readTime: '12 min',
-      rating: 5.0,
-      readers: '180K+',
-      badge: 'BREAKTHROUGH',
-      gradient: 'from-emerald-500 to-teal-500',
-      icon: <Brain className="w-6 h-6" />,
-      link: '/blog/ai-2026-feb-autonomous-neural-networks',
-      description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
-    },
-    {
-      id: 2,
-      title: 'Quantum Edge Computing Revolution',
-      category: 'Edge Computing',
-      readTime: '15 min',
-      rating: 4.9,
-      readers: '156K+',
-      badge: 'FEATURED',
-      gradient: 'from-blue-500 to-cyan-500',
-      icon: <Zap className="w-6 h-6" />,
-      link: '/blog/edge-2026-feb-quantum-computing',
-      description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
-    },
-    {
-      id: 3,
-      title: 'Meta-Cognitive AI Systems',
-      category: 'AI Psychology',
-      readTime: '18 min',
-      rating: 5.0,
-      readers: '203K+',
-      badge: 'REVOLUTIONARY',
-      gradient: 'from-purple-500 to-pink-500',
-      icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2026-feb-meta-cognitive-systems',
-      description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
-    }
-  ];
-  return (
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+      id:  1
+      title: 'AutonomousNeuralNetworks 2026'
+      category: 'AIArchitecture'
+      readTime: '12min'
+      rating: 5.0
+      readers: '180K+'
+      badge: 'BREAKTHROUGH'
+      gradient: 'from-emerald-500to-teal-500'
+      icon: <Brain,className = "w-6 h-6" / > 
+      link: '/blog/ai-2026-feb-autonomous-neural-networks'
+      description: 'Self-evolvingneuralarchitectures achieving99.97% accuracyinautonomous decision-making'
+     }
+    { 
+      id:  2
+      title: 'QuantumEdgeComputing Revolution'
+      category: 'EdgeComputing'
+      readTime: '15min'
+      rating: 4.9
+      readers: '156K+'
+      badge: 'FEATURED'
+      gradient: 'from-blue-500to-cyan-500'
+      icon: <ZapclassName = "w-6 h-6" / > 
+      link: '/blog/edge-2026-feb-quantum-computing'
+      description: 'Ultra-lowlatencyquantum processingdeliveringsub-millisecondresponsetimes'
+     }
+    { 
+      id:  3
+      title: 'Meta-CognitiveAISystems'
+      category: 'AIPsychology'
+      readTime: '18min'
+      rating: 5.0
+      readers: '203K+'
+      badge: 'REVOLUTIONARY'
+      gradient: 'from-purple-500to-pink-500'
+      icon: <SparklesclassName = "w-6 h-6" / > 
+      link: '/blog/ai-2026-feb-meta-cognitive-systems'
+      description: 'AIthatthinks aboutthinking - achievingtrueself-awarenessandautonomous learning'
+     }
+  ]; return (
+    <divclassName = "py-20bg-gradient-to-brfrom-slate-900via-indigo-900to-purple-900relativeoverflow-hidden">
+      {/* Animatedbackgroundeffects */}
+      <divclassName="absoluteinset-0overflow-hiddenopacity-20">
+        <divclassName="absolutetop-0left-1/4 w-96h-96bg-emerald-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" />
+        <divclassName="absolutebottom-0right-1/4 w-96h-96bg-blue-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '2s' }} />
+        <divclassName = "absolutetop-1/2left-1/2 w-96h-96bg-purple-500rounded-fullmix-blend-multiplyfilterblur-3xlanimate-pulse" style={{ animationDelay: '4s' }} />
       </div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 border border-emerald-500/30 mb-8">
-            <Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
-            <span className="text-emerald-400 font-bold text-lg tracking-wider uppercase">
-              🌟 FEBRUARY 2026: REVOLUTIONARY CONTENT SHOWCASE
+      <divclassName = "containermx-autopx-6relativez-10">
+        {/* HeaderSection */}
+        <divclassName="text-centermb-16">
+          <divclassName="inline-flexitems-centergap-3px-8py-4rounded-fullbg-gradient-to-rfrom-emerald-500/20to-blue-500/20borderborder-emerald-500/30mb-8">
+            <SparklesclassName="w-6 h-6text-emerald-400animate-pulse" />
+            <spanclassName="text-emerald-400font-boldtext-lgtracking-wideruppercase">
+              🌟 FEBRUARY2026: REVOLUTIONARYCONTENTSHOWCASE
             </span>
-            <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
+            <SparklesclassName="w-6 h-6text-blue-400animate-pulse" />
           </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
-            The Future of AI is Now
+          <h2className="text-5xlmd:text-6xlfont-extraboldmb-6bg-gradient-to-rfrom-emerald-400via-blue-400to-purple-400bg-clip-texttext-transparent">
+            TheFutureof AIisNow
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover groundbreaking AI breakthroughs that are reshaping the technological landscape. 
-            Join 500K+ professionals who trust our revolutionary content to stay ahead of the curve.
+          <pclassName="text-xltext-gray-300max-w-4xlmx-autoleading-relaxedmb-8">
+            DiscovergroundbreakingAI breakthroughsthatare reshapingthetechnological landscape. 
+            Join500K+ professionalswhotrust ourrevolutionarycontent tostayahead ofthecurve.
           </p>
-          {/* Achievement Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-            {[
-              { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" />, color: 'text-emerald-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
-              { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" />, color: 'text-purple-400' },
-              { value: '50+', label: 'Industry Awards', icon: <TrendingUp className="w-8 h-8" />, color: 'text-pink-400' }
-            ].map((achievement, index) => (
-              <div key={index} className="text-center">
-                <div className={`${achievement.color} mb-2 flex justify-center`}>
+          {/* AchievementStats */}
+          <divclassName = "gridgrid-cols-2md: grid-cols-4gap-6max-w-4xlmx-automb-12">
+            { [
+              { value: '500K+'label: 'MonthlyReaders'icon: <UsersclassName = "w-8 h-8" / > color: 'text-emerald-400'  }
+              {  value: '99.9%'label: 'ContentAccuracy'icon: <StarclassName = "w-8 h-8" / > color: 'text-blue-400'  }
+              {  value: '200+'label: 'ExpertArticles'icon: <AwardclassName = "w-8 h-8" / > color: 'text-purple-400'  }
+              {  value: '50+'label: 'IndustryAwards'icon: <TrendingUpclassName = "w-8 h-8" / > color: 'text-pink-400'  }
+            ].map((achievementindex) => (
+              <divkey = { index }className = "text-center">
+                <divclassName = { `${achievement.color }mb-2flexjustify-center`}>
                   {achievement.icon}
                 </div>
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-emerald-400 to-purple-400 bg-clip-text text-transparent mb-1">
+                <divclassName = "text-3xlfont-extraboldbg-gradient-to-rfrom-emerald-400to-purple-400bg-clip-texttext-transparentmb-1">
                   {achievement.value}
                 </div>
-                <div className="text-gray-400 text-sm font-medium">
+                <divclassName="text-gray-400text-smfont-medium">
                   {achievement.label}
                 </div>
               </div>
             ))}
           </div>
         </div>
-        {/* Featured Content Cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {featuredContent.map((content, index) => (
-            <div
-key={content.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              <div className="relative p-8">
+        {/* FeaturedContentCards */}
+        <divclassName = "gridmd: grid-cols-3gap-8mb-16">
+          { featuredContent.map((contentindex) =  > (
+            <divkey = { content.id  }className = "grouprelativebg-white/5backdrop-blur-lgrounded-2xlborderborder-white/10hover: border-emerald-500/50transition-allduration-500overflow-hiddenhover:transformhover:scale-105hover:shadow-2xlhover:shadow-emerald-500/20"
+              style = { { animationDelay: `${index * 200 }ms` }}
+             > {/* Cardgloweffect */}
+              <divclassName = { `absoluteinset-0bg-gradient-to-br ${content.gradient }opacity-0group-hover: opacity-10transition-allduration-500`} />
+              <divclassName = "relativep-8">
                 {/* Badge */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="flex items-center gap-2 text-emerald-400">
+                <divclassName="flexitems-centerjustify-betweenmb-6">
+                  <divclassName="flexitems-centergap-2text-emerald-400">
                     {content.icon}
-                  </div>
-                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
+                  </div > <divclassName = { `px-3py-1.5rounded-fullbg-gradient-to-r ${content.gradient }text-whitetext-xsfont-boldborderborder-white/30`}>
                     {content.badge}
                   </div>
                 </div>
                 {/* Category */}
-                <div className="mb-4">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
+                <divclassName = "mb-4">
+                  <spanclassName="inline-blockpx-3py-1rounded-fullbg-gradient-to-rfrom-emerald-500/20to-blue-500/20text-emerald-400text-xsfont-semiboldborderborder-emerald-500/30">
                     {content.category}
                   </span>
                 </div>
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
+                <h3className="text-2xlfont-boldtext-whitemb-4group-hover: text-emerald-400transition-colorsduration-300leading-tight">
                   {content.title}
                 </h3>
                 {/* Description */}
-                <p className="text-gray-400 mb-6 text-sm leading-relaxed">
+                <pclassName = "text-gray-400mb-6text-smleading-relaxed">
                   {content.description}
                 </p>
-                {/* Meta Info */}
-                <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
-                  <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-emerald-400" />
+                {/* MetaInfo */}
+                <divclassName="flexitems-centerjustify-betweentext-smtext-gray-500mb-6pb-6border-bborder-white/10">
+                  <spanclassName="flexitems-centergap-2">
+                    <ZapclassName="w-4 h-4text-emerald-400" />
                     {content.readTime}
                   </span>
-                  <span className="flex items-center gap-1">
-                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                  <spanclassName="flexitems-centergap-1">
+                    <StarclassName="w-4 h-4text-yellow-400fill-current" />
                     {content.rating}
                   </span>
                 </div>
-                {/* Reader Count */}
-                <div className="mb-6">
-                  <div className="flex items-center gap-2 text-gray-400">
-                    <Users className="w-4 h-4" />
-                    <span className="text-sm">{content.readers} readers</span>
+                {/* ReaderCount */}
+                <divclassName="mb-6">
+                  <divclassName="flexitems-centergap-2text-gray-400">
+                    <UsersclassName="w-4 h-4" />
+                    <spanclassName="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
-                {/* CTA Button */}
-                <a
-                  href={content.link}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1`}
+                </div > {/* CTAButton */}
+                <ahref = { content.link }className={ `group/btnflexitems-centerjustify-centergap-2 w-fullbg-gradient-to-r ${content.gradient } hover: opacity-90text-whitefont-boldpy-3px-6rounded-xltransition-allduration-300shadow-lghover:shadow-emerald-500/50transformhover:-translate-y-1`}
                 >
-                  <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <span>ReadNow</span>
+                  <ArrowRight,className = "w-4 h-4group-hover/btn: translate-x-1transition-transformduration-300" />
                 </a>
               </div>
             </div>
           ))}
         </div>
-        {/* Special Offer Section */}
-        <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-3xl p-8 md:p-12 border border-emerald-500/20 mb-16">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-              <Star className="w-5 h-5 text-yellow-400 fill-current" />
-              <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
-                EXCLUSIVE FEBRUARY OFFER
+        {/* SpecialOfferSection */}
+        <divclassName = "bg-gradient-to-rfrom-emerald-500/10to-blue-500/10rounded-3xlp-8md: p-12borderborder-emerald-500/20mb-16">
+          <divclassName="text-center">
+            <divclassName="inline-flexitems-centergap-2px-4py-2rounded-fullbg-gradient-to-rfrom-yellow-500/20to-orange-500/20borderborder-yellow-500/30mb-6">
+              <StarclassName="w-5 h-5text-yellow-400fill-current" />
+              <spanclassName="text-yellow-400font-boldtext-smtracking-wideruppercase">
+                EXCLUSIVEFEBRUARYOFFER
               </span>
             </div>
-            <h3 className="text-4xl font-extrabold text-white mb-4">
-              Unlock Premium AI Insights
+            <h3className="text-4xlfont-extraboldtext-whitemb-4">
+              UnlockPremiumAI Insights
             </h3>
-            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-              Get exclusive access to cutting-edge research, early content releases, and premium AI insights. 
-              Join our elite community of technology pioneers and thought leaders.
+            <pclassName="text-xltext-gray-300mb-8max-w-2xlmx-auto">
+              Getexclusiveaccess tocutting-edgeresearchearlycontentreleasesandpremiumAI insights. 
+              Joinourelite communityoftechnology pioneersandthought leaders.
             </p>
-            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-              <div className="text-center">
-                <div className="text-3xl font-extrabold text-emerald-400 line-through opacity-50">$399/month</div>
-                <div className="text-2xl font-bold text-white">$149/month</div>
-                <div className="text-sm text-gray-400">First 6 months only</div>
+            <divclassName = "flexflex-colsm: flex-rowgap-6justify-centeritems-center">
+              <divclassName="text-center">
+                <divclassName="text-3xlfont-extraboldtext-emerald-400line-throughopacity-50">$399/month</div>
+                <divclassName="text-2xlfont-boldtext-white">$149/month</div>
+                <divclassName="text-smtext-gray-400">First6months only</div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="/subscribe"
-                  className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
+              <divclassName="flexflex-colsm:flex-rowgap-4">
+                <ahref="/subscribe"
+                  className="bg-gradient-to-rfrom-emerald-500to-blue-600hover:from-emerald-400hover:to-blue-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-emerald-500/50flexitems-centerjustify-centergap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
-                  <span>Get Premium Access</span>
+                  <SparklesclassName="w-5 h-5" />
+                  <span>GetPremiumAccess</span>
                 </a>
-                <a
-                  href="/contact"
-                  className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                <ahref="/contact"
+                  className="border-2border-emerald-500text-emerald-400hover:bg-emerald-500hover:text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300flexitems-centerjustify-centergap-2"
                 >
-                  <span>Contact Sales</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <span>ContactSales</span>
+                  <ArrowRight,className="w-5 h-5" />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        {/* Newsletter Signup */}
-        <div className="text-center">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Stay Ahead with Our Newsletter
+        {/* NewsletterSignup */}
+        <divclassName = "text-center">
+          <divclassName="inline-blockp-1rounded-2xlbg-gradient-to-rfrom-emerald-500via-blue-500to-purple-500">
+            <divclassName="bg-slate-900rounded-xlpx-12py-10">
+              <h3className="text-3xlfont-boldtext-whitemb-4">
+                StayAheadwith OurNewsletter
               </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Get weekly insights, exclusive content previews, and early access to revolutionary AI breakthroughs. 
-                Join 500K+ subscribers who never miss the future.
+              <pclassName="text-gray-400mb-8max-w-2xlmx-auto">
+                Getweeklyinsightsexclusivecontentpreviewsandearlyaccess torevolutionaryAI breakthroughs. 
+                Join500K+ subscriberswhonever missthefuture.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                <input
-                  type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300"
+              <divclassName = "flexflex-colsm: flex-rowgap-4justify-centermax-w-mdmx-auto">
+                <inputtype="email"
+                    placeholder="Enteryouremail"
+                    className="flex-1px-6py-4rounded-xlbg-white/10borderborder-white/20text-whiteplaceholder-gray-400focus:outline-nonefocus:border-emerald-500focus:bg-white/20transition-allduration-300"
                   />
-                <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
+                <buttonclassName="bg-gradient-to-rfrom-emerald-500to-blue-600hover:from-emerald-400hover:to-blue-500text-whitefont-boldpy-4px-8rounded-xltransition-allduration-300shadow-lghover:shadow-emerald-500/50flexitems-centerjustify-centergap-2">
                   <span>Subscribe</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <ArrowRight,className="w-5 h-5" />
                 </button>
               </div>
-              <p className="text-xs text-gray-500 mt-4">
-                No spam, unsubscribe at any time. We respect your privacy.
+              <pclassName="text-xstext-gray-500mt-4">
+                Nospamunsubscribeatany time. Werespectyour privacy.
               </p>
             </div>
           </div>
@@ -225,4 +214,4 @@ key={content.id}
     </div>
   );
 };
-export default February2026ContentShowcaseBanner;
+exportdefaultFebruary2026ContentShowcaseBanner;

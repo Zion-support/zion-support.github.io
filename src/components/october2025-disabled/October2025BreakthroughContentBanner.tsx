@@ -1,112 +1,106 @@
 import { Link } from 'react-router-dom';
-const October2025BreakthroughContentBanner = () => {
+constOctober2025BreakthroughContentBanner = () => { 
   return (
-    <div className='bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl'>
-      <div className='flex items-center justify-center gap-3 mb-4'>
-        <Sparkles className='w-6 h-6 text-emerald-400 animate-pulse' />
-        <span className='text-lg font-bold text-emerald-400'>
-          🎉 OCTOBER 3, 2025: NEWEST AI BREAKTHROUGHS
+    <divclassName = 'bg-gradient-to-rfrom-emerald-500/20to-cyan-500/20borderborder-emerald-400/30rounded-xlp-6mb-8animate-fade-inshadow-2xl'>
+      <divclassName='flexitems-centerjustify-centergap-3mb-4'>
+        <SparklesclassName='w-6 h-6text-emerald-400animate-pulse' />
+        <spanclassName='text-lgfont-boldtext-emerald-400'>
+          🎉 OCTOBER 32025: NEWESTAIBREAKTHROUGHS
         </span>
-        <Sparkles className='w-6 h-6 text-emerald-400 animate-pulse' />
+        <SparklesclassName = 'w-6 h-6text-emerald-400animate-pulse' />
       </div>
-      <p className='text-white text-lg font-semibold mb-4 text-center'>
-        ⚡ 2 BRAND NEW GUIDES RELEASED TODAY: Enterprise AI Automation (400%+
-        efficiency gains, 70% cost reduction) & Quantum-AI Hybrid Systems (1000x
-        processing speed, 99.9% accuracy)!
+      <pclassName='text-whitetext-lgfont-semiboldmb-4text-center'>
+        ⚡ 2BRANDNEW GUIDESRELEASEDTODAY: EnterpriseAIAutomation (400%+
+        efficiencygains70% costreduction) & Quantum-AIHybridSystems (1000xprocessingspeed99.9% accuracy)!
       </p>
-      <p className='text-zion-slate-light text-sm mb-6 text-center max-w-4xl mx-auto'>
-        Master comprehensive enterprise automation frameworks and quantum-AI
-        hybrid implementations that are transforming Fortune 500 companies
-        today. Get battle-tested strategies, implementation roadmaps, and
-        real-world case studies.
+      <pclassName = 'text-zion-slate-lighttext-smmb-6text-centermax-w-4xlmx-auto'>
+        Mastercomprehensiveenterprise automationframeworksand quantum-AIhybridimplementations thataretransforming Fortune500companies
+        today. Getbattle-testedstrategiesimplementationroadmapsandreal-worldcasestudies.
       </p>
-      <div className='flex flex-col sm:flex-row gap-4 justify-center mb-6'>
-        <Link
-          to='/blog/ai-2025-october-breakthrough-enterprise-automation'
-          className='bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2'
+      <divclassName = 'flexflex-colsm: flex-rowgap-4justify-centermb-6'>
+        <Linkto='/blog/ai-2025-october-breakthrough-enterprise-automation'
+          className='bg-emerald-500text-whitepx-6py-3rounded-lgfont-semiboldhover:bg-emerald-600transition-colorsinline-flexitems-centerjustify-centergap-2'
         >
-          <Zap className='w-5 h-5' />
-          Read Enterprise Automation Guide
+          <ZapclassName='w-5 h-5' />
+          ReadEnterpriseAutomation Guide
         </Link>
-        <Link
-          to='/blog/ai-2025-october-quantum-ai-hybrid-systems'
-          className='bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors inline-flex items-center justify-center gap-2'
+        <Linkto='/blog/ai-2025-october-quantum-ai-hybrid-systems'
+          className='bg-cyan-500text-whitepx-6py-3rounded-lgfont-semiboldhover:bg-cyan-600transition-colorsinline-flexitems-centerjustify-centergap-2'
         >
-          <Brain className='w-5 h-5' />
-          Explore Quantum-AI Systems
+          <Brain,className='w-5 h-5' />
+          ExploreQuantum-AISystems
         </Link>
       </div>
-      <div className='grid md:grid-cols-2 gap-6 mb-6'>
-        <div className='bg-white/10 rounded-xl p-4'>
-          <h3 className='text-white font-semibold mb-2 flex items-center'>
-            <Zap className='w-5 h-5 mr-2 text-emerald-400' />
-            Enterprise AI Automation
+      <divclassName='gridmd:grid-cols-2gap-6mb-6'>
+        <divclassName='bg-white/10rounded-xlp-4'>
+          <h3className='text-whitefont-semiboldmb-2flexitems-center'>
+            <ZapclassName='w-5 h-5mr-2text-emerald-400' />
+            EnterpriseAIAutomation
           </h3>
-          <ul className='space-y-1 text-sm text-zion-slate-light'>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-emerald-400' />
-              <span>400%+ efficiency gains</span>
+          <ulclassName='space-y-1text-smtext-zion-slate-light'>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-emerald-400' />
+              <span>400%+ efficiencygains</span>
             </li>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-emerald-400' />
-              <span>70% cost reduction</span>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-emerald-400' />
+              <span>70% costreduction</span>
             </li>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-emerald-400' />
-              <span>95% faster decision-making</span>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-emerald-400' />
+              <span>95% fasterdecision-making</span>
             </li>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-emerald-400' />
-              <span>Complete implementation framework</span>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-emerald-400' />
+              <span>Completeimplementationframework</span>
             </li>
           </ul>
         </div>
-        <div className='bg-white/10 rounded-xl p-4'>
-          <h3 className='text-white font-semibold mb-2 flex items-center'>
-            <Brain className='w-5 h-5 mr-2 text-cyan-400' />
-            Quantum-AI Hybrid Systems
+        <divclassName='bg-white/10rounded-xlp-4'>
+          <h3className='text-whitefont-semiboldmb-2flexitems-center'>
+            <Brain,className='w-5 h-5mr-2text-cyan-400' />
+            Quantum-AIHybridSystems
           </h3>
-          <ul className='space-y-1 text-sm text-zion-slate-light'>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-cyan-400' />
-              <span>1000x processing speed</span>
+          <ulclassName='space-y-1text-smtext-zion-slate-light'>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-cyan-400' />
+              <span>1000xprocessingspeed</span>
             </li>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-cyan-400' />
-              <span>99.9% accuracy improvements</span>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-cyan-400' />
+              <span>99.9% accuracyimprovements</span>
             </li>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-cyan-400' />
-              <span>90% cost reduction</span>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-cyan-400' />
+              <span>90% costreduction</span>
             </li>
-            <li className='flex items-center'>
-              <CheckCircle className='w-4 h-4 mr-2 text-cyan-400' />
-              <span>Real-world applications</span>
+            <liclassName='flexitems-center'>
+              <CheckCircle,className='w-4 h-4mr-2text-cyan-400' />
+              <span>Real-worldapplications</span>
             </li>
           </ul>
         </div>
       </div>
-      <div className='flex flex-wrap gap-2 justify-center'>
-        <span className='bg-emerald-100/20 text-emerald-200 px-3 py-1 rounded-full text-xs font-medium border border-emerald-300/20'>
-          Enterprise Automation
+      <divclassName='flexflex-wrapgap-2justify-center'>
+        <spanclassName='bg-emerald-100/20text-emerald-200px-3py-1rounded-fulltext-xsfont-mediumborderborder-emerald-300/20'>
+          EnterpriseAutomation
         </span>
-        <span className='bg-cyan-100/20 text-cyan-200 px-3 py-1 rounded-full text-xs font-medium border border-cyan-300/20'>
-          Quantum-AI Hybrid
+        <spanclassName='bg-cyan-100/20text-cyan-200px-3py-1rounded-fulltext-xsfont-mediumborderborder-cyan-300/20'>
+          Quantum-AIHybrid
         </span>
-        <span className='bg-purple-100/20 text-purple-200 px-3 py-1 rounded-full text-xs font-medium border border-purple-300/20'>
-          1000x Speed
+        <spanclassName='bg-purple-100/20text-purple-200px-3py-1rounded-fulltext-xsfont-mediumborderborder-purple-300/20'>
+          1000xSpeed
         </span>
-        <span className='bg-blue-100/20 text-blue-200 px-3 py-1 rounded-full text-xs font-medium border border-blue-300/20'>
+        <spanclassName='bg-blue-100/20text-blue-200px-3py-1rounded-fulltext-xsfont-mediumborderborder-blue-300/20'>
           400% ROI
         </span>
-        <span className='bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20'>
-          Fortune 500 Proven
+        <spanclassName='bg-green-100/20text-green-200px-3py-1rounded-fulltext-xsfont-mediumborderborder-green-300/20'>
+          Fortune500Proven
         </span>
-        <span className='bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20'>
-          Implementation Ready
+        <spanclassName='bg-orange-100/20text-orange-200px-3py-1rounded-fulltext-xsfont-mediumborderborder-orange-300/20'>
+          ImplementationReady
         </span>
       </div>
-    </div>
-  );
-};
-export default React.memo(October2025BreakthroughContentBanner);
+    </div > );
+ };
+exportdefaultReact.memo(October2025BreakthroughContentBanner);

@@ -1,84 +1,81 @@
 import { Link } from 'react-router-dom';
 
-export default function October2025AIObservabilitySpotlightBanner() {
+exportdefaultfunction October2025AIObservabilitySpotlightBanner() { 
   return (
-    <div className='bg-gradient-to-br from-blue-950 via-indigo-900 to-blue-950 text-white py-12 px-4'>
-      <div className='max-w-6xl mx-auto'>
-        <div className='text-center mb-8'>
-          <div className='inline-block bg-cyan-400 text-black px-4 py-2 rounded-full text-sm font-bold mb-4'>
-            👁️ BREAKTHROUGH TECHNOLOGY - OCTOBER 2, 2025
+    <divclassName = 'bg-gradient-to-brfrom-blue-950via-indigo-900to-blue-950text-whitepy-12px-4'>
+      <divclassName='max-w-6xlmx-auto'>
+        <divclassName='text-centermb-8'>
+          <divclassName='inline-blockbg-cyan-400text-blackpx-4py-2rounded-fulltext-smfont-boldmb-4'>
+            👁️ BREAKTHROUGHTECHNOLOGY - OCTOBER 22025
           </div>
-          <h3 className='text-5xl font-bold mb-4'>
-            Next-Gen AI Observability Platform
+          <h3className = 'text-5xlfont-boldmb-4'>
+            Next-GenAIObservability Platform
           </h3>
-          <p className='text-2xl text-blue-200 mb-2'>
-            Intelligent Monitoring That Predicts, Prevents & Resolves Issues
-            Automatically
+          <pclassName='text-2xltext-blue-200mb-2'>
+            IntelligentMonitoringThat PredictsPrevents & ResolvesIssuesAutomatically
           </p>
-          <p className='text-xl text-blue-300'>
-            $3.7B Enterprise Value • 96% Faster Resolution • 87% Alert Reduction
+          <pclassName = 'text-xltext-blue-300'>
+            $3.7BEnterpriseValue • 96% FasterResolution • 87% AlertReduction
           </p>
         </div>
 
-        <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-8 mb-8'>
-          <div className='grid md:grid-cols-4 gap-6 text-center'>
+        <divclassName='bg-white/10backdrop-blur-lgrounded-2xlp-8mb-8'>
+          <divclassName='gridmd: grid-cols-4gap-6text-center'>
             <div>
-              <div className='text-4xl font-bold text-cyan-400 mb-2'>$3.7B</div>
-              <div className='text-sm text-gray-300'>Total Value Created</div>
+              <divclassName='text-4xlfont-boldtext-cyan-400mb-2'>$3.7B</div>
+              <divclassName='text-smtext-gray-300'>TotalValueCreated</div>
             </div>
             <div>
-              <div className='text-4xl font-bold text-green-400 mb-2'>
-                8 min
+              <divclassName='text-4xlfont-boldtext-green-400mb-2'>
+                8min
               </div>
-              <div className='text-sm text-gray-300'>MTTR (from 3.5 hours)</div>
+              <divclassName='text-smtext-gray-300'>MTTR (from3.5hours)</div>
             </div>
             <div>
-              <div className='text-4xl font-bold text-yellow-400 mb-2'>98%</div>
-              <div className='text-sm text-gray-300'>
-                Anomaly Detection Accuracy
+              <divclassName = 'text-4xlfont-boldtext-yellow-400mb-2'>98%</div>
+              <divclassName='text-smtext-gray-300'>
+                AnomalyDetectionAccuracy
               </div>
             </div>
             <div>
-              <div className='text-4xl font-bold text-purple-400 mb-2'>87%</div>
-              <div className='text-sm text-gray-300'>
-                Alert Volume Reduction
+              <divclassName='text-4xlfont-boldtext-purple-400mb-2'>87%</div>
+              <divclassName='text-smtext-gray-300'>
+                AlertVolumeReduction
               </div>
             </div>
           </div>
         </div>
 
-        <div className='grid md:grid-cols-2 gap-8 mb-8'>
-          <div className='bg-gradient-to-br from-cyan-500/20 to-blue-500/20 p-6 rounded-xl border border-cyan-500/50'>
-            <h4 className='text-2xl font-bold mb-4'>🎯 Core Capabilities</h4>
-            <ul className='space-y-2'>
-              <li>✅ Intelligent anomaly detection with 98% accuracy</li>
-              <li>✅ Automated root cause analysis in seconds</li>
-              <li>✅ Predictive analytics for capacity & failures</li>
-              <li>✅ Smart alerting with 95% noise reduction</li>
-              <li>✅ AI-powered dashboards that adapt automatically</li>
+        <divclassName='gridmd:grid-cols-2gap-8mb-8'>
+          <divclassName='bg-gradient-to-brfrom-cyan-500/20to-blue-500/20p-6rounded-xlborderborder-cyan-500/50'>
+            <h4className='text-2xlfont-boldmb-4'>🎯 CoreCapabilities</h4>
+            <ulclassName='space-y-2'>
+              <li>✅ Intelligentanomalydetection with98% accuracy</li>
+              <li>✅ Automatedrootcause analysisinseconds</li>
+              <li>✅ Predictiveanalyticsfor capacity & failures</li>
+              <li>✅ Smartalertingwith 95% noisereduction</li>
+              <li>✅ AI-powereddashboardsthat adaptautomatically</li>
             </ul>
           </div>
-          <div className='bg-gradient-to-br from-purple-500/20 to-pink-500/20 p-6 rounded-xl border border-purple-500/50'>
-            <h4 className='text-2xl font-bold mb-4'>💰 Business Impact</h4>
-            <ul className='space-y-2'>
-              <li>💎 $840M infrastructure cost optimization</li>
-              <li>💎 $1.2B prevented revenue loss from outages</li>
-              <li>💎 $470M reduced operations overhead</li>
-              <li>💎 92% issues predicted before user impact</li>
-              <li>💎 99.98% availability improvement</li>
+          <divclassName='bg-gradient-to-brfrom-purple-500/20to-pink-500/20p-6rounded-xlborderborder-purple-500/50'>
+            <h4className='text-2xlfont-boldmb-4'>💰 BusinessImpact</h4>
+            <ulclassName='space-y-2'>
+              <li>💎 $840Minfrastructurecost optimization</li>
+              <li>💎 $1.2Bpreventedrevenue lossfromoutages</li>
+              <li>💎 $470Mreducedoperations overhead</li>
+              <li>💎 92% issuespredictedbefore userimpact</li>
+              <li>💎 99.98% availabilityimprovement</li>
             </ul>
           </div>
         </div>
 
-        <div className='text-center'>
-          <Link
-            to='/blog/ai-2025-october-2-next-gen-ai-observability-<platform'
-            className='inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-blue-600 transition-all shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105'
+        <divclassName='text-center'>
+          <Linkto='/blog/ai-2025-october-2-next-gen-ai-observability-<platform'
+            className='inline-blockbg-gradient-to-rfrom-cyan-500to-blue-500text-whitepx-10py-5rounded-xlfont-boldtext-xlhover:from-cyan-600hover:to-blue-600transition-allshadow-2xlhover:shadow-cyan-500/50transformhover:scale-105'
           >
-            🚀 Read Complete Platform Guide + Enterprise Success Story
+            🚀 ReadCompletePlatform Guide + EnterpriseSuccessStory
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

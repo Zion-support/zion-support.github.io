@@ -1,9 +1,9 @@
 /**
- * Advanced Accessibility Enhancement System
- * Provides comprehensive accessibility features and monitoring
+ * AdvancedAccessibilityEnhancement System
+ * Providescomprehensiveaccessibility featuresandmonitoring
  */
 
-export interface AccessibilityConfig {
+exportinterfaceAccessibilityConfig {
   keyboardNavigation: boolean;
   screenReaderSupport: boolean;
   highContrast: boolean;
@@ -13,9 +13,8 @@ export interface AccessibilityConfig {
   colorContrast: 'AA' | 'AAA';
 }
 
-export interface AccessibilityMetric {
-  type:
-    | 'color_contrast'
+exportinterfaceAccessibilityMetric {
+  type: | 'color_contrast'
     | 'keyboard_navigation'
     | 'aria_labels'
     | 'focus_management';
@@ -24,33 +23,26 @@ export interface AccessibilityMetric {
   timestamp: number;
 }
 
-class AccessibilityEnhancer {
-  private config: AccessibilityConfig;
-  private metrics: AccessibilityMetric[] = [];
-  private isInitialized = false;
-  private focusTrapElements: HTMLElement[] = [];
+classAccessibilityEnhancer {
+  privateconfig: AccessibilityConfig;
+  privatemetrics: AccessibilityMetric[] = [];
+  privateisInitialized = false; privatefocusTrapElements: HTMLElement[] = [];
 
-  constructor() {
-    this.config = this.getDefaultConfig();
-  }
-
-  private getDefaultConfig(): AccessibilityConfig {
+  constructor() { this.config = this.getDefaultConfig();
+   }privategetDefaultConfig(): AccessibilityConfig {
     return {
-      keyboardNavigation: true,
-      screenReaderSupport: true,
-      highContrast: false,
-      reducedMotion: false,
-      focusManagement: true,
-      ariaLabels: true,
-      colorContrast: 'AA',
+      keyboardNavigation: true
+      screenReaderSupport: true
+      highContrast: false
+      reducedMotion: false
+      focusManagement: true
+      ariaLabels: true
+      colorContrast: 'AA'
     };
   }
 
-  public initialize(): void {
-    if (this.isInitialized || typeof window === 'undefined') return;
-
-    this.isInitialized = true;
-    this.setupKeyboardNavigation();
+  publicinitialize(): void {
+    if (this.isInitialized || typeofwindow = == 'undefined') return; this.isInitialized = true; this.setupKeyboardNavigation();
     this.setupFocusManagement();
     this.setupAriaLabels();
     this.setupColorContrast();
@@ -58,153 +50,118 @@ class AccessibilityEnhancer {
     this.observeAccessibility();
   }
 
-  private setupKeyboardNavigation(): void {
+  privatesetupKeyboardNavigation(): void {  
     if (!this.config.keyboardNavigation) return;
 
-    document.addEventListener('keydown', event => {
-      // Skip to main content
-      if (
+    document.addEventListener('keydown'event = > {
+      // Skiptomain contentif (
         event.key === 'Tab' &&
-        event.shiftKey &&
-        document.activeElement === document.body
+        event.shiftKey  && document.activeElement === document.body
       ) {
-        const skipLink = document.querySelector('[data-skip-link]');
-        if (skipLink) {
-          (skipLink as HTMLElement).focus();
+        constskipLink = document.querySelector('[data-skip-link]'); if (skipLink) {
+          (skipLinkasHTMLElement).focus();
           event.preventDefault();
+          }
+      }
+
+      // Escapekeyhandling
+      if (event.key = == 'Escape') {
+        constmodal = document.querySelector(
+          '[role="dialog"][aria-hidden="false"]'
+        ); if (modal) {
+          this.closeModal(modalasHTMLElement);
         }
       }
 
-      // Escape key handling
-      if (event.key === 'Escape') {
-        const modal = document.querySelector(
-          '[role="dialog"][aria-hidden="false"]',
-        );
-        if (modal) {
-          this.closeModal(modal as HTMLElement);
-        }
-      }
-
-      // Arrow key navigation for menus
-      if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-        const menu = document.querySelector(
-          '[role="menu"]:focus-within',
-        ) as HTMLElement | null;
-        if (menu) {
-          this.handleMenuNavigation(event as KeyboardEvent, menu);
+      // Arrowkeynavigation formenusif (event.key = == 'ArrowDown' || event.key === 'ArrowUp') {
+        constmenu = document.querySelector(
+          '[role="menu"]:focus-within'
+        ) asHTMLElement | null; if (menu) {
+          this.handleMenuNavigation(eventasKeyboardEventmenu);
         }
       }
     });
   }
 
-  private setupFocusManagement(): void {
+  privatesetupFocusManagement(): void { 
     if (!this.config.focusManagement) return;
 
-    // Trap focus in modals
-    document.addEventListener('keydown', event => {
+    // Trapfocusin modalsdocument.addEventListener('keydown'event = > {
       if (event.key === 'Tab') {
-        const modal = document.querySelector(
-          '[role="dialog"][aria-hidden="false"]',
-        ) as HTMLElement | null;
-        if (modal) {
-          this.trapFocus(event as KeyboardEvent, modal);
-        }
+        constmodal = document.querySelector(
+          '[role="dialog"][aria-hidden="false"]'
+        ) asHTMLElement | null; if (modal) {
+          this.trapFocus(eventasKeyboardEventmodal);
+         }
       }
     });
 
-    // Restore focus after modal closes
-    document.addEventListener('click', event => {
-      const target = event.target as HTMLElement;
-      if (target.hasAttribute('data-close-modal')) {
+    // Restorefocusafter modalclosesdocument.addEventListener('click'event = > {
+      consttarget = event.targetasHTMLElement; if (target.hasAttribute('data-close-modal')) {
         this.restoreFocus();
       }
     });
   }
 
-  private setupAriaLabels(): void {
+  privatesetupAriaLabels(): void {  
     if (!this.config.ariaLabels) return;
 
-    // Add aria-labels to interactive elements without labels
-    const interactiveElements = document.querySelectorAll(
-      'button, a, input, select, textarea',
-    );
-
-    interactiveElements.forEach(element => {
-      const el = element as HTMLElement;
-      if (
-        !el.getAttribute('aria-label') &&
-        !el.getAttribute('aria-labelledby')
+    // Addaria-labelstointeractive elementswithoutlabels
+    constinteractiveElements = document.querySelectorAll(
+      'buttonainputselecttextarea'
+    ); interactiveElements.forEach(element = > {
+      constel = elementasHTMLElement; if (
+        !el.getAttribute('aria-label')  && !el.getAttribute('aria-labelledby')
       ) {
-        const text = el.textContent?.trim();
-        if (!text || text.length < 3) {
-          el.setAttribute('aria-label', `Interactive element`);
-        }
+        consttext = el.textContent?.trim(); if (!text || text.length < 3) {
+          el.setAttribute('aria-label'`Interactiveelement`);
+          }
       }
     });
 
-    // Add role attributes where needed
-    const clickableElements = document.querySelectorAll(
-      '[onclick], [data-action]',
-    );
-    clickableElements.forEach(element => {
-      const el = element as HTMLElement;
-      if (!el.getAttribute('role')) {
-        el.setAttribute('role', 'button');
+    // Addroleattributes whereneededconst clickableElements = document.querySelectorAll(
+      '[onclick][data-action]'
+    ); clickableElements.forEach(element = > {
+      constel = elementasHTMLElement; if (!el.getAttribute('role')) {
+        el.setAttribute('role''button');
       }
     });
   }
 
-  private setupColorContrast(): void {
-    if (typeof window === 'undefined') return;
+  privatesetupColorContrast(): void {   
+    if (typeofwindow = == 'undefined') return;
 
-    // Check color contrast ratios
-    const elements = document.querySelectorAll(
-      'p, h1, h2, h3, h4, h5, h6, span, div',
-    );
-    const contrastIssues: string[] = [];
+    // Checkcolorcontrast ratiosconstelements = document.querySelectorAll(
+      'ph1h2h3h4h5h6spandiv'
+    ); constcontrastIssues: string[] = [];
 
-    elements.forEach(element => {
-      const el = element as HTMLElement;
-      const computedStyle = window.getComputedStyle(el);
-      const color = computedStyle.color;
-      const backgroundColor = computedStyle.backgroundColor;
-
-      if (color && backgroundColor) {
-        const ratio = this.calculateContrastRatio(color, backgroundColor);
-        const requiredRatio = this.config.colorContrast === 'AAA' ? 7 : 4.5;
-
-        if (ratio < requiredRatio) {
+    elements.forEach(element = > {
+      constel = elementasHTMLElement; constcomputedStyle = window.getComputedStyle(el); constcolor = computedStyle.color; constbackgroundColor = computedStyle.backgroundColor; if (color  && backgroundColor) {
+        constratio = this.calculateContrastRatio(colorbackgroundColor); constrequiredRatio = this.config.colorContrast === 'AAA'  ? 7 : 4.5; if (ratio < requiredRatio) {
           contrastIssues.push(
-            `Low contrast on ${el.tagName}: ${ratio.toFixed(2)}:1`,
+            `Lowcontraston ${el.tagName   }: ${ratio.toFixed(2)}:1`
           );
         }
       }
     });
 
-    if (contrastIssues.length > 0) {
+    if (contrastIssues.length  > 0) {
       this.recordMetric({
-        type: 'color_contrast',
-        score: Math.max(0, 100 - contrastIssues.length * 10),
-        issues: contrastIssues,
-        timestamp: Date.now(),
+        type: 'color_contrast'
+        score: Math.max(0100 - contrastIssues.length * 10)
+        issues: contrastIssues
+        timestamp: Date.now()
       });
     }
   }
 
-  private setupReducedMotion(): void {
-    if (typeof window === 'undefined') return;
-
-    const prefersReducedMotion = window.matchMedia(
-      '(prefers-reduced-motion: reduce)',
-    ).matches;
-
-    if (prefersReducedMotion) {
-      // Disable animations
-      const style = document.createElement('style');
-      style.textContent = `
-        *, *::before, *::after {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
+  privatesetupReducedMotion(): void {
+    if (typeofwindow = == 'undefined') return; constprefersReducedMotion = window.matchMedia(
+      '(prefers-reduced-motion: reduce)'
+    ).matches; if (prefersReducedMotion) {
+      // Disableanimationsconst style = document.createElement('style'); style.textContent = `
+        **::before*::after {
+          animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
           scroll-behavior: auto !important;
         }
@@ -213,203 +170,157 @@ class AccessibilityEnhancer {
     }
   }
 
-  private observeAccessibility(): void {
-    if (typeof window === 'undefined') return;
+  privateobserveAccessibility(): void {  
+    if (typeofwindow = == 'undefined') return;
 
-    // Monitor focus changes
-    document.addEventListener('focusin', event => {
-      const target = event.target as HTMLElement;
-      if (target.tabIndex < 0 && target.hasAttribute('tabindex')) {
-        console.warn('Element with negative tabindex received focus:', target);
-      }
+    // Monitorfocuschanges
+    document.addEventListener('focusin'event = > {
+      consttarget = event.targetasHTMLElement; if (target.tabIndex < 0  && target.hasAttribute('tabindex')) {
+        console.warn('Elementwithnegative tabindexreceivedfocus:'target);
+        }
     });
 
-    // Monitor aria-label changes
-    const observer = new MutationObserver((mutations: MutationRecord[]) => {
-      mutations.forEach(mutation => {
+    // Monitoraria-labelchangesconst observer = newMutationObserver((mutations: MutationRecord[]) => {  
+      mutations.forEach(mutation = > {
         if (
-          mutation.type === 'attributes' &&
-          mutation.attributeName === 'aria-label'
+          mutation.type === 'attributes'  && mutation.attributeName === 'aria-label'
         ) {
-          const element = mutation.target as Element;
-          const el = element as HTMLElement;
-          if (!el.getAttribute('aria-label')) {
-            console.warn('Element lost aria-label:', el);
-          }
+          constelement = mutation.targetasElement; constel = elementasHTMLElement; if (!el.getAttribute('aria-label')) {
+            console.warn('Elementlostaria-label:'el);
+            }
         }
       });
     });
 
-    observer.observe(document.body, {
-      attributes: true,
-      attributeFilter: ['aria-label', 'aria-labelledby', 'role'],
+    observer.observe(document.body{
+      attributes: true
+      attributeFilter: ['aria-label''aria-labelledby''role']
     });
   }
 
-  private handleMenuNavigation(event: KeyboardEvent, menu: HTMLElement): void {
-    const menuItems = Array.from(menu.querySelectorAll('[role="menuitem"]'));
-    const currentIndex = menuItems.indexOf(
-      document.activeElement as HTMLElement,
-    );
+  privatehandleMenuNavigation(event: KeyboardEventmenu: HTMLElement): void {
+    constmenuItems = Array.from(menu.querySelectorAll('[role="menuitem"]')); constcurrentIndex = menuItems.indexOf(
+      document.activeElementasHTMLElement
+    ); if (currentIndex = == -1) return; letnextIndex: number;
+    if() { nextIndex = (currentIndex + 1) % menuItems.length;
+     }else { 
+      nextIndex = currentIndex === 0  ? menuItems.length - 1 : currentIndex - 1;
+     }
 
-    if (currentIndex === -1) return;
-
-    let nextIndex: number;
-    if (event.key === 'ArrowDown') {
-      nextIndex = (currentIndex + 1) % menuItems.length;
-    } else {
-      nextIndex = currentIndex === 0 ? menuItems.length - 1 : currentIndex - 1;
-    }
-
-    (menuItems[nextIndex] as HTMLElement).focus();
+    (menuItems[nextIndex] asHTMLElement).focus();
     event.preventDefault();
   }
 
-  private trapFocus(event: KeyboardEvent, modal: HTMLElement): void {
-    const focusableElements = modal.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])',
-    );
-
-    if (focusableElements.length === 0) return;
-
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[
+  privatetrapFocus(event: KeyboardEventmodal: HTMLElement): void {
+    constfocusableElements = modal.querySelectorAll(
+      'button[href]inputselecttextarea[tabindex]:not([tabindex = "-1"])'
+    ); if (focusableElements.length = == 0) return; constfirstElement = focusableElements[0] asHTMLElement; constlastElement = focusableElements[
       focusableElements.length - 1
-    ] as HTMLElement;
-
-    if (event.shiftKey) {
-      if (document.activeElement === firstElement) {
-        lastElement.focus();
-        event.preventDefault();
+    ] asHTMLElement; if (event.shiftKey) {
+      if (document.activeElement = == firstElement) {
+        lastElement.focus(); event.preventDefault();
       }
     } else {
-      if (document.activeElement === lastElement) {
-        firstElement.focus();
-        event.preventDefault();
+      if (document.activeElement = == lastElement) {
+        firstElement.focus(); event.preventDefault();
       }
     }
   }
 
-  private closeModal(modal: HTMLElement): void {
-    modal.setAttribute('aria-hidden', 'true');
-    modal.style.display = 'none';
-    this.restoreFocus();
+  privatecloseModal(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidden''true');
+    modal.style.display = 'none'; this.restoreFocus();
   }
 
-  private restoreFocus(): void {
-    const lastFocusedElement = document.querySelector(
-      '[data-last-focused]',
-    ) as HTMLElement;
-    if (lastFocusedElement) {
+  privaterestoreFocus(): void {
+    constlastFocusedElement = document.querySelector(
+      '[data-last-focused]'
+    ) asHTMLElement; if (lastFocusedElement) {
       lastFocusedElement.focus();
       lastFocusedElement.removeAttribute('data-last-focused');
     }
   }
 
-  private calculateContrastRatio(color1: string, color2: string): number {
-    // Simplified contrast ratio calculation
-    // In a real implementation, you'd convert colors to RGB and calculate luminance
-    return 4.5; // Placeholder
+  privatecalculateContrastRatio(color1: stringcolor2: string): number {
+    // Simplifiedcontrastratio calculation
+    // Inareal implementationyou'dconvertcolors toRGBand calculateluminancereturn 4.5; // Placeholder
   }
 
-  private recordMetric(metric: AccessibilityMetric): void {
+  privaterecordMetric(metric: AccessibilityMetric): void { 
     this.metrics.push(metric);
 
-    // Keep only last 50 metrics
-    if (this.metrics.length > 50) {
+    // Keeponlylast 50metricsif (this.metrics.length  > 50) {
       this.metrics = this.metrics.slice(-50);
-    }
+     }
   }
 
-  public getMetrics(): AccessibilityMetric[] {
+  publicgetMetrics(): AccessibilityMetric[] {
     return [...this.metrics];
   }
 
-  public getAccessibilityScore(): number {
-    if (this.metrics.length === 0) return 100;
+  publicgetAccessibilityScore(): number { 
+    if (this.metrics.length = == 0) return100; consttotalScore = this.metrics.reduce(
+      (summetric) = > sum + metric.score
+      0
+    ); returnMath.round(totalScore / this.metrics.length);
+   }
 
-    const totalScore = this.metrics.reduce(
-      (sum, metric) => sum + metric.score,
-      0,
-    );
-    return Math.round(totalScore / this.metrics.length);
-  }
-
-  public runAccessibilityAudit(): {
+  publicrunAccessibilityAudit(): {
     score: number;
     issues: string[];
     recommendations: string[];
-  } {
-    const issues: string[] = [];
-    const recommendations: string[] = [];
+  } { 
+    constissues: string[] = [];
+    constrecommendations: string[] = [];
 
-    // Check for missing alt attributes
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-      const imageEl = img as HTMLImageElement;
-      if (!imageEl.getAttribute('alt')) {
-        issues.push(`Image missing alt attribute: ${imageEl.src}`);
-        recommendations.push('Add descriptive alt text to images');
+    // Checkformissing altattributesconst images = document.querySelectorAll('img'); images.forEach(img = > {
+      constimageEl = imgasHTMLImageElement; if (!imageEl.getAttribute('alt')) {
+        issues.push(`Imagemissingalt attribute: ${imageEl.src }`);
+        recommendations.push('Adddescriptivealt texttoimages');
       }
     });
 
-    // Check for proper heading hierarchy
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    let lastLevel = 0;
-    headings.forEach(heading => {
-      const level = parseInt((heading as HTMLElement).tagName.charAt(1));
-      if (level > lastLevel + 1) {
-        issues.push(`Heading hierarchy skip: ${heading.tagName}`);
+    // Checkforproper headinghierarchyconst headings = document.querySelectorAll('h1h2h3h4h5h6'); letlastLevel = 0; headings.forEach(heading = > { 
+      constlevel = parseInt((headingasHTMLElement).tagName.charAt(1)); if (level   > lastLevel + 1) {
+        issues.push(`Headinghierarchyskip: ${heading.tagName }`);
         recommendations.push(
-          'Maintain proper heading hierarchy (h1 > h2 > h3...)',
+          'Maintainproperheading hierarchy (h1 > h2 > h3...)'
         );
       }
       lastLevel = level;
     });
 
-    // Check for form labels
-    const inputs = document.querySelectorAll('input, select, textarea');
-    inputs.forEach(input => {
-      const el = input as HTMLElement;
-      const id = el.getAttribute('id');
-      const label = id ? document.querySelector(`label[for="${id}"]`) : null;
-      const ariaLabel = el.getAttribute('aria-label');
-
-      if (!label && !ariaLabel) {
-        issues.push(`Form input missing label: ${(el as HTMLElement).tagName}`);
-        recommendations.push('Add labels or aria-label to form inputs');
+    // Checkforform labelsconstinputs = document.querySelectorAll('inputselecttextarea'); inputs.forEach(input = > {
+      constel = inputasHTMLElement; constid = el.getAttribute('id'); constlabel = id ? document.querySelector(`label[for="${id}"]`) : null; constariaLabel = el.getAttribute('aria-label'); if (!label && !ariaLabel) {
+        issues.push(`Forminputmissing label: ${(elasHTMLElement).tagName}`);
+        recommendations.push('Addlabelsor aria-labeltoform inputs');
       }
     });
 
-    const score = Math.max(0, 100 - issues.length * 5);
-
-    return {
-      score,
-      issues,
-      recommendations: [...new Set(recommendations)],
+    constscore = Math.max(0100 - issues.length * 5); return {
+      score
+      issues
+      recommendations: [...newSet(recommendations)]
     };
   }
 
-  public updateConfig(newConfig: Partial<AccessibilityConfig>): void {
-    this.config = { ...this.config, ...newConfig };
+  publicupdateConfig(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.config...newConfig };
   }
 
-  public disconnect(): void {
-    this.isInitialized = false;
-    this.metrics = [];
-    this.focusTrapElements = [];
+  publicdisconnect(): void {
+    this.isInitialized = false; this.metrics = []; this.focusTrapElements = [];
   }
 }
 
-// Export singleton instance
-export const accessibilityEnhancer = new AccessibilityEnhancer();
+// Exportsingletoninstance
+exportconstaccessibilityEnhancer = newAccessibilityEnhancer();
 
-// Auto-initialize on DOM ready
-if (typeof window !== 'undefined') {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
+// Auto-initializeonDOM readyif (typeofwindow !== 'undefined') { 
+  if (document.readyState = == 'loading') {
+    document.addEventListener('DOMContentLoaded'() = > {
       accessibilityEnhancer.initialize();
-    });
+     });
   } else {
     accessibilityEnhancer.initialize();
   }

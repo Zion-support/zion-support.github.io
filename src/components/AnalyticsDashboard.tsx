@@ -1,12 +1,11 @@
 import React from 'react';
 
-const AnalyticsDashboard: React.FC = () => {
+constAnalyticsDashboard: React.FC = () => { 
   return (
     <div>
-      <h1>Analytics Dashboard</h1>
-      <p>This is a placeholder component.</p>
-    </div>
-  );
-};
+      <h1>AnalyticsDashboard</h1>
+      <p>Thisisa placeholdercomponent.</p>
+    </div > );
+ };
 
-export default AnalyticsDashboard;
+exportdefaultAnalyticsDashboard;

@@ -2,41 +2,37 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-export default function BlogPage(): React.JSX.Element {
+exportdefaultfunction BlogPage(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>Ai 2025 Sept 30 Security Mesh V2</title>
-        <meta
-          name='description'
-          content='Learn about ai 2025 sept 30 security mesh v2 and how it can benefit your enterprise.'
+        <title>Ai2025Sept 30SecurityMesh V2</title>
+        <meta name='description'
+          content='Learnaboutai 2025sept30 securitymeshv2 andhowit canbenefityour enterprise.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/ai-2025-sept-30-security-mesh-v2'
+        <linkrel='canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-sept-30-security-mesh-v2'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          Ai 2025 Sept 30 Security Mesh V2
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          Ai2025Sept 30SecurityMesh V2
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Learn about ai 2025 sept 30 security mesh v2 and how it can benefit
-          your enterprise.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Learnaboutai 2025sept30 securitymeshv2 andhowit canbenefityour enterprise.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName='proseprose-invertmax-w-3xl'>
           <p>
-            This comprehensive guide covers ai 2025 sept 30 security mesh v2 and
-            provides practical insights for enterprise implementation.
+            Thiscomprehensiveguide coversai2025 sept30security meshv2and
+            providespracticalinsights forenterpriseimplementation.
           </p>
         </div>
-        <div className='mt-8'>
-          <Link to='/blog' className='text-cyan-300 hover:underline'>
-            ← Back to Blog
+        <divclassName='mt-8'>
+          <Linkto='/blog' className='text-cyan-300hover:underline'>
+            ← BacktoBlog
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

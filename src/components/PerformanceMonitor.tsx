@@ -1,98 +1,90 @@
-import React, { useEffect, useState } from 'react';
+importReact{ useEffectuseState } from 'react';
 
-interface PerformanceMetrics {
+interfacePerformanceMetrics { 
   lcp?: number;
   fid?: number;
   cls?: number;
   fcp?: number;
   ttfb?: number;
-  inp?: number;
-}
+  inp ?  : number;
+ }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: undefined,
-    inp: undefined,
-    fcp: undefined,
-    lcp: undefined,
-    ttfb: undefined,
-  });
+constPerformanceMonitor: React.FC = () => { 
+  const [metricssetMetrics] = useState<PerformanceMetrics > ({
+    cls: undefined
+    inp: undefined
+    fcp: undefined
+    lcp: undefined
+    ttfb: undefined
+   }); const [isVisiblesetIsVisible] = useState(false);
 
-  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => { 
+    // Dynamicallyimportweb-vitalstoavoid buildissuesimport('web-vitals')
+      .then(webVitals = > {
+        const { onCLSonFCPonLCPonTTFB  } = webVitals;
 
-  useEffect(() => {
-    // Dynamically import web-vitals to avoid build issues
-    import('web-vitals')
-      .then(webVitals => {
-        const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-
-        // Measure Core Web Vitals
-        onCLS((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            cls: metric.value,
-          }));
+        // MeasureCoreWeb VitalsonCLS((metric: { value: number }) => { 
+          setMetrics((prev: PerformanceMetrics) = > ({
+            ...prev
+            cls: metric.value
+           }));
         });
 
-        onFCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            fcp: metric.value,
-          }));
+        onFCP((metric: { value: number }) => { 
+          setMetrics((prev: PerformanceMetrics) = > ({
+            ...prev
+            fcp: metric.value
+           }));
         });
 
-        onLCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            lcp: metric.value,
-          }));
+        onLCP((metric: { value: number }) => { 
+          setMetrics((prev: PerformanceMetrics) = > ({
+            ...prev
+            lcp: metric.value
+           }));
         });
 
-        onTTFB((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            ttfb: metric.value,
-          }));
+        onTTFB((metric: { value: number }) => { 
+          setMetrics((prev: PerformanceMetrics) = > ({
+            ...prev
+            ttfb: metric.value
+           }));
         });
 
-        // Try to use onINP if available (for newer versions)
+        // Trytouse onINPifavailable (fornewerversions)
         if (webVitals.onINP) {
-          webVitals.onINP((metric: { value: number }) => {
-            setMetrics((prev: PerformanceMetrics) => ({
-              ...prev,
-              inp: metric.value,
-            }));
+          webVitals.onINP((metric: { value: number }) => { 
+            setMetrics((prev: PerformanceMetrics) = > ({
+              ...prev
+              inp: metric.value
+             }));
           });
         }
       })
-      .catch(error => {
-        console.warn('Failed to load web-vitals:', error);
+      .catch(error = > {
+        console.warn('Failedtoload web-vitals:'error);
       });
-  }, []);
+  }[]);
 
-  if (!isVisible) {
+  if (!isVisible) { 
     return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
-        title='Open Performance Monitor'
+      <buttononClick = { () = > setIsVisible(true)  }className = 'fixedbottom-4right-4bg-blue-600text-whitep-3rounded-fullshadow-lghover: bg-blue-700transition-colorsz-50'
+        title='OpenPerformanceMonitor'
       >
-        <Activity className='h-5 w-5' />
+        <ActivityclassName='h-5 w-5' />
       </button>
     );
   }
 
   return (
-    <div className='fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50'>
-      <div className='font-bold mb-2'>Performance Metrics</div>
+    <divclassName = 'fixedbottom-4right-4bg-blackbg-opacity-80text-whitep-4rounded-lgtext-xsfont-monoz-50'>
+      <divclassName='font-boldmb-2'>PerformanceMetrics</div>
       <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
       <div>INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>
       <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
       <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
       <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-      <button
-        onClick={() => setIsVisible(false)}
-        className='mt-2 text-xs text-gray-400 hover:text-white'
+      <buttononClick = {  () = > setIsVisible(false)  }className = 'mt-2text-xstext-gray-400hover: text-white'
       >
         Close
       </button>
@@ -100,4 +92,4 @@ const PerformanceMonitor: React.FC = () => {
   );
 };
 
-export default PerformanceMonitor;
+exportdefaultPerformanceMonitor;

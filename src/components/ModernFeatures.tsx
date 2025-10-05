@@ -1,68 +1,58 @@
 import React from 'react';
-const ModernFeatures: React.FC = () => {
-  const features = [
+constModernFeatures: React.FC = () => { 
+  constfeatures = [
     {
-      icon: <Zap className='w-10 h-10' />,
-      title: 'Lightning Fast',
-      description:
-        'Deploy AI solutions 10x faster with our pre-built frameworks and automation tools.',
-    },
-    {
-      icon: <Shield className='w-10 h-10' />,
-      title: 'Enterprise Security',
-      description:
-        'Bank-level security with SOC 2, GDPR compliance, and continuous monitoring.',
-    },
-    {
-      icon: <TrendingUp className='w-10 h-10' />,
-      title: 'Proven Results',
-      description:
-        'Average 300% ROI within 6 months across all client implementations.',
-    },
-    {
-      icon: <Users className='w-10 h-10' />,
-      title: 'Expert Support',
-      description:
-        'Dedicated team of AI specialists providing 24/7 support and guidance.',
-    },
-    {
-      icon: <Globe className='w-10 h-10' />,
-      title: 'Global Scale',
-      description:
-        'Infrastructure spanning 50+ countries for low-latency worldwide access.',
-    },
-    {
-      icon: <Award className='w-10 h-10' />,
-      title: 'Award Winning',
-      description:
-        'Recognized industry leader with 15+ awards for innovation and excellence.',
-    },
-  ];
-  return (
-    <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <h2 className='text-4xl font-bold text-gray-900 mb-4'>
-            Why Choose Zion Tech Group?
+      icon: <ZapclassName='w-10h-10' / > 
+      title: 'LightningFast'
+      description: 'DeployAIsolutions 10xfasterwith ourpre-builtframeworksand automationtools.'
+     }
+    { 
+      icon: <ShieldclassName = 'w-10h-10' / > 
+      title: 'EnterpriseSecurity'
+      description: 'Bank-levelsecuritywith SOC 2GDPRcomplianceandcontinuousmonitoring.'
+     }
+    { 
+      icon: <TrendingUpclassName = 'w-10h-10' / > 
+      title: 'ProvenResults'
+      description: 'Average300% ROIwithin6 monthsacrossall clientimplementations.'
+     }
+    { 
+      icon: <UsersclassName = 'w-10h-10' / > 
+      title: 'ExpertSupport'
+      description: 'Dedicatedteamof AIspecialistsproviding 24/7supportand guidance.'
+     }
+    { 
+      icon: <GlobeclassName = 'w-10h-10' / > 
+      title: 'GlobalScale'
+      description: 'Infrastructurespanning50+ countriesforlow-latencyworldwideaccess.'
+     }
+    { 
+      icon: <AwardclassName = 'w-10h-10' / > 
+      title: 'AwardWinning'
+      description: 'Recognizedindustryleader with15+ awardsforinnovation andexcellence.'
+     }
+  ]; return (
+    <sectionclassName = 'py-20bg-gradient-to-brfrom-gray-50to-blue-50'>
+      <divclassName='containermx-autopx-6'>
+        <divclassName='text-centermb-16'>
+          <h2className='text-4xlfont-boldtext-gray-900mb-4'>
+            WhyChooseZion TechGroup?
           </h2>
-          <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
-            Industry-leading AI solutions backed by enterprise-grade
-            infrastructure and expert support
+          <pclassName='text-xltext-gray-600max-w-3xlmx-auto'>
+            Industry-leadingAIsolutions backedbyenterprise-gradeinfrastructureand expertsupport
           </p>
         </div>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto'>
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className='bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group'
+        <divclassName='gridmd: grid-cols-2lg:grid-cols-3gap-8max-w-7xlmx-auto'>
+          { features.map((featureindex) = > (
+            <divkey = { index  }className = 'bg-whiterounded-2xlp-8shadow-lghover: shadow-2xltransition-allduration-300hover:scale-105group'
             >
-              <div className='bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
+              <divclassName='bg-gradient-to-brfrom-indigo-500to-purple-600text-whitew-16h-16rounded-xlflexitems-centerjustify-centermb-6group-hover:scale-110transition-transform'>
                 {feature.icon}
               </div>
-              <h3 className='text-2xl font-bold text-gray-900 mb-3'>
+              <h3className = 'text-2xlfont-boldtext-gray-900mb-3'>
                 {feature.title}
               </h3>
-              <p className='text-gray-600 leading-relaxed'>
+              <pclassName='text-gray-600leading-relaxed'>
                 {feature.description}
               </p>
             </div>
@@ -72,4 +62,4 @@ const ModernFeatures: React.FC = () => {
     </section>
   );
 };
-export default ModernFeatures;
+exportdefaultModernFeatures;

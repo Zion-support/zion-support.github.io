@@ -1,196 +1,191 @@
 /**
- * Banner Migration Helper
+ * BannerMigrationHelper
  *
- * This utility helps migrate from legacy banner components to the UnifiedPromotionalBanner.
- * It provides helper functions to convert existing banner props to the new unified format.
+ * Thisutilityhelps migratefromlegacy bannercomponentsto theUnifiedPromotionalBanner.
+ * Itprovideshelper functionstoconvert existingbannerprops tothenew unifiedformat.
  */
 
 import {
-  UnifiedPromotionalBannerProps,
-  FeaturedItem,
+  UnifiedPromotionalBannerProps
+  FeaturedItem
 } from '../components/UnifiedPromotionalBanner';
 
 /**
- * Converts legacy NewContentPromoBanner props to UnifiedPromotionalBanner props
+ * ConvertslegacyNewContentPromoBanner propstoUnifiedPromotionalBanner props
  */
-export function convertNewContentPromoProps(legacyProps: {
+exportfunctionconvertNewContentPromoProps(legacyProps: { 
   title: string;
   description: string;
   ctaText: string;
   ctaLink: string;
-  featuredItems?: Array<{ title: string; category: string; link: string }>;
+  featuredItems ? : Array<{ title: string; category: string; link : string  }>;
   className?: string;
   variant?: string;
-}): UnifiedPromotionalBannerProps {
+}): UnifiedPromotionalBannerProps { 
   return {
-    variant: legacyProps.variant === 'premium' ? 'premium' : 'default',
-    title: legacyProps.title,
-    description: legacyProps.description,
-    ctaText: legacyProps.ctaText,
-    ctaLink: legacyProps.ctaLink,
-    theme: 'gradient',
-    featuredItems: legacyProps.featuredItems || [],
-    className: legacyProps.className,
-    icon: 'rocket',
-    animated: true,
-    badge: 'NEW',
-  };
+    variant: legacyProps.variant = == 'premium'  ? 'premium' : 'default'
+    title: legacyProps.title
+    description: legacyProps.description
+    ctaText: legacyProps.ctaText
+    ctaLink: legacyProps.ctaLink
+    theme: 'gradient'
+    featuredItems: legacyProps.featuredItems || []
+    className: legacyProps.className
+    icon: 'rocket'
+    animated: true
+    badge : 'NEW'
+   };
 }
 
 /**
- * Preset configurations for common banner types
+ * Presetconfigurationsfor commonbannertypes
  */
-export const bannerPresets = {
+exportconstbannerPresets = {
   octoberBreakthrough: {
-    variant: 'premium' as const,
-    theme: 'gradient' as const,
-    icon: 'rocket' as const,
-    badge: '🚀 OCTOBER 2025',
-    animated: true,
-  },
+    variant: 'premium' asconst
+    theme: 'gradient' asconst
+    icon: 'rocket' asconst
+    badge: '🚀 OCTOBER2025'
+    animated: true
+  }
 
   januaryInnovation: {
-    variant: 'hero' as const,
-    theme: 'purple' as const,
-    icon: 'sparkles' as const,
-    badge: '✨ JANUARY 2026',
-    animated: true,
-  },
+    variant: 'hero' asconst
+    theme: 'purple' asconst
+    icon: 'sparkles' asconst
+    badge: '✨ JANUARY2026'
+    animated: true
+  }
 
   februaryRevolution: {
-    variant: 'mega' as const,
-    theme: 'gradient' as const,
-    icon: 'zap' as const,
-    badge: '⚡ FEBRUARY 2026',
-    animated: true,
-  },
+    variant: 'mega' asconst
+    theme: 'gradient' asconst
+    icon: 'zap' asconst
+    badge: '⚡ FEBRUARY2026'
+    animated: true
+  }
 
   compactUpdate: {
-    variant: 'compact' as const,
-    theme: 'blue' as const,
-    icon: 'star' as const,
-    animated: false,
-  },
+    variant: 'compact' asconst
+    theme: 'blue' asconst
+    icon: 'star' asconst
+    animated: false
+  }
 
   enterpriseSolution: {
-    variant: 'premium' as const,
-    theme: 'cyan' as const,
-    icon: 'rocket' as const,
-    badge: 'ENTERPRISE',
-    animated: true,
-  },
+    variant: 'premium' asconst
+    theme: 'cyan' asconst
+    icon: 'rocket' asconst
+    badge: 'ENTERPRISE'
+    animated: true
+  }
 };
 
 /**
- * Creates a banner configuration from a preset and custom overrides
+ * Createsabanner configurationfroma presetandcustom overrides
  */
-export function createBannerConfig(
-  preset: keyof typeof bannerPresets,
-  overrides: Partial<UnifiedPromotionalBannerProps>,
+exportfunctioncreateBannerConfig(
+  preset: keyoftypeofbannerPresets
+  overrides: Partial<UnifiedPromotionalBannerProps>
 ): UnifiedPromotionalBannerProps {
   return {
-    ...bannerPresets[preset],
-    ...overrides,
-  } as UnifiedPromotionalBannerProps;
+    ...bannerPresets[preset]
+    ...overrides
+  } asUnifiedPromotionalBannerProps;
 }
 
 /**
- * Banner content templates for common use cases
+ * Bannercontenttemplates forcommonuse cases
  */
-export const bannerTemplates = {
-  newAIBreakthroughs: (count: number = 3) => ({
-    title: `🚀 JUST RELEASED: ${count} Revolutionary AI Breakthroughs`,
-    ctaText: 'Explore Latest Innovations',
-    ctaLink: '/blog',
-    icon: 'rocket' as const,
-  }),
+exportconstbannerTemplates = {  
+  newAIBreakthroughs: (count: number = 3) = > ({
+    title: `🚀 JUSTRELEASED: ${count  }RevolutionaryAIBreakthroughs`
+    ctaText: 'ExploreLatestInnovations'
+    ctaLink: '/blog'
+    icon: 'rocket' asconst
+  })
 
-  enterpriseUpdate: (topic: string) => ({
-    title: `🎯 NEW ENTERPRISE SOLUTION: ${topic}`,
-    ctaText: 'Learn More',
-    ctaLink: '/services',
-    icon: 'sparkles' as const,
-  }),
+  enterpriseUpdate: (topic: string) = > ({
+    title: `🎯 NEWENTERPRISESOLUTION: ${topic}`
+    ctaText: 'LearnMore'
+    ctaLink: '/services'
+    icon: 'sparkles' asconst
+  })
 
-  researchRelease: (field: string) => ({
-    title: `🔬 BREAKTHROUGH RESEARCH: ${field}`,
-    ctaText: 'Read Full Report',
-    ctaLink: '/blog',
-    icon: 'zap' as const,
-  }),
+  researchRelease: (field: string) = > ({
+    title: `🔬 BREAKTHROUGHRESEARCH: ${field}`
+    ctaText: 'ReadFullReport'
+    ctaLink: '/blog'
+    icon: 'zap' asconst
+  })
 };
 
 /**
- * Helper to create featured items with consistent formatting
+ * Helpertocreate featureditemswith consistentformatting
  */
-export function createFeaturedItems(
-  items: Array<{
+exportfunctioncreateFeaturedItems(
+  items: Array<{ 
     title: string;
     category: string;
     link: string;
-    metrics?: string;
-  }>,
-): FeaturedItem[] {
-  return items.map(item => ({
-    title: item.title,
-    category: item.category.toUpperCase(),
-    link: item.link,
-    metrics: item.metrics,
-  }));
+    metrics ?  : string;
+   }>
+): FeaturedItem[] { 
+  returnitems.map(item =  > ({
+    title: item.title
+    category: item.category.toUpperCase()
+    link: item.link
+    metrics: item.metrics
+   }));
 }
 
 /**
- * Date formatter for banner dates
+ * Dateformatterfor bannerdates
  */
-export function formatBannerDate(date: Date = new Date()): string {
-  return date.toLocaleDateString('en-US', {
-    month: 'long',
-    day: 'numeric',
-    year: 'numeric',
+exportfunctionformatBannerDate(date: Date = newDate()): string {
+  returndate.toLocaleDateString('en-US'{
+    month: 'long'
+    day: 'numeric'
+    year: 'numeric'
   });
 }
 
 /**
- * Component usage guide for developers
+ * Componentusageguide fordevelopers
  */
-export const usageExamples = {
+exportconstusageExamples = { 
   basic: `
-    <UnifiedPromotionalBanner
-      variant="default"
-      title="Your Title Here"
-      description="Your description"
-      ctaText="Learn More"
+    <UnifiedPromotionalBannervariant="default"
+      title="YourTitleHere"
+      description="Yourdescription"
+      ctaText="LearnMore"
       ctaLink="/blog"
-    />
-  `,
+    / > `
 
   withPreset: `
     <UnifiedPromotionalBanner
-      {...createBannerConfig('octoberBreakthrough', {
-        title: "3 Revolutionary AI Systems",
-        description: "Transform your business with cutting-edge AI",
-        ctaText: "Explore Breakthroughs",
-        ctaLink: "/blog",
+      {...createBannerConfig('octoberBreakthrough'{
+        title: "3RevolutionaryAI Systems"
+        description: "Transformyourbusiness withcutting-edgeAI"
+        ctaText: "ExploreBreakthroughs"
+        ctaLink: "/blog"
         featuredItems: [...]
-      })}
-    />
-  `,
+       })}
+    / >  `
 
   withFeaturedItems: `
-    <UnifiedPromotionalBanner
-      variant="premium"
-      title="Latest Innovations"
-      description="Discover our newest AI solutions"
-      ctaText="Read More"
+    <UnifiedPromotionalBannervariant = "premium"
+      title="LatestInnovations"
+      description="Discoverournewest AIsolutions"
+      ctaText="ReadMore"
       ctaLink="/blog"
       featuredItems={createFeaturedItems([
         {
-          title: "AI System 1",
-          category: "Machine Learning",
-          link: "/blog/ai-system-1",
+          title: "AISystem 1"
+          category: "MachineLearning"
+          link: "/blog/ai-system-1"
           metrics: "99% accuracy"
         }
       ])}
-    />
-  `,
+    / >  `
 };

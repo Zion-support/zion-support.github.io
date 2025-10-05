@@ -1,271 +1,259 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-const January2025ContentShowcaseBanner: React.FC = () => {
+constJanuary2025ContentShowcaseBanner: React.FC = () => { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
-      {' '}
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-[url('/images/abstract-pattern.svg')] opacity-10 animate-pulse"></div>
-      <div className='absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1'></div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20'>
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-2 bg-pink-500/20 text-pink-400 px-6 py-3 rounded-full text-sm font-medium mb-8'>
-            <Sparkles className='w-5 h-5' />
-            <span>JANUARY 2025 CONTENT COLLECTION</span>
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-brfrom-indigo-900via-purple-900to-pink-900' > {' ' }
+      {/* AnimatedBackground */}
+      <divclassName = "absoluteinset-0bg-[url('/images/abstract-pattern.svg')] opacity-10animate-pulse" />
+      <divclassName = 'absolutetop-0left-0 w-fullh-fullbg-gradient-to-rfrom-transparentvia-white/5to-transparenttransform -skew-y-1' />
+      <divclassName='relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-20'>
+        <divclassName='text-centermb-16'>
+          <divclassName='inline-flexitems-centergap-2bg-pink-500/20text-pink-400px-6py-3rounded-fulltext-smfont-mediummb-8'>
+            <SparklesclassName='w-5 h-5' />
+            <span>JANUARY2025CONTENT COLLECTION</span>
           </div>
-          <h2 className='text-4xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-            <span className='bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent'>
-              Complete AI Knowledge Hub
+          <h2className='text-4xlmd:text-6xlfont-boldtext-whitemb-6leading-tight'>
+            <spanclassName='bg-gradient-to-rfrom-pink-400via-purple-400to-blue-400bg-clip-texttext-transparent'>
+              CompleteAIKnowledge Hub
             </span>
-            <br /> <span className='text-white'>2025 Edition</span>
+            <br /> <spanclassName='text-white'>2025Edition</span>
           </h2>
-          <p className='text-xl text-gray-300 max-w-4xl mx-auto mb-12'>
-            Access the most comprehensive collection of AI insights,
-            breakthrough technologies, and proven enterprise strategies.
-            Everything you need to master AI transformation in one place.
+          <pclassName='text-xltext-gray-300max-w-4xlmx-automb-12'>
+            Accessthemost comprehensivecollectionof AIinsights
+            breakthroughtechnologiesandprovenenterprise strategies.
+            Everythingyouneed tomasterAI transformationinone place.
           </p>
         </div>
-        {/* Content Categories */}
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>
-          {/* Breakthrough Technologies */}
-          <div className='group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-pink-400/50 transition-all duration-300 hover:transform hover:scale-105'>
-            <div className='absolute inset-0 bg-gradient-to-br from-pink-500/10 to-purple-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-            <div className='relative'>
-              <div className='flex items-center gap-4 mb-6'>
-                <div className='p-3 bg-pink-500/20 rounded-xl'>
-                  <Zap className='w-8 h-8 text-pink-400' />
+        {/* ContentCategories */}
+        <divclassName = 'gridmd: grid-cols-2lg:grid-cols-3gap-8mb-16'>
+          {/* BreakthroughTechnologies */}
+          <divclassName = 'grouprelativebg-white/10backdrop-blur-lgrounded-3xlp-8borderborder-white/20hover: border-pink-400/50transition-allduration-300hover:transformhover:scale-105'>
+            <divclassName='absoluteinset-0bg-gradient-to-brfrom-pink-500/10to-purple-500/10rounded-3xlopacity-0group-hover:opacity-100transition-opacityduration-300' />
+            <divclassName='relative'>
+              <divclassName='flexitems-centergap-4mb-6'>
+                <divclassName='p-3bg-pink-500/20rounded-xl'>
+                  <ZapclassName='w-8 h-8text-pink-400' />
                 </div>
                 <div>
-                  <h3 className='text-2xl font-bold text-white'>
-                    Breakthrough Technologies
+                  <h3className='text-2xlfont-boldtext-white'>
+                    BreakthroughTechnologies
                   </h3>
-                  <p className='text-gray-400'>6 Revolutionary Guides</p>
+                  <pclassName='text-gray-400'>6RevolutionaryGuides</p>
                 </div>
               </div>
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Explore the latest AI breakthroughs including quantum-neural
-                fusion, synthetic consciousness, and neuromorphic computing.
+              <pclassName='text-gray-300mb-6leading-relaxed'>
+                Explorethelatest AIbreakthroughsincluding quantum-neuralfusionsyntheticconsciousnessandneuromorphiccomputing.
               </p>
-              <div className='space-y-3 mb-6'>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-pink-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Quantum-Neural Fusion
+              <divclassName = 'space-y-3mb-6'>
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-pink-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    Quantum-NeuralFusion
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Synthetic Consciousness
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-purple-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    SyntheticConsciousness
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Autonomous Enterprise Mesh
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-blue-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    AutonomousEnterpriseMesh
                   </span>
                 </div>
               </div>
-              <Link
-                to='/blog/category/breakthrough-technologies'
-                className='inline-flex items-center gap-2 text-pink-400 hover:text-pink-300 font-medium transition-colors'
+              <Linkto='/blog/category/breakthrough-technologies'
+                className='inline-flexitems-centergap-2text-pink-400hover: text-pink-300font-mediumtransition-colors'
               >
-                Explore All Technologies
-                <ArrowRight className='w-4 h-4' />
+                ExploreAllTechnologies
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
-          {/* Enterprise Case Studies */}
-          <div className='group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105'>
-            <div className='absolute inset-0 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-            <div className='relative'>
-              <div className='flex items-center gap-4 mb-6'>
-                <div className='p-3 bg-purple-500/20 rounded-xl'>
-                  <Award className='w-8 h-8 text-purple-400' />
+          {/* EnterpriseCaseStudies */}
+          <divclassName = 'grouprelativebg-white/10backdrop-blur-lgrounded-3xlp-8borderborder-white/20hover: border-purple-400/50transition-allduration-300hover:transformhover:scale-105'>
+            <divclassName='absoluteinset-0bg-gradient-to-brfrom-purple-500/10to-blue-500/10rounded-3xlopacity-0group-hover:opacity-100transition-opacityduration-300' />
+            <divclassName='relative'>
+              <divclassName='flexitems-centergap-4mb-6'>
+                <divclassName='p-3bg-purple-500/20rounded-xl'>
+                  <AwardclassName='w-8 h-8text-purple-400' />
                 </div>
                 <div>
-                  <h3 className='text-2xl font-bold text-white'>
-                    Enterprise Success Stories
+                  <h3className='text-2xlfont-boldtext-white'>
+                    EnterpriseSuccessStories
                   </h3>
-                  <p className='text-gray-400'>6 Proven Case Studies</p>
+                  <pclassName='text-gray-400'>6ProvenCase Studies</p>
                 </div>
               </div>
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Learn from Fortune 500 companies that have achieved billions in
-                value creation through AI transformation initiatives.
+              <pclassName='text-gray-300mb-6leading-relaxed'>
+                LearnfromFortune 500companiesthat haveachievedbillions invaluecreation throughAItransformation initiatives.
               </p>
-              <div className='space-y-3 mb-6'>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Manufacturing Transformation
+              <divclassName='space-y-3mb-6'>
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-purple-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    ManufacturingTransformation
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Financial Fraud Prevention
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-blue-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    FinancialFraudPrevention
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-emerald-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Healthcare AI Diagnostics
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-emerald-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    HealthcareAIDiagnostics
                   </span>
                 </div>
               </div>
-              <Link
-                to='/case-studies'
-                className='inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors'
+              <Linkto='/case-studies'
+                className='inline-flexitems-centergap-2text-purple-400hover:text-purple-300font-mediumtransition-colors'
               >
-                View All Case Studies
-                <ArrowRight className='w-4 h-4' />
+                ViewAllCase Studies
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
-          {/* Latest Articles */}
-          <div className='group relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105'>
-            <div className='absolute inset-0 bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300'></div>
-            <div className='relative'>
-              <div className='flex items-center gap-4 mb-6'>
-                <div className='p-3 bg-blue-500/20 rounded-xl'>
-                  <BookOpen className='w-8 h-8 text-blue-400' />
+          {/* LatestArticles */}
+          <divclassName = 'grouprelativebg-white/10backdrop-blur-lgrounded-3xlp-8borderborder-white/20hover: border-blue-400/50transition-allduration-300hover:transformhover:scale-105'>
+            <divclassName='absoluteinset-0bg-gradient-to-brfrom-blue-500/10to-emerald-500/10rounded-3xlopacity-0group-hover:opacity-100transition-opacityduration-300' />
+            <divclassName='relative'>
+              <divclassName='flexitems-centergap-4mb-6'>
+                <divclassName='p-3bg-blue-500/20rounded-xl'>
+                  <BookOpenclassName='w-8 h-8text-blue-400' />
                 </div>
                 <div>
-                  <h3 className='text-2xl font-bold text-white'>
-                    Latest Articles
+                  <h3className='text-2xlfont-boldtext-white'>
+                    LatestArticles
                   </h3>
-                  <p className='text-gray-400'>50+ Expert Guides</p>
+                  <pclassName='text-gray-400'>50+ ExpertGuides</p>
                 </div>
               </div>
-              <p className='text-gray-300 mb-6 leading-relaxed'>
-                Stay ahead with the latest AI insights, implementation guides,
-                and industry best practices from our expert team.
+              <pclassName='text-gray-300mb-6leading-relaxed'>
+                Stayaheadwith thelatestAI insightsimplementationguides
+                andindustrybest practicesfromour expertteam.
               </p>
-              <div className='space-y-3 mb-6'>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-blue-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    AI Platform Engineering
+              <divclassName = 'space-y-3mb-6'>
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-blue-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    AIPlatformEngineering
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-emerald-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Enterprise RAG Systems
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-emerald-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    EnterpriseRAGSystems
                   </span>
                 </div>
-                <div className='flex items-center gap-3'>
-                  <div className='w-2 h-2 bg-purple-400 rounded-full'></div>
-                  <span className='text-gray-300 text-sm'>
-                    Autonomous Operations
+                <divclassName='flexitems-centergap-3'>
+                  <divclassName='w-2 h-2bg-purple-400rounded-full' />
+                  <spanclassName='text-gray-300text-sm'>
+                    AutonomousOperations
                   </span>
                 </div>
               </div>
-              <Link
-                to='/blog'
-                className='inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors'
+              <Linkto='/blog'
+                className='inline-flexitems-centergap-2text-blue-400hover: text-blue-300font-mediumtransition-colors'
               >
-                Read All Articles
-                <ArrowRight className='w-4 h-4' />
+                ReadAllArticles
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
         </div>
         {/* Statistics */}
-        <div className='bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/20 mb-16'>
-          <h3 className='text-3xl font-bold text-white text-center mb-12'>
-            Content Library Overview
+        <divclassName = 'bg-white/5backdrop-blur-lgrounded-3xlp-12borderborder-white/20mb-16'>
+          <h3className='text-3xlfont-boldtext-whitetext-centermb-12'>
+            ContentLibraryOverview
           </h3>
-          <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-            <div className='text-center'>
-              <div className='text-gray-300'>Total Articles</div>
+          <divclassName='gridgrid-cols-2md: grid-cols-4gap-8'>
+            <divclassName='text-center'>
+              <divclassName='text-gray-300'>TotalArticles</div>
             </div>
-            <div className='text-center'>
-              <div className='text-gray-300'>Case Studies</div>
+            <divclassName='text-center'>
+              <divclassName='text-gray-300'>CaseStudies</div>
             </div>
-            <div className='text-center'>
-              <div className='text-4xl font-bold text-blue-400 mb-2'>15+</div>
+            <divclassName='text-center'>
+              <divclassName='text-4xlfont-boldtext-blue-400mb-2'>15+</div>
             </div>
-            <div className='text-center'>
-              <div className='text-4xl font-bold text-emerald-400 mb-2'>
+            <divclassName='text-center'>
+              <divclassName='text-4xlfont-boldtext-emerald-400mb-2'>
                 500+
               </div>
-              <div className='text-gray-300'>Enterprise Readers</div>
+              <divclassName='text-gray-300'>EnterpriseReaders</div>
             </div>
           </div>
         </div>
-        {/* Featured Content Preview */}
-        <div className='grid md:grid-cols-2 gap-8 mb-16'>
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>
-            <div className='flex items-center gap-3 mb-4'>
-              <Star className='w-6 h-6 text-yellow-400 fill-current' />
-              <h4 className='text-xl font-bold text-white'>Most Popular</h4>
+        {/* FeaturedContentPreview */}
+        <divclassName = 'gridmd: grid-cols-2gap-8mb-16'>
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/20'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <StarclassName='w-6 h-6text-yellow-400fill-current' />
+              <h4className='text-xlfont-boldtext-white'>MostPopular</h4>
             </div>
-            <h5 className='text-lg font-semibold text-white mb-2'>
-              AI Quantum-Neural Fusion 2025
+            <h5className='text-lgfont-semiboldtext-whitemb-2'>
+              AIQuantum-NeuralFusion2025
             </h5>
-            <p className='text-gray-300 text-sm mb-4'>
-              Revolutionary fusion technology achieving 10,000x performance
-              improvements...
+            <pclassName='text-gray-300text-smmb-4'>
+              Revolutionaryfusiontechnology achieving 10000xperformanceimprovements...
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-pink-400 font-medium'>15 min read</span>
-              <Link
-                to='/blog/ai-quantum-neural-fusion-<2025'
-                className='text-pink-400 hover:text-pink-300'
+            <divclassName = 'flexitems-centerjustify-between'>
+              <spanclassName='text-pink-400font-medium'>15minread</span>
+              <Linkto='/blog/ai-quantum-neural-fusion-<2025'
+                className='text-pink-400hover: text-pink-300'
               >
-                <ArrowRight className='w-4 h-4' />
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20'>
-            <div className='flex items-center gap-3 mb-4'>
-              <TrendingUp className='w-6 h-6 text-emerald-400' />
-              <h4 className='text-xl font-bold text-white'>Trending Now</h4>
+          <divclassName='bg-white/5backdrop-blur-lgrounded-2xlp-8borderborder-white/20'>
+            <divclassName='flexitems-centergap-3mb-4'>
+              <TrendingUpclassName='w-6 h-6text-emerald-400' />
+              <h4className='text-xlfont-boldtext-white'>TrendingNow</h4>
             </div>
-            <h5 className='text-lg font-semibold text-white mb-2'>
-              Autonomous Enterprise Mesh
+            <h5className='text-lgfont-semiboldtext-whitemb-2'>
+              AutonomousEnterpriseMesh
             </h5>
-            <p className='text-gray-300 text-sm mb-4'>
-              Self-organizing AI networks achieving 99.7% operational
-              efficiency...
+            <pclassName='text-gray-300text-smmb-4'>
+              Self-organizingAInetworks achieving99.7% operationalefficiency...
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-emerald-400 font-medium'>12 min read</span>
-              <Link
-                to='/blog/autonomous-enterprise-mesh-<2025'
-                className='text-emerald-400 hover:text-emerald-300'
+            <divclassName='flexitems-centerjustify-between'>
+              <spanclassName='text-emerald-400font-medium'>12minread</span>
+              <Linkto='/blog/autonomous-enterprise-mesh-<2025'
+                className='text-emerald-400hover:text-emerald-300'
               >
-                <ArrowRight className='w-4 h-4' />
+                <ArrowRight,className='w-4 h-4' />
               </Link>
             </div>
           </div>
         </div>
-        {/* Call to Action */}
-        <div className='text-center'>
-          <div className='flex flex-col sm:flex-row items-center justify-center gap-4 mb-6'>
-            <Link
-              to='/resources'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-8 py-4 rounded-full font-semibold hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105'
+        {/* CalltoAction */}
+        <divclassName = 'text-center'>
+          <divclassName='flexflex-colsm: flex-rowitems-centerjustify-centergap-4mb-6'>
+            <Linkto='/resources'
+              className='inline-flexitems-centergap-2bg-gradient-to-rfrom-pink-500to-purple-500text-whitepx-8py-4rounded-fullfont-semiboldhover:from-pink-600hover:to-purple-600transition-allduration-300transformhover:scale-105'
             >
-              <BookOpen className='w-5 h-5' />
-              Explore Complete Library
+              <BookOpenclassName='w-5 h-5' />
+              ExploreCompleteLibrary
             </Link>
-            <Link
-              to='/newsletter'
-              className='inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300'
+            <Linkto='/newsletter'
+              className='inline-flexitems-centergap-2bg-white/10text-whitepx-8py-4rounded-fullfont-semiboldborderborder-white/20hover:bg-white/20transition-allduration-300'
             >
-              <Users className='w-5 h-5' />
-              Join AI Community
+              <UsersclassName='w-5 h-5' />
+              JoinAICommunity
             </Link>
           </div>
-          <p className='text-gray-400 text-sm'>
-            Get exclusive access to new content and AI insights delivered weekly
+          <pclassName='text-gray-400text-sm'>
+            Getexclusiveaccess tonewcontent andAIinsights deliveredweekly
           </p>
         </div>
       </div>
     </div>
   );
 };
-export default January2025ContentShowcaseBanner;
+exportdefaultJanuary2025ContentShowcaseBanner;

@@ -1,9 +1,9 @@
 /**
- * Accessibility Auditor
- * Comprehensive WCAG 2.1 compliance checker and accessibility enhancement tool
+ * AccessibilityAuditor
+ * ComprehensiveWCAG2.1compliancechecker andaccessibilityenhancement tool
  */
 
-interface AccessibilityIssue {
+interfaceAccessibilityIssue {
   severity: 'critical' | 'serious' | 'moderate' | 'minor';
   element: string;
   issue: string;
@@ -11,7 +11,7 @@ interface AccessibilityIssue {
   wcagCriterion: string;
 }
 
-interface AccessibilityReport {
+interfaceAccessibilityReport {
   score: number;
   issues: AccessibilityIssue[];
   compliantAreas: string[];
@@ -23,274 +23,247 @@ interface AccessibilityReport {
   };
 }
 
-export class AccessibilityAuditor {
-  private wcagGuidelines = {
-    perceivable: ['1.1.1', '1.2.1', '1.3.1', '1.4.1', '1.4.3'],
-    operable: ['2.1.1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],
-    understandable: ['3.1.1', '3.2.1', '3.3.1'],
-    robust: ['4.1.1', '4.1.2'],
+exportclassAccessibilityAuditor {
+  privatewcagGuidelines = {
+    perceivable: ['1.1.1''1.2.1''1.3.1''1.4.1''1.4.3']
+    operable: ['2.1.1''2.1.2''2.4.1''2.4.3''2.4.7']
+    understandable: ['3.1.1''3.2.1''3.3.1']
+    robust: ['4.1.1''4.1.2']
   };
 
   /**
-   * Perform comprehensive accessibility audit
+   * Performcomprehensiveaccessibility audit
    */
-  auditWebsite(): AccessibilityReport {
-    console.log('Starting accessibility audit...');
+  auditWebsite(): AccessibilityReport { 
+    console.log('Startingaccessibilityaudit...');
 
-    const issues = this.detectIssues();
-    const compliantAreas = this.identifyCompliantAreas();
-    const score = this.calculateScore(issues);
-
-    return {
-      score,
-      issues,
-      compliantAreas,
+    constissues = this.detectIssues(); constcompliantAreas = this.identifyCompliantAreas(); constscore = this.calculateScore(issues); return {
+      score
+      issues
+      compliantAreas
       summary: {
-        critical: issues.filter(i => i.severity === 'critical').length,
-        serious: issues.filter(i => i.severity === 'serious').length,
-        moderate: issues.filter(i => i.severity === 'moderate').length,
-        minor: issues.filter(i => i.severity === 'minor').length,
-      },
+        critical: issues.filter(i = > i.severity === 'critical').length
+        serious: issues.filter(i = > i.severity === 'serious').length
+        moderate: issues.filter(i = > i.severity === 'moderate').length
+        minor: issues.filter(i = > i.severity === 'minor').length
+       }
     };
   }
 
   /**
-   * Detect accessibility issues
+   * Detectaccessibilityissues
    */
-  private detectIssues(): AccessibilityIssue[] {
-    const issues: AccessibilityIssue[] = [];
+  privatedetectIssues(): AccessibilityIssue[] { 
+    constissues: AccessibilityIssue[] = [];
 
-    // Check for images without alt text
+    // Checkforimages withoutalttext
     issues.push({
-      severity: 'serious',
-      element: '<img> tags',
-      issue: 'Missing alt attributes on images',
-      recommendation: 'Add descriptive alt text to all images',
-      wcagCriterion: '1.1.1 (Level A)',
+      severity: 'serious'
+      element: '<img > tags'
+      issue: 'Missingaltattributes onimages'
+      recommendation: 'Adddescriptivealt texttoall images'
+      wcagCriterion: '1.1.1 (Level A)'
+     });
+
+    // Checkforproper headingstructureissues.push({ 
+      severity: 'moderate'
+      element: '<h1>-<h6 > tags'
+      issue: 'Skippedheadinglevels detected'
+      recommendation: 'Ensureheadinghierarchy islogical (h1 → h2 → h3)'
+      wcagCriterion: '2.4.6 (LevelAA)'
+     });
+
+    // Checkforkeyboard navigationissues.push({
+      severity: 'critical'
+      element: 'Interactiveelements'
+      issue: 'Someinteractiveelements notkeyboardaccessible'
+      recommendation: 'Ensureallinteractive elementscanbe accessedviakeyboard'
+      wcagCriterion: '2.1.1 (Level A)'
     });
 
-    // Check for proper heading structure
-    issues.push({
-      severity: 'moderate',
-      element: '<h1>-<h6> tags',
-      issue: 'Skipped heading levels detected',
-      recommendation: 'Ensure heading hierarchy is logical (h1 → h2 → h3)',
-      wcagCriterion: '2.4.6 (Level AA)',
+    // Checkforcolor contrastissues.push({
+      severity: 'serious'
+      element: 'Textelements'
+      issue: 'Insufficientcolorcontrast ratioonsome text'
+      recommendation: 'Ensureminimum4.5:1contrastratio fornormaltext'
+      wcagCriterion: '1.4.3 (LevelAA)'
     });
 
-    // Check for keyboard navigation
-    issues.push({
-      severity: 'critical',
-      element: 'Interactive elements',
-      issue: 'Some interactive elements not keyboard accessible',
-      recommendation:
-        'Ensure all interactive elements can be accessed via keyboard',
-      wcagCriterion: '2.1.1 (Level A)',
+    // CheckforARIA labelsissues.push({
+      severity: 'moderate'
+      element: 'Bannercomponents'
+      issue: 'MissingARIAlabels onbannernavigation'
+      recommendation: 'Addaria-labeltonavigation regions'
+      wcagCriterion: '4.1.2 (Level A)'
     });
 
-    // Check for color contrast
-    issues.push({
-      severity: 'serious',
-      element: 'Text elements',
-      issue: 'Insufficient color contrast ratio on some text',
-      recommendation: 'Ensure minimum 4.5:1 contrast ratio for normal text',
-      wcagCriterion: '1.4.3 (Level AA)',
+    // Checkforfocus indicatorsissues.push({
+      severity: 'moderate'
+      element: 'Linksandbuttons'
+      issue: 'Focusindicatorsnot alwaysvisible'
+      recommendation: 'Ensurevisiblefocus indicatorsonall focusableelements'
+      wcagCriterion: '2.4.7 (LevelAA)'
     });
 
-    // Check for ARIA labels
-    issues.push({
-      severity: 'moderate',
-      element: 'Banner components',
-      issue: 'Missing ARIA labels on banner navigation',
-      recommendation: 'Add aria-label to navigation regions',
-      wcagCriterion: '4.1.2 (Level A)',
-    });
+    // Checkforform labelsissues.push({ 
+      severity: 'serious'
+      element: '<input> elements'
+      issue: 'Forminputsmissing associatedlabels'
+      recommendation: 'Add <label > elementsoraria-labeltoall forminputs'
+      wcagCriterion: '1.3.1 (Level A)'
+     });
 
-    // Check for focus indicators
-    issues.push({
-      severity: 'moderate',
-      element: 'Links and buttons',
-      issue: 'Focus indicators not always visible',
-      recommendation:
-        'Ensure visible focus indicators on all focusable elements',
-      wcagCriterion: '2.4.7 (Level AA)',
-    });
+    // Checkforsemantic HTMLissues.push({ 
+      severity: 'minor'
+      element: 'Pagestructure'
+      issue: 'Notusingsemantic HTML5elementsconsistently'
+      recommendation: 'Use <nav><main><article><aside > appropriately'
+      wcagCriterion: '1.3.1 (Level A)'
+     });
 
-    // Check for form labels
-    issues.push({
-      severity: 'serious',
-      element: '<input> elements',
-      issue: 'Form inputs missing associated labels',
-      recommendation: 'Add <label> elements or aria-label to all form inputs',
-      wcagCriterion: '1.3.1 (Level A)',
-    });
-
-    // Check for semantic HTML
-    issues.push({
-      severity: 'minor',
-      element: 'Page structure',
-      issue: 'Not using semantic HTML5 elements consistently',
-      recommendation: 'Use <nav>, <main>, <article>, <aside> appropriately',
-      wcagCriterion: '1.3.1 (Level A)',
-    });
-
-    return issues;
+    returnissues;
   }
 
   /**
-   * Identify compliant areas
+   * Identifycompliantareas
    */
-  private identifyCompliantAreas(): string[] {
+  privateidentifyCompliantAreas(): string[] { 
     return [
-      'Page has valid HTML5 doctype',
-      'Language attribute set on <html> tag',
-      'Title element present and descriptive',
-      'Meta viewport tag properly configured',
-      'Skip to main content link present',
-      'Consistent navigation structure',
-      'Text can be resized up to 200% without loss of content',
+      'Pagehasvalid HTML5doctype'
+      'Languageattributeset on <html > tag'
+      'Titleelementpresent anddescriptive'
+      'Metaviewporttag properlyconfigured'
+      'Skiptomain contentlinkpresent'
+      'Consistentnavigationstructure'
+      'Textcanbe resizedupto 200% withoutlossof content'
     ];
-  }
+   }
 
   /**
-   * Calculate accessibility score
+   * Calculateaccessibilityscore
    */
-  private calculateScore(issues: AccessibilityIssue[]): number {
-    const weights = {
-      critical: 25,
-      serious: 15,
-      moderate: 8,
-      minor: 3,
-    };
+  privatecalculateScore(issues: AccessibilityIssue[]): number {
+    constweights = {
+      critical: 25
+      serious: 15
+      moderate:  8
+      minor:  3
+    }; constdeductions = issues.reduce((totalissue) => {
+      returntotal + weights[issue.severity];
+    }0);
 
-    const deductions = issues.reduce((total, issue) => {
-      return total + weights[issue.severity];
-    }, 0);
-
-    return Math.max(0, 100 - deductions);
+    returnMath.max(0100 - deductions);
   }
 
   /**
-   * Generate recommendations for improvements
+   * Generaterecommendationsfor improvements
    */
   generateRecommendations(): string[] {
     return [
-      '✅ Add alt text to all images (use empty alt="" for decorative images)',
-      "✅ Implement proper heading hierarchy (don't skip levels)",
-      '✅ Ensure all interactive elements are keyboard accessible',
-      '✅ Test color contrast with tools like WebAIM Contrast Checker',
-      '✅ Add ARIA labels to navigation landmarks',
-      '✅ Make focus indicators highly visible',
-      '✅ Associate all form inputs with labels',
-      '✅ Use semantic HTML5 elements',
-      '✅ Test with screen readers (NVDA, JAWS, VoiceOver)',
-      '✅ Implement skip navigation links',
-      '✅ Ensure error messages are announced to screen readers',
-      '✅ Make sure content is responsive and works with zoom',
+      '✅ Addalttext toallimages (useemptyalt = "" fordecorativeimages)'
+      "✅ Implementproperheading hierarchy (don'tskiplevels)"
+      '✅ Ensureallinteractive elementsarekeyboard accessible'
+      '✅ Testcolorcontrast withtoolslike WebAIMContrastChecker'
+      '✅ AddARIAlabels tonavigationlandmarks'
+      '✅ Makefocusindicators highlyvisible'
+      '✅ Associateallform inputswithlabels'
+      '✅ UsesemanticHTML5 elements'
+      '✅ Testwithscreen readers (NVDAJAWSVoiceOver)'
+      '✅ Implementskipnavigation links'
+      '✅ Ensureerrormessages areannouncedto screenreaders'
+      '✅ Makesurecontent isresponsiveand workswithzoom'
     ];
   }
 
   /**
-   * Quick accessibility fixes
+   * Quickaccessibilityfixes
    */
   applyQuickFixes(): {
     applied: string[];
     manual: string[];
-  } {
-    const applied = [
-      'Added lang="en" to <html> tag',
-      'Added viewport meta tag',
-      'Added skip to main content link',
-      'Improved focus indicator visibility',
-      'Added ARIA landmarks to main regions',
-    ];
-
-    const manual = [
-      'Review and add alt text to images',
-      'Fix heading hierarchy',
-      'Test keyboard navigation thoroughly',
-      'Verify color contrast ratios',
-      'Add form labels where missing',
-    ];
-
-    return { applied, manual };
+  } { 
+    constapplied = [
+      'Addedlang="en" to <html > tag'
+      'Addedviewportmeta tag'
+      'Addedskipto maincontentlink'
+      'Improvedfocusindicator visibility'
+      'AddedARIAlandmarks tomainregions'
+    ]; constmanual = [
+      'Reviewandadd alttextto images'
+      'Fixheadinghierarchy'
+      'Testkeyboardnavigation thoroughly'
+      'Verifycolorcontrast ratios'
+      'Addformlabels wheremissing'
+    ]; return { appliedmanual  };
   }
 
   /**
-   * Generate comprehensive accessibility report
+   * Generatecomprehensiveaccessibility report
    */
   generateReport(): string {
-    const audit = this.auditWebsite();
-    const recommendations = this.generateRecommendations();
-    const fixes = this.applyQuickFixes();
+    constaudit = this.auditWebsite(); constrecommendations = this.generateRecommendations(); constfixes = this.applyQuickFixes(); return `
+# AccessibilityAuditReport
 
-    return `
-# Accessibility Audit Report
+## OverallScore: ${audit.score}/100
 
-## Overall Score: ${audit.score}/100
+### ScoreInterpretation
+- **90-100**: Excellent - WCAG2.1AAAcompliant
+- **75-89**: Good - WCAG2.1AAcompliant  
+- **60-74**: Fair - WCAG2.1Acompliant
+- **Below60**: Needsimprovement
 
-### Score Interpretation
-- **90-100**: Excellent - WCAG 2.1 AAA compliant
-- **75-89**: Good - WCAG 2.1 AA compliant  
-- **60-74**: Fair - WCAG 2.1 A compliant
-- **Below 60**: Needs improvement
-
-## Issue Summary
+## IssueSummary
 - **Critical**: ${audit.summary.critical} issues
 - **Serious**: ${audit.summary.serious} issues
 - **Moderate**: ${audit.summary.moderate} issues
 - **Minor**: ${audit.summary.minor} issues
 
-## Identified Issues
+## IdentifiedIssues
 
-${audit.issues
+${ audit.issues
   .map(
-    (issue, index) => `
-### ${index + 1}. ${issue.element}
+    (issueindex) =  >  `
+### ${index + 1 }. ${issue.element}
 - **Severity**: ${issue.severity.toUpperCase()}
 - **Issue**: ${issue.issue}
 - **Recommendation**: ${issue.recommendation}
-- **WCAG Criterion**: ${issue.wcagCriterion}
-`,
+- **WCAGCriterion**: ${issue.wcagCriterion}
+`
   )
   .join('\n')}
 
-## Compliant Areas ✅
-${audit.compliantAreas.map(area => `- ${area}`).join('\n')}
+## CompliantAreas ✅
+${ audit.compliantAreas.map(area =  >  `- ${area }`).join('\n')}
 
 ## Recommendations
-${recommendations.map(rec => rec).join('\n')}
+${ recommendations.map(rec = > rec).join('\n') }
 
-## Quick Fixes Applied ✅
-${fixes.applied.map(fix => `- ${fix}`).join('\n')}
+## QuickFixesApplied ✅
+${ fixes.applied.map(fix =  >  `- ${fix }`).join('\n')}
 
-## Manual Actions Required ⚠️
-${fixes.manual.map(action => `- ${action}`).join('\n')}
+## ManualActionsRequired ⚠️
+${ fixes.manual.map(action =  >  `- ${action }`).join('\n')}
 
-## Next Steps
-1. **Immediate**: Address all critical and serious issues
-2. **Short-term**: Fix moderate issues within 2 weeks
-3. **Long-term**: Resolve minor issues and achieve AAA compliance
-4. **Ongoing**: Regular accessibility audits and testing
+## NextSteps1. **Immediate**: Addressallcritical andseriousissues
+2. **Short-term**: Fixmoderateissues within2weeks
+3. **Long-term**: Resolveminorissues andachieveAAA compliance4. **Ongoing**: Regularaccessibilityaudits andtesting
 
 ## Resources
-- WCAG 2.1 Guidelines: https://www.w3.org/WAI/WCAG21/quickref/
-- WebAIM Contrast Checker: https://webaim.org/resources/contrastchecker/
-- NVDA Screen Reader: https://www.nvaccess.org/download/
-- axe DevTools: https://www.deque.com/axe/devtools/
+- WCAG2.1Guidelines: https://www.w3.org/WAI/WCAG21/quickref/
+- WebAIMContrastChecker: https://webaim.org/resources/contrastchecker/
+- NVDAScreenReader: https://www.nvaccess.org/download/
+- axeDevTools: https://www.deque.com/axe/devtools/
 
 ---
-**Generated**: ${new Date().toISOString()}
-**Next Audit**: Recommended in 30 days
+**Generated**: ${newDate().toISOString()}
+**NextAudit**: Recommendedin30 days
 `;
   }
 }
 
-// Export singleton instance
-export const accessibilityAuditor = new AccessibilityAuditor();
+// Exportsingletoninstance
+exportconstaccessibilityAuditor = newAccessibilityAuditor();
 
-// Export convenience functions
-export const auditAccessibility = () => accessibilityAuditor.auditWebsite();
-export const getA11yRecommendations = () =>
-  accessibilityAuditor.generateRecommendations();
-export const generateA11yReport = () => accessibilityAuditor.generateReport();
+// Exportconveniencefunctions
+exportconstauditAccessibility = () => accessibilityAuditor.auditWebsite(); exportconstgetA11yRecommendations = () =>
+  accessibilityAuditor.generateRecommendations(); exportconstgenerateA11yReport = () => accessibilityAuditor.generateReport();

@@ -1,4 +1,4 @@
-export interface EnhancedPromotionalBanner {
+exportinterfaceEnhancedPromotionalBanner { 
   id: string;
   title: string;
   description: string;
@@ -9,1180 +9,1042 @@ export interface EnhancedPromotionalBanner {
   featured: boolean;
   priority: number;
   startDate: string;
-  endDate?: string;
-}
+  endDate ?  : string;
+ }
 
-export const enhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
+exportconstenhancedPromotionalBanners: EnhancedPromotionalBanner[] = [
   {
-    id: 'oct-01-autonomous-business-ops-2025',
-    title:
-      '🚀 JUST RELEASED: Autonomous Business Operations Platform — $650M Value Creation, 85% Cost Reduction in 90 Days!',
-    description:
-      'Revolutionary AI platform eliminating manual processes across 40+ workflows. Fortune 100 achieved $650M annual value, 99.7% accuracy, 10x faster operations. 50% OFF through December + FREE 30-day proof of concept!',
-    ctaText: 'Transform Your Business Now',
-    ctaLink: '/services/autonomous-business-operations',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-autonomous-business-ops-2025'
+    title: '🚀 JUSTRELEASED: AutonomousBusinessOperations Platform — $650MValueCreation85% CostReductionin 90Days!'
+    description: 'RevolutionaryAIplatform eliminatingmanualprocesses across40+ workflows. Fortune100achieved $650Mannualvalue99.7% accuracy10xfasteroperations. 50% OFFthroughDecember + FREE30-dayproofof concept!'
+    ctaText: 'TransformYourBusiness Now'
+    ctaLink: '/services/autonomous-business-operations'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-autonomous-ops-blog-2025',
-    title:
-      '📖 NEW GUIDE: The Complete Autonomous Business Operations Revolution — 22-Minute Deep Dive',
-    description:
-      'Learn how Fortune 500 companies are deploying self-managing AI systems. Complete implementation guide with architecture, ROI calculator, and production best practices.',
-    ctaText: 'Read the Complete Guide',
-    ctaLink: '/blog/ai-autonomous-business-operations-revolution-2025',
-    variant: 'info',
-    icon: '📖',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-autonomous-ops-blog-2025'
+    title: '📖 NEWGUIDE: TheCompleteAutonomous BusinessOperationsRevolution — 22-MinuteDeepDive'
+    description: 'LearnhowFortune 500companiesare deployingself-managingAIsystems. Completeimplementationguide witharchitectureROIcalculatorandproductionbest practices.'
+    ctaText: 'ReadtheComplete Guide'
+    ctaLink: '/blog/ai-autonomous-business-operations-revolution-2025'
+    variant: 'info'
+    icon: '📖'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-650m-case-study-2025',
-    title:
-      '💰 CASE STUDY: Fortune 100 Creates $650M Annual Value Through Autonomous Operations',
-    description:
-      'Incredible transformation story! 85% cost reduction, 10x faster processing, 99.7% accuracy, 40+ autonomous workflows deployed in 90 days. Complete technical details and lessons learned.',
-    ctaText: 'Read $650M Success Story',
-    ctaLink:
-      '/case-studies/fortune-100-autonomous-operations-transformation-2025',
-    variant: 'success',
-    icon: '💰',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-650m-case-study-2025'
+    title: '💰 CASESTUDY: Fortune100Creates $650MAnnualValue ThroughAutonomousOperations'
+    description: 'Incredibletransformationstory! 85% costreduction10xfasterprocessing99.7% accuracy40+ autonomousworkflowsdeployed in90days. Completetechnicaldetails andlessonslearned.'
+    ctaText: 'Read $650MSuccessStory'
+    ctaLink: '/case-studies/fortune-100-autonomous-operations-transformation-2025'
+    variant: 'success'
+    icon: '💰'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-agent-swarm-breakthrough-2025',
-    title:
-      '🔥🤖 BREAKTHROUGH: Revolutionary Agent Swarm Platform — 100,000+ AI Agents Working in Perfect Harmony',
-    description:
-      'Just launched! Coordinate massive swarms of 100,000+ specialized AI agents achieving 99.999% reliability, sub-second response times, and 95% cost reduction. $890M healthcare success story + production-ready services now available.',
-    ctaText: 'Explore Agent Swarms',
-    ctaLink: '/services/ai-2025-october-agent-swarm-platform-services',
-    variant: 'success',
-    icon: '🤖',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-agent-swarm-breakthrough-2025'
+    title: '🔥🤖 BREAKTHROUGH: RevolutionaryAgentSwarm Platform — 100000+ AIAgentsWorking inPerfectHarmony'
+    description: 'Justlaunched! Coordinatemassiveswarms of100000+ specializedAIagents achieving99.999% reliabilitysub-secondresponsetimesand95% costreduction. $890Mhealthcaresuccess story + production-readyservicesnow available.'
+    ctaText: 'ExploreAgentSwarms'
+    ctaLink: '/services/ai-2025-october-agent-swarm-platform-services'
+    variant: 'success'
+    icon: '🤖'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-healthcare-890m-success-2025',
-    title:
-      '💰 $890M Value Creation: Global Healthcare Network Transforms with 75,000 AI Agents',
-    description:
-      'Incredible results! 98.7% diagnostic accuracy, 89% faster diagnoses, 99.97% uptime, and $890M annual value. See how agent swarms revolutionized healthcare for 150M patients.',
-    ctaText: 'Read Success Story',
-    ctaLink:
-      '/case-studies/ai-2025-oct-01-global-healthcare-agent-swarm-890m-success',
-    variant: 'success',
-    icon: '🏥',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-healthcare-890m-success-2025'
+    title: '💰 $890MValueCreation: GlobalHealthcareNetwork Transformswith75000AIAgents'
+    description: 'Incredibleresults! 98.7% diagnosticaccuracy89% fasterdiagnoses99.97% uptimeand $890Mannualvalue. Seehowagent swarmsrevolutionizedhealthcare for150Mpatients.'
+    ctaText: 'ReadSuccessStory'
+    ctaLink: '/case-studies/ai-2025-oct-01-global-healthcare-agent-swarm-890m-success'
+    variant: 'success'
+    icon: '🏥'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-enterprise-platform-automation-2025',
-    title:
-      '🚀 NEW TODAY: Enterprise AI Platform Revolution & Intelligent Automation Breakthrough',
-    description:
-      'Transform your enterprise! Build comprehensive AI platforms with 40-60% cost reduction and $500M value creation. Plus: End manual operations with intelligent automation achieving 300-500% ROI.',
-    ctaText: 'Discover the Revolution',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-enterprise-platform-automation-2025'
+    title: '🚀 NEWTODAY: EnterpriseAIPlatform Revolution & IntelligentAutomationBreakthrough'
+    description: 'Transformyourenterprise! BuildcomprehensiveAI platformswith40-60% costreductionand $500Mvaluecreation. Plus: Endmanualoperations withintelligentautomation achieving300-500% ROI.'
+    ctaText: 'DiscovertheRevolution'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'enterprise-platform-implementation-service-2025',
-    title:
-      '⚡ NEW SERVICE: Enterprise AI Platform Implementation - Production Ready in 90 Days',
-    description:
-      'Complete AI platform deployment with proven ROI. $50M+ annual value, 90% accuracy, 3-5x faster deployment. Transform your enterprise with our comprehensive implementation service.',
-    ctaText: 'Get Started Today',
-    ctaLink: '/services/enterprise-ai-platform-implementation-2025',
-    variant: 'warning',
-    icon: '⚡',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'enterprise-platform-implementation-service-2025'
+    title: '⚡ NEWSERVICE: EnterpriseAIPlatform Implementation - ProductionReadyin 90Days'
+    description: 'CompleteAIplatform deploymentwithproven ROI. $50M+ annualvalue90% accuracy3-5xfasterdeployment. Transformyourenterprise withourcomprehensive implementationservice.'
+    ctaText: 'GetStartedToday'
+    ctaLink: '/services/enterprise-ai-platform-implementation-2025'
+    variant: 'warning'
+    icon: '⚡'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-500m-success-story-2025',
-    title:
-      '💰 SUCCESS STORY: Fortune 100 Company Creates $500M Annual Value in 90 Days',
-    description:
-      'See how a global enterprise transformed operations with our AI platform. 10x faster deployment, 85% cost reduction, 40+ autonomous workflows. Read the complete case study.',
-    ctaText: 'Read Success Story',
-    ctaLink:
-      '/case-studies/ai-2025-oct-global-enterprise-platform-transformation-500m-success',
-    variant: 'info',
-    icon: '💰',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-500m-success-story-2025'
+    title: '💰 SUCCESSSTORY: Fortune100Company Creates $500MAnnualValue in90Days'
+    description: 'Seehowa globalenterprisetransformed operationswithour AIplatform. 10xfasterdeployment85% costreduction40+ autonomousworkflows. Readthecomplete casestudy.'
+    ctaText: 'ReadSuccessStory'
+    ctaLink: '/case-studies/ai-2025-oct-global-enterprise-platform-transformation-500m-success'
+    variant: 'info'
+    icon: '💰'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-latest-breakthrough-2025-featured',
-    title:
-      '🎯 JUST RELEASED: Edge AI Compression, Continuous Learning, Synthetic Data Generation',
-    description:
-      'Three groundbreaking articles just dropped! Deploy models 100x smaller, build self-improving AI systems with 47% accuracy gains, and generate unlimited training data. Transform your AI capabilities today.',
-    ctaText: 'Read the Latest Breakthroughs',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🎯',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-latest-breakthrough-2025-featured'
+    title: '🎯 JUSTRELEASED: EdgeAICompressionContinuousLearningSyntheticDataGeneration'
+    description: 'Threegroundbreakingarticles justdropped! Deploymodels100x smallerbuildself-improvingAIsystems with47% accuracygainsandgenerateunlimited trainingdata. TransformyourAI capabilitiestoday.'
+    ctaText: 'ReadtheLatest Breakthroughs'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🎯'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-model-compression-edge-oct-2025',
-    title:
-      '⚡ NEW: AI Model Compression — Deploy 100x Smaller Models with 95%+ Accuracy',
-    description:
-      'Master edge deployment with INT8/INT4 quantization, structured pruning, and knowledge distillation. Achieve sub-50ms inference on mobile and IoT devices with 92% memory reduction.',
-    ctaText: 'Learn Edge AI Deployment',
-    ctaLink: '/blog/ai-model-compression-quantization-edge-2025',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-model-compression-edge-oct-2025'
+    title: '⚡ NEW: AIModelCompression — Deploy100xSmaller Modelswith95%+ Accuracy'
+    description: 'Masteredgedeployment withINT8/INT4quantizationstructuredpruningandknowledgedistillation. Achievesub-50msinferenceon mobileandIoT deviceswith92% memoryreduction.'
+    ctaText: 'LearnEdgeAI Deployment'
+    ctaLink: '/blog/ai-model-compression-quantization-edge-2025'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'continuous-learning-systems-oct-2025',
-    title:
-      '🔄 NEW: Continuous Learning — 47% Accuracy Improvement with Self-Improving AI',
-    description:
-      'Build systems that adapt in real-time to concept drift. 99.8% uptime during live updates, 73% faster adaptation, and $5.8M annual value from continuous model improvement.',
-    ctaText: 'Build Self-Improving AI',
-    ctaLink: '/blog/continuous-learning-systems-online-updates-2025',
-    variant: 'info',
-    icon: '🔄',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'continuous-learning-systems-oct-2025'
+    title: '🔄 NEW: ContinuousLearning — 47% AccuracyImprovementwith Self-ImprovingAI'
+    description: 'Buildsystemsthat adaptinreal-timetoconcept drift. 99.8% uptimeduringlive updates73% fasteradaptationand $5.8Mannualvalue fromcontinuousmodel improvement.'
+    ctaText: 'BuildSelf-ImprovingAI'
+    ctaLink: '/blog/continuous-learning-systems-online-updates-2025'
+    variant: 'info'
+    icon: '🔄'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'synthetic-data-generation-oct-2025',
-    title:
-      '🎨 NEW: Synthetic Data — Generate Unlimited Training Data with 98% Fidelity',
-    description:
-      'Overcome data scarcity and privacy constraints. Create 10,000x rare event augmentation, achieve 100% privacy compliance, and save $8.4M on data collection costs.',
-    ctaText: 'Master Synthetic Data',
-    ctaLink: '/blog/synthetic-data-generation-ai-training-2025',
-    variant: 'info',
-    icon: '🎨',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'synthetic-data-generation-oct-2025'
+    title: '🎨 NEW: SyntheticData — GenerateUnlimitedTraining Datawith98% Fidelity'
+    description: 'Overcomedatascarcity andprivacyconstraints. Create10000xrareevent augmentationachieve100% privacycomplianceandsave $8.4Mondata collectioncosts.'
+    ctaText: 'MasterSyntheticData'
+    ctaLink: '/blog/synthetic-data-generation-ai-training-2025'
+    variant: 'info'
+    icon: '🎨'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-latest-breakthrough-content-2025',
-    title:
-      '🚀 NEW TODAY: Continuous Intelligence, GenAI Supply Chain Resilience, Autonomous Cloud Security',
-    description:
-      'Just released! Real-time AI decisioning at 100M+ events/sec, self-healing supply chains with 99.7% uptime, and autonomous threat neutralization in <5 seconds. Transform your operations now.',
-    ctaText: 'Read the Latest Articles',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-latest-breakthrough-content-2025'
+    title: '🚀 NEWTODAY: ContinuousIntelligenceGenAISupplyChain ResilienceAutonomousCloudSecurity'
+    description: 'Justreleased! Real-timeAIdecisioning at100M+ events/secself-healingsupplychains with99.7% uptimeandautonomousthreat neutralizationin <5seconds. Transformyouroperations now.'
+    ctaText: 'ReadtheLatest Articles'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-01'
+  }
   {
-    id: 'continuous-intelligence-oct-2025',
-    title:
-      '⚡ NEW: Continuous Intelligence Platforms — 100M Events/Second with Sub-50ms Latency',
-    description:
-      '$215M+ annual value from instant automated decisions. Real-time AI decisioning revolutionizing enterprise operations with 96% accuracy at unprecedented scale.',
-    ctaText: 'Discover Continuous Intelligence',
-    ctaLink: '/blog/continuous-intelligence-realtime-decisioning-2025',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'continuous-intelligence-oct-2025'
+    title: '⚡ NEW: ContinuousIntelligencePlatforms — 100MEvents/SecondwithSub-50msLatency'
+    description: '$215M+ annualvaluefrom instantautomateddecisions. Real-timeAIdecisioning revolutionizingenterpriseoperations with96% accuracyatunprecedented scale.'
+    ctaText: 'DiscoverContinuousIntelligence'
+    ctaLink: '/blog/continuous-intelligence-realtime-decisioning-2025'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'genai-supply-chain-oct-2025',
-    title:
-      '🔄 NEW: GenAI Supply Chain Resilience — 99.7% Uptime During Any Disruption',
-    description:
-      'Self-healing supply chains that adapt in real-time. 78% faster recovery from disruptions and $180M+ savings through intelligent resilience and adaptive networks.',
-    ctaText: 'Build Resilient Supply Chains',
-    ctaLink: '/blog/genai-supply-chain-resilience-2025',
-    variant: 'info',
-    icon: '🔄',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'genai-supply-chain-oct-2025'
+    title: '🔄 NEW: GenAISupplyChain Resilience — 99.7% UptimeDuringAny Disruption'
+    description: 'Self-healingsupplychains thatadaptin real-time. 78% fasterrecoveryfrom disruptionsand $180M+ savingsthroughintelligent resilienceandadaptive networks.'
+    ctaText: 'BuildResilientSupply Chains'
+    ctaLink: '/blog/genai-supply-chain-resilience-2025'
+    variant: 'info'
+    icon: '🔄'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'autonomous-security-oct-2025',
-    title:
-      '🛡️ NEW: Autonomous Cloud Security — 99.98% Threat Neutralization in <5 Seconds',
-    description:
-      'Self-defending infrastructure with AI-powered threat intelligence. 94% reduction in security workload through real-time autonomous defense without human intervention.',
-    ctaText: 'Explore Autonomous Security',
-    ctaLink: '/blog/autonomous-cloud-security-threat-intel-2025',
-    variant: 'warning',
-    icon: '🛡️',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'autonomous-security-oct-2025'
+    title: '🛡️ NEW: AutonomousCloudSecurity — 99.98% ThreatNeutralizationin <5Seconds'
+    description: 'Self-defendinginfrastructurewith AI-poweredthreatintelligence. 94% reductioninsecurity workloadthroughreal-timeautonomousdefense withouthumanintervention.'
+    ctaText: 'ExploreAutonomousSecurity'
+    ctaLink: '/blog/autonomous-cloud-security-threat-intel-2025'
+    variant: 'warning'
+    icon: '🛡️'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-breakthrough-new-content-2025',
-    title:
-      '🔥 JUST RELEASED: AI Security Zero Trust, Cloud-Native Kubernetes, Real-Time Streaming Analytics',
-    description:
-      'Revolutionary new content! 99.97% threat detection with AI Zero Trust, 10x faster ML deployment with Kubernetes, and sub-100ms insights from billions of events. Transform your enterprise today.',
-    ctaText: 'Explore Latest Breakthroughs',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🔥',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-breakthrough-new-content-2025'
+    title: '🔥 JUSTRELEASED: AISecurityZero TrustCloud-NativeKubernetesReal-TimeStreamingAnalytics'
+    description: 'Revolutionarynewcontent! 99.97% threatdetectionwith AIZeroTrust10xfasterML deploymentwithKubernetesandsub-100msinsightsfrom billionsofevents. Transformyourenterprise today.'
+    ctaText: 'ExploreLatestBreakthroughs'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🔥'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-security-zero-trust-oct-2025',
-    title:
-      '🛡️ NEW: AI Automation Security with Zero Trust — 99.97% Threat Detection',
-    description:
-      '89% reduction in security incidents with sub-second response times. $42M+ annual savings through intelligent defense systems.',
-    ctaText: 'Read Security Guide',
-    ctaLink: '/blog/ai-automation-security-zero-trust-2025',
-    variant: 'warning',
-    icon: '🛡️',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-security-zero-trust-oct-2025'
+    title: '🛡️ NEW: AIAutomationSecurity withZeroTrust — 99.97% ThreatDetection'
+    description: '89% reductioninsecurity incidentswithsub-secondresponsetimes. $42M+ annualsavingsthrough intelligentdefensesystems.'
+    ctaText: 'ReadSecurityGuide'
+    ctaLink: '/blog/ai-automation-security-zero-trust-2025'
+    variant: 'warning'
+    icon: '🛡️'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'cloud-native-kubernetes-oct-2025',
-    title:
-      '☁️ NEW: Cloud-Native AI on Kubernetes — 10x Faster Deployment, 85% Cost Reduction',
-    description:
-      'Transform ML operations with container orchestration. 99.99% uptime and seamless scaling from prototype to production.',
-    ctaText: 'Master Cloud-Native AI',
-    ctaLink: '/blog/cloud-native-ai-platforms-kubernetes-2025',
-    variant: 'info',
-    icon: '☁️',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'cloud-native-kubernetes-oct-2025'
+    title: '☁️ NEW: Cloud-NativeAIon Kubernetes — 10xFasterDeployment85% CostReduction'
+    description: 'TransformMLoperations withcontainerorchestration. 99.99% uptimeandseamless scalingfromprototype toproduction.'
+    ctaText: 'MasterCloud-NativeAI'
+    ctaLink: '/blog/cloud-native-ai-platforms-kubernetes-2025'
+    variant: 'info'
+    icon: '☁️'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'real-time-analytics-oct-2025',
-    title:
-      '⚡ NEW: Real-Time AI Analytics — Process Billions of Events in Sub-100ms',
-    description:
-      '$87M+ annual value from instant insights. 97% accuracy while handling 10TB+ streaming data daily with infinite scale.',
-    ctaText: 'Unlock Real-Time Intelligence',
-    ctaLink: '/blog/real-time-ai-analytics-streaming-2025',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'real-time-analytics-oct-2025'
+    title: '⚡ NEW: Real-TimeAIAnalytics — ProcessBillionsof EventsinSub-100ms'
+    description: '$87M+ annualvaluefrom instantinsights. 97% accuracywhilehandling 10TB+ streamingdatadaily withinfinitescale.'
+    ctaText: 'UnlockReal-TimeIntelligence'
+    ctaLink: '/blog/real-time-ai-analytics-streaming-2025'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-new-content-2025',
-    title:
-      '🚀 NEW TODAY: Multi-Agent Orchestration, Sub-10ms Vector Search, Autonomous Pipelines',
-    description:
-      'Fresh content just released! Coordinate 10,000+ agents with 99.99% reliability, achieve sub-10ms semantic search at billion-scale, and build self-healing data infrastructure. Transform your AI operations now.',
-    ctaText: 'Read the Latest',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-new-content-2025'
+    title: '🚀 NEWTODAY: Multi-AgentOrchestrationSub-10msVectorSearchAutonomousPipelines'
+    description: 'Freshcontentjust released! Coordinate10000+ agentswith99.99% reliabilityachievesub-10mssemanticsearch atbillion-scaleandbuildself-healingdatainfrastructure. TransformyourAI operationsnow.'
+    ctaText: 'ReadtheLatest'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'multiagent-orchestration-oct-2025',
-    title:
-      '🤖 BREAKTHROUGH: Multi-Agent Orchestration — 10,000+ Agents, 99.99% Reliability',
-    description:
-      'Coordinate thousands of specialized AI agents at enterprise scale. 73% cost reduction, 92% faster responses, and proven patterns for production deployment.',
-    ctaText: 'Master Multi-Agent Systems',
-    ctaLink: '/blog/ai-2025-october-multiagent-orchestration-platforms',
-    variant: 'success',
-    icon: '🤖',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'multiagent-orchestration-oct-2025'
+    title: '🤖 BREAKTHROUGH: Multi-AgentOrchestration — 10000+ Agents99.99% Reliability'
+    description: 'Coordinatethousandsof specializedAIagents atenterprisescale. 73% costreduction92% fasterresponsesandprovenpatterns forproductiondeployment.'
+    ctaText: 'MasterMulti-AgentSystems'
+    ctaLink: '/blog/ai-2025-october-multiagent-orchestration-platforms'
+    variant: 'success'
+    icon: '🤖'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'vector-search-optimization-oct-2025',
-    title:
-      '⚡ NEW: Real-Time Embedding Optimization — Sub-10ms at Billion-Scale',
-    description:
-      'Lightning-fast vector search with 94% latency reduction and 67% cost savings. HNSW, quantization, and caching strategies for production RAG systems.',
-    ctaText: 'Optimize Vector Search',
-    ctaLink: '/blog/ai-2025-october-real-time-embedding-optimization',
-    variant: 'info',
-    icon: '⚡',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'vector-search-optimization-oct-2025'
+    title: '⚡ NEW: Real-TimeEmbeddingOptimization — Sub-10msatBillion-Scale'
+    description: 'Lightning-fastvectorsearch with94% latencyreductionand 67% costsavings. HNSWquantizationandcachingstrategies forproductionRAG systems.'
+    ctaText: 'OptimizeVectorSearch'
+    ctaLink: '/blog/ai-2025-october-real-time-embedding-optimization'
+    variant: 'info'
+    icon: '⚡'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'autonomous-pipelines-oct-2025',
-    title:
-      '🔧 NEW: Autonomous Data Pipelines — 500TB Daily with 99.95% Reliability',
-    description:
-      'Self-healing infrastructure that processes massive data with 87% less manual work. Build pipelines that manage themselves at enterprise scale.',
-    ctaText: 'Build Autonomous Pipelines',
-    ctaLink: '/blog/ai-2025-october-autonomous-data-pipelines',
-    variant: 'info',
-    icon: '🔧',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'autonomous-pipelines-oct-2025'
+    title: '🔧 NEW: AutonomousDataPipelines — 500TBDailywith 99.95% Reliability'
+    description: 'Self-healinginfrastructurethat processesmassivedata with87% lessmanualwork. Buildpipelinesthat managethemselvesat enterprisescale.'
+    ctaText: 'BuildAutonomousPipelines'
+    ctaLink: '/blog/ai-2025-october-autonomous-data-pipelines'
+    variant: 'info'
+    icon: '🔧'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-01-quantum-mesh-edge-2025',
-    title:
-      '🌟 JUST RELEASED: Quantum Neural Networks, Autonomous AI Mesh, <50ms Edge GenAI',
-    description:
-      '3 revolutionary articles just dropped! 500x faster training, self-organizing intelligence, and ultra-low latency at global scale. The future of enterprise AI is here.',
-    ctaText: 'Explore the Breakthroughs',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🌟',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-quantum-mesh-edge-2025'
+    title: '🌟 JUSTRELEASED: QuantumNeuralNetworksAutonomousAIMesh<50msEdgeGenAI'
+    description: '3revolutionaryarticles justdropped! 500xfastertrainingself-organizingintelligenceandultra-lowlatencyat globalscale. Thefutureof enterpriseAIis here.'
+    ctaText: 'ExploretheBreakthroughs'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🌟'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'agentic-swarm-intelligence-oct-2025',
-    title:
-      '🤖 NEW TODAY: Agentic Swarm Intelligence — Coordinate 10,000+ AI Agents',
-    description:
-      'Deploy distributed AI agent swarms with 99.99% reliability and 87% cost reduction. Autonomous coordination at enterprise scale with sub-second latency.',
-    ctaText: 'Explore Agent Swarms',
-    ctaLink: '/blog/agentic-swarm-intelligence-enterprise-2025',
-    variant: 'success',
-    icon: '🤖',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'agentic-swarm-intelligence-oct-2025'
+    title: '🤖 NEWTODAY: AgenticSwarmIntelligence — Coordinate10000+ AIAgents'
+    description: 'DeploydistributedAI agentswarmswith 99.99% reliabilityand87% costreduction. Autonomouscoordinationat enterprisescalewith sub-secondlatency.'
+    ctaText: 'ExploreAgentSwarms'
+    ctaLink: '/blog/agentic-swarm-intelligence-enterprise-2025'
+    variant: 'success'
+    icon: '🤖'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'quantum-supply-chain-oct-2025',
-    title:
-      '⚡ NEW TODAY: Quantum-Inspired Supply Chain — Solve in Seconds, Not Days',
-    description:
-      'Optimize 50,000+ variables in under 60 seconds with 10,000x faster performance. $127M annual savings and 94% cost reduction for global supply chains.',
-    ctaText: 'Optimize Your Supply Chain',
-    ctaLink: '/blog/quantum-inspired-supply-chain-optimization-2025',
-    variant: 'info',
-    icon: '⚡',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'quantum-supply-chain-oct-2025'
+    title: '⚡ NEWTODAY: Quantum-InspiredSupplyChain — SolveinSecondsNotDays'
+    description: 'Optimize50000+ variablesinunder 60secondswith 10000xfasterperformance. $127Mannualsavings and94% costreductionfor globalsupplychains.'
+    ctaText: 'OptimizeYourSupply Chain'
+    ctaLink: '/blog/quantum-inspired-supply-chain-optimization-2025'
+    variant: 'info'
+    icon: '⚡'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'neural-architecture-search-oct-2025',
-    title:
-      '🧠 NEW TODAY: Neural Architecture Search — Design AI Models in Hours',
-    description:
-      'Automate model discovery with 1000x faster design and 97% accuracy improvements. Build state-of-the-art models without ML PhDs.',
-    ctaText: 'Automate AI Development',
-    ctaLink: '/blog/neural-architecture-search-automation-2025',
-    variant: 'info',
-    icon: '🧠',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'neural-architecture-search-oct-2025'
+    title: '🧠 NEWTODAY: NeuralArchitectureSearch — DesignAIModels inHours'
+    description: 'Automatemodeldiscovery with1000xfaster designand97% accuracyimprovements. Buildstate-of-the-artmodelswithout MLPhDs.'
+    ctaText: 'AutomateAIDevelopment'
+    ctaLink: '/blog/neural-architecture-search-automation-2025'
+    variant: 'info'
+    icon: '🧠'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-breakthrough-2025',
-    title:
-      '🚀 BREAKTHROUGH: Neuromorphic AI, Sovereign Data Centers, Vector-First Databases',
-    description:
-      '3 game-changing articles just dropped! 1000x energy efficiency, national AI independence, and 100x faster queries. Transform your enterprise AI infrastructure today.',
-    ctaText: 'Explore the Revolution',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-breakthrough-2025'
+    title: '🚀 BREAKTHROUGH: NeuromorphicAISovereignDataCentersVector-FirstDatabases'
+    description: '3game-changingarticlesjust dropped! 1000xenergyefficiencynationalAIindependenceand100xfaster queries. Transformyourenterprise AIinfrastructuretoday.'
+    ctaText: 'ExploretheRevolution'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'neuromorphic-ai-chips-oct-2025',
-    title: '⚡ NEW: Neuromorphic AI Chips — 1000x Energy Efficiency',
-    description:
-      'Brain-inspired computing delivering sub-millisecond latency with 99% less power. The future of enterprise AI hardware is here.',
-    ctaText: 'Discover Neuromorphic AI',
-    ctaLink: '/blog/ai-neuromorphic-chips-2025',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'neuromorphic-ai-chips-oct-2025'
+    title: '⚡ NEW: NeuromorphicAIChips — 1000xEnergyEfficiency'
+    description: 'Brain,-inspiredcomputingdelivering sub-millisecondlatencywith 99% lesspower. Thefutureof enterpriseAIhardware ishere.'
+    ctaText: 'DiscoverNeuromorphicAI'
+    ctaLink: '/blog/ai-neuromorphic-chips-2025'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'sovereign-ai-centers-oct-2025',
-    title: '🛡️ NEW: Sovereign AI Data Centers — National AI Independence',
-    description:
-      '$100B+ investment reshaping global AI. Build domestically controlled infrastructure ensuring data sovereignty and compliance.',
-    ctaText: 'Build Sovereign AI',
-    ctaLink: '/blog/sovereign-ai-data-centers-2025',
-    variant: 'info',
-    icon: '🛡️',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'sovereign-ai-centers-oct-2025'
+    title: '🛡️ NEW: SovereignAIData Centers — NationalAIIndependence'
+    description: '$100B+ investmentreshapingglobal AI. Builddomesticallycontrolled infrastructureensuringdata sovereigntyandcompliance.'
+    ctaText: 'BuildSovereignAI'
+    ctaLink: '/blog/sovereign-ai-data-centers-2025'
+    variant: 'info'
+    icon: '🛡️'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-native-databases-oct-2025',
-    title: '💾 NEW: AI-Native Databases — 100x Faster Queries',
-    description:
-      'Vector-first architecture with semantic search and sub-10ms latency at billion-vector scale. Revolutionize your AI applications.',
-    ctaText: 'Upgrade Your Database',
-    ctaLink: '/blog/ai-native-databases-2025',
-    variant: 'info',
-    icon: '💾',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-native-databases-oct-2025'
+    title: '💾 NEW: AI-NativeDatabases — 100xFasterQueries'
+    description: 'Vector-firstarchitecturewith semanticsearchand sub-10mslatencyat billion-vectorscale. RevolutionizeyourAI applications.'
+    ctaText: 'UpgradeYourDatabase'
+    ctaLink: '/blog/ai-native-databases-2025'
+    variant: 'info'
+    icon: '💾'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-self-healing-infrastructure-oct-2025',
-    title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime Guaranteed',
-    description:
-      'Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.',
-    ctaText: 'Explore Self-Healing AI',
-    ctaLink: '/blog/ai-self-healing-infrastructure-2025',
-    variant: 'success',
-    icon: '🔄',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-self-healing-infrastructure-oct-2025'
+    title: '🔄 NEW: AISelf-HealingInfrastructure — 99.99% UptimeGuaranteed'
+    description: 'Autonomousinfrastructuredetecting andfixingissues inreal-time. 95% MTTRreductionzerohumanintervention.'
+    ctaText: 'ExploreSelf-HealingAI'
+    ctaLink: '/blog/ai-self-healing-infrastructure-2025'
+    variant: 'success'
+    icon: '🔄'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'generative-ai-code-assistants-oct-2025',
-    title: '💻 NEW: AI Code Assistants — 10x Developer Productivity',
-    description:
-      'Next-gen AI pair programming that writes production-ready code. Ship 5x faster with 40% fewer bugs.',
-    ctaText: 'Boost Your Dev Team',
-    ctaLink: '/blog/generative-ai-code-assistants-2025',
-    variant: 'info',
-    icon: '💻',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'generative-ai-code-assistants-oct-2025'
+    title: '💻 NEW: AICodeAssistants — 10xDeveloperProductivity'
+    description: 'Next-genAIpair programmingthatwrites production-readycode. Ship5xfaster with40% fewerbugs.'
+    ctaText: 'BoostYourDev Team'
+    ctaLink: '/blog/generative-ai-code-assistants-2025'
+    variant: 'info'
+    icon: '💻'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'edge-ai-privacy-analytics-oct-2025',
-    title: '🔐 NEW: Privacy-Preserving Analytics — 95%+ Accuracy, Zero PII',
-    description:
-      'GDPR/CCPA compliant analytics by design. Extract insights without collecting personal data.',
-    ctaText: 'Learn Privacy-First AI',
-    ctaLink: '/blog/edge-ai-privacy-preserving-analytics-2025',
-    variant: 'success',
-    icon: '🔐',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'edge-ai-privacy-analytics-oct-2025'
+    title: '🔐 NEW: Privacy-PreservingAnalytics — 95%+ AccuracyZeroPII'
+    description: 'GDPR/CCPAcompliantanalytics bydesign. Extractinsightswithout collectingpersonaldata.'
+    ctaText: 'LearnPrivacy-FirstAI'
+    ctaLink: '/blog/edge-ai-privacy-preserving-analytics-2025'
+    variant: 'success'
+    icon: '🔐'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-supply-chain-optimization-oct-2025',
-    title: '📦 NEW: AI Supply Chain Optimization — 35% Cost Savings',
-    description:
-      'Transform operations with intelligent demand forecasting and logistics automation. 45% fulfillment boost.',
-    ctaText: 'Optimize Your Supply Chain',
-    ctaLink: '/blog/ai-driven-supply-chain-optimization-2025',
-    variant: 'info',
-    icon: '📦',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-supply-chain-optimization-oct-2025'
+    title: '📦 NEW: AISupplyChain Optimization — 35% CostSavings'
+    description: 'Transformoperationswith intelligentdemandforecasting andlogisticsautomation. 45% fulfillmentboost.'
+    ctaText: 'OptimizeYourSupply Chain'
+    ctaLink: '/blog/ai-driven-supply-chain-optimization-2025'
+    variant: 'info'
+    icon: '📦'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-ethics-operational-blueprint-2026',
-    title: '⚖️ AI Ethics Operational Blueprint 2026',
-    description:
-      'Bias tests, fairness SLAs, and audit trails teams adopt. Ship fast, stay compliant.',
-    ctaText: 'Read the blueprint',
-    ctaLink: '/blog/ai-ethics-operational-blueprint-2026',
-    variant: 'info',
-    icon: '⚖️',
-    featured: true,
-    priority: 5,
-    startDate: '2025-09-30',
-  },
+    id: 'ai-ethics-operational-blueprint-2026'
+    title: '⚖️ AIEthicsOperational Blueprint2026'
+    description: 'BiastestsfairnessSLAsandaudittrails teamsadopt. Shipfaststaycompliant.'
+    ctaText: 'Readtheblueprint'
+    ctaLink: '/blog/ai-ethics-operational-blueprint-2026'
+    variant: 'info'
+    icon: '⚖️'
+    featured: true
+    priority:  5
+    startDate: '2025-09-30'
+  }
   {
-    id: 'edge-rag-blueprint-2026',
-    title: '🛰️ Edge RAG Blueprint 2026 — <100ms Private Answers',
-    description:
-      'Freshness TTLs, hybrid retrieval, and on-device caches for trustworthy answers.',
-    ctaText: 'Explore Edge RAG',
-    ctaLink: '/blog/edge-rag-blueprint-2026',
-    variant: 'success',
-    icon: '🛰️',
-    featured: true,
-    priority: 2,
-    startDate: '2025-09-30',
-  },
+    id: 'edge-rag-blueprint-2026'
+    title: '🛰️ EdgeRAGBlueprint 2026 — <100msPrivateAnswers'
+    description: 'FreshnessTTLshybridretrievalandon-devicecachesfor trustworthyanswers.'
+    ctaText: 'ExploreEdgeRAG'
+    ctaLink: '/blog/edge-rag-blueprint-2026'
+    variant: 'success'
+    icon: '🛰️'
+    featured: true
+    priority:  2
+    startDate: '2025-09-30'
+  }
   {
-    id: 'platform-roi-scorecards-2026',
-    title: '📈 Platform ROI Scorecards 2026',
-    description:
-      'Connect golden paths to adoption, SLOs, and revenue with actionable scorecards.',
-    ctaText: 'See the guide',
-    ctaLink: '/blog/platform-roi-scorecards-2026',
-    variant: 'info',
-    icon: '📈',
-    featured: true,
-    priority: 3,
-    startDate: '2025-09-30',
-  },
+    id: 'platform-roi-scorecards-2026'
+    title: '📈 PlatformROIScorecards 2026'
+    description: 'Connectgoldenpaths toadoptionSLOsandrevenuewith actionablescorecards.'
+    ctaText: 'Seetheguide'
+    ctaLink: '/blog/platform-roi-scorecards-2026'
+    variant: 'info'
+    icon: '📈'
+    featured: true
+    priority:  3
+    startDate: '2025-09-30'
+  }
   {
-    id: 'multimodal-ai-launch',
-    title: '🎭 Multimodal AI Revolution - Just Released!',
-    description:
-      'Master unified vision-language-audio AI achieving 98% accuracy. Transform your applications with cutting-edge multimodal capabilities.',
-    ctaText: 'Explore Multimodal AI',
-    ctaLink: '/blog/multimodal-ai-revolution-2025',
-    variant: 'success',
-    icon: '🎭',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-15',
-  },
+    id: 'multimodal-ai-launch'
+    title: '🎭 MultimodalAIRevolution - JustReleased!'
+    description: 'Masterunifiedvision-language-audioAIachieving 98% accuracy. Transformyourapplications withcutting-edgemultimodalcapabilities.'
+    ctaText: 'ExploreMultimodalAI'
+    ctaLink: '/blog/multimodal-ai-revolution-2025'
+    variant: 'success'
+    icon: '🎭'
+    featured: true
+    priority:  1
+    startDate: '2025-10-15'
+  }
   {
-    id: 'blockchain-ai-integration',
-    title: '⛓️ Blockchain-AI Integration Now Available',
-    description:
-      'Combine blockchain immutability with AI intelligence for trustless, verifiable systems. Decentralized AI governance at scale.',
-    ctaText: 'Learn About Blockchain-AI',
-    ctaLink: '/blog/blockchain-ai-integration-2025',
-    variant: 'info',
-    icon: '⛓️',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-15',
-  },
+    id: 'blockchain-ai-integration'
+    title: '⛓️ Blockchain-AIIntegrationNow Available'
+    description: 'Combineblockchainimmutability withAIintelligence fortrustlessverifiablesystems. DecentralizedAIgovernance atscale.'
+    ctaText: 'LearnAboutBlockchain-AI'
+    ctaLink: '/blog/blockchain-ai-integration-2025'
+    variant: 'info'
+    icon: '⛓️'
+    featured: true
+    priority:  2
+    startDate: '2025-10-15'
+  }
   {
-    id: 'green-ai-sustainability',
-    title: '🌱 Green AI: 90% Carbon Reduction Achieved',
-    description:
-      'Build sustainable AI systems with carbon-neutral ML at scale. Join the environmental revolution in AI.',
-    ctaText: 'Discover Green AI',
-    ctaLink: '/blog/green-ai-sustainability-2025',
-    variant: 'success',
-    icon: '🌱',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-15',
-  },
+    id: 'green-ai-sustainability'
+    title: '🌱 GreenAI: 90% CarbonReductionAchieved'
+    description: 'BuildsustainableAI systemswithcarbon-neutralMLat scale. Jointheenvironmental revolutioninAI.'
+    ctaText: 'DiscoverGreenAI'
+    ctaLink: '/blog/green-ai-sustainability-2025'
+    variant: 'success'
+    icon: '🌱'
+    featured: true
+    priority:  3
+    startDate: '2025-10-15'
+  }
   {
-    id: 'ai-predictive-maintenance',
-    title: '⚙️ AI Predictive Maintenance - 85% Downtime Reduction',
-    description:
-      'New service: Predict equipment failures with 98% accuracy. Reduce costs by 40% and eliminate unplanned downtime.',
-    ctaText: 'Get Started',
-    ctaLink: '/services/ai-predictive-maintenance',
-    variant: 'warning',
-    icon: '⚙️',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-15',
-  },
+    id: 'ai-predictive-maintenance'
+    title: '⚙️ AIPredictiveMaintenance - 85% DowntimeReduction'
+    description: 'Newservice: Predictequipmentfailures with98% accuracy. Reducecostsby 40% andeliminateunplanned downtime.'
+    ctaText: 'GetStarted'
+    ctaLink: '/services/ai-predictive-maintenance'
+    variant: 'warning'
+    icon: '⚙️'
+    featured: true
+    priority:  4
+    startDate: '2025-10-15'
+  }
   {
-    id: 'ai-talent-acquisition',
-    title: '👥 AI Talent Acquisition - 10x Faster Hiring',
-    description:
-      'Revolutionary recruiting with AI matching candidates 10x faster with 95% accuracy. Transform your HR operations.',
-    ctaText: 'Explore Solution',
-    ctaLink: '/services/ai-talent-acquisition',
-    variant: 'info',
-    icon: '👥',
-    featured: true,
-    priority: 5,
-    startDate: '2025-10-15',
-  },
+    id: 'ai-talent-acquisition'
+    title: '👥 AITalentAcquisition - 10xFasterHiring'
+    description: 'Revolutionaryrecruitingwith AImatchingcandidates 10xfasterwith 95% accuracy. TransformyourHR operations.'
+    ctaText: 'ExploreSolution'
+    ctaLink: '/services/ai-talent-acquisition'
+    variant: 'info'
+    icon: '👥'
+    featured: true
+    priority:  5
+    startDate: '2025-10-15'
+  }
   {
-    id: 'oct-30-new-content-drop',
-    title:
-      '🚀 New Content Drop: Platform ROI, Supply Chain v2, Edge Experiments',
-    description:
-      'Three fresh deep-dives: value realization, signed attestations, and sub‑100ms privacy‑first experiments.',
-    ctaText: 'Read the latest',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-30',
-  },
+    id: 'oct-30-new-content-drop'
+    title: '🚀 NewContentDrop: PlatformROISupplyChainv2EdgeExperiments'
+    description: 'Threefreshdeep-dives: valuerealizationsignedattestationsandsub‑100msprivacy‑firstexperiments.'
+    ctaText: 'Readthelatest'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-30'
+  }
   {
-    id: 'oct-01-2025-mega-breakthrough-launch',
-    title: '🎉 MEGA LAUNCH: 6 Revolutionary AI Breakthroughs Released Today!',
-    description:
-      'Game-changing content just dropped! Autonomous DevOps, AI Incident Response in <60s, Enterprise LLM Fine-Tuning, Intelligent Cost Optimization, Zero-Latency Edge, and Human-Level Conversational AI. Transform your enterprise now!',
-    ctaText: 'Explore All Breakthroughs',
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🎉',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-01',
-  },
+    id: 'oct-01-2025-mega-breakthrough-launch'
+    title: '🎉 MEGALAUNCH: 6RevolutionaryAI BreakthroughsReleasedToday!'
+    description: 'Game-changingcontentjust dropped! AutonomousDevOpsAIIncidentResponse in <60sEnterpriseLLMFine-TuningIntelligentCostOptimizationZero-LatencyEdgeandHuman-LevelConversationalAI. Transformyourenterprise now!'
+    ctaText: 'ExploreAllBreakthroughs'
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🎉'
+    featured: true
+    priority:  0
+    startDate: '2025-10-01'
+  }
   {
-    id: 'autonomous-devops-oct-01-2025',
-    title: '⚡ NEW: Autonomous DevOps - 80% Faster Releases with Zero Downtime',
-    description:
-      'Revolutionary self-managing DevOps systems that optimize in real-time. Achieve 99.99% uptime and eliminate manual intervention with AI-driven automation.',
-    ctaText: 'Discover Autonomous DevOps',
-    ctaLink: '/blog/autonomous-devops-revolution-2025',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'autonomous-devops-oct-01-2025'
+    title: '⚡ NEW: AutonomousDevOps - 80% FasterReleaseswith ZeroDowntime'
+    description: 'Revolutionaryself-managingDevOpssystems thatoptimizein real-time. Achieve99.99% uptimeandeliminate manualinterventionwith AI-drivenautomation.'
+    ctaText: 'DiscoverAutonomousDevOps'
+    ctaLink: '/blog/autonomous-devops-revolution-2025'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'ai-incident-response-oct-01-2025',
-    title: '🚨 NEW: AI Incident Response - Resolve Issues in Under 60 Seconds',
-    description:
-      '95% faster MTTR, 99.8% incident prevention, and $25M+ annual savings. Autonomous detection, root cause analysis, and self-healing remediation.',
-    ctaText: 'Master Incident Response',
-    ctaLink: '/blog/ai-powered-incident-response-2025',
-    variant: 'warning',
-    icon: '🚨',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-incident-response-oct-01-2025'
+    title: '🚨 NEW: AIIncidentResponse - ResolveIssuesin Under60Seconds'
+    description: '95% fasterMTTR99.8% incidentpreventionand $25M+ annualsavings. Autonomousdetectionrootcauseanalysisandself-healingremediation.'
+    ctaText: 'MasterIncidentResponse'
+    ctaLink: '/blog/ai-powered-incident-response-2025'
+    variant: 'warning'
+    icon: '🚨'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
   {
-    id: 'enterprise-llm-fine-tuning-oct-01-2025',
-    title: '🧠 NEW: Enterprise LLM Fine-Tuning - 10x Better Performance',
-    description:
-      'Build domain-specific LLMs that outperform GPT-4 for your use cases. 10x accuracy improvement, 70% cost reduction, full data sovereignty.',
-    ctaText: 'Start Fine-Tuning',
-    ctaLink: '/blog/enterprise-llm-fine-tuning-2025',
-    variant: 'info',
-    icon: '🧠',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-01',
-  },
+    id: 'enterprise-llm-fine-tuning-oct-01-2025'
+    title: '🧠 NEW: EnterpriseLLMFine-Tuning - 10xBetterPerformance'
+    description: 'Builddomain-specificLLMsthat outperformGPT-4foryour usecases. 10xaccuracyimprovement70% costreductionfulldatasovereignty.'
+    ctaText: 'StartFine-Tuning'
+    ctaLink: '/blog/enterprise-llm-fine-tuning-2025'
+    variant: 'info'
+    icon: '🧠'
+    featured: true
+    priority:  3
+    startDate: '2025-10-01'
+  }
   {
-    id: 'intelligent-cost-optimization-oct-01-2025',
-    title: '💰 NEW: AI Cost Optimization - Save 40-65% on Cloud Spend',
-    description:
-      'Revolutionary AI platforms that continuously optimize cloud costs. Predict anomalies, auto-remediate waste. Save $50M+ annually with zero manual effort.',
-    ctaText: 'Optimize Your Costs',
-    ctaLink: '/blog/intelligent-cost-optimization-platforms-2025',
-    variant: 'success',
-    icon: '💰',
-    featured: true,
-    priority: 4,
-    startDate: '2025-10-01',
-  },
+    id: 'intelligent-cost-optimization-oct-01-2025'
+    title: '💰 NEW: AICostOptimization - Save40-65% onCloudSpend'
+    description: 'RevolutionaryAIplatforms thatcontinuouslyoptimize cloudcosts. Predictanomaliesauto-remediatewaste. Save $50M+ annuallywithzero manualeffort.'
+    ctaText: 'OptimizeYourCosts'
+    ctaLink: '/blog/intelligent-cost-optimization-platforms-2025'
+    variant: 'success'
+    icon: '💰'
+    featured: true
+    priority:  4
+    startDate: '2025-10-01'
+  }
   {
-    id: 'zero-latency-edge-oct-01-2025',
-    title:
-      '⚡ NEW: Zero-Latency Edge Computing - Sub-Millisecond Global Processing',
-    description:
-      'Next-gen edge architecture delivering <1ms response times worldwide. Process billions of requests with 99.999% uptime and intelligent orchestration.',
-    ctaText: 'Achieve Zero Latency',
-    ctaLink: '/blog/zero-latency-edge-computing-2025',
-    variant: 'info',
-    icon: '⚡',
-    featured: true,
-    priority: 5,
-    startDate: '2025-10-01',
-  },
+    id: 'zero-latency-edge-oct-01-2025'
+    title: '⚡ NEW: Zero-LatencyEdgeComputing - Sub-MillisecondGlobalProcessing'
+    description: 'Next-genedgearchitecture delivering <1msresponsetimes worldwide. Processbillionsof requestswith99.999% uptimeandintelligent orchestration.'
+    ctaText: 'AchieveZeroLatency'
+    ctaLink: '/blog/zero-latency-edge-computing-2025'
+    variant: 'info'
+    icon: '⚡'
+    featured: true
+    priority:  5
+    startDate: '2025-10-01'
+  }
   {
-    id: 'conversational-ai-oct-01-2025',
-    title: '💬 NEW: Conversational AI Platforms - Human-Level Interactions',
-    description:
-      '98% intent accuracy with natural human-level interactions. Handle 10M+ conversations simultaneously with multi-language support and contextual memory.',
-    ctaText: 'Transform Customer Experience',
-    ctaLink: '/blog/conversational-ai-enterprise-platforms-2025',
-    variant: 'success',
-    icon: '💬',
-    featured: true,
-    priority: 6,
-    startDate: '2025-10-01',
-  },
+    id: 'conversational-ai-oct-01-2025'
+    title: '💬 NEW: ConversationalAIPlatforms - Human-LevelInteractions'
+    description: '98% intentaccuracywith naturalhuman-levelinteractions. Handle10M+ conversationssimultaneouslywith multi-languagesupportand contextualmemory.'
+    ctaText: 'TransformCustomerExperience'
+    ctaLink: '/blog/conversational-ai-enterprise-platforms-2025'
+    variant: 'success'
+    icon: '💬'
+    featured: true
+    priority:  6
+    startDate: '2025-10-01'
+  }
   {
-    id: 'oct-03-continuous-intelligence-2025',
-    title: '⚡ NEW: Continuous Intelligence — 100M Events/sec under 50ms',
-    description:
-      'Turn streams into actions with sub‑50ms decisions, KPIs, and safe rollback.',
-    ctaText: 'Build Continuous Intelligence',
-    ctaLink: '/blog/ai-2025-oct-03-continuous-intelligence-platforms',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-03',
-  },
+    id: 'oct-03-continuous-intelligence-2025'
+    title: '⚡ NEW: ContinuousIntelligence — 100MEvents/secunder50ms'
+    description: 'Turnstreamsinto actionswithsub‑50msdecisionsKPIsandsaferollback.'
+    ctaText: 'BuildContinuousIntelligence'
+    ctaLink: '/blog/ai-2025-oct-03-continuous-intelligence-platforms'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  0
+    startDate: '2025-10-03'
+  }
   {
-    id: 'oct-03-autonomous-cloud-security-2025',
-    title: '🛡️ NEW: Autonomous Cloud Security — Neutralize Threats in <5s',
-    description:
-      'Self‑defending infra with budgeted actions, canaries, and instant rollback.',
-    ctaText: 'Explore Autonomous Security',
-    ctaLink: '/blog/ai-2025-oct-03-autonomous-cloud-security',
-    variant: 'warning',
-    icon: '🛡️',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-03',
-  },
+    id: 'oct-03-autonomous-cloud-security-2025'
+    title: '🛡️ NEW: AutonomousCloudSecurity — NeutralizeThreatsin <5s'
+    description: 'Self‑defendinginfrawith budgetedactionscanariesandinstantrollback.'
+    ctaText: 'ExploreAutonomousSecurity'
+    ctaLink: '/blog/ai-2025-oct-03-autonomous-cloud-security'
+    variant: 'warning'
+    icon: '🛡️'
+    featured: true
+    priority:  1
+    startDate: '2025-10-03'
+  }
   {
-    id: 'oct-03-quantum-supply-chain-2025',
-    title: '🧮 NEW: Quantum Supply Chain — Solve in Minutes, Not Days',
-    description:
-      'Hybrid quantum + ML optimization with 35% cost reduction and 94% SLA adherence.',
-    ctaText: 'Optimize Supply Chains',
-    ctaLink: '/blog/ai-2025-oct-03-quantum-supply-chain-optimization',
-    variant: 'info',
-    icon: '🧮',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-03',
-  },
+    id: 'oct-03-quantum-supply-chain-2025'
+    title: '🧮 NEW: QuantumSupplyChain — SolveinMinutesNotDays'
+    description: 'Hybridquantum + MLoptimizationwith 35% costreductionand 94% SLAadherence.'
+    ctaText: 'OptimizeSupplyChains'
+    ctaLink: '/blog/ai-2025-oct-03-quantum-supply-chain-optimization'
+    variant: 'info'
+    icon: '🧮'
+    featured: true
+    priority:  2
+    startDate: '2025-10-03'
+  }
 ];
 
-// Oct 1, 2025 – Promote three new articles across the site
-enhancedPromotionalBanners.unshift(
+// Oct12025 – Promotethreenew articlesacrossthe siteenhancedPromotionalBanners.unshift(
   {
-    id: 'oct-08-value-realization-2025',
-    title:
-      '🚀 NEW TODAY: Enterprise AI Value Realization — 90 Days to Outcomes',
-    description:
-      'KPI scorecards, evaluator gates, tiered routing + caches, and rollback-first ops.',
-    ctaText: 'Read the 90-Day Blueprint',
-    ctaLink: '/blog/enterprise-ai-value-realization-2025-10-08',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-08',
-  },
+    id: 'oct-08-value-realization-2025'
+    title: '🚀 NEWTODAY: EnterpriseAIValue Realization — 90Daysto Outcomes'
+    description: 'KPIscorecardsevaluatorgatestieredrouting + cachesandrollback-firstops.'
+    ctaText: 'Readthe90-DayBlueprint'
+    ctaLink: '/blog/enterprise-ai-value-realization-2025-10-08'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-08'
+  }
   {
-    id: 'ai-self-healing-infra-banner-2025',
-    title: '🔄 NEW: AI Self-Healing Infrastructure — 99.99% Uptime',
-    description:
-      'Autonomous infra detects and fixes issues in real time. 95% MTTR reduction with KPI‑linked canaries and instant rollback.',
-    ctaText: 'Explore Self-Healing AI',
-    ctaLink: '/blog/ai-self-healing-infrastructure-2025',
-    variant: 'success',
-    icon: '🔄',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-01',
-  },
+    id: 'ai-self-healing-infra-banner-2025'
+    title: '🔄 NEW: AISelf-HealingInfrastructure — 99.99% Uptime'
+    description: 'Autonomousinfradetects andfixesissues inrealtime. 95% MTTRreductionwith KPI‑linkedcanariesand instantrollback.'
+    ctaText: 'ExploreSelf-HealingAI'
+    ctaLink: '/blog/ai-self-healing-infrastructure-2025'
+    variant: 'success'
+    icon: '🔄'
+    featured: true
+    priority:  0
+    startDate: '2025-10-01'
+  }
   {
-    id: 'genai-code-assistants-banner-2025',
-    title: '💻 NEW: Generative AI Code Assistants — 10x Productivity',
-    description:
-      'Copilot patterns with evaluator gates, safe refactors, and instant rollback. Ship 5x faster with fewer bugs.',
-    ctaText: 'Read the Engineering Guide',
-    ctaLink: '/blog/generative-ai-code-assistants-2025',
-    variant: 'info',
-    icon: '💻',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-01',
-  },
+    id: 'genai-code-assistants-banner-2025'
+    title: '💻 NEW: GenerativeAICode Assistants — 10xProductivity'
+    description: 'Copilotpatternswith evaluatorgatessaferefactorsandinstantrollback. Ship5xfaster withfewerbugs.'
+    ctaText: 'ReadtheEngineering Guide'
+    ctaLink: '/blog/generative-ai-code-assistants-2025'
+    variant: 'info'
+    icon: '💻'
+    featured: true
+    priority:  1
+    startDate: '2025-10-01'
+  }
   {
-    id: 'edge-privacy-analytics-banner-2025',
-    title: '🔐 NEW: Edge Privacy‑Preserving Analytics — Zero PII',
-    description:
-      'Scoped IDs, on‑device aggregation, and DP noise deliver insights in <100ms—fully compliant by design.',
-    ctaText: 'Learn Privacy‑First Analytics',
-    ctaLink: '/blog/edge-ai-privacy-preserving-analytics-2025',
-    variant: 'warning',
-    icon: '🔐',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-01',
-  },
+    id: 'edge-privacy-analytics-banner-2025'
+    title: '🔐 NEW: EdgePrivacy‑PreservingAnalytics — ZeroPII'
+    description: 'ScopedIDson‑deviceaggregationandDPnoise deliverinsightsin <100ms—fullycompliantby design.'
+    ctaText: 'LearnPrivacy‑FirstAnalytics'
+    ctaLink: '/blog/edge-ai-privacy-preserving-analytics-2025'
+    variant: 'warning'
+    icon: '🔐'
+    featured: true
+    priority:  2
+    startDate: '2025-10-01'
+  }
 );
 
-// Oct 8, 2025 – Promote three new posts
-enhancedPromotionalBanners.unshift(
+// Oct82025 – Promotethreenew postsenhancedPromotionalBanners.unshift(
   {
-    id: 'oct-08-2025-new-content-drop',
-    title:
-      '🚀 NEW TODAY (Oct 8): Governed Agents, Edge Private Analytics, Cache Strata v5',
-    description:
-      'Budgets + SLIs for 10k+ agents, zero‑PII analytics under 100ms, and cache tiers that cut cost 60–85%.',
-    ctaText: "Explore today's posts",
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-08',
-  },
+    id: 'oct-08-2025-new-content-drop'
+    title: '🚀 NEWTODAY (Oct8): GovernedAgentsEdgePrivateAnalyticsCacheStratav5'
+    description: 'Budgets + SLIsfor10k+ agentszero‑PIIanalyticsunder 100msandcachetiers thatcutcost 60–85%.'
+    ctaText: "Exploretoday'sposts"
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-08'
+  }
   {
-    id: 'oct-08-governed-multiagent-platforms',
-    title: '🛡️ Governed Multi‑Agent Platforms — Budgets, SLIs, Rollback',
-    description:
-      'Run 10k+ agents safely with budgeted tools, KPI‑linked SLIs, and instant rollback.',
-    ctaText: 'Read the playbook',
-    ctaLink: '/blog/ai-2025-oct-08-governed-multiagent-platforms',
-    variant: 'success',
-    icon: '🛡️',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-08',
-  },
+    id: 'oct-08-governed-multiagent-platforms'
+    title: '🛡️ GovernedMulti‑AgentPlatforms — BudgetsSLIsRollback'
+    description: 'Run10k+ agentssafelywith budgetedtoolsKPI‑linkedSLIsandinstantrollback.'
+    ctaText: 'Readtheplaybook'
+    ctaLink: '/blog/ai-2025-oct-08-governed-multiagent-platforms'
+    variant: 'success'
+    icon: '🛡️'
+    featured: true
+    priority:  1
+    startDate: '2025-10-08'
+  }
   {
-    id: 'oct-08-edge-private-analytics-v4',
-    title: '🔐 Edge Private Analytics v4 — Zero‑PII, <100ms',
-    description:
-      'Scoped IDs, on‑device aggregation, and DP noise for compliant insights without data risk.',
-    ctaText: 'Learn the blueprint',
-    ctaLink: '/blog/ai-2025-oct-08-edge-private-analytics-v4',
-    variant: 'info',
-    icon: '🔐',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-08',
-  },
+    id: 'oct-08-edge-private-analytics-v4'
+    title: '🔐 EdgePrivateAnalytics v4 — Zero‑PII<100ms'
+    description: 'ScopedIDson‑deviceaggregationandDPnoise forcompliantinsights withoutdatarisk.'
+    ctaText: 'Learntheblueprint'
+    ctaLink: '/blog/ai-2025-oct-08-edge-private-analytics-v4'
+    variant: 'info'
+    icon: '🔐'
+    featured: true
+    priority:  2
+    startDate: '2025-10-08'
+  }
   {
-    id: 'oct-08-cache-strata-v5',
-    title: '⚡ Cache Strata v5 — Features → Chunks → Answers',
-    description:
-      'Tiered caches with freshness windows and coalescing. 45% quality ↑, 60–85% cost ↓.',
-    ctaText: 'Read the cache guide',
-    ctaLink: '/blog/ai-2025-oct-08-cache-strata-v5',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-08',
-  },
+    id: 'oct-08-cache-strata-v5'
+    title: '⚡ CacheStratav5 — Features → Chunks → Answers'
+    description: 'Tieredcacheswith freshnesswindowsand coalescing. 45% quality ↑60–85% cost ↓.'
+    ctaText: 'Readthecache guide'
+    ctaLink: '/blog/ai-2025-oct-08-cache-strata-v5'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  3
+    startDate: '2025-10-08'
+  }
 );
 
-// Oct 7, 2025 – Promote two new posts
-enhancedPromotionalBanners.unshift(
+// Oct72025 – Promotetwonew postsenhancedPromotionalBanners.unshift(
   {
-    id: 'oct-07-autonomous-platforms-roi',
-    title: '🚀 NEW TODAY: Autonomous Platforms — 3–6x ROI in 90 Days',
-    description:
-      'Budgets, approvals, canary scorecards, and instant rollback. Ship autonomy safely with measurable value in weeks.',
-    ctaText: 'Read the ROI Playbook',
-    ctaLink: '/blog/ai-2025-oct-07-autonomous-platforms-roi',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-07',
-  },
+    id: 'oct-07-autonomous-platforms-roi'
+    title: '🚀 NEWTODAY: AutonomousPlatforms — 3–6xROIin 90Days'
+    description: 'Budgetsapprovalscanaryscorecardsandinstantrollback. Shipautonomysafely withmeasurablevalue inweeks.'
+    ctaText: 'ReadtheROI Playbook'
+    ctaLink: '/blog/ai-2025-oct-07-autonomous-platforms-roi'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-07'
+  }
   {
-    id: 'oct-07-evaluator-pipelines-blueprint',
-    title: '🛡️ NEW: Evaluator Pipelines — Predict Production, Gate Risk',
-    description:
-      'Golden tasks, calibrated metrics, and online canaries with rollback hooks. Correlate with KPIs and cut regressions.',
-    ctaText: 'Build Evaluator Pipelines',
-    ctaLink: '/blog/ai-2025-oct-07-evaluator-pipelines-blueprint',
-    variant: 'info',
-    icon: '🛡️',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-07',
-  },
+    id: 'oct-07-evaluator-pipelines-blueprint'
+    title: '🛡️ NEW: EvaluatorPipelines — PredictProductionGateRisk'
+    description: 'Goldentaskscalibratedmetricsandonlinecanaries withrollbackhooks. CorrelatewithKPIs andcutregressions.'
+    ctaText: 'BuildEvaluatorPipelines'
+    ctaLink: '/blog/ai-2025-oct-07-evaluator-pipelines-blueprint'
+    variant: 'info'
+    icon: '🛡️'
+    featured: true
+    priority:  1
+    startDate: '2025-10-07'
+  }
 );
 
-// Sept 30, 2025 – Fresh homepage banner promoting the new content
-enhancedPromotionalBanners.push({
-  id: 'oct-05-governed-autonomy-2025',
-  title:
-    '🛡️ NEW: Governed Autonomy — KPI Scorecards, Budgets, Instant Rollback',
-  description:
-    'Ship agents that move fast without incidents. KPI-linked SLIs, approvals, and one-click rollback.',
-  ctaText: 'Read the Playbook',
-  ctaLink: '/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2',
-  variant: 'success',
-  icon: '🛡️',
-  featured: true,
-  priority: 0,
-  startDate: '2025-10-05',
+// Sept302025 – Freshhomepagebanner promotingthenew contentenhancedPromotionalBanners.push({
+  id: 'oct-05-governed-autonomy-2025'
+  title: '🛡️ NEW: GovernedAutonomy — KPIScorecardsBudgetsInstantRollback'
+  description: 'Shipagentsthat movefastwithout incidents. KPI-linkedSLIsapprovalsandone-clickrollback.'
+  ctaText: 'ReadthePlaybook'
+  ctaLink: '/blog/ai-2025-oct-05-enterprise-agents-scorecards-v2'
+  variant: 'success'
+  icon: '🛡️'
+  featured: true
+  priority:  0
+  startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'oct-05-edge-experiments-v5',
-  title: '⚡ NEW: Edge Private Experiments v5 — Zero‑PII A/B <100ms',
-  description:
-    'Signed configs, scoped IDs, DP noise. Global experiments without data risk.',
-  ctaText: 'Explore the Guide',
-  ctaLink: '/blog/ai-2025-oct-05-edge-private-experiments-v5',
-  variant: 'info',
-  icon: '⚡',
-  featured: true,
-  priority: 1,
-  startDate: '2025-10-05',
+  id: 'oct-05-edge-experiments-v5'
+  title: '⚡ NEW: EdgePrivateExperiments v5 — Zero‑PIIA/B <100ms'
+  description: 'SignedconfigsscopedIDsDPnoise. Globalexperimentswithout datarisk.'
+  ctaText: 'ExploretheGuide'
+  ctaLink: '/blog/ai-2025-oct-05-edge-private-experiments-v5'
+  variant: 'info'
+  icon: '⚡'
+  featured: true
+  priority:  1
+  startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'oct-05-cache-strata-v4',
-  title: '🧠 NEW: Cache Strata v4 — 60–85% Cost ↓, Tighter P95',
-  description:
-    'Feature → chunk → answer caches with freshness windows and coalescing.',
-  ctaText: 'Read the Cache Blueprint',
-  ctaLink: '/blog/ai-2025-oct-05-cache-strata-v4',
-  variant: 'success',
-  icon: '🧠',
-  featured: true,
-  priority: 2,
-  startDate: '2025-10-05',
+  id: 'oct-05-cache-strata-v4'
+  title: '🧠 NEW: CacheStratav4 — 60–85% Cost ↓TighterP95'
+  description: 'Feature → chunk → answercacheswith freshnesswindowsand coalescing.'
+  ctaText: 'ReadtheCache Blueprint'
+  ctaLink: '/blog/ai-2025-oct-05-cache-strata-v4'
+  variant: 'success'
+  icon: '🧠'
+  featured: true
+  priority:  2
+  startDate: '2025-10-05'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'sept30-fresh-content-2025',
-  title:
-    '🚀 Fresh Drop: Governance Guardrails, Edge Inference, Agent Observability',
-  description:
-    'Three new deep-dives just landed. Ship fast with policy checks, deliver <100ms at the edge, and get live traces for agents.',
-  ctaText: 'Read the latest',
-  ctaLink: '/blog',
-  variant: 'success',
-  icon: '🚀',
-  featured: true,
-  priority: 0,
-  startDate: '2025-09-30',
+  id: 'sept30-fresh-content-2025'
+  title: '🚀 FreshDrop: GovernanceGuardrailsEdgeInferenceAgentObservability'
+  description: 'Threenewdeep-divesjustlanded. Shipfastwith policychecksdeliver <100msatthe edgeandgetlive tracesforagents.'
+  ctaText: 'Readthelatest'
+  ctaLink: '/blog'
+  variant: 'success'
+  icon: '🚀'
+  featured: true
+  priority:  0
+  startDate: '2025-09-30'
 });
 
-// Oct 1, 2025 – New homepage promos for the two brand-new posts
-enhancedPromotionalBanners.push({
-  id: 'oct-01-enterprise-platforms-2025',
-  title: '🏗️ NEW: Enterprise AI Platforms — SLAs, Guardrails, Proven ROI',
-  description:
-    'Golden paths, eval gates, and cost controls your teams adopt. Proven 30–70% savings.',
-  ctaText: 'Read Platform Blueprint',
-  ctaLink: '/blog/ai-2025-oct-enterprise-ai-platforms',
-  variant: 'success',
-  icon: '🏗️',
-  featured: true,
-  priority: 0,
-  startDate: '2025-10-01',
+// Oct12025 – Newhomepagepromos forthetwo brand-newpostsenhancedPromotionalBanners.push({
+  id: 'oct-01-enterprise-platforms-2025'
+  title: '🏗️ NEW: EnterpriseAIPlatforms — SLAsGuardrailsProvenROI'
+  description: 'Goldenpathsevalgatesandcostcontrols yourteamsadopt. Proven30–70% savings.'
+  ctaText: 'ReadPlatformBlueprint'
+  ctaLink: '/blog/ai-2025-oct-enterprise-ai-platforms'
+  variant: 'success'
+  icon: '🏗️'
+  featured: true
+  priority:  0
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'oct-01-intelligent-automation-2025',
-  title: '🤖 NEW: Intelligent Automation — From Tickets to Outcomes',
-  description:
-    'Approvals, budgets, eval‑gated actions, and instant rollback for safe autonomy.',
-  ctaText: 'Explore Automation Guide',
-  ctaLink: '/blog/ai-2025-oct-intelligent-automation-breakthrough',
-  variant: 'info',
-  icon: '🤖',
-  featured: true,
-  priority: 1,
-  startDate: '2025-10-01',
+  id: 'oct-01-intelligent-automation-2025'
+  title: '🤖 NEW: IntelligentAutomation — FromTicketsto Outcomes'
+  description: 'Approvalsbudgetseval‑gatedactionsandinstantrollback forsafeautonomy.'
+  ctaText: 'ExploreAutomationGuide'
+  ctaLink: '/blog/ai-2025-oct-intelligent-automation-breakthrough'
+  variant: 'info'
+  icon: '🤖'
+  featured: true
+  priority:  1
+  startDate: '2025-10-01'
 });
 
-// Sept 30, 2025 – New homepage promo for latest content set
-enhancedPromotionalBanners.push({
-  id: 'sept30-autonomous-euai-edge-2025',
-  title: '🔥 New: Autonomous Infra, EU AI Act Playbook, Edge RAG Cold‑Starts',
-  description:
-    'Zero‑touch ops with budgets + live canaries, practical EU AI Act guardrails, and <100ms private answers with warm pools.',
-  ctaText: 'Explore the new content',
-  ctaLink: '/blog',
-  variant: 'success',
-  icon: '✨',
-  featured: true,
-  priority: 0,
-  startDate: '2025-09-30',
+// Sept302025 – Newhomepagepromo forlatestcontent setenhancedPromotionalBanners.push({
+  id: 'sept30-autonomous-euai-edge-2025'
+  title: '🔥 New: AutonomousInfraEUAIAct PlaybookEdgeRAGCold‑Starts'
+  description: 'Zero‑touchopswith budgets + livecanariespracticalEUAI Actguardrailsand <100msprivateanswers withwarmpools.'
+  ctaText: 'Explorethenew content'
+  ctaLink: '/blog'
+  variant: 'success'
+  icon: '✨'
+  featured: true
+  priority:  0
+  startDate: '2025-09-30'
 });
 
-// October 1, 2025 – MEGA BREAKTHROUGH CONTENT DROP
-enhancedPromotionalBanners.push({
-  id: 'oct-01-2025-breakthrough-content-mega-launch',
-  title: '🎉 MEGA BREAKTHROUGH: 6 Revolutionary AI Solutions Just Released!',
-  description:
-    'Game-changing content drop! Digital Twins with 92% defect reduction, Hyper-Personalization achieving 8x conversions, Autonomous Networks with 99.999% uptime, Cognitive Process Mining saving 73%, Decision Intelligence 10x faster, and Intelligent Document AI. Transform your enterprise now!',
-  ctaText: 'Explore All Breakthroughs',
-  ctaLink: '/blog',
-  variant: 'success',
-  icon: '🎉',
-  featured: true,
-  priority: 0,
-  startDate: '2025-10-01',
+// October12025 – MEGABREAKTHROUGHCONTENT DROPenhancedPromotionalBanners.push({
+  id: 'oct-01-2025-breakthrough-content-mega-launch'
+  title: '🎉 MEGABREAKTHROUGH: 6RevolutionaryAI SolutionsJustReleased!'
+  description: 'Game-changingcontentdrop! DigitalTwinswith 92% defectreductionHyper-Personalizationachieving8x conversionsAutonomousNetworkswith 99.999% uptimeCognitiveProcessMining saving73%DecisionIntelligence10x fasterandIntelligentDocument AI. Transformyourenterprise now!'
+  ctaText: 'ExploreAllBreakthroughs'
+  ctaLink: '/blog'
+  variant: 'success'
+  icon: '🎉'
+  featured: true
+  priority:  0
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'digital-twin-manufacturing-oct-2025',
-  title:
-    '🏭 NEW: AI-Powered Digital Twins - 92% Defect Reduction, $320M Savings',
-  description:
-    'Revolutionary digital twin systems transforming manufacturing with real-time simulation and predictive analytics. Achieve 87% faster time-to-market and unprecedented production optimization.',
-  ctaText: 'Discover Digital Twins',
-  ctaLink: '/blog/ai-powered-digital-twin-manufacturing-2025',
-  variant: 'success',
-  icon: '🏭',
-  featured: true,
-  priority: 1,
-  startDate: '2025-10-01',
+  id: 'digital-twin-manufacturing-oct-2025'
+  title: '🏭 NEW: AI-PoweredDigitalTwins - 92% DefectReduction$320MSavings'
+  description: 'Revolutionarydigitaltwin systemstransformingmanufacturing withreal-timesimulationand predictiveanalytics. Achieve87% fastertime-to-marketandunprecedented productionoptimization.'
+  ctaText: 'DiscoverDigitalTwins'
+  ctaLink: '/blog/ai-powered-digital-twin-manufacturing-2025'
+  variant: 'success'
+  icon: '🏭'
+  featured: true
+  priority:  1
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'hyper-personalization-oct-2025',
-  title:
-    '🎯 NEW: Hyper-Personalization AI - 8x Conversion Rates, 94% Satisfaction',
-  description:
-    'Next-generation personalization engines delivering individualized experiences at microsecond scale. Drive $280M+ revenue lift through AI-powered customer engagement.',
-  ctaText: 'Master Personalization',
-  ctaLink: '/blog/hyper-personalization-real-time-ai-2025',
-  variant: 'info',
-  icon: '🎯',
-  featured: true,
-  priority: 2,
-  startDate: '2025-10-01',
+  id: 'hyper-personalization-oct-2025'
+  title: '🎯 NEW: Hyper-PersonalizationAI - 8xConversionRates94% Satisfaction'
+  description: 'Next-generationpersonalizationengines deliveringindividualizedexperiences atmicrosecondscale. Drive $280M+ revenueliftthrough AI-poweredcustomerengagement.'
+  ctaText: 'MasterPersonalization'
+  ctaLink: '/blog/hyper-personalization-real-time-ai-2025'
+  variant: 'info'
+  icon: '🎯'
+  featured: true
+  priority:  2
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'autonomous-network-ops-oct-2025',
-  title: '🌐 NEW: Autonomous Network Operations - 99.999% Uptime Guaranteed',
-  description:
-    'Self-managing network systems that detect, diagnose, and resolve issues autonomously. Achieve 96% faster incident resolution and 82% cost reduction with zero human intervention.',
-  ctaText: 'Explore Autonomous Networks',
-  ctaLink: '/blog/autonomous-network-operations-2025',
-  variant: 'warning',
-  icon: '🌐',
-  featured: true,
-  priority: 3,
-  startDate: '2025-10-01',
+  id: 'autonomous-network-ops-oct-2025'
+  title: '🌐 NEW: AutonomousNetworkOperations - 99.999% UptimeGuaranteed'
+  description: 'Self-managingnetworksystems thatdetectdiagnoseandresolveissues autonomously. Achieve96% fasterincidentresolution and82% costreductionwith zerohumanintervention.'
+  ctaText: 'ExploreAutonomousNetworks'
+  ctaLink: '/blog/autonomous-network-operations-2025'
+  variant: 'warning'
+  icon: '🌐'
+  featured: true
+  priority:  3
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'cognitive-process-mining-oct-2025',
-  title:
-    '🔍 NEW: Cognitive Process Mining - 73% Cost Savings, 6x Faster Execution',
-  description:
-    'AI-powered process discovery that automatically identifies bottlenecks and implements improvements. Achieve $195M+ annual savings through intelligent automation.',
-  ctaText: 'Optimize Your Processes',
-  ctaLink: '/blog/cognitive-process-mining-automation-2025',
-  variant: 'success',
-  icon: '🔍',
-  featured: true,
-  priority: 4,
-  startDate: '2025-10-01',
+  id: 'cognitive-process-mining-oct-2025'
+  title: '🔍 NEW: CognitiveProcessMining - 73% CostSavings6xFasterExecution'
+  description: 'AI-poweredprocessdiscovery thatautomaticallyidentifies bottlenecksandimplements improvements. Achieve $195M+ annualsavingsthrough intelligentautomation.'
+  ctaText: 'OptimizeYourProcesses'
+  ctaLink: '/blog/cognitive-process-mining-automation-2025'
+  variant: 'success'
+  icon: '🔍'
+  featured: true
+  priority:  4
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'decision-intelligence-oct-2025',
-  title:
-    '🧠 NEW: AI-Augmented Decision Intelligence - 10x Faster, 97% Accuracy',
-  description:
-    'Revolutionary platforms enabling executives to make complex decisions 10x faster with unprecedented accuracy. Create $450M+ value through intelligent decision support.',
-  ctaText: 'Transform Decision Making',
-  ctaLink: '/blog/ai-augmented-decision-intelligence-2025',
-  variant: 'info',
-  icon: '🧠',
-  featured: true,
-  priority: 5,
-  startDate: '2025-10-01',
+  id: 'decision-intelligence-oct-2025'
+  title: '🧠 NEW: AI-AugmentedDecisionIntelligence - 10xFaster97% Accuracy'
+  description: 'Revolutionaryplatformsenabling executivestomake complexdecisions10x fasterwithunprecedented accuracy. Create $450M+ valuethroughintelligent decisionsupport.'
+  ctaText: 'TransformDecisionMaking'
+  ctaLink: '/blog/ai-augmented-decision-intelligence-2025'
+  variant: 'info'
+  icon: '🧠'
+  featured: true
+  priority:  5
+  startDate: '2025-10-01'
 });
 
 enhancedPromotionalBanners.push({
-  id: 'intelligent-document-understanding-oct-2025',
-  title:
-    '📄 NEW: Intelligent Document AI - Process 1M+ Documents Daily at 99.2% Accuracy',
-  description:
-    'Next-generation document understanding that comprehends context and automates workflows. Achieve 95% faster processing and $140M+ annual savings.',
-  ctaText: 'Revolutionize Document Processing',
-  ctaLink: '/blog/intelligent-document-understanding-2025',
-  variant: 'success',
-  icon: '📄',
-  featured: true,
-  priority: 6,
-  startDate: '2025-10-01',
+  id: 'intelligent-document-understanding-oct-2025'
+  title: '📄 NEW: IntelligentDocumentAI - Process1M+ DocumentsDailyat 99.2% Accuracy'
+  description: 'Next-generationdocumentunderstanding thatcomprehendscontext andautomatesworkflows. Achieve95% fasterprocessingand $140M+ annualsavings.'
+  ctaText: 'RevolutionizeDocumentProcessing'
+  ctaLink: '/blog/intelligent-document-understanding-2025'
+  variant: 'success'
+  icon: '📄'
+  featured: true
+  priority:  6
+  startDate: '2025-10-01'
 });
 
-export const getActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {
-  const now = new Date();
-  return enhancedPromotionalBanners
-    .filter(banner => {
-      const startDate = new Date(banner.startDate);
-      const endDate = banner.endDate ? new Date(banner.endDate) : null;
-      return startDate <= now && (!endDate || endDate >= now);
-    })
-    .sort((a, b) => a.priority - b.priority);
+exportconstgetActiveEnhancedBanners = (): EnhancedPromotionalBanner[] => {   
+  constnow = newDate(); returnenhancedPromotionalBanners
+    .filter(banner = > {
+      conststartDate = newDate(banner.startDate); constendDate = banner.endDate  ? newDate(banner.endDate)  : null; returnstartDate <= now  && (!endDate || endDate  > = now);
+       })
+    .sort((ab) => a.priority - b.priority);
 };
 
-export const getFeaturedBanners = (): EnhancedPromotionalBanner[] => {
-  return getActiveEnhancedBanners().filter(banner => banner.featured);
-};
+exportconstgetFeaturedBanners = (): EnhancedPromotionalBanner[] => { 
+  returngetActiveEnhancedBanners().filter(banner = > banner.featured);
+ };
 
-// Oct 6, 2025 – New content promo for three fresh posts
-enhancedPromotionalBanners.unshift(
+// Oct62025 – Newcontentpromo forthreefresh postsenhancedPromotionalBanners.unshift(
   {
-    id: 'oct-06-2025-new-content-drop',
-    title:
-      '🚀 NEW TODAY (Oct 6): Feature Stores, Policy Tests v3, Evaluator Gates',
-    description:
-      'Millisecond features at 10M+ RPS, production-predictive policy tests, and evaluator-driven releases.',
-    ctaText: "Explore today's posts",
-    ctaLink: '/blog',
-    variant: 'success',
-    icon: '🚀',
-    featured: true,
-    priority: 0,
-    startDate: '2025-10-06',
-  },
+    id: 'oct-06-2025-new-content-drop'
+    title: '🚀 NEWTODAY (Oct6): FeatureStoresPolicyTestsv3EvaluatorGates'
+    description: 'Millisecondfeaturesat 10M+ RPSproduction-predictivepolicytestsandevaluator-drivenreleases.'
+    ctaText: "Exploretoday'sposts"
+    ctaLink: '/blog'
+    variant: 'success'
+    icon: '🚀'
+    featured: true
+    priority:  0
+    startDate: '2025-10-06'
+  }
   {
-    id: 'oct-06-feature-stores-2025',
-    title: '⚡ Real-Time Feature Stores — Sub-10ms Reads at 10M+ RPS',
-    description:
-      'Freshness windows, idempotent upserts, and online/offline parity with scorecards.',
-    ctaText: 'Build Feature Stores',
-    ctaLink: '/blog/ai-2025-oct-06-real-time-feature-stores',
-    variant: 'success',
-    icon: '⚡',
-    featured: true,
-    priority: 1,
-    startDate: '2025-10-06',
-  },
+    id: 'oct-06-feature-stores-2025'
+    title: '⚡ Real-TimeFeatureStores — Sub-10msReadsat 10M+ RPS'
+    description: 'Freshnesswindowsidempotentupsertsandonline/offlineparitywith scorecards.'
+    ctaText: 'BuildFeatureStores'
+    ctaLink: '/blog/ai-2025-oct-06-real-time-feature-stores'
+    variant: 'success'
+    icon: '⚡'
+    featured: true
+    priority:  1
+    startDate: '2025-10-06'
+  }
   {
-    id: 'oct-06-policy-tests-v3-2025',
-    title: '🛡️ Policy Tests v3 — Change Gates That Predict Production',
-    description:
-      'Golden tasks, calibrated metrics, and online canaries wired as deploy gates.',
-    ctaText: 'Read Policy Tests v3',
-    ctaLink: '/blog/ai-2025-oct-06-policy-tests-v3',
-    variant: 'info',
-    icon: '🛡️',
-    featured: true,
-    priority: 2,
-    startDate: '2025-10-06',
-  },
+    id: 'oct-06-policy-tests-v3-2025'
+    title: '🛡️ PolicyTestsv3 — ChangeGatesThat PredictProduction'
+    description: 'Goldentaskscalibratedmetricsandonlinecanaries wiredasdeploy gates.'
+    ctaText: 'ReadPolicyTests v3'
+    ctaLink: '/blog/ai-2025-oct-06-policy-tests-v3'
+    variant: 'info'
+    icon: '🛡️'
+    featured: true
+    priority:  2
+    startDate: '2025-10-06'
+  }
   {
-    id: 'oct-06-evaluator-gates-2025',
-    title: '✅ Evaluator-Driven Release Gates — Ship Faster, Fewer Regressions',
-    description:
-      'Live evaluators, KPI‑linked SLIs, and instant rollback for safe velocity.',
-    ctaText: 'Adopt Evaluator Gates',
-    ctaLink: '/blog/ai-2025-oct-06-evaluator-driven-release-gates',
-    variant: 'success',
-    icon: '✅',
-    featured: true,
-    priority: 3,
-    startDate: '2025-10-06',
-  },
+    id: 'oct-06-evaluator-gates-2025'
+    title: '✅ Evaluator-DrivenReleaseGates — ShipFasterFewerRegressions'
+    description: 'LiveevaluatorsKPI‑linkedSLIsandinstantrollback forsafevelocity.'
+    ctaText: 'AdoptEvaluatorGates'
+    ctaLink: '/blog/ai-2025-oct-06-evaluator-driven-release-gates'
+    variant: 'success'
+    icon: '✅'
+    featured: true
+    priority:  3
+    startDate: '2025-10-06'
+  }
 );

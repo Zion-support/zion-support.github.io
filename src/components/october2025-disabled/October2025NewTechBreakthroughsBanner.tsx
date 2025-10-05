@@ -1,216 +1,207 @@
 import { Link } from 'react-router-dom';
-export default function October2025NewTechBreakthroughsBanner() {
+exportdefaultfunction October2025NewTechBreakthroughsBanner() { 
   return (
-    <div className='relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 border-y border-purple-500/30'>
-      {' '}
-      {/* Animated background */}
-      <div className='absolute inset-0 opacity-20'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse'></div>
-        <div
-          className='absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse'
+    <divclassName = 'relativeoverflow-hiddenbg-gradient-to-rfrom-purple-900via-blue-900to-indigo-900border-yborder-purple-500/30' > {' ' }
+      {/* Animatedbackground */}
+      <divclassName='absoluteinset-0opacity-20'>
+        <divclassName='absolutetop-0left-1/4 w-96h-96bg-purple-500rounded-fullblur-3xlanimate-pulse' />
+        <divclassName='absolutebottom-0right-1/4 w-96h-96bg-blue-500rounded-fullblur-3xlanimate-pulse'
           style={{ animationDelay: '1s' }}
-        ></div>
+         />
       </div>
-      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12'>
+      <divclassName = 'relativemax-w-7xlmx-autopx-4sm: px-6lg:px-8py-12'>
         {/* Header */}
-        <div className='text-center mb-10'>
-          <div className='inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 rounded-full border border-purple-400/30 mb-4'>
-            <Sparkles className='w-5 h-5 text-yellow-400 animate-pulse' />
-            <span className='text-purple-200 font-semibold text-sm uppercase tracking-wider'>
-              Just Published: October 2, 2025
+        <divclassName = 'text-centermb-10'>
+          <divclassName='inline-flexitems-centergap-2px-4py-2bg-purple-500/20rounded-fullborderborder-purple-400/30mb-4'>
+            <SparklesclassName='w-5 h-5text-yellow-400animate-pulse' />
+            <spanclassName='text-purple-200font-semiboldtext-smuppercasetracking-wider'>
+              JustPublished: October 22025
             </span>
-            <Sparkles className='w-5 h-5 text-yellow-400 animate-pulse' />
+            <SparklesclassName = 'w-5 h-5text-yellow-400animate-pulse' />
           </div>
-          <h2 className='text-4xl md:text-5xl font-bold text-white mb-4'>
-            🚀 3 Revolutionary Tech Breakthroughs
+          <h2className='text-4xlmd: text-5xlfont-boldtext-whitemb-4'>
+            🚀 3RevolutionaryTech Breakthroughs
           </h2>
-          <p className='text-xl text-purple-200 max-w-4xl mx-auto'>
-            Transform Your Business with AI-Powered DevOps, Blockchain-AI
-            Integration & Sustainable Green Computing
+          <pclassName='text-xltext-purple-200max-w-4xlmx-auto'>
+            TransformYourBusiness withAI-PoweredDevOpsBlockchain-AIIntegration & SustainableGreenComputing
           </p>
         </div>
-        {/* Featured Articles Grid */}
-        <div className='grid md:grid-cols-3 gap-6 mb-8'>
-          {/* Article 1: DevOps Automation */}
-          <Link
-            to='/blog/ai-2025-oct-02-devops-automation-ai-revolution'
-            className='group relative bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20'
+        {/* FeaturedArticlesGrid */}
+        <divclassName = 'gridmd: grid-cols-3gap-6mb-8'>
+          {/* Article1: DevOpsAutomation */}
+          <Linkto = '/blog/ai-2025-oct-02-devops-automation-ai-revolution'
+            className='grouprelativebg-gradient-to-brfrom-blue-900/50to-purple-900/50rounded-2xlp-6borderborder-blue-400/30hover: border-blue-400/60transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-blue-500/20'
           >
-            <div className='absolute top-4 right-4'>
-              <div className='px-3 py-1 bg-blue-500/30 rounded-full'>
-                <span className='text-blue-200 text-xs font-bold'>HOT 🔥</span>
+            <divclassName='absolutetop-4right-4'>
+              <divclassName='px-3py-1bg-blue-500/30rounded-full'>
+                <spanclassName='text-blue-200text-xsfont-bold'>HOT 🔥</span>
               </div>
             </div>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-blue-500/20 rounded-xl'>
-                <Zap className='w-8 h-8 text-blue-400' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-blue-500/20rounded-xl'>
+                <ZapclassName='w-8 h-8text-blue-400' />
               </div>
               <div>
-                <div className='text-xs text-blue-300 uppercase font-semibold'>
-                  DevOps AI
+                <divclassName='text-xstext-blue-300uppercasefont-semibold'>
+                  DevOpsAI
                 </div>
-                <div className='text-sm text-blue-200'>15 min read</div>
+                <divclassName='text-smtext-blue-200'>15minread</div>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors'>
-              AI-Powered DevOps Automation Revolution
+            <h3className='text-2xlfont-boldtext-whitemb-3group-hover:text-blue-300transition-colors'>
+              AI-PoweredDevOpsAutomation Revolution
             </h3>
-            <p className='text-blue-200 text-sm mb-4 line-clamp-3'>
-              Achieve 99.8% deployment success rates, 96% incident reduction,
-              and $47M annual savings with intelligent automation.
+            <pclassName='text-blue-200text-smmb-4line-clamp-3'>
+              Achieve99.8% deploymentsuccessrates96% incidentreduction
+              and $47Mannualsavings withintelligentautomation.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  487 deploys/day
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  487deploys/day
                 </span>
-                <span className='text-blue-300'>vs 23 previously</span>
+                <spanclassName='text-blue-300'>vs23previously</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  96% incident reduction
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  96% incidentreduction
                 </span>
-                <span className='text-blue-300'>MTTR: 4 min</span>
+                <spanclassName='text-blue-300'>MTTR: 4min</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  $47M saved annually
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  $47Msavedannually
                 </span>
-                <span className='text-blue-300'>67% cost reduction</span>
+                <spanclassName='text-blue-300'>67% costreduction</span>
               </div>
             </div>
-            <div className='flex items-center text-blue-300 group-hover:text-blue-200 font-semibold'>
-              Read Full Guide
-              <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-blue-300group-hover:text-blue-200font-semibold'>
+              ReadFullGuide
+              <ArrowRight,className='ml-2 w-5 h-5group-hover:translate-x-1transition-transform' />
             </div>
           </Link>
-          {/* Article 2: Blockchain-AI Integration */}
-          <Link
-            to='/blog/ai-2025-oct-02-blockchain-ai-enterprise-integration'
-            className='group relative bg-gradient-to-br from-purple-900/50 to-pink-900/50 rounded-2xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'
+          {/* Article2: Blockchain-AIIntegration */}
+          <Linkto = '/blog/ai-2025-oct-02-blockchain-ai-enterprise-integration'
+            className='grouprelativebg-gradient-to-brfrom-purple-900/50to-pink-900/50rounded-2xlp-6borderborder-purple-400/30hover: border-purple-400/60transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-purple-500/20'
           >
-            <div className='absolute top-4 right-4'>
-              <div className='px-3 py-1 bg-purple-500/30 rounded-full'>
-                <span className='text-purple-200 text-xs font-bold'>
+            <divclassName='absolutetop-4right-4'>
+              <divclassName='px-3py-1bg-purple-500/30rounded-full'>
+                <spanclassName='text-purple-200text-xsfont-bold'>
                   NEW 💎
                 </span>
               </div>
             </div>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-purple-500/20 rounded-xl'>
-                <Sparkles className='w-8 h-8 text-purple-400' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-purple-500/20rounded-xl'>
+                <SparklesclassName='w-8 h-8text-purple-400' />
               </div>
               <div>
-                <div className='text-xs text-purple-300 uppercase font-semibold'>
+                <divclassName='text-xstext-purple-300uppercasefont-semibold'>
                   Blockchain-AI
                 </div>
-                <div className='text-sm text-purple-200'>14 min read</div>
+                <divclassName='text-smtext-purple-200'>14minread</div>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors'>
-              Blockchain-AI Integration Revolution
+            <h3className='text-2xlfont-boldtext-whitemb-3group-hover:text-purple-300transition-colors'>
+              Blockchain-AIIntegrationRevolution
             </h3>
-            <p className='text-purple-200 text-sm mb-4 line-clamp-3'>
-              99.9% transaction accuracy, $127M annual savings, and immutable
-              intelligent business processes for enterprises.
+            <pclassName='text-purple-200text-smmb-4line-clamp-3'>
+              99.9% transactionaccuracy$127Mannualsavingsandimmutableintelligent businessprocessesfor enterprises.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
                   99.9% accuracy
                 </span>
-                <span className='text-purple-300'>AI-verified contracts</span>
+                <spanclassName='text-purple-300'>AI-verifiedcontracts</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  $127M saved
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  $127Msaved
                 </span>
-                <span className='text-purple-300'>Annual enterprise value</span>
+                <spanclassName='text-purple-300'>Annualenterprisevalue</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  96% fraud reduction
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  96% fraudreduction
                 </span>
-                <span className='text-purple-300'>Supply chain security</span>
+                <spanclassName='text-purple-300'>Supplychainsecurity</span>
               </div>
             </div>
-            <div className='flex items-center text-purple-300 group-hover:text-purple-200 font-semibold'>
-              Explore Integration
-              <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-purple-300group-hover: text-purple-200font-semibold'>
+              ExploreIntegration
+              <ArrowRight,className='ml-2 w-5 h-5group-hover:translate-x-1transition-transform' />
             </div>
           </Link>
-          {/* Article 3: Sustainable AI */}
-          <Link
-            to='/blog/ai-2025-oct-02-sustainable-ai-green-computing-revolution'
-            className='group relative bg-gradient-to-br from-green-900/50 to-emerald-900/50 rounded-2xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20'
+          {/* Article3: Sustainable AI */}
+          <Linkto = '/blog/ai-2025-oct-02-sustainable-ai-green-computing-revolution'
+            className='grouprelativebg-gradient-to-brfrom-green-900/50to-emerald-900/50rounded-2xlp-6borderborder-green-400/30hover: border-green-400/60transition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-green-500/20'
           >
-            <div className='absolute top-4 right-4'>
-              <div className='px-3 py-1 bg-green-500/30 rounded-full'>
-                <span className='text-green-200 text-xs font-bold'>ECO 🌱</span>
+            <divclassName='absolutetop-4right-4'>
+              <divclassName='px-3py-1bg-green-500/30rounded-full'>
+                <spanclassName='text-green-200text-xsfont-bold'>ECO 🌱</span>
               </div>
             </div>
-            <div className='flex items-center gap-3 mb-4'>
-              <div className='p-3 bg-green-500/20 rounded-xl'>
-                <TrendingUp className='w-8 h-8 text-green-400' />
+            <divclassName='flexitems-centergap-3mb-4'>
+              <divclassName='p-3bg-green-500/20rounded-xl'>
+                <TrendingUpclassName='w-8 h-8text-green-400' />
               </div>
               <div>
-                <div className='text-xs text-green-300 uppercase font-semibold'>
-                  Green AI
+                <divclassName='text-xstext-green-300uppercasefont-semibold'>
+                  GreenAI
                 </div>
-                <div className='text-sm text-green-200'>13 min read</div>
+                <divclassName='text-smtext-green-200'>13minread</div>
               </div>
             </div>
-            <h3 className='text-2xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors'>
-              Sustainable AI & Green Computing
+            <h3className='text-2xlfont-boldtext-whitemb-3group-hover:text-green-300transition-colors'>
+              SustainableAI & GreenComputing
             </h3>
-            <p className='text-green-200 text-sm mb-4 line-clamp-3'>
-              89% energy reduction, 2.4M tons CO2 saved annually, and $284M cost
-              savings while improving performance.
+            <pclassName='text-green-200text-smmb-4line-clamp-3'>
+              89% energyreduction2.4MtonsCO2 savedannuallyand $284Mcostsavings whileimprovingperformance.
             </p>
-            <div className='space-y-2 mb-4'>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  89% energy reduction
+            <divclassName = 'space-y-2mb-4'>
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  89% energyreduction
                 </span>
-                <span className='text-green-300'>Massive efficiency gains</span>
+                <spanclassName='text-green-300'>Massiveefficiencygains</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  2.4M tons CO2 saved
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  2.4MtonsCO2 saved
                 </span>
-                <span className='text-green-300'>Climate impact</span>
+                <spanclassName='text-green-300'>Climateimpact</span>
               </div>
-              <div className='flex items-center gap-2 text-sm'>
-                <TrendingUp className='w-4 h-4 text-green-400' />
-                <span className='text-green-400 font-semibold'>
-                  $284M savings
+              <divclassName='flexitems-centergap-2text-sm'>
+                <TrendingUpclassName='w-4 h-4text-green-400' />
+                <spanclassName='text-green-400font-semibold'>
+                  $284Msavings
                 </span>
-                <span className='text-green-300'>Annual cost reduction</span>
+                <spanclassName='text-green-300'>Annualcostreduction</span>
               </div>
             </div>
-            <div className='flex items-center text-green-300 group-hover:text-green-200 font-semibold'>
-              Learn Green AI
-              <ArrowRight className='ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform' />
+            <divclassName='flexitems-centertext-green-300group-hover: text-green-200font-semibold'>
+              LearnGreenAI
+              <ArrowRight,className='ml-2 w-5 h-5group-hover:translate-x-1transition-transform' />
             </div>
           </Link>
         </div>
-        {/* Call to Action */}
-        <div className='text-center'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30'
+        {/* CalltoAction */}
+        <divclassName = 'text-center'>
+          <Linkto='/blog'
+            className='inline-flexitems-centergap-2px-8py-4bg-gradient-to-rfrom-purple-600to-blue-600hover: from-purple-500hover:to-blue-500text-whitefont-boldrounded-xltransition-allduration-300hover:scale-105hover:shadow-2xlhover:shadow-purple-500/30'
           >
-            <Sparkles className='w-5 h-5' />
-            Explore All Latest Breakthroughs
-            <ArrowRight className='w-5 h-5' />
+            <SparklesclassName='w-5 h-5' />
+            ExploreAllLatest Breakthroughs
+            <ArrowRight,className='w-5 h-5' />
           </Link>
         </div>
       </div>

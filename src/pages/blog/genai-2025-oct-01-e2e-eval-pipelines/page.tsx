@@ -1,38 +1,32 @@
-// @ts-nocheck
-import React from 'react';
+// @ts-nocheckimportReact from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function GenAIE2EEvalPipelines(): React.JSX.Element {
+exportdefaultfunction GenAIE2EEvalPipelines(): React.JSX.Element { 
   return (
-    <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white'>
+    <divclassName = 'min-h-screenbg-gradient-to-brfrom-zion-blue-darkvia-zion-blueto-zion-purple-darktext-white'>
       <Helmet>
-        <title>E2E Eval Pipelines — KPI‑Linked Gates</title>
-        <meta
-          name='description'
-          content='Eval pipelines wired to KPIs with budgets, canaries, and instant rollback hooks.'
+        <title>E2EEvalPipelines — KPI‑LinkedGates</title>
+        <meta name='description'
+          content='Evalpipelineswired toKPIswith budgetscanariesandinstantrollback hooks.'
         />
-        <link
-          rel='canonical'
-          href='https://ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines'
+        <linkrel = 'canonical'
+          href='https: //ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines'
         />
       </Helmet>
 
-      <div className='container mx-auto px-6 py-16'>
-        <h1 className='text-4xl md:text-5xl font-bold mb-4'>
-          E2E Eval Pipelines — KPI‑Linked Gates
+      <divclassName='containermx-autopx-6py-16'>
+        <h1className='text-4xlmd:text-5xlfont-boldmb-4'>
+          E2EEvalPipelines — KPI‑LinkedGates
         </h1>
-        <p className='text-zion-slate-light mb-8'>
-          Design eval pipelines tied to outcomes with cost/quality budgets,
-          canaries, and rollback triggers.
+        <pclassName='text-zion-slate-lightmb-8'>
+          Designevalpipelines tiedtooutcomes withcost/qualitybudgets
+          canariesandrollbacktriggers.
         </p>
-        <div className='prose prose-invert max-w-3xl'>
+        <divclassName = 'proseprose-invertmax-w-3xl'>
           <p>
-            Build end‑to‑end evaluation pipelines that correlate with business
-            KPIs. Use budget‑aware routing, live canaries, and rollback hooks to
-            prevent regressions while preserving velocity.
+            Buildend‑to‑endevaluationpipelines thatcorrelatewith businessKPIs. Usebudget‑awareroutinglivecanariesandrollbackhooks topreventregressions whilepreservingvelocity.
           </p>
         </div>
       </div>
-    </div>
-  );
-}
+    </div > );
+ }

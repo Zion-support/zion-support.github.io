@@ -1,5 +1,4 @@
-import { AlertTriangle } from 'lucide-react';
-import { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -27,39 +26,19 @@ class ErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-50'>
-            <div className='max-w-md w-full mx-4'>
-              <div className='bg-white rounded-2xl shadow-xl p-8 text-center'>
-                <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
-                  <AlertTriangle className='w-8 h-8 text-red-600' />
-                </div>
-                <h1 className='text-2xl font-bold text-gray-900 mb-2'>
-                  Oops! Something went wrong
-                </h1>
-                <p className='text-gray-600 mb-6'>
-                  We're sorry for the inconvenience. Please try refreshing the
-                  page.
-                </p>
-                <div className='space-y-3'>
-                  <button
-                    onClick={() => window.location.reload()}
-                    className='w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors'
-                  >
-                    Refresh Page
-                  </button>
-                  <a
-                    href='/'
-                    className='block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors'
-                  >
-                    Go to Homepage
-                  </a>
-                </div>
-              </div>
-            </div>
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-400 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Reload Page
+            </button>
           </div>
-        )
+        </div>
       );
     }
 
