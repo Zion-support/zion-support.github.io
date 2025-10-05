@@ -1,5 +1,6 @@
 import React, { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { Calendar, ArrowRight } from 'lucide-react';
 
 /**
  * October 2025 Cognitive Mesh Orchestration Platform Launch Banner
@@ -216,7 +217,11 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
+<<<<<<< HEAD:src/components/October2025CognitiveMeshLaunchBanner.tsx
               <ArrowRight className="w-5 h-5" aria-hidden="true" />
+=======
+              <Calendar className="w-5 h-5" aria-hidden="true" />
+>>>>>>> 501606581ee72ebfbf00e42ec7653b143010c650:src/components/october2025-disabled/October2025CognitiveMeshLaunchBanner.tsx
               Schedule Free Consultation
             </Link>
             
