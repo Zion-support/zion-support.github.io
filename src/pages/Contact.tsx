@@ -1,6 +1,5 @@
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+      {/* <Footer /> */}
 
 const Contact: React.FC = () => {
   return (
@@ -15,7 +14,7 @@ const Contact: React.FC = () => {
         </div>
       </main>
       
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

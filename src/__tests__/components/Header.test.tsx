@@ -1,8 +1,8 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/Header';
-import '@testing-library/jest-dom';
 
 const renderWithRouter = (component: React.ReactElement) => {
   return render(
