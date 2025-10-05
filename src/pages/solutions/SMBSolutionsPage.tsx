@@ -44,31 +44,31 @@ const SMBSolutionsPage: React.FC = () => {
         <title>SMB Solutions - Zion Tech Group</title>
         <meta name="description" content="Cost-effective technology solutions designed for small and medium businesses including automation, cloud solutions, and business intelligence." /></Helmet>
       
-      <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
         {/* Header */}
-        <section className="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-16">
-          <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">SMB Solutions</h1>
-            <p className="text-xl text-green-100 max-w-3xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SMB Solutions</h1>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Cost-effective technology solutions designed for small and medium businesses to drive growth and efficiency.
             </p>
           </div>
         </section>
 
         {/* Solutions Grid */}
-        <section className="py-20">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {smbSolutions.map((solution, index) => (
-                <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
-                  <div className="text-4xl mb-4">{solution.icon}</div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4">{solution.title}</h3>
-                  <p className="text-gray-600 mb-6">{solution.description}</p>
+                <div key={index} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.icon}</div>
+                  <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.title}</h3>
+                  <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{solution.description}</p>
                   
-                  <ul className="space-y-2 mb-6">
+                  <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {solution.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-700">
-                        <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                      <li key={featureIndex} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                         {feature}
                       </li>
                     ))}
@@ -76,47 +76,36 @@ const SMBSolutionsPage: React.FC = () => {
                   
                   <Link 
                     to="/contact" 
-                    className="text-green-600 font-semibold hover:text-green-800 transition-colors
-                  >
-                    Learn More →
-                  </Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* SMB Benefits */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our SMB Solutions?</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Why Choose Our SMB Solutions?</h2>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Solutions designed specifically for small and medium business needs and budgets
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="text-4xl mb-4">💰</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Cost-Effective</h3>
-                <p className="text-gray-600">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">💰</div>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Cost-Effective</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Affordable solutions that provide maximum value without breaking your budget.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl mb-4">🚀</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Quick Implementation</h3>
-                <p className="text-gray-600">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🚀</div>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Quick Implementation</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Fast deployment and implementation to get you up and running quickly.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="text-4xl mb-4">📈</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Scalable Growth</h3>
-                <p className="text-gray-600">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">📈</div>
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Scalable Growth</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Solutions that grow with your business and adapt to changing needs.
                 </p>
               </div>
@@ -125,53 +114,53 @@ const SMBSolutionsPage: React.FC = () => {
         </section>
 
         {/* SMB Features */}
-        <section className="py-20 bg-gray-50">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">SMB-Focused Features</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SMB-Focused Features</h2>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Features designed specifically for small and medium business requirements
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Easy Setup & Management</h3>
-                <p className="text-gray-600 mb-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Easy Setup & Management</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   User-friendly interfaces and intuitive dashboards that don't require technical expertise.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                     Simple configuration wizards
                   </li>
-                  <li className="flex items-center text-sm text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                     One-click deployment options
                   </li>
-                  <li className="flex items-center text-sm text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                     Comprehensive documentation
                   </li>
                 </ul>
               </div>
               
-              <div className="bg-white p-8 rounded-xl shadow-sm">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">24/7 Support</h3>
-                <p className="text-gray-600 mb-4">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">24/7 Support</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Dedicated support team available around the clock to help your business succeed.
                 </p>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-sm text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                     Phone and email support
                   </li>
-                  <li className="flex items-center text-sm text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                     Remote assistance
                   </li>
-                  <li className="flex items-center text-sm text-gray-700">
-                    <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
+                  <li className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white"></span>
                     Priority response times
                   </li>
                 </ul>
@@ -181,42 +170,42 @@ const SMBSolutionsPage: React.FC = () => {
         </section>
 
         {/* Success Stories */}
-        <section className="py-20 bg-white">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">SMB Success Stories</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SMB Success Stories</h2>
+              <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Real results from small and medium businesses using our solutions
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📈</span>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">📈</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">40% Cost Reduction</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">40% Cost Reduction</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Local retail chain reduced operational costs by 40% through our automation solutions.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">⚡</span>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">⚡</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">3x Faster Processing</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">3x Faster Processing</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Manufacturing company increased processing speed by 300% with our cloud solutions.
                 </p>
               </div>
               
-              <div className="text-center">
-                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🎯</span>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                  <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">🎯</span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">95% Uptime</h3>
-                <p className="text-gray-600 text-sm">
+                <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">95% Uptime</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   Service company achieved 95% uptime with our IT support and monitoring solutions.
                 </p>
               </div>
@@ -225,23 +214,16 @@ const SMBSolutionsPage: React.FC = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-green-600 text-white">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-4">Ready to Grow Your SMB?</h2>
-            <p className="text-xl mb-8 text-green-100 max-w-2xl mx-auto">
+        <section className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Ready to Grow Your SMB?</h2>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Let's discuss how our SMB solutions can help you compete with larger businesses and drive growth.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <Link
                 to="/contact
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors
-              >
-                Get Started Today
-              </Link>
-              <Link
-                to="/pricing
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors
-              >
+                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 View Pricing
               </Link>
             </div>

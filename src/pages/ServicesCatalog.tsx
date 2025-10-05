@@ -22,50 +22,44 @@ const ServicesCatalog:React.FC = () => {
         keywords: "services pricing, AI pricing, IT rates, micro SaaS pricing" ,
         canonical: "https://ziontechgroup.com/services/catalog",
       />
-      <main className="py-12 sm:py-16
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Services Catalog</h3>
-            <p className="text-gray-700 mb-6">Average market prices shown; final quotes depend on scope and SLAs.</h3>
-            <div className="overflow-x-auto bg-white border rounded-lg shadow-sm">
-              <table className="min-w-full
+      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services Catalog</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Average market prices shown; final quotes depend on scope and SLAs.</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <table className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Group</h3>
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Service</h3>
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Typical Price</h3>
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Action</h3>
+      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services Catalog</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Average market prices shown; final quotes depend on scope and SLAs.</h3>
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <table className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 <thead >
-                  <tr className="bg-gray-50 text-left text-sm text-gray-600
-                    <th className="px-4 py-3 font-medium">Group</h3>
-                    <th className="px-4 py-3 font-medium">Service</h3>
-                    <th className="px-4 py-3 font-medium">Typical Price</h3>
-                    <th className="px-4 py-3 font-medium">Action</h3>
-      <main className="py-12 sm:py-16">
-        <div className="container mx-auto px-6">
-          <div className="max-w-7xl mx-auto">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-6">Services Catalog</h3>
-            <p className="text-gray-700 mb-6">Average market prices shown; final quotes depend on scope and SLAs.</h3>
-            <div className="overflow-x-auto bg-white border rounded-lg shadow-sm">
-              <table className="min-w-full">
-                <thead >
-                  <tr className="bg-gray-50 text-left text-sm text-gray-600">
-                    <th className="px-4 py-3 font-medium">Group</h3>
-                    <th className="px-4 py-3 font-medium">Service</h3>
-                    <th className="px-4 py-3 font-medium">Typical Price</h3>
-                    <th className="px-4 py-3 font-medium">Action</h3>
+                  <tr className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Group</h3>
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Service</h3>
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Typical Price</h3>
+                    <th className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Action</h3>
                   </tr>
                 </thead>
                 <tbody >
                   {rows.map((r) => (
-                    <tr key={r.group + r.name} className="border-t
-                      <td className="px-4 py-3 text-sm text-gray-700">{r.group}</td>";
-                      <td className="px-4 py-3 text-sm text-gray-900">{r.name}</td>";
-                      <td className="px-4 py-3 text-sm text-gray-700 whitespace-nowrap">{r.price}</td>";
-                      <td className="px-4 py-3 text-sm
-                        <a href={r.link} className="text-blue-600 hover:underline mr-4">Learn more</h3>
-                        <a href="/contact" className="text-blue-600 hover:underline">Get a quote</h3>
-                    <tr key={r.group + r.name} className="border-t">
-                      <td className="px-4 py-3 text-sm text-gray-700">{r.group}</td>";
-                      <td className="px-4 py-3 text-sm text-gray-900">{r.name}</td>";
-                      <td className="px-4 py-3 text-sm text-gray-700 whitespace-nowrap">{r.price}</td>";
-                      <td className="px-4 py-3 text-sm">
-                        <a href={r.link} className="text-blue-600 hover:underline mr-4">Learn more</h3>
-                        <a href="/contact" className="text-blue-600 hover:underline">Get a quote</h3>
+                    <tr key={r.group + r.name} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{r.group}</td>";
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{r.name}</td>";
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{r.price}</td>";
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Learn more</h3>
+                        <a href="/contact" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Get a quote</h3>
+                    <tr key={r.group + r.name} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{r.group}</td>";
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{r.name}</td>";
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">{r.price}</td>";
+                      <td className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                        <a href={r.link} className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Learn more</h3>
+                        <a href="/contact" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Get a quote</h3>
                       </td>
                     </tr>
                   ))}
@@ -73,21 +67,21 @@ const ServicesCatalog:React.FC = () => {
               </table>
             </div>
 
-            <div className="mt-8 bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <div >
-                <p className="text-lg font-semibold text-blue-900">Need custom pricing or a bundled offer?</h3>
-                <p className="text-blue-800">Call +1 302 464 0950 or email kleber@ziontechgroup.com</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Need custom pricing or a bundled offer?</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Call +1 302 464 0950 or email kleber@ziontechgroup.com</h3>
               </div>
-              <div className="flex gap-3">
-                <a href="/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <a href="/contact" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact Sales</h3>
                 <a href="/demo" className ="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</h3>
-            <div className="mt-8 bg-blue-50 border border-blue-100 rounded-lg p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <div >
-                <p className="text-lg font-semibold text-blue-900">Need custom pricing or a bundled offer?</h3>
-                <p className="text-blue-800">Call +1 302 464 0950 or email kleber@ziontechgroup.com</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Need custom pricing or a bundled offer?</h3>
+                <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Call +1 302 464 0950 or email kleber@ziontechgroup.com</h3>
               </div>
-              <div className="flex gap-3">
-                <a href="/contact" className="px-5 py-2 rounded-md bg-blue-600 text-white hover:bg-blue-700">Contact Sales</h3>
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <a href="/contact" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Contact Sales</h3>
                 <a href="/demo" className ="px-5 py-2 rounded-md border border-blue-600 text-blue-600 hover:bg-blue-50">Book a Demo</h3>
               </div>
             </div>

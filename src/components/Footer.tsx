@@ -55,51 +55,49 @@ const Footer: React.FC = () => {
   ];
 
   return (
-    <footer className="bg-slate-900 border-t border-slate-800">
+    <footer className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
           {/* Company Info */}
-          <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 text-white mb-4">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">Z</span>
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <Link to="/" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Z</span>
               </div>
-              <span className="font-bold text-xl">Zion Tech Group</span>
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Zion Tech Group</span>
             </Link>
             
-            <p className="text-gray-400 mb-6 max-w-md">
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Leading provider of advanced AI and IT solutions. Transform your business with 
               cutting-edge technology, automation, and intelligent systems.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Mail className="w-4 h-4" />
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+                <Mail className="w-5 h-5" />
                 <span>contact@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <Phone className="w-4 h-4" />
+              <div className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
                 <span>+1 (555) ZION-TECH</span>
               </div>
-              <div className="flex items-center space-x-3 text-gray-400">
-                <MapPin className="w-4 h-4" />
+              <div className="flex items-center gap-2">
+                <MapPin className="w-5 h-5" />
                 <span>San Francisco, CA</span>
               </div>
             </div>
 
             {/* Social Links */}
-            <div className="flex space-x-4 mt-6">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
-                  aria-label={social.name}
-                >
+                  className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                   <social.icon className="w-5 h-5" />
                 </a>
               ))}
@@ -108,14 +106,13 @@ const Footer: React.FC = () => {
 
           {/* Solutions */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Solutions</h3>
-            <ul className="space-y-2">
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Solutions</h3>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {footerLinks.solutions.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {link.name}
                   </Link>
                 </li>
@@ -125,14 +122,13 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Services</h3>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {link.name}
                   </Link>
                 </li>
@@ -142,14 +138,13 @@ const Footer: React.FC = () => {
 
           {/* Resources */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Resources</h3>
-            <ul className="space-y-2">
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Resources</h3>
+            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               {footerLinks.resources.map((link) => (
                 <li key={link.name}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-white transition-colors"
-                  >
+                    className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                     {link.name}
                   </Link>
                 </li>
@@ -159,22 +154,21 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-12 pt-8 border-t border-slate-800">
-          <div className="max-w-md">
-            <h3 className="text-white font-semibold mb-4">Stay Updated</h3>
-            <p className="text-gray-400 mb-4">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <h3 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Stay Updated</h3>
+            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               Get the latest insights on AI and technology trends.
             </p>
-            <form className="flex space-x-2">
+            <form className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                className="px-4 py-2 rounded-lg bg-slate-800 text-white placeholder-slate-400 border border-slate-700 focus:border-blue-500 focus:outline-none"
               />
               <button
                 type="submit"
-                className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors"
-              >
+                className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Subscribe
               </button>
             </form>
@@ -183,21 +177,21 @@ const Footer: React.FC = () => {
       </div>
 
       {/* Bottom Footer */}
-      <div className="border-t border-slate-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-gray-400 text-sm">
+      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
             
-            <div className="flex space-x-6 text-sm">
-              <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
+            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <Link to="/privacy" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/terms" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Terms of Service
               </Link>
-              <Link to="/cookies" className="text-gray-400 hover:text-white transition-colors">
+              <Link to="/cookies" className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
                 Cookie Policy
               </Link>
             </div>
@@ -205,11 +199,9 @@ const Footer: React.FC = () => {
             {/* Back to Top Button */}
             <button
               onClick={scrollToTop}
-              className="flex items-center space-x-2 text-gray-400 hover:text-white transition-colors"
-              aria-label="Back to top"
-            >
-              <ArrowUp className="w-4 h-4" />
-              <span className="text-sm">Back to Top</span>
+              className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+              <ArrowUp className="w-5 h-5" />
+              <span className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Back to Top</span>
             </button>
           </div>
         </div>

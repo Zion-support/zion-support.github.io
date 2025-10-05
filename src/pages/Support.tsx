@@ -1,38 +1,43 @@
-// import React from 'react';
-;
+import React from 'react';
+
 const Support: React.FC = () => {
   return (
-    <>
-      <Helmet >
-        <title >Support - Zion Tech Group</title>
-        <meta name="description", content ="Get the support you need for your projects and solutions." />
-        <meta name="description" content="Get the support you need for your projects and solutions." />
-      </Helmet>
-      
-      <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Support - Zion Tech Group</h3>
-          <p className="text-xl text-gray-600 mb-8">,
-  This page is currently under development. Please check back soon for updates.
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Support Center
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Get help and support for all our services and solutions.
           </p>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-gray-600">,
-      <div className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Support - Zion Tech Group</h3>
-          <p className="text-xl text-gray-600 mb-8">,
-  This page is currently under development. Please check back soon for updates.
-          </p>
-          <div className="bg-white p-8 rounded-xl shadow-lg">
-            <p className="text-gray-600">,
-  We're working hard to bring you the best content and features. Thank you for your patience.';';
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Documentation</h3>
+            <p className="text-gray-600 mb-6">
+              Comprehensive guides and documentation for all our products.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contact Support</h3>
+            <p className="text-gray-600 mb-6">
+              Reach out to our support team for technical assistance.
+            </p>
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-8">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-4">FAQ</h3>
+            <p className="text-gray-600 mb-6">
+              Find answers to frequently asked questions.
             </p>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
-export default Component;
-;
+export default Support;
