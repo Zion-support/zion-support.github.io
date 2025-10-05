@@ -3,13 +3,6 @@ class SecurityEnhancer {
   private isInitialized: boolean = false;
 
   private constructor() {}
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fad3
 
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
@@ -26,22 +19,7 @@ class SecurityEnhancer {
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
-<<<<<<< HEAD
     this.isInitialized = true;
-<<<<<<< HEAD
-=======
-    this.setupCSP();
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-=======
-    this.setupSecurityHeaders();
-    
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fad3
   }
 
   private setupCSP(): void {
@@ -62,32 +40,11 @@ class SecurityEnhancer {
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-=======
-  }
-
-  private setupSecurityHeaders(): void {
-    // Additional security headers setup
-    console.log('Security headers configured');
   }
 
   cleanup(): void {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
-=======
-  }
-
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
->>>>>>> cursor/fix-errors-and-merge-to-main-fad3
   }
 }
 
