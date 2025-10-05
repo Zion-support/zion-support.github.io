@@ -1,13 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Target from 'lucide-react';
-import Users from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Zap from 'lucide-react';
-import Shield from 'lucide-react';
-import CheckCircle from 'lucide-react';
+import { ArrowRight, TrendingUp, Target, Users, DollarSign, Zap, Shield, CheckCircle } from 'lucide-react';
 
 export default function Fortune500QuantumAITransformation2026() {
   return (
@@ -67,7 +60,7 @@ export default function Fortune500QuantumAITransformation2026() {
             ].map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-5xl mb-3">{stat.icon}</div>
-                <div  bg-clip-text text-transparent mb-2`}>
+                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                   {stat.value}
                 </div>
                 <div className="text-gray-400 text-sm font-medium">
