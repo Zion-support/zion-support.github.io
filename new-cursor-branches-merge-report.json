@@ -1,0 +1,59 @@
+{
+  "timestamp": "2025-10-05T11:26:28.935Z",
+  "summary": {
+    "totalBranches": 10,
+    "merged": 10,
+    "notFound": 0,
+    "successRate": "100%"
+  },
+  "systemChecks": {
+    "typeCheck": true,
+    "lintCheck": true,
+    "testCheck": true,
+    "buildCheck": true,
+    "allPassed": true
+  },
+  "results": [
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-016f",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-073a",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-0ebe",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-0fc7",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-214f",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-277a",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-4feb",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-5597",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-77cd",
+      "status": "merged"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-921e",
+      "status": "merged"
+    }
+  ],
+  "status": "success"
+}
