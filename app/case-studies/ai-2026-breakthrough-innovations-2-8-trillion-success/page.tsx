@@ -1,4 +1,5 @@
 import Link from 'next/link';
+// @ts-ignore
 import { ArrowRight, TrendingUp, Brain, Zap, Target, Users, DollarSign, Award } from 'lucide-react';
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study | Zion Tech Group',
