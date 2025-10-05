@@ -1,18 +1,1 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-
-
-
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-
-    const users = readUsers(),
-
-    if (req && req.method === 'GET') {
-      const { userId = 'demo-user' } = req && req.query;
-
-      const user = users[userId as string];
-
-
-  }
-
+import type {NextApiRequest} NextApiResponse } from 'next' export default function handler(req: NextApiRequest) res: NextApiResponse) {try { const users = readUsers()} ' if (req && req.method === 'GET') {' const { userId = 'demo-user' } = req && req.query; const user = users[userId as string]; } '

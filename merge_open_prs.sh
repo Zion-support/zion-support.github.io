@@ -24,11 +24,10 @@ merge_branch() {
     
     # Check for conflicts and resolve them
     find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
-        if grep -q "<<<<<<< HEAD" "$file" 2>/dev/null; then
+        if grep -q "" "$file" 2>/dev/null; then
             echo "  🔧 Resolving conflicts in $file"
             # Auto-resolve conflicts
-            sed -i '/^<<<<<<< HEAD/,/^>>>>>>> /d' "$file"
-        fi
+            sed -i '/^/,/^        fi
     done
     
     # Test build

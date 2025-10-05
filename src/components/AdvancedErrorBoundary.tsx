@@ -1,4 +1,4 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -23,13 +23,21 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
-    
+
     // Log error to monitoring service
     console.error('Error caught by boundary:', error, errorInfo);
-    
+
     // Send to error tracking service
     if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as { gtag: (event: string, action: string, params: { description: string; fatal: boolean }) => void }).gtag('event', 'exception', {
+      (
+        window as {
+          gtag: (
+            event: string,
+            action: string,
+            params: { description: string; fatal: boolean },
+          ) => void;
+        }
+      ).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false,
       });
@@ -38,15 +46,17 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
 
   render() {
     if (this.state.hasError) {
-      return this.props.fallback || (
-        <div className="error-boundary">
-          <h2>Something went wrong.</h2>
-          <details style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {this.state.errorInfo?.componentStack}
-          </details>
-        </div>
+      return (
+        this.props.fallback || (
+          <div className='error-boundary'>
+            <h2>Something went wrong.</h2>
+            <details style={{ whiteSpace: 'pre-wrap' }}>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {this.state.errorInfo?.componentStack}
+            </details>
+          </div>
+        )
       );
     }
 
