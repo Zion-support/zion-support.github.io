@@ -1,18 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const ContentValueTestimonials: React.FC = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: 'Sarah Johnson',
-      company: 'TechCorp Inc.',
-      role: 'CTO',
-      content: 'The AI solutions provided by Zion Tech Group have revolutionized our operations. We\'ve seen a 300% increase in efficiency.',
-      rating: 5,
-      image: '/api/placeholder/60/60'
-=======
 interface Testimonial {
   id: number;
   name: string;
@@ -32,48 +19,26 @@ const ContentValueTestimonials: React.FC = () => {
       role: 'CTO',
       content: 'The AI solutions provided by Zion Tech Group have revolutionized our business operations. We\'ve seen a 300% increase in efficiency and significant cost savings.',
       rating: 5
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
     },
     {
       id: 2,
       name: 'Michael Chen',
-<<<<<<< HEAD
-      company: 'DataFlow Systems',
-      role: 'CEO',
-      content: 'Outstanding service and cutting-edge technology. Our team productivity has increased dramatically.',
-      rating: 5,
-      image: '/api/placeholder/60/60'
-=======
       company: 'Global Enterprises',
       role: 'VP of Operations',
       content: 'Outstanding service and cutting-edge technology. The team\'s expertise in enterprise automation has transformed our workflow completely.',
       rating: 5
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
     },
     {
       id: 3,
       name: 'Emily Rodriguez',
-<<<<<<< HEAD
-      company: 'InnovateLab',
-      role: 'Product Manager',
-      content: 'The AI automation tools have streamlined our processes and saved us countless hours of manual work.',
-      rating: 5,
-      image: '/api/placeholder/60/60'
-=======
       company: 'Innovation Labs',
       role: 'Director of Technology',
       content: 'Working with Zion Tech Group has been a game-changer. Their cloud infrastructure solutions are robust, scalable, and perfectly tailored to our needs.',
       rating: 5
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
     }
   ];
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
     <div className='bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-y border-emerald-500/20 py-16'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-12'>
@@ -133,7 +98,6 @@ const ContentValueTestimonials: React.FC = () => {
             </div>
           ))}
         </div>
-=======
 interface Testimonial {
   id: string;
   name: string;
@@ -195,8 +159,6 @@ const ContentValueTestimonials: React.FC<ContentValueTestimonialsProps> = ({
             </div>
           </div>
         ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
-=======
     <div className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -243,7 +205,6 @@ const ContentValueTestimonials: React.FC<ContentValueTestimonialsProps> = ({
             </div>
           ))}
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
       </div>
     </div>
   );

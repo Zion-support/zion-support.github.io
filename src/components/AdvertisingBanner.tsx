@@ -3,11 +3,6 @@ import { Link } from 'react-router-dom';
 
 const AdvertisingBanner: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
     <div className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 border-y border-purple-500/20 py-16'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-12'>
@@ -37,7 +32,6 @@ const AdvertisingBanner: React.FC = () => {
             </Link>
           </div>
         </div>
-=======
     <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 px-4">
       <div className="max-w-6xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -53,7 +47,6 @@ const AdvertisingBanner: React.FC = () => {
         >
           Learn More
         </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
       </div>
     </div>
   );

@@ -186,56 +186,6 @@ const AdvancedDashboard: React.FC = () => {
             ×
           </button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        <div className="p-4">
-          <div className="flex space-x-2 mb-4">
-            <button
-              onClick={() => setActiveTab("overview")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "overview" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Overview
-            </button>
-            <button
-              onClick={() => setActiveTab("analytics")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "analytics" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Analytics
-            </button>
-            <button
-              onClick={() => setActiveTab("performance")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "performance" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Performance
-            </button>
-            <button
-              onClick={() => setActiveTab("security")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "security" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Security
-            </button>
-          </div>
-          
-          {data && (
-            <div className="space-y-4">
-              {activeTab === "overview" && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-blue-800">Page Views</h3>
-                    <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
-=======
-=======
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-lg shadow-xl max-w-6xl w-full max-h-[90vh] overflow-hidden">
         {/* Header */}
@@ -249,23 +199,10 @@ const AdvancedDashboard: React.FC = () => {
             ×
           </button>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 
         {/* Tabs */}
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              {[
-                { id: "overview", label: "Overview" },
-                { id: "analytics", label: "Analytics" },
-                { id: "performance", label: "Performance" },
-                { id: "cache", label: "Cache" },
-                { id: "security", label: "Security" },
-                { id: "accessibility", label: "Accessibility" }
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
             {[
               { id: "overview", label: "Overview" },
               { id: "analytics", label: "Analytics" },
@@ -273,13 +210,6 @@ const AdvancedDashboard: React.FC = () => {
               { id: "cache", label: "Cache" },
               { id: "security", label: "Security" },
               { id: "accessibility", label: "Accessibility" }
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -304,43 +234,20 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-green-800">Sessions</h3>
                     <p className="text-2xl font-bold text-green-600">{data.analytics.sessions}</p>
-=======
                     Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
                   </div>
                   <div>
                     Duration: {formatDuration(Date.now() - (data.analytics?.startTime || 0))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
                   </div>
                   <div className="bg-yellow-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-yellow-800">Bounce Rate</h3>
                     <p className="text-2xl font-bold text-yellow-600">{(data.analytics.bounceRate * 100).toFixed(1)}%</p>
                   </div>
                 </div>
-<<<<<<< HEAD
-              )}
-              
-              {activeTab === "analytics" && (
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold">Analytics Data</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 border rounded">
-                      <p className="text-sm text-gray-600">Page Views</p>
-                      <p className="text-xl font-bold">{data.analytics.pageViews}</p>
-                    </div>
-                    <div className="p-4 border rounded">
-                      <p className="text-sm text-gray-600">Sessions</p>
-                      <p className="text-xl font-bold">{data.analytics.sessions}</p>
-                    </div>
-=======
               </div>
 
               <div className="bg-purple-50 p-4 rounded-lg">
@@ -352,7 +259,6 @@ const AdvancedDashboard: React.FC = () => {
                     Usage: {(
                       ((data.performance?.memoryUsage || 0) / (data.performance?.memoryLimit || 1)) * 100
                     ).toFixed(1)}%
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
                   </div>
                 </div>
               )}
@@ -371,31 +277,6 @@ const AdvancedDashboard: React.FC = () => {
                     </div>
                   </div>
                 </div>
-<<<<<<< HEAD
-              )}
-              
-              {activeTab === "security" && (
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold">Security Status</h3>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="p-4 border rounded">
-                      <p className="text-sm text-gray-600">Threats Blocked</p>
-                      <p className="text-xl font-bold text-red-600">{data.security.threatsBlocked}</p>
-                    </div>
-                    <div className="p-4 border rounded">
-                      <p className="text-sm text-gray-600">Vulnerabilities</p>
-                      <p className="text-xl font-bold text-orange-600">{data.security.vulnerabilities}</p>
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-          )}
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-2d46
 
         {/* Tabs */}
         <div className="bg-gray-100 border-b">
@@ -720,10 +601,7 @@ const AdvancedDashboard: React.FC = () => {
         <div className="bg-gray-100 p-4 text-center text-sm text-gray-600">
           Last updated: {new Date().toLocaleTimeString()}
         </div>
-=======
         )}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
-=======
 
           {activeTab === "analytics" && data?.analytics && (
             <div className="space-y-6">
@@ -936,7 +814,6 @@ const AdvancedDashboard: React.FC = () => {
         <div className="bg-gray-100 p-4 text-center text-sm text-gray-600">
           Last updated: {new Date().toLocaleTimeString()}
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
       </div>
     </div>
   );

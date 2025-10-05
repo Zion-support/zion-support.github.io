@@ -231,15 +231,11 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div>
               <div className="text-2xl font-bold text-white mb-1">99.99%</div>
               <div>Average Uptime Achieved</div>
-<<<<<<< HEAD:src/components/October2025AutonomousInfrastructureBanner.tsx
-            <div>Average ROI</div>
-=======
             </div>
             <div>
               <div className="text-2xl font-bold text-white mb-1">340%</div>
               <div>Average ROI</div>
             </div>
->>>>>>> origin/main:src/components/october2025-disabled/October2025AutonomousInfrastructureBanner.tsx
             <div>
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>

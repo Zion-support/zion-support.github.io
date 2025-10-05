@@ -26,18 +26,6 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-// Mock react-error-boundary
-jest.mock('react-error-boundary', () => ({
-  withErrorBoundary: (Component: React.ComponentType) => Component,
-  useErrorHandler: () => jest.fn(),
-}));
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
 
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
@@ -58,19 +46,10 @@ jest.mock('react-router-dom', () => ({
   useLocation: () => ({ pathname: '/' }),
 }));
 
-<<<<<<< HEAD
-// Mock lucide-react icons
-<<<<<<< HEAD
-const mockIcon = (name: string) => `[${name}]`;
-=======
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 
 // Mock lucide-react icons
 jest.mock('lucide-react', () => {
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -289,28 +268,6 @@ jest.mock('lucide-react', () => {
   };
 });
 
-<<<<<<< HEAD
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock fetch
-global.fetch = jest.fn();
-
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
@@ -342,11 +299,3 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/main
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61

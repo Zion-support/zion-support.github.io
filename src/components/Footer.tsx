@@ -39,12 +39,4 @@ const Footer: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default Footer;
-=======
-export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
-=======
-export default Footer;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
