@@ -1,9 +1,4 @@
-import React{ useStateuseEffect } from "react";
-// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
-// import AdvancedCacheManager from '../utils/advancedCache';
-import { enhancedAccessibility } from '../utils/enhancedAccessibility';
-import { securityAuditor } from '../utils/securityAuditor';
-// import EnhancedUXManager from '../utils/enhancedUXManager';
+import React, { useState, useEffect } from 'react';
 
 interface PerformanceData {
   memoryUsage: number;
@@ -30,19 +25,13 @@ interface AnalyticsData {
   events: Array<{
     event: string;
     timestamp: number;
-    properties?: Record<stringunknown>;
+    properties?: Record<string, unknown>;
   }>;
   deviceInfo: {
     screenResolution: string;
     language: string;
     timezone: string;
   };
-}
-
-interface AnalyticsEvent {
-  type: string;
-  timestamp: number;
-  data?: Record<stringunknown>;
 }
 
 interface CacheData {
@@ -62,85 +51,80 @@ interface DashboardData {
 }
 
 const AdvancedDashboard: React.FC = () => {
-  const [isOpensetIsOpen] = useState(false);
-  const [datasetData] = useState<DashboardData | null>(null);
-  const [activeTabsetActiveTab] = useState("overview");
+  const [isOpen, setIsOpen] = useState(false);
+  const [data, setData] = useState<DashboardData | null>(null);
+  const [activeTab, setActiveTab] = useState("overview");
 
   useEffect(() => {
     if (isOpen) {
       updateData();
-      const interval = setInterval(updateData5000);
+      const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
-  }[isOpen]);
+  }, [isOpen]);
 
   const updateData = () => {
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0misses: 0size: 0 };
+    const cacheStats = { hits: 0, misses: 0, size: 0 };
 
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {
-      id: `session_${Date.now()}`
-      startTime: Date.now() - 300000// 5 minutes ago
-      lastActivity: Date.now()
-      pageViews: events.filter((e) => e.name === "page_view").length
+      id: `session_${Date.now()}`,
+      startTime: Date.now() - 300000, // 5 minutes ago
+      lastActivity: Date.now(),
+      pageViews: events.filter((e) => e.name === "page_view").length,
       events: events.map((e) => ({
-        event: e.name
-        timestamp: e.timestamp || Date.now()
+        event: e.name,
+        timestamp: e.timestamp || Date.now(),
         properties: (e as any).properties || {}
-      }))
+      })),
       deviceInfo: {
-        screenResolution: `${window.screen.width}x${window.screen.height}`
-        language: navigator.language
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
       }
     };
 
     // Convert cache stats to proper format
     const cache: CacheData = {
-      size:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).size as number) || 0
-          : 0
-      totalSize:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).totalSize as number) || 0
-          : 0
-      maxSize:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).maxSize as number) || 0
-          : 0
-      hitRate:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).hitRate as number) || 0
-          : 0
+      size: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).size as number) || 0
+        : 0,
+      totalSize: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
+        : 0,
+      maxSize: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
+        : 0,
+      hitRate: typeof cacheStats === "object" && cacheStats !== null
+        ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
+        : 0
     };
 
     setData({
-      analytics: analyticsData || {}
-      cache: cache || {}
+      analytics: analyticsData,
+      cache: cache,
       performance: {
-        memoryUsage:
-          (
-            performance as Performance & {
-              memory?: { usedJSHeapSize?: number };
-            }
-          ).memory?.usedJSHeapSize || 0
-        memoryLimit:
-          (
-            performance as Performance & {
-              memory?: { jsHeapSizeLimit?: number };
-            }
+        memoryUsage: (performance as Performance & {
+          memory?: { usedJSHeapSize?: number };
+        }).memory?.usedJSHeapSize || 0,
+        memoryLimit: (performance as Performance & {
+          memory?: { jsHeapSizeLimit?: number };
+        }).memory?.jsHeapSizeLimit || 0
+      },
+      accessibility: { features: "Screen reader support, keyboard navigation" },
+      security: { status: "Active" },
+      ux: { status: "Optimized" }
     });
   };
 
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
-    const sizes = ["Bytes""KB""MB""GB"];
+    const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(ki)).toFixed(2)) + " " + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
   const formatDuration = (ms: number): string => {
@@ -180,12 +164,12 @@ const AdvancedDashboard: React.FC = () => {
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
             {[
-              { id: "overview"label: "Overview" }
-              { id: "analytics"label: "Analytics" }
-              { id: "performance"label: "Performance" }
-              { id: "cache"label: "Cache" }
-              { id: "security"label: "Security" }
-              { id: "accessibility"label: "Accessibility" }
+              { id: "overview", label: "Overview" },
+              { id: "analytics", label: "Analytics" },
+              { id: "performance", label: "Performance" },
+              { id: "cache", label: "Cache" },
+              { id: "security", label: "Security" },
+              { id: "accessibility", label: "Accessibility" }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -210,13 +194,10 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
                   <div>
-                    Session: {data.analytics?.id?.substring(012) || "N/A"}...
+                    Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
                   </div>
                   <div>
-                    Duration:{" "}
-                    {formatDuration(
-                      Date.now() - (data.analytics?.startTime || 0)
-                    )}
+                    Duration: {formatDuration(Date.now() - (data.analytics?.startTime || 0))}
                   </div>
                   <div>Page Views: {data.analytics?.pageViews || 0}</div>
                   <div>Events: {data.analytics?.events?.length || 0}</div>
@@ -236,24 +217,14 @@ const AdvancedDashboard: React.FC = () => {
               </div>
 
               <div className="bg-purple-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-purple-900 mb-2">
-                  Performance
-                </h3>
+                <h3 className="font-semibold text-purple-900 mb-2">Performance</h3>
                 <div className="space-y-1 text-sm">
+                  <div>Memory: {formatBytes(data.performance?.memoryUsage || 0)}</div>
+                  <div>Limit: {formatBytes(data.performance?.memoryLimit || 0)}</div>
                   <div>
-                    Memory: {formatBytes(data.performance?.memoryUsage || 0)}
-                  </div>
-                  <div>
-                    Limit: {formatBytes(data.performance?.memoryLimit || 0)}
-                  </div>
-                  <div>
-                    Usage:{" "}
-                    {(
-                      ((data.performance?.memoryUsage || 0) /
-                        (data.performance?.memoryLimit || 1)) *
-                      100
-                    ).toFixed(1)}
-                    %
+                    Usage: {(
+                      ((data.performance?.memoryUsage || 0) / (data.performance?.memoryLimit || 1)) * 100
+                    ).toFixed(1)}%
                   </div>
                 </div>
               </div>
@@ -267,9 +238,7 @@ const AdvancedDashboard: React.FC = () => {
               </div>
 
               <div className="bg-pink-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-pink-900 mb-2">
-                  Accessibility
-                </h3>
+                <h3 className="font-semibold text-pink-900 mb-2">Accessibility</h3>
                 <div className="space-y-1 text-sm">
                   <div>Features: {data.accessibility?.features}</div>
                   <div>Compliance: WCAG 2.1 AA</div>
@@ -277,218 +246,10 @@ const AdvancedDashboard: React.FC = () => {
               </div>
 
               <div className="bg-indigo-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-indigo-900 mb-2">
-                  User Experience
-                </h3>
+                <h3 className="font-semibold text-indigo-900 mb-2">User Experience</h3>
                 <div className="space-y-1 text-sm">
                   <div>Status: {data.ux?.status}</div>
                   <div>Theme: Auto</div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === "analytics" && data?.analytics && (
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-3">Session Information</h3>
-                  <div className="space-y-2 text-sm">
-                    <div>
-                      <strong>ID:</strong> {data.analytics.id || "N/A"}
-                    </div>
-                    <div>
-                      <strong>Start Time:</strong>{" "}
-                      {data.analytics.startTime
-                        ? new Date(data.analytics.startTime).toLocaleString()
-                        : "N/A"}
-                    </div>
-                    <div>
-                      <strong>Last Activity:</strong>{" "}
-                      {data.analytics.lastActivity
-                        ? new Date(data.analytics.lastActivity).toLocaleString()
-                        : "N/A"}
-                    </div>
-                    <div>
-                      <strong>Page Views:</strong>{" "}
-                      {data.analytics.pageViews || 0}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-3">Device Information</h3>
-                  <div className="space-y-2 text-sm">
-                    <div>
-                      <strong>Screen:</strong>{" "}
-                      {data.analytics.deviceInfo?.screenResolution || "N/A"}
-                    </div>
-                    <div>
-                      <strong>Language:</strong>{" "}
-                      {data.analytics.deviceInfo?.language || "N/A"}
-                    </div>
-                    <div>
-                      <strong>Timezone:</strong>{" "}
-                      {data.analytics.deviceInfo?.timezone || "N/A"}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-3">
-                  Recent Events ({data.analytics.events?.length || 0})
-                </h3>
-                <div className="max-h-64 overflow-y-auto">
-                  <div className="space-y-2">
-                    {(data.analytics.events || [])
-                      .slice(-10)
-                      .map((eventindex: number) => (
-                        <div
-                          key={index}
-                          className="bg-white p-2 rounded text-sm"
-                        >
-                          <div className="font-medium">{event.event}</div>
-                          <div className="text-gray-600">
-                            {new Date(event.timestamp).toLocaleString()}
-                          </div>
-                          {event.properties &&
-                            Object.keys(event.properties).length > 0 && (
-                              <div className="text-gray-500 text-xs mt-1">
-                                {JSON.stringify(event.propertiesnull2)}
-                              </div>
-                            )}
-                        </div>
-                      ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === "performance" && data?.performance && (
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-3">Memory Usage</h3>
-                <div className="space-y-2">
-                  <div className="flex justify-between">
-                    <span>Used Memory:</span>
-                    <span>{formatBytes(data.performance.memoryUsage)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Memory Limit:</span>
-                    <span>{formatBytes(data.performance.memoryLimit)}</span>
-                  </div>
-                  <div className="w-full bg-gray-200 rounded-full h-2">
-                    <div
-                      className="bg-blue-600 h-2 rounded-full"
-                      style={{
-                        width: `${(data.performance.memoryUsage / data.performance.memoryLimit) * 100}%`
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === "cache" && data?.cache && (
-            <div className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-3">Cache Statistics</h3>
-                  <div className="space-y-2 text-sm">
-                    <div>
-                      <strong>Items:</strong> {data.cache.size || 0}
-                    </div>
-                    <div>
-                      <strong>Total Size:</strong>{" "}
-                      {formatBytes(data.cache.totalSize || 0)}
-                    </div>
-                    <div>
-                      <strong>Max Size:</strong>{" "}
-                      {formatBytes(data.cache.maxSize || 0)}
-                    </div>
-                    <div>
-                      <strong>Hit Rate:</strong>{" "}
-                      {((data.cache.hitRate || 0) * 100).toFixed(1)}%
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h3 className="font-semibold mb-3">Cache Usage</h3>
-                  <div className="space-y-2">
-                    <div className="flex justify-between">
-                      <span>Used Space:</span>
-                      <span>{formatBytes(data.cache.totalSize || 0)}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Available:</span>
-                      <span>
-                        {formatBytes(
-                          (data.cache.maxSize || 0) -
-                            (data.cache.totalSize || 0)
-                        )}
-                      </span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-green-600 h-2 rounded-full"
-                        style={{
-                          width: `${((data.cache.totalSize || 0) / (data.cache.maxSize || 1)) * 100}%`
-                        }}
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === "security" && (
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-3">Security Status</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>Security Manager: Active</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>Content Security Policy: Enabled</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>XSS Protection: Active</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === "accessibility" && (
-            <div className="space-y-6">
-              <div className="bg-gray-50 p-4 rounded-lg">
-                <h3 className="font-semibold mb-3">Accessibility Features</h3>
-                <div className="space-y-2 text-sm">
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>Screen Reader Support: Enabled</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>Keyboard Navigation: Active</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>High Contrast Mode: Available</span>
-                  </div>
-                  <div className="flex items-center">
-                    <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                    <span>WCAG 2.1 AA Compliance: Active</span>
-                  </div>
                 </div>
               </div>
             </div>
