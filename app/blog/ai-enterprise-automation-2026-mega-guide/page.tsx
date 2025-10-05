@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -52,8 +51,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{stat.icon}</div>
-                  <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
-                    {stat.value}
+<div  bg-clip-text text-transparent mb-2`}>                    {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
                     {stat.label}
@@ -282,8 +280,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                 ].map((component, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                     <div className="text-4xl mb-4">{component.icon}</div>
-                    <h3 className={`text-xl font-bold mb-3 ${component.color}`}>{component.title}</h3>
-                    <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
+<h3 `}>{component.title}</h3>                    <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
                   </div>
                 ))}
               </div>
@@ -412,14 +409,12 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                  href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
                 >
                   Start Your Automation Journey
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

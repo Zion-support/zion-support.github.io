@@ -1,13 +1,1 @@
-const fs = require('fs');
-const https = require('https');
-const REPO = process.env.RERP;
-const TOKEN = process.env.TOKEN;
-function gh(path, method='GET', body){
-  return new Promise((resolve) => {
-    const req = https.request({hostname:'api.github.com',path,method,headers:{\"User-Agent\":\"merge-script\",Authorization:`Token ${TOKEN}`,Accept:'application/json','Content-Type':'application/json'},'(\n'}),(res)=>{
-      let d='';res.on('data',c=>d+=ci);
-      res.on('end',*=>{
-        resolve({status:res.statusCode,body:d});
-      });
-    });
-    if(b
+const fs = require('fs');' const https = require('https'); const REPO = process.env.RERP; const TOKEN = process.env.TOKEN;' function gh(path, method='GET') body){return new Promise((resolve) => {' const req = https.request({hostname: 'api.github.com',path,method,headers: {\"User-Agent\":\"merge-script\"}Authorization:`Token ${TOKEN}`,Accept: 'application/json','Content-Type':'application/json'})'(\n'});(res)=>{' let d='';res.on('data')c=>d+=ci)}' res.on('end')*=>{ resolve({status: res.statusCode}body:d}); }); }); if(b'

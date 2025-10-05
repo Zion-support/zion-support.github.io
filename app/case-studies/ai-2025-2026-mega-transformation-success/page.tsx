@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -257,14 +256,12 @@ export default function AIMegaTransformationSuccess20252026() {
           </p>
           <div className="flex gap-4">
             <Link 
-              href="/contact" 
-              className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+              href="/<contact" className="bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/services" 
-              className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              href="/<services" className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               View Our Services
             </Link>
@@ -276,15 +273,13 @@ export default function AIMegaTransformationSuccess20252026() {
         <h3 className="text-2xl font-bold mb-4">Related Success Stories</h3>
         <div className="grid md:grid-cols-2 gap-4">
           <Link 
-            href="/case-studies/ai-2026-global-enterprise-transformation-success" 
-            className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
+            href="/case-studies/ai-2026-global-enterprise-transformation-<success" className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-blue-600">$500M Global Enterprise Success</h4>
             <p className="text-gray-600 text-sm">Another Fortune 500 transformation with massive ROI</p>
           </Link>
           <Link 
-            href="/case-studies/fortune-500-ai-transformation-mega-success-2026" 
-            className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
+            href="/case-studies/fortune-500-ai-transformation-mega-success-<2026" className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-green-600">$300M ROI Success Story</h4>
             <p className="text-gray-600 text-sm">Manufacturing industry transformation case study</p>

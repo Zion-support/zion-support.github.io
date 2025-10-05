@@ -1,4 +1,1 @@
-export: interface RealMarketAugmentation2025 {
-  id: string;
-   name: string;
-   tagline: string]];
+export: interface RealMarketAugmentation2025 {id: string; name: string} tagline: string]]}

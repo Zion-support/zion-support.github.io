@@ -1,19 +1,16 @@
 import React from 'react';
-import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
-<<<<<<< HEAD
+import { ArrowRight, TrendingUp, CheckCircle, Brain, Star } from 'lucide-react';
+
 // Fallback: content module may be relocated; guard import
-let revolutionaryBreakthroughs2025: any[] = [];
-let breakthroughServices2025: any[] = [];
-let latestCaseStudies2025: any[] = [];
+let revolutionaryBreakthroughs2025: unknown[] = [];
+let breakthroughServices2025: unknown[] = [];
+let latestCaseStudies2025: unknown[] = [];
 // Content import disabled to avoid hard build failure if the source file moves.
 // Page gracefully renders with empty sections when content is unavailable.
-=======
-import { revolutionaryBreakthroughs2025, breakthroughServices2025, latestCaseStudies2025 } from '../../../src/content/revolutionary-ai-breakthroughs-2025';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export default function RevolutionaryBreakthroughs2025() {
   const getIconComponent = (icon: string) => {
-    const iconMap: { [key: string]: React.ComponentType<any> } = {
+    const iconMap: { [key: string]: React.ComponentType<unknown> } = {
       '🧠': Brain,
       '⚛️': Atom,
       '🤖': Bot,
@@ -103,7 +100,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-            {revolutionaryBreakthroughs2025.map((breakthrough, index) => {
+            {revolutionaryBreakthroughs2025.map((breakthrough) => {
               const IconComponent = getIconComponent(breakthrough.icon);
               return (
                 <div
@@ -192,7 +189,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
-            {breakthroughServices2025.map((service, index) => {
+            {breakthroughServices2025.map((service) => {
               const IconComponent = getIconComponent(service.icon);
               return (
                 <div
@@ -274,7 +271,7 @@ export default function RevolutionaryBreakthroughs2025() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {latestCaseStudies2025.map((caseStudy, index) => (
+            {latestCaseStudies2025.map((caseStudy) => (
               <div
                 key={caseStudy.id}
                 className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"

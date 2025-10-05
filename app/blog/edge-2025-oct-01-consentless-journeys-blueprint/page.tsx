@@ -32,7 +32,7 @@ export default function Page() {
 				</div>
 
 				<div className="mt-8">
-					<a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
+					<a href="/<blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
 				</div>
 			</div>
 		</div>

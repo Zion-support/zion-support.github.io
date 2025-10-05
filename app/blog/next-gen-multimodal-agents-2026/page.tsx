@@ -1,4 +1,3 @@
-import React from 'react';
 import Head from 'next/head';
 
 export default function NextGenMultimodalAgents2026() {
@@ -15,7 +14,7 @@ export default function NextGenMultimodalAgents2026() {
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-fuchsia-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <nav className="mb-8">
-            <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <a href="/<blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Blog
             </a>
           </nav>
@@ -90,10 +89,10 @@ export default function NextGenMultimodalAgents2026() {
                     We design, deploy, and govern multimodal agents tailored to your highest-value workflows.
                   </p>
                   <div className="flex gap-4">
-                    <a href="tel:+13024640950" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    <a href="tel:+<13024640950" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                       Call +1 302 464 0950
                     </a>
-                    <a href="mailto:kleber@ziontechgroup.com" className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                    <a href="mailto:kleber@ziontechgroup.<com" className="bg-fuchsia-500 hover:bg-fuchsia-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                       Email Us
                     </a>
                   </div>
@@ -105,8 +104,8 @@ export default function NextGenMultimodalAgents2026() {
               <div className="flex items-center justify-between">
                 <div className="text-white/60 text-sm">Written by Zion Tech Group AI Systems</div>
                 <div className="flex gap-4">
-                  <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</a>
-                  <a href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">Get in Touch</a>
+                  <a href="/<blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</a>
+                  <a href="/<contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">Get in Touch</a>
                 </div>
               </div>
             </footer>

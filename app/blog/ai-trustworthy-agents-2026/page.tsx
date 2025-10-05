@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Trustworthy Autonomous Agents 2026: Guardrails, Evals, and Policy Gates',
@@ -59,8 +58,7 @@ export default function Page() {
 
         <section className="mt-10">
           <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-semibold rounded-lg hover:from-fuchsia-400 hover:to-purple-500"
+            href="/<contact" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-fuchsia-500 to-purple-600 text-white font-semibold rounded-lg hover:from-fuchsia-400 hover:to-purple-500"
           >
             Schedule a Consultation
           </a>

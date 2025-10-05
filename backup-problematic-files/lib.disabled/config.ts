@@ -1,12 +1,1 @@
-const EnvironmentSchema = z.object ({
-
-  NODE_ENV: z;
-
-    .enum ([';developmen, t, production, ', test'])';
-    .default ()
-  'development'), ';
-
-
-
-
-origin/main
+const EnvironmentSchema = z.object ({NODE_ENV: z} .enum ([',developmen, t, production, ') test'])' .default ()' 'development')} ' origin/main '

@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'AI Trends 2026: The Future of Enterprise Technology | Zion Tech Group',
@@ -120,10 +119,10 @@ export default function AITrends2026() {
                 Discover how Zion Tech Group can help you implement these cutting-edge AI trends in your organization. Our team of experts specializes in autonomous systems, quantum AI, and enterprise transformation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                <a href="/<contact" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                   Get Started
                 </a>
-                <a href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                <a href="/<services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                   Explore Services
                 </a>
               </div>

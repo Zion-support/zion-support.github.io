@@ -1,2 +1,46 @@
-import: React { useState, useMemo } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import { Search, Filter, Star, TrendingUp, Clock, Users, Target, Rocket, Brain, Shield, Cloud, Atom, Heart, Satellite, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Sparkles, Award, Globe, Code, Lock, BarChart3, Workflow, Eye, Server, Smartphone, Database, Network, PenTool, Building, Truck, DollarSign, BookOpen, MessageCircle, HelpCircle, FileText, Cpu, TrendingDown, Calendar, UserCheck, ShieldCheck, Zap as ZapIcon, ShoppingCart, Gauge, MessageCircle as MessageCircleIcon    } from 'lucide-react' import { enhancedServicesCatalog2025, EnhancedService } from '../data/enhancedServicesCatalog2025'  export default function EnhancedServicesShowcase2025() { const [searchTerm, setSearchTerm] = useState('') const [selectedCategory, setSelectedCategory] = useState('all') const [sortBy, setSortBy] = useState('featured') const [viewMode, setViewMode] = useState<any>('grid') ';
-;;
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'EnhancedServicesShowcase2025 | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'EnhancedServicesShowcase2025',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function EnhancedServicesShowcase2025() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              EnhancedServicesShowcase2025
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'EnhancedServicesShowcase2025 | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'EnhancedServicesShowcase2025',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function EnhancedServicesShowcase2025() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >EnhancedServicesShowcase2025</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

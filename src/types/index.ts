@@ -1,38 +1,32 @@
+// Type definitions
+export interface BannerConfig {
+  id: string;
+  title: string;
+  component: string;
+  priority: number;
+  category: string;
+  impressions: number;
+  clicks: number;
+  active: boolean;
+}
+
 export interface PerformanceMetrics {
-  fcp: number | null; // First Contentful Paint
-  lcp: number | null; // Largest Contentful Paint
-  fid: number | null; // First Input Delay
-  cls: number | null; // Cumulative Layout Shift
-  ttfb: number | null; // Time to First Byte
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 }
 
-export interface MemoryUsage {
-  used: number; // MB
-  total: number; // MB
-  limit: number; // MB
-}
-
-export interface ResourceTiming {
+export interface AnalyticsEvent {
   name: string;
-  duration: number;
-  size: number;
-  type: string;
-}
-
-export interface NavigationTiming {
-  domContentLoaded: number;
-  loadComplete: number;
-  totalTime: number;
-  dns: number;
-  tcp: number;
-  request: number;
-  response: number;
-  domProcessing: number;
-}
-
-export interface PerformanceStatus {
-  fcp: boolean;
-  lcp: boolean;
-  fid: boolean;
-  cls: boolean;
+  category: string;
+  action?: string;
+  label?: string;
+  value?: number;
+  timestamp: string;
+  session_id: string;
+  user_id: string;
+  page_url: string;
+  user_agent: string;
 }

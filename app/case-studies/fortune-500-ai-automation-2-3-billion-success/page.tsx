@@ -293,14 +293,12 @@ export default function Fortune500AIAutomationSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/services" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                href="/<services" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
               </a>

@@ -41,7 +41,7 @@ function readTalentProfiles() {
   }
   if (endPos === -1) return [];
   const arrayText = after.slice(arrStart, endPos + 1);
-  // eslint-disable-next-line no-new-func
+   
   const profiles = Function('return ' + arrayText)();
   return Array.isArray(profiles) ? profiles : [];
 }

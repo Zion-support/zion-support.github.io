@@ -43,8 +43,7 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
               </div>
             </div>
             <a 
-              href="/blog/ai-2025-advanced-rag-systems-production-deployment"
-              className="inline-block w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+              href="/blog/ai-2025-advanced-rag-systems-production-<deployment" className="inline-block w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               Read Full Guide →
             </a>
@@ -73,8 +72,7 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
               </div>
             </div>
             <a 
-              href="/blog/ai-2025-multimodal-ai-enterprise-integration-guide"
-              className="inline-block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+              href="/blog/ai-2025-multimodal-ai-enterprise-integration-<guide" className="inline-block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               Explore Integration →
             </a>
@@ -103,8 +101,7 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
               </div>
             </div>
             <a 
-              href="/blog/ai-2025-edge-ai-industrial-automation-revolution"
-              className="inline-block w-full bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+              href="/blog/ai-2025-edge-ai-industrial-automation-<revolution" className="inline-block w-full bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
             >
               Learn More →
             </a>
@@ -136,8 +133,7 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
                 resulting in unprecedented operational efficiency.
               </p>
               <a 
-                href="/case-studies/ai-2025-global-logistics-multimodal-ai-transformation-18-billion-success"
-                className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+                href="/case-studies/ai-2025-global-logistics-multimodal-ai-transformation-18-billion-<success" className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 View Case Study →
               </a>
@@ -156,8 +152,7 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
                 achieving 95% failure prediction accuracy.
               </p>
               <a 
-                href="/case-studies/ai-2025-manufacturing-edge-ai-predictive-maintenance-12-billion-success"
-                className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
+                href="/case-studies/ai-2025-manufacturing-edge-ai-predictive-maintenance-12-billion-<success" className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 text-sm"
               >
                 View Case Study →
               </a>
@@ -169,14 +164,12 @@ const January2025NewContentShowcaseBanner: React.FC = () => {
         <div className="text-center mt-12">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <a 
-              href="/blog"
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+              href="/<blog" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Explore All Content →
             </a>
             <a 
-              href="/contact"
-              className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/<contact" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Discuss Your AI Strategy
             </a>

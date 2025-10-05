@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 
 export const metadata = {
 	title: 'AI-Powered Enterprise Autonomous Systems (2025) | Zion Tech Group',

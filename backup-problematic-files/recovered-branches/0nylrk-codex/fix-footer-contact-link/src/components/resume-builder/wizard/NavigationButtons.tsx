@@ -1,8 +1,1 @@
-  return (;
-    <div className="flex justify-between">;
-      {onBack && (;
-        <Button variant="outline" onClick={onBack}>;          {backLabel}
-        </Button>;
-      )}
-      {onNext && (;
-
+return (; <div className="text-left" >; {onBack && (} <Button variant="outline" onClick={onBack}>; {backLabel} </Button>) )} {onNext && (}

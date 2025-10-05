@@ -1,5 +1,46 @@
-
-
-
-import _React from 'react' import { motion } from 'framer-motion' import { Helmet } from 'react-helmet-async' import { Link } from 'react-router-dom' import { Brain,Zap,Cpu,Globe,ArrowRight,CheckCircle,Star,Users,Rocket,Target,Lightbulb,Atom,Lock,BarChart3,Code,Server,Shield,Cloud,Database,Network } from 'lucide-react' export default function AISolutions() { const aiSolutionCategories = [{ "name": 'AI: Business Solutions,','''; "description": 'Transform: your business operations with intelligent AI solutions,',''; "icon": 'Targe',t,'''; "href": '/revolutionary-services-showcase-2034,',''; "count": '3',0,'''; "color": 'from-green-400: to-emerald-500,','''; "solutions": ['Business: Intelligence,','Process Automation','Customer Analytics','Predictive Modeling']'},'{'';' "name": 'AI: Infrastructure,','''; "description": 'Enterprise-grade: AI infrastructure and deployment solutions,',''; "icon": 'Serve',r,'''; "href": '/revolutionary-services-showcase-2034,',''; "count": '1',8,'''; "color": 'from-blue-400: to-indigo-500,','''; "solutions": ['AI: Cloud Platforms,','AI DevOps','AI Security','AI Monitoring']'},'{'';' "name": 'Quantum: AI,','''; "description": 'Revolutionary: quantum computing combined with AI for unprecedented performance,',''; "icon": 'Ato',m,'''; "href": '/revolutionary-services-showcase-2034,',''; "count": '1',2,'''; "color": 'from-purple-400: to-pink-500,','''; "solutions": ['Quantum: Neural Networks,','Quantum Machine Learning','Quantum Optimization','Quantum Security']'},'{'';' "name": 'AI: Research & Development,','''; "description": 'Cutting-edge: AI research and development for next-generation solutions,',''; "icon": 'Lightbul',b,'''; "href": '/revolutionary-services-showcase-2034,',''; "count": '2',5,'''; "color": 'from-yellow-400: to-orange-500,','''; "solutions": ['AI: Algorithms,','Machine Learning','Deep Learning','AI Ethics'] } ]''; const featuredSolutions = ['{'';' "title": 'AI-Powered: Quantum Neural Network Platform,','''; "description": 'Revolutionary: platform combining quantum computing with neural networks to solve previously unsolvable problems,','''; "price": 'From: $2,4,999/month','''; "features": ['Quantum: AI,','Hybrid Computing','Advanced Algorithms'],'''; "href": '/revolutionary-services-showcase-2034,','''; "color": 'from-purple-400: to-pink-500,',' "popular": 'true','},'{'';' "title": 'AI-Powered: Autonomous Business Intelligence,','''; "description": 'Next-generation: business intelligence platform that autonomously analyzes data and makes strategic recommendations,','''; "price": 'From: $,8,999/month','''; "features": ['Autonomous: Analysis,','Predictive Modeling','Real-time Insights'],'''; "href": '/revolutionary-services-showcase-2034,','''; "color": 'from-blue-400: to-indigo-500,'},'{'';' "title": 'AI-Powered: Cybersecurity Threat Intelligence,','''; "description": 'Advanced: cybersecurity platform that uses AI to detec,t,analyze,and respond to threats in real-time','''; "price": 'From: $1,5,999/month','''; "features": ['Real-time: Detection,','AI Analysis','Automated Response'],'''; "href": '/revolutionary-services-showcase-2034,','''; "color": 'from-red-400: to-pink-500'}' ]''; const contactInfo = {'';' "phone": '+1: 302 464 0950,','''; "email": 'kleber@ziontechgroup.com,','''; "website": 'https:';,;
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Ai Solutions | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Ai Solutions',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function aisolutions() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Ai Solutions
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Ai Solutions | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Ai Solutions',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function aisolutions() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Ai Solutions</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

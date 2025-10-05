@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -58,14 +57,12 @@ export default function March2025AutonomousOperationsRevolutionPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/services/autonomous-operations-consultation"
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+                href="/services/autonomous-operations-<consultation" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Get Autonomous Operations Consultation →
               </a>
               <a 
-                href="/case-studies"
-                className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-teal-500/50 transform hover:-translate-y-1"
+                href="/case-<studies" className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-teal-500/50 transform hover:-translate-y-1"
               >
                 View Success Stories →
               </a>
@@ -269,14 +266,12 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Schedule Consultation
                 </a>
                 <a 
-                  href="/services/autonomous-operations-consultation"
-                  className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/services/autonomous-operations-<consultation" className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Learn More About Our Services
                 </a>
@@ -295,8 +290,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <h3 className="text-xl font-bold text-white mb-4">February 2025: Quantum AI Breakthrough</h3>
               <p className="text-gray-300 mb-4">Fortune 500 companies achieve 300% performance improvements and $50B in cost savings through quantum-enhanced AI systems.</p>
               <a 
-                href="/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-transformation"
-                className="text-emerald-400 hover:text-emerald-300 font-semibold"
+                href="/blog/ai-2025-february-quantum-ai-breakthrough-enterprise-<transformation" className="text-emerald-400 hover:text-emerald-300 font-semibold"
               >
                 Read More →
               </a>
@@ -305,8 +299,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <h3 className="text-xl font-bold text-white mb-4">January 2025: Enterprise Automation</h3>
               <p className="text-gray-300 mb-4">Learn about the $2.3B cost savings and 95% efficiency gains achieved by Fortune 500 companies.</p>
               <a 
-                href="/blog/ai-2025-january-enterprise-automation-breakthrough"
-                className="text-teal-400 hover:text-teal-300 font-semibold"
+                href="/blog/ai-2025-january-enterprise-automation-<breakthrough" className="text-teal-400 hover:text-teal-300 font-semibold"
               >
                 Read More →
               </a>
@@ -315,8 +308,7 @@ export default function March2025AutonomousOperationsRevolutionPage() {
               <h3 className="text-xl font-bold text-white mb-4">Autonomous Operations Case Studies</h3>
               <p className="text-gray-300 mb-4">Detailed analysis of how leading enterprises achieved unprecedented results with autonomous AI systems.</p>
               <a 
-                href="/case-studies"
-                className="text-cyan-400 hover:text-cyan-300 font-semibold"
+                href="/case-<studies" className="text-cyan-400 hover:text-cyan-300 font-semibold"
               >
                 View Case Studies →
               </a>

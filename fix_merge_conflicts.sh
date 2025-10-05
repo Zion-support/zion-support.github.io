@@ -1,22 +1,25 @@
 #!/bin/bash
 
-  if grep -q "" "$file"; then
-# Find all files with merge conflicts and fix them by keeping HEAD version
-find app/services -name "*.tsx" -exec grep -l "<<<<<<< HEAD" {} \; | while read file; do
-    echo "Fixing merge conflicts in: $file"
+# Script to fix merge conflicts in blog files
+# This script removes merge conflict markers and keeps the HEAD version
+
+echo "Starting merge conflict resolution..."
+
+# Find all files with merge conflicts
+conflict_files=$(grep -l "^" /workspace/app/blog -r | head -50)
+
+for file in $conflict_files; do
+    echo "Processing: $file"
     
-    # Create a temporary file
-    temp_file=$(mktemp)
+    # Create a backup
+    cp "$file" "$file.backup"
     
-    # Process the file to remove merge conflict markers and keep HEAD version
-    awk '
-    /^<<<<<<< HEAD/ { in_head = 1; next }
-    /^=======/ { in_head = 0; in_other = 1; next }
-    /^    in_head || (!in_head && !in_other) { print }
-    ' "$file" > "$temp_file"
-    
-    # Replace the original file
-    mv "$temp_file" "$file"
+    # Remove merge conflict markers and keep HEAD version
+    # This removes everything from  to  and from  to ranch
+    sed -i '/^/,/^/d' "$file"
+    sed -i '/^    
+    echo "Fixed: $file"
 done
 
-echo "Merge conflicts fixed!"
+echo "Merge conflict resolution completed for first 50 files."
+echo "Run this script again to process more files if needed."

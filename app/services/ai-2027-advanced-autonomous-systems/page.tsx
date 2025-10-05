@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -30,14 +29,12 @@ export default function AI2027AdvancedAutonomousSystemsService() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            href="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            href="/<contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Get Started Today
           </Link>
           <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
           >
             Call +1 302 464 0950
           </a>
@@ -270,8 +267,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• Standard support</li>
             </ul>
             <Link
-              href="/contact"
-              className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+              href="/<contact" className="block w-full bg-blue-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
             >
               Get Started
             </Link>
@@ -292,8 +288,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• Custom integration</li>
             </ul>
             <Link
-              href="/contact"
-              className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+              href="/<contact" className="block w-full bg-purple-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Started
             </Link>
@@ -311,8 +306,7 @@ export default function AI2027AdvancedAutonomousSystemsService() {
               <li>• White-label solutions</li>
             </ul>
             <Link
-              href="/contact"
-              className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
+              href="/<contact" className="block w-full bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
             >
               Contact Sales
             </Link>
@@ -328,14 +322,12 @@ export default function AI2027AdvancedAutonomousSystemsService() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/contact"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            href="/<contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Start Your Transformation
           </Link>
           <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
           >
             Call +1 302 464 0950
           </a>

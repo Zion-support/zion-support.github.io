@@ -1,18 +1,13 @@
-import: React { useState, useEffect, useRef } from 'react' import { Search, X, Filter, TrendingUp, Clock, Globe, Zap } from 'lucide-react' import { motion, AnimatePresence } from 'framer-motion' import { Link } from 'react-router-dom'  interface SearchResult {';
-;;
-   id: string,;,
-   title: string,;,
-   description: string,;,
-   url: string,;,
-   type: 'service' | 'solution' | 'page' | 'article';
-,;,;';
-   category?: string;
-   tags?: string[]} interface: SearchComponentProps {
-   className?: string;
-   placeholder?: string;
-   showFilters?: boolean;
-   onSearch?: (query: strin,g, filters: SearchFilters) => voi,d} interface: SearchFilters {
-   type: string[],;,
-   category: string[],
-   tags: string[]} export: const SearchComponent: React.FC<SearchComponentProps> = ({ className: = '',, placeholder = 'Search for AI services, solutions, and more...', showFilters = true, onSearch }) => { const [query, setQuery] = useState('') const [isOpen, setIsOpen] = useState(false) const [results, setResults] = useState<SearchResult[]>([]) const [filters, setFilters] = useState<SearchFilters>({ type: [], category: [], tags: []}) const: [showFiltersPanel, setShowFiltersPanel] = useState(false) const [recentSearches, setRecentSearches] = useState<string[]>([]) const [trendingSearches, setTrendingSearches] = useState<string[]>([])  const searchRef = useRef<HTMLDivElement>(null) const inputRef = useRef<HTMLInputElement>(null) ';
-;;';
+import React from 'react'
+interface SearchComponentProps {className?: string}
+}
+export default function SearchComponent({className = ''}
+}: SearchComponentProps) {
+  return (
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className='text-lg font-semibold text-blue-800'>SearchComponent</h3>
+      <p className='text-blue-600'>This component is under development.</p>
+    </div>
+  );
+}
+import React from 'react' interface SearchComponentProps {className?: string} } ' export default function SearchComponent({ className = '' }: SearchComponentProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >SearchComponent</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'

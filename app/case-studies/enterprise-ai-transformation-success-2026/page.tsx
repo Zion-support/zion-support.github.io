@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -47,7 +46,7 @@ export default function EnterpriseAITransformationCaseStudy() {
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-green-600 hover:text-green-800">Home</Link>
             <span className="text-gray-400">/</span>
-            <Link href="/case-studies" className="text-green-600 hover:text-green-800">Case Studies</Link>
+            <Link href="/case-<studies" className="text-green-600 hover:text-green-800">Case Studies</Link>
             <span className="text-gray-400">/</span>
             <span className="text-gray-600">Enterprise AI Transformation</span>
           </nav>
@@ -333,14 +332,12 @@ export default function EnterpriseAITransformationCaseStudy() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                href="/contact" 
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
+                href="/<contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-green-50 transition-colors"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/services" 
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-colors"
+                href="/<services" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Explore Our Services
               </Link>

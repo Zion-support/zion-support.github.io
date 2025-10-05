@@ -17,24 +17,28 @@ export interface SEOMetadata {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
-  structuredData?: Record<string, unknown>;
+  structuredData?: Record<string, any>;
 }
 
+/**
+ * Generate meta tags for SEO
+ */
 export const generateMetaTags = (metadata: SEOMetadata): string => {
   const tags: string[] = [];
-  
+
   // Basic meta tags
   tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
   tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
-  
+
   if (metadata.keywords && metadata.keywords.length > 0) {
     tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
   }
-  
+
   if (metadata.author) {
     tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
   }
-  
+
+  // Canonical URL
   if (metadata.canonicalUrl) {
     tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
   }
@@ -43,11 +47,11 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
   tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
   tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
-  
+
   if (metadata.ogImage) {
     tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
   }
-  
+
   if (metadata.canonicalUrl) {
     tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
   }
@@ -56,27 +60,30 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
   tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
   tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
   tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
-  
+
   if (metadata.twitterImage || metadata.ogImage) {
     tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
   }
-  
+
   return tags.join('\n');
 };
 
 /**
  * Generate structured data (JSON-LD)
  */
-export const generateStructuredData = (type: string, data: Record<string, unknown>): string => {
+export const generateStructuredData = (type: string, data: Record<string, any>): string => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type,
     ...data
-  } as Record<string, unknown>;
-  
+  };
+
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
 };
 
+/**
+ * Generate article structured data
+ */
 export const generateArticleStructuredData = (article: {
   title: string;
   description: string;
@@ -91,7 +98,7 @@ export const generateArticleStructuredData = (article: {
     description: article.description,
     author: {
       '@type': 'Person',
-      name: article.author,
+      name: article.author
     },
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
@@ -102,23 +109,29 @@ export const generateArticleStructuredData = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png',
+        url: 'https://ziontechgroup.com/logo.png'
       }
     }
   });
 };
 
+/**
+ * Generate breadcrumb structured data
+ */
 export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
   return generateStructuredData('BreadcrumbList', {
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      item: crumb.url,
+      item: crumb.url
     }))
   });
 };
 
+/**
+ * Generate organization structured data
+ */
 export const generateOrganizationStructuredData = (): string => {
   return generateStructuredData('Organization', {
     name: 'Zion Tech Group',
@@ -128,43 +141,54 @@ export const generateOrganizationStructuredData = (): string => {
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/zion-holdings',
+      'https://github.com/zion-holdings'
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com',
+      email: 'contact@ziontechgroup.com'
     }
   });
 };
 
+/**
+ * Generate FAQ structured data
+ */
 export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
   return generateStructuredData('FAQPage', {
-    mainEntity: faqs.map((faq) => ({
+    mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer,
+        text: faq.answer
       }
     }))
   });
 };
 
+/**
+ * Generate sitemap XML
+ */
 export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
-  const urlsXml = urls
-    .map((url) => {
-      const lastmod = url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : '';
-      const changefreq = url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : '';
-      const priority = url.priority !== undefined ? `<priority>${url.priority}</priority>` : '';
-      return `<url>\n  <loc>${escapeHtml(url.loc)}</loc>\n  ${lastmod}\n  ${changefreq}\n  ${priority}\n</url>`;
-    })
-    .join('\n');
-    
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urlsXml}\n</urlset>`;
+  const urlsXml = urls.map(url => `
+  <url>
+    <loc>${escapeHtml(url.loc)}</loc>
+    ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
+    ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
+    ${url.priority !== undefined ? `<priority>${url.priority}</priority>` : ''}
+  </url>`).join('');
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlsXml}
+</urlset>`;
 };
 
+/**
+ * Generate robots.txt
+ */
 export const generateRobotsTxt = (config: {
   userAgent?: string;
   disallow?: string[];
@@ -172,21 +196,22 @@ export const generateRobotsTxt = (config: {
   sitemap?: string;
 }): string => {
   const lines: string[] = [];
+
   lines.push(`User-agent: ${config.userAgent || '*'}`);
-  
+
   if (config.disallow && config.disallow.length > 0) {
-    config.disallow.forEach((path) => lines.push(`Disallow: ${path}`));
+    config.disallow.forEach(path => lines.push(`Disallow: ${path}`));
   }
-  
+
   if (config.allow && config.allow.length > 0) {
-    config.allow.forEach((path) => lines.push(`Allow: ${path}`));
+    config.allow.forEach(path => lines.push(`Allow: ${path}`));
   }
-  
+
   if (config.sitemap) {
     lines.push('');
     lines.push(`Sitemap: ${config.sitemap}`);
   }
-  
+
   return lines.join('\n');
 };
 
@@ -195,8 +220,11 @@ export const generateRobotsTxt = (config: {
  */
 export const optimizeTitle = (title: string, maxLength: number = 60): string => {
   if (title.length <= maxLength) return title;
+  
+  // Truncate at word boundary
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
+  
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
 };
 
@@ -205,8 +233,11 @@ export const optimizeTitle = (title: string, maxLength: number = 60): string => 
  */
 export const optimizeDescription = (description: string, maxLength: number = 160): string => {
   if (description.length <= maxLength) return description;
+  
+  // Truncate at word boundary
   const truncated = description.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
+  
   return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
 };
 
@@ -216,15 +247,19 @@ export const optimizeDescription = (description: string, maxLength: number = 160
 export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {
   // Remove special characters and convert to lowercase
   const cleaned = content.toLowerCase().replace(/[^a-z0-9\s]/g, '');
-  const words = cleaned.split(/\s+/);
-  const frequency = new Map<string, number>();
   
-  words.forEach((word) => {
-    if (word.length > 3) {
+  // Split into words
+  const words = cleaned.split(/\s+/);
+  
+  // Count word frequency
+  const frequency = new Map<string, number>();
+  words.forEach(word => {
+    if (word.length > 3) { // Ignore short words
       frequency.set(word, (frequency.get(word) || 0) + 1);
     }
   });
   
+  // Sort by frequency and return top keywords
   return Array.from(frequency.entries())
     .sort((a, b) => b[1] - a[1])
     .slice(0, maxKeywords)
@@ -241,6 +276,9 @@ export const generateSlug = (title: string): string => {
     .replace(/^-+|-+$/g, '');
 };
 
+/**
+ * Validate URL for SEO
+ */
 export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
   const issues: string[] = [];
   
@@ -281,7 +319,7 @@ function escapeHtml(text: string): string {
     '"': '&quot;',
     "'": '&#039;'
   };
-  return text.replace(/[&<>"']/g, (m) => map[m]);
+  return text.replace(/[&<>"']/g, m => map[m]);
 }
 
 /**
@@ -295,10 +333,11 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
 /**
  * Check content quality for SEO
  */
-export const checkContentQuality = (
-  content: string,
-  title: string,
-): { score: number; issues: string[]; recommendations: string[] } => {
+export const checkContentQuality = (content: string, title: string): {
+  score: number;
+  issues: string[];
+  recommendations: string[];
+} => {
   const issues: string[] = [];
   const recommendations: string[] = [];
   let score = 100;
@@ -313,7 +352,8 @@ export const checkContentQuality = (
   // Keyword density check (title in content)
   const titleWords = title.toLowerCase().split(/\s+/);
   const contentLower = content.toLowerCase();
-  const titleInContent = titleWords.some((word) => contentLower.includes(word));
+  const titleInContent = titleWords.some(word => contentLower.includes(word));
+  
   if (!titleInContent) {
     issues.push('Title keywords not found in content');
     score -= 15;

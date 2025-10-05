@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -54,14 +53,12 @@ export default function June2026UltimateBreakthroughCaseStudyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/50"
+              href="/<contact" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-orange-500/50"
             >
               Contact Us Today
             </a>
             <a 
-              href="/blog/ai-2026-june-ultimate-breakthrough-revolution" 
-              className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+              href="/blog/ai-2026-june-ultimate-breakthrough-<revolution" className="border-2 border-orange-500 text-orange-600 hover:bg-orange-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
             >
               Read Full Breakthrough
             </a>

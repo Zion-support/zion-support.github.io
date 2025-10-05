@@ -1,6 +1,4 @@
-import React from 'react';
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: '🧠 Neuromorphic Computing Revolution 2026: Brain-Inspired AI That Thinks Like Humans',
   description: 'Discover the revolutionary neuromorphic computing breakthrough of 2026 that mimics human brain architecture. Achieve 99.7% neural efficiency, 1000x faster processing, and ultra-low power consumption. Transform your enterprise with brain-inspired AI.',
@@ -78,14 +76,12 @@ export default function NeuromorphicComputingRevolution2026() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Neuromorphic Consultation
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories
               </a>
@@ -243,14 +239,12 @@ export default function NeuromorphicComputingRevolution2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Schedule Neuromorphic Demo
             </a>
             <a 
-              href="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Case Studies
             </a>

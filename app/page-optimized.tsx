@@ -1,14 +1,5 @@
-import React from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 import dynamic from 'next/dynamic';
-=======
-import { UnifiedBanner, bannerConfigurations } from './components/UnifiedBannerSystem';
-import { LazyWrapper } from './components/LazyLoader';
-import { SEOOptimizer } from './components/SEOOptimizer';
-import { AccessibilityEnhancer } from './components/AccessibilityEnhancer';
-import { PerformanceMonitor } from './components/PerformanceMonitor';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 // Lazy load heavy components
 const UnifiedContentPromotion = dynamic(() => import('../components/UnifiedContentPromotion'), {
@@ -125,12 +116,12 @@ export default function HomePage() {
               and enterprise IT solutions that drive growth, efficiency, and innovation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
+              <ArrowRight
                 href="/services"
                 className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Explore Our Services
-              </Link>
+              </ArrowRight>
               <a
                 href="tel:+13024640950"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
@@ -222,12 +213,12 @@ export default function HomePage() {
                   </a>
                 </div>
                 <div className="mt-6 pt-4 border-t border-white/20">
-                  <Link
+                  <ArrowRight
                     href="/blog"
                     className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                   >
                     View All Content →
-                  </Link>
+                  </ArrowRight>
                 </div>
               </div>
             </div>

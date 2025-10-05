@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Cognitive Computing Services - Next-Generation Intelligence',
@@ -27,14 +25,12 @@ export default function AICognitiveComputingServices() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <a
-            href="tel:+13024640950"
-            className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg"
+            href="tel:+<13024640950" className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg"
           >
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
+            href="mailto:kleber@ziontechgroup.<com" className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
           >
             Get Free Consultation
           </a>
@@ -179,14 +175,12 @@ export default function AICognitiveComputingServices() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="tel:+13024640950"
-            className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg"
+            href="tel:+<13024640950" className="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-700 transition-colors shadow-lg"
           >
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
+            href="mailto:kleber@ziontechgroup.<com" className="border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-600 hover:text-white transition-colors"
           >
             Get Free Consultation
           </a>

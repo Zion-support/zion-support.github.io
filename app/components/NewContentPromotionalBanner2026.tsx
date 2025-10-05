@@ -1,6 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
+import { ArrowRight, Rocket, Target, TrendingUp, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -117,13 +116,13 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
                 {/* Category */}
                 <div className="mb-4">
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
+                  <span className={`px-3 py-1 rounded-full bg-white/10 text-gray-900 text-sm font-semibold border border-white/20`}>
                     {content.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3 className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                <h3 className={`text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
                   {content.title}
                 </h3>
 
@@ -135,7 +134,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${content.slug}`}
-                  className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
+                  className={`inline-flex items-center gap-3 bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />

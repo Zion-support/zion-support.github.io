@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Enterprise AI Transformation: $150M ROI Success Story | Zion Tech Group',
@@ -224,10 +223,10 @@ export default function EnterpriseAITransformationCaseStudy() {
                 Ready to achieve similar results? Our team of AI transformation experts can help you implement autonomous systems, quantum optimization, and enterprise automation to deliver measurable ROI.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/contact" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
+                <a href="/<contact" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors">
                   Start Your Transformation
                 </a>
-                <a href="/services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
+                <a href="/<services" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">
                   View Our Services
                 </a>
               </div>

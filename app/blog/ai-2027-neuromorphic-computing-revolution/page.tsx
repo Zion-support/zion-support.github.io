@@ -1,6 +1,4 @@
-import React from 'react';
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
   description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture for unprecedented AI performance. Discover how brain-inspired chips are transforming enterprise operations.',
@@ -222,14 +220,12 @@ export default function AI2027NeuromorphicComputingRevolution() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="/contact" 
-                className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/<contact" className="bg-white text-cyan-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
               </a>
               <a 
-                href="/services" 
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
+                href="/<services" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-600 transition-colors"
               >
                 Explore Neuromorphic Solutions
               </a>

@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function January2025QuantumNeuralRevolutionBanner() {
   return (
@@ -63,8 +62,7 @@ export default function January2025QuantumNeuralRevolutionBanner() {
               <span className="bg-green-500/20 px-3 py-1 rounded-full text-green-300 text-xs">10,000x Performance</span>
             </div>
             <a 
-              href="/blog/ai-2025-january-quantum-neural-revolution"
-              className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/blog/ai-2025-january-quantum-neural-<revolution" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Read Complete Guide →
             </a>
@@ -92,8 +90,7 @@ export default function January2025QuantumNeuralRevolutionBanner() {
               <span className="bg-purple-500/20 px-3 py-1 rounded-full text-purple-300 text-xs">Global Impact</span>
             </div>
             <a 
-              href="/case-studies/ai-2025-january-quantum-neural-2-5-billion-success"
-              className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/case-studies/ai-2025-january-quantum-neural-2-5-billion-<success" className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               View Success Story →
             </a>
@@ -145,20 +142,17 @@ export default function January2025QuantumNeuralRevolutionBanner() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/services/quantum-neural-ai-implementation" 
-                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
+                href="/services/quantum-neural-ai-<implementation" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
               >
                 Learn About Services
               </a>
               <a 
-                href="/blog/ai-2025-january-quantum-neural-revolution" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/blog/ai-2025-january-quantum-neural-<revolution" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Read Full Article
               </a>

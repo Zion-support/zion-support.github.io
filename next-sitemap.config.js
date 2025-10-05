@@ -1,6 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
-module.exports = {
-  siteUrl: 'https://app.ziontechgroup.com',
+module.exports = {siteUrl: 'https://app.ziontechgroup.com',
   generateRobotsTxt: true,
-  outDir: './public'
+  outDir: './public'}
 };
+/** @type {import('next-sitemap').IConfig} */ module.exports = {' siteUrl: 'https://app.ziontechgroup.com', generateRobotsTxt: true}' outDir: './public' }; '

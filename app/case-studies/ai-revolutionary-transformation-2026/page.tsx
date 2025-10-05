@@ -1,7 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-
-export const metadata = {
+// export const metadata = {
   title: 'AI Revolutionary Transformation 2026: $100M ROI Success Story',
   description: 'See how a Fortune 500 company achieved $100M ROI with revolutionary AI transformation. Complete case study with implementation details and results.',
   keywords: 'AI transformation, ROI case study, Fortune 500, AI success story, enterprise AI',
@@ -342,14 +340,12 @@ export default function AIRevolutionaryTransformation2026() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="tel:+13024640950"
-            className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            href="tel:+<13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             📞 Call +1 302 464 0950
           </Link>
           <Link
-            href="/contact"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            href="/<contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
           >
             📧 Get Free Consultation
           </Link>

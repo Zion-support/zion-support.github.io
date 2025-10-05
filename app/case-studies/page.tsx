@@ -1,23 +1,5 @@
-import React from 'react';
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Metadata } from 'next';
-=======
-import { Link } from 'react-router-dom';
-import { 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Zap, 
-  TrendingUp,
-  Award,
-  Target,
-  Rocket,
-  DollarSign,
-  Percent
-} from 'lucide-react';
->>>>>>> b0266c0c1be3ec9050e7ba803edc6a65b0904e57
 
 export const metadata: Metadata = {
   title: 'AI Success Stories & Case Studies | Zion Tech Group',
@@ -362,14 +344,12 @@ export default function CaseStudiesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              href="/<services" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
             </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

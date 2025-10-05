@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -51,7 +50,7 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
               ].map((stat, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
                   <div className="text-5xl mb-3">{stat.icon}</div>
-                  <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
+                  <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                     {stat.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
@@ -277,14 +276,12 @@ export default function AI2026RevolutionaryBreakthroughFebruary() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                  href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Get Free Consultation
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

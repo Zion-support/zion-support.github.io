@@ -4,13 +4,6 @@
     "noEmit": true,
     "skipLibCheck": true
   },
-  "include": [
-    "src/typecheck-entry.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "build",
-    "coverage"
-  ]
+  "include": ["src/typecheck-entry.ts"],
+  "exclude": ["node_modules", "dist", "build", "coverage"]
 }

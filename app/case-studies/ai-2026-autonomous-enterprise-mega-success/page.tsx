@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 
 export default function AI2026AutonomousEnterpriseMegaSuccess() {
   return (
@@ -29,14 +27,12 @@ export default function AI2026AutonomousEnterpriseMegaSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#results-overview" 
-                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="#results-<overview" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 View Results →
               </a>
               <a 
-                href="/blog/ai-2026-autonomous-enterprise-operations-breakthrough" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-autonomous-enterprise-operations-<breakthrough" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Learn the Technology →
               </a>
@@ -198,7 +194,7 @@ export default function AI2026AutonomousEnterpriseMegaSuccess() {
       </section>
 
       {/* Results Overview */}
-      <section id="results-overview" className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
+      <section id="results-<overview" className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-cyan-400 to-blue-400 bg-clip-text text-transparent">
@@ -427,14 +423,12 @@ export default function AI2026AutonomousEnterpriseMegaSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/blog/ai-2026-autonomous-enterprise-operations-breakthrough" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-autonomous-enterprise-operations-<breakthrough" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Learn the Technology →
               </a>
@@ -454,14 +448,12 @@ export default function AI2026AutonomousEnterpriseMegaSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </a>
               <a 
-                href="/case-studies" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/case-<studies" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 View More Success Stories →
               </a>

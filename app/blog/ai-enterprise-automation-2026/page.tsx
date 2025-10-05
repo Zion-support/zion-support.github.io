@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'AI Enterprise Automation 2026: Complete Business Process Transformation | Zion Tech Group',
@@ -101,8 +100,8 @@ export default function AIEnterpriseAutomation2026() {
           <h2 className="text-2xl font-bold mb-4">Automate Your Enterprise with Confidence</h2>
           <p className="text-lg mb-6 opacity-90">We design and implement AI automation that delivers measurable business outcomes.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a Conversation</a>
-            <a href="/services/ai-workflow-automation" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-colors">Explore Automation Services</a>
+            <a href="/<contact" className="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Start a Conversation</a>
+            <a href="/services/ai-workflow-<automation" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-700 transition-colors">Explore Automation Services</a>
           </div>
         </div>
       </div>

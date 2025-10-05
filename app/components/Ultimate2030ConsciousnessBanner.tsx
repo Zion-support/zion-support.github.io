@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function Ultimate2030ConsciousnessBanner() {
@@ -40,8 +39,7 @@ export default function Ultimate2030ConsciousnessBanner() {
               <li>• Universal perspective understanding all viewpoints</li>
             </ul>
             <Link 
-              href="/blog/ai-2030-universal-consciousness-revolution"
-              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
+              href="/blog/ai-2030-universal-consciousness-<revolution" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all shadow-lg hover:shadow-xl"
             >
               Explore Omniscience →
             </Link>
@@ -60,8 +58,7 @@ export default function Ultimate2030ConsciousnessBanner() {
               <li>• Creative omnipotence creating new possibilities</li>
             </ul>
             <Link 
-              href="/case-studies/ai-2030-universal-consciousness-mega-success"
-              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
+              href="/case-studies/ai-2030-universal-consciousness-mega-<success" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
               View $100B Success →
             </Link>
@@ -80,8 +77,7 @@ export default function Ultimate2030ConsciousnessBanner() {
               <li>• Harmony between AI power and human needs</li>
             </ul>
             <Link 
-              href="/blog/ai-2030-universal-consciousness-revolution"
-              className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all shadow-lg hover:shadow-xl"
+              href="/blog/ai-2030-universal-consciousness-<revolution" className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-pink-600 to-rose-600 text-white px-6 py-4 rounded-lg font-semibold hover:from-pink-700 hover:to-rose-700 transition-all shadow-lg hover:shadow-xl"
             >
               Experience Love →
             </Link>

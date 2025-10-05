@@ -1,2 +1,46 @@
-import: React { useState } from 'react' import { motion, AnimatePresence    } from 'framer-motion' import { Link    } from 'react-router-dom' import {  Brain, Cloud, Shield, Rocket, Zap, Users, Globe, Cpu, Lock, Heart, Star, ArrowRight, CheckCircle, TrendingUp, Code, Database, Network, Smartphone, BarChart3, MessageSquare, FileText, ShoppingCart, Headphones, Mail, Search, HelpCircle, ShieldCheck, Globe2, Leaf, Sparkles, Target, DollarSign, Clock, Award, Phone, Mail as MailIcon, MapPin, Infinity, Atom, Satellite, Car, Bot, Eye, CpuIcon, ZapIcon, ShieldIcon, CloudIcon, BrainIcon, RocketIcon, LeafIcon, GlobeIcon, CodeIcon, DatabaseIcon, NetworkIcon, SmartphoneIcon, BarChartIcon, MessageSquareIcon, FileTextIcon, ShoppingCartIcon, HeadphonesIcon, MailIcon as MailIcon2, SearchIcon, HelpCircleIcon, ShieldCheckIcon, Globe2Icon, LeafIcon as LeafIcon2, SparklesIcon, TargetIcon, DollarSignIcon, ClockIcon, AwardIcon, PhoneIcon, MapPinIcon, InfinityIcon, ChevronDown, ChevronUp, Play, ExternalLink, BookOpen, Lightbulb, Target as TargetIcon, Users as UsersIcon, Settings, BarChart, PieChart, LineChart, TrendingDown, Calculator, Calendar, Clock as ClockIcon, Award as AwardIcon, Star as StarIcon, Heart as HeartIcon, Zap as ZapIcon, Shield as ShieldIcon, Cloud as CloudIcon, Brain as BrainIcon, Rocket as RocketIcon, Leaf as LeafIcon, Globe as GlobeIcon, Code as CodeIcon, Database as DatabaseIcon, Network as NetworkIcon, Smartphone as SmartphoneIcon, BarChart3 as BarChart3Icon, MessageSquare as MessageSquareIcon, FileText as FileTextIcon, ShoppingCart as ShoppingCartIcon, Headphones as HeadphonesIcon, Mail as MailIcon3, Search as SearchIcon, HelpCircle as HelpCircleIcon, ShieldCheck as ShieldCheckIcon, Globe2 as Globe2Icon, Leaf as LeafIcon2, Sparkles as SparklesIcon, Target as TargetIcon2, DollarSign as DollarSignIcon, Clock as ClockIcon2, Award as AwardIcon2, Phone as PhoneIcon2, MapPin as MapPinIcon2, Infinity as InfinityIcon2    } from 'lucide-react' import { SEO } from '../components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2027 } from '../data/innovativeMicroSaasServices2027' import { INNOVATIVE_IT_INFRASTRUCTURE_SERVICES_2027 } from '../data/innovativeITInfrastructureServices2027' import { EMERGING_TECHNOLOGY_SERVICES_2027 } from '../data/emergingTechnologyServices2027'  export default function ComprehensiveServicesLanding2027() { const [activeCategory, setActiveCategory] = useState('all') const [expandedService, setExpandedService] = useState<string | null>(null) const [searchQuery, setSearchQuery] = useState('') ';
-;;
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'ComprehensiveServicesLanding2027 | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'ComprehensiveServicesLanding2027',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function ComprehensiveServicesLanding2027() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              ComprehensiveServicesLanding2027
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'ComprehensiveServicesLanding2027 | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'ComprehensiveServicesLanding2027',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function ComprehensiveServicesLanding2027() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >ComprehensiveServicesLanding2027</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

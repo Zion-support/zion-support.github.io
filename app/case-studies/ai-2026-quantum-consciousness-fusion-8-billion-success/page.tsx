@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -36,14 +35,12 @@ export default function QuantumConsciousnessFusionSuccessPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
-                href="/blog/ai-2026-quantum-consciousness-fusion-breakthrough" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-quantum-consciousness-fusion-<breakthrough" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough →
               </Link>
               <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Experience Consciousness
               </Link>
@@ -366,14 +363,12 @@ export default function QuantumConsciousnessFusionSuccessPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Transform Healthcare
               </Link>
               <Link 
-                href="/blog/ai-2026-quantum-consciousness-fusion-breakthrough" 
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-quantum-consciousness-fusion-<breakthrough" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Read Full Breakthrough
               </Link>
@@ -392,21 +387,19 @@ export default function QuantumConsciousnessFusionSuccessPage() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Experience the Future
             </Link>
             <a 
-              href="tel:+13024640950" 
-              className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="tel:+<13024640950" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Call +1 302 464 0950
             </a>
           </div>
           
           <div className="mt-8 text-sm text-gray-400">
-            <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
+            <p>Email: <a href="mailto:kleber@ziontechgroup.<com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a></p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -65,14 +64,12 @@ export default function AI2027TranscendentIntelligenceRevolution() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Experience Transcendent AI
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Transcendent Results
               </a>
@@ -294,7 +291,7 @@ export default function AI2027TranscendentIntelligenceRevolution() {
               ].map((metric, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300 text-center">
                   <div className="text-6xl mb-4">{metric.icon}</div>
-                  <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}>
+<div `}>>>>>>>> origin/merge-pr-25212
                     {metric.value}
                   </div>
                   <div className="text-gray-400 text-sm font-medium">
@@ -312,14 +309,12 @@ export default function AI2027TranscendentIntelligenceRevolution() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                  href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Transcend Your Enterprise
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Transcendent Results
                 </a>
@@ -340,14 +335,12 @@ export default function AI2027TranscendentIntelligenceRevolution() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Schedule Transcendent Consultation
             </a>
             <a 
-              href="/services" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/<services" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Transcendent Services
             </a>

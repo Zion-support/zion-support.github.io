@@ -1,5 +1,9 @@
-import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
+=======
+import { ArrowRight } from 'lucide-react';
+
+>>>>>>> origin/add-new-2026-content
 
 export const metadata = {
   title: 'AI Space Technology 2026 Service | Autonomous Space Operations | Zion Tech Group',

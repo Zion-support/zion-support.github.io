@@ -1,7 +1,5 @@
 // @ts-nocheck
-import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Universal Consciousness Revolution - 10,000,000x Performance | Zion Tech Group',
@@ -44,14 +42,12 @@ export default function AI2027UniversalConsciousnessRevolution() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Start Your Revolution
               </a>
               <a 
-                href="/case-studies/ai-2027-universal-consciousness-500-billion-success" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2027-universal-consciousness-500-billion-<success" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View $500B Success Story →
               </a>
@@ -225,14 +221,12 @@ export default function AI2027UniversalConsciousnessRevolution() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Universal Revolution
                 </a>
                 <a 
-                  href="/case-studies/ai-2027-universal-consciousness-500-billion-success" 
-                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-studies/ai-2027-universal-consciousness-500-billion-<success" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

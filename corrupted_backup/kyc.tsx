@@ -1,49 +1,44 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-
-interface KYCSubmission {
-  id: string;
-  userId: string;
-  status: 'pending' | 'approved' | 'rejected' | 'needs_info';
-  submittedAt: string;
-  documents: Array<{
-    id: string;
-    kind: string;
-    filename: string;
-    uploadedAt: string;
-  }>;
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Kyc | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Kyc',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function kyc() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>Kyc</h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
 }
-
-const mockKYCData: KYCSubmission[] = [
-  {
-    id: '1',
-    userId: 'user123',
-    status: 'pending',
-    submittedAt: '2025-01-15T10:00:00Z',
-    documents: [
-      {
-        id: 'doc1',
-        kind: 'passport',
-        filename: 'passport.pdf',
-        uploadedAt: '2025-01-15T10:00:00Z'
-      }
-    ]
-  }
-];
-
-const AdminKYCPage: React.FC = () => {
-  const [submissions, setSubmissions] = useState<KYCSubmission[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simulate loading data
-    setTimeout(() => {
-      setSubmissions(mockKYCData);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  return (
-    <>
-      <Head>
-
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Kyc | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Kyc',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function kyc() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Kyc</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'
