@@ -1,1 +1,53 @@
-import React from ' react ' ; import { render scre e n } from ' @ testi n g - libra r y / react ' ; import { BrowserRout e r } from ' react - rout e r - d o m ' ; import App from ' .. / App ' ; / / Mock reac t - rout e r - dom components jest.mo c k ( ' react - rout e r - d o m ' ( ) = > ( { BrowserRout e r: ( { child r e n }: { childr e n: Rea c t.ReactN o d e } ) = > ( < > { childr e n } < / > ) Routes: ( { child r e n }: { childr e n: Rea c t.ReactN o d e } ) = > < > { childr e n } < / > Route: ( { elem e n t }: { eleme n t: Rea c t.ReactN o d e } ) = > < > { eleme n t } < / > Li n k: ( { child r e n to ...pro p s }: { childr e n: Rea c t.ReactNode; to: string; [ k e y: string ]: unkn o w n; } ) = > ( < a hre f = { to } { ...pro p s } > { childr e n } < / a > ) } ) ); / / Mock other components that might cause issues jes t.mo c k ( ' .. / components / Head e r ' ( ) = > { return function MockHeader( ) { retu r n < div dat a - test i d = ' head e r ' > Header Componen t < / di v > ; }; } ); je s t.mo c k ( ' .. / components / Foot e r ' ( ) = > { return function MockFooter( ) { retu r n < div dat a - test i d = ' foot e r ' > Footer Componen t < / di v > ; }; } ); descri b e ( ' App ' ( ) = > { te s t ( ' renders without crashing ' ( ) = > { render ( < BrowserRout e r > < App / > < / BrowserRout e r > ); / / Check if the app renders without throwing errors expect ( scre e n.getByTest I d ( ' head e r ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTest I d ( ' foot e r ' ) ) .toBeInTheDocume n t ( ); } ); te s t ( ' contains main application structu r e ' ( ) = > { render ( < BrowserRout e r > < App / > < / BrowserRout e r > ); / / Verify basic app structure is present const header = scre e n.getByTest I d ( ' hea d e r ' ); const footer = scre e n.getByTest I d ( ' foo t e r ' ); expe c t ( head e r ) .toBeInTheDocume n t ( ); expe c t ( foot e r ) .toBeInTheDocume n t ( ); } ); } ); $ $ 
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import App from '../App';
+
+// Mock react-router-dom components
+jest.mock('react-router-dom', () => ({
+  BrowserRouter: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  Routes: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  Route: ({ element }: { element: React.ReactNode }) => <>{element}</>,
+  Link: ({ children, to, ...props }: { children: React.ReactNode; to: string; [key: string]: unknown; }) => (
+    <a href={to} {...props}>{children}</a>
+  )
+}));
+
+// Mock other components that might cause issues
+jest.mock('../components/Header', () => {
+  return function MockHeader() {
+    return <div data-testid="header">Header Component</div>;
+  };
+});
+
+jest.mock('../components/Footer', () => {
+  return function MockFooter() {
+    return <div data-testid="footer">Footer Component</div>;
+  };
+});
+
+describe('App', () => {
+  test('renders without crashing', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+    // Check if the app renders without throwing errors
+    expect(screen.getByTestId('header')).toBeInTheDocument();
+    expect(screen.getByTestId('footer')).toBeInTheDocument();
+  });
+
+  test('contains main application structure', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    );
+    // Verify basic app structure is present
+    const header = screen.getByTestId('header');
+    const footer = screen.getByTestId('footer');
+    expect(header).toBeInTheDocument();
+    expect(footer).toBeInTheDocument();
+  });
+});

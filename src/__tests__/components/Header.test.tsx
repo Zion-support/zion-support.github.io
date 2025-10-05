@@ -1,1 +1,58 @@
-import React from ' react ' ; import { render scre e n } from ' @ testi n g - libra r y / react ' ; import { BrowserRout e r } from ' react - rout e r - d o m ' ; import Header from ' .. / .. / components / Head e r ' ; / / Mock frame r - motion jes t.mo c k ( ' fram e r - moti o n ' ( ) = > ( { moti o n: { n a v: ( { child r e n ...pro p s }: { childr e n: Rea c t.ReactNode; [ k e y: string ]: unkn o w n; } ) = > < n a v { ...pro p s } > { childr e n } < / n a v > d i v: ( { child r e n ...pro p s }: { childr e n: Rea c t.ReactNode; [ k e y: string ]: unkn o w n; } ) = > < d i v { ...pro p s } > { childr e n } < / d i v > butt o n: ( { child r e n ...pro p s }: { childr e n: Rea c t.ReactNode; [ k e y: string ]: unkn o w n; } ) = > < butt o n { ...pro p s } > { childr e n } < / butt o n > } } ) ); const renderWithRouter = ( compone n t: Rea c t.ReactElem e n t ) = > { return rende r ( < BrowserRout e r > { compon e n t } < / BrowserRout e r > ); }; descri b e ( ' Header Componen t ' ( ) = > { te s t ( ' renders header with navigati o n ' ( ) = > { renderWithRout e r ( < Head e r / > ); expe c t ( scre e n.getByRo l e ( ' bann e r ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByRo l e ( ' navigati o n ' ) ) .toBeInTheDocume n t ( ); } ); te s t ( ' renders company name ' ( ) = > { renderWithRout e r ( < Head e r / > ); const logo = scre e n.getByTe x t ( ' Zion Tech Grou p ' ); expe c t ( lo g o ) .toBeInTheDocume n t ( ); } ); te s t ( ' renders navigation links ' ( ) = > { renderWithRout e r ( < Head e r / > ); expe c t ( scre e n.getByTe x t ( ' Services ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTe x t ( ' Solutio n s ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTe x t ( ' Resourc e s ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTe x t ( ' Prici n g ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTe x t ( ' Blog ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTe x t ( ' About ' ) ) .toBeInTheDocume n t ( ); expe c t ( scre e n.getByTe x t ( ' Contact ' ) ) .toBeInTheDocume n t ( ); } ); te s t ( ' renders get started butt o n ' ( ) = > { renderWithRout e r ( < Head e r / > ); const getStartedButton = scre e n.getByTe x t ( ' Get Start e d ' ); expe c t ( getStartedButt o n ) .toBeInTheDocume n t ( ); } ); } ); $ $ 
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import Header from '../../components/Header';
+
+// Mock framer-motion
+jest.mock('framer-motion', () => ({
+  motion: {
+    nav: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown; }) => (
+      <nav {...props}>{children}</nav>
+    ),
+    div: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown; }) => (
+      <div {...props}>{children}</div>
+    ),
+    button: ({ children, ...props }: { children: React.ReactNode; [key: string]: unknown; }) => (
+      <button {...props}>{children}</button>
+    )
+  }
+}));
+
+const renderWithRouter = (component: React.ReactElement) => {
+  return render(
+    <BrowserRouter>
+      {component}
+    </BrowserRouter>
+  );
+};
+
+describe('Header Component', () => {
+  test('renders header with navigation', () => {
+    renderWithRouter(<Header />);
+    expect(screen.getByRole('banner')).toBeInTheDocument();
+    expect(screen.getByRole('navigation')).toBeInTheDocument();
+  });
+
+  test('renders company name', () => {
+    renderWithRouter(<Header />);
+    const logo = screen.getByText('Zion Tech Group');
+    expect(logo).toBeInTheDocument();
+  });
+
+  test('renders navigation links', () => {
+    renderWithRouter(<Header />);
+    expect(screen.getByText('Services')).toBeInTheDocument();
+    expect(screen.getByText('Solutions')).toBeInTheDocument();
+    expect(screen.getByText('Resources')).toBeInTheDocument();
+    expect(screen.getByText('Pricing')).toBeInTheDocument();
+    expect(screen.getByText('Blog')).toBeInTheDocument();
+    expect(screen.getByText('About')).toBeInTheDocument();
+    expect(screen.getByText('Contact')).toBeInTheDocument();
+  });
+
+  test('renders get started button', () => {
+    renderWithRouter(<Header />);
+    const getStartedButton = screen.getByText('Get Started');
+    expect(getStartedButton).toBeInTheDocument();
+  });
+});

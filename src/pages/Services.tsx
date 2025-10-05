@@ -1,1 +1,367 @@
-import { ArrowRig h t Bra i n CheckCirc l e Clo u d Co d e Databa s e Rock e t Shie l d St a r Trending U p Use r s Z a p } from ' luci d e - react ' ; import React from ' react ' ; import { Helm e t } from ' react - helm e t - asy n c ' ; import { moti o n } from ' fram e r - moti o n ' ; import { Li n k } from ' react - rout e r - d o m ' ; const Services: React.FC = ( ) = > { const services = [ { ic o n: B r a i n tit l e: ' AI & Machine Learning Solution s ' descripti o n: ' Transform your business with cuttin g - edge artificial intelligence and machine learning implementati o n s. ' featur e s: [ ' Custom ML Model Developm e n t ' ' Predictive Analytic s ' ' Natural Language Processing ' ' Computer Vision Solutions ' ' AI Automation Workflows ' ' Re a l - time Decision Making ' ] pri c e: ' Starting a t $ 5 0 0 0 ' popul a r: fa l s e col o r: ' b l u e ' } { ic o n: Roc k e t tit l e: ' Micro SaaS Developmen t ' descripti o n: ' Scalable softwar e - as - a - service applications designed for rapid deployment and exponential growt h. ' featur e s: [ ' Rapid Prototypi n g ' ' Scalable Architectur e ' ' A P I - First Desig n ' ' Clo u d - Native Developmen t ' ' User Management Systems ' ' Payment Integratio n ' ] pri c e: ' Starting a t $ 3 0 0 0 ' popul a r: t r u e col o r: ' pur p l e ' } { ic o n: Shi e l d tit l e: ' Cybersecuri t y & Complia n c e ' descripti o n: ' Comprehensive security solutions to protect your digital assets and ensure regulatory complianc e. ' featur e s: [ ' Security Audi t s ' ' Penetration Testin g ' ' Compliance Managemen t ' ' Incident Respons e ' ' Security Trainin g ' ' Risk Assessmen t ' ] pri c e: ' Starting a t $ 4 0 0 0 ' popul a r: fa l s e col o r: ' gr e e n ' } { ic o n: Cl o u d tit l e: ' Cloud Migratio n & Dev O p s ' descripti o n: ' Seamless cloud migration and DevOps implementation for improved scalability and efficien c y. ' featur e s: [ ' Cloud Strategy Plannin g ' ' Infrastructure as Code ' ' CI / CD Pipeline Setup ' ' Container Orchestratio n ' ' Monitori n g & Loggi n g ' ' Cost Optimizatio n ' ] pri c e: ' Starting a t $ 6 0 0 0 ' popul a r: fa l s e col o r: ' ind i g o ' } { ic o n: C o d e tit l e: ' Custom Software Developmen t ' descripti o n: ' Tailored software solutions built to meet your specific business requirements and goal s. ' featur e s: [ ' Web Application Developmen t ' ' Mobile App Development ' ' API Developmen t ' ' Database Desig n ' ' Thi r d - party Integration s ' ' Legacy System Modernization ' ] pri c e: ' Starting a t $ 8 0 0 0 ' popul a r: fa l s e col o r: ' ora n g e ' } { ic o n: Datab a s e tit l e: ' Data Analytic s & Business Intelligen c e ' descripti o n: ' Unlock insights from your data with advanced analytics and business intelligence solution s. ' featur e s: [ ' Data Warehousi n g ' ' ETL Pipeline Development ' ' Dashboard Creatio n ' ' Predictive Modelin g ' ' Data Visualizatio n ' ' Re a l - time Analytic s ' ] pri c e: ' Starting a t $ 5 5 0 0 ' popul a r: fa l s e col o r: ' t e a l ' } ]; const processSteps = [ { st e p: ' 0 1 ' tit l e: ' Discove r y & Consultat i o n ' descripti o n: ' We start by understanding your business go a l s challeng e s and requirements through detailed consultatio n. ' } { st e p: ' 0 2 ' tit l e: ' Strate g y & Plann i n g ' descripti o n: ' Our team develops a comprehensive strategy and project plan tailored to your specific nee d s. ' } { st e p: ' 0 3 ' tit l e: ' Developme n t & Implementat i o n ' descripti o n: ' We build and implement your solution using cuttin g - edge technologies and best practic e s. ' } { st e p: ' 0 4 ' tit l e: ' Testi n g & Quality Assuran c e ' descripti o n: ' Rigorous testing ensures your solution meets the highest quality standards and performance requireme n t s. ' } { st e p: ' 0 5 ' tit l e: ' Deployme n t & Lau n c h ' descripti o n: ' We handle the complete deployment process and ensure a smooth launch of your soluti o n. ' } { st e p: ' 0 6 ' tit l e: ' Suppo r t & Maintena n c e ' descripti o n: ' Ongoing support and maintenance to ensure your solution continues to perform optimall y. ' } ]; const stats = [ { ic o n: U s e r s value: ' 50 0 + ' lab e l: ' Happy Clien t s ' } { ic o n: S t a r value: ' 9 8 % ' lab e l: ' Client Satisfacti o n ' } { ic o n: Trendin g U p value: ' 15 0 % ' lab e l: ' Average R O I ' } { ic o n: Za p value: ' 24 / 7 ' lab e l: ' Support Availab l e ' } ]; retu r n ( < > < Helm e t > < tit l e > Our Services - Zion Tech Group | AI & IT Solution s < / tit l e > < meta nam e = ' descripti o n ' conte n t = ' Comprehensive AI and IT solutions including machine learni n g micro SaaS development cybersecuri t y cloud migratio n and custom software developme n t. ' / > < meta nam e = ' keywor d s ' conte n t = ' AI solutio n s micro Saa S cybersecuri t y cloud migratio n DevO p s custom software development data analytic s ' / > < / Helm e t > < div classNam e = ' m i n - h - screen b g - gradie n t - to - br fro m - bl u e - 50 vi a - white t o - te a l - 50 ' > { / * Header Sectio n * / } < section classNam e = ' bg - gradie n t - to - r fro m - bl u e - 600 t o - purp l e - 600 p y - 20 ' > < div classNam e = ' m a x - w - 7xl m x - auto p x - 4 s m: px - 6 l g: px - 8 tex t - cent e r ' > < moti o n.div initia l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 } } > < h1 classNam e = ' te x t - 4xl m d: te x t - 5xl fon t - bold tex t - white m b - 6 ' > Comprehensive Technology Solutions < / h1 > < p classNam e = ' te x t - xl tex t - bl u e - 100 ma x - w - 3xl m x - au t o ' > From AI and machine learning to cloud migration and custom software developme n t we provide end - to - end technology solutions that drive business grow t h. < / p > < / moti o n.d i v > < / d i v > < / secti o n > { / * Stats Sectio n * / } < section classNam e = ' py - 16 b g - whi t e ' > < div classNam e = ' m a x - w - 7xl m x - auto p x - 4 s m: px - 6 l g: px - 8 ' > < div classNam e = ' grid gri d - co l s - 2 m d: gr i d - co l s - 4 ga p - 8 ' > { sta t s.m a p ( ( st a t ind e x ) = > ( < moti o n.div ke y = { in d e x } initi a l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 del a y: ind e x * 0. 1 } } classNa m e = ' te x t - cent e r ' > < div classNam e = ' w - 1 6 h - 16 b g - bl u e - 100 rounde d - lg flex items - center justif y - center m x - auto m b - 4 ' > < st a t.icon classNam e = ' w - 8 h - 8 tex t - bl u e - 6 0 0 ' / > < / d i v > < div classNam e = ' te x t - 3xl fon t - bold tex t - gr a y - 900 m b - 2 ' > { st a t.value } < / d i v > < div classNam e = ' te x t - gr a y - 6 0 0 ' > { st a t.lab e l } < / d i v > < / moti o n.di v > ) ) } < / d i v > < / d i v > < / secti o n > { / * Services Gri d * / } < section classNam e = ' py - 20 ' > < div classNam e = ' m a x - w - 7xl m x - auto p x - 4 s m: px - 6 l g: px - 8 ' > < moti o n.div initia l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 } } classNa m e = ' te x t - center m b - 16 ' > < h2 classNam e = ' te x t - 3xl m d: te x t - 4xl fon t - bold tex t - gr a y - 900 m b - 4 ' > Our Core Services < / h2 > < p classNam e = ' te x t - xl tex t - gr a y - 600 ma x - w - 2xl m x - au t o ' > Comprehensive technology solutions designed to accelerate your digital transformation < / p > < / moti o n.d i v > < div classNam e = ' grid gri d - co l s - 1 m d: gr i d - co l s - 2 l g: gr i d - co l s - 3 ga p - 8 ' > { servic e s.m a p ( ( ser v i c e ind e x ) = > ( < moti o n.div ke y = { in d e x } initi a l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 del a y: ind e x * 0. 1 } } classNa m e = { ` bg - white rounde d - xl shado w - lg hove r: shad o w - xl transitio n - all duratio n - 30 0 p - 6 borde r $ { servi c e.popul a r ? ' bord e r - bl u e - 300 rin g - 2 rin g - bl u e - 100 relativ e ' : ' bord e r - gr a y - 200 hove r: bord e r - bl u e - 3 0 0 ' } ` } > { servi c e.popul a r & & ( < div classNam e = ' absolu t e - t o p - 3 lef t - 1 / 2 transfor m - transla t e - x - 1 / 2 ' > < span classNam e = ' bg - gradie n t - to - r fro m - bl u e - 600 t o - purp l e - 600 tex t - white p x - 4 p y - 1 rounde d - full tex t - sm fon t - bo l d ' > Most Popula r < / sp a n > < / di v > ) } < div classNam e = ' te x t - center m b - 6 ' > < div classNam e = { ` w - 1 6 h - 16 b g - $ { servi c e.col o r } - 100 rounde d - lg flex items - center justif y - center m x - auto m b - 4 ` } > < servi c e.icon classNam e = { ` w - 8 h - 8 tex t - $ { servi c e.col o r } - 6 0 0 ` } / > < / d i v > < h3 classNam e = ' te x t - xl fon t - bold tex t - gr a y - 900 m b - 3 ' > { servi c e.tit l e } < / h3 > < p classNam e = ' te x t - gr a y - 600 m b - 4 ' > { servi c e.descripti o n } < / p > < div classNam e = ' te x t - 2xl fon t - bold tex t - bl u e - 600 m b - 4 ' > { servi c e.pri c e } < / d i v > < / d i v > < ul classNam e = ' spa c e - y - 3 m b - 6 ' > { servi c e.featur e s.m a p ( ( feat u r e featureInd e x ) = > ( < li ke y = { featureIn d e x } classNa m e = ' flex item s - center ga p - 3 ' > < CheckCircle classNam e = ' w - 5 h - 5 tex t - gre e n - 600 fle x - shri n k - 0 ' / > < span classNam e = ' te x t - gr a y - 7 0 0 ' > { featu r e } < / sp a n > < / l i > ) ) } < / ul > < Link t o = ' / conta c t ' classNa m e = { ` bloc k w - full tex t - center p y - 3 p x - 4 rounde d - lg fon t - semibold transitio n - colo r s $ { servi c e.popul a r ? ' bg - gradie n t - to - r fro m - bl u e - 600 t o - purp l e - 600 tex t - white hove r: from - bl u e - 700 hove r: to - purp l e - 7 0 0 ' : ' bg - bl u e - 600 tex t - white hove r: bg - bl u e - 7 0 0 ' } ` } > Get Starte d < / Li n k > < / moti o n.d i v > ) ) } < / d i v > < / d i v > < / secti o n > { / * Process Sectio n * / } < section classNam e = ' py - 20 b g - whi t e ' > < div classNam e = ' m a x - w - 7xl m x - auto p x - 4 s m: px - 6 l g: px - 8 ' > < moti o n.div initia l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 } } classNa m e = ' te x t - center m b - 16 ' > < h2 classNam e = ' te x t - 3xl m d: te x t - 4xl fon t - bold tex t - gr a y - 900 m b - 4 ' > Our Proces s < / h2 > < p classNam e = ' te x t - xl tex t - gr a y - 600 ma x - w - 2xl m x - au t o ' > A proven methodology that ensures successful project delivery and client satisfactio n < / p > < / moti o n.d i v > < div classNam e = ' grid gri d - co l s - 1 m d: gr i d - co l s - 2 l g: gr i d - co l s - 3 ga p - 8 ' > { processSte p s.m a p ( ( st e p ind e x ) = > ( < moti o n.div ke y = { in d e x } initi a l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 del a y: ind e x * 0. 1 } } classNa m e = ' te x t - cent e r ' > < div classNam e = ' w - 1 6 h - 16 b g - bl u e - 600 tex t - white rounde d - full flex items - center justif y - center tex t - xl fon t - bold m x - auto m b - 4 ' > { st e p.st e p } < / d i v > < h3 classNam e = ' te x t - xl fon t - bold tex t - gr a y - 900 m b - 3 ' > { st e p.tit l e } < / h3 > < p classNam e = ' te x t - gr a y - 6 0 0 ' > { st e p.descripti o n } < / p > < / moti o n.di v > ) ) } < / d i v > < / d i v > < / secti o n > { / * CTA Sectio n * / } < section classNam e = ' py - 20 b g - gradie n t - to - r fro m - bl u e - 600 t o - purp l e - 6 0 0 ' > < div classNam e = ' m a x - w - 7xl m x - auto p x - 4 s m: px - 6 l g: px - 8 tex t - cent e r ' > < moti o n.div initia l = { { opac i t y: 0 y: 2 0 } } anima t e = { { opac i t y: 1 y: 0 } } transiti o n = { { durati o n: 0. 6 } } > < h2 classNam e = ' te x t - 3xl m d: te x t - 4xl fon t - bold tex t - white m b - 4 ' > Ready to Transform Your Busines s ? < / h2 > < p classNam e = ' te x t - xl tex t - bl u e - 100 m b - 8 ma x - w - 2xl m x - au t o ' > L e t ' s discuss your project requirements and create a solution that drives real resul t s. < / p > < div classNam e = ' flex fle x - col s m: fl e x - row ga p - 4 justif y - cent e r ' > < Link t o = ' / conta c t ' classNa m e = ' bg - white tex t - bl u e - 600 p x - 8 p y - 3 rounde d - lg fon t - semibold hove r: bg - gr a y - 100 transitio n - colors flex items - center justif y - cent e r ' > Start Your Project < ArrowRight classNam e = ' w - 5 h - 5 m l - 2 ' / > < / Li n k > < Link t o = ' / abo u t ' classNa m e = ' border borde r - white tex t - white p x - 8 p y - 3 rounde d - lg fon t - semibold hove r: bg - bl u e - 700 transitio n - colo r s ' > Learn More About Us < / Li n k > < / d i v > < / moti o n.d i v > < / d i v > < / secti o n > < / d i v > < / > ); }; export default Services; $ $ 
+import { ArrowRight, Brain, CheckCircle, Cloud, Code, Database, Rocket, Shield, Star, TrendingUp, Users, Zap } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
+const Services: React.FC = () => {
+  const services = [
+    {
+      icon: Brain,
+      title: 'AI & Machine Learning Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning implementations.',
+      features: [
+        'Custom ML Model Development',
+        'Predictive Analytics',
+        'Natural Language Processing',
+        'Computer Vision Solutions',
+        'AI Automation Workflows',
+        'Real-time Decision Making'
+      ],
+      price: 'Starting at $5000',
+      popular: false,
+      color: 'blue'
+    },
+    {
+      icon: Rocket,
+      title: 'Micro SaaS Development',
+      description: 'Scalable software-as-a-service applications designed for rapid deployment and exponential growth.',
+      features: [
+        'Rapid Prototyping',
+        'Scalable Architecture',
+        'API-First Design',
+        'Cloud-Native Development',
+        'User Management Systems',
+        'Payment Integration'
+      ],
+      price: 'Starting at $3000',
+      popular: true,
+      color: 'purple'
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity & Compliance',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure regulatory compliance.',
+      features: [
+        'Security Audits',
+        'Penetration Testing',
+        'Compliance Management',
+        'Incident Response',
+        'Security Training',
+        'Risk Assessment'
+      ],
+      price: 'Starting at $4000',
+      popular: false,
+      color: 'green'
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Migration & DevOps',
+      description: 'Seamless cloud migration and DevOps implementation for improved scalability and efficiency.',
+      features: [
+        'Cloud Strategy Planning',
+        'Infrastructure as Code',
+        'CI/CD Pipeline Setup',
+        'Container Orchestration',
+        'Monitoring & Logging',
+        'Cost Optimization'
+      ],
+      price: 'Starting at $6000',
+      popular: false,
+      color: 'indigo'
+    },
+    {
+      icon: Code,
+      title: 'Custom Software Development',
+      description: 'Tailored software solutions built to meet your specific business requirements and goals.',
+      features: [
+        'Web Application Development',
+        'Mobile App Development',
+        'API Development',
+        'Database Design',
+        'Third-party Integrations',
+        'Legacy System Modernization'
+      ],
+      price: 'Starting at $8000',
+      popular: false,
+      color: 'orange'
+    },
+    {
+      icon: Database,
+      title: 'Data Analytics & Business Intelligence',
+      description: 'Unlock insights from your data with advanced analytics and business intelligence solutions.',
+      features: [
+        'Data Warehousing',
+        'ETL Pipeline Development',
+        'Dashboard Creation',
+        'Predictive Modeling',
+        'Data Visualization',
+        'Real-time Analytics'
+      ],
+      price: 'Starting at $5500',
+      popular: false,
+      color: 'teal'
+    }
+  ];
+
+  const processSteps = [
+    {
+      step: '01',
+      title: 'Discovery & Consultation',
+      description: 'We start by understanding your business goals, challenges, and requirements through detailed consultation.'
+    },
+    {
+      step: '02',
+      title: 'Strategy & Planning',
+      description: 'Our team develops a comprehensive strategy and project plan tailored to your specific needs.'
+    },
+    {
+      step: '03',
+      title: 'Development & Implementation',
+      description: 'We build and implement your solution using cutting-edge technologies and best practices.'
+    },
+    {
+      step: '04',
+      title: 'Testing & Quality Assurance',
+      description: 'Rigorous testing ensures your solution meets the highest quality standards and performance requirements.'
+    },
+    {
+      step: '05',
+      title: 'Deployment & Launch',
+      description: 'We handle the complete deployment process and ensure a smooth launch of your solution.'
+    },
+    {
+      step: '06',
+      title: 'Support & Maintenance',
+      description: 'Ongoing support and maintenance to ensure your solution continues to perform optimally.'
+    }
+  ];
+
+  const stats = [
+    {
+      icon: Users,
+      value: '500+',
+      label: 'Happy Clients'
+    },
+    {
+      icon: Star,
+      value: '98%',
+      label: 'Client Satisfaction'
+    },
+    {
+      icon: TrendingUp,
+      value: '150%',
+      label: 'Average ROI'
+    },
+    {
+      icon: Zap,
+      value: '24/7',
+      label: 'Support Available'
+    }
+  ];
+
+  return (
+    <>
+      <Helmet>
+        <title>Our Services - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Comprehensive AI and IT solutions including machine learning, micro SaaS development, cybersecurity, cloud migration, and custom software development." />
+        <meta name="keywords" content="AI solutions, micro SaaS, cybersecurity, cloud migration, DevOps, custom software development, data analytics" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50">
+        {/* Header Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Comprehensive Technology Solutions
+              </h1>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
+                From AI and machine learning to cloud migration and custom software development, we provide end-to-end technology solutions that drive business growth.
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <stat.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <div className="text-3xl font-bold text-gray-900 mb-2">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-600">
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Services Grid */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Core Services
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Comprehensive technology solutions designed to accelerate your digital transformation
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className={`bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border ${
+                    service.popular
+                      ? 'border-blue-300 ring-2 ring-blue-100 relative'
+                      : 'border-gray-200 hover:border-blue-300'
+                  }`}
+                >
+                  {service.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <div className="text-center mb-6">
+                    <div className={`w-16 h-16 bg-${service.color}-100 rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                      <service.icon className={`w-8 h-8 text-${service.color}-600`} />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-3">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4">
+                      {service.description}
+                    </p>
+                    <div className="text-2xl font-bold text-blue-600 mb-4">
+                      {service.price}
+                    </div>
+                  </div>
+                  <ul className="space-y-3 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center gap-3">
+                        <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                        <span className="text-gray-700">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                      service.popular
+                        ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
+                        : 'bg-blue-600 text-white hover:bg-blue-700'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Process
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                A proven methodology that ensures successful project delivery and client satisfaction
+              </p>
+            </motion.div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {processSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
+                    {step.step}
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600">
+                    {step.description}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Let's discuss your project requirements and create a solution that drives real results.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                >
+                  Start Your Project
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Link>
+                <Link
+                  to="/about"
+                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                >
+                  Learn More About Us
+                </Link>
+              </div>
+            </motion.div>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+};
+
+export default Services;

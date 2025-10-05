@@ -1,1 +1,57 @@
-import React from ' react ' ; import { Routes Route } from ' react - rout e r - d o m ' ; / / import Home from ' . / pages / Home ' ; / / Temporarily disabled import About fro m ' . / pages / About ' ; import Services from ' . / pages / Services ' ; import Contact from ' . / pages / Contact ' ; import Blog from ' . / pages / Blog ' ; import CaseStudies from ' . / pages / CaseStudi e s ' ; import PostBySlug from ' . / pages / blog / PostBySl u g ' ; import AIWorkflowAutomation from ' . / pages / servic e s / AIWorkflowAutomati o n ' ; import AIVirtualAssistant from ' . / pages / servic e s / AIVirtualAssista n t ' ; import AIDataAnalytics from ' . / pages / servic e s / AIDataAnalyti c s ' ; import AIIntelligentDocumentProcessing from ' . / pages / servic e s / AIIntelligentDocumentProcessi n g ' ; import RealTimeCognitiveAutomation from ' . / pages / servic e s / RealTimeCognitiveAutomati o n ' ; import AdvancedCybersecurityAI from ' . / pages / servic e s / AdvancedCybersecurity A I ' ; import MultimodalEnterpriseIntelligence from ' . / pages / blog / ai - 20 2 5 - o c t - multimod a l - enterpri s e - intelligen c e ' ; import AdaptiveLearningPlatforms from ' . / pages / blog / ai - 20 2 5 - o c t - adapti v e - learni n g - platfor m s ' ; import CognitiveAutomationEnterpriseRevolution from ' . / pages / blog / ai - 20 2 5 - o c t - cogniti v e - automati o n - enterpri s e - revoluti o n ' ; import EnterpriseAITransformationSuccessStrategies from ' . / pages / blog / ai - 20 2 5 - o c t - enterpri s e - ai - transformati o n - succe s s - strategi e s ' ; import NextGenIntelligentAutomationBreakthrough from ' . / pages / blog / ai - 20 2 5 - o c t - ne x t - g e n - intellige n t - automati o n - breakthrou g h ' ; import GlobalRetailAITransformation from ' . / pages / ca s e - studi e s / glob a l - reta i l - ai - transformati o n - 20 2 5 ' ; import HealthcareAITransformation from ' . / pages / ca s e - studi e s / healthca r e - ai - transformati o n - 20 2 5 ' ; import GlobalFinTechAITransformation from ' . / pages / ca s e - studi e s / glob a l - finte c h - ai - transformati o n - 20 2 5 ' ; import MultiAgentEnterpriseOrchestration from ' . / pages / blog / ai - 20 2 5 - multiage n t - enterpri s e - orchestrati o n - revoluti o n ' ; import CognitiveComputingTransformation from ' . / pages / blog / ai - 20 2 5 - cogniti v e - computi n g - enterpri s e - transformati o n ' ; import GlobalTelecomCognitiveTransformation from ' . / pages / ca s e - studi e s / glob a l - telec o m - cogniti v e - transformati o n - 4 - 7 - billi o n ' ; export const AppRouter: React.FC = ( ) = > { retu r n ( < Routes > < Route pat h = ' / ' eleme n t = { < d i v > Home page temporarily disabl e d < / d i v > } / > < Route pat h = ' / abo u t ' eleme n t = { < About / > } / > < Route pat h = ' / servic e s ' eleme n t = { < Services / > } / > < Route pat h = ' / servic e s / ai - workfl o w - automati o n ' eleme n t = { < AIWorkflowAutomati o n / > } / > < Route pat h = ' / servic e s / ai - virtu a l - assista n t ' eleme n t = { < AIVirtualAssista n t / > } / > < Route pat h = ' / servic e s / ai - da t a - analyti c s ' eleme n t = { < AIDataAnalyti c s / > } / > < Route pat h = ' / servic e s / ai - intellige n t - document - processi n g ' eleme n t = { < AIIntelligentDocumentProcessi n g / > } / > < Route pat h = ' / servic e s / re a l - ti m e - cogniti v e - automati o n ' eleme n t = { < RealTimeCognitiveAutomati o n / > } / > < Route pat h = ' / servic e s / advanc e d - cybersecuri t y - ai ' eleme n t = { < AdvancedCybersecurity A I / > } / > < Route pat h = ' / ca s e - studi e s ' eleme n t = { < CaseStudi e s / > } / > < Route pat h = ' / ca s e - studi e s / glob a l - reta i l - ai - transformati o n - 20 2 5 ' eleme n t = { < GlobalRetailAITransformati o n / > } / > < Route pat h = ' / ca s e - studi e s / healthca r e - ai - transformati o n - 20 2 5 ' eleme n t = { < HealthcareAITransformati o n / > } / > < Route pat h = ' / ca s e - studi e s / glob a l - finte c h - ai - transformati o n - 20 2 5 ' eleme n t = { < GlobalFinTechAITransformati o n / > } / > < Route pat h = ' / ca s e - studi e s / glob a l - telec o m - cogniti v e - transformati o n - 4 - 7 - billi o n ' eleme n t = { < GlobalTelecomCognitiveTransformati o n / > } / > < Route pat h = ' / conta c t ' eleme n t = { < Contact / > } / > < Route pat h = ' / blog ' eleme n t = { < Blog / > } / > < Route pat h = ' / blog / : sl u g ' eleme n t = { < PostBySl u g / > } / > < Route pat h = ' / blog / ai - 20 2 5 - o c t - multimod a l - enterpri s e - intelligen c e ' eleme n t = { < MultimodalEnterpriseIntelligen c e / > } / > < Route pat h = ' / blog / ai - 20 2 5 - o c t - adapti v e - learni n g - platfor m s ' eleme n t = { < AdaptiveLearningPlatfor m s / > } / > < Route pat h = ' / blog / ai - 20 2 5 - o c t - cogniti v e - automati o n - enterpri s e - revoluti o n ' eleme n t = { < CognitiveAutomationEnterpriseRevoluti o n / > } / > < Route pat h = ' / blog / ai - 20 2 5 - o c t - enterpri s e - ai - transformati o n - succe s s - strategi e s ' eleme n t = { < EnterpriseAITransformationSuccessStrategi e s / > } / > < Route pat h = ' / blog / ai - 20 2 5 - o c t - ne x t - g e n - intellige n t - automati o n - breakthrou g h ' eleme n t = { < NextGenIntelligentAutomationBreakthrou g h / > } / > < Route pat h = ' / blog / ai - 20 2 5 - multiage n t - enterpri s e - orchestrati o n - revoluti o n ' eleme n t = { < MultiAgentEnterpriseOrchestrati o n / > } / > < Route pat h = ' / blog / ai - 20 2 5 - cogniti v e - computi n g - enterpri s e - transformati o n ' eleme n t = { < CognitiveComputingTransformati o n / > } / > < / Route s > ); }; $ $ 
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+// import Home from './pages/Home'; // Temporarily disabled
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
+import CaseStudies from './pages/CaseStudies';
+import PostBySlug from './pages/blog/PostBySlug';
+import AIWorkflowAutomation from './pages/services/AIWorkflowAutomation';
+import AIVirtualAssistant from './pages/services/AIVirtualAssistant';
+import AIDataAnalytics from './pages/services/AIDataAnalytics';
+import AIIntelligentDocumentProcessing from './pages/services/AIIntelligentDocumentProcessing';
+import RealTimeCognitiveAutomation from './pages/services/RealTimeCognitiveAutomation';
+import AdvancedCybersecurityAI from './pages/services/AdvancedCybersecurityAI';
+import MultimodalEnterpriseIntelligence from './pages/blog/ai-2025-oct-multimodal-enterprise-intelligence';
+import AdaptiveLearningPlatforms from './pages/blog/ai-2025-oct-adaptive-learning-platforms';
+import CognitiveAutomationEnterpriseRevolution from './pages/blog/ai-2025-oct-cognitive-automation-enterprise-revolution';
+import EnterpriseAITransformationSuccessStrategies from './pages/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies';
+import NextGenIntelligentAutomationBreakthrough from './pages/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough';
+import GlobalRetailAITransformation from './pages/case-studies/global-retail-ai-transformation-2025';
+import HealthcareAITransformation from './pages/case-studies/healthcare-ai-transformation-2025';
+import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-ai-transformation-2025';
+import MultiAgentEnterpriseOrchestration from './pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution';
+import CognitiveComputingTransformation from './pages/blog/ai-2025-cognitive-computing-enterprise-transformation';
+import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-telecom-cognitive-transformation-4-7-billion';
+
+export const AppRouter: React.FC = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<div>Home page temporarily disabled</div>} />
+      <Route path="/about" element={<About />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/services/ai-workflow-automation" element={<AIWorkflowAutomation />} />
+      <Route path="/services/ai-virtual-assistant" element={<AIVirtualAssistant />} />
+      <Route path="/services/ai-data-analytics" element={<AIDataAnalytics />} />
+      <Route path="/services/ai-intelligent-document-processing" element={<AIIntelligentDocumentProcessing />} />
+      <Route path="/services/real-time-cognitive-automation" element={<RealTimeCognitiveAutomation />} />
+      <Route path="/services/advanced-cybersecurity-ai" element={<AdvancedCybersecurityAI />} />
+      <Route path="/case-studies" element={<CaseStudies />} />
+      <Route path="/case-studies/global-retail-ai-transformation-2025" element={<GlobalRetailAITransformation />} />
+      <Route path="/case-studies/healthcare-ai-transformation-2025" element={<HealthcareAITransformation />} />
+      <Route path="/case-studies/global-fintech-ai-transformation-2025" element={<GlobalFinTechAITransformation />} />
+      <Route path="/case-studies/global-telecom-cognitive-transformation-4-7-billion" element={<GlobalTelecomCognitiveTransformation />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/blog/:slug" element={<PostBySlug />} />
+      <Route path="/blog/ai-2025-oct-multimodal-enterprise-intelligence" element={<MultimodalEnterpriseIntelligence />} />
+      <Route path="/blog/ai-2025-oct-adaptive-learning-platforms" element={<AdaptiveLearningPlatforms />} />
+      <Route path="/blog/ai-2025-oct-cognitive-automation-enterprise-revolution" element={<CognitiveAutomationEnterpriseRevolution />} />
+      <Route path="/blog/ai-2025-oct-enterprise-ai-transformation-success-strategies" element={<EnterpriseAITransformationSuccessStrategies />} />
+      <Route path="/blog/ai-2025-oct-next-gen-intelligent-automation-breakthrough" element={<NextGenIntelligentAutomationBreakthrough />} />
+      <Route path="/blog/ai-2025-multiagent-enterprise-orchestration-revolution" element={<MultiAgentEnterpriseOrchestration />} />
+      <Route path="/blog/ai-2025-cognitive-computing-enterprise-transformation" element={<CognitiveComputingTransformation />} />
+    </Routes>
+  );
+};
