@@ -1,7 +1,8 @@
 import React from 'react';
+import { Brain, Users, Zap, TrendingUp, CheckCircle, ArrowRight, Award, Target } from 'lucide-react';
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Brain, Users, Zap, TrendingUp, CheckCircle, ArrowRight, Award, Target } from 'lucide-react';
 import Header from '../../../components/Header';
 
 const MultiAgentEnterpriseOrchestration: React.FC = () => {

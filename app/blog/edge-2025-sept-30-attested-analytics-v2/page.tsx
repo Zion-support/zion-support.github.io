@@ -32,7 +32,7 @@ export default function AttestedEdgeAnalyticsV2() {
           </ol>
         </section>
 
-        <hr className="my-10 border-white/10" />
+        <hr />
 
         <aside className="bg-indigo-500/10 border border-indigo-400/20 rounded-xl p-6">
           <h3 className="text-xl font-bold text-indigo-300 mb-2">Related</h3>

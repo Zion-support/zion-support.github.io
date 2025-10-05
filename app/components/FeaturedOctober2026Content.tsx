@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import {Sparkles} from 'lucide-react';
+import {Shield} from 'lucide-react';
+import {Bot} from 'lucide-react';
+import {ShoppingBag} from 'lucide-react';
+
+=======
 import Link from 'next/link';
-// import { Sparkles, Shield, Bot, ShoppingBag } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function FeaturedOctober2026Content() {
   return (
@@ -266,3 +273,4 @@ export default function FeaturedOctober2026Content() {
     </section>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

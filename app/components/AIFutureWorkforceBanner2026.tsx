@@ -1,5 +1,7 @@
+<<<<<<< HEAD
+=======
 import Link from 'next/link';
-// import { Users, Brain, TrendingUp, ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
 
 export default function AIFutureWorkforceBanner2026() {
   return (
@@ -128,3 +130,4 @@ export default function AIFutureWorkforceBanner2026() {
     </section>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

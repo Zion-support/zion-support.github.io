@@ -12,10 +12,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import HomePage from './page';
 
 // Utils
-<<<<<<< HEAD
-=======
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9cc7
 
 // Styles
 import '../index.css';
@@ -25,13 +22,10 @@ const App: React.FC = () => {
     // Initialize global error handling
     console.log('App initialized');
 
-<<<<<<< HEAD
-=======
     // Initialize performance monitoring
     performanceOptimizer.startRender('App');
 
     console.log('Performance monitoring initialized');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9cc7
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
   }, []);
 

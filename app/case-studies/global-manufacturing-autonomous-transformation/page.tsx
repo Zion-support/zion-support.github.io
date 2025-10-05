@@ -1,5 +1,16 @@
+<<<<<<< HEAD
+import {TrendingUp} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
+import {Target} from 'lucide-react';
+import {Clock} from 'lucide-react';
+import {Users} from 'lucide-react';
+import {BarChart3} from 'lucide-react';
+import {Award} from 'lucide-react';
+import {Zap} from 'lucide-react';
+=======
 import Link from 'next/link';
-// import { ArrowLeft, TrendingUp, CheckCircle, Target, Clock, Users, DollarSign, BarChart3, Award, Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -513,3 +524,4 @@ export default function GlobalManufacturingCaseStudy() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

@@ -1,6 +1,12 @@
+<<<<<<< HEAD
+import {ArrowRight} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Cpu} from 'lucide-react';
+import {Shield} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+=======
 import React from 'react';
-import Link from 'next/link';
-// import { ArrowRight, Zap, Cpu, Shield, TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
   return (
@@ -113,3 +119,4 @@ const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
 };
 
 export default February2026RevolutionaryEdgeComputingBanner;
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

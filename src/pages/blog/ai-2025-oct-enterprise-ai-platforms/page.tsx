@@ -1,28 +1,8 @@
-<<<<<<< HEAD
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function BlogPage(): React.JSX.Element {
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
+}
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
-        <title>Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />
-=======
-        <title>Ai 2025 Oct Enterprise Ai Platforms</title>
-        <meta 
-          name="description" 
-          content="Learn about ai 2025 oct enterprise ai platforms and how it can benefit your enterprise." 
-        />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" 
-        />
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
+}
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -39,7 +19,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f679

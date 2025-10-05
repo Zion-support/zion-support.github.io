@@ -7,8 +7,8 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
       <div className="flex items-center gap-3 mb-6">
         <span className="text-5xl">🚀</span>
         <div>
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">
-            NEW: Revolutionary AI Breakthroughs October 2025
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">",
+      NEW: Revolutionary AI Breakthroughs October 2025
           </h2>
           <p className="text-purple-300 text-lg mt-2">
             Just Published: $13.3B in Proven Enterprise Value — Neural Architecture Search, Distributed RL & Privacy-Preserving AI

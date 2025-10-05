@@ -1,5 +1,12 @@
+<<<<<<< HEAD
+import {ArrowRight} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Brain} from 'lucide-react';
+import {Cpu} from 'lucide-react';
+import {Sparkles} from 'lucide-react';
+=======
 import Link from 'next/link';
-// import { ArrowRight, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Revolutionary2026ContentBanner() {
   return (
@@ -198,3 +205,4 @@ export default function Revolutionary2026ContentBanner() {
     </section>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

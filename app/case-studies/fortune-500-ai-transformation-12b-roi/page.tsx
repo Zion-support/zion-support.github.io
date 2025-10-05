@@ -1,6 +1,17 @@
+<<<<<<< HEAD
+import {Calendar} from 'lucide-react';
+import {Clock} from 'lucide-react';
+import {User} from 'lucide-react';
+import {ArrowRight} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Award} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
+=======
 import { Metadata } from 'next';
+import { Calendar } from 'lucide-react';
+
 import Link from 'next/link';
-// import { Calendar, Clock, User, ArrowRight, TrendingUp, DollarSign, Target, Zap, Shield, Users, Award, CheckCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Fortune 500 AI Transformation: $12.4B ROI Case Study | Zion Tech Group',
@@ -410,3 +421,4 @@ export default function Fortune500AITransformation12BROI() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

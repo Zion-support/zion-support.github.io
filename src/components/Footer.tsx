@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
             
             <p className='text-gray-300'>
               Email: info@ziontechgroup.com
-              <br
+              <br />
               Phone: +1 (302) 464-0950
             </p>
           </div>

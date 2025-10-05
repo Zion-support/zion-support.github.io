@@ -5,35 +5,35 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [
     {
       title: "Next-Generation Enterprise Automation: The 2026 AI Revolution",
-      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",
+      description: "98% Automation Rate, 1000x Processing Speed, $2.5B Cost Savings",",
       slug: "ai-2026-next-generation-enterprise-automation",
-      category: "AI Innovation",
+      category: "AI Innovation",",
       emoji: "🚀",
-      highlight: "BREAKTHROUGH",
+      highlight: "BREAKTHROUGH",",
       impact: "98% Automation",
-      type: "blog",
+      type: "blog",",
       readTime: "15 min"
     },
-    {
+    {",
       title: "Quantum AI Breakthrough: Revolutionary Computing Paradigm",
-      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",
+      description: "10^18 Operations/sec, 99.9% Accuracy, $10B Market Value",",
       slug: "quantum-ai-breakthrough-2026-revolutionary-computing",
-      category: "Quantum Computing",
+      category: "Quantum Computing",",
       emoji: "⚛️",
-      highlight: "REVOLUTIONARY",
+      highlight: "REVOLUTIONARY",",
       impact: "10^18 Ops/sec",
-      type: "blog",
+      type: "blog",",
       readTime: "18 min"
     },
-    {
+    {",
       title: "Fortune 500 Quantum AI Transformation: $10B Revenue Impact",
-      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",
+      description: "500% Productivity Increase, 95% Process Automation, Market Leadership",",
       slug: "fortune-500-quantum-ai-transformation-2026",
-      category: "Success Story",
+      category: "Success Story",",
       emoji: "🏆",
-      highlight: "MEGA SUCCESS",
+      highlight: "MEGA SUCCESS",",
       impact: "$10B Revenue",
-      type: "case-study",
+      type: "case-study",",
       readTime: "12 min"
     }
   ];
@@ -69,8 +69,8 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {revolutionaryContent.map((content, index) => (
-            <div>
-              key={index} 
+            <div
+key={index} 
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Content Header */}
@@ -101,8 +101,8 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
 
-                  <span className="text-green-400 font-bold text-sm">
-                    Impact: {content.impact}
+                  <span className="text-green-400 font-bold text-sm">",
+      Impact: {content.impact}
                   </span>
                 </div>
               </div>

@@ -51,8 +51,8 @@ const FeaturedServiceCard: React.FC = () => {
         </div>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
           {services.map((service, index) => (
-            <div>
-              key={index}
+            <div
+key={index}
               className='bg-white p-8 rounded-xl shadow-lg border hover:shadow-xl transition-shadow'
             >
               <div className='text-5xl mb-4'>{service.icon}</div>

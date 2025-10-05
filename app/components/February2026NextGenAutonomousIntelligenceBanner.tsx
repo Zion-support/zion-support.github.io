@@ -1,4 +1,14 @@
-// import { ArrowRight, Zap, Brain, TrendingUp, Users, Shield } from 'lucide-react';
+<<<<<<< HEAD
+import {ArrowRight} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Brain} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {Users} from 'lucide-react';
+import {Shield} from 'lucide-react';
+=======
+
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 
 export default function February2026NextGenAutonomousIntelligenceBanner() {
   return (
@@ -159,3 +169,4 @@ export default function February2026NextGenAutonomousIntelligenceBanner() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

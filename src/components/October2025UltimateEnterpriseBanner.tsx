@@ -26,7 +26,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Ultimate Enterprise AI
             </span>
-            <br <span className="text-white">Revolution 2025</span>
+            <br /> <span className="text-white">Revolution 2025</span>
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-medium">

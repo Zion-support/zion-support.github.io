@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+import {BookOpen} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {Award} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Globe} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
+=======
 import Link from 'next/link';
-// import { BookOpen, TrendingUp, Award, Zap, Globe, CheckCircle } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
 
 /**
  * Content Intelligence Revolution Banner
@@ -235,3 +243,4 @@ export function ContentIntelligenceShowcaseBanner() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

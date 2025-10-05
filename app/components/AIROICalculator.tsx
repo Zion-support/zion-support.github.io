@@ -1,5 +1,11 @@
+<<<<<<< HEAD
+import {Calculator} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {DollarSign} from 'lucide-react';
+import {Zap} from 'lucide-react';
+=======
 import React, { useState } from 'react';
-// import { Calculator, TrendingUp, DollarSign, Zap } from 'lucide-react';
+import { Calculator } from 'lucide-react';
 
 export default function AIROICalculator() {
   const [annualRevenue, setAnnualRevenue] = useState(1000000);
@@ -118,3 +124,4 @@ export default function AIROICalculator() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

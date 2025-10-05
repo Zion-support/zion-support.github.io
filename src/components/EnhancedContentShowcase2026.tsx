@@ -13,7 +13,7 @@ interface ContentItem {
   href: string;
   metrics?: {
     label: string;
-    value: string;
+  value: string;
   }[];
 }
 
@@ -182,8 +182,8 @@ export default function EnhancedContentShowcase2026() {
         <div className="flex flex-col md:flex-row gap-4 mb-8 justify-between items-center">
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
-              <button>
-                key={category}
+              <button
+key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
                   selectedCategory === category

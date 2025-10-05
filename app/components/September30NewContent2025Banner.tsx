@@ -1,6 +1,13 @@
+<<<<<<< HEAD
+import {Sparkles} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {ArrowRight} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Rocket} from 'lucide-react';
+import {Star} from 'lucide-react';
+=======
 import React from 'react';
-import Link from 'next/link';
-// import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -129,7 +136,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
+                  <span  text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
                 </div>
@@ -168,7 +175,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
         {/* Second Row */}
         <div className="grid md:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
-          {newArticles.slice(3).map((article, index) => (
+          {newArticles.slice(3).map((article) => (
             <div 
               key={article.id}
               className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30"
@@ -192,7 +199,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
+                  <span  text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
                 </div>
@@ -285,3 +292,4 @@ const September30NewContent2025Banner: React.FC = () => {
 };
 
 export default September30NewContent2025Banner;
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

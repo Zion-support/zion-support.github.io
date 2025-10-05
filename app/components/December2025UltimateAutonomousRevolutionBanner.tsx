@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+import {Brain} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {ArrowRight} from 'lucide-react';
+import {Star} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
+=======
 import Link from 'next/link';
-// import { Brain, Zap, TrendingUp, ArrowRight, Star, CheckCircle } from 'lucide-react';
+import { Brain } from 'lucide-react';
 
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (
@@ -177,3 +185,4 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

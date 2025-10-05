@@ -28,22 +28,22 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
 
   if (!isVisible) return null;
 
-  const variantClasses = {
-    info: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
-    success: "bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 text-green-100",
-    warning: "bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/30 text-yellow-100",
-    error: "bg-gradient-to-r from-red-500/20 to-pink-500/20 border-red-400/30 text-red-100",
-    default: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
-    premium: "bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 border-purple-400/30 text-purple-100",
+  const variantClasses = {",
+      info: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
+      success: "bg-gradient-to-r from-green-500/20 to-emerald-500/20 border-green-400/30 text-green-100",",
+      warning: "bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border-yellow-400/30 text-yellow-100",
+      error: "bg-gradient-to-r from-red-500/20 to-pink-500/20 border-red-400/30 text-red-100",",
+      default: "bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-blue-400/30 text-blue-100",
+      premium: "bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-red-600/20 border-purple-400/30 text-purple-100",
   };
 
-  const iconClasses = {
-    info: "text-blue-400",
-    success: "text-green-400",
-    warning: "text-yellow-400",
-    error: "text-red-400",
-    default: "text-blue-400",
-    premium: "text-purple-300",
+  const iconClasses = {",
+      info: "text-blue-400",
+      success: "text-green-400",",
+      warning: "text-yellow-400",
+      error: "text-red-400",",
+      default: "text-blue-400",
+      premium: "text-purple-300",
   };
 
   return (
@@ -112,8 +112,8 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
           </div>
 
           {dismissible && (
-            <button>
-              onClick={handleDismiss}
+            <button
+onClick={handleDismiss}
               className="ml-4 p-1 rounded-full hover:bg-white/20 transition-colors"
 
             >

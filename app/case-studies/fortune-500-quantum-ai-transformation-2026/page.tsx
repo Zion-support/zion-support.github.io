@@ -1,5 +1,15 @@
+<<<<<<< HEAD
+import {ArrowRight} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
+import {Target} from 'lucide-react';
+import {Users} from 'lucide-react';
+import {DollarSign} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Shield} from 'lucide-react';
+import {CheckCircle} from 'lucide-react';
+=======
 import Link from 'next/link';
-// import { ArrowRight, TrendingUp, Target, Users, DollarSign, Zap, Shield, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Fortune500QuantumAITransformation2026() {
   return (
@@ -354,3 +364,4 @@ export default function Fortune500QuantumAITransformation2026() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39
