@@ -15,8 +15,6 @@ export default function BlogPage(): React.JSX.Element {
           rel="canonical" 
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4" 
         />
-        <title>Ai 2025 Oct 01 Operational Trust V4 - Zion</title>
-        <meta name="description" content="Learn about ai 2025 oct 01 operational trust v4 and how it can benefit your enterprise." />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -33,5 +31,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-}
 }

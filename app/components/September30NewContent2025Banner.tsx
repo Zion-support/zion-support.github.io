@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Rocket, TrendingUp, Zap } from 'lucide-react';
+
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -128,7 +128,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-<span  text-white text-sm font-semibold shadow-lg`}>>>>>>>> origin/merge-pr-25212
+                  <span className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
@@ -191,7 +191,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-<span  text-white text-sm font-semibold shadow-lg`}>>>>>>>> origin/merge-pr-25212
+                  <span className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>

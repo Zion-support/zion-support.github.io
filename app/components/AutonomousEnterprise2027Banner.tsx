@@ -6,7 +6,7 @@ export default function AutonomousEnterprise2027Banner() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-600/20 to-teal-600/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle at 50% 50%,rgba(16,185,129,0.3),transparent 50%)]"></div>
       </div>
 
       {/* Content */}

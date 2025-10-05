@@ -115,9 +115,11 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-`}                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                activeFilter === filter.id
+                  ? 'bg-gradient-to-r from-purple-500 to-blue-500 text-white shadow-lg'
+                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
->>>>>>> origin/merge-pr-25212
             >
               {filter.label} ({filter.count})
             </button>
@@ -134,7 +136,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Content Type Badge */}
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-between mb-3">
-<span `}>>>>>>>> origin/merge-pr-25212
+                  <span className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-300 px-3 py-1 rounded-full text-sm font-medium">
                     {item.type}
                   </span>
                   {item.featured && (
