@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { Clock, User, CheckCircle } from "lucide-react";
+import { Clock, User, CheckCircle } from 'lucide-react';
+
 ;
 ;
 ;

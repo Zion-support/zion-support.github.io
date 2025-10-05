@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { TrendingUp } from "lucide-react";
+import { TrendingUp } from 'lucide-react';
+
 ;
 
 const October2025RevOpsBanner = () => {

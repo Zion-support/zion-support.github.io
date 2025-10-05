@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 
-import { Sparkles, Shield, Bot, ShoppingBag } from "lucide-react";
+import { Sparkles, Shield, Bot, ShoppingBag } from 'lucide-react';
+
 ;
 ;
 ;

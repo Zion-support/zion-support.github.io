@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { Clock, Brain, TrendingUp } from "lucide-react";
+import { Clock, Brain, TrendingUp } from 'lucide-react';
+
 ;
 ;
 ;

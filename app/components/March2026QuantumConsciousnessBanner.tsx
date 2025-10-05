@@ -2,7 +2,8 @@
 import React from 'react';
 <<<<<<< HEAD
 
-import { ArrowRight, Brain, Zap, Target, Shield, Star } from "lucide-react";
+import { ArrowRight, Brain, Zap, Target, Shield, Star } from 'lucide-react';
+
 ;
 ;
 ;

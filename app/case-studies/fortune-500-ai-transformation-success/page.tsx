@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { Calendar, User, Clock, Tag } from "lucide-react";
+import { Calendar, User, Clock, Tag } from 'lucide-react';
+
 ;
 ;
 ;

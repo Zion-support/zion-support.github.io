@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { ArrowRight, Lock, Brain, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, Lock, Brain, TrendingUp, Zap } from 'lucide-react';
+
 ;
 ;
 ;

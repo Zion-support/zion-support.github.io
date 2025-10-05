@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { Rocket, Satellite, Globe, Zap } from "lucide-react";
+import { Rocket, Satellite, Globe, Zap } from 'lucide-react';
+
 ;
 ;
 ;

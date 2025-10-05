@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { BookOpen, TrendingUp, Award, Zap, Globe, CheckCircle } from "lucide-react";
+import { BookOpen, TrendingUp, Award, Zap, Globe, CheckCircle } from 'lucide-react';
+
 ;
 ;
 ;

@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { FileText } from "lucide-react";
 
-import { FileText } from "lucide-react";
+import { FileText } from 'lucide-react';
+
 ;
 
 const October2025DocumentAutomationBanner = () => {

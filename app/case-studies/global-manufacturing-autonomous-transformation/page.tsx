@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { TrendingUp, CheckCircle, Target, Clock, Users, BarChart3, Award, Zap } from "lucide-react";
+import { TrendingUp, CheckCircle, Target, Clock, Users, BarChart3, Award, Zap } from 'lucide-react';
+
 ;
 ;
 ;

@@ -7,7 +7,8 @@
 ;
 import { Link } from "react-router-dom";
 
-import { ArrowLeft, Zap, Brain, Rocket, DollarSign, CheckCircle, TrendingUp } from "lucide-react";
+import { ArrowLeft, Zap, Brain, Rocket, DollarSign, CheckCircle, TrendingUp } from 'lucide-react';
+
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 

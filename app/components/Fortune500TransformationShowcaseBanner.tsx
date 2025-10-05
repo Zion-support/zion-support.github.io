@@ -2,7 +2,8 @@
 import React from 'react';
 <<<<<<< HEAD
 
-import { ArrowRight, TrendingUp, Users, Award, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Award, CheckCircle, Star } from 'lucide-react';
+
 ;
 ;
 ;

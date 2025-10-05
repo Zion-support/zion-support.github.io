@@ -2,7 +2,8 @@ import Link from 'next/link';
 
 <<<<<<< HEAD
 
-import { TrendingUp, DollarSign, Clock, Users, Award, ArrowRight } from "lucide-react";
+import { TrendingUp, DollarSign, Clock, Users, Award, ArrowRight } from 'lucide-react';
+
 // @ts-ignore
 
 

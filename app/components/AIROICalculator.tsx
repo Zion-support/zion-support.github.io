@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 
 <<<<<<< HEAD
 
-import { Calculator, TrendingUp, DollarSign, Zap } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Zap } from 'lucide-react';
+
 ;
 ;
 ;
