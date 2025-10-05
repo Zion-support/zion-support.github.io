@@ -1,241 +1,226 @@
-import { CheckCircle } from 'lucide-react';
-import React from 'react';
+impo, r, t { CheckCirc, l, e } fr, o, m 'luci, d, e-rea, c, t';
+import, React, from 'rea, c, t';
 
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-const Home: React.FC = () => {
-  return (
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+const, Hom, e: Rea, c, t.FC = () => { 
+  retu, r, n (
     <>
-      <Helmet>
-        <title>
-          Zion Tech Group - Leading AI & IT Solutions | Transform Your Business
-        </title>
-        <meta
-          name='description'
-          content='Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Expert consulting services with proven results.'
+      <Helm, e, t>
+        <tit, l, e>
+          Zion, Tech, Group - Leading, A, I & IT, Solution, s | Transform, Your, Business
+        </tit, l, e>
+        <meta, nam, e = 'descripti, o, n'
+          conte, n, t='Zion, Tech, Group delivers, cuttin, g-edge, AI, and IT, solutions, that transform, businesse, s. Expert, consulting, services with, proven, results.'
         />
-        <meta
-          name='keywords'
-          content='AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation'
+        <meta, nam, e='keywor, d, s'
+          conte, n, t='AI, soluti, o, n, s, IT, consultin, g, cybersecuri, t, y, machine, learnin, g, cloud, infrastructur, e, digital, transformatio, n'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50'>
-        {/* Hero Section */}
-        <section className='relative bg-gradient-to-br from-blue-50 to-indigo-100 py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center'>
-              <div className='inline-flex items-center px-6 py-3 rounded-full bg-blue-100 text-blue-800 text-sm font-medium mb-8'>
-                <span className='w-4 h-4 mr-2'>✨</span>
-                Trusted by 500+ companies worldwide
-                <span className='w-4 h-4 ml-2'>🚀</span>
-              </div>
-              <h1 className='text-4xl md:text-6xl font-bold text-gray-900 mb-6'>
-                Leading AI & Technology Solutions
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-white, t, o-te, a, l-50' > {/* Hero, Sectio, n */ }
+        <section, classNam, e='relative, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-indi, g, o-100, p, y-20'>
+          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
+            <div, classNam, e='te, x, t-cent, e, r'>
+              <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-bl, u, e-100, tex, t-bl, u, e-800, tex, t-sm, fon, t-medium, m, b-8'>
+                <span, classNam, e='w-4 h-4, m, r-2'>✨</sp, a, n>
+                Trusted, by, 500+ companies, worldwid, e
+                <span, classNam, e='w-4 h-4, m, l-2'>🚀</sp, a, n>
+              </d, i, v>
+              <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6'>
+                Leading, A, I & Technology, Solution, s
               </h1>
-              <p className='text-xl text-gray-600 mb-8 max-w-3xl mx-auto'>
-                Transform your business with cutting-edge AI micro SaaS and
-                enterprise IT solutions. Build faster, scale smarter, and
-                achieve unprecedented results.
+              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
+                Transform, your, business with, cuttin, g-edge, AI, micro SaaS, and, enterprise IT, solution, s. Build, fas, t, e, r, scale, smarte, r, and, achieve, unprecedented resul, t, s.
               </p>
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-                <Link
-                  to='/services'
-                  className='bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+              <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+                <Link, t, o='/servic, e, s'
+                  classNa, m, e='bg-bl, u, e-600, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s'
                 >
-                  Explore Services
-                </Link>
-                <Link
-                  to='/contact'
-                  className='border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors'
+                  Explore, Service, s
+                </Li, n, k>
+                <Link, t, o='/conta, c, t'
+                  classNa, m, e='border, borde, r-bl, u, e-600, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-50, transitio, n-colo, r, s'
                 >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                  Get, Starte, d
+                </Li, n, k>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* Featured Services */}
-        <section className='py-20 bg-white'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
-                Our Core Services
+        {/* Featured, Servi, c, e, s */}
+        <section, classNam, e = 'py-20, b, g-whi, t, e'>
+          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
+            <div, classNam, e='te, x, t-center, m, b-16'>
+              <h2, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
+                Our, Core, Services
               </h2>
-              <p className='text-xl text-gray-600 max-w-2xl mx-auto'>
-                Comprehensive solutions designed to accelerate your digital
-                transformation
+              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o'>
+                Comprehensive, solutions, designed to, accelerate, your digital, transformatio, n
               </p>
-            </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-              <div className='bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300'>
-                <div className='text-center mb-6'>
-                  <div className='w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                    <span className='w-8 h-8 text-blue-600'>⚡</span>
-                  </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
-                    AI Services & Solutions
+            </d, i, v>
+            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
+              <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, p-6, border, border-gr, a, y-200, hove, r:bord, e, r-bl, u, e-3, 0, 0'>
+                <div, classNam, e='te, x, t-center, m, b-6'>
+                  <div, classNam, e='w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
+                    <span, classNam, e='w-8 h-8, tex, t-bl, u, e-6, 0, 0'>⚡</sp, a, n>
+                  </d, i, v>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
+                    AI, Service, s & Solutio, n, s
                   </h3>
-                  <p className='text-gray-600 mb-4'>
-                    Advanced artificial intelligence solutions including machine
-                    learning, deep learning, and AI automation.
+                  <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
+                    Advanced, artificial, intelligence solutions, including, machine
+                    lear, n, i, n, g, deep, learnin, g, and, AI, automation.
                   </p>
-                  <div className='text-3xl font-bold text-blue-600 mb-4'>
-                    Starting at $5,000
-                  </div>
-                </div>
-                <ul className='space-y-3 mb-6'>
-                  <li className='flex items-center gap-3'>
-                    <span className='w-5 h-5 text-green-600'>✔️</span>
-                    <span className='text-gray-700'>
-                      Machine Learning Models
-                    </span>
+                  <div, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4'>
+                    Starting, a, t $, 5,0, 0, 0
+                  </d, i, v>
+                </d, i, v>
+                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>
+                      Machine, Learning, Models
+                    </sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <span className='w-5 h-5 text-green-600'>✔️</span>
-                    <span className='text-gray-700'>Deep Learning Systems</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Deep, Learning, Systems</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <span className='w-5 h-5 text-green-600'>✔️</span>
-                    <span className='text-gray-700'>AI Automation</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>AI, Automatio, n</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <span className='w-5 h-5 text-green-600'>✔️</span>
-                    <span className='text-gray-700'>Predictive Analytics</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <span, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0'>✔️</sp, a, n>
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Predictive, Analytic, s</sp, a, n>
                   </li>
                 </ul>
-                <Link
-                  to='/services/ai-services'
-                  className='block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors'
+                <Link, t, o='/servic, e, s/ai-servic, e, s'
+                  classNa, m, e='bloc, k, w-full, tex, t-center, p, y-3, p, x-4, rounde, d-lg, fon, t-semibold, b, g-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
                 >
-                  Learn More
-                </Link>
-              </div>
+                  Learn, Mor, e
+                </Li, n, k>
+              </d, i, v>
 
-              <div className='bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-300 ring-2 ring-blue-100 relative'>
-                <div className='absolute -top-3 left-1/2 transform -translate-x-1/2'>
-                  <span className='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold'>
-                    Most Popular
-                  </span>
-                </div>
-                <div className='text-center mb-6'>
-                  <div className='w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                    <span className='w-8 h-8 text-purple-600'>🚀</span>
-                  </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
-                    Micro SaaS Solutions
+              <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, p-6, border, border-bl, u, e-300, rin, g-2, rin, g-bl, u, e-100, relativ, e'>
+                <div, classNam, e='absolu, t, e -t, o, p-3, lef, t-1/2, transfor, m -transla, t, e-x-1/2'>
+                  <span, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, x-4, p, y-1, rounde, d-full, tex, t-sm, fon, t-bo, l, d'>
+                    Most, Popula, r
+                  </sp, a, n>
+                </d, i, v>
+                <div, classNam, e='te, x, t-center, m, b-6'>
+                  <div, classNam, e='w-1, 6, h-16, b, g-purp, l, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
+                    <span, classNam, e='w-8 h-8, tex, t-purp, l, e-6, 0, 0'>🚀</sp, a, n>
+                  </d, i, v>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
+                    Micro, SaaS, Solutions
                   </h3>
-                  <p className='text-gray-600 mb-4'>
-                    Scalable software-as-a-service applications designed for
-                    rapid deployment and growth.
+                  <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
+                    Scalable, softwar, e-as-a-service, applications, designed for, rapid, deployment and, growt, h.
                   </p>
-                  <div className='text-3xl font-bold text-blue-600 mb-4'>
-                    Starting at $3,000
-                  </div>
-                </div>
-                <ul className='space-y-3 mb-6'>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>Rapid Development</span>
+                  <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4'>
+                    Startin, g, a, t $, 3,0, 0, 0
+                  </d, i, v>
+                </d, i, v>
+                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Rapid, Developmen, t</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>Scalable Architecture</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Scalable, Architectur, e</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>Cloud-Native Design</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Clo, u, d-Native, Desig, n</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>API-First Approach</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>A, P, I-First, Approac, h</sp, a, n>
                   </li>
                 </ul>
-                <Link
-                  to='/services/micro-saas'
-                  className='block w-full text-center py-3 px-4 rounded-lg font-semibold bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transition-colors'
+                <Link, t, o='/servic, e, s/mic, r, o-sa, a, s'
+                  classNa, m, e='bloc, k, w-full, tex, t-center, p, y-3, p, x-4, rounde, d-lg, fon, t-semibold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-colo, r, s'
                 >
-                  Learn More
-                </Link>
-              </div>
+                  Learn, Mor, e
+                </Li, n, k>
+              </d, i, v>
 
-              <div className='bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300'>
-                <div className='text-center mb-6'>
-                  <div className='w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4'>
-                    <span className='w-8 h-8 text-green-600'>🛡️</span>
-                  </div>
-                  <h3 className='text-xl font-bold text-gray-900 mb-3'>
-                    IT Services & Solutions
+              <div, classNam, e='bg-white, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-30, 0, p-6, border, border-gr, a, y-200, hove, r:bord, e, r-bl, u, e-3, 0, 0'>
+                <div, classNam, e='te, x, t-center, m, b-6'>
+                  <div, classNam, e='w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
+                    <span, classNam, e='w-8 h-8, tex, t-gre, e, n-6, 0, 0'>🛡️</sp, a, n>
+                  </d, i, v>
+                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
+                    IT, Service, s & Solutio, n, s
                   </h3>
-                  <p className='text-gray-600 mb-4'>
-                    Comprehensive IT infrastructure, cloud migration, and DevOps
-                    services.
+                  <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
+                    Comprehensive, IT, infrastructu, r, e, cloud, migratio, n, and, DevOps, services.
                   </p>
-                  <div className='text-3xl font-bold text-blue-600 mb-4'>
-                    Starting at $2,500
-                  </div>
-                </div>
-                <ul className='space-y-3 mb-6'>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>Cloud Migration</span>
+                  <div, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-4'>
+                    Starting, a, t $, 2,5, 0, 0
+                  </d, i, v>
+                </d, i, v>
+                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Cloud, Migratio, n</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>DevOps & SRE</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>DevO, p, s & S, R, E</sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>
-                      Infrastructure Management
-                    </span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>
+                      Infrastructure, Managemen, t
+                    </sp, a, n>
                   </li>
-                  <li className='flex items-center gap-3'>
-                    <CheckCircle className='w-5 h-5 text-green-600' />
-                    <span className='text-gray-700'>Security & Compliance</span>
+                  <li, classNam, e='flex, item, s-center, ga, p-3'>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-6, 0, 0' />
+                    <span, classNam, e='te, x, t-gr, a, y-7, 0, 0'>Securi, t, y & Complian, c, e</sp, a, n>
                   </li>
                 </ul>
-                <Link
-                  to='/services/it-services'
-                  className='block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors'
+                <Link, t, o='/servic, e, s/it-servic, e, s'
+                  classNa, m, e='bloc, k, w-full, tex, t-center, p, y-3, p, x-4, rounde, d-lg, fon, t-semibold, b, g-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
                 >
-                  Learn More
-                </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+                  Learn, Mor, e
+                </Li, n, k>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        {/* CTA Section */}
-        <section className='py-20 bg-blue-600'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <h2 className='text-3xl md:text-4xl font-bold text-white mb-4'>
-              Ready to Transform Your Business?
+        {/* CTA, Sect, i, o, n */}
+        <section, classNam, e = 'py-20, b, g-bl, u, e-6, 0, 0'>
+          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r'>
+            <h2, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
+              Ready, to, Transform Your, Busines, s?
             </h2>
-            <p className='text-xl text-blue-100 mb-8 max-w-2xl mx-auto'>
-              Join hundreds of enterprises already leveraging our AI and
-              technology solutions.
+            <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
+              Join, hundreds, of enterprises, already, leveraging our, AI, and
+              technology, solution, s.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <Link
-                to='/contact'
-                className='bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors'
+            <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+              <Link, t, o='/conta, c, t'
+                classNa, m, e='bg-white, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
               >
-                Start Your Project
-              </Link>
-              <Link
-                to='/about'
-                className='border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors'
+                Start, Your, Project
+              </Li, n, k>
+              <Link, t, o='/abo, u, t'
+                classNa, m, e='border, borde, r-white, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s'
               >
-                Learn More
-              </Link>
-            </div>
-          </div>
-        </section>
-      </div>
+                Learn, Mor, e
+              </Li, n, k>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+      </d, i, v>
     </>
   );
 };
 
-export default Home;
+export, default, Home;

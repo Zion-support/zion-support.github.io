@@ -1,330 +1,306 @@
-import { Link } from 'react-router-dom';
-import {
-  ArrowLeft,
-  Zap,
-  Brain,
-  TrendingUp,
-  CheckCircle,
-  Rocket,
-} from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import Header from '../../components/Header';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t {
+  ArrowLe, f, t,
+  Z, a, p,
+  Bra, i, n,
+  Trending, U, p,
+  CheckCirc, l, e,
+  Rock, e, t,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import, Header, from '../../componen, t, s/Head, e, r';
 
-const NextGenIntelligentAutomationBreakthrough = () => {
-  return (
+const, NextGenIntelligentAutomationBreakthroug, h = () => { 
+  retu, r, n (
     <>
-      <Helmet>
-        <title>
-          Next-Gen Intelligent Automation Breakthrough: AI-Powered Workflows
-          Redefining Operations | Zion Tech Group
-        </title>
-        <meta
-          name='description'
-          content='Discover next-generation intelligent automation revolutionizing business with 94% accuracy, 85% cost reduction, and 10x productivity gains through AI-powered workflows.'
+      <Helm, e, t>
+        <tit, l, e>
+          Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h: AI-Powered, Workflows, Redefining Operatio, n, s | Zion, Tech, Group
+        </tit, l, e>
+        <meta, nam, e = 'descripti, o, n'
+          conte, n, t='Discover, nex, t-generation, intelligent, automation revolutionizing, business, with 94% accu, r, a, c, y, 85% cost, reductio, n, and, 10x, productivity gains, through, AI-powered, workflow, s.'
         />
-        <meta
-          name='keywords'
-          content='intelligent automation, RPA, AI workflows, process automation, hyperautomation, digital transformation'
+        <meta, nam, e = 'keywor, d, s'
+          conte, n, t='intelligent, automati, o, n, R, P, A, AI, workflow, s, process, automatio, n, hyperautomati, o, n, digital, transformatio, n'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className='min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>
-        <Header />
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
+        <Head, e, r />
 
-        <article className='container mx-auto px-6 py-20'>
-          <Link
-            to='/blog'
-            className='inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors'
+        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20'>
+          <Link, t, o='/bl, o, g'
+            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft className='w-4 h-4 mr-2' />
-            Back to Blog
-          </Link>
+            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            Back, to, Blog
+          </Li, n, k>
 
-          <div className='max-w-4xl mx-auto'>
-            <div className='flex items-center gap-4 mb-6 flex-wrap'>
-              <span className='px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-semibold border border-purple-500/30'>
-                ⭐ FEATURED
-              </span>
-              <span className='px-4 py-2 bg-green-500/20 text-green-300 rounded-full text-sm font-semibold border border-green-500/30'>
-                Intelligent Automation
-              </span>
-              <span className='text-zion-slate-light'>
-                October 1, 2025 • 20 min read
-              </span>
-            </div>
+          <div, classNam, e='m, a, x-w-4xl, m, x-au, t, o'>
+            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
+              <span, classNam, e='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
+                ⭐ FEATUR, E, D
+              </sp, a, n>
+              <span, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-gre, e, n-5, 0, 0/30'>
+                Intelligent, Automatio, n
+              </sp, a, n>
+              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                Octo, b, e, r , 1, 20, 2, 5 • 20, min, read
+              </sp, a, n>
+            </d, i, v>
 
-            <h1 className='text-5xl md:text-6xl font-bold text-white mb-6 leading-tight'>
-              Next-Gen Intelligent Automation Breakthrough
-              <span className='block text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-400 mt-2 text-4xl'>
-                How AI-Powered Workflows Are Redefining Business Operations
-              </span>
+            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
+              Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h
+              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
+                How, A, I-Powered, Workflows, Are Redefining, Business, Operations
+              </sp, a, n>
             </h1>
 
-            <p className='text-xl text-zion-slate-light leading-relaxed mb-8'>
-              Organizations deploying next-generation automation are achieving
-              94% accuracy, 85% cost reductions, and 10x productivity gains
-              through AI-powered workflows that learn, adapt, and optimize
-              autonomously.
+            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+              Organizations, deploying, next-generation, automation, are achieving, 9, 4% accu, r, a, c, y, 85% cost, reduction, s, and, 10x, productivity gains, through, AI-powered, workflows, that lea, r, n, ada, p, t, and, optimize, autonomously.
             </p>
 
-            <div className='flex items-center gap-4 mb-12'>
-              <div className='w-12 h-12 rounded-full bg-gradient-to-r from-green-500 to-cyan-500 flex items-center justify-center'>
-                <Brain className='w-6 h-6 text-white' />
-              </div>
-              <div>
-                <div className='text-white font-semibold'>Marcus Rodriguez</div>
-                <div className='text-zion-slate-light text-sm'>
-                  VP of Automation Solutions, Zion Tech Group
-                </div>
-              </div>
-            </div>
-
-            {/* Key Metrics */}
-            <div className='grid md:grid-cols-4 gap-4 mb-12'>
+            <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'>
+              <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
+                <Brain, classNam, e='w-6 h-6, tex, t-whi, t, e' />
+              </d, i, v>
+              <d, i, v>
+                <div, classNam, e='te, x, t-white, fon, t-semibo, l, d'>Marcus, Rodrigue, z</d, i, v>
+                <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
+                  VP, of, Automation Soluti, o, n, s, Zion, Tech, Group
+                </d, i, v>
+              </d, i, v>
+            </d, i, v > {/* Key, Metric, s */ }
+            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12'>
               {[
-                { value: '$3.2T', label: 'Automation Market 2025' },
-                { value: '85%', label: 'Cost Reduction' },
-                { value: '94%', label: 'Accuracy Rate' },
-                { value: '10x', label: 'Productivity Gain' },
-              ].map((metric, index) => (
-                <div
-                  key={index}
-                  className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30 text-center'
+                { val, u, e: '$3., 2, T', lab, e, l: 'Automation, Market, 202, 5' },
+                { val, u, e: '8, 5%', lab, e, l: 'Cost, Reducti, o, n' },
+                { val, u, e: '9, 4%', lab, e, l: 'Accuracy, Ra, t, e' },
+                { val, u, e: '10, x', lab, e, l: 'Productivity, Ga, i, n' },
+              ].m, a, p((metr, i, c, ind, e, x) => (
+                <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30, tex, t-cent, e, r'
                 >
-                  <div className='text-3xl font-bold text-cyan-400 mb-2'>
-                    {metric.value}
-                  </div>
-                  <div className='text-sm text-zion-slate-light'>
-                    {metric.label}
-                  </div>
-                </div>
+                  <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+                    {metr, i, c.val, u, e}
+                  </d, i, v>
+                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                    {metr, i, c.lab, e, l}
+                  </d, i, v>
+                </di, v>
               ))}
-            </div>
+            </d, i, v>
 
-            {/* Content */}
-            <div className='prose prose-invert prose-lg max-w-none space-y-8 text-zion-slate-light'>
-              <section>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <Zap className='w-8 h-8 text-yellow-400' />
-                  The Evolution of Automation
+            {/* Conte, n, t */}
+            <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-none, spac, e-y-8, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+              <secti, o, n>
+                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Zap, classNam, e='w-8 h-8, tex, t-yell, o, w-4, 0, 0' />
+                  The, Evolution, of Automati, o, n
                 </h2>
-                <div className='bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-zion-cyan/30'>
-                  <div className='grid md:grid-cols-2 gap-8'>
-                    <div>
-                      <h3 className='text-xl font-bold text-white mb-4'>
-                        Traditional RPA (2015-2020)
+                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+                    <d, i, v>
+                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                        Traditional, RP, A (20, 1, 5-2, 0, 2, 0)
                       </h3>
-                      <ul className='space-y-2'>
-                        <li>❌ Rule-based automation</li>
-                        <li>❌ Structured data only</li>
-                        <li>❌ Manual process mapping</li>
-                        <li>❌ High maintenance burden</li>
-                        <li>❌ Limited scalability</li>
+                      <ul, classNam, e = 'spa, c, e-y-2'>
+                        <li>❌ Ru, l, e-based, automatio, n</li>
+                        <li>❌ Structured, data, only</li>
+                        <li>❌ Manual, process, mapping</li>
+                        <li>❌ High, maintenance, burden</li>
+                        <li>❌ Limited, scalabilit, y</li>
                       </ul>
-                    </div>
-                    <div>
-                      <h3 className='text-xl font-bold text-white mb-4'>
-                        Intelligent Automation (2025)
+                    </d, i, v>
+                    <d, i, v>
+                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                        Intelligent, Automatio, n (2, 0, 2, 5)
                       </h3>
-                      <ul className='space-y-2'>
-                        <li className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                          <span>AI-powered decision-making</span>
+                      <ul, classNam, e = 'spa, c, e-y-2'>
+                        <li, classNam, e='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <sp, a, n>AI-powered, decisio, n-maki, n, g</sp, a, n>
                         </li>
-                        <li className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                          <span>Unstructured data processing</span>
+                        <li, classNam, e='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <sp, a, n>Unstructured, data, processing</sp, a, n>
                         </li>
-                        <li className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                          <span>Self-learning workflows</span>
+                        <li, classNam, e='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <sp, a, n>Se, l, f-learning, workflow, s</sp, a, n>
                         </li>
-                        <li className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                          <span>Autonomous optimization</span>
+                        <li, classNam, e='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <sp, a, n>Autonomous, optimizatio, n</sp, a, n>
                         </li>
-                        <li className='flex items-start gap-2'>
-                          <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                          <span>Unlimited scalability</span>
+                        <li, classNam, e='flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <sp, a, n>Unlimited, scalabilit, y</sp, a, n>
                         </li>
                       </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
+              </secti, o, n>
 
-              <section>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <Brain className='w-8 h-8 text-purple-400' />
-                  Next-Gen Automation Capabilities
+              <secti, o, n>
+                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Brain, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                  Ne, x, t-Gen, Automation, Capabilities
                 </h2>
-                <div className='grid gap-6'>
+                <div, classNam, e='grid, ga, p-6'>
                   {[
                     {
-                      title: 'Cognitive Process Automation',
-                      description:
-                        'AI systems that understand, learn, and make decisions like humans. 99.8% accuracy in document processing across any format.',
-                      icon: '🧠',
+                      tit, l, e: 'Cognitive, Process, Automati, o, n',
+                      descripti, o, n: 'AI, systems, that underst, a, n, d, lea, r, n, and, make, decisions like, human, s. 99.8% accuracy, in, document processing, across, any form, a, t.',
+                      ic, o, n: '🧠',
                     },
                     {
-                      title: 'Adaptive Workflow Orchestration',
-                      description:
-                        'Self-optimizing workflows that evolve based on outcomes. 87% auto-resolution rate for exceptions.',
-                      icon: '🔄',
+                      tit, l, e: 'Adaptive, Workflow, Orchestratio, n',
+                      descripti, o, n: 'Se, l, f-optimizing, workflows, that evolve, based, on outcom, e, s. 87% au, t, o-resolution, rate, for excepti, o, n, s.',
+                      ic, o, n: '🔄',
                     },
                     {
-                      title: 'Predictive Automation',
-                      description:
-                        'Anticipate and act before issues occur. 96% forecast accuracy with 84% of failures prevented proactively.',
-                      icon: '🔮',
+                      tit, l, e: 'Predictive, Automati, o, n',
+                      descripti, o, n: 'Anticipate, and, act before, issues, occur. 96% forecast, accuracy, with 84% of, failures, prevented proactiv, e, l, y.',
+                      ic, o, n: '🔮',
                     },
                     {
-                      title: 'Generative Automation',
-                      description:
-                        'AI that creates content, code, and solutions autonomously. 70% reduction in development time.',
-                      icon: '✨',
+                      tit, l, e: 'Generative, Automati, o, n',
+                      descripti, o, n: 'AI, that, creates cont, e, n, t, co, d, e, and, solutions, autonomously. 70% reduction, in, development ti, m, e.',
+                      ic, o, n: '✨',
                     },
                     {
-                      title: 'Autonomous Decision-Making',
-                      description:
-                        'AI systems that make complex decisions independently. 97.8% accuracy in real-time risk-based decisions.',
-                      icon: '🎯',
+                      tit, l, e: 'Autonomous, Decisio, n-Mak, i, n, g',
+                      descripti, o, n: 'AI, systems, that make, complex, decisions independent, l, y. 97.8% accuracy, in, real-time, ris, k-based, decisio, n, s.',
+                      ic, o, n: '🎯',
                     },
-                  ].map((capability, index) => (
-                    <div
-                      key={index}
-                      className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/20 hover:border-zion-cyan/50 transition-all'
+                  ].m, a, p((capabili, t, y, ind, e, x) => (
+                    <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                     >
-                      <div className='flex items-start gap-4'>
-                        <div className='text-4xl'>{capability.icon}</div>
-                        <div className='flex-1'>
-                          <h3 className='text-xl font-bold text-white mb-3'>
-                            {capability.title}
+                      <div, classNam, e='flex, item, s-start, ga, p-4'>
+                        <div, classNam, e='te, x, t-4, x, l'>{capabili, t, y.ic, o, n}</d, i, v>
+                        <div, classNam, e = 'fl, e, x-1'>
+                          <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                            {capabili, t, y.tit, l, e}
                           </h3>
-                          <p className='text-zion-slate-light'>
-                            {capability.description}
+                          <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                            {capabili, t, y.descripti, o, n}
                           </p>
-                        </div>
-                      </div>
-                    </div>
+                        </d, i, v>
+                      </d, i, v>
+                    </di, v>
                   ))}
-                </div>
-              </section>
+                </d, i, v>
+              </secti, o, n>
 
-              <section>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <TrendingUp className='w-8 h-8 text-green-400' />
-                  Industry Applications & Results
+              <secti, o, n>
+                <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <TrendingUp, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                  Industry, Application, s & Resul, t, s
                 </h2>
-                <div className='grid gap-6'>
+                <div, classNam, e='grid, ga, p-6'>
                   {[
                     {
-                      industry: 'Financial Services',
-                      savings: '$12.4M',
-                      automation: '95%',
-                      results: [
-                        'Loan Processing: 96% faster',
-                        'KYC/AML: 100% coverage',
-                        'Fraud Detection: 99.4% accuracy',
+                      indust, r, y: 'Financial, Servi, c, e, s',
+                      savin, g, s: '$12.4, M',
+                      automati, o, n: '9, 5%',
+                      resul, t, s: [
+                        'Loan, Processin, g: 96% fas, t, e, r',
+                        'K, Y, C/A, M, L: 1, 0, 0% cover, a, g, e',
+                        'Fraud, Detectio, n: 99.4% accur, a, c, y',
                       ],
                     },
                     {
-                      industry: 'Healthcare',
-                      savings: '$8.7M',
-                      automation: '92%',
-                      results: [
-                        'Claims Processing: 92% auto-adjudication',
-                        'Medical Coding: 99.1% accuracy',
-                        '70% administrative burden reduction',
+                      indust, r, y: 'Healthc, a, r, e',
+                      savin, g, s: '$8.7, M',
+                      automati, o, n: '9, 2%',
+                      resul, t, s: [
+                        'Claims, Processin, g: 92% au, t, o-adjudicat, i, o, n',
+                        'Medical, Codin, g: 99.1% accur, a, c, y',
+                        '70% administrative, burden, reduction',
                       ],
                     },
                     {
-                      industry: 'Manufacturing',
-                      savings: '$18.2M',
-                      automation: '94%',
-                      results: [
-                        'Quality Control: 99.7% defect detection',
-                        'Inventory: 98% forecast accuracy',
-                        'Downtime: 73% reduction',
+                      indust, r, y: 'Manufactur, i, n, g',
+                      savin, g, s: '$18.2, M',
+                      automati, o, n: '9, 4%',
+                      resul, t, s: [
+                        'Quality, Contro, l: 99.7% defect, detecti, o, n',
+                        'Invento, r, y: 98% forecast, accura, c, y',
+                        'Downti, m, e: 73% reduct, i, o, n',
                       ],
                     },
                     {
-                      industry: 'Retail & E-commerce',
-                      savings: '$6.8M',
-                      automation: '89%',
-                      results: [
-                        'Order Processing: 99.8% automation',
-                        'Fulfillment: 80% faster',
-                        'Revenue: 28% increase',
+                      indust, r, y: 'Reta, i, l & E-comme, r, c, e',
+                      savin, g, s: '$6.8, M',
+                      automati, o, n: '8, 9%',
+                      resul, t, s: [
+                        'Order, Processin, g: 99.8% automat, i, o, n',
+                        'Fulfillme, n, t: 80% fas, t, e, r',
+                        'Reven, u, e: 28% incre, a, s, e',
                       ],
                     },
-                  ].map((app, index) => (
-                    <div
-                      key={index}
-                      className='bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-xl p-6 border border-blue-500/30'
+                  ].m, a, p((a, p, p, ind, e, x) => (
+                    <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'
                     >
-                      <div className='flex flex-wrap items-center justify-between gap-4 mb-4'>
-                        <h3 className='text-2xl font-bold text-white'>
-                          {app.industry}
+                      <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
+                        <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                          {a, p, p.indust, r, y}
                         </h3>
-                        <div className='flex gap-3'>
-                          <span className='px-3 py-1 bg-green-500/20 text-green-300 rounded-lg text-sm font-semibold'>
-                            {app.savings} savings
-                          </span>
-                          <span className='px-3 py-1 bg-blue-500/20 text-blue-300 rounded-lg text-sm font-semibold'>
-                            {app.automation} automated
-                          </span>
-                        </div>
-                      </div>
-                      <ul className='space-y-2'>
-                        {app.results.map((result, rIndex) => (
-                          <li key={rIndex} className='flex items-start gap-2'>
-                            <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0 mt-1' />
-                            <span>{result}</span>
-                          </li>
+                        <div, classNam, e='flex, ga, p-3'>
+                          <span, classNam, e='px-3, p, y-1, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                            {a, p, p.savin, g, s} savin, g, s
+                          </sp, a, n>
+                          <span, classNam, e='px-3, p, y-1, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                            {a, p, p.automati, o, n} automat, e, d
+                          </sp, a, n>
+                        </d, i, v>
+                      </d, i, v>
+                      <ul, classNam, e='spa, c, e-y-2'>
+                        { a, p, p.resul, t, s.m, a, p((res, u, l, t, rInd, e, x) = > (
+                          <li, ke, y = { rIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
+                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                            <sp, a, n>{resu, l, t}</sp, a, n>
+                          </l, i>
                         ))}
                       </ul>
-                    </div>
+                    </d, i, v>
                   ))}
-                </div>
-              </section>
+                </d, i, v>
+              </secti, o, n>
 
-              <section className='bg-gradient-to-r from-green-900/40 via-blue-900/40 to-purple-900/40 rounded-xl p-8 border-2 border-green-500/50'>
-                <h2 className='text-3xl font-bold text-white mb-6 flex items-center gap-3'>
-                  <Rocket className='w-8 h-8 text-green-400' />
-                  Start Your Automation Journey
+              <section, classNam, e = 'bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, vi, a-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/50'>
+                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Rocket, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                  Start, Your, Automation Journ, e, y
                 </h2>
-                <p className='text-xl text-zion-slate-light mb-6'>
-                  The intelligent automation breakthrough of 2025 represents an{' '}
-                  <strong className='text-white'>inflection point</strong> in
-                  business operations. The question is no longer "Should we
-                  automate?" but{' '}
-                  <strong className='text-white'>
-                    "How fast can we transform?"
-                  </strong>
+                <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
+                  The, intelligent, automation breakthrough, of, 2025 represents, a, n{' '}
+                  <strong, classNam, e='te, x, t-whi, t, e'>inflection, poin, t</stro, n, g> in, business, operations. The, question, is no, longe, r "Should, we, automate?" b, u, t{' '}
+                  <strong, classNam, e='te, x, t-whi, t, e'>
+                    "How, fast, can we, transfor, m?"
+                  </stro, n, g>
                 </p>
-                <div className='grid md:grid-cols-2 gap-4'>
-                  <Link
-                    to='/contact'
-                    className='inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-green-500 to-cyan-500 text-white font-bold rounded-lg hover:from-green-600 hover:to-cyan-600 transition-all'
+                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
+                  <Link, t, o='/conta, c, t'
+                    classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-gre, e, n-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
                   >
-                    Book Free Assessment
-                    <Rocket className='w-5 h-5' />
-                  </Link>
-                  <Link
-                    to='/services/real-time-cognitive-automation'
-                    className='inline-flex items-center justify-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-green-500/30 hover:bg-white/20 transition-all'
+                    Book, Free, Assessment
+                    <Rocket, classNam, e='w-5 h-5' />
+                  </Li, n, k>
+                  <Link, t, o='/servic, e, s/re, a, l-ti, m, e-cogniti, v, e-automati, o, n'
+                    classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-gre, e, n-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
                   >
-                    View Automation Platform
-                  </Link>
-                </div>
-              </section>
-            </div>
-          </div>
-        </article>
-      </div>
+                    View, Automation, Platform
+                  </Li, n, k>
+                </d, i, v>
+              </secti, o, n>
+            </d, i, v>
+          </d, i, v>
+        </artic, l, e>
+      </d, i, v>
     </>
   );
 };
 
-export default NextGenIntelligentAutomationBreakthrough;
+export, default, NextGenIntelligentAutomationBreakthrough;

@@ -1,100 +1,90 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { newArticles2025 } from '../content/new-articles-2025';
-import { newServices2026 } from '../content/new-services-2026';
-const NewContentShowcase: React.FC = () => {
-  const topArticles = newArticles2025.slice(0, 3);
-  const topServices = newServices2026.slice(0, 3);
-  return (
-    <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-purple-100 rounded-full text-purple-700 font-semibold mb-4">
-            🌟 JUST RELEASED
-          </div>
-          <h2 className="text-5xl font-bold text-gray-900 mb-4">
-            New Content & Services
+import, React, from 'rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
+impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
+const, NewContentShowcas, e: Rea, c, t.FC = () => { 
+  const, topArticle, s = newArticles20, 2, 5.sl, i, c, e(, 0, 3); const, topService, s = newServices20, 2, 6.sli, c, e(, 0, 3); retu, r, n (
+    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-50, vi, a-purp, l, e-50, t, o-pi, n, k-50">
+      <div, classNam, e="container, m, x-auto, p, x-6">
+        <div, classNam, e="te, x, t-center, m, b-16">
+          <div, classNam, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-purp, l, e-100, rounde, d-full, tex, t-purp, l, e-700, fon, t-semibold, m, b-4">
+            🌟 JUST, RELEASE, D
+          </d, i, v>
+          <h2, classNam, e="te, x, t-5xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            New, Conten, t & Servic, e, s
           </h2>
-          <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
-            Explore our latest breakthrough articles and revolutionary services
+          <p, classNam, e="te, x, t-2xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
+            Explore, our, latest breakthrough, articles, and revolutionary, service, s
           </p>
-        </div>
-        <div className="grid lg:grid-cols-2 gap-12 mb-12" > {/* Articles Section */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <BookOpen className="w-8 h-8 text-indigo-600" />
-              <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
-            </div>
-            <div className="space-y-4">
-              {topArticles.map((article) => (
-                <Link
-                  key={article.id}
-                  to={article.link}
-                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
+        </d, i, v>
+        <div, classNam, e="grid, l, g: gr, i, d-co, l, s-2, ga, p-12, m, b-12"  > {/* Articles, Sect, i, o, n */ }
+          <d, i, v>
+            <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6">
+              <BookOpen, classNam, e="w-8 h-8, tex, t-indi, g, o-6, 0, 0" />
+              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">Latest, Article, s</h3>
+            </d, i, v>
+            <div, classNam, e="spa, c, e-y-4">
+              { topArticl, e, s.m, a, p((arti, c, l, e) = > (
+                <Link, ke, y = { artic, l, e.i, d  }, to={ artic, l, e.li, n, k } classNa, m, e="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 >
-                  <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">{article.title}</h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{article.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">{article.readTime}</span>
-                    <span className="text-indigo-600 font-semibold flex items-center gap-1">
-                      Read More <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
+                  <div, classNam, e="te, x, t-sm, tex, t-indi, g, o-600, fon, t-semibold, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
+                  <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{artic, l, e.tit, l, e}</h4>
+                  <p, classNam, e="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{artic, l, e.descripti, o, n}</p>
+                  <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm">
+                    <span, classNam, e="te, x, t-gr, a, y-5, 0, 0">{artic, l, e.readTi, m, e}</sp, a, n>
+                    <span, classNam, e="te, x, t-indi, g, o-600, fon, t-semibold, flex, items-center, ga, p-1">
+                      Read, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
+                    </sp, a, n>
+                  </d, i, v>
+                </L, i, n, k>
               ))}
-            </div>
-            <div className="mt-6 text-center">
-              <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
+            </d, i, v>
+            <div, classNam, e = "mt-6, tex, t-cent, e, r">
+              <Link, t, o="/bl, o, g"
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-600, fon, t-bold, hove, r: te, x, t-indi, g, o-8, 0, 0"
               >
-                View All Articles
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-          {/* Services Section */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <Rocket className="w-8 h-8 text-purple-600" />
-              <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
-            </div>
-            <div className="space-y-4">
-              {topServices.map((service) => (
-                <Link
-                  key={service.id}
-                  to={service.link}
-                  className="block bg-white rounded-xl p-6 shadow-md hover:shadow-2xl transition-all hover:scale-105"
+                View, All, Articles
+                <ArrowRight, classNam, e="w-5 h-5" />
+              </Li, n, k>
+            </d, i, v>
+          </d, i, v>
+          {/* Services, Sect, i, o, n */}
+          <d, i, v>
+            <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-6">
+              <Rocket, classNam, e="w-8 h-8, tex, t-purp, l, e-6, 0, 0" />
+              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">New, Service, s</h3>
+            </d, i, v>
+            <div, classNam, e="spa, c, e-y-4">
+              { topServic, e, s.m, a, p((serv, i, c, e) = > (
+                <Link, ke, y = { servi, c, e.i, d  }, to={ servi, c, e.li, n, k } classNa, m, e="block, b, g-white, rounde, d-x, l, p-6, shado, w-md, hove, r: shad, o, w-2xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
                 >
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-2xl">{service.icon}</span>
-                    <span className="text-sm text-purple-600 font-semibold">{service.category}</span>
-                  </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">{service.name}</h4>
-                  <p className="text-gray-600 text-sm mb-3 line-clamp-2">{service.description}</p>
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-700 font-semibold">{service.pricing}</span>
-                    <span className="text-purple-600 font-semibold flex items-center gap-1">
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </span>
-                  </div>
-                </Link>
+                  <div, classNam, e="flex, item, s-center, ga, p-2, m, b-2">
+                    <span, classNam, e="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>
+                    <span, classNam, e = "te, x, t-sm, tex, t-purp, l, e-600, fon, t-semibo, l, d">{servi, c, e.catego, r, y}</sp, a, n>
+                  </d, i, v>
+                  <h4, classNam, e="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">{servi, c, e.na, m, e}</h4>
+                  <p, classNam, e="te, x, t-gr, a, y-600, tex, t-sm, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
+                  <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm">
+                    <span, classNam, e="te, x, t-gr, a, y-700, fon, t-semibo, l, d">{servi, c, e.prici, n, g}</sp, a, n>
+                    <span, classNam, e="te, x, t-purp, l, e-600, fon, t-semibold, flex, items-center, ga, p-1">
+                      Learn, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
+                    </sp, a, n>
+                  </d, i, v>
+                </L, i, n, k>
               ))}
-            </div>
-            <div className="mt-6 text-center">
-              <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
+            </d, i, v>
+            <div, classNam, e = "mt-6, tex, t-cent, e, r">
+              <Link, t, o="/servic, e, s"
+                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-600, fon, t-bold, hove, r: te, x, t-purp, l, e-8, 0, 0"
               >
-                View All Services
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                View, All, Services
+                <ArrowRight, classNam, e="w-5 h-5" />
+              </Li, n, k>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </sec, t, i, o, n>
   );
 };
-export default NewContentShowcase;
+export, default, NewContentShowcase;

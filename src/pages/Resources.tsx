@@ -1,143 +1,127 @@
-import React from 'react';
+import, React, from 'rea, c, t';
 
-const Resources: React.FC = () => {
-  return (
-    <div className='min-h-screen bg-slate-950'>
-      <div className='container mx-auto px-6 py-20'>
-        <div className='text-center mb-16'>
-          <h1 className='text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent'>
-            AI Resources & Documentation
+const, Resource, s: Rea, c, t.FC = () => {  
+  retu, r, n (
+    <div, classNam, e = 'm, i, n-h-screen, b, g-sla, t, e-9, 5, 0'>
+      <div, classNam, e='container, m, x-auto, p, x-6, p, y-20'>
+        <div, classNam, e='te, x, t-center, m, b-16'>
+          <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+            AI, Resource, s & Documentati, o, n
           </h1>
-          <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-            Comprehensive resources, guides, and documentation to help you
-            leverage the full power of our AI solutions and technologies.
+          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
+            Comprehensive, resour, c, e, s, guid, e, s, and, documentation, to help, you, leverage the, full, power of, our, AI solutions, and, technologies.
           </p>
-        </div>
+        </d, i, v>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-blue-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>📚</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Documentation
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
+          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
+            <div, classNam, e='te, x, t-6xl, m, b-6'>📚</d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+              Documentati, o, n
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Complete API documentation, integration guides, and technical
-              specifications.
+            <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              Complete, API, documentati, o, n, integration, guide, s, and, technical, specifications.
             </p>
-            <a
-              href='/<docs'
-              className='inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <a, hre, f = '/<do, c, s'
+              classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
             >
-              View Docs →
+              View, Doc, s →
             </a>
-          </div>
+          </d, i, v>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-purple-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🎯</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>
-              Best Practices
+          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
+            <div, classNam, e='te, x, t-6xl, m, b-6'>🎯</d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+              Best, Practice, s
             </h3>
-            <p className='text-gray-300 mb-6'>
-              Industry best practices, optimization techniques, and
-              implementation strategies.
+            <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              Industry, best, practic, e, s, optimization, technique, s, and, implementation, strategies.
             </p>
-            <a
-              href='/best-<practices'
-              className='inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <a, hre, f = '/be, s, t-<practic, e, s'
+              classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
             >
-              Learn More →
+              Learn, Mor, e →
             </a>
-          </div>
+          </d, i, v>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🛠️</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Tools & SDKs</h3>
-            <p className='text-gray-300 mb-6'>
-              Development tools, SDKs, and libraries to accelerate your AI
-              implementation.
+          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
+            <div, classNam, e='te, x, t-6xl, m, b-6'>🛠️</d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>Too, l, s & SD, K, s</h3>
+            <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              Development, to, o, l, s, SD, K, s, and, libraries, to accelerate, your, AI
+              implementati, o, n.
             </p>
-            <a
-              href='/<tools'
-              className='inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <a, hre, f = '/<too, l, s'
+              classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-600, hove, r: fr, o, m-gre, e, n-400, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
             >
-              Get Tools →
+              Get, Tool, s →
             </a>
-          </div>
+          </d, i, v>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-orange-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🎓</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Tutorials</h3>
-            <p className='text-gray-300 mb-6'>
-              Step-by-step tutorials and hands-on guides for getting started
-              with our AI solutions.
+          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-oran, g, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
+            <div, classNam, e='te, x, t-6xl, m, b-6'>🎓</d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>Tutoria, l, s</h3>
+            <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              St, e, p-by-step, tutorials, and han, d, s-on, guides, for getting, started, with our, AI, solutions.
             </p>
-            <a
-              href='/<tutorials'
-              className='inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <a, hre, f='/<tutoria, l, s'
+              classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-600, hove, r:fr, o, m-oran, g, e-400, hove, r:to-r, e, d-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
             >
-              Start Learning →
+              Start, Learnin, g →
             </a>
-          </div>
+          </d, i, v>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>💡</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Use Cases</h3>
-            <p className='text-gray-300 mb-6'>
-              Real-world examples and use cases demonstrating AI implementation
-              success stories.
+          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
+            <div, classNam, e='te, x, t-6xl, m, b-6'>💡</d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>Use, Case, s</h3>
+            <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              Re, a, l-world, examples, and use, cases, demonstrating AI, implementation, success stori, e, s.
             </p>
-            <a
-              href='/use-<cases'
-              className='inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <a, hre, f='/u, s, e-<cas, e, s'
+              classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
             >
-              Explore Cases →
+              Explore, Case, s →
             </a>
-          </div>
+          </d, i, v>
 
-          <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-indigo-500/50 transition-all duration-300'>
-            <div className='text-6xl mb-6'>🔧</div>
-            <h3 className='text-2xl font-bold text-white mb-4'>Support</h3>
-            <p className='text-gray-300 mb-6'>
-              Technical support, community forums, and expert assistance for
-              your AI journey.
+          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
+            <div, classNam, e='te, x, t-6xl, m, b-6'>🔧</d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>Suppo, r, t</h3>
+            <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              Technical, supp, o, r, t, community, forum, s, and, expert, assistance for, your, AI journ, e, y.
             </p>
-            <a
-              href='/<support'
-              className='inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300'
+            <a, hre, f = '/<suppo, r, t'
+              classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
             >
-              Get Support →
+              Get, Suppor, t →
             </a>
-          </div>
-        </div>
+          </d, i, v>
+        </d, i, v>
 
-        <div className='mt-16 text-center'>
-          <div className='bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30'>
-            <h2 className='text-3xl font-bold text-white mb-4'>
-              Ready to Get Started?
-            </h2>
-            <p className='text-lg text-gray-300 mb-6 max-w-2xl mx-auto'>
-              Join thousands of developers and enterprises who are already
-              leveraging our AI solutions to transform their businesses.
+        <div, classNam, e='mt-16, tex, t-cent, e, r'>
+          <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30'>
+            <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+              Ready, to, Get Start, e, d ? </h2>
+            <p, classNam, e='te, x, t-lg, tex, t-gr, a, y-300, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
+              Join, thousands, of developers, and, enterprises who, are, already
+              leveraging, our, AI solutions, to, transform their, businesse, s.
             </p>
-            <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-              <a
-                href='/<contact'
-                className='bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1'
+            <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
+              <a, hre, f='/<conta, c, t'
+                classNa, m, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
               >
-                Start Your Project
+                Start, Your, Project
               </a>
-              <a
-                href='/<blog'
-                className='border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300'
+              <a, hre, f='/<bl, o, g'
+                classNa, m, e='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r : te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
               >
-                Read Our Blog
+                Read, Our, Blog
               </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v > );
+  };
 
-export default Resources;
+export, default, Resources;

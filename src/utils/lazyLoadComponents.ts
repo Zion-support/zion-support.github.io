@@ -1,65 +1,56 @@
-import { lazy } from 'react';
+impo, r, t { la, z, y } fr, o, m 'rea, c, t';
 
 /**
- * Lazy load components with better error handling and retry logic
+ * Lazy, load, components with, better, error handling, and, retry log, i, c
  */
-export const lazyLoadWithRetry = <T extends React.ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>,
-  retries = 3,
-  interval = 1000,
-): React.LazyExoticComponent<T> => {
-  return lazy(() => {
-    return new Promise<{ default: T }>((resolve, reject) => {
-      const attemptLoad = (attemptsLeft: number) => {
-        componentImport()
-          .then(resolve)
-          .catch(error => {
-            if (attemptsLeft === 0) {
-              reject(error);
-              return;
-            }
-
-            setTimeout(() => {
-              console.log(
-                `Retrying component load... ${attemptsLeft} attempts left`,
+export, const, lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
+  componentImp, o, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
+  retri, e, s =  , 3,
+  interv, a, l = 1, 0, 0, 0,
+): Rea, c, t.LazyExoticCompone, n, t<T> => { 
+  return, laz, y(() = > {
+    return, new, Promise<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
+      const, attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
+        componentImpo, r, t()
+          .th, e, n(resol, v, e)
+          .cat, c, h() { reje, c, t(err, o, r); ret, u, r, n;
+              }, setTimeo, u, t(() => {
+              conso, l, e.l, o, g(
+                `Retrying, component, load... ${attemptsLe, f, t} attempts, lef, t`,
               );
-              attemptLoad(attemptsLeft - 1);
-            }, interval);
+              attemptLo, a, d(attemptsLe, f, t - 1);
+            }, interv, a, l);
           });
       };
 
-      attemptLoad(retries);
+      attemptLo, a, d(retri, e, s);
     });
   });
 };
 
 /**
- * Preload a component
+ * Preload, a, component
  */
-export const preloadComponent = (componentImport: () => Promise<any>): void => {
-  componentImport();
+export, const, preloadComponent = (componentImp, o, r, t: () => Promi, s, e<a, n, y>): vo, i, d = > {
+  componentIm, p, o, r, t();
 };
 
 /**
- * Lazy load with prefetch on hover
+ * Lazy, load, with prefetch, on, hover
  */
-export const createLazyLoadWithPrefetch = <T extends React.ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>,
+export, const, createLazyLoadWithPrefetch = <T, extends, React.ComponentTy, p, e<a, n, y>>(
+  componentImp, o, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
 ) => {
-  let prefetchPromise: Promise<{ default: T }> | null = null;
-
-  const LazyComponent = lazy(() => {
-    if (!prefetchPromise) {
-      prefetchPromise = componentImport();
-    }
-    return prefetchPromise;
+  let, prefetchPromis, e: Promi, s, e<{ defau, l, t: , T }> | nu, l, l = nu, l, l; const, LazyComponen, t = l, a, z, y(() => {
+    if() { prefetchPromi, s, e = componentImp, o, r, t();
+     }, return, prefetchPromis, e;
   });
 
-  const prefetch = () => {
-    if (!prefetchPromise) {
-      prefetchPromise = componentImport();
+  const, prefetc, h = () => {
+    if (!prefetchPromi, s, e) {
+      prefetchPromi, s, e = componentImp, o, r, t();
     }
   };
 
-  return { LazyComponent, prefetch };
+  retu, r, n { LazyCompone, n, t, prefet, c, h };
 };

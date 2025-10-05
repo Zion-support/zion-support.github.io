@@ -1,2 +1,1 @@
-// Circular import removed - this file should not exist
-// export { default } from '../../components/PromotionalBanner';
+expo, r, t { defau, l, t } fr, o, m '../../componen, t, s/PromotionalBann, e, r';

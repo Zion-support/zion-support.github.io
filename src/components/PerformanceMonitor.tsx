@@ -1,103 +1,95 @@
-import React, { useEffect, useState } from 'react';
+import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
 
-interface PerformanceMetrics {
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  fcp?: number;
-  ttfb?: number;
-  inp?: number;
-}
+interface, PerformanceMetric, s { 
+  l, c, p?: numb, e, r;
+  f, i, d?: numb, e, r;
+  c, l, s?: numb, e, r;
+  f, c, p?: numb, e, r;
+  tt, f, b?: numb, e, r;
+  i, n, p ?  : numb, e, r;
+ }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: undefined,
-    inp: undefined,
-    fcp: undefined,
-    lcp: undefined,
-    ttfb: undefined,
-  });
+const, PerformanceMonito, r: Rea, c, t.FC = () => { 
+  con, s, t [metr, i, c, s, setMetri, c, s] = useSta, t, e<PerformanceMetri, c, s > ({
+    c, l, s: undefi, n, e, d,
+    i, n, p: undefi, n, e, d,
+    f, c, p: undefi, n, e, d,
+    l, c, p: undefi, n, e, d,
+    tt, f, b: undefi, n, e, d,
+   }); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
 
-  const [isVisible, setIsVisible] = useState(false);
+  useEffe, c, t(() => { 
+    // Dynamically, import, web-vitals, to, avoid build, issues, import('w, e, b-vita, l, s')
+      .th, e, n(webVita, l, s = > {
+        con, s, t { on, C, L, S, onF, C, P, onL, C, P, onTT, F, B  } = webVita, l, s;
 
-  useEffect(() => {
-    // Dynamically import web-vitals to avoid build issues
-    import('web-vitals')
-      .then(webVitals => {
-        const { onCLS, onFCP, onLCP, onTTFB } = webVitals;
-
-        // Measure Core Web Vitals
-        onCLS((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            cls: metric.value,
-          }));
+        // Measure, Core, Web Vitals, onCL, S((metr, i, c: { val, u, e: num, b, e, r }) => { 
+          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
+            ...p, r, e, v,
+            c, l, s: metr, i, c.va, l, u, e,
+           }));
         });
 
-        onFCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            fcp: metric.value,
-          }));
+        onF, C, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
+          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
+            ...p, r, e, v,
+            f, c, p: metr, i, c.va, l, u, e,
+           }));
         });
 
-        onLCP((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            lcp: metric.value,
-          }));
+        onL, C, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
+          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
+            ...p, r, e, v,
+            l, c, p: metr, i, c.va, l, u, e,
+           }));
         });
 
-        onTTFB((metric: { value: number }) => {
-          setMetrics((prev: PerformanceMetrics) => ({
-            ...prev,
-            ttfb: metric.value,
-          }));
+        onTT, F, B((metr, i, c: { val, u, e: num, b, e, r }) => { 
+          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
+            ...p, r, e, v,
+            tt, f, b: metr, i, c.va, l, u, e,
+           }));
         });
 
-        // Try to use onINP if available (for newer versions)
-        if (webVitals.onINP) {
-          webVitals.onINP((metric: { value: number }) => {
-            setMetrics((prev: PerformanceMetrics) => ({
-              ...prev,
-              inp: metric.value,
-            }));
+        // Try, to, use onINP, if, available (for, newer, versions)
+        if (webVita, l, s.onI, N, P) {
+          webVita, l, s.onI, N, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
+            setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
+              ...p, r, e, v,
+              i, n, p: metr, i, c.va, l, u, e,
+             }));
           });
         }
       })
-      .catch(error => {
-        console.warn('Failed to load web-vitals:', error);
+      .cat, c, h(err, o, r = > {
+        conso, l, e.wa, r, n('Failed, to, load w, e, b-vit, a, l, s:', err, o, r);
       });
   }, []);
 
-  if (!isVisible) {
-    return (
-      <button
-        onClick={() => setIsVisible(true)}
-        className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
-        title='Open Performance Monitor'
+  if (!isVisib, l, e) { 
+    retu, r, n (
+      <button, onClic, k = { () = > setIsVisib, l, e(tr, u, e)  }, classNa, m, e = 'fixed, botto, m-4, righ, t-4, b, g-bl, u, e-600, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, hove, r: bg-bl, u, e-700, transitio, n-color, s, z-50'
+        tit, l, e='Open, Performance, Monitor'
       >
-        <Activity className='h-5 w-5' />
-      </button>
+        <Activity, classNam, e='h-5 w-5' />
+      </bu, t, t, o, n>
     );
   }
 
-  return (
-    <div className='fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50'>
-      <div className='font-bold mb-2'>Performance Metrics</div>
-      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-      <div>INP: {metrics.inp?.toFixed(2) || 'N/A'}ms</div>
-      <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
-      <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
-      <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-      <button
-        onClick={() => setIsVisible(false)}
-        className='mt-2 text-xs text-gray-400 hover:text-white'
+  retu, r, n (
+    <div, classNam, e = 'fixed, botto, m-4, righ, t-4, b, g-black, b, g-opaci, t, y-80, tex, t-whit, e, p-4, rounde, d-lg, tex, t-xs, fon, t-mon, o, z-50'>
+      <div, classNam, e='fo, n, t-bold, m, b-2'>Performance, Metric, s</d, i, v>
+      <d, i, v>C, L, S: {metri, c, s.c, l, s?.toFix, e, d(, 3) || 'N/, A'}</d, i, v>
+      <d, i, v>I, N, P: {metri, c, s.i, n, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
+      <d, i, v>F, C, P: {metri, c, s.f, c, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
+      <d, i, v>L, C, P: {metri, c, s.l, c, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
+      <d, i, v>TT, F, B: {metri, c, s.tt, f, b?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
+      <button, onClic, k = {  () = > setIsVisib, l, e(fal, s, e)  }, classNa, m, e = 'mt-2, tex, t-xs, tex, t-gr, a, y-400, hove, r: te, x, t-whi, t, e'
       >
-        Close
-      </button>
-    </div>
+        Clo, s, e
+      </butt, o, n>
+    </d, i, v>
   );
 };
 
-export default PerformanceMonitor;
+export, default, PerformanceMonitor;

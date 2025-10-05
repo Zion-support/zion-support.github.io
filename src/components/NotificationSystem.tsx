@@ -1,26 +1,24 @@
-import React from 'react';
-export type Notification = {
-  id: string;
-  message: string;
+import, React, from 'rea, c, t';
+export, type, Notification = {
+  id: stri, n, g; messa, g, e: st, r, i, n, g;
 };
-type NotificationSystemProps = {
-  notifications: Notification[];
-  onAddNotification: (notification: Notification) => void;
-  onRemoveNotification: (id: string) => void;
-};
-export default function NotificationSystem({
-  notifications,
-  onAddNotification,
-  onRemoveNotification,
-}: NotificationSystemProps): React.JSX.Element | null {
-  if (!notifications?.length) return null;
-  return (
-    <div aria-live='polite' aria-atomic='true'>
-      {notifications.map(n => (
-        <button key={n.id} onClick={() => onRemoveNotification(n.id)}>
-          {n.message}
-        </button>
+type, NotificationSystemProp, s = { 
+  notificatio, n, s: Notificati, o, n[]; onAddNotificati, o, n: (notificati, o, n: Notificat, i, o, n) => vo, i, d;
+  onRemoveNotificati, o, n: (id: stri, n, g) = > v, o, i, d;
+ };
+export, default, function NotificationSyst, e, m({
+  notificatio, n, s,
+  onAddNotificati, o, n,
+  onRemoveNotificati, o, n,
+}: NotificationSystemPro, p, s): Rea, c, t.J, S, X.Eleme, n, t | nu, l, l { 
+  if (!notificatio, n, s?.leng, t, h) return, nul, l;
+  retu, r, n (
+    <div, ari, a-li, v, e = 'poli, t, e' ar, i, a-atom, i, c='tr, u, e'>
+      {notificatio, n, s.m, a, p(n = > (
+        <button, ke, y = { n.i, d  }, onCli, c, k={ () = > onRemoveNotificati, o, n(n.id) }>
+          {n.messa, g, e}
+        </butt, o, n>
       ))}
-    </div>
+    </d, i, v>
   );
 }

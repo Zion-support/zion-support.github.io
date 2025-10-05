@@ -1,380 +1,332 @@
-import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
-import React, { useState } from 'react';
+impo, r, t { CheckCirc, l, e, Clo, c, k, Ma, i, l, MapP, i, n, Pho, n, e, Se, n, d } fr, o, m 'luci, d, e-rea, c, t';
+import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
 
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: '',
-    budget: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+const, Contac, t: Rea, c, t.FC = () => {
+  con, s, t [formD, a, t, a, setFormDa, t, a] = useSta, t, e({
+    na, m, e: '',
+    ema, i, l: '',
+    compa, n, y: '',
+    pho, n, e: '',
+    servi, c, e: '',
+    messa, g, e: '',
+    budg, e, t: '',
+  }); con, s, t [isSubmitti, n, g, setIsSubmitti, n, g] = useSta, t, e(fal, s, e);
+  con, s, t [isSubmitt, e, d, setIsSubmitt, e, d] = useSta, t, e(fal, s, e);
 
-  const handleInputChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+  const, handleInputChang, e = (
+    e: Rea, c, t.ChangeEve, n, t<
+      HTMLInputEleme, n, t | HTMLTextAreaEleme, n, t | HTMLSelectEle, m, e, n, t
     >,
   ) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value,
+    con, s, t { na, m, e, val, u, e } = e.targ, e, t; setFormDa, t, a(pr, e, v = > ({
+      ...p, r, e, v,
+      [na, m, e]: val, u, e,
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const, handleSubmi, t = asy, n, c (e: Rea, c, t.FormEv, e, n, t) => { 
+    e.preventDefau, l, t(); setIsSubmitti, n, g(tr, u, e);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    // Simulate, form, submission
+    await, new, Promise(resol, v, e = > setTimeo, u, t(res, o, l, v, e, 20, 0, 0)); setIsSubmitti, n, g(fal, s, e);
+    setIsSubmitt, e, d(tr, u, e);
 
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: '',
-        budget: '',
-      });
-    }, 3000);
+    // Reset, form, after 3, seconds, setTimeout(() = > {
+      setIsSubmitt, e, d(fal, s, e);
+      setFormDa, t, a({
+        na, m, e: '',
+        ema, i, l: '',
+        compa, n, y: '',
+        pho, n, e: '',
+        servi, c, e: '',
+        messa, g, e: '',
+        budg, e, t: '',
+       });
+    }, 30, 0, 0);
   };
 
-  return (
+  retu, r, n (
     <>
-      <Helmet>
-        <title>Contact Us - Zion Tech Group | Get Started Today</title>
-        <meta
-          name='description'
-          content='Ready to transform your business? Contact Zion Tech Group for AI and IT solutions. Free consultation available.'
+      <Helm, e, t>
+        <tit, l, e>Contact, U, s - Zion, Tech, Group | Get, Started, Today</tit, l, e>
+        <meta, nam, e = 'descripti, o, n'
+          conte, n, t='Ready, to, transform your, busines, s? Contact, Zion, Tech Group, for, AI and, IT, solutions. Free, consultation, available.'
         />
-        <meta
-          name='keywords'
-          content='contact, consultation, AI solutions, IT services, business transformation'
+        <meta, nam, e='keywor, d, s'
+          conte, n, t='cont, a, c, t, consultati, o, n, AI, solution, s, IT, service, s, business, transformatio, n'
         />
-      </Helmet>
+      </Helm, e, t>
 
-      <div className='min-h-screen bg-gradient-to-br from-blue-50 via-white to-teal-50'>
-        {/* Header Section */}
-        <section className='bg-gradient-to-r from-blue-600 to-purple-600 py-20'>
-          <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
+      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-white, t, o-te, a, l-50'>
+        {/* Header, Sectio, n */}
+        <section, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, p, y-20'>
+          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r'>
+            <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
+              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
+              transiti, o, n = {{ durati, o, n: , 0., 6 }}
             >
-              <h1 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-                Let's Build Something Amazing Together
+              <h1, classNam, e = 'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
+                L, e, t's, Build, Something Amazing, Togethe, r
               </h1>
-              <p className='text-xl text-blue-100 max-w-3xl mx-auto'>
-                Ready to transform your business with cutting-edge AI and
-                technology solutions? Get in touch with our experts for a free
-                consultation.
+              <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o'>
+                Ready, to, transform your, business, with cutti, n, g-edge, AI, and
+                technology, solution, s? Get, in, touch with, our, experts for, a, free
+                consultati, o, n.
               </p>
-            </motion.div>
-          </div>
-        </section>
+            </moti, o, n.d, i, v>
+          </d, i, v>
+        </secti, o, n>
 
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
-          <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
-            {/* Contact Information */}
-            <div className='lg:col-span-1'>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+        <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8, p, y-16'>
+          <div, classNam, e='grid, gri, d-co, l, s-1, l, g:gr, i, d-co, l, s-3, ga, p-12'>
+            {/* Contact, Informat, i, o, n */}
+            <div, classNam, e = 'lg: c, o, l-sp, a, n-1'>
+              <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, x: -2, 0 }}
+                anima, t, e = {{ opac, i, t, y:  , 1, x:  , 0 }}
+                transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: 0., 2 }}
               >
-                <h2 className='text-2xl font-bold text-gray-900 mb-8'>
-                  Get in Touch
+                <h2, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-8'>
+                  Get, in, Touch
                 </h2>
 
-                <div className='space-y-6'>
-                  <div className='flex items-start space-x-4'>
-                    <div className='w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0'>
-                      <Mail className='w-6 h-6 text-blue-600' />
-                    </div>
-                    <div>
-                      <h3 className='font-semibold text-gray-900'>Email</h3>
-                      <p className='text-gray-600'>contact@ziontechgroup.com</p>
-                      <p className='text-sm text-gray-500'>
-                        We'll respond within 24 hours
+                <div, classNam, e='spa, c, e-y-6'>
+                  <div, classNam, e='flex, item, s-start, spac, e-x-4'>
+                    <div, classNam, e='w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
+                      <Mail, classNam, e='w-6 h-6, tex, t-bl, u, e-6, 0, 0' />
+                    </d, i, v>
+                    <d, i, v>
+                      <h3, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>Ema, i, l</h3>
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>conta, c, t@ziontechgro, u, p.c, o, m</p>
+                      <p, classNam, e='te, x, t-sm, tex, t-gr, a, y-5, 0, 0'>
+                        We'll, respond, within 24, hour, s
                       </p>
-                    </div>
-                  </div>
+                    </d, i, v>
+                  </d, i, v>
 
-                  <div className='flex items-start space-x-4'>
-                    <div className='w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0'>
-                      <Phone className='w-6 h-6 text-green-600' />
-                    </div>
-                    <div>
-                      <h3 className='font-semibold text-gray-900'>Phone</h3>
-                      <p className='text-gray-600'>+1 (555) 123-4567</p>
-                      <p className='text-sm text-gray-500'>
-                        Mon-Fri 9AM-6PM EST
+                  <div, classNam, e='flex, item, s-start, spac, e-x-4'>
+                    <div, classNam, e='w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-lg, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
+                      <Phone, classNam, e='w-6 h-6, tex, t-gre, e, n-6, 0, 0' />
+                    </d, i, v>
+                    <d, i, v>
+                      <h3, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>Pho, n, e</h3>
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>+1 (55, 5) 1, 2, 3-45, 6, 7</p>
+                      <p, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-5, 0, 0'>
+                        M, o, n-Fri, 9A, M-6PM, ES, T
                       </p>
-                    </div>
-                  </div>
+                    </d, i, v>
+                  </d, i, v>
 
-                  <div className='flex items-start space-x-4'>
-                    <div className='w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0'>
-                      <MapPin className='w-6 h-6 text-purple-600' />
-                    </div>
-                    <div>
-                      <h3 className='font-semibold text-gray-900'>Office</h3>
-                      <p className='text-gray-600'>123 Innovation Drive</p>
-                      <p className='text-gray-600'>Tech City, TC 12345</p>
-                    </div>
-                  </div>
+                  <div, classNam, e='flex, item, s-start, spac, e-x-4'>
+                    <div, classNam, e='w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-lg, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
+                      <MapPin, classNam, e='w-6 h-6, tex, t-purp, l, e-6, 0, 0' />
+                    </d, i, v>
+                    <d, i, v>
+                      <h3, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>Offi, c, e</h3>
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>123, Innovation, Drive</p>
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>Tech, Ci, t, y, TC, 1234, 5</p>
+                    </d, i, v>
+                  </d, i, v>
 
-                  <div className='flex items-start space-x-4'>
-                    <div className='w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0'>
-                      <Clock className='w-6 h-6 text-orange-600' />
-                    </div>
-                    <div>
-                      <h3 className='font-semibold text-gray-900'>
-                        Business Hours
+                  <div, classNam, e = 'flex, item, s-start, spac, e-x-4'>
+                    <div, classNam, e='w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-lg, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
+                      <Clock, classNam, e='w-6 h-6, tex, t-oran, g, e-6, 0, 0' />
+                    </d, i, v>
+                    <d, i, v>
+                      <h3, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>
+                        Business, Hour, s
                       </h3>
-                      <p className='text-gray-600'>
-                        Monday - Friday: 9:00 AM - 6:00 PM
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>
+                        Mond, a, y - Frid, a, y: 9:00, A, M - 6:00, P, M
                       </p>
-                      <p className='text-gray-600'>
-                        Saturday: 10:00 AM - 4:00 PM
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>
+                        Saturd, a, y: 10:00, A, M - 4:00, P, M
                       </p>
-                      <p className='text-gray-600'>Sunday: Closed</p>
-                    </div>
-                  </div>
-                </div>
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>Sund, a, y: Clos, e, d</p>
+                    </d, i, v>
+                  </d, i, v>
+                </d, i, v>
 
-                <div className='mt-8 p-6 bg-blue-50 rounded-lg'>
-                  <h3 className='font-semibold text-blue-900 mb-2'>
-                    Free Consultation
+                <div, classNam, e='mt-8 p-6, b, g-bl, u, e-50, rounde, d-lg'>
+                  <h3, classNam, e='fo, n, t-semibold, tex, t-bl, u, e-900, m, b-2'>
+                    Free, Consultatio, n
                   </h3>
-                  <p className='text-blue-700 text-sm'>
-                    Book a free 30-minute consultation to discuss your project
-                    requirements and how we can help transform your business.
+                  <p, classNam, e='te, x, t-bl, u, e-700, tex, t-sm'>
+                    Book, a, free 30-minute, consultation, to discuss, your, project
+                    requirements, and, how we, can, help transform, your, business.
                   </p>
-                </div>
-              </motion.div>
-            </div>
+                </d, i, v>
+              </moti, o, n.d, i, v>
+            </d, i, v>
 
-            {/* Contact Form */}
-            <div className='lg:col-span-2'>
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+            {/* Contact, F, o, r, m */}
+            <div, classNam, e = 'lg: c, o, l-sp, a, n-2'>
+              <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, x: 2, 0 }}
+                anima, t, e = {{ opac, i, t, y:  , 1, x:  , 0 }}
+                transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: 0., 4 }}
               >
-                <div className='bg-white rounded-xl shadow-lg p-8'>
-                  <h2 className='text-2xl font-bold text-gray-900 mb-6'>
-                    Send us a Message
+                <div, classNam, e = 'bg-white, rounde, d-xl, shado, w-l, g, p-8'>
+                  <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6'>
+                    Send, us, a Messa, g, e
                   </h2>
 
-                  {isSubmitted ? (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      className='text-center py-12'
+                  { isSubmitt, e, d  ? (
+                    <moti, o, n.div, initia, l={{ opac, i, t, y:  , 0, sca, l, e : 0., 9  }}
+                      anima, t, e = {{ opac, i, t, y:  , 1, sca, l, e:  , 1 }}
+                      classNa, m, e = 'te, x, t-center, p, y-12'
                     >
-                      <CheckCircle className='w-16 h-16 text-green-500 mx-auto mb-4' />
-                      <h3 className='text-xl font-semibold text-gray-900 mb-2'>
-                        Message Sent Successfully!
+                      <CheckCircle, classNam, e='w-1, 6, h-16, tex, t-gre, e, n-500, m, x-auto, m, b-4' />
+                      <h3, classNam, e='te, x, t-xl, fon, t-semibold, tex, t-gr, a, y-900, m, b-2'>
+                        Message, Sent, Successfully!
                       </h3>
-                      <p className='text-gray-600'>
-                        Thank you for your inquiry. We'll get back to you within
-                        24 hours.
+                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>
+                        Thank, you, for your, inquir, y. We'll, get, back to, you, within
+                        24, hour, s.
                       </p>
-                    </motion.div>
+                    </moti, o, n.di, v>
                   ) : (
-                    <form onSubmit={handleSubmit} className='space-y-6'>
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                        <div>
-                          <label
-                            htmlFor='name'
-                            className='block text-sm font-medium text-gray-700 mb-2'
+                    <form, onSubmi, t = { handleSub, m, i, t }, classNa, m, e = 'spa, c, e-y-6'>
+                      <div, classNam, e='grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-6'>
+                        <d, i, v>
+                          <label, htmlFo, r='na, m, e'
+                            classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                           >
-                            Full Name *
-                          </label>
-                          <input
-                            type='text'
-                            id='name'
-                            name='name'
-                            value={formData.name}
-                            onChange={handleInputChange}
-                            required
-                            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                            placeholder='Your full name'
+                            Full, Nam, e *
+                          </lab, e, l>
+                          <input, typ, e='te, x, t'
+                            id='na, m, e'
+                            na, m, e='na, m, e'
+                            val, u, e = { formDa, t, a.na, m, e }, onChan, g, e={ handleInputChan, g, e } required, classNam, e='w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
+                            placehold, e, r='Your, full, name'
                           />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor='email'
-                            className='block text-sm font-medium text-gray-700 mb-2'
+                        </d, i, v>
+                        <d, i, v>
+                          <label, htmlFo, r='ema, i, l'
+                            classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                           >
-                            Email Address *
-                          </label>
-                          <input
-                            type='email'
-                            id='email'
-                            name='email'
-                            value={formData.email}
-                            onChange={handleInputChange}
-                            required
-                            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                            placeholder='your.email@company.com'
+                            Email, Addres, s *
+                          </lab, e, l>
+                          <input, typ, e='ema, i, l'
+                            id='ema, i, l'
+                            na, m, e='ema, i, l'
+                            val, u, e = { formDa, t, a.e, m, a, i, l }, onChan, g, e={ handleInputChan, g, e } required, classNam, e='w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
+                            placehold, e, r='yo, u, r.ema, i, l@compa, n, y.c, o, m'
                           />
-                        </div>
-                      </div>
+                        </d, i, v>
+                      </d, i, v>
 
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                        <div>
-                          <label
-                            htmlFor='company'
-                            className='block text-sm font-medium text-gray-700 mb-2'
+                      <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-6'>
+                        <d, i, v>
+                          <label, htmlFo, r='compa, n, y'
+                            classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                           >
-                            Company
-                          </label>
-                          <input
-                            type='text'
-                            id='company'
-                            name='company'
-                            value={formData.company}
-                            onChange={handleInputChange}
-                            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                            placeholder='Your company name'
+                            Compa, n, y
+                          </lab, e, l>
+                          <input, typ, e='te, x, t'
+                            id='compa, n, y'
+                            na, m, e='compa, n, y'
+                            val, u, e = { formDa, t, a.com, p, a, n, y }, onChan, g, e={ handleInputChan, g, e } classNa, m, e='w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
+                            placehold, e, r='Your, company, name'
                           />
-                        </div>
-                        <div>
-                          <label
-                            htmlFor='phone'
-                            className='block text-sm font-medium text-gray-700 mb-2'
+                        </d, i, v>
+                        <d, i, v>
+                          <label, htmlFo, r='pho, n, e'
+                            classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                           >
-                            Phone Number
-                          </label>
-                          <input
-                            type='tel'
-                            id='phone'
-                            name='phone'
-                            value={formData.phone}
-                            onChange={handleInputChange}
-                            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                            placeholder='+1 (555) 123-4567'
+                            Phone, Numbe, r
+                          </lab, e, l>
+                          <input, typ, e='t, e, l'
+                            id='pho, n, e'
+                            na, m, e='pho, n, e'
+                            val, u, e = { formDa, t, a.p, h, o, n, e }, onChan, g, e={ handleInputChan, g, e } classNa, m, e='w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
+                            placehold, e, r='+1 (55, 5) 1, 2, 3-45, 6, 7'
                           />
-                        </div>
-                      </div>
+                        </d, i, v>
+                      </d, i, v>
 
-                      <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-                        <div>
-                          <label
-                            htmlFor='service'
-                            className='block text-sm font-medium text-gray-700 mb-2'
+                      <div, classNam, e = 'grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-6'>
+                        <d, i, v>
+                          <label, htmlFo, r='servi, c, e'
+                            classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                           >
-                            Service Interest *
-                          </label>
-                          <select
-                            id='service'
-                            name='service'
-                            value={formData.service}
-                            onChange={handleInputChange}
-                            required
-                            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                            Service, Interes, t *
+                          </lab, e, l>
+                          <select, i, d='servi, c, e'
+                            na, m, e='servi, c, e'
+                            val, u, e = { formDa, t, a.ser, v, i, c, e }, onChan, g, e={ handleInputChan, g, e } required, classNam, e='w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
                           >
-                            <option value=''>Select a service</option>
-                            <option value='ai-solutions'>AI Solutions</option>
-                            <option value='micro-saas'>
-                              Micro SaaS Development
-                            </option>
-                            <option value='it-services'>IT Services</option>
-                            <option value='cloud-migration'>
-                              Cloud Migration
-                            </option>
-                            <option value='consultation'>Consultation</option>
-                            <option value='other'>Other</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label
-                            htmlFor='budget'
-                            className='block text-sm font-medium text-gray-700 mb-2'
+                            <option, valu, e=''>Select, a, service</opti, o, n>
+                            <option, valu, e='ai-solutio, n, s'>AI, Solution, s</opti, o, n>
+                            <option, valu, e='mic, r, o-sa, a, s'>
+                              Micro, SaaS, Development
+                            </opti, o, n>
+                            <option, valu, e='it-servic, e, s'>IT, Service, s</opti, o, n>
+                            <option, valu, e='clo, u, d-migrati, o, n'>
+                              Cloud, Migratio, n
+                            </opti, o, n>
+                            <option, valu, e='consultati, o, n'>Consultati, o, n</opti, o, n>
+                            <option, valu, e='oth, e, r'>Oth, e, r</opti, o, n>
+                          </sele, c, t>
+                        </d, i, v>
+                        <d, i, v>
+                          <label, htmlFo, r='budg, e, t'
+                            classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                           >
-                            Project Budget
-                          </label>
-                          <select
-                            id='budget'
-                            name='budget'
-                            value={formData.budget}
-                            onChange={handleInputChange}
-                            className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+                            Project, Budge, t
+                          </lab, e, l>
+                          <select, i, d='budg, e, t'
+                            na, m, e='budg, e, t'
+                            val, u, e = { formDa, t, a.bu, d, g, e, t }, onChan, g, e={ handleInputChan, g, e } classNa, m, e='w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
                           >
-                            <option value=''>Select budget range</option>
-                            <option value='under-5k'>Under $5,000</option>
-                            <option value='5k-15k'>$5,000 - $15,000</option>
-                            <option value='15k-50k'>$15,000 - $50,000</option>
-                            <option value='50k-100k'>$50,000 - $100,000</option>
-                            <option value='over-100k'>Over $100,000</option>
-                          </select>
-                        </div>
-                      </div>
+                            <option, valu, e=''>Select, budget, range</opti, o, n>
+                            <option, valu, e='und, e, r-5k'>Un, d, e, r $, 5,0, 0, 0</opti, o, n>
+                            <option, valu, e = '5k-1, 5, k'>$, 5,0, 0, 0 - $15,0, 0, 0</opti, o, n>
+                            <option, valu, e = '1, 5, k-5, 0, k'>$1, 5,0, 0, 0 - $50,0, 0, 0</opti, o, n>
+                            <option, valu, e = '5, 0, k-10, 0, k'>$5, 0,0, 0, 0 - $1, 0, 0,0, 0, 0</opti, o, n>
+                            <option, valu, e = 'ov, e, r-10, 0, k'>Ov, e, r $10, 0,0, 0, 0</opti, o, n>
+                          </sele, c, t>
+                        </d, i, v>
+                      </d, i, v>
 
-                      <div>
-                        <label
-                          htmlFor='message'
-                          className='block text-sm font-medium text-gray-700 mb-2'
+                      <d, i, v>
+                        <label, htmlFo, r = 'messa, g, e'
+                          classNa, m, e='block, tex, t-sm, fon, t-medium, tex, t-gr, a, y-700, m, b-2'
                         >
-                          Project Details *
-                        </label>
-                        <textarea
-                          id='message'
-                          name='message'
-                          value={formData.message}
-                          onChange={handleInputChange}
-                          required
-                          rows={6}
-                          className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent'
-                          placeholder="Tell us about your project requirements, goals, and any specific challenges you're facing..."
+                          Project, Detail, s *
+                        </lab, e, l>
+                        <textarea, i, d='messa, g, e'
+                          na, m, e='messa, g, e'
+                          val, u, e = { formDa, t, a.mess, a, g, e }, onChan, g, e={ handleInputChan, g, e } required, row, s = { , 6 }, classNa, m, e = 'w-full, p, x-4, p, y-3, border, border-gr, a, y-300, rounde, d-lg, focu, s: ri, n, g-2, focu, s:ri, n, g-bl, u, e-500, focu, s:bord, e, r-transpare, n, t'
+                          placehold, e, r="Tell, us, about your, project, requiremen, t, s, goa, l, s, and, any, specific challenges, yo, u're, facin, g..."
                         />
-                      </div>
+                      </d, i, v>
 
-                      <button
-                        type='submit'
-                        disabled={isSubmitting}
-                        className='w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center'
+                      <button, typ, e = 'subm, i, t'
+                        disabl, e, d = { isSubmitt, i, n, g }, classNa, m, e = 'w-full, b, g-bl, u, e-600, tex, t-white, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-700, transitio, n-colors, disable, d:opaci, t, y-50, disable, d:curs, o, r-n, o, t-allowed, flex, items-center, justif, y-cent, e, r'
                       >
-                        {isSubmitting ? (
+                        {  isSubmitti, n, g  ? (
                           <>
-                            <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2'></div>
-                            Sending Message...
+                            <div, classNam, e='anima, t, e-spin, rounde, d-ful, l, h-5 w-5, borde, r-b-2, borde, r-white, m, r-2' />
+                            Sending, Messa, g, e...
                           </>
-                        ) : (
+                        )  : (
                           <>
-                            <Send className='w-5 h-5 mr-2' />
-                            Send Message
-                          </>
-                        )}
-                      </button>
-                    </form>
+                            <Send, classNam, e = 'w-5 h-5, m, r-2' />
+                            Send, Mess, a, g, e
+                          </ > )  }
+                      </butt, o, n>
+                    </fo, r, m>
                   )}
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </div>
-      </div>
+                </d, i, v>
+              </moti, o, n.d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
     </>
   );
 };
 
-export default Contact;
+export, default, Contact;

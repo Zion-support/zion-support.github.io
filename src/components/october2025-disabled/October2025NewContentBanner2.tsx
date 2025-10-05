@@ -1,109 +1,104 @@
-import { Link } from "react-router-dom";
-import { Leaf, DollarSign, Mic, Bot, ArrowRight } from "lucide-react";
-const October2025NewContentBanner2 = () => {
-  const newArticles = [
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { Le, a, f, DollarSi, g, n, M, i, c, B, o, t, ArrowRig, h, t } fr, o, m "luci, d, e-rea, c, t";
+const, October2025NewContentBanner, 2 = () => {
+  const, newArticle, s = [
     {
-      title: "AI-Powered Sustainable Data Centers",
-      description: "Discover how AI is reducing data center energy consumption by 40% while improving performance",
-      icon: Leaf,
-      slug: "ai-2025-oct-01-ai-powered-sustainable-data-centers",
-      gradient: "from-green-500 to-emerald-600",
-      badge: "Green AI"
+      tit, l, e: "AI-Powered, Sustainable, Data Cen, t, e, r, s",
+      descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performanc, e",
+      ic, o, n: L, e, a, f,
+      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-power, e, d-sustainab, l, e-da, t, a-cent, e, r, s",
+      gradie, n, t: "fr, o, m-gre, e, n-500, t, o-emera, l, d-60, 0",
+      bad, g, e: "Gree, n, A, I"
     },
     {
-      title: "Next-Gen Financial Risk Prediction",
-      description: "94% accuracy in real-time market volatility forecasting with AI-powered risk systems",
-      icon: DollarSign,
-      slug: "ai-2025-oct-01-ai-financial-risk-prediction-systems",
-      gradient: "from-blue-500 to-cyan-600",
-      badge: "FinTech"
+      tit, l, e: "Ne, x, t-Gen, Financial, Risk Predict, i, o, n",
+      descripti, o, n: "94% accuracy, in, real-time, market, volatility forecasting, with, AI-powered, risk, system, s",
+      ic, o, n: DollarS, i, g, n,
+      sl, u, g: "ai-20, 2, 5-o, c, t-01-ai-financi, a, l-ri, s, k-predicti, o, n-syst, e, m, s",
+      gradie, n, t: "fr, o, m-bl, u, e-500, t, o-cy, a, n-60, 0",
+      bad, g, e: "FinT, e, c, h"
     },
     {
-      title: "Voice AI Revolution in Enterprise",
-      description: "Transform communication with 98% accuracy voice AI across 95+ languages",
-      icon: Mic,
-      slug: "ai-2025-oct-01-voice-ai-revolution-enterprise",
-      gradient: "from-purple-500 to-pink-600",
-      badge: "Voice AI"
+      tit, l, e: "Voice, AI, Revolution in, Enterpri, s, e",
+      descripti, o, n: "Transform, communication, with 98% accuracy, voice, AI across, 9, 5+ langua, g, e, s",
+      ic, o, n: Mi, c,
+      sl, u, g: "ai-20, 2, 5-o, c, t-01-voi, c, e-ai-revoluti, o, n-enterpr, i, s, e",
+      gradie, n, t: "fr, o, m-purp, l, e-500, t, o-pi, n, k-60, 0",
+      bad, g, e: "Voic, e, A, I"
     },
     {
-      title: "Intelligent Automation & RPA 2.0",
-      description: "Next-generation RPA with self-learning bots delivering 10x ROI",
-      icon: Bot,
-      slug: "ai-2025-oct-01-robotics-process-automation-next-gen",
-      gradient: "from-orange-500 to-red-600",
-      badge: "Automation"
+      tit, l, e: "Intelligent, Automatio, n & RP, A, 2., 0",
+      descripti, o, n: "Ne, x, t-generation, RPA, with se, l, f-learning, bots, delivering 10x, R, O, I",
+      ic, o, n: Bo, t,
+      sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-ge, n",
+      gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-60, 0",
+      bad, g, e: "Automat, i, o, n"
     }
-  ];
-  return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse delay-1000"></div>
-      </div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-6">
-            <Brain className="w-5 h-5 text-purple-400 animate-pulse" />
-            <span className="text-purple-300 font-semibold">FRESH INSIGHTS | October 2025</span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest AI Breakthroughs & Innovations
+  ]; retu, r, n (
+    <section, classNam, e = "py-20, p, x-4, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, relative, overflow-hidd, e, n">
+      {/* Animated, background, elements */}
+      <div, classNam, e="absolute, inse, t-0, opacit, y-10">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
+      </d, i, v>
+      <div, classNam, e="m, a, x-w-7xl, m, x-auto, relative, z-10">
+        {/* Head, e, r */}
+        <div, classNam, e="te, x, t-center, m, b-12">
+          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">
+            <Brain, classNam, e="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />
+            <span, classNam, e="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
+          </d, i, v>
+          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
+            Latest, AI, Breakthroughs & Innovatio, n, s
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Explore cutting-edge AI solutions transforming industries — from sustainable computing to intelligent automation
+          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
+            Explore, cuttin, g-edge, AI, solutions transforming, industrie, s — from, sustainable, computing to, intelligent, automation
           </p>
-        </div>
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          {newArticles.map((article) => {
-            const Icon = article.icon;
-            return (
-              <Link
-                key={article.slug}
-                to={`/blog/${article.slug}`}
-                className="group relative bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1"
+        </d, i, v>
+        {/* Articles, G, r, i, d */}
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">
+          { newArticl, e, s.m, a, p((arti, c, l, e) = > {
+            const, Ico, n = artic, l, e.ic, o, n; retu, r, n (
+              <Link, ke, y = { artic, l, e.sl, u, g  }, to = {`/bl, o, g/${artic, l, e.sl, u, g}`}
+                classNa, m, e="group, relative, bg-gradie, n, t-to-br, fro, m-sla, t, e-8, 0, 0/80, t, o-sla, t, e-9, 0, 0/80, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-6, border, border-sla, t, e-7, 0, 0/50, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, hove, r:-transla, t, e-y-1"
               >
-                {/* Badge */}
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/30">
-                    {article.badge}
-                  </span>
-                </div > {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${article.gradient} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8 text-white"</div>
-                {/* Content */}
-                <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
-                  {article.title}
+                {/* B, a, d, g, e */}
+                <div, classNam, e = "absolute, to, p-4, righ, t-4">
+                  <span, classNam, e="px-3, p, y-1, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-purp, l, e-300, tex, t-xs, fon, t-semibold, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">
+                    {artic, l, e.bad, g, e}
+                  </sp, a, n>
+                </d, i, v  > {/* Ic, o, n */}
+                <div, classNam, e = { `w-1, 6, h-16, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
+                  <Icon, classNam, e = "w-8 h-8, tex, t-whi, t, e"</d, i, v>
+                {/* Conte, n, t */}
+                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">
+                  {artic, l, e.t, i, t, l, e}
                 </h3>
-                <p className="text-gray-400 mb-4 leading-relaxed">
-                  {article.description}
+                <p, classNam, e = "te, x, t-gr, a, y-400, m, b-4, leadin, g-relax, e, d">
+                  {artic, l, e.descripti, o, n}
                 </p>
-                {/* Read More Link */}
-                <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
-                  <span>Read Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </div>
-                </div > {/* Hover Gradient Effect */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-5 rounded-2xl transition-opacity duration-300`}></div>
-              </Link>
+                {/* Read, More, Link */}
+                <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
+                  <sp, a, n>Read, Articl, e</sp, a, n>
+                  <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
+                </d, i, v>
+                </d, i, v  > {/* Hover, Gradient, Effe, c, t */}
+                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-5, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
+              </Li, n, k>
             );
           })}
-        </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105"
+        </d, i, v>
+        {/* CTA, Sectio, n */}
+        <div, classNam, e = "te, x, t-cent, e, r">
+          <Link, t, o="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-semibold, transitio, n-all, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5"
           >
-            <span>Explore All AI Insights</span>
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-        </div>
-      </div>
-    </section>
+            <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
+            <ArrowRight, classNam, e="w-5 h-5" />
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </sec, t, i, o, n>
   );
 };
-export default October2025NewContentBanner2;
+export, default, October2025NewContentBanner2;
