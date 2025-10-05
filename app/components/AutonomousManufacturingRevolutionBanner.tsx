@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Bot, Cog, Cogs, Factory, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Cogs, Factory, TrendingUp, Zap } from 'lucide-react';
 
 
 

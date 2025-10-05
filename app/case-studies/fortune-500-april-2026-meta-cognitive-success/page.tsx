@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Cog, Target } from 'lucide-react';
 
 
 export const metadata: Metadata = {

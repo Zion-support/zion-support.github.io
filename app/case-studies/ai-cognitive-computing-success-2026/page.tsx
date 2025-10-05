@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowLeft, ArrowRight, Bookmark, Bot, Calendar, Clock, Cog, DollarSign, Share, Target, TrendingUp, User } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, DollarSign, Share, Target, TrendingUp, User } from 'lucide-react';
 
 
 

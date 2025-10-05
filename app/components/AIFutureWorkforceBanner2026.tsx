@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowRight, Brain, TrendingUp, User, Users } from 'lucide-react';
+import { ArrowRight, Brain, TrendingUp, Users } from 'lucide-react';
 
 
 
