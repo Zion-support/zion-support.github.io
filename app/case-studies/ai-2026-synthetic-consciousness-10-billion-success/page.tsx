@@ -15,6 +15,7 @@ import Award from 'lucide-react/dist/esm/icons/award';
 
 
 
+import { ArrowRight, Brain, TrendingUp, DollarSign, Users, Target, Award } from 'lucide-react';
 export const metadata = {
   title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',
   description: 'Discover how a Fortune 500 company achieved $10 billion in ROI through Zion Tech Group\'s synthetic consciousness AI implementation. Real results from real transformation.',
