@@ -63,9 +63,9 @@ const Sidebar: React.FC = () => {
                   to={link.path}
                   className={`block px-3 py-2 text-sm rounded-md transition-colors ${
                     isActive(link.path)
-                      ? 'bg-blue-100 text-blue-700 font-medium'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
-                  }`}
+                      ? bg-blue-100 text-blue-700 font-medium'
+                      : 'text-gray-600 hover: 'text-gray-900 hover:bg-gray-100
+                  '}`}
                 >
                   {link.label}
                 </Link>
@@ -77,7 +77,7 @@ const Sidebar: React.FC = () => {
         <div className='pt-4 border-t border-gray-200'>
           <Link
             to='/contact'
-            className='block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium'
+            className='block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover: 'bg-blue-700 transition-colors font-medium
           >
             Get Started
           </Link>
@@ -85,6 +85,6 @@ const Sidebar: React.FC = () => {
       </div>
     </aside>
   );
-};
+'};
 
 export default Sidebar;

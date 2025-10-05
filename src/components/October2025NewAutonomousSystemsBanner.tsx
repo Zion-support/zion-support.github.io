@@ -37,9 +37,7 @@ const October2025NewAutonomousSystemsBanner = () => {
           <div className="bg-gradient-to-br from-purple-900/80 to-indigo-900/80 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 group">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:shadow-purple-400/70 transition-all">
-
-                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:shadow-purple-400/70 transition-all" />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-black text-white mb-3 group-hover:text-yellow-300 transition-colors">
@@ -87,9 +85,7 @@ const October2025NewAutonomousSystemsBanner = () => {
           <div className="bg-gradient-to-br from-blue-900/80 to-cyan-900/80 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300 group">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all">
-
-                </div>
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all" />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-black text-white mb-3 group-hover:text-yellow-300 transition-colors">

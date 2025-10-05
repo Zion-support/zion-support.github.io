@@ -5,8 +5,8 @@ export default function October2025NewAdvancedAIContentBanner() {
   return (
     <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700" />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -61,9 +61,7 @@ export default function October2025NewAdvancedAIContentBanner() {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/50 h-full">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-
-                  </div>
+                  <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg" />
                   <span className="text-xs font-bold text-purple-300 uppercase tracking-wider">
                     Federated AI
                   </span>
@@ -79,15 +77,15 @@ export default function October2025NewAdvancedAIContentBanner() {
                 
                 <div className="space-y-2 text-xs text-blue-200">
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>47 Fortune 500 deployments across 42 countries</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>47M patients served without data centralization</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>94.7% model accuracy matching centralized training</span>
                   </div>
                 </div>
@@ -129,15 +127,15 @@ export default function October2025NewAdvancedAIContentBanner() {
                 
                 <div className="space-y-2 text-xs text-blue-200">
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>470M synthetic transactions for top-3 bank</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>1000x fraud examples — 94.7% detection accuracy</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>100% privacy compliance across 67 countries</span>
                   </div>
                 </div>
@@ -162,9 +160,7 @@ export default function October2025NewAdvancedAIContentBanner() {
             >
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:shadow-2xl hover:shadow-green-500/50 h-full">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
-
-                  </div>
+                  <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg" />
                   <span className="text-xs font-bold text-green-300 uppercase tracking-wider">
                     AI Governance
                   </span>
@@ -180,15 +176,15 @@ export default function October2025NewAdvancedAIContentBanner() {
                 
                 <div className="space-y-2 text-xs text-blue-200">
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>340 models governed for top-10 insurer</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>$87M penalties avoided — 100% audit pass rate</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                    <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                     <span>92% risk reduction with automated governance</span>
                   </div>
                 </div>

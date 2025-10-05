@@ -15,9 +15,9 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-16 px-6 rounded-3xl shadow-2xl my-12 border-4 border-emerald-400/50" > {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="container mx-auto relative z-10">
@@ -25,8 +25,8 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm border-2 border-red-400 rounded-full px-6 py-2 animate-pulse">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500" />
             </span>
             <span className="text-red-200 font-bold text-sm uppercase tracking-wider">🔥 Breaking News - October 1, 2025</span>
           </div>

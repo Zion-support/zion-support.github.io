@@ -275,8 +275,8 @@ describe('UnifiedPromotionalBanner', () => {
       );
 
       const banner = container.firstChild;
-      expect(banner).not.toHaveClass('hover:scale-[1.01]');
-    });
+      expect(banner).not.toHaveClass('hover: 'scale-[1.01]);
+    '});
   });
 
   describe('Accessibility', () => {

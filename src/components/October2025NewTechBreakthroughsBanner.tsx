@@ -4,8 +4,8 @@ export default function October2025NewTechBreakthroughsBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 border-y border-purple-500/30" > {/* Animated background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -41,9 +41,7 @@ export default function October2025NewTechBreakthroughsBanner() {
             </div>
             
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-blue-500/20 rounded-xl">
-
-              </div>
+              <div className="p-3 bg-blue-500/20 rounded-xl" />
               <div>
                 <div className="text-xs text-blue-300 uppercase font-semibold">DevOps AI</div>
                 <div className="text-sm text-blue-200">15 min read</div>
@@ -94,9 +92,7 @@ export default function October2025NewTechBreakthroughsBanner() {
             </div>
             
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-purple-500/20 rounded-xl">
-
-              </div>
+              <div className="p-3 bg-purple-500/20 rounded-xl" />
               <div>
                 <div className="text-xs text-purple-300 uppercase font-semibold">Blockchain-AI</div>
                 <div className="text-sm text-purple-200">14 min read</div>
@@ -147,9 +143,7 @@ export default function October2025NewTechBreakthroughsBanner() {
             </div>
             
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-green-500/20 rounded-xl">
-
-              </div>
+              <div className="p-3 bg-green-500/20 rounded-xl" />
               <div>
                 <div className="text-xs text-green-300 uppercase font-semibold">Green AI</div>
                 <div className="text-sm text-green-200">13 min read</div>

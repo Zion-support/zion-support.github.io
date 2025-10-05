@@ -5,8 +5,8 @@ export default function October2025CuttingEdgeRevolutionBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 py-24" > {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/10 via-indigo-500/10 to-violet-500/10 blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl animate-pulse" />
+        <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/10 via-indigo-500/10 to-violet-500/10 blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -14,8 +14,8 @@ export default function October2025CuttingEdgeRevolutionBanner() {
         <div className="flex justify-center mb-8">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border-2 border-blue-400/50 backdrop-blur-sm">
             <span className="relative flex h-3 w-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500" />
             </span>
             <span className="text-blue-300 font-bold text-lg tracking-wider uppercase">
               🚀 Just Published • October 1, 2025 Cutting-Edge AI Revolution

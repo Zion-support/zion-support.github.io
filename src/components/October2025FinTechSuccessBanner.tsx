@@ -5,8 +5,8 @@ export default function October2025FinTechSuccessBanner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 border-4 border-blue-500 rounded-2xl shadow-2xl mb-8" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 p-8 md:p-12">
@@ -128,19 +128,13 @@ export default function October2025FinTechSuccessBanner() {
               <div className="text-2xl font-black text-blue-300 mb-1">85,000</div>
               
             </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+            <div />
+            <div />
             <div>
               <div className="text-2xl font-black text-green-300 mb-1">$14.1B</div>
               <div className="text-sm text-blue-200">Annual Savings</div>
             </div>
-            <div>
-
-            </div>
+            <div />
           </div>
         </div>
       </div>

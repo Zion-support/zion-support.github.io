@@ -112,9 +112,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
     <div className={`${variants[variant]} ${className} relative overflow-hidden`}>
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping"></div>
+        <div className="absolute top-0 left-0 w-32 h-32 bg-white rounded-full animate-pulse" />
+        <div className="absolute bottom-0 right-0 w-24 h-24 bg-white rounded-full animate-bounce" />
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white rounded-full animate-ping" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-6">

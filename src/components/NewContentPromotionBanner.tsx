@@ -50,9 +50,9 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
     <div className={`relative overflow-hidden border rounded-xl p-6 mb-8 animate-fade-in ${variantClasses[variant]} ${className}`}>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent"></div>
-        <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/5 rounded-full"></div>
-        <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/5 rounded-full"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/10 to-transparent" />
+        <div className="absolute -top-4 -right-4 w-20 h-20 bg-white/5 rounded-full" />
+        <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-white/5 rounded-full" />
       </div>
 
       <div className="relative z-10">
@@ -95,9 +95,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               </div>
               
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
-                <div className="flex items-center gap-2 mb-1">
-
-                </div>
+                <div className="flex items-center gap-2 mb-1" />
                 <div className="text-xs opacity-90">Production Deployment Patterns</div>
               </div>
             </div>

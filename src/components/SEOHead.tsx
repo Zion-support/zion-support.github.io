@@ -12,8 +12,8 @@ interface SEOHeadProps {
   structuredData?: object;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group — AI, Micro SaaS, and IT Services',
+const SEOHead: 'React.FC<SEOHeadProps> = ({
+  title = Zion Tech Group — AI', Micro SaaS, and IT Services',
   description = 'Enterprise-grade AI, micro SaaS, and IT solutions. Transform your business with cutting-edge technology and automation.',
   keywords = 'AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation',
   canonicalUrl,

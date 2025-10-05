@@ -12,10 +12,7 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {
           {/* Left side - Badge and Title */}
           <div className="flex items-start gap-4 flex-1 min-w-0">
             <div className="flex-shrink-0 mt-1">
-              <div className="relative">
-
-
-              </div>
+              <div className="relative" />
             </div>
             
             <div className="flex-1 min-w-0">
