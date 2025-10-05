@@ -1,5 +1,14 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 // import { ArrowRight, Zap, Brain, Cpu, Target, TrendingUp } from 'lucide-react';
+=======
+import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
+import Zap from 'lucide-react/dist/esm/icons/ap';
+import Brain from 'lucide-react/dist/esm/icons/rain';
+import Cpu from 'lucide-react/dist/esm/icons/pu';
+import Target from 'lucide-react/dist/esm/icons/arget';
+import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export const metadata = {
   title: 'AI 2026: Quantum Neural Superintelligence - The Next Evolution of Artificial Intelligence',
@@ -16,7 +25,7 @@ export default function QuantumNeuralSuperintelligence2026() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-indigo-600/20 text-indigo-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Zap className="w-4 h-4" />
+              <Zap />
               Quantum Breakthrough
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -33,14 +42,14 @@ export default function QuantumNeuralSuperintelligence2026() {
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 View $25B Success Case Study
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight />
               </Link>
               <Link 
                 href="/services/quantum-ai-development"
                 className="inline-flex items-center gap-2 border border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300"
               >
                 Implement Quantum AI
-                <Brain className="w-5 h-5" />
+                <Brain />
               </Link>
             </div>
           </div>
@@ -56,7 +65,7 @@ export default function QuantumNeuralSuperintelligence2026() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-indigo-600/20 to-purple-600/20 p-8 rounded-2xl border border-indigo-500/30">
               <div className="w-12 h-12 bg-indigo-600 rounded-lg flex items-center justify-center mb-6">
-                <Cpu className="w-6 h-6 text-white" />
+                <Cpu />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Quantum Processing</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -66,7 +75,7 @@ export default function QuantumNeuralSuperintelligence2026() {
             </div>
             <div className="bg-gradient-to-br from-purple-600/20 to-pink-600/20 p-8 rounded-2xl border border-purple-500/30">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain className="w-6 h-6 text-white" />
+                <Brain />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Neural Quantum States</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -76,7 +85,7 @@ export default function QuantumNeuralSuperintelligence2026() {
             </div>
             <div className="bg-gradient-to-br from-pink-600/20 to-indigo-600/20 p-8 rounded-2xl border border-pink-500/30">
               <div className="w-12 h-12 bg-pink-600 rounded-lg flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-white" />
+                <Target />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Superintelligent Reasoning</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -273,14 +282,14 @@ export default function QuantumNeuralSuperintelligence2026() {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Quantum Consultation
-              <ArrowRight className="w-5 h-5" />
+              <ArrowRight />
             </Link>
             <Link 
               href="/services/quantum-ai-development"
               className="inline-flex items-center gap-2 border border-indigo-500 text-indigo-300 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-500/10 transition-all duration-300"
             >
               Explore Quantum Solutions
-              <TrendingUp className="w-5 h-5" />
+              <TrendingUp />
             </Link>
           </div>
         </div>
