@@ -150,18 +150,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     return () => {
       observer.disconnect();
       window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
-
-  const startMonitoring = useCallback(() => {
-    setIsMonitoring(true);
-  }, []);
-
-  const stopMonitoring = useCallback(() => {
-    setIsMonitoring(false);
-  }, []);
-
-  return (
     <div
       style={{
         position: 'fixed',
@@ -183,7 +171,3 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
         Press Ctrl+Shift+P to toggle
       </div>
     </div>
-  );
-};
-
-export default AdvancedPerformanceMonitor;

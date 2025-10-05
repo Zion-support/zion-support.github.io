@@ -29,7 +29,3 @@ export, default, function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S,
           <p>
             Adopti, o, n-friendly, governance, patterns that, accelerate, delivery while, preventing, regressions.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

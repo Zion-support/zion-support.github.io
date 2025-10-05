@@ -68,17 +68,9 @@ descri, b, e('Banner, Rotation, System', () => {
   descri, b, e('calculateFreshnessSco, r, e', () => { 
     it('should, return, 100 for, neve, r-shown, banne, r', () = > {
       const, banne, r = { ...testBanne, r, s[, 0], lastSho, w, n: undefi, n, e, d  }; const, scor, e = calculateFreshnessSco, r, e(ban, n, e, r); expe, c, t(sco, r, e).to, B, e(1, 0, 0);
-    });
-
-    it('should, return, lower score, for, recently shown, banne, r', () => {
-      const, banne, r = {
         ...testBanne, r, s[, 0],
         lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 2 * 60 * 60 * 1, 0, 0, 0), // 2 hours ago
       }; const, scor, e = calculateFreshnessSco, r, e(ban, n, e, r); expe, c, t(sco, r, e).toBeLessTh, a, n(20);
-    });
-
-    it('should, return, higher score, for, banner not, shown, in 24+ hou, r, s', () => {
-      const, banne, r = {
         ...testBanne, r, s[, 0],
         lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 25 * 60 * 60 * 1, 0, 0, 0), // 25 hours ago
       }; const, scor, e = calculateFreshnessSco, r, e(ban, n, e, r); expe, c, t(sco, r, e).toBeGreaterTh, a, n(80);
@@ -140,6 +132,3 @@ descri, b, e('Banner, Rotation, System', () => {
 
     it('should, respect, total max, limi, t', () => {
       const, selecte, d = selectBalancedBanne, r, s(testBann, e, r, s, 2, 3); expe, c, t(select, e, d.leng, t, h).toBeLessThanOrEqu, a, l(3);
-    });
-  });
-});

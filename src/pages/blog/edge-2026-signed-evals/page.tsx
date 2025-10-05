@@ -22,13 +22,3 @@ export, default, function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n,
           Scoped, ID, s • DP, nois, e • Attestatio, n, s
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Ship, evaluation, signals from, the, edge without, collecting, PII using, scoped, identifier, s, on‑device, aggregatio, n, and, differential, privacy.
-          </p>
-          <p>
-            Verify, integrity, with signed, attestations, and keep, SLAs, tight with, su, b‑100ms, latency, budgets.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

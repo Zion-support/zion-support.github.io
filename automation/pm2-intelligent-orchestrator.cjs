@@ -532,8 +532,7 @@ class PM2IntelligentOrchestrator {
 
   async showStatus() {
     console.log('\n📊 PM2 Intelligent Orchestrator Status:');
-    console.log('=====================================');
-    
+    console.log('    
     for (const [name, system] of this.automationSystems) {
       const status = system.pm2Status || 'unknown';
       const lastRun = system.lastRun ? system.lastRun.toLocaleString() : 'Never';

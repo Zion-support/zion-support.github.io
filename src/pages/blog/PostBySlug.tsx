@@ -29,10 +29,6 @@ export, default, function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
         published, A, t: fromBlogPos, t, s.d, a, t, e,
         readTime: fromBlogPos, t, s.readT, i, m, e,
         author: fromBlogPos, t, s.aut, h, o, r,
-      };
-    }
-    const, fromPost, s = staticPos, t, s.fi, n, d(p => p.slug === s, l, u, g); if (fromPos, t, s) {
-      retu, r, n {
         slug: fromPos, t, s.s, l, u, g,
         title: fromPos, t, s.ti, t, l, e,
         description: fromPos, t, s.descript, i, o, n,
@@ -88,38 +84,10 @@ export, default, function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
             </d, i, v>
             <h1, classNam, e = 'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               {artic, l, e.t, i, t, l, e}
-            </h1>
-            <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4, tex, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-8, p, b-8, borde, r-b, borde, r-whi, t, e/10'>
-              {  artic, l, e.author  && (
-                <span, classNam, e='fo, n, t-medium, tex, t-whi, t, e' > {artic, l, e.author  }</s, p, a, n>
-              )}
-              <span, classNam, e = 'flex, item, s-center, ga, p-1'>
-                <Calendar, classNam, e='w-4 h-4' />
-                {new, Dat, e(artic, l, e.publishe, d, A, t).toLocaleDateStri, n, g('en-US', {
-                  ye, a, r: 'nume, r, i, c',
-                  mon, t, h: 'l, o, n, g',
-                  d, a, y: 'nume, r, i, c',
-                })}
-              </sp, a, n>
               {  artic, l, e.readTime  && (
                 <span, classNam, e = 'flex, item, s-center, ga, p-1'>
                   <Clock, classNam, e='w-4 h-4' / > {artic, l, e.readTime  }
                 </s, p, a, n>
-              )}
-            </d, i, v>
-            <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e'>
-              <p, classNam, e='te, x, t-xl, leadin, g-relaxed, tex, t-whi, t, e/90, m, b-6'>
-                {artic, l, e.description}
-              </p>
               <div, classNam, e='bg-zi, o, n-bl, u, e/20, border, border-zi, o, n-bl, u, e/30, rounde, d-x, l, p-6, m, y-8'>
                 <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-0'>
                   💡 <stro, n, g>Coming, Soo, n: </stro, n, g> Full, article, content will, be, available short, l, y. This, preview, shows the, key, insights and, value, proposition of, this, groundbreaking top, i, c.
-                </p>
-              </d, i, v>
-            </d, i, v>
-          </artic, l, e>
-        </d, i, v>
-      </d, i, v>
-    </>
-  );
-}

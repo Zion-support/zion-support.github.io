@@ -53,14 +53,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     r, e, d: 'fr, o, m-r, e, d-500, t, o-r, e, d-600, hove, r:fr, o, m-r, e, d-600, hove, r:to-r, e, d-70, 0',
     cy, a, n: 'fr, o, m-cy, a, n-500, t, o-cy, a, n-600, hove, r:fr, o, m-cy, a, n-600, hove, r:to-cy, a, n-70, 0',
     gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hove, r:to-bl, u, e-60, 0',
-  };
-  // Icon selection const IconCompone n t = {
-    sparkl, e, s: Spar, k, l, e, s,
-    z, a, p: Za, p,
-    rock, e, t: Roc, k, e, t,
-    st, a, r: S, t, a, r,
-    no, n, e: n, u, l, l,
-  }[ic, o, n];
   // Varia n t-specific styles const variantClass e s = {
     defau, l, t: 'py-8 p, x-, 6',
     premi, u, m: 'py-12, p, x-, 8',
@@ -72,25 +64,8 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
         bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl 
         ${variantClass, e, s[varia, n, t]} 
         ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
-        ${classNa, m, e}
-      `}
-    >
-      {/* Header, Sectio, n */}
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
-        {/* Badge, and, Date */}
-        {  (bad, g, e || d, a, t, e) && (
-          <div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
-            {bad, g, e && (
               <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
                 {IconCompone, n, t  && <IconComponent, classNam, e='w-4 h-4' / >   }
-                {bad, g, e}
-              </s, p, a, n>
-            )}
-            {  date  && (
-              <span, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m' > {date  }</s, p, a, n>
-            )}
-          </d, i, v > )}
-        {/* Tit, l, e */}
         <h2, classNam, e = { `
           fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t
           ${
@@ -130,54 +105,9 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
           >
             { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (
               <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
-              >
-                <div, classNam, e='flex, item, s-start, ga, p-3'>
-                  <div, classNam, e='fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>
-                    {in, d, e, x + , 1}
-                  </d, i, v>
                   <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
                     <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
                       {it, e, m.category}
-                    </d, i, v>
-                    <div, classNam, e='te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2'>
-                      {it, e, m.t, i, t, l, e}
-                    </d, i, v>
-                    {  it, e, m.metri, c, s  && (
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-4, 0, 0' > {it, e, m.metri, c, s  }
-                      </di, v>
-                    )}
-                  </d, i, v>
                   <ArrowRight, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
-                </d, i, v>
-              </Li, n, k>
-            ))}
-          </d, i, v>
-        )}
-        {/* CTA, Butto, n */}
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, classNa, m, e={ `
-              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
-              ${ 
-                varia, n, t === 'compa, c, t'
-                  ? 'px-6, p, y-3, tex, t-sm'
-                  : varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
-                     ? 'px-10, p, y-5, tex, t-lg'
-                     : 'te, x, t-ba, s, e'
-               }
-            `}
-           > {ctaTe, x, t}
-            <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
-            />
-          </Li, n, k>
-          {  featuredIte, m, s.leng, t, h  > showCou, n, t  && (
-            <Link, t, o = { ctaL, i, n, k   }, classNa, m, e = 'te, x, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, transitio, n-colors, tex, t-sm'
-            >
               +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h
               { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }
-            </Li, n, k>
-          )}
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
-  );
-};
-export, default, UnifiedPromotionalBanner;

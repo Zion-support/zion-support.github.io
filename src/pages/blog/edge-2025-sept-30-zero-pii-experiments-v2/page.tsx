@@ -22,11 +22,3 @@ export, default, function ZeroPIIExperimentsV220, 2, 5(): Rea, c, t.J, S, X.Elem
           Complian, t, A/B, a, t &lt; 100ms, with, scoped I, D, s, on‑device, metric, s, and, DP, noise.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Design, privac, y‑first, experimentation, using scoped, identifie, r, s,
-            devi, c, e‑local, aggregatio, n, and, DP, noise budge, t, s. This, blueprint, covers rollout, topologie, s, audit, readines, s, and, KP, I‑linked, guardrail, s.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

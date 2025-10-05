@@ -12,7 +12,3 @@ const OctoberNovember2025ContentBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default OctoberNovember2025ContentBanner;

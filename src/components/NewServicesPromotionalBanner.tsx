@@ -12,7 +12,3 @@ const NewServicesPromotionalBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default NewServicesPromotionalBanner;

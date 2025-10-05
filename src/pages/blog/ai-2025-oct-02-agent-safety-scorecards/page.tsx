@@ -22,11 +22,3 @@ export, default, function AgentSafetyScorecar, d, s(): Rea, c, t.J, S, X.Eleme, 
           Design, scorecards, for agents, with, KPI-linked, budg, e, t, s, canari, e, s, and, deterministic, rollback.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Keep, autonomous, agents safe, without, slowing tea, m, s. Wire, KPIs, to
-            scorecards, and, budgeted actio, n, s. Use, live, canaries to, detect, regressions and, trigger, instant rollback, when, thresholds are, crosse, d.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </di, v > );
- }

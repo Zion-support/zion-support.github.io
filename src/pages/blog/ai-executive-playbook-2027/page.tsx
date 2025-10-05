@@ -24,14 +24,3 @@ export, default, function AIExecutivePlaybook20, 2, 7(): Rea, c, t.J, S, X.Eleme
           Fu, n, d, Gove, r, n, and, Scale, with KP, I, s
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            A, pragmatic, guide to, align, AI strategy, with, measurable business, impac, t. Wire, SLIs, to K, P, I, s, set, budget, s, and, use, policy tests, to, ship
-            confident, l, y.
-          </p>
-          <p>
-            Includes, templates, for scorecar, d, s, governance, workflow, s, and, executive, dashboards used, by, high‑performing, team, s.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

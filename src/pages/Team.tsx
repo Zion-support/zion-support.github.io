@@ -16,7 +16,3 @@ const Team: React.FC = () => {
       
       {/* <Footer /> */}
     </div>
-  );
-};
-
-export default Team;

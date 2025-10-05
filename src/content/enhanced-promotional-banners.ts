@@ -673,46 +673,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     priori, t, y:  , 2,
     startDa, t, e: '20, 2, 5-10-0, 3',
   },
-];
-
-// Oc t 1 20 2 5 – Promote three new articles across the site enhancedPromotionalBanner s.unshi f t(
-  {
-    id: 'o, c, t-08-val, u, e-realizati, o, n-2, 0, 2, 5',
-    title: '🚀 NEW, TODA, Y: Enterprise, AI, Value Realizati, o, n — 90, Days, to Outco, m, e, s',
-    description: 'KPI, scorecar, d, s, evaluator, gate, s, tiered, routin, g + cach, e, s, and, rollbac, k-first, op, s.',
-    ctaTe, x, t: 'Read, the, 90-Day, Bluepri, n, t',
-    ctaLi, n, k: '/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-0, 8',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '🚀',
-    featured: t, r, u, e,
-    priori, t, y:  , 0,
-    startDa, t, e: '20, 2, 5-10-0, 8',
-  },
-  {
-    id: 'ai-se, l, f-heali, n, g-inf, r, a-bann, e, r-2, 0, 2, 5',
-    title: '🔄 N, E, W: AI, Sel, f-Healing, Infrastructur, e — 99.99% Upt, i, m, e',
-    description: 'Autonomous, infra, detects and, fixes, issues in, real, time. 95% MTTR, reduction, with K, P, I‑linked, canaries, and instant, rollba, c, k.',
-    ctaTe, x, t: 'Explore, Sel, f-Healin, g, A, I',
-    ctaLi, n, k: '/bl, o, g/ai-se, l, f-heali, n, g-infrastructu, r, e-2, 0, 2, 5',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '🔄',
-    featured: t, r, u, e,
-    priori, t, y:  , 0,
-    startDa, t, e: '20, 2, 5-10-0, 1',
-  },
-  {
-    id: 'gen, a, i-co, d, e-assistan, t, s-bann, e, r-2, 0, 2, 5',
-    title: '💻 N, E, W: Generative, AI, Code Assistan, t, s — 10x, Productivi, t, y',
-    description: 'Copilot, patterns, with evaluator, gat, e, s, safe, refactor, s, and, instant, rollback. Ship, 5x, faster with, fewer, bugs.',
-    ctaTe, x, t: 'Read, the, Engineering Gu, i, d, e',
-    ctaLi, n, k: '/bl, o, g/generati, v, e-ai-co, d, e-assistan, t, s-2, 0, 2, 5',
-    varia, n, t: 'i, n, f, o',
-    ic, o, n: '💻',
-    featured: t, r, u, e,
-    priori, t, y:  , 1,
-    startDa, t, e: '20, 2, 5-10-0, 1',
-  },
-  {
     id: 'ed, g, e-priva, c, y-analyti, c, s-bann, e, r-2, 0, 2, 5',
     title: '🔐 N, E, W: Edge, Privac, y‑Preserving, Analytic, s — Zero, P, I, I',
     description: 'Scoped, I, D, s, on‑device, aggregatio, n, and, DP, noise deliver, insights, in <100, m, s—fully, compliant, by desi, g, n.',
@@ -724,46 +684,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     priori, t, y:  , 2,
     startDa, t, e: '20, 2, 5-10-0, 1',
   },
-);
-
-// Oc t 8 20 2 5 – Promote three new posts enhancedPromotionalBanner s.unshi f t(
-  {
-    id: 'o, c, t-08-20, 2, 5-n, e, w-conte, n, t-d, r, o, p',
-    title: '🚀 NEW, TODA, Y (Oc, t, 8): Governed, Agen, t, s, Edge, Private, Analytics, Cache, Strata, v5',
-    description: 'Budge, t, s + SLIs, for, 10k+ age, n, t, s, ze, r, o‑PII, analytics, under 100, m, s, and, cache, tiers that, cut, cost 60–85%.',
-    ctaTe, x, t: "Explore, toda, y's, pos, t, s",
-    ctaLi, n, k: '/b, l, o, g',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '🚀',
-    featured: t, r, u, e,
-    priori, t, y:  , 0,
-    startDa, t, e: '20, 2, 5-10-0, 8',
-  },
-  {
-    id: 'o, c, t-08-govern, e, d-multiage, n, t-platfo, r, m, s',
-    title: '🛡️ Governed, Mult, i‑Agent, Platform, s — Budg, e, t, s, SL, I, s, Rollba, c, k',
-    description: 'Run, 10, k+ agents, safely, with budgeted, too, l, s, K, P, I‑linked, SLI, s, and, instant, rollback.',
-    ctaTe, x, t: 'Read, the, playboo, k',
-    ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-08-govern, e, d-multiage, n, t-platfo, r, m, s',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '🛡️',
-    featured: t, r, u, e,
-    priori, t, y:  , 1,
-    startDa, t, e: '20, 2, 5-10-0, 8',
-  },
-  {
-    id: 'o, c, t-08-ed, g, e-priva, t, e-analyti, c, s-v, 4',
-    title: '🔐 Edge, Private, Analytics v4 — Ze, r, o‑PI, I, <100, m, s',
-    description: 'Scoped, I, D, s, on‑device, aggregatio, n, and, DP, noise for, compliant, insights without, data, risk.',
-    ctaTe, x, t: 'Learn, the, blueprin, t',
-    ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-08-ed, g, e-priva, t, e-analyti, c, s-v, 4',
-    varia, n, t: 'i, n, f, o',
-    ic, o, n: '🔐',
-    featured: t, r, u, e,
-    priori, t, y:  , 2,
-    startDa, t, e: '20, 2, 5-10-0, 8',
-  },
-  {
     id: 'o, c, t-08-cac, h, e-stra, t, a-v, 5',
     title: '⚡ Cache, Strata, v5 — Featur, e, s → Chun, k, s → Answ, e, r, s',
     description: 'Tiered, caches, with freshness, windows, and coalesci, n, g. 45% qual, i, t, y ↑, 60–85% co, s, t ↓.',
@@ -775,22 +695,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     priori, t, y:  , 3,
     startDa, t, e: '20, 2, 5-10-0, 8',
   },
-);
-
-// Oc t 7 20 2 5 – Promote two new posts enhancedPromotionalBanner s.unshi f t(
-  {
-    id: 'o, c, t-07-autonomo, u, s-platfor, m, s-ro, i',
-    title: '🚀 NEW, TODA, Y: Autonomous, Platform, s — 3–6x, ROI, in 90, Da, y, s',
-    description: 'Budg, e, t, s, approva, l, s, canary, scorecard, s, and, instant, rollback. Ship, autonomy, safely with, measurable, value in, week, s.',
-    ctaTe, x, t: 'Read, the, ROI Playb, o, o, k',
-    ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-07-autonomo, u, s-platfor, m, s-ro, i',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '🚀',
-    featured: t, r, u, e,
-    priori, t, y:  , 0,
-    startDa, t, e: '20, 2, 5-10-0, 7',
-  },
-  {
     id: 'o, c, t-07-evaluat, o, r-pipelin, e, s-bluepr, i, n, t',
     title: '🛡️ N, E, W: Evaluator, Pipeline, s — Predict, Producti, o, n, Gate, Ris, k',
     description: 'Golden, tas, k, s, calibrated, metric, s, and, online, canaries with, rollback, hooks. Correlate, with, KPIs and, cut, regressions.',
@@ -815,9 +719,6 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 0,
   startDa, t, e: '20, 2, 5-10-0, 5',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'o, c, t-05-ed, g, e-experimen, t, s-v, 5',
   title: '⚡ N, E, W: Edge, Private, Experiments v5 — Ze, r, o‑PI, I, A/B <10, 0, m, s',
   description: 'Signed, confi, g, s, scoped, ID, s, DP, nois, e. Global, experiments, without data, ris, k.',
@@ -828,9 +729,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 1,
   startDa, t, e: '20, 2, 5-10-0, 5',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'o, c, t-05-cac, h, e-stra, t, a-v, 4',
   title: '🧠 N, E, W: Cache, Strata, v4 — 60–85% C, o, s, t ↓, Tighter, P9, 5',
   description: 'Featu, r, e → chu, n, k → answer, caches, with freshness, windows, and coalesc, i, n, g.',
@@ -841,9 +739,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 2,
   startDa, t, e: '20, 2, 5-10-0, 5',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'sept, 3, 0-fre, s, h-conte, n, t-2, 0, 2, 5',
   title: '🚀 Fresh, Dro, p: Governance, Guardrai, l, s, Edge, Inferenc, e, Agent, Observabilit, y',
   description: 'Three, new, deep-dives, just, landed. Ship, fast, with policy, chec, k, s, deliv, e, r <100ms, at, the ed, g, e, and, get, live traces, for, agents.',
@@ -867,9 +762,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 0,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'o, c, t-01-intellige, n, t-automati, o, n-2, 0, 2, 5',
   title: '🤖 N, E, W: Intelligent, Automatio, n — From, Tickets, to Outco, m, e, s',
   description: 'Approv, a, l, s, budge, t, s, ev, a, l‑gated, action, s, and, instant, rollback for, safe, autonomy.',
@@ -906,9 +798,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 0,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'digit, a, l-tw, i, n-manufacturi, n, g-o, c, t-2, 0, 2, 5',
   title: '🏭 N, E, W: AI-Powered, Digital, Twins - 92% Defect, Reducti, o, n, $320M, Saving, s',
   description: 'Revolutionary, digital, twin systems, transforming, manufacturing with, rea, l-time, simulation, and predictive, analytic, s. Achieve, 8, 7% faster, tim, e-to-market, and, unprecedented production, optimizati, o, n.',
@@ -919,9 +808,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 1,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'hyp, e, r-personalizati, o, n-o, c, t-2, 0, 2, 5',
   title: '🎯 N, E, W: Hyp, e, r-Personalization, A, I - 8x, Conversion, Rate, s, 94% Satisfacti, o, n',
   description: 'Ne, x, t-generation, personalization, engines delivering, individualized, experiences at, microsecond, scale. Dri, v, e $28, 0, M+ revenue, lift, through AI-powered, customer, engagemen, t.',
@@ -932,9 +818,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 2,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'autonomo, u, s-netwo, r, k-o, p, s-o, c, t-2, 0, 2, 5',
   title: '🌐 N, E, W: Autonomous, Network, Operations - 99.9, 9, 9% Uptime, Guarante, e, d',
   description: 'Se, l, f-managing, network, systems that, dete, c, t, diagno, s, e, and, resolve, issues autonomous, l, y. Achieve, 9, 6% faster, incident, resolution and, 8, 2% cost, reduction, with zero, human, intervention.',
@@ -945,9 +828,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 3,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'cogniti, v, e-proce, s, s-mini, n, g-o, c, t-2, 0, 2, 5',
   title: '🔍 N, E, W: Cognitive, Process, Mining - 73% Cost, Savin, g, s, 6x, Faster, Execution',
   description: 'AI-powered, process, discovery that, automatically, identifies bottlenecks, and, implements improvemen, t, s. Achie, v, e $19, 5, M+ annual, savings, through intelligent, automati, o, n.',
@@ -958,9 +838,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 4,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'decisi, o, n-intelligen, c, e-o, c, t-2, 0, 2, 5',
   title: '🧠 N, E, W: AI-Augmented, Decision, Intelligence - 10x, Fast, e, r, 97% Accura, c, y',
   description: 'Revolutionary, platforms, enabling executives, to, make complex, decisions, 10x faster, with, unprecedented accura, c, y. Crea, t, e $45, 0, M+ value, through, intelligent decision, suppo, r, t.',
@@ -971,9 +848,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 5,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-enhancedPromotionalBanne, r, s.pu, s, h({
   id: 'intellige, n, t-docume, n, t-understandi, n, g-o, c, t-2, 0, 2, 5',
   title: '📄 N, E, W: Intelligent, Document, AI - Process, 1, M+ Documents, Daily, at 99.2% Accur, a, c, y',
   description: 'Ne, x, t-generation, document, understanding that, comprehends, context and, automates, workflows. Achieve, 9, 5% faster, processing, and $14, 0, M+ annual, savin, g, s.',
@@ -984,58 +858,6 @@ enhancedPromotionalBanne, r, s.pu, s, h({
   featured: t, r, u, e,
   priori, t, y:  , 6,
   startDa, t, e: '20, 2, 5-10-0, 1',
-});
-
-export const getActiveEnhancedBanners = (): EnhancedPromotionalBann, e, r[] => {   
-  const, no, w = new, Da, t, e(); return, enhancedPromotionalBanner, s
-    .filt, e, r(bann, e, r = > {
-      const, startDat, e = new, Dat, e(bann, e, r.startD, a, t, e); const, endDat, e = bann, e, r.endDa, t, e  ? new, Dat, e(bann, e, r.endD, a, t, e)  : nu, l, l; return, startDat, e <= n, o, w  && (!endDa, t, e || endDa, t, e  > = n, o, w);
-       })
-    .so, r, t((a, b) => a.priori, t, y - b.priori, t, y);
-};
-
-export const getFeaturedBanners = (): EnhancedPromotionalBann, e, r[] => { 
-  return, getActiveEnhancedBanner, s().filt, e, r(bann, e, r = > bann, e, r.featu, r, e, d);
- };
-
-// Oc t 6 20 2 5 – New content promo for three fresh posts enhancedPromotionalBanner s.unshi f t(
-  {
-    id: 'o, c, t-06-20, 2, 5-n, e, w-conte, n, t-d, r, o, p',
-    title: '🚀 NEW, TODA, Y (Oc, t, 6): Feature, Stor, e, s, Policy, Tests, v3, Evaluator, Gate, s',
-    description: 'Millisecond, features, at 1, 0, M+ RP, S, producti, o, n-predictive, policy, tests, and, evaluato, r-driven, release, s.',
-    ctaTe, x, t: "Explore, toda, y's, pos, t, s",
-    ctaLi, n, k: '/b, l, o, g',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '🚀',
-    featured: t, r, u, e,
-    priori, t, y:  , 0,
-    startDa, t, e: '20, 2, 5-10-0, 6',
-  },
-  {
-    id: 'o, c, t-06-featu, r, e-stor, e, s-2, 0, 2, 5',
-    title: '⚡ Re, a, l-Time, Feature, Stores — S, u, b-10ms, Reads, at 1, 0, M+ RP, S',
-    description: 'Freshness, windo, w, s, idempotent, upsert, s, and, onlin, e/offline, parity, with scorecar, d, s.',
-    ctaTe, x, t: 'Build, Feature, Store, s',
-    ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-06-re, a, l-ti, m, e-featu, r, e-sto, r, e, s',
-    varia, n, t: 'succ, e, s, s',
-    ic, o, n: '⚡',
-    featured: t, r, u, e,
-    priori, t, y:  , 1,
-    startDa, t, e: '20, 2, 5-10-0, 6',
-  },
-  {
-    id: 'o, c, t-06-poli, c, y-tes, t, s-v3-2, 0, 2, 5',
-    title: '🛡️ Policy, Tests, v3 — Change, Gates, That Predict, Producti, o, n',
-    description: 'Golden, tas, k, s, calibrated, metric, s, and, online, canaries wired, as, deploy gat, e, s.',
-    ctaTe, x, t: 'Read, Policy, Tests v, 3',
-    ctaLi, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-06-poli, c, y-tes, t, s-v, 3',
-    varia, n, t: 'i, n, f, o',
-    ic, o, n: '🛡️',
-    featured: t, r, u, e,
-    priori, t, y:  , 2,
-    startDa, t, e: '20, 2, 5-10-0, 6',
-  },
-  {
     id: 'o, c, t-06-evaluat, o, r-gat, e, s-2, 0, 2, 5',
     title: '✅ Evaluat, o, r-Driven, Release, Gates — Ship, Fast, e, r, Fewer, Regression, s',
     description: 'Live, evaluato, r, s, K, P, I‑linked, SLI, s, and, instant, rollback for, safe, velocity.',

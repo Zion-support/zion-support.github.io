@@ -507,4 +507,3 @@ export const BLOG_POSTS: BlogPo, s, t[] = [
     published, A, t: '20, 2, 5-10-0, 3',
     readTime: 1, 0,
   },
-];

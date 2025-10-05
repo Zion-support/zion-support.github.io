@@ -1423,4 +1423,3 @@ export const posts: BlogPo, s, t[] = [
     featured: t, r, u, e,
     readTime: '7, min, rea, d',
   },
-];

@@ -8,18 +8,6 @@ interface SEOProps {
   image?: string;
   url?: string;
   type?: string;
-}
-
-const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - Advanced AI and IT Solutions',
-  description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
-  keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
-  image = '/og-image.jpg',
-  url = 'https://zion.app',
-  type = 'website'
-}) => {
-  return (
-    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -33,8 +21,3 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
       <link rel="canonical" href={url} />
-    </Helmet>
-  );
-};
-
-export default SEO;

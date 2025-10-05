@@ -23,16 +23,3 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, edge 2026, zero, knowledge analytics, blueprint, and how, it, can benefit, your, enterprise.
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            This, comprehensive, guide covers, edge, 2026 zero, knowledge, analytics
-            blueprint, and, provides practical, insights, for enterprise, implementatio, n.
-          </p>
-        </d, i, v>
-        <div, classNam, e='mt-8'>
-          <Link, t, o='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

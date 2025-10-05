@@ -21,21 +21,6 @@ export const octoberCuttingEdgeInnovations = [
       'Proven, in, Fortune 500, financial, institutions',
     ],
   },
-  {
-    id: 'neuromorph, i, c-comput, i, n, g',
-    slug: 'ai-20, 2, 5-octob, e, r-neuromorph, i, c-enterpri, s, e-revolut, i, o, n',
-    title: 'Neuromorphic, Computing, Revolutio, n',
-    category: 'Bra, i, n-Inspire, d, A, I',
-    description: 'Deploy, brai, n-inspired, neuromorphic, chips for, 100x, energy efficiency, and, sub-millisecond, inference, at the, edg, e. Transform, autonomous, vehicle, s, roboti, c, s, and, Io, T.',
-    ic, o, n: '🧠',
-    gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
-    metri, c, s: {
-      efficien, c, y: '1, 0, 0, x',
-      laten, c, y: '<1m, s',
-      mark, e, t: '$19, B',
-      costReducti, o, n: '9, 5%',
-    },
-    highligh, t, s: [
       'Spiking, neural, networks (SN, N, s) with, biological, realis, m',
       'Intel, Loihi, 2 and, BrainChip, Akida deployment, guide, s',
       'Eve, n, t-driven, sensors, for ult, r, a-low, power, consumption',
@@ -43,21 +28,6 @@ export const octoberCuttingEdgeInnovations = [
       'Proven, in, BMW autonomous, driving, and NASA, rover, s',
     ],
   },
-  {
-    id: 'mul, t, i-age, n, t-governa, n, c, e',
-    slug: 'ai-20, 2, 5-octob, e, r-autonomo, u, s-mul, t, i-age, n, t-governa, n, c, e',
-    title: 'Mul, t, i-Agent, Governance, Framewor, k',
-    category: 'AI, Governan, c, e',
-    description: 'Govern, AI, agent swarms, at, scale with, polic, y-as-c, o, d, e, safety, guardrail, s, and, compliance, automation. 99.97% policy, compliance, across 1000s, of, agents.',
-    ic, o, n: '⚖️',
-    gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-viol, e, t-60, 0',
-    metri, c, s: {
-      agen, t, s: '10, 0, 0, s',
-      complian, c, e: '99.9, 7%',
-      mark, e, t: '$1, 4, 0, B',
-      riskReducti, o, n: '7, 8%',
-    },
-    highligh, t, s: [
       'Poli, c, y-as-code, with, Open Policy, Agen, t (OP, A)',
       'Mul, t, i-layered, safety, guardrails and, circuit, breakers',
       'Hum, a, n-in-t, h, e-lo, o, p (HI, T, L) intelligent, escalatio, n',
@@ -70,4 +40,3 @@ export const octoberCuttingEdgeInnovations = [
   averageEfficien, c, y: '98, x',
   combinedComplian, c, e: '99., 9%',
   enterpriseDeploymen, t, s: '50, 0+',
-};

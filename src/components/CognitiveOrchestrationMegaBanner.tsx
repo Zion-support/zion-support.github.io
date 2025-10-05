@@ -12,11 +12,6 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
           </div>
           <h1 className='text-6xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent'>
             The Future of AI Orchestration
-          </h1>
-          <p className='text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Experience the next generation of AI orchestration that seamlessly coordinates multiple AI systems, 
-            creating intelligent workflows that adapt and evolve in real-time.
-          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">Intelligent Automation</h3>
@@ -40,7 +35,3 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default CognitiveOrchestrationMegaBanner;

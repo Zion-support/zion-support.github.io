@@ -40,18 +40,6 @@ const SuccessStoriesShowcase: React.FC = () => {
         "95% fewer false positives"
       ],
       color: "from-purple-500 to-pink-500"
-    }
-  ];
-  return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Success Stories
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how leading companies are transforming their operations with our AI solutions
-          </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) => (
@@ -77,30 +65,14 @@ key={index}
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
-                  ))}
-                </div>
-                <Link
-                  to="/case-studies"
-                  className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
-                >
                   Read Full Story
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-        <div className="text-center">
-          <Link
-            to="/case-studies"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
-          >
             View All Success Stories
             <ArrowRight className="w-6 h-6" />
           </Link>
         </div>
       </div>
     </section>
-  );
-};
-export default SuccessStoriesShowcase;

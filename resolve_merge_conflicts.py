@@ -37,10 +37,6 @@ def resolve_conflicts_in_file(file_path):
     if not os.path.exists(file_path):
         return True
     
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
-        
         # Check if file has conflict markers
         if '<<<<<<< HEAD' not in content:
             return True
@@ -175,6 +171,3 @@ def main():
         print("Pushing changes to remote...")
         run_command("git push origin main")
         print("Changes pushed successfully!")
-
-if __name__ == "__main__":
-    main()

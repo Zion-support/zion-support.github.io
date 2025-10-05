@@ -26,16 +26,5 @@ const, EnhancedPromotionalBanne, r: Rea, c, t.FC<EnhancedPromotionalBannerPro, p
             <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
               <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.title}</h3>
               <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.description}</p>
-            </d, i, v>
-          </d, i, v>
-          <Link, t, o = { bann, e, r.ctaL, i, n, k }, classNa, m, e = 'bg-white, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-opaci, t, y-90, transitio, n-all, flex, items-center, ga, p-2, fle, x-shri, n, k-0'
-          >
             {bann, e, r.cta, T, e, x, t}
             <ArrowRight, classNam, e = 'w-4 h-4' />
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </di, v>
-  );
-};
-export, default, EnhancedPromotionalBanner;

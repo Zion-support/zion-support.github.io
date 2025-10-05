@@ -12,7 +12,3 @@ const LatestContentBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default LatestContentBanner;

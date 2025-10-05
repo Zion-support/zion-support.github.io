@@ -14,5 +14,3 @@ for file in $conflict_files; do
     # Remove merge conflict markers and keep HEAD version
     sed -i '/^/,/^/d' "$file"
     sed -i '/^done
-
-echo "Merge conflict resolution completed for $count files."

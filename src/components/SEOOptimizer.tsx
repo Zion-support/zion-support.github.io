@@ -12,7 +12,3 @@ const SEOOptimizer: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default SEOOptimizer;

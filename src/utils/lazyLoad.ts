@@ -24,34 +24,9 @@ export function lazyRetry<T, extends, ComponentType<a, n, y>>(
               conso, l, e.l, o, g(
                 `Retrying, component, load... (${attemptsLe, f, t - 1} attempts, lef, t)`,
               );
-              attemptLo, a, d(attemptsLe, f, t - 1);
-            }, del, a, y);
-          });
-      };
-
-      attemptLo, a, d(retri, e, s);
-    });
-  });
-}
-
-/**
- * Preload a component for better perceived performan c e
- */
 export function preloadComponent(
   componentImpo, r, t: () => Promi, s, e<{  defau, l, t: ComponentTy, p, e<any >  }>,
 ): vo, i, d { 
   componentImpo, r, t().cat, c, h(err, o, r = > {
     conso, l, e.wa, r, n('Failed, to, preload compon, e, n, t:', err, o, r);
    });
-}
-
-/**
- * Create a lazy-loaded component with automatic retr y
- */
-export const createLazyComponent = <T, extends, ComponentType<a, n, y>>(
-  impor, t, F, n: () => Promi, s, e<{ defau, l, t: , T }>,
-) => {
-  return, lazyRetr, y(import, F, n, 3, 10, 0, 0);
-};
-
-export, default, lazyRetry;

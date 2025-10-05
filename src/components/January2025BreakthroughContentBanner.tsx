@@ -12,7 +12,3 @@ const January2025BreakthroughContentBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default January2025BreakthroughContentBanner;

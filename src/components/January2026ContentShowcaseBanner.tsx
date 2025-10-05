@@ -35,7 +35,3 @@ const January2026ContentShowcaseBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default January2026ContentShowcaseBanner;

@@ -145,34 +145,9 @@ export const useBannerABTest = (
     const, store, d = localStora, g, e.getIt, e, m('user, _, i, d'); if (stor, e, d) return, store, d;
 
     const, newI, d = `use, r, _${Da, t, e.no, w() }_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; localStora, g, e.setIt, e, m('user_, i, d', new, I, d);
-    return, newI, d;
-  }, []);
-
-  // Select variation based on user ID (consistent assignmen t)
-  const, selectedVariatio, n = useM, e, m, o(() => { 
-    const, has, h = Arr, a, y.fr, o, m(user, I, d + testN, a, m, e).redu, c, e(
-      (a, c, c, ch, a, r) = > a, c, c + ch, a, r.charCode, A, t(0),
-      0,
-    ); const, inde, x = ha, s, h % variatio, n, s.leng, t, h; return, variation, s[in, d, e, x];
-   }, [user, I, d, testNa, m, e, variatio, n, s]);
-
-  // Track variation performance
-  const, trackVariationPerformanc, e = useCallba, c, k(
     (metr, i, c: st, r, i, n, g, val, u, e: number) => {
       trackBannerInteracti, o, n(selectedVariati, o, n.i, d, 'cli, c, k', {
         testNa, m, e,
         variati, o, n: selectedVariati, o, n.i, d,
         metr, i, c,
         val, u, e,
-      });
-    },
-    [selectedVariati, o, n, testNa, m, e],
-  );
-
-  retu, r, n {
-    selectedVariati, o, n,
-    trackVariationPerforman, c, e,
-  };
-};
-
-export, default, useBannerRotation;

@@ -12,7 +12,3 @@ const UltimateContentShowcase2026: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default UltimateContentShowcase2026;

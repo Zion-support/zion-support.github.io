@@ -12,7 +12,3 @@ const October2025FinTechSuccessBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default October2025FinTechSuccessBanner;

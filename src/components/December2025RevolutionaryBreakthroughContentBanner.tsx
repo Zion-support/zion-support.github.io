@@ -181,7 +181,3 @@ const December2025RevolutionaryBreakthroughContentBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default December2025RevolutionaryBreakthroughContentBanner;

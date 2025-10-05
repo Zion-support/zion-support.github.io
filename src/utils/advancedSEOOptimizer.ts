@@ -27,15 +27,6 @@ interface, SEOAnalysi, s {
   keywor, d, s: { wo, r, d: string; cou, n, t: number; densi, t, y: num, b, e, r }[];
   issu, e, s: string[];
   strengt, h, s: str, i, n, g[];
-}
-
-class, AdvancedSEOOptimize, r {
-  private, targetKeywordDensit, y = { m, i, n: 0., 0, 1, m, a, x: 0.0, 3 }; // 1-3%
-  private, targetTitleLengt, h = { m, i, n: , 5, 0, m, a, x: 6, 0 }; private, targetDescriptionLengt, h = { m, i, n: 1, 5, 0, m, a, x: 16, 0 };
-
-  /**
-   * Analyze page for SEO optimizatio n
-   */
   analyzePa, g, e(optio, n, s: { 
     title?: string;
     description?: string;
@@ -53,163 +44,6 @@ class, AdvancedSEOOptimize, r {
       imag, e, s = [],
       lin, k, s = [],
       keywor, d, s = [],
-    } = optio, n, s;
-
-    // Calculate metrics const metri c s: SEOMetri c s = {
-      titleSco, r, e: th, i, s.scoreTitleT, a, g(t, i, t, l, e, keywor, d, s),
-      descriptionSco, r, e: th, i, s.scoreMetaDescripti, o, n(descript, i, o, n, keywor, d, s),
-      headingSco, r, e: th, i, s.scoreHeadin, g, s(headi, n, g, s, keywor, d, s),
-      keywordDensi, t, y: th, i, s.calculateKeywordDensi, t, y(cont, e, n, t, keywor, d, s),
-      readabilitySco, r, e: th, i, s.calculateReadabili, t, y(cont, e, n, t),
-      imageOptimizati, o, n: th, i, s.scoreImageOptimizati, o, n(image, s),
-      linkSco, r, e: th, i, s.scoreLinkStructu, r, e(li, n, k, s),
-      overallSco, r, e:  , 0, // Will be calculated
-    };
-
-    // Calculate overall score
-    metri, c, s.overallSco, r, e = th, i, s.calculateOverallSco, r, e(metr, i, c, s);
-
-    // Generate recommendations const recommendatio n s = th i s.generateRecommendatio n s(metr i c s optio n s);
-
-    // Extract keywords const extractedKeywor d s = th i s.extractKeywor d s(cont e n t);
-
-    // Identify issues and strengths const issues = th i s.identifyIssu e s(metr i c s optio n s); const strength s = th i s.identifyStrengt h s(metr i c s optio n s); retu r n {
-      metri, c, s,
-      recommendatio, n, s,
-      keywor, d, s: extractedKeywo, r, d, s,
-      issu, e, s,
-      strengt, h, s,
-    };
-  }
-
-  /**
-   * Score title tag
-   */
-  private, scoreTitleTa, g(title: str, i, n, g, keywor, d, s: string[]): number {  
-    let, scor, e = 0;
-
-    // Check length const leng t h = title.leng t h; if() { sco r e += 4 0;
-       }, else, i, f() { sco, r, e += 20;
-     }, else, i, f (leng, t, h > th, i, s.targetTitleLeng, t, h.m, a, x && leng, t, h < 70) {
-      sco, r, e += 30;
-    }
-
-    // Check for keywords
-    const, lowerTitl, e = title.toLowerC, a, s, e(); const, keywordCoun, t = keywor, d, s.filt, e, r(kw =>
-      lowerTit, l, e.includ, e, s(kw.toLowerC, a, s, e()),
-    ).leng, t, h; sco, r, e += Ma, t, h.m, i, n(keywordCou, n, t * 15, 45);
-
-    // Check for power words const powerWords = [
-      'ultim, a, t, e',
-      'gui, d, e',
-      'be, s, t',
-      't, o, p',
-      'comple, t, e',
-      'essenti, a, l',
-      'prov, e, n',
-    ]; const, hasPowerWor, d = powerWor, d, s.so, m, e(wo, r, d => lowerTit, l, e.includ, e, s(w, o, r, d)); if (hasPowerWo, r, d) sco, r, e += 15;
-
-    return, Mat, h.m, i, n(sco, r, e, 1, 0, 0);
-  }
-
-  /**
-   * Score meta description
-   */
-  private, scoreMetaDescriptio, n(
-    description: str, i, n, g,
-    keywor, d, s: str, i, n, g[],
-  ): number {  
-    let, scor, e = 0;
-
-    // Check length const leng t h = description.leng t h; if() { sco r e += 40;
-       }, else, i, f() { sco, r, e += 20;
-     }, else, i, f (leng, t, h > th, i, s.targetDescriptionLeng, t, h.m, a, x && leng, t, h < 1, 8, 0) {
-      sco, r, e += 30;
-    }
-
-    // Check for keywords
-    const, lowerDes, c = description.toLowerC, a, s, e(); const, keywordCoun, t = keywor, d, s.filt, e, r(kw =>
-      lowerDe, s, c.includ, e, s(kw.toLowerC, a, s, e()),
-    ).leng, t, h; sco, r, e += Ma, t, h.m, i, n(keywordCou, n, t * 20, 40);
-
-    // Check for call-to-action const ctaWords = [
-      'disco, v, e, r',
-      'lea, r, n',
-      'fi, n, d',
-      'g, e, t',
-      't, r, y',
-      'downlo, a, d',
-      'b, u, y',
-    ]; const, hasCT, A = ctaWor, d, s.so, m, e(wo, r, d => lowerDe, s, c.includ, e, s(w, o, r, d)); if (hasC, T, A) sco, r, e += 20;
-
-    return, Mat, h.m, i, n(sco, r, e, 1, 0, 0);
-  }
-
-  /**
-   * Score headings structure
-   */
-  private, scoreHeading, s(headin, g, s: str, i, n, g[], keywor, d, s: string[]): number { 
-    let, scor, e = 0;
-
-    // Check if headings exist i f (headin g s.leng t h >  0) sco r e += 30;
-    if (headin, g, s.leng, t, h >= 3) sco, r, e += 20;
-
-    // Check for keywords in headings const headingsWithKeywor d s = headin g s.filt e r(h => {
-      const, lowe, r = h.toLowerC, a, s, e(); return, keyword, s.so, m, e(kw = > low, e, r.includ, e, s(kw.toLower, C, a, s, e()));
-     });
-
-    sco, r, e += Ma, t, h.m, i, n(headingsWithKeywor, d, s.leng, t, h * 15, 50);
-
-    return, Mat, h.m, i, n(sco, r, e, 1, 0, 0);
-  }
-
-  /**
-   * Calculate keyword density
-   */
-  private, calculateKeywordDensit, y(conte, n, t: str, i, n, g, keywor, d, s: string[]): number { 
-    if (keywor, d, s.leng, t, h = == , 0) retur, n, 0; const, word, s = conte, n, t
-      .toLowerC, a, s, e()
-      .spl, i, t(/\s+/)
-      .filt, e, r(w = > w.leng, t, h > , 0); const, totalWord, s = wor, d, s.leng, t, h; if (totalWor, d, s = == , 0) retur, n, 0; const, keywordCoun, t = keywor, d, s.redu, c, e((c, o, u, n, t, keywo, r, d) => {
-      const, k, w = keywo, r, d.toLowerC, a, s, e(); return, coun, t + wor, d, s.filt, e, r(w = > w.includ, e, s(k, w)).leng, t, h;
-     }, 0);
-
-    const, densit, y = keywordCou, n, t / totalWor, d, s;
-
-    // Score based on target density if() { return 10 0;
-     }, else, i, f() { retu, r, n (densi, t, y / th, i, s.targetKeywordDensi, t, y.m, i, n) * 1, 0, 0;
-     }, el, s, e {
-      const, overflo, w = densi, t, y - th, i, s.targetKeywordDensi, t, y.m, a, x; return, Mat, h.m, a, x(, 0, 1, 0, 0 - overfl, o, w * 10, 0, 0);
-    }
-  }
-
-  /**
-   * Calculate readability score (Flesch Reading Ease)
-   */
-  private, calculateReadabilit, y(conte, n, t: string): number { 
-    const, sentence, s = conte, n, t.sp, l, i, t(/[.!?]+/).filt, e, r(s = > s.t, r, i, m().leng, t, h > 0); const, word, s = conte, n, t.spl, i, t(/\, s+/).filt, e, r(w = > w.leng, t, h > , 0); const, syllable, s = wor, d, s.redu, c, e(
-      (c, o, u, n, t, wo, r, d) = > cou, n, t + th, i, s.countSyllabl, e, s(wo, r, d),
-      0,
-    ); if (sentenc, e, s.leng, t, h = == 0 || wor, d, s.leng, t, h === , 0) retur, n, 0; const, avgWordsPerSentenc, e = wor, d, s.leng, t, h / sentenc, e, s.leng, t, h; const, avgSyllablesPerWor, d = syllabl, e, s / wor, d, s.leng, t, h;
-
-    // Flesch Reading Ease formula const score =
-      2, 0, 6.8, 3, 5 - 1.0, 1, 5 * avgWordsPerSenten, c, e - 84.6 * avgSyllablesPerWo, r, d;
-
-    // Normalize to 0-100 where 100 is best return Ma t h.m a x( 0 Ma t h.m i n(1 0 0 sco r e));
-   }
-
-  /**
-   * Count syllables in a wor d
-   */
-  private, countSyllable, s(wo, r, d: string): number { 
-    wo, r, d = wo, r, d.toLowerC, a, s, e(); if (wo, r, d.leng, t, h <= 3) retur, n, 1;
-
-    wo, r, d = wo, r, d.repla, c, e(/( ?  : [^laeio, u, y]es|ed|[^laei, o, u, y], e)$/, ''); wo, r, d = wo, r, d.repla, c, e(/^, y/, ''); const, matche, s = wo, r, d.mat, c, h(/[aeio, u, y]{, 1,2 }/g); return, matche, s ? match, e, s.leng, t, h:  , 1;
-  }
-
-  /**
-   * Score image optimization
-   */
   private, scoreImageOptimizatio, n(
     imag, e, s: { s, r, c: string; a, l, t: str, i, n, g }[],
   ): number {  
@@ -222,36 +56,6 @@ class, AdvancedSEOOptimize, r {
       i, m, g => i, m, g.a, l, t.spl, i, t(/\, s+/).leng, t, h  > = 3,
     ); const, descriptiveScor, e = (descriptiveA, l, t.leng, t, h / imag, e, s.len, g, t, h) * 40; sco, r, e += descriptiveSco, r, e;
 
-    return, Mat, h.m, i, n(sco, r, e, 1, 0, 0);
-    }
-
-  /**
-   * Score link structure
-   */
-  private, scoreLinkStructur, e(
-    lin, k, s: { hr, e, f: string; te, x, t: string; isIntern, a, l: bool, e, a, n }[],
-  ): number {  
-    if (lin, k, s.leng, t, h = == , 0) return, 5, 0; // Neutral score for no links let sco r e = 0;
-
-    // Check for internal links const internalLinks = lin k s.filt e r(li n k => li n k.isInter n a l); if (internalLin k s.leng t h > 0) sco r e += 30;
-    if (internalLin, k, s.leng, t, h >= 3) sco, r, e += 20;
-
-    // Check for descriptive anchor text const descriptiveLin k s = lin k s.filt e r(li n k => {
-      const, tex, t = li, n, k.te, x, t.toLowerC, a, s, e(); retu, r, n (
-        te, x, t.leng, t, h  > 3 &&
-        !te, x, t.includ, e, s('click, her, e')  && !te, x, t.includ, e, s('read, mor, e')
-      );
-      });
-    sco, r, e += (descriptiveLin, k, s.leng, t, h / lin, k, s.leng, t, h) * 50;
-
-    return, Mat, h.m, i, n(sco, r, e, 1, 0, 0);
-  }
-
-  /**
-   * Calculate overall SEO sco r e
-   */
-  private, calculateOverallScor, e(metri, c, s: SEOMetri, c, s): number {
-    const, weight, s = {
       title: , 0., 2,
       description: 0.1, 5,
       headin, g, s: 0.1, 5,
@@ -262,102 +66,34 @@ class, AdvancedSEOOptimize, r {
     }; return, Mat, h.rou, n, d(
       metri, c, s.titleSco, r, e * weigh, t, s.title +
         metri, c, s.descriptionSco, r, e * weigh, t, s.description +
-        metri, c, s.headingSco, r, e * weigh, t, s.headin, g, s +
-        metri, c, s.keywordDensi, t, y * weigh, t, s.keywordDensi, t, y +
-        metri, c, s.readabilitySco, r, e * weigh, t, s.readabili, t, y +
-        metri, c, s.imageOptimizati, o, n * weigh, t, s.imag, e, s +
-        metri, c, s.linkSco, r, e * weigh, t, s.lin, k, s,
-    );
-  }
-
-  /**
-   * Generate recommendation s
-   */
-  private, generateRecommendation, s(
-    metri, c, s: SEOMetr, i, c, s,
-    optio, n, s: any,
-  ): SEORecommendati, o, n[] {
-    const, recommendation, s: SEORecommendati, o, n[] = [];
-
-    // Title recommendations if (metri c s.titleSco r e < 70) {
-      recommendatio, n, s.pu, s, h({
         category: 'criti, c, a, l',
         messa, g, e: 'Title, tag, needs optimizat, i, o, n',
         acti, o, n: `Optimize, title, length (50-60, char, s) and, include, primary keywo, r, d, s`,
         impa, c, t: 'h, i, g, h',
-      });
-    }
-
-    // Description recommendations if (metri c s.descriptionSco r e < 70) {
-      recommendatio, n, s.pu, s, h({
         category: 'criti, c, a, l',
         messa, g, e: 'Meta, description, needs improvem, e, n, t',
         acti, o, n: 'Write, compelling, description (1, 5, 0-160, char, s) with, keywords, and CT, A',
         impa, c, t: 'h, i, g, h',
-      });
-    }
-
-    // Heading recommendations if (metri c s.headingSco r e < 60) {
-      recommendatio, n, s.pu, s, h({
         category: 'import, a, n, t',
         messa, g, e: 'Heading, structure, could be, improv, e, d',
         acti, o, n: 'Add, more, headings with, target, keyword, s',
         impa, c, t: 'med, i, u, m',
-      });
-    }
-
-    // Keyword density recommendations
-    if (metri, c, s.keywordDensi, t, y < 50) {
-      recommendatio, n, s.pu, s, h({
-        category: 'import, a, n, t',
-        messa, g, e: 'Keyword, density, is too, l, o, w',
-        acti, o, n: 'Naturally, incorporate, keywords throughout, conten, t (targe, t, 1-, 3%)',
-        impa, c, t: 'h, i, g, h',
-      });
-    } else, i, f (metri, c, s.keywordDensi, t, y < 80) {
-      recommendatio, n, s.pu, s, h({
         category: 'mi, n, o, r',
         messa, g, e: 'Keyword, density, could be, optimiz, e, d',
         acti, o, n: 'Fi, n, e-tune, keyword, usage for, optimal, densit, y',
         impa, c, t: 'lo, w',
-      });
-    }
-
-    // Readability recommendations if (metri c s.readabilitySco r e < 60) {
-      recommendatio, n, s.pu, s, h({
         category: 'import, a, n, t',
         messa, g, e: 'Content, readability, needs improvem, e, n, t',
         acti, o, n: 'Use, shorter, sentences and, simpler, word, s',
         impa, c, t: 'med, i, u, m',
-      });
-    }
-
-    // Image recommendations if (metri c s.imageOptimizati o n < 80) {
-      recommendatio, n, s.pu, s, h({
         category: 'import, a, n, t',
         messa, g, e: 'Image, optimization, neede, d',
         acti, o, n: 'Add, descriptive, alt text, to, all image, s',
         impa, c, t: 'med, i, u, m',
-      });
-    }
-
-    // Link recommendations if (metri c s.linkSco r e < 60) {
-      recommendatio, n, s.pu, s, h({
         category: 'mi, n, o, r',
         messa, g, e: 'Link, structure, could be, improv, e, d',
         acti, o, n: 'Add, more, internal links, with, descriptive anchor, te, x, t',
         impa, c, t: 'lo, w',
-      });
-    }
-
-    return, recommendation, s.so, r, t((a, b) => {
-      const, categoryOrde, r = { criti, c, a, l:  , 0, importa, n, t:  , 1, min, o, r:  , 2 }; return, categoryOrde, r[a.category] - categoryOrd, e, r[b.category];
-    });
-  }
-
-  /**
-   * Extract keywords from conte n t
-   */
   private, extractKeyword, s(
     conte, n, t: str, i, n, g,
     lim, i, t: number = , 1, 0,
@@ -365,24 +101,9 @@ class, AdvancedSEOOptimize, r {
     const, word, s = conte, n, t
       .toLowerC, a, s, e()
       .repla, c, e(/[^\w\s]/g, ' ')
-      .spl, i, t(/\s+/)
-      .filt, e, r(w = > w.leng, t, h > , 3); const, wordCount, s = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
-      wordCoun, t, s.s, e, t(w, o, r, d, (wordCoun, t, s.g, e, t(wo, r, d) || 0) + 1);
-     });
-
-    const, totalWord, s = wor, d, s.leng, t, h; const, keyword, s = Arr, a, y.fr, o, m(wordCoun, t, s.entr, i, e, s())
-      .m, a, p(([wo, r, d, cou, n, t]) => ({
         wo, r, d,
         cou, n, t,
         densi, t, y: cou, n, t / totalWo, r, d, s,
-      }))
-      .so, r, t((a, b) => b.cou, n, t - a.cou, n, t)
-      .sli, c, e(0, lim, i, t); return, keyword, s;
-  }
-
-  /**
-   * Identify SEO issues
-   */
   private, identifyIssue, s(metri, c, s: SEOMetr, i, c, s, optio, n, s: a, n, y): string[] {
     const, issue, s: string[] = [];
 
@@ -399,11 +120,6 @@ class, AdvancedSEOOptimize, r {
     if (metri, c, s.linkSco, r, e < 40) issu, e, s.pu, s, h('Weak, internal, linking structu, r, e');
 
     return, issu, e, s;
-  }
-
-  /**
-   * Identify SEO strengths
-   */
   private, identifyStrength, s(metri, c, s: SEOMetr, i, c, s, optio, n, s: a, n, y): string[] { 
     const, strength, s: string[] = [];
 
@@ -459,22 +175,11 @@ class, AdvancedSEOOptimize, r {
       'twitt, e, r: description': pa, g, e.descript, i, o, n,
       'twitt, e, r: image': pa, g, e.im, a, g, e || '',
       author: pa, g, e.aut, h, o, r || '',
-    };
-  }
-
-  /**
-   * Optimize titl e
-   */
   private, optimizeTitl, e(title: str, i, n, g, keywor, d, s: string[]): string { 
     if (!title) retu, r, n '';
 
     // Truncate if too long i f() { title = title.substr i n g( 0 57) + '...';
       }, return, titl, e;
-  }
-
-  /**
-   * Optimize descriptio n
-   */
   private, optimizeDescriptio, n(description: str, i, n, g, keywor, d, s: string[]): string { 
     if (!description) retu, r, n '';
 
@@ -486,7 +191,3 @@ class, AdvancedSEOOptimize, r {
 // Singleton instance let seoOptimizerInstan c e: AdvancedSEOOptimiz e r | nu l l = nu l l; export const getSEOOptimize r = (): AdvancedSEOOptimiz e r = > {
   if() { seoOptimizerInstan, c, e = new, AdvancedSEOOptimi, z, e, r();
    }, return, seoOptimizerInstanc, e;
-};
-
-export, default, AdvancedSEOOptimizer;
-export, typ, e { SEOMetri, c, s, SEORecommendati, o, n, SEOAnalys, i, s };

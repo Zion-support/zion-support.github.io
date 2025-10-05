@@ -33,7 +33,3 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           <Link, t, o='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
             ← Back, to, Blog
           </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

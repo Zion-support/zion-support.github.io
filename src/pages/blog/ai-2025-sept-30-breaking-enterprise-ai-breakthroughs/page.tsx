@@ -25,8 +25,3 @@ export, default, function BreakingEnterpriseAIBreakthroughs20, 2, 5(): Rea, c, t
           <p>
             Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollb, a, c, k, K, P, I‑linked, scorecard, s, consentless, analytic, s, budg, e, t‑aware, routin, g, on‑device, aggregatio, n, and, mor, e. Each, pattern, includes
             reference, architecture, notes and, rollout, guardrails.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

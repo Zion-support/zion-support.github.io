@@ -12,7 +12,3 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default October2025NeuralSwarmIntelligenceBanner;

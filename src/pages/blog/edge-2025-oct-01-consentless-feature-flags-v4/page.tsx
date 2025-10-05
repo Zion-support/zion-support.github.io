@@ -22,11 +22,3 @@ export, default, function ConsentlessFeatureFlags, V, 4(): Rea, c, t.J, S, X.Ele
           Private, rollouts, at &lt; 100ms, with, scoped I, D, s, signed, config, s, and, o, n‑device, metric, s.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Deliver, glob, a, l, priva, c, y‑preserving, rollouts, by segme, n, t, g, e, o, and, SL, A. Use, attestation, s, DP‑hardened, telemetr, y, and, budgeted, actions
-            to, keep, velocity high, without, PII.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

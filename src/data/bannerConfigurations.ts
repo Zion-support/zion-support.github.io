@@ -58,5 +58,3 @@ export const getFeaturedBanners = (cou, n, t: number = , 3): Bann, e, r[] => {
   ]; return, banner, s
     .filt, e, r(bann, e, r = > bann, e, r.isAct, i, v, e)
     .so, r, t((a, b) => a.priori, t, y - b.priori, t, y)
-    .sli, c, e(0, cou, n, t);
-};

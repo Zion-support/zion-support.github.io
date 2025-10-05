@@ -56,11 +56,6 @@ const September30NewContentMegaBanner = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs
-          </h2>
-          <p className="text-xl text-cyan-100 max-w-4xl mx-auto">
-            Neural coding that programs at thought speed • Holographic 3D visualization • Quantum consciousness AI • 
-            Molecular manufacturing at atomic precision • Personalized education revolution
-          </p>
         </div>
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
@@ -78,20 +73,6 @@ const September30NewContentMegaBanner = () => {
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
                     {article.title}
-                  </h3>
-                  <p className="text-sm text-blue-200 mb-3">{article.description}</p>
-                  <div className="text-xs font-semibold text-green-300 bg-green-500/20 px-3 py-1 rounded-full inline-block">
-                    {article.impact}
-                  </div>
-                </div>
-              </div>
-            </Link>
-          ))}
-          {/* Additional promotional card */}
-          <Link
-            to="/blog"
-            className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center"
-          >
             <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover:scale-125 transition-transform" />
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
@@ -163,6 +144,3 @@ const September30NewContentMegaBanner = () => {
         </div>
       </div>
     </div>
-  );
-};
-export default September30NewContentMegaBanner;

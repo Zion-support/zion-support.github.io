@@ -24,16 +24,3 @@ export, default, function EdgeConsentlessJourneysBlueprint20, 2, 6(): Rea, c, t.
           Scoped, ID, s • On‑device, cohort, s • DP, nois, e • &lt; 100, m, s
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            This, blueprint, outlines how, to, deliver personal, i, z, e, d,
-            priva, c, y‑preserving, journeys, without collecting, PI, I. It, uses, scoped
-            identifie, r, s, on‑device, cohortin, g, and, differential, privacy to, unlock, actionable insights, while, staying under, global, latency budge, t, s.
-          </p>
-          <p>
-            You, will, learn cohort, desig, n, local, aggregatio, n, DP, configuratio, n,
-            attestation, hook, s, and, rollout, patterns that, let, you A/B, test, features worldwide, with, confidence.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

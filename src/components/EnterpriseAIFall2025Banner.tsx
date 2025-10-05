@@ -12,7 +12,3 @@ const EnterpriseAIFall2025Banner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default EnterpriseAIFall2025Banner;

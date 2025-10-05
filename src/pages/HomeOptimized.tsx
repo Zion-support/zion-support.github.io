@@ -61,17 +61,6 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
           <div, classNam, e = 'absolute, to, p-40, lef, t-1/2 w-6, 0, h-60, b, g-zi, o, n-cyan, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t'
             sty, l, e={{ animationDel, a, y: ', 4, s' }}
            />
-        </d, i, v>
-
-        {/* Hero, Sectio, n */}
-        <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, relative, z-10'>
-          <div, classNam, e='te, x, t-center, ma, x-w-5xl, m, x-au, t, o'>
-            {/* Bad, g, e */}
-            <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, m, b-8, animat, e-fa, d, e-in, border, border-zi, o, n-cy, a, n/30, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0'>
-              <Rocket, classNam, e='w-4 h-4, m, r-2, animat, e-pul, s, e' />
-              Trusted, by, 500+ companies, worldwid, e
-              <Rocket, classNam, e='w-4 h-4, m, l-2, animat, e-boun, c, e' />
-            </d, i, v>
 
             <h1, classNam, e='te, x, t-5xl, m, d:te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, animat, e-sli, d, e-up'>
               <span, classNam, e='bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e-light, t, o-zi, o, n-purp, l, e-light, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%'>
@@ -82,27 +71,10 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
             <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in'>
               Transform, your, business with, cuttin, g-edge, AI, solutio, n, s,
               enterpri, s, e-grade, securit, y, and, nex, t-generation, cloud, infrastructure. Join, 50, 0+ companies, already, scaling with, u, s!
-            </p>
-
-            {/* Sta, t, s */}
-            <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-12, ma, x-w-2xl, m, x-au, t, o'>
-              {[
-                { val, u, e: '5, 0, 0+', lab, e, l: 'Projects, Deliver, e, d' },
-                { val, u, e: '99., 9%', lab, e, l: 'Uptime, S, L, A' },
-                { val, u, e: '24/, 7', lab, e, l: 'Supp, o, r, t' },
-                { val, u, e: ', 5★', lab, e, l: 'Client, Rati, n, g' },
-              ].m, a, p((st, a, t, ind, e, x) => (
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-center, group, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0'
                 >
                   <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-zi, o, n-cyan, grou, p-hov, e, r:te, x, t-zi, o, n-bl, u, e-light, transitio, n-colo, r, s'>
                     {st, a, t.v, a, l, u, e}
-                  </d, i, v>
-                  <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                    {st, a, t.lab, e, l}
-                  </d, i, v>
-                </di, v>
-              ))}
-            </d, i, v>
 
             <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
               <Link, t, o='/servic, e, s'
@@ -110,13 +82,6 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               >
                 Explore, Service, s
                 <ArrowRight, classNam, e='w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-              </Li, n, k>
-              <Link, t, o='/conta, c, t' classNa, m, e='b, t, n-seconda, r, y'>
-                Get, Starte, d
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
 
         {/* Banner, Rotation, Secti, o, n */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
@@ -126,106 +91,15 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               'october20, 2, 5-ne, x, t-g, e, n-ai',
             ] }, maxBanne, r, s={ 3 } autoRota, t, e={fal, s, e}
           />
-        </secti, o, n>
-
-        {/* Latest, Insights, Section */}
-        <section, classNam, e='container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
-          <Suspense, fallbac, k={ <LoadingSecti, o, n / >  }>
-            <LatestInsigh, t, s />
-          </Suspen, s, e>
-        </secti, o, n>
-
-        {/* Features, Sectio, n */}
-        <section, classNam, e='container, m, x-auto, p, x-6, p, y-20, relative, z-10'>
-          <div, classNam, e='te, x, t-center, m, b-16'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4, animat, e-sli, d, e-up'>
-              Why, Choose, Zion Tech, Grou, p?
-            </h2>
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, ma, x-w-2xl, m, x-au, t, o'>
-              We, deliver, exceptional technology, solutions, that drive, business, growth and, innovatio, n.
-            </p>
-          </d, i, v>
-
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
-            {[
-              {
-                ic, o, n: Sh, i, e, l, d,
-                title: 'Enterprise, Securi, t, y',
-                description: 'Advanced, cybersecurity, solutions protecting, your, business from, evolving, threat, s.',
-                featur, e, s: [
-                  'SOC, 2, Complianc, e',
-                  'Penetration, Testin, g',
-                  '24/7, Monitorin, g',
-                ],
-                col, o, r: 'b, l, u, e',
-              },
-              {
-                ic, o, n: Za, p,
-                title: 'AI, Innovati, o, n',
-                description: 'Cutti, n, g-edge, artificial, intelligence solutions, that, transform your, operatio, n, s.',
-                featur, e, s: [
-                  'Machine, Learni, n, g',
-                  'Natural, Language, Processing',
-                  'Computer, Visio, n',
-                ],
-                col, o, r: 'pur, p, l, e',
-              },
-              {
-                ic, o, n: Us, e, r, s,
-                title: 'Expert, Te, a, m',
-                description: 'Wor, l, d-class, engineers, and consultants, dedicated, to your, succe, s, s.',
-                featur, e, s: [
-                  '10+ Years, Experien, c, e',
-                  'Certified, Professional, s',
-                  'Dedicated, Suppor, t',
-                ],
-                col, o, r: 'c, y, a, n',
-              },
-              {
-                ic, o, n: Gl, o, b, e,
-                title: 'Global, Rea, c, h',
-                description: 'Serving, clients, worldwide with, localized, expertise and, suppo, r, t.',
-                featur, e, s: [
-                  '50+ Countr, i, e, s',
-                  'Local, Suppor, t',
-                  '24/7, Availabilit, y',
-                ],
-                col, o, r: 'bl, u, e-li, g, h, t',
-              },
-            ].m, a, p((featu, r, e, ind, e, x) => (
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'card, group, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
               >
                 <div, classNam, e={`bg-zi, o, n-${featu, r, e.c, o, l, o, r}/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: bg-zi, o, n-${featu, r, e.co, l, o, r}/30, transitio, n-colors, border, border-zi, o, n-${featu, r, e.col, o, r}/30, shado, w-lg`}
                  > <featu, r, e.icon, classNam, e = {`w-8 h-8, tex, t-zi, o, n-${featu, r, e.col, o, r}-light, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}
                   />
-                </d, i, v>
-                <h3, classNam, e = 'te, x, t-xl, fon, t-semibold, tex, t-white, m, b-4'>
-                  {featu, r, e.title}
-                </h3>
-                <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
-                  {featu, r, e.description}
-                </p>
                 <ul, classNam, e='spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e'>
                   { featu, r, e.featur, e, s.m, a, p((i, t, e, m, i) = > (
                     <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-cent, e, r'>
                       <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n' />
-                      {it, e, m}
-                    </l, i>
-                  ))}
-                </ul>
-              </d, i, v>
-            ))}
-          </d, i, v>
-        </secti, o, n>
-
-        {/* Latest, Insights, Preview */}
-        <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
-          <div, classNam, e='flex, item, s-center, justif, y-between, m, b-8'>
-            <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'>Latest, Insight, s</h3>
-            <Link, t, o='/insigh, t, s' classNa, m, e='te, x, t-zi, o, n-cyan, hove, r: underli, n, e'>
-              View, al, l
-            </Li, n, k>
-          </d, i, v>
           <div, classNam, e='grid, m, d:gr, i, d-co, l, s-4, ga, p-6'>
             { latestInsigh, t, s.sl, i, c, e(, 0, 4).m, a, p(it, e, m = > (
               <article, ke, y = { it, e, m.i, d  }, classNa, m, e = 'card, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
@@ -240,46 +114,6 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                   <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>{it, e, m.summa, r, y}</p>
                   <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n'>
                     <sp, a, n>{new, Dat, e(it, e, m.d, a, t, e).toLocaleDateStri, n, g()}</sp, a, n>
-                    <sp, a, n>{it, e, m.readMinut, e, s} min, rea, d</sp, a, n>
-                  </d, i, v>
-                </d, i, v>
-              </artic, l, e>
-            ))}
-          </d, i, v>
-        </secti, o, n>
-
-        {/* Testimonials, Sectio, n */}
-        <section, classNam, e = 'bg-zi, o, n-sla, t, e-dark, p, y-20, relative, overflow-hidd, e, n'>
-          <div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/10, t, o-zi, o, n-purp, l, e/10, opacit, y-50' />
-          <div, classNam, e='container, m, x-auto, p, x-6, relative, z-10'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4, animat, e-sli, d, e-up'>
-                What, Our, Clients S, a, y
-              </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, ma, x-w-2xl, m, x-auto, animat, e-fa, d, e-in'>
-                D, o, n&ap, o, s; t, just, take our, word, for it. He, r, e&ap, o, s;s, what, our
-                clients, have, to say, about, working with, u, s.
-              </p>
-            </d, i, v>
-
-            <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-8'>
-              {[
-                {
-                  na, m, e: 'Sarah, John, s, o, n',
-                  ro, l, e: 'CE, O, TechCo, r, p',
-                  quo, t, e: 'Zion, Tech, Group transformed, our, entire digital, infrastructur, e. Their, AI, solutions increased, our, efficiency by, 3, 0, 0%.',
-                },
-                {
-                  na, m, e: 'Michael, Ch, e, n',
-                  ro, l, e: 'CT, O, InnovateL, a, b',
-                  quo, t, e: 'Outstanding, team, and exceptional, result, s. They, delivered, our mobile, app, ahead of, schedule, and under, budg, e, t.',
-                },
-                {
-                  na, m, e: 'Emily, Rodrigu, e, z',
-                  ro, l, e: 'Security, Direct, o, r, FinanceFir, s, t',
-                  quo, t, e: 'The, security, solutions they, implemented, gave us, complete, peace of, min, d. Highly, recommend, e, d!',
-                },
-              ].m, a, p((testimoni, a, l, ind, e, x) => (
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'card, tex, t-center, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
                 >
                   <div, classNam, e='flex, justif, y-center, m, b-4'>
@@ -287,63 +121,9 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                       <Star, ke, y = { , i  }, classNa, m, e = 'w-5 h-5, tex, t-yell, o, w-400, fil, l-current, animat, e-pul, s, e'
                         sty, l, e = { { animationDel, a, y: `${i * , 0., 1 }, s` }}
                       />
-                    ))}
-                  </d, i, v>
-                  <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-6, itali, c'>
-                    &ldq, u, o;{testimoni, a, l.quo, t, e}&rdq, u, o;
-                  </p>
-                  <d, i, v>
-                    <div, classNam, e = 'fo, n, t-semibold, tex, t-whi, t, e'>
-                      {testimoni, a, l.na, m, e}
-                    </d, i, v>
-                    <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e'>
-                      {testimoni, a, l.ro, l, e}
-                    </d, i, v>
-                  </d, i, v>
-                </di, v>
-              ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-
-        {/* Modern, Features, Section */}
-        <Suspense, fallbac, k = { <LoadingSecti, o, n / >  }>
-          <ModernFeatur, e, s />
-        </Suspen, s, e>
-
-        {/* Enhanced, Testimonials, Section */}
-        <Suspense, fallbac, k={ <LoadingSecti, o, n / >  }>
-          <EnhancedTestimonia, l, s />
-        </Suspen, s, e>
-
-        {/* CTA, Sectio, n */}
-        <section, classNam, e='py-20, b, g-gradie, n, t-to-r, fro, m-zi, o, n-blue, t, o-zi, o, n-purple, relative, overflow-hidd, e, n'>
-          <div, classNam, e='absolute, inse, t-0, b, g-black, opacit, y-10' />
-          <div, classNam, e='container, m, x-auto, p, x-6, tex, t-center, relative, z-10'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-6, animat, e-sli, d, e-up'>
-              Ready, to, Transform Your, Busines, s?
-            </h2>
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, ma, x-w-2xl, m, x-auto, animat, e-fa, d, e-in'>
-              Join, thousands, of companies, that, trust Zion, Tech, Group for, their, technology nee, d, s. L, e, t&ap, o, s; s, build, something amazing, togethe, r.
-            </p>
             <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
               <Link, t, o='/conta, c, t'
                 classNa, m, e='bg-white, tex, t-zi, o, n-blue, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, items-center, justif, y-center, ga, p-2, grou, p'
               >
                 <Target, classNam, e='w-5 h-5, grou, p-hov, e, r:rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0' />
                 Start, Your, Journey Tod, a, y
-              </Li, n, k>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-zi, o, n-blue, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
-              >
-                Schedule, a, Call
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-      </d, i, v>
-    </>
-  );
-};
-
-export, default, HomeOptimized;

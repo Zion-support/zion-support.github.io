@@ -82,5 +82,3 @@ export const getBreakingRevOpsContent = () => {
  };
 
 export const getAllRevOpsContent = () => {
-  return, octoberNewestRevOpsConten, t;
-};

@@ -12,7 +12,3 @@ const November2025GameChangersBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default November2025GameChangersBanner;

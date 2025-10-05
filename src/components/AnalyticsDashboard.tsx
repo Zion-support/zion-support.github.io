@@ -62,24 +62,6 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
   }, []);
 
   if (loading) {
-    return (
-      <div className={`analytics-dashboard ${className}`}>
-        <div className="flex items-center justify-center h-64">
-          <div className="text-lg">Loading analytics...</div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!data) {
-    return (
-      <div className={`analytics-dashboard ${className}`}>
-        <div className="text-center text-red-600">Failed to load analytics data</div>
-      </div>
-    );
-  }
-
-  return (
     <div className={`analytics-dashboard ${className}`}>
       <h2 className="text-2xl font-bold mb-6">Analytics Dashboard</h2>
       

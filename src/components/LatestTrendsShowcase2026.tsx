@@ -12,7 +12,3 @@ const LatestTrendsShowcase2026: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default LatestTrendsShowcase2026;

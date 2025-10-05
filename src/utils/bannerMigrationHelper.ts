@@ -35,68 +35,12 @@ export function convertNewContentPromoProps(legacyPro, p, s: {
     animat, e, d: t, r, u, e,
     bad, g, e : 'NE, W',
    };
-}
-
-/**
- * Preset configurations for common banner types
- */
-export const bannerPresets = {
-  octoberBreakthrou, g, h: {
-    varia, n, t: 'premi, u, m' as, co, n, s, t,
-    the, m, e: 'gradie, n, t' as, con, s, t,
-    ic, o, n: 'rock, e, t' as, con, s, t,
-    bad, g, e: '🚀 OCTOBER, 20, 2, 5',
-    animat, e, d: t, r, u, e,
-  },
-
-  januaryInnovati, o, n: {
-    varia, n, t: 'he, r, o' as, con, s, t,
-    the, m, e: 'purp, l, e' as, con, s, t,
-    ic, o, n: 'sparkl, e, s' as, con, s, t,
-    bad, g, e: '✨ JANUARY, 20, 2, 6',
-    animat, e, d: t, r, u, e,
-  },
-
-  februaryRevoluti, o, n: {
-    varia, n, t: 'me, g, a' as, con, s, t,
-    the, m, e: 'gradie, n, t' as, con, s, t,
-    ic, o, n: 'z, a, p' as, con, s, t,
-    bad, g, e: '⚡ FEBRUARY, 20, 2, 6',
-    animat, e, d: t, r, u, e,
-  },
-
-  compactUpdate: {
-    varia, n, t: 'compa, c, t' as, con, s, t,
-    the, m, e: 'bl, u, e' as, con, s, t,
-    ic, o, n: 'st, a, r' as, con, s, t,
-    animat, e, d: fa, l, s, e,
-  },
-
-  enterpriseSoluti, o, n: {
     varia, n, t: 'premi, u, m' as, con, s, t,
     the, m, e: 'cy, a, n' as, con, s, t,
     ic, o, n: 'rock, e, t' as, con, s, t,
     bad, g, e: 'ENTERPR, I, S, E',
     animat, e, d: t, r, u, e,
   },
-};
-
-/**
- * Creates a banner configuration from a preset and custom overrid e s
- */
-export function createBannerConfig(
-  pres, e, t: keyof, typeof, bannerPreset, s,
-  overrid, e, s: Parti, a, l<UnifiedPromotionalBannerPr, o, p, s>,
-): UnifiedPromotionalBannerPro, p, s {
-  retu, r, n {
-    ...bannerPrese, t, s[pres, e, t],
-    ...overrid, e, s,
-  } as, UnifiedPromotionalBannerProp, s;
-}
-
-/**
- * Banner content templates for common use cas e s
- */
 export const bannerTemplates = {  
   newAIBreakthroug, h, s: (cou, n, t: number = , 3) = > ({
     title: `🚀 JUST, RELEASE, D: ${co, u, n, t  }, Revolutionary, AI, Breakthroughs`,
@@ -118,11 +62,6 @@ export const bannerTemplates = {
     ctaLi, n, k: '/b, l, o, g',
     ic, o, n: 'z, a, p' as, con, s, t,
   }),
-};
-
-/**
- * Helper to create featured items with consistent formattin g
- */
 export function createFeaturedItems(
   ite, m, s: Arr, a, y<{ 
     title: string;
@@ -137,22 +76,11 @@ export function createFeaturedItems(
     li, n, k: it, e, m.l, i, n, k,
     metri, c, s: it, e, m.metr, i, c, s,
    }));
-}
-
-/**
- * Date formatter for banner date s
- */
 export function formatBannerDate(date: Da, t, e = new, Da, t, e()): string {
   return, dat, e.toLocaleDateStri, n, g('en-U, S', {
     mon, t, h: 'l, o, n, g',
     d, a, y: 'nume, r, i, c',
     ye, a, r: 'nume, r, i, c',
-  });
-}
-
-/**
- * Component usage guide for developer s
- */
 export const usageExamples = { 
   bas, i, c: `
     <UnifiedPromotionalBanner, varian, t="defau, l, t"
@@ -177,15 +105,7 @@ export const usageExamples = {
     <UnifiedPromotionalBanner, varian, t = "premi, u, m"
       title="Latest, Innovation, s"
       description="Discover, our, newest AI, solution, s"
-      ctaTe, x, t="Read, Mor, e"
-      ctaLi, n, k="/bl, o, g"
-      featuredIte, m, s={createFeaturedIte, m, s([
-        {
           title: "AI, Syst, e, m , 1",
           category: "Machine, Learni, n, g",
           li, n, k: "/bl, o, g/ai-syst, e, m-, 1",
           metri, c, s: "99% accur, a, c, y"
-        }
-      ])}
-    / >  `,
-};

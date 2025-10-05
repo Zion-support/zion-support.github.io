@@ -26,38 +26,8 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           </h1>
           <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
             Practical, runbooks, for governing, autonomous, agents with, budgeted, actio, n, s, K, P, I‑linked, canarie, s, and, deterministic, rollback that, preserve, customer experience, while, accelerating delive, r, y.
-          </p>
-
-          <div, classNam, e = 'spa, c, e-y-6'>
-            <h2, classNam, e='te, x, t-2xl, fon, t-semibo, l, d'>Runbook, Pattern, s</h2>
-            <ul, classNam, e='li, s, t-disc, p, l-6, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-              <li>
-                Budget, guards, per intent, with, escalation thresholds, and, approvals.
-              </li>
-              <li>
-                Scorecard, canaries, with rollback, hooks, when KPIs, dip, beyond
-                toleran, c, e.
-              </li>
-              <li>
-                Trace, everything, from token, to, KPI with, cost, and risk, telemetr, y.
-              </li>
-              <li>Drills, and, chaos tests, to, validate failure, modes, weekly.</li>
-            </ul>
-
-            <h2, classNam, e='te, x, t-2xl, fon, t-semibo, l, d'>Adoption, Guid, e</h2>
-            <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-              Start, with, a single, critical, flo, w, wire, in, KPIs, define, budget, s,
-              and, ship, a canary, runboo, k. Expand, coverage, as telemetry, validates, stability. Automate, rollback, after two, consecutive, score
-              violatio, n, s.
-            </p>
 
             <div, classNam, e = 'mt-8'>
               <a, hre, f='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r: underli, n, e'>
                 ← Back, to, Blog
               </a>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

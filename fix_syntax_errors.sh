@@ -34,11 +34,3 @@ for file in $error_files; do
     sed -i '/^/d' "$file"
     sed -i '/^/d' "$file"
     sed -i '/^    
-    # 5. Fix common JSX issues
-    # Remove any stray characters that might break JSX
-    sed -i 's/[^\x00-\x7F]//g' "$file"
-    
-done
-
-echo "Syntax error fixes completed for $count files."
-echo "Note: Some complex syntax issues may require manual review."

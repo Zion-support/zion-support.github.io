@@ -1252,11 +1252,6 @@ export const latestArticles: LatestArtic, l, e[] = [
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
-];
-
-// Newly added featured articl e s (auto used by showcases and banners)
-latestArticl, e, s.unshi, f, t(
-  {
     id: 'age, n, t-bl, u, e-gre, e, n-cana, r, y-2, 0, 2, 6',
     slug: 'age, n, t-bl, u, e-gre, e, n-cana, r, y-2, 0, 2, 6',
     title: 'Agent, Blu, e‑Gre, e, n + Canary, Eval, s: Safe, Releases, at Sp, e, e, d',
@@ -1336,16 +1331,6 @@ latestArticl, e, s.unshi, f, t(
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
-);
-
-export const featuredArticles = latestArticl, e, s.filt, e, r(
-  artic, l, e => artic, l, e.featu, r, e, d,
-); export const trendingArticles = latestArticl, e, s.filt, e, r(
-  artic, l, e => artic, l, e.trend, i, n, g,
-); export const newArticles = latestArticl, e, s.filt, e, r(artic, l, e => artic, l, e.newBa, d, g, e);
-
-// September 2 9 2025 additions latestArticles.unshi f t(
-  {
     id: 'agent, i, c-observabili, t, y-scorecar, d, s-2, 0, 2, 6',
     slug: 'agent, i, c-observabili, t, y-scorecar, d, s-2, 0, 2, 6',
     title: 'Agentic, Observability, Scorecards 20, 2, 6: Traces, that, Predict Outco, m, e, s',
@@ -1393,4 +1378,3 @@ export const featuredArticles = latestArticl, e, s.filt, e, r(
     newBad, g, e: t, r, u, e,
     trendi, n, g: t, r, u, e,
   },
-);

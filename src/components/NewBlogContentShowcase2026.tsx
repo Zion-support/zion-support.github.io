@@ -121,42 +121,12 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
         <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
         <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-      </d, i, v>
-      <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
-        {/* Header, Sectio, n */}
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">
-            <Sparkles, classNam, e="w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-              📚 NEW, BLOG, CONTENT • January, 202, 6
-            </sp, a, n>
-            <Sparkles, classNam, e="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />
-          </d, i, v>
           <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
             New, Blog, Content Showcase, 202, 6
-          </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, our, latest insi, g, h, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. 
-            Stay, ahead, of the, curve, with content, from, industry-leading, expert, s.
-          </p>
-          {/* Blog, Stat, s */}
           <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
             { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
                 <div, classNam, e="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
-                  {st, a, t.ic, o, n}
-                </d, i, v>
-                <div, classNam, e="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1">
-                  {st, a, t.val, u, e}
-                </d, i, v>
-                <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">
-                  {st, a, t.lab, e, l}
-                </d, i, v>
-              </di, v>
-            ))}
-          </d, i, v>
-        </d, i, v>
-        {/* Featured, Blog, Posts */}
         <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
           { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (
             <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
@@ -164,138 +134,30 @@ const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => {
              > {/* Card, glow, effect */}
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
               <div, classNam, e = "relativ, e, p-8">
-                {/* Bad, g, e & Featur, e, d */}
-                <div, classNam, e="flex, item, s-start, justif, y-between, m, b-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-bl, u, e-4, 0, 0">
-                    {po, s, t.ic, o, n}
-                  </d, i, v>
                   <div, classNam, e="flex, fle, x-col, ga, p-2">
                     {  po, s, t.trendi, n, g  && (
                       <div, classNam, e="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">
                         <TrendingUp, classNam, e="w-3 h-3" />
-                        <sp, a, n>TRENDI, N, G</sp, a, n>
-                      </di, v  > )  }
-                    <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
-                      {po, s, t.bad, g, e}
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                {/* Catego, r, y */}
-                <div, classNam, e = "mb-4">
-                  <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30">
-                    {po, s, t.category}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Tit, l, e */}
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
                   {po, s, t.t, i, t, l, e}
-                </h3>
-                {/* Excer, p, t */}
-                <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm">
-                  {po, s, t.excerpt}
-                </p>
-                {/* Ta, g, s */}
-                <div, classNam, e="mb-6">
-                  <div, classNam, e="flex, fle, x-wrap, ga, p-1">
-                    { po, s, t.tags.m, a, p((ta, g, i, d, x) = > (
-                      <span, ke, y = { id, x  }, classNa, m, e = "px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs">
-                        #{t, a, g}
-                      </s, p, a, n>
-                    ))}
-                  </d, i, v>
-                </d, i, v>
-                {/* Meta, Inf, o */}
-                <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
-                  <span, classNam, e="flex, item, s-center, ga, p-2">
-                    <Clock, classNam, e="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />
-                    {po, s, t.readTime}
-                  </sp, a, n>
                   <span, classNam, e="flex, item, s-center, ga, p-1">
                     <Eye, classNam, e="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />
-                    {po, s, t.vie, w, s}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Auth, o, r & Rati, n, g */}
-                <div, classNam, e="flex, item, s-center, justif, y-between, m, b-6">
-                  <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">
-                    By {po, s, t.author}
-                  </d, i, v>
                   <div, classNam, e="flex, item, s-center, ga, p-1">
                     <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
                     <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm">{po, s, t.rati, n, g}</sp, a, n>
-                  </d, i, v>
-                </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f={`/bl, o, g/${po, s, t.slug}`}
-                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
-                >
-                  <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
-                </a>
-              </d, i, v>
-            </d, i, v>
-          ))}
-        </d, i, v>
-        {/* Newsletter, Signu, p */}
         <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-bl, u, e-5, 0, 0/20, m, b-16">
           <div, classNam, e="te, x, t-cent, e, r">
             <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
               <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 PREMIUM, CONTEN, T
-              </sp, a, n>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
-              Get, Exclusive, Blog Updat, e, s
-            </h3>
             <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s, 
-              and, premium, content from, industry, experts. Join, 100, K+ subscribe, r, s.
-            </p>
-            <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-              <input, typ, e="ema, i, l"
-                  placehold, e, r="Enter, your, email"
-                  classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-bl, u, e-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
-                />
-              <button, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
-                <sp, a, n>Subscri, b, e</sp, a, n>
                 <ArrowRight, classNam, e="w-5 h-5" />
-              </butt, o, n>
-            </d, i, v>
-            <p, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, m, t-4">
-              No, s, p, a, m, unsubscribe, anytim, e. Get, premium, content delivered, weekl, y.
-            </p>
-          </d, i, v>
-        </d, i, v>
-        {/* CTA, Sectio, n */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, classNam, e="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-5, 0, 0">
-            <div, classNam, e="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
-              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-                Explore, Our, Complete Blog, Librar, y
-              </h3>
-              <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
-                Discover, 50, 0+ articles, covering, A, I, machine, learnin, g, quantum, computin, g, and, enterprise, technology. 
-                Find, insights, that matter, to, your business, and, stay ahead, of, the competiti, o, n.
-              </p>
               <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">
                 <a, hre, f="/bl, o, g"
                   classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, classNam, e="w-5 h-5" />
-                  <sp, a, n>Browse, All, Articles</sp, a, n>
-                </a>
-                <a, hre, f="/conta, c, t"
-                  classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
-                >
-                  <sp, a, n>Request, Custom, Content</sp, a, n>
                   <ArrowRight, classNam, e="w-5 h-5" />
-                </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
-  );
-};
-export, default, NewBlogContentShowcase2026;

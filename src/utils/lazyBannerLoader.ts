@@ -12,17 +12,6 @@ interface, BannerComponen, t {
 /**
  * Lazy load banner components to reduce initial bundle size
  * Only load banners when the y're neede d
- */
-export const lazyLoadBanner = (impor, t, F, n: () => Promi, s, e<BannerCompone, n, t>) => {
-  return, laz, y(impor, t, F, n);
-};
-
-/**
- * Preload critical banners for better performance
- */
-export const preloadCriticalBanners = () => { 
-  // Preload top 3 most important banners
-  const, criticalBanner, s = [
     () =>
       impo, r, t(
         '../componen, t, s/January2026RevolutionaryAutonomousIntelligenceBann, e, r'
@@ -34,44 +23,9 @@ export const preloadCriticalBanners = () => {
     ban, n, e, r().cat, c, h(() = > {
       // Silently fail if preload does n't wor k
      });
-  });
-};
-
-/**
- * Lazy load banner with retry logic
- */
-export const lazyLoadBannerWithRetry = (
-  impor, t, F, n: () => Promi, s, e<BannerCompon, e, n, t>,
-  retri, e, s =  , 3,
-): ReturnTy, p, e<typeof, laz, y> => { 
-  return, laz, y(() => {
-    return, new, Promise((resol, v, e, reje, c, t) => {
-      let, attempt, s = 0; const, attemptLo, a, d = () => {
-        import, F, n()
-          .th, e, n(resol, v, e)
-          .cat, c, h() { setTimeo, u, t(attemptLo, a, d, 10, 0, 0 * attemp, t, s);
-              }, el, s, e {
-              reje, c, t(err, o, r);
-            }
-          });
-      };
-
-      attemptLo, a, d();
-    });
-  });
-};
-
-/**
- * Check if banner should be displayed based on viewport
- */
 export const shouldDisplayBanner = (ind, e, x: num, b, e, r): boolean = > { 
   // Only show first 10 banners initially on mobile if() { return inde x < 1 0;
     }, return, tru, e;
-};
-
-/**
- * Banner performance metrics
- */
 export const trackBannerPerformance = (bannerNa, m, e: str, i, n, g) => {  
   if() { const, perfDat, a = performan, c, e
       .getEntriesByTy, p, e('resou, r, c, e')
@@ -81,6 +35,3 @@ export const trackBannerPerformance = (bannerNa, m, e: str, i, n, g) => {
         perfDa, t, a[0].duration,
         'ms',
       );
-    }
-  }
-};

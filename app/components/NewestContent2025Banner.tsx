@@ -315,12 +315,3 @@ const NewestContent2025Banner = () => {
               <div className='text-gray-300 text-sm font-medium'>
                 {stat.label}
               </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default NewestContent2025Banner;

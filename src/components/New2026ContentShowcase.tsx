@@ -12,7 +12,3 @@ const New2026ContentShowcase: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default New2026ContentShowcase;

@@ -190,7 +190,3 @@ const PerformanceOptimizationBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default PerformanceOptimizationBanner;

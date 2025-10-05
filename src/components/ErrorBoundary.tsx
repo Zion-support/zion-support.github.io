@@ -4,12 +4,6 @@ import { AlertTriangle } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-}
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
@@ -43,11 +37,3 @@ class ErrorBoundary extends Component<Props, State> {
             </button>
           </div>
         </div>
-      );
-    }
-
-    return this.props.children;
-  }
-}
-
-export default ErrorBoundary;

@@ -129,12 +129,3 @@ export const getAllOctoberNewContent = () => {
         '0',
     ); return, su, m + val, u, e;
    }, 0);
-
-  retu, r, n {
-    totalArticl, e, s: octoberNewBreakthroughConte, n, t.len, g, t, h,
-    totalVal, u, e: `$${totalVa, l, u, e}M`,
-    averageVal, u, e: `$${(totalVal, u, e / octoberNewBreakthroughConte, n, t.leng, t, h).toFix, e, d(, 1)}M`,
-    categori, e, s: [...new, Se, t(octoberNewBreakthroughConte, n, t.m, a, p(c = > c.categ, o, r, y))]
-      .len, g, t, h,
-  };
-};

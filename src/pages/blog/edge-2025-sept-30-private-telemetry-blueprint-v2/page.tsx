@@ -11,24 +11,3 @@ export, default, function Pa, g, e() {
           <p, classNam, e = 'te, x, t-gr, a, y-600, m, b-6'>
             Ship, useful, analytics without, collecting, PII using, scoped, ID, s, local, redactio, n, and, differential, privacy at, the, edge. Keep, SLAs, while
             improving, signal, quality.
-          </p>
-          <div, classNam, e = 'prose, pros, e-indi, g, o'>
-            <h2>Key, Pattern, s</h2>
-            <ul>
-              <li>Scoped, identifiers, and on‑device, redaction, filters</li>
-              <li>Edge, aggregation, with DP, noise, and attestatio, n, s</li>
-              <li>Latency, budgets, with warm, pools, and cache, tier, s</li>
-              <li>Audit, trails, and retention, controls, by regi, o, n</li>
-            </ul>
-            <h2>Implementation, Step, s</h2>
-            <ol>
-              <li>Define, privacy, classes and, filtering, rules</li>
-              <li>Instrument, clients, with scoped, IDs, and local, hashin, g</li>
-              <li>Aggregate, at, edge POPs, with, DP noise, and, proofs</li>
-              <li>Publish, dashboards, with SLA, and, compliance vie, w, s</li>
-            </ol>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
-    </m, a, i, n > );
- }

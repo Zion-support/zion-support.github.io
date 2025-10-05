@@ -11,40 +11,6 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
   variant = 'hero',
   showCount = 3,
   className = ''
-}) => {
-        <h2>Comprehensive Promo Banner</h2>
-        <p>This is a comprehensive promotional banner component.</p>
-        <Link to="/" className="cta-button">
-          Learn More
-        </Link>
-  const promoItems = [
-    {
-      id: 1,
-      title: 'AI-Powered Solutions',
-      description: 'Revolutionary artificial intelligence technologies',
-      link: '/services/ai-solutions',
-      color: 'from-blue-600 to-purple-600'
-    },
-    {
-      id: 2,
-      title: 'Enterprise Integration',
-      description: 'Seamless business process automation',
-      link: '/services/enterprise',
-      color: 'from-green-600 to-teal-600'
-    },
-    {
-      id: 3,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable and secure cloud solutions',
-      link: '/services/cloud',
-      color: 'from-orange-600 to-red-600'
-    }
-  ];
-
-  const displayedItems = promoItems.slice(0, showCount);
-
-  if (variant === 'compact') {
-    return (
       <div className={`bg-gradient-to-r ${promoItems[0].color} text-white py-8 px-4 ${className}`}>
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl font-bold mb-4">{promoItems[0].title}</h2>
@@ -57,11 +23,6 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
           </Link>
         </div>
       </div>
-    );
-  }
-
-  if (variant === 'featured') {
-    return (
       <div className={`space-y-6 ${className}`}>
         {displayedItems.map((item) => (
           <div key={item.id} className={`bg-gradient-to-r ${item.color} text-white p-6 rounded-lg`}>
@@ -78,11 +39,6 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
           </div>
         ))}
       </div>
-    );
-  }
-
-  // Default hero variant
-  return (
     <div className={`bg-gradient-to-r ${promoItems[0].color} text-white py-16 px-4 ${className}`}>
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -107,8 +63,3 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
         </div>
       </div>
     </div>
-  );
-};
-
-export default ComprehensivePromoBanner;
-export default ComprehensivePromoBanner;

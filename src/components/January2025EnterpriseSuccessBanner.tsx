@@ -12,7 +12,3 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default January2025EnterpriseSuccessBanner;

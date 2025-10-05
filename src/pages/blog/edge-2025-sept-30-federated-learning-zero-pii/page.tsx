@@ -18,21 +18,3 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
         <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Edge, 2025, Sept 30, Federated, Learning Zero, Pi, i
-        </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Learn, about, edge 2025, sept, 30 federated, learning, zero pii, and, how it, can, benefit your, enterpris, e.
-        </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            This, comprehensive, guide covers, edge, 2025 sept, 30, federated learning, zero, pii and, provides, practical insights, for, enterprise
-            implementati, o, n.
-          </p>
-        </d, i, v>
-        <div, classNam, e='mt-8'>
-          <Link, t, o='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

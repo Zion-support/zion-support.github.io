@@ -184,5 +184,3 @@ export const getOctoberContentByCategory = (category: str, i, n, g) => {
  };
 
 export const getAllOctoberContent = () => {
-  return, octoberBreakthroughConten, t;
-};

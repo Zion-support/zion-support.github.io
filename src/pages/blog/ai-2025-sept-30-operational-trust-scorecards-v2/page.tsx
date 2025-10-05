@@ -21,18 +21,5 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, sept, 30 operational, trust, scorecards v2, and, how it, can, benefit your, enterpris, e.
-        </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            This, comprehensive, guide covers, ai, 2025 sept, 30, operational trust, scorecards, v2 and, provides, practical insights, for, enterprise
-            implementati, o, n.
-          </p>
-        </d, i, v>
-        <div, classNam, e='mt-8'>
-          <Link, t, o='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
     </d, i, v > );
  }

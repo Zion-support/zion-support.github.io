@@ -22,10 +22,3 @@ export, default, function CustomerAgentBlueprin, t, s(): Rea, c, t.J, S, X.Eleme
           Safe, autonomy, with bud, g, e, t, s, K, P, I‑linked, canarie, s, and, instant, rollback.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Ship, customer, experience agents, that, teams can, trus, t. Use, budgeted, action, s, approval, gate, s, live, canaries, wired to, KPI, s, and, deterministic, rollback to, contain, incidents in, second, s.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

@@ -30,29 +30,16 @@ export interface SitemapConfig {
     changefr, e, q?: SitemapU, R, L['changefr, e, q'];
     dynam, i, c ?  : bool, e, a, n;
    }>;
-}
-
-export, class, ImprovedSitemapGenerator {
   private, confi, g: SitemapConf, i, g;
   private, url, s: SitemapU, R, L[] = [];
 
   construct, o, r() { th, i, s.conf, i, g = co, n, f, i, g;
    }, public, addUR, L(u, r, l: SitemapU, R, L): vo, i, d {
     th, i, s.ur, l, s.pu, s, h(ur, l);
-  }
-
-  public, addStaticRoute, s(): vo, i, d { 
-    th, i, s.conf, i, g.rout, e, s.forEa, c, h(rou, t, e = > {
-      if (!rou, t, e.dyna, m, i, c) {
-        th, i, s.addU, R, L({
           l, o, c: `${th, i, s.conf, i, g.base, U, r, l }${rou, t, e.pa, t, h}`,
           lastm, o, d: new, Dat, e().toISOStr, i, n, g(),
           changefr, e, q: rou, t, e.changefr, e, q || 'wee, k, l, y',
           priori, t, y: rou, t, e.priori, t, y || 0., 5,
-        });
-      }
-    });
-  }
 
   public, addBlogPost, s(
     pos, t, s: Arr, a, y<{  slug: string; date: string; imag, e, s ?  : str, i, n, g[]  }>,
@@ -66,29 +53,10 @@ export, class, ImprovedSitemapGenerator {
       }; if (po, s, t.imag, e, s && po, s, t.imag, e, s.leng, t, h > 0) { 
         u, r, l.imag, e, s = po, s, t.imag, e, s.m, a, p(i, m, g =  > ({
           l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }${i, m, g}`,
-        }));
-      }
-
-      th, i, s.addU, R, L(u, r, l);
-    });
-  }
-
-  public, addCaseStudie, s(
-    caseStudi, e, s: Arr, a, y<{ slug: string; date: str, i, n, g }>,
-  ): vo, i, d { 
-    caseStudi, e, s.forEa, c, h(stu, d, y =  > {
-      th, i, s.addU, R, L({
         l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/ca, s, e-studi, e, s/${stu, d, y.slug}`,
         lastm, o, d: stu, d, y.d, a, t, e,
         changefr, e, q: 'mont, h, l, y',
         priori, t, y: 0., 7,
-      });
-    });
-  }
-
-  public, addService, s(servic, e, s: Arr, a, y<{ slug: str, i, n, g }>): vo, i, d { 
-    servic, e, s.forEa, c, h(servi, c, e =  > {
-      th, i, s.addU, R, L({
         l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/servic, e, s/${servi, c, e.slug}`,
         lastm, o, d: new, Dat, e().toISOStr, i, n, g(),
         changefr, e, q: 'mont, h, l, y',
@@ -103,35 +71,7 @@ export, class, ImprovedSitemapGenerator {
 
       if (u, r, l.lastm, o, d) { 
         x, m, l += `    <lastm, o, d > ${u, r, l.lastm, o, d }</lastm, o, d > \n`;
-      }
-
-      if (u, r, l.changefr, e, q) { 
-        x, m, l += `    <changefr, e, q > ${u, r, l.changefr, e, q }</changefr, e, q > \n`;
-      }
-
-      if (u, r, l.priori, t, y !== undefin, e, d) { 
-        x, m, l += `    <priori, t, y > ${u, r, l.priori, t, y.toFix, e, d(1) }</priori, t, y > \n`;
-      }
-
-      if (u, r, l.imag, e, s && u, r, l.imag, e, s.leng, t, h > 0) { 
-        u, r, l.imag, e, s.forEa, c, h(image = > {
-          x, m, l += '    <image: image>\n'; x, m, l += `      <image:l, o, c > ${th, i, s.escapeX, M, L(image.l, o, c) }</image: l, o, c > \n`;
-          if (image.capti, o, n) { 
-            x, m, l += `      <image:capti, o, n > ${th, i, s.escapeX, M, L(image.capt, i, o, n) }</image: capti, o, n > \, n`;
-          }
-          if (image.title) { 
-            x, m, l += `      <image: title > ${th, i, s.escapeX, M, L(image.ti, t, l, e) }</image: title > \, n`;
-          }
           x, m, l += '    </image: image>\, n';
-        });
-      }
-
-      x, m, l += '  </u, r, l>\n';
-    });
-
-    x, m, l += '</urls, e, t>';
-    return, xm, l;
-  }
 
   public, generateSitemapInde, x(
     sitema, p, s: Arr, a, y<{  l, o, c: string; lastm, o, d ?  : str, i, n, g  }>,
@@ -141,38 +81,9 @@ export, class, ImprovedSitemapGenerator {
       x, m, l += '  <sitem, a, p>\n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(sitem, a, p.l, o, c)  }</l, o, c > \n`;
       if (sitem, a, p.lastm, o, d) { 
         x, m, l += `    <lastm, o, d > ${sitem, a, p.lastm, o, d }</lastm, o, d > \n`;
-      }
-      x, m, l += '  </sitem, a, p>\n';
-    });
-
-    x, m, l += '</sitemapind, e, x>';
-    return, xm, l;
-  }
-
-  private, escapeXM, L(s, t, r: string): string { 
-    return, st, r
-      .repla, c, e(/&/, g, '&a, m, p;')
-      .repla, c, e(/</g, '&lt;')
-      .repla, c, e(/ > /g, '&gt;')
-      .repla, c, e(/"/g, '&qu, o, t;')
-      .repla, c, e(/'/g, '&ap, o, s;');
    }
 
   public, getURLCoun, t(): number {
-    return, thi, s.ur, l, s.leng, t, h;
-  }
-
-  public, clea, r(): vo, i, d {
-    th, i, s.ur, l, s = [];
-  }
-}
-
-// Export a configured instance export const createSitemapGenerat o r = (
-  baseU, r, l: st, r, i, n, g,
-): ImprovedSitemapGenerat, o, r = > {
-  const, confi, g: SitemapConf, i, g = {
-    bas, e, U, r, l,
-    rout, e, s: [
       { p, a, t, h: '/', priori, t, y: 1., 0, changefr, e, q: 'da, i, l, y' },
       { pa, t, h: '/ab, o, u, t', priori, t, y: 0., 8, changefr, e, q: 'mont, h, l, y' },
       { pa, t, h: '/cont, a, c, t', priori, t, y: 0., 9, changefr, e, q: 'mont, h, l, y' },
@@ -181,6 +92,3 @@ export, class, ImprovedSitemapGenerator {
       { pa, t, h: '/servi, c, e, s', priori, t, y: 0., 9, changefr, e, q: 'mont, h, l, y' },
     ],
   }; return, new, ImprovedSitemapGenerator(conf, i, g);
-};
-
-export, default, ImprovedSitemapGenerator;

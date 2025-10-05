@@ -125,20 +125,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
         <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
           sty, l, e={{ animationDel, a, y: ', 4, s' }}
          />
-      </d, i, v>
-      <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
-        {/* Header, Sectio, n */}
-        <div, classNam, e='te, x, t-center, m, b-16'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in'>
-            <Sparkles, classNam, e='w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e' />
-            <span, classNam, e='te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
-              🏢 ENTERPRISE, SOLUTIONS, SHOWCASE • 20, 2, 6
-            </sp, a, n>
-            <Sparkles, classNam, e='w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e' />
-          </d, i, v>
-          <h2, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-indi, g, o-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in'>
-            Enterprise, Solutions, Showcase 20, 2, 6
-          </h2>
           <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8'>
             Transform, your, enterprise with, our, comprehensive suite, of, AI-powered, solution, s. From, automation, to secu, r, i, t, y, we, deliver, measurable
             results, that, drive business, growth, and operational, excellenc, e.
@@ -148,19 +134,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
             { successMetri, c, s.m, a, p((me, t, r, i, c, ind, e, x) = > (
               <div, ke, y = { in, d, e, x  }, classNa, m, e = 'te, x, t-cent, e, r'>
                 <div, classNam, e='te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r'>
-                  {metr, i, c.ic, o, n}
-                </d, i, v>
-                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-indi, g, o-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1'>
-                  {metr, i, c.val, u, e}
-                </d, i, v>
-                <div, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m'>
-                  {metr, i, c.lab, e, l}
-                </d, i, v>
-              </di, v>
-            ))}
-          </d, i, v>
-        </d, i, v>
-        {/* Enterprise, Solutions, Grid */}
         <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
           { enterpriseSolutio, n, s.m, a, p((solu, t, i, o, n, ind, e, x) = > (
             <div, ke, y = { solution.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20'
@@ -176,13 +149,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                   </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${solution.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}
                   >
                     {solution.bad, g, e}
-                  </d, i, v>
-                </d, i, v>
-                {/* Catego, r, y & Indust, r, y */}
-                <div, classNam, e = 'mb-4, spac, e-y-2'>
-                  <span, classNam, e='inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
-                    {solution.category}
-                  </sp, a, n>
                   <div, classNam, e='te, x, t-xs, tex, t-gr, a, y-50, 0'>
                     ", Industri, e, s: {solution.indus, t, r, y}
                   </d, i, v>
@@ -190,25 +156,6 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                 {/* Tit, l, e */}
                 <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t'>
                   {solution.t, i, t, l, e}
-                </h3>
-                {/* Excer, p, t */}
-                <p, classNam, e = 'te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm'>
-                  {solution.excerpt}
-                </p>
-                {/* R, O, I & Savin, g, s */}
-                <div, classNam, e='grid, gri, d-co, l, s-2, ga, p-4, m, b-6'>
-                  <div, classNam, e='te, x, t-cente, r, p-3, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, border, border-gre, e, n-5, 0, 0/30'>
-                    <div, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, tex, t-lg'>
-                      {solution.r, o, i}
-                    </d, i, v>
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-cente, r, p-3, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30'>
-                    <div, classNam, e='te, x, t-bl, u, e-400, fon, t-bold, tex, t-lg'>
-                      {solution.savin, g, s}
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                {/* Featur, e, s */}
                 <div, classNam, e='mb-6'>
                   <div, classNam, e='te, x, t-gr, a, y-400, tex, t-xs, m, b-2'>
                     Key, Feature, s: </d, i, v>
@@ -216,51 +163,10 @@ const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
                     { solution.featur, e, s.m, a, p((fea, t, u, r, e, i, d, x) = > (
                       <span, ke, y = { id, x  }, classNa, m, e = 'px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs'
                       >
-                        {featu, r, e}
-                      </s, p, a, n>
-                    ))}
-                  </d, i, v>
-                </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f = {`/solutio, n, s/${solution.slug}`}
-                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${solution.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
-                >
-                  <sp, a, n>Explore, Solutio, n</sp, a, n>
                   <ArrowRight, classNam, e = 'w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0' />
-                </a>
-              </d, i, v>
-            </d, i, v>
-          ))}
-        </d, i, v>
-        {/* Enterprise, CTA, Section */}
-        <div, classNam, e = 'te, x, t-center, m, t-20'>
-          <div, classNam, e='inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-indi, g, o-500, t, o-purp, l, e-5, 0, 0'>
-            <div, classNam, e='bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10'>
-              <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-                Ready, to, Transform Your, Enterpris, e?
-              </h3>
-              <p, classNam, e='te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-                Join, 50, 0+ leading, organizations, that trust, our, enterprise
-                solutions, to, drive innovat, i, o, n, reduce, cost, s, and, achieve, unprecedented operational, efficienc, y.
-              </p>
               <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
                 <a, hre, f='/conta, c, t'
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 >
                   <Building, classNam, e='w-5 h-5' />
-                  <sp, a, n>Schedule, Enterprise, Demo</sp, a, n>
-                </a>
-                <a, hre, f='/ca, s, e-studi, e, s'
-                  classNa, m, e='bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2'
-                >
-                  <sp, a, n>View, Success, Stories</sp, a, n>
                   <ArrowRight, classNam, e='w-5 h-5' />
-                </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
-  );
-};
-export, default, EnterpriseSolutionsShowcase2026;

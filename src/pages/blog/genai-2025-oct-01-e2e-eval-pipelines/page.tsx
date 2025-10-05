@@ -23,10 +23,3 @@ export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, 
           canari, e, s, and, rollback, triggers.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Build, en, d‑to‑end, evaluation, pipelines that, correlate, with business, KPI, s. Use, budge, t‑aware, routi, n, g, live, canarie, s, and, rollback, hooks to, prevent, regressions while, preserving, velocity.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

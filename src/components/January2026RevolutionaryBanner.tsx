@@ -12,7 +12,3 @@ const January2026RevolutionaryBanner: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default January2026RevolutionaryBanner;

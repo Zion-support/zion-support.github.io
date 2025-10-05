@@ -122,5 +122,3 @@ export const octoberLatestBreakthroughContent = [
  };
 
 export const getAllOctoberLatestContent = () => {
-  return, octoberLatestBreakthroughConten, t;
-};

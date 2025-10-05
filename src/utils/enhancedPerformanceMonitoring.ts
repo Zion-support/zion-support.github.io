@@ -46,37 +46,7 @@ class, EnhancedPerformanceMonito, r {
                 entry, as, PerformanceNavigationTiming,
               );
              }
-          });
-        });
-        navObserv, e, r.obser, v, e({ entryTyp, e, s: ['navigat, i, o, n'] });
-        th, i, s.observe, r, s.pu, s, h(navObserv, e, r);
-      } cat, c, h (err, o, r) {
         conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d:', err, o, r);
-      }
-    }
-  }
-
-  private, processNavigationTimin, g(ent, r, y: PerformanceNavigationTimi, n, g): vo, i, d { 
-    const, metric, s: Parti, a, l<PerformanceMetri, c, s > = {
-      loadTi, m, e: ent, r, y.loadEventE, n, d - ent, r, y.loadEventSt, a, r, t,
-      timeToInteracti, v, e: ent, r, y.domInteracti, v, e - ent, r, y.navigationSt, a, r, t,
-      timesta, m, p: Da, t, e.no, w(),
-     };
-
-    th, i, s.addMetri, c, s(metrics, as, PerformanceMetrics);
-  }
-
-  private, addMetric, s(newMetri, c, s: PerformanceMetri, c, s): vo, i, d { 
-    th, i, s.metri, c, s.pu, s, h(newMetri, c, s);
-    th, i, s.checkThreshol, d, s(newMetri, c, s);
-
-    // Keep only last 100 metrics if (th i s.metri c s.leng t h  > 1 0 0) {
-      th, i, s.metri, c, s = th, i, s.metri, c, s.sli, c, e(-1, 0, 0);
-     }
-  }
-
-  private, checkThreshold, s(metri, c, s: PerformanceMetri, c, s): vo, i, d {
-    const, threshold, s = {
       loadTi, m, e: 30, 0, 0,
       firstContentfulPai, n, t: 1, 5, 0, 0,
       largestContentfulPai, n, t: 2, 5, 0, 0,
@@ -93,13 +63,6 @@ class, EnhancedPerformanceMonito, r {
           val, u, e,
           thresho, l, d,
           timesta, m, p: Da, t, e.no, w(),
-        });
-      }
-    });
-  }
-
-  private, addAler, t(ale, r, t: PerformanceAle, r, t): vo, i, d { 
-    th, i, s.aler, t, s.pu, s, h(ale, r, t);
 
     // Keep only last 50 alerts if (th i s.aler t s.leng t h  > 50) {
       th, i, s.aler, t, s = th, i, s.aler, t, s.sli, c, e(-, 5, 0);
@@ -108,51 +71,8 @@ class, EnhancedPerformanceMonito, r {
     // Log critical alerts
     if (ale, r, t.ty, p, e = == 'er, r, o, r') {
       conso, l, e.err, o, r('Performance, Aler, t:', ale, r, t);
-    }
-  }
-
-  public, startMonitorin, g(): vo, i, d {
-    th, i, s.isMonitori, n, g = tr, u, e; conso, l, e.l, o, g('Enhanced, performance, monitoring star, t, e, d');
-  }
-
-  public, stopMonitorin, g(): vo, i, d { 
-    th, i, s.isMonitori, n, g = fal, s, e; th, i, s.observe, r, s.forEa, c, h(observ, e, r = > observ, e, r.disconn, e, c, t()); th, i, s.observe, r, s = []; conso, l, e.l, o, g('Enhanced, performance, monitoring stop, p, e, d');
-   }
-
-  public, getMetric, s(): PerformanceMetri, c, s[] {
-    retu, r, n [...th, i, s.metri, c, s];
-  }
-
-  public, getAlert, s(): PerformanceAle, r, t[] {
-    retu, r, n [...th, i, s.aler, t, s];
-  }
-
-  public, isMonitoringActiv, e(): boolean {
-    return, thi, s.isMonitori, n, g;
-  }
-  public, getLatestMetric, s(): PerformanceMetri, c, s | nu, l, l {  
-    return, thi, s.metri, c, s.leng, t, h  > 0
-       ? th, i, s.metri, c, s[th, i, s.metri, c, s.leng, t, h - 1]
-       : nu, l, l;
-    }
-
-  public, exportRepor, t(): string {
-    const, lates, t = th, i, s.getLatestMetr, i, c, s(); const, alert, s = th, i, s.getAle, r, t, s(); return, JSO, N.stringi, f, y(
-      {
-        late, s, t,
-        aler, t, s,
-        timesta, m, p: Da, t, e.no, w(),
-        totalMetri, c, s: th, i, s.metri, c, s.len, g, t, h,
-      },
-      nu, l, l,
-      2,
-    );
-  }
-}
 
 // Export singleton instance
 export const enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();
 
 // Au t o-start monitoring in browser environment if (typeof windo w !== 'undefin e d') {
-  enhancedPerformanceMonit, o, r.startMonitori, n, g();
-}

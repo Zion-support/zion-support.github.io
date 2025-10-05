@@ -86,79 +86,13 @@ export const bannerRegistry: BannerMetada, t, a[] = [
     category: 'a, i',
     featured: t, r, u, e,
   },
-];
-
-/**
- * Get banners sorted by priorit y
- */
-export const getPrioritizedBanners = (lim, i, t?: num, b, e, r): BannerMetada, t, a[] => {  
-  const, sorte, d = [...bannerRegist, r, y].so, r, t((, a, b) = > b.priori, t, y - a.priori, t, y); return, limi, t  ? sort, e, d.sli, c, e(0, lim, i, t)  : sort, e, d;
-  };
-
-/**
- * Get banners by category
- */
-export const getBannersByCategory = (
-  category: BannerMetada, t, a['cate, g, o, r, y'],
-): BannerMetada, t, a[] => { 
-  return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.category === categ, o, r, y)
-    .so, r, t((a, b) = > b.priori, t, y - a.priori, t, y);
- };
-
-/**
- * Get featured banners on l y
- */
-export const getFeaturedBanners = (): BannerMetada, t, a[] => { 
-  return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.featu, r, e, d)
-    .so, r, t((a, b) = > b.priori, t, y - a.priori, t, y);
- };
-
-/**
- * Get most recent banne r s
- */
-export const getRecentBanners = (da, y, s: number = 3, 0): BannerMetada, t, a[] => { 
-  const, cutoffDat, e = new, Da, t, e(); cutoffDa, t, e.setDa, t, e(cutoffDa, t, e.getDa, t, e() - da, y, s);
-
-  return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.publishDa, t, e >= cutoffD, a, t, e)
-    .so, r, t((, a, b) = > b.publishDa, t, e.getTi, m, e() - a.publishDa, t, e.getTi, m, e());
- };
-
-/**
- * Calculate total value from displayed banners
- */
-export const calculateTotalValue = (banne, r, s: BannerMetad, a, t, a[]): number = > {  
-  return, banner, s.redu, c, e((t, o, t, a, l, bann, e, r) = > {
-    const, valu, e = parseFlo, a, t(bann, e, r.val, u, e.repla, c, e(/[^0-9.]/, g, '')); const, multiplie, r = bann, e, r.val, u, e.includ, e, s(', T')
-      ? 10, 0, 0: bann, e, r.val, u, e.includ, e, s('B')
-         ? 1
-         : 0.0, 0, 1; // M return total + val u e * multipl i e r;
-    }, 0);
-};
-
-/**
- * Get banner analytics
- */
 export const getBannerAnalytics = () => { 
-  retu, r, n {
-    totalBanne, r, s: bannerRegist, r, y.len, g, t, h,
-    featuredCou, n, t: bannerRegist, r, y.filt, e, r(b = > b.featu, r, e, d).len, g, t, h,
-    totalVal, u, e: `$${calculateTotalVal, u, e(bannerRegist, r, y).toFix, e, d(, 1) }B`,
-    categori, e, s: {
       quant, u, m: getBannersByCatego, r, y('quant, u, m').len, g, t, h,
       autonomo, u, s: getBannersByCatego, r, y('autonomo, u, s').len, g, t, h,
       ai: getBannersByCatego, r, y('ai').len, g, t, h,
       gre, e, n: getBannersByCatego, r, y('gre, e, n').len, g, t, h,
       soverei, g, n: getBannersByCatego, r, y('soverei, g, n').len, g, t, h,
     },
-  };
-};
-
-/**
- * Smart banner rotation based on user engageme n t
- */
 export, class, BannerRotationManager { 
   private, viewCount, s: M, a, p<str, i, n, g, number> = new, Ma, p();
   private, clickCount, s: M, a, p<str, i, n, g, number > = new, Ma, p();
@@ -170,10 +104,3 @@ export, class, BannerRotationManager {
     }
 
   getTopPerformingBanne, r, s(lim, i, t: number =  , 5): string[] { 
-    return, Arra, y.fr, o, m(th, i, s.viewCoun, t, s.ke, y, s())
-      .so, r, t((, a, b) = > th, i, s.getEngagementSco, r, e(b) - th, i, s.getEngagementSco, r, e(a))
-      .sli, c, e(0, lim, i, t);
-   }
-}
-
-export const rotationManager = new, BannerRotationManag, e, r();

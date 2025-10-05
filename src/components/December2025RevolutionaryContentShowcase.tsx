@@ -181,7 +181,3 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default December2025RevolutionaryContentShowcase;

@@ -13,6 +13,3 @@ const NewContentAnnouncement: React.FC = () => {
       </div>
     </div>
   );
-};
-
-export default NewContentAnnouncement;

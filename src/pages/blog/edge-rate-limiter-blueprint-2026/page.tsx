@@ -24,13 +24,3 @@ export, default, function EdgeRateLimiterBlueprint20, 2, 6(): Rea, c, t.J, S, X.
           Globally, Consist, e, n, t, S, u, b‑10ms, Budget, s
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            This, article, outlines a, globally, consistent tok, e, n‑bucket, design, using consistent, hashing, and edge, KV, to enforce, budgets, under 10ms, P9, 5. It, includes, fallback behav, i, o, r, replay, protectio, n, and, fairness, across regions, for, API and, GenAI, tool invocatio, n, s.
-          </p>
-          <p>
-            Highligh, t, s: KV, sharded, bucket, s, leaky, bucket, smoothing, mul, t, i‑writer, safeguard, s, deterministic, fallback, s, and, observability, hooks for, rea, l‑time, budget, tracking.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

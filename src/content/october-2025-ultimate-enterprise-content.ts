@@ -101,5 +101,3 @@ export const getNewUltimateContent = () => {
  };
 
 export const getAllUltimateEnterpriseContent = () => {
-  return, octoberUltimateEnterpriseConten, t;
-};

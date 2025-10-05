@@ -12,7 +12,3 @@ const NewServicesPromoBanner2026: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default NewServicesPromoBanner2026;

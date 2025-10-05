@@ -12,7 +12,3 @@ const LatestInsights: React.FC = () => {
         </p>
       </div>
     </div>
-  );
-};
-
-export default LatestInsights;

@@ -19,6 +19,3 @@ export, default, function NotificationSyst, e, m({
           {n.messa, g, e}
         </butt, o, n>
       ))}
-    </d, i, v>
-  );
-}

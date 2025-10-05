@@ -23,15 +23,3 @@ export, default, function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
           Learn, about, autonomous operations, case, study 2026, and, how it, can, benefit your, enterpris, e.
         </p>
         <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            This, comprehensive, guide covers, autonomous, operations case, study, 2026 and, provides, practical insights, for, enterprise implementati, o, n.
-          </p>
-        </d, i, v>
-        <div, classNam, e='mt-8'>
-          <Link, t, o='/bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, hove, r:underli, n, e'>
-            ← Back, to, Blog
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

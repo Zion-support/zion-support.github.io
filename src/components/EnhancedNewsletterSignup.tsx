@@ -14,12 +14,6 @@ export, default, function EnhancedNewsletterSign, u, p({ title = 'Stay, Updat, e
     setEm, a, i, l('');
    };
 
-  if (isSubscrib, e, d) {
-    retu, r, n (
-      <div, classNam, e = {`bg-gre, e, n-100, border, border-gre, e, n-400, tex, t-gre, e, n-700, p, x-4, p, y-3, rounde, d ${classNa, m, e}`}>
-        Thank, you, for subscribing, to, our newslett, e, r!
-      </di, v  > );
-  }
 
   retu, r, n (
     <form, onSubmi, t = { handleSub, m, i, t }, classNa, m, e = {`bg-gr, a, y-10, 0, p-6, rounde, d-lg ${classNa, m, e}`} ar, i, a-lab, e, l="Newsletter, signu, p">
@@ -35,10 +29,3 @@ export, default, function EnhancedNewsletterSign, u, p({ title = 'Stay, Updat, e
 
         <button, typ, e="subm, i, t"
           classNa, m, e="bg-bl, u, e-600, tex, t-white, p, x-4, p, y-2, rounde, d-md, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
-        >
-          Subscri, b, e
-        </butt, o, n>
-      </d, i, v>
-    </fo, r, m>
-  );
-}

@@ -14,99 +14,12 @@ const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = (
     succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, borde, r-gre, e, n-4, 0, 0/3, 0',
     warni, n, g: 'bg-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, borde, r-oran, g, e-4, 0, 0/3, 0'
   }; const, featuredConten, t = [
-    {
-      title: "AI, Safety, Budgets 20, 2, 6",
-      description: "Guardrails, wired, to K, P, I, s, approva, l, s, rollbac, k, s",
-      ic, o, n: Shi, e, l, d,
-      li, n, k: "/bl, o, g/ai-safe, t, y-budge, t, s-2, 0, 2, 6",
-      category: "AI, Strate, g, y"
-    },
-    {
-      title: "Edge, Privacy, for ML, 20, 2, 6",
-      description: "On‑device, filters, and scoped, identifie, r, s",
-      ic, o, n: Cl, o, u, d,
-      li, n, k: "/bl, o, g/ed, g, e-priva, c, y-ml-2, 0, 2, 6",
-      category: "E, d, g, e"
-    },
-    {
-      title: "Agent, Evals, in Prod, 20, 2, 6",
-      description: "Online, checks, that predict, outcom, e, s",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/age, n, t-eva, l, s-in-pr, o, d-2, 0, 2, 6",
-      category: "Ge, n, A, I"
-    },
-    {
       title: "Co, s, t‑Aware, Inference, 202, 6",
       description: "Warm, pools, and quality, tiers, under S, L, A, s",
       ic, o, n: Za, p,
       li, n, k: "/bl, o, g/ai-co, s, t-awa, r, e-inferen, c, e-2, 0, 2, 6",
       category: "Ge, n, A, I"
     },
-    {
-      title: "Platform, Golden, Paths 2, 0, 2, 6",
-      description: "Paved, roads, that move, KP, I, s",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/platfo, r, m-gold, e, n-pat, h, s-kp, i, s-2, 0, 2, 6",
-      category: "Platf, o, r, m"
-    },
-    {
-      title: "Quali, t, y‑Tiered, GenAI, Routing 2, 0, 2, 6",
-      description: "Control, cost, with ti, e, r, s, cach, e, s, and, eval, signals",
-      ic, o, n: Za, p,
-      li, n, k: "/bl, o, g/gen, a, i-routi, n, g-und, e, r-budge, t, s-2, 0, 2, 6",
-      category: "Ge, n, A, I"
-    },
-    {
-      title: "On‑Device, Agents, 202, 6",
-      description: "Offli, n, e‑capable, too, l, s, private, cache, s, safe, fallback, s",
-      ic, o, n: Cl, o, u, d,
-      li, n, k: "/bl, o, g/on-devi, c, e-agen, t, s-offli, n, e-too, l, s-2, 0, 2, 6",
-      category: "E, d, g, e"
-    },
-    {
-      title: "Ze, r, o‑Trust, Observability, 202, 6",
-      description: "Signed, traces, and lea, s, t‑privilege, telemet, r, y",
-      ic, o, n: Shi, e, l, d,
-      li, n, k: "/bl, o, g/ze, r, o-tru, s, t-observabili, t, y-2, 0, 2, 6",
-      category: "Secur, i, t, y"
-    },
-    {
-      title: "AI, Incident, Response Playbo, o, k, s",
-      description: "Contain, incidents, in under, 60, second, s",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/ai-incide, n, t-respon, s, e-playboo, k, s-2, 0, 2, 5",
-      category: "Secur, i, t, y"
-    },
-    {
-      title: "Agentic, Workflows, Blueprint 2, 0, 2, 6",
-      description: "Compose, mult, i‑tool, agents, with safe, tools, and policy, tests, in C, I",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/agent, i, c-workflo, w, s-bluepri, n, t-2, 0, 2, 6",
-      category: "Ge, n, A, I"
-    },
-    {
-      title: "Edge, LLM, Cachin, g",
-      description: "S, u, b‑100ms, prompts, via tiere, d, K, V, signed, config, s, freshness, window, s",
-      ic, o, n: Za, p,
-      li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-2, 0, 2, 5",
-      category: "Architect, u, r, e"
-    },
-    {
-      title: "AI, Operational, Scorecards 2, 0, 2, 6",
-      description: "Guardrails, wired, to KPIs, with, PR che, c, k, s, canari, e, s, and, SLO, s",
-      ic, o, n: Br, a, i, n,
-      li, n, k: "/bl, o, g/ai-operation, a, l-scorecar, d, s-2, 0, 2, 6",
-      category: "AI, Strate, g, y"
-    }
-  ]; if (isDismiss, e, d) return, nul, l;
-  retu, r, n (
-    <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
-      {/* Animated, background, elements */}
-      <div, classNam, e="absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
-        <div, classNam, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-1, 6, h-16, b, g-white, rounde, d-full, animat, e-pi, n, g" />
-      </d, i, v>
       <div, classNam, e="relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-6, p, y-6">
         <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
           <div, classNam, e="fl, e, x-1">
@@ -175,17 +88,3 @@ const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = (
               <div, classNam, e="flex, item, s-center, ga, p-1">
                 <span, classNam, e="fo, n, t-semibo, l, d">50+</sp, a, n>
                 <sp, a, n>Expert, Insight, s</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-          {/* Dismiss, butto, n */}
-          <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
-          >
-            <X, classNam, e="w-5 h-5" />
-          </butt, o, n>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
-  );
-};
-export, default, React.me, m, o(NewContentPromoBann, e, r);

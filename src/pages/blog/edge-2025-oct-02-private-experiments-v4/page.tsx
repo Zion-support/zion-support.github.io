@@ -22,11 +22,3 @@ export, default, function PrivateExperiments, V, 4(): Rea, c, t.J, S, X.Eleme, n
           Stand, up, privacy-first, experiments, with edge, aggregat, i, o, n, signed, config, s, and, budget, s.
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
-          <p>
-            Build, consen, t-safe, experimentation, pipelines that, run, under 100, m, s.
-            Use, scoped, identifier, s, on-device, aggregatio, n, and, differential, privacy to, protect, users while, keeping, signals ri, c, h.
-          </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
- }

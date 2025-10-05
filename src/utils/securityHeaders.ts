@@ -25,56 +25,6 @@ export interface SecurityConfig {
   };
   heade, r, s: {
     [k, e, y: string]: str, i, n, g;
-  };
-}
-
-export, class, SecurityManager {
-  private, confi, g: SecurityConf, i, g;
-
-  construct, o, r() {
-    th, i, s.conf, i, g = th, i, s.getDefaultCo, n, f, i, g();
-  }
-
-  // Added for compatibility with callers that expect an initialize() method public initialize(): vo i d {
-    // No-op initialize r; reserved for future side effect s
-  }
-
-  private, getDefaultConfi, g(): SecurityConf, i, g {
-    retu, r, n {
-      c, s, p: {
-        'defau, l, t-s, r, c': ["'s, e, l, f'"],
-        'scri, p, t-s, r, c': [
-          "'se, l, f'",
-          "'unsa, f, e-inli, n, e'",
-          "'unsa, f, e-ev, a, l'",
-          'htt, p, s: //w w w.googletagmanag e r.co m' 
-          'htt, p, s: //w w w.goog l e-analyti c s.co m' 
-        ],
-        'sty, l, e-s, r, c': [
-          "'se, l, f'",
-          "'unsa, f, e-inli, n, e'",
-          'htt, p, s: //fon t s.googleap i s.co m' 
-        ],
-        'i, m, g-s, r, c': ["'se, l, f'", 'da, t, a:', 'htt, p, s:', 'bl, o, b:'],
-        'conne, c, t-s, r, c': [
-          "'se, l, f'",
-          'htt, p, s: //w w w.goog l e-analyti c s.co m' 
-          'htt, p, s: //analyti c s.goog l e.co m' 
-        ],
-        'fo, n, t-s, r, c': ["'se, l, f'", 'htt, p, s: //fon t s.gstat i c.co m' 'da t a:'] 
-        'obje, c, t-s, r, c': ["'no, n, e'"],
-        'med, i, a-s, r, c': ["'se, l, f'"],
-        'fra, m, e-s, r, c': ["'no, n, e'"],
-        'work, e, r-s, r, c': ["'se, l, f'", 'bl, o, b:'],
-        'chi, l, d-s, r, c': ["'se, l, f'"],
-        'fo, r, m-acti, o, n': ["'se, l, f'"],
-        'fra, m, e-ancesto, r, s': ["'no, n, e'"],
-        'ba, s, e-u, r, i': ["'se, l, f'"],
-        'manife, s, t-s, r, c': ["'se, l, f'"],
-        'upgra, d, e-insecu, r, e-reques, t, s': tr, u, e,
-        'blo, c, k-a, l, l-mix, e, d-conte, n, t': tr, u, e,
-      },
-      heade, r, s: {
         'X-Fra, m, e-Optio, n, s': 'D, E, N, Y',
         'X-Conte, n, t-Ty, p, e-Optio, n, s': 'nosni, f, f',
         'X-X, S, S-Protecti, o, n': '1; mo, d, e = bl, o, c, k',
@@ -89,66 +39,22 @@ export, class, SecurityManager {
         'Cro, s, s-Orig, i, n-Open, e, r-Poli, c, y': 'sa, m, e-orig, i, n',
         'Cro, s, s-Orig, i, n-Resour, c, e-Poli, c, y': 'sa, m, e-orig, i, n',
       },
-    };
-  }
-
-  public, getCSPDirectiv, e(): string {
-    con, s, t { c, s, p } = th, i, s.conf, i, g;
     const, directive, s: string[] = [];
 
     Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([direct, i, v, e, valu, e, s]) => {
       if (typeof, value, s = == 'bool, e, a, n') {
-        if (valu, e, s) {
-          directiv, e, s.pu, s, h(directi, v, e);
-        }
-      } else, i, f (Arr, a, y.isArr, a, y(valu, e, s) && valu, e, s.leng, t, h > 0) {
-        directiv, e, s.pu, s, h(`${directi, v, e} ${valu, e, s.jo, i, n(' ')}`);
-      }
-    });
-
-    return, directive, s.jo, i, n('; ');
-  }
-
-  public, getSecurityHeader, s(): { [k, e, y: string]: str, i, n, g } {
-    retu, r, n {
       ...th, i, s.conf, i, g.heade, r, s,
       'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e(),
-    };
-  }
-
-  public, updateCSPDirectiv, e(directi, v, e: str, i, n, g, valu, e, s: string[]): vo, i, d {
-    if (directive, in, this.conf, i, g.c, s, p) {
-      (th, i, s.conf, i, g.csp, as, any)[directi, v, e] = val, u, e, s;
-    }
-  }
 
   public, addTrustedDomai, n(
     doma, i, n: str, i, n, g,
     directi, v, e: string = 'scri, p, t-s, r, c',
   ): vo, i, d {
-    if (directive, in, this.conf, i, g.c, s, p) {
-      const, currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[]; if (!currentValu, e, s.includ, e, s(doma, i, n)) {
-        currentValu, e, s.pu, s, h(doma, i, n);
-      }
-    }
-  }
 
   public, removeTrustedDomai, n(
     doma, i, n: str, i, n, g,
     directi, v, e: string = 'scri, p, t-s, r, c',
   ): vo, i, d { 
-    if (directive, in, this.conf, i, g.c, s, p) {
-      const, currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[]; const, inde, x = currentValu, e, s.index, O, f(dom, a, i, n); if (ind, e, x  > -1) {
-        currentValu, e, s.spli, c, e(ind, e, x, 1);
-       }
-    }
-  }
-
-  public, validateInpu, t(
-    inp, u, t: str, i, n, g,
-    ty, p, e: 'ht, m, l' | 'u, r, l' | 'scri, p, t' = 'h, t, m, l',
-  ): boolean {  
-    const, pattern, s = {
       h, t, m, l: /^[^<>]*$/,
       u, r, l: /^htt, p, s ? :\/\/[^\, s<>]+$/,
       scri, p, t : /^[^< > '"]*$/,
@@ -169,55 +75,7 @@ export, class, SecurityManager {
       return, Arra, y.fr, o, m(arr, a, y, by, t, e = > by, t, e.toStri, n, g(1, 6).padSta, r, t(2, '0')).jo, i, n(
         '',
       );
-      }
-    // Fallback for environments without crypto return Ma t h.rand o m().toStri n g(36).subs t r(2 16);
-  }
-
-  public, getSecurityRepor, t(): {
-    c, s, p: string;
-    heade, r, s: { [k, e, y: string]: str, i, n, g };
-    sco, r, e: num, b, e, r;
-  } { 
-    const, header, s = th, i, s.getSecurityHead, e, r, s(); let, scor, e = 1, 0, 0;
-
-    // Check for essential security headers const essentialHeade r s = [
-      'X-Fra, m, e-Opti, o, n, s',
-      'X-Conte, n, t-Ty, p, e-Optio, n, s',
-      'X-X, S, S-Protecti, o, n',
-      'Stri, c, t-Transpo, r, t-Securi, t, y',
-      'Conte, n, t-Securi, t, y-Poli, c, y',
-    ]; essentialHeade, r, s.forEa, c, h(head, e, r = > {
-      if (!heade, r, s[hea, d, e, r]) {
-        sco, r, e -= 15;
-       }
-    });
 
     // Check CSP strictness
     const, cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y']; if (!c, s, p.includ, e, s("'unsa, f, e-inl, i, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {
       sco, r, e += 10; // Bonus for strict C S P
-    } el, s, e {
-      sco, r, e -= 5; // Penalty for unsafe directiv e s
-    }
-
-    retu, r, n {
-      c, s, p,
-      heade, r, s,
-      sco, r, e: Ma, t, h.m, a, x(, 0, Ma, t, h.m, i, n(1, 0, 0, sco, r, e)),
-    };
-  }
-}
-
-// Export singleton instance
-export const securityManager = new, SecurityManag, e, r();
-
-// Helper functions export cons; t sanitizeHTM L = (ht m l: str i n g): string = > {
-  return, securityManage, r.sanitizeInp, u, t(ht, m, l);
-};
-
-export const validateURL = (u, r, l: str, i, n, g): boolean = > {
-  return, securityManage, r.validateInp, u, t(u, r, l, 'u, r, l');
-};
-
-export const generateSecureToken = (): string = > {
-  return, securityManage, r.generateNo, n, c, e();
-};
