@@ -52,7 +52,7 @@ export default function FeaturedContentBanner2025() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {featuredContent.map((content, index) = > (
+          {featuredContent.map((content, index) => (
             <a
               key={index}
               href={content.href}

@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
-<<<<<<< HEAD
-import AdvancedAccessibilityManager from "../utils/advancedAccessibilityManager";
-import AdvancedSecurityManager from "../utils/advancedSecurityManager";
-import EnhancedUXManager from "../utils/enhancedUXManager";
-=======
-import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
-import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
-import EnhancedUXManager from '../utils/enhancedUXManager';
->>>>>>> 4ba245a45fc5 (Checkpoint before follow-up message)
+// import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
+// import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
+// import EnhancedUXManager from '../utils/enhancedUXManager';
 
 interface PerformanceData {
   memoryUsage: number;
@@ -142,17 +136,27 @@ const AdvancedDashboard: React.FC = () => {
       },
       accessibility: {
         // Get accessibility stats from manager
-        features: AdvancedAccessibilityManager.getInstance()
-          ? "Active"
-          : "Inactive",
+<<<<<<< HEAD
+        features: "Accessibility features disabled", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
       },
       security: {
         // Get security stats from manager
-        status: AdvancedSecurityManager.getInstance() ? "Active" : "Inactive",
+        status: "Security features disabled", // AdvancedSecurityManager.getInstance() ? "Active" : "Inactive",
       },
       ux: {
         // Get UX stats from manager
-        status: EnhancedUXManager.getInstance() ? "Active" : "Inactive",
+        status: "UX features disabled", // EnhancedUXManager.getInstance() ? "Active" : "Inactive",
+=======
+        features: "Active", // Fallback value
+      },
+      security: {
+        // Get security stats from manager
+        status: "Active", // Fallback value
+      },
+      ux: {
+        // Get UX stats from manager
+        status: "Active", // Fallback value
+>>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b
       },
     });
   };

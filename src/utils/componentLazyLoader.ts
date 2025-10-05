@@ -18,21 +18,21 @@ export interface LazyLoadConfig {
  */
 export function createLazyComponent<T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
-  fallback?: ComponentType<any>
+  fallback?: ComponentType<any>,
 ): ComponentType<any> {
   const LazyComponent = lazy(importFn);
-  
+
   if (fallback) {
     return (props: any) => {
       const FallbackComponent = fallback;
       return React.createElement(
         ErrorBoundary,
         { fallback: React.createElement(FallbackComponent) },
-        React.createElement(LazyComponent, props)
+        React.createElement(LazyComponent, props),
       );
     };
   }
-  
+
   return LazyComponent;
 }
 
@@ -42,7 +42,7 @@ export function createLazyComponent<T extends ComponentType<any>>(
 export function preloadComponent(importFn: () => Promise<any>): void {
   // Start loading the component
   const promise = importFn();
-  
+
   // Store in cache for faster subsequent loads
   if ('requestIdleCallback' in window) {
     requestIdleCallback(() => {
@@ -64,24 +64,24 @@ export function preloadComponent(importFn: () => Promise<any>): void {
  */
 export function createVisibilityLazyComponent<T extends ComponentType<any>>(
   importFn: () => Promise<{ default: T }>,
-  threshold: number = 0.1
+  threshold: number = 0.1,
 ): ComponentType<any> {
   return lazy(() => {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       // Check if IntersectionObserver is supported
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
+          entries => {
+            entries.forEach(entry => {
               if (entry.isIntersecting) {
                 importFn().then(resolve);
                 observer.disconnect();
               }
             });
           },
-          { threshold }
+          { threshold },
         );
-        
+
         // Observe the placeholder element
         // This will be triggered when component mounts
         setTimeout(() => importFn().then(resolve), 100);
@@ -98,7 +98,7 @@ export function createVisibilityLazyComponent<T extends ComponentType<any>>(
  */
 export function batchPreload(
   components: Array<() => Promise<any>>,
-  delayMs: number = 100
+  delayMs: number = 100,
 ): void {
   components.forEach((importFn, index) => {
     setTimeout(() => {
@@ -136,4 +136,3 @@ class ErrorBoundary extends React.Component<
     return this.props.children;
   }
 }
-

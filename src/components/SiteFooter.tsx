@@ -20,7 +20,6 @@ const SiteFooter: React.FC = () => {
           </div>
 
           <div>
-            
             <ul className='space-y-2'>
               <li>
                 <Link to='/services' className='hover:text-white'>
@@ -46,7 +45,6 @@ const SiteFooter: React.FC = () => {
           </div>
 
           <div>
-            
             <ul className='space-y-2'>
               <li>
                 <Link to='/solutions' className='hover:text-white'>
@@ -72,7 +70,6 @@ const SiteFooter: React.FC = () => {
           </div>
 
           <div>
-            
             <ul className='space-y-2'>
               <li>
                 <Link to='/about' className='hover:text-white'>
@@ -114,7 +111,9 @@ const SiteFooter: React.FC = () => {
         </div>
 
         <div className='border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center'>
-          <p > © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
+          <p>
+            {' '}
+            © {new Date().getFullYear()} Zion Tech Group. All rights reserved.
           </p>
         </div>
       </div>

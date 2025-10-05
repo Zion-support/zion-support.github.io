@@ -58,14 +58,9 @@ class ContentRecommendationEngine {
       excludeViewed?: boolean;
       category?: string;
       type?: ContentItem['type'];
-    } = {}
+    } = {},
   ): RecommendationResult[] {
-    const {
-      limit = 5,
-      excludeViewed = true,
-      category,
-      type,
-    } = options;
+    const { limit = 5, excludeViewed = true, category, type } = options;
 
     // Get or create user profile
     const userProfile = this.createUserProfile(userId);
@@ -75,28 +70,28 @@ class ContentRecommendationEngine {
 
     if (excludeViewed) {
       candidates = candidates.filter(
-        (item) => !userProfile.viewedContent.includes(item.id)
+        item => !userProfile.viewedContent.includes(item.id),
       );
     }
 
     if (category) {
-      candidates = candidates.filter((item) => item.category === category);
+      candidates = candidates.filter(item => item.category === category);
     }
 
     if (type) {
-      candidates = candidates.filter((item) => item.type === type);
+      candidates = candidates.filter(item => item.type === type);
     }
 
     // Score each candidate
-    const scored = candidates.map((item) => this.scoreContent(item, userProfile));
+    const scored = candidates.map(item => this.scoreContent(item, userProfile));
 
     // Sort by score and return top results
     const topRecommendations = scored
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
 
-    return topRecommendations.map((rec) => {
-      const content = this.contentCatalog.find((c) => c.id === rec.contentId)!;
+    return topRecommendations.map(rec => {
+      const content = this.contentCatalog.find(c => c.id === rec.contentId)!;
       return {
         content,
         score: rec.score,
@@ -108,16 +103,20 @@ class ContentRecommendationEngine {
   /**
    * Score content for user
    */
-  private scoreContent(content: ContentItem, profile: UserProfile): RecommendationScore {
+  private scoreContent(
+    content: ContentItem,
+    profile: UserProfile,
+  ): RecommendationScore {
     let score = 0;
     const reasons: string[] = [];
 
     // Interest matching
-    const interestMatches = content.tags.filter((tag) =>
-      profile.interests.some((interest) => 
-        interest.toLowerCase().includes(tag.toLowerCase()) ||
-        tag.toLowerCase().includes(interest.toLowerCase())
-      )
+    const interestMatches = content.tags.filter(tag =>
+      profile.interests.some(
+        interest =>
+          interest.toLowerCase().includes(tag.toLowerCase()) ||
+          tag.toLowerCase().includes(interest.toLowerCase()),
+      ),
     );
 
     if (interestMatches.length > 0) {
@@ -204,7 +203,7 @@ class ContentRecommendationEngine {
       interest?: string;
       category?: string;
       engagement?: number;
-    }
+    },
   ): void {
     const profile = this.createUserProfile(userId);
 
@@ -236,26 +235,29 @@ class ContentRecommendationEngine {
    * Get similar content
    */
   getSimilarContent(contentId: string, limit: number = 5): ContentItem[] {
-    const source = this.contentCatalog.find((c) => c.id === contentId);
+    const source = this.contentCatalog.find(c => c.id === contentId);
     if (!source) return [];
 
     // Calculate similarity scores
     const scored = this.contentCatalog
-      .filter((c) => c.id !== contentId)
-      .map((item) => ({
+      .filter(c => c.id !== contentId)
+      .map(item => ({
         content: item,
         score: this.calculateSimilarity(source, item),
       }))
       .sort((a, b) => b.score - a.score)
       .slice(0, limit);
 
-    return scored.map((s) => s.content);
+    return scored.map(s => s.content);
   }
 
   /**
    * Calculate content similarity
    */
-  private calculateSimilarity(content1: ContentItem, content2: ContentItem): number {
+  private calculateSimilarity(
+    content1: ContentItem,
+    content2: ContentItem,
+  ): number {
     let score = 0;
 
     // Same category
@@ -264,7 +266,7 @@ class ContentRecommendationEngine {
     }
 
     // Tag overlap
-    const commonTags = content1.tags.filter((tag) => content2.tags.includes(tag));
+    const commonTags = content1.tags.filter(tag => content2.tags.includes(tag));
     score += Math.min(commonTags.length * 15, 45);
 
     // Same type
@@ -280,7 +282,7 @@ class ContentRecommendationEngine {
    */
   getTrendingContent(limit: number = 10): ContentItem[] {
     return this.contentCatalog
-      .filter((c) => c.views || c.conversions)
+      .filter(c => c.views || c.conversions)
       .sort((a, b) => {
         const scoreA = (a.views || 0) * 0.7 + (a.conversions || 0) * 100;
         const scoreB = (b.views || 0) * 0.7 + (b.conversions || 0) * 100;
@@ -294,7 +296,7 @@ class ContentRecommendationEngine {
    */
   getByCategory(category: string, limit: number = 10): ContentItem[] {
     return this.contentCatalog
-      .filter((c) => c.category === category)
+      .filter(c => c.category === category)
       .slice(0, limit);
   }
 
@@ -302,9 +304,7 @@ class ContentRecommendationEngine {
    * Get content by type
    */
   getByType(type: ContentItem['type'], limit: number = 10): ContentItem[] {
-    return this.contentCatalog
-      .filter((c) => c.type === type)
-      .slice(0, limit);
+    return this.contentCatalog.filter(c => c.type === type).slice(0, limit);
   }
 
   /**
@@ -312,16 +312,16 @@ class ContentRecommendationEngine {
    */
   searchContent(query: string, limit: number = 10): ContentItem[] {
     const lowerQuery = query.toLowerCase();
-    
+
     return this.contentCatalog
-      .map((item) => ({
+      .map(item => ({
         content: item,
         relevance: this.calculateRelevance(item, lowerQuery),
       }))
-      .filter((r) => r.relevance > 0)
+      .filter(r => r.relevance > 0)
       .sort((a, b) => b.relevance - a.relevance)
       .slice(0, limit)
-      .map((r) => r.content);
+      .map(r => r.content);
   }
 
   /**
@@ -341,8 +341,8 @@ class ContentRecommendationEngine {
     }
 
     // Tag matches
-    const matchingTags = content.tags.filter((tag) =>
-      tag.toLowerCase().includes(query)
+    const matchingTags = content.tags.filter(tag =>
+      tag.toLowerCase().includes(query),
     );
     score += matchingTags.length * 10;
 
@@ -352,7 +352,9 @@ class ContentRecommendationEngine {
   /**
    * Estimate content complexity
    */
-  private estimateComplexity(content: ContentItem): 'beginner' | 'intermediate' | 'advanced' {
+  private estimateComplexity(
+    content: ContentItem,
+  ): 'beginner' | 'intermediate' | 'advanced' {
     // Simple heuristic based on tags and title
     const technicalTerms = [
       'quantum',
@@ -364,9 +366,10 @@ class ContentRecommendationEngine {
       'microservices',
     ];
 
-    const hasTechnicalTerms = technicalTerms.some((term) =>
-      content.title.toLowerCase().includes(term) ||
-      content.tags.some((tag) => tag.toLowerCase().includes(term))
+    const hasTechnicalTerms = technicalTerms.some(
+      term =>
+        content.title.toLowerCase().includes(term) ||
+        content.tags.some(tag => tag.toLowerCase().includes(term)),
     );
 
     if (hasTechnicalTerms) {
@@ -392,13 +395,19 @@ class ContentRecommendationEngine {
    * Get personalized feed
    */
   getPersonalizedFeed(userId: string, limit: number = 20): ContentItem[] {
-    const recommendations = this.getRecommendations(userId, { limit: limit * 2 });
+    const recommendations = this.getRecommendations(userId, {
+      limit: limit * 2,
+    });
     const trending = this.getTrendingContent(5);
     const recent = this.getRecentContent(5);
 
     // Interleave recommendations, trending, and recent
     const feed: ContentItem[] = [];
-    const maxItems = Math.max(recommendations.length, trending.length, recent.length);
+    const maxItems = Math.max(
+      recommendations.length,
+      trending.length,
+      recent.length,
+    );
 
     for (let i = 0; i < maxItems && feed.length < limit; i++) {
       if (i < recommendations.length) feed.push(recommendations[i].content);
@@ -408,11 +417,13 @@ class ContentRecommendationEngine {
 
     // Remove duplicates
     const seen = new Set<string>();
-    return feed.filter((item) => {
-      if (seen.has(item.id)) return false;
-      seen.add(item.id);
-      return true;
-    }).slice(0, limit);
+    return feed
+      .filter(item => {
+        if (seen.has(item.id)) return false;
+        seen.add(item.id);
+        return true;
+      })
+      .slice(0, limit);
   }
 
   /**
@@ -433,7 +444,7 @@ class ContentRecommendationEngine {
    */
   trackView(contentId: string, userId: string, duration: number): void {
     // Update content metrics
-    const content = this.contentCatalog.find((c) => c.id === contentId);
+    const content = this.contentCatalog.find(c => c.id === contentId);
     if (content) {
       content.views = (content.views || 0) + 1;
     }
@@ -449,8 +460,8 @@ class ContentRecommendationEngine {
       this.updateUserProfile(userId, {
         category: content.category,
       });
-      
-      content.tags.forEach((tag) => {
+
+      content.tags.forEach(tag => {
         this.updateUserProfile(userId, {
           interest: tag,
         });
@@ -462,7 +473,7 @@ class ContentRecommendationEngine {
    * Track conversion
    */
   trackConversion(contentId: string): void {
-    const content = this.contentCatalog.find((c) => c.id === contentId);
+    const content = this.contentCatalog.find(c => c.id === contentId);
     if (content) {
       content.conversions = (content.conversions || 0) + 1;
     }
@@ -476,7 +487,7 @@ class ContentRecommendationEngine {
     conversions: number;
     conversionRate: number;
   } | null {
-    const content = this.contentCatalog.find((c) => c.id === contentId);
+    const content = this.contentCatalog.find(c => c.id === contentId);
     if (!content) return null;
 
     const views = content.views || 0;

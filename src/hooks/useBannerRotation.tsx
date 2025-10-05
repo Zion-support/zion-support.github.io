@@ -43,7 +43,7 @@ export const useBannerRotation = ({
   const [displayedBanners, setDisplayedBanners] = useState<BannerConfig[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [, setLastRotation] = useState(Date.now());
-  
+
   // Load banner statistics from storage
   const bannersWithStats = useMemo(() => {
     return banners.map(banner => ({
@@ -51,60 +51,61 @@ export const useBannerRotation = ({
       ...loadBannerStats(banner.id),
     }));
   }, [banners]);
-  
+
   // Select banners to display
   const selectBanners = useCallback(() => {
     const selected = balancedSelection
       ? selectBalancedBanners(bannersWithStats)
       : selectBannersForDisplay(bannersWithStats, strategy as RotationStrategy);
-    
+
     setDisplayedBanners(selected);
     setLastRotation(Date.now());
     setIsLoading(false);
   }, [bannersWithStats, strategy, balancedSelection]);
-  
+
   // Handle banner impression
   const handleBannerImpression = useCallback((bannerId: string) => {
     trackImpression(bannerId);
     trackBannerInteraction(bannerId, 'impression');
   }, []);
-  
+
   // Handle banner click
   const handleBannerClick = useCallback((bannerId: string) => {
     trackClick(bannerId);
     trackBannerInteraction(bannerId, 'click');
   }, []);
-  
+
   // Refresh banners manually
   const refreshBanners = useCallback(() => {
     selectBanners();
   }, [selectBanners]);
-  
+
   // Initial selection
   useEffect(() => {
     selectBanners();
   }, [selectBanners]);
-  
+
   // Auto-rotation
   useEffect(() => {
     if (!autoRotate) return;
-    
+
     // Calculate refresh interval based on engagement
-    const avgEngagement = bannersWithStats.reduce((sum, b) => {
-      const impressions = b.impressions || 0;
-      const clicks = b.clicks || 0;
-      return sum + (impressions > 0 ? (clicks / impressions) * 100 : 0);
-    }, 0) / bannersWithStats.length;
-    
+    const avgEngagement =
+      bannersWithStats.reduce((sum, b) => {
+        const impressions = b.impressions || 0;
+        const clicks = b.clicks || 0;
+        return sum + (impressions > 0 ? (clicks / impressions) * 100 : 0);
+      }, 0) / bannersWithStats.length;
+
     const interval = getRefreshInterval(avgEngagement);
-    
+
     const timer = setInterval(() => {
       selectBanners();
     }, interval);
-    
+
     return () => clearInterval(timer);
   }, [autoRotate, bannersWithStats, selectBanners]);
-  
+
   return {
     displayedBanners,
     handleBannerImpression,
@@ -119,14 +120,14 @@ export const useBannerRotation = ({
  */
 export const useBannerVisibility = (
   bannerId: string,
-  onVisible?: () => void
+  onVisible?: () => void,
 ): { ref: React.RefObject<HTMLDivElement | null> } => {
   const ref = React.useRef<HTMLDivElement | null>(null);
-  
+
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
-    
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -138,14 +139,14 @@ export const useBannerVisibility = (
       },
       {
         threshold: 0.5, // 50% visible
-      }
+      },
     );
-    
+
     observer.observe(element);
-    
+
     return () => observer.disconnect();
   }, [bannerId, onVisible]);
-  
+
   return { ref };
 };
 
@@ -154,7 +155,7 @@ export const useBannerVisibility = (
  */
 export const useBannerABTest = (
   variations: BannerConfig[],
-  testName: string
+  testName: string,
 ): {
   selectedVariation: BannerConfig;
   trackVariationPerformance: (metric: string, value: number) => void;
@@ -163,22 +164,22 @@ export const useBannerABTest = (
   const userId = useMemo(() => {
     const stored = localStorage.getItem('user_id');
     if (stored) return stored;
-    
+
     const newId = `user_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
     localStorage.setItem('user_id', newId);
     return newId;
   }, []);
-  
+
   // Select variation based on user ID (consistent assignment)
   const selectedVariation = useMemo(() => {
     const hash = Array.from(userId + testName).reduce(
       (acc, char) => acc + char.charCodeAt(0),
-      0
+      0,
     );
     const index = hash % variations.length;
     return variations[index];
   }, [userId, testName, variations]);
-  
+
   // Track variation performance
   const trackVariationPerformance = useCallback(
     (metric: string, value: number) => {
@@ -189,9 +190,9 @@ export const useBannerABTest = (
         value,
       });
     },
-    [selectedVariation, testName]
+    [selectedVariation, testName],
   );
-  
+
   return {
     selectedVariation,
     trackVariationPerformance,

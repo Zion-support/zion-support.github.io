@@ -1,4 +1,3 @@
-
 // Code quality utilities and configurations
 export const codeQualityUtils = {
   // Type checking utilities
@@ -9,30 +8,30 @@ export const codeQualityUtils = {
     }
     return true;
   },
-  
+
   // Deep object comparison
   deepEqual: (obj1, obj2) => {
     if (obj1 === obj2) return true;
     if (obj1 == null || obj2 == null) return false;
     if (typeof obj1 !== typeof obj2) return false;
-    
+
     if (typeof obj1 === 'object') {
       const keys1 = Object.keys(obj1);
       const keys2 = Object.keys(obj2);
-      
+
       if (keys1.length !== keys2.length) return false;
-      
+
       for (const key of keys1) {
         if (!keys2.includes(key)) return false;
         if (!deepEqual(obj1[key], obj2[key])) return false;
       }
-      
+
       return true;
     }
-    
+
     return false;
   },
-  
+
   // Debounce utility
   debounce: (func, wait) => {
     let timeout;
@@ -45,23 +44,23 @@ export const codeQualityUtils = {
       timeout = setTimeout(later, wait);
     };
   },
-  
+
   // Throttle utility
   throttle: (func, limit) => {
     let inThrottle;
-    return function(...args) {
+    return function (...args) {
       if (!inThrottle) {
         func.apply(this, args);
         inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
+        setTimeout(() => (inThrottle = false), limit);
       }
     };
   },
-  
+
   // Memoization
-  memoize: (fn) => {
+  memoize: fn => {
     const cache = new Map();
-    return function(...args) {
+    return function (...args) {
       const key = JSON.stringify(args);
       if (cache.has(key)) {
         return cache.get(key);
@@ -70,5 +69,5 @@ export const codeQualityUtils = {
       cache.set(key, result);
       return result;
     };
-  }
+  },
 };
