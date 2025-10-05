@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-interface BannerType {
-  variant: 'success' | 'warning' | 'info' | 'error';
+interface BannerData {
+  id: string;
   title: string;
   description: string;
-  icon?: string;
-  ctaText: string;
-  ctaLink: string;
+  variant: 'success' | 'warning' | 'info' | 'error';
+  link?: string;
+  linkText?: string;
 }
 
 interface EnhancedPromotionalBannerProps {
-  banner: BannerType;
+  banner: BannerData;
   className?: string;
 }
 
@@ -29,25 +29,21 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
   return (
     <div className={`${variantStyles[banner.variant]} text-white p-4 ${className}`}>
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between flex-wrap gap-4">
-          <div className="flex items-center gap-3 flex-1 min-w-0">
-            {banner.icon && (
-              <span className="text-2xl flex-shrink-0">{banner.icon}</span>
-            )}
-            <div className="flex-1 min-w-0">
-              <h3 className="font-bold text-lg">{banner.title}</h3>
-              <p className="text-sm opacity-90">{banner.description}</p>
-            </div>
+        <div className="flex items-center justify-between">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold mb-1">{banner.title}</h3>
+            <p className="text-sm opacity-90">{banner.description}</p>
           </div>
-          <Link
-            to={banner.ctaLink}
-            className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
-          >
-            {banner.ctaText}
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
+          {banner.link && banner.linkText && (
+            <div className="ml-4">
+              <Link
+                to={banner.link}
+                className="bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+              >
+                {banner.linkText}
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

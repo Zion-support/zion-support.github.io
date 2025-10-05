@@ -18,97 +18,55 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   keywords = 'AI solutions, enterprise AI, artificial intelligence, machine learning, automation',
   canonical,
   url = 'https://ziontechgroup.com',
-  image = 'https://ziontechgroup.com/og-image.jpg',
   type = 'website',
   author = 'Zion Tech Group',
+  image = 'https://ziontechgroup.com/og-image.jpg'
 }) => {
-  const metaKeywords = Array.isArray(keywords) ? keywords.join(', ') : keywords;
-  const canonicalUrl = canonical || url;
-  const structuredData = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description: 'Revolutionary AI and IT Solutions',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    sameAs: [
-      'https://linkedin.com/company/zion-tech-group',
-      'https://twitter.com/ziontechgroup',
-      'https://github.com/ZionClouds',
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-123-4567',
-      contactType: 'customer service',
-      email: 'info@ziontechgroup.com',
-    },
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: '123 Innovation Drive',
-      addressLocality: 'San Francisco',
-      addressRegion: 'CA',
-      postalCode: '94105',
-      addressCountry: 'US',
-    },
-    foundingDate: '2020',
-    numberOfEmployees: '500+',
-    industry: 'Artificial Intelligence',
-    services: [
-      'AI Workflow Automation',
-      'Enterprise AI Solutions',
-      'AI Data Analytics',
-      'Cybersecurity AI',
-      'Quantum Computing',
-      'AI Consulting',
-    ],
-  };
+  const keywordsString = Array.isArray(keywords) ? keywords.join(', ') : keywords;
 
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
-      <meta name="keywords" content={metaKeywords} />
+      <meta name="keywords" content={keywordsString} />
       <meta name="author" content={author} />
-      <meta name="robots" content="index,follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-      {/* Open Graph Meta Tags */}
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content={type} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content={type} />
-      <meta property="og:site_name" content="Zion Tech Group" />
-      <meta property="og:locale" content="en_US" />
-
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-
-      {/* Additional Meta Tags */}
-      <meta name="theme-color" content="#3B82F6" />
-      <meta name="msapplication-TileColor" content="#3B82F6" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
+      
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={url} />
+      <meta property="twitter:title" content={title} />
+      <meta property="twitter:description" content={description} />
+      <meta property="twitter:image" content={image} />
+      
       {/* Canonical URL */}
-      <link rel="canonical" href={url} />
-
-      {/* Favicon */}
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-      {/* DNS Prefetch */}
-      <link rel="dns-prefetch" href="//api.ziontechgroup.com" />
-
-      {/* Performance Hints */}
-      <meta httpEquiv="x-dns-prefetch-control" content="on" />
-
+      {canonical && <link rel="canonical" href={canonical} />}
+      
+      {/* Additional SEO meta tags */}
+      <meta name="robots" content="index, follow" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Zion Tech Group",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": description,
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup"
+          ]
+        })}
       </script>
     </Helmet>
   );

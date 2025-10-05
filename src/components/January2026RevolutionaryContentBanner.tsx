@@ -19,176 +19,96 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
       description: '10^18 Operations/sec, 99.9% Accuracy, $10B Market Value',
       slug: 'quantum-ai-breakthrough-2026-revolutionary-computing',
       category: 'Quantum Computing',
-      emoji: '⚛️',
+      emoji: '⚡',
       highlight: 'REVOLUTIONARY',
-      impact: '10^18 Op/sec',
-      type: 'blog',
-      readTime: '18 min',
+      impact: '10^18 Ops/sec',
+      type: 'case-study',
+      readTime: '22 min',
     },
     {
-      title: 'Fortune 500 Quantum AI Transformation: $10B Revenue Impact',
-      description: '500% Productivity Increase, 95% Process Automation, Market Leadership',
-      slug: 'fortune-500-quantum-ai-transformation-2026',
-      category: 'Success Story',
-      emoji: '🏆',
-      highlight: 'MEGA SUCCESS',
-      impact: '$10B Revenue',
-      type: 'case-study',
-      readTime: '12 min',
-    },
+      title: 'Autonomous Neural Networks: Self-Evolving AI Systems',
+      description: '99.97% Accuracy, Self-Healing, Infinite Scalability',
+      slug: 'autonomous-neural-networks-2026-self-evolving-ai',
+      category: 'Neural Networks',
+      emoji: '🧠',
+      highlight: 'INNOVATION',
+      impact: '99.97% Accuracy',
+      type: 'research',
+      readTime: '18 min',
+    }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
-        />
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
-          style={{ animationDelay: '4s' }}
-        />
-      </div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header */}
+    <div className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
-            <span className="w-5 h-5 text-blue-400">✨</span>
-            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
-              January 2026 • Revolutionary Content Launch
-            </span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-400/20 rounded-full mb-6">
+            <span className="text-yellow-300 font-bold text-sm">🔥 JANUARY 2026 REVOLUTIONARY CONTENT</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Revolutionary AI Breakthroughs: The Future is Here
+          <h2 className="text-5xl font-bold mb-6">
+            Revolutionary Content Showcase
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            Experience the cutting-edge of AI innovation with our latest breakthrough content: 98% automation rates, quantum computing revolutions, and Fortune 500 transformations worth $10B.
+          <p className="text-xl text-blue-200 max-w-4xl mx-auto">
+            Discover breakthrough AI innovations, quantum computing advances, and autonomous systems that are reshaping the future of technology.
           </p>
         </div>
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {revolutionaryContent.map((content, index) => (
-            <div
-              key={index}
-              className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
-            >
-              {/* Content Header */}
-              <div className="flex items-start justify-between mb-4">
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 group">
+              <div className="flex items-center justify-between mb-6">
                 <div className="text-4xl">{content.emoji}</div>
-                <div className="flex flex-col items-end gap-2">
-                  <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
-                    {content.highlight}
-                  </span>
-                  <span className="text-xs text-gray-400">
-                    {content.readTime}
-                  </span>
+                <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
+                  {content.highlight}
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
+                {content.title}
+              </h3>
+
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                {content.description}
+              </p>
+
+              <div className="flex items-center justify-between mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">{content.impact}</div>
+                  <div className="text-sm text-blue-200">Impact</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-lg font-bold text-yellow-400">{content.readTime}</div>
+                  <div className="text-sm text-blue-200">Read Time</div>
                 </div>
               </div>
-              {/* Content Info */}
-              <div className="mb-4">
-                <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">
+
+              <div className="mb-6">
+                <span className="bg-white/20 text-white px-3 py-1 rounded-full text-sm font-semibold">
                   {content.category}
                 </span>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
-                  {content.title}
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                  {content.description}
-                </p>
               </div>
-              {/* Impact Badge */}
-              <div className="mb-6">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
-                  <span className="w-4 h-4 text-green-400">🎯</span>
-                  <span className="text-green-400 font-bold text-sm">
-                    Impact: {content.impact}
-                  </span>
-                </div>
-              </div>
-              {/* CTA Button */}
+
               <Link
-                to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
+                to={`/${content.type}/${content.slug}`}
+                className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-6 py-3 rounded-lg font-semibold transition-colors group-hover:bg-white/30"
               >
-                {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                Read Full Article
+                <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
               </Link>
             </div>
           ))}
         </div>
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-4 gap-6 mb-12">
-          {[
-            {
-              value: '98%',
-              label: 'Automation Rate',
-              icon: '🤖',
-              color: 'from-blue-400 to-cyan-400',
-            },
-            {
-              value: '10^18',
-              label: 'Quantum Ops/sec',
-              icon: '⚛️',
-              color: 'from-purple-400 to-pink-400',
-            },
-            {
-              value: '$10B',
-              label: 'Revenue Impact',
-              icon: '💰',
-              color: 'from-green-400 to-emerald-400',
-            },
-            {
-              value: '500%',
-              label: 'Productivity Gain',
-              icon: '⚡',
-              color: 'from-yellow-400 to-orange-400',
-            },
-          ].map((stat, index) => (
-            <div
-              key={index}
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 text-center"
-            >
-              <div className="text-3xl mb-2">{stat.icon}</div>
-              <div className={`text-2xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-1`}
-              >
-                {stat.value}
-              </div>
-              <div className="text-gray-400 text-xs font-medium">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-        {/* Call to Action */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold mb-4 text-white">
-              Ready to Experience the AI Revolution?
-            </h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Join the Fortune 500 companies already transforming their operations with Zion Tech Group's breakthrough AI solutions.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
-              >
-                Start Your Transformation
-              </Link>
-              <Link
-                to="/services"
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
-              >
-                Explore Our Services
-              </Link>
-            </div>
-          </div>
+
+        <div className="text-center mt-16">
+          <Link
+            to="/content"
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-yellow-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
+          >
+            Explore All Revolutionary Content
+          </Link>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

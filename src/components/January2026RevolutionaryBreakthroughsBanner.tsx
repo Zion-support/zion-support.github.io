@@ -19,130 +19,107 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       bgColor: "bg-blue-500/10"
     },
     {
-      icon: '🌐',
-      title: "Autonomous Enterprise Mesh",
-      description: "Self-organizing AI networks achieving 99.7% operational efficiency",
-      stats: "99.7% Efficiency",
+      icon: '🔄',
+      title: "Autonomous Operations",
+      description: "Self-managing systems with 99.99% uptime and self-healing capabilities",
+      stats: "99.99% Uptime",
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-500/10"
     },
     {
-      icon: '🛡️',
-      title: "Quantum-Safe Security",
-      description: "Unbreakable protection systems with 99.99% threat prevention",
-      stats: "$2.8B Protected",
+      icon: '🔮',
+      title: "Meta-Cognitive AI",
+      description: "AI systems that think about their own thinking processes",
+      stats: "95% Accuracy",
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-500/10"
+    },
+    {
+      icon: '🌐',
+      title: "Neural Edge Networks",
+      description: "Distributed AI processing at the edge with quantum-classical hybrid systems",
+      stats: "1000x Processing",
+      color: "from-teal-500 to-blue-500",
+      bgColor: "bg-teal-500/10"
+    },
+    {
+      icon: '📊',
+      title: "Predictive Analytics",
+      description: "Advanced forecasting with 99.97% accuracy in business predictions",
+      stats: "99.97% Accuracy",
+      color: "from-pink-500 to-rose-500",
+      bgColor: "bg-pink-500/10"
     }
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 text-white">
-      {/* Background Effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
-      </div>
-      <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6">
-            <span className="w-4 h-4 mr-2 text-yellow-400">✨</span>
-            January 15, 2026 - Revolutionary Breakthroughs
+    <div className="py-20 bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-400/20 rounded-full mb-6">
+            <span className="text-yellow-300 font-bold text-sm">🔥 JANUARY 2026 REVOLUTIONARY BREAKTHROUGHS</span>
           </div>
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent mb-6">
-            AI Revolution 2026
+          <h2 className="text-5xl font-bold mb-6">
+            Revolutionary Breakthroughs
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Witness the most profound technological breakthroughs in human history. 
-            From synthetic consciousness to quantum edge computing, these innovations are reshaping the future of enterprise AI and human-computer interaction.
+          <p className="text-xl text-blue-200 max-w-4xl mx-auto">
+            Discover the groundbreaking innovations that are reshaping the future of AI, quantum computing, and autonomous systems.
           </p>
         </div>
-        {/* Breakthroughs Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {breakthroughs.map((breakthrough, index) => (
-            <div
-              key={breakthrough.title}
-              className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}
-            >
-              <div className="flex items-start space-x-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <span className="text-2xl">{breakthrough.icon}</span>
+            <div key={index} className={`${breakthrough.bgColor} backdrop-blur-lg rounded-2xl p-8 hover:bg-white/15 transition-all duration-300 group`}>
+              <div className="flex items-center justify-between mb-6">
+                <div className={`w-16 h-16 bg-gradient-to-r ${breakthrough.color} rounded-xl flex items-center justify-center text-2xl`}>
+                  {breakthrough.icon}
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
-                    {breakthrough.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {breakthrough.description}
-                  </p>
-                  <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full">
-                    <span className="text-sm font-semibold text-purple-300">
-                      {breakthrough.stats}
-                    </span>
-                  </div>
+                <div className="text-right">
+                  <div className="text-2xl font-bold text-yellow-400">{breakthrough.stats}</div>
                 </div>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
+                {breakthrough.title}
+              </h3>
+
+              <p className="text-blue-100 mb-6 leading-relaxed">
+                {breakthrough.description}
+              </p>
+
+              <div className="flex items-center gap-2 text-blue-300">
+                <span className="text-sm font-semibold">Learn More</span>
+                <span className="text-lg group-hover:translate-x-1 transition-transform">→</span>
               </div>
             </div>
           ))}
         </div>
-        {/* Key Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-              99.7%
-            </div>
-            <div className="text-sm text-gray-300">Operational Efficiency</div>
-          </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
-              200x
-            </div>
-            <div className="text-sm text-gray-300">Speed Improvement</div>
-          </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
-              $500B
-            </div>
-            <div className="text-sm text-gray-300">Enterprise Value</div>
-          </div>
-          <div className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10">
-            <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent mb-2">
-              95%
-            </div>
-            <div className="text-sm text-gray-300">Automation Rate</div>
-          </div>
-        </div>
-        {/* CTA */}
-        <div className="text-center">
-          <div className="space-y-4">
-            <p className="text-lg text-gray-300 mb-6">
-              Ready to transform your enterprise with revolutionary AI?
+
+        <div className="text-center mt-16">
+          <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-3xl font-bold mb-4">
+              Ready to Experience the Future?
+            </h3>
+            <p className="text-xl text-blue-200 mb-8">
+              Join 500+ Fortune 500 companies already transforming with our revolutionary AI solutions
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/blog"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href="/contact"
+                className="bg-gradient-to-r from-yellow-400 to-orange-500 text-yellow-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
               >
-                Explore All Content
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                Start Your Transformation
               </a>
               <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
+                href="/solutions"
+                className="border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                View Services
+                Explore All Solutions
               </a>
             </div>
           </div>
         </div>
       </div>
-      {/* Floating Particles */}
-      <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse" />
-      <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000" />
-      <div className="absolute bottom-20 left-32 w-3 h-3 bg-green-400/30 rounded-full animate-pulse delay-2000" />
-      <div className="absolute bottom-40 right-20 w-5 h-5 bg-orange-400/30 rounded-full animate-pulse delay-500" />
     </div>
   );
 };

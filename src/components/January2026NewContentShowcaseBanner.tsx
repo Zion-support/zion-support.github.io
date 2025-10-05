@@ -16,68 +16,41 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
       </div>
       <div className="relative z-10">
-        {/* Header */}
-        <div className="text-center mb-8">
-          <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 rounded-full text-sm font-semibold mb-4">
-            <span className="mr-2">🚀</span>
-            January 2026 - Revolutionary AI Breakthroughs
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-yellow-400/20 rounded-full mb-6">
+            <span className="text-yellow-300 font-bold text-sm">🚀 JANUARY 2026 NEW CONTENT</span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent mb-4">
-            The Future of AI is Here
+          <h2 className="text-5xl font-bold mb-6">
+            Revolutionary Content Showcase
           </h2>
-          <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Discover groundbreaking AI technologies that are revolutionizing enterprise operations, 
-            from synthetic consciousness to quantum edge computing and autonomous mesh networks.
+          <p className="text-xl text-blue-200 max-w-4xl mx-auto">
+            Discover breakthrough AI innovations, quantum computing advances, and autonomous systems that are reshaping the future of technology.
           </p>
         </div>
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-4 text-center hover:bg-white/20 transition-all duration-300"
-            >
-              <span className="text-2xl mb-3 block">{feature.icon}</span>
-              <h3 className="font-semibold text-white mb-1">{feature.title}</h3>
-              <p className="text-sm text-blue-200">{feature.desc}</p>
+            <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/15 transition-all duration-300 group">
+              <div className="text-4xl mb-4">{feature.icon}</div>
+              <h3 className="text-lg font-bold mb-2 group-hover:text-blue-400 transition-colors">
+                {feature.title}
+              </h3>
+              <p className="text-blue-200 text-sm">
+                {feature.desc}
+              </p>
             </div>
           ))}
         </div>
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>
-            <div className="text-sm text-blue-200">Accuracy</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-300 mb-1">200x</div>
-            <div className="text-sm text-blue-200">Speed Boost</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-green-300 mb-1">$500B</div>
-            <div className="text-sm text-blue-200">Enterprise Value</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300 mb-1">95%</div>
-            <div className="text-sm text-blue-200">Automation</div>
-          </div>
-        </div>
-        {/* CTA */}
-        <div className="text-center">
+
+        <div className="text-center mt-12">
           <a
-            href="/blog"
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            href="/content"
+            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-yellow-900 px-8 py-4 rounded-xl font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300"
           >
-            Explore January 2026 Content
-            <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+            Explore All New Content
           </a>
         </div>
       </div>
-      {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000" />
     </div>
   );
 };

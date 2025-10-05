@@ -22,260 +22,119 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
     },
     {
       id: 2,
-      title: 'Quantum-Enhanced Security Platform',
-      slug: 'quantum-security-platform-2026',
-      excerpt: 'Ultimate enterprise security with quantum-encrypted communications and zero-trust architectures. Protect your organization from advanced cyber threats.',
-      category: 'Cybersecurity',
-      industry: 'Finance, Healthcare, Government',
-      roi: '250%',
+      title: 'Quantum-Enhanced Analytics',
+      slug: 'quantum-analytics-2026',
+      excerpt: 'Leverage quantum computing for advanced analytics, delivering 1000x faster data processing and unprecedented insights for enterprise decision-making.',
+      category: 'Advanced Analytics',
+      industry: 'Financial Services',
+      roi: '500%',
       savings: '$5M+',
-      icon: '🛡️',
-      gradient: 'from-purple-500 to-indigo-500',
-      badge: 'ENTERPRISE',
+      icon: '⚡',
+      gradient: 'from-purple-500 to-pink-500',
+      badge: 'NEW',
       features: [
-        'Quantum Encryption',
-        'Zero-Trust Architecture',
-        'Threat Detection',
+        'Quantum Processing',
+        'Real-time Analytics',
+        'Predictive Modeling',
       ],
     },
     {
       id: 3,
-      title: 'Cloud-Native AI Infrastructure',
-      slug: 'cloud-native-ai-infrastructure-2026',
-      excerpt: 'Scalable, secure, and cost-effective AI infrastructure built for enterprise scale. Deploy and manage AI models across multi-cloud environments.',
-      category: 'Cloud Infrastructure',
-      industry: 'Technology, Retail, Manufacturing',
+      title: 'Autonomous Operations Suite',
+      slug: 'autonomous-operations-2026',
+      excerpt: 'Complete self-managing infrastructure with 99.99% uptime, self-healing systems, and autonomous optimization for maximum efficiency.',
+      category: 'Infrastructure',
+      industry: 'Technology',
       roi: '400%',
       savings: '$3M+',
-      icon: '☁️',
+      icon: '🔄',
       gradient: 'from-green-500 to-emerald-500',
-      badge: 'CLOUD-FIRST',
-      features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization'],
-    },
-    {
-      id: 4,
-      title: 'Predictive Analytics Intelligence',
-      slug: 'predictive-analytics-intelligence-2026',
-      excerpt: 'Advanced predictive analytics that forecast business trends, customer behavior, and operational risks with 99.9% accuracy.',
-      category: 'Business Intelligence',
-      industry: 'Retail, Finance, Healthcare',
-      roi: '350%',
-      savings: '$4M+',
-      icon: '🎯',
-      gradient: 'from-orange-500 to-red-500',
-      badge: 'PREDICTIVE',
-      features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights'],
-    },
-    {
-      id: 5,
-      title: 'Digital Transformation Suite',
-      slug: 'digital-transformation-suite-2026',
-      excerpt: 'Complete digital transformation solution covering strategy, implementation, and optimization. Modernize your enterprise for the AI era.',
-      category: 'Digital Transformation',
-      industry: 'All Industries',
-      roi: '500%',
-      savings: '$10M+',
-      icon: '🏢',
-      gradient: 'from-teal-500 to-cyan-500',
-      badge: 'TRANSFORMATION',
-      features: ['Strategy Consulting', 'Implementation', 'Change Management'],
-    },
-    {
-      id: 6,
-      title: 'Enterprise AI Governance',
-      slug: 'enterprise-ai-governance-2026',
-      excerpt: 'Comprehensive AI governance framework ensuring ethical AI deployment, compliance, and risk management across your organization.',
-      category: 'AI Governance',
-      industry: 'Finance, Healthcare, Government',
-      roi: '200%',
-      savings: '$1.5M+',
-      icon: '👥',
-      gradient: 'from-pink-500 to-purple-500',
-      badge: 'GOVERNANCE',
-      features: ['Ethical AI', 'Compliance Management', 'Risk Assessment'],
-    },
-  ];
-
-  const successMetrics = [
-    {
-      value: '500+',
-      label: 'Enterprise Clients',
-      icon: '🏢',
-    },
-    {
-      value: '$2B+',
-      label: 'Cost Savings Generated',
-      icon: '💰',
-    },
-    {
-      value: '98%',
-      label: 'Client Satisfaction',
-      icon: '🏆',
-    },
-    {
-      value: '24/7',
-      label: 'Enterprise Support',
-      icon: '👥',
-    },
+      badge: 'TRENDING',
+      features: [
+        'Self-Healing Systems',
+        'Autonomous Scaling',
+        'Predictive Maintenance',
+      ],
+    }
   ];
 
   return (
-    <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
-          style={{ animationDelay: '2s' }}
-        />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"
-          style={{ animationDelay: '4s' }}
-        />
-      </div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
+    <div className="py-20 bg-gray-900 text-white">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-blue-500/30 mb-8 animate-fade-in">
-            <span className="w-5 h-5 text-blue-400 animate-pulse">✨</span>
-            <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
-              🏢 ENTERPRISE SOLUTIONS SHOWCASE • 2026
-            </span>
-            <span className="w-5 h-5 text-indigo-400 animate-pulse">✨</span>
-          </div>
-          <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">
-            Enterprise Solutions Showcase 2026
+          <h2 className="text-5xl font-bold mb-6">
+            Enterprise Solutions 2026
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security, we deliver measurable
-            results that drive business growth and operational excellence.
+          <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+            Revolutionary AI-powered solutions designed to transform enterprise operations and drive unprecedented growth
           </p>
-          {/* Success Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {successMetrics.map((metric, index) => (
-              <div key={index} className="text-center">
-                <div className="text-blue-400 mb-2 flex justify-center">
-                  <span className="text-2xl">{metric.icon}</span>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {enterpriseSolutions.map((solution) => (
+            <div key={solution.id} className="bg-gray-800 rounded-2xl p-8 hover:bg-gray-700 transition-all duration-300 group">
+              <div className="flex items-center justify-between mb-6">
+                <div className={`w-16 h-16 bg-gradient-to-r ${solution.gradient} rounded-xl flex items-center justify-center text-2xl`}>
+                  {solution.icon}
                 </div>
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent mb-1">
-                  {metric.value}
+                <span className="bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-xs font-bold">
+                  {solution.badge}
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-bold mb-4 group-hover:text-blue-400 transition-colors">
+                {solution.title}
+              </h3>
+
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                {solution.excerpt}
+              </p>
+
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-400">{solution.roi}</div>
+                  <div className="text-sm text-gray-400">ROI</div>
                 </div>
-                <div className="text-gray-400 text-sm font-medium">
-                  {metric.label}
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-400">{solution.savings}</div>
+                  <div className="text-sm text-gray-400">Annual Savings</div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-        {/* Enterprise Solutions Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {enterpriseSolutions.map((solution, index) => (
-            <div
-              key={solution.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}
-              />
-              <div className="relative p-8">
-                {/* Icon & Badge */}
-                <div className="flex items-start justify-between mb-6">
-                  <div className="text-blue-400 group-hover:scale-110 transition-transform duration-300">
-                    <span className="text-3xl">{solution.icon}</span>
-                  </div>
-                  <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${solution.gradient} text-white text-xs font-bold border border-white/30`}
-                  >
-                    {solution.badge}
-                  </div>
+
+              <div className="mb-6">
+                <div className="text-sm text-gray-400 mb-2">Key Features:</div>
+                <div className="flex flex-wrap gap-2">
+                  {solution.features.map((feature, index) => (
+                    <span key={index} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm">
+                      {feature}
+                    </span>
+                  ))}
                 </div>
-                {/* Category & Industry */}
-                <div className="mb-4 space-y-2">
-                  <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
-                    {solution.category}
-                  </span>
-                  <div className="text-xs text-gray-500">
-                    Industries: {solution.industry}
-                  </div>
+              </div>
+
+              <div className="flex items-center justify-between">
+                <div className="text-sm text-gray-400">
+                  <div>Industry: {solution.industry}</div>
+                  <div>Category: {solution.category}</div>
                 </div>
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
-                  {solution.title}
-                </h3>
-                {/* Excerpt */}
-                <p className="text-gray-400 mb-6 leading-relaxed text-sm">
-                  {solution.excerpt}
-                </p>
-                {/* ROI & Savings */}
-                <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="text-center p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
-                    <div className="text-green-400 font-bold text-lg">
-                      {solution.roi}
-                    </div>
-                  </div>
-                  <div className="text-center p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30">
-                    <div className="text-blue-400 font-bold text-lg">
-                      {solution.savings}
-                    </div>
-                  </div>
-                </div>
-                {/* Features */}
-                <div className="mb-6">
-                  <div className="text-gray-400 text-xs mb-2">
-                    Key Features:
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {solution.features.map((feature, idx) => (
-                      <span key={idx} className="px-2 py-1 rounded bg-white/10 text-gray-300 text-xs"
-                      >
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-                {/* CTA Button */}
                 <a
                   href={`/solutions/${solution.slug}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${solution.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1`}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
                 >
-                  <span>Explore Solution</span>
-                  <svg className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  Learn More
                 </a>
               </div>
             </div>
           ))}
         </div>
-        {/* Enterprise CTA Section */}
-        <div className="text-center mt-20">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Ready to Transform Your Enterprise?
-              </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Join 500+ leading organizations that trust our enterprise
-                solutions to drive innovation, reduce costs, and achieve unprecedented operational efficiency.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
-                >
-                  <span className="text-xl">🏢</span>
-                  <span>Schedule Enterprise Demo</span>
-                </a>
-                <a
-                  href="/case-studies"
-                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
-                  <span>View Success Stories</span>
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
-            </div>
-          </div>
+
+        <div className="text-center mt-16">
+          <a
+            href="/solutions"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300"
+          >
+            Explore All Solutions
+          </a>
         </div>
       </div>
     </div>

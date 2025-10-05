@@ -29,10 +29,11 @@ export default function EnhancedNewsletterSignup({
   }
 
   return (
-    <form onSubmit={handleSubmit} className={`bg-gray-100 p-6 rounded-lg ${className}`} aria-label="Newsletter signup">
-      <h3 className="text-lg font-semibold mb-2">{title}</h3>
+    <div className={`bg-gray-50 border border-gray-200 rounded-lg p-6 ${className}`}>
+      <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-4">{subtitle}</p>
-      <div className="flex gap-2">
+      
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
           value={email}
@@ -43,11 +44,11 @@ export default function EnhancedNewsletterSignup({
         />
         <button
           type="submit"
-          className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+          className="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors"
         >
           Subscribe
         </button>
-      </div>
-    </form>
+      </form>
+    </div>
   );
 }
