@@ -1,4 +1,4 @@
-import React{ useEffectuseStateuseCallbackuseMemo } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;
@@ -30,48 +30,33 @@ interface Alert {
   resolved: boolean;
 }
 
-interface PerformanceThresholds {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  memoryUsage: number;
-}
-
-interface Alert {
-  id: string;
-  message: string;
-  resolved: boolean;
-}
-
 export const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metricssetMetrics] = useState<PerformanceMetrics>({});
-  const [isVisiblesetIsVisible] = useState(false);
-  const [alertssetAlerts] = useState<Alert[]>([]);
-  const [thresholdssetThresholds] = useState<PerformanceThresholds>({
-    loadTime: 3000
-    firstContentfulPaint: 1800
-    largestContentfulPaint: 2500
-    cumulativeLayoutShift: 0.1
-    firstInputDelay: 100
-    memoryUsage: 50 * 1024 * 1024// 50MB
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
+  const [alerts, setAlerts] = useState<Alert[]>([]);
+  const [thresholds, setThresholds] = useState<PerformanceThresholds>({
+    loadTime: 3000,
+    firstContentfulPaint: 1800,
+    largestContentfulPaint: 2500,
+    cumulativeLayoutShift: 0.1,
+    firstInputDelay: 100,
+    memoryUsage: 50 * 1024 * 1024 // 50MB
   });
 
   // Resolve alert
   const resolveAlert = useCallback((alertId: string) => {
     setAlerts((prev) =>
       prev.map((alert) =>
-        alert.id === alertId ? { ...alertresolved: true } : alert
+        alert.id === alertId ? { ...alert, resolved: true } : alert
       )
     );
-  }[]);
+  }, []);
 
   // Update thresholds
   const updateThresholds = useCallback(
     (newThresholds: Partial<PerformanceThresholds>) => {
-      setThresholds((prev) => ({ ...prev...newThresholds }));
-    }
+      setThresholds((prev) => ({ ...prev, ...newThresholds }));
+    },
     []
   );
 
@@ -87,28 +72,31 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     if (metrics.cls && metrics.cls > thresholds.cumulativeLayoutShift) score -= 25;
     if (metrics.fid && metrics.fid > thresholds.firstInputDelay) score -= 10;
 
-    return Math.max(0score);
-  }[metricsthresholds]);
+    return Math.max(0, score);
+  }, [metrics, thresholds]);
 
   // Get performance grade
   const getPerformanceGrade = useCallback((score: number) => {
-    if (score >= 90) return { grade: "A"color: "text-green-500" };
-    if (score >= 80) return { grade: "B"color: "text-yellow-500" };
-    if (score >= 70) return { grade: "C"color: "text-orange-500" };
-    if (score >= 60) return { grade: "D"color: "text-red-500" };
-    return { grade: "F"color: "text-red-700" };
-  }[]);
+    if (score >= 90) return { grade: "A", color: "text-green-500" };
+    if (score >= 80) return { grade: "B", color: "text-yellow-500" };
+    if (score >= 70) return { grade: "C", color: "text-orange-500" };
+    if (score >= 60) return { grade: "D", color: "text-red-500" };
+    return { grade: "F", color: "text-red-700" };
+  }, []);
 
   // Format time
   const formatTime = useCallback((ms: number) => {
     if (ms < 1000) return `${ms.toFixed(0)}ms`;
     return `${(ms / 1000).toFixed(2)}s`;
-  }[]);
+  }, []);
 
   // Format bytes
   const formatBytes = useCallback((bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+    if (bytes < 1024 * 1024 * 1024) return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+    return `${(bytes / (1024 * 1024 * 1024)).toFixed(1)} GB`;
+  }, []);
 
   useEffect(() => {
     // Only run in development
@@ -118,10 +106,10 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       const entries = list.getEntries();
       entries.forEach(entry => {
         if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prevlcp: entry.startTime }));
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
           setMetrics(prev => ({
-            ...prev
+            ...prev,
             fid: (entry as any).processingStart - entry.startTime
           }));
         } else if (
@@ -129,7 +117,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
           !(entry as any).hadRecentInput
         ) {
           setMetrics(prev => ({
-            ...prev
+            ...prev,
             cls: (prev.cls || 0) + (entry as any).value
           }));
         }
@@ -137,7 +125,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
     });
 
     observer.observe({
-      entryTypes: ['largest-contentful-paint''first-input''layout-shift']
+      entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift']
     });
 
     // Toggle visibility with Ctrl+Shift+P
@@ -147,26 +135,39 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
       }
     };
 
-    window.addEventListener('keydown'handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);
 
     return () => {
       observer.disconnect();
-      window.removeEventListener('keydown'handleKeyPress);
+      window.removeEventListener('keydown', handleKeyPress);
     };
-  }[]);
+  }, []);
 
   if (!isVisible) return null;
+
+  const grade = getPerformanceGrade(performanceScore);
 
   return (
     <div
       style={{
+        position: 'fixed',
+        top: '10px',
+        right: '10px',
+        background: 'rgba(0, 0, 0, 0.8)',
+        color: 'white',
+        padding: '10px',
+        borderRadius: '5px',
+        fontSize: '12px',
+        zIndex: 9999,
+        fontFamily: 'monospace'
       }}
     >
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
+      <h4 style={{ margin: '0 0 10px 0', fontSize: '14px' }}>Performance Metrics</h4>
+      <div>LCP: {metrics.lcp ? formatTime(metrics.lcp) : 'N/A'}</div>
+      <div>FID: {metrics.fid ? formatTime(metrics.fid) : 'N/A'}</div>
       <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px'fontSize: '10px' }}>
+      <div>Score: <span className={grade.color}>{performanceScore}/100 ({grade.grade})</span></div>
+      <div style={{ marginTop: '10px', fontSize: '10px' }}>
         Press Ctrl+Shift+P to toggle
       </div>
     </div>

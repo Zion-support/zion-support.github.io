@@ -1,4 +1,4 @@
-import React{ useStateuseEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import { enhancedAccessibility } from '../utils/enhancedAccessibility';
@@ -69,30 +69,30 @@ const AdvancedDashboard: React.FC = () => {
   useEffect(() => {
     if (isOpen) {
       updateData();
-      const interval = setInterval(updateData5000);
+      const interval = setInterval(updateData, 5000);
       return () => clearInterval(interval);
     }
-  }[isOpen]);
+  }, [isOpen]);
 
   const updateData = () => {
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0misses: 0size: 0 };
+    const cacheStats = { hits: 0, misses: 0, size: 0 };
 
     // Convert analytics events to analytics data format
     const analyticsData: AnalyticsData = {
-      id: `session_${Date.now()}`
-      startTime: Date.now() - 300000// 5 minutes ago
-      lastActivity: Date.now()
-      pageViews: events.filter((e) => e.name === "page_view").length
+      id: `session_${Date.now()}`,
+      startTime: Date.now() - 300000, // 5 minutes ago
+      lastActivity: Date.now(),
+      pageViews: events.filter((e) => e.name === "page_view").length,
       events: events.map((e) => ({
-        event: e.name
-        timestamp: e.timestamp || Date.now()
+        event: e.name,
+        timestamp: e.timestamp || Date.now(),
         properties: (e as any).properties || {}
-      }))
+      })),
       deviceInfo: {
-        screenResolution: `${window.screen.width}x${window.screen.height}`
-        language: navigator.language
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
       }
     };
@@ -101,46 +101,48 @@ const AdvancedDashboard: React.FC = () => {
     const cache: CacheData = {
       size:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).size as number) || 0
-          : 0
+          ? ((cacheStats as Record<string, unknown>).size as number) || 0
+          : 0,
       totalSize:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).totalSize as number) || 0
-          : 0
+          ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
+          : 0,
       maxSize:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).maxSize as number) || 0
-          : 0
+          ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
+          : 0,
       hitRate:
         typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<stringunknown>).hitRate as number) || 0
+          ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
           : 0
     };
 
     setData({
-      analytics: analyticsData || {}
-      cache: cache || {}
+      analytics: analyticsData || {},
+      cache: cache || {},
       performance: {
         memoryUsage:
           (
             performance as Performance & {
               memory?: { usedJSHeapSize?: number };
             }
-          ).memory?.usedJSHeapSize || 0
+          ).memory?.usedJSHeapSize || 0,
         memoryLimit:
           (
             performance as Performance & {
               memory?: { jsHeapSizeLimit?: number };
             }
+          ).memory?.jsHeapSizeLimit || 0
+      }
     });
   };
 
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
-    const sizes = ["Bytes""KB""MB""GB"];
+    const sizes = ["Bytes", "KB", "MB", "GB"];
     const i = Math.floor(Math.log(bytes) / Math.log(k));
-    return parseFloat((bytes / Math.pow(ki)).toFixed(2)) + " " + sizes[i];
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
   };
 
   const formatDuration = (ms: number): string => {
@@ -180,12 +182,12 @@ const AdvancedDashboard: React.FC = () => {
         <div className="bg-gray-100 border-b">
           <div className="flex space-x-1 p-2">
             {[
-              { id: "overview"label: "Overview" }
-              { id: "analytics"label: "Analytics" }
-              { id: "performance"label: "Performance" }
-              { id: "cache"label: "Cache" }
-              { id: "security"label: "Security" }
-              { id: "accessibility"label: "Accessibility" }
+              { id: "overview", label: "Overview" },
+              { id: "analytics", label: "Analytics" },
+              { id: "performance", label: "Performance" },
+              { id: "cache", label: "Cache" },
+              { id: "security", label: "Security" },
+              { id: "accessibility", label: "Accessibility" }
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -210,7 +212,7 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
                   <div>
-                    Session: {data.analytics?.id?.substring(012) || "N/A"}...
+                    Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
                   </div>
                   <div>
                     Duration:{" "}
