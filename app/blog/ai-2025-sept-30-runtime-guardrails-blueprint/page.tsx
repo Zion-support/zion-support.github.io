@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 
 export default function RuntimeGuardrailsBlueprint2025() {
@@ -39,7 +38,7 @@ export default function RuntimeGuardrailsBlueprint2025() {
           </ol>
         </section>
 
-        <hr className="my-10 border-white/10" />
+        <hr />
 
         <aside className="bg-emerald-500/10 border border-emerald-400/20 rounded-xl p-6">
           <h3 className="text-xl font-bold text-emerald-300 mb-2">Related</h3>

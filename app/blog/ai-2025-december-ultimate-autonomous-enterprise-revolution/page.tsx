@@ -1,17 +1,16 @@
-import React from 'react';
 import Link from 'next/link';
-import ArrowLeft from 'lucide-react';
-import Calendar from 'lucide-react';
-import User from 'lucide-react';
-import Clock from 'lucide-react';
-import Tag from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Users from 'lucide-react';
-import Target from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import Shield from 'lucide-react';
+import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
+import Calendar from 'lucide-react/dist/esm/icons/alendar';
+import User from 'lucide-react/dist/esm/icons/ser';
+import Clock from 'lucide-react/dist/esm/icons/lock';
+import Tag from 'lucide-react/dist/esm/icons/ag';
+import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import DollarSign from 'lucide-react/dist/esm/icons/ollarsign';
+import Users from 'lucide-react/dist/esm/icons/sers';
+import Target from 'lucide-react/dist/esm/icons/arget';
+import Brain from 'lucide-react/dist/esm/icons/rain';
+import Zap from 'lucide-react/dist/esm/icons/ap';
+import Shield from 'lucide-react/dist/esm/icons/hield';
 
 export const metadata = {
   title: 'AI 2025 December: Ultimate Autonomous Enterprise Revolution - Zion Tech Group',
@@ -29,7 +28,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft />
             Back to Home
           </Link>
         </div>
@@ -41,15 +40,15 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar />
               <span>December 15, 2025</span>
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              <User />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock />
               <span>22 min read</span>
             </div>
           </div>
@@ -65,7 +64,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           <div className="flex flex-wrap gap-2">
             {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Tag />
                 {tag}
               </span>
             ))}
@@ -75,7 +74,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
         {/* Revolutionary Breakthrough Banner */}
         <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white rounded-2xl p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-            <Brain className="w-8 h-8" />
+            <Brain />
             🚀 Revolutionary Breakthrough Achieved
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -104,7 +103,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           
           <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-xl p-6 mb-8">
             <h3 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
-              <Zap className="w-5 h-5" />
+              <Zap />
               What Makes This Revolution Different?
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
@@ -130,7 +129,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Brain className="w-6 h-6 text-purple-600" />
+                <Brain />
                 <h3 className="font-bold text-purple-800">Neural Autonomy Engine</h3>
               </div>
               <p className="text-purple-700 text-sm">
@@ -140,7 +139,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
             
             <div className="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Shield className="w-6 h-6 text-blue-600" />
+                <Shield />
                 <h3 className="font-bold text-blue-800">Autonomous Security</h3>
               </div>
               <p className="text-blue-700 text-sm">
@@ -150,7 +149,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
             
             <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <TrendingUp className="w-6 h-6 text-green-600" />
+                <TrendingUp />
                 <h3 className="font-bold text-green-800">Performance Optimization</h3>
               </div>
               <p className="text-green-700 text-sm">

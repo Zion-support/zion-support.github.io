@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Edge Privacy Insights 2026 — Actionable Metrics Without PII',

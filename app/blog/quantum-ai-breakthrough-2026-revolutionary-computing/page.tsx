@@ -1,13 +1,12 @@
-import React from 'react';
 import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import Atom from 'lucide-react';
-import Zap from 'lucide-react';
-import Shield from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Target from 'lucide-react';
-import CheckCircle from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
+import Atom from 'lucide-react/dist/esm/icons/tom';
+import Zap from 'lucide-react/dist/esm/icons/ap';
+import Shield from 'lucide-react/dist/esm/icons/hield';
+import Brain from 'lucide-react/dist/esm/icons/rain';
+import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import Target from 'lucide-react/dist/esm/icons/arget';
+import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
 
 export default function QuantumAIBreakthrough2026() {
   return (
@@ -38,15 +37,15 @@ export default function QuantumAIBreakthrough2026() {
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <span className="flex items-center gap-2">
-                <Atom className="w-4 h-4" />
+                <Atom />
                 Quantum Computing
               </span>
               <span className="flex items-center gap-2">
-                <Brain className="w-4 h-4" />
+                <Brain />
                 Neural Networks
               </span>
               <span className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
+                <Zap />
                 Breakthrough Technology
               </span>
               <span>18 min read</span>
@@ -67,7 +66,7 @@ export default function QuantumAIBreakthrough2026() {
             ].map((stat, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="text-5xl mb-3">{stat.icon}</div>
-                <div  bg-clip-text text-transparent mb-2`}>
+                <div className={`text-4xl font-extrabold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent mb-2`}>
                   {stat.value}
                 </div>
                 <div className="text-gray-400 text-sm font-medium">
@@ -97,19 +96,19 @@ export default function QuantumAIBreakthrough2026() {
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 Revolutionary Breakthrough Achievements</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle />
                     <span><strong>Quantum-Neural Fusion:</strong> First successful integration of quantum computing with neural networks</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle />
                     <span><strong>10^18 Operations/sec:</strong> Unprecedented computational power for complex problem solving</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle />
                     <span><strong>99.9% Accuracy:</strong> Solving problems previously considered computationally impossible</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <CheckCircle />
                     <span><strong>Commercial Viability:</strong> First quantum AI systems ready for enterprise deployment</span>
                   </li>
                 </ul>
@@ -266,7 +265,7 @@ export default function QuantumAIBreakthrough2026() {
                 href="/blog" 
                 className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
               >
-                <ArrowRight className="w-4 h-4 rotate-180" />
+                <ArrowRight />
                 Back to Blog
               </Link>
               <Link 
@@ -274,7 +273,7 @@ export default function QuantumAIBreakthrough2026() {
                 className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Quantum AI Services
-                <ArrowRight className="w-4 h-4" />
+                <ArrowRight />
               </Link>
             </div>
           </div>
