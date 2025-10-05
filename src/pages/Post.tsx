@@ -1,12 +1,1 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-
-export default function Post(): React.JSX.Element {
-  const { slug } = useParams();
-  return (
-    <main style={{ padding: '2rem' }}>
-      <h1>Post</h1>
-      <p>{slug}</p>
-    </main>
-  );
-}
+import React from ' react ' ; import { usePara m s } from ' react - rout e r - d o m ' ; export default function Post( ): Rea c t.J S X.Eleme n t { const { sl u g } = usePara m s ( ); retu r n ( < main styl e = { { paddi n g: ' 2r e m ' } } > < h1 > Po s t < / h1 > < p > { sl u g } < / p > < / ma i n > ); } $ $ 

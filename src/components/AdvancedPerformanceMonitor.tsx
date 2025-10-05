@@ -7,6 +7,27 @@ interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   inp?: number;
+  loadTime?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  cumulativeLayoutShift?: number;
+  firstInputDelay?: number;
+  memoryUsage?: number;
+}
+
+interface PerformanceThresholds {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  memoryUsage: number;
+}
+
+interface Alert {
+  id: string;
+  message: string;
+  resolved: boolean;
 }
 
 interface PerformanceThresholds {
@@ -88,8 +109,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const formatBytes = useCallback((bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-      return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-    }, []);
 
   useEffect(() => {
     // Only run in development

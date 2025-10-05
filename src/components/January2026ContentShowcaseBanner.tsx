@@ -1,4 +1,5 @@
 import React from 'react';
+import { Sparkles, TrendingUp, Zap, ArrowRight, Brain, Atom, Cpu } from 'lucide-react';
 const January2026ContentShowcaseBanner: React.FC = () => {
   const latestArticles = [
     {

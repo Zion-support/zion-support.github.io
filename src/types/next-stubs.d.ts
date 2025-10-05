@@ -1,20 +1,19 @@
-// Next.js stubs for compatibility
-declare module 'next/link' {
-  import { ComponentType } from 'react';
-  interface LinkProps {
-    href: string;
-    children: React.ReactNode;
-    className?: string;
-  }
-  const Link: ComponentType<LinkProps>;
-  export default Link;
+// Ne x t.js stubs for compatibility declare module 'ne x t/li n k' {
+  impo r t { ComponentTy p e } fr o m 'rea c t';
+  interface LinkProp s { 
+    hr e f: stri n g;
+    childr e n: Rea c t.ReactNo d e;
+    classNa m e ?  : str i n g;
+   }
+  const Lin k: ComponentTy p e<LinkPro p s>;
+  export default Lin k;
 }
 
-declare module 'next/head' {
-  import { ComponentType } from 'react';
-  interface HeadProps {
-    children: React.ReactNode;
+declare modul e 'ne x t/he a d' {
+  impo r t { ComponentTy p e } fr o m 'rea c t';
+  interface HeadProp s {
+    childr e n: Rea c t.ReactN o d e;
   }
-  const Head: ComponentType<HeadProps>;
-  export default Head;
+  const Hea d: ComponentTy p e<HeadPro p s>;
+  export default Hea d;
 }

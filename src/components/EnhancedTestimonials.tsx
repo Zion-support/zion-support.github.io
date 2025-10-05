@@ -1,5 +1,1 @@
-import React from 'react';
-
-export default function EnhancedTestimonials(): React.JSX.Element {
-  return <section aria-label='Enhanced Testimonials' />;
-}
+import React from ' react ' ; export default function EnhancedTestimonials( ): Rea c t.J S X.Eleme n t { retu r n < section ari a - lab e l = ' Enhanced Testimonia l s ' / > ; } $ $ 

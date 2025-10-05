@@ -336,8 +336,7 @@ const originalConsoleWarn = console.warn;
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
     if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('Warning: ReactDOM.render is no longer supported') ||
+      typeof args[0] === 'string' && (args[0].includes('Warning: ReactDOM.render is no longer supported') ||
         args[0].includes(
           'Warning: A suspended resource finished loading inside a test',
         ))
@@ -348,8 +347,7 @@ beforeAll(() => {
   };
   console.warn = (...args: unknown[]) => {
     if (
-      typeof args[0] === 'string' &&
-      (args[0].includes('componentWillReceiveProps') ||
+      typeof args[0] === 'string' && (args[0].includes('componentWillReceiveProps') ||
         args[0].includes('componentWillMount'))
     ) {
       return;
