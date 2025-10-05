@@ -3,7 +3,7 @@ import { lazy } from 'react';
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -14,7 +14,7 @@ export function debounce<T extends (...args: any[]) => any>(
 
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+  limit: number,
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean;
   return (...args: Parameters<T>) => {
@@ -39,18 +39,22 @@ export function preloadImages(srcs: string[]): Promise<void[]> {
   return Promise.all(srcs.map(preloadImage));
 }
 
-export function getImageOptimizedUrl(src: string, width?: number, quality = 80): string {
+export function getImageOptimizedUrl(
+  src: string,
+  width?: number,
+  quality = 80,
+): string {
   // Add image optimization logic here
   // This is a placeholder for actual optimization service
   const params = new URLSearchParams();
   if (width) params.set('w', width.toString());
   params.set('q', quality.toString());
-  
+
   return `${src}?${params.toString()}`;
 }
 
 export function lazyLoadComponent<T extends React.ComponentType<any>>(
-  importFunc: () => Promise<{ default: T }>
+  importFunc: () => Promise<{ default: T }>,
 ): React.LazyExoticComponent<T> {
   return lazy(importFunc);
 }
@@ -64,11 +68,11 @@ export function measurePerformance(name: string, fn: () => void): void {
 
 export function createIntersectionObserver(
   callback: IntersectionObserverCallback,
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit,
 ): IntersectionObserver {
   return new IntersectionObserver(callback, {
     threshold: 0.1,
     rootMargin: '50px',
-    ...options
+    ...options,
   });
 }

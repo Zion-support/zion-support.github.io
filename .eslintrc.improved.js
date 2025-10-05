@@ -11,7 +11,7 @@ module.exports = {
     ecmaVersion: 2020,
     sourceType: 'module',
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
     },
   },
   plugins: ['@typescript-eslint', 'react', 'react-hooks', 'jsx-a11y'],
@@ -23,16 +23,16 @@ module.exports = {
     'jsx-a11y/alt-text': 'error',
     'jsx-a11y/anchor-is-valid': 'error',
     'prefer-const': 'error',
-    'no-var': 'error'
+    'no-var': 'error',
   },
   settings: {
     react: {
-      version: 'detect'
+      version: 'detect',
     },
   },
   env: {
     browser: true,
     node: true,
-    es2020: true
+    es2020: true,
   },
 };

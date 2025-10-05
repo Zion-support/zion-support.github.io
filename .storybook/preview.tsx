@@ -1,5 +1,5 @@
-import '../src/index.css'
-import type { Preview } from '@storybook/react'
+import '../src/index.css';
+import type { Preview } from '@storybook/react';
 
 const preview: Preview = {
   parameters: {
@@ -7,7 +7,7 @@ const preview: Preview = {
     controls: {
       matchers: {
         color: /(background|color)$/i,
-        date: /Date$/
+        date: /Date$/,
       },
     },
   },

@@ -57,15 +57,18 @@ export class PerformanceOptimizer {
   /**
    * Record performance metrics for a component
    */
-  private recordMetrics(componentName: string, metrics: PerformanceMetrics): void {
+  private recordMetrics(
+    componentName: string,
+    metrics: PerformanceMetrics,
+  ): void {
     const existingMetrics = this.metrics.get(componentName) || [];
     existingMetrics.push(metrics);
-    
+
     // Keep only last 100 metrics per component
     if (existingMetrics.length > 100) {
       existingMetrics.splice(0, existingMetrics.length - 100);
     }
-    
+
     this.metrics.set(componentName, existingMetrics);
   }
 
@@ -107,22 +110,27 @@ export class PerformanceOptimizer {
   getAverageRenderTime(componentName: string): number {
     const metrics = this.getMetrics(componentName);
     if (metrics.length === 0) return 0;
-    
-    const totalTime = metrics.reduce((sum, metric) => sum + metric.renderTime, 0);
+
+    const totalTime = metrics.reduce(
+      (sum, metric) => sum + metric.renderTime,
+      0,
+    );
     return totalTime / metrics.length;
   }
 
   /**
    * Get slowest components
    */
-  getSlowestComponents(limit: number = 10): Array<{ componentName: string; averageTime: number }> {
+  getSlowestComponents(
+    limit: number = 10,
+  ): Array<{ componentName: string; averageTime: number }> {
     const results: Array<{ componentName: string; averageTime: number }> = [];
-    
+
     for (const [componentName] of this.metrics) {
       const averageTime = this.getAverageRenderTime(componentName);
       results.push({ componentName, averageTime });
     }
-    
+
     return results
       .sort((a, b) => b.averageTime - a.averageTime)
       .slice(0, limit);
@@ -146,13 +154,17 @@ export class PerformanceOptimizer {
     memoryUsage: number;
   } {
     const allMetrics = Array.from(this.metrics.values()).flat();
-    const slowComponents = Array.from(this.metrics.keys()).filter(
-      name => this.isComponentSlow(name)
+    const slowComponents = Array.from(this.metrics.keys()).filter(name =>
+      this.isComponentSlow(name),
     ).length;
-    
-    const totalRenderTime = allMetrics.reduce((sum, metric) => sum + metric.renderTime, 0);
-    const averageRenderTime = allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
-    
+
+    const totalRenderTime = allMetrics.reduce(
+      (sum, metric) => sum + metric.renderTime,
+      0,
+    );
+    const averageRenderTime =
+      allMetrics.length > 0 ? totalRenderTime / allMetrics.length : 0;
+
     return {
       totalComponents: this.metrics.size,
       slowComponents,
@@ -188,7 +200,7 @@ export class PerformanceOptimizer {
       summary: this.getPerformanceSummary(),
       components: Object.fromEntries(this.metrics),
     };
-    
+
     return JSON.stringify(exportData, null, 2);
   }
 
@@ -213,14 +225,18 @@ export const performanceOptimizer = new PerformanceOptimizer();
 // React HOC for performance tracking
 export function withPerformanceTracking<P extends object>(
   WrappedComponent: React.ComponentType<P>,
-  componentName?: string
+  componentName?: string,
 ) {
-  const displayName = componentName || WrappedComponent.displayName || WrappedComponent.name || 'Component';
-  
+  const displayName =
+    componentName ||
+    WrappedComponent.displayName ||
+    WrappedComponent.name ||
+    'Component';
+
   const TrackedComponent = React.forwardRef<any, P>((props, ref) => {
     React.useEffect(() => {
       performanceOptimizer.startRender(displayName);
-      
+
       return () => {
         performanceOptimizer.endRender(displayName);
       };
@@ -230,7 +246,7 @@ export function withPerformanceTracking<P extends object>(
   });
 
   TrackedComponent.displayName = `withPerformanceTracking(${displayName})`;
-  
+
   return TrackedComponent;
 }
 
@@ -238,7 +254,7 @@ export function withPerformanceTracking<P extends object>(
 export function usePerformanceTracking(componentName: string) {
   React.useEffect(() => {
     performanceOptimizer.startRender(componentName);
-    
+
     return () => {
       performanceOptimizer.endRender(componentName);
     };
@@ -252,7 +268,7 @@ export const performanceUtils = {
    */
   debounce<T extends (...args: any[]) => any>(
     func: T,
-    wait: number
+    wait: number,
   ): (...args: Parameters<T>) => void {
     let timeout: NodeJS.Timeout;
     return (...args: Parameters<T>) => {
@@ -266,7 +282,7 @@ export const performanceUtils = {
    */
   throttle<T extends (...args: any[]) => any>(
     func: T,
-    limit: number
+    limit: number,
   ): (...args: Parameters<T>) => void {
     let inThrottle: boolean;
     return (...args: Parameters<T>) => {
@@ -284,7 +300,7 @@ export const performanceUtils = {
   shouldComponentUpdate<P extends object>(
     prevProps: P,
     nextProps: P,
-    keys: (keyof P)[]
+    keys: (keyof P)[],
   ): boolean {
     return keys.some(key => prevProps[key] !== nextProps[key]);
   },

@@ -252,7 +252,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <motion.div
                 key={insight.title}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1} y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
               >
@@ -284,7 +284,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <motion.div
                 key={tier.name}
                 initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1} y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
                   tier.popular
@@ -376,7 +376,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 <motion.div
                   key={service.id}
                   initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1} y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
                 >
@@ -474,7 +474,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-3xl font-bold mb-6"
             >
@@ -482,7 +482,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             </motion.h2>
             <motion.p
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8} delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
             >
@@ -491,7 +491,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             </motion.p>
             <motion.div
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8} delay: 0.4 }}
               className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
             >
@@ -526,7 +526,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl font-bold text-white mb-6"
             >
@@ -534,7 +534,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             </motion.h2>
             <motion.p
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8} delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
             >
@@ -543,7 +543,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             </motion.p>
             <motion.div
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8} delay: 0.4 }}
               className="grid md:grid-cols-3 gap-8 mb-12"
             >
@@ -578,7 +578,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             </motion.div>
             <motion.div
               initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8} delay: 0.6 }}
               className="flex flex-wrap justify-center gap-4"
             >

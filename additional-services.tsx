@@ -53,7 +53,7 @@ export default function AdditionalServices() {
             'Team productivity dashboards'
           ],
           link: '/contact',
-          marketSize: '$4.2B meeting software market'}
+          marketSize: '$4.2B meeting software market',
           roi: '35% reduction in meeting time waste'
         },
         {name: 'Healthcare Appointment Intelligence',

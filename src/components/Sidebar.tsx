@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
@@ -15,8 +15,8 @@ const Sidebar: React.FC = () => {
         { label: 'Resources', path: '/resources' },
         { label: 'Case Studies', path: '/case-studies' },
         { label: 'Blog', path: '/blog' },
-        { label: 'About', path: '/about' }
-      ]
+        { label: 'About', path: '/about' },
+      ],
     },
     {
       title: 'AI Services',
@@ -24,8 +24,8 @@ const Sidebar: React.FC = () => {
         { label: 'AI Solutions', path: '/services/ai-services' },
         { label: 'Micro SaaS', path: '/services/micro-saas' },
         { label: 'Data Analytics', path: '/services/analytics' },
-        { label: 'Workflow Automation', path: '/services/automation' }
-      ]
+        { label: 'Workflow Automation', path: '/services/automation' },
+      ],
     },
     {
       title: 'IT Services',
@@ -33,27 +33,30 @@ const Sidebar: React.FC = () => {
         { label: 'IT Services', path: '/services/it-services' },
         { label: 'Cloud & DevOps', path: '/services/cloud' },
         { label: 'Cybersecurity', path: '/services/security' },
-        { label: 'Compliance Monitor', path: '/services/ai-compliance-monitor' }
-      ]
+        {
+          label: 'Compliance Monitor',
+          path: '/services/ai-compliance-monitor',
+        },
+      ],
     },
     {
       title: 'Tools',
       links: [
         { label: 'SEO Split Testing', path: '/services/seo-split-testing' },
-        { label: 'Image CDN Optimizer', path: '/services/image-cdn-optimizer' }
-      ]
-    }
+        { label: 'Image CDN Optimizer', path: '/services/image-cdn-optimizer' },
+      ],
+    },
   ];
 
   return (
-    <aside className="bg-gray-50 rounded-lg p-6 h-fit sticky top-24">
-      <div className="space-y-6">
+    <aside className='bg-gray-50 rounded-lg p-6 h-fit sticky top-24'>
+      <div className='space-y-6'>
         {sections.map((section, sectionIndex) => (
           <div key={sectionIndex}>
-            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3">
+            <h3 className='text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3'>
               {section.title}
             </h3>
-            <nav className="space-y-1">
+            <nav className='space-y-1'>
               {section.links.map((link, linkIndex) => (
                 <Link
                   key={linkIndex}
@@ -70,11 +73,11 @@ const Sidebar: React.FC = () => {
             </nav>
           </div>
         ))}
-        
-        <div className="pt-4 border-t border-gray-200">
+
+        <div className='pt-4 border-t border-gray-200'>
           <Link
-            to="/contact"
-            className="block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium"
+            to='/contact'
+            className='block w-full bg-blue-600 text-white text-center py-2 px-4 rounded-md hover:bg-blue-700 transition-colors font-medium'
           >
             Get Started
           </Link>

@@ -4,7 +4,9 @@ interface SkeletonProps {
   className?: string;
 }
 
-const Skeleton = React.memo(function Skeleton({ className = '' }: SkeletonProps) {
+const Skeleton = React.memo(function Skeleton({
+  className = '',
+}: SkeletonProps) {
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
       <h3 className='text-lg font-semibold text-blue-800'>Skeleton</h3>

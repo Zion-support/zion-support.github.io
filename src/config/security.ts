@@ -16,8 +16,10 @@ export const securityConfig = {
       frame-ancestors 'none';
       base-uri 'self';
       form-action 'self';
-    `.replace(/\s+/g, ' ').trim()
-  }
+    `
+      .replace(/\s+/g, ' ')
+      .trim(),
+  },
 };
 
 export function getSecurityHeaders() {
