@@ -1,6 +1,8 @@
 
-import { Calendar, Clock, Cpu, Shield } from 'lucide-react';
-
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cpu } from 'lucide-react';
 
 export const metadata = {
   title: 'Edge Private Insights v2 (2026): Scoped IDs + DP + On-device | Zion',

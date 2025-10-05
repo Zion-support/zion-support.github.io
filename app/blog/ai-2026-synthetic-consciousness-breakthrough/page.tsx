@@ -1,7 +1,10 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, Brain, Target, TrendingUp, Zap } from 'lucide-react';
+import Link from 'next/link';
 
-
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness',
@@ -30,20 +33,20 @@ export default function SyntheticConsciousnessBreakthrough2026() {
               This revolutionary advancement represents the most significant leap in AI development since the inception of artificial intelligence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight 
+              <Link 
                 href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View $10B Success Case Study
                 <ArrowRight />
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/services/ai-consulting"
                 className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
               >
                 Implement Conscious AI
                 <Brain />
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
@@ -217,20 +220,20 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             capabilities and drive unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
+            <Link 
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation
               <ArrowRight />
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/services/ai-development"
               className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
             >
               Explore AI Services
               <TrendingUp />
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>
