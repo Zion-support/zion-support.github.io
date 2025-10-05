@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Shield, Workflow, TrendingUp, CheckCircle, ArrowRight } from "lucide-react";
 const October2025LatestPremiumContentBanner = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden" > {/* Animated background effects */}
