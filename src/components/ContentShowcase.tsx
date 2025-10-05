@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React from "react";
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
 
 const ContentShowcase: React.FC = () => {
   const contentItems = [
@@ -22,15 +18,12 @@ const ContentShowcase: React.FC = () => {
       title: "Cloud Migration Guide",
       description: "Comprehensive guide to successful cloud migration strategies",
       category: "IT Services",
-<<<<<<< HEAD
-      readTime: "6 min read"
-=======
       readTime: "10 min read"
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="py-16 bg-gray-50">
@@ -79,6 +72,8 @@ const ContentShowcase: React.FC = () => {
           ))}
         </div>
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29bd
     <div className="py-12 px-4">
       <h2 className="text-3xl font-bold mb-8 text-center">Featured Content</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -99,6 +94,7 @@ const ContentShowcase: React.FC = () => {
             </div>
           </div>
         ))}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2368
 =======
               <h3 className="text-xl font-bold mb-3">{item.title}</h3>
@@ -113,6 +109,8 @@ const ContentShowcase: React.FC = () => {
           ))}
         </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-9427
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29bd
       </div>
     </div>
   );

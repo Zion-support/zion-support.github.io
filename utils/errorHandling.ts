@@ -25,7 +25,7 @@ interface ErrorMetrics {
 
 const ERROR_LOG_KEY = 'zion_error_logs';
 const MAX_ERROR_LOGS = 100;
-const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
+// const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
 
 /**
  * Get session ID
@@ -135,7 +135,7 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
 /**
  * Send error to monitoring service
  */
-const sendToMonitoring = (errorLog: ErrorLog) => {
+const sendToMonitoring = (_errorLog: ErrorLog) => {
   if (typeof window === 'undefined') return;
 
   // Example: Send to Sentry, LogRocket, or custom endpoint

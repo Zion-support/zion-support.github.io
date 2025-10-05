@@ -1,7 +1,6 @@
-import React, { Suspense, lazy, useState, useEffect } from "react";
+import React, { Suspense, useState, useEffect } from "react";
 import { ErrorBoundary } from "react-error-boundary";
 import { motion } from "framer-motion";
-import { getFeaturedBanners } from '../data/bannerConfigurations';
 
 // Loading component
 const LoadingSpinner: React.FC = () => (
@@ -37,7 +36,6 @@ const ErrorFallback: React.FC<{ error: Error; resetErrorBoundary: () => void }> 
 
 // Main content component
 const MainContent: React.FC = () => {
-  const [banners, setBanners] = useState(getFeaturedBanners(3));
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

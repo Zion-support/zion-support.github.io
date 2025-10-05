@@ -28,6 +28,7 @@ const FeaturedServiceCard: React.FC = () => {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -88,6 +89,8 @@ const FeaturedServiceCard: React.FC = () => {
         </div>
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29bd
     <div className="py-12 px-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {services.map((service, index) => (
@@ -111,9 +114,12 @@ const FeaturedServiceCard: React.FC = () => {
             </a>
           </div>
         ))}
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-2368
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-9427
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-29bd
       </div>
     </div>
   );

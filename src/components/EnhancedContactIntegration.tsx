@@ -17,8 +17,4 @@ const EnhancedContactIntegration = React.memo(function EnhancedContactIntegratio
   );
 });
 
-<<<<<<< HEAD
 export default EnhancedContactIntegration;
-=======
-export default EnhancedContactIntegration;
->>>>>>> cursor/fix-errors-and-merge-to-main-2368

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
+=======
+import React, { useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-29bd
 
 export function useAccessibility() {
   useEffect(() => {

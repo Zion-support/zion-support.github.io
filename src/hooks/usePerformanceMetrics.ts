@@ -40,7 +40,8 @@ export function usePerformanceMetrics() {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+        const inputEntry = entry as PerformanceEventTiming;
+        setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
       });
     }).observe({ entryTypes: ['first-input'] });
 
@@ -49,8 +50,9 @@ export function usePerformanceMetrics() {
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
       entries.forEach(entry => {
-        if (!entry.hadRecentInput) {
-          clsValue += entry.value;
+        const layoutEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value?: number };
+        if (!layoutEntry.hadRecentInput) {
+          clsValue += layoutEntry.value || 0;
         }
       });
       setMetrics(prev => ({ ...prev, cls: clsValue }));
@@ -59,7 +61,7 @@ export function usePerformanceMetrics() {
     // Time to First Byte
     new PerformanceObserver((list) => {
       const entries = list.getEntries();
-      const ttfbEntry = entries.find(entry => entry.name.includes('document'));
+      const ttfbEntry = entries.find(entry => entry.name.includes('document')) as PerformanceNavigationTiming;
       if (ttfbEntry) {
         setMetrics(prev => ({ ...prev, ttfb: ttfbEntry.responseStart - ttfbEntry.requestStart }));
       }
