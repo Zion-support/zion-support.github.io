@@ -16,17 +16,21 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
+global.IntersectionObserver = class MockIntersectionObserver implements IntersectionObserver {
   root: Element | null = null;
   rootMargin: string = '0px';
   thresholds: ReadonlyArray<number> = [0];
   
-  constructor() {}
+  constructor(
+    public callback: IntersectionObserverCallback,
+    public options?: IntersectionObserverInit
+  ) {}
+  
   disconnect() {}
   observe() {}
   unobserve() {}
   takeRecords(): IntersectionObserverEntry[] { return []; }
-} as IntersectionObserver;
+} as any;
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
