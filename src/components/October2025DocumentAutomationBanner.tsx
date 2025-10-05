@@ -5,7 +5,9 @@ const October2025DocumentAutomationBanner = () => {
     <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }}</div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breaking News Badge */}
@@ -13,7 +15,8 @@ const October2025DocumentAutomationBanner = () => {
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full text-white font-bold text-sm shadow-lg animate-pulse">
             <FileText className="w-4 h-4 mr-2" />
             NEW RELEASE - OCTOBER 1, 2025
-            <FileText className="w-4 h-4 ml-2"</div>
+            <FileText className="w-4 h-4 ml-2" />
+          </div>
         </div>
 
         {/* Main Headline */}
