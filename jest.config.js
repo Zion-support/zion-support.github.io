@@ -1,7 +1,7 @@
 export default {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/app/setupTests.tsx'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transform: {
     '^.+\\.(ts|tsx)$': [
@@ -12,14 +12,14 @@ export default {
     ],
   },
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/app/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.js',
   },
   testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '<rootDir>/app/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/app/**/*.{test,spec}.{js,jsx,ts,tsx}',
     '<rootDir>/__tests__/simple.test.js',
     '<rootDir>/__tests__/basic.smoke.test.js',
   ],
