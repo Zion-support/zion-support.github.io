@@ -1,4 +1,18 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
+  description: 'Discover how a Fortune 500 company achieved $2.3 billion in cost savings and 95% operational efficiency gains through comprehensive AI automation. Real-world implementation insights and proven results.',
+  keywords: 'Fortune 500, AI automation, cost savings, operational efficiency, enterprise transformation, business intelligence, AI success story',
+  openGraph: {
+    title: 'Fortune 500 AI Automation Success: $2.3B Cost Savings & 95% Efficiency Gains',
+    description: 'Discover how a Fortune 500 company achieved $2.3 billion in cost savings and 95% operational efficiency gains through comprehensive AI automation.',
+    type: 'article',
+    publishedTime: '2025-01-20T00:00:00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Fortune 500', 'AI Automation', 'Cost Savings', 'Enterprise', 'Success Story']
+  }
+};
 
 export default function Fortune500AIAutomationSuccess() {
   return (
@@ -279,14 +293,12 @@ export default function Fortune500AIAutomationSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/services" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                href="/<services" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
               </a>

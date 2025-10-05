@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2026 January: Quantum Consciousness Breakthrough - The Next Evolution',
+  description: 'Discover the revolutionary quantum consciousness breakthrough that is reshaping AI capabilities, enabling unprecedented intelligence and consciousness fusion in enterprise systems.',
+  keywords: ['AI 2026', 'quantum consciousness', 'AI breakthrough', 'consciousness fusion', 'quantum AI', 'enterprise AI'],
+  openGraph: {
+    title: 'AI 2026 January: Quantum Consciousness Breakthrough - The Next Evolution',
+    description: 'Discover the revolutionary quantum consciousness breakthrough that is reshaping AI capabilities and enabling unprecedented intelligence.',
+    type: 'article',
+    publishedTime: '2026-01-01T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AI2026JanuaryQuantumConsciousnessBreakthrough() {
   return (
@@ -168,14 +181,12 @@ export default function AI2026JanuaryQuantumConsciousnessBreakthrough() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Explore Consciousness AI
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   View Breakthrough Results
                 </a>

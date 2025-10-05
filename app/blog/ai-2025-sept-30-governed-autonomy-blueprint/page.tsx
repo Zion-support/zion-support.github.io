@@ -1,6 +1,5 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
@@ -103,12 +102,12 @@ export default function GovernedAutonomyBlueprint2025() {
   );
 }
 
-function RelatedCard({ title, href, color }: { title: string; href: string; color: string }) {
+function RelatedCard({ title, href }: { title: string; href: string }) {
   return (
-    <Link to={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
-      <h3 className={`text-xl font-bold mb-2 ${color}`}>{title}</h3>
+    <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
+      <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <span className="text-indigo-700 font-semibold">Read More →</span>
-    </Link>
+    </ArrowRight>
   );
 }
 

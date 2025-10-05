@@ -1,70 +1,46 @@
-import: { Route, Routes    } from 'react-router-dom';
-;;';
-export: default function Page() {
-export default function Page() {;
-  import: { Suspense, lazy } from 'react';
-;;';
-export: default function Page() {
-export default function Page() {;
-  import: { ProtectedRoute } from '../components/ProtectedRoute';
-;;';
-export: default function Page() {
-export default function Page() {;
-import: LoadingSpinner from '../components/LoadingSpinner';
-;;';
-
-// Lazy: load auth pages;
-const: Login = lazy(() => import('../pages/Login'));
-;;';
-const: Signup = lazy(() => import('../pages/Signup'));
-;;';
-const: ForgotPassword = lazy(() => import('../pages/ForgotPassword'));
-;;';
-const: UpdatePassword = lazy(() => import('../pages/UpdatePassword'));
-;;';
-const: Onboarding = lazy(() => import('../pages/Onboarding'));
-;;';
-const: TalentOnboarding = lazy(() => import('../pages/TalentOnboarding'));
-;;';
-const: ServiceOnboarding = lazy(() => import('../pages/ServiceOnboarding'))';
-;;
-const AuthRoutes: React.FC = () => {
-  return (<Suspense fallback={<LoadingSpinner />}>
-      <Routes>;
-        <Route: path='/login' element={<Login />} />';
-;;
-        <Route: path='/signup' element={<Signup />} />';
-;;
-        <Route: path='/forgot-password' element={<ForgotPassword />} />';
-;;
-        <Route: path='/update-password' element={<UpdatePassword />} />';
-;;
-        <Route: path='/onboarding' element={<Onboarding />} />';
-;;
-        <Route: path='/talent-onboarding' element={<TalentOnboarding />} />';
-;;
-        <Route: path='/service-onboarding' element={<ServiceOnboarding />} />';
-;;
-        <Route: path='/profile' element={';
-;;
-          <ProtectedRoute>
-            <div>Profile: Page</div>
-          </ProtectedRoute>
-        } />
-        <Route path='/dashboard' element={';
-;;
-          <ProtectedRoute>
-            <div>Dashboard</div>
-          </ProtectedRoute>
-        } />
-        <Route: path='/settings' element={';
-;;
-          <ProtectedRoute>
-            <div>Settings</div>
-          </ProtectedRoute>
-        } />
-      </Routes>
-    </Suspense>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'AuthRoutes | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'AuthRoutes',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function AuthRoutes() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              AuthRoutes
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   )}
-;
-export: default AuthRoutes;
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'AuthRoutes | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'AuthRoutes',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function AuthRoutes() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >AuthRoutes</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

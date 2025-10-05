@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2025 December: Revolutionary Autonomous Enterprise Transformation',
+  description: 'Discover how Fortune 500 companies are achieving unprecedented business transformation through revolutionary autonomous enterprise systems, achieving 95% operational efficiency and $50B+ value creation.',
+  keywords: ['AI 2025', 'autonomous enterprise', 'Fortune 500', 'business transformation', 'operational efficiency', 'AI automation'],
+  openGraph: {
+    title: 'AI 2025 December: Revolutionary Autonomous Enterprise Transformation',
+    description: 'Discover how Fortune 500 companies are achieving unprecedented business transformation through revolutionary autonomous enterprise systems.',
+    type: 'article',
+    publishedTime: '2025-12-01T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AI2025DecemberRevolutionaryAutonomousEnterprise() {
   return (
@@ -167,14 +180,12 @@ export default function AI2025DecemberRevolutionaryAutonomousEnterprise() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                 >
                   Get Started Today
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

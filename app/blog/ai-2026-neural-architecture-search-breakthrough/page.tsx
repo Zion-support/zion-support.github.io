@@ -1,4 +1,3 @@
-// import React from 'react';
 
 export default function NeuralArchitectureSearchBreakthrough() {
   return (
@@ -170,8 +169,7 @@ export default function NeuralArchitectureSearchBreakthrough() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <a 
-            href="/services/ai-neural-architecture-optimization" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold rounded-full hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+            href="/services/ai-neural-architecture-<optimization" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 text-white font-bold rounded-full hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           >
             Get Started with NAS 2026
             <span className="ml-2">🚀</span>

@@ -1,4 +1,18 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2027: Quantum AI Security Revolution - Protect $847B Assets with Quantum-Resistant AI',
+  description: 'Discover the quantum AI security breakthrough that protects $847B in enterprise assets with quantum-resistant encryption, NIST-approved protocols, and 99.97% threat prevention.',
+  keywords: 'quantum AI security, quantum-resistant encryption, cybersecurity, NIST-approved, enterprise security, AI protection',
+  openGraph: {
+    title: 'AI 2027: Quantum AI Security Revolution',
+    description: 'Protect $847B assets with quantum-resistant AI security',
+    type: 'article',
+    publishedTime: '2027-01-20T00:00:00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI Security', 'Quantum Computing', 'Cybersecurity', 'Enterprise Security'],
+  },
+};
 
 export default function QuantumAISecurityRevolution() {
   return (
@@ -215,14 +229,12 @@ export default function QuantumAISecurityRevolution() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Get Security Assessment
             </a>
             <a 
-              href="/services/quantum-ai-security" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+              href="/services/quantum-ai-<security" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               View Security Services
             </a>

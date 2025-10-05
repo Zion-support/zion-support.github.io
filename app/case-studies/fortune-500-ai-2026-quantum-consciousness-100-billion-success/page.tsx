@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Fortune 500 AI 2026 Quantum Consciousness: $100B Success Story',
+  description: 'Discover how a Fortune 500 technology leader achieved $100B in value creation through quantum consciousness AI implementation, revolutionizing their operations and market position.',
+  keywords: ['Fortune 500', 'AI 2026', 'quantum consciousness', 'success story', 'value creation', 'enterprise transformation'],
+  openGraph: {
+    title: 'Fortune 500 AI 2026 Quantum Consciousness: $100B Success Story',
+    description: 'Discover how a Fortune 500 technology leader achieved $100B in value creation through quantum consciousness AI implementation.',
+    type: 'article',
+    publishedTime: '2026-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function Fortune500AI2026QuantumConsciousnessSuccess() {
   return (
@@ -222,14 +235,12 @@ export default function Fortune500AI2026QuantumConsciousnessSuccess() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   View More Success Stories
                 </a>

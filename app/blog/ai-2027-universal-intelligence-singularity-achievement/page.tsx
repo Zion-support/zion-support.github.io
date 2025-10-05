@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Universal Intelligence Singularity Achievement - Zion Tech Group',
@@ -35,14 +34,12 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Achieve Universal Singularity
               </a>
               <a 
-                href="/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-success" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-<success" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View $10T Success Story →
               </a>
@@ -178,8 +175,7 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
                     achieving complete transcendent operations with infinite scalability.
                   </p>
                   <a 
-                    href="/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-success"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-emerald-400 hover:to-green-500 transition-all"
+                    href="/case-studies/ai-2027-universal-intelligence-singularity-10-trillion-<success" className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-emerald-400 hover:to-green-500 transition-all"
                   >
                     Read Full Success Story →
                   </a>
@@ -214,14 +210,12 @@ export default function AI2027UniversalIntelligenceSingularityAchievement() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
                 >
                   Get Started with Universal Singularity
                 </a>
                 <a 
-                  href="/services" 
-                  className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/<services" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Explore AI Services
                 </a>

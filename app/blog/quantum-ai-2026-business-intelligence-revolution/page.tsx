@@ -1,6 +1,12 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowLeft,Calendar,Clock,Tag,User } from "lucide-react";
+
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import { ArrowLeft, Clock, Calendar, User, Tag } from 'lucide-react';
+
 
 export const metadata = {
   title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',
@@ -14,10 +20,11 @@ export default function QuantumAIBusinessIntelligence() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link to="/" 
+          <Link 
+            href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft />
             Back to Home
           </Link>
         </div>
@@ -29,15 +36,15 @@ export default function QuantumAIBusinessIntelligence() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar />
               <span>January 20, 2026</span>
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              <User />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock />
               <span>15 min read</span>
             </div>
           </div>
@@ -53,7 +60,7 @@ export default function QuantumAIBusinessIntelligence() {
           <div className="flex flex-wrap gap-2">
             {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Tag />
                 {tag}
               </span>
             ))}
@@ -295,12 +302,14 @@ export default function QuantumAIBusinessIntelligence() {
               Contact Zion Tech Group to explore how quantum computing can transform your data into strategic competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/guides/quantum-ai-implementation-roadmap-2026"
+              <Link 
+                href="/guides/quantum-ai-implementation-roadmap-2026"
                 className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Quantum AI Roadmap
               </Link>
-              <Link to="/case-studies/fortune-500-quantum-bi-transformation"
+              <Link 
+                href="/case-studies/fortune-500-quantum-bi-transformation"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View Success Stories

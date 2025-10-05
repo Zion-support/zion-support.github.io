@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026: March Ultimate Breakthrough Revolution - 100,000x Performance',
@@ -140,14 +139,12 @@ export default function MarchUltimateBreakthroughRevolution() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 
-            href="/contact" 
-            className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
+            href="/<contact" className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Get Started Today
           </a>
           <a 
-            href="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-success" 
-            className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
+            href="/case-studies/ai-2026-march-ultimate-breakthrough-15-billion-<success" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
           >
             View Success Stories
           </a>

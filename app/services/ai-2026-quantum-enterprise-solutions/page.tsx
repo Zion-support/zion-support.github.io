@@ -1,12 +1,11 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export default function QuantumEnterpriseSolutionsPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="mb-12">
-          <Link to="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <Link href="/<services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Services
           </Link>
           <div className="flex items-center gap-2 mb-6">
@@ -261,13 +260,13 @@ export default function QuantumEnterpriseSolutionsPage() {
             Our team of quantum AI experts is ready to help you transform your business operations.
           </p>
           <div className="flex flex-wrap justify-center gap-6">
-            <Link to="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+            <Link 
+              href="/<contact" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
             >
               Schedule Consultation
             </Link>
-            <Link to="/case-studies" 
-              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
+            <Link 
+              href="/case-<studies" className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
             >
               View Success Stories
             </Link>

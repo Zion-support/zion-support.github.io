@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
   title: '$1.2B AI Revolutionary Breakthrough Success - Zion Tech Group',
@@ -16,7 +15,7 @@ export default function AI2027RevolutionaryBreakthroughSuccess() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <Link to="/case-studies" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <Link href="/case-<studies" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Case Studies
         </Link>
       </div>
@@ -326,13 +325,13 @@ export default function AI2027RevolutionaryBreakthroughSuccess() {
               Join 200+ companies achieving breakthrough results with AI 2027 technology
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact"
-                className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              <Link
+                href="/<contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Get Started Today
               </Link>
-              <Link to="/blog/ai-2027-autonomous-enterprise-revolution"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
+              <Link
+                href="/blog/ai-2027-autonomous-enterprise-<revolution" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Learn More About AI 2027
               </Link>

@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Agent Safety Runbooks 2026 | Zion Tech Group',
@@ -36,9 +35,9 @@ export default function AgentSafetyRunbooks2026Page() {
 				</div>
 
 				<div className="mt-12">
-					<Link to="/blog" className="inline-block bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-bold hover:bg-fuchsia-50">
+					<ArrowRight href="/blog" className="inline-block bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-bold hover:bg-fuchsia-50">
 						← Back to Blog
-					</Link>
+					</ArrowRight>
 				</div>
 			</main>
 		</div>

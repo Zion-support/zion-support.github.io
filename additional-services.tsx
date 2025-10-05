@@ -1,52 +1,11 @@
-// import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { 
-  Brain, 
-  Code, 
-  Cloud, 
-  Shield, 
-  Network, 
-  Server, 
-  BarChart3, 
-  Settings, 
-  Zap, 
-  Monitor, 
-  Search, 
-  MessageSquare, 
-  CheckCircle, 
-  ArrowRight, 
-  DollarSign,
-  Clock,
-  Star,
-  TrendingUp,
-  Smartphone,
-  Globe,
-  Lock,
-  Database,
-  Cpu,
-  Target,
-  Rocket,
-  Phone,
-  Mail,
-  MapPin,
-  Users,
-  FileText,
-  CreditCard,
-  ShoppingCart,
-  Camera,
-  Mic,
-  Video,
-  Headphones,
-  Wifi,
-  Battery,
-  Wrench,
-  Tool
-} from 'lucide-react';
+import { ArrowRight, Brain, CheckCircle, Clock, Cloud, Code, DollarSign, Globe, MessageSquare, Server, Smartphone, Star } from 'lucide-react';
+import React from 'react'
+
+import { Helmet } from 'react-helmet-async'
 
 export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';
   const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';
-
   const sections = [
     {
       id: 'micro-saas',
@@ -71,8 +30,7 @@ export default function AdditionalServices() {
           marketSize: '$7.5B email marketing market',
           roi: 'Average 23% increase in open rates'
         },
-        {
-          name: 'Smart Meeting Analytics Platform',
+        {name: 'Smart Meeting Analytics Platform',
           blurb: 'AI-powered meeting insights, productivity tracking, and automated follow-up generation for remote teams.',
           price: '$99 - $499/month',
           eta: '2 weeks',
@@ -88,8 +46,7 @@ export default function AdditionalServices() {
           marketSize: '$4.2B meeting software market',
           roi: '35% reduction in meeting time waste'
         },
-        {
-          name: 'Healthcare Appointment Intelligence',
+        {name: 'Healthcare Appointment Intelligence',
           blurb: 'AI-driven appointment scheduling with patient preference learning, no-show prediction, and optimization.',
           price: '$199 - $999/month',
           eta: '3 weeks',
@@ -105,8 +62,7 @@ export default function AdditionalServices() {
           marketSize: '$3.8B healthcare scheduling market',
           roi: '28% reduction in no-shows, 15% revenue increase'
         },
-        {
-          name: 'AI Content Localization Engine',
+        {name: 'AI Content Localization Engine',
           blurb: 'Automated content translation, cultural adaptation, and SEO optimization for global markets.',
           price: '$149 - $799/month',
           eta: '2 weeks',
@@ -122,8 +78,7 @@ export default function AdditionalServices() {
           marketSize: '$56B localization market',
           roi: '40% faster time-to-market globally'
         },
-        {
-          name: 'Smart Inventory Forecasting',
+        {name: 'Smart Inventory Forecasting',
           blurb: 'AI-powered demand forecasting, stock optimization, and automated reordering for e-commerce businesses.',
           price: '$299 - $1,499/month',
           eta: '3 weeks',
@@ -139,8 +94,7 @@ export default function AdditionalServices() {
           marketSize: '$2.1B inventory management market',
           roi: '25% reduction in stockouts, 20% cost savings'
         },
-        {
-          name: 'AI-Powered Compliance Monitor',
+        {name: 'AI-Powered Compliance Monitor',
           blurb: 'Automated compliance monitoring, risk assessment, and regulatory reporting for financial services.',
           price: '$999 - $4,999/month',
           eta: '4 weeks',
@@ -156,8 +110,7 @@ export default function AdditionalServices() {
           marketSize: '$12.3B compliance software market',
           roi: '60% reduction in compliance costs'
         },
-        {
-          name: 'Smart Lead Scoring Platform',
+        {name: 'Smart Lead Scoring Platform',
           blurb: 'AI-driven lead qualification, scoring, and nurturing automation for B2B sales teams.',
           price: '$199 - $999/month',
           eta: '2 weeks',
@@ -173,8 +126,7 @@ export default function AdditionalServices() {
           marketSize: '$6.8B sales automation market',
           roi: '45% improvement in lead conversion'
         },
-        {
-          name: 'AI Social Media Scheduler',
+        {name: 'AI Social Media Scheduler',
           blurb: 'Intelligent social media posting with optimal timing, content suggestions, and engagement optimization.',
           price: '$79 - $399/month',
           eta: '1 week',
@@ -188,8 +140,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Invoice Generator Pro',
+        {name: 'AI-Powered Invoice Generator Pro',
           blurb: 'Automated invoice creation with smart categorization, payment tracking, and client communication.',
           price: '$49 - $199/month',
           eta: '1-2 weeks',
@@ -198,28 +149,26 @@ export default function AdditionalServices() {
             'Automated payment reminders and follow-ups',
             'Multi-currency support with real-time exchange rates',
             'Client portal with payment history and analytics',
-            'Integration with accounting software (QuickBooks, Xero)',
+            'Integration with accounting software (QuickBooks) Xero)',
             'Custom branding and professional templates'
           ],
           link: '/contact'
         },
-        {
-          name: 'Smart Social Media Scheduler',
+        {name: 'Smart Social Media Scheduler',
           blurb: 'AI-driven social media management with optimal posting times and content optimization.',
           price: '$29 - $149/month',
           eta: '1-2 weeks',
           bullets: [
             'AI-powered optimal posting time detection',
             'Content performance prediction and optimization',
-            'Multi-platform scheduling (Instagram, Facebook, Twitter, LinkedIn)',
+            'Multi-platform scheduling (Instagram, Facebook, Twitter) LinkedIn)',
             'Hashtag research and trending topic integration',
             'Analytics dashboard with engagement insights',
             'Team collaboration and approval workflows'
           ],
           link: '/contact'
         },
-        {
-          name: 'AI Customer Support Chatbot',
+        {name: 'AI Customer Support Chatbot',
           blurb: 'Intelligent chatbot with natural language processing and seamless human handoff.',
           price: '$99 - $499/month',
           eta: '2-3 weeks',
@@ -233,8 +182,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Smart Inventory Management System',
+        {name: 'Smart Inventory Management System',
           blurb: 'AI-powered inventory optimization with demand forecasting and automated reordering.',
           price: '$199 - $799/month',
           eta: '2-4 weeks',
@@ -248,8 +196,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Email Marketing Suite',
+        {name: 'AI-Powered Email Marketing Suite',
           blurb: 'Advanced email marketing with AI-driven personalization and campaign optimization.',
           price: '$79 - $299/month',
           eta: '2-3 weeks',
@@ -263,8 +210,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Smart Project Management Tool',
+        {name: 'Smart Project Management Tool',
           blurb: 'AI-enhanced project management with predictive analytics and resource optimization.',
           price: '$39 - $199/month',
           eta: '2-3 weeks',
@@ -278,8 +224,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Lead Scoring Platform',
+        {name: 'AI-Powered Lead Scoring Platform',
           blurb: 'Intelligent lead qualification with behavioral analysis and conversion prediction.',
           price: '$149 - $599/month',
           eta: '2-3 weeks',
@@ -293,8 +238,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Smart Document Management System',
+        {name: 'Smart Document Management System',
           blurb: 'AI-powered document organization with intelligent search and automated categorization.',
           price: '$59 - $249/month',
           eta: '2-3 weeks',
@@ -308,8 +252,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Analytics Dashboard',
+        {name: 'AI-Powered Analytics Dashboard',
           blurb: 'Intelligent business intelligence with automated insights and predictive analytics.',
           price: '$199 - $799/month',
           eta: '3-4 weeks',
@@ -323,8 +266,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Smart Appointment Booking System',
+        {name: 'Smart Appointment Booking System',
           blurb: 'AI-enhanced scheduling with conflict resolution and optimal time slot suggestions.',
           price: '$29 - $149/month',
           eta: '1-2 weeks',
@@ -338,8 +280,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Smart Contract Audit Platform',
+        {name: 'Smart Contract Audit Platform',
           blurb: 'Automated smart contract security analysis with comprehensive vulnerability detection.',
           price: '$1,200 - $5,000/month',
           eta: '2-4 weeks',
@@ -351,8 +292,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'API Rate Limiting & Monetization',
+        {name: 'API Rate Limiting & Monetization',
           blurb: 'Intelligent API rate limiting with usage-based billing and analytics.',
           price: '$199 - $999/month',
           eta: '1-2 weeks',
@@ -364,8 +304,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Real Estate Investment Analytics',
+        {name: 'Real Estate Investment Analytics',
           blurb: 'AI-powered property valuation and investment opportunity analysis.',
           price: '$499 - $2,499/month',
           eta: '3-5 weeks',
@@ -377,8 +316,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Supply Chain Risk Intelligence',
+        {name: 'Supply Chain Risk Intelligence',
           blurb: 'Real-time supply chain monitoring with risk assessment and alternative sourcing.',
           price: '$899 - $4,500/month',
           eta: '4-6 weeks',
@@ -390,8 +328,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Video Content Creator',
+        {name: 'AI-Powered Video Content Creator',
           blurb: 'Automated video generation with AI avatars, voice synthesis, and multi-language support.',
           price: '$299 - $1,999/month',
           eta: '3-4 weeks',
@@ -407,8 +344,7 @@ export default function AdditionalServices() {
           marketSize: '$15.7B video marketing market',
           roi: '70% reduction in video production costs'
         },
-        {
-          name: 'Smart Expense Management SaaS',
+        {name: 'Smart Expense Management SaaS',
           blurb: 'AI-powered expense tracking with automated categorization and compliance monitoring.',
           price: '$49 - $299/month',
           eta: '2-3 weeks',
@@ -417,15 +353,14 @@ export default function AdditionalServices() {
             'Automated expense categorization and tax optimization',
             'Policy compliance monitoring and alerts',
             'Multi-currency support with real-time conversion',
-            'Integration with accounting software (QuickBooks, Xero)',
+            'Integration with accounting software (QuickBooks) Xero)',
             'Advanced analytics and spending insights'
           ],
           link: '/contact',
           marketSize: '$8.2B expense management market',
           roi: '45% reduction in expense processing time'
         },
-        {
-          name: 'AI-Powered Customer Feedback Analyzer',
+        {name: 'AI-Powered Customer Feedback Analyzer',
           blurb: 'Intelligent sentiment analysis and feedback categorization with actionable insights.',
           price: '$199 - $999/month',
           eta: '2-3 weeks',
@@ -441,8 +376,7 @@ export default function AdditionalServices() {
           marketSize: '$4.1B customer feedback market',
           roi: '60% improvement in customer satisfaction scores'
         },
-        {
-          name: 'Smart Contract Analytics Platform',
+        {name: 'Smart Contract Analytics Platform',
           blurb: 'Blockchain analytics and monitoring for DeFi protocols and smart contract interactions.',
           price: '$499 - $2,999/month',
           eta: '3-5 weeks',
@@ -452,14 +386,13 @@ export default function AdditionalServices() {
             'Risk assessment and vulnerability detection',
             'DeFi protocol performance analytics',
             'Custom dashboard and reporting tools',
-            'Multi-blockchain support (Ethereum, Polygon, BSC)'
+            'Multi-blockchain support (Ethereum, Polygon) BSC)'
           ],
           link: '/contact',
           marketSize: '$2.1B blockchain analytics market',
           roi: '80% reduction in smart contract risks'
         },
-        {
-          name: 'AI-Powered SEO Content Optimizer',
+        {name: 'AI-Powered SEO Content Optimizer',
           blurb: 'Intelligent content optimization with keyword research and performance tracking.',
           price: '$99 - $599/month',
           eta: '1-2 weeks',
@@ -475,8 +408,7 @@ export default function AdditionalServices() {
           marketSize: '$6.8B SEO tools market',
           roi: '120% increase in organic traffic'
         },
-        {
-          name: 'Smart Property Management System',
+        {name: 'Smart Property Management System',
           blurb: 'Comprehensive property management with tenant screening and maintenance automation.',
           price: '$199 - $999/month',
           eta: '3-4 weeks',
@@ -492,8 +424,7 @@ export default function AdditionalServices() {
           marketSize: '$3.2B property management market',
           roi: '35% reduction in property management costs'
         },
-        {
-          name: 'AI-Powered Legal Document Analyzer',
+        {name: 'AI-Powered Legal Document Analyzer',
           blurb: 'Intelligent legal document review with risk assessment and compliance checking.',
           price: '$799 - $4,999/month',
           eta: '4-6 weeks',
@@ -509,8 +440,7 @@ export default function AdditionalServices() {
           marketSize: '$12.4B legal tech market',
           roi: '75% reduction in document review time'
         },
-        {
-          name: 'Smart Fleet Management Platform',
+        {name: 'Smart Fleet Management Platform',
           blurb: 'IoT-powered fleet tracking with predictive maintenance and route optimization.',
           price: '$299 - $1,999/month',
           eta: '3-5 weeks',
@@ -526,8 +456,7 @@ export default function AdditionalServices() {
           marketSize: '$5.8B fleet management market',
           roi: '25% reduction in fleet operating costs'
         },
-        {
-          name: 'AI-Powered Email Deliverability Optimizer',
+        {name: 'AI-Powered Email Deliverability Optimizer',
           blurb: 'Advanced email deliverability monitoring with reputation management and optimization.',
           price: '$149 - $799/month',
           eta: '2-3 weeks',
@@ -544,13 +473,12 @@ export default function AdditionalServices() {
           roi: '40% improvement in email deliverability rates'
         }
         ,
-        {
-          name: 'AI Privacy Policy & Terms Generator',
+        {name: 'AI Privacy Policy & Terms Generator',
           blurb: 'Generate compliant Privacy Policies, Terms, and DPA addendums with continuous updates.',
           price: '$39 - $199/month',
           eta: '1 week',
           bullets: [
-            'Jurisdiction-aware policies (US, EU, UK, CA, AU)',
+            'Jurisdiction-aware policies (US, EU, UK, CA) AU)',
             'Auto-updates for regulatory changes',
             'Cookie banner and consent logs',
             'Data Processing Addendum (DPA) templates',
@@ -561,8 +489,7 @@ export default function AdditionalServices() {
           marketSize: '$10.5B privacy tech market',
           roi: '90% faster policy updates'
         },
-        {
-          name: 'AI Proposal & SOW Writer',
+        {name: 'AI Proposal & SOW Writer',
           blurb: 'Draft client proposals and statements of work with scope, milestones, and pricing.',
           price: '$29 - $149/month',
           eta: '1 week',
@@ -571,15 +498,14 @@ export default function AdditionalServices() {
             'Auto-scoped deliverables and timelines',
             'Profitability guardrails and price suggestions',
             'E-signature and PDF export',
-            'CRM integration (HubSpot, Salesforce)',
+            'CRM integration (HubSpot) Salesforce)',
             'Versioning and redline compare'
           ],
           link: '/contact',
           marketSize: '$6.2B proposal software market',
           roi: '3x faster sales cycles'
         },
-        {
-          name: 'AI-Powered Competitive Intelligence Platform',
+        {name: 'AI-Powered Competitive Intelligence Platform',
           blurb: 'Real-time competitive analysis with automated monitoring and strategic insights.',
           price: '$299 - $1,999/month',
           eta: '2-3 weeks',
@@ -595,8 +521,7 @@ export default function AdditionalServices() {
           marketSize: '$4.8B competitive intelligence market',
           roi: '45% improvement in strategic decision speed'
         },
-        {
-          name: 'Smart Contract Lifecycle Management',
+        {name: 'Smart Contract Lifecycle Management',
           blurb: 'End-to-end smart contract development, deployment, and monitoring platform.',
           price: '$499 - $3,999/month',
           eta: '3-4 weeks',
@@ -612,8 +537,7 @@ export default function AdditionalServices() {
           marketSize: '$2.3B smart contract market',
           roi: '70% reduction in development time'
         },
-        {
-          name: 'AI-Powered Customer Onboarding Automation',
+        {name: 'AI-Powered Customer Onboarding Automation',
           blurb: 'Intelligent customer onboarding with personalized journeys and automated workflows.',
           price: '$199 - $999/month',
           eta: '2-3 weeks',
@@ -629,8 +553,7 @@ export default function AdditionalServices() {
           marketSize: '$3.2B customer onboarding market',
           roi: '60% improvement in customer activation rates'
         },
-        {
-          name: 'Intelligent API Documentation Generator',
+        {name: 'Intelligent API Documentation Generator',
           blurb: 'Automated API documentation with interactive examples and real-time updates.',
           price: '$99 - $599/month',
           eta: '1-2 weeks',
@@ -646,8 +569,7 @@ export default function AdditionalServices() {
           marketSize: '$2.1B API management market',
           roi: '80% reduction in documentation maintenance'
         },
-        {
-          name: 'AI-Powered Event Management Platform',
+        {name: 'AI-Powered Event Management Platform',
           blurb: 'Intelligent event planning with automated coordination and attendee engagement.',
           price: '$149 - $799/month',
           eta: '2-3 weeks',
@@ -663,8 +585,7 @@ export default function AdditionalServices() {
           marketSize: '$5.8B event management market',
           roi: '50% reduction in event planning time'
         },
-        {
-          name: 'Smart Contract Analytics & Risk Assessment',
+        {name: 'Smart Contract Analytics & Risk Assessment',
           blurb: 'Advanced blockchain analytics with risk scoring and compliance monitoring.',
           price: '$399 - $2,499/month',
           eta: '3-4 weeks',
@@ -680,13 +601,12 @@ export default function AdditionalServices() {
           marketSize: '$1.8B blockchain analytics market',
           roi: '65% improvement in risk management efficiency'
         },
-        {
-          name: 'AI-Powered Content Moderation Suite',
+        {name: 'AI-Powered Content Moderation Suite',
           blurb: 'Advanced content moderation with multi-modal AI for text, image, and video.',
           price: '$199 - $1,499/month',
           eta: '2-3 weeks',
           bullets: [
-            'Multi-modal content analysis (text, image, video)',
+            'Multi-modal content analysis (text, image) video)',
             'Real-time moderation with customizable policies',
             'False positive reduction through ML feedback',
             'Multi-language support and cultural context',
@@ -697,8 +617,7 @@ export default function AdditionalServices() {
           marketSize: '$3.2B content moderation market',
           roi: '70% reduction in moderation costs'
         },
-        {
-          name: 'Intelligent Password Management Enterprise',
+        {name: 'Intelligent Password Management Enterprise',
           blurb: 'Advanced password security with AI-powered breach monitoring and team management.',
           price: '$79 - $399/month',
           eta: '1-2 weeks',
@@ -714,8 +633,7 @@ export default function AdditionalServices() {
           marketSize: '$2.8B password management market',
           roi: '85% reduction in password-related security incidents'
         },
-        {
-          name: 'AI-Powered Subscription Analytics',
+        {name: 'AI-Powered Subscription Analytics',
           blurb: 'Advanced subscription business analytics with churn prediction and revenue optimization.',
           price: '$299 - $1,999/month',
           eta: '2-3 weeks',
@@ -731,8 +649,7 @@ export default function AdditionalServices() {
           marketSize: '$4.2B subscription management market',
           roi: '35% improvement in customer retention'
         },
-        {
-          name: 'Smart Contract Insurance Platform',
+        {name: 'Smart Contract Insurance Platform',
           blurb: 'Automated smart contract insurance with risk assessment and claims processing.',
           price: '$599 - $4,999/month',
           eta: '4-6 weeks',
@@ -748,8 +665,7 @@ export default function AdditionalServices() {
           marketSize: '$1.2B DeFi insurance market',
           roi: '90% faster claims processing'
         },
-        {
-          name: 'AI-Powered Employee Onboarding Suite',
+        {name: 'AI-Powered Employee Onboarding Suite',
           blurb: 'Intelligent employee onboarding with automated workflows and compliance tracking.',
           price: '$149 - $799/month',
           eta: '2-3 weeks',
@@ -765,8 +681,7 @@ export default function AdditionalServices() {
           marketSize: '$2.4B HR onboarding market',
           roi: '60% reduction in onboarding time'
         },
-        {
-          name: 'Intelligent Code Review Assistant',
+        {name: 'Intelligent Code Review Assistant',
           blurb: 'AI-powered code review with automated suggestions and security scanning.',
           price: '$199 - $999/month',
           eta: '2-3 weeks',
@@ -782,8 +697,7 @@ export default function AdditionalServices() {
           marketSize: '$3.1B code review tools market',
           roi: '75% reduction in code review time'
         },
-        {
-          name: 'AI-Powered Vendor Management Platform',
+        {name: 'AI-Powered Vendor Management Platform',
           blurb: 'Intelligent vendor relationship management with performance tracking and risk assessment.',
           price: '$299 - $1,999/month',
           eta: '3-4 weeks',
@@ -799,8 +713,7 @@ export default function AdditionalServices() {
           marketSize: '$2.8B vendor management market',
           roi: '50% improvement in vendor relationship efficiency'
         },
-        {
-          name: 'Smart Contract Marketplace',
+        {name: 'Smart Contract Marketplace',
           blurb: 'Decentralized marketplace for smart contracts with verification and licensing.',
           price: '$399 - $2,999/month',
           eta: '4-6 weeks',
@@ -818,8 +731,7 @@ export default function AdditionalServices() {
         }
       ]
     },
-    {
-      id: 'ai',
+    {id: 'ai',
       title: 'AI Services — Advanced Capabilities',
       icon: Brain,
       color: 'blue',
@@ -830,7 +742,7 @@ export default function AdditionalServices() {
           price: '$1,500 - $7,500/month',
           eta: '3-4 weeks',
           bullets: [
-            'Multi-channel chatbot deployment (web, mobile, social)',
+            'Multi-channel chatbot deployment (web, mobile) social)',
             'Natural language processing with intent recognition',
             'Sentiment analysis and escalation triggers',
             'Integration with CRM and ticketing systems',
@@ -839,10 +751,9 @@ export default function AdditionalServices() {
           ],
           link: '/contact',
           marketSize: '$8.6B conversational AI market',
-          roi: '70% reduction in support costs, 95% customer satisfaction'
+          roi: '70% reduction in support costs} 95% customer satisfaction'
         },
-        {
-          name: 'Predictive Analytics Platform',
+        {name: 'Predictive Analytics Platform',
           blurb: 'Advanced machine learning models for business forecasting, risk assessment, and decision optimization.',
           price: '$2,500 - $12,000/month',
           eta: '4-6 weeks',
@@ -858,8 +769,7 @@ export default function AdditionalServices() {
           marketSize: '$15.2B predictive analytics market',
           roi: '25% improvement in business decision accuracy'
         },
-        {
-          name: 'AI-Powered Document Processing',
+        {name: 'AI-Powered Document Processing',
           blurb: 'Intelligent document analysis, data extraction, and automated workflow processing.',
           price: '$1,800 - $8,000/month',
           eta: '3-5 weeks',
@@ -875,8 +785,7 @@ export default function AdditionalServices() {
           marketSize: '$12.4B document management market',
           roi: '90% reduction in manual processing time'
         },
-        {
-          name: 'Computer Vision Solutions',
+        {name: 'Computer Vision Solutions',
           blurb: 'Advanced image and video analysis for quality control, security, and automation.',
           price: '$2,000 - $10,000/month',
           eta: '4-6 weeks',
@@ -892,8 +801,7 @@ export default function AdditionalServices() {
           marketSize: '$19.1B computer vision market',
           roi: '40% improvement in quality control accuracy'
         },
-        {
-          name: 'AI-Powered Fraud Detection',
+        {name: 'AI-Powered Fraud Detection',
           blurb: 'Real-time fraud prevention and risk assessment using advanced machine learning algorithms.',
           price: '$3,000 - $15,000/month',
           eta: '4-6 weeks',
@@ -907,10 +815,9 @@ export default function AdditionalServices() {
           ],
           link: '/contact',
           marketSize: '$9.8B fraud detection market',
-          roi: '85% reduction in false positives, 60% fraud prevention'
+          roi: '85% reduction in false positives} 60% fraud prevention'
         },
-        {
-          name: 'Natural Language Processing Suite',
+        {name: 'Natural Language Processing Suite',
           blurb: 'Advanced NLP capabilities for text analysis, language translation, and content generation.',
           price: '$1,200 - $6,000/month',
           eta: '2-4 weeks',
@@ -924,8 +831,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Content Generation Suite',
+        {name: 'AI-Powered Content Generation Suite',
           blurb: 'Advanced AI content creation with brand voice consistency and SEO optimization.',
           price: '$199 - $999/month',
           eta: '2-3 weeks',
@@ -933,14 +839,13 @@ export default function AdditionalServices() {
             'GPT-4 powered content generation',
             'Brand voice training and consistency',
             'SEO optimization with keyword integration',
-            'Multi-format content (blogs, social, emails)',
+            'Multi-format content (blogs, social) emails)',
             'Plagiarism detection and originality scoring',
             'Content performance analytics and optimization'
           ],
           link: '/contact'
         },
-        {
-          name: 'AI Customer Sentiment Analysis',
+        {name: 'AI Customer Sentiment Analysis',
           blurb: 'Real-time sentiment monitoring across all customer touchpoints with actionable insights.',
           price: '$299 - $1,299/month',
           eta: '2-3 weeks',
@@ -954,8 +859,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Fraud Detection System',
+        {name: 'AI-Powered Fraud Detection System',
           blurb: 'Advanced fraud prevention with machine learning and real-time transaction monitoring.',
           price: '$1,999 - $9,999/month',
           eta: '4-6 weeks',
@@ -969,8 +873,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Recommendation Engine',
+        {name: 'AI-Powered Recommendation Engine',
           blurb: 'Personalized recommendation system with collaborative filtering and deep learning.',
           price: '$799 - $3,999/month',
           eta: '3-4 weeks',
@@ -984,8 +887,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Predictive Analytics Platform',
+        {name: 'AI-Powered Predictive Analytics Platform',
           blurb: 'Advanced predictive modeling with machine learning for business forecasting and insights.',
           price: '$1,299 - $5,999/month',
           eta: '4-6 weeks',
@@ -999,8 +901,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Image Recognition System',
+        {name: 'AI-Powered Image Recognition System',
           blurb: 'Advanced computer vision with object detection, classification, and analysis capabilities.',
           price: '$399 - $1,999/month',
           eta: '3-4 weeks',
@@ -1014,8 +915,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Language Translation Service',
+        {name: 'AI-Powered Language Translation Service',
           blurb: 'Real-time multilingual translation with context awareness and domain-specific accuracy.',
           price: '$199 - $999/month',
           eta: '2-3 weeks',
@@ -1029,8 +929,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Code Review Assistant',
+        {name: 'AI-Powered Code Review Assistant',
           blurb: 'Automated code analysis, security scanning, and quality improvement suggestions.',
           price: '$599 - $2,999/month',
           eta: '2-4 weeks',
@@ -1042,8 +941,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Predictive Maintenance AI',
+        {name: 'Predictive Maintenance AI',
           blurb: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',
           price: '$1,500 - $7,500/month',
           eta: '4-8 weeks',
@@ -1055,8 +953,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI Customer Journey Analytics',
+        {name: 'AI Customer Journey Analytics',
           blurb: 'Advanced customer behavior analysis with personalized journey optimization.',
           price: '$899 - $4,500/month',
           eta: '3-6 weeks',
@@ -1068,21 +965,19 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Autonomous Document Processing',
+        {name: 'Autonomous Document Processing',
           blurb: 'End-to-end document workflow automation with intelligent data extraction.',
           price: '$1,200 - $5,500/month',
           eta: '3-5 weeks',
           bullets: [
-            'Multi-format document processing (PDF, images, forms)',
+            'Multi-format document processing (PDF, images) forms)',
             'Intelligent data extraction and validation',
             'Workflow automation and approval routing',
             'Compliance tracking and audit trails'
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Fraud Detection',
+        {name: 'AI-Powered Fraud Detection',
           blurb: 'Real-time fraud detection with machine learning models and behavioral analysis.',
           price: '$2,000 - $10,000/month',
           eta: '4-8 weeks',
@@ -1094,8 +989,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'AI-Powered Autonomous Testing Platform',
+        {name: 'AI-Powered Autonomous Testing Platform',
           blurb: 'Self-healing test automation with AI-driven test generation and maintenance.',
           price: '$1,500 - $8,000/month',
           eta: '3-5 weeks',
@@ -1111,8 +1005,7 @@ export default function AdditionalServices() {
           marketSize: '$4.1B test automation market',
           roi: '85% reduction in test maintenance costs'
         },
-        {
-          name: 'AI-Powered Voice Analytics Platform',
+        {name: 'AI-Powered Voice Analytics Platform',
           blurb: 'Advanced voice analysis for customer service optimization and sentiment detection.',
           price: '$399 - $2,499/month',
           eta: '3-4 weeks',
@@ -1128,8 +1021,7 @@ export default function AdditionalServices() {
           marketSize: '$2.8B voice analytics market',
           roi: '50% improvement in customer service quality'
         },
-        {
-          name: 'AI-Powered Predictive Maintenance System',
+        {name: 'AI-Powered Predictive Maintenance System',
           blurb: 'IoT sensor data analysis for predictive equipment maintenance and failure prevention.',
           price: '$1,200 - $6,000/month',
           eta: '4-8 weeks',
@@ -1145,13 +1037,12 @@ export default function AdditionalServices() {
           marketSize: '$4.5B predictive maintenance market',
           roi: '40% reduction in unplanned downtime'
         },
-        {
-          name: 'AI-Powered Content Moderation Suite',
+        {name: 'AI-Powered Content Moderation Suite',
           blurb: 'Automated content moderation with multi-modal AI for text, image, and video analysis.',
           price: '$299 - $1,999/month',
           eta: '2-4 weeks',
           bullets: [
-            'Multi-modal content analysis (text, image, video)',
+            'Multi-modal content analysis (text, image) video)',
             'Real-time moderation with customizable policies',
             'False positive reduction through ML feedback',
             'Multi-language support and cultural context',
@@ -1162,8 +1053,7 @@ export default function AdditionalServices() {
           marketSize: '$3.2B content moderation market',
           roi: '70% reduction in moderation costs'
         },
-        {
-          name: 'AI-Powered Energy Optimization Platform',
+        {name: 'AI-Powered Energy Optimization Platform',
           blurb: 'Smart energy management with predictive analytics and automated optimization.',
           price: '$499 - $3,999/month',
           eta: '4-6 weeks',
@@ -1179,8 +1069,7 @@ export default function AdditionalServices() {
           marketSize: '$12.8B energy management market',
           roi: '30% reduction in energy costs'
         },
-        {
-          name: 'AI-Powered Talent Acquisition Platform',
+        {name: 'AI-Powered Talent Acquisition Platform',
           blurb: 'Intelligent recruitment with candidate matching and bias-free screening.',
           price: '$799 - $4,999/month',
           eta: '3-6 weeks',
@@ -1196,8 +1085,7 @@ export default function AdditionalServices() {
           marketSize: '$15.8B talent acquisition market',
           roi: '60% reduction in time-to-hire'
         },
-        {
-          name: 'AI-Powered Supply Chain Optimization',
+        {name: 'AI-Powered Supply Chain Optimization',
           blurb: 'End-to-end supply chain optimization with demand forecasting and logistics automation.',
           price: '$1,999 - $12,000/month',
           eta: '6-12 weeks',
@@ -1213,8 +1101,7 @@ export default function AdditionalServices() {
           marketSize: '$37.4B supply chain management market',
           roi: '25% reduction in supply chain costs'
         },
-        {
-          name: 'AI-Powered Financial Risk Assessment',
+        {name: 'AI-Powered Financial Risk Assessment',
           blurb: 'Advanced financial risk modeling with real-time monitoring and automated alerts.',
           price: '$2,500 - $15,000/month',
           eta: '4-8 weeks',
@@ -1230,13 +1117,12 @@ export default function AdditionalServices() {
           marketSize: '$28.5B financial risk management market',
           roi: '35% reduction in credit losses'
         },
-        {
-          name: 'AI-Powered Healthcare Diagnostics Assistant',
+        {name: 'AI-Powered Healthcare Diagnostics Assistant',
           blurb: 'Medical image analysis and diagnostic support with AI-powered insights.',
           price: '$3,000 - $20,000/month',
           eta: '6-12 weeks',
           bullets: [
-            'Medical image analysis (X-ray, MRI, CT, ultrasound)',
+            'Medical image analysis (X-ray, MRI, CT) ultrasound)',
             'Symptom analysis and preliminary diagnosis support',
             'Drug interaction checking and allergy detection',
             'Patient risk stratification and monitoring',
@@ -1248,8 +1134,7 @@ export default function AdditionalServices() {
           roi: '30% improvement in diagnostic accuracy'
         }
         ,
-        {
-          name: 'AI Sales Playbook Copilot',
+        {name: 'AI Sales Playbook Copilot',
           blurb: 'On-call AI coach for SDRs/AEs with live call guidance, objection handling, and next actions.',
           price: '$59 - $199/user/month',
           eta: '2-4 weeks',
@@ -1265,8 +1150,7 @@ export default function AdditionalServices() {
           marketSize: '$30B sales tech market',
           roi: '25% lift in win rates'
         },
-        {
-          name: 'Responsible AI Governance Suite',
+        {name: 'Responsible AI Governance Suite',
           blurb: 'EU AI Act/NIST-aligned risk, evals, incidents, and model inventory for enterprise AI.',
           price: '$799 - $4,999/month',
           eta: '4-8 weeks',
@@ -1282,8 +1166,7 @@ export default function AdditionalServices() {
           marketSize: '$4.3B AI governance market',
           roi: 'Audit time reduced by 70%'
         },
-        {
-          name: 'AI-Powered Autonomous Code Generation',
+        {name: 'AI-Powered Autonomous Code Generation',
           blurb: 'Advanced AI code generation with context awareness and automated testing.',
           price: '$999 - $5,999/month',
           eta: '3-5 weeks',
@@ -1299,8 +1182,7 @@ export default function AdditionalServices() {
           marketSize: '$8.4B code generation market',
           roi: '85% reduction in development time'
         },
-        {
-          name: 'AI-Powered Digital Twin Platform',
+        {name: 'AI-Powered Digital Twin Platform',
           blurb: 'Intelligent digital twins with real-time simulation and predictive analytics.',
           price: '$1,999 - $12,999/month',
           eta: '6-10 weeks',
@@ -1316,8 +1198,7 @@ export default function AdditionalServices() {
           marketSize: '$15.8B digital twin market',
           roi: '40% reduction in operational costs'
         },
-        {
-          name: 'AI-Powered Autonomous Vehicle Fleet Management',
+        {name: 'AI-Powered Autonomous Vehicle Fleet Management',
           blurb: 'Intelligent fleet management for autonomous vehicles with route optimization.',
           price: '$2,499 - $15,999/month',
           eta: '8-12 weeks',
@@ -1333,8 +1214,7 @@ export default function AdditionalServices() {
           marketSize: '$18.4B autonomous vehicle market',
           roi: '60% improvement in fleet efficiency'
         },
-        {
-          name: 'AI-Powered Quantum Computing Optimization',
+        {name: 'AI-Powered Quantum Computing Optimization',
           blurb: 'Quantum computing optimization with AI-driven algorithm selection and execution.',
           price: '$3,999 - $25,999/month',
           eta: '8-16 weeks',
@@ -1350,8 +1230,7 @@ export default function AdditionalServices() {
           marketSize: '$2.1B quantum computing market',
           roi: '300% improvement in quantum algorithm performance'
         },
-        {
-          name: 'AI-Powered Metaverse Development Platform',
+        {name: 'AI-Powered Metaverse Development Platform',
           blurb: 'Comprehensive metaverse creation with AI-driven content generation and user interaction.',
           price: '$1,499 - $9,999/month',
           eta: '6-12 weeks',
@@ -1367,8 +1246,7 @@ export default function AdditionalServices() {
           marketSize: '$13.8B metaverse market',
           roi: '70% reduction in metaverse development costs'
         },
-        {
-          name: 'AI-Powered Space Mission Optimization',
+        {name: 'AI-Powered Space Mission Optimization',
           blurb: 'Advanced AI for space mission planning, satellite management, and orbital optimization.',
           price: '$4,999 - $35,999/month',
           eta: '12-20 weeks',
@@ -1384,8 +1262,7 @@ export default function AdditionalServices() {
           marketSize: '$4.2B space technology market',
           roi: '50% improvement in mission success rates'
         },
-        {
-          name: 'AI-Powered Climate Change Modeling',
+        {name: 'AI-Powered Climate Change Modeling',
           blurb: 'Advanced climate modeling with AI-driven predictions and mitigation strategies.',
           price: '$2,999 - $19,999/month',
           eta: '8-16 weeks',
@@ -1401,8 +1278,7 @@ export default function AdditionalServices() {
           marketSize: '$1.8B climate tech market',
           roi: '80% improvement in climate prediction accuracy'
         },
-        {
-          name: 'AI-Powered Synthetic Biology Platform',
+        {name: 'AI-Powered Synthetic Biology Platform',
           blurb: 'Intelligent synthetic biology with AI-driven protein design and genetic optimization.',
           price: '$3,499 - $22,999/month',
           eta: '10-18 weeks',
@@ -1418,8 +1294,7 @@ export default function AdditionalServices() {
           marketSize: '$3.2B synthetic biology market',
           roi: '200% improvement in drug discovery efficiency'
         },
-        {
-          name: 'AI-Powered Brain-Computer Interface',
+        {name: 'AI-Powered Brain-Computer Interface',
           blurb: 'Advanced BCI with AI-driven neural signal processing and control systems.',
           price: '$4,999 - $35,999/month',
           eta: '12-24 weeks',
@@ -1437,8 +1312,7 @@ export default function AdditionalServices() {
         }
       ]
     },
-    {
-      id: 'it',
+    {id: 'it',
       title: 'IT Services — Comprehensive Solutions',
       icon: Cloud,
       color: 'green',
@@ -1458,10 +1332,9 @@ export default function AdditionalServices() {
           ],
           link: '/contact',
           marketSize: '$445B cloud computing market',
-          roi: '30% cost reduction, 50% performance improvement'
+          roi: '30% cost reduction} 50% performance improvement'
         },
-        {
-          name: 'DevOps & CI/CD Automation',
+        {name: 'DevOps & CI/CD Automation',
           blurb: 'End-to-end DevOps implementation with automated pipelines and infrastructure as code.',
           price: '$3,500 - $15,000/month',
           eta: '3-6 weeks',
@@ -1475,10 +1348,9 @@ export default function AdditionalServices() {
           ],
           link: '/contact',
           marketSize: '$7.8B DevOps market',
-          roi: '60% faster deployment, 40% fewer bugs'
+          roi: '60% faster deployment} 40% fewer bugs'
         },
-        {
-          name: 'Cybersecurity & Compliance',
+        {name: 'Cybersecurity & Compliance',
           blurb: 'Comprehensive security solutions including threat detection, compliance, and risk management.',
           price: '$2,500 - $12,000/month',
           eta: '4-8 weeks',
@@ -1492,8 +1364,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Cloud Migration & Optimization',
+        {name: 'Cloud Migration & Optimization',
           blurb: 'Comprehensive cloud migration services with cost optimization and security implementation.',
           price: '$5,000 - $50,000/project',
           eta: '4-8 weeks',
@@ -1507,8 +1378,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'DevOps Automation & CI/CD',
+        {name: 'DevOps Automation & CI/CD',
           blurb: 'Complete DevOps transformation with automated pipelines and infrastructure as code.',
           price: '$3,000 - $25,000/project',
           eta: '3-6 weeks',
@@ -1522,8 +1392,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Cybersecurity Assessment & Implementation',
+        {name: 'Cybersecurity Assessment & Implementation',
           blurb: 'Comprehensive security assessment with threat modeling and security implementation.',
           price: '$2,500 - $20,000/project',
           eta: '2-4 weeks',
@@ -1537,8 +1406,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Data Analytics & Business Intelligence',
+        {name: 'Data Analytics & Business Intelligence',
           blurb: 'Advanced data analytics platform with machine learning and predictive insights.',
           price: '$4,000 - $30,000/project',
           eta: '4-8 weeks',
@@ -1552,8 +1420,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'API Development & Integration',
+        {name: 'API Development & Integration',
           blurb: 'RESTful API development with microservices architecture and third-party integrations.',
           price: '$2,000 - $15,000/project',
           eta: '2-4 weeks',
@@ -1567,8 +1434,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Database Design & Optimization',
+        {name: 'Database Design & Optimization',
           blurb: 'Advanced database architecture with performance optimization and scalability solutions.',
           price: '$1,500 - $12,000/project',
           eta: '2-4 weeks',
@@ -1582,13 +1448,12 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Mobile App Development',
+        {name: 'Mobile App Development',
           blurb: 'Cross-platform mobile application development with native performance and features.',
           price: '$5,000 - $40,000/project',
           eta: '6-12 weeks',
           bullets: [
-            'Cross-platform development (React Native, Flutter)',
+            'Cross-platform development (React Native) Flutter)',
             'Native iOS and Android app development',
             'UI/UX design and user experience optimization',
             'Backend integration and API development',
@@ -1597,14 +1462,13 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'E-commerce Platform Development',
+        {name: 'E-commerce Platform Development',
           blurb: 'Complete e-commerce solution with payment integration and inventory management.',
           price: '$8,000 - $60,000/project',
           eta: '8-16 weeks',
           bullets: [
             'Custom e-commerce platform development',
-            'Payment gateway integration (Stripe, PayPal)',
+            'Payment gateway integration (Stripe) PayPal)',
             'Inventory management and order processing',
             'Customer portal and account management',
             'SEO optimization and marketing tools',
@@ -1612,8 +1476,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Blockchain & Web3 Solutions',
+        {name: 'Blockchain & Web3 Solutions',
           blurb: 'Blockchain development with smart contracts, DeFi, and NFT marketplace solutions.',
           price: '$10,000 - $100,000/project',
           eta: '8-20 weeks',
@@ -1627,8 +1490,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Zero Trust Security Architecture',
+        {name: 'Zero Trust Security Architecture',
           blurb: 'Comprehensive zero trust implementation with identity verification and micro-segmentation.',
           price: '$4,500 - $22,000/month',
           eta: '6-12 weeks',
@@ -1640,8 +1502,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Cloud Migration & Modernization',
+        {name: 'Cloud Migration & Modernization',
           blurb: 'Complete cloud migration strategy with application modernization and optimization.',
           price: '$8,000 - $45,000/month',
           eta: '8-16 weeks',
@@ -1653,8 +1514,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'DevSecOps Pipeline Implementation',
+        {name: 'DevSecOps Pipeline Implementation',
           blurb: 'Secure CI/CD pipelines with automated security testing and compliance.',
           price: '$3,200 - $15,000/month',
           eta: '4-8 weeks',
@@ -1666,8 +1526,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Disaster Recovery & Business Continuity',
+        {name: 'Disaster Recovery & Business Continuity',
           blurb: 'Comprehensive disaster recovery planning with automated failover and testing.',
           price: '$2,800 - $18,000/month',
           eta: '6-10 weeks',
@@ -1679,8 +1538,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'API Gateway & Microservices Management',
+        {name: 'API Gateway & Microservices Management',
           blurb: 'Enterprise API management with security, monitoring, and developer portal.',
           price: '$1,500 - $8,500/month',
           eta: '3-6 weeks',
@@ -1692,8 +1550,7 @@ export default function AdditionalServices() {
           ],
           link: '/contact'
         },
-        {
-          name: 'Cloud-Native Application Development',
+        {name: 'Cloud-Native Application Development',
           blurb: 'Modern cloud-native applications with microservices architecture and container orchestration.',
           price: '$8,000 - $75,000/project',
           eta: '8-20 weeks',
@@ -1709,8 +1566,7 @@ export default function AdditionalServices() {
           marketSize: '$445B cloud computing market',
           roi: '60% reduction in infrastructure costs'
         },
-        {
-          name: 'Enterprise Data Integration Platform',
+        {name: 'Enterprise Data Integration Platform',
           blurb: 'Comprehensive data integration with ETL/ELT pipelines and real-time processing.',
           price: '$5,000 - $40,000/project',
           eta: '6-16 weeks',
@@ -1726,8 +1582,7 @@ export default function AdditionalServices() {
           marketSize: '$33.3B data integration market',
           roi: '50% reduction in data processing time'
         },
-        {
-          name: 'Multi-Cloud Infrastructure Management',
+        {name: 'Multi-Cloud Infrastructure Management',
           blurb: 'Comprehensive multi-cloud strategy with cost optimization and security management.',
           price: '$3,000 - $25,000/month',
           eta: '4-12 weeks',
@@ -1743,8 +1598,7 @@ export default function AdditionalServices() {
           marketSize: '$445B cloud computing market',
           roi: '35% reduction in cloud costs'
         },
-        {
-          name: 'Edge Computing Solutions',
+        {name: 'Edge Computing Solutions',
           blurb: 'Edge computing infrastructure with IoT integration and real-time processing.',
           price: '$2,500 - $20,000/project',
           eta: '4-10 weeks',
@@ -1760,8 +1614,7 @@ export default function AdditionalServices() {
           marketSize: '$15.7B edge computing market',
           roi: '40% improvement in response times'
         },
-        {
-          name: 'Enterprise Security Operations Center (SOC)',
+        {name: 'Enterprise Security Operations Center (SOC)',
           blurb: '24/7 security monitoring with threat detection and incident response.',
           price: '$5,000 - $30,000/month',
           eta: '6-12 weeks',
@@ -1777,8 +1630,7 @@ export default function AdditionalServices() {
           marketSize: '$366.1B cybersecurity market',
           roi: '70% reduction in security incidents'
         },
-        {
-          name: 'Digital Transformation Consulting',
+        {name: 'Digital Transformation Consulting',
           blurb: 'Comprehensive digital transformation strategy with technology modernization and process optimization.',
           price: '$2,000 - $20,000/month',
           eta: '3-12 months',
@@ -1794,8 +1646,7 @@ export default function AdditionalServices() {
           marketSize: '$1.8T digital transformation market',
           roi: '300% average ROI within 2 years'
         },
-        {
-          name: 'IoT Platform Development',
+        {name: 'IoT Platform Development',
           blurb: 'Comprehensive IoT solutions with device management and data analytics.',
           price: '$10,000 - $100,000/project',
           eta: '8-24 weeks',
@@ -1811,8 +1662,7 @@ export default function AdditionalServices() {
           marketSize: '$1.3T IoT market',
           roi: '25% reduction in operational costs'
         },
-        {
-          name: 'Enterprise Resource Planning (ERP) Implementation',
+        {name: 'Enterprise Resource Planning (ERP) Implementation',
           blurb: 'Complete ERP system implementation with customization and integration services.',
           price: '$25,000 - $500,000/project',
           eta: '12-36 weeks',
@@ -1828,8 +1678,7 @@ export default function AdditionalServices() {
           marketSize: '$54.8B ERP market',
           roi: '20% improvement in operational efficiency'
         },
-        {
-          name: 'Customer Relationship Management (CRM) Solutions',
+        {name: 'Customer Relationship Management (CRM) Solutions',
           blurb: 'Advanced CRM implementation with sales automation and customer analytics.',
           price: '$5,000 - $50,000/project',
           eta: '4-16 weeks',
@@ -1845,8 +1694,7 @@ export default function AdditionalServices() {
           marketSize: '$58.8B CRM market',
           roi: '45% improvement in sales productivity'
         },
-        {
-          name: 'Edge Computing & 5G Infrastructure',
+        {name: 'Edge Computing & 5G Infrastructure',
           blurb: 'Advanced edge computing solutions with 5G integration and low-latency processing.',
           price: '$8,000 - $75,000/project',
           eta: '8-16 weeks',
@@ -1862,8 +1710,7 @@ export default function AdditionalServices() {
           marketSize: '$15.7B edge computing market',
           roi: '60% improvement in response times'
         },
-        {
-          name: 'Quantum-Safe Security Implementation',
+        {name: 'Quantum-Safe Security Implementation',
           blurb: 'Future-proof security solutions resistant to quantum computing attacks.',
           price: '$15,000 - $150,000/project',
           eta: '12-24 weeks',
@@ -1879,8 +1726,7 @@ export default function AdditionalServices() {
           marketSize: '$2.8B quantum security market',
           roi: '100% protection against quantum attacks'
         },
-        {
-          name: 'Autonomous Infrastructure Management',
+        {name: 'Autonomous Infrastructure Management',
           blurb: 'Self-managing infrastructure with AI-driven automation and optimization.',
           price: '$10,000 - $100,000/project',
           eta: '8-20 weeks',
@@ -1896,8 +1742,7 @@ export default function AdditionalServices() {
           marketSize: '$12.4B autonomous infrastructure market',
           roi: '70% reduction in operational overhead'
         },
-        {
-          name: 'Neuromorphic Computing Systems',
+        {name: 'Neuromorphic Computing Systems',
           blurb: 'Brain-inspired computing systems for ultra-efficient AI processing.',
           price: '$25,000 - $250,000/project',
           eta: '16-32 weeks',
@@ -1913,8 +1758,7 @@ export default function AdditionalServices() {
           marketSize: '$1.2B neuromorphic computing market',
           roi: '90% reduction in power consumption'
         },
-        {
-          name: 'Satellite Internet & Global Connectivity',
+        {name: 'Satellite Internet & Global Connectivity',
           blurb: 'Comprehensive satellite internet solutions with global coverage and low latency.',
           price: '$50,000 - $500,000/project',
           eta: '12-36 weeks',
@@ -1930,8 +1774,7 @@ export default function AdditionalServices() {
           marketSize: '$8.4B satellite internet market',
           roi: '80% improvement in global connectivity'
         },
-        {
-          name: 'Advanced Robotics & Automation Systems',
+        {name: 'Advanced Robotics & Automation Systems',
           blurb: 'Intelligent robotics solutions with AI-driven automation and human-robot collaboration.',
           price: '$20,000 - $200,000/project',
           eta: '12-24 weeks',
@@ -1947,8 +1790,7 @@ export default function AdditionalServices() {
           marketSize: '$23.8B robotics market',
           roi: '65% improvement in manufacturing efficiency'
         },
-        {
-          name: 'Advanced Materials & Nanotechnology',
+        {name: 'Advanced Materials & Nanotechnology',
           blurb: 'Cutting-edge materials science with nanotechnology applications and smart materials.',
           price: '$30,000 - $300,000/project',
           eta: '16-40 weeks',
@@ -1964,8 +1806,7 @@ export default function AdditionalServices() {
           marketSize: '$4.2B nanotechnology market',
           roi: '200% improvement in material performance'
         },
-        {
-          name: 'Advanced Manufacturing & Industry 4.0',
+        {name: 'Advanced Manufacturing & Industry 4.0',
           blurb: 'Smart manufacturing solutions with IoT, AI, and automation integration.',
           price: '$25,000 - $250,000/project',
           eta: '12-28 weeks',
@@ -1981,8 +1822,7 @@ export default function AdditionalServices() {
           marketSize: '$18.2B Industry 4.0 market',
           roi: '50% improvement in manufacturing efficiency'
         },
-        {
-          name: 'Advanced Energy Storage & Grid Management',
+        {name: 'Advanced Energy Storage & Grid Management',
           blurb: 'Intelligent energy storage systems with smart grid integration and optimization.',
           price: '$40,000 - $400,000/project',
           eta: '16-32 weeks',
@@ -1999,8 +1839,7 @@ export default function AdditionalServices() {
           roi: '40% improvement in energy efficiency'
         }
         ,
-        {
-          name: 'Data Platform Modernization (Lakehouse)',
+        {name: 'Data Platform Modernization (Lakehouse)',
           blurb: 'Migrate legacy warehouses to a modern lakehouse with streaming and governance.',
           price: '$25,000 - $180,000/project',
           eta: '8-20 weeks',
@@ -2016,8 +1855,7 @@ export default function AdditionalServices() {
           marketSize: '$87B analytics market',
           roi: '50% faster analytics delivery'
         },
-        {
-          name: 'Platform Engineering (Internal Developer Platform)',
+        {name: 'Platform Engineering (Internal Developer Platform)',
           blurb: 'Golden paths, paved roads, and self-service infra to accelerate developer velocity.',
           price: '$12,000 - $65,000/month',
           eta: '6-16 weeks',
@@ -2035,8 +1873,7 @@ export default function AdditionalServices() {
         }
       ]
     },
-    {
-      title: 'Enhanced Micro SaaS Solutions',
+    {title: 'Enhanced Micro SaaS Solutions',
       icon: Code,
       color: 'purple',
       items: [
@@ -2057,8 +1894,7 @@ export default function AdditionalServices() {
           marketSize: '$15.7B video marketing market',
           roi: '70% reduction in video production costs'
         },
-        {
-          name: 'Smart Expense Management SaaS',
+        {name: 'Smart Expense Management SaaS',
           blurb: 'AI-powered expense tracking, categorization, and automated reimbursement processing.',
           price: '$149 - $799/month',
           eta: '2-3 weeks',
@@ -2074,8 +1910,7 @@ export default function AdditionalServices() {
           marketSize: '$4.2B expense management market',
           roi: '60% reduction in expense processing time'
         },
-        {
-          name: 'AI-Powered Customer Feedback Analyzer',
+        {name: 'AI-Powered Customer Feedback Analyzer',
           blurb: 'Intelligent sentiment analysis and actionable insights from customer feedback across all channels.',
           price: '$199 - $999/month',
           eta: '2-3 weeks',
@@ -2093,8 +1928,7 @@ export default function AdditionalServices() {
         }
       ]
     },
-    {
-      title: 'Advanced AI Services',
+    {title: 'Advanced AI Services',
       icon: Brain,
       color: 'blue',
       items: [
@@ -2115,8 +1949,7 @@ export default function AdditionalServices() {
           marketSize: '$12.3B test automation market',
           roi: '80% reduction in test maintenance effort'
         },
-        {
-          name: 'AI-Powered Voice Analytics Platform',
+        {name: 'AI-Powered Voice Analytics Platform',
           blurb: 'Advanced voice analysis for customer service optimization and compliance monitoring.',
           price: '$399 - $1,999/month',
           eta: '3-4 weeks',
@@ -2132,8 +1965,7 @@ export default function AdditionalServices() {
           marketSize: '$6.7B voice analytics market',
           roi: '35% improvement in customer service quality'
         },
-        {
-          name: 'AI-Powered Predictive Maintenance System',
+        {name: 'AI-Powered Predictive Maintenance System',
           blurb: 'Machine learning-driven equipment maintenance prediction and optimization.',
           price: '$799 - $4,999/month',
           eta: '6-8 weeks',
@@ -2151,8 +1983,7 @@ export default function AdditionalServices() {
         }
       ]
     },
-    {
-      title: 'Enterprise IT Solutions',
+    {title: 'Enterprise IT Solutions',
       icon: Server,
       color: 'green',
       items: [
@@ -2173,8 +2004,7 @@ export default function AdditionalServices() {
           marketSize: '$25.4B cloud-native development market',
           roi: '40% faster application deployment'
         },
-        {
-          name: 'Enterprise Data Integration Platform',
+        {name: 'Enterprise Data Integration Platform',
           blurb: 'Comprehensive data integration solution for enterprise-wide data management and analytics.',
           price: '$25,000 - $150,000/project',
           eta: '12-20 weeks',
@@ -2190,8 +2020,7 @@ export default function AdditionalServices() {
           marketSize: '$18.7B data integration market',
           roi: '50% improvement in data quality and accessibility'
         },
-        {
-          name: 'Multi-Cloud Infrastructure Management',
+        {name: 'Multi-Cloud Infrastructure Management',
           blurb: 'Unified management and optimization of multi-cloud infrastructure across AWS, Azure, and GCP.',
           price: '$10,000 - $75,000/project',
           eta: '6-12 weeks',
@@ -2210,21 +2039,15 @@ export default function AdditionalServices() {
       ]
     }
   ];
-
-  const phoneHref = 'tel:+13024640950';
-  const emailHref = 'mailto:kleber@ziontechgroup.com';
-  const websiteUrl = 'https://ziontechgroup.com';
-  const address = '364 E Main St STE 1008, Middletown DE 19709';
-
-  return (
-    <>
+  const phoneHref = 'tel:+13024640950'
+  const emailHref = 'mailto:kleber@ziontechgroup.com'
+  return (<>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description} />
         <meta name="keywords" content="micro SaaS, AI services, IT solutions, automation, cloud services, enterprise software" />
         <link rel="canonical" href="https://ziontechgroup.com/additional-services" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         {/* Hero Section */}
         <section className="container mx-auto px-6 py-16">
@@ -2237,7 +2060,7 @@ export default function AdditionalServices() {
               New Services We Now Offer
             </h1>
             <p className="text-xl text-blue-100 mb-8 max-w-4xl mx-auto">
-              We regularly add pragmatic, production-grade services to maximize ROI. Explore our latest micro SaaS, AI, and IT solutions below, then contact us to get a tailored proposal.
+              We regularly add pragmatic, production-grade services to maximize ROI. Explore our latest micro SaaS, AI) and IT solutions below; then contact us to get a tailored proposal.
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
               <div className="flex items-center">
@@ -2255,7 +2078,6 @@ export default function AdditionalServices() {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="container mx-auto px-6 py-12">
           <div className="grid grid-cols-1 gap-8">
@@ -2269,13 +2091,11 @@ export default function AdditionalServices() {
                     </div>
                     <h2 className="text-2xl font-semibold text-white">{section.title}</h2>
                   </div>
-                  
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {section.items.map((item) => (
                       <div key={item.name} className="group relative rounded-xl border border-slate-700/50 p-6 hover:border-cyan-500/50 transition-all duration-300">
                         <h3 className="text-lg font-semibold text-white mb-2">{item.name}</h3>
                         <p className="text-sm text-slate-300 mb-4">{item.blurb}</p>
-                        
                         <ul className="space-y-2 mb-4">
                           {item.bullets.map((bullet, idx) => (
                             <li key={idx} className="flex items-center gap-2 text-sm text-slate-400">
@@ -2284,15 +2104,14 @@ export default function AdditionalServices() {
                             </li>
                           ))}
                         </ul>
-                        
                         <div className="flex items-center justify-between text-sm">
                           <div className="text-slate-300">
                             <span className="font-semibold text-cyan-400">{item.price}</span>
                             <span className="text-slate-500 ml-2">•</span>
                             <span className="ml-2">{item.eta} delivery</span>
                           </div>
-                          <a 
-                            href={item.link} 
+                          <a
+                            href={item.link}
                             className={`inline-flex items-center font-semibold text-${section.color}-400 hover:text-${section.color}-300 transition-colors`}
                           >
                             Learn more
@@ -2307,7 +2126,6 @@ export default function AdditionalServices() {
             })}
           </div>
         </section>
-
         {/* Contact Section */}
         <section className="container mx-auto px-6 py-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 rounded-2xl p-8 border border-cyan-500/20">
@@ -2317,7 +2135,6 @@ export default function AdditionalServices() {
                 Get a custom proposal for your specific needs. Most engagements start with a 30-60 minute consultation and a detailed proposal within 48 hours.
               </p>
             </div>
-            
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div>
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -2347,19 +2164,18 @@ export default function AdditionalServices() {
                 </p>
               </div>
             </div>
-
             <div className="text-center">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <a 
-                  href={phoneHref} 
+                <a
+                  href={phoneHref}
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
                 >
                   <Smartphone className="w-4 h-4" />
                   +1 302 464 0950
                 </a>
-                <a 
-                  href={emailHref} 
-                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-slate-600 transition-colors"
+                <a
+                  href={emailHref}
+                  className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover: bg-slate-600 transition-colors"
                 >
                   <MessageSquare className="w-4 h-4" />
                   kleber@ziontechgroup.com

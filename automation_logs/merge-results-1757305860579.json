@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-09-08T04:28:41.954Z",
+  "totalBranches": 10,
+  "processed": 10,
+  "merged": 3,
+  "failed": 7,
+  "mergedBranches": [
+    {
+      "branch": "automation/git-sync/2025-08-15T05-02-34-939Z",
+      "resolved": true,
+      "timestamp": "2025-09-08T04:29:26.340Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-12-41-839Z",
+      "resolved": true,
+      "timestamp": "2025-09-08T04:30:18.895Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-16-05-527Z",
+      "resolved": true,
+      "timestamp": "2025-09-08T04:30:45.474Z"
+    }
+  ],
+  "failedBranches": [
+    {
+      "branch": "origin/auto/autonomy-17186719616",
+      "error": "Command failed: git merge --abort\nfatal: There is no merge to abort (MERGE_HEAD missing).\n",
+      "timestamp": "2025-09-08T04:28:59.815Z"
+    },
+    {
+      "branch": "automation-improvements-1757244538193",
+      "error": "Command failed: git merge origin/automation-improvements-1757244538193 --no-ff -m \"Merge: automation-improvements-1757244538193\"\nwarning: exhaustive rename detection was skipped due to too many files.\nwarning: you may want to set your merge.renamelimit variable to at least 26312 and retry the command.\n",
+      "timestamp": "2025-09-08T04:29:13.338Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-03-47-842Z",
+      "error": "Command failed: git merge origin/automation/git-sync/2025-08-15T05-03-47-842Z --no-ff -m \"Merge: automation/git-sync/2025-08-15T05-03-47-842Z\"",
+      "timestamp": "2025-09-08T04:29:39.356Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-03-55-276Z",
+      "error": "Command failed: git merge origin/automation/git-sync/2025-08-15T05-03-55-276Z --no-ff -m \"Merge: automation/git-sync/2025-08-15T05-03-55-276Z\"",
+      "timestamp": "2025-09-08T04:29:52.256Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-12-30-749Z",
+      "error": "Command failed: git merge origin/automation/git-sync/2025-08-15T05-12-30-749Z --no-ff -m \"Merge: automation/git-sync/2025-08-15T05-12-30-749Z\"",
+      "timestamp": "2025-09-08T04:30:06.058Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-15-56-530Z",
+      "error": "Command failed: git merge origin/automation/git-sync/2025-08-15T05-15-56-530Z --no-ff -m \"Merge: automation/git-sync/2025-08-15T05-15-56-530Z\"",
+      "timestamp": "2025-09-08T04:30:32.772Z"
+    },
+    {
+      "branch": "automation/git-sync/2025-08-15T05-23-02-777Z",
+      "error": "Command failed: git merge origin/automation/git-sync/2025-08-15T05-23-02-777Z --no-ff -m \"Merge: automation/git-sync/2025-08-15T05-23-02-777Z\"",
+      "timestamp": "2025-09-08T04:30:58.577Z"
+    }
+  ],
+  "summary": {
+    "successRate": "30.00%",
+    "totalProcessed": 10,
+    "successfullyMerged": 3,
+    "failedMerges": 7
+  }
+}

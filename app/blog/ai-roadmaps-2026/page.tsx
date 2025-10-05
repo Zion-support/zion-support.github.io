@@ -1,6 +1,5 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Roadmaps 2026: What to Build Next and Why',
@@ -53,10 +52,10 @@ export default function Page() {
           <h3 className="text-xl font-semibold mb-2">Next up</h3>
           <ul className="list-disc pl-6 text-blue-700">
             <li>
-              <Link to="/content-hub">Explore the Content Hub</Link>
+              <ArrowRight href="/content-hub">Explore the Content Hub</ArrowRight>
             </li>
             <li>
-              <Link to="/blog/ai-value-stream-analytics-2026">AI Value Stream Analytics 2026</Link>
+              <ArrowRight href="/blog/ai-value-stream-analytics-2026">AI Value Stream Analytics 2026</ArrowRight>
             </li>
           </ul>
         </div>

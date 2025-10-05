@@ -1,6 +1,4 @@
-// import React from 'react';
 import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Adaptive Neural Architectures - The Future of Enterprise AI | Zion Tech Group',
@@ -36,20 +34,17 @@ export default function AdaptiveNeuralArchitecturesPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#content" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="#<content" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Read Full Article
               </a>
               <a 
-                href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-success" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-<success" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View $25B Success Story →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Start Your Evolution
               </a>
@@ -79,7 +74,7 @@ export default function AdaptiveNeuralArchitecturesPage() {
       </header>
 
       {/* Article Content */}
-      <section id="content" className="py-20 bg-white">
+      <section id="<content" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">The Evolution of Neural Networks</h2>
@@ -188,14 +183,12 @@ export default function AdaptiveNeuralArchitecturesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                  href="/<contact" className="bg-white text-blue-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Contact Our AI Specialists
                 </a>
                 <a 
-                  href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-success" 
-                  className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
+                  href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-<success" className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   View Success Stories
                 </a>

@@ -1,4 +1,18 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation | Zion Tech Group',
+  description: 'Discover the revolutionary AI breakthroughs transforming enterprise operations in January 2025. Advanced autonomous systems, quantum-enhanced intelligence, and $2.8B proven ROI.',
+  keywords: 'AI revolution 2025, enterprise AI transformation, autonomous systems, quantum AI, machine learning, artificial intelligence, business automation',
+  openGraph: {
+    title: 'January 2025 Advanced AI Revolution: Next-Generation Enterprise Transformation',
+    description: 'Revolutionary AI breakthroughs with $2.8B proven ROI, 99.9% operational autonomy, and zero downtime.',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI Revolution', 'Enterprise Transformation', 'Autonomous Systems', 'Quantum AI'],
+  },
+};
 
 export default function AdvancedAIRevolution2025() {
   return (
@@ -128,14 +142,12 @@ export default function AdvancedAIRevolution2025() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a 
-                    href="/contact" 
-                    className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                    href="/<contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                   >
                     Start Your Transformation →
                   </a>
                   <a 
-                    href="/case-studies/fortune-500-ai-2025-january-advanced-ai-revolution-2-8-billion-success" 
-                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                    href="/case-studies/fortune-500-ai-2025-january-advanced-ai-revolution-2-8-billion-<success" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
                   >
                     View Success Story
                   </a>

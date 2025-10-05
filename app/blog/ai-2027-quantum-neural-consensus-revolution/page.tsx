@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2027: Quantum-Neural Consensus Revolution - Distributed Superintelligence',
+  description: 'Discover the quantum-neural consensus revolution: a distributed superintelligence network achieving collective consciousness and 10,000x processing power through quantum entanglement.',
+  keywords: 'AI 2027, quantum neural networks, consensus AI, distributed superintelligence, quantum entanglement, collective consciousness',
+  openGraph: {
+    title: 'AI 2027: Quantum-Neural Consensus Revolution',
+    description: 'Distributed superintelligence network achieving collective consciousness through quantum entanglement.',
+    type: 'article',
+    publishedTime: '2027-01-20T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function QuantumNeuralConsensus2027() {
   return (
@@ -269,14 +282,12 @@ export default function QuantumNeuralConsensus2027() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                href="/<contact" className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
               >
                 Explore Quantum AI
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories
               </a>

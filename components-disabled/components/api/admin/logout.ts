@@ -1,18 +1,1 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-  res.status(200).json({ ok: true });export default function handler(req: NextApiRequest, res: NextApiResponse) {;
-  clearSessionCookie(res);
-
-  res.status(200).json({ ok: true });
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-import { clearSessionCookie } from '../../../utils / admin_auth';
-export default /**
- * handler - Function description;
- */
-function handler() {
-  clearSessionCookie (res);
-  res.status (200).json ({ ok: true });export default /**
-  res.status (200).json ({ ok: true });
-
-import { clearSessionCookie } from '../../../utils/adminAuth';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+import type {NextApiRequest} NextApiResponse } from 'next' res.status(200).json({ ok: true });export default function handler(req: NextApiRequest) res: NextApiResponse) {; clearSessionCookie(res)} res.status(200).json({ ok: true }); export default function handler(req: NextApiRequest) res: NextApiResponse) { ' import { clearSessionCookie } from '../../../utils / admin_auth' export default /** * handler - Function description; */ function handler() {clearSessionCookie (res)} res.status (200).json ({ ok: true });export default /** res.status (200).json ({ ok: true }); ' import { clearSessionCookie } from '../../../utils/adminAuth' export default function handler(req: NextApiRequest) res: NextApiResponse) {;'

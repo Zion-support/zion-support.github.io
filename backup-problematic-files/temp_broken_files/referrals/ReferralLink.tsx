@@ -1,0 +1,1 @@
+<Input; value={referralLink} onCopy (); setCopied (true); setTimeout ( () => setCopied (false), 2000) ; };

@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'February 2025: Quantum AI Breakthrough - Enterprise Transformation Revolution | Zion Tech Group',
@@ -58,14 +57,12 @@ export default function February2025QuantumAIBreakthroughPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success"
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-<success" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 View $50B Success Story →
               </a>
               <a 
-                href="/services/quantum-ai-consultation"
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/services/quantum-ai-<consultation" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Quantum AI Consultation →
               </a>
@@ -205,14 +202,12 @@ export default function February2025QuantumAIBreakthroughPage() {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Schedule Consultation
                 </a>
                 <a 
-                  href="/services/quantum-ai-consultation"
-                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/services/quantum-ai-<consultation" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Learn More About Our Services
                 </a>
@@ -231,8 +226,7 @@ export default function February2025QuantumAIBreakthroughPage() {
               <h3 className="text-xl font-bold text-white mb-4">March 2025: Autonomous Operations Revolution</h3>
               <p className="text-gray-300 mb-4">Discover how autonomous AI agents are revolutionizing enterprise operations with 85% automation rates.</p>
               <a 
-                href="/blog/ai-2025-march-autonomous-enterprise-operations-revolution"
-                className="text-indigo-400 hover:text-indigo-300 font-semibold"
+                href="/blog/ai-2025-march-autonomous-enterprise-operations-<revolution" className="text-indigo-400 hover:text-indigo-300 font-semibold"
               >
                 Read More →
               </a>
@@ -241,8 +235,7 @@ export default function February2025QuantumAIBreakthroughPage() {
               <h3 className="text-xl font-bold text-white mb-4">January 2025: Enterprise Automation Breakthrough</h3>
               <p className="text-gray-300 mb-4">Learn about the $2.3B cost savings and 95% efficiency gains achieved by Fortune 500 companies.</p>
               <a 
-                href="/blog/ai-2025-january-enterprise-automation-breakthrough"
-                className="text-purple-400 hover:text-purple-300 font-semibold"
+                href="/blog/ai-2025-january-enterprise-automation-<breakthrough" className="text-purple-400 hover:text-purple-300 font-semibold"
               >
                 Read More →
               </a>
@@ -251,8 +244,7 @@ export default function February2025QuantumAIBreakthroughPage() {
               <h3 className="text-xl font-bold text-white mb-4">Case Study: $50B Success Story</h3>
               <p className="text-gray-300 mb-4">Detailed analysis of how a Fortune 50 company achieved unprecedented results with quantum AI.</p>
               <a 
-                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-success"
-                className="text-blue-400 hover:text-blue-300 font-semibold"
+                href="/case-studies/ai-2025-february-quantum-ai-breakthrough-50-billion-<success" className="text-blue-400 hover:text-blue-300 font-semibold"
               >
                 View Case Study →
               </a>

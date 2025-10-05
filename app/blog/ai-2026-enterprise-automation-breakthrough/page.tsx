@@ -1,6 +1,12 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowLeft,Calendar,Clock,Tag,User } from "lucide-react";
+
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import { ArrowLeft, Clock, Calendar, User, Tag } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI 2026: Enterprise Automation Breakthrough - Zion Tech Group',
@@ -14,10 +20,11 @@ export default function EnterpriseAutomationBreakthrough() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link to="/" 
+          <Link 
+            href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft />
             Back to Home
           </Link>
         </div>
@@ -29,15 +36,15 @@ export default function EnterpriseAutomationBreakthrough() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar />
               <span>January 15, 2026</span>
             </div>
             <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
+              <User />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock />
               <span>12 min read</span>
             </div>
           </div>
@@ -53,7 +60,7 @@ export default function EnterpriseAutomationBreakthrough() {
           <div className="flex flex-wrap gap-2">
             {['AI', 'Enterprise Automation', 'Business Intelligence', '2026 Trends', 'Autonomous Operations'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag className="w-3 h-3" />
+                <Tag />
                 {tag}
               </span>
             ))}
@@ -246,12 +253,14 @@ export default function EnterpriseAutomationBreakthrough() {
               Contact Zion Tech Group to discover how our advanced AI solutions can revolutionize your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/guides/ai-2026-implementation-roadmap"
+              <Link 
+                href="/guides/ai-2026-implementation-roadmap"
                 className="bg-white text-blue-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Implementation Guide
               </Link>
-              <Link to="/case-studies/fortune-500-ai-transformation-success"
+              <Link 
+                href="/case-studies/fortune-500-ai-transformation-success"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Success Stories

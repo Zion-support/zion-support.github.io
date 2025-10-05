@@ -1,0 +1,1 @@
+export default ComprehensivePricing2026;

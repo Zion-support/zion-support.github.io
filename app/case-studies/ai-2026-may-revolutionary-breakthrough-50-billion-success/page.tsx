@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
@@ -54,14 +53,12 @@ export default function May2026RevolutionaryBreakthroughCaseStudyPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Contact Us Today
             </a>
             <a 
-              href="/blog/ai-2026-may-revolutionary-breakthrough-announcement" 
-              className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+              href="/blog/ai-2026-may-revolutionary-breakthrough-<announcement" className="border-2 border-green-500 text-green-600 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
             >
               Read Full Breakthrough
             </a>

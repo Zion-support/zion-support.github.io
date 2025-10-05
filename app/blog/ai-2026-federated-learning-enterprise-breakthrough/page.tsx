@@ -1,4 +1,3 @@
-// import React from 'react';
 
 export default function FederatedLearningEnterpriseBreakthrough() {
   return (
@@ -222,8 +221,7 @@ export default function FederatedLearningEnterpriseBreakthrough() {
         {/* CTA */}
         <div className="mt-16 text-center">
           <a 
-            href="/services/ai-federated-learning-enterprise" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-bold rounded-full hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+            href="/services/ai-federated-learning-<enterprise" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-blue-500 text-white font-bold rounded-full hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           >
             Start Your Federated Learning Journey
             <span className="ml-2">🔐</span>

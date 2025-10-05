@@ -1,0 +1,1 @@
+interface ProductsAdminPageProps { // Add props here as needed } export default function ProductsAdminPage() {} return (; <div> <h1>ProductsAdminPage</h1> <p>This component is currently under development.</p> </div> ); } } }

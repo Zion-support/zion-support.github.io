@@ -1,5 +1,1 @@
-export: interface RealAugmentedService2025Batch3 {
-  id: string;
-   name: string;
-   tagline: string;
-
+export: interface RealAugmentedService2025Batch3 {id: string; name: string} tagline: string}

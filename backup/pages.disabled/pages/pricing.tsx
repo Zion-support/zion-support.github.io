@@ -1,4 +1,1 @@
-
-}
-
-export default PricingPage;
+} export default PricingPage;

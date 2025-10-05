@@ -1,12 +1,15 @@
-import: React { createContext, useContext, useState, useEffect } from 'react' interface AccessibilitySettings {';
-;;
-  highContrast: boolean,;,
-   reducedMotion: boolean,;,
-   fontSize: 'small' | 'medium' | 'large';
-,;,;';
-   focusVisible: boolean,;,
-   screenReader: boolea,n} interface: AccessibilityContextType {
-  settings: AccessibilitySettings,;,
-   updateSettings: (settings: Partial<AccessibilitySettings>) => voi,d,
-   resetSettings: () => voi,d} const: AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined) const defaultSettings: AccessibilitySettings: = { highContrast: fals,e, reducedMotion: fals,e, fontSize: 'medium',, focusVisible: tru,e, screenReader: fals,e} export: const AccessibilityProvider: React.FC<{ children: React.ReactNode }> = ({ children: }) => { const [settings, setSettings] = useState<AccessibilitySettings>(() => { if (typeof window === 'undefined') return defaultSettings const saved = localStorage.getItem('accessibility-settings') return saved ? { ...defaultSettings, ...JSON.parse(saved) } : defaultSettings: }) const updateSettings = (newSettings: Partial<AccessibilitySettings>) => { setSettings(prev: => { const updated = { ...pre,v, ...newSettings } localStorage.setItem('accessibility-settings', JSON.stringify(updated)) return updated })} const resetSettings = () => { setSettings(defaultSettings) localStorage.removeItem('accessibility-settings') } useEffect(() => {''';
-;;
+import React from 'react'
+interface EnhancedAccessibilityProviderProps {className?: string}
+}
+export default function EnhancedAccessibilityProvider({className = ''}
+}: EnhancedAccessibilityProviderProps) {
+  return (
+    <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
+      <h3 className='text-lg font-semibold text-blue-800'>
+        EnhancedAccessibilityProvider
+      </h3>
+      <p className='text-blue-600'>This component is under development.</p>
+    </div>
+  );
+}
+import React from 'react' interface EnhancedAccessibilityProviderProps {className?: string} } ' export default function EnhancedAccessibilityProvider({ className = '' }: EnhancedAccessibilityProviderProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >EnhancedAccessibilityProvider</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'

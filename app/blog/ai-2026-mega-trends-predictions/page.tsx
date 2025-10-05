@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Mega Trends: The Next Frontier of Enterprise Transformation',
@@ -50,9 +49,9 @@ export default function AITrends2026Page() {
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <nav className="flex items-center space-x-2 text-sm">
-            <Link to="/" className="text-blue-600 hover:text-blue-800">Home</Link>
+            <ArrowRight href="/" className="text-blue-600 hover:text-blue-800">Home</ArrowRight>
             <span className="text-gray-400">/</span>
-            <Link to="/blog" className="text-blue-600 hover:text-blue-800">Blog</Link>
+            <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800">Blog</ArrowRight>
             <span className="text-gray-400">/</span>
             <span className="text-gray-600">AI 2026 Mega Trends</span>
           </nav>
@@ -123,16 +122,18 @@ export default function AITrends2026Page() {
               in implementing cutting-edge AI solutions that drive real business value.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Link to="/contact" 
+              <ArrowRight 
+                href="/contact" 
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors"
               >
                 Get Started Today
-              </Link>
-              <Link to="/case-studies" 
+              </ArrowRight>
+              <ArrowRight 
+                href="/case-studies" 
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Case Studies
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </article>
