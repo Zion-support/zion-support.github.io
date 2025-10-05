@@ -27,7 +27,6 @@ interface Alert {
 export const AdvancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
   const [alerts, setAlerts] = useState<Alert[]>([]);
   const [thresholds, setThresholds] = useState<PerformanceThresholds>({
     loadTime: 3000,
@@ -89,10 +88,8 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   const formatBytes = useCallback((bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-  }, []);
-=======
->>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b
+      return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+    }, []);
 
   useEffect(() => {
     // Only run in development

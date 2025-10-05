@@ -2,7 +2,6 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-<<<<<<< HEAD
   // Temporarily disabled October 2025 banners due to syntax errors
   // 'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),
   // 'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),

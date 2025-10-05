@@ -156,7 +156,6 @@ const AdvancedDashboard: React.FC = () => {
       ux: {
         // Get UX stats from manager
         status: "Active", // Fallback value
->>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b
       },
     });
   };
