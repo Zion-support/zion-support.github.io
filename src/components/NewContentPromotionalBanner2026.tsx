@@ -1,170 +1,159 @@
-import React from 'react';
-const NewContentPromotionalBanner2026 = () => {
-  const newContent = [
+import, React, from 'rea, c, t';
+const, NewContentPromotionalBanner202, 6 = () => {
+  const, newConten, t = [
     {
-      title: 'Quantum-Conscious Intelligence',
-      date: 'January 2026',
-      impact: '$2.3B Enterprise Value',
-      readers: '500K+',
-      icon: '🧠',
-      color: 'from-violet-500 to-purple-500'
+      tit, l, e: 'Quant, u, m-Conscious, Intellige, n, c, e',
+      da, t, e: 'January, 20, 2, 6',
+      impa, c, t: '$2.3B, Enterprise, Valu, e',
+      reade, r, s: '5, 0, 0, K+',
+      ic, o, n: '🧠',
+      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0'
     },
     {
-      title: 'Autonomous Neural Networks',
-      date: 'February 2026',
-      impact: '99.97% Accuracy',
-      readers: '180K+',
-      icon: '⚡',
-      color: 'from-emerald-500 to-teal-500'
+      tit, l, e: 'Autonomous, Neural, Network, s',
+      da, t, e: 'February, 20, 2, 6',
+      impa, c, t: '99.97% Accur, a, c, y',
+      reade, r, s: '1, 8, 0, K+',
+      ic, o, n: '⚡',
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0'
     },
     {
-      title: 'Neural-Synaptic Fusion AI',
-      date: 'March 2026',
-      impact: '500% Cognitive Enhancement',
-      readers: '203K+',
-      icon: '🚀',
-      color: 'from-blue-500 to-cyan-500'
+      tit, l, e: 'Neur, a, l-Synaptic, Fusion, A, I',
+      da, t, e: 'March, 20, 2, 6',
+      impa, c, t: '5, 0, 0% Cognitive, Enhanceme, n, t',
+      reade, r, s: '2, 0, 3, K+',
+      ic, o, n: '🚀',
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0'
     }
-  ];
-  return (
-    <div className="py-16 bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 relative overflow-hidden">
-      {/* Animated background effects */}
-      <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
-      <div className="container mx-auto px-6 relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
-            <Globe className="w-6 h-6 text-violet-400 animate-pulse" />
-            <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">
-              🌍 NEW 2026 CONTENT REVOLUTION
-            </span>
-            <Globe className="w-6 h-6 text-purple-400 animate-pulse" />
-          </div>
-          <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
-            Revolutionary Content Just Released
+  ]; retu, r, n (
+    <div, classNam, e = "py-16, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-viol, e, t-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+      {/* Animated, background, effects */}
+      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
+      </d, i, v>
+      <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
+        {/* Header, Sectio, n */}
+        <div, classNam, e="te, x, t-center, m, b-12">
+          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6">
+            <Globe, classNam, e="w-6 h-6, tex, t-viol, e, t-400, animat, e-pul, s, e" />
+            <span, classNam, e="te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
+              🌍 NEW, 2026, CONTENT REVOLUTI, O, N
+            </sp, a, n>
+            <Globe, classNam, e="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e" />
+          </d, i, v>
+          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+            Revolutionary, Content, Just Releas, e, d
           </h2>
-          <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-            Discover the most groundbreaking AI innovations of 2026. Join millions of professionals 
-            who are already experiencing the future of technology through our revolutionary content.
+          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
+            Discover, the, most groundbreaking, AI, innovations of, 202, 6. Join, millions, of professionals, who, are already, experiencing, the future, of, technology through, our, revolutionary conte, n, t.
           </p>
-        </div>
-        {/* Content Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((content, index) => (
-            <div
-key={index}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              <div className="relative p-8">
-                {/* Content Icon */}
-                <div className="text-5xl mb-6 text-center group-hover:animate-pulse">
-                  {content.icon}
-                </div>
-                {/* Date Badge */}
-                <div className="text-center mb-4">
-                  <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>
-                    {content.date}
-                  </span>
-                </div>
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors duration-300 leading-tight text-center">
-                  {content.title}
+        </d, i, v>
+        {/* Content, G, r, i, d */}
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">
+          { newConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
+            <div, ke, y = { in, d, e, x  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-viol, e, t-5, 0, 0/20"
+              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+             > {/* Card, glow, effect */}
+              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
+              <div, classNam, e = "relativ, e, p-8">
+                {/* Content, Ico, n */}
+                <div, classNam, e="te, x, t-5xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e">
+                  {conte, n, t.ic, o, n}
+                </d, i, v>
+                {/* Date, Badg, e */}
+                <div, classNam, e = "te, x, t-center, m, b-4" > <span, classNam, e = { `inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.co, l, o, r }, te, x, t-white, tex, t-xs, fon, t-bo, l, d`}>
+                    {conte, n, t.da, t, e}
+                  </sp, a, n>
+                </d, i, v>
+                {/* Tit, l, e */}
+                <h3, classNam, e = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-viol, e, t-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">
+                  {conte, n, t.t, i, t, l, e}
                 </h3>
-                {/* Impact */}
-                <div className="text-center mb-4">
-                  <div className="text-violet-400 font-semibold text-lg">
-                    {content.impact}
-                  </div>
-                </div>
-                {/* Reader Count */}
-                <div className="text-center mb-6">
-                  <div className="flex items-center justify-center gap-2 text-gray-400">
-                    <Users className="w-4 h-4" />
-                    <span className="text-sm">{content.readers} readers</span>
-                  </div>
-                </div>
-                {/* CTA Button */}
-                <a
-                  href={`/blog/${content.title.toLowerCase().replace(/\s+/g, '-')}`}
-                  className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}
+                {/* Impa, c, t */}
+                <div, classNam, e = "te, x, t-center, m, b-4">
+                  <div, classNam, e="te, x, t-viol, e, t-400, fon, t-semibold, tex, t-lg">
+                    {conte, n, t.impa, c, t}
+                  </d, i, v>
+                </d, i, v>
+                {/* Reader, Coun, t */}
+                <div, classNam, e="te, x, t-center, m, b-6">
+                  <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
+                    <Users, classNam, e="w-4 h-4" />
+                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
+                  </d, i, v>
+                </d, i, v > {/* CTA, Butto, n */}
+                <a, hre, f={`/bl, o, g/${conte, n, t.tit, l, e.toLowerC, a, s, e().repla, c, e(/\s+/g, '-')}`}
+                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.co, l, o, r }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
                 >
-                  <span>Read Now</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <sp, a, n>Read, No, w</sp, a, n>
+                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
                 </a>
-              </div>
-            </div>
+              </d, i, v>
+            </d, i, v>
           ))}
-        </div>
-        {/* Global Impact Stats */}
-        <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-3xl p-8 border border-violet-500/20 mb-12">
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-extrabold text-white mb-4">
-              Global Impact of Our Revolutionary Content
+        </d, i, v>
+        {/* Global, Impact, Stats */}
+        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, border, border-viol, e, t-5, 0, 0/20, m, b-12">
+          <div, classNam, e="te, x, t-center, m, b-8">
+            <h3, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-white, m, b-4">
+              Global, Impact, of Our, Revolutionary, Content
             </h3>
-            <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-              Our innovative content is transforming industries worldwide and creating unprecedented value.
+            <p, classNam, e="te, x, t-lg, tex, t-gr, a, y-300, ma, x-w-2xl, m, x-au, t, o">
+              Our, innovative, content is, transforming, industries worldwide, and, creating unprecedented, valu, e.
             </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' },
-              { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' },
-              { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
-              { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className={`${stat.color} mb-2 flex justify-center`}>
-                  {stat.icon}
-                </div>
-                <div className="text-3xl font-extrabold bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-gray-400 text-sm font-medium">
-                  {stat.label}
-                </div>
-              </div>
+          </d, i, v>
+          <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">
+            { [
+              { val, u, e: '2., 5, M+', lab, e, l: 'Global, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-viol, e, t-40, 0'  },
+              {  val, u, e: '$15, B+', lab, e, l: 'Value, Creat, e, d', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
+              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
+              {  val, u, e: '15, 0+', lab, e, l: 'Countries, Reach, e, d', ic, o, n: <Globe, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  }
+            ].m, a, p((st, a, t, ind, e, x) => (
+              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r" > <div, classNam, e = { `${st, a, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
+                  {st, a, t.ic, o, n}
+                </d, i, v>
+                <div, classNam, e = "te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1">
+                  {st, a, t.val, u, e}
+                </d, i, v>
+                <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">
+                  {st, a, t.lab, e, l}
+                </d, i, v>
+              </di, v>
             ))}
-          </div>
-        </div>
-        {/* CTA Section */}
-        <div className="text-center">
-          <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-violet-500 via-purple-500 to-blue-500">
-            <div className="bg-slate-900 rounded-xl px-12 py-10">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Join the Content Revolution
+          </d, i, v>
+        </d, i, v>
+        {/* CTA, Sectio, n */}
+        <div, classNam, e = "te, x, t-cent, e, r">
+          <div, classNam, e="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-viol, e, t-500, vi, a-purp, l, e-500, t, o-bl, u, e-5, 0, 0">
+            <div, classNam, e="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
+              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
+                Join, the, Content Revoluti, o, n
               </h3>
-              <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-                Be among the first to access revolutionary AI insights, breakthrough research, 
-                and transformative technologies that are reshaping our world.
+              <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+                Be, among, the first, to, access revolutionary, AI, insight, s, breakthrough, researc, h, 
+                and, transformative, technologies that, are, reshaping our, worl, d.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a
-                  href="/blog"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
+              <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">
+                <a, hre, f="/bl, o, g"
+                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-viol, e, t-500, t, o-purp, l, e-600, hove, r:fr, o, m-viol, e, t-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <Rocket className="w-5 h-5" />
-                  <span>Explore All Content</span>
+                  <Rocket, classNam, e="w-5 h-5" />
+                  <sp, a, n>Explore, All, Content</sp, a, n>
                 </a>
-                <a
-                  href="/newsletter"
-                  className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                <a, hre, f="/newslett, e, r"
+                  classNa, m, e="bord, e, r-2, borde, r-viol, e, t-500, tex, t-viol, e, t-400, hove, r:bg-viol, e, t-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <span>Subscribe to Updates</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <sp, a, n>Subscribe, to, Updates</sp, a, n>
+                  <ArrowRight, classNam, e="w-5 h-5" />
                 </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-export default React.memo(NewContentPromotionalBanner2026);
+export, default, React.me, m, o(NewContentPromotionalBanner20, 2, 6);

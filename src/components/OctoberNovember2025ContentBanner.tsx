@@ -1,94 +1,89 @@
-export default function OctoberNovember2025ContentBanner() {
-  return (
-    <section className='bg-gradient-to-br from-blue-600 via-purple-600 to-pink-600 text-white py-20 px-6'>
-      <div className='max-w-7xl mx-auto'>
-        <div className='text-center mb-12'>
-          <p className='text-sm uppercase tracking-widest font-bold text-blue-100 mb-3'>
-            🚀 FRESH INSIGHTS · OCTOBER-NOVEMBER 2025
+export, default, function OctoberNovember2025ContentBann, e, r() { 
+  retu, r, n (
+    <section, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, p, y-20, p, x-6'>
+      <div, classNam, e='m, a, x-w-7xl, m, x-au, t, o'>
+        <div, classNam, e='te, x, t-center, m, b-12'>
+          <p, classNam, e='te, x, t-sm, uppercase, tracking-widest, fon, t-bold, tex, t-bl, u, e-100, m, b-3'>
+            🚀 FRESH, INSIGHT, S · OCTOB, E, R-NOVEMBER, 202, 5
           </p>
-          <h2 className='text-5xl md:text-6xl font-extrabold leading-tight mb-6'>
-            Latest Enterprise AI Strategies
+          <h2, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, leadin, g-tight, m, b-6'>
+            Latest, Enterprise, AI Strategi, e, s
           </h2>
-          <p className='text-xl md:text-2xl text-blue-50 max-w-3xl mx-auto leading-relaxed'>
-            Production-ready frameworks for AI supply chains, multi-agent
-            systems, governance, and real-time inference optimization
+          <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, tex, t-bl, u, e-50, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'>
+            Producti, o, n-ready, frameworks, for AI, supply, chai, n, s, mul, t, i-agent, system, s, governan, c, e, and, rea, l-time, inference, optimization
           </p>
-        </div>
+        </d, i, v>
 
-        <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12'>
-          {' '}
-          {/* Article 1 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-blue-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              October 2025
-            </div>
-            <h3 className='text-2xl font-bold mb-3'>
-              AI Supply Chain Resilience 2.0
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, t-, 1, 2' > {' ' }
+          {/* Articl, e, 1 */}
+          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20'>
+            <div, classNam, e='te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e'>
+              October, 202, 5
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>
+              AI, Supply, Chain Resilienc, e, 2.0
             </h3>
-            <p className='text-blue-100 mb-4 text-sm leading-relaxed'>
-              Predictive disruption management, autonomous inventory
-              optimization, and real-time supplier risk scoring
+            <p, classNam, e='te, x, t-bl, u, e-100, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
+              Predictive, disruption, manageme, n, t, autonomous, inventory, optimization, and, rea, l-time, supplier, risk scori, n, g
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-blue-200'>22 min read</span>
-              <div className='text-blue-300 font-semibold'>→</div>
-            </div>
-          </div>
-          {/* Article 2 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-purple-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              October 2025
-            </div>
-            <h3 className='text-2xl font-bold mb-3'>
-              Multi-Agent Systems Architecture
+            <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
+              <span, classNam, e='te, x, t-xs, tex, t-bl, u, e-2, 0, 0'>22, min, read</sp, a, n>
+              <div, classNam, e='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>→</d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Articl, e, 2 */}
+          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20'>
+            <div, classNam, e='te, x, t-purp, l, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e'>
+              October, 202, 5
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>
+              Mul, t, i-Agent, Systems, Architecture
             </h3>
-            <p className='text-purple-100 mb-4 text-sm leading-relaxed'>
-              Production patterns for orchestrating autonomous agents with
-              safety, observability, and cost control
+            <p, classNam, e='te, x, t-purp, l, e-100, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
+              Production, patterns, for orchestrating, autonomous, agents with, saf, e, t, y, observabili, t, y, and, cost, control
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-purple-200'>28 min read</span>
-              <div className='text-purple-300 font-semibold'>→</div>
-            </div>
-          </div>
-          {/* Article 3 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-pink-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              November 2025
-            </div>
-            <h3 className='text-2xl font-bold mb-3'>AI Governance Framework</h3>
-            <p className='text-pink-100 mb-4 text-sm leading-relaxed'>
-              Compliance automation, risk management, audit trails, and
-              board-level reporting for autonomous AI
+            <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
+              <span, classNam, e='te, x, t-xs, tex, t-purp, l, e-2, 0, 0'>28, min, read</sp, a, n>
+              <div, classNam, e='te, x, t-purp, l, e-300, fon, t-semibo, l, d'>→</d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Articl, e, 3 */}
+          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20'>
+            <div, classNam, e='te, x, t-pi, n, k-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e'>
+              November, 202, 5
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>AI, Governance, Framework</h3>
+            <p, classNam, e='te, x, t-pi, n, k-100, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
+              Compliance, automat, i, o, n, risk, managemen, t, audit, trail, s, and, boar, d-level, reporting, for autonomous, A, I
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-pink-200'>32 min read</span>
-              <div className='text-pink-300 font-semibold'>→</div>
-            </div>
-          </div>
-          {/* Article 4 */}
-          <div className='bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20'>
-            <div className='text-orange-300 text-sm font-semibold mb-3 uppercase tracking-wide'>
-              November 2025
-            </div>
-            <h3 className='text-2xl font-bold mb-3'>Real-Time AI Inference</h3>
-            <p className='text-orange-100 mb-4 text-sm leading-relaxed'>
-              Sub-50ms inference at scale: quantization, edge deployment,
-              caching, and hardware acceleration
+            <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
+              <span, classNam, e='te, x, t-xs, tex, t-pi, n, k-2, 0, 0'>32, min, read</sp, a, n>
+              <div, classNam, e='te, x, t-pi, n, k-300, fon, t-semibo, l, d'>→</d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Articl, e, 4 */}
+          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, curso, r-pointer, border, border-whi, t, e/20'>
+            <div, classNam, e='te, x, t-oran, g, e-300, tex, t-sm, fon, t-semibold, m, b-3, uppercase, tracking-wi, d, e'>
+              November, 202, 5
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Re, a, l-Time, AI, Inference</h3>
+            <p, classNam, e='te, x, t-oran, g, e-100, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
+              S, u, b-50ms, inference, at sca, l, e: quantiza, t, i, o, n, edge, deploymen, t,
+              cachi, n, g, and, hardware, acceleration
             </p>
-            <div className='flex items-center justify-between'>
-              <span className='text-xs text-orange-200'>26 min read</span>
-              <div className='text-orange-300 font-semibold'>→</div>
-            </div>
-          </div>
-        </div>
+            <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
+              <span, classNam, e='te, x, t-xs, tex, t-oran, g, e-2, 0, 0'>26, min, read</sp, a, n>
+              <div, classNam, e='te, x, t-oran, g, e-300, fon, t-semibo, l, d'>→</d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
 
-        <div className='text-center mt-12'>
-          <div className='inline-block bg-white text-blue-600 px-8 py-4 rounded-full font-bold text-lg hover:bg-blue-50 transition-colors cursor-pointer shadow-xl'>
-            Explore All Latest Insights →
-          </div>
-        </div>
-      </div>
-    </section>
+        <div, classNam, e='te, x, t-center, m, t-12'>
+          <div, classNam, e='inli, n, e-block, b, g-white, tex, t-bl, u, e-600, p, x-8, p, y-4, rounde, d-full, fon, t-bold, tex, t-lg, hove, r: bg-bl, u, e-50, transitio, n-colors, curso, r-pointer, shado, w-xl'>
+            Explore, All, Latest Insigh, t, s →
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </sec, t, i, o, n>
   );
 }

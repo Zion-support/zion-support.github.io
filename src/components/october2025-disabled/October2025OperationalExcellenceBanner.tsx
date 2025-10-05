@@ -1,332 +1,325 @@
-import React from 'react';
-import {
-  ArrowLeft,
-  ArrowRight,
-  Award,
-  Brain,
-  Calendar,
-  CheckCircle,
-  Clock,
-  DollarSign,
-  Globe,
-  Rocket,
-  Satellite,
-  Share2,
-  Bookmark,
-  Tag,
-  Target,
-  TrendingUp,
-  Users,
-  User,
-  Zap,
-  BarChart3,
-  BookOpen,
-} from 'lucide-react';
-import { Link } from 'react-router-dom';
-const October2025OperationalExcellenceBanner = () => {
-  return (
-    <div className='relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl'>
-      {' '}
-      {/* Animated background elements */}
-      <div className='absolute inset-0 overflow-hidden'>
-        <div className='absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>
-        <div className='absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>
-        <div className='absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500/15 rounded-full blur-3xl animate-pulse delay-500'></div>
-      </div>
-      <div className='relative z-10 max-w-7xl mx-auto'>
-        {/* Breaking News Badge */}
-        <div className='text-center mb-8'>
-          <div className='inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-cyan-500/30 border-2 border-emerald-400/50 rounded-full px-8 py-3 mb-6 shadow-lg backdrop-blur-sm'>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-pulse' />
-            <span className='text-emerald-200 font-bold text-lg uppercase tracking-wider'>
-              🚀 October 2025 — Operational Excellence Revolution
-            </span>
-            <Sparkles className='w-6 h-6 text-yellow-300 animate-pulse' />
-          </div>
-          <h2 className='text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight'>
-            Transform Operations with AI-Powered Intelligence
+import, React, from 'rea, c, t';
+impo, r, t {
+  ArrowLe, f, t,
+  ArrowRig, h, t,
+  Awa, r, d,
+  Bra, i, n,
+  Calend, a, r,
+  CheckCirc, l, e,
+  Clo, c, k,
+  DollarSi, g, n,
+  Glo, b, e,
+  Rock, e, t,
+  Satelli, t, e,
+  Shar, e, 2,
+  Bookma, r, k,
+  T, a, g,
+  Targ, e, t,
+  Trending, U, p,
+  Use, r, s,
+  Us, e, r,
+  Z, a, p,
+  BarChar, t, 3,
+  BookOp, e, n,
+} fr, o, m 'luci, d, e-rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+const, October2025OperationalExcellenceBanne, r = () => { 
+  retu, r, n (
+    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-20, p, x-6, rounde, d-3xl, m, b-12, shado, w-2, x, l' > {' ' }
+      {/* Animated, background, elements */}
+      <div, classNam, e='absolute, inse, t-0, overflo, w-hidd, e, n'>
+        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
+        <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0' />
+        <div, classNam, e='absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/15, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0' />
+      </d, i, v>
+      <div, classNam, e='relativ, e, z-10, ma, x-w-7xl, m, x-au, t, o'>
+        {/* Breaking, News, Badge */}
+        <div, classNam, e='te, x, t-center, m, b-8'>
+          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/30, vi, a-te, a, l-5, 0, 0/30, t, o-cy, a, n-5, 0, 0/30, borde, r-2, borde, r-emera, l, d-4, 0, 0/50, rounde, d-full, p, x-8, p, y-3, m, b-6, shado, w-lg, backdro, p-bl, u, r-sm'>
+            <Sparkles, classNam, e='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
+            <span, classNam, e='te, x, t-emera, l, d-200, fon, t-bold, tex, t-lg, uppercase, tracking-wid, e, r'>
+              🚀 October, 202, 5 — Operational, Excellence, Revolution
+            </sp, a, n>
+            <Sparkles, classNam, e='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
+          </d, i, v>
+          <h2, classNam, e='te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t'>
+            Transform, Operations, with AI-Powered, Intelligenc, e
           </h2>
-          <p className='text-2xl text-teal-200 max-w-4xl mx-auto leading-relaxed'>
-            Discover breakthrough AI innovations delivering unprecedented
-            efficiency:
-            <span className='text-emerald-300 font-semibold'>
+          <p, classNam, e='te, x, t-2xl, tex, t-te, a, l-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
+            Discover, breakthrough, AI innovations, delivering, unprecedented
+            efficien, c, y: <span, classNam, e='te, x, t-emera, l, d-300, fon, t-semi, b, o, l, d'>
               {' '}
-              Predictive Maintenance (99.6% Accuracy)
-            </span>
+              Predictive, Maintenanc, e (99.6% Accura, c, y)
+            </sp, a, n>
             ,
-            <span className='text-teal-300 font-semibold'>
+            <span, classNam, e = 'te, x, t-te, a, l-300, fon, t-semibo, l, d'>
               {' '}
-              Autonomous API Orchestration (99.8% Uptime)
-            </span>
-            , and
-            <span className='text-cyan-300 font-semibold'>
+              Autonomous, API, Orchestration (99.8% Upt, i, m, e)
+            </sp, a, n>
+            , a, n, d
+            <span, classNam, e = 'te, x, t-cy, a, n-300, fon, t-semibo, l, d'>
               {' '}
-              Customer Intent Prediction (98.2% Accuracy)
-            </span>
+              Customer, Intent, Prediction (98.2% Accur, a, c, y)
+            </sp, a, n>
           </p>
-        </div>
-        {/* Key Metrics Showcase */}
-        <div className='grid md:grid-cols-4 gap-4 mb-12 max-w-6xl mx-auto'>
-          <div className='bg-gradient-to-br from-emerald-800/40 to-emerald-900/40 backdrop-blur-sm border border-emerald-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-emerald-300 mb-2'>
+        </d, i, v>
+        {/* Key, Metrics, Showcase */}
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12, ma, x-w-6xl, m, x-au, t, o'>
+          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, shado, w-lg'>
+            <div, classNam, e='te, x, t-5xl, fon, t-extrabold, tex, t-emera, l, d-300, m, b-2'>
               $24.4B
-            </div>
-            <div className='text-emerald-200 font-semibold text-sm uppercase tracking-wide'>
-              Combined Value Creation
-            </div>
-          </div>
-          <div className='bg-gradient-to-br from-teal-800/40 to-teal-900/40 backdrop-blur-sm border border-teal-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-teal-300 mb-2'>
+            </d, i, v>
+            <div, classNam, e='te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+              Combined, Value, Creation
+            </d, i, v>
+          </d, i, v>
+          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-te, a, l-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-te, a, l-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, shado, w-lg'>
+            <div, classNam, e='te, x, t-5xl, fon, t-extrabold, tex, t-te, a, l-300, m, b-2'>
               99.2%
-            </div>
-            <div className='text-teal-200 font-semibold text-sm uppercase tracking-wide'>
-              Average Accuracy
-            </div>
-          </div>
-          <div className='bg-gradient-to-br from-cyan-800/40 to-cyan-900/40 backdrop-blur-sm border border-cyan-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-cyan-300 mb-2'>
+            </d, i, v>
+            <div, classNam, e='te, x, t-te, a, l-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+              Average, Accurac, y
+            </d, i, v>
+          </d, i, v>
+          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, shado, w-lg'>
+            <div, classNam, e='te, x, t-5xl, fon, t-extrabold, tex, t-cy, a, n-300, m, b-2'>
               92%
-            </div>
-            <div className='text-cyan-200 font-semibold text-sm uppercase tracking-wide'>
-              Cost Reduction
-            </div>
-          </div>
-          <div className='bg-gradient-to-br from-blue-800/40 to-blue-900/40 backdrop-blur-sm border border-blue-400/30 rounded-2xl p-6 text-center hover:scale-105 transition-transform shadow-lg'>
-            <div className='text-5xl font-extrabold text-blue-300 mb-2'>
-              560%
-            </div>
-            <div className='text-blue-200 font-semibold text-sm uppercase tracking-wide'>
-              Average ROI
-            </div>
-          </div>
-        </div>
-        {/* Featured Articles Grid */}
-        <div className='grid md:grid-cols-3 gap-6 mb-10'>
-          {/* Article 1 - Predictive Maintenance */}
-          <Link
-            to='/blog/ai-2025-oct-predictive-maintenance-enterprise-breakthrough'
-            className='group bg-gradient-to-br from-emerald-800/50 to-emerald-900/50 backdrop-blur-sm border-2 border-emerald-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300'
+            </d, i, v>
+            <div, classNam, e='te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+              Cost, Reductio, n
+            </d, i, v>
+          </d, i, v>
+          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, shado, w-lg'>
+            <div, classNam, e='te, x, t-5xl, fon, t-extrabold, tex, t-bl, u, e-300, m, b-2'>
+              5, 6, 0%
+            </d, i, v>
+            <div, classNam, e='te, x, t-bl, u, e-200, fon, t-semibold, tex, t-sm, uppercase, tracking-wi, d, e'>
+              Average, RO, I
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+        {/* Featured, Articles, Gr, i, d */}
+        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10'>
+          {/* Articl, e, 1 - Predictive, Maintena, n, c, e */}
+          <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-predicti, v, e-maintenan, c, e-enterpri, s, e-breakthrou, g, h'
+            classNa, m, e='group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-emera, l, d-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-emerald-500/30 rounded-2xl group-hover:bg-emerald-500/40 transition-colors shadow-lg'>
-                <Wrench className='w-10 h-10 text-emerald-200' />
-              </div>
-              <div className='flex-1'>
-                <span className='text-xs text-emerald-300 font-bold uppercase tracking-wider bg-emerald-500/20 px-3 py-1 rounded-full'>
-                  Predictive Maintenance
-                </span>
-              </div>
-            </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-emerald-200 transition-colors leading-tight'>
-              AI-Powered Predictive Maintenance: 99.6% Failure Prediction
+            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
+              <div, classNam, e='p-4, b, g-emera, l, d-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r:bg-emera, l, d-5, 0, 0/40, transitio, n-colors, shado, w-lg'>
+                <Wrench, classNam, e='w-1, 0, h-10, tex, t-emera, l, d-2, 0, 0' />
+              </d, i, v>
+              <div, classNam, e='fl, e, x-1'>
+                <span, classNam, e='te, x, t-xs, tex, t-emera, l, d-300, fon, t-bold, uppercase, tracking-wider, b, g-emera, l, d-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l'>
+                  Predictive, Maintenanc, e
+                </sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-emera, l, d-200, transitio, n-colors, leadin, g-tig, h, t'>
+              AI-Powered, Predictive, Maintenance: 99.6% Failure, Predictio, n
             </h3>
-            <p className='text-teal-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Revolutionary AI platform achieving{' '}
-              <span className='text-emerald-300 font-semibold'>
-                99.6% failure prediction accuracy
-              </span>{' '}
-              with
-              <span className='text-emerald-300 font-semibold'>
+            <p, classNam, e='te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4'>
+              Revolutionary, AI, platform achie, v, i, n, g{' '}
+              <span, classNam, e = 'te, x, t-emera, l, d-300, fon, t-semibo, l, d'>
+                99.6% failure, prediction, accuracy
+              </sp, a, n>{' '}
+              wi, t, h
+              <span, classNam, e='te, x, t-emera, l, d-300, fon, t-semibo, l, d'>
                 {' '}
-                94% downtime reduction
-              </span>{' '}
-              and{' '}
-              <span className='text-emerald-300 font-semibold'>
-                $8.7B annual savings
-              </span>
-              . Transform reactive maintenance into proactive optimization.
+                94% downtime, reductio, n
+              </sp, a, n>{' '}
+              a, n, d{' '}
+              <span, classNam, e='te, x, t-emera, l, d-300, fon, t-semibo, l, d'>
+                $8.7B, annual, savings
+              </sp, a, n>
+              . Transform, reactive, maintenance into, proactive, optimization.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>$8.7B in annual savings</span>
-              </div>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>94% downtime reduction</span>
-              </div>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>450% ROI within 18 months</span>
-              </div>
-            </div>
-            <div className='flex items-center justify-between pt-4 border-t border-emerald-400/30'>
-              <div className='flex items-center gap-2 text-emerald-300 text-sm'>
-                <span className='font-medium'>16 min read</span>
-                <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
-              </div>
-              <ArrowRight className='w-6 h-6 text-emerald-300 group-hover:translate-x-2 transition-transform' />
-            </div>
-          </Link>
-          {/* Article 2 - API Orchestration */}
-          <Link
-            to='/blog/ai-2025-oct-autonomous-api-orchestration-revolution'
-            className='group bg-gradient-to-br from-teal-800/50 to-teal-900/50 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-teal-500/50 transition-all duration-300'
+            <div, classNam, e='spa, c, e-y-2, m, b-6'>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm'>
+                <TrendingUp, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>$8.7B, in, annual savin, g, s</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm'>
+                <Award, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>94% downtime, reductio, n</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm'>
+                <Zap, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>4, 5, 0% ROI, within, 18 mont, h, s</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <div, classNam, e='flex, item, s-center, justif, y-between, p, t-4, borde, r-t, borde, r-emera, l, d-4, 0, 0/30'>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, tex, t-sm'>
+                <span, classNam, e='fo, n, t-medi, u, m'>16, min, read</sp, a, n>
+                <sp, a, n>•</sp, a, n>
+                <span, classNam, e='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
+              </d, i, v>
+              <ArrowRight, classNam, e = 'w-6 h-6, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
+            </d, i, v>
+          </Li, n, k>
+          {/* Articl, e, 2 - API, Orchestrat, i, o, n */}
+          <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-a, p, i-orchestrati, o, n-revoluti, o, n'
+            classNa, m, e='group, b, g-gradie, n, t-to-br, fro, m-te, a, l-8, 0, 0/50, t, o-te, a, l-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-te, a, l-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-teal-500/30 rounded-2xl group-hover:bg-teal-500/40 transition-colors shadow-lg'>
-                <Network className='w-10 h-10 text-teal-200' />
-              </div>
-              <div className='flex-1'>
-                <span className='text-xs text-teal-300 font-bold uppercase tracking-wider bg-teal-500/20 px-3 py-1 rounded-full'>
-                  API Orchestration
-                </span>
-              </div>
-            </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-teal-200 transition-colors leading-tight'>
-              Autonomous API Orchestration: Self-Healing Microservices
+            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
+              <div, classNam, e='p-4, b, g-te, a, l-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r:bg-te, a, l-5, 0, 0/40, transitio, n-colors, shado, w-lg'>
+                <Network, classNam, e='w-1, 0, h-10, tex, t-te, a, l-2, 0, 0' />
+              </d, i, v>
+              <div, classNam, e='fl, e, x-1'>
+                <span, classNam, e='te, x, t-xs, tex, t-te, a, l-300, fon, t-bold, uppercase, tracking-wider, b, g-te, a, l-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l'>
+                  API, Orchestratio, n
+                </sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-te, a, l-200, transitio, n-colors, leadin, g-tig, h, t'>
+              Autonomous, API, Orchestration: Se, l, f-Healing, Microservice, s
             </h3>
-            <p className='text-teal-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Transform microservices management with{' '}
-              <span className='text-teal-300 font-semibold'>99.8% uptime</span>,
-              managing
-              <span className='text-teal-300 font-semibold'>
+            <p, classNam, e='te, x, t-te, a, l-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4'>
+              Transform, microservices, management wi, t, h{' '}
+              <span, classNam, e = 'te, x, t-te, a, l-300, fon, t-semibo, l, d'>99.8% upti, m, e</s, p, a, n>,
+              managi, n, g
+              <span, classNam, e = 'te, x, t-te, a, l-300, fon, t-semibo, l, d'>
                 {' '}
-                100M+ daily requests
-              </span>{' '}
-              with self-healing capabilities and
-              <span className='text-teal-300 font-semibold'>
-                $6.4B value creation
-              </span>
-              . Zero-touch operations at scale.
+                10, 0, M+ daily, request, s
+              </sp, a, n>{' '}
+              with, sel, f-healing, capabilities, and
+              <span, classNam, e='te, x, t-te, a, l-300, fon, t-semibo, l, d'>
+                $6.4B, value, creation
+              </sp, a, n>
+              . Ze, r, o-touch, operations, at sca, l, e.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>$6.4B enterprise value</span>
-              </div>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>
-                  95% incident auto-resolution
-                </span>
-              </div>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>550% ROI within 12 months</span>
-              </div>
-            </div>
-            <div className='flex items-center justify-between pt-4 border-t border-teal-400/30'>
-              <div className='flex items-center gap-2 text-teal-300 text-sm'>
-                <span className='font-medium'>17 min read</span>
-                <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
-              </div>
-              <ArrowRight className='w-6 h-6 text-teal-300 group-hover:translate-x-2 transition-transform' />
-            </div>
-          </Link>
-          {/* Article 3 - Customer Intent Prediction */}
-          <Link
-            to='/blog/ai-2025-oct-customer-intent-prediction-breakthrough'
-            className='group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300'
+            <div, classNam, e='spa, c, e-y-2, m, b-6'>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'>
+                <TrendingUp, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>$6.4B, enterprise, value</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'>
+                <Award, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>
+                  95% incident, aut, o-resoluti, o, n
+                </sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'>
+                <Zap, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>5, 5, 0% ROI, within, 12 mont, h, s</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <div, classNam, e='flex, item, s-center, justif, y-between, p, t-4, borde, r-t, borde, r-te, a, l-4, 0, 0/30'>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-te, a, l-300, tex, t-sm'>
+                <span, classNam, e='fo, n, t-medi, u, m'>17, min, read</sp, a, n>
+                <sp, a, n>•</sp, a, n>
+                <span, classNam, e='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
+              </d, i, v>
+              <ArrowRight, classNam, e = 'w-6 h-6, tex, t-te, a, l-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
+            </d, i, v>
+          </Li, n, k>
+          {/* Articl, e, 3 - Customer, Intent, Predicti, o, n */}
+          <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-custom, e, r-inte, n, t-predicti, o, n-breakthrou, g, h'
+            classNa, m, e='group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/50, t, o-cy, a, n-9, 0, 0/50, backdro, p-bl, u, r-sm, borde, r-2, borde, r-cy, a, n-4, 0, 0/40, rounde, d-2x, l, p-8, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
           >
-            <div className='flex items-center gap-4 mb-6'>
-              <div className='p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg'>
-                <Target className='w-10 h-10 text-cyan-200' />
-              </div>
-              <div className='flex-1'>
-                <span className='text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full'>
-                  Intent Prediction
-                </span>
-              </div>
-            </div>
-            <h3 className='text-2xl font-bold text-white mb-4 group-hover:text-cyan-200 transition-colors leading-tight'>
-              Real-Time AI Customer Intent: 98.2% Prediction Accuracy
+            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
+              <div, classNam, e='p-4, b, g-cy, a, n-5, 0, 0/30, rounde, d-2xl, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/40, transitio, n-colors, shado, w-lg'>
+                <Target, classNam, e='w-1, 0, h-10, tex, t-cy, a, n-2, 0, 0' />
+              </d, i, v>
+              <div, classNam, e='fl, e, x-1'>
+                <span, classNam, e='te, x, t-xs, tex, t-cy, a, n-300, fon, t-bold, uppercase, tracking-wider, b, g-cy, a, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l'>
+                  Intent, Predictio, n
+                </sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r:te, x, t-cy, a, n-200, transitio, n-colors, leadin, g-tig, h, t'>
+              Re, a, l-Time, AI, Customer Inte, n, t: 98.2% Prediction, Accurac, y
             </h3>
-            <p className='text-cyan-200 text-base mb-6 leading-relaxed line-clamp-4'>
-              Unlock{' '}
-              <span className='text-cyan-300 font-semibold'>
-                $9.3B revenue growth
-              </span>{' '}
-              with AI achieving
-              <span className='text-cyan-300 font-semibold'>
+            <p, classNam, e='te, x, t-cy, a, n-200, tex, t-base, m, b-6, leadin, g-relaxed, lin, e-cla, m, p-4'>
+              Un, l, o, c, k{' '}
+              <span, classNam, e = 'te, x, t-cy, a, n-300, fon, t-semibo, l, d'>
+                $9.3B, revenue, growth
+              </sp, a, n>{' '}
+              with, AI, achieving
+              <span, classNam, e='te, x, t-cy, a, n-300, fon, t-semibo, l, d'>
                 {' '}
-                98.2% intent prediction accuracy
-              </span>{' '}
-              and
-              <span className='text-cyan-300 font-semibold'>
-                850% conversion increases
-              </span>
-              . Hyper-personalization in real-time.
+                98.2% intent, prediction, accuracy
+              </sp, a, n>{' '}
+              a, n, d
+              <span, classNam, e='te, x, t-cy, a, n-300, fon, t-semibo, l, d'>
+                8, 5, 0% conversion, increase, s
+              </sp, a, n>
+              . Hyp, e, r-personalization, in, real-ti, m, e.
             </p>
-            <div className='space-y-2 mb-6'>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <TrendingUp className='w-4 h-4' />
-                <span className='font-semibold'>$9.3B revenue growth</span>
-              </div>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <Award className='w-4 h-4' />
-                <span className='font-semibold'>850% conversion increase</span>
-              </div>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <Zap className='w-4 h-4' />
-                <span className='font-semibold'>680% ROI in 6 months</span>
-              </div>
-            </div>
-            <div className='flex items-center justify-between pt-4 border-t border-cyan-400/30'>
-              <div className='flex items-center gap-2 text-cyan-300 text-sm'>
-                <span className='font-medium'>18 min read</span>
-                <span>•</span>
-                <span className='font-medium'>Oct 1, 2025</span>
-              </div>
-              <ArrowRight className='w-6 h-6 text-cyan-300 group-hover:translate-x-2 transition-transform' />
-            </div>
-          </Link>
-        </div>
-        {/* Call to Action Section */}
-        <div className='bg-gradient-to-r from-emerald-800/30 via-teal-800/30 to-cyan-800/30 backdrop-blur-sm border-2 border-teal-400/40 rounded-2xl p-8 text-center shadow-xl'>
-          <h3 className='text-3xl font-bold text-white mb-4'>
-            Achieve Operational Excellence with AI
+            <div, classNam, e='spa, c, e-y-2, m, b-6'>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm'>
+                <TrendingUp, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>$9.3B, revenue, growth</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm'>
+                <Award, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>8, 5, 0% conversion, increas, e</sp, a, n>
+              </d, i, v>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm'>
+                <Zap, classNam, e='w-4 h-4' />
+                <span, classNam, e='fo, n, t-semibo, l, d'>6, 8, 0% ROI, in, 6 mont, h, s</sp, a, n>
+              </d, i, v>
+            </d, i, v>
+            <div, classNam, e='flex, item, s-center, justif, y-between, p, t-4, borde, r-t, borde, r-cy, a, n-4, 0, 0/30'>
+              <div, classNam, e='flex, item, s-center, ga, p-2, tex, t-cy, a, n-300, tex, t-sm'>
+                <span, classNam, e='fo, n, t-medi, u, m'>18, min, read</sp, a, n>
+                <sp, a, n>•</sp, a, n>
+                <span, classNam, e='fo, n, t-medi, u, m'>O, c, t , 1, 20, 2, 5</sp, a, n>
+              </d, i, v>
+              <ArrowRight, classNam, e = 'w-6 h-6, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m' />
+            </d, i, v>
+          </Li, n, k>
+        </d, i, v>
+        {/* Call, to, Action Sec, t, i, o, n */}
+        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-emera, l, d-8, 0, 0/30, vi, a-te, a, l-8, 0, 0/30, t, o-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, borde, r-2, borde, r-te, a, l-4, 0, 0/40, rounde, d-2x, l, p-8, tex, t-center, shado, w-xl'>
+          <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+            Achieve, Operational, Excellence with, A, I
           </h3>
-          <p className='text-xl text-teal-200 mb-8 max-w-3xl mx-auto'>
-            Join enterprise leaders who have implemented these AI systems across{' '}
-            <span className='text-emerald-300 font-semibold'>
-              1,200+ global deployments
-            </span>
-            , creating{' '}
-            <span className='text-teal-300 font-semibold'>
-              $24.4B in measurable value
-            </span>{' '}
-            with an average{' '}
-            <span className='text-cyan-300 font-semibold'>560% ROI</span>.
+          <p, classNam, e='te, x, t-xl, tex, t-te, a, l-200, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
+            Join, enterprise, leaders who, have, implemented these, AI, systems acro, s, s{' '}
+            <span, classNam, e='te, x, t-emera, l, d-300, fon, t-semibo, l, d'>
+              , 1,2, 0, 0+ global, deployment, s
+            </sp, a, n>
+            , creati, n, g{' '}
+            <span, classNam, e = 'te, x, t-te, a, l-300, fon, t-semibo, l, d'>
+              $24.4B, in, measurable val, u, e
+            </sp, a, n>{' '}
+            with, an, average{' '}
+            <span, classNam, e='te, x, t-cy, a, n-300, fon, t-semibo, l, d'>5, 6, 0% R, O, I</sp, a, n>.
           </p>
-          <div className='flex flex-wrap gap-4 justify-center'>
-            <Link
-              to='/blog'
-              className='inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'
+          <div, classNam, e='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'>
+            <Link, t, o='/bl, o, g'
+              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-400, hove, r:to-te, a, l-400, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
-              <span>Explore All Innovations</span>
-              <ArrowRight className='w-5 h-5' />
-            </Link>
-            <Link
-              to='/contact'
-              className='inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105'
+              <sp, a, n>Explore, All, Innovations</sp, a, n>
+              <ArrowRight, classNam, e='w-5 h-5' />
+            </Li, n, k>
+            <Link, t, o='/conta, c, t'
+              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-whi, t, e/30, tex, t-white, fon, t-bold, p, x-8, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
             >
-              <span>Get Started Today</span>
-              <ArrowRight className='w-5 h-5' />
-            </Link>
-          </div>
-        </div>
-        {/* Trust Indicators */}
-        <div className='mt-10 text-center'>
-          <div className='flex flex-wrap gap-6 justify-center items-center text-teal-300 text-sm'>
-            <div className='flex items-center gap-2'>
-              <Award className='w-5 h-5 text-yellow-400' />
-              <span className='font-semibold'>1,200+ Global Deployments</span>
-            </div>
-            <div className='flex items-center gap-2'>
-              <Sparkles className='w-5 h-5 text-emerald-400' />
-              <span className='font-semibold'>99.2% Average Accuracy</span>
-            </div>
-            <div className='flex items-center gap-2'>
-              <TrendingUp className='w-5 h-5 text-green-400' />
-              <span className='font-semibold'>$24.4B Value Created</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+              <sp, a, n>Get, Started, Today</sp, a, n>
+              <ArrowRight, classNam, e='w-5 h-5' />
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Trust, Indicat, o, r, s */}
+        <div, classNam, e = 'mt-10, tex, t-cent, e, r'>
+          <div, classNam, e='flex, fle, x-wrap, ga, p-6, justif, y-center, item, s-center, tex, t-te, a, l-300, tex, t-sm'>
+            <div, classNam, e='flex, item, s-center, ga, p-2'>
+              <Award, classNam, e='w-5 h-5, tex, t-yell, o, w-4, 0, 0' />
+              <span, classNam, e='fo, n, t-semibo, l, d'>, 1,2, 0, 0+ Global, Deployment, s</sp, a, n>
+            </d, i, v>
+            <div, classNam, e = 'flex, item, s-center, ga, p-2'>
+              <Sparkles, classNam, e='w-5 h-5, tex, t-emera, l, d-4, 0, 0' />
+              <span, classNam, e='fo, n, t-semibo, l, d'>99.2% Average, Accurac, y</sp, a, n>
+            </d, i, v>
+            <div, classNam, e='flex, item, s-center, ga, p-2'>
+              <TrendingUp, classNam, e='w-5 h-5, tex, t-gre, e, n-4, 0, 0' />
+              <span, classNam, e='fo, n, t-semibo, l, d'>$24.4B, Value, Created</sp, a, n>
+            </d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </di, v>
   );
 };
-export default October2025OperationalExcellenceBanner;
+export, default, October2025OperationalExcellenceBanner;

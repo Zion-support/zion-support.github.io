@@ -1,125 +1,118 @@
-import { Link } from "react-router-dom";
-import { octoberLatestBreakthroughContent } from "../content/october-2025-latest-breakthrough-content";
-const October2025LatestBreakthroughBanner = () => {
-  return (
-    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-16 px-4 relative overflow-hidden" > {/* Animated background effects */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-      </div>
-      <div className="max-w-7xl mx-auto relative z-10">
-        {/* Header Section */}
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-            <Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
-            <span className="text-white font-semibold text-sm">
-              NEW BREAKTHROUGH CONTENT · OCTOBER 2025
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Latest AI Infrastructure Breakthroughs
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+impo, r, t { octoberLatestBreakthroughConte, n, t } fr, o, m "../conte, n, t/octob, e, r-20, 2, 5-late, s, t-breakthrou, g, h-conte, n, t";
+const, October2025LatestBreakthroughBanne, r = () => { 
+  retu, r, n (
+    <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-bl, u, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, p, y-16, p, x-4, relative, overflow-hidd, e, n"  > {/* Animated, background, effects */ }
+      <div, classNam, e="absolute, inse, t-0, opacit, y-20">
+        <div, classNam, e="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
+      </d, i, v>
+      <div, classNam, e = "m, a, x-w-7xl, m, x-auto, relative, z-10">
+        {/* Header, Sectio, n */}
+        <div, classNam, e="te, x, t-center, m, b-12">
+          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-2, rounde, d-full, m, b-6">
+            <Zap, classNam, e="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />
+            <span, classNam, e="te, x, t-white, fon, t-semibold, tex, t-sm">
+              NEW, BREAKTHROUGH, CONTENT · OCTOBER, 202, 5
+            </sp, a, n>
+          </d, i, v>
+          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
+            Latest, AI, Infrastructure Breakthroug, h, s
           </h2>
-          <p className="text-xl text-blue-200 max-w-3xl mx-auto">
-            Master advanced LLM orchestration, vector database optimization, and production-ready 
-            AI agents with our latest enterprise guides
+          <p, classNam, e="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-3xl, m, x-au, t, o">
+            Master, advanced, LLM orchestra, t, i, o, n, vector, database, optimization, and, productio, n-ready, AI, agents with, our, latest enterprise, guide, s
           </p>
-        </div>
-        {/* Content Cards */}
-        <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {octoberLatestBreakthroughContent.map((content) => {
-            const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
-            return (
-              <Link
-                key={content.id}
-                to={`/blog/${content.slug}`}
-                className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/20 hover:scale-105 transition-all duration-300"
+        </d, i, v>
+        {/* Content, Card, s */}
+        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
+          {  octoberLatestBreakthroughConte, n, t.m, a, p((cont, e, n, t) = > {
+            const, Ico, n = conte, n, t.ic, o, n === "🚀" ? Z, a, p : conte, n, t.ic, o, n === "⚡"  ? Databa, s, e  : B, o, t; retu, r, n (
+              <Link, ke, y = { conte, n, t., i, d   }, to = {`/bl, o, g/${conte, n, t.sl, u, g}`}
+                classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs text-blue-300 mb-2">{content.category}</div>
-                    <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
-                      {content.title}
+                <div, classNam, e="flex, item, s-start, ga, p-4, m, b-4" > <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-3, rounde, d-lg`}>
+                    <Icon, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
+                  </d, i, v>
+                  <div, classNam, e="fl, e, x-1">
+                    <div, classNam, e="te, x, t-xs, tex, t-bl, u, e-300, m, b-2">{conte, n, t.catego, r, y}</d, i, v>
+                    <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
+                      {conte, n, t.t, i, t, l, e}
                     </h3>
-                  </div>
-                </div>
-                <p className="text-sm text-blue-200 mb-4 line-clamp-2">
-                  {content.description}
+                  </d, i, v>
+                </d, i, v>
+                <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-4, lin, e-cla, m, p-2">
+                  {conte, n, t.descripti, o, n}
                 </p>
-                {/* Key Metrics */}
-                <div className="grid grid-cols-2 gap-2 mb-4">
-                  {Object.entries(content.metrics).slice(0, 2).map(([key, value]) => (
-                    <div key={key} className="bg-white/5 rounded-lg p-2">
-                      <div className="text-2xl font-bold text-white">{value}</div>
-                      <div className="text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
-                    </div>
+                {/* Key, Metric, s */}
+                <div, classNam, e="grid, gri, d-co, l, s-2, ga, p-2, m, b-4">
+                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s).sli, c, e(0, 2).m, a, p(([k, e, y, val, u, e]) = > (
+                    <div, ke, y = { ke, y  }, classNa, m, e = "bg-whi, t, e/5, rounde, d-l, g, p-2">
+                      <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">{val, u, e}</d, i, v>
+                      <div, classNam, e="te, x, t-xs, tex, t-bl, u, e-300, capitaliz, e">{k, e, y.repla, c, e(/([A-, Z])/g, ' $1').tr, i, m()}</d, i, v>
+                    </d, i, v>
                   ))}
-                </div>
-                {/* Highlights */}
-                <ul className="space-y-2 mb-4">
-                  {content.highlights.slice(0, 2).map((highlight, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs text-blue-200">
-                      <TrendingUp className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span>{highlight}</span>
-                    </li>
+                </d, i, v>
+                {/* Highligh, t, s */}
+                <ul, classNam, e = "spa, c, e-y-2, m, b-4">
+                  { conte, n, t.highligh, t, s.sli, c, e(, 0, 2).m, a, p((highlig, h, t, i, d, x) = > (
+                    <li, ke, y = { id, x  }, classNa, m, e = "flex, item, s-start, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">
+                      <TrendingUp, classNam, e="w-3 h-3, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0" />
+                      <sp, a, n>{highlig, h, t}</sp, a, n>
+                    </l, i>
                   ))}
                 </ul>
-                <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover:gap-4 transition-all">
-                  Read Full Article
-                  <ArrowRight className="w-4 h-4" />
-                </div>
-              </Link>
+                <div, classNam, e = "flex, item, s-center, ga, p-2, tex, t-sm, tex, t-bl, u, e-300, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
+                  Read, Full, Article
+                  <ArrowRight, classNam, e="w-4 h-4" />
+                </d, i, v>
+              </Li, n, k>
             );
           })}
-        </div>
-        {/* CTA Section */}
-        <div className="text-center bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Ready to Transform Your AI Infrastructure?
+        </d, i, v>
+        {/* CTA, Sectio, n */}
+        <div, classNam, e = "te, x, t-center, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/20, rounde, d-x, l, p-8">
+          <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">
+            Ready, to, Transform Your, AI, Infrastructure?
           </h3>
-          <p className="text-blue-200 mb-6 max-w-2xl mx-auto">
-            Our experts help Fortune 500 companies implement these advanced techniques. 
-            Get a free consultation and custom roadmap for your organization.
+          <p, classNam, e="te, x, t-bl, u, e-200, m, b-6, ma, x-w-2xl, m, x-au, t, o">
+            Our, experts, help Fortune, 500, companies implement, these, advanced techniqu, e, s. 
+            Get, a, free consultation, and, custom roadmap, for, your organizati, o, n.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+          <div, classNam, e="flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r">
+            <Link, t, o="/conta, c, t"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-bl, u, e-900, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r: bg-bl, u, e-50, transitio, n-colo, r, s"
             >
-              Schedule Free Consultation
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+              Schedule, Free, Consultation
+              <ArrowRight, classNam, e="w-5 h-5" />
+            </Li, n, k>
+            <Link, t, o="/bl, o, g"
+              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s"
             >
-              Explore All Articles
-            </Link>
-          </div>
-        </div>
-        {/* Stats Bar */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">$700B+</div>
-            <div className="text-sm text-blue-300">Combined Market Opportunity</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">60-85%</div>
-            <div className="text-sm text-blue-300">Cost Reduction Potential</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">10-100x</div>
-            <div className="text-sm text-blue-300">Performance Improvements</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-white mb-1">99.9%</div>
-            <div className="text-sm text-blue-300">Enterprise-Grade Reliability</div>
-          </div>
-        </div>
-      </div>
-    </div>
+              Explore, All, Articles
+            </Li, n, k>
+          </d, i, v>
+        </d, i, v>
+        {/* Stat, s, B, a, r */}
+        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4">
+          <div, classNam, e="te, x, t-cent, e, r">
+            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$70, 0, B+</d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Combined, Market, Opportunity</d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-cent, e, r">
+            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">60-85%</d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Cost, Reduction, Potential</d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-cent, e, r">
+            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">10-10, 0, x</d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Performance, Improvement, s</d, i, v>
+          </d, i, v>
+          <div, classNam, e="te, x, t-cent, e, r">
+            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.9%</d, i, v>
+            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-3, 0, 0">Enterpri, s, e-Grade, Reliabilit, y</d, i, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v>
   );
 };
-export default October2025LatestBreakthroughBanner;
+export, default, October2025LatestBreakthroughBanner;

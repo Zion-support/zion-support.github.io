@@ -1,148 +1,142 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import, React, from 'rea, c, t';
+impo, r, t { NavLi, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
-const linkClass = ({ isActive }: { isActive: boolean }) =>
-  `block px-3 py-2 rounded-md text-sm ${
-    isActive
-      ? 'bg-blue-100 text-blue-700 font-medium'
-      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-  }`;
-
-const SiteSidebar: React.FC = () => {
-  const location = useLocation();
-  void location; // suppress unused for build
-
-  return (
-    <aside className='hidden xl:block w-64 shrink-0 border-r border-gray-200 bg-gray-50'>
-      <div className='p-6'>
-        <h2 className='text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4'>
-          Navigation
+const, linkClas, s = ({ isActi, v, e }: { isActi, v, e: boo, l, e, a, n }) =>
+  `block, p, x-3, p, y-2, rounde, d-md, tex, t-sm ${ 
+    isActi, v, e
+       ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'
+      : 'te, x, t-gr, a, y-700, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'
+   }`; const, SiteSideba, r: Rea, c, t.FC = () => { 
+  const, locatio, n = useLocat, i, o, n(); void, locatio, n; // suppress, unused, for build, retur, n (
+    <aside, classNam, e = 'hidden, x, l:bloc, k, w-64, shrin, k-0, borde, r-r, borde, r-gr, a, y-200, b, g-gr, a, y-50'>
+      <div, classNam, e='p-6'>
+        <h2, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-700, uppercase, tracking-wider, m, b-4'>
+          Navigati, o, n
         </h2>
 
-        <div className='space-y-6'>
-          <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
-              Explore
+        <div, classNam, e='spa, c, e-y-6'>
+          <d, i, v>
+            <h3, classNam, e='te, x, t-xs, fon, t-medium, tex, t-gr, a, y-600, uppercase, mb-2'>
+              Explo, r, e
             </h3>
-            <nav className='space-y-1'>
-              {' '}
-              <NavLink to='/' className={linkClass}>
-                Home
-              </NavLink>
-              <NavLink to='/solutions' className={linkClass}>
-                Solutions
-              </NavLink>
-              <NavLink to='/services' className={linkClass}>
-                Services
-              </NavLink>
-              <NavLink to='/marketplace' className={linkClass}>
-                Marketplace
-              </NavLink>
-              <NavLink to='/resources' className={linkClass}>
-                Resources
-              </NavLink>
-              <NavLink to='/case-studies' className={linkClass}>
-                Case Studies
-              </NavLink>
-              <NavLink to='/blog' className={linkClass}>
-                Blog
-              </NavLink>
-              <NavLink to='/about' className={linkClass}>
-                About
-              </NavLink>
-            </nav>
-          </div>
+            <nav, classNam, e='spa, c, e-, y-, 1' > {' ' }
+              <NavLink, t, o = '/' classNa, m, e={linkCla, s, s}>
+                Ho, m, e
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s' classNa, m, e={linkCla, s, s}>
+                Solutio, n, s
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s' classNa, m, e={linkCla, s, s}>
+                Servic, e, s
+              </NavLi, n, k>
+              <NavLink, t, o='/marketpla, c, e' classNa, m, e={linkCla, s, s}>
+                Marketpla, c, e
+              </NavLi, n, k>
+              <NavLink, t, o='/resourc, e, s' classNa, m, e={linkCla, s, s}>
+                Resourc, e, s
+              </NavLi, n, k>
+              <NavLink, t, o='/ca, s, e-studi, e, s' classNa, m, e={linkCla, s, s}>
+                Case, Studie, s
+              </NavLi, n, k>
+              <NavLink, t, o='/bl, o, g' classNa, m, e={linkCla, s, s}>
+                Bl, o, g
+              </NavLi, n, k>
+              <NavLink, t, o='/abo, u, t' classNa, m, e={linkCla, s, s}>
+                Abo, u, t
+              </NavLi, n, k>
+            </n, a, v>
+          </d, i, v>
 
-          <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
-              Solutions
+          <d, i, v>
+            <h3, classNam, e='te, x, t-xs, fon, t-medium, tex, t-gr, a, y-600, uppercase, mb-2'>
+              Solutio, n, s
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/solutions/enterprise' className={linkClass}>
-                Enterprise
-              </NavLink>
-              <NavLink to='/solutions/smb' className={linkClass}>
-                SMB
-              </NavLink>
-              <NavLink to='/solutions/startup' className={linkClass}>
-                Startup
-              </NavLink>
-              <NavLink to='/solutions/healthcare' className={linkClass}>
-                Healthcare
-              </NavLink>
-              <NavLink to='/solutions/financial' className={linkClass}>
-                Financial
-              </NavLink>
-              <NavLink to='/solutions/retail' className={linkClass}>
-                Retail
-              </NavLink>
-              <NavLink to='/solutions/manufacturing' className={linkClass}>
-                Manufacturing
-              </NavLink>
-            </nav>
-          </div>
+            <nav, classNam, e='spa, c, e-y-1'>
+              <NavLink, t, o='/solutio, n, s/enterpri, s, e' classNa, m, e={linkCla, s, s}>
+                Enterpri, s, e
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s/s, m, b' classNa, m, e={linkCla, s, s}>
+                S, M, B
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s/start, u, p' classNa, m, e={linkCla, s, s}>
+                Start, u, p
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s/healthca, r, e' classNa, m, e={linkCla, s, s}>
+                Healthca, r, e
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s/financi, a, l' classNa, m, e={linkCla, s, s}>
+                Financi, a, l
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s/reta, i, l' classNa, m, e={linkCla, s, s}>
+                Reta, i, l
+              </NavLi, n, k>
+              <NavLink, t, o='/solutio, n, s/manufacturi, n, g' classNa, m, e={linkCla, s, s}>
+                Manufacturi, n, g
+              </NavLi, n, k>
+            </n, a, v>
+          </d, i, v>
 
-          <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
-              Services
+          <d, i, v>
+            <h3, classNam, e='te, x, t-xs, fon, t-medium, tex, t-gr, a, y-600, uppercase, mb-2'>
+              Servic, e, s
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/services/ai-services' className={linkClass}>
-                AI Services
-              </NavLink>
-              <NavLink to='/services/it-services' className={linkClass}>
-                IT Services
-              </NavLink>
-              <NavLink to='/services/micro-saas' className={linkClass}>
-                Micro SaaS
-              </NavLink>
-              <NavLink to='/services/cloud' className={linkClass}>
-                Cloud
-              </NavLink>
-              <NavLink to='/services/analytics' className={linkClass}>
-                Analytics
-              </NavLink>
-              <NavLink to='/services/security' className={linkClass}>
-                Security
-              </NavLink>
-              <NavLink to='/services/automation' className={linkClass}>
-                Automation
-              </NavLink>
-            </nav>
-          </div>
+            <nav, classNam, e='spa, c, e-y-1'>
+              <NavLink, t, o='/servic, e, s/ai-servic, e, s' classNa, m, e={linkCla, s, s}>
+                AI, Service, s
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s/it-servic, e, s' classNa, m, e={linkCla, s, s}>
+                IT, Service, s
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s/mic, r, o-sa, a, s' classNa, m, e={linkCla, s, s}>
+                Micro, Saa, S
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s/clo, u, d' classNa, m, e={linkCla, s, s}>
+                Clo, u, d
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s/analyti, c, s' classNa, m, e={linkCla, s, s}>
+                Analyti, c, s
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s/securi, t, y' classNa, m, e={linkCla, s, s}>
+                Securi, t, y
+              </NavLi, n, k>
+              <NavLink, t, o='/servic, e, s/automati, o, n' classNa, m, e={linkCla, s, s}>
+                Automati, o, n
+              </NavLi, n, k>
+            </n, a, v>
+          </d, i, v>
 
-          <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
-              Company
+          <d, i, v>
+            <h3, classNam, e='te, x, t-xs, fon, t-medium, tex, t-gr, a, y-600, uppercase, mb-2'>
+              Compa, n, y
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/contact' className={linkClass}>
-                Contact
-              </NavLink>
-              <NavLink to='/partners' className={linkClass}>
-                Partners
-              </NavLink>
-              <NavLink to='/pricing' className={linkClass}>
-                Pricing
-              </NavLink>
-              <NavLink to='/careers' className={linkClass}>
-                Careers
-              </NavLink>
-              <NavLink to='/faq' className={linkClass}>
-                FAQ
-              </NavLink>
-              <NavLink to='/privacy' className={linkClass}>
-                Privacy
-              </NavLink>
-              <NavLink to='/terms' className={linkClass}>
-                Terms
-              </NavLink>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </aside>
+            <nav, classNam, e='spa, c, e-y-1'>
+              <NavLink, t, o='/conta, c, t' classNa, m, e={linkCla, s, s}>
+                Conta, c, t
+              </NavLi, n, k>
+              <NavLink, t, o='/partne, r, s' classNa, m, e={linkCla, s, s}>
+                Partne, r, s
+              </NavLi, n, k>
+              <NavLink, t, o='/prici, n, g' classNa, m, e={linkCla, s, s}>
+                Prici, n, g
+              </NavLi, n, k>
+              <NavLink, t, o='/caree, r, s' classNa, m, e={linkCla, s, s}>
+                Caree, r, s
+              </NavLi, n, k>
+              <NavLink, t, o='/f, a, q' classNa, m, e={linkCla, s, s}>
+                F, A, Q
+              </NavLi, n, k>
+              <NavLink, t, o='/priva, c, y' classNa, m, e={linkCla, s, s}>
+                Priva, c, y
+              </NavLi, n, k>
+              <NavLink, t, o='/ter, m, s' classNa, m, e={linkCla, s, s}>
+                Ter, m, s
+              </NavLi, n, k>
+            </n, a, v>
+          </d, i, v>
+        </d, i, v>
+      </d, i, v>
+    </as, i, d, e>
   );
 };
 
-export default SiteSidebar;
+export, default, SiteSidebar;

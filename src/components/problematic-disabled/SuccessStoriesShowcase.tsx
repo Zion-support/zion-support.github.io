@@ -1,109 +1,104 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-const SuccessStoriesShowcase: React.FC = () => {
-  const stories = [
+import, React, from 'rea, c, t';
+impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => { 
+  const, storie, s = [
     {
-      company: "TechCorp International",
-      industry: "Technology",
-      icon: '🚀',
-      icon: <TrendingUp className="w-8 h-8" />,
-      result: "300% Revenue Growth",
-      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
-      metrics: [
-        "98% prediction accuracy",
-        "60% cost reduction",
-        "2M users impacted"
+      compa, n, y: "TechCorp, Internatio, n, a, l",
+      indust, r, y: "Technol, o, g, y",
+      ic, o, n: '🚀',
+      ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,
+      resu, l, t: "3, 0, 0% Revenue, Grow, t, h",
+      descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
+      metri, c, s: [
+        "98% prediction, accura, c, y",
+        "60% cost, reductio, n",
+        "2M, users, impacted"
       ],",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {",
-      company: "Global Manufacturing Inc",
-      industry: "Manufacturing",
-      icon: '🚀',
-      icon: <Target className="w-8 h-8" />,
-      result: "85% Downtime Reduction",
-      description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
-      metrics: [
-        "$2M annual savings",
-        "40% lower maintenance costs",
-        "99.9% uptime achieved"
+      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
+     },
+    { ",
+      compa, n, y: "Global, Manufacturing, In, c",
+      indust, r, y: "Manufactur, i, n, g",
+      ic, o, n: '🚀',
+      ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,
+      resu, l, t: "85% Downtime, Reducti, o, n",
+      descripti, o, n: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
+      metri, c, s: [
+        "$2M, annual, saving, s",
+        "40% lower, maintenance, costs",
+        "99.9% uptime, achieve, d"
       ],",
-      color: "from-green-500 to-emerald-500"
-    },
-    {",
-      company: "FinanceFirst Bank",
-      industry: "Financial Services",
-      icon: '🚀',
-      icon: <Users className="w-8 h-8" />,
-      result: "99.95% Fraud Detection",
-      description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
-      metrics: [
-        "$5M fraud prevented",
-        "Sub-100ms detection",
-        "95% fewer false positives"
+      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
+     },
+    { ",
+      compa, n, y: "FinanceFirst, Ba, n, k",
+      indust, r, y: "Financial, Servic, e, s",
+      ic, o, n: '🚀',
+      ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > ,
+      resu, l, t: "99.95% Fraud, Detecti, o, n",
+      descripti, o, n: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives b, y, 9, 5%.",",
+      metri, c, s: [
+        "$5M, fraud, prevente, d",
+        "S, u, b-100ms, detectio, n",
+        "95% fewer, false, positives"
       ],",
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
-  return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Success Stories
+      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
+     }
+  ]; retu, r, n (
+    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
+      <div, classNam, e="container, m, x-auto, p, x-6">
+        <div, classNam, e="te, x, t-center, m, b-16">
+          <h2, classNam, e="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+            Success, Storie, s
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See how leading companies are transforming their operations with our AI solutions
+          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
+            See, how, leading companies, are, transforming their, operations, with our, AI, solutions
           </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
-          {stories.map((story, index) => (
-            <div
-key={index}
-              className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
+        </d, i, v>
+        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
+          { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
+            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
             >
-              <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
-                <div className="flex items-center gap-3 mb-4">
-                  {story.icon}
-                  <div>
-                    <h3 className="font-bold text-xl">{story.company}</h3>
-                    <p className="text-sm opacity-90">{story.industry}</p>
-                  </div>
-                </div>
-                <div className="text-3xl font-bold">{story.result}</div>
-              </div>
-              <div className="p-6">
-                <p className="text-gray-600 mb-6">{story.description}</p>
-                <div className="space-y-2 mb-6">
-                  {story.metrics.map((metric, idx) => (
-                    <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                      <span className="text-sm text-gray-700">{metric}</span>
-                    </div>
+              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}>
+                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
+                  {sto, r, y.ic, o, n}
+                  <d, i, v>
+                    <h3, classNam, e="fo, n, t-bold, tex, t-xl">{sto, r, y.compa, n, y}</h3>
+                    <p, classNam, e="te, x, t-sm, opacit, y-90">{sto, r, y.indust, r, y}</p>
+                  </d, i, v>
+                </d, i, v>
+                <div, classNam, e="te, x, t-3xl, fon, t-bo, l, d">{sto, r, y.resu, l, t}</d, i, v>
+              </d, i, v>
+              <div, classNam, e="p-6">
+                <p, classNam, e="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.descripti, o, n}</p>
+                <div, classNam, e="spa, c, e-y-2, m, b-6">
+                  { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
+                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2">
+                      <div, classNam, e="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" />
+                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-7, 0, 0">{metr, i, c}</sp, a, n>
+                    </di, v>
                   ))}
-                </div>
-                <Link
-                  to="/case-studies"
-                  className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
+                </d, i, v>
+                <Link, t, o = "/ca, s, e-studi, e, s"
+                  classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2"
                 >
-                  Read Full Story
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            </div>
+                  Read, Full, Story
+                  <ArrowRight, classNam, e="w-4 h-4" />
+                </Li, n, k>
+              </d, i, v>
+            </d, i, v>
           ))}
-        </div>
-        <div className="text-center">
-          <Link
-            to="/case-studies"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
+        </d, i, v>
+        <div, classNam, e = "te, x, t-cent, e, r">
+          <Link, t, o="/ca, s, e-studi, e, s"
+            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
           >
-            View All Success Stories
-            <ArrowRight className="w-6 h-6" />
-          </Link>
-        </div>
-      </div>
-    </section>
+            View, All, Success Stori, e, s
+            <ArrowRight, classNam, e="w-6 h-6" />
+          </Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </sec, t, i, o, n>
   );
 };
-export default SuccessStoriesShowcase;
+export, default, SuccessStoriesShowcase;

@@ -1,59 +1,56 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
 
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
-}
+interface, Prop, s { 
+  childr, e, n: ReactNo, d, e;
+  fallba, c, k ?  : ReactN, o, d, e;
+ }
 
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
+interface, Stat, e { 
+  hasErr, o, r: boole, a, n;
+  err, o, r?: Err, o, r;
+  errorIn, f, o ?  : ErrorI, n, f, o;
+ }
 
-export class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
+export, class, AdvancedErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> {
+  construct, o, r(pro, p, s: Pro, p, s) {
+    sup, e, r(pro, p, s);
+    th, i, s.sta, t, e = { hasErr, o, r: f, a, l, s, e };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static, getDerivedStateFromErro, r(err, o, r: Err, o, r): Sta, t, e {
+    retu, r, n { hasErr, o, r: t, r, u, e, err, o, r };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
+  componentDidCat, c, h(err, o, r: Er, r, o, r, errorIn, f, o: ErrorIn, f, o) {
+    th, i, s.setSta, t, e({ er, r, o, r, errorIn, f, o });
 
-    // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    // Log, error, to monitoring, service, console.err, o, r('Error, caught, by bounda, r, y:', err, o, r, errorIn, f, o);
 
-    // Send to error tracking service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false,
+    // Send, to, error tracking, service, if (typeof, windo, w !== 'undefin, e, d' && 'gt, a, g' in, windo, w) {
+      (window, as, any).gt, a, g('eve, n, t', 'excepti, o, n', {
+        descripti, o, n: err, o, r.toStr, i, n, g(),
+        fat, a, l: fa, l, s, e,
       });
     }
   }
 
-  render() {
-    if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className='error-boundary'>
-            <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
-              {this.state.error && this.state.error.toString()}
+  rend, e, r() { 
+    if (th, i, s.sta, t, e.hasErr, o, r) {
+      retu, r, n (
+        th, i, s.pro, p, s.fallba, c, k || (
+          <div, classNam, e = 'err, o, r-bounda, r, y'>
+            <h2>Something, went, wrong.</h2 > <details, styl, e={{ whiteSpa, c, e: 'p, r, e-wr, a, p'  }}>
+              { th, i, s.sta, t, e.err, o, r  && th, i, s.sta, t, e.err, o, r.toStri, n, g() }
               <br />
-              {this.state.errorInfo?.componentStack}
-            </details>
-          </div>
+              {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
+            </detai, l, s>
+          </d, i, v>
         )
       );
     }
 
-    return this.props.children;
+    return, thi, s.pro, p, s.childr, e, n;
   }
 }
 
-export default AdvancedErrorBoundary;
+export, default, AdvancedErrorBoundary;

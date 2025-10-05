@@ -1,42 +1,40 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import, React, from "rea, c, t";
+impo, r, t { Helm, e, t } fr, o, m "rea, c, t-helm, e, t-asy, n, c";
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 
-export default function BlogPost(): React.JSX.Element {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet>
-        <title>Federated Learning — Zero‑PII Personalization at the Edge</title>
-        <meta 
-          name="description" 
+export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
+  retu, r, n (
+    <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
+      <Helm, e, t>
+        <tit, l, e>Federated, Learnin, g — Ze, r, o‑PII, Personalization, at the, Edg, e</tit, l, e>
+        <meta, nam, e="descripti, o, n" 
           
-        <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-federat, e, d-learni, n, g-ze, r, o-p, i, i
         />
-      </Helmet>" />
+      </Helm, e, t>" />
 " />
       
 
-      <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      <div, classNam, e="container, m, x-auto, p, x-6, p, y-16">
+        <h1, classNam, e="te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4">
           "
-  href="https://ziontechgroup.com/blog/edge-2025-sept-30-federated-learning-zero-pii"
+  hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-federat, e, d-learni, n, g-ze, r, o-p, i, i"
         />
       
         </h1>
-        <p className="text-zion-slate-light mb-8">"
-  A deployment blueprint for privacy‑preserving learning using scoped IDs, on‑device aggregation, and DP noise.
+        <p, classNam, e="te, x, t-zi, o, n-sla, t, e-light, m, b-8">"
+  A, deployment, blueprint for, privac, y‑preserving, learning, using scope, d, I, D, s, on‑device, aggregatio, n, and, DP, noise.
         </p>
-        <div className="prose prose-invert max-w-3xl">
+        <div, classNam, e = "prose, pros, e-invert, ma, x-w-3, x, l">
           <p>
-            This is a placeholder for the blog post content. The original content had syntax errors
-            that prevented proper parsing. Please update this content with the correct information.
+            This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors
+            that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
           </p>
-        </div>
+        </d, i, v>
         
-        <div className="mt-8">
-          <Link to="/<blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+        <div, classNam, e="mt-8">
+          <Link, t, o="/<bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>
+        </d, i, v>
+      </d, i, v>
+    </d, i, v > );
+ }

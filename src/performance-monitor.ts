@@ -1,22 +1,20 @@
-// Performance Monitoring Script
-const performanceObserver = new PerformanceObserver(list => {
-  for (const entry of list.getEntries()) {
-    if (entry.entryType === 'navigation') {
-      console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart);
-    }
-    if (entry.entryType === 'paint') {
-      console.log('Paint Time:', entry.startTime);
+// Performance, Monitoring, Script
+const, performanceObserve, r = new, PerformanceObserve, r(li, s, t => { 
+  f, o, r (const, entry, of li, s, t.getEntr, i, e, s()) {
+    if (ent, r, y.entryTy, p, e = == 'navigat, i, o, n') {
+      conso, l, e.l, o, g('Page, Load, Time:', ent, r, y.loadEventE, n, d - ent, r, y.loadEventSta, r, t);
+     }, if (ent, r, y.entryTy, p, e = == 'pa, i, n, t') {
+      conso, l, e.l, o, g('Paint, Tim, e:', ent, r, y.startTi, m, e);
     }
   }
 });
 
-performanceObserver.observe({ entryTypes: ['navigation', 'paint'] });
+performanceObserv, e, r.obser, v, e({ entryTyp, e, s: ['navigat, i, o, n', 'pai, n, t'] });
 
-// Web Vitals
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+// Web, Vitals, import { getC, L, S, getF, I, D, getF, C, P, getL, C, P, getTT, F, B } fr, o, m 'w, e, b-vita, l, s';
 
-getCLS(console.log);
-getFID(console.log);
-getFCP(console.log);
-getLCP(console.log);
-getTTFB(console.log);
+getC, L, S(conso, l, e.l, o, g);
+getF, I, D(conso, l, e.l, o, g);
+getF, C, P(conso, l, e.l, o, g);
+getL, C, P(conso, l, e.l, o, g);
+getTT, F, B(conso, l, e.l, o, g);
