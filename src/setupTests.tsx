@@ -76,12 +76,18 @@ jest.mock('react-helmet-async', () => ({
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+}));
+
 // Mock lucide-react icons
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
 
 // Mock lucide-react icons
 jest.mock('lucide-react', () => {
-  const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),

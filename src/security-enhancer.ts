@@ -17,10 +17,6 @@ class SecurityEnhancer {
     }
 
     this.setupCSP();
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
-
-    this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.setupSecurityHeaders();
@@ -45,12 +41,10 @@ class SecurityEnhancer {
   }
 
   private setupXSSProtection(): void {
-    if (typeof document !== 'undefined') {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-Content-Type-Options';
-      meta.content = 'nosniff';
-      document.head.appendChild(meta);
-    }
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
   }
 
   private setupSecurityHeaders(): void {
