@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import ArrowRight from 'next/link';
 import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, DollarSign, Share, Target, TrendingUp, User } from 'lucide-react';
 
+=======
+import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User, DollarSign, TrendingUp, Target, Share2, Bookmark } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f15
 
 
 

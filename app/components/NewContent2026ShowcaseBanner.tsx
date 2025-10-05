@@ -3,6 +3,7 @@ import { ArrowRight, TrendingUp, Users } from 'lucide-react';
 
 
 
+import { ArrowRight, Users, TrendingUp, Star } from 'lucide-react';
 
 export default function NewContent2026ShowcaseBanner() {
   return (

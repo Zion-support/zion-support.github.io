@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, BookOpen, CheckCircle, Clock, Target, TrendingUp
 
 
 
+import { ArrowLeft, Clock, TrendingUp, Target, CheckCircle, Zap, BookOpen } from 'lucide-react';
 
 import { Metadata } from 'next';
 

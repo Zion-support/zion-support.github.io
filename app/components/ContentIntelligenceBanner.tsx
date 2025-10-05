@@ -3,6 +3,7 @@ import { ArrowRight, Award, BookOpen, CheckCircle, Globe, TrendingUp, Zap } from
 
 
 
+import { TrendingUp, CheckCircle, Zap, Globe, Award, BookOpen } from 'lucide-react';
 
 /**
  * Content Intelligence Revolution Banner

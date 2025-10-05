@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight, Users, CheckCircle, Brain, Zap } from 'lucide-react';
 
 import { ArrowRight } from 'lucide-react';
 import { Brain } from 'lucide-react';

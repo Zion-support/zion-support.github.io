@@ -1,5 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Gauge, ShieldCheck, Activity } from 'lucide-react';
+=======
+import { ArrowRight, Calendar, Clock } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f15
 
 
 export const metadata = {

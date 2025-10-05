@@ -2,6 +2,7 @@ import ArrowRight from 'next/link';
 import { ArrowRight, CheckCircle, DollarSign, TrendingUp, Users } from 'lucide-react';
 
 
+import { ArrowRight, Users, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
 
 export default function Fortune500QuantumAITransformation2026() {
   return (

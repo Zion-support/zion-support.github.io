@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, Tag, Brain, Zap } from 'lucide-react';
 
 import { ArrowLeft } from 'lucide-react';
 import { Calendar } from 'lucide-react';

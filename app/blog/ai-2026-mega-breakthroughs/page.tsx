@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Target, Brain, Rocket, Zap } from 'lucide-react';
 
 import { ArrowRight } from 'lucide-react';
 import { Zap } from 'lucide-react';

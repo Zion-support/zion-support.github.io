@@ -1,5 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Log, BarChart3 } from 'lucide-react';
+=======
+import { Users, TrendingUp, Zap, BarChart3 } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f15
 
 
 export const metadata = {

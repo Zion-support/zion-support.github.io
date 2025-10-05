@@ -1,5 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { Atom } from 'lucide-react';
+=======
+import { ArrowRight, CheckCircle, Brain, Zap } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f15
 
 
 export default function QuantumAIBreakthrough2026() {
