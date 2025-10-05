@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import Link from 'next/link';
 export default function AI2025JanuaryAutonomousEnterpriseTransformation() {
   return (
     <div className="min-h-screen bg-slate-950">

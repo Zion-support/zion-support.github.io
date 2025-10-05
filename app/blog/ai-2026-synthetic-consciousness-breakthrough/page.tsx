@@ -1,10 +1,10 @@
 import Link from 'next/link';
 
-import { ArrowRight } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Target from 'lucide-react/dist/esm/icons/target';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 
 export const metadata = {
   title: 'AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness',

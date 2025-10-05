@@ -281,7 +281,7 @@ export default function AIEnterpriseAutomation2026MegaGuide() {
                 ].map((component, index) => (
                   <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
                     <div className="text-4xl mb-4">{component.icon}</div>
-                    <h3 className={`text-xl font-bold ${component.color} mb-3`}>{component.title}</h3>
+                    <h3 className={`text-lg font-bold ${component.color} mb-2`}>{component.title}</h3>
                     <p className="text-gray-300 text-sm leading-relaxed">{component.description}</p>
                   </div>
                 ))}

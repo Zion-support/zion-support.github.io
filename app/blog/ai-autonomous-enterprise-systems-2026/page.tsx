@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import { ArrowLeft } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { User } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Share2 } from 'lucide-react';
-import { Bookmark } from 'lucide-react';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import User from 'lucide-react/dist/esm/icons/user';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Share2 from 'lucide-react/dist/esm/icons/share-2';
+import Bookmark from 'lucide-react/dist/esm/icons/bookmark';
 
 export const metadata = {
   title: 'AI Autonomous Enterprise Systems 2026: Self-Improving Intelligence Revolution | Zion Tech Group',

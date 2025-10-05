@@ -1,15 +1,15 @@
 import Link from 'next/link';
 
-import { ArrowLeft } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { User } from 'lucide-react';
-import { Tag } from 'lucide-react';
-import { Share2 } from 'lucide-react';
-import { BookOpen } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Zap } from 'lucide-react';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import User from 'lucide-react/dist/esm/icons/user';
+import Tag from 'lucide-react/dist/esm/icons/tag';
+import Share2 from 'lucide-react/dist/esm/icons/share-2';
+import BookOpen from 'lucide-react/dist/esm/icons/book-open';
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
 
 import { Metadata } from 'next';
 

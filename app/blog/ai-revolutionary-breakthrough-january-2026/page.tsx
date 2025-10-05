@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import { ArrowRight } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Zap } from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Zap from 'lucide-react/dist/esm/icons/zap';
 
 export const metadata = {
   title: 'AI Revolutionary Breakthrough January 2026: 10x Performance Gains | Zion Tech Group',

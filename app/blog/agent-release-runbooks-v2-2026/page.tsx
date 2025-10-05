@@ -1,6 +1,10 @@
-import { Calendar, Clock } from 'lucide-react';
-// import Link from 'next/link';
+import Link from 'next/link';
 
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import ListChecks from 'lucide-react/dist/esm/icons/list-checks';
+import FileWarning from 'lucide-react/dist/esm/icons/file-warning';
+import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
 
 export const metadata = {
   title: 'Agent Release Runbooks v2 (2026): Budgets, Canaries, Rollback | Zion',

@@ -1,16 +1,16 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-import { Calendar } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { User } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Brain } from 'lucide-react';
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import User from 'lucide-react/dist/esm/icons/user';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Cpu from 'lucide-react/dist/esm/icons/cpu';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Brain from 'lucide-react/dist/esm/icons/brain';
 
 export const metadata: Metadata = {
   title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',

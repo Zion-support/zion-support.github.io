@@ -1,6 +1,12 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, Award, Brain, DollarSign, Target, TrendingUp, Users, Zap } from 'lucide-react';
-
+import Link from 'next/link';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Target from 'lucide-react/dist/esm/icons/target';
+import Users from 'lucide-react/dist/esm/icons/users';
+import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign';
+import Award from 'lucide-react/dist/esm/icons/award';
 
 
 
@@ -300,27 +306,27 @@ export default function AI2026BreakthroughInnovationsCaseStudyPage() {
           Join the Fortune 500 companies already generating unprecedented value with AI 2026 breakthrough innovations.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <ArrowRight 
+          <Link 
             href="/blog/ai-2026-breakthrough-innovations-mega-success" 
             className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             Read Full Blog Post
             <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
-          <ArrowRight 
+          </Link>
+          <Link 
             href="/services/ai-2026-breakthrough-innovations-implementation" 
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             Start Implementation
             <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
-          <ArrowRight 
+          </Link>
+          <Link 
             href="/contact" 
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Get Expert Consultation
             <ArrowRight className="w-5 h-5" />
-          </ArrowRight>
+          </Link>
         </div>
       </section>
     </div>

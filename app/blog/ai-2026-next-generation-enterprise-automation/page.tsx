@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
-import { ArrowRight } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Users from 'lucide-react/dist/esm/icons/users';
+import Target from 'lucide-react/dist/esm/icons/target';
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 
 export default function AINextGenEnterpriseAutomation2026() {
   return (
