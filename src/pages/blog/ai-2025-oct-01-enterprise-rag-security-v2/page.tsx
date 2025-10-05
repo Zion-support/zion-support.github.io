@@ -6,19 +6,7 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
-        <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
-=======
-        <title>Ai 2025 Oct 01 Enterprise Rag Security V2</title>
-        <meta 
-          name="description" 
-          content="Learn about ai 2025 oct 01 enterprise rag security v2 and how it can benefit your enterprise." 
-        />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2" 
-        />
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
+}
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -35,8 +23,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f679

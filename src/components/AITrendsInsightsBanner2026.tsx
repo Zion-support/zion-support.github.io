@@ -133,7 +133,11 @@ const AITrendsInsightsBanner2026: React.FC = () => {
         {/* Trending Topics Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {trendingTopics.map((topic, index) => (
+<<<<<<< HEAD
             <div 
+=======
+            <div
+>>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
               key={topic.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
@@ -224,6 +228,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300"
+              />
 
               <button className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">
 

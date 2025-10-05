@@ -172,8 +172,8 @@ const TrendingContentBanner: React.FC = () => {
           {/* Navigation dots */}
           <div className="flex gap-2">
             {trendingItems.map((_, index) => (
-              <button>
-                key={index}
+              <button
+key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 

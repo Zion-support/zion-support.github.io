@@ -97,7 +97,11 @@ const October2025CuttingEdgeContentBanner = () => {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.metrics.map((metric, idx) => (
                     <span
+<<<<<<< HEAD
                       key={idx}
+=======
+key={idx}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
                       className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50"
                     >
                       {metric}

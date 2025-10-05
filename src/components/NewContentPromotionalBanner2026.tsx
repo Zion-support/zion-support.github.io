@@ -61,8 +61,13 @@ const NewContentPromotionalBanner2026 = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {newContent.map((content, index) => (
+<<<<<<< HEAD
             <div 
               key={index}
+=======
+            <div
+key={index}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >

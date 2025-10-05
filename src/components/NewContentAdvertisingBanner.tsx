@@ -134,8 +134,13 @@ const NewContentAdvertisingBanner: React.FC = () => {
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
+<<<<<<< HEAD
             <div 
               key={content.id}
+=======
+            <div
+key={content.id}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
@@ -258,8 +263,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
+/>
 
-                <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
+<button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
 
                 </button>
               </div>
