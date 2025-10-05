@@ -1,43 +1,6 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 
-// Polyfill TextEncoder and TextDecoder for Node.js environment
-if (typeof global.TextEncoder === 'undefined') {
-  const { TextEncoder, TextDecoder } = require('util');
-  global.TextEncoder = TextEncoder;
-  global.TextDecoder = TextDecoder;
-}
-
-// Mock import.meta.env for Jest
-Object.defineProperty(global, 'import', {
-  value: {
-    meta: {
-      env: {
-        DEV: true,
-        PROD: false,
-        MODE: 'test',
-      },
-    },
-  },
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof IntersectionObserver;
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof ResizeObserver;
-
-// Mock matchMedia
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -50,11 +13,10 @@ Object.defineProperty(window, 'matchMedia', {
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
   })),
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-03e2
 });
 
 // Mock performance API
-Object.defineProperty(window'performance', {
+Object.defineProperty(window, 'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
@@ -62,6 +24,11 @@ Object.defineProperty(window'performance', {
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
     getEntriesByName: jest.fn(() => []),
+  },
+});
+
+// Mock react-error-boundary
+jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
@@ -294,6 +261,7 @@ jest.mock('lucide-react', () => {
     TimerOff: () => mockIcon('timer-off-icon'),
     Stopwatch: () => mockIcon('stopwatch-icon'),
     Hourglass: () => mockIcon('hourglass-icon'),
+  };
 });
 
 // Mock console methods to reduce noise in tests
@@ -309,6 +277,7 @@ beforeAll(() => {
         ))
     ) {
       return;
+    }
     originalConsoleError.call(console, ...args);
   };
   console.warn = (...args: unknown[]) => {
@@ -317,8 +286,13 @@ beforeAll(() => {
         args[0].includes('componentWillMount'))
     ) {
       return;
+    }
     originalConsoleWarn.call(console, ...args);
   };
 });
 
 afterAll(() => {
+  // Cleanup after all tests
+  console.error = originalConsoleError;
+  console.warn = originalConsoleWarn;
+});

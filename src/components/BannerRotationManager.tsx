@@ -1,101 +1,16 @@
-import React{ lazySuspenseuseStateuseEffect } from 'react';
+import React from 'react';
 
-// Define available banners with their import paths
-const bannerComponents = {
-};
-
-export type BannerKey = keyof typeof bannerComponents;
-
-interface BannerRotationManagerProps {
-  /** Array of banner keys to display in rotation */
-  banners?: BannerKey[];
-  /** Rotation interval in milliseconds (default: 8000) */
-  interval?: number;
-  /** Whether to auto-rotate banners (default: true) */
-  autoRotate?: boolean;
-  /** Maximum number of banners to show (default: 3) */
-  maxBanners?: number;
-}
-
-const LoadingFallback = () => (
-  <div className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse'>
-    <div className='h-32 bg-white/10 rounded'></div>
-  </div>
-);
-
-/**
- * Banner Rotation Manager Component
- *
- * Manages banner display with lazy loadingrotationand performance optimization
- */
-export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [
-}) => {
-  const [currentIndexsetCurrentIndex] = useState(0);
-  const [visibleBannerssetVisibleBanners] = useState<BannerKey[]>([]);
-
-  // Select banners to display (limit to maxBanners)
-  useEffect(() => {
-    const selected = banners.slice(0maxBanners);
-    setVisibleBanners(selected);
-  }[bannersmaxBanners]);
-
-  // Auto-rotation logic
-  useEffect(() => {
-    if (!autoRotate || visibleBanners.length <= 1) return;
-
-    const timer = setInterval(() => {
-      setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-    }interval);
-
-    return () => clearInterval(timer);
-  }[autoRotateintervalvisibleBanners.length]);
-
-  if (visibleBanners.length === 0) return null;
-
-  // For non-rotatingshow all banners
-  if (!autoRotate) {
-    return (
-      <div className='space-y-6'>
-        {visibleBanners.map(bannerKey => {
-          const BannerComponent = bannerComponents[bannerKey];
-          return (
-            <Suspense key={bannerKey} fallback={<LoadingFallback />}>
-              <BannerComponent />
-            </Suspense>
-          );
-        })}
-      </div>
-    );
-  }
-
-  // For rotatingshow current banner with controls
-  const currentBannerKey = visibleBanners[currentIndex];
-  const CurrentBanner = bannerComponents[currentBannerKey];
-
+const BannerRotationManager: React.FC = () => {
   return (
-    <div className='relative'>
-      <Suspense fallback={<LoadingFallback />}>
-        <CurrentBanner />
-      </Suspense>
-
-      {/* Rotation controls (if multiple banners) */}
-      {visibleBanners.length > 1 && (
-        <div className='flex justify-center gap-2 mt-4'>
-          {visibleBanners.map((_index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                index === currentIndex
-                  ? 'bg-purple-400 w-8'
-                  : 'bg-white/30 hover:bg-white/50'
-              }`}
-              aria-label={`Go to banner ${index + 1}`}
-            />
-          ))}
-        </div>
-      )}
+    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">
+          Banner Rotation Manager
+        </h2>
+        <p className="text-lg mb-6">
+          This component is being restored. Please check back later for full functionality.
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,15 +1,15 @@
 import React from 'react';
 
-interface LoadingProps {
-  message?: string;
-}
-
-const Loading: React.FC<LoadingProps> = ({ message = 'Loading...' }) => {
+const Loading: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-900">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-        <p className="text-white text-lg">{message}</p>
+    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">
+          Loading
+        </h2>
+        <p className="text-lg mb-6">
+          This component is being restored. Please check back later for full functionality.
+        </p>
       </div>
     </div>
   );
