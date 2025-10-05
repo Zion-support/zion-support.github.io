@@ -69,7 +69,8 @@ const October2025AdvancedAIInnovationsBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
-                <Database className="w-8 h-8 text-purple-300"</div>
+                <Database className="w-8 h-8 text-purple-300" />
+              </div>
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">Data Engineering</span>
               </div>
