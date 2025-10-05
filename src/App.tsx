@@ -1,8 +1,9 @@
-import { Suspense, lazy } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import SEO from './components/SEO';
 import Loading from './components/Loading';
+import "./index.css";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -15,7 +16,6 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
-
   return (
     <ErrorBoundary>
       <SEO />
