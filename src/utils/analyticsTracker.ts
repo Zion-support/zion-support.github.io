@@ -35,13 +35,13 @@ export interface ConversionEvent {
 export const initAnalytics = (): void => {
   // Generate or retrieve session ID
   const sessionId = getOrCreateSessionId();
-  
+
   // Track initial page view
   trackPageView(window.location.pathname);
-  
+
   // Set up automatic event listeners
   setupAutoTracking();
-  
+
   console.log(`Analytics initialized - Session: ${sessionId}`);
 };
 
@@ -59,7 +59,7 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {
     userId: getUserId(),
     metadata: event.metadata,
   };
-  
+
   // Send to Google Analytics if available
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', fullEvent.action, {
@@ -69,10 +69,10 @@ export const trackEvent = (event: Partial<AnalyticsEvent>): void => {
       ...fullEvent.metadata,
     });
   }
-  
+
   // Send to custom analytics endpoint
   sendToAnalytics(fullEvent);
-  
+
   // Store locally for offline analysis
   storeEventLocally(fullEvent);
 };
@@ -87,7 +87,7 @@ export const trackPageView = (path: string, title?: string): void => {
     referrer: document.referrer,
     timestamp: new Date().toISOString(),
   };
-  
+
   // Google Analytics
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('config', 'GA_MEASUREMENT_ID', {
@@ -95,7 +95,7 @@ export const trackPageView = (path: string, title?: string): void => {
       page_title: event.title,
     });
   }
-  
+
   // Custom tracking
   trackEvent({
     category: 'page_view',
@@ -111,7 +111,7 @@ export const trackPageView = (path: string, title?: string): void => {
 export const trackBannerInteraction = (
   bannerId: string,
   action: 'impression' | 'click' | 'close',
-  metadata?: Record<string, any>
+  metadata?: Record<string, any>,
 ): void => {
   trackEvent({
     category: 'banner',
@@ -137,7 +137,7 @@ export const trackConversion = (conversion: ConversionEvent): void => {
       campaign: conversion.campaign,
     },
   });
-  
+
   // Send to conversion API if available
   if (typeof window !== 'undefined' && (window as any).gtag) {
     (window as any).gtag('event', 'conversion', {
@@ -155,7 +155,7 @@ export const trackConversion = (conversion: ConversionEvent): void => {
 export const trackEngagement = (
   type: 'scroll' | 'time' | 'interaction',
   value: number,
-  metadata?: Record<string, any>
+  metadata?: Record<string, any>,
 ): void => {
   trackEvent({
     category: 'engagement',
@@ -171,7 +171,7 @@ export const trackEngagement = (
 export const trackError = (
   error: Error,
   context?: string,
-  severity: 'low' | 'medium' | 'high' | 'critical' = 'medium'
+  severity: 'low' | 'medium' | 'high' | 'critical' = 'medium',
 ): void => {
   trackEvent({
     category: 'error',
@@ -184,7 +184,7 @@ export const trackError = (
       userAgent: navigator.userAgent,
     },
   });
-  
+
   // Send to error tracking service
   if (typeof window !== 'undefined' && (window as any).Sentry) {
     (window as any).Sentry.captureException(error, {
@@ -199,7 +199,7 @@ export const trackError = (
 export const trackFormSubmission = (
   formName: string,
   success: boolean,
-  errorMessage?: string
+  errorMessage?: string,
 ): void => {
   trackEvent({
     category: 'form',
@@ -264,7 +264,7 @@ export const trackDownload = (fileName: string, fileType: string): void => {
 export const trackVideo = (
   action: 'play' | 'pause' | 'complete',
   videoId: string,
-  progress?: number
+  progress?: number,
 ): void => {
   trackEvent({
     category: 'video',
@@ -285,10 +285,13 @@ const setupAutoTracking = (): void => {
   // Track scroll depth
   let maxScroll = 0;
   window.addEventListener('scroll', () => {
-    const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    const scrollPercent =
+      (window.scrollY /
+        (document.documentElement.scrollHeight - window.innerHeight)) *
+      100;
     if (scrollPercent > maxScroll) {
       maxScroll = scrollPercent;
-      
+
       // Track milestones
       if (maxScroll >= 25 && maxScroll < 26) {
         trackEngagement('scroll', 25, { milestone: '25%' });
@@ -301,19 +304,19 @@ const setupAutoTracking = (): void => {
       }
     }
   });
-  
+
   // Track time on page
   const startTime = Date.now();
   window.addEventListener('beforeunload', () => {
     const timeOnPage = (Date.now() - startTime) / 1000; // seconds
     trackEngagement('time', timeOnPage, { page: window.location.pathname });
   });
-  
+
   // Track outbound links
-  document.addEventListener('click', (e) => {
+  document.addEventListener('click', e => {
     const target = e.target as HTMLElement;
     const link = target.closest('a');
-    
+
     if (link && link.href && link.hostname !== window.location.hostname) {
       trackEvent({
         category: 'outbound',
@@ -335,7 +338,7 @@ const sendToAnalytics = async (event: AnalyticsEvent): Promise<void> => {
   try {
     // Only send in production
     if (process.env.NODE_ENV !== 'production') return;
-    
+
     await fetch('/api/analytics', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -354,14 +357,14 @@ const storeEventLocally = (event: AnalyticsEvent): void => {
     const key = 'analytics_events';
     const stored = localStorage.getItem(key);
     const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];
-    
+
     events.push(event);
-    
+
     // Keep only last 100 events
     if (events.length > 100) {
       events.shift();
     }
-    
+
     localStorage.setItem(key, JSON.stringify(events));
   } catch (error) {
     console.warn('Failed to store event locally:', error);
@@ -374,12 +377,12 @@ const storeEventLocally = (event: AnalyticsEvent): void => {
 const getOrCreateSessionId = (): string => {
   const key = 'analytics_session_id';
   let sessionId = sessionStorage.getItem(key);
-  
+
   if (!sessionId) {
     sessionId = generateId();
     sessionStorage.setItem(key, sessionId);
   }
-  
+
   return sessionId;
 };
 
@@ -396,12 +399,12 @@ const getSessionId = (): string => {
 const getUserId = (): string | undefined => {
   const key = 'analytics_user_id';
   let userId = localStorage.getItem(key);
-  
+
   if (!userId) {
     userId = generateId();
     localStorage.setItem(key, userId);
   }
-  
+
   return userId;
 };
 
@@ -429,7 +432,7 @@ export const getAnalyticsSummary = (): {
 } => {
   const stored = localStorage.getItem('analytics_events');
   const events: AnalyticsEvent[] = stored ? JSON.parse(stored) : [];
-  
+
   return {
     events,
     sessionId: getSessionId(),

@@ -28,12 +28,12 @@ export class BundleOptimizer {
       totalSize: 0,
       componentCount: 0,
       largestComponents: [],
-      recommendations: []
+      recommendations: [],
     };
 
     // Analysis logic would integrate with webpack/vite bundle analyzer
     console.log('Bundle analysis initiated...');
-    
+
     // Simulate component size analysis
     const components = this.getComponentSizes();
     analysis.totalSize = components.reduce((sum, c) => sum + c.size, 0);
@@ -53,13 +53,13 @@ export class BundleOptimizer {
    */
   optimizeWithCodeSplitting(): OptimizationResult {
     const before = this.analyzeBundleComposition();
-    
+
     // Apply optimizations
     const optimizations = [
       'Implement dynamic imports for banner components',
       'Lazy load route components',
       'Extract common vendor chunks',
-      'Implement progressive loading for images'
+      'Implement progressive loading for images',
     ];
 
     console.log('Applying optimizations:', optimizations);
@@ -68,7 +68,7 @@ export class BundleOptimizer {
     const after: BundleAnalysis = {
       ...before,
       totalSize: Math.round(before.totalSize * 0.65), // 35% reduction
-      recommendations: []
+      recommendations: [],
     };
 
     const savings = before.totalSize - after.totalSize;
@@ -78,7 +78,7 @@ export class BundleOptimizer {
       before,
       after,
       savings,
-      savingsPercentage
+      savingsPercentage,
     };
   }
 
@@ -90,26 +90,27 @@ export class BundleOptimizer {
 
     // Check for large components
     const largeComponents = analysis.largestComponents.filter(
-      c => c.size > this.threshold
+      c => c.size > this.threshold,
     );
 
     if (largeComponents.length > 0) {
       recommendations.push(
-        `Found ${largeComponents.length} components over ${this.threshold / 1024}KB - consider code splitting`
+        `Found ${largeComponents.length} components over ${this.threshold / 1024}KB - consider code splitting`,
       );
     }
 
     // Check total bundle size
-    if (analysis.totalSize > 1024 * 1024) { // > 1MB
+    if (analysis.totalSize > 1024 * 1024) {
+      // > 1MB
       recommendations.push(
-        'Total bundle size exceeds 1MB - implement aggressive code splitting'
+        'Total bundle size exceeds 1MB - implement aggressive code splitting',
       );
     }
 
     // Banner component optimization
     if (analysis.componentCount > 50) {
       recommendations.push(
-        'High number of banner components detected - implement banner rotation system with lazy loading'
+        'High number of banner components detected - implement banner rotation system with lazy loading',
       );
     }
 
@@ -126,7 +127,7 @@ export class BundleOptimizer {
       { name: 'Home.tsx', size: 280 * 1024 },
       { name: 'BannerComponents', size: 650 * 1024 },
       { name: 'BlogComponents', size: 320 * 1024 },
-      { name: 'UtilityFunctions', size: 180 * 1024 }
+      { name: 'UtilityFunctions', size: 180 * 1024 },
     ];
   }
 
@@ -138,19 +139,19 @@ export class BundleOptimizer {
     potentialSavings: number;
   } {
     console.log('Analyzing unused exports...');
-    
+
     // Mock implementation
     const unusedExports = [
       'unusedHelperFunction1',
       'unusedHelperFunction2',
-      'deprecatedComponent1'
+      'deprecatedComponent1',
     ];
 
     const potentialSavings = unusedExports.length * 15 * 1024; // Estimate 15KB per unused export
 
     return {
       unusedExports,
-      potentialSavings
+      potentialSavings,
     };
   }
 
@@ -163,7 +164,7 @@ export class BundleOptimizer {
   } {
     return {
       strategy: 'vendor-async-pages',
-      expectedImprovement: '40-50% reduction in initial bundle size'
+      expectedImprovement: '40-50% reduction in initial bundle size',
     };
   }
 
@@ -183,9 +184,9 @@ export class BundleOptimizer {
 - **Total Size**: ${(analysis.totalSize / 1024).toFixed(2)} KB
 - **Component Count**: ${analysis.componentCount}
 - **Largest Components**:
-${analysis.largestComponents.map(c => 
-  `  - ${c.name}: ${(c.size / 1024).toFixed(2)} KB`
-).join('\n')}
+${analysis.largestComponents
+  .map(c => `  - ${c.name}: ${(c.size / 1024).toFixed(2)} KB`)
+  .join('\n')}
 
 ## Optimization Results
 - **Size Before**: ${(optimization.before.totalSize / 1024).toFixed(2)} KB

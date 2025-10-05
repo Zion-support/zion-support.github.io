@@ -52,7 +52,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
       url: window.location.href,
-      retryCount: this.retryCount
+      retryCount: this.retryCount,
     };
 
     // Log to console in development
@@ -142,7 +142,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo?.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     };
 
     // For demo purposes, copy to clipboard
@@ -189,8 +189,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 <strong>Error ID:</strong> {errorId}
               </p>
               <p className='text-sm text-gray-600'>
-                <strong>Message:</strong>{' '}
-                {error?.message || 'Unknown error'}
+                <strong>Message:</strong> {error?.message || 'Unknown error'}
               </p>
             </div>
 

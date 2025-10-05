@@ -1,26 +1,25 @@
-
 // Advanced SEO utilities
 export const seoUtils = {
-  generateStructuredData: (data) => {
+  generateStructuredData: data => {
     return {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": data.name || "Zion Tech Group",
-      "description": data.description,
-      "url": data.url,
-      "logo": data.logo,
-      "sameAs": data.socialLinks || [],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": data.phone,
-        "contactType": "customer service"
-      }
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: data.name || 'Zion Tech Group',
+      description: data.description,
+      url: data.url,
+      logo: data.logo,
+      sameAs: data.socialLinks || [],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: data.phone,
+        contactType: 'customer service',
+      },
     };
   },
-  
-  generateMetaTags: (data) => {
+
+  generateMetaTags: data => {
     return {
-      title: data.title + " | Zion Tech Group",
+      title: data.title + ' | Zion Tech Group',
       description: data.description,
       keywords: data.keywords?.join(', '),
       canonical: data.canonical,
@@ -35,18 +34,18 @@ export const seoUtils = {
         title: data.title,
         description: data.description,
         image: data.image,
-      }
+      },
     };
   },
-  
-  generateSitemap: (routes) => {
+
+  generateSitemap: routes => {
     const sitemap = routes.map(route => ({
       url: route.url,
       lastModified: new Date().toISOString(),
       changeFrequency: route.changeFrequency || 'monthly',
-      priority: route.priority || 0.8
+      priority: route.priority || 0.8,
     }));
-    
+
     return sitemap;
-  }
+  },
 };

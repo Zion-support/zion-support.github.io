@@ -24,13 +24,13 @@ export function generateMetaTags(config: SEOConfig): Record<string, string> {
     // Basic meta
     title: config.title,
     description: config.description,
-    
+
     // Open Graph
     'og:title': config.title,
     'og:description': config.description,
     'og:type': config.type || 'website',
     'og:locale': config.locale || 'en_US',
-    
+
     // Twitter Card
     'twitter:card': 'summary_large_image',
     'twitter:title': config.title,
@@ -104,7 +104,10 @@ export function generateStructuredData(config: SEOConfig): object {
 /**
  * Calculate reading time from content
  */
-export function calculateReadingTime(content: string, wordsPerMinute: number = 200): string {
+export function calculateReadingTime(
+  content: string,
+  wordsPerMinute: number = 200,
+): string {
   const words = content.trim().split(/\s+/).length;
   const minutes = Math.ceil(words / wordsPerMinute);
   return `${minutes} min read`;
@@ -116,13 +119,20 @@ export function calculateReadingTime(content: string, wordsPerMinute: number = 2
 export interface SitemapEntry {
   url: string;
   lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changefreq?:
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never';
   priority?: number;
 }
 
 export function generateSitemapEntry(entry: SitemapEntry): string {
   const { url, lastmod, changefreq, priority } = entry;
-  
+
   return `
   <url>
     <loc>${url}</loc>
@@ -135,16 +145,55 @@ export function generateSitemapEntry(entry: SitemapEntry): string {
 /**
  * Extract keywords from content
  */
-export function extractKeywords(content: string, maxKeywords: number = 20): string[] {
+export function extractKeywords(
+  content: string,
+  maxKeywords: number = 20,
+): string[] {
   // Remove HTML tags
   const text = content.replace(/<[^>]*>/g, ' ');
-  
+
   // Common words to exclude
   const stopWords = new Set([
-    'the', 'a', 'an', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for',
-    'of', 'with', 'by', 'from', 'as', 'is', 'was', 'are', 'were', 'been',
-    'be', 'have', 'has', 'had', 'do', 'does', 'did', 'will', 'would', 'could',
-    'should', 'may', 'might', 'must', 'can', 'this', 'that', 'these', 'those',
+    'the',
+    'a',
+    'an',
+    'and',
+    'or',
+    'but',
+    'in',
+    'on',
+    'at',
+    'to',
+    'for',
+    'of',
+    'with',
+    'by',
+    'from',
+    'as',
+    'is',
+    'was',
+    'are',
+    'were',
+    'been',
+    'be',
+    'have',
+    'has',
+    'had',
+    'do',
+    'does',
+    'did',
+    'will',
+    'would',
+    'could',
+    'should',
+    'may',
+    'might',
+    'must',
+    'can',
+    'this',
+    'that',
+    'these',
+    'those',
   ]);
 
   // Extract words
@@ -170,7 +219,10 @@ export function extractKeywords(content: string, maxKeywords: number = 20): stri
 /**
  * Optimize meta description length
  */
-export function optimizeDescription(description: string, maxLength: number = 160): string {
+export function optimizeDescription(
+  description: string,
+  maxLength: number = 160,
+): string {
   if (description.length <= maxLength) {
     return description;
   }
@@ -178,7 +230,7 @@ export function optimizeDescription(description: string, maxLength: number = 160
   // Truncate at last complete sentence before maxLength
   const truncated = description.substring(0, maxLength);
   const lastSentence = truncated.lastIndexOf('.');
-  
+
   if (lastSentence > maxLength * 0.7) {
     return truncated.substring(0, lastSentence + 1);
   }

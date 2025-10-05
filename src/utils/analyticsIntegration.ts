@@ -1,10 +1,10 @@
 /**
  * Analytics Integration Utility
- * 
+ *
  * Unified analytics tracking system supporting multiple providers
  * (Google Analytics, Mixpanel, Amplitude, Segment, etc.) with
  * privacy-focused tracking and GDPR compliance.
- * 
+ *
  * Features:
  * - Multi-provider support
  * - Event tracking with custom properties
@@ -67,7 +67,7 @@ class AnalyticsIntegration {
   constructor(config: AnalyticsConfig) {
     this.config = config;
     this.sessionId = this.generateSessionId();
-    
+
     // Check for Do Not Track
     if (config.privacy.respectDoNotTrack && this.isDoNotTrackEnabled()) {
       console.log('[Analytics] Do Not Track is enabled, analytics disabled');
@@ -121,7 +121,7 @@ class AnalyticsIntegration {
    */
   private initializeGoogleAnalytics(): void {
     const { measurementId } = this.config.providers.googleAnalytics!;
-    
+
     // Load gtag.js
     const script = document.createElement('script');
     script.async = true;
@@ -151,41 +151,42 @@ class AnalyticsIntegration {
    */
   private initializeMixpanel(): void {
     const { token } = this.config.providers.mixpanel!;
-    
+
     // Load Mixpanel
-    (function(f: any, b: any) {
+    (function (f: any, b: any) {
       if (!b.__SV) {
         var e, g, i, h;
         window.mixpanel = b;
         b._i = [];
-        b.init = function(e: any, f: any, c: any) {
+        b.init = function (e: any, f: any, c: any) {
           function g(a: any, d: any) {
             var b = d.split('.');
             2 == b.length && ((a = a[b[0]]), (d = b[1]));
-            a[d] = function() {
+            a[d] = function () {
               a.push([d].concat(Array.prototype.slice.call(arguments, 0)));
             };
           }
           var a = b;
           'undefined' !== typeof c ? (a = b[c] = []) : (c = 'mixpanel');
           a.people = a.people || [];
-          a.toString = function(a: any) {
+          a.toString = function (a: any) {
             var d = 'mixpanel';
             'mixpanel' !== c && (d += '.' + c);
             a || (d += ' (stub)');
             return d;
           };
-          a.people.toString = function() {
+          a.people.toString = function () {
             return a.toString(1) + '.people (stub)';
           };
-          i = 'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(
-            ' '
-          );
+          i =
+            'disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove'.split(
+              ' ',
+            );
           for (h = 0; h < i.length; h++) g(a, i[h]);
           var j = 'set set_once union unset remove delete'.split(' ');
-          a.get_group = function() {
+          a.get_group = function () {
             function b(c: any) {
-              d[c] = function() {
+              d[c] = function () {
                 call2_args = arguments;
                 call2 = [c].concat(Array.prototype.slice.call(call2_args, 0));
                 a.push([e, call2]);
@@ -193,7 +194,9 @@ class AnalyticsIntegration {
             }
             for (
               var d = {},
-                e = ['get_group'].concat(Array.prototype.slice.call(arguments, 0)),
+                e = ['get_group'].concat(
+                  Array.prototype.slice.call(arguments, 0),
+                ),
                 c = 0;
               c < j.length;
               c++
@@ -223,56 +226,107 @@ class AnalyticsIntegration {
    */
   private initializeAmplitude(): void {
     const { apiKey } = this.config.providers.amplitude!;
-    
+
     // Load Amplitude
-    (function(e: any, t: any) {
+    (function (e: any, t: any) {
       var n = e.amplitude || { _q: [], _iq: {} };
       var r = t.createElement('script');
       r.type = 'text/javascript';
-      r.integrity = 'sha384-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4ajx/pKmwWtc+IufKJiCQZ+WjJIi+7C6Ntm';
+      r.integrity =
+        'sha384-u0hlTAJ1tNefeBKwiBNwB4CkHZ1ck4ajx/pKmwWtc+IufKJiCQZ+WjJIi+7C6Ntm';
       r.crossOrigin = 'anonymous';
       r.async = true;
       r.src = 'https://cdn.amplitude.com/libs/amplitude-8.21.4-min.gz.js';
-      r.onload = function() {
+      r.onload = function () {
         if (!e.amplitude.runQueuedFunctions) {
           console.log('[Amplitude] Error: could not load SDK');
         }
       };
       var s: any = t.getElementsByTagName('script')[0];
       s.parentNode.insertBefore(r, s);
-      
+
       function i(e: any, t: any) {
-        e.prototype[t] = function() {
+        e.prototype[t] = function () {
           this._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
           return this;
         };
       }
-      
-      var o = function() {
+
+      var o = function () {
         this._q = [];
         return this;
       };
-      var a = ['add', 'append', 'clearAll', 'prepend', 'set', 'setOnce', 'unset', 'preInsert', 'postInsert', 'remove'];
+      var a = [
+        'add',
+        'append',
+        'clearAll',
+        'prepend',
+        'set',
+        'setOnce',
+        'unset',
+        'preInsert',
+        'postInsert',
+        'remove',
+      ];
       for (var c = 0; c < a.length; c++) {
         i(o, a[c]);
       }
       n.Identify = o;
-      
-      var u = function() {
+
+      var u = function () {
         this._q = [];
         return this;
       };
-      var l = ['setProductId', 'setQuantity', 'setPrice', 'setRevenueType', 'setEventProperties'];
+      var l = [
+        'setProductId',
+        'setQuantity',
+        'setPrice',
+        'setRevenueType',
+        'setEventProperties',
+      ];
       for (var p = 0; p < l.length; p++) {
         i(u, l[p]);
       }
       n.Revenue = u;
-      
-      var d = ['init', 'logEvent', 'logRevenue', 'setUserId', 'setUserProperties', 'setOptOut', 'setVersionName', 'setDomain', 'setDeviceId', 'enableTracking', 'setGlobalUserProperties', 'identify', 'clearUserProperties', 'setGroup', 'logRevenueV2', 'regenerateDeviceId', 'groupIdentify', 'onInit', 'logEventWithTimestamp', 'logEventWithGroups', 'setSessionId', 'resetSessionId', 'getDeviceId', 'getUserId', 'setMinTimeBetweenSessionsMillis', 'setEventUploadThreshold', 'setUseDynamicConfig', 'setServerZone', 'setServerUrl', 'sendEvents', 'setLibrary', 'setTransport'];
-      
+
+      var d = [
+        'init',
+        'logEvent',
+        'logRevenue',
+        'setUserId',
+        'setUserProperties',
+        'setOptOut',
+        'setVersionName',
+        'setDomain',
+        'setDeviceId',
+        'enableTracking',
+        'setGlobalUserProperties',
+        'identify',
+        'clearUserProperties',
+        'setGroup',
+        'logRevenueV2',
+        'regenerateDeviceId',
+        'groupIdentify',
+        'onInit',
+        'logEventWithTimestamp',
+        'logEventWithGroups',
+        'setSessionId',
+        'resetSessionId',
+        'getDeviceId',
+        'getUserId',
+        'setMinTimeBetweenSessionsMillis',
+        'setEventUploadThreshold',
+        'setUseDynamicConfig',
+        'setServerZone',
+        'setServerUrl',
+        'sendEvents',
+        'setLibrary',
+        'setTransport',
+      ];
+
       function v(e: any) {
         function t(t: any) {
-          e[t] = function() {
+          e[t] = function () {
             e._q.push([t].concat(Array.prototype.slice.call(arguments, 0)));
           };
         }
@@ -281,7 +335,7 @@ class AnalyticsIntegration {
         }
       }
       v(n);
-      
+
       e.amplitude = n;
     })(window, document);
 
@@ -303,10 +357,11 @@ class AnalyticsIntegration {
    */
   private initializeSegment(): void {
     const { writeKey } = this.config.providers.segment!;
-    
+
     // Load Segment
-    !(function() {
-      var analytics = ((window as any).analytics = (window as any).analytics || []);
+    !(function () {
+      var analytics = ((window as any).analytics =
+        (window as any).analytics || []);
       if (!analytics.initialize)
         if (analytics.invoked)
           window.console &&
@@ -336,8 +391,8 @@ class AnalyticsIntegration {
             'setAnonymousId',
             'addDestinationMiddleware',
           ];
-          analytics.factory = function(e: any) {
-            return function() {
+          analytics.factory = function (e: any) {
+            return function () {
               var t = Array.prototype.slice.call(arguments);
               t.unshift(e);
               analytics.push(t);
@@ -348,7 +403,7 @@ class AnalyticsIntegration {
             var key = analytics.methods[e];
             analytics[key] = analytics.factory(key);
           }
-          analytics.load = function(key: any, e: any) {
+          analytics.load = function (key: any, e: any) {
             var t = document.createElement('script');
             t.type = 'text/javascript';
             t.async = !0;
@@ -431,7 +486,9 @@ class AnalyticsIntegration {
     }
 
     if (this.config.providers.amplitude?.enabled) {
-      (window as any).amplitude?.getInstance().logEvent('Page Viewed', pageProps);
+      (window as any).amplitude
+        ?.getInstance()
+        .logEvent('Page Viewed', pageProps);
     }
 
     if (this.config.providers.segment?.enabled) {
@@ -439,7 +496,11 @@ class AnalyticsIntegration {
     }
 
     if (this.config.debug) {
-      console.log('[Analytics] Page viewed:', pageName || document.title, pageProps);
+      console.log(
+        '[Analytics] Page viewed:',
+        pageName || document.title,
+        pageProps,
+      );
     }
   }
 
@@ -570,7 +631,9 @@ export let analytics: AnalyticsIntegration;
 /**
  * Initialize analytics
  */
-export function initializeAnalytics(config: Partial<AnalyticsConfig>): AnalyticsIntegration {
+export function initializeAnalytics(
+  config: Partial<AnalyticsConfig>,
+): AnalyticsIntegration {
   const mergedConfig = {
     ...defaultConfig,
     ...config,

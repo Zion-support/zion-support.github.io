@@ -20,7 +20,7 @@ export interface BlogPostSEO {
  */
 export function generateBlogPostSchema(post: BlogPostSEO) {
   const baseUrl = 'https://ziontechgroup.com';
-  
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -58,7 +58,7 @@ export function generateBlogPostSchema(post: BlogPostSEO) {
  */
 export function generateOpenGraphTags(post: BlogPostSEO) {
   const baseUrl = 'https://ziontechgroup.com';
-  
+
   return {
     'og:type': 'article',
     'og:title': post.title,
@@ -78,7 +78,7 @@ export function generateOpenGraphTags(post: BlogPostSEO) {
  */
 export function generateTwitterCardTags(post: BlogPostSEO) {
   const baseUrl = 'https://ziontechgroup.com';
-  
+
   return {
     'twitter:card': 'summary_large_image',
     'twitter:site': '@ZionTechGroup',
@@ -112,9 +112,12 @@ export function generateCompleteSEO(post: BlogPostSEO) {
  */
 export const breakthroughBlogPosts: BlogPostSEO[] = [
   {
-    title: 'Neural Architecture Evolution 2025 — Self-Designing AI Models Breakthrough',
-    description: 'Revolutionary neural architecture search achieving 10,000x faster model design, 97% accuracy improvement, and $25M annual savings through autonomous AI model evolution and optimization.',
-    keywords: 'neural architecture search, AutoML, model optimization, AI evolution, self-designing AI, neural networks, enterprise AI, model performance',
+    title:
+      'Neural Architecture Evolution 2025 — Self-Designing AI Models Breakthrough',
+    description:
+      'Revolutionary neural architecture search achieving 10,000x faster model design, 97% accuracy improvement, and $25M annual savings through autonomous AI model evolution and optimization.',
+    keywords:
+      'neural architecture search, AutoML, model optimization, AI evolution, self-designing AI, neural networks, enterprise AI, model performance',
     date: '2025-10-01',
     author: 'Zion Tech Group',
     category: 'AI Innovation',
@@ -122,9 +125,12 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [
     readTime: '25 min',
   },
   {
-    title: 'Quantum-Inspired Optimization 2025 — Enterprise Problem Solving Revolution',
-    description: 'Revolutionary quantum-inspired algorithms solving complex enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value through breakthrough optimization.',
-    keywords: 'quantum optimization, quantum computing, enterprise optimization, quantum algorithms, supply chain, portfolio optimization, quantum-inspired AI',
+    title:
+      'Quantum-Inspired Optimization 2025 — Enterprise Problem Solving Revolution',
+    description:
+      'Revolutionary quantum-inspired algorithms solving complex enterprise problems 1000x faster with 99.8% optimality, delivering $42M annual value through breakthrough optimization.',
+    keywords:
+      'quantum optimization, quantum computing, enterprise optimization, quantum algorithms, supply chain, portfolio optimization, quantum-inspired AI',
     date: '2025-10-01',
     author: 'Zion Tech Group',
     category: 'Quantum Computing',
@@ -132,9 +138,12 @@ export const breakthroughBlogPosts: BlogPostSEO[] = [
     readTime: '22 min',
   },
   {
-    title: 'Intelligent Automation Orchestration 2025 — Enterprise Process Revolution',
-    description: 'Revolutionary AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration of enterprise workflows.',
-    keywords: 'intelligent automation, process automation, RPA, AI orchestration, workflow automation, enterprise automation, digital transformation, process mining',
+    title:
+      'Intelligent Automation Orchestration 2025 — Enterprise Process Revolution',
+    description:
+      'Revolutionary AI-powered automation platform achieving 98% process automation, 85% cost reduction, and $67M annual savings through intelligent orchestration of enterprise workflows.',
+    keywords:
+      'intelligent automation, process automation, RPA, AI orchestration, workflow automation, enterprise automation, digital transformation, process mining',
     date: '2025-10-01',
     author: 'Zion Tech Group',
     category: 'Enterprise Automation',

@@ -21,7 +21,9 @@ const SiteHeader: React.FC = () => {
           <nav
             className='hidden md:flex items-center gap-6'
             aria-label='Main navigation'
-           > <NavLink to='/services' className={navLinkClass}>
+          >
+            {' '}
+            <NavLink to='/services' className={navLinkClass}>
               Services
             </NavLink>
             <NavLink to='/solutions' className={navLinkClass}>
