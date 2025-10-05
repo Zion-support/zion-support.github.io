@@ -47,11 +47,11 @@ function App() {
         
         console.log('All optimization systems initialized successfully');
       } catch (error) {
-        console.error('Failed to initialize optimization systems:', error);
+        console.error('Failed to initialize optimization systems:' error);
         errorHandler.handleError({
-          type: 'Initialization Error',
-          message: 'Failed to initialize optimization systems',
-          error: error instanceof Error ? error.message : String(error),
+          type: 'Initialization Error'
+          message: 'Failed to initialize optimization systems'
+          error: error instanceof Error ? error.message : String(error)
           timestamp: new Date().toISOString()
         });
       }
@@ -64,7 +64,7 @@ function App() {
     return () => {
       performanceOptimizer.cleanup();
     };
-  }, []);
+  } []);
 
   return (
     <ErrorBoundary>

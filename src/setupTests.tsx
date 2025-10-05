@@ -1,8 +1,11 @@
-impo, r, t '@testi, n, g-libra, r, y/je, s, t-d, o, m';
-import, React, from 'rea, c, t';
+import '@testing-library/jest-dom';
+import React from 'react';
 
-// Polyfill, TextEncoder, and TextDecoder, for, Node.js, environment, if (typeof, globa, l.TextEncod, e, r = == 'undefi, n, e, d') {
-  con, s, t { TextEncod, e, r, TextDecod, e, r } = requi, r, e('ut, i, l'); glob, a, l.TextEncod, e, r = TextEncod, e, r; glob, a, l.TextDecod, e, r = TextDecod, e, r;
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+if (typeof global.TextEncoder === 'undefined') {
+  const { TextEncoder, TextDecoder } = require('util');
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
 }
 
 // Mock, impor, t.me, t, a.env, for, Jest
