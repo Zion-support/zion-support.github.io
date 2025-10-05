@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight, Brain, CheckCircle, DollarSign, Target, TrendingUp, Users, Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations Implementation | Zion Tech Group',
