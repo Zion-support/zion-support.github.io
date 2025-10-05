@@ -34,4 +34,3 @@ root.render(
 );
 
 reportWebVitals();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-fea2
