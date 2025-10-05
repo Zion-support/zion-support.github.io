@@ -10,7 +10,7 @@ interface ErrorLog {
   level: 'error' | 'warn' | 'info' | 'debug';
   message: string;
   stack?: string;
-  context?: Record<string, any>;
+  context?: Record<string, unknown>;
   userAgent?: string;
   url?: string;
   sessionId?: string;
@@ -87,7 +87,7 @@ const saveErrorLog = (log: ErrorLog) => {
  */
 export const logError = (
   error: Error | string,
-  context?: Record<string, any>,
+  context?: Record<string, unknown>,
   level: 'error' | 'warn' = 'error',
 ) => {
   const errorLog: ErrorLog = {
@@ -119,7 +119,7 @@ export const logError = (
 /**
  * Log info message
  */
-export const logInfo = (message: string, context?: Record<string, any>) => {
+export const logInfo = (message: string, context?: Record<string, unknown>) => {
   const errorLog: ErrorLog = {
     timestamp: Date.now(),
     level: 'info',
@@ -146,9 +146,9 @@ const sendToMonitoring = (_errorLog: ErrorLog) => {
   // Example: Send to Sentry, LogRocket, or custom endpoint
   try {
     // Uncomment and configure your monitoring service
-    /*
-    if ('Sentry' in window) {
-      (window as any).Sentry.captureException(new Error(errorLog.message), {
+      /*
+      if ('Sentry' in window) {
+      (window as { Sentry?: { captureException: (error: Error, context: Record<string, unknown>) => void } }).Sentry?.captureException(new Error(errorLog.message), {
         contexts: {
           custom: errorLog.context,
         },
@@ -307,7 +307,7 @@ export const monitorPerformance = () => {
         }
       });
       longTaskObserver.observe({ entryTypes: ['longtask'] });
-    } catch (error) {
+    } catch {
       // Long task API not supported
     }
   }
@@ -335,7 +335,7 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
 /**
  * Try-catch wrapper with automatic error logging
  */
-export const withErrorHandling = <T extends (...args: any[]) => any>(
+export const withErrorHandling = <T extends (...args: unknown[]) => unknown>(
   fn: T,
   context?: string,
 ): T => {

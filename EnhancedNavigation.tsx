@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
+
+import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+
+;
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [

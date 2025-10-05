@@ -10,10 +10,9 @@ const LoadingSpinner: React.FC = () => (
 );
 
 // Error fallback component
-const ErrorFallback: React.FC<{
-  error: Error;
+const ErrorFallback: React.FC<{ error: Error;
   resetErrorBoundary: () => void;
-}> = ({ error, resetErrorBoundary }) => (
+ }> = ({ error, resetErrorBoundary }) => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -114,7 +113,7 @@ const MainContent: React.FC = () => {
               </div>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🔄</div>
-                <h3 className='text-xl font-bold mb-3'>Automation</h3>
+                
                 <p className='text-gray-600'>
                   Complete automation suites for enterprise operations and
                   workflows.
