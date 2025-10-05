@@ -24,9 +24,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: '>,'
-      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
-    },
+      icon: '>,
+      link: /blog/ai-2025-oct-03-governed-agent-rollbacks
+    '},
     {
       id: 7,
       title: 'Consentless Personalization (Edge)',
@@ -36,9 +36,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: '>,'
-      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
-    },
+      icon: '>,
+      link: /blog/edge-2025-oct-02-consentless-personalization-blueprint
+    '},
     {
       id: 1,
       title: 'AI 2027: Operational Trust Blueprint',
@@ -48,9 +48,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: '>,'
-      link: '/blog/ai-2027-operational-trust-blueprint'
-    },
+      icon: '>,
+      link: /blog/ai-2027-operational-trust-blueprint
+    '},
     {
       id: 2,
       title: 'Edge 2026: Private Feature Flags',
@@ -60,9 +60,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: '>,'
-      link: '/blog/edge-2026-private-feature-flags'
-    },
+      icon: '>,
+      link: /blog/edge-2026-private-feature-flags
+    '},
     {
       id: 3,
       title: 'GenAI Quality Tiers v2 (2026)',
@@ -72,25 +72,25 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: '>,'
-      link: '/blog/genai-quality-tiers-v2-2026'
-    }
+      icon: '>,
+      link: /blog/genai-quality-tiers-v2-2026
+    '}
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: '> },'
-    { value: '98%', label: 'Customer Satisfaction', icon: '> },'
-    { value: '200+', label: 'Expert Articles', icon: '> },'
-    { value: '50+', label: 'Industry Awards', icon: '> }'
+    { value: '500K+', label: 'Monthly Readers', icon: '>' },
+    { value: '98%', label: 'Customer Satisfaction', icon: '>' },
+    { value: '200+', label: 'Expert Articles', icon: '>' },
+    { value: '50+', label: 'Industry Awards', icon: '>' }
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -140,7 +140,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
               
               <div className="relative p-8">
                 {/* Badge */}
@@ -256,12 +256,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
-
-                <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
-
-                </button>
+                  placeholder="Enter your email" className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300" <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2" / />
               </div>
               <p className="text-xs text-gray-500 mt-4">
                 No spam, unsubscribe at any time. We respect your privacy.

@@ -182,7 +182,7 @@ export default function EnhancedContentShowcase2026() {
         <div className="flex flex-col md:flex-row gap-4 mb-8 justify-between items-center">
           <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
-              <button>
+              <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
@@ -213,8 +213,8 @@ export default function EnhancedContentShowcase2026() {
           {sortedContent.map((item) => (
             <Link key={item.id} to={item.href} className="group">
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200 group-hover:border-blue-300">
-                {/* Featured Badge */}
-                {item.featured && (
+                {/* Featured Badge */},
+    {item.featured && (
                   <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 text-xs font-semibold">
                     ⭐ FEATURED
                   </div>
@@ -241,8 +241,8 @@ export default function EnhancedContentShowcase2026() {
                     {item.description}
                   </p>
 
-                  {/* Metrics */}
-                  {item.metrics && (
+                  {/* Metrics */},
+    {item.metrics && (
                     <div className="grid grid-cols-3 gap-2 mb-4">
                       {item.metrics.map((metric, index) => (
                         <div key={index} className="text-center bg-gray-50 rounded-lg p-2">
@@ -251,9 +251,8 @@ export default function EnhancedContentShowcase2026() {
                         </div>
                       ))}
                     </div>
-                  )}
-
-                  {/* Meta Information */}
+                  )},
+    {/* Meta Information */}
                   <div className="flex items-center justify-between text-xs text-gray-500">
                     <span>{item.readTime}</span>
                     <span>{item.publishDate}</span>

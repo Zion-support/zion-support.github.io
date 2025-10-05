@@ -29,9 +29,7 @@ const January2026RevolutionaryBanner: React.FC = () => {
           {/* Quantum Edge Fusion */}
           <div className="bg-gradient-to-br from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30">
-
-              </div>
+              <div className="bg-blue-500/20 p-2 rounded-lg border border-blue-400/30" />
               <div>
                 <h3 className="text-lg font-bold text-white">Quantum Edge Fusion</h3>
                 <div className="text-sm text-blue-300">1000x Speed Improvement</div>
@@ -60,9 +58,7 @@ const January2026RevolutionaryBanner: React.FC = () => {
           {/* Synthetic Consciousness */}
           <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30">
-
-              </div>
+              <div className="bg-purple-500/20 p-2 rounded-lg border border-purple-400/30" />
               <div>
                 <h3 className="text-lg font-bold text-white">Synthetic Consciousness</h3>
                 <div className="text-sm text-purple-300">98.7% Consciousness Accuracy</div>

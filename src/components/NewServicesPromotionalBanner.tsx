@@ -30,15 +30,15 @@ const NewServicesPromotionalBanner: React.FC = () => {
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-emerald-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Quantum algorithm optimization</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-emerald-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Hybrid quantum-classical systems</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-emerald-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Performance benchmarking</span>
               </div>
             </div>
@@ -60,15 +60,15 @@ const NewServicesPromotionalBanner: React.FC = () => {
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-blue-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Real-time threat monitoring</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-blue-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Automated incident response</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-blue-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Compliance management</span>
               </div>
             </div>
@@ -90,15 +90,15 @@ const NewServicesPromotionalBanner: React.FC = () => {
             </p>
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Self-healing infrastructure</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Dynamic resource optimization</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Predictive scaling</span>
               </div>
             </div>
@@ -170,13 +170,13 @@ const NewServicesPromotionalBanner: React.FC = () => {
             <p className="text-gray-400">Real results from enterprises using our new AI services</p>
           </div>
           
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md: grid-cols-2 gap-8">
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">
               <div className="text-yellow-400 text-2xl mb-4">★★★★★</div>
               <p className="text-gray-300 mb-4 italic">
-                "The Quantum AI Consulting transformed our computational capabilities. We're seeing 300% performance improvements in our AI models."
+                "The Quantum AI Consulting transformed our computational capabilities. Were seeing 300% performance improvements in our AI models."
               </p>
-              <div className="text-emerald-400 font-semibold">CTO, Fortune 100 Tech Company</div>
+              <div className="text-emerald-400 font-semibold">CTO', Fortune 100 Tech Company</div>
             </div>
             
             <div className="bg-white/5 rounded-xl p-6 border border-white/10">

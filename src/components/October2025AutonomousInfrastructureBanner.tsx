@@ -5,9 +5,9 @@ const October2025AutonomousInfrastructureBanner = () => {
     <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,7 +21,7 @@ const October2025AutonomousInfrastructureBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Real-Time Autonomous Infrastructure Orchestration
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+            <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               $3.2B Value Created | 99.99% Uptime | 87% Cost Reduction | 42x ROI
             </span>
           </h2>
@@ -81,9 +81,7 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
-
-              </div>
+              <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center" />
               <div>
                 <div className="font-semibold text-white mb-1">Autonomous Self-Healing</div>
                 <div className="text-sm text-gray-300">
@@ -93,9 +91,7 @@ const October2025AutonomousInfrastructureBanner = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
-
-              </div>
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center" />
               <div>
                 <div className="font-semibold text-white mb-1">Intelligent Cost Optimization</div>
                 <div className="text-sm text-gray-300">
@@ -109,9 +105,7 @@ const October2025AutonomousInfrastructureBanner = () => {
         {/* Fortune 500 Success Story */}
         <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 mb-10">
           <div className="flex items-start gap-4 mb-6">
-            <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
-
-            </div>
+            <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" />
             <div>
               <h3 className="text-2xl font-bold text-white mb-2">
                 Fortune 100 Financial Services: $410M Annual Value Creation
@@ -220,10 +214,7 @@ const October2025AutonomousInfrastructureBanner = () => {
             to="/case-studies/ai-2025-oct-global-financial-services-autonomous-infrastructure-410-million-success"
             className="group bg-gradient-to-br from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
           >
-            <div className="flex items-center justify-between mb-3">
-
-
-            </div>
+            <div className="flex items-center justify-between mb-3" />
             <div className="font-bold text-lg mb-2">View $410M Success Story</div>
             <div className="text-sm text-blue-100">
               Fortune 100 case study: 99.994% uptime, 87% cost reduction, 47x ROI, 12-month journey
@@ -234,10 +225,7 @@ const October2025AutonomousInfrastructureBanner = () => {
             to="/services/autonomous-infrastructure-orchestration-services"
             className="group bg-gradient-to-br from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white rounded-xl p-6 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
           >
-            <div className="flex items-center justify-between mb-3">
-
-
-            </div>
+            <div className="flex items-center justify-between mb-3" />
             <div className="font-bold text-lg mb-2">Explore Services & Pricing</div>
             <div className="text-sm text-purple-100">
               Implementation packages, managed services, ROI projections, success guarantees

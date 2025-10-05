@@ -57,9 +57,9 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-30">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -112,7 +112,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500" />
               
               <div className="relative p-8">
                 {/* Icon & Badges */}
@@ -122,9 +122,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   </div>
                   <div className="flex flex-col gap-2">
                     {content.trending && (
-                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-
-                      </div>
+                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg" />
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
                       NEW
@@ -174,7 +172,7 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
 
                 {/* CTA Button */}
                 <Link
-                  to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
+                  to={`/${content.slug.includes(case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>

@@ -79,7 +79,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                 <div className="space-y-2 mb-6">
                   {story.metrics.map((metric, idx) => (
                     <div key={idx} className="flex items-center gap-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-green-500 rounded-full" />
                       <span className="text-sm text-gray-700">{metric}</span>
                     </div>
                   ))}

@@ -10,19 +10,19 @@ export interface FeaturedItem {
 
 export interface UnifiedPromotionalBannerProps {
   variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
-  title: string;
+  title: 'string;
   description: string;
   ctaText: string;
   ctaLink: string;
-  theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';
+  theme?: blue | purple | green | orange | red | gradient | cyan;
   featuredItems?: FeaturedItem[];
   showCount?: number;
   className?: string;
-  icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';
+  icon?: sparkles | zap | rocket | star | none;
   animated?: boolean;
   badge?: string;
   date?: string;
-}
+'}
 
 const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
   variant = 'default',
@@ -86,31 +86,30 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
         bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
-        ${animated ? 'transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''}
+        ${animated ? transition-all duration-300 hover:shadow-2xl hover:scale-[1.01]' : ''}
         ${className}
       `}
     >
       {/* Header Section */}
       <div className="max-w-7xl mx-auto">
-        {/* Badge and Date */}
-        {(badge || date) && (
+        {/* Badge and Date */},
+    {(badge || date) && (
           <div className="flex items-center gap-3 mb-4">
             {badge && (
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold">
-                {IconComponent && <IconComponent className="w-4 h-4" />}
-                {badge}
+                {IconComponent && <IconComponent className="w-4 h-4" />},
+    {badge}
               </span>
-            )}
-            {date && (
+            )},
+    {date && (
               <span className="text-sm text-gray-300 font-medium">{date}</span>
             )}
           </div>
-        )}
-
-        {/* Title */}
+        )},
+    {/* Title */}
         <h2 className={`>
           font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
-          ${variant === 'hero' || variant === 'mega' ? 'text-4xl md:text-5xl' : 
+          ${variant === hero' || variant === 'mega' ? 'text-4xl md:text-5xl' : 
             variant === 'premium' ? 'text-3xl md:text-4xl' : 
             variant === 'compact' ? 'text-xl md:text-2xl' : 
             'text-2xl md:text-3xl'}
@@ -121,18 +120,18 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
         {/* Description */}
         <p className={`>
           text-gray-200 mb-6
-          ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
+          ${variant === hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
             variant === 'compact' ? 'text-sm' : 
             'text-base md:text-lg'}
         `}>
           {description}
         </p>
 
-        {/* Featured Items */}
-        {visibleItems.length > 0 && (
+        {/* Featured Items */},
+    {visibleItems.length > 0 && (
           <div className={`>
             grid gap-4 mb-6
-            ${variant === 'mega' ? 'md:grid-cols-3' : 
+            ${variant === mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
               'md:grid-cols-1'}
           `}>
@@ -160,9 +159,8 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
               </Link>
             ))}
           </div>
-        )}
-
-        {/* CTA Button */}
+        )},
+    {/* CTA Button */}
         <div className="flex flex-wrap items-center gap-4">
           <Link
             to={ctaLink}
@@ -170,13 +168,13 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
               inline-flex items-center gap-2 px-8 py-4 rounded-lg font-bold text-white
               bg-gradient-to-r ${buttonThemes[theme]}
               transform transition-all duration-300 hover:scale-105 hover:shadow-xl
-              ${variant === 'compact' ? 'px-6 py-3 text-sm' : 
+              ${variant === compact' ? 'px-6 py-3 text-sm' : 
                 variant === 'hero' || variant === 'mega' ? 'px-10 py-5 text-lg' : 
                 'text-base'}
             `}
           >
             {ctaText}
-            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`}</Link>
+            <ArrowRight className={`${variant === compact' ? 'w-4 h-4' : 'w-5 h-5'}`}</Link>
 
           {featuredItems.length > showCount && (
             <Link

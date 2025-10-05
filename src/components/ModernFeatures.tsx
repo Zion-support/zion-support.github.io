@@ -1,9 +1,9 @@
 import React from 'react';
 
-const ModernFeatures: React.FC = () => {
+const ModernFeatures: 'React.FC = () => {
   const features = [
     {
-      icon: '>,'
+      icon: >','
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
     },

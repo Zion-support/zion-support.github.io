@@ -93,11 +93,11 @@ export default function FeaturedContentBanner2025() {
         </div>
 
         {/* Additional Promotional Content */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md: grid-cols-2 gap-8">
           <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-green-400">🎯 Free AI Assessment</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Discover your enterprise's AI automation potential with our comprehensive assessment. 
+              Discover your enterprises AI automation potential with our comprehensive assessment. 
               Get personalized recommendations and ROI projections in just 30 minutes.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -119,7 +119,7 @@ export default function FeaturedContentBanner2025() {
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/30 rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 AI Innovation Lab</h3>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              Join our exclusive AI Innovation Lab and get early access to breakthrough technologies, 
+              Join our exclusive AI Innovation Lab and get early access to breakthrough technologies', 
               pilot programs, and direct access to our AI experts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -149,10 +149,7 @@ export default function FeaturedContentBanner2025() {
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input 
               type="email" 
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
-
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+              placeholder="Enter your email address" className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none" <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300" />
               Subscribe
             </button>
           </div>

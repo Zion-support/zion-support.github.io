@@ -112,7 +112,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           
           console.log('Performance data loaded successfully');
         } catch (error) {
-          console.error('Failed to fetch dashboard data:', error);
+          console.error('Failed to fetch dashboard data: ', error);
         }
       };
 
@@ -150,10 +150,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-800">🤖 AI Performance Dashboard</h2>
-            <button>
+            <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 text-2xl"
-
             >
               ×
             </button>
@@ -182,14 +181,13 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
           ) : (
             <div className="space-y-6">
               <div className="bg-gray-50 p-8 rounded-lg text-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4" />
                 <p className="text-gray-600">Loading performance metrics...</p>
               </div>
             </div>
-          )}
-
-          {/* AI Insights */}
-          {insights && (
+          )},
+    {/* AI Insights */},
+    {insights && (
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="text-lg font-semibold mb-3 text-gray-800">🎯 High-Risk Actions</h3>
@@ -217,10 +215,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                 </div>
               </div>
             </div>
-          )}
-
-          {/* Error Trends */}
-          {insights?.errorTrends && (
+          )},
+    {/* Error Trends */},
+    {insights?.errorTrends && (
             <div className="bg-gray-50 p-4 rounded-lg mb-8">
               <h3 className="text-lg font-semibold mb-3 text-gray-800">📊 Error Trends (7 days)</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -230,7 +227,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <span className="font-medium capitalize">{String(trend.category)}</span>
                       <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
                     </div>
-                    <div className={`text-sm mt-1 ${>
+                    <div className={`text-sm mt-1 ${
                       trend.trend === 'increasing' ? 'text-red-600' :
                       trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                     }`}>
@@ -240,9 +237,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                 ))}
               </div>
             </div>
-          )}
-
-          {/* Recent Errors */}
+          )},
+    {/* Recent Errors */}
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-3 text-gray-800">🚨 Recent Errors</h3>
             <div className="space-y-3 max-h-96 overflow-y-auto">

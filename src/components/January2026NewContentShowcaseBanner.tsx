@@ -19,7 +19,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
     >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent" />
       </div>
 
       <div className="relative z-10">
@@ -114,8 +114,8 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse" />
+      <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000" />
     </motion.div>
   );
 };

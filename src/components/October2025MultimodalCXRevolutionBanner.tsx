@@ -5,9 +5,9 @@ const October2025MultimodalCXRevolutionBanner = () => {
     <div className="relative bg-gradient-to-br from-cyan-900/20 via-blue-900/20 to-purple-900/20 border-y border-cyan-500/30 overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -21,7 +21,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Multimodal AI Customer Experience Platform
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+            <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               $340M Value Created | 287% ROI | 94% Customer Satisfaction
             </span>
           </h2>
@@ -90,9 +90,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
-
-              </div>
+              <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center" />
               <div>
                 <div className="font-semibold text-white mb-1">Predictive Intelligence</div>
                 <div className="text-sm text-gray-300">

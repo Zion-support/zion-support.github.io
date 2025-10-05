@@ -6,8 +6,8 @@ export default function October2025CognitiveHyperautomationBanner() {
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 border-4 border-purple-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-400 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-purple-400 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-400 rounded-full filter blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="relative z-10 p-8 md:p-12">

@@ -6,9 +6,9 @@ const October2025NextGenAIBanner = () => {
     <div className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl animate-pulse delay-500" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
@@ -66,9 +66,7 @@ const October2025NextGenAIBanner = () => {
             className="group bg-gradient-to-br from-cyan-800/50 to-cyan-900/50 backdrop-blur-sm border-2 border-cyan-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg">
-
-              </div>
+              <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg" />
               <div className="flex-1">
                 <span className="text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full">
                   Multi-Agent Systems
@@ -116,9 +114,7 @@ const October2025NextGenAIBanner = () => {
             className="group bg-gradient-to-br from-blue-800/50 to-blue-900/50 backdrop-blur-sm border-2 border-blue-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-blue-500/30 rounded-2xl group-hover:bg-blue-500/40 transition-colors shadow-lg">
-
-              </div>
+              <div className="p-4 bg-blue-500/30 rounded-2xl group-hover:bg-blue-500/40 transition-colors shadow-lg" />
               <div className="flex-1">
                 <span className="text-xs text-blue-300 font-bold uppercase tracking-wider bg-blue-500/20 px-3 py-1 rounded-full">
                   Adaptive AI
@@ -166,9 +162,7 @@ const October2025NextGenAIBanner = () => {
             className="group bg-gradient-to-br from-purple-800/50 to-purple-900/50 backdrop-blur-sm border-2 border-purple-400/40 rounded-2xl p-8 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 transition-all duration-300"
           >
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-4 bg-purple-500/30 rounded-2xl group-hover:bg-purple-500/40 transition-colors shadow-lg">
-
-              </div>
+              <div className="p-4 bg-purple-500/30 rounded-2xl group-hover:bg-purple-500/40 transition-colors shadow-lg" />
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-bold uppercase tracking-wider bg-purple-500/20 px-3 py-1 rounded-full">
                   Hybrid Intelligence

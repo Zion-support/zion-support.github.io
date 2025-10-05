@@ -4,28 +4,28 @@ import { NavLink, useLocation } from 'react-router-dom';
 const linkClass = ({ isActive }: { isActive: boolean }) =>
   `block px-3 py-2 rounded-md text-sm ${
     isActive
-      ? 'bg-blue-100 text-blue-700 font-medium'
-      : 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-  }`;
+      ? bg-blue-100 text-blue-700 font-medium'
+      : 'text-gray-700 hover: 'text-gray-900 hover:bg-gray-100
+  '}`;
 
-const SiteSidebar: React.FC = () => {
+const SiteSidebar: 'React.FC = () => {
   const location = useLocation();
   void location; // suppress unused for build
 
   return (
-    <aside className='hidden xl:block w-64 shrink-0 border-r border-gray-200 bg-gray-50'>
-      <div className='p-6'>
-        <h2 className='text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4'>
+    <aside className=hidden xl:block w-64 shrink-0 border-r border-gray-200 bg-gray-50>
+      <div className=p-6>
+        <h2 className=text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4>
           Navigation
         </h2>
 
-        <div className='space-y-6'>
+        <div className=space-y-6>
           <div>
-            <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
+            <h3 className=text-xs font-medium text-gray-600 uppercase mb-2>
               Explore
             </h3>
-            <nav className='space-y-1'>
-              <NavLink to='/' className={linkClass}>
+            <nav className=space-y-1>
+              <NavLink to=/ className={linkClass'}>
                 Home
               </NavLink>
               <NavLink to='/solutions' className={linkClass}>

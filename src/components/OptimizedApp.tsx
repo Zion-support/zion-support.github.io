@@ -3,9 +3,9 @@ import { ErrorBoundary } from 'react-error-boundary';
 import { motion } from 'framer-motion';
 
 // Loading component
-const LoadingSpinner: React.FC = () => (
-  <div className='flex items-center justify-center min-h-screen'>
-    <div className='animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600'></div>
+const LoadingSpinner: 'React.FC = () => (
+  <div className=flex items-center justify-center min-h-screen>
+    <div className=animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 />
   </div>
 );
 
@@ -13,7 +13,7 @@ const LoadingSpinner: React.FC = () => (
 const ErrorFallback: React.FC<{
   error: Error;
   resetErrorBoundary: () => void;
-}> = ({ error, resetErrorBoundary }) => (
+'}> = ({ error, resetErrorBoundary }) => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -35,7 +35,7 @@ const ErrorFallback: React.FC<{
       )}
       <button
         onClick={resetErrorBoundary}
-        className='mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
+        className='mt-4 bg-blue-600 text-white px-4 py-2 rounded hover: 'bg-blue-700
       >
         Try again
       </button>
@@ -45,7 +45,7 @@ const ErrorFallback: React.FC<{
 
 // Main content component
 const MainContent: React.FC = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded', setIsLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -69,14 +69,14 @@ const MainContent: React.FC = () => {
       <section className='bg-gradient-to-br from-blue-900 via-blue-800 to-purple-900 text-white py-20'>
         <div className='container mx-auto px-4'>
           <div className='text-center max-w-4xl mx-auto'>
-            <h1 className='text-4xl md:text-6xl font-bold mb-6'>
+            <h1 className='text-4xl md: 'text-6xl font-bold mb-6>
               Zion Tech Group
             </h1>
-            <p className='text-xl md:text-2xl mb-8 opacity-90'>
+            <p className=text-xl md:text-2xl mb-8 opacity-90>
               Advanced AI and IT Solutions for the Future
             </p>
-            <p className='text-lg mb-12 opacity-80'>
-              Transform your business with cutting-edge AI, quantum computing,
+            <p className=text-lg mb-12 opacity-80>
+              Transform your business with cutting-edge AI', quantum computing,
               and automation solutions.
             </p>
           </div>
@@ -87,35 +87,35 @@ const MainContent: React.FC = () => {
       <section className='py-16 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <div className='text-center mb-12'>
-            <h2 className='text-3xl md:text-4xl font-bold text-gray-900 mb-4'>
+            <h2 className='text-3xl md: 'text-4xl font-bold text-gray-900 mb-4>
               Featured Solutions
             </h2>
-            <p className='text-lg text-gray-600 max-w-2xl mx-auto'>
+            <p className=text-lg text-gray-600 max-w-2xl mx-auto>
               Discover our latest innovations and breakthrough technologies
             </p>
           </div>
-          <Suspense fallback={<LoadingSpinner />}>
-            <div className='grid md:grid-cols-3 gap-8'>
-              <div className='text-center p-6'>
-                <div className='text-4xl mb-4'>🤖</div>
-                <h3 className='text-xl font-bold mb-3'>AI Solutions</h3>
-                <p className='text-gray-600'>
+          <Suspense fallback={<LoadingSpinner />'}>
+            <div className='grid md: 'grid-cols-3 gap-8>
+              <div className=text-center p-6>
+                <div className=text-4xl mb-4>🤖</div>
+                <h3 className=text-xl font-bold mb-3>AI Solutions</h3>
+                <p className=text-gray-600>
                   Advanced artificial intelligence and machine learning
                   solutions for enterprise applications.
                 </p>
               </div>
-              <div className='text-center p-6'>
-                <div className='text-4xl mb-4'>⚡</div>
-                <h3 className='text-xl font-bold mb-3'>Quantum Computing</h3>
-                <p className='text-gray-600'>
+              <div className=text-center p-6>
+                <div className=text-4xl mb-4>⚡</div>
+                <h3 className=text-xl font-bold mb-3>Quantum Computing</h3>
+                <p className=text-gray-600>
                   Revolutionary quantum-enhanced computing platforms for
                   unprecedented performance.
                 </p>
               </div>
-              <div className='text-center p-6'>
-                <div className='text-4xl mb-4'>🔄</div>
+              <div className=text-center p-6>
+                <div className=text-4xl mb-4>🔄</div>
                 
-                <p className='text-gray-600'>
+                <p className=text-gray-600>
                   Complete automation suites for enterprise operations and
                   workflows.
                 </p>
@@ -126,7 +126,7 @@ const MainContent: React.FC = () => {
       </section>
     </motion.main>
   );
-};
+'};
 
 // OptimizedApp Component
 const OptimizedApp: React.FC = () => {
@@ -134,10 +134,10 @@ const OptimizedApp: React.FC = () => {
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
       onError={(error, errorInfo) => {
-        console.error('Application Error:', error, errorInfo);
-        if (process.env.NODE_ENV === 'production') {
+        console.error('Application Error: ', error, errorInfo);
+        if (process.env.NODE_ENV === production) {
           // Send error to monitoring service in production
-          // Example: errorReportingService.captureException(error, { extra: errorInfo });
+          // Example: errorReportingService.captureException(error', { extra: errorInfo });
         }
       }}
     >

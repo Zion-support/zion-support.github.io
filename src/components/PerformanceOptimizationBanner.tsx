@@ -6,30 +6,30 @@ const PerformanceOptimizationBanner = () => {
       title: 'Lightning Fast Loading',
       description: 'Optimized bundle size with code splitting and lazy loading',
       improvement: '87% faster',
-      icon: '>,'
-      color: 'from-yellow-500 to-orange-500'
-    },
+      icon: '>,
+      color: from-yellow-500 to-orange-500
+    '},
     {
       title: 'Enhanced Security',
       description: 'Advanced security headers and content security policies',
       improvement: '99.9% secure',
-      icon: '>,'
-      color: 'from-green-500 to-emerald-500'
-    },
+      icon: '>,
+      color: from-green-500 to-emerald-500
+    '},
     {
       title: 'SEO Optimized',
       description: 'Meta tags, structured data, and semantic HTML',
       improvement: '95% score',
-      icon: '>,'
-      color: 'from-blue-500 to-cyan-500'
-    },
+      icon: '>,
+      color: from-blue-500 to-cyan-500
+    '},
     {
       title: 'Accessibility Enhanced',
       description: 'WCAG 2.1 AA compliant with screen reader support',
       improvement: '100% accessible',
-      icon: '>,'
-      color: 'from-purple-500 to-violet-500'
-    }
+      icon: '>,
+      color: from-purple-500 to-violet-500
+    '}
   ];
 
   return (

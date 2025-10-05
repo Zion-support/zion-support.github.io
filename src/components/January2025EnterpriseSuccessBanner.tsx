@@ -5,9 +5,9 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/grid-pattern.svg')] opacity-5"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute inset-0 bg-[url(/images/grid-pattern.svg')] opacity-5" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-blue-500/10 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-emerald-500/10 to-transparent rounded-full blur-3xl" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
@@ -20,7 +20,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
               Real Results
             </span>
-            <br <span className="text-white">From Real Companies</span>
+            <br/> <span className="text-white">From Real Companies</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
@@ -33,7 +33,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-8 mb-16">
           {/* Manufacturing Transformation */}
           <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-emerald-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-blue-500/20 rounded-xl">
@@ -72,12 +72,10 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
 
           {/* Financial Services */}
           <div className="group relative bg-white/5 backdrop-blur-lg rounded-3xl p-8 border border-white/10 hover:border-emerald-400/50 transition-all duration-300 hover:transform hover:scale-[1.02]">
-            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-blue-500/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
-                <div className="p-3 bg-emerald-500/20 rounded-xl">
-
-                </div>
+                <div className="p-3 bg-emerald-500/20 rounded-xl" />
                 <div>
                   <h3 className="text-2xl font-bold text-white">Global Financial Services</h3>
                   <p className="text-gray-400">Fortune 100 • Financial Services</p>
@@ -116,9 +114,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           {/* Healthcare */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-purple-500/20 rounded-lg">
-
-              </div>
+              <div className="p-2 bg-purple-500/20 rounded-lg" />
               <div>
                 <h4 className="text-lg font-bold text-white">Regional Healthcare</h4>
                 <p className="text-gray-400 text-sm">Healthcare Network</p>
@@ -129,18 +125,14 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-purple-400 font-bold">$1.5B Value</span>
-              <Link to="/case-studies/healthcare-ai-diagnostic-system" className="text-purple-400 hover:text-purple-300">
-
-              </Link>
+              <Link to="/case-studies/healthcare-ai-diagnostic-system" className="text-purple-400 hover:text-purple-300" />
             </div>
           </div>
 
           {/* Retail */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-blue-500/20 rounded-lg">
-
-              </div>
+              <div className="p-2 bg-blue-500/20 rounded-lg" />
               <div>
                 <h4 className="text-lg font-bold text-white">Global Retail Corp</h4>
                 <p className="text-gray-400 text-sm">Retail Chain</p>
@@ -151,18 +143,14 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-blue-400 font-bold">2,800% ROI</span>
-              <Link to="/case-studies/retail-supply-chain-optimization" className="text-blue-400 hover:text-blue-300">
-
-              </Link>
+              <Link to="/case-studies/retail-supply-chain-optimization" className="text-blue-400 hover:text-blue-300" />
             </div>
           </div>
 
           {/* Energy */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-emerald-400/50 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-emerald-500/20 rounded-lg">
-
-              </div>
+              <div className="p-2 bg-emerald-500/20 rounded-lg" />
               <div>
                 <h4 className="text-lg font-bold text-white">Energy Utility</h4>
                 <p className="text-gray-400 text-sm">Smart Grid</p>
@@ -173,9 +161,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-emerald-400 font-bold">1,600% ROI</span>
-              <Link to="/case-studies/energy-sector-smart-grid" className="text-emerald-400 hover:text-emerald-300">
-
-              </Link>
+              <Link to="/case-studies/energy-sector-smart-grid" className="text-emerald-400 hover:text-emerald-300" />
             </div>
           </div>
         </div>

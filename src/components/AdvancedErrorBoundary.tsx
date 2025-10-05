@@ -25,10 +25,10 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
     this.setState({ error, errorInfo });
     
     // Log error to monitoring service
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary: ', error, errorInfo);
     
     // Send to error tracking service
-    if (typeof window !== 'undefined' && 'gtag' in window) {
+    if (typeof window !== undefined && gtag in window) {
       (window as any).gtag('event', 'exception', {
         description: error.toString(),
         fatal: false,
@@ -43,7 +43,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
-            <br
+            <br/>
             {this.state.errorInfo?.componentStack}
           </details>
         </div>

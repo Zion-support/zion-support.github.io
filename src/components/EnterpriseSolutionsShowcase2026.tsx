@@ -11,8 +11,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '300%',
       savings: '$2M+',
-      icon: '>,'
-      gradient: 'from-blue-500 to-cyan-500',
+      icon: '>,
+      gradient: from-blue-500 to-cyan-500',
       badge: 'BEST SELLER',
       features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']
     },
@@ -25,8 +25,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '250%',
       savings: '$5M+',
-      icon: '>,'
-      gradient: 'from-purple-500 to-indigo-500',
+      icon: '>,
+      gradient: from-purple-500 to-indigo-500',
       badge: 'ENTERPRISE',
       features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']
     },
@@ -39,8 +39,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Technology, Retail, Manufacturing',
       roi: '400%',
       savings: '$3M+',
-      icon: '>,'
-      gradient: 'from-green-500 to-emerald-500',
+      icon: '>,
+      gradient: from-green-500 to-emerald-500',
       badge: 'CLOUD-FIRST',
       features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']
     },
@@ -53,8 +53,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Retail, Finance, Healthcare',
       roi: '350%',
       savings: '$4M+',
-      icon: '>,'
-      gradient: 'from-orange-500 to-red-500',
+      icon: '>,
+      gradient: from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']
     },
@@ -67,8 +67,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '500%',
       savings: '$10M+',
-      icon: '>,'
-      gradient: 'from-teal-500 to-cyan-500',
+      icon: '>,
+      gradient: from-teal-500 to-cyan-500',
       badge: 'TRANSFORMATION',
       features: ['Strategy Consulting', 'Implementation', 'Change Management']
     },
@@ -81,27 +81,27 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '200%',
       savings: '$1.5M+',
-      icon: '>,'
-      gradient: 'from-pink-500 to-purple-500',
+      icon: '>,
+      gradient: from-pink-500 to-purple-500',
       badge: 'GOVERNANCE',
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']
     }
   ];
 
   const successMetrics = [
-    { value: '500+', label: 'Enterprise Clients', icon: '> },'
-    { value: '$2B+', label: 'Cost Savings Generated', icon: '> },'
-    { value: '98%', label: 'Client Satisfaction', icon: '> },'
-    { value: '24/7', label: 'Enterprise Support', icon: '> }'
+    { value: '500+', label: 'Enterprise Clients', icon: '>' },
+    { value: '$2B+', label: 'Cost Savings Generated', icon: '>' },
+    { value: '98%', label: 'Client Satisfaction', icon: '>' },
+    { value: '24/7', label: 'Enterprise Support', icon: '>' }
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -151,7 +151,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
               
               <div className="relative p-8">
                 {/* Icon & Badge */}

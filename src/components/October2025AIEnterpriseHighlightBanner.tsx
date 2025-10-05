@@ -16,7 +16,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
 
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 leading-tight">
           Enterprise AI Transformation
-          <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+          <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
             Implementation Guides
           </span>
         </h2>
@@ -124,12 +124,12 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               <div className="text-2xl font-bold">200+</div>
               <div className="text-sm text-white/70">Fortune 1000</div>
             </div>
-            <div className="h-10 w-px bg-white/20"></div>
+            <div className="h-10 w-px bg-white/20" />
             <div>
               <div className="text-2xl font-bold">$292M</div>
               <div className="text-sm text-white/70">Combined ROI</div>
             </div>
-            <div className="h-10 w-px bg-white/20"></div>
+            <div className="h-10 w-px bg-white/20" />
             <div>
               <div className="text-2xl font-bold">50K+</div>
               

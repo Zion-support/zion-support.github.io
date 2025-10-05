@@ -66,7 +66,7 @@ const PerformanceMonitor: React.FC = () => {
         }
       })
       .catch(error => {
-        console.warn('Failed to load web-vitals:', error);
+        console.warn('Failed to load web-vitals: ', error);
       });
   }, []);
 
@@ -74,12 +74,12 @@ const PerformanceMonitor: React.FC = () => {
     return (
       <button>
         onClick={() => setIsVisible(true)}
-        className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
-        title='Open Performance Monitor'
+        className=fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover: bg-blue-700 transition-colors z-50
+        title=Open Performance Monitor
       >
-        <Activity className='h-5 w-5'</button>
+        <Activity className=h-5 w-5</button>
     );
-  }
+  '}
 
   return (
     <div className='fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50'>
@@ -91,12 +91,12 @@ const PerformanceMonitor: React.FC = () => {
       <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
       <button>
         onClick={() => setIsVisible(false)}
-        className='mt-2 text-xs text-gray-400 hover:text-white'
+        className='mt-2 text-xs text-gray-400 hover: 'text-white
       >
         Close
       </button>
     </div>
   );
-};
+'};
 
 export default PerformanceMonitor;

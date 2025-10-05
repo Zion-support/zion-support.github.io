@@ -5,13 +5,13 @@ const October2025TechBreakthroughBanner = () => {
     <div className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,219,255,0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(79,209,197,0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,219,255,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(79,209,197,0.3),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.3),transparent_50%)]" />
       </div>
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breaking News Badge */}
@@ -107,9 +107,7 @@ const October2025TechBreakthroughBanner = () => {
           {/* Autonomous Risk Management */}
           <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors">
-
-              </div>
+              <div className="p-3 rounded-xl bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors" />
               <div className="flex-1">
                 <div className="text-xs font-bold text-blue-300 uppercase tracking-wide mb-1">Risk Intelligence</div>
                 <div className="text-sm text-blue-100 font-medium">AI-Powered • Autonomous</div>
@@ -148,9 +146,7 @@ const October2025TechBreakthroughBanner = () => {
           {/* AI-Powered Digital Twins */}
           <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover:border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover:bg-indigo-500/30 transition-colors">
-
-              </div>
+              <div className="p-3 rounded-xl bg-indigo-500/20 group-hover:bg-indigo-500/30 transition-colors" />
               <div className="flex-1">
                 <div className="text-xs font-bold text-indigo-300 uppercase tracking-wide mb-1">Digital Intelligence</div>
                 <div className="text-sm text-indigo-100 font-medium">Real-Time • Self-Learning</div>
@@ -192,11 +188,11 @@ const October2025TechBreakthroughBanner = () => {
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             🎯 Why These Technologies Are Game-Changers
           </h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md: grid-cols-3 gap-6">
             <div className="text-center">
               <div className="text-cyan-300 text-3xl font-bold mb-2">3-5 Years</div>
               <div className="text-white text-sm font-medium">Quantum Threat Window</div>
-              <div className="text-cyan-200 text-xs mt-1">Deploy quantum-safe security NOW before it's too late</div>
+              <div className="text-cyan-200 text-xs mt-1">Deploy quantum-safe security NOW before its too late</div>
             </div>
             <div className="text-center">
               <div className="text-blue-300 text-3xl font-bold mb-2">90+ Days</div>
@@ -211,7 +207,7 @@ const October2025TechBreakthroughBanner = () => {
           </div>
         </div>
 
-        {/* Industry Applications */}
+        {/* Industry Applications */'}
         <div className="mb-8">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
             🌐 Proven Results Across Industries

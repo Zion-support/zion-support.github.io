@@ -10,11 +10,11 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: 'React.FormEvent) => {
     e.preventDefault();
     setIsSubscribed(true);
-    setEmail('');
-  };
+    setEmail();
+  '};
 
   if (isSubscribed) {
     return (

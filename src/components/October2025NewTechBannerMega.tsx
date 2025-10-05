@@ -6,8 +6,8 @@ const October2025NewTechBannerMega = () => {
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 px-6 my-12 rounded-2xl shadow-2xl">
       {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-purple-500/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
-        <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000"></div>
+        <div className="absolute w-96 h-96 bg-purple-500/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse" />
+        <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000" />
       </div>
 
       <div className="relative max-w-7xl mx-auto">
@@ -21,7 +21,7 @@ const October2025NewTechBannerMega = () => {
           
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Revolutionary AI Solutions
-            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
+            <br/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
               Transform Your Enterprise Today
             </span>
           </h2>
@@ -37,9 +37,7 @@ const October2025NewTechBannerMega = () => {
           {/* Card 1: Multimodal AI */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg">
-
-              </div>
+              <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg" />
               <div className="text-sm font-semibold text-purple-300 uppercase tracking-wide">
                 NEW GUIDE #1
               </div>
@@ -80,9 +78,7 @@ const October2025NewTechBannerMega = () => {
           {/* Card 2: AI Security */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-
-              </div>
+              <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg" />
               <div className="text-sm font-semibold text-blue-300 uppercase tracking-wide">
                 NEW GUIDE #2
               </div>
@@ -123,9 +119,7 @@ const October2025NewTechBannerMega = () => {
           {/* Card 3: RAG Architecture */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg">
-
-              </div>
+              <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg" />
               <div className="text-sm font-semibold text-green-300 uppercase tracking-wide">
                 NEW GUIDE #3
               </div>

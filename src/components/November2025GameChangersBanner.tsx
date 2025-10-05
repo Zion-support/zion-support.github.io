@@ -30,9 +30,7 @@ const November2025GameChangersBanner = () => {
             {/* Article 1: Autonomous Enterprise */}
             <div className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group">
               <div className="flex items-start gap-3 mb-4">
-                <div className="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/30 transition-colors">
-
-                </div>
+                <div className="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/30 transition-colors" />
                 <div className="flex-1">
                   <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
                     🏢 Enterprise Automation
@@ -51,19 +49,19 @@ const November2025GameChangersBanner = () => {
               
               <div className="space-y-2 mb-4 text-sm">
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>95% automation rate</strong> across operations</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>$500M+ value</strong> per enterprise annually</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>99.97% accuracy</strong> in AI-driven processes</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>87% cost reduction</strong> through automation</span>
                 </div>
               </div>
@@ -80,9 +78,7 @@ const November2025GameChangersBanner = () => {
             {/* Article 2: Neural Marketplace */}
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 group">
               <div className="flex items-start gap-3 mb-4">
-                <div className="bg-purple-500/20 p-3 rounded-xl group-hover:bg-purple-500/30 transition-colors">
-
-                </div>
+                <div className="bg-purple-500/20 p-3 rounded-xl group-hover:bg-purple-500/30 transition-colors" />
                 <div className="flex-1">
                   <div className="text-xs font-bold text-purple-400 uppercase tracking-wider mb-2">
                     🛍️ AI-Powered Commerce
@@ -101,19 +97,19 @@ const November2025GameChangersBanner = () => {
               
               <div className="space-y-2 mb-4 text-sm">
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>12.7x conversion rate</strong> improvement</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>99.8% personalization</strong> accuracy</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>$890M+ revenue</strong> growth annually</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>47% revenue optimization</strong> via dynamic pricing</span>
                 </div>
               </div>
@@ -130,9 +126,7 @@ const November2025GameChangersBanner = () => {
             {/* Article 3: Quantum Security */}
             <div className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20 group">
               <div className="flex items-start gap-3 mb-4">
-                <div className="bg-red-500/20 p-3 rounded-xl group-hover:bg-red-500/30 transition-colors">
-
-                </div>
+                <div className="bg-red-500/20 p-3 rounded-xl group-hover:bg-red-500/30 transition-colors" />
                 <div className="flex-1">
                   <div className="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">
                     🔒 Quantum Security
@@ -151,19 +145,19 @@ const November2025GameChangersBanner = () => {
               
               <div className="space-y-2 mb-4 text-sm">
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>$2.7T assets</strong> quantum-protected</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>99.999% threat</strong> prevention rate</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>Zero quantum</strong> vulnerabilities</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-300">
-                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
+                  <div className="w-1.5 h-1.5 bg-green-400 rounded-full" />
                   <span><strong>$5.6B value</strong> protected per enterprise</span>
                 </div>
               </div>

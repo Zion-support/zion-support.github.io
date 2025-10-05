@@ -93,9 +93,9 @@ const Ultimate2026ContentShowcase: React.FC = () => {
     <div className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-15">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -161,17 +161,14 @@ const Ultimate2026ContentShowcase: React.FC = () => {
               whileHover={{ scale: 1.03 }}
               className="group relative"
             >
-              {/* Featured badge */}
-              {content.featured && (
+              {/* Featured badge */},
+    {content.featured && (
                 <div className="absolute -top-4 -right-4 z-20">
-                  <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold shadow-xl">
-
-                  </div>
+                  <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold shadow-xl" />
                 </div>
-              )}
-
-              {/* Card glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover:from-blue-500/15 group-hover:via-purple-500/15 group-hover:to-cyan-500/15 transition-all duration-700 rounded-3xl"></div>
+              )},
+    {/* Card glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover:from-blue-500/15 group-hover:via-purple-500/15 group-hover:to-cyan-500/15 transition-all duration-700 rounded-3xl" />
               
               <div className="relative bg-white/8 backdrop-blur-xl rounded-3xl p-10 border border-white/15 hover:border-blue-500/50 transition-all duration-500 h-full">
                 {/* Icon & Badges */}
@@ -181,9 +178,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                   </div>
                   <div className="flex flex-col gap-3">
                     {content.trending && (
-                      <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">
-
-                      </div>
+                      <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg" />
                     )}
                     <span className="px-4 py-2 rounded-full bg-blue-500/25 text-blue-300 text-xs font-bold border border-blue-500/40">
                       MASTERCLASS

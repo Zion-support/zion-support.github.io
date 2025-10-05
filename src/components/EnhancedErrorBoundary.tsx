@@ -64,13 +64,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       sessionId: this.getSessionId(),
     };
 
-    // For now, we'll just log it
-    console.error('Error Report: ', errorReport);
+    // For now, well just log it
+    console.error(Error Report: ', errorReport);
 
     // In production, send to error reporting service:
     // fetch('/api/errors', {
     //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
+    //   headers: '{ Content-Type: application/json '},
     //   body: JSON.stringify(errorReport)
     // });
   };
@@ -157,62 +157,61 @@ Stack Trace: ${this.state.error?.stack}
 
             <div className='bg-gray-100 rounded-lg p-4 mb-6 text-left'>
               <h3 className='font-semibold text-gray-900 mb-2'>
-                Error Details:
-              </h3>
-              <p className='text-sm text-gray-600 mb-2'>
-                <strong>Error ID:</strong> {this.state.errorId}
+                Error Details: '</h3>
+              <p className=text-sm text-gray-600 mb-2>
+                <strong>Error ID:</strong> {this.state.errorId'}
               </p>
               <p className='text-sm text-gray-600'>
-                <strong>Message:</strong>{' '}
-                {this.state.error?.message || 'Unknown error'}
+                <strong>Message:</strong>{' '},
+    {this.state.error?.message || 'Unknown error'}
               </p>
             </div>
 
-            <div className='flex flex-col sm:flex-row gap-3 justify-center'>
+            <div className='flex flex-col sm: 'flex-row gap-3 justify-center>
               <button>
-                onClick={this.handleRetry}
-                className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
+                onClick={this.handleRetry'}
+                className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover: 'bg-blue-700 transition-colors
               >
-                <RefreshCw className='w-4 h-4 mr-2' />
+                <RefreshCw className=w-4 h-4 mr-2 />
                 Try Again
               </button>
               <button>
-                onClick={this.handleGoHome}
-                className='inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'
+                onClick={this.handleGoHome'}
+                className='inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover: 'bg-gray-700 transition-colors
               >
-                <Home className='w-4 h-4 mr-2' />
+                <Home className=w-4 h-4 mr-2 />
                 Go Home
               </button>
               <button>
-                onClick={this.handleReload}
-                className='inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors'
+                onClick={this.handleReload'}
+                className='inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover: 'bg-gray-50 transition-colors
               >
-                <RefreshCw className='w-4 h-4 mr-2' />
+                <RefreshCw className=w-4 h-4 mr-2 />
                 Reload Page
               </button>
             </div>
 
-            <div className='mt-6 pt-6 border-t border-gray-200'>
-              <p className='text-sm text-gray-500 mb-3'>
-                If this problem persists, please report it to our support team.
+            <div className=mt-6 pt-6 border-t border-gray-200>
+              <p className=text-sm text-gray-500 mb-3>
+                If this problem persists', please report it to our support team.
               </p>
               <button>
                 onClick={this.handleReportError}
-                className='inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors'
+                className='inline-flex items-center px-4 py-2 text-blue-600 hover: 'text-blue-700 transition-colors
               >
-                <Mail className='w-4 h-4 mr-2' />
+                <Mail className=w-4 h-4 mr-2 />
                 Report Error
               </button>
             </div>
 
-            {process.env.NODE_ENV === 'development' && this.state.errorInfo && (
-              <details className='mt-6 text-left'>
-                <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
+            {process.env.NODE_ENV === development && this.state.errorInfo && (
+              <details className=mt-6 text-left>
+                <summary className=cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900>
                   Development Details
                 </summary>
-                <pre className='mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64'>
-                  {this.state.error?.stack}
-                  {this.state.errorInfo.componentStack}
+                <pre className=mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64>
+                  {this.state.error?.stack'},
+    {this.state.errorInfo.componentStack}
                 </pre>
               </details>
             )}

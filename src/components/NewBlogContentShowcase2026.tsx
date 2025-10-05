@@ -15,8 +15,8 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
-      gradient: 'from-blue-500 to-purple-500',
+      icon: '>,
+      gradient: from-blue-500 to-purple-500',
       badge: 'FEATURED',
       tags: ['AI', 'Revolution', 'Enterprise', 'Guide']
     },
@@ -33,8 +33,8 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
-      gradient: 'from-cyan-500 to-blue-500',
+      icon: '>,
+      gradient: from-cyan-500 to-blue-500',
       badge: 'TRENDING',
       tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']
     },
@@ -51,8 +51,8 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
-      gradient: 'from-green-500 to-emerald-500',
+      icon: '>,
+      gradient: from-green-500 to-emerald-500',
       badge: 'POPULAR',
       tags: ['Enterprise', 'Implementation', 'AI', 'Success']
     },
@@ -69,8 +69,8 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.7,
       trending: false,
       featured: false,
-      icon: '>,'
-      gradient: 'from-purple-500 to-pink-500',
+      icon: '>,
+      gradient: from-purple-500 to-pink-500',
       badge: 'INNOVATION',
       tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']
     },
@@ -87,8 +87,8 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
-      gradient: 'from-orange-500 to-red-500',
+      icon: '>,
+      gradient: from-orange-500 to-red-500',
       badge: 'ANALYTICS',
       tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']
     },
@@ -105,27 +105,27 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: false,
       featured: true,
-      icon: '>,'
-      gradient: 'from-indigo-500 to-purple-500',
+      icon: '>,
+      gradient: from-indigo-500 to-purple-500',
       badge: 'ETHICS',
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']
     }
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: '> },'
-    { value: '2M+', label: 'Monthly Readers', icon: '> },'
-    { value: '4.8', label: 'Average Rating', icon: '> },'
-    { value: '150+', label: 'Expert Authors', icon: '> }'
+    { value: '500+', label: 'Published Articles', icon: '>' },
+    { value: '2M+', label: 'Monthly Readers', icon: '>' },
+    { value: '4.8', label: 'Average Rating', icon: '>' },
+    { value: '150+', label: 'Expert Authors', icon: '>' }
   ];
 
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -175,7 +175,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
               
               <div className="relative p-8">
                 {/* Badge & Featured */}
@@ -185,9 +185,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                   </div>
                   <div className="flex flex-col gap-2">
                     {post.trending && (
-                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-
-                      </div>
+                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg" />
                     )}
                     <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${post.gradient} text-white text-xs font-bold border border-white/30`}>
                       {post.badge}
@@ -280,12 +278,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300"
-
-              <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">
-
-              </button>
+                placeholder="Enter your email" className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300" <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2" / />
             </div>
             <p className="text-xs text-gray-500 mt-4">
               No spam, unsubscribe anytime. Get premium content delivered weekly.

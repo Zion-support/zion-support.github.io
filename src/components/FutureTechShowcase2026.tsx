@@ -11,8 +11,8 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '18 min',
       trending: true,
-      icon: '>,'
-      gradient: 'from-cyan-500 to-blue-500',
+      icon: '>,
+      gradient: from-cyan-500 to-blue-500',
       badge: 'QUANTUM AI',
       stats: '10,000x Speed Boost'
     },
@@ -25,8 +25,8 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '22 min',
       trending: true,
-      icon: '>,'
-      gradient: 'from-purple-500 to-pink-500',
+      icon: '>,
+      gradient: from-purple-500 to-pink-500',
       badge: 'SELF-EVOLVING',
       stats: '99.7% Auto-Improvement'
     },
@@ -39,8 +39,8 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '15 min',
       trending: true,
-      icon: '>,'
-      gradient: 'from-green-500 to-emerald-500',
+      icon: '>,
+      gradient: from-green-500 to-emerald-500',
       badge: 'PREDICTIVE',
       stats: '99.9% Accuracy'
     },
@@ -53,8 +53,8 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '12 min',
       trending: true,
-      icon: '>,'
-      gradient: 'from-orange-500 to-red-500',
+      icon: '>,
+      gradient: from-orange-500 to-red-500',
       badge: 'IMMERSIVE',
       stats: '100% Integration'
     },
@@ -67,8 +67,8 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '14 min',
       trending: true,
-      icon: '>,'
-      gradient: 'from-indigo-500 to-purple-500',
+      icon: '>,
+      gradient: from-indigo-500 to-purple-500',
       badge: 'QUANTUM-SECURE',
       stats: 'Unbreakable Security'
     },
@@ -81,8 +81,8 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '20 min',
       trending: true,
-      icon: '>,'
-      gradient: 'from-teal-500 to-cyan-500',
+      icon: '>,
+      gradient: from-teal-500 to-cyan-500',
       badge: 'META-COGNITIVE',
       stats: 'Autonomous Orchestration'
     }
@@ -92,9 +92,9 @@ const FutureTechShowcase2026: React.FC = () => {
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -127,7 +127,7 @@ const FutureTechShowcase2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`} />
               
               <div className="relative p-8">
                 {/* Icon & Badges */}
@@ -137,9 +137,7 @@ const FutureTechShowcase2026: React.FC = () => {
                   </div>
                   <div className="flex flex-col gap-2">
                     {article.trending && (
-                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-
-                      </div>
+                      <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg" />
                     )}
                     <span className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${article.gradient} text-white text-xs font-semibold border border-white/30`}>
                       {article.badge}
@@ -196,9 +194,9 @@ const FutureTechShowcase2026: React.FC = () => {
         </div>
 
         {/* Revolutionary Stats Section */}
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
+        <div className="grid md: grid-cols-4 gap-8 mb-16">
           {[
-            { value: '10,000x', label: 'Quantum Processing Speed', icon: '⚛️' },
+            { value: 10',000x', label: 'Quantum Processing Speed', icon: '⚛️' },
             { value: '99.7%', label: 'Auto-Improvement Rate', icon: '🧠' },
             { value: '99.9%', label: 'Predictive Accuracy', icon: '🎯' },
             { value: '$1B+', label: 'Enterprise Value Created', icon: '💰' }

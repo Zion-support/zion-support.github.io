@@ -33,9 +33,7 @@ export default function January2027NewContentShowcaseBanner() {
             </div>
             
             <div className="grid grid-cols-2 gap-3 mb-6">
-              <div className="bg-green-500/20 rounded-lg p-3 text-center">
-
-              </div>
+              <div className="bg-green-500/20 rounded-lg p-3 text-center" />
               <div className="bg-emerald-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-emerald-400">&lt;1μs</div>
                 
@@ -85,9 +83,7 @@ export default function January2027NewContentShowcaseBanner() {
                 <div className="text-lg font-bold text-indigo-400">99.97%</div>
                 
               </div>
-              <div className="bg-blue-500/20 rounded-lg p-3 text-center">
-
-              </div>
+              <div className="bg-blue-500/20 rounded-lg p-3 text-center" />
               <div className="bg-cyan-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-cyan-400">3-5yr</div>
                 
@@ -121,9 +117,7 @@ export default function January2027NewContentShowcaseBanner() {
             </div>
             
             <div className="grid grid-cols-2 gap-3 mb-6">
-              <div className="bg-blue-500/20 rounded-lg p-3 text-center">
-
-              </div>
+              <div className="bg-blue-500/20 rounded-lg p-3 text-center" />
               <div className="bg-cyan-500/20 rounded-lg p-3 text-center">
                 <div className="text-lg font-bold text-cyan-400">78%</div>
                 

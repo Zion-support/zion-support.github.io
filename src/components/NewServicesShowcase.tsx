@@ -48,9 +48,9 @@ const NewServicesShowcase: React.FC = () => {
     <section className="py-20 bg-gradient-to-br from-slate-950 via-purple-950 to-indigo-950 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden opacity-10">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }} />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -106,7 +106,7 @@ const NewServicesShowcase: React.FC = () => {
                   <ul className="space-y-2">
                     {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`}></div>
+                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`} />
                         <span>{feature}</span>
                       </li>
                     ))}

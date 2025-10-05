@@ -7,32 +7,32 @@ const GlobalAITransformationHub = () => {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
-      icon: '>,'
-      color: 'from-blue-500 to-cyan-500',
+      icon: '>,
+      color: from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
     {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
-      icon: '>,'
-      color: 'from-purple-500 to-violet-500',
+      icon: '>,
+      color: from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
     {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
-      icon: '>,'
-      color: 'from-emerald-500 to-teal-500',
+      icon: '>,
+      color: from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
     {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
-      icon: '>,'
-      color: 'from-orange-500 to-red-500',
+      icon: '>,
+      color: from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }
   ];

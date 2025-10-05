@@ -31,9 +31,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             {/* Edge AI + 5G Card */}
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-cyan-500/20 p-3 rounded-lg">
-
-                </div>
+                <div className="bg-cyan-500/20 p-3 rounded-lg" />
                 <div>
                   <h3 className="text-2xl font-bold text-cyan-400">AI at the Edge with 5G</h3>
                   <p className="text-cyan-300 text-sm">Ultra-Low Latency Real-Time Intelligence</p>
@@ -67,9 +65,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             {/* Quantum-Safe Cryptography Card */}
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
-                <div className="bg-purple-500/20 p-3 rounded-lg">
-
-                </div>
+                <div className="bg-purple-500/20 p-3 rounded-lg" />
                 <div>
                   <h3 className="text-2xl font-bold text-purple-400">Quantum-Safe Cryptography</h3>
                   <p className="text-purple-300 text-sm">Protect Against Q-Day with PQC</p>

@@ -6,8 +6,8 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
     <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden">
       {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 -left-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 -right-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-0 -left-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse" />
+        <div className="absolute bottom-0 -right-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse delay-1000" />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -21,7 +21,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
         {/* Main heading */}
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight">
           🌟 Breakthrough AI Content
-          <br <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+          <br/> <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
             LIVE NOW!
           </span>
         </h2>

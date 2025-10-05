@@ -104,7 +104,7 @@ const October2025FeaturedContentBanner = () => {
                 className="group relative overflow-hidden rounded-2xl border hover:border-opacity-100 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 style={{ borderColor: content.borderColor }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${content.bgGradient} opacity-50 group-hover:opacity-70 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-br ${content.bgGradient} opacity-50 group-hover:opacity-70 transition-opacity`} />
                 <div className="relative p-8">
                   {/* Icon & Title */}
                   <div className="flex items-start mb-6">
@@ -143,7 +143,7 @@ const October2025FeaturedContentBanner = () => {
                 </div>
 
                 {/* Hover Effect Overlay */}
-                <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
+                <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-10 transition-opacity`} />
               </Link>
             );
           })}

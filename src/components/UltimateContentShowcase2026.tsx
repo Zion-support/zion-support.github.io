@@ -30,15 +30,15 @@ const UltimateContentShowcase2026: React.FC = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Real-time quantum optimization</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Neural network acceleration</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-purple-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-purple-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Enterprise-grade security</span>
               </div>
             </div>
@@ -59,15 +59,15 @@ const UltimateContentShowcase2026: React.FC = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-blue-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Self-reflection capabilities</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-blue-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Autonomous learning</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-blue-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Cognitive optimization</span>
               </div>
             </div>
@@ -88,15 +88,15 @@ const UltimateContentShowcase2026: React.FC = () => {
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Self-healing systems</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Dynamic optimization</span>
               </div>
               <div className="flex items-center gap-3">
-                <span className="w-2 h-2 bg-green-400 rounded-full"></span>
+                <span className="w-2 h-2 bg-green-400 rounded-full" />
                 <span className="text-gray-300 text-sm">Zero-touch operations</span>
               </div>
             </div>

@@ -97,14 +97,14 @@ const TrendingContentBanner: React.FC = () => {
 
   const currentItem = trendingItems[currentIndex];
 
-  const getBadgeColor = (badge: string) => {
+  const getBadgeColor = (badge: 'string) => {
     switch (badge) {
-      case 'HOT': return 'bg-red-500 text-white';
-      case 'NEW': return 'bg-green-500 text-white';
-      case 'TRENDING': return 'bg-blue-500 text-white';
-      case 'POPULAR': return 'bg-purple-500 text-white';
-      default: return 'bg-gray-500 text-white';
-    }
+      case HOT: return bg-red-500 text-white;
+      case NEW: return bg-green-500 text-white;
+      case TRENDING: return bg-blue-500 text-white;
+      case POPULAR: return bg-purple-500 text-white;
+      default: return bg-gray-500 text-white;
+    '}
   };
 
   const Icon = currentItem.icon;
@@ -177,9 +177,9 @@ const TrendingContentBanner: React.FC = () => {
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentIndex 
-                    ? 'bg-zion-cyan scale-125' 
-                    : 'bg-white/30 hover:bg-white/50'
-                }`}
+                    ? bg-zion-cyan scale-125' 
+                    : 'bg-white/30 hover: 'bg-white/50
+                '}`}
 
             ))}
           </div>

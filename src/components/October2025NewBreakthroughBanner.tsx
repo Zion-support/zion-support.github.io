@@ -14,9 +14,9 @@ const October2025NewBreakthroughBanner = () => {
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20 px-4 relative overflow-hidden">
       {/* Animated background effects */}
       <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-10 left-10 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 right-10 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-10 left-10 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" />
+        <div className="absolute top-1/2 right-10 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
@@ -32,7 +32,7 @@ const October2025NewBreakthroughBanner = () => {
           
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Next-Generation Enterprise AI
-            <br <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
+            <br/> <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
               Systems That Transform Operations
             </span>
           </h2>
