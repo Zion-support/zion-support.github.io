@@ -1,9 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-// import { Brain } from "lucide-react";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: 'AI 2026 Revolutionary Autonomous Enterprise Success - $2.8B ROI Case Study - Zion Tech Group',
   description: 'Case study: How Fortune 500 companies achieved $2.8B ROI with AI 2026 Revolutionary Autonomous Enterprise Systems, delivering 99.7% automation efficiency.',

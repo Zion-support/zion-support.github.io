@@ -35,7 +35,6 @@ export default function QuantumAIBreakthrough2026() {
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <span className="flex items-center gap-2">
-<<<<<<< HEAD
                 <Atom />
                 Quantum Computing
               </span>
@@ -45,17 +44,6 @@ export default function QuantumAIBreakthrough2026() {
               </span>
               <span className="flex items-center gap-2">
                 <Zap />
-=======
-                <Atom className="w-4 h-4" />
-                Quantum Computing
-              </span>
-              <span className="flex items-center gap-2">
-                <Brain className="w-4 h-4" />
-                Neural Networks
-              </span>
-              <span className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Breakthrough Technology
               </span>
               <span>18 min read</span>
@@ -106,7 +94,6 @@ export default function QuantumAIBreakthrough2026() {
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 Revolutionary Breakthrough Achievements</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-<<<<<<< HEAD
                     <CheckCircle />
                     <span><strong>Quantum-Neural Fusion:</strong> First successful integration of quantum computing with neural networks</span>
                   </li>
@@ -120,21 +107,6 @@ export default function QuantumAIBreakthrough2026() {
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle />
-=======
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span><strong>Quantum-Neural Fusion:</strong> First successful integration of quantum computing with neural networks</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span><strong>10^18 Operations/sec:</strong> Unprecedented computational power for complex problem solving</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
-                    <span><strong>99.9% Accuracy:</strong> Solving problems previously considered computationally impossible</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                     <span><strong>Commercial Viability:</strong> First quantum AI systems ready for enterprise deployment</span>
                   </li>
                 </ul>
@@ -291,11 +263,7 @@ export default function QuantumAIBreakthrough2026() {
                 href="/blog" 
                 className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
               >
-<<<<<<< HEAD
                 <ArrowRight />
-=======
-                <ArrowRight className="w-4 h-4 rotate-180" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 Back to Blog
               </Link>
               <Link 
@@ -303,11 +271,7 @@ export default function QuantumAIBreakthrough2026() {
                 className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Quantum AI Services
-<<<<<<< HEAD
                 <ArrowRight />
-=======
-                <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           </div>

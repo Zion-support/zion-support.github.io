@@ -1,8 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-// import { Brain } from "lucide-react";
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
 
 export default function RevolutionaryAI2027Banner() {
   return (

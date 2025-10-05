@@ -1,9 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-// import { Brain } from "lucide-react";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: 'AI Revolutionary Transformation 2026: $100M ROI Success Story',
   description: 'See how a Fortune 500 company achieved $100M ROI with revolutionary AI transformation. Complete case study with implementation details and results.',

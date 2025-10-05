@@ -1,9 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-// import { User } from "lucide-react";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
 export const metadata = {
   title: 'AI Finance Automation Success 2026: $15M ROI Case Study',
   description: 'See how a Fortune 500 financial services company achieved $15M ROI with AI finance automation. 95% process efficiency and zero-touch operations.',
