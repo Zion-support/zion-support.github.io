@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
-import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
-import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
-import EnhancedUXManager from '../utils/enhancedUXManager';
+import { enhancedAccessibility } from '../utils/enhancedAccessibility';
+import { securityManager } from '../utils/securityHeaders';
+import { enhancedPerformanceMonitor } from '../utils/enhancedPerformanceMonitor';
 
 interface PerformanceData {
   memoryUsage: number;
@@ -136,17 +136,17 @@ const AdvancedDashboard: React.FC = () => {
       },
       accessibility: {
         // Get accessibility stats from manager
-        features: AdvancedAccessibilityManager.getInstance()
+        features: enhancedAccessibility.getReport()
           ? "Active"
           : "Inactive",
       },
       security: {
         // Get security stats from manager
-        status: AdvancedSecurityManager.getInstance() ? "Active" : "Inactive",
+        status: securityManager ? "Active" : "Inactive",
       },
       ux: {
         // Get UX stats from manager
-        status: EnhancedUXManager.getInstance() ? "Active" : "Inactive",
+        status: enhancedPerformanceMonitor ? "Active" : "Inactive",
       },
     });
   };
