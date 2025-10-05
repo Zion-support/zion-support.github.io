@@ -6,7 +6,6 @@ import Clock from 'lucide-react/dist/esm/icons/clock';
 import User from 'lucide-react/dist/esm/icons/user';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Share2 from 'lucide-react/dist/esm/icons/share-2';
-import Bookmark from 'lucide-react/dist/esm/icons/bookmark';>>>>>>> origin/merge-pr-25212
 import { ArrowLeft, Clock, Calendar, User, Share2, Bookmark } from 'lucide-react';
 
 
@@ -23,19 +22,13 @@ export default function AIAutonomousEnterpriseSystems2026() {
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="max-w-4xl mx-auto px-4">
           <div className="flex items-center gap-2 text-blue-200 mb-4">
-<<<<<<< HEAD
             <Link href="/blog" className="flex items-center gap-1 hover:text-white transition-colors">
               <ArrowLeft />
-=======
-            <Link href="/<blog" className="flex items-center gap-1 hover:text-white transition-colors">
-              <ArrowLeft className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               Back to Blog
             </Link>
           </div>
           <div className="flex items-center gap-4 text-sm text-blue-200 mb-6">
             <div className="flex items-center gap-1">
-<<<<<<< HEAD
               <Calendar />
               January 30, 2026
             </div>
@@ -45,17 +38,6 @@ export default function AIAutonomousEnterpriseSystems2026() {
             </div>
             <div className="flex items-center gap-1">
               <User />
-=======
-              <Calendar className="w-4 h-4" />
-              January 30, 2026
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              28 min read
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               Zion Tech Group
             </div>
           </div>
@@ -224,19 +206,11 @@ export default function AIAutonomousEnterpriseSystems2026() {
         {/* Article Actions */}
         <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
           <button className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
-<<<<<<< HEAD
             <Share2 />
             Share Article
           </button>
           <button className="flex items-center gap-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
             <Bookmark />
-=======
-            <Share2 className="w-4 h-4" />
-            Share Article
-          </button>
-          <button className="flex items-center gap-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">
-            <Bookmark className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             Save for Later
           </button>
         </div>

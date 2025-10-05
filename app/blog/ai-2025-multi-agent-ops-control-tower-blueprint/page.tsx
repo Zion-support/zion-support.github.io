@@ -20,15 +20,9 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
               Operationalize AI agents with observability, approvals, runbooks, and fail‑safes.
             </p>
             <div className="flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8">
-<<<<<<< HEAD
               <div className="flex items-center"><Calendar /> September 30, 2025</div>
               <div className="flex items-center"><User /> Zion Tech Group</div>
               <div className="flex items-center"><Clock /> 7 min read</div>
-=======
-              <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /> September 30, 2025</div>
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /> Zion Tech Group</div>
-              <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /> 7 min read</div>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </div>
         </div>
@@ -60,11 +54,7 @@ export default function MultiAgentOpsControlTowerBlueprintPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link to="/" className="inline-flex items-center text-indigo-600 hover:text-indigo-800 font-medium">
-<<<<<<< HEAD
           <ArrowLeft /> Back to Home
-=======
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
         </Link>
       </div>
     </div>

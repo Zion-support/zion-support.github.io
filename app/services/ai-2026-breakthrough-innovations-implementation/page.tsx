@@ -275,7 +275,6 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
           >
             Start Implementation
             <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
           </ArrowRight>
           <ArrowRight 
             href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
@@ -291,21 +290,6 @@ export default function AI2026BreakthroughInnovationsImplementationPage() {
             Read Full Analysis
             <ArrowRight className="w-5 h-5" />
           </ArrowRight>
-=======
-          </Link>
-          <Link 
-            href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-<success" className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
-          >
-            View Success Stories
-            <ArrowRight className="w-5 h-5" />
-          </Link>
-          <Link 
-            href="/blog/ai-2026-breakthrough-innovations-mega-<success" className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
-          >
-            Read Full Analysis
-            <ArrowRight className="w-5 h-5" />
-          </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
         </div>
       </section>
 

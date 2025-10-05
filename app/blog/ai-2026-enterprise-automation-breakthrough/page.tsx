@@ -5,7 +5,6 @@ import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import User from 'lucide-react/dist/esm/icons/user';
 import Clock from 'lucide-react/dist/esm/icons/clock';
-import Tag from 'lucide-react/dist/esm/icons/tag';>>>>>>> origin/merge-pr-25212
 import { ArrowLeft, Clock, Calendar, User, Tag } from 'lucide-react';
 
 
@@ -25,11 +24,7 @@ export default function EnterpriseAutomationBreakthrough() {
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-<<<<<<< HEAD
             <ArrowLeft />
-=======
-            <ArrowLeft className="w-4 h-4 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             Back to Home
           </Link>
         </div>
@@ -41,7 +36,6 @@ export default function EnterpriseAutomationBreakthrough() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-<<<<<<< HEAD
               <Calendar />
               <span>January 15, 2026</span>
             </div>
@@ -51,17 +45,6 @@ export default function EnterpriseAutomationBreakthrough() {
             </div>
             <div className="flex items-center gap-1">
               <Clock />
-=======
-              <Calendar className="w-4 h-4" />
-              <span>January 15, 2026</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <User className="w-4 h-4" />
-              <span>Zion Tech Group</span>
-            </div>
-            <div className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span>12 min read</span>
             </div>
           </div>
@@ -77,11 +60,7 @@ export default function EnterpriseAutomationBreakthrough() {
           <div className="flex flex-wrap gap-2">
             {['AI', 'Enterprise Automation', 'Business Intelligence', '2026 Trends', 'Autonomous Operations'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-<<<<<<< HEAD
                 <Tag />
-=======
-                <Tag className="w-3 h-3" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 {tag}
               </span>
             ))}
