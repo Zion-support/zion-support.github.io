@@ -3,32 +3,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
-}
-
-class AdvancedErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
@@ -45,7 +19,10 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return {
+      hasError: true,
+      error
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -54,48 +31,70 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       errorInfo
     });
 
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-    }
-
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     }
+
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // In production, you might want to send this to an error reporting service
+    if (process.env.NODE_ENV === 'production') {
+      // Example: Send to error reporting service
+      // errorReportingService.captureException(error, { extra: errorInfo });
+    }
   }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  };
 
   render() {
     if (this.state.hasError) {
-      return (
-        this.props.fallback || (
-          <div className="error-boundary p-6 bg-red-50 border border-red-200 rounded-lg">
-            <h2 className="text-lg font-semibold text-red-800 mb-2">
-              Something went wrong
-            </h2>
-            <details className="text-sm text-red-700">
-              <summary className="cursor-pointer mb-2">Error details</summary>
-              {this.state.error && this.state.error.toString()}
-              <br />
-              {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
-            </detai, l, s>
-          </d, i, v>
-      errorInfo
-    });
-  }
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
 
-  render() { 
-    if (this.state.hasError) {
       return (
-        this.props.fallback || (
-          <div className="error-boundary">
-            <h2>Something went wrong.</h2>
-            <details style={{ whiteSpace: 'pre-wrap' }}>
-              {this.state.error && this.state.error.toString()}
-              <br />
-              {this.state.errorInfo?.componentStack}
-            </details>
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+              </svg>
+            </div>
+            <div className="mt-4 text-center">
+              <h3 className="text-lg font-medium text-gray-900">
+                Something went wrong
+              </h3>
+              <p className="mt-2 text-sm text-gray-500">
+                We're sorry, but something unexpected happened. Please try again.
+              </p>
+              <div className="mt-6">
+                <button
+                  onClick={this.handleRetry}
+                  className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                >
+                  Try again
+                </button>
+              </div>
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <details className="mt-4 text-left">
+                  <summary className="text-sm font-medium text-gray-700 cursor-pointer">
+                    Error Details
+                  </summary>
+                  <pre className="mt-2 text-xs text-gray-600 bg-gray-100 p-2 rounded overflow-auto">
+                    {this.state.error.toString()}
+                    {this.state.errorInfo?.componentStack}
+                  </pre>
+                </details>
+              )}
+            </div>
           </div>
-        )
+        </div>
       );
     }
 
@@ -103,9 +102,4 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 }
 
-    return this.props.children;
-  }
-}
-
-export default AdvancedErrorBoundary;
 export default AdvancedErrorBoundary;
