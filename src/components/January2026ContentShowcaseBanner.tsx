@@ -1,4 +1,5 @@
 import React from 'react';
+import { Sparkles, TrendingUp, Zap, ArrowRight, Brain, Atom, Cpu } from 'lucide-react';
 const January2026ContentShowcaseBanner: React.FC = () => {
   const latestArticles = [
     {
@@ -219,11 +220,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               <li>• Hybrid quantum-classical systems</li>
             </ul>
           </div>
-          <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center">
-            <Cpu className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
-            <h3 className="text-2xl font-bold mb-4 text-indigo-400">Meta-Cognitive Reasoning</h3>
-            <p className="text-gray-300 mb-6">
-              Self-aware AI systems with introspection capabilities and the ability to reason about their own reasoning processes.
           <div className='bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center'>
             <Cpu className='w-16 h-16 text-indigo-400 mx-auto mb-4' />
             <h3 className='text-2xl font-bold mb-4 text-indigo-400'>
