@@ -1,20 +1,17 @@
 import Link from 'next/link';
-
-<<<<<<< HEAD
-
-import { Rocket, Satellite, Globe, Zap } from 'lucide-react';
-
-;
-;
-;
-;
-=======
-import Zap from 'lucide-react';
-import DollarSign from 'lucide-react';
 import Rocket from 'lucide-react';
 import Satellite from 'lucide-react';
 import Globe from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
+import Zap from 'lucide-react';
+
+
+
+
+
+
+
+
+;
 
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',

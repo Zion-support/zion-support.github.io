@@ -1,6 +1,26 @@
 import React from 'react';
+import Mail from 'lucide-react';
+import Phone from 'lucide-react';
+import MapPin from 'lucide-react';
+import Linkedin from 'lucide-react';
+import Twitter from 'lucide-react';
+import Github from 'lucide-react';
+import Facebook from 'lucide-react';
 
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from "lucide-react";
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
 import { Link } from 'react-router-dom';
 
 

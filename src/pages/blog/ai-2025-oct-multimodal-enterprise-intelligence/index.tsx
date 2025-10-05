@@ -1,5 +1,22 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Brain, TrendingUp, Zap, Shield, CheckCircle } from 'lucide-react';
+import ArrowLeft from 'lucide-react';
+import Brain from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Zap from 'lucide-react';
+import Shield from 'lucide-react';
+import CheckCircle from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+;
 
 import { Helmet } from "react-helmet-async";
 import Header from "../../../components/Header";

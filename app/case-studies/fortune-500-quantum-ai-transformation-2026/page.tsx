@@ -1,9 +1,21 @@
 import Link from 'next/link';
-<<<<<<< HEAD
+import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Target from 'lucide-react';
+import Users from 'lucide-react';
+import DollarSign from 'lucide-react';
+import Zap from 'lucide-react';
+import Shield from 'lucide-react';
+import CheckCircle from 'lucide-react';
 
-import { ArrowRight, TrendingUp, Target, Users, DollarSign, Zap, Shield, CheckCircle } from 'lucide-react';
 
-// 
+
+
+
+
+
+
+
 
 
 
@@ -11,13 +23,6 @@ import { ArrowRight, TrendingUp, Target, Users, DollarSign, Zap, Shield, CheckCi
 
 
 ;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Users from 'lucide-react';
-import DollarSign from 'lucide-react';
-import CheckCircle from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 export default function Fortune500QuantumAITransformation2026() {
   return (

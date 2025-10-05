@@ -1,6 +1,41 @@
 import React from 'react'
+import Brain from 'lucide-react';
+import Code from 'lucide-react';
+import Cloud from 'lucide-react';
+import Server from 'lucide-react';
+import MessageSquare from 'lucide-react';
+import CheckCircle from 'lucide-react';
+import ArrowRight from 'lucide-react';
+import DollarSign from 'lucide-react';
+import Clock from 'lucide-react';
+import Star from 'lucide-react';
+import Smartphone from 'lucide-react';
+import Globe from 'lucide-react';
 
-import { Brain, Code, Cloud, Server, MessageSquare, CheckCircle, ArrowRight, DollarSign, Clock, Star, Smartphone, Globe } from "lucide-react";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
 import { Helmet } from 'react-helmet-async'
 
 

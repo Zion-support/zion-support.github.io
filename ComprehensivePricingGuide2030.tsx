@@ -1,6 +1,38 @@
 import React, { useState, useMemo } from 'react'
+import CheckCircle from 'lucide-react';
+import Zap from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Brain from 'lucide-react';
+import Server from 'lucide-react';
+import ArrowRight from 'lucide-react';
+import Mail from 'lucide-react';
+import Phone from 'lucide-react';
+import MapPin from 'lucide-react';
+import Rocket from 'lucide-react';
+import Cpu from 'lucide-react';
 
-import { CheckCircle, Zap, TrendingUp, Brain, Server, ArrowRight, Mail, Phone, MapPin, Rocket, Cpu } from "lucide-react";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 

@@ -1,6 +1,41 @@
 import React from 'react';
+import Brain from 'lucide-react';
+import Rocket from 'lucide-react';
+import Shield from 'lucide-react';
+import Cloud from 'lucide-react';
+import Code from 'lucide-react';
+import Database from 'lucide-react';
+import CheckCircle from 'lucide-react';
+import ArrowRight from 'lucide-react';
+import Star from 'lucide-react';
+import Users from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Zap from 'lucide-react';
 
-import { Brain, Rocket, Shield, Cloud, Code, Database, CheckCircle, ArrowRight, Star, Users, TrendingUp, Zap } from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
