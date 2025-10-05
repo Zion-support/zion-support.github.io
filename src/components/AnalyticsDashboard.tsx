@@ -53,22 +53,39 @@ const AnalyticsDashboard: React.FC<DashboardProps> = ({ isVisible = false, onClo
         </div>
 
         <div className="flex border-b">
-          {['performance', 'seo', 'errors'].map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab as any)}
-              className={`px-4 py-2 font-medium capitalize ${
-                activeTab === tab
-                  ? 'text-blue-600 border-b-2 border-blue-600'
-                  : 'text-gray-500 hover:text-gray-700'
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
+          <button
+            onClick={() => setActiveTab('performance')}
+            className={`px-4 py-2 font-medium ${
+              activeTab === 'performance'
+                ? 'text-blue-600 border-b-2 border-blue-600'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            Performance
+          </button>
+          <button
+            onClick={() => setActiveTab('seo')}
+            className={`px-4 py-2 font-medium ${
+              activeTab === 'seo'
+                ? 'text-blue-600 border-b-2 border-blue-600'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            SEO
+          </button>
+          <button
+            onClick={() => setActiveTab('errors')}
+            className={`px-4 py-2 font-medium ${
+              activeTab === 'errors'
+                ? 'text-blue-600 border-b-2 border-blue-600'
+                : 'text-gray-500 hover:text-gray-700'
+            }`}
+          >
+            Errors
+          </button>
         </div>
 
-        <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
           {activeTab === 'performance' && <PerformanceTab metrics={performanceMetrics} />}
           {activeTab === 'seo' && <SEOTab analytics={seoAnalytics} />}
           {activeTab === 'errors' && <ErrorsTab metrics={errorMetrics} />}
@@ -94,64 +111,28 @@ const PerformanceTab: React.FC<{ metrics: any }> = ({ metrics }) => {
           <h3 className="font-semibold text-green-800">Total Interactions</h3>
           <div className="text-3xl font-bold text-green-600">{interactions.length}</div>
         </div>
-        <div className="bg-purple-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-purple-800">Load Time</h3>
-          <div className="text-3xl font-bold text-purple-600">
-            {data.loadTime ? `${data.loadTime.toFixed(0)}ms` : 'N/A'}
+        <div className="bg-yellow-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-yellow-800">Load Time</h3>
+          <div className="text-3xl font-bold text-yellow-600">
+            {data?.loadTime ? `${data.loadTime}ms` : 'N/A'}
           </div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Core Web Vitals</h3>
-          <div className="space-y-2">
-            <div className="flex justify-between">
-              <span>LCP (Largest Contentful Paint):</span>
-              <span className={getVitalColor(data.lcp, 2500, 4000)}>
-                {data.lcp ? `${data.lcp.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>FID (First Input Delay):</span>
-              <span className={getVitalColor(data.fid, 100, 300)}>
-                {data.fid ? `${data.fid.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>CLS (Cumulative Layout Shift):</span>
-              <span className={getVitalColor(data.cls, 0.1, 0.25)}>
-                {data.cls ? data.cls.toFixed(4) : 'N/A'}
-              </span>
-            </div>
-            <div className="flex justify-between">
-              <span>FCP (First Contentful Paint):</span>
-              <span className={getVitalColor(data.fcp, 1800, 3000)}>
-                {data.fcp ? `${data.fcp.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-lg font-semibold mb-4">Performance Metrics</h3>
+        <div className="space-y-3">
+          <div className="flex justify-between">
+            <span>First Contentful Paint</span>
+            <span className="font-semibold">{data?.fcp || 'N/A'}ms</span>
           </div>
-        </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-3">User Interactions</h3>
-          <div className="space-y-2">
-            <div className="flex justify-between">
-              <span>Clicks:</span>
-              <span>{interactions.filter((i: any) => i.type === 'click').length}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Scrolls:</span>
-              <span>{interactions.filter((i: any) => i.type === 'scroll').length}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Keydowns:</span>
-              <span>{interactions.filter((i: any) => i.type === 'keydown').length}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>Resizes:</span>
-              <span>{interactions.filter((i: any) => i.type === 'resize').length}</span>
-            </div>
+          <div className="flex justify-between">
+            <span>Largest Contentful Paint</span>
+            <span className="font-semibold">{data?.lcp || 'N/A'}ms</span>
+          </div>
+          <div className="flex justify-between">
+            <span>Cumulative Layout Shift</span>
+            <span className="font-semibold">{data?.cls || 'N/A'}</span>
           </div>
         </div>
       </div>
@@ -162,36 +143,28 @@ const PerformanceTab: React.FC<{ metrics: any }> = ({ metrics }) => {
 const SEOTab: React.FC<{ analytics: any }> = ({ analytics }) => {
   if (!analytics) return <div>Loading SEO analytics...</div>;
 
-  const totalPageViews = Array.from(analytics.values()).reduce((sum: number, data: any) => sum + data.pageViews, 0);
-  const totalPages = analytics.size;
-
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="bg-blue-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-blue-800">Total Page Views</h3>
-          <div className="text-3xl font-bold text-blue-600">{totalPageViews}</div>
+          <h3 className="font-semibold text-blue-800">SEO Score</h3>
+          <div className="text-3xl font-bold text-blue-600">{analytics.score || 'N/A'}/100</div>
         </div>
         <div className="bg-green-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-green-800">Pages Tracked</h3>
-          <div className="text-3xl font-bold text-green-600">{totalPages}</div>
+          <h3 className="font-semibold text-green-800">Page Speed</h3>
+          <div className="text-3xl font-bold text-green-600">{analytics.pageSpeed || 'N/A'}</div>
         </div>
       </div>
 
-      <div>
-        <h3 className="text-lg font-semibold mb-3">Page Performance</h3>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-lg font-semibold mb-4">SEO Recommendations</h3>
         <div className="space-y-2">
-          {Array.from(analytics.entries()).map(([page, data]: [string, any]) => (
-            <div key={page} className="flex justify-between items-center p-2 bg-gray-50 rounded">
-              <span className="font-medium">{page || '/'}</span>
-              <div className="text-sm text-gray-600">
-                {data.pageViews} views
-                <span className="ml-2 text-xs">
-                  (Last: {new Date(data.lastUpdated).toLocaleTimeString()})
-                </span>
-              </div>
+          {analytics.recommendations?.map((rec: string, index: number) => (
+            <div key={index} className="flex items-start">
+              <span className="text-yellow-500 mr-2">•</span>
+              <span>{rec}</span>
             </div>
-          ))}
+          )) || <div>No recommendations available</div>}
         </div>
       </div>
     </div>
@@ -203,77 +176,34 @@ const ErrorsTab: React.FC<{ metrics: any }> = ({ metrics }) => {
 
   return (
     <div className="space-y-6">
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-red-50 p-4 rounded-lg">
           <h3 className="font-semibold text-red-800">Total Errors</h3>
-          <div className="text-3xl font-bold text-red-600">{metrics.totalErrors}</div>
-        </div>
-        <div className="bg-orange-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-orange-800">Critical</h3>
-          <div className="text-3xl font-bold text-orange-600">
-            {metrics.errorsBySeverity.critical || 0}
-          </div>
+          <div className="text-3xl font-bold text-red-600">{metrics.totalErrors || 0}</div>
         </div>
         <div className="bg-yellow-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-yellow-800">High</h3>
-          <div className="text-3xl font-bold text-yellow-600">
-            {metrics.errorsBySeverity.high || 0}
-          </div>
+          <h3 className="font-semibold text-yellow-800">Warnings</h3>
+          <div className="text-3xl font-bold text-yellow-600">{metrics.warnings || 0}</div>
         </div>
-        <div className="bg-blue-50 p-4 rounded-lg">
-          <h3 className="font-semibold text-blue-800">Error Rate</h3>
-          <div className="text-3xl font-bold text-blue-600">
-            {metrics.errorRate.toFixed(4)}/s
-          </div>
+        <div className="bg-green-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-green-800">Resolved</h3>
+          <div className="text-3xl font-bold text-green-600">{metrics.resolved || 0}</div>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Errors by Type</h3>
-          <div className="space-y-2">
-              {Object.entries(metrics.errorsByType).map(([type, count]) => (
-              <div key={type} className="flex justify-between">
-                <span className="capitalize">{type}:</span>
-                <span className="font-medium">{count as number}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Errors by Severity</h3>
-          <div className="space-y-2">
-            {Object.entries(metrics.errorsBySeverity).map(([severity, count]) => (
-              <div key={severity} className="flex justify-between">
-                <span className="capitalize">{severity}:</span>
-                <span className={`font-medium ${getSeverityColor(severity)}`}>
-                  {count as number}
-                </span>
-              </div>
-            ))}
-          </div>
+      <div className="bg-white p-6 rounded-lg shadow-md">
+        <h3 className="text-lg font-semibold mb-4">Recent Errors</h3>
+        <div className="space-y-2">
+          {metrics.recentErrors?.map((error: any, index: number) => (
+            <div key={index} className="p-3 bg-red-50 rounded border-l-4 border-red-400">
+              <div className="font-semibold text-red-800">{error.message}</div>
+              <div className="text-sm text-red-600">{error.stack}</div>
+            </div>
+          )) || <div>No recent errors</div>}
         </div>
       </div>
     </div>
   );
-};
-
-const getVitalColor = (value: number | null, good: number, poor: number) => {
-  if (value === null) return 'text-gray-500';
-  if (value <= good) return 'text-green-600';
-  if (value <= poor) return 'text-yellow-600';
-  return 'text-red-600';
-};
-
-const getSeverityColor = (severity: string) => {
-  switch (severity) {
-    case 'critical': return 'text-red-600';
-    case 'high': return 'text-orange-600';
-    case 'medium': return 'text-yellow-600';
-    case 'low': return 'text-green-600';
-    default: return 'text-gray-600';
-  }
 };
 
 export default AnalyticsDashboard;
