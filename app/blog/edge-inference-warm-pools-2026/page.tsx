@@ -1,7 +1,4 @@
 // @ts-nocheck
-import { ArrowRight, Target } from 'lucide-react';
-
-import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge Inference Warm Pools 2026: Sub-100ms Global with Predictable Cost',
