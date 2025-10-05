@@ -1,3 +1,1 @@
-
-
-const "ReviewSummary": React.FC < Props> = ({ summary   ,;
+const "ReviewSummary": React.FC < Props> = ({summary }

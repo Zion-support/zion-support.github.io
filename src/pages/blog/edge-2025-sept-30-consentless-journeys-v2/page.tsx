@@ -1,25 +1,34 @@
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function Page(): void {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Consentless Journeys v2 — Personalization &lt;100ms, Zero‑PII
-      </h1>
-      <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Scoped IDs, on‑device models, and DP noise for compliant, real‑time journeys at global scale.
-      </p>
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <Link to="/", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Home</Link>",
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <Link to="/", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Home</Link>",
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Home</Link>",
+      <Helmet>
+        <title>Edge 2025 Sept 30 Consentless Journeys V2</title>
+        <meta 
+          name="description" 
+          content="Learn about edge 2025 sept 30 consentless journeys v2 and how it can benefit your enterprise." 
+        />
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/edge-2025-sept-30-consentless-journeys-v2" 
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge 2025 Sept 30 Consentless Journeys V2</h1>
+        <p className="text-zion-slate-light mb-8">Learn about edge 2025 sept 30 consentless journeys v2 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers edge 2025 sept 30 consentless journeys v2 and provides practical insights for enterprise implementation.
+          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+        </div>
       </div>
     </div>
   );
 }
-
-;

@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2029 Meta-Cognitive Superintelligence Mega Success - $10B ROI Achievement',
@@ -190,14 +189,12 @@ export default function AIMetaCognitiveSuperintelligenceMegaSuccess() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a 
-              href="/contact" 
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center"
+              href="/<contact" className="bg-white text-green-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors text-center"
             >
               Contact Zion Tech Group
             </a>
             <a 
-              href="/blog/ai-2029-meta-cognitive-superintelligence-breakthrough" 
-              className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center"
+              href="/blog/ai-2029-meta-cognitive-superintelligence-<breakthrough" className="bg-yellow-400 text-black px-8 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors text-center"
             >
               Learn About the Technology
             </a>

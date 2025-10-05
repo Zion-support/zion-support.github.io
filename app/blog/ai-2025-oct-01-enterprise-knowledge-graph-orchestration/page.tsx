@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Enterprise Knowledge Graph Orchestration — October 2025',
@@ -29,7 +28,7 @@ export default function Page() {
 			</section>
 
 			<div className="mt-10">
-				<Link to="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>
+				<ArrowRight href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</ArrowRight>
 			</div>
 		</main>
 	);

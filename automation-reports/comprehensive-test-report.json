@@ -1,0 +1,125 @@
+{
+  "timestamp": "2025-09-02T23:02:26.336Z",
+  "summary": {
+    "totalTests": 9,
+    "passed": 1,
+    "failed": 8,
+    "passRate": "11.11%"
+  },
+  "testCategories": {
+    "unit": [
+      {
+        "command": "npm run test",
+        "description": "Jest Unit Tests",
+        "success": false,
+        "error": "spawnSync /bin/sh ENOBUFS"
+      }
+    ],
+    "integration": [
+      {
+        "command": "npm run build",
+        "description": "Build Integration Test",
+        "success": false,
+        "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ The \"experimental.esmExternals\" option has been modified. experimental.esmExternals is not recommended to be modified as it may disrupt module resolution. It should be removed from your next.config.js.\nFailed to compile.\n\n./pages/api.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/api.tsx\u001b[0m:95:1]\n \u001b[2m92\u001b[0m |   -H \"Content-Type: application/json\" \\\\\n \u001b[2m93\u001b[0m |   -d '{'\n \u001b[2m94\u001b[0m |     \"target\": \"https://example.com\", \"scan_type\": \"vulnerability\"\n \u001b[2m95\u001b[0m |   }'`,'\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m96\u001b[0m |       description: 'Perform security scans using our API'\n \u001b[2m97\u001b[0m |     }\n \u001b[2m98\u001b[0m |   ];\n    `----\n  \u001b[31mx\u001b[0m Unexpected token `description`. Expected identifier\n    ,-[\u001b[36;1;4m/workspace/pages/api.tsx\u001b[0m:96:1]\n \u001b[2m93\u001b[0m |   -d '{'\n \u001b[2m94\u001b[0m |     \"target\": \"https://example.com\", \"scan_type\": \"vulnerability\"\n \u001b[2m95\u001b[0m |   }'`,'\n \u001b[2m96\u001b[0m |       description: 'Perform security scans using our API'\n    : \u001b[35;1m      ^^^^^^^^^^^\u001b[0m\n \u001b[2m97\u001b[0m |     }\n \u001b[2m98\u001b[0m |   ];\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/api.tsx\n\n./pages/careers.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/careers.tsx\u001b[0m:14:1]\n \u001b[2m11\u001b[0m |       type: 'Full-time', experience: '5+ years',\n \u001b[2m12\u001b[0m |       icon: Brain, description: 'Lead the development of cutting-edge AI solutions and machine learning models.',\n \u001b[2m13\u001b[0m |       requirements: [\n \u001b[2m14\u001b[0m |         'Master\\'s degree in Computer Science or related field', '\n    : \u001b[35;1m                                                                 ^\u001b[0m\n \u001b[2m15\u001b[0m |         '5+ years experience in AI/ML development',\n \u001b[2m16\u001b[0m |         'Proficiency in Python, TensorFlow, PyTorch', 'Experience with cloud platforms (AWS, Azure, GCP)', 'Strong problem-solving and communication skills'\n \u001b[2m17\u001b[0m |       ]\n    `----\n  \u001b[31mx\u001b[0m Expected ',', got 'string literal (5+ years experience in AI/ML development, '5+ years experience in AI/ML development')'\n    ,-[\u001b[36;1;4m/workspace/pages/careers.tsx\u001b[0m:15:1]\n \u001b[2m12\u001b[0m |       icon: Brain, description: 'Lead the development of cutting-edge AI solutions and machine learning models.',\n \u001b[2m13\u001b[0m |       requirements: [\n \u001b[2m14\u001b[0m |         'Master\\'s degree in Computer Science or related field', '\n \u001b[2m15\u001b[0m |         '5+ years experience in AI/ML development',\n    : \u001b[35;1m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n \u001b[2m16\u001b[0m |         'Proficiency in Python, TensorFlow, PyTorch', 'Experience with cloud platforms (AWS, Azure, GCP)', 'Strong problem-solving and communication skills'\n \u001b[2m17\u001b[0m |       ]\n \u001b[2m18\u001b[0m |     }, {\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/careers.tsx\n\n./pages/case-studies.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token `author`. Expected identifier\n    ,-[\u001b[36;1;4m/workspace/pages/case-studies.tsx\u001b[0m:80:1]\n \u001b[2m77\u001b[0m |   const testimonials = [\n \u001b[2m78\u001b[0m |     {\n \u001b[2m79\u001b[0m |       quote: \"Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we&apos;ve seen significant improvements in efficiency and cost savings.\", ''\n \u001b[2m80\u001b[0m |       author: \"Sarah Johnson\",\n    : \u001b[35;1m      ^^^^^^\u001b[0m\n \u001b[2m81\u001b[0m |       title: \"CTO\", company: \"Manufacturing Corp\",\n \u001b[2m82\u001b[0m |       rating: 5\n \u001b[2m83\u001b[0m |     }, {\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/case-studies.tsx\n\n./pages/press.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/press.tsx\u001b[0m:19:1]\n \u001b[2m16\u001b[0m |     },\n \u001b[2m17\u001b[0m |     {\n \u001b[2m18\u001b[0m |       title: 'Zion Tech Group Partners with Microsoft to Deliver Advanced Cloud Solutions', date: '2023-09-10',\n \u001b[2m19\u001b[0m |       summary: 'Strategic partnership enables customers to leverage Microsoft Azure with Zion\\'s AI and automation capabilities.', '\n    : \u001b[35;1m                                                                                                                                   ^\u001b[0m\n \u001b[2m20\u001b[0m |       category: 'Partnership',\n \u001b[2m21\u001b[0m |       readTime: '2 min read'\n \u001b[2m22\u001b[0m |     }, {\n    `----\n  \u001b[31mx\u001b[0m Unexpected token `category`. Expected identifier\n    ,-[\u001b[36;1;4m/workspace/pages/press.tsx\u001b[0m:20:1]\n \u001b[2m17\u001b[0m |     {\n \u001b[2m18\u001b[0m |       title: 'Zion Tech Group Partners with Microsoft to Deliver Advanced Cloud Solutions', date: '2023-09-10',\n \u001b[2m19\u001b[0m |       summary: 'Strategic partnership enables customers to leverage Microsoft Azure with Zion\\'s AI and automation capabilities.', '\n \u001b[2m20\u001b[0m |       category: 'Partnership',\n    : \u001b[35;1m      ^^^^^^^^\u001b[0m\n \u001b[2m21\u001b[0m |       readTime: '2 min read'\n \u001b[2m22\u001b[0m |     }, {\n \u001b[2m23\u001b[0m |       title: 'Zion Tech Group Recognized as Top AI Company by TechCrunch',\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/press.tsx\n\n./pages/search.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'string literal (, '')'\n    ,-[\u001b[36;1;4m/workspace/pages/search.tsx\u001b[0m:81:1]\n \u001b[2m78\u001b[0m |         <title>Search - Zion Tech Group</title>\n \u001b[2m79\u001b[0m |         <meta\n \u001b[2m80\u001b[0m |           name=\"description\"\n \u001b[2m81\u001b[0m |           content=\"Search through Zion Tech Group&apos;s services, solutions, and content.\"''\n    : \u001b[35;1m                                                                                           ^^\u001b[0m\n \u001b[2m82\u001b[0m |         />\n \u001b[2m83\u001b[0m |         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n \u001b[2m84\u001b[0m |       </Head>\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/search.tsx\n\n\n> Build failed because of webpack errors\n"
+      },
+      {
+        "command": "npm run type-check",
+        "description": "TypeScript Integration Test",
+        "success": false,
+        "error": "spawnSync /bin/sh ENOBUFS"
+      }
+    ],
+    "performance": [
+      {
+        "command": "npm run perf:monitor",
+        "description": "Performance Monitoring",
+        "success": false,
+        "error": "Command failed: npm run perf:monitor\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process && this.metrics.system.process.uptime || 'N/A}s`);\n                                                                                                   ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+      },
+      {
+        "command": "npm run perf:audit",
+        "description": "Performance Audit",
+        "success": false,
+        "error": "Command failed: npm run perf:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process && this.metrics.system.process.uptime || 'N/A}s`);\n                                                                                                   ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+      }
+    ],
+    "security": [
+      {
+        "command": "npm audit",
+        "description": "Security Audit",
+        "success": true,
+        "output": "found 0 vulnerabilities\n"
+      },
+      {
+        "command": "npm run lint",
+        "description": "Code Security Check",
+        "success": false,
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token 'import'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ],
+    "accessibility": [
+      {
+        "command": "npm run lint",
+        "description": "Accessibility Linting",
+        "success": false,
+        "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token 'import'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+      }
+    ]
+  },
+  "details": [
+    {
+      "command": "npm run test",
+      "description": "Jest Unit Tests",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "command": "npm run test:coverage",
+      "description": "Test Coverage Report",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "command": "npm run build",
+      "description": "Build Integration Test",
+      "success": false,
+      "error": "Command failed: npm run build\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n ⚠ The \"experimental.esmExternals\" option has been modified. experimental.esmExternals is not recommended to be modified as it may disrupt module resolution. It should be removed from your next.config.js.\nFailed to compile.\n\n./pages/api.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/api.tsx\u001b[0m:95:1]\n \u001b[2m92\u001b[0m |   -H \"Content-Type: application/json\" \\\\\n \u001b[2m93\u001b[0m |   -d '{'\n \u001b[2m94\u001b[0m |     \"target\": \"https://example.com\", \"scan_type\": \"vulnerability\"\n \u001b[2m95\u001b[0m |   }'`,'\n    : \u001b[35;1m      ^\u001b[0m\n \u001b[2m96\u001b[0m |       description: 'Perform security scans using our API'\n \u001b[2m97\u001b[0m |     }\n \u001b[2m98\u001b[0m |   ];\n    `----\n  \u001b[31mx\u001b[0m Unexpected token `description`. Expected identifier\n    ,-[\u001b[36;1;4m/workspace/pages/api.tsx\u001b[0m:96:1]\n \u001b[2m93\u001b[0m |   -d '{'\n \u001b[2m94\u001b[0m |     \"target\": \"https://example.com\", \"scan_type\": \"vulnerability\"\n \u001b[2m95\u001b[0m |   }'`,'\n \u001b[2m96\u001b[0m |       description: 'Perform security scans using our API'\n    : \u001b[35;1m      ^^^^^^^^^^^\u001b[0m\n \u001b[2m97\u001b[0m |     }\n \u001b[2m98\u001b[0m |   ];\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/api.tsx\n\n./pages/careers.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/careers.tsx\u001b[0m:14:1]\n \u001b[2m11\u001b[0m |       type: 'Full-time', experience: '5+ years',\n \u001b[2m12\u001b[0m |       icon: Brain, description: 'Lead the development of cutting-edge AI solutions and machine learning models.',\n \u001b[2m13\u001b[0m |       requirements: [\n \u001b[2m14\u001b[0m |         'Master\\'s degree in Computer Science or related field', '\n    : \u001b[35;1m                                                                 ^\u001b[0m\n \u001b[2m15\u001b[0m |         '5+ years experience in AI/ML development',\n \u001b[2m16\u001b[0m |         'Proficiency in Python, TensorFlow, PyTorch', 'Experience with cloud platforms (AWS, Azure, GCP)', 'Strong problem-solving and communication skills'\n \u001b[2m17\u001b[0m |       ]\n    `----\n  \u001b[31mx\u001b[0m Expected ',', got 'string literal (5+ years experience in AI/ML development, '5+ years experience in AI/ML development')'\n    ,-[\u001b[36;1;4m/workspace/pages/careers.tsx\u001b[0m:15:1]\n \u001b[2m12\u001b[0m |       icon: Brain, description: 'Lead the development of cutting-edge AI solutions and machine learning models.',\n \u001b[2m13\u001b[0m |       requirements: [\n \u001b[2m14\u001b[0m |         'Master\\'s degree in Computer Science or related field', '\n \u001b[2m15\u001b[0m |         '5+ years experience in AI/ML development',\n    : \u001b[35;1m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\u001b[0m\n \u001b[2m16\u001b[0m |         'Proficiency in Python, TensorFlow, PyTorch', 'Experience with cloud platforms (AWS, Azure, GCP)', 'Strong problem-solving and communication skills'\n \u001b[2m17\u001b[0m |       ]\n \u001b[2m18\u001b[0m |     }, {\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/careers.tsx\n\n./pages/case-studies.tsx\nError:   \u001b[31mx\u001b[0m Unexpected token `author`. Expected identifier\n    ,-[\u001b[36;1;4m/workspace/pages/case-studies.tsx\u001b[0m:80:1]\n \u001b[2m77\u001b[0m |   const testimonials = [\n \u001b[2m78\u001b[0m |     {\n \u001b[2m79\u001b[0m |       quote: \"Zion Tech Group transformed our entire IT infrastructure. The results exceeded our expectations, and we&apos;ve seen significant improvements in efficiency and cost savings.\", ''\n \u001b[2m80\u001b[0m |       author: \"Sarah Johnson\",\n    : \u001b[35;1m      ^^^^^^\u001b[0m\n \u001b[2m81\u001b[0m |       title: \"CTO\", company: \"Manufacturing Corp\",\n \u001b[2m82\u001b[0m |       rating: 5\n \u001b[2m83\u001b[0m |     }, {\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/case-studies.tsx\n\n./pages/press.tsx\nError:   \u001b[31mx\u001b[0m Unterminated string constant\n    ,-[\u001b[36;1;4m/workspace/pages/press.tsx\u001b[0m:19:1]\n \u001b[2m16\u001b[0m |     },\n \u001b[2m17\u001b[0m |     {\n \u001b[2m18\u001b[0m |       title: 'Zion Tech Group Partners with Microsoft to Deliver Advanced Cloud Solutions', date: '2023-09-10',\n \u001b[2m19\u001b[0m |       summary: 'Strategic partnership enables customers to leverage Microsoft Azure with Zion\\'s AI and automation capabilities.', '\n    : \u001b[35;1m                                                                                                                                   ^\u001b[0m\n \u001b[2m20\u001b[0m |       category: 'Partnership',\n \u001b[2m21\u001b[0m |       readTime: '2 min read'\n \u001b[2m22\u001b[0m |     }, {\n    `----\n  \u001b[31mx\u001b[0m Unexpected token `category`. Expected identifier\n    ,-[\u001b[36;1;4m/workspace/pages/press.tsx\u001b[0m:20:1]\n \u001b[2m17\u001b[0m |     {\n \u001b[2m18\u001b[0m |       title: 'Zion Tech Group Partners with Microsoft to Deliver Advanced Cloud Solutions', date: '2023-09-10',\n \u001b[2m19\u001b[0m |       summary: 'Strategic partnership enables customers to leverage Microsoft Azure with Zion\\'s AI and automation capabilities.', '\n \u001b[2m20\u001b[0m |       category: 'Partnership',\n    : \u001b[35;1m      ^^^^^^^^\u001b[0m\n \u001b[2m21\u001b[0m |       readTime: '2 min read'\n \u001b[2m22\u001b[0m |     }, {\n \u001b[2m23\u001b[0m |       title: 'Zion Tech Group Recognized as Top AI Company by TechCrunch',\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/press.tsx\n\n./pages/search.tsx\nError:   \u001b[31mx\u001b[0m Expected '</', got 'string literal (, '')'\n    ,-[\u001b[36;1;4m/workspace/pages/search.tsx\u001b[0m:81:1]\n \u001b[2m78\u001b[0m |         <title>Search - Zion Tech Group</title>\n \u001b[2m79\u001b[0m |         <meta\n \u001b[2m80\u001b[0m |           name=\"description\"\n \u001b[2m81\u001b[0m |           content=\"Search through Zion Tech Group&apos;s services, solutions, and content.\"''\n    : \u001b[35;1m                                                                                           ^^\u001b[0m\n \u001b[2m82\u001b[0m |         />\n \u001b[2m83\u001b[0m |         <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n \u001b[2m84\u001b[0m |       </Head>\n    `----\n\nCaused by:\n    Syntax Error\n\nImport trace for requested module:\n./pages/search.tsx\n\n\n> Build failed because of webpack errors\n"
+    },
+    {
+      "command": "npm run type-check",
+      "description": "TypeScript Integration Test",
+      "success": false,
+      "error": "spawnSync /bin/sh ENOBUFS"
+    },
+    {
+      "command": "npm run perf:monitor",
+      "description": "Performance Monitoring",
+      "success": false,
+      "error": "Command failed: npm run perf:monitor\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process && this.metrics.system.process.uptime || 'N/A}s`);\n                                                                                                   ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    },
+    {
+      "command": "npm run perf:audit",
+      "description": "Performance Audit",
+      "success": false,
+      "error": "Command failed: npm run perf:audit\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\nfile:///workspace/scripts/performance-monitor.js:186\n    console.log(`   Uptime: ${this.metrics.system.process && this.metrics.system.process.uptime || 'N/A}s`);\n                                                                                                   ^^^^^^^^^\n\nSyntaxError: Invalid or unexpected token\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n\nNode.js v22.16.0\n"
+    },
+    {
+      "command": "npm audit",
+      "description": "Security Audit",
+      "success": true,
+      "output": "found 0 vulnerabilities\n"
+    },
+    {
+      "command": "npm run lint",
+      "description": "Code Security Check",
+      "success": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token 'import'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+    },
+    {
+      "command": "npm run lint",
+      "description": "Accessibility Linting",
+      "success": false,
+      "error": "Command failed: npm run lint\nnpm warn config optional Use `--omit=optional` to exclude optional dependencies, or\nnpm warn config `--include=optional` to include them.\nnpm warn config\nnpm warn config       Default value does install optional deps unless otherwise omitted.\n\nOops! Something went wrong! :(\n\nESLint: 8.57.1\n\nSyntaxError: Unexpected token 'import'\n    at compileSourceTextModule (node:internal/modules/esm/utils:344:16)\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:105:18)\n    at #translate (node:internal/modules/esm/loader:534:12)\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:581:27)\n    at async ModuleJob._link (node:internal/modules/esm/module_job:116:19)\n"
+    }
+  ]
+}

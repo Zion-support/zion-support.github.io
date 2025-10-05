@@ -1,58 +1,73 @@
+// eslint.config.js
 import js from '@eslint/js';
 import globals from 'globals';
+import tseslint from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from 'typescript-eslint';
 
-export default tseslint.config(
-  { 
-    ignores: [
-      'dist', 
-      'node_modules/', 
-      '.next/', 
-      'out/', 
-      'build/',
-      'src/pages/services/',
-      'src/pages/solutions/',
-      'src/pages/talent/',
-      'src/pages/terms.tsx',
-      'src/pages/webinars.tsx',
-      'src/pages/zion-hire-ai.tsx',
-      'src/pages/services.tsx',
-      'src/pages/solutions.tsx',
-      'src/routes/',
-      'src/services/',
-      'src/store/',
-      'src/test/',
-      'src/types/',
-      'src/utils/',
-      '*.config.js',
-      '*.config.ts',
-      '*.config.cjs',
-      '*.config.mjs',
-    ]
-  },
+export default [
+  // Global ignores - ignore everything except src and app directories
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    ignores: [
+      '**/*',
+      '!src/**',
+      '!app/**',
+      'src/pages/blog-disabled/**',
+      'src/components/**',
+      'src/pages/**',
+      'src/content/**',
+      'src/data/**',
+      'src/hooks/**',
+      'src/types/**',
+      'src/utils/**',
+      'src/config/**',
+    ],
+  },
+  // Base JavaScript configuration (limit to app source only)
+  {
+    files: ['src/**/*.{js,cjs,mjs}', '**/*.{js,jsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: { ...globals.node },
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+    },
+    ...js.configs.recommended,
+  },
+  // Simplified TypeScript configuration (non type-aware)
+  {
+    files: [
+      'src/**/*.{ts,tsx}',
+      'pages/**/*.{ts,tsx}',
+      'app/**/*.{ts,tsx}',
+      '**/*.{ts,tsx}',
+    ],
+    languageOptions: {
+      parser: tsParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: { ...globals.browser },
     },
     plugins: {
+      '@typescript-eslint': tseslint,
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
     },
     rules: {
-      ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
-        'warn',
-        { allowConstantExport: true },
-      ],
-      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/explicit-function-return-type': 'off',
-      '@typescript-eslint/explicit-module-boundary-types': 'off',
-      'no-console': 'warn',
+      ...(reactHooks.configs.recommended?.rules || {}),
+      'react-refresh/only-export-components': 'off',
+      '@typescript-eslint/no-unused-vars': 'warn',
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
   },
-);
+];

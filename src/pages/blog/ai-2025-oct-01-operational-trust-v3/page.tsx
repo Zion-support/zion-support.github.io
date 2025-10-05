@@ -1,62 +1,34 @@
-// @ts-nocheck
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const Page: () => {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet >
-        <title >AI 2025: Operational Trust Scorecards v3</title>,,
-        <meta name="description",;,
-  content: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook for operational trust.", /><link rel="canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3/>",
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations • 9 min read • 2025-10-01</div>";,
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI 2025: Operational Trust Scorecards v3</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations • 9 min read • 2025-10-01</div>";,
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI 2025: Operational Trust Scorecards v3</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-  content: "SLIs → KPIs with budgets, canaries, and instant rollback — updated v3 playbook for operational trust.",
+      <Helmet>
+        <title>Ai 2025 Oct 01 Operational Trust V3</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2025 oct 01 operational trust v3 and how it can benefit your enterprise." 
         />
-        <link rel="canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3" />",
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3" 
+        />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations • 9 min read • 2025-10-01</div>",
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI 2025: Operational Trust Scorecards v3</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Operations • 9 min read • 2025-10-01</div>",
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI 2025: Operational Trust Scorecards v3</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Guardrails engineers adopt: PR policy checks, live canaries, KPI‑linked rollback, and budgeted actions that keep,,
-            teams fast and safe.
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Oct 01 Operational Trust V3</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2025 oct 01 operational trust v3 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers ai 2025 oct 01 operational trust v3 and provides practical insights for enterprise implementation.
           </p>
-
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What’s New in v3</h2>",
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">What’s New in v3</h2>",
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Blueprint</h2>",
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Blueprint</h2>",
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Wire SLIs to KPI movements, gate changes with PR policy checks and live canaries, and enforce budgets that
-              trigger deterministic rollback when thresholds are violated.
-            </p>
-
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            </div>
-          </div>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default Component;
-
-;
+}

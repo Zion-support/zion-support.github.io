@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'March 2026 AI Breakthrough Revolution: The Next Frontier of Enterprise Intelligence',
@@ -42,20 +41,17 @@ export default function March2026BreakthroughPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#breakthroughs" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="#<breakthroughs" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Breakthroughs
               </a>
               <a 
-                href="/case-studies/ai-2026-march-breakthrough-5-billion-success" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2026-march-breakthrough-5-billion-<success" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 View $5B Success Story →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Free Consultation
               </a>
@@ -89,7 +85,7 @@ export default function March2026BreakthroughPage() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             {/* Executive Summary */}
-            <section id="summary" className="mb-16">
+            <section id="<summary" className="mb-16">
               <h2 className="text-4xl font-bold text-white mb-6">Executive Summary</h2>
               <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/20">
                 <p className="text-xl text-gray-300 leading-relaxed">
@@ -101,7 +97,7 @@ export default function March2026BreakthroughPage() {
             </section>
 
             {/* Revolutionary Breakthroughs */}
-            <section id="breakthroughs" className="mb-16">
+            <section id="<breakthroughs" className="mb-16">
               <h2 className="text-4xl font-bold text-white mb-8">Revolutionary Breakthroughs</h2>
               
               <div className="grid md:grid-cols-3 gap-8">
@@ -150,7 +146,7 @@ export default function March2026BreakthroughPage() {
             </section>
 
             {/* Real-World Impact */}
-            <section id="impact" className="mb-16">
+            <section id="<impact" className="mb-16">
               <h2 className="text-4xl font-bold text-white mb-8">Real-World Impact</h2>
               
               <div className="grid md:grid-cols-2 gap-8">
@@ -212,20 +208,17 @@ export default function March2026BreakthroughPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a 
-                    href="/contact" 
-                    className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                    href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                   >
                     Get Free Consultation
                   </a>
                   <a 
-                    href="/case-studies/ai-2026-march-breakthrough-5-billion-success" 
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                    href="/case-studies/ai-2026-march-breakthrough-5-billion-<success" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                   >
                     View $5B Success Story →
                   </a>
                   <a 
-                    href="/services/ai-2026-march-breakthrough-consulting" 
-                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                    href="/services/ai-2026-march-breakthrough-<consulting" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                   >
                     Explore Services
                   </a>

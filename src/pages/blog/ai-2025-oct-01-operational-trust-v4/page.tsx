@@ -1,45 +1,34 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function OperationalTrustV4(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet >
-        <title >Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
-        <meta name="description",;,
-  content: "Live canaries, budgeted actions, and attested rollback wired to product KPIs.", /><link rel="canonical",;,
-  href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
+      <Helmet>
+        <title>Ai 2025 Oct 01 Operational Trust V4</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2025 oct 01 operational trust v4 and how it can benefit your enterprise." 
+        />
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4" 
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Operational Trust Scorecards v4</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SLIs → KPIs with Budgets</p>";,
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-  href="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Operational Trust Scorecards v4</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SLIs → KPIs with Budgets</p>",
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Operational Trust Scorecards v4</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SLIs → KPIs with Budgets</p>";,
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-  href="https: //ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4",
-        />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Operational Trust Scorecards v4</h1>",
-        <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">SLIs → KPIs with Budgets</p>",
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Oct 01 Operational Trust V4</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2025 oct 01 operational trust v4 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers ai 2025 oct 01 operational trust v4 and provides practical insights for enterprise implementation.
+          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/<blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-
-;

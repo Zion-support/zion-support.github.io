@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026 | Zion Tech Group',
@@ -131,8 +130,7 @@ export default function AIEnterpriseTransformation2026() {
               Ready to transform your enterprise with AI? Our experts can guide you through every step of the journey.
             </p>
             <a 
-              href="/services/ai-enterprise-transformation" 
-              className="inline-block bg-white text-emerald-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+              href="/services/ai-enterprise-<transformation" className="inline-block bg-white text-emerald-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
             >
               Begin AI Transformation
             </a>

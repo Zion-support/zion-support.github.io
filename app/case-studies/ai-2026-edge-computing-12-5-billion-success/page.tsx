@@ -1,5 +1,4 @@
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Edge Computing $12.5B Success Case Study | Zion Tech Group',
@@ -251,22 +250,22 @@ export default function AI2026EdgeComputing125BillionSuccess() {
 
         <h2 className="text-2xl font-bold mt-8 mb-4">🔗 Related Content</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link to="/blog/ai-2026-revolutionary-edge-computing-breakthrough" className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <Link href="/blog/ai-2026-revolutionary-edge-computing-<breakthrough" className="block p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">🚀 Revolutionary Edge Computing Blog</h3>
             <p className="text-sm opacity-90">Technical deep dive and innovation details</p>
           </Link>
           
-          <Link to="/blog/ai-2026-autonomous-business-intelligence-breakthrough" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <Link href="/blog/ai-2026-autonomous-business-intelligence-<breakthrough" className="block p-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">🤖 Autonomous Business Intelligence</h3>
             <p className="text-sm opacity-90">Complementary AI breakthrough</p>
           </Link>
           
-          <Link to="/services/ai-edge-computing-solutions" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <Link href="/services/ai-edge-computing-<solutions" className="block p-4 bg-gradient-to-r from-purple-500 to-indigo-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">🛠️ Edge Computing Services</h3>
             <p className="text-sm opacity-90">Implementation and support services</p>
           </Link>
           
-          <Link to="/contact" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
+          <Link href="/<contact" className="block p-4 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-lg hover:shadow-lg transition-shadow">
             <h3 className="font-semibold">📞 Contact Our Experts</h3>
             <p className="text-sm opacity-90">Discuss your edge computing needs</p>
           </Link>
@@ -279,10 +278,10 @@ export default function AI2026EdgeComputing125BillionSuccess() {
             Contact us today to learn how we can deliver similar results for your organization.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link to="/contact" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/<contact" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Your Transformation
             </Link>
-            <Link to="/services/ai-edge-computing-solutions" className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors">
+            <Link href="/services/ai-edge-computing-<solutions" className="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-400 transition-colors">
               View Our Services
             </Link>
           </div>

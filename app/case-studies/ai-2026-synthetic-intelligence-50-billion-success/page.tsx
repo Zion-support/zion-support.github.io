@@ -1,6 +1,4 @@
-// import React from 'react';
 import { Metadata } from 'next';
-import { Link } from 'react-router-dom';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Synthetic Intelligence Delivers $50B Enterprise Success | Zion Tech Group',
@@ -36,20 +34,17 @@ export default function SyntheticIntelligenceSuccessPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#content" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="#<content" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Full Case Study
               </a>
               <a 
-                href="/blog/ai-2026-synthetic-intelligence-revolution-enterprise-breakthrough" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-synthetic-intelligence-revolution-enterprise-<breakthrough" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Details →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Start Your Success Story
               </a>
@@ -79,7 +74,7 @@ export default function SyntheticIntelligenceSuccessPage() {
       </header>
 
       {/* Case Study Content */}
-      <section id="content" className="py-20 bg-white">
+      <section id="<content" className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="prose prose-lg max-w-none">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Executive Summary</h2>
@@ -242,14 +237,12 @@ export default function SyntheticIntelligenceSuccessPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                  href="/<contact" className="bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Contact Our AI Specialists
                 </a>
                 <a 
-                  href="/blog/ai-2026-synthetic-intelligence-revolution-enterprise-breakthrough" 
-                  className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-green-600 transition-colors"
+                  href="/blog/ai-2026-synthetic-intelligence-revolution-enterprise-<breakthrough" className="border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-green-600 transition-colors"
                 >
                   Read Technical Details
                 </a>

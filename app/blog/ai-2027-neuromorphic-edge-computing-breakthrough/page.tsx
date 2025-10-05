@@ -1,4 +1,18 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2027: Neuromorphic Edge Computing Breakthrough - 1000x Efficiency Revolution',
+  description: 'Discover the revolutionary neuromorphic edge computing breakthrough that delivers 1000x energy efficiency, sub-microsecond latency, and $2.3B in enterprise savings. Complete implementation guide and Fortune 500 case studies.',
+  keywords: 'neuromorphic computing, edge AI, energy efficiency, low latency, Fortune 500, AI breakthrough 2027',
+  openGraph: {
+    title: 'AI 2027: Neuromorphic Edge Computing Breakthrough',
+    description: '1000x energy efficiency, sub-microsecond latency, $2.3B savings',
+    type: 'article',
+    publishedTime: '2027-01-15T00:00:00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI', 'Neuromorphic Computing', 'Edge Computing', 'Energy Efficiency'],
+  },
+};
 
 export default function NeuromorphicEdgeComputingBreakthrough() {
   return (
@@ -172,14 +186,12 @@ export default function NeuromorphicEdgeComputingBreakthrough() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Get Started Today
             </a>
             <a 
-              href="/case-studies" 
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+              href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               View More Case Studies
             </a>

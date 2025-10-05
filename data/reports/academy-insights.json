@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2025-09-08T10:39:26.234Z",
+  "featuredCourses": [
+    {
+      "slug": "ai-engineering-foundations",
+      "reason": "High engagement; matches trend: Edge AI"
+    },
+    {
+      "slug": "devops-cloud-primer",
+      "reason": "Interest in serverless pipelines"
+    }
+  ],
+  "trendingTopics": [
+    {
+      "title": "Using Claude Code to modernize a 25-year-old kernel driver",
+      "url": "https://dmitrybrant.com/2025/09/07/using-claude-code-to-modernize-a-25-year-old-kernel-driver"
+    },
+    {
+      "title": "The MacBook has a sensor that knows the exact angle of the screen hinge",
+      "url": "https://twitter.com/samhenrigold/status/1964428927159382261"
+    },
+    {
+      "title": "Show HN: C++ library for reading MacBook lid angle sensor data",
+      "url": "https://github.com/ufoym/mac-angle"
+    },
+    {
+      "title": "Why Is Japan Still Investing in Custom Floating Point Accelerators?",
+      "url": "https://www.nextplatform.com/2025/09/04/why-is-japan-still-investing-in-custom-floating-point-accelerators/"
+    },
+    {
+      "title": "Formatting code should be unnecessary",
+      "url": "https://maxleiter.com/blog/formatting"
+    },
+    {
+      "title": "GPT-5 Thinking in ChatGPT (a.k.a. Research Goblin) is good at search",
+      "url": "https://simonwillison.net/2025/Sep/6/research-goblin/"
+    },
+    {
+      "title": "Intel Arc Pro B50 GPU Launched at $349 for Compact Workstations",
+      "url": "https://www.guru3d.com/story/intel-arc-pro-b50-gpu-launched-at-for-compact-workstations/"
+    },
+    {
+      "title": "Show HN: Veena Chromatic Tuner",
+      "url": "https://play.google.com/store/apps/details?id=in.magima.digitaltuner&hl=en_US"
+    },
+    {
+      "title": "Analog optical computer for AI inference and combinatorial optimization",
+      "url": "https://www.nature.com/articles/s41586-025-09430-z"
+    },
+    {
+      "title": "Creative Technology: The Sound Blaster",
+      "url": "https://www.abortretry.fail/p/the-story-of-creative-technology"
+    }
+  ],
+  "recommendations": [
+    {
+      "title": "Add lesson: Edge AI deployment to mobile",
+      "course": "ai-engineering-foundations"
+    },
+    {
+      "title": "Add module: Serverless ETL with modern runtimes",
+      "course": "devops-cloud-primer"
+    }
+  ]
+}

@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 import QuantumAI2026EnterpriseTransformation from '../../../blog/quantum-ai-2026-enterprise-transformation';
 
 export const metadata: Metadata = {

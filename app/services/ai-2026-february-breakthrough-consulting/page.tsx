@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'AI 2026 February Breakthrough Consulting Services',
@@ -212,20 +211,17 @@ export default function February2026ConsultingPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                  href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Get Free Consultation
                 </a>
                 <a 
-                  href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" 
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                  href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-<success" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
                 >
                   View Success Stories
                 </a>
                 <a 
-                  href="/blog/ai-2026-february-mega-breakthrough-revolution" 
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/blog/ai-2026-february-mega-breakthrough-<revolution" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Read Full Guide
                 </a>

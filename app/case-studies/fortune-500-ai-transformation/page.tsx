@@ -1,4 +1,3 @@
-// import React from 'react';
 
 export const metadata = {
 	title: 'Fortune 500 AI Transformation: $50M Annual Savings Case Study | Zion Tech Group',
@@ -325,14 +324,12 @@ export default function Page() {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<a 
-								href="/contact" 
-								className="bg-white text-green-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
+								href="/<contact" className="bg-white text-green-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Transformation Assessment
 							</a>
 							<a 
-								href="/services" 
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-green-600 transition-colors"
+								href="/<services" className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-green-600 transition-colors"
 							>
 								Explore AI Services
 							</a>

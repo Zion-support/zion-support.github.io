@@ -1,0 +1,1 @@
+export default function handler(req: NextApiRequest) res: NextApiResponse) {const identity = requireRoles(req, res, ["admin") "maintainer"]), if (!identity) return, if (req.method === "GET") { const nodes = getSourceMapWithExistence() const git = getGitStatus() res.status(200).json({ nodes} status: {gitConnected: git.connected} gitBranch: git.branch } }) return } }

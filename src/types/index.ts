@@ -1,37 +1,32 @@
-
-// TypeScript type definitions
-export interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-}
-
-export interface SEOData {
+// Type definitions
+export interface BannerConfig {
+  id: string;
   title: string;
-  description: string;
-  keywords: string;
-  image?: string;
-  url?: string;
+  component: string;
+  priority: number;
+  category: string;
+  impressions: number;
+  clicks: number;
+  active: boolean;
 }
 
-export interface SecurityConfig {
-  csp: Record<string, string[]>;
-  rateLimit: {
-    limit: number;
-    windowMs: number;
-  };
+export interface PerformanceMetrics {
+  fcp?: number;
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  ttfb?: number;
 }
 
-export interface AccessibilityConfig {
-  ariaLabels: boolean;
-  focusManagement: boolean;
-  colorContrast: boolean;
-}
-
-export interface AppConfig {
-  performance: PerformanceMetrics;
-  seo: SEOData;
-  security: SecurityConfig;
-  accessibility: AccessibilityConfig;
+export interface AnalyticsEvent {
+  name: string;
+  category: string;
+  action?: string;
+  label?: string;
+  value?: number;
+  timestamp: string;
+  session_id: string;
+  user_id: string;
+  page_url: string;
+  user_agent: string;
 }

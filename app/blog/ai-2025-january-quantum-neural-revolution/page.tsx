@@ -1,4 +1,3 @@
-// import React from 'react';
 
 export default function AI2025JanuaryQuantumNeuralRevolution() {
   return (
@@ -198,14 +197,12 @@ export default function AI2025JanuaryQuantumNeuralRevolution() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                  href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
                 >
                   Start Your Transformation
                 </a>
                 <a 
-                  href="/case-studies/ai-2025-january-quantum-neural-2-5-billion-success" 
-                  className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
+                  href="/case-studies/ai-2025-january-quantum-neural-2-5-billion-<success" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
                 >
                   View Success Story
                 </a>
@@ -217,14 +214,12 @@ export default function AI2025JanuaryQuantumNeuralRevolution() {
           <div className="mt-12 pt-8 border-t border-slate-800">
             <div className="flex justify-between items-center">
               <a 
-                href="/blog/ai-2025-december-quantum-computing-breakthrough"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                href="/blog/ai-2025-december-quantum-computing-<breakthrough" className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 ← Previous: December 2025 Quantum Computing Breakthrough
               </a>
               <a 
-                href="/blog"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                href="/<blog" className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 All Articles →
               </a>

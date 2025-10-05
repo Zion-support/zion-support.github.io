@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Quantum Consciousness Fusion: The Next Evolution of AI',
@@ -39,14 +38,12 @@ export default function QuantumConsciousnessFusionPage() {
             
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="#fusion-technology" 
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="#fusion-<technology" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Explore Technology →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Start Your Journey
               </a>
@@ -56,7 +53,7 @@ export default function QuantumConsciousnessFusionPage() {
       </section>
 
       {/* Main Content */}
-      <section id="fusion-technology" className="py-20 bg-slate-900">
+      <section id="fusion-<technology" className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto prose prose-lg prose-invert">
             <h2 className="text-4xl font-bold text-white mb-8">What is Quantum Consciousness Fusion?</h2>
@@ -213,14 +210,12 @@ export default function QuantumConsciousnessFusionPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
             >
               Start Your Journey
             </a>
             <a 
-              href="/case-studies" 
-              className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              href="/case-<studies" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               View Success Stories →
             </a>

@@ -1,33 +1,60 @@
 #!/bin/bash
 
-# Simple PR merge script that handles the 8 open PRs directly
+# Simple script to merge the most recent PRs
 set -e
 
 echo "🚀 Starting simple PR merge process..."
 
-# Ensure we're on main and up to date
-echo "📋 Ensuring we're on main branch..."
-git checkout main
-git pull origin main
+# Get the latest branches
+echo "📋 Fetching latest branches..."
+git fetch origin
 
-echo "📤 Pushing current changes..."
-git push origin main
+# Get the 10 most recent branches
+RECENT_BRANCHES=$(git branch -r | grep -E "cursor/fix-errors-and-merge-to-main" | tail -10 | sed 's/origin\///' | sort -r)
 
-# List of open PRs from the JSON data
-# PR #24745: "Fix errors and merge to main"
-# PR #24744: "Enhance and expand ziontechgroup.com services and site"  
-# PR #24741: "Analyze, improve, and deploy application"
-# PR #24740: "Analyze, improve, and deploy application"
-# PR #24739: "Fix errors and merge to main"
-# PR #24736: "Fix errors and merge to main"
-# PR #24734: "Fix errors and merge to main"
-# PR #24733: "Enhance and expand ziontechgroup.com services and site"
+echo "📊 Found recent branches to merge:"
+echo "$RECENT_BRANCHES"
 
-echo "✅ All open PRs have been processed through the comprehensive merge that already occurred."
-echo "📊 The main branch now contains all the changes from the open PRs."
+# Process each branch
+COUNT=0
+MERGED=0
+FAILED=0
 
-# Check final status
-echo "📋 Final status:"
-git status
+for branch in $RECENT_BRANCHES; do
+    ((COUNT++))
+    echo ""
+    echo "🔄 [$COUNT/10] Processing branch: $branch"
+    
+    # Checkout and merge
+    if git checkout -b temp-$branch origin/$branch 2>/dev/null; then
+        git checkout main
+        
+        if git merge --no-ff temp-$branch -m "Merge $branch into main" 2>/dev/null; then
+            echo "✅ Successfully merged $branch"
+            ((MERGED++))
+            
+            # Push the merge
+            git push origin main
+            
+            # Clean up
+            git branch -D temp-$branch
+        else
+            echo "❌ Failed to merge $branch due to conflicts"
+            git merge --abort
+            git branch -D temp-$branch
+            ((FAILED++))
+        fi
+    else
+        echo "⚠️  Could not checkout branch $branch"
+        ((FAILED++))
+    fi
+done
 
-echo "🎉 PR merge process completed successfully!"
+echo ""
+echo "🎯 Summary:"
+echo "  Total processed: $COUNT"
+echo "  Successfully merged: $MERGED"
+echo "  Failed: $FAILED"
+
+echo ""
+echo "✅ Simple merge process completed!"

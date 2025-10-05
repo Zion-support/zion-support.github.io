@@ -1,50 +1,34 @@
-// @ts-nocheck
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const Page: () => {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet >
-        <title >AI Self-Healing Infrastructure 2025 — 99.99% Uptime</title>
-        <meta name="description",;,
-  content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.", /><link rel="canonical", href="https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025/>",;,
-  content: "Autonomous infrastructure detecting and fixing issues in real-time. 95% MTTR reduction, zero human intervention.",
+      <Helmet>
+        <title>Ai Self Healing Infrastructure 2025</title>
+        <meta 
+          name="description" 
+          content="Learn about ai self healing infrastructure 2025 and how it can benefit your enterprise." 
         />
-        <link rel="canonical", href ="https: //ziontechgroup.com/blog/ai-self-healing-infrastructure-2025" />",
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-self-healing-infrastructure-2025" 
+        />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Infrastructure • 8 min read • 2025-10-01</div>",
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Self-Healing Infrastructure (2025)</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Infrastructure • 8 min read • 2025-10-01</div>",
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">AI Self-Healing Infrastructure (2025)</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Build autonomous, self-recovering platforms with KPI-linked canaries, budgeted actions, and rollback playbooks
-            that maintain 99.99% uptime while cutting MTTR by 95%.
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai Self Healing Infrastructure 2025</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai self healing infrastructure 2025 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers ai self healing infrastructure 2025 and provides practical insights for enterprise implementation.
           </p>
-
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Architecture</h2>",
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Architecture</h2>",
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Outcomes</h2>",
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Outcomes</h2>",
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Teams ship faster with fewer incidents, consistent reliability, and clear rollback criteria linked to
-              business outcomes.
-            </p>
-
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            </div>
-          </div>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default Component;
-
-;
+}

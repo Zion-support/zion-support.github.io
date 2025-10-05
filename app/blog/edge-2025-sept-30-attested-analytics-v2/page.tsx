@@ -1,6 +1,5 @@
 // @ts-nocheck
-// import React from 'react';
-import { Link } from 'react-router-dom';
+import ArrowRight from 'next/link';
 
 export default function AttestedEdgeAnalyticsV2() {
   return (
@@ -33,20 +32,20 @@ export default function AttestedEdgeAnalyticsV2() {
           </ol>
         </section>
 
-        <hr className="my-10 border-white/10" />
+        <hr />
 
         <aside className="bg-indigo-500/10 border border-indigo-400/20 rounded-xl p-6">
           <h3 className="text-xl font-bold text-indigo-300 mb-2">Related</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-1">
             <li>
-              <Link to="/blog/edge-2026-zero-pii-analytics" className="text-indigo-300 hover:text-indigo-200">
+              <ArrowRight href="/blog/edge-2026-zero-pii-analytics" className="text-indigo-300 hover:text-indigo-200">
                 Edge 2026 Zero‑PII Analytics
-              </Link>
+              </ArrowRight>
             </li>
             <li>
-              <Link to="/blog/edge-consentless-experiments-2026-q4" className="text-indigo-300 hover:text-indigo-200">
+              <ArrowRight href="/blog/edge-consentless-experiments-2026-q4" className="text-indigo-300 hover:text-indigo-200">
                 Consentless Experiments 2026 Q4
-              </Link>
+              </ArrowRight>
             </li>
           </ul>
         </aside>

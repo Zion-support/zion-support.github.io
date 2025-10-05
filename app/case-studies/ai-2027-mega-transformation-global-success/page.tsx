@@ -1,4 +1,17 @@
+import { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'AI 2027 Mega Transformation: $500M Global Enterprise Success - Zion Tech Group',
+  description: 'Discover how Zion Tech Group delivered a $500M transformation success using AI 2027 technologies. Learn about the breakthrough results, ROI, and implementation strategies.',
+  keywords: 'AI 2027, enterprise transformation, case study, $500M success, ROI, Zion Tech Group, AI implementation',
+  openGraph: {
+    title: 'AI 2027 Mega Transformation: $500M Global Enterprise Success',
+    description: 'Revolutionary AI transformation delivering $500M in value through breakthrough technologies.',
+    type: 'article',
+    publishedTime: '2027-01-25T00:00:00.000Z',
+    authors: ['Zion Tech Group'],
+  },
+};
 
 export default function AI2027MegaTransformationSuccess() {
   return (
@@ -348,14 +361,12 @@ export default function AI2027MegaTransformationSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/services" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                href="/<services" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
               </a>

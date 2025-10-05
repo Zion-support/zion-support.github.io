@@ -1,4 +1,3 @@
-// import React from 'react';
 
 export default function QuantumAIEnterpriseSolutions2026() {
   return (
@@ -355,14 +354,12 @@ export default function QuantumAIEnterpriseSolutions2026() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Schedule Quantum AI Demo
                 </a>
                 <a 
-                  href="/services/quantum-ai" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/services/quantum-<ai" className="border-2 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Explore Quantum Solutions
                 </a>
@@ -378,8 +375,8 @@ export default function QuantumAIEnterpriseSolutions2026() {
                 <p>Last updated: January 2026</p>
               </div>
               <div className="flex gap-4">
-                <a href="/blog" className="hover:text-purple-400 transition-colors">← Back to Blog</a>
-                <a href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</a>
+                <a href="/<blog" className="hover:text-purple-400 transition-colors">← Back to Blog</a>
+                <a href="/<contact" className="hover:text-purple-400 transition-colors">Contact Us</a>
               </div>
             </div>
           </footer>

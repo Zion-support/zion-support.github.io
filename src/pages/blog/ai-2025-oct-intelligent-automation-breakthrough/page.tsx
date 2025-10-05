@@ -1,64 +1,34 @@
-// @ts-nocheck
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const Page: () => {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-      <Helmet >
-        <title >Intelligent Automation Breakthrough 2025: From Tickets to Outcomes</title>,,
-        <meta name="description",;,
-  content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.", /><link rel="canonical", href ="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough/>",
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Automation • 8 min read • 2025-10-01</div>";,
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Intelligent Automation Breakthrough 2025</h1>";,
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Automation • 8 min read • 2025-10-01</div>";,
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Intelligent Automation Breakthrough 2025</h1>";,
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">,";,
-  Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
-          content: "Shift from manual tickets to outcome‑driven automation with safe agent runbooks, budgets, and instant rollback.",
+      <Helmet>
+        <title>Ai 2025 Oct Intelligent Automation Breakthrough</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2025 oct intelligent automation breakthrough and how it can benefit your enterprise." 
         />
-        <link rel="canonical", href ="https: //ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" />",
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2025-oct-intelligent-automation-breakthrough" 
+        />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Automation • 8 min read • 2025-10-01</div>",
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Intelligent Automation Breakthrough 2025</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-        <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Automation • 8 min read • 2025-10-01</div>",
-          <h1 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Intelligent Automation Breakthrough 2025</h1>",
-          <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Go beyond scripts with agents that plan, execute, and recover safely. Learn production patterns for approvals
-            budgets, eval‑gated actions, and deterministic rollback.
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Oct Intelligent Automation Breakthrough</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2025 oct intelligent automation breakthrough and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers ai 2025 oct intelligent automation breakthrough and provides practical insights for enterprise implementation.
           </p>
-
-          <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Production Patterns</h2>",
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-            <h2 className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Production Patterns</h2>",
-            <ul className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Measuring Outcomes</h2>",
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">Measuring Outcomes</h2>",
-            <p className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-  Track time‑to‑resolution, cost per action, incident avoidance, and value realized—not just tasks completed.
-            </p>
-
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
-              <Link to="/blog", className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">← Back to Blog</Link>",
-            </div>
-          </div>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
-};
-
-export default Component;
-
-;
+}

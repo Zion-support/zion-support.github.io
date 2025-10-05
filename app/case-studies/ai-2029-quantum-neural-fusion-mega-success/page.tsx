@@ -1,5 +1,4 @@
-// import React from 'react';
-// Metadata handled by React Helmet
+import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Case Study: AI 2029 Quantum Neural Fusion Mega Success - $10B ROI Achievement',
