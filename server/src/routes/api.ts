@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { body, validationResult } from 'express-validator';
+import fs from 'fs';
+import path from 'path';
 
 const router = Router();
 
@@ -92,6 +94,147 @@ router.get('/users/:id', async (req, res) => {
     return res.status(500).json({ 
       success: false, 
       error: 'Failed to fetch user' 
+    });
+  }
+});
+
+// POST /api/logs - Production logging endpoint
+router.post('/logs', [
+  body('logs').isArray().withMessage('Logs must be an array'),
+  body('logs.*.timestamp').isISO8601().withMessage('Each log must have a valid timestamp'),
+  body('logs.*.level').isIn(['error', 'warn', 'info', 'debug']).withMessage('Each log must have a valid level'),
+  body('logs.*.message').isString().notEmpty().withMessage('Each log must have a message'),
+  validate
+], async (req: any, res: any) => {
+  try {
+    const { logs } = req.body;
+    
+    // Ensure logs directory exists
+    const logsDir = path.join(__dirname, '../../logs');
+    if (!fs.existsSync(logsDir)) {
+      fs.mkdirSync(logsDir, { recursive: true });
+    }
+    
+    // Create log file name based on date
+    const today = new Date().toISOString().split('T')[0];
+    const logFileName = `production-${today}.json`;
+    const logFilePath = path.join(logsDir, logFileName);
+    
+    // Read existing logs or create empty array
+    let existingLogs = [];
+    if (fs.existsSync(logFilePath)) {
+      try {
+        const fileContent = fs.readFileSync(logFilePath, 'utf8');
+        existingLogs = JSON.parse(fileContent);
+      } catch (parseError) {
+        console.warn('Failed to parse existing log file, starting fresh:', parseError);
+      }
+    }
+    
+    // Add new logs
+    const allLogs = [...existingLogs, ...logs];
+    
+    // Write back to file
+    fs.writeFileSync(logFilePath, JSON.stringify(allLogs, null, 2));
+    
+    // Also log to console for immediate visibility
+    logs.forEach((log: any) => {
+      const logMessage = `[${log.level.toUpperCase()}] ${log.timestamp}: ${log.message}`;
+      switch (log.level) {
+        case 'error':
+          console.error(logMessage, log.error);
+          break;
+        case 'warn':
+          console.warn(logMessage);
+          break;
+        case 'info':
+          console.info(logMessage);
+          break;
+        case 'debug':
+          console.debug(logMessage);
+          break;
+        default:
+          console.log(logMessage);
+      }
+    });
+    
+    res.json({ 
+      success: true, 
+      message: `Successfully logged ${logs.length} entries`,
+      loggedAt: new Date().toISOString()
+    });
+  } catch (error) {
+    console.error('Failed to process logs:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to process logs' 
+    });
+  }
+});
+
+// GET /api/logs - Retrieve logs (for debugging/monitoring)
+router.get('/logs', async (req: any, res: any) => {
+  try {
+    const { date, level, limit = 100 } = req.query;
+    const logsDir = path.join(__dirname, '../../logs');
+    
+    if (!fs.existsSync(logsDir)) {
+      return res.json({ 
+        success: true, 
+        data: [],
+        message: 'No logs directory found' 
+      });
+    }
+    
+    // Get log files
+    const logFiles = fs.readdirSync(logsDir)
+      .filter(file => file.startsWith('production-') && file.endsWith('.json'))
+      .sort()
+      .reverse(); // Most recent first
+    
+    let allLogs: any[] = [];
+    
+    // Read logs from files
+    for (const file of logFiles) {
+      const filePath = path.join(logsDir, file);
+      try {
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const logs = JSON.parse(fileContent);
+        allLogs = [...allLogs, ...logs];
+      } catch (parseError) {
+        console.warn(`Failed to parse log file ${file}:`, parseError);
+      }
+    }
+    
+    // Filter by date if specified
+    if (date) {
+      allLogs = allLogs.filter(log => 
+        log.timestamp.startsWith(date)
+      );
+    }
+    
+    // Filter by level if specified
+    if (level) {
+      allLogs = allLogs.filter(log => log.level === level);
+    }
+    
+    // Sort by timestamp (most recent first)
+    allLogs.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+    
+    // Apply limit
+    allLogs = allLogs.slice(0, parseInt(limit as string));
+    
+    res.json({ 
+      success: true, 
+      data: allLogs,
+      count: allLogs.length,
+      totalFiles: logFiles.length
+    });
+  } catch (error) {
+    console.error('Failed to retrieve logs:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Failed to retrieve logs' 
     });
   }
 });

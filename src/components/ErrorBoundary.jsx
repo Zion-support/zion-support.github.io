@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle, RefreshCw, Home, ArrowLeft, Bug, Shield, Zap } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import { logErrorToProduction } from '@/utils/productionLogger';
 
 function ErrorFallback({ error, resetError, retryCount = 0 }) {
     const navigate = useNavigate();
@@ -171,6 +172,11 @@ export function ErrorBoundary({ children, fallback, onError }) {
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
                 console.error('ErrorBoundary caught an error:', event.error);
+                logErrorToProduction('ErrorBoundary caught an error', event.error, {
+                    component: 'ErrorBoundary',
+                    errorType: 'unhandled_error',
+                    url: window.location.href
+                });
             }
         };
 
@@ -183,6 +189,11 @@ export function ErrorBoundary({ children, fallback, onError }) {
             // Log error to console in development
             if (process.env.NODE_ENV === 'development') {
                 console.error('ErrorBoundary caught an unhandled rejection:', event.reason);
+                logErrorToProduction('ErrorBoundary caught an unhandled rejection', event.reason, {
+                    component: 'ErrorBoundary',
+                    errorType: 'unhandled_rejection',
+                    url: window.location.href
+                });
             }
         };
 
@@ -224,6 +235,11 @@ export function useErrorHandler() {
     const handleError = (error) => {
         setError(error);
         console.error('useErrorHandler caught an error:', error);
+        logErrorToProduction('useErrorHandler caught an error', error, {
+            component: 'useErrorHandler',
+            errorType: 'handled_error',
+            url: window.location.href
+        });
     };
 
     const clearError = () => {

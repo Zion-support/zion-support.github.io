@@ -12,6 +12,7 @@ import { PromotionalBanner } from './components/PromotionalBanner';
 import { NewContentPromotionalBanner } from './components/NewContentPromotionalBanner';
 // Removed direct import to avoid name collision with lazy import below
 import { ServicesHighlight } from './components/ServicesHighlight';
+import { LoggingTest } from './components/LoggingTest';
 
 // Lazy load pages - only import existing ones
 const Home = React.lazy(() => import('./pages/EnhancedHome'));
@@ -187,6 +188,7 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/marketplace" element={<Marketplace />} />
+                <Route path="/logging-test" element={<LoggingTest />} />
                 
                 {/* New routes for missing pages */}
                 <Route path="/api-docs" element={<APIDocumentation />} />

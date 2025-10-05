@@ -115,6 +115,13 @@ export default defineConfig(({ command, mode }) => {
       hmr: {
         overlay: false,
       },
+      proxy: {
+        '/api': {
+          target: 'http://localhost:5000',
+          changeOrigin: true,
+          secure: false,
+        },
+      },
     },
     preview: {
       port: 4173,
