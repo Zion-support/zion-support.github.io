@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
+=======
+<<<<<<< HEAD
+import React from 'react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -36,6 +41,7 @@ const EnhancedContactForm: React.FC = () => {
   };
 
   return (
+<<<<<<< HEAD
     <div className="max-w-2xl mx-auto">
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -88,12 +94,75 @@ const EnhancedContactForm: React.FC = () => {
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
             Message *
           </label>
+=======
+    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold mb-4">
+          Enhanced Contact Form
+        </h2>
+        <p className="text-lg mb-6">
+          This component is being restored. Please check back later for full functionality.
+        </p>
+      </div>
+=======
+import React, { useState } from 'react';
+
+const EnhancedContactForm: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  return (
+    <div className="enhanced-contact-form">
+      <h2>Contact Us</h2>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+        </div>
+        <div>
+          <label htmlFor="message">Message:</label>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
           <textarea
             id="message"
             name="message"
             value={formData.message}
             onChange={handleChange}
             required
+<<<<<<< HEAD
             rows={6}
             className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-800 dark:text-white resize-vertical"
           />
@@ -123,8 +192,23 @@ const EnhancedContactForm: React.FC = () => {
           {isSubmitting ? 'Sending...' : 'Send Message'}
         </button>
       </form>
+=======
+          />
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedContactForm;
+=======
+<<<<<<< HEAD
+export default EnhancedContactForm;
+=======
+export default EnhancedContactForm;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245

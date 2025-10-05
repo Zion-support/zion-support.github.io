@@ -2,6 +2,10 @@ import React from 'react';
 
 const BreakthroughContent2026Banner: React.FC = () => {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
     <div className='bg-gradient-to-r from-violet-900/40 to-indigo-900/40 border-y border-violet-500/20 py-16'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-12'>

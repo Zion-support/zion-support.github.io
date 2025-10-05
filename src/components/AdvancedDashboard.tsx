@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
@@ -7,6 +8,8 @@ import { enhancedAccessibility } from '../utils/enhancedAccessibility';
 import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 
 interface DashboardData {
   analytics: {
@@ -42,6 +45,9 @@ const AdvancedDashboard: React.FC = () => {
 
   const updateData = () => {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
     // Mock data for demonstration
     const mockData: DashboardData = {
       analytics: {
@@ -60,6 +66,7 @@ const AdvancedDashboard: React.FC = () => {
     };
     
     setData(mockData);
+<<<<<<< HEAD
 =======
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
@@ -148,6 +155,10 @@ const AdvancedDashboard: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
   };
 
+=======
+  };
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
   if (!isOpen) {
     return (
       <button
@@ -176,6 +187,7 @@ const AdvancedDashboard: React.FC = () => {
             </svg>
           </button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         
@@ -322,6 +334,8 @@ const AdvancedDashboard: React.FC = () => {
             </div>
           )}
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-50 p-4 rounded-lg">
@@ -334,6 +348,7 @@ const AdvancedDashboard: React.FC = () => {
               </div>
             )}
           </div>
+        </div>
 
           <div className="bg-gray-50 p-4 rounded-lg">
             <h3 className="text-lg font-semibold mb-2">Performance</h3>
@@ -345,17 +360,99 @@ const AdvancedDashboard: React.FC = () => {
             )}
           </div>
 
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Security</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Threats Blocked: {data.security.threatsBlocked}</p>
-                <p>Vulnerabilities: {data.security.vulnerabilities}</p>
+        <div className="flex space-x-1 mb-6">
+          {["overview", "analytics", "performance", "security"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 rounded ${
+                activeTab === tab
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
+        </div>
+
+        {data && (
+          <div className="space-y-6">
+            {activeTab === "overview" && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-800">Analytics</h3>
+                  <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
+                  <p className="text-sm text-blue-600">Page Views</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-800">Performance</h3>
+                  <p className="text-2xl font-bold text-green-600">{formatDuration(data.performance.loadTime)}</p>
+                  <p className="text-sm text-green-600">Load Time</p>
+                </div>
+                <div className="bg-red-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-red-800">Security</h3>
+                  <p className="text-2xl font-bold text-red-600">{data.security.threatsBlocked}</p>
+                  <p className="text-sm text-red-600">Threats Blocked</p>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "analytics" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Page Views</h3>
+                    <p className="text-3xl font-bold text-blue-600">{data.analytics.pageViews}</p>
+                  </div>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Sessions</h3>
+                    <p className="text-3xl font-bold text-green-600">{data.analytics.sessions}</p>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border rounded-lg">
+                  <h3 className="text-lg font-semibold mb-2">Bounce Rate</h3>
+                  <p className="text-3xl font-bold text-orange-600">{(data.analytics.bounceRate * 100).toFixed(1)}%</p>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "performance" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Load Time</h3>
+                    <p className="text-3xl font-bold text-blue-600">{formatDuration(data.performance.loadTime)}</p>
+                  </div>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Response Time</h3>
+                    <p className="text-3xl font-bold text-green-600">{formatDuration(data.performance.responseTime)}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "security" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Threats Blocked</h3>
+                    <p className="text-3xl font-bold text-red-600">{data.security.threatsBlocked}</p>
+                  </div>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Vulnerabilities</h3>
+                    <p className="text-3xl font-bold text-orange-600">{data.security.vulnerabilities}</p>
+                  </div>
+                </div>
               </div>
             )}
           </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-5246
         </div>
+=======
+        )}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
       </div>
     </div>
   );

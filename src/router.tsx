@@ -25,6 +25,10 @@ const AppRouter: React.FC = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+<<<<<<< HEAD
+=======
+          <Route path="/team" element={<Team />} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
         </Routes>
       </Suspense>
     </Router>

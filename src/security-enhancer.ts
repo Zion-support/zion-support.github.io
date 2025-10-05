@@ -15,6 +15,7 @@ class SecurityEnhancer {
     if (this.isInitialized) {
       return;
     }
+
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
@@ -40,12 +41,19 @@ class SecurityEnhancer {
   }
 
   private setupXSSProtection(): void {
+<<<<<<< HEAD
     if (typeof document !== 'undefined') {
       const meta = document.createElement('meta');
       meta.httpEquiv = 'X-Content-Type-Options';
       meta.content = 'nosniff';
       document.head.appendChild(meta);
     }
+=======
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
   }
 
   private setupSecurityHeaders(): void {

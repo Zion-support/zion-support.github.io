@@ -47,8 +47,13 @@ jest.mock('react-router-dom', () => ({
 }));
 
 // Mock lucide-react icons
+<<<<<<< HEAD
 const mockIcon = (name: string) => `[${name}]`;
+=======
+const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 
+// Mock lucide-react icons
 jest.mock('lucide-react', () => {
   return {
     Menu: () => mockIcon('menu-icon'),
@@ -267,6 +272,25 @@ jest.mock('lucide-react', () => {
     Hourglass: () => mockIcon('hourglass-icon'),
   };
 });
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock fetch
+global.fetch = jest.fn();
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;

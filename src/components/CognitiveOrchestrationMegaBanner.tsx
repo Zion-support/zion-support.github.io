@@ -2,6 +2,10 @@ import React from 'react';
 
 const CognitiveOrchestrationMegaBanner: React.FC = () => {
   return (
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
     <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-rose-900/40 border-y border-purple-500/20 py-20'>
       <div className='container mx-auto px-6'>
         <div className='text-center mb-16'>

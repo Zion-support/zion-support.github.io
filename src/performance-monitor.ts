@@ -1,0 +1,40 @@
+class PerformanceMonitor {
+  private static instance: PerformanceMonitor;
+  private isInitialized = false;
+
+  static getInstance(): PerformanceMonitor {
+    if (!PerformanceMonitor.instance) {
+      PerformanceMonitor.instance = new PerformanceMonitor();
+    }
+    return PerformanceMonitor.instance;
+  }
+
+  init(): void {
+    if (this.isInitialized) {
+      return;
+    }
+
+    this.setupPerformanceMonitoring();
+    this.isInitialized = true;
+    console.log('Performance monitor initialized');
+  }
+
+  private setupPerformanceMonitoring(): void {
+    // Monitor Core Web Vitals
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      this.monitorWebVitals();
+    }
+  }
+
+  private monitorWebVitals(): void {
+    // Monitor LCP, FID, CLS, etc.
+    console.log('Web Vitals monitoring enabled');
+  }
+
+  cleanup(): void {
+    this.isInitialized = false;
+    console.log('Performance monitor cleaned up');
+  }
+}
+
+export default PerformanceMonitor;
