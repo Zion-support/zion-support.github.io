@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 
@@ -70,6 +71,8 @@ const January2026ContentShowcaseBanner: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8245
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
 import { Sparkles, TrendingUp, Zap, ArrowRight, Brain, Atom, Cpu } from 'lucide-react';
 
 const January2026ContentShowcaseBanner: React.FC = () => {
@@ -195,8 +198,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               className='group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20'
               style={{ animationDelay: `${index * 200}ms` }}
             >
-              {/* Card glow effect */}
-              <div className='absolute inset-0 bg-gradient-to-br from-purple-500/0 via-cyan-500/0 to-indigo-500/0 group-hover:from-purple-500/10 group-hover:via-cyan-500/10 group-hover:to-indigo-500/10 transition-all duration-500'></div>
               <div className='relative p-8'>
                 {/* Icon & Badges */}
                 <div className='flex items-start justify-between mb-6'>
@@ -347,12 +348,16 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default January2026ContentShowcaseBanner;
@@ -366,3 +371,6 @@ export default January2026ContentShowcaseBanner;
 =======
 export default January2026ContentShowcaseBanner;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+export default January2026ContentShowcaseBanner;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61

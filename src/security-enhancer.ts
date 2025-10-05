@@ -10,6 +10,9 @@ class SecurityEnhancer {
     }
     return SecurityEnhancer.instance;
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
   }
 
   init(): void {
@@ -18,6 +21,7 @@ class SecurityEnhancer {
     }
 
     this.setupCSP();
+<<<<<<< HEAD
 <<<<<<< HEAD
     this.setupSecurityHeaders();
     this.enableHTTPSRedirect();
@@ -31,10 +35,17 @@ class SecurityEnhancer {
     
     this.isInitialized = true;
 <<<<<<< HEAD
+=======
+    this.setupSecurityHeaders();
+    this.setupXSSProtection();
+    
+    this.isInitialized = true;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
     console.log('Security enhancer initialized');
   }
 
   private setupCSP(): void {
+<<<<<<< HEAD
     if (typeof document !== 'undefined') {
       const meta = document.createElement('meta');
       meta.httpEquiv = 'Content-Security-Policy';
@@ -86,12 +97,15 @@ class SecurityEnhancer {
   }
 
   private setupCSP(): void {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
     document.head.appendChild(meta);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
   cleanup(): void {
@@ -107,11 +121,22 @@ class SecurityEnhancer {
   private enableHTTPSRedirect(): void {
     // Enable HTTPS redirect
     console.log('HTTPS redirect enabled');
+=======
+  private setupSecurityHeaders(): void {
+    // Additional security headers would be set by the server
+    console.log('Security headers configured');
+  }
+
+  private setupXSSProtection(): void {
+    // XSS protection measures
+    console.log('XSS protection enabled');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
   }
 
   cleanup(): void {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');
+<<<<<<< HEAD
 =======
   private setupHTTPSRedirect(): void {
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
@@ -126,6 +151,8 @@ class SecurityEnhancer {
     document.head.appendChild(meta);
 >>>>>>> origin/main
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
   }
 }
 

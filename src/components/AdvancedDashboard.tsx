@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,6 +9,9 @@ import React, { useState, useEffect } from "react";
 =======
 import React, { useState, useEffect } from "react";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import { enhancedAccessibility } from '../utils/enhancedAccessibility';
@@ -112,9 +116,12 @@ const AdvancedDashboard: React.FC = () => {
   const [data, setData] = useState<DashboardData | null>(null);
   const [activeTab, setActiveTab] = useState("overview");
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
 
   useEffect(() => {
     if (isOpen) {
@@ -204,12 +211,17 @@ const AdvancedDashboard: React.FC = () => {
 
     setData({
 <<<<<<< HEAD
+<<<<<<< HEAD
       analytics: analyticsData || {},
       cache: cache || {},
 =======
       analytics: analyticsData || {} as AnalyticsData,
       cache: cache || {} as CacheData,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+      analytics: analyticsData || {},
+      cache: cache || {},
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
       performance: {
         memoryUsage:
           (
@@ -224,6 +236,7 @@ const AdvancedDashboard: React.FC = () => {
             }
           ).memory?.jsHeapSizeLimit || 0
       },
+<<<<<<< HEAD
 <<<<<<< HEAD
       security: {
         vulnerabilities: 0,
@@ -270,12 +283,27 @@ const AdvancedDashboard: React.FC = () => {
       security: { status: "Active" },
       ux: { status: "Optimized" }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+      security: {
+        cspViolations: 0,
+        xssAttempts: 0,
+        csrfAttempts: 0
+      },
+      ux: {
+        loadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        cumulativeLayoutShift: 0,
+        firstInputDelay: 0
+      }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
     });
   };
 
   const formatBytes = (bytes: number): string => {
     if (bytes === 0) return "0 Bytes";
     const k = 1024;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       const sizes = ["Bytes", "KB", "MB", "GB"];
@@ -291,6 +319,11 @@ const AdvancedDashboard: React.FC = () => {
     const i = Math.floor(Math.log(bytes) / Math.log(k));
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+    const sizes = ["Bytes", "KB", "MB", "GB"];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
   };
 
   const formatDuration = (ms: number): string => {
@@ -435,9 +468,12 @@ const AdvancedDashboard: React.FC = () => {
               { id: "security", label: "Security" },
               { id: "accessibility", label: "Accessibility" }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
             ].map((tab) => (
               <button
                 key={tab.id}
@@ -462,6 +498,7 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
                 <div className="space-y-1 text-sm">
                   <div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
                       Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
@@ -572,6 +609,9 @@ const AdvancedDashboard: React.FC = () => {
                 <h3 className="font-semibold text-pink-900 mb-2">Accessibility</h3>
 =======
                     Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
+=======
+                      Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
                   </div>
                   <div>
                     Duration:{" "}

@@ -24,7 +24,11 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
+<<<<<<< HEAD
       icon: '🚀',
+=======
+      icon: <TrendingUp className="w-8 h-8" />,
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
       result: "300% Revenue Growth",
         description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [

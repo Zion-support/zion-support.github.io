@@ -3,10 +3,38 @@ import React from 'react';
 
 const October2025SupplyChainRevolutionBanner: React.FC = () => {
   return (
+<<<<<<< HEAD:src/components/October2025SupplyChainRevolutionBanner.tsx
     <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">
           October2025 Supply Chain Revolution Banner
+=======
+    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-16 px-6 rounded-3xl shadow-2xl my-12 border-4 border-emerald-400/50">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-teal-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="container mx-auto relative z-10">
+        {/* Breaking News Badge */}
+        <div className="flex items-center justify-center gap-3 mb-6">
+          <div className="flex items-center gap-2 bg-red-500/20 backdrop-blur-sm border-2 border-red-400 rounded-full px-6 py-2 animate-pulse">
+            <span className="relative flex h-3 w-3">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+            </span>
+            <span className="text-red-200 font-bold text-sm uppercase tracking-wider">🔥 Breaking News - October 1, 2025</span>
+          </div>
+        </div>
+
+        {/* Main Headline */}
+        <h2 className="text-5xl md:text-6xl font-extrabold text-center mb-6 text-white leading-tight">
+          <span className="bg-gradient-to-r from-emerald-300 via-teal-200 to-cyan-300 bg-clip-text text-transparent animate-gradient">
+            Autonomous Supply Chain Revolution
+          </span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61:src/components/October2025SupplyChainRevolutionBanner.tsx.disabled
         </h2>
         <p className="text-lg mb-6">
           This component is being restored. Please check back later for full functionality.
@@ -411,6 +439,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
           <div className="flex flex-wrap items-center justify-center gap-6 text-emerald-200 text-sm">
             <div className="flex items-center gap-2">
               <CheckCircleIcon className="w-5 h-5 text-green-400" />
+<<<<<<< HEAD:src/components/October2025SupplyChainRevolutionBanner.tsx
               <span><strong>15+</strong> Fortune 500 Clients</span>
             </div>
             <div className="flex items-center gap-2">
@@ -428,6 +457,25 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
             <div className="flex items-center gap-2">
               <CheckCircleIcon className="w-5 h-5 text-green-400" />
               <span><strong>SOC 2 Type II</strong> Certified</span>
+=======
+                <span><strong>15+</strong> Fortune 500 Clients</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>$20B+</strong> Total Value Created</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>99.97%</strong> Platform Uptime</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>0</strong> Security Breaches</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <CheckCircleIcon className="w-5 h-5 text-green-400" />
+                <span><strong>SOC 2 Type II</strong> Certified</span>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61:src/components/October2025SupplyChainRevolutionBanner.tsx.disabled
             </div>
           </div>
         </div>

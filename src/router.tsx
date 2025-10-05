@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -26,10 +27,19 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 =======
 >>>>>>> origin/main
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+import React, { Suspense } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Services from './pages/Services';
+import About from './pages/About';
+import Contact from './pages/Contact';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
 
 const AppRouter: React.FC = () => {
   return (
     <Router>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -64,6 +74,14 @@ const AppRouter: React.FC = () => {
 =======
 >>>>>>> origin/main
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+=======
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
         </Routes>
       </Suspense>
     </Router>

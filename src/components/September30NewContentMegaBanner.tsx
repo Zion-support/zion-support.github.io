@@ -86,8 +86,13 @@ const September30NewContentMegaBanner = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
+<<<<<<< HEAD
                   <article.icon className="w-6 h-6" />
                 </div>
+=======
+                    <article.icon className="w-6 h-6" />
+                  </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
