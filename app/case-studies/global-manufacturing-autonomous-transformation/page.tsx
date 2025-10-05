@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { ArrowLeft, Clock, Users, Target, Award, Zap, CheckCircle, TrendingUp, BarChart3, ArrowLeft, CheckCircle, ArrowLeft, ArrowLeft } from 'lucide-react';
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

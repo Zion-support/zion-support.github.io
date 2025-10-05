@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
+
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
   description: 'Master the art of AI implementation with our comprehensive 2026 roadmap. From strategy development to full-scale deployment, learn how to successfully transform your enterprise.',
