@@ -1,11 +1,7 @@
-import React from 'react';
-
-interface SearchComponentProps {
-  className?: string;
+import React from 'react'
+interface SearchComponentProps {className?: string}
 }
-
-export default function SearchComponent({
-  className = '',
+export default function SearchComponent({className = ''}
 }: SearchComponentProps) {
   return (
     <div className={`bg-blue-100 p-4 rounded-lg ${className}`}>
@@ -14,3 +10,4 @@ export default function SearchComponent({
     </div>
   );
 }
+import React from 'react' interface SearchComponentProps {className?: string} } ' export default function SearchComponent({ className = '' }: SearchComponentProps) { return ( <div className={`bg-blue-100 p-4 rounded-lg ${className}`}> <h3 className="text-lg font-semibold text-blue-800" >SearchComponent</h3> <p className="text-blue-600" >This component is under development.</p> </div> ); }'

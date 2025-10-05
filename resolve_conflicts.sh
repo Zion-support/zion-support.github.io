@@ -12,18 +12,14 @@ resolve_file() {
     
     # Use a simple strategy: keep the HEAD version for most conflicts
     # Remove conflict markers and keep the HEAD content
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> [a-f0-9]*$/d' "$file"
+    sed -i '/^
     
     # Clean up any remaining conflict markers
-    sed -i '/^<<<<<<< HEAD$/d' "$file"
-    sed -i '/^=======$/d' "$file"
-    sed -i '/^>>>>>>> [a-f0-9]*$/d' "$file"
+    sed -i '/^
 }
 
 # Find all files with merge conflicts
-conflict_files=$(find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
-
+conflict_files=$(find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "
 echo "Found $(echo "$conflict_files" | wc -l) files with conflicts"
 
 # Process each file

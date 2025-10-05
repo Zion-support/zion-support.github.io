@@ -4,8 +4,7 @@
 set -e
 
 echo "🚀 Starting Master Execution Script for Complete Merge Resolution and Improvements"
-echo "=================================================================================="
-
+echo "
 # Function to safely run commands
 safe_run() {
     echo "Running: $*"

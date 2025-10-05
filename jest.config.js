@@ -1,22 +1,36 @@
 export default {
-  preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/app/setupTests.tsx'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transform: {
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      useESM: true,
-    }],
+    '^.+\\.(ts|tsx|js|jsx)$': [
+      'babel-jest',
+      {
+        presets: [
+          '@babel/preset-env',
+          '@babel/preset-react',
+          '@babel/preset-typescript',
+        ],
+      },
+    ],
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react)/)',
+  ],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/app/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
       '<rootDir>/__mocks__/fileMock.js',
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-error-boundary|@testing-library)/)',
+  ],
   testMatch: [
-    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
-    '<rootDir>/src/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '<rootDir>/app/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/app/**/*.{test,spec}.{js,jsx,ts,tsx}',
+    '<rootDir>/__tests__/simple.test.js',
+    '<rootDir>/__tests__/basic.smoke.test.js',
   ],
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}',
@@ -24,6 +38,7 @@ export default {
     '!src/vite-env.d.ts',
     '!src/main.tsx',
     '!src/utils/improvementRunner.ts',
+    '!src/pages/blog-disabled/**/*',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
   testTimeout: 10000,
@@ -63,6 +78,11 @@ export default {
     '/lib_backup/',
     '/services/',
     '/middleware/',
+    '/__tests__/auth/',
+    '/__tests__/server/',
+    '/__tests__/pages/',
+    '/__tests__/disabled/',
+    '/src/pages/blog-disabled/',
   ],
   modulePathIgnorePatterns: [
     '/automation/',

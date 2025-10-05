@@ -4,77 +4,54 @@ import fs from 'fs';
 import path from 'path';
 import { glob } from 'glob';
 
-// Find all blog page files with JSX errors
-const blogFiles = await glob('app/blog/**/page.tsx');
+// Find all TypeScript/JSX files in src/components
+const files = await glob('src/components/**/*.{tsx,ts}');
 
-console.log(`Found ${blogFiles.length} blog files to check...`);
+console.log(`Found ${files.length} files to check...`);
 
-let fixedCount = 0;
+let fixedFiles = 0;
 
-for (const filePath of blogFiles) {
+for (const filePath of files) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
 
-    // Fix common JSX issues
+    // Fix orphaned /> tags (standalone /> on their own lines)
+    content = content.replace(/^\s*\/>\s*$/gm, '');
 
-    // 1. Fix unterminated string literals (remove stray quotes)
-    content = content.replace(/"[^"]*$/gm, match => {
-      if (match.endsWith('"') && match.length > 1) {
-        return match;
-      }
-      return match.replace(/"[^"]*$/, '');
+    // Fix unterminated regular expression literals
+    // Look for patterns like /pattern without closing /
+    content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
+      // If it looks like a regex but isn't closed, it's probably a string
+      return `${prop}: '${match.split(':')[1].trim().substring(1)}'`;
     });
 
-    // 2. Fix JSX expressions without parent element
-    // Look for patterns like: return (\n    <div></div>\n      <div></div>
-    content = content.replace(
-      /return\s*\(\s*\n\s*<[^>]+><\/[^>]+>\s*\n\s*<[^>]+>/g,
-      match => {
-        return match.replace(
-          /return\s*\(\s*\n\s*/,
-          'return (\n    <div className="container">\n      ',
-        );
-      },
-    );
+    // Fix JSX attributes that look like regex but are actually strings
+    content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {
+      const value = match
+        .match(/={\s*\/[^\/\n]*$/)[0]
+        .replace(/={\s*\//, '')
+        .trim();
+      return `={'${value}'}`;
+    });
 
-    // 3. Fix missing closing tags by ensuring proper nesting
-    // This is a simplified approach - wrap everything in a main container if needed
-    if (
-      content.includes('export default function') &&
-      !content.includes('<div className="container">')
-    ) {
-      content = content.replace(
-        /(export default function[^{]*\{\s*return\s*\(\s*)(<[^>]+>)/,
-        '$1<div className="container">\n      $2',
-      );
+    // Fix common patterns where /> appears in wrong places
+    content = content.replace(/\s*\/>\s*<span/g, ' <span');
+    content = content.replace(/\s*\/>\s*<\/span>/g, '</span>');
 
-      // Add closing div before the last closing parenthesis
-      const lastReturnIndex = content.lastIndexOf('return (');
-      if (lastReturnIndex !== -1) {
-        const closingParenIndex = content.lastIndexOf(');');
-        if (closingParenIndex !== -1) {
-          content =
-            content.substring(0, closingParenIndex) + '\n    </div>\n  );';
-        }
-      }
-    }
+    // Fix patterns where /> appears before closing tags
+    content = content.replace(/\s*\/>\s*<\/div>/g, '</div>');
+    content = content.replace(/\s*\/>\s*<\/a>/g, '</a>');
+    content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>');
 
-    // 4. Fix unexpected tokens like > in JSX
-    content = content.replace(/([^=])>([^<])/g, '$1&gt;$2');
-
-    // 5. Fix object literal syntax errors (= instead of :)
-    content = content.replace(/(\w+)=(\w+)/g, '$1: $2');
-
-    // Only write if content changed
     if (content !== originalContent) {
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed: ${filePath}`);
-      fixedCount++;
+      fixedFiles++;
     }
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`\nFixed ${fixedFiles} files.`);
