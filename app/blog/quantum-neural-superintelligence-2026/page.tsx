@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'Quantum AI, Neural Networks, Superintelligence, Quantum Computing, Enterprise AI, AI 2026, Quantum Neural',
   openGraph: {
     title: 'Quantum Neural Superintelligence 2026',
-    description: 'Revolutionary AI system combining quantum computing with neural networks for superintelligent capabilities.',
-    type: 'article',
-    publishedTime: '2026-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary AI system combining quantum computing with neural networks for superintelligent capabilities.',
+  type: 'article',
+  publishedTime: '2026-01-20T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function QuantumNeuralSuperintelligencePage() {

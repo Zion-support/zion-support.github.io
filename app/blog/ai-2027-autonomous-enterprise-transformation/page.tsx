@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2027, autonomous enterprise, business transformation, AI-driven decisions, self-governing business, operational autonomy',
   openGraph: {
     title: 'AI 2027: Autonomous Enterprise Transformation',
-    description: 'Revolutionary autonomous enterprise transformation reshaping business operations',
-    type: 'article',
-    publishedTime: '2027-01-10T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary autonomous enterprise transformation reshaping business operations',
+  type: 'article',
+  publishedTime: '2027-01-10T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2027AutonomousEnterpriseTransformation() {

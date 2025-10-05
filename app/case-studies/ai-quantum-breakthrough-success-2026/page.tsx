@@ -6,18 +6,18 @@ export const metadata = {
   keywords: 'quantum AI ROI, quantum computing success story, enterprise quantum AI, AI transformation case study, quantum breakthrough 2026',
   openGraph: {
     title: 'AI Quantum Breakthrough Success 2026: $500M ROI Case Study',
-    description: 'Fortune 500 company achieves $500M ROI with revolutionary quantum-enhanced AI systems.',
-    type: 'article',
-    url: 'https://ziontechgroup.com/case-studies/ai-quantum-breakthrough-success-2026',
-    images: [
+  description: 'Fortune 500 company achieves $500M ROI with revolutionary quantum-enhanced AI systems.',
+  type: 'article',
+  url: 'https://ziontechgroup.com/case-studies/ai-quantum-breakthrough-success-2026',
+  images: [
       {
         url: '/og-quantum-success-2026.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'AI Quantum Breakthrough Success 2026',
+  width: 1200,
+  height: 630,
+  alt: 'AI Quantum Breakthrough Success 2026'
       },
-    ],
-  },
+    ]
+  }
 };
 
 export default function AIQuantumBreakthroughSuccess2026() {

@@ -7,18 +7,18 @@ export const metadata = {
   authors: [{ name: 'Zion Tech Group' }],
   openGraph: {
     title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
-    description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
-    url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-business-intelligence-breakthrough',
-    siteName: 'Zion Tech Group',
-    type: 'article',
-    publishedTime: '2026-01-30T00:00:00Z',
-    authors: ['Zion Tech Group'],
+  description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
+  url: 'https://ziontechgroup.com/blog/ai-2026-autonomous-business-intelligence-breakthrough',
+  siteName: 'Zion Tech Group',
+  type: 'article',
+  publishedTime: '2026-01-30T00:00:00Z',
+  authors: ['Zion Tech Group']
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
-    description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.',
-  },
+  title: 'AI 2026 Autonomous Business Intelligence Breakthrough',
+  description: 'Revolutionary autonomous BI systems delivering 300% ROI improvements and automated decision-making.'
+  }
 };
 
 export default function AutonomousBusinessIntelligenceBreakthrough() {

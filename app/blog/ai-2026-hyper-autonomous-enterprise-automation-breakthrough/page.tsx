@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI automation 2026, hyper-autonomous, 99.9% automation, $300B value, Fortune 500, enterprise automation',
   openGraph: {
     title: 'AI 2026 Hyper-Autonomous Enterprise Automation: 99.9% Automation & $300B Value Generation',
-    description: 'Discover the revolutionary hyper-autonomous enterprise automation breakthrough achieving 99.9% automation rate and $300B+ value generation for Fortune 500 companies.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Discover the revolutionary hyper-autonomous enterprise automation breakthrough achieving 99.9% automation rate and $300B+ value generation for Fortune 500 companies.',
+  type: 'article',
+  publishedTime: '2026-01-15T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026HyperAutonomousEnterpriseAutomationBreakthrough() {

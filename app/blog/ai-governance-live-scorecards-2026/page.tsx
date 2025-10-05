@@ -6,11 +6,11 @@ export const metadata = {
     'Implement CI policy tests and live scorecards for latency, cost, and correctness to stop regressions pre-release.',
   openGraph: {
     title: 'AI Governance Live Scorecards 2026',
-    description:
+  description:
       'CI policy tests + live scorecards for latency, cost, and quality. Prevent regressions before they ship.',
-    type: 'article',
-    publishedTime: '2026-01-30T00:00:00Z',
-  },
+  type: 'article',
+  publishedTime: '2026-01-30T00:00:00Z'
+  }
 };
 
 export default function AIGovernanceLiveScorecards2026() {

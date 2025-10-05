@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: 'AI 2026: Live Guardrails Blueprint',
-  description: 'Budgets, policy gates, KPI‑linked canaries, and instant rollback for safe autonomy.',
+  description: 'Budgets, policy gates, KPI‑linked canaries, and instant rollback for safe autonomy.'
 };
 
 export default function Page() {

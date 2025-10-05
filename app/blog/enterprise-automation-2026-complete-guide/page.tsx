@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'enterprise automation, AI 2026, meta-cognitive AI, autonomous operations, business process automation, Zion Tech Group',
   openGraph: {
     title: 'Enterprise Automation 2026: Complete Implementation Guide',
-    description: 'Master enterprise automation with our comprehensive 2026 guide featuring meta-cognitive AI and autonomous operations',
-    type: 'article',
-    publishedTime: '2026-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Master enterprise automation with our comprehensive 2026 guide featuring meta-cognitive AI and autonomous operations',
+  type: 'article',
+  publishedTime: '2026-01-20T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function EnterpriseAutomation2026Guide() {

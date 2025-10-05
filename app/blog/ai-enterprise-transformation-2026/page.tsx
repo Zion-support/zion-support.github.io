@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'AI transformation, enterprise AI, digital transformation, business intelligence, AI strategy',
   openGraph: {
     title: 'AI Enterprise Transformation: Complete Digital Overhaul Guide 2026',
-    description: 'Master the art of AI-driven enterprise transformation with our comprehensive guide.',
-    type: 'article',
-    publishedTime: '2025-01-30T00:00:00.000Z',
-  },
+  description: 'Master the art of AI-driven enterprise transformation with our comprehensive guide.',
+  type: 'article',
+  publishedTime: '2025-01-30T00:00:00.000Z'
+  }
 };
 
 export default function AIEnterpriseTransformation2026() {
@@ -84,7 +84,8 @@ export default function AIEnterpriseTransformation2026() {
             <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl p-6 mb-8">
               <h4 className="text-xl font-bold text-white mb-3">Case Study: Fortune 100 Manufacturing</h4>
               <p className="text-gray-300 mb-4">
-                A global manufacturing leader transformed their operations with our AI strategy, achieving:
+                A global manufacturing leader transformed their operations with our AI strategy,
+  achieving:
               </p>
               <ul className="text-gray-300 space-y-2">
                 <li>• 60% reduction in production costs</li>

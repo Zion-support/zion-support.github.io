@@ -6,10 +6,10 @@ export const metadata: Metadata = {
   keywords: 'quantum consciousness, enterprise success, $3.2B value, AI transformation, case study',
   openGraph: {
     title: 'Quantum Consciousness Enterprise Success: $3.2B Value Generation',
-    description: 'How a Fortune 500 company achieved $3.2 billion in value with quantum consciousness AI systems',
-    type: 'article',
-    publishedTime: '2026-05-01T00:00:00.000Z',
-  },
+  description: 'How a Fortune 500 company achieved $3.2 billion in value with quantum consciousness AI systems',
+  type: 'article',
+  publishedTime: '2026-05-01T00:00:00.000Z'
+  }
 };
 
 export default function QuantumConsciousnessEnterpriseSuccess() {

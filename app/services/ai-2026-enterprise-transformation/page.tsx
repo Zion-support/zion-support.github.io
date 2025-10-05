@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   keywords: 'AI 2026 enterprise transformation, AI implementation, enterprise AI services, AI ROI, AI automation, AI consulting',
   openGraph: {
     title: 'AI 2026 Enterprise Transformation Services',
-    description: 'Comprehensive AI transformation services delivering 300%+ ROI and $50M+ annual savings',
-    type: 'website',
-  },
+  description: 'Comprehensive AI transformation services delivering 300%+ ROI and $50M+ annual savings',
+  type: 'website'
+  }
 };
 
 export default function AI2026EnterpriseTransformationPage() {

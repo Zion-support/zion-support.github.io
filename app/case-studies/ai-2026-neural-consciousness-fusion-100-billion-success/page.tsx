@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   keywords: 'AI success story, neural consciousness fusion, $100B ROI, Fortune 50, enterprise AI transformation, consciousness AI, neural networks',
   openGraph: {
     title: 'AI 2026 Neural Consciousness Fusion: $100B Success Story',
-    description: 'Fortune 50 company achieves $100B ROI through revolutionary neural consciousness fusion AI.',
-    type: 'article',
-  },
+  description: 'Fortune 50 company achieves $100B ROI through revolutionary neural consciousness fusion AI.',
+  type: 'article'
+  }
 };
 
 export default function NeuralConsciousnessFusionSuccess() {

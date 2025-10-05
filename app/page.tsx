@@ -22,33 +22,33 @@ export default function HomePage() {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Zion Tech Group',
-    description:
+  name: 'Zion Tech Group',
+  description:
       'Leading provider of AI-powered enterprise solutions and digital transformation services',
-    url: 'https://ziontechgroup.com',
-    logo: 'https://ziontechgroup.com/logo.png',
-    contactPoint: {
+  url: 'https://ziontechgroup.com',
+  logo: 'https://ziontechgroup.com/logo.png',
+  contactPoint: {
       '@type': 'ContactPoint',
-      telephone: '+1-302-464-0950',
-      contactType: 'customer service',
-      email: 'kleber@ziontechgroup.com',
+  telephone: '+1-302-464-0950',
+  contactType: 'customer service',
+  email: 'kleber@ziontechgroup.com'
     },
-    address: {
+  address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
-      addressLocality: 'Wilmington',
-      addressRegion: 'DE',
+  addressCountry: 'US',
+  addressLocality: 'Wilmington',
+  addressRegion: 'DE'
     },
-    sameAs: [
+  sameAs: [
       'https://linkedin.com/company/ziontechgroup',
       'https://twitter.com/ziontechgroup',
     ],
-    offers: {
+  offers: {
       '@type': 'Offer',
-      description: 'AI Enterprise Transformation Services',
-      price: '300% ROI Guaranteed',
-      priceCurrency: 'USD',
-    },
+  description: 'AI Enterprise Transformation Services',
+  price: '300% ROI Guaranteed',
+  priceCurrency: 'USD'
+    }
   };
 
   return (

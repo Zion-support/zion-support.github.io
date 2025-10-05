@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, neural architecture, quantum-neural fusion, meta-cognitive AI, enterprise automation, Zion Tech Group',
   openGraph: {
     title: 'AI 2026: Neural Architecture Revolution',
-    description: 'Revolutionary neural architecture breakthroughs transforming enterprise AI in 2026',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary neural architecture breakthroughs transforming enterprise AI in 2026',
+  type: 'article',
+  publishedTime: '2026-01-15T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AINeuralArchitectureRevolution2026() {

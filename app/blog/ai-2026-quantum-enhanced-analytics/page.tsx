@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'AI 2026, quantum analytics, quantum computing, data processing, quantum algorithms, enterprise analytics',
   openGraph: {
     title: 'AI 2026: Quantum-Enhanced Analytics Revolution',
-    description: 'Revolutionary quantum-enhanced analytics transforming data processing and insights',
-    type: 'article',
-    publishedTime: '2026-01-20T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Revolutionary quantum-enhanced analytics transforming data processing and insights',
+  type: 'article',
+  publishedTime: '2026-01-20T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026QuantumEnhancedAnalytics() {

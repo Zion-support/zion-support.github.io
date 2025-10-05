@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   keywords: ['Quantum AI', 'Enterprise Transformation', 'Quantum Computing', 'AI Optimization', '2026 Technology'],
   openGraph: {
     title: '⚛️ Quantum AI 2026: Enterprise Transformation Breakthrough',
-    description: 'Revolutionary Quantum AI delivering 1000x computational advantages and breakthrough optimization for enterprise transformation.',
-    type: 'article',
-    url: '/blog/quantum-ai-2026-enterprise-transformation',
+  description: 'Revolutionary Quantum AI delivering 1000x computational advantages and breakthrough optimization for enterprise transformation.',
+  type: 'article',
+  url: '/blog/quantum-ai-2026-enterprise-transformation'
   },
   alternates: {
-    canonical: '/blog/quantum-ai-2026-enterprise-transformation',
-  },
+    canonical: '/blog/quantum-ai-2026-enterprise-transformation'
+  }
 };
 
 export default function Page() {

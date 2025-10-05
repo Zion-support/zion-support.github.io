@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI breakthrough 2026, meta-cognitive AI, quantum neural networks, autonomous operations, enterprise AI, Zion Tech Group',
   openGraph: {
     title: 'AI 2026 Mega Breakthrough: Revolutionary January Innovations',
-    description: 'Explore the most significant AI breakthroughs of January 2026 with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations.',
-    type: 'article',
-    publishedTime: '2026-01-15T00:00:00Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'Explore the most significant AI breakthroughs of January 2026 with Meta-Cognitive AI, Quantum-Neural Networks, and Autonomous Operations.',
+  type: 'article',
+  publishedTime: '2026-01-15T00:00:00Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026MegaBreakthroughPage() {

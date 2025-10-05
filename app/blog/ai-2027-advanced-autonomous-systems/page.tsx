@@ -6,9 +6,9 @@ export const metadata = {
   keywords: 'AI 2027, autonomous systems, self-healing AI, enterprise automation, AI governance, autonomous operations',
   openGraph: {
     title: 'AI 2027: Advanced Autonomous Systems Revolution - Complete Enterprise Guide',
-    description: 'Discover the future of autonomous AI systems in 2027. Complete guide to self-governing, self-healing, and self-optimizing AI architectures.',
-    type: 'article',
-  },
+  description: 'Discover the future of autonomous AI systems in 2027. Complete guide to self-governing, self-healing, and self-optimizing AI architectures.',
+  type: 'article'
+  }
 };
 
 export default function AI2027AdvancedAutonomousSystems() {

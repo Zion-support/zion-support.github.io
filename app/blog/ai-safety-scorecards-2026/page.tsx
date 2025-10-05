@@ -2,7 +2,7 @@ import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Safety Scorecards (2026): Guardrails wired to KPIs',
-  description: 'Design and operate AI safety scorecards that connect SLIs to business KPIs with budgets, canaries, and instant rollback.',
+  description: 'Design and operate AI safety scorecards that connect SLIs to business KPIs with budgets, canaries, and instant rollback.'
 };
 
 export default function Page() {

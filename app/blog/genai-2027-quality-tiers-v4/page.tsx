@@ -2,7 +2,7 @@
 
 export const metadata = {
   title: 'GenAI 2027: Quality Tiers v4 — Stable UX Under Budget',
-  description: 'Deterministic tiering + semantic caches + eval gates to cut spend 40–70% without quality regressions.',
+  description: 'Deterministic tiering + semantic caches + eval gates to cut spend 40–70% without quality regressions.'
 };
 
 export default function Page() {

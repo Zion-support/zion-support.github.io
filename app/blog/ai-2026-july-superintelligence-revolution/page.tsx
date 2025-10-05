@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   keywords: 'AI superintelligence 2026, neural architecture, quantum consciousness, autonomous AI, enterprise AI, revolutionary technology',
   openGraph: {
     title: 'AI 2026 July Superintelligence Revolution: The Next Evolution',
-    description: 'The most advanced AI superintelligence breakthrough of 2026, delivering unprecedented performance and enterprise transformation.',
-    type: 'article',
-    publishedTime: '2026-07-01T00:00:00.000Z',
-    authors: ['Zion Tech Group'],
-  },
+  description: 'The most advanced AI superintelligence breakthrough of 2026, delivering unprecedented performance and enterprise transformation.',
+  type: 'article',
+  publishedTime: '2026-07-01T00:00:00.000Z',
+  authors: ['Zion Tech Group']
+  }
 };
 
 export default function AI2026JulySuperintelligenceRevolution() {
@@ -166,7 +166,8 @@ export default function AI2026JulySuperintelligenceRevolution() {
             
             <p className="text-lg text-gray-300 mb-6">
               This breakthrough represents just the beginning of what's possible with superintelligence. We're already 
-              working on the next generation of systems that will push the boundaries even further, including:
+              working on the next generation of systems that will push the boundaries even further,
+  including:
             </p>
 
             <ul className="space-y-4 text-gray-300 mb-8">

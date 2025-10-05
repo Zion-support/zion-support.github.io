@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: 'Autonomous Enterprise, Business Automation, AI Operations, Enterprise AI, Process Automation, Business Intelligence',
   openGraph: {
     title: 'Autonomous Enterprise Operations 2027: Complete Business Automation',
-    description: 'Achieve 99.9% automation rates with autonomous enterprise operations that eliminate manual processes',
-    type: 'article',
-    publishedTime: '2027-01-20T00:00:00.000Z',
-    authors: ['Zion Tech Group Enterprise Solutions Team'],
-  },
+  description: 'Achieve 99.9% automation rates with autonomous enterprise operations that eliminate manual processes',
+  type: 'article',
+  publishedTime: '2027-01-20T00:00:00.000Z',
+  authors: ['Zion Tech Group Enterprise Solutions Team']
+  }
 };
 
 export default function AutonomousEnterpriseOperations2027() {
