@@ -54,10 +54,12 @@ const October2025NewAutonomousSystemsBanner = () => {
                     <span className="text-blue-300 font-bold">89% Infrastructure Cost Reduction</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" <span className="text-purple-300 font-bold">$847M Annual Value Creation</span>
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
+                    <span className="text-purple-300 font-bold">$847M Annual Value Creation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+                    <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">
@@ -97,16 +99,20 @@ const October2025NewAutonomousSystemsBanner = () => {
                 </h3>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <span className="text-green-300 font-bold">99.2% Failure Prediction Accuracy</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                    <span className="text-green-300 font-bold">99.2% Failure Prediction Accuracy</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" <span className="text-cyan-300 font-bold">87% Reduction in Downtime</span>
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+                    <span className="text-cyan-300 font-bold">87% Reduction in Downtime</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" <span className="text-blue-300 font-bold">$127M Annual Value</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
+                    <span className="text-blue-300 font-bold">$127M Annual Value</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
+                    <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">

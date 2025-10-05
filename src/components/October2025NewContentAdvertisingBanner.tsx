@@ -49,19 +49,22 @@ export default function October2025NewContentAdvertisingBanner() {
             <div className="grid md:grid-cols-3 gap-6 text-left">
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-cyan-300">Autonomous Mesh Intelligence</h3>
+                  <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+                  <h3 className="text-xl font-bold text-cyan-300">Autonomous Mesh Intelligence</h3>
                 </div>
                 <p className="text-gray-300">Self-organizing distributed AI networks with unprecedented scalability</p>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-purple-300">Quantum-Neural Hybrid</h3>
+                  <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
+                  <h3 className="text-xl font-bold text-purple-300">Quantum-Neural Hybrid</h3>
                 </div>
                 <p className="text-gray-300">Revolutionary computing breakthrough for drug discovery and optimization</p>
               </div>
               <div>
                 <div className="flex items-center gap-2 mb-3">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <h3 className="text-xl font-bold text-green-300">Neural-Symbolic Reasoning</h3>
+                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                  <h3 className="text-xl font-bold text-green-300">Neural-Symbolic Reasoning</h3>
                 </div>
                 <p className="text-gray-300">Explainable AI with human-like logical reasoning capabilities</p>
               </div>
