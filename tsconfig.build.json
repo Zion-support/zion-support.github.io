@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "strict": false
+  },
+  "exclude": [
+    "src/pages/blog-disabled/**/*",
+    "app/blog",
+    "app/components",
+    "blog",
+    "components",
+    "src/components/**/*",
+    "src/pages/blog/**/*"
+  ]
+}

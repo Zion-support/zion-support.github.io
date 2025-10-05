@@ -1,17 +1,6 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark, TrendingUp, DollarSign, Target } from 'lucide-react';
-=======
-import ArrowLeft from 'lucide-react';
-import Clock from 'lucide-react';
-import User from 'lucide-react';
-import Calendar from 'lucide-react';
-import Share2 from 'lucide-react';
-import Bookmark from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Target from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+// @ts-ignore
+import { ArrowLeft, Calendar, Clock, User, DollarSign, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Cognitive Computing Success 2026: $25M Value Creation Case Study | Zion Tech Group',

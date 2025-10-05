@@ -1,16 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-// import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
-=======
-import Sparkles from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Rocket from 'lucide-react';
-import Shield from 'lucide-react';
-import Target from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+import { Sparkles } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -112,7 +101,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div  opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
                 {/* Icon & Badge */}
@@ -120,20 +109,20 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <div className="text-7xl group-hover:scale-110 transition-transform duration-300">
                     {content.icon}
                   </div>
-                  <div  text-white text-sm font-bold shadow-lg`}>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
                     {content.badge}
                   </div>
                 </div>
 
                 {/* Category */}
                 <div className="mb-4">
-                  <span  text-gray-900 text-sm font-semibold border border-white/20`}>
+                  <span className={`px-3 py-1 rounded-full bg-white/10 text-gray-900 text-sm font-semibold border border-white/20`}>
                     {content.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3  group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                <h3 className={`text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-fuchsia-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
                   {content.title}
                 </h3>
 
@@ -145,7 +134,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${content.slug}`}
-                   hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
+                  className={`inline-flex items-center gap-3 bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span className="text-lg">Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
@@ -153,7 +142,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               </div>
 
               {/* Corner accent */}
-              <div  opacity-10 rounded-bl-full`}></div>
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
             </div>
           ))}
         </div>

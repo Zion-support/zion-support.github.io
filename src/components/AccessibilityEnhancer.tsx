@@ -16,11 +16,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       skipLink.className = 'skip-link';
       skipLink.style.cssText = `
         position: absolute;
-        top: -40px;
+  top: -40px;
         left: 6px;
-        background: #000;
+  background: #000;
         color: #fff;
-        padding: 8px;
+  padding: 8px;
         text-decoration: none;
         z-index: 1000;
         transition: top 0.3s;

@@ -2,27 +2,27 @@ import { Link } from "react-router-dom";
 
 const October2025AIOperationsBanner = () => {
   const newArticles = [
-    {
+    {",
       title: "AI-Powered DevSecOps Automation",
-      description: "Achieve 99.2% vulnerability detection with 87% auto-remediation and 847% deployment acceleration",
+      description: "Achieve 99.2% vulnerability detection with 87% auto-remediation and 847% deployment acceleration",",
       link: "/blog/ai-2025-oct-01-devsecops-automation-revolution",
-      icon: Shield,
+      icon: Shield,",
       stats: "99.2% Detection | 7,747% ROI",
       color: "from-blue-500 to-cyan-500"
     },
-    {
+    {",
       title: "Autonomous Cloud Cost Optimization",
-      description: "Save $127M+ annually with 67% cost reduction and 99.3% optimization accuracy",
+      description: "Save $127M+ annually with 67% cost reduction and 99.3% optimization accuracy",",
       link: "/blog/ai-2025-oct-01-autonomous-cloud-cost-optimization",
-      icon: TrendingDown,
+      icon: TrendingDown,",
       stats: "67% Savings | 18,287% ROI",
       color: "from-green-500 to-emerald-500"
     },
-    {
+    {",
       title: "Real-Time AI Observability Platform",
-      description: "99.94% uptime with predictive issue detection 37 minutes before impact",
+      description: "99.94% uptime with predictive issue detection 37 minutes before impact",",
       link: "/blog/ai-2025-oct-01-real-time-ai-observability-platform",
-      icon: Activity,
+      icon: Activity,",
       stats: "98.7% Prevention | 17,488% ROI",
       color: "from-purple-500 to-pink-500"
     }

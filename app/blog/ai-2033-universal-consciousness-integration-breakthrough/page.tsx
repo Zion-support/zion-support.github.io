@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 import Link from 'next/link';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

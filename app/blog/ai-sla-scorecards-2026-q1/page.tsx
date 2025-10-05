@@ -1,14 +1,11 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { Calendar, Clock, Gauge, ShieldCheck, Activity, ArrowRight } from 'lucide-react';
-=======
+
 import Calendar from 'lucide-react/dist/esm/icons/alendar';
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import Gauge from 'lucide-react/dist/esm/icons/auge';
 import ShieldCheck from 'lucide-react/dist/esm/icons/hieldcheck';
 import Activity from 'lucide-react/dist/esm/icons/ctivity';
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export const metadata = {
   title: 'AI SLA Scorecards 2026 Q1: KPIs, Budgets, Rollback | Zion Tech Group',
