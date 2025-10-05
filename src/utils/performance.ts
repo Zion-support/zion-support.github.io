@@ -1,4 +1,5 @@
 // Performance optimization utilities
+import { lazy } from 'react';
 
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
@@ -51,7 +52,7 @@ export function getImageOptimizedUrl(src: string, width?: number, quality = 80):
 export function lazyLoadComponent<T extends React.ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>
 ): React.LazyExoticComponent<T> {
-  return React.lazy(importFunc);
+  return lazy(importFunc);
 }
 
 export function measurePerformance(name: string, fn: () => void): void {

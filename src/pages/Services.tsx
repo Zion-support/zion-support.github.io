@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Rocket, Shield, Users, Target, Award } from 'lucide-react';
+import { CheckCircle, Rocket, Shield, Users } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [

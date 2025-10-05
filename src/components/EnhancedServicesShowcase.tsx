@@ -17,8 +17,4 @@ const EnhancedServicesShowcase = React.memo(function EnhancedServicesShowcase({
   );
 });
 
-<<<<<<< HEAD
 export default EnhancedServicesShowcase;
-=======
-export default EnhancedServicesShowcase;
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
