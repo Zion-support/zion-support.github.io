@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-// Performance Monitoring Script
-export const performanceOptimizer = {
-  startPerformanceMonitoring: () => {
-    // Monitor Core Web Vitals
-    if ('PerformanceObserver' in window) {
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          console.log('Performance metric:', entry.name, entry.value);
-        }
-      });
-      
-      observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
-=======
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -46,17 +32,8 @@ export class PerformanceMonitor {
       } catch (error) {
         console.warn('PerformanceObserver not supported:', error);
       }
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     }
-  },
-
-  cleanup: () => {
-    // Cleanup performance monitoring
-    console.log('Performance monitoring cleaned up');
   }
-<<<<<<< HEAD
-};
-=======
 
   private observeResourceTiming(): void {
     if ('PerformanceObserver' in window) {
@@ -121,4 +98,3 @@ export class PerformanceMonitor {
 }
 
 export default PerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
