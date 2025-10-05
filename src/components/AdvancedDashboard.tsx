@@ -1,12 +1,4 @@
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
-=======
-// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
-// import AdvancedCacheManager from '../utils/advancedCache';
-import { enhancedAccessibility } from '../utils/enhancedAccessibility';
-import { securityAuditor } from '../utils/securityAuditor';
-// import EnhancedUXManager from '../utils/enhancedUXManager';
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
 
 interface DashboardData {
   analytics: {
@@ -38,7 +30,6 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-<<<<<<< HEAD
     // Mock data for demonstration
     const mockData: DashboardData = {
       analytics: {
@@ -57,67 +48,6 @@ const AdvancedDashboard: React.FC = () => {
     };
     
     setData(mockData);
-=======
-    // Mock analytics data for now
-    const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
-
-    // Convert analytics events to analytics data format
-    const analyticsData: AnalyticsData = {
-      id: `session_${Date.now()}`,
-      startTime: Date.now() - 300000, // 5 minutes ago
-      lastActivity: Date.now(),
-      pageViews: events.filter((e) => e.name === "page_view").length,
-      events: events.map((e) => ({
-        event: e.name,
-        timestamp: e.timestamp || Date.now(),
-        properties: (e as any).properties || {}
-      })),
-      deviceInfo: {
-        screenResolution: `${window.screen.width}x${window.screen.height}`,
-        language: navigator.language,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      }
-    };
-
-    // Convert cache stats to proper format
-    const cache: CacheData = {
-      size:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).size as number) || 0
-          : 0,
-      totalSize:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
-          : 0,
-      maxSize:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
-          : 0,
-      hitRate:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
-          : 0
-    };
-
-    setData({
-      analytics: analyticsData || {},
-      cache: cache || {},
-      performance: {
-        memoryUsage:
-          (
-            performance as Performance & {
-              memory?: { usedJSHeapSize?: number };
-            }
-          ).memory?.usedJSHeapSize || 0,
-        memoryLimit:
-          (
-            performance as Performance & {
-              memory?: { jsHeapSizeLimit?: number };
-            }
-          ).memory?.jsHeapSizeLimit || 0
-      }
-    });
   };
 
   const formatBytes = (bytes: number): string => {
@@ -132,7 +62,6 @@ const AdvancedDashboard: React.FC = () => {
     if (ms < 1000) return `${ms}ms`;
     if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
     return `${(ms / 60000).toFixed(1)}m`;
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
   };
 
   if (!isOpen) {
@@ -159,86 +88,94 @@ const AdvancedDashboard: React.FC = () => {
           </button>
         </div>
 
-<<<<<<< HEAD
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Analytics</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Page Views: {data.analytics.pageViews}</p>
-                <p>Sessions: {data.analytics.sessions}</p>
-                <p>Bounce Rate: {(data.analytics.bounceRate * 100).toFixed(1)}%</p>
-              </div>
-            )}
-=======
-        {/* Tabs */}
-        <div className="bg-gray-100 border-b">
-          <div className="flex space-x-1 p-2">
-            {[
-              { id: "overview", label: "Overview" },
-              { id: "analytics", label: "Analytics" },
-              { id: "performance", label: "Performance" },
-              { id: "cache", label: "Cache" },
-              { id: "security", label: "Security" },
-              { id: "accessibility", label: "Accessibility" }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === tab.id
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-          </div>
-
-<<<<<<< HEAD
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Performance</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Load Time: {data.performance.loadTime.toFixed(0)}ms</p>
-                <p>Response Time: {data.performance.responseTime.toFixed(0)}ms</p>
-=======
-        {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
-          {activeTab === "overview" && data && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
-                <div className="space-y-1 text-sm">
-                  <div>
-                    Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
-                  </div>
-                  <div>
-                    Duration:{" "}
-                    {formatDuration(
-                      Date.now() - (data.analytics?.startTime || 0)
-                    )}
-                  </div>
-                  <div>Page Views: {data.analytics?.pageViews || 0}</div>
-                  <div>Events: {data.analytics?.events?.length || 0}</div>
-                </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-              </div>
-            )}
-          </div>
-
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Security</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Threats Blocked: {data.security.threatsBlocked}</p>
-                <p>Vulnerabilities: {data.security.vulnerabilities}</p>
-              </div>
-            )}
-          </div>
+        <div className="flex space-x-1 mb-6">
+          {["overview", "analytics", "performance", "security"].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab)}
+              className={`px-4 py-2 rounded ${
+                activeTab === tab
+                  ? "bg-blue-600 text-white"
+                  : "bg-gray-200 text-gray-700 hover:bg-gray-300"
+              }`}
+            >
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
+            </button>
+          ))}
         </div>
+
+        {data && (
+          <div className="space-y-6">
+            {activeTab === "overview" && (
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="bg-blue-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-blue-800">Analytics</h3>
+                  <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
+                  <p className="text-sm text-blue-600">Page Views</p>
+                </div>
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-green-800">Performance</h3>
+                  <p className="text-2xl font-bold text-green-600">{formatDuration(data.performance.loadTime)}</p>
+                  <p className="text-sm text-green-600">Load Time</p>
+                </div>
+                <div className="bg-red-50 p-4 rounded-lg">
+                  <h3 className="text-lg font-semibold text-red-800">Security</h3>
+                  <p className="text-2xl font-bold text-red-600">{data.security.threatsBlocked}</p>
+                  <p className="text-sm text-red-600">Threats Blocked</p>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "analytics" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Page Views</h3>
+                    <p className="text-3xl font-bold text-blue-600">{data.analytics.pageViews}</p>
+                  </div>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Sessions</h3>
+                    <p className="text-3xl font-bold text-green-600">{data.analytics.sessions}</p>
+                  </div>
+                </div>
+                <div className="bg-white p-4 border rounded-lg">
+                  <h3 className="text-lg font-semibold mb-2">Bounce Rate</h3>
+                  <p className="text-3xl font-bold text-orange-600">{(data.analytics.bounceRate * 100).toFixed(1)}%</p>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "performance" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Load Time</h3>
+                    <p className="text-3xl font-bold text-blue-600">{formatDuration(data.performance.loadTime)}</p>
+                  </div>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Response Time</h3>
+                    <p className="text-3xl font-bold text-green-600">{formatDuration(data.performance.responseTime)}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeTab === "security" && (
+              <div className="space-y-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Threats Blocked</h3>
+                    <p className="text-3xl font-bold text-red-600">{data.security.threatsBlocked}</p>
+                  </div>
+                  <div className="bg-white p-4 border rounded-lg">
+                    <h3 className="text-lg font-semibold mb-2">Vulnerabilities</h3>
+                    <p className="text-3xl font-bold text-orange-600">{data.security.vulnerabilities}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
