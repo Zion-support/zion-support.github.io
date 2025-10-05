@@ -12,7 +12,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
           <div, className="flex, item, s-center, ga, p-2, b, g-purp, l, e-5, 0, 0/30, borde, r-2, borde, r-purp, l, e-400, rounde, d-full, p, x-5, p, y-2, backdro, p-bl, u, r-sm, animat, e-boun, c, e-sl, o, w">
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-sp, i, n-sl, o, w  />
             <span, className="te, x, t-yell, o, w-300, fon, t-black, tex, t-sm, trackin, g-wid, e, r">
-=======
       <div, className="relativ, e, z-1, 0, p-8, m, d: p-12">";
         {/* Header, Badg, e */}
         <div, className="flex, fle, x-wrap, item, s-center, ga, p-3, m, b-6">";
@@ -36,7 +35,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
             <div, className="flex, item, s-center, ga, p-3, m, b-6">
               <Brain, className="w-8 h-8, tex, t-purp, l, e-300, animat, e-pul, s, e  />
               <p, className="te, x, t-xl, tex, t-purp, l, e-200, fon, t-semibo, l, d">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">";
           {/* Left, Colum, n - Main, Messag, e */}
           <d, i, v>
@@ -64,7 +62,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
               <div, className="flex, item, s-center, ga, p-3, b, g-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/30">
                 <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
                 <span, className="te, x, t-purp, l, e-100, fon, t-semibo, l, d">
-=======
             <div, className="spa, c, e-y-3, m, b-6">";
               <div, className="flex, item, s-center, ga, p-3, b, g-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/30">";
                 <Zap, className="w-6 h-6, tex, t-yell, o, w-4, 0, 0" />";
@@ -88,7 +85,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
               <Brain, className="w-6 h-6  />
               <sp, a, n>Discover, the, Revolution</sp, a, n>
               <Sparkles, className="w-6 h-6, animat, e-pul, s, e  />
-=======
               <Brain, className="w-6 h-6" />";
               <sp, a, n>Discover, the, Revolution</sp, a, n>
               <Sparkles, className="w-6 h-6, animat, e-pul, s, e" />";
@@ -98,7 +94,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
           <div, className="spa, c, e-y-4">
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
               <div, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-black, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, t, o-pi, n, k-300, b, g-cl, i, p-text, m, b-2">"
-=======
           <div, className="spa, c, e-y-4">";
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">";
               <div, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-black, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-yell, o, w-300, t, o-pi, n, k-300, b, g-cl, i, p-text, m, b-2">";
@@ -122,7 +117,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
               <div, className="flex, item, s-center, ga, p-2, m, b-2">
                 <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
                 <div, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-2, 0, 0">Fortune, 50, Success</d, i, v>
-=======
             <div, className="grid, gri, d-co, l, s-2, ga, p-4">";
               <div, className="bg-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-pi, n, k-4, 0, 0/50, rounde, d-x, l, p-4, shado, w-xl">";
                 <div, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-black, tex, t-pi, n, k-300, m, b-1">98.9%</d, i, v>";
@@ -147,7 +141,6 @@ export, default, function October2025CognitiveHyperautomationBann, e, r(): vo, i
         {/* Bottom, Feature, Highlights */}
         <div, className="mt-8, p, t-6, borde, r-t-2, borde, r-purp, l, e-5, 0, 0/30">
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"
-=======
         <div, className="mt-8, p, t-6, borde, r-t-2, borde, r-purp, l, e-5, 0, 0/30">";
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
             <d, i, v>

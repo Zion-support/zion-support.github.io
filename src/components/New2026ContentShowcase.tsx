@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
   return (
@@ -9,7 +8,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -26,7 +24,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
             Revolutionary, AI, Content & Breakthroug, h, s;
           </h2>
           <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, fon, t-semibold, ma, x-w-4xl, m, x-au, t, o">"
-=======
           <h2, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Revolutionary, AI, Content & Breakthroug, h, s;
           </h2>
@@ -44,7 +41,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, ga, p-3, m, b-6">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
                   <span, className="te, x, t-2, x, l">🧠</sp, a, n>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {/* Hyperconscious, Computin, g */}
           <Link, t, o="/bl, o, g/ai-20, 2, 6-hyperconscio, u, s-computi, n, g-revoluti, o, n" classNa, m, e="group, bloc, k">";
@@ -64,7 +60,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               </d, i, v>
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
                 Hyperconscious, Computing, Revolution;
               </h3>
@@ -74,7 +69,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, justif, y-betwe, e, n">
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">12, min, read</d, i, v>
                 <div, className="te, x, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
               <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">12, min, read</d, i, v>";
                 <div, className="te, x, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
@@ -90,7 +84,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, ga, p-3, m, b-6">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
                   <span, className="te, x, t-2, x, l">⚛️</sp, a, n>
-=======
           <Link, t, o="/bl, o, g/quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthrou, g, h" classNa, m, e="group, bloc, k">";
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30, hove, r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hov, e
   r:shad, o, w-bl, u, e-5, 0, 0/20">";
@@ -108,7 +101,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                 </d, i, v>
               </d, i, v>
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
                 Quant, u, m-Neural, Fusion, Breakthrough;
               </h3>
@@ -118,7 +110,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, justif, y-betwe, e, n">
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">15, min, read</d, i, v>
                 <div, className="te, x, t-bl, u, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
-=======
               <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">15, min, read</d, i, v>";
                 <div, className="te, x, t-bl, u, e-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
@@ -134,7 +125,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, ga, p-3, m, b-6">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">
                   <span, className="te, x, t-2, x, l">🌐</sp, a, n>
-=======
           <Link, t, o="/bl, o, g/autonomo, u, s-enterpri, s, e-me, s, h-20, 2, 6" classNa, m, e="group, bloc, k">";
             <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-indi, g, o-5, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20">";
               <div, className="flex, item, s-center, ga, p-3, m, b-6">";
@@ -152,7 +142,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               </d, i, v>
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-ho, v, e
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
                 Autonomous, Enterprise, Mesh;
               </h3>
@@ -162,7 +151,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, justif, y-betwe, e, n">
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">18, min, read</d, i, v>
                 <div, className="te, x, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-=======
               <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">18, min, read</d, i, v>";
                 <div, className="te, x, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
@@ -190,7 +178,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="w-1, 2, h-12, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                     <span, className="te, x, t-xl">🏆</sp, a, n>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
             {/* Fortune, 100, Case Stu, d, y */}
             <Link, t, o="/ca, s, e-studi, e, s/fortu, n, e-1, 0, 0-hyperconscio, u, s-transformati, o, n" classNa, m, e="group, bloc, k">";
@@ -207,7 +194,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                 </d, i, v>
                 <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
-=======
                 <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
                   $1.2T, Hyperconscious, Transformation;
                 </h4>
@@ -218,7 +204,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                   <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>
                   <div, className="te, x, t-gre, e, n-400, fon, t-semibold, grou, p-ho, v, e
   r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                   <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>";
                   <div, className="te, x, t-gre, e, n-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
@@ -234,7 +219,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
                   <div, className="w-1, 2, h-12, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-gre, e, n-500, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                     <span, className="te, x, t-xl">🏭</sp, a, n>
-=======
             <Link, t, o="/ca, s, e-studi, e, s/quant, u, m-neur, a, l-fusi, o, n-manufacturi, n, g-succe, s, s" classNa, m, e="group, bloc, k">";
               <div, className="bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/40, t, o-gre, e, n-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-5, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">";
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -249,7 +233,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                 </d, i, v>
                 <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-=======
                 <h4, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
                   $2.8B, Perfect, Production;
                 </h4>
@@ -259,7 +242,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
                 <div, className="flex, item, s-center, justif, y-betwe, e, n">
                   <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>
                   <div, className="te, x, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                   <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Case, Stud, y</d, i, v>";
                   <div, className="te, x, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
@@ -281,7 +263,6 @@ const, New2026ContentShowcas, e: Rea, c, t.FC = () => {
             </p>
           </d, i, v>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <Li, n, k
   to="/conta, c, t" 

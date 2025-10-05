@@ -8,7 +8,6 @@ async function handler(req, res) {
     return;
   }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
   const { amount, currency = 'usd', userId } = req.body || {};
   
   if (!amount) {
@@ -57,8 +56,6 @@ try {
   } catch (err) {
     console.error('Payment intent error:', err);
     res.status(500).json({ error: err.message });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }
 }
 

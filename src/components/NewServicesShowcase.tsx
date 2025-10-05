@@ -44,7 +44,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
       borderCol, o, r: "bord, e, r-indi, g, o-5, 0, 0/30","
       hoverBorderCol, o, r: "ho, v, e
   r:bord, e, r-indi, g, o-4, 0, 0/60","
-=======
 import React from "react";';
 const, NewServicesShowcas, e: Rea, c, t.FC = () => {
   const, newService, s = [
@@ -102,7 +101,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-10">";
         <div, className="absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -119,7 +117,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
             Revolutionary, AI, Services;
           </h2>
           <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, fon, t-semibold, ma, x-w-4xl, m, x-au, t, o">"
-=======
           <h2, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Revolutionary, AI, Services;
           </h2>
@@ -130,7 +127,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
         </d, i, v>
         {/* Services, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {newServic, e, s.m, a, p((servi, c, e) => (
             <Link, ke, y={servi, c, e.id} to={`/servic, e, s/${servi, c, e.id}`} classNa, m, e="group, bloc, k">";`;`
@@ -142,7 +138,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
                     <span, className="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>
                   </d, i, v>
                   <div, className="fl, e, x-1">
-=======
                 <div, className="flex, item, s-center, ga, p-4, m, b-6">";
                   <div, className={`w-1, 6, h-16, b, g-gradie, n, t-to-r ${servi, c, e.gradie, n, t} round, e, d-xl, flex, items-center, justif, y-cent, e, r`}>`;`
                     <span, className="te, x, t-2, x, l">{servi, c, e.ic, o, n}</sp, a, n>";
@@ -158,7 +153,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
                 </d, i, v>
                 {/* Service, Titl, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
                   {servi, c, e.tit, l, e}
                 </h3>
@@ -172,7 +166,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
                   <ul, className="spa, c, e-y-2">
                     {servi, c, e.featur, e, s.m, a, p((featu, r, e, ind, e, x) => (
                       <li, ke, y={ind, e, x} classNa, m, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-3, 0, 0">
-=======
                 <div, className="mb-6">";
                   <h4, className="te, x, t-white, fon, t-semibold, m, b-3">Key, Feature, s: </h4>";
                   <ul, className="spa, c, e-y-2">";
@@ -187,7 +180,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
                 {/* C, T, A */}
                 <div, className="flex, item, s-center, justif, y-betwe, e, n">
                   <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Learn, Mor, e</d, i, v>
-=======
                 <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                   <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Learn, Mor, e</d, i, v>";
                   <div, className={`te, x, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s`}>`;`
@@ -212,7 +204,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
             <div, className="te, x, t-cent, e, r">
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">99.9, 9, 9%</d, i, v>
               <div, className="te, x, t-gr, a, y-300, tex, t-sm">Operational, Accurac, y</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">";
             <div, className="te, x, t-cent, e, r">";
               <div, className="te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2">99.9, 9, 9%</d, i, v>";
@@ -243,7 +234,6 @@ const, NewServicesShowcas, e: Rea, c, t.FC = () => {
             </p>
           </d, i, v>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <Li, n, k
   to="/conta, c, t" 

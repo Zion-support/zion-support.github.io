@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const EnhancedNavigation: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },

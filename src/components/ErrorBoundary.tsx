@@ -1,6 +1,5 @@
 import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m "rea, c, t";
 impo, r, t { AlertTriang, l, e } fr, o, m "luci, d, e-rea, c, t";
-=======
 import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m "rea, c, t";';
 impo, r, t {
 AlertTriang, l, e;
@@ -14,7 +13,6 @@ err, o, r?: Err, o, r;
 }
 class, ErrorBoundary, extends Compone, n, t<Pro, p, s, Sta, t, e> {
 public, stat, e: Sta, t, e = {
-=======
 public, sta, t
   e: Sta, t, e = {
 hasErr, o, r: fal, s, e;
@@ -24,7 +22,6 @@ hasErr, o, r: fal, s, e;
   }
   public, componentDidCatc, h(err, o, r: Err, o, r, errorIn, f, o: ErrorIn, f, o) {
     conso, l, e.err, o, r('Uncaught, erro, r: ', err, o, r, errorIn, f, o);'
-=======
     conso, l, e.err, o, r('Uncaught, erro, r: ', err, o, r, errorIn, f, o);';
   }
   public, rende, r() {
@@ -35,7 +32,6 @@ hasErr, o, r: fal, s, e;
             <div, className="bg-white, rounde, d-2xl, shado, w-x, l, p-8, tex, t-cent, e, r">
               <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, rounde, d-full, b, g-r, e, d-100, m, b-4">
                 <AlertTriangle, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
-=======
         <div, className="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gradie, n, t-to-br, fro, m-r, e, d-50, t, o-oran, g, e-50">";
           <div, className="m, a, x-w-m, d, w-full, m, x-4">";
             <div, className="bg-white, rounde, d-2xl, shado, w-x, l, p-8, tex, t-cent, e, r">";
@@ -47,7 +43,6 @@ hasErr, o, r: fal, s, e;
               </h1>
               <p, className="te, x, t-gr, a, y-600, m, b-6">
                 We're, sorry, for the, inconvenienc, e. Please, try, refreshing the, pag, e.;
-=======
               <p, className="te, x, t-gr, a, y-600, m, b-6">";
                 We're, sorry, for the, inconvenienc, e. Please, try, refreshing the, pag, e.';
               </p>

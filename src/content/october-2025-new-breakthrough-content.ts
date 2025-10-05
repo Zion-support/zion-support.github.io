@@ -93,7 +93,6 @@ export, const, octoberNewBreakthroughContent = [
     }
     c, t, a: "Read, Case, Study"
     val, u, e: "$627M, Create, d"
-=======
     i
   d: "autonomo, u, s-ai-orchestrati, o, n-platfo, r, m-revoluti, o, n",";
     tit, l, e: "Autonomous, AI, Orchestration Platform, Revoluti, o
@@ -204,7 +203,6 @@ export, const, getAllOctoberNewContent = () => {
   avgSpeedImproveme, n, t: "2, 6, x","
   enterpriseAdopti, o, n: "89%","
   customerSatisfacti, o, n: "96%","
-=======
   totalMarketVal, u, e: "$1.4, 7, B",";
   avgCostReducti, o, n: "79%",";
   avgSpeedImproveme, n, t: "2, 6, x",";

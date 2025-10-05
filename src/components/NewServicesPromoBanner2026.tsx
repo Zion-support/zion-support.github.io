@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
   return (
@@ -24,7 +23,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
             Revolutionary, AI, Services That, Will, Transform Your, Busines, s;
           </h2>
           <p, className="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8">
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
         <div, className="absolu, t, e -t, o, p-20 -rig, h, t-2, 0, w-4, 0, h-40, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolu, t, e -bott, o, m-20 -le, f, t-2, 0, w-4, 0, h-40, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -55,7 +53,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-center, m, b-6">
               <div, className="bg-bl, u, e-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-bl, u, e-4, 0, 0/30, shado, w-lg">"
                 <Zap, className="w-1, 0, h-10, tex, t-bl, u, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
         <div, className="grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {/* Quantum, Edge, Fusion Platfo, r, m */}
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/60, t, o-purp, l, e-8, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/40, hove, r: bord, e, r-bl, u, e-4, 0, 0/70, transitio, n-all, duratio, n-500, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, grou, p">";
@@ -83,7 +80,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0">
                 <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0  />
                 <span, className="fo, n, t-semibo, l, d">90% Energy, Reductio, n</sp, a, n>
-=======
             <div, className="spa, c, e-y-4, m, b-6">";
               <div, className="flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0">";
                 <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0" />";
@@ -123,7 +119,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-center, m, b-6">
               <div, className="bg-purp, l, e-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-purp, l, e-4, 0, 0/30, shado, w-lg">"
                 <Brain, className="w-1, 0, h-10, tex, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-pi, n, k-8, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/40, hove, r: bord, e, r-purp, l, e-4, 0, 0/70, transitio, n-all, duratio, n-500, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, grou, p">";
             <div, className="te, x, t-center, m, b-6">";
               <div, className="bg-purp, l, e-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-purp, l, e-4, 0, 0/30, shado, w-lg">";
@@ -149,7 +144,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0">
                 <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0  />
                 <span, className="fo, n, t-semibo, l, d">99.2% Ethical, Alignmen, t</sp, a, n>
-=======
             <div, className="spa, c, e-y-4, m, b-6">";
               <div, className="flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0">";
                 <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0" />";
@@ -189,7 +183,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
             <div, className="te, x, t-center, m, b-6">
               <div, className="bg-gre, e, n-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r: bg-gre, e, n-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-gre, e, n-4, 0, 0/30, shado, w-lg">"
                 <Cpu, className="w-1, 0, h-10, tex, t-gre, e, n-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-8, 0, 0/60, t, o-te, a, l-8, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/40, hove, r: bord, e, r-gre, e, n-4, 0, 0/70, transitio, n-all, duratio, n-500, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, grou, p">";
             <div, className="te, x, t-center, m, b-6">";
               <div, className="bg-gre, e, n-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r: bg-gre, e, n-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-gre, e, n-4, 0, 0/30, shado, w-lg">";
@@ -215,7 +208,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0">
                 <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0  />
                 <span, className="fo, n, t-semibo, l, d">99.9% Cognitive, Accurac, y</sp, a, n>
-=======
             <div, className="spa, c, e-y-4, m, b-6">";
               <div, className="flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0">";
                 <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0" />";
@@ -256,7 +248,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
               <TrendingUp, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-boun, c, e  />
               <span, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-3, 0, 0">EARLY, ACCESS, SPECIAL OFF, E, R</sp, a, n>
               <TrendingUp, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-boun, c, e  />
-=======
         <div, className="te, x, t-cent, e, r">";
           <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-2x, l, p-8, m, b-8">";
             <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
@@ -272,7 +263,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
             </p>
           </d, i, v>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, item, s-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, item, s-cent, e, r">";
             <Li, n, k
   to="/conta, c, t" 
@@ -282,7 +272,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
               <Shield, className="w-6 h-6  />
               Get, Started, Now;
               <ArrowRight, className="w-6 h-6  />
-=======
               <Shield, className="w-6 h-6" />";
               Get, Started, Now;
               <ArrowRight, className="w-6 h-6" />";
@@ -293,7 +282,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
   r:sca, l, e-1, 0, 5"
             >
               <Star, className="w-6 h-6  />
-=======
               <Star, className="w-6 h-6" />";
               View, All, Services;
             </Li, n, k>
@@ -303,7 +291,6 @@ const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => {
             <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0"> $1, 5, B+ in, value, created</sp, a, n> • ";
             <span, className="fo, n, t-bo, l, d"> 99.9% customer, satisfactio, n</sp, a, n> • ";
             <span, className="fo, n, t-bo, l, d"> 24/7, expert, support</sp, a, n>
-=======
           <div, className="mt-8, tex, t-lg, tex, t-emera, l, d-2, 0, 0">";
             <span, className="fo, n, t-bo, l, d">Trusted, by, 500+ companies, worldwid, e</sp, a, n> • ";
             <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0"> $1, 5, B+ in, value, created</sp, a, n> • ";

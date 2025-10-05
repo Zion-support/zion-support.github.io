@@ -11,7 +11,6 @@ export, default, function CustomerAgentBlueprin, t, s(): Rea, c, t.J, S, X.Eleme
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Customer, Agent, Blueprints</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Safe, autonomy, with budge, t, s, K, P, I‑linked, canarie, s, and, instant, rollback.</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
         <meta name="descripti, o, n" content="Playbooks, for, CX agents, with, KPI scorecar, d, s, budgeted, action, s, canari, e, s, and, deterministic, rollback." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-custom, e, r-age, n, t-blueprin, t, s" />";
       </Helmet>

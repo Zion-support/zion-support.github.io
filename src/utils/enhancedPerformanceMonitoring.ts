@@ -40,7 +40,6 @@ th, i, s.initializeObserve, r, s();
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;
     // Observe, navigation, timing
   if ('PerformanceObserv, e, r' in, windo, w) {;
-=======
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
     // Observe, navigation, timing
   if ('PerformanceObserv, e, r' in, windo, w) {';
@@ -49,7 +48,6 @@ th, i, s.initializeObserve, r, s();
           const, entrie, s = li, s, t.getEntri, e, s();
           entri, e, s.forEa, c, h((ent, r, y) => {
             if (ent, r, y.entryTy, p, e === 'navigati, o, n') {;
-=======
             if (ent, r, y.entryTy, p, e === 'navigati, o, n') {';
               th, i, s.processNavigationTimi, n, g(entry, as, PerformanceNavigationTiming);
             }
@@ -59,7 +57,6 @@ th, i, s.initializeObserve, r, s();
         th, i, s.observe, r, s.pu, s, h(navObserv, e, r);
       } cat, c, h (err, o, r) {
         conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d: ', err, o, r);'
-=======
         conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d: ', err, o, r);';
       }
     }
@@ -96,7 +93,6 @@ th, i, s.initializeObserve, r, s();
       if (typeof, valu, e === 'numb, e, r' && val, u, e > thresho, l, d) {;
         th, i, s.addAle, r, t({
           ty, p, e: val, u, e > thresho, l, d * 1.5 ? 'err, o, r' : 'warni, n, g','
-=======
       if (typeof, valu, e === 'numb, e, r' && val, u, e > thresho, l, d) {';
         th, i, s.addAle, r, t({
           ty, p, e: val, u, e > thresho, l, d * 1.5 ? 'err, o, r' : 'warni, n, g',';
@@ -118,7 +114,6 @@ th, i, s.initializeObserve, r, s();
     // Log, critical, alerts
   if (ale, r, t.ty, p, e === 'err, o, r') {;
       conso, l, e.err, o, r('Performance, Aler, t: ', ale, r, t);'
-=======
     if (ale, r, t.ty, p, e === 'err, o, r') {';
       conso, l, e.err, o, r('Performance, Aler, t: ', ale, r, t);';
     }
@@ -157,7 +152,6 @@ th, i, s.initializeObserve, r, s();
   export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonito, r();
 // Au, t, o-start, monitoring, in browser, environmen, t
   if (typeof, windo, w !== 'undefin, e, d') {;
-=======
 if (typeof, windo, w !== 'undefin, e, d') {';
   enhancedPerformanceMonit, o, r.startMonitori, n, g();
 }

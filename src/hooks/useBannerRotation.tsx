@@ -125,7 +125,6 @@ export, const, useBannerABTest = (
   testNa, m, e: stri, n, g
 ): {
   selectedVariati, o, n: BannerConf, i, g
-=======
   selectedVariati, o, n: BannerConf, i, g;
   trackVariationPerforman, c, e: (met, r, i
   c: stri, n, g, val, u, e: numb, e, r) => vo, i, d;
@@ -136,7 +135,6 @@ export, const, useBannerABTest = (
     if (stor, e, d) return, store, d;
     const, newI, d = `use, r, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;`;`
     localStora, g, e.setIt, e, m('user_, i, d', new, I, d);
-=======
     localStora, g, e.setIt, e, m('user_, i, d', new, I, d);';
     return, newI, d;
   }, []);
@@ -153,7 +151,6 @@ export, const, useBannerABTest = (
   const, trackVariationPerformanc, e = useCallba, c, k(
     (metr, i, c: stri, n, g, val, u, e: numb, e, r) => {
       trackBannerInteracti, o, n(selectedVariati, o, n.id, 'cli, c, k', {;
-=======
       trackBannerInteracti, o, n(selectedVariati, o, n.id, 'cli, c, k', {';
         testNa, m, e
         variati, o, n: selectedVariati, o, n.id

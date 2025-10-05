@@ -88,7 +88,6 @@ const, Resource, s: Rea, c, t.FC = () => {
       excer, p, t: 'Exploring, how, AI is, revolutionizing, manufacturing processes, and, predictive maintenan, c, e.'
       da, t, e: '20, 2, 5-01-15'
       li, n, k: '/bl, o, g/ai-manufacturi, n, g-futu, r, e'
-=======
       li, n, k: '/bl, o, g/ai-manufacturi, n, g-futu, r, e'
     }
     {
@@ -96,7 +95,6 @@ const, Resource, s: Rea, c, t.FC = () => {
       excer, p, t: 'Essential, security, measures to, protect, your AI, infrastructure, and da, t, a.'
       da, t, e: '20, 2, 5-01-12'
       li, n, k: '/bl, o, g/ai-cybersecuri, t, y-be, s, t-practic, e, s'
-=======
       li, n, k: '/bl, o, g/ai-cybersecuri, t, y-be, s, t-practic, e, s'
     }
     {
@@ -104,7 +102,6 @@ const, Resource, s: Rea, c, t.FC = () => {
       excer, p, t: 'A, comprehensive, guide to, measuring, and maximizing, ROI, from AI, investment, s.'
       da, t, e: '20, 2, 5-01-10'
       li, n, k: '/bl, o, g/ai-r, o, i-calculati, o, n-gui, d, e'
-=======
       li, n, k: '/bl, o, g/ai-r, o, i-calculati, o, n-gui, d, e'
     }
     {
@@ -113,7 +110,6 @@ const, Resource, s: Rea, c, t.FC = () => {
       da, t, e: '20, 2, 5-01-08'
       li, n, k: '/bl, o, g/ethic, a, l-ai-syste, m, s'
     }
-=======
       li, n, k: '/bl, o, g/ethic, a, l-ai-syste, m, s'
     }
   ];

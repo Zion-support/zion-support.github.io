@@ -12,7 +12,6 @@ return (
 <h1, className="te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4">GenAI, 202, 5: Cache, Playbook, v2</h1>
 <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">A, practical, guide to, semantic, caching with, KP, I-linked, scorecards, and rollba, c, k.</p>
 <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
 <title>GenAI, 20, 2
   5: Cache, Playbook, v2</title>
 <meta name="descripti, o, n" content="Tier, e, d + semantic, caches, with eval, gates, for 50–70% savings, and, stable UX." />";

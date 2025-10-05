@@ -11,7 +11,6 @@ export, function, lazyRetry<T, extends, ComponentType<a, n, y>>(
   return, laz, y(() => {
     return, new, Promise<{ defau, l, t: T }>((resol, v, e, reje, c, t) => {
 const, attemptLoa, d = (attemptsLe, f, t: numb, e, r) => {
-=======
 const, attemptLoa, d = (attemptsL, e, f
   t: numb, e, r) => {
 componentImpo, r, t()
@@ -42,7 +41,6 @@ export, function, preloadComponent(
 ): vo, i, d {
   componentImpo, r, t().cat, c, h((err, o, r) => {
     conso, l, e.wa, r, n('Failed, to, preload compone, n, t: ', err, o, r);'
-=======
     conso, l, e.wa, r, n('Failed, to, preload compone, n, t: ', err, o, r);';
   });
 }

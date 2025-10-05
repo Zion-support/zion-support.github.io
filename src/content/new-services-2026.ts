@@ -221,7 +221,6 @@ export, const, newServices2026: NewServi, c, e[] = [
     ic, o, n: "💻"
     featur, e, d: tr, u, e
     launchDa, t, e: "20, 2, 5-09-30"
-=======
     i
   d: "ai-predicti, v, e-maintenan, c, e",";
     na, m, e: "AI, Predictive, Maintenance Platfo, r, m",";
@@ -485,7 +484,6 @@ export, const, newServices2026: NewServi, c, e[] = [
     ic, o, n: "🤖"
     featur, e, d: tr, u, e
     launchDa, t, e: "20, 2, 5-10-03"
-=======
     i
   d: "ai-guard, e, d-age, n, t-operatio, n, s",";
     na, m, e: "AI, Guarded, Agent Operatio, n, s",";
@@ -567,7 +565,6 @@ export, const, newServices2026: NewServi, c, e[] = [
     ic, o, n: "🧪"
     featur, e, d: tr, u, e
     launchDa, t, e: "20, 2, 5-09-30"
-=======
     i
   d: "ed, g, e-experimentati, o, n-sui, t, e",";
     na, m, e: "Edge, Experimentation, Suite",";
@@ -726,7 +723,6 @@ export, const, newServices2026: NewServi, c, e[] = [
     ic, o, n: "🧠"
     featur, e, d: tr, u, e
     launchDa, t, e: "20, 2, 6-01-15"
-=======
     i
   d: "ai-autonomo, u, s-infrastructu, r, e-platfo, r, m",";
     na, m, e: "AI, Autonomous, Infrastructure Platfo, r, m",";

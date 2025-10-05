@@ -7,7 +7,6 @@
         <me, t, a
   na, m, e="descripti, o, n"
           content="Achieve, 6, 0–85% GenAI, cost, savings with, econom, y/quality, tier, routing, semantic, cache, s, KV, store, s, and, KP, I-linked, eval, scorecards." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-co, s, t-optimizati, o, n-v5/>"
-=======
           content="Achieve, 6, 0–85% GenAI, cost, savings with, econom, y/quality, tier, routing, semantic, cache, s, KV, store, s, and, KP, I-linked, eval, scorecards."
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-co, s, t-optimizati, o, n-v5" />";
@@ -30,7 +29,6 @@
             </ul>
             <h2, className="te, x, t-2xl, fon, t-semibo, l, d">Bluepri, n, t</h2>
             <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">
-=======
             <h2, className="te, x, t-2xl, fon, t-semibo, l, d">Bluepri, n, t</h2>";
             <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">";
               Start, with, a budget, per, request ty, p, e, attach, a, decision function, that, chooses: cac, h, e → econo, m, y → quali, t, y.
@@ -38,7 +36,6 @@
             </p>
             <div, className="mt-8">
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
-=======
             <div, className="mt-8">";
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
             </d, i, v>

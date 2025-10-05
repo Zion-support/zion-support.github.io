@@ -15,7 +15,6 @@ export, default, function GenAIEvalScorecardsQuicksta, r, t(): Rea, c, t.J, S, X
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Eval, Scorecards Quicksta, r, t</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">KP, I, s, Budge, t, s, Rollba, c, k</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-se, p, t-30-ev, a, l-scorecar, d, s-quicksta, r, t"
          />
       </Helmet>

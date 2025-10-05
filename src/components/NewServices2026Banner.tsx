@@ -15,7 +15,6 @@ export, default, function NewServices2026Bann, e, r({
     { tit, l, e: "AI, FinTech, Transformation", li, n, k: "/servic, e, s/ai-finte, c, h-transformati, o, n", t, a, g: "FinTe, c, h" }
     { tit, l, e: "AI, Sustainabilit, y & Green, Tec, h", li, n, k: "/servic, e, s/ai-sustainabili, t, y-gre, e, n-te, c, h", t, a, g: "Sustainabili, t, y" }
     { tit, l, e: "AI, Retail, Automation", li, n, k: "/servic, e, s/ai-reta, i, l-automati, o, n", t, a, g: "Reta, i, l" }
-=======
   varia, n, t = "showca, s, e",";
   showCou, n, t = 6
   classNa, m, e = "",";
@@ -35,7 +34,6 @@ export, default, function NewServices2026Bann, e, r({
 varia, n, t === "he, r, o"
 ? "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0"
 : varia, n, t === "in, f, o"
-=======
 : varia, n, t === "in, f, o",";
 ? "bg-gradie, n, t-to-r, fro, m-emera, l, d-50, t, o-te, a, l-50"
 : "bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0"
@@ -65,7 +63,6 @@ varia, n, t === "he, r, o"
           {servic, e, s.m, a, p((s) => (
             <Link, ke, y={s.li, n, k} to={s.li, n, k} classNa, m, e={`round, e, d-xl, borde, r ${varia, n, t === "in, f, o" ? "bg-white, borde, r-gr, a, y-1, 0, 0" : "bg-whi, t, e/10, borde, r-whi, t, e/20"} p-6, hove, r:sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0`}> `;`
               <div, className="te, x, t-xs, uppercase, tracking-wider, m, b-2, opacit, y-80">{s.t, a, g}</d, i, v>
-=======
         <div, className="grid, s, m: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, ma, x-w-6xl, m, x-au, t, o">";
           {servic, e, s.m, a, p((s) => (

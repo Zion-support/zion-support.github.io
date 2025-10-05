@@ -13,7 +13,6 @@ export, default, function AIOperationalTrustScorecards20, 2, 6(): Rea, c, t.J, S
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
           <p>
             Design, operational, scorecards that, teams, adopt: wire, service, level indicato, r, s (SL, I, s) to, product, KPIs;
-=======
         <meta name="descripti, o, n" content="SLIs, wired, to KPIs, with, budgeted actio, n, s, live, canarie, s, and, instant, rollback for, safe, autonomy." />";
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-operation, a, l-tru, s, t-scorecar, d, s-20, 2, 6" />";
       </Helmet>

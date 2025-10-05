@@ -7,7 +7,6 @@ const, October2025BreakthroughContentBanne, r = () => {
         <Sparkles, className="w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e  />
       </d, i, v>
       <p, className="te, x, t-white, tex, t-lg, fon, t-semibold, m, b-4, tex, t-cent, e, r">
-=======
     <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-8, animat, e-fa, d, e-in, shado, w-2, x, l">";
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
         <Sparkles, className="w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e" />";
@@ -24,7 +23,6 @@ const, October2025BreakthroughContentBanne, r = () => {
         Get, battl, e-tested, strategie, s, implementation, roadmap, s, and, rea, l-world, case, studies.
       </p>
       <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-6">"
-=======
       <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-6">";
         <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-octob, e, r-breakthrou, g, h-enterpri, s, e-automati, o, n"
@@ -32,7 +30,6 @@ const, October2025BreakthroughContentBanne, r = () => {
   r: bg-emera, l, d-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
         >
           <Zap, className="w-5 h-5  />
-=======
           <Zap, className="w-5 h-5" />";
           Read, Enterprise, Automation Gui, d, e;
         </Li, n, k>
@@ -41,7 +38,6 @@ const, October2025BreakthroughContentBanne, r = () => {
           classNa, m, e="bg-cy, a, n-500, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-cy, a, n-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
         >
           <Brain, className="w-5 h-5  />
-=======
           <Brain, className="w-5 h-5" />";
           Explore, Quantu, m-AI, System, s;
         </Li, n, k>
@@ -67,7 +63,6 @@ const, October2025BreakthroughContentBanne, r = () => {
             </li>
             <li, className="flex, item, s-cent, e, r">
               <CheckCircle, className="w-4 h-4, m, r-2, tex, t-emera, l, d-4, 0, 0  />
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
         <div, className="bg-whi, t, e/10, rounde, d-x, l, p-4">";
           <h3, className="te, x, t-white, fon, t-semibold, m, b-2, flex, items-cent, e, r">";
@@ -113,7 +108,6 @@ const, October2025BreakthroughContentBanne, r = () => {
             </li>
             <li, className="flex, item, s-cent, e, r">
               <CheckCircle, className="w-4 h-4, m, r-2, tex, t-cy, a, n-4, 0, 0  />
-=======
         <div, className="bg-whi, t, e/10, rounde, d-x, l, p-4">";
           <h3, className="te, x, t-white, fon, t-semibold, m, b-2, flex, items-cent, e, r">";
             <Brain, className="w-5 h-5, m, r-2, tex, t-cy, a, n-4, 0, 0" />";

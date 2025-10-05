@@ -15,7 +15,6 @@ export, default, function AITrustlessEvaluationBlueprint20, 2, 6(): Rea, c, t.J,
   6: Trustless, Evaluation, Blueprint</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Signed, dataset, s • Verifiable, pipeline, s • Tamp, e, r‑evident, scorin, g</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 6-trustle, s, s-evaluati, o, n-bluepri, n, t"
          />
       </Helmet>

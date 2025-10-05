@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 import, Header, from "../../componen, t, s/Head, e, r";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -18,7 +17,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
         <Head, e, r   />
         <article, className="container, m, x-auto, p, x-6, p, y-20">
-=======
         <article, className="container, m, x-auto, p, x-6, p, y-20">";
           {/* Back, Lin, k */};
           <Li, n, k
@@ -26,7 +24,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Services;
           </Li, n, k>
@@ -42,7 +39,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
               <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Starting, a, t $7,9, 9, 9/mon, t, h</sp, a, n>";
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               Re, a, l-Time, Cognitive, Automation Platfo, r, m;
               <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2">";
@@ -51,7 +47,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
             </h1>
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8">
               Revolutionize, your, business operations, with, AI-powered, workflows, that deliver, instant, decision-maki, n, g;
-=======
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8">";
               Revolutionize, your, business operations, with, AI-powered, workflows, that deliver, instant, decision-maki, n, g
               se, l, f-learning, automatio, n, and, 9, 9.97% accura, c, y. Achieve, 8, 7% cost, reduction, and 10x, productivity, gains.
@@ -73,7 +68,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
               <div, className="bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-center, hove, r: sca, l, e-105, transitio, n-transfo, r, m">"
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2">6, M, o</d, i, v>
                 <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Average, ROI, Time</d, i, v>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">";
               <div, className="bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r: sca, l, e-105, transitio, n-transfo, r, m">";
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2">94%</d, i, v>";
@@ -117,7 +111,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                 <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
                 Business, Impac, t;
@@ -154,7 +147,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">🧠 Se, l, f-Learning, System, s</h3>";
                     <ul, className="spa, c, e-y-3">";
                       <li, className="flex, item, s-start, ga, p-2">";
@@ -217,7 +209,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     <div, className="te, x, t-4xl, m, b-4">{capabili, t, y.ic, o, n}</d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">{capabili, t, y.tit, l, e}</h3>
                     <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">{capabili, t, y.descripti, o, n}</p>
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                 <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
                 Platform, Capabilitie, s;
@@ -296,7 +287,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     automati, o, n: "89%","
                     highligh, t, s: ["Order, processi, n
   g: 99.8% automati, o, n", "Customer, servic, e: 89% au, t, o-resoluti, o, n", "Retur, n, s: 95% automat, e, d"]"
-=======
                     indust, r, y: "Financial, Service, s",";
                     savin, g, s: "$12.4M",";
                     automati, o, n: "95%",";
@@ -341,7 +331,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                       {soluti, o, n.highligh, t, s.m, a, p((highlig, h, t, hInd, e, x) => (
                         <li, ke, y={hInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                         <li, ke, y={hInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
                           <sp, a, n>{highlig, h, t}</sp, a, n>
@@ -375,7 +364,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     na, m, e: "Enterpri, s, e","
                     pri, c, e: "$49,9, 9, 9","
                     featur, e, s: ["Unlimited, transaction, s", "Unlimited, workflow, s", "Custom, AI, models", "Dedicated, tea, m", "99.97% S, L, A"]"
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                 <DollarSign, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
                 Prici, n, g & Packag, e, s;
@@ -412,7 +400,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                       {p, k, g.featur, e, s.m, a, p((featu, r, e, fInd, e, x) => (
                         <li, ke, y={fInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                         <li, ke, y={fInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
                           <sp, a, n>{featu, r, e}</sp, a, n>
@@ -431,7 +418,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     <div, className="flex, item, s-center, ga, p-3, m, b-4">
                       <Rocket, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">🚀 October, 2025, Launch Speci, a, l</h3>
-=======
               <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50">";
                 <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6">";
                   <div, className="fl, e, x-1">";
@@ -453,7 +439,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                     <ul, className="spa, c, e-y-2">";
                       <li, className="flex, item, s-start, ga, p-2">";
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
@@ -480,7 +465,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                     >
                       Get, Started, Today;
                       <Zap, className="w-5 h-5  />
-=======
                       <Zap, className="w-5 h-5" />";
                     </Li, n, k>
                   </d, i, v>
@@ -501,7 +485,6 @@ const, RealTimeCognitiveAutomatio, n = () => {
                 >
                   Schedule, Free, Assessment;
                   <Zap, className="w-5 h-5  />
-=======
                   <Zap, className="w-5 h-5" />";
                 </Li, n, k>
                 <Li, n, k

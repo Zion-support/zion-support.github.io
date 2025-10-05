@@ -4,7 +4,6 @@
  */
 export, interface, SitemapURL {
 l, o, c: stri, n, g
-=======
 l, o, c: stri, n, g;
 lastm, o, d?: stri, n, g;
 changefr, e, q?: 'alwa, y, s' | 'hour, l, y' | 'dai, l, y' | 'week, l, y' | 'month, l, y' | 'year, l, y' | 'nev, e, r';';
@@ -12,7 +11,6 @@ priori, t, y?: numb, e, r;
 imag, e, s?: Arr, a, y<{
 lo
   c: stri, n, g;
-=======
 imag, e, s?: Arr, a, y<{
 l, o, c: stri, n, g;
 capti, o, n?: stri, n, g;
@@ -23,7 +21,6 @@ export, interface, SitemapConfig {
 baseU, r, l: stri, n, g
 rout, e, s: Arr, a, y<{
 pa, t, h: stri, n, g
-=======
 baseU, r, l: stri, n, g;
 rou, t, e
   s: Arr, a, y<{
@@ -37,7 +34,6 @@ export, class, ImprovedSitemapGenerator {
 private, confi, g: SitemapConf, i, g;
 private, url, s: SitemapU, R, L[] = [];
 construct, o, r(conf, i, g: SitemapConf, i, g) {
-=======
 private, confi, g: SitemapConf, i, g;
 private, url, s: SitemapU, R, L[] = [];
 construct, o, r(con, f, i
@@ -55,7 +51,6 @@ th, i, s.conf, i, g = conf, i, g;
           lastm, o, d: new, Dat, e().toISOStri, n, g()
           changefr, e, q: rou, t, e.changefr, e, q || 'week, l, y'
           priori, t, y: rou, t, e.priori, t, y || 0.5;
-=======
           lo
   c: `${th, i, s.conf, i, g.baseU, r, l}${rou, t, e.pa, t, h}`,`;`
           lastm, o, d: new, Dat, e().toISOStri, n, g()
@@ -75,7 +70,6 @@ lo
         lastm, o, d: po, s, t.da, t, e
         changefr, e, q: 'month, l, y'
         priori, t, y: 0.8;
-=======
 const, u, r
   l: SitemapU, R, L = {
 l, o, c: `${th, i, s.conf, i, g.baseU, r, l`;`
@@ -87,7 +81,6 @@ l, o, c: `${th, i, s.conf, i, g.baseU, r, l`;`
       if (po, s, t.imag, e, s && po, s, t.imag, e, s.leng, t, h > 0) {
         u, r, l.imag, e, s = po, s, t.imag, e, s.m, a, p(i, m, g => ({
           l, o, c: `${th, i, s.conf, i, g.baseU, r, l}${i, m, g}`}));`
-=======
           l, o, c: `${th, i, s.conf, i, g.baseU, r, l}${i, m, g}`,`;`
         }));
       }
@@ -102,7 +95,6 @@ l, o, c: `${th, i, s.conf, i, g.baseU, r, l`;`
         lastm, o, d: stu, d, y.da, t, e
         changefr, e, q: 'month, l, y'
         priori, t, y: 0.7;
-=======
         lo
   c: `${th, i, s.conf, i, g.baseU, r, l}/ca, s, e-studi, e, s/${stu, d, y.sl, u, g}`,`;`
         lastm, o, d: stu, d, y.da, t, e
@@ -119,7 +111,6 @@ l, o, c: `${th, i, s.conf, i, g.baseU, r, l`;`
         lastm, o, d: new, Dat, e().toISOStri, n, g()
         changefr, e, q: 'month, l, y'
         priori, t, y: 0.9;
-=======
         lo
   c: `${th, i, s.conf, i, g.baseU, r, l}/servic, e, s/${servi, c, e.sl, u, g}`,`;`
         lastm, o, d: new, Dat, e().toISOStri, n, g()
@@ -134,7 +125,6 @@ x, m, l += '<urlset, xmln, s="ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a,
 x, m, l += ' xml, n, s:ima, g, e="ht, t, p://w, w, w.goog, l, e.c, o, m/schem, a, s/sitem, a, p-ima, g, e/1.1">\n';
 th, i, s.ur, l, s.forEa, c, h(u, r, l => {
 x, m, l += '  <u, r, l>\n';
-=======
 let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8"?>\n';';
 x, m, l += '<urlset, xmln, s="h, t, t
   p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9"';';
@@ -167,7 +157,6 @@ x, m, l += `      <im, a, g,`
             x, m, l += `      <ima, g, e:tit, l, e>${th, i, s.escapeX, M, L(ima, g, e.tit, l, e)}</ima, g, e: tit, l, e>\n`,`;`
           }
           x, m, l += '    </ima, g, e: ima, g, e>\n';'
-=======
 x, m, l += '    <ima, g, e: ima, g, e>\n';';
 x, m, l += `      <ima, g, e:l, o, c>${th, i, s.escapeX, M, L(ima, g, e.l, o, c)`;`
 }</ima, g, e: l, o, c>\n`;`;`
@@ -192,7 +181,6 @@ let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8"?>\n';
 x, m, l += '<sitemapindex, xmln, s="ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">\n';
 sitema, p, s.forEa, c, h(sitem, a, p => {
 x, m, l += '  <sitem, a, p>\n';
-=======
 let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8"?>\n';';
 x, m, l += '<sitemapindex, xmln, s="h, t, t
   p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">\n';';
@@ -215,7 +203,6 @@ x, m, l += `    <l, o, c>${th, i, s.escapeX, M, L(sitem, a, p.l, o, c)`;`
       .repla, c, e(/>/g, '&gt;');
       .repla, c, e(/"/g, '&qu, o, t;');
       .repla, c, e(/'/g, '&ap, o, s;');
-=======
       .repla, c, e(/&/g, '&a, m, p;')';
       .repla, c, e(/</g, '&lt;')';
       .repla, c, e(/>/g, '&gt;')';
@@ -241,7 +228,6 @@ x, m, l += `    <l, o, c>${th, i, s.escapeX, M, L(sitem, a, p.l, o, c)`;`
       { pa, t, h: '/ca, s, e-studi, e, s', priori, t, y: 0.8, changefr, e, q: 'week, l, y' }
       { pa, t, h: '/servic, e, s', priori, t, y: 0.9, changefr, e, q: 'month, l, y' }
     ]
-=======
       { pa, t, h: '/', priori, t, y: 1.0, changefr, e, q: 'dai, l, y' },';
       { pa, t, h: '/abo, u, t', priori, t, y: 0.8, changefr, e, q: 'month, l, y' },';
       { pa, t, h: '/conta, c, t', priori, t, y: 0.9, changefr, e, q: 'month, l, y' },';

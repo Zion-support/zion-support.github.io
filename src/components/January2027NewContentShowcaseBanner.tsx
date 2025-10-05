@@ -13,7 +13,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-8">
             Discover, the, most advanced, AI, technologies reshaping, the, future: Neuromorphic, Edge, Computing with, 1000x, efficiency;
-=======
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Revolutionary, AI, Breakthroughs Now, Liv, e;
           </h2>
@@ -30,7 +29,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">🧠</d, i, v>"
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">Neuromorphic, Edge, Computing</h3>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-6xl, m, x-auto, m, b-12">";
           {/* Neuromorphic, Edge, Computing */}
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">";
@@ -82,7 +80,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">🔐</d, i, v>"
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">Quantum, AI, Security</h3>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">";
             <div, className="te, x, t-center, m, b-6">";
               <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">🔐</d, i, v>";
@@ -132,7 +129,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">💰</d, i, v>"
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3">Fortune, 500, Success</h3>
               <p, className="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">";
             <div, className="te, x, t-center, m, b-6">";
               <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">💰</d, i, v>";
@@ -186,7 +182,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
             </p>
           </d, i, v>
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4">"
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4">";
             <a, titl, e="Internal, lin, k" 
               hr, e, f="/bl, o, g"
@@ -196,7 +191,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">📚</d, i, v>"
               <div, className="fo, n, t-bold, tex, t-whi, t, e">All, Article, s</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">2, 0, 0+ AI, Breakthrough, s</d, i, v>
-=======
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">📚</d, i, v>";
               <div, className="fo, n, t-bold, tex, t-whi, t, e">All, Article, s</d, i, v>";
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">2, 0, 0+ AI, Breakthrough, s</d, i, v>";
@@ -209,7 +203,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">💼</d, i, v>"
               <div, className="fo, n, t-bold, tex, t-whi, t, e">Case, Studie, s</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">$5, 0, B+ Success, Storie, s</d, i, v>
-=======
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">💼</d, i, v>";
               <div, className="fo, n, t-bold, tex, t-whi, t, e">Case, Studie, s</d, i, v>";
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">$5, 0, B+ Success, Storie, s</d, i, v>";
@@ -222,7 +215,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">🚀</d, i, v>"
               <div, className="fo, n, t-bold, tex, t-whi, t, e">AI, Service, s</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">Implementation, Read, y</d, i, v>
-=======
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">🚀</d, i, v>";
               <div, className="fo, n, t-bold, tex, t-whi, t, e">AI, Service, s</d, i, v>";
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">Implementation, Read, y</d, i, v>";
@@ -235,7 +227,6 @@ export, default, function January2027NewContentShowcaseBann, e, r(): vo, i, d {
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">💬</d, i, v>"
               <div, className="fo, n, t-bold, tex, t-whi, t, e">Consultati, o, n</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">Free, Assessmen, t</d, i, v>
-=======
               <div, className="te, x, t-3xl, m, b-2, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">💬</d, i, v>";
               <div, className="fo, n, t-bold, tex, t-whi, t, e">Consultati, o, n</d, i, v>";
               <div, className="te, x, t-xs, tex, t-gr, a, y-3, 0, 0">Free, Assessmen, t</d, i, v>";

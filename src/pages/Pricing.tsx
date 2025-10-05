@@ -70,7 +70,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
       limitatio, n, s: []
       c, t, a: 'Contact, Sale, s'
       popul, a, r: fal, s, e;
-=======
 import React from "react";';
 impo, r, t {
 Li, n, k;
@@ -171,7 +170,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
       descripti, o, n: 'Enhanced, support, with faster, response, times','
       pri, c, e: 'Fr, o, m $5, 0, 0/mon, t, h','
       featur, e, s: ['Priority, Respons, e', 'Dedicated, Support, Channel', 'Extended, Hour, s']'
-=======
       na, m, e: 'Custom, AI, Model Developme, n, t',';
       descripti, o, n: 'Bespoke, AI, models tailored, to, your specific, business, needs',';
       pri, c, e: 'Fr, o, m $5,0, 0, 0',';
@@ -212,7 +210,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
     {
       questi, o, n: 'Are, there, any setup, fee, s?','
       answ, e, r: 'No, setup, fees for, Starter, and Professional, plan, s. Enterprise, plans, may include, setup, fees depending, on, custom requiremen, t, s.}
-=======
       questi, o, n: 'What, is, included in, the, free tri, a, l?',';
       answ, e, r: 'The, free, trial includes, access, to all, Starter, plan features, for, 14 da, y, s, with, no, credit card, require, d.'
     }
@@ -248,7 +245,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
   no, credit, card requir, e, d. Scale, as, you gr, o, w.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
       <section, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-te, a, l-600, tex, t-white, p, y-20">";
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
           <div, className="te, x, t-cent, e, r">";
@@ -284,7 +280,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
   g:px-8">"
           <div, className="te, x, t-center, m, b-16">
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">"
-=======
       <section, className="py-20, b, g-whi, t, e">";
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
           <div, className="te, x, t-center, m, b-16">";
@@ -297,7 +292,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
           </d, i, v>
           <div, className="grid, gri, d-co, l, s-1 m
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">";
             {pricingPla, n, s.m, a, p((pl, a, n) => {
               const, IconComponen, t = pl, a, n.ic, o, n;
@@ -309,7 +303,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">
                       <span, className="bg-bl, u, e-500, tex, t-white, p, x-6, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, flex, items-cent, e, r">
                         <Star, className="w-4 h-4, m, r-1  />
-=======
                     <div, className="absolu, t, e -t, o, p-4, lef, t-1/2, transfor, m -transla, t, e-x-1/2">";
                       <span, className="bg-bl, u, e-500, tex, t-white, p, x-6, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, flex, items-cent, e, r">";
                         <Star, className="w-4 h-4, m, r-1" />";
@@ -318,7 +311,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
                     </d, i, v>
                   )}
                   <div, className="te, x, t-center, m, b-8">
-=======
                   <div, className="te, x, t-center, m, b-8">";
                     <div, className={`w-1, 6, h-16, rounde, d-lg, b, g-${pl, a, n.col, o, r}-100, flex, items-center, justif, y-center, m, x-auto, m, b-4`}>`;`
                       <IconComponent, className={`w-8 h-8, tex, t-${pl, a, n.col, o, r}-6, 0, 0`} />`;`
@@ -334,7 +326,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
                     {pl, a, n.featur, e, s.m, a, p((featu, r, e) => (
                       <li, ke, y={featu, r, e} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-7, 0, 0">
                         <Check, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
-=======
                       <li, ke, y={featu, r, e} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-7, 0, 0">";
                         <Check, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
                         {featu, r, e}
@@ -353,7 +344,6 @@ const, Pricin, g: Rea, c, t.FC = () => {
 `bloc, k, w-full, tex, t-center, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-bl, u, e-600, tex, t-white, hove, r:bg-bl, u, e-7, 0, 0'
-=======
                     to={pl, a, n.na, m, e === 'Enterpri, s, e' ? '/conta, c, t' : '/de, m, o'}';
                     classNa, m, e={
 `bloc, k, w-full, tex, t-center, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
@@ -376,7 +366,6 @@ pl, a, n.popul, a, r;
   g:px-8">"
           <div, className="te, x, t-center, m, b-16">
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">"
-=======
       <section, className="py-20, b, g-gr, a, y-50">";
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
           <div, className="te, x, t-center, m, b-16">";
@@ -389,7 +378,6 @@ pl, a, n.popul, a, r;
           </d, i, v>
           <div, className="grid, gri, d-co, l, s-1 m
   d: gr, i, d-co, l, s-2, ga, p-8">"
-=======
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8">";
             {addOnServic, e, s.m, a, p((servi, c, e) => (
               <div, ke, y={servi, c, e.na, m, e} classNa, m, e="bg-white, rounde, d-lg, shado, w-lg, border, border-gr, a, y-20, 0, p-8">";
@@ -402,7 +390,6 @@ pl, a, n.popul, a, r;
                   {servi, c, e.featur, e, s.m, a, p((featu, r, e) => (
                     <li, ke, y={featu, r, e} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-7, 0, 0">
                       <Check, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0  />
-=======
                     <li, ke, y={featu, r, e} classNa, m, e="flex, item, s-center, tex, t-gr, a, y-7, 0, 0">";
                       <Check, className="w-4 h-4, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0" />";
                       {featu, r, e}
@@ -426,7 +413,6 @@ pl, a, n.popul, a, r;
   g:px-8">"
           <div, className="te, x, t-center, m, b-16">
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">"
-=======
       <section, className="py-20, b, g-whi, t, e">";
         <div, className="m, a, x-w-4xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
           <div, className="te, x, t-center, m, b-16">";
@@ -453,7 +439,6 @@ pl, a, n.popul, a, r;
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"
           <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">"
-=======
       <section, className="py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0">";
         <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
           <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4">";
@@ -464,7 +449,6 @@ pl, a, n.popul, a, r;
           </p>
           <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <Li, n, k
   to="/de, m, o"

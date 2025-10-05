@@ -23,7 +23,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
   ];
   return (
     <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">"
-=======
       tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Laten, c, y",";
       catego, r, y: "AI, Infrastructur, e",";
       readTi, m, e: "7, min, read",";
@@ -61,7 +60,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
               </sp, a, n>
             </d, i, v>
             <h2, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4">"
-=======
       <div, className="relativ, e, z-10">";
         <div, className="flex, fle, x-col, l, g: fl, e, x-row, l, g:ite, m, s-center, l, g:justi, f, y-between, ga, p-8">";
           <div, className="m, a, x-w-2, x, l">";
@@ -89,7 +87,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
               <BookOpen, className="w-5 h-5  />
               Explore, All, Articles;
               <ArrowRight, className="w-5 h-5  />
-=======
               <BookOpen, className="w-5 h-5" />";
               Explore, All, Articles;
               <ArrowRight, className="w-5 h-5" />";
@@ -100,7 +97,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
   r:sca, l, e-1, 0, 5"
             >
               <Zap, className="w-5 h-5  />
-=======
               <Zap, className="w-5 h-5" />";
               View, Case, Studies;
             </Li, n, k>
@@ -113,7 +109,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
   r:sca, l, e-1, 0, 5">"
               <div, className="flex, item, s-center, justif, y-between, m, b-3">
                 <span, className="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
-=======
         <div, className="mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">";
           {featuredConte, n, t.m, a, p((it, e, m, ind, e, x) => (
             <div, ke, y={ind, e, x} classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hov, e
@@ -136,7 +131,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
                   {it, e, m.readTi, m, e}
                 </sp, a, n>
                 <ArrowRight, className="w-4 h-4, tex, t-whi, t, e/70  />
-=======
                 <ArrowRight, className="w-4 h-4, tex, t-whi, t, e/70" />";
               </d, i, v>
             </d, i, v>
@@ -147,7 +141,6 @@ export, default, function ContentPromotionBann, e, r(): vo, i, d {
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>
             <div, className="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</d, i, v>
-=======
         <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>";

@@ -24,7 +24,6 @@ c, s, p: {
 };
   heade, r, s: {
     [k, e, y: stri, n, g]: stri, n, g;
-=======
 'defau, l, t-s, r, c': stri, n, g[];';
 'scri, p, t-s, r, c': stri, n, g[];';
 'sty, l, e-s, r, c': stri, n, g[];';
@@ -88,7 +87,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
         'X-Permitt, e, d-Cro, s, s-Doma, i, n-Polici, e, s': 'no, n, e'
         'Cro, s, s-Orig, i, n-Embedd, e, r-Poli, c, y': 'requi, r, e-co, r, p'
         'Cro, s, s-Orig, i, n-Open, e, r-Poli, c, y': 'sa, m, e-orig, i, n'
-=======
         'defau, l, t-s, r, c': ["'se, l, f'"],";
         'scri, p, t-s, r, c': ["'se, l, f'", "'unsa, f, e-inli, n, e'", "'unsa, f, e-ev, a, l'", 'htt, p, s: //w, w, w.googletagmanag, e, r.c, o, m', 'htt, p, s://w, w, w.goog, l, e-analyti, c, s.c, o, m'],';
         'sty, l, e-s, r, c': ["'se, l, f'", "'unsa, f, e-inli, n, e'", 'htt, p, s: //fon, t, s.googleap, i, s.c, o, m'],';
@@ -127,7 +125,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
     const, directive, s: stri, n, g[] = []
     Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([directi, v, e, valu, e, s]) => {
       if (typeof, value, s === 'boole, a, n') {;
-=======
     const, directive, s: stri, n, g[] = [];
     Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([directi, v, e, valu, e, s]) => {
       if (typeof, value, s === 'boole, a, n') {';
@@ -144,7 +141,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
     retu, r, n {
       ...th, i, s.conf, i, g.heade, r, s;
       'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e()
-=======
       ...th, i, s.conf, i, g.heade, r, s
       'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e()';
     };
@@ -155,7 +151,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
     }
   }
   public, addTrustedDomai, n(doma, i, n: stri, n, g, directi, v, e: stri, n, g = 'scri, p, t-s, r, c'): vo, i, d {'
-=======
   public, addTrustedDomai, n(doma, i, n: stri, n, g, directi, v, e: stri, n, g = 'scri, p, t-s, r, c'): vo, i, d {';
     if (directive, in, this.conf, i, g.c, s, p) {
       const, currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[];
@@ -165,7 +160,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
     }
   }
   public, removeTrustedDomai, n(doma, i, n: stri, n, g, directi, v, e: stri, n, g = 'scri, p, t-s, r, c'): vo, i, d {'
-=======
   public, removeTrustedDomai, n(doma, i, n: stri, n, g, directi, v, e: stri, n, g = 'scri, p, t-s, r, c'): vo, i, d {';
     if (directive, in, this.conf, i, g.c, s, p) {
       const, currentValue, s = (th, i, s.conf, i, g.csp, as, any)[directi, v, e] as, strin, g[];
@@ -180,7 +174,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
       ht, m, l: /^[^<>]*$/
       u, r, l: /^htt, p, s?:\/\/[^\s<>]+$/
       scri, p, t: /^[^<>'"]*$/"
-=======
   public, validateInpu, t(inp, u, t: stri, n, g, ty, p, e: 'ht, m, l' | 'u, r, l' | 'scri, p, t' = 'ht, m, l'): boole, a, n {';
     const, pattern, s = {
       h, t, m
@@ -195,7 +188,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
       .repla, c, e(/[<>]/g, '');
       .repla, c, e(/javascri, p, t: /gi, '')'
       .repla, c, e(/on\w+=/gi, '');
-=======
       .repla, c, e(/[<>]/g, '')';
       .repla, c, e(/javascri, p, t: /gi, '')';
       .repla, c, e(/on\w+=/gi, '')';
@@ -203,7 +195,6 @@ th, i, s.conf, i, g = th, i, s.getDefaultConf, i, g();
   }
   public, generateNonc, e(): stri, n, g {
     if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.cryp, t, o) {;
-=======
     if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.cryp, t, o) {';
       const, arra, y = new, Uint8Arra, y(16);
       wind, o, w.cryp, t, o.getRandomValu, e, s(arr, a, y);
@@ -218,7 +209,6 @@ heade, r, s: { [ke
   y: stri, n, g]: stri, n, g;
 };
     sco, r, e: numb, e, r
-=======
     sco, r, e: numb, e, r;
   } {
     const, header, s = th, i, s.getSecurityHeade, r, s();
@@ -238,7 +228,6 @@ heade, r, s: { [ke
     });
     // Check, CSP, strictness
   const, cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y'];
-=======
     const, cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y'];';
     if (!c, s, p.includ, e, s("'unsa, f, e-inli, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {";
       sco, r, e += 10; // Bonus, for, strict C, S, P;
@@ -260,7 +249,6 @@ heade, r, s: { [ke
 };
 export, const, validateURL = (u, r, l: stri, n, g): boole, a, n => {
   return, securityManage, r.validateInp, u, t(u, r, l, 'u, r, l');
-=======
   return, securityManage, r.validateInp, u, t(u, r, l, 'u, r, l');';
 };
 export, const, generateSecureToken = (): stri, n, g => {

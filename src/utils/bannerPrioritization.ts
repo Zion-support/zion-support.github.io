@@ -86,7 +86,6 @@ export, const, bannerRegistry: BannerMetada, t, a[] = [
     catego, r, y: 'ai'
     featur, e, d: tr, u, e;
   }
-=======
     id: 'jan20, 2, 6-autonomo, u, s',';
     na, m, e: 'January, 2026, Revolutionary Autonomous, Intelligenc, e',';
     priori, t, y: 1, 0, 0
@@ -172,7 +171,6 @@ export, const, getPrioritizedBanners = (lim, i, t?: numb, e, r): BannerMetada, t
  */
 export, const, getBannersByCategory = (
   catego, r, y: BannerMetada, t, a['catego, r, y']'
-=======
   catego, r, y: BannerMetada, t, a['catego, r, y']';
 ): BannerMetada, t, a[] => {
   return, bannerRegistr, y;
@@ -205,7 +203,6 @@ export, const, calculateTotalValue = (banne, r, s: BannerMetada, t, a[]): numb, 
     const, valu, e = parseFlo, a, t(bann, e, r.val, u, e.repla, c, e(/[^0-9.]/g, ''));
     const, multiplie, r = bann, e, r.val, u, e.includ, e, s('T') ? 10, 0, 0 ;
                      : bann, e, r.val, u, e.includ, e, s('B') ? 1 ;
-=======
     const, valu, e = parseFlo, a, t(bann, e, r.val, u, e.repla, c, e(/[^0-9.]/g, ''));';
     const, multiplie, r = bann, e, r.val, u, e.includ, e, s('T') ? 10, 0, 0 ';
                      : bann, e, r.val, u, e.includ, e, s('B') ? 1 ';
@@ -228,7 +225,6 @@ export, const, getBannerAnalytics = () => {
       gre, e, n: getBannersByCatego, r, y('gre, e, n').leng, t, h
       soverei, g, n: getBannersByCatego, r, y('soverei, g, n').leng, t, h;
     }
-=======
     totalBanne, r, s: bannerRegist, r, y.leng, t, h
     featuredCou, n, t: bannerRegist, r, y.filt, e, r(b => b.featur, e, d).leng, t, h
     totalVal, u, e: `$${calculateTotalVal, u, e(bannerRegist, r, y).toFix, e, d(1)}B`,`;`
@@ -247,7 +243,6 @@ export, const, getBannerAnalytics = () => {
 export, class, BannerRotationManager {
   private, viewCount, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p()
   private, clickCount, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p()
-=======
   private, viewCount, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p();
   private, clickCount, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p();
   recordVi, e, w(banner, I, d: stri, n, g) {

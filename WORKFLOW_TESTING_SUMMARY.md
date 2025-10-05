@@ -17,11 +17,9 @@
 ### 3. Current Status
 ```
 🏥 Overall Health Assessment:
-=============================
 ✅ All workflows are healthy! Background agents should work properly.
 
 📊 Workflow Health Summary:
-============================
   Total workflows: 450
   Valid YAML: 450
   Invalid YAML: 0

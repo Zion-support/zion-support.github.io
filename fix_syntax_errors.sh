@@ -31,9 +31,7 @@ for file in $error_files; do
     # For now, let's just clean up obvious issues
     
     # 4. Remove any remaining merge conflict artifacts
-    sed -i '/^<<<<<<< HEAD/d' "$file"
-    sed -i '/^=======/d' "$file"
-    sed -i '/^>>>>>>> .*/d' "$file"
+    sed -i '/^
     
     # 5. Fix common JSX issues
     # Remove any stray characters that might break JSX

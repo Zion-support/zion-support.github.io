@@ -8,7 +8,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
           content="Deploy, autonomous, AI security, operations, that detect, threats, in millisecon, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3B+ in, enterprise, assets." /><me, t, a
   na, m, e="keywor, d, s"
           content="AI, securit, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-ne, x, t-g, e, n-securi, t, y-operatio, n, s/>"
-=======
           content="AI, securit, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e"
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-ne, x, t-g, e, n-securi, t, y-operatio, n, s" />";
@@ -21,7 +20,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
   r: te, x, t-purp, l, e-300, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="mr-2 h-4 w-4  />
-=======
             <ArrowLeft, className="mr-2 h-4 w-4" />";
             Back, to, Blog;
           </Li, n, k>
@@ -60,7 +58,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
                 </li>
                 <li, className="flex, item, s-start, ga, p-3">
                   <AlertTriangle, className="h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0  />
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-r, e, d-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">";
               Ne, x, t-Gen, AI, Security Operati, o, n
   s: T, h, e $2.3B, Defense, Shield
@@ -98,7 +95,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0">The, Security, Crisis</h2>
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">
                 Cyber, threats, have evolved, beyond, human capacity, to, defend. Modern, attacks, leverage AI, operate, at, machine spe, e, d;
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0">The, Security, Crisis</h2>";
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">";
@@ -117,7 +113,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">1. Intelligent, Threat, Detection</h3>
                 <p, className="te, x, t-gr, a, y-300, m, b-4">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0">The, Autonomous, SecOps Architectu, r, e</h2>";
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">";
@@ -166,7 +161,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">4. Threat, Intelligence, Fusion</h3>
                 <p, className="te, x, t-gr, a, y-300, m, b-4">
                   AI, aggregates, and analyzes, threat, intelligence from, hundreds, of sourc, e, s—commercial, feed, s, open, source, intel;
-=======
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">4. Threat, Intelligence, Fusion</h3>";
                 <p, className="te, x, t-gr, a, y-300, m, b-4">";
@@ -188,7 +182,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
                 <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30">
                   <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0">Global, Financial, Institution</h3>
                   <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0">Enterprise, Success, Stories</h2>";
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
@@ -220,7 +213,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">Pha, s, e 
   1: Assessme, n, t (Week, s, 1-4)</h3>"
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0">Implementation, Roadma, p</h2>";
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">";
@@ -235,7 +227,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">Phas, e, 2: Deployme, n, t (Week, s, 5-12)</h3>"
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">
-=======
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">Phas, e, 2: Deployme, n, t (Week, s, 5-12)</h3>";
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">";
@@ -249,7 +240,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">Pha, s, e 
   3: Optimizati, o, n (Weeks, 1, 3-24)</h3>"
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">
-=======
               <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0">Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-24)</h3>";
                 <ul, className="li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4">";
@@ -269,7 +259,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
   processes, is, like bringing, a, knife to, a, gunfight.
               </p>
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">
-=======
               <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">";
                 Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfe, c, t 
                 threat, detectio, n, s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to
@@ -289,7 +278,6 @@ export, default, function NextGenSecurityOperations20, 2, 5(): vo, i, d {
               >
                 Schedule, Your, Security Assessme, n, t;
                 <ArrowLeft, className="ml-2 h-5 w-5, rotat, e-1, 8, 0  />
-=======
                 <ArrowLeft, className="ml-2 h-5 w-5, rotat, e-1, 8, 0" />";
               </Li, n, k>
             </d, i, v>

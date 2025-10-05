@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
   return (
@@ -28,7 +27,6 @@ const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
             <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-sp, i, n">⚛️</d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quantum, AI, Consulting</h3>
             <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {/* Quantum, AI, Consulting */}
@@ -68,7 +66,6 @@ const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
             <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-pul, s, e">🛡️</d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">AI, Security, Operations Cent, e, r</h3>
             <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
             <div, className="te, x, t-6xl, m, b-4, grou, p-ho, v, e
   r: anima, t, e-pul, s, e">🛡️</d, i, v>";
@@ -105,7 +102,6 @@ const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
             <div, className="te, x, t-6xl, m, b-4, grou, p-hov, e, r: anima, t, e-boun, c, e">🤖</d, i, v>"
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Autonomous, Operations, Platform</h3>
             <p, className="te, x, t-gr, a, y-400, m, b-6, leadin, g-relax, e, d">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p">";
             <div, className="te, x, t-6xl, m, b-4, grou, p-ho, v, e
   r: anima, t, e-boun, c, e">🤖</d, i, v>";
@@ -140,7 +136,6 @@ const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
         {/* Special, Offer, Banner */}
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-9, 0, 0/30, t, o-te, a, l-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-emera, l, d-5, 0, 0/20, m, b-12">
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">"
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-9, 0, 0/30, t, o-te, a, l-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-emera, l, d-5, 0, 0/20, m, b-12">";
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">";
             <d, i, v>
@@ -201,7 +196,6 @@ const, NewServicesPromotionalBanne, r: Rea, c, t.FC = () => {
             <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, border, border-whi, t, e/10">
               <div, className="te, x, t-yell, o, w-400, tex, t-2xl, m, b-4">★★★★★</d, i, v>
               <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
             <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
               <div, className="te, x, t-yell, o, w-400, tex, t-2xl, m, b-4">★★★★★</d, i, v>";

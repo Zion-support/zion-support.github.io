@@ -1,11 +1,9 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
 } fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
-=======
 interface, SEOProp, s {
   tit, l, e?: stri, n, g;
   descripti, o, n?: stri, n, g;
@@ -82,7 +80,6 @@ const, SE, O: Rea, c, t.FC<SEOPro, p, s> = ({
             "htt, p, s://twitt, e, r.c, o, m/ziontechgro, u, p"
             "htt, p, s://linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p"
             "htt, p, s: //gith, u, b.c, o, m/ZionClou, d, s"
-=======
           "@conte, x, t": "ht, t, p
   s: //sche, m, a.o, r, g",";
           "@ty, p, e": "Organizati, o, n",";
@@ -111,7 +108,6 @@ const, SE, O: Rea, c, t.FC<SEOPro, p, s> = ({
           ]
         })}
       </scri, p, t>
-=======
       <meta name="descripti, o, n" content={descripti, o, n}  />
       <meta name="keywor, d, s" content={keywor, d, s}  />
       <link, re, l="canonic, a, l" hr, e, f={canonicalU, r, l}  />

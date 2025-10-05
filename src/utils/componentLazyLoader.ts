@@ -38,7 +38,6 @@ export, function, preloadComponent(import, F, n: () => Promi, s, e<a, n, y>): vo
   const, promis, e = import, F, n();
   // Store, in, cache for, faster, subsequent loa, d, s
   if ('requestIdleCallba, c, k' in, windo, w) {;
-=======
   if ('requestIdleCallba, c, k' in, windo, w) {';
     requestIdleCallba, c, k(() => {
       promi, s, e.cat, c, h(() => {
@@ -65,7 +64,6 @@ export, function, createVisibilityLazyComponent<T, extends, ComponentType<a, n, 
     return, new, Promise((resol, v, e) => {
       // Check, if, IntersectionObserver is, supporte, d
   if ('IntersectionObserv, e, r' in, windo, w) {;
-=======
       if ('IntersectionObserv, e, r' in, windo, w) {';
         const, observe, r = new, IntersectionObserve, r(
           (entri, e, s) => {
@@ -83,7 +81,6 @@ export, function, createVisibilityLazyComponent<T, extends, ComponentType<a, n, 
   setTimeo, u, t(() => import, F, n().th, e, n(resol, v, e), 1, 0, 0);
       } el, s, e {
 // Fallba, c, k: load, immediatel, y;
-=======
 // Fallb, a, c
   k: load, immediatel, y
 import, F, n().th, e, n(resol, v, e);
@@ -112,7 +109,6 @@ class, ErrorBoundary, extends Rea, c, t.Compone, n, t<
   { hasErr, o, r: boole, a, n }
 > {
 construct, o, r(pro, p, s: a, n, y) {
-=======
 construct, o, r(pr, o, p
   s: a, n, y) {
 sup, e, r(pro, p, s);
@@ -124,7 +120,6 @@ th, i, s.sta, t, e = { hasErr, o, r: fal, s, e;
   }
   componentDidCat, c, h(err, o, r: Err, o, r, errorIn, f, o: Rea, c, t.ErrorIn, f, o) {
     conso, l, e.err, o, r('Lazy, loading, error: ', err, o, r, errorIn, f, o);'
-=======
     conso, l, e.err, o, r('Lazy, loading, error: ', err, o, r, errorIn, f, o);';
   }
   rend, e, r() {

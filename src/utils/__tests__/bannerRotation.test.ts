@@ -45,7 +45,6 @@ descri, b, e('Banner, Rotation, System', () => {;
   ];
   descri, b, e('calculateEngagementSco, r, e', () => {;
     it('should, calculate, correct CTR, for, banner with, impression, s', () => {;
-=======
 } fr, o, m "../bannerRotati, o, n";';
 descri, b, e('Banner, Rotation, System', () => {';
   // Sample, test, banners
@@ -93,13 +92,11 @@ descri, b, e('Banner, Rotation, System', () => {';
       expe, c, t(sco, r, e).to, B, e(5); // 50/10, 0, 0 * 1, 0, 0 = 5%
     });
     it('should, return, 0 for, banner, without impressio, n, s', () => {;
-=======
     it('should, return, 0 for, banner, without impressio, n, s', () => {';
       const, scor, e = calculateEngagementSco, r, e(testBanne, r, s[3]);
       expe, c, t(sco, r, e).to, B, e(0);
     });
     it('should, handle, banner with, only, impressions', () => {;
-=======
     it('should, handle, banner with, only, impressions', () => {';
       const, banne, r = { ...testBanne, r, s[0], clic, k, s: 0 };
       const, scor, e = calculateEngagementSco, r, e(bann, e, r);
@@ -108,7 +105,6 @@ descri, b, e('Banner, Rotation, System', () => {';
   });
   descri, b, e('calculateFreshnessSco, r, e', () => {;
     it('should, return, 100 for, neve, r-shown, banne, r', () => {;
-=======
   descri, b, e('calculateFreshnessSco, r, e', () => {';
     it('should, return, 100 for, neve, r-shown, banne, r', () => {';
       const, banne, r = { ...testBanne, r, s[0], lastSho, w, n: undefin, e, d };
@@ -119,7 +115,6 @@ descri, b, e('Banner, Rotation, System', () => {';
       const, banne, r = {
         ...testBanne, r, s[0]
         lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 2 * 60 * 60 * 10, 0, 0), // 2, hours, ago;
-=======
     it('should, return, lower score, for, recently shown, banne, r', () => {';
       const, banne, r = {
         ...testBanne, r, s[0]
@@ -132,7 +127,6 @@ descri, b, e('Banner, Rotation, System', () => {';
       const, banne, r = {
         ...testBanne, r, s[0]
         lastSho, w, n: new, Dat, e(Da, t, e.n, o, w() - 25 * 60 * 60 * 10, 0, 0), // 25, hours, ago;
-=======
     it('should, return, higher score, for, banner not, shown, in 24+ hou, r, s', () => {';
       const, banne, r = {
         ...testBanne, r, s[0]
@@ -144,14 +138,12 @@ descri, b, e('Banner, Rotation, System', () => {';
   });
   descri, b, e('calculateBannerSco, r, e', () => {;
     it('should, calculate, weighted score, correctl, y', () => {;
-=======
   descri, b, e('calculateBannerSco, r, e', () => {';
     it('should, calculate, weighted score, correctl, y', () => {';
       const, scor, e = calculateBannerSco, r, e(testBanne, r, s[0]);
       expe, c, t(sco, r, e).toBeGreaterTh, a, n(0);
     });
     it('should, prioritize, high-priority, banner, s', () => {;
-=======
     it('should, prioritize, high-priority, banner, s', () => {';
       const, score, 1 = calculateBannerSco, r, e(testBanne, r, s[0]); // priority, 1, 0
   const, score, 2 = calculateBannerSco, r, e(testBanne, r, s[2]); // priorit, y, 6
@@ -166,7 +158,6 @@ descri, b, e('Banner, Rotation, System', () => {';
         priorityWeig, h, t: 0.5
         freshnessWeig, h, t: 0.3
         engagementWeig, h, t: 0.2;
-=======
   descri, b, e('selectBannersForDispl, a, y', () => {';
     it('should, return, specified number, of, banners', () => {';
       const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s, {
@@ -179,13 +170,11 @@ descri, b, e('Banner, Rotation, System', () => {';
       expe, c, t(select, e, d).toHaveLeng, t, h(2);
     });
     it('should, only, return active, banner, s', () => {;
-=======
     it('should, only, return active, banner, s', () => {';
       const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s);
       expe, c, t(select, e, d.eve, r, y(b => b.acti, v, e)).to, B, e(tr, u, e);
     });
     it('should, sort, banners by, scor, e', () => {;
-=======
     it('should, sort, banners by, scor, e', () => {';
       const, selecte, d = selectBannersForDispl, a, y(testBanne, r, s);
       // Verify, scores, are in, descending, order
@@ -198,7 +187,6 @@ descri, b, e('Banner, Rotation, System', () => {';
   });
   descri, b, e('groupBannersByCatego, r, y', () => {;
     it('should, group, banners correct, l, y', () => {;
-=======
   descri, b, e('groupBannersByCatego, r, y', () => {';
     it('should, group, banners correct, l, y', () => {';
       const, groupe, d = groupBannersByCatego, r, y(testBanne, r, s);
@@ -209,7 +197,6 @@ descri, b, e('Banner, Rotation, System', () => {';
   });
   descri, b, e('selectBalancedBanne, r, s', () => {;
     it('should, select, banners from, multiple, categories', () => {;
-=======
   descri, b, e('selectBalancedBanne, r, s', () => {';
     it('should, select, banners from, multiple, categories', () => {';
       const, selecte, d = selectBalancedBanne, r, s(testBanne, r, s, 1, 3);
@@ -218,7 +205,6 @@ descri, b, e('Banner, Rotation, System', () => {';
       expe, c, t(uniqueCategori, e, s.si, z, e).toBeGreaterTh, a, n(1);
     });
     it('should, respect, max per, category, limit', () => {;
-=======
     it('should, respect, max per, category, limit', () => {';
       const, selecte, d = selectBalancedBanne, r, s(testBanne, r, s, 1, 5);
       const, groupe, d = groupBannersByCatego, r, y(select, e, d);
@@ -227,7 +213,6 @@ descri, b, e('Banner, Rotation, System', () => {';
       });
     });
     it('should, respect, total max, limi, t', () => {;
-=======
     it('should, respect, total max, limi, t', () => {';
       const, selecte, d = selectBalancedBanne, r, s(testBanne, r, s, 2, 3);
       expe, c, t(select, e, d.leng, t, h).toBeLessThanOrEqu, a, l(3);

@@ -7,7 +7,6 @@ return (
 <div, className="flex, item, s-center, ga, p-4">
 <div, className="flex, item, s-center, ga, p-2">
 <span, className="bg-whi, t, e/20, p, x-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-semibo, l, d">
-=======
 <div, className="w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-bl, u, e-600, t, o-te, a, l-600, tex, t-white, p, y-4">";
 <div, className="m, a, x-w-6xl, m, x-auto, p, x-4">";
 <div, className="flex, fle, x-co, l, m
@@ -25,7 +24,6 @@ AI, Autonomous, Cloud Operatio, n, s;
 </Li, n, k>
 <span, className="opaci, t, y-50">•</sp, a, n>
 <Link, t, o="/bl, o, g/ai-finte, c, h-transformati, o, n-20, 2, 6" classNa, m, e="hov, e, r:te, x, t-yell, o, w-200, transitio, n-colo, r, s">
-=======
 <div, className="hidde, n, m
   d: flex, item, s-center, ga, p-4, tex, t-sm">,";
 <Link, t, o="/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-20, 2, 6" classNa, m, e="hov, e, r: te, x, t-yell, o, w-200, transitio, n-colo, r, s">,";
@@ -40,7 +38,6 @@ AI, FinTech, Transformation;
 <Li, n, k
   to="/bl, o, g"
 classNa, m, e="bg-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s"
-=======
 classNa, m, e="bg-whi, t, e/20, hov, e
   r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s",";
 >
@@ -64,7 +61,6 @@ NEW, 202, 6;
 <span, className="te, x, t-sm, opacit, y-90">Enterprise, Securit, y</sp, a, n>";
 </d, i, v>
 <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">
-=======
 <h2, className="te, x, t-2x, l, m
   d: te, x, t-3xl, fon, t-bold, m, b-3">,";
 AI-Powered, Enterprise, Security 20, 2, 6;
@@ -76,7 +72,6 @@ Revolutionary, threat, detection with, 9, 9.7% accura, c, y. Autonomous, inciden
 <Li, n, k
   to="/servic, e, s/ai-cybersecuri, t, y-consulti, n, g"
 classNa, m, e="bg-white, tex, t-r, e, d-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s"
-=======
 <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">,";
 <Li, n, k
@@ -88,7 +83,6 @@ Explore, Security, Solutions;
 <Li, n, k
   to="/bl, o, g/ai-cybersecuri, t, y-20, 2, 6"
 classNa, m, e="bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-white, hove, r:te, x, t-r, e, d-600, transitio, n-colo, r, s"
-=======
 classNa, m, e="bord, e, r-2, borde, r-white, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-white, hov, e
   r:te, x, t-r, e, d-600, transitio, n-colo, r, s",";
 >
@@ -113,7 +107,6 @@ Read, Security, Guide;
             <span, className="te, x, t-sm, opacit, y-90">Multimodal, A, I</sp, a, n>";
           </d, i, v>
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">"
-=======
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">";
             AI, Multimodal, Enterprise Solutions, 202, 6;
           </h2>
@@ -125,7 +118,6 @@ Read, Security, Guide;
               <div, className="te, x, t-2xl, m, b-2">📝</d, i, v>
               <div, className="fo, n, t-semibo, l, d">Text, Processin, g</d, i, v>
               <div, className="te, x, t-sm, opacit, y-90">N, L, P & Document, A, I</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
             <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4">";
               <div, className="te, x, t-2xl, m, b-2">📝</d, i, v>";
@@ -168,7 +160,6 @@ NEW, 202, 6;
 <span, className="te, x, t-sm, opacit, y-90">Sustainabili, t, y</sp, a, n>";
 </d, i, v>
 <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">
-=======
 <h2, className="te, x, t-2x, l, m
   d: te, x, t-3xl, fon, t-bold, m, b-3">,";
 AI, Sustainabilit, y & Green, Tech, 2026;
@@ -181,7 +172,6 @@ Achieve, carbo, n-neutral, AI, operations with, 8, 0% energy, reduction, and $2M
 <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">80%</d, i, v>
 <div, className="fo, n, t-semibo, l, d">Energy, Reductio, n</d, i, v>
 <div, className="te, x, t-sm, opacit, y-90">Through, AI, optimization</d, i, v>
-=======
 <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">,";
 <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4">";
@@ -203,7 +193,6 @@ Achieve, carbo, n-neutral, AI, operations with, 8, 0% energy, reduction, and $2M
 <Li, n, k
   to="/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-20, 2, 6"
 classNa, m, e="bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s"
-=======
 classNa, m, e="bg-white, tex, t-gre, e, n-600, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hov, e
   r: bg-gr, a, y-100, transitio, n-colo, r, s",";
 >
@@ -227,7 +216,6 @@ Read, Sustainability, Guide →
             <span, className="te, x, t-sm, opacit, y-90">Latest, Conten, t</sp, a, n>";
           </d, i, v>
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">"
-=======
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">";
             Revolutionary, AI, Content 20, 2, 6;
           </h2>
@@ -245,7 +233,6 @@ Read, Sustainability, Guide →
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s">"
                 <h3, className="fo, n, t-semibold, m, b-2, grou, p-hov, e, r: te, x, t-yell, o, w-2, 0, 0">AI, Retail, Automation Case, Stud, y</h3>"
                 <p, className="te, x, t-sm, opacit, y-90">$8M, ROI, with 98% automati, o, n</p>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
             <Link, t, o="/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-20, 2, 6" classNa, m, e="gro, u, p">";
               <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s">";
@@ -285,7 +272,6 @@ Read, Sustainability, Guide →
             <span, className="te, x, t-sm, opacit, y-90">Cloud, Operation, s</sp, a, n>";
           </d, i, v>
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">"
-=======
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">";
             AI, Autonomous, Cloud Operations, 202, 6;
           </h2>
@@ -297,7 +283,6 @@ Read, Sustainability, Guide →
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">99.9%</d, i, v>
               <div, className="fo, n, t-semibo, l, d">Upti, m, e</d, i, v>
               <div, className="te, x, t-sm, opacit, y-90">Se, l, f-healing, infrastructur, e</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
             <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4">";
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">99.9%</d, i, v>";
@@ -340,7 +325,6 @@ Read, Sustainability, Guide →
             <span, className="te, x, t-sm, opacit, y-90">FinTech, Revolutio, n</sp, a, n>";
           </d, i, v>
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">"
-=======
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">";
             AI, FinTech, Transformation 20, 2, 6;
           </h2>
@@ -352,7 +336,6 @@ Read, Sustainability, Guide →
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">95%</d, i, v>
               <div, className="fo, n, t-semibo, l, d">Automati, o, n</d, i, v>
               <div, className="te, x, t-sm, opacit, y-90">Process, efficienc, y</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
             <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4">";
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-3, 0, 0">95%</d, i, v>";
@@ -395,7 +378,6 @@ Read, Sustainability, Guide →
             <span, className="te, x, t-sm, opacit, y-90">Fortune, 50, 0</sp, a, n>";
           </d, i, v>
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">"
-=======
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">";
             AI, Retail, Automation Success, Stor, y;
           </h2>
@@ -407,7 +389,6 @@ Read, Sustainability, Guide →
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0">98%</d, i, v>
               <div, className="fo, n, t-semibo, l, d">Automation, Rat, e</d, i, v>
               <div, className="te, x, t-sm, opacit, y-90">Process, automatio, n</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-6">";
             <div, className="bg-whi, t, e/10, rounde, d-l, g, p-4">";
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-3, 0, 0">98%</d, i, v>";
@@ -450,7 +431,6 @@ Read, Sustainability, Guide →
             <span, className="te, x, t-sm, opacit, y-90">Latest, Conten, t</sp, a, n>";
           </d, i, v>
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">"
-=======
           <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-3">";
             Cutti, n, g-Edge, AI, Content 20, 2, 6;
           </h2>
@@ -468,7 +448,6 @@ Read, Sustainability, Guide →
               Retail, Automatio, n;
             </Li, n, k>
             <Link, t, o="/bl, o, g/ai-sustainabili, t, y-gre, e, n-te, c, h-20, 2, 6" classNa, m, e="bg-whi, t, e/10, hove, r: bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s">"
-=======
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-4, m, b-6">";
             <Link, t, o="/bl, o, g/ai-autonomo, u, s-clo, u, d-operatio, n, s-20, 2, 6" classNa, m, e="bg-whi, t, e/10, hove, r: bg-whi, t, e/20, p, x-4, p, y-2, rounde, d-lg, tex, t-sm, fon, t-semibold, transitio, n-colo, r, s">";
               Cloud, Operation, s;

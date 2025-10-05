@@ -78,7 +78,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     { val, u, e: '98%', lab, e, l: 'Customer, Satisfactio, n', ic, o, n: <Star, className="w-8 h-8" /> }
     { val, u, e: '2, 0, 0+', lab, e, l: 'Expert, Article, s', ic, o, n: <Award, className="w-8 h-8" /> }
     { val, u, e: '50+', lab, e, l: 'Industry, Award, s', ic, o, n: <Target, className="w-8 h-8" /> }
-=======
       tit, l, e: 'Governed, Agent, Rollbacks',';
       catego, r, y: 'AI, Operation, s',';
       readTi, m, e: '7, mi, n',';
@@ -153,7 +152,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -170,7 +168,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
             <Sparkles, className="w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">"
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";
             <Sparkles, className="w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e" />";
@@ -188,7 +185,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
           </p>
           {/* Achievement, Stat, s */}
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">"
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">";
             {achievemen, t, s.m, a, p((achieveme, n, t, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">";
@@ -207,7 +203,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         </d, i, v>
         {/* Featured, Content, Cards */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
             <d, i, v
@@ -236,7 +231,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">";
                   {conte, n, t.tit, l, e}
                 </h3>
@@ -248,7 +242,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   </sp, a, n>
                   <span, className="flex, item, s-center, ga, p-1">
                     <Star, className="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-=======
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">";
                   <span, className="flex, item, s-center, ga, p-2">";
                     <Zap, className="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />";
@@ -264,7 +257,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
                     <Users, className="w-4 h-4  />
                     <span, className="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
-=======
                 <div, className="mb-6">";
                   <div, className="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">";
                     <Users, className="w-4 h-4" />";
@@ -279,7 +271,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Read, No, w</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   hr, e, f={conte, n, t.li, n, k || '/bl, o, g'}';
                   classNa, m, e={`gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t} hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hove,`
   r:-transla, t, e-y-1`}`;`
@@ -297,7 +288,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Star, className="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">";
@@ -320,7 +310,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 <div, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">First, 3, months</d, i, v>
               </d, i, v>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";
               <div, className="te, x, t-cent, e, r">";
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-indi, g, o-400, lin, e-through, opacit, y-50">$2, 9, 9/mon, t, h</d, i, v>";
@@ -334,7 +323,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, className="w-5 h-5  />
-=======
                   <Sparkles, className="w-5 h-5" />";
                   <sp, a, n>Get, Premium, Access</sp, a, n>
                 </a>
@@ -345,7 +333,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Contact, Sale, s</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>
@@ -364,7 +351,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">";
                 <inp, u, t 
   ty, p, e="ema, i, l"
@@ -375,7 +361,6 @@ const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">"
                   <sp, a, n>Subscri, b, e</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                 <button, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r: fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
   r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">";
                   <sp, a, n>Subscri, b, e</sp, a, n>

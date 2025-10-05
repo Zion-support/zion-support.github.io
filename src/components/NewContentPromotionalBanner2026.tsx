@@ -22,7 +22,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
       reade, r, s: '20, 3, K+','
       ic, o, n: '🚀','
       col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0}
-=======
 import React from "react";';
 const, NewContentPromotionalBanner202, 6 = () => {
   const, newConten, t = [
@@ -58,7 +57,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-viol, e, t-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -75,7 +73,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
             <Globe, className="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-purp, l, e-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6">";
             <Globe, className="w-6 h-6, tex, t-viol, e, t-400, animat, e-pul, s, e" />";
@@ -94,7 +91,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
         </d, i, v>
         {/* Content, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {newConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
             <d, i, v
@@ -108,13 +104,11 @@ const, NewContentPromotionalBanner202, 6 = () => {
               <div, className="relativ, e, p-8">";
                 {/* Content, Ico, n */}
                 <div, className="te, x, t-5xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e">"
-=======
                 <div, className="te, x, t-5xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e">";
                   {conte, n, t.ic, o, n}
                 </d, i, v>
                 {/* Date, Badg, e */}
                 <div, className="te, x, t-center, m, b-4">
-=======
                 <div, className="te, x, t-center, m, b-4">";
                   <span, className={`inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.col, o, r} te, x, t-white, tex, t-xs, fon, t-bo, l, d`}>`;`
                     {conte, n, t.da, t, e}
@@ -122,7 +116,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-viol, e, t-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-viol, e, t-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">";
                   {conte, n, t.tit, l, e}
                 </h3>
@@ -137,7 +130,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
                   <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
                     <Users, className="w-4 h-4  />
                     <span, className="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
-=======
                 <div, className="te, x, t-center, m, b-6">";
                   <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">";
                     <Users, className="w-4 h-4" />";
@@ -152,7 +144,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
                 >
                   <sp, a, n>Read, No, w</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
@@ -177,7 +168,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
               { val, u, e: '1, 5, 0+', lab, e, l: 'Countries, Reache, d', ic, o, n: <Globe, className="w-8 h-8" />, col, o, r: 'te, x, t-emera, l, d-4, 0, 0' }
             ].m, a, p((st, a, t, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="te, x, t-cent, e, r">
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8">";
             {[
               { va, l, u
@@ -212,7 +202,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
   and, transformative, technologies that, are, reshaping our, worl, d.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
                 Be, among, the first, to, access revolutionary, AI, insights, breakthrough, researc, h
                 and, transformative, technologies that, are, reshaping our, worl, d.
@@ -224,7 +213,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
   r:shad, o, w-viol, e, t-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Rocket, className="w-5 h-5  />
-=======
                   <Rocket, className="w-5 h-5" />";
                   <sp, a, n>Explore, All, Content</sp, a, n>
                 </a>
@@ -235,7 +223,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
                 >
                   <sp, a, n>Subscribe, to, Updates</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>

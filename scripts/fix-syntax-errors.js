@@ -21,8 +21,7 @@ for (const file of files) {
     let fileFixed = 0;
     
     // Fix merge conflict markers
-    const conflictPattern = /^<<<<<<<.*?\n(.*?)\n=======\n(.*?)\n>>>>>>>.*?$/gms;
-    content = content.replace(conflictPattern, (match, ours, theirs) => {
+    const conflictPattern = /^<<<<<<<.*?\n(.*?)\n    content = content.replace(conflictPattern, (match, ours, theirs) => {
       fileFixed++;
       // Keep the first version (ours) by default
       return ours.trim();

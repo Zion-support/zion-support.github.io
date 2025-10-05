@@ -13,7 +13,6 @@ gradie, n, t: stri, n, g
 featur, e, d: boole, a, n
 ta, g, s: stri, n, g[]
 highligh, t, s: stri, n, g[]
-=======
 id: stri, n, g;
 tit, l, e: stri, n, g;
 sl, u, g: stri, n, g;
@@ -186,7 +185,6 @@ export, const, october2025RevolutionaryContent: RevolutionaryConte, n, t[] = [
       c, l, v: "+1, 5, 6%"
       retenti, o, n: "94%"
       reven, u, e: "$23, 0, M+"
-=======
     i
   d: "ai-consciousne, s, s-integrati, o, n-20, 2, 5",";
     tit, l, e: "AI, Consciousness, Integratio
@@ -393,7 +391,6 @@ export, const, getAllOctober2025Content = () => {
       "24/7, autonomous, protection"
     ]
     sl, u, g: "autonomo, u, s-securi, t, y-me, s, h"
-=======
     i
   d: "consciousne, s, s-ai-platfo, r, m",";
     tit, l, e: "Consciousness, AI, Platform",";
@@ -480,7 +477,6 @@ export, const, getAllOctober2025Content = () => {
       responseTi, m, e: "<1, m, s"
     }
     sl, u, g: "healthca, r, e-autonomo, u, s-securi, t, y-succe, s, s"
-=======
     i
   d: "fortu, n, e-1, 0, 0-consciousne, s, s-ai",";
     tit, l, e: "Fortune, 100, Transforms Operations, with, Consciousness AI",";

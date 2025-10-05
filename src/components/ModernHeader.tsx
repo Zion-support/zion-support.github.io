@@ -1,6 +1,5 @@
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-=======
 import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
 impo, r, t {
 Li, n, k;
@@ -66,7 +65,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
       <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8">"
         <div, className="flex, justif, y-between, item, s-cente, r, h-16">
-=======
     { na, m, e: 'Ho, m, e', hr, e, f: '/' },';
     { 
       na, m, e: 'Solutio, n, s', ';
@@ -133,7 +131,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
           </Li, n, k>
           {/* Desktop, Navigatio, n */}
           <nav, className="hidden, m, d: flex, spac, e-x-8">"
-=======
           <nav, className="hidden, m, d: flex, spac, e-x-8">";
             {navigationIte, m, s.m, a, p((it, e, m) => (
               <d, i, v
@@ -150,7 +147,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
                   {it, e, m.dropdo, w, n && (
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7  />
-=======
                     <svg, className="w-4 h-4, m, l-1" fi, l, l="no, n, e" stro, k, e="currentCol, o, r" viewB, o, x="0, 0, 24 24">";
                       <path, strokeLineca, p="rou, n, d" strokeLinejo, i, n="rou, n, d" strokeWid, t, h={2} d="M19, 9, l-7 7-7-7" />";
                     </s, v, g>
@@ -176,7 +172,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
           </n, a, v>
           {/* CTA, Butto, n */}
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">"
-=======
           <div, className="hidden, m, d: flex, item, s-center, spac, e-x-4">";
             <a, titl, e="Internal, lin, k"
               hr, e, f="te
@@ -226,7 +221,6 @@ const, ModernHeade, r: Rea, c, t.FC = () => {
 isMenuOp, e, n && (
 <div, className="md: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">
 <nav, className="flex, fle, x-col, spac, e-y-1">
-=======
 <div, className="m
   d: hidden, p, y-4, borde, r-t, borde, r-gr, a, y-2, 0, 0">,";
 <nav, className="flex, fle, x-col, spac, e-y-1">";

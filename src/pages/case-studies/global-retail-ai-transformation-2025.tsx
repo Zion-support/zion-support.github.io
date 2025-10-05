@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 import, Header, from "../../componen, t, s/Head, e, r";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -18,7 +17,6 @@ const, GlobalRetailAITransformatio, n = () => {
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
         <Head, e, r   />
         <article, className="container, m, x-auto, p, x-6, p, y-20">
-=======
         <article, className="container, m, x-auto, p, x-6, p, y-20">";
           {/* Back, Lin, k */};
           <Li, n, k
@@ -26,7 +24,6 @@ const, GlobalRetailAITransformatio, n = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Case Studi, e, s;
           </Li, n, k>
@@ -43,7 +40,6 @@ const, GlobalRetailAITransformatio, n = () => {
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
               Global, Retail, AI Transformati, o, n: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               Global, Retail, AI Transformat, i, o
   n: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2">";
@@ -60,7 +56,6 @@ const, GlobalRetailAITransformatio, n = () => {
               <div, className="bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r">
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">$48, 9, M</d, i, v>
                 <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Total, Value, Created</d, i, v>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">";
               <div, className="bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r">";
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">$48, 9, M</d, i, v>";
@@ -95,7 +90,6 @@ const, GlobalRetailAITransformatio, n = () => {
                       <li><strong, className="te, x, t-zi, o, n-cy, a, n">Reven, u, e: </stro, n, g> $85B, annuall, y</li>"
                       <li><strong, className="te, x, t-zi, o, n-cy, a, n">Employe, e, s: </stro, n, g> 4, 5, 0,0, 0, 0+ worldwi, d, e</li>"
                       <li><strong, className="te, x, t-zi, o, n-cy, a, n">Marke, t, s: </stro, n, g> 28, countrie, s, 6, continent, s</li>"
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">🏢 Client, Profil, e</h2>";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30">";
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
@@ -151,7 +145,6 @@ const, GlobalRetailAITransformatio, n = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">
                     <Zap, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0  />
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">🎯 AI, Transformation, Solution</h2>";
               <p, className="te, x, t-lg, leadin, g-relaxed, m, b-6">";
                 Zion, Tech, Group designed, and, deployed a, comprehensive, AI platform, spanning, demand forecasti, n, g
@@ -179,7 +172,6 @@ const, GlobalRetailAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <ul, className="spa, c, e-y-2, tex, t-sm">";
                     <li, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -198,7 +190,6 @@ const, GlobalRetailAITransformatio, n = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">
                     <Users, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
                     <Users, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
@@ -219,7 +210,6 @@ const, GlobalRetailAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <ul, className="spa, c, e-y-2, tex, t-sm">";
                     <li, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -238,7 +228,6 @@ const, GlobalRetailAITransformatio, n = () => {
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">
                     <Target, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
                     <Target, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
@@ -259,7 +248,6 @@ const, GlobalRetailAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                   <ul, className="spa, c, e-y-2, tex, t-sm">";
                     <li, className="flex, item, s-center, ga, p-2">";
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -295,7 +283,6 @@ const, GlobalRetailAITransformatio, n = () => {
                     </li>
                     <li, className="flex, item, s-center, ga, p-2">
                       <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/40, t, o-r, e, d-9, 0, 0/40, rounde, d-x, l, p-6, border, border-oran, g, e-5, 0, 0/30">";
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2">";
                     <DollarSign, className="w-6 h-6, tex, t-oran, g, e-4, 0, 0" />";
@@ -338,7 +325,6 @@ const, GlobalRetailAITransformatio, n = () => {
   and, initial, model development, for, demand forecasti, n, g.
                       </p>
                       <div, className="te, x, t-xs, tex, t-gre, e, n-4, 0, 0">✓ Demand, forecasting, pilot: 94% accuracy, in, 50 stor, e, s</d, i, v>"
-=======
                     <div, className="fl, e, x-1">";
                       <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">Discove, r, y & Foundati, o, n</h3>";
                       <p, className="te, x, t-sm, m, b-3">";
@@ -386,7 +372,6 @@ const, GlobalRetailAITransformatio, n = () => {
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">📊 Business, Impac, t & Resul, t, s</h2>
               <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30">
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-10">"
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">📊 Business, Impac, t & Resul, t, s</h2>";
               <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30">";
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-10">";
@@ -398,7 +383,6 @@ const, GlobalRetailAITransformatio, n = () => {
                           <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Revenue, Increa, s
   e: </sp, a, n>"
                           <span, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">+$3.2B</sp, a, n>
-=======
                         <div, className="flex, justif, y-between, item, s-center, m, b-2">";
                           <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Revenue, Increas, e: </sp, a, n>";
                           <span, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">+$3.2B</sp, a, n>";
@@ -409,7 +393,6 @@ const, GlobalRetailAITransformatio, n = () => {
                         <div, className="flex, justif, y-between, item, s-center, m, b-2">
                           <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Cost, Reductio, n: </sp, a, n>"
                           <span, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">-$2.4B</sp, a, n>
-=======
                         <div, className="flex, justif, y-between, item, s-center, m, b-2">";
                           <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Cost, Reductio, n: </sp, a, n>";
                           <span, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">-$2.4B</sp, a, n>";
@@ -421,7 +404,6 @@ const, GlobalRetailAITransformatio, n = () => {
                           <strong, className="te, x, t-whi, t, e">Net, Value, Create
   d: </stro, n, g>"
                           <strong, className="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">$48, 9, M</stro, n, g>
-=======
                       <div, className="bord, e, r-t, borde, r-whi, t, e/20, p, t-4">";
                         <div, className="flex, justif, y-between, item, s-center, m, b-2">";
                           <strong, className="te, x, t-whi, t, e">Net, Value, Created: </stro, n, g>";
@@ -463,7 +445,6 @@ const, GlobalRetailAITransformatio, n = () => {
                         <div, className="flex, justif, y-between, item, s-cent, e, r">
                           <sp, a, n>Conversion, Rat, e: </sp, a, n>
                           <strong, className="te, x, t-oran, g, e-4, 0, 0">+3, 4, 0%</stro, n, g>
-=======
                     <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Operational, Improvement, s</h3>";
                     <div, className="spa, c, e-y-3">";
                       <div, className="bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-gre, e, n-4, 0, 0/30">";
@@ -502,7 +483,6 @@ const, GlobalRetailAITransformatio, n = () => {
                 <div, className="mt-8, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r">
                   <div, className="te, x, t-xl, tex, t-white, m, b-2">R, O, I: <strong, className="te, x, t-4xl, tex, t-gre, e, n-4, 0, 0">8, 2, 3%</stro, n, g></d, i, v>"
                   <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">
-=======
                 <div, className="mt-8, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r">";
                   <div, className="te, x, t-xl, tex, t-white, m, b-2">R, O, I: <strong, className="te, x, t-4xl, tex, t-gre, e, n-4, 0, 0">8, 2, 3%</stro, n, g></d, i, v>";
                   <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">";
@@ -521,7 +501,6 @@ const, GlobalRetailAITransformatio, n = () => {
                     Zion, Tech, Group's, AI, transformation has, been, nothing short, of, revolutionary for, our, business. 
                     T, h, e $489M, in, value creation, exceeded, our most, optimistic, projections. More, importantl, y
   we've, fundamentally, changed how, we, operate—from, reactive, to predicti, v, e, from, generic, to;
-=======
               <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-bl, u, e-5, 0, 0/30">";
                 <div, className="te, x, t-center, m, b-8">";
                   <div, className="te, x, t-6xl, m, b-4">"</d, i, v>";
@@ -549,7 +528,6 @@ const, GlobalRetailAITransformatio, n = () => {
   AI, transformatio, n. Schedule, your, free consultation, to, explore wh, a, t's, possible, for your, organizatio, n.;
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
                 AI, transformatio, n. Schedule, your, free consultation, to, explore wh, a, t's, possible, for your, organizatio, n.';
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
@@ -559,7 +537,6 @@ const, GlobalRetailAITransformatio, n = () => {
   r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg"
                 >
                   <TrendingUp, className="w-6 h-6  />
-=======
                   <TrendingUp, className="w-6 h-6" />";
                   Schedule, Free, Consultation;
                 </Li, n, k>

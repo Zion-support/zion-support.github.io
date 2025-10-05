@@ -19,7 +19,6 @@
           <div, className="spa, c, e-y-6">
             <h2, className="te, x, t-2xl, fon, t-semibo, l, d">Playbo, o, k</h2>
             <ul, className="li, s, t-disc, p, l-6, tex, t-zi, o, n-sla, t, e-lig, h, t">
-=======
           content="Ne, x, t-gen, AI, pair programming, that, writes producti, o, n-ready, cod, e. Ship, 5x, faster with, 4, 0% fewer, bug, s."
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/generati, v, e-ai-co, d, e-assistan, t, s-20, 2, 5" />";
@@ -48,7 +47,6 @@
             </p>
             <div, className="mt-8">
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
-=======
             <div, className="mt-8">";
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
             </d, i, v>

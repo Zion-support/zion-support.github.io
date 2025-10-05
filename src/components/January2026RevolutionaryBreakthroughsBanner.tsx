@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
   const, breakthrough, s = [
@@ -10,7 +9,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Revolutionary, AI, achieving genuine, consciousness, and emotional, intelligenc, e","
       sta, t, s: "$500B, Enterprise, Value","
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0","
-=======
       tit, l, e: "Synthetic, Consciousness, AI",";
       descripti, o, n: "Revolutionary, AI, achieving genuine, consciousness, and emotional, intelligenc, e",";
       sta, t, s: "$500B, Enterprise, Value",";
@@ -23,7 +21,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "S, u, b-millisecond, processing, with 2, 0, 0-250x, speed, improvements","
       sta, t, s: "200x, Faste, r","
       col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0","
-=======
       tit, l, e: "Quantum, Edge, Computing",";
       descripti, o, n: "S, u, b-millisecond, processing, with 2, 0, 0-250x, speed, improvements",";
       sta, t, s: "200x, Faste, r",";
@@ -36,7 +33,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficienc, y","
       sta, t, s: "99.7% Efficien, c, y","
       col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0","
-=======
       tit, l, e: "Autonomous, Enterprise, Mesh",";
       descripti, o, n: "Se, l, f-organizing, AI, networks achieving, 9, 9.7% operational, efficienc, y",";
       sta, t, s: "99.7% Efficien, c, y",";
@@ -49,7 +45,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
       descripti, o, n: "Unbreakable, protection, systems with, 9, 9.99% threat, preventio, n","
       sta, t, s: "$2.8B, Protecte, d","
       col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0","
-=======
       tit, l, e: "Quant, u, m-Safe, Securit, y",";
       descripti, o, n: "Unbreakable, protection, systems with, 9, 9.99% threat, preventio, n",";
       sta, t, s: "$2.8B, Protecte, d",";
@@ -78,7 +73,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-6"
           >
             <Sparkles, className="w-4 h-4, m, r-2, tex, t-yell, o, w-4, 0, 0  />
-=======
             <Sparkles, className="w-4 h-4, m, r-2, tex, t-yell, o, w-4, 0, 0" />";
             January, 1, 5, 20, 2, 6 - Revolutionary, Breakthrough, s;
           </moti, o, n.d, i, v>
@@ -103,7 +97,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
         </d, i, v>
         {/* Breakthroughs, Gri, d */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {breakthroug, h, s.m, a, p((breakthrou, g, h, ind, e, x) => (
             <moti, o, n.d, i, v
@@ -120,7 +113,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
                 </d, i, v>
                 <div, className="fl, e, x-1">
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
               <div, className="flex, item, s-start, spac, e-x-4">";
                 <div, className={`p-3, rounde, d-xl, b, g-gradie, n, t-to-r ${breakthrou, g, h.col, o, r}`}>`;`
                   <breakthrou, g, h.icon, className="w-6 h-6, tex, t-whi, t, e" />";
@@ -186,7 +178,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
               Ready, to, transform your, enterprise, with revolutionary, A, I?
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a, titl, e="Internal, lin, k"
                 hr, e, f="/bl, o, g"
@@ -195,7 +186,6 @@ const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
               >
                 Explore, All, Content;
                 <ArrowRight, className="ml-2 w-5 h-5  />
-=======
                 <ArrowRight, className="ml-2 w-5 h-5" />";
               </a>
               <a, titl, e="Internal, lin, k"

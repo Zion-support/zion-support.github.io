@@ -12,7 +12,6 @@ const, AdvertisingBanne, r: Rea, c, t.FC = () => {
           <div, className="hidden, s, m: bloc, k, h-6 w-px, b, g-whi, t, e/30"></d, i, v>"
           <p, className="te, x, t-sm, fon, t-medi, u, m">
             <span, className="fo, n, t-bo, l, d">NEW, THIS, WEEK: </sp, a, n> Vector, DB, Optimization at, 100, B+ sca, l, e & Enterprise, Agent, Uptime 99.9%"
-=======
 import React from "react";';
 const, AdvertisingBanne, r: Rea, c, t.FC = () => {
   return (
@@ -34,7 +33,6 @@ const, AdvertisingBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-105, shado, w-md"
           >
             <Zap, className="w-4 h-4  />
-=======
             <Zap, className="w-4 h-4" />";
             Vector, DB, Guide;
           </Li, n, k>
@@ -44,7 +42,6 @@ const, AdvertisingBanne, r: Rea, c, t.FC = () => {
   r:sca, l, e-105, shado, w-md"
           >
             <Shield, className="w-4 h-4  />
-=======
             <Shield, className="w-4 h-4" />";
             Agent, Uptim, e;
           </Li, n, k>

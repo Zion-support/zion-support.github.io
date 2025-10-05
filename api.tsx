@@ -2,7 +2,6 @@ import React from 'react';
 import { Code, Shield, Zap, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function API() {
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
   const endpoints = [
     {
       name: 'Content Management',
@@ -44,7 +43,6 @@ description: 'Get analytics and reporting data',
         </div>
       </div>
 
-
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
@@ -72,7 +70,6 @@ description: 'Get analytics and reporting data',
           </div>
         </div>
       </div>
-
 
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -116,7 +113,6 @@ description: 'Get analytics and reporting data',
           </div>
         </div>
       </div>
-
 
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">

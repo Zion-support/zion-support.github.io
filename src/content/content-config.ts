@@ -38,7 +38,6 @@ starti, n, g: stri, n, g
 popul, a, r?: boole, a, n;
 };
   featur, e, s: stri, n, g[]
-=======
 id: stri, n, g;
 tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
@@ -68,7 +67,6 @@ second, a, r
   ic, o, n: stri, n, g
   featur, e, d?: boole, a, n;
   sl, u, g: stri, n, g
-=======
 prima, r, y: stri, n, g;
 second, a, r
   y: stri, n, g;
@@ -183,7 +181,6 @@ prior, i, t
     featur, e, d: fal, s, e
     sl, u, g: '/bl, o, g/ai-virtu, a, l-assistan, t, s-custom, e, r-servi, c, e','
     ta, g, s: ['AI', 'Virtual, Assistan, t', 'Customer, Servic, e', 'N, L, P']'
-=======
     id: 'ai-revoluti, o, n-20, 2, 5',';
     tit, l, e: 'AI, Revolution, 202
   5: The, Complete, Business Transformation, Guid, e',';
@@ -319,7 +316,6 @@ prior, i, t
     featur, e, d: tr, u, e
     sl, u, g: '/ca, s, e-studi, e, s/financefl, o, w-automati, o, n','
     ta, g, s: ['Finte, c, h', 'Workflow, Automatio, n', 'R, O, I', 'Process, Efficienc, y']'
-=======
     id: 'techco, r, p-ai-transformati, o, n',';
     tit, l, e: 'TechCorp, AI, Transformatio
   n: 90% Efficiency, Gai, n',';
@@ -537,7 +533,6 @@ prior, i, t
     featur, e, d: fal, s, e
     sl, u, g: '/servic, e, s/cybersecuri, t, y-consulti, n, g'
     ta, g, s: ['Cybersecuri, t, y', 'Zero, Trus, t', 'Complian, c, e', 'Threat, Detectio, n']
-=======
     id: 'ai-analyti, c, s-platfo, r, m',';
     tit, l, e: 'AI, Analytics, Platform',';
     descripti, o, n: 'Transform, data, into actionable, insights, with predictive, modeling, and re, a, l-time, dashboard, s',';
@@ -719,7 +714,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'fre, s, h-conte, n, t-o, c, t-20, 2, 5',';
     messa, g, e: '✨ Ne
   w: Governance, Scorecards, 2026, Freshne, s, s‑Aware, RAG, v2, Edge, Flags, 2026',';
@@ -741,7 +735,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/ai-governan, c, e-scorecar, d, s-20, 2, 6','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'governan, c, e-scorecar, d, s-20, 2, 6',';
     messa, g, e: '📚 AI, Governance, 202
   6: Scorecards, Engineers, Actually U, s, e',';
@@ -763,7 +756,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/freshne, s, s-awa, r, e-r, a, g-v2','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'freshne, s, s-awa, r, e-r, a, g-v2',';
     messa, g, e: '🧭 Freshne, s, s‑Aware, RAG, v
   2: TTL, Budgets, and SL, A, s',';
@@ -785,7 +777,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/ed, g, e-fla, g, s-bluepri, n, t-20, 2, 6','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'ed, g, e-fla, g, s-bluepri, n, t-20, 2, 6',';
     messa, g, e: '⚡ Edge, Flags, Blueprint 2, 0, 2
   6: <100ms, Global, Releases',';
@@ -807,7 +798,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/ai-platfo, r, m-engineeri, n, g-20, 2, 5','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'n, e, w-bl, o, g-bann, e, r',';
     messa, g, e: '🔥 Ne
   w: AI, Platform, Engineering 20, 2, 5 + Secure, ML, Supply Cha, i, n',';
@@ -829,7 +819,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/ai-ri, s, k-regist, e, r-20, 2, 5','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-ro, s, e-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'ai-ri, s, k-regist, e, r-bann, e, r',';
     messa, g, e: '🛡️ Ne
   w: AI, Risk, Register That, Drives, Action',';
@@ -850,7 +839,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/practic, a, l-eva, l, s-scorecar, d, s-20, 2, 5','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'practic, a, l-eva, l, s-bann, e, r',';
     messa, g, e: '📈 Practical, AI, Evals That, Predict, Outcomes',';
     ctaTe, x, t: 'See, Scorecard, s',';
@@ -871,7 +859,6 @@ prior, i, t
     ctaLi, n, k: '/servic, e, s/ai-analyti, c, s-platfo, r, m','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-te, a, l-600, t, o-cy, a, n-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'analyti, c, s-platfo, r, m-bann, e, r',';
     messa, g, e: '🚀 Lau, n, c
   h: AI, Analytics, Platform - Transform, Data, into Actionable, Insight, s',';
@@ -893,7 +880,6 @@ prior, i, t
     ctaLi, n, k: '/ca, s, e-studi, e, s/techco, r, p-ai-transformati, o, n','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'techco, r, p-succe, s, s-bann, e, r',';
     messa, g, e: '🏆 Success, Sto, r
   y: TechCorp, Achieved, 90% Efficiency, Gain, with AI, Transformatio, n',';
@@ -915,7 +901,6 @@ prior, i, t
     ctaLi, n, k: '/servic, e, s/ai-analyti, c, s-platfo, r, m#prici, n, g','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'fr, e, e-tri, a, l-bann, e, r',';
     messa, g, e: '🎯 Limited, Ti, m
   e: 30-Day, Free, Trial for, AI, Analytics Platfo, r, m - No, Credit, Card Requir, e, d',';
@@ -936,7 +921,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/clo, u, d-fino, p, s-guardrai, l, s-20, 2, 5','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-s, k, y-600, t, o-bl, u, e-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'clo, u, d-fino, p, s-guardrai, l, s-bann, e, r',';
     messa, g, e: '💸 Cloud, FinOps, Guardrails Engineers, Actually, Use',';
     ctaTe, x, t: 'Cut, Spen, d',';
@@ -956,7 +940,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/practic, a, l-eva, l, s-scorecar, d, s-20, 2, 5','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'practic, a, l-eva, l, s-20, 2, 5-bann, e, r',';
     messa, g, e: '📈 Practical, AI, Evals That, Predict, Business Outcom, e, s',';
     ctaTe, x, t: 'See, Scorecard, s',';
@@ -976,7 +959,6 @@ prior, i, t
     ctaLi, n, k: '/bl, o, g/serverle, s, s-inferen, c, e-co, s, t-playbo, o, k-20, 2, 5','
     backgroundCol, o, r: 'bg-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-6, 0, 0','
     textCol, o, r: 'te, x, t-whi, t, e','
-=======
     id: 'serverle, s, s-inferen, c, e-cos, t, s-bann, e, r',';
     messa, g, e: '🧰 Serverless, Inference, Cost Playbo, o, k',';
     ctaTe, x, t: 'Optimi, z, e',';
@@ -1015,7 +997,6 @@ export, const, getRecentContent = (lim, i, t: numb, e, r = 3) => {
     ...blogPos, t, s.m, a, p(po, s, t => ({ ...po, s, t, ty, p, e: 'bl, o, g' as, cons, t }))
     ...caseStudi, e, s.m, a, p(stu, d, y => ({ ...stu, d, y, ty, p, e: 'ca, s, e-stu, d, y' as, cons, t }))
     ...servic, e, s.m, a, p(servi, c, e => ({ ...servi, c, e, ty, p, e: 'servi, c, e' as, cons, t }))
-=======
     ...blogPos, t, s.m, a, p(po, s, t => ({ ...po, s, t, ty, p, e: 'bl, o, g' as, cons, t })),';
     ...caseStudi, e, s.m, a, p(stu, d, y => ({ ...stu, d, y, ty, p, e: 'ca, s, e-stu, d, y' as, cons, t })),';
     ...servic, e, s.m, a, p(servi, c, e => ({ ...servi, c, e, ty, p, e: 'servi, c, e' as, cons, t }))';

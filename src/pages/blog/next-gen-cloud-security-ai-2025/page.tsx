@@ -11,7 +11,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
           </d, i, v>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-r, e, d-300, vi, a-oran, g, e-300, t, o-yell, o, w-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-=======
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-r, e, d-300, vi, a-oran, g, e-300, t, o-yell, o, w-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Ne, x, t-Gen, Cloud, Security wit, h, A
   I: Autonomous, Threat, Prevention at, Scal, e
@@ -37,7 +36,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-r, e, d-5, 0, 0/10, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/20">
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-300, m, b-2">99.97% Detection, Rat, e</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">AI, identifies, threats invisible, to, traditional security, tool, s</p>
-=======
         <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">";
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Executive, Summar, y</h2>";
@@ -64,7 +62,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-r, e, d-300, m, b-3">🛡️ Predictive, Threat, Intelligence</h3>
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, A, I-Powered, Security, Platform</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -110,7 +107,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-r, e, d-300, m, b-2">Zero, Breache, s</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">In, 18, Months of, Operatio, n</p>
-=======
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-r, e, d-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Success, Stor, y: Healthcare, Provider, Transformation</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -140,7 +136,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-r, e, d-300, m, b-3">🎯 Advanced, Threat, Detection</h3>
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Security, Capabilities</h2>";
             <div, className="spa, c, e-y-6">";
@@ -156,7 +151,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, b-3">🔒 Data, Protectio, n</h3>
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">
-=======
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, b-3">🔒 Data, Protectio, n</h3>";
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">";
@@ -169,7 +163,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-300, m, b-3">🌐 Clo, u, d-Native, Securit, y</h3>
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">
-=======
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-300, m, b-3">🌐 Clo, u, d-Native, Securit, y</h3>";
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2, m, l-6, lis, t-di, s, c">";
@@ -184,7 +177,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-yell, o, w-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-r, e, d-5, 0, 0/30">
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Threat, Landscape, 2025</h2>
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
-=======
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-yell, o, w-5, 0, 0/20, rounde, d-2x, l, p-8, border, border-r, e, d-5, 0, 0/30">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Threat, Landscape, 2025</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
@@ -201,7 +193,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, b-4">Our, Defens, e</h3>
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, b-4">Our, Defens, e</h3>";
                 <ul, className="te, x, t-gr, a, y-300, spac, e-y-2">";
                   <li>• AI, vs, A
@@ -220,7 +211,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-r, e, d-300, m, b-3">Wee, k, 1-2: Security, Assessmen, t</h3>"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Implementation, Timelin, e</h2>";
             <div, className="spa, c, e-y-6">";
@@ -233,7 +223,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, b-3">Wee, k, 3-4: Foundation, Deploymen, t</h3>"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, b-3">Wee, k, 3-4: Foundation, Deploymen, t</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
@@ -244,7 +233,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-300, m, b-3">Wee, k, 5-
   8: Advanced, Protectio, n</h3>"
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">";
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-300, m, b-3">Wee, k, 5-8: Advanced, Protectio, n</h3>";
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">";
@@ -257,7 +245,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Analysi, s</h2>
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">"
-=======
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-r, e, d-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">ROI, Analysi, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">";
@@ -278,7 +265,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
                   <li>• Eliminate, need, for 24/7, SOC, staffing</li>
                   <li, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, t-2">RO
   I: 6, 5, 0% in, Year, 1</li>"
-=======
                   <li, className="te, x, t-xl, fon, t-bold, tex, t-oran, g, e-300, m, t-2">R, O, I: 6, 5, 0% in, Year, 1</li>";
                 </ul>
               </d, i, v>
@@ -296,7 +282,6 @@ export, default, function NextGenCloudSecurityAI2025Pa, g, e(): vo, i, d {
                 Get, Free, Security Assessme, n, t;
               </a>
               <a, titl, e="Internal, lin, k" hr, e, f="/de, m, o" classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-whi, t, e/10, hove, r: bg-whi, t, e/20, tex, t-white, fon, t-semibold, rounde, d-xl, border, border-whi, t, e/20, transitio, n-a, l, l">"
-=======
           <section, className="mb-12, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Secure, Your, Cloud Tod, a, y</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";

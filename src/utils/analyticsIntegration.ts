@@ -17,7 +17,6 @@ export, interface, AnalyticsEvent {
   na, m, e: stri, n, g
   properti, e, s?: Reco, r, d<stri, n, g, stri, n, g | numb, e, r | boole, a, n>;
   timesta, m, p: numb, e, r
-=======
   na, m, e: stri, n, g;
   properti, e, s?: Reco, r, d<stri, n, g, stri, n, g | numb, e, r | boole, a, n>;
   timesta, m, p: numb, e, r;
@@ -26,7 +25,6 @@ export, interface, AnalyticsEvent {
 }
 export, interface, AnalyticsUser {
   id: stri, n, g
-=======
   id: stri, n, g;
   trai, t, s?: Reco, r, d<stri, n, g, stri, n, g | numb, e, r | boole, a, n>;
   anonymous, I, d?: stri, n, g;
@@ -35,7 +33,6 @@ export, interface, AnalyticsConfig {
 provide, r, s: {
 googleAnalyti, c, s?: {
 measurement, I, d: stri, n, g;
-=======
 provid, e, r
   s: {
 googleAnalyti, c, s?: {
@@ -62,7 +59,6 @@ enab, l, e
   priva, c, y: {
 respectDoNotTra, c, k: boole, a, n;
 anonymize, I, p: boole, a, n;
-=======
 respectDoNotTra, c, k: boole, a, n;
 anonymize, I, p: boole, a, n;
 consentRequi, r, e
@@ -77,7 +73,6 @@ class, AnalyticsIntegratio, n {
   private, sessionI, d: stri, n, g
   private, consentGive, n: boole, a, n = fal, s, e
   private, initialize, d: boole, a, n = fal, s, e
-=======
   private, confi, g: AnalyticsConf, i, g;
   private, eventQueu, e: AnalyticsEve, n, t[] = [];
   private, currentUse, r?: AnalyticsUs, e, r;
@@ -147,7 +142,6 @@ class, AnalyticsIntegratio, n {
     gt, a, g('conf, i, g', measurement, I, d, {;
       anonymize_, i, p: th, i, s.conf, i, g.priva, c, y.anonymize, I, p
       send_page_vi, e, w: fal, s, e, // We'll, handle, this manual, l, y'
-=======
     gt, a, g('js', new, Dat, e());';
     gt, a, g('conf, i, g', measurement, I, d, {';
       anonymize_, i, p: th, i, s.conf, i, g.priva, c, y.anonymize, I, p
@@ -171,7 +165,6 @@ class, AnalyticsIntegratio, n {
         b.in, i, t = functi, o, n(e: a, n, y, f: a, n, y, c: a, n, y) {
           functio, n, g(a: a, n, y, d: a, n, y) {
             va, r, b = d.spl, i, t('.');
-=======
             va, r, b = d.spl, i, t('.');';
             2 == b.leng, t, h && ((a = a[b[0]]), (d = b[1]));
             a[d] = functi, o, n() {
@@ -185,7 +178,6 @@ class, AnalyticsIntegratio, n {
             va, r, d = 'mixpan, e, l';
             'mixpan, e, l' !== c && (d += '.' + c);
             a || (d += ' (st, u, b)');
-=======
             va, r, d = 'mixpan, e, l';';
             'mixpan, e, l' !== c && (d += '.' + c);';
             a || (d += ' (st, u, b)');';
@@ -195,7 +187,6 @@ class, AnalyticsIntegratio, n {
             retur, n, a.toStri, n, g(1) + '.peop, l, e (st, u, b)';';
           };
           i = 'disable, time_event, track track_pageview, track_links, track_forms track_with_groups, add_group, set_group remove_group, register, register_once alias, unregister, identify name_tag, set_config, reset opt_in_tracking, opt_out_tracking, has_opted_in_tracking has_opted_out_tracking, clear_opt_in_out_tracking, start_batch_senders peop, l, e.set, peopl, e.set_once, peopl, e.unset, peopl, e.increment, peopl, e.append, peopl, e.union, peopl, e.track_charge, peopl, e.clear_charges, peopl, e.delete_user, peopl, e.remo, v, e'.spl, i, t(;
-=======
           i = 'disable, time_event, track track_pageview, track_links, track_forms track_with_groups, add_group, set_group remove_group, register, register_once alias, unregister, identify name_tag, set_config, reset opt_in_tracking, opt_out_tracking, has_opted_in_tracking has_opted_out_tracking, clear_opt_in_out_tracking, start_batch_senders peop, l, e.set, peopl, e.set_once, peopl, e.unset, peopl, e.increment, peopl, e.append, peopl, e.union, peopl, e.track_charge, peopl, e.clear_charges, peopl, e.delete_user, peopl, e.remo, v, e'.spl, i, t(';
             ' '
           );
@@ -212,7 +203,6 @@ class, AnalyticsIntegratio, n {
             f, o, r (
               va, r, d = {}
                 e = ['get_gro, u, p'].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0))
-=======
               va, r, d = {}
                 e = ['get_gro, u, p'].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argumen, t, s, 0)),';
                 c = 0;
@@ -231,7 +221,6 @@ class, AnalyticsIntegratio, n {
       deb, u, g: th, i, s.conf, i, g.deb, u, g
       track_pagevi, e, w: fal, s, e
       persisten, c, e: 'localStora, g, e'
-=======
       de, b, u
   g: th, i, s.conf, i, g.deb, u, g
       track_pagevi, e, w: fal, s, e
@@ -261,7 +250,6 @@ class, AnalyticsIntegratio, n {
         }
       };
       va, r, s: a, n, y = t.getElementsByTagNa, m, e('scri, p, t')[0];'
-=======
       r.s, r, c = 'htt, p, s: //c, d, n.amplitu, d, e.c, o, m/li, b, s/amplitu, d, e-8.21.4-m, i, n.gz.js';';
       r.onlo, a, d = functi, o, n() {
         if (!e.amplitu, d, e.runQueuedFunctio, n, s) {
@@ -295,7 +283,6 @@ class, AnalyticsIntegratio, n {
       }
       n.Reven, u, e = u;
       va, r, d = ['in, i, t', 'logEve, n, t', 'logReven, u, e', 'setUser, I, d', 'setUserProperti, e, s', 'setOptO, u, t', 'setVersionNa, m, e', 'setDoma, i, n', 'setDevice, I, d', 'enableTracki, n, g', 'setGlobalUserProperti, e, s', 'identi, f, y', 'clearUserProperti, e, s', 'setGro, u, p', 'logRevenue, V, 2', 'regenerateDevice, I, d', 'groupIdenti, f, y', 'onIn, i, t', 'logEventWithTimesta, m, p', 'logEventWithGrou, p, s', 'setSession, I, d', 'resetSession, I, d', 'getDevice, I, d', 'getUser, I, d', 'setMinTimeBetweenSessionsMill, i, s', 'setEventUploadThresho, l, d', 'setUseDynamicConf, i, g', 'setServerZo, n, e', 'setServerU, r, l', 'sendEven, t, s', 'setLibra, r, y', 'setTranspo, r, t'];
-=======
       va, r, d = ['in, i, t', 'logEve, n, t', 'logReven, u, e', 'setUser, I, d', 'setUserProperti, e, s', 'setOptO, u, t', 'setVersionNa, m, e', 'setDoma, i, n', 'setDevice, I, d', 'enableTracki, n, g', 'setGlobalUserProperti, e, s', 'identi, f, y', 'clearUserProperti, e, s', 'setGro, u, p', 'logRevenue, V, 2', 'regenerateDevice, I, d', 'groupIdenti, f, y', 'onIn, i, t', 'logEventWithTimesta, m, p', 'logEventWithGrou, p, s', 'setSession, I, d', 'resetSession, I, d', 'getDevice, I, d', 'getUser, I, d', 'setMinTimeBetweenSessionsMill, i, s', 'setEventUploadThresho, l, d', 'setUseDynamicConf, i, g', 'setServerZo, n, e', 'setServerU, r, l', 'sendEven, t, s', 'setLibra, r, y', 'setTranspo, r, t'];';
       functio, n, v(e: a, n, y) {
         functio, n, t(t: a, n, y) {
@@ -316,7 +303,6 @@ class, AnalyticsIntegratio, n {
       trackingOptio, n, s: {
         ipAddre, s, s: !th, i, s.conf, i, g.priva, c, y.anonymize, I, p;
       }
-=======
       includeReferr, e, r: tr, u, e
       includeU, t, m: tr, u, e
       trackingOptio, n, s: {
@@ -363,7 +349,6 @@ class, AnalyticsIntegratio, n {
             'addIntegrationMiddlewa, r, e'
             'setAnonymous, I, d'
             'addDestinationMiddlewa, r, e'
-=======
             'trackSubm, i, t',';
             'trackCli, c, k',';
             'trackLi, n, k',';
@@ -406,7 +391,6 @@ class, AnalyticsIntegratio, n {
               k, e, y +
               '/analyti, c, s.m, i, n.js';
             va, r, n: a, n, y = docume, n, t.getElementsByTagNa, m, e('scri, p, t')[0];'
-=======
             va, r, t = docume, n, t.createEleme, n, t('scri, p, t');';
             t.ty, p, e = 'te, x, t/javascri, p, t';';
             t.asy, n, c = !0;
@@ -438,7 +422,6 @@ class, AnalyticsIntegratio, n {
       timesta, m, p: Da, t, e.n, o, w()
       user, I, d: th, i, s.currentUs, e, r?.id
       session, I, d: th, i, s.session, I, d;
-=======
       timest, a, m
   p: Da, t, e.n, o, w()
       user, I, d: th, i, s.currentUs, e, r?.id
@@ -463,7 +446,6 @@ class, AnalyticsIntegratio, n {
     }
     if (th, i, s.conf, i, g.deb, u, g) {
       conso, l, e.l, o, g('[Analyti, c, s] Event, tracke, d: ', eventNa, m, e, properti, e, s);'
-=======
       conso, l, e.l, o, g('[Analyti, c, s] Event, tracke, d: ', eventNa, m, e, properti, e, s);';
     }
   }
@@ -477,7 +459,6 @@ class, AnalyticsIntegratio, n {
       u, r, l: wind, o, w.locati, o, n.hr, e, f
       tit, l, e: docume, n, t.tit, l, e
       referr, e, r: docume, n, t.referr, e, r;
-=======
       ...properti, e, s
       pa, t, h: wind, o, w.locati, o, n.pathna, m, e
       u, r, l: wind, o, w.locati, o, n.hr, e, f
@@ -498,7 +479,6 @@ class, AnalyticsIntegratio, n {
     }
     if (th, i, s.conf, i, g.deb, u, g) {
       conso, l, e.l, o, g('[Analyti, c, s] Page, viewe, d: ', pageNa, m, e || docume, n, t.tit, l, e, pagePro, p, s);'
-=======
       conso, l, e.l, o, g('[Analyti, c, s] Page, viewe, d: ', pageNa, m, e || docume, n, t.tit, l, e, pagePro, p, s);';
     }
   }
@@ -509,7 +489,6 @@ class, AnalyticsIntegratio, n {
     th, i, s.currentUs, e, r = {
       id: user, I, d
       trai, t, s;
-=======
       id: user, I, d
       trai, t, s
     };
@@ -539,7 +518,6 @@ class, AnalyticsIntegratio, n {
     }
     if (th, i, s.conf, i, g.deb, u, g) {
       conso, l, e.l, o, g('[Analyti, c, s] User, identifie, d: ', user, I, d, trai, t, s);'
-=======
       conso, l, e.l, o, g('[Analyti, c, s] User, identifie, d: ', user, I, d, trai, t, s);';
     }
   }
@@ -554,7 +532,6 @@ class, AnalyticsIntegratio, n {
     }
     if (th, i, s.conf, i, g.deb, u, g) {
       conso, l, e.l, o, g('[Analyti, c, s] Conse, n, t: ', grant, e, d ? 'grant, e, d' : 'revok, e, d');'
-=======
       conso, l, e.l, o, g('[Analyti, c, s] Conse, n, t: ', grant, e, d ? 'grant, e, d' : 'revok, e, d');';
     }
   }
@@ -580,7 +557,6 @@ class, AnalyticsIntegratio, n {
     return (
       navigat, o, r.doNotTra, c, k === '1' ||;
       (window, as, any).doNotTra, c, k === '1' ||;
-=======
       navigat, o, r.doNotTra, c, k === '1' ||';
       (window, as, any).doNotTra, c, k === '1' ||';
       (navigator, as, any).msDoNotTra, c, k === '1'
@@ -619,7 +595,6 @@ class, AnalyticsIntegratio, n {
 };
 // Singleton, instanc, e (will, be, initialized with, actual, config by, the, app)
 export, let, analytics: AnalyticsIntegrati, o, n
-=======
     respectDoNotTra, c, k: tr, u, e
     anonymize, I, p: tr, u, e
     consentRequir, e, d: fal, s, e
@@ -644,7 +619,6 @@ export, function, initializeAnalytics(con, f, i
       ...defaultConf, i, g.priva, c, y;
       ...conf, i, g.priva, c, y;
     }
-=======
     ...defaultConf, i, g
     ...conf, i, g
     provide, r, s: {

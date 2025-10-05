@@ -33,7 +33,6 @@ const, HomeOptimize, d = () => {
           content="Zion, Tech, Group - Leading, A, I & IT, Solution, s" /><me, t, a
   na, m, e="twitt, e, r:descripti, o, n"
           content="Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/>"
-=======
           proper, t, y="og: tit, l, e"
           content="Zion, Tech, Group - Leading, A, I & IT, Solution, s"
          />
@@ -57,7 +56,6 @@ const, HomeOptimize, d = () => {
         {/* Animated, background, elements */};
         <div, className="absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">
           <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-blue, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t"></d, i, v>
-=======
         <div, className="absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">";
           <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-blue, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t"></d, i, v>";
           <d, i, v
@@ -80,7 +78,6 @@ const, HomeOptimize, d = () => {
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, animat, e-sli, d, e-up">"
               <span, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e-light, t, o-zi, o, n-purp, l, e-light, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%">
-=======
             <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, m, b-8, animat, e-fa, d, e-in, border, border-zi, o, n-cy, a, n/30, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0">";
               <Rocket, className="w-4 h-4, m, r-2, animat, e-pul, s, e" />";
               Trusted, by, 500+ companies, worldwid, e;
@@ -94,7 +91,6 @@ const, HomeOptimize, d = () => {
             <p, className="te, x, t-x, l, m
   d: te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in">
               Transform, your, business with, cuttin, g-edge, AI, solutions, enterpri, s, e-grade, securit, y;
-=======
             <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in">";
               Transform, your, business with, cuttin, g-edge, AI, solutions, enterpri, s, e-grade, securit, y
               and, nex, t-generation, cloud, infrastructure. Join, 50, 0+ companies, already, scaling with, u, s!
@@ -109,7 +105,6 @@ const, HomeOptimize, d = () => {
               ].m, a, p((st, a, t, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="te, x, t-center, group, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
                   <div, className="te, x, t-3xl, fon, t-bold, tex, t-zi, o, n-cyan, grou, p-hov, e, r: te, x, t-zi, o, n-bl, u, e-light, transitio, n-colo, r, s">"
-=======
             <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-12, ma, x-w-2xl, m, x-au, t, o">";
               {[
                 { va, l, u
@@ -128,7 +123,6 @@ const, HomeOptimize, d = () => {
               ))}
             </d, i, v>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <Li, n, k
   to="/servic, e, s"
@@ -137,7 +131,6 @@ const, HomeOptimize, d = () => {
                 Explore, Service, s;
                 <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </Li, n, k>
               <Link, t, o="/conta, c, t" classNa, m, e="b, t, n-seconda, r, y">";
@@ -153,7 +146,6 @@ const, HomeOptimize, d = () => {
               'october20, 2, 5-n, e, w-breakthrou, g, h'
               'october20, 2, 5-te, c, h-breakthrou, g, h'
               'october20, 2, 5-ne, x, t-g, e, n-ai'
-=======
               'october20, 2, 5-n, e, w-breakthrou, g, h',';
               'october20, 2, 5-te, c, h-breakthrou, g, h',';
               'october20, 2, 5-ne, x, t-g, e, n-ai',';
@@ -212,7 +204,6 @@ const, HomeOptimize, d = () => {
             ].m, a, p((featu, r, e, ind, e, x) => (
               <div, ke, y={ind, e, x} classNa, m, e="card, group, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
   r:shad, o, w-2, x, l">"
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8">";
             {[
               {
@@ -260,7 +251,6 @@ const, HomeOptimize, d = () => {
                   {featu, r, e.featur, e, s.m, a, p((it, e, m, i) => (
                     <li, ke, y={i} classNa, m, e="flex, item, s-cent, e, r">
                       <CheckCircle, className="w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n  />
-=======
                     <li, ke, y={i} classNa, m, e="flex, item, s-cent, e, r">";
                       <CheckCircle, className="w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n" />";
                       {it, e, m}
@@ -286,7 +276,6 @@ const, HomeOptimize, d = () => {
                   <h4, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2">{it, e, m.tit, l, e}</h4>
                   <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-4">{it, e, m.summa, r, y}</p>
                   <div, className="te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n">
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-16, relative, z-10">";
           <div, className="flex, item, s-center, justif, y-between, m, b-8">";
             <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Latest, Insight, s</h3>";
@@ -344,7 +333,6 @@ const, HomeOptimize, d = () => {
                 <div, ke, y={ind, e, x} classNa, m, e="card, tex, t-center, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
   r:shad, o, w-2, x, l">"
                   <div, className="flex, justif, y-center, m, b-4">
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {[
                 {
@@ -406,7 +394,6 @@ const, HomeOptimize, d = () => {
   technology, need, s. L, e, t&ap, o, s;s, build, something amazing, togethe, r.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <Li, n, k
   to="/conta, c, t"
@@ -414,7 +401,6 @@ const, HomeOptimize, d = () => {
   r:shad, o, w-2xl, flex, items-center, justif, y-center, ga, p-2, grou, p"
               >
                 <Target, className="w-5 h-5, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                 <Target, className="w-5 h-5, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0" />";
                 Start, Your, Journey Tod, a, y;
               </Li, n, k>

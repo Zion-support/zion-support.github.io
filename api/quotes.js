@@ -10,7 +10,6 @@ export default async function handler(req, res) {
     const { name, email, phone, details, country, service } = req.body || {};
     
     if (!name || !email || !phone || !details) {
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
       res.status(400).json({ 
         error: 'Missing required fields: name, email, phone, and details are required' 
       });
@@ -20,7 +19,6 @@ export default async function handler(req, res) {
     // Create quote object
     const quote = {
       id: `quote_${Date.now()}`,
-=======
       res.status(400).json({ error: 'Name, email, phone, and details are required' });
       return;
     }
@@ -28,7 +26,6 @@ export default async function handler(req, res) {
     // Process quote request
     const quote = {
       id: 'quote_' + Math.random().toString(36).substr(2, 9),
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
       name,
       email,
       phone,
@@ -49,7 +46,5 @@ country: country || 'US',
   } catch (err) {
     console.error('Quote submission error:', err);
     res.status(500).json({ error: err.message || 'Quote submission failed' });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }
 }

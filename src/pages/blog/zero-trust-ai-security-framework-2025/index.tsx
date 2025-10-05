@@ -20,7 +20,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
         <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16">
           <div, className="absolute, inse, t-0, b, g-bla, c, k/20"></d, i, v>
           <div, className="container, m, x-auto, p, x-6, relative, z-10">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ze, r, o-tru, s, t-ai-securi, t, y-framewo, r, k-20, 2, 5"
          />
       </Helmet>
@@ -34,7 +33,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
               classNa, m, e="inli, n, e-flex, item, s-center, tex, t-whi, t, e/90, hove, r: te, x, t-white, m, b-8, transitio, n-colo, r, s"
             >
               <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
               <ArrowLeft, className="w-4 h-4, m, r-2" />";
               Back, to, Blog;
             </Li, n, k>
@@ -64,7 +62,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                 </d, i, v>
                 <div, className="flex, item, s-cent, e, r">
                   <TrendingUp, className="w-5 h-5, m, r-2  />
-=======
               <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
                 Ze, r, o-Trust, AI, Security Framew, o, r
   k: Protecting, Model, s, Da, t, a & Inference, Pipeline, s
@@ -97,7 +94,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
               </h2>
               <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4">
                 AI, systems, face unprecedented, security, challenges: model, thef, t, data, poisonin, g, adversarial, attack, s;
-=======
             <div, className="bg-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, borde, r-l-4, borde, r-r, e, d-50, 0, p-6, rounde, d-r-lg, m, b-12">";
               <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-cent, e, r">";
                 <AlertTriangle, className="w-6 h-6, m, r-2, tex, t-r, e, d-4, 0, 0" />";
@@ -118,7 +114,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
             <section, className="mb-12">
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">
                 <ShieldCheck, className="w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0  />
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">";
                 <ShieldCheck, className="w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0" />";
@@ -132,7 +127,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                   </h3>
                   <p, className="te, x, t-gr, a, y-300, m, b-4">
                     Every, request, to mode, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n;
-=======
                   <p, className="te, x, t-gr, a, y-300, m, b-4">";
                     Every, request, to mode, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n
                     authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.
@@ -234,7 +228,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                         All, humans, and services, get, unique identiti, e, s.
                       </p>
                       <p, className="te, x, t-sm, tex, t-emera, l, d-4, 0, 0">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">";
                 <Lock, className="w-8 h-8, m, r-3, tex, t-bl, u, e-4, 0, 0" />";
@@ -269,7 +262,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                         Every, microservice, authenticated before, communicatio, n.
                       </p>
                       <p, className="te, x, t-sm, tex, t-cy, a, n-4, 0, 0">
-=======
                       <h4, className="te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2">Laye, r, 2: Network, Securit, y</h4>";
                       <p, className="te, x, t-gr, a, y-400, m, b-2">";
                         Service, mes, h (Ist, i, o, Linke, r, d) with, mTL, S, traffic, encryptio, n, and, zer, o-trust, networkin, g.
@@ -291,7 +283,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                         OPA, evaluates, policies in, rea, l-ti, m, e.
                       </p>
                       <p, className="te, x, t-sm, tex, t-bl, u, e-4, 0, 0">
-=======
                       <h4, className="te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2">Laye, r, 3: Policy, Enforcemen, t</h4>";
                       <p, className="te, x, t-gr, a, y-400, m, b-2">";
                         Declarative, policies, as co, d, e. API, gateway, enforces rate, limit, s, quot, a, s, and, access, controls.
@@ -313,7 +304,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
   suspicious, pattern, s (unusual, data, access, model, querie, s).
                       </p>
                       <p, className="te, x, t-sm, tex, t-purp, l, e-4, 0, 0">
-=======
                       <h4, className="te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2">Laye, r, 4: Monitori, n, g & Detecti, o, n</h4>";
                       <p, className="te, x, t-gr, a, y-400, m, b-2">";
                         Continuous, monitoring, with behavioral, baseline, s. ML-powered, anomaly, detection fla, g, s
@@ -335,7 +325,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                         Automated, compliance, reporting (SO, C, 2, ISO, 2700, 1, GD, P, R).
                       </p>
                       <p, className="te, x, t-sm, tex, t-pi, n, k-4, 0, 0">
-=======
                       <h4, className="te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2">Laye, r, 5: Aud, i, t & Complian, c, e</h4>";
                       <p, className="te, x, t-gr, a, y-400, m, b-2">";
                         Immutable, audit, logs for, every, model acce, s, s, data, quer, y, and, inference, request.
@@ -365,7 +354,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                   <div, className="bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d">
                     <p, className="te, x, t-emera, l, d-400, fon, t-semibold, m, b-2">Mitigatio, n, s: </p>"
                     <ul, className="te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1">
-=======
             <section, className="mb-12">";
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r">";
                 <Shield, className="w-8 h-8, m, r-3, tex, t-r, e, d-4, 0, 0" />";
@@ -396,7 +384,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                   <div, className="bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d">
                     <p, className="te, x, t-cy, a, n-400, fon, t-semibold, m, b-2">Mitigatio, n, s: </p>"
                     <ul, className="te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1">
-=======
                   <div, className="bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d">";
                     <p, className="te, x, t-cy, a, n-400, fon, t-semibold, m, b-2">Mitigatio, n, s: </p>";
                     <ul, className="te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1">";
@@ -415,7 +402,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                   <div, className="bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d">
                     <p, className="te, x, t-bl, u, e-400, fon, t-semibold, m, b-2">Mitigatio, n, s: </p>"
                     <ul, className="te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1">
-=======
                   <div, className="bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d">";
                     <p, className="te, x, t-bl, u, e-400, fon, t-semibold, m, b-2">Mitigatio, n, s: </p>";
                     <ul, className="te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1">";
@@ -433,7 +419,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
               <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30">
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Security, Posture, Improvements</h2>
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
-=======
             <section, className="mb-12">";
               <div, className="bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30">";
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Security, Posture, Improvements</h2>";
@@ -472,7 +457,6 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                 >
                   Request, Security, Assessment;
                   <ArrowLeft, className="w-5 h-5, m, l-2, rotat, e-1, 8, 0  />
-=======
                   <ArrowLeft, className="w-5 h-5, m, l-2, rotat, e-1, 8, 0" />";
                 </Li, n, k>
               </d, i, v>

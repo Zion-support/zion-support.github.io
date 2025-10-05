@@ -34,7 +34,6 @@ async function handler(req, res) {
     }
 
     if (subscribers.includes(email)) {
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
       res.status(409).json({ error: 'Email already subscribed' });
       return;
     }
@@ -49,8 +48,6 @@ subscribers.push(email);
   } catch (err) {
     console.error('Newsletter subscription error:', err);
     res.status(500).json({ error: 'Internal server error' });
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }
 }
 

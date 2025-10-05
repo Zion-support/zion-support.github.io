@@ -16,7 +16,6 @@ const, November2025GameChangersBanne, r = () => {
               3, Revolutionary, Breakthroughs Transforming, Enterprises, in November, 202, 5;
             </h2>
             <p, className="te, x, t-xl, tex, t-bl, u, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
-=======
     <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-12">";
       <div, className="container, m, x-auto, p, x-4">";
         <div, className="m, a, x-w-7xl, m, x-au, t, o">";
@@ -45,7 +44,6 @@ const, November2025GameChangersBanne, r = () => {
               <div, className="flex, item, s-start, ga, p-3, m, b-4">
                 <div, className="bg-bl, u, e-5, 0, 0/2, 0, p-3, rounde, d-xl, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">"
                   <Zap, className="h-8 w-8, tex, t-bl, u, e-4, 0, 0  />
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
             {/* Artic, l, e 
   1: Autonomous, Enterpris, e */}
@@ -60,14 +58,12 @@ const, November2025GameChangersBanne, r = () => {
                   </d, i, v>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-bl, u, e-300, transitio, n-colors, leadin, g-tig, h, t">"
-=======
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colors, leadin, g-tig, h, t">";
                     Autonomous, Enterprise, Revolution;
                   </h3>
                 </d, i, v>
               </d, i, v>
               <p, className="te, x, t-bl, u, e-200, tex, t-sm, leadin, g-relaxed, m, b-4">
-=======
               <p, className="te, x, t-bl, u, e-200, tex, t-sm, leadin, g-relaxed, m, b-4">";
                 Se, l, f-managing, organizations, achieving <strong, className="te, x, t-whi, t, e">95% automati, o, n</stro, n, g> wi, t, h ";
                 Fortune, 500, companies generati, n, g <strong, className="te, x, t-yell, o, w-3, 0, 0">$50, 0, M+ annual, valu, e</stro, n, g> throu, g, h ";
@@ -98,7 +94,6 @@ const, November2025GameChangersBanne, r = () => {
               >
                 <sp, a, n>Read, Full, Guide</sp, a, n>
                 <ArrowRight, className="h-4 w-4, grou, p-hov, e, r/li, n, k: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <ArrowRight, className="h-4 w-4, grou, p-hov, e, r/li, n, k: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </Li, n, k>
             </d, i, v>
@@ -109,7 +104,6 @@ const, November2025GameChangersBanne, r = () => {
               <div, className="flex, item, s-start, ga, p-3, m, b-4">
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"
                   <TrendingUp, className="h-8 w-8, tex, t-purp, l, e-4, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/50, t, o-pi, n, k-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20, grou, p">";
               <div, className="flex, item, s-start, ga, p-3, m, b-4">";
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-3, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";
@@ -121,14 +115,12 @@ const, November2025GameChangersBanne, r = () => {
                   </d, i, v>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-purp, l, e-300, transitio, n-colors, leadin, g-tig, h, t">"
-=======
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, leadin, g-tig, h, t">";
                     Neural, Marketplace, Revolution;
                   </h3>
                 </d, i, v>
               </d, i, v>
               <p, className="te, x, t-purp, l, e-200, tex, t-sm, leadin, g-relaxed, m, b-4">
-=======
               <p, className="te, x, t-purp, l, e-200, tex, t-sm, leadin, g-relaxed, m, b-4">";
                 AI-powered, commerce, platforms achievi, n, g <strong, className="te, x, t-whi, t, e">99.8% conversion, optimizatio, n</stro, n, g> wi, t, h ";
                 leading, retailers, generating <strong, className="te, x, t-yell, o, w-3, 0, 0">$89, 0, M+ annual, revenue, growth</stro, n, g> throu, g, h ";
@@ -159,7 +151,6 @@ const, November2025GameChangersBanne, r = () => {
               >
                 <sp, a, n>Discover, Neural, Commerce</sp, a, n>
                 <ArrowRight, className="h-4 w-4, grou, p-hov, e, r/li, n, k: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <ArrowRight, className="h-4 w-4, grou, p-hov, e, r/li, n, k: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </Li, n, k>
             </d, i, v>
@@ -170,7 +161,6 @@ const, November2025GameChangersBanne, r = () => {
               <div, className="flex, item, s-start, ga, p-3, m, b-4">
                 <div, className="bg-r, e, d-5, 0, 0/2, 0, p-3, rounde, d-xl, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">"
                   <Shield, className="h-8 w-8, tex, t-r, e, d-4, 0, 0  />
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/50, t, o-oran, g, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-2x, l, p-6, hove, r: bord, e, r-r, e, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/20, grou, p">";
               <div, className="flex, item, s-start, ga, p-3, m, b-4">";
                 <div, className="bg-r, e, d-5, 0, 0/2, 0, p-3, rounde, d-xl, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">";
@@ -182,14 +172,12 @@ const, November2025GameChangersBanne, r = () => {
                   </d, i, v>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-r, e, d-300, transitio, n-colors, leadin, g-tig, h, t">"
-=======
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-r, e, d-300, transitio, n-colors, leadin, g-tig, h, t">";
                     Po, s, t-Quantum, Cryptograph, y;
                   </h3>
                 </d, i, v>
               </d, i, v>
               <p, className="te, x, t-r, e, d-200, tex, t-sm, leadin, g-relaxed, m, b-4">
-=======
               <p, className="te, x, t-r, e, d-200, tex, t-sm, leadin, g-relaxed, m, b-4">";
                 Quant, u, m-resistant, security, protecting <strong, className="te, x, t-whi, t, e">$2.7T, in, enterprise asse, t, s</stro, n, g> wi, t, h ";
                 leading, organizations, achieving <strong, className="te, x, t-yell, o, w-3, 0, 0">99.9, 9, 9% threat, preventio, n</stro, n, g> a, n, d ";
@@ -220,7 +208,6 @@ const, November2025GameChangersBanne, r = () => {
               >
                 <sp, a, n>Secure, Your, Future</sp, a, n>
                 <ArrowRight, className="h-4 w-4, grou, p-hov, e, r/li, n, k: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <ArrowRight, className="h-4 w-4, grou, p-hov, e, r/li, n, k: transla, t, e-x-1, transitio, n-transfo, r, m" />";
               </Li, n, k>
             </d, i, v>
@@ -239,7 +226,6 @@ const, November2025GameChangersBanne, r = () => {
             <p, className="mt-6, tex, t-bl, u, e-300, tex, t-sm">
               💡 <strong, className="te, x, t-whi, t, e">Join, 5, 0,0, 0, 0+ enterpris, e, s</stro, n, g> already, implementing, these ga, m, e-changing, innovation, s. ";
               <Link, t, o="/conta, c, t" classNa, m, e="te, x, t-yell, o, w-300, hove, r: te, x, t-yell, o, w-200, underline, ml-1">"
-=======
               <Sparkles, className="h-6 w-6" />";
               <sp, a, n>Explore, All, November 2025, Breakthrough, s</sp, a, n>
               <ArrowRight, className="h-6 w-6" />";

@@ -33,7 +33,6 @@ export, default, function Bl, o, g(): Rea, c, t.J, S, X.Eleme, n, t {
     "Case, Studie, s"
     "Industry, Insight, s"
     "Tutoria, l, s"
-=======
     "A, l, l",";
     "AI, Strateg, y",";
     "Securi, t, y",";
@@ -182,7 +181,6 @@ export, default, function Bl, o, g(): Rea, c, t.J, S, X.Eleme, n, t {
     }
   ];
   // Map, content, entries into, this, page's, structur, e;
-=======
       id: 1
       tit, l, e: "How, AI, Workflow Automation, Transformed, a Fortune, 500, Company",";
       excer, p, t: "Discover, how, our AI, workflow, automation solution, reduced, manual processes, by, 80% and, increased, operational efficiency, by, 300% for, a, leading financial, services, company.",";
@@ -329,14 +327,12 @@ export, default, function Bl, o, g(): Rea, c, t.J, S, X.Eleme, n, t {
       catego, r, y: a.catego, r, y
       ta, g, s: a.ta, g, s
       ima, g, e: a.ima, g, e || "/a, p, i/placehold, e, r/4, 0, 0/2, 5, 0","
-=======
       ima, g, e: a.ima, g, e || "/a, p, i/placehold, e, r/4, 0, 0/2, 5, 0",";
       featur, e, d: a.featur, e, d
       vie, w, s: a.trendi, n, g ? 10, 0, 0 : 2, 5, 0
     }));
   }, []);
   const, blogPost, s: BlogPo, s, t[] = [...mappedFromConte, n, t, ...staticPos, t, s]
-=======
   const, blogPost, s: BlogPo, s, t[] = [...mappedFromConte, n, t, ...staticPos, t, s];
   const, filteredPost, s = blogPos, t, s.filt, e, r(po, s, t => {
     const, matchesCategor, y = selectedCatego, r, y === "A, l, l" || po, s, t.catego, r, y === selectedCatego, r, y;";
@@ -354,7 +350,6 @@ ca, s, e "Case, Studie, s": return, BarChart, 3;
 ca, s, e "Technolo, g, y": return, Cod, e;
 ca, s, e "Industry, Insight, s": return, TrendingU, p;
 ca, s, e "Tutoria, l, s": return, Bo, t;
-=======
 ca, s, e "AI, Solution, s": return, Za, p;";
 ca, s, e "Case, Studie, s": return, BarChart, 3;";
 ca, s, e "Technolo, g, y": return, Cod, e;";
@@ -372,7 +367,6 @@ ca, s, e "Industry, Insight, s": retu, r, n "te, x, t-oran, g, e-400, b, g-oran,
 ca, s, e "Tutoria, l, s": retu, r, n "te, x, t-cy, a, n-400, b, g-cy, a, n-5, 0, 0/10, borde, r-cy, a, n-5, 0, 0/30";
 defau, l, t: retu, r, n "te, x, t-gr, a, y-400, b, g-gr, a, y-5, 0, 0/10, borde, r-gr, a, y-5, 0, 0/30";
 }
-=======
 ca, s, e "AI, Solution, s": retu, r, n "te, x, t-bl, u, e-400, b, g-bl, u, e-5, 0, 0/10, borde, r-bl, u, e-5, 0, 0/30";";
 ca, s, e "Case, Studie, s": retu, r, n "te, x, t-gre, e, n-400, b, g-gre, e, n-5, 0, 0/10, borde, r-gre, e, n-5, 0, 0/30";";
 ca, s, e "Technolo, g, y": retu, r, n "te, x, t-purp, l, e-400, b, g-purp, l, e-5, 0, 0/10, borde, r-purp, l, e-5, 0, 0/30";";
@@ -398,7 +392,6 @@ defau, l, t: retu, r, n "te, x, t-gr, a, y-400, b, g-gr, a, y-5, 0, 0/10, borde,
         <me, t, a
   na, m, e="twitt, e, r:descripti, o, n"
           content="Latest, insights, on AI, and, technology tren, d, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/>"
-=======
           content="Stay, updated, with the, latest, insights on, A, I, technology, trend, s, case, studie, s, and, industry, best practices, from, Zion Tech, Group, experts."
          />
         <meta, propert, y="og: tit, l, e" content="Bl, o, g & Insigh, t, s - Zion, Tech, Group" />";
@@ -426,7 +419,6 @@ defau, l, t: retu, r, n "te, x, t-gr, a, y-400, b, g-gr, a, y-5, 0, 0/10, borde,
                 <div, className="te, x, t-xs, tex, t-whi, t, e/90">Ship, KP, I‑linked, guardrails, and private, assistants, under real, budget, s.</d, i, v>
               </d, i, v>
               <a, titl, e="Internal, lin, k" hr, e, f="/bl, o, g/ai-governan, c, e-scorecar, d, s-quicksta, r, t-20, 2, 6" classNa, m, e="bg-white, tex, t-gr, a, y-900, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, whitespac, e-nowr, a, p">"
-=======
         <div, className="bord, e, r-b, borde, r-whi, t, e/10">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-6">";
               <div, className="mt-4, m, b-2, rounde, d-xl, b, g-gradie, n, t-to-r, fro, m-fuchs, i, a-600, t, o-purp, l, e-60, 0, p-4, tex, t-white, flex, items-center, justif, y-betwe, e, n">";
@@ -448,7 +440,6 @@ defau, l, t: retu, r, n "te, x, t-gr, a, y-400, b, g-gr, a, y-5, 0, 0/10, borde,
                 <a, titl, e="Internal, lin, k" hr, e, f="/bl, o, g/ai-e, 2, e-traci, n, g-20, 2, 5" classNa, m, e="bg-white, tex, t-gr, a, y-900, p, x-3, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, whitespac, e-nowr, a, p">E2E, AI, Tracing</a>"
                 <a, titl, e="Internal, lin, k" hr, e, f="/bl, o, g/ed, g, e-personalizati, o, n-20, 2, 5" classNa, m, e="bg-white, tex, t-gr, a, y-900, p, x-3, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, whitespac, e-nowr, a, p">Edge, Personalizatio, n</a>"
                 <a, titl, e="Internal, lin, k" hr, e, f="/bl, o, g/poli, c, y-tes, t, s-quicksta, r, t-20, 2, 5" classNa, m, e="bg-white, tex, t-gr, a, y-900, p, x-3, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colors, whitespac, e-nowr, a, p">Policy, Tests, Quickstart</a>"
-=======
         <div, className="bord, e, r-b, borde, r-whi, t, e/10">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-6">";
               <div, className="mt-4, m, b-2, rounde, d-xl, b, g-gradie, n, t-to-r, fro, m-cy, a, n-600, t, o-bl, u, e-60, 0, p-4, tex, t-white, flex, items-center, ga, p-3, fle, x-wr, a, p">";
@@ -470,7 +461,6 @@ defau, l, t: retu, r, n "te, x, t-gr, a, y-400, b, g-gr, a, y-5, 0, 0/10, borde,
             </h1>
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, ma, x-w-3xl, m, x-au, t, o">
               Stay, ahead, with the, latest, insights on, A, I, technology, trend, s, case, studie, s;
-=======
         <section, className="container, m, x-auto, p, x-6, p, y-20">";
           <div, className="te, x, t-center, m, b-16">";
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6">";
@@ -489,7 +479,6 @@ defau, l, t: retu, r, n "te, x, t-gr, a, y-400, b, g-gr, a, y-5, 0, 0/10, borde,
             <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, m, b-8">"
               <div, className="relative, fle, x-1">
                 <Search, className="absolute, lef, t-3, to, p-1/2, transfor, m -transla, t, e-y-1/2, tex, t-zi, o, n-sla, t, e-ligh, t, w-5 h-5  />
-=======
           <div, className="m, a, x-w-4xl, m, x-auto, m, b-12">";
             <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, m, b-8">";
               <div, className="relative, fle, x-1">";
@@ -526,7 +515,6 @@ selectedCatego, r, y === "A, l, l" && searchTe, r, m === "" && (";
 <div, className="mb-16">
 <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-8">Featured, Article, s</h2>
 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">
-=======
 <div, className="mb-16">";
 <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-8">Featured, Article, s</h2>";
 <div, className="gri, d, m
@@ -548,7 +536,6 @@ return (
                         </d, i, v>
                         <div, className="flex, item, s-center, tex, t-zi, o, n-sla, t, e-light, tex, t-sm">
                           <TrendingUp, className="w-4 h-4, m, r-1  />
-=======
                       <div, className="flex, item, s-center, justif, y-between, m, b-4">";
                         <div, className={`inli, n, e-flex, item, s-center, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, borde, r ${categoryCol, o, r}`}>`;`
                           <CategoryIcon, className="w-3 h-3, m, r-1" />";
@@ -560,7 +547,6 @@ return (
                         </d, i, v>
                       </d, i, v>
                       <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">"
-=======
                       <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">";
                         {po, s, t.tit, l, e}
                       </h3>
@@ -595,7 +581,6 @@ return (
                         <button, className="te, x, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, transitio, n-colors, flex, items-center, grou, p">"
                           Read, Mor, e;
                           <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                       <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                         <div, className="flex, item, s-center, spac, e-x-4, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">";
                           <div, className="flex, item, s-cent, e, r">";
@@ -630,7 +615,6 @@ return (
             </h2>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-8">";
               {selectedCatego, r, y !== "A, l, l" || searchTe, r, m ? "Search, Result, s" : "Latest, Article, s"}";
             </h2>
@@ -652,7 +636,6 @@ return (
                       </d, i, v>
                       <div, className="flex, item, s-center, tex, t-zi, o, n-sla, t, e-light, tex, t-xs">
                         <TrendingUp, className="w-3 h-3, m, r-1  />
-=======
                     <div, className="flex, item, s-center, justif, y-between, m, b-4">";
                       <div, className={`inli, n, e-flex, item, s-center, p, x-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, borde, r ${categoryCol, o, r}`}>`;`
                         <CategoryIcon, className="w-3 h-3, m, r-1" />";
@@ -664,7 +647,6 @@ return (
                       </d, i, v>
                     </d, i, v>
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colors, lin, e-cla, m, p-2">"
-=======
                     <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colors, lin, e-cla, m, p-2">";
                       {po, s, t.tit, l, e}
                     </h3>
@@ -693,7 +675,6 @@ return (
                       </d, i, v>
                       <div, className="flex, item, s-cent, e, r">
                         <Clock, className="w-3 h-3, m, r-1  />
-=======
                     <div, className="flex, item, s-center, justif, y-between, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">";
                       <div, className="flex, item, s-cent, e, r">";
                         <User, className="w-3 h-3, m, r-1" />";
@@ -707,7 +688,6 @@ return (
                     <button, className="w-full, m, t-4, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, transitio, n-colors, flex, items-center, justif, y-center, grou, p/btn, tex, t-sm">"
                       Read, Articl, e;
                       <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                     <button, className="w-full, m, t-4, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, transitio, n-colors, flex, items-center, justif, y-center, grou, p/btn, tex, t-sm">";
                       Read, Articl, e;
                       <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r/bt

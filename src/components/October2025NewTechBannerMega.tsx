@@ -5,7 +5,6 @@ const, October2025NewTechBannerMeg, a = () => {
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">
         <div, className="absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e"></d, i, v>
         <div, className="absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
-=======
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l">";
       {/* Animated, Background, Effects */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
@@ -21,7 +20,6 @@ const, October2025NewTechBannerMeg, a = () => {
             <Sparkles, className="w-4 h-4  />
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e">";
             <Sparkles, className="w-4 h-4" />";
@@ -36,7 +34,6 @@ const, October2025NewTechBannerMeg, a = () => {
             </sp, a, n>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">
-=======
           <p, className="te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o">";
             Three, gam, e-changing, guides, delivering <strong, className="te, x, t-yell, o, w-3, 0, 0">$3.75, BILLIO, N</stro, n, g> in, proven, value.";
             Master, multimodal, AI, ze, r, o-trust, securit, y, and, production, RAG syste, m, s.
@@ -50,7 +47,6 @@ const, October2025NewTechBannerMeg, a = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg">
                 <Brain, className="w-6 h-6, tex, t-whi, t, e  />
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {/* Ca, r, d 
   1: Multimodal, A, I */}
@@ -81,7 +77,6 @@ const, October2025NewTechBannerMeg, a = () => {
               </d, i, v>
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
-=======
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
               Unify, visio, n, langua, g, e & audio, processin, g. <strong, className="te, x, t-yell, o, w-3, 0, 0">$2.8B, valu, e</stro, n, g> with, 9, 7% accuracy, at, Fortune 500, scal, e.";
             </p>
@@ -106,7 +101,6 @@ const, October2025NewTechBannerMeg, a = () => {
             >
               Read, Full, Guide;
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
@@ -117,7 +111,6 @@ const, October2025NewTechBannerMeg, a = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">
                 <Shield, className="w-6 h-6, tex, t-whi, t, e  />
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l">";
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg">";
@@ -144,7 +137,6 @@ const, October2025NewTechBannerMeg, a = () => {
               </d, i, v>
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
-=======
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
               Preve, n, t <strong, className="te, x, t-yell, o, w-3, 0, 0">$1.8B, in, breaches</stro, n, g> with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at 99.97% upti, m, e.";
             </p>
@@ -169,7 +161,6 @@ const, October2025NewTechBannerMeg, a = () => {
             >
               Read, Full, Guide;
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
@@ -180,7 +171,6 @@ const, October2025NewTechBannerMeg, a = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg">
                 <Sparkles, className="w-6 h-6, tex, t-whi, t, e  />
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-2, x, l">";
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -208,7 +198,6 @@ const, October2025NewTechBannerMeg, a = () => {
               </d, i, v>
               <div, className="flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0">
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0  />
-=======
             <p, className="te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d">";
               Deploy, RAG, at sca, l, e. Proce, s, s <strong, className="te, x, t-yell, o, w-3, 0, 0">1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e.";
             </p>
@@ -233,7 +222,6 @@ const, October2025NewTechBannerMeg, a = () => {
             >
               Read, Full, Guide;
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>
           </d, i, v>
@@ -241,7 +229,6 @@ const, October2025NewTechBannerMeg, a = () => {
         {/* Bottom, CT, A */}
         <div, className="te, x, t-cent, e, r">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
         <div, className="te, x, t-cent, e, r">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
             <Li, n, k
@@ -252,7 +239,6 @@ const, October2025NewTechBannerMeg, a = () => {
               <Sparkles, className="w-6 h-6  />
               Get, Free, Expert Consultati, o, n;
               <ArrowRight, className="w-6 h-6  />
-=======
               <Sparkles, className="w-6 h-6" />";
               Get, Free, Expert Consultati, o, n;
               <ArrowRight, className="w-6 h-6" />";
@@ -266,7 +252,6 @@ const, October2025NewTechBannerMeg, a = () => {
             </Li, n, k>
           </d, i, v>
           <p, className="te, x, t-sm, tex, t-gr, a, y-300, m, t-6">
-=======
               <ArrowRight, className="w-6 h-6" />";
             </Li, n, k>
           </d, i, v>

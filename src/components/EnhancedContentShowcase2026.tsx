@@ -10,7 +10,6 @@ featur, e, d?: boole, a, n;
 hr, e, f: stri, n, g;
 metri, c, s?: {
 lab, e, l: stri, n, g;
-=======
 id: stri, n, g;
 tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
@@ -129,7 +128,6 @@ const, contentItem, s: ContentIt, e, m[] = [
       { lab, e, l: 'Cost, Optimizatio, n', val, u, e: '70%' }
       { lab, e, l: 'Automati, o, n', val, u, e: '95%' }
       { lab, e, l: 'Accura, c, y', val, u, e: '99%' }
-=======
     id: 'ai-autonomo, u, s-clo, u, d-o, p, s-20, 2, 6',';
     tit, l, e: 'AI, Autonomous, Cloud Operations, 20, 2
   6: Se, l, f-Healing, Infrastructure, Guide',';
@@ -241,7 +239,6 @@ export, default, function EnhancedContentShowcase20, 2, 6(): vo, i, d {
   );
   const, sortedConten, t = [...filteredConte, n, t].so, r, t((a, b) => {
     if (sort, B, y === 'featur, e, d') {;
-=======
 const, categorie, s = ['A, l, l', 'Cloud, Operation, s', 'FinTe, c, h', 'Reta, i, l', 'Sustainabili, t, y', 'Architectu, r, e', 'FinO, p, s'];';
 export, default, function EnhancedContentShowcase20, 2, 6(): vo, i, d {
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e('A, l, l');';
@@ -256,7 +253,6 @@ export, default, function EnhancedContentShowcase20, 2, 6(): vo, i, d {
       retur, n, 0;
     }
     if (sort, B, y === 'newe, s, t') {;
-=======
     if (sort, B, y === 'newe, s, t') {';
       return, new, Date(b.publishDa, t, e).getTi, m, e() - new, Dat, e(a.publishDa, t, e).getTi, m, e();
     }
@@ -268,7 +264,6 @@ ca, s, e 'bl, o, g': retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-8, 0, 0';
 ca, s, e 'ca, s, e-stu, d, y': retu, r, n 'bg-gre, e, n-100, tex, t-gre, e, n-8, 0, 0';
 ca, s, e 'gui, d, e': retu, r, n 'bg-purp, l, e-100, tex, t-purp, l, e-8, 0, 0';
 defau, l, t: retu, r, n 'bg-gr, a, y-100, tex, t-gr, a, y-8, 0, 0';
-=======
 ca, s, e 'bl, o, g': retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-8, 0, 0';';
 ca, s, e 'ca, s, e-stu, d, y': retu, r, n 'bg-gre, e, n-100, tex, t-gre, e, n-8, 0, 0';';
 ca, s, e 'gui, d, e': retu, r, n 'bg-purp, l, e-100, tex, t-purp, l, e-8, 0, 0';';
@@ -285,7 +280,6 @@ ca, s, e 'Sustainabili, t, y': retu, r, n 'bg-gre, e, n-100, tex, t-gre, e, n-8,
 ca, s, e 'Architectu, r, e': retu, r, n 'bg-indi, g, o-100, tex, t-indi, g, o-8, 0, 0';
 ca, s, e 'FinO, p, s': retu, r, n 'bg-viol, e, t-100, tex, t-viol, e, t-8, 0, 0';
 defau, l, t: retu, r, n 'bg-gr, a, y-100, tex, t-gr, a, y-8, 0, 0';
-=======
 ca, s, e 'Cloud, Operation, s': retu, r, n 'bg-cy, a, n-100, tex, t-cy, a, n-8, 0, 0';';
 ca, s, e 'FinTe, c, h': retu, r, n 'bg-emera, l, d-100, tex, t-emera, l, d-8, 0, 0';';
 ca, s, e 'Reta, i, l': retu, r, n 'bg-oran, g, e-100, tex, t-oran, g, e-8, 0, 0';';
@@ -317,7 +311,6 @@ defa, u, l
         {/* Filters, and, Sorting */}
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, m, b-8, justif, y-between, item, s-cent, e, r">"
           <div, className="flex, fle, x-wrap, ga, p-2">
-=======
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, m, b-8, justif, y-between, item, s-cent, e, r">";
           <div, className="flex, fle, x-wrap, ga, p-2">";
             {categori, e, s.m, a, p((catego, r, y) => (
@@ -328,7 +321,6 @@ defa, u, l
                   selectedCatego, r, y === catego, r, y;
                     ? 'bg-bl, u, e-600, tex, t-whi, t, e'
                     : 'bg-white, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, border, border-gr, a, y-2, 0, 0}`}`;`
-=======
                     : 'bg-white, tex, t-gr, a, y-700, hove, r: bg-gr, a, y-100, border, border-gr, a, y-2, 0, 0'
                 }`}`;`
               >
@@ -338,7 +330,6 @@ defa, u, l
           </d, i, v>
           <div, className="flex, item, s-center, ga, p-2">
             <span, className="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Sort, b, y: </sp, a, n>"
-=======
           <div, className="flex, item, s-center, ga, p-2">";
             <span, className="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Sort, b, y: </sp, a, n>";
             <sele, c, t
@@ -359,7 +350,6 @@ defa, u, l
             <Link, ke, y={it, e, m.id} to={it, e, m.hr, e, f} classNa, m, e="gro, u, p">
               <div, className="bg-white, rounde, d-xl, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-300, overflo, w-hidden, border, border-gr, a, y-200, grou, p-ho, v, e
   r:bord, e, r-bl, u, e-3, 0, 0">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
           {sortedConte, n, t.m, a, p((it, e, m) => (
@@ -375,7 +365,6 @@ defa, u, l
                 <div, className="p-6">";
                   {/* Type, and, Category */}
                   <div, className="flex, item, s-center, ga, p-2, m, b-3">
-=======
                   <div, className="flex, item, s-center, ga, p-2, m, b-3">";
                     <span, className={`px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-semibo, l, d ${getTypeCol, o, r(it, e, m.ty, p, e)}`}>`;`
                       {it, e, m.ty, p, e.toUpperCa, s, e()}
@@ -386,7 +375,6 @@ defa, u, l
                   </d, i, v>
                   {/* Tit, l, e */}
                   <h3, className="te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-600, transitio, n-colors, lin, e-cla, m, p-2">"
-=======
                   <h3, className="te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-600, transitio, n-colors, lin, e-cla, m, p-2">";
                     {it, e, m.tit, l, e}
                   </h3>
@@ -415,7 +403,6 @@ defa, u, l
                 <div, className="px-6, p, b-6">
                   <div, className="te, x, t-bl, u, e-600, fon, t-semibold, tex, t-sm, grou, p-hov, e, r: te, x, t-bl, u, e-700, transitio, n-colo, r, s">"
                     Re, a, d {it, e, m.ty, p, e === 'ca, s, e-stu, d, y' ? 'Case, Stud, y' : it, e, m.ty, p, e === 'gui, d, e' ? 'Gui, d, e' : 'Artic, l, e'} →;
-=======
                 <div, className="px-6, p, b-6">";
                   <div, className="te, x, t-bl, u, e-600, fon, t-semibold, tex, t-sm, grou, p-hov, e, r: te, x, t-bl, u, e-700, transitio, n-colo, r, s">";
                     Re, a, d {it, e, m.ty, p, e === 'ca, s, e-stu, d, y' ? 'Case, Stud, y' : it, e, m.ty, p, e === 'gui, d, e' ? 'Gui, d, e' : 'Artic, l, e'} →';
@@ -444,7 +431,6 @@ defa, u, l
             <div, className="te, x, t-cent, e, r">
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2">50+</d, i, v>
               <div, className="te, x, t-gr, a, y-6, 0, 0">AI, Article, s</d, i, v>
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";
             <div, className="te, x, t-cent, e, r">";
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2">50+</d, i, v>";

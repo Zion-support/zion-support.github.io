@@ -13,7 +13,6 @@ import, Reac, t, { la, z, y, Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, 
   'october20, 2, 5-revo, p, s': la, z, y(() => impo, r, t('./October2025RevOpsBann, e, r'))
   'january20, 2, 6-revolutiona, r, y': la, z, y(() => impo, r, t('./January2026RevolutionaryBann, e, r'))
   'n, e, w-servic, e, s-20, 2, 6': la, z, y(() => impo, r, t('./NewServicesPromoBanner20, 2, 6'))
-=======
 import, Reac, t, { la, z, y, Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
 // Define, available, banners with, their, import pat, h, s
   const, bannerComponent, s = {
@@ -39,7 +38,6 @@ interv, a, l?: numb, e, r;
 /** Whether, to, auto-rotate, banner, s (defau, l, t: tr, u, e) */
 autoRota, t, e?: boole, a, n;
 /** Maximum, number, of banners, to, show (defau, l, t: 3) */
-=======
 /** Rotation, interval, in millisecon, d, s (defa, u, l
   t: 80, 0, 0) */
 interv, a, l?: numb, e, r;
@@ -64,7 +62,6 @@ export, const, BannerRotationManager: Rea, c, t.FC<BannerRotationManagerPro, p, 
     'october20, 2, 5-ne, x, t-g, e, n-ai'
   ]
   interv, a, l = 80, 0, 0;
-=======
 export, const, BannerRotationManager: Rea, c, t.FC<BannerRotationManagerPro, p, s> = ({
   banne, r, s = [
     'october20, 2, 5-n, e, w-breakthrou, g, h',';
@@ -125,7 +122,6 @@ export, const, BannerRotationManager: Rea, c, t.FC<BannerRotationManagerPro, p, 
                 ind, e, x === currentInd, e, x;
                   ? 'bg-purp, l, e-40, 0, w-8'
                   : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50}`}`;`
-=======
                   : 'bg-whi, t, e/30, hove, r: bg-whi, t, e/50'
               }`}`;`
               ar, i, a-lab, e, l={`Go, to, banner ${ind, e, x + 1}`}`;`

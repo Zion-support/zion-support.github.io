@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 interface, LoadingProp, s {
 si, z, e?: 'sm' | 'md' | 'lg';
@@ -12,7 +11,6 @@ const, Loadin, g: Rea, c, t.FC<LoadingPro, p, s> = ({ si, z, e = 'md', te, x, t 
     lg: 'w-1, 2, h-12};
   return (
     <div, className="flex, fle, x-col, item, s-center, justif, y-cente, r, p-8">
-=======
 const, Loadin, g: Rea, c, t.FC<LoadingPro, p, s> = ({ si, z, e = 'md', te, x, t = 'Loadi, n, g...' }) => {';
   const, sizeClasse, s = {
     sm: 'w-4 h-4',';

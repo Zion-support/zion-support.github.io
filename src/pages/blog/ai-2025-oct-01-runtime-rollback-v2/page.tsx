@@ -15,7 +15,6 @@ export, default, function RuntimeRollback, V, 2(): Rea, c, t.J, S, X.Eleme, n, t
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">AI, Runtime, Rollback v2</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">KPI, Canarie, s • Budget, Gate, s • O, n, e‑Click, Recover, y</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-v2"
          />
       </Helmet>

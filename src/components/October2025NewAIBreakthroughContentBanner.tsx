@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   return (
@@ -12,7 +11,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
   W: Revolutionary, AI, Breakthroughs October, 202, 5
           </h2>
           <p, className="te, x, t-purp, l, e-300, tex, t-lg, m, t-2">
-=======
           <h2, className="te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             N, E, W: Revolutionary, AI, Breakthroughs October, 202, 5
           </h2>
@@ -30,7 +28,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         <div, className="bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
   r:sca, l, e-1, 0, 5">";
@@ -78,7 +75,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
         <div, className="bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -125,7 +121,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           <div, className="spa, c, e-y-3, m, b-6">
             <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
         <div, className="bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hov, e
   r:sca, l, e-1, 0, 5">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -176,7 +171,6 @@ const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => {
               <strong, className="te, x, t-purp, l, e-4, 0, 0"> NAS, designs, optimal architectur, e, s</stro, n, g>
               <strong, className="te, x, t-emera, l, d-4, 0, 0"> distributed, RL, trains them, at, scale</stro, n, g>, a, n, d;
               <strong, className="te, x, t-indi, g, o-4, 0, 0"> priva, c, y-preserving, technique, s</stro, n, g> enable, deployment, on sensitive, dat, a. 
-=======
       <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-8, 0, 0/30, t, o-emera, l, d-8, 0, 0/30, border, border-purp, l, e-5, 0, 0/40, rounde, d-x, l, p-6">";
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">";
           <div, className="fl, e, x-1">";

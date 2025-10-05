@@ -17,7 +17,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <Shield, className="w-5 h-5, tex, t-r, e, d-4, 0, 0  />
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-=======
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n">";
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
@@ -42,7 +41,6 @@ const, October2025FraudDetectionBanne, r = () => {
             </sp, a, n>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
-=======
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
             Revolutionary, AI, platform combini, n, g <strong, className="te, x, t-whi, t, e">Graph, Neural, Networks, Behavioral, Biometric, s & Mul, t, i-Model, M, L</stro, n, g> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, false, positives. <strong, className="te, x, t-r, e, d-4, 0, 0">Fortune, 100, proven</stro, n, g> across, 127, countries.";
           </p>
@@ -72,7 +70,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>
             <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";
           <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hov, e
   r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
@@ -110,7 +107,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                 <Brain, className="w-6 h-6, tex, t-r, e, d-4, 0, 0  />
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
@@ -126,7 +122,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                 <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
-=======
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
                 <Eye, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
@@ -141,7 +136,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                 <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0  />
-=======
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
                 <Network, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />";
@@ -166,7 +160,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <d, i, v>
               <div, className="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">
                 <AlertCircle, className="w-5 h-5"  />
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">";
           <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
             <Shield, className="w-8 h-8, tex, t-r, e, d-4, 0, 0" />";
@@ -199,7 +192,6 @@ const, October2025FraudDetectionBanne, r = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <span, className="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-=======
                 <li, className="flex, item, s-start, ga, p-2">";
                   <span, className="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>";
                   <sp, a, n>NPS, Scor, e: 14 (indust, r, y-wor, s, t)</sp, a, n>
@@ -209,7 +201,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <d, i, v>
               <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">
                 <CheckCircle, className="w-5 h-5"  />
-=======
               <div, className="te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">";
                 <CheckCircle, className="w-5 h-5" />";
                 Aft, e, r: AI-Powered, Excellenc, e
@@ -233,7 +224,6 @@ const, October2025FraudDetectionBanne, r = () => {
                 </li>
                 <li, className="flex, item, s-start, ga, p-2">
                   <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-=======
                 <li, className="flex, item, s-start, ga, p-2">";
                   <span, className="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>";
                   <sp, a, n>NPS, Scor, e: 74 (indust, r, y-leadi, n, g, +60, point, s)</sp, a, n>
@@ -244,7 +234,6 @@ const, October2025FraudDetectionBanne, r = () => {
           <div, className="te, x, t-cent, e, r">
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg">
               <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
-=======
           <div, className="te, x, t-cent, e, r">";
             <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg">";
               <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
@@ -290,7 +279,6 @@ const, October2025FraudDetectionBanne, r = () => {
               <div, className="te, x, t-3xl, m, b-2">📱</d, i, v>
               <div, className="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Telec, o, m</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">99.2% detecti, o, n</d, i, v>
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">";
             <div, className="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r: bg-whi, t, e/10, transitio, n-colo, r, s">";
               <div, className="te, x, t-3xl, m, b-2">🏦</d, i, v>";
@@ -322,7 +310,6 @@ const, October2025FraudDetectionBanne, r = () => {
         </d, i, v>
         {/* Call, to, Action Secti, o, n */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
@@ -331,7 +318,6 @@ const, October2025FraudDetectionBanne, r = () => {
           >
             <Brain, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4  />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-=======
             <Brain, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />";
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">";
               Read, Technical, Deep-Di, v, e;
@@ -342,7 +328,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>Explore, Technolog, y</sp, a, n>
               <ArrowRight, className="w-5 h-5  />
-=======
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
               <sp, a, n>Explore, Technolog, y</sp, a, n>
               <ArrowRight, className="w-5 h-5" />";
@@ -363,7 +348,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>See, Result, s</sp, a, n>
               <ArrowRight, className="w-5 h-5  />
-=======
             <Shield, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />";
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">";
               $847B, Success, Story;
@@ -383,7 +367,6 @@ const, October2025FraudDetectionBanne, r = () => {
           >
             <Target, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4  />
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-=======
             <Target, className="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />";
             <div, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">";
               Our, Fraud, Detection Servic, e, s;
@@ -394,7 +377,6 @@ const, October2025FraudDetectionBanne, r = () => {
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
               <sp, a, n>Get, Protecte, d</sp, a, n>
               <ArrowRight, className="w-5 h-5  />
-=======
             <div, className="flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
               <sp, a, n>Get, Protecte, d</sp, a, n>
               <ArrowRight, className="w-5 h-5" />";
@@ -418,7 +400,6 @@ const, October2025FraudDetectionBanne, r = () => {
               <Shield, className="w-6 h-6  />
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>
               <ArrowRight, className="w-6 h-6  />
-=======
               <Shield, className="w-6 h-6" />";
               <sp, a, n>Schedule, Free, Assessment</sp, a, n>
               <ArrowRight, className="w-6 h-6" />";
@@ -446,7 +427,6 @@ const, October2025FraudDetectionBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, ga, p-2">
               <CheckCircle, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">";
           <div, className="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0">";
             <div, className="flex, item, s-center, ga, p-2">";

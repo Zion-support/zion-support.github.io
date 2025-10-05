@@ -7,7 +7,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>
-=======
 import React from "react";';
 const, October2025AdvancedAIInnovationsBanne, r = () => {
   return (
@@ -31,7 +30,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
           </h2>
           <p, className="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">
             Explore, revolutionary, advances in, neuromorphic, computing, synthetic, data, generation;
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
@@ -48,7 +46,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
         </d, i, v>
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Neuromorphic, Computin, g */}
           <Li, n, k
@@ -59,7 +56,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Brain, className="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />";
@@ -70,7 +66,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">";
               Neuromorphic, Neural, Network
   s: Bra, i, n-Inspired, Computing, Revolution
@@ -86,7 +81,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -99,7 +93,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Database, className="w-8 h-8, tex, t-purp, l, e-3, 0, 0" />";
@@ -114,7 +107,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
             </h3>
             <p, className="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
               Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y;
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">";
               Synthetic, Data, Generation Mast, e, r
   y: Solving, A, I's, Data, Scarcity Probl, e, m';
@@ -130,7 +122,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -143,7 +134,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Atom, className="w-8 h-8, tex, t-pi, n, k-3, 0, 0" />";
@@ -158,7 +148,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
             </h3>
             <p, className="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
               Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y;
-=======
             <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-pi, n, k-200, transitio, n-colo, r, s">";
               Quantum, Machine, Learnin
   g: Enterprise, Breakthrough, in 20, 2, 5
@@ -174,7 +163,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
                 <sp, a, n>Oc, t, 1, 20, 2, 5</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -188,7 +176,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
           >
             <sp, a, n>Discover, More, Innovations</sp, a, n>
             <ArrowRight, className="w-6 h-6  />
-=======
             <ArrowRight, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm, m, t-4">";
@@ -199,7 +186,6 @@ const, October2025AdvancedAIInnovationsBanne, r = () => {
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">"
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1">
-=======
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1">";

@@ -17,7 +17,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
               🚀 BREAKI, N, G: Octobe, r, 1, 20, 2, 5
             </sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-=======
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-b, borde, r-purp, l, e-5, 0, 0/30, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, b, g-gr, i, d-whi, t, e/[0.02] bg-[si, z, e: 60px_60, p, x]" />";
@@ -40,7 +39,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
         {/* Main, headlin, e */}
         <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-center, m, b-4, leadin, g-tig, h, t">"
           <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-oran, g, e-300, t, o-pi, n, k-300, tex, t-transparent, b, g-cl, i, p-text, dro, p-shad, o, w-lg">
-=======
         <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-center, m, b-4, leadin, g-tig, h, t">";
           <span, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-oran, g, e-300, t, o-pi, n, k-300, tex, t-transparent, b, g-cl, i, p-text, dro, p-shad, o, w-lg">";
             🔥 REVOLUTION, A, R
@@ -50,7 +48,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
         {/* S, u, b-headli, n, e */}
         <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">"
           ⚡ Just, Release, d: <span, className="te, x, t-yell, o, w-300, fon, t-bla, c, k">$974M, Combined, Annual Val, u, e</sp, a, n> — "
-=======
         <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, tex, t-bl, u, e-100, m, b-8, ma, x-w-5xl, m, x-auto, fon, t-semibo, l, d">";
           ⚡ Just, Releas, e
   d: <span, className="te, x, t-yell, o, w-300, fon, t-bla, c, k">$974M, Combined, Annual Val, u, e</sp, a, n> — ";
@@ -87,7 +84,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
                   <div, className="flex, item, s-center, ga, p-2">
                     <div, className="w-2 h-2, b, g-yell, o, w-400, rounde, d-full, animat, e-pul, s, e  />
                     <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">99.9, 9, 7% Availability, Achieve, d</sp, a, n>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
           {/* Ca, r, d 
   1: Enterprise, Mes, h */}
@@ -133,7 +129,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
                   >
                     Read, Blog, Post;
                     <ArrowRight, className="w-4 h-4  />
-=======
                     <ArrowRight, className="w-4 h-4" />";
                   </Li, n, k>
                   <Li, n, k
@@ -143,7 +138,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
                   >
                     View, Case, Study;
                     <TrendingUp, className="w-4 h-4  />
-=======
                     <TrendingUp, className="w-4 h-4" />";
                   </Li, n, k>
                 </d, i, v>
@@ -179,7 +173,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
                   <div, className="flex, item, s-center, ga, p-2">
                     <div, className="w-2 h-2, b, g-yell, o, w-400, rounde, d-full, animat, e-pul, s, e  />
                     <span, className="te, x, t-yell, o, w-300, fon, t-bo, l, d">30-Day, Advance, Warning</sp, a, n>
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/80, t, o-cy, a, n-9, 0, 0/80, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-x, l, p-6, hove, r: sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-300, grou, p">";
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0">";
@@ -222,7 +215,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
                   >
                     Read, Blog, Post;
                     <ArrowRight, className="w-4 h-4  />
-=======
                     <ArrowRight, className="w-4 h-4" />";
                   </Li, n, k>
                   <Li, n, k
@@ -232,7 +224,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
                   >
                     View, Case, Study;
                     <TrendingUp, className="w-4 h-4  />
-=======
                     <TrendingUp, className="w-4 h-4" />";
                   </Li, n, k>
                 </d, i, v>
@@ -250,7 +241,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
             <Sparkles, className="w-6 h-6  />
             Explore, All, Revolutionary Conte, n, t;
             <ArrowRight, className="w-6 h-6  />
-=======
             <Sparkles, className="w-6 h-6" />";
             Explore, All, Revolutionary Conte, n, t;
             <ArrowRight, className="w-6 h-6" />";
@@ -261,7 +251,6 @@ const, October2025NewAutonomousSystemsBanne, r = () => {
           <div, className="bg-bla, c, k/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-whi, t, e/10">
             <div, className="te, x, t-3xl, fon, t-black, tex, t-yell, o, w-300, m, b-1">$97, 4, M</d, i, v>
             <div, className="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Combined, Annual, Value</d, i, v>
-=======
         <div, className="mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">";
           <div, className="bg-bla, c, k/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-whi, t, e/10">";
             <div, className="te, x, t-3xl, fon, t-black, tex, t-yell, o, w-300, m, b-1">$97, 4, M</d, i, v>";

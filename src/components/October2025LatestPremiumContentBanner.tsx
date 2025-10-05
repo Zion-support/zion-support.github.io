@@ -12,7 +12,6 @@ return (
           <div, className="fl, e, x-1">
             <div, className="flex, item, s-center, ga, p-3, m, b-3">
               <span, className="inli, n, e-flex, item, s-center, p, x-4, p, y-1.5, rounde, d-full, tex, t-xs, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, shado, w-lg, animat, e-pul, s, e">
-=======
 <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, borde, r-y, borde, r-purp, l, e-5, 0, 0/30, p, y-6, p, x-4, s, m: px-6 l
   g:px-8, shado, w-2xl, relative, overflow-hidd, e, n">,";
 {/* Animated, background, effects */
@@ -35,7 +34,6 @@ return (
               🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y!
             </h2>
             <p, className="te, x, t-lg, tex, t-purp, l, e-100, m, b-4, ma, x-w-4xl, leadin, g-relax, e, d">
-=======
             <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-3, leadin, g-tig, h, t">";
               🚀 3, Revolutionary, AI Breakthroug, h, s — Transform, Your, Enterprise Tod, a, y!
             </h2>
@@ -48,7 +46,6 @@ return (
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20">
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0">$19.2B+</d, i, v>
                 <div, className="te, x, t-xs, tex, t-purp, l, e-2, 0, 0">Total, Value, Created</d, i, v>
-=======
             <div, className="grid, gri, d-co, l, s-2, s, m: gr, i, d-co, l, s-4, ga, p-4, m, b-4">";
               <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/20">";
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-4, 0, 0">$19.2B+</d, i, v>";
@@ -69,7 +66,6 @@ return (
             </d, i, v>
             {/* Featured, Article, s */}
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">"
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">";
               <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-autonomo, u, s-da, t, a-governan, c, e-revoluti, o, n"
@@ -80,7 +76,6 @@ return (
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1  />
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-start, ga, p-3, m, b-2">";
                   <Shield, className="w-6 h-6, tex, t-purp, l, e-300, fle, x-shri, n, k-0, m, t-1" />";
                   <d, i, v>
@@ -93,7 +88,6 @@ return (
                     <div, className="flex, item, s-center, ga, p-2, tex, t-xs">
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0  />
                       <span, className="te, x, t-purp, l, e-3, 0, 0">Se, l, f-Regulating, System, s</sp, a, n>
-=======
                     <div, className="flex, item, s-center, ga, p-2, tex, t-xs">";
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />";
                       <span, className="te, x, t-purp, l, e-3, 0, 0">Se, l, f-Regulating, System, s</sp, a, n>";
@@ -110,7 +104,6 @@ return (
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1  />
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-start, ga, p-3, m, b-2">";
                   <Brain, className="w-6 h-6, tex, t-r, e, d-300, fle, x-shri, n, k-0, m, t-1" />";
                   <d, i, v>
@@ -123,7 +116,6 @@ return (
                     <div, className="flex, item, s-center, ga, p-2, tex, t-xs">
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0  />
                       <span, className="te, x, t-r, e, d-3, 0, 0">Re, a, l-Time, Protectio, n</sp, a, n>
-=======
                     <div, className="flex, item, s-center, ga, p-2, tex, t-xs">";
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />";
                       <span, className="te, x, t-r, e, d-3, 0, 0">Re, a, l-Time, Protectio, n</sp, a, n>";
@@ -140,7 +132,6 @@ return (
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1  />
                   <d, i, v>
                     <h3, className="fo, n, t-bold, tex, t-white, tex, t-sm, m, b-1, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
-=======
                 <div, className="flex, item, s-start, ga, p-3, m, b-2">";
                   <Workflow, className="w-6 h-6, tex, t-bl, u, e-300, fle, x-shri, n, k-0, m, t-1" />";
                   <d, i, v>
@@ -153,7 +144,6 @@ return (
                     <div, className="flex, item, s-center, ga, p-2, tex, t-xs">
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0  />
                       <span, className="te, x, t-bl, u, e-3, 0, 0">Intelligent, Automatio, n</sp, a, n>
-=======
                     <div, className="flex, item, s-center, ga, p-2, tex, t-xs">";
                       <CheckCircle, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />";
                       <span, className="te, x, t-bl, u, e-3, 0, 0">Intelligent, Automatio, n</sp, a, n>";
@@ -174,7 +164,6 @@ return (
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0">
                 <Shield, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0  />
-=======
             <div, className="flex, fle, x-wrap, ga, p-3">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-sm, tex, t-purp, l, e-1, 0, 0">";
                 <TrendingUp, className="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />";
@@ -191,7 +180,6 @@ return (
             </d, i, v>
           </d, i, v>
           <div, className="flex, fle, x-col, ga, p-3, l, g: ml-6">"
-=======
           <div, className="flex, fle, x-col, ga, p-3, l, g: ml-6">";
             <Li, n, k
   to="/bl, o, g"
@@ -200,7 +188,6 @@ return (
             >
               <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <span, className="mr-2">Explore, All, 3 Breakthroug, h, s</sp, a, n>";
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </Li, n, k>

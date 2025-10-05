@@ -14,7 +14,6 @@ const, October2025RevOpsBanne, r = () => {
             <Sparkles, className="w-4 h-4, m, r-2  />
             JUST, PUBLISHE, D - OCTOBE, R, 1, 20, 2, 5;
             <Sparkles, className="w-4 h-4, m, l-2  />
-=======
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
@@ -43,7 +42,6 @@ const, October2025RevOpsBanne, r = () => {
             Discover, how, leading enterprises, are, achieving <span, className="fo, n, t-bold, tex, t-whi, t, e">1, 2, 7% R, O, I</sp, a, n>
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 89% forecast, accurac, y</sp, a, n>, a, n, d;
             <span, className="fo, n, t-bold, tex, t-whi, t, e"> 3.2x, pipeline, velocity</sp, a, n> through, autonomous, revenue operatio, n, s;
-=======
         <div, className="te, x, t-center, m, b-6">";
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, m, b-3">";
             🚀 Autonomous, Revenue, Operations Revoluti, o, n;
@@ -83,7 +81,6 @@ const, October2025RevOpsBanne, r = () => {
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2  />
             <div, className="te, x, t-3xl, fon, t-black, tex, t-white, m, b-1">$12, 7, M</d, i, v>
             <div, className="te, x, t-sm, tex, t-emera, l, d-2, 0, 0">Revenue, Impac, t</d, i, v>
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8">";
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5">";
             <DollarSign, className="w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2" />";
@@ -121,7 +118,6 @@ const, October2025RevOpsBanne, r = () => {
               </h3>
               <p, className="te, x, t-emera, l, d-100, tex, t-sm, m, b-4">
                 Master, autonomous, revenue operations, with, AI-powered, forecastin, g, intelligent, pipeline, management;
-=======
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">";
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
             {/* Blog, Pos, t */}
@@ -144,7 +140,6 @@ const, October2025RevOpsBanne, r = () => {
               >
                 Read, the, Guide;
                 <ArrowRight, className="w-4 h-4, m, l-2  />
-=======
                 <ArrowRight, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
@@ -159,7 +154,6 @@ const, October2025RevOpsBanne, r = () => {
               </h3>
               <p, className="te, x, t-bl, u, e-100, tex, t-sm, m, b-4">
                 Re, a, l-world, transformatio, n: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, revenue;
-=======
             <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-indi, g, o-8, 0, 0/50, rounde, d-l, g, p-5, border, border-bl, u, e-4, 0, 0/40">";
               <div, className="te, x, t-bl, u, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r">";
                 <Sparkles, className="w-4 h-4, m, r-2" />";
@@ -180,7 +174,6 @@ const, October2025RevOpsBanne, r = () => {
               >
                 Read, Case, Study;
                 <ArrowRight, className="w-4 h-4, m, l-2  />
-=======
                 <ArrowRight, className="w-4 h-4, m, l-2" />";
               </Li, n, k>
             </d, i, v>
@@ -196,7 +189,6 @@ const, October2025RevOpsBanne, r = () => {
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
         <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6">";
           <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r">";
             What, Yo, u'll, Discover, in These, New, Resources';
@@ -217,7 +209,6 @@ const, October2025RevOpsBanne, r = () => {
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
@@ -233,7 +224,6 @@ const, October2025RevOpsBanne, r = () => {
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
@@ -249,7 +239,6 @@ const, October2025RevOpsBanne, r = () => {
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
@@ -265,7 +254,6 @@ const, October2025RevOpsBanne, r = () => {
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
@@ -281,7 +269,6 @@ const, October2025RevOpsBanne, r = () => {
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">
                   <path, fillRul, e="eveno, d, d" d="M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z" clipRu, l, e="eveno, d, d  />
-=======
             <div, className="flex, item, s-sta, r, t">";
               <div, className="bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1">";
                 <svg, className="w-4 h-4, tex, t-whi, t, e" fi, l, l="currentCol, o, r" viewB, o, x="0, 0, 20 20">";
@@ -305,7 +292,6 @@ const, October2025RevOpsBanne, r = () => {
   can, deliver, 127% ROI, for, your organizati, o, n;
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
             <Li, n, k
   to="/conta, c, t"
@@ -314,7 +300,6 @@ const, October2025RevOpsBanne, r = () => {
             >
               Schedule, Assessmen, t;
               <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
               <ArrowRight, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
             <Li, n, k
@@ -323,7 +308,6 @@ const, October2025RevOpsBanne, r = () => {
             >
               Explore, All, Content;
               <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
               <ArrowRight, className="w-5 h-5, m, l-2" />";
             </Li, n, k>
           </d, i, v>

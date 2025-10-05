@@ -1,5 +1,4 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -35,7 +34,6 @@ const, October2025NewContentBanner, 2 = () => {
       ic, o, n: B, o, t
       sl, u, g: "ai-20, 2, 5-o, c, t-01-roboti, c, s-proce, s, s-automati, o, n-ne, x, t-g, e, n","
       gradie, n, t: "fr, o, m-oran, g, e-500, t, o-r, e, d-6, 0, 0","
-=======
       tit, l, e: "AI-Powered, Sustainable, Data Cente, r, s",";
       descripti, o, n: "Discover, how, AI is, reducing, data center, energy, consumption by, 4, 0% while, improving, performance",";
       ic, o, n: Le, a, f
@@ -83,7 +81,6 @@ const, October2025NewContentBanner, 2 = () => {
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">FRESH, INSIGHT, S | October, 202, 5</sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">"
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, p, x-6, p, y-2, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">";
             <Brain, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
@@ -98,7 +95,6 @@ const, October2025NewContentBanner, 2 = () => {
         </d, i, v>
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12">";
           {newArticl, e, s.m, a, p((artic, l, e) => {
             const, Ico, n = artic, l, e.ic, o, n;
@@ -121,7 +117,6 @@ const, October2025NewContentBanner, 2 = () => {
                 </d, i, v>
                 {/* Conte, n, t */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
-=======
                   <Icon, className="w-8 h-8, tex, t-whi, t, e" />";
                 </d, i, v>
                 {/* Conte, n, t */}
@@ -135,7 +130,6 @@ const, October2025NewContentBanner, 2 = () => {
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   <sp, a, n>Read, Articl, e</sp, a, n>
                   <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
@@ -156,7 +150,6 @@ const, October2025NewContentBanner, 2 = () => {
           >
             <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
             <ArrowRight, className="w-5 h-5  />
-=======
             <ArrowRight, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>

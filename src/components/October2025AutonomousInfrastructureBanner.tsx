@@ -17,7 +17,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <Bot, className="w-5 h-5, tex, t-cy, a, n-4, 0, 0  />
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">"
-=======
     <div, className="relative, b, g-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, vi, a-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, borde, r-y, borde, r-cy, a, n-5, 0, 0/40, overflo, w-hidd, e, n">";
       {/* Animated, background, effects */};
       <div, className="absolute, inse, t-0, opacit, y-10">";
@@ -42,7 +41,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </sp, a, n>
           </h2>
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
-=======
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">";
             Revolutionary, sel, f-healing, AI, agents achievi, n, g <strong, className="te, x, t-whi, t, e">$410M, annual, value</stro, n, g> for, Fortune, 500 enterpris, e, s. ";
             Predictive, incident, prevention, autonomous, remediatio, n, and, zer, o-touch, operations, with <strong, className="te, x, t-cy, a, n-4, 0, 0">97% autonomous, success, rate</stro, n, g>. ";
@@ -74,7 +72,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">4, 2, x</d, i, v>
             <div, className="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Average, RO, I</d, i, v>
             <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">1.8-month, paybac, k</d, i, v>
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">";
           <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/40, t, o-cy, a, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">";
             <Target, className="w-8 h-8, tex, t-cy, a, n-400, m, x-auto, m, b-2" />";
@@ -111,7 +108,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                 <Activity, className="w-6 h-6, tex, t-cy, a, n-4, 0, 0  />
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-cy, a, n-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
@@ -127,7 +123,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                 <Bot, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0  />
-=======
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
                 <Bot, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />";
@@ -142,7 +137,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-4">
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
                 <Cloud, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
-=======
             <div, className="flex, item, s-start, ga, p-4">";
               <div, className="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">";
                 <Cloud, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />";
@@ -164,7 +158,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </d, i, v>
             <d, i, v>
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2">
-=======
         <div, className="bg-gradie, n, t-to-br, fro, m-cy, a, n-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/20, rounde, d-2x, l, p-8, m, b-10">";
           <div, className="flex, item, s-start, ga, p-4, m, b-6">";
             <div, className="fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-xl, flex, items-center, justif, y-cent, e, r">";
@@ -184,7 +177,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-1">99.9, 9, 4%</d, i, v>
               <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Uptime, Achieve, d</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">3, minutes, total downti, m, e/ye, a, r</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-6">";
             <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4">";
               <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-1">99.9, 9, 4%</d, i, v>";
@@ -225,7 +217,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-3">
               <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
               <div, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4">";
             <div, className="flex, item, s-start, ga, p-3">";
               <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
@@ -283,7 +274,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
               <div, className="te, x, t-2xl, m, b-2">📡</d, i, v>
               <div, className="fo, n, t-semibold, tex, t-white, tex, t-sm, m, b-1">Technolo, g, y</d, i, v>
               <div, className="te, x, t-xs, tex, t-gr, a, y-4, 0, 0">Scale, without, team grow, t, h</d, i, v>
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-5, ga, p-4">";
             <div, className="bg-bla, c, k/20, rounde, d-l, g, p-4, tex, t-center, hov, e
   r: bg-bla, c, k/30, transitio, n-colo, r, s">";
@@ -316,7 +306,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         </d, i, v>
         {/* Ca, l, l-to-Action, Button, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           <Li, n, k
   to="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-autonomo, u, s-infrastructu, r, e-orchestrati, o, n-revoluti, o, n"
@@ -329,7 +318,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Read, Technical, Deep Di, v, e</d, i, v>
             <div, className="te, x, t-sm, tex, t-cy, a, n-1, 0, 0">
-=======
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";
               <Cpu, className="w-8 h-8" />";
               <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -351,7 +339,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </d, i, v>
             <div, className="fo, n, t-bold, tex, t-lg, m, b-2">Vi, e, w $410M, Success, Story</d, i, v>
             <div, className="te, x, t-sm, tex, t-bl, u, e-1, 0, 0">
-=======
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";
               <Shield, className="w-8 h-8" />";
               <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -370,7 +357,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             <div, className="flex, item, s-center, justif, y-between, m, b-3">
               <Target, className="w-8 h-8  />
               <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, justif, y-between, m, b-3">";
               <Target, className="w-8 h-8" />";
               <ArrowRight, className="w-6 h-6, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -391,7 +377,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             Includes, ROI, projection, implementation, roadma, p, and, executive, presentation. No, cos, t. No, obligatio, n.
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";
             <Li, n, k
   to="/conta, c, t"
@@ -403,7 +388,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
             </Li, n, k>
             <div, className="te, x, t-white, tex, t-sm">
               <Clock, className="w-4 h-4, inline, mr-1  />
-=======
               <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
             <div, className="te, x, t-white, tex, t-sm">";
@@ -415,7 +399,6 @@ const, October2025AutonomousInfrastructureBanne, r = () => {
         {/* Trust, Indicator, s */}
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r">
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0">"
-=======
         <div, className="mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10, tex, t-cent, e, r">";
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4, tex, t-sm, tex, t-gr, a, y-4, 0, 0">";
             <d, i, v>

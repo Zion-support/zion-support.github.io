@@ -35,7 +35,6 @@ export, const, wait = (ms: numb, e, r): Promi, s, e<vo, i, d> => {
 export, const, waitFor = asy, n, c (
   conditi, o, n: () => boole, a, n | Promi, s, e<boole, a, n>
   timeo, u, t = 50, 0, 0;
-=======
   conditi, o, n: () => boole, a, n | Promi, s, e<boole, a, n>
   timeo, u, t = 50, 0, 0
   interv, a, l = 50;
@@ -75,7 +74,6 @@ export, const, click = (eleme, n, t: Eleme, n, t): vo, i, d => {
     bubbl, e, s: tr, u, e
     cancelab, l, e: tr, u, e
     vi, e, w: wind, o, w;
-=======
 export, const, click = (elem, e, n
   t: Eleme, n, t): vo, i, d => {
   const, clickEven, t = new, MouseEven, t('cli, c, k', {';
@@ -99,7 +97,6 @@ export, const, type = (eleme, n, t: HTMLInputEleme, n, t | HTMLTextAreaEleme, n,
   const, changeEven, t = new, Even, t('chan, g, e', {
     bubbl, e, s: tr, u, e
     cancelab, l, e: tr, u, e;
-=======
   const, inputEven, t = new, Even, t('inp, u, t', {';
     bubbl, e, s: tr, u, e
     cancelab, l, e: tr, u, e
@@ -119,7 +116,6 @@ export, const, clear = (eleme, n, t: HTMLInputEleme, n, t | HTMLTextAreaEleme, n
   const, changeEven, t = new, Even, t('chan, g, e', {
     bubbl, e, s: tr, u, e
     cancelab, l, e: tr, u, e;
-=======
   eleme, n, t.val, u, e = '';';
   const, changeEven, t = new, Even, t('chan, g, e', {';
     bubbl, e, s: tr, u, e
@@ -135,7 +131,6 @@ export, const, selectOption = (eleme, n, t: HTMLSelectEleme, n, t, val, u, e: st
   const, changeEven, t = new, Even, t('chan, g, e', {
     bubbl, e, s: tr, u, e
     cancelab, l, e: tr, u, e;
-=======
   const, changeEven, t = new, Even, t('chan, g, e', {';
     bubbl, e, s: tr, u, e
     cancelab, l, e: tr, u, e
@@ -148,7 +143,6 @@ export, const, selectOption = (eleme, n, t: HTMLSelectEleme, n, t, val, u, e: st
 export, class, FetchMock {
   private, response, s: M, a, p<stri, n, g, a, n, y> = new, Ma, p()
   private, originalFetc, h: typeof, fetc, h
-=======
   private, response, s: M, a, p<stri, n, g, a, n, y> = new, Ma, p();
   private, originalFetc, h: typeof, fetc, h;
   construct, o, r() {
@@ -164,7 +158,6 @@ export, class, FetchMock {
       stat, u, s: optio, n, s?.stat, u, s || 2, 0, 0
       statusTe, x, t: optio, n, s?.statusTe, x, t || 'OK'
       heade, r, s: optio, n, s?.heade, r, s || {}
-=======
       stat, u, s: optio, n, s?.stat, u, s || 2, 0, 0
       statusTe, x, t: optio, n, s?.statusTe, x, t || 'OK',';
       heade, r, s: optio, n, s?.heade, r, s || {}
@@ -182,7 +175,6 @@ export, class, FetchMock {
       th, i, s.respons, e, s.s, e, t(u, r, l, {
         ...origin, a, l
   on, c, e: tr, u, e;
-=======
         ...origin, a, l
         on, c, e: tr, u, e
       });
@@ -191,7 +183,6 @@ export, class, FetchMock {
   insta, l, l(): vo, i, d {
     globalTh, i, s.fet, c, h = asy, n, c (inp, u, t: RequestIn, f, o | U, R, L, in, i, t?: RequestIn, i, t): Promi, s, e<Respon, s, e> => {
       const, ur, l = typeof, inpu, t === 'stri, n, g' ? inp, u, t : inp, u, t.toStri, n, g();
-=======
       const, ur, l = typeof, inpu, t === 'stri, n, g' ? inp, u, t : inp, u, t.toStri, n, g();';
       const, mockDat, a = th, i, s.respons, e, s.g, e, t(u, r, l);
       if (mockDa, t, a) {
@@ -202,7 +193,6 @@ export, class, FetchMock {
           stat, u, s: mockDa, t, a.stat, u, s
           statusTe, x, t: mockDa, t, a.statusTe, x, t
           heade, r, s: mockDa, t, a.heade, r, s;
-=======
           sta, t, u
   s: mockDa, t, a.stat, u, s
           statusTe, x, t: mockDa, t, a.statusTe, x, t
@@ -293,7 +283,6 @@ export, const, generateMockData = {
   da, t, e: (): Da, t, e => {
     return, new, Date(Da, t, e.n, o, w() - generateMockDa, t, a.numb, e, r(0, 3, 6, 5) * 24 * 60 * 60 * 10, 0, 0);
   }
-=======
   }
   numb, e, r: (m, i, n = 0, m, a, x = 1, 0, 0): numb, e, r => {
     return, Mat, h.flo, o, r(Ma, t, h.rand, o, m() * (m, a, x - m, i, n + 1)) + m, i, n;
@@ -328,7 +317,6 @@ export, const, generateMockData = {
 export, class, PerformanceTester {
   private, startTim, e: numb, e, r = 0
   private, measurement, s: M, a, p<stri, n, g, numb, e, r[]> = new, Ma, p()
-=======
   private, startTim, e: numb, e, r = 0;
   private, measuremen, t
   s: M, a, p<stri, n, g, numb, e, r[]> = new, Ma, p();
@@ -389,7 +377,6 @@ return, elemen, t.hasAttribu, t, e('ar, i, a-lab, e, l') || eleme, n, t.hasAttri
   g: HTMLImageEleme, n, t): boole, a, n => {
     return, Boolea, n(i, m, g.a, l, t && i, m, g.a, l, t.tr, i, m().leng, t, h > 0);
   }
-=======
 return, elemen, t.hasAttribu, t, e('ar, i, a-lab, e, l') || eleme, n, t.hasAttribu, t, e('ar, i, a-labelled, b, y');';
 }
   hasRo, l, e: (elem, e, n
@@ -436,7 +423,6 @@ consoleM, o, c
     Obje, c, t.defineProper, t, y(wind, o, w, 'localStora, g, e', {
       val, u, e: localStorageMo, c, k
       writab, l, e: tr, u, e;
-=======
     Obje, c, t.defineProper, t, y(wind, o, w, 'localStora, g, e', {';
       val, u, e: localStorageMo, c, k
       writab, l, e: tr, u, e
@@ -446,7 +432,6 @@ consoleM, o, c
     Obje, c, t.defineProper, t, y(wind, o, w, 'sessionStora, g, e', {
       val, u, e: new, LocalStorageMoc, k()
       writab, l, e: tr, u, e;
-=======
     Obje, c, t.defineProper, t, y(wind, o, w, 'sessionStora, g, e', {';
       val, u, e: new, LocalStorageMoc, k()
       writab, l, e: tr, u, e

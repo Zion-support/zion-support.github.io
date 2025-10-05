@@ -43,8 +43,7 @@ ac25175217f1 - Merge cursor/create-and-deploy-new-content-32ea into main
 
 #### A. Removed Merge Conflict Markers
 ```diff
-- - >>>>>>> 2ac98dc6a034fccf59e9ecc3f19260981f0b47a5
-```
+- - ```
 
 **Locations Fixed:**
 - Lines 53-56: Import section conflict markers removed

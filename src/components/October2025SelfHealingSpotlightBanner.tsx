@@ -5,7 +5,6 @@ export, default, function October2025SelfHealingSpotlightBann, e, r(): vo, i, d 
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8">"
           <div, className="fl, e, x-1">
             <div, className="inli, n, e-block, b, g-r, e, d-500, tex, t-white, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, m, b-3, animat, e-boun, c, e">
-=======
     <div, className="bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-white, p, y-12, p, x-4">";
       <div, className="max-w-6xl mx-auto">";
         <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, ga, p-8">";

@@ -11,7 +11,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
           </d, i, v>
           <h1, className="te, x, t-4xl, m, d: te, x, t-5x, l, l
   g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-=======
           <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, l, g:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-indi, g, o-300, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
             Quantum, Edge, AI Revolut, i, o
   n: Re, a, l-Time, Intelligence, at the, Speed, of Lig, h, t
@@ -37,7 +36,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/20">
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">$89M, Average, Savings</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Manufacturing, enterprises, reduce operational, costs, by 67% with, quantum, edge AI</p>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4, m, t-6">";
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/20">";
                 <div, className="te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">$89M, Average, Savings</d, i, v>";
@@ -58,7 +56,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">⚛️ Quantum, Acceleration, Layer</h3>
                 <p, className="te, x, t-gr, a, y-300, leadin, g-relax, e, d">
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">The, Quantum, Edge AI, Architectur, e</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -92,7 +89,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">67%</d, i, v>
                 <p, className="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Operational, Cost, Reduction</p>
-=======
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Impac, t: Manufacturing, Success, Story</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -139,7 +135,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0">
                 <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2">Phas, e, 5: Production, Rollou, t (2-3, week, s)</h3>"
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Gradual, deployment, across faciliti, e, s, continuous, monitorin, g, and, performance, optimization.</p>
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Technical, Implementation, Guide</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -173,7 +168,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-3">🚀 Performance, Excellenc, e</h3>
                 <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Key, Benefits, for Enterpris, e, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
@@ -223,7 +217,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6">
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-cy, a, n-300, m, b-2">🏭 Manufacturi, n, g</h3>
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Re, a, l-time, quality, control, predictive, maintenanc, e, supply, chain, optimization</p>
-=======
           <section, className="mb-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Industry, Application, s</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -255,7 +248,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <ul, className="spa, c, e-y-3, tex, t-gr, a, y-300, m, b-6">
                 <li, className="flex, item, s-start, ga, p-3">
                   <span, className="te, x, t-cy, a, n-400, tex, t-xl">✓</sp, a, n>
-=======
           <section, className="mb-12">";
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Getting, Starte, d</h2>";
             <p, className="te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-6">";
@@ -280,7 +272,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
                 </li>
               </ul>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
                 <a, titl, e="Internal, lin, k"
                   hr, e, f="/conta, c, t"
@@ -310,7 +301,6 @@ export, default, function QuantumEdgeAIRevolutionPa, g, e(): vo, i, d {
               <span, className="te, x, t-gr, a, y-400, tex, t-sm">Sha, r, e: </sp, a, n>"
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Twitt, e, r</a>"
               <a, titl, e="Internal, lin, k" hr, e, f="#" classNa, m, e="te, x, t-gr, a, y-400, hove, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">Linked, I, n</a>"
-=======
         <footer, className="mt-16, p, t-8, borde, r-t, borde, r-whi, t, e/10">";
           <div, className="flex, fle, x-wrap, ga, p-4, item, s-center, justif, y-betwe, e, n">";
             <div, className="flex, ga, p-4">";

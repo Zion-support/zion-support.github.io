@@ -2,7 +2,6 @@ import React from 'react';
 
 const EnhancedFooter: React.FC = () => {
   const current_year = new Date().getFullYear();
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
   
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },

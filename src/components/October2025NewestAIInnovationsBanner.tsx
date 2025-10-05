@@ -7,7 +7,6 @@ export, default, function October2025NewestAIInnovationsBann, e, r(): vo, i, d {
             🚀 JUST, PUBLISHE, D - OCTOBE, R, 2, 20, 2, 5 🚀
           </d, i, v>
           <h2, className="te, x, t-5xl, fon, t-bold, m, b-4">
-=======
           <h2, className="te, x, t-5xl, fon, t-bold, m, b-4">";
             Revolutionary, AI, Innovations: 3, Gam, e-Changing, Technologie, s
           </h2>
@@ -21,7 +20,6 @@ export, default, function October2025NewestAIInnovationsBann, e, r(): vo, i, d {
             <div, className="te, x, t-4xl, m, b-4">🔧</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Agentic, Sel, f-Healing, Infrastructur, e</h3>
             <ul, className="te, x, t-bl, u, e-100, spac, e-y-2, m, b-4">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, t-12">";
           {/* Se, l, f-Healing, Infrastructur, e */}
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">";
@@ -47,7 +45,6 @@ export, default, function October2025NewestAIInnovationsBann, e, r(): vo, i, d {
             <div, className="te, x, t-4xl, m, b-4">👁️</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Ne, x, t-Gen, AI, Observability</h3>
             <ul, className="te, x, t-bl, u, e-100, spac, e-y-2, m, b-4">
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">";
             <div, className="te, x, t-4xl, m, b-4">👁️</d, i, v>";
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Ne, x, t-Gen, AI, Observability</h3>";
@@ -71,7 +68,6 @@ export, default, function October2025NewestAIInnovationsBann, e, r(): vo, i, d {
             <div, className="te, x, t-4xl, m, b-4">🤖</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Autonomous, ML, Pipelines</h3>
             <ul, className="te, x, t-bl, u, e-100, spac, e-y-2, m, b-4">
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">";
             <div, className="te, x, t-4xl, m, b-4">🤖</d, i, v>";
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Autonomous, ML, Pipelines</h3>";
@@ -94,7 +90,6 @@ export, default, function October2025NewestAIInnovationsBann, e, r(): vo, i, d {
         <div, className="mt-12, tex, t-cent, e, r">
           <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-400, tex, t-black, p, x-8, p, y-4, rounde, d-xl, inlin, e-blo, c, k">
             <p, className="te, x, t-2xl, fon, t-bold, m, b-2">
-=======
         <div, className="mt-12, tex, t-cent, e, r">";
           <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-400, tex, t-black, p, x-8, p, y-4, rounde, d-xl, inlin, e-blo, c, k">";
             <p, className="te, x, t-2xl, fon, t-bold, m, b-2">";

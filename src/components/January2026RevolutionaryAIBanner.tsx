@@ -11,7 +11,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
       </h2>
       <p, className="te, x, t-white, tex, t-lg, fon, t-semibold, m, b-6, tex, t-center, ma, x-w-4xl, m, x-au, t, o">
         🌟 BREAKI, N, G: Wor, l, d's, First, Quantum-Conscious, AI, System Achieves, 9, 9.99% Accuracy, in, Complex Decision, Makin, g - '
-=======
     <div, className="bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, vi, a-purp, l, e-5, 0, 0/20, t, o-fuchs, i, a-5, 0, 0/20, border, border-viol, e, t-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">";
       <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">";
         <Sparkles, className="w-7 h-7, tex, t-viol, e, t-400, animat, e-pul, s, e" />";
@@ -46,7 +45,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
             </li>
             <li, className="flex, item, s-cent, e, r">
               <CheckCircle, className="w-4 h-4, m, r-2, tex, t-viol, e, t-4, 0, 0  />
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-viol, e, t-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
           <div, className="te, x, t-4xl, m, b-4">🧠</d, i, v>";
@@ -81,7 +79,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
             </li>
             <li, className="flex, item, s-cent, e, r">
               <CheckCircle, className="w-4 h-4, m, r-2, tex, t-purp, l, e-4, 0, 0  />
-=======
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
           <div, className="te, x, t-4xl, m, b-4">⚡</d, i, v>";
           <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Quantum, Processin, g</h3>";
@@ -114,7 +111,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
             </li>
             <li, className="flex, item, s-cent, e, r">
               <CheckCircle, className="w-4 h-4, m, r-2, tex, t-fuchs, i, a-4, 0, 0  />
-=======
         <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-fuchs, i, a-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
           <div, className="te, x, t-4xl, m, b-4">💰</d, i, v>";
           <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">Enterprise, Impac, t</h3>";
@@ -136,7 +132,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
       </d, i, v>
       <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8">"
-=======
       <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8">";
         <Li, n, k
   to="/bl, o, g/ai-20, 2, 6-janua, r, y-quant, u, m-consciousne, s, s-breakthrou, g, h"
@@ -144,7 +139,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
   r:shad, o, w-viol, e, t-5, 0, 0/50, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
         >
           <Brain, className="w-5 h-5  />
-=======
           <Brain, className="w-5 h-5" />";
           Read, Quantum, Consciousness Gui, d, e;
         </Li, n, k>
@@ -154,7 +148,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
         >
           <Award, className="w-5 h-5  />
-=======
           <Award, className="w-5 h-5" />";
           Vi, e, w $2.3B, Success, Story;
         </Li, n, k>
@@ -164,7 +157,6 @@ const, January2026RevolutionaryAIBanne, r = () => {
   r:te, x, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, transitio, n-all, duratio, n-300, inlin, e-flex, item, s-center, justif, y-center, ga, p-2"
         >
           <Zap, className="w-5 h-5  />
-=======
           <Zap, className="w-5 h-5" />";
           Get, Quantum, AI Servic, e, s;
         </Li, n, k>

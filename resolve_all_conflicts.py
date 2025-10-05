@@ -13,28 +13,22 @@ def resolve_merge_conflicts_comprehensive(file_path):
             content = f.read()
         
         # Check if file has merge conflict markers
-        if '.*?>>>>>>> [^\n]*'
-        
+        if '.*?        
         def resolve_conflict(match):
             conflict_text = match.group(0)
             
-            # Split by ======= to get both sides
-            parts = conflict_text.split('=======')
-            if len(parts) != 2:
+            # Split by             parts = conflict_text.split('            if len(parts) != 2:
                 return conflict_text  # Return original if malformed
             
-            # Get the incoming changes (after =======)
-            incoming_part = parts[1]
+            # Get the incoming changes (after             incoming_part = parts[1]
             
-            # Remove the >>>>>>> line
-            lines = incoming_part.split('\n')
+            # Remove the             lines = incoming_part.split('\n')
             result_lines = []
             for line in lines:
                 if not line.strip().startswith('>>>>>>>'):
                     result_lines.append(line)
                 else:
-                    break  # Stop at the >>>>>>> line
-            
+                    break  # Stop at the             
             return '\n'.join(result_lines).strip()
         
         # Replace all conflict blocks
@@ -67,8 +61,7 @@ def main():
                 try:
                     with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
                         content = f.read()
-                        if '<<<<<<< HEAD' in content:
-                            conflict_files.append(file_path)
+                        if '                            conflict_files.append(file_path)
                 except:
                     continue
     

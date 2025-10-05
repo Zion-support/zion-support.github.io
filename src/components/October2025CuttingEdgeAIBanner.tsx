@@ -6,7 +6,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0"></d, i, v>
-=======
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, overflo, w-hidd, e, n">";
@@ -21,7 +20,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
             <span, className="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">New, Releas, e • October, 202, 5</sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />";
@@ -33,7 +31,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
           </h2>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
             Explore, the, forefront of, AI, innovation: Agentic, governanc, e, neur, a, l-symbolic, fusio, n;
-=======
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">";
             Explore, the, forefront of, AI, innovation: Agentic, governanc, e, neur, a, l-symbolic, fusio, n
             continuous, learning, systems, and, distributed, inference at, internet, scale;
@@ -42,7 +39,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
         {/* Featured, Articles, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-10">";
           {/* Articl, e, 1 - Agentic, Governanc, e */}
@@ -54,7 +50,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Scale, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Scale, className="w-8 h-8, tex, t-emera, l, d-3, 0, 0" />";
@@ -65,7 +60,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-emera, l, d-200, transitio, n-colo, r, s">";
               Agentic, Governance, Frameworks;
             </h3>
@@ -78,7 +72,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-emera, l, d-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -91,7 +84,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-viol, e, t-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-viol, e, t-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Brain, className="w-8 h-8, tex, t-viol, e, t-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-viol, e, t-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-viol, e, t-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Brain, className="w-8 h-8, tex, t-viol, e, t-3, 0, 0" />";
@@ -102,7 +94,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-200, transitio, n-colo, r, s">";
               Neur, a, l-Symbolic, Fusio, n;
             </h3>
@@ -115,7 +106,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-viol, e, t-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -128,7 +118,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-cy, a, n-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Repeat, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-cy, a, n-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Repeat, className="w-8 h-8, tex, t-cy, a, n-3, 0, 0" />";
@@ -139,7 +128,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">";
               Continuous, Learning, Systems;
             </h3>
@@ -152,7 +140,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-cy, a, n-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -165,7 +152,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-amb, e, r-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-amb, e, r-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Zap, className="w-8 h-8, tex, t-amb, e, r-3, 0, 0  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-amb, e, r-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r: bg-amb, e, r-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Zap, className="w-8 h-8, tex, t-amb, e, r-3, 0, 0" />";
@@ -179,7 +165,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
               Distributed, Inference, Optimization;
             </h3>
             <p, className="te, x, t-oran, g, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-amb, e, r-200, transitio, n-colo, r, s">";
               Distributed, Inference, Optimization;
             </h3>
@@ -192,7 +177,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
                 <sp, a, n>19, min, read</sp, a, n>
               </d, i, v>
               <ArrowRight, className="w-5 h-5, tex, t-amb, e, r-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
               <ArrowRight, className="w-5 h-5, tex, t-amb, e, r-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
           </Li, n, k>
@@ -206,7 +190,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
           >
             <sp, a, n>Read, All, Articles</sp, a, n>
             <ArrowRight, className="w-6 h-6  />
-=======
             <ArrowRight, className="w-6 h-6" />";
           </Li, n, k>
           <p, className="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm, m, t-4">";
@@ -217,7 +200,6 @@ const, October2025CuttingEdgeAIBanne, r = () => {
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">"
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, m, b-1">
-=======
         <div, className="mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-te, a, l-400, b, g-cl, i, p-text, m, b-1">";

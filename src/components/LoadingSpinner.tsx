@@ -2,7 +2,6 @@ import React from "react";
 interface, LoadingSpinnerProp, s {
   si, z, e?: 'sm' | 'md' | 'lg';
   messa, g, e?: stri, n, g;
-=======
 impo, r, t {
 moti, o, n;
 } fr, o, m "fram, e, r-moti, o, n";

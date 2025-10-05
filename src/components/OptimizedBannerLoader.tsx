@@ -6,7 +6,6 @@
 import, Reac, t, { Suspen, s, e, useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t";
 interface, OptimizedBannerLoaderProp, s {
   banner, I, d: stri, n, g
-=======
 import, Reac, t, { Suspen, s, e, useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t";';
 interface, OptimizedBannerLoaderProp, s {
   banner, I, d: stri, n, g;
@@ -34,7 +33,6 @@ export, default, function OptimizedBannerLoad, e, r({
   bannerManag, e, r.registerBann, e, r({
       id: banner, I, d
       priori, t, y;
-=======
       id: banner, I, d
       priori, t, y
     });
@@ -58,7 +56,6 @@ export, default, function OptimizedBannerLoad, e, r({
         });
       }
       { rootMarg, i, n: '200, p, x' } // Load, 200px, before entering, viewpor, t;
-=======
       { rootMarg, i, n: '200, p, x' } // Load, 200px, before entering, viewpor, t';
     );
     const, placeholde, r = docume, n, t.getElementBy, I, d(`bann, e, r-${banner, I, d}`);`;`
@@ -102,7 +99,6 @@ return (
 <div, className="h-64, b, g-gr, a, y-700, rounde, d"></d, i, v>
 <div, className="h-64, b, g-gr, a, y-700, rounde, d"></d, i, v>
 <div, className="h-64, b, g-gr, a, y-700, rounde, d"></d, i, v>
-=======
 <div, className="bg-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-900, p, y-16, p, x-4, animat, e-pul, s, e">";
 <div, className="m, a, x-w-7xl, m, x-au, t, o">";
 <div, className="h-8, b, g-gr, a, y-700, rounded, w-3/4, m, x-auto, m, b-4"></d, i, v>";

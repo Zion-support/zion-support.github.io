@@ -23,7 +23,6 @@ issu, e, s: SEOIss, u, e[]
 metri, c, s: {
 pageTit, l, e: stri, n, g
 metaDescripti, o, n: stri, n, g
-=======
 overallSco, r, e: numb, e, r;
 totalIssu, e, s: numb, e, r;
 erro, r, s: numb, e, r;
@@ -42,7 +41,6 @@ headin, g, s: { h1: numb, e, r; h2: numb, e, r; h3: numb, e, r; h4: numb, e, r; 
   l: numb, e, r };
     wordCou, n, t: numb, e, r
     readabilitySco, r, e: numb, e, r
-=======
     wordCou, n, t: numb, e, r;
     readabilitySc, o, r
   e: numb, e, r;
@@ -155,7 +153,6 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {
       f, i, x: 'Fix, or, remove broken, links, to improve, user, experience'
       sco, r, e: 40;
     }
-=======
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e<stri, n, g>('a, l, l');';
   con, s, t [selectedImpa, c, t, setSelectedImpa, c, t] = useSta, t, e<stri, n, g>('a, l, l');';
   const, commonSEOIssue, s: SEOIss, u, e[] = [
@@ -280,7 +277,6 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {
         sco, r, e = 40;
       } else, i, f (iss, u, e.id === 's, s, l-certifica, t, e' && Ma, t, h.rand, o, m() > 0.1) {;
         ty, p, e = 'in, f, o';
-=======
       if (iss, u, e.id === 'ima, g, e-a, l, t-te, x, t' && Ma, t, h.rand, o, m() > 0.3) {';
         ty, p, e = 'warni, n, g';';
         sco, r, e = 60;
@@ -318,7 +314,6 @@ const, SEOAuditDashboar, d: Rea, c, t.FC = () => {
         readabilitySco, r, e: 72;
       }
       lastUpdat, e, d: Da, t, e.n, o, w()
-=======
         pageTi, t, l
   e: 'Zion, Tech, Group - Leading, A, I & Technology, Solution, s',';
         metaDescripti, o, n: 'Cutti, n, g-edge, A, I, clo, u, d, and, digital, transformation solutions, for, modern enterpris, e, s. Expert, IT, consulting and, innovative, technology implementatio, n, s.',';
@@ -344,7 +339,6 @@ retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" />;
 defau, l, t:
 retu, r, n <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;
 }
-=======
 ca, s, e 'err, o, r':';
 retu, r, n <XCircle, className="w-5 h-5, tex, t-r, e, d-6, 0, 0" />;";
 ca, s, e 'warni, n, g':';
@@ -360,7 +354,6 @@ retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';
 ca, s, e 'medi, u, m':
 retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 0';
 defau, l, t: retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';
-=======
 ca, s, e 'hi, g, h':';
 retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';';
 ca, s, e 'medi, u, m':';
@@ -386,7 +379,6 @@ retu, r, n <Globe, className="w-4 h-4" />;
     if (sco, r, e >= 80) retu, r, n 'te, x, t-gre, e, n-600, b, g-gre, e, n-1, 0, 0';
     if (sco, r, e >= 60) retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
     retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';
-=======
 ca, s, e 'conte, n, t':';
 retu, r, n <Search, className="w-4 h-4" />;";
 ca, s, e 'mobi, l, e':';
@@ -409,7 +401,6 @@ retu, r, n <Globe, className="w-4 h-4" />;";
   }) || [];
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))];
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];
-=======
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(commonSEOIssu, e, s.m, a, p(i => i.catego, r, y)))];';
   const, impact, s = ['a, l, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];';
   useEffe, c, t(() => {
@@ -421,7 +412,6 @@ retu, r, n <Globe, className="w-4 h-4" />;";
         <d, i, v>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">
             <Search, className="w-6 h-6  />
-=======
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";
             <Search, className="w-6 h-6" />";
             SEO, Audit, Dashboard;
@@ -435,7 +425,6 @@ retu, r, n <Globe, className="w-4 h-4" />;";
             isRunni, n, g;
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0}`}`;`
-=======
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'
           }`}`;`
         >
@@ -448,7 +437,6 @@ Analyzi, n, g...
 ) : (
 <>
 <Search, className="w-4 h-4  />
-=======
 <Search, className="w-4 h-4" />";
 Run, SEO, Audit;
 < />
@@ -462,7 +450,6 @@ Run, SEO, Audit;
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">
               <div, className="flex, justif, y-between, item, s-cent, e, r">
-=======
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";
               <div, className="flex, justif, y-between, item, s-cent, e, r">";
@@ -471,7 +458,6 @@ Run, SEO, Audit;
                   <p, className="te, x, t-3xl, fon, t-bo, l, d">{repo, r, t.overallSco, r, e}%</p>";
                 </d, i, v>
                 <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  />
-=======
                 <Search, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -482,7 +468,6 @@ Run, SEO, Audit;
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-7, 0, 0">{repo, r, t.erro, r, s}</p>";
                 </d, i, v>
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0  />
-=======
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -493,7 +478,6 @@ Run, SEO, Audit;
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-7, 0, 0">{repo, r, t.warnin, g, s}</p>";
                 </d, i, v>
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0  />
-=======
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -504,7 +488,6 @@ Run, SEO, Audit;
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0">{repo, r, t.totalIssu, e, s}</p>";
                 </d, i, v>
                 <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  />
-=======
                 <Eye, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -521,7 +504,6 @@ Run, SEO, Audit;
                     <span, className="fo, n, t-medi, u, m">{repo, r, t.metri, c, s.wordCou, n, t.toLocaleStri, n, g()}</sp, a, n>
                   </d, i, v>
                   <div, className="flex, justif, y-betwe, e, n">
-=======
           <div, className="bg-gr, a, y-50, rounde, d-l, g, p-4, m, b-6">";
             <h3, className="te, x, t-lg, fon, t-semibold, tex, t-gr, a, y-900, m, b-4">Page, Metric, s</h3>";
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">";
@@ -551,7 +533,6 @@ Run, SEO, Audit;
                   <div, className="flex, justif, y-betwe, e, n">
                     <sp, a, n>Total, Heading, s: </sp, a, n>
                     <span, className="fo, n, t-medi, u, m">
-=======
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Structu, r, e</h4>";
                 <div, className="spa, c, e-y-1, tex, t-sm">";
                   <div, className="flex, justif, y-betwe, e, n">";
@@ -576,7 +557,6 @@ Run, SEO, Audit;
                   <div, className="flex, justif, y-betwe, e, n">
                     <sp, a, n>Missing, Alt, Text: </sp, a, n>
                     <span, className="fo, n, t-medium, tex, t-r, e, d-6, 0, 0">{repo, r, t.metri, c, s.imag, e, s.withoutA, l, t}</sp, a, n>
-=======
                 <h4, className="fo, n, t-medium, tex, t-gr, a, y-700, m, b-2">Med, i, a & Lin, k, s</h4>";
                 <div, className="spa, c, e-y-1, tex, t-sm">";
                   <div, className="flex, justif, y-betwe, e, n">";
@@ -640,7 +620,6 @@ Run, SEO, Audit;
                       <div, className="fl, e, x-1">
                         <div, className="flex, item, s-center, ga, p-2, m, b-1">
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}</h4>
-=======
                       <div, className="fl, e, x-1">";
                         <div, className="flex, item, s-center, ga, p-2, m, b-1">";
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{iss, u, e.tit, l, e}</h4>";
@@ -659,7 +638,6 @@ Run, SEO, Audit;
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">
                           <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>"
                           <p, className="te, x, t-gre, e, n-700, tex, t-sm">{iss, u, e.f, i, x}</p>
-=======
                         <p, className="te, x, t-gr, a, y-600, tex, t-sm, m, b-2">{iss, u, e.descripti, o, n}</p>";
                         <div, className="bg-gre, e, n-50, border, border-gre, e, n-200, rounde, d-l, g, p-3">";
                           <p, className="te, x, t-gre, e, n-800, tex, t-sm, fon, t-medi, u, m">How, to, Fix: </p>";

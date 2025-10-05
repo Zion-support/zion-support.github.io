@@ -17,7 +17,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Blog;
           </Li, n, k>
@@ -32,7 +31,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
               <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Octobe, r, 1, 20, 2, 5 • 25, min, read</sp, a, n>";
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               Enterprise, AI, Transformation Success, Strategie, s;
               <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l">";
@@ -46,7 +44,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
             <div, className="flex, item, s-center, ga, p-4, m, b-12">
               <div, className="w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r">
                 <Users, className="w-6 h-6, tex, t-whi, t, e  />
-=======
             <div, className="flex, item, s-center, ga, p-4, m, b-12">";
               <div, className="w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r">";
                 <Users, className="w-6 h-6, tex, t-whi, t, e" />";
@@ -63,7 +60,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                 { val, u, e: "1, 0, x", lab, e, l: "Average, RO, I" }
                 { val, u, e: "40%", lab, e, l: "Cost, Reductio, n" }
                 { val, u, e: "73%", lab, e, l: "Initiatives, That, Fail" }
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12">";
               {[
                 { va, l, u
@@ -91,7 +87,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                     In, 202, 5, companies, that, successfully implement, AI, are achievi, n, g <strong, className="te, x, t-gre, e, n-4, 0, 0">10x, RO, I</stro, n, g>
                     <strong, className="te, x, t-gre, e, n-4, 0, 0"> 40% cost, reduction, s</stro, n, g>, a, n, d <strong, className="te, x, t-gre, e, n-4, 0, 0">transformative, business, growth</stro, n, g>. 
                     Howev, e, r, <strong, className="te, x, t-r, e, d-4, 0, 0">73% of, AI, initiatives still, fai, l</stro, n, g> to, deliver, expected val, u, e.
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
                   Executive, Summar, y;
@@ -111,7 +106,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
               <secti, o, n>
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">
                   <Target, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <Target, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
                   The, 7, Pillars of, AI, Success;
@@ -160,7 +154,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                         <div, className="fl, e, x-1">
                           <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">{pill, a, r.pill, a, r}</h3>
                           <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">{pill, a, r.descripti, o, n}</p>
-=======
                       pill, a, r: "1. Strategic, Visio, n & Executive, Alignmen, t",";
                       descripti, o, n: "Start, with, clear vision, and, top-down, commitmen, t. Define, compelling, AI visi, o, n, secure, executive, sponsorship, and, build, comprehensive business, cas, e.",";
                       ic, o, n: "🎯"
@@ -223,7 +216,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                         "Core, team, hired"
                         "Infrastructure, deploye, d"
                         "Data, platform, operational"
-=======
                       pha, s, e: "Pha, s, e 
   1: Foundati, o, n",";
                       durati, o, n: "Month, s, 1-6",";
@@ -247,7 +239,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                         "10+ models, in, production"
                         "All, business, units engag, e, d"
                         "MLOps, fully, operational"
-=======
                       pha, s, e: "Pha, s, e 
   2: Scali, n, g",";
                       durati, o, n: "Month, s, 7-18",";
@@ -269,7 +260,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                       mileston, e, s: [
                         "50+ models, in, production"
                         "AI-first, operating, model"
-=======
                       pha, s, e: "Pha, s, e 
   3: Transformati, o, n",";
                       durati, o, n: "Months, 1, 9-36",";
@@ -304,7 +294,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                           {pha, s, e.mileston, e, s.m, a, p((milesto, n, e, mInd, e, x) => (
                             <li, ke, y={mInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                               <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                       <div, className="mb-4">";
                         <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Investme, n, t: </sp, a, n>";
                         <span, className="te, x, t-white, fon, t-semibo, l, d">{pha, s, e.investme, n, t}</sp, a, n>";
@@ -337,7 +326,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                       highligh, t, s: [
                         "40% reduction, in, inventory cos, t, s"
                         "28% increase, in, customer lifetime, valu, e"
-=======
                       compa, n, y: "Global, Retail, Chain",";
                       indust, r, y: "Fortune, 100, Retailer",";
                       investme, n, t: "$4, 5, M",";
@@ -358,7 +346,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                       highligh, t, s: [
                         "23% reduction, in, readmissions"
                         "19% improvement, in, patient outcom, e, s"
-=======
                       compa, n, y: "Healthcare, Provide, r",";
                       indust, r, y: "Mul, t, i-hospital, syste, m",";
                       investme, n, t: "$2, 8, M",";
@@ -379,7 +366,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                       highligh, t, s: [
                         "47% reduction, in, unplanned downti, m, e"
                         "34% improvement, in, first-pass, qualit, y"
-=======
                       compa, n, y: "Manufacturing, Enterpris, e",";
                       indust, r, y: "Global, manufacture, r",";
                       investme, n, t: "$3, 8, M",";
@@ -399,7 +385,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                         <div, className="bg-whi, t, e/10, rounde, d-l, g, p-3">
                           <div, className="te, x, t-lg, fon, t-bold, tex, t-cy, a, n-4, 0, 0">{sto, r, y.investme, n, t}</d, i, v>
                           <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Investme, n, t</d, i, v>
-=======
                     <div, ke, y={ind, e, x} classNa, m, e="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30">";
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2">{sto, r, y.compa, n, y}</h3>";
                       <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-4">{sto, r, y.indust, r, y}</p>";
@@ -421,7 +406,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                         {sto, r, y.highligh, t, s.m, a, p((highlig, h, t, hInd, e, x) => (
                           <li, ke, y={hInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                             <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                           <li, ke, y={hInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                             <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
                             <sp, a, n>{highlig, h, t}</sp, a, n>
@@ -442,7 +426,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                   The, question, is not, whether, to transfo, r, m, b, u, t <strong, className="te, x, t-whi, t, e">how, fas, t</stro, n, g> you, can, execute.";
                 </p>
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4">"
-=======
               <section, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50">";
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <Rocket, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
@@ -460,7 +443,6 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                   >
                     Schedule, AI, Assessment;
                     <Rocket, className="w-5 h-5  />
-=======
                     <Rocket, className="w-5 h-5" />";
                   </Li, n, k>
                   <Li, n, k

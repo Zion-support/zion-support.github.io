@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 interface, AnimatedSectionProp, s {
 animati, o, n?: 'fade, I, n' | 'slide, U, p' | 'slideLe, f, t' | 'slideRig, h, t' | 'sca, l, e';
@@ -9,7 +8,6 @@ childr, e, n: Rea, c, t.ReactNo, d, e;
 const, AnimatedSectio, n: Rea, c, t.FC<AnimatedSectionPro, p, s> = ({ animati, o, n = 'fade, I, n', del, a, y = 0, childr, e, n }) => {
 const, styl, e: Rea, c, t.CSSProperti, e, s = {
 animationDel, a, y: `${del, a, y`
-=======
 const, AnimatedSecti, o
   n: Rea, c, t.FC<AnimatedSectionPro, p, s> = ({ animati, o, n = 'fade, I, n', del, a, y = 0, childr, e, n }) => {';
 const, styl, e: Rea, c, t.CSSProperti, e, s = {

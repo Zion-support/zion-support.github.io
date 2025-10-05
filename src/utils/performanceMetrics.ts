@@ -29,7 +29,6 @@ metr, i, c: stri, n, g;
 budg, e, t: numb, e, r;
 curre, n, t: numb, e, r;
 stat, u, s: 'pa, s, s' | 'wa, r, n' | 'fa, i, l';
-=======
 metr, i, c: stri, n, g;
 budg, e, t: numb, e, r;
 curre, n, t: numb, e, r;
@@ -47,7 +46,6 @@ tt, f, b?: PerformanceMetr, i, c;
   customMetri, c, s: PerformanceMetr, i, c[]
   resourceTimin, g, s: ResourceTimi, n, g[]
   budge, t, s: PerformanceBudg, e, t[]
-=======
   customMetri, c, s: PerformanceMetr, i, c[];
   resourceTimin, g, s: ResourceTimi, n, g[];
   budge, t, s: PerformanceBudg, e, t[];
@@ -59,7 +57,6 @@ class, PerformanceMetricsTracke, r {
   private, customMarker, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p()
   private, budget, s: PerformanceBudg, e, t[] = []
   private, observer, s: PerformanceObserv, e, r[] = []
-=======
   private, metric, s: M, a, p<stri, n, g, PerformanceMetr, i, c> = new, Ma, p();
   private, customMarker, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p();
   private, budget, s: PerformanceBudg, e, t[] = [];
@@ -79,7 +76,6 @@ class, PerformanceMetricsTracke, r {
         const, resourceObserve, r = new, PerformanceObserve, r((li, s, t) => {
           f, o, r (const, entry, of li, s, t.getEntri, e, s()) {
             if (ent, r, y.entryTy, p, e === 'resour, c, e') {;
-=======
     if ('PerformanceObserv, e, r' in, windo, w) {';
       t, r, y {
         const, resourceObserve, r = new, PerformanceObserve, r((li, s, t) => {
@@ -93,7 +89,6 @@ class, PerformanceMetricsTracke, r {
         th, i, s.observe, r, s.pu, s, h(resourceObserv, e, r);
       } cat, c, h (e) {
         conso, l, e.wa, r, n('Failed, to, setup resource, observe, r: ', e);'
-=======
         conso, l, e.wa, r, n('Failed, to, setup resource, observe, r: ', e);';
       }
     }
@@ -118,7 +113,6 @@ class, PerformanceMetricsTracke, r {
    */
   private, observeLC, P(): vo, i, d {
     if ('PerformanceObserv, e, r' in, windo, w) {;
-=======
     if ('PerformanceObserv, e, r' in, windo, w) {';
       t, r, y {
         const, observe, r = new, PerformanceObserve, r((li, s, t) => {
@@ -132,7 +126,6 @@ class, PerformanceMetricsTracke, r {
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
         conso, l, e.wa, r, n('Failed, to, observe L, C, P: ', e);'
-=======
         conso, l, e.wa, r, n('Failed, to, observe L, C, P: ', e);';
       }
     }
@@ -142,7 +135,6 @@ class, PerformanceMetricsTracke, r {
    */
   private, observeFI, D(): vo, i, d {
     if ('PerformanceObserv, e, r' in, windo, w) {;
-=======
     if ('PerformanceObserv, e, r' in, windo, w) {';
       t, r, y {
         const, observe, r = new, PerformanceObserve, r((li, s, t) => {
@@ -155,7 +147,6 @@ class, PerformanceMetricsTracke, r {
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
         conso, l, e.wa, r, n('Failed, to, observe F, I, D: ', e);'
-=======
         conso, l, e.wa, r, n('Failed, to, observe F, I, D: ', e);';
       }
     }
@@ -165,7 +156,6 @@ class, PerformanceMetricsTracke, r {
    */
   private, observeCL, S(): vo, i, d {
     if ('PerformanceObserv, e, r' in, windo, w) {;
-=======
     if ('PerformanceObserv, e, r' in, windo, w) {';
       t, r, y {
         let, clsValu, e = 0;
@@ -181,7 +171,6 @@ class, PerformanceMetricsTracke, r {
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
         conso, l, e.wa, r, n('Failed, to, observe C, L, S: ', e);'
-=======
         conso, l, e.wa, r, n('Failed, to, observe C, L, S: ', e);';
       }
     }
@@ -191,7 +180,6 @@ class, PerformanceMetricsTracke, r {
    */
   private, observeFC, P(): vo, i, d {
     if ('PerformanceObserv, e, r' in, windo, w) {;
-=======
     if ('PerformanceObserv, e, r' in, windo, w) {';
       t, r, y {
         const, observe, r = new, PerformanceObserve, r((li, s, t) => {
@@ -205,7 +193,6 @@ class, PerformanceMetricsTracke, r {
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
         conso, l, e.wa, r, n('Failed, to, observe F, C, P: ', e);'
-=======
         conso, l, e.wa, r, n('Failed, to, observe F, C, P: ', e);';
       }
     }
@@ -226,7 +213,6 @@ class, PerformanceMetricsTracke, r {
     na, m, e: stri, n, g
     val, u, e: numb, e, r
     rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r): vo, i, d {
-=======
     rat, i, n
   g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'
   ): vo, i, d {
@@ -235,7 +221,6 @@ class, PerformanceMetricsTracke, r {
       val, u, e: Ma, t, h.rou, n, d(val, u, e)
       rati, n, g
       timesta, m, p: Da, t, e.n, o, w()
-=======
       timest, a, m
   p: Da, t, e.n, o, w()
     };
@@ -244,7 +229,6 @@ class, PerformanceMetricsTracke, r {
   th, i, s.checkBudge, t, s();
     // Log, in, development
   if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
-=======
     if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
       conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${metr, i, c.val, u, e}ms (${rati, n, g})`);`;`
     }
@@ -293,7 +277,6 @@ class, PerformanceMetricsTracke, r {
     if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';
     if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) retu, r, n 'fo, n, t';
     retu, r, n 'oth, e, r';
-=======
     if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) retu, r, n 'scri, p, t';';
     if (u, r, l.mat, c, h(/\.c, s, s$/)) retu, r, n 'styleshe, e, t';';
     if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';';
@@ -313,7 +296,6 @@ class, PerformanceMetricsTracke, r {
         budg, e, t
         curre, n, t: 0
         stat, u, s: 'pa, s, s'
-=======
         curr, e, n
   t: 0
         stat, u, s: 'pa, s, s',';
@@ -357,7 +339,6 @@ class, PerformanceMetricsTracke, r {
       resourceTimin, g, s: th, i, s.getResourceTimin, g, s()
       budge, t, s: [...th, i, s.budge, t, s]
       timesta, m, p: new, Dat, e()
-=======
         lc
   p: th, i, s.metri, c, s.g, e, t('L, C, P'),';
         f, i, d: th, i, s.metri, c, s.g, e, t('F, I, D'),';
@@ -383,7 +364,6 @@ class, PerformanceMetricsTracke, r {
       durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durati, o, n)
       si, z, e: resour, c, e.transferSi, z, e || 0
       ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.na, m, e)
-=======
       n, a, m
   e: resour, c, e.na, m, e
       durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durati, o, n)
@@ -398,7 +378,6 @@ class, PerformanceMetricsTracke, r {
     if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';
     if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
   private, getRatingForLC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';';
     if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -411,7 +390,6 @@ class, PerformanceMetricsTracke, r {
     if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';
     if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
   private, getRatingForFI, D(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';';
     if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -424,7 +402,6 @@ class, PerformanceMetricsTracke, r {
     if (val, u, e <= 0.1) retu, r, n 'go, o, d';
     if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
   private, getRatingForCL, S(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     if (val, u, e <= 0.1) retu, r, n 'go, o, d';';
     if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -437,7 +414,6 @@ class, PerformanceMetricsTracke, r {
     if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';
     if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
   private, getRatingForFC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';';
     if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -450,7 +426,6 @@ class, PerformanceMetricsTracke, r {
     if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';
     if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
   private, getRatingForTTF, B(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';';
     if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -463,7 +438,6 @@ class, PerformanceMetricsTracke, r {
     if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';
     if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
   private, getRatingForCustomMetri, c(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';';
     if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
@@ -485,7 +459,6 @@ performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);
 performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);
 performanceMetri, c, s.setBudg, e, t('F, C, P', 18, 0, 0);
 performanceMetri, c, s.setBudg, e, t('TT, F, B', 8, 0, 0);
-=======
 performanceMetri, c, s.setBudg, e, t('L, C, P', 25, 0, 0);';
 performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);';
 performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);';

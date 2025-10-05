@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
   const, latestArticle, s = newArticles20, 2, 5.filt, e, r(a => a.featur, e, d).sli, c, e(0, 6);
@@ -16,7 +15,6 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
         </d, i, v>
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
           {latestArticl, e, s.m, a, p((artic, l, e) => (
@@ -38,7 +36,6 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                   )}
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s">"
-=======
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3, grou, p-hov, e, r: te, x, t-indi, g, o-600, transitio, n-colo, r, s">";
                   {artic, l, e.tit, l, e}
                 </h3>
@@ -53,7 +50,6 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
                   <div, className="te, x, t-indi, g, o-600, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, flex, items-center, transitio, n-a, l, l">"
                     Read, Mor, e;
                     <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
                 <div, className="flex, item, s-center, justif, y-between, tex, t-sm">";
                   <div, className="flex, item, s-center, tex, t-gr, a, y-5, 0, 0">";
                     <Clock, className="w-4 h-4, m, r-1" />";
@@ -87,7 +83,6 @@ const, LatestArticlesShowcas, e: Rea, c, t.FC = () => {
           >
             View, All, Articles;
             <ArrowRight, className="w-6 h-6  />
-=======
             <ArrowRight, className="w-6 h-6" />";
           </Li, n, k>
         </d, i, v>

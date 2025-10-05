@@ -45,7 +45,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       tit, l, e: "🔧 AI, Autonomous, Operations","
       descripti, o, n: "Se, l, f-healing, systems, with automated, incident, response","
       li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-04-ai-autonomo, u, s-operatio, n, s","
-=======
 import React from "react";';
 impo, r, t {
 Li, n, k;
@@ -105,7 +104,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  />
           <h2, className="te, x, t-4xl, fon, t-bo, l, d">OCTOBER, 2025, MEGA LAUN, C, H</h2>
           <Sparkles, className="w-8 h-8, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-=======
     <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, tex, t-white, rounde, d-2x, l, p-8">";
       <div, className="te, x, t-center, m, b-8">";
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
@@ -122,7 +120,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
       </d, i, v>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         {megaArticl, e, s.m, a, p((artic, l, e, ind, e, x) => (
@@ -146,7 +143,6 @@ const, October2025MegaLaunchBanne, r: Rea, c, t.FC = () => {
         >
           Read, All, 7 Articl, e, s;
           <ArrowRight, className="w-5 h-5  />
-=======
           <ArrowRight, className="w-5 h-5" />";
         </Li, n, k>
       </d, i, v>

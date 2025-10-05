@@ -17,7 +17,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Blog;
           </Li, n, k>
@@ -32,7 +31,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
               <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Octobe, r, 1, 20, 2, 5 • 20, min, read</sp, a, n>";
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               Ne, x, t-Gen, Intelligent, Automation Breakthrou, g, h;
               <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l">";
@@ -46,7 +44,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
             <div, className="flex, item, s-center, ga, p-4, m, b-12">
               <div, className="w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r">
                 <Brain, className="w-6 h-6, tex, t-whi, t, e  />
-=======
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8">";
               Organizations, deploying, next-generation, automation, are achieving, 9, 4% accura, c, y, 85% cost, reduction, s
               and, 10x, productivity gains, through, AI-powered, workflows, that lea, r, n, ada, p, t, and, optimize, autonomously.
@@ -67,7 +64,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                 { val, u, e: "85%", lab, e, l: "Cost, Reductio, n" }
                 { val, u, e: "94%", lab, e, l: "Accuracy, Rat, e" }
                 { val, u, e: "1, 0, x", lab, e, l: "Productivity, Gai, n" }
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12">";
               {[
                 { va, l, u
@@ -91,7 +87,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                 </h2>
                 <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30">
                   <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">"
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <Zap, className="w-8 h-8, tex, t-yell, o, w-4, 0, 0" />";
                   The, Evolution, of Automati, o, n;
@@ -129,7 +124,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                         </li>
                         <li, className="flex, item, s-start, ga, p-2">
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                       <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">Intelligent, Automatio, n (20, 2, 5)</h3>";
                       <ul, className="spa, c, e-y-2">";
                         <li, className="flex, item, s-start, ga, p-2">";
@@ -160,7 +154,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
               <secti, o, n>
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">
                   <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <Brain, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
                   Ne, x, t-Gen, Automation, Capabilities;
@@ -200,7 +193,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                         <div, className="fl, e, x-1">
                           <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">{capabili, t, y.tit, l, e}</h3>
                           <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">{capabili, t, y.descripti, o, n}</p>
-=======
                       tit, l, e: "Cognitive, Process, Automation",";
                       descripti, o, n: "AI, systems, that understa, n, d, lea, r, n, and, make, decisions like, human, s. 99.8% accuracy, in, document processing, across, any form, a, t.",";
                       ic, o, n: "🧠"
@@ -241,7 +233,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
               <secti, o, n>
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">
                   <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0  />
-=======
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <TrendingUp, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
                   Industry, Application, s & Resul, t, s;
@@ -275,7 +266,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                       automati, o, n: "89%","
                       resul, t, s: ["Order, Processi, n
   g: 99.8% automati, o, n", "Fulfillme, n, t: 80% fast, e, r", "Reven, u, e: 28% increa, s, e"]"
-=======
                       indust, r, y: "Financial, Service, s",";
                       savin, g, s: "$12.4M",";
                       automati, o, n: "95%",";
@@ -320,7 +310,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                         {a, p, p.resul, t, s.m, a, p((resu, l, t, rInd, e, x) => (
                           <li, ke, y={rInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                             <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                           <li, ke, y={rInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                             <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
                             <sp, a, n>{resu, l, t}</sp, a, n>
@@ -341,7 +330,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                   The, question, is no, longe, r "Should, we, automate?" b, u, t <strong, className="te, x, t-whi, t, e">"How, fast, can we, transfor, m?"</stro, n, g>
                 </p>
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-4">"
-=======
               <section, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, vi, a-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/50">";
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                   <Rocket, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
@@ -359,7 +347,6 @@ const, NextGenIntelligentAutomationBreakthroug, h = () => {
                   >
                     Book, Free, Assessment;
                     <Rocket, className="w-5 h-5  />
-=======
                     <Rocket, className="w-5 h-5" />";
                   </Li, n, k>
                   <Li, n, k

@@ -18,7 +18,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               🔥 BREAKI, N, G: OCTOBER, 202, 5 — 5, REVOLUTIONARY, AI BREAKTHROUGHS, JUST, RELEASED! 🔥
             </sp, a, n>
             <Sparkles, className="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-=======
     <div, className="relative, b, g-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, overflo, w-hidden, borde, r-b, borde, r-whi, t, e/10">";
       {/* Animated, Backgroun, d */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
@@ -43,7 +42,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
         {/* Main, Headlin, e */}
         <h2, className="te, x, t-3xl, s, m: te, x, t-4x, l, l
   g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">"
-=======
         <h2, className="te, x, t-3xl, s, m: te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-center, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t">";
           Ultimate, AI, Innovation Su, i, t
   e: <br />
@@ -51,7 +49,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
         </h2>
         {/* Subtit, l, e */}
         <p, className="te, x, t-center, tex, t-lg, s, m: te, x, t-xl, tex, t-bl, u, e-100, m, b-10, ma, x-w-4xl, m, x-au, t, o">"
-=======
         <p, className="te, x, t-center, tex, t-lg, s, m: te, x, t-xl, tex, t-bl, u, e-100, m, b-10, ma, x-w-4xl, m, x-au, t, o">";
           💎 Deploy, 5, game-changing, AI, technologies transforming, enterprises, worldwid
   e: Agentic, Mesh, Networks, Quant, u, m-AI, Optimizatio, n, Cognitive, Digital, Twins, Neuromorphic, Edge, AI, and, Autonomous, Security Orchestrati, o, n — delivering, unprecedented, performance, efficien, c, y, and, competitive, advantage!
@@ -59,7 +56,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
         {/* Feature, Gri, d */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-4, m, b-10">";
           {/* Featur, e, 1 */}
@@ -74,7 +70,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">
                 <h3, className="fo, n, t-bold, tex, t-white, tex, t-lg, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"
-=======
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Zap, className="w-5 h-5, tex, t-purp, l, e-3, 0, 0" />";
@@ -91,7 +86,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-2, transitio, n-a, l, l">"
               Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-purp, l, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Explore, Technolog, y <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -109,7 +103,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">
                 <h3, className="fo, n, t-bold, tex, t-white, tex, t-lg, m, b-1, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
-=======
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-bl, u, e-5, 0, 0/30, transitio, n-colo, r, s">";
                 <TrendingUp, className="w-5 h-5, tex, t-bl, u, e-3, 0, 0" />";
@@ -126,7 +119,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
               Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Discover, Innovatio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -144,7 +136,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">
                 <h3, className="fo, n, t-bold, tex, t-white, tex, t-lg, m, b-1, grou, p-hov, e, r: te, x, t-indi, g, o-200, transitio, n-colo, r, s">"
-=======
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-indi, g, o-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Sparkles, className="w-5 h-5, tex, t-indi, g, o-3, 0, 0" />";
@@ -161,7 +152,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             <div, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-2, transitio, n-a, l, l">"
               Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-indi, g, o-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Learn, Mor, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -179,7 +169,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">
                 <h3, className="fo, n, t-bold, tex, t-white, tex, t-lg, m, b-1, grou, p-hov, e, r: te, x, t-cy, a, n-200, transitio, n-colo, r, s">"
-=======
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-cy, a, n-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">";
                 <Zap, className="w-5 h-5, tex, t-cy, a, n-3, 0, 0" />";
@@ -196,7 +185,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             </d, i, v>
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">"
               Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-cy, a, n-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -214,7 +202,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
               </d, i, v>
               <div, className="fl, e, x-1">
                 <h3, className="fo, n, t-bold, tex, t-white, tex, t-lg, m, b-1, grou, p-hov, e, r: te, x, t-r, e, d-200, transitio, n-colo, r, s">"
-=======
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s">";
                 <TrendingUp, className="w-5 h-5, tex, t-r, e, d-3, 0, 0" />";
@@ -231,7 +218,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-2, transitio, n-a, l, l">"
               View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-r, e, d-300, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-2, transitio, n-a, l, l">";
               View, Solutio, n <ArrowRight, className="w-4 h-4, m, l-1, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -243,7 +229,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
             <div, className="flex, item, s-start, ga, p-3, m, b-3">
               <div, className="p-2, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r: bg-yell, o, w-5, 0, 0/30, transitio, n-colo, r, s">"
                 <Sparkles, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-pul, s, e  />
-=======
           <div, className="group, relative, bg-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, backdro, p-bl, u, r-sm, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-x, l, p-6, hove, r: bord, e, r-yell, o, w-400, hove, r:shad, o, w-lg, hove, r:shad, o, w-yell, o, w-5, 0, 0/20, transitio, n-all, duratio, n-3, 0, 0">";
             <div, className="flex, item, s-start, ga, p-3, m, b-3">";
               <div, className="p-2, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, grou, p-ho, v, e
@@ -265,7 +250,6 @@ const, October2025UltimateBreakthroughBanne, r = () => {
   r:shad, o, w-xl"
             >
               View, All, Innovations <ArrowRight, className="w-5 h-5  />
-=======
               View, All, Innovations <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>

@@ -40,7 +40,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
         "95% fewer, false, positives"
       ]
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0"
-=======
 import React from "react";';
 const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
   const, storie, s = [
@@ -97,7 +96,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
           </p>
         </d, i, v>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">";
           {stori, e, s.m, a, p((sto, r, y, ind, e, x) => (
             <d, i, v
@@ -106,7 +104,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
             >
               <div, className={`bg-gradie, n, t-to-r ${sto, r, y.col, o, r} te, x, t-whit, e, p-6`}>`;`
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">
-=======
                 <div, className="flex, item, s-center, ga, p-3, m, b-4">";
                   {sto, r, y.ic, o, n}
                   <d, i, v>
@@ -119,7 +116,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
               <div, className="p-6">
                 <p, className="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.descripti, o, n}</p>
                 <div, className="spa, c, e-y-2, m, b-6">
-=======
               <div, className="p-6">";
                 <p, className="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.descripti, o, n}</p>";
                 <div, className="spa, c, e-y-2, m, b-6">";
@@ -136,7 +132,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
                 >
                   Read, Full, Story;
                   <ArrowRight, className="w-4 h-4  />
-=======
                   <ArrowRight, className="w-4 h-4" />";
                 </Li, n, k>
               </d, i, v>
@@ -151,7 +146,6 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
           >
             View, All, Success Stori, e, s;
             <ArrowRight, className="w-6 h-6  />
-=======
             <ArrowRight, className="w-6 h-6" />";
           </Li, n, k>
         </d, i, v>

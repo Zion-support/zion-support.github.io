@@ -69,7 +69,6 @@ export, const, octoberNewestRevOpsContent = [
     c, t, a: {
       te, x, t: "Read, the, Full Case, Stud, y"
       li, n, k: "/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succe, s, s"
-=======
     i
   d: "autonomo, u, s-revo, p, s-revoluti, o, n-20, 2, 5",";
     tit, l, e: "🚀 NE

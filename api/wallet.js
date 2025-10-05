@@ -1,8 +1,5 @@
 const { withErrorLogging } = require('./withErrorLogging.cjs');
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
-=======
 import { withErrorLogging } from './withErrorLogging.cjs';
->>>>>>> cursor/fix-errors-and-merge-to-main-8302
 
 async function handler(req, res) {
   if (req.method !== 'GET') {
@@ -11,7 +8,6 @@ async function handler(req, res) {
     res.end('Method Not Allowed');
     return;
   }
-
 
   const { userId } = req.query || {};
   
@@ -70,5 +66,3 @@ try {
 }
 
 module.exports = withErrorLogging(handler);
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8302

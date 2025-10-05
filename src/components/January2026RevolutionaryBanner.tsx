@@ -12,7 +12,6 @@ return (
 <Sparkles, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
 </d, i, v>
 <h2, className="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-200, t, o-purp, l, e-200, b, g-cl, i, p-text, tex, t-transpare, n, t">
-=======
 import React from "react";';
 const, January2026RevolutionaryBanne, r: Rea, c, t.FC = () => {
 return (
@@ -44,7 +43,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="bg-bl, u, e-5, 0, 0/2, 0, p-2, rounde, d-lg, border, border-bl, u, e-4, 0, 0/30">
                 <Zap, className="w-6 h-6, tex, t-bl, u, e-4, 0, 0  />
-=======
 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">,";
 {/* Quantum, Edge, Fusion */
 }
@@ -68,7 +66,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">
                 <Shield, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0  />
-=======
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-xs, tex, t-bl, u, e-2, 0, 0">";
                 <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />";
@@ -85,7 +82,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
   r:sca, l, e-1, 0, 5"
             >
               Learn, Mor, e <ArrowRight, className="w-4 h-4  />
-=======
               Learn, Mor, e <ArrowRight, className="w-4 h-4" />";
             </Li, n, k>
           </d, i, v>
@@ -95,7 +91,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-2, rounde, d-lg, border, border-purp, l, e-4, 0, 0/30">
                 <Brain, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-pi, n, k-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">";
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -117,7 +112,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">
                 <Star, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0  />
-=======
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0">";
                 <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />";
@@ -134,7 +128,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
   r:sca, l, e-1, 0, 5"
             >
               Explore, No, w <ArrowRight, className="w-4 h-4  />
-=======
               Explore, No, w <ArrowRight, className="w-4 h-4" />";
             </Li, n, k>
           </d, i, v>
@@ -144,7 +137,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="bg-gre, e, n-5, 0, 0/2, 0, p-2, rounde, d-lg, border, border-gre, e, n-4, 0, 0/30">
                 <Cpu, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0  />
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30, hove, r: bord, e, r-gre, e, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
   r:shad, o, w-xl">";
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -166,7 +158,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
               </d, i, v>
               <div, className="flex, item, s-center, ga, p-2, tex, t-xs, tex, t-gre, e, n-2, 0, 0">
                 <Shield, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0  />
-=======
             <div, className="spa, c, e-y-2, m, b-4">";
               <div, className="flex, item, s-center, ga, p-2, tex, t-xs, tex, t-gre, e, n-2, 0, 0">";
                 <TrendingUp, className="w-3 h-3, tex, t-gre, e, n-4, 0, 0" />";
@@ -183,7 +174,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
   r:sca, l, e-1, 0, 5"
             >
               Discover, Mor, e <ArrowRight, className="w-4 h-4  />
-=======
               Discover, Mor, e <ArrowRight, className="w-4 h-4" />";
             </Li, n, k>
           </d, i, v>
@@ -194,7 +184,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
               <Star, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
               <span, className="te, x, t-lg, fon, t-bold, tex, t-yell, o, w-3, 0, 0">LIMITED, TIM, E: Early, Access, Program</sp, a, n>"
               <Star, className="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e  />
-=======
         <div, className="te, x, t-cent, e, r">";
           <div, className="bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-4, 0, 0/40, rounde, d-x, l, p-6, m, b-6">";
             <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-3">";
@@ -210,7 +199,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
             </p>
           </d, i, v>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">";
             <Li, n, k
   to="/servic, e, s" 
@@ -220,7 +208,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
               <Sparkles, className="w-5 h-5  />
               Explore, All, Services;
               <ArrowRight, className="w-5 h-5  />
-=======
               <Sparkles, className="w-5 h-5" />";
               Explore, All, Services;
               <ArrowRight, className="w-5 h-5" />";
@@ -231,7 +218,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
   r:sca, l, e-1, 0, 5"
             >
               <Brain, className="w-5 h-5  />
-=======
               <Brain, className="w-5 h-5" />";
               Schedule, Consultatio, n;
             </Li, n, k>
@@ -240,7 +226,6 @@ transforming, how, businesses operate, at, the highest, leve, l.
             <span, className="fo, n, t-bo, l, d">Trusted, by, 500+ companies, worldwid, e</sp, a, n> • ";
             <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0"> $1, 5, B+ in, value, created</sp, a, n> • ";
             <span, className="fo, n, t-bo, l, d"> 99.9% customer, satisfactio, n</sp, a, n>
-=======
           <div, className="mt-6, tex, t-sm, tex, t-bl, u, e-2, 0, 0">";
             <span, className="fo, n, t-bo, l, d">Trusted, by, 500+ companies, worldwid, e</sp, a, n> • ";
             <span, className="fo, n, t-bold, tex, t-yell, o, w-3, 0, 0"> $1, 5, B+ in, value, created</sp, a, n> • ";

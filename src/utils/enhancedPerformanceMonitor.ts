@@ -18,7 +18,6 @@ private, observe, r
 */
 initiali, z, e(): vo, i, d {
 if (typeof, windo, w === 'undefin, e, d') retu, r, n;
-=======
 initiali, z, e(): vo, i, d {
 if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
 th, i, s.observeWebVita, l, s();
@@ -79,7 +78,6 @@ th, i, s.observeLayoutShif, t, s();
    */
   private, observeLongTask, s(): vo, i, d {
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
-=======
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;';
     t, r, y {
       const, longTaskObserve, r = new, PerformanceObserve, r((li, s, t) => {
@@ -89,7 +87,6 @@ th, i, s.observeLayoutShif, t, s();
           if (durati, o, n > 50) {
             conso, l, e.wa, r, n(`Long, task, detected: ${durati, o, n.toFix, e, d(2)}ms`, ent, r, y);`;`
             th, i, s.recordMetr, i, c('Long, Tas, k', durati, o, n, th, i, s.getRati, n, g('longTa, s, k', durati, o, n));
-=======
             th, i, s.recordMetr, i, c('Long, Tas, k', durati, o, n, th, i, s.getRati, n, g('longTa, s, k', durati, o, n));';
           }
         });
@@ -105,7 +102,6 @@ th, i, s.observeLayoutShif, t, s();
    */
   private, observeLayoutShift, s(): vo, i, d {
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
-=======
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;';
     t, r, y {
       const, layoutShiftObserve, r = new, PerformanceObserve, r((li, s, t) => {
@@ -127,7 +123,6 @@ th, i, s.observeLayoutShif, t, s();
    * Record, a, performance metr, i, c;
    */
   private, recordMetri, c(na, m, e: stri, n, g, val, u, e: numb, e, r, rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'): vo, i, d {'
-=======
   private, recordMetri, c(na, m, e: stri, n, g, val, u, e: numb, e, r, rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'): vo, i, d {';
     const, metr, i
   c: PerformanceMetr, i, c = {
@@ -143,7 +138,6 @@ th, i, s.observeLayoutShif, t, s();
    * Get, rating, for a, metri, c;
    */
   private, getRatin, g(metr, i, c: stri, n, g, val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
-=======
   private, getRatin, g(metr, i, c: stri, n, g, val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
     const, threshol, d
   s: Reco, r, d<stri, n, g, { go, o, d: numb, e, r; p, o, o
@@ -162,7 +156,6 @@ th, i, s.observeLayoutShif, t, s();
     if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
     if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
     retu, r, n 'po, o, r';
-=======
     if (!thresho, l, d) retu, r, n 'go, o, d';';
     if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';';
     if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';';

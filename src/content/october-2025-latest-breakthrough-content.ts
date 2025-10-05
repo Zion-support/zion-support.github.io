@@ -103,7 +103,6 @@ export, const, octoberLatestBreakthroughContent = [
       costSavin, g, s: "85%"
       productivi, t, y: "1, 0, x"
       mark, e, t: "$34, 0, B"
-=======
     i
   d: "enterpri, s, e-digit, a, l-twi, n, s-revoluti, o, n",";
     tit, l, e: "Enterprise, Digital, Twin

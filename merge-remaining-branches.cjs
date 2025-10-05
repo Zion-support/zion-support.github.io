@@ -41,8 +41,7 @@ function resolveConflicts() {
             try {
                 let content = fs.readFileSync(file, 'utf8');
                 
-                if (content.includes('|>>>>>>> /);
-                    
+                if (content.includes('|                    
                     if (sections.length === 4) {
                         const headSection = sections[1].trim();
                         const remoteSection = sections[2].trim();

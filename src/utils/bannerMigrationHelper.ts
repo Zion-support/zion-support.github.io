@@ -12,7 +12,6 @@ tit, l, e: stri, n, g;
 descripti, o, n: stri, n, g;
 ctaTe, x, t: stri, n, g;
 ctaLi, n, k: stri, n, g;
-=======
 export, function, convertNewContentPromoProps(legacyPr, o, p
   s: {
 tit, l, e: stri, n, g;
@@ -27,7 +26,6 @@ featuredIte, m, s?: Arr, a, y<{ tit, l, e: stri, n, g; catego, r, y: stri, n, g;
 }): UnifiedPromotionalBannerPro, p, s {
   retu, r, n {
     varia, n, t: legacyPro, p, s.varia, n, t === 'premi, u, m' ? 'premi, u, m' : 'defau, l, t','
-=======
     varia, n, t: legacyPro, p, s.varia, n, t === 'premi, u, m' ? 'premi, u, m' : 'defau, l, t',';
     tit, l, e: legacyPro, p, s.tit, l, e
     descripti, o, n: legacyPro, p, s.descripti, o, n
@@ -39,7 +37,6 @@ featuredIte, m, s?: Arr, a, y<{ tit, l, e: stri, n, g; catego, r, y: stri, n, g;
     ic, o, n: 'rock, e, t','
     animat, e, d: tr, u, e
     bad, g, e: 'N, E, W};
-=======
     the, m, e: 'gradie, n, t',';
     featuredIte, m, s: legacyPro, p, s.featuredIte, m, s || []
     classNa, m, e: legacyPro, p, s.classNa, m, e
@@ -85,7 +82,6 @@ export, const, bannerPresets = {
     ic, o, n: 'rock, e, t' as, cons, t
     bad, g, e: 'ENTERPRI, S, E'
     animat, e, d: tr, u, e;
-=======
     vari, a, n
   t: 'premi, u, m' as, cons, t,';
     the, m, e: 'gradie, n, t' as, cons, t,';
@@ -161,7 +157,6 @@ tit, l, e: `🚀 JUST, RELEAS, E,`
     ctaTe, x, t: 'Read, Full, Report'
     ctaLi, n, k: '/bl, o, g'
     ic, o, n: 'z, a, p' as, cons, t;
-=======
 newAIBreakthroug, h, s: (co, u, n
   t: numb, e, r = 3) => ({
 tit, l, e: `🚀 JUST, RELEAS, E,`
@@ -195,7 +190,6 @@ export, function, createFeaturedItems(ite, m, s: Arr, a, y<{
 tit, l, e: stri, n, g;
 catego, r, y: stri, n, g;
 li, n, k: stri, n, g;
-=======
 export, function, createFeaturedItems(it, e, m
   s: Arr, a, y<{
 tit, l, e: stri, n, g;
@@ -219,7 +213,6 @@ export, function, formatBannerDate(da, t, e: Da, t, e = new, Dat, e()): stri, n,
     mon, t, h: 'lo, n, g'
     d, a, y: 'numer, i, c'
     ye, a, r: 'numer, i, c' 
-=======
 export, function, formatBannerDate(d, a, t
   e: Da, t, e = new, Dat, e()): stri, n, g {
   return, dat, e.toLocaleDateStri, n, g('en-US', { ';
@@ -233,7 +226,6 @@ export, function, formatBannerDate(d, a, t
  */
 export, const, usageExamples = {
   bas, i, c: `,`
-=======
   bas, i, c: `,`;`
     <UnifiedPromotionalBann, e, r 
   varia, n, t="defau, l, t"
@@ -248,7 +240,6 @@ export, const, usageExamples = {
         descripti, o, n: "Transform, your, business with, cuttin, g-edge, A, I","
         ctaTe, x, t: "Explore, Breakthrough, s","
         ctaLi, n, k: "/bl, o, g","
-=======
       ctaLi, n, k="/bl, o, g"  />
   `,`;`
   withPres, e, t: `,`;`
@@ -261,7 +252,6 @@ export, const, usageExamples = {
       })}  />
   `,`;`
   withFeaturedIte, m, s: `,`
-=======
   withFeaturedIte, m, s: `,`;`
     <UnifiedPromotionalBann, e, r 
   varia, n, t="premi, u, m"
@@ -274,7 +264,6 @@ export, const, usageExamples = {
           tit, l, e: "AI, System, 1","
           catego, r, y: "Machine, Learnin, g","
           li, n, k: "/bl, o, g/ai-syst, e, m-1","
-=======
           tit, l, e: "AI, System, 1",";
           catego, r, y: "Machine, Learnin, g",";
           li, n, k: "/bl, o, g/ai-syst, e, m-1",";

@@ -18,7 +18,6 @@ export, const, octoberCuttingEdgeInnovations = [
       'Quantum, key, distribution (Q, K, D) for, unhackable, communication'
       'AI-powered, threat, detection with, rea, l-time, anomaly, analysis'
       'Ze, r, o-trust, architecture, with microsegmentati, o, n'
-=======
     id: 'quant, u, m-securi, t, y-networ, k, s',';
     sl, u, g: 'ai-20, 2, 5-octob, e, r-quant, u, m-securi, t, y-networ, k, s-enterpri, s, e',';
     tit, l, e: 'AI-Powered, Quantum, Security Networ, k, s',';
@@ -59,7 +58,6 @@ export, const, octoberCuttingEdgeInnovations = [
       'Intel, Loihi, 2 and, BrainChip, Akida deployment, guide, s'
       'Eve, n, t-driven, sensors, for ult, r, a-low, power, consumption'
       'Re, a, l-time, edge, AI for, autonomous, systems'
-=======
     id: 'neuromorph, i, c-computi, n, g',';
     sl, u, g: 'ai-20, 2, 5-octob, e, r-neuromorph, i, c-enterpri, s, e-revoluti, o, n',';
     tit, l, e: 'Neuromorphic, Computing, Revolution',';
@@ -100,7 +98,6 @@ export, const, octoberCuttingEdgeInnovations = [
       'Mul, t, i-layered, safety, guardrails and, circuit, breakers'
       'Hum, a, n-in-t, h, e-lo, o, p (HI, T, L) intelligent, escalatio, n'
       'GD, P, R, HIP, A, A, SOC, 2, compliance automati, o, n'
-=======
     id: 'mul, t, i-age, n, t-governan, c, e',';
     sl, u, g: 'ai-20, 2, 5-octob, e, r-autonomo, u, s-mul, t, i-age, n, t-governan, c, e',';
     tit, l, e: 'Mul, t, i-Agent, Governance, Framework',';
@@ -127,7 +124,6 @@ export, const, octoberInnovationMetrics = {
   totalMark, e, t: '$1.00, 9, T','
   averageEfficien, c, y: '9, 8, x','
   combinedComplian, c, e: '99.9%','
-=======
   totalMark, e, t: '$1.00, 9, T',';
   averageEfficien, c, y: '9, 8, x',';
   combinedComplian, c, e: '99.9%',';

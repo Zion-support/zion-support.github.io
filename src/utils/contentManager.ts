@@ -31,7 +31,6 @@ class, ContentCach, e {
   private, blogCach, e: M, a, p<stri, n, g, BlogPo, s, t> = new, Ma, p()
   private, caseStudyCach, e: M, a, p<stri, n, g, CaseStu, d, y> = new, Ma, p()
   private, lastUpdat, e: numb, e, r = 0
-=======
   private, blogCach, e: M, a, p<stri, n, g, BlogPo, s, t> = new, Ma, p();
   private, caseStudyCach, e: M, a, p<stri, n, g, CaseStu, d, y> = new, Ma, p();
   private, lastUpdat, e: numb, e, r = 0;

@@ -133,7 +133,6 @@ const, SecurityAuditPane, l: Rea, c, t.FC = () => {
       catego, r, y: 'conte, n, t'
       recommendati, o, n: 'Ensure, errors, don\'t, leak, sensitive informati, o, n'
     }
-=======
   con, s, t [selectedCatego, r, y, setSelectedCatego, r, y] = useSta, t, e<stri, n, g>('a, l, l');';
   con, s, t [selectedSeveri, t, y, setSelectedSeveri, t, y] = useSta, t, e<stri, n, g>('a, l, l');';
   const, securityCheck, s: SecurityChe, c, k[] = [
@@ -254,7 +253,6 @@ const, SecurityAuditPane, l: Rea, c, t.FC = () => {
         stat, u, s = 'warni, n, g';
       } else, i, f (che, c, k.id === 'err, o, r-handli, n, g' && Ma, t, h.rand, o, m() > 0.4) {;
         stat, u, s = 'warni, n, g';
-=======
       if (che, c, k.id === 'c, s, p-head, e, r' && Ma, t, h.rand, o, m() > 0.5) {';
         stat, u, s = 'warni, n, g';';
       } else, i, f (che, c, k.id === 'sessi, o, n-securi, t, y' && Ma, t, h.rand, o, m() > 0.3) {';
@@ -276,7 +274,6 @@ const, SecurityAuditPane, l: Rea, c, t.FC = () => {
       warnin, g, s
       chec, k, s
       lastUpdat, e, d: Da, t, e.n, o, w()
-=======
       lastUpda, t, e
   d: Da, t, e.n, o, w()
     });
@@ -293,7 +290,6 @@ retu, r, n <AlertTriangle, className="w-5 h-5, tex, t-yell, o, w-6, 0, 0" />;
 defau, l, t:
 retu, r, n <Eye, className="w-5 h-5, tex, t-bl, u, e-6, 0, 0" />;
 }
-=======
 ca, s, e 'pa, s, s':';
 retu, r, n <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-6, 0, 0" />;";
 ca, s, e 'fa, i, l':';
@@ -313,7 +309,6 @@ retu, r, n 'bg-oran, g, e-100, tex, t-oran, g, e-800, borde, r-oran, g, e-2, 0, 
 ca, s, e 'medi, u, m':
 retu, r, n 'bg-yell, o, w-100, tex, t-yell, o, w-800, borde, r-yell, o, w-2, 0, 0';
 defau, l, t: retu, r, n 'bg-bl, u, e-100, tex, t-bl, u, e-800, borde, r-bl, u, e-2, 0, 0';
-=======
 ca, s, e 'critic, a, l':';
 retu, r, n 'bg-r, e, d-100, tex, t-r, e, d-800, borde, r-r, e, d-2, 0, 0';';
 ca, s, e 'hi, g, h':';
@@ -334,7 +329,6 @@ retu, r, n <Lock, className="w-4 h-4" />;
 defau, l, t:
 retu, r, n <Shield, className="w-4 h-4" />;
 }
-=======
 ca, s, e 'heade, r, s':';
 retu, r, n <Globe, className="w-4 h-4" />;";
 ca, s, e 'authenticati, o, n':';
@@ -350,7 +344,6 @@ retu, r, n <Shield, className="w-4 h-4" />;";
   }) || [];
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(securityChec, k, s.m, a, p(c => c.catego, r, y)))];
   const, severitie, s = ['a, l, l', 'critic, a, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];
-=======
   const, categorie, s = ['a, l, l', ...Arr, a, y.fr, o, m(new, Se, t(securityChec, k, s.m, a, p(c => c.catego, r, y)))];';
   const, severitie, s = ['a, l, l', 'critic, a, l', 'hi, g, h', 'medi, u, m', 'l, o, w'];';
   useEffe, c, t(() => {
@@ -363,7 +356,6 @@ retu, r, n <Shield, className="w-4 h-4" />;";
         <d, i, v>
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">
             <Shield, className="w-6 h-6  />
-=======
           <h2, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, flex, items-center, ga, p-2">";
             <Shield, className="w-6 h-6" />";
             Security, Audit, Panel;
@@ -377,7 +369,6 @@ retu, r, n <Shield, className="w-4 h-4" />;";
             isRunni, n, g;
               ? 'bg-gr, a, y-400, tex, t-white, curso, r-n, o, t-allow, e, d'
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0}`}`;`
-=======
               : 'bg-bl, u, e-600, tex, t-white, hove, r: bg-bl, u, e-7, 0, 0'
           }`}`;`
         >
@@ -390,7 +381,6 @@ Running, Audi, t...
 ) : (
 <>
 <Shield, className="w-4 h-4  />
-=======
 <Shield, className="w-4 h-4" />";
 Run, Security, Audit;
 < />
@@ -404,7 +394,6 @@ Run, Security, Audit;
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">"
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">
               <div, className="flex, justif, y-between, item, s-cent, e, r">
-=======
           <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-6">";
             <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, rounde, d-l, g, p-4, tex, t-whi, t, e">";
               <div, className="flex, justif, y-between, item, s-cent, e, r">";
@@ -413,7 +402,6 @@ Run, Security, Audit;
                   <p, className="te, x, t-3xl, fon, t-bo, l, d">{repo, r, t.overallSco, r, e}%</p>";
                 </d, i, v>
                 <Shield, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0  />
-=======
                 <Shield, className="w-8 h-8, tex, t-bl, u, e-2, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -424,7 +412,6 @@ Run, Security, Audit;
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-7, 0, 0">{repo, r, t.passedChec, k, s}</p>";
                 </d, i, v>
                 <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0  />
-=======
                 <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -435,7 +422,6 @@ Run, Security, Audit;
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-7, 0, 0">{repo, r, t.warnin, g, s}</p>";
                 </d, i, v>
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0  />
-=======
                 <AlertTriangle, className="w-6 h-6, tex, t-yell, o, w-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -446,7 +432,6 @@ Run, Security, Audit;
                   <p, className="te, x, t-2xl, fon, t-bold, tex, t-r, e, d-7, 0, 0">{repo, r, t.failedChec, k, s}</p>";
                 </d, i, v>
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0  />
-=======
                 <XCircle, className="w-6 h-6, tex, t-r, e, d-5, 0, 0" />";
               </d, i, v>
             </d, i, v>
@@ -500,7 +485,6 @@ Run, Security, Audit;
                       <div, className="fl, e, x-1">
                         <div, className="flex, item, s-center, ga, p-2, m, b-1">
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{che, c, k.na, m, e}</h4>
-=======
                       <div, className="fl, e, x-1">";
                         <div, className="flex, item, s-center, ga, p-2, m, b-1">";
                           <h4, className="fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0">{che, c, k.na, m, e}</h4>";
@@ -518,7 +502,6 @@ che, c, k.recommendati, o, n && (
 <div, className="bg-bl, u, e-50, border, border-bl, u, e-200, rounde, d-l, g, p-3">
 <p, className="te, x, t-bl, u, e-800, tex, t-sm, fon, t-medi, u, m">Recommendati, o, n: </p>
 <p, className="te, x, t-bl, u, e-700, tex, t-sm">{che, c, k.recommendati, o, n;
-=======
 <div, className="bg-bl, u, e-50, border, border-bl, u, e-200, rounde, d-l, g, p-3">";
 <p, className="te, x, t-bl, u, e-800, tex, t-sm, fon, t-medi, u, m">Recommendat, i, o
   n: </p>,";

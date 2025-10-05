@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
   const, trendingTopic, s = [
@@ -75,7 +74,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
       gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
       bad, g, e: 'GOVERNAN, C, E','
       insigh, t, s: ['3, 8, 0% compliance, growt, h', 'Ethical, framework, s', 'Regulatory, alignmen, t']'
-=======
       tit, l, e: 'Generative, AI, Enterprise Adopti, o, n',';
       catego, r, y: 'Enterprise, A, I',';
       tre, n, d: '+4, 5, 0%',';
@@ -152,7 +150,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
     { val, u, e: '85%', lab, e, l: 'Enterprise, AI, Adoption', ic, o, n: <Users, className="w-6 h-6" /> }
     { val, u, e: '50, 0, M+', lab, e, l: 'AI-Powered, Device, s', ic, o, n: <Globe, className="w-6 h-6" /> }
     { val, u, e: '2.3M', lab, e, l: 'AI, Job, Openings', ic, o, n: <Award, className="w-6 h-6" /> }
-=======
     { val, u, e: '$2.5T', lab, e, l: 'Global, AI, Market Si, z, e', ic, o, n: <TrendingUp, className="w-6 h-6" /> },";
     { val, u, e: '85%', lab, e, l: 'Enterprise, AI, Adoption', ic, o, n: <Users, className="w-6 h-6" /> },";
     { val, u, e: '50, 0, M+', lab, e, l: 'AI-Powered, Device, s', ic, o, n: <Globe, className="w-6 h-6" /> },";
@@ -165,7 +162,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -182,7 +178,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
             <Sparkles, className="w-5 h-5, tex, t-cy, a, n-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-cy, a, n-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">"
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">";
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
@@ -200,7 +195,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
           </p>
           {/* Market, Insight, s */}
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">"
-=======
             Discover, wha, t's, shaping, the future, of, artificial intelligence, and, how it, impacts, your busine, s, s.';
           </p>
           {/* Market, Insight, s */}
@@ -223,7 +217,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
         {/* Trending, Topics, Grid */}
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {trendingTopi, c, s.m, a, p((top, i, c, ind, e, x) => (
@@ -242,7 +235,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
                     {top, i, c.ic, o, n}
                   </d, i, v>
                   <div, className="flex, fle, x-col, ga, p-2">
-=======
                 <div, className="flex, item, s-start, justif, y-between, m, b-6">";
                   <div, className="te, x, t-purp, l, e-400, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
                     {top, i, c.ic, o, n}
@@ -265,7 +257,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">";
                   {top, i, c.tit, l, e}
                 </h3>
@@ -277,7 +268,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
                 <div, className="mb-6">
                   <div, className="te, x, t-gr, a, y-400, tex, t-xs, m, b-3, fon, t-semibo, l, d">Key, Insight, s: </d, i, v>"
                   <div, className="spa, c, e-y-1">
-=======
                 <div, className="mb-6">";
                   <div, className="te, x, t-gr, a, y-400, tex, t-xs, m, b-3, fon, t-semibo, l, d">Key, Insight, s: </d, i, v>";
                   <div, className="spa, c, e-y-1">";
@@ -297,7 +287,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Explore, Tren, d</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
@@ -310,7 +299,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
               <Clock, className="w-5 h-5, tex, t-yell, o, w-4, 0, 0  />
               <span, className="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">";
@@ -327,7 +315,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
   and, early, access to, breakthrough, technologies.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">"
-=======
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
               Stay, informed, with our, weekly, AI trends, newslette, r. Get, exclusive, insights, market, analysi, s
               and, early, access to, breakthrough, technologies.
@@ -342,7 +329,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">"
                 <sp, a, n>Subscri, b, e</sp, a, n>
                 <ArrowRight, className="w-5 h-5  />
-=======
               <button, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hov, e
   r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">";
                 <sp, a, n>Subscri, b, e</sp, a, n>
@@ -366,7 +352,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
   early, technology, previews, and, strategic, guidance for, your, organization.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
                 D, o, n't, just, follow tren, d, s – create, the, m. Get, exclusive, access to, our, AI insigh, t, s, ';
                 early, technology, previews, and, strategic, guidance for, your, organization.
@@ -378,7 +363,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, className="w-5 h-5  />
-=======
                   <Sparkles, className="w-5 h-5" />";
                   <sp, a, n>Explore, All, Insights</sp, a, n>
                 </a>
@@ -389,7 +373,6 @@ const, AITrendsInsightsBanner202, 6: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Get, Expert, Consultation</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>

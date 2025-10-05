@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 impo, r, t { Glo, b, e } fr, o, m "luci, d, e-rea, c, t";
 import, Header, from "../../componen, t, s/Head, e, r";
 import, Footer, from "../../componen, t, s/Foot, e, r";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -20,7 +19,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   n: Shie, l, d
       tit, l, e: "Comprehensive, Security, Analysis","
       descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.","
-=======
       tit, l, e: "Comprehensive, Security, Analysis",";
       descripti, o, n: "Deep, code, analysis using, static, analysis, dynamic, testin, g, and, formal, verification to, identify, vulnerabilities.",";
       benef, i, t: "99.8% vulnerability, detection, rate"
@@ -29,7 +27,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: Sear, c, h
       tit, l, e: "Automated, Vulnerability, Scanning","
       descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.","
-=======
       tit, l, e: "Automated, Vulnerability, Scanning",";
       descripti, o, n: "AI-powered, scanning, tools that, detect, common smart, contract, vulnerabilities and, security, patterns.",";
       benef, i, t: "1, 0, 0+ vulnerability, patterns, detected"
@@ -38,7 +35,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: AlertTriang, l, e
       tit, l, e: "Risk, Assessmen, t & Mitigati, o, n","
       descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.","
-=======
       tit, l, e: "Risk, Assessmen, t & Mitigati, o, n",";
       descripti, o, n: "Detailed, risk, analysis with, prioritized, recommendations and, mitigation, strategies.",";
       benef, i, t: "Zero, critical, vulnerabilities in, productio, n"
@@ -47,7 +43,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: CheckCirc, l, e
       tit, l, e: "Compliance, Verificatio, n","
       descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.","
-=======
       tit, l, e: "Compliance, Verificatio, n",";
       descripti, o, n: "Ensure, compliance, with industry, standard, s, regulatory, requirement, s, and, best, practices.",";
       benef, i, t: "1, 0, 0% compliance, with, standards"
@@ -56,7 +51,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: Clo, c, k
       tit, l, e: "Fast, Turnaroun, d","
       descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.","
-=======
       tit, l, e: "Fast, Turnaroun, d",";
       descripti, o, n: "Rapid, audit, completion with, detailed, reports delivered, within, 5-10, business, days.",";
       benef, i, t: "5-10, day, delivery guarant, e, e"
@@ -65,7 +59,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: Use, r, s
       tit, l, e: "Expert, Tea, m","
       descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.","
-=======
       tit, l, e: "Expert, Tea, m",";
       descripti, o, n: "Certified, blockchain, security experts, with, extensive experience, in, smart contract, auditin, g.",";
       benef, i, t: "50+ successful, audits, completed"
@@ -128,7 +121,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         "Security, training, included"
       ]
       popul, a, r: fal, s, e;
-=======
       n, a, m
   e: "Basic, Audi, t",";
       pri, c, e: "$2,5, 0, 0",";
@@ -192,7 +184,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       na, m, e: "Michael, Che, n","
       ro, l, e: "C, T, O, DeFi, Protoco, l","
       conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.","
-=======
       na, m, e: "Michael, Che, n",";
       ro, l, e: "C, T, O, DeFi, Protoco, l",";
       conte, n, t: "The, smart, contract audit, identified, 3 critical, vulnerabilities, that could, have, resulted in $50M, in, losses. The, tea, m's, expertise, saved our, project, and gave, us, confidence for, mainnet, launch.",";
@@ -203,7 +194,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       na, m, e: "Sarah, Rodrigue, z","
       ro, l, e: "Found, e, r, NFT, Marketplac, e","
       conte, n, t: "Professional, audit, process with, clear, communication and, actionable, recommendations. The, compliance, verification helped, us, meet regulatory, requirements, for our, marketplace, launch.","
-=======
       na, m, e: "Sarah, Rodrigue, z",";
       ro, l, e: "Found, e, r, NFT, Marketplac, e",";
       conte, n, t: "Professional, audit, process with, clear, communication and, actionable, recommendations. The, compliance, verification helped, us, meet regulatory, requirements, for our, marketplace, launch.",";
@@ -214,7 +204,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       na, m, e: "Dr. James, Wilso, n","
       ro, l, e: "Head, of, Blockchain, FinTe, c, h","
       conte, n, t: "The, enterprise, audit package, provided, comprehensive security, coverage, for our, mult, i-contract, syste, m. The, formal, verification process, gave, us mathematical, proof, of our, contrac, t's, correctnes, s.","
-=======
       na, m, e: "Dr. James, Wilso, n",";
       ro, l, e: "Head, of, Blockchain, FinTe, c, h",";
       conte, n, t: "The, enterprise, audit package, provided, comprehensive security, coverage, for our, mult, i-contract, syste, m. The, formal, verification process, gave, us mathematical, proof, of our, contrac, t's, correctnes, s.",";
@@ -246,7 +235,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
       ic, o, n: Use, r, s
       descripti, o, n: "Auditing, governance, contracts, voting, mechanism, s, and, treasury, management syste, m, s.","
       vulnerabiliti, e, s: ["Vote, manipulatio, n", "Treasury, exploit, s", "Proposal, vulnerabilitie, s", "Execution, risk, s"]"
-=======
       tit, l, e: "DeFi, Protocol, s",";
       ic, o, n: Glo, b, e
       descripti, o, n: "Comprehensive, auditing, for decentralized, finance, protocols including, lendin, g, borrowi, n, g, and, trading, platforms.",";
@@ -300,7 +288,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
     {
       st, e, p: "06","
       tit, l, e: "Foll, o, w-up, Suppor, t","
-=======
       st, e, p: "01",";
       tit, l, e: "Initial, Assessmen, t",";
       descripti, o, n: "Code, review, and architecture, analysis, to understand, the, smart contract, functionality, and desi, g, n."
@@ -338,7 +325,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
         <me, t, a
   na, m, e="descripti, o, n"
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery." /><meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/servic, e, s/sma, r, t-contra, c, t-aud, i, t/>"
-=======
           content="Professional, smart, contract auditing, services, with 99.8% vulnerability, detection, rate. Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects. 5-10, day, delivery."
          />
         <meta name="keywor, d, s" content="smart, contract, audit, blockchain, securit, y, DeFi, audi, t, NFT, audi, t, smart, contract, security, vulnerability, assessmen, t, blockchain, complianc, e" />";
@@ -359,7 +345,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
                 Comprehensive, security, analysis for, DeF, i, NF, T, s, and, blockchain, projects.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
         <section, className="bg-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-white, p, y-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-cent, e, r">";
@@ -378,7 +363,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
                 >
                   <Phone, className="w-5 h-5, m, r-2  />
-=======
                   <Phone, className="w-5 h-5, m, r-2" />";
                   Request, Quot, e;
                 </a>
@@ -389,7 +373,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
                 >
                   View, Pricin, g;
                   <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
                   <ArrowRight, className="w-5 h-5, m, l-2" />";
                 </a>
               </d, i, v>
@@ -402,7 +385,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="text-center mb-12">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-16, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="text-center mb-12">";
@@ -418,7 +400,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">
                   <Shield, className="w-8 h-8, tex, t-r, e, d-6, 0, 0  />
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-8">";
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-r, e, d-100, rounde, d-full, m, b-4">";
@@ -430,7 +411,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0  />
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-oran, g, e-100, rounde, d-full, m, b-4">";
                   <Clock, className="w-8 h-8, tex, t-oran, g, e-6, 0, 0" />";
@@ -441,7 +421,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0  />
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-yell, o, w-100, rounde, d-full, m, b-4">";
                   <Users, className="w-8 h-8, tex, t-yell, o, w-6, 0, 0" />";
@@ -452,7 +431,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0  />
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-full, m, b-4">";
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-6, 0, 0" />";
@@ -469,7 +447,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -498,7 +475,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
                           <li, ke, y={vulnInd, e, x} classNa, m, e="flex, item, s-center, tex, t-sm">
                             <AlertTriangle, className="w-4 h-4, tex, t-oran, g, e-500, m, r-2, fle, x-shri, n, k-0  />
                             <span, className="te, x, t-gr, a, y-7, 0, 0">{vu, l, n}</sp, a, n>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8">";
               {auditTyp, e, s.m, a, p((aud, i, t, ind, e, x) => {
@@ -533,7 +509,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -546,7 +521,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
             </d, i, v>
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {proce, s, s.m, a, p((st, e, p, ind, e, x) => (
@@ -567,7 +541,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -591,7 +564,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
                     <p, className="te, x, t-gr, a, y-600, m, b-4">{featu, r, e.descripti, o, n}</p>
                     <div, className="inli, n, e-flex, item, s-center, tex, t-gre, e, n-600, fon, t-semibold, tex, t-sm">
                       <CheckCircle, className="w-4 h-4, m, r-1  />
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {featur, e, s.m, a, p((featu, r, e, ind, e, x) => {
@@ -619,7 +591,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, i, d="prici, n, g" classNa, m, e="py-20, b, g-gr, a, y-50">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -632,7 +603,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
             </d, i, v>
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {prici, n, g.m, a, p((pl, a, n, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e={`bg-white, rounde, d-2xl, shado, w-l, g, p-8 ${pl, a, n.popul, a, r ? 'ri, n, g-2, rin, g-r, e, d-500, relativ, e' : ''}`}>`;`
@@ -656,7 +626,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0  />
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>
-=======
                       <li, ke, y={featureInd, e, x} classNa, m, e="flex, item, s-cent, e, r">";
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-500, m, r-3, fle, x-shri, n, k-0" />";
                         <span, className="te, x, t-gr, a, y-7, 0, 0">{featu, r, e}</sp, a, n>";
@@ -669,7 +638,6 @@ const, SmartContractAudi, t: Rea, c, t.FC = () => {
 `w-full, block, text-center, p, y-3, p, x-6, rounde, d-lg, fon, t-semibold, transitio, n-colo, r, s ${`;`
 pl, a, n.popul, a, r;
 ? 'bg-r, e, d-600, tex, t-white, hove, r: bg-r, e, d-7, 0, 0'
-=======
 ? 'bg-r, e, d-600, tex, t-white, hov, e
   r: bg-r, e, d-7, 0, 0',';
 : 'bg-gr, a, y-100, tex, t-gr, a, y-900, hove, r:bg-gr, a, y-2, 0, 0'
@@ -688,7 +656,6 @@ pl, a, n.popul, a, r;
               >
                 Contact, our, Security Te, a, m;
                 <ArrowRight, className="w-4 h-4, m, l-1  />
-=======
                 <ArrowRight, className="w-4 h-4, m, l-1" />";
               </a>
             </d, i, v>
@@ -700,7 +667,6 @@ pl, a, n.popul, a, r;
   g:px-8">"
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
-=======
         <section, className="py-20">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -713,14 +679,12 @@ pl, a, n.popul, a, r;
             </d, i, v>
             <div, className="gri, d, m
   d: gr, i, d-co, l, s-3, ga, p-8">"
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               {testimonia, l, s.m, a, p((testimoni, a, l, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-8, rounde, d-xl, shado, w-lg, border, border-gr, a, y-2, 0, 0">";
                   <div, className="flex, item, s-center, m, b-4">";
                     {[...Arr, a, y(testimoni, a, l.rati, n, g)].m, a, p((_, i) => (
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-=======
                       <Star, ke, y={i} classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                     ))}
                   </d, i, v>
@@ -742,7 +706,6 @@ pl, a, n.popul, a, r;
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6 l
   g:px-8, tex, t-cent, e, r">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-=======
         <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-r, e, d-900, vi, a-oran, g, e-800, t, o-yell, o, w-900, tex, t-whi, t, e">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r">";
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
@@ -753,7 +716,6 @@ pl, a, n.popul, a, r;
             </p>
             <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <a
   hr, e, f="/conta, c, t"
@@ -761,7 +723,6 @@ pl, a, n.popul, a, r;
   r: bg-r, e, d-700, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-colo, r, s"
               >
                 <Phone, className="w-5 h-5, m, r-2  />
-=======
                 <Phone, className="w-5 h-5, m, r-2" />";
                 Request, Free, Quote;
               </a>
@@ -772,7 +733,6 @@ pl, a, n.popul, a, r;
               >
                 View, Audit, Reports;
                 <ArrowRight, className="w-5 h-5, m, l-2  />
-=======
                 <ArrowRight, className="w-5 h-5, m, l-2" />";
               </a>
             </d, i, v>

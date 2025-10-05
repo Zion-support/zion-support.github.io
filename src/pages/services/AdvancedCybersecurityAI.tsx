@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 import, Header, from "../../componen, t, s/Head, e, r";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -18,7 +17,6 @@ const, AdvancedCybersecurityA, I = () => {
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
         <Head, e, r   />
         <article, className="container, m, x-auto, p, x-6, p, y-20">
-=======
         <article, className="container, m, x-auto, p, x-6, p, y-20">";
           {/* Back, Lin, k */};
           <Li, n, k
@@ -26,7 +24,6 @@ const, AdvancedCybersecurityA, I = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Services;
           </Li, n, k>
@@ -42,7 +39,6 @@ const, AdvancedCybersecurityA, I = () => {
               <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Starting, a, t $12,9, 9, 9/mon, t, h</sp, a, n>";
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
               Advanced, Cybersecurity, AI Platfo, r, m;
               <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-bl, u, e-400, m, t-2">";
@@ -70,7 +66,6 @@ const, AdvancedCybersecurityA, I = () => {
               <div, className="bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r: sca, l, e-105, transitio, n-transfo, r, m">"
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2">&lt;5s</d, i, v>
                 <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Response, Tim, e</d, i, v>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">";
               <div, className="bg-r, e, d-9, 0, 0/40, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/30, tex, t-center, hove, r: sca, l, e-105, transitio, n-transfo, r, m">";
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-r, e, d-400, m, b-2">99.92%</d, i, v>";
@@ -114,7 +109,6 @@ const, AdvancedCybersecurityA, I = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <span, className="te, x, t-r, e, d-400, fon, t-bo, l, d">60, second, s: </sp, a, n>"
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                 <Shield, className="w-8 h-8, tex, t-r, e, d-4, 0, 0" />";
                 The, Modern, Threat Landsca, p, e;
@@ -152,7 +146,6 @@ const, AdvancedCybersecurityA, I = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">✅ Our, Solutio, n</h3>";
                     <ul, className="spa, c, e-y-3">";
                       <li, className="flex, item, s-start, ga, p-2">";
@@ -215,7 +208,6 @@ const, AdvancedCybersecurityA, I = () => {
                     <div, className="te, x, t-4xl, m, b-4">{featu, r, e.ic, o, n}</d, i, v>
                     <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3">{featu, r, e.tit, l, e}</h3>
                     <p, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">{featu, r, e.descripti, o, n}</p>
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                 <Lock, className="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />";
                 Platform, Feature, s;
@@ -290,7 +282,6 @@ const, AdvancedCybersecurityA, I = () => {
                     savin, g, s: "$5.6M","
                     resul, t, s: "94% fraud, reductio, n","
                     highligh, t, s: ["POS, security, monitoring", "DDoS, mitigatio, n", "Customer, data, protection"]"
-=======
                     indust, r, y: "Financial, Service, s",";
                     savin, g, s: "$8.4M",";
                     resul, t, s: "Zero, breache, s",";
@@ -331,7 +322,6 @@ const, AdvancedCybersecurityA, I = () => {
                       {soluti, o, n.highligh, t, s.m, a, p((highlig, h, t, hInd, e, x) => (
                         <li, ke, y={hInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                         <li, ke, y={hInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
                           <sp, a, n>{highlig, h, t}</sp, a, n>
@@ -365,7 +355,6 @@ const, AdvancedCybersecurityA, I = () => {
                     na, m, e: "Managed, Securit, y","
                     pri, c, e: "$59,9, 9, 9","
                     featur, e, s: ["Unlimited, endpoint, s", "Unlimited, log, storage", "24/7, SOC, monitoring", "Dedicated, analyst, s", "99.97% S, L, A"]"
-=======
               <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3">";
                 <DollarSign, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
                 Prici, n, g & Packag, e, s;
@@ -402,7 +391,6 @@ const, AdvancedCybersecurityA, I = () => {
                       {p, k, g.featur, e, s.m, a, p((featu, r, e, fInd, e, x) => (
                         <li, ke, y={fInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                         <li, ke, y={fInd, e, x} classNa, m, e="flex, item, s-start, ga, p-2">";
                           <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
                           <sp, a, n>{featu, r, e}</sp, a, n>
@@ -421,7 +409,6 @@ const, AdvancedCybersecurityA, I = () => {
                     <div, className="flex, item, s-center, ga, p-3, m, b-4">
                       <Shield, className="w-8 h-8, tex, t-r, e, d-4, 0, 0  />
                       <h3, className="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">🛡️ October, 2025, Security Initiati, v, e</h3>
-=======
               <div, className="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/40, vi, a-oran, g, e-9, 0, 0/40, t, o-yell, o, w-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-r, e, d-5, 0, 0/50">";
                 <div, className="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6">";
                   <div, className="fl, e, x-1">";
@@ -443,7 +430,6 @@ const, AdvancedCybersecurityA, I = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1  />
-=======
                     <ul, className="spa, c, e-y-2">";
                       <li, className="flex, item, s-start, ga, p-2">";
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1" />";
@@ -470,7 +456,6 @@ const, AdvancedCybersecurityA, I = () => {
                     >
                       Secure, Your, Enterprise;
                       <Shield, className="w-5 h-5  />
-=======
                       <Shield, className="w-5 h-5" />";
                     </Li, n, k>
                   </d, i, v>
@@ -491,7 +476,6 @@ const, AdvancedCybersecurityA, I = () => {
                 >
                   Schedule, Security, Assessment;
                   <Shield, className="w-5 h-5  />
-=======
                   <Shield, className="w-5 h-5" />";
                 </Li, n, k>
                 <Li, n, k

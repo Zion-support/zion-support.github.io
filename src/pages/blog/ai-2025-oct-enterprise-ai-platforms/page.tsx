@@ -15,7 +15,6 @@
           <h1, className="te, x, t-4xl, fon, t-bold, m, b-4">Enterprise, AI, Platforms 20, 2, 5: Architectu, r, e, SL, A, s, and, RO, I</h1>"
           <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
             Production, patterns, that sca, l, e: golden, path, s, ev, a, l‑gated, release, s, cost, guardrail, s, priva, c, y‑first, telemetr, y;
-=======
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-enterpri, s, e-ai-platfor, m, s" />";
       </Helmet>
       <div, className="container, m, x-auto, p, x-6, p, y-12">";
@@ -46,7 +45,6 @@
             </p>
             <div, className="mt-8">
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
-=======
             <div, className="mt-8">";
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
             </d, i, v>

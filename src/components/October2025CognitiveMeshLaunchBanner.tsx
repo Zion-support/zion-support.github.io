@@ -1,5 +1,4 @@
 import, Reac, t, { me, m, o } fr, o, m "rea, c, t";
-=======
 import, Reac, t, { me, m, o } fr, o, m "rea, c, t";';
 /**
  * October, 2025, Cognitive Mesh, Orchestration, Platform Launch, Banne, r;
@@ -24,7 +23,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
         <d, i, v
   classNa, m, e="absolute, to, p-1/2, lef, t-1/2 w-6, 0, h-60, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-flo, a, t"
           sty, l, e={{ animationDel, a, y: '4s' }};
-=======
           sty, l, e={{ animationDel, a, y: '2s' }}';
         ></d, i, v>
         <d, i, v
@@ -64,7 +62,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <li, className="flex, item, s-center, ga, p-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, p, x-4, p, y-2, rounde, d-lg">
               <Zap, className="w-5 h-5, tex, t-yell, o, w-3, 0, 0" ar, i, a-hidd, e, n="tr, u, e  />
               <span, className="te, x, t-white, fon, t-semibo, l, d">S, u, b-3ms, Latenc, y</sp, a, n>
-=======
             <Rocket, className="w-5 h-5, tex, t-yell, o, w-300, animat, e-boun, c, e" ar, i, a-hidd, e, n="tr, u, e" />";
             <span, className="te, x, t-white, fon, t-bold, tex, t-lg">";
               🚀 JUST, LAUNCHE, D - OCTOBER, 202, 5;
@@ -114,7 +111,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l="Return, on, investment">4, 2, 5%</p>
             <p, className="te, x, t-whi, t, e/80, tex, t-sm">ROI, in, 18 Mont, h, s</p>
             <p, className="te, x, t-gre, e, n-300, tex, t-xs, m, t-1">Fortune, 100, Client</p>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-10" ro, l, e="li, s, t" ar, i, a-lab, e, l="Platform, benefits, and achievemen, t, s">";
           <article, className="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0" ro, l, e="listit, e, m">";
             <p, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-2" ar, i, a-lab, e, l="Total, value, created">$1, 2, B</p>";
@@ -147,7 +143,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
   g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">"
             <li, className="flex, item, s-start, ga, p-3">
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  />
-=======
           <ul, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, lis, t-no, n, e">";
             <li, className="flex, item, s-start, ga, p-3">";
@@ -159,7 +154,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             </li>
             <li, className="flex, item, s-start, ga, p-3">
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  />
-=======
             <li, className="flex, item, s-start, ga, p-3">";
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
               <d, i, v>
@@ -169,7 +163,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             </li>
             <li, className="flex, item, s-start, ga, p-3">
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  />
-=======
             <li, className="flex, item, s-start, ga, p-3">";
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
               <d, i, v>
@@ -179,7 +172,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             </li>
             <li, className="flex, item, s-start, ga, p-3">
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e  />
-=======
             <li, className="flex, item, s-start, ga, p-3">";
               <CheckCircle, className="w-6 h-6, tex, t-gre, e, n-300, fle, x-shri, n, k-0, m, t-1" ar, i, a-hidd, e, n="tr, u, e" />";
               <d, i, v>
@@ -191,7 +183,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
         </secti, o, n>
         {/* Content, Card, s */}
         <nav, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10" ar, i, a-lab, e, l="Featured, content, links">"
-=======
         <nav, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10" ar, i, a-lab, e, l="Featured, content, links">";
           {/* Blog, Post, Card */}
           <Li, n, k
@@ -203,7 +194,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">
                 <Network, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">";
                 <Network, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e" />";
@@ -214,7 +204,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
               </d, i, v>
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-200, transitio, n-colo, r, s">";
               Cognitive, Mesh, Orchestratio
   n: The, Future, of Distributed, A, I
@@ -226,7 +215,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <span, className="flex, item, s-center, ga, p-2, tex, t-bl, u, e-300, fon, t-semibo, l, d">";
               <sp, a, n>Read, Articl, e</sp, a, n>
               <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
-=======
               <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
             </sp, a, n>
           </Li, n, k>
@@ -240,7 +228,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">
                 <TrendingUp, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">";
                 <TrendingUp, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e" />";
@@ -251,7 +238,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
               </d, i, v>
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-gre, e, n-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-gre, e, n-200, transitio, n-colo, r, s">";
               Global, FinTe, c
   h: $12, Billion, Value Creation, in, 18 Mont, h, s
@@ -263,7 +249,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <span, className="flex, item, s-center, ga, p-2, tex, t-gre, e, n-300, fon, t-semibo, l, d">";
               <sp, a, n>View, Case, Study</sp, a, n>
               <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
-=======
               <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
             </sp, a, n>
           </Li, n, k>
@@ -277,7 +262,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <div, className="flex, item, s-center, ga, p-3, m, b-4">
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">
                 <Zap, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e  />
-=======
             <div, className="flex, item, s-center, ga, p-3, m, b-4">";
               <div, className="p-3, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg" ar, i, a-hidd, e, n="tr, u, e">";
                 <Zap, className="w-6 h-6, tex, t-whi, t, e" ar, i, a-hidd, e, n="tr, u, e" />";
@@ -288,7 +272,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
               </d, i, v>
             </d, i, v>
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-200, transitio, n-colo, r, s">";
               Cognitive, Mesh, Platform Servic, e, s;
             </h3>
@@ -299,7 +282,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
             <span, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, fon, t-semibo, l, d">";
               <sp, a, n>Explore, Service, s</sp, a, n>
               <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e/>"
-=======
               <ArrowRight, className="w-4 h-4, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" ar, i, a-hidd, e, n="tr, u, e" />";
             </sp, a, n>
           </Li, n, k>
@@ -307,7 +289,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
         {/* Call, to, Action */}
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action">
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
         <div, className="te, x, t-cent, e, r" ro, l, e="regi, o, n" ar, i, a-lab, e, l="Call, to, action">";
           <div, className="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">";
             <Li, n, k
@@ -319,7 +300,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
               <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
               Schedule, Free, Consultation;
               <ArrowRight, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
-=======
               <Rocket, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />";
               Schedule, Free, Consultation;
               <ArrowRight, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />";
@@ -330,13 +310,11 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
               ar, i, a-lab, e, l="Learn, more, about Cognitive, Mesh, technology"
             >
               <Network, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e  />
-=======
               <Network, className="w-5 h-5" ar, i, a-hidd, e, n="tr, u, e" />";
               Learn, Mor, e;
             </Li, n, k>
           </d, i, v>
           <p, className="te, x, t-whi, t, e/80, tex, t-sm, m, t-6, ma, x-w-2xl, m, x-au, t, o">
-=======
           <p, className="te, x, t-whi, t, e/80, tex, t-sm, m, t-6, ma, x-w-2xl, m, x-au, t, o">";
             ✨ <stro, n, g>Limited, Time, Offer: </stro, n, g> Get, 5, 0% off, implementation, fees for, October, 2025 si, g, n-u, p, s. 
             Fre, e, 2-week, assessment, included. No, commitment, required.
@@ -347,7 +325,6 @@ const, October2025CognitiveMeshLaunchBanne, r: Rea, c, t.FC = me, m, o(() => {
   );
 });
 October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';
-=======
 October2025CognitiveMeshLaunchBann, e, r.displayNa, m, e = 'October2025CognitiveMeshLaunchBann, e, r';';
 export default October2025CognitiveMeshLaunchBanner;
 ;

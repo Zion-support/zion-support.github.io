@@ -14,7 +14,6 @@ impa, c, t: stri, n, g
 metri, c, s: {
 improveme, n, t: stri, n, g
 r, o, i: stri, n, g
-=======
 id: stri, n, g;
 sl, u, g: stri, n, g;
 tit, l, e: stri, n, g;
@@ -194,7 +193,6 @@ export, const, sept30BreakthroughArticles: BreakthroughArtic, l, e[] = [
       improveme, n, t: "95% prediction, accurac, y"
       r, o, i: "3, 5, 0% returns, improvemen, t"
       timefra, m, e: "5, weeks, to tradi, n, g"
-=======
     i
   d: "re, a, l-ti, m, e-ai-decisi, o, n-engin, e, s-20, 2, 5",";
     sl, u, g: "re, a, l-ti, m, e-ai-decisi, o, n-engin, e, s-20, 2, 5",";

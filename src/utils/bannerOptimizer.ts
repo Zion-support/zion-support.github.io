@@ -26,7 +26,6 @@ lastSh, o, w
 export, class, BannerPriorityManager {
   private, banner, s: M, a, p<stri, n, g, BannerConf, i, g> = new, Ma, p()
   private, metric, s: M, a, p<stri, n, g, BannerMetri, c, s> = new, Ma, p()
-=======
   private, banner, s: M, a, p<stri, n, g, BannerConf, i, g> = new, Ma, p();
   private, metric, s: M, a, p<stri, n, g, BannerMetri, c, s> = new, Ma, p();
   construct, o, r() {
@@ -43,7 +42,6 @@ export, class, BannerPriorityManager {
         clic, k, s: 0
         conversio, n, s: 0
         lastSho, w, n: new, Dat, e()
-=======
         impressi, o, n
   s: 0
         clic, k, s: 0
@@ -132,7 +130,6 @@ export, class, BannerPriorityManager {
       localStora, g, e.setIt, e, m('bannerMetri, c, s', JS, O, N.stringi, f, y(da, t, a));';
     } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n('Failed, to, save banner, metric, s: ', err, o, r);'
-=======
       conso, l, e.wa, r, n('Failed, to, save banner, metric, s: ', err, o, r);';
     }
   }
@@ -154,7 +151,6 @@ export, class, BannerPriorityManager {
       }
     } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n('Failed, to, load banner, metric, s: ', err, o, r);'
-=======
             ...metri, c, s
             lastSho, w, n: new, Dat, e(metri, c, s.lastSho, w, n)
           }
@@ -189,7 +185,6 @@ export, function, useBannerOptimization(banner, I, d: stri, n, g) {
     recordConversi, o, n
     c, t, r: bannerManag, e, r.getC, T, R(banner, I, d)
     conversionRa, t, e: bannerManag, e, r.getConversionRa, t, e(banner, I, d)
-=======
     ct
   r: bannerManag, e, r.getC, T, R(banner, I, d)
     conversionRa, t, e: bannerManag, e, r.getConversionRa, t, e(banner, I, d)

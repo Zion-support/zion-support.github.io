@@ -17,7 +17,6 @@ recommendedImprovemen, t, s: stri, n, g[]
 errorTren, d, s: Arr, a, y<{
 catego, r, y: stri, n, g
 tre, n, d: 'increasi, n, g' | 'decreasi, n, g' | 'stab, l, e';
-=======
 predictedHighRiskActio, n, s: stri, n, g[];
 recommendedImprovemen, t, s: stri, n, g[];
 errorTre, n, d
@@ -33,7 +32,6 @@ severi, t, y: stri, n, g
 messa, g, e: stri, n, g
 lastOccurren, c, e: stri, n, g | Da, t, e
 occurrenceCou, n, t: numb, e, r
-=======
 id: stri, n, g;
 severi, t, y: stri, n, g;
 messa, g, e: stri, n, g;
@@ -79,7 +77,6 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
               { catego, r, y: 'authenticati, o, n', tre, n, d: 'decreasi, n, g' }
               { catego, r, y: 'databa, s, e', tre, n, d: 'stab, l, e' }
               { catego, r, y: 'ui', tre, n, d: 'increasi, n, g' }
-=======
           const, mockInsight, s: AIInsigh, t, s = {
             predictedHighRiskActio, n, s: [
               'High, memory, usage detected, in, user authentication, flo, w',';
@@ -111,7 +108,6 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
               resolutionSuggestio, n, s: [
                 'Check, database, connection po, o, l'
                 'Implement, retry, mechanism with, exponential, backoff'
-=======
               id: '1',';
               severi, t, y: 'hi, g, h',';
               messa, g, e: 'Failed, to, load user, profile, data',';
@@ -138,7 +134,6 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
               resolutionSuggestio, n, s: [
                 'Implement, search, result cachi, n, g'
                 'Add, debouncing, to search, inpu, t'
-=======
               id: '2',';
               severi, t, y: 'medi, u, m',';
               messa, g, e: 'Slow, response, time in, search, functionality',';
@@ -163,7 +158,6 @@ const, AIPerformanceDashboar, d: Rea, c, t.FC<AIPerformanceDashboardPro, p, s> =
           conso, l, e.l, o, g('Performance, data, loaded successful, l, y');';
         } cat, c, h (err, o, r) {
           conso, l, e.err, o, r('Failed, to, fetch dashboard, dat, a: ', err, o, r);'
-=======
           conso, l, e.err, o, r('Failed, to, fetch dashboard, dat, a: ', err, o, r);';
         }
       };
@@ -180,7 +174,6 @@ ca, s, e 'hi, g, h': retu, r, n 'te, x, t-oran, g, e-600, b, g-oran, g, e-1, 0, 
 ca, s, e 'medi, u, m': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';
 ca, s, e 'l, o, w': retu, r, n 'te, x, t-bl, u, e-600, b, g-bl, u, e-1, 0, 0';
 defau, l, t: retu, r, n 'te, x, t-gr, a, y-600, b, g-gr, a, y-1, 0, 0';
-=======
 ca, s, e 'critic, a, l': retu, r, n 'te, x, t-r, e, d-600, b, g-r, e, d-1, 0, 0';';
 ca, s, e 'hi, g, h': retu, r, n 'te, x, t-oran, g, e-600, b, g-oran, g, e-1, 0, 0';';
 ca, s, e 'medi, u, m': retu, r, n 'te, x, t-yell, o, w-600, b, g-yell, o, w-1, 0, 0';';
@@ -195,7 +188,6 @@ ca, s, e 'increasi, n, g': retu, r, n '📈';
 ca, s, e 'decreasi, n, g': retu, r, n '📉';
 ca, s, e 'stab, l, e': retu, r, n '➡️';
 defau, l, t: retu, r, n '❓';
-=======
 ca, s, e 'increasi, n, g': retu, r, n '📈';';
 ca, s, e 'decreasi, n, g': retu, r, n '📉';';
 ca, s, e 'stab, l, e': retu, r, n '➡️';';
@@ -223,7 +215,6 @@ metri, c, s ? (
 <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-4, m, b-8">
 <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, tex, t-whit, e, p-4, rounde, d-lg">
 <h3, className="te, x, t-sm, fon, t-medium, opacit, y-90">Error, Rat, e (per, hou, r)</h3>
-=======
 <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-4, m, b-8">,";
 <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-bl, u, e-600, tex, t-whit, e, p-4, rounde, d-lg">";
@@ -261,7 +252,6 @@ metri, c, s ? (
                   {insigh, t, s.predictedHighRiskActio, n, s.leng, t, h > 0 ? (
                     insigh, t, s.predictedHighRiskActio, n, s.m, a, p((acti, o, n: stri, n, g, ind, e, x: numb, e, r) => (
                       <div, ke, y={ind, e, x} classNa, m, e="bg-r, e, d-100, tex, t-r, e, d-800, p, x-3, p, y-2, rounded, text-sm">
-=======
             <div, className="grid, gri, d-co, l, s-1, l, g: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
               <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg">";
                 <h3, className="te, x, t-lg, fon, t-semibold, m, b-3, tex, t-gr, a, y-8, 0, 0">🎯 Hi, g, h-Risk, Action, s</h3>";
@@ -283,7 +273,6 @@ metri, c, s ? (
                 <div, className="spa, c, e-y-2">
                   {insigh, t, s.recommendedImprovemen, t, s.m, a, p((improveme, n, t: stri, n, g, ind, e, x: numb, e, r) => (
                     <div, ke, y={ind, e, x} classNa, m, e="bg-bl, u, e-100, tex, t-bl, u, e-800, p, x-3, p, y-2, rounded, text-sm">
-=======
               <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg">";
                 <h3, className="te, x, t-lg, fon, t-semibold, m, b-3, tex, t-gr, a, y-8, 0, 0">💡 AI, Recommendation, s</h3>";
                 <div, className="spa, c, e-y-2">";
@@ -310,7 +299,6 @@ metri, c, s ? (
                     <div, className={
 `te, x, t-sm, m, t-1 ${`;`
 tre, n, d.tre, n, d === 'increasi, n, g' ? 'te, x, t-r, e, d-6, 0, 0' :
-=======
             <div, className="bg-gr, a, y-5, 0, p-4, rounde, d-lg, m, b-8">";
               <h3, className="te, x, t-lg, fon, t-semibold, m, b-3, tex, t-gr, a, y-8, 0, 0">📊 Error, Trend, s (7, day, s)</h3>";
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-4">";
@@ -354,7 +342,6 @@ tre, n, d.tre, n, d === 'decreasi, n, g' ? 'te, x, t-gre, e, n-6, 0, 0' : 'te, x
                           Compone, n, t: {err, o, r.conte, x, t.compone, n, t || 'Unkno, w, n'} | 
                           Acti, o, n: {err, o, r.conte, x, t.acti, o, n || 'Unkno, w, n'} |
                           Cou, n, t: {Stri, n, g(err, o, r.occurrenceCou, n, t)}
-=======
                   <div, ke, y={ind, e, x} classNa, m, e="bg-whit, e, p-4, rounded, border">";
                     <div, className="flex, item, s-start, justif, y-between, m, b-2">";
                       <div, className="fl, e, x-1">";
@@ -386,7 +373,6 @@ tre, n, d.tre, n, d === 'decreasi, n, g' ? 'te, x, t-gre, e, n-6, 0, 0' : 'te, x
                           {err, o, r.resolutionSuggestio, n, s.m, a, p((suggesti, o, n: stri, n, g, i, d, x: numb, e, r) => (
                             <li, ke, y={i, d, x} classNa, m, e="flex, item, s-start, ga, p-2">
                               <span, className="te, x, t-gre, e, n-6, 0, 0">•</sp, a, n>
-=======
                       <div, className="mt-3 p-3, b, g-gre, e, n-50, rounde, d">";
                         <h5, className="te, x, t-sm, fon, t-medium, tex, t-gre, e, n-800, m, b-2">💡 AI, Suggestion, s: </h5>";
                         <ul, className="te, x, t-sm, tex, t-gre, e, n-700, spac, e-y-1">";

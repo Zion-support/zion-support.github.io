@@ -38,7 +38,6 @@ th, i, s.initiali, z, e();
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;
     // Global, error, handler
   wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {;
-=======
     if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
     // Global, error, handler
   wind, o, w.addEventListen, e, r('err, o, r', (eve, n, t) => {';
@@ -55,7 +54,6 @@ th, i, s.initiali, z, e();
   wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (eve, n, t) => {;
       th, i, s.handleErr, o, r({
         messa, g, e: eve, n, t.reas, o, n?.messa, g, e || 'Unhandled, promise, rejection','
-=======
         catego, r, y: 'javascri, p, t'
       });
     });
@@ -69,7 +67,6 @@ th, i, s.initiali, z, e();
         u, r, l: wind, o, w.locati, o, n.hr, e, f
         severi, t, y: th, i, s.determineSeveri, t, y(eve, n, t.reas, o, n)
         catego, r, y: 'promi, s, e});
-=======
         catego, r, y: 'promi, s, e'
       });
     });
@@ -89,7 +86,6 @@ th, i, s.initiali, z, e();
     // Medium, severity, errors
   if (messa, g, e.includ, e, s('warni, n, g') || messa, g, e.includ, e, s('deprecat, e, d')) {;
       retu, r, n 'medi, u, m';
-=======
   private, determineSeverit, y(err, o, r: a, n, y): 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l' {';
     if (!err, o, r) retu, r, n 'l, o, w';';
     const, messag, e = err, o, r.messa, g, e?.toLowerCa, s, e() || '';';
@@ -116,7 +112,6 @@ th, i, s.initiali, z, e();
     // Log, critical, errors immediate, l, y
   if (errorIn, f, o.severi, t, y === 'critic, a, l') {;
       conso, l, e.err, o, r('Critical, Erro, r: ', errorIn, f, o);'
-=======
     if (errorIn, f, o.severi, t, y === 'critic, a, l') {';
       conso, l, e.err, o, r('Critical, Erro, r: ', errorIn, f, o);';
     }
@@ -143,7 +138,6 @@ th, i, s.initiali, z, e();
       u, r, l: typeof, windo, w !== 'undefin, e, d' ? wind, o, w.locati, o, n.hr, e, f : 'unkno, w, n','
       severi, t, y: 'medi, u, m','
       catego, r, y: 'rea, c, t','
-=======
     conso, l, e.l, o, g('Error, reporte, d: ', errorIn, f, o);';
   }
   public, logErro, r(

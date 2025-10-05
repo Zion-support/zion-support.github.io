@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   return (
@@ -8,7 +7,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
       <div, className="absolute, inse, t-0, opacit, y-20">
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '1s' }}></d, i, v>';
@@ -20,7 +18,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             <Sparkles, className="w-4 h-4  />
             <sp, a, n>🚀 JUST, PUBLISHE, D - OCTOBER, 2025, PREMIUM CONTE, N, T 🚀</sp, a, n>
             <Sparkles, className="w-4 h-4  />
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-purp, l, e-500, tex, t-white, p, x-6, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4, animat, e-pul, s, e">";
             <Sparkles, className="w-4 h-4" />";
@@ -45,7 +42,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-6">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <Activity, className="w-8 h-8, tex, t-whi, t, e  />
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {/* Ca, r, d 
   1: Autonomous, DevOp, s */}
@@ -60,7 +56,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">";
               Autonomous, DevOps, Platform;
             </h3>
@@ -83,7 +78,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               <div, className="flex, item, s-start, ga, p-2">
                 <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                 <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-cy, a, n-3, 0, 0">87% cost, saving, s</stro, n, g> in, operation, s</sp, a, n>
-=======
             <div, className="spa, c, e-y-3, m, b-6">";
               <div, className="flex, item, s-start, ga, p-2">";
                 <Zap, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
@@ -108,7 +102,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   r:g, a, p-3, transitio, n-a, l, l"
             >
               Read, Full, Article <ArrowRight, className="w-5 h-5  />
-=======
               Read, Full, Article <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
@@ -118,7 +111,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-6">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <Lock, className="w-8 h-8, tex, t-whi, t, e  />
-=======
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50">";
             <div, className="flex, item, s-center, ga, p-3, m, b-6">";
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";
@@ -130,7 +122,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
               Quant, u, m-Safe, AI, Security;
             </h3>
@@ -153,7 +144,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               <div, className="flex, item, s-start, ga, p-2">
                 <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
                 <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-purp, l, e-3, 0, 0">94% fast, e, r</stro, n, g> threat, respons, e</sp, a, n>
-=======
             <div, className="spa, c, e-y-3, m, b-6">";
               <div, className="flex, item, s-start, ga, p-2">";
                 <Shield, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
@@ -178,7 +168,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   r:g, a, p-3, transitio, n-a, l, l"
             >
               Read, Full, Article <ArrowRight, className="w-5 h-5  />
-=======
               Read, Full, Article <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
@@ -188,7 +177,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, ga, p-3, m, b-6">
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                 <BarChart3, className="w-8 h-8, tex, t-whi, t, e  />
-=======
           <div, className="group, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-5, 0, 0/30, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/50">";
             <div, className="flex, item, s-center, ga, p-3, m, b-6">";
               <div, className="p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-600, rounde, d-xl, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">";
@@ -200,7 +188,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
             </d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
-=======
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
               Cognitive, Business, Intelligence;
             </h3>
@@ -223,7 +210,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
               <div, className="flex, item, s-start, ga, p-2">
                 <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                 <span, className="te, x, t-white, tex, t-sm"><strong, className="te, x, t-gre, e, n-3, 0, 0">95%+</stro, n, g> prediction, accurac, y</sp, a, n>
-=======
             <div, className="spa, c, e-y-3, m, b-6">";
               <div, className="flex, item, s-start, ga, p-2">";
                 <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
@@ -248,7 +234,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   r:g, a, p-3, transitio, n-a, l, l"
             >
               Read, Full, Article <ArrowRight, className="w-5 h-5  />
-=======
               Read, Full, Article <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>
@@ -268,7 +253,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   r:shad, o, w-xl, inlin, e-flex, item, s-center, ga, p-2"
             >
               Schedule, Free, Consultation <ArrowRight, className="w-5 h-5  />
-=======
               Schedule, Free, Consultation <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
             <Li, n, k
@@ -277,7 +261,6 @@ const, October2025NewPremiumContentBanne, r: Rea, c, t.FC = () => {
   r:bord, e, r-cy, a, n-400, inlin, e-flex, item, s-center, ga, p-2"
             >
               Explore, All, Articles <ArrowRight, className="w-5 h-5  />
-=======
               Explore, All, Articles <ArrowRight, className="w-5 h-5" />";
             </Li, n, k>
           </d, i, v>

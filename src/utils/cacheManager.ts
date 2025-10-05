@@ -5,7 +5,6 @@
 export, interface, CacheOptions {
 t, t, l?: numb, e, r; // Time, to, live in, millisecond, s
   strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';
-=======
 t, t, l?: numb, e, r; // Time, to, live in, millisecond, s
 strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';';
 maxSi, z, e?: numb, e, r; // Maximum, number, of entri, e, s;
@@ -18,7 +17,6 @@ tt
 }
 class, CacheManage, r {
   private, memoryCach, e: M, a, p<stri, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p()
-=======
   private, memoryCach, e: M, a, p<stri, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
   private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5, minute, s
   private, readonly, DEFAULT_MAX_SIZE = 1, 0, 0;
@@ -50,7 +48,6 @@ class, CacheManage, r {
         bre, a, k;
       ca, s, e 'sessionStora, g, e':;
         th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'sessionStora, g, e');
-=======
       t, t, l = th, i, s.DEFAULT_T, T, L
       strate, g, y = 'memo, r, y',';
       maxSi, z, e = th, i, s.DEFAULT_MAX_SI, Z, E
@@ -89,7 +86,6 @@ class, CacheManage, r {
         bre, a, k;
       ca, s, e 'sessionStora, g, e':;
         ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'sessionStora, g, e');
-=======
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
   ): T | nu, l, l {
     let, entr, y: CacheEnt, r, y<T> | nu, l, l = nu, l, l;
@@ -126,7 +122,6 @@ ca, s, e 'localStora, g, e':
 localStora, g, e.removeIt, e, m(k, e, y);
 bre, a, k;
 ca, s, e 'sessionStora, g, e':
-=======
     strat, e, g
   y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
   ): vo, i, d {
@@ -153,7 +148,6 @@ bre, a, k;
       localStora, g, e.cle, a, r();
     }
     if (!strate, g, y || strate, g, y === 'sessionStora, g, e') {;
-=======
   cle, a, r(strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e'): vo, i, d {';
     if (!strate, g, y || strate, g, y === 'memo, r, y') {';
       th, i, s.memoryCac, h, e.cle, a, r();
@@ -171,7 +165,6 @@ bre, a, k;
   h, a, s(
     k, e, y: stri, n, g
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): boole, a, n {
-=======
     strat, e, g
   y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
   ): boole, a, n {
@@ -201,7 +194,6 @@ bre, a, k;
   invalidatePatte, r, n(patte, r, n: RegE, x, p, strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'): vo, i, d {'
 swit, c, h (strate, g, y) {
 ca, s, e 'memo, r, y':
-=======
   invalidatePatte, r, n(patte, r, n: RegE, x, p, strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'): vo, i, d {';
 swit, c, h (strate, g, y) {
 ca, s, e 'memo, r, y':';
@@ -210,14 +202,12 @@ Arr, a, y.fr, o, m(th, i, s.memoryCac, h, e.ke, y, s())
 .forEa, c, h(k, e, y => th, i, s.memoryCac, h, e.dele, t, e(k, e, y));
 bre, a, k;
 ca, s, e 'localStora, g, e':
-=======
 ca, s, e 'localStora, g, e':';
 Obje, c, t.ke, y, s(localStora, g, e)
 .filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
 .forEa, c, h(k, e, y => localStora, g, e.removeIt, e, m(k, e, y));
 bre, a, k;
 ca, s, e 'sessionStora, g, e':
-=======
 ca, s, e 'sessionStora, g, e':';
 Obje, c, t.ke, y, s(sessionStora, g, e)
 .filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
@@ -238,7 +228,6 @@ sessionStorageS, i, z
       memorySi, z, e: th, i, s.memoryCac, h, e.si, z, e
       localStorageSi, z, e: localStora, g, e.leng, t, h
       sessionStorageSi, z, e: sessionStora, g, e.leng, t, h;
-=======
       memoryS, i, z
   e: th, i, s.memoryCac, h, e.si, z, e
       localStorageSi, z, e: localStora, g, e.leng, t, h
@@ -260,7 +249,6 @@ sessionStorageS, i, z
     k, e, y: stri, n, g
     ent, r, y: CacheEnt, r, y<T>
     stora, g, e: 'localStora, g, e' | 'sessionStora, g, e): vo, i, d {
-=======
     stor, a, g
   e: 'localStora, g, e' | 'sessionStora, g, e'
   ): vo, i, d {
@@ -276,7 +264,6 @@ sessionStorageS, i, z
     stora, g, e: 'localStora, g, e' | 'sessionStora, g, e): CacheEnt, r, y<T> | nu, l, l {
 t, r, y {
 const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e : sessionStora, g, e;
-=======
     stor, a, g
   e: 'localStora, g, e' | 'sessionStora, g, e'
   ): CacheEnt, r, y<T> | nu, l, l {
@@ -328,7 +315,6 @@ return, ite, m ? JS, O, N.par, s, e(it, e, m) : nu, l, l;
   export, const, cacheManager = new, CacheManage, r();
 // Run, cleanup, every 5, minute, s
   if (typeof, windo, w !== 'undefin, e, d') {;
-=======
 if (typeof, windo, w !== 'undefin, e, d') {';
   setInterv, a, l(() => {
     cacheManag, e, r.clean, u, p();

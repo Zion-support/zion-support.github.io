@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-=======
 import React from "react";';
 impo, r, t {
 Helm, e, t;
@@ -24,7 +23,6 @@ const, SEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
   ogTy, p, e = 'websi, t, e'
   twitterCa, r, d = 'summary_large_ima, g, e'
   structuredDa, t, a;
-=======
 const, SEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
   tit, l, e = 'Zion, Tech, Group — AI, Micro, Saa, S, and, IT, Services',';
   descripti, o, n = 'Enterpri, s, e-grade, A, I, micro, Saa, S, and, IT, solutions. Transform, your, business with, cuttin, g-edge, technology, and automati, o, n.',';
@@ -64,7 +62,6 @@ const, SEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       'htt, p, s://linked, i, n.c, o, m/compa, n, y/zi, o, n-te, c, h-gro, u, p'
       'htt, p, s: //twitt, e, r.c, o, m/ziontechgro, u, p'
     ]
-=======
     '@conte, x, t': 'ht, t, p
   s: //sche, m, a.o, r, g',';
     '@ty, p, e': 'Organizati, o, n',';
@@ -116,7 +113,6 @@ const, SEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
       <link, re, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.googleap, i, s.c, o, m/>"
       <link, re, l="preconne, c, t" hr, e, f="htt, p, s://fon, t, s.gstat, i, c.c, o, m" crossOrig, i, n="anonymo, u, s/>"
       <link, re, l="d, n, s-prefet, c, h" hr, e, f="//w, w, w.goog, l, e-analyti, c, s.c, o, m  />
-=======
       <meta name="descripti, o, n" content={descripti, o, n} />";
       <meta name="keywor, d, s" content={keywor, d, s} />";
       <link, re, l="canonic, a, l" hr, e, f={fullCanonicalU, r, l} />";

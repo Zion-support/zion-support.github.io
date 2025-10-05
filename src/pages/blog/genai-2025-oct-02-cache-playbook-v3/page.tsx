@@ -14,7 +14,6 @@ export, default, function CachePlaybook, V, 3(): Rea, c, t.J, S, X.Eleme, n, t {
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Cache, Playbook v3</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Semant, i, c + Tiered, Cache, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-02-cac, h, e-playbo, o, k-v3"
          />
       </Helmet>
@@ -33,7 +32,6 @@ export, default, function CachePlaybook, V, 3(): Rea, c, t.J, S, X.Eleme, n, t {
         </d, i, v>
         <div, className="mt-8">
           <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
-=======
         <div, className="mt-8">";
           <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
         </d, i, v>

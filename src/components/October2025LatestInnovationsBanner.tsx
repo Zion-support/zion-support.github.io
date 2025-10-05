@@ -19,7 +19,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-white, m, b-4">"
             <span, className="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-4, 0, 0">
-=======
     <div, className="relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-indi, g, o-5, 0, 0/30">";
       {/* Animated, background, elements */};
       <div, className="absolute, inse, t-0, opacit, y-20">";
@@ -45,7 +44,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">
             🚀 <strong, className="te, x, t-whi, t, e">JUST, RELEASED, TODA
   Y: </stro, n, g> Deploy, enterpris, e-grade, AI, governance achievi, n, g "
-=======
           <p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-au, t, o">";
             🚀 <strong, className="te, x, t-whi, t, e">JUST, RELEASED, TODAY: </stro, n, g> Deploy, enterpris, e-grade, AI, governance achievi, n, g ";
             <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d"> 99.9% complian, c, e</sp, a, n>, harness, quantu, m-enhanced, AI, with ";
@@ -56,7 +54,6 @@ const, October2025LatestInnovationsBanne, r = () => {
         </d, i, v>
         {/* Feature, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
           {/* Ca, r, d 
   1: AI, Governanc, e */}
@@ -67,7 +64,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           >
             <div, className="absolute, to, p-4, righ, t-4">
               <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
-=======
             <div, className="absolute, to, p-4, righ, t-4">";
               <Shield, className="h-8 w-8, tex, t-emera, l, d-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
             </d, i, v>
@@ -77,7 +73,6 @@ const, October2025LatestInnovationsBanne, r = () => {
               </sp, a, n>
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s">";
                 AI, Governanc, e & Compliance, Framework, 2025;
               </h3>
@@ -99,7 +94,6 @@ const, October2025LatestInnovationsBanne, r = () => {
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-3, transitio, n-a, l, l">"
               Read, Full, Guide <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               Read, Full, Guide <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
@@ -113,7 +107,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           >
             <div, className="absolute, to, p-4, righ, t-4">
               <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
-=======
             <div, className="absolute, to, p-4, righ, t-4">";
               <Zap, className="h-8 w-8, tex, t-viol, e, t-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
             </d, i, v>
@@ -123,7 +116,6 @@ const, October2025LatestInnovationsBanne, r = () => {
               </sp, a, n>
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">";
                 Quant, u, m-Enhanced, AI, Hybrid Systems, 202, 5;
               </h3>
@@ -144,7 +136,6 @@ const, October2025LatestInnovationsBanne, r = () => {
             </ul>
             <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">"
               Explore, Quantum, AI <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               Explore, Quantum, AI <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
             </d, i, v>
@@ -158,7 +149,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           >
             <div, className="absolute, to, p-4, righ, t-4">
               <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e/>"
-=======
             <div, className="absolute, to, p-4, righ, t-4">";
               <Building2, className="h-8 w-8, tex, t-indi, g, o-400, grou, p-hov, e, r: anima, t, e-pul, s, e" />";
             </d, i, v>
@@ -168,7 +158,6 @@ const, October2025LatestInnovationsBanne, r = () => {
               </sp, a, n>
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-ho, v, e
   r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-300, transitio, n-colo, r, s">";
                 Autonomous, Enterprise, Orchestration Platform, 202, 5;
               </h3>
@@ -190,7 +179,6 @@ const, October2025LatestInnovationsBanne, r = () => {
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-ho, v, e
   r: g, a, p-3, transitio, n-a, l, l">"
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="flex, item, s-center, tex, t-indi, g, o-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l">";
               Discover, Platfor, m <ArrowRight, className="h-4 w-4, m, l-2, grou, p-ho, v, e
   r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
@@ -206,7 +194,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           >
             <sp, a, n>Explore, All, Latest AI, Innovation, s</sp, a, n>
             <ArrowRight, className="h-5 w-5  />
-=======
             <ArrowRight, className="h-5 w-5" />";
           </Li, n, k>
         </d, i, v>
@@ -215,7 +202,6 @@ const, October2025LatestInnovationsBanne, r = () => {
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">
             💡 <strong, className="te, x, t-whi, t, e">Combined, Impac, t: </stro, n, g> These, three, innovations deliv, e, r;
             <span, className="te, x, t-gre, e, n-400, fon, t-semibo, l, d"> $73, 2, M+ in, total, annual val, u, e</sp, a, n> through, enhanced, governance;
-=======
         <div, className="mt-8, tex, t-cent, e, r">";
           <p, className="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">";
             💡 <strong, className="te, x, t-whi, t, e">Combined, Impa, c

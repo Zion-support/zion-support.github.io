@@ -103,7 +103,6 @@ export, const, october2025Breakthroughs: BlogPo, s, t[] = [
     featur, e, d: tr, u, e
     valuePropositi, o, n: '$127M, annual, savings'
   }
-=======
     sl, u, g: 'ai-20, 2, 5-o, c, t-01-neur, a, l-architectu, r, e-evoluti, o, n-breakthrou, g, h',';
     tit, l, e: 'Neural, Architecture, Evolution 20, 2, 5',';
     descripti, o, n: 'Se, l, f-designing, AI, models achieving, 1, 0,000x, faster, development, 97% accuracy, improvemen, t, a, n, d $25M, annual, savings through, autonomous, model evoluti, o, n.',';
@@ -268,7 +267,6 @@ export, const, allBlogPosts: BlogPo, s, t[] = [
     featur, e, d: tr, u, e
     valuePropositi, o, n: 'Instant, reversibilit, y, resilient, release, s'
   }
-=======
 export, const, allBlogPosts: BlogPo, s, t[] = [
   ...october2025Breakthroug, h, s
   // Newly, added, October 2025, post, s;
@@ -412,7 +410,6 @@ export, const, blogStats = {
   categori, e, s: getAllCategori, e, s().leng, t, h
   ta, g, s: getAllTa, g, s().leng, t, h
   totalVal, u, e: getTotalValuePropositi, o, n()
-=======
   totalPo, s, t
   s: allBlogPos, t, s.leng, t, h
   featuredPos, t, s: getFeaturedPos, t, s().leng, t, h

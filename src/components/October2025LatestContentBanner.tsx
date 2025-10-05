@@ -20,7 +20,6 @@ const, October2025LatestContentBanne, r = () => {
       descripti, o, n: "Revolutionary, techniques, for simultaneous, tex, t, visi, o, n, and, audio, processing in, productio, n","
       ic, o, n: Z, a, p
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-re, a, l-ti, m, e-multimod, a, l-processi, n, g-revoluti, o, n","
-=======
       tit, l, e: "Advanced, GenAI, Orchestration Platfo, r, m",";
       descripti, o, n: "Master, mult, i-model, coordination, and intelligent, workflow, automation at, enterprise, scale",";
       ic, o, n: Bra, i, n
@@ -58,7 +57,6 @@ const, October2025LatestContentBanne, r = () => {
             <span, className="te, x, t-viol, e, t-300, fon, t-semibo, l, d">NEW, CONTEN, T - OCTOBER, 202, 5</sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, vi, a-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-viol, e, t-6, 0, 0/20, t, o-cy, a, n-6, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">";
             <Sparkles, className="w-5 h-5, tex, t-viol, e, t-400, animat, e-pul, s, e" />";
@@ -73,7 +71,6 @@ const, October2025LatestContentBanne, r = () => {
         </d, i, v>
         {/* Articles, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
           {articl, e, s.m, a, p((artic, l, e, i, d, x) => {
             const, IconComponen, t = artic, l, e.ic, o, n;
@@ -88,7 +85,6 @@ const, October2025LatestContentBanne, r = () => {
                   <IconComponent, className="w-6 h-6, tex, t-whi, t, e  />
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">"
-=======
                   <IconComponent, className="w-6 h-6, tex, t-whi, t, e" />";
                 </d, i, v>
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-viol, e, t-300, transitio, n-colo, r, s">";
@@ -100,7 +96,6 @@ const, October2025LatestContentBanne, r = () => {
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                   <sp, a, n>Read, Mor, e</sp, a, n>
                   <ArrowRight, className="w-4 h-4  />
-=======
                 <div, className="flex, item, s-center, ga, p-2, tex, t-viol, e, t-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                   <sp, a, n>Read, Mor, e</sp, a, n>
                   <ArrowRight, className="w-4 h-4" />";
@@ -113,7 +108,6 @@ const, October2025LatestContentBanne, r = () => {
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">"
           <div, className="te, x, t-cent, e, r">
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, b, g-sla, t, e-8, 0, 0/30, backdro, p-bl, u, r-sm, border, border-sla, t, e-700, rounde, d-x, l, p-8">";
           <div, className="te, x, t-cent, e, r">";
             <div, className="te, x, t-3xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-viol, e, t-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">";
@@ -149,7 +143,6 @@ const, October2025LatestContentBanne, r = () => {
           >
             Explore, All, Articles;
             <ArrowRight, className="w-5 h-5  />
-=======
             <ArrowRight, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>

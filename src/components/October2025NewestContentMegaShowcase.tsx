@@ -25,7 +25,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
       val, u, e: "$5.7B","
       metr, i, c: "58,3, 6, 0% R, O, I","
       li, n, k: "/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-symbol, i, c-reasoni, n, g-syste, m, s","
-=======
       ic, o, n: <Network, className="w-8 h-8" />,";
       tit, l, e: "Autonomous, Mesh, Intelligence Platfo, r, m",";
       descripti, o, n: "Se, l, f-organizing, distributed, AI networks, with, 99.9, 9, 7% upti, m, e",";
@@ -60,7 +59,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_rig, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]/>"
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e  />
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0  />
-=======
       <div, className="absolute, inse, t-0">";
         <div, className="absolute, inse, t-0, b, g-[line, a, r-gradie, n, t(to_rig, h, t,#4f4f4f2e_1, p, x,transparent_1, p, x),line, a, r-gradie, n, t(to_bott, o, m,#4f4f4f2e_1, p, x,transparent_1, p, x)] bg-[si, z, e: 64px_64, p, x]" />";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />";
@@ -74,7 +72,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
             <span, className="te, x, t-purp, l, e-300, fon, t-semibo, l, d">JUST, PUBLISHE, D • OCTOBE, R, 1, 20, 2, 5</sp, a, n>
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-purp, l, e-200, t, o-cy, a, n-200, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
         <div, className="te, x, t-center, m, b-16, animat, e-fa, d, e-in">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-purp, l, e-5, 0, 0/30, m, b-6">";
             <Sparkles, className="w-5 h-5, tex, t-purp, l, e-4, 0, 0" />";
@@ -90,7 +87,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
             <div, className="flex, item, s-center, ga, p-2">
               <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0  />
               <span, className="te, x, t-gre, e, n-400, fon, t-bo, l, d">$26.8B, Combined, Value</sp, a, n>
-=======
           <div, className="flex, fle, x-wrap, justif, y-center, ga, p-6, tex, t-lg">";
             <div, className="flex, item, s-center, ga, p-2">";
               <TrendingUp, className="w-5 h-5, tex, t-gre, e, n-4, 0, 0" />";
@@ -106,7 +102,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
         </d, i, v>
         {/* Content, Gri, d */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {newConte, n, t.m, a, p((it, e, m, ind, e, x) => (
             <Li, n, k
@@ -118,14 +113,12 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
               {/* Ic, o, n */}
               <div, className={`inli, n, e-fle, x, p-4, rounde, d-xl, b, g-gradie, n, t-to-br ${it, e, m.gradie, n, t} mb-6, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`}>`;`
                 <div, className="te, x, t-whi, t, e">
-=======
                 <div, className="te, x, t-whi, t, e">";
                   {it, e, m.ic, o, n}
                 </d, i, v>
               </d, i, v>
               {/* Tit, l, e */}
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">"
-=======
               <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">";
                 {it, e, m.tit, l, e}
               </h3>
@@ -148,7 +141,6 @@ export, default, function October2025NewestContentMegaShowca, s, e(): vo, i, d {
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">"
                 <sp, a, n>Read, Complete, Guide</sp, a, n>
                 <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-=======
               <div, className="flex, item, s-center, ga, p-2, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">";
                 <sp, a, n>Read, Complete, Guide</sp, a, n>
                 <ArrowRight, className="w-5 h-5, grou, p-ho, v, e

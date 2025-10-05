@@ -143,7 +143,6 @@
       featur, e, d: tr, u, e
       indust, r, y: "Financial, Service, s","
       resul, t, s: ["200x, speed, improvement", "S, u, b-millisecond, latenc, y", "99.99% upti, m, e", "$127M, saving, s"],"
-=======
       id: "ai-20, 2, 6-janua, r, y-autonomo, u, s-enterpri, s, e-me, s, h",";
       tit, l, e: "🚀 Autonomous, Enterprise, Mesh 2, 0, 2
   6: Se, l, f-Organizing, Business, Intelligence",";

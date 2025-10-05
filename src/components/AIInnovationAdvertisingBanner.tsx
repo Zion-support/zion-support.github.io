@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, AIInnovationAdvertisingBanne, r: Rea, c, t.FC = () => {
 return (
@@ -49,7 +48,6 @@ Get, early, access to, our, breakthrough AI, technologies, and transform, your, 
               ].m, a, p((featu, r, e, ind, e, x) => (
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-4 p-4, b, g-whi, t, e/5, rounde, d-xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"
                   <div, className="te, x, t-3, x, l">{featu, r, e.ic, o, n}</d, i, v>
-=======
 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">,";
 {/* Left, Sid, e - Featur, e, s */
 }
@@ -128,7 +126,6 @@ Get, early, access to, our, breakthrough AI, technologies, and transform, your, 
               <div, className="flex, item, s-center, ga, p-3">
                 <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>
                 <span, className="te, x, t-gr, a, y-3, 0, 0">ROI, Guarante, e: 3, 0, 0%+ in, 6, months</sp, a, n>"
-=======
               <div, className="flex, item, s-center, ga, p-3">";
                 <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
                 <span, className="te, x, t-gr, a, y-3, 0, 0">ROI, Guarante, e: 3, 0, 0%+ in, 6, months</sp, a, n>";
@@ -177,7 +174,6 @@ Get, early, access to, our, breakthrough AI, technologies, and transform, your, 
                 compa, n, y: 'Leading, Healthcare, System','
                 resu, l, t: '99.9% uptime, achieve, d','
                 testimoni, a, l: 'Me, t, a-cognitive, AI, improved our, decisio, n-making, accuracy, by 95%}
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
             {[
               {

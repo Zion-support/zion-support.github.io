@@ -13,31 +13,11 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflict markers
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Split content into lines
-        lines = content.split('\n')
-        resolved_lines = []
-        i = 0
-        
-        while i < len(lines):
-            line = lines[i]
-            
-            if line.strip() == '<<<<<<< HEAD':
-                # Start of conflict - skip until =======
-                i += 1
-                while i < len(lines) and lines[i].strip() != '=======':
-                    i += 1
-                if i < len(lines):
-                    i += 1  # Skip =======
-                    # Take the incoming changes (after =======)
-                    while i < len(lines) and lines[i].strip() != '>>>>>>> ':
+        if '
                         resolved_lines.append(lines[i])
                         i += 1
                     if i < len(lines):
-                        i += 1  # Skip >>>>>>> 
-                else:
+                        i += 1  # Skip                 else:
                     break
             else:
                 resolved_lines.append(line)
@@ -71,8 +51,7 @@ def main():
                 try:
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
-                        if '<<<<<<< HEAD' in content:
-                            conflict_files.append(file_path)
+                        if '                            conflict_files.append(file_path)
                 except:
                     continue
     

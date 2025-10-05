@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 interface, ComprehensivePromoBannerProp, s {
 varia, n, t?: 'he, r, o' | 'compa, c, t' | 'featur, e, d';
@@ -9,7 +8,6 @@ classNa, m, e?: stri, n, g;
 const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, s> = ({ 
   varia, n, t = 'he, r, o'
   showCou, n, t = 4;
-=======
 const, ComprehensivePromoBann, e
   r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, s> = ({ 
   varia, n, t = 'he, r, o', ';
@@ -22,7 +20,6 @@ const, ComprehensivePromoBann, e
     return (
       <div, className={`bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-6 ${classNa, m, e}`}>`;`
         <div, className="flex, item, s-center, justif, y-betwe, e, n">
-=======
   if (varia, n, t === 'compa, c, t') {';
     return (
       <div, className={`bg-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-6 ${classNa, m, e}`}>`;`
@@ -41,7 +38,6 @@ const, ComprehensivePromoBann, e
           >
             Explore, No, w;
             <ArrowRight, className="w-5 h-5  />
-=======
             <ArrowRight, className="w-5 h-5" />";
           </Li, n, k>
         </d, i, v>
@@ -55,7 +51,6 @@ const, ComprehensivePromoBann, e
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <Sparkles, className="w-8 h-8, tex, t-yell, o, w-3, 0, 0  />
             <h2, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Latest, Innovation, s</h2>
-=======
   if (varia, n, t === 'featur, e, d') {';
     return (
       <div, className={`bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidd, e, n ${classNa, m, e}`}>`;`
@@ -76,7 +71,6 @@ const, ComprehensivePromoBann, e
               <p, className="te, x, t-gr, a, y-600, m, b-4">{artic, l, e.descripti, o, n}</p>
               <Link, t, o={artic, l, e.li, n, k} classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2">"
                 Read, Mor, e <ArrowRight, className="w-4 h-4  />
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6 p-8">";
           {latestArticl, e, s.sli, c, e(0, 2).m, a, p((artic, l, e) => (
             <div, ke, y={artic, l, e.id} classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-x, l, p-6, hove, r: shad, o, w-lg, transitio, n-a, l, l">";
@@ -106,7 +100,6 @@ const, ComprehensivePromoBann, e
           </h2>
           <p, className="te, x, t-xl, tex, t-purp, l, e-200, ma, x-w-3xl, m, x-au, t, o">
             Multimodal, A, I, Blockchain, Integratio, n, Green, A, I, Auto, M, L, Predictive, Maintenanc, e;
-=======
       <div, className="max-w-6xl mx-auto">";
         <div, className="te, x, t-center, m, b-10">";
           <div, className="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6">";
@@ -126,7 +119,6 @@ const, ComprehensivePromoBann, e
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2">
               <Sparkles, className="w-6 h-6, tex, t-yell, o, w-3, 0, 0  />
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">";
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2">";
@@ -150,7 +142,6 @@ const, ComprehensivePromoBann, e
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2">
               <Zap, className="w-6 h-6, tex, t-gre, e, n-3, 0, 0  />
-=======
           <div, className="bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6">";
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, flex, items-center, ga, p-2">";
               <Zap, className="w-6 h-6, tex, t-gre, e, n-3, 0, 0" />";
@@ -179,7 +170,6 @@ const, ComprehensivePromoBann, e
           >
             Explore, All, Content;
             <ArrowRight, className="w-6 h-6  />
-=======
             <ArrowRight, className="w-6 h-6" />";
           </Li, n, k>
         </d, i, v>

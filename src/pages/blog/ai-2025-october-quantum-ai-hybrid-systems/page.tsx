@@ -22,7 +22,6 @@ const, QuantumAIHybrid202, 5 = () => {
             </d, i, v>
             <h1, className="te, x, t-4xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
               Quant, u, m-AI, Hybrid, Systems 20, 2, 5: <span, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
         <meta name="descripti, o, n" content="Discover, how, quantum-AI, hybrid, systems are, revolutionizing, enterprise computi, n, g. Learn, implementation, strategies, re, a, l-world, application, s, and, ROI, optimization for, 1000x, processing speed, gain, s." />";
         <meta, propert, y="og: tit, l, e" content="Quant, u, m-AI, Hybrid, Systems 20, 2, 5: Practical, Nea, r-Term, Implementatio, n" />";
         <meta, propert, y="o
@@ -64,7 +63,6 @@ const, QuantumAIHybrid202, 5 = () => {
                 <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6, m, b-6">
                   <p, className="te, x, t-white, tex, t-lg, leadin, g-relax, e, d">
                     Quant, u, m-AI, hybrid, systems are, no, longer theoretic, a, l—th, e, y're, deliverin, g <stro, n, g>1000x, processing, speed</stro, n, g>
-=======
             <p, className="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, leadin, g-relax, e, d">";
               Discover, how, quantum-AI, hybrid, systems are, revolutionizing, enterprise computi, n, g. Learn, implementation, strategies
               re, a, l-world, application, s, and, ROI, optimization for, 1000x, processing speed, gain, s.
@@ -90,7 +88,6 @@ const, QuantumAIHybrid202, 5 = () => {
                   <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6, tex, t-cent, e, r">
                     <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2">100, 0, x</d, i, v>
                     <div, className="te, x, t-white, tex, t-sm">Processing, Spee, d</d, i, v>
-=======
                 <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
                   <div, className="bg-whi, t, e/10, rounde, d-x, l, p-6, tex, t-cent, e, r">";
                     <div, className="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2">100, 0, x</d, i, v>";
@@ -130,7 +127,6 @@ const, QuantumAIHybrid202, 5 = () => {
                     <li, className="flex, item, s-sta, r, t">
                       <CheckCircle, className="w-5 h-5, tex, t-emera, l, d-400, m, r-3, m, t-0.5, fle, x-shri, n, k-0  />
                       <span, className="te, x, t-whi, t, e">Machine, Learnin, g: Quant, u, m-enhanced, neural, networks</sp, a, n>"
-=======
               <section, className="mb-12">";
                 <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Re, a, l-World, Quantu, m-AI, Application, s</h2>";
                 <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">";
@@ -170,7 +166,6 @@ const, QuantumAIHybrid202, 5 = () => {
                   </p>
                   <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
                   <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
                     <Li, n, k
   to="/conta, c, t"
@@ -179,7 +174,6 @@ const, QuantumAIHybrid202, 5 = () => {
                     >
                       Explore, Quantu, m-AI, Solution, s;
                       <ArrowRight, className="w-5 h-5  />
-=======
                       <ArrowRight, className="w-5 h-5" />";
                     </Li, n, k>
                     <Li, n, k

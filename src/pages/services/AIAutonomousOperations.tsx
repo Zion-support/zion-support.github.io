@@ -6,7 +6,6 @@ const, AIAutonomousOperation, s: Rea, c, t.FC = () => {
         <div, className="te, x, t-center, m, b-16">
           <h1, className="te, x, t-4x, l, m
   d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
 import React from "react";';
 const, AIAutonomousOperation, s: Rea, c, t.FC = () => {
   return (
@@ -28,7 +27,6 @@ const, AIAutonomousOperation, s: Rea, c, t.FC = () => {
             <div, className="te, x, t-6xl, m, b-6">🤖</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Se, l, f-Managing, System, s</h3>
             <p, className="te, x, t-gr, a, y-300, m, b-6">
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hov, e
   r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
@@ -42,7 +40,6 @@ const, AIAutonomousOperation, s: Rea, c, t.FC = () => {
             <div, className="te, x, t-6xl, m, b-6">⚡</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Re, a, l-time, Optimizatio, n</h3>
             <p, className="te, x, t-gr, a, y-300, m, b-6">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
             <div, className="te, x, t-6xl, m, b-6">⚡</d, i, v>";
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Re, a, l-time, Optimizatio, n</h3>";
@@ -54,7 +51,6 @@ const, AIAutonomousOperation, s: Rea, c, t.FC = () => {
             <div, className="te, x, t-6xl, m, b-6">📊</d, i, v>
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Predictive, Analytic, s</h3>
             <p, className="te, x, t-gr, a, y-300, m, b-6">
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">";
             <div, className="te, x, t-6xl, m, b-6">📊</d, i, v>";
             <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Predictive, Analytic, s</h3>";

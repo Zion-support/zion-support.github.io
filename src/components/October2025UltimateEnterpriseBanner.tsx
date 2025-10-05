@@ -8,7 +8,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0"></d, i, v>
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-20, 0, 0"></d, i, v>
-=======
     <div, className="relative, p, y-16, p, x-4, s, m: px-6 l
   g:px-8, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, overflo, w-hidd, e, n">";
       {/* Animated, Backgroun, d */};
@@ -27,7 +26,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
             <span, className="bg-cl, i, p-text, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-4, 0, 0">
-=======
         <div, className="text-center mb-12">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, m, b-6, animat, e-bounce, shado, w-2, x, l">";
             <Sparkles, className="w-5 h-5, animat, e-sp, i, n" />";
@@ -45,7 +43,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
             Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>
             <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</sp, a, n>, a, n, d;
             <span, className="te, x, t-bl, u, e-400, fon, t-bo, l, d"> transformative, result, s</sp, a, n>
-=======
           <p, className="te, x, t-2xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, fon, t-medi, u, m">";
             Breakthrough, solutions, delivering <span, className="te, x, t-cy, a, n-400, fon, t-bo, l, d">1, 5, 6%-1, 8, 4% R, O, I</sp, a, n>, ";
             <span, className="te, x, t-purp, l, e-400, fon, t-bo, l, d"> $26, 2, M+ savin, g, s</sp, a, n>, a, n, d ";
@@ -61,7 +58,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
               <div, className="fl, e, x-shri, n, k-0">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                   <Cloud, className="w-9 h-9, tex, t-whi, t, e  />
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">";
           {/* Mul, t, i-Cloud, Intelligence, Card */}
           <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, vi, a-cy, a, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30, hove, r: bord, e, r-cy, a, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, grou, p">";
@@ -82,7 +78,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 </d, i, v>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-cy, a, n-400, transitio, n-colo, r, s">";
                   {multiCloudConte, n, t.ic, o, n} Adaptive, Mult, i-Cloud, Intelligenc, e;
                 </h3>
@@ -108,7 +103,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">"
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">4.5x</d, i, v>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Efficiency, Gai, n</d, i, v>
-=======
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">";
               <div, className="bg-cy, a, n-5, 0, 0/10, rounde, d-x, l, p-4, border, border-cy, a, n-5, 0, 0/20, hove, r: bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-colo, r, s">";
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-1">1, 5, 6%</d, i, v>";
@@ -134,7 +128,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
-=======
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";
                   <CheckCircle, className="w-5 h-5, tex, t-cy, a, n-400, fle, x-shri, n, k-0, m, t-0.5" />";
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
@@ -149,7 +142,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
             >
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-=======
               <span, className="te, x, t-lg">{multiCloudConte, n, t.c, t, a.te, x, t}</sp, a, n>";
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </Li, n, k>
@@ -161,7 +153,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
               <div, className="fl, e, x-shri, n, k-0">
                 <div, className="w-1, 6, h-16, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-600, rounde, d-2xl, flex, items-center, justif, y-center, shado, w-lg, transform, group-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0">"
                   <MessageSquare, className="w-9 h-9, tex, t-whi, t, e  />
-=======
           <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-ro, s, e-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, grou, p">";
             <div, className="flex, item, s-start, ga, p-4, m, b-6">";
               <div, className="fl, e, x-shri, n, k-0">";
@@ -180,7 +171,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 </d, i, v>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-ho, v, e
   r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colo, r, s">";
                   {conversationalAIConte, n, t.ic, o, n} Conversational, AI, Revolution;
                 </h3>
@@ -206,7 +196,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">"
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">$17, 3, M</d, i, v>
                 <div, className="te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m">Annual, Saving, s</d, i, v>
-=======
             <div, className="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">";
               <div, className="bg-purp, l, e-5, 0, 0/10, rounde, d-x, l, p-4, border, border-purp, l, e-5, 0, 0/20, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-colo, r, s">";
                 <div, className="te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-1">1, 8, 4%</d, i, v>";
@@ -232,7 +221,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5  />
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>
-=======
                 <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-3, tex, t-gr, a, y-2, 0, 0">";
                   <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, fle, x-shri, n, k-0, m, t-0.5" />";
                   <span, className="te, x, t-sm, leadin, g-relax, e, d">{highlig, h, t}</sp, a, n>";
@@ -247,7 +235,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
             >
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m/>"
-=======
               <span, className="te, x, t-lg">{conversationalAIConte, n, t.c, t, a.te, x, t}</sp, a, n>";
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-transfo, r, m" />";
             </Li, n, k>
@@ -259,7 +246,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">
                 <Award, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0  />
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-cy, a, n-6, 0, 0/20, vi, a-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/20">";
           <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">";
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
@@ -273,7 +259,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">
                 <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0  />
-=======
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";
                 <TrendingUp, className="w-1, 0, h-10, tex, t-gre, e, n-4, 0, 0" />";
@@ -285,7 +270,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">
                 <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0  />
-=======
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";
                 <Zap, className="w-1, 0, h-10, tex, t-cy, a, n-4, 0, 0" />";
@@ -297,7 +281,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
   r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
               <div, className="flex, item, s-center, justif, y-center, m, b-3">
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0  />
-=======
             <div, className="group, hove, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
               <div, className="flex, item, s-center, justif, y-center, m, b-3">";
                 <Sparkles, className="w-1, 0, h-10, tex, t-purp, l, e-4, 0, 0" />";
@@ -313,7 +296,6 @@ const, October2025UltimateEnterpriseBanne, r = () => {
             Ready, to, transform your, enterprise, with cutti, n, g-edge, AI, solutions?
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">";
             <Li, n, k
   to="/conta, c, t"

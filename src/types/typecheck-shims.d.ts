@@ -9,7 +9,6 @@ expo, r, t = Conte, n, t;
 }
 declare, modul, e "../componen, t, s/*" {
 const, Componen, t: Rea, c, t.ComponentTy, p, e;
-=======
 declare, modul, e "../pag, e, s/*" {";
 const, Compone, n
   t: Rea, c, t.ComponentTy, p, e;
@@ -45,7 +44,6 @@ n, a, m
 val, u, e: numb, e, r
 del, t, a: numb, e, r
 id: stri, n, g
-=======
 	const, al, l: Reco, r, d<stri, n, g, Rea, c, t.ComponentTy, p, e>;
 	export default all;
 }

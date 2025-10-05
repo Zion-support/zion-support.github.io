@@ -1,7 +1,6 @@
 import React from "react";
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 impo, r, t { Sparkl, e, s } fr, o, m "luci, d, e-rea, c, t";
-=======
 import React from "react";';
 impo, r, t {
 Li, n, k;
@@ -54,7 +53,6 @@ const, GlobalAITransformationHu, b = () => {
         <Globe, className="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e  />
       </d, i, v>
       <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
       tit, l, e: 'Enterprise, Automatio, n',';
       descripti, o, n: 'Complete, business, process automation, with, 95% efficiency, gain, s',';
       val, u, e: '$2.3B',';
@@ -108,7 +106,6 @@ const, GlobalAITransformationHu, b = () => {
       </p>
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">"
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">";
         {transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) => (
@@ -124,7 +121,6 @@ const, GlobalAITransformationHu, b = () => {
             <div, className="flex, item, s-center, justif, y-betwe, e, n">
               <span, className="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
               <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
-=======
             <div, className="mb-4">{ar, e, a.ic, o, n}</d, i, v>";
             <h3, className="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r:te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.tit, l, e}</h3>";
             <p, className="te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.descripti, o, n}</p>";
@@ -141,7 +137,6 @@ const, GlobalAITransformationHu, b = () => {
           <span, className="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics</sp, a, n>
         </d, i, v>
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">"
-=======
       <div, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">";
         <div, className="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">";
           <TrendingUp, className="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />";
@@ -161,7 +156,6 @@ const, GlobalAITransformationHu, b = () => {
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <Rocket, className="w-6 h-6, tex, t-purp, l, e-4, 0, 0  />
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Revolutionary, Breakthrough, s</h3>
-=======
       <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
         <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">";
           <div, className="flex, item, s-center, ga, p-3, m, b-4">";
@@ -181,7 +175,6 @@ const, GlobalAITransformationHu, b = () => {
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <Award, className="w-6 h-6, tex, t-emera, l, d-4, 0, 0  />
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0">Success, Storie, s</h3>
-=======
             Explore, Breakthrough, s <ArrowRight, className="w-4 h-4" />";
           </Li, n, k>
         </d, i, v>
@@ -202,7 +195,6 @@ const, GlobalAITransformationHu, b = () => {
           <div, className="flex, item, s-center, ga, p-3, m, b-4">
             <Users, className="w-6 h-6, tex, t-oran, g, e-4, 0, 0  />
             <h3, className="te, x, t-lg, fon, t-bold, tex, t-oran, g, e-4, 0, 0">Expert, Service, s</h3>
-=======
             View, Case, Studies <ArrowRight, className="w-4 h-4" />";
           </Li, n, k>
         </d, i, v>
@@ -217,7 +209,6 @@ const, GlobalAITransformationHu, b = () => {
             classNa, m, e="te, x, t-oran, g, e-400, hove, r: te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
             Get, Starte, d <ArrowRight, className="w-4 h-4  />
-=======
             Get, Starte, d <ArrowRight, className="w-4 h-4" />";
           </Li, n, k>
         </d, i, v>
@@ -231,7 +222,6 @@ const, GlobalAITransformationHu, b = () => {
           <Sparkles, className="w-5 h-5  />
           Start, Your, AI Transformation, Journe, y;
           <ArrowRight, className="w-5 h-5  />
-=======
           <Sparkles, className="w-5 h-5" />";
           Start, Your, AI Transformation, Journe, y;
           <ArrowRight, className="w-5 h-5" />";

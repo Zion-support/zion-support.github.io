@@ -18,7 +18,6 @@ const, AIMLOpsAutomatio, n = () => {
                 AI, MLOps, Automation;
               </h1>
               <p, className="te, x, t-xl, m, d: te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o">"
-=======
           content="Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Depl, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization."
          />
         <meta name="keywor, d, s" content="MLO, p, s, AI, automatio, n, ML, deploymen, t, model, monitorin, g, CI/CD, for, ML, automated, ML, pipelines" />";
@@ -44,7 +43,6 @@ const, AIMLOpsAutomatio, n = () => {
                 >
                   Get, Starte, d;
                   <ArrowRight, className="ml-2 h-5 w-5  />
-=======
                   <ArrowRight, className="ml-2 h-5 w-5" />";
                 </Li, n, k>
                 <a, titl, e="Internal, lin, k"
@@ -78,7 +76,6 @@ const, AIMLOpsAutomatio, n = () => {
               <div, className="p-6">
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2">72%</d, i, v>
                 <div, className="te, x, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">Cost, Reductio, n</d, i, v>"
-=======
         <section, className="py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r">";
@@ -109,7 +106,6 @@ const, AIMLOpsAutomatio, n = () => {
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, m, b-4">Comprehensive, MLOps, Platform</h2>
               <p, className="te, x, t-xl, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">"
-=======
         <section, i, d="featur, e, s" classNa, m, e="py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -140,7 +136,6 @@ const, AIMLOpsAutomatio, n = () => {
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1  />
                     <span, className="te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0">Instant, rollback, on failu, r, e</sp, a, n>"
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-3, ga, p-8">";
               {/* Automated, Pipeline, s */}
@@ -187,7 +182,6 @@ const, AIMLOpsAutomatio, n = () => {
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1  />
                     <span, className="te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0">Automated, retraining, triggers</sp, a, n>"
-=======
               <div, className="bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w">";
                 <TrendingUp, className="h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Re, a, l-time, Model, Monitoring</h3>";
@@ -231,7 +225,6 @@ const, AIMLOpsAutomatio, n = () => {
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1  />
                     <span, className="te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0">Compliance, audit, trails</sp, a, n>"
-=======
               <div, className="bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w">";
                 <Shield, className="h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Centralized, Model, Registry</h3>";
@@ -275,7 +268,6 @@ const, AIMLOpsAutomatio, n = () => {
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1  />
                     <span, className="te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0">Traini, n, g-serving, consistenc, y</sp, a, n>"
-=======
               <div, className="bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w">";
                 <Users, className="h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Enterprise, Feature, Store</h3>";
@@ -319,7 +311,6 @@ const, AIMLOpsAutomatio, n = () => {
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1  />
                     <span, className="te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0">Zero, downtime, scaling</sp, a, n>"
-=======
               <div, className="bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w">";
                 <Zap, className="h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Intelligent, Aut, o-scali, n, g</h3>";
@@ -363,7 +354,6 @@ const, AIMLOpsAutomatio, n = () => {
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1  />
                     <span, className="te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0">Reproducibili, t, y</sp, a, n>"
-=======
               <div, className="bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w">";
                 <TrendingUp, className="h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Experiment, Trackin, g</h3>";
@@ -397,7 +387,6 @@ const, AIMLOpsAutomatio, n = () => {
             <div, className="te, x, t-center, m, b-16">
               <h2, className="te, x, t-4xl, fon, t-bold, m, b-4">Proven, Use, Cases</h2>
               <p, className="te, x, t-xl, tex, t-gr, a, y-600, dar, k: te, x, t-gr, a, y-3, 0, 0">"
-=======
         <section, className="py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0">";
           <div, className="m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8">";
             <div, className="te, x, t-center, m, b-16">";
@@ -425,7 +414,6 @@ const, AIMLOpsAutomatio, n = () => {
                   </li>
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1  />
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-8">";
               <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-purp, l, e-50, dar, k: fr, o, m-gr, a, y-700, dar, k:to-gr, a, y-60, 0, p-8, rounde, d-xl">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Financial, Service, s</h3>";
@@ -464,7 +452,6 @@ const, AIMLOpsAutomatio, n = () => {
                   </li>
                   <li, className="flex, item, s-sta, r, t">
                     <CheckCircle, className="h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1  />
-=======
               <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-50, t, o-bl, u, e-50, dar, k: fr, o, m-gr, a, y-700, dar, k:to-gr, a, y-60, 0, p-8, rounde, d-xl">";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">E-Commer, c, e</h3>";
                 <p, className="te, x, t-gr, a, y-700, da, r
@@ -494,7 +481,6 @@ const, AIMLOpsAutomatio, n = () => {
           <div, className="m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6 l
   g:px-8">"
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">
-=======
         <section, className="py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e">";
           <div, className="m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8">";
             <h2, className="te, x, t-4xl, fon, t-bold, m, b-6">";
@@ -511,7 +497,6 @@ const, AIMLOpsAutomatio, n = () => {
               >
                 Schedule, Consultatio, n;
                 <ArrowRight, className="ml-2 h-5 w-5  />
-=======
                 <ArrowRight, className="ml-2 h-5 w-5" />";
               </Li, n, k>
               <Li, n, k

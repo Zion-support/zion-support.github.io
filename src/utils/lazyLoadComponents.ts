@@ -10,7 +10,6 @@ export, const, lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>
   return, laz, y(() => {
     return, new, Promise<{ defau, l, t: T }>((resol, v, e, reje, c, t) => {
 const, attemptLoa, d = (attemptsLe, f, t: numb, e, r) => {
-=======
 const, attemptLoa, d = (attemptsL, e, f
   t: numb, e, r) => {
 componentImpo, r, t()

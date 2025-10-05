@@ -1446,9 +1446,7 @@
 [0;34m🔧 Fixing workflow: yaml-validator[0m
   ✅ No placeholder patterns found to fix
 
-
 [0;34m📊 Fix Summary[0m
-==================
 Total workflows processed: 450
 [0;32mSuccessfully processed: 450[0m
 [0;31mFailed to process: 0[0m

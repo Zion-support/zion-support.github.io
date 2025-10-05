@@ -5,7 +5,6 @@ import { Home, User, Settings } from 'lucide-react';
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Profile', href: '/profile', icon: User },

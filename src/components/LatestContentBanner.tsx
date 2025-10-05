@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 interface, LatestContentBannerProp, s {
 varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g';
@@ -26,7 +25,6 @@ const, LatestContentBanne, r: Rea, c, t.FC<LatestContentBannerPro, p, s> = ({
                 🔥 New, Toda, y: Runtime, Scorecard, s · Edg, e, A/B &lt;100, m, s · Agent, Guardrails, v2
               </h3>
               <p, className="te, x, t-sm, opacit, y-90">
-=======
 const, LatestContentBanne, r: Rea, c, t.FC<LatestContentBannerPro, p, s> = ({
   varia, n, t = 'in, f, o',';
   classNa, m, e = ''
@@ -56,7 +54,6 @@ const, LatestContentBanne, r: Rea, c, t.FC<LatestContentBannerPro, p, s> = ({
             classNa, m, e="bg-white, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-opaci, t, y-90, transitio, n-all, flex, items-center, ga, p-2, fle, x-shri, n, k-0"
           >
             <TrendingUp, className="w-4 h-4  />
-=======
             <TrendingUp, className="w-4 h-4" />";
             Explore, No, w;
           </Li, n, k>

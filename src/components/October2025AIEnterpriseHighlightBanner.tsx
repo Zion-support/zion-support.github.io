@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
   return (
@@ -14,7 +13,6 @@ const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
           </sp, a, n>
         </d, i, v>
         <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-center, m, b-4, leadin, g-tig, h, t">"
-=======
         <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-center, m, b-4, leadin, g-tig, h, t">";
           Enterprise, AI, Transformation;
           <br   />
@@ -32,7 +30,6 @@ const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, justif, y-between, m, b-4">
               <span, className="te, x, t-3, x, l">🛡️</sp, a, n>
               <span, className="px-3, p, y-1, b, g-bl, u, e-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">GOVERNAN, C, E</sp, a, n>
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">";
             <div, className="flex, item, s-center, justif, y-between, m, b-4">";
@@ -68,7 +65,6 @@ const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, justif, y-between, m, b-4">
               <span, className="te, x, t-3, x, l">🧠</sp, a, n>
               <span, className="px-3, p, y-1, b, g-purp, l, e-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">MULTIMOD, A, L</sp, a, n>
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">";
             <div, className="flex, item, s-center, justif, y-between, m, b-4">";
               <span, className="te, x, t-3, x, l">🧠</sp, a, n>";
@@ -103,7 +99,6 @@ const, October2025AIEnterpriseHighlightBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, justif, y-between, m, b-4">
               <span, className="te, x, t-3, x, l">⚡</sp, a, n>
               <span, className="px-3, p, y-1, b, g-gre, e, n-5, 0, 0/30, rounde, d-lg, tex, t-xs, fon, t-bo, l, d">EDGE, A, I</sp, a, n>
-=======
           <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-a, l, l">";
             <div, className="flex, item, s-center, justif, y-between, m, b-4">";
               <span, className="te, x, t-3, x, l">⚡</sp, a, n>";

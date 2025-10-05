@@ -32,7 +32,6 @@ const, UnifiedBannerSyste, m: Rea, c, t.FC<UnifiedBannerSystemPro, p, s> = ({
   autoRota, t, e = tr, u, e
   rotationInterv, a, l = 50, 0, 0
   showNavigati, o, n = tr, u, e;
-=======
 const, UnifiedBannerSyst, e
   m: Rea, c, t.FC<UnifiedBannerSystemPro, p, s> = ({
   banne, r, s
@@ -62,7 +61,6 @@ const, UnifiedBannerSyst, e
     // Analytics, trackin, g
   if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {;
       wind, o, w.gt, a, g('eve, n, t', 'banner_cli, c, k', {;
-=======
     if (typeof, windo, w !== 'undefin, e, d' && wind, o, w.gt, a, g) {';
       wind, o, w.gt, a, g('eve, n, t', 'banner_cli, c, k', {';
         banner_, i, d: bann, e, r.id
@@ -76,7 +74,6 @@ const, UnifiedBannerSyst, e
   const, getAnimationVariant, s = (ty, p, e: stri, n, g = 'sli, d, e') => {'
     swit, c, h (ty, p, e) {
       ca, s, e 'sli, d, e':;
-=======
   const, getAnimationVariant, s = (ty, p, e: stri, n, g = 'sli, d, e') => {';
     swit, c, h (ty, p, e) {
       ca, s, e 'sli, d, e':';
@@ -89,7 +86,6 @@ const, UnifiedBannerSyst, e
   x: '-1, 0, 0%', opaci, t, y: 0 };
         };
       ca, s, e 'fa, d, e':;
-=======
           ex, i, t: { 
   x: '-1, 0, 0%', opaci, t, y: 0 }';
         };
@@ -103,7 +99,6 @@ const, UnifiedBannerSyst, e
   y: 0 }
         };
       ca, s, e 'sca, l, e':;
-=======
       ca, s, e 'sca, l, e':';
         retu, r, n {
           initi, a, l: { sc, a, l
@@ -148,7 +143,6 @@ const, UnifiedBannerSyst, e
                   <div, className="flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6">"
                     <div, className="fl, e, x-1">
                       <h2, className="te, x, t-2xl, m, d: te, x, t-3xl, fon, t-bold, m, b-2">"
-=======
                   backgroundCol, o, r: bann, e, r.backgroundCol, o, r || '#1e40, a, f',';
                   col, o, r: bann, e, r.textCol, o, r || '#ffff, f, f'
                 }}
@@ -163,7 +157,6 @@ const, UnifiedBannerSyst, e
                       {
 bann, e, r.subtit, l, e && (
 <h3, className="te, x, t-lg, m, d: te, x, t-xl, fon, t-semibold, m, b-3, opacit, y-90">
-=======
 <h3, className="te, x, t-l, g, m
   d: te, x, t-xl, fon, t-semibold, m, b-3, opacit, y-90">,";
 {bann, e, r.subtit, l, e;
@@ -171,7 +164,6 @@ bann, e, r.subtit, l, e && (
                         </h3>
                       )}
                       <p, className="te, x, t-base, m, d: te, x, t-lg, m, b-6, opacit, y-80">"
-=======
                       <p, className="te, x, t-base, m, d: te, x, t-lg, m, b-6, opacit, y-80">";
                         {bann, e, r.descripti, o, n}
                       </p>
@@ -234,7 +226,6 @@ hei, g, h
 }
         .bann, e, r-it, e, m.hidd, e, n {
           point, e, r-even, t, s: no, n, e
-=======
           point, e, r-even, t, s: no, n, e;
         }
         .bann, e, r-contain, e, r {
@@ -245,7 +236,6 @@ posit, i, o
         @med, i, a (m, a, x-wid, t, h: 768, p, x) {
           .bann, e, r-contain, e, r {
             m, i, n-heig, h, t: 400, p, x
-=======
             m, i, n-heig, h, t: 400, p, x;
           }
         }

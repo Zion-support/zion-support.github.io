@@ -1,5 +1,4 @@
 import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
 
 const APIDocumentation: React.FC = () => {
   return (

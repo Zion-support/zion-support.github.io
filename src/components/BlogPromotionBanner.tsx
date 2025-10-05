@@ -1,5 +1,4 @@
 import React from "react";
-=======
 import React from "react";';
 const, BlogPromotionBanne, r: Rea, c, t.FC = () => {
   return (
@@ -13,7 +12,6 @@ const, BlogPromotionBanne, r: Rea, c, t.FC = () => {
           </d, i, v>
           <h2, className="te, x, t-4x, l, m
   d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
           <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
             Stay, Ahead, with AI, Innovatio, n;
           </h2>

@@ -21,7 +21,6 @@ banne, r, s: BannerDa, t, a[];
 rotationInterv, a, l?: numb, e, r;
 maxVisibleBanne, r, s?: numb, e, r;
 }
-=======
 interface, Banne, r {
 id: stri, n, g;
 tit, l, e: stri, n, g;

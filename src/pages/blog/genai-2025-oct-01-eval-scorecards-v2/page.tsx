@@ -15,7 +15,6 @@ export, default, function GenAIEvalScorecards, V, 2(): Rea, c, t.J, S, X.Eleme, 
         <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Eval, Scorecards v2</h1>"
         <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Scorecar, d, s • Budget, Gate, s • Policy, Test, s</p>
         <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
-=======
           hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-ev, a, l-scorecar, d, s-v2"
          />
       </Helmet>

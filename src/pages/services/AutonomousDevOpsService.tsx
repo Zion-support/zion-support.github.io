@@ -9,7 +9,6 @@ const, AutonomousDevOpsServic, e = () => {
           content="Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upti, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n." /><me, t, a
   na, m, e="keywor, d, s"
           content="autonomous, devop, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-devo, p, s/>"
-=======
           content="autonomous, devop, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n"
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-devo, p, s" />";
@@ -29,7 +28,6 @@ const, AutonomousDevOpsServic, e = () => {
                 Autonomous, DevOps, Services;
               </h1>
               <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o">"
-=======
         <section, className="relative, p, t-32, p, b-20, p, x-4">";
           <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l"></d, i, v>";
           <div, className="relative, ma, x-w-7xl, m, x-au, t, o">";
@@ -52,7 +50,6 @@ const, AutonomousDevOpsServic, e = () => {
                 >
                   Get, Started, Today;
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </Li, n, k>
                 <Li, n, k
@@ -90,7 +87,6 @@ const, AutonomousDevOpsServic, e = () => {
                 <Target, className="w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4  />
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Zero, Manual, Work</h3>
                 <p, className="te, x, t-gr, a, y-3, 0, 0">Eliminate, manual, configuration and, intervention, completely</p>
-=======
         <section, className="py-20, p, x-4">";
           <div, className="m, a, x-w-7xl, m, x-au, t, o">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">Transform, Your, DevOps Operatio, n, s</h2>";
@@ -130,7 +126,6 @@ const, AutonomousDevOpsServic, e = () => {
                 <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
                   <li, className="flex, item, s-start, ga, p-3">
                     <span, className="te, x, t-bl, u, e-400, m, t-1">•</sp, a, n>
-=======
         <section, className="py-20, p, x-4, b, g-bla, c, k/30">";
           <div, className="m, a, x-w-7xl, m, x-au, t, o">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">Autonomous, DevOps, Capabilities</h2>";
@@ -163,7 +158,6 @@ const, AutonomousDevOpsServic, e = () => {
                 <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
                   <li, className="flex, item, s-start, ga, p-3">
                     <span, className="te, x, t-gre, e, n-400, m, t-1">•</sp, a, n>
-=======
               <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
                 <Shield, className="w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Intelligent, Sel, f-Heali, n, g</h3>";
@@ -192,7 +186,6 @@ const, AutonomousDevOpsServic, e = () => {
                 <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
                   <li, className="flex, item, s-start, ga, p-3">
                     <span, className="te, x, t-purp, l, e-400, m, t-1">•</sp, a, n>
-=======
               <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
                 <Rocket, className="w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Ze, r, o-Downtime, Deploymen, t</h3>";
@@ -221,7 +214,6 @@ const, AutonomousDevOpsServic, e = () => {
                 <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
                   <li, className="flex, item, s-start, ga, p-3">
                     <span, className="te, x, t-oran, g, e-400, m, t-1">•</sp, a, n>
-=======
               <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
                 <TrendingUp, className="w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4" />";
                 <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Continuous, Optimizatio, n</h3>";
@@ -257,7 +249,6 @@ const, AutonomousDevOpsServic, e = () => {
                   <div, className="w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">1</d, i, v>
                   <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Day, s, 1-30: Foundati, o, n</h3>"
                   <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
-=======
         <section, className="py-20, p, x-4">";
           <div, className="m, a, x-w-7xl, m, x-au, t, o">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">90-Day, Implementation, Roadmap</h2>";
@@ -281,7 +272,6 @@ const, AutonomousDevOpsServic, e = () => {
                   <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Days, 3, 1-6
   0: Integrati, o, n</h3>"
                   <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
-=======
               <div, className="relati, v, e">";
                 <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
                   <div, className="w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">2</d, i, v>";
@@ -301,7 +291,6 @@ const, AutonomousDevOpsServic, e = () => {
                   <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Days, 6, 1-9
   0: Optimizati, o, n</h3>"
                   <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
-=======
               <div, className="relati, v, e">";
                 <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
                   <div, className="w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">3</d, i, v>";
@@ -349,7 +338,6 @@ const, AutonomousDevOpsServic, e = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1  />
-=======
                 <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
                   <d, i, v>
                     <h4, className="fo, n, t-bold, tex, t-lg, m, b-3">Package, Include, s: </h4>";
@@ -390,7 +378,6 @@ const, AutonomousDevOpsServic, e = () => {
                       </li>
                       <li, className="flex, item, s-start, ga, p-2">
                         <Zap, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1  />
-=======
                     <h4, className="fo, n, t-bold, tex, t-lg, m, b-3">Expected, RO, I: </h4>";
                     <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
                       <li, className="flex, item, s-start, ga, p-2">";
@@ -420,7 +407,6 @@ const, AutonomousDevOpsServic, e = () => {
                   >
                     Schedule, Consultatio, n;
                     <ArrowRight, className="w-5 h-5  />
-=======
                     <ArrowRight, className="w-5 h-5" />";
                   </Li, n, k>
                 </d, i, v>
@@ -432,7 +418,6 @@ const, AutonomousDevOpsServic, e = () => {
         <section, className="py-20, p, x-4">
           <div, className="m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r">
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6">"
-=======
         <section, className="py-20, p, x-4">";
           <div, className="m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r">";
             <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6">";
@@ -449,7 +434,6 @@ const, AutonomousDevOpsServic, e = () => {
               >
                 Get, Started, Today;
                 <ArrowRight, className="w-5 h-5  />
-=======
                 <ArrowRight, className="w-5 h-5" />";
               </Li, n, k>
               <Li, n, k

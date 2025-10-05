@@ -28,7 +28,6 @@ export, default, function AIMicroSA, A, S(): Rea, c, t.J, S, X.Eleme, n, t {
       e, t, a: "1-2, week, s"
       catego, r, y: "Content, A, I"
       ic, o, n: undefin, e, d
-=======
       ic, o, n: FileTe, x, t
       featur, e, s: [
         "AI-generated, blog, posts, social, media, content, and, email, campaigns"
@@ -56,7 +55,6 @@ export, default, function AIMicroSA, A, S(): Rea, c, t.J, S, X.Eleme, n, t {
       e, t, a: "1-2, week, s"
       catego, r, y: "Process, Automatio, n"
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Z, a, p
       featur, e, s: [
         "Visual, workflow, builder with, dra, g-a, n, d-drop, interfac, e"
@@ -84,7 +82,6 @@ export, default, function AIMicroSA, A, S(): Rea, c, t.J, S, X.Eleme, n, t {
       e, t, a: "2-3, week, s"
       catego, r, y: "Business, Intelligenc, e"
       ic, o, n: undefin, e, d
-=======
       ic, o, n: BarChar, t, 3
       featur, e, s: [
         "Re, a, l-time, data, visualization and, custom, dashboards"
@@ -112,7 +109,6 @@ export, default, function AIMicroSA, A, S(): Rea, c, t.J, S, X.Eleme, n, t {
       e, t, a: "2-4, week, s"
       catego, r, y: "Customer, Analytic, s"
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Use, r, s
       featur, e, s: [
         "Re, a, l-time, customer, journey mappi, n, g"
@@ -140,7 +136,6 @@ export, default, function AIMicroSA, A, S(): Rea, c, t.J, S, X.Eleme, n, t {
       e, t, a: "2-3, week, s"
       catego, r, y: "Cybersecuri, t, y"
       ic, o, n: undefin, e, d
-=======
       ic, o, n: Shie, l, d
       featur, e, s: [
         "AI-powered, threat, detection and, respons, e"
@@ -168,7 +163,6 @@ export, default, function AIMicroSA, A, S(): Rea, c, t.J, S, X.Eleme, n, t {
       e, t, a: "3-4, week, s"
       catego, r, y: "Voice, A, I"
       ic, o, n: undefin, e, d
-=======
       ic, o, n: MessageSqua, r, e
       featur, e, s: [
         "Natural, language, processing with, 9, 5% accura, c, y"

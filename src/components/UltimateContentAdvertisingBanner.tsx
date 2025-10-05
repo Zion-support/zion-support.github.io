@@ -24,7 +24,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
       ic, o, n: "🤖","
       tit, l, e: "Autonomous, Operation, s","
       descripti, o, n: "98% automation, rates, with se, l, f-healing, system, s","
-=======
 import React from "react";';
 const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   const, advertisingFeature, s = [
@@ -59,7 +58,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
     { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n }
     { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t }
     { val, u, e: "99.99%", lab, e, l: "Security, Accurac, y", ic, o, n: Shie, l, d }
-=======
     { val, u, e: "5, 0, 0+", lab, e, l: "Enterprise, Client, s", ic, o, n: Use, r, s },";
     { val, u, e: "$50, 0, M+", lab, e, l: "Cost, Saving, s", ic, o, n: DollarSi, g, n },";
     { val, u, e: "98%", lab, e, l: "Automation, Rat, e", ic, o, n: Targ, e, t },";
@@ -72,7 +70,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-6, 4, h-64, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -101,7 +98,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
             Ultimate, Conten, t;
           </h2>
           <h3, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-8, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
               <Sparkles, className="w-1, 0, h-10, tex, t-yell, o, w-4, 0, 0" />";
             </moti, o, n.d, i, v>
             <div, className="flex, item, s-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-purp, l, e-5, 0, 0/30">";
@@ -129,7 +125,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
             <div, className="flex, item, s-center, ga, p-3">
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e  />
               <span, className="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">LIMITED, TIM, E: Exclusive, Early, Access to, 2026, Content</sp, a, n>"
-=======
           <div, className="inli, n, e-block, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-r, e, d-5, 0, 0/30, m, b-12">";
             <div, className="flex, item, s-center, ga, p-3">";
               <Clock, className="w-6 h-6, tex, t-r, e, d-400, animat, e-pul, s, e" />";
@@ -140,7 +135,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         {/* Features, Gri, d */}
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
-=======
         <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2 l
   g:gr, i, d-co, l, s-4, ga, p-8, m, b-20">";
           {advertisingFeatur, e, s.m, a, p((featu, r, e, ind, e, x) => (
@@ -159,7 +153,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                   {featu, r, e.ic, o, n}
                 </d, i, v>
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-3, 0, 0">"
-=======
               <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-500, rounde, d-2, x, l"></d, i, v>";
               <div, className="relative, b, g-whi, t, e/8, backdro, p-bl, u, r-xl, rounde, d-2x, l, p-8, border, border-whi, t, e/15, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-30, 0, h-fu, l, l">";
                 <div, className="te, x, t-6xl, m, b-6, grou, p-ho, v, e
@@ -181,7 +174,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
         </d, i, v>
         {/* Success, Stat, s */}
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">"
-=======
         <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-20">";
           {successSta, t, s.m, a, p((st, a, t, ind, e, x) => (
             <moti, o, n.d, i, v
@@ -208,7 +200,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <div, className="flex, item, s-center, justif, y-center, ga, p-2, m, b-6">";
                 {[...Arr, a, y(5)].m, a, p((_, i) => (
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t  />
-=======
                   <Star, ke, y={i} classNa, m, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />";
                 ))}
                 <span, className="te, x, t-gr, a, y-300, tex, t-lg, m, l-2">5.0/5.0, Ratin, g</sp, a, n>";
@@ -219,7 +210,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 <div, className="te, x, t-6xl, m, b-4">💼</d, i, v>
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
                   "Zion, Tech, Group's, AI, solutions reduced, our, operational costs, b, y $50M, annuall, y. ;
-=======
             <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-8">";
               <div, className="te, x, t-cent, e, r">";
                 <div, className="te, x, t-6xl, m, b-4">💼</d, i, v>";
@@ -232,7 +222,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
               <div, className="te, x, t-cent, e, r">
                 <div, className="te, x, t-6xl, m, b-4">🚀</d, i, v>
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">
-=======
               <div, className="te, x, t-cent, e, r">";
                 <div, className="te, x, t-6xl, m, b-4">🚀</d, i, v>";
                 <p, className="te, x, t-gr, a, y-300, m, b-4, itali, c">";
@@ -278,7 +267,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 </d, i, v>
               </d, i, v>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-cent, e, r">"
-=======
               <div, className="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12">";
                 <div, className="flex, item, s-center, ga, p-3, tex, t-gre, e, n-4, 0, 0">";
                   <CheckCircle, className="w-6 h-6" />";
@@ -300,7 +288,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-3, tex, t-lg"
                 >
                   <Rocket, className="w-6 h-6  />
-=======
                   <Rocket, className="w-6 h-6" />";
                   <sp, a, n>Get, Started, Today</sp, a, n>
                 </a>
@@ -311,7 +298,6 @@ const, UltimateContentAdvertisingBanne, r: Rea, c, t.FC = () => {
                 >
                   <sp, a, n>Explore, Content, Library</sp, a, n>
                   <ArrowRight, className="w-6 h-6  />
-=======
                   <ArrowRight, className="w-6 h-6" />";
                 </a>
               </d, i, v>

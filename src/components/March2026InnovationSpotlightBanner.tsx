@@ -18,7 +18,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
       impa, c, t: '$5.2B, market, creation','
       ic, o, n: '🌌','
       col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
-=======
       tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI',';
       descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y',';
       impa, c, t: '5, 0, 0% cognitive, enhancemen, t',';
@@ -47,7 +46,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>;
         <div, className="absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '4s' }}></d, i, v>;
-=======
       <div, className="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">";
         <div, className="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e"></d, i, v>";
         <div, className="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: '2s' }}></d, i, v>';
@@ -64,7 +62,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
             <Rocket, className="w-6 h-6, tex, t-indi, g, o-400, animat, e-pul, s, e  />
           </d, i, v>
           <h2, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
-=======
         <div, className="te, x, t-center, m, b-16">";
           <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-indi, g, o-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, m, b-8">";
             <Rocket, className="w-6 h-6, tex, t-purp, l, e-400, animat, e-pul, s, e" />";
@@ -87,7 +84,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
               { val, u, e: '100, 0, x', lab, e, l: 'Processing, Spee, d', ic, o, n: '⚡', col, o, r: 'te, x, t-indi, g, o-4, 0, 0' }
               { val, u, e: '$5.2B', lab, e, l: 'Market, Creatio, n', ic, o, n: '💰', col, o, r: 'te, x, t-bl, u, e-4, 0, 0' }
               { val, u, e: '5, 0, 0%', lab, e, l: 'Enhanceme, n, t', ic, o, n: '📈', col, o, r: 'te, x, t-emera, l, d-4, 0, 0' }
-=======
           <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">";
             {[
               { va, l, u
@@ -110,7 +106,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
         </d, i, v>
         {/* Innovation, Card, s */}
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">";
           {innovatio, n, s.m, a, p((innovati, o, n, ind, e, x) => (
             <d, i, v
@@ -124,13 +119,11 @@ const, March2026InnovationSpotlightBanne, r = () => {
               <div, className="relativ, e, p-8">";
                 {/* Innovation, Ico, n */}
                 <div, className="te, x, t-6xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e">"
-=======
                 <div, className="te, x, t-6xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e">";
                   {innovati, o, n.ic, o, n}
                 </d, i, v>
                 {/* Tit, l, e */}
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">"
-=======
                 <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">";
                   {innovati, o, n.tit, l, e}
                 </h3>
@@ -142,7 +135,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
                 <div, className="te, x, t-center, m, b-6">
                   <div, className={`inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.col, o, r} te, x, t-white, tex, t-sm, fon, t-bo, l, d`}>`
                     Impa, c, t: {innovati, o, n.impa, c, t}
-=======
                 <div, className="te, x, t-center, m, b-6">";
                   <div, className={`inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.col, o, r} te, x, t-white, tex, t-sm, fon, t-bo, l, d`}>`;`
                     Impa, c, t: {innovati, o, n.impa, c, t}
@@ -156,7 +148,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
                 >
                   <sp, a, n>Explore, Innovatio, n</sp, a, n>
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0/>"
-=======
                   <ArrowRight, className="w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />";
                 </a>
               </d, i, v>
@@ -167,7 +158,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
         <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16">"
           <div, className="text-center mb-12">
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
-=======
         <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-indi, g, o-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-purp, l, e-5, 0, 0/20, m, b-16">";
           <div, className="text-center mb-12">";
             <h3, className="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">";
@@ -197,7 +187,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
                 achieveme, n, t: '$5.2B, Market, Creation','
                 reven, u, e: '98% Customer, Satisfactio, n','
                 ic, o, n: <Sparkles, className="w-8 h-8/>"
-=======
           <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
             {[
               {
@@ -243,7 +232,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
   early, research, insights, and, transformative, technologies that, are, reshaping our, worl, d.
               </p>
               <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
               <p, className="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">";
                 Be, part, of the, futur, e. Get, exclusive, access to, revolutionary, innovations
                 early, research, insights, and, transformative, technologies that, are, reshaping our, worl, d.
@@ -255,7 +243,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
   r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Rocket, className="w-5 h-5  />
-=======
                   <Rocket, className="w-5 h-5" />";
                   <sp, a, n>Explore, All, Innovations</sp, a, n>
                 </a>
@@ -266,7 +253,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
                 >
                   <sp, a, n>Partner, With, Us</sp, a, n>
                   <ArrowRight, className="w-5 h-5  />
-=======
                   <ArrowRight, className="w-5 h-5" />";
                 </a>
               </d, i, v>

@@ -10,7 +10,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["Platfo, r, m", "R, O, I", "Scorecar, d, s"]
     conte, n, t: `,`
-=======
     id: "ai-platfo, r, m-r, o, i-scorecar, d, s",";
     tit, l, e: "AI, Platform, RO
   I: Simple, Scorecards, That Drive, Adoptio, n",";
@@ -42,7 +41,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["Guardrai, l, s", "Scorecar, d, s", "Eva, l, s"]
     conte, n, t: `,`
-=======
     id: "guardrai, l, s-scorecar, d, s-eva, l, s-20, 2, 5",";
     tit, l, e: "Guardrails, Engineers, Adop
   t: Scorecar, d, s, PR, Gate, s, Online, Canarie, s",";
@@ -74,7 +72,6 @@ export, const, newInsights = [
     featur, e, d: fal, s, e
     ta, g, s: ["Ed, g, e", "Fla, g, s", "Delive, r, y"]
     conte, n, t: `,`
-=======
     id: "ed, g, e-fla, g, s-bluepri, n, t-20, 2, 5",";
     tit, l, e: "Edge, Flags, Blueprin
   t: Ze, r, o‑Regret, Rollout, s",";
@@ -100,7 +97,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["R, A, G", "Freshne, s, s", "Sear, c, h"]
     conte, n, t: `,`
-=======
     id: "r, a, g-freshne, s, s-t, t, l-20, 2, 5",";
     tit, l, e: "RAG, Freshne, s
   s: TTL, Budgets, and Versioned, Corpor, a",";
@@ -126,7 +122,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["Securi, t, y", "ML", "Supply, Chai, n"]
     conte, n, t: `,`
-=======
     id: "secu, r, e-ml-supp, l, y-cha, i, n",";
     tit, l, e: "Secure, ML, Supply Ch, a, i
   n: Linea, g, e, SBO, M, s, and, Egress, Controls",";
@@ -153,7 +148,6 @@ export, const, newInsights = [
     conte, n, t: `,`
       <h2>Revolutionizing, Enterprise, Operations</h2>
       <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 202, 5, we're, seeing, unprecedented adoption, rates, and ROI, from, AI automation, initiative, s.</p>;
-=======
     id: "ai-automati, o, n-20, 2, 5",";
     tit, l, e: "The, Future, of AI, Automation, in Enterpri, s, e",";
     summa, r, y: "Discover, how, AI automation, is, transforming enterprise, operations, in 20, 2, 5, with, rea, l-world, case, studies and, implementation, strategies.",";
@@ -194,7 +188,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["Cybersecuri, t, y", "AI", "Threat, Detectio, n", "Securi, t, y"]
     conte, n, t: `,`
-=======
     id: "cybersecuri, t, y-ai-20, 2, 5",";
     tit, l, e: "AI-Powered, Cybersecuri, t
   y: The, Next, Generation of, Protectio, n",";
@@ -230,7 +223,6 @@ export, const, newInsights = [
     featur, e, d: fal, s, e
     ta, g, s: ["Clo, u, d", "Microservic, e, s", "DevO, p, s", "Scalabili, t, y"]
     conte, n, t: `,`
-=======
     id: "clo, u, d-nati, v, e-20, 2, 5",";
     tit, l, e: "Building, Resilient, Cloud-Native, Application, s",";
     summa, r, y: "Learn, the, latest strategies, for, developing and, deploying, cloud-native, applications, that scale, automatically, and handle, failures, gracefully.",";
@@ -264,7 +256,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["Data, Analytic, s", "AI", "Machine, Learnin, g", "Business, Intelligenc, e"]
     conte, n, t: `,`
-=======
     id: "da, t, a-analyti, c, s-ai",";
     tit, l, e: "AI-Driven, Data, Analytic
   s: From, Insights, to Acti, o, n",";
@@ -299,7 +290,6 @@ export, const, newInsights = [
     featur, e, d: fal, s, e
     ta, g, s: ["DevO, p, s", "CI/CD", "Automati, o, n", "Infrastructu, r, e"]
     conte, n, t: `,`
-=======
     id: "devo, p, s-automati, o, n-20, 2, 5",";
     tit, l, e: "DevOps, Automati, o
   n: Accelerating, Software, Delivery",";
@@ -336,7 +326,6 @@ export, const, newInsights = [
     conte, n, t: `,`
       <h2>The, Micr, o-SaaS, Revolutio, n</h2>
       <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>;
-=======
     id: "mic, r, o-sa, a, s-tren, d, s",";
     tit, l, e: "The, Rise, of Mic, r, o-S, a, a
   S: Building, Profitable, Niche Solutio, n, s",";
@@ -372,7 +361,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["R, A, G", "Gen, A, I", "Sear, c, h", "Securi, t, y"]
     conte, n, t: `,`
-=======
     id: "enterpri, s, e-r, a, g-bluepri, n, t-20, 2, 5",";
     tit, l, e: "Enterprise, RAG, Blueprint v
   2: Freshne, s, s, Securi, t, y, and, Eval, s",";
@@ -404,7 +392,6 @@ export, const, newInsights = [
     featur, e, d: tr, u, e
     ta, g, s: ["FinO, p, s", "Clo, u, d", "Governan, c, e"]
     conte, n, t: `,`
-=======
     id: "fino, p, s-scorecar, d, s-20, 2, 5",";
     tit, l, e: "Cloud, FinOps, Scorecards Engineers, Actually, Use",";
     summa, r, y: "Guardrai, l, s, PR, check, s, and, budgets, that cut, waste, 25–40% while, preserving, delivery spe, e, d.",";
@@ -437,7 +424,6 @@ newInsigh, t, s.unshi, f, t({
   featur, e, d: tr, u, e
   ta, g, s: ["Governan, c, e", "Poli, c, y", "Scorecar, d, s"]
   conte, n, t: `,`
-=======
   id: "ai-governan, c, e-scorecar, d, s-20, 2, 6",";
   tit, l, e: "AI, Governance, 202
   6: Scorecards, Engineers, Actually U, s, e",";

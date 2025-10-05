@@ -3,7 +3,6 @@ id: stri, n, g
 tit, l, e: stri, n, g
 summa, r, y: stri, n, g
 catego, r, y: stri, n, g
-=======
 id: stri, n, g;
 tit, l, e: stri, n, g;
 summa, r, y: stri, n, g;
@@ -160,7 +159,6 @@ export, const, latestInsights: InsightArtic, l, e[] = [
     da, t, e: "20, 2, 5-09-30"
     readMinut, e, s: 6;
   }
-=======
     id: "ai-20, 2, 5-o, c, t-enterpri, s, e-r, a, g-architectu, r, e-bluepri, n, t",";
     tit, l, e: "Enterprise, RAG, Architecture Bluepr, i, n
   t: 99.9% Precision, at, Scale",";

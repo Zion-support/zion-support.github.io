@@ -20,7 +20,6 @@ export, const, generateMetaTags = (da, t, a: SEODa, t, a) => {
     canonic, a, l
   ogIma, g, e = '/imag, e, s/og-defau, l, t.j, p, g'
     ogTy, p, e = 'websi, t, e'
-=======
     descripti, o, n
     keywor, d, s = []
     canonic, a, l
@@ -48,7 +47,6 @@ export, const, generateStructuredData = (da, t, a: {
 na, m, e: stri, n, g;
 descripti, o, n: stri, n, g;
 u, r, l: stri, n, g;
-=======
     keywo, r, d
   s: keywor, d, s.jo, i, n(', '),';
     canonic, a, l
@@ -74,7 +72,6 @@ same, A, s?: stri, n, g[];
   retu, r, n {
     '@conte, x, t': 'htt, p, s: //sche, m, a.o, r, g','
     '@ty, p, e': 'Organizati, o, n'
-=======
     '@conte, x, t': 'htt, p, s: //sche, m, a.o, r, g',';
     '@ty, p, e': 'Organizati, o, n',';
     na, m, e: da, t, a.na, m, e
@@ -97,7 +94,6 @@ ur
       positi, o, n: ind, e, x + 1
       na, m, e: it, e, m.na, m, e
       it, e, m: it, e, m.u, r, l;
-=======
 export, const, generateBreadcrumbStructuredData = (it, e, m
   s: Arr, a, y<{
 na, m, e: stri, n, g;

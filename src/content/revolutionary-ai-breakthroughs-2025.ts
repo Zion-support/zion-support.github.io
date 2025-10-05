@@ -135,7 +135,6 @@ export, const, revolutionaryBreakthroughs2025 = [
       ener, g, y: 'Ult, r, a-L, o, w'
       savin, g, s: '$4M+'
       architectu, r, e: 'Revolutiona, r, y'
-=======
     i
   d: 'me, t, a-cogniti, v, e-ai',';
     tit, l, e: 'Me, t, a-Cognitiv, e, A
@@ -295,7 +294,6 @@ export, const, breakthroughServices2025 = [
       '95% Decision, Accurac, y'
       '$2M+ Annual, Saving, s'
       '3, 0, 0% R, O, I'
-=======
     id: 'me, t, a-cogniti, v, e-consulti, n, g',';
     tit, l, e: 'Me, t, a-Cognitive, AI, Consulting',';
     descripti, o, n: 'Transform, your, enterprise with, AI, that thinks, about, thinking. Achieve, 9, 5% decision, accuracy, and $2M+ annual, saving, s.',';
@@ -336,7 +334,6 @@ export, const, breakthroughServices2025 = [
       '1000x, Processing, Speed'
       '$5M+ Infrastructure, Saving, s'
       '99.9% Efficien, c, y'
-=======
     id: 'quant, u, m-neur, a, l-implementati, o, n',';
     tit, l, e: 'Quant, u, m-Neural, Network, Implementation',';
     descripti, o, n: 'Deploy, quantu, m-neural, networks, for 1000x, processing, speed a, n, d $5M+ infrastructure, saving, s.',';
@@ -377,7 +374,6 @@ export, const, breakthroughServices2025 = [
       '98% Automation, Rat, e'
       '$1, 0, M+ Annual, Saving, s'
       '3, 0, 0% Efficiency, Gai, n'
-=======
     id: 'autonomo, u, s-operatio, n, s-servi, c, e',';
     tit, l, e: 'Autonomous, Operations, Service',';
     descripti, o, n: 'Achieve, 9, 8% operational, automation, with our, comprehensive, autonomous operations, platfor, m.',';
@@ -423,7 +419,6 @@ export, const, latestCaseStudies2025 = [
       'Complete, AI, infrastructure overha, u, l'
       '95% process, automation, achieved'
       '$50M, annual, cost savin, g, s'
-=======
     id: 'fortu, n, e-5, 0, 0-transformati, o, n',';
     tit, l, e: 'Fortune, 500, AI Transformat, i, o
   n: $50M, Annual, Savings',';
@@ -470,7 +465,6 @@ export, const, latestCaseStudies2025 = [
       'AI-powered, inventory, optimization'
       '92% automated, decision, making'
       '$25M, annual, savings'
-=======
     id: 'glob, a, l-reta, i, l-optimizati, o, n',';
     tit, l, e: 'Global, Retail, Chai
   n: AI-Powered, Optimizatio, n',';
@@ -524,7 +518,6 @@ export, const, promotionalBanners2025 = [
       { lab, e, l: '$5, 0, M+ Annual, Saving, s', val, u, e: 'Average, Client, Results' }
       { lab, e, l: '95% Automation, Rat, e', val, u, e: 'Operational, Excellenc, e' }
       { lab, e, l: '3, 0, 0% R, O, I', val, u, e: 'First, Year, Returns' }
-=======
     id: 'revolutiona, r, y-breakthrou, g, h',';
     tit, l, e: '🚀 Revolutionary, AI, Breakthroughs 20, 2, 5',';
     subtit, l, e: 'Me, t, a-Cognitive, A, I • Quant, u, m-Neural, Network, s • Autonomous, Operation, s',';

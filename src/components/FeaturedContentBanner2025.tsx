@@ -30,7 +30,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
       catego, r, y: 'Innovation, La, b','
       readTi, m, e: '40, min, read','
       publishDa, t, e: 'Jan, 2, 5, 20, 2, 5}
-=======
       ty, p, e: 'bl, o, g',';
       tit, l, e: 'AI, Autonomous, Enterprise Operati, o, n
   s: Complete, 2025, Guide',';
@@ -81,7 +80,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
           </p>
         </d, i, v>
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12">";
           {featuredConte, n, t.m, a, p((conte, n, t, ind, e, x) => (
             <a
@@ -92,7 +90,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
             >
               <div, className="flex, item, s-start, ga, p-4, m, b-6">
                 <div, className="te, x, t-4xl, fle, x-shri, n, k-0, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
-=======
               <div, className="flex, item, s-start, ga, p-4, m, b-6">";
                 <div, className="te, x, t-4xl, fle, x-shri, n, k-0, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">";
                   {conte, n, t.ima, g, e}
@@ -104,7 +101,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
                     </sp, a, n>
                   </d, i, v>
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-3, 0, 0">"
-=======
                   <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-3, 0, 0">";
                     {conte, n, t.tit, l, e}
                   </h3>
@@ -123,7 +119,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
                 </sp, a, n>
                 <div, className="w-8 h-8, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0">"
                   <span, className="te, x, t-white, tex, t-sm">→</sp, a, n>
-=======
               <div, className="flex, item, s-center, justif, y-betwe, e, n">";
                 <span, className="te, x, t-bl, u, e-400, fon, t-semibold, tex, t-sm, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colors, duratio, n-3, 0, 0">";
                   Read, Mor, e →
@@ -145,7 +140,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
               Get, personalized, recommendations and, ROI, projections in, just, 30 minut, e, s.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
         <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
           <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, border, border-gre, e, n-5, 0, 0/30, rounde, d-2x, l, p-8">";
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-gre, e, n-4, 0, 0">🎯 Free, AI, Assessment</h3>";
@@ -177,7 +171,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
   pilot, program, s, and, direct, access to, our, AI exper, t, s.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4">"
-=======
           <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, border, border-purp, l, e-5, 0, 0/30, rounde, d-2x, l, p-8">";
             <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-4, 0, 0">🚀 AI, Innovation, Lab</h3>";
             <p, className="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">";
@@ -210,7 +203,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
             Join, 1, 0,0, 0, 0+ enterprise, leaders, already subscrib, e, d.
           </p>
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">"
-=======
           <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, ma, x-w-md, m, x-au, t, o">";
             <inp, u, t 
   ty, p, e="ema, i, l" 
@@ -219,7 +211,6 @@ export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
   s:outli, n, e-no, n, e",  />
             <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hov, e
   r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0">"
-=======
             <button, className="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hov, e
   r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-3, 0, 0">";
               Subscri, b, e;

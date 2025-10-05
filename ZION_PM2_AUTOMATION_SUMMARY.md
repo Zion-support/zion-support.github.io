@@ -185,7 +185,6 @@ AUTO_DEPLOY=false                        # Enable auto-deploy
 ### **Test Results**
 ```
 📊 Test Results Summary
-========================
 ✅ PM2 Installation: PASS
 ✅ Ecosystem Config: PASS
 ✅ Script Files: PASS

@@ -1,6 +1,5 @@
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
 import, Header, from "../../componen, t, s/Head, e, r";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";";
@@ -18,7 +17,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
       <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
         <Head, e, r   />
         <div, className="container, m, x-auto, p, x-6, p, y-20">
-=======
         <div, className="container, m, x-auto, p, x-6, p, y-20">";
           {/* Back, Lin, k */};
           <Li, n, k
@@ -26,7 +24,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
             classNa, m, e="inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s"
           >
             <ArrowLeft, className="w-4 h-4, m, r-2  />
-=======
             <ArrowLeft, className="w-4 h-4, m, r-2" />";
             Back, to, Services;
           </Li, n, k>
@@ -37,7 +34,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
               🚀 Enterprise, Document, AI • October, 202, 5;
             </d, i, v>
             <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
-=======
           <div, className="m, a, x-w-5xl, m, x-auto, tex, t-center, m, b-16">";
             <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, m, b-8, border, border-bl, u, e-5, 0, 0/30">";
               <FileText, className="w-5 h-5, m, r-2" />";
@@ -51,7 +47,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
             </h1>
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">
               Transform, manual, document processing, with, AI achieving, 9, 8.5% accura, c, y, 95% automati, o, n;
-=======
             <p, className="te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">";
               Transform, manual, document processing, with, AI achieving, 9, 8.5% accura, c, y, 95% automati, o, n
               a, n, d $2.8M+ annual, saving, s. Extra, c, t, classi, f, y, and, process, any document, type, at sca, l, e
@@ -62,7 +57,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30">
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">98.5%</d, i, v>
                 <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">Extraction, Accurac, y</d, i, v>
-=======
             <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8">";
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30">";
                 <div, className="te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2">98.5%</d, i, v>";
@@ -83,7 +77,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
             </d, i, v>
             <div, className="flex, fle, x-co, l, s
   m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <Li, n, k
   to="/conta, c, t"
@@ -91,7 +84,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
   r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, shado, w-lg"
               >
                 <Zap, className="w-5 h-5  />
-=======
                 <Zap, className="w-5 h-5" />";
                 Start, Free, Trial;
               </Li, n, k>
@@ -112,7 +104,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                 <ul, className="spa, c, e-y-3, tex, t-zi, o, n-sla, t, e-lig, h, t">
                   <li, className="flex, item, s-start, ga, p-2">
                     <span, className="te, x, t-r, e, d-400, m, t-1">•</sp, a, n>
-=======
           <div, className="m, a, x-w-6xl, m, x-auto, m, b-20">";
             <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
               <div, className="bg-r, e, d-9, 0, 0/20, rounde, d-2x, l, p-8, border, border-r, e, d-5, 0, 0/30">";
@@ -161,7 +152,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                   </li>
                   <li, className="flex, item, s-start, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0  />
-=======
               <div, className="bg-gre, e, n-9, 0, 0/20, rounde, d-2x, l, p-8, border, border-gre, e, n-5, 0, 0/30">";
                 <h2, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">✅ Our, A, I-Powered, Solutio, n</h2>";
                 <ul, className="spa, c, e-y-3, tex, t-zi, o, n-sla, t, e-lig, h, t">";
@@ -200,7 +190,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                 <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">Intelligent, Extractio, n</h3>
                 <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-4">
                   Extract, structured, data from, any, document form, a, t—invoic, e, s, contrac, t, s, for, m, s, receip, t, s;
-=======
           <div, className="m, a, x-w-6xl, m, x-auto, m, b-20">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r">🎯 Core, Capabilitie, s</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
@@ -224,7 +213,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30, hove, r: sca, l, e-105, transitio, n-a, l, l">"
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-5, 0, 0/30">
                   <Zap, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
-=======
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30, hove, r: sca, l, e-105, transitio, n-a, l, l">";
                 <div, className="bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-5, 0, 0/30">";
                   <Zap, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0" />";
@@ -244,7 +232,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-gre, e, n-4, 0, 0/30, hove, r: sca, l, e-105, transitio, n-a, l, l">"
                 <div, className="bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-5, 0, 0/30">
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0  />
-=======
               <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-gre, e, n-4, 0, 0/30, hove, r: sca, l, e-105, transitio, n-a, l, l">";
                 <div, className="bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-5, 0, 0/30">";
                   <CheckCircle, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
@@ -283,7 +270,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                       <div, className="bg-bl, u, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-bl, u, e-5, 0, 0/20">
                         <div, className="fo, n, t-bold, tex, t-bl, u, e-400, m, b-1">92% Fast, e, r</d, i, v>
                         <div, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Invoice, Processin, g</d, i, v>
-=======
           <div, className="m, a, x-w-6xl, m, x-auto, m, b-20">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r">💼 Enterprise, Use, Cases</h2>";
             <div, className="spa, c, e-y-6">";
@@ -320,7 +306,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                 <div, className="flex, item, s-start, ga, p-6">
                   <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-purp, l, e-5, 0, 0/30">
                     <FileText, className="w-8 h-8, tex, t-purp, l, e-4, 0, 0  />
-=======
               <div, className="bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30">";
                 <div, className="flex, item, s-start, ga, p-6">";
                   <div, className="bg-purp, l, e-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-purp, l, e-5, 0, 0/30">";
@@ -336,7 +321,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                       <div, className="bg-purp, l, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/20">
                         <div, className="fo, n, t-bold, tex, t-purp, l, e-400, m, b-1">87% Fast, e, r</d, i, v>
                         <div, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Contract, Revie, w</d, i, v>
-=======
                     <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm">";
                       <div, className="bg-purp, l, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/20">";
                         <div, className="fo, n, t-bold, tex, t-purp, l, e-400, m, b-1">87% Fast, e, r</d, i, v>";
@@ -358,7 +342,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                 <div, className="flex, item, s-start, ga, p-6">
                   <div, className="bg-gre, e, n-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-gre, e, n-5, 0, 0/30">
                     <Clock, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0  />
-=======
               <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-8, border, border-gre, e, n-5, 0, 0/30">";
                 <div, className="flex, item, s-start, ga, p-6">";
                   <div, className="bg-gre, e, n-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-gre, e, n-5, 0, 0/30">";
@@ -374,7 +357,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                       <div, className="bg-gre, e, n-9, 0, 0/30, rounde, d-l, g, p-3, border, border-gre, e, n-5, 0, 0/20">
                         <div, className="fo, n, t-bold, tex, t-gre, e, n-400, m, b-1">94% Fast, e, r</d, i, v>
                         <div, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Customer, Onboardin, g</d, i, v>
-=======
                     <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm">";
                       <div, className="bg-gre, e, n-9, 0, 0/30, rounde, d-l, g, p-3, border, border-gre, e, n-5, 0, 0/20">";
                         <div, className="fo, n, t-bold, tex, t-gre, e, n-400, m, b-1">94% Fast, e, r</d, i, v>";
@@ -399,7 +381,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r">💰 ROI, Calculato, r</h2>
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30">
               <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-10">"
-=======
           <div, className="m, a, x-w-6xl, m, x-auto, m, b-20">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r">💰 ROI, Calculato, r</h2>";
             <div, className="bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30">";
@@ -422,7 +403,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                     <div, className="bord, e, r-t, borde, r-whi, t, e/20, p, t-4, flex, justify-between, item, s-center, tex, t-xl">
                       <strong, className="te, x, t-whi, t, e">First, Year, Total: </stro, n, g>"
                       <strong, className="te, x, t-whi, t, e">$8, 5, K</stro, n, g>
-=======
                     <div, className="flex, justif, y-between, item, s-center, tex, t-lg">";
                       <span, className="te, x, t-zi, o, n-sla, t, e-lig, h, t">Implementati, o, n: </sp, a, n>";
                       <span, className="te, x, t-white, fon, t-semibo, l, d">$25K, on, e-ti, m, e</sp, a, n>";
@@ -456,7 +436,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                     <div, className="bord, e, r-t, borde, r-whi, t, e/20, p, t-4, flex, justify-between, item, s-center, tex, t-xl">
                       <strong, className="te, x, t-whi, t, e">Total, Valu, e: </stro, n, g>"
                       <strong, className="te, x, t-gre, e, n-4, 0, 0">$89, 0, K</stro, n, g>
-=======
                   <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Your, Saving, s (Yea, r, 1)</h3>";
                   <div, className="spa, c, e-y-4">";
                     <div, className="flex, justif, y-between, item, s-center, tex, t-lg">";
@@ -482,7 +461,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">9, 4, 7% R, O, I</d, i, v>
                 <div, className="te, x, t-xl, tex, t-whi, t, e">Payback, Perio, d: 1.2, month, s • Net, Val, u
   e: $80, 5, K/ye, a, r</d, i, v>"
-=======
               <div, className="mt-10, tex, t-cent, e, r">";
                 <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2">9, 4, 7% R, O, I</d, i, v>";
                 <div, className="te, x, t-xl, tex, t-whi, t, e">Payback, Perio, d: 1.2, month, s • Net, Val, u
@@ -515,7 +493,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                   </li>
                   <li, className="flex, item, s-start, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0  />
-=======
           <div, className="m, a, x-w-6xl, m, x-auto, m, b-20">";
             <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r">💎 Transparent, Pricin, g</h2>";
             <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
@@ -578,7 +555,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                   </li>
                   <li, className="flex, item, s-start, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0  />
-=======
                 <ul, className="spa, c, e-y-3, tex, t-sm, tex, t-zi, o, n-sla, t, e-light, m, b-8">";
                   <li, className="flex, item, s-start, ga, p-2">";
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0" />";
@@ -633,7 +609,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
                   </li>
                   <li, className="flex, item, s-start, ga, p-2">
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0  />
-=======
                 <ul, className="spa, c, e-y-3, tex, t-sm, tex, t-zi, o, n-sla, t, e-light, m, b-8">";
                   <li, className="flex, item, s-start, ga, p-2">";
                     <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0" />";
@@ -675,7 +650,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
               Start, your, free 30-day, trial, today—no, credit, card requir, e, d.
             </p>
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
-=======
             <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
               <Li, n, k
   to="/conta, c, t"
@@ -683,7 +657,6 @@ const, AIIntelligentDocumentProcessin, g = () => {
   r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg"
               >
                 <Zap, className="w-6 h-6  />
-=======
                 <Zap, className="w-6 h-6" />";
                 Start, Free, 30-Day, Tria, l;
               </Li, n, k>

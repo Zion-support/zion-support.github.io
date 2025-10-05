@@ -34,7 +34,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   classNa, m, e = ''
   ic, o, n = 'sparkl, e, s'
   animat, e, d = tr, u, e;
-=======
 const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
   varia, n, t = 'defau, l, t',';
   tit, l, e
@@ -74,7 +73,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
   r:to-cy, a, n-7, 0, 0','
     gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hov, e
   r:to-bl, u, e-6, 0, 0};
-=======
     bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/30',';
     purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/30',';
     gre, e, n: 'fr, o, m-gre, e, n-5, 0, 0/10, t, o-gre, e, n-6, 0, 0/10, borde, r-gre, e, n-5, 0, 0/30',';
@@ -114,7 +112,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
     he, r, o: 'py-16, p, x-10','
     compa, c, t: 'py-6, p, x-4','
     me, g, a: 'py-20, p, x-12};
-=======
     defau, l, t: 'py-8, p, x-6',';
     premi, u, m: 'py-12, p, x-8',';
     he, r, o: 'py-16, p, x-10',';
@@ -130,7 +127,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
         ${variantClass, e, s[varia, n, t]} 
         ${animat, e, d ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e
   r:sca, l, e-[1.01]' : ''};
-=======
         ${animat, e, d ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hov, e
   r:sca, l, e-[1.01]' : ''}';
         ${classNa, m, e}
@@ -144,7 +140,6 @@ const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, 
             {bad, g, e && (
               <span, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d">
                 {IconCompone, n, t && <IconComponent, className="w-4 h-4/>}";
-=======
               <span, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d">";
                 {IconCompone, n, t && <IconComponent, className="w-4 h-4" />}";
                 {bad, g, e}
@@ -162,7 +157,6 @@ fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e
 ${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-4xl, m, d: te, x, t-5, x, l' :,'
 varia, n, t === 'premi, u, m' ? 'te, x, t-3xl, m, d: te, x, t-4, x, l' :,'
 varia, n, t === 'compa, c, t' ? 'te, x, t-xl, m, d: te, x, t-2, x, l' :,'
-=======
 ${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-4xl, m, d: te, x, t-5, x, l' :';
 varia, n, t === 'premi, u, m' ? 'te, x, t-3xl, m, d: te, x, t-4, x, l' :';
 varia, n, t === 'compa, c, t' ? 'te, x, t-xl, m, d: te, x, t-2, x, l' :';
@@ -178,7 +172,6 @@ varia, n, t === 'compa, c, t' ? 'te, x, t-xl, m, d: te, x, t-2, x, l' :';
 te, x, t-gr, a, y-200, m, b-6;
 ${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-lg, m, d: te, x, t-xl' :,'
 varia, n, t === 'compa, c, t' ? 'te, x, t-sm' :
-=======
 ${varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'te, x, t-lg, m, d: te, x, t-xl' :';
 varia, n, t === 'compa, c, t' ? 'te, x, t-sm' :';
 'te, x, t-bas, e, m
@@ -194,7 +187,6 @@ visibleIte, m, s.leng, t, h > 0 && (
 grid, ga, p-4, m, b-6;
 ${varia, n, t === 'me, g, a' ? 'md: gr, i, d-co, l, s-3' :,'
 varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m' ? 'md: gr, i, d-co, l, s-2' :,'
-=======
 ${varia, n, t === 'me, g, a' ? 'md: gr, i, d-co, l, s-3' :';
 varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m' ? 'md: gr, i, d-co, l, s-2' :';
 'm
@@ -215,7 +207,6 @@ varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m' ? 'md: gr, i, d-co, 
                   <div, className="fl, e, x-1, mi, n-w-0">
                     <div, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1">{it, e, m.catego, r, y}</d, i, v>
                     <div, className="te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2">"
-=======
                   <div, className="fl, e, x-1, mi, n-w-0">";
                     <div, className="te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1">{it, e, m.catego, r, y}</d, i, v>";
                     <div, className="te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2">";
@@ -226,7 +217,6 @@ varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m' ? 'md: gr, i, d-co, 
                     )}
                   </d, i, v>
                   <ArrowRight, className="fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y/>"
-=======
                   <ArrowRight, className="fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y" />";
                 </d, i, v>
               </Li, n, k>
@@ -258,7 +248,6 @@ varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a' ? 'px-10, p, y-5, tex, 
               classNa, m, e="te, x, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, transitio, n-colors, tex, t-sm"
             >
               +{featuredIte, m, s.leng, t, h - showCou, n, t} more, breakthroug, h{featuredIte, m, s.leng, t, h - showCou, n, t !== 1 ? 's' : ''};
-=======
               +{featuredIte, m, s.leng, t, h - showCou, n, t} more, breakthroug, h{featuredIte, m, s.leng, t, h - showCou, n, t !== 1 ? 's' : ''}';
             </Li, n, k>
           )}

@@ -19,7 +19,6 @@ export, const, blogPosts: BlogPo, s, t[] = [
   2: Gate, Ris, k, Ship, Faste, r"
     descripti, o, n: "K, P, I‑linked, SLI, s, online, canarie, s, and, rollbac, k‑first, ops, that raise, velocity, while reducing, incident, s."
     conte, n, t: `,`
-=======
     sl, u, g: "ai-20, 2, 5-o, c, t-04-operation, a, l-ai-scorecar, d, s-v2",";
     tit, l, e: "Operational, AI, Scorecards v
   2: Gate, Ris, k, Ship, Faste, r",";
@@ -28,7 +27,6 @@ export, const, blogPosts: BlogPo, s, t[] = [
 # Operational, AI, Scorecards v2
   Ship, AI, features weekly, without, surprises by, wiring, measurement to, decision, s.
 ## What, Yo, u'll, Implemen, t;
-=======
 ## What, Yo, u'll, Implemen, t';
 - K, P, I‑linked, SLIs, that predict, outcome, s;
 - Online, canaries, as deploy, gate, s;
@@ -51,7 +49,6 @@ export, const, blogPosts: BlogPo, s, t[] = [
   s: Lift, Correctnes, s, Cut, Spen, d"
     descripti, o, n: "Freshness, window, s, retrieval, tier, s, and, semantic, caches that, raise, answer quality, while, reducing co, s, t."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Reliability, La, b",";
     da, t, e: "20, 2, 5-10-04",";
     catego, r, y: "AI, Reliabilit, y",";
@@ -91,7 +88,6 @@ export, const, blogPosts: BlogPo, s, t[] = [
     descripti, o, n: "Deploy, sel, f-healing, infrastructure, with AI-driven, incident, response, automated, remediatio, n, and, predictive, maintenance."
     conte, n, t: `,`
 # Autonomous, DevOps, Platforms: Se, l, f-Healing, Infrastructure, at Sca, l, e;
-=======
     aut, h, o
   r: "Zion, Tech, Group Knowledge, System, s",";
     da, t, e: "20, 2, 5-10-04",";
@@ -133,7 +129,6 @@ Modern, infrastructure, requires autonomous, capabilities, to handle, the, compl
     descripti, o, n: "Unify, visio, n, langua, g, e, and, reasoning, capabilities for, enterprise, applications that, understand, context across, modalitie, s."
     conte, n, t: `,`
 # Multimodal, AI, Integration: Visi, o, n, Langua, g, e, and, Decision, Making;
-=======
     auth, o, r: "Zion, Tech, Group DevOps, Innovatio, n",";
     da, t, e: "20, 2, 5-10-04",";
     catego, r, y: "DevO, p, s & Infrastructu, r, e",";
@@ -175,7 +170,6 @@ Enterprise, AI, systems need, to, process and, understand, multiple data, types,
     descripti, o, n: "Implement, comprehensive, AI governance, frameworks, with automated, risk, assessment, compliance, monitorin, g, and, ethical, AI practic, e, s."
     conte, n, t: `,`
 # Enterprise, AI, Governance: Risk, Management, and Compliance, at, Scale;
-=======
     aut, h, o
   r: "Zion, Tech, Group AI, Researc, h",";
     da, t, e: "20, 2, 5-10-04",";
@@ -218,7 +212,6 @@ Modern, enterprises, need robust, AI, governance to, manage, risks and, ensure, 
     descripti, o, n: "Optimize, AI, inference at, the, edge with, reduced, latency, improved, privac, y, and, enhanced, performance for, rea, l-time, application, s."
     conte, n, t: `,`
 # Edge, Computing, Optimization: Deploy, AI, at the, Network, Edge;
-=======
     aut, h, o
   r: "Zion, Tech, Group Governance, Tea, m",";
     da, t, e: "20, 2, 5-10-04",";
@@ -262,7 +255,6 @@ Edge, computing, brings AI, closer, to data, source, s, enabling, rea, l-time, p
     descripti, o, n: "Practical, patterns, to run, AI, agents safely, in, prod with, KP, I-linked, SLI, s, action, budget, s, and, instant, rollback."
     conte, n, t: `,`
 # Enterprise, Agents, in Producti, o, n: Budge, t, s, Approva, l, s, and, Rollbac, k;
-=======
     auth, o, r: "Zion, Tech, Group Edge, Computin, g",";
     da, t, e: "20, 2, 5-10-04",";
     catego, r, y: "Edge, Computin, g",";
@@ -334,7 +326,6 @@ This, guide, shows how, to, ship agentic, systems, that operate, within, explici
   y: policy, tests, in CI, K, P, I-linked, scorecard, s, kill, switche, s, and, budge, t-aware, routin, g."
     conte, n, t: `,`
 # Enterprise, AI, Governance 20, 2, 5: Scorecar, d, s, Guardrai, l, s, and, Zer, o-Regret, Rollout, s;
-=======
     auth, o, r: "Zion, Tech, Group AI, Operation, s",";
     da, t, e: "20, 2, 5-10-04",";
     catego, r, y: "AI, Operation, s",";
@@ -408,7 +399,6 @@ Modern, enterprises, need shipping, speed, without surprise, ris, k. This, field
     descripti, o, n: "Operate, AI, safely at, scale, with K, P, I-linked, scorecard, s, canary, gate, s, and, rollbac, k-first, desig, n."
     conte, n, t: `,`
 # AI, Ops, Excellence: Live, Scorecard, s, Canary, Gate, s, Instant, Rollbac, k;
-=======
     auth, o, r: "Zion, Tech, Group Reliability, La, b",";
     da, t, e: "20, 2, 5-10-01",";
     catego, r, y: "AI, Governanc, e",";
@@ -448,7 +438,6 @@ Operate, AI, systems safely, at, enterprise sca, l, e. Wire, KP, I-linked, score
   7: SLIs, That, Drive Outcom, e, s"
     descripti, o, n: "Design, platform, scorecards engineers, adop, t—SLIs, tied, to KP, I, s, budge, t, s, and, rollback, triggers."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Reliability, La, b",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Operatio, n, s",";
@@ -486,7 +475,6 @@ Operate, AI, systems safely, at, enterprise sca, l, e. Wire, KP, I-linked, score
     tit, l, e: "Edge, Experiments, v4 (20, 2, 6): Ze, r, o‑PI, I, A/B, Under, 100ms"
     descripti, o, n: "Run, compliant, experiments with, scoped, IDs, on-device, aggregatio, n, and, DP, noise—glob, a, l <100, m, s."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Platform, Tea, m",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Platform, Engineerin, g",";
@@ -518,7 +506,6 @@ Blueprint, for, compliant, fast, experimentatio, n: - Signed, config, s + cachea
     tit, l, e: "GenAI, Cost, Controllers v4 (20, 2, 7): Quality, Tier, s + Caches, at, Scale"
     descripti, o, n: "Stabilize, UX, under budget, with, tiered routi, n, g, semantic, cache, s, and, evaluato, r-backed, policie, s."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Privacy, La, b",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Experimentati, o, n",";
@@ -552,7 +539,6 @@ Cut, spend, 40–70% while, tightening, tails: - Tiered, model, routing by, SLA,
     descripti, o, n: "Run, hig, h‑velocit, y, A/B, tests, without centralizing, PII, using signed, config, s, scoped, ID, s, and, edge, analytics."
     conte, n, t: `,`
 # Private, Feature, Flags: Ze, r, o‑PII, Experiments, Under 100, m, s;
-=======
     aut, h, o
   r: "Zion, Tech, Group FinOps, La, b",";
     da, t, e: "20, 2, 5-10-03",";
@@ -595,7 +581,6 @@ Modern, experimentation, does not, require, centralized P, I, I. This, guide, sh
     descripti, o, n: "Blueprint, for, instant rollbac, k, s, canary, scorecard, s, and, budgeted, routes—move, fast, without breaka, g, e."
     conte, n, t: `,`
 # Runtime, Rollback, Guardrails: Ship, Faster, With Reversible, Change, s;
-=======
     aut, h, o
   r: "Zion, Tech, Group Privacy, La, b",";
     da, t, e: "20, 2, 5-10-01",";
@@ -639,7 +624,6 @@ This, guide, includes reference, dashboard, s, config, example, s, and, incident
     descripti, o, n: "Deploy, budgete, d, poli, c, y‑gated, AI, copilots that, boost, delivery 10x, while, keeping reliability, and, spend under, contro, l."
     conte, n, t: `,`
 # Enterprise, Agent, Copilots 20, 2, 5: 10x, Velocity, With Guardrai, l, s;
-=======
     aut, h, o
   r: "Zion, Tech, Group Reliability, La, b",";
     da, t, e: "20, 2, 5-10-01",";
@@ -682,7 +666,6 @@ Results, we, see in, productio, n: - 10x, feature, velocity with, stable, change
   h: HNSW, tunin, g, PQ/IVF, hybri, d, tiered, cache, s, and, hardwar, e-aware, configs, that deliver, su, b-10ms, p99, at billi, o, n-sca, l, e."
     conte, n, t: `,`
 # Vector, Database, Optimization 20, 2, 5: S, u, b-10ms, Search, at Billion, Scal, e;
-=======
     aut, h, o
   r: "Zion, Tech, Group Te, a, m",";
     da, t, e: "20, 2, 5-10-01",";
@@ -720,7 +703,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
   5: 1, 0, M+/sec, Decisions, under 1, m, s"
     descripti, o, n: "Architect, ultr, a-l, o, w-latency, decision, engines with, streaming, features, tiered, cache, s, and, budgeted, routes. Proven, patterns, for <1ms, actions, at 1, 0, M+ even, t, s/s, e, c."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Data, Platform, s",";
     da, t, e: "20, 2, 5-10-01",";
     catego, r, y: "AI, Infrastructur, e",";
@@ -756,7 +738,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
   5: Sign, a, l‑Rich, Insights, Without P, I, I"
     descripti, o, n: "On-device, aggregatio, n, scoped, ID, s, and, DP, noise to, unlock, analytics without, collecting, PII—trusted, by, security and, loved, by produ, c, t."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Re, a, l-Time, AI, Team",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Re, a, l-Time, A, I",";
@@ -792,7 +773,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
   5: Live, Trace, s, SL, I, s, and, Rollbac, k"
     descripti, o, n: "E, n, d‑to‑end, visibility, for agent, tools, with K, P, I‑linked, SLI, s, budgeted, action, s, and, instant, rollback trigge, r, s."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Privacy, Engineerin, g",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Analyti, c, s",";
@@ -827,7 +807,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
   5: 12.4x, Engagemen, t, 8x, Conversio, n"
     descripti, o, n: "Deploy, rea, l-time, personalization, engines with, event, streams, vector, user, models, and, bandit, routing. Proven, patterns, yielding 12.4x, engagement, and 8x, conversion, uplifts."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group AI, Operation, s",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "AI, Operation, s",";
@@ -864,7 +843,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
     descripti, o, n: "A, pragmatic, caching blueprint, for, LLM a, p, p
   s: prom, p, t, embeddi, n, g, feature, and, retrieval-layer, caches, that cut, spend, while tightening, tail, latency."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group CX, La, b",";
     da, t, e: "20, 2, 5-10-01",";
     catego, r, y: "Customer, Experienc, e",";
@@ -907,7 +885,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
     descripti, o, n: "A, field, guide to, measurable, AI reliabil, i, t
   y: eval, scorecard, s, r, e, d-team, funnel, s, and, production, SLOs that, stic, k."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Platform, Tea, m",";
     da, t, e: "20, 2, 5-10-02",";
     catego, r, y: "GenAI, Engineerin, g",";
@@ -949,7 +926,6 @@ This, hand, s-on, guide, shows how, leading, teams achieve, su, b-10ms, p99, vec
     descripti, o, n: "Discover, how, AI-powered, digital, twins are, revolutionizing, enterprise operations, in, 2025, delivering, unprecedented, insights, predictive, capabilitie, s, a, n, d $47B, in, business val, u, e."
     conte, n, t: `,`
 # Enterprise, Digital, Twins: The, 2025, AI-Powered, Revolution, Transforming Business, Operation, s;
-=======
     aut, h, o
   r: "Zion, Tech, Group Reliability, La, b",";
     da, t, e: "20, 2, 5-10-02",";
@@ -984,7 +960,6 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     descripti, o, n: "Organizations, implementing, autonomous DevOps, are, achieving 99.99% upti, m, e, 92% reduction, in, incident response, tim, e, 87% cost, saving, s, a, n, d $34, 0, M+ in, annual, value creation, through, intelligent se, l, f-healing, automatio, n."
     conte, n, t: `,`
 # AI-Powered, Autonomous, DevOps Platform, 202, 5: Se, l, f-Healing, Infrastructure, Revolution;
-=======
     aut, h, o
   r: "Dr. Sarah, Che, n, Chief, Innovation, Officer",";
     da, t, e: "20, 2, 5-10-01",";
@@ -1019,7 +994,6 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     descripti, o, n: "Leading, enterprises, implementing quant, u, m-resistant, AI, security are, achieving, 99.99% threat, preventio, n, zero, cryptographic, vulnerabilities, 94% faster, threat, response, a, n, d $24, 7, M+ in, avoided, breach cos, t, s."
     conte, n, t: `,`
 # Quant, u, m-Safe, AI, Security Framework, 202, 5: Futu, r, e-Proofing, Enterprise, Protection;
-=======
     aut, h, o
   r: "Zion, Tech, Group DevOps, Innovation, Team",";
     da, t, e: "20, 2, 5-10-01",";
@@ -1054,7 +1028,6 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     descripti, o, n: "Organizations, implementing, cognitive BI, are, achieving 87% faster, decision, s, 3, 4, 0% R, O, I, $42, 7, M+ in, incremental, revenue, and, competitive, advantages through, instant, AI-powered, insight, s."
     conte, n, t: `,`
 # Re, a, l-Time, Cognitive, Business Intelligence, Platform, 2025: AI-Driven, Decision, Revolution;
-=======
     aut, h, o
   r: "Zion, Tech, Group Security, Research, Division",";
     da, t, e: "20, 2, 5-10-01",";
@@ -1089,7 +1062,6 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     descripti, o, n: "Organizations, implementing, IAEM are, achieving, 97.3% operational, automatio, n, 89% cost, reductio, n, a, n, d $84, 7, M+ in, annual, value creation, through, self-organizi, n, g, se, l, f-healing, distributed, AI syste, m, s."
     conte, n, t: `,`
 # Intelligent, Autonomous, Enterprise Me, s, h: The, Future, of Distributed, AI, Operations;
-=======
     aut, h, o
   r: "Zion, Tech, Group Analytics, Excellence, Team",";
     da, t, e: "20, 2, 5-10-01",";
@@ -1124,7 +1096,6 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     descripti, o, n: "AI-powered, predictive, maintenance systems, are, predicting failures, with, 99.2% accuracy, up, to 30, days, in advan, c, e, reducing, downtime, by 87%, and, deliverin, g $12, 7, M+ in, annual, value."
     conte, n, t: `,`
 # Advanced, A, I-Powered, Predictive, Maintenance: Eliminating, Unplanned, Downtime;
-=======
     aut, h, o
   r: "Zion, Tech, Group Research, Tea, m",";
     da, t, e: "20, 2, 5-10-01",";
@@ -1159,7 +1130,6 @@ For, full, details, see, the, complete article, in, our content, repositor, y.
     conte, n, t: `,`
 # The, Complete, Guide to, AI, Workflow Automation, in, 2025
   Artificial, Intelligence, has transformed, from, a futuristic, concept, into a, practical, business tool, tha, t's, reshaping, how companies, operat, e. In, 202, 5, AI, workflow, automation i, s, n't, just, a competitive, advantag, e—it's, becoming, essential for, survival, in the, digital, marketplace.;
-=======
     auth, o, r: "Zion, Tech, Group Industrial, AI, Division",";
     da, t, e: "20, 2, 5-10-01",";
     catego, r, y: "Industrial, A, I",";
@@ -1248,7 +1218,6 @@ D, o, n't, let, your competitors, gain, an ed, g, e. Start, your, AI automation,
     tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Laten, c, y"
     descripti, o, n: "Topologies, and, caching strategies, that, cut P95, by, 40% in, real, deployments."
     conte, n, t: `,`
-=======
 D, o, n't, let, your competitors, gain, an ed, g, e. Start, your, AI automation, journey, today with, Zion, Tech Gro, u, p.';
     `,`;`
     auth, o, r: "Zion, Tech, Group Te, a, m",";
@@ -1300,7 +1269,6 @@ Want, help, designing a, pragmatic, edge pl, a, n? Our, team, has shipped, this,
   s: Fewer, KPI, s, Better, Outcome, s"
     descripti, o, n: "Pick, three, metrics that, align, delivery, reliabili, t, y, and, cost, without dashboard, bloa, t."
     conte, n, t: `,`
-=======
     `,`;`
     auth, o, r: "Zion, Tech, Group Te, a, m",";
     da, t, e: "20, 2, 5-09-28",";
@@ -1340,7 +1308,6 @@ Want, help, designing a, pragmatic, edge pl, a, n? Our, team, has shipped, this,
     tit, l, e: "Best, Practices, for Implementing, AI, Virtual Assistants, in, 2025"
     descripti, o, n: "Learn, how, to successfully, implement, AI virtual, assistants, in your, busines, s. Discover, strategies, for traini, n, g, deployme, n, t, and, optimizatio, n."
     conte, n, t: `,`
-=======
     `,`;`
     auth, o, r: "Zion, Tech, Group Te, a, m",";
     da, t, e: "20, 2, 5-08-30",";
@@ -1359,7 +1326,6 @@ Want, help, designing a, pragmatic, edge pl, a, n? Our, team, has shipped, this,
   AI, virtual, assistants have, evolved, from simple, chatbots, to sophisticated, conversational, AI systems, that, can handle, complex, customer interactio, n, s. As, businesses, increasingly adopt, these, technologies, understanding, best, practices becomes, crucial, for successful, implementatio, n.
 ## Understanding, Modern, AI Virtual, Assistant, s
   Tod, a, y's, AI, virtual assistants, are, powered by, advanced, natural language, processin, g (N, L, P) and, machine, learning algorith, m, s. They, ca, n: '
-=======
 Tod, a, y's, AI, virtual assistants, are, powered by, advanced, natural language, processin, g (N, L, P) and, machine, learning algorith, m, s. They, ca, n: ';
 - **Understand, contex, t**: Maintain, conversation, context across, multiple, interactions;
 - **Learn, from, interactions**: Improve, responses, based on, user, feedback and, pattern, s;
@@ -1379,7 +1345,6 @@ Tod, a, y's, AI, virtual assistants, are, powered by, advanced, natural language
 ### 3. Design, Conversational, Flows
   Create, natura, l, hum, a, n-like, conversation, patterns: - **Welcome, message, s**: Friend, l, y, helpful, introduction, s
 - **Error, handlin, g**: Graceful, responses, when the, AI, doesn't, understan, d;
-=======
 - **Error, handlin, g**: Graceful, responses, when the, AI, doesn't, understan, d';
 - **Escalation, path, s**: Smooth, handoff, to human, agents, when need, e, d;
 - **Closing, interaction, s**: Profession, a, l, helpful, conclusion, s;
@@ -1459,7 +1424,6 @@ The, future, of customer, service, is he, r, e. D, o, n't, get, left behi, n, d�
     tit, l, e: "How, AI, is Transforming, Data, Analytics in, 202, 5"
     descripti, o, n: "Explore, the, revolutionary impact, of, AI on, data, analytics. Learn, about, predictive analyti, c, s, automated, insight, s, and, rea, l-time, decision, making."
     conte, n, t: `,`
-=======
 The, future, of customer, service, is he, r, e. D, o, n't, get, left behi, n, d—start, your, AI assistant, journey, today.';
     `,`;`
     auth, o, r: "Zion, Tech, Group Te, a, m",";
@@ -1519,7 +1483,6 @@ NLP, enables, users to, query, data using, natural, language: - "Show, me, sales
 - **Recommendation, engine, s**: Suggest, actions, based on, data, analysis;
 ### Re, a, l-Time, Analytic, s
   Process, and, analyze data, as, it's, generate, d: '
-=======
 Process, and, analyze data, as, it's, generate, d: ';
 - **Stream, processin, g**: Handle, hig, h-velocity, data, streams;
 - **Instant, alert, s**: Notify, stakeholders, of critical, change, s;
@@ -1618,7 +1581,6 @@ Take, a, phased approach, to, implementation: - Start, with, pilot projec, t, s
 - Scale, successful, initiatives;
 - Continuously, optimize, and impro, v, e;
 ## Zion, Tech, Group's, AI, Analytics Solutio, n, s;
-=======
 ## Zion, Tech, Group's, AI, Analytics Solutio, n, s';
 At, Zion, Tech Gro, u, p, we, specialize, in implementing, A, I-powered, analytics, solutions that, deliver, measurable business, valu, e. Our, comprehensive, approach includ, e, s: - **Strategic, assessmen, t** of, your, analytics nee, d, s
 - **Custom, solution, design** tailored, to, your busine, s, s;
@@ -1648,7 +1610,6 @@ Ready, to, transform your, data, into actionable, insight, s? Contact, our, team
     tit, l, e: "Why, Micro, SAAS Platforms, Are, the Future, of, Business Softwa, r, e"
     descripti, o, n: "Discover, the, advantages of, micro, SAAS platforms, and, how th, e, y're, transforming, how businesses, consume, and implement, software, solutions."
     conte, n, t: `,`
-=======
 The, future, of analytics, is, here, and, i, t's, powered, by AI. D, o, n't, let, your competitors, gain, an ed, g, e—start, your, AI analytics, transformation, today with, Zion, Tech Gro, u, p.';
 Ready, to, transform your, data, into actionable, insight, s? Contact, our, team for, a, free consultation, and, discover how, AI, analytics can, revolutionize, your busine, s, s.
     `,`;`
@@ -1803,7 +1764,6 @@ Micro, SAAS, platforms are, specialized, software-as-a-service, applications, de
 - **Contract, revie, w**: Understand, terms, and conditio, n, s;
 ## Zion, Tech, Group's, Micro, SAAS Solutio, n, s;
 At, Zion, Tech Gro, u, p, we've, developed, a suite, of, AI-powered, micro, SAAS platforms, designed, to solve, specific, business challeng, e, s: '
-=======
 ## Zion, Tech, Group's, Micro, SAAS Solutio, n, s';
 At, Zion, Tech Gro, u, p, we've, developed, a suite, of, AI-powered, micro, SAAS platforms, designed, to solve, specific, business challeng, e, s: ';
 ### AI, Workflow, Automation Platfo, r, m;
@@ -1845,7 +1805,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
     descripti, o, n: "A, pragmatic, RAG playb, o, o
   k: retrieval, budget, s, freshness, window, s, and, cache, tiers that, raise, answer quality, while, cutting spe, n, d."
     conte, n, t: `,`
-=======
 The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o, n't, get, left behi, n, d—start, your, transformation tod, a, y.';
     `,`;`
     auth, o, r: "Zion, Tech, Group Te, a, m",";
@@ -1885,7 +1844,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
   n: Safe, Tool, s, Fast, Outcome, s"
     descripti, o, n: "Design, agent, toolchains with, budget, s, approva, l, s, and, rollback, to move, 10x, faster without, incident, s."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Knowledge, System, s",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "RAG, Engineerin, g",";
@@ -1921,7 +1879,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
   6: Quality, Tier, s, Coales, c, e, and, Distil, l"
     descripti, o, n: "Latest, cost, playbook with, tiered, routing, request, coalescin, g, and, selective, distillation—60–85% cost, down, with steady, UX, KPIs."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group AI, Operation, s",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "AI, Operation, s",";
@@ -1957,7 +1914,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
   5: 99.2% Forecast, Accurac, y, 78% Co, s, t ↓"
     descripti, o, n: "Deploy, A, I-driven, plannin, g, routi, n, g, and, fulfillment, with clos, e, d-loop, telemetry, and guardrai, l, s. Re, a, l-world, playbooks, for 99.2% forecast, accuracy, and 78% cost, reductio, n."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Platform, Tea, m",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "GenAI, Engineerin, g",";
@@ -1994,7 +1950,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
     descripti, o, n: "Agentic, SOC, playboo
   k: tool, trace, s, action, budget, s, and, rollbac, k. Ship, measurable, protection with, 9, 9.97% detection, an, d <1s, response, times."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Supply, Chain, AI",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Supply, Chain, AI",";
@@ -2031,7 +1986,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
   X: 12.4x, Engagemen, t, 8x, Conversion, Uplift"
     descripti, o, n: "Production, blueprint, for re, a, l‑time, personalization, using streaming, feature, s, vector, profile, s, and, bandit, routing—measurable, lifts, without P, I, I."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Security, Engineerin, g",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "AI, Securit, y",";
@@ -2068,7 +2022,6 @@ The, future, of business, software, is he, r, e, and, i, t's, micro, SAAS. D, o,
     descripti, o, n: "Deploy, brai, n-inspired, AI, at the, edge, with eve, n, t-driven, compute, delivering s, u, b-10ms, decisions, at 1000x, energy, efficiency."
     conte, n, t: `,`
 # Neuromorphic, Edge, AI 20, 2, 5: 1000x, Efficiency, for Re, a, l-Time, Intelligenc, e;
-=======
     aut, h, o
   r: "Zion, Tech, Group CX, La, b",";
     da, t, e: "20, 2, 5-10-03",";
@@ -2103,7 +2056,6 @@ Key, outcome, s: s, u, b-10ms, latenc, y, 1000x, energy, efficiency vs. GP, U, s
     descripti, o, n: "Blueprint, to, train hi, g, h-accuracy, models, with zero, PII, risk using, diffusio, n/GAN, pipelines, and evaluato, r, s."
     conte, n, t: `,`
 # Synthetic, Data, in Producti, o, n: Priva, c, y-Safe, Accuracy, Gains in, 202, 5;
-=======
     aut, h, o
   r: "Zion, Tech, Group Resear, c, h",";
     da, t, e: "20, 2, 5-10-03",";
@@ -2137,7 +2089,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
   5: 3.2x, Pipeline, Velocity, 1, 2, 7% R, O, I"
     descripti, o, n: "E, n, d-to-end, RevOps, automation with, AI, playbooks, guardrailed, routin, g, and, live, scorecards. Prove, n, 3.2x, pipeline, velocity and, 12, 7% ROI, in, Fortune 500, deployment, s."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Data, La, b",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Data, Platform, s",";
@@ -2176,7 +2127,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
     descripti, o, n: "Production, blueprint, for documen, t, A
   I: layo, u, t-aware, model, s, weak, label, s, and, huma, n-in-t, h, e-loop, QA, delivering 99.2% accuracy, and, 94% faster, processin, g."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group GTM, System, s",";
     da, t, e: "20, 2, 5-10-01",";
     catego, r, y: "Go-To-Market, A, I",";
@@ -2214,7 +2164,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
     descripti, o, n: "A, pragmatic, reference architecture, to, run AI, as, a prod, u, c
   t: scorecar, d, s, policy, tests, in CI, tiered, routin, g, and, rollback, playbooks."
     conte, n, t: `,`
-=======
     `,`;`
     auth, o, r: "Zion, Tech, Group Document, A, I",";
     da, t, e: "20, 2, 5-10-01",";
@@ -2259,7 +2208,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
   e: <100, m, s, Ze, r, o‑PII, Metric, s"
     descripti, o, n: "Run, global, A/Bs, with, scoped I, D, s, on‑device, aggregatio, n, and, DP, noise—s, u, b‑100ms, decisions, without data, ris, k."
     conte, n, t: `,`
-=======
     auth, o, r: "Zion, Tech, Group Platform, Offic, e",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "Platform, Engineerin, g",";
@@ -2300,7 +2248,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
   t: Scorecards, That, Drive Outcom, e, s"
     descripti, o, n: "Design, eval, pipelines that, predict, production KPIs, and, gate risky, changes, with confiden, c, e."
     conte, n, t: `,`
-=======
     `,`;`
     auth, o, r: "Zion, Tech, Group Edge, La, b",";
     da, t, e: "20, 2, 5-10-03",";
@@ -2343,7 +2290,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
   e: Freshness, Window, s, Sources, You, Can Tru, s, t"
     descripti, o, n: "Ship, governed, retrieval with, freshness, windows, source, whitelist, s, and, cache, tiers that, cut, cost while, lifting, answer quali, t, y."
     conte, n, t: `,`
-=======
     `,`;`
     auth, o, r: "Zion, Tech, Group Reliability, La, b",";
     da, t, e: "20, 2, 5-10-03",";
@@ -2383,7 +2329,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
   n: Budge, t, s, Approva, l, s, Rollba, c, k"
     descripti, o, n: "Design, agent, toolchains with, action, budgets, approva, l, s, and, instant, rollback so, teams, move 10x, faster, without inciden, t, s."
     conte, n, t: `,`
-=======
     `,`;`
     auth, o, r: "Zion, Tech, Group Knowledge, System, s",";
     da, t, e: "20, 2, 5-10-03",";
@@ -2415,7 +2360,6 @@ Includes, rollout, plan, governance, guardrail, s, and, rea, l-world, case, stud
     ta, g, s: ["Agen, t, s", "Governan, c, e", "Approva, l, s", "Rollba, c, k"],"
     featur, e, d: tr, u, e
     readTi, m, e: "8, min, read","
-=======
     auth, o, r: "Zion, Tech, Group AI, Operation, s",";
     da, t, e: "20, 2, 5-10-03",";
     catego, r, y: "AI, Operation, s",";

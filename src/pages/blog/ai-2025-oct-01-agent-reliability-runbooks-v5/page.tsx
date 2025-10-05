@@ -7,7 +7,6 @@
         <me, t, a
   na, m, e="descripti, o, n"
           content="Execute, saf, e, budg, e, t-aware, agent, operations using, KP, I-linked, playbook, s, canary, scorecard, s, and, instant, rollback." /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-age, n, t-reliabili, t, y-runboo, k, s-v5/>"
-=======
           content="Execute, saf, e, budg, e, t-aware, agent, operations using, KP, I-linked, playbook, s, canary, scorecard, s, and, instant, rollback."
          />
         <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-age, n, t-reliabili, t, y-runboo, k, s-v5" />";
@@ -35,7 +34,6 @@
             </p>
             <div, className="mt-8">
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>"
-=======
             <div, className="mt-8">";
               <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>";
             </d, i, v>

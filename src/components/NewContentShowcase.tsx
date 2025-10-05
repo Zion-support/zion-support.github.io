@@ -1,6 +1,5 @@
 import React from "react";
 impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-=======
 impo, r, t {
 Li, n, k;
 } fr, o, m "rea, c, t-rout, e, r-d, o, m";
@@ -59,7 +58,6 @@ const, newServices202, 6 = [
     catego, r, y: 'Cybersecuri, t, y'
     ic, o, n: '🔒'
     li, n, k: '/servic, e, s/ze, r, o-tru, s, t-securi, t, y'
-=======
     na, m, e: 'Zero, Trust, Security Framewo, r, k'
     descripti, o, n: 'Advanced, security, with 99.9% threat, detection, accuracy'
     catego, r, y: 'Cybersecuri, t, y'
