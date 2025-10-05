@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-// import Footer from '../components/Footer';
-=======
 import React from 'react';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
+// import Footer from '../components/Footer';
 
 const Contact: React.FC = () => {
   return (
@@ -19,13 +13,8 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </main>
-<<<<<<< HEAD
 
       {/* <Footer /> */}
-=======
-      
-      <Footer />
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
     </div>
   );
 };
