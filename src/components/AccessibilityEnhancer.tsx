@@ -6,11 +6,12 @@ interface AccessibilityEnhancerProps {
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Add skip links
+    // Add skip links for keyboard navigation
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
       skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'skip-link';
       skipLink.style.cssText = `
         position: absolute;
         top: -40px;
@@ -36,24 +37,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Enhance interactive elements
     const enhanceInteractiveElements = () => {
-      const buttons = document.querySelectorAll('button:not([aria-label])');
+      const buttons = document.querySelectorAll('button, [role="button"]');
       buttons.forEach(button => {
-        if (!button.getAttribute('aria-label')) {
-          button.setAttribute('aria-label', button.textContent || 'Button');
-        }
-      });
-
-      const links = document.querySelectorAll('a:not([aria-label])');
-      links.forEach(link => {
-        if (!link.getAttribute('aria-label')) {
-          link.setAttribute('aria-label', link.textContent || 'Link');
-        }
-      });
-
-      const images = document.querySelectorAll('img:not([alt])');
-      images.forEach(img => {
-        if (!img.getAttribute('alt')) {
-          img.setAttribute('alt', 'Image');
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Interactive element');
         }
       });
     };
@@ -71,48 +58,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       });
     };
 
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const header = document.querySelector('header');
-      if (header && !header.getAttribute('role')) {
-        header.setAttribute('role', 'banner');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
-    };
-
-    // Initialize accessibility enhancements
     addSkipLinks();
     enhanceInteractiveElements();
     enhanceFocusManagement();
-    addAriaLandmarks();
 
-    // Set up mutation observer to handle dynamically added content
-    const observer = new MutationObserver(() => {
-      enhanceInteractiveElements();
-      addAriaLandmarks();
-    });
-
-    observer.observe(document.body, {
-      childList: true,
-      subtree: true
-    });
-
+    // Cleanup function
     return () => {
-      observer.disconnect();
+      const skipLink = document.querySelector('.skip-link');
+      if (skipLink) {
+        skipLink.remove();
+      }
     };
   }, []);
 
