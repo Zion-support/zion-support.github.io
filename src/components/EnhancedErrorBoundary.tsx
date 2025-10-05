@@ -59,8 +59,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,',
-      userId: this.getUserId(),',
+      url: window.location.href,
+      userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
 

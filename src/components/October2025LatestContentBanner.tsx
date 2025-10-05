@@ -2,24 +2,24 @@ import { Link } from "react-router-dom";
 
 const October2025LatestContentBanner = () => {
   const articles = [
-    {",
+    {
       title: "Advanced GenAI Orchestration Platform",
       description: "Master multi-model coordination and intelligent workflow automation at enterprise scale",
-      icon: Brain,",
+      icon: Brain,
       link: "/blog/ai-2025-october-advanced-genai-orchestration-platform",
       gradient: "from-violet-600 to-purple-600"
     },
-    {",
+    {
       title: "Enterprise AI Security: Zero Trust Framework",
       description: "Comprehensive security architecture protecting AI models, data, and inference endpoints",
-      icon: Shield,",
+      icon: Shield,
       link: "/blog/ai-2025-october-enterprise-ai-security-zero-trust-framework",
       gradient: "from-cyan-600 to-blue-600"
     },
-    {",
+    {
       title: "Real-Time Multimodal AI Processing",
       description: "Revolutionary techniques for simultaneous text, vision, and audio processing in production",
-      icon: Zap,",
+      icon: Zap,
       link: "/blog/ai-2025-october-real-time-multimodal-processing-revolution",
       gradient: "from-purple-600 to-pink-600"
     }
@@ -61,7 +61,8 @@ const October2025LatestContentBanner = () => {
                 className="group bg-slate-800/50 backdrop-blur-sm border border-slate-700 hover:border-violet-500/50 rounded-xl p-6 transition-all duration-300 hover:transform hover:-translate-y-2 hover:shadow-2xl hover:shadow-violet-500/20"
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <IconComponent className="w-6 h-6 text-white"</div>
+                  <IconComponent className="w-6 h-6 text-white" />
+                </div>
                 
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
                   {article.title}

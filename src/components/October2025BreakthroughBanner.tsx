@@ -4,7 +4,9 @@ const October2025BreakthroughBanner = () => {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" <div className="container mx-auto px-6 relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" />
+      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
+      <div className="container mx-auto px-6 relative z-10">
         {/* Main Banner */}
         <div className="bg-gradient-to-br from-purple-900/50 via-indigo-900/50 to-emerald-900/50 rounded-2xl border-2 border-purple-500/30 backdrop-blur-sm p-8 md:p-12 mb-8 shadow-2xl">
           <div className="flex items-center gap-3 mb-6">
