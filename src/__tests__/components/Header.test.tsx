@@ -11,12 +11,6 @@ const renderWithRouter = (component: React.ReactElement) => {
     </BrowserRouter>
   );
 };
-<<<<<<< HEAD
-=======
-import Header from '../../components/Header';
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
 
 describe('Header', () => {
   it('renders without crashing', () => {
