@@ -12,12 +12,15 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Team = lazy(() => import('./pages/Team'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0290
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3
 
 const AppRouter: React.FC = () => {
   return (
@@ -33,6 +36,7 @@ const AppRouter: React.FC = () => {
           <Route path="/terms" element={<Terms />} />
           <Route path="/team" element={<Team />} />
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
@@ -40,6 +44,8 @@ const AppRouter: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0290
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3
         </Routes>
       </Suspense>
     </Router>

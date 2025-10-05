@@ -26,15 +26,22 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0290
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -51,6 +58,7 @@ jest.mock('react-router-dom', () => ({
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 // Mock lucide-react icons
@@ -58,6 +66,11 @@ const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</sp
 
 jest.mock('lucide-react', () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-0290
+=======
+// Mock lucide-react icons
+jest.mock('lucide-react', () => {
+  const mockIcon = (name: string) => `mock-${name}`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -327,6 +340,9 @@ afterAll(() => {
   console.warn = originalConsoleWarn;
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0290
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3

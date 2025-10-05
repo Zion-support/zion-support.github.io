@@ -4,9 +4,12 @@ class AccessibilityEnhancer {
 
   private constructor() {}
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-4daf
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-0290
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-fad3
 
   static getInstance(): AccessibilityEnhancer {
     if (!AccessibilityEnhancer.instance) {
