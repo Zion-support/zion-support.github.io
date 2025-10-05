@@ -44,11 +44,11 @@ export const calculateEngagementScore = (banner: BannerConfig): number => {
  */
 export const calculateFreshnessScore = (banner: BannerConfig): number => {
   if (!banner.lastShown) return 100; // Never shown = maximum freshness
-  
+
   const now = new Date().getTime();
   const lastShown = new Date(banner.lastShown).getTime();
   const hoursSinceShown = (now - lastShown) / (1000 * 60 * 60);
-  
+
   // Exponential decay: fresher after 24+ hours
   return Math.min(100, (hoursSinceShown / 24) * 100);
 };
@@ -58,12 +58,14 @@ export const calculateFreshnessScore = (banner: BannerConfig): number => {
  */
 export const calculateBannerScore = (
   banner: BannerConfig,
-  strategy: RotationStrategy = DEFAULT_STRATEGY
+  strategy: RotationStrategy = DEFAULT_STRATEGY,
 ): number => {
   const priorityScore = banner.priority * strategy.priorityWeight;
-  const engagementScore = calculateEngagementScore(banner) * strategy.engagementWeight;
-  const freshnessScore = calculateFreshnessScore(banner) * strategy.freshnessWeight;
-  
+  const engagementScore =
+    calculateEngagementScore(banner) * strategy.engagementWeight;
+  const freshnessScore =
+    calculateFreshnessScore(banner) * strategy.freshnessWeight;
+
   return priorityScore + engagementScore + freshnessScore;
 };
 
@@ -72,20 +74,20 @@ export const calculateBannerScore = (
  */
 export const selectBannersForDisplay = (
   banners: BannerConfig[],
-  strategy: RotationStrategy = DEFAULT_STRATEGY
+  strategy: RotationStrategy = DEFAULT_STRATEGY,
 ): BannerConfig[] => {
   // Filter active banners only
   const activeBanners = banners.filter(b => b.active);
-  
+
   // Calculate scores for all active banners
   const scoredBanners = activeBanners.map(banner => ({
     banner,
     score: calculateBannerScore(banner, strategy),
   }));
-  
+
   // Sort by score (highest first)
   scoredBanners.sort((a, b) => b.score - a.score);
-  
+
   // Return top N banners
   return scoredBanners.slice(0, strategy.maxVisible).map(sb => sb.banner);
 };
@@ -94,15 +96,18 @@ export const selectBannersForDisplay = (
  * Group banners by category for balanced distribution
  */
 export const groupBannersByCategory = (
-  banners: BannerConfig[]
+  banners: BannerConfig[],
 ): Record<string, BannerConfig[]> => {
-  return banners.reduce((acc, banner) => {
-    if (!acc[banner.category]) {
-      acc[banner.category] = [];
-    }
-    acc[banner.category].push(banner);
-    return acc;
-  }, {} as Record<string, BannerConfig[]>);
+  return banners.reduce(
+    (acc, banner) => {
+      if (!acc[banner.category]) {
+        acc[banner.category] = [];
+      }
+      acc[banner.category].push(banner);
+      return acc;
+    },
+    {} as Record<string, BannerConfig[]>,
+  );
 };
 
 /**
@@ -111,11 +116,11 @@ export const groupBannersByCategory = (
 export const selectBalancedBanners = (
   banners: BannerConfig[],
   maxPerCategory: number = 2,
-  totalMax: number = 5
+  totalMax: number = 5,
 ): BannerConfig[] => {
   const grouped = groupBannersByCategory(banners);
   const selected: BannerConfig[] = [];
-  
+
   // Get top banners from each category
   Object.values(grouped).forEach(categoryBanners => {
     const sortedByScore = categoryBanners
@@ -123,10 +128,10 @@ export const selectBalancedBanners = (
       .sort((a, b) => b.score - a.score)
       .slice(0, maxPerCategory)
       .map(sb => sb.banner);
-    
+
     selected.push(...sortedByScore);
   });
-  
+
   // Sort all selected by score and take top N
   return selected
     .map(b => ({ banner: b, score: calculateBannerScore(b) }))
@@ -143,7 +148,10 @@ export const trackImpression = (bannerId: string): void => {
     const storageKey = `banner_${bannerId}_impressions`;
     const current = parseInt(localStorage.getItem(storageKey) || '0');
     localStorage.setItem(storageKey, (current + 1).toString());
-    localStorage.setItem(`banner_${bannerId}_lastShown`, new Date().toISOString());
+    localStorage.setItem(
+      `banner_${bannerId}_lastShown`,
+      new Date().toISOString(),
+    );
   } catch (error) {
     console.warn('Failed to track banner impression:', error);
   }
@@ -157,7 +165,7 @@ export const trackClick = (bannerId: string): void => {
     const storageKey = `banner_${bannerId}_clicks`;
     const current = parseInt(localStorage.getItem(storageKey) || '0');
     localStorage.setItem(storageKey, (current + 1).toString());
-    
+
     // Also track analytics event if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', 'banner_click', {
@@ -175,11 +183,15 @@ export const trackClick = (bannerId: string): void => {
  */
 export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {
   try {
-    const impressions = parseInt(localStorage.getItem(`banner_${bannerId}_impressions`) || '0');
-    const clicks = parseInt(localStorage.getItem(`banner_${bannerId}_clicks`) || '0');
+    const impressions = parseInt(
+      localStorage.getItem(`banner_${bannerId}_impressions`) || '0',
+    );
+    const clicks = parseInt(
+      localStorage.getItem(`banner_${bannerId}_clicks`) || '0',
+    );
     const lastShownStr = localStorage.getItem(`banner_${bannerId}_lastShown`);
     const lastShown = lastShownStr ? new Date(lastShownStr) : undefined;
-    
+
     return { impressions, clicks, lastShown };
   } catch (error) {
     console.warn('Failed to load banner stats:', error);
@@ -192,16 +204,16 @@ export const loadBannerStats = (bannerId: string): Partial<BannerConfig> => {
  */
 export const selectBannerVariation = (
   variations: BannerConfig[],
-  userId?: string
+  userId?: string,
 ): BannerConfig => {
   if (variations.length === 0) {
     throw new Error('No banner variations provided');
   }
-  
+
   if (variations.length === 1) {
     return variations[0];
   }
-  
+
   // Simple hash-based selection for consistent user experience
   const hash = userId ? hashString(userId) : Math.random();
   const index = Math.floor(hash * variations.length);
@@ -215,7 +227,7 @@ const hashString = (str: string): number => {
   let hash = 0;
   for (let i = 0; i < str.length; i++) {
     const char = str.charCodeAt(i);
-    hash = ((hash << 5) - hash) + char;
+    hash = (hash << 5) - hash + char;
     hash = hash & hash; // Convert to 32-bit integer
   }
   return Math.abs(hash) / 2147483647; // Normalize to 0-1

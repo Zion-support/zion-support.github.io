@@ -23,8 +23,12 @@ export const lazyLoadBanner = (importFn: () => Promise<BannerComponent>) => {
 export const preloadCriticalBanners = () => {
   // Preload top 3 most important banners
   const criticalBanners = [
-    () => import('../components/January2026RevolutionaryAutonomousIntelligenceBanner'),
-    () => import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),
+    () =>
+      import(
+        '../components/January2026RevolutionaryAutonomousIntelligenceBanner'
+      ),
+    () =>
+      import('../components/January2026QuantumAIConsciousnessRevolutionBanner'),
     () => import('../components/October2025NeuralQuantumOrchestrationBanner'),
   ];
 
@@ -40,12 +44,12 @@ export const preloadCriticalBanners = () => {
  */
 export const lazyLoadBannerWithRetry = (
   importFn: () => Promise<BannerComponent>,
-  retries = 3
+  retries = 3,
 ): ReturnType<typeof lazy> => {
   return lazy(() => {
     return new Promise((resolve, reject) => {
       let attempts = 0;
-      
+
       const attemptLoad = () => {
         importFn()
           .then(resolve)
@@ -58,7 +62,7 @@ export const lazyLoadBannerWithRetry = (
             }
           });
       };
-      
+
       attemptLoad();
     });
   });
@@ -80,11 +84,16 @@ export const shouldDisplayBanner = (index: number): boolean => {
  */
 export const trackBannerPerformance = (bannerName: string) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
-    const perfData = performance.getEntriesByType('resource')
+    const perfData = performance
+      .getEntriesByType('resource')
       .filter(entry => entry.name.includes(bannerName));
-    
+
     if (perfData.length > 0) {
-      console.log(`Banner ${bannerName} load time:`, perfData[0].duration, 'ms');
+      console.log(
+        `Banner ${bannerName} load time:`,
+        perfData[0].duration,
+        'ms',
+      );
     }
   }
 };

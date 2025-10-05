@@ -38,8 +38,9 @@ const DEFAULT_CONFIG: PrioritizationConfig = {
  */
 export const calculateRecencyScore = (publishDate: Date): number => {
   const now = new Date();
-  const daysSince = (now.getTime() - publishDate.getTime()) / (1000 * 60 * 60 * 24);
-  
+  const daysSince =
+    (now.getTime() - publishDate.getTime()) / (1000 * 60 * 60 * 24);
+
   if (daysSince < 1) return 100; // Brand new
   if (daysSince < 7) return 90; // This week
   if (daysSince < 30) return 75; // This month
@@ -54,7 +55,7 @@ export const calculateRecencyScore = (publishDate: Date): number => {
  */
 export const calculateValueScore = (value?: number): number => {
   if (!value) return 0;
-  
+
   // Logarithmic scale for large values
   if (value >= 100) return 100; // $100B+
   if (value >= 50) return 95;
@@ -73,12 +74,12 @@ export const calculateValueScore = (value?: number): number => {
  */
 export const calculateEngagementScoreFromMetrics = (
   views?: number,
-  engagement?: number
+  engagement?: number,
 ): number => {
   if (!views && !engagement) return 50; // Default score for new content
-  
+
   let score = 0;
-  
+
   // Views component (50% weight)
   if (views) {
     if (views >= 100000) score += 50;
@@ -90,14 +91,14 @@ export const calculateEngagementScoreFromMetrics = (
   } else {
     score += 25; // Default if no views data
   }
-  
+
   // Engagement component (50% weight)
   if (engagement !== undefined) {
     score += (engagement / 100) * 50;
   } else {
     score += 25; // Default if no engagement data
   }
-  
+
   return Math.min(100, score);
 };
 
@@ -106,19 +107,22 @@ export const calculateEngagementScoreFromMetrics = (
  */
 export const calculateContentScore = (
   item: ContentItem,
-  config: PrioritizationConfig = DEFAULT_CONFIG
+  config: PrioritizationConfig = DEFAULT_CONFIG,
 ): number => {
   const recencyScore = calculateRecencyScore(item.date);
   const valueScore = calculateValueScore(item.value);
-  const engagementScore = calculateEngagementScoreFromMetrics(item.views, item.engagement);
+  const engagementScore = calculateEngagementScoreFromMetrics(
+    item.views,
+    item.engagement,
+  );
   const priorityScore = item.priority * 10; // Convert priority (1-10) to 0-100 scale
-  
+
   const totalScore =
     recencyScore * config.recencyWeight +
     valueScore * config.valueWeight +
     engagementScore * config.engagementWeight +
     priorityScore * config.priorityWeight;
-  
+
   return totalScore;
 };
 
@@ -127,15 +131,15 @@ export const calculateContentScore = (
  */
 export const prioritizeContent = (
   items: ContentItem[],
-  config?: PrioritizationConfig
+  config?: PrioritizationConfig,
 ): ContentItem[] => {
   const scoredItems = items.map(item => ({
     item,
     score: calculateContentScore(item, config),
   }));
-  
+
   scoredItems.sort((a, b) => b.score - a.score);
-  
+
   return scoredItems.map(si => si.item);
 };
 
@@ -147,51 +151,62 @@ export const prioritizeWithBalance = (
   items: ContentItem[],
   maxPerCategory: number = 3,
   totalMax: number = 10,
-  config?: PrioritizationConfig
+  config?: PrioritizationConfig,
 ): ContentItem[] => {
   // Group by category
-  const byCategory = items.reduce((acc, item) => {
-    if (!acc[item.category]) acc[item.category] = [];
-    acc[item.category].push(item);
-    return acc;
-  }, {} as Record<string, ContentItem[]>);
-  
+  const byCategory = items.reduce(
+    (acc, item) => {
+      if (!acc[item.category]) acc[item.category] = [];
+      acc[item.category].push(item);
+      return acc;
+    },
+    {} as Record<string, ContentItem[]>,
+  );
+
   // Prioritize within each category
   const prioritizedByCategory: Record<string, ContentItem[]> = {};
   Object.keys(byCategory).forEach(category => {
-    prioritizedByCategory[category] = prioritizeContent(byCategory[category], config);
+    prioritizedByCategory[category] = prioritizeContent(
+      byCategory[category],
+      config,
+    );
   });
-  
+
   // Round-robin selection from categories
   const result: ContentItem[] = [];
   const categories = Object.keys(prioritizedByCategory);
   const categoryIndices: Record<string, number> = {};
   categories.forEach(cat => (categoryIndices[cat] = 0));
-  
+
   while (result.length < totalMax) {
     let addedInRound = false;
-    
+
     for (const category of categories) {
       const categoryItems = prioritizedByCategory[category];
       const currentIndex = categoryIndices[category];
-      
+
       // Check if we've exhausted this category or hit category limit
-      const categoryCount = result.filter(item => item.category === category).length;
-      if (currentIndex >= categoryItems.length || categoryCount >= maxPerCategory) {
+      const categoryCount = result.filter(
+        item => item.category === category,
+      ).length;
+      if (
+        currentIndex >= categoryItems.length ||
+        categoryCount >= maxPerCategory
+      ) {
         continue;
       }
-      
+
       result.push(categoryItems[currentIndex]);
       categoryIndices[category]++;
       addedInRound = true;
-      
+
       if (result.length >= totalMax) break;
     }
-    
+
     // If no items were added in this round, we're done
     if (!addedInRound) break;
   }
-  
+
   return result;
 };
 
@@ -201,20 +216,23 @@ export const prioritizeWithBalance = (
 export const getTopByCategory = (
   items: ContentItem[],
   topN: number = 5,
-  config?: PrioritizationConfig
+  config?: PrioritizationConfig,
 ): Record<string, ContentItem[]> => {
-  const byCategory = items.reduce((acc, item) => {
-    if (!acc[item.category]) acc[item.category] = [];
-    acc[item.category].push(item);
-    return acc;
-  }, {} as Record<string, ContentItem[]>);
-  
+  const byCategory = items.reduce(
+    (acc, item) => {
+      if (!acc[item.category]) acc[item.category] = [];
+      acc[item.category].push(item);
+      return acc;
+    },
+    {} as Record<string, ContentItem[]>,
+  );
+
   const result: Record<string, ContentItem[]> = {};
   Object.keys(byCategory).forEach(category => {
     const prioritized = prioritizeContent(byCategory[category], config);
     result[category] = prioritized.slice(0, topN);
   });
-  
+
   return result;
 };
 
@@ -224,7 +242,7 @@ export const getTopByCategory = (
 export const filterByQuality = (
   items: ContentItem[],
   minScore: number = 70,
-  config?: PrioritizationConfig
+  config?: PrioritizationConfig,
 ): ContentItem[] => {
   return items.filter(item => {
     const score = calculateContentScore(item, config);
@@ -238,13 +256,13 @@ export const filterByQuality = (
 export const getTrendingContent = (
   items: ContentItem[],
   topN: number = 5,
-  recentDays: number = 7
+  recentDays: number = 7,
 ): ContentItem[] => {
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - recentDays);
-  
+
   const recentItems = items.filter(item => item.date >= cutoffDate);
-  
+
   return prioritizeContent(recentItems, {
     recencyWeight: 0.2,
     valueWeight: 0.2,
@@ -259,7 +277,7 @@ export const getTrendingContent = (
  */
 export const getEvergreenContent = (
   items: ContentItem[],
-  topN: number = 5
+  topN: number = 5,
 ): ContentItem[] => {
   return prioritizeContent(items, {
     recencyWeight: 0.1, // Low weight on recency
@@ -280,7 +298,7 @@ export const createMixedFeed = (
     newCount: number;
     evergreenCount: number;
     totalMax: number;
-  }
+  },
 ): {
   trending: ContentItem[];
   new: ContentItem[];
@@ -289,31 +307,38 @@ export const createMixedFeed = (
 } => {
   const trending = getTrendingContent(items, config.trendingCount);
   const trendingIds = new Set(trending.map(item => item.id));
-  
-  const remainingAfterTrending = items.filter(item => !trendingIds.has(item.id));
-  
+
+  const remainingAfterTrending = items.filter(
+    item => !trendingIds.has(item.id),
+  );
+
   // Get newest content
   const sortedByDate = [...remainingAfterTrending].sort(
-    (a, b) => b.date.getTime() - a.date.getTime()
+    (a, b) => b.date.getTime() - a.date.getTime(),
   );
   const newContent = sortedByDate.slice(0, config.newCount);
   const newIds = new Set(newContent.map(item => item.id));
-  
+
   // Get evergreen from remaining
-  const remainingAfterNew = remainingAfterTrending.filter(item => !newIds.has(item.id));
-  const evergreen = getEvergreenContent(remainingAfterNew, config.evergreenCount);
-  
+  const remainingAfterNew = remainingAfterTrending.filter(
+    item => !newIds.has(item.id),
+  );
+  const evergreen = getEvergreenContent(
+    remainingAfterNew,
+    config.evergreenCount,
+  );
+
   // Combine all with deduplication
   const allIds = new Set<string>();
   const all: ContentItem[] = [];
-  
+
   [...trending, ...newContent, ...evergreen].forEach(item => {
     if (!allIds.has(item.id) && all.length < config.totalMax) {
       allIds.add(item.id);
       all.push(item);
     }
   });
-  
+
   return {
     trending,
     new: newContent,

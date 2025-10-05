@@ -48,7 +48,7 @@ class EnhancedAccessibility {
       enableMotionReduction: true,
       enableVoiceControl: true,
       enableTouchAccessibility: true,
-      ...config
+      ...config,
     };
 
     this.metrics = {
@@ -63,7 +63,7 @@ class EnhancedAccessibility {
       totalElements: 0,
       accessibleElements: 0,
       issuesFound: 0,
-      score: 0
+      score: 0,
     };
   }
 
@@ -88,12 +88,14 @@ class EnhancedAccessibility {
   private setupKeyboardNavigation(): void {
     if (!this.config.enableKeyboardNavigation) return;
 
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', event => {
       // Skip links and form elements
-      if (event.target instanceof HTMLAnchorElement || 
-          event.target instanceof HTMLInputElement ||
-          event.target instanceof HTMLTextAreaElement ||
-          event.target instanceof HTMLSelectElement) {
+      if (
+        event.target instanceof HTMLAnchorElement ||
+        event.target instanceof HTMLInputElement ||
+        event.target instanceof HTMLTextAreaElement ||
+        event.target instanceof HTMLSelectElement
+      ) {
         return;
       }
 
@@ -112,9 +114,14 @@ class EnhancedAccessibility {
 
   private navigateWithArrows(direction: number): void {
     const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    const nextIndex = Math.max(0, Math.min(focusableElements.length - 1, currentIndex + direction));
-    
+    const currentIndex = focusableElements.indexOf(
+      document.activeElement as HTMLElement,
+    );
+    const nextIndex = Math.max(
+      0,
+      Math.min(focusableElements.length - 1, currentIndex + direction),
+    );
+
     if (focusableElements[nextIndex]) {
       focusableElements[nextIndex].focus();
     }
@@ -122,8 +129,10 @@ class EnhancedAccessibility {
 
   private enhanceTabNavigation(event: KeyboardEvent): void {
     const focusableElements = this.getFocusableElements();
-    const currentIndex = focusableElements.indexOf(document.activeElement as HTMLElement);
-    
+    const currentIndex = focusableElements.indexOf(
+      document.activeElement as HTMLElement,
+    );
+
     if (event.shiftKey) {
       // Shift + Tab (backward)
       if (currentIndex <= 0) {
@@ -144,10 +153,10 @@ class EnhancedAccessibility {
 
     // Add screen reader announcements
     this.createAnnouncementRegion();
-    
+
     // Enhance form labels
     this.enhanceFormLabels();
-    
+
     // Add skip links
     this.addSkipLinks();
   }
@@ -163,11 +172,17 @@ class EnhancedAccessibility {
 
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
-    inputs.forEach((input) => {
-      if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
+    inputs.forEach(input => {
+      if (
+        !input.getAttribute('aria-label') &&
+        !input.getAttribute('aria-labelledby')
+      ) {
         const label = document.querySelector(`label[for="${input.id}"]`);
         if (label) {
-          input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
+          input.setAttribute(
+            'aria-labelledby',
+            label.id || `label-${input.id}`,
+          );
         }
       }
     });
@@ -192,24 +207,26 @@ class EnhancedAccessibility {
     }
 
     // Listen for changes in contrast preference
-    window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
-      if (e.matches) {
-        document.body.classList.add('high-contrast');
-      } else {
-        document.body.classList.remove('high-contrast');
-      }
-    });
+    window
+      .matchMedia('(prefers-contrast: high)')
+      .addEventListener('change', e => {
+        if (e.matches) {
+          document.body.classList.add('high-contrast');
+        } else {
+          document.body.classList.remove('high-contrast');
+        }
+      });
   }
 
   private setupFocusManagement(): void {
     if (!this.config.enableFocusManagement) return;
 
     // Add focus indicators
-    document.addEventListener('focusin', (event) => {
+    document.addEventListener('focusin', event => {
       (event.target as HTMLElement).classList.add('focus-visible');
     });
 
-    document.addEventListener('focusout', (event) => {
+    document.addEventListener('focusout', event => {
       (event.target as HTMLElement).classList.remove('focus-visible');
     });
   }
@@ -219,7 +236,7 @@ class EnhancedAccessibility {
 
     // Add ARIA labels to interactive elements
     const buttons = document.querySelectorAll('button:not([aria-label])');
-    buttons.forEach((button) => {
+    buttons.forEach(button => {
       if (!button.textContent?.trim()) {
         button.setAttribute('aria-label', 'Button');
       }
@@ -227,7 +244,7 @@ class EnhancedAccessibility {
 
     // Add ARIA labels to images
     const images = document.querySelectorAll('img:not([alt])');
-    images.forEach((img) => {
+    images.forEach(img => {
       img.setAttribute('alt', 'Image');
     });
   }
@@ -244,12 +261,12 @@ class EnhancedAccessibility {
 
     // Support for text scaling
     document.body.style.fontSize = '100%';
-    
+
     // Listen for text scaling changes
     const observer = new ResizeObserver(() => {
       this.updateTextScaling();
     });
-    
+
     observer.observe(document.body);
   }
 
@@ -262,20 +279,22 @@ class EnhancedAccessibility {
     }
 
     // Listen for changes in motion preference
-    window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
-      if (e.matches) {
-        document.body.classList.add('reduced-motion');
-      } else {
-        document.body.classList.remove('reduced-motion');
-      }
-    });
+    window
+      .matchMedia('(prefers-reduced-motion: reduce)')
+      .addEventListener('change', e => {
+        if (e.matches) {
+          document.body.classList.add('reduced-motion');
+        } else {
+          document.body.classList.remove('reduced-motion');
+        }
+      });
   }
 
   private setupVoiceControl(): void {
     if (!this.config.enableVoiceControl) return;
 
     // Add voice control support
-    document.addEventListener('keydown', (event) => {
+    document.addEventListener('keydown', event => {
       if (event.ctrlKey && event.key === 'v') {
         this.activateVoiceControl();
       }
@@ -286,11 +305,13 @@ class EnhancedAccessibility {
     if (!this.config.enableTouchAccessibility) return;
 
     // Enhance touch targets
-    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
-    touchTargets.forEach((target) => {
+    const touchTargets = document.querySelectorAll(
+      'button, a, input, select, textarea',
+    );
+    touchTargets.forEach(target => {
       const element = target as HTMLElement;
       const rect = element.getBoundingClientRect();
-      
+
       if (rect.width < 44 || rect.height < 44) {
         element.style.minWidth = '44px';
         element.style.minHeight = '44px';
@@ -310,10 +331,12 @@ class EnhancedAccessibility {
       'iframe',
       'object',
       'embed',
-      '[contenteditable="true"]'
+      '[contenteditable="true"]',
     ];
-    
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+
+    return Array.from(
+      document.querySelectorAll(focusableSelectors.join(', ')),
+    ) as HTMLElement[];
   }
 
   private getFocusableElements(): HTMLElement[] {
@@ -328,10 +351,12 @@ class EnhancedAccessibility {
       'iframe',
       'object',
       'embed',
-      '[contenteditable="true"]'
+      '[contenteditable="true"]',
     ];
-    
-    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+
+    return Array.from(
+      document.querySelectorAll(focusableSelectors.join(', ')),
+    ) as HTMLElement[];
   }
 
   public getFocusableElementsCount(): number {
@@ -357,7 +382,9 @@ class EnhancedAccessibility {
   public analyzeAccessibility(): AccessibilityMetrics {
     const elements = document.querySelectorAll('*');
     const focusableElements = this.getFocusableElements();
-    const ariaLabels = document.querySelectorAll('[aria-label], [aria-labelledby]');
+    const ariaLabels = document.querySelectorAll(
+      '[aria-label], [aria-labelledby]',
+    );
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     const images = document.querySelectorAll('img');
     const imagesWithAlt = document.querySelectorAll('img[alt]');
@@ -374,7 +401,7 @@ class EnhancedAccessibility {
       totalElements: elements.length,
       accessibleElements: focusableElements.length + ariaLabels.length,
       issuesFound: 0,
-      score: 0
+      score: 0,
     };
 
     // Calculate overall score
@@ -389,7 +416,10 @@ class EnhancedAccessibility {
     const maxScore = 100;
 
     // Focusable elements score (20 points)
-    const focusableScore = Math.min(20, (this.metrics.focusableElements / 10) * 20);
+    const focusableScore = Math.min(
+      20,
+      (this.metrics.focusableElements / 10) * 20,
+    );
     score += focusableScore;
 
     // ARIA labels score (20 points)

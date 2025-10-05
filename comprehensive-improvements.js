@@ -43,12 +43,15 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 // Add new optimization scripts
 packageJson.scripts = {
   ...packageJson.scripts,
-  'optimize:all': 'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
-  'performance:audit': 'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
+  'optimize:all':
+    'pnpm run optimize:images && pnpm run optimize:css && pnpm run build:optimized',
+  'performance:audit':
+    'lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html',
   'security:audit': 'npm audit --audit-level=moderate',
   'accessibility:audit': 'echo "Running accessibility audit..."',
   'seo:audit': 'echo "Running SEO audit..."',
-  'comprehensive:audit': 'pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit'
+  'comprehensive:audit':
+    'pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit',
 };
 
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
@@ -82,7 +85,10 @@ getLCP(console.log);
 getTTFB(console.log);
 `;
 
-fs.writeFileSync(path.join(__dirname, 'src', 'performance-monitor.ts'), performanceMonitor);
+fs.writeFileSync(
+  path.join(__dirname, 'src', 'performance-monitor.ts'),
+  performanceMonitor,
+);
 console.log('✅ Performance monitoring script created');
 
 // 4. Create accessibility improvements
@@ -146,7 +152,10 @@ if (typeof window !== 'undefined') {
 }
 `;
 
-fs.writeFileSync(path.join(__dirname, 'src', 'accessibility-enhancer.ts'), accessibilityEnhancer);
+fs.writeFileSync(
+  path.join(__dirname, 'src', 'accessibility-enhancer.ts'),
+  accessibilityEnhancer,
+);
 console.log('✅ Accessibility enhancer created');
 
 // 5. Create SEO improvements
@@ -236,7 +245,10 @@ if (typeof window !== 'undefined') {
 }
 `;
 
-fs.writeFileSync(path.join(__dirname, 'src', 'security-enhancer.ts'), securityEnhancer);
+fs.writeFileSync(
+  path.join(__dirname, 'src', 'security-enhancer.ts'),
+  securityEnhancer,
+);
 console.log('✅ Security enhancer created');
 
 // 7. Create comprehensive report
@@ -251,14 +263,14 @@ const report = {
     'Accessibility enhancements added',
     'SEO optimizations implemented',
     'Security enhancements added',
-    'Package.json scripts updated'
+    'Package.json scripts updated',
   ],
   nextSteps: [
     'Run comprehensive audit: pnpm run comprehensive:audit',
     'Test performance improvements',
     'Verify accessibility compliance',
     'Check SEO optimizations',
-    'Review security enhancements'
+    'Review security enhancements',
   ],
   scripts: {
     'optimize:all': 'Optimize images, CSS, and build',
@@ -266,13 +278,13 @@ const report = {
     'security:audit': 'Run security audit',
     'accessibility:audit': 'Run accessibility audit',
     'seo:audit': 'Run SEO audit',
-    'comprehensive:audit': 'Run all audits'
-  }
+    'comprehensive:audit': 'Run all audits',
+  },
 };
 
 fs.writeFileSync(
   path.join(__dirname, 'comprehensive-improvements-report.json'),
-  JSON.stringify(report, null, 2)
+  JSON.stringify(report, null, 2),
 );
 
 console.log('✅ Comprehensive improvements report generated');
@@ -295,4 +307,6 @@ console.log('  2. Test the improvements');
 console.log('  3. Review the generated report');
 console.log('  4. Deploy the optimized version');
 
-console.log('\n✨ Your Zion website is now optimized and ready for production!');
+console.log(
+  '\n✨ Your Zion website is now optimized and ready for production!',
+);

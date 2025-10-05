@@ -3,6 +3,8 @@
  * Provides comprehensive performance monitoring and optimization features
  */
 
+import * as React from 'react';
+
 interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
@@ -79,7 +81,8 @@ export class PerformanceOptimizer {
       const fidObserver = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         entries.forEach((entry) => {
-          this.reportMetric('FID', entry.processingStart - entry.startTime);
+          const fidEntry = entry as PerformanceEventTiming;
+          this.reportMetric('FID', fidEntry.processingStart - fidEntry.startTime);
         });
       });
       fidObserver.observe({ entryTypes: ['first-input'] });
@@ -168,8 +171,8 @@ export class PerformanceOptimizer {
     }
 
     // Send to analytics service in production
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'performance_metric', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'performance_metric', {
         metric_name: name,
         metric_value: value,
         ...metadata,
@@ -183,8 +186,8 @@ export class PerformanceOptimizer {
     }
 
     // Send to error tracking service
-    if (typeof gtag !== 'undefined') {
-      gtag('event', 'exception', {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
       });
@@ -303,6 +306,18 @@ export class PerformanceOptimizer {
     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
+
+  // Additional methods for compatibility
+  public startRender(componentName: string): void {
+    // This method is for compatibility with the old interface
+    // The actual tracking is handled by the performance monitoring
+    console.log(`Starting render tracking for: ${componentName}`);
+  }
+
+  public endRender(componentName: string): void {
+    // This method is for compatibility with the old interface
+    console.log(`Ending render tracking for: ${componentName}`);
+  }
 }
 
 // Export singleton instance
@@ -329,6 +344,7 @@ export const usePerformanceOptimizer = () => {
 
   return { metrics, score, optimizer: performanceOptimizer };
 };
+<<<<<<< HEAD:src/components/problematic-disabled/performanceOptimizer.ts
 
 /**
  * Performance Optimization Utility
@@ -655,3 +671,5 @@ export const performanceUtils = {
 };
 
 export default performanceOptimizer;
+=======
+>>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b:src/utils/performanceOptimizer.ts

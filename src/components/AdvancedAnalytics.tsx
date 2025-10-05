@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react';
 
 interface AdvancedAnalyticsProps {
   enableConversionTracking?: boolean;
@@ -6,10 +6,11 @@ interface AdvancedAnalyticsProps {
   enableErrorTracking?: boolean;
 }
 
-export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
+export default function AdvancedAnalytics(
+  props: AdvancedAnalyticsProps,
+): React.JSX.Element {
   useEffect(() => {
     void props;
   }, [props]);
   return <></>;
 }
-

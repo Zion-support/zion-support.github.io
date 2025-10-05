@@ -10,9 +10,10 @@ const LoadingSpinner: React.FC = () => (
 );
 
 // Error fallback component
-const ErrorFallback: React.FC<{ error: Error;
+const ErrorFallback: React.FC<{
+  error: Error;
   resetErrorBoundary: () => void;
- }> = ({ error, resetErrorBoundary }) => (
+}> = ({ error, resetErrorBoundary }) => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -27,7 +28,9 @@ const ErrorFallback: React.FC<{ error: Error;
           <summary className='cursor-pointer text-sm text-gray-500'>
             Error details
           </summary>
-          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>{error.message}</pre>
+          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>
+            {error.message}
+          </pre>
         </details>
       )}
       <button

@@ -98,7 +98,10 @@ class AdvancedSEOOptimizer {
 
     // Check length
     const length = title.length;
-    if (length >= this.targetTitleLength.min && length <= this.targetTitleLength.max) {
+    if (
+      length >= this.targetTitleLength.min &&
+      length <= this.targetTitleLength.max
+    ) {
       score += 40;
     } else if (length > 0 && length < this.targetTitleLength.min) {
       score += 20;
@@ -108,12 +111,22 @@ class AdvancedSEOOptimizer {
 
     // Check for keywords
     const lowerTitle = title.toLowerCase();
-    const keywordCount = keywords.filter((kw) => lowerTitle.includes(kw.toLowerCase())).length;
+    const keywordCount = keywords.filter(kw =>
+      lowerTitle.includes(kw.toLowerCase()),
+    ).length;
     score += Math.min(keywordCount * 15, 45);
 
     // Check for power words
-    const powerWords = ['ultimate', 'guide', 'best', 'top', 'complete', 'essential', 'proven'];
-    const hasPowerWord = powerWords.some((word) => lowerTitle.includes(word));
+    const powerWords = [
+      'ultimate',
+      'guide',
+      'best',
+      'top',
+      'complete',
+      'essential',
+      'proven',
+    ];
+    const hasPowerWord = powerWords.some(word => lowerTitle.includes(word));
     if (hasPowerWord) score += 15;
 
     return Math.min(score, 100);
@@ -122,12 +135,18 @@ class AdvancedSEOOptimizer {
   /**
    * Score meta description
    */
-  private scoreMetaDescription(description: string, keywords: string[]): number {
+  private scoreMetaDescription(
+    description: string,
+    keywords: string[],
+  ): number {
     let score = 0;
 
     // Check length
     const length = description.length;
-    if (length >= this.targetDescriptionLength.min && length <= this.targetDescriptionLength.max) {
+    if (
+      length >= this.targetDescriptionLength.min &&
+      length <= this.targetDescriptionLength.max
+    ) {
       score += 40;
     } else if (length > 0 && length < this.targetDescriptionLength.min) {
       score += 20;
@@ -137,12 +156,22 @@ class AdvancedSEOOptimizer {
 
     // Check for keywords
     const lowerDesc = description.toLowerCase();
-    const keywordCount = keywords.filter((kw) => lowerDesc.includes(kw.toLowerCase())).length;
+    const keywordCount = keywords.filter(kw =>
+      lowerDesc.includes(kw.toLowerCase()),
+    ).length;
     score += Math.min(keywordCount * 20, 40);
 
     // Check for call-to-action
-    const ctaWords = ['discover', 'learn', 'find', 'get', 'try', 'download', 'buy'];
-    const hasCTA = ctaWords.some((word) => lowerDesc.includes(word));
+    const ctaWords = [
+      'discover',
+      'learn',
+      'find',
+      'get',
+      'try',
+      'download',
+      'buy',
+    ];
+    const hasCTA = ctaWords.some(word => lowerDesc.includes(word));
     if (hasCTA) score += 20;
 
     return Math.min(score, 100);
@@ -159,9 +188,9 @@ class AdvancedSEOOptimizer {
     if (headings.length >= 3) score += 20;
 
     // Check for keywords in headings
-    const headingsWithKeywords = headings.filter((h) => {
+    const headingsWithKeywords = headings.filter(h => {
       const lower = h.toLowerCase();
-      return keywords.some((kw) => lower.includes(kw.toLowerCase()));
+      return keywords.some(kw => lower.includes(kw.toLowerCase()));
     });
 
     score += Math.min(headingsWithKeywords.length * 15, 50);
@@ -175,19 +204,25 @@ class AdvancedSEOOptimizer {
   private calculateKeywordDensity(content: string, keywords: string[]): number {
     if (keywords.length === 0) return 0;
 
-    const words = content.toLowerCase().split(/\s+/).filter((w) => w.length > 0);
+    const words = content
+      .toLowerCase()
+      .split(/\s+/)
+      .filter(w => w.length > 0);
     const totalWords = words.length;
     if (totalWords === 0) return 0;
 
     const keywordCount = keywords.reduce((count, keyword) => {
       const kw = keyword.toLowerCase();
-      return count + words.filter((w) => w.includes(kw)).length;
+      return count + words.filter(w => w.includes(kw)).length;
     }, 0);
 
     const density = keywordCount / totalWords;
 
     // Score based on target density
-    if (density >= this.targetKeywordDensity.min && density <= this.targetKeywordDensity.max) {
+    if (
+      density >= this.targetKeywordDensity.min &&
+      density <= this.targetKeywordDensity.max
+    ) {
       return 100;
     } else if (density < this.targetKeywordDensity.min) {
       return (density / this.targetKeywordDensity.min) * 100;
@@ -201,9 +236,12 @@ class AdvancedSEOOptimizer {
    * Calculate readability score (Flesch Reading Ease)
    */
   private calculateReadability(content: string): number {
-    const sentences = content.split(/[.!?]+/).filter((s) => s.trim().length > 0);
-    const words = content.split(/\s+/).filter((w) => w.length > 0);
-    const syllables = words.reduce((count, word) => count + this.countSyllables(word), 0);
+    const sentences = content.split(/[.!?]+/).filter(s => s.trim().length > 0);
+    const words = content.split(/\s+/).filter(w => w.length > 0);
+    const syllables = words.reduce(
+      (count, word) => count + this.countSyllables(word),
+      0,
+    );
 
     if (sentences.length === 0 || words.length === 0) return 0;
 
@@ -211,7 +249,8 @@ class AdvancedSEOOptimizer {
     const avgSyllablesPerWord = syllables / words.length;
 
     // Flesch Reading Ease formula
-    const score = 206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord;
+    const score =
+      206.835 - 1.015 * avgWordsPerSentence - 84.6 * avgSyllablesPerWord;
 
     // Normalize to 0-100 where 100 is best
     return Math.max(0, Math.min(100, score));
@@ -234,18 +273,22 @@ class AdvancedSEOOptimizer {
   /**
    * Score image optimization
    */
-  private scoreImageOptimization(images: { src: string; alt: string }[]): number {
+  private scoreImageOptimization(
+    images: { src: string; alt: string }[],
+  ): number {
     if (images.length === 0) return 100; // No images, no problem
 
     let score = 0;
 
     // Check for alt text
-    const imagesWithAlt = images.filter((img) => img.alt && img.alt.length > 0);
+    const imagesWithAlt = images.filter(img => img.alt && img.alt.length > 0);
     const altTextScore = (imagesWithAlt.length / images.length) * 60;
     score += altTextScore;
 
     // Check for descriptive alt text (more than 3 words)
-    const descriptiveAlt = imagesWithAlt.filter((img) => img.alt.split(/\s+/).length >= 3);
+    const descriptiveAlt = imagesWithAlt.filter(
+      img => img.alt.split(/\s+/).length >= 3,
+    );
     const descriptiveScore = (descriptiveAlt.length / images.length) * 40;
     score += descriptiveScore;
 
@@ -255,20 +298,26 @@ class AdvancedSEOOptimizer {
   /**
    * Score link structure
    */
-  private scoreLinkStructure(links: { href: string; text: string; isInternal: boolean }[]): number {
+  private scoreLinkStructure(
+    links: { href: string; text: string; isInternal: boolean }[],
+  ): number {
     if (links.length === 0) return 50; // Neutral score for no links
 
     let score = 0;
 
     // Check for internal links
-    const internalLinks = links.filter((link) => link.isInternal);
+    const internalLinks = links.filter(link => link.isInternal);
     if (internalLinks.length > 0) score += 30;
     if (internalLinks.length >= 3) score += 20;
 
     // Check for descriptive anchor text
-    const descriptiveLinks = links.filter((link) => {
+    const descriptiveLinks = links.filter(link => {
       const text = link.text.toLowerCase();
-      return text.length > 3 && !text.includes('click here') && !text.includes('read more');
+      return (
+        text.length > 3 &&
+        !text.includes('click here') &&
+        !text.includes('read more')
+      );
     });
     score += (descriptiveLinks.length / links.length) * 50;
 
@@ -280,13 +329,13 @@ class AdvancedSEOOptimizer {
    */
   private calculateOverallScore(metrics: SEOMetrics): number {
     const weights = {
-      title: 0.20,
+      title: 0.2,
       description: 0.15,
       headings: 0.15,
       keywordDensity: 0.15,
       readability: 0.15,
-      images: 0.10,
-      links: 0.10,
+      images: 0.1,
+      links: 0.1,
     };
 
     return Math.round(
@@ -296,7 +345,7 @@ class AdvancedSEOOptimizer {
         metrics.keywordDensity * weights.keywordDensity +
         metrics.readabilityScore * weights.readability +
         metrics.imageOptimization * weights.images +
-        metrics.linkScore * weights.links
+        metrics.linkScore * weights.links,
     );
   }
 
@@ -305,7 +354,7 @@ class AdvancedSEOOptimizer {
    */
   private generateRecommendations(
     metrics: SEOMetrics,
-    options: any
+    options: any,
   ): SEORecommendation[] {
     const recommendations: SEORecommendation[] = [];
 
@@ -324,7 +373,8 @@ class AdvancedSEOOptimizer {
       recommendations.push({
         category: 'critical',
         message: 'Meta description needs improvement',
-        action: 'Write compelling description (150-160 chars) with keywords and CTA',
+        action:
+          'Write compelling description (150-160 chars) with keywords and CTA',
         impact: 'high',
       });
     }
@@ -344,7 +394,8 @@ class AdvancedSEOOptimizer {
       recommendations.push({
         category: 'important',
         message: 'Keyword density is too low',
-        action: 'Naturally incorporate keywords throughout content (target 1-3%)',
+        action:
+          'Naturally incorporate keywords throughout content (target 1-3%)',
         impact: 'high',
       });
     } else if (metrics.keywordDensity < 80) {
@@ -395,15 +446,18 @@ class AdvancedSEOOptimizer {
   /**
    * Extract keywords from content
    */
-  private extractKeywords(content: string, limit: number = 10): { word: string; count: number; density: number }[] {
+  private extractKeywords(
+    content: string,
+    limit: number = 10,
+  ): { word: string; count: number; density: number }[] {
     const words = content
       .toLowerCase()
       .replace(/[^\w\s]/g, ' ')
       .split(/\s+/)
-      .filter((w) => w.length > 3);
+      .filter(w => w.length > 3);
 
     const wordCounts = new Map<string, number>();
-    words.forEach((word) => {
+    words.forEach(word => {
       wordCounts.set(word, (wordCounts.get(word) || 0) + 1);
     });
 
@@ -427,11 +481,15 @@ class AdvancedSEOOptimizer {
     const issues: string[] = [];
 
     if (metrics.titleScore < 50) issues.push('Title tag is poorly optimized');
-    if (metrics.descriptionScore < 50) issues.push('Meta description is poorly optimized');
-    if (metrics.headingScore < 40) issues.push('Missing or poorly structured headings');
+    if (metrics.descriptionScore < 50)
+      issues.push('Meta description is poorly optimized');
+    if (metrics.headingScore < 40)
+      issues.push('Missing or poorly structured headings');
     if (metrics.keywordDensity < 30) issues.push('Keyword density is too low');
-    if (metrics.readabilityScore < 50) issues.push('Content is difficult to read');
-    if (metrics.imageOptimization < 60) issues.push('Images lack proper alt text');
+    if (metrics.readabilityScore < 50)
+      issues.push('Content is difficult to read');
+    if (metrics.imageOptimization < 60)
+      issues.push('Images lack proper alt text');
     if (metrics.linkScore < 40) issues.push('Weak internal linking structure');
 
     return issues;
@@ -443,12 +501,16 @@ class AdvancedSEOOptimizer {
   private identifyStrengths(metrics: SEOMetrics, options: any): string[] {
     const strengths: string[] = [];
 
-    if (metrics.titleScore >= 80) strengths.push('Excellent title tag optimization');
-    if (metrics.descriptionScore >= 80) strengths.push('Well-optimized meta description');
+    if (metrics.titleScore >= 80)
+      strengths.push('Excellent title tag optimization');
+    if (metrics.descriptionScore >= 80)
+      strengths.push('Well-optimized meta description');
     if (metrics.headingScore >= 80) strengths.push('Strong heading structure');
     if (metrics.keywordDensity >= 80) strengths.push('Optimal keyword density');
-    if (metrics.readabilityScore >= 70) strengths.push('Highly readable content');
-    if (metrics.imageOptimization >= 80) strengths.push('Well-optimized images');
+    if (metrics.readabilityScore >= 70)
+      strengths.push('Highly readable content');
+    if (metrics.imageOptimization >= 80)
+      strengths.push('Well-optimized images');
     if (metrics.linkScore >= 70) strengths.push('Good internal linking');
 
     return strengths;
@@ -457,7 +519,10 @@ class AdvancedSEOOptimizer {
   /**
    * Generate structured data (JSON-LD)
    */
-  generateStructuredData(type: 'Article' | 'Product' | 'Service', data: any): string {
+  generateStructuredData(
+    type: 'Article' | 'Product' | 'Service',
+    data: any,
+  ): string {
     const baseSchema = {
       '@context': 'https://schema.org',
       '@type': type,
@@ -499,7 +564,7 @@ class AdvancedSEOOptimizer {
    */
   private optimizeTitle(title: string, keywords: string[]): string {
     if (!title) return '';
-    
+
     // Truncate if too long
     if (title.length > 60) {
       title = title.substring(0, 57) + '...';

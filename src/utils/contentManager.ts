@@ -104,7 +104,9 @@ export async function getBlogPost(slug: string): Promise<BlogPost | undefined> {
 /**
  * Get featured blog posts
  */
-export async function getFeaturedBlogPosts(limit: number = 4): Promise<BlogPost[]> {
+export async function getFeaturedBlogPosts(
+  limit: number = 4,
+): Promise<BlogPost[]> {
   const posts = await getAllBlogPosts();
   return posts
     .filter(post => post.featured)
@@ -115,7 +117,9 @@ export async function getFeaturedBlogPosts(limit: number = 4): Promise<BlogPost[
 /**
  * Get recent blog posts
  */
-export async function getRecentBlogPosts(limit: number = 10): Promise<BlogPost[]> {
+export async function getRecentBlogPosts(
+  limit: number = 10,
+): Promise<BlogPost[]> {
   const posts = await getAllBlogPosts();
   return posts
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -125,7 +129,9 @@ export async function getRecentBlogPosts(limit: number = 10): Promise<BlogPost[]
 /**
  * Get blog posts by category
  */
-export async function getBlogPostsByCategory(category: string): Promise<BlogPost[]> {
+export async function getBlogPostsByCategory(
+  category: string,
+): Promise<BlogPost[]> {
   const posts = await getAllBlogPosts();
   return posts
     .filter(post => post.category.toLowerCase() === category.toLowerCase())
@@ -148,12 +154,13 @@ export async function getBlogPostsByTag(tag: string): Promise<BlogPost[]> {
 export async function searchBlogPosts(query: string): Promise<BlogPost[]> {
   const posts = await getAllBlogPosts();
   const lowerQuery = query.toLowerCase();
-  
-  return posts.filter(post => 
-    post.title.toLowerCase().includes(lowerQuery) ||
-    post.description.toLowerCase().includes(lowerQuery) ||
-    post.tags.some(tag => tag.toLowerCase().includes(lowerQuery)) ||
-    post.category.toLowerCase().includes(lowerQuery)
+
+  return posts.filter(
+    post =>
+      post.title.toLowerCase().includes(lowerQuery) ||
+      post.description.toLowerCase().includes(lowerQuery) ||
+      post.tags.some(tag => tag.toLowerCase().includes(lowerQuery)) ||
+      post.category.toLowerCase().includes(lowerQuery),
   );
 }
 
@@ -171,7 +178,9 @@ export async function getAllCaseStudies(): Promise<CaseStudy[]> {
 /**
  * Get case study by slug
  */
-export async function getCaseStudy(slug: string): Promise<CaseStudy | undefined> {
+export async function getCaseStudy(
+  slug: string,
+): Promise<CaseStudy | undefined> {
   if (contentCache.isCacheValid()) {
     return contentCache.getCaseStudy(slug);
   }
@@ -183,20 +192,22 @@ export async function getCaseStudy(slug: string): Promise<CaseStudy | undefined>
 /**
  * Get featured case studies
  */
-export async function getFeaturedCaseStudies(limit: number = 3): Promise<CaseStudy[]> {
+export async function getFeaturedCaseStudies(
+  limit: number = 3,
+): Promise<CaseStudy[]> {
   const studies = await getAllCaseStudies();
-  return studies
-    .filter(study => study.featured)
-    .slice(0, limit);
+  return studies.filter(study => study.featured).slice(0, limit);
 }
 
 /**
  * Get case studies by industry
  */
-export async function getCaseStudiesByIndustry(industry: string): Promise<CaseStudy[]> {
+export async function getCaseStudiesByIndustry(
+  industry: string,
+): Promise<CaseStudy[]> {
   const studies = await getAllCaseStudies();
-  return studies.filter(study => 
-    study.industry.toLowerCase() === industry.toLowerCase()
+  return studies.filter(
+    study => study.industry.toLowerCase() === industry.toLowerCase(),
   );
 }
 
@@ -229,5 +240,5 @@ export default {
   getFeaturedCaseStudies,
   getCaseStudiesByIndustry,
   preloadContentCache,
-  clearContentCache
+  clearContentCache,
 };

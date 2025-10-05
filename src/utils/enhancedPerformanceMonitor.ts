@@ -31,11 +31,14 @@ class EnhancedPerformanceMonitor {
   private observeWebVitals(): void {
     // Largest Contentful Paint (LCP)
     try {
-      const lcpObserver = new PerformanceObserver((list) => {
+      const lcpObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime?: number; loadTime?: number };
+        const lastEntry = entries[entries.length - 1] as PerformanceEntry & {
+          renderTime?: number;
+          loadTime?: number;
+        };
         const lcp = lastEntry.renderTime || lastEntry.loadTime || 0;
-        
+
         this.recordMetric('LCP', lcp, this.getRating('lcp', lcp));
       });
       lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -46,10 +49,11 @@ class EnhancedPerformanceMonitor {
 
     // First Input Delay (FID)
     try {
-      const fidObserver = new PerformanceObserver((list) => {
+      const fidObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
-          const fid = (entry as PerformanceEventTiming).processingStart - entry.startTime;
+        entries.forEach(entry => {
+          const fid =
+            (entry as PerformanceEventTiming).processingStart - entry.startTime;
           this.recordMetric('FID', fid, this.getRating('fid', fid));
         });
       });
@@ -62,9 +66,9 @@ class EnhancedPerformanceMonitor {
     // Cumulative Layout Shift (CLS)
     try {
       let clsValue = 0;
-      const clsObserver = new PerformanceObserver((list) => {
+      const clsObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           if (!(entry as LayoutShift).hadRecentInput) {
             clsValue += (entry as LayoutShift).value;
           }
@@ -85,13 +89,17 @@ class EnhancedPerformanceMonitor {
     if (!('PerformanceObserver' in window)) return;
 
     try {
-      const longTaskObserver = new PerformanceObserver((list) => {
+      const longTaskObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           const duration = entry.duration;
           if (duration > 50) {
             console.warn(`Long task detected: ${duration.toFixed(2)}ms`, entry);
-            this.recordMetric('Long Task', duration, this.getRating('longTask', duration));
+            this.recordMetric(
+              'Long Task',
+              duration,
+              this.getRating('longTask', duration),
+            );
           }
         });
       });
@@ -109,9 +117,9 @@ class EnhancedPerformanceMonitor {
     if (!('PerformanceObserver' in window)) return;
 
     try {
-      const layoutShiftObserver = new PerformanceObserver((list) => {
+      const layoutShiftObserver = new PerformanceObserver(list => {
         const entries = list.getEntries();
-        entries.forEach((entry) => {
+        entries.forEach(entry => {
           const shift = entry as LayoutShift;
           if (!shift.hadRecentInput) {
             console.log(`Layout shift: ${shift.value.toFixed(4)}`, shift);
@@ -128,14 +136,18 @@ class EnhancedPerformanceMonitor {
   /**
    * Record a performance metric
    */
-  private recordMetric(name: string, value: number, rating: 'good' | 'needs-improvement' | 'poor'): void {
+  private recordMetric(
+    name: string,
+    value: number,
+    rating: 'good' | 'needs-improvement' | 'poor',
+  ): void {
     const metric: PerformanceMetric = {
       name,
       value,
       rating,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
-    
+
     this.metrics.push(metric);
     console.log(`[Performance] ${name}: ${value.toFixed(2)} (${rating})`);
   }
@@ -143,12 +155,15 @@ class EnhancedPerformanceMonitor {
   /**
    * Get rating for a metric
    */
-  private getRating(metric: string, value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRating(
+    metric: string,
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     const thresholds: Record<string, { good: number; poor: number }> = {
       lcp: { good: 2500, poor: 4000 },
       fid: { good: 100, poor: 300 },
       cls: { good: 0.1, poor: 0.25 },
-      longTask: { good: 50, poor: 100 }
+      longTask: { good: 50, poor: 100 },
     };
 
     const threshold = thresholds[metric];
@@ -169,10 +184,13 @@ class EnhancedPerformanceMonitor {
   /**
    * Get metrics summary
    */
-  getSummary(): Record<string, { average: number; count: number; rating: string }> {
+  getSummary(): Record<
+    string,
+    { average: number; count: number; rating: string }
+  > {
     const summary: Record<string, { values: number[]; ratings: string[] }> = {};
 
-    this.metrics.forEach((metric) => {
+    this.metrics.forEach(metric => {
       if (!summary[metric.name]) {
         summary[metric.name] = { values: [], ratings: [] };
       }
@@ -180,17 +198,20 @@ class EnhancedPerformanceMonitor {
       summary[metric.name].ratings.push(metric.rating);
     });
 
-    const result: Record<string, { average: number; count: number; rating: string }> = {};
-    Object.keys(summary).forEach((name) => {
+    const result: Record<
+      string,
+      { average: number; count: number; rating: string }
+    > = {};
+    Object.keys(summary).forEach(name => {
       const values = summary[name].values;
       const average = values.reduce((a, b) => a + b, 0) / values.length;
       const ratings = summary[name].ratings;
       const rating = this.getMostCommonRating(ratings);
-      
+
       result[name] = {
         average,
         count: values.length,
-        rating
+        rating,
       };
     });
 
@@ -202,13 +223,13 @@ class EnhancedPerformanceMonitor {
    */
   private getMostCommonRating(ratings: string[]): string {
     const counts: Record<string, number> = {};
-    ratings.forEach((rating) => {
+    ratings.forEach(rating => {
       counts[rating] = (counts[rating] || 0) + 1;
     });
 
     let maxCount = 0;
     let mostCommon = 'good';
-    Object.keys(counts).forEach((rating) => {
+    Object.keys(counts).forEach(rating => {
       if (counts[rating] > maxCount) {
         maxCount = counts[rating];
         mostCommon = rating;
@@ -222,7 +243,7 @@ class EnhancedPerformanceMonitor {
    * Cleanup observers
    */
   cleanup(): void {
-    this.observers.forEach((observer) => observer.disconnect());
+    this.observers.forEach(observer => observer.disconnect());
     this.observers = [];
     this.metrics = [];
   }

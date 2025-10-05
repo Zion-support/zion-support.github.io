@@ -7,7 +7,11 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "Autonomous Systems",
       link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
       gradient: "from-cyan-500 to-blue-600",
+<<<<<<< HEAD:src/components/october2025-disabled/October2025CuttingEdgeContentBanner.tsx
       icon: Zap className="w-6 h-6" /,
+=======
+      icon: <Zap className="w-6 h-6" />,
+>>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b:src/components/October2025CuttingEdgeContentBanner.tsx
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {
@@ -16,7 +20,11 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "LLM Engineering",
       link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
       gradient: "from-purple-500 to-pink-600",
+<<<<<<< HEAD:src/components/october2025-disabled/October2025CuttingEdgeContentBanner.tsx
       icon: Sparkles className="w-6 h-6" /,
+=======
+      icon: <Sparkles className="w-6 h-6" />,
+>>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b:src/components/October2025CuttingEdgeContentBanner.tsx
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {
@@ -25,7 +33,11 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "ML at Scale",
       link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
       gradient: "from-orange-500 to-red-600",
+<<<<<<< HEAD:src/components/october2025-disabled/October2025CuttingEdgeContentBanner.tsx
       icon: TrendingUp className="w-6 h-6" /,
+=======
+      icon: <TrendingUp className="w-6 h-6" />,
+>>>>>>> 2f0ab1af17070514134ed63b8d6e627785058d9b:src/components/October2025CuttingEdgeContentBanner.tsx
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];

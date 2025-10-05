@@ -2,7 +2,8 @@
 
 const posts = [
   {
-    title: 'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
+    title:
+      'Enterprise AI Roadmap 2025: Scorecards, Guardrails, and Reliable Velocity',
     description:
       'A practical roadmap to fund, govern, and ship AI with KPI‑linked scorecards and guardrails‑as‑code.',
     href: '/blog/ai-2025-oct-04-enterprise-ai-roadmap-scorecards',
@@ -13,10 +14,15 @@ const posts = [
   {
     title: 'AI 2026: Quantum-Neural Fusion Revolutionary Breakthrough',
     description:
-      'Explore the groundbreaking convergence of quantum computing and neural networks that\'s revolutionizing enterprise AI in 2026.',
+      "Explore the groundbreaking convergence of quantum computing and neural networks that's revolutionizing enterprise AI in 2026.",
     href: '/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough',
     date: '2026-01-15',
-    tags: ['Quantum Computing', 'Neural Networks', 'AI Fusion', 'Enterprise AI'],
+    tags: [
+      'Quantum Computing',
+      'Neural Networks',
+      'AI Fusion',
+      'Enterprise AI',
+    ],
     featured: true,
   },
   {
@@ -25,7 +31,12 @@ const posts = [
       'Discover how synthetic consciousness AI is revolutionizing enterprise operations with self-aware systems and autonomous decision-making.',
     href: '/blog/ai-2026-synthetic-consciousness-enterprise-transformation',
     date: '2026-01-20',
-    tags: ['Synthetic Consciousness', 'Self-Aware AI', 'Enterprise Transformation', 'AI Ethics'],
+    tags: [
+      'Synthetic Consciousness',
+      'Self-Aware AI',
+      'Enterprise Transformation',
+      'AI Ethics',
+    ],
     featured: true,
   },
   {
@@ -34,7 +45,12 @@ const posts = [
       'Learn how autonomous AI systems are revolutionizing enterprise operations with self-managing, self-optimizing, and self-healing capabilities.',
     href: '/blog/ai-2026-autonomous-enterprise-operations-revolution',
     date: '2026-01-25',
-    tags: ['Autonomous Operations', 'Enterprise AI', 'Self-Managing Systems', 'Business Automation'],
+    tags: [
+      'Autonomous Operations',
+      'Enterprise AI',
+      'Self-Managing Systems',
+      'Business Automation',
+    ],
     featured: true,
   },
   {
@@ -94,7 +110,8 @@ const posts = [
     tags: ['AI', 'Governance', 'Risk'],
   },
   {
-    title: 'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
+    title:
+      'Serverless for ML in 2025: Simple, Cost-Efficient, Production-Ready',
     description:
       'Run ML and GenAI on serverless with predictable cost and strong reliability.',
     href: '/blog/serverless-for-ml-2025',
@@ -173,17 +190,22 @@ export default function BlogIndexPage() {
       <header className='mb-10'>
         <h1 className='text-4xl md:text-5xl font-bold text-gray-900'>Blog</h1>
         <p className='mt-3 text-gray-600 max-w-2xl'>
-          Curated insights, implementation guides, and trend reports from Zion Tech Group.
+          Curated insights, implementation guides, and trend reports from Zion
+          Tech Group.
         </p>
       </header>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        {posts.map((post) => (
+        {posts.map(post => (
           <a key={post.href} href={post.href} className='group'>
             <article className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 h-full'>
               <div className='text-sm text-gray-400 mb-3 flex items-center'>
                 {post.date}
-                {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
+                {post.featured && (
+                  <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>
+                    FEATURED
+                  </span>
+                )}
               </div>
               <h2 className='text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors'>
                 {post.title}
@@ -192,8 +214,11 @@ export default function BlogIndexPage() {
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>
-                {post.tags.map((tag) => (
-                  <span key={tag} className='bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs'>
+                {post.tags.map(tag => (
+                  <span
+                    key={tag}
+                    className='bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs'
+                  >
                     {tag}
                   </span>
                 ))}
@@ -208,4 +233,3 @@ export default function BlogIndexPage() {
     </div>
   );
 }
-
