@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Target from 'lucide-react';
+import DollarSign from 'lucide-react';
 import Clock from 'lucide-react';
 import User from 'lucide-react';
 import CheckCircle from 'lucide-react';

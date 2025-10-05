@@ -34,13 +34,9 @@ key={item.id}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                   {isNew(item.date) && (
-<<<<<<< HEAD
                     <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
                       New
                     </span>
-=======
-                    <span className="text-green-400">●</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-6f98
                   )}
                 </div>
                 <div className="flex items-center gap-2">
