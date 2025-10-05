@@ -143,10 +143,6 @@ class EnhancedPerformanceMonitor {
     return [...this.alerts];
   }
 
-  public isMonitoring(): boolean {
-    return this._isMonitoring;
-  }
-
   public getLatestMetrics(): PerformanceMetrics | null {
     return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
   }
