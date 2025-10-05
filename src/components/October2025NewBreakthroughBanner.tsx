@@ -56,7 +56,8 @@ const October2025NewBreakthroughBanner = () => {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`bg-gradient-to-br ${content.gradient} p-4 rounded-xl shadow-lg`}>
-                    <Icon className="w-8 h-8 text-white"</div>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
                   <div className="flex-1">
                     <div className="text-xs text-purple-300 mb-2 font-semibold uppercase tracking-wider">
                       {content.category}
