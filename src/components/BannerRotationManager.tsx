@@ -2,24 +2,6 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-  'january2026-revolutionary': lazy(
-    () => import('./January2026RevolutionaryBanner'),
-  ),
-  'january2026-content-showcase': lazy(
-    () => import('./January2026ContentShowcaseBanner'),
-  ),
-  'january2026-new-content': lazy(
-    () => import('./January2026NewContentShowcaseBanner'),
-  ),
-  'january2026-revolutionary-ai': lazy(
-    () => import('./January2026RevolutionaryAIBanner'),
-  ),
-  'january2026-revolutionary-content': lazy(
-    () => import('./January2026RevolutionaryContentBanner'),
-  ),
-  'january2026-revolutionary-breakthroughs': lazy(
-    () => import('./January2026RevolutionaryBreakthroughsBanner'),
-  ),
   'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
   'latest-2026-content': lazy(() => import('./Latest2026ContentBanner')),
   'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner')),
