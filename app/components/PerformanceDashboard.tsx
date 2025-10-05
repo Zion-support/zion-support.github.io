@@ -98,11 +98,7 @@ const PerformanceDashboard: React.FC = () => {
           <div className='flex items-center space-x-2'>
             <button
               onClick={() => setAutoRefresh(!autoRefresh)}
-              className={`text-xs px-2 py-1 rounded ${
-                autoRefresh
-                  ? 'bg-green-100 text-green-800'
-                  : 'bg-gray-100 text-gray-600'
-              }`}
+              `}
             >
               {autoRefresh ? 'Auto' : 'Manual'}
             </button>
@@ -128,7 +124,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
         <div className='flex items-center mt-2'>
           <div
-            className={`w-3 h-3 rounded-full mr-2 ${data.isHealthy ? 'bg-green-500' : 'bg-red-500'}`}
+            `}
           ></div>
           <span className='text-sm text-gray-600'>
             {data.isHealthy ? 'System Healthy' : 'Issues Detected'}

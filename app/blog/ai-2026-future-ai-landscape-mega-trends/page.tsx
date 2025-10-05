@@ -1,7 +1,16 @@
 import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Calendar, Clock, User, ArrowRight, TrendingUp, Brain, Zap, Shield, Globe, Target } from 'lucide-react';
+import Calendar from 'lucide-react';
+import Clock from 'lucide-react';
+import User from 'lucide-react';
+import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Brain from 'lucide-react';
+import Zap from 'lucide-react';
+import Shield from 'lucide-react';
+import Globe from 'lucide-react';
+import Target from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'AI 2026: The Future AI Landscape - Mega Trends & Revolutionary Breakthroughs | Zion Tech Group',

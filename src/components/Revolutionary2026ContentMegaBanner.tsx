@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield } from 'lucide-react';
 
 const Revolutionary2026ContentMegaBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -101,14 +100,14 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
             >
-              <Sparkles className="w-8 h-8 text-yellow-400" />
+               />
             </motion.div>
             <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-purple-500/30">
-              <Rocket className="w-4 h-4 text-purple-400" />
+               />
               <span className="text-sm font-semibold text-white">REVOLUTIONARY BREAKTHROUGH • 2026</span>
             </div>
             <div className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
-              <Zap className="w-4 h-4 text-yellow-400 animate-pulse" />
+               />
               <span className="text-sm font-semibold text-yellow-300">6 BREAKTHROUGH TECHNOLOGIES</span>
             </div>
           </div>
@@ -124,15 +123,15 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
 
           <div className="flex items-center justify-center gap-8 text-center">
             <div className="flex items-center gap-2">
-              <Brain className="w-6 h-6 text-purple-400" />
+               />
               <span className="text-lg font-bold text-white">Meta-Cognitive AI</span>
             </div>
             <div className="flex items-center gap-2">
-              <Shield className="w-6 h-6 text-blue-400" />
+               />
               <span className="text-lg font-bold text-white">Zero Trust Security</span>
             </div>
             <div className="flex items-center gap-2">
-              <Rocket className="w-6 h-6 text-cyan-400" />
+               />
               <span className="text-lg font-bold text-white">Autonomous Operations</span>
             </div>
           </div>
@@ -153,8 +152,8 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
               {content.featured && (
                 <div className="absolute -top-3 -right-3 z-20">
                   <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold shadow-lg">
-                    <Star className="w-3 h-3 fill-current" />
-                    <span>FEATURED</span>
+                     />
+                    
                   </div>
                 </div>
               )}
@@ -171,8 +170,8 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
-                        <span>TRENDING</span>
+                         />
+                        
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
@@ -208,7 +207,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-purple-400" />
+                     />
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -221,7 +220,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                 >
                   <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" />
                   <span>Explore Breakthrough</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                   />
                 </a>
               </div>
             </motion.div>
@@ -272,7 +271,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-                  <Rocket className="w-5 h-5" />
+                   />
                   <span>Start Your Revolution</span>
                 </a>
                 <a
@@ -280,7 +279,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Explore All Breakthroughs</span>
-                  <ArrowRight className="w-5 h-5" />
+                   />
                 </a>
               </div>
             </div>
@@ -291,7 +290,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
         <div className="mt-16 pt-8 border-t border-white/20">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-bold text-yellow-300">6</div>
+              
               <div className="text-sm text-gray-400">Revolutionary Breakthroughs</div>
             </div>
             <div>

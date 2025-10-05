@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { X, ArrowRight, BookOpen, TrendingUp, Sparkles, Zap } from 'lucide-react';
 
 interface NewContentPromotionBannerProps {
   variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';
@@ -68,7 +67,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               </div>
               <div className="flex items-center gap-1">
                 <TrendingUp className={`w-4 h-4 ${iconClasses[variant]} animate-bounce`} />
-                <span className="text-xs opacity-75">Trending</span>
+                
               </div>
             </div>
 
@@ -84,7 +83,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
                 <div className="flex items-center gap-2 mb-1">
-                  <BookOpen className="w-3 h-3" />
+                   />
                   <span className="text-xs font-medium">Data Engineering</span>
                 </div>
                 <div className="text-xs opacity-90">Real-Time Data Pipelines Guide</div>
@@ -92,7 +91,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
                 <div className="flex items-center gap-2 mb-1">
-                  <Zap className="w-3 h-3" />
+                   />
                   <span className="text-xs font-medium">Platform Engineering</span>
                 </div>
                 <div className="text-xs opacity-90">Scorecards That Drive Adoption</div>
@@ -100,8 +99,8 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
                 <div className="flex items-center gap-2 mb-1">
-                  <Sparkles className="w-3 h-3" />
-                  <span className="text-xs font-medium">GenAI</span>
+                   />
+                  
                 </div>
                 <div className="text-xs opacity-90">Production Deployment Patterns</div>
               </div>
@@ -112,7 +111,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 border border-white/30"
             >
               {ctaText}
-              <ArrowRight className="w-4 h-4" />
+               />
             </Link>
           </div>
 

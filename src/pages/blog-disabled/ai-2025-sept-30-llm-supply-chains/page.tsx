@@ -12,10 +12,9 @@ export default function BlogPost(): React.JSX.Element {
           
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains
         />
-      </Helmet>
-
-      <div className=" />
-      </Helmet>
+      </Helmet>" />
+" />
+      
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -23,10 +22,7 @@ export default function BlogPost(): React.JSX.Element {
   AI Supply Chains: 99.5% Forecasts, 85% Inventory Reduction,,
         
         </h1>
-        <p>
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-llm-supply-chains"
-        />
-      </p>
+        
         <div className="prose prose-invert max-w-3xl">
           <p>
             This is a placeholder for the blog post content. The original content had syntax errors

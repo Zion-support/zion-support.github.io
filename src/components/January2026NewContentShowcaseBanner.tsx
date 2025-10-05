@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Cpu, Network } from 'lucide-react';
 
 const January2026NewContentShowcaseBanner: React.FC = () => {
   const features = [
@@ -82,10 +81,10 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>
-            <div className="text-sm text-blue-200">Efficiency</div>
+            
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-300 mb-1">200x</div>
+            
             <div className="text-sm text-blue-200">Speed Boost</div>
           </div>
           <div className="text-center">
@@ -94,7 +93,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-1">95%</div>
-            <div className="text-sm text-blue-200">Automation</div>
+            
           </div>
         </motion.div>
 
@@ -110,7 +109,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Explore January 2026 Content
-            <ArrowRight className="ml-2 w-5 h-5" />
+             />
           </a>
         </motion.div>
       </div>

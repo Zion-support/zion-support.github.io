@@ -1,6 +1,18 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target, Brain, Zap, Shield, CheckCircle } from 'lucide-react';
+import ArrowLeft from 'lucide-react';
+import Calendar from 'lucide-react';
+import User from 'lucide-react';
+import Clock from 'lucide-react';
+import Tag from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import DollarSign from 'lucide-react';
+import Users from 'lucide-react';
+import Target from 'lucide-react';
+import Brain from 'lucide-react';
+import Zap from 'lucide-react';
+import Shield from 'lucide-react';
+import CheckCircle from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2025 December Autonomous Revolution: $2.8B Success Story - Zion Tech Group',
