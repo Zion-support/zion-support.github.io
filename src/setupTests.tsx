@@ -1,13 +1,11 @@
 import '@testing-library/jest-dom';
 import React from 'react';
-
 // Polyfill TextEncoder and TextDecoder for Node.js environment
 if (typeof global.TextEncoder === 'undefined') {
   const { TextEncoder, TextDecoder } = require('util');
   global.TextEncoder = TextEncoder;
   global.TextDecoder = TextDecoder;
 }
-
 // Mock import.meta.env for Jest
 Object.defineProperty(global, 'import', {
   value: {
@@ -15,19 +13,15 @@ Object.defineProperty(global, 'import', {
       env: {
         DEV: true,
         PROD: false,
-<<<<<<< HEAD
         MODE: 'test',
       },
     },
   },
-=======
         MODE: 'test'
       }
     }
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 });
-
 // Mock IntersectionObserver
 global.IntersectionObserver = class IntersectionObserver {
   constructor() {}
@@ -35,7 +29,6 @@ global.IntersectionObserver = class IntersectionObserver {
   observe() {}
   unobserve() {}
 } as unknown as typeof IntersectionObserver;
-
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -43,7 +36,6 @@ global.ResizeObserver = class ResizeObserver {
   observe() {}
   unobserve() {}
 } as unknown as typeof ResizeObserver;
-
 // Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -58,7 +50,6 @@ Object.defineProperty(window, 'matchMedia', {
     dispatchEvent: jest.fn(),
   })),
 });
-
 // Mock performance API
 Object.defineProperty(window, 'performance', {
   writable: true,
@@ -67,60 +58,42 @@ Object.defineProperty(window, 'performance', {
     mark: jest.fn(),
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
-<<<<<<< HEAD
     getEntriesByName: jest.fn(() => []),
   },
-=======
     getEntriesByName: jest.fn(() => [])
   }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 });
-
 // Mock PerformanceObserver
 global.PerformanceObserver = class PerformanceObserver {
   constructor() {}
   observe() {}
   disconnect() {}
-<<<<<<< HEAD
   takeRecords() {
     return [];
   }
-=======
   takeRecords() { return []; }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 } as unknown as typeof PerformanceObserver;
-
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
   ErrorBoundary: ({ children }: { children: React.ReactNode }) => {
     return children;
   },
   withErrorBoundary: (Component: React.ComponentType) => Component,
-<<<<<<< HEAD
   useErrorHandler: () => jest.fn(),
-=======
   useErrorHandler: () => jest.fn()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 }));
-
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
   Helmet: ({ children }: { children: React.ReactNode }) => children,
-<<<<<<< HEAD
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
-=======
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 }));
-
 // Mock lucide-react icons
 jest.mock('lucide-react', () => {
   const mockIcon = (testId: string) => {
     const { createElement } = require('react');
     return createElement('div', { 'data-testid': testId });
-<<<<<<< HEAD
   };
-
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -353,11 +326,9 @@ jest.mock('lucide-react', () => {
     AlertTriangle: () => mockIcon('alert-triangle-icon'),
   };
 });
-
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
-
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
     if (
@@ -380,8 +351,6 @@ beforeAll(() => {
     originalConsoleWarn.call(console, ...args);
   };
 });
-
-=======
   };
   return {
     Menu: () => mockIcon('menu-icon'),
@@ -615,11 +584,9 @@ beforeAll(() => {
     AlertTriangle: () => mockIcon('alert-triangle-icon')
   };
 });
-
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
 const originalConsoleWarn = console.warn;
-
 beforeAll(() => {
   console.error = (...args: unknown[]) => {
     if (typeof args[0] === 'string' && (
@@ -630,7 +597,6 @@ beforeAll(() => {
     }
     originalConsoleError.call(console, ...args);
   };
-
   console.warn = (...args: unknown[]) => {
     if (typeof args[0] === 'string' && (
       args[0].includes('componentWillReceiveProps') ||
@@ -641,8 +607,6 @@ beforeAll(() => {
     originalConsoleWarn.call(console, ...args);
   };
 });
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;

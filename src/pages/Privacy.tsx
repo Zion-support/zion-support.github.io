@@ -1,19 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
 import { motion } from 'framer-motion';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
-
 const Privacy: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Privacy policy for Zion Tech Group's website and services." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="container mx-auto px-4">
@@ -27,7 +21,6 @@ const Privacy: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -37,26 +30,22 @@ const Privacy: React.FC = () => {
                   We collect information you provide directly to us, such as when you
                   create an account, contact us, or use our services.
                 </p>
-                
                 <h2>How We Use Your Information</h2>
                 <p>
                   We use the information we collect to provide, maintain, and improve
                   our services and communicate with you.
                 </p>
-                
                 <h2>Information Sharing</h2>
                 <p>
                   We do not sell, trade, or otherwise transfer your personal information
                   to third parties without your consent.
                 </p>
-                
                 <h2>Data Security</h2>
                 <p>
                   We implement appropriate security measures to protect your personal
                   information against unauthorized access, alteration, disclosure, or
                   destruction.
                 </p>
-                
                 <h2>Contact Us</h2>
                 <p>
                   If you have any questions about this Privacy Policy, please contact us
@@ -66,7 +55,6 @@ const Privacy: React.FC = () => {
             </div>
           </div>
         </section>
-=======
         <meta name="description" content="Learn how Zion Tech Group protects your privacy and handles your personal information in accordance with applicable laws and regulations." />
         <meta name="keywords" content="privacy policy, data protection, personal information, GDPR, privacy rights" />
       </Helmet>
@@ -88,7 +76,6 @@ const Privacy: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -99,12 +86,10 @@ const Privacy: React.FC = () => {
             <p className="text-sm text-gray-600 mb-8">
               <strong>Last Updated:</strong> January 15, 2025
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">1. Introduction</h2>
             <p className="text-gray-600 mb-6">
               Zion Tech Group ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">2. Information We Collect</h2>
             <h3 className="text-xl font-semibold text-gray-900 mb-3">2.1 Personal Information</h3>
             <p className="text-gray-600 mb-4">
@@ -117,7 +102,6 @@ const Privacy: React.FC = () => {
               <li>Communication preferences</li>
               <li>Payment and billing information</li>
             </ul>
-
             <h3 className="text-xl font-semibold text-gray-900 mb-3">2.2 Automatically Collected Information</h3>
             <p className="text-gray-600 mb-4">
               When you visit our website, we may automatically collect certain information, including:
@@ -130,7 +114,6 @@ const Privacy: React.FC = () => {
               <li>Referring website information</li>
               <li>Cookies and similar tracking technologies</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">3. How We Use Your Information</h2>
             <p className="text-gray-600 mb-4">
               We use the collected information for various purposes, including:
@@ -144,7 +127,6 @@ const Privacy: React.FC = () => {
               <li>Marketing and promotional activities (with your consent)</li>
               <li>Complying with legal obligations</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">4. Information Sharing and Disclosure</h2>
             <p className="text-gray-600 mb-4">
               We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:
@@ -155,17 +137,14 @@ const Privacy: React.FC = () => {
               <li>In connection with a business transfer or merger</li>
               <li>With your explicit consent</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">5. Data Security</h2>
             <p className="text-gray-600 mb-6">
               We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet or electronic storage is 100% secure.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">6. Cookies and Tracking Technologies</h2>
             <p className="text-gray-600 mb-4">
               We use cookies and similar tracking technologies to enhance your experience on our website. You can control cookie settings through your browser preferences.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">7. Your Rights</h2>
             <p className="text-gray-600 mb-4">
               Depending on your location, you may have certain rights regarding your personal information, including:
@@ -178,27 +157,22 @@ const Privacy: React.FC = () => {
               <li>Right to data portability</li>
               <li>Right to object to processing</li>
             </ul>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">8. Data Retention</h2>
             <p className="text-gray-600 mb-6">
               We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required by law.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">9. International Data Transfers</h2>
             <p className="text-gray-600 mb-6">
               Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place to protect your information during such transfers.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">10. Children's Privacy</h2>
             <p className="text-gray-600 mb-6">
               Our services are not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">11. Changes to This Privacy Policy</h2>
             <p className="text-gray-600 mb-6">
               We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.
             </p>
-
             <h2 className="text-2xl font-bold text-gray-900 mb-4">12. Contact Us</h2>
             <p className="text-gray-600 mb-4">
               If you have any questions about this Privacy Policy or our privacy practices, please contact us:
@@ -216,10 +190,8 @@ const Privacy: React.FC = () => {
             </div>
           </motion.div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
       </div>
     </>
   );
 };
-
 export default Privacy;

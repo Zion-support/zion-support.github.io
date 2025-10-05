@@ -1,8 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
-
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
@@ -12,14 +10,12 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Team = lazy(() => import('./pages/Team'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
-
 // Loading component
 const Loading = () => (
   <div className="flex items-center justify-center min-h-screen">
     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
   </div>
 );
-
 const AppRouter: React.FC = () => {
   return (
     <Router>
@@ -38,9 +34,7 @@ const AppRouter: React.FC = () => {
     </Router>
   );
 };
-
 export default AppRouter;
-=======
 import { Routes, Route } from 'react-router-dom';
 // import Home from './pages/Home'; // Temporarily disabled
 import About from './pages/About';
@@ -66,7 +60,6 @@ import GlobalFinTechAITransformation from './pages/case-studies/global-fintech-a
 import MultiAgentEnterpriseOrchestration from './pages/blog/ai-2025-multiagent-enterprise-orchestration-revolution';
 import CognitiveComputingTransformation from './pages/blog/ai-2025-cognitive-computing-enterprise-transformation';
 import GlobalTelecomCognitiveTransformation from './pages/case-studies/global-telecom-cognitive-transformation-4-7-billion';
-
 export const AppRouter: React.FC = () => {
   return (
     <Routes>
@@ -97,4 +90,3 @@ export const AppRouter: React.FC = () => {
     </Routes>
   );
 };
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5

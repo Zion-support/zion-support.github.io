@@ -1,20 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight, Brain, CheckCircle, Cloud, Database, Shield } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-=======
 import { ArrowRight, Brain, CheckCircle, Cloud, Code, Database, Rocket, Shield, Star, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
-
 const Services: React.FC = () => {
   const services = [
     {
       icon: Brain,
-<<<<<<< HEAD
       title: 'AI Solutions',
       description: 'Custom AI implementations including machine learning, natural language processing, and computer vision.',
       features: ['Machine Learning Models', 'NLP Solutions', 'Computer Vision', 'Predictive Analytics']
@@ -38,14 +33,12 @@ const Services: React.FC = () => {
       features: ['Security Audits', 'Compliance Management', 'Threat Detection', 'Incident Response']
     }
   ];
-
   return (
     <>
       <Helmet>
         <title>Services - Zion Tech Group</title>
         <meta name="description" content="Explore our comprehensive AI and IT services including AI solutions, cloud services, data analytics, and security solutions." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
@@ -61,7 +54,6 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Services Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -87,7 +79,6 @@ const Services: React.FC = () => {
                   </div>
                 ))}
               </div>
-=======
       title: 'AI & Machine Learning Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence and machine learning implementations.',
       features: [
@@ -183,7 +174,6 @@ const Services: React.FC = () => {
       color: 'teal'
     }
   ];
-
   const processSteps = [
     {
       step: '01',
@@ -216,7 +206,6 @@ const Services: React.FC = () => {
       description: 'Ongoing support and maintenance to ensure your solution continues to perform optimally.'
     }
   ];
-
   const stats = [
     {
       icon: Users,
@@ -239,7 +228,6 @@ const Services: React.FC = () => {
       label: 'Support Available'
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -265,7 +253,6 @@ const Services: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         {/* Stats Section */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -289,12 +276,9 @@ const Services: React.FC = () => {
                   </div>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
         {/* Process Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -333,7 +317,6 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
@@ -350,7 +333,6 @@ const Services: React.FC = () => {
               Contact Us Today
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-=======
         {/* Services Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -424,7 +406,6 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Process Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -464,7 +445,6 @@ const Services: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -495,12 +475,10 @@ const Services: React.FC = () => {
                 </Link>
               </div>
             </motion.div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
           </div>
         </section>
       </div>
     </>
   );
 };
-
 export default Services;

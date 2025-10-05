@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 // SEO Optimization Script
 export const optimizeSEO = () => {
   // Add structured data
@@ -19,22 +17,18 @@ export const optimizeSEO = () => {
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(structuredData);
   document.head.appendChild(script);
-
   // Optimize meta tags
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
     metaDescription.setAttribute('content', 'Zion Tech Group - Advanced AI and IT Solutions. Transform your business with cutting-edge artificial intelligence and technology solutions.');
   }
-
   // Add canonical URL
   const canonical = document.createElement('link');
   canonical.rel = 'canonical';
   canonical.href = window.location.href;
   document.head.appendChild(canonical);
 };
-
 // Auto-run on page load
 if (typeof window !== 'undefined') {
   document.addEventListener('DOMContentLoaded', optimizeSEO);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5

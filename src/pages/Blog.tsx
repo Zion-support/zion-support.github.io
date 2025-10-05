@@ -1,7 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const Blog: React.FC = () => {
   return (
     <>
@@ -9,7 +7,6 @@ const Blog: React.FC = () => {
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Stay updated with the latest insights on AI, technology trends, and enterprise solutions from Zion Tech Group." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="container mx-auto px-4">
@@ -23,7 +20,6 @@ const Blog: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -35,13 +31,11 @@ const Blog: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 import { ArrowRight, Calendar, Clock, Search, Tag, User } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
 const Blog: React.FC = () => {
   const blogPosts = [
     {
@@ -111,7 +105,6 @@ const Blog: React.FC = () => {
       featured: false
     }
   ];
-
   const categories = [
     'All',
     'AI & Machine Learning',
@@ -121,10 +114,8 @@ const Blog: React.FC = () => {
     'Data Analytics',
     'Development'
   ];
-
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
-
   return (
     <>
       <Helmet>
@@ -150,7 +141,6 @@ const Blog: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           {/* Search and Filter */}
           <div className="mb-12">
@@ -179,7 +169,6 @@ const Blog: React.FC = () => {
               </div>
             </div>
           </div>
-
           {/* Featured Post */}
           {featuredPost && (
             <motion.div
@@ -234,7 +223,6 @@ const Blog: React.FC = () => {
               </div>
             </motion.div>
           )}
-
           {/* Blog Posts Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regularPosts.map((post, index) => (
@@ -283,7 +271,6 @@ const Blog: React.FC = () => {
               </motion.article>
             ))}
           </div>
-
           {/* Newsletter Subscription */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -309,10 +296,8 @@ const Blog: React.FC = () => {
             </div>
           </motion.div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
       </div>
     </>
   );
 };
-
 export default Blog;

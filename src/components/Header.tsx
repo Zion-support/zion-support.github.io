@@ -1,14 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -19,7 +15,6 @@ const Header: React.FC = () => {
               Zion Tech Group
             </a>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <a
@@ -59,7 +54,6 @@ const Header: React.FC = () => {
               Call Now
             </a>
           </nav>
-
           {/* Mobile Menu Button */}
           <div className="md:hidden">
             <button
@@ -71,7 +65,6 @@ const Header: React.FC = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-gray-200">
@@ -125,8 +118,5 @@ const Header: React.FC = () => {
     </header>
   );
 };
-
 export default Header;
-=======
 import React from ' react ' ; const Header: React.FC = ( ) = > { retu r n ( < header classNam e = ' bg - white shado w - sm ' > < div classNam e = ' m a x - w - 7xl m x - auto p x - 4 s m: px - 6 l g: px - 8 ' > < div classNam e = ' flex justif y - between item s - center p y - 6 ' > < div classNam e = ' flex item s - cent e r ' > < h1 classNam e = ' te x t - 2xl fon t - bold tex t - gr a y - 9 0 0 ' > Zion Tech Group < / h1 > < / d i v > < nav classNam e = ' hidden m d: flex spac e - x - 8 ' > < a hre f = ' / ' classNa m e = ' te x t - gr a y - 500 hove r: te x t - gr a y - 9 0 0 ' > Home < / a > < a hre f = ' / abo u t ' classNa m e = ' te x t - gr a y - 500 hove r: te x t - gr a y - 9 0 0 ' > About < / a > < a hre f = ' / servic e s ' classNa m e = ' te x t - gr a y - 500 hove r: te x t - gr a y - 9 0 0 ' > Services < / a > < a hre f = ' / conta c t ' classNa m e = ' te x t - gr a y - 500 hove r: te x t - gr a y - 9 0 0 ' > Contact < / a > < / n a v > < / d i v > < / d i v > < / he a d e r > ); }; export default Header; $ $ 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5

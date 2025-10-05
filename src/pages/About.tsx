@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ArrowRight, Award, CheckCircle, Globe, Users } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-
 const About: React.FC = () => {
   return (
     <>
@@ -10,7 +8,6 @@ const About: React.FC = () => {
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission to transform enterprises with AI-powered solutions and digital transformation services." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
@@ -24,13 +21,11 @@ const About: React.FC = () => {
                 and digital innovation.
               </p>
             </div>
-=======
 import { ArrowRight, Award, CheckCircle, Globe, Lightbulb, Shield, Target, Users, Zap } from 'lucide-react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
 const About: React.FC = () => {
   const values = [
     {
@@ -54,7 +49,6 @@ const About: React.FC = () => {
       description: 'We deliver high-quality solutions that exceed expectations and drive measurable results.'
     }
   ];
-
   const team = [
     {
       name: 'Sarah Johnson',
@@ -81,7 +75,6 @@ const About: React.FC = () => {
       experience: '8+ years in DevOps and infrastructure management'
     }
   ];
-
   const achievements = [
     {
       icon: Award,
@@ -104,7 +97,6 @@ const About: React.FC = () => {
       description: 'First to market with several breakthrough AI solutions'
     }
   ];
-
   return (
     <>
       <Helmet>
@@ -128,12 +120,9 @@ const About: React.FC = () => {
                 We're a team of passionate technologists dedicated to transforming businesses through innovative AI and technology solutions that drive real results.
               </p>
             </motion.div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
           </div>
         </section>
-
         {/* Mission Section */}
-<<<<<<< HEAD
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
@@ -144,7 +133,6 @@ const About: React.FC = () => {
                 technology to solve complex business challenges and create sustainable
                 competitive advantages.
               </p>
-=======
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -206,7 +194,6 @@ const About: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -243,12 +230,9 @@ const About: React.FC = () => {
                   </p>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
         {/* Values Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -286,7 +270,6 @@ const About: React.FC = () => {
                   </p>
                 </div>
               </div>
-=======
         {/* Team Section */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -334,7 +317,6 @@ const About: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* Achievements Section */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -371,12 +353,9 @@ const About: React.FC = () => {
                   </p>
                 </motion.div>
               ))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
@@ -403,7 +382,6 @@ const About: React.FC = () => {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
@@ -420,7 +398,6 @@ const About: React.FC = () => {
               Get In Touch
               <ArrowRight className="ml-2 w-5 h-5" />
             </a>
-=======
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -451,12 +428,10 @@ const About: React.FC = () => {
                 </Link>
               </div>
             </motion.div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
           </div>
         </section>
       </div>
     </>
   );
 };
-
 export default About;

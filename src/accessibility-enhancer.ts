@@ -1,57 +1,46 @@
-<<<<<<< HEAD
 // Accessibility enhancement utilities
 export class AccessibilityEnhancer {
   private static instance: AccessibilityEnhancer;
   private isInitialized = false;
-
   static getInstance(): AccessibilityEnhancer {
     if (!AccessibilityEnhancer.instance) {
       AccessibilityEnhancer.instance = new AccessibilityEnhancer();
     }
     return AccessibilityEnhancer.instance;
   }
-
   init(): void {
     if (this.isInitialized) {
       return;
     }
-
     this.setupKeyboardNavigation();
     this.setupScreenReaderSupport();
     this.setupColorContrast();
     this.setupFocusManagement();
-    
     this.isInitialized = true;
     console.log('Accessibility enhancer initialized');
   }
-
   private setupKeyboardNavigation(): void {
     // Add keyboard navigation support
     document.addEventListener('keydown', this.handleKeyboardNavigation.bind(this));
   }
-
   private setupScreenReaderSupport(): void {
     // Add ARIA attributes and screen reader support
     this.addAriaLabels();
   }
-
   private setupColorContrast(): void {
     // Ensure proper color contrast
     this.checkColorContrast();
   }
-
   private setupFocusManagement(): void {
     // Manage focus for better accessibility
     this.setupFocusTraps();
   }
-
   private handleKeyboardNavigation(event: KeyboardEvent): void {
     // Handle keyboard navigation
     if (event.key === 'Tab') {
       // Handle tab navigation
     }
   }
-
   private addAriaLabels(): void {
     // Add ARIA labels to elements that need them
     const buttons = document.querySelectorAll('button:not([aria-label])');
@@ -61,25 +50,20 @@ export class AccessibilityEnhancer {
       }
     });
   }
-
   private checkColorContrast(): void {
     // Check and improve color contrast
     console.log('Color contrast check completed');
   }
-
   private setupFocusTraps(): void {
     // Set up focus traps for modals and dropdowns
     console.log('Focus traps configured');
   }
-
   cleanup(): void {
     this.isInitialized = false;
     console.log('Accessibility enhancer cleaned up');
   }
 }
-
 export default AccessibilityEnhancer;
-=======
 // Accessibility Enhancement Script
 export const enhanceAccessibility = () => {
   // Add skip links
@@ -104,7 +88,6 @@ export const enhanceAccessibility = () => {
     skipLink.style.top = '-40px';
   });
   document.body.insertBefore(skipLink, document.body.firstChild);
-
   // Add ARIA labels to interactive elements
   const buttons = document.querySelectorAll('button:not([aria-label])');
   buttons.forEach(button => {
@@ -112,7 +95,6 @@ export const enhanceAccessibility = () => {
       button.setAttribute('aria-label', button.textContent.trim());
     }
   });
-
   // Add focus indicators
   const style = document.createElement('style');
   style.textContent = `
@@ -126,9 +108,7 @@ export const enhanceAccessibility = () => {
   `;
   document.head.appendChild(style);
 };
-
 // Auto-run on page load
 if (typeof window !== 'undefined') {
   document.addEventListener('DOMContentLoaded', enhanceAccessibility);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5

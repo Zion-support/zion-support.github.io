@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Mail, Phone, MapPin } from 'lucide-react';
-
 const Contact: React.FC = () => {
   return (
     <>
@@ -10,7 +8,6 @@ const Contact: React.FC = () => {
         <title>Contact Us - Zion Tech Group</title>
         <meta name="description" content="Get in touch with Zion Tech Group for AI and IT solutions. Call +1 302 464 0950 or email kleber@ziontechgroup.com" />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
           <div className="container mx-auto px-4">
@@ -24,7 +21,6 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </section>
-
         <section className="py-16">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -59,7 +55,6 @@ const Contact: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Contact Form */}
                 <div>
                   <h2 className="text-3xl font-bold mb-8">Send us a Message</h2>
@@ -123,12 +118,10 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </section>
-=======
 import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -141,12 +134,10 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -168,7 +159,6 @@ const Contact: React.FC = () => {
       });
     }, 3000);
   };
-
   return (
     <>
       <Helmet>
@@ -194,7 +184,6 @@ const Contact: React.FC = () => {
             </motion.div>
           </div>
         </section>
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Information */}
@@ -258,7 +247,6 @@ const Contact: React.FC = () => {
                 </div>
               </motion.div>
             </div>
-
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <motion.div
@@ -429,10 +417,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
       </div>
     </>
   );
 };
-
 export default Contact;

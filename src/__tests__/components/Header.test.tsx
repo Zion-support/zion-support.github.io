@@ -1,23 +1,18 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
 import Header from '../../components/Header';
-
 // Mock the Header component if it doesn't exist
 jest.mock('../../components/Header', () => {
   return function MockHeader() {
     return <header data-testid="header">Header Component</header>;
   };
 });
-
 describe('Header', () => {
   it('renders without crashing', () => {
     render(<Header />);
     expect(screen.getByTestId('header')).toBeInTheDocument();
-=======
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/Header';
-
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
@@ -32,7 +27,6 @@ jest.mock('framer-motion', () => ({
     )
   }
 }));
-
 const renderWithRouter = (component: React.ReactElement) => {
   return render(
     <BrowserRouter>
@@ -40,20 +34,17 @@ const renderWithRouter = (component: React.ReactElement) => {
     </BrowserRouter>
   );
 };
-
 describe('Header Component', () => {
   test('renders header with navigation', () => {
     renderWithRouter(<Header />);
     expect(screen.getByRole('banner')).toBeInTheDocument();
     expect(screen.getByRole('navigation')).toBeInTheDocument();
   });
-
   test('renders company name', () => {
     renderWithRouter(<Header />);
     const logo = screen.getByText('Zion Tech Group');
     expect(logo).toBeInTheDocument();
   });
-
   test('renders navigation links', () => {
     renderWithRouter(<Header />);
     expect(screen.getByText('Services')).toBeInTheDocument();
@@ -64,11 +55,9 @@ describe('Header Component', () => {
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
   });
-
   test('renders get started button', () => {
     renderWithRouter(<Header />);
     const getStartedButton = screen.getByText('Get Started');
     expect(getStartedButton).toBeInTheDocument();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
   });
 });

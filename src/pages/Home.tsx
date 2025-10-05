@@ -1,22 +1,16 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
-=======
 import { CheckCircle } from 'lucide-react';
 import React from 'react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
 const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Home - Zion Tech Group</title>
         <meta name="description" content="Transform your enterprise with AI-powered solutions. Achieve 300% ROI, 70% cost reduction, and 90% efficiency gains." />
       </Helmet>
-      
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
@@ -44,7 +38,6 @@ const Home: React.FC = () => {
                   className="border-2 border-white text-white hover:bg-white hover:text-blue-900 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300"
                 >
                   View Services
-=======
         <title>Zion Tech Group - Leading AI & IT Solutions | Transform Your Business</title>
         <meta name="description" content="Zion Tech Group delivers cutting-edge AI and IT solutions that transform businesses. Expert consulting services with proven results." />
         <meta name="keywords" content="AI solutions, IT consulting, cybersecurity, machine learning, cloud infrastructure, digital transformation" />
@@ -71,14 +64,11 @@ const Home: React.FC = () => {
                 </Link>
                 <Link to="/contact" className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
                   Get Started
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
                 </Link>
               </div>
             </div>
           </div>
         </section>
-
-<<<<<<< HEAD
         {/* Features Section */}
         <section className="py-16 bg-gray-50">
           <div className="container mx-auto px-4">
@@ -114,7 +104,6 @@ const Home: React.FC = () => {
                     Boost productivity and efficiency with cutting-edge AI technology.
                   </p>
                 </div>
-=======
         {/* Featured Services */}
         <section className="py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -164,7 +153,6 @@ const Home: React.FC = () => {
                   Learn More
                 </Link>
               </div>
-
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-blue-300 ring-2 ring-blue-100 relative">
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-bold">
@@ -207,7 +195,6 @@ const Home: React.FC = () => {
                   Learn More
                 </Link>
               </div>
-
               <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-300">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
@@ -244,14 +231,11 @@ const Home: React.FC = () => {
                 <Link to="/services/it-services" className="block w-full text-center py-3 px-4 rounded-lg font-semibold bg-blue-600 text-white hover:bg-blue-700 transition-colors">
                   Learn More
                 </Link>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
               </div>
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">
@@ -267,7 +251,6 @@ const Home: React.FC = () => {
             >
               Start Your Transformation
             </Link>
-=======
         <section className="py-20 bg-blue-600">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,12 +267,10 @@ const Home: React.FC = () => {
                 Learn More
               </Link>
             </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
           </div>
         </section>
       </div>
     </>
   );
 };
-
 export default Home;

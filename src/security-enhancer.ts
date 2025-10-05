@@ -1,30 +1,24 @@
-<<<<<<< HEAD
 // Security enhancement utilities
 export class SecurityEnhancer {
   private static instance: SecurityEnhancer;
   private isInitialized = false;
-
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
       SecurityEnhancer.instance = new SecurityEnhancer();
     }
     return SecurityEnhancer.instance;
   }
-
   init(): void {
     if (this.isInitialized) {
       return;
     }
-
     this.setupCSP();
     this.setupHTTPS();
     this.setupXSSProtection();
     this.setupCSRFProtection();
-    
     this.isInitialized = true;
     console.log('Security enhancer initialized');
   }
-
   private setupCSP(): void {
     // Set up Content Security Policy
     const meta = document.createElement('meta');
@@ -32,45 +26,38 @@ export class SecurityEnhancer {
     meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
     document.head.appendChild(meta);
   }
-
   private setupHTTPS(): void {
     // Ensure HTTPS is used
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
       console.warn('Application should be served over HTTPS');
     }
   }
-
   private setupXSSProtection(): void {
     // Set up XSS protection headers
     const meta = document.createElement('meta');
     meta.httpEquiv = 'X-Content-Type-Options';
     meta.content = 'nosniff';
     document.head.appendChild(meta);
-
     const xssMeta = document.createElement('meta');
     xssMeta.httpEquiv = 'X-XSS-Protection';
     xssMeta.content = '1; mode=block';
     document.head.appendChild(xssMeta);
   }
-
   private setupCSRFProtection(): void {
     // Set up CSRF protection
     const token = this.generateCSRFToken();
     document.cookie = `csrf-token=${token}; SameSite=Strict; Secure`;
   }
-
   private generateCSRFToken(): string {
     const array = new Uint8Array(32);
     crypto.getRandomValues(array);
     return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
   }
-
   setupSecurityMonitoring(): void {
     // Monitor for security issues
     this.monitorConsoleErrors();
     this.monitorNetworkRequests();
   }
-
   private monitorConsoleErrors(): void {
     const originalError = console.error;
     console.error = (...args: unknown[]) => {
@@ -81,7 +68,6 @@ export class SecurityEnhancer {
       originalError.apply(console, args);
     };
   }
-
   private monitorNetworkRequests(): void {
     // Monitor fetch requests for security issues
     const originalFetch = window.fetch;
@@ -98,19 +84,15 @@ export class SecurityEnhancer {
       }
     };
   }
-
   private logSecurityEvent(type: string, data: unknown): void {
     console.log('Security event:', { type, data, timestamp: new Date().toISOString() });
   }
-
   cleanup(): void {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');
   }
 }
-
 export default SecurityEnhancer;
-=======
 // Security Enhancement Script
 export const enhanceSecurity = () => {
   // Add Content Security Policy
@@ -127,7 +109,6 @@ export const enhanceSecurity = () => {
   meta.httpEquiv = 'Content-Security-Policy';
   meta.content = csp;
   document.head.appendChild(meta);
-
   // Add security headers
   const securityHeaders = [
     { name: 'X-Content-Type-Options', value: 'nosniff' },
@@ -135,13 +116,10 @@ export const enhanceSecurity = () => {
     { name: 'X-XSS-Protection', value: '1; mode=block' },
     { name: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }
   ];
-
   // Note: These would typically be set by the server
   console.log('Security headers to be set by server:', securityHeaders);
 };
-
 // Auto-run on page load
 if (typeof window !== 'undefined') {
   document.addEventListener('DOMContentLoaded', enhanceSecurity);
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
