@@ -1,9 +1,8 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { AppErrorBoundary } from './components/AppErrorBoundary';
+import ErrorBoundary from './components/ErrorBoundary';
 import SEO from './components/SEO';
-import { PageLoader } from './components/LoadingComponents';
-import { useAccessibility } from './hooks/useAccessibility';
+import Loading from './components/Loading';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -16,13 +15,12 @@ const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 
 function App() {
-  useAccessibility();
 
   return (
-    <AppErrorBoundary>
+    <ErrorBoundary>
       <SEO />
       <Router>
-        <Suspense fallback={<PageLoader />}>
+        <Suspense fallback={<Loading />}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -35,7 +33,7 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-    </AppErrorBoundary>
+    </ErrorBoundary>
   );
 }
 
