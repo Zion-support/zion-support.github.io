@@ -1,6 +1,6 @@
 /**
  * Code Splitting Helper Utilities
- * 
+ *
  * Provides utilities for intelligent code splitting and lazy loading
  */
 
@@ -13,29 +13,30 @@ import { lazy, ComponentType } from 'react';
 export const lazyWithRetry = <T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
   retries = 3,
-  interval = 1000
+  interval = 1000,
 ): React.LazyExoticComponent<T> => {
-  return lazy(() =>
-    new Promise<{ default: T }>((resolve, reject) => {
-      const attemptImport = async (retriesLeft: number) => {
-        try {
-          const module = await importFunc();
-          resolve(module);
-        } catch (error) {
-          if (retriesLeft > 0) {
-            console.warn(
-              `Failed to load component, retrying... (${retriesLeft} attempts left)`
-            );
-            setTimeout(() => attemptImport(retriesLeft - 1), interval);
-          } else {
-            console.error('Failed to load component after multiple retries');
-            reject(error);
+  return lazy(
+    () =>
+      new Promise<{ default: T }>((resolve, reject) => {
+        const attemptImport = async (retriesLeft: number) => {
+          try {
+            const module = await importFunc();
+            resolve(module);
+          } catch (error) {
+            if (retriesLeft > 0) {
+              console.warn(
+                `Failed to load component, retrying... (${retriesLeft} attempts left)`,
+              );
+              setTimeout(() => attemptImport(retriesLeft - 1), interval);
+            } else {
+              console.error('Failed to load component after multiple retries');
+              reject(error);
+            }
           }
-        }
-      };
+        };
 
-      attemptImport(retries);
-    })
+        attemptImport(retries);
+      }),
   );
 };
 
@@ -44,11 +45,13 @@ export const lazyWithRetry = <T extends ComponentType<any>>(
  * Useful for prefetching components before they're needed
  */
 export const preloadComponent = (
-  importFunc: () => Promise<any>
+  importFunc: () => Promise<any>,
 ): Promise<void> => {
-  return importFunc().then(() => {}).catch((error) => {
-    console.error('Failed to preload component:', error);
-  });
+  return importFunc()
+    .then(() => {})
+    .catch(error => {
+      console.error('Failed to preload component:', error);
+    });
 };
 
 /**
@@ -57,10 +60,10 @@ export const preloadComponent = (
  */
 export const createLazyRoute = <T extends ComponentType<any>>(
   importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
+  fallback?: React.ReactNode,
 ) => {
   const LazyComponent = lazyWithRetry(importFunc);
-  
+
   return {
     Component: LazyComponent,
     preload: () => preloadComponent(importFunc),
@@ -73,13 +76,13 @@ export const createLazyRoute = <T extends ComponentType<any>>(
 export const useLazyLoadOnVisible = (
   ref: React.RefObject<HTMLElement>,
   callback: () => void,
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit,
 ): (() => void) => {
   if (typeof window === 'undefined') return () => {};
 
   const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
+    entries => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
           callback();
           observer.disconnect();
@@ -90,7 +93,7 @@ export const useLazyLoadOnVisible = (
       rootMargin: '50px',
       threshold: 0.01,
       ...options,
-    }
+    },
   );
 
   if (ref.current) {
@@ -107,9 +110,11 @@ export const useLazyLoadOnVisible = (
 export const logBundleSize = (componentName: string): void => {
   if (process.env.NODE_ENV !== 'development') return;
 
-  const entries = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+  const entries = performance.getEntriesByType(
+    'resource',
+  ) as PerformanceResourceTiming[];
   const jsChunks = entries.filter(
-    (entry) => entry.name.includes('.js') && entry.name.includes('chunk')
+    entry => entry.name.includes('.js') && entry.name.includes('chunk'),
   );
 
   if (jsChunks.length > 0) {
@@ -129,7 +134,7 @@ export const createSmartPreloader = () => {
 
   const getConnectionSpeed = (): 'slow' | 'fast' | 'unknown' => {
     if (typeof navigator === 'undefined') return 'unknown';
-    
+
     const connection = (navigator as any).connection;
     if (!connection) return 'unknown';
 
@@ -154,7 +159,7 @@ export const createSmartPreloader = () => {
         try {
           await importFunc();
           // Small delay between preloads to avoid overwhelming the network
-          await new Promise((resolve) => setTimeout(resolve, 100));
+          await new Promise(resolve => setTimeout(resolve, 100));
         } catch (error) {
           console.error('Preload error:', error);
         }

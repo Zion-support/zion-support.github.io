@@ -1,6 +1,6 @@
 /**
  * Performance Monitoring Utility
- * 
+ *
  * Provides comprehensive performance monitoring and optimization features
  */
 
@@ -17,7 +17,7 @@ export interface PerformanceMetrics {
  * Measure Core Web Vitals
  */
 export const measureWebVitals = (): Promise<PerformanceMetrics> => {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     if (typeof window === 'undefined' || !('performance' in window)) {
       resolve({
         pageLoadTime: 0,
@@ -30,11 +30,11 @@ export const measureWebVitals = (): Promise<PerformanceMetrics> => {
       return;
     }
 
-    const observer = new PerformanceObserver((list) => {
+    const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const metrics: Partial<PerformanceMetrics> = {};
 
-      entries.forEach((entry) => {
+      entries.forEach(entry => {
         if (entry.entryType === 'paint') {
           const paintEntry = entry as PerformancePaintTiming;
           if (paintEntry.name === 'first-contentful-paint') {
@@ -44,25 +44,32 @@ export const measureWebVitals = (): Promise<PerformanceMetrics> => {
           metrics.largestContentfulPaint = entry.startTime;
         } else if (entry.entryType === 'layout-shift') {
           const layoutEntry = entry as LayoutShift;
-          metrics.cumulativeLayoutShift = 
+          metrics.cumulativeLayoutShift =
             (metrics.cumulativeLayoutShift || 0) + (layoutEntry.value || 0);
         }
       });
 
       // Calculate TTI and TBT from navigation timing
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming;
       if (navigation) {
         metrics.pageLoadTime = navigation.loadEventEnd - navigation.fetchStart;
-        metrics.timeToInteractive = navigation.domInteractive - navigation.fetchStart;
-        metrics.totalBlockingTime = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+        metrics.timeToInteractive =
+          navigation.domInteractive - navigation.fetchStart;
+        metrics.totalBlockingTime =
+          navigation.domContentLoadedEventEnd -
+          navigation.domContentLoadedEventStart;
       }
 
       resolve(metrics as PerformanceMetrics);
     });
 
     try {
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift'] });
-      
+      observer.observe({
+        entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift'],
+      });
+
       // Fallback: resolve after timeout if no entries
       setTimeout(() => {
         observer.disconnect();
@@ -88,14 +95,29 @@ export const logPerformanceMetrics = async (): Promise<void> => {
   if (process.env.NODE_ENV !== 'development') return;
 
   const metrics = await measureWebVitals();
-  
+
   console.group('📊 Performance Metrics');
   console.log('Page Load Time:', `${metrics.pageLoadTime.toFixed(2)}ms`);
-  console.log('First Contentful Paint:', `${metrics.firstContentfulPaint.toFixed(2)}ms`);
-  console.log('Largest Contentful Paint:', `${metrics.largestContentfulPaint.toFixed(2)}ms`);
-  console.log('Time to Interactive:', `${metrics.timeToInteractive.toFixed(2)}ms`);
-  console.log('Total Blocking Time:', `${metrics.totalBlockingTime.toFixed(2)}ms`);
-  console.log('Cumulative Layout Shift:', metrics.cumulativeLayoutShift.toFixed(3));
+  console.log(
+    'First Contentful Paint:',
+    `${metrics.firstContentfulPaint.toFixed(2)}ms`,
+  );
+  console.log(
+    'Largest Contentful Paint:',
+    `${metrics.largestContentfulPaint.toFixed(2)}ms`,
+  );
+  console.log(
+    'Time to Interactive:',
+    `${metrics.timeToInteractive.toFixed(2)}ms`,
+  );
+  console.log(
+    'Total Blocking Time:',
+    `${metrics.totalBlockingTime.toFixed(2)}ms`,
+  );
+  console.log(
+    'Cumulative Layout Shift:',
+    metrics.cumulativeLayoutShift.toFixed(3),
+  );
   console.groupEnd();
 };
 
@@ -103,12 +125,14 @@ export const logPerformanceMetrics = async (): Promise<void> => {
  * Track long tasks that block the main thread
  */
 export const trackLongTasks = (callback: (duration: number) => void): void => {
-  if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return;
+  if (typeof window === 'undefined' || !('PerformanceObserver' in window))
+    return;
 
   try {
-    const observer = new PerformanceObserver((list) => {
-      list.getEntries().forEach((entry) => {
-        if (entry.duration > 50) { // Tasks longer than 50ms
+    const observer = new PerformanceObserver(list => {
+      list.getEntries().forEach(entry => {
+        if (entry.duration > 50) {
+          // Tasks longer than 50ms
           callback(entry.duration);
           console.warn(`Long task detected: ${entry.duration.toFixed(2)}ms`);
         }
@@ -134,9 +158,11 @@ export interface ResourceTiming {
 export const measureResourcePerformance = (): ResourceTiming[] => {
   if (typeof window === 'undefined' || !('performance' in window)) return [];
 
-  const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
-  
-  return resources.map((resource) => ({
+  const resources = performance.getEntriesByType(
+    'resource',
+  ) as PerformanceResourceTiming[];
+
+  return resources.map(resource => ({
     name: resource.name.split('/').pop() || resource.name,
     duration: resource.duration,
     size: resource.transferSize || 0,
@@ -149,7 +175,7 @@ export const measureResourcePerformance = (): ResourceTiming[] => {
  */
 export const getSlowResources = (): ResourceTiming[] => {
   const resources = measureResourcePerformance();
-  return resources.filter((resource) => resource.duration > 1000);
+  return resources.filter(resource => resource.duration > 1000);
 };
 
 /**
@@ -157,7 +183,7 @@ export const getSlowResources = (): ResourceTiming[] => {
  */
 export const getMemoryUsage = (): { used: number; limit: number } | null => {
   if (typeof window === 'undefined') return null;
-  
+
   const memory = (performance as any).memory;
   if (!memory) return null;
 
@@ -179,7 +205,11 @@ export const mark = (name: string): void => {
 /**
  * Measure time between two marks
  */
-export const measure = (name: string, startMark: string, endMark: string): number => {
+export const measure = (
+  name: string,
+  startMark: string,
+  endMark: string,
+): number => {
   if (typeof window === 'undefined' || !('performance' in window)) return 0;
 
   try {

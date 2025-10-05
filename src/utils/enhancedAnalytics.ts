@@ -44,7 +44,7 @@ class EnhancedAnalytics {
 
   constructor() {
     this.session = this.createNewSession();
-    
+
     if (typeof window !== 'undefined') {
       this.performanceOptimizer = getPerformanceOptimizer();
       this.initialize();
@@ -118,7 +118,7 @@ class EnhancedAnalytics {
     category: string,
     action: string,
     label?: string,
-    value?: number
+    value?: number,
   ): void {
     const event: UserEvent = {
       category,
@@ -138,7 +138,7 @@ class EnhancedAnalytics {
   trackConversion(
     type: ConversionEvent['type'],
     value: number = 0,
-    metadata?: Record<string, any>
+    metadata?: Record<string, any>,
   ): void {
     const conversion: ConversionEvent = {
       type,
@@ -165,7 +165,7 @@ class EnhancedAnalytics {
     this.trackEvent(
       'Form',
       success ? 'Submit Success' : 'Submit Error',
-      formName
+      formName,
     );
 
     if (success) {
@@ -176,7 +176,11 @@ class EnhancedAnalytics {
   /**
    * Track content engagement
    */
-  trackContentEngagement(contentType: string, contentId: string, duration: number): void {
+  trackContentEngagement(
+    contentType: string,
+    contentId: string,
+    duration: number,
+  ): void {
     this.trackEvent('Content Engagement', contentType, contentId, duration);
   }
 
@@ -257,9 +261,9 @@ class EnhancedAnalytics {
     if (typeof window === 'undefined') return;
 
     // Track clicks on important elements
-    document.addEventListener('click', (e) => {
+    document.addEventListener('click', e => {
       const target = e.target as HTMLElement;
-      
+
       // Track CTA clicks
       if (target.closest('button[class*="btn"], a[class*="btn"]')) {
         const text = target.textContent?.trim() || 'Unknown';
@@ -280,15 +284,20 @@ class EnhancedAnalytics {
 
     window.addEventListener('scroll', () => {
       const scrollPercentage = Math.round(
-        ((window.scrollY + window.innerHeight) / document.documentElement.scrollHeight) * 100
+        ((window.scrollY + window.innerHeight) /
+          document.documentElement.scrollHeight) *
+          100,
       );
 
       if (scrollPercentage > maxScroll) {
         maxScroll = scrollPercentage;
 
         // Track milestone scroll depths
-        scrollThresholds.forEach((threshold) => {
-          if (scrollPercentage >= threshold && !trackedThresholds.has(threshold)) {
+        scrollThresholds.forEach(threshold => {
+          if (
+            scrollPercentage >= threshold &&
+            !trackedThresholds.has(threshold)
+          ) {
             trackedThresholds.add(threshold);
             this.trackScrollDepth(threshold);
           }
@@ -298,7 +307,7 @@ class EnhancedAnalytics {
 
     // Track time on page
     let pageStartTime = Date.now();
-    
+
     // Track before page unload
     window.addEventListener('beforeunload', () => {
       const timeOnPage = Date.now() - pageStartTime;
@@ -309,19 +318,23 @@ class EnhancedAnalytics {
     document.addEventListener('visibilitychange', () => {
       if (document.hidden) {
         const timeOnPage = Date.now() - pageStartTime;
-        this.trackContentEngagement('Page', window.location.pathname, timeOnPage);
+        this.trackContentEngagement(
+          'Page',
+          window.location.pathname,
+          timeOnPage,
+        );
       } else {
         pageStartTime = Date.now();
       }
     });
 
     // Track errors
-    window.addEventListener('error', (e) => {
+    window.addEventListener('error', e => {
       this.trackError(new Error(e.message), e.filename);
     });
 
     // Track unhandled promise rejections
-    window.addEventListener('unhandledrejection', (e) => {
+    window.addEventListener('unhandledrejection', e => {
       this.trackError(new Error(e.reason), 'Unhandled Promise');
     });
   }
@@ -360,7 +373,7 @@ class EnhancedAnalytics {
       const stored = localStorage.getItem('analytics_session');
       if (stored) {
         const data = JSON.parse(stored);
-        
+
         // Check if session is recent (within 30 minutes)
         if (Date.now() - data.startTime < 30 * 60 * 1000) {
           this.session = data;
@@ -473,7 +486,7 @@ class EnhancedAnalytics {
   private getConversionsBreakdown(): Record<string, number> {
     const breakdown: Record<string, number> = {};
 
-    this.session.conversions.forEach((conversion) => {
+    this.session.conversions.forEach(conversion => {
       breakdown[conversion.type] = (breakdown[conversion.type] || 0) + 1;
     });
 

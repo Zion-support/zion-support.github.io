@@ -1,9 +1,9 @@
 /**
  * Performance Metrics Dashboard Utility
- * 
+ *
  * Comprehensive performance monitoring and metrics collection for
  * web vitals, resource timing, and custom performance markers.
- * 
+ *
  * Features:
  * - Core Web Vitals tracking (LCP, FID, CLS, FCP, TTFB)
  * - Custom performance markers
@@ -65,7 +65,7 @@ class PerformanceMetricsTracker {
     // Observe resource timing
     if ('PerformanceObserver' in window) {
       try {
-        const resourceObserver = new PerformanceObserver((list) => {
+        const resourceObserver = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'resource') {
               this.trackResourceTiming(entry as PerformanceResourceTiming);
@@ -106,11 +106,14 @@ class PerformanceMetricsTracker {
   private observeLCP(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          const lastEntry = entries[entries.length - 1] as PerformanceEntry & { renderTime: number; loadTime: number };
+          const lastEntry = entries[entries.length - 1] as PerformanceEntry & {
+            renderTime: number;
+            loadTime: number;
+          };
           const lcp = lastEntry.renderTime || lastEntry.loadTime;
-          
+
           this.recordMetric('LCP', lcp, this.getRatingForLCP(lcp));
         });
         observer.observe({ entryTypes: ['largest-contentful-paint'] });
@@ -127,11 +130,11 @@ class PerformanceMetricsTracker {
   private observeFID(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const firstInput = entries[0] as PerformanceEventTiming;
           const fid = firstInput.processingStart - firstInput.startTime;
-          
+
           this.recordMetric('FID', fid, this.getRatingForFID(fid));
         });
         observer.observe({ entryTypes: ['first-input'] });
@@ -149,11 +152,15 @@ class PerformanceMetricsTracker {
     if ('PerformanceObserver' in window) {
       try {
         let clsValue = 0;
-        const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver(list => {
           for (const entry of list.getEntries()) {
             if (!(entry as any).hadRecentInput) {
               clsValue += (entry as any).value;
-              this.recordMetric('CLS', clsValue, this.getRatingForCLS(clsValue));
+              this.recordMetric(
+                'CLS',
+                clsValue,
+                this.getRatingForCLS(clsValue),
+              );
             }
           }
         });
@@ -171,7 +178,7 @@ class PerformanceMetricsTracker {
   private observeFCP(): void {
     if ('PerformanceObserver' in window) {
       try {
-        const observer = new PerformanceObserver((list) => {
+        const observer = new PerformanceObserver(list => {
           const entries = list.getEntries();
           const fcp = entries[0]?.startTime;
           if (fcp) {
@@ -191,7 +198,9 @@ class PerformanceMetricsTracker {
    */
   private trackTTFB(): void {
     if (window.performance && window.performance.timing) {
-      const ttfb = window.performance.timing.responseStart - window.performance.timing.requestStart;
+      const ttfb =
+        window.performance.timing.responseStart -
+        window.performance.timing.requestStart;
       this.recordMetric('TTFB', ttfb, this.getRatingForTTFB(ttfb));
     }
   }
@@ -202,7 +211,7 @@ class PerformanceMetricsTracker {
   private recordMetric(
     name: string,
     value: number,
-    rating: 'good' | 'needs-improvement' | 'poor'
+    rating: 'good' | 'needs-improvement' | 'poor',
   ): void {
     const metric: PerformanceMetric = {
       name,
@@ -210,12 +219,12 @@ class PerformanceMetricsTracker {
       rating,
       timestamp: Date.now(),
     };
-    
+
     this.metrics.set(name, metric);
-    
+
     // Check budgets
     this.checkBudgets();
-    
+
     // Log in development
     if (process.env.NODE_ENV === 'development') {
       console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);
@@ -242,13 +251,13 @@ class PerformanceMetricsTracker {
 
     const endTime = performance.now();
     const duration = endTime - startTime;
-    
+
     performance.mark(`${name}-end`);
     performance.measure(name, `${name}-start`, `${name}-end`);
-    
+
     this.recordMetric(name, duration, this.getRatingForCustomMetric(duration));
     this.customMarkers.delete(name);
-    
+
     return duration;
   }
 
@@ -258,10 +267,13 @@ class PerformanceMetricsTracker {
   private trackResourceTiming(entry: PerformanceResourceTiming): void {
     const resourceType = this.getResourceType(entry.name);
     const size = entry.transferSize || 0;
-    
+
     // Track large resources
-    if (size > 100000) { // 100KB
-      console.warn(`Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`);
+    if (size > 100000) {
+      // 100KB
+      console.warn(
+        `Large resource detected: ${entry.name} (${Math.round(size / 1024)}KB)`,
+      );
     }
   }
 
@@ -302,7 +314,7 @@ class PerformanceMetricsTracker {
       const metric = this.metrics.get(budget.metric);
       if (metric) {
         budget.current = metric.value;
-        
+
         if (metric.value > budget.budget * 1.2) {
           budget.status = 'fail';
         } else if (metric.value > budget.budget) {
@@ -327,7 +339,7 @@ class PerformanceMetricsTracker {
         ttfb: this.metrics.get('TTFB'),
       },
       customMetrics: Array.from(this.metrics.values()).filter(
-        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name)
+        m => !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name),
       ),
       resourceTimings: this.getResourceTimings(),
       budgets: [...this.budgets],
@@ -339,7 +351,9 @@ class PerformanceMetricsTracker {
    * Get resource timings
    */
   private getResourceTimings(): ResourceTiming[] {
-    const resources = performance.getEntriesByType('resource') as PerformanceResourceTiming[];
+    const resources = performance.getEntriesByType(
+      'resource',
+    ) as PerformanceResourceTiming[];
     return resources.map(resource => ({
       name: resource.name,
       duration: Math.round(resource.duration),
@@ -351,7 +365,9 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for LCP
    */
-  private getRatingForLCP(value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRatingForLCP(
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 2500) return 'good';
     if (value <= 4000) return 'needs-improvement';
     return 'poor';
@@ -360,7 +376,9 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for FID
    */
-  private getRatingForFID(value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRatingForFID(
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 100) return 'good';
     if (value <= 300) return 'needs-improvement';
     return 'poor';
@@ -369,7 +387,9 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for CLS
    */
-  private getRatingForCLS(value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRatingForCLS(
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 0.1) return 'good';
     if (value <= 0.25) return 'needs-improvement';
     return 'poor';
@@ -378,7 +398,9 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for FCP
    */
-  private getRatingForFCP(value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRatingForFCP(
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 1800) return 'good';
     if (value <= 3000) return 'needs-improvement';
     return 'poor';
@@ -387,7 +409,9 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for TTFB
    */
-  private getRatingForTTFB(value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRatingForTTFB(
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 800) return 'good';
     if (value <= 1800) return 'needs-improvement';
     return 'poor';
@@ -396,7 +420,9 @@ class PerformanceMetricsTracker {
   /**
    * Get rating for custom metrics
    */
-  private getRatingForCustomMetric(value: number): 'good' | 'needs-improvement' | 'poor' {
+  private getRatingForCustomMetric(
+    value: number,
+  ): 'good' | 'needs-improvement' | 'poor' {
     if (value <= 1000) return 'good';
     if (value <= 3000) return 'needs-improvement';
     return 'poor';

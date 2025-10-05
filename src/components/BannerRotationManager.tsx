@@ -2,17 +2,35 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-  'october2025-tech-breakthrough': lazy(() => import('./October2025TechBreakthroughBanner')),
+  'october2025-tech-breakthrough': lazy(
+    () => import('./October2025TechBreakthroughBanner'),
+  ),
   'october2025-next-gen-ai': lazy(() => import('./October2025NextGenAIBanner')),
-  'october2025-operational-excellence': lazy(() => import('./October2025OperationalExcellenceBanner')),
-  'october2025-edge-ai-quantum': lazy(() => import('./October2025EdgeAIQuantumCryptoBanner')),
-  'october2025-breakthrough-content': lazy(() => import('./October2025BreakthroughContentBanner')),
-  'october2025-ai-revolution': lazy(() => import('./October2025AIRevolutionBanner')),
-  'october2025-new-content': lazy(() => import('./October2025NewContentBanner')),
-  'october2025-new-breakthrough': lazy(() => import('./October2025NewBreakthroughBanner')),
-  'october2025-document-automation': lazy(() => import('./October2025DocumentAutomationBanner')),
+  'october2025-operational-excellence': lazy(
+    () => import('./October2025OperationalExcellenceBanner'),
+  ),
+  'october2025-edge-ai-quantum': lazy(
+    () => import('./October2025EdgeAIQuantumCryptoBanner'),
+  ),
+  'october2025-breakthrough-content': lazy(
+    () => import('./October2025BreakthroughContentBanner'),
+  ),
+  'october2025-ai-revolution': lazy(
+    () => import('./October2025AIRevolutionBanner'),
+  ),
+  'october2025-new-content': lazy(
+    () => import('./October2025NewContentBanner'),
+  ),
+  'october2025-new-breakthrough': lazy(
+    () => import('./October2025NewBreakthroughBanner'),
+  ),
+  'october2025-document-automation': lazy(
+    () => import('./October2025DocumentAutomationBanner'),
+  ),
   'october2025-revops': lazy(() => import('./October2025RevOpsBanner')),
-  'january2026-revolutionary': lazy(() => import('./January2026RevolutionaryBanner')),
+  'january2026-revolutionary': lazy(
+    () => import('./January2026RevolutionaryBanner'),
+  ),
   'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
 };
 
@@ -30,14 +48,14 @@ interface BannerRotationManagerProps {
 }
 
 const LoadingFallback = () => (
-  <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse">
-    <div className="h-32 bg-white/10 rounded"></div>
+  <div className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse'>
+    <div className='h-32 bg-white/10 rounded'></div>
   </div>
 );
 
 /**
  * Banner Rotation Manager Component
- * 
+ *
  * Manages banner display with lazy loading, rotation, and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
@@ -64,7 +82,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     if (!autoRotate || visibleBanners.length <= 1) return;
 
     const timer = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
+      setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
     }, interval);
 
     return () => clearInterval(timer);
@@ -75,15 +93,13 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   // For non-rotating, show all banners
   if (!autoRotate) {
     return (
-      <div className="space-y-6">
-        {visibleBanners.map((bannerKey) => {
+      <div className='space-y-6'>
+        {visibleBanners.map(bannerKey => {
           const BannerComponent = bannerComponents[bannerKey];
           return (
             <Suspense key={bannerKey} fallback={<LoadingFallback />}>
-
               <BannerComponent />
             </Suspense>
-
           );
         })}
       </div>
@@ -95,15 +111,14 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   const CurrentBanner = bannerComponents[currentBannerKey];
 
   return (
-    <div className="relative">
+    <div className='relative'>
       <Suspense fallback={<LoadingFallback />}>
-
         <CurrentBanner />
       </Suspense>
 
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
-        <div className="flex justify-center gap-2 mt-4">
+        <div className='flex justify-center gap-2 mt-4'>
           {visibleBanners.map((_, index) => (
             <button
               key={index}

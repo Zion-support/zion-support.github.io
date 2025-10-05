@@ -100,7 +100,7 @@ export const getPrioritizedBanners = (limit?: number): BannerMetadata[] => {
  * Get banners by category
  */
 export const getBannersByCategory = (
-  category: BannerMetadata['category']
+  category: BannerMetadata['category'],
 ): BannerMetadata[] => {
   return bannerRegistry
     .filter(banner => banner.category === category)
@@ -122,7 +122,7 @@ export const getFeaturedBanners = (): BannerMetadata[] => {
 export const getRecentBanners = (days: number = 30): BannerMetadata[] => {
   const cutoffDate = new Date();
   cutoffDate.setDate(cutoffDate.getDate() - days);
-  
+
   return bannerRegistry
     .filter(banner => banner.publishDate >= cutoffDate)
     .sort((a, b) => b.publishDate.getTime() - a.publishDate.getTime());
@@ -134,10 +134,12 @@ export const getRecentBanners = (days: number = 30): BannerMetadata[] => {
 export const calculateTotalValue = (banners: BannerMetadata[]): number => {
   return banners.reduce((total, banner) => {
     const value = parseFloat(banner.value.replace(/[^0-9.]/g, ''));
-    const multiplier = banner.value.includes('T') ? 1000 
-                     : banner.value.includes('B') ? 1 
-                     : 0.001; // M
-    return total + (value * multiplier);
+    const multiplier = banner.value.includes('T')
+      ? 1000
+      : banner.value.includes('B')
+        ? 1
+        : 0.001; // M
+    return total + value * multiplier;
   }, 0);
 };
 

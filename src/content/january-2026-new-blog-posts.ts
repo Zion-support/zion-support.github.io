@@ -15,9 +15,11 @@ export interface BlogPost {
 
 export const newJanuary2026BlogPosts: BlogPost[] = [
   {
-    id: "ai-2026-january-hyperautomation-platform",
-    title: "⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation",
-    excerpt: "Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.",
+    id: 'ai-2026-january-hyperautomation-platform',
+    title:
+      '⚙️ AI Hyperautomation Platform 2026: End-to-End Business Automation',
+    excerpt:
+      'Complete business process automation achieving 95% automation rates with 10x efficiency improvements and $2.8B success stories.',
     content: `
 # AI Hyperautomation Platform 2026: End-to-End Business Automation
 
@@ -140,18 +142,25 @@ The age of hyperautomation has begun. The question isn't whether to automate - i
 
 *"We're not just automating tasks; we're transforming entire business ecosystems."* - Sarah Johnson, Chief Automation Officer
     `,
-    author: "Sarah Johnson, Chief Automation Officer",
-    publishedAt: "2026-01-30",
+    author: 'Sarah Johnson, Chief Automation Officer',
+    publishedAt: '2026-01-30',
     readTime: 14,
-    category: "Business Automation",
-    tags: ["hyperautomation", "AI", "business process", "efficiency", "transformation"],
+    category: 'Business Automation',
+    tags: [
+      'hyperautomation',
+      'AI',
+      'business process',
+      'efficiency',
+      'transformation',
+    ],
     featured: true,
-    imageUrl: "/images/hyperautomation-platform-2026.jpg"
+    imageUrl: '/images/hyperautomation-platform-2026.jpg',
   },
   {
-    id: "ai-2026-january-quantum-security-breakthrough",
-    title: "🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection",
-    excerpt: "Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.",
+    id: 'ai-2026-january-quantum-security-breakthrough',
+    title: '🔐 Quantum-Safe Security 2026: Unbreakable Enterprise Protection',
+    excerpt:
+      'Quantum-resistant security systems protecting $2.8B in assets with 99.99% threat prevention and zero security breaches across enterprise networks.',
     content: `
 # Quantum-Safe Security 2026: Unbreakable Enterprise Protection
 
@@ -291,18 +300,26 @@ The quantum era is coming. The question isn't whether your security will be comp
 
 *"In the quantum era, security isn't just about protecting today's data; it's about securing tomorrow's secrets."* - Dr. Michael Chen, Chief Security Officer
     `,
-    author: "Dr. Michael Chen, Chief Security Officer",
-    publishedAt: "2026-01-28",
+    author: 'Dr. Michael Chen, Chief Security Officer',
+    publishedAt: '2026-01-28',
     readTime: 16,
-    category: "Cybersecurity",
-    tags: ["quantum security", "encryption", "cybersecurity", "protection", "compliance"],
+    category: 'Cybersecurity',
+    tags: [
+      'quantum security',
+      'encryption',
+      'cybersecurity',
+      'protection',
+      'compliance',
+    ],
     featured: true,
-    imageUrl: "/images/quantum-security-2026.jpg"
+    imageUrl: '/images/quantum-security-2026.jpg',
   },
   {
-    id: "ai-2026-january-blockchain-integration",
-    title: "⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution",
-    excerpt: "Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.",
+    id: 'ai-2026-january-blockchain-integration',
+    title:
+      '⛓️ Blockchain-AI Integration 2026: Trustless Intelligence Revolution',
+    excerpt:
+      'Revolutionary integration of blockchain and AI creating trustless intelligence systems with decentralized governance and $1.2B enterprise value creation.',
     content: `
 # Blockchain-AI Integration 2026: Trustless Intelligence Revolution
 
@@ -463,14 +480,20 @@ The future is decentralized. The future is intelligent. The future is trustless.
 
 *"We're not just integrating blockchain and AI; we're creating a new paradigm of trustless intelligence."* - Dr. Sarah Rodriguez, Chief Blockchain Architect
     `,
-    author: "Dr. Sarah Rodriguez, Chief Blockchain Architect",
-    publishedAt: "2026-01-26",
+    author: 'Dr. Sarah Rodriguez, Chief Blockchain Architect',
+    publishedAt: '2026-01-26',
     readTime: 17,
-    category: "Blockchain Technology",
-    tags: ["blockchain", "AI integration", "decentralized", "trustless", "innovation"],
+    category: 'Blockchain Technology',
+    tags: [
+      'blockchain',
+      'AI integration',
+      'decentralized',
+      'trustless',
+      'innovation',
+    ],
     featured: true,
-    imageUrl: "/images/blockchain-ai-integration-2026.jpg"
-  }
+    imageUrl: '/images/blockchain-ai-integration-2026.jpg',
+  },
 ];
 
 export const getFeaturedJanuary2026BlogPosts = () => {

@@ -1,6 +1,5 @@
-
 // Performance Monitoring Script
-const performanceObserver = new PerformanceObserver((list) => {
+const performanceObserver = new PerformanceObserver(list => {
   for (const entry of list.getEntries()) {
     if (entry.entryType === 'navigation') {
       console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart);
