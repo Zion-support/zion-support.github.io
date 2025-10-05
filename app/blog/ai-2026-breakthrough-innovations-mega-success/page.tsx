@@ -1,11 +1,7 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowRight, Brain, Target, TrendingUp, User, Users, Zap } from 'lucide-react';
 
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Target from 'lucide-react/dist/esm/icons/arget';
-import Users from 'lucide-react/dist/esm/icons/sers';
+
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Story | Zion Tech Group',
@@ -199,27 +195,27 @@ export default function AI2026BreakthroughInnovationsPage() {
           Join the Fortune 500 companies already generating unprecedented value with AI 2026 breakthrough innovations.
         </p>
         <div className="flex flex-wrap gap-4 justify-center">
-          <Link 
+          <ArrowRight 
             href="/case-studies/ai-2026-breakthrough-innovations-2-8-trillion-success" 
             className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all flex items-center gap-2"
           >
             View Success Story
             <ArrowRight />
-          </Link>
-          <Link 
+          </ArrowRight>
+          <ArrowRight 
             href="/services/ai-2026-breakthrough-innovations-implementation" 
             className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all flex items-center gap-2"
           >
             Start Implementation
             <ArrowRight />
-          </Link>
-          <Link 
+          </ArrowRight>
+          <ArrowRight 
             href="/contact" 
             className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all flex items-center gap-2"
           >
             Get Expert Consultation
             <ArrowRight />
-          </Link>
+          </ArrowRight>
         </div>
       </section>
 
@@ -227,22 +223,22 @@ export default function AI2026BreakthroughInnovationsPage() {
       <section className="mt-12">
         <h2 className="text-2xl font-bold mb-6 text-gray-900">Related Breakthrough Content</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-2026-quantum-consciousness-breakthrough" className="block p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
+          <ArrowRight href="/blog/ai-2026-quantum-consciousness-breakthrough" className="block p-6 bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl border border-purple-200 hover:shadow-lg transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">BREAKTHROUGH</span>
               <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">$847B SUCCESS</span>
             </div>
             <h3 className="font-bold text-lg text-gray-900 mb-2">AI 2026 Quantum Consciousness Breakthrough</h3>
             <p className="text-gray-700">Revolutionary quantum consciousness achieving 99.999% awareness levels.</p>
-          </Link>
-          <Link href="/case-studies/fortune-500-ai-2026-breakthrough-2-8-trillion-success" className="block p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:shadow-lg transition-all">
+          </ArrowRight>
+          <ArrowRight href="/case-studies/fortune-500-ai-2026-breakthrough-2-8-trillion-success" className="block p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl border border-green-200 hover:shadow-lg transition-all">
             <div className="flex items-center gap-2 mb-3">
               <span className="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">FORTUNE 500</span>
               <span className="bg-yellow-500 text-white px-2 py-1 rounded text-xs font-semibold">$2.8T ROI</span>
             </div>
             <h3 className="font-bold text-lg text-gray-900 mb-2">Fortune 500 $2.8 Trillion Success Story</h3>
             <p className="text-gray-700">How leading enterprises achieved unprecedented value with AI breakthrough innovations.</p>
-          </Link>
+          </ArrowRight>
         </div>
       </section>
     </div>

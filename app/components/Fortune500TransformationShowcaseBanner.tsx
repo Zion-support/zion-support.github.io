@@ -1,4 +1,6 @@
 
+import { ArrowRight, Award, CheckCircle, TrendingUp, User, Users } from 'lucide-react';
+
 import React from 'react';
 
 

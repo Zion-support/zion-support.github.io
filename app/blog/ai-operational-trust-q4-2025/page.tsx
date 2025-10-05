@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Operational Trust Q4 2025: Live Scorecards that Ship',
@@ -10,7 +10,7 @@ export default function AIOperationalTrustQ42025Page() {
     <div className="min-h-screen bg-slate-950 text-white">
       <main className="max-w-3xl mx-auto px-6 py-16">
         <div className="mb-8">
-          <Link href="/blog" className="text-emerald-400 hover:text-emerald-300">← Back to Blog</Link>
+          <ArrowRight href="/blog" className="text-emerald-400 hover:text-emerald-300">← Back to Blog</ArrowRight>
         </div>
         <header className="mb-6">
           <div className="flex items-center gap-3 text-sm text-white/60 mb-3">
@@ -45,9 +45,9 @@ export default function AIOperationalTrustQ42025Page() {
         <footer className="mt-12 pt-6 border-t border-white/10 text-white/70">
           <p>
             Continue exploring: {' '}
-            <Link href="/blog/edge-consentless-analytics-q4-2025" className="text-cyan-300 hover:text-cyan-200">Consentless Edge Analytics</Link>
+            <ArrowRight href="/blog/edge-consentless-analytics-q4-2025" className="text-cyan-300 hover:text-cyan-200">Consentless Edge Analytics</ArrowRight>
             {' '}•{' '}
-            <Link href="/blog/genai-routing-quality-tiers-q4-2025" className="text-fuchsia-300 hover:text-fuchsia-200">GenAI Quality Tiers</Link>
+            <ArrowRight href="/blog/genai-routing-quality-tiers-q4-2025" className="text-fuchsia-300 hover:text-fuchsia-200">GenAI Quality Tiers</ArrowRight>
           </p>
         </footer>
       </main>

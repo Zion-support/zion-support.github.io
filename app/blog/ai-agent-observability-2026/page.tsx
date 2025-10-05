@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Agent Observability 2026: Metrics, Traces, and Guardrails',
@@ -18,9 +18,9 @@ export default function AIAgentObservability2026Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">
+          <ArrowRight href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
         </nav>
 
         <article className="max-w-4xl mx-auto">
@@ -61,7 +61,7 @@ export default function AIAgentObservability2026Page() {
                   <h3 className="text-xl font-bold mb-3 text-violet-200">Tracing</h3>
                   <ul className="space-y-2 text-white/80">
                     <li>• OpenTelemetry spans with semantic conventions for agents</li>
-                    <li>• Link model inputs/outputs with sensitive-field hashing</li>
+                    <li>• ArrowRight model inputs/outputs with sensitive-field hashing</li>
                     <li>• Attach policy decisions and approvals as span events</li>
                   </ul>
                 </div>
@@ -91,12 +91,12 @@ export default function AIAgentObservability2026Page() {
                 Launch safe autonomy with measurable ROI and audit-ready evidence.
               </p>
               <div className="flex justify-center gap-4">
-                <Link href="/contact" className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
+                <ArrowRight href="/contact" className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
                   Talk to an Expert
-                </Link>
-                <Link href="/case-studies" className="border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                </ArrowRight>
+                <ArrowRight href="/case-studies" className="border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   View Case Studies
-                </Link>
+                </ArrowRight>
               </div>
             </section>
           </div>
@@ -105,8 +105,8 @@ export default function AIAgentObservability2026Page() {
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group AI Reliability Team</div>
               <div className="flex gap-4">
-                <Link href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">← Back to Blog</Link>
-                <Link href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</Link>
+                <ArrowRight href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">← Back to Blog</ArrowRight>
+                <ArrowRight href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</ArrowRight>
               </div>
             </div>
           </footer>

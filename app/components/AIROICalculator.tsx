@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Calculator, DollarSign, TrendingUp, Zap } from 'lucide-react';
+
 
 
 

@@ -1,17 +1,7 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, Clock, DollarSign, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import Tag from 'lucide-react/dist/esm/icons/ag';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import DollarSign from 'lucide-react/dist/esm/icons/ollarsign';
-import Users from 'lucide-react/dist/esm/icons/sers';
-import Target from 'lucide-react/dist/esm/icons/arget';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Shield from 'lucide-react/dist/esm/icons/hield';
+
 
 export const metadata = {
   title: 'AI 2025 December: Ultimate Autonomous Enterprise Revolution - Zion Tech Group',
@@ -25,13 +15,13 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
+          <ArrowRight 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft />
             Back to Home
-          </Link>
+          </ArrowRight>
         </div>
       </header>
 
@@ -65,7 +55,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           <div className="flex flex-wrap gap-2">
             {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag />
+                <Bookmark />
                 {tag}
               </span>
             ))}
@@ -280,12 +270,12 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                 <p className="text-blue-700 mb-4">
                   Schedule a free consultation with our AI experts to discuss your autonomous transformation goals.
                 </p>
-                <Link 
+                <ArrowRight 
                   href="/contact" 
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Schedule Consultation
-                </Link>
+                </ArrowRight>
               </div>
               <div>
                 <p className="text-blue-700 mb-4">

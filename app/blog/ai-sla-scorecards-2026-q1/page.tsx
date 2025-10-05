@@ -1,11 +1,7 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
+import { Activity, ArrowRight, Calendar, Clock, Gauge, Map, Shield, ShieldCheck } from 'lucide-react';
 
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import Gauge from 'lucide-react/dist/esm/icons/auge';
-import ShieldCheck from 'lucide-react/dist/esm/icons/hieldcheck';
-import Activity from 'lucide-react/dist/esm/icons/ctivity';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
+
 
 export const metadata = {
   title: 'AI SLA Scorecards 2026 Q1: KPIs, Budgets, Rollback | Zion Tech Group',
@@ -90,8 +86,8 @@ export default function Page() {
             <h3 className="text-2xl font-bold mb-2 flex items-center gap-2"><Activity /> Ship with Confidence</h3>
             <p className="text-white/90 mb-4">Use budgets and rollbacks to move fast without surprises. We implement this end‑to‑end in 6–8 weeks.</p>
             <div className="flex gap-3">
-              <Link href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight /></Link>
-              <Link href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</Link>
+              <ArrowRight href="/contact" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Talk to experts <ArrowRight /></ArrowRight>
+              <ArrowRight href="/blog/ai-governance-live-scorecards-2026" className="border border-white/50 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Read live scorecards</ArrowRight>
             </div>
           </div>
         </div>

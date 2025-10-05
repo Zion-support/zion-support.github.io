@@ -1,11 +1,7 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowRight, BarChart3, Calculator, Cog, Shield, TrendingUp, User, Users, Zap } from 'lucide-react';
 
-import Cog from 'lucide-react/dist/esm/icons/og';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Shield from 'lucide-react/dist/esm/icons/hield';
-import Users from 'lucide-react/dist/esm/icons/sers';
-import BarChart3 from 'lucide-react/dist/esm/icons/archart3';
+
 
 export const metadata = {
   title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',
@@ -300,12 +296,12 @@ export default function AI2026EnterpriseAutomationRevolution() {
           Join the leading enterprises already transforming their operations with AI automation.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
+          <ArrowRight
             href="/case-studies/ai-enterprise-automation-success-2026"
             className="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             View Success Stories
-          </Link>
+          </ArrowRight>
           <a
             href="tel:+13024640950"
             className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-orange-600 transition-colors"
@@ -319,7 +315,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Automation Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-autonomous-operations-2026" className="group">
+          <ArrowRight href="/blog/ai-autonomous-operations-2026" className="group">
             <div className="bg-gradient-to-r from-purple-50 to-pink-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                 Autonomous Operations: The Future of Business
@@ -328,8 +324,8 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 Deep dive into how autonomous systems are reshaping enterprise operations.
               </p>
             </div>
-          </Link>
-          <Link href="/case-studies/ai-automation-manufacturing-success-2026" className="group">
+          </ArrowRight>
+          <ArrowRight href="/case-studies/ai-automation-manufacturing-success-2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Manufacturing Automation: 40% Cost Reduction
@@ -338,7 +334,7 @@ export default function AI2026EnterpriseAutomationRevolution() {
                 Real-world case study of AI automation transforming manufacturing operations.
               </p>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

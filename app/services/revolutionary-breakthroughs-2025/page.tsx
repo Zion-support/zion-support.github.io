@@ -1,4 +1,6 @@
 import React from 'react';
+import { ArrowRight, Atom, Bot, Brain, CheckCircle, Cog, Map, Rocket, TrendingUp } from 'lucide-react';
+
 
 
 

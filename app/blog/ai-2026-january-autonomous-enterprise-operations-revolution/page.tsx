@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'January 2026 Autonomous Enterprise Operations Revolution | Zion Tech Group',
@@ -175,18 +175,18 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
                   Contact our experts to learn how the January 2026 Autonomous Enterprise Operations Revolution can transform your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <ArrowRight 
                     href="/contact" 
                     className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     Schedule Consultation
-                  </Link>
-                  <Link 
+                  </ArrowRight>
+                  <ArrowRight 
                     href="/services" 
                     className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                   >
                     View Services
-                  </Link>
+                  </ArrowRight>
                 </div>
               </div>
             </section>
@@ -197,18 +197,18 @@ export default function January2026AutonomousEnterpriseOperationsRevolution() {
         {/* Navigation */}
         <div className="max-w-4xl mx-auto mt-12">
           <div className="flex justify-between">
-            <Link 
+            <ArrowRight 
               href="/blog" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               ← Back to Blog
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/blog/ai-2026-january-quantum-neural-optimization-breakthrough" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               Next Article →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

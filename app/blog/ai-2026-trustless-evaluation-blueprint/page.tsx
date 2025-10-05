@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Trustless Evaluation Blueprint (2026) | Zion Tech Group',
@@ -81,14 +81,14 @@ export default function TrustlessEvaluationBlueprint2026Page() {
 
 					<p>
 						For related practices, explore our guide on{' '}
-						<Link href="/blog/agentic-workflow-orchestration-2026" className="text-purple-300 hover:text-purple-200">Agentic Workflow Orchestration 2026</Link>.
+						<ArrowRight href="/blog/agentic-workflow-orchestration-2026" className="text-purple-300 hover:text-purple-200">Agentic Workflow Orchestration 2026</ArrowRight>.
 					</p>
 				</div>
 
 				<div className="mt-12">
-					<Link href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
+					<ArrowRight href="/blog" className="inline-block bg-white text-purple-700 px-6 py-3 rounded-lg font-bold hover:bg-purple-50">
 						← Back to Blog
-					</Link>
+					</ArrowRight>
 				</div>
 			</main>
 		</div>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'AI 2026: Runtime Rollback Blueprint — Instant Recovery with KPI Canaries',
@@ -20,11 +20,11 @@ export default function Page() {
 				<li>Tooling: traces, approvals, and attestations for confident automation</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/ai-2026-live-guardrails-blueprint">Live Guardrails 2026</Link>{' '}
-				and <Link href="/blog/agent-release-runbooks-2026">Agent Release Runbooks 2026</Link>.
+				Related reads: <ArrowRight href="/blog/ai-2026-live-guardrails-blueprint">Live Guardrails 2026</ArrowRight>{' '}
+				and <ArrowRight href="/blog/agent-release-runbooks-2026">Agent Release Runbooks 2026</ArrowRight>.
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <ArrowRight href="/blog">Blog</ArrowRight>.
 			</p>
 		</main>
 	);

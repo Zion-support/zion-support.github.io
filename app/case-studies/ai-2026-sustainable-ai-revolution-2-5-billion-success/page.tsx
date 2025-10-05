@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Sustainable AI Revolution $2.5B Success Story - Zion Tech Group',
@@ -312,18 +312,18 @@ export default function SustainableAISuccessPage() {
             <div className="bg-gradient-to-br from-slate-900/20 to-slate-800/20 rounded-xl p-6 border border-slate-500/20">
               <h3 className="text-xl font-bold text-white mb-4">Related Success Stories</h3>
               <div className="space-y-4">
-                <Link href="/case-studies/ai-2026-ultimate-consciousness-breakthrough-847-billion-success" className="block p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 hover:border-purple-400/40 transition-colors">
+                <ArrowRight href="/case-studies/ai-2026-ultimate-consciousness-breakthrough-847-billion-success" className="block p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 hover:border-purple-400/40 transition-colors">
                   <div className="text-white font-semibold">$847B Consciousness Success</div>
                   <div className="text-sm text-gray-400">Fortune 50 Transformation</div>
-                </Link>
-                <Link href="/case-studies/ai-2026-neural-architecture-1-trillion-success" className="block p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-400/40 transition-colors">
+                </ArrowRight>
+                <ArrowRight href="/case-studies/ai-2026-neural-architecture-1-trillion-success" className="block p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-400/40 transition-colors">
                   <div className="text-white font-semibold">$1T Neural Architecture Success</div>
                   <div className="text-sm text-gray-400">Revolutionary AI</div>
-                </Link>
-                <Link href="/case-studies/ai-2026-ultimate-autonomous-revolution-100-billion-success" className="block p-3 rounded-lg bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/20 hover:border-emerald-400/40 transition-colors">
+                </ArrowRight>
+                <ArrowRight href="/case-studies/ai-2026-ultimate-autonomous-revolution-100-billion-success" className="block p-3 rounded-lg bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/20 hover:border-emerald-400/40 transition-colors">
                   <div className="text-white font-semibold">$100B Autonomous Success</div>
                   <div className="text-sm text-gray-400">Ultimate Revolution</div>
-                </Link>
+                </ArrowRight>
               </div>
             </div>
 

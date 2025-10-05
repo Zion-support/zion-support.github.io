@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: Revolutionary Technologies Reshaping Enterprise',
@@ -267,18 +267,18 @@ export default function AI2026BreakthroughInnovationsPage() {
             Our expert team is ready to help you implement these cutting-edge technologies.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies" 
               className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

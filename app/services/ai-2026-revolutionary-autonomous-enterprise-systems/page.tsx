@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group Services',
@@ -221,38 +221,38 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystemsService() 
           Start your transformation today and achieve unprecedented ROI results.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link 
+          <ArrowRight 
             href="/contact" 
             className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             🚀 Start Your Transformation
-          </Link>
-          <Link 
+          </ArrowRight>
+          <ArrowRight 
             href="/case-studies/ai-2026-revolutionary-autonomous-enterprise-success" 
             className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-green-700 hover:to-emerald-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             💰 View Success Stories
-          </Link>
-          <Link 
+          </ArrowRight>
+          <ArrowRight 
             href="/blog/ai-2026-revolutionary-autonomous-enterprise-systems" 
             className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105"
           >
             📖 Read Full Article
-          </Link>
+          </ArrowRight>
         </div>
       </div>
 
       <div className="border-t border-gray-200 pt-8">
         <h3 className="text-xl font-bold text-gray-900 mb-6">Related Revolutionary Services</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/services/ai-autonomous-operations-2026" className="block p-6 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200">
+          <ArrowRight href="/services/ai-autonomous-operations-2026" className="block p-6 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200">
             <h4 className="font-semibold text-gray-900 mb-2">AI Autonomous Operations 2026</h4>
             <p className="text-gray-600">Revolutionary autonomous operations with 95% efficiency gains.</p>
-          </Link>
-          <Link href="/services/ai-2027-revolutionary-breakthrough-solutions" className="block p-6 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
+          </ArrowRight>
+          <ArrowRight href="/services/ai-2027-revolutionary-breakthrough-solutions" className="block p-6 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
             <h4 className="font-semibold text-gray-900 mb-2">AI 2027 Revolutionary Solutions</h4>
             <p className="text-gray-600">Next-generation revolutionary AI solutions for enterprise transformation.</p>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

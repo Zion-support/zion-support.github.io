@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AdaptiveNeuralArchitecturesBanner() {
   return (
@@ -51,24 +51,24 @@ export default function AdaptiveNeuralArchitecturesBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-adaptive-neural-architectures-breakthrough" 
               className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read Full Breakthrough →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-adaptive-neural-architectures-25-billion-success" 
               className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               View $25B Success Story →
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Start Your Evolution
-            </Link>
+            </ArrowRight>
           </div>
           
           {/* Features Grid */}
