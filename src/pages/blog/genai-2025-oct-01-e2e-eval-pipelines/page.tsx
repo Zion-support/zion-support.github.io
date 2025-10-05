@@ -1,8 +1,8 @@
 // @ts-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
+export default function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s</title>
@@ -14,11 +14,11 @@ export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, 
         />
       </Helm, e, t>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Design, eval, pipelines tied, to, outcomes with, cos, t/quality, budg, e, t, s,
           canari, e, s, and, rollback, triggers.
         </p>
@@ -26,7 +26,7 @@ export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, 
           <p>
             Build, en, d‑to‑end, evaluation, pipelines that, correlate, with business, KPI, s. Use, budge, t‑aware, routi, n, g, live, canarie, s, and, rollback, hooks to, prevent, regressions while, preserving, velocity.
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </d, i, v > );
  }

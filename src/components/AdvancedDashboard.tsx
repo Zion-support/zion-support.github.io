@@ -19,7 +19,6 @@ interface DashboardData {
 const AdvancedDashboard: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<DashboardData | null>(null);
-  const [activeTab, setActiveTab] = useState("overview");
 
   useEffect(() => {
     if (isOpen) {

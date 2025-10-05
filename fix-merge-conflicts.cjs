@@ -1,66 +1,96 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
+console.log('🔧 Fixing merge conflicts in files...');
+
+// Files with merge conflicts
+const conflictedFiles = [
+  'src/OptimizedApp.tsx',
+  'src/__tests__/components/Header.test.tsx',
+  'src/performance-monitor.ts',
+  'src/router.tsx',
+  'src/security-enhancer.ts',
+  'src/setupTests.tsx'
+];
+
 function fixMergeConflicts(filePath) {
   try {
+    console.log(`🔧 Fixing conflicts in ${filePath}...`);
+    
+    if (!fs.existsSync(filePath)) {
+      console.log(`⚠️ File ${filePath} does not exist, skipping...`);
+      return false;
+    }
+    
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n/g, '');
-    content = content.replace(/=======\n/g, '');
-    content = content.replace(/>>>>>>> [^\n]+\n/g, '');
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    // Remove all merge conflict markers and keep the most recent version
+    // This is a simple approach - keep everything after the last =======
+    const lines = content.split('\n');
+    const cleanedLines = [];
+    let inConflict = false;
+    let keepLines = false;
     
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< [^\n]+\n[^>]*>>>>>>> [^\n]+/g, '');
-    content = content.replace(/<<<<<<< [^\n]+/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.includes('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepLines = false;
+        continue;
+      }
+      
+      if (line.includes('=======')) {
+        keepLines = true;
+        continue;
+      }
+      
+      if (line.includes('>>>>>>>')) {
+        inConflict = false;
+        keepLines = false;
+        continue;
+      }
+      
+      if (!inConflict || keepLines) {
+        cleanedLines.push(line);
+      }
+    }
     
-    // Clean up extra whitespace
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    content = content.replace(/^\s*\n/gm, '');
+    // If we have cleaned content, write it back
+    if (cleanedLines.length > 0) {
+      const cleanedContent = cleanedLines.join('\n');
+      fs.writeFileSync(filePath, cleanedContent);
+      console.log(`✅ Fixed conflicts in ${filePath}`);
+      return true;
+    } else {
+      console.log(`⚠️ No content to keep in ${filePath}`);
+      return false;
+    }
     
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.log(`❌ Error fixing ${filePath}: ${error.message}`);
     return false;
   }
 }
 
-// Find all TypeScript/TSX files
-const srcDir = './src';
-const files = [];
-
-function findFiles(dir) {
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      findFiles(fullPath);
-    } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-      files.push(fullPath);
-    }
-  }
-}
-
-findFiles(srcDir);
-
-console.log(`Found ${files.length} TypeScript files to check...`);
-
-let fixedCount = 0;
-for (const file of files) {
-  const content = fs.readFileSync(file, 'utf8');
-  if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+function main() {
+  let fixedCount = 0;
+  
+  for (const file of conflictedFiles) {
     if (fixMergeConflicts(file)) {
       fixedCount++;
     }
   }
+  
+  console.log(`\n📊 Summary: Fixed conflicts in ${fixedCount}/${conflictedFiles.length} files`);
+  
+  if (fixedCount === conflictedFiles.length) {
+    console.log('🎉 All merge conflicts resolved!');
+  } else {
+    console.log('⚠️ Some files could not be fixed automatically');
+  }
 }
 
-console.log(`Fixed ${fixedCount} files with merge conflicts.`);
+main();

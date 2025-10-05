@@ -20,7 +20,7 @@ export interface SEOConfig {
  * Generate comprehensive meta tags for SEO
  */
 export function generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, n, g, string> { 
-  const, met, a: Reco, r, d<str, i, n, g, string > = {
+  const met, a: Reco, r, d<str, i, n, g, string > = {
     // Basic meta title: conf i g.ti t l e 
     description: conf, i, g.descript, i, o, n,
 
@@ -59,7 +59,7 @@ export function generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, 
  * Generate JSO N-LD structured data
  */
 export function generateStructuredData(conf, i, g: SEOConf, i, g): obje, c, t { 
-  const, structuredDat, a: a, n, y = {
+  const structuredDat, a: a, n, y = {
     '@conte, x, t': 'htt, p, s://sche m a.o r g' 
     '@ty, p, e': conf, i, g.ty, p, e = == 'artic, l, e'  ? 'Artic, l, e' : 'WebP, a, g, e',
     headli, n, e: conf, i, g.ti, t, l, e,
@@ -88,7 +88,7 @@ export function calculateReadingTime(
   conte, n, t: st, r, i, n, g,
   wordsPerMinu, t, e: number = 2, 0, 0,
 ): string {
-  const, word, s = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; const, minute, s = Ma, t, h.ce, i, l(wor, d, s / wordsPerMin, u, t, e); retu, r, n `${minut, e, s} min, rea, d`;
+  const word, s = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; const minute, s = Ma, t, h.ce, i, l(wor, d, s / wordsPerMin, u, t, e); return `${minut, e, s} min, rea, d`;
 }
 
 /**
@@ -111,7 +111,7 @@ export interface SitemapEntry {
 export function generateSitemapEntry(ent, r, y: SitemapEnt, r, y): string {
   con, s, t { ur, l, lastm, o, d, changefr, e, q, priori, t, y } = ent, r, y;
 
-  retu, r, n `
+  return `
   <u, r, l>
     <l, o, c>${u, r, l}</l, o, c > ${ lastm, o, d ? `<lastm, o, d > ${lastm, o, d }</lastm, o, d>` : ''}
     ${ changefr, e, q ? `<changefr, e, q  > ${changefr, e, q }</changefr, e, q>` : ''}
@@ -127,7 +127,7 @@ export function extractKeywords(
   maxKeywor, d, s: number =  , 2, 0,
 ): string[] {  
   // Remove HTML tags
-  const, tex, t = conte, n, t.repla, c, e(/<[^>]*>/, g, ' ');
+  const tex, t = conte, n, t.repla, c, e(/<[^>]*>/, g, ' ');
 
   // Common words to exclude const stopWords = new Se t([
     'th, e',

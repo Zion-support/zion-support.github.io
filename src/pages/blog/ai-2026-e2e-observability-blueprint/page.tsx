@@ -1,8 +1,8 @@
 // @ts-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export, default, function AIE2EObservabilityBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
+export default function AIE2EObservabilityBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>AI, 202, 6: E2E, Observability, Blueprint — From, Token, to K, P, I</title>
@@ -14,14 +14,14 @@ export, default, function AIE2EObservabilityBlueprint20, 2, 6(): Rea, c, t.J, S,
         />
       </Helm, e, t>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           AI, 202, 6: E2E, Observability, Blueprint
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Trac, e, s • Budge, t, s • SL, I, s • Rollback, hook, s
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
             Connect, every, prom, p, t, tool, cal, l, and, model, decision to, business, outcomes. This, blueprint, covers trace, desig, n, budget, instrumentatio, n, K, P, I‑linked, SLI, s, and, rollback, signals that, keep, systems reliable, and, cost‑efficie, n, t.
           </p>
@@ -29,7 +29,7 @@ export, default, function AIE2EObservabilityBlueprint20, 2, 6(): Rea, c, t.J, S,
             We, include, reference SL, O, s, sampling, strategie, s, and, dashboards, that
             highlight, regressions, before they, impact, users.
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </d, i, v > );
  }

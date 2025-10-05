@@ -1,6 +1,43 @@
 import '@testing-library/jest-dom';
+import React from 'react';
 
-// Mock window.matchMedia
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+if (typeof global.TextEncoder === 'undefined') {
+  const { TextEncoder, TextDecoder } = require('util');
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
+}
+
+// Mock import.meta.env for Jest
+Object.defineProperty(global, 'import', {
+  value: {
+    meta: {
+      env: {
+        DEV: true,
+        PROD: false,
+        MODE: 'test',
+      },
+    },
+  },
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof IntersectionObserver;
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof ResizeObserver;
+
+// Mock matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -39,17 +76,26 @@ jest.mock('react-helmet-async', () => ({
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
-// Mock react-router-dom
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => jest.fn(),
-  useLocation: () => ({ pathname: '/' }),
-}));
+// Mock fetch
+global.fetch = jest.fn();
+
+// Mock console methods to reduce noise in tests
+global.console = {
+  ...console,
+  log: jest.fn(),
+  debug: jest.fn(),
+  info: jest.fn(),
+  warn: jest.fn(),
+  error: jest.fn(),
+};
 
 // Mock lucide-react icons
-const mockIcon = (name: string) => `[${name}]`;
-
 jest.mock('lucide-react', () => {
+  const mockIcon = (testId: string) => {
+    const { createElement } = require('react');
+    return createElement('div', { 'data-testid': testId });
+  };
+
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),

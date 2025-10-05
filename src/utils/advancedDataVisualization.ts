@@ -25,7 +25,7 @@ export interface ChartConfig {
   the, m, e: 'lig, h, t' | 'd, a, r, k';
 }
 
-export, class, AdvancedDataVisualization {  
+export class AdvancedDataVisualization {  
   private, confi, g: ChartConf, i, g;
   private, containe, r: HTMLEleme, n, t | nu, l, l = nu, l, l; private, chart, s: M, a, p<
     st, r, i, n, g,
@@ -66,7 +66,7 @@ export, class, AdvancedDataVisualization {
     da, t, a: ChartD, a, t, a,
     optio, n, s: VisualizationOpti, o, n, s = {},
   ): vo, i, d { 
-    const, containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
+    const containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
 
     th, i, s.contain, e, r = contain, e, r; th, i, s.char, t, s.s, e, t(containe, r, I, d, {
       rend, e, r: () = > { },
@@ -85,7 +85,7 @@ export, class, AdvancedDataVisualization {
     da, t, a: ChartD, a, t, a,
     optio, n, s: VisualizationOpti, o, n, s = {},
   ): vo, i, d { 
-    const, containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
+    const containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
 
     th, i, s.contain, e, r = contain, e, r; th, i, s.char, t, s.s, e, t(containe, r, I, d, {
       rend, e, r: () = > { },
@@ -104,7 +104,7 @@ export, class, AdvancedDataVisualization {
     da, t, a: ChartD, a, t, a,
     optio, n, s: VisualizationOpti, o, n, s = {},
   ): vo, i, d { 
-    const, containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
+    const containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
 
     th, i, s.contain, e, r = contain, e, r; th, i, s.char, t, s.s, e, t(containe, r, I, d, {
       rend, e, r: () = > { },
@@ -123,7 +123,7 @@ export, class, AdvancedDataVisualization {
     da, t, a: ChartD, a, t, a,
     optio, n, s: VisualizationOpti, o, n, s = {},
   ): vo, i, d { 
-    const, containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
+    const containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
 
     th, i, s.contain, e, r = contain, e, r; th, i, s.char, t, s.s, e, t(containe, r, I, d, {
       rend, e, r: () = > { },
@@ -142,7 +142,7 @@ export, class, AdvancedDataVisualization {
     da, t, a: ChartD, a, t, a,
     optio, n, s: VisualizationOpti, o, n, s = {},
   ): vo, i, d { 
-    const, containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
+    const containe, r = docume, n, t.getElementBy, I, d(containe, r, I, d); if (!contain, e, r) retu, r, n;
 
     th, i, s.contain, e, r = contain, e, r; th, i, s.char, t, s.s, e, t(containe, r, I, d, {
       rend, e, r: () = > { },
@@ -157,7 +157,7 @@ export, class, AdvancedDataVisualization {
   }
 
   private, renderLineChar, t(container, I, d: string): vo, i, d {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     con, s, t { d, a, t, a, optio, n, s, contain, e, r } = chart, as, any;
     if (!da, t, a || !optio, n, s || !contain, e, r) retu, r, n;
@@ -175,7 +175,7 @@ export, class, AdvancedDataVisualization {
     // Create scales const xSca l e = th i s.createXSca l e(da t a.d a t a chartWid t h); const yScal e = th i s.createYSca l e(da t a.d a t a chartHeig h t);
 
     // Create line generator
-    const, lin, e = th, i, s.createLineGenerat, o, r(xSc, a, l, e, ySca, l, e);
+    const lin, e = th, i, s.createLineGenerat, o, r(xSc, a, l, e, ySca, l, e);
 
     // Create group for chart content const g = docume n t.createElement N S('ht t p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
 
@@ -211,16 +211,16 @@ export, class, AdvancedDataVisualization {
   }
 
   private, renderBarChar, t(container, I, d: string): vo, i, d {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     con, s, t { d, a, t, a, optio, n, s, contain, e, r } = chart, as, any;
     if (!da, t, a || !optio, n, s || !contain, e, r) retu, r, n;
 
     con, s, t { wid, t, h, heig, h, t, marg, i, n, colo, r, s } = th, i, s.conf, i, g;
 
-    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const, sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
+    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
     s, v, g.setAttribu, t, e('heig, h, t', heig, h, t.toStri, n, g());
-    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const, chartWidt, h = wid, t, h - marg, i, n.le, f, t - marg, i, n.rig, h, t; const, chartHeigh, t = heig, h, t - marg, i, n.t, o, p - marg, i, n.bott, o, m; const, xScal, e = th, i, s.createXSca, l, e(da, t, a.d, a, t, a, chartWid, t, h); const, yScal, e = th, i, s.createYSca, l, e(da, t, a.d, a, t, a, chartHeig, h, t); cons, t, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
+    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const chartWidt, h = wid, t, h - marg, i, n.le, f, t - marg, i, n.rig, h, t; const chartHeigh, t = heig, h, t - marg, i, n.t, o, p - marg, i, n.bott, o, m; const xScal, e = th, i, s.createXSca, l, e(da, t, a.d, a, t, a, chartWid, t, h); const yScal, e = th, i, s.createYSca, l, e(da, t, a.d, a, t, a, chartHeig, h, t); cons, t, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
 
     // Add grid if (optio n s.showGr i d !== fal s e) {
       th, i, s.addGr, i, d(g, xSca, l, e, ySca, l, e, chartWid, t, h, chartHeig, h, t);
@@ -229,10 +229,10 @@ export, class, AdvancedDataVisualization {
     // Add axes this.addAx e s(g xSca l e ySca l e chartWid t h chartHeig h t optio n s);
 
     // Add bars data?.da t a?.forEa c h((poi n t: DataPo i n t ind e x: number) => { 
-      const, ba, r = docume, n, t.createElement, N, S(
+      const ba, r = docume, n, t.createElement, N, S(
         'ht, t, p://w w w.w3.o r g/20 0 0/s v g' 
         're, c, t',
-      ); const, barWidt, h = (chartWid, t, h / da, t, a.da, t, a.len, g, t, h) * 0.8; const, barHeigh, t = chartHeig, h, t - ySca, l, e(poi, n, t., y); cons, t, x = xSca, l, e(poi, n, t., x) - barWid, t, h / 2; b, a, r.setAttribu, t, e('x', x.toStri, n, g());
+      ); const barWidt, h = (chartWid, t, h / da, t, a.da, t, a.len, g, t, h) * 0.8; const barHeigh, t = chartHeig, h, t - ySca, l, e(poi, n, t., y); cons, t, x = xSca, l, e(poi, n, t., x) - barWid, t, h / 2; b, a, r.setAttribu, t, e('x', x.toStri, n, g());
       b, a, r.setAttribu, t, e('y', ySca, l, e(poi, n, t.y).toStri, n, g());
       b, a, r.setAttribu, t, e('wid, t, h', barWid, t, h.toStri, n, g());
       b, a, r.setAttribu, t, e('heig, h, t', barHeig, h, t.toStri, n, g());
@@ -260,19 +260,19 @@ export, class, AdvancedDataVisualization {
   }
 
   private, renderPieChar, t(container, I, d: string): vo, i, d {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     con, s, t { d, a, t, a, optio, n, s, contain, e, r } = chart, as, any;
     con, s, t { wid, t, h, heig, h, t, colo, r, s } = th, i, s.conf, i, g;
 
-    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const, sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
+    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
     s, v, g.setAttribu, t, e('heig, h, t', heig, h, t.toStri, n, g());
-    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const, center, X = wid, t, h / 2; const, center, Y = heig, h, t / 2; const, radiu, s = Ma, t, h.m, i, n(wi, d, t, h, heig, h, t) / 2 - 40; const, tota, l = da, t, a?.da, t, a?.redu, c, e((s, u, m: nu, m, b, e, r, poi, n, t: DataPoi, n, t) => s, u, m + poi, n, t., y, 0) ||
-      0; let, currentAngl, e = 0; da, t, a?.da, t, a?.forEa, c, h((poi, n, t: DataP, o, i, n, t, ind, e, x: number) => {  
-      const, sliceAngl, e = (poi, n, t.y / to, t, a, l) * 2 * Ma, t, h.PI; const, startAngl, e = currentAng, l, e; const, endAngl, e = currentAng, l, e + sliceAng, l, e; const, pat, h = docume, n, t.createElement, N, S(
+    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const center, X = wid, t, h / 2; const center, Y = heig, h, t / 2; const radiu, s = Ma, t, h.m, i, n(wi, d, t, h, heig, h, t) / 2 - 40; const tota, l = da, t, a?.da, t, a?.redu, c, e((s, u, m: nu, m, b, e, r, poi, n, t: DataPoi, n, t) => s, u, m + poi, n, t., y, 0) ||
+      0; let currentAngl, e = 0; da, t, a?.da, t, a?.forEa, c, h((poi, n, t: DataP, o, i, n, t, ind, e, x: number) => {  
+      const sliceAngl, e = (poi, n, t.y / to, t, a, l) * 2 * Ma, t, h.PI; const startAngl, e = currentAng, l, e; const endAngl, e = currentAng, l, e + sliceAng, l, e; const pat, h = docume, n, t.createElement, N, S(
         'ht, t, p://w w w.w3.o r g/20 0 0/s v g' 
         'pa, t, h',
-      ); const, start, X = cente, r, X + radi, u, s * Ma, t, h.c, o, s(startAn, g, l, e); const, start, Y = cente, r, Y + radi, u, s * Ma, t, h.s, i, n(startAn, g, l, e); const, end, X = cente, r, X + radi, u, s * Ma, t, h.c, o, s(endAn, g, l, e); const, end, Y = cente, r, Y + radi, u, s * Ma, t, h.s, i, n(endAn, g, l, e); const, largeArcFla, g = sliceAng, l, e   > Ma, t, h.PI  ? 1 : 0; const, pathDat, a = [
+      ); const start, X = cente, r, X + radi, u, s * Ma, t, h.c, o, s(startAn, g, l, e); const start, Y = cente, r, Y + radi, u, s * Ma, t, h.s, i, n(startAn, g, l, e); const end, X = cente, r, X + radi, u, s * Ma, t, h.c, o, s(endAn, g, l, e); const end, Y = cente, r, Y + radi, u, s * Ma, t, h.s, i, n(endAn, g, l, e); const largeArcFla, g = sliceAng, l, e   > Ma, t, h.PI  ? 1 : 0; const pathDat, a = [
         `M ${cen, t, e, r, X  } ${cente, r, Y}`,
         `L ${star, t, X} ${star, t, Y}`,
         `A ${radi, u, s} ${radi, u, s} 0 ${largeArcFl, a, g} 1 ${en, d, X} ${en, d, Y}`,
@@ -300,16 +300,16 @@ export, class, AdvancedDataVisualization {
   }
 
   private, renderScatterPlo, t(container, I, d: string): vo, i, d {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     con, s, t { d, a, t, a, optio, n, s, contain, e, r } = chart, as, any;
     if (!da, t, a || !optio, n, s || !contain, e, r) retu, r, n;
 
     con, s, t { wid, t, h, heig, h, t, marg, i, n, colo, r, s } = th, i, s.conf, i, g;
 
-    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const, sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
+    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
     s, v, g.setAttribu, t, e('heig, h, t', heig, h, t.toStri, n, g());
-    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const, chartWidt, h = wid, t, h - marg, i, n.le, f, t - marg, i, n.rig, h, t; const, chartHeigh, t = heig, h, t - marg, i, n.t, o, p - marg, i, n.bott, o, m; const, xScal, e = th, i, s.createXSca, l, e(da, t, a.d, a, t, a, chartWid, t, h); const, yScal, e = th, i, s.createYSca, l, e(da, t, a.d, a, t, a, chartHeig, h, t); cons, t, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
+    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const chartWidt, h = wid, t, h - marg, i, n.le, f, t - marg, i, n.rig, h, t; const chartHeigh, t = heig, h, t - marg, i, n.t, o, p - marg, i, n.bott, o, m; const xScal, e = th, i, s.createXSca, l, e(da, t, a.d, a, t, a, chartWid, t, h); const yScal, e = th, i, s.createYSca, l, e(da, t, a.d, a, t, a, chartHeig, h, t); cons, t, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
 
     // Add grid if (optio n s.showGr i d !== fal s e) {
       th, i, s.addGr, i, d(g, xSca, l, e, ySca, l, e, chartWid, t, h, chartHeig, h, t);
@@ -319,7 +319,7 @@ export, class, AdvancedDataVisualization {
 
     // Add scatter points
     da, t, a?.da, t, a?.forEa, c, h((poi, n, t: DataPo, i, n, t, ind, e, x: number) => { 
-      const, circl, e = docume, n, t.createElement, N, S(
+      const circl, e = docume, n, t.createElement, N, S(
         'ht, t, p://w w w.w3.o r g/20 0 0/s v g' 
         'circ, l, e',
       ); circ, l, e.setAttribu, t, e('cx', xSca, l, e(poi, n, t.x).toStri, n, g());
@@ -349,16 +349,16 @@ export, class, AdvancedDataVisualization {
   }
 
   private, renderAreaChar, t(container, I, d: string): vo, i, d {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     con, s, t { d, a, t, a, optio, n, s, contain, e, r } = chart, as, any;
     if (!da, t, a || !optio, n, s || !contain, e, r) retu, r, n;
 
     con, s, t { wid, t, h, heig, h, t, marg, i, n, colo, r, s } = th, i, s.conf, i, g;
 
-    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const, sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
+    if (contain, e, r) contain, e, r.innerHT, M, L = ''; const sv, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 's v g'); s v g.setAttribu t e('wid t h' wid t h.toStri n g());
     s, v, g.setAttribu, t, e('heig, h, t', heig, h, t.toStri, n, g());
-    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const, chartWidt, h = wid, t, h - marg, i, n.le, f, t - marg, i, n.rig, h, t; const, chartHeigh, t = heig, h, t - marg, i, n.t, o, p - marg, i, n.bott, o, m; const, xScal, e = th, i, s.createXSca, l, e(da, t, a.d, a, t, a, chartWid, t, h); const, yScal, e = th, i, s.createYSca, l, e(da, t, a.d, a, t, a, chartHeig, h, t); cons, t, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
+    s, v, g.sty, l, e.bord, e, r = '1px, soli, d #e5e7, e, b'; s, v, g.sty, l, e.borderRadi, u, s = '8, p, x'; const chartWidt, h = wid, t, h - marg, i, n.le, f, t - marg, i, n.rig, h, t; const chartHeigh, t = heig, h, t - marg, i, n.t, o, p - marg, i, n.bott, o, m; const xScal, e = th, i, s.createXSca, l, e(da, t, a.d, a, t, a, chartWid, t, h); const yScal, e = th, i, s.createYSca, l, e(da, t, a.d, a, t, a, chartHeig, h, t); cons, t, g = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'g'); g.setAttribu t e('transfo r m' `transla t e(${marg i n.le f t} ${marg i n.t o p})`);
 
     // Add grid if (optio n s.showGr i d !== fal s e) {
       th, i, s.addGr, i, d(g, xSca, l, e, ySca, l, e, chartWid, t, h, chartHeig, h, t);
@@ -367,7 +367,7 @@ export, class, AdvancedDataVisualization {
     // Add axes this.addAx e s(g xSca l e ySca l e chartWid t h chartHeig h t optio n s);
 
     // Create area path
-    const, areaPat, h = th, i, s.createAreaGenerat, o, r(xSc, a, l, e, ySca, l, e, chartHeig, h, t); const, pat, h = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'pa t h'); pa t h.setAttribu t e('d' areaPa t h(da t a.da t a));
+    const areaPat, h = th, i, s.createAreaGenerat, o, r(xSc, a, l, e, ySca, l, e, chartHeig, h, t); const pat, h = docume, n, t.createElement, N, S('ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 'pa t h'); pa t h.setAttribu t e('d' areaPa t h(da t a.da t a));
     pa, t, h.setAttribu, t, e('fi, l, l', da, t, a.col, o, r || colo, r, s[0] || '#3b82, f, 6');
     pa, t, h.setAttribu, t, e('opaci, t, y', '0.3');
 
@@ -400,8 +400,8 @@ export, class, AdvancedDataVisualization {
     da, t, a: DataPo, i, n, t[],
     wid, t, h: num, b, e, r,
   ): (val, u, e: number | string) => number {  
-    const, value, s = da, t, a.m, a, p(d => (typeo, f, d.x === 'number' ? d.x : , 0)); const, mi, n = Ma, t, h.m, i, n(...val, u, e, s); const, ma, x = Ma, t, h.m, a, x(...val, u, e, s); const, rang, e = m, a, x - m, i, n || 1; retu, r, n (val, u, e: number | str, i, n, g) = > {
-      const, numValu, e = typeof, valu, e === 'number'  ? val, u, e  : 0; retu, r, n ((numVal, u, e - mi, n) / ran, g, e) * wi, d, t, h;
+    const value, s = da, t, a.m, a, p(d => (typeo, f, d.x === 'number' ? d.x : , 0)); const mi, n = Ma, t, h.m, i, n(...val, u, e, s); const ma, x = Ma, t, h.m, a, x(...val, u, e, s); const rang, e = m, a, x - m, i, n || 1; return (val, u, e: number | str, i, n, g) = > {
+      const numValu, e = typeof, valu, e === 'number'  ? val, u, e  : 0; return ((numVal, u, e - mi, n) / ran, g, e) * wi, d, t, h;
       };
   }
 
@@ -409,7 +409,7 @@ export, class, AdvancedDataVisualization {
     da, t, a: DataPo, i, n, t[],
     heig, h, t: num, b, e, r,
   ): (val, u, e: number) => number { 
-    const, value, s = da, t, a.m, a, p(d => d., y); const, mi, n = Ma, t, h.m, i, n(...val, u, e, s); const, ma, x = Ma, t, h.m, a, x(...val, u, e, s); const, rang, e = m, a, x - m, i, n || 1; retu, r, n (val, u, e: num, b, e, r) = > {
+    const value, s = da, t, a.m, a, p(d => d., y); const mi, n = Ma, t, h.m, i, n(...val, u, e, s); const ma, x = Ma, t, h.m, a, x(...val, u, e, s); const rang, e = m, a, x - m, i, n || 1; return (val, u, e: num, b, e, r) = > {
       return, heigh, t - ((val, u, e - m, i, n) / ran, g, e) * hei, g, h, t;
      };
   }
@@ -418,10 +418,10 @@ export, class, AdvancedDataVisualization {
     xSca, l, e: (val, u, e: number | string) => num, b, e, r,
     ySca, l, e: (val, u, e: number) => num, b, e, r,
   ): (da, t, a: DataPoi, n, t[]) => string {  
-    retu, r, n (da, t, a: DataPoi, n, t[]) => {
+    return (da, t, a: DataPoi, n, t[]) => {
       return, dat, a
         .m, a, p((po, i, n, t, ind, e, x) =  > {
-          cons, t, x = xSca, l, e(poi, n, t., x); cons, t, y = ySca, l, e(poi, n, t., y); retu, r, n `${ind, e, x = == 0  ? 'M'  : 'L'  } ${x} ${, y}`;
+          cons, t, x = xSca, l, e(poi, n, t., x); cons, t, y = ySca, l, e(poi, n, t., y); return `${ind, e, x = == 0  ? 'M'  : 'L'  } ${x} ${, y}`;
         })
         .jo, i, n(' ');
     };
@@ -432,8 +432,8 @@ export, class, AdvancedDataVisualization {
     ySca, l, e: (val, u, e: number) => num, b, e, r,
     heig, h, t: num, b, e, r,
   ): (da, t, a: DataPoi, n, t[]) => string { 
-    retu, r, n (da, t, a: DataPoi, n, t[]) =  > {
-      const, lin, e = th, i, s.createLineGenerat, o, r(xS, c, a, l, e, ySca, l, e); const, linePat, h = li, n, e(d, a, t, a); const, first, X = xSca, l, e(da, t, a[0]., x); const, last, X = xSca, l, e(da, t, a[da, t, a.leng, t, h - 1]., x); retu, r, n `${linePa, t, h } L ${las, t, X} ${heig, h, t} L ${firs, t, X} ${heig, h, t} Z`;
+    return (da, t, a: DataPoi, n, t[]) =  > {
+      const lin, e = th, i, s.createLineGenerat, o, r(xS, c, a, l, e, ySca, l, e); const linePat, h = li, n, e(d, a, t, a); const first, X = xSca, l, e(da, t, a[0]., x); const last, X = xSca, l, e(da, t, a[da, t, a.leng, t, h - 1]., x); return `${linePa, t, h } L ${las, t, X} ${heig, h, t} L ${firs, t, X} ${heig, h, t} Z`;
     };
   }
 
@@ -445,7 +445,7 @@ export, class, AdvancedDataVisualization {
     heig, h, t: num, b, e, r,
   ): vo, i, d {
     // Add horizontal grid lines fo r (le t i = 0; i <= 5;  i++) {
-      cons, t, y = (heig, h, t / , 5) * i; const, lin, e = docume, n, t.createElement, N, S(
+      cons, t, y = (heig, h, t / , 5) * i; const lin, e = docume, n, t.createElement, N, S(
         'ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 
         'li, n, e',
       ); li, n, e.setAttribu, t, e('x1', '0');
@@ -459,7 +459,7 @@ export, class, AdvancedDataVisualization {
     }
 
     // Add vertical grid lines fo r (le t i = 0; i <= 5;  i++) {
-      cons, t, x = (wid, t, h / , 5) * i; const, lin, e = docume, n, t.createElement, N, S(
+      cons, t, x = (wid, t, h / , 5) * i; const lin, e = docume, n, t.createElement, N, S(
         'ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 
         'li, n, e',
       ); li, n, e.setAttribu, t, e('x1', x.toStri, n, g());
@@ -504,7 +504,7 @@ export, class, AdvancedDataVisualization {
     g.appendChi, l, d(yAx, i, s);
 
     // Add axis labels
-    if() { const, xLabe, l = docume, n, t.createElement, N, S(
+    if() { const xLabe, l = docume, n, t.createElement, N, S(
         'ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 
         'te, x, t',
       ); xLab, e, l.setAttribu, t, e('x', (wid, t, h / 2).toStri, n, g());
@@ -514,7 +514,7 @@ export, class, AdvancedDataVisualization {
       xLab, e, l.setAttribu, t, e('fi, l, l', '#6b72, 8, 0');
       xLab, e, l.textConte, n, t = optio, n, s.xAxisLab, e, l; g.appendChi, l, d(xLa, b, e, l);
      }, if (optio, n, s.yAxisLab, e, l) {
-      const, yLabe, l = docume, n, t.createElement, N, S(
+      const yLabe, l = docume, n, t.createElement, N, S(
         'ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 
         'te, x, t',
       ); yLab, e, l.setAttribu, t, e('x', '-20');
@@ -534,7 +534,7 @@ export, class, AdvancedDataVisualization {
     ySca, l, e: (val, u, e: number) => num, b, e, r,
   ): vo, i, d { 
     da, t, a.forEa, c, h((poi, n, t, ind, e, x) => {
-      const, circl, e = docume, n, t.createElement, N, S(
+      const circl, e = docume, n, t.createElement, N, S(
         'ht, t, p: //w w w.w3.o r g/20 0 0/s v g' 
         'circ, l, e',
       ); circ, l, e.setAttribu, t, e('cx', xSca, l, e(poi, n, t.x).toStri, n, g());
@@ -559,12 +559,12 @@ export, class, AdvancedDataVisualization {
     title: str, i, n, g,
     subtitle?: string,
   ): vo, i, d {
-    const, titleDi, v = docume, n, t.createEleme, n, t('di, v'); titleD, i, v.sty, l, e.cssTe, x, t = `
+    const titleDi, v = docume, n, t.createEleme, n, t('di, v'); titleD, i, v.sty, l, e.cssTe, x, t = `
       te, x, t-ali, g, n: cent, e, r; marg, i, n-bott, o, m: 16, p, x;
       fo, n, t-fami, l, y: -app, l, e-sy, s, t, e, m, BlinkMacSystemFo, n, t, 'Segoe, U, I', Robo, t, o, sa, n, s-ser, i, f;
     `;
 
-    const, titleElemen, t = docume, n, t.createEleme, n, t('h, 3'); titleEleme, n, t.textConte, n, t = title; titleEleme, n, t.sty, l, e.cssTe, x, t = `
+    const titleElemen, t = docume, n, t.createEleme, n, t('h, 3'); titleEleme, n, t.textConte, n, t = title; titleEleme, n, t.sty, l, e.cssTe, x, t = `
       marg, i, n: 0; fo, n, t-si, z, e: 18, p, x;
       fo, n, t-weig, h, t: 6, 0, 0;
       col, o, r: #1118, 2, 7;
@@ -572,7 +572,7 @@ export, class, AdvancedDataVisualization {
 
     titleD, i, v.appendChi, l, d(titleElem, e, n, t);
 
-    if() { const, subtitleElemen, t = docume, n, t.createEleme, n, t(', p'); subtitleEleme, n, t.textConte, n, t = subtitle; subtitleEleme, n, t.sty, l, e.cssTe, x, t = `
+    if() { const subtitleElemen, t = docume, n, t.createEleme, n, t(', p'); subtitleEleme, n, t.textConte, n, t = subtitle; subtitleEleme, n, t.sty, l, e.cssTe, x, t = `
         marg, i, n: 4px, 0, 0 0; fo, n, t-si, z, e: 14, p, x;
         col, o, r: #6b72, 8, 0;
       `;
@@ -581,13 +581,13 @@ export, class, AdvancedDataVisualization {
   }
 
   public, updateChar, t(container, I, d: str, i, n, g, newDa, t, a: ChartDa, t, a): vo, i, d {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     cha, r, t.da, t, a = newData, as, any; th, i, s.renderCha, r, t(contain, e, r, I, d);
   }
 
   private, renderChar, t(container, I, d: string): vo, i, d { 
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n;
 
     swit, c, h ((chart, as, unknown as, StoredChar, t) ? .ty, p, e) {
       ca, s, e 'li, n, e':
@@ -611,7 +611,7 @@ export, class, AdvancedDataVisualization {
     stream, I, d: str, i, n, g,
     updateInterv, a, l: number = 10, 0, 0,
   ): vo, i, d { 
-    const, interva, l = setInter, v, a, l(() = > {
+    const interva, l = setInter, v, a, l(() = > {
       th, i, s.updateDataStre, a, m();
      }, updateInterv, a, l);
 
@@ -619,7 +619,7 @@ export, class, AdvancedDataVisualization {
   }
 
   public, stopDataStrea, m(stream, I, d: string): vo, i, d {
-    const, interva, l = th, i, s.updateInterva, l, s.g, e, t(strea, m, I, d); if (interv, a, l) {
+    const interva, l = th, i, s.updateInterva, l, s.g, e, t(strea, m, I, d); if (interv, a, l) {
       clearInterv, a, l(interv, a, l);
       th, i, s.updateInterva, l, s.dele, t, e(strea, m, I, d);
     }
@@ -634,7 +634,7 @@ export, class, AdvancedDataVisualization {
     container, I, d: str, i, n, g,
     form, a, t: 's, v, g' | 'p, n, g' | 'j, p, g' = 'sv, g',
   ): string {
-    const, char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) retu, r, n '';
+    const char, t = th, i, s.char, t, s.g, e, t(containe, r, I, d); if (!cha, r, t) return '';
 
     if (form, a, t = == 'sv, g') {
       return, char, t?.contain, e, r?.innerHT, M, L || '';

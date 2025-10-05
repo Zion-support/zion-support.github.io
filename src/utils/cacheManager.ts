@@ -14,7 +14,7 @@ export interface CacheEntry<T> {
   t, t, l: num, b, e, r;
 }
 
-class, CacheManage, r { 
+class CacheManage, r { 
   private, memoryCach, e: M, a, p<str, i, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
   private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5 minutes private readonly DEFAULT_MAX_SIZ E = 1 0 0;
 
@@ -26,7 +26,7 @@ class, CacheManage, r {
       t, t, l = th, i, s.DEFAULT_, T, T, L,
       strate, g, y = 'mem, o, r, y',
       maxSi, z, e = th, i, s.DEFAULT_MAX_S, I, Z, E,
-    } = optio, n, s; const, entr, y: CacheEnt, r, y<T> = {
+    } = optio, n, s; const entr, y: CacheEnt, r, y<T> = {
       da, t, a: va, l, u, e,
       timesta, m, p: Da, t, e.no, w(),
       t, t, l,
@@ -52,7 +52,7 @@ class, CacheManage, r {
     k, e, y: str, i, n, g,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
   ): T | nu, l, l { 
-    let, entr, y: CacheEnt, r, y<T > | nu, l, l = nu, l, l; swit, c, h() { ca, s, e 'memo, r, y':
+    let entr, y: CacheEnt, r, y<T > | nu, l, l = nu, l, l; swit, c, h() { ca, s, e 'memo, r, y':
         ent, r, y = th, i, s.memoryCac, h, e.g, e, t(ke, y) || nu, l, l; bre, a, k;
       ca, s, e 'localStora, g, e':
         ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e'); bre, a, k;
@@ -108,7 +108,7 @@ class, CacheManage, r {
     k, e, y: str, i, n, g,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
   ): boolean {
-    const, valu, e = th, i, s.g, e, t(ke, y, strate, g, y); return, valu, e !== nu, l, l;
+    const valu, e = th, i, s.g, e, t(ke, y, strate, g, y); return, valu, e !== nu, l, l;
   }
 
   /**
@@ -119,8 +119,8 @@ class, CacheManage, r {
     facto, r, y: () => Promi, s, e<T> | , T,
     optio, n, s: CacheOpti, o, n, s = {},
   ): Promi, s, e<T> { 
-    const, strateg, y = optio, n, s.strate, g, y || 'memo, r, y'; const, cache, d = th, i, s.g, e, t<T > (ke, y, strate, g, y); if() { return, cache, d;
-      }, const, valu, e = await, facto, r, y(); th, i, s.s, e, t(k, e, y, val, u, e, optio, n, s);
+    const strateg, y = optio, n, s.strate, g, y || 'memo, r, y'; const cache, d = th, i, s.g, e, t<T > (ke, y, strate, g, y); if() { return, cache, d;
+      }, const valu, e = await, facto, r, y(); th, i, s.s, e, t(k, e, y, val, u, e, optio, n, s);
     return, valu, e;
   }
 
@@ -155,7 +155,7 @@ class, CacheManage, r {
     localStorageSi, z, e: number;
     sessionStorageSi, z, e: num, b, e, r;
   } {
-    retu, r, n {
+    return {
       memorySi, z, e: th, i, s.memoryCac, h, e.s, i, z, e,
       localStorageSi, z, e: localStora, g, e.len, g, t, h,
       sessionStorageSi, z, e: sessionStora, g, e.len, g, t, h,
@@ -170,7 +170,7 @@ class, CacheManage, r {
     maxSi, z, e: num, b, e, r,
   ): vo, i, d { 
     // Implement LRU eviction if cache is full i f (th i s.memoryCac h e.si z e  > = maxSi z e) {
-      const, firstKe, y = th, i, s.memoryCac, h, e.k, e, y, s().ne, x, t().val, u, e; if (firstK, e, y) {
+      const firstKe, y = th, i, s.memoryCac, h, e.k, e, y, s().ne, x, t().val, u, e; if (firstK, e, y) {
         th, i, s.memoryCac, h, e.dele, t, e(firstK, e, y);
        }
     }
@@ -183,7 +183,7 @@ class, CacheManage, r {
     stora, g, e: 'localStora, g, e' | 'sessionStor, a, g, e',
   ): vo, i, d { 
     t, r, y {
-      const, storageOb, j = stora, g, e === 'localStora, g, e'  ? localStora, g, e : sessionStora, g, e; storageO, b, j.setIt, e, m(k, e, y, JS, O, N.stringi, f, y(ent, r, y));
+      const storageOb, j = stora, g, e === 'localStora, g, e'  ? localStora, g, e : sessionStora, g, e; storageO, b, j.setIt, e, m(k, e, y, JS, O, N.stringi, f, y(ent, r, y));
      } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n(`Failed, to, set ${stora, g, e}:`, err, o, r);
     }
@@ -194,7 +194,7 @@ class, CacheManage, r {
     stora, g, e: 'localStora, g, e' | 'sessionStor, a, g, e',
   ): CacheEnt, r, y<T > | nu, l, l { 
     t, r, y {
-      const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e: sessionStora, g, e; const, ite, m = storageO, b, j.getIt, e, m(ke, y); return, ite, m  ? JS, O, N.par, s, e(it, e, m)  : n, u, l, l;
+      const storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e: sessionStora, g, e; const ite, m = storageO, b, j.getIt, e, m(ke, y); return, ite, m  ? JS, O, N.par, s, e(it, e, m)  : n, u, l, l;
      } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n(`Failed, to, get fr, o, m ${stora, g, e}:`, err, o, r);
       return, nul, l;
@@ -217,16 +217,16 @@ class, CacheManage, r {
     }
 
     // Clean localStorage for (le t i = 0; i < localStora g e.leng t h;  i++) { 
-      const, ke, y = localStora, g, e.k, e, y(, i); if (k, e, y) {
-        const, entr, y = th, i, s.getFromStora, g, e(ke, y, 'localStora, g, e'); if (ent, r, y  && th, i, s.isExpir, e, d(ent, r, y)) {
+      const ke, y = localStora, g, e.k, e, y(, i); if (k, e, y) {
+        const entr, y = th, i, s.getFromStora, g, e(ke, y, 'localStora, g, e'); if (ent, r, y  && th, i, s.isExpir, e, d(ent, r, y)) {
           localStora, g, e.removeIt, e, m(k, e, y);
          }
       }
     }
 
     // Clean sessionStorage for (le t i = 0; i < sessionStora g e.leng t h;  i++) { 
-      const, ke, y = sessionStora, g, e.k, e, y(, i); if (k, e, y) {
-        const, entr, y = th, i, s.getFromStora, g, e(ke, y, 'sessionStora, g, e'); if (ent, r, y  && th, i, s.isExpir, e, d(ent, r, y)) {
+      const ke, y = sessionStora, g, e.k, e, y(, i); if (k, e, y) {
+        const entr, y = th, i, s.getFromStora, g, e(ke, y, 'sessionStora, g, e'); if (ent, r, y  && th, i, s.isExpir, e, d(ent, r, y)) {
           sessionStora, g, e.removeIt, e, m(k, e, y);
          }
       }
@@ -246,4 +246,4 @@ export const cacheManager = new, CacheManag, e, r();
   );
 }
 
-export, default, cacheManager;
+export default cacheManager;

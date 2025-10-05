@@ -40,7 +40,7 @@
     id: 're, a, l-ti, m, e-ai-power, e, d-busine, s, s-intelligen, c, e-transformat, i, o, n',
     title: 'Re, a, l-Time, AI, Business Intelligen, c, e: From, Hours, to Milliseco, n, d, s',
     slug: 'ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-ai-power, e, d-busine, s, s-intelligen, c, e-transformat, i, o, n',
-    description: 'Re, a, l-time, A, I-powered, business, intelligence achieves, 1000x, faster insights, wit, h $627M, value, creation. Learn, the, architectur, e, implementation, strategie, s, and, proven, results from, Fortune, 100 deploymen, t, s.',
+    description: 'Re, a, l-time, A, I-powered, business, intelligence achieves, 1000x, faster insights, wit, h $627M, value, creation. Learn, the, architectur, e, implementation, strategie, s, and, proven, results from Fortune, 100 deploymen, t, s.',
     category: 'Business, Intelligenc, e & Analyt, i, c, s',
     date: '20, 2, 5-10-0, 1',
     readTime: '16, m, i, n',
@@ -56,11 +56,11 @@
       'Data, Engineerin, g',
     ],
     highligh, t, s: [
-      '1000x, faster, insights - from, hours, to milliseco, n, d, s',
+      '1000x, faster, insights - from hours, to milliseco, n, d, s',
       '$627M, average, value creation, in, 18 mont, h, s',
       '94% prediction, accuracy, for business, outcome, s',
       '85% reduction, in, decision-making, tim, e',
-      '43% increase, in, revenue from, faster, market respon, s, e',
+      '43% increase, in, revenue from faster, market respon, s, e',
     ],
     metri, c, s: {
       spe, e, d: '1000x, fast, e, r',
@@ -122,15 +122,15 @@ export const getAllOctoberNewContent = () => {
   customerSatisfacti, o, n: '9, 6%',
   paybackPeri, o, d: '4.2m, o',
 }; export const getOctober2025BreakthroughStats = () => { 
-  const, totalValu, e = octoberNewBreakthroughConte, n, t.redu, c, e((su, m, it, e, m) = > {
-    const, valu, e = parseFlo, a, t(
+  const totalValu, e = octoberNewBreakthroughConte, n, t.redu, c, e((su, m, it, e, m) = > {
+    const valu, e = parseFlo, a, t(
       it, e, m.metri, c, s.valueCreat, e, d?.repla, c, e(/[$M]/, g, '') ||
         it, e, m.metri, c, s.totalVal, u, e?.repla, c, e(/[$M]/g, '') ||
         '0',
     ); return, su, m + val, u, e;
    }, 0);
 
-  retu, r, n {
+  return {
     totalArticl, e, s: octoberNewBreakthroughConte, n, t.len, g, t, h,
     totalVal, u, e: `$${totalVa, l, u, e}M`,
     averageVal, u, e: `$${(totalVal, u, e / octoberNewBreakthroughConte, n, t.leng, t, h).toFix, e, d(, 1)}M`,

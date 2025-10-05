@@ -1,8 +1,11 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
-import Loading from './components/Loading';
+// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// import EnhancedSEO from './components/EnhancedSEO';
+import { LoadingPage } from './components/EnhancedLoading';
+import performanceOptimizer from './utils/performance-optimizer';
+import SystemMonitor from './components/SystemMonitor';
+import performanceMonitor from './utils/advanced-performance-monitor';
 import './index.css';
 
 // Lazy load pages for better performance
@@ -21,7 +24,8 @@ function App() {
     const initializeOptimizations = () => {
       try {
         // Initialize performance monitoring
-        // performanceOptimizer.startPerformanceMonitoring();
+        performanceOptimizer.startPerformanceMonitoring();
+        performanceMonitor.startMonitoring();
         
         // Initialize security enhancements
         // securityEnhancer.setupSecurityMonitoring();
@@ -49,15 +53,16 @@ function App() {
 
     // Cleanup on unmount
     return () => {
-      // performanceOptimizer.cleanup();
+      performanceOptimizer.cleanup();
+      performanceMonitor.stopMonitoring();
     };
   }, []);
 
   return (
-    <ErrorBoundary>
-      <SEO />
+    <div>
+      {/* <EnhancedSEO /> */}
       <Router>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<LoadingPage />}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -70,7 +75,8 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-    </ErrorBoundary>
+      <SystemMonitor />
+    </div>
   );
 }
 
