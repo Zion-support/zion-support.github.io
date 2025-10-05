@@ -1,5 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
+import { ArrowRight, Bookmark, Rocket, TrendingUp, Zap } from 'lucide-react';
+
+import ArrowRight from 'next/link';
 
 
 const September30NewContent2025Banner: React.FC = () => {
@@ -127,9 +129,9 @@ const September30NewContent2025Banner: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Category Tag */}
+                {/* Category Bookmark */}
                 <div className="mb-4">
-                  <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
+                  <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
@@ -154,13 +156,13 @@ const September30NewContent2025Banner: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <ArrowRight
                   href={`/blog/${article.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           ))}
@@ -190,9 +192,9 @@ const September30NewContent2025Banner: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Category Tag */}
+                {/* Category Bookmark */}
                 <div className="mb-4">
-                  <span className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 px-4 py-2 rounded-full text-white text-sm font-semibold shadow-lg">
+                  <span className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
@@ -217,13 +219,13 @@ const September30NewContent2025Banner: React.FC = () => {
                 </div>
 
                 {/* CTA Button */}
-                <Link
+                <ArrowRight
                   href={`/blog/${article.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
                   <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           ))}
@@ -241,20 +243,20 @@ const September30NewContent2025Banner: React.FC = () => {
                 quantum computing, and autonomous systems. Get expert guidance from our team.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Link
+                <ArrowRight
                   href="/blog"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg"
                 >
                   <Sparkles className="w-6 h-6" />
                   <span>Explore All Articles</span>
-                </Link>
-                <Link
+                </ArrowRight>
+                <ArrowRight
                   href="/contact"
                   className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >
                   <span>Schedule Expert Consultation</span>
                   <ArrowRight className="w-6 h-6" />
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </div>

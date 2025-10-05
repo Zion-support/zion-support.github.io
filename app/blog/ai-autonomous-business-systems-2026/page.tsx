@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Autonomous Business Systems 2026: 95% Automation Achievement | Zion Tech Group',
@@ -24,9 +24,9 @@ export default function AIAutonomousBusinessSystems2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
         
         <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white p-6 rounded-lg mb-6">
           <span className="bg-yellow-400 text-black px-3 py-1 rounded-full text-sm font-bold mr-3">
@@ -211,26 +211,26 @@ export default function AIAutonomousBusinessSystems2026() {
             Ready to achieve autonomous business operations? Our team of AI specialists and business process experts 
             can help you implement autonomous systems tailored to your organization's specific needs.
           </p>
-          <Link 
+          <ArrowRight 
             href="/services/ai-autonomous-operations" 
             className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             Explore Autonomous Operations
-          </Link>
+          </ArrowRight>
         </div>
 
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Related Resources</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-enterprise-transformation-2027" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
+          <ArrowRight href="/blog/ai-enterprise-transformation-2027" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">AI Enterprise Transformation 2027</h3>
             <p className="text-gray-600">Next-generation enterprise AI strategies and implementations</p>
-          </Link>
+          </ArrowRight>
           
-          <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
+          <ArrowRight href="/case-studies/ai-autonomous-business-systems-success-2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Autonomous Systems Success Story</h3>
             <p className="text-gray-600">See how a Fortune 100 company achieved 95% automation</p>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

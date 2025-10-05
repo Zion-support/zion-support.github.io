@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2025-2026 Mega Trends Breakthrough: Revolutionary Enterprise Transformation',
@@ -189,32 +189,32 @@ export default function AIMegaTrends20252026() {
             Don't miss the AI revolution. Contact Zion Tech Group to implement these breakthrough technologies 
             and achieve unprecedented operational excellence.
           </p>
-          <Link 
+          <ArrowRight 
             href="/contact" 
             className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
           >
             Start Your Transformation
-          </Link>
+          </ArrowRight>
         </div>
       </div>
 
       <div className="mt-12 border-t pt-8">
         <h3 className="text-2xl font-bold mb-4">Related Content</h3>
         <div className="grid md:grid-cols-2 gap-4">
-          <Link 
+          <ArrowRight 
             href="/blog/ai-2026-quantum-enhanced-analytics" 
             className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-blue-600">Quantum Analytics 1000x Performance</h4>
             <p className="text-gray-600 text-sm">Discover how quantum computing revolutionizes data analytics</p>
-          </Link>
-          <Link 
+          </ArrowRight>
+          <ArrowRight 
             href="/case-studies/ai-2026-global-enterprise-transformation-success" 
             className="block p-4 border rounded-lg hover:shadow-md transition-shadow"
           >
             <h4 className="font-bold text-green-600">$500M Global Enterprise Success</h4>
             <p className="text-gray-600 text-sm">Real-world transformation case study with massive ROI</p>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

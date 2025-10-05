@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function January2026QuantumNeuralBanner() {
   return (
@@ -38,18 +38,18 @@ export default function January2026QuantumNeuralBanner() {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-january-quantum-neural-optimization-breakthrough"
                 className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
               >
                 Explore Breakthrough
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact"
                 className="bg-transparent border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Get Demo
-              </Link>
+              </ArrowRight>
             </div>
           </div>
           

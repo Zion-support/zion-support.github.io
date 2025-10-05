@@ -1,17 +1,7 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-import { Calendar, Clock, User, arrowright, Zap, Cpu, Shield, trendingup, Target, Brain } from 'lucide-react';
+import { ArrowRight, Brain, Calendar, Clock, Cpu, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 
-
-
-
-
-
-
-
-
-
-
+import ArrowRight from 'next/link';
 
 
 export const metadata: Metadata = {
@@ -309,20 +299,20 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                 identify opportunities and implement quantum solutions for maximum competitive advantage.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
+                <ArrowRight 
                   href="/contact"
                   className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center gap-2"
                 >
                   Start Your Quantum Journey
                   <ArrowRight />
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/services/quantum-computing"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors flex items-center justify-center gap-2"
                 >
                   Explore Quantum Services
                   <ArrowRight />
-                </Link>
+                </ArrowRight>
               </div>
             </div>
 
@@ -333,7 +323,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
         <div className="mt-16">
           <h3 className="text-2xl font-bold text-white mb-8 text-center">Related Articles</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-future-ai-landscape-mega-trends" className="group">
+            <ArrowRight href="/blog/ai-2026-future-ai-landscape-mega-trends" className="group">
               <div className="bg-gradient-to-r from-purple-900/50 to-blue-900/50 border border-purple-500/30 rounded-xl p-6 hover:border-purple-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors">
                   AI 2026: Future AI Landscape
@@ -342,8 +332,8 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                   Mega trends and revolutionary breakthroughs shaping the AI landscape in 2026
                 </p>
               </div>
-            </Link>
-            <Link href="/blog/quantum-ai-implementation-guide-2026" className="group">
+            </ArrowRight>
+            <ArrowRight href="/blog/quantum-ai-implementation-guide-2026" className="group">
               <div className="bg-gradient-to-r from-blue-900/50 to-cyan-900/50 border border-blue-500/30 rounded-xl p-6 hover:border-blue-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-300 transition-colors">
                   Quantum AI Implementation Guide
@@ -352,8 +342,8 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                   Complete guide to implementing quantum AI solutions in enterprise environments
                 </p>
               </div>
-            </Link>
-            <Link href="/blog/enterprise-quantum-security-2026" className="group">
+            </ArrowRight>
+            <ArrowRight href="/blog/enterprise-quantum-security-2026" className="group">
               <div className="bg-gradient-to-r from-green-900/50 to-teal-900/50 border border-green-500/30 rounded-xl p-6 hover:border-green-400/60 transition-colors">
                 <h4 className="text-lg font-semibold text-white mb-2 group-hover:text-green-300 transition-colors">
                   Enterprise Quantum Security
@@ -362,7 +352,7 @@ export default function QuantumComputing2026CommercialBreakthrough() {
                   Protecting your organization with quantum-safe security infrastructure
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

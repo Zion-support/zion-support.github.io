@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import { Cog, Target } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Fortune 500 April 2026 Meta-Cognitive AI Success: $5.2B Value Generated',

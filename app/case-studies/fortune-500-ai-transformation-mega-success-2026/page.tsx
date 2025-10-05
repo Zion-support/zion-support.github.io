@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -423,18 +423,18 @@ export default function Fortune500AITransformationMegaSuccess2026() {
               Join the Fortune 500 companies already transforming their operations with AI and seeing unprecedented ROI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/blog" 
                 className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read More Success Stories
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Start Your AI Transformation
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -443,7 +443,7 @@ export default function Fortune500AITransformationMegaSuccess2026() {
         <div className="max-w-4xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-white mb-8">More Success Stories</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/case-studies/enterprise-ai-transformation-mega-success-2026" className="group">
+            <ArrowRight href="/case-studies/enterprise-ai-transformation-mega-success-2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-green-400 mb-2">
                   Enterprise AI Transformation Mega Success
@@ -452,8 +452,8 @@ export default function Fortune500AITransformationMegaSuccess2026() {
                   How another Fortune 500 company achieved $1.8B in value creation
                 </p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-quantum-breakthrough-success-2026" className="group">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-quantum-breakthrough-success-2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-green-400 mb-2">
                   AI Quantum Breakthrough Success
@@ -462,7 +462,7 @@ export default function Fortune500AITransformationMegaSuccess2026() {
                   Revolutionary quantum AI implementation delivering 600% ROI
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

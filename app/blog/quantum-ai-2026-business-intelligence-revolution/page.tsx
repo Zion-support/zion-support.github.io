@@ -1,10 +1,5 @@
-import Link from 'next/link';
-import { arrowleft, Calendar, User, Clock, Tag } from 'lucide-react';
-
-
-
-
-
+import ArrowRight from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Calendar, Clock, Map, User } from 'lucide-react';
 
 
 
@@ -20,13 +15,13 @@ export default function QuantumAIBusinessIntelligence() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
+          <ArrowRight 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft />
             Back to Home
-          </Link>
+          </ArrowRight>
         </div>
       </header>
 
@@ -60,7 +55,7 @@ export default function QuantumAIBusinessIntelligence() {
           <div className="flex flex-wrap gap-2">
             {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag />
+                <Bookmark />
                 {tag}
               </span>
             ))}
@@ -302,18 +297,18 @@ export default function QuantumAIBusinessIntelligence() {
               Contact Zion Tech Group to explore how quantum computing can transform your data into strategic competitive advantage.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/guides/quantum-ai-implementation-roadmap-2026"
                 className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Quantum AI Roadmap
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies/fortune-500-quantum-bi-transformation"
                 className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View Success Stories
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>

@@ -1,4 +1,6 @@
 
+import { ArrowRight, Brain, Shield, Target, Zap } from 'lucide-react';
+
 import React from 'react';
 
 

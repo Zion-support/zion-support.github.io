@@ -1,17 +1,5 @@
-import Link from 'next/link';
-import { arrowleft, Calendar, User, Clock, Tag, trendingup, dollarsign, Users, Target, Brain, Zap, Shield } from 'lucide-react';
-
-
-
-
-
-
-
-
-
-
-
-
+import ArrowRight from 'next/link';
+import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, Clock, DollarSign, Shield, Target, TrendingUp, User, Zap } from 'lucide-react';
 
 
 
@@ -27,13 +15,13 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
       {/* Header */}
       <header className="border-b border-gray-200 bg-white sticky top-0 z-50">
         <div className="max-w-4xl mx-auto px-4 py-4">
-          <Link 
+          <ArrowRight 
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
             <ArrowLeft />
             Back to Home
-          </Link>
+          </ArrowRight>
         </div>
       </header>
 
@@ -67,7 +55,7 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
           <div className="flex flex-wrap gap-2">
             {['AI Revolution', 'Autonomous Enterprise', 'December 2025', 'AI Breakthrough', 'Enterprise Automation'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag />
+                <Bookmark />
                 {tag}
               </span>
             ))}
@@ -282,12 +270,12 @@ export default function AI2025DecemberUltimateAutonomousEnterpriseRevolution() {
                 <p className="text-blue-700 mb-4">
                   Schedule a free consultation with our AI experts to discuss your autonomous transformation goals.
                 </p>
-                <Link 
+                <ArrowRight 
                   href="/contact" 
                   className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
                 >
                   Schedule Consultation
-                </Link>
+                </ArrowRight>
               </div>
               <div>
                 <p className="text-blue-700 mb-4">

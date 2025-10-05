@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { ArrowRight, TrendingUp, Brain, Target, Users, DollarSign, Award } from 'lucide-react';
+import ArrowRight from 'next/link';
+import { ArrowRight, Award, Brain, DollarSign, Target, TrendingUp, User, Users } from 'lucide-react';
 
 
 
@@ -37,20 +37,20 @@ export default function SyntheticConsciousnessSuccessCaseStudy() {
               breakthrough synthetic consciousness AI, achieving unprecedented ROI and operational excellence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-synthetic-consciousness-breakthrough"
                 className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 Read Technical Details
                 <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/services/ai-consulting"
                 className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
               >
                 Start Your Transformation
                 <TrendingUp className="w-5 h-5" />
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -335,20 +335,20 @@ export default function SyntheticConsciousnessSuccessCaseStudy() {
             Join the ranks of industry leaders achieving unprecedented ROI and operational excellence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <ArrowRight 
               href="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Start Your Transformation
               <ArrowRight className="w-5 h-5" />
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/services/ai-development"
               className="inline-flex items-center gap-2 border border-green-500 text-green-300 px-8 py-4 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
             >
               Explore AI Solutions
               <TrendingUp className="w-5 h-5" />
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

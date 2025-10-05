@@ -1,13 +1,5 @@
-import Link from 'next/link';
-import { arrowright, Calendar, Clock, Users, trendingup, dollarsign, Target, checkcircle } from 'lucide-react';
-
-
-
-
-
-
-
-
+import ArrowRight from 'next/link';
+import { ArrowRight, Calendar, CheckCircle, Clock, DollarSign, Target, TrendingUp, User, Users } from 'lucide-react';
 
 
 
@@ -493,7 +485,7 @@ export default function AICostOptimizationBreakthrough2026() {
               Related Cost Optimization Resources
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/blog/generative-ai-cost-breakthrough-2025" className="group">
+              <ArrowRight href="/blog/generative-ai-cost-breakthrough-2025" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">💰</div>
@@ -509,9 +501,9 @@ export default function AICostOptimizationBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </ArrowRight>
               
-              <Link href="/blog/ai-infrastructure-automation-2026" className="group">
+              <ArrowRight href="/blog/ai-infrastructure-automation-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">⚡</div>
@@ -527,9 +519,9 @@ export default function AICostOptimizationBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </ArrowRight>
               
-              <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group">
+              <ArrowRight href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏆</div>
@@ -545,7 +537,7 @@ export default function AICostOptimizationBreakthrough2026() {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>

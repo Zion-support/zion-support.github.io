@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Meta-Cognitive Reasoning: The Next Evolution in Enterprise Intelligence | Zion Tech Group',
@@ -10,9 +10,9 @@ export default function AIMetaCognitiveReasoning2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
       </div>
 
       <article className="prose prose-lg max-w-none">
@@ -181,32 +181,32 @@ export default function AIMetaCognitiveReasoning2026() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center"
             >
               Schedule Consultation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/services/ai-autonomous-cloud-ops" 
               className="bg-white border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-all duration-200 text-center"
             >
               Explore AI Services
-            </Link>
+            </ArrowRight>
           </div>
         </section>
 
         <div className="border-t border-gray-200 pt-8 mt-8">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Related Content</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-cognitive-computing-breakthrough-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <ArrowRight href="/blog/ai-cognitive-computing-breakthrough-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-semibold text-gray-900">🧠 Cognitive Computing Breakthrough</h4>
               <p className="text-gray-600 text-sm">The foundation of meta-cognitive reasoning</p>
-            </Link>
-            <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-autonomous-business-systems-success-2026" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-semibold text-gray-900">🤖 Autonomous Business Systems Success</h4>
               <p className="text-gray-600 text-sm">Real-world implementation results</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </article>

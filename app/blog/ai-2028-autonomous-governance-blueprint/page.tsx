@@ -1,8 +1,6 @@
-import Link from 'next/link';
-import { Shield } from 'lucide-react';
+import ArrowRight from 'next/link';
 
-
-
+import { ArrowRight, Shield } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',
@@ -21,7 +19,7 @@ export const metadata = {
 export default function AutonomousGovernanceBlueprint2028() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</ArrowRight>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI 2028: Autonomous Governance Blueprint</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 12 min read • AI Governance</div>
 
@@ -49,7 +47,7 @@ export default function AutonomousGovernanceBlueprint2028() {
         <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded">
           <h3 className="m-0 flex items-center gap-2"><Shield />Need a safe rollout?</h3>
           <p className="m-0">We implement governance gates, scorecards, and recovery playbooks in weeks.</p>
-          <Link href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <ArrowRight href="/services" className="inline-block mt-3 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded">Explore Services</ArrowRight>
         </div>
       </div>
     </div>

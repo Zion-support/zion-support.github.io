@@ -1,4 +1,6 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
+import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
+
 
 
 
@@ -37,12 +39,12 @@ export default function January2026QuantumBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-300">$47M ROI</span>
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-quantum-neural-superintelligence-ultimate-breakthrough"
                 className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
                 Learn More <ArrowRight className="w-4 h-4" />
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -57,12 +59,12 @@ export default function January2026QuantumBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-300">370% ROI</span>
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-synthetic-consciousness-enterprise-breakthrough"
                 className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
                 Explore <ArrowRight className="w-4 h-4" />
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -77,12 +79,12 @@ export default function January2026QuantumBreakthroughBanner() {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-2xl font-bold text-green-300">96.3% Efficiency</span>
-              <Link 
+              <ArrowRight 
                 href="/case-studies/quantum-ai-manufacturing-success-2026"
                 className="flex items-center gap-2 text-yellow-300 hover:text-yellow-200 transition-colors"
               >
                 Case Study <ArrowRight className="w-4 h-4" />
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -114,13 +116,13 @@ export default function January2026QuantumBreakthroughBanner() {
             <span className="text-lg font-semibold text-yellow-300">Limited Time: Early Access Available</span>
             <Star className="w-6 h-6 text-yellow-300 animate-pulse" />
           </div>
-          <Link 
+          <ArrowRight 
             href="/contact"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold px-8 py-4 rounded-full text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Get Your Quantum AI Demo
             <ArrowRight className="w-5 h-5" />
-          </Link>
+          </ArrowRight>
           <p className="text-blue-200 text-sm mt-3">
             Schedule a personalized demonstration and ROI analysis
           </p>

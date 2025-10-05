@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: Neuromorphic Computing Breakthrough - The Brain-Inspired Revolution',
@@ -17,9 +17,9 @@ export default function AI2027NeuromorphicComputingBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
         
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -224,26 +224,26 @@ export default function AI2027NeuromorphicComputingBreakthrough() {
             deployed brain-inspired AI systems for Fortune 500 companies, delivering unprecedented performance gains.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
+            <ArrowRight href="/contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors">
               Start Your Journey
-            </Link>
-            <Link href="/services/ai-neuromorphic-computing" className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/services/ai-neuromorphic-computing" className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg hover:bg-purple-50 transition-colors">
               Learn About Our Services
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t border-gray-200 pt-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Breakthroughs</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-2027-autonomous-enterprise-transformation" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <ArrowRight href="/blog/ai-2027-autonomous-enterprise-transformation" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">🏢 Autonomous Enterprise Transformation</h4>
               <p className="text-sm text-gray-600">How AI is revolutionizing business operations in 2027.</p>
-            </Link>
-            <Link href="/blog/ai-2027-quantum-neural-networks" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2027-quantum-neural-networks" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">⚛️ Quantum Neural Networks</h4>
               <p className="text-sm text-gray-600">The convergence of quantum computing and neural networks.</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

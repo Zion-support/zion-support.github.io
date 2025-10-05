@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 const UltimateBusinessIntelligence2025Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -144,18 +144,18 @@ const UltimateBusinessIntelligence2025Banner = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <ArrowRight
                 href={currentContent.url}
                 className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-3 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 text-center"
               >
                 Read {currentContent.type}
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
               >
                 Get Consultation
-              </Link>
+              </ArrowRight>
             </div>
 
             {/* Content Type Badge */}
@@ -180,7 +180,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((item, index) => (
               <div
                 key={item.id}
-                className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                className={`cursor-pointer p-3 rounded-lg transition-all duration-200 ${
                   currentSlide === index 
                     ? 'bg-white/20 border border-white/30' 
                     : 'bg-white/5 hover:bg-white/10 border border-transparent'
@@ -212,10 +212,8 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                currentSlide === index 
-                  ? 'bg-white' 
-                  : 'bg-white/30 hover:bg-white/50'
+              className={`w-3 h-3 rounded-full transition-all duration-200 ${
+                currentSlide === index ? 'bg-white' : 'bg-white/30 hover:bg-white/50'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

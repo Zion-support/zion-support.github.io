@@ -1,5 +1,5 @@
-import Link from 'next/link';
-import { Sparkles, Shield, Bot, ShoppingBag } from 'lucide-react';
+import ArrowRight from 'next/link';
+import { ArrowRight, Bot, Shield } from 'lucide-react';
 
 
 
@@ -92,12 +92,12 @@ export default function FeaturedOctober2026Content() {
                 </ul>
               </div>
               
-              <Link
+              <ArrowRight
                 href="/blog/ai-federated-learning-privacy-2026"
                 className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 group-hover:scale-105"
               >
                 Read Complete Guide →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -161,12 +161,12 @@ export default function FeaturedOctober2026Content() {
                 </ul>
               </div>
               
-              <Link
+              <ArrowRight
                 href="/blog/ai-reinforcement-learning-robotics-2026"
                 className="block w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white text-center py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 group-hover:scale-105"
               >
                 Read Complete Guide →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -222,12 +222,12 @@ export default function FeaturedOctober2026Content() {
                 </div>
               </div>
               
-              <Link
+              <ArrowRight
                 href="/case-studies/ai-retail-personalization-transformation-2026"
                 className="inline-block bg-white text-green-600 px-8 py-4 rounded-xl font-bold hover:bg-green-50 transition-colors"
               >
                 Read Full Case Study →
-              </Link>
+              </ArrowRight>
             </div>
             
             <div className="bg-gradient-to-br from-green-700 to-emerald-700 p-12">
@@ -260,18 +260,18 @@ export default function FeaturedOctober2026Content() {
             Want to achieve similar results? Our AI experts can help you implement these strategies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/contact"
               className="inline-flex items-center justify-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 hover:scale-105"
             >
               Get Free AI Assessment
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/blog"
               className="inline-flex items-center justify-center border-2 border-purple-600 text-purple-600 px-8 py-4 rounded-xl font-semibold hover:bg-purple-50 transition-all duration-300"
             >
               Explore All Content
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

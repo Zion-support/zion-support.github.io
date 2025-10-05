@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Enterprise Agent Risk Budgets: Safe Autonomy at Scale',
@@ -25,7 +25,7 @@ export default function Page() {
 				Adopt a scorecard that correlates agent outcomes to business metrics, ensuring speed without surprises.
 			</p>
 			<div className="mt-10">
-				<Link href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
+				<ArrowRight href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</ArrowRight>
 			</div>
 		</div>
 	);

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Meta-Cognitive Superintelligence Breakthrough - Zion Tech Group',
@@ -151,24 +151,24 @@ export default function AI2027MetaCognitiveSuperintelligenceBreakthrough() {
               Discover how meta-cognitive superintelligence can revolutionize your business operations and unlock unprecedented self-evolving capabilities.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Schedule Meta-Cognitive Consultation
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" 
                 className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 View Meta-Cognitive Success Stories
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/services" 
                 className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Meta-Cognitive Services
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
@@ -177,24 +177,24 @@ export default function AI2027MetaCognitiveSuperintelligenceBreakthrough() {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-indigo-400">Related Meta-Cognitive Breakthroughs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2027-universal-consciousness-integration-breakthrough" className="group">
+            <ArrowRight href="/blog/ai-2027-universal-consciousness-integration-breakthrough" className="group">
               <div className="bg-gradient-to-r from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-700/50 hover:border-blue-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h3 className="text-xl font-semibold mb-3 text-blue-300 group-hover:text-blue-200">Universal Consciousness Integration</h3>
                 <p className="text-gray-400 group-hover:text-gray-300">Advanced universal consciousness integration breakthrough</p>
               </div>
-            </Link>
-            <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group">
               <div className="bg-gradient-to-r from-cyan-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-6 border border-cyan-700/50 hover:border-cyan-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h3 className="text-xl font-semibold mb-3 text-cyan-300 group-hover:text-cyan-200">Quantum Consciousness Fusion</h3>
                 <p className="text-gray-400 group-hover:text-gray-300">Revolutionary quantum consciousness integration</p>
               </div>
-            </Link>
-            <Link href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" className="group">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-meta-cognitive-superintelligence-success" className="group">
               <div className="bg-gradient-to-r from-purple-800/50 to-pink-800/50 backdrop-blur-sm rounded-2xl p-6 border border-purple-700/50 hover:border-purple-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h3 className="text-xl font-semibold mb-3 text-purple-300 group-hover:text-purple-200">Meta-Cognitive Success Stories</h3>
                 <p className="text-gray-400 group-hover:text-gray-300">Real-world meta-cognitive implementations</p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

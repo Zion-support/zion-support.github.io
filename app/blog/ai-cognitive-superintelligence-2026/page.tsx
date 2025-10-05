@@ -1,11 +1,5 @@
-import Link from 'next/link';
-import { Clock, arrowright, Brain, Zap, Target, trendingup } from 'lucide-react';
-
-
-
-
-
-
+import ArrowRight from 'next/link';
+import { ArrowRight, Brain, Clock, Cog, Target, TrendingUp, Zap } from 'lucide-react';
 
 
 
@@ -312,18 +306,18 @@ export default function AICognitiveSuperintelligence2026() {
             Discover how cognitive superintelligence can revolutionize your operations, accelerate innovation, and drive unprecedented growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link
+            <ArrowRight
               href="/contact"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Schedule Consultation
-            </Link>
-            <Link
+            </ArrowRight>
+            <ArrowRight
               href="/services/ai-cognitive-superintelligence"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors text-center"
             >
               Learn More
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>
@@ -332,7 +326,7 @@ export default function AICognitiveSuperintelligence2026() {
       <div className="mt-16 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Content</h3>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/blog/ai-neural-architecture-optimization-2026" className="group">
+          <ArrowRight href="/blog/ai-neural-architecture-optimization-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Neural Architecture Optimization 2026
@@ -341,8 +335,8 @@ export default function AICognitiveSuperintelligence2026() {
                 Master neural architecture optimization with 40% performance gains and 60% cost reduction.
               </p>
             </div>
-          </Link>
-          <Link href="/blog/ai-quantum-computing-2026" className="group">
+          </ArrowRight>
+          <ArrowRight href="/blog/ai-quantum-computing-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Quantum Computing 2026
@@ -351,8 +345,8 @@ export default function AICognitiveSuperintelligence2026() {
                 Harness quantum computing for AI breakthroughs with 1000x faster optimization.
               </p>
             </div>
-          </Link>
-          <Link href="/case-studies/ai-cognitive-superintelligence-mega-success-2026" className="group">
+          </ArrowRight>
+          <ArrowRight href="/case-studies/ai-cognitive-superintelligence-mega-success-2026" className="group">
             <div className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 $750M Cognitive AI Success Story
@@ -361,7 +355,7 @@ export default function AICognitiveSuperintelligence2026() {
                 See how a Fortune 500 company achieved massive ROI with cognitive superintelligence.
               </p>
             </div>
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>

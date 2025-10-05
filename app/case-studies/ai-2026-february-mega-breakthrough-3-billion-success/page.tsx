@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 February Mega Breakthrough: $3B Success Story - Fortune 100 Transformation',
@@ -34,18 +34,18 @@ export default function AI2026FebruaryMegaBreakthrough3BillionSuccessPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Achieve Similar Results
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog/ai-2026-february-revolutionary-breakthrough-revolution" 
                 className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Learn About the Breakthrough →
-              </Link>
+              </ArrowRight>
             </div>
             
             {/* Key Results */}
@@ -354,18 +354,18 @@ export default function AI2026FebruaryMegaBreakthrough3BillionSuccessPage() {
               Join the Fortune 100 companies achieving $3B+ ROI with 99.9% autonomous operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog/ai-2026-february-revolutionary-breakthrough-revolution" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Learn About the Technology
-              </Link>
+              </ArrowRight>
             </div>
           </section>
         </div>

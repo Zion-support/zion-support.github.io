@@ -1,40 +1,79 @@
 #!/usr/bin/env node
 
 const { execSync } = require('child_process');
+const fs = require('fs');
 
-console.log('🔧 Resolving all merge conflicts automatically...\n');
-
-try {
-    // Get list of conflicted files
-    const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(f => f);
-    
-    console.log(`Found ${conflictedFiles.length} conflicted files to resolve:`);
-    conflictedFiles.forEach(file => console.log(`  - ${file}`));
-    console.log('');
-    
-    // Strategy: Use "theirs" version for all conflicts (incoming changes)
-    console.log('📋 Resolution strategy: Using incoming changes (theirs) for all conflicts...\n');
-    
-    for (const file of conflictedFiles) {
-        try {
-            console.log(`🔧 Resolving conflict in: ${file}`);
-            
-            // Use git checkout with --theirs to accept incoming changes
-            execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
-            execSync(`git add "${file}"`, { stdio: 'pipe' });
-            
-            console.log(`✅ Resolved: ${file}`);
-        } catch (error) {
-            console.log(`❌ Failed to resolve ${file}: ${error.message}`);
-        }
-    }
-    
-    console.log('\n🎯 Committing resolved conflicts...');
-    execSync('git commit -m "Resolve all merge conflicts: accept incoming changes from remote main"', { stdio: 'pipe' });
-    
-    console.log('✅ Successfully resolved all merge conflicts!');
-    
-} catch (error) {
-    console.log('❌ Error resolving conflicts:', error.message);
-    process.exit(1);
+function getConflictedFiles() {
+  try {
+    const output = execSync('git status --porcelain', { encoding: 'utf8' });
+    return output
+      .split('\n')
+      .filter(line => line.startsWith('UU') || line.startsWith('AA') || line.startsWith('DD'))
+      .map(line => line.substring(3).trim())
+      .filter(file => file.length > 0);
+  } catch (error) {
+    console.error('Error getting conflicted files:', error.message);
+    return [];
+  }
 }
+
+function resolveConflicts(files) {
+  let resolved = 0;
+  let failed = 0;
+
+  for (const file of files) {
+    try {
+      if (!fs.existsSync(file)) {
+        console.log(`Skipping non-existent file: ${file}`);
+        continue;
+      }
+      
+      // For modify/delete conflicts, remove the file
+      if (file.includes('fix-imports.cjs')) {
+        execSync(`git rm "${file}"`, { stdio: 'pipe' });
+        console.log(`✅ Removed: ${file}`);
+      } else {
+        // For content conflicts, choose the remote version
+        execSync(`git checkout --theirs "${file}"`, { stdio: 'pipe' });
+        execSync(`git add "${file}"`, { stdio: 'pipe' });
+        console.log(`✅ Resolved: ${file}`);
+      }
+      resolved++;
+    } catch (error) {
+      console.error(`❌ Failed to resolve ${file}:`, error.message);
+      failed++;
+    }
+  }
+  return { resolved, failed };
+}
+
+function main() {
+  console.log('🔍 Checking for merge conflicts...');
+  const conflictedFiles = getConflictedFiles();
+  if (conflictedFiles.length === 0) {
+    console.log('✅ No merge conflicts found');
+    return;
+  }
+  
+  console.log(`📋 Found ${conflictedFiles.length} files with conflicts:`);
+  conflictedFiles.forEach(file => console.log(`  - ${file}`));
+  
+  console.log('\n🔧 Resolving conflicts by choosing remote version...');
+  const result = resolveConflicts(conflictedFiles);
+  
+  console.log(`\n📊 Resolution Summary:`);
+  console.log(`  ✅ Resolved: ${result.resolved}`);
+  console.log(`  ❌ Failed: ${result.failed}`);
+  
+  if (result.failed === 0) {
+    console.log('\n🎉 All conflicts resolved successfully!');
+  } else {
+    console.log('\n⚠️  Some conflicts could not be resolved automatically');
+  }
+}
+
+if (require.main === module) {
+  main();
+}
+
+module.exports = { getConflictedFiles, resolveConflicts };

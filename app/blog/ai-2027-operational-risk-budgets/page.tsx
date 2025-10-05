@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: Operational Risk Budgets — Budgets, Canaries, Rollback | Zion Tech Group',
@@ -57,9 +57,9 @@ export default function AI2027OperationalRiskBudgetsPage() {
 
         <h3 className="mt-10">Related Guides</h3>
         <ul>
-          <li><Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization Playbook</Link></li>
-          <li><Link href="/blog/ai-2026-live-guardrails-blueprint">AI 2026: Live Guardrails Blueprint</Link></li>
-          <li><Link href="/blog/agent-release-runbooks-2026">Agent Release Runbooks 2026</Link></li>
+          <li><ArrowRight href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization Playbook</ArrowRight></li>
+          <li><ArrowRight href="/blog/ai-2026-live-guardrails-blueprint">AI 2026: Live Guardrails Blueprint</ArrowRight></li>
+          <li><ArrowRight href="/blog/agent-release-runbooks-2026">Agent Release Runbooks 2026</ArrowRight></li>
         </ul>
       </article>
 
@@ -67,8 +67,8 @@ export default function AI2027OperationalRiskBudgetsPage() {
         <h3 className="text-2xl font-bold mb-3">Ready to adopt risk budgets?</h3>
         <p className="mb-6 opacity-90">We help enterprises stand up KPI-linked canaries and rollback-ready playbooks.</p>
         <div className="flex gap-3 flex-col sm:flex-row">
-          <Link href="/contact" className="bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</Link>
-          <Link href="/case-studies/ai-2027-revolutionary-breakthrough-success" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">See success stories</Link>
+          <ArrowRight href="/contact" className="bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</ArrowRight>
+          <ArrowRight href="/case-studies/ai-2027-revolutionary-breakthrough-success" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">See success stories</ArrowRight>
         </div>
       </div>
     </div>

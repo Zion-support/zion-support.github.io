@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function October2025FreshContentBanner() {
   return (
@@ -57,12 +57,12 @@ export default function October2025FreshContentBanner() {
                   <div className="text-xs text-cyan-300">Cost Reduction</div>
                 </div>
               </div>
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2025-october-multi-agent-collaboration-systems" 
                 className="text-blue-300 text-sm font-semibold hover:text-blue-200 inline-flex items-center gap-2"
               >
                 Read Full Guide →
-              </Link>
+              </ArrowRight>
             </div>
 
             {/* Cost Optimization */}
@@ -87,12 +87,12 @@ export default function October2025FreshContentBanner() {
                   <div className="text-xs text-emerald-300">Avg Savings</div>
                 </div>
               </div>
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2025-october-enterprise-cost-optimization" 
                 className="text-green-300 text-sm font-semibold hover:text-green-200 inline-flex items-center gap-2"
               >
                 Read Full Guide →
-              </Link>
+              </ArrowRight>
             </div>
 
             {/* Real-Time Operations */}
@@ -117,30 +117,30 @@ export default function October2025FreshContentBanner() {
                   <div className="text-xs text-pink-300">Auto-Resolve</div>
                 </div>
               </div>
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2025-october-real-time-operations" 
                 className="text-purple-300 text-sm font-semibold hover:text-purple-200 inline-flex items-center gap-2"
               >
                 Read Full Guide →
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
           {/* Bottom CTA */}
           <div className="text-center">
             <div className="inline-flex flex-col sm:flex-row gap-4">
-              <Link 
+              <ArrowRight 
                 href="/contact" 
                 className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/blog" 
                 className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore All Content
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -148,24 +148,24 @@ export default function October2025FreshContentBanner() {
           <div className="mt-12 bg-gradient-to-r from-blue-900/20 to-purple-900/20 backdrop-blur-sm rounded-xl p-6 border border-blue-500/20">
             <h4 className="text-white font-bold text-lg mb-4 text-center">Related Topics & Services</h4>
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/services/ai-agents-enterprise-automation-2025" className="text-blue-300 text-sm hover:text-blue-200 transition-colors px-4 py-2 bg-blue-500/10 rounded-lg">
+              <ArrowRight href="/services/ai-agents-enterprise-automation-2025" className="text-blue-300 text-sm hover:text-blue-200 transition-colors px-4 py-2 bg-blue-500/10 rounded-lg">
                 AI Agent Services
-              </Link>
-              <Link href="/services/ai-finops-consulting" className="text-green-300 text-sm hover:text-green-200 transition-colors px-4 py-2 bg-green-500/10 rounded-lg">
+              </ArrowRight>
+              <ArrowRight href="/services/ai-finops-consulting" className="text-green-300 text-sm hover:text-green-200 transition-colors px-4 py-2 bg-green-500/10 rounded-lg">
                 FinOps Consulting
-              </Link>
-              <Link href="/services/ai-observability-monitoring-2025" className="text-purple-300 text-sm hover:text-purple-200 transition-colors px-4 py-2 bg-purple-500/10 rounded-lg">
+              </ArrowRight>
+              <ArrowRight href="/services/ai-observability-monitoring-2025" className="text-purple-300 text-sm hover:text-purple-200 transition-colors px-4 py-2 bg-purple-500/10 rounded-lg">
                 AI Observability
-              </Link>
-              <Link href="/blog/ai-2025-october-multi-agent-collaboration-systems" className="text-cyan-300 text-sm hover:text-cyan-200 transition-colors px-4 py-2 bg-cyan-500/10 rounded-lg">
+              </ArrowRight>
+              <ArrowRight href="/blog/ai-2025-october-multi-agent-collaboration-systems" className="text-cyan-300 text-sm hover:text-cyan-200 transition-colors px-4 py-2 bg-cyan-500/10 rounded-lg">
                 Multi-Agent Guide
-              </Link>
-              <Link href="/blog/ai-2025-october-enterprise-cost-optimization" className="text-emerald-300 text-sm hover:text-emerald-200 transition-colors px-4 py-2 bg-emerald-500/10 rounded-lg">
+              </ArrowRight>
+              <ArrowRight href="/blog/ai-2025-october-enterprise-cost-optimization" className="text-emerald-300 text-sm hover:text-emerald-200 transition-colors px-4 py-2 bg-emerald-500/10 rounded-lg">
                 Cost Optimization
-              </Link>
-              <Link href="/blog/ai-2025-october-real-time-operations" className="text-pink-300 text-sm hover:text-pink-200 transition-colors px-4 py-2 bg-pink-500/10 rounded-lg">
+              </ArrowRight>
+              <ArrowRight href="/blog/ai-2025-october-real-time-operations" className="text-pink-300 text-sm hover:text-pink-200 transition-colors px-4 py-2 bg-pink-500/10 rounded-lg">
                 Real-Time Ops
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </div>
