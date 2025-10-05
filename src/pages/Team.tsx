@@ -13,7 +13,7 @@ const Team: React.FC = () => {
           </div>
         </div>
       </main>
-
+      
       {/* <Footer /> */}
     </div>
   );

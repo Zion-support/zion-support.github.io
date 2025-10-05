@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import PerformanceMonitor from '../utils/performance-monitor';
+import SEOOptimizer from '../utils/seo-optimizer';
+import ErrorHandler from '../utils/error-handler';
 
 interface AnalyticsData {
   pageViews: number;
@@ -92,15 +95,6 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
       uniqueVisitors: 890,
       bounceRate: 35.2,
       avgSessionDuration: 2.5
-    });
-  }, []);
-
-  return (
-    <div className="bg-white rounded-lg shadow-lg p-6">
-      <h2 className="text-2xl font-bold mb-6">Analytics Dashboard</h2>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-blue-50 p-4 rounded-lg">
           <h3 className="text-lg font-semibold text-blue-900 mb-2">Page Views</h3>
           <p className="text-3xl font-bold text-blue-600">{data.pageViews.toLocaleString()}</p>
         </div>
@@ -133,19 +127,4 @@ const AnalyticsDashboard: React.FC<AnalyticsDashboardProps> = ({
         <div className="bg-purple-50 p-4 rounded-lg">
           <h3 className="text-lg font-semibold text-purple-900 mb-2">Avg. Session</h3>
           <p className="text-3xl font-bold text-purple-600">{data.avgSessionDuration}m</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const AnalyticsDashboard: React.FC = () => {
-  return (
-    <div className="analytics-dashboard">
-      <h2>Analytics Dashboard</h2>
-      <p>Analytics data will be displayed here.</p>
-    </div>
-  );
-};
-
-export default AnalyticsDashboard;

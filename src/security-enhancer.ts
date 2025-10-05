@@ -20,17 +20,7 @@ class SecurityEnhancer {
     this.setupXSSProtection();
     this.setupSecurityHeaders();
     
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
-  }
-
   private setupCSP(): void {
-    if (typeof document !== 'undefined') {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'Content-Security-Policy';
-      meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
-      document.head.appendChild(meta);
-    }
   }
 
   private setupHTTPSRedirect(): void {
@@ -51,12 +41,3 @@ class SecurityEnhancer {
   private setupSecurityHeaders(): void {
     // Additional security headers setup
     console.log('Security headers configured');
-  }
-
-  cleanup(): void {
-    this.isInitialized = false;
-    console.log('Security enhancer cleaned up');
-  }
-}
-
-export default SecurityEnhancer;
