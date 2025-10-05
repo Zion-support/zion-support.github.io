@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Bot from 'lucide-react/dist/esm/icons/ot';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Target from 'lucide-react/dist/esm/icons/arget';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import { Clock } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Bot } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Autonomous Robotics 2026: The Future of Intelligent Automation',

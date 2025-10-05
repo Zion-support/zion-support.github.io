@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import Cog from 'lucide-react/dist/esm/icons/og';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Shield from 'lucide-react/dist/esm/icons/hield';
-import Users from 'lucide-react/dist/esm/icons/sers';
-import BarChart3 from 'lucide-react/dist/esm/icons/archart3';
+import { Log } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',

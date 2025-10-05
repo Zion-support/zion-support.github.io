@@ -1,7 +1,7 @@
 // import Link from 'next/link';
 
-import Calendar from 'lucide-react/dist/esm/icons/calendar';
-import Clock from 'lucide-react/dist/esm/icons/clock';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
 import ListChecks from 'lucide-react/dist/esm/icons/list-checks';
 import FileWarning from 'lucide-react/dist/esm/icons/file-warning';
 import RefreshCw from 'lucide-react/dist/esm/icons/refresh-cw';
