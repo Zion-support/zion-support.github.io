@@ -1,0 +1,20 @@
+                      {article.category}
+                    </span>
+                  </div>
+                  {/* Title */}
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
+          ))}
+        </div>
+              >
+                {topic}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+};

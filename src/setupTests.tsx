@@ -49,15 +49,12 @@ Object.defineProperty(window, 'matchMedia', {
     addEventListener: jest.fn(),
     removeEventListener: jest.fn(),
     dispatchEvent: jest.fn(),
-<<<<<<< HEAD
-   })),
-=======
   })),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03e2
 });
 
 // Mock performance API
-Object.defineProperty(window, 'performance', {
+Object.defineProperty(window'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
@@ -65,45 +62,6 @@ Object.defineProperty(window, 'performance', {
     measure: jest.fn(),
     getEntriesByType: jest.fn(() => []),
     getEntriesByName: jest.fn(() => []),
-<<<<<<< HEAD
-   },
-});
-
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-} as unknown as typeof PerformanceObserver;
-
-// Mock react-error-boundary
-jest.mock('react-error-boundary', () => ({
-  ErrorBoundary: ({ children }: { children: React.ReactNode }) => {
-    return children;
-  },
-=======
-  },
-});
-
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-} as unknown as typeof PerformanceObserver;
-
-// Mock react-error-boundary
-jest.mock('react-error-boundary', () => ({
-  ErrorBoundary: ({ children }: { children: React.ReactNode }) => {
-    return children;
-  },
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
@@ -184,11 +142,6 @@ jest.mock('lucide-react', () => {
     Pause: () => mockIcon('pause-icon'),
     SkipForward: () => mockIcon('skip-forward-icon'),
     SkipBack: () => mockIcon('skip-back-icon'),
-<<<<<<< HEAD
-    Volume2: () => mockIcon('volume-2-icon'),
-=======
-    Volume2: () => mockIcon('volume2-icon'),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     VolumeX: () => mockIcon('volume-x-icon'),
     Maximize: () => mockIcon('maximize-icon'),
     Minimize: () => mockIcon('minimize-icon'),
@@ -295,11 +248,6 @@ jest.mock('lucide-react', () => {
     Route: () => mockIcon('route-icon'),
     Flag: () => mockIcon('flag-icon'),
     Building: () => mockIcon('building-icon'),
-<<<<<<< HEAD
-    Building2: () => mockIcon('building-2-icon'),
-=======
-    Building2: () => mockIcon('building2-icon'),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     Factory: () => mockIcon('factory-icon'),
     Warehouse: () => mockIcon('warehouse-icon'),
     Store: () => mockIcon('store-icon'),
@@ -310,11 +258,6 @@ jest.mock('lucide-react', () => {
     Museum: () => mockIcon('museum-icon'),
     Theater: () => mockIcon('theater-icon'),
     Cinema: () => mockIcon('cinema-icon'),
-<<<<<<< HEAD
-    Music2: () => mockIcon('music-2-icon'),
-=======
-    Music2: () => mockIcon('music2-icon'),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     Headphones: () => mockIcon('headphones-icon'),
     Mic: () => mockIcon('mic-icon'),
     MicOff: () => mockIcon('mic-off-icon'),
@@ -327,25 +270,6 @@ jest.mock('lucide-react', () => {
     VideoOff: () => mockIcon('video-off-icon'),
     Webcam: () => mockIcon('webcam-icon'),
     WebcamOff: () => mockIcon('webcam-off-icon'),
-<<<<<<< HEAD
-    Gamepad2: () => mockIcon('gamepad-2-icon'),
-    Joystick: () => mockIcon('joystick-icon'),
-    Dice1: () => mockIcon('dice-1-icon'),
-    Dice2: () => mockIcon('dice-2-icon'),
-    Dice3: () => mockIcon('dice-3-icon'),
-    Dice4: () => mockIcon('dice-4-icon'),
-    Dice5: () => mockIcon('dice-5-icon'),
-    Dice6: () => mockIcon('dice-6-icon'),
-=======
-    Gamepad2: () => mockIcon('gamepad2-icon'),
-    Joystick: () => mockIcon('joystick-icon'),
-    Dice1: () => mockIcon('dice1-icon'),
-    Dice2: () => mockIcon('dice2-icon'),
-    Dice3: () => mockIcon('dice3-icon'),
-    Dice4: () => mockIcon('dice4-icon'),
-    Dice5: () => mockIcon('dice5-icon'),
-    Dice6: () => mockIcon('dice6-icon'),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     Puzzle: () => mockIcon('puzzle-icon'),
     PuzzlePiece: () => mockIcon('puzzle-piece-icon'),
     Chess: () => mockIcon('chess-icon'),
@@ -357,11 +281,6 @@ jest.mock('lucide-react', () => {
     ChessPawn: () => mockIcon('chess-pawn-icon'),
     Cards: () => mockIcon('cards-icon'),
     Spade: () => mockIcon('spade-icon'),
-<<<<<<< HEAD
-    Heart2: () => mockIcon('heart-2-icon'),
-=======
-    Heart2: () => mockIcon('heart2-icon'),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     Diamond: () => mockIcon('diamond-icon'),
     Club: () => mockIcon('club-icon'),
     Crown: () => mockIcon('crown-icon'),
@@ -371,24 +290,10 @@ jest.mock('lucide-react', () => {
     Earrings: () => mockIcon('earrings-icon'),
     Bracelet: () => mockIcon('bracelet-icon'),
     Watch: () => mockIcon('watch-icon'),
-<<<<<<< HEAD
-    Clock2: () => mockIcon('clock-2-icon'),
-=======
-    Clock2: () => mockIcon('clock2-icon'),
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     Timer: () => mockIcon('timer-icon'),
     TimerOff: () => mockIcon('timer-off-icon'),
     Stopwatch: () => mockIcon('stopwatch-icon'),
     Hourglass: () => mockIcon('hourglass-icon'),
-<<<<<<< HEAD
-    Calendar2: () => mockIcon('calendar-2-icon'),
-    AlertTriangle: () => mockIcon('alert-triangle-icon'),
-   };
-=======
-    Calendar2: () => mockIcon('calendar2-icon'),
-    AlertTriangle: () => mockIcon('alert-triangle-icon'),
-  };
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
 });
 
 // Mock console methods to reduce noise in tests
@@ -404,11 +309,6 @@ beforeAll(() => {
         ))
     ) {
       return;
-<<<<<<< HEAD
-      }
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     originalConsoleError.call(console, ...args);
   };
   console.warn = (...args: unknown[]) => {
@@ -417,16 +317,8 @@ beforeAll(() => {
         args[0].includes('componentWillMount'))
     ) {
       return;
-<<<<<<< HEAD
-     }
-=======
-    }
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     originalConsoleWarn.call(console, ...args);
   };
 });
 
 afterAll(() => {
-  console.error = originalConsoleError;
-  console.warn = originalConsoleWarn;
-});

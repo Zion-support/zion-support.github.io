@@ -47,16 +47,15 @@ const SystemMonitor: React.FC = () => {
       const loadTime = perfData ? perfData.loadEventEnd - perfData.navigationStart : 0;
       
       // Get memory usage
-      const memoryUsage = 'memory' in performance 
-        ? Math.round((performance.memory.usedJSHeapSize / performance.memory.totalJSHeapSize) * 100)
-        : 0;
-
+      const memoryUsage = 'memory' in performance ? 
+        Math.round((performance.memory.usedJSHeapSize / performance.memory.totalJSHeapSize) * 100) : 0;
+      
       // Get cache stats
-      const cacheStats = window.cacheSystem?.getStats() || { size: 0, hitRate: 0 };
-
+      const cacheStats = (window as any).cacheSystem?.getStats() || { size: 0, hitRate: 0 };
+      
       // Get analytics stats
-      const analyticsData = window.analyticsOptimizer?.getSessionData() || { pageViews: 0 };
-
+      const analyticsData = (window as any).analyticsOptimizer?.getSessionData() || { pageViews: 0 };
+      
       setStats({
         performance: {
           loadTime: Math.round(loadTime),
@@ -88,7 +87,6 @@ const SystemMonitor: React.FC = () => {
 
     updateStats();
     const interval = setInterval(updateStats, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -115,7 +113,7 @@ const SystemMonitor: React.FC = () => {
           ×
         </button>
       </div>
-
+      
       <div className="space-y-4">
         {/* Performance */}
         <div className="bg-blue-50 dark:bg-blue-900/20 p-3 rounded-lg">
