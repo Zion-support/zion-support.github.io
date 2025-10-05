@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Calendar, Clock, TrendingUp, Users, Zap } from 'lucide-react';
+// import { ArrowRight, Calendar, Clock, TrendingUp, Users, Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Revolutionary Breakthrough January 2026: 10x Performance Gains | Zion Tech Group',

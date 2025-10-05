@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Cpu, Shield, TrendingUp, Brain, Star, Rocket } from 'lucide-react';
+// import { ArrowRight, Zap, Cpu, Shield, TrendingUp, Brain, Star, Rocket } from 'lucide-react';
 
 const February2026NewContentMegaBanner: React.FC = () => {
   return (

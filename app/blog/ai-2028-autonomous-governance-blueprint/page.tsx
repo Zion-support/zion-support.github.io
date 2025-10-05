@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { Shield } from 'lucide-react';
+// import { Shield } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',

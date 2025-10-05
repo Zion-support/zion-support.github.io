@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+// import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness',
