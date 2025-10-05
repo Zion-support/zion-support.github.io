@@ -28,6 +28,6 @@
     }
   },
   "include": ["src", "app"],
-  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components"],
+  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components", "src/components/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

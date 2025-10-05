@@ -93,8 +93,8 @@ const October2025QuantumEdgeFusionBanner: React.FC = () => {
                 }}
                 transition={{
                   duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Infinity,",
+      ease: "easeInOut"
                 }}
                 className="bg-gradient-to-br from-cyan-500/20 to-blue-500/20 backdrop-blur-lg rounded-2xl p-8 border border-cyan-400/30"
               >

@@ -106,8 +106,8 @@ key={index}
 
                 {/* Impact */}
                 <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
-                    Impact: {innovation.impact}
+                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>",
+      Impact: {innovation.impact}
                   </div>
                 </div>
 
@@ -153,7 +153,7 @@ key={index}
                 company: 'Reality Synthesis Corp',
                 achievement: '$5.2B Market Creation',
                 revenue: '98% Customer Satisfaction',
-                icon: '>'
+      icon: '>'
               }
             ].map((story, index) => (
               <div key={index} className="text-center">

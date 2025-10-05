@@ -32,7 +32,7 @@ const October2025NewBreakthroughBanner = () => {
           
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Next-Generation Enterprise AI
-            <br <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
+            <br /> <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
               Systems That Transform Operations
             </span>
           </h2>

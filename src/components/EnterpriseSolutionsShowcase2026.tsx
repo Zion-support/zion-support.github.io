@@ -171,8 +171,8 @@ key={solution.id}
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
                     {solution.category}
                   </span>
-                  <div className="text-xs text-gray-500">
-                    Industries: {solution.industry}
+                  <div className="text-xs text-gray-500">",
+      Industries: {solution.industry}
                   </div>
                 </div>
 

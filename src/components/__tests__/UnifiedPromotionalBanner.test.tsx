@@ -135,7 +135,7 @@ describe('UnifiedPromotionalBanner', () => {
       {
         title: 'Item 3',
         category: 'Category 3',
-        link: '/item-3'
+      link: '/item-3'
       }
     ];
 
@@ -335,7 +335,7 @@ describe('UnifiedPromotionalBanner', () => {
         {
           title: 'Item 1',
           category: 'Category 1',
-          link: '/item-1'
+      link: '/item-1'
         }
       ];
 

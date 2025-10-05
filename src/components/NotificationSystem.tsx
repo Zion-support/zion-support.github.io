@@ -6,8 +6,8 @@ export type Notification = {
 };
 
 type NotificationSystemProps = {
-  notifications: Notification[];
-  onRemove: (id: string) => void;
+  notifications: Notification[];",
+      onRemove: (id: string) => void;
 };
 
 export default function NotificationSystem({ notifications, onRemove }: NotificationSystemProps): React.JSX.Element | null {

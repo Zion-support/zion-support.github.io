@@ -261,8 +261,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
                         <div className="text-sm text-gray-600">
                           Component: {error.context.component || 'Unknown'} | 
-                          Action: {error.context.action || 'Unknown'} |
-                          Count: {String(error.occurrenceCount)}
+                          Action: {error.context.action || 'Unknown'} |",
+      Count: {String(error.occurrenceCount)}
                         </div>
                         {error.aiPredictedImpact && (
                           <div className="text-sm text-blue-600 mt-1">
