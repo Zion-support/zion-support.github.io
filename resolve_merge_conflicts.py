@@ -1,87 +1,180 @@
 #!/usr/bin/env python3
 """
-Script to automatically resolve merge conflicts by choosing the cleaner version
+Comprehensive merge conflict resolution script
+Resolves conflicts by preferring main branch version and cleaning up conflicts
 """
-import os
-import re
-import glob
 
-def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a file"""
+import os
+import subprocess
+import sys
+import re
+from pathlib import Path
+
+def run_command(cmd, cwd=None):
+    """Run a command and return the result"""
+    try:
+        result = subprocess.run(cmd, shell=True, cwd=cwd, capture_output=True, text=True)
+        return result.returncode == 0, result.stdout, result.stderr
+    except Exception as e:
+        return False, "", str(e)
+
+def get_unmerged_branches():
+    """Get list of branches that haven't been merged to main"""
+    success, output, _ = run_command("git branch -r --no-merged main")
+    if not success:
+        return []
+    
+    branches = []
+    for line in output.strip().split('\n'):
+        if line.strip() and 'origin/' in line:
+            branch = line.strip().replace('origin/', '')
+            if 'cursor/fix-errors-and-merge-to-main' in branch:
+                branches.append(branch)
+    return branches
+
+def resolve_conflicts_in_file(file_path):
+    """Resolve conflicts in a single file by choosing main branch version"""
+    if not os.path.exists(file_path):
+        return True
+    
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Skip if no merge conflicts
+        # Check if file has conflict markers
         if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Pattern to match merge conflicts with duplicate imports
-        pattern = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> [^\n]+\s*\n'
-        
-        def resolve_conflict(match):
-            head_content = match.group(1).strip()
-            other_content = match.group(2).strip()
-            
-            # If both are imports, choose the cleaner one (usually the one without quotes)
-            if 'import' in head_content and 'import' in other_content:
-                # Prefer the version without quotes around module names
-                if '"' not in other_content and '"' in head_content:
-                    return other_content
-                elif '"' not in head_content and '"' in other_content:
-                    return head_content
-                else:
-                    # If both are similar, choose the shorter one
-                    return head_content if len(head_content) <= len(other_content) else other_content
-            else:
-                # For non-import conflicts, prefer the HEAD version
-                return head_content
-        
-        # Resolve conflicts
-        new_content = re.sub(pattern, resolve_conflict, content, flags=re.DOTALL)
-        
-        # Remove any remaining merge conflict markers
-        new_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', new_content, flags=re.DOTALL)
-        
-        # Clean up extra newlines
-        new_content = re.sub(r'\n\s*\n\s*\n+', '\n\n', new_content)
-        
-        if new_content != content:
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.write(new_content)
             return True
         
-        return False
+        # Split by conflict markers and keep main branch version
+        lines = content.split('\n')
+        resolved_lines = []
+        in_conflict = False
+        keep_main = True
+        
+        for line in lines:
+            if line.strip() == '<<<<<<< HEAD':
+                in_conflict = True
+                keep_main = True
+                continue
+            elif line.strip() == '=======':
+                keep_main = False
+                continue
+            elif line.strip() == '>>>>>>>':
+                in_conflict = False
+                keep_main = True
+                continue
+            elif in_conflict and not keep_main:
+                # Skip lines from the other branch
+                continue
+            else:
+                resolved_lines.append(line)
+        
+        # Write resolved content
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(resolved_lines))
+        
+        return True
     except Exception as e:
-        print(f"Error processing {file_path}: {e}")
+        print(f"Error resolving conflicts in {file_path}: {e}")
+        return False
+
+def resolve_all_conflicts():
+    """Resolve all merge conflicts in the current merge state"""
+    success, output, _ = run_command("git status --porcelain")
+    if not success:
+        return False
+    
+    conflicted_files = []
+    for line in output.strip().split('\n'):
+        if line.strip().startswith('UU') or line.strip().startswith('AA') or line.strip().startswith('DD'):
+            file_path = line[3:].strip()
+            conflicted_files.append(file_path)
+    
+    print(f"Found {len(conflicted_files)} conflicted files")
+    
+    for file_path in conflicted_files:
+        print(f"Resolving conflicts in: {file_path}")
+        if not resolve_conflicts_in_file(file_path):
+            print(f"Failed to resolve conflicts in: {file_path}")
+            return False
+    
+    return True
+
+def merge_branch(branch_name):
+    """Merge a specific branch with conflict resolution"""
+    print(f"\n=== Merging branch: {branch_name} ===")
+    
+    # Start merge
+    success, output, error = run_command(f"git merge origin/{branch_name}")
+    
+    if success:
+        print(f"Successfully merged {branch_name}")
+        return True
+    
+    # Check if there are conflicts
+    if "CONFLICT" in output or "CONFLICT" in error:
+        print(f"Conflicts detected in {branch_name}, resolving...")
+        
+        # Resolve conflicts
+        if resolve_all_conflicts():
+            # Add resolved files
+            run_command("git add .")
+            
+            # Commit the merge
+            success, _, _ = run_command(f"git commit -m 'Resolve merge conflicts for {branch_name}'")
+            if success:
+                print(f"Successfully resolved conflicts and merged {branch_name}")
+                return True
+            else:
+                print(f"Failed to commit resolved conflicts for {branch_name}")
+                return False
+        else:
+            print(f"Failed to resolve conflicts for {branch_name}")
+            return False
+    else:
+        print(f"Merge failed for {branch_name}: {error}")
         return False
 
 def main():
-    """Main function to resolve all merge conflicts"""
-    # Get all files with merge conflicts
-    result = os.popen("git diff --name-only --diff-filter=U").read().strip()
-    if not result:
-        print("No merge conflicts found")
+    """Main function to merge all unmerged branches"""
+    print("Starting comprehensive merge conflict resolution...")
+    
+    # Get list of unmerged branches
+    branches = get_unmerged_branches()
+    print(f"Found {len(branches)} unmerged branches")
+    
+    if not branches:
+        print("No branches to merge")
         return
     
-    files = result.split('\n')
-    resolved_count = 0
+    # Merge each branch
+    successful_merges = 0
+    failed_merges = 0
     
-    for file_path in files:
-        if file_path and os.path.exists(file_path):
-            print(f"Resolving conflicts in: {file_path}")
-            if resolve_merge_conflicts(file_path):
-                resolved_count += 1
-                print(f"  ✓ Resolved conflicts")
-            else:
-                print(f"  - No conflicts to resolve")
+    for branch in branches:
+        print(f"\nProcessing branch: {branch}")
+        
+        # Check if branch has commits ahead of main
+        success, output, _ = run_command(f"git log --oneline main..origin/{branch}")
+        if not success or not output.strip():
+            print(f"Branch {branch} has no new commits, skipping")
+            continue
+        
+        if merge_branch(branch):
+            successful_merges += 1
+        else:
+            failed_merges += 1
+            # Abort current merge if it failed
+            run_command("git merge --abort")
     
-    print(f"\nResolved conflicts in {resolved_count} files")
+    print(f"\n=== Merge Summary ===")
+    print(f"Successful merges: {successful_merges}")
+    print(f"Failed merges: {failed_merges}")
     
-    # Add resolved files to git
-    if resolved_count > 0:
-        os.system("git add .")
-        print("Added resolved files to git staging area")
+    if successful_merges > 0:
+        print("Pushing changes to remote...")
+        run_command("git push origin main")
+        print("Changes pushed successfully!")
 
 if __name__ == "__main__":
     main()
