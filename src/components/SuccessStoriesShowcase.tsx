@@ -5,7 +5,6 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
-      icon: '🚀',
       icon: <TrendingUp className="w-8 h-8" />,
       result: "300% Revenue Growth",
         description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
