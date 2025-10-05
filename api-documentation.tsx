@@ -122,6 +122,6 @@ else:
         </div>
       </div>
     </div>
-  ),
+  );
 };
 export default APIDocumentation;

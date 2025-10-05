@@ -39,8 +39,10 @@ class EnhancedPerformanceMonitor {
   }
 
   private initializeObservers(): void {
+    if (typeof window === 'undefined') return;
+
     // Observe navigation timing
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
+    if ('PerformanceObserver' in window) {
       try {
         const navObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
@@ -61,7 +63,7 @@ class EnhancedPerformanceMonitor {
   private processNavigationTiming(entry: PerformanceNavigationTiming): void {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
-      timeToInteractive: entry.domInteractive - entry.fetchStart,
+      timeToInteractive: entry.domInteractive - entry.navigationStart,
       timestamp: Date.now()
     };
 
@@ -92,7 +94,7 @@ class EnhancedPerformanceMonitor {
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
       const value = metrics[key as keyof PerformanceMetrics];
-      if (value && value > threshold) {
+      if (typeof value === 'number' && value > threshold) {
         this.addAlert({
           type: value > threshold * 1.5 ? 'error' : 'warning',
           message: `${key} exceeded threshold: ${value}ms > ${threshold}ms`,
@@ -135,12 +137,12 @@ class EnhancedPerformanceMonitor {
     return [...this.metrics];
   }
 
-  public getMonitoringStatus(): boolean {
-    return this.isMonitoring;
-  }
-
   public getAlerts(): PerformanceAlert[] {
     return [...this.alerts];
+  }
+
+  public isMonitoringActive(): boolean {
+    return this.isMonitoring;
   }
 
   public getLatestMetrics(): PerformanceMetrics | null {

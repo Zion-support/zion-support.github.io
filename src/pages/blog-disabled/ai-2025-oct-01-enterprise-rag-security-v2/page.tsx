@@ -9,12 +9,9 @@ export default function BlogPost(): React.JSX.Element {
         <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2
+          content="Enterprise RAG Security v2 - Auth-Aware, Fresh, Signed for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

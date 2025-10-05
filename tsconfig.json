@@ -15,6 +15,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
@@ -26,6 +28,6 @@
     }
   },
   "include": ["src", "app"],
-  "exclude": ["src/pages/blog-disabled/**/*"],
+  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

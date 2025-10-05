@@ -9,23 +9,17 @@ export default function BlogPost(): React.JSX.Element {
         <title>AI 2025: Causal Evals Blueprint — KPIs, Budgets, Rollback</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint
+          content="AI 2025: Causal Evals Blueprint - KPIs, Budgets, Rollback for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          "
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-causal-evals-blueprint"
-        />
-      
+          AI 2025: Causal Evals Blueprint
         </h1>
-        <p className="text-zion-slate-light mb-8">"
-  Policy Tests • Causal Graphs • KPI‑Linked Canaries • Instant Rollback
+        <p className="text-zion-slate-light mb-8">
+          Policy Tests • Causal Graphs • KPI‑Linked Canaries • Instant Rollback
         </p>
         <div className="prose prose-invert max-w-3xl">
           <p>

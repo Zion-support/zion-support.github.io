@@ -12,10 +12,9 @@ export default function BlogPost(): React.JSX.Element {
           
         <link rel="canonical" href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide
         />
-      </Helmet>
-
-      <div className=" />
-      </Helmet>
+      </Helmet>" />
+" />
+      
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -24,7 +23,7 @@ export default function BlogPost(): React.JSX.Element {
         
         </h1>
         <p className="text-zion-slate-light mb-8">;,
-  href="https: //ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide"
+  href="https://ziontechgroup.com/blog/fintech-2025-sept-30-ai-financial-modeling-guide"
         />
       </p>
         <div className="prose prose-invert max-w-3xl">

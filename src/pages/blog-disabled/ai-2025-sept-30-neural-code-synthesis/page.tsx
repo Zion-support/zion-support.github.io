@@ -12,15 +12,14 @@ export default function BlogPost(): React.JSX.Element {
           
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis
         />
-      </Helmet>
-
-      <div className=" />
-      </Helmet>
+      </Helmet>" />
+" />
+      
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           "
-  href="https: //ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis"
+  href="https://ziontechgroup.com/blog/ai-2025-sept-30-neural-code-synthesis"
         />
       
         </h1>

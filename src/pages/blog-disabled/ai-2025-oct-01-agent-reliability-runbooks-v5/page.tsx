@@ -9,7 +9,8 @@ export default function BlogPost(): React.JSX.Element {
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
         <meta 
           name="description" 
-          
+          content="Agent Reliability Runbooks v5 - Budgets, Canaries, Rollback strategies for AI systems"
+        />
         <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />
       </Helmet>
 
