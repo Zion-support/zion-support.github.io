@@ -12,15 +12,14 @@ export default function BlogPost(): React.JSX.Element {
           
         <link rel="canonical" href="https://ziontechgroup.com/blog/federated-learning-enterprise-2026
         />
-      </Helmet>
-
-      <div className=" />
-      </Helmet>
+      </Helmet>" />
+" />
+      
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           "
-  href="https: //ziontechgroup.com/blog/federated-learning-enterprise-2026"
+  href="https://ziontechgroup.com/blog/federated-learning-enterprise-2026"
         />
       
         </h1>

@@ -9,12 +9,9 @@ export default function BlogPost(): React.JSX.Element {
         <title>AI Runtime Rollback v2 — Instant, KPI‑Linked Recovery</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2
+          content="AI Runtime Rollback v2 - Instant, KPI-Linked Recovery for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-runtime-rollback-v2" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

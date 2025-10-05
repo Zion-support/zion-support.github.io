@@ -9,8 +9,9 @@ export default function BlogPost(): React.JSX.Element {
         <title>AI 2025: Operational Trust Scorecards v3</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+          content="AI 2025: Operational Trust Scorecards v3 - Advanced monitoring and reliability strategies"
+        />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v3" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

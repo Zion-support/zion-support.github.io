@@ -9,8 +9,9 @@ export default function BlogPost(): React.JSX.Element {
         <title>Enterprise AI Platforms 2025: Architecture, SLAs, and ROI</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog" />
+          content="Enterprise AI Platforms 2025: Architecture, SLAs, and ROI for modern AI infrastructure"
+        />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

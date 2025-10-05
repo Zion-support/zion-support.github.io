@@ -9,12 +9,9 @@ export default function BlogPost(): React.JSX.Element {
         <title>Operational Trust Scorecards v4 — SLIs → KPIs with Budgets</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4
+          content="Operational Trust Scorecards v4 - SLIs to KPIs with Budgets for AI systems"
         />
-      </Helmet>
-
-      <div className=" />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-operational-trust-v4" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

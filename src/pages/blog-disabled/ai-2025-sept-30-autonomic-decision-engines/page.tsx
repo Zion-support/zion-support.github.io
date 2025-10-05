@@ -9,13 +9,11 @@ export default function BlogPost(): React.JSX.Element {
         <title>Autonomic Decision Engines — Sub‑100ms, KPI‑Linked Actions</title>
         <meta 
           name="description" 
-          
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomic-decision-engines
+          content="Autonomic Decision Engines - Sub-100ms, KPI-Linked Actions for AI systems"
         />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-sept-30-autonomic-decision-engines" />
       </Helmet>
-
-      <div className=" />
-      </Helmet>
+      
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">

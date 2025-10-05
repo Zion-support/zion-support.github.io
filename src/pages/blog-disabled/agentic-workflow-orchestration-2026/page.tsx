@@ -7,8 +7,7 @@ export default function BlogPost(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Agentic Workflow Orchestration 2026 — Budgets, Canaries, Rollback</title>
-        <meta name="description" content="Blog post description" />
-        />
+        <meta name="description" content="Agentic Workflow Orchestration 2026 - Budgets, Canaries, Rollback strategies" />
         <link rel="canonical" href="https://ziontechgroup.com/blog/agentic-workflow-orchestration-2026" />
       </Helmet>
 

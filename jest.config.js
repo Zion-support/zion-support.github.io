@@ -2,10 +2,20 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/setupTests.tsx'],
   transform: {
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'] }],
+    '^.+\\.(ts|tsx)$': [
+      'ts-jest',
+      {
+        useESM: true,
+        tsconfig: {
+          jsx: 'react-jsx',
+          esModuleInterop: true,
+          allowSyntheticDefaultImports: true,
+        },
+      },
+    ],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react)/)',
+    'node_modules/(?!(react-error-boundary|@testing-library|react-helmet-async|framer-motion)/)',
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',
