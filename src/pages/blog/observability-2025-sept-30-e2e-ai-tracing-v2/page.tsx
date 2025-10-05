@@ -1,32 +1,34 @@
-// @ts-nocheck
+import React from "react";
+import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-const Page = () => {
+export default function BlogPage(): React.JSX.Element {
   return (
-    <div className="container mx-auto px-6 py-12 text-white">
-      <h1 className="text-3xl font-bold mb-4">E2E AI Tracing v2 — From Token to KPI with Budgets</h1>
-      <p className="text-zion-slate-light mb-6">
-        Span budgets, cost telemetry, and KPI‑linked rollback for trace‑driven reliability and cost control.
-      </p>
-      <div className="space-y-4 text-zion-slate-light">
-        <p>
-          Instrument prompts, tools, and calls with end‑to‑end traces that include cost and latency
-          budgets. Wire rollback playbooks to spans so incidents are contained in seconds without
-          slowing delivery.
-        </p>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>Span‑level budgets with alerts and automated actions</li>
-          <li>Cost telemetry and quality signals tied to KPIs</li>
-          <li>Rollback hooks that execute deterministically</li>
-          <li>Dashboards engineers actually use</li>
-        </ul>
-      </div>
-      <div className="mt-8">
-        <Link to="/blog" className="text-cyan-300 underline">Back to Blog</Link>
+    <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
+      <Helmet>
+        <title>Observability 2025 Sept 30 E2e Ai Tracing V2</title>
+        <meta 
+          name="description" 
+          content="Learn about observability 2025 sept 30 e2e ai tracing v2 and how it can benefit your enterprise." 
+        />
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/observability-2025-sept-30-e2e-ai-tracing-v2" 
+        />
+      </Helmet>
+
+      <div className="container mx-auto px-6 py-16">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Observability 2025 Sept 30 E2e Ai Tracing V2</h1>
+        <p className="text-zion-slate-light mb-8">Learn about observability 2025 sept 30 e2e ai tracing v2 and how it can benefit your enterprise.</p>
+        <div className="prose prose-invert max-w-3xl">
+          <p>
+            This comprehensive guide covers observability 2025 sept 30 e2e ai tracing v2 and provides practical insights for enterprise implementation.
+          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+        </div>
       </div>
     </div>
   );
-};
-
-export default Page;
-
+}

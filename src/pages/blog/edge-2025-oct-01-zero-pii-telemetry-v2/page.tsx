@@ -1,37 +1,34 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function ZeroPIITelemetryV2(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Zero‑PII Telemetry v2 — Sub‑100ms, Signed, Differentially Private</title>
-        <meta
-          name="description"
-          content="Scoped IDs, on‑device aggregation, DP noise, and attestations for privacy‑preserving metrics at the edge."
+        <title>Edge 2025 Oct 01 Zero Pii Telemetry V2</title>
+        <meta 
+          name="description" 
+          content="Learn about edge 2025 oct 01 zero pii telemetry v2 and how it can benefit your enterprise." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/edge-2025-oct-01-zero-pii-telemetry-v2" 
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Zero‑PII Telemetry v2</h1>
-        <p className="text-zion-slate-light mb-8">Sub‑100ms, Signed, Differentially Private</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Edge 2025 Oct 01 Zero Pii Telemetry V2</h1>
+        <p className="text-zion-slate-light mb-8">Learn about edge 2025 oct 01 zero pii telemetry v2 and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Ship privacy-preserving telemetry in under 100ms using scoped IDs,
-            on-device aggregation, and differential privacy. Use signed
-            attestations for trust and compliance.
+            This comprehensive guide covers edge 2025 oct 01 zero pii telemetry v2 and provides practical insights for enterprise implementation.
           </p>
-          <p>
-            We outline event schemas, device-side processing, aggregation windows,
-            DP calibration, and verification patterns that scale globally.
-          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-
