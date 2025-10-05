@@ -1,25 +1,3 @@
-<<<<<<< HEAD
-// SEO Optimization Script
-export const seoOptimizer = {
-  trackPageView: () => {
-    // Track page views for SEO
-    console.log('SEO tracking initialized');
-    
-    // Add structured data
-    const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Advanced AI and IT Solutions"
-    };
-    
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(structuredData);
-    document.head.appendChild(script);
-  }
-};
-=======
 // SEO optimization utilities
 export class SEOOptimizer {
   private static instance: SEOOptimizer;
@@ -172,4 +150,3 @@ Sitemap: https://ziontechgroup.com/sitemap.xml`;
 }
 
 export default SEOOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
