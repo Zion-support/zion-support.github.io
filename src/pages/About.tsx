@@ -8,12 +8,9 @@ import {
   Target, 
   Lightbulb, 
   Shield, 
-  Rocket,
   CheckCircle,
   ArrowRight,
   Globe,
-  Code,
-  Database,
   Zap
 } from 'lucide-react';
 
