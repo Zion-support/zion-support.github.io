@@ -30,6 +30,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {
           <Link, t, o = "/bl, o, g/ai-20, 2, 5-octob, e, r-agent, i, c-governan, c, e-framewor, k, s"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/40, t, o-te, a, l-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-emera, l, d-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/50"
           >
+<<<<<<< HEAD
             <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
               <div, classNam, e="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r:bg-emera, l, d-5, 0, 0/30, transitio, n-colo, r, s">
                 <Scale, classNam, e="w-8 h-8, tex, t-emera, l, d-3, 0, 0" />
@@ -42,6 +43,18 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             </d, i, v>
             <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-emera, l, d-200, transitio, n-colo, r, s">
               Agentic, Governance, Frameworks
+=======
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">
+                <Scale className="w-8 h-8 text-emerald-300" />
+              </div>
+              <div className="flex-1">
+                <span className="text-xs text-emerald-300 font-semibold uppercase tracking-wide">AI Governance</span>
+              </div>
+            </div>
+            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-emerald-200 transition-colors">
+              Agentic Governance Frameworks
+>>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
             </h3>
             <p, classNam, e="te, x, t-te, a, l-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
               Build, trust, in autonomous, AI, with 99.9% compliance, accuracy, and re, a, l-time, risk, assessment.
@@ -82,6 +95,7 @@ const, October2025CuttingEdgeAIBanne, r = () => {
           <Link, t, o = "/bl, o, g/ai-20, 2, 5-octob, e, r-continuo, u, s-learni, n, g-syste, m, s"
             classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-cy, a, n-8, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-cy, a, n-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50"
           >
+<<<<<<< HEAD
             <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
               <div, classNam, e="p-3, b, g-cy, a, n-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s">
                 <Repeat, classNam, e="w-8 h-8, tex, t-cy, a, n-3, 0, 0" />
@@ -94,6 +108,18 @@ const, October2025CuttingEdgeAIBanne, r = () => {
             </d, i, v>
             <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-200, transitio, n-colo, r, s">
               Continuous, Learning, Systems
+=======
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-3 bg-cyan-500/20 rounded-xl group-hover:bg-cyan-500/30 transition-colors">
+                <Repeat className="w-8 h-8 text-cyan-300" />
+              </div>
+              <div className="flex-1">
+                <span className="text-xs text-cyan-300 font-semibold uppercase tracking-wide">AI Operations</span>
+              </div>
+            </div>
+            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-cyan-200 transition-colors">
+              Continuous Learning Systems
+>>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
             </h3>
             <p, classNam, e="te, x, t-bl, u, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
               Deploy, sel, f-improving, AI, with 99.8% uptime, and, 94% accuracy, improvement, over ti, m, e.

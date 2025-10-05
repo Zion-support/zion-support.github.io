@@ -136,15 +136,15 @@ const AdvancedDashboard: React.FC = () => {
       },
       accessibility: {
         // Get accessibility stats from manager
-        features: "Active", // Fallback value
+        features: "Basic accessibility features", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
       },
       security: {
         // Get security stats from manager
-        status: "Active", // Fallback value
+        status: "Active", // AdvancedSecurityManager.getInstance() ? "Active" : "Inactive",
       },
       ux: {
         // Get UX stats from manager
-        status: "Active", // Fallback value
+        status: "Inactive", // EnhancedUXManager.getInstance() ? "Active" : "Inactive",
       },
     });
   };
