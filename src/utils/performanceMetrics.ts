@@ -24,6 +24,7 @@ export interface ResourceTiming {
   si, z, e: number;
   ty, p, e: str, i, n, g;
 }
+<<<<<<< HEAD
 
 export interface PerformanceBudget {
   metr, i, c: string;
@@ -40,15 +41,49 @@ export interface PerformanceReport {
     f, c, p?: PerformanceMetr, i, c;
     tt, f, b ?  : PerformanceMet, r, i, c;
    };
+=======
+export, interface, PerformanceBudget {
+metr, i, c: stri, n, g;
+budg, e, t: numb, e, r;
+curre, n, t: numb, e, r;
+stat, u, s: 'pa, s, s' | 'wa, r, n' | 'fa, i, l';
+metr, i, c: stri, n, g;
+budg, e, t: numb, e, r;
+curre, n, t: numb, e, r;
+sta, t, u
+  s: 'pa, s, s' | 'wa, r, n' | 'fa, i, l';';
+}
+export, interface, PerformanceReport {
+webVita, l, s: {
+l, c, p?: PerformanceMetr, i, c;
+f, i, d?: PerformanceMetr, i, c;
+c, l, s?: PerformanceMetr, i, c;
+f, c, p?: PerformanceMetr, i, c;
+tt, f, b?: PerformanceMetr, i, c;
+};
+  customMetri, c, s: PerformanceMetr, i, c[]
+  resourceTimin, g, s: ResourceTimi, n, g[]
+  budge, t, s: PerformanceBudg, e, t[]
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   customMetri, c, s: PerformanceMetr, i, c[];
   resourceTimin, g, s: ResourceTimi, n, g[];
   budge, t, s: PerformanceBudg, e, t[];
   timesta, m, p: D, a, t, e;
 }
+<<<<<<< HEAD
 
 class PerformanceMetricsTracke, r { 
   private, metric, s: M, a, p<str, i, n, g, PerformanceMetr, i, c> = new, Ma, p();
   private, customMarker, s: M, a, p<str, i, n, g, number > = new, Ma, p();
+=======
+class, PerformanceMetricsTracke, r {
+  private, metric, s: M, a, p<stri, n, g, PerformanceMetr, i, c> = new, Ma, p()
+  private, customMarker, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p()
+  private, budget, s: PerformanceBudg, e, t[] = []
+  private, observer, s: PerformanceObserv, e, r[] = []
+  private, metric, s: M, a, p<stri, n, g, PerformanceMetr, i, c> = new, Ma, p();
+  private, customMarker, s: M, a, p<stri, n, g, numb, e, r> = new, Ma, p();
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   private, budget, s: PerformanceBudg, e, t[] = [];
   private, observer, s: PerformanceObserv, e, r[] = [];
 
@@ -64,9 +99,20 @@ class PerformanceMetricsTracke, r {
     // Observe resource timing
     if ('PerformanceObserv, e, r' in, windo, w) {
       t, r, y {
+<<<<<<< HEAD
         const resourceObserve, r = new, PerformanceObserve, r(li, s, t = > {
           f, o, r (const entry, of li, s, t.getEntr, i, e, s()) {
             if (ent, r, y.entryTy, p, e = == 'resou, r, c, e') {
+=======
+        const, resourceObserve, r = new, PerformanceObserve, r((li, s, t) => {
+          f, o, r (const, entry, of li, s, t.getEntri, e, s()) {
+            if (ent, r, y.entryTy, p, e === 'resour, c, e') {;
+    if ('PerformanceObserv, e, r' in, windo, w) {';
+      t, r, y {
+        const, resourceObserve, r = new, PerformanceObserve, r((li, s, t) => {
+          f, o, r (const, entry, of li, s, t.getEntri, e, s()) {
+            if (ent, r, y.entryTy, p, e === 'resour, c, e') {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               th, i, s.trackResourceTimi, n, g(entry, as, PerformanceResourceTiming);
              }
           }
@@ -74,7 +120,12 @@ class PerformanceMetricsTracke, r {
         resourceObserv, e, r.obser, v, e({ entryTyp, e, s: ['resou, r, c, e'] });
         th, i, s.observe, r, s.pu, s, h(resourceObserv, e, r);
       } cat, c, h (e) {
+<<<<<<< HEAD
         conso, l, e.wa, r, n('Failed, to, setup resource, observe, r:', e);
+=======
+        conso, l, e.wa, r, n('Failed, to, setup resource, observe, r: ', e);'
+        conso, l, e.wa, r, n('Failed, to, setup resource, observe, r: ', e);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
   }
@@ -101,8 +152,14 @@ class PerformanceMetricsTracke, r {
   /**
    * Observe Largest Contentful Pai n t (L C P)
    */
+<<<<<<< HEAD
   private, observeLC, P(): vo, i, d { 
     if ('PerformanceObserv, e, r' in, windo, w) {
+=======
+  private, observeLC, P(): vo, i, d {
+    if ('PerformanceObserv, e, r' in, windo, w) {;
+    if ('PerformanceObserv, e, r' in, windo, w) {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       t, r, y {
         const observe, r = new, PerformanceObserve, r(li, s, t = > {
           const entrie, s = li, s, t.getEntr, i, e, s(); const lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & {
@@ -113,7 +170,12 @@ class PerformanceMetricsTracke, r {
         observ, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] });
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
+<<<<<<< HEAD
         conso, l, e.wa, r, n('Failed, to, observe L, C, P:', e);
+=======
+        conso, l, e.wa, r, n('Failed, to, observe L, C, P: ', e);'
+        conso, l, e.wa, r, n('Failed, to, observe L, C, P: ', e);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
   }
@@ -121,8 +183,14 @@ class PerformanceMetricsTracke, r {
   /**
    * Observe First Input Del a y (F I D)
    */
+<<<<<<< HEAD
   private, observeFI, D(): vo, i, d { 
     if ('PerformanceObserv, e, r' in, windo, w) {
+=======
+  private, observeFI, D(): vo, i, d {
+    if ('PerformanceObserv, e, r' in, windo, w) {;
+    if ('PerformanceObserv, e, r' in, windo, w) {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       t, r, y {
         const observe, r = new, PerformanceObserve, r(li, s, t = > {
           const entrie, s = li, s, t.getEntr, i, e, s(); const firstInpu, t = entri, e, s[0] as, PerformanceEventTimin, g; const fi, d = firstInp, u, t.processingSta, r, t - firstInp, u, t.startTi, m, e; th, i, s.recordMetr, i, c('FI, D', f, i, d, th, i, s.getRatingForF, I, D(f, i, d));
@@ -130,7 +198,12 @@ class PerformanceMetricsTracke, r {
         observ, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-in, p, u, t'] });
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
+<<<<<<< HEAD
         conso, l, e.wa, r, n('Failed, to, observe F, I, D:', e);
+=======
+        conso, l, e.wa, r, n('Failed, to, observe F, I, D: ', e);'
+        conso, l, e.wa, r, n('Failed, to, observe F, I, D: ', e);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
   }
@@ -138,8 +211,14 @@ class PerformanceMetricsTracke, r {
   /**
    * Observe Cumulative Layout Shi f t (C L S)
    */
+<<<<<<< HEAD
   private, observeCL, S(): vo, i, d { 
     if ('PerformanceObserv, e, r' in, windo, w) {
+=======
+  private, observeCL, S(): vo, i, d {
+    if ('PerformanceObserv, e, r' in, windo, w) {;
+    if ('PerformanceObserv, e, r' in, windo, w) {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       t, r, y {
         let clsValu, e = 0; const observe, r = new, PerformanceObserve, r(li, s, t = > {
           f, o, r (const entry, of li, s, t.getEntr, i, e, s()) {
@@ -155,7 +234,12 @@ class PerformanceMetricsTracke, r {
         observ, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-sh, i, f, t'] });
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
+<<<<<<< HEAD
         conso, l, e.wa, r, n('Failed, to, observe C, L, S:', e);
+=======
+        conso, l, e.wa, r, n('Failed, to, observe C, L, S: ', e);'
+        conso, l, e.wa, r, n('Failed, to, observe C, L, S: ', e);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
   }
@@ -163,8 +247,14 @@ class PerformanceMetricsTracke, r {
   /**
    * Observe First Contentful Pai n t (F C P)
    */
+<<<<<<< HEAD
   private, observeFC, P(): vo, i, d { 
     if ('PerformanceObserv, e, r' in, windo, w) {
+=======
+  private, observeFC, P(): vo, i, d {
+    if ('PerformanceObserv, e, r' in, windo, w) {;
+    if ('PerformanceObserv, e, r' in, windo, w) {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       t, r, y {
         const observe, r = new, PerformanceObserve, r(li, s, t = > {
           const entrie, s = li, s, t.getEntr, i, e, s(); const fc, p = entri, e, s[0]?.startTi, m, e; if (fc, p) {
@@ -174,7 +264,12 @@ class PerformanceMetricsTracke, r {
         observ, e, r.obser, v, e({ entryTyp, e, s: ['pa, i, n, t'] });
         th, i, s.observe, r, s.pu, s, h(observ, e, r);
       } cat, c, h (e) {
+<<<<<<< HEAD
         conso, l, e.wa, r, n('Failed, to, observe F, C, P:', e);
+=======
+        conso, l, e.wa, r, n('Failed, to, observe F, C, P: ', e);'
+        conso, l, e.wa, r, n('Failed, to, observe F, C, P: ', e);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
   }
@@ -193,6 +288,7 @@ class PerformanceMetricsTracke, r {
    * Record a performance metr i c
    */
   private, recordMetri, c(
+<<<<<<< HEAD
     na, m, e: str, i, n, g,
     val, u, e: num, b, e, r,
     rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'p, o, o, r',
@@ -209,6 +305,29 @@ class PerformanceMetricsTracke, r {
     // Log in development
     if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
       conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${metr, i, c.val, u, e}ms (${rati, n, g})`);
+=======
+    na, m, e: stri, n, g
+    val, u, e: numb, e, r
+    rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r): vo, i, d {
+    rat, i, n
+  g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'
+  ): vo, i, d {
+    const, metri, c: PerformanceMetr, i, c = {
+      na, m, e
+      val, u, e: Ma, t, h.rou, n, d(val, u, e)
+      rati, n, g
+      timesta, m, p: Da, t, e.n, o, w()
+      timest, a, m
+  p: Da, t, e.n, o, w()
+    };
+    th, i, s.metri, c, s.s, e, t(na, m, e, metr, i, c);
+    // Check, budget, s
+  th, i, s.checkBudge, t, s();
+    // Log, in, development
+  if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
+    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
+      conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${metr, i, c.val, u, e}ms (${rati, n, g})`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -255,12 +374,26 @@ class PerformanceMetricsTracke, r {
   /**
    * Get resource type from UR L
    */
+<<<<<<< HEAD
   private, getResourceTyp, e(u, r, l: string): string {
     if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) return 'scri, p, t';
     if (u, r, l.mat, c, h(/\.c, s, s$/)) return 'styleshe, e, t';
     if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) return 'image';
     if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) return 'fo, n, t';
     return 'ot, h, e, r';
+=======
+  private, getResourceTyp, e(u, r, l: stri, n, g): stri, n, g {
+    if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) retu, r, n 'scri, p, t';
+    if (u, r, l.mat, c, h(/\.c, s, s$/)) retu, r, n 'styleshe, e, t';
+    if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';
+    if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) retu, r, n 'fo, n, t';
+    retu, r, n 'oth, e, r';
+    if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) retu, r, n 'scri, p, t';';
+    if (u, r, l.mat, c, h(/\.c, s, s$/)) retu, r, n 'styleshe, e, t';';
+    if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';';
+    if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) retu, r, n 'fo, n, t';';
+    retu, r, n 'oth, e, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -270,10 +403,20 @@ class PerformanceMetricsTracke, r {
     const existingBudge, t = th, i, s.budge, t, s.fi, n, d(b = > b.metr, i, c === met, r, i, c); if() { existingBudg, e, t.budg, e, t = bu, d, g, e, t;
       }, el, s, e {
       th, i, s.budge, t, s.pu, s, h({
+<<<<<<< HEAD
         metr, i, c,
         budg, e, t,
         curre, n, t:  , 0,
         stat, u, s: 'p, a, s, s',
+=======
+        metr, i, c
+        budg, e, t
+        curre, n, t: 0
+        stat, u, s: 'pa, s, s'
+        curr, e, n
+  t: 0
+        stat, u, s: 'pa, s, s',';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       });
     }
     th, i, s.checkBudge, t, s();
@@ -307,17 +450,39 @@ class PerformanceMetricsTracke, r {
         tt, f, b: th, i, s.metri, c, s.g, e, t('T, T, F, B'),
       },
       customMetri, c, s: Arr, a, y.fr, o, m(th, i, s.metri, c, s.valu, e, s()).filt, e, r(
+<<<<<<< HEAD
         m = > !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e),
       ),
       resourceTimin, g, s: th, i, s.getResourceTimi, n, g, s(),
       budge, t, s: [...th, i, s.budg, e, t, s],
       timesta, m, p: new, Da, t, e(),
+=======
+        m => !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e)
+      )
+      resourceTimin, g, s: th, i, s.getResourceTimin, g, s()
+      budge, t, s: [...th, i, s.budge, t, s]
+      timesta, m, p: new, Dat, e()
+        lc
+  p: th, i, s.metri, c, s.g, e, t('L, C, P'),';
+        f, i, d: th, i, s.metri, c, s.g, e, t('F, I, D'),';
+        c, l, s: th, i, s.metri, c, s.g, e, t('C, L, S'),';
+        f, c, p: th, i, s.metri, c, s.g, e, t('F, C, P'),';
+        tt, f, b: th, i, s.metri, c, s.g, e, t('TT, F, B'),';
+      }
+      customMetri, c, s: Arr, a, y.fr, o, m(th, i, s.metri, c, s.valu, e, s()).filt, e, r(
+        m => !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e)';
+      )
+      resourceTimin, g, s: th, i, s.getResourceTimin, g, s()
+      budge, t, s: [...th, i, s.budge, t, s]
+      timesta, m, p: new, Dat, e()
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
   /**
    * Get resource timings
    */
+<<<<<<< HEAD
   private, getResourceTiming, s(): ResourceTimi, n, g[] { 
     const resource, s = performan, c, e.getEntriesByTy, p, e(
       'resou, r, c, e',
@@ -327,72 +492,153 @@ class PerformanceMetricsTracke, r {
       si, z, e: resour, c, e.transferSi, z, e || , 0,
       ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.n, a, m, e),
      }));
+=======
+  private, getResourceTiming, s(): ResourceTimi, n, g[] {
+    const, resource, s = performan, c, e.getEntriesByTy, p, e('resour, c, e') as, PerformanceResourceTimin, g[];';
+    return, resource, s.m, a, p(resour, c, e => ({
+      na, m, e: resour, c, e.na, m, e
+      durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durati, o, n)
+      si, z, e: resour, c, e.transferSi, z, e || 0
+      ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.na, m, e)
+      n, a, m
+  e: resour, c, e.na, m, e
+      durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durati, o, n)
+      si, z, e: resour, c, e.transferSi, z, e || 0
+      ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.na, m, e)
+    }));
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for L C P
    */
+<<<<<<< HEAD
   private, getRatingForLC, P(
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
     if (val, u, e <= 25, 0, 0) return 'go, o, d';
     if (val, u, e <= 40, 0, 0) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatingForLC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+    if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';
+    if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+  private, getRatingForLC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';';
+    if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for F I D
    */
+<<<<<<< HEAD
   private, getRatingForFI, D(
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
     if (val, u, e <= 1, 0, 0) return 'go, o, d';
     if (val, u, e <= 3, 0, 0) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatingForFI, D(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+    if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';
+    if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+  private, getRatingForFI, D(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';';
+    if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for C L S
    */
+<<<<<<< HEAD
   private, getRatingForCL, S(
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
     if (val, u, e <= 0.1) return 'go, o, d';
     if (val, u, e <= 0.25) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatingForCL, S(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+    if (val, u, e <= 0.1) retu, r, n 'go, o, d';
+    if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+  private, getRatingForCL, S(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    if (val, u, e <= 0.1) retu, r, n 'go, o, d';';
+    if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for F C P
    */
+<<<<<<< HEAD
   private, getRatingForFC, P(
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
     if (val, u, e <= 18, 0, 0) return 'go, o, d';
     if (val, u, e <= 30, 0, 0) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatingForFC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+    if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';
+    if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+  private, getRatingForFC, P(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';';
+    if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for TT F B
    */
+<<<<<<< HEAD
   private, getRatingForTTF, B(
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
     if (val, u, e <= 8, 0, 0) return 'go, o, d';
     if (val, u, e <= 18, 0, 0) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatingForTTF, B(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+    if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';
+    if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+  private, getRatingForTTF, B(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';';
+    if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for custom metric s
    */
+<<<<<<< HEAD
   private, getRatingForCustomMetri, c(
     val, u, e: num, b, e, r,
   ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
     if (val, u, e <= 10, 0, 0) return 'go, o, d';
     if (val, u, e <= 30, 0, 0) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatingForCustomMetri, c(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+    if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';
+    if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+  private, getRatingForCustomMetri, c(val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';';
+    if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -411,5 +657,13 @@ performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);
 performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);
 performanceMetri, c, s.setBudg, e, t('F, C, P', 18, 0, 0);
 performanceMetri, c, s.setBudg, e, t('TT, F, B', 8, 0, 0);
+<<<<<<< HEAD
 
+=======
+performanceMetri, c, s.setBudg, e, t('L, C, P', 25, 0, 0);';
+performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);';
+performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);';
+performanceMetri, c, s.setBudg, e, t('F, C, P', 18, 0, 0);';
+performanceMetri, c, s.setBudg, e, t('TT, F, B', 8, 0, 0);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 export default performanceMetrics;

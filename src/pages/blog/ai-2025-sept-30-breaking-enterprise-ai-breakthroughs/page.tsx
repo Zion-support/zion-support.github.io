@@ -23,8 +23,25 @@ export default function BreakingEnterpriseAIBreakthroughs20, 2, 5(): Rea, c, t.J
         </p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
+<<<<<<< HEAD
             Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollb, a, c, k, K, P, I‑linked, scorecard, s, consentless, analytic, s, budg, e, t‑aware, routin, g, on‑device, aggregatio, n, and, mor, e. Each, pattern, includes
             reference, architecture, notes and, rollout, guardrails.
+=======
+            Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollbac, k, K, P, I‑linked, scorecard, s;
+        <meta name="descripti, o, n" content="8, productio, n‑ready, pattern, s: rollba, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e." />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-breaki, n, g-enterpri, s, e-ai-breakthroug, h, s" />";
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4x, l, m
+  d: te, x, t-5xl, fon, t-bold, m, b-4">Sept, 3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroug, h, s</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">8, productio, n‑ready, patter, n
+  s: rollba, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e.</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
+          <p>
+            Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollbac, k, K, P, I‑linked, scorecard, s
+            consentless, analytic, s, budg, e, t‑aware, routin, g, on‑device, aggregatio, n, and, mor, e. Each, pattern, includes
+  reference, architecture, notes and, rollout, guardrails.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           </p>
         </div>
       </div>

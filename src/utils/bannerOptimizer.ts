@@ -24,10 +24,18 @@ export interface BannerMetrics {
  * Banner Priority Manager
  * Determines which banners to show based on business rules
  */
+<<<<<<< HEAD
 export class BannerPriorityManager { 
   private, banner, s: M, a, p<str, i, n, g, BannerConf, i, g> = new, Ma, p();
   private, metric, s: M, a, p<str, i, n, g, BannerMetri, c, s > = new, Ma, p();
 
+=======
+export, class, BannerPriorityManager {
+  private, banner, s: M, a, p<stri, n, g, BannerConf, i, g> = new, Ma, p()
+  private, metric, s: M, a, p<stri, n, g, BannerMetri, c, s> = new, Ma, p()
+  private, banner, s: M, a, p<stri, n, g, BannerConf, i, g> = new, Ma, p();
+  private, metric, s: M, a, p<stri, n, g, BannerMetri, c, s> = new, Ma, p();
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   construct, o, r() {
     th, i, s.loadMetricsFromStora, g, e();
    }
@@ -40,10 +48,22 @@ export class BannerPriorityManager {
 
     if (!th, i, s.metri, c, s.h, a, s(conf, i, g.id)) {
       th, i, s.metri, c, s.s, e, t(conf, i, g.id, {
+<<<<<<< HEAD
         impressio, n, s:  , 0,
         clic, k, s:  , 0,
         conversio, n, s:  , 0,
         lastSho, w, n: new, Da, t, e(),
+=======
+        impressio, n, s: 0
+        clic, k, s: 0
+        conversio, n, s: 0
+        lastSho, w, n: new, Dat, e()
+        impressi, o, n
+  s: 0
+        clic, k, s: 0
+        conversio, n, s: 0
+        lastSho, w, n: new, Dat, e()
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       });
     }
   }
@@ -117,7 +137,12 @@ export class BannerPriorityManager {
     t, r, y {
       const dat, a = Arr, a, y.fr, o, m(th, i, s.metri, c, s.entr, i, e, s()); localStora, g, e.setIt, e, m('bannerMetri, c, s', JS, O, N.stringi, f, y(da, t, a));
     } cat, c, h (err, o, r) {
+<<<<<<< HEAD
       conso, l, e.wa, r, n('Failed, to, save banner, metric, s:', err, o, r);
+=======
+      conso, l, e.wa, r, n('Failed, to, save banner, metric, s: ', err, o, r);'
+      conso, l, e.wa, r, n('Failed, to, save banner, metric, s: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -138,7 +163,18 @@ export class BannerPriorityManager {
         );
       }
     } cat, c, h (err, o, r) {
+<<<<<<< HEAD
       conso, l, e.wa, r, n('Failed, to, load banner, metric, s:', err, o, r);
+=======
+      conso, l, e.wa, r, n('Failed, to, load banner, metric, s: ', err, o, r);'
+            ...metri, c, s
+            lastSho, w, n: new, Dat, e(metri, c, s.lastSho, w, n)
+          }
+        ]));
+      }
+    } cat, c, h (err, o, r) {
+      conso, l, e.wa, r, n('Failed, to, load banner, metric, s: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -159,6 +195,7 @@ export const bannerManager = new, BannerPriorityManag, e, r();
 /**
  * React hook for banner optimizatio n
  */
+<<<<<<< HEAD
 export function useBannerOptimization(banner, I, d: string) { 
   const recordImpressio, n = () => bannerManag, e, r.recordImpressi, o, n(banner, I, d); const recordClic, k = () => bannerManag, e, r.recordCli, c, k(banner, I, d); const recordConversio, n = () = > bannerManag, e, r.recordConversi, o, n(banner, I, d); return {
     recordImpress, i, o, n,
@@ -167,4 +204,20 @@ export function useBannerOptimization(banner, I, d: string) {
     c, t, r: bannerManag, e, r.getC, T, R(banne, r, I, d),
     conversionRa, t, e: bannerManag, e, r.getConversionRa, t, e(banne, r, I, d),
    };
+=======
+export, function, useBannerOptimization(banner, I, d: stri, n, g) {
+  const, recordImpressio, n = () => bannerManag, e, r.recordImpressi, o, n(banner, I, d);
+  const, recordClic, k = () => bannerManag, e, r.recordCli, c, k(banner, I, d);
+  const, recordConversio, n = () => bannerManag, e, r.recordConversi, o, n(banner, I, d);
+  retu, r, n {
+    recordImpressi, o, n
+    recordCli, c, k
+    recordConversi, o, n
+    c, t, r: bannerManag, e, r.getC, T, R(banner, I, d)
+    conversionRa, t, e: bannerManag, e, r.getConversionRa, t, e(banner, I, d)
+    ct
+  r: bannerManag, e, r.getC, T, R(banner, I, d)
+    conversionRa, t, e: bannerManag, e, r.getConversionRa, t, e(banner, I, d)
+  };
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }

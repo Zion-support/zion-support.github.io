@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+import, Header, from "../../componen, t, s/Head, e, r";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 impo, r, t {
   ArrowLe, f, t,
   ArrowRig, h, t,
@@ -14,6 +19,7 @@ import Header, from '../../componen, t, s/Head, e, r';
 const Fortune100AutonomousOperationsTransformatio, n = () => { 
   return (
     <>
+<<<<<<< HEAD
       <Helm, e, t>
         <title>
           Fortune, 10, 0: $650M, Value, Through Autonomous, Operation, s | Zion, Tech, Group
@@ -35,6 +41,27 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
           >
             <ArrowLeft, className='w-4 h-4, m, r-2' />
             Back, to, Case Studi, e, s
+=======
+      <Helmet>
+        <title>Fortune, 10, 0: $650M, Value, Through Autonomous, Operation, s | Zion, Tech, Group</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Fortune, 100, financial services, company, creates $650M, annual, value through, A, I-powered, autonomous, operations. 85% cost, reductio, n, 99.7% accura, c, y, 40+ workflows, in, 90 da, y, s." /><me, t, a
+  na, m, e="keywor, d, s"
+          content="autonomous, operations, case stu, d, y, AI, transformatio, n, business, automatio, n, operational, efficienc, y, Fortune, 10, 0, R, O, I" /></Helmet>
+      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-9, 0, 0">";
+        <Head, e, r   />
+        <article, className="container, m, x-auto, p, x-6, p, y-20">
+        <article, className="container, m, x-auto, p, x-6, p, y-20">";
+          {/* Back, Lin, k */};
+          <Li, n, k
+  to="/ca, s, e-studi, e, s"
+            classNa, m, e="inli, n, e-flex, item, s-center, tex, t-cy, a, n-400, hove, r: te, x, t-cy, a, n-300, m, b-8, transitio, n-colo, r, s"
+          >
+            <ArrowLeft, className="w-4 h-4, m, r-2  />
+            <ArrowLeft, className="w-4 h-4, m, r-2" />";
+            Back, to, Case Studi, e, s;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           </Li, n, k>
 
           {/* He, a, d, e, r */}
@@ -46,6 +73,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
               <span, className='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
                 🏦 Financial, Service, s
               </sp, a, n>
+<<<<<<< HEAD
               <span, className='te, x, t-bl, u, e-2, 0, 0'>12-month, transformatio, n</sp, a, n>
             </div>
 
@@ -53,6 +81,16 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
               Fortune, 100, Enterprise:
               <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, m, t-2'>
                 $650M, Value, Creation Through, Autonomous, Business Operatio, n, s
+=======
+              <span, className="te, x, t-bl, u, e-2, 0, 0">12-month, transformatio, n</sp, a, n>";
+            </d, i, v>
+            <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
+              Fortune, 100, Enterprise: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, m, t-2">"
+            <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
+              Fortune, 100, Enterpris
+  e: <span, className="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, m, t-2">";
+                $650M, Value, Creation Through, Autonomous, Business Operatio, n, s;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </sp, a, n>
             </h1>
 
@@ -62,6 +100,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
             </p>
 
             {/* Key, Metric, s */}
+<<<<<<< HEAD
             <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6'>
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'>
                 <DollarSign, className='w-8 h-8, tex, t-gre, e, n-400, m, b-2' />
@@ -88,6 +127,51 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
             </div>
           </div>
 
+=======
+            <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">"
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30">
+                <DollarSign, className="w-8 h-8, tex, t-gre, e, n-400, m, b-2  />
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$65, 0, M</d, i, v>
+                <div, className="te, x, t-gre, e, n-200, tex, t-sm">Annual, Value, Creation</d, i, v>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30">
+                <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-400, m, b-2  />
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">85%</d, i, v>
+                <div, className="te, x, t-bl, u, e-200, tex, t-sm">Cost, Reductio, n</d, i, v>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
+                <Zap, className="w-8 h-8, tex, t-purp, l, e-400, m, b-2  />
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.7%</d, i, v>
+                <div, className="te, x, t-purp, l, e-200, tex, t-sm">Accuracy, Rat, e</d, i, v>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">
+                <Users, className="w-8 h-8, tex, t-oran, g, e-400, m, b-2  />
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">3,6, 1, 1%</d, i, v>
+                <div, className="te, x, t-oran, g, e-200, tex, t-sm">3-Year, RO, I</d, i, v>
+            <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30">";
+                <DollarSign, className="w-8 h-8, tex, t-gre, e, n-400, m, b-2" />";
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$65, 0, M</d, i, v>";
+                <div, className="te, x, t-gre, e, n-200, tex, t-sm">Annual, Value, Creation</d, i, v>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30">";
+                <TrendingUp, className="w-8 h-8, tex, t-bl, u, e-400, m, b-2" />";
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">85%</d, i, v>";
+                <div, className="te, x, t-bl, u, e-200, tex, t-sm">Cost, Reductio, n</d, i, v>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">";
+                <Zap, className="w-8 h-8, tex, t-purp, l, e-400, m, b-2" />";
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.7%</d, i, v>";
+                <div, className="te, x, t-purp, l, e-200, tex, t-sm">Accuracy, Rat, e</d, i, v>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">";
+                <Users, className="w-8 h-8, tex, t-oran, g, e-400, m, b-2" />";
+                <div, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">3,6, 1, 1%</d, i, v>";
+                <div, className="te, x, t-oran, g, e-200, tex, t-sm">3-Year, RO, I</d, i, v>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           {/* Executive, Summar, y */}
           <div, className='m, a, x-w-5xl, m, x-auto, m, b-16'>
             <div, className='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, border, border-bl, u, e-4, 0, 0/30'>
@@ -97,14 +181,24 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
               <p, className='te, x, t-bl, u, e-100, tex, t-lg, m, b-6, leadin, g-relax, e, d'>
                 A, Fortune, 100 financial, services, company wi, t, h , 8, 0,0, 0, 0+ employees, globally, faced mounting, operational, challenges: 2.3M, manual, transactions per, mon, t, h, $420M, in, annual operational, costs, growing at, 1, 5% Y, o, Y, and, a, 3.2% error, rate, costing $45M, annuall, y.
               </p>
+<<<<<<< HEAD
               <p, classNam, e = 'te, x, t-bl, u, e-100, tex, t-lg, leadin, g-relax, e, d'>
                 Through, our, autonomous business, operations, platfor, m, we, transformed, their entire, enterprise, in 12, month, s, with, the, initial deployment, completed, in just, 90, days. The, results, exceeded all, expectation, s: $650M, in, annual value, creati, o, n, 85%
                 cost, reductio, n, 99.7% accura, c, y, and, complete, transformation of, business, operations across, financ, e, HR, operatio, n, s, sal, e, s, and, suppor, t.
+=======
+              <p, className="te, x, t-bl, u, e-100, tex, t-lg, leadin, g-relax, e, d">
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">";
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, border, border-bl, u, e-4, 0, 0/30">";
+              <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">Executive, Summar, y</h2>";
+              <p, className="te, x, t-bl, u, e-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">";
+                A, Fortune, 100 financial, services, company with, 8, 0,0, 0, 0+ employees, globally, faced mounting, operational, challenges: 2.3M, manual, transactions per, mont, h, $420M, in, annual operational, costs, growing at, 1, 5% Y, o, Y, and, a, 3.2% error, rate, costing $45M, annuall, y.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </p>
             </div>
           </div>
 
           {/* The, Challeng, e */}
+<<<<<<< HEAD
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>
               The, Challeng, e
@@ -121,6 +215,25 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                     <sp, a, n>
                       2.3M, manual, transactions per, month, across 15, countrie, s
                     </sp, a, n>
+=======
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8">The, Challeng, e</h2>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8">"
+              <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-r, e, d-4, 0, 0/30">
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Operational, Inefficiencie, s</h3>
+                <ul, className="spa, c, e-y-3, tex, t-r, e, d-1, 0, 0">
+                  <li, className="flex, item, s-start, ga, p-2">
+                    <div, className="w-2 h-2, b, g-r, e, d-400, rounde, d-full, m, t-2"></d, i, v>
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8">The, Challeng, e</h2>";
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-r, e, d-4, 0, 0/30">";
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Operational, Inefficiencie, s</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-r, e, d-1, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-2">";
+                    <div, className="w-2 h-2, b, g-r, e, d-400, rounde, d-full, m, t-2"></d, i, v>";
+                    <sp, a, n>2.3M, manual, transactions per, month, across 15, countrie, s</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                   <li, className='flex, item, s-start, ga, p-2'>
                     <div, className='w-2 h-2, b, g-r, e, d-400, rounde, d-full, m, t-2' />
@@ -172,11 +285,38 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       Enable, 2, 4/7, global, operations without, offshore, labor
                     </sp, a, n>
                   </li>
+<<<<<<< HEAD
                   <li, className='flex, item, s-start, ga, p-2'>
                     <CheckCircle, className='w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0' />
                     <sp, a, n>
                       Maintain, regulatory, compliance across, all, jurisdictions
                     </sp, a, n>
+=======
+                  <li, className="flex, item, s-start, ga, p-2">
+                    <CheckCircle, className="w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0  />
+              <div, className="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-amb, e, r-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-yell, o, w-4, 0, 0/30">";
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Strategic, Imperative, s</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-yell, o, w-1, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-2">";
+                    <CheckCircle, className="w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0" />";
+                    <sp, a, n>Reduce, operational, costs by, 6, 0%+ within, 18, months</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-2">";
+                    <CheckCircle, className="w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0" />";
+                    <sp, a, n>Improve, processing, speed by, 10, x</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-2">";
+                    <CheckCircle, className="w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0" />";
+                    <sp, a, n>Achieve, 9, 9.5%+ accuracy, across, all operatio, n, s</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-2">";
+                    <CheckCircle, className="w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0" />";
+                    <sp, a, n>Enable, 2, 4/7, global, operations without, offshore, labor</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-2">";
+                    <CheckCircle, className="w-5 h-5, tex, t-yell, o, w-400, m, t-0.5, fle, x-shri, n, k-0" />";
+                    <sp, a, n>Maintain, regulatory, compliance across, all, jurisdictions</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                 </ul>
               </div>
@@ -184,6 +324,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
           </div>
 
           {/* The, Solutio, n */}
+<<<<<<< HEAD
           <div, className='m, a, x-w-5xl, m, x-auto, m, b-16'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>The, Solutio, n</h2>
 
@@ -200,6 +341,23 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                   <div, className='bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-l, g, w-1, 0, h-10, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0'>
                     1
                   </div>
+=======
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8">The, Solutio, n</h2>
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, border, border-bl, u, e-4, 0, 0/30, m, b-8">"
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Autonomous, Business, Operations Platfo, r, m</h3>
+              <p, className="te, x, t-bl, u, e-100, m, b-6, leadin, g-relax, e, d">
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8">The, Solutio, n</h2>";
+            <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, border, border-bl, u, e-4, 0, 0/30, m, b-8">";
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Autonomous, Business, Operations Platfo, r, m</h3>";
+              <p, className="te, x, t-bl, u, e-100, m, b-6, leadin, g-relax, e, d">";
+                We, deployed, a comprehensive, autonomous, operations platform, with, five core, laye, r
+  s: </p>
+              <div, className="spa, c, e-y-4">";
+                <div, className="flex, item, s-start, ga, p-4">";
+                  <div, className="bg-bl, u, e-500, tex, t-white, fon, t-bold, tex, t-l, g, w-1, 0, h-10, rounde, d-full, flex, items-center, justif, y-center, fle, x-shri, n, k-0">1</d, i, v>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   <d, i, v>
                     <h4, className='te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2'>
                       Da, t, a & Integration, Laye, r
@@ -290,6 +448,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                   </p>
                 </div>
                 <d, i, v>
+<<<<<<< HEAD
                   <h4, classNam, e = 'te, x, t-lg, fon, t-semibold, tex, t-gre, e, n-300, m, b-2'>
                     Phas, e, 3: Laun, c, h & Sca, l, e (Days, 6, 1-9, 0)
                   </h4>
@@ -301,6 +460,24 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
             </div>
           </div>
 
+=======
+                  <h4, className="te, x, t-lg, fon, t-semibold, tex, t-gre, e, n-300, m, b-2">Phas, e, 3: Laun, c, h & Sca, l, e (Days, 6, 1-90)</h4>"
+                  <p, className="te, x, t-gre, e, n-100, tex, t-sm">Pilot, deployment, of 5, workflow, s, validati, o, n, fu, l, l-scale, rollout, to 40+ workflo, w, s</p>
+                  <h4, className="te, x, t-lg, fon, t-semibold, tex, t-gre, e, n-300, m, b-2">Phas, e, 1: Discove, r, y & Assessme, n, t (Day, s, 1-30)</h4>";
+                  <p, className="te, x, t-gre, e, n-100, tex, t-sm">Process, mappin, g, data, assessmen, t, ROI, modelin, g, architecture, desig, n</p>";
+                </d, i, v>
+                <d, i, v>
+                  <h4, className="te, x, t-lg, fon, t-semibold, tex, t-gre, e, n-300, m, b-2">Phas, e, 2: Platform, Buil, d (Days, 3, 1-60)</h4>";
+                  <p, className="te, x, t-gre, e, n-100, tex, t-sm">Infrastructure, deploymen, t, model, trainin, g, system, integratio, n, security, implementatio, n</p>";
+                </d, i, v>
+                <d, i, v>
+                  <h4, className="te, x, t-lg, fon, t-semibold, tex, t-gre, e, n-300, m, b-2">Phas, e, 3: Laun, c, h & Sca, l, e (Days, 6, 1-90)</h4>";
+                  <p, className="te, x, t-gre, e, n-100, tex, t-sm">Pilot, deployment, of 5, workflow, s, validati, o, n, fu, l, l-scale, rollout, to 40+ workflo, w, s</p>";
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           {/* The, Result, s */}
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'>
             <h2, className='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8'>
@@ -313,6 +490,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 <DollarSign, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                 Financial, Impac, t: $65, 0, M+ Annual, Valu, e
               </h3>
+<<<<<<< HEAD
 
               <div, className='grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
                 <div, className='bg-gre, e, n-8, 0, 0/30, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'>
@@ -323,6 +501,27 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                     Cost, Saving, s
                   </div>
                   <ul, className='spa, c, e-y-2, tex, t-gre, e, n-200, tex, t-sm'>
+=======
+              <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">"
+                <div, className="bg-gre, e, n-8, 0, 0/30, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30">
+                  <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2">$44, 3, M</d, i, v>
+                  <div, className="te, x, t-gre, e, n-100, fon, t-semibold, m, b-3">Cost, Saving, s</d, i, v>
+                  <ul, className="spa, c, e-y-2, tex, t-gre, e, n-200, tex, t-sm">
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8">The, Result, s: Transformational, Impac, t</h2>";
+            {/* Financial, Impac, t */}
+            <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, d: p-12, border, border-gre, e, n-4, 0, 0/30, m, b-8">";
+              <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8, flex, items-center, ga, p-3">";
+                <DollarSign, className="w-8 h-8, tex, t-gre, e, n-4, 0, 0" />";
+                Financial, Impa, c
+  t: $65, 0, M+ Annual, Valu, e
+              </h3>
+              <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">";
+                <div, className="bg-gre, e, n-8, 0, 0/30, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30">";
+                  <div, className="te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-300, m, b-2">$44, 3, M</d, i, v>";
+                  <div, className="te, x, t-gre, e, n-100, fon, t-semibold, m, b-3">Cost, Saving, s</d, i, v>";
+                  <ul, className="spa, c, e-y-2, tex, t-gre, e, n-200, tex, t-sm">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <li>• $320M, labor, costs</li>
                     <li>• $42M, error, remediation</li>
                     <li>• $38M, infrastructur, e</li>
@@ -357,6 +556,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                     <li>• $18M, fraud, prevention</li>
                     <li>• $12M, operational, risk</li>
                   </ul>
+<<<<<<< HEAD
                 </div>
               </div>
             </div>
@@ -370,6 +570,24 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 <ul, className='spa, c, e-y-3'>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+=======
+                </d, i, v>
+              </d, i, v>
+            </d, i, v>
+            {/* Operational, Excellenc, e */}
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8">"
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30">
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Spe, e, d & Sca, l, e</h3>
+                <ul, className="spa, c, e-y-3">
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0  />
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-8">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30">";
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Spe, e, d & Sca, l, e</h3>";
+                <ul, className="spa, c, e-y-3">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <d, i, v>
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         10x, Faster, Processing
@@ -379,8 +597,15 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       </div>
                     </div>
                   </li>
+<<<<<<< HEAD
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+=======
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0  />
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <d, i, v>
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         &lt; 100ms, Decision, Latency
@@ -390,8 +615,15 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       </div>
                     </div>
                   </li>
+<<<<<<< HEAD
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0' />
+=======
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0  />
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <CheckCircle, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1, fle, x-shri, n, k-0" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <d, i, v>
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         2x, Transaction, Volume
@@ -402,6 +634,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                     </div>
                   </li>
                 </ul>
+<<<<<<< HEAD
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30'>
@@ -411,6 +644,19 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 <ul, className='spa, c, e-y-3'>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+=======
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30">
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Quali, t, y & Accura, c, y</h3>
+                <ul, className="spa, c, e-y-3">
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0  />
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-pi, n, k-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30">";
+                <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Quali, t, y & Accura, c, y</h3>";
+                <ul, className="spa, c, e-y-3">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <d, i, v>
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         99.7% Accura, c, y
@@ -420,8 +666,15 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       </div>
                     </div>
                   </li>
+<<<<<<< HEAD
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+=======
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0  />
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <d, i, v>
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         97% Error, Reductio, n
@@ -431,8 +684,15 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       </div>
                     </div>
                   </li>
+<<<<<<< HEAD
                   <li, className='flex, item, s-start, ga, p-3'>
                     <CheckCircle, className='w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0' />
+=======
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0  />
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <CheckCircle, className="w-5 h-5, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <d, i, v>
                       <div, className='te, x, t-white, fon, t-semibo, l, d'>
                         98.5% SLA, Complianc, e
@@ -465,8 +725,30 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       <div, className='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' />
                       <sp, a, n>CS, A, T: +28% (72% → 9, 2%)</sp, a, n>
                     </li>
+<<<<<<< HEAD
                     <li, classNam, e = 'flex, item, s-center, ga, p-2'>
                       <div, className='w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l' />
+=======
+                    <li, className="flex, item, s-center, ga, p-2">
+                      <div, className="w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l"></d, i, v>
+            <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/60, t, o-r, e, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-oran, g, e-4, 0, 0/30">";
+              <h3, className="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6">Custom, e, r & Employee, Experienc, e</h3>";
+              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
+                <d, i, v>
+                  <h4, className="te, x, t-lg, fon, t-semibold, tex, t-oran, g, e-300, m, b-4">Customer, Impac, t</h4>";
+                  <ul, className="spa, c, e-y-2, tex, t-oran, g, e-1, 0, 0">";
+                    <li, className="flex, item, s-center, ga, p-2">";
+                      <div, className="w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l"></d, i, v>";
+                      <sp, a, n>NP
+  S: +32, point, s (38 → 70)</sp, a, n>
+                    </li>
+                    <li, className="flex, item, s-center, ga, p-2">";
+                      <div, className="w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l"></d, i, v>";
+                      <sp, a, n>CS, A, T: +28% (72% → 92%)</sp, a, n>
+                    </li>
+                    <li, className="flex, item, s-center, ga, p-2">";
+                      <div, className="w-2 h-2, b, g-oran, g, e-400, rounde, d-fu, l, l"></d, i, v>";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                       <sp, a, n>First, Contact, Resolution: +45%</sp, a, n>
                     </li>
                   </ul>
@@ -525,11 +807,37 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                       op, e, n-sour, c, e, be, s, t-of-bre, e, d, modular, desig, n
                     </sp, a, n>
                   </li>
+<<<<<<< HEAD
                   <li, classNam, e = 'flex, item, s-start, ga, p-3'>
                     <div, className='w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0' />
                     <sp, a, n>
                       <stro, n, g>Governan, c, e & Ri, s, k: </stro, n, g> Hum, a, n-in-t, h, e-loop, for, high-risk, decisi, o, n, s, comprehensive, audit, trails
                     </sp, a, n>
+=======
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <div, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0"></d, i, v>
+          <div, className="m, a, x-w-5xl, m, x-auto, m, b-16">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-white, m, b-8">Key, Learning, s & Best, Practice, s</h2>";
+            <div, className="spa, c, e-y-6">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30">";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-4">✅ Critical, Success, Factors</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-bl, u, e-1, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <div, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0"></d, i, v>";
+                    <sp, a, n><stro, n, g>Executive, Sponsorshi, p: </stro, n, g> C-suite, commitment, with quarterly, business, reviews and, protected, budget</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <div, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0"></d, i, v>";
+                    <sp, a, n><stro, n, g>Change, Managemen, t: </stro, n, g> Transparent, communicatio, n, comprehensive, trainin, g, reskilling, program, s</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <div, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0"></d, i, v>";
+                    <sp, a, n><stro, n, g>Technology, Choice, s: </stro, n, g> Clo, u, d-nati, v, e, op, e, n-sour, c, e, be, s, t-of-bre, e, d, modular, desig, n</sp, a, n>
+                  </li>
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <div, className="w-2 h-2, b, g-bl, u, e-400, rounde, d-full, m, t-2, fle, x-shri, n, k-0"></d, i, v>";
+                    <sp, a, n><stro, n, g>Governan, c, e & Ri, s, k: </stro, n, g> Hum, a, n-in-t, h, e-loop, for, high-risk, decision, s, comprehensive, audit, trails</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                 </ul>
               </div>
@@ -580,6 +888,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 Achieve, similar, results with, our, Autonomous Business, Operations, platform. Get, started, with a, free, consultation and, custom, ROI
                 analys, i, s.
               </p>
+<<<<<<< HEAD
 
               <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8'>
                 <Link, t, o='/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s'
@@ -587,6 +896,18 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 >
                   Explore, Our, Services
                   <ArrowRight, className='w-5 h-5' />
+=======
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8">"
+              <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8">";
+                <Li, n, k
+  to="/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s"
+                  classNa, m, e="inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, b, g-white, tex, t-gre, e, n-600, hov, e
+  r: bg-gre, e, n-50, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-xl"
+                >
+                  Explore, Our, Services;
+                  <ArrowRight, className="w-5 h-5  />
+                  <ArrowRight, className="w-5 h-5" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </Li, n, k>
                 <Link, t, o='/conta, c, t'
                   className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, borde, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-gre, e, n-600, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-a, l, l'
@@ -599,6 +920,7 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 <p, className='te, x, t-white, fon, t-bold, tex, t-lg, m, b-2'>
                   🎁 Special, Launch, Offer
                 </p>
+<<<<<<< HEAD
                 <p, className='te, x, t-gre, e, n-1, 0, 0'>
                   50% OFF, implementatio, n + FREE, 3, 0-day, proof, of concept, through, December 20, 2, 5
                 </p>
@@ -620,32 +942,79 @@ const Fortune100AutonomousOperationsTransformatio, n = () => {
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
                   The, Complete, Autonomous Operations, Guid, e
+=======
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+          {/* Related, Conten, t */}
+          <div, className="m, a, x-w-5xl, m, x-auto, m, t-16">
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8">Related, Resource, s</h2>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">"
+          <div, className="m, a, x-w-5xl, m, x-auto, m, t-16">";
+            <h2, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8">Related, Resource, s</h2>";
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6">";
+              <Li, n, k
+  to="/bl, o, g/ai-autonomo, u, s-busine, s, s-operatio, n, s-revoluti, o, n-20, 2, 5"
+                classNa, m, e="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/60, t, o-cy, a, n-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30, hov, e
+  r: bord, e, r-bl, u, e-4, 0, 0/60, transitio, n-all, grou, p"
+              >
+                <div, className="te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e">Blog, Pos, t</d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">"
+                <div, className="te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e">Blog, Pos, t</d, i, v>";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">";
+                  The, Complete, Autonomous Operations, Guid, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </h3>
                 <p, className='te, x, t-bl, u, e-100, tex, t-sm, m, b-4'>
                   22-minute, deep, dive with, architect, u, r, e, implementation, pattern, s, and, ROI, framework
                 </p>
+<<<<<<< HEAD
                 <div, classNam, e = 'flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm'>
                   Read, Guid, e{' '}
                   <ArrowRight, className='w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
+=======
+                <div, className="flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm">
+                  Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <div, className="flex, item, s-center, tex, t-bl, u, e-300, fon, t-semibold, tex, t-sm">";
+                  Read, Guid, e <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </d, i, v>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </Li, n, k>
 
               <Link, t, o='/servic, e, s/autonomo, u, s-busine, s, s-operatio, n, s'
                 className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/60, t, o-emera, l, d-9, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30, hove, r:bord, e, r-gre, e, n-4, 0, 0/60, transitio, n-all, grou, p'
               >
+<<<<<<< HEAD
                 <div, className='te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e'>
                   Servi, c, e
                 </div>
                 <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-gre, e, n-300, transitio, n-colo, r, s'>
                   Autonomous, Operations, Platform
+=======
+                <div, className="te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e">Servi, c, e</d, i, v>
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">"
+                <div, className="te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibold, m, b-2, uppercas, e">Servi, c, e</d, i, v>";
+                <h3, className="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-gre, e, n-300, transitio, n-colo, r, s">";
+                  Autonomous, Operations, Platform;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </h3>
                 <p, className='te, x, t-gre, e, n-100, tex, t-sm, m, b-4'>
                   Transform, your, enterprise in, 90, days with, guaranteed, ROI
                 </p>
+<<<<<<< HEAD
                 <div, className='flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm'>
                   Explore, Serv, i, c, e{' '}
                   <ArrowRight, classNam, e = 'w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m' />
                 </div>
+=======
+                <div, className="flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm">
+                  Explore, Servic, e <ArrowRight, className="w-4 h-4, m, l-2, grou, p-ho, v, e
+  r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <div, className="flex, item, s-center, tex, t-gre, e, n-300, fon, t-semibold, tex, t-sm">";
+                  Explore, Servic, e <ArrowRight, className="w-4 h-4, m, l-2, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+                </d, i, v>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </Li, n, k>
             </div>
           </div>

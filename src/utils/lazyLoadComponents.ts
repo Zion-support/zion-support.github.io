@@ -3,6 +3,7 @@ impo, r, t { la, z, y } fr, o, m 'rea, c, t';
 /**
  * Lazy load components with better error handling and retry log i c
  */
+<<<<<<< HEAD
 export const lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
   componentImp, o, r, t: () => Promi, s, e<{ defau, l, t: , T }>,
   retri, e, s =  , 3,
@@ -18,6 +19,29 @@ export const lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
               conso, l, e.l, o, g(
                 `Retrying, component, load... ${attemptsLe, f, t} attempts, lef, t`,
               );
+=======
+export, const, lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
+  componentImpo, r, t: () => Promi, s, e<{ defa, u, l
+  t: T }>
+  retri, e, s = 3
+  interv, a, l = 10, 0, 0;
+): Rea, c, t.LazyExoticCompone, n, t<T> => {
+  return, laz, y(() => {
+    return, new, Promise<{ defau, l, t: T }>((resol, v, e, reje, c, t) => {
+const, attemptLoa, d = (attemptsLe, f, t: numb, e, r) => {
+const, attemptLoa, d = (attemptsL, e, f
+  t: numb, e, r) => {
+componentImpo, r, t()
+.th, e, n(resol, v, e)
+.cat, c, h((err, o, r) => {
+if (attemptsLe, f, t === 0) {
+reje, c, t(err, o, r);
+retu, r, n;
+}
+            ;
+            setTimeo, u, t(() => {
+              conso, l, e.l, o, g(`Retrying, component, load... ${attemptsLe, f, t} attempts, lef, t`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               attemptLo, a, d(attemptsLe, f, t - 1);
             }, interv, a, l);
           });

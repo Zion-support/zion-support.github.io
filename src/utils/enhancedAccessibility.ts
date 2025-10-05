@@ -82,6 +82,7 @@ class EnhancedAccessibilit, y {
 
   private, setupKeyboardNavigatio, n(): vo, i, d { 
     if (!th, i, s.conf, i, g.enableKeyboardNavigati, o, n) retu, r, n;
+<<<<<<< HEAD
 
     docume, n, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
       // Skip links and form elements if (
@@ -99,6 +100,26 @@ class EnhancedAccessibilit, y {
 
       // Handle tab navigation
       if (eve, n, t.k, e, y = == 'Ta, b') {
+=======
+    docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {;
+    docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {';
+      // Skip, links, and form, element, s
+  if (eve, n, t.target, instanceof, HTMLAnchorElement || 
+          eve, n, t.target, instanceof, HTMLInputElement ||
+          eve, n, t.target, instanceof, HTMLTextAreaElement ||
+          eve, n, t.target, instanceof, HTMLSelectElement) {
+        retu, r, n;
+      }
+      // Handle, arrow, key navigati, o, n
+  if (eve, n, t.k, e, y === 'ArrowDo, w, n' || eve, n, t.k, e, y === 'Arrow, U, p') {;
+      if (eve, n, t.k, e, y === 'ArrowDo, w, n' || eve, n, t.k, e, y === 'Arrow, U, p') {';
+        eve, n, t.preventDefau, l, t();
+        th, i, s.navigateWithArro, w, s(eve, n, t.k, e, y === 'ArrowDo, w, n' ? 1 : -1);';
+      }
+      // Handle, tab, navigation
+  if (eve, n, t.k, e, y === 'T, a, b') {;
+      if (eve, n, t.k, e, y === 'T, a, b') {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         th, i, s.enhanceTabNavigati, o, n(eve, n, t);
       }
     });
@@ -150,6 +171,7 @@ class EnhancedAccessibilit, y {
     announceme, n, t.setAttribu, t, e('ar, i, a-atom, i, c', 'tr, u, e');
     announceme, n, t.classNa, m, e = 'sr-on, l, y'; announceme, n, t.id = 'announcemen, t, s'; docume, n, t.bo, d, y.appendChi, l, d(announcem, e, n, t);
   }
+<<<<<<< HEAD
 
   private, enhanceFormLabel, s(): vo, i, d {  
     const input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
@@ -161,6 +183,16 @@ class EnhancedAccessibilit, y {
             'ar, i, a-labelled, b, y',
             lab, e, l.id || `lab, e, l-${inp, u, t.id}`,
           );
+=======
+  private, enhanceFormLabel, s(): vo, i, d {
+    const, input, s = docume, n, t.querySelectorA, l, l('inp, u, t, textar, e, a, sele, c, t');';
+    inpu, t, s.forEa, c, h((inp, u, t) => {
+      if (!inp, u, t.getAttribu, t, e('ar, i, a-lab, e, l') && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')) {;
+      if (!inp, u, t.getAttribu, t, e('ar, i, a-lab, e, l') && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')) {';
+        const, labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.id}"]`);`;`
+        if (lab, e, l) {
+          inp, u, t.setAttribu, t, e('ar, i, a-labelled, b, y', lab, e, l.id || `lab, e, l-${inp, u, t.id}`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         }
       }
     });
@@ -169,6 +201,7 @@ class EnhancedAccessibilit, y {
   private, addSkipLink, s(): vo, i, d { 
     const skipLink, s = docume, n, t.createEleme, n, t('di, v'); skipLin, k, s.classNa, m, e = 'sk, i, p-lin, k, s'; skipLin, k, s.innerHT, M, L = `
       <a, hre, f="#ma, i, n-conte, n, t" cla, s, s="sk, i, p-li, n, k">Skip, to, main conte, n, t</a>
+<<<<<<< HEAD
       <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a  >  `; docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, s, docume, n, t.bo, d, y.firstChi, l, d);
    }
 
@@ -188,10 +221,38 @@ class EnhancedAccessibilit, y {
           docume, n, t.bo, d, y.classLi, s, t.remo, v, e('hi, g, h-contra, s, t');
         }
       });
+=======
+      <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a>
+      <a, hre, f="#ma, i, n-conte, n, t" cla, s, s="sk, i, p-li, n, k">Skip, to, main conte, n, t</a>";
+      <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a>";
+    `;`;`
+    docume, n, t.bo, d, y.insertBefo, r, e(skipLin, k, s, docume, n, t.bo, d, y.firstChi, l, d);
+  }
+  private, setupHighContras, t(): vo, i, d {
+if (!th, i, s.conf, i, g.enableHighContra, s, t) retu, r, n;
+// Check, for, high contrast, mode, preference
+  if (wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s) {
+docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');
+}
+    // Listen, for, changes in, contrast, preference
+  wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').addEventListen, e, r('chan, g, e', (e) => {'
+if (wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s) {,';
+docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
+}
+    // Listen, for, changes in, contrast, preference
+  wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').addEventListen, e, r('chan, g, e', (e) => {';
+      if (e.match, e, s) {
+        docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');';
+      } el, s, e {
+        docume, n, t.bo, d, y.classLi, s, t.remo, v, e('hi, g, h-contra, s, t');';
+      }
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   private, setupFocusManagemen, t(): vo, i, d { 
     if (!th, i, s.conf, i, g.enableFocusManageme, n, t) retu, r, n;
+<<<<<<< HEAD
 
     // Add focus indicators
     docume, n, t.addEventListen, e, r('focus, i, n', eve, n, t = > {
@@ -200,11 +261,25 @@ class EnhancedAccessibilit, y {
 
     docume, n, t.addEventListen, e, r('focuso, u, t', eve, n, t = > {
       (eve, n, t.target, as, HTMLElemen, t).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');
+=======
+    // Add, focus, indicators
+  docume, n, t.addEventListen, e, r('focus, i, n', (eve, n, t) => {;
+      (eve, n, t.target, as, HTMLElement).classLi, s, t.a, d, d('foc, u, s-visib, l, e');
+    });
+    docume, n, t.addEventListen, e, r('focuso, u, t', (eve, n, t) => {;
+      (eve, n, t.target, as, HTMLElement).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');
+    docume, n, t.addEventListen, e, r('focus, i, n', (eve, n, t) => {';
+      (eve, n, t.target, as, HTMLElement).classLi, s, t.a, d, d('foc, u, s-visib, l, e');';
+    });
+    docume, n, t.addEventListen, e, r('focuso, u, t', (eve, n, t) => {';
+      (eve, n, t.target, as, HTMLElement).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   }
 
   private, setupARIALabel, s(): vo, i, d { 
     if (!th, i, s.conf, i, g.enableARIALabe, l, s) retu, r, n;
+<<<<<<< HEAD
 
     // Add ARIA labels to interactive elements
     const button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
@@ -215,6 +290,21 @@ class EnhancedAccessibilit, y {
 
     // Add ARIA labels to images const imag e s = docume n t.querySelectorA l l('i m g: n o t([al t])'); imag e s.forEa c h(i m g = > {
       i, m, g.setAttribu, t, e('a, l, t', 'Ima, g, e');
+=======
+    // Add, ARIA, labels to, interactive, elements
+  const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l])');'
+    const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-lab, e, l])');';
+    butto, n, s.forEa, c, h((butt, o, n) => {
+      if (!butt, o, n.textConte, n, t?.tr, i, m()) {
+        butt, o, n.setAttribu, t, e('ar, i, a-lab, e, l', 'Butt, o, n');';
+      }
+    });
+    // Add, ARIA, labels to, image, s
+  const, image, s = docume, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');'
+    const, image, s = docume, n, t.querySelectorA, l, l('i, m, g: n, o, t([a, l, t])');';
+    imag, e, s.forEa, c, h((i, m, g) => {
+      i, m, g.setAttribu, t, e('a, l, t', 'Ima, g, e');';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   }
 
@@ -226,10 +316,18 @@ class EnhancedAccessibilit, y {
 
   private, setupTextScalin, g(): vo, i, d { 
     if (!th, i, s.conf, i, g.enableTextScali, n, g) retu, r, n;
+<<<<<<< HEAD
 
     // Support for text scaling documen t.bo d y.sty l e.fontSi z e = '1 0 0%';
 
     // Listen for text scaling changes const observ e r = new ResizeObserv e r(() = > {
+=======
+    // Support, for, text scali, n, g
+  docume, n, t.bo, d, y.sty, l, e.fontSi, z, e = '1, 0, 0%';
+    docume, n, t.bo, d, y.sty, l, e.fontSi, z, e = '1, 0, 0%';';
+    // Listen, for, text scaling, change, s
+  const, observe, r = new, ResizeObserve, r(() => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       th, i, s.updateTextScali, n, g();
      });
 
@@ -237,6 +335,7 @@ class EnhancedAccessibilit, y {
   }
 
   private, setupMotionReductio, n(): vo, i, d {
+<<<<<<< HEAD
     if (!th, i, s.conf, i, g.enableMotionReducti, o, n) retu, r, n;
 
     // Check for reduced motion preference if (wind o w.matchMed i a('(prefe r s-reduc e d-moti o n: redu c e)').match e s) {
@@ -251,13 +350,41 @@ class EnhancedAccessibilit, y {
           docume, n, t.bo, d, y.classLi, s, t.remo, v, e('reduc, e, d-moti, o, n');
         }
       });
+=======
+if (!th, i, s.conf, i, g.enableMotionReducti, o, n) retu, r, n;
+// Check, for, reduced motion, preferenc, e
+  if (wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').match, e, s) {
+docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');
+}
+    // Listen, for, changes in, motion, preference
+  wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').addEventListen, e, r('chan, g, e', (e) => {'
+if (wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').match, e, s) {,';
+docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
+}
+    // Listen, for, changes in, motion, preference
+  wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').addEventListen, e, r('chan, g, e', (e) => {';
+      if (e.match, e, s) {
+        docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');';
+      } el, s, e {
+        docume, n, t.bo, d, y.classLi, s, t.remo, v, e('reduc, e, d-moti, o, n');';
+      }
+    });
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   private, setupVoiceContro, l(): vo, i, d {  
     if (!th, i, s.conf, i, g.enableVoiceContr, o, l) retu, r, n;
+<<<<<<< HEAD
 
     // Add voice control support documen t.addEventListen e r('keydo w n' eve n t = > {
       if (eve, n, t.ctrlK, e, y  && eve, n, t.k, e, y === ', v') {
+=======
+    // Add, voice, control suppo, r, t
+  docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {;
+      if (eve, n, t.ctrlK, e, y && eve, n, t.k, e, y === 'v') {;
+    docume, n, t.addEventListen, e, r('keydo, w, n', (eve, n, t) => {';
+      if (eve, n, t.ctrlK, e, y && eve, n, t.k, e, y === 'v') {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         th, i, s.activateVoiceContr, o, l();
         }
     });
@@ -277,6 +404,7 @@ class EnhancedAccessibilit, y {
   }
 
   private, getFocusableElement, s(): HTMLEleme, n, t[] {
+<<<<<<< HEAD
     const focusableSelector, s = [
       'a[h, r, e, f]',
       'butt, o, n: n, o, t([disab, l, e, d])',
@@ -292,6 +420,24 @@ class EnhancedAccessibilit, y {
     ]; return, Arra, y.fr, o, m(
       docume, n, t.querySelectorA, l, l(focusableSelecto, r, s.jo, i, n(', ')),
     ) as, HTMLElemen, t[];
+=======
+    const, focusableSelector, s = [
+      'a[hr, e, f]'
+      'butt, o, n: n, o, t([disabl, e, d])','
+      'inp, u, t: n, o, t([disabl, e, d])','
+      'sele, c, t: n, o, t([disabl, e, d])','
+      'textar, e, a: n, o, t([disabl, e, d])','
+      '[tabind, e, x]:n, o, t([tabind, e, x="-1"])'
+    ].jo, i, n(', ');
+      'a[hr, e, f]',';
+      'butt, o, n: n, o, t([disabl, e, d])',';
+      'inp, u, t: n, o, t([disabl, e, d])',';
+      'sele, c, t: n, o, t([disabl, e, d])',';
+      'textar, e, a: n, o, t([disabl, e, d])',';
+      '[tabind, e, x]:n, o, t([tabind, e, x="-1"])'
+    ].jo, i, n(', ');';
+    return, Arra, y.fr, o, m(docume, n, t.querySelectorA, l, l(focusableSelecto, r, s)) as, HTMLElemen, t[];
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   private, getFocusableElement, s(): HTMLEleme, n, t[] {
@@ -322,7 +468,14 @@ class EnhancedAccessibilit, y {
   }
 
   private, updateTextScalin, g(): vo, i, d {
+<<<<<<< HEAD
     // Update text scaling based on user preferences const fontSize = wind o w.getComputedSty l e(docume n t.b o d y).fontSi z e; conso l e.l o g('Text scaling updated:' fontSi z e);
+=======
+    // Update, text, scaling based, on, user preferenc, e, s
+  const, fontSiz, e = wind, o, w.getComputedSty, l, e(docume, n, t.bo, d, y).fontSi, z, e;
+    conso, l, e.l, o, g('Text, scaling, updated: ', fontSi, z, e);'
+    conso, l, e.l, o, g('Text, scaling, updated: ', fontSi, z, e);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   private, activateVoiceContro, l(): vo, i, d {
@@ -331,6 +484,7 @@ class EnhancedAccessibilit, y {
   }
 
   public, analyzeAccessibilit, y(): AccessibilityMetri, c, s {
+<<<<<<< HEAD
     const element, s = docume, n, t.querySelector, A, l, l('*'); const focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const ariaLabel, s = docume, n, t.querySelectorA, l, l(
       '[ar, i, a-la, b, e, l], [ar, i, a-labelled, b, y]',
     ); const heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const image, s = docume, n, t.querySelectorA, l, l('im, g'); const imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
@@ -343,11 +497,50 @@ class EnhancedAccessibilit, y {
       accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.len, g, t, h,
       issuesFou, n, d:  , 0,
       sco, r, e:  , 0,
+=======
+    const, element, s = docume, n, t.querySelectorA, l, l('*');';
+    const, focusableElement, s = th, i, s.getFocusableElemen, t, s();
+    const, ariaLabel, s = docume, n, t.querySelectorA, l, l('[ar, i, a-lab, e, l], [ar, i, a-labelled, b, y]');
+    const, heading, s = docume, n, t.querySelectorA, l, l('h1, h2, h3, h4, h5, h6');
+    const, image, s = docume, n, t.querySelectorA, l, l('i, m, g');
+    const, imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[a, l, t]');
+    th, i, s.metri, c, s = {
+      colorContrastRat, i, o: 4.5, // Would, be, calculated by, a, contrast check, e, r
+      focusableElemen, t, s: focusableElemen, t, s.leng, t, h
+      ariaLabe, l, s: ariaLabe, l, s.leng, t, h
+      headingStructu, r, e: headin, g, s.leng, t, h
+      altTex, t, s: imagesWithA, l, t.leng, t, h
+      keyboardTra, p, s: 0, // Would, be, detected by, testin, g
+      screenReaderCompatibili, t, y: 85, // Would, be, calculated based, on, various facto, r, s
+      overallSco, r, e: 0
+      totalElemen, t, s: elemen, t, s.leng, t, h
+      accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.leng, t, h
+      issuesFou, n, d: 0
+      sco, r, e: 0;
+    const, ariaLabel, s = docume, n, t.querySelectorA, l, l('[ar, i, a-lab, e, l], [ar, i, a-labelled, b, y]');';
+    const, heading, s = docume, n, t.querySelectorA, l, l('h1, h2, h3, h4, h5, h6');';
+    const, image, s = docume, n, t.querySelectorA, l, l('i, m, g');';
+    const, imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[a, l, t]');';
+    th, i, s.metri, c, s = {
+      colorContrastRat, i, o: 4.5, // Would, be, calculated by, a, contrast check, e, r
+      focusableElemen, t, s: focusableElemen, t, s.leng, t, h
+      ariaLabe, l, s: ariaLabe, l, s.leng, t, h
+      headingStructu, r, e: headin, g, s.leng, t, h
+      altTex, t, s: imagesWithA, l, t.leng, t, h
+      keyboardTra, p, s: 0, // Would, be, detected by, testin, g
+      screenReaderCompatibili, t, y: 85, // Would, be, calculated based, on, various facto, r, s
+      overallSco, r, e: 0
+      totalElemen, t, s: elemen, t, s.leng, t, h
+      accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.leng, t, h
+      issuesFou, n, d: 0
+      sco, r, e: 0
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
 
     // Calculate overall score
     th, i, s.metri, c, s.overallSco, r, e = th, i, s.calculateOverallSc, o, r, e(); th, i, s.metri, c, s.sco, r, e = th, i, s.metri, c, s.overallSco, r, e; return { ...th, i, s.metri, c, s };
   }
+<<<<<<< HEAD
 
   private, calculateOverallSco, r, e(): number {  
     let scor, e = 0; const maxScor, e = 1, 0, 0;
@@ -376,12 +569,40 @@ class EnhancedAccessibilit, y {
   public, announc, e(messa, g, e: string): vo, i, d {
     const announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
       announceme, n, t.textConte, n, t = mes, s, a, g, e;
+=======
+  private, calculateOverallScor, e(): numb, e, r {
+    let, scor, e = 0;
+    const, maxScor, e = 1, 0, 0;
+    // Focusable, elements, score (20, point, s)
+    const, focusableScor, e = Ma, t, h.m, i, n(20, (th, i, s.metri, c, s.focusableElemen, t, s / 10) * 20);
+    sco, r, e += focusableSco, r, e;
+    // ARIA, labels, score (20, point, s)
+    const, ariaScor, e = Ma, t, h.m, i, n(20, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20);
+    sco, r, e += ariaSco, r, e;
+    // Alt, texts, score (20, point, s)
+    const, altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20 : 0;
+    sco, r, e += altSco, r, e;
+    // Heading, structure, score (20, point, s)
+    const, headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0;
+    sco, r, e += headingSco, r, e;
+    // Color, contrast, score (20, point, s)
+    const, contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o >= 4.5 ? 20 : 10;
+    sco, r, e += contrastSco, r, e;
+    return, Mat, h.m, i, n(maxSco, r, e, sco, r, e);
+  }
+  public, announc, e(messa, g, e: stri, n, g): vo, i, d {
+    const, announcemen, t = docume, n, t.getElementBy, I, d('announcemen, t, s');
+    const, announcemen, t = docume, n, t.getElementBy, I, d('announcemen, t, s');';
+    if (announceme, n, t) {
+      announceme, n, t.textConte, n, t = messa, g, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
   public, getMetric, s(): AccessibilityMetri, c, s {
     return { ...th, i, s.metri, c, s };
   }
+<<<<<<< HEAD
 
   public, getRepor, t(): string {
     const metric, s = th, i, s.analyzeAccessibil, i, t, y(); return `
@@ -400,5 +621,28 @@ Enhanced, Accessibility, Report: - Overall, Scor, e: ${metri, c, s.overallSc, o,
 export const enhancedAccessibility = new, EnhancedAccessibili, t, y();
 
 // Au t o-initialize in browser environment i f (typeof windo w !== 'undefin e d') {
+=======
+  public, getRepor, t(): stri, n, g {
+const, metric, s = th, i, s.analyzeAccessibili, t, y();
+retu, r, n ``
+Enhanced, Accessibility, Report: 
+Enhanced, Accessibility, Report: - Overall, Sco, r
+  e: ${metri, c, s.overallSco, r, e;
+}/1, 0, 0;
+- Focusable, Element, s: ${metri, c, s.focusableElemen, t, s}
+- ARIA, Label, s: ${metri, c, s.ariaLabe, l, s}
+- Alt, Text, s: ${metri, c, s.altTex, t, s}
+- Heading, Structur, e: ${metri, c, s.headingStructu, r, e}
+- Issues, Foun, d: ${metri, c, s.issuesFou, n, d}
+- Sco, r, e: ${metri, c, s.sco, r, e}%
+`;`;`
+  }
+}
+// Export, singleton, instance
+  export, const, enhancedAccessibility = new, EnhancedAccessibilit, y();
+// Au, t, o-initialize, in, browser environme, n, t
+  if (typeof, windo, w !== 'undefin, e, d') {;
+if (typeof, windo, w !== 'undefin, e, d') {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   enhancedAccessibili, t, y.initiali, z, e();
 }

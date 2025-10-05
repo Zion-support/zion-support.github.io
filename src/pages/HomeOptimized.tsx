@@ -27,6 +27,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
         <title>
           Zion, Tech, Group - Leading, A, I & IT, Solution, s | Transform, Your, Business
         </title>
+<<<<<<< HEAD
         <meta, nam, e = 'description'
           conte, n, t='Zion, Tech, Group delivers, cuttin, g-edge, AI, and IT, solutions, that transform, businesse, s. Enterprise, securi, t, y, AI, innovatio, n, and, expert, consulting servic, e, s.'
         />
@@ -63,10 +64,64 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
            />
         </div>
 
+=======
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Zion, Tech, Group delivers, cuttin, g-edge, AI, and IT, solutions, that transform, businesse, s. Enterprise, securit, y, AI, innovatio, n, and, expert, consulting servic, e, s." /><me, t, a
+  na, m, e="keywor, d, s"
+          content="AI, solution, s, IT, consultin, g, cybersecuri, t, y, machine, learnin, g, cloud, infrastructur, e, digital, transformatio, n" /><me, t, a
+  proper, t, y="og: tit, l, e"
+          content="Zion, Tech, Group - Leading, A, I & IT, Solution, s" /><me, t, a
+  proper, t, y="og:descripti, o, n"
+          content="Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s" /><meta, propert, y="og:ty, p, e" content="websi, t, e" />
+        <meta, propert, y="og: u, r, l" content="ht, t, p
+  s://ziontechgro, u, p.c, o, m" />
+        <meta name="twitt, e, r:ca, r, d" content="summary_large_ima, g, e" />
+        <me, t, a
+  na, m, e="twitt, e, r:tit, l, e"
+          content="Zion, Tech, Group - Leading, A, I & IT, Solution, s" /><me, t, a
+  na, m, e="twitt, e, r:descripti, o, n"
+          content="Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/>"
+          proper, t, y="og: tit, l, e"
+          content="Zion, Tech, Group - Leading, A, I & IT, Solution, s"
+         />
+        <me, t, a 
+  proper, t, y="og: descripti, o, n"
+          content="Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s"  />
+        <meta, propert, y="og: ty, p, e" content="websi, t, e" />";
+        <meta, propert, y="og: u, r, l" content="htt, p, s://ziontechgro, u, p.c, o, m" />";
+        <meta name="twitt, e, r: ca, r, d" content="summary_large_ima, g, e" />";
+        <me, t, a 
+  na, m, e="twit, t, e
+  r: tit, l, e"
+          content="Zion, Tech, Group - Leading, A, I & IT, Solution, s"  />
+        <me, t, a 
+  na, m, e="twitt, e, r: descripti, o, n"
+          content="Transform, your, business with, cuttin, g-edge, AI, and IT, solution, s"  />
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m" />";
+      </Helmet>
+      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, relative, overflow-hidd, e, n">";
+        <Head, e, r   />
+        {/* Animated, background, elements */};
+        <div, className="absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">
+          <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-blue, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t"></d, i, v>
+        <div, className="absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">";
+          <div, className="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-blue, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t"></d, i, v>";
+          <d, i, v
+  classNa, m, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-8, 0, h-80, b, g-zi, o, n-purple, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t"
+            sty, l, e={{ animationDel, a, y: "2s" }}";
+          ></d, i, v>
+          <d, i, v
+  classNa, m, e="absolute, to, p-40, lef, t-1/2 w-6, 0, h-60, b, g-zi, o, n-cyan, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-xl, opacit, y-20, animat, e-flo, a, t"
+            sty, l, e={{ animationDel, a, y: "4s" }}";
+          ></d, i, v>
+        </d, i, v>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         {/* Hero, Sectio, n */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-20, relative, z-10'>
           <div, className='te, x, t-center, ma, x-w-5xl, m, x-au, t, o'>
             {/* Bad, g, e */}
+<<<<<<< HEAD
             <div, className='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, m, b-8, animat, e-fa, d, e-in, border, border-zi, o, n-cy, a, n/30, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0'>
               <Rocket, className='w-4 h-4, m, r-2, animat, e-pul, s, e' />
               Trusted, by, 500+ companies, worldwid, e
@@ -82,6 +137,31 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
             <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in'>
               Transform, your, business with, cuttin, g-edge, AI, solutio, n, s,
               enterpri, s, e-grade, securit, y, and, nex, t-generation, cloud, infrastructure. Join, 50, 0+ companies, already, scaling with, u, s!
+=======
+            <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, m, b-8, animat, e-fa, d, e-in, border, border-zi, o, n-cy, a, n/30, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0">"
+              <Rocket, className="w-4 h-4, m, r-2, animat, e-pul, s, e  />
+              Trusted, by, 500+ companies, worldwid, e;
+              <Rocket, className="w-4 h-4, m, l-2, animat, e-boun, c, e  />
+            </d, i, v>
+            <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, animat, e-sli, d, e-up">"
+              <span, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e-light, t, o-zi, o, n-purp, l, e-light, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%">
+            <div, className="inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, m, b-8, animat, e-fa, d, e-in, border, border-zi, o, n-cy, a, n/30, shado, w-lg, hove, r: shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0">";
+              <Rocket, className="w-4 h-4, m, r-2, animat, e-pul, s, e" />";
+              Trusted, by, 500+ companies, worldwid, e;
+              <Rocket, className="w-4 h-4, m, l-2, animat, e-boun, c, e" />";
+            </d, i, v>
+            <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, tex, t-white, m, b-6, animat, e-sli, d, e-up">";
+              <span, className="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e-light, t, o-zi, o, n-purp, l, e-light, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradient, b, g-3, 0, 0%">";
+                Zion, Tech, Group;
+              </sp, a, n>
+            </h1>
+            <p, className="te, x, t-x, l, m
+  d: te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in">
+              Transform, your, business with, cuttin, g-edge, AI, solutions, enterpri, s, e-grade, securit, y;
+            <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, leadin, g-relaxed, ma, x-w-3xl, m, x-auto, animat, e-fa, d, e-in">";
+              Transform, your, business with, cuttin, g-edge, AI, solutions, enterpri, s, e-grade, securit, y
+              and, nex, t-generation, cloud, infrastructure. Join, 50, 0+ companies, already, scaling with, u, s!
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
             </p>
 
             {/* Sta, t, s */}
@@ -92,6 +172,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                 { val, u, e: '24/, 7', lab, e, l: 'Supp, o, r, t' },
                 { val, u, e: ', 5★', lab, e, l: 'Client, Rati, n, g' },
               ].m, a, p((st, a, t, ind, e, x) => (
+<<<<<<< HEAD
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'te, x, t-center, group, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0'
                 >
                   <div, className='te, x, t-3xl, fon, t-bold, tex, t-zi, o, n-cyan, grou, p-hov, e, r:te, x, t-zi, o, n-bl, u, e-light, transitio, n-colo, r, s'>
@@ -110,6 +191,37 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               >
                 Explore, Service, s
                 <ArrowRight, className='w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
+=======
+                <div, ke, y={ind, e, x} classNa, m, e="te, x, t-center, group, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">"
+                  <div, className="te, x, t-3xl, fon, t-bold, tex, t-zi, o, n-cyan, grou, p-hov, e, r: te, x, t-zi, o, n-bl, u, e-light, transitio, n-colo, r, s">"
+            <div, className="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-8, m, b-12, ma, x-w-2xl, m, x-au, t, o">";
+              {[
+                { va, l, u
+  e: "5, 0, 0+", lab, e, l: "Projects, Delivere, d" },";
+                { val, u, e: "99.9%", lab, e, l: "Uptime, SL, A" },";
+                { val, u, e: "24/7", lab, e, l: "Suppo, r, t" },";
+                { val, u, e: "5★", lab, e, l: "Client, Ratin, g" },";
+              ].m, a, p((st, a, t, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="te, x, t-center, group, hover: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0">";
+                  <div, className="te, x, t-3xl, fon, t-bold, tex, t-zi, o, n-cyan, grou, p-ho, v, e
+  r: te, x, t-zi, o, n-bl, u, e-light, transitio, n-colo, r, s">";
+                    {st, a, t.val, u, e}
+                  </d, i, v>
+                  <div, className="te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t">{st, a, t.lab, e, l}</d, i, v>";
+                </d, i, v>
+              ))}
+            </d, i, v>
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+              <Li, n, k
+  to="/servic, e, s"
+                classNa, m, e="b, t, n-primary, flex, items-center, justif, y-center, ga, p-2, grou, p"
+              >
+                Explore, Service, s;
+                <ArrowRight, className="w-5 h-5, grou, p-ho, v, e
+  r: transla, t, e-x-1, transitio, n-transfo, r, m/>"
+                <ArrowRight, className="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </Li, n, k>
               <Link, t, o='/conta, c, t' className='b, t, n-seconda, r, y'>
                 Get, Starte, d
@@ -117,6 +229,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
             </div>
           </div>
         </secti, o, n>
+<<<<<<< HEAD
 
         {/* Banner, Rotation, Secti, o, n */}
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
@@ -126,6 +239,21 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
               'october20, 2, 5-ne, x, t-g, e, n-ai',
             ] }, maxBanne, r, s={ 3 } autoRota, t, e={fal, s, e}
           />
+=======
+        {/* Banner, Rotation, Section */}
+        <section, className="container, m, x-auto, p, x-6, p, y-16, relative, z-10">";
+          <BannerRotationManag, e, r 
+  banne, r, s={[
+              'october20, 2, 5-n, e, w-breakthrou, g, h'
+              'october20, 2, 5-te, c, h-breakthrou, g, h'
+              'october20, 2, 5-ne, x, t-g, e, n-ai'
+              'october20, 2, 5-n, e, w-breakthrou, g, h',';
+              'october20, 2, 5-te, c, h-breakthrou, g, h',';
+              'october20, 2, 5-ne, x, t-g, e, n-ai',';
+            ]}
+            maxBanne, r, s={3}
+            autoRota, t, e={fal, s, e}  />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </secti, o, n>
 
         {/* Latest, Insights, Section */}
@@ -193,6 +321,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                 col, o, r: 'bl, u, e-li, g, h, t',
               },
             ].m, a, p((featu, r, e, ind, e, x) => (
+<<<<<<< HEAD
               <div, ke, y = { in, d, e, x }, classNa, m, e = 'card, group, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
               >
                 <div, className={`bg-zi, o, n-${featu, r, e.c, o, l, o, r}/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r: bg-zi, o, n-${featu, r, e.co, l, o, r}/30, transitio, n-colors, border, border-zi, o, n-${featu, r, e.col, o, r}/30, shado, w-lg`}
@@ -201,14 +330,66 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                 </div>
                 <h3, classNam, e = 'te, x, t-xl, fon, t-semibold, tex, t-white, m, b-4'>
                   {featu, r, e.title}
+=======
+              <div, ke, y={ind, e, x} classNa, m, e="card, group, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">"
+          <div, className="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8">";
+            {[
+              {
+                i, c, o
+  n: Shie, l, d
+                tit, l, e: "Enterprise, Securit, y",";
+                descripti, o, n: "Advanced, cybersecurity, solutions protecting, your, business from, evolving, threats.",";
+                featur, e, s: ["SOC, 2, Compliance", "Penetration, Testin, g", "24/7, Monitorin, g"],";
+                col, o, r: "bl, u, e",";
+              }
+              {
+                ic, o, n: Z, a, p
+                tit, l, e: "AI, Innovatio, n",";
+                descripti, o, n: "Cutti, n, g-edge, artificial, intelligence solutions, that, transform your, operation, s.",";
+                featur, e, s: ["Machine, Learnin, g", "Natural, Language, Processing", "Computer, Visio, n"],";
+                col, o, r: "purp, l, e",";
+              }
+              {
+                ic, o, n: Use, r, s
+                tit, l, e: "Expert, Tea, m",";
+                descripti, o, n: "Wor, l, d-class, engineers, and consultants, dedicated, to your, succes, s.",";
+                featur, e, s: ["10+ Years, Experienc, e", "Certified, Professional, s", "Dedicated, Suppor, t"],";
+                col, o, r: "cy, a, n",";
+              }
+              {
+                ic, o, n: Glo, b, e
+                tit, l, e: "Global, Reac, h",";
+                descripti, o, n: "Serving, clients, worldwide with, localized, expertise and, suppor, t.",";
+                featur, e, s: ["50+ Countri, e, s", "Local, Suppor, t", "24/7, Availabilit, y"],";
+                col, o, r: "bl, u, e-lig, h, t",";
+              }
+            ].m, a, p((featu, r, e, ind, e, x) => (
+              <div, ke, y={ind, e, x} classNa, m, e="card, group, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">";
+                <div, className={`bg-zi, o, n-${featu, r, e.col, o, r}/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, grou, p-hov, e, r:bg-zi, o, n-${featu, r, e.col, o, r}/30, transitio, n-colors, border, border-zi, o, n-${featu, r, e.col, o, r}/30, shado, w-lg`}>`;`
+                  <featu, r, e.icon, className={`w-8 h-8, tex, t-zi, o, n-${featu, r, e.col, o, r}-light, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0`} />`;`
+                </d, i, v>
+                <h3, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-4">";
+                  {featu, r, e.tit, l, e}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </h3>
                 <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
                   {featu, r, e.description}
                 </p>
+<<<<<<< HEAD
                 <ul, className='spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e'>
                   { featu, r, e.featur, e, s.m, a, p((i, t, e, m, i) = > (
                     <li, ke, y = { , i  }, classNa, m, e = 'flex, item, s-cent, e, r'>
                       <CheckCircle, className='w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n' />
+=======
+                <ul, className="spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e">";
+                  {featu, r, e.featur, e, s.m, a, p((it, e, m, i) => (
+                    <li, ke, y={i} classNa, m, e="flex, item, s-cent, e, r">
+                      <CheckCircle, className="w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n  />
+                    <li, ke, y={i} classNa, m, e="flex, item, s-cent, e, r">";
+                      <CheckCircle, className="w-4 h-4, m, r-2, tex, t-zi, o, n-cy, a, n" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                       {it, e, m}
                     </l, i>
                   ))}
@@ -219,6 +400,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
         </secti, o, n>
 
         {/* Latest, Insights, Preview */}
+<<<<<<< HEAD
         <section, classNam, e = 'container, m, x-auto, p, x-6, p, y-16, relative, z-10'>
           <div, className='flex, item, s-center, justif, y-between, m, b-8'>
             <h3, className='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'>Latest, Insight, s</h3>
@@ -240,6 +422,38 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                   <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>{it, e, m.summa, r, y}</p>
                   <div, className='te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n'>
                     <sp, a, n>{new, Dat, e(it, e, m.d, a, t, e).toLocaleDateStri, n, g()}</sp, a, n>
+=======
+        <section, className="container, m, x-auto, p, x-6, p, y-16, relative, z-10">
+          <div, className="flex, item, s-center, justif, y-between, m, b-8">
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Latest, Insight, s</h3>
+            <Link, t, o="/insigh, t, s" classNa, m, e="te, x, t-zi, o, n-cyan, hove, r: underli, n, e">View, al, l</Li, n, k>"
+          </d, i, v>
+          <div, className="grid, m, d: gr, i, d-co, l, s-4, ga, p-6">"
+            {latestInsigh, t, s.sli, c, e(0, 4).m, a, p((it, e, m) => (
+              <article, ke, y={it, e, m.id} classNa, m, e="card, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">"
+                <div, className="p-6">
+                  <div, className="te, x, t-xs, uppercase, tracking-wider, tex, t-zi, o, n-cyan, m, b-2">{it, e, m.catego, r, y}</d, i, v>
+                  <h4, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2">{it, e, m.tit, l, e}</h4>
+                  <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-4">{it, e, m.summa, r, y}</p>
+                  <div, className="te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n">
+        <section, className="container, m, x-auto, p, x-6, p, y-16, relative, z-10">";
+          <div, className="flex, item, s-center, justif, y-between, m, b-8">";
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Latest, Insight, s</h3>";
+            <Link, t, o="/insigh, t, s" classNa, m, e="te, x, t-zi, o, n-cyan, hove, r: underli, n, e">View, al, l</Li, n, k>";
+          </d, i, v>
+          <div, className="gri, d, m
+  d: gr, i, d-co, l, s-4, ga, p-6">";
+            {latestInsigh, t, s.sli, c, e(0, 4).m, a, p((it, e, m) => (
+              <article, ke, y={it, e, m.id} classNa, m, e="card, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">";
+                <div, className="p-6">";
+                  <div, className="te, x, t-xs, uppercase, tracking-wider, tex, t-zi, o, n-cyan, m, b-2">{it, e, m.catego, r, y}</d, i, v>";
+                  <h4, className="te, x, t-xl, fon, t-semibold, tex, t-white, m, b-2">{it, e, m.tit, l, e}</h4>";
+                  <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-4">{it, e, m.summa, r, y}</p>";
+                  <div, className="te, x, t-sm, tex, t-zi, o, n-slate, flex, items-center, justif, y-betwe, e, n">";
+                    <sp, a, n>{new, Dat, e(it, e, m.da, t, e).toLocaleDateStri, n, g()}</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <sp, a, n>{it, e, m.readMinut, e, s} min, rea, d</sp, a, n>
                   </div>
                 </div>
@@ -280,6 +494,7 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                   quo, t, e: 'The, security, solutions they, implemented, gave us, complete, peace of, min, d. Highly, recommend, e, d!',
                 },
               ].m, a, p((testimoni, a, l, ind, e, x) => (
+<<<<<<< HEAD
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'card, tex, t-center, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2, x, l'
                 >
                   <div, className='flex, justif, y-center, m, b-4'>
@@ -287,6 +502,38 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
                       <Star, ke, y = { , i  }, classNa, m, e = 'w-5 h-5, tex, t-yell, o, w-400, fil, l-current, animat, e-pul, s, e'
                         sty, l, e = { { animationDel, a, y: `${i * , 0., 1 }, s` }}
                       />
+=======
+                <div, ke, y={ind, e, x} classNa, m, e="card, tex, t-center, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">"
+                  <div, className="flex, justif, y-center, m, b-4">
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              {[
+                {
+                  n, a, m
+  e: "Sarah, Johnso, n",";
+                  ro, l, e: "C, E, O, TechCo, r, p",";
+                  quo, t, e: "Zion, Tech, Group transformed, our, entire digital, infrastructur, e. Their, AI, solutions increased, our, efficiency by, 30, 0%.",";
+                }
+                {
+                  na, m, e: "Michael, Che, n",";
+                  ro, l, e: "C, T, O, InnovateL, a, b",";
+                  quo, t, e: "Outstanding, team, and exceptional, result, s. They, delivered, our mobile, app, ahead of, schedule, and under, budge, t.",";
+                }
+                {
+                  na, m, e: "Emily, Rodrigue, z",";
+                  ro, l, e: "Security, Directo, r, FinanceFir, s, t",";
+                  quo, t, e: "The, security, solutions they, implemented, gave us, complete, peace of, min, d. Highly, recommende, d!",";
+                }
+              ].m, a, p((testimoni, a, l, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="card, tex, t-center, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hov, e
+  r:shad, o, w-2, x, l">";
+                  <div, className="flex, justif, y-center, m, b-4">";
+                    {[...Arr, a, y(5)].m, a, p((_, i) => (
+                      <St, a, r 
+  k, e, y={i}
+                        classNa, m, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-current, animat, e-pul, s, e"
+                        sty, l, e={{ animationDel, a, y: `${i * 0.1}s` }}`;`  />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     ))}
                   </div>
                   <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-6, itali, c'>
@@ -326,12 +573,25 @@ impo, r, t { latestInsigh, t, s } fr, o, m '../conte, n, t/insigh, t, s';
             <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, ma, x-w-2xl, m, x-auto, animat, e-fa, d, e-in'>
               Join, thousands, of companies, that, trust Zion, Tech, Group for, their, technology nee, d, s. L, e, t&ap, o, s; s, build, something amazing, togethe, r.
             </p>
+<<<<<<< HEAD
             <div, className='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
               <Link, t, o='/conta, c, t'
                 className='bg-white, tex, t-zi, o, n-blue, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, items-center, justif, y-center, ga, p-2, grou, p'
               >
                 <Target, className='w-5 h-5, grou, p-hov, e, r:rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0' />
                 Start, Your, Journey Tod, a, y
+=======
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">"
+            <div, className="flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">";
+              <Li, n, k
+  to="/conta, c, t"
+                classNa, m, e="bg-white, tex, t-zi, o, n-blue, hove, r: bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hov, e
+  r:shad, o, w-2xl, flex, items-center, justif, y-center, ga, p-2, grou, p"
+              >
+                <Target, className="w-5 h-5, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0/>"
+                <Target, className="w-5 h-5, grou, p-hov, e, r: rota, t, e-12, transitio, n-transform, duratio, n-3, 0, 0" />";
+                Start, Your, Journey Tod, a, y;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </Li, n, k>
               <Link, t, o='/conta, c, t'
                 className='bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-zi, o, n-blue, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'

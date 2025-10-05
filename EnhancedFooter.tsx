@@ -8,10 +8,17 @@ import {
   Twitter,
 } from 'lucide-react';
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
+=======
+
+const EnhancedFooter: React.FC = () => {
+  const current_year = new Date().getFullYear();
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   const services = [
     { name: 'AI Development', href: '/services/ai-development' },
     { name: 'Cloud Services', href: '/services/cloud-services' },
@@ -35,6 +42,7 @@ const EnhancedFooter: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
+<<<<<<< HEAD
   return (
     <footer className='bg-gray-900 text-white'>
       <div className='container mx-auto px-4 py-12'>
@@ -88,38 +96,86 @@ const EnhancedFooter: React.FC = () => {
                       {service.name}
                     </span>
                   </Link>
+=======
+
+return (
+    <footer className="bg-gray-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Services */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <ul className="space-y-2">
+              {services.map((service) => (
+                <li key={service.name}>
+                  <a
+                    href={service.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {service.name}
+                  </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+{/* Products */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           <div>
             <h3 className='text-lg font-semibold mb-4'>Products</h3>
             <ul className='space-y-2'>
               {products.map(product => (
                 <li key={product.name}>
+<<<<<<< HEAD
                   <Link to={product.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {product.name}
                     </span>
                   </Link>
+=======
+<a
+                    href={product.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {product.name}
+                  </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+{/* Company */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           <div>
             <h3 className='text-lg font-semibold mb-4'>Company</h3>
             <ul className='space-y-2'>
               {company.map(item => (
                 <li key={item.name}>
+<<<<<<< HEAD
                   <Link to={item.href}>
                     <span className='text-gray-300 hover:text-white transition-colors'>
                       {item.name}
                     </span>
                   </Link>
+=======
+<a
+                    href={item.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {item.name}
+                  </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </li>
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
         </div>
         <div className='border-t border-gray-700 mt-8 pt-8'>
           <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
@@ -169,6 +225,24 @@ const EnhancedFooter: React.FC = () => {
               </Link>
             </div>
           </div>
+=======
+{/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>Zion Tech Group</p>
+              <p>Advanced AI & IT Solutions</p>
+              <p>Email: info@ziontechgroup.com</p>
+              <p>Phone: +1 (555) 123-4567</p>
+            </div>
+          </div>
+        </div>
+
+<div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {current_year} Zion Tech Group. All rights reserved.
+          </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </div>
       </div>
     </footer>

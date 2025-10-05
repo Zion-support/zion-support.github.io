@@ -132,11 +132,82 @@ npm run pm2:logs             # View all logs
 - **100% automated** scaling and optimization
 - **Zero downtime** deployments
 
+<<<<<<< HEAD
 ### **Operational Reliability**
 - **99.9% uptime** through intelligent management
 - **Automated recovery** from all failure scenarios
 - **Proactive monitoring** prevents issues before they occur
 - **Comprehensive logging** for troubleshooting
+=======
+## 🔧 Configuration & Customization
+
+### **Environment Variables**
+```bash
+MONITOR_INTERVAL=30000                    # Health check interval
+HEALTH_CHECK_ENDPOINTS=http://localhost:3000,http://localhost:5000/health
+BUILD_WATCH_INTERVAL=60000                # File watch interval
+AUTO_BUILD=true                          # Enable auto-build
+AUTO_DEPLOY=false                        # Enable auto-deploy
+```
+
+### **Scaling Rules**
+- **Frontend**: 2-8 instances, CPU threshold 70%, Memory threshold 80%
+- **Backend**: 2-6 instances, CPU threshold 75%, Memory threshold 85%
+- **Auto-optimization**: Memory restart at 75%, CPU scale at 80%
+
+## 🧪 Testing & Validation
+
+### **Test Results**
+```
+📊 Test Results Summary
+✅ PM2 Installation: PASS
+✅ Ecosystem Config: PASS
+✅ Script Files: PASS
+✅ Directory Structure: PASS
+✅ PM2 Commands: PASS
+✅ Script Execution: PASS
+✅ Health Endpoints: PASS
+✅ NPM Scripts: PASS
+
+Success Rate: 100.0%
+```
+
+### **System Validation**
+- All components tested and validated
+- PM2 integration verified
+- Script execution confirmed
+- NPM scripts validated
+- Directory structure verified
+
+## 🔮 Future Enhancements
+
+### **Planned Features**
+- **Machine Learning**: Predictive scaling and optimization
+- **Advanced Analytics**: Deep performance insights
+- **Integration**: Slack, email, and webhook notifications
+- **Dashboard**: Web-based monitoring interface
+- **API**: REST API for external integrations
+
+### **Extensibility**
+- **Plugin System**: Custom monitoring plugins
+- **Custom Metrics**: Application-specific metrics
+- **External Monitoring**: Integration with external tools
+- **Custom Actions**: User-defined automation rules
+
+## 📚 Documentation & Support
+
+### **Available Documentation**
+- **PM2_AUTOMATION_README.md**: Comprehensive user guide
+- **Inline code comments**: Detailed code documentation
+- **NPM script descriptions**: Command usage and examples
+- **Configuration examples**: Setup and customization guides
+
+### **Support & Maintenance**
+- **Automated testing**: Continuous system validation
+- **Health monitoring**: Real-time system health checks
+- **Error logging**: Comprehensive error tracking
+- **Performance reporting**: Regular performance insights
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 
 ## 🎉 Conclusion
 

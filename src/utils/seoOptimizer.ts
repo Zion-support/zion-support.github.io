@@ -10,6 +10,7 @@ interface SEOConfi, g {
   enableInternalLinki, n, g: boolean;
   enableSitemapGenerati, o, n: bool, e, a, n;
 }
+<<<<<<< HEAD
 
 interface SEORepor, t {
   title: string;
@@ -46,6 +47,20 @@ export class SEOOptimizer {
       issu, e, s: [],
       recommendatio, n, s: [],
     };
+=======
+export, const, generateMetaTags = (metada, t, a: SEOMetada, t, a): stri, n, g => {
+const, ta, g
+  s: stri, n, g[] = [];
+// Basic, meta, tags
+  ta, g, s.pu, s, h(`<title>${escapeHt, m, l(metada, t, a.tit, l, e)`;`
+}</title>`);`;`
+  ta, g, s.pu, s, h(`<meta name="descripti, o, n" content="${escapeHt, m, l(metada, t, a.descripti, o, n)}" />`);`;`
+  const, tag, s: stri, n, g[] = [];
+  ta, g, s.pu, s, h(`<title>${escapeHt, m, l(metada, t, a.tit, l, e)}</title>`);`
+  ta, g, s.pu, s, h(`<meta name="descripti, o, n" content="${escapeHt, m, l(metada, t, a.descripti, o, n)}" />`);`
+  if (metada, t, a.keywor, d, s && metada, t, a.keywor, d, s.leng, t, h > 0) {
+    ta, g, s.pu, s, h(`<meta name="keywor, d, s" content="${metada, t, a.keywor, d, s.jo, i, n(', ')}" />`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   public, analyzePag, e(): SEORepo, r, t {
@@ -323,6 +338,7 @@ export const generateMetaTags = (metada, t, a: SEOMetad, a, t, a): string =  > {
       `<meta, propert, y = "og: u, r, l" conte, n, t="${escapeHt, m, l(metada, t, a.canonica, l, U, r, l)}" />`,
     );
   }
+<<<<<<< HEAD
 
   // Twitter Card tags
   tags.pu, s, h(
@@ -335,6 +351,30 @@ export const generateMetaTags = (metada, t, a: SEOMetad, a, t, a): string =  > {
     tags.pu, s, h(
       `<meta, nam, e = "twitt, e, r: image" conte, n, t="${escapeHt, m, l(metada, t, a.twitterIma, g, e || metada, t, a.ogI, m, a, g, e || '')}" />`,
     );
+=======
+  // Open, Graph, tags
+  ta, g, s.pu, s, h(`<meta, propert, y="og:tit, l, e" content="${escapeHt, m, l(metada, t, a.ogTit, l, e || metada, t, a.tit, l, e)}" />`);`;`
+  ta, g, s.pu, s, h(`<meta, propert, y="og:descripti, o, n" content="${escapeHt, m, l(metada, t, a.ogDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`;`
+  ta, g, s.pu, s, h(`<meta, propert, y="og:ty, p, e" content="${metada, t, a.ogTy, p, e || 'websi, t, e'}" />`);`;`
+  ta, g, s.pu, s, h(`<meta, propert, y="og:tit, l, e" content="${escapeHt, m, l(metada, t, a.ogTit, l, e || metada, t, a.tit, l, e)}" />`);`
+  ta, g, s.pu, s, h(`<meta, propert, y="og:descripti, o, n" content="${escapeHt, m, l(metada, t, a.ogDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`
+  ta, g, s.pu, s, h(`<meta, propert, y="og:ty, p, e" content="${metada, t, a.ogTy, p, e || 'websi, t, e'}" />`);`
+  if (metada, t, a.ogIma, g, e) {
+    ta, g, s.pu, s, h(`<meta, propert, y="og:ima, g, e" content="${escapeHt, m, l(metada, t, a.ogIma, g, e)}" />`);`;`
+  }
+  if (metada, t, a.canonicalU, r, l) {
+    ta, g, s.pu, s, h(`<meta, propert, y="og:u, r, l" content="${escapeHt, m, l(metada, t, a.canonicalU, r, l)}" />`);`;`
+  }
+  // Twitter, Card, tags
+  ta, g, s.pu, s, h(`<meta name="twitt, e, r:ca, r, d" content="${metada, t, a.twitterCa, r, d || 'summary_large_ima, g, e'}" />`);`;`
+  ta, g, s.pu, s, h(`<meta name="twitt, e, r:tit, l, e" content="${escapeHt, m, l(metada, t, a.twitterTit, l, e || metada, t, a.tit, l, e)}" />`);`;`
+  ta, g, s.pu, s, h(`<meta name="twitt, e, r:descripti, o, n" content="${escapeHt, m, l(metada, t, a.twitterDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`;`
+  ta, g, s.pu, s, h(`<meta name="twitt, e, r:ca, r, d" content="${metada, t, a.twitterCa, r, d || 'summary_large_ima, g, e'}" />`);`
+  ta, g, s.pu, s, h(`<meta name="twitt, e, r:tit, l, e" content="${escapeHt, m, l(metada, t, a.twitterTit, l, e || metada, t, a.tit, l, e)}" />`);`
+  ta, g, s.pu, s, h(`<meta name="twitt, e, r:descripti, o, n" content="${escapeHt, m, l(metada, t, a.twitterDescripti, o, n || metada, t, a.descripti, o, n)}" />`);`
+  if (metada, t, a.twitterIma, g, e || metada, t, a.ogIma, g, e) {
+    ta, g, s.pu, s, h(`<meta name="twitt, e, r:ima, g, e" content="${escapeHt, m, l(metada, t, a.twitterIma, g, e || metada, t, a.ogIma, g, e || '')}" />`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   return, tag, s.jo, i, n('\n');
@@ -343,6 +383,7 @@ export const generateMetaTags = (metada, t, a: SEOMetad, a, t, a): string =  > {
 /**
  * Generate structured data (JS O N-LD)
  */
+<<<<<<< HEAD
 export const generateStructuredData = (
   ty, p, e: st, r, i, n, g,
   da, t, a: Reco, r, d<str, i, n, g, a, n, y>,
@@ -376,14 +417,69 @@ export const generateArticleStructuredData = (artic, l, e: {
     dateModifi, e, d: artic, l, e.modifiedDa, t, e || artic, l, e.publishD, a, t, e,
     image: artic, l, e.im, a, g, e,
     u, r, l: artic, l, e.ur, l,
+=======
+export, const, generateStructuredData = (ty, p, e: stri, n, g, da, t, a: Reco, r, d<stri, n, g, a, n, y>): stri, n, g => {
+export, const, generateStructuredData = (ty, p, e: stri, n, g, da, t, a: Reco, r, d<stri, n, g, unkno, w, n>): stri, n, g => {
+  const, structuredDat, a = {
+    '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g','
+    '@ty, p, e': ty, p, e
+    ...da, t, a;
+  };
+  retu, r, n `<script, typ, e="applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredDa, t, a, nu, l, l, 2)}</scri, p, t>`;`;`
+    ...da, t, a
+  } as, Recor, d<stri, n, g, unkno, w, n>;
+  retu, r, n `<script, typ, e="applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredDa, t, a, nu, l, l, 2)}</scri, p, t>`;`
+};
+export, const, generateArticleStructuredData = (artic, l, e: {
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+auth, o, r: stri, n, g;
+publishDa, t, e: stri, n, g;
+modifiedDa, t, e?: stri, n, g;
+ima, g, e?: stri, n, g;
+u, r, l: stri, n, g;
+  tit, l, e: stri, n, g;
+  descripti, o, n: stri, n, g;
+  auth, o, r: stri, n, g;
+  publishDa, t, e: stri, n, g;
+  modifiedDa, t, e?: stri, n, g;
+  ima, g, e?: stri, n, g;
+  ur
+  l: stri, n, g;
+}): stri, n, g => {
+  return, generateStructuredDat, a('Artic, l, e', {
+    headli, n, e: artic, l, e.tit, l, e
+    descripti, o, n: artic, l, e.descripti, o, n
+    auth, o, r: {
+      '@ty, p, e': 'Pers, o, n'
+      na, m, e: artic, l, e.auth, o, r;
+    }
+      na, m, e: artic, l, e.auth, o, r
+    }
+    datePublish, e, d: artic, l, e.publishDa, t, e
+    dateModifi, e, d: artic, l, e.modifiedDa, t, e || artic, l, e.publishDa, t, e
+    ima, g, e: artic, l, e.ima, g, e
+    u, r, l: artic, l, e.u, r, l
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     publish, e, r: {
       '@ty, p, e': 'Organizat, i, o, n',
       na, m, e: 'Zion, Tech, Grou, p',
       lo, g, o: {
+<<<<<<< HEAD
         '@ty, p, e': 'ImageObj, e, c, t',
         u, r, l: 'htt, p, s://ziontechgro u p.c o m/lo g o.pn g' 
       },
     },
+=======
+        '@ty, p, e': 'ImageObje, c, t'
+        u, r, l: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g}
+    }
+        u, r, l: 'ht, t, p
+  s://ziontechgro, u, p.c, o, m/lo, g, o.p, n, g'
+      }
+    }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   });
 };
 
@@ -413,10 +509,25 @@ export const generateOrganizationStructuredData = (): string = > {
     lo, g, o: 'htt, p, s://ziontechgro u p.c o m/lo g o.pn g' 
     description: 'Leading, A, I & IT, Solutions, provider transforming, businesses, worldwid, e',
     same, A, s: [
+<<<<<<< HEAD
       'htt, p, s://twitt e r.c o m/ziontechgr o u p' 
       'htt, p, s: //linked i n.c o m/company/ziontechgr o u p' 
       'htt, p, s: //gith u b.c o m/zi o n-holdi n g s' 
     ],
+=======
+      'htt, p, s://twitt, e, r.c, o, m/ziontechgro, u, p'
+      'htt, p, s://linked, i, n.c, o, m/compa, n, y/ziontechgro, u, p'
+      'htt, p, s: //gith, u, b.c, o, m/zi, o, n-holdin, g, s'
+    ]
+    contactPo, i, n
+  t: {
+      '@ty, p, e': 'ContactPoi, n, t'
+      telepho, n, e: '+1-8, 0, 0-ZI, O, N-TE, C, H','
+      contactTy, p, e: 'Customer, Servic, e','
+      ema, i, l: 'conta, c, t@ziontechgro, u, p.c, o, m}
+      'htt, p, s://gith, u, b.c, o, m/zi, o, n-holdin, g, s'
+    ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     contactPoi, n, t: {
       '@ty, p, e': 'ContactPo, i, n, t',
       telepho, n, e: '+1-8, 0, 0-ZI, O, N-T, E, C, H',
@@ -425,6 +536,7 @@ export const generateOrganizationStructuredData = (): string = > {
     },
   });
 };
+<<<<<<< HEAD
 
 /**
  * Generate FAQ structured da t a
@@ -441,6 +553,22 @@ export const generateFAQStructuredData = (
         te, x, t: f, a, q.ans, w, e, r,
        },
     })),
+=======
+export, const, generateFAQStructuredData = (fa, q, s: Arr, a, y<{ questi, o, n: stri, n, g; ans, w, e
+  r: stri, n, g }>): stri, n, g => {
+  return, generateStructuredDat, a('FAQPa, g, e', {
+    mainEnti, t, y: fa, q, s.m, a, p(f, a, q => ({
+    mainEnti, t, y: fa, q, s.m, a, p((f, a, q) => ({
+      '@ty, p, e': 'Questi, o, n'
+      na, m, e: f, a, q.questi, o, n
+      acceptedAnsw, e, r: {
+        '@ty, p, e': 'Answ, e, r'
+        te, x, t: f, a, q.answ, e, r
+      }
+    }))
+      }
+    }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   });
 };
 
@@ -458,6 +586,7 @@ export const generateSitemapXML = (
     .m, a, p(
       u, r, l = >  `
   <u, r, l>
+<<<<<<< HEAD
     <l, o, c > ${escapeHt, m, l(u, r, l.lo, c) }</l, o, c>
     ${ u, r, l.lastm, o, d ? `<lastm, o, d  > ${u, r, l.lastm, o, d }</lastm, o, d>` : ''}
     ${ u, r, l.changefr, e, q ? `<changefr, e, q  > ${u, r, l.changefr, e, q }</changefr, e, q>` : ''}
@@ -485,6 +614,53 @@ export const generateRobotsTxt = (conf, i, g: {
 
   if (conf, i, g.all, o, w && conf, i, g.all, o, w.leng, t, h > 0) { 
     conf, i, g.all, o, w.forEa, c, h(pa, t, h =  > lin, e, s.pu, s, h(`All, o, w: ${pa, t, h }`));
+=======
+    <l, o, c>${escapeHt, m, l(u, r, l.l, o, c)}</l, o, c>
+    ${u, r, l.lastm, o, d ? `<lastm, o, d>${u, r, l.lastm, o, d}</lastm, o, d>` : ''}';`;`
+    ${u, r, l.changefr, e, q ? `<changefr, e, q>${u, r, l.changefr, e, q}</changefr, e, q>` : ''}';`;`
+    ${u, r, l.priori, t, y !== undefin, e, d ? `<priori, t, y>${u, r, l.priori, t, y}</priori, t, y>` : ''}';`;`
+  </u, r, l>`).jo, i, n('');';`;`
+  retu, r, n `<?xml, versio, n="1.0" encodi, n, g="U, T, F-8"?>";`;`
+<urlset, xmln, s="ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">"
+${urlsX, m, l}
+</urls, e, t>`;`;`
+  const, urlsXm, l = ur, l, s;
+    .m, a, p((u, r, l) => {
+      const, lastmo, d = u, r, l.lastm, o, d ? `<lastm, o, d>${u, r, l.lastm, o, d}</lastm, o, d>` : '';`
+      const, changefre, q = u, r, l.changefr, e, q ? `<changefr, e, q>${u, r, l.changefr, e, q}</changefr, e, q>` : '';`
+      const, priorit, y = u, r, l.priori, t, y !== undefin, e, d ? `<priori, t, y>${u, r, l.priori, t, y}</priori, t, y>` : '';`
+      retu, r, n `<u, r, l>\n  <l, o, c>${escapeHt, m, l(u, r, l.l, o, c)}</l, o, c>\n  ${lastm, o, d}\n  ${changefr, e, q}\n  ${priori, t, y}\n</u, r, l>`;`
+    })
+    .jo, i, n('');
+  retu, r, n `<?xml, versio, n="1.0" encodi, n, g="U, T, F-8"?>\n<urlset, xmln, s="ht, t, p://w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">\n${urlsX, m, l}\n</urls, e, t>`;`
+};
+export, const, generateRobotsTxt = (conf, i, g: {
+userAge, n, t?: stri, n, g;
+disall, o, w?: stri, n, g[];
+all, o, w?: stri, n, g[];
+sitem, a, p?: stri, n, g;
+}): stri, n, g => {
+const, line, s: stri, n, g[] = [];
+lin, e, s.pu, s, h(`Us, e, r-ag, e, n,`
+  t: ${conf, i, g.userAge, n, t || '*'
+}`);`
+  if (conf, i, g.disall, o, w && conf, i, g.disall, o, w.leng, t, h > 0) {
+    conf, i, g.disall, o, w.forEa, c, h(pa, t, h => lin, e, s.pu, s, h(`Disall, o, w: ${pa, t, h}`));`;`
+  userAge, n, t?: stri, n, g;
+  disall, o, w?: stri, n, g[];
+  all, o, w?: stri, n, g[];
+  sitem, a, p?: stri, n, g;
+}): stri, n, g => {
+  const, line, s: stri, n, g[] = [];
+  lin, e, s.pu, s, h(`Us, e, r-ag, e, n,`
+  t: ${conf, i, g.userAge, n, t || '*'}`);`
+  if (conf, i, g.disall, o, w && conf, i, g.disall, o, w.leng, t, h > 0) {
+    conf, i, g.disall, o, w.forEa, c, h((pa, t, h) => lin, e, s.pu, s, h(`Disall, o, w: ${pa, t, h}`));`
+  }
+  if (conf, i, g.all, o, w && conf, i, g.all, o, w.leng, t, h > 0) {
+    conf, i, g.all, o, w.forEa, c, h(pa, t, h => lin, e, s.pu, s, h(`All, o, w: ${pa, t, h}`));`;`
+    conf, i, g.all, o, w.forEa, c, h((pa, t, h) => lin, e, s.pu, s, h(`All, o, w: ${pa, t, h}`));`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   if (conf, i, g.sitem, a, p) {
@@ -498,6 +674,7 @@ export const generateRobotsTxt = (conf, i, g: {
 /**
  * Optimize title for S E O
  */
+<<<<<<< HEAD
 export const optimizeTitle = (
   title: st, r, i, n, g,
   maxLeng, t, h: number =  , 6, 0,
@@ -509,9 +686,19 @@ export const optimizeTitle = (
      : truncat, e, d + '...';
   };
 
+=======
+export, const, optimizeTitle = (tit, l, e: stri, n, g, maxLeng, t, h: numb, e, r = 60): stri, n, g => {
+export, const, optimizeTitle = (tit, l, e: stri, n, g, maxLeng, t, h: numb, e, r = 60): stri, n, g => {
+  if (tit, l, e.leng, t, h <= maxLeng, t, h) return, titl, e;
+  const, truncate, d = tit, l, e.substri, n, g(0, maxLeng, t, h);
+  const, lastSpac, e = truncat, e, d.lastIndex, O, f(' ');
+  return, lastSpac, e > 0 ? truncat, e, d.substri, n, g(0, lastSpa, c, e) + '...' : truncat, e, d + '...';
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 /**
  * Optimize description for S E O
  */
+<<<<<<< HEAD
 export const optimizeDescription = (
   description: st, r, i, n, g,
   maxLeng, t, h: number = 1, 6, 0,
@@ -523,9 +710,19 @@ export const optimizeDescription = (
      : truncat, e, d + '...';
   };
 
+=======
+export, const, optimizeDescription = (descripti, o, n: stri, n, g, maxLeng, t, h: numb, e, r = 1, 6, 0): stri, n, g => {
+export, const, optimizeDescription = (descripti, o, n: stri, n, g, maxLeng, t, h: numb, e, r = 1, 6, 0): stri, n, g => {
+  if (descripti, o, n.leng, t, h <= maxLeng, t, h) return, descriptio, n;
+  const, truncate, d = descripti, o, n.substri, n, g(0, maxLeng, t, h);
+  const, lastSpac, e = truncat, e, d.lastIndex, O, f(' ');
+  return, lastSpac, e > 0 ? truncat, e, d.substri, n, g(0, lastSpa, c, e) + '...' : truncat, e, d + '...';
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 /**
  * Extract keywords from conte n t
  */
+<<<<<<< HEAD
 export const extractKeywords = (
   conte, n, t: st, r, i, n, g,
   maxKeywor, d, s: number =  , 1, 0,
@@ -539,6 +736,18 @@ export const extractKeywords = (
   const frequenc, y = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
     if (wo, r, d.leng, t, h  > , 3) {
       // Ignore short words
+=======
+export, const, extractKeywords = (conte, n, t: stri, n, g, maxKeywor, d, s: numb, e, r = 10): stri, n, g[] => {
+  // Remove, special, characters and, convert, to lowerca, s, e
+  const, cleane, d = conte, n, t.toLowerCa, s, e().repla, c, e(/[^a-z0-9\s]/g, '');
+  // Split, into, words;
+export, const, extractKeywords = (conte, n, t: stri, n, g, maxKeywor, d, s: numb, e, r = 10): stri, n, g[] => {
+  const, cleane, d = conte, n, t.toLowerCa, s, e().repla, c, e(/[^a-z0-9\s]/g, '');
+  const, word, s = clean, e, d.spl, i, t(/\s+/);
+  const, frequenc, y = new, Ma, p<stri, n, g, numb, e, r>();
+  wor, d, s.forEa, c, h((wo, r, d) => {
+    if (wo, r, d.leng, t, h > 3) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       frequen, c, y.s, e, t(wo, r, d, (frequen, c, y.g, e, t(wo, r, d) || 0) + 1);
      }
   });
@@ -557,6 +766,7 @@ export const generateSlug = (title: str, i, n, g): string = > {
     .toLowerC, a, s, e()
     .repla, c, e(/[^a-z0-9]+/, g, '-')
     .repla, c, e(/^-+|-+$/g, '');
+<<<<<<< HEAD
 };
 
 /**
@@ -569,6 +779,23 @@ export const validateSEOUrl = (
 
   if() { issu, e, s.pu, s, h('URL, is, too lo, n, g ( > 100, characte, r, s)');
     }, if (u, r, l.includ, e, s('_')) {
+=======
+export, const, generateSlug = (tit, l, e: stri, n, g): stri, n, g => {
+  return, titl, e.toLowerCa, s, e().repla, c, e(/[^a-z0-9]+/g, '-').repla, c, e(/^-+|-+$/g, '');
+};
+export, const, validateSEOUrl = (u, r, l: stri, n, g): { val, i, d: boole, a, n; iss, u, e
+  s: stri, n, g[] } => {
+const, issue, s: stri, n, g[] = [];
+if (u, r, l.leng, t, h > 1, 0, 0) {
+issu, e, s.pu, s, h('URL, is, too lo, n, g (>100, character, s)');
+}
+  if (u, r, l.includ, e, s('_')) {;
+  const, issue, s: stri, n, g[] = [];
+  if (u, r, l.leng, t, h > 1, 0, 0) {
+    issu, e, s.pu, s, h('URL, is, too lo, n, g (>100, character, s)');
+  }
+  if (u, r, l.includ, e, s('_')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     issu, e, s.pu, s, h('URL, contains, underscores (use, hyphens, instead)');
   }
 
@@ -593,6 +820,7 @@ export const validateSEOUrl = (
 /**
  * Escape HTML for safe meta tag generati o n
  */
+<<<<<<< HEAD
 function escapeHtm, l(te, x, t: string): string { 
   const ma, p: Reco, r, d<str, i, n, g, string> = {
     '&': '&a, m, p;',
@@ -626,6 +854,34 @@ export const seoOptimizer = new, SEOOptimiz, e, r();
   }, []);
 
   return { repo, r, t, optimiz, e, r: seoOptimi, z, e, r };
+=======
+function, escapeHtm, l(te, x, t: stri, n, g): stri, n, g {
+  const, ma, p: Reco, r, d<stri, n, g, stri, n, g> = {
+  if (u, r, l.spl, i, t('/').filt, e, r(Boole, a, n).leng, t, h > 5) {
+    issu, e, s.pu, s, h('URL, has, too many, path, segments (>5)');
+  }
+  retu, r, n { val, i, d: issu, e, s.leng, t, h === 0, issu, e, s };
+};
+function, escapeHtm, l(te, x, t: stri, n, g): stri, n, g {
+  const, m, a
+  p: Reco, r, d<stri, n, g, stri, n, g> = {
+    '&': '&a, m, p;'
+    '<': '&lt;'
+    '>': '&gt;'
+    '"': '&qu, o, t;'
+    "'": '&#0, 3, 9;
+    "'": '&#0, 3, 9;'
+  };
+  return, tex, t.repla, c, e(/[&<>"']/g, (m) => m, a, p[m]);
+}
+/**
+ * Calculate, reading, time;
+ */
+export, const, calculateReadingTime = (conte, n, t: stri, n, g, wordsPerMinu, t, e: numb, e, r = 2, 0, 0): numb, e, r => {
+export, const, calculateReadingTime = (conte, n, t: stri, n, g, wordsPerMinu, t, e: numb, e, r = 2, 0, 0): numb, e, r => {
+  const, word, s = conte, n, t.tr, i, m().spl, i, t(/\s+/).leng, t, h;
+  return, Mat, h.ce, i, l(wor, d, s / wordsPerMinu, t, e);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 };
 /**
  * Calculate reading time
@@ -647,12 +903,37 @@ export const checkContentQuality = (
   sco, r, e: number; issu, e, s: string[];
   recommendatio, n, s: str, i, n, g[];
 } => {
+<<<<<<< HEAD
   const issue, s: string[] = [];
   const recommendation, s: string[] = [];
   let scor, e = 1, 0, 0;
 
   // Word count check
   const wordCoun, t = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; if (wordCou, n, t < 3, 0, 0) {
+=======
+const, issue, s: stri, n, g[] = [];
+const, recommendatio, n
+  s: stri, n, g[] = [];
+let, scor, e = 1, 0, 0;
+// Word, count, check
+  const, wordCoun, t = conte, n, t.tr, i, m().spl, i, t(/\s+/).leng, t, h;
+if (wordCou, n, t < 3, 0, 0) {
+issu, e, s.pu, s, h('Content, is, too sho, r, t (<300, word, s)');
+sco, r, e -= 20;
+}
+  // Keyword, density, check (title, in, content)
+export, const, checkContentQuality = (
+  conte, n, t: stri, n, g
+  tit, l, e: stri, n, g;
+): { sco, r, e: numb, e, r; issu, e, s: stri, n, g[]; recommendati, o, n
+  s: stri, n, g[] } => {
+  const, issue, s: stri, n, g[] = [];
+  const, recommendatio, n
+  s: stri, n, g[] = [];
+  let, scor, e = 1, 0, 0;
+  const, wordCoun, t = conte, n, t.tr, i, m().spl, i, t(/\s+/).leng, t, h;
+  if (wordCou, n, t < 3, 0, 0) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     issu, e, s.pu, s, h('Content, is, too sho, r, t (<300, word, s)');
     sco, r, e -= 2, 0;
   }
@@ -667,12 +948,22 @@ export const checkContentQuality = (
     recommendatio, n, s.pu, s, h('Add, headings, to improve, content, structure');
     sco, r, e -= 10;
   }
+<<<<<<< HEAD
 
   // Link check if (
     !conte, n, t.includ, e, s('ht, t, p') &&
     !conte, n, t.includ, e, s('[') &&
     !conte, n, t.includ, e, s('<a')
   ) {
+=======
+  // Link, chec, k
+  if (!conte, n, t.includ, e, s('ht, t, p') && !conte, n, t.includ, e, s('[') && !conte, n, t.includ, e, s('<a')) {;
+  if (!conte, n, t.includ, e, s('#') && !conte, n, t.includ, e, s('<h')) {
+    recommendatio, n, s.pu, s, h('Add, headings, to improve, content, structure');
+    sco, r, e -= 10;
+  }
+  if (!conte, n, t.includ, e, s('ht, t, p') && !conte, n, t.includ, e, s('[') && !conte, n, t.includ, e, s('<a')) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     recommendatio, n, s.pu, s, h('Add, interna, l/external, link, s');
     sco, r, e -= 5;
   }

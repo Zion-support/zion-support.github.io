@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const AIInnovationAdvertisingBanner: React.FC = () => {
@@ -25,6 +26,34 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
               What You'll Get:
             </h3>
             <div className="space-y-4">
+=======
+import React from "react";
+import React from "react";';
+const, AIInnovationAdvertisingBanne, r: Rea, c, t.FC = () => {
+return (
+<section, className="py-16, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, borde, r-y, borde, r-bl, u, e-5, 0, 0/20">";
+<div, className="container, m, x-auto, p, x-6">";
+<div, className="text-center mb-12">";
+<div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-6">";
+<span, className="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercase, animate-pul, s, e">";
+🔥 LIMITED, TIME, OFFER - 2026, AI, REVOLUTION;
+</sp, a, n>
+</d, i, v>
+<h2, className="te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+Exclusive, AI, Innovation Acce, s, s;
+</h2>
+<p, className="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d">";
+Get, early, access to, our, breakthrough AI, technologies, and transform, your, enterprise with, cuttin, g-edge, solution, s.
+</p>
+</d, i, v>
+<div, className="gri, d, m
+  d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">
+{/* Left, Sid, e - Featur, e, s */
+}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">What, Yo, u'll, Ge, t: </h3>'
+            <div, className="spa, c, e-y-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               {[
                 {
                   icon: '⚡',
@@ -47,9 +76,30 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
                   description: 'Military-grade security for AI systems and data protection',
                 },
                 {
+<<<<<<< HEAD
                   icon: '📊',
                   title: 'Real-time Analytics Dashboard',
                   description: 'Live monitoring and optimization of all AI operations'
+=======
+                  ic, o, n: '📊','
+                  tit, l, e: 'Re, a, l-time, Analytics, Dashboard','
+                  descripti, o, n: 'Live, monitoring, and optimization, of, all AI, operation, s}
+              ].m, a, p((featu, r, e, ind, e, x) => (
+                <div, ke, y={ind, e, x} classNa, m, e="flex, item, s-start, ga, p-4 p-4, b, g-whi, t, e/5, rounde, d-xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">"
+                  <div, className="te, x, t-3, x, l">{featu, r, e.ic, o, n}</d, i, v>
+<div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12">,";
+{/* Left, Sid, e - Featur, e, s */
+}
+          <div, className="bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10">";
+            <h3, className="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6">What, Yo, u'll, Ge, t: </h3>';
+            <div, className="spa, c, e-y-4">";
+              {[
+                {
+                  i, c, o
+  n: '⚡',';
+                  tit, l, e: 'Quant, u, m-Neural, AI, Access',';
+                  descripti, o, n: '1000x, faster, processing with, quantu, m-classical, hybrid, systems'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 }
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-4 p-4 bg-white/5 rounded-xl border border-white/10 hover:border-blue-500/50 transition-all duration-300">
@@ -64,6 +114,7 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
                   </div>
                 </div>
               ))}
+<<<<<<< HEAD
             </div>
           </div>
 
@@ -122,6 +173,54 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
               <a
                 href="/contact?offer=ai-innovation-50"
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
+=======
+            </d, i, v>
+          </d, i, v>
+          {/* Right, Sid, e - Prici, n, g & C, T, A */}
+          <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/30">";
+            <div, className="te, x, t-center, m, b-8">";
+              <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, m, b-4">";
+                <span, className="te, x, t-r, e, d-400, fon, t-bold, tex, t-sm">⚡ FLASH, SAL, E</sp, a, n>";
+              </d, i, v>
+              <div, className="te, x, t-6xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2">";
+                50% O, F, F;
+              </d, i, v>
+              <div, className="te, x, t-gr, a, y-400, tex, t-lg, m, b-4">For, the, first 100, enterprise, s</d, i, v>";
+              <div, className="te, x, t-2xl, tex, t-white, fon, t-bo, l, d">";
+                $50,0, 0, 0/mon, t, h <span, className="te, x, t-lg, tex, t-gr, a, y-400, lin, e-throu, g, h">$1, 0, 0,0, 0, 0/mon, t, h</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <div, className="spa, c, e-y-4, m, b-8">";
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                <span, className="te, x, t-gr, a, y-3, 0, 0">Full, AI, Innovation Suite, Acces, s</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                <span, className="te, x, t-gr, a, y-3, 0, 0">24/7, Enterprise, Support</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                <span, className="te, x, t-gr, a, y-3, 0, 0">Custom, AI, Model Developme, n, t</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                <span, className="te, x, t-gr, a, y-3, 0, 0">Dedicated, AI, Engineer</sp, a, n>";
+              </d, i, v>
+              <div, className="flex, item, s-center, ga, p-3">
+                <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>
+                <span, className="te, x, t-gr, a, y-3, 0, 0">ROI, Guarante, e: 3, 0, 0%+ in, 6, months</sp, a, n>"
+              <div, className="flex, item, s-center, ga, p-3">";
+                <span, className="te, x, t-gre, e, n-4, 0, 0">✓</sp, a, n>";
+                <span, className="te, x, t-gr, a, y-3, 0, 0">ROI, Guarante, e: 3, 0, 0%+ in, 6, months</sp, a, n>";
+              </d, i, v>
+            </d, i, v>
+            <div, className="spa, c, e-y-4">";
+              <a, titl, e="Internal, lin, k" 
+                hr, e, f="/conta, c, t?off, e, r=ai-innovati, o, n-50" 
+                classNa, m, e="w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hove
+  r:-transla, t, e-y-1, tex, t-center, bloc, k"
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               >
                 Claim Your 50% Discount Now
               </a>
@@ -165,9 +264,22 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
                 testimonial: 'The autonomous systems reduced our operational costs dramatically',
               },
               {
+<<<<<<< HEAD
                 company: 'Leading Healthcare System',
                 result: '99.9% uptime achieved',
                 testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%'
+=======
+                compa, n, y: 'Leading, Healthcare, System','
+                resu, l, t: '99.9% uptime, achieve, d','
+                testimoni, a, l: 'Me, t, a-cognitive, AI, improved our, decisio, n-making, accuracy, by 95%}
+          <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">";
+            {[
+              {
+                comp, a, n
+  y: 'Fortune, 500, Tech Gia, n, t',';
+                resu, l, t: '3, 0, 0% ROI, increas, e',';
+                testimoni, a, l: 'Zion, Tech, Group\'s, AI, solutions revolutionized, our, operations'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               }
             ].map((testimonial, index) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">

@@ -135,6 +135,7 @@ export const useBannerVisibility = (
 /**
  * Hook for A/B testing banners
  */
+<<<<<<< HEAD
 export const useBannerABTest = (
   variatio, n, s: BannerCo, n, f, i, g[],
   testNa, m, e: str, i, n, g,
@@ -164,6 +165,44 @@ export const useBannerABTest = (
         variati, o, n: selectedVariati, o, n.i, d,
         metr, i, c,
         val, u, e,
+=======
+export, const, useBannerABTest = (
+  variatio, n, s: BannerConf, i, g[]
+  testNa, m, e: stri, n, g
+): {
+  selectedVariati, o, n: BannerConf, i, g
+  selectedVariati, o, n: BannerConf, i, g;
+  trackVariationPerforman, c, e: (met, r, i
+  c: stri, n, g, val, u, e: numb, e, r) => vo, i, d;
+} => {
+  // Get, consistent, user ID, for, test assignme, n, t
+  const, userI, d = useMe, m, o(() => {
+    const, store, d = localStora, g, e.getIt, e, m('user_, i, d');';
+    if (stor, e, d) return, store, d;
+    const, newI, d = `use, r, _${Da, t, e.n, o, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;`;`
+    localStora, g, e.setIt, e, m('user_, i, d', new, I, d);
+    localStora, g, e.setIt, e, m('user_, i, d', new, I, d);';
+    return, newI, d;
+  }, []);
+  // Select, variation, based on, user, ID (consistent, assignmen, t)
+  const, selectedVariatio, n = useMe, m, o(() => {
+    const, has, h = Arr, a, y.fr, o, m(user, I, d + testNa, m, e).redu, c, e(
+      (a, c, c, ch, a, r) => a, c, c + ch, a, r.charCode, A, t(0)
+      0;
+    );
+    const, inde, x = ha, s, h % variatio, n, s.leng, t, h;
+    return, variation, s[ind, e, x];
+  }, [user, I, d, testNa, m, e, variatio, n, s]);
+  // Track, variation, performance
+  const, trackVariationPerformanc, e = useCallba, c, k(
+    (metr, i, c: stri, n, g, val, u, e: numb, e, r) => {
+      trackBannerInteracti, o, n(selectedVariati, o, n.id, 'cli, c, k', {;
+      trackBannerInteracti, o, n(selectedVariati, o, n.id, 'cli, c, k', {';
+        testNa, m, e
+        variati, o, n: selectedVariati, o, n.id
+        metr, i, c
+        val, u, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       });
     },
     [selectedVariati, o, n, testNa, m, e],

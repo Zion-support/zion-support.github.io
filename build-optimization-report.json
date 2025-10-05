@@ -1,1 +1,260 @@
+<<<<<<< HEAD
 {}
+=======
+{
+  "timestamp": "2025-10-02T06:16:50.255Z",
+  "buildAnalysis": {
+    "totalSize": 619987,
+    "fileAnalysis": {
+      "js": {
+        "count": 9,
+        "size": 255994,
+        "files": [
+          {
+            "name": "performance-monitor.js",
+            "size": 2079
+          },
+          {
+            "name": "sw-enhanced.js",
+            "size": 4621
+          },
+          {
+            "name": "sw-performance.js",
+            "size": 3736
+          },
+          {
+            "name": "sw.js",
+            "size": 902
+          },
+          {
+            "name": "assets/js/components-COZwjzJ8.js",
+            "size": 35138
+          },
+          {
+            "name": "assets/js/main-BnAZMWgz.js",
+            "size": 8870
+          },
+          {
+            "name": "assets/js/pages-BlzUi3KC.js",
+            "size": 8231
+          },
+          {
+            "name": "assets/js/vendor-D0dDnUyN.js",
+            "size": 9265
+          },
+          {
+            "name": "assets/js/vendor-react-VK85RLaR.js",
+            "size": 183152
+          }
+        ]
+      },
+      "css": {
+        "count": 1,
+        "size": 65097,
+        "files": [
+          {
+            "name": "assets/css/main-YDLR5VC_.css",
+            "size": 65097
+          }
+        ]
+      },
+      "images": {
+        "count": 6,
+        "size": 3251,
+        "files": [
+          {
+            "name": "grid.svg",
+            "size": 368
+          },
+          {
+            "name": "images/abstract-pattern.svg",
+            "size": 498
+          },
+          {
+            "name": "images/bio-pattern.svg",
+            "size": 556
+          },
+          {
+            "name": "images/grid-pattern.svg",
+            "size": 388
+          },
+          {
+            "name": "images/neural-network-bg.svg",
+            "size": 801
+          },
+          {
+            "name": "images/space-pattern.svg",
+            "size": 640
+          }
+        ]
+      },
+      "other": {
+        "count": 15,
+        "size": 295645,
+        "files": [
+          {
+            "name": "_headers",
+            "size": 610
+          },
+          {
+            "name": "_redirects",
+            "size": 23
+          },
+          {
+            "name": "index.html",
+            "size": 3622
+          },
+          {
+            "name": "manifest.json",
+            "size": 2298
+          },
+          {
+            "name": "offline.html",
+            "size": 1846
+          },
+          {
+            "name": "robots.txt",
+            "size": 264
+          },
+          {
+            "name": "site.webmanifest",
+            "size": 1902
+          },
+          {
+            "name": "sitemap-blog.xml",
+            "size": 150789
+          },
+          {
+            "name": "sitemap-case-studies.xml",
+            "size": 97294
+          },
+          {
+            "name": "sitemap-index.xml",
+            "size": 224
+          },
+          {
+            "name": "sitemap-main.xml",
+            "size": 1521
+          },
+          {
+            "name": "sitemap-new-posts.xml",
+            "size": 773
+          },
+          {
+            "name": "sitemap-services.xml",
+            "size": 32607
+          },
+          {
+            "name": "sitemap.xml",
+            "size": 817
+          },
+          {
+            "name": "structured-data.json",
+            "size": 1055
+          }
+        ]
+      }
+    }
+  },
+  "recommendations": {
+    "bundle": [
+      "Implement dynamic imports for route-based code splitting",
+      "Use React.lazy() for component-based code splitting",
+      "Optimize vendor chunk splitting",
+      "Enable tree shaking for unused code removal",
+      "Use webpack-bundle-analyzer to identify large dependencies",
+      "Consider using dynamic imports for heavy libraries",
+      "Implement preloading for critical resources",
+      "Use service workers for caching strategies",
+      "Optimize third-party library usage",
+      "Implement progressive loading"
+    ],
+    "assets": [
+      "Convert images to WebP format with fallbacks",
+      "Implement responsive images with srcset",
+      "Use image compression tools (TinyPNG, ImageOptim)",
+      "Implement lazy loading for images",
+      "Optimize SVG files by removing unnecessary metadata",
+      "Use CSS sprites for small icons",
+      "Implement critical CSS inlining",
+      "Use CSS purging to remove unused styles",
+      "Optimize font loading with font-display: swap",
+      "Implement resource hints (preload, prefetch)"
+    ],
+    "performance": [
+      "Implement service worker for offline caching",
+      "Use HTTP/2 server push for critical resources",
+      "Enable gzip and brotli compression",
+      "Implement critical resource preloading",
+      "Use CDN for static asset delivery",
+      "Optimize database queries and API responses",
+      "Implement proper caching headers",
+      "Use performance budgets in CI/CD",
+      "Monitor Core Web Vitals",
+      "Implement progressive enhancement"
+    ]
+  },
+  "checklist": {
+    "build": [
+      "Bundle size is under 1MB",
+      "JavaScript chunks are properly split",
+      "CSS is minified and purged",
+      "Images are optimized and compressed",
+      "Tree shaking is enabled",
+      "Dead code elimination is working",
+      "Source maps are disabled in production",
+      "Compression is enabled",
+      "Cache busting is implemented",
+      "Build time is optimized"
+    ],
+    "runtime": [
+      "Critical resources are preloaded",
+      "Non-critical resources are lazy loaded",
+      "Service worker is implemented",
+      "Caching strategy is optimized",
+      "Error boundaries are in place",
+      "Performance monitoring is active",
+      "Core Web Vitals are passing",
+      "Mobile performance is optimized",
+      "Accessibility is maintained",
+      "SEO is not compromised"
+    ],
+    "deployment": [
+      "CDN is configured",
+      "Compression is enabled on server",
+      "Cache headers are optimized",
+      "Security headers are implemented",
+      "Monitoring is set up",
+      "Error tracking is active",
+      "Performance budgets are enforced",
+      "Automated testing is passing",
+      "Deployment pipeline is optimized",
+      "Rollback strategy is in place"
+    ]
+  },
+  "priorityActions": [
+    "Implement code splitting with React.lazy()",
+    "Optimize bundle size with tree shaking",
+    "Enable compression (gzip/brotli)",
+    "Implement service worker caching",
+    "Optimize images with WebP format",
+    "Add performance monitoring",
+    "Implement lazy loading",
+    "Set up CDN for static assets",
+    "Configure proper cache headers",
+    "Monitor Core Web Vitals"
+  ],
+  "tools": [
+    "webpack-bundle-analyzer",
+    "lighthouse",
+    "web-vitals",
+    "vite-bundle-analyzer",
+    "rollup-plugin-visualizer",
+    "source-map-explorer",
+    "bundlephobia",
+    "webpack-bundle-size-analyzer",
+    "parcel-bundler",
+    "rollup"
+  ]
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279

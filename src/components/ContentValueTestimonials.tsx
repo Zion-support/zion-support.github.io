@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const ContentValueTestimonials: React.FC = () => {
@@ -97,3 +98,12 @@ const ContentValueTestimonials: React.FC = () => {
 };
 
 export default ContentValueTestimonials;
+=======
+import React from "react";
+export, default, function ContentValueTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t {
+	retu, r, n <section, ari, a-lab, e, l="Content, Value, Testimonials/>;";
+import React from "react";';
+export, default, function ContentValueTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t {
+	retu, r, n <section, ari, a-lab, e, l="Content, Value, Testimonials" />;";
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279

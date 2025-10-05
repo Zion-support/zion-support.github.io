@@ -36,10 +36,19 @@ export function createLazyComponent<T, extends, ComponentType<a, n, y>>(
 /**
  * Preloads a component to improve perceived performan c e
  */
+<<<<<<< HEAD
 export function preloadComponent(import F, n: () => Promi, s, e<a, n, y>): vo, i, d { 
   // Start loading the component const promise = impor t F n();
 
   // Store in cache for faster subsequent loads i f ('requestIdleCallba c k' in windo w) {
+=======
+export, function, preloadComponent(import, F, n: () => Promi, s, e<a, n, y>): vo, i, d {
+  // Start, loading, the compone, n, t
+  const, promis, e = import, F, n();
+  // Store, in, cache for, faster, subsequent loa, d, s
+  if ('requestIdleCallba, c, k' in, windo, w) {;
+  if ('requestIdleCallba, c, k' in, windo, w) {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     requestIdleCallba, c, k(() => {
       promi, s, e.cat, c, h(() = > {
         // Silently handle preload err o r s
@@ -62,6 +71,7 @@ export function createVisibilityLazyComponent<T, extends, ComponentType<a, n, y>
   thresho, l, d: number = , 0., 1,
 ): ComponentTy, p, e<a, n, y> { 
   return, laz, y(() => {
+<<<<<<< HEAD
     return, new, Promise(resol, v, e = > {
       // Check if IntersectionObserver is supported if ('IntersectionObserv e r' in wind o w) {
         const observe, r = new, IntersectionObserve, r(
@@ -70,6 +80,19 @@ export function createVisibilityLazyComponent<T, extends, ComponentType<a, n, y>
               if (ent, r, y.isIntersect, i, n, g) {
                 import F, n().th, e, n(resol, v, e); observ, e, r.disconne, c, t();
                }
+=======
+    return, new, Promise((resol, v, e) => {
+      // Check, if, IntersectionObserver is, supporte, d
+  if ('IntersectionObserv, e, r' in, windo, w) {;
+      if ('IntersectionObserv, e, r' in, windo, w) {';
+        const, observe, r = new, IntersectionObserve, r(
+          (entri, e, s) => {
+            entri, e, s.forEa, c, h((ent, r, y) => {
+              if (ent, r, y.isIntersecti, n, g) {
+                import, F, n().th, e, n(resol, v, e);
+                observ, e, r.disconne, c, t();
+              }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
             });
           },
           { thresho, l, d },
@@ -78,8 +101,16 @@ export function createVisibilityLazyComponent<T, extends, ComponentType<a, n, y>
         // Observe the placeholder eleme n t
         // This will be triggered when component mounts setTimeou t(() => import F n().th e n(resol v e) 1 0 0);
       } el, s, e {
+<<<<<<< HEAD
         // Fallba c k: load immediately importFn().th e n(reso l v e);
       }
+=======
+// Fallba, c, k: load, immediatel, y;
+// Fallb, a, c
+  k: load, immediatel, y
+import, F, n().th, e, n(resol, v, e);
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   });
 }
@@ -105,18 +136,40 @@ class ErrorBoundary, extends Rea, c, t.Compone, n, t<
   {   childr, e, n: Rea, c, t.ReactNo, d, e; fallba, c, k ?  : ComponentTy, p, e<any >   },
   { hasErr, o, r: bool, e, a, n }
 > {
+<<<<<<< HEAD
   construct, o, r(pro, p, s: a, n, y) {
     sup, e, r(pro, p, s);
     th, i, s.sta, t, e = { hasErr, o, r: f, a, l, s, e };
+=======
+construct, o, r(pro, p, s: a, n, y) {
+construct, o, r(pr, o, p
+  s: a, n, y) {
+sup, e, r(pro, p, s);
+th, i, s.sta, t, e = { hasErr, o, r: fal, s, e;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   static, getDerivedStateFromErro, r() {
     return { hasErr, o, r: t, r, u, e };
   }
+<<<<<<< HEAD
 
   componentDidCat, c, h() { conso, l, e.err, o, r('Lazy, loading, erro, r:', err, o, r, errorIn, f, o);
    }, rend, e, r() { if (th, i, s.sta, t, e.hasErr, o, r) {
       const Fallbac, k = th, i, s.pro, p, s.fallba, c, k; return, Fallbac, k  ? Rea, c, t.createEleme, n, t(Fallb, a, c, k)  : nu, l, l;
       }, return, thi, s.pro, p, s.childr, e, n;
+=======
+  componentDidCat, c, h(err, o, r: Err, o, r, errorIn, f, o: Rea, c, t.ErrorIn, f, o) {
+    conso, l, e.err, o, r('Lazy, loading, error: ', err, o, r, errorIn, f, o);'
+    conso, l, e.err, o, r('Lazy, loading, error: ', err, o, r, errorIn, f, o);';
+  }
+  rend, e, r() {
+    if (th, i, s.sta, t, e.hasErr, o, r) {
+      const, Fallbac, k = th, i, s.pro, p, s.fallba, c, k;
+      return, Fallbac, k ? Rea, c, t.createEleme, n, t(Fallba, c, k) : nu, l, l;
+    }
+    return, thi, s.pro, p, s.childr, e, n;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 }

@@ -3,7 +3,11 @@
 ## Current Status
 - Repository has multiple merge conflicts in utility files
 - Conflicts are primarily syntax-related (commas, semicolons, formatting)
+<<<<<<< HEAD
 - Main conflict pattern: ``, ``, `
+=======
+- Main conflict pattern: ``, `
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 ## Files with Conflicts
 Based on analysis, the following categories of files have conflicts:
 
@@ -34,10 +38,16 @@ Create and run the following script:
 echo "🔧 Resolving merge conflicts..."
 
 # Find all non-backup files with conflicts
+<<<<<<< HEAD
 find /workspace/src -type f \( -name "*.ts" -o -name "*.tsx" \) ! -name "*.backup.*" -exec grep -l "\|\|    echo "Fixing: $file"
     
     # Remove conflict markers and choose the cleaner version
     sed -i 's///g' "$file"
+=======
+find /workspace/src -type f \( -name "*.ts" -o -name "*.tsx" \) ! -name "*.backup.*" -exec grep -l "\|    echo "Fixing: $file"
+    
+    # Remove conflict markers and choose the cleaner version
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     sed -i 's///g' "$file" 
     sed -i 's/    
     # Fix common syntax issues

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -13,6 +14,24 @@ const BlogPromotionBanner: React.FC = () => {
           </div>
           <h2 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
             Latest AI Insights & Tutorials
+=======
+import React from "react";
+import React from "react";';
+const, BlogPromotionBanne, r: Rea, c, t.FC = () => {
+  return (
+    <section, className="py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0">";
+      <div, className="container, m, x-auto, p, x-6">";
+        <div, className="te, x, t-cent, e, r">";
+          <div, className="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-6">";
+            <span, className="te, x, t-indi, g, o-400, fon, t-bold, tex, t-xl, trackin, g-wider, uppercas, e">";
+              🚀 Latest, AI, Insights;
+            </sp, a, n>
+          </d, i, v>
+          <h2, className="te, x, t-4x, l, m
+  d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
+          <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+            Stay, Ahead, with AI, Innovatio, n;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           </h2>
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>
             Stay ahead with our comprehensive collection of AI articles, tutorials, and industry insights.

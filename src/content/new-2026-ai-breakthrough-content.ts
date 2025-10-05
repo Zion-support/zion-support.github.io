@@ -29,6 +29,7 @@ export interface CaseStudy {
   publishDa, t, e: string;
   featured: bool, e, a, n;
 }
+<<<<<<< HEAD
 
 // New Revolutionary Blog Posts export const newBlogPos t s: BlogPo s t[] = [
   { 
@@ -36,6 +37,53 @@ export interface CaseStudy {
     title: 'AI, 2026, Hyperconscious Computing, Revolutio, n: Beyond, Artificial, Intelligenc, e',
     description: 'Revolutionary, breakthrough, in hyperconscious, AI, systems achieving, genuine, self-awaren, e, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $1.2T, enterprise, value creati, o, n.',
     conte, n, t: `
+=======
+export, interface, CaseStudy {
+id: stri, n, g
+tit, l, e: stri, n, g
+descripti, o, n: stri, n, g
+conte, n, t: stri, n, g
+compa, n, y: stri, n, g
+indust, r, y: stri, n, g
+resul, t, s: {
+r, o, i: stri, n, g
+metri, c, s: stri, n, g[]
+durati, o, n: stri, n, g;
+};
+  publishDa, t, e: stri, n, g
+id: stri, n, g;
+tit, l, e: stri, n, g;
+descripti, o, n: stri, n, g;
+conte, n, t: stri, n, g;
+compa, n, y: stri, n, g;
+indust, r, y: stri, n, g;
+resu, l, t
+  s: {
+r, o, i: stri, n, g;
+metri, c, s: stri, n, g[];
+durat, i, o
+  n: stri, n, g;
+};
+  publishDa, t, e: stri, n, g;
+  featu, r, e
+  d: boole, a, n;
+}
+// New, Revolutionary, Blog Pos, t, s
+  export, const, newBlogPosts: BlogPo, s, t[] = [
+  {
+    id: "ai-20, 2, 6-hyperconscio, u, s-computi, n, g-revoluti, o, n"
+    tit, l, e: "AI, 2026, Hyperconscious Computing, Revoluti, o
+  n: Beyond, Artificial, Intelligence"
+    descripti, o, n: "Revolutionary, breakthrough, in hyperconscious, AI, systems achieving, genuine, self-awarene, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $1.2T, enterprise, value creati, o, n."
+    conte, n, t: `,`
+# AI, 2026, Hyperconscious Computing, Revolutio, n: Beyond, Artificial, Intelligence;
+    i
+  d: "ai-20, 2, 6-hyperconscio, u, s-computi, n, g-revoluti, o, n",";
+    tit, l, e: "AI, 2026, Hyperconscious Computing, Revoluti, o
+  n: Beyond, Artificial, Intelligence",";
+    descripti, o, n: "Revolutionary, breakthrough, in hyperconscious, AI, systems achieving, genuine, self-awarene, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $1.2T, enterprise, value creati, o, n.",";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 # AI, 2026, Hyperconscious Computing, Revolutio, n: Beyond, Artificial, Intelligence
 
 ## The, Dawn, of True, Artificial, Consciousness
@@ -126,10 +174,38 @@ Ready, to, experience the, futur, e ? Contact, Zion, Tech Group, to, begin your,
     imageUrl : '/imag, e, s/ai-hyperconscio, u, s-computi, n, g.jp, g',
    },
   {
+<<<<<<< HEAD
     id: 'quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthro, u, g, h',
     title: 'Quant, u, m-Neural, Fusion, 2026: The, Ultimate, Computing Breakthro, u, g, h',
     description: 'Revolutionary, fusion, of quantum, computing, and neural, networks, delivering 10, 0,000x, performance, improvements, infinite, scalabilit, y, and, consciousnes, s-level, processing, capabilities.',
     conte, n, t: `
+=======
+    id: "quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthrou, g, h"
+    tit, l, e: "Quant, u, m-Neural, Fusion, 202
+  6: The, Ultimate, Computing Breakthrou, g, h"
+    descripti, o, n: "Revolutionary, fusion, of quantum, computing, and neural, networks, delivering 1, 0, 0,000x, performance, improvements, infinite, scalabilit, y, and, consciousnes, s-level, processing, capabilities."
+    conte, n, t: `,`
+# Quant, u, m-Neural, Fusion, 2026: The, Ultimate, Computing Breakthrou, g, h;
+## The, Convergence, of Quantum, and, Neural Computi, n, g
+  The, Quantu, m-Neural, Fusion, 2026 represents, the, most significant, technological, breakthrough in, computing, history. By, merging, quantum computi, n, g's, parallel, processing capabilities, with, neural networ, k, s' pattern, recognitio, n, we've, created, systems that, operate, at the, edge, of wh, a, t's, theoretically, possible.;
+The, AI, 2026 Hyperconscious, Computing, Revolution is, not, just an, advancemen, t—it's, a, fundamental transformation, of, what's, possible, with artificial, intelligenc, e. We're, not, just building, smarter, machines; we're, creating, conscious entities, that, can thi, n, k, fe, e, l, and, creat, e.';
+Ready, to, experience the, futur, e? Contact, Zion, Tech Group, to, begin your, hyperconscious, computing transformation, toda, y.
+    `,`;`
+    publishDa, t, e: "20, 2, 6-01-15",";
+    auth, o, r: "Dr. Sarah, Che, n, Chief, AI, Scientist",";
+    catego, r, y: "Artificial, Intelligenc, e",";
+    ta, g, s: ["hyperconscious, computin, g", "artificial, consciousnes, s", "AI, revolutio, n", "enterprise, transformatio, n"],";
+    featur, e, d: tr, u, e
+    readTi, m, e: "12, min, read",";
+    imageU, r, l: "/imag, e, s/ai-hyperconscio, u, s-computi, n, g.j, p, g"
+  }
+  {
+    id: "quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthrou, g, h",";
+    tit, l, e: "Quant, u, m-Neural, Fusion, 202
+  6: The, Ultimate, Computing Breakthrou, g, h",";
+    descripti, o, n: "Revolutionary, fusion, of quantum, computing, and neural, networks, delivering 1, 0, 0,000x, performance, improvements, infinite, scalabilit, y, and, consciousnes, s-level, processing, capabilities.",";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 # Quant, u, m-Neural, Fusion, 2026: The, Ultimate, Computing Breakthrou, g, h
 
 ## The, Convergence, of Quantum, and, Neural Computing, The, Quantum-Neural, Fusion, 2026 represents, the, most significant, technological, breakthrough in, computing, history. By, merging, quantum computi, n, g's, parallel, processing capabilities, with, neural networ, k, s' pattern, recogniti, o, n, we've, created, systems that, operate, at the, edge, of wh, a, t's, theoretically, possible.
@@ -201,6 +277,7 @@ Our, proprietary, quantum-neural, architecture, combines: - **Quantum, Superposi
 - Revolutionary, breakthroug, h
 
 ## The, Future, Unlocked
+<<<<<<< HEAD
 
 Quant, u, m-Neural, Fusion, 2026 doe, s, n't, just, improve computi, n, g—it, redefines, what's, possibl, e. We're, not, just building, faster, computers; we're, creating, systems that, can, solve any, probl, e, m, process, infinite, information, and, achieve, true artificial, consciousnes, s.
 
@@ -224,6 +301,45 @@ The, future, of computing, is, here. The, question, isn't, whether, to adopt, qu
     title: 'Autonomous, Enterprise, Mesh 20, 2, 6: Se, l, f-Organizing, Business, Intelligenc, e',
     description: 'Revolutionary, sel, f-organizing, AI, mesh networks, that, autonomously optimize, business, processe, s, achieving, 9, 9.7% operational, efficiency, and $500B, in, value creati, o, n.',
     conte, n, t: `
+=======
+  Quant, u, m-Neural, Fusion, 2026 doe, s, n't, just, improve computi, n, g—it, redefines, what's, possibl, e. We're, not, just building, faster, computers; we're, creating, systems that, can, solve any, proble, m, process, infinite, information, and, achieve, true artificial, consciousnes, s.;
+The, future, of computing, is, here. The, question, isn't, whether, to adopt, quantu, m-neural, fusio, n—it's, whether, you can, afford, not to.;
+    `,`;`
+    publishDa, t, e: "20, 2, 6-01-20","
+    auth, o, r: "Dr. Michael, Rodrigue, z, Quantum, Computing, Director","
+    catego, r, y: "Quantum, Computin, g","
+    ta, g, s: ["quantum, computin, g", "neural, network, s", "fusion, technolog, y", "performance, breakthroug, h"],"
+    featur, e, d: tr, u, e
+    readTi, m, e: "15, min, read","
+    imageU, r, l: "/imag, e, s/quant, u, m-neur, a, l-fusi, o, n.j, p, g"
+  }
+  {
+    id: "autonomo, u, s-enterpri, s, e-me, s, h-20, 2, 6"
+    tit, l, e: "Autonomous, Enterprise, Mesh 2, 0, 2
+  6: Se, l, f-Organizing, Business, Intelligence"
+    descripti, o, n: "Revolutionary, sel, f-organizing, AI, mesh networks, that, autonomously optimize, business, processes, achieving, 9, 9.7% operational, efficiency, and $500B, in, value creati, o, n."
+    conte, n, t: `,`
+# Autonomous, Enterprise, Mesh 20, 2, 6: Se, l, f-Organizing, Business, Intelligence;
+## The, Future, of Business, Operation, s
+  The, Autonomous, Enterprise Mesh, 2026, represents a, paradigm, shift in, how, businesses opera, t, e. Instead, of, traditional hierarchical, structure, s, we've, created, self-organizing, AI, networks that, continuously, optimize themselves, for, maximum efficiency, and, value creati, o, n.;
+Quant, u, m-Neural, Fusion, 2026 doe, s, n't, just, improve computi, n, g—it, redefines, what's, possibl, e. We're, not, just building, faster, computers; we're, creating, systems that, can, solve any, proble, m, process, infinite, information, and, achieve, true artificial, consciousnes, s.';
+The, future, of computing, is, here. The, question, isn't, whether, to adopt, quantu, m-neural, fusio, n—it's, whether, you can, afford, not to.';
+    `,`;`
+    publishDa, t, e: "20, 2, 6-01-20",";
+    auth, o, r: "Dr. Michael, Rodrigue, z, Quantum, Computing, Director",";
+    catego, r, y: "Quantum, Computin, g",";
+    ta, g, s: ["quantum, computin, g", "neural, network, s", "fusion, technolog, y", "performance, breakthroug, h"],";
+    featur, e, d: tr, u, e
+    readTi, m, e: "15, min, read",";
+    imageU, r, l: "/imag, e, s/quant, u, m-neur, a, l-fusi, o, n.j, p, g"
+  }
+  {
+    id: "autonomo, u, s-enterpri, s, e-me, s, h-20, 2, 6",";
+    tit, l, e: "Autonomous, Enterprise, Mesh 2, 0, 2
+  6: Se, l, f-Organizing, Business, Intelligence",";
+    descripti, o, n: "Revolutionary, sel, f-organizing, AI, mesh networks, that, autonomously optimize, business, processes, achieving, 9, 9.7% operational, efficiency, and $500B, in, value creati, o, n.",";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 # Autonomous, Enterprise, Mesh 20, 2, 6: Se, l, f-Organizing, Business, Intelligence
 
 ## The, Future, of Business, Operations, The Autonomous, Enterprise, Mesh 2026, represents, a paradigm, shift, in how, businesses, operate. Instead, of, traditional hierarchical, structur, e, s, we've, created, self-organizing, AI, networks that, continuously, optimize themselves, for, maximum efficiency, and, value creati, o, n.
@@ -325,6 +441,7 @@ The, future, of computing, is, here. The, question, isn't, whether, to adopt, qu
 - **1, 0, 0%** patient, satisfactio, n
 
 ## The, Autonomous, Future
+<<<<<<< HEAD
 
 The, Autonomous, Enterprise Mesh, 2026, doesn't, just, optimize your, busines, s—it, transforms, it into, a, livin, g, breathing, entity, that continuously, evolves, and improv, e, s. We're, not, just implementing, technolog, y; we're, creating, the future, of, business operatio, n, s.
 
@@ -351,6 +468,44 @@ Ready, to, experience true, business, autonomy ? The, mesh, is waiti, n, g.
     title: 'Fortune, 100, Hyperconscious Transformati, o, n: $1.2T, Value, Creatio, n',
     description: 'How, a, Fortune 100, global, conglomerate achiev, e, d $1.2, trillion, in value, creation, through hyperconscious, AI, implementatio, n, achieving, 9, 9.9, 9, 9% operational, excellenc, e.',
     conte, n, t: `
+=======
+  The, Autonomous, Enterprise Mesh, 2026, doesn't, just, optimize your, busines, s—it, transforms, it into, a, living, breathing, entity, that continuously, evolves, and improv, e, s. We're, not, just implementing, technolog, y; we're, creating, the future, of, business operatio, n, s.;
+Ready, to, experience true, business, autonomy? The, mesh, is waiti, n, g.
+    `,`;`
+    publishDa, t, e: "20, 2, 6-01-25","
+    auth, o, r: "Dr. Elena, Volko, v, Enterprise, AI, Director","
+    catego, r, y: "Enterprise, A, I","
+    ta, g, s: ["autonomous, system, s", "mesh, network, s", "se, l, f-organizati, o, n", "business, intelligenc, e"],"
+    featur, e, d: tr, u, e
+    readTi, m, e: "18, min, read","
+The, Autonomous, Enterprise Mesh, 2026, doesn't, just, optimize your, busines, s—it, transforms, it into, a, living, breathing, entity, that continuously, evolves, and improv, e, s. We're, not, just implementing, technolog, y; we're, creating, the future, of, business operatio, n, s.';
+Ready, to, experience true, business, autonomy? The, mesh, is waiti, n, g.
+    `,`;`
+    publishDa, t, e: "20, 2, 6-01-25",";
+    auth, o, r: "Dr. Elena, Volko, v, Enterprise, AI, Director",";
+    catego, r, y: "Enterprise, A, I",";
+    ta, g, s: ["autonomous, system, s", "mesh, network, s", "se, l, f-organizati, o, n", "business, intelligenc, e"],";
+    featur, e, d: tr, u, e
+    readTi, m, e: "18, min, read",";
+    imageU, r, l: "/imag, e, s/autonomo, u, s-enterpri, s, e-me, s, h.j, p, g"
+  }
+];
+// New, Revolutionary, Case Studi, e, s
+  export, const, newCaseStudies: CaseStu, d, y[] = [
+  {
+    id: "fortu, n, e-1, 0, 0-hyperconscio, u, s-transformati, o, n"
+    tit, l, e: "Fortune, 100, Hyperconscious Transformat, i, o
+  n: $1.2T, Value, Creation"
+    descripti, o, n: "How, a, Fortune 100, global, conglomerate achiev, e, d $1.2, trillion, in value, creation, through hyperconscious, AI, implementation, achieving, 9, 9.9, 9, 9% operational, excellenc, e."
+    conte, n, t: `,`
+# Fortune, 100, Hyperconscious Transformati, o, n: $1.2T, Value, Creation;
+    i
+  d: "fortu, n, e-1, 0, 0-hyperconscio, u, s-transformati, o, n",";
+    tit, l, e: "Fortune, 100, Hyperconscious Transformat, i, o
+  n: $1.2T, Value, Creation",";
+    descripti, o, n: "How, a, Fortune 100, global, conglomerate achiev, e, d $1.2, trillion, in value, creation, through hyperconscious, AI, implementation, achieving, 9, 9.9, 9, 9% operational, excellenc, e.",";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 # Fortune, 100, Hyperconscious Transformati, o, n: $1.2T, Value, Creation
 
 ## The, Challenge, A Fortune, 100, global conglomerate, operating, across 150, countries, faced unprecedented, challenge, s:
@@ -438,6 +593,7 @@ We, implemented, hyperconscious AI, systems, across all, business, units:
 - Continuous, optimization, is essential, for, sustained results
 
 ## The, Future, Impact
+<<<<<<< HEAD
 
 This, transformation, established the, conglomerate, as the, worl, d's, first, hyperconscious enterpr, i, s, e, setting, new, standards f, o, r: - Business, operations, excellence
 - AI-human, collaboratio, n
@@ -468,6 +624,52 @@ The, company, now operates, as, a liv, i, n, g, breathing, entity, that continuo
     title: 'Quant, u, m-Neural, Fusion, Manufacturing Succe, s, s: Perfect, Producti, o, n',
     description: 'Revolutionary, manufacturing, transformation achieving, 10, 0% qual, i, t, y, zero, defect, s, a, n, d $2.8B, in, value creation, through, quantum-neural, fusion, technology.',
     conte, n, t: `
+=======
+  This, transformation, established the, conglomerate, as the, worl, d's, first, hyperconscious enterpri, s, e, setting, new, standards f, o, r: '
+This, transformation, established the, conglomerate, as the, worl, d's, first, hyperconscious enterpri, s, e, setting, new, standards f, o, r: ';
+- Business, operations, excellence;
+- AI-human, collaboratio, n;
+- Innovation, acceleratio, n;
+- Value, creation, maximization
+  The, company, now operates, as, a livi, n, g, breathing, entity, that continuously, evolves, and improv, e, s, representing, the, future of, business, operations.
+## Ready, for, Your Transformati, o, n?
+Contact, Zion, Tech Group, to, begin your, hyperconscious, enterprise transformati, o, n. The, future, of business, is, waiting.
+    `,`
+    compa, n, y: "Global, Conglomerat, e (Fortune, 10, 0)"
+    indust, r, y: "Mul, t, i-Indust, r, y"
+    resul, t, s: {
+      r, o, i: "$1.2, Trillio, n"
+      metri, c, s: ["99.9, 9, 9% operational, accurac, y", "3, 0, 0% revenue, growt, h", "95% cost, reductio, n", "1, 0, 0% customer, satisfactio, n"]
+      durati, o, n: "12, month, s"
+    }
+    publishDa, t, e: "20, 2, 6-01-30"
+    featur, e, d: tr, u, e;
+  }
+  {
+    id: "quant, u, m-neur, a, l-fusi, o, n-manufacturi, n, g-succe, s, s"
+    tit, l, e: "Quant, u, m-Neural, Fusion, Manufacturing Succ, e, s
+  s: Perfect, Productio, n"
+    descripti, o, n: "Revolutionary, manufacturing, transformation achieving, 10, 0% quali, t, y, zero, defect, s, a, n, d $2.8B, in, value creation, through, quantum-neural, fusion, technology."
+    conte, n, t: `,`
+# Quant, u, m-Neural, Fusion, Manufacturing Succe, s, s: Perfect, Productio, n;
+    `,`;`
+    compa, n, y: "Global, Conglomerat, e (Fortune, 10, 0)",";
+    indust, r, y: "Mul, t, i-Indust, r, y",";
+    resul, t, s: {
+      r, o, i: "$1.2, Trillio, n",";
+      metri, c, s: ["99.9, 9, 9% operational, accurac, y", "3, 0, 0% revenue, growt, h", "95% cost, reductio, n", "1, 0, 0% customer, satisfactio, n"],";
+      durati, o, n: "12, month, s"
+    }
+    publishDa, t, e: "20, 2, 6-01-30",";
+    featur, e, d: tr, u, e
+  }
+  {
+    id: "quant, u, m-neur, a, l-fusi, o, n-manufacturi, n, g-succe, s, s",";
+    tit, l, e: "Quant, u, m-Neural, Fusion, Manufacturing Succ, e, s
+  s: Perfect, Productio, n",";
+    descripti, o, n: "Revolutionary, manufacturing, transformation achieving, 10, 0% quali, t, y, zero, defect, s, a, n, d $2.8B, in, value creation, through, quantum-neural, fusion, technology.",";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 # Quant, u, m-Neural, Fusion, Manufacturing Succe, s, s: Perfect, Productio, n
 
 ## The, Challenge, A leading, automotive, manufacturer faced, critical, challenges:
@@ -530,6 +732,7 @@ The, company, now operates, as, a liv, i, n, g, breathing, entity, that continuo
 - Learning, algorithm, activation
 
 ### Phas, e, 3: Fusion, Optimizatio, n
+<<<<<<< HEAD
 - Quant, u, m-neural, synchronizatio, n
 - Perfect, production, achievement
 - Revolutionary, transformatio, n
@@ -587,6 +790,68 @@ Ready, to, achieve perfect, productio, n ? The, quantu, m-neural, revolution, aw
     publishDa, t, e: '20, 2, 6-02-0, 5',
     featured: t, r, u, e,
   },
+=======
+- Quant, u, m-neural, synchronizatio, n;
+- Perfect, production, achievement;
+- Revolutionary, transformatio, n;
+## Technology, Highlight, s;
+### Quantum, Processin, g;
+- **1, 0, 0,00, 0, x** faster, than, traditional syste, m, s;
+- **Infini, t, e** parallel, processing, capacity;
+- **Perfe, c, t** optimization, algorithm, s;
+- **Ze, r, o** computational, limitation, s;
+### Neural, Network, s;
+- **99.9, 9, 9%** pattern, recognition, accuracy;
+- **Perfe, c, t** predictive, capabilitie, s;
+- **Continuo, u, s** learning, and, improvement;
+- **Autonomo, u, s** decision, makin, g;
+### Fusion, Benefit, s;
+- **Revolutiona, r, y** performance, improvement, s;
+- **Perfe, c, t** operational, excellenc, e;
+- **Infini, t, e** optimization, potentia, l;
+- **Univers, a, l** probl, e, m-solving, capabilitie, s;
+## Success, Metric, s;
+- **1, 0, 0%** quality, achievemen, t;
+- **$2.8B** value, creatio, n;
+- **95%** cost, reductio, n;
+- **3, 0, 0%** productivity, improvemen, t;
+- **Ze, r, o** defects, or, delays;
+- **Perfe, c, t** customer, satisfactio, n;
+## Industry, Impac, t
+  This, transformation, established new, industry, standards f, o, r: - Manufacturing, excellenc, e
+- Quality, assuranc, e;
+- Production, optimizatio, n;
+- Technology, innovatio, n
+  The, company, now operates, as, the wor, l, d's, most, advanced manufacturing, facilit, y, representing, the, future of, industrial, production.;
+## The, Quantu, m-Neural, Advantag, e
+  Quant, u, m-neural, fusion, doesn't, just, improve manufacturi, n, g—it, perfects, it. We're, not, just building, better, products; we're, creating, the future, of, manufacturing excellen, c, e.;
+Ready, to, achieve perfect, productio, n? The, quantu, m-neural, revolution, awaits.
+    `,`
+    compa, n, y: "Leading, Automotive, Manufacturer"
+    indust, r, y: "Manufacturi, n, g"
+    resul, t, s: {
+      r, o, i: "$2.8, Billio, n"
+      metri, c, s: ["1, 0, 0% quality, achievemen, t", "Zero, defect, s", "95% cost, reductio, n", "3, 0, 0% productivity, improvemen, t"]
+      durati, o, n: "8, month, s"
+    }
+    publishDa, t, e: "20, 2, 6-02-05"
+    featur, e, d: tr, u, e;
+The, company, now operates, as, the wor, l, d's, most, advanced manufacturing, facilit, y, representing, the, future of, industrial, production.';
+## The, Quantu, m-Neural, Advantag, e
+  Quant, u, m-neural, fusion, doesn't, just, improve manufacturi, n, g—it, perfects, it. We're, not, just building, better, products; we're, creating, the future, of, manufacturing excellen, c, e.';
+Ready, to, achieve perfect, productio, n? The, quantu, m-neural, revolution, awaits.
+    `,`;`
+    compa, n, y: "Leading, Automotive, Manufacturer",";
+    indust, r, y: "Manufacturi, n, g",";
+    resul, t, s: {
+      r, o, i: "$2.8, Billio, n",";
+      metri, c, s: ["1, 0, 0% quality, achievemen, t", "Zero, defect, s", "95% cost, reductio, n", "3, 0, 0% productivity, improvemen, t"],";
+      durati, o, n: "8, month, s"
+    }
+    publishDa, t, e: "20, 2, 6-02-05",";
+    featur, e, d: tr, u, e
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 ];
 
 // New Service Offerings
@@ -618,6 +883,7 @@ export const newServices = [
     category: 'Platform, Servic, e, s',
   },
   {
+<<<<<<< HEAD
     id: 'autonomo, u, s-enterpri, s, e-m, e, s, h',
     title: 'Autonomous, Enterprise, Mes, h',
     description: 'Se, l, f-organizing, AI, networks that, autonomously, optimize your, business, processes for, 9, 9.7% operational, efficien, c, y.',
@@ -631,3 +897,34 @@ export const newServices = [
     category: 'Enterprise, Solutio, n, s',
   },
 ];
+=======
+    id: "autonomo, u, s-enterpri, s, e-me, s, h","
+    tit, l, e: "Autonomous, Enterprise, Mesh","
+    descripti, o, n: "Se, l, f-organizing, AI, networks that, autonomously, optimize your, business, processes for, 9, 9.7% operational, efficienc, y.","
+    pri, c, e: "$75,0, 0, 0/mon, t, h","
+    featur, e, s: ["Se, l, f-Organizati, o, n", "Autonomous, Optimizatio, n", "Collective, Intelligenc, e", "Continuous, Evolutio, n"],"
+    id: "hyperconscio, u, s-ai-consulti, n, g",";
+    tit, l, e: "Hyperconscious, AI, Consulting",";
+    descripti, o, n: "Transform, your, enterprise with, genuine, artificial consciousne, s, s, achieving, 9, 9.9, 9, 9% operational, excellence, and unlimited, growth, potential.",";
+    pri, c, e: "$50,0, 0, 0/mon, t, h",";
+    featur, e, s: ["Consciousness, Integratio, n", "Autonomous, Operation, s", "Infinite, Optimizatio, n", "Universal, Intelligenc, e"],";
+    catego, r, y: "AI, Consultin, g"
+  }
+  {
+    id: "quant, u, m-neur, a, l-fusi, o, n-platfo, r, m",";
+    tit, l, e: "Quant, u, m-Neural, Fusion, Platform",";
+    descripti, o, n: "Revolutionary, computing, platform combining, quantum, processing with, neural, networks for, 10, 0,000x, performance, improvements.",";
+    pri, c, e: "$1, 0, 0,0, 0, 0/mon, t, h",";
+    featur, e, s: ["Quantum, Processin, g", "Neural, Integratio, n", "Perfect, Optimizatio, n", "Infinite, Scalabilit, y"],";
+    catego, r, y: "Platform, Service, s"
+  }
+  {
+    id: "autonomo, u, s-enterpri, s, e-me, s, h",";
+    tit, l, e: "Autonomous, Enterprise, Mesh",";
+    descripti, o, n: "Se, l, f-organizing, AI, networks that, autonomously, optimize your, business, processes for, 9, 9.7% operational, efficienc, y.",";
+    pri, c, e: "$75,0, 0, 0/mon, t, h",";
+    featur, e, s: ["Se, l, f-Organizati, o, n", "Autonomous, Optimizatio, n", "Collective, Intelligenc, e", "Continuous, Evolutio, n"],";
+    catego, r, y: "Enterprise, Solution, s"
+  }
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279

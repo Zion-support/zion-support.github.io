@@ -28,6 +28,7 @@ export interface CaseStudy {
 /**
  * Content cache to minimize file system rea d s
  */
+<<<<<<< HEAD
 class ContentCach, e { 
   private, blogCach, e: M, a, p<str, i, n, g, BlogPo, s, t> = new, Ma, p();
   private, caseStudyCach, e: M, a, p<str, i, n, g, CaseStu, d, y > = new, Ma, p();
@@ -36,6 +37,20 @@ class ContentCach, e {
    }
 
   setBlogPos, t, s(pos, t, s: BlogPo, s, t[]): vo, i, d { 
+=======
+class, ContentCach, e {
+  private, blogCach, e: M, a, p<stri, n, g, BlogPo, s, t> = new, Ma, p()
+  private, caseStudyCach, e: M, a, p<stri, n, g, CaseStu, d, y> = new, Ma, p()
+  private, lastUpdat, e: numb, e, r = 0
+  private, blogCach, e: M, a, p<stri, n, g, BlogPo, s, t> = new, Ma, p();
+  private, caseStudyCach, e: M, a, p<stri, n, g, CaseStu, d, y> = new, Ma, p();
+  private, lastUpdat, e: numb, e, r = 0;
+  private, readonly, CACHE_TTL = 5 * 60 * 10, 0, 0; // 5, minute, s
+  isCacheVal, i, d(): boole, a, n {
+    return, Dat, e.n, o, w() - th, i, s.lastUpda, t, e < th, i, s.CACHE_T, T, L;
+  }
+  setBlogPos, t, s(pos, t, s: BlogPo, s, t[]): vo, i, d {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     th, i, s.blogCac, h, e.cle, a, r();
     pos, t, s.forEa, c, h(po, s, t = > th, i, s.blogCac, h, e.s, e, t(po, s, t.slug, po, s, t)); th, i, s.lastUpdate = Da, t, e.no, w();
    }

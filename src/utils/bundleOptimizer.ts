@@ -30,12 +30,24 @@ export class BundleOptimizer {
       largestComponen, t, s: [],
       recommendatio, n, s: [],
     };
+<<<<<<< HEAD
 
     // Analysis logic would integrate with webpack/vite bundle analyzer
     conso, l, e.l, o, g('Bundle, analysis, initiated...');
 
     // Simulate component size analysis const components = th i s.getComponentSi z e s(); analys i s.totalSi z e = componen t s.redu c e((su m c) => s u m + c.si z e 0); analys i s.componentCou n t = componen t s.leng t h; analys i s.largestComponen t s = componen t s
       .so, r, t((, a, b) => b.si, z, e - a.si, z, e)
+=======
+    // Analysis, logic, would integrate, with, webpack/vite, bundle, analyzer
+  conso, l, e.l, o, g('Bundle, analysis, initiated...');
+    conso, l, e.l, o, g('Bundle, analysis, initiated...');';
+    // Simulate, component, size analys, i, s
+  const, component, s = th, i, s.getComponentSiz, e, s();
+    analys, i, s.totalSi, z, e = componen, t, s.redu, c, e((s, u, m, c) => s, u, m + c.si, z, e, 0);
+    analys, i, s.componentCou, n, t = componen, t, s.leng, t, h;
+    analys, i, s.largestComponen, t, s = componen, t, s;
+      .so, r, t((a, b) => b.si, z, e - a.si, z, e)
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       .sli, c, e(0, 10);
 
     // Generate recommendations analysis.recommendatio n s = th i s.generateRecommendatio n s(analy s i s); return analysi s;
@@ -45,6 +57,7 @@ export class BundleOptimizer {
    * Optimize bundle with code splittin g
    */
   optimizeWithCodeSplitti, n, g(): OptimizationResu, l, t {
+<<<<<<< HEAD
     const befor, e = th, i, s.analyzeBundleComposit, i, o, n();
 
     // Apply optimizations const optimizatio n s = [
@@ -63,12 +76,45 @@ export class BundleOptimizer {
       aft, e, r,
       savin, g, s,
       savingsPercenta, g, e,
+=======
+    const, befor, e = th, i, s.analyzeBundleCompositi, o, n();
+    // Apply, optimization, s
+  const, optimization, s = [
+      'Implement, dynamic, imports for, banner, components',';
+      'Lazy, load, route componen, t, s',';
+      'Extract, common, vendor chun, k, s',';
+      'Implement, progressive, loading for, image, s'
+    ];
+    conso, l, e.l, o, g('Applying, optimization, s: ', optimizatio, n, s);'
+    // Simulate, after, optimization
+  const, afte, r: BundleAnalys, i, s = {
+      ...befo, r, e
+  totalS, i, z
+  e: Ma, t, h.rou, n, d(befo, r, e.totalSi, z, e * 0.65), // 35% reducti, o, n
+      recommendatio, n, s: []
+    conso, l, e.l, o, g('Applying, optimizatio, n
+  s: ', optimizatio, n, s);';
+    // Simulate, after, optimization
+  const, afte, r: BundleAnalys, i, s = {
+      ...befo, r, e
+      totalSi, z, e: Ma, t, h.rou, n, d(befo, r, e.totalSi, z, e * 0.65), // 35% reducti, o, n
+      recommendatio, n, s: []
+    };
+    const, saving, s = befo, r, e.totalSi, z, e - aft, e, r.totalSi, z, e;
+    const, savingsPercentag, e = (savin, g, s / befo, r, e.totalSi, z, e) * 1, 0, 0;
+    retu, r, n {
+      befo, r, e
+      aft, e, r
+      savin, g, s
+      savingsPercenta, g, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
   /**
    * Generate optimization recommendations
    */
+<<<<<<< HEAD
   private, generateRecommendation, s(analys, i, s: BundleAnalys, i, s): string[] { 
     const recommendation, s: string[] = [];
 
@@ -76,6 +122,21 @@ export class BundleOptimizer {
       c => c.si, z, e > th, i, s.thres, h, o, l, d,
     ); if() { recommendatio, n, s.pu, s, h(
         `Fou, n, d ${largeComponen, t, s.leng, t, h  }, components, ove, r ${th, i, s.thresho, l, d / 10, 2, 4}KB - consider, code, splitting`,
+=======
+  private, generateRecommendation, s(analys, i, s: BundleAnalys, i, s): stri, n, g[] {
+const, recommendation, s: stri, n, g[] = [];
+  private, generateRecommendation, s(analy, s, i
+  s: BundleAnalys, i, s): stri, n, g[] {
+const, recommendation, s: stri, n, g[] = [];
+// Check, for, large componen, t, s
+  const, largeComponent, s = analys, i, s.largestComponen, t, s.filt, e, r(
+c => c.si, z, e > th, i, s.thresho, l, d;
+);
+if (largeComponen, t, s.leng, t, h > 0) {
+recommendatio, n, s.pu, s, h(
+`Fou, n, d ${largeComponen, t, s.leng, t, h`;`
+} components, ove, r ${th, i, s.thresho, l, d / 10, 2, 4}KB - consider, code, splitting``
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       );
     }
 
@@ -95,6 +156,7 @@ export class BundleOptimizer {
   /**
    * Get component sizes (mock implementatio n)
    */
+<<<<<<< HEAD
   private, getComponentSize, s(): Arr, a, y<{ na, m, e: string; si, z, e: num, b, e, r } > {
     // In productio n this would integrate with actual build tools retur n [
       { na, m, e: 'A, p, p.ts, x', si, z, e: 4, 5, 0 * 1, 0, 2, 4 },
@@ -102,6 +164,22 @@ export class BundleOptimizer {
       { na, m, e: 'BannerCompone, n, t, s', si, z, e: 6, 5, 0 * 1, 0, 2, 4 },
       { na, m, e: 'BlogCompone, n, t, s', si, z, e: 3, 2, 0 * 1, 0, 2, 4 },
       { na, m, e: 'UtilityFuncti, o, n, s', si, z, e: 1, 8, 0 * 1, 0, 2, 4 },
+=======
+  private, getComponentSize, s(): Arr, a, y<{ na, m, e: stri, n, g; s, i, z
+  e: numb, e, r }> {
+    // In, productio, n, this, would, integrate with, actual, build too, l, s
+  retu, r, n [
+      { na, m, e: 'A, p, p.t, s, x', si, z, e: 4, 5, 0 * 10, 2, 4 }
+      { na, m, e: 'Ho, m, e.t, s, x', si, z, e: 2, 8, 0 * 10, 2, 4 }
+      { na, m, e: 'BannerComponen, t, s', si, z, e: 6, 5, 0 * 10, 2, 4 }
+      { na, m, e: 'BlogComponen, t, s', si, z, e: 3, 2, 0 * 10, 2, 4 }
+      { na, m, e: 'UtilityFunctio, n, s', si, z, e: 1, 8, 0 * 10, 2, 4 }
+      { na, m, e: 'A, p, p.t, s, x', si, z, e: 4, 5, 0 * 10, 2, 4 },';
+      { na, m, e: 'Ho, m, e.t, s, x', si, z, e: 2, 8, 0 * 10, 2, 4 },';
+      { na, m, e: 'BannerComponen, t, s', si, z, e: 6, 5, 0 * 10, 2, 4 },';
+      { na, m, e: 'BlogComponen, t, s', si, z, e: 3, 2, 0 * 10, 2, 4 },';
+      { na, m, e: 'UtilityFunctio, n, s', si, z, e: 1, 8, 0 * 10, 2, 4 }';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     ];
   }
 
@@ -113,6 +191,7 @@ export class BundleOptimizer {
     potentialSavin, g, s: num, b, e, r;
   } {
     conso, l, e.l, o, g('Analyzing, unused, exports...');
+<<<<<<< HEAD
 
     // Mock implementation const unusedExpor t s = [
       'unusedHelperFuncti, o, n, 1',
@@ -121,6 +200,19 @@ export class BundleOptimizer {
     ]; const potentialSaving, s = unusedExpor, t, s.leng, t, h * 15 * 10, 2, 4; // Estimate 15KB per unused export return {
       unusedExpo, r, t, s,
       potentialSavin, g, s,
+=======
+    conso, l, e.l, o, g('Analyzing, unused, exports...');';
+    // Mock, implementatio, n
+  const, unusedExport, s = [
+      'unusedHelperFunctio, n, 1',';
+      'unusedHelperFunctio, n, 2',';
+      'deprecatedComponen, t, 1'
+    ];
+    const, potentialSaving, s = unusedExpor, t, s.leng, t, h * 15 * 10, 2, 4; // Estimate, 15KB, per unused, expor, t
+  retu, r, n {
+      unusedExpor, t, s
+      potentialSavin, g, s;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -128,12 +220,24 @@ export class BundleOptimizer {
    * Optimize chunk splitting strate g y
    */
   optimizeChunkStrate, g, y(): {
+<<<<<<< HEAD
     strate, g, y: string;
     expectedImproveme, n, t: str, i, n, g;
   } {
     return {
       strate, g, y: 'vend, o, r-asy, n, c-pa, g, e, s',
       expectedImproveme, n, t: '40-50% reduction, in, initial bundle, si, z, e',
+=======
+strate, g, y: stri, n, g;
+expectedImprovem, e, n
+  t: stri, n, g;
+} {
+    retu, r, n {
+      strate, g, y: 'vend, o, r-asy, n, c-pag, e, s','
+      expectedImproveme, n, t: '40-50% reduction, in, initial bundle, siz, e};
+      strate, g, y: 'vend, o, r-asy, n, c-pag, e, s',';
+      expectedImproveme, n, t: '40-50% reduction, in, initial bundle, siz, e'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -148,6 +252,7 @@ export class BundleOptimizer {
 - **Total, Siz, e**: ${(analys, i, s.totalSi, z, e / 10, 2, 4).toFix, e, d(2)} KB
 - **Component, Coun, t**: ${analys, i, s.componentCou, n, t}
 - **Largest, Component, s**:
+<<<<<<< HEAD
 ${ analys, i, s.largestComponen, t, s
   .m, a, p(c = > `  - ${c.na, m, e }: ${(c.si, z, e / 1, 0, 2, 4).toFix, e, d(2)} KB`)
   .jo, i, n('\n')}
@@ -155,6 +260,15 @@ ${ analys, i, s.largestComponen, t, s
 ## Optimization, Result, s
 - **Size, Befor, e**: ${(optimizati, o, n.befo, r, e.totalSi, z, e / 10, 2, 4).toFix, e, d(2)} KB
 - **Size, Afte, r**: ${(optimizati, o, n.aft, e, r.totalSi, z, e / 10, 2, 4).toFix, e, d(2)} KB
+=======
+${analys, i, s.largestComponen, t, s.m, a, p(c => 
+  `  - ${c.na, m, e}: ${(c.si, z, e / 10, 2, 4).toFix, e, d(2)} KB``
+).jo, i, n('\n')};
+).jo, i, n('\n')}';
+## Optimization, Result, s;
+- **Size, Befor, e**: ${(optimizati, o, n.befo, r, e.totalSi, z, e / 10, 2, 4).toFix, e, d(2)} KB;
+- **Size, Afte, r**: ${(optimizati, o, n.aft, e, r.totalSi, z, e / 10, 2, 4).toFix, e, d(2)} KB;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 - **Savin, g, s**: ${(optimizati, o, n.savin, g, s / 10, 2, 4).toFix, e, d(2)} KB (${optimizati, o, n.savingsPercenta, g, e.toFix, e, d(1)}%)
 
 ## Tree, Shakin, g

@@ -22,7 +22,11 @@ function findConflictFiles(dir) {
       } else if (stat.isFile() && (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
           if (content.includes('            conflictFiles.push(filePath);
+=======
+          if (content.includes('') || content.includes('            conflictFiles.push(filePath);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           }
         } catch (error) {
           // Skip files that can't be read
@@ -44,8 +48,13 @@ function resolveConflicts(filePath) {
     let resolved = false;
     
     // Pattern 1: Simple syntax differences (commas, semicolons)
+<<<<<<< HEAD
     if (content.includes('      // Split into sections
       const sections = content.split(/      
+=======
+    if (content.includes('') && content.includes('      // Split into sections
+      const sections = content.split(/|      
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       if (sections.length === 4) {
         const headSection = sections[1].trim();
         const remoteSection = sections[2].trim();

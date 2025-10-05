@@ -24,10 +24,16 @@ merge_branch() {
     
     # Check for conflicts and resolve them
     find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | while read file; do
+<<<<<<< HEAD
         if grep -q "" "$file" 2>/dev/null; then
             echo "  🔧 Resolving conflicts in $file"
             # Auto-resolve conflicts
             sed -i '/^/,/^        fi
+=======
+        if grep -q "            echo "  🔧 Resolving conflicts in $file"
+            # Auto-resolve conflicts
+            sed -i '/^        fi
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     done
     
     # Test build

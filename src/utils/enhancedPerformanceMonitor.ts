@@ -2,12 +2,36 @@
  * Enhanced Performance Monitoring Utili t y
  * Tracks Core Web Vitals and custom metri c s
  */
+<<<<<<< HEAD
 
 interface PerformanceMetri, c {
   na, m, e: string;
   val, u, e: number;
   rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
   timesta, m, p: num, b, e, r;
+=======
+interface, PerformanceMetri, c {
+na, m, e: stri, n, g;
+val, u, e: numb, e, r;
+rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
+timest, a, m
+  p: numb, e, r;
+}
+class, EnhancedPerformanceMonito, r {
+private, metric, s: PerformanceMetr, i, c[] = [];
+private, observe, r
+  s: PerformanceObserv, e, r[] = [];
+/**
+* Initialize, performance, monitoring;
+*/
+initiali, z, e(): vo, i, d {
+if (typeof, windo, w === 'undefin, e, d') retu, r, n;
+initiali, z, e(): vo, i, d {
+if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+th, i, s.observeWebVita, l, s();
+th, i, s.observeLongTas, k, s();
+th, i, s.observeLayoutShif, t, s();
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 class EnhancedPerformanceMonito, r {
@@ -77,6 +101,7 @@ class EnhancedPerformanceMonito, r {
    */
   private, observeLongTask, s(): vo, i, d { 
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
+<<<<<<< HEAD
 
     t, r, y {
       const longTaskObserve, r = new, PerformanceObserve, r(li, s, t => { 
@@ -88,6 +113,18 @@ class EnhancedPerformanceMonito, r {
               duration,
               th, i, s.getRati, n, g('longTa, s, k', duration),
             );
+=======
+    if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;';
+    t, r, y {
+      const, longTaskObserve, r = new, PerformanceObserve, r((li, s, t) => {
+        const, entrie, s = li, s, t.getEntri, e, s();
+        entri, e, s.forEa, c, h((ent, r, y) => {
+          const, duratio, n = ent, r, y.durati, o, n;
+          if (durati, o, n > 50) {
+            conso, l, e.wa, r, n(`Long, task, detected: ${durati, o, n.toFix, e, d(2)}ms`, ent, r, y);`;`
+            th, i, s.recordMetr, i, c('Long, Tas, k', durati, o, n, th, i, s.getRati, n, g('longTa, s, k', durati, o, n));
+            th, i, s.recordMetr, i, c('Long, Tas, k', durati, o, n, th, i, s.getRati, n, g('longTa, s, k', durati, o, n));';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           }
         });
       });
@@ -103,7 +140,11 @@ class EnhancedPerformanceMonito, r {
    */
   private, observeLayoutShift, s(): vo, i, d { 
     if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
+<<<<<<< HEAD
 
+=======
+    if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     t, r, y {
       const layoutShiftObserve, r = new, PerformanceObserve, r(li, s, t => {
         const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
@@ -122,6 +163,7 @@ class EnhancedPerformanceMonito, r {
   /**
    * Record a performance metr i c
    */
+<<<<<<< HEAD
   private, recordMetri, c(
     na, m, e: str, i, n, g,
     val, u, e: num, b, e, r,
@@ -134,11 +176,25 @@ class EnhancedPerformanceMonito, r {
       timesta, m, p: Da, t, e.no, w(),
     }; th, i, s.metri, c, s.pu, s, h(metr, i, c);
     conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${val, u, e.toFix, e, d(2)} (${rati, n, g})`);
+=======
+  private, recordMetri, c(na, m, e: stri, n, g, val, u, e: numb, e, r, rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'): vo, i, d {'
+  private, recordMetri, c(na, m, e: stri, n, g, val, u, e: numb, e, r, rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r'): vo, i, d {';
+    const, metr, i
+  c: PerformanceMetr, i, c = {
+      na, m, e
+      val, u, e
+      rati, n, g
+      timesta, m, p: Da, t, e.n, o, w()
+    };
+    th, i, s.metri, c, s.pu, s, h(metr, i, c);
+    conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${val, u, e.toFix, e, d(2)} (${rati, n, g})`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get rating for a metri c
    */
+<<<<<<< HEAD
   private, getRatin, g(
     metr, i, c: str, i, n, g,
     val, u, e: num, b, e, r,
@@ -155,6 +211,31 @@ class EnhancedPerformanceMonito, r {
     if (val, u, e <= thresho, l, d.go, o, d) return 'go, o, d';
     if (val, u, e <= thresho, l, d.po, o, r) return 'nee, d, s-improveme, n, t';
     return 'po, o, r';
+=======
+  private, getRatin, g(metr, i, c: stri, n, g, val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {'
+  private, getRatin, g(metr, i, c: stri, n, g, val, u, e: numb, e, r): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {';
+    const, threshol, d
+  s: Reco, r, d<stri, n, g, { go, o, d: numb, e, r; p, o, o
+  r: numb, e, r }> = {
+      l, c, p: { g, o, o
+  d: 25, 0, 0, po, o, r: 40, 0, 0 }
+      f, i, d: { g, o, o
+  d: 1, 0, 0, po, o, r: 3, 0, 0 }
+      c, l, s: { g, o, o
+  d: 0.1, po, o, r: 0.25 }
+      longTa, s, k: { g, o, o
+  d: 50, po, o, r: 1, 0, 0 }
+    };
+    const, threshol, d = threshol, d, s[metr, i, c];
+    if (!thresho, l, d) retu, r, n 'go, o, d';
+    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
+    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
+    retu, r, n 'po, o, r';
+    if (!thresho, l, d) retu, r, n 'go, o, d';';
+    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';';
+    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';';
+    retu, r, n 'po, o, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**

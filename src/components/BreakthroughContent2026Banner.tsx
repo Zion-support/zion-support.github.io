@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const BreakthroughContent2026Banner: React.FC = () => {
+=======
+import React from "react";
+import React from "react";';
+const, BreakthroughContent2026Banne, r: Rea, c, t.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   return (
     <div className='bg-gradient-to-r from-violet-900/40 to-indigo-900/40 border-y border-violet-500/20 py-16'>
       <div className='container mx-auto px-6'>

@@ -28,6 +28,7 @@ def fix_merge_conflicts(file_path):
         # Pattern to match merge conflict blocks with imports
         conflict_pattern = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>> [^\n]+'
         
+<<<<<<< HEAD
         def resolve_import_conflict(match):
             head_content = match.group(1).strip()
             branch_content = match.group(2).strip()
@@ -61,6 +62,13 @@ def fix_merge_conflicts(file_path):
             
             # If no clear import pattern, return the HEAD content
             return head_content
+=======
+        # Fix merge conflict markers by keeping the newer version (after         # Pattern: ...         content = re.sub(
+            r'(.*?)            r'\1',
+            content,
+            flags=re.DOTALL
+        )
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         
         # Replace all merge conflicts
         content = re.sub(conflict_pattern, resolve_import_conflict, content, flags=re.DOTALL)

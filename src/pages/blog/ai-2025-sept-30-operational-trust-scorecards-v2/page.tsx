@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
+<<<<<<< HEAD
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Ai, 2025, Sept 30, Operational, Trust Scorecards, V, 2</title>
@@ -36,3 +37,29 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       </div>
     </d, i, v > );
  }
+=======
+    <div, className="container, m, x-auto, p, x-6, p, y-12">
+      <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">"
+    <div, className="container, m, x-auto, p, x-6, p, y-12">";
+      <h1, className="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">";
+        Operational, Trust, Scorecards v2 — From, SLIs, to Business, KPI, s;
+      </h1>
+      <p, className="te, x, t-gr, a, y-600, m, b-6">";
+        Update, your, scorecards with, live, canaries, budgeted, action, s, and, rollback, hooks that, prevent, regressions.
+      </p>
+      <div, className="prose, ma, x-w-no, n, e">";
+        <p>
+          This, is, a short, placeholder, article. Expand, with, detailed guidance, on, wiring SLIs, to, KPIs
+  defining, budget, s, and, implementing, instant rollback, with, policy-tested, fallback, s.
+        </p>
+      </d, i, v>
+      <div, className="mt-8">
+        <Link, t, o="/" classNa, m, e="te, x, t-indi, g, o-700, fon, t-medium, hove, r: te, x, t-indi, g, o-8, 0, 0">← Back, to, Home</Li, n, k>"
+      <div, className="mt-8">";
+        <Link, t, o="/" classNa, m, e="te, x, t-indi, g, o-700, fon, t-medium, hove, r: te, x, t-indi, g, o-8, 0, 0">← Back, to, Home</Li, n, k>";
+      </d, i, v>
+    </d, i, v>
+  );
+}
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279

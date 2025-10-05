@@ -3,6 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
+<<<<<<< HEAD
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>
@@ -19,6 +20,25 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
       <div, className='container, m, x-auto, p, x-6, p, y-16'>
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Agentic, Workflow, Orchestration 20, 2, 6
+=======
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
+      <Helmet>
+        <title>Agentic, Workflow, Orchestration 20, 2, 6 — Budge, t, s, Canari, e, s, Rollba, c, k</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Design, agentic, workflows with, budgeted, actions, K, P, I-linked, canarie, s, and, instant, rollback for, safe, velocity." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/agent, i, c-workfl, o, w-orchestrati, o, n-20, 2, 6",  />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">"
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/agent, i, c-workfl, o, w-orchestrati, o, n-20, 2, 6"
+         />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">";
+          Agentic, Workflow, Orchestration 20, 2, 6;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Budgeted, Action, s • KPI, Canarie, s • Instant, Rollbac, k

@@ -41,9 +41,14 @@ for file in $files_with_errors; do
     sed -i 's/useMemo/useMemo/g' "$file"
     sed -i 's/useCallback/useCallback/g' "$file"
     
+<<<<<<< HEAD
     # Fix React.FC syntax
     sed -i 's/Rea, c, t\.FC/React.FC/g' "$file"
     sed -i 's/React\.FC/React.FC/g' "$file"
+=======
+    # 4. Remove any remaining merge conflict artifacts
+    sed -i '/^
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     
     # Fix JSX syntax errors
     sed -i 's/retu, r, n /return /g' "$file"

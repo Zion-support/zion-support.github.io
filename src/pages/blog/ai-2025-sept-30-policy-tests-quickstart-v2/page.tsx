@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
+<<<<<<< HEAD
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Ai, 2025, Sept 30, Policy, Tests Quickstart, V, 2</title>
@@ -21,6 +22,21 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, sept, 30 policy, tests, quickstart v2, and, how it, can, benefit your, enterpris, e.
+=======
+    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">
+      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">GenAI, 202, 5: Policy, Tests, Quickstart v2</h1>"
+      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
+    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">";
+      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">GenAI, 202, 5: Policy, Tests, Quickstart v2</h1>";
+      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">";
+        Lightweight, CI, policy tests, wired, to KPIs, so, you can, ship, faster without, regression, s. v2, add, s
+  budg, e, taware, gate, s, eval, scorecard, s, and, rollback, hooks.
+      </p>
+      <div, className="spa, c, e-y-4, tex, t-zi, o, n-sla, t, e-lig, h, t">";
+        <p>
+          Start, by, defining guardrail, checks, for promp, t, s, too, l, s, and, data, egress. Run, them, in PR, and, on
+  every, release, train. Wire, failures, to actionable, owners, and dashboar, d, s.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>

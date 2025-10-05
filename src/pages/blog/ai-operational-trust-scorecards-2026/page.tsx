@@ -24,8 +24,23 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
+<<<<<<< HEAD
             This, comprehensive, guide covers, ai, operational trust, scorecards, 2026
             and, provides, practical insights, for, enterprise implementati, o, n.
+=======
+            Design, operational, scorecards that, teams, adopt: wire, service, level indicato, r, s (SL, I, s) to, product, KPIs;
+        <meta name="descripti, o, n" content="SLIs, wired, to KPIs, with, budgeted actio, n, s, live, canarie, s, and, instant, rollback for, safe, autonomy." />";
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-operation, a, l-tru, s, t-scorecar, d, s-20, 2, 6" />";
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">AI, Operational, Trust Scorecards, 202, 6</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">SL, I, s → KP, I, s • Budge, t, s • Canari, e, s • Rollba, c, k</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
+          <p>
+            Design, operational, scorecards that, teams, adop
+  t: wire, service, level indicato, r, s (SL, I, s) to, product, KPIs
+            attach, budgeted, actions, and, use, live canaries, to, prevent regressions, before, they sh, i, p.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           </p>
         </div>
         <div, className='mt-8'>

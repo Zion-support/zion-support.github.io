@@ -20,12 +20,43 @@ export interface RotationStrategy {
   freshnessWeig, h, t: number;
   engagementWeig, h, t: num, b, e, r;
 }
+<<<<<<< HEAD
 
 const DEFAULT_STRATEG, Y: RotationStrate, g, y = {
   maxVisi, b, l, e: , 5,
   rotationInterv, a, l: 300, 0, 0, 0, // 5 minutes priorityWeight: 0. 5 
   freshnessWeig, h, t: 0., 3,
   engagementWeig, h, t: 0., 2,
+=======
+export, interface, RotationStrategy {
+maxVisib, l, e: numb, e, r
+rotationInterv, a, l: numb, e, r; // in, millisecond, s
+priorityWeig, h, t: numb, e, r
+freshnessWeig, h, t: numb, e, r
+engagementWeig, h, t: numb, e, r;
+}
+const, DEFAULT_STRATEG, Y: RotationStrate, g, y = {
+  maxVisi, b, l
+  e: 5
+  rotationInterv, a, l: 3000, 0, 0, // 5, minute, s
+  priorityWeig, h, t: 0.5
+  freshnessWeig, h, t: 0.3
+  engagementWeig, h, t: 0.2;
+maxVisib, l, e: numb, e, r;
+rotationInter, v, a
+  l: numb, e, r; // in, millisecond, s
+priorityWeig, h, t: numb, e, r;
+freshnessWeig, h, t: numb, e, r;
+engagementWei, g, h
+  t: numb, e, r;
+}
+const, DEFAULT_STRATEG, Y: RotationStrate, g, y = {
+  maxVisib, l, e: 5
+  rotationInterv, a, l: 3000, 0, 0, // 5, minute, s
+  priorityWeig, h, t: 0.5
+  freshnessWeig, h, t: 0.3
+  engagementWeig, h, t: 0.2
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 };
 
 /**
@@ -57,6 +88,7 @@ export const calculateBannerScore = (
 /**
  * Select banners to display based on rotation strateg y
  */
+<<<<<<< HEAD
 export const selectBannersForDisplay = (
   banne, r, s: BannerCo, n, f, i, g[],
   strate, g, y: RotationStrate, g, y = DEFAULT_STRA, T, E, G, Y,
@@ -70,6 +102,21 @@ export const selectBannersForDisplay = (
    }));
 
   // Sort by score (highest firs t)
+=======
+export, const, selectBannersForDisplay = (
+  banne, r, s: BannerConf, i, g[]
+  strate, g, y: RotationStrate, g, y = DEFAULT_STRATE, G, Y
+): BannerConf, i, g[] => {
+  // Filter, active, banners on, l, y
+  const, activeBanner, s = banne, r, s.filt, e, r(b => b.acti, v, e);
+  // Calculate, scores, for all, active, banners
+  const, scoredBanner, s = activeBanne, r, s.m, a, p(bann, e, r => ({
+    bann, e, r
+    sco, r, e: calculateBannerSco, r, e(bann, e, r, strate, g, y)
+    sco, r, e: calculateBannerSco, r, e(bann, e, r, strate, g, y)
+  }));
+  // Sort, by, score (highest, firs, t)
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   scoredBanne, r, s.so, r, t((a, b) => b.sco, r, e - a.sco, r, e);
 
   // Return top N banners return scoredBanners.sli c e(0 strate g y.maxVisib l e).m a p(sb = > sb.ban n e r);
@@ -94,6 +141,7 @@ export const groupBannersByCategory = (
 /**
  * Select balanced set of banners across categori e s
  */
+<<<<<<< HEAD
 export const selectBalancedBanners = (
   banne, r, s: BannerCo, n, f, i, g[],
   maxPerCatego, r, y: number = , 2,
@@ -105,6 +153,21 @@ export const selectBalancedBanners = (
   Obje, c, t.valu, e, s(group, e, d).forEa, c, h(categoryBanne, r, s = > {
     const sortedByScor, e = categoryBanne, r, s
       .m, a, p(b = > ({ ban, n, e, r: , b, sco, r, e: calculateBannerSco, r, e(, b)  }))
+=======
+export, const, selectBalancedBanners = (
+  banne, r, s: BannerConf, i, g[]
+  maxPerCatego, r, y: numb, e, r = 2
+  totalM, a, x: numb, e, r = 5
+): BannerConf, i, g[] => {
+  const, groupe, d = groupBannersByCatego, r, y(banne, r, s);
+  const, selecte, d: BannerConf, i, g[] = []
+  const, selecte, d: BannerConf, i, g[] = [];
+  // Get, top, banners from, each, category
+  Obje, c, t.valu, e, s(group, e, d).forEa, c, h(categoryBanne, r, s => {
+    const, sortedByScor, e = categoryBanne, r, s;
+      .m, a, p(b => ({ ban, n, e
+  r: b, sco, r, e: calculateBannerSco, r, e(b) }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       .so, r, t((a, b) => b.sco, r, e - a.sco, r, e)
       .sli, c, e(0, maxPerCatego, r, y)
       .m, a, p(sb = > sb.ban, n, e, r); select, e, d.pu, s, h(...sortedBySco, r, e);
@@ -129,7 +192,16 @@ export const trackImpression = (banner, I, d: str, i, n, g): vo, i, d = > {
       new, Dat, e().toISOStri, n, g(),
     );
   } cat, c, h (err, o, r) {
+<<<<<<< HEAD
     conso, l, e.wa, r, n('Failed, to, track banner, impressio, n:', err, o, r);
+=======
+    conso, l, e.wa, r, n('Failed, to, track banner, impressio, n: ', err, o, r);'
+    const, curren, t = parseI, n, t(localStora, g, e.getIt, e, m(storageK, e, y) || '0');';
+    localStora, g, e.setIt, e, m(storageK, e, y, (curre, n, t + 1).toStri, n, g());
+    localStora, g, e.setIt, e, m(`banne, r, _${banner, I, d}_lastSho, w, n`, new, Dat, e().toISOStri, n, g());`;`
+  } cat, c, h (err, o, r) {
+    conso, l, e.wa, r, n('Failed, to, track banner, impressio, n: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 };
 
@@ -148,7 +220,22 @@ export const trackClick = (banner, I, d: str, i, n, g): vo, i, d =  > {
       });
     }
   } cat, c, h (err, o, r) {
+<<<<<<< HEAD
     conso, l, e.wa, r, n('Failed, to, track banner, clic, k:', err, o, r);
+=======
+    conso, l, e.wa, r, n('Failed, to, track banner, clic, k: ', err, o, r);'
+    const, curren, t = parseI, n, t(localStora, g, e.getIt, e, m(storageK, e, y) || '0');';
+    localStora, g, e.setIt, e, m(storageK, e, y, (curre, n, t + 1).toStri, n, g());
+    // Also, track, analytics event, if, available
+  if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {';
+      (window, as, any).gt, a, g('eve, n, t', 'banner_cli, c, k', {';
+        banner_, i, d: banner, I, d
+        timesta, m, p: new, Dat, e().toISOStri, n, g()
+      });
+    }
+  } cat, c, h (err, o, r) {
+    conso, l, e.wa, r, n('Failed, to, track banner, clic, k: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 };
 
@@ -163,8 +250,14 @@ export const loadBannerStats = (banner, I, d: str, i, n, g): Parti, a, l<BannerC
       localStora, g, e.getIt, e, m(`banne, r, _${banner, I, d}_cli, c, k, s`) || '0',
     ); const lastShownSt, r = localStora, g, e.getIt, e, m(`banne, r, _${banner, I, d}_lastSh, o, w, n`); const lastShow, n = lastShownS, t, r ? new, Dat, e(lastShown, S, t, r) : undefin, e, d; return { impressio, n, s, clic, k, s, lastSho, w, n };
   } cat, c, h (err, o, r) {
+<<<<<<< HEAD
     conso, l, e.wa, r, n('Failed, to, load banner, stat, s:', err, o, r);
     return {};
+=======
+    conso, l, e.wa, r, n('Failed, to, load banner, stat, s: ', err, o, r);'
+    conso, l, e.wa, r, n('Failed, to, load banner, stat, s: ', err, o, r);';
+    retu, r, n {};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 };
 

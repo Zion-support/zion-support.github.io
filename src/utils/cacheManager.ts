@@ -2,6 +2,7 @@
  * Cache Manage r
  * Implements intelligent caching strategies for better performan c e
  */
+<<<<<<< HEAD
 
 export interface CacheOptions { 
   t, t, l?: number; // Time to live in milliseconds strategy?: 'memo r y' | 'localStora g e' | 'sessionStora g e';
@@ -18,6 +19,26 @@ class CacheManage, r {
   private, memoryCach, e: M, a, p<str, i, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
   private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5 minutes private readonly DEFAULT_MAX_SIZ E = 1 0 0;
 
+=======
+export, interface, CacheOptions {
+t, t, l?: numb, e, r; // Time, to, live in, millisecond, s
+  strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';
+t, t, l?: numb, e, r; // Time, to, live in, millisecond, s
+strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e';';
+maxSi, z, e?: numb, e, r; // Maximum, number, of entri, e, s;
+}
+export, interface, CacheEntry<T> {
+da, t, a: T;
+timesta, m, p: numb, e, r;
+tt
+  l: numb, e, r;
+}
+class, CacheManage, r {
+  private, memoryCach, e: M, a, p<stri, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p()
+  private, memoryCach, e: M, a, p<stri, n, g, CacheEnt, r, y<unkno, w, n>> = new, Ma, p();
+  private, readonly, DEFAULT_TTL = 5 * 60 * 10, 0, 0; // 5, minute, s
+  private, readonly, DEFAULT_MAX_SIZE = 1, 0, 0;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   /**
    * Set a value in cach e
    */
@@ -41,6 +62,27 @@ class CacheManage, r {
         bre, a, k;
       ca, s, e 'sessionStora, g, e':
         th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'sessionStora, g, e');
+<<<<<<< HEAD
+=======
+      t, t, l = th, i, s.DEFAULT_T, T, L
+      strate, g, y = 'memo, r, y',';
+      maxSi, z, e = th, i, s.DEFAULT_MAX_SI, Z, E
+    } = optio, n, s;
+    const, entr, y: CacheEnt, r, y<T> = {
+      da, t, a: val, u, e
+      timesta, m, p: Da, t, e.n, o, w()
+      t, t, l
+    };
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':';
+        th, i, s.setInMemo, r, y(k, e, y, ent, r, y, maxSi, z, e);
+        bre, a, k;
+      ca, s, e 'localStora, g, e':';
+        th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'localStora, g, e');';
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':';
+        th, i, s.setInStora, g, e(k, e, y, ent, r, y, 'sessionStora, g, e');';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         bre, a, k;
     }
   }
@@ -49,6 +91,7 @@ class CacheManage, r {
    * Get a value from cach e
    */
   g, e, t<T>(
+<<<<<<< HEAD
     k, e, y: str, i, n, g,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
   ): T | nu, l, l { 
@@ -61,6 +104,38 @@ class CacheManage, r {
       }, if (!ent, r, y) return, nul, l;
 
     // Check if entry has expired if (th i s.isExpir e d(ent r y)) {
+=======
+    k, e, y: stri, n, g
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): T | nu, l, l {
+    let, ent, r
+  y: CacheEnt, r, y<T> | nu, l, l = nu, l, l
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':;
+        ent, r, y = th, i, s.memoryCac, h, e.g, e, t(k, e, y) || nu, l, l;
+        bre, a, k;
+      ca, s, e 'localStora, g, e':;
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e');
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':;
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'sessionStora, g, e');
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
+  ): T | nu, l, l {
+    let, entr, y: CacheEnt, r, y<T> | nu, l, l = nu, l, l;
+    swit, c, h (strate, g, y) {
+      ca, s, e 'memo, r, y':';
+        ent, r, y = th, i, s.memoryCac, h, e.g, e, t(k, e, y) || nu, l, l;
+        bre, a, k;
+      ca, s, e 'localStora, g, e':';
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'localStora, g, e');';
+        bre, a, k;
+      ca, s, e 'sessionStora, g, e':';
+        ent, r, y = th, i, s.getFromStora, g, e(k, e, y, 'sessionStora, g, e');';
+        bre, a, k;
+    }
+    if (!ent, r, y) return, nul, l;
+    // Check, if, entry has, expire, d
+  if (th, i, s.isExpir, e, d(ent, r, y)) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       th, i, s.dele, t, e(k, e, y, strate, g, y);
       return, nul, l;
     }
@@ -72,8 +147,23 @@ class CacheManage, r {
    * Delete a value from cach e
    */
   dele, t, e(
+<<<<<<< HEAD
     k, e, y: str, i, n, g,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
+=======
+    k, e, y: stri, n, g
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): vo, i, d {
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':
+th, i, s.memoryCac, h, e.dele, t, e(k, e, y);
+bre, a, k;
+ca, s, e 'localStora, g, e':
+localStora, g, e.removeIt, e, m(k, e, y);
+bre, a, k;
+ca, s, e 'sessionStora, g, e':
+    strat, e, g
+  y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   ): vo, i, d {
     swit, c, h (strate, g, y) {
       ca, s, e 'memo, r, y':
@@ -96,7 +186,19 @@ class CacheManage, r {
      }, if (!strate, g, y || strate, g, y = == 'localStor, a, g, e') {
       localStora, g, e.cle, a, r();
     }
+<<<<<<< HEAD
     if (!strate, g, y || strate, g, y = == 'sessionStor, a, g, e') {
+=======
+    if (!strate, g, y || strate, g, y === 'sessionStora, g, e') {;
+  cle, a, r(strate, g, y?: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e'): vo, i, d {';
+    if (!strate, g, y || strate, g, y === 'memo, r, y') {';
+      th, i, s.memoryCac, h, e.cle, a, r();
+    }
+    if (!strate, g, y || strate, g, y === 'localStora, g, e') {';
+      localStora, g, e.cle, a, r();
+    }
+    if (!strate, g, y || strate, g, y === 'sessionStora, g, e') {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       sessionStora, g, e.cle, a, r();
     }
   }
@@ -105,10 +207,20 @@ class CacheManage, r {
    * Check if a key exists and is not expired
    */
   h, a, s(
+<<<<<<< HEAD
     k, e, y: str, i, n, g,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
   ): boolean {
     const valu, e = th, i, s.g, e, t(ke, y, strate, g, y); return, valu, e !== nu, l, l;
+=======
+    k, e, y: stri, n, g
+    strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y): boole, a, n {
+    strat, e, g
+  y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'
+  ): boole, a, n {
+    const, valu, e = th, i, s.g, e, t(k, e, y, strate, g, y);
+    return, valu, e !== nu, l, l;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -127,6 +239,7 @@ class CacheManage, r {
   /**
    * Invalidate cache entries matching a pattern
    */
+<<<<<<< HEAD
   invalidatePatte, r, n(
     patte, r, n: Reg, E, x, p,
     strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'mem, o, r, y',
@@ -145,12 +258,38 @@ class CacheManage, r {
           .filt, e, r(k, e, y = > patte, r, n.te, s, t(ke, y))
           .forEa, c, h(k, e, y = > sessionStora, g, e.removeIt, e, m(ke, y)); bre, a, k;
      }
+=======
+  invalidatePatte, r, n(patte, r, n: RegE, x, p, strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'): vo, i, d {'
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':
+  invalidatePatte, r, n(patte, r, n: RegE, x, p, strate, g, y: 'memo, r, y' | 'localStora, g, e' | 'sessionStora, g, e' = 'memo, r, y'): vo, i, d {';
+swit, c, h (strate, g, y) {
+ca, s, e 'memo, r, y':';
+Arr, a, y.fr, o, m(th, i, s.memoryCac, h, e.ke, y, s())
+.filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
+.forEa, c, h(k, e, y => th, i, s.memoryCac, h, e.dele, t, e(k, e, y));
+bre, a, k;
+ca, s, e 'localStora, g, e':
+ca, s, e 'localStora, g, e':';
+Obje, c, t.ke, y, s(localStora, g, e)
+.filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
+.forEa, c, h(k, e, y => localStora, g, e.removeIt, e, m(k, e, y));
+bre, a, k;
+ca, s, e 'sessionStora, g, e':
+ca, s, e 'sessionStora, g, e':';
+Obje, c, t.ke, y, s(sessionStora, g, e)
+.filt, e, r(k, e, y => patte, r, n.te, s, t(k, e, y))
+.forEa, c, h(k, e, y => sessionStora, g, e.removeIt, e, m(k, e, y));
+bre, a, k;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Get cache statistics
    */
   getSta, t, s(): {
+<<<<<<< HEAD
     memorySi, z, e: number;
     localStorageSi, z, e: number;
     sessionStorageSi, z, e: num, b, e, r;
@@ -159,6 +298,21 @@ class CacheManage, r {
       memorySi, z, e: th, i, s.memoryCac, h, e.s, i, z, e,
       localStorageSi, z, e: localStora, g, e.len, g, t, h,
       sessionStorageSi, z, e: sessionStora, g, e.len, g, t, h,
+=======
+memorySi, z, e: numb, e, r;
+localStorageSi, z, e: numb, e, r;
+sessionStorageS, i, z
+  e: numb, e, r;
+} {
+    retu, r, n {
+      memorySi, z, e: th, i, s.memoryCac, h, e.si, z, e
+      localStorageSi, z, e: localStora, g, e.leng, t, h
+      sessionStorageSi, z, e: sessionStora, g, e.leng, t, h;
+      memoryS, i, z
+  e: th, i, s.memoryCac, h, e.si, z, e
+      localStorageSi, z, e: localStora, g, e.leng, t, h
+      sessionStorageSi, z, e: sessionStora, g, e.leng, t, h
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -178,10 +332,19 @@ class CacheManage, r {
   }
 
   private, setInStorag, e<T>(
+<<<<<<< HEAD
     k, e, y: str, i, n, g,
     ent, r, y: CacheEnt, r, y<, T>,
     stora, g, e: 'localStora, g, e' | 'sessionStor, a, g, e',
   ): vo, i, d { 
+=======
+    k, e, y: stri, n, g
+    ent, r, y: CacheEnt, r, y<T>
+    stora, g, e: 'localStora, g, e' | 'sessionStora, g, e): vo, i, d {
+    stor, a, g
+  e: 'localStora, g, e' | 'sessionStora, g, e'
+  ): vo, i, d {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     t, r, y {
       const storageOb, j = stora, g, e === 'localStora, g, e'  ? localStora, g, e : sessionStora, g, e; storageO, b, j.setIt, e, m(k, e, y, JS, O, N.stringi, f, y(ent, r, y));
      } cat, c, h (err, o, r) {
@@ -190,6 +353,7 @@ class CacheManage, r {
   }
 
   private, getFromStorag, e<T>(
+<<<<<<< HEAD
     k, e, y: str, i, n, g,
     stora, g, e: 'localStora, g, e' | 'sessionStor, a, g, e',
   ): CacheEnt, r, y<T > | nu, l, l { 
@@ -197,6 +361,21 @@ class CacheManage, r {
       const storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e: sessionStora, g, e; const ite, m = storageO, b, j.getIt, e, m(ke, y); return, ite, m  ? JS, O, N.par, s, e(it, e, m)  : n, u, l, l;
      } cat, c, h (err, o, r) {
       conso, l, e.wa, r, n(`Failed, to, get fr, o, m ${stora, g, e}:`, err, o, r);
+=======
+    k, e, y: stri, n, g
+    stora, g, e: 'localStora, g, e' | 'sessionStora, g, e): CacheEnt, r, y<T> | nu, l, l {
+t, r, y {
+const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e : sessionStora, g, e;
+    stor, a, g
+  e: 'localStora, g, e' | 'sessionStora, g, e'
+  ): CacheEnt, r, y<T> | nu, l, l {
+t, r, y {
+const, storageOb, j = stora, g, e === 'localStora, g, e' ? localStora, g, e : sessionStora, g, e;';
+const, ite, m = storageO, b, j.getIt, e, m(k, e, y);
+return, ite, m ? JS, O, N.par, s, e(it, e, m) : nu, l, l;
+} cat, c, h (err, o, r) {
+      conso, l, e.wa, r, n(`Failed, to, get fr, o, m ${stora, g, e}:`, err, o, r);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       return, nul, l;
     }
   }
@@ -233,6 +412,7 @@ class CacheManage, r {
     }
   }
 }
+<<<<<<< HEAD
 
 // Export singleton instance
 export const cacheManager = new, CacheManag, e, r();
@@ -244,6 +424,16 @@ export const cacheManager = new, CacheManag, e, r();
      },
     5 * 60 * 10, 0, 0,
   );
+=======
+// Export, singleton, instance
+  export, const, cacheManager = new, CacheManage, r();
+// Run, cleanup, every 5, minute, s
+  if (typeof, windo, w !== 'undefin, e, d') {;
+if (typeof, windo, w !== 'undefin, e, d') {';
+  setInterv, a, l(() => {
+    cacheManag, e, r.clean, u, p();
+  }, 5 * 60 * 10, 0, 0);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 export default cacheManager;

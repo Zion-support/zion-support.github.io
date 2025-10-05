@@ -27,6 +27,7 @@ export interface PerformanceAlert {
   thresho, l, d: number;
   timesta, m, p: num, b, e, r;
 }
+<<<<<<< HEAD
 
 class EnhancedPerformanceMonito, r {
   private, metric, s: PerformanceMetri, c, s[] = [];
@@ -46,12 +47,43 @@ class EnhancedPerformanceMonito, r {
                 entry, as, PerformanceNavigationTiming,
               );
              }
+=======
+class, EnhancedPerformanceMonito, r {
+private, metric, s: PerformanceMetri, c, s[] = [];
+private, alert, s: PerformanceAle, r, t[] = [];
+private, observe, r
+  s: PerformanceObserv, e, r[] = [];
+private, isMonitorin, g = fal, s, e;
+construct, o, r() {
+th, i, s.initializeObserve, r, s();
+}
+  private, initializeObserver, s(): vo, i, d {
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;
+    // Observe, navigation, timing
+  if ('PerformanceObserv, e, r' in, windo, w) {;
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+    // Observe, navigation, timing
+  if ('PerformanceObserv, e, r' in, windo, w) {';
+      t, r, y {
+        const, navObserve, r = new, PerformanceObserve, r((li, s, t) => {
+          const, entrie, s = li, s, t.getEntri, e, s();
+          entri, e, s.forEa, c, h((ent, r, y) => {
+            if (ent, r, y.entryTy, p, e === 'navigati, o, n') {;
+            if (ent, r, y.entryTy, p, e === 'navigati, o, n') {';
+              th, i, s.processNavigationTimi, n, g(entry, as, PerformanceNavigationTiming);
+            }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           });
         });
         navObserv, e, r.obser, v, e({ entryTyp, e, s: ['navigat, i, o, n'] });
         th, i, s.observe, r, s.pu, s, h(navObserv, e, r);
       } cat, c, h (err, o, r) {
+<<<<<<< HEAD
         conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d:', err, o, r);
+=======
+        conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d: ', err, o, r);'
+        conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
   }
@@ -76,6 +108,7 @@ class EnhancedPerformanceMonito, r {
   }
 
   private, checkThreshold, s(metri, c, s: PerformanceMetri, c, s): vo, i, d {
+<<<<<<< HEAD
     const threshold, s = {
       loadTi, m, e: 30, 0, 0,
       firstContentfulPai, n, t: 1, 5, 0, 0,
@@ -93,6 +126,31 @@ class EnhancedPerformanceMonito, r {
           val, u, e,
           thresho, l, d,
           timesta, m, p: Da, t, e.no, w(),
+=======
+    const, threshold, s = {
+      loadTi, m, e: 30, 0, 0
+      firstContentfulPai, n, t: 15, 0, 0
+      largestContentfulPai, n, t: 25, 0, 0
+      firstInputDel, a, y: 1, 0, 0
+      cumulativeLayoutShi, f, t: 0.1
+      timeToInteracti, v, e: 38, 0, 0
+      totalBlockingTi, m, e: 2, 0, 0
+      speedInd, e, x: 30, 0, 0
+    };
+    Obje, c, t.entri, e, s(threshol, d, s).forEa, c, h(([k, e, y, thresho, l, d]) => {
+      const, valu, e = metri, c, s[key, as, keyof PerformanceMetri, c, s];
+      if (typeof, valu, e === 'numb, e, r' && val, u, e > thresho, l, d) {;
+        th, i, s.addAle, r, t({
+          ty, p, e: val, u, e > thresho, l, d * 1.5 ? 'err, o, r' : 'warni, n, g','
+      if (typeof, valu, e === 'numb, e, r' && val, u, e > thresho, l, d) {';
+        th, i, s.addAle, r, t({
+          ty, p, e: val, u, e > thresho, l, d * 1.5 ? 'err, o, r' : 'warni, n, g',';
+          messa, g, e: `${k, e, y} exceeded, threshol, d: ${val, u, e}ms > ${thresho, l, d}ms`,`;`
+          metr, i, c: key, as, keyof PerformanceMetri, c, s
+          val, u, e
+          thresho, l, d
+          timesta, m, p: Da, t, e.n, o, w()
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         });
       }
     });
@@ -100,6 +158,7 @@ class EnhancedPerformanceMonito, r {
 
   private, addAler, t(ale, r, t: PerformanceAle, r, t): vo, i, d { 
     th, i, s.aler, t, s.pu, s, h(ale, r, t);
+<<<<<<< HEAD
 
     // Keep only last 50 alerts if (th i s.aler t s.leng t h  > 50) {
       th, i, s.aler, t, s = th, i, s.aler, t, s.sli, c, e(-, 5, 0);
@@ -108,6 +167,17 @@ class EnhancedPerformanceMonito, r {
     // Log critical alerts
     if (ale, r, t.ty, p, e = == 'er, r, o, r') {
       conso, l, e.err, o, r('Performance, Aler, t:', ale, r, t);
+=======
+    // Keep, only, last 50, alert, s
+  if (th, i, s.aler, t, s.leng, t, h > 50) {
+      th, i, s.aler, t, s = th, i, s.aler, t, s.sli, c, e(-50);
+    }
+    // Log, critical, alerts
+  if (ale, r, t.ty, p, e === 'err, o, r') {;
+      conso, l, e.err, o, r('Performance, Aler, t: ', ale, r, t);'
+    if (ale, r, t.ty, p, e === 'err, o, r') {';
+      conso, l, e.err, o, r('Performance, Aler, t: ', ale, r, t);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -149,10 +219,18 @@ class EnhancedPerformanceMonito, r {
     );
   }
 }
+<<<<<<< HEAD
 
 // Export singleton instance
 export const enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();
 
 // Au t o-start monitoring in browser environment if (typeof windo w !== 'undefin e d') {
+=======
+// Export, singleton, instance
+  export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonito, r();
+// Au, t, o-start, monitoring, in browser, environmen, t
+  if (typeof, windo, w !== 'undefin, e, d') {;
+if (typeof, windo, w !== 'undefin, e, d') {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   enhancedPerformanceMonit, o, r.startMonitori, n, g();
 }

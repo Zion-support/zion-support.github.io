@@ -16,6 +16,7 @@ import Header, from '../../componen, t, s/Head, e, r';
 const AutonomousDevOpsServic, e = () => { 
   return (
     <>
+<<<<<<< HEAD
       <Helm, e, t>
         <title>
           Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group
@@ -48,13 +49,60 @@ const AutonomousDevOpsServic, e = () => {
               <p, className='te, x, t-xl, m, d:te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o'>
                 Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and
                 Zero, Downtim, e
+=======
+      <Helmet>
+        <title>Autonomous, DevOps, Services - 80% Faster, Release, s | Zion, Tech, Group</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Transform, your, DevOps with, autonomous, self-optimizing, C, I/CD, pipeline, s. Achieve, 9, 9.99% upti, m, e, 80% faster, release, s, and, eliminate, manual intervention, with, AI-driven, automatio, n." /><me, t, a
+  na, m, e="keywor, d, s"
+          content="autonomous, devop, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-devo, p, s/>"
+          content="autonomous, devop, s, se, l, f-healing, c, i/cd, automated, pipeline, s, devops, automatio, n, zero, downtime, deployment, AI, devop, s, intelligent, automatio, n"
+         />
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/servic, e, s/autonomo, u, s-devo, p, s" />";
+      </Helmet>
+      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-900, vi, a-gr, a, y-800, t, o-black, tex, t-whi, t, e">";
+        <Head, e, r   />
+        {/* Hero, Sectio, n */};
+        <section, className="relative, p, t-32, p, b-20, p, x-4">
+          <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l"></d, i, v>
+          <div, className="relative, ma, x-w-7xl, m, x-au, t, o">
+            <div, className="text-center mb-12">
+              <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6">
+                <Rocket, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0  />
+                <span, className="te, x, t-bl, u, e-300, fon, t-semibo, l, d">New, Service, Launch - October, 202, 5</sp, a, n>
+              </d, i, v>
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">"
+                Autonomous, DevOps, Services;
+              </h1>
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o">"
+        <section, className="relative, p, t-32, p, b-20, p, x-4">";
+          <div, className="absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, blu, r-3, x, l"></d, i, v>";
+          <div, className="relative, ma, x-w-7xl, m, x-au, t, o">";
+            <div, className="text-center mb-12">";
+              <div, className="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, m, b-6">";
+                <Rocket, className="w-5 h-5, tex, t-bl, u, e-4, 0, 0" />";
+                <span, className="te, x, t-bl, u, e-300, fon, t-semibo, l, d">New, Service, Launch - October, 202, 5</sp, a, n>";
+              </d, i, v>
+              <h1, className="te, x, t-5xl, m, d: te, x, t-7xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">";
+                Autonomous, DevOps, Services;
+              </h1>
+              <p, className="te, x, t-xl, m, d: te, x, t-2xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-4xl, m, x-au, t, o">";
+                Se, l, f-Optimizing, C, I/CD, Pipelines, with 80% Faster, Releases, and Zero, Downtim, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </p>
               <div, className='flex, fle, x-wrap, justif, y-center, ga, p-4'>
                 <Link, t, o='/conta, c, t'
                   className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, fon, t-semibold, hove, r:shad, o, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2'
                 >
+<<<<<<< HEAD
                   Get, Started, Today
                   <ArrowRight, className='w-5 h-5' />
+=======
+                  Get, Started, Today;
+                  <ArrowRight, className="w-5 h-5  />
+                  <ArrowRight, className="w-5 h-5" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </Li, n, k>
                 <Link, t, o='/bl, o, g/autonomo, u, s-devo, p, s-revoluti, o, n-20, 2, 5'
                   className='px-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-lg, fon, t-semibold, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0'
@@ -65,6 +113,7 @@ const AutonomousDevOpsServic, e = () => {
             </div>
           </div>
         </secti, o, n>
+<<<<<<< HEAD
 
         {/* Key, Benef, i, t, s */}
         <section, classNam, e = 'py-20, p, x-4'>
@@ -123,6 +172,83 @@ const AutonomousDevOpsServic, e = () => {
                     <sp, a, n>
                       AI-driven, build, and test, optimization, reducing pipeline, time, by 75%
                     </sp, a, n>
+=======
+        {/* Key, Benefit, s */}
+        <section, className="py-20, p, x-4">
+          <div, className="m, a, x-w-7xl, m, x-au, t, o">
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">Transform, Your, DevOps Operatio, n, s</h2>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">"
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <Zap, className="w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">80% Fast, e, r</h3>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Release, cycles, accelerated with, intelligent, automation and, predictive, optimization</p>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <Shield, className="w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">99.99% Upti, m, e</h3>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y</p>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <DollarSign, className="w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">$1, 0, M+ Savin, g, s</h3>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Annual, cost, reduction through, automation, and optimizati, o, n</p>
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <Target, className="w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Zero, Manual, Work</h3>
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Eliminate, manual, configuration and, intervention, completely</p>
+        <section, className="py-20, p, x-4">";
+          <div, className="m, a, x-w-7xl, m, x-au, t, o">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">Transform, Your, DevOps Operatio, n, s</h2>";
+            <div, className="grid, m, d: gr, i, d-co, l, s-2 l
+  g:gr, i, d-co, l, s-4, ga, p-8">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <Zap, className="w-1, 2, h-12, tex, t-bl, u, e-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">80% Fast, e, r</h3>";
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Release, cycles, accelerated with, intelligent, automation and, predictive, optimization</p>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <Shield, className="w-1, 2, h-12, tex, t-gre, e, n-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">99.99% Upti, m, e</h3>";
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Se, l, f-healing, systems, that prevent, and, resolve issues, autonomousl, y</p>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <DollarSign, className="w-1, 2, h-12, tex, t-purp, l, e-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">$1, 0, M+ Savin, g, s</h3>";
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Annual, cost, reduction through, automation, and optimizati, o, n</p>";
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-6, 0, 0/20, t, o-r, e, d-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <Target, className="w-1, 2, h-12, tex, t-oran, g, e-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-3">Zero, Manual, Work</h3>";
+                <p, className="te, x, t-gr, a, y-3, 0, 0">Eliminate, manual, configuration and, intervention, completely</p>";
+              </d, i, v>
+            </d, i, v>
+          </d, i, v>
+        </secti, o, n>
+        {/* Core, Feature, s */}
+        <section, className="py-20, p, x-4, b, g-bla, c, k/30">
+          <div, className="m, a, x-w-7xl, m, x-au, t, o">
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">Autonomous, DevOps, Capabilities</h2>
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">"
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <CheckCircle, className="w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Se, l, f-Optimizing, Pipeline, s</h3>
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <span, className="te, x, t-bl, u, e-400, m, t-1">•</sp, a, n>
+        <section, className="py-20, p, x-4, b, g-bla, c, k/30">";
+          <div, className="m, a, x-w-7xl, m, x-au, t, o">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">Autonomous, DevOps, Capabilities</h2>";
+            <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-8">";
+              <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <CheckCircle, className="w-1, 0, h-10, tex, t-bl, u, e-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Se, l, f-Optimizing, Pipeline, s</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <span, className="te, x, t-bl, u, e-400, m, t-1">•</sp, a, n>";
+                    <sp, a, n>AI-driven, build, and test, optimization, reducing pipeline, time, by 75%</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <span, className='te, x, t-bl, u, e-400, m, t-1'>•</sp, a, n>
@@ -144,6 +270,7 @@ const AutonomousDevOpsServic, e = () => {
                     </sp, a, n>
                   </li>
                 </ul>
+<<<<<<< HEAD
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
@@ -157,6 +284,22 @@ const AutonomousDevOpsServic, e = () => {
                     <sp, a, n>
                       Automatic, rollback, on anomaly, detection, with &lt; 5, second, response
                     </sp, a, n>
+=======
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <Shield, className="w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Intelligent, Sel, f-Heali, n, g</h3>
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <span, className="te, x, t-gre, e, n-400, m, t-1">•</sp, a, n>
+              <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/30, t, o-te, a, l-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <Shield, className="w-1, 0, h-10, tex, t-gre, e, n-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Intelligent, Sel, f-Heali, n, g</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <span, className="te, x, t-gre, e, n-400, m, t-1">•</sp, a, n>";
+                    <sp, a, n>Automatic, rollback, on anomaly, detection, with &lt;5, second, response</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <span, className='te, x, t-gre, e, n-400, m, t-1'>•</sp, a, n>
@@ -178,6 +321,7 @@ const AutonomousDevOpsServic, e = () => {
                     </sp, a, n>
                   </li>
                 </ul>
+<<<<<<< HEAD
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
@@ -191,6 +335,22 @@ const AutonomousDevOpsServic, e = () => {
                     <sp, a, n>
                       Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g
                     </sp, a, n>
+=======
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <Rocket, className="w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Ze, r, o-Downtime, Deploymen, t</h3>
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <span, className="te, x, t-purp, l, e-400, m, t-1">•</sp, a, n>
+              <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/30, t, o-pi, n, k-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <Rocket, className="w-1, 0, h-10, tex, t-purp, l, e-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Ze, r, o-Downtime, Deploymen, t</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <span, className="te, x, t-purp, l, e-400, m, t-1">•</sp, a, n>";
+                    <sp, a, n>Bl, u, e-green, and, canary deployment, strategies, with AI, monitorin, g</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <span, className='te, x, t-purp, l, e-400, m, t-1'>•</sp, a, n>
@@ -209,6 +369,7 @@ const AutonomousDevOpsServic, e = () => {
                     </sp, a, n>
                   </li>
                 </ul>
+<<<<<<< HEAD
               </div>
 
               <div, className='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10'>
@@ -222,6 +383,22 @@ const AutonomousDevOpsServic, e = () => {
                     <sp, a, n>
                       Re, a, l-time, cost, optimization reducing, cloud, spend by, 4, 0-60%
                     </sp, a, n>
+=======
+              </d, i, v>
+              <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                <TrendingUp, className="w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4  />
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Continuous, Optimizatio, n</h3>
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
+                  <li, className="flex, item, s-start, ga, p-3">
+                    <span, className="te, x, t-oran, g, e-400, m, t-1">•</sp, a, n>
+              <div, className="bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/30, t, o-r, e, d-9, 0, 0/3, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                <TrendingUp, className="w-1, 0, h-10, tex, t-oran, g, e-400, m, b-4" />";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Continuous, Optimizatio, n</h3>";
+                <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">";
+                  <li, className="flex, item, s-start, ga, p-3">";
+                    <span, className="te, x, t-oran, g, e-400, m, t-1">•</sp, a, n>";
+                    <sp, a, n>Re, a, l-time, cost, optimization reducing, cloud, spend by, 4, 0-60%</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </li>
                   <li, className='flex, item, s-start, ga, p-3'>
                     <span, className='te, x, t-oran, g, e-400, m, t-1'>•</sp, a, n>
@@ -247,6 +424,7 @@ const AutonomousDevOpsServic, e = () => {
             </div>
           </div>
         </secti, o, n>
+<<<<<<< HEAD
 
         {/* Implementation, Timel, i, n, e */}
         <section, classNam, e = 'py-20, p, x-4'>
@@ -264,12 +442,34 @@ const AutonomousDevOpsServic, e = () => {
                     Day, s, 1-30: Foundati, o, n
                   </h3>
                   <ul, className='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
+=======
+        {/* Implementation, Timelin, e */}
+        <section, className="py-20, p, x-4">
+          <div, className="m, a, x-w-7xl, m, x-au, t, o">
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">90-Day, Implementation, Roadmap</h2>
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">"
+              <div, className="relati, v, e">
+                <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                  <div, className="w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">1</d, i, v>
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Day, s, 1-30: Foundati, o, n</h3>"
+                  <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
+        <section, className="py-20, p, x-4">";
+          <div, className="m, a, x-w-7xl, m, x-au, t, o">";
+            <h2, className="te, x, t-4xl, fon, t-bold, tex, t-center, m, b-16">90-Day, Implementation, Roadmap</h2>";
+            <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8">";
+              <div, className="relati, v, e">";
+                <div, className="bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                  <div, className="w-1, 2, h-12, b, g-bl, u, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">1</d, i, v>";
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Day, s, 1-30: Foundati, o, n</h3>";
+                  <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <li>• Current, state, assessment</li>
                     <li>• Architecture, desig, n</li>
                     <li>• Pipeline, automation, setup</li>
                     <li>• Core, infrastructure, deployment</li>
                     <li>• Team, training, initiation</li>
                   </ul>
+<<<<<<< HEAD
                 </div>
               </div>
               <div, className='relati, v, e'>
@@ -281,12 +481,28 @@ const AutonomousDevOpsServic, e = () => {
                     Days, 3, 1-60: Integrati, o, n
                   </h3>
                   <ul, className='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
+=======
+                </d, i, v>
+              </d, i, v>
+              <div, className="relati, v, e">
+                <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                  <div, className="w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">2</d, i, v>
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Days, 3, 1-6
+  0: Integrati, o, n</h3>"
+                  <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
+              <div, className="relati, v, e">";
+                <div, className="bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/20, t, o-pi, n, k-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                  <div, className="w-1, 2, h-12, b, g-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">2</d, i, v>";
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Days, 3, 1-60: Integrati, o, n</h3>";
+                  <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <li>• AI, model, deployment</li>
                     <li>• Se, l, f-healing, implementatio, n</li>
                     <li>• Monitoring, and, alerting</li>
                     <li>• Security, integratio, n</li>
                     <li>• Progressive, rollout, testing</li>
                   </ul>
+<<<<<<< HEAD
                 </div>
               </div>
               <div, className='relati, v, e'>
@@ -298,6 +514,21 @@ const AutonomousDevOpsServic, e = () => {
                     Days, 6, 1-90: Optimizati, o, n
                   </h3>
                   <ul, className='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
+=======
+                </d, i, v>
+              </d, i, v>
+              <div, className="relati, v, e">
+                <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">
+                  <div, className="w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">3</d, i, v>
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Days, 6, 1-9
+  0: Optimizati, o, n</h3>"
+                  <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
+              <div, className="relati, v, e">";
+                <div, className="bg-gradie, n, t-to-br, fro, m-gre, e, n-6, 0, 0/20, t, o-te, a, l-6, 0, 0/2, 0, p-8, rounde, d-2xl, backdro, p-bl, u, r-sm, border, border-whi, t, e/10">";
+                  <div, className="w-1, 2, h-12, b, g-gre, e, n-600, rounde, d-full, flex, items-center, justif, y-center, m, b-4, tex, t-xl, fon, t-bo, l, d">3</d, i, v>";
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4">Days, 6, 1-90: Optimizati, o, n</h3>";
+                  <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <li>• Full, production, deployment</li>
                     <li>• Performance, optimizatio, n</li>
                     <li>• Cost, reduction, implementation</li>
@@ -347,8 +578,31 @@ const AutonomousDevOpsServic, e = () => {
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
                         <sp, a, n>AI, model, training on, your, pipelines</sp, a, n>
                       </li>
+<<<<<<< HEAD
                       <li, className='flex, item, s-start, ga, p-2'>
                         <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, m, t-1' />
+=======
+                      <li, className="flex, item, s-start, ga, p-2">
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1  />
+                <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
+                  <d, i, v>
+                    <h4, className="fo, n, t-bold, tex, t-lg, m, b-3">Package, Include, s: </h4>";
+                    <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1" />";
+                        <sp, a, n>Complete, autonomous, DevOps platfo, r, m</sp, a, n>
+                      </li>
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1" />";
+                        <sp, a, n>90-day, implementatio, n & migrati, o, n</sp, a, n>
+                      </li>
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1" />";
+                        <sp, a, n>AI, model, training on, your, pipelines</sp, a, n>
+                      </li>
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <CheckCircle, className="w-5 h-5, tex, t-gre, e, n-400, m, t-1" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                         <sp, a, n>24/7, monitoring, and suppo, r, t</sp, a, n>
                       </li>
                     </ul>
@@ -368,8 +622,29 @@ const AutonomousDevOpsServic, e = () => {
                         <Shield, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
                         <sp, a, n>95% reduction, in, downtime inciden, t, s</sp, a, n>
                       </li>
+<<<<<<< HEAD
                       <li, className='flex, item, s-start, ga, p-2'>
                         <Zap, className='w-5 h-5, tex, t-bl, u, e-400, m, t-1' />
+=======
+                      <li, className="flex, item, s-start, ga, p-2">
+                        <Zap, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1  />
+                    <h4, className="fo, n, t-bold, tex, t-lg, m, b-3">Expected, RO, I: </h4>";
+                    <ul, className="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">";
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <TrendingUp, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1" />";
+                        <sp, a, n>$1, 0, M+ annual, cost, savings</sp, a, n>
+                      </li>
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <Clock, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1" />";
+                        <sp, a, n>80% reduction, in, deployment ti, m, e</sp, a, n>
+                      </li>
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <Shield, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1" />";
+                        <sp, a, n>95% reduction, in, downtime inciden, t, s</sp, a, n>
+                      </li>
+                      <li, className="flex, item, s-start, ga, p-2">";
+                        <Zap, className="w-5 h-5, tex, t-bl, u, e-400, m, t-1" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                         <sp, a, n>3, 0, 0-5, 0, 0% productivity, increas, e</sp, a, n>
                       </li>
                     </ul>
@@ -379,19 +654,35 @@ const AutonomousDevOpsServic, e = () => {
                   <Link, t, o='/conta, c, t'
                     className='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, fon, t-semibold, hove, r:shad, o, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'
                   >
+<<<<<<< HEAD
                     Schedule, Consultatio, n
                     <ArrowRight, className='w-5 h-5' />
+=======
+                    Schedule, Consultatio, n;
+                    <ArrowRight, className="w-5 h-5  />
+                    <ArrowRight, className="w-5 h-5" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </Li, n, k>
                 </div>
               </div>
             </div>
           </div>
         </secti, o, n>
+<<<<<<< HEAD
 
         {/* CTA, Sect, i, o, n */}
         <section, classNam, e = 'py-20, p, x-4'>
           <div, className='m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r'>
             <h2, className='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6'>
+=======
+        {/* CTA, Sectio, n */}
+        <section, className="py-20, p, x-4">
+          <div, className="m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r">
+            <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6">"
+        <section, className="py-20, p, x-4">";
+          <div, className="m, a, x-w-4xl, m, x-auto, tex, t-cent, e, r">";
+            <h2, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-6">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               Ready, to, Transform Your, DevOp, s?
             </h2>
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, m, b-8'>
@@ -402,8 +693,14 @@ const AutonomousDevOpsServic, e = () => {
               <Link, t, o='/conta, c, t'
                 className='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-lg, fon, t-semibold, hove, r:shad, o, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2'
               >
+<<<<<<< HEAD
                 Get, Started, Today
                 <ArrowRight, className='w-5 h-5' />
+=======
+                Get, Started, Today;
+                <ArrowRight, className="w-5 h-5  />
+                <ArrowRight, className="w-5 h-5" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </Li, n, k>
               <Link, t, o='/ca, s, e-studi, e, s'
                 className='px-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-lg, fon, t-semibold, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0'

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 impo, r, t { ArrowLe, f, t, Calend, a, r, Clo, c, k } fr, o, m 'luci, d, e-rea, c, t';
 import React from 'react';
 impo, r, t { usePara, m, s, Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
@@ -88,6 +89,139 @@ export default function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
             </div>
             <h1, classNam, e = 'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               {artic, l, e.t, i, t, l, e}
+=======
+import React from "react";";
+import, Header, from "../../componen, t, s/Head, e, r";";
+export, default, function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
+  con, s, t { sl, u, g } = usePara, m, s();
+  const, articl, e = Rea, c, t.useMe, m, o(() => {
+    if (!sl, u, g) return, undefine, d;
+    const, fromLates, t = latestArticl, e, s.fi, n, d((a) => a.sl, u, g === sl, u, g);
+    if (fromLate, s, t) {
+      retu, r, n {
+        sl, u, g: fromLate, s, t.sl, u, g
+        tit, l, e: fromLate, s, t.tit, l, e
+        descripti, o, n: fromLate, s, t.descripti, o, n || fromLate, s, t.excer, p, t
+        catego, r, y: fromLate, s, t.catego, r, y
+        published, A, t: fromLate, s, t.da, t, e
+        readTi, m, e: fromLate, s, t.readTi, m, e
+        auth, o, r: fromLate, s, t.auth, o, r;
+        s, l, u
+  g: fromLate, s, t.sl, u, g
+        tit, l, e: fromLate, s, t.tit, l, e
+        descripti, o, n: fromLate, s, t.descripti, o, n || fromLate, s, t.excer, p, t
+        catego, r, y: fromLate, s, t.catego, r, y
+        published, A, t: fromLate, s, t.da, t, e
+        readTi, m, e: fromLate, s, t.readTi, m, e
+        auth, o, r: fromLate, s, t.auth, o, r
+      };
+    }
+    const, fromBlogPost, s = blogPos, t, s.fi, n, d((p) => p.sl, u, g === sl, u, g);
+    if (fromBlogPos, t, s) {
+      retu, r, n {
+        sl, u, g: fromBlogPos, t, s.sl, u, g
+        tit, l, e: fromBlogPos, t, s.tit, l, e
+        descripti, o, n: fromBlogPos, t, s.descripti, o, n
+        catego, r, y: fromBlogPos, t, s.catego, r, y
+        published, A, t: fromBlogPos, t, s.da, t, e
+        readTi, m, e: fromBlogPos, t, s.readTi, m, e
+        auth, o, r: fromBlogPos, t, s.auth, o, r;
+        s, l, u
+  g: fromBlogPos, t, s.sl, u, g
+        tit, l, e: fromBlogPos, t, s.tit, l, e
+        descripti, o, n: fromBlogPos, t, s.descripti, o, n
+        catego, r, y: fromBlogPos, t, s.catego, r, y
+        published, A, t: fromBlogPos, t, s.da, t, e
+        readTi, m, e: fromBlogPos, t, s.readTi, m, e
+        auth, o, r: fromBlogPos, t, s.auth, o, r
+      };
+    }
+    const, fromPost, s = staticPos, t, s.fi, n, d((p) => p.sl, u, g === sl, u, g);
+    if (fromPos, t, s) {
+      retu, r, n {
+        sl, u, g: fromPos, t, s.sl, u, g
+        tit, l, e: fromPos, t, s.tit, l, e
+        descripti, o, n: fromPos, t, s.descripti, o, n
+        catego, r, y: fromPos, t, s.catego, r, y
+        published, A, t: fromPos, t, s.published, A, t
+        readTi, m, e: fromPos, t, s.readTi, m, e
+        auth, o, r: "Zion, Tech, Group Te, a, m"
+        s, l, u
+  g: fromPos, t, s.sl, u, g
+        tit, l, e: fromPos, t, s.tit, l, e
+        descripti, o, n: fromPos, t, s.descripti, o, n
+        catego, r, y: fromPos, t, s.catego, r, y
+        published, A, t: fromPos, t, s.published, A, t
+        readTi, m, e: fromPos, t, s.readTi, m, e
+        auth, o, r: "Zion, Tech, Group Te, a, m",";
+      };
+    }
+    return, undefine, d;
+  }, [sl, u, g]);
+  if (!artic, l, e) {
+return (
+<>
+<Head, e, r   />
+<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whit, e, p-8">
+<div, className="m, a, x-w-3xl, m, x-auto, p, t-20">
+<h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Article, not, found</h1>
+<p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">The, post, you are, looking, for does, not, exist or, has, been mov, e, d.</p>
+<Link, t, o="/bl, o, g" classNa, m, e="te, x, t-zi, o, n-cyan, hove, r: underline, inlin, e-flex, item, s-center, ga, p-2">
+<ArrowLeft, className="w-4 h-4"  />
+<div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whit, e, p-8">";
+<div, className="m, a, x-w-3xl, m, x-auto, p, t-20">";
+<h1, className="te, x, t-3xl, fon, t-bold, m, b-4">Article, not, found</h1>";
+<p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">The, post, you are, looking, for does, not, exist or, has, been mov, e, d.</p>";
+<Link, t, o="/bl, o, g" classNa, m, e="te, x, t-zi, o, n-cyan, hov, e
+  r: underline, inlin, e-flex, item, s-center, ga, p-2">,";
+<ArrowLeft, className="w-4 h-4" />";
+Back, to, Blog;
+</Li, n, k>
+</d, i, v>
+</d, i, v>
+< />
+);
+}
+  return (
+    <>
+      <Helmet>
+        <title>{artic, l, e.tit, l, e} | Zion, Tech, Group</title>
+        <meta name="descripti, o, n" content={artic, l, e.descripti, o, n}  />
+        <meta, propert, y="og:tit, l, e" content={artic, l, e.tit, l, e}  />
+        <meta, propert, y="og:descripti, o, n" content={artic, l, e.descripti, o, n}  />
+        <meta, propert, y="og:ty, p, e" content="artic, l, e" />
+        <meta name="descripti, o, n" content={artic, l, e.descripti, o, n} />";
+        <meta, propert, y="og:tit, l, e" content={artic, l, e.tit, l, e} />";
+        <meta, propert, y="og:descripti, o, n" content={artic, l, e.descripti, o, n} />";
+        <meta, propert, y="og: ty, p, e" content="artic, l, e" />";
+      </Helmet>
+      <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k">";
+        <Head, e, r   />
+        <div, className="m, a, x-w-4xl, m, x-auto, p, x-6, p, y-24">
+          <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-zi, o, n-cyan, hov, e
+  r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, inlin, e-flex, item, s-center, ga, p-2, transitio, n-colo, r, s">"
+            <ArrowLeft, className="w-4 h-4  />
+            Back, to, Blog;
+          </Li, n, k>
+          <article, className="mt-8, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, d: p-12, border, border-whi, t, e/20">"
+            <div, className="mb-6">
+              <span, className="inli, n, e-block, p, x-3, p, y-1, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, rounde, d-full, border, border-zi, o, n-cy, a, n/30">
+        <div, className="m, a, x-w-4xl, m, x-auto, p, x-6, p, y-24">";
+          <Link, t, o="/bl, o, g" classNa, m, e="te, x, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, inlin, e-flex, item, s-center, ga, p-2, transitio, n-colo, r, s">";
+            <ArrowLeft, className="w-4 h-4" />";
+            Back, to, Blog;
+          </Li, n, k>
+          <article, className="mt-8, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8 m
+  d: p-12, border, border-whi, t, e/20">";
+            <div, className="mb-6">";
+              <span, className="inli, n, e-block, p, x-3, p, y-1, b, g-zi, o, n-cy, a, n/20, tex, t-zi, o, n-cyan, tex, t-sm, fon, t-medium, rounde, d-full, border, border-zi, o, n-cy, a, n/30">";
+                {artic, l, e.catego, r, y}
+              </sp, a, n>
+            </d, i, v>
+            <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">"
+            <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">";
+              {artic, l, e.tit, l, e}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
             </h1>
             <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4, tex, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-8, p, b-8, borde, r-b, borde, r-whi, t, e/10'>
               {  artic, l, e.author  && (
@@ -101,19 +235,47 @@ export default function PostBySl, u, g(): Rea, c, t.J, S, X.Eleme, n, t {
                   d, a, y: 'nume, r, i, c',
                 })}
               </sp, a, n>
+<<<<<<< HEAD
               {  artic, l, e.readTime  && (
                 <span, classNam, e = 'flex, item, s-center, ga, p-1'>
                   <Clock, className='w-4 h-4' / > {artic, l, e.readTime  }
                 </span>
+=======
+              {artic, l, e.readTi, m, e && (
+                <span, className="flex, item, s-center, ga, p-1">
+                  <Clock, className="w-4 h-4  />
+              <span, className="flex, item, s-center, ga, p-1">";
+                <Calendar, className="w-4 h-4" />";
+                {new, Dat, e(artic, l, e.published, A, t).toLocaleDateStri, n, g('en-US', { ';
+                  ye, a, r: 'numer, i, c', ';
+                  mon, t, h: 'lo, n, g', ';
+                  d, a, y: 'numer, i, c' 
+                })}
+              </sp, a, n>
+              {artic, l, e.readTi, m, e && (
+                <span, className="flex, item, s-center, ga, p-1">";
+                  <Clock, className="w-4 h-4" />";
+                  {artic, l, e.readTi, m, e}
+                </sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               )}
             </div>
             <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e'>
               <p, className='te, x, t-xl, leadin, g-relaxed, tex, t-whi, t, e/90, m, b-6'>
                 {artic, l, e.description}
               </p>
+<<<<<<< HEAD
               <div, className='bg-zi, o, n-bl, u, e/20, border, border-zi, o, n-bl, u, e/30, rounde, d-x, l, p-6, m, y-8'>
                 <p, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-0'>
                   💡 <stro, n, g>Coming, Soo, n: </stro, n, g> Full, article, content will, be, available short, l, y. This, preview, shows the, key, insights and, value, proposition of, this, groundbreaking top, i, c.
+=======
+              <div, className="bg-zi, o, n-bl, u, e/20, border, border-zi, o, n-bl, u, e/30, rounde, d-x, l, p-6, m, y-8">
+                <p, className="te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-0">
+              <div, className="bg-zi, o, n-bl, u, e/20, border, border-zi, o, n-bl, u, e/30, rounde, d-x, l, p-6, m, y-8">";
+                <p, className="te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-0">";
+                  💡 <stro, n, g>Coming, Soo, n: </stro, n, g> Full, article, content will, be, available short, l, y. 
+                  This, preview, shows the, key, insights and, value, proposition of, this, groundbreaking top, i, c.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </p>
               </div>
             </div>

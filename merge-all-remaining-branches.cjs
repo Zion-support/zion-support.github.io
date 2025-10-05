@@ -38,9 +38,13 @@ function resolveConflicts() {
             try {
                 let content = fs.readFileSync(file, 'utf8');
                 
+<<<<<<< HEAD
                 if (content.includes('')) {
                     // Simple conflict resolution - choose the version with proper syntax
                     const sections = content.split(/||                    
+=======
+                if (content.includes('|                    
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     if (sections.length === 4) {
                         const headSection = sections[1].trim();
                         const remoteSection = sections[2].trim();

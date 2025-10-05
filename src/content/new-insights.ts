@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const newInsights = [
   { 
     id: 'ai-platfo, r, m-r, o, i-scorec, a, r, d, s',
@@ -9,6 +10,30 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Platf, o, r, m', 'R, O, I', 'Scorecar, d, s'],
     conte, n, t: `
+=======
+export, const, newInsights = [
+  {
+    id: "ai-platfo, r, m-r, o, i-scorecar, d, s"
+    tit, l, e: "AI, Platform, RO
+  I: Simple, Scorecards, That Drive, Adoptio, n"
+    summa, r, y: "Connect, platform, capabilities to, adoptio, n, golden, path, s, and, SLO, outcomes. Make, quarterly, cut/scale, decisions, with eviden, c, e."
+    catego, r, y: "AI, Strateg, y"
+    da, t, e: "20, 2, 5-10-03"
+    readMinut, e, s: 7
+    featur, e, d: tr, u, e
+    ta, g, s: ["Platfo, r, m", "R, O, I", "Scorecar, d, s"]
+    conte, n, t: `,`
+    id: "ai-platfo, r, m-r, o, i-scorecar, d, s",";
+    tit, l, e: "AI, Platform, RO
+  I: Simple, Scorecards, That Drive, Adoptio, n",";
+    summa, r, y: "Connect, platform, capabilities to, adoptio, n, golden, path, s, and, SLO, outcomes. Make, quarterly, cut/scale, decisions, with eviden, c, e.",";
+    catego, r, y: "AI, Strateg, y",";
+    da, t, e: "20, 2, 5-10-03",";
+    readMinut, e, s: 7
+    featur, e, d: tr, u, e
+    ta, g, s: ["Platfo, r, m", "R, O, I", "Scorecar, d, s"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>Why, Scorecards, Win</h2>
       <p>Adopt, i, o, n, TTFX, on, golden pat, h, s, and, reliability, SLOs are, the, leading signals, that, predict platform, RO, I.</p>
       <h3>Operating, Rhyth, m</h3>
@@ -16,6 +41,7 @@ export const newInsights = [
         <li>Monthly, reviews, with owne, r, s</li>
         <li>R, e, d/amber, flags, with remediati, o, n</li>
         <li>C, u, t/scale, based, on evidence, delta, s</li>
+<<<<<<< HEAD
       </ul  >  `,
    },
   { 
@@ -29,12 +55,40 @@ export const newInsights = [
     tags: ['Guardra, i, l, s', 'Scorecar, d, s', 'Eva, l, s'],
     conte, n, t: `
       <h2>Ship, Fast, e, r, Saf, e, r</h2>
+=======
+      </ul>
+    ``
+  }
+  {
+    id: "guardrai, l, s-scorecar, d, s-eva, l, s-20, 2, 5"
+    tit, l, e: "Guardrails, Engineers, Adop
+  t: Scorecar, d, s, PR, Gate, s, Online, Canarie, s"
+    summa, r, y: "Lightweig, h, t, outco, m, e‑linked, guardrails, that speed, delivery, while managing, ris, k."
+    catego, r, y: "AI, Strateg, y"
+    da, t, e: "20, 2, 5-09-29"
+    readMinut, e, s: 7
+    featur, e, d: tr, u, e
+    ta, g, s: ["Guardrai, l, s", "Scorecar, d, s", "Eva, l, s"]
+    conte, n, t: `,`
+    id: "guardrai, l, s-scorecar, d, s-eva, l, s-20, 2, 5",";
+    tit, l, e: "Guardrails, Engineers, Adop
+  t: Scorecar, d, s, PR, Gate, s, Online, Canarie, s",";
+    summa, r, y: "Lightweig, h, t, outco, m, e‑linked, guardrails, that speed, delivery, while managing, ris, k.",";
+    catego, r, y: "AI, Strateg, y",";
+    da, t, e: "20, 2, 5-09-29",";
+    readMinut, e, s: 7
+    featur, e, d: tr, u, e
+    ta, g, s: ["Guardrai, l, s", "Scorecar, d, s", "Eva, l, s"],";
+    conte, n, t: `,`;`
+      <h2>Ship, Faste, r, Saf, e, r</h2>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <p>Connect, scorecards, to product, KPI, s. Use, PR, gates for, risky, changes and, run, online canaries, tied, to outcom, e, s.</p>
       <h3>Playbo, o, k</h3>
       <ul>
         <li>Adopti, o, n‑friendly, scorecard, s</li>
         <li>Sma, l, l, meaningful, PR, checks</li>
         <li>Budgeted, online, evals</li>
+<<<<<<< HEAD
       </ul  >  `,
    },
   { 
@@ -73,6 +127,82 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Secur, i, t, y', 'ML', 'Supply, Chai, n'],
     conte, n, t: `
+=======
+      </ul>
+    ``
+  }
+  {
+    id: "ed, g, e-fla, g, s-bluepri, n, t-20, 2, 5"
+    tit, l, e: "Edge, Flags, Blueprin
+  t: Ze, r, o‑Regret, Rollout, s"
+    summa, r, y: "<100ms, global, flags with, segmented, canaries, budge, t, s, and, instant, rollback."
+    catego, r, y: "Architectu, r, e"
+    da, t, e: "20, 2, 5-09-29"
+    readMinut, e, s: 6
+    featur, e, d: fal, s, e
+    ta, g, s: ["Ed, g, e", "Fla, g, s", "Delive, r, y"]
+    conte, n, t: `,`
+    id: "ed, g, e-fla, g, s-bluepri, n, t-20, 2, 5",";
+    tit, l, e: "Edge, Flags, Blueprin
+  t: Ze, r, o‑Regret, Rollout, s",";
+    summa, r, y: "<100ms, global, flags with, segmented, canaries, budge, t, s, and, instant, rollback.",";
+    catego, r, y: "Architectu, r, e",";
+    da, t, e: "20, 2, 5-09-29",";
+    readMinut, e, s: 6
+    featur, e, d: fal, s, e
+    ta, g, s: ["Ed, g, e", "Fla, g, s", "Delive, r, y"],";
+    conte, n, t: `,`;`
+      <h2>Progressive, Deliver, y</h2>
+      <p>Segment, by, geo and, accoun, t, cap, risk, with budge, t, s, and, stream, telemetry for, evidenc, e‑based, release, s.</p>
+    ``
+  }
+  {
+    id: "r, a, g-freshne, s, s-t, t, l-20, 2, 5"
+    tit, l, e: "RAG, Freshne, s
+  s: TTL, Budgets, and Versioned, Corpor, a"
+    summa, r, y: "Prevent, stale, answers with, freshness, windows and, warm, caches."
+    catego, r, y: "Gen, A, I"
+    da, t, e: "20, 2, 5-09-29"
+    readMinut, e, s: 8
+    featur, e, d: tr, u, e
+    ta, g, s: ["R, A, G", "Freshne, s, s", "Sear, c, h"]
+    conte, n, t: `,`
+    id: "r, a, g-freshne, s, s-t, t, l-20, 2, 5",";
+    tit, l, e: "RAG, Freshne, s
+  s: TTL, Budgets, and Versioned, Corpor, a",";
+    summa, r, y: "Prevent, stale, answers with, freshness, windows and, warm, caches.",";
+    catego, r, y: "Gen, A, I",";
+    da, t, e: "20, 2, 5-09-29",";
+    readMinut, e, s: 8
+    featur, e, d: tr, u, e
+    ta, g, s: ["R, A, G", "Freshne, s, s", "Sear, c, h"],";
+    conte, n, t: `,`;`
+      <h2>Operate, with, Freshness</h2>
+      <p>Use, TTL, windows, async, warmup, s, and, versioned, corpora to, keep, retrieval accurate, at, scale.</p>
+    ``
+  }
+  {
+    id: "secu, r, e-ml-supp, l, y-cha, i, n"
+    tit, l, e: "Secure, ML, Supply Ch, a, i
+  n: Linea, g, e, SBO, M, s, and, Egress, Controls"
+    summa, r, y: "Lock, down, datasets, mode, l, s, and, inference, routes with, provenanc, e, signed, artifact, s, and, policy, checks in, C, I/CD."
+    catego, r, y: "Securi, t, y"
+    da, t, e: "20, 2, 5-10-03"
+    readMinut, e, s: 6
+    featur, e, d: tr, u, e
+    ta, g, s: ["Securi, t, y", "ML", "Supply, Chai, n"]
+    conte, n, t: `,`
+    id: "secu, r, e-ml-supp, l, y-cha, i, n",";
+    tit, l, e: "Secure, ML, Supply Ch, a, i
+  n: Linea, g, e, SBO, M, s, and, Egress, Controls",";
+    summa, r, y: "Lock, down, datasets, mode, l, s, and, inference, routes with, provenanc, e, signed, artifact, s, and, policy, checks in, C, I/CD.",";
+    catego, r, y: "Securi, t, y",";
+    da, t, e: "20, 2, 5-10-03",";
+    readMinut, e, s: 6
+    featur, e, d: tr, u, e
+    ta, g, s: ["Securi, t, y", "ML", "Supply, Chai, n"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>E, n, d-to-End, Control, s</h2>
       <p>Track, lineage, from datasets, to, deployed mode, l, s. Enforce, policy, tests and, signed, artifacts across, the, pipeline.</, p  >  `,
    },
@@ -87,8 +217,23 @@ export const newInsights = [
     tags: ['A, I', 'Automati, o, n', 'Enterpri, s, e', '20, 2, 5'],
     conte, n, t: `
       <h2>Revolutionizing, Enterprise, Operations</h2>
+<<<<<<< HEAD
       <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 20, 2, 5, we're, seeing, unprecedented adoption, rates, and ROI, from AI automation, initiative, s.</p>
       
+=======
+      <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 202, 5, we're, seeing, unprecedented adoption, rates, and ROI, from, AI automation, initiative, s.</p>;
+    id: "ai-automati, o, n-20, 2, 5",";
+    tit, l, e: "The, Future, of AI, Automation, in Enterpri, s, e",";
+    summa, r, y: "Discover, how, AI automation, is, transforming enterprise, operations, in 20, 2, 5, with, rea, l-world, case, studies and, implementation, strategies.",";
+    catego, r, y: "AI & Automati, o, n",";
+    da, t, e: "20, 2, 5-01-20",";
+    readMinut, e, s: 8
+    featur, e, d: tr, u, e
+    ta, g, s: ["AI", "Automati, o, n", "Enterpri, s, e", "20, 2, 5"],";
+    conte, n, t: `,`;`
+      <h2>Revolutionizing, Enterprise, Operations</h2>
+      <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 202, 5, we're, seeing, unprecedented adoption, rates, and ROI, from, AI automation, initiative, s.</p>';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h3>Key, Trends, Driving Adopti, o, n</h3>
       <ul>
         <li><stro, n, g>Process, Mining, Integration: </stro, n, g> AI, now, automatically identifies, optimization, opportunities</li>
@@ -106,6 +251,7 @@ export const newInsights = [
         <li>Cost, reductio, n: 35% decrease, in, operational cos, t, s</li>
         <li>Error, reductio, n: 95% improvement, in, accuracy</li>
         <li>Employee, satisfactio, n: 40% increase, in, job satisfaction, score, s</li>
+<<<<<<< HEAD
       </u, l  >  `,
    },
   { 
@@ -118,6 +264,32 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Cybersecur, i, t, y', 'AI', 'Threat, Detectio, n', 'Securi, t, y'],
     conte, n, t: `
+=======
+      </ul>
+    ``
+  }
+  {
+    id: "cybersecuri, t, y-ai-20, 2, 5"
+    tit, l, e: "AI-Powered, Cybersecuri, t
+  y: The, Next, Generation of, Protectio, n"
+    summa, r, y: "Explore, how, AI is, revolutionizing, cybersecurity with, advanced, threat detecti, o, n, automated, respons, e, and, predictive, security analyti, c, s."
+    catego, r, y: "Cybersecuri, t, y"
+    da, t, e: "20, 2, 5-01-18"
+    readMinut, e, s: 10
+    featur, e, d: tr, u, e
+    ta, g, s: ["Cybersecuri, t, y", "AI", "Threat, Detectio, n", "Securi, t, y"]
+    conte, n, t: `,`
+    id: "cybersecuri, t, y-ai-20, 2, 5",";
+    tit, l, e: "AI-Powered, Cybersecuri, t
+  y: The, Next, Generation of, Protectio, n",";
+    summa, r, y: "Explore, how, AI is, revolutionizing, cybersecurity with, advanced, threat detecti, o, n, automated, respons, e, and, predictive, security analyti, c, s.",";
+    catego, r, y: "Cybersecuri, t, y",";
+    da, t, e: "20, 2, 5-01-18",";
+    readMinut, e, s: 10
+    featur, e, d: tr, u, e
+    ta, g, s: ["Cybersecuri, t, y", "AI", "Threat, Detectio, n", "Securi, t, y"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>The, Evolution, of Cyber, Threat, s</h2>
       <p>As, cyber, threats become, more, sophisticate, d, traditional, security, measures are, no, longer sufficie, n, t. AI-powered, cybersecurity, represents the, next, frontier in, digital, protection.</p>
       
@@ -133,6 +305,7 @@ export const newInsights = [
       <p>AI, enables, true ze, r, o-trust, security, model, s, continuously, verifying, every access, request, and adapting, security, policies in, rea, l-ti, m, e.</p>
       
       <h3>Implementation, Roadma, p</h3>
+<<<<<<< HEAD
       <p>Organizations, should, start with, A, I-enhanced, endpoint, detection and, gradually, expand to, networ, k-level, and, cloud security, automatio, n.</p  >  `,
    },
   { 
@@ -145,6 +318,30 @@ export const newInsights = [
     featured: fa, l, s, e,
     tags: ['Cl, o, u, d', 'Microservic, e, s', 'DevO, p, s', 'Scalabili, t, y'],
     conte, n, t: `
+=======
+      <p>Organizations, should, start with, A, I-enhanced, endpoint, detection and, gradually, expand to, networ, k-level, and, cloud security, automatio, n.</p>
+    ``
+  }
+  {
+    id: "clo, u, d-nati, v, e-20, 2, 5"
+    tit, l, e: "Building, Resilient, Cloud-Native, Application, s"
+    summa, r, y: "Learn, the, latest strategies, for, developing and, deploying, cloud-native, applications, that scale, automatically, and handle, failures, gracefully."
+    catego, r, y: "Cloud, Computin, g"
+    da, t, e: "20, 2, 5-01-15"
+    readMinut, e, s: 12
+    featur, e, d: fal, s, e
+    ta, g, s: ["Clo, u, d", "Microservic, e, s", "DevO, p, s", "Scalabili, t, y"]
+    conte, n, t: `,`
+    id: "clo, u, d-nati, v, e-20, 2, 5",";
+    tit, l, e: "Building, Resilient, Cloud-Native, Application, s",";
+    summa, r, y: "Learn, the, latest strategies, for, developing and, deploying, cloud-native, applications, that scale, automatically, and handle, failures, gracefully.",";
+    catego, r, y: "Cloud, Computin, g",";
+    da, t, e: "20, 2, 5-01-15",";
+    readMinut, e, s: 12
+    featur, e, d: fal, s, e
+    ta, g, s: ["Clo, u, d", "Microservic, e, s", "DevO, p, s", "Scalabili, t, y"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>The, Clou, d-Native, Advantag, e</h2>
       <p>Clo, u, d-native, applications, are designed, from the ground, up, to leverage, cloud, infrastructur, e, providing, unprecedented, scalability and, resilienc, e.</p>
       
@@ -157,6 +354,7 @@ export const newInsights = [
       </ul>
       
       <h3>Best, Practices, for 20, 2, 5</h3>
+<<<<<<< HEAD
       <p>Focus, on, observability, implement, chaos, engineering, and, adopt, GitOps workflows, for, reliable deploymen, t, s.</p  >  `,
    },
   { 
@@ -169,6 +367,32 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Data, Analyti, c, s', 'AI', 'Machine, Learnin, g', 'Business, Intelligenc, e'],
     conte, n, t: `
+=======
+      <p>Focus, on, observability, implement, chaos, engineering, and, adopt, GitOps workflows, for, reliable deploymen, t, s.</p>
+    ``
+  }
+  {
+    id: "da, t, a-analyti, c, s-ai"
+    tit, l, e: "AI-Driven, Data, Analytic
+  s: From, Insights, to Acti, o, n"
+    summa, r, y: "Transform, your, data into, actionable, business intelligence, with, advanced AI, analytic, s, machine, learning, models, and, rea, l-time, dashboard, s."
+    catego, r, y: "Data, Analytic, s"
+    da, t, e: "20, 2, 5-01-12"
+    readMinut, e, s: 9
+    featur, e, d: tr, u, e
+    ta, g, s: ["Data, Analytic, s", "AI", "Machine, Learnin, g", "Business, Intelligenc, e"]
+    conte, n, t: `,`
+    id: "da, t, a-analyti, c, s-ai",";
+    tit, l, e: "AI-Driven, Data, Analytic
+  s: From, Insights, to Acti, o, n",";
+    summa, r, y: "Transform, your, data into, actionable, business intelligence, with, advanced AI, analytic, s, machine, learning, models, and, rea, l-time, dashboard, s.",";
+    catego, r, y: "Data, Analytic, s",";
+    da, t, e: "20, 2, 5-01-12",";
+    readMinut, e, s: 9
+    featur, e, d: tr, u, e
+    ta, g, s: ["Data, Analytic, s", "AI", "Machine, Learnin, g", "Business, Intelligenc, e"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>The, Dat, a-Driven, Transformatio, n</h2>
       <p>Modern, businesses, generate vast, amounts, of d, a, t, a, but, the, real value, lies, in extracting, meaningful, insights and, taking, action based, on, those insigh, t, s.</p>
       
@@ -181,6 +405,7 @@ export const newInsights = [
       </ul>
       
       <h3>Implementation, Strateg, y</h3>
+<<<<<<< HEAD
       <p>Start, with, data quality, initiativ, e, s, then, implement, self-service, analytics, platforms that, empower, business users, to, explore data, independentl, y.</p  >  `,
    },
   { 
@@ -193,6 +418,32 @@ export const newInsights = [
     featured: fa, l, s, e,
     tags: ['Dev, O, p, s', 'CI/CD', 'Automati, o, n', 'Infrastructu, r, e'],
     conte, n, t: `
+=======
+      <p>Start, with, data quality, initiative, s, then, implement, self-service, analytics, platforms that, empower, business users, to, explore data, independentl, y.</p>
+    ``
+  }
+  {
+    id: "devo, p, s-automati, o, n-20, 2, 5"
+    tit, l, e: "DevOps, Automati, o
+  n: Accelerating, Software, Delivery"
+    summa, r, y: "Master, the, art of, DevOps, automation with, C, I/CD, pipeline, s, infrastructure, as, code, and, automated, testing strategies, that, reduce deployment, times, by 80%."
+    catego, r, y: "DevO, p, s"
+    da, t, e: "20, 2, 5-01-10"
+    readMinut, e, s: 11
+    featur, e, d: fal, s, e
+    ta, g, s: ["DevO, p, s", "CI/CD", "Automati, o, n", "Infrastructu, r, e"]
+    conte, n, t: `,`
+    id: "devo, p, s-automati, o, n-20, 2, 5",";
+    tit, l, e: "DevOps, Automati, o
+  n: Accelerating, Software, Delivery",";
+    summa, r, y: "Master, the, art of, DevOps, automation with, C, I/CD, pipeline, s, infrastructure, as, code, and, automated, testing strategies, that, reduce deployment, times, by 80%.",";
+    catego, r, y: "DevO, p, s",";
+    da, t, e: "20, 2, 5-01-10",";
+    readMinut, e, s: 11
+    featur, e, d: fal, s, e
+    ta, g, s: ["DevO, p, s", "CI/CD", "Automati, o, n", "Infrastructu, r, e"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>Accelerating, Software, Delivery</h2>
       <p>DevOps, automation, is essential, for, modern software, developme, n, t, enabling, teams, to deliver, features, faster while, maintaining, quality and, reliabilit, y.</p>
       
@@ -218,8 +469,24 @@ export const newInsights = [
     tags: ['Mic, r, o-S, a, a, S', 'Entrepreneursh, i, p', 'Softwa, r, e', 'Busine, s, s'],
     conte, n, t: `
       <h2>The, Micr, o-SaaS, Revolutio, n</h2>
+<<<<<<< HEAD
       <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>
       
+=======
+      <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>;
+    id: "mic, r, o-sa, a, s-tren, d, s",";
+    tit, l, e: "The, Rise, of Mic, r, o-S, a, a
+  S: Building, Profitable, Niche Solutio, n, s",";
+    summa, r, y: "Discover, how, micro-SaaS, businesses, are disrupting, traditional, software markets, with, focused, profitable, solutions, for specific, niche, s.",";
+    catego, r, y: "Mic, r, o-Sa, a, S",";
+    da, t, e: "20, 2, 5-01-08",";
+    readMinut, e, s: 7
+    featur, e, d: tr, u, e
+    ta, g, s: ["Mic, r, o-Sa, a, S", "Entrepreneursh, i, p", "Softwa, r, e", "Busine, s, s"],";
+    conte, n, t: `,`;`
+      <h2>The, Micr, o-SaaS, Revolutio, n</h2>
+      <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h3>Characteristics, of, Successful Mic, r, o-Sa, a, S</h3>
       <ul>
         <li><stro, n, g>Niche, Focu, s:</stro, n, g> Solving, specific, problems for, specific, audiences</li>
@@ -229,6 +496,7 @@ export const newInsights = [
       </ul>
       
       <h3>Building, Your, Micro-Sa, a, S</h3>
+<<<<<<< HEAD
       <p>Start, with, customer discov, e, r, y, validate, your, problem-solution, fi, t, and, iterate, rapidly based, on, user feedba, c, k.</p  >  `,
    },
   { 
@@ -241,6 +509,34 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['RA, G', 'Gen, A, I', 'Sear, c, h', 'Securi, t, y'],
     conte, n, t: `
+=======
+      <p>Start, with, customer discove, r, y, validate, your, problem-solution, fi, t, and, iterate, rapidly based, on, user feedba, c, k.</p>
+    ``
+  }
+  {
+    id: "enterpri, s, e-r, a, g-bluepri, n, t-20, 2, 5"
+    tit, l, e: "Enterprise, RAG, Blueprint v
+  2: Freshne, s, s, Securi, t, y, and, Eval, s"
+    summa, r, y: "Producti, o, n-ready, RAG, pattern
+  s: hybrid, searc, h, au, t, h-aware, retrieva, l, freshness, control, s, and, layered, evaluation."
+    catego, r, y: "Gen, A, I"
+    da, t, e: "20, 2, 5-10-04"
+    readMinut, e, s: 9
+    featur, e, d: tr, u, e
+    ta, g, s: ["R, A, G", "Gen, A, I", "Sear, c, h", "Securi, t, y"]
+    conte, n, t: `,`
+    id: "enterpri, s, e-r, a, g-bluepri, n, t-20, 2, 5",";
+    tit, l, e: "Enterprise, RAG, Blueprint v
+  2: Freshne, s, s, Securi, t, y, and, Eval, s",";
+    summa, r, y: "Producti, o, n-ready, RAG, pattern
+  s: hybrid, searc, h, au, t, h-aware, retrieva, l, freshness, control, s, and, layered, evaluation.",";
+    catego, r, y: "Gen, A, I",";
+    da, t, e: "20, 2, 5-10-04",";
+    readMinut, e, s: 9
+    featur, e, d: tr, u, e
+    ta, g, s: ["R, A, G", "Gen, A, I", "Sear, c, h", "Securi, t, y"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>Why, RAG, v2</h2>
       <p>Move, beyond, naive vector, search, with hybrid, retriev, a, l, freshness, window, s, and, authorizatio, n-aware, filter, s.</p>
       <h3>Operate, with, Confidence</h3>
@@ -248,6 +544,7 @@ export const newInsights = [
         <li>Offline, evals, aligned to, business, KPIs</li>
         <li>Online, canaries, with rollback, trigger, s</li>
         <li>Prompt, firewalls, and r, e, d-teami, n, g</li>
+<<<<<<< HEAD
       </ul  >  `,
    },
   { 
@@ -260,6 +557,30 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Fin, O, p, s', 'Clo, u, d', 'Governan, c, e'],
     conte, n, t: `
+=======
+      </ul>
+    ``
+  }
+  {
+    id: "fino, p, s-scorecar, d, s-20, 2, 5"
+    tit, l, e: "Cloud, FinOps, Scorecards Engineers, Actually, Use"
+    summa, r, y: "Guardrai, l, s, PR, check, s, and, budgets, that cut, waste, 25–40% while, preserving, delivery spe, e, d."
+    catego, r, y: "Clo, u, d"
+    da, t, e: "20, 2, 5-10-04"
+    readMinut, e, s: 6
+    featur, e, d: tr, u, e
+    ta, g, s: ["FinO, p, s", "Clo, u, d", "Governan, c, e"]
+    conte, n, t: `,`
+    id: "fino, p, s-scorecar, d, s-20, 2, 5",";
+    tit, l, e: "Cloud, FinOps, Scorecards Engineers, Actually, Use",";
+    summa, r, y: "Guardrai, l, s, PR, check, s, and, budgets, that cut, waste, 25–40% while, preserving, delivery spe, e, d.",";
+    catego, r, y: "Clo, u, d",";
+    da, t, e: "20, 2, 5-10-04",";
+    readMinut, e, s: 6
+    featur, e, d: tr, u, e
+    ta, g, s: ["FinO, p, s", "Clo, u, d", "Governan, c, e"],";
+    conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       <h2>Scorecards, That, Matter</h2>
       <p>Connect, spend, to product, goa, l, s, set, guardrails, engineers respe, c, t, and, automate, waste preventi, o, n.</p>
       <h3>Playbo, o, k</h3>
@@ -270,6 +591,7 @@ export const newInsights = [
       </ul  >  `,
    },
 ];
+<<<<<<< HEAD
 
 // Add e d: Octob e r  7 2025 newInsight s.unshi f t({ 
   id: 'ai-governan, c, e-scorecar, d, s-2, 0, 2, 6',
@@ -281,6 +603,30 @@ export const newInsights = [
   featured: t, r, u, e,
   tags: ['Governa, n, c, e', 'Poli, c, y', 'Scorecar, d, s'],
   conte, n, t: `
+=======
+// Add, e, d: Octobe, r, 7, 20, 2, 5
+newInsigh, t, s.unshi, f, t({
+  id: "ai-governan, c, e-scorecar, d, s-20, 2, 6"
+  tit, l, e: "AI, Governance, 202
+  6: Scorecards, Engineers, Actually U, s, e"
+  summa, r, y: "Outco, m, e‑linked, guardrails, with PR, checks, and online, canaries, that accelerate, deliver, y."
+  catego, r, y: "AI, Strateg, y"
+  da, t, e: "20, 2, 5-10-07"
+  readMinut, e, s: 7
+  featur, e, d: tr, u, e
+  ta, g, s: ["Governan, c, e", "Poli, c, y", "Scorecar, d, s"]
+  conte, n, t: `,`
+  id: "ai-governan, c, e-scorecar, d, s-20, 2, 6",";
+  tit, l, e: "AI, Governance, 202
+  6: Scorecards, Engineers, Actually U, s, e",";
+  summa, r, y: "Outco, m, e‑linked, guardrails, with PR, checks, and online, canaries, that accelerate, deliver, y.",";
+  catego, r, y: "AI, Strateg, y",";
+  da, t, e: "20, 2, 5-10-07",";
+  readMinut, e, s: 7
+  featur, e, d: tr, u, e
+  ta, g, s: ["Governan, c, e", "Poli, c, y", "Scorecar, d, s"],";
+  conte, n, t: `,`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     <h2>Guardrails, That, Ship</h2>
     <p>Adopt, scorecards, tied to, KP, I, s, small, PR, checks for, risky, changes, and, budgeted, online canari, e, s.</p>
     <h3>What, to, Implement</h3>

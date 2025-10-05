@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 const PromotionalBanner: React.FC = () => {
@@ -16,3 +17,7 @@ const PromotionalBanner: React.FC = () => {
 };
 
 export default PromotionalBanner;
+=======
+expo, r, t { defau, l, t } fr, o, m "../../componen, t, s/PromotionalBann, e, r";
+expo, r, t { defau, l, t } fr, o, m "../../componen, t, s/PromotionalBann, e, r";';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279

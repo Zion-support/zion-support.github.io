@@ -5,7 +5,11 @@ function resolveConfigConflicts() {
   let eslintContent = fs.readFileSync('eslint.config.js', 'utf8');
   
   // Remove merge conflict markers and combine the best of both
+<<<<<<< HEAD
   eslintContent = eslintContent.replace(/\n.*?\n\n.*?\n  
+=======
+  eslintContent = eslintContent.replace(/\n.*?\n  
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   // Fix the files configuration to include both src and app
   eslintContent = eslintContent.replace(
     /files: \["app\/\*\*\/\*\.\{ts,tsx\}"\]/,
@@ -19,7 +23,11 @@ function resolveConfigConflicts() {
   let packageContent = fs.readFileSync('package.json', 'utf8');
   
   // Remove merge conflict markers and use the src/ approach
+<<<<<<< HEAD
   packageContent = packageContent.replace(/\n.*?\n\n.*?\n  packageContent = packageContent.replace(
+=======
+  packageContent = packageContent.replace(/\n.*?\n  packageContent = packageContent.replace(
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     /"lint": "eslint app\/ --ext \.ts,\.tsx,\.js,\.jsx --max-warnings 0"/,
     '"lint": "eslint src/ --ext .ts,.tsx,.js,.jsx --max-warnings 0"'
   );
@@ -31,7 +39,11 @@ function resolveConfigConflicts() {
   let tsconfigContent = fs.readFileSync('tsconfig.json', 'utf8');
   
   // Remove merge conflict markers and use both src and app
+<<<<<<< HEAD
   tsconfigContent = tsconfigContent.replace(/\n.*?\n\n.*?\n  tsconfigContent = tsconfigContent.replace(
+=======
+  tsconfigContent = tsconfigContent.replace(/\n.*?\n  tsconfigContent = tsconfigContent.replace(
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     /"include": \["app"\]/,
     '"include": ["src", "app"]'
   );

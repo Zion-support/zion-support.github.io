@@ -3,6 +3,7 @@ impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
+<<<<<<< HEAD
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Enterprise, RAG, Security v2 — Au, t, h-Aw, a, r, e, Fre, s, h, Sign, e, d</title>
@@ -20,6 +21,28 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>Au, t, h-A, w, a, r, e, Fre, s, h, Sign, e, d</p>
         <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+=======
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
+      <Helmet>
+        <title>Enterprise, RAG, Security v2 — Au, t, h-Awa, r, e, Fre, s, h, Sign, e, d</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Au, t, h-scoped, retrieva, l, freshness, window, s, prompt, firewall, s, and, signed, outputs that, keep, answers correct, and, compliant." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-enterpri, s, e-r, a, g-securi, t, y-v2",  />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Enterprise, RAG, Security v2</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Au, t, h-Awa, r, e, Fre, s, h, Sign, e, d</p>
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-01-enterpri, s, e-r, a, g-securi, t, y-v2"
+         />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">Enterprise, RAG, Security v2</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Au, t, h-Awa, r, e, Fre, s, h, Sign, e, d</p>";
+        <div, className="prose, pros, e-invert, ma, x-w-3, x, l">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           <p>
             Upgrade, enterprise, RAG safety, with, auth-aware, retriev, a, l, freshness, window, s, prompt, firewall, s, and, signed, outputs. Prevent, data, leaks
             and, stale, answers while, maintaining, performance guarante, e, s.

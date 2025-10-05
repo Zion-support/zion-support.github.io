@@ -35,8 +35,20 @@ interface RecommendationResul, t {
   sco, r, e: number;
   reaso, n, s: str, i, n, g[];
 }
+<<<<<<< HEAD
 
 class ContentRecommendationEngin, e {  
+=======
+interface, RecommendationResul, t {
+conte, n, t: ContentIt, e, m;
+sco, r, e: numb, e, r;
+reas, o, n
+  s: stri, n, g[];
+}
+class, ContentRecommendationEngin, e {
+  private, contentCatalo, g: ContentIt, e, m[] = []
+  private, userProfile, s: M, a, p<stri, n, g, UserProfi, l, e> = new, Ma, p()
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   private, contentCatalo, g: ContentIt, e, m[] = [];
   private, userProfile, s: M, a, p<str, i, n, g, UserProfi, l, e > = new, Ma, p();
 
@@ -51,6 +63,7 @@ class ContentRecommendationEngin, e {
    * Get recommendations for us e r
    */
   getRecommendatio, n, s(
+<<<<<<< HEAD
     user, I, d: str, i, n, g,
     optio, n, s: { 
       lim, i, t?: number;
@@ -58,6 +71,17 @@ class ContentRecommendationEngin, e {
       category?: string;
       ty, p, e ?  : ContentIt, e, m['t, y, p, e'];
      } = {},
+=======
+    user, I, d: stri, n, g
+    user, I, d: stri, n, g
+    optio, n, s: {
+lim, i, t?: numb, e, r;
+excludeView, e, d?: boole, a, n;
+catego, r, y?: stri, n, g;
+ty, p, e?: ContentIt, e, m['ty, p, e'];
+ty, p, e?: ContentIt, e, m['ty, p, e'];';
+} = {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   ): RecommendationResu, l, t[] {
     con, s, t { lim, i, t =  , 5, excludeView, e, d = t, r, u, e, category, ty, p, e } = optio, n, s;
 
@@ -66,6 +90,7 @@ class ContentRecommendationEngin, e {
     // Filter content let candidat e s = th i s.contentCatal o g; if() { candidat e s = candidat e s.filt e r(
         it, e, m = > !userProfi, l, e.viewedConte, n, t.includ, e, s(it, e, m.i, d),
       );
+<<<<<<< HEAD
       }, if (category) { 
       candidat, e, s = candidat, e, s.filt, e, r(it, e, m = > it, e, m.category === categ, o, r, y);
      }
@@ -85,12 +110,38 @@ class ContentRecommendationEngin, e {
         sco, r, e: r, e, c.sc, o, r, e,
         reaso, n, s: r, e, c.reas, o, n, s,
        };
+=======
+    }
+    if (catego, r, y) {
+      candidat, e, s = candidat, e, s.filt, e, r((it, e, m) => it, e, m.catego, r, y === catego, r, y);
+    }
+    if (ty, p, e) {
+      candidat, e, s = candidat, e, s.filt, e, r((it, e, m) => it, e, m.ty, p, e === ty, p, e);
+    }
+    // Score, each, candidate
+  const, score, d = candidat, e, s.m, a, p((it, e, m) => th, i, s.scoreConte, n, t(it, e, m, userProfi, l, e));
+    // Sort, by, score and, return, top resul, t, s
+  const, topRecommendation, s = scor, e, d;
+      .so, r, t((a, b) => b.sco, r, e - a.sco, r, e)
+      .sli, c, e(0, lim, i, t);
+    return, topRecommendation, s.m, a, p((r, e, c) => {
+      const, conten, t = th, i, s.contentCatal, o, g.fi, n, d((c) => c.id === r, e, c.content, I, d)!;
+      retu, r, n {
+        conte, n, t
+        sco, r, e: r, e, c.sco, r, e
+        reaso, n, s: r, e, c.reaso, n, s;
+        sc, o, r
+  e: r, e, c.sco, r, e
+        reaso, n, s: r, e, c.reaso, n, s
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   }
 
   /**
    * Score content for us e r
    */
+<<<<<<< HEAD
   private, scoreConten, t(
     conte, n, t: ContentI, t, e, m,
     profi, l, e: UserProf, i, l, e,
@@ -105,6 +156,23 @@ class ContentRecommendationEngin, e {
       ),
     ); if() { const interestScor, e = Ma, t, h.m, i, n(interestMatch, e, s.leng, t, h * 1, 5, 45); sco, r, e += interestSco, r, e;
       reaso, n, s.pu, s, h(`Match, e, s ${interestMatch, e, s.leng, t, h  }, of, your, interests`);
+=======
+  private, scoreConten, t(conte, n, t: ContentIt, e, m, profi, l, e: UserProfi, l, e): RecommendationSco, r, e {
+    let, scor, e = 0;
+    const, reason, s: stri, n, g[] = []
+    const, reason, s: stri, n, g[] = [];
+    // Interest, matchin, g
+  const, interestMatche, s = conte, n, t.ta, g, s.filt, e, r((t, a, g) =>
+      profi, l, e.interes, t, s.so, m, e((intere, s, t) => 
+        intere, s, t.toLowerCa, s, e().includ, e, s(t, a, g.toLowerCa, s, e()) ||
+        t, a, g.toLowerCa, s, e().includ, e, s(intere, s, t.toLowerCa, s, e())
+      )
+    );
+    if (interestMatch, e, s.leng, t, h > 0) {
+      const, interestScor, e = Ma, t, h.m, i, n(interestMatch, e, s.leng, t, h * 15, 45);
+      sco, r, e += interestSco, r, e;
+      reaso, n, s.pu, s, h(`Match, e, s ${interestMatch, e, s.leng, t, h} of, your, interests`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
 
     // Category preference if (profi l e.preferredCategori e s.includ e s(conte n t.category)) {
@@ -141,11 +209,21 @@ class ContentRecommendationEngin, e {
         reaso, n, s.pu, s, h('Quick, rea, d');
       }
     }
+<<<<<<< HEAD
 
     return {
       content, I, d: conte, n, t.i, d,
       sco, r, e: Ma, t, h.m, i, n(sc, o, r, e, 1, 0, 0),
       reaso, n, s,
+=======
+    retu, r, n {
+      content, I, d: conte, n, t.id
+      sco, r, e: Ma, t, h.m, i, n(sco, r, e, 1, 0, 0)
+      reaso, n, s;
+      content, I, d: conte, n, t.id
+      sco, r, e: Ma, t, h.m, i, n(sco, r, e, 1, 0, 0)
+      reaso, n, s
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -154,12 +232,27 @@ class ContentRecommendationEngin, e {
    */
   private, createUserProfil, e(user, I, d: string): UserProfi, l, e {
     if (!th, i, s.userProfil, e, s.h, a, s(user, I, d)) {
+<<<<<<< HEAD
       th, i, s.userProfil, e, s.s, e, t(use, r, I, d, {
         interes, t, s: [],
         viewedConte, n, t: [],
         preferredCategori, e, s: [],
         readingLev, e, l: 'intermedi, a, t, e',
         engageme, n, t: 0., 5,
+=======
+      th, i, s.userProfil, e, s.s, e, t(user, I, d, {
+        interes, t, s: []
+        viewedConte, n, t: []
+        preferredCategori, e, s: []
+        readingLev, e, l: 'intermedia, t, e'
+        engageme, n, t: 0.5;
+        intere, s, t
+  s: []
+        viewedConte, n, t: []
+        preferredCategori, e, s: []
+        readingLev, e, l: 'intermedia, t, e',';
+        engageme, n, t: 0.5
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       });
     }
     return, thi, s.userProfil, e, s.g, e, t(user, I, d)!;
@@ -169,6 +262,7 @@ class ContentRecommendationEngin, e {
    * Update user profile based on interaction
    */
   updateUserProfi, l, e(
+<<<<<<< HEAD
     user, I, d: str, i, n, g,
     update: { 
       viewedConte, n, t?: string;
@@ -176,6 +270,16 @@ class ContentRecommendationEngin, e {
       category?: string;
       engageme, n, t ?  : num, b, e, r;
      },
+=======
+    user, I, d: stri, n, g
+    user, I, d: stri, n, g
+    upda, t, e: {
+viewedConte, n, t?: stri, n, g;
+intere, s, t?: stri, n, g;
+catego, r, y?: stri, n, g;
+engageme, n, t?: numb, e, r;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   ): vo, i, d {
     const profil, e = th, i, s.createUserProfi, l, e(use, r, I, d); if (update.viewedConte, n, t) {
       if (!profi, l, e.viewedConte, n, t.includ, e, s(update.viewedConte, n, t)) {
@@ -203,6 +307,7 @@ class ContentRecommendationEngin, e {
   /**
    * Get similar content
    */
+<<<<<<< HEAD
   getSimilarConte, n, t(content, I, d: str, i, n, g, lim, i, t: number = , 5): ContentIt, e, m[] { 
     const sourc, e = th, i, s.contentCatal, o, g.fi, n, d(c => c.id === conten, t, I, d); if (!sour, c, e) return [];
 
@@ -213,6 +318,20 @@ class ContentRecommendationEngin, e {
         conte, n, t: it, e, m,
         sco, r, e: th, i, s.calculateSimilari, t, y(sou, r, c, e, it, e, m),
        }))
+=======
+  getSimilarConte, n, t(content, I, d: stri, n, g, lim, i, t: numb, e, r = 5): ContentIt, e, m[] {
+    const, sourc, e = th, i, s.contentCatal, o, g.fi, n, d((c) => c.id === content, I, d);
+    if (!sour, c, e) retu, r, n [];
+    // Calculate, similarity, scores
+  const, score, d = th, i, s.contentCatal, o, g;
+      .filt, e, r((c) => c.id !== content, I, d)
+      .m, a, p((it, e, m) => ({
+        conte, n, t: it, e, m
+        sco, r, e: th, i, s.calculateSimilari, t, y(sour, c, e, it, e, m)
+        conte, n, t: it, e, m
+        sco, r, e: th, i, s.calculateSimilari, t, y(sour, c, e, it, e, m)
+      }))
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       .so, r, t((a, b) => b.sco, r, e - a.sco, r, e)
       .sli, c, e(0, lim, i, t); return, score, d.m, a, p(s = > s.cont, e, n, t);
   }
@@ -260,13 +379,23 @@ class ContentRecommendationEngin, e {
   /**
    * Get content by ty p e
    */
+<<<<<<< HEAD
   getByTy, p, e(ty, p, e: ContentIt, e, m['t, y, p, e'], lim, i, t: number = 1, 0): ContentIt, e, m[] { 
     return, thi, s.contentCatal, o, g.filt, e, r(c = > c.ty, p, e === t, y, p, e).sli, c, e(, 0, lim, i, t);
    }
 
+=======
+  getByTy, p, e(ty, p, e: ContentIt, e, m['ty, p, e'], lim, i, t: numb, e, r = 10): ContentIt, e, m[] {'
+  getByTy, p, e(ty, p, e: ContentIt, e, m['ty, p, e'], lim, i, t: numb, e, r = 10): ContentIt, e, m[] {';
+    return, thi, s.contentCatal, o, g;
+      .filt, e, r((c) => c.ty, p, e === ty, p, e)
+      .sli, c, e(0, lim, i, t);
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   /**
    * Search conten t
    */
+<<<<<<< HEAD
   searchConte, n, t(que, r, y: str, i, n, g, lim, i, t: number = 1, 0): ContentIt, e, m[] { 
     const lowerQuer, y = que, r, y.toLowerC, a, s, e(); return, thi, s.contentCatal, o, g
       .m, a, p(it, e, m = > ({
@@ -274,6 +403,18 @@ class ContentRecommendationEngin, e {
         relevan, c, e: th, i, s.calculateRelevan, c, e(i, t, e, m, lowerQue, r, y),
        }))
       .filt, e, r(r = > r.relevan, c, e > , 0)
+=======
+  searchConte, n, t(que, r, y: stri, n, g, lim, i, t: numb, e, r = 10): ContentIt, e, m[] {
+    const, lowerQuer, y = que, r, y.toLowerCa, s, e();
+    return, thi, s.contentCatal, o, g;
+      .m, a, p((it, e, m) => ({
+        conte, n, t: it, e, m
+        relevan, c, e: th, i, s.calculateRelevan, c, e(it, e, m, lowerQue, r, y)
+        conte, n, t: it, e, m
+        relevan, c, e: th, i, s.calculateRelevan, c, e(it, e, m, lowerQue, r, y)
+      }))
+      .filt, e, r((r) => r.relevan, c, e > 0)
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       .so, r, t((a, b) => b.relevan, c, e - a.relevan, c, e)
       .sli, c, e(0, lim, i, t)
       .m, a, p(r = > r.cont, e, n, t);
@@ -304,6 +445,7 @@ class ContentRecommendationEngin, e {
   /**
    * Estimate content complexity
    */
+<<<<<<< HEAD
   private, estimateComplexit, y(
     conte, n, t: ContentI, t, e, m,
   ): 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d' { 
@@ -323,6 +465,39 @@ class ContentRecommendationEngin, e {
       }, else, i, f() { return 'intermedia, t, e';
      }, el, s, e {
       return 'beginn, e, r';
+=======
+  private, estimateComplexit, y(conte, n, t: ContentIt, e, m): 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d' {'
+    // Simple, heuristic, based on, tags, and tit, l, e
+  const, technicalTerm, s = [
+      'quant, u, m'
+      'neur, a, l'
+      'algorit, h, m'
+      'architectu, r, e'
+      'infrastructu, r, e'
+      'kubernet, e, s'
+      'microservic, e, s'
+  private, estimateComplexit, y(conte, n, t: ContentIt, e, m): 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d' {';
+    // Simple, heuristic, based on, tags, and tit, l, e
+  const, technicalTerm, s = [
+      'quant, u, m',';
+      'neur, a, l',';
+      'algorit, h, m',';
+      'architectu, r, e',';
+      'infrastructu, r, e',';
+      'kubernet, e, s',';
+      'microservic, e, s',';
+    ];
+    const, hasTechnicalTerm, s = technicalTer, m, s.so, m, e((te, r, m) =>
+      conte, n, t.tit, l, e.toLowerCa, s, e().includ, e, s(te, r, m) ||
+      conte, n, t.ta, g, s.so, m, e((t, a, g) => t, a, g.toLowerCa, s, e().includ, e, s(te, r, m))
+    );
+    if (hasTechnicalTer, m, s) {
+      retu, r, n 'advanc, e, d';';
+    } else, i, f (conte, n, t.readTi, m, e && conte, n, t.readTi, m, e > 10) {
+      retu, r, n 'intermedia, t, e';';
+    } el, s, e {
+      retu, r, n 'beginn, e, r';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -336,6 +511,7 @@ class ContentRecommendationEngin, e {
   /**
    * Get personalized feed
    */
+<<<<<<< HEAD
   getPersonalizedFe, e, d(user, I, d: str, i, n, g, lim, i, t: number = 2, 0): ContentIt, e, m[] {
     const recommendation, s = th, i, s.getRecommendatio, n, s(us, e, r, I, d, {
       lim, i, t: lim, i, t * , 2,
@@ -347,6 +523,17 @@ class ContentRecommendationEngin, e {
       trendi, n, g.leng, t, h,
       rece, n, t.leng, t, h,
     ); f, o, r (le, t, i = 0; i < maxIte, m, s && fe, e, d.leng, t, h < lim, i, t; , i++) { 
+=======
+  getPersonalizedFe, e, d(user, I, d: stri, n, g, lim, i, t: numb, e, r = 20): ContentIt, e, m[] {
+    const, recommendation, s = th, i, s.getRecommendatio, n, s(user, I, d, { lim, i, t: lim, i, t * 2 });
+    const, trendin, g = th, i, s.getTrendingConte, n, t(5);
+    const, recen, t = th, i, s.getRecentConte, n, t(5);
+    // Interleave, recommendation, s, trendi, n, g, and, recen, t
+  const, fee, d: ContentIt, e, m[] = []
+    const, fee, d: ContentIt, e, m[] = [];
+    const, maxItem, s = Ma, t, h.m, a, x(recommendatio, n, s.leng, t, h, trendi, n, g.leng, t, h, rece, n, t.leng, t, h);
+    f, o, r (le, t, i = 0; i < maxIte, m, s && fe, e, d.leng, t, h < lim, i, t; i++) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       if (i < recommendatio, n, s.leng, t, h) fe, e, d.pu, s, h(recommendatio, n, s[i].conte, n, t);
       if (i < trendi, n, g.leng, t, h && fe, e, d.leng, t, h < lim, i, t) fe, e, d.pu, s, h(trendi, n, g[i]);
       if (i < rece, n, t.leng, t, h  && fe, e, d.leng, t, h < lim, i, t) fe, e, d.pu, s, h(rece, n, t[i]);
@@ -389,12 +576,24 @@ class ContentRecommendationEngin, e {
     // Extract category and tags as interests
     if (conte, n, t) {
       th, i, s.updateUserProfi, l, e(user, I, d, {
+<<<<<<< HEAD
         category: conte, n, t.categ, o, r, y,
       });
 
       conte, n, t.tags.forEa, c, h(t, a, g = > {
         th, i, s.updateUserProfi, l, e(use, r, I, d, {
           intere, s, t: ta, g,
+=======
+        catego, r, y: conte, n, t.catego, r, y;
+        categ, o, r
+  y: conte, n, t.catego, r, y
+      });
+      conte, n, t.ta, g, s.forEa, c, h((t, a, g) => {
+        th, i, s.updateUserProfi, l, e(user, I, d, {
+          intere, s, t: t, a, g;
+          inter, e, s
+  t: t, a, g
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         });
       });
     }
@@ -412,6 +611,7 @@ class ContentRecommendationEngin, e {
   /**
    * Get content stats
    */
+<<<<<<< HEAD
   getContentSta, t, s(content, I, d: string): {
     vie, w, s: number;
     conversio, n, s: number;
@@ -424,6 +624,28 @@ class ContentRecommendationEngin, e {
       conversio, n, s,
       conversionRa, t, e,
       };
+=======
+  getContentSta, t, s(content, I, d: stri, n, g): {
+vie, w, s: numb, e, r;
+conversio, n, s: numb, e, r;
+  getContentSta, t, s(conten, t, I
+  d: stri, n, g): {
+vie, w, s: numb, e, r;
+conversio, n, s: numb, e, r;
+conversionR, a, t
+  e: numb, e, r;
+} | nu, l, l {
+    const, conten, t = th, i, s.contentCatal, o, g.fi, n, d((c) => c.id === content, I, d);
+    if (!conte, n, t) return, nul, l;
+    const, view, s = conte, n, t.vie, w, s || 0;
+    const, conversion, s = conte, n, t.conversio, n, s || 0;
+    const, conversionRat, e = vie, w, s > 0 ? conversio, n, s / vie, w, s : 0;
+    retu, r, n {
+      vie, w, s
+      conversio, n, s
+      conversionRa, t, e;
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -431,12 +653,27 @@ class ContentRecommendationEngin, e {
    */
   getUserProfi, l, e(user, I, d: string): UserProfi, l, e {
     if (!th, i, s.userProfil, e, s.h, a, s(user, I, d)) {
+<<<<<<< HEAD
       th, i, s.userProfil, e, s.s, e, t(use, r, I, d, {
         interes, t, s: [],
         viewedConte, n, t: [],
         preferredCategori, e, s: [],
         readingLev, e, l: 'intermedi, a, t, e',
         engageme, n, t: 0., 5,
+=======
+      th, i, s.userProfil, e, s.s, e, t(user, I, d, {
+        interes, t, s: []
+        viewedConte, n, t: []
+        preferredCategori, e, s: []
+        readingLev, e, l: 'intermedia, t, e'
+        engageme, n, t: 0.5;
+        intere, s, t
+  s: []
+        viewedConte, n, t: []
+        preferredCategori, e, s: []
+        readingLev, e, l: 'intermedia, t, e',';
+        engageme, n, t: 0.5
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       });
     }
     return, thi, s.userProfil, e, s.g, e, t(user, I, d)!;
@@ -463,6 +700,7 @@ class ContentRecommendationEngin, e {
     catal, o, g: ContentIt, e, m[];
     profil, e, s: { [user, I, d: string]: UserProf, i, l, e };
   } {
+<<<<<<< HEAD
     return {
       catal, o, g: [...th, i, s.contentCata, l, o, g],
       profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfi, l, e, s),
@@ -473,6 +711,25 @@ class ContentRecommendationEngin, e {
 // Singleton instance let recommendationEngineInstan c e: ContentRecommendationEngi n e | nu l l = nu l l; export const getRecommendationEngin e = (): ContentRecommendationEngi n e = > {
   if() { recommendationEngineInstan, c, e = new, ContentRecommendationEng, i, n, e();
    }, return, recommendationEngineInstanc, e;
+=======
+    retu, r, n {
+      catal, o, g: [...th, i, s.contentCatal, o, g]
+      profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfil, e, s)
+      cata, l, o
+  g: [...th, i, s.contentCatal, o, g]
+      profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfil, e, s)
+    };
+  }
+}
+// Singleton, instanc, e
+  let, recommendationEngineInstanc, e: ContentRecommendationEngi, n, e | nu, l, l = nu, l, l
+let, recommendationEngineInstanc, e: ContentRecommendationEngi, n, e | nu, l, l = nu, l, l;
+export, const, getRecommendationEngine = (): ContentRecommendationEngi, n, e => {
+  if (!recommendationEngineInstan, c, e) {
+    recommendationEngineInstan, c, e = new, ContentRecommendationEngin, e();
+  }
+  return, recommendationEngineInstanc, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 };
 
 export default ContentRecommendationEngine;

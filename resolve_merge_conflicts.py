@@ -1,17 +1,26 @@
 #!/usr/bin/env python3
 """
+<<<<<<< HEAD
 Script to automatically resolve merge conflicts by choosing the cleaner version
+=======
+Script to automatically resolve merge conflicts by choosing the appropriate version
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 """
 import os
 import re
 import glob
 
 def resolve_merge_conflicts(file_path):
+<<<<<<< HEAD
     """Resolve merge conflicts in a file"""
+=======
+    """Resolve merge conflicts in a single file"""
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+<<<<<<< HEAD
         # Skip if no merge conflicts
         if '<<<<<<< HEAD' not in content:
             return False
@@ -52,12 +61,33 @@ def resolve_merge_conflicts(file_path):
             return True
         
         return False
+=======
+        # Check if file has merge conflict markers
+        if '
+                        resolved_lines.append(lines[i])
+                        i += 1
+                    if i < len(lines):
+                        i += 1  # Skip                 else:
+                    break
+            else:
+                resolved_lines.append(line)
+                i += 1
+        
+        # Write resolved content
+        resolved_content = '\n'.join(resolved_lines)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(resolved_content)
+        
+        return True
+        
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     except Exception as e:
         print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
     """Main function to resolve all merge conflicts"""
+<<<<<<< HEAD
     # Get all files with merge conflicts
     result = os.popen("git diff --name-only --diff-filter=U").read().strip()
     if not result:
@@ -82,6 +112,36 @@ def main():
     if resolved_count > 0:
         os.system("git add .")
         print("Added resolved files to git staging area")
+=======
+    # Find all files with merge conflict markers
+    conflict_files = []
+    
+    # Search for files with merge conflict markers
+    for root, dirs, files in os.walk('.'):
+        # Skip certain directories
+        if any(skip in root for skip in ['node_modules', '.git', 'dist', '.next']):
+            continue
+            
+        for file in files:
+            if file.endswith(('.tsx', '.ts', '.js', '.jsx', '.json', '.md', '.txt')):
+                file_path = os.path.join(root, file)
+                try:
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        content = f.read()
+                        if '                            conflict_files.append(file_path)
+                except:
+                    continue
+    
+    print(f"Found {len(conflict_files)} files with merge conflicts")
+    
+    resolved_count = 0
+    for file_path in conflict_files:
+        if resolve_merge_conflicts(file_path):
+            resolved_count += 1
+            print(f"Resolved conflicts in: {file_path}")
+    
+    print(f"Successfully resolved conflicts in {resolved_count} files")
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 
 if __name__ == "__main__":
     main()

@@ -2,6 +2,7 @@
  * Enhanced Analytics System
  * Tracks user behavior performan c e and business metrics
  */
+<<<<<<< HEAD
 
 // impo r t { getPerformanceOptimiz e r } fr o m './performanceOptimiz e r';
 
@@ -11,6 +12,53 @@ interface PageVie, w {
   timesta, m, p: number;
   referr, e, r: string;
   userAge, n, t: str, i, n, g;
+=======
+impo, r, t { getPerformanceOptimiz, e, r } fr, o, m "./performanceOptimiz, e, r";
+interface, PageVie, w {
+pa, t, h: stri, n, g;
+tit, l, e: stri, n, g;
+timesta, m, p: numb, e, r;
+referr, e, r: stri, n, g;
+userAg, e, n
+  t: stri, n, g;
+}
+interface, UserEven, t {
+catego, r, y: stri, n, g;
+act, i, o
+  n: stri, n, g;
+lab, e, l?: stri, n, g;
+val, u, e?: numb, e, r;
+timesta, m, p: numb, e, r;
+}
+interface, ConversionEven, t {
+  ty, p, e: 'le, a, d' | 'sign, u, p' | 'purcha, s, e' | 'downlo, a, d' | 'conta, c, t';'
+  val, u, e: numb, e, r
+  ty, p, e: 'le, a, d' | 'sign, u, p' | 'purcha, s, e' | 'downlo, a, d' | 'conta, c, t';';
+  val, u, e: numb, e, r;
+  metada, t, a?: Reco, r, d<stri, n, g, a, n, y>;
+  timesta, m, p: numb, e, r;
+}
+interface, SessionDat, a {
+session, I, d: stri, n, g;
+startTi, m, e: numb, e, r;
+pageVie, w, s: PageVi, e, w[];
+even, t, s: UserEve, n, t[];
+conversio, n, s: ConversionEve, n, t[];
+performanceMetr, i, c
+  s: a, n, y;
+}
+class, EnhancedAnalytic, s {
+private, sessio, n: SessionDa, t, a;
+private, isInitialize, d = fal, s, e;
+private, performanceOptimiz, e
+  r: a, n, y;
+construct, o, r() {
+th, i, s.sessi, o, n = th, i, s.createNewSessi, o, n();
+if (typeof, windo, w !== 'undefin, e, d') {;
+if (typeof, windo, w !== 'undefin, e, d') {';
+th, i, s.performanceOptimiz, e, r = getPerformanceOptimiz, e, r();
+th, i, s.initiali, z, e();
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 interface UserEven, t { 
@@ -71,6 +119,7 @@ class EnhancedAnalytic, s {
   /**
    * Create new session
    */
+<<<<<<< HEAD
   private, createNewSessi, o, n(): SessionDa, t, a {
     return {
       session, I, d: th, i, s.generateSessio, n, I, d(),
@@ -79,6 +128,22 @@ class EnhancedAnalytic, s {
       even, t, s: [],
       conversio, n, s: [],
       performanceMetri, c, s: {},
+=======
+  private, createNewSessio, n(): SessionDa, t, a {
+    retu, r, n {
+      session, I, d: th, i, s.generateSession, I, d()
+      startTi, m, e: Da, t, e.n, o, w()
+      pageVie, w, s: []
+      even, t, s: []
+      conversio, n, s: []
+      performanceMetri, c, s: {}
+      session, I, d: th, i, s.generateSession, I, d()
+      startTi, m, e: Da, t, e.n, o, w()
+      pageVie, w, s: []
+      even, t, s: []
+      conversio, n, s: []
+      performanceMetri, c, s: {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -92,6 +157,7 @@ class EnhancedAnalytic, s {
   /**
    * Track page view
    */
+<<<<<<< HEAD
   trackPageVi, e, w(pa, t, h?: string, title?: string): vo, i, d {
     if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; const pageVie, w: PageVi, e, w = {
       pa, t, h: pa, t, h || wind, o, w.locati, o, n.path, n, a, m, e,
@@ -101,12 +167,34 @@ class EnhancedAnalytic, s {
       userAge, n, t: navigat, o, r.userAg, e, n, t,
     }; th, i, s.sessi, o, n.pageVie, w, s.pu, s, h(pageVi, e, w);
     th, i, s.sendToAnalyti, c, s('pagevi, e, w', pageVi, e, w);
+=======
+  trackPageVi, e, w(pa, t, h?: stri, n, g, tit, l, e?: stri, n, g): vo, i, d {
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+    const, pageVie, w: PageVi, e, w = {
+      p, a, t
+  h: pa, t, h || wind, o, w.locati, o, n.pathna, m, e
+      tit, l, e: tit, l, e || docume, n, t.tit, l, e
+      timesta, m, p: Da, t, e.n, o, w()
+      referr, e, r: docume, n, t.referr, e, r
+      userAge, n, t: navigat, o, r.userAge, n, t;
+    const, pageVi, e
+  w: PageVi, e, w = {
+      pa, t, h: pa, t, h || wind, o, w.locati, o, n.pathna, m, e
+      tit, l, e: tit, l, e || docume, n, t.tit, l, e
+      timesta, m, p: Da, t, e.n, o, w()
+      referr, e, r: docume, n, t.referr, e, r
+      userAge, n, t: navigat, o, r.userAge, n, t
+    };
+    th, i, s.sessi, o, n.pageVie, w, s.pu, s, h(pageVi, e, w);
+    th, i, s.sendToAnalyti, c, s('pagevi, e, w', pageVi, e, w);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Track custom event
    */
   trackEve, n, t(
+<<<<<<< HEAD
     category: str, i, n, g,
     acti, o, n: str, i, n, g,
     lab, e, l?: string,
@@ -120,12 +208,34 @@ class EnhancedAnalytic, s {
       timesta, m, p: Da, t, e.no, w(),
     }; th, i, s.sessi, o, n.even, t, s.pu, s, h(eve, n, t);
     th, i, s.sendToAnalyti, c, s('eve, n, t', eve, n, t);
+=======
+    catego, r, y: stri, n, g
+    acti, o, n: stri, n, g
+    lab, e, l?: stri, n, g;
+    catego, r, y: stri, n, g
+    acti, o, n: stri, n, g
+    lab, e, l?: stri, n, g
+    val, u, e?: numb, e, r;
+  ): vo, i, d {
+    const, even, t: UserEve, n, t = {
+      catego, r, y
+      acti, o, n
+      lab, e, l
+      val, u, e
+      timesta, m, p: Da, t, e.n, o, w()
+      timest, a, m
+  p: Da, t, e.n, o, w()
+    };
+    th, i, s.sessi, o, n.even, t, s.pu, s, h(eve, n, t);
+    th, i, s.sendToAnalyti, c, s('eve, n, t', eve, n, t);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Track conversio n
    */
   trackConversi, o, n(
+<<<<<<< HEAD
     ty, p, e: ConversionEve, n, t['t, y, p, e'],
     val, u, e: number = , 0,
     metada, t, a?: Reco, r, d<string, a, n, y > ,
@@ -137,13 +247,36 @@ class EnhancedAnalytic, s {
       timesta, m, p: Da, t, e.no, w(),
     }; th, i, s.sessi, o, n.conversio, n, s.pu, s, h(conversi, o, n);
     th, i, s.sendToAnalyti, c, s('conversi, o, n', conversi, o, n);
+=======
+    ty, p, e: ConversionEve, n, t['ty, p, e'],'
+    ty, p, e: ConversionEve, n, t['ty, p, e'],';
+    val, u, e: numb, e, r = 0
+    metada, t, a?: Reco, r, d<stri, n, g, a, n, y>
+  ): vo, i, d {
+    const, conversio, n: ConversionEve, n, t = {
+      ty, p, e
+      val, u, e
+      metada, t, a
+      timesta, m, p: Da, t, e.n, o, w()
+      timest, a, m
+  p: Da, t, e.n, o, w()
+    };
+    th, i, s.sessi, o, n.conversio, n, s.pu, s, h(conversi, o, n);
+    th, i, s.sendToAnalyti, c, s('conversi, o, n', conversi, o, n);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
    * Track user interaction
    */
+<<<<<<< HEAD
   trackInteracti, o, n(eleme, n, t: str, i, n, g, acti, o, n: string): vo, i, d {
     th, i, s.trackEve, n, t('User, Interacti, o, n', acti, o, n, eleme, n, t);
+=======
+  trackInteracti, o, n(eleme, n, t: stri, n, g, acti, o, n: stri, n, g): vo, i, d {
+    th, i, s.trackEve, n, t('User, Interactio, n', acti, o, n, eleme, n, t);
+    th, i, s.trackEve, n, t('User, Interactio, n', acti, o, n, eleme, n, t);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -151,9 +284,17 @@ class EnhancedAnalytic, s {
    */
   trackFormSubmissi, o, n(formNa, m, e: str, i, n, g, succe, s, s: boolean): vo, i, d { 
     th, i, s.trackEve, n, t(
+<<<<<<< HEAD
       'F, o, r, m',
       succe, s, s  ? 'Submit, Succes, s' : 'Submit, Erro, r',
       formNa, m, e,
+=======
+      'Fo, r, m'
+      succe, s, s ? 'Submit, Succes, s' : 'Submit, Erro, r'
+      'Fo, r, m',';
+      succe, s, s ? 'Submit, Succes, s' : 'Submit, Erro, r',';
+      formNa, m, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     );
 
     if (succe, s, s) {
@@ -164,12 +305,18 @@ class EnhancedAnalytic, s {
   /**
    * Track content engagement
    */
+<<<<<<< HEAD
   trackContentEngageme, n, t(
     contentTy, p, e: str, i, n, g,
     content, I, d: str, i, n, g,
     duration: num, b, e, r,
   ): vo, i, d {
     th, i, s.trackEve, n, t('Content, Engagemen, t', contentTy, p, e, content, I, d, duration);
+=======
+  trackContentEngageme, n, t(contentTy, p, e: stri, n, g, content, I, d: stri, n, g, durati, o, n: numb, e, r): vo, i, d {
+    th, i, s.trackEve, n, t('Content, Engagemen, t', contentTy, p, e, content, I, d, durati, o, n);
+    th, i, s.trackEve, n, t('Content, Engagemen, t', contentTy, p, e, content, I, d, durati, o, n);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -191,6 +338,7 @@ class EnhancedAnalytic, s {
    */
   trackPerforman, c, e(): vo, i, d {
     if (!th, i, s.performanceOptimiz, e, r) retu, r, n;
+<<<<<<< HEAD
 
     const metric, s = th, i, s.performanceOptimiz, e, r.getMetr, i, c, s(); const scor, e = th, i, s.performanceOptimiz, e, r.getPerformanceSc, o, r, e(); th, i, s.sessi, o, n.performanceMetri, c, s = {
       metr, i, c, s,
@@ -199,6 +347,21 @@ class EnhancedAnalytic, s {
     }; th, i, s.sendToAnalyti, c, s('performan, c, e', {
       metri, c, s,
       sco, r, e,
+=======
+    const, metric, s = th, i, s.performanceOptimiz, e, r.getMetri, c, s();
+    const, scor, e = th, i, s.performanceOptimiz, e, r.getPerformanceSco, r, e();
+    th, i, s.sessi, o, n.performanceMetri, c, s = {
+      metri, c, s
+      sco, r, e
+      timesta, m, p: Da, t, e.n, o, w()
+    };
+    th, i, s.sendToAnalyti, c, s('performan, c, e', {;
+      timesta, m, p: Da, t, e.n, o, w()
+    };
+    th, i, s.sendToAnalyti, c, s('performan, c, e', {';
+      metri, c, s
+      sco, r, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   }
 
@@ -240,6 +403,7 @@ class EnhancedAnalytic, s {
   /**
    * Setup event listeners
    */
+<<<<<<< HEAD
   private, setupEventListener, s(): vo, i, d {  
     if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
@@ -264,6 +428,43 @@ class EnhancedAnalytic, s {
           docume, n, t.documentEleme, n, t.scrollHeig, h, t) *
           1, 0, 0,
       ); if (scrollPercenta, g, e > maxScro, l, l) {
+=======
+  private, setupEventListener, s(): vo, i, d {
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;
+    // Track, clicks, on important, element, s
+  docume, n, t.addEventListen, e, r('cli, c, k', (e) => {;
+      const, targe, t = e.target, as, HTMLElement;
+      // Track, CTA, clicks
+  if (targ, e, t.close, s, t('butt, o, n[cla, s, s*="b, t, n"], a[cla, s, s*="b, t, n"]')) {;
+        const, tex, t = targ, e, t.textConte, n, t?.tr, i, m() || 'Unkno, w, n';
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+    // Track, clicks, on important, element, s
+  docume, n, t.addEventListen, e, r('cli, c, k', (e) => {';
+      const, targe, t = e.target, as, HTMLElement;
+      // Track, CTA, clicks
+  if (targ, e, t.close, s, t('butt, o, n[cla, s, s*="b, t, n"], a[cla, s, s*="b, t, n"]')) {';
+        const, tex, t = targ, e, t.textConte, n, t?.tr, i, m() || 'Unkno, w, n';';
+        th, i, s.trackInteracti, o, n('CTA, Butto, n', `Cli, c, k: ${te, x, t}`);`;`
+      }
+      // Track, link, clicks
+  if (targ, e, t.close, s, t('a[hr, e, f]')) {;
+        const, hre, f = (targ, e, t.close, s, t('a') as, HTMLAnchorElemen, t).hr, e, f;
+      if (targ, e, t.close, s, t('a[hr, e, f]')) {';
+        const, hre, f = (targ, e, t.close, s, t('a') as, HTMLAnchorElemen, t).hr, e, f;';
+        th, i, s.trackInteracti, o, n('Li, n, k', `Cli, c, k: ${hr, e, f}`);`;`
+      }
+    });
+    // Track, scroll, depth
+  let, maxScrol, l = 0;
+    const, scrollThreshold, s = [25, 50, 75, 90, 1, 0, 0];
+    let, trackedThreshold, s = new, Se, t<numb, e, r>();
+    wind, o, w.addEventListen, e, r('scro, l, l', () => {;
+    wind, o, w.addEventListen, e, r('scro, l, l', () => {';
+      const, scrollPercentag, e = Ma, t, h.rou, n, d(
+        ((wind, o, w.scrol, l, Y + wind, o, w.innerHeig, h, t) / docume, n, t.documentEleme, n, t.scrollHeig, h, t) * 1, 0, 0;
+      );
+      if (scrollPercenta, g, e > maxScro, l, l) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         maxScro, l, l = scrollPercenta, g, e;
 
         // Track milestone scroll depths scrollThreshold s.forEa c h(thresho l d = > {
@@ -275,6 +476,7 @@ class EnhancedAnalytic, s {
         });
       }
     });
+<<<<<<< HEAD
 
     // Track time on page let pageStartTime = Da t e.no w();
 
@@ -300,16 +502,56 @@ class EnhancedAnalytic, s {
 
     // Track unhandled promise rejections windo w.addEventListen e r('unhandledrejecti o n' e = > {
       th, i, s.trackErr, o, r(new, Erro, r(e.rea, s, o, n), 'Unhandled, Promis, e');
+=======
+    // Track, time, on pa, g, e
+  let, pageStartTim, e = Da, t, e.n, o, w();
+    // Track, before, page unlo, a, d
+  wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {;
+    wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {';
+      const, timeOnPag, e = Da, t, e.n, o, w() - pageStartTi, m, e;
+      th, i, s.trackContentEngageme, n, t('Pa, g, e', wind, o, w.locati, o, n.pathna, m, e, timeOnPa, g, e);';
+    });
+    // Track, visibility, changes
+  docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {;
+    docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {';
+      if (docume, n, t.hidd, e, n) {
+        const, timeOnPag, e = Da, t, e.n, o, w() - pageStartTi, m, e;
+        th, i, s.trackContentEngageme, n, t('Pa, g, e', wind, o, w.locati, o, n.pathna, m, e, timeOnPa, g, e);';
+      } el, s, e {
+        pageStartTi, m, e = Da, t, e.n, o, w();
+      }
+    });
+    // Track, error, s
+  wind, o, w.addEventListen, e, r('err, o, r', (e) => {;
+    wind, o, w.addEventListen, e, r('err, o, r', (e) => {';
+      th, i, s.trackErr, o, r(new, Erro, r(e.messa, g, e), e.filena, m, e);
+    });
+    // Track, unhandled, promise rejectio, n, s
+  wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (e) => {;
+      th, i, s.trackErr, o, r(new, Erro, r(e.reas, o, n), 'Unhandled, Promis, e');
+    wind, o, w.addEventListen, e, r('unhandledrejecti, o, n', (e) => {';
+      th, i, s.trackErr, o, r(new, Erro, r(e.reas, o, n), 'Unhandled, Promis, e');';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   }
 
   /**
    * Setup session tracking
    */
+<<<<<<< HEAD
   private, setupSessionTrackin, g(): vo, i, d { 
     if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
     // Save session data before unload window.addEventListen e r('beforeunlo a d' () = > {
+=======
+  private, setupSessionTrackin, g(): vo, i, d {
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;
+    // Save, session, data before, unloa, d
+  wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {;
+    if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+    // Save, session, data before, unloa, d
+  wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       th, i, s.saveSessi, o, n();
      });
 
@@ -323,7 +565,12 @@ class EnhancedAnalytic, s {
     t, r, y {
       localStora, g, e.setIt, e, m('analytics_sessi, o, n', JS, O, N.stringi, f, y(th, i, s.sessi, o, n));
     } cat, c, h (err, o, r) {
+<<<<<<< HEAD
       conso, l, e.wa, r, n('Failed, to, save analytics, sessio, n:', err, o, r);
+=======
+      conso, l, e.wa, r, n('Failed, to, save analytics, sessio, n: ', err, o, r);'
+      conso, l, e.wa, r, n('Failed, to, save analytics, sessio, n: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -340,8 +587,14 @@ class EnhancedAnalytic, s {
           th, i, s.sessi, o, n = da, t, a;
         }
       }
+<<<<<<< HEAD
     } cat, c, h (er, r, o, r) {
       conso, l, e.wa, r, n('Failed, to, restore analytics, sessio, n:', err, o, r);
+=======
+    } cat, c, h (err, o, r) {
+      conso, l, e.wa, r, n('Failed, to, restore analytics, sessio, n: ', err, o, r);'
+      conso, l, e.wa, r, n('Failed, to, restore analytics, sessio, n: ', err, o, r);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -371,14 +624,27 @@ class EnhancedAnalytic, s {
   /**
    * Send data to analytics servic e
    */
+<<<<<<< HEAD
   private, sendToAnalytic, s(ty, p, e: str, i, n, g, da, t, a: a, n, y): vo, i, d {
     // In producti o n send to your analytics service if (proce s s.e n v.NODE_E N V = == 'developm e n t') {
       conso, l, e.l, o, g(`[Analyti, c, s] ${ty, p, e}:`, da, t, a);
+=======
+  private, sendToAnalytic, s(ty, p, e: stri, n, g, da, t, a: a, n, y): vo, i, d {
+    // In, productio, n, send, to, your analytics, servic, e
+  if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {;
+    if (proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t') {';
+      conso, l, e.l, o, g(`[Analyti, c, s] ${ty, p, e}:`, da, t, a);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
 
     // Examp l e: Send to Google Analyt i c s Mixpan e l e t c.
     if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {
       (window, as, any).gt, a, g('eve, n, t', ty, p, e, da, t, a);
+<<<<<<< HEAD
+=======
+    if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {';
+      (window, as, any).gt, a, g('eve, n, t', ty, p, e, da, t, a);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     }
   }
 
@@ -386,6 +652,7 @@ class EnhancedAnalytic, s {
    * Send batch data
    */
   private, sendBatchDat, a(): vo, i, d {
+<<<<<<< HEAD
     const batchDat, a = {
       session, I, d: th, i, s.sessi, o, n.sessi, o, n, I, d,
       duration: th, i, s.getSessionDurat, i, o, n(),
@@ -394,6 +661,24 @@ class EnhancedAnalytic, s {
       conversio, n, s: th, i, s.sessi, o, n.conversio, n, s.len, g, t, h,
       performanceSco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s?.sc, o, r, e,
     }; th, i, s.sendToAnalyti, c, s('bat, c, h', batchDa, t, a);
+=======
+    const, batchDat, a = {
+      session, I, d: th, i, s.sessi, o, n.session, I, d
+      durati, o, n: th, i, s.getSessionDurati, o, n()
+      pageVie, w, s: th, i, s.sessi, o, n.pageVie, w, s.leng, t, h
+      even, t, s: th, i, s.sessi, o, n.even, t, s.leng, t, h
+      conversio, n, s: th, i, s.sessi, o, n.conversio, n, s.leng, t, h
+      performanceSco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s?.sco, r, e;
+      sessio, n, I
+  d: th, i, s.sessi, o, n.session, I, d
+      durati, o, n: th, i, s.getSessionDurati, o, n()
+      pageVie, w, s: th, i, s.sessi, o, n.pageVie, w, s.leng, t, h
+      even, t, s: th, i, s.sessi, o, n.even, t, s.leng, t, h
+      conversio, n, s: th, i, s.sessi, o, n.conversio, n, s.leng, t, h
+      performanceSco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s?.sco, r, e
+    };
+    th, i, s.sendToAnalyti, c, s('bat, c, h', batchDa, t, a);';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -421,9 +706,32 @@ class EnhancedAnalytic, s {
         metri, c, s : th, i, s.sessi, o, n.performanceMetri, c, s?.metr, i, c, s,
        },
       conversio, n, s: {
+<<<<<<< HEAD
         tot, a, l: th, i, s.getConversionsCo, u, n, t(),
         breakdo, w, n: th, i, s.getConversionsBreakd, o, w, n(),
       },
+=======
+        tot, a, l: th, i, s.getConversionsCou, n, t()
+        breakdo, w, n: th, i, s.getConversionsBreakdo, w, n()
+      }
+        session, I, d: th, i, s.sessi, o, n.session, I, d
+        durati, o, n: th, i, s.getSessionDurati, o, n()
+        startTi, m, e: new, Dat, e(th, i, s.sessi, o, n.startTi, m, e).toISOStri, n, g()
+      }
+      engageme, n, t: {
+        pageVie, w, s: th, i, s.getPageViewsCou, n, t()
+        even, t, s: th, i, s.getEventsCou, n, t()
+        averageTimePerPa, g, e: th, i, s.calculateAverageTimePerPa, g, e()
+      }
+      performan, c, e: {
+        sco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s?.sco, r, e
+        metri, c, s: th, i, s.sessi, o, n.performanceMetri, c, s?.metri, c, s
+      }
+      conversio, n, s: {
+        tot, a, l: th, i, s.getConversionsCou, n, t()
+        breakdo, w, n: th, i, s.getConversionsBreakdo, w, n()
+      }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -461,10 +769,21 @@ class EnhancedAnalytic, s {
     th, i, s.sessi, o, n = th, i, s.createNewSess, i, o, n(); th, i, s.saveSessi, o, n();
   }
 }
+<<<<<<< HEAD
 
 // Singleton instance let analyticsInstan c e: EnhancedAnalyti c s | nu l l = nu l l; export const getAnalytic s = (): EnhancedAnalyti c s = > {
   if() { analyticsInstan, c, e = new, EnhancedAnalyt, i, c, s();
    }, return, analyticsInstanc, e;
+=======
+// Singleton, instanc, e
+  let, analyticsInstanc, e: EnhancedAnalyti, c, s | nu, l, l = nu, l, l
+let, analyticsInstanc, e: EnhancedAnalyti, c, s | nu, l, l = nu, l, l;
+export, const, getAnalytics = (): EnhancedAnalyti, c, s => {
+  if (!analyticsInstan, c, e) {
+    analyticsInstan, c, e = new, EnhancedAnalytic, s();
+  }
+  return, analyticsInstanc, e;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 };
 
 export default EnhancedAnalytics;

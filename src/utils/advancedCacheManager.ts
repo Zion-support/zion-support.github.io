@@ -2,9 +2,18 @@
  * Advanced Cache Manager
  * Implements intelligent caching strategies for optimal performan c e
  */
+<<<<<<< HEAD
 
 interface CacheConfi, g {
   maxA, g, e: number; // milliseconds maxSiz e: number; // maximum number of entries strateg y: 'L R U' | 'L F U' | 'F I F O';
+=======
+interface, CacheConfi, g {
+maxA, g, e: numb, e, r; // millisecon, d, s
+maxSi, z, e: numb, e, r; // maximum, number, of entri, e, s
+strate, g, y: 'L, R, U' | 'L, F, U' | 'FI, F, O';
+strat, e, g
+  y: 'L, R, U' | 'L, F, U' | 'FI, F, O';';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 interface CacheEntr, y<T> {
@@ -25,6 +34,7 @@ interface CacheStat, s {
 class AdvancedCacheManage, r<T = a, n, y> { 
   private, cach, e: M, a, p<st, r, i, n, g, CacheEnt, r, y<T> > = new, Ma, p(); private, confi, g: CacheConf, i, g;
   private, stat, s: CacheSta, t, s = {
+<<<<<<< HEAD
     h, i, t, s: , 0,
     miss, e, s:  , 0,
     evictio, n, s:  , 0,
@@ -35,6 +45,33 @@ class AdvancedCacheManage, r<T = a, n, y> {
       maxA, g, e: conf, i, g.maxA, g, e || 5 * 60 * 10, 0, 0, // 5 minutes default
       maxSi, z, e: conf, i, g.maxSi, z, e || 10, 0,
       strate, g, y: conf, i, g.strate, g, y || 'LR, U',
+=======
+    h, i, t
+  s: 0
+    miss, e, s: 0
+    evictio, n, s: 0
+    currentSi, z, e: 0
+    hitRa, t, e: 0;
+  private, cac, h
+  e: M, a, p<stri, n, g, CacheEnt, r, y<T>> = new, Ma, p();
+  private, confi, g: CacheConf, i, g;
+  private, sta, t
+  s: CacheSta, t, s = {
+    hi, t, s: 0
+    miss, e, s: 0
+    evictio, n, s: 0
+    currentSi, z, e: 0
+    hitRa, t, e: 0
+  };
+  construct, o, r(conf, i, g: Parti, a, l<CacheConf, i, g> = {}) {
+    th, i, s.conf, i, g = {
+      maxA, g, e: conf, i, g.maxA, g, e || 5 * 60 * 10, 0, 0, // 5, minutes, default
+      maxSi, z, e: conf, i, g.maxSi, z, e || 1, 0, 0
+      strate, g, y: conf, i, g.strate, g, y || 'L, R, U'
+      maxS, i, z
+  e: conf, i, g.maxSi, z, e || 1, 0, 0
+      strate, g, y: conf, i, g.strate, g, y || 'L, R, U',';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -56,12 +93,23 @@ class AdvancedCacheManage, r<T = a, n, y> {
       th, i, s.updateHitRa, t, e();
       return, nul, l;
     }
+<<<<<<< HEAD
 
     // Update access count for LFU strategy
     ent, r, y.accessCou, n, t++;
 
     // Update timestamp for LRU strategy if() { ent r y.timesta m p = Da t e.no w();
      }, th, i, s.sta, t, s.hi, t, s++;
+=======
+    // Update, access, count for, LFU, strategy
+  ent, r, y.accessCou, n, t++;
+    // Update, timestamp, for LRU, strateg, y
+  if (th, i, s.conf, i, g.strate, g, y === 'L, R, U') {;
+    if (th, i, s.conf, i, g.strate, g, y === 'L, R, U') {';
+      ent, r, y.timesta, m, p = Da, t, e.n, o, w();
+    }
+    th, i, s.sta, t, s.hi, t, s++;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     th, i, s.updateHitRa, t, e();
     return, entr, y.val, u, e;
   }
@@ -69,6 +117,7 @@ class AdvancedCacheManage, r<T = a, n, y> {
   /**
    * Set value in cac h e
    */
+<<<<<<< HEAD
   s, e, t(k, e, y: str, i, n, g, val, u, e:  , T, customMaxA, g, e?: number): vo, i, d { 
     // If cache is fu l l evict based on strategy i f() { th i s.evi c t();
       }, const siz, e = th, i, s.estimateSi, z, e(va, l, u, e); th, i, s.cac, h, e.s, e, t(k, e, y, {
@@ -76,6 +125,22 @@ class AdvancedCacheManage, r<T = a, n, y> {
       timesta, m, p: Da, t, e.no, w(),
       accessCou, n, t:  , 0,
       si, z, e,
+=======
+  s, e, t(k, e, y: stri, n, g, val, u, e: T, customMaxA, g, e?: numb, e, r): vo, i, d {
+    // If, cache, is fu, l, l, evict, based, on strate, g, y
+  if (th, i, s.cac, h, e.si, z, e >= th, i, s.conf, i, g.maxSi, z, e) {
+      th, i, s.evi, c, t();
+    }
+    const, siz, e = th, i, s.estimateSi, z, e(val, u, e);
+    th, i, s.cac, h, e.s, e, t(k, e, y, {
+      val, u, e
+      timesta, m, p: Da, t, e.n, o, w()
+      accessCou, n, t: 0
+      si, z, e;
+      timesta, m, p: Da, t, e.n, o, w()
+      accessCou, n, t: 0
+      si, z, e
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
 
     th, i, s.sta, t, s.currentSi, z, e = th, i, s.cac, h, e.si, z, e;
@@ -130,12 +195,36 @@ class AdvancedCacheManage, r<T = a, n, y> {
    * Evict entries based on strateg y
    */
   private, evic, t(): vo, i, d {
+<<<<<<< HEAD
     if (th, i, s.cac, h, e.si, z, e = == , 0) retu, r, n; let keyToEvic, t: string | nu, l, l = nu, l, l; swit, c, h() { ca, s, e 'L, R, U': // Least Recently Used
         keyToEvi, c, t = th, i, s.findLRU, K, e, y(); bre, a, k;
       ca, s, e 'L, F, U': // Least Frequently Used
         keyToEvi, c, t = th, i, s.findLFU, K, e, y(); bre, a, k;
       ca, s, e 'FI, F, O': // First In First Out keyToEvic t = th i s.cac h e.k e y s().ne x t().val u e || nu l l; br e a k;
      }, if (keyToEvi, c, t) {
+=======
+if (th, i, s.cac, h, e.si, z, e === 0) retu, r, n;
+let, keyToEvic, t: stri, n, g | nu, l, l = nu, l, l;
+swit, c, h (th, i, s.conf, i, g.strate, g, y) {
+ca, s, e 'L, R, U': // Least, Recently, Used
+  keyToEvi, c, t = th, i, s.findLRUK, e, y();
+bre, a, k;
+ca, s, e 'L, F, U': // Least, Frequently, Used
+  keyToEvi, c, t = th, i, s.findLFUK, e, y();
+bre, a, k;
+ca, s, e 'FI, F, O': // First, In, First O, u, t;
+ca, s, e 'L, R, U': // Least, Recently, Used,';
+keyToEvi, c, t = th, i, s.findLRUK, e, y();
+bre, a, k;
+ca, s, e 'L, F, U': // Least, Frequently, Used,';
+keyToEvi, c, t = th, i, s.findLFUK, e, y();
+bre, a, k;
+ca, s, e 'FI, F, O': // First, In, First O, u, t,';
+keyToEvi, c, t = th, i, s.cac, h, e.ke, y, s().ne, x, t().val, u, e || nu, l, l;
+bre, a, k;
+}
+    if (keyToEvi, c, t) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       th, i, s.cac, h, e.dele, t, e(keyToEvi, c, t);
       th, i, s.sta, t, s.evictio, n, s++;
       th, i, s.sta, t, s.currentSi, z, e = th, i, s.cac, h, e.si, z, e;
@@ -145,8 +234,16 @@ class AdvancedCacheManage, r<T = a, n, y> {
   /**
    * Find Least Recently Used ke y
    */
+<<<<<<< HEAD
   private, findLRUK, e, y(): string | nu, l, l {
     let oldestKe, y: string | nu, l, l = nu, l, l; let oldestTim, e = Infini, t, y; f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
+=======
+  private, findLRUKe, y(): stri, n, g | nu, l, l {
+    let, oldestKe, y: stri, n, g | nu, l, l = nu, l, l
+    let, oldestKe, y: stri, n, g | nu, l, l = nu, l, l;
+    let, oldestTim, e = Infini, t, y;
+    f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       if (ent, r, y.timesta, m, p < oldestTi, m, e) {
         oldestTi, m, e = ent, r, y.timesta, m, p; oldestK, e, y = k, e, y;
       }
@@ -158,8 +255,16 @@ class AdvancedCacheManage, r<T = a, n, y> {
   /**
    * Find Least Frequently Used ke y
    */
+<<<<<<< HEAD
   private, findLFUK, e, y(): string | nu, l, l {
     let lfuKe, y: string | nu, l, l = nu, l, l; let minCoun, t = Infini, t, y; f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
+=======
+  private, findLFUKe, y(): stri, n, g | nu, l, l {
+    let, lfuKe, y: stri, n, g | nu, l, l = nu, l, l
+    let, lfuKe, y: stri, n, g | nu, l, l = nu, l, l;
+    let, minCoun, t = Infini, t, y;
+    f, o, r (con, s, t [k, e, y, ent, r, y] of, thi, s.cac, h, e.entri, e, s()) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       if (ent, r, y.accessCou, n, t < minCou, n, t) {
         minCou, n, t = ent, r, y.accessCou, n, t; lfuK, e, y = k, e, y;
       }
@@ -277,6 +382,7 @@ class AdvancedCacheManage, r<T = a, n, y> {
     }
   }
 }
+<<<<<<< HEAD
 
 // Singleton instances for different cache types
 const apiCach, e = new, AdvancedCacheManage, r<a, n, y>({
@@ -300,6 +406,42 @@ if (typeof, windo, w !== 'undefin, e, d') {
      },
     5 * 60 * 10, 0, 0,
   ); // Clean every 5 minut e s
+=======
+// Singleton, instances, for different, cache, types
+  const, apiCach, e = new, AdvancedCacheManage, r<a, n, y>({
+  maxA, g, e: 5 * 60 * 10, 0, 0, // 5, minute, s
+  maxSi, z, e: 1, 0, 0
+  strate, g, y: 'L, R, U'
+  maxS, i, z
+  e: 1, 0, 0
+  strate, g, y: 'L, R, U',';
+});
+const, contentCach, e = new, AdvancedCacheManage, r<a, n, y>({
+  maxA, g, e: 60 * 60 * 10, 0, 0, // 1, hou, r
+  maxSi, z, e: 50
+  strate, g, y: 'L, F, U'
+  maxS, i, z
+  e: 50
+  strate, g, y: 'L, F, U',';
+});
+const, imageCach, e = new, AdvancedCacheManage, r<stri, n, g>({
+  maxA, g, e: 24 * 60 * 60 * 10, 0, 0, // 24, hour, s
+  maxSi, z, e: 2, 0, 0
+  strate, g, y: 'L, R, U'
+});
+// Start, periodic, cleanup
+  if (typeof, windo, w !== 'undefin, e, d') {;
+  maxSi, z, e: 2, 0, 0
+  strate, g, y: 'L, R, U',';
+});
+// Start, periodic, cleanup
+  if (typeof, windo, w !== 'undefin, e, d') {';
+  setInterv, a, l(() => {
+    apiCac, h, e.cleanExpir, e, d();
+    contentCac, h, e.cleanExpir, e, d();
+    imageCac, h, e.cleanExpir, e, d();
+  }, 5 * 60 * 10, 0, 0); // Clean, every, 5 minut, e, s;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 expo, r, t { AdvancedCacheManag, e, r, apiCac, h, e, contentCac, h, e, imageCac, h, e };

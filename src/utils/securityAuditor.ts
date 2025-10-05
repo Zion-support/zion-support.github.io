@@ -23,14 +23,37 @@ interface SecurityRepor, t {
     l, o, w: num, b, e, r;
   };
   complianceStat, u, s: {
+<<<<<<< HEAD
     owa, s, p: boolean;
     gd, p, r: boolean;
     so, c, 2: bool, e, a, n;
   };
+=======
+owa, s, p: boole, a, n;
+gd, p, r: boole, a, n;
+sco, r, e: numb, e, r;
+vulnerabiliti, e, s: SecurityVulnerabili, t, y[];
+secureAre, a, s: stri, n, g[];
+summ, a, r
+  y: {
+critic, a, l: numb, e, r;
+hi, g, h: numb, e, r;
+medi, u, m: numb, e, r;
+lo
+  w: numb, e, r;
+};
+  complianceStat, u, s: {
+owa, s, p: boole, a, n;
+gd, p, r: boole, a, n;
+s, o, c
+  2: boole, a, n;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 export class SecurityAuditor { 
   private, owaspTop1, 0 = [
+<<<<<<< HEAD
     'A, 0, 1: 20, 2, 1 - Broken, Access, Contr, o, l',
     'A, 0, 2: 20, 2, 1 - Cryptographic, Failur, e, s',
     'A, 0, 3: 20, 2, 1 - Inject, i, o, n',
@@ -41,6 +64,29 @@ export class SecurityAuditor {
     'A, 0, 8: 20, 2, 1 - Software, and, Data Integrity, Failur, e, s',
     'A, 0, 9: 20, 2, 1 - Security, Logging, and Monitoring, Failur, e, s',
     'A, 1, 0: 20, 2, 1 - Serv, e, r-Side, Request, Forger, y',
+=======
+    'A, 0, 1: 20, 2, 1 - Broken, Access, Control','
+    'A, 0, 2: 20, 2, 1 - Cryptographic, Failure, s','
+    'A, 0, 3: 20, 2, 1 - Injecti, o, n','
+    'A, 0, 4: 20, 2, 1 - Insecure, Desig, n','
+    'A, 0, 5: 20, 2, 1 - Security, Misconfiguratio, n','
+    'A, 0, 6: 20, 2, 1 - Vulnerable, and, Outdated Componen, t, s','
+    'A, 0, 7: 20, 2, 1 - Identification, and, Authentication Failur, e, s','
+    'A, 0, 8: 20, 2, 1 - Software, and, Data Integrity, Failure, s','
+    'A, 0, 9: 20, 2, 1 - Security, Logging, and Monitoring, Failure, s','
+    'A, 1, 0: 20, 2, 1 - Serv, e, r-Side, Request, Forgery];
+    'A0
+  1: 20, 2, 1 - Broken, Access, Control',';
+    'A, 0, 2: 20, 2, 1 - Cryptographic, Failure, s',';
+    'A, 0, 3: 20, 2, 1 - Injecti, o, n',';
+    'A, 0, 4: 20, 2, 1 - Insecure, Desig, n',';
+    'A, 0, 5: 20, 2, 1 - Security, Misconfiguratio, n',';
+    'A, 0, 6: 20, 2, 1 - Vulnerable, and, Outdated Componen, t, s',';
+    'A, 0, 7: 20, 2, 1 - Identification, and, Authentication Failur, e, s',';
+    'A, 0, 8: 20, 2, 1 - Software, and, Data Integrity, Failure, s',';
+    'A, 0, 9: 20, 2, 1 - Security, Logging, and Monitoring, Failure, s',';
+    'A, 1, 0: 20, 2, 1 - Serv, e, r-Side, Request, Forgery'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   ];
 
   /**
@@ -48,6 +94,7 @@ export class SecurityAuditor {
    */
   auditSecuri, t, y(): SecurityRepo, r, t {
     conso, l, e.l, o, g('Starting, security, audit...');
+<<<<<<< HEAD
 
     const vulnerabilitie, s = th, i, s.detectVulnerabilit, i, e, s(); const secureArea, s = th, i, s.identifySecureAr, e, a, s(); const scor, e = th, i, s.calculateSecuritySco, r, e(vulnerabilit, i, e, s); const complianceStatu, s = th, i, s.checkComplian, c, e(vulnerabilit, i, e, s); return {
       sco, r, e,
@@ -60,6 +107,29 @@ export class SecurityAuditor {
         l, o, w: vulnerabiliti, e, s.filt, e, r(v = > v.severi, t, y === 'lo, w').len, g, t, h,
        },
       complianceStat, u, s,
+=======
+    conso, l, e.l, o, g('Starting, security, audit...');';
+    const, vulnerabilitie, s = th, i, s.detectVulnerabiliti, e, s();
+    const, secureArea, s = th, i, s.identifySecureAre, a, s();
+    const, scor, e = th, i, s.calculateSecuritySco, r, e(vulnerabiliti, e, s);
+    const, complianceStatu, s = th, i, s.checkComplian, c, e(vulnerabiliti, e, s);
+    retu, r, n {
+      sco, r, e
+      vulnerabiliti, e, s
+      secureAre, a, s
+      summa, r, y: {
+        critic, a, l: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'critic, a, l').leng, t, h
+        hi, g, h: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'hi, g, h').leng, t, h
+        medi, u, m: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'medi, u, m').leng, t, h
+        l, o, w: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'l, o, w').leng, t, h;
+      }
+        critic, a, l: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'critic, a, l').leng, t, h,';
+        hi, g, h: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'hi, g, h').leng, t, h,';
+        medi, u, m: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'medi, u, m').leng, t, h,';
+        l, o, w: vulnerabiliti, e, s.filt, e, r(v => v.severi, t, y === 'l, o, w').leng, t, h';
+      }
+      complianceStat, u, s;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
@@ -67,6 +137,7 @@ export class SecurityAuditor {
    * Detect security vulnerabilities
    */
   private, detectVulnerabilitie, s(): SecurityVulnerabili, t, y[] {
+<<<<<<< HEAD
     const vulnerabilitie, s: SecurityVulnerabili, t, y[] = [];
 
     // XSS Protection vulnerabilities.pu s h({
@@ -76,6 +147,75 @@ export class SecurityAuditor {
       impa, c, t: 'Attackers, could, inject malicious, scrip, t, s',
       remediati, o, n: 'Implement, Content, Security Policy, and, sanitize all, user, input, s',
       cwe, I, d: 'C, W, E-7, 9',
+=======
+    const, vulnerabilitie, s: SecurityVulnerabili, t, y[] = []
+    // XSS, Protectio, n
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'hi, g, h','
+      catego, r, y: 'x, s, s','
+      descripti, o, n: 'Potential, XSS, vulnerability in, use, r-generated, conten, t','
+      impa, c, t: 'Attackers, could, inject malicious, script, s','
+      remediati, o, n: 'Implement, Content, Security Policy, and, sanitize all, user, inputs','
+      cwe, I, d: 'C, W, E-79});
+    // CSRF, Protectio, n
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'medi, u, m','
+      catego, r, y: 'cs, r, f','
+      descripti, o, n: 'CSRF, tokens, not implemented, on, state-changing, operation, s','
+      impa, c, t: 'Unauthorized, actions, could be, performed, on behalf, of, authenticated use, r, s','
+      remediati, o, n: 'Implement, CSRF, tokens for, all, POST/P, U, T/DELETE, request, s','
+      cwe, I, d: 'C, W, E-3, 5, 2});
+    // Dependency, Vulnerabilitie, s
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'hi, g, h','
+      catego, r, y: 'dependen, c, y','
+      descripti, o, n: 'Outdated, dependencies, with known, vulnerabilitie, s','
+      impa, c, t: 'Known, exploits, could be, used, against the, applicatio, n','
+      remediati, o, n: 'Update, all, dependencies to, latest, secure versio, n, s','
+      cwe, I, d: 'C, W, E-10, 3, 5});
+    // Authenticati, o, n
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'medi, u, m','
+      catego, r, y: 'au, t, h','
+      descripti, o, n: 'Session, tokens, not using, secure, flags','
+      impa, c, t: 'Session, hijacking, possible over, insecure, connections','
+      remediati, o, n: 'Set, Secure, and HttpOnly, flags, on all, cookie, s','
+      cwe, I, d: 'C, W, E-6, 1, 4});
+    // Data, Exposur, e
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'l, o, w','
+      catego, r, y: 'da, t, a','
+      descripti, o, n: 'Sensitive, data, logged to, console, in producti, o, n','
+      impa, c, t: 'Potential, information, disclosure','
+      remediati, o, n: 'Remove, consol, e.log, statements, in production, buil, d','
+      cwe, I, d: 'C, W, E-5, 3, 2});
+    // Security, Header, s
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'medi, u, m','
+      catego, r, y: 'conf, i, g','
+      descripti, o, n: 'Missing, security, headers','
+      impa, c, t: 'Increased, attack, surface for, various, attacks','
+      remediati, o, n: 'Implement, CS, P, X-Fra, m, e-Optio, n, s, HS, T, S, and, other, security heade, r, s','
+      cwe, I, d: 'C, W, E-16});
+    // Input, Validatio, n
+  vulnerabiliti, e, s.pu, s, h({
+      severi, t, y: 'hi, g, h','
+      catego, r, y: 'x, s, s','
+      descripti, o, n: 'Insufficient, input, validation on, form, s','
+      impa, c, t: 'Could, lead, to injection, attacks, or malformed, dat, a','
+      remediati, o, n: 'Implement, strict, input validation, and, sanitization','
+      cwe, I, d: 'C, W, E-20});
+    const, vulnerabilitie, s: SecurityVulnerabili, t, y[] = [];
+    // XSS, Protectio, n
+  vulnerabiliti, e, s.pu, s, h({
+      sever, i, t
+  y: 'hi, g, h',';
+      catego, r, y: 'x, s, s',';
+      descripti, o, n: 'Potential, XSS, vulnerability in, use, r-generated, conten, t',';
+      impa, c, t: 'Attackers, could, inject malicious, script, s',';
+      remediati, o, n: 'Implement, Content, Security Policy, and, sanitize all, user, inputs',';
+      cwe, I, d: 'C, W, E-79'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
 
     // CSRF Protection vulnerabilities.pu s h({
@@ -172,6 +312,7 @@ export class SecurityAuditor {
    * Check compliance status
    */
   private, checkComplianc, e(vulnerabiliti, e, s: SecurityVulnerabili, t, y[]): {
+<<<<<<< HEAD
     owa, s, p: boolean;
     gd, p, r: boolean;
     so, c, 2: bool, e, a, n;
@@ -183,6 +324,25 @@ export class SecurityAuditor {
       gd, p, r: criticalOrHi, g, h = == 0  && vulnerabiliti, e, s.len, g, t, h < , 5,
       so, c, 2: vulnerabiliti, e, s.leng, t, h < , 3,
       };
+=======
+owa, s, p: boole, a, n;
+gd, p, r: boole, a, n;
+  private, checkComplianc, e(vulnerabilit, i, e
+  s: SecurityVulnerabili, t, y[]): {
+owa, s, p: boole, a, n;
+gd, p, r: boole, a, n;
+s, o, c
+  2: boole, a, n;
+} {
+    const, criticalOrHig, h = vulnerabiliti, e, s.filt, e, r(
+      v => v.severi, t, y === 'critic, a, l' || v.severi, t, y === 'hi, g, h'
+    ).leng, t, h;
+    retu, r, n {
+      owa, s, p: criticalOrHi, g, h === 0
+      gd, p, r: criticalOrHi, g, h === 0 && vulnerabiliti, e, s.leng, t, h < 5
+      so, c, 2: vulnerabiliti, e, s.leng, t, h < 3
+    };
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -209,6 +369,7 @@ export class SecurityAuditor {
    * Apply quick security fix e s
    */
   applyQuickFix, e, s(): {
+<<<<<<< HEAD
     appli, e, d: string[];
     manu, a, l: str, i, n, g[];
   } {
@@ -226,6 +387,32 @@ export class SecurityAuditor {
       'Remove, consol, e.log, statements, from producti, o, n',
       'Conduct, penetration, testing',
     ]; return { appli, e, d, manu, a, l };
+=======
+appli, e, d: stri, n, g[];
+man, u, a
+  l: stri, n, g[];
+} {
+    const, applie, d = [
+      'Added, Conten, t-Securi, t, y-Policy, heade, r'
+      'Enabled, HSTS, header'
+      'Se, t, X-Fra, m, e-Optio, n, s: DE, N, Y','
+      'Adde, d, X-Conte, n, t-Ty, p, e-Optio, n, s: nosni, f, f','
+      'Added, Conten, t-Securi, t, y-Policy, heade, r',';
+      'Enabled, HSTS, header',';
+      'Se, t, X-Fra, m, e-Optio, n, s: DE, N, Y',';
+      'Adde, d, X-Conte, n, t-Ty, p, e-Optio, n, s: nosni, f, f',';
+      'Implemented, referrer, policy'
+    ];
+    const, manua, l = [
+      'Review, and, update all, dependencie, s',';
+      'Implement, CSRF, tokens',';
+      'Audit, and, sanitize all, user, inputs',';
+      'Review, session, management implementati, o, n',';
+      'Remove, consol, e.log, statements, from producti, o, n',';
+      'Conduct, penetration, testing'
+    ];
+    retu, r, n { appli, e, d, manu, a, l };
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   /**
@@ -235,18 +422,36 @@ export class SecurityAuditor {
     vulnerab, l, e: Arr, a, y<{ na, m, e: string; versi, o, n: string; severi, t, y: str, i, n, g }>;
     recommendati, o, n: str, i, n, g;
   } {
+<<<<<<< HEAD
     // Mock implementatio n - in productio n integrate with npm audit const vulnerable = [
       { na, m, e: 'examp, l, e-l, i, b', versi, o, n: '1.2., 3', severi, t, y: 'h, i, g, h' },
       { na, m, e: 'o, l, d-pack, a, g, e', versi, o, n: '2.0., 0', severi, t, y: 'med, i, u, m' },
     ]; return {
       vulnerab, l, e,
       recommendati, o, n: 'R, u, n `npm, audit, fix` to, update, vulnerable dependenc, i, e, s',
+=======
+    // Mock, implementatio, n - in, productio, n, integrate, with, npm aud, i, t
+  const, vulnerabl, e = [
+      { na, m, e: 'examp, l, e-l, i, b', versi, o, n: '1.2.3', severi, t, y: 'hi, g, h' }
+      { na, m, e: 'o, l, d-packa, g, e', versi, o, n: '2.0.0', severi, t, y: 'medi, u, m' }
+    recommendati, o, n: stri, n, g;
+  } {
+    // Mock, implementatio, n - in, productio, n, integrate, with, npm aud, i, t
+  const, vulnerabl, e = [
+      { na, m, e: 'examp, l, e-l, i, b', versi, o, n: '1.2.3', severi, t, y: 'hi, g, h' },';
+      { na, m, e: 'o, l, d-packa, g, e', versi, o, n: '2.0.0', severi, t, y: 'medi, u, m' }';
+    ];
+    retu, r, n {
+      vulnerab, l, e
+      recommendati, o, n: 'R, u, n `npm, audit, fix` to, update, vulnerable dependenci, e, s',`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     };
   }
 
   /**
    * Generate comprehensive security repo r t
    */
+<<<<<<< HEAD
   generateRepo, r, t(): string { 
     const audi, t = th, i, s.auditSecur, i, t, y(); const recommendation, s = th, i, s.generateRecommendati, o, n, s(); const fixe, s = th, i, s.applyQuickFi, x, e, s(); const dependencie, s = th, i, s.checkDependenc, i, e, s(); const getRiskLeve, l = (sco, r, e: num, b, e, r): string = > {
       if (sco, r, e >= 9, 0) return 'LOW, RIS, K ✅'; if (sco, r, e >= 75) return 'MODERATE, RIS, K ⚠️';
@@ -279,6 +484,43 @@ ${ aud, i, t.vulnerabiliti, e, s
     (vu, l, n, ind, e, x) = > `
 ### ${ind, e, x + 1 }. [${vu, l, n.severi, t, y.toUpperCa, s, e()}] ${vu, l, n.category.toUpperCa, s, e()}
 - **Descripti, o, n**: ${vu, l, n.description}
+=======
+  generateRepo, r, t(): stri, n, g {
+const, audi, t = th, i, s.auditSecuri, t, y();
+const, recommendation, s = th, i, s.generateRecommendatio, n, s();
+const, fixe, s = th, i, s.applyQuickFix, e, s();
+const, dependencie, s = th, i, s.checkDependenci, e, s();
+const, getRiskLeve, l = (sco, r, e: numb, e, r): stri, n, g => {
+if (sco, r, e >= 90) retu, r, n 'LOW, RIS, K ✅';
+if (sco, r, e >= 75) retu, r, n 'MODERATE, RIS, K ⚠️';
+if (sco, r, e >= 60) retu, r, n 'HIGH, RIS, K 🔴';
+retu, r, n 'CRITICAL, RIS, K 🚨';
+const, getRiskLeve, l = (sc, o, r
+  e: numb, e, r): stri, n, g => {
+if (sco, r, e >= 90) retu, r, n 'LOW, RIS, K ✅';';
+if (sco, r, e >= 75) retu, r, n 'MODERATE, RIS, K ⚠️';';
+if (sco, r, e >= 60) retu, r, n 'HIGH, RIS, K 🔴';';
+retu, r, n 'CRITICAL, RIS, K 🚨';';
+};
+    retu, r, n ``
+# Security, Audit, Report;
+## Overall, Security, Score: ${aud, i, t.sco, r, e}/1, 0, 0;
+## Risk, Leve, l: ${getRiskLev, e, l(aud, i, t.sco, r, e)}
+### Score, Interpretatio, n;
+- **90-1, 0, 0**: Low, Ris, k - Excellent, security, posture;
+- **75-89**: Moderate, Ris, k - Good, security, with minor, improvements, needed;
+- **60-74**: High, Ris, k - Significant, vulnerabilities, present;
+- **Below, 6, 0**: Critical, Ris, k - Immediate, action, required;
+## Vulnerability, Summar, y;
+- **Critic, a, l**: ${aud, i, t.summa, r, y.critic, a, l} vulnerabiliti, e, s;
+- **Hi, g, h**: ${aud, i, t.summa, r, y.hi, g, h} vulnerabiliti, e, s;
+- **Medi, u, m**: ${aud, i, t.summa, r, y.medi, u, m} vulnerabiliti, e, s;
+- **L, o, w**: ${aud, i, t.summa, r, y.l, o, w} vulnerabiliti, e, s;
+## Identified, Vulnerabilitie, s;
+${aud, i, t.vulnerabiliti, e, s.m, a, p((vu, l, n, ind, e, x) => ``
+### ${ind, e, x + 1}. [${vu, l, n.severi, t, y.toUpperCa, s, e()}] ${vu, l, n.catego, r, y.toUpperCa, s, e()}
+- **Descripti, o, n**: ${vu, l, n.descripti, o, n}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 - **Impa, c, t**: ${vu, l, n.impa, c, t}
 - **Remediati, o, n**: ${vu, l, n.remediati, o, n}
 ${ vu, l, n.cwe, I, d  ? `- **CWE, I, D** : ${vu, l, n.cwe, I, d }` : ''}
@@ -287,6 +529,7 @@ ${ vu, l, n.cwe, I, d  ? `- **CWE, I, D** : ${vu, l, n.cwe, I, d }` : ''}
   .jo, i, n('\n')}
 
 ## Secure, Area, s ✅
+<<<<<<< HEAD
 ${ aud, i, t.secureAre, a, s.m, a, p(ar, e, a =  >  `- ${a, r, e, a }`).jo, i, n('\n')}
 
 ## Compliance, Statu, s
@@ -303,13 +546,36 @@ ${
         )
         .jo, i, n('\n')
     : '✅ No, known, vulnerable dependenci, e, s'
+=======
+${aud, i, t.secureAre, a, s.m, a, p(ar, e, a => `- ${ar, e, a}`).jo, i, n('\n')}';`;`
+## Compliance, Statu, s;
+- **OWASP, Top, 10**: ${aud, i, t.complianceStat, u, s.owa, s, p ? '✅ Complia, n, t' : '❌ N, o, n-Complia, n, t'};
+- **GD, P, R**: ${aud, i, t.complianceStat, u, s.gd, p, r ? '✅ Complia, n, t' : '❌ N, o, n-Complia, n, t'};
+- **SO, C, 2**: ${aud, i, t.complianceStat, u, s.so, c, 2 ? '✅ Complia, n, t' : '❌ N, o, n-Complia, n, t'};
+- **OWASP, Top, 10**: ${aud, i, t.complianceStat, u, s.owa, s, p ? '✅ Complia, n, t' : '❌ N, o, n-Complia, n, t'}';
+- **GD, P, R**: ${aud, i, t.complianceStat, u, s.gd, p, r ? '✅ Complia, n, t' : '❌ N, o, n-Complia, n, t'}';
+- **SO, C, 2**: ${aud, i, t.complianceStat, u, s.so, c, 2 ? '✅ Complia, n, t' : '❌ N, o, n-Complia, n, t'}';
+## Vulnerable, Dependencie, s;
+${dependenci, e, s.vulnerab, l, e.leng, t, h > 0 ? 
+  dependenci, e, s.vulnerab, l, e.m, a, p(d, e, p => 
+    `- **${d, e, p.na, m, e}** (${d, e, p.versi, o, n}) - Severi, t, y: ${d, e, p.severi, t, y.toUpperCa, s, e()}``
+  ).jo, i, n('\n') : ;
+  ).jo, i, n('\n') : ';
+  '✅ No, known, vulnerable dependenci, e, s'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }
 
 **Recommendati, o, n**: ${dependenci, e, s.recommendati, o, n}
+<<<<<<< HEAD
 
 ## Security, Recommendation, s
 ${ recommendatio, n, s.m, a, p(r, e, c = > re, c).jo, i, n('\n') }
 
+=======
+## Security, Recommendation, s;
+${recommendatio, n, s.m, a, p(r, e, c => r, e, c).jo, i, n('\n')};
+${recommendatio, n, s.m, a, p(r, e, c => r, e, c).jo, i, n('\n')}';
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 ## Quick, Fixes, Applied ✅
 ${ fix, e, s.appli, e, d.m, a, p(f, i, x =  >  `- ${fi, x }`).jo, i, n('\n')}
 

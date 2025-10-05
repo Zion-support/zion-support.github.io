@@ -315,6 +315,22 @@ const NewestContent2025Banner = () => {
               <div className='text-gray-300 text-sm font-medium'>
                 {stat.label}
               </div>
+<<<<<<< HEAD
+=======
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+              <Link
+                href="/contact"
+                className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
+                <span>Start Your AI Transformation</span>
+              </Link>
+              
+              <Link
+                href="/blog"
+                className="group flex items-center gap-3 bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-8 rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300">
+                <span>Explore All Articles</span>
+                <span>→</span>
+              </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
             </div>
           ))}
         </div>

@@ -128,8 +128,12 @@ Once the merge is complete, the following improvements can be implemented:
 ## 📝 Technical Details
 
 ### Changes Made
+<<<<<<< HEAD
 1. **Merge Conflict Resolution**: Removed all ``, ``, and `ranch_name` markers
 2. **Syntax Error Fixes**: Fixed JavaScript parsing errors and template literal issues
+=======
+1. **Merge Conflict Resolution**: Removed all ``, and `2. **Syntax Error Fixes**: Fixed JavaScript parsing errors and template literal issues
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 3. **Module System Updates**: Converted CommonJS `require()` to ES6 `import` statements
 4. **Code Cleanup**: Removed duplicate function declarations and imports
 

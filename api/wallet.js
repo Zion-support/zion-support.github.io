@@ -1,4 +1,5 @@
 const { withErrorLogging } = require('./withErrorLogging.cjs');
+<<<<<<< HEAD
 async function handler(req) res) {if (req.method !== 'GET') {
     res.statusCode = 405}
     res.setHeader('Allow'} 'GET');
@@ -6,6 +7,51 @@ async function handler(req) res) {if (req.method !== 'GET') {
     return;
   }
   try {
+=======
+import { withErrorLogging } from './withErrorLogging.cjs';
+
+async function handler(req, res) {
+  if (req.method !== 'GET') {
+    res.statusCode = 405;
+    res.setHeader('Allow', 'GET');
+    res.end('Method Not Allowed');
+    return;
+  }
+
+  const { userId } = req.query || {};
+  
+  if (!userId) {
+    res.statusCode = 400;
+    res.json({ error: 'User ID is required' });
+    return;
+  }
+
+  try {
+    // Fetch wallet data logic here
+    const wallet = {
+      id: `wallet_${userId}`,
+      userId,
+      balance: 0,
+      currency: 'usd',
+      transactions: [],
+      createdAt: new Date().toISOString()
+    };
+
+    res.status(200).json({
+      success: true,
+      wallet
+    });
+  } catch (error) {
+    console.error('Wallet fetch error:', error);
+    res.status(500).json({ 
+      error: error.message || 'Failed to fetch wallet' 
+    });
+  }
+}
+
+export default withErrorLogging(handler);
+try {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     const { userId } = req.query || {};
     if (!userId) {res.statusCode = 400}
       res.json({ error: 'User ID is required' });
@@ -24,4 +70,9 @@ async function handler(req) res) {if (req.method !== 'GET') {
     res.json({ error: error.message || 'Failed to fetch wallet' });
   }
 }
+<<<<<<< HEAD
 module.exports = withErrorLogging(handler);
+=======
+
+module.exports = withErrorLogging(handler);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279

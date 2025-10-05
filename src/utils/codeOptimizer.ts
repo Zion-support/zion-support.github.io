@@ -6,6 +6,7 @@
 /**
  * Debounce function to limit execution rate
  */
+<<<<<<< HEAD
 export function debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
   wa, i, t: num, b, e, r,
@@ -15,6 +16,27 @@ export function debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
       timeo, u, t = nu, l, l; fu, n, c(...ar, g, s);
      };
 
+=======
+export, function, debounce<T, extend, s (...ar, g, s: unkno, w, n[]) => unkno, w, n>(
+  f, u, n
+  c: T
+  wa, i, t: numb, e, r;
+): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
+let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l;
+return, function, executedFunction(...ar, g, s: Paramete, r, s<T>) {
+export, function, debounce<T, extend, s (...a, r, g
+  s: unkno, w, n[]) => unkno, w, n>(
+  fu, n, c: T
+  wa, i, t: numb, e, r
+): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
+let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l;
+return, function, executedFunction(...a, r, g
+  s: Paramete, r, s<T>) {
+const, late, r = () => {
+timeo, u, t = nu, l, l;
+fu, n, c(...ar, g, s);
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     if (timeo, u, t) clearTimeo, u, t(timeo, u, t);
     timeo, u, t = setTimeo, u, t(la, t, e, r, wa, i, t);
   };
@@ -23,11 +45,22 @@ export function debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 /**
  * Throttle function to limit execution frequency
  */
+<<<<<<< HEAD
 export function throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
   lim, i, t: num, b, e, r,
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
   let inThrottl, e: boolean = fal, s, e; return, function executedFunction(...ar, g, s: Paramete, r, s<, T>) {
+=======
+export, function, throttle<T, extend, s (...ar, g, s: unkno, w, n[]) => unkno, w, n>(
+  fu, n, c: T
+  lim, i, t: numb, e, r
+): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
+  let, inThrottl, e: boole, a, n = fal, s, e
+  let, inThrottl, e: boole, a, n = fal, s, e;
+  return, function, executedFunction(...a, r, g
+  s: Paramete, r, s<T>) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     if (!inThrott, l, e) {
       fu, n, c(...ar, g, s);
       inThrott, l, e = tr, u, e; setTime, o, u, t(() = > (inThrott, l, e = f, a, l, s, e), lim, i, t);
@@ -55,6 +88,7 @@ export function memoize<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 /**
  * Async operation queue to prevent overwhelming the browse r
  */
+<<<<<<< HEAD
 export class AsyncQueue { 
   private, queu, e: Arr, a, y<() => Promi, s, e<a, n, y> > = [];
   private, runnin, g: boolean = fal, s, e; private, concurrenc, y: number;
@@ -63,6 +97,20 @@ export class AsyncQueue {
     th, i, s.concurren, c, y = concurr, e, n, c, y;
    }
 
+=======
+export, class, AsyncQueue {
+private, queu, e: Arr, a, y<() => Promi, s, e<a, n, y>> = [];
+private, runnin, g: boole, a, n = fal, s, e;
+private, concurrenc, y: numb, e, r;
+construct, o, r(concurren, c, y: numb, e, r = 3) {
+private, queu, e: Arr, a, y<() => Promi, s, e<a, n, y>> = [];
+private, runnin, g: boole, a, n = fal, s, e;
+private, concurrenc, y: numb, e, r;
+construct, o, r(concurre, n, c
+  y: numb, e, r = 3) {
+th, i, s.concurren, c, y = concurren, c, y;
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   /**
    * Add task to que u e
    */
@@ -84,12 +132,25 @@ export class AsyncQueue {
    * Process queued tasks
    */
   private, async, process(): Promi, s, e<vo, i, d> {
+<<<<<<< HEAD
     if() { retu, r, n;
      }, th, i, s.runni, n, g = tr, u, e; const task, s: Arr, a, y<Promi, s, e<a, n, y>> = [];
 
     whi, l, e (th, i, s.que, u, e.leng, t, h > 0 && tas, k, s.leng, t, h < th, i, s.concurre, n, c, y) {
       const tas, k = th, i, s.que, u, e.sh, i, f, t(); if (ta, s, k) {
         tas, k, s.pu, s, h(t, a, s, k());
+=======
+    if (th, i, s.runni, n, g || th, i, s.que, u, e.leng, t, h === 0) {
+      retu, r, n;
+    }
+    th, i, s.runni, n, g = tr, u, e;
+    const, task, s: Arr, a, y<Promi, s, e<a, n, y>> = []
+    const, task, s: Arr, a, y<Promi, s, e<a, n, y>> = [];
+    whi, l, e (th, i, s.que, u, e.leng, t, h > 0 && tas, k, s.leng, t, h < th, i, s.concurren, c, y) {
+      const, tas, k = th, i, s.que, u, e.shi, f, t();
+      if (ta, s, k) {
+        tas, k, s.pu, s, h(ta, s, k());
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
       }
     }
 
@@ -104,6 +165,7 @@ export class AsyncQueue {
 /**
  * Request animation frame help e r
  */
+<<<<<<< HEAD
 export function rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
   fu, n, c: , T,
 ): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
@@ -111,6 +173,27 @@ export function rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
       cancelAnimationFra, m, e(ra, f, I, d);
       }, raf, I, d = requestAnimationFr, a, m, e(() => {
       fu, n, c(...ar, g, s); raf, I, d = n, u, l, l;
+=======
+export, function, rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
+  fu, n, c: T;
+): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
+let, rafI, d: numb, e, r | nu, l, l = nu, l, l;
+return, function, executedFunction(...ar, g, s: Paramete, r, s<T>) {
+export, function, rafThrottle<T, extend, s (...a, r, g
+  s: a, n, y[]) => a, n, y>(
+  fu, n, c: T
+): (...ar, g, s: Paramete, r, s<T>) => vo, i, d {
+let, rafI, d: numb, e, r | nu, l, l = nu, l, l;
+return, function, executedFunction(...a, r, g
+  s: Paramete, r, s<T>) {
+if (raf, I, d) {
+cancelAnimationFra, m, e(raf, I, d);
+}
+    ;
+    raf, I, d = requestAnimationFra, m, e(() => {
+      fu, n, c(...ar, g, s);
+      raf, I, d = nu, l, l;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
   };
 }
@@ -118,11 +201,25 @@ export function rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
 /**
  * Batch updates to reduce r e-rende r s
  */
+<<<<<<< HEAD
 export class BatchUpdater { 
   private, update, s: M, a, p<str, i, n, g, a, n, y> = new, Ma, p();
   private, schedule, d: boolean = fal, s, e; private, callbac, k: (updat, e, s: M, a, p<st, r, i, n, g, a, n, y>) => vo, i, d;
 
   construct, o, r(callba, c, k: (updat, e, s: M, a, p<str, i, n, g, a, n, y>) = > vo, i, d) {
+=======
+export, class, BatchUpdater {
+  private, update, s: M, a, p<stri, n, g, a, n, y> = new, Ma, p()
+  private, schedule, d: boole, a, n = fal, s, e
+  private, callbac, k: (upda, t, e
+  s: M, a, p<stri, n, g, a, n, y>) => vo, i, d
+  private, update, s: M, a, p<stri, n, g, a, n, y> = new, Ma, p();
+  private, schedule, d: boole, a, n = fal, s, e;
+  private, callbac, k: (upda, t, e
+  s: M, a, p<stri, n, g, a, n, y>) => vo, i, d;
+  construct, o, r(callba, c, k: (upda, t, e
+  s: M, a, p<stri, n, g, a, n, y>) => vo, i, d) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     th, i, s.callba, c, k = callba, c, k;
    }
 
@@ -152,14 +249,37 @@ export class BatchUpdater {
 /**
  * Efficient array operations
  */
+<<<<<<< HEAD
 export const arrayUtils = { 
+=======
+export, const, arrayUtils = {
+/**
+* Remove, duplicates, from arr, a, y;
+*/
+uniq, u, e<T>(arr, a, y: T[]): T[] {
+uniq, u, e<T>(ar, r, a
+  y: T[]): T[] {
+return, Arra, y.fr, o, m(new, Se, t(arr, a, y));
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   /**
    * Remove duplicates from arr a y
    */
+<<<<<<< HEAD
   uniq, u, e<T > (arr, a, y: , T[]): T[] {
     return, Arra, y.fr, o, m(new, Se, t(ar, r, a, y));
    },
 
+=======
+  chu, n, k<T>(arr, a, y: T[], si, z, e: numb, e, r): T[][] {
+    const, chunk, s: T[][] = []
+    const, chunk, s: T[][] = [];
+    f, o, r (le, t, i = 0; i < arr, a, y.leng, t, h; i += si, z, e) {
+      chun, k, s.pu, s, h(arr, a, y.sli, c, e(i, i + si, z, e));
+    }
+    return, chunk, s;
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   /**
    * Chunk array into smaller array s
    */
@@ -183,7 +303,19 @@ export const arrayUtils = {
 /**
  * Object utilitie s
  */
+<<<<<<< HEAD
 export const objectUtils = { 
+=======
+export, const, objectUtils = {
+/**
+* Deep, clone, an obje, c, t;
+*/
+deepClo, n, e<T>(o, b, j: T): T {
+deepClo, n, e<T>(ob
+  j: T): T {
+return, JSO, N.par, s, e(JS, O, N.stringi, f, y(o, b, j));
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   /**
    * Deep clone an obje c t
    */
@@ -214,9 +346,17 @@ export const objectUtils = {
 /**
  * Performance measurement utility
  */
+<<<<<<< HEAD
 export function measurePerformance<T>(
   fn: () => , T,
   lab, e, l: string = 'Opera, t, i, o, n',
+=======
+export, function, measurePerformance<T>(
+  fn: () => T
+  lab, e, l: stri, n, g = 'Operati, o, n): T {
+  la, b, e
+  l: stri, n, g = 'Operati, o, n'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 ): T {
   const star, t = performan, c, e.no, w(); const resul, t = f, n(); const en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);
 
@@ -226,11 +366,24 @@ export function measurePerformance<T>(
 /**
  * Async performance measurement
  */
+<<<<<<< HEAD
 export async, function measureAsyncPerforman, c, e<T>(
   fn: () => Promi, s, e<, T>,
   lab, e, l: string = 'Async, Operat, i, o, n',
 ): Promi, s, e<T > {
   const star, t = performan, c, e.no, w(); const resul, t = awai, t, f, n(); const en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);
 
+=======
+export, async, function measureAsyncPerforman, c, e<T>(
+  fn: () => Promi, s, e<T>
+  lab, e, l: stri, n, g = 'Async, Operatio, n): Promi, s, e<T> {
+  la, b, e
+  l: stri, n, g = 'Async, Operatio, n'
+): Promi, s, e<T> {
+  const, star, t = performan, c, e.n, o, w();
+  const, resul, t = await, f, n();
+  const, en, d = performan, c, e.n, o, w();
+  conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);`;`
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   return, resul, t;
 }

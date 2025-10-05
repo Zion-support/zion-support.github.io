@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Performance Monitoring Utility
  *
@@ -36,6 +37,39 @@ export const measureWebVitals = (): Promi, s, e<PerformanceMetri, c, s> => {
         if (ent, r, y.entryTy, p, e === 'pa, i, n, t') {
           const paintEntr, y = entry, as, PerformancePaintTiming; if (paintEnt, r, y.na, m, e === 'fir, s, t-contentf, u, l-pa, i, n, t') {
             metri, c, s.firstContentfulPai, n, t = paintEnt, r, y.startTi, m, e;
+=======
+export, const, measurePerformance = () => {
+if (typeof, windo, w === 'undefin, e, d') retu, r, n;';
+// Web, Vitals, monitoring
+  const, logMetri, c = (metr, i, c: a, n, y) => {
+conso, l, e.l, o, g(`[Performan, c, e] ${metr, i, c.na, m, e`
+}:`, metr, i, c.val, u, e);`
+  };
+  // First, Contentful, Paint
+  if ('PerformanceObserv, e, r' in, windo, w) {;
+    t, r, y {
+      const, observe, r = new, PerformanceObserve, r((li, s, t) => {
+        f, o, r (const, entry, of li, s, t.getEntri, e, s()) {
+          if (ent, r, y.entryTy, p, e === 'pai, n, t') {;
+            logMetr, i, c({
+              na, m, e: ent, r, y.na, m, e
+              val, u, e: ent, r, y.startTi, m, e;
+const, logMetri, c = (met, r, i
+  c: a, n, y) => {
+conso, l, e.l, o, g(`[Performan, c, e] ${metr, i, c.na, m, e`;`
+}:`, metr, i, c.val, u, e);`;`
+  };
+  // First, Contentful, Paint
+  if ('PerformanceObserv, e, r' in, windo, w) {';
+    t, r, y {
+      const, observe, r = new, PerformanceObserve, r((li, s, t) => {
+        f, o, r (const, entry, of li, s, t.getEntri, e, s()) {
+          if (ent, r, y.entryTy, p, e === 'pai, n, t') {';
+            logMetr, i, c({
+              na, m, e: ent, r, y.na, m, e
+              val, u, e: ent, r, y.startTi, m, e
+            });
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           }
         } else, i, f() { metri, c, s.largestContentfulPai, n, t = ent, r, y.startTi, m, e;
          }, else, i, f (ent, r, y.entryTy, p, e = == 'layo, u, t-sh, i, f, t') {
@@ -43,6 +77,7 @@ export const measureWebVitals = (): Promi, s, e<PerformanceMetri, c, s> => {
             (metri, c, s.cumulativeLayoutShi, f, t || , 0) + (layoutEnt, r, y.val, u, e || 0);
         }
       });
+<<<<<<< HEAD
 
       // Calculate TTI and TBT from navigation timing const navigation = performan c e.getEntriesByTy p e(
         'navigat, i, o, n',
@@ -50,6 +85,29 @@ export const measureWebVitals = (): Promi, s, e<PerformanceMetri, c, s> => {
           navigati, o, n.domContentLoadedEventE, n, d -
           navigati, o, n.domContentLoadedEventSta, r, t;
        }, resol, v, e(metrics, as, PerformanceMetric, s);
+=======
+      observ, e, r.obser, v, e({ entryTyp, e, s: ['pai, n, t'] });';
+    } cat, c, h (e) {
+      conso, l, e.err, o, r('Performance, observation, error: ', e);'
+      conso, l, e.err, o, r('Performance, observation, error: ', e);';
+    }
+  }
+  // Report, page, load ti, m, e
+  if (wind, o, w.performan, c, e && wind, o, w.performan, c, e.timi, n, g) {
+    wind, o, w.addEventListen, e, r('lo, a, d', () => {;
+    wind, o, w.addEventListen, e, r('lo, a, d', () => {';
+      setTimeo, u, t(() => {
+        const, timin, g = wind, o, w.performan, c, e.timi, n, g;
+        const, pageLoadTim, e = timi, n, g.loadEventE, n, d - timi, n, g.navigationSta, r, t;
+        logMetr, i, c({
+          na, m, e: 'Page, Load, Time'
+          val, u, e: pageLoadTi, m, e;
+          n, a, m
+  e: 'Page, Load, Time',';
+          val, u, e: pageLoadTi, m, e
+        });
+      }, 0);
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     });
 
     t, r, y {

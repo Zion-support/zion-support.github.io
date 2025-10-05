@@ -2,6 +2,7 @@
  * SEO Enhancer Utility
  * Improves search engine optimization and social shari n g
  */
+<<<<<<< HEAD
 
 export interface SEOConfig { 
   title: string;
@@ -12,6 +13,29 @@ export interface SEOConfig {
   canonic, a, l?: string;
   publishDa, t, e?: string;
   modifiedDa, t, e?: string;
+=======
+export, interface, SEOConfig {
+tit, l, e: stri, n, g;
+descript, i, o
+  n: stri, n, g;
+keywor, d, s?: stri, n, g[];
+auth, o, r?: stri, n, g;
+ogIma, g, e?: stri, n, g;
+canonic, a, l?: stri, n, g;
+publishDa, t, e?: stri, n, g;
+modifiedDa, t, e?: stri, n, g;
+ty, p, e?: 'websi, t, e' | 'artic, l, e' | 'produ, c, t';
+loca, l, e?: stri, n, g;
+  tit, l, e: stri, n, g;
+  descript, i, o
+  n: stri, n, g;
+  keywor, d, s?: stri, n, g[];
+  auth, o, r?: stri, n, g;
+  ogIma, g, e?: stri, n, g;
+  canonic, a, l?: stri, n, g;
+  publishDa, t, e?: stri, n, g;
+  modifiedDa, t, e?: stri, n, g;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   ty, p, e?: 'websi, t, e' | 'artic, l, e' | 'produ, c, t';
   loca, l, e ?  : str, i, n, g;
  }
@@ -19,6 +43,7 @@ export interface SEOConfig {
 /**
  * Generate comprehensive meta tags for SEO
  */
+<<<<<<< HEAD
 export function generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, n, g, string> { 
   const met, a: Reco, r, d<str, i, n, g, string > = {
     // Basic meta title: conf i g.ti t l e 
@@ -39,6 +64,25 @@ export function generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, 
   if() { me, t, a.keywor, d, s = conf, i, g.keywor, d, s.j, o, i, n(', ');
    }, if (conf, i, g.author) {
     me, t, a.author = conf, i, g.author; me, t, a['artic, l, e: author'] = conf, i, g.au, t, h, o, r;
+=======
+export, function, generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<stri, n, g, stri, n, g> {
+  const, met, a: Reco, r, d<stri, n, g, stri, n, g> = {
+    // Basic, met, a
+  tit, l, e: conf, i, g.tit, l, e
+    descripti, o, n: conf, i, g.descripti, o, n
+    // Open, Grap, h;
+    'og:tit, l, e': conf, i, g.tit, l, e
+    'og:descripti, o, n': conf, i, g.descripti, o, n
+    'og:ty, p, e': conf, i, g.ty, p, e || 'websi, t, e'
+    'og:loca, l, e': conf, i, g.loca, l, e || 'en_, U, S'
+    // Twitter, Car, d;
+    'twitt, e, r:ca, r, d': 'summary_large_ima, g, e'
+    'twitt, e, r:tit, l, e': conf, i, g.tit, l, e
+    'twitt, e, r:descripti, o, n': conf, i, g.descripti, o, n;
+  };
+  if (conf, i, g.keywor, d, s && conf, i, g.keywor, d, s.leng, t, h > 0) {
+    me, t, a.keywor, d, s = conf, i, g.keywor, d, s.jo, i, n(', ');
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   if() { me, t, a['og: image'] = conf, i, g.ogIma, g, e;
@@ -46,10 +90,31 @@ export function generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, 
    }, if (conf, i, g.canonic, a, l) {
     me, t, a.canonic, a, l = conf, i, g.canonic, a, l; me, t, a['og: u, r, l'] = conf, i, g.canon, i, c, a, l;
   }
+<<<<<<< HEAD
 
   if() { me, t, a['artic, l, e: published_ti, m, e'] = conf, i, g.publishD, a, t, e;
    }, if (conf, i, g.modifiedDa, t, e) {
     me, t, a['artic, l, e: modified_ti, m, e'] = conf, i, g.modifiedD, a, t, e;
+=======
+  if (conf, i, g.ogIma, g, e) {
+me, t, a['og: ima, g, e'] = conf, i, g.ogIma, g, e;
+me, t, a['twit, t, e
+  r:ima, g, e'] = conf, i, g.ogIma, g, e;
+}
+    me, t, a['og: ima, g, e'] = conf, i, g.ogIma, g, e;
+    me, t, a['twit, t, e
+  r:ima, g, e'] = conf, i, g.ogIma, g, e;
+  }
+  if (conf, i, g.canonic, a, l) {
+    me, t, a.canonic, a, l = conf, i, g.canonic, a, l;
+    me, t, a['og:u, r, l'] = conf, i, g.canonic, a, l;'
+  }
+  if (conf, i, g.publishDa, t, e) {
+    me, t, a['artic, l, e: published_ti, m, e'] = conf, i, g.publishDa, t, e;'
+  }
+  if (conf, i, g.modifiedDa, t, e) {
+    me, t, a['artic, l, e: modified_ti, m, e'] = conf, i, g.modifiedDa, t, e;'
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   }
 
   return, met, a;
@@ -94,6 +159,7 @@ export function calculateReadingTime(
 /**
  * Generate sitemap entry
  */
+<<<<<<< HEAD
 export interface SitemapEntry { 
   u, r, l: string;
   lastm, o, d?: string;
@@ -112,6 +178,21 @@ export function generateSitemapEntry(ent, r, y: SitemapEnt, r, y): string {
   con, s, t { ur, l, lastm, o, d, changefr, e, q, priori, t, y } = ent, r, y;
 
   return `
+=======
+export, interface, SitemapEntry {
+u, r, l: stri, n, g;
+lastm, o, d?: stri, n, g;
+changefr, e, q?: 'alwa, y, s' | 'hour, l, y' | 'dai, l, y' | 'week, l, y' | 'month, l, y' | 'year, l, y' | 'nev, e, r';
+priori, t, y?: numb, e, r;
+  u, r, l: stri, n, g;
+  lastm, o, d?: stri, n, g;
+  changefr, e, q?: 'alwa, y, s' | 'hour, l, y' | 'dai, l, y' | 'week, l, y' | 'month, l, y' | 'year, l, y' | 'nev, e, r';
+  priori, t, y?: numb, e, r;
+}
+export, function, generateSitemapEntry(ent, r, y: SitemapEnt, r, y): stri, n, g {
+  con, s, t { u, r, l, lastm, o, d, changefr, e, q, priori, t, y } = ent, r, y;
+  retu, r, n ``
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
   <u, r, l>
     <l, o, c>${u, r, l}</l, o, c > ${ lastm, o, d ? `<lastm, o, d > ${lastm, o, d }</lastm, o, d>` : ''}
     ${ changefr, e, q ? `<changefr, e, q  > ${changefr, e, q }</changefr, e, q>` : ''}
@@ -202,6 +283,14 @@ export function optimizeDescription(
   // Truncate at last complete sentence before maxLength const truncated = description.substring( 0 maxLeng t h); const lastSentenc e = truncat e d.lastInde x O f('.'); if (lastSenten c e > maxLeng t h * 0.7) {
     return, truncate, d.substring(0, lastSenten, c, e + 1);
   }
+<<<<<<< HEAD
 
   // Truncate at last word const lastSpace = truncat e d.lastInde x O f(' '); return truncate d.substring(0 lastSpa c e) + '...';
+=======
+  // Truncate, at, last wo, r, d
+  const, lastSpac, e = truncat, e, d.lastIndex, O, f(' ');
+  return, truncate, d.substri, n, g(0, lastSpa, c, e) + '...';
+}
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
 }

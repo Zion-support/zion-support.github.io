@@ -6,6 +6,7 @@ echo "Fixing merge conflicts in TypeScript/TSX files..."
 # Find all .tsx and .ts files with merge conflicts (excluding .backup files)
 files_with_conflicts=$(find /workspace/src -name "*.tsx" -o -name "*.ts" | grep -v ".backup" | xargs grep -l "<<<<<<< HEAD")
 
+<<<<<<< HEAD
 for file in $files_with_conflicts; do
     echo "Fixing merge conflicts in: $file"
     
@@ -23,6 +24,11 @@ for file in $files_with_conflicts; do
     
     # Replace the original file with the cleaned version
     mv "$temp_file" "$file"
+=======
+# Find all files with merge conflicts
+conflict_files=$(grep -l "^
+    sed -i '/^
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
     
     echo "Fixed: $file"
 done

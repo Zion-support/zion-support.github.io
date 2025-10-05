@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 export default function CognitiveSearchEnterprise20, 2, 5() { 
   return (
     <>
+<<<<<<< HEAD
       <Helm, e, t>
         <title>
           Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group
@@ -27,6 +28,29 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
           >
             <ArrowLeft, className='mr-2 h-4 w-4' />
             Back, to, Blog
+=======
+      <Helmet>
+        <title>Cognitive, Enterprise, Search 20, 2, 5 — 97% Answer, Accurac, y, 12x, Faster, Discovery, $12, 4, M+ Productivity, Gain, s | Zion, Tech, Group</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Transform, enterprise, knowledge discovery, with, AI-powered, cognitive, search. Achieve, 9, 7% answer, accurac, y, 12x, faster, information retriev, a, l, and, unloc, k $12, 4, M+ in, productivity, gains across, your, organization." /><me, t, a
+  na, m, e="keywor, d, s"
+          content="cognitive, searc, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s" /><link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-cogniti, v, e-sear, c, h-enterpri, s, e/>"
+          content="cognitive, searc, h, enterprise, searc, h, AI, searc, h, semantic, searc, h, knowledge, managemen, t, information, retrieva, l, enterprise, A, I, vector, searc, h, RAG, system, s"
+         />
+        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-cogniti, v, e-sear, c, h-enterpri, s, e" />";
+      </Helmet>
+      <article, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-sla, t, e-900, tex, t-whi, t, e">";
+        <div, className="container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l">";
+          <Li, n, k
+  to="/bl, o, g"
+            classNa, m, e="inli, n, e-flex, item, s-center, tex, t-indi, g, o-400, hov, e
+  r: te, x, t-indi, g, o-300, m, b-8, transitio, n-colo, r, s"
+          >
+            <ArrowLeft, className="mr-2 h-4 w-4  />
+            <ArrowLeft, className="mr-2 h-4 w-4" />";
+            Back, to, Blog;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
           </Li, n, k>
 
           <header, className='mb-12'>
@@ -34,11 +58,20 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <span, className='px-4, p, y-2, b, g-indi, g, o-5, 0, 0/20, tex, t-indi, g, o-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-indi, g, o-5, 0, 0/30'>
                 Cognitive, A, I
               </sp, a, n>
+<<<<<<< HEAD
               <span, className='te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5</sp, a, n>
             </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
               Cognitive, Enterprise, Search: Unlocking, Institutional, Knowledge at, Scal, e
+=======
+              <span, className="te, x, t-gr, a, y-4, 0, 0">Octobe, r, 1, 20, 2, 5</sp, a, n>";
+            </d, i, v>
+            <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">"
+            <h1, className="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t">";
+              Cognitive, Enterprise, Searc
+  h: Unlocking, Institutional, Knowledge at, Scal, e
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
             </h1>
 
             <p, className='te, x, t-xl, tex, t-gr, a, y-300, leadin, g-relax, e, d'>
@@ -67,11 +100,34 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     <stro, n, g>12x, Faster, Discovery: </stro, n, g> Find, critical, information in, seconds, instead of, hour, s
                   </sp, a, n>
                 </li>
+<<<<<<< HEAD
                 <li, className='flex, item, s-start, ga, p-3'>
                   <TrendingUp, className='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
                   <sp, a, n>
                     <stro, n, g>$12, 4, M+ Productivi, t, y:</stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n
                   </sp, a, n>
+=======
+                <li, className="flex, item, s-start, ga, p-3">
+                  <TrendingUp, className="h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0  />
+          <div, className="prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e">";
+            <div, className="bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, border, border-indi, g, o-5, 0, 0/20, rounde, d-x, l, p-8, m, b-12">";
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, flex, items-center, ga, p-3">";
+                <Brain, className="h-8 w-8, tex, t-indi, g, o-4, 0, 0" />";
+                Transformative, Result, s;
+              </h2>
+              <ul, className="spa, c, e-y-4, tex, t-lg">";
+                <li, className="flex, item, s-start, ga, p-3">";
+                  <Search, className="h-6 w-6, tex, t-purp, l, e-400, m, t-1, fle, x-shri, n, k-0" />";
+                  <sp, a, n><stro, n, g>97% Answer, Accurac, y: </stro, n, g> AI, understands, context and, delivers, precise answe, r, s, not, just, documents</sp, a, n>
+                </li>
+                <li, className="flex, item, s-start, ga, p-3">";
+                  <Zap, className="h-6 w-6, tex, t-yell, o, w-400, m, t-1, fle, x-shri, n, k-0" />";
+                  <sp, a, n><stro, n, g>12x, Faster, Discovery: </stro, n, g> Find, critical, information in, seconds, instead of, hour, s</sp, a, n>
+                </li>
+                <li, className="flex, item, s-start, ga, p-3">";
+                  <TrendingUp, className="h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0" />";
+                  <sp, a, n><stro, n, g>$12, 4, M+ Productivi, t, y: </stro, n, g> Employees, save, 8.5, hours, weekly finding, informatio, n</sp, a, n>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </li>
               </ul>
             </div>
@@ -90,6 +146,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 R, A, G (Retriev, a, l-Augmented, Generati, o, n) architectures, transforms, how organizations, access, institutional knowled, g, e. These, systems, understand natural, languag, e, reason, about, relationships, and, provide, precise answers, with, full source, attributio, n.
               </p>
             </secti, o, n>
+<<<<<<< HEAD
 
             <section, classNam, e = 'mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -103,6 +160,21 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 <p, className='te, x, t-gr, a, y-300, m, b-4'>
                   Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations that, capture, semantic
                   meani, n, g. This, enables, understanding of, synony, m, s, related, concept, s, and, contextual, nuances that, keyword, matching miss, e, s.
+=======
+            <section, className="mb-12">
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Cognitive, Search, Architecture</h2>
+              <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-indi, g, o-5, 0, 0/20">
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0">1. Semantic, Understanding, Layer</h3>
+                <p, className="te, x, t-gr, a, y-300, m, b-4">
+            <section, className="mb-12">";
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Cognitive, Search, Architecture</h2>";
+              <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-indi, g, o-5, 0, 0/20">";
+                <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0">1. Semantic, Understanding, Layer</h3>";
+                <p, className="te, x, t-gr, a, y-300, m, b-4">";
+                  Advanced, embedding, models transform, documents, and queries, into, high-dimensional, vector, representations th, a, t
+  capture, semantic, meaning. This, enables, understanding of, synonym, s, related, concept, s, and, contextual, nuances
+  that, keyword, matching miss, e, s.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                 </p>
                 <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
                   <li>
@@ -177,6 +249,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 </ul>
               </div>
             </secti, o, n>
+<<<<<<< HEAD
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -188,6 +261,20 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     Professional, Services, Firm
                   </h3>
                   <ul, className='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+=======
+            <section, className="mb-12">
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Enterprise, Deployment, Success</h2>
+              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">"
+                <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30">
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-3, 0, 0">Professional, Services, Firm</h3>
+                  <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">
+            <section, className="mb-12">";
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Enterprise, Deployment, Success</h2>";
+              <div, className="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8">";
+                <div, className="bg-gradie, n, t-to-br, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-6, border, border-indi, g, o-5, 0, 0/30">";
+                  <h3, className="te, x, t-2xl, fon, t-bold, m, b-4, tex, t-indi, g, o-3, 0, 0">Professional, Services, Firm</h3>";
+                  <ul, className="spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0">";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                     <li>• 89% reduction, in, time finding, informatio, n</li>
                     <li>• $156M, productivity, gains annual, l, y</li>
                     <li>• 96% employee, adoption, within 3, month, s</li>
@@ -207,6 +294,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 </div>
               </div>
             </secti, o, n>
+<<<<<<< HEAD
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -221,6 +309,23 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                     Search, across, te, x, t, imag, e, s, vide, o, s, and, audio, with unified, interface s. Find, charts, in presentatio, n, s, quotes, in, recorded
                     meetin, g, s, or, technical, diagrams in, documentation, with
                     natural, language, queries.
+=======
+            <section, className="mb-12">
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Advanced, Capabilitie, s</h2>
+              <div, className="spa, c, e-y-6">
+                <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-indi, g, o-5, 0, 0">
+                  <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-indi, g, o-3, 0, 0">Multimodal, Searc, h</h3>
+                  <p, className="te, x, t-gr, a, y-3, 0, 0">
+                    Search, across, text, imag, e, s, vide, o, s, and, audio, with unified, interface, s. Find, charts, in presentatio, n, s;
+            <section, className="mb-12">";
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">Advanced, Capabilitie, s</h2>";
+              <div, className="spa, c, e-y-6">";
+                <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-indi, g, o-5, 0, 0">";
+                  <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-indi, g, o-3, 0, 0">Multimodal, Searc, h</h3>";
+                  <p, className="te, x, t-gr, a, y-3, 0, 0">";
+                    Search, across, text, imag, e, s, vide, o, s, and, audio, with unified, interface, s. Find, charts, in presentatio, n, s
+                    quotes, in, recorded meetin, g, s, or, technical, diagrams in, documentation, with natural, language, queries.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </p>
                 </div>
                 <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-purp, l, e-5, 0, 0'>
@@ -230,6 +335,7 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <p, className='te, x, t-gr, a, y-3, 0, 0'>
                     AI, agents, surface relevant, information, before users, even, search. Conte, x, t-aware, recommendations, deliver insights, based, on current, tas, k, s, upcoming, meeting, s, or, project, activities.
                   </p>
+<<<<<<< HEAD
                 </div>
                 <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0'>
                   <h3, className='te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0'>
@@ -238,10 +344,23 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                   <p, className='te, x, t-gr, a, y-3, 0, 0'>
                     R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails track, all, searches and, access, for complian, c, e. Sensitive, data, remains
                     encrypted, and, on-premises, if, required.
+=======
+                </d, i, v>
+                <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0">
+                  <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0">Enterprise, Securit, y & Complian, c, e</h3>
+                  <p, className="te, x, t-gr, a, y-3, 0, 0">
+                    R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails ;
+                <div, className="bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, borde, r-l-4, borde, r-pi, n, k-5, 0, 0">";
+                  <h3, className="te, x, t-xl, fon, t-bold, m, b-3, tex, t-pi, n, k-3, 0, 0">Enterprise, Securit, y & Complian, c, e</h3>";
+                  <p, className="te, x, t-gr, a, y-3, 0, 0">";
+                    R, o, w-level, security, ensures users, only, access information, the, y're, authorized, to s, e, e. Complete, audit, trails ';
+                    track, all, searches and, access, for complian, c, e. Sensitive, data, remains encrypted, and, on-premises, if, required.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
                   </p>
                 </div>
               </div>
             </secti, o, n>
+<<<<<<< HEAD
 
             <section, className='mb-12'>
               <h2, className='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0'>
@@ -255,6 +374,16 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
                 Engineers, solve, problems by, finding, solutions from across, the
                 organizati, o, n. Leaders, make, data-driven, decisions, with
                 comprehensive, contex, t.
+=======
+            <section, className="mb-12">";
+              <h2, className="te, x, t-3xl, fon, t-bold, m, b-6, tex, t-indi, g, o-3, 0, 0">The, Knowledge, Competitive Advanta, g, e</h2>";
+              <p, className="te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d">";
+                Organizations, that, effectively leverage, institutional, knowledge make, better, decisions fast, e, r. Cognitive, searc, h
+  doe, s, n't, just, save ti, m, e—it, fundamentally, changes wh, a, t's, possibl, e. Sales, teams, close deals, with, perfect informati, o, n ;
+                doe, s, n't, just, save ti, m, e—it, fundamentally, changes wh, a, t's, possibl, e. Sales, teams, close deals, with, perfect informati, o, n ';
+                about, past, similar engagemen, t, s. Engineers, solve, problems by, finding, solutions from, across, the organizati, o, n. 
+                Leaders, make, data-driven, decisions, with comprehensive, contex, t.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </p>
               <p, className='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
                 The, competitive, moat grows, over, time as, the, system learns, from every sea, r, c, h, continuously, improving, its understanding, of, your
@@ -272,8 +401,14 @@ export default function CognitiveSearchEnterprise20, 2, 5() {
               <Link, t, o='/conta, c, t'
                 className='inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-white, tex, t-indi, g, o-600, rounde, d-lg, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-50, transitio, n-colo, r, s'
               >
+<<<<<<< HEAD
                 Start, Your, Knowledge Transformati, o, n
                 <Brain, className='ml-2 h-5 w-5' />
+=======
+                Start, Your, Knowledge Transformati, o, n;
+                <Brain, className="ml-2 h-5 w-5  />
+                <Brain, className="ml-2 h-5 w-5" />";
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
               </Li, n, k>
             </div>
           </div>

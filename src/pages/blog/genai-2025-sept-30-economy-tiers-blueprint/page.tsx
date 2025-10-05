@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
+<<<<<<< HEAD
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Genai, 2025, Sept 30, Economy, Tiers Bluepri, n, t</title>
@@ -21,6 +22,21 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, genai 2025, sept, 30 economy, tiers, blueprint and, how, it can, benefit, your enterpri, s, e.
+=======
+    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">
+      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">GenAI, 202, 5: Economy, Tiers, Blueprint</h1>"
+      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">
+    <div, className="container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e">";
+      <h1, className="te, x, t-3xl, fon, t-bold, m, b-4">GenAI, 202, 5: Economy, Tiers, Blueprint</h1>";
+      <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-6">";
+        Tier, routin, g + semantic, caches, with eval, gates, to cut, spend, 40–70% while, keeping, UX stab, l, e.
+      </p>
+      <div, className="spa, c, e-y-4, tex, t-zi, o, n-sla, t, e-lig, h, t">";
+        <p>
+          Route, traffic, by SLA, with, quality tiers, and, cache hot, paths, semantically. Add, online, eval
+  gates, wired, to KPIs, to, prevent regressio, n, s. Use, budge, t‑aware, routing, to keep, bill, s
+  predictable, without, hurting outcom, e, s.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>

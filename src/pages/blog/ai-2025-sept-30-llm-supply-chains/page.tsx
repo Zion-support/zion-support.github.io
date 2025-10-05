@@ -19,8 +19,23 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Ai, 2025, Sept 30, Llm, Supply Chai, n, s
         </h1>
+<<<<<<< HEAD
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, ai 2025, sept, 30 llm, supply, chains and, how, it can, benefit, your enterpri, s, e.
+=======
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-l, l, m-supp, l, y-chai, n, s"
+         />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">";
+          AI, Supply, Chain
+  s: 99.5% Forecas, t, s, 85% Inventory, Reductio, n
+        </h1>
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">";
+          Outco, m, e-led, architectur, e: live, freshness, windows, quality, budget, s, and, rollbac, k
+          to, avoid, downstream regressions, while, accelerating cycle, tim, e.
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>

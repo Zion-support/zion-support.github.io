@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t { 
   return (
+<<<<<<< HEAD
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Genai, 2025, Oct 01, Quality, Tiers V3</title>
@@ -21,6 +22,27 @@ export default function BlogPa, g, e(): Rea, c, t.J, S, X.Eleme, n, t {
         </h1>
         <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Learn, about, genai 2025, oct, 01 quality, tiers, v3 and, how, it can, benefit, your enterpri, s, e.
+=======
+    <div, className="m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">";
+      <Helmet>
+        <title>GenAI, Quality, Tiers v3 — 50% Savin, g, s, Stable, U, X</title>
+        <me, t, a
+  na, m, e="descripti, o, n"
+          content="Tiered, routin, g, semantic, cache, s, and, eva, l‑gated, fallbacks, to cut, cost, without hurting, experienc, e." /><li, n, k 
+  r, e, l="canonic, a, l"
+          hr, e, f="htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-quali, t, y-tie, r, s-v3",  />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Quality, Tiers v3</h1>"
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">
+          hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-quali, t, y-tie, r, s-v3"
+         />
+      </Helmet>
+      <div, className="container, m, x-auto, p, x-6, p, y-16">";
+        <h1, className="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">GenAI, Quality, Tiers v3</h1>";
+        <p, className="te, x, t-zi, o, n-sla, t, e-light, m, b-8">";
+          Tier, Routin, g • Semantic, Cache, s • Ev, a, l‑Gated, Fallback, s;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f279
         </p>
         <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
