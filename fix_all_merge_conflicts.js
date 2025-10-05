@@ -9,9 +9,6 @@ const __dirname = path.dirname(__filename);
 
 // List of files with merge conflicts
 const filesWithConflicts = [
-  'app/case-studies/ai-2026-mega-transformation-success/page.tsx',
-  'app/case-studies/ai-2026-quantum-neural-superintelligence-25-billion-success/page.tsx',
-  'app/case-studies/ai-2026-synthetic-consciousness-10-billion-success/page.tsx',
   'app/case-studies/ai-cognitive-computing-success-2026/page.tsx',
   'app/case-studies/ai-cognitive-superintelligence-mega-success-2026/page.tsx',
   'app/case-studies/ai-enterprise-automation-success-2026/page.tsx',
@@ -19,10 +16,6 @@ const filesWithConflicts = [
   'app/case-studies/fortune-500-ai-transformation-12b-roi/page.tsx',
   'app/case-studies/fortune-500-ai-transformation-success/page.tsx',
   'app/case-studies/fortune-500-quantum-ai-transformation-2026/page.tsx',
-  'app/case-studies/global-manufacturing-autonomous-transformation/page.tsx',
-  'app/guides/ai-2026-implementation-roadmap/page.tsx',
-  'app/guides/autonomous-business-processes-implementation-guide-2026/page.tsx',
-  'app/services/ai-2026-breakthrough-innovations-implementation/page.tsx',
   'app/services/revolutionary-breakthroughs-2025/page.tsx'
 ];
 
@@ -38,11 +31,11 @@ function fixMergeConflicts(filePath) {
     
     console.log(`Fixing merge conflicts in ${filePath}`);
     
-    // Pattern to match the merge conflict in import statements
-    const mergeConflictPattern = /<<<<<<< HEAD\s*\n\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];\s*\n\s*;\s*\n;\s*\n;\s*\n;\s*\n;\s*\n;\s*\n;\s*\n;\s*\n=======\s*\n([\s\S]*?)\s*>>>>>>> cursor\/fix-errors-and-merge-to-main-ec39/;
+    // More flexible pattern that matches any merge conflict with lucide-react imports
+    const mergeConflictPattern = /<<<<<<< HEAD\s*\n\s*import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];\s*\n[\s\S]*?=======\s*\n[\s\S]*?>>>>>>> cursor\/fix-errors-and-merge-to-main-ec39/;
     
     // Replace the merge conflict with the correct import statement
-    content = content.replace(mergeConflictPattern, (match, headImports, afterImports) => {
+    content = content.replace(mergeConflictPattern, (match, headImports) => {
       // Extract individual imports from the HEAD section
       const imports = headImports.split(',').map(imp => imp.trim()).filter(imp => imp);
       

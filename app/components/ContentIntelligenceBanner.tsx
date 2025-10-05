@@ -1,8 +1,97 @@
 import Link from 'next/link';
+import BookOpen from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Award from 'lucide-react';
+import Zap from 'lucide-react';
+import Globe from 'lucide-react';
+import CheckCircle from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <<<<<<< HEAD
 
-import { BookOpen, TrendingUp, Award, Zap, Globe, CheckCircle } from 'lucide-react';
+
+
+
+
+
+
 
 ;
 ;
@@ -11,11 +100,11 @@ import { BookOpen, TrendingUp, Award, Zap, Globe, CheckCircle } from 'lucide-rea
 ;
 ;
 =======
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
-import Award from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Globe from 'lucide-react';
+
+
+
+
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 /**

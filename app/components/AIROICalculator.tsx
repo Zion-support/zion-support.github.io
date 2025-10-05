@@ -1,17 +1,76 @@
 import React, { useState } from 'react';
+import Calculator from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import DollarSign from 'lucide-react';
+import Zap from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <<<<<<< HEAD
 
-import { Calculator, TrendingUp, DollarSign, Zap } from 'lucide-react';
+
+
+
+
 
 ;
 ;
 ;
 ;
 =======
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
-import DollarSign from 'lucide-react';
+
+
+
 >>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 export default function AIROICalculator() {
