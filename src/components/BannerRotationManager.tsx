@@ -1,7 +1,15 @@
-import React{ lazySuspenseuseStateuseEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
+  'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
+  'performance-optimization': lazy(() => import('./PerformanceOptimizationBanner')),
+  'blog-promotion': lazy(() => import('./BlogPromotionBanner')),
+  'advertising': lazy(() => import('./AdvertisingBanner')),
+  'content-showcase': lazy(() => import('./ContentShowcase')),
+  'december-2025': lazy(() => import('./December2025RevolutionaryBreakthroughContentBanner')),
+  'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner')),
+  'ai-trends-2026': lazy(() => import('./AITrendsInsightsBanner2026'))
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -18,27 +26,39 @@ interface BannerRotationManagerProps {
 }
 
 const LoadingFallback = () => (
-  <div className='bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse'>
-    <div className='h-32 bg-white/10 rounded'></div>
+  <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-8 border border-purple-500/30 animate-pulse">
+    <div className="h-32 bg-white/10 rounded"></div>
   </div>
 );
 
 /**
  * Banner Rotation Manager Component
  *
- * Manages banner display with lazy loadingrotationand performance optimization
+ * Manages banner display with lazy loading, rotation, and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [
+    'ai-innovation',
+    'performance-optimization',
+    'blog-promotion',
+    'advertising',
+    'content-showcase',
+    'december-2025',
+    'ai-cost-optimization',
+    'ai-trends-2026'
+  ],
+  interval = 8000,
+  autoRotate = true,
+  maxBanners = 3
 }) => {
-  const [currentIndexsetCurrentIndex] = useState(0);
-  const [visibleBannerssetVisibleBanners] = useState<BannerKey[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
-    const selected = banners.slice(0maxBanners);
+    const selected = banners.slice(0, maxBanners);
     setVisibleBanners(selected);
-  }[bannersmaxBanners]);
+  }, [banners, maxBanners]);
 
   // Auto-rotation logic
   useEffect(() => {
@@ -46,17 +66,17 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
     const timer = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-    }interval);
+    }, interval);
 
     return () => clearInterval(timer);
-  }[autoRotateintervalvisibleBanners.length]);
+  }, [autoRotate, interval, visibleBanners.length]);
 
   if (visibleBanners.length === 0) return null;
 
-  // For non-rotatingshow all banners
+  // For non-rotating, show all banners
   if (!autoRotate) {
     return (
-      <div className='space-y-6'>
+      <div className="space-y-6">
         {visibleBanners.map(bannerKey => {
           const BannerComponent = bannerComponents[bannerKey];
           return (
@@ -69,20 +89,20 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     );
   }
 
-  // For rotatingshow current banner with controls
+  // For rotating, show current banner with controls
   const currentBannerKey = visibleBanners[currentIndex];
   const CurrentBanner = bannerComponents[currentBannerKey];
 
   return (
-    <div className='relative'>
+    <div className="relative">
       <Suspense fallback={<LoadingFallback />}>
         <CurrentBanner />
       </Suspense>
 
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
-        <div className='flex justify-center gap-2 mt-4'>
-          {visibleBanners.map((_index) => (
+        <div className="flex justify-center gap-2 mt-4">
+          {visibleBanners.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

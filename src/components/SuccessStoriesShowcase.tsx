@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { TrendingUp, Target, Users, ArrowRight } from 'lucide-react';
+
 const SuccessStoriesShowcase: React.FC = () => {
   const stories = [
     {
       company: "TechCorp International",
       industry: "Technology",
-      icon: '🚀',
       icon: <TrendingUp className="w-8 h-8" />,
       result: "300% Revenue Growth",
-        description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
+      description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [
         "98% prediction accuracy",
         "60% cost reduction",
@@ -43,6 +44,7 @@ const SuccessStoriesShowcase: React.FC = () => {
       color: "from-purple-500 to-pink-500"
     }
   ];
+
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
@@ -54,10 +56,11 @@ const SuccessStoriesShowcase: React.FC = () => {
             See how leading companies are transforming their operations with our AI solutions
           </p>
         </div>
+        
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) => (
             <div
-key={index}
+              key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
@@ -91,6 +94,7 @@ key={index}
             </div>
           ))}
         </div>
+        
         <div className="text-center">
           <Link
             to="/case-studies"
@@ -104,4 +108,5 @@ key={index}
     </section>
   );
 };
+
 export default SuccessStoriesShowcase;

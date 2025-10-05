@@ -1,12 +1,17 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-const October2025FraudDetectionBanner = () => {
+import { Shield, Zap, Target, TrendingUp, Brain, Eye, Network, AlertCircle, CheckCircle, ArrowRight } from 'lucide-react';
+
+const October2025FraudDetectionBanner: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden" > {/* Animated background effects */}
+    <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden">
+      {/* Animated background effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
+
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-10">
@@ -16,7 +21,8 @@ const October2025FraudDetectionBanner = () => {
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             AI-Powered Real-Time Fraud Detection
-            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
+            <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
               $847B in Assets Protected | 99.7% Accuracy | Sub-50ms Detection
             </span>
           </h2>
@@ -24,6 +30,7 @@ const October2025FraudDetectionBanner = () => {
             Revolutionary AI platform combining <strong className="text-white">Graph Neural Networks, Behavioral Biometrics & Multi-Model ML</strong> to achieve 96% fraud reduction, 43x ROI, and near-zero false positives. <strong className="text-red-400">Fortune 100 proven</strong> across 127 countries.
           </p>
         </div>
+
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           <div className="bg-gradient-to-br from-red-900/40 to-red-800/40 backdrop-blur-sm border border-red-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
@@ -51,6 +58,7 @@ const October2025FraudDetectionBanner = () => {
             <div className="text-xs text-gray-400 mt-1">Globally deployed</div>
           </div>
         </div>
+
         {/* Revolutionary Capabilities */}
         <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -72,8 +80,6 @@ const October2025FraudDetectionBanner = () => {
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
                 <Eye className="w-6 h-6 text-purple-400" />
               </div>
-                <Eye className="w-6 h-6 text-purple-400" />
-              </div>
               <div>
                 <div className="font-semibold text-white mb-1">Behavioral Biometrics</div>
                 <div className="text-sm text-gray-300">
@@ -85,8 +91,6 @@ const October2025FraudDetectionBanner = () => {
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
                 <Network className="w-6 h-6 text-blue-400" />
               </div>
-                <Network className="w-6 h-6 text-blue-400" />
-              </div>
               <div>
                 <div className="font-semibold text-white mb-1">Graph Intelligence</div>
                 <div className="text-sm text-gray-300">
@@ -96,6 +100,7 @@ const October2025FraudDetectionBanner = () => {
             </div>
           </div>
         </div>
+
         {/* Fortune 100 Success Story */}
         <div className="bg-gradient-to-r from-red-900/30 via-purple-900/30 to-blue-900/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <div className="flex items-center justify-center gap-3 mb-4">
@@ -175,6 +180,7 @@ const October2025FraudDetectionBanner = () => {
             </div>
           </div>
         </div>
+
         {/* Industry Applications */}
         <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -193,18 +199,22 @@ const October2025FraudDetectionBanner = () => {
             </div>
             <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
               <div className="text-3xl mb-2">🏥</div>
+              <div className="text-sm font-semibold text-white">Healthcare</div>
               <div className="text-xs text-gray-400 mt-1">$78M savings</div>
             </div>
             <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
               <div className="text-3xl mb-2">🏢</div>
+              <div className="text-sm font-semibold text-white">Enterprise</div>
               <div className="text-xs text-gray-400 mt-1">$127M savings</div>
             </div>
             <div className="text-center p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
               <div className="text-3xl mb-2">📱</div>
+              <div className="text-sm font-semibold text-white">FinTech</div>
               <div className="text-xs text-gray-400 mt-1">99.2% detection</div>
             </div>
           </div>
         </div>
+
         {/* Call to Action Section */}
         <div className="grid md:grid-cols-3 gap-6">
           <Link
@@ -256,6 +266,7 @@ const October2025FraudDetectionBanner = () => {
             </div>
           </Link>
         </div>
+
         {/* Free Assessment CTA */}
         <div className="mt-10 text-center">
           <div className="inline-flex flex-col items-center gap-4 p-8 bg-gradient-to-r from-red-900/40 via-purple-900/40 to-blue-900/40 backdrop-blur-sm border border-white/20 rounded-2xl">
@@ -275,6 +286,7 @@ const October2025FraudDetectionBanner = () => {
             </Link>
           </div>
         </div>
+
         {/* Trust Indicators */}
         <div className="mt-10 pt-8 border-t border-white/10">
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
@@ -304,4 +316,5 @@ const October2025FraudDetectionBanner = () => {
     </div>
   );
 };
+
 export default October2025FraudDetectionBanner;

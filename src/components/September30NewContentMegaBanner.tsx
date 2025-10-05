@@ -1,5 +1,8 @@
+import React from 'react';
 import { Link } from "react-router-dom";
-const September30NewContentMegaBanner = () => {
+import { Brain, Layers, Atom, Zap, GraduationCap, Sparkles, ArrowRight } from 'lucide-react';
+
+const September30NewContentMegaBanner: React.FC = () => {
   const newArticles = [
     {
       title: "AI Neural Coding Breakthrough",
@@ -42,10 +45,12 @@ const September30NewContentMegaBanner = () => {
       impact: "97% mastery rate"
     }
   ];
+
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
+      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
@@ -62,6 +67,7 @@ const September30NewContentMegaBanner = () => {
             Molecular manufacturing at atomic precision • Personalized education revolution
           </p>
         </div>
+
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {newArticles.map((article, index) => (
@@ -72,7 +78,8 @@ const September30NewContentMegaBanner = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
-                  <article.icon className="w-6 h-6"</div>
+                  <article.icon className="w-6 h-6" />
+                </div>
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
@@ -86,6 +93,7 @@ const September30NewContentMegaBanner = () => {
               </div>
             </Link>
           ))}
+
           {/* Additional promotional card */}
           <Link
             to="/blog"
@@ -100,10 +108,12 @@ const September30NewContentMegaBanner = () => {
             </div>
           </Link>
         </div>
+
         {/* Stats Banner */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
+              <div className="text-3xl font-bold text-cyan-400 mb-1">5</div>
               <div className="text-sm text-blue-200">New Breakthroughs</div>
             </div>
             <div>
@@ -124,6 +134,7 @@ const September30NewContentMegaBanner = () => {
             </div>
           </div>
         </div>
+
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
@@ -142,6 +153,7 @@ const September30NewContentMegaBanner = () => {
             Get Started Today
           </Link>
         </div>
+
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
@@ -164,4 +176,5 @@ const September30NewContentMegaBanner = () => {
     </div>
   );
 };
+
 export default September30NewContentMegaBanner;
