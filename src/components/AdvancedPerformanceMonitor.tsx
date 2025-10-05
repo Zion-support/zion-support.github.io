@@ -1,4 +1,4 @@
-import React{ useEffectuseStateuseCallbackuseMemo } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 
 interface PerformanceMetrics {
   lcp?: number;

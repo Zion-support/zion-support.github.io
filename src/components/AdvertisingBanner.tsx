@@ -1,12 +1,9 @@
 import React from 'react';
-            99.9%
           </p>
-
-          <Linkto='/blog/ai-2025-oct-01-vector-database-optimization-enterprise'
+          <Link to='/blog/ai-2025-oct-01-vector-database-optimization-enterprise'
           </Link>
         </div>
       </div>
     </div > );
  };
-
 exportdefaultAdvertisingBanner;
