@@ -117,7 +117,7 @@ const September30MegaBanner2025 = () => {
         </div>
         {/* Article Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {breakthroughArticles.map((article, index) = > (
+          {breakthroughArticles.map((article, index) => (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -246,7 +246,7 @@ const September30MegaBanner2025 = () => {
               "95%+ Accuracy",
               "10,000x Performance",
               "Enterprise Scale"
-            ].map((topic) = > (
+            ].map((topic) => (
               <span key={topic} className="px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full text-sm font-bold text-white border-2 border-white/30 hover:bg-white/25 hover:scale-105 transition-all cursor-pointer shadow-lg">
                 {topic}
               </span>

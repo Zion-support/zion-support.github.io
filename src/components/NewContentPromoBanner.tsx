@@ -195,7 +195,6 @@ onClick={() => setIsDismissed(true)}
           >
             <X className="w-5 h-5" />
           </button>
-=======
             <X className="w-5 h-5" />
           </button>
         </div>

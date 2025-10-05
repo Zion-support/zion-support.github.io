@@ -64,7 +64,7 @@ const September30NewContentMegaBanner = () => {
         </div>
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) = > (
+          {newArticles.map((article, index) => (
             <Link
               key={index}
               to={article.link}
