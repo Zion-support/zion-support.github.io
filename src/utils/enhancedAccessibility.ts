@@ -40,68 +40,12 @@ class EnhancedAccessibility {
     this.config = {
       enableKeyboardNavigation: true,
       enableScreenReaderSupport: true,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
       enableHighContrast: true,
       enableFocusManagement: true,
       enableARIALabels: true,
       enableColorContrast: true,
       enableTextScaling: true,
       enableMotionReduction: true,
-<<<<<<< HEAD
-      enableVoiceControl: false,
-      enableTouchAccessibility: true,
-      ...config,
-    };
-  }
-
-  public init(): void {
-    if (typeof window === 'undefined') return;
-
-    // Initialize all accessibility features
-    if (this.config.enableAnnouncements) {
-      this.createAnnouncementRegion();
-    }
-
-    if (this.config.enableFormLabels) {
-      this.enhanceFormLabels();
-    }
-
-    if (this.config.enableSkipLinks) {
-      this.addSkipLinks();
-    }
-
-    if (this.config.enableHighContrast) {
-      this.setupHighContrast();
-    }
-
-    if (this.config.enableFocusManagement) {
-      this.setupFocusManagement();
-    }
-
-    if (this.config.enableARIALabels) {
-      this.setupARIALabels();
-    }
-
-    if (this.config.enableColorContrast) {
-      this.setupColorContrast();
-    }
-
-    if (this.config.enableTextScaling) {
-      this.setupTextScaling();
-    }
-
-    if (this.config.enableMotionReduction) {
-      this.setupMotionReduction();
-    }
-
-    if (this.config.enableVoiceControl) {
-      this.setupVoiceControl();
-    }
-
-    if (this.config.enableTouchAccessibility) {
-      this.setupTouchAccessibility();
-    }
-=======
       enableVoiceControl: true,
       enableTouchAccessibility: true,
       ...config
@@ -206,7 +150,6 @@ class EnhancedAccessibility {
     
     // Add skip links
     this.addSkipLinks();
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
   }
 
   private createAnnouncementRegion(): void {
@@ -221,27 +164,18 @@ class EnhancedAccessibility {
   private enhanceFormLabels(): void {
     const inputs = document.querySelectorAll('input, textarea, select');
     inputs.forEach((input) => {
-<<<<<<< HEAD
-      const label = input.closest('label');
-      if (label) {
-        input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
-=======
       if (!input.getAttribute('aria-label') && !input.getAttribute('aria-labelledby')) {
         const label = document.querySelector(`label[for="${input.id}"]`);
         if (label) {
           input.setAttribute('aria-labelledby', label.id || `label-${input.id}`);
         }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
       }
     });
   }
 
   private addSkipLinks(): void {
     const skipLinks = document.createElement('div');
-<<<<<<< HEAD
-=======
     skipLinks.className = 'skip-links';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
     skipLinks.innerHTML = `
       <a href="#main-content" class="skip-link">Skip to main content</a>
       <a href="#navigation" class="skip-link">Skip to navigation</a>
@@ -250,8 +184,6 @@ class EnhancedAccessibility {
   }
 
   private setupHighContrast(): void {
-<<<<<<< HEAD
-=======
     if (!this.config.enableHighContrast) return;
 
     // Check for high contrast mode preference
@@ -259,7 +191,6 @@ class EnhancedAccessibility {
       document.body.classList.add('high-contrast');
     }
 
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
     // Listen for changes in contrast preference
     window.matchMedia('(prefers-contrast: high)').addEventListener('change', (e) => {
       if (e.matches) {
@@ -274,23 +205,12 @@ class EnhancedAccessibility {
     if (!this.config.enableFocusManagement) return;
 
     // Add focus indicators
-<<<<<<< HEAD
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    });
-
-    document.addEventListener('mousedown', () => {
-      document.body.classList.remove('keyboard-navigation');
-=======
     document.addEventListener('focusin', (event) => {
       (event.target as HTMLElement).classList.add('focus-visible');
     });
 
     document.addEventListener('focusout', (event) => {
       (event.target as HTMLElement).classList.remove('focus-visible');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
     });
   }
 
@@ -315,27 +235,13 @@ class EnhancedAccessibility {
   private setupColorContrast(): void {
     if (!this.config.enableColorContrast) return;
 
-<<<<<<< HEAD
-    // Check color contrast
-=======
     // Check color contrast ratios
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
     this.checkColorContrast();
   }
 
   private setupTextScaling(): void {
     if (!this.config.enableTextScaling) return;
 
-<<<<<<< HEAD
-    // Initialize text scaling
-    document.body.style.fontSize = '100%';
-
-    // Listen for text size changes
-    const observer = new ResizeObserver(() => {
-      this.updateTextScaling();
-    });
-
-=======
     // Support for text scaling
     document.body.style.fontSize = '100%';
     
@@ -344,14 +250,10 @@ class EnhancedAccessibility {
       this.updateTextScaling();
     });
     
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
     observer.observe(document.body);
   }
 
   private setupMotionReduction(): void {
-<<<<<<< HEAD
-    // Listen for motion preference
-=======
     if (!this.config.enableMotionReduction) return;
 
     // Check for reduced motion preference
@@ -360,7 +262,6 @@ class EnhancedAccessibility {
     }
 
     // Listen for changes in motion preference
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
     window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', (e) => {
       if (e.matches) {
         document.body.classList.add('reduced-motion');
@@ -373,15 +274,9 @@ class EnhancedAccessibility {
   private setupVoiceControl(): void {
     if (!this.config.enableVoiceControl) return;
 
-<<<<<<< HEAD
-    // Basic voice control setup
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'v' && e.ctrlKey) {
-=======
     // Add voice control support
     document.addEventListener('keydown', (event) => {
       if (event.ctrlKey && event.key === 'v') {
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
         this.activateVoiceControl();
       }
     });
@@ -390,15 +285,6 @@ class EnhancedAccessibility {
   private setupTouchAccessibility(): void {
     if (!this.config.enableTouchAccessibility) return;
 
-<<<<<<< HEAD
-    // Ensure touch targets are at least 44px
-    const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
-    touchTargets.forEach((target) => {
-      const element = target as HTMLElement;
-      if (element.offsetHeight < 44 || element.offsetWidth < 44) {
-        element.style.minHeight = '44px';
-        element.style.minWidth = '44px';
-=======
     // Enhance touch targets
     const touchTargets = document.querySelectorAll('button, a, input, select, textarea');
     touchTargets.forEach((target) => {
@@ -408,37 +294,17 @@ class EnhancedAccessibility {
       if (rect.width < 44 || rect.height < 44) {
         element.style.minWidth = '44px';
         element.style.minHeight = '44px';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
       }
     });
   }
 
-<<<<<<< HEAD
-  public getFocusableElementsCount(): number {
-    const focusableSelectors = [
-=======
   private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
       'a[href]',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
       'button:not([disabled])',
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-<<<<<<< HEAD
-      'a[href]',
-      '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
-
-    return document.querySelectorAll(focusableSelectors).length;
-  }
-
-
-  private checkColorContrast(): void {
-    // Basic color contrast check
-    console.log('Checking color contrast...');
-    // Implementation would go here
-=======
       '[tabindex]:not([tabindex="-1"])'
     ].join(', ');
 
@@ -448,7 +314,6 @@ class EnhancedAccessibility {
   private checkColorContrast(): void {
     // This would typically use a color contrast checking library
     console.log('Checking color contrast...');
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
   }
 
   private updateTextScaling(): void {
@@ -459,51 +324,6 @@ class EnhancedAccessibility {
 
   private activateVoiceControl(): void {
     console.log('Voice control activated');
-<<<<<<< HEAD
-    // Voice control implementation would go here
-  }
-
-  public analyzeAccessibility(): AccessibilityMetrics {
-    const issues: string[] = [];
-    const recommendations: string[] = [];
-
-    // Check for missing alt text
-    const imagesWithoutAlt = document.querySelectorAll('img:not([alt])');
-    if (imagesWithoutAlt.length > 0) {
-      issues.push(`${imagesWithoutAlt.length} images missing alt text`);
-      recommendations.push('Add descriptive alt text to all images');
-    }
-
-    // Check for missing form labels
-    const inputsWithoutLabels = document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])');
-    if (inputsWithoutLabels.length > 0) {
-      issues.push(`${inputsWithoutLabels.length} form inputs missing labels`);
-      recommendations.push('Add labels or aria-label to all form inputs');
-    }
-
-    // Check for missing heading structure
-    const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-    if (headings.length === 0) {
-      issues.push('No headings found');
-      recommendations.push('Add proper heading structure');
-    }
-
-    // Calculate overall score
-    const score = this.calculateOverallScore(issues);
-
-    return {
-      score,
-      issues,
-      recommendations,
-    };
-  }
-
-  private calculateOverallScore(issues: string[]): number {
-    const baseScore = 100;
-    const penaltyPerIssue = 10;
-    const penalty = issues.length * penaltyPerIssue;
-    return Math.max(0, baseScore - penalty);
-=======
     // Implement voice control functionality
   }
 
@@ -562,7 +382,6 @@ class EnhancedAccessibility {
     score += contrastScore;
 
     return Math.min(maxScore, score);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
   }
 
   public announce(message: string): void {
@@ -573,29 +392,6 @@ class EnhancedAccessibility {
   }
 
   public getMetrics(): AccessibilityMetrics {
-<<<<<<< HEAD
-    return this.analyzeAccessibility();
-  }
-
-  public getReport(): string {
-    const metrics = this.getMetrics();
-    return `
-Accessibility Report:
-Score: ${metrics.score}/100
-Issues: ${metrics.issues.length}
-Recommendations: ${metrics.recommendations.length}
-
-Issues:
-${metrics.issues.map(issue => `- ${issue}`).join('\n')}
-
-Recommendations:
-${metrics.recommendations.map(rec => `- ${rec}`).join('\n')}
-    `.trim();
-  }
-}
-
-export default EnhancedAccessibility;
-=======
     return { ...this.metrics };
   }
 
@@ -621,4 +417,5 @@ export const enhancedAccessibility = new EnhancedAccessibility();
 if (typeof window !== 'undefined') {
   enhancedAccessibility.initialize();
 }
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-393e
+
+export default EnhancedAccessibility;
