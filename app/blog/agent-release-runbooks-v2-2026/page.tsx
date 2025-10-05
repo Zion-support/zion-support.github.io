@@ -1,6 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { Calendar, Clock, ListChecks, FileWarning, RefreshCw } from 'lucide-react';
+import Calendar from 'lucide-react';
+import Clock from 'lucide-react';
+import ListChecks from 'lucide-react';
+import FileWarning from 'lucide-react';
+import RefreshCw from 'lucide-react';
 
 export const metadata = {
   title: 'Agent Release Runbooks v2 (2026): Budgets, Canaries, Rollback | Zion',

@@ -19,7 +19,7 @@ export default function FeaturedServiceCard({
   popular = false 
 }: FeaturedServiceCardProps) {
   return (
-    <div className={`bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-8 border border-blue-200 relative ${popular ? 'ring-2 ring-blue-500' : ''}`}>
+    <div `}>
       {popular && (
         <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
           POPULAR
