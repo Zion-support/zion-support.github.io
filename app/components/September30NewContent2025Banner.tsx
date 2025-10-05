@@ -128,7 +128,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span  text-white text-sm font-semibold shadow-lg`}>
+                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
@@ -191,7 +191,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span  text-white text-sm font-semibold shadow-lg`}>
+                  <span className="bg-gradient-to-r from-purple-600 to-blue-600 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
                     {article.category}
                   </span>
                 </div>
