@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight, Award, Brain, DollarSign, Target, TrendingUp, User, Users, Zap } from 'lucide-react';;
+import { ArrowRight, TrendingUp, Brain, Zap, Target, Users, DollarSign, Award } from 'lucide-react';
 export const metadata = {
   title: 'AI 2026 Breakthrough Innovations: $2.8 Trillion Success Case Study | Zion Tech Group',
   description: 'Detailed case study of how Fortune 500 companies achieved $2.8 trillion in value through AI 2026 breakthrough innovations including quantum-neural fusion and autonomous enterprise systems.',

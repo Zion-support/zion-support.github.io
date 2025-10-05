@@ -6,8 +6,6 @@ export default function October2025NewestContentMegaShowcase() {
       icon: <Network className="w-8 h-8" />,",=======
     {",
       icon: <Network className="w-8 h-8" />,",
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       title: "Autonomous Mesh Intelligence Platform",
       description: "Self-organizing distributed AI networks with 99.997% uptime",",
       value: "$8.4B",
@@ -18,8 +16,6 @@ export default function October2025NewestContentMegaShowcase() {
     {
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",",
       value: "$12.7B",
@@ -30,8 +26,6 @@ icon: '🚀',=======
     {
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",",
       value: "$5.7B",

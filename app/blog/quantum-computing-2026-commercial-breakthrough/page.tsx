@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-=======
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import User from 'lucide-react/dist/esm/icons/user';

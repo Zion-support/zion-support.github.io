@@ -9,8 +9,6 @@ const GlobalAITransformationHub = () => {
       value: '$2.3B',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -20,8 +18,6 @@ icon: '🚀',=======
       value: '$500B',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -31,8 +27,6 @@ icon: '🚀',=======
       value: '$150B',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -42,8 +36,6 @@ icon: '🚀',=======
       value: '$87B',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }

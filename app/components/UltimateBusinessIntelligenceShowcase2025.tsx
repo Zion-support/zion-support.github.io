@@ -115,11 +115,9 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
-                activeFilter === filter.id 
-                  ? 'bg-yellow-400 text-black' 
-                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+`}                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
               }`}
+>>>>>>> origin/merge-pr-25212
             >
               {filter.label} ({filter.count})
             </button>
@@ -136,12 +134,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Content Type Badge */}
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-between mb-3">
-                  <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold ${
-                    item.type === 'Case Study' ? 'bg-blue-100 text-blue-800' :
-                    item.type === 'Blog Post' ? 'bg-green-100 text-green-800' :
-                    item.type === 'Guide' ? 'bg-purple-100 text-purple-800' :
-                    'bg-gray-100 text-gray-800'
-                  }`}>
+<span `}>>>>>>>> origin/merge-pr-25212
                     {item.type}
                   </span>
                   {item.featured && (

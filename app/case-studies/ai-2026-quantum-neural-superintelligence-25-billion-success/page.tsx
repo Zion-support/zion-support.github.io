@@ -1,10 +1,5 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-import { ArrowRight, Brain, Target, Users, DollarSign, Award, TrendingUp, Zap, User } from 'lucide-react';
-
-=======
 import { Award, ArrowRight, TrendingUp, Zap, Brain, Target, DollarSign, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-080a
 
 // @ts-ignore
 export const metadata = {

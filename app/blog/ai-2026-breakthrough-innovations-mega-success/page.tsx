@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-=======
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import Brain from 'lucide-react/dist/esm/icons/brain';

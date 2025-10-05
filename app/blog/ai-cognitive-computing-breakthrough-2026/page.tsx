@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-=======
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import User from 'lucide-react/dist/esm/icons/user';

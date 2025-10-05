@@ -1,6 +1,4 @@
 
-import { Satellite } from 'lucide-react';
-
 export const metadata = {
   title: 'AI Space Technology Services - Autonomous Space Operations',
   description: 'Transform your space operations with AI-powered autonomous satellites, intelligent mission planning, and 99.9% mission success rates.',

@@ -10,8 +10,6 @@ const October2025CuttingEdgeContentBanner = () => {
       gradient: "from-cyan-500 to-blue-600",
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {",
@@ -22,8 +20,6 @@ icon: '🚀',=======
       gradient: "from-purple-500 to-pink-600",
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {",
@@ -34,8 +30,6 @@ icon: '🚀',=======
       gradient: "from-orange-500 to-red-600",
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
