@@ -26,7 +26,7 @@ const October2025LatestBreakthroughBanner = () => {
         </div>
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {octoberLatestBreakthroughContent.map((content) = > {
+          {octoberLatestBreakthroughContent.map((content) => {
             const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
             return (
               <Link
@@ -50,7 +50,7 @@ const October2025LatestBreakthroughBanner = () => {
                 </p>
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 gap-2 mb-4">
-                  {Object.entries(content.metrics).slice(0, 2).map(([key, value]) = > (
+                  {Object.entries(content.metrics).slice(0, 2).map(([key, value]) => (
                     <div key={key} className="bg-white/5 rounded-lg p-2">
                       <div className="text-2xl font-bold text-white">{value}</div>
                       <div className="text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
@@ -59,7 +59,7 @@ const October2025LatestBreakthroughBanner = () => {
                 </div>
                 {/* Highlights */}
                 <ul className="space-y-2 mb-4">
-                  {content.highlights.slice(0, 2).map((highlight, idx) = > (
+                  {content.highlights.slice(0, 2).map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-blue-200">
                       <TrendingUp className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
                       <span>{highlight}</span>

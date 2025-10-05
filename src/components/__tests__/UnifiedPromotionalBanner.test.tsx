@@ -49,7 +49,7 @@ describe('UnifiedPromotionalBanner', () => {
   });
 
   describe('Variants', () => {
-    it('renders default variant correctly', () = > {
+    it('renders default variant correctly', () => {
       const { container } = render(
         <RouterWrapper>
           <UnifiedPromotionalBanner {...defaultProps} variant="default"</RouterWrapper>
@@ -103,7 +103,7 @@ describe('UnifiedPromotionalBanner', () => {
   describe('Themes', () => {
     const themes = ['blue', 'purple', 'green', 'orange', 'red', 'cyan', 'gradient'] as const;
 
-    themes.forEach(theme = > {
+    themes.forEach(theme => {
       it(`renders ${theme} theme correctly`, () => {
         const { container } = render(
           <RouterWrapper>
@@ -224,7 +224,7 @@ describe('UnifiedPromotionalBanner', () => {
   });
 
   describe('Icons', () => {
-    it('renders sparkles icon', () = > {
+    it('renders sparkles icon', () => {
       const { container } = render(
         <RouterWrapper>
           <UnifiedPromotionalBanner {...defaultProps} badge="Test" icon="sparkles"</RouterWrapper>
@@ -258,7 +258,7 @@ describe('UnifiedPromotionalBanner', () => {
   });
 
   describe('Animation', () => {
-    it('applies animation classes by default', () = > {
+    it('applies animation classes by default', () => {
       const { container } = render(
         <RouterWrapper>
           <UnifiedPromotionalBanner {...defaultProps}</RouterWrapper>

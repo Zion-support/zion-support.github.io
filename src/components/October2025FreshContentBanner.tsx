@@ -93,7 +93,6 @@ const October2025FreshContentBanner = () => {
               <div className="p-3 bg-cyan-500/20 rounded-xl group-hover:bg-cyan-500/30 transition-colors">
                 <Network className="w-8 h-8 text-cyan-300" />
               </div>
-=======
                 <Network className="w-8 h-8 text-cyan-300" />
               </div>
               <div className="flex-1">
@@ -125,7 +124,6 @@ const October2025FreshContentBanner = () => {
               <div className="p-3 bg-violet-500/20 rounded-xl group-hover:bg-violet-500/30 transition-colors">
                 <Lightbulb className="w-8 h-8 text-violet-300" />
               </div>
-=======
                 <Lightbulb className="w-8 h-8 text-violet-300" />
               </div>
               <div className="flex-1">

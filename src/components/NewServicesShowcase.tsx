@@ -72,7 +72,7 @@ const NewServicesShowcase: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {newServices.map((service) = > (
+          {newServices.map((service) => (
             <Link key={service.id} to={`/services/${service.id}`} className="group block" > <div className={`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>
                 {/* Service Header */}
                 <div className="flex items-center gap-4 mb-6" > <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center`}>
@@ -101,7 +101,7 @@ const NewServicesShowcase: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, index) = > (
+                    {service.features.map((feature, index) => (
                       <li key={index} className="flex items-center gap-2 text-gray-300" > <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`}></div>
                         <span>{feature}</span>
                       </li>
