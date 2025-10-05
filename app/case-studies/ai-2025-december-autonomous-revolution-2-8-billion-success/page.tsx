@@ -1,5 +1,5 @@
 import ArrowRight from 'next/link';
-import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, CheckCircle, Clock, Map, Shield, TrendingUp, User, Zap } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Bookmark, Brain, Calendar, CheckCircle, Clock, Shield, TrendingUp, User, Zap } from 'lucide-react';
 
 
 // Use simple SVG icons instead of lucide-react to avoid TypeScript issues
