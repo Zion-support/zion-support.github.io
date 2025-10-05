@@ -10,9 +10,6 @@ export default async function handler(req, res) {
     const { name, email, phone, details, country, service } = req.body || {};
     
     if (!name || !email || !phone || !details) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8302
       res.status(400).json({ 
         error: 'Missing required fields: name, email, phone, and details are required' 
@@ -36,30 +33,7 @@ export default async function handler(req, res) {
       email,
       phone,
       details,
-<<<<<<< HEAD
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      status: 'pending',
-      createdAt: new Date().toISOString()
-    };
-
-    // In production, save to database
-    console.log('New quote submission:', quote);
-
-    res.status(200).json({
-      success: true,
-      message: 'Quote submitted successfully',
-      quoteId: quote.id
-    });
-
-  } catch (error) {
-    console.error('Quote submission error:', error);
-    res.status(500).json({ 
-      error: error.message || 'Quote submission failed' 
-    });
-<<<<<<< HEAD
-=======
-      country: country || 'US',
+country: country || 'US',
       service: service || 'General Inquiry',
       timestamp: new Date().toISOString(),
       status: 'pending'
@@ -75,7 +49,6 @@ export default async function handler(req, res) {
   } catch (err) {
     console.error('Quote submission error:', err);
     res.status(500).json({ error: err.message || 'Quote submission failed' });
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-8302
   }

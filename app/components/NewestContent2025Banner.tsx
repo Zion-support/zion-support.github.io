@@ -252,10 +252,6 @@ const NewestContent2025Banner = () => {
               </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
         {/* Stats Section */}
         <div className="text-left">
           {[{
@@ -271,8 +267,6 @@ const NewestContent2025Banner = () => {
               <div className="text-left">
                 {stat.label}
               </div>
-<<<<<<< HEAD
-=======
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
               <Link
                 href="/contact"

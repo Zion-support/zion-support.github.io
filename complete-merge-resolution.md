@@ -3,7 +3,7 @@
 ## Current Status
 - Repository has multiple merge conflicts in utility files
 - Conflicts are primarily syntax-related (commas, semicolons, formatting)
-- Main conflict pattern: `<<<<<<< HEAD`, `=======`, `>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208`
+- Main conflict pattern: ``, `>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b208`
 
 ## Files with Conflicts
 Based on analysis, the following categories of files have conflicts:
@@ -35,12 +35,11 @@ Create and run the following script:
 echo "🔧 Resolving merge conflicts..."
 
 # Find all non-backup files with conflicts
-find /workspace/src -type f \( -name "*.ts" -o -name "*.tsx" \) ! -name "*.backup.*" -exec grep -l "<<<<<<< HEAD\|=======\|>>>>>>> " {} \; | while read file; do
+find /workspace/src -type f \( -name "*.ts" -o -name "*.tsx" \) ! -name "*.backup.*" -exec grep -l "\|>>>>>>> " {} \; | while read file; do
     echo "Fixing: $file"
     
     # Remove conflict markers and choose the cleaner version
-    sed -i 's/<<<<<<< HEAD//g' "$file"
-    sed -i 's/=======//g' "$file" 
+    sed -i 's///g' "$file" 
     sed -i 's/>>>>>>> origin\/[^[:space:]]*//g' "$file"
     
     # Fix common syntax issues

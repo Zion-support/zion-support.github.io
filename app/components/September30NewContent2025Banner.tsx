@@ -249,9 +249,6 @@ const September30NewContent2025Banner: React.FC = () => {
               </div>
           </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 >>>>>>> origin/main
         {/* Stats Section */}
         <div className="text-left">
@@ -265,9 +262,7 @@ const September30NewContent2025Banner: React.FC = () => {
               <div className="text-left">{stat.icon}</div>"
               <div className="text-left">
                 {stat.value}
-<<<<<<< HEAD
-=======
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
+<div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <Link
                 href="/contact"
                 className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl">
@@ -292,7 +287,6 @@ const September30NewContent2025Banner: React.FC = () => {
                 <div className="text-gray-300 font-semibold">
                   Enterprise Clients
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-3825
 =======
 >>>>>>> origin/main
               </div>

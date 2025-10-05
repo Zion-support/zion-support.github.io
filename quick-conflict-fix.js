@@ -11,14 +11,7 @@ function fixFile(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has conflicts
-    if (!content.includes('<<<<<<< HEAD')) {
-      return false;
-    }
-    
-    console.log(`Fixing: ${filePath}`);
-    
-    // Remove conflict markers and choose the better version
-    const sections = content.split(/<<<<<<< HEAD|=======|>>>>>>> origin\/[^\n]*/);
+    if (!content.includes('|>>>>>>> origin\/[^\n]*/);
     
     if (sections.length >= 3) {
       // Take the first section (before HEAD) + the better of the two conflict sections

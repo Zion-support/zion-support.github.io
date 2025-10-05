@@ -22,7 +22,7 @@ function findConflictFiles(dir) {
       } else if (stat.isFile() && (file.endsWith('.ts') || file.endsWith('.tsx') || file.endsWith('.js') || file.endsWith('.jsx'))) {
         try {
           const content = fs.readFileSync(filePath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>> ')) {
+          if (content.includes('') || content.includes('>>>>>>> ')) {
             conflictFiles.push(filePath);
           }
         } catch (error) {
@@ -45,9 +45,9 @@ function resolveConflicts(filePath) {
     let resolved = false;
     
     // Pattern 1: Simple syntax differences (commas, semicolons)
-    if (content.includes('<<<<<<< HEAD') && content.includes('=======') && content.includes('>>>>>>> ')) {
+    if (content.includes('') && content.includes('>>>>>>> ')) {
       // Split into sections
-      const sections = content.split(/<<<<<<< HEAD|=======|>>>>>>> /);
+      const sections = content.split(/|>>>>>>> /);
       
       if (sections.length === 4) {
         const headSection = sections[1].trim();

@@ -1,10 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Code, Key, Globe, Database, Shield, Zap, ArrowRight, Copy, CheckCircle, ExternalLink, Clock, Users } from 'lucide-react';
-
-const API: React.FC = () => {
-=======
 import { Code, Shield, Zap, ArrowRight, ExternalLink } from 'lucide-react';
 
 export default function API() {
@@ -16,21 +10,13 @@ export default function API() {
       endpoint: '/api/content',
       description: 'Retrieve all content items',
       parameters: ['limit', 'offset', 'category'],
-<<<<<<< HEAD
-      response: 'Array of content objects'
-=======
-      response: 'JSON array of content objects'
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
+response: 'JSON array of content objects'
     },
     {
       name: 'User Authentication',
       method: 'POST',
       endpoint: '/api/auth/login',
-<<<<<<< HEAD
-      description: 'Authenticate user credentials',
-=======
-      description: 'Authenticate user and get access token',
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
+description: 'Authenticate user and get access token',
       parameters: ['email', 'password'],
       response: 'JWT token and user data'
     },
@@ -38,23 +24,15 @@ export default function API() {
       name: 'Analytics Data',
       method: 'GET',
       endpoint: '/api/analytics',
-<<<<<<< HEAD
-      description: 'Get analytics data',
-      parameters: ['dateRange', 'metrics'],
-=======
-      description: 'Get analytics and reporting data',
+description: 'Get analytics and reporting data',
       parameters: ['date_range', 'metrics'],
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
       response: 'Analytics data object'
     }
   ];
 
   return (
     <div className="min-h-screen bg-gray-50">
-<<<<<<< HEAD
-      {/* Hero Section */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
+
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -66,10 +44,7 @@ export default function API() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Features Section */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
+
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8">
@@ -98,10 +73,7 @@ export default function API() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* API Endpoints Section */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
+
       <div className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 text-center mb-12">API Endpoints</h2>
@@ -145,10 +117,7 @@ export default function API() {
         </div>
       </div>
 
-<<<<<<< HEAD
-      {/* Getting Started Section */}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
+
       <div className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
@@ -157,17 +126,7 @@ export default function API() {
               Ready to integrate with our APIs? Get your API key and start building amazing applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-<<<<<<< HEAD
-              <Link to="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
-                Get API Key
-                <ArrowRight className="ml-2 w-5 h-5" />
-              </Link>
-              <Link to="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
-                View Full Documentation
-                <ExternalLink className="ml-2 w-5 h-5" />
-              </Link>
-=======
-              <a href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+<a href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                 Get API Key
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
@@ -175,17 +134,10 @@ export default function API() {
                 View Full Documentation
                 <ExternalLink className="ml-2 w-5 h-5" />
               </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
-};
-
-export default API;
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-0588
