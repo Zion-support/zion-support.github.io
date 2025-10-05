@@ -34,15 +34,15 @@ export default function Fortune500QuantumAITransformation2026() {
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <span className="flex items-center gap-2">
-                <<<Users className="w-4 h-4" />
+                <Users className="w-4 h-4" />
                 Fortune 500 Client
               </span>
               <span className="flex items-center gap-2">
-                <<<DollarSign className="w-4 h-4" />
+                <DollarSign className="w-4 h-4" />
                 $10B Revenue Impact
               </span>
               <span className="flex items-center gap-2">
-                <<<TrendingUp className="w-4 h-4" />
+                <TrendingUp className="w-4 h-4" />
                 Quantum AI
               </span>
               <span>12 min read</span>
@@ -174,19 +174,19 @@ export default function Fortune500QuantumAITransformation2026() {
                 <h4 className="text-xl font-bold mb-4 text-green-400">💰 Financial Impact</h4>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>$10B Additional Revenue:</strong> 40% increase in annual revenue</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>$2B Cost Savings:</strong> Eliminated operational inefficiencies</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>$500M Quality Savings:</strong> Reduced defect costs to zero</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>ROI:</strong> 500% return on investment in 18 months</span>
                   </li>
                 </ul>
@@ -196,19 +196,19 @@ export default function Fortune500QuantumAITransformation2026() {
                 <h4 className="text-xl font-bold mb-4 text-blue-400">⚡ Operational Excellence</h4>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>95% Automation:</strong> Reduced manual processes to 5%</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>500% Productivity:</strong> 5x increase in output per employee</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>99.9% Quality:</strong> Near-perfect defect-free production</span>
                   </li>
                   <li className="flex items-center gap-3">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     <span><strong>70% Faster Lead Times:</strong> Competitive advantage restored</span>
                   </li>
                 </ul>
@@ -338,14 +338,14 @@ export default function Fortune500QuantumAITransformation2026() {
               <Link 
                 href="/case-<studies" className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
               >
-                <<<ArrowRight className="w-4 h-4 rotate-180" />
+                <ArrowRight className="w-4 h-4 rotate-180" />
                 Back to Case Studies
               </Link>
               <Link 
                 href="/<blog" className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Read More Success Stories
-                <<<ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 export default function October2025NewestContentMegaShowcase() {
   const newContent = [
     {
-      icon: <<<Network className="w-8 h-8" />,
+      icon: <Network className="w-8 h-8" />,
       title: "Autonomous Mesh Intelligence Platform",
       description: "Self-organizing distributed AI networks with 99.997% uptime",
       value: "$8.4B",
@@ -18,7 +18,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: <<<Atom className="w-8 h-8" />,
+      icon: <Atom className="w-8 h-8" />,
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",
       value: "$12.7B",
@@ -27,7 +27,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: <<<Brain className="w-8 h-8" />,
+      icon: <Brain className="w-8 h-8" />,
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",
       value: "$5.7B",
@@ -50,7 +50,7 @@ export default function October2025NewestContentMegaShowcase() {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-full border border-purple-500/30 mb-6">
-            <<<Sparkles className="w-5 h-5 text-purple-400" />
+            <Sparkles className="w-5 h-5 text-purple-400" />
             <span className="text-purple-300 font-semibold">JUST PUBLISHED • OCTOBER 1, 2025</span>
           </div>
           
@@ -64,7 +64,7 @@ export default function October2025NewestContentMegaShowcase() {
           
           <div className="flex flex-wrap justify-center gap-6 text-lg">
             <div className="flex items-center gap-2">
-              <<<TrendingUp className="w-5 h-5 text-green-400" />
+              <TrendingUp className="w-5 h-5 text-green-400" />
               <span className="text-green-400 font-bold">$26.8B Combined Value</span>
             </div>
             <div className="flex items-center gap-2">
@@ -116,7 +116,7 @@ export default function October2025NewestContentMegaShowcase() {
               {/* CTA */}
               <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
                 <span>Read Complete Guide</span>
-                <<<ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </div>
 
               {/* Hover Glow Effect */}

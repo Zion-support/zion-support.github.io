@@ -91,7 +91,7 @@ export default function AIServices() {
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-slate-300">
-                      <<<CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </div>
                   ))}

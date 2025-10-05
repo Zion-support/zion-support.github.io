@@ -48,12 +48,12 @@ const LatestArticlesShowcase: React.FC = () => {
                 
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center text-gray-500">
-                    <<<Clock className="w-4 h-4 mr-1" />
+                    <Clock className="w-4 h-4 mr-1" />
                     {article.readTime}
                   </div>
                   <div className="text-indigo-600 font-semibold group-hover:gap-2 flex items-center transition-all">
                     Read More
-                    <<<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
                 
@@ -77,7 +77,7 @@ const LatestArticlesShowcase: React.FC = () => {
             to="/<blog" className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
           >
             View All Articles
-            <<<ArrowRight className="w-6 h-6" />
+            <ArrowRight className="w-6 h-6" />
           </Link>
         </div>
       </div>

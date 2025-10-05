@@ -21,7 +21,7 @@ const LatestInsights: React.FC = () => {
             to="/<insights" className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-            <<<ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
@@ -55,7 +55,7 @@ const LatestInsights: React.FC = () => {
                 to="/<insights" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-                <<<ArrowRight className="w-4 h-4" />
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           ))}
@@ -66,7 +66,7 @@ const LatestInsights: React.FC = () => {
             to="/<insights" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-            <<<ArrowRight className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

@@ -156,7 +156,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
-                  <<<ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  <ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </Link>
             ))}

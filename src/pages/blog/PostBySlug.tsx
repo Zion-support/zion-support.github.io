@@ -62,7 +62,7 @@ export default function PostBySlug(): React.JSX.Element {
             <h1 className="text-3xl font-bold mb-4">Article not found</h1>
             <p className="text-zion-slate-light mb-6">The post you are looking for does not exist or has been moved.</p>
             <Link to="/<blog" className="text-zion-cyan hover:underline inline-flex items-center gap-2">
-              <<<ArrowLeft className="w-4 h-4" />
+              <ArrowLeft className="w-4 h-4" />
               Back to Blog
             </Link>
           </div>
@@ -84,7 +84,7 @@ export default function PostBySlug(): React.JSX.Element {
         <Header />
         <div className="max-w-4xl mx-auto px-6 py-24">
           <Link to="/<blog" className="text-zion-cyan hover:text-zion-blue-light mb-8 inline-flex items-center gap-2 transition-colors">
-            <<<ArrowLeft className="w-4 h-4" />
+            <ArrowLeft className="w-4 h-4" />
             Back to Blog
           </Link>
           
@@ -104,7 +104,7 @@ export default function PostBySlug(): React.JSX.Element {
                 <span className="font-medium text-white">{article.author}</span>
               )}
               <span className="flex items-center gap-1">
-                <<<Calendar className="w-4 h-4" />
+                <Calendar className="w-4 h-4" />
                 {new Date(article.publishedAt).toLocaleDateString('en-US', { 
                   year: 'numeric', 
                   month: 'long', 
@@ -113,7 +113,7 @@ export default function PostBySlug(): React.JSX.Element {
               </span>
               {article.readTime && (
                 <span className="flex items-center gap-1">
-                  <<<Clock className="w-4 h-4" />
+                  <Clock className="w-4 h-4" />
                   {article.readTime}
                 </span>
               )}

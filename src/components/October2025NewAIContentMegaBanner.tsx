@@ -19,7 +19,7 @@ const October2025NewAIContentMegaBanner = () => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
           <div className="p-3 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl">
-            <<<Sparkles className="w-8 h-8 text-white" />
+            <Sparkles className="w-8 h-8 text-white" />
           </div>
           <div>
             <div className="flex items-center gap-2 mb-1">
@@ -47,7 +47,7 @@ const October2025NewAIContentMegaBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
-                <<<Bot className="w-6 h-6 text-purple-400" />
+                <Bot className="w-6 h-6 text-purple-400" />
               </div>
               <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded">NEW</span>
             </div>
@@ -59,7 +59,7 @@ const October2025NewAIContentMegaBanner = () => {
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
               <span className="flex items-center gap-1">
-                <<<TrendingUp className="w-3 h-3" />
+                <TrendingUp className="w-3 h-3" />
                 $4.7B Value
               </span>
               <span>•</span>
@@ -67,7 +67,7 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
             <div className="flex items-center text-purple-400 font-semibold group-hover:text-purple-300">
               Read Full Guide
-              <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
@@ -77,7 +77,7 @@ const October2025NewAIContentMegaBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors">
-                <<<Shield className="w-6 h-6 text-red-400" />
+                <Shield className="w-6 h-6 text-red-400" />
               </div>
               <span className="px-2 py-1 bg-red-500/20 text-red-300 text-xs font-semibold rounded">CRITICAL</span>
             </div>
@@ -89,7 +89,7 @@ const October2025NewAIContentMegaBanner = () => {
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
               <span className="flex items-center gap-1">
-                <<<Shield className="w-3 h-3" />
+                <Shield className="w-3 h-3" />
                 99.8% Prevention
               </span>
               <span>•</span>
@@ -97,7 +97,7 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
             <div className="flex items-center text-red-400 font-semibold group-hover:text-red-300">
               Read Security Guide
-              <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
@@ -107,7 +107,7 @@ const October2025NewAIContentMegaBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                <<<Database className="w-6 h-6 text-cyan-400" />
+                <Database className="w-6 h-6 text-cyan-400" />
               </div>
               <span className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs font-semibold rounded">ESSENTIAL</span>
             </div>
@@ -119,7 +119,7 @@ const October2025NewAIContentMegaBanner = () => {
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
               <span className="flex items-center gap-1">
-                <<<Database className="w-3 h-3" />
+                <Database className="w-3 h-3" />
                 $5.8B Scale
               </span>
               <span>•</span>
@@ -127,7 +127,7 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
             <div className="flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300">
               Read Implementation Guide
-              <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>
@@ -147,7 +147,7 @@ const October2025NewAIContentMegaBanner = () => {
               to="/<blog" className="flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Explore All Insights
-              <<<ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

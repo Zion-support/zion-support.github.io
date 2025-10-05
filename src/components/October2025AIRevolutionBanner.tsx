@@ -16,11 +16,11 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-4">
-            <<<Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
             <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">
               🚀 JUST PUBLISHED - October 1, 2025
             </span>
-            <<<Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
           
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
@@ -42,7 +42,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl border border-purple-400/30 group-hover:bg-purple-500/30 transition-colors">
-                <<<Bot className="w-6 h-6 text-purple-400" />
+                <Bot className="w-6 h-6 text-purple-400" />
               </div>
               <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/30">
                 AUTONOMOUS AGENTS
@@ -75,7 +75,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             
             <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
-              <<<ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" />
             </div>
           </Link>
 
@@ -85,7 +85,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-xl border border-indigo-400/30 group-hover:bg-indigo-500/30 transition-colors">
-                <<<Code2 className="w-6 h-6 text-indigo-400" />
+                <Code2 className="w-6 h-6 text-indigo-400" />
               </div>
               <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full border border-indigo-500/30">
                 AI DEVELOPMENT
@@ -118,7 +118,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             
             <div className="flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
-              <<<ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" />
             </div>
           </Link>
 
@@ -128,7 +128,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-emerald-500/20 rounded-xl border border-emerald-400/30 group-hover:bg-emerald-500/30 transition-colors">
-                <<<Shield className="w-6 h-6 text-emerald-400" />
+                <Shield className="w-6 h-6 text-emerald-400" />
               </div>
               <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-500/30">
                 AI SAFETY
@@ -161,7 +161,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             
             <div className="flex items-center gap-2 text-emerald-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
-              <<<ArrowRight className="w-5 h-5" />
+              <ArrowRight className="w-5 h-5" />
             </div>
           </Link>
         </div>
@@ -172,7 +172,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             to="/<blog" className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30"
           >
             <span>Explore All Latest AI Insights</span>
-            <<<ArrowRight className="w-5 h-5" />
+            <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </div>

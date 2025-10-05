@@ -9,9 +9,9 @@ const January2026RevolutionaryAIBanner = () => {
   return (
     <div className="bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-fuchsia-500/20 border border-violet-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
-        <<<Sparkles className="w-7 h-7 text-violet-400 animate-pulse" />
+        <Sparkles className="w-7 h-7 text-violet-400 animate-pulse" />
         <span className="text-xl font-bold text-violet-400">🚀 JANUARY 2026: REVOLUTIONARY AI BREAKTHROUGH</span>
-        <<<Sparkles className="w-7 h-7 text-violet-400 animate-pulse" />
+        <Sparkles className="w-7 h-7 text-violet-400 animate-pulse" />
       </div>
       
       <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
@@ -35,15 +35,15 @@ const January2026RevolutionaryAIBanner = () => {
           <h3 className="text-xl font-bold text-white mb-3">Quantum Consciousness</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-violet-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-violet-400" />
               <span>99.99% decision accuracy</span>
             </li>
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-violet-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-violet-400" />
               <span>Real-time consciousness simulation</span>
             </li>
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-violet-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-violet-400" />
               <span>Self-evolving intelligence</span>
             </li>
           </ul>
@@ -54,15 +54,15 @@ const January2026RevolutionaryAIBanner = () => {
           <h3 className="text-xl font-bold text-white mb-3">Quantum Processing</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
               <span>10,000x faster than classical AI</span>
             </li>
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
               <span>Parallel universe processing</span>
             </li>
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-purple-400" />
               <span>Zero-latency decision making</span>
             </li>
           </ul>
@@ -73,15 +73,15 @@ const January2026RevolutionaryAIBanner = () => {
           <h3 className="text-xl font-bold text-white mb-3">Enterprise Impact</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-fuchsia-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-fuchsia-400" />
               <span>$2.3B value created</span>
             </li>
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-fuchsia-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-fuchsia-400" />
               <span>95% operational efficiency gain</span>
             </li>
             <li className="flex items-center">
-              <<<CheckCircle className="w-4 h-4 mr-2 text-fuchsia-400" />
+              <CheckCircle className="w-4 h-4 mr-2 text-fuchsia-400" />
               <span>Fortune 500 proven</span>
             </li>
           </ul>
@@ -92,19 +92,19 @@ const January2026RevolutionaryAIBanner = () => {
         <Link
           to="/blog/ai-2026-january-quantum-consciousness-<breakthrough" className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-violet-500/50 inline-flex items-center justify-center gap-2"
         >
-          <<<Brain className="w-5 h-5" />
+          <Brain className="w-5 h-5" />
           Read Quantum Consciousness Guide
         </Link>
         <Link
           to="/case-studies/quantum-consciousness-2-3-billion-<success" className="bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-purple-500/50 inline-flex items-center justify-center gap-2"
         >
-          <<<Award className="w-5 h-5" />
+          <Award className="w-5 h-5" />
           View $2.3B Success Story
         </Link>
         <Link
           to="/services/quantum-consciousness-<ai" className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 inline-flex items-center justify-center gap-2"
         >
-          <<<Zap className="w-5 h-5" />
+          <Zap className="w-5 h-5" />
           Get Quantum AI Services
         </Link>
       </div>

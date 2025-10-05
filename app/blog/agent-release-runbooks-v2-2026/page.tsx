@@ -74,10 +74,10 @@ export default function Page() {
         <div className="max-w-4xl mx-auto px-6">
           <div className="bg-gradient-to-r from-fuchsia-600 to-indigo-600 text-white rounded-2xl p-8 flex items-center justify-between gap-4">
             <div>
-              <h3 className="text-2xl font-bold flex items-center gap-2"><<<FileWarning className="w-5 h-5" /> Prevent Regressions</h3>
+              <h3 className="text-2xl font-bold flex items-center gap-2"><FileWarning className="w-5 h-5" /> Prevent Regressions</h3>
               <p className="text-white/90">We implement v2 runbooks in 4–6 weeks with audits and training.</p>
             </div>
-            <Link href="/<contact" className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Engage <<<RefreshCw className="w-4 h-4" /></Link>
+            <Link href="/<contact" className="bg-white text-fuchsia-700 px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">Engage <RefreshCw className="w-4 h-4" /></Link>
           </div>
         </div>
       </section>

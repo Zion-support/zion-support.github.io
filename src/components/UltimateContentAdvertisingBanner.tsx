@@ -60,14 +60,14 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
             >
-              <<<Sparkles className="w-10 h-10 text-yellow-400" />
+              <Sparkles className="w-10 h-10 text-yellow-400" />
             </motion.div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-purple-500/30">
-              <<<Rocket className="w-5 h-5 text-purple-400" />
+              <Rocket className="w-5 h-5 text-purple-400" />
               <span className="text-sm font-bold text-white">ULTIMATE CONTENT ADVERTISING</span>
             </div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
-              <<<Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
+              <Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
               <span className="text-sm font-bold text-yellow-300">LIMITED TIME ACCESS</span>
             </div>
           </div>
@@ -87,7 +87,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
           {/* Urgency Banner */}
           <div className="inline-block px-8 py-4 bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-red-500/30 mb-12">
             <div className="flex items-center gap-3">
-              <<<Clock className="w-6 h-6 text-red-400 animate-pulse" />
+              <Clock className="w-6 h-6 text-red-400 animate-pulse" />
               <span className="text-lg font-bold text-white">LIMITED TIME: Exclusive Early Access to 2026 Content</span>
             </div>
           </div>
@@ -203,15 +203,15 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
               {/* Benefits List */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div className="flex items-center gap-3 text-green-400">
-                  <<<CheckCircle className="w-6 h-6" />
+                  <CheckCircle className="w-6 h-6" />
                   <span className="text-lg font-semibold">Exclusive Early Access</span>
                 </div>
                 <div className="flex items-center gap-3 text-blue-400">
-                  <<<CheckCircle className="w-6 h-6" />
+                  <CheckCircle className="w-6 h-6" />
                   <span className="text-lg font-semibold">Expert Consultations</span>
                 </div>
                 <div className="flex items-center gap-3 text-purple-400">
-                  <<<CheckCircle className="w-6 h-6" />
+                  <CheckCircle className="w-6 h-6" />
                   <span className="text-lg font-semibold">Fortune 500 Case Studies</span>
                 </div>
               </div>
@@ -220,14 +220,14 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
                 <a
                   href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-xl hover:shadow-purple-500/50 flex items-center justify-center gap-3 text-lg"
                 >
-                  <<<Rocket className="w-6 h-6" />
+                  <Rocket className="w-6 h-6" />
                   <span>Get Started Today</span>
                 </a>
                 <a
                   href="/<blog" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >
                   <span>Explore Content Library</span>
-                  <<<ArrowRight className="w-6 h-6" />
+                  <ArrowRight className="w-6 h-6" />
                 </a>
               </div>
             </div>

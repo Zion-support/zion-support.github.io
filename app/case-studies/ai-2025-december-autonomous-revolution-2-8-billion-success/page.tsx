@@ -26,7 +26,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-            <<<ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
         </div>
@@ -38,15 +38,15 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <<<Calendar className="w-4 h-4" />
+              <Calendar className="w-4 h-4" />
               <span>December 20, 2025</span>
             </div>
             <div className="flex items-center gap-1">
-              <<<User className="w-4 h-4" />
+              <User className="w-4 h-4" />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <<<Clock className="w-4 h-4" />
+              <Clock className="w-4 h-4" />
               <span>16 min read</span>
             </div>
           </div>
@@ -62,7 +62,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
           <div className="flex flex-wrap gap-2">
             {['AI Success Story', '$2.8B Savings', 'Autonomous Enterprise', 'December 2025', 'Fortune 100'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <<<Tag className="w-3 h-3" />
+                <Tag className="w-3 h-3" />
                 {tag}
               </span>
             ))}
@@ -72,7 +72,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
         {/* Executive Summary */}
         <div className="bg-gradient-to-r from-purple-600 via-indigo-600 to-blue-600 text-white rounded-2xl p-8 mb-12">
           <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-            <<<Brain className="w-8 h-8" />
+            <Brain className="w-8 h-8" />
             📊 Executive Summary
           </h2>
           <div className="grid md:grid-cols-4 gap-6">
@@ -165,13 +165,13 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
           
           <div className="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-6 mb-8">
             <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
-              <<<Zap className="w-5 h-5" />
+              <Zap className="w-5 h-5" />
               Zion Tech Group's Revolutionary Approach
             </h3>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <<<Brain className="w-8 h-8 text-purple-600" />
+                  <Brain className="w-8 h-8 text-purple-600" />
                 </div>
                 <h4 className="font-bold text-green-800 mb-2">Neural Autonomy Engine</h4>
                 <p className="text-green-700 text-sm">
@@ -180,7 +180,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <<<Shield className="w-8 h-8 text-blue-600" />
+                  <Shield className="w-8 h-8 text-blue-600" />
                 </div>
                 <h4 className="font-bold text-green-800 mb-2">Autonomous Security</h4>
                 <p className="text-green-700 text-sm">
@@ -189,7 +189,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <<<TrendingUp className="w-8 h-8 text-green-600" />
+                  <TrendingUp className="w-8 h-8 text-green-600" />
                 </div>
                 <h4 className="font-bold text-green-800 mb-2">Predictive Optimization</h4>
                 <p className="text-green-700 text-sm">
@@ -262,7 +262,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6">
               <h3 className="font-bold text-green-800 mb-4 flex items-center gap-2">
-                <<<CheckCircle className="w-5 h-5" />
+                <CheckCircle className="w-5 h-5" />
                 Financial Impact
               </h3>
               <ul className="space-y-3 text-green-700">
@@ -287,7 +287,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
             
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 rounded-xl p-6">
               <h3 className="font-bold text-blue-800 mb-4 flex items-center gap-2">
-                <<<TrendingUp className="w-5 h-5" />
+                <TrendingUp className="w-5 h-5" />
                 Operational Excellence
               </h3>
               <ul className="space-y-3 text-blue-700">
@@ -347,7 +347,7 @@ export default function AI2025DecemberAutonomousRevolution28BillionSuccess() {
               </blockquote>
               <div className="flex items-center justify-center gap-4">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                  <<<User className="w-8 h-8" />
+                  <User className="w-8 h-8" />
                 </div>
                 <div className="text-left">
                   <div className="font-bold text-lg">Sarah Chen</div>

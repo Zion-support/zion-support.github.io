@@ -48,11 +48,11 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6 flex-wrap">
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-lg">
-                  <<<Brain className="w-4 h-4 mr-2" />
+                  <Brain className="w-4 h-4 mr-2" />
                   BREAKTHROUGH TECHNOLOGY
                 </span>
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <<<Award className="w-4 h-4 mr-2" />
+                  <Award className="w-4 h-4 mr-2" />
                   $847M+ VALUE
                 </span>
                 <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
@@ -109,7 +109,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
           <div className="prose prose-lg prose-invert max-w-none">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <<<Target className="w-8 h-8 text-yellow-400" />
+                <Target className="w-8 h-8 text-yellow-400" />
                 Executive Summary
               </h2>
               <p className="text-purple-100 leading-relaxed">
@@ -124,7 +124,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
             <div className="space-y-12">
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <<<Zap className="w-8 h-8 text-yellow-400" />
+                  <Zap className="w-8 h-8 text-yellow-400" />
                   The Multi-Agent Revolution
                 </h2>
                 
@@ -154,19 +154,19 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-4">The Multi-Agent Advantage</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-3 text-purple-100">
-                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>Distributed intelligence:</strong> 1000+ specialized agents working in harmony</span>
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
-                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>Autonomous coordination:</strong> Self-organizing teams with 99.7% accuracy</span>
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
-                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>Dynamic scaling:</strong> Automatic resource allocation based on demand</span>
                     </li>
                     <li className="flex items-start gap-3 text-purple-100">
-                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>Resilient architecture:</strong> Built-in redundancy and fault tolerance</span>
                     </li>
                   </ul>
@@ -175,7 +175,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <<<Users className="w-8 h-8 text-blue-400" />
+                  <Users className="w-8 h-8 text-blue-400" />
                   Real-World Enterprise Applications
                 </h2>
                 
@@ -223,7 +223,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                         <div className="grid grid-cols-2 gap-2">
                           {application.results.map((result, i) => (
                             <div key={i} className="text-sm text-purple-100 flex items-center gap-2">
-                              <<<CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
                               {result}
                             </div>
                           ))}
@@ -236,7 +236,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
               
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <<<TrendingUp className="w-8 h-8 text-green-400" />
+                  <TrendingUp className="w-8 h-8 text-green-400" />
                   ROI Analysis
                 </h2>
                 
@@ -308,7 +308,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 to="/<contact" className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
               >
                 Schedule Assessment
-                <<<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/<services" className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
@@ -326,7 +326,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 to="/blog/ai-2025-cognitive-computing-enterprise-<transformation" className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <<<Brain className="w-6 h-6 text-pink-400" />
+                  <Brain className="w-6 h-6 text-pink-400" />
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
@@ -341,7 +341,7 @@ const MultiAgentEnterpriseOrchestration: React.FC = () => {
                 to="/case-studies/global-telecom-cognitive-transformation-4-7-<billion" className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <<<Award className="w-6 h-6 text-green-400" />
+                  <Award className="w-6 h-6 text-green-400" />
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">

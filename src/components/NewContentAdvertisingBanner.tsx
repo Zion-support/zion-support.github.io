@@ -32,7 +32,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: <<<Sparkles className="w-6 h-6" />,
+      icon: <Sparkles className="w-6 h-6" />,
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -44,7 +44,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: <<<TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w-6 h-6" />,
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -56,7 +56,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: <<<Star className="w-6 h-6" />,
+      icon: <Star className="w-6 h-6" />,
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -68,7 +68,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: <<<TrendingUp className="w-6 h-6" />,
+      icon: <TrendingUp className="w-6 h-6" />,
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -80,16 +80,16 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: <<<Award className="w-6 h-6" />,
+      icon: <Award className="w-6 h-6" />,
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: <<<Users className="w-8 h-8" /> },
-    { value: '98%', label: 'Customer Satisfaction', icon: <<<Star className="w-8 h-8" /> },
-    { value: '200+', label: 'Expert Articles', icon: <<<Award className="w-8 h-8" /> },
-    { value: '50+', label: 'Industry Awards', icon: <<<Target className="w-8 h-8" /> }
+    { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
+    { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
+    { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
+    { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
   ];
 
   return (
@@ -105,11 +105,11 @@ const NewContentAdvertisingBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
-            <<<Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
             <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
               🚀 NEW CONTENT LAUNCH • Sept 30, 2025
             </span>
-            <<<Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
+            <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
@@ -176,11 +176,11 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <<<Zap className="w-4 h-4 text-indigo-400" />
+                    <Zap className="w-4 h-4 text-indigo-400" />
                     {content.readTime}
                   </span>
                   <span className="flex items-center gap-1">
-                    <<<Star className="w-4 h-4 text-yellow-400 fill-current" />
+                    <Star className="w-4 h-4 text-yellow-400 fill-current" />
                     {content.rating}
                   </span>
                 </div>
@@ -188,7 +188,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 {/* Reader Count */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-400">
-                    <<<Users className="w-4 h-4" />
+                    <Users className="w-4 h-4" />
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
@@ -199,7 +199,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
-                  <<<ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
             </div>
@@ -210,7 +210,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
         <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-              <<<Star className="w-5 h-5 text-yellow-400 fill-current" />
+              <Star className="w-5 h-5 text-yellow-400 fill-current" />
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 LIMITED TIME OFFER
               </span>
@@ -234,14 +234,14 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <a
                   href="/<subscribe" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
                 >
-                  <<<Sparkles className="w-5 h-5" />
+                  <Sparkles className="w-5 h-5" />
                   <span>Get Premium Access</span>
                 </a>
                 <a
                   href="/<contact" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Contact Sales</span>
-                  <<<ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>
@@ -265,7 +265,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   placeholder="Enter your <<email className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300" />
                 <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
                   <span>Subscribe</span>
-                  <<<ArrowRight className="w-5 h-5" />
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-4">

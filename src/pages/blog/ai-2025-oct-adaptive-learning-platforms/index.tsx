@@ -29,7 +29,7 @@ const AdaptiveLearningPlatforms = () => {
           <Link
             to="/<blog" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <<<ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
 
@@ -56,7 +56,7 @@ const AdaptiveLearningPlatforms = () => {
 
             <div className="flex items-center gap-6 mt-8 text-zion-slate-light">
               <div className="flex items-center gap-2">
-                <<<GraduationCap className="w-5 h-5 text-zion-cyan" />
+                <GraduationCap className="w-5 h-5 text-zion-cyan" />
                 <span>Dr. Michael Torres, Chief Learning Officer</span>
               </div>
               <span>•</span>
@@ -114,7 +114,7 @@ const AdaptiveLearningPlatforms = () => {
               <div className="space-y-6">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     1. Intelligent Assessment & Profiling
                   </h3>
                   <p className="mb-3">
@@ -131,7 +131,7 @@ const AdaptiveLearningPlatforms = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     2. Dynamic Path Personalization
                   </h3>
                   <p className="mb-3">
@@ -147,7 +147,7 @@ const AdaptiveLearningPlatforms = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     3. AI-Powered Content Generation
                   </h3>
                   <p className="mb-3">
@@ -163,7 +163,7 @@ const AdaptiveLearningPlatforms = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-green-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <<<CheckCircle className="w-5 h-5 text-green-400" />
+                    <CheckCircle className="w-5 h-5 text-green-400" />
                     4. Predictive Analytics & Intervention
                   </h3>
                   <p className="mb-3">
@@ -191,11 +191,11 @@ const AdaptiveLearningPlatforms = () => {
                   </p>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>5x faster time-to-productivity for new developers</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>87% first-time certification pass rates</span>
                     </div>
                   </div>
@@ -209,11 +209,11 @@ const AdaptiveLearningPlatforms = () => {
                   </p>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>94% improvement in leadership competencies</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>$89M saved in executive recruiting costs</span>
                     </div>
                   </div>
@@ -227,11 +227,11 @@ const AdaptiveLearningPlatforms = () => {
                   </p>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>95% on-time completion vs. 34% previous</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>92% knowledge retention after 6 months</span>
                     </div>
                   </div>
@@ -245,11 +245,11 @@ const AdaptiveLearningPlatforms = () => {
                   </p>
                   <div className="text-sm space-y-1">
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>78% increase in quota attainment</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <<<CheckCircle className="w-4 h-4 text-green-400" />
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span>$156M incremental revenue in Year 1</span>
                     </div>
                   </div>
@@ -369,7 +369,7 @@ const AdaptiveLearningPlatforms = () => {
                 <Link
                   to="/<contact" className="bg-white text-blue-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
-                  <<<Target className="w-5 h-5" />
+                  <Target className="w-5 h-5" />
                   Request Demo
                 </Link>
                 <Link

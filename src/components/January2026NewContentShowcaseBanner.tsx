@@ -109,7 +109,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             href="/<blog" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
           >
             Explore January 2026 Content
-            <<<ArrowRight className="ml-2 w-5 h-5" />
+            <ArrowRight className="ml-2 w-5 h-5" />
           </a>
         </motion.div>
       </div>

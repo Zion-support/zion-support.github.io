@@ -27,7 +27,7 @@ export default function CognitiveSearchEnterprise2025() {
           <Link
             to="/<blog" className="inline-flex items-center text-indigo-400 hover:text-indigo-300 mb-8 transition-colors"
           >
-            <<<ArrowLeft className="mr-2 h-4 w-4" />
+            <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
 
@@ -51,20 +51,20 @@ export default function CognitiveSearchEnterprise2025() {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <<<Brain className="h-8 w-8 text-indigo-400" />
+                <Brain className="h-8 w-8 text-indigo-400" />
                 Transformative Results
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <<<Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                  <Search className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                   <span><strong>97% Answer Accuracy:</strong> AI understands context and delivers precise answers, not just documents</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <<<Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
                   <span><strong>12x Faster Discovery:</strong> Find critical information in seconds instead of hours</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <<<TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>$124M+ Productivity:</strong> Employees save 8.5 hours weekly finding information</span>
                 </li>
               </ul>
@@ -216,7 +216,7 @@ export default function CognitiveSearchEnterprise2025() {
                 to="/<contact" className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 rounded-lg font-bold text-lg hover:bg-indigo-50 transition-colors"
               >
                 Start Your Knowledge Transformation
-                <<<Brain className="ml-2 h-5 w-5" />
+                <Brain className="ml-2 h-5 w-5" />
               </Link>
             </div>
           </div>
