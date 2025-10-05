@@ -2,91 +2,75 @@ import React, { useEffect, useRef, useState } from 'react';
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
-  animation?: 'fadeIn' | 'slideUp' | 'slideDown' | 'slideLeft' | 'slideRight' | 'scale' | 'rotate';
-  delay?: number;
-  duration?: number;
-  threshold?: number;
   className?: string;
-  style?: React.CSSProperties;
+  animation?: 'fadeIn' | 'slideUp' | 'slideLeft' | 'slideRight';
+  delay?: number;
 }
 
 const AnimatedSection: React.FC<AnimatedSectionProps> = ({
   children,
-  animation = 'fadeIn',
-  delay = 0,
-  duration = 600,
-  threshold = 0.1,
   className = '',
-  style = {}
+  animation = 'fadeIn',
+  delay = 0
 }) => {
   const [isVisible, setIsVisible] = useState(false);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const elementRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
+        if (entry.isIntersecting) {
           setTimeout(() => {
             setIsVisible(true);
-            setHasAnimated(true);
           }, delay);
         }
       },
-      { threshold }
+      { threshold: 0.1 }
     );
 
-    if (elementRef.current) {
-      observer.observe(elementRef.current);
+    if (ref.current) {
+      observer.observe(ref.current);
     }
 
-    return () => {
-      if (elementRef.current) {
-        observer.unobserve(elementRef.current);
-      }
-    };
-  }, [delay, threshold, hasAnimated]);
+    return () => observer.disconnect();
+  }, [delay]);
 
-  const getAnimationStyles = (): React.CSSProperties => {
-    const baseStyles: React.CSSProperties = {
-      transition: `all ${duration}ms cubic-bezier(0.4, 0, 0.2, 1)`,
-      transitionDelay: `${delay}ms`,
-      ...style
-    };
-
+  const getAnimationClasses = () => {
+    const baseClasses = 'transition-all duration-1000 ease-out';
+    
     if (!isVisible) {
       switch (animation) {
         case 'fadeIn':
-          return { ...baseStyles, opacity: 0 };
+          return `${baseClasses} opacity-0`;
         case 'slideUp':
-          return { ...baseStyles, opacity: 0, transform: 'translateY(30px)' };
-        case 'slideDown':
-          return { ...baseStyles, opacity: 0, transform: 'translateY(-30px)' };
+          return `${baseClasses} opacity-0 transform translate-y-8`;
         case 'slideLeft':
-          return { ...baseStyles, opacity: 0, transform: 'translateX(30px)' };
+          return `${baseClasses} opacity-0 transform translate-x-8`;
         case 'slideRight':
-          return { ...baseStyles, opacity: 0, transform: 'translateX(-30px)' };
-        case 'scale':
-          return { ...baseStyles, opacity: 0, transform: 'scale(0.8)' };
-        case 'rotate':
-          return { ...baseStyles, opacity: 0, transform: 'rotate(5deg) scale(0.9)' };
+          return `${baseClasses} opacity-0 transform -translate-x-8`;
         default:
-          return { ...baseStyles, opacity: 0 };
+          return `${baseClasses} opacity-0`;
       }
     }
 
-    return {
-      ...baseStyles,
-      opacity: 1,
-      transform: 'translateY(0) translateX(0) scale(1) rotate(0deg)'
-    };
+    switch (animation) {
+      case 'fadeIn':
+        return `${baseClasses} opacity-100`;
+      case 'slideUp':
+        return `${baseClasses} opacity-100 transform translate-y-0`;
+      case 'slideLeft':
+        return `${baseClasses} opacity-100 transform translate-x-0`;
+      case 'slideRight':
+        return `${baseClasses} opacity-100 transform translate-x-0`;
+      default:
+        return `${baseClasses} opacity-100`;
+    }
   };
 
   return (
     <div
-      ref={elementRef}
-      className={className}
-      style={getAnimationStyles()}
+      ref={ref}
+      className={`${getAnimationClasses()} ${className}`}
     >
       {children}
     </div>

@@ -1,8 +1,0 @@
- };
-
-exportconstgetAllOctoberNewContent = () => {
-  returnoctoberNewBreakthroughContent;
-};
-
-  };
-};
