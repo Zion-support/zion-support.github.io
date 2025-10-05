@@ -1,6 +1,5 @@
 import React from 'react';
-import { ArrowRight, TrendingUp, Zap, Rocket, Sparkles } from 'lucide-react';
-
+import { ArrowRight, Rocket, TrendingUp, Zap } from 'lucide-react';
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -129,7 +128,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-<span className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
+<span  text-white text-sm font-semibold shadow-lg`}>>>>>>>> origin/merge-pr-25212
                     {article.category}
                   </span>
                 </div>
@@ -192,7 +191,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-<span className={`inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r ${article.gradient} text-white text-sm font-semibold shadow-lg`}>
+<span  text-white text-sm font-semibold shadow-lg`}>>>>>>>> origin/merge-pr-25212
                     {article.category}
                   </span>
                 </div>

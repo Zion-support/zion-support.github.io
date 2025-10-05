@@ -1,7 +1,11 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Brain, Users, TrendingUp, Zap, Shield } from 'lucide-react';
 
+=======
+import { ArrowRight, Brain, TrendingUp, Users, Zap } from 'lucide-react';
+>>>>>>> main
 
 export default function February2026NextGenAutonomousIntelligenceBanner() {
   return (

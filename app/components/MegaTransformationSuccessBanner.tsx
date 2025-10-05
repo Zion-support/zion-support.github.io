@@ -1,6 +1,10 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, Users, DollarSign, Award, TrendingUp } from 'lucide-react';
 
+=======
+import { ArrowRight, Award, DollarSign, TrendingUp, Users } from 'lucide-react';
+>>>>>>> main
 
 export default function MegaTransformationSuccessBanner() {
   return (

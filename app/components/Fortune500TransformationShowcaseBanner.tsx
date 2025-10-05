@@ -1,7 +1,11 @@
 
 import React from 'react';
+<<<<<<< HEAD
 import { ArrowRight, Users, Award, TrendingUp, CheckCircle } from 'lucide-react';
 
+=======
+import { ArrowRight, Award, CheckCircle, TrendingUp, Users } from 'lucide-react';
+>>>>>>> main
 
 export default function Fortune500TransformationShowcaseBanner() {
   return (

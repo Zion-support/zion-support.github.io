@@ -1,7 +1,6 @@
 import React from 'react';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
-
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900">

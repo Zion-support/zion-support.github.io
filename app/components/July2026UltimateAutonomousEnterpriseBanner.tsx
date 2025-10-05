@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function July2026UltimateAutonomousEnterpriseBanner() {
   return (
@@ -47,24 +47,24 @@ export default function July2026UltimateAutonomousEnterpriseBanner() {
           
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <ArrowRight 
+            <Link 
               href="/blog/ai-2026-july-ultimate-autonomous-enterprise-breakthrough" 
               className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
             >
               Read Breakthrough Details
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/case-studies/ai-2026-july-ultimate-autonomous-enterprise-500-billion-success" 
               className="bg-gradient-to-r from-teal-500 to-cyan-600 hover:from-teal-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-teal-500/50 transform hover:-translate-y-1"
             >
               View $500B Success Story
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/contact" 
               className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Get Autonomous Enterprise
-            </ArrowRight>
+            </Link>
           </div>
           
           {/* Features Grid */}

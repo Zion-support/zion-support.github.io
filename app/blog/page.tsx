@@ -191,7 +191,6 @@ export default function BlogIndexPage() {
               <p `}>                {post.title}
               </h2>
               <p className='text-gray-300 mb-4 line-clamp-3'>
->>>>>>> origin/merge-pr-25212
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-=======
 import Cog from 'lucide-react/dist/esm/icons/file-text';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';

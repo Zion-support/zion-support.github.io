@@ -8,8 +8,6 @@ const PerformanceOptimizationBanner = () => {
       improvement: '87% faster',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-yellow-500 to-orange-500'
     },
     {
@@ -18,8 +16,6 @@ icon: '🚀',=======
       improvement: '99.9% secure',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-green-500 to-emerald-500'
     },
     {
@@ -28,8 +24,6 @@ icon: '🚀',=======
       improvement: '95% score',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-blue-500 to-cyan-500'
     },
     {
@@ -38,8 +32,6 @@ icon: '🚀',=======
       improvement: '100% accessible',
 icon: '🚀',=======
       icon: '🚀',
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
       color: 'from-purple-500 to-violet-500'
     }
   ];

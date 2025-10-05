@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
-
 export default function NewContent2026RevolutionaryBanner() {
   return (
     <div className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">

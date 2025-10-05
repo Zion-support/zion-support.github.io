@@ -1,6 +1,5 @@
 import Link from 'next/link';
 
-=======
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Atom from 'lucide-react/dist/esm/icons/atom';
 import Zap from 'lucide-react/dist/esm/icons/zap';

@@ -1,5 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, Users, DollarSign, Award, TrendingUp, Clock } from 'lucide-react';
+=======
+import { Award, DollarSign, TrendingUp, Clock, Users, ArrowRight } from 'lucide-react';
+>>>>>>> main
 
 // @ts-ignore
 export const metadata = {

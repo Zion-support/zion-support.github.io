@@ -1,5 +1,9 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 import { ArrowRight, Users, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
+=======
+import { ArrowRight, CheckCircle, DollarSign, TrendingUp, Users } from 'lucide-react';
+>>>>>>> main
 
 export default function Fortune500QuantumAITransformation2026() {
   return (

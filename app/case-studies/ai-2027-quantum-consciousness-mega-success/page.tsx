@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Quantum Consciousness Mega Success - $2.5B ROI Case Study',
@@ -264,12 +264,12 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
             Limited availability - Only 10 slots remaining for 2027
           </div>
           <br />
-          <ArrowRight 
+          <Link 
             href="/contact" 
             className="inline-block bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all"
           >
             Start Your Quantum Transformation
-          </ArrowRight>
+          </Link>
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">The Future is Quantum</h3>
@@ -287,18 +287,18 @@ export default function AI2027QuantumConsciousnessMegaSuccess() {
             Contact us today to secure your implementation slot and achieve unprecedented ROI.
           </p>
           <div className="flex gap-4">
-            <ArrowRight 
+            <Link 
               href="/contact" 
               className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Started Today
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/blog/ai-2027-quantum-consciousness-fusion" 
               className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
             >
               Learn More About Quantum AI
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027 Quantum Breakthrough Success: $1.2B ROI Case Study',
@@ -452,18 +452,18 @@ export default function AI2027QuantumBreakthroughSuccess() {
                 Start your quantum AI journey today and achieve breakthrough performance improvements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <ArrowRight 
+                <Link 
                   href="/contact" 
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Quantum AI Journey
-                </ArrowRight>
-                <ArrowRight 
+                </Link>
+                <Link 
                   href="/blog/ai-2027-quantum-revolution" 
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read Implementation Guide
-                </ArrowRight>
+                </Link>
               </div>
             </div>
           </div>
