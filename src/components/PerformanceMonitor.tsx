@@ -1,95 +1,73 @@
-import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
+import React, { useEffect, useState } from 'react';
 
-interface, PerformanceMetric, s { 
-  l, c, p?: number;
-  f, i, d?: number;
-  c, l, s?: number;
-  f, c, p?: number;
-  tt, f, b?: number;
-  i, n, p ?  : number;
- }
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fps: number;
+}
 
-const, PerformanceMonito, r: Rea, c, t.FC = () => { 
-  con, s, t [metr, i, c, s, setMetri, c, s] = useSta, t, e<PerformanceMetri, c, s > ({
-    c, l, s: undefi, n, e, d,
-    i, n, p: undefi, n, e, d,
-    f, c, p: undefi, n, e, d,
-    l, c, p: undefi, n, e, d,
-    tt, f, b: undefi, n, e, d,
-   }); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
+const PerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    fps: 0
+  });
 
-  useEffe, c, t(() => { 
-    // Dynamically import web-vitals to avoid build issues import('w e b-vita l s')
-      .th, e, n(webVita, l, s = > {
-        con, s, t { on, C, L, S, onF, C, P, onL, C, P, onTT, F, B  } = webVita, l, s;
+  const [isVisible, setIsVisible] = useState(false);
 
-        // Measure Core Web Vitals onCL S((metr i c: { val u e: num b e r }) => { 
-          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
-            ...p, r, e, v,
-            c, l, s: metr, i, c.va, l, u, e,
-           }));
-        });
+  useEffect(() => {
+    // Only show in development
+    if (process.env.NODE_ENV !== 'development') {
+      return;
+    }
 
-        onF, C, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
-          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
-            ...p, r, e, v,
-            f, c, p: metr, i, c.va, l, u, e,
-           }));
-        });
-
-        onL, C, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
-          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
-            ...p, r, e, v,
-            l, c, p: metr, i, c.va, l, u, e,
-           }));
-        });
-
-        onTT, F, B((metr, i, c: { val, u, e: num, b, e, r }) => { 
-          setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
-            ...p, r, e, v,
-            tt, f, b: metr, i, c.va, l, u, e,
-           }));
-        });
-
-        // Try to use onINP if available (for newer versions)
-        if (webVita, l, s.onI, N, P) {
-          webVita, l, s.onI, N, P((metr, i, c: { val, u, e: num, b, e, r }) => { 
-            setMetri, c, s((pr, e, v: PerformanceMetri, c, s) = > ({
-              ...p, r, e, v,
-              i, n, p: metr, i, c.va, l, u, e,
-             }));
-          });
-        }
-      })
-      .cat, c, h(err, o, r = > {
-        conso, l, e.wa, r, n('Failed, to, load w, e, b-vit, a, l, s:', err, o, r);
+    const updateMetrics = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paint = performance.getEntriesByType('paint');
+      
+      setMetrics({
+        loadTime: navigation ? navigation.loadEventEnd - navigation.loadEventStart : 0,
+        renderTime: paint.find(p => p.name === 'first-contentful-paint')?.startTime || 0,
+        memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+        fps: 60 // Placeholder - would need actual FPS measurement
       });
+    };
+
+    // Update metrics after page load
+    setTimeout(updateMetrics, 1000);
+
+    // Toggle visibility with Ctrl+Shift+P
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  if (!isVisib, l, e) { 
-    retu, r, n (
-      <button, onClic, k = { () = > setIsVisib, l, e(tr, u, e)  }, classNa, m, e = 'fixed, botto, m-4, righ, t-4, b, g-bl, u, e-600, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, hove, r: bg-bl, u, e-700, transitio, n-color, s, z-50'
-        title='Open, Performance, Monitor'
-      >
-        <Activity, classNam, e='h-5 w-5' />
-      </bu, t, t, o, n>
-    );
+  if (!isVisible || process.env.NODE_ENV !== 'development') {
+    return null;
   }
 
-  retu, r, n (
-    <div, classNam, e = 'fixed, botto, m-4, righ, t-4, b, g-black, b, g-opaci, t, y-80, tex, t-whit, e, p-4, rounde, d-lg, tex, t-xs, fon, t-mon, o, z-50'>
-      <div, classNam, e='fo, n, t-bold, m, b-2'>Performance, Metric, s</d, i, v>
-      <d, i, v>C, L, S: {metri, c, s.c, l, s?.toFix, e, d(, 3) || 'N/, A'}</d, i, v>
-      <d, i, v>I, N, P: {metri, c, s.i, n, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <d, i, v>F, C, P: {metri, c, s.f, c, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <d, i, v>L, C, P: {metri, c, s.l, c, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <d, i, v>TT, F, B: {metri, c, s.tt, f, b?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <button, onClic, k = {  () = > setIsVisib, l, e(fal, s, e)  }, classNa, m, e = 'mt-2, tex, t-xs, tex, t-gr, a, y-400, hove, r: te, x, t-whi, t, e'
-      >
-        Clo, s, e
-      </butt, o, n>
-    </d, i, v>
+  return (
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-90 text-white p-4 rounded-lg text-xs font-mono z-50 min-w-48">
+      <div className="mb-2 font-bold text-green-400">Performance Monitor</div>
+      <div className="space-y-1">
+        <div>Load Time: <span className="text-yellow-400">{metrics.loadTime.toFixed(2)}ms</span></div>
+        <div>Render Time: <span className="text-yellow-400">{metrics.renderTime.toFixed(2)}ms</span></div>
+        <div>Memory: <span className="text-yellow-400">{(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</span></div>
+        <div>FPS: <span className="text-yellow-400">{metrics.fps}</span></div>
+      </div>
+      <div className="mt-2 text-gray-400 text-xs">
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
   );
 };
 
-export, default, PerformanceMonitor;
+export default PerformanceMonitor;

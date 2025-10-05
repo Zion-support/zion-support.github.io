@@ -1,106 +1,69 @@
-import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-interface, NewContentPromotionBannerProp, s { 
-  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
-  title?: string;
-  description?: string;
-  ctaTe, x, t?: string;
-  ctaLi, n, k?: string;
-  dismissib, l, e?: boolean;
-  classNa, m, e ?  : string;
- }
-const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p, s> = ({
-  varia, n, t = 'in, f, o',
-  title = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Gui, d, e, s",
-  description = "Discover, our, latest articles, on, real-time, data, pipeline, s, platform, engineerin, g, and, GenAI, operationalization.",
-  ctaTe, x, t = "Explore, Latest, Conten, t",
-  ctaLi, n, k = "/b, l, o, g",
-  dismissib, l, e = t, r, u, e,
-  classNa, m, e = "",
-}) => { 
-  con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(tr, u, e); const, handleDismis, s = () = > {
-    setIsVisib, l, e(fal, s, e);
-   };
-  if (!isVisib, l, e) return, nul, l;
-  const, variantClasse, s = {
-      in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",
-      succe, s, s: "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, borde, r-gre, e, n-4, 0, 0/30, tex, t-gre, e, n-10, 0",
-      warni, n, g: "bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-yell, o, w-4, 0, 0/30, tex, t-yell, o, w-10, 0",
-      err, o, r: "bg-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, borde, r-r, e, d-4, 0, 0/30, tex, t-r, e, d-10, 0",
-      defau, l, t: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-10, 0",
-      premi, u, m: "bg-gradie, n, t-to-r, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-r, e, d-6, 0, 0/20, borde, r-purp, l, e-4, 0, 0/30, tex, t-purp, l, e-10, 0",
-  }; const, iconClasse, s = {
-      in, f, o: "te, x, t-bl, u, e-4, 0, 0",
-      succe, s, s: "te, x, t-gre, e, n-40, 0",
-      warni, n, g: "te, x, t-yell, o, w-40, 0",
-      err, o, r: "te, x, t-r, e, d-40, 0",
-      defau, l, t: "te, x, t-bl, u, e-40, 0",
-      premi, u, m: "te, x, t-purp, l, e-30, 0"
-  }; retu, r, n (
-    <div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
-      {/* Background, Patter, n */}
-      <div, classNam, e="absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" />
-        <div, classNam, e="absolu, t, e -t, o, p-4 -rig, h, t-4 w-2, 0, h-20, b, g-whi, t, e/5, rounde, d-fu, l, l" />
-        <div, classNam, e="absolu, t, e -bott, o, m-4 -le, f, t-4 w-1, 6, h-16, b, g-whi, t, e/5, rounde, d-fu, l, l" />
-      </d, i, v>
-      <div, classNam, e="relativ, e, z-10">
-        <div, classNam, e="flex, item, s-start, justif, y-betwe, e, n">
-          <div, classNam, e="fl, e, x-1">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
-              <div, classNam, e="flex, item, s-center, ga, p-2" > <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
-                <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
-                  Fresh, Conten, t
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e="flex, item, s-center, ga, p-1" > <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
-              {title}
-            </h3>
-            <p, classNam, e="te, x, t-sm, opacit, y-90, m, b-4, ma, x-w-2, x, l">
-              {description}
-            </p>
-            {/* Featured, Content, Preview */}
-            <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">
-              <div, classNam, e="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
-                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
-                  <BookOpen, classNam, e="w-3 h-3" />
-                  <span, classNam, e="te, x, t-xs, fon, t-medi, u, m">Data, Engineerin, g</sp, a, n>
-                </d, i, v>
-                <div, classNam, e="te, x, t-xs, opacit, y-90">Re, a, l-Time, Data, Pipelines Gui, d, e</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
-                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
-                  <Zap, classNam, e="w-3 h-3" />
-                  <span, classNam, e="te, x, t-xs, fon, t-medi, u, m">Platform, Engineerin, g</sp, a, n>
-                </d, i, v>
-                <div, classNam, e="te, x, t-xs, opacit, y-90">Scorecards, That, Drive Adopti, o, n</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
-                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
-                  <Sparkles, classNam, e="w-3 h-3" />
-                  <span, classNam, e="te, x, t-xs, fon, t-medi, u, m">Gen, A, I</sp, a, n>
-                </d, i, v>
-                <div, classNam, e="te, x, t-xs, opacit, y-90">Production, Deployment, Patterns</d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o = { cta, L, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-medium, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/30"
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+interface NewContentPromotionBannerProps {
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  variant?: 'default' | 'gradient' | 'dark';
+  dismissible?: boolean;
+}
+
+const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  variant = 'default',
+  dismissible = true
+}) => {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const getVariantClasses = () => {
+    switch (variant) {
+      case 'gradient':
+        return 'bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white';
+      case 'dark':
+        return 'bg-gray-900 text-white';
+      default:
+        return 'bg-blue-50 border border-blue-200 text-blue-900';
+    }
+  };
+
+  if (!isVisible) return null;
+
+  return (
+    <div className={`relative ${getVariantClasses()} py-4 px-6`}>
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="flex-1">
+          <h3 className="text-lg font-semibold mb-1">{title}</h3>
+          <p className="text-sm opacity-90">{description}</p>
+        </div>
+        
+        <div className="flex items-center space-x-4 ml-6">
+          <Link
+            to={ctaLink}
+            className="px-4 py-2 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+          >
+            {ctaText}
+          </Link>
+          
+          {dismissible && (
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-white/70 hover:text-white transition-colors"
+              aria-label="Dismiss banner"
             >
-              {cta, T, e, x, t}
-              <ArrowRight, classNam, e = "w-4 h-4" />
-            </Li, n, k>
-          </d, i, v>
-          { dismissib, l, e  && (
-            <button, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
-            >
-                <X, classNam, e="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />
-              </bu, t, t, o, n>
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           )}
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   );
 };
-export, default, NewContentPromotionBanner;
+
+export default NewContentPromotionBanner;
