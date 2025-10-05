@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function October2025NewestContentMegaShowcase() {
   const newContent = [
     {
-      icon: <Network className="w-8 h-8" />,
+      icon: <Network className="w-8 h-8">,
       title: "Autonomous Mesh Intelligence Platform",
       description: "Self-organizing distributed AI networks with 99.997% uptime",
       value: "$8.4B",
@@ -12,7 +12,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: '>,'
+      icon: '>,',
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",
       value: "$12.7B",
@@ -21,7 +21,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: '>,'
+      icon: '>,',
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",
       value: "$5.7B",
@@ -35,7 +35,7 @@ export default function October2025NewestContentMegaShowcase() {
     <section className="relative py-24 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:64px_64px]" <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"</div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:64px_64px]">
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
@@ -73,8 +73,7 @@ export default function October2025NewestContentMegaShowcase() {
             <Link
               key={index}
               to={item.link}
-              className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-            >
+              className="group relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               {/* Icon */}
               <div className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${item.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                 <div className="text-white">
@@ -124,14 +123,12 @@ export default function October2025NewestContentMegaShowcase() {
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
-                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50"
-              >
+                className="px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50">
                 Schedule Free Consultation
               </Link>
               <Link
                 to="/services"
-                className="px-8 py-4 bg-slate-700/50 text-white font-bold rounded-xl border border-slate-600 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105"
-              >
+                className="px-8 py-4 bg-slate-700/50 text-white font-bold rounded-xl border border-slate-600 hover:bg-slate-600/50 transition-all duration-300 hover:scale-105">
                 Explore All Services
               </Link>
             </div>

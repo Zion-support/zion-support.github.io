@@ -8,11 +8,7 @@ export default function BlogPage(): React.JSX.Element {
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
         <meta 
           name="description" 
-<<<<<<< HEAD
-          content="Learn about agent reliability runbooks v5 and how it can benefit your enterprise." 
-=======
-          content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback." 
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback."
         />
         <link 
           rel="canonical" 
@@ -28,13 +24,7 @@ export default function BlogPage(): React.JSX.Element {
             Practical runbooks for governing autonomous agents with budgeted actions, KPI‑linked canaries, and deterministic rollback
             that preserve customer experience while accelerating delivery.
           </p>
-<<<<<<< HEAD
-        </div>
-        <div className="mt-8">
-          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
-=======
-
-          <div className="space-y-6">
+<div className="space-y-6">
             <h2 className="text-2xl font-semibold">Runbook Patterns</h2>
             <ul className="list-disc pl-6 text-zion-slate-light">
               <li>Budget guards per intent with escalation thresholds and approvals.</li>
@@ -53,7 +43,6 @@ export default function BlogPage(): React.JSX.Element {
               <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
         </div>
       </div>
     </div>

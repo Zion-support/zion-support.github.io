@@ -1,9 +1,5 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { Shield } from 'lucide-react';
-=======
 import Shield from 'lucide-react/dist/esm/icons/hield';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export const metadata = {
   title: 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',

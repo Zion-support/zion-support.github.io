@@ -1,8 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { Calendar, Clock, User, ArrowRight, Zap, Cpu, Shield, TrendingUp, Target, Brain } from 'lucide-react';
-=======
 import Calendar from 'lucide-react/dist/esm/icons/alendar';
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import User from 'lucide-react/dist/esm/icons/ser';
@@ -13,7 +10,6 @@ import Shield from 'lucide-react/dist/esm/icons/hield';
 import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
 import Target from 'lucide-react/dist/esm/icons/arget';
 import Brain from 'lucide-react/dist/esm/icons/rain';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export const metadata: Metadata = {
   title: 'Quantum Computing 2026: Commercial Breakthrough & Enterprise Implementation | Zion Tech Group',

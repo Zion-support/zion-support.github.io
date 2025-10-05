@@ -5,10 +5,7 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
-}
-=======
-        <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
+<title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
         <meta 
           name="description" 
           content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." 
@@ -17,7 +14,6 @@ export default function BlogPage(): React.JSX.Element {
           rel="canonical" 
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2" 
         />
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -41,8 +37,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48

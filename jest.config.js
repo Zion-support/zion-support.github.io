@@ -3,17 +3,10 @@ export default {
   setupFilesAfterEnv: ['<rootDir>/app/setupTests.tsx'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transform: {
-<<<<<<< HEAD
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest'],
-  },
-  transformIgnorePatterns: [
-    'node_modules/(?!(react-error-boundary|.*\\.mjs$|@testing-library|@types|framer-motion|lucide-react|clsx|tailwind-merge|web-vitals|recharts|react|react-dom|react-helmet-async|react-router-dom|gray-matter)/)',
-=======
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'] }],
+'^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', { presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'] }],
   },
   transformIgnorePatterns: [
     'node_modules/(?!(react-error-boundary|@testing-library|react|react-dom|framer-motion|lucide-react)/)',
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
   ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/app/$1',

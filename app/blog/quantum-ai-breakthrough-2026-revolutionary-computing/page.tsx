@@ -1,7 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUp, Target, CheckCircle } from 'lucide-react';
-=======
 import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
 import Atom from 'lucide-react/dist/esm/icons/tom';
 import Zap from 'lucide-react/dist/esm/icons/ap';
@@ -10,7 +7,6 @@ import Brain from 'lucide-react/dist/esm/icons/rain';
 import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
 import Target from 'lucide-react/dist/esm/icons/arget';
 import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export default function QuantumAIBreakthrough2026() {
   return (

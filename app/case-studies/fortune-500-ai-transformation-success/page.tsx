@@ -1,7 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowLeft, Calendar, User, Clock, Tag, TrendingUp, DollarSign, Users, Target } from 'lucide-react';
-=======
 import ArrowLeft from 'lucide-react';
 import Calendar from 'lucide-react';
 import User from 'lucide-react';
@@ -11,7 +8,6 @@ import TrendingUp from 'lucide-react';
 import DollarSign from 'lucide-react';
 import Users from 'lucide-react';
 import Target from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export const metadata = {
   title: 'Fortune 500 AI Transformation Success: $52M+ Savings & 156% ROI - Zion Tech Group',

@@ -1,14 +1,10 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowLeft, Clock, User, Calendar, Share2, Bookmark } from 'lucide-react';
-=======
 import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
 import Clock from 'lucide-react/dist/esm/icons/lock';
 import User from 'lucide-react/dist/esm/icons/ser';
 import Calendar from 'lucide-react/dist/esm/icons/alendar';
 import Share2 from 'lucide-react/dist/esm/icons/hare2';
 import Bookmark from 'lucide-react/dist/esm/icons/ookmark';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
 
 export const metadata = {
   title: 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',

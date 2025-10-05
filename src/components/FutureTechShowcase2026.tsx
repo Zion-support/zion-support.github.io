@@ -11,7 +11,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '18 min',
       trending: true,
-      icon: '>,'
+      icon: '>,',
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'QUANTUM AI',
       stats: '10,000x Speed Boost'
@@ -25,7 +25,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '22 min',
       trending: true,
-      icon: '>,'
+      icon: '>,',
       gradient: 'from-purple-500 to-pink-500',
       badge: 'SELF-EVOLVING',
       stats: '99.7% Auto-Improvement'
@@ -39,7 +39,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '15 min',
       trending: true,
-      icon: '>,'
+      icon: '>,',
       gradient: 'from-green-500 to-emerald-500',
       badge: 'PREDICTIVE',
       stats: '99.9% Accuracy'
@@ -53,7 +53,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '12 min',
       trending: true,
-      icon: '>,'
+      icon: '>,',
       gradient: 'from-orange-500 to-red-500',
       badge: 'IMMERSIVE',
       stats: '100% Integration'
@@ -67,7 +67,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '14 min',
       trending: true,
-      icon: '>,'
+      icon: '>,',
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'QUANTUM-SECURE',
       stats: 'Unbreakable Security'
@@ -81,7 +81,7 @@ const FutureTechShowcase2026: React.FC = () => {
       date: '2026-01-20',
       readTime: '20 min',
       trending: true,
-      icon: '>,'
+      icon: '>,',
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'META-COGNITIVE',
       stats: 'Autonomous Orchestration'
@@ -93,8 +93,8 @@ const FutureTechShowcase2026: React.FC = () => {
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -121,16 +121,9 @@ const FutureTechShowcase2026: React.FC = () => {
         {/* Future Tech Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {futureTechArticles.map((article, index) => (
-<<<<<<< HEAD
-            <div 
-              key={article.id}
-=======
-            <div
+<div
 key={article.id}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
@@ -234,15 +227,13 @@ key={article.id}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/blog"
-                  className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">
 
                   <span>Explore All Technologies</span>
                 </a>
                 <a
                   href="/contact"
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                   <span>Get Early Access</span>
 
                 </a>
