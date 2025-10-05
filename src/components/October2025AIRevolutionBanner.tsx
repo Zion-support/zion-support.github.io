@@ -81,7 +81,8 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-xl border border-indigo-400/30 group-hover:bg-indigo-500/30 transition-colors">
-                <Code2 className="w-6 h-6 text-indigo-400"</div>
+                <Code2 className="w-6 h-6 text-indigo-400" />
+              </div>
               <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 text-xs font-semibold rounded-full border border-indigo-500/30">
                 AI DEVELOPMENT
               </span>

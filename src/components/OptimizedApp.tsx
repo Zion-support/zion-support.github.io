@@ -144,7 +144,8 @@ const OptimizedApp: React.FC = () => {
       }}
     >
       <Suspense fallback={<LoadingSpinner />}>
-        <MainContent</Suspense>
+        <MainContent />
+      </Suspense>
     </ErrorBoundary>
   );
 };
