@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -44,22 +43,3 @@ const Footer: React.FC = () => {
 };
 
 export default Footer;
-=======
-
-const Footer: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          Footer
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default Footer;
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
