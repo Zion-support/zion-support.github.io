@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -15,7 +14,6 @@ const Header: React.FC = () => {
           <Link to="/services" className="hover:text-gray-300">Services</Link>
           <Link to="/contact" className="hover:text-gray-300">Contact</Link>
         </nav>
-=======
 import React, { useState } from 'react';
 
 const Header: React.FC = () => {
@@ -78,7 +76,6 @@ const Header: React.FC = () => {
             </div>
           </div>
         )}
->>>>>>> cursor/fix-errors-and-merge-to-main-ab0f
       </div>
     </header>
   );
