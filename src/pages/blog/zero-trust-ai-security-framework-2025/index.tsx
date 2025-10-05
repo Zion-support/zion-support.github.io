@@ -1,5 +1,5 @@
+import { AlertTriangle, ArrowLeft, Calendar, Clock, Lock, Shield, ShieldCheck, TrendingUp } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Calendar, Clock, Lock, Shield, ShieldCheck, TrendingUp, AlertTriangle } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 const ZeroTrustAISecurityFramework2025 = () => {

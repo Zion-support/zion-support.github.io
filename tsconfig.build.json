@@ -9,8 +9,6 @@
   },
   "exclude": [
     "src/pages/blog-disabled/**/*",
-    "app/blog",
-    "app/components",
     "blog",
     "components",
     "src/components/**/*",

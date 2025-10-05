@@ -1,4 +1,6 @@
-import { React } from 'react';
+import React from 'react';
+
+
 
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];
@@ -384,4 +386,3 @@ export default function RevolutionaryBreakthroughs2025() {
     </div>
   );
 }
->>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39
