@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Cpu, Shield, TrendingUp } from 'lucide-react';
+// import { ArrowRight, Zap, Cpu, Shield, TrendingUp } from 'lucide-react';
 
 const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
   return (

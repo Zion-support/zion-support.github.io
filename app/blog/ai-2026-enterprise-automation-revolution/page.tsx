@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
+// import { Cog, Zap, TrendingUp, Shield, Users, BarChart3 } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026 Enterprise Automation Revolution: Transform Your Business Operations',

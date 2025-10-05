@@ -21,8 +21,7 @@ const October2025FraudDetectionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             AI-Powered Real-Time Fraud Detection
-            <br
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
+            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-purple-400 to-blue-400">
               $847B in Assets Protected | 99.7% Accuracy | Sub-50ms Detection
             </span>
           </h2>
@@ -83,8 +82,7 @@ const October2025FraudDetectionBanner = () => {
 
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
-                <Eye className="w-6 h-6 text-purple-400" />
-              </div>
+                <Eye className="w-6 h-6 text-purple-400"</div>
               <div>
                 <div className="font-semibold text-white mb-1">Behavioral Biometrics</div>
                 <div className="text-sm text-gray-300">
@@ -95,8 +93,7 @@ const October2025FraudDetectionBanner = () => {
 
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
-                <Network className="w-6 h-6 text-blue-400" />
-              </div>
+                <Network className="w-6 h-6 text-blue-400"</div>
               <div>
                 <div className="font-semibold text-white mb-1">Graph Intelligence</div>
                 <div className="text-sm text-gray-300">

@@ -39,8 +39,7 @@ const October2025CuttingEdgeAIBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-emerald-500/20 rounded-xl group-hover:bg-emerald-500/30 transition-colors">
-                <Scale className="w-8 h-8 text-emerald-300" />
-              </div>
+                <Scale className="w-8 h-8 text-emerald-300"</div>
               <div className="flex-1">
                 <span className="text-xs text-emerald-300 font-semibold uppercase tracking-wide">AI Governance</span>
               </div>
@@ -99,8 +98,7 @@ const October2025CuttingEdgeAIBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-cyan-500/20 rounded-xl group-hover:bg-cyan-500/30 transition-colors">
-                <Repeat className="w-8 h-8 text-cyan-300" />
-              </div>
+                <Repeat className="w-8 h-8 text-cyan-300"</div>
               <div className="flex-1">
                 <span className="text-xs text-cyan-300 font-semibold uppercase tracking-wide">AI Operations</span>
               </div>

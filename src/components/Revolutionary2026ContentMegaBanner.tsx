@@ -216,8 +216,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   href={`/blog/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
-                  <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" />
-                  <span>Explore Breakthrough</span>
+                  <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full" <span>Explore Breakthrough</span>
 
                 </a>
               </div>

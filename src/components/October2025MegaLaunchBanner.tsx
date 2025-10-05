@@ -249,8 +249,7 @@ const October2025MegaLaunchBanner = () => {
             to="/contact"
             className="group border-2 border-white hover:bg-white text-white hover:text-purple-900 px-12 py-5 rounded-full font-bold text-lg transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
           >
-            <Lightbulb className="w-6 h-6 group-hover:animate-pulse" />
-            <span>Get Expert Consultation</span>
+            <Lightbulb className="w-6 h-6 group-hover:animate-pulse" <span>Get Expert Consultation</span>
           </Link>
         </div>
 

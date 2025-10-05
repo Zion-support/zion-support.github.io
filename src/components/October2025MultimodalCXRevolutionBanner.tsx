@@ -21,8 +21,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
           
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Multimodal AI Customer Experience Platform
-            <br
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
+            <br <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               $340M Value Created | 287% ROI | 94% Customer Satisfaction
             </span>
           </h2>
@@ -35,8 +34,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
           <div className="bg-gradient-to-br from-cyan-900/40 to-cyan-800/40 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
-            <Heart className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
-            <div className="text-3xl font-bold text-white mb-1">94%</div>
+            <Heart className="w-8 h-8 text-cyan-400 mx-auto mb-2" <div className="text-3xl font-bold text-white mb-1">94%</div>
             <div className="text-sm text-cyan-200">Customer Satisfaction</div>
             <div className="text-xs text-gray-400 mt-1">+147% improvement</div>
           </div>
@@ -71,8 +69,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
-                <Eye className="w-6 h-6 text-cyan-400" />
-              </div>
+                <Eye className="w-6 h-6 text-cyan-400"</div>
               <div>
                 <div className="font-semibold text-white mb-1">Vision AI Intelligence</div>
                 <div className="text-sm text-gray-300">
@@ -83,8 +80,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
 
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
-                <MessageCircle className="w-6 h-6 text-blue-400" />
-              </div>
+                <MessageCircle className="w-6 h-6 text-blue-400"</div>
               <div>
                 <div className="font-semibold text-white mb-1">Voice + Emotion AI</div>
                 <div className="text-sm text-gray-300">
@@ -301,8 +297,7 @@ const October2025MultimodalCXRevolutionBanner = () => {
               to="/contact"
               className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 rounded-lg text-white font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50"
             >
-              <Heart className="w-6 h-6" />
-              <span>Schedule Free Assessment</span>
+              <Heart className="w-6 h-6" <span>Schedule Free Assessment</span>
 
             </Link>
           </div>

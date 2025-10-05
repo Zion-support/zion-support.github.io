@@ -125,8 +125,7 @@ const TrendingContentBanner: React.FC = () => {
 
           <div className="flex items-start gap-4">
             <div className="bg-zion-blue/20 p-3 rounded-lg group-hover:bg-zion-blue/30 transition-colors">
-              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform" />
-            </div>
+              <Icon className="w-6 h-6 text-zion-cyan group-hover:scale-110 transition-transform"</div>
             
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-1">
@@ -145,8 +144,7 @@ const TrendingContentBanner: React.FC = () => {
 
               <div className="flex items-center gap-4 text-xs text-zion-slate-light">
                 <div className="flex items-center gap-1">
-                  <Eye className="w-3 h-3" />
-                  <span>{currentItem.views} views</span>
+                  <Eye className="w-3 h-3" <span>{currentItem.views} views</span>
                 </div>
                 <div className="flex items-center gap-1">
 

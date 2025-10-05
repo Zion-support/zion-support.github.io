@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
+// import { ArrowLeft, Calendar, User, Clock, Tag } from 'lucide-react';
 
 export const metadata = {
   title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',

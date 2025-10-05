@@ -36,8 +36,7 @@ const October2025NewPremiumContentBanner: React.FC = () => {
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-cyan-500/30 hover:border-cyan-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Activity className="w-8 h-8 text-white" />
-              </div>
+                <Activity className="w-8 h-8 text-white"</div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
                 
               </div>
@@ -74,16 +73,14 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/ai-autonomous-devops-platform-2025-october"
               className="flex items-center gap-2 text-cyan-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article
-            </Link>
+              Read Full Article</Link>
           </div>
 
           {/* Card 2: Quantum-Safe Security */}
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-purple-500 to-pink-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <Lock className="w-8 h-8 text-white" />
-              </div>
+                <Lock className="w-8 h-8 text-white"</div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
                 
               </div>
@@ -120,16 +117,14 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/quantum-safe-ai-security-framework-2025-october"
               className="flex items-center gap-2 text-purple-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article
-            </Link>
+              Read Full Article</Link>
           </div>
 
           {/* Card 3: Cognitive Business Intelligence */}
           <div className="group bg-white/10 backdrop-blur-lg rounded-2xl p-8 border-2 border-green-500/30 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/50">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-                <BarChart3 className="w-8 h-8 text-white" />
-              </div>
+                <BarChart3 className="w-8 h-8 text-white"</div>
               <div className="px-3 py-1 bg-green-500/20 border border-green-400 rounded-full">
                 
               </div>
@@ -166,8 +161,7 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/real-time-cognitive-business-intelligence-2025-october"
               className="flex items-center gap-2 text-green-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article
-            </Link>
+              Read Full Article</Link>
           </div>
         </div>
 
@@ -184,14 +178,12 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2"
             >
-              Schedule Free Consultation
-            </Link>
+              Schedule Free Consultation</Link>
             <Link 
               to="/blog"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-400 inline-flex items-center gap-2"
             >
-              Explore All Articles
-            </Link>
+              Explore All Articles</Link>
           </div>
         </div>
       </div>

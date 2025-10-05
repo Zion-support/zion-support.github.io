@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'Hyper-Personalization Engines — October 2025',

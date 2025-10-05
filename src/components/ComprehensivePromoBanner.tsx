@@ -60,8 +60,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
               <p className="text-gray-600 mb-4">{article.description}</p>
               <Link to={article.link} className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
-                Read More
-              </Link>
+                Read More</Link>
             </div>
           ))}
         </div>

@@ -42,8 +42,7 @@ const October2025LatestBreakthroughBanner = () => {
               >
                 <div className="flex items-start gap-4 mb-4">
                   <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>
-                    <Icon className="w-6 h-6 text-white" />
-                  </div>
+                    <Icon className="w-6 h-6 text-white"</div>
                   <div className="flex-1">
                     <div className="text-xs text-blue-300 mb-2">{content.category}</div>
                     <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">

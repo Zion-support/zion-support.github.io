@@ -63,7 +63,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {featuredArticles.map((article) => (
-              <div>
+              <div
                 key={article.id}
                 className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all hover:scale-105"
               >
@@ -79,8 +79,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
                     to={article.link}
                     className="text-yellow-300 font-semibold hover:text-yellow-200 flex items-center gap-1"
                   >
-                    Read
-                  </Link>
+                    Read</Link>
                 </div>
               </div>
             ))}
@@ -123,7 +122,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
               >
                 <div className="flex flex-wrap gap-2 mb-3">
                   {article.tags.slice(0, 2).map((tag) => (
-                    <span>
+                    <span
                       key={tag}
                       className="text-xs bg-indigo-100 text-indigo-700 px-2 py-1 rounded-full"
                     >

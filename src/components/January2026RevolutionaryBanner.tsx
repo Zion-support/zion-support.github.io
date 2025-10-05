@@ -54,8 +54,7 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/blog/ai-2026-january-quantum-edge-fusion" 
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
-              Learn More
-            </Link>
+              Learn More</Link>
           </div>
 
           {/* Synthetic Consciousness */}
@@ -86,16 +85,14 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/blog/ai-2026-january-synthetic-consciousness-breakthrough" 
               className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
-              Explore Now
-            </Link>
+              Explore Now</Link>
           </div>
 
           {/* Neuromorphic Processing */}
           <div className="bg-gradient-to-br from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105 hover:shadow-xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="bg-green-500/20 p-2 rounded-lg border border-green-400/30">
-                <Cpu className="w-6 h-6 text-green-400" />
-              </div>
+                <Cpu className="w-6 h-6 text-green-400"</div>
               <div>
                 <h3 className="text-lg font-bold text-white">Neuromorphic Processing</h3>
                 <div className="text-sm text-green-300">1000x Energy Efficiency</div>
@@ -118,8 +115,7 @@ const January2026RevolutionaryBanner: React.FC = () => {
               to="/blog/ai-2026-january-neuromorphic-processing-revolution" 
               className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:scale-105"
             >
-              Discover More
-            </Link>
+              Discover More</Link>
           </div>
         </div>
 

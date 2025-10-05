@@ -7,7 +7,7 @@ const GlobalAITransformationHub = () => {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
-      icon: "🔮",
+      icon: '>,'
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -15,7 +15,7 @@ const GlobalAITransformationHub = () => {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
-      icon: "🔮",
+      icon: '>,'
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -23,7 +23,7 @@ const GlobalAITransformationHub = () => {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
-      icon: "🔮",
+      icon: '>,'
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -31,7 +31,7 @@ const GlobalAITransformationHub = () => {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
-      icon: "🔮",
+      icon: '>,'
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }
@@ -104,8 +104,7 @@ const GlobalAITransformationHub = () => {
             to="/blog/ai-2026-revolutionary-breakthrough-announcement" 
             className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2"
           >
-            Explore Breakthroughs
-          </Link>
+            Explore Breakthroughs</Link>
         </div>
 
         <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl p-6 border border-emerald-400/30">
@@ -118,8 +117,7 @@ const GlobalAITransformationHub = () => {
             to="/case-studies" 
             className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-2"
           >
-            View Case Studies
-          </Link>
+            View Case Studies</Link>
         </div>
 
         <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">
@@ -132,8 +130,7 @@ const GlobalAITransformationHub = () => {
             to="/services" 
             className="text-orange-400 hover:text-orange-300 font-semibold flex items-center gap-2"
           >
-            Get Started
-          </Link>
+            Get Started</Link>
         </div>
       </div>
 

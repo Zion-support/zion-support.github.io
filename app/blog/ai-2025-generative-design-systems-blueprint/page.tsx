@@ -1,6 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, User, Clock, ArrowLeft } from 'lucide-react';
+// import { Calendar, User, Clock, ArrowLeft } from 'lucide-react';
 
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (

@@ -1,4 +1,3 @@
-import React from 'react';
 import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
 
 export default function EnterprisePage() {

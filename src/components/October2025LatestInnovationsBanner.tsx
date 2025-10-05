@@ -71,8 +71,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-emerald-400 font-semibold group-hover:gap-3 transition-all">
-              Read Full Guide
-            </div>
+              Read Full Guide</div>
           </Link>
 
           {/* Card 2: Quantum AI */}
@@ -109,8 +108,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-violet-400 font-semibold group-hover:gap-3 transition-all">
-              Explore Quantum AI
-            </div>
+              Explore Quantum AI</div>
           </Link>
 
           {/* Card 3: Enterprise Orchestration */}
@@ -119,8 +117,7 @@ const October2025LatestInnovationsBanner = () => {
             className="group relative bg-gradient-to-br from-indigo-900/30 to-amber-900/30 border border-indigo-500/30 rounded-xl p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
           >
             <div className="absolute top-4 right-4">
-              <Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse" />
-            </div>
+              <Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse"</div>
             
             <div className="mb-4">
               <span className="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
@@ -147,8 +144,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-indigo-400 font-semibold group-hover:gap-3 transition-all">
-              Discover Platform
-            </div>
+              Discover Platform</div>
           </Link>
         </div>
 

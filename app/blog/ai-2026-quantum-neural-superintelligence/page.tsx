@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Zap, Brain, Cpu, Target, TrendingUp } from 'lucide-react';
+// import { ArrowRight, Zap, Brain, Cpu, Target, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026: Quantum Neural Superintelligence - The Next Evolution of Artificial Intelligence',

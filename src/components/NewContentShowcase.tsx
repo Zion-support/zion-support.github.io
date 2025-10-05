@@ -42,8 +42,7 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">{article.readTime}</span>
                     <span className="text-indigo-600 font-semibold flex items-center gap-1">
-                      Read More
-                    </span>
+                      Read More</span>
                   </div>
                 </Link>
               ))}
@@ -81,8 +80,7 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-700 font-semibold">{service.pricing}</span>
                     <span className="text-purple-600 font-semibold flex items-center gap-1">
-                      Learn More
-                    </span>
+                      Learn More</span>
                   </div>
                 </Link>
               ))}

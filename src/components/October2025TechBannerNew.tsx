@@ -88,8 +88,7 @@ const October2025TechBannerNew = () => {
 
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <article.icon className="w-7 h-7 text-white" />
-                  </div>
+                    <article.icon className="w-7 h-7 text-white"</div>
 
                   {/* Content */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
