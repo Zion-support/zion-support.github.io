@@ -31,8 +31,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f679

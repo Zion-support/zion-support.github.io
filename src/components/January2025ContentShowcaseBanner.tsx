@@ -19,7 +19,7 @@ const January2025ContentShowcaseBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
               Complete AI Knowledge Hub
             </span>
-            <br
+            <br />
             <span className="text-white">2025 Edition</span>
           </h2>
           

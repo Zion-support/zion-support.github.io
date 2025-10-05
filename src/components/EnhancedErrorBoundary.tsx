@@ -170,21 +170,21 @@ Stack Trace: ${this.state.error?.stack}
             </div>
 
             <div className='flex flex-col sm:flex-row gap-3 justify-center'>
-              <button>
+              <button
                 onClick={this.handleRetry}
                 className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
               >
                 <RefreshCw className='w-4 h-4 mr-2' />
                 Try Again
               </button>
-              <button>
+              <button
                 onClick={this.handleGoHome}
                 className='inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'
               >
                 <Home className='w-4 h-4 mr-2' />
                 Go Home
               </button>
-              <button>
+              <button
                 onClick={this.handleReload}
                 className='inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors'
               >
@@ -197,7 +197,7 @@ Stack Trace: ${this.state.error?.stack}
               <p className='text-sm text-gray-500 mb-3'>
                 If this problem persists, please report it to our support team.
               </p>
-              <button>
+              <button
                 onClick={this.handleReportError}
                 className='inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors'
               >

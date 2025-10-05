@@ -106,7 +106,7 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {costOptimizationContent.map((content, index) => (
-            <div>
+            <div
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
@@ -123,7 +123,7 @@ const AICostOptimizationBanner: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 text-white text-xs font-bold shadow-lg">
-
+                        TRENDING
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-green-500/20 text-green-400 text-xs font-semibold border border-green-500/30">
@@ -166,7 +166,7 @@ const AICostOptimizationBanner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-
+                    <span>⏱️</span>
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>

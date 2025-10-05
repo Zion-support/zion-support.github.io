@@ -98,7 +98,7 @@ const February2026ContentShowcaseBanner = () => {
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
-            <div>
+            <div
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
@@ -227,9 +227,10 @@ const February2026ContentShowcaseBanner = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300"
+                />
 
                 <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
-
+                  Subscribe
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-4">

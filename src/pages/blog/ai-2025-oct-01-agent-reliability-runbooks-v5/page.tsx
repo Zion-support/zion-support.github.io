@@ -1,36 +1,28 @@
-<<<<<<< HEAD
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function BlogPage(): React.JSX.Element {
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
-        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />
-=======
-        <title>Ai 2025 Oct 01 Agent Reliability Runbooks V5</title>
         <meta 
           name="description" 
-          content="Learn about ai 2025 oct 01 agent reliability runbooks v5 and how it can benefit your enterprise." 
+          content="Learn about agent reliability runbooks v5 and how it can benefit your enterprise." 
         />
         <link 
           rel="canonical" 
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" 
         />
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Oct 01 Agent Reliability Runbooks V5</h1>
-        <p className="text-zion-slate-light mb-8">Learn about ai 2025 oct 01 agent reliability runbooks v5 and how it can benefit your enterprise.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</h1>
+        <p className="text-zion-slate-light mb-8">Learn about agent reliability runbooks v5 and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            This comprehensive guide covers ai 2025 oct 01 agent reliability runbooks v5 and provides practical insights for enterprise implementation.
+            This comprehensive guide covers agent reliability runbooks v5 and provides practical insights for enterprise implementation.
           </p>
         </div>
         <div className="mt-8">
@@ -39,7 +31,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-f679

@@ -6,27 +6,23 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
         <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
-=======
-        <title>Ai 2025 Oct 01 Enterprise Rag Security V2</title>
         <meta 
           name="description" 
-          content="Learn about ai 2025 oct 01 enterprise rag security v2 and how it can benefit your enterprise." 
+          content="Learn about enterprise RAG security v2 and how it can benefit your enterprise." 
         />
         <link 
           rel="canonical" 
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2" 
         />
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2025 Oct 01 Enterprise Rag Security V2</h1>
-        <p className="text-zion-slate-light mb-8">Learn about ai 2025 oct 01 enterprise rag security v2 and how it can benefit your enterprise.</p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</h1>
+        <p className="text-zion-slate-light mb-8">Learn about enterprise RAG security v2 and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            This comprehensive guide covers ai 2025 oct 01 enterprise rag security v2 and provides practical insights for enterprise implementation.
+            This comprehensive guide covers enterprise RAG security v2 and provides practical insights for enterprise implementation.
           </p>
         </div>
         <div className="mt-8">
@@ -35,8 +31,4 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
