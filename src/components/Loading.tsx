@@ -5,10 +5,14 @@ interface LoadingProps {
   text?: string;
 }
 
+<<<<<<< HEAD
 const Loading: React.FC<LoadingProps> = ({
   size = "md",
   text = "Loading..."
 }) => {
+=======
+const Loading: React.FC<LoadingProps> = ({ size = "md", text = "Loading..." }) => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
   const sizeClasses = {
     sm: "w-4 h-4",
     md: "w-8 h-8",
@@ -19,9 +23,13 @@ const Loading: React.FC<LoadingProps> = ({
     <div className="flex flex-col items-center justify-center p-8">
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
       {text && (
+<<<<<<< HEAD
         <p className="mt-4 text-sm text-gray-600">
           {text}
         </p>
+=======
+        <p className="mt-4 text-sm text-gray-600">{text}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       )}
     </div>
   );

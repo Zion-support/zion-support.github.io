@@ -13,13 +13,19 @@ interface SEOHeadProps {
 }
 
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
+<<<<<<< HEAD
   title = "Zion Tech Group - Revolutionary AI and IT Solutions",
   description = "Transform your enterprise with Zion Tech Group's revolutionary AI solutions.",
+=======
+  title = "ZionTechGroup - Revolutionary AI and IT Solutions",
+  description = "Transform your enterprise with ZionTech Group's revolutionary AI solutions.",
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
   keywords = "AI solutions, enterprise AI, artificial intelligence, machine learning, automation",
   canonical,
   url = "https://ziontechgroup.com",
   image = "https://ziontechgroup.com/og-image.jpg",
   type = "website",
+<<<<<<< HEAD
   author = "Zion Tech Group"
 }) => {
   const metaKeywords = Array.isArray(keywords) ? keywords.join(", ") : keywords;
@@ -29,6 +35,17 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
+=======
+  author = "ZionTechGroup"
+}) => {
+  const metaKeywords = Array.isArray(keywords) ? keywords.join(", ") : keywords;
+  const canonicalUrl = canonical || url;
+  
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ZionTechGroup",
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
     "description": "Revolutionary AI and IT Solutions",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.png",
@@ -70,8 +87,13 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={metaKeywords} />
       <meta name="author" content={author} />
+<<<<<<< HEAD
       <meta name="robots" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+=======
+      <meta name="robots" content="index,follow" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       
       {/* Open Graph Meta Tags */}
       <meta property="og:title" content={title} />
@@ -79,7 +101,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:image" content={image} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:type" content={type} />
+<<<<<<< HEAD
       <meta property="og:site_name" content="Zion Tech Group" />
+=======
+      <meta property="og:site_name" content="ZionTechGroup" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter Card Meta Tags */}
@@ -93,7 +119,11 @@ const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
       <meta name="msapplication-TileColor" content="#3B82F6" />
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<<<<<<< HEAD
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+=======
+      <meta name="apple-mobile-web-app-title" content="ZionTechGroup" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       
       {/* Canonical URL */}
       <link rel="canonical" href={url} />

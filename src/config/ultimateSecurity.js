@@ -5,7 +5,11 @@ module.exports = {
     'X-Content-Type-Options': 'nosniff',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
+<<<<<<< HEAD
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), payment=(), usb=()',
+=======
+    'Permissions-Policy': "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains; preload'
   },
   inputValidation: {

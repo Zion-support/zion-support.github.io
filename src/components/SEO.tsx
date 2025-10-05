@@ -5,12 +5,16 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
+<<<<<<< HEAD
   author?: string;
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
   canonical?: string;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   noIndex?: boolean;
+<<<<<<< HEAD
   structuredData?: object;
 }
 
@@ -19,14 +23,28 @@ const SEO: React.FC<SEOProps> = ({
   description = "Enterprise-grade AI micro SaaS and IT solutions. Transform your business with cutting-edge technology and automation.",
   keywords = "AI services, micro SaaS, IT services, cloud migration, DevOps, enterprise software, automation",
   author = "Zion Tech Group",
+=======
+}
+
+const SEO: React.FC<SEOProps> = ({
+  title = "ZionTechGroup — AI Micro SaaS and IT Services",
+  description = "Enterprise-grade AI micro SaaS and IT solutions. Transform your business with cutting-edge technology and automation.",
+  keywords = "AI services, micro SaaS, IT services, cloud migration, DevOps, SRE, enterprise software, automation",
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
   canonical,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
+<<<<<<< HEAD
   noIndex = false,
   structuredData
 }) => {
   const fullTitle = title.includes("Zion Tech Group") ? title : `${title} | Zion Tech Group`;
+=======
+  noIndex = false
+}) => {
+  const fullTitle = title.includes("ZionTechGroup") ? title : `${title} | ZionTechGroup`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
   const canonicalUrl = canonical || (typeof window !== "undefined" ? window.location.href : "https://ziontechgroup.com");
 
   return (
@@ -34,20 +52,31 @@ const SEO: React.FC<SEOProps> = ({
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
+<<<<<<< HEAD
       <meta name="author" content={author} />
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       <link rel="canonical" href={canonicalUrl} />
       
       {/* Robots */}
       <meta name="robots" content={noIndex ? "noindex,nofollow" : "index,follow"} />
       <meta name="googlebot" content="index,follow" />
       
+<<<<<<< HEAD
       {/* Open Graph */}
+=======
+      {/* OpenGraph */}
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
+<<<<<<< HEAD
       <meta property="og:site_name" content="Zion Tech Group" />
+=======
+      <meta property="og:site_name" content="ZionTechGroup" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
       <meta property="og:locale" content="en_US" />
       
       {/* Twitter */}
@@ -57,6 +86,7 @@ const SEO: React.FC<SEOProps> = ({
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO */}
+<<<<<<< HEAD
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="theme-color" content="#1f2937" />
@@ -101,6 +131,42 @@ const SEO: React.FC<SEOProps> = ({
           })}
         </script>
       )}
+=======
+      <meta name="author" content="ZionTechGroup" />
+      <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      {/* Structured Data */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "ZionTechGroup",
+          "url": "https://ziontechgroup.com",
+          "logo": "https://ziontechgroup.com/logo.png",
+          "description": "Enterprise-grade AI micro SaaS and IT solutions provider",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-302-464-0950",
+            "contactType": "customer service",
+            "email": "kleber@ziontechgroup.com"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "364 E Main St STE 1008",
+            "addressLocality": "Middletown",
+            "addressRegion": "DE",
+            "postalCode": "19709",
+            "addressCountry": "US"
+          },
+          "sameAs": [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/zion-tech-group",
+            "https://github.com/ZionClouds"
+          ]
+        })}
+      </script>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f69a
     </Helmet>
   );
 };
