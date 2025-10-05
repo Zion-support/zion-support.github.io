@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Bookmark, User } from 'lucide-react';
 
 
 export const metadata: Metadata = {

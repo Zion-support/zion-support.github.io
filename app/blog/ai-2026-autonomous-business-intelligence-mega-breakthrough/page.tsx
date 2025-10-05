@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { ArrowRight, User } from 'lucide-react';
 
 import ArrowRight from 'next/link';
 
