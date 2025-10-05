@@ -1,9 +1,5 @@
 import React from 'react';
 
-import React from 'react';
-
-import React from 'react';
-
 const AIPlatformArchitecture: React.FC = () => {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -34,17 +30,10 @@ const AIPlatformArchitecture: React.FC = () => {
             <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mb-4">
               <div className="w-6 h-6 bg-purple-400 rounded"></div>
             </div>
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3">Microservices Design</h3>
             <p className="text-gray-300 mb-6">
               Modular, containerized services that enable rapid deployment, 
               independent scaling, and easy maintenance.
-=======
-            <h3 className="text-xl font-bold text-white mb-3">Data Pipeline Integration</h3>
-            <p className="text-gray-300 mb-6">
-              Seamless integration with existing data sources and pipelines, 
-              enabling real-time processing and insights generation.
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
             </p>
           </div>
 
@@ -52,17 +41,10 @@ const AIPlatformArchitecture: React.FC = () => {
             <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mb-4">
               <div className="w-6 h-6 bg-cyan-400 rounded"></div>
             </div>
-<<<<<<< HEAD
             <h3 className="text-xl font-bold text-white mb-3">API-First Approach</h3>
             <p className="text-gray-300 mb-6">
               RESTful APIs and GraphQL endpoints that provide seamless integration 
               with existing systems and third-party services.
-=======
-            <h3 className="text-xl font-bold text-white mb-3">Security & Compliance</h3>
-            <p className="text-gray-300 mb-6">
-              Enterprise-grade security with compliance frameworks, 
-              ensuring your AI platform meets industry standards.
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
             </p>
           </div>
         </div>
@@ -70,19 +52,9 @@ const AIPlatformArchitecture: React.FC = () => {
         <div className="text-center">
           <a 
             href="/contact"
-<<<<<<< HEAD
-<<<<<<< HEAD
             className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl"
           >
-            Get Started with AI Platform
-=======
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
-=======
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl"
-          >
->>>>>>> cursor/fix-errors-and-merge-to-main-4095
             Design Your AI Platform
->>>>>>> cursor/fix-errors-and-merge-to-main-87dd
           </a>
         </div>
       </div>
