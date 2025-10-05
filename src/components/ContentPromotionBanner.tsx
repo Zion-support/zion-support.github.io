@@ -1,106 +1,124 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-export, default, function ContentPromotionBann, e, r() {
-  const, featuredConten, t = [
+import { Link } from 'react-router-dom';
+
+export default function ContentPromotionBanner() {
+  const featuredContent = [
     {
-      title: "Edge, Inference, Patterns That, Actually, Reduce Lat, e, n, c, y",
-      category: "AI, Infrastructu, r, e",
-      readTime: "7, min, rea, d",
-      isN, e, w: t, r, u, e,
+      title: "Edge Inference Patterns That Actually Reduce Latency",
+      category: "AI Infrastructure",
+      readTime: "7 min read",
+      isNew: true,
     },
     {
-      title: "Nor, t, h‑Star, Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s",
-      category: "Leaders, h, i, p",
-      readTime: "5, min, rea, d",
-      isN, e, w: t, r, u, e,
+      title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
+      category: "Leadership",
+      readTime: "5 min read",
+      isNew: true,
     },
     {
-      title: "OpenTelemetry, in, Production: Traces, That, Engineers Us, e",
-      category: "Observabil, i, t, y",
-      readTime: "6, min, rea, d",
-      isN, e, w: t, r, u, e,
+      title: "OpenTelemetry in Production: Traces That Engineers Use",
+      category: "Observability",
+      readTime: "6 min read",
+      isNew: true,
     },
-  ]; retu, r, n (
-    <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, rounde, d-2x, l, p-8, m, d: p-12, tex, t-white, relative, overflow-hidd, e, n">
-      {/* Background, Patt, e, r, n */}
-      <div, classNam, e = "absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/20, t, o-transpare, n, t" />
-      </d, i, v>
-      <div, classNam, e="relativ, e, z-10">
-        <div, classNam, e="flex, fle, x-col, l, g: fl, e, x-row, l, g:ite, m, s-center, l, g:justi, f, y-between, ga, p-8">
-          <div, classNam, e="m, a, x-w-2, x, l">
-            <div, classNam, e="flex, item, s-center, ga, p-2, m, b-4">
-              <span, classNam, e="te, x, t-sm, fon, t-medium, tex, t-yell, o, w-300, uppercase, tracking-wi, d, e">
-                Fresh, Conten, t
-              </sp, a, n>
-            </d, i, v>
-            <h2, classNam, e="te, x, t-3xl, m, d:te, x, t-4xl, fon, t-bold, m, b-4">
-              Latest, from, Zion Insigh, t, s
+  ];
+
+  return (
+    <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent" />
+      </div>
+      <div className="relative z-10">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div className="max-w-2xl">
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
+                Fresh Content
+              </span>
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Latest from Zion Insights
             </h2>
-            <p, classNam, e="te, x, t-whi, t, e/90, tex, t-lg, leadin, g-relax, e, d">
-              Fresh, articles, on AI, automat, i, o, n, cloud, securit, y, and, developer, productivity. 
-              Stay, ahead, with expert, analysis, and practical, guide, s.
+            <p className="text-white/90 text-lg leading-relaxed">
+              Fresh articles on AI automation, cloud security, and developer productivity. 
+              Stay ahead with expert analysis and practical guides.
             </p>
-          </d, i, v>
-          <div, classNam, e = "flex, fle, x-col, ga, p-4">
-            <Link, t, o="/bl, o, g" 
-              classNa, m, e="bg-white, tex, t-indi, g, o-700, hove, r: bg-indi, g, o-50, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg"
+          </div>
+          <div className="flex flex-col gap-4">
+            <Link
+              to="/blog"
+              className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-              <BookOpen, classNam, e="w-5 h-5" />
-              Explore, All, Articles
-              <ArrowRight, classNam, e="w-5 h-5" />
-            </Li, n, k>
-            <Link, t, o="/ca, s, e-studi, e, s" 
-              classNa, m, e="bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-indi, g, o-700, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5"
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              Explore All Articles
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+            <Link
+              to="/case-studies"
+              className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
             >
-              <Zap, classNam, e="w-5 h-5" />
-              View, Case, Studies
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-        {/* Featured, Content, Car, d, s */}
-        <div, classNam, e = "mt-10, grid, gap-6, m, d: gr, i, d-co, l, s-3">
-            { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > (
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5">
-              <div, classNam, e="flex, item, s-center, justif, y-between, m, b-3">
-                <span, classNam, e="te, x, t-xs, uppercase, tracking-wider, tex, t-bl, u, e-200, b, g-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounde, d-fu, l, l">
-                  {it, e, m.cate, g, o, r, y}
-                </sp, a, n>
-                {  it, e, m.isN, e, w  && (
-                  <span, classNam, e = "bg-r, e, d-500, tex, t-white, tex, t-xs, p, x-2, p, y-1, rounde, d-full, fon, t-medi, u, m">
-                    N, E, W
-                  </s, p, a, n  > )  }
-              </d, i, v>
-              <h3, classNam, e = "fo, n, t-bold, tex, t-white, m, b-2, lin, e-cla, m, p-2">
-                {it, e, m.title}
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              View Case Studies
+            </Link>
+          </div>
+        </div>
+        {/* Featured Content Cards */}
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {featuredContent.map((item, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+            >
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
+                  {item.category}
+                </span>
+                {item.isNew && (
+                  <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                    NEW
+                  </span>
+                )}
+              </div>
+              <h3 className="font-bold text-white mb-2 line-clamp-2">
+                {item.title}
               </h3>
-              <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-                <span, classNam, e="te, x, t-sm, tex, t-whi, t, e/70">
-                  {it, e, m.readTime}
-                </sp, a, n>
-                <ArrowRight, classNam, e="w-4 h-4, tex, t-whi, t, e/70" />
-              </d, i, v>
-            </di, v>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-white/70">
+                  {item.readTime}
+                </span>
+                <svg className="w-4 h-4 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </div>
           ))}
-        </d, i, v>
-        {/* Sta, t, s */}
-        <div, classNam, e = "mt-8, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, p, t-8, borde, r-t, borde, r-whi, t, e/20">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">50+</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Articles, Publishe, d</d, i, v>
-          </d, i, v>
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">1, 0, K+</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Monthly, Reader, s</d, i, v>
-          </d, i, v>
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Expert, Author, s</d, i, v>
-          </d, i, v>
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">4.9★</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-whi, t, e/80">Reader, Ratin, g</d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+        {/* Stats */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">50+</div>
+            <div className="text-sm text-white/80">Articles Published</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">10K+</div>
+            <div className="text-sm text-white/80">Monthly Readers</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">25+</div>
+            <div className="text-sm text-white/80">Expert Authors</div>
+          </div>
+          <div className="text-center">
+            <div className="text-2xl font-bold text-white">4.9★</div>
+            <div className="text-sm text-white/80">Reader Rating</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

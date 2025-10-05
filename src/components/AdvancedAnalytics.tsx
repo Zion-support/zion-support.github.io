@@ -1,6 +1,5 @@
-import, Reac, t, { useEffe, c, t } fr, o, m 'rea, c, t';
+import React, { useEffect, useState } from 'react';
 
-<<<<<<< HEAD
 interface AdvancedAnalyticsProps {
   enableConversionTracking?: boolean;
   enablePerformanceTracking?: boolean;
@@ -61,19 +60,3 @@ const AdvancedAnalytics: React.FC<AdvancedAnalyticsProps> = ({
 };
 
 export default AdvancedAnalytics;
-=======
-interface, AdvancedAnalyticsProp, s { 
-  enableConversionTracki, n, g?: boolean;
-  enablePerformanceTracki, n, g?: boolean;
-  enableErrorTracki, n, g ?  : boolean;
- }
-
-export, default, function AdvancedAnalyti, c, s(
-  pro, p, s: AdvancedAnalyticsPr, o, p, s,
-): Rea, c, t.J, S, X.Eleme, n, t { 
-  useEffe, c, t(() = > {
-    void, prop, s;
-   }, [pro, p, s]);
-  retu, r, n <></>;
-}
->>>>>>> 31330b606ffa8add68612abb144b6508c148ddf4
