@@ -24,7 +24,7 @@ const About: React.FC = () => {
           </div>
         </div>
       </main>
-
+      
       {/* <Footer /> */}
     </div>
   );
