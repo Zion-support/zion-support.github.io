@@ -16,6 +16,11 @@ class SecurityEnhancer {
     this.setupCSP();
     this.isInitialized = true;
     console.log('Security enhancer initialized');
+
+    this.setupCSP();
+    this.setupHTTPSRedirect();
+    this.setupXSSProtection();
+    this.isInitialized = true;
   }
 
   private setupCSP(): void {

@@ -23,11 +23,11 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
-            </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
+            </a>
+            <a href="/blog" className="text-gray-300 hover:text-white transition-colors">
               Blog
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
+            </a>
+            <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
               Contact
             </Link>
           </nav>
@@ -59,11 +59,11 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
                 Services
-              </Link>
-              <Link to="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              </a>
+              <a href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Blog
-              </Link>
-              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              </a>
+              <a href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </Link>
             </div>
