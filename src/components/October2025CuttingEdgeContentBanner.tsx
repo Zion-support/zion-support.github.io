@@ -8,7 +8,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "Autonomous Systems",
       link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
       gradient: "from-cyan-500 to-blue-600",
-      icon: '>,'
+      icon: ' > ,'
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {
@@ -17,7 +17,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "LLM Engineering",
       link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
       gradient: "from-purple-500 to-pink-600",
-      icon: '>,'
+      icon: ' > ,'
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {
@@ -26,7 +26,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "ML at Scale",
       link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
       gradient: "from-orange-500 to-red-600",
-      icon: '>,'
+      icon: ' > ,'
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -63,7 +63,7 @@ const October2025CuttingEdgeContentBanner = () => {
 
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {featuredArticles.map((article, index) => (
+          {featuredArticles.map((article, index) = > (
             <Link
               key={index}
               to={article.link}
@@ -74,8 +74,7 @@ const October2025CuttingEdgeContentBanner = () => {
               
               <div className="relative p-6">
                 {/* Icon and Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`p-3 rounded-xl bg-gradient-to-br ${article.gradient} text-white shadow-lg`}>
+                <div className="flex items-center justify-between mb-4" > <div className={`p-3 rounded-xl bg-gradient-to-br ${article.gradient} text-white shadow-lg`}>
                     {article.icon}
                   </div>
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
@@ -95,7 +94,7 @@ const October2025CuttingEdgeContentBanner = () => {
 
                 {/* Metrics */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {article.metrics.map((metric, idx) => (
+                  {article.metrics.map((metric, idx) = > (
                     <span
 <<<<<<< HEAD
                       key={idx}
@@ -149,7 +148,7 @@ key={idx}
         </div>
       </div>
 
-      <style>{`
+      <style > {`
         @keyframes blob {
           0%, 100% { transform: translate(0, 0) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }

@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function October2025CuttingEdgeRevolutionBanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 py-24">
-      {/* Animated Background */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-purple-950 to-slate-950 py-24" > {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10 blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-cyan-500/10 via-indigo-500/10 to-violet-500/10 blur-3xl animate-pulse delay-1000"></div>

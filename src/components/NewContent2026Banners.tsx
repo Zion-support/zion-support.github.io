@@ -32,8 +32,7 @@ export function LatestContent2026Banner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // AI Security Enterprise 2026 Banner
@@ -70,8 +69,7 @@ export function AISecurityEnterprise2026Banner() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // AI Multimodal Enterprise 2026 Banner
@@ -117,8 +115,7 @@ export function AIMultimodalEnterprise2026Banner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // AI Sustainability Transformation Banner
@@ -164,8 +161,7 @@ export function AISustainabilityTransformationBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // New Latest 2026 Content Banner
@@ -208,8 +204,7 @@ export function NewLatest2026ContentBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // AI Autonomous Cloud Ops Banner
@@ -255,8 +250,7 @@ export function AIAutonomousCloudOpsBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // AI FinTech Transformation Banner
@@ -302,8 +296,7 @@ export function AIFinTechTransformationBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // AI Retail Automation Banner
@@ -349,8 +342,7 @@ export function AIRetailAutomationBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }
 
 // Latest 2026 Content Banner
@@ -393,6 +385,5 @@ export function Latest2026ContentBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

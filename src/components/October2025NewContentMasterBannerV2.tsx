@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function October2025NewContentMasterBannerV2() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
-      {/* Animated Background */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-80 h-80 bg-orange-400 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-rose-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>

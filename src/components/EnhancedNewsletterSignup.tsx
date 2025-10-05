@@ -10,7 +10,7 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) = > {
     e.preventDefault();
     setIsSubscribed(true);
     setEmail('');
@@ -20,8 +20,7 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
     return (
       <div className={`bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded ${className}`}>
         Thank you for subscribing to our newsletter!
-      </div>
-    );
+      </div > );
   }
 
   return (
@@ -32,7 +31,7 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
         <input
           type="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={(e) = > setEmail(e.target.value)}
           placeholder="Enter your email"
           className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
 <<<<<<< HEAD

@@ -96,8 +96,7 @@ const October2025BreakthroughContentBanner = () => {
         <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Fortune 500 Proven</span>
         <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Implementation Ready</span>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default React.memo(October2025BreakthroughContentBanner);

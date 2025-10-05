@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function October2025FinTechSuccessBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 border-4 border-blue-500 rounded-2xl shadow-2xl mb-8">
-      {/* Animated Background */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-blue-900 via-indigo-900 to-purple-900 border-4 border-blue-500 rounded-2xl shadow-2xl mb-8" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-400 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>

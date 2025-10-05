@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function October2025NewestContentMegaShowcase() {
   const newContent = [
     {
-      icon: <Network className="w-8 h-8" />,
+      icon: <Network className="w-8 h-8" / > ,
       title: "Autonomous Mesh Intelligence Platform",
       description: "Self-organizing distributed AI networks with 99.997% uptime",
       value: "$8.4B",
@@ -12,7 +12,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-blue-500 to-cyan-500"
     },
     {
-      icon: '>,'
+      icon: ' > ,'
       title: "Quantum-Neural Hybrid Systems",
       description: "100,000x performance improvements for drug discovery and optimization",
       value: "$12.7B",
@@ -21,7 +21,7 @@ export default function October2025NewestContentMegaShowcase() {
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: '>,'
+      icon: ' > ,'
       title: "Neural-Symbolic Reasoning Systems",
       description: "97% accuracy with 100% explainable AI decision-making",
       value: "$5.7B",
@@ -69,7 +69,7 @@ export default function October2025NewestContentMegaShowcase() {
 
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {newContent.map((item, index) => (
+          {newContent.map((item, index) = > (
             <Link
               key={index}
               to={item.link}
@@ -108,9 +108,7 @@ export default function October2025NewestContentMegaShowcase() {
               <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
                 <span>Read Complete Guide</span>
 
-              </div>
-
-              {/* Hover Glow Effect */}
+              </div > {/* Hover Glow Effect */}
               <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300 pointer-events-none`}</Link>
           ))}
         </div>

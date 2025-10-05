@@ -88,7 +88,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
-          {advertisingFeatures.map((feature, index) => (
+          {advertisingFeatures.map((feature, index) = > (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -122,7 +122,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
 
         {/* Success Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
-          {successStats.map((stat, index) => (
+          {successStats.map((stat, index) = > (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -146,7 +146,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
                 What Our Clients Say
               </h3>
               <div className="flex items-center justify-center gap-2 mb-6">
-                {[...Array(5)].map((_, i) => (
+                {[...Array(5)].map((_, i) = > (
                   <Star key={i} className="w-6 h-6 text-yellow-400 fill-current" />
                 ))}
                 <span className="text-gray-300 text-lg ml-2">5.0/5.0 Rating</span>

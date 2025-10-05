@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 const October2025NewTechBannerMega = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 px-6 my-12 rounded-2xl shadow-2xl">
-      {/* Animated Background Effects */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 px-6 my-12 rounded-2xl shadow-2xl" > {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 bg-purple-500/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
         <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000"></div>

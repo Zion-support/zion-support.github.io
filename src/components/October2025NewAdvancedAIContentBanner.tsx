@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function October2025NewAdvancedAIContentBanner() {
   return (
-    <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>

@@ -3,7 +3,7 @@ import { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) = > void;
 }
 
 interface State {
@@ -80,7 +80,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return localStorage.getItem('userId');
   };
 
-  getSessionId = (): string => {
+  getSessionId = (): string = > {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -106,7 +106,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  handleReportError = () => {
+  handleReportError = () = > {
     // const errorReport = {
     //   errorId: this.state.errorId,
     //   message: this.state.error?.message,
@@ -210,8 +210,7 @@ onClick={this.handleReportError}
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
                   Development Details
                 </summary>
-                <pre className='mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64'>
-                  {this.state.error?.stack}
+                <pre className='mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64' > {this.state.error?.stack}
                   {this.state.errorInfo.componentStack}
                 </pre>
               </details>
