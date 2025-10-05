@@ -1,6 +1,6 @@
-export class PerformanceMonitor {
+class PerformanceMonitor {
   private static instance: PerformanceMonitor;
-  private isInitialized = false;
+  private isInitialized: boolean = false;
 
   private constructor() {}
 
@@ -24,3 +24,5 @@ export class PerformanceMonitor {
     console.log('Performance monitor cleaned up');
   }
 }
+
+export default PerformanceMonitor;

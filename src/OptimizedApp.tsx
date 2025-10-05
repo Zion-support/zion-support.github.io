@@ -1,1 +1,0 @@
-// OptimizedApp component

@@ -6,7 +6,7 @@ const AppRouter: React.FC = () => {
     <Router>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<div>Home Page</div>} />
+          <Route path="/" element={<div>Home</div>} />
         </Routes>
       </Suspense>
     </Router>

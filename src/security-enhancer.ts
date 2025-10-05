@@ -1,6 +1,6 @@
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
-  private isInitialized = false;
+  private isInitialized: boolean = false;
 
   private constructor() {}
 
