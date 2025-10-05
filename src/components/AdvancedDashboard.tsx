@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
-=======
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import { enhancedAccessibility } from '../utils/enhancedAccessibility';
 import { securityAuditor } from '../utils/securityAuditor';
 // import EnhancedUXManager from '../utils/enhancedUXManager';
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 
 interface DashboardData {
   analytics: {
@@ -27,10 +24,7 @@ interface DashboardData {
 const AdvancedDashboard: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<DashboardData | null>(null);
-<<<<<<< HEAD
-=======
   const [activeTab, setActiveTab] = useState("overview");
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 
   useEffect(() => {
     if (isOpen) {
@@ -41,26 +35,6 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-<<<<<<< HEAD
-    // Mock data for demonstration
-    const mockData: DashboardData = {
-      analytics: {
-        pageViews: Math.floor(Math.random() * 1000) + 500,
-        sessions: Math.floor(Math.random() * 100) + 50,
-        bounceRate: Math.random() * 0.5 + 0.2
-      },
-      performance: {
-        loadTime: Math.random() * 2000 + 500,
-        responseTime: Math.random() * 500 + 100
-      },
-      security: {
-        threatsBlocked: Math.floor(Math.random() * 10),
-        vulnerabilities: Math.floor(Math.random() * 5)
-      }
-    };
-    
-    setData(mockData);
-=======
     // Mock analytics data for now
     const events: Array<{ name: string; timestamp?: number }> = [];
     const cacheStats = { hits: 0, misses: 0, size: 0 };
@@ -145,7 +119,6 @@ const AdvancedDashboard: React.FC = () => {
     if (ms < 1000) return `${ms}ms`;
     if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
     return `${(ms / 60000).toFixed(1)}m`;
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
   };
 
   if (!isOpen) {
@@ -176,53 +149,6 @@ const AdvancedDashboard: React.FC = () => {
             </svg>
           </button>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
-        <div className="p-4">
-          <div className="flex space-x-2 mb-4">
-            <button
-              onClick={() => setActiveTab("overview")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "overview" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Overview
-            </button>
-            <button
-              onClick={() => setActiveTab("analytics")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "analytics" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Analytics
-            </button>
-            <button
-              onClick={() => setActiveTab("performance")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "performance" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Performance
-            </button>
-            <button
-              onClick={() => setActiveTab("security")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "security" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Security
-            </button>
-          </div>
-          
-          {data && (
-            <div className="space-y-4">
-              {activeTab === "overview" && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-blue-800">Page Views</h3>
-                    <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
-=======
 
         {/* Tabs */}
         <div className="bg-gray-100 border-b">
@@ -259,7 +185,6 @@ const AdvancedDashboard: React.FC = () => {
                 <div className="space-y-1 text-sm">
                   <div>
                       Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-green-800">Sessions</h3>
@@ -321,7 +246,6 @@ const AdvancedDashboard: React.FC = () => {
               )}
             </div>
           )}
-=======
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <div className="bg-gray-50 p-4 rounded-lg">
@@ -354,7 +278,6 @@ const AdvancedDashboard: React.FC = () => {
               </div>
             )}
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5246
         </div>
       </div>
     </div>
