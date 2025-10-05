@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface DashboardData {
   analytics: {
@@ -48,6 +48,7 @@ const AdvancedDashboard: React.FC = () => {
     
     setData(mockData);
   };
+
   if (!isOpen) {
     return (
       <button
