@@ -16,3 +16,5 @@ const Team: React.FC = () => {
       
       {/* <Footer /> */}
     </div>
+
+      {/* <Footer /> */}

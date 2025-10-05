@@ -91,9 +91,3 @@ const ContentValueTestimonials: React.FC = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
-  );
-};
-
-export default ContentValueTestimonials;

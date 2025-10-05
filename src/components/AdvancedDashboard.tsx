@@ -19,46 +19,6 @@ interface DashboardData {
     threatsBlocked: number;
     vulnerabilities: number;
   };
-}
-
-const AdvancedDashboard: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [data, setData] = useState<DashboardData | null>(null);
-  const [activeTab, setActiveTab] = useState("overview");
-
-  useEffect(() => {
-    if (isOpen) {
-      updateData();
-      const interval = setInterval(updateData, 5000);
-      return () => clearInterval(interval);
-    }
-  }, [isOpen]);
-
-  const updateData = () => {
-    // Mock analytics data for now
-    const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
-
-    // Convert analytics events to analytics data format
-    const analyticsData: AnalyticsData = {
-      id: `session_${Date.now()}`,
-      startTime: Date.now() - 300000, // 5 minutes ago
-      lastActivity: Date.now(),
-      pageViews: events.filter((e) => e.name === "page_view").length,
-      events: events.map((e) => ({
-        event: e.name,
-        timestamp: e.timestamp || Date.now(),
-        properties: (e as any).properties || {}
-      })),
-      deviceInfo: {
-        screenResolution: `${window.screen.width}x${window.screen.height}`,
-        language: navigator.language,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      }
-    };
-
-    // Convert cache stats to proper format
-    const cache: CacheData = {
       size:
         typeof cacheStats === "object" && cacheStats !== null
           ? ((cacheStats as Record<string, unknown>).size as number) || 0
@@ -104,38 +64,15 @@ const AdvancedDashboard: React.FC = () => {
         interactivity: 0,
         visualStability: 0
       }
-    });
-  };
-
-  const formatBytes = (bytes: number): string => {
-    if (bytes === 0) return "0 Bytes";
-    const k = 1024;
       const sizes = ["Bytes", "KB", "MB", "GB"];
       const i = Math.floor(Math.log(bytes) / Math.log(k));
       return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
-  };
-
-  const formatDuration = (ms: number): string => {
-    if (ms < 1000) return `${ms}ms`;
-    if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
-    return `${(ms / 60000).toFixed(1)}m`;
-  };
-
-  if (!isOpen) {
-    return (
-      <button
-        onClick={() => setIsOpen(true)}
         className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
         title="Open Dashboard"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
         </svg>
-      </button>
-    );
-  }
-
-  return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden">
         <div className="flex justify-between items-center p-4 border-b">

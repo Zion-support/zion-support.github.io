@@ -4,12 +4,5 @@ interface LoadingProps {
   size?: 'sm' | 'md' | 'lg';
   text?: string;
 }
-
-const Loading: React.FC<LoadingProps> = ({ 
-  size = 'md', 
-  text = 'Loading...' 
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>

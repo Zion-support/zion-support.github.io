@@ -1,3 +1,4 @@
+>>>>>>> origin/merge-fixes
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Loading from './components/Loading';
@@ -11,10 +12,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const Privacy = lazy(() => import('./pages/Privacy'));
 const Terms = lazy(() => import('./pages/Terms'));
 const Team = lazy(() => import('./pages/Team'));
-
-const AppRouter: React.FC = () => {
-  return (
-    <Router>
+>>>>>>> origin/merge-fixes
       <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -25,10 +23,3 @@ const AppRouter: React.FC = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
-        </Routes>
-      </Suspense>
-    </Router>
-  );
-};
-
-export default AppRouter;

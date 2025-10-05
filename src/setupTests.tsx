@@ -26,25 +26,34 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
-
-// Mock react-error-boundary
-jest.mock('react-error-boundary', () => ({
-  withErrorBoundary: (Component: React.ComponentType) => Component,
-  useErrorHandler: () => jest.fn(),
-}));
-
-// Mock react-helmet-async
-jest.mock('react-helmet-async', () => ({
-  Helmet: ({ children }: { children: React.ReactNode }) => children,
-  HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
-}));
-
-// Mock react-router-dom
-jest.mock('react-router-dom', () => ({
-  ...jest.requireActual('react-router-dom'),
-  useNavigate: () => jest.fn(),
-  useLocation: () => ({ pathname: '/' }),
-}));
-
 // Mock lucide-react icons
 const mockIcon = (name: string) => `[${name}]`;
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock fetch
+global.fetch = jest.fn();
+
+// Mock console methods to reduce noise in tests
+global.console = {
+  ...console,
+  log: jest.fn(),
+  debug: jest.fn(),
+  info: jest.fn(),
+  warn: jest.fn(),
+  error: jest.fn(),
+};
+>>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d

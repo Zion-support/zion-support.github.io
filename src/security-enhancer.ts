@@ -3,26 +3,15 @@ class SecurityEnhancer {
   private isInitialized: boolean = false;
 
   private constructor() {}
+  private isInitialized = false;
 
-  static getInstance(): SecurityEnhancer {
-    if (!SecurityEnhancer.instance) {
-      SecurityEnhancer.instance = new SecurityEnhancer();
-    }
-    return SecurityEnhancer.instance;
-  }
-
-  init(): void {
-    if (this.isInitialized) {
-      return;
-    }
+>>>>>>> origin/merge-fixes
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
     this.setupSecurityHeaders();
     
-  private setupCSP(): void {
-  }
-
+>>>>>>> origin/merge-fixes
   private setupHTTPSRedirect(): void {
     if (typeof location !== 'undefined' && location.protocol !== 'https:' && location.hostname !== 'localhost') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
