@@ -1,12 +1,21 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Home, User, Settings, Menu, X } from 'lucide-react'
+=======
+import {Home, User, Settings, Menu, X } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
+<<<<<<< HEAD
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
+=======
+    {name: 'Profile', href: '/profile', icon: User },
+    {name: 'Settings', href: '/settings', icon: Settings }
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
   ];
   return (
     <div className="flex h-screen bg-gray-100">

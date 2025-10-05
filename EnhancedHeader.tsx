@@ -1,17 +1,28 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 import { Menu, X } from 'lucide-react'
+=======
+import {Menu, X } from 'lucide-react'
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
 const EnhancedHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigationItems = [
     { name: 'Home', href: '/' },
+<<<<<<< HEAD
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
+=======
+    {name: 'Services', href: '/services' },
+    {name: 'About', href: '/about' },
+    {name: 'Contact', href: '/contact' },
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
   ];
-  const closeMobileMenu = () => {setIsOpen(false);
-    setActiveDropdown(null)}
+  const closeMobileMenu = () => {
+    setIsOpen(false);
+    setActiveDropdown(null);
   };
   return (
     <header className="bg-white shadow-lg">

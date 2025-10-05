@@ -3,7 +3,11 @@ interface ModernNavigationProps {
   className?: string;
 }
 
+<<<<<<< HEAD
 export default function ModernNavigation({ className = "" }: ModernNavigationProps) {
+=======
+export default function ModernNavigation({className = ""}: ModernNavigationProps) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
   return (
     <div className={className}>
       <h1>ModernNavigation</h1>

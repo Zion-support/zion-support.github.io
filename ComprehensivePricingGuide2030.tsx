@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+=======
+import React, {useState, useMemo } from 'react'
+import { motion  } from 'framer-motion'
+import { Link  } from 'react-router-dom'
+>>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
 import {CheckCircle,
   Star,
   Zap,
