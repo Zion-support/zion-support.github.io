@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-=======
-import React, {useState, useMemo } from 'react'
-import { motion  } from 'framer-motion'
-import { Link  } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
 import {CheckCircle,
   Star,
   Zap,
@@ -246,8 +240,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0} y: 20 }}
-            whileInView={{ opacity: 1} y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
           >
@@ -257,9 +251,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             {marketInsights.map((insight, index) => (
               <motion.div
                 key={insight.title}
-                initial={{ opacity: 0} y: 20 }}
-                whileInView={{ opacity: 1} y: 0 }}
-                transition={{ duration: 0.6} delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
@@ -278,8 +272,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0} y: 20 }}
-            whileInView={{ opacity: 1} y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
           >
@@ -289,9 +283,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0} y: 20 }}
-                whileInView={{ opacity: 1} y: 0 }}
-                transition={{ duration: 0.6} delay: index * 0.1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
                   tier.popular
                     ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20'
@@ -341,8 +335,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0} y: 20 }}
-            whileInView={{ opacity: 1} y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
           >
@@ -381,9 +375,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0} y: 20 }}
-                  whileInView={{ opacity: 1} y: 0 }}
-                  transition={{ duration: 0.6} delay: index * 0.1 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
                 >
                   {/* Header */}
@@ -479,26 +473,26 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-3xl font-bold mb-6"
             >
               Calculate Your ROI
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
             >
               Use our ROI calculator to estimate the return on investment for our services.
               Most clients see returns within 3-6 months.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-slate-900/60 backdrop-blur border border-cyan-400/20 rounded-2xl p-8"
             >
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -531,26 +525,26 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.h2
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="text-4xl font-bold text-white mb-6"
             >
               Ready to Get Started?
             </motion.h2>
             <motion.p
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-slate-300 mb-8"
             >
               Our team of experts is ready to help you choose the right services and pricing plan.
               Get in touch today for a personalized consultation.
             </motion.p>
             <motion.div
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.4 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
               className="grid md:grid-cols-3 gap-8 mb-12"
             >
               <div className="flex flex-col items-center">
@@ -583,9 +577,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               </div>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0} y: 20 }}
-              whileInView={{ opacity: 1} y: 0 }}
-              transition={{ duration: 0.8} delay: 0.6 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
               className="flex flex-wrap justify-center gap-4"
             >
               <Link
