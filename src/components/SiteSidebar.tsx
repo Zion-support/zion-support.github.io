@@ -24,7 +24,9 @@ const SiteSidebar: React.FC = () => {
             <h3 className='text-xs font-medium text-gray-600 uppercase mb-2'>
               Explore
             </h3>
-            <nav className='space-y-1' > <NavLink to='/' className={linkClass}>
+            <nav className='space-y-1'>
+              {' '}
+              <NavLink to='/' className={linkClass}>
                 Home
               </NavLink>
               <NavLink to='/solutions' className={linkClass}>

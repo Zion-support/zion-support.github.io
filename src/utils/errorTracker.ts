@@ -1,9 +1,9 @@
 /**
  * Error Tracking and Monitoring Utility
- * 
+ *
  * Comprehensive error tracking system for production monitoring,
  * error reporting, and debugging assistance.
- * 
+ *
  * Features:
  * - Centralized error logging
  * - Error categorization and severity levels
@@ -62,7 +62,7 @@ class ErrorTracker {
     error: Error | string,
     severity: ErrorSeverity = ErrorSeverity.MEDIUM,
     category: ErrorCategory = ErrorCategory.UNKNOWN,
-    context: ErrorContext = {}
+    context: ErrorContext = {},
   ): TrackedError {
     const trackedError: TrackedError = {
       id: this.generateErrorId(),
@@ -77,7 +77,7 @@ class ErrorTracker {
     };
 
     this.errors.push(trackedError);
-    
+
     // Keep only recent errors
     if (this.errors.length > this.maxErrors) {
       this.errors = this.errors.slice(-this.maxErrors);
@@ -107,7 +107,7 @@ class ErrorTracker {
     url: string,
     method: string,
     status?: number,
-    context: ErrorContext = {}
+    context: ErrorContext = {},
   ): TrackedError {
     return this.trackError(
       error,
@@ -121,7 +121,7 @@ class ErrorTracker {
           method,
           status,
         },
-      }
+      },
     );
   }
 
@@ -132,21 +132,16 @@ class ErrorTracker {
     error: Error,
     componentName: string,
     props?: Record<string, any>,
-    context: ErrorContext = {}
+    context: ErrorContext = {},
   ): TrackedError {
-    return this.trackError(
-      error,
-      ErrorSeverity.HIGH,
-      ErrorCategory.RENDERING,
-      {
-        ...context,
-        component: componentName,
-        metadata: {
-          ...context.metadata,
-          props,
-        },
-      }
-    );
+    return this.trackError(error, ErrorSeverity.HIGH, ErrorCategory.RENDERING, {
+      ...context,
+      component: componentName,
+      metadata: {
+        ...context.metadata,
+        props,
+      },
+    });
   }
 
   /**
@@ -210,18 +205,23 @@ class ErrorTracker {
   getStatistics() {
     const total = this.errors.length;
     const unresolved = this.getUnresolvedErrors().length;
-    
+
     const bySeverity = {
       [ErrorSeverity.LOW]: this.getErrorsBySeverity(ErrorSeverity.LOW).length,
-      [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM).length,
+      [ErrorSeverity.MEDIUM]: this.getErrorsBySeverity(ErrorSeverity.MEDIUM)
+        .length,
       [ErrorSeverity.HIGH]: this.getErrorsBySeverity(ErrorSeverity.HIGH).length,
-      [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL).length,
+      [ErrorSeverity.CRITICAL]: this.getErrorsBySeverity(ErrorSeverity.CRITICAL)
+        .length,
     };
 
-    const byCategory = Object.values(ErrorCategory).reduce((acc, category) => {
-      acc[category] = this.getErrorsByCategory(category).length;
-      return acc;
-    }, {} as Record<ErrorCategory, number>);
+    const byCategory = Object.values(ErrorCategory).reduce(
+      (acc, category) => {
+        acc[category] = this.getErrorsByCategory(category).length;
+        return acc;
+      },
+      {} as Record<ErrorCategory, number>,
+    );
 
     return {
       total,
@@ -277,7 +277,7 @@ class ErrorTracker {
   private sendToExternalService(error: TrackedError): void {
     // Integration point for external services
     // Example: Sentry, DataDog, New Relic, etc.
-    
+
     // Uncomment and configure based on your monitoring service:
     // if (window.Sentry) {
     //   window.Sentry.captureException(new Error(error.message), {
@@ -313,7 +313,7 @@ export const errorTracker = new ErrorTracker();
 export function handleComponentError(
   error: Error,
   errorInfo: { componentStack: string },
-  componentName: string
+  componentName: string,
 ): void {
   errorTracker.trackRenderError(error, componentName, {
     componentStack: errorInfo.componentStack,
@@ -325,7 +325,7 @@ export function handleComponentError(
  */
 export function setupGlobalErrorHandling(): void {
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', event => {
     errorTracker.trackError(
       new Error(event.reason),
       ErrorSeverity.HIGH,
@@ -335,12 +335,12 @@ export function setupGlobalErrorHandling(): void {
           type: 'unhandledRejection',
           promise: event.promise,
         },
-      }
+      },
     );
   });
 
   // Handle global errors
-  window.addEventListener('error', (event) => {
+  window.addEventListener('error', event => {
     errorTracker.trackError(
       event.error || new Error(event.message),
       ErrorSeverity.HIGH,
@@ -351,7 +351,7 @@ export function setupGlobalErrorHandling(): void {
           lineno: event.lineno,
           colno: event.colno,
         },
-      }
+      },
     );
   });
 }

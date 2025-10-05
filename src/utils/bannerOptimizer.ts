@@ -37,7 +37,7 @@ export class BannerPriorityManager {
    */
   registerBanner(config: BannerConfig): void {
     this.banners.set(config.id, config);
-    
+
     if (!this.metrics.has(config.id)) {
       this.metrics.set(config.id, {
         impressions: 0,
@@ -53,20 +53,24 @@ export class BannerPriorityManager {
    */
   getSortedBanners(): BannerConfig[] {
     const now = new Date();
-    
+
     return Array.from(this.banners.values())
       .filter(banner => {
         // Filter out expired banners
         if (banner.expiryDate && banner.expiryDate < now) {
           return false;
         }
-        
+
         // Filter out banners that reached max impressions
         const metrics = this.metrics.get(banner.id);
-        if (banner.maxImpressions && metrics && metrics.impressions >= banner.maxImpressions) {
+        if (
+          banner.maxImpressions &&
+          metrics &&
+          metrics.impressions >= banner.maxImpressions
+        ) {
           return false;
         }
-        
+
         return true;
       })
       .sort((a, b) => b.priority - a.priority);
@@ -148,13 +152,15 @@ export class BannerPriorityManager {
       const data = localStorage.getItem('bannerMetrics');
       if (data) {
         const entries = JSON.parse(data);
-        this.metrics = new Map(entries.map(([id, metrics]: [string, any]) => [
-          id,
-          {
-            ...metrics,
-            lastShown: new Date(metrics.lastShown),
-          },
-        ]));
+        this.metrics = new Map(
+          entries.map(([id, metrics]: [string, any]) => [
+            id,
+            {
+              ...metrics,
+              lastShown: new Date(metrics.lastShown),
+            },
+          ]),
+        );
       }
     } catch (error) {
       console.warn('Failed to load banner metrics:', error);
@@ -182,7 +188,7 @@ export function useBannerOptimization(bannerId: string) {
   const recordImpression = () => bannerManager.recordImpression(bannerId);
   const recordClick = () => bannerManager.recordClick(bannerId);
   const recordConversion = () => bannerManager.recordConversion(bannerId);
-  
+
   return {
     recordImpression,
     recordClick,

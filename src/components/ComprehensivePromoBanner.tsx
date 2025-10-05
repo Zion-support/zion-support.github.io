@@ -49,7 +49,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 p-8">
-          {latestArticles.slice(0, 2).map((article) = > (
+          {latestArticles.slice(0, 2).map((article) => (
             <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
               <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
@@ -86,7 +86,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
               Latest Articles
             </h3>
             <div className="space-y-3">
-              {latestArticles.slice(0, 3).map((article) = > (
+              {latestArticles.slice(0, 3).map((article) => (
                 <Link
                   key={article.id}
                   to={article.link}
@@ -105,7 +105,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
               New Services
             </h3>
             <div className="space-y-3">
-              {latestServices.slice(0, 3).map((service) = > (
+              {latestServices.slice(0, 3).map((service) => (
                 <Link
                   key={service.id}
                   to={service.link}

@@ -6,7 +6,14 @@
 export interface SitemapURL {
   loc: string;
   lastmod?: string;
-  changefreq?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  changefreq?:
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never';
   priority?: number;
   images?: Array<{
     loc: string;
@@ -50,7 +57,9 @@ export class ImprovedSitemapGenerator {
     });
   }
 
-  public addBlogPosts(posts: Array<{ slug: string; date: string; images?: string[] }>): void {
+  public addBlogPosts(
+    posts: Array<{ slug: string; date: string; images?: string[] }>,
+  ): void {
     posts.forEach(post => {
       const url: SitemapURL = {
         loc: `${this.config.baseUrl}/blog/${post.slug}`,
@@ -69,7 +78,9 @@ export class ImprovedSitemapGenerator {
     });
   }
 
-  public addCaseStudies(caseStudies: Array<{ slug: string; date: string }>): void {
+  public addCaseStudies(
+    caseStudies: Array<{ slug: string; date: string }>,
+  ): void {
     caseStudies.forEach(study => {
       this.addURL({
         loc: `${this.config.baseUrl}/case-studies/${study.slug}`,
@@ -99,15 +110,15 @@ export class ImprovedSitemapGenerator {
     this.urls.forEach(url => {
       xml += '  <url>\n';
       xml += `    <loc>${this.escapeXML(url.loc)}</loc>\n`;
-      
+
       if (url.lastmod) {
         xml += `    <lastmod>${url.lastmod}</lastmod>\n`;
       }
-      
+
       if (url.changefreq) {
         xml += `    <changefreq>${url.changefreq}</changefreq>\n`;
       }
-      
+
       if (url.priority !== undefined) {
         xml += `    <priority>${url.priority.toFixed(1)}</priority>\n`;
       }
@@ -133,9 +144,12 @@ export class ImprovedSitemapGenerator {
     return xml;
   }
 
-  public generateSitemapIndex(sitemaps: Array<{ loc: string; lastmod?: string }>): string {
+  public generateSitemapIndex(
+    sitemaps: Array<{ loc: string; lastmod?: string }>,
+  ): string {
     let xml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    xml += '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    xml +=
+      '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
 
     sitemaps.forEach(sitemap => {
       xml += '  <sitemap>\n';
@@ -169,7 +183,9 @@ export class ImprovedSitemapGenerator {
 }
 
 // Export a configured instance
-export const createSitemapGenerator = (baseUrl: string): ImprovedSitemapGenerator => {
+export const createSitemapGenerator = (
+  baseUrl: string,
+): ImprovedSitemapGenerator => {
   const config: SitemapConfig = {
     baseUrl,
     routes: [

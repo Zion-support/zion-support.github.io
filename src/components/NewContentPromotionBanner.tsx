@@ -104,11 +104,8 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
 onClick={handleDismiss}
               className="ml-4 p-1 rounded-full hover:bg-white/20 transition-colors"
             >
-              <X className="w-5 h-5 opacity-75 hover:opacity-100" />
-            </button>
-=======
-              <X className="w-5 h-5 opacity-75 hover:opacity-100" />
-            </button>
+                <X className="w-5 h-5 opacity-75 hover:opacity-100" />
+              </button>
           )}
         </div>
       </div>

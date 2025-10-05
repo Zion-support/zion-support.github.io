@@ -79,7 +79,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
         </div>
         {/* Breakthroughs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {breakthroughs.map((breakthrough, index) = > (
+          {breakthroughs.map((breakthrough, index) => (
             <motion.div
               key={breakthrough.title}
               initial={{ opacity: 0, y: 30 }}

@@ -33,7 +33,6 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
                 <div className="p-3 bg-blue-500/20 rounded-xl">
                   <Building2 className="w-8 h-8 text-blue-400" />
                 </div>
-=======
                   <Building2 className="w-8 h-8 text-blue-400" />
                 </div>
                 <div>
@@ -195,7 +194,6 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 export default January2025EnterpriseSuccessBanner;

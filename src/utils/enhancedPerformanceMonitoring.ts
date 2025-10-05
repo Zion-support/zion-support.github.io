@@ -44,11 +44,13 @@ class EnhancedPerformanceMonitor {
     // Observe navigation timing
     if ('PerformanceObserver' in window) {
       try {
-        const navObserver = new PerformanceObserver((list) => {
+        const navObserver = new PerformanceObserver(list => {
           const entries = list.getEntries();
-          entries.forEach((entry) => {
+          entries.forEach(entry => {
             if (entry.entryType === 'navigation') {
-              this.processNavigationTiming(entry as PerformanceNavigationTiming);
+              this.processNavigationTiming(
+                entry as PerformanceNavigationTiming,
+              );
             }
           });
         });
@@ -64,7 +66,7 @@ class EnhancedPerformanceMonitor {
     const metrics: Partial<PerformanceMetrics> = {
       loadTime: entry.loadEventEnd - entry.loadEventStart,
       timeToInteractive: entry.domInteractive - entry.navigationStart,
-      timestamp: Date.now()
+      timestamp: Date.now(),
     };
 
     this.addMetrics(metrics as PerformanceMetrics);
@@ -73,7 +75,7 @@ class EnhancedPerformanceMonitor {
   private addMetrics(newMetrics: PerformanceMetrics): void {
     this.metrics.push(newMetrics);
     this.checkThresholds(newMetrics);
-    
+
     // Keep only last 100 metrics
     if (this.metrics.length > 100) {
       this.metrics = this.metrics.slice(-100);
@@ -89,7 +91,7 @@ class EnhancedPerformanceMonitor {
       cumulativeLayoutShift: 0.1,
       timeToInteractive: 3800,
       totalBlockingTime: 200,
-      speedIndex: 3000
+      speedIndex: 3000,
     };
 
     Object.entries(thresholds).forEach(([key, threshold]) => {
@@ -101,7 +103,7 @@ class EnhancedPerformanceMonitor {
           metric: key as keyof PerformanceMetrics,
           value,
           threshold,
-          timestamp: Date.now()
+          timestamp: Date.now(),
         });
       }
     });
@@ -109,7 +111,7 @@ class EnhancedPerformanceMonitor {
 
   private addAlert(alert: PerformanceAlert): void {
     this.alerts.push(alert);
-    
+
     // Keep only last 50 alerts
     if (this.alerts.length > 50) {
       this.alerts = this.alerts.slice(-50);
@@ -145,19 +147,25 @@ class EnhancedPerformanceMonitor {
     return this.isMonitoring;
   }
   public getLatestMetrics(): PerformanceMetrics | null {
-    return this.metrics.length > 0 ? this.metrics[this.metrics.length - 1] : null;
+    return this.metrics.length > 0
+      ? this.metrics[this.metrics.length - 1]
+      : null;
   }
 
   public exportReport(): string {
     const latest = this.getLatestMetrics();
     const alerts = this.getAlerts();
 
-    return JSON.stringify({
-      latest,
-      alerts,
-      timestamp: Date.now(),
-      totalMetrics: this.metrics.length
-    }, null, 2);
+    return JSON.stringify(
+      {
+        latest,
+        alerts,
+        timestamp: Date.now(),
+        totalMetrics: this.metrics.length,
+      },
+      null,
+      2,
+    );
   }
 }
 
