@@ -1,38 +1,39 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
   title?: string;
   description?: string;
+  keywords?: string;
+  image?: string;
+  url?: string;
+  type?: string;
 }
 
-const SEO: React.FC<SEOProps> = ({ 
-  title = "Zion Tech Group - Advanced AI and IT Solutions",
-  description = "Leading provider of advanced AI and IT solutions for enterprise clients"
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Advanced AI and IT Solutions',
+  description = 'Leading provider of advanced AI solutions, enterprise automation, and cutting-edge technology services. Transform your business with our innovative AI-powered solutions.',
+  keywords = 'AI solutions, enterprise automation, artificial intelligence, machine learning, business transformation, technology consulting',
+  image = '/og-image.jpg',
+  url = 'https://zion.app',
+  type = 'website'
 }) => {
   return (
-<<<<<<< HEAD
-    <>
+    <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:image" content={image} />
+      <meta property="og:url" content={url} />
+      <meta property="og:type" content={type} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-    </>
-=======
-    <Helmet>
-      <title>Zion Tech Group - Advanced AI & IT Solutions</title>
-      <meta name="description" content="Transform your business with cutting-edge artificial intelligence and innovative technology solutions from Zion Tech Group." />
-      <meta name="keywords" content="AI, artificial intelligence, IT solutions, technology, business transformation" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta property="og:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-      <meta property="og:description" content="Transform your business with cutting-edge artificial intelligence and innovative technology solutions." />
-      <meta property="og:type" content="website" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content="Zion Tech Group - Advanced AI & IT Solutions" />
-      <meta name="twitter:description" content="Transform your business with cutting-edge artificial intelligence and innovative technology solutions." />
+      <meta name="twitter:image" content={image} />
+      <link rel="canonical" href={url} />
     </Helmet>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
   );
 };
 

@@ -1,17 +1,26 @@
 import React from 'react';
 
-const Loading: React.FC = () => {
+interface LoadingProps {
+  size?: 'sm' | 'md' | 'lg';
+  text?: string;
+}
+
+const Loading: React.FC<LoadingProps> = ({ 
+  size = 'md', 
+  text = 'Loading...' 
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
   return (
-<<<<<<< HEAD
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-500"></div>
-=======
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
-        <p className="text-white text-lg">Loading...</p>
-      </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
+      {text && (
+        <p className="mt-4 text-gray-600 text-sm">{text}</p>
+      )}
     </div>
   );
 };
