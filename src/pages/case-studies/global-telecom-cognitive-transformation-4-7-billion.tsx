@@ -1,10 +1,14 @@
-import { ArrowRight, Award, Brain, CheckCircle, Target, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
-;
+import { Award } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
 import Header from '../../components/Header';
 
 const GlobalTelecomCognitiveTransformation: React.FC = () => {
@@ -28,14 +32,14 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
         
         {/* Hero Section */}
         <div className="relative pt-24 pb-16 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle at 30% 50%,rgba(139,92,246,0.2),transparent 50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle at 30% 50%,rgba(139,92,246,0.2),transparent_50%)]" />
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Breadcrumb */}
             <nav className="flex items-center space-x-2 text-sm mb-8">
               <Link to="/" className="text-purple-300 hover:text-white transition-colors">Home</Link>
               <span className="text-purple-400">/</span>
-              <Link to="/case-studies" className="text-purple-300 hover:text-white transition-colors">Case Studies</Link>
+              <Link to="/case-<studies" className="text-purple-300 hover:text-white transition-colors">Case Studies</Link>
               <span className="text-purple-400">/</span>
               <span className="text-white">Fortune 20 Telecom</span>
             </nav>
@@ -44,7 +48,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6 flex-wrap">
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2" />
+                  <<<Award className="w-4 h-4 mr-2" />
                   SUCCESS STORY
                 </span>
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-purple-500 text-white shadow-lg">
@@ -69,17 +73,17 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               
               <div className="flex items-center gap-6 text-sm text-purple-200 flex-wrap">
                 <span className="flex items-center gap-2">
-                  <Users className="w-4 h-4" />
+                  <<<Users className="w-4 h-4" />
                   250,000+ Employees
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-2">
-                  <TrendingUp className="w-4 h-4" />
+                  <<<TrendingUp className="w-4 h-4" />
                   $180B Annual Revenue
                 </span>
                 <span>•</span>
                 <span className="flex items-center gap-2">
-                  <Zap className="w-4 h-4" />
+                  <<<Zap className="w-4 h-4" />
                   18 Month Implementation
                 </span>
               </div>
@@ -123,7 +127,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               {/* Challenge Section */}
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Target className="w-8 h-8 text-red-400" />
+                  <<<Target className="w-8 h-8 text-red-400" />
                   The Challenge
                 </h2>
                 
@@ -187,7 +191,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               {/* Solution Section */}
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Brain className="w-8 h-8 text-purple-400" />
+                  <<<Brain className="w-8 h-8 text-purple-400" />
                   The Solution: Cognitive Computing Platform
                 </h2>
                 
@@ -238,7 +242,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                         <ul className="space-y-2">
                           {solution.features.map((feature, i) => (
                             <li key={i} className="flex items-start gap-2 text-purple-100">
-                              <CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
+                              <<<CheckCircle className="w-4 h-4 text-green-400 mt-1 flex-shrink-0" />
                               <span>{feature}</span>
                             </li>
                           ))}
@@ -257,7 +261,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               {/* Results Section */}
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" />
+                  <<<TrendingUp className="w-8 h-8 text-green-400" />
                   Results & Business Impact
                 </h2>
                 
@@ -408,11 +412,10 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
                 
                 <div className="mt-6 pt-6 border-t border-white/10">
                   <Link
-                    to="/contact"
-                    className="w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl transition-all duration-300 hover:scale-105 group"
+                    to="/<contact" className="w-full inline-flex items-center justify-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl transition-all duration-300 hover:scale-105 group"
                   >
                     Get Similar Results
-                    <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <<<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>
               </div>
@@ -428,7 +431,7 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
               </p>
               <footer className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                  <Award className="w-6 h-6 text-white" />
+                  <<<Award className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <div className="font-bold text-white">Chief Executive Officer</div>
@@ -447,15 +450,13 @@ const GlobalTelecomCognitiveTransformation: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
+                to="/<contact" className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
               >
                 Schedule Consultation
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <<<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/case-studies"
-                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
+                to="/case-<studies" className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
               >
                 View More Case Studies
               </Link>
