@@ -1,5 +1,6 @@
 import { ArrowRight, Brain, CheckCircle, Cpu, Mail, MapPin, Phone, Rocket, Server, TrendingUp, Zap } from 'lucide-react';
 import React, { useState, useMemo } from 'react'
+
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 

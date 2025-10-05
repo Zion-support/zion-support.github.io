@@ -1,13 +1,12 @@
 import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User, Share2, Bookmark } from 'lucide-react';
 
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import User from 'lucide-react/dist/esm/icons/user';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Share2 from 'lucide-react/dist/esm/icons/share-2';
-import Bookmark from 'lucide-react/dist/esm/icons/bookmark';>>>>>>> origin/merge-pr-25212
-import { ArrowLeft, Clock, Calendar, User, Share2, Bookmark } from 'lucide-react';
-
+import Bookmark from 'lucide-react/dist/esm/icons/bookmark';
 
 export const metadata = {
   title: 'AI Cognitive Computing Breakthrough 2026: Human-Level Reasoning Revolution | Zion Tech Group',

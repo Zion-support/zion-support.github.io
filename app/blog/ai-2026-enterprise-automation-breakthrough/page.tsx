@@ -1,12 +1,11 @@
 import Link from 'next/link';
+import { ArrowLeft, Calendar, Clock, User, Tag } from 'lucide-react';
 
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import User from 'lucide-react/dist/esm/icons/user';
 import Clock from 'lucide-react/dist/esm/icons/clock';
-import Tag from 'lucide-react/dist/esm/icons/tag';>>>>>>> origin/merge-pr-25212
-import { ArrowLeft, Clock, Calendar, User, Tag } from 'lucide-react';
-
+import Tag from 'lucide-react/dist/esm/icons/tag';
 
 export const metadata = {
   title: 'AI 2026: Enterprise Automation Breakthrough - Zion Tech Group',

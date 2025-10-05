@@ -1,15 +1,4 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-
-import Calendar from 'lucide-react/dist/esm/icons/calendar';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import Gauge from 'lucide-react/dist/esm/icons/gauge';
-import ShieldCheck from 'lucide-react/dist/esm/icons/shieldcheck';
-import Activity from 'lucide-react/dist/esm/icons/activity';
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';>>>>>>> origin/merge-pr-25212
-import { ArrowRight, Clock, Calendar, Shield } from 'lucide-react';
-=======
->>>>>>> origin/add-new-2026-content
 
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Clock from 'lucide-react/dist/esm/icons/clock';

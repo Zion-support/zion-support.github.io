@@ -1,8 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Brain, TrendingUp, Clock, Zap, Calendar, User, Tag, Shield } from 'lucide-react';
+import { ArrowLeft, Calendar, Clock, User, TrendingUp, Tag, Brain, Zap } from 'lucide-react';
 
-<<<<<<< HEAD
-=======
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import User from 'lucide-react/dist/esm/icons/user';
@@ -12,7 +10,6 @@ import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import Brain from 'lucide-react/dist/esm/icons/brain';
 import Zap from 'lucide-react/dist/esm/icons/zap';
 import Shield from 'lucide-react/dist/esm/icons/shield';
->>>>>>> origin/add-new-2026-content
 
 export const metadata = {
   title: 'AI 2025 December: Ultimate Autonomous Enterprise Revolution - Zion Tech Group',

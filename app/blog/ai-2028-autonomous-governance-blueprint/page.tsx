@@ -1,8 +1,6 @@
 import Link from 'next/link';
 
-import Shield from 'lucide-react/dist/esm/icons/hield';>>>>>>> origin/merge-pr-25212
-import { Shield } from 'lucide-react';
-
+import Shield from 'lucide-react/dist/esm/icons/shield';
 
 export const metadata = {
   title: 'AI 2028: Autonomous Governance Blueprint | Zion Tech Group',

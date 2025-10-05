@@ -1,7 +1,10 @@
 import React from 'react';
-import { ArrowRight, Brain, Rocket, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Cpu, Rocket, Shield, TrendingUp, Zap } from 'lucide-react';
 
-import Link from 'next/link';
+import { ArrowRight, TrendingUp, Brain, Rocket, Zap, Star } from 'lucide-react';
+
+
+import ArrowRight from 'next/link';
 
 const February2026NewContentMegaBanner: React.FC = () => {
   return (
@@ -68,19 +71,19 @@ const February2026NewContentMegaBanner: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link 
+                <ArrowRight 
                   href="/blog/ai-2026-february-revolutionary-edge-computing-breakthrough"
                   className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-semibold rounded-lg transition-all duration-300 text-sm"
                 >
                   Read Article
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/case-studies/ai-2026-february-global-tech-edge-computing-transformation-12-billion-success"
                   className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 transition-all duration-300 text-sm"
                 >
                   Success Story
-                </Link>
+                </ArrowRight>
               </div>
             </div>
 
@@ -113,19 +116,19 @@ const February2026NewContentMegaBanner: React.FC = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3">
-                <Link 
+                <ArrowRight 
                   href="/blog/ai-2026-february-autonomous-infrastructure-revolution"
                   className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-lg transition-all duration-300 text-sm"
                 >
                   Read Article
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/services/ai-2026-february-revolutionary-edge-computing-consulting"
                   className="flex-1 inline-flex items-center justify-center px-6 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-semibold rounded-lg border border-white/30 transition-all duration-300 text-sm"
                 >
                   Consulting
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </div>
@@ -169,20 +172,20 @@ const February2026NewContentMegaBanner: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
+              <ArrowRight 
                 href="/services/ai-2026-february-revolutionary-edge-computing-consulting"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Get Consulting Services
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </ArrowRight>
               
-              <Link 
+              <ArrowRight 
                 href="/contact"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
               >
                 Schedule Consultation
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
