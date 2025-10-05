@@ -277,8 +277,8 @@ const October2025MegaLaunchBanner = () => {
               "GDPR Compliant",
               "Production-Ready"
             ].map((topic) => (
-              <span>
-                key={topic} 
+              <span
+key={topic} 
                 className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full text-sm text-white border border-white/30 hover:border-white/50 hover:bg-white/20 transition-all cursor-pointer"
               >
                 {topic}

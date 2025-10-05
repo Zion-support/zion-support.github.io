@@ -106,7 +106,7 @@ const AICostOptimizationBanner: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {costOptimizationContent.map((content, index) => (
-            <div>
+            <div
               key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-green-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20"
               style={{ animationDelay: `${index * 150}ms` }}

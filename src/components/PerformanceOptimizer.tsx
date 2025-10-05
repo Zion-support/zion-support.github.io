@@ -129,8 +129,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
         {optimizationOptions.map(option => (
-          <div>
-            key={option.key}
+          <div
+key={option.key}
             className={`p-4 border rounded-lg transition-colors ${
               option.enabled
                 ? 'border-green-200 bg-green-50'
@@ -176,8 +176,8 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           </h3>
           <div className='space-y-1'>
             {currentOptimizations.map((optimization, index) => (
-              <div>
-                key={index}
+              <div
+key={index}
                 className={`text-sm ${
                   optimization.startsWith('✓')
                     ? 'text-green-600'
@@ -192,14 +192,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       )}
 
       <div className='flex justify-end space-x-3'>
-        <button>
-          onClick={onClose}
+        <button
+onClick={onClose}
           className='px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500'
         >
           Close
         </button>
-        <button>
-          onClick={() => {
+        <button
+onClick={() => {
             setCurrentOptimizations([]);
             // Trigger re-optimization
           }}

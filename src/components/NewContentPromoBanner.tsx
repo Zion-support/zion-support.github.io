@@ -206,8 +206,8 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
           </div>
 
           {/* Dismiss button */}
-          <button>
-            onClick={() => setIsDismissed(true)}
+          <button
+onClick={() => setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
 
           >

@@ -72,8 +72,8 @@ const PerformanceMonitor: React.FC = () => {
 
   if (!isVisible) {
     return (
-      <button>
-        onClick={() => setIsVisible(true)}
+      <button
+onClick={() => setIsVisible(true)}
         className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
         title='Open Performance Monitor'
       >
@@ -90,8 +90,8 @@ const PerformanceMonitor: React.FC = () => {
       <div>FCP: {metrics.fcp?.toFixed(2) || 'N/A'}ms</div>
       <div>LCP: {metrics.lcp?.toFixed(2) || 'N/A'}ms</div>
       <div>TTFB: {metrics.ttfb?.toFixed(2) || 'N/A'}ms</div>
-      <button>
-        onClick={() => setIsVisible(false)}
+      <button
+onClick={() => setIsVisible(false)}
         className='mt-2 text-xs text-gray-400 hover:text-white'
       >
         Close

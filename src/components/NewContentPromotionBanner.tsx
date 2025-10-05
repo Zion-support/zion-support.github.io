@@ -115,8 +115,8 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
           </div>
 
           {dismissible && (
-            <button>
-              onClick={handleDismiss}
+            <button
+onClick={handleDismiss}
               className="ml-4 p-1 rounded-full hover:bg-white/20 transition-colors"
 
             >
