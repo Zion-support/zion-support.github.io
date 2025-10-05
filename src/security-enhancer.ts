@@ -9,46 +9,6 @@ class SecurityEnhancer {
       SecurityEnhancer.instance = new SecurityEnhancer();
     }
     return SecurityEnhancer.instance;
-<<<<<<< HEAD
-  }
-
-  init(): void {
-    if (this.isInitialized) {
-      return;
-    }
-    this.setupCSP();
-    this.setupHTTPSRedirect();
-    this.setupXSSProtection();
-    this.setupSecurityHeaders();
-    
-    this.isInitialized = true;
-    console.log('Security enhancer initialized');
-  }
-
-  private setupCSP(): void {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'Content-Security-Policy';
-    meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
-    document.head.appendChild(meta);
-  }
-
-  private setupHTTPSRedirect(): void {
-    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
-      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
-    }
-  }
-
-  private setupXSSProtection(): void {
-    const meta = document.createElement('meta');
-    meta.httpEquiv = 'X-Content-Type-Options';
-    meta.content = 'nosniff';
-    document.head.appendChild(meta);
-  }
-
-  private setupSecurityHeaders(): void {
-    // Additional security headers setup
-    console.log('Security headers configured');
-=======
   }
 
   init(): void {
@@ -68,7 +28,6 @@ class SecurityEnhancer {
       meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
       document.head.appendChild(meta);
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
   }
 
   cleanup(): void {
