@@ -2,6 +2,7 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
+<<<<<<< HEAD
   'january2026-revolutionary': lazy(
     () => import('./January2026RevolutionaryBanner'),
   ),
@@ -29,6 +30,9 @@ const bannerComponents = {
   'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner')),
   'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner')),
   'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
+=======
+  // Add banner components here as needed
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -53,6 +57,7 @@ const LoadingFallback = () => (
 /**
  * Banner Rotation Manager Component
  *
+<<<<<<< HEAD
  * Manages banner display with lazy loading rotation and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
@@ -72,6 +77,15 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   autoRotate = true,
   className = ''
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+ * Manages banner display with lazy loading, rotation, and performance optimization
+ */
+export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
+  banners = [],
+  interval = 8000,
+  autoRotate = true,
+  maxBanners = 3
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
@@ -89,17 +103,25 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     const timer = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
 <<<<<<< HEAD
+<<<<<<< HEAD
     }, interval);
 =======
       }, interval);
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+    }, interval);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 
     return () => clearInterval(timer);
   }, [autoRotate, interval, visibleBanners.length]);
 
   if (visibleBanners.length === 0) return null;
 
+<<<<<<< HEAD
   // For non-rotating show all banners
+=======
+  // For non-rotating, show all banners
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
   if (!autoRotate) {
     return (
       <div className='space-y-6'>
@@ -115,7 +137,11 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     );
   }
 
+<<<<<<< HEAD
   // For rotating show current banner with controls
+=======
+  // For rotating, show current banner with controls
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
   const currentBannerKey = visibleBanners[currentIndex];
   const CurrentBanner = bannerComponents[currentBannerKey];
 
@@ -146,4 +172,8 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   );
 };
 
+<<<<<<< HEAD
 export default BannerRotationManager;
+=======
+export default BannerRotationManager;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163

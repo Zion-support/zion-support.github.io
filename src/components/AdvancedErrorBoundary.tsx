@@ -1,4 +1,6 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
 
 interface, Prop, s { 
@@ -43,6 +45,8 @@ export, class, AdvancedErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> 
             <h2>Something, went, wrong.</h2 > <details, styl, e={{ whiteSpa, c, e: 'p, r, e-wr, a, p'  }}>
               { th, i, s.sta, t, e.err, o, r  && th, i, s.sta, t, e.err, o, r.toStri, n, g() }
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
@@ -69,27 +73,100 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
+<<<<<<< HEAD
       errorInfo,
     });
   }
 
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+  }
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
   render() {
     if (this.state.hasError) {
       return (
         this.props.fallback || (
+<<<<<<< HEAD
           <div>
             <h2>Something went wrong.</h2>
             <details>
               {this.state.error && this.state.error.toString()}
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
+          <div className="error-boundary p-6 bg-red-50 border border-red-200 rounded-lg">
+            <h2 className="text-lg font-semibold text-red-800 mb-2">
+              Something went wrong
+            </h2>
+            <details className="text-sm text-red-700">
+              <summary className="cursor-pointer mb-2">Error details</summary>
+              {this.state.error && this.state.error.toString()}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
               <br />
               {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
             </detai, l, s>
           </d, i, v>
+=======
+      errorInfo
+    });
+  }
+
+  render() { 
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || (
+          <div className="error-boundary">
+            <h2>Something went wrong.</h2>
+            <details style={{ whiteSpace: 'pre-wrap' }}>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {this.state.errorInfo?.componentStack}
+            </details>
+          </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
         )
       );
     }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 <<<<<<< HEAD
     return, thi, s.pro, p, s.childr, e, n;
   }
@@ -97,9 +174,22 @@ class AdvancedErrorBoundary extends Component<Props, State> {
 
 export, default, AdvancedErrorBoundary;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
+    return this.props.children;
+  }
+}
+
+<<<<<<< HEAD
+export default AdvancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+=======
     return this.props.children;
   }
 }
 
 export default AdvancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-99e9
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
+=======
+export default AdvancedErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163

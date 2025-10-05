@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Security Enhancer Utility
  * Advanced security monitoring and protection tools
@@ -674,3 +675,12 @@ if (typeof window !== 'undefined') {
 }
 
 export default SecurityEnhancer;
+=======
+const securityEnhancer = {
+  setupSecurityMonitoring: () => {
+    console.log('Security monitoring setup');
+  }
+};
+
+export default securityEnhancer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
