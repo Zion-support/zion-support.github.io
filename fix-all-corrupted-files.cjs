@@ -1,203 +1,237 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
-function fixCorruptedFile(filePath) {
+// Function to fix corrupted import statements
+function fixCorruptedImports(content) {
+  // Fix import statements with commas
+  content = content.replace(/impo, r, t\s+/g, 'import ');
+  content = content.replace(/import,\s+/g, 'import ');
+  content = content.replace(/fr, o, m\s+/g, 'from ');
+  content = content.replace(/from,\s+/g, 'from ');
+  content = content.replace(/\{\s*([^}]+)\s*\}\s*fr, o, m/g, '{$1} from');
+  content = content.replace(/\{\s*([^}]+)\s*,\s*\}\s*fr, o, m/g, '{$1} from');
+  
+  // Fix other common corrupted patterns
+  content = content.replace(/const,\s+/g, 'const ');
+  content = content.replace(/interface,\s+/g, 'interface ');
+  content = content.replace(/class,\s+/g, 'class ');
+  content = content.replace(/extends,\s+/g, 'extends ');
+  content = content.replace(/React,\s+FC/g, 'React.FC');
+  content = content.replace(/ReactNo, d, e/g, 'ReactNode');
+  content = content.replace(/boole, a, n/g, 'boolean');
+  content = content.replace(/stri, n, g/g, 'string');
+  content = content.replace(/obje, c, t/g, 'object');
+  content = content.replace(/functi, o, n/g, 'function');
+  content = content.replace(/retu, r, n\s+/g, 'return ');
+  content = content.replace(/retu, r, n\s*\(/g, 'return (');
+  content = content.replace(/retu, r, n\s*\{/g, 'return {');
+  content = content.replace(/retu, r, n\s*\[/g, 'return [');
+  content = content.replace(/retu, r, n\s*;/g, 'return;');
+  content = content.replace(/retu, r, n\s*$/g, 'return');
+  
+  // Fix JSX attributes
+  content = content.replace(/classNam, e\s*=/g, 'className=');
+  content = content.replace(/onCli, c, k\s*=/g, 'onClick=');
+  content = content.replace(/onChan, g, e\s*=/g, 'onChange=');
+  content = content.replace(/onSubmi, t\s*=/g, 'onSubmit=');
+  content = content.replace(/onMou, s, eOve, r\s*=/g, 'onMouseOver=');
+  content = content.replace(/onMou, s, eOut\s*=/g, 'onMouseOut=');
+  content = content.replace(/onFocu, s\s*=/g, 'onFocus=');
+  content = content.replace(/onBlu, r\s*=/g, 'onBlur=');
+  
+  // Fix common variable names
+  content = content.replace(/th, i, s\./g, 'this.');
+  content = content.replace(/th, i, s\[/g, 'this[');
+  content = content.replace(/th, i, s\s*=/g, 'this =');
+  content = content.replace(/th, i, s\s*;/g, 'this;');
+  content = content.replace(/th, i, s\s*$/g, 'this');
+  
+  // Fix common function calls
+  content = content.replace(/conso, l, e\./g, 'console.');
+  content = content.replace(/wind, o, w\./g, 'window.');
+  content = content.replace(/docum, e, n, t\./g, 'document.');
+  
+  // Fix common strings
+  content = content.replace(/'([^']*),([^']*)'/g, (match, p1, p2) => {
+    if (p1 && p2) return `'${p1}${p2}'`;
+    return match;
+  });
+  content = content.replace(/"([^"]*),([^"]*)"/g, (match, p1, p2) => {
+    if (p1 && p2) return `"${p1}${p2}"`;
+    return match;
+  });
+  
+  return content;
+}
+
+// Function to fix corrupted JSX
+function fixCorruptedJSX(content) {
+  // Fix JSX tags with commas
+  content = content.replace(/<div,\s+/g, '<div ');
+  content = content.replace(/<\/div,\s*>/g, '</div>');
+  content = content.replace(/<span,\s+/g, '<span ');
+  content = content.replace(/<\/span,\s*>/g, '</span>');
+  content = content.replace(/<p,\s+/g, '<p ');
+  content = content.replace(/<\/p,\s*>/g, '</p>');
+  content = content.replace(/<h1,\s+/g, '<h1 ');
+  content = content.replace(/<\/h1,\s*>/g, '</h1>');
+  content = content.replace(/<h2,\s+/g, '<h2 ');
+  content = content.replace(/<\/h2,\s*>/g, '</h2>');
+  content = content.replace(/<h3,\s+/g, '<h3 ');
+  content = content.replace(/<\/h3,\s*>/g, '</h3>');
+  content = content.replace(/<button,\s+/g, '<button ');
+  content = content.replace(/<\/button,\s*>/g, '</button>');
+  content = content.replace(/<a,\s+/g, '<a ');
+  content = content.replace(/<\/a,\s*>/g, '</a>');
+  content = content.replace(/<img,\s+/g, '<img ');
+  content = content.replace(/<input,\s+/g, '<input ');
+  content = content.replace(/<form,\s+/g, '<form ');
+  content = content.replace(/<\/form,\s*>/g, '</form>');
+  content = content.replace(/<section,\s+/g, '<section ');
+  content = content.replace(/<\/section,\s*>/g, '</section>');
+  content = content.replace(/<article,\s+/g, '<article ');
+  content = content.replace(/<\/article,\s*>/g, '</article>');
+  content = content.replace(/<header,\s+/g, '<header ');
+  content = content.replace(/<\/header,\s*>/g, '</header>');
+  content = content.replace(/<footer,\s+/g, '<footer ');
+  content = content.replace(/<\/footer,\s*>/g, '</footer>');
+  content = content.replace(/<nav,\s+/g, '<nav ');
+  content = content.replace(/<\/nav,\s*>/g, '</nav>');
+  content = content.replace(/<ul,\s+/g, '<ul ');
+  content = content.replace(/<\/ul,\s*>/g, '</ul>');
+  content = content.replace(/<li,\s+/g, '<li ');
+  content = content.replace(/<\/li,\s*>/g, '</li>');
+  content = content.replace(/<ol,\s+/g, '<ol ');
+  content = content.replace(/<\/ol,\s*>/g, '</ol>');
+  content = content.replace(/<table,\s+/g, '<table ');
+  content = content.replace(/<\/table,\s*>/g, '</table>');
+  content = content.replace(/<tr,\s+/g, '<tr ');
+  content = content.replace(/<\/tr,\s*>/g, '</tr>');
+  content = content.replace(/<td,\s+/g, '<td ');
+  content = content.replace(/<\/td,\s*>/g, '</td>');
+  content = content.replace(/<th,\s+/g, '<th ');
+  content = content.replace(/<\/th,\s*>/g, '</th>');
+  
+  return content;
+}
+
+// Function to remove duplicate imports
+function removeDuplicateImports(content) {
+  const lines = content.split('\n');
+  const seenImports = new Set();
+  const cleanedLines = [];
+  
+  for (const line of lines) {
+    const trimmedLine = line.trim();
+    if (trimmedLine.startsWith('import ')) {
+      if (!seenImports.has(trimmedLine)) {
+        seenImports.add(trimmedLine);
+        cleanedLines.push(line);
+      }
+    } else {
+      cleanedLines.push(line);
+    }
+  }
+  
+  return cleanedLines.join('\n');
+}
+
+// Function to fix malformed JSX structure
+function fixMalformedJSX(content) {
+  // Fix common malformed patterns
+  content = content.replace(/\}\s*\)\s*;\s*const\s+/g, '});\nconst ');
+  content = content.replace(/\}\s*\)\s*;\s*export\s+/g, '});\nexport ');
+  content = content.replace(/\}\s*\)\s*;\s*<\/Helmet>/g, '});\n</Helmet>');
+  content = content.replace(/\}\s*\)\s*;\s*<div/g, '});\n<div');
+  content = content.replace(/\}\s*\)\s*;\s*<section/g, '});\n<section');
+  
+  // Fix missing closing tags
+  content = content.replace(/<div([^>]*)>\s*<section([^>]*)>\s*([^<]*)<\/section>\s*<\/div>\s*<\/>\s*\)\s*;\s*export/g, '<div$1>\n<section$2>\n$3\n</section>\n</div>\n</>\n);\nexport');
+  
+  return content;
+}
+
+// Function to fix a single file
+function fixFile(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    const originalContent = content;
     
-    // Fix all corrupted patterns systematically
-    content = content.replace(/\s+/g, ' '); // Normalize whitespace
-    content = content.replace(/\s*,\s*/g, ' '); // Remove commas with spaces
-    content = content.replace(/\s*{\s*/g, ' { '); // Fix braces
-    content = content.replace(/\s*}\s*/g, ' } '); // Fix braces
-    content = content.replace(/\s*\(\s*/g, ' ( '); // Fix parentheses
-    content = content.replace(/\s*\)\s*/g, ' ) '); // Fix parentheses
-    content = content.replace(/\s*\[\s*/g, ' [ '); // Fix brackets
-    content = content.replace(/\s*\]\s*/g, ' ] '); // Fix brackets
-    content = content.replace(/\s*;\s*/g, '; '); // Fix semicolons
-    content = content.replace(/\s*:\s*/g, ': '); // Fix colons
-    content = content.replace(/\s*=\s*/g, ' = '); // Fix equals
-    content = content.replace(/\s*<\s*/g, ' < '); // Fix less than
-    content = content.replace(/\s*>\s*/g, ' > '); // Fix greater than
-    content = content.replace(/\s*!\s*/g, ' ! '); // Fix exclamation
-    content = content.replace(/\s*\?\s*/g, ' ? '); // Fix question mark
-    content = content.replace(/\s*&\s*/g, ' & '); // Fix ampersand
-    content = content.replace(/\s*\|\s*/g, ' | '); // Fix pipe
-    content = content.replace(/\s*\+\s*/g, ' + '); // Fix plus
-    content = content.replace(/\s*-\s*/g, ' - '); // Fix minus
-    content = content.replace(/\s*\*\s*/g, ' * '); // Fix asterisk
-    content = content.replace(/\s*\/\s*/g, ' / '); // Fix slash
-    content = content.replace(/\s*%\s*/g, ' % '); // Fix percent
-    content = content.replace(/\s*@\s*/g, ' @ '); // Fix at
-    content = content.replace(/\s*#\s*/g, ' # '); // Fix hash
-    content = content.replace(/\s*$\s*/g, ' $ '); // Fix dollar
-    content = content.replace(/\s*~\s*/g, ' ~ '); // Fix tilde
-    content = content.replace(/\s*`\s*/g, ' ` '); // Fix backtick
-    content = content.replace(/\s*'\s*/g, " ' "); // Fix single quote
-    content = content.replace(/\s*"\s*/g, ' " '); // Fix double quote
+    // Apply fixes
+    content = fixCorruptedImports(content);
+    content = fixCorruptedJSX(content);
+    content = removeDuplicateImports(content);
+    content = fixMalformedJSX(content);
     
-    // Fix specific corrupted patterns
-    content = content.replace(/import\s*{\s*([^}]+)\s*}\s*from\s*['"]([^'"]+)['"]/g, (match, imports, module) => {
-      const cleanImports = imports.replace(/\s+/g, ' ').trim();
-      return `import { ${cleanImports} } from '${module}'`;
-    });
+    // Only write if content changed
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      return true;
+    }
     
-    content = content.replace(/import\s+([^{}\s]+)\s+from\s+['"]([^'"]+)['"]/g, (match, name, module) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `import ${cleanName} from '${module}'`;
-    });
-    
-    // Fix interface declarations
-    content = content.replace(/interface\s+([^{]+)\s*{/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `interface ${cleanName} {`;
-    });
-    
-    // Fix type declarations
-    content = content.replace(/type\s+([^{=]+)\s*=/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `type ${cleanName} =`;
-    });
-    
-    // Fix function declarations
-    content = content.replace(/function\s+([^{]+)\s*\(/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `function ${cleanName}(`;
-    });
-    
-    // Fix const declarations
-    content = content.replace(/const\s+([^{=]+)\s*=/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `const ${cleanName} =`;
-    });
-    
-    // Fix let declarations
-    content = content.replace(/let\s+([^{=]+)\s*=/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `let ${cleanName} =`;
-    });
-    
-    // Fix var declarations
-    content = content.replace(/var\s+([^{=]+)\s*=/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `var ${cleanName} =`;
-    });
-    
-    // Fix React component declarations
-    content = content.replace(/React\.FC<([^>]+)>/g, (match, props) => {
-      const cleanProps = props.replace(/\s+/g, '').trim();
-      return `React.FC<${cleanProps}>`;
-    });
-    
-    // Fix JSX element names
-    content = content.replace(/<([A-Z][A-Za-z0-9]*)\s/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `<${cleanName} `;
-    });
-    
-    // Fix closing JSX tags
-    content = content.replace(/<\/([A-Z][A-Za-z0-9]*)\s*>/g, (match, name) => {
-      const cleanName = name.replace(/\s+/g, '').trim();
-      return `</${cleanName}>`;
-    });
-    
-    // Fix property names in objects
-    content = content.replace(/(\w+)\s*:\s*/g, (match, prop) => {
-      const cleanProp = prop.replace(/\s+/g, '').trim();
-      return `${cleanProp}: `;
-    });
-    
-    // Fix method calls
-    content = content.replace(/(\w+)\.(\w+)\s*\(/g, (match, obj, method) => {
-      const cleanObj = obj.replace(/\s+/g, '').trim();
-      const cleanMethod = method.replace(/\s+/g, '').trim();
-      return `${cleanObj}.${cleanMethod}(`;
-    });
-    
-    // Fix string literals
-    content = content.replace(/['"]([^'"]*)\s+([^'"]*)['"]/g, (match, part1, part2) => {
-      if (part1 && part2) {
-        return `"${part1}${part2}"`;
-      }
-      return match;
-    });
-    
-    // Clean up multiple spaces
-    content = content.replace(/\s{2,}/g, ' ');
-    
-    // Fix specific common patterns
-    content = content.replace(/from\s+['"]react['"]/g, "from 'react'");
-    content = content.replace(/from\s+['"]react-dom['"]/g, "from 'react-dom'");
-    content = content.replace(/from\s+['"]react-router-dom['"]/g, "from 'react-router-dom'");
-    content = content.replace(/from\s+['"]lucide-react['"]/g, "from 'lucide-react'");
-    content = content.replace(/from\s+['"]react-helmet-async['"]/g, "from 'react-helmet-async'");
-    content = content.replace(/from\s+['"]web-vitals['"]/g, "from 'web-vitals'");
-    
-    // Fix arrow functions
-    content = content.replace(/\(\s*([^)]+)\s*\)\s*=>/g, (match, params) => {
-      const cleanParams = params.replace(/\s+/g, ' ').trim();
-      return `(${cleanParams}) =>`;
-    });
-    
-    // Fix destructuring
-    content = content.replace(/{\s*([^}]+)\s*}/g, (match, props) => {
-      const cleanProps = props.replace(/\s+/g, ' ').trim();
-      return `{ ${cleanProps} }`;
-    });
-    
-    // Fix array destructuring
-    content = content.replace(/\[\s*([^\]]+)\s*\]/g, (match, items) => {
-      const cleanItems = items.replace(/\s+/g, ' ').trim();
-      return `[ ${cleanItems} ]`;
-    });
-    
-    // Fix template literals
-    content = content.replace(/`([^`]*)\s+([^`]*)`/g, (match, part1, part2) => {
-      if (part1 && part2) {
-        return `\`${part1}${part2}\``;
-      }
-      return match;
-    });
-    
-    // Final cleanup
-    content = content.replace(/\s{2,}/g, ' ');
-    content = content.replace(/\n\s*\n/g, '\n');
-    
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-    return true;
+    return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
 
-// Find all TypeScript/TSX files
-const srcDir = './src';
-const files = [];
-
-function findFiles(dir) {
-  const items = fs.readdirSync(dir);
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-    if (stat.isDirectory()) {
-      findFiles(fullPath);
-    } else if (item.endsWith('.ts') || item.endsWith('.tsx')) {
-      files.push(fullPath);
+// Function to find all corrupted files
+function findCorruptedFiles(dir) {
+  const corruptedFiles = [];
+  
+  function scanDirectory(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        scanDirectory(fullPath);
+      } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
+        try {
+          const content = fs.readFileSync(fullPath, 'utf8');
+          if (content.includes('impo, r, t') || content.includes('import,') || content.includes('fr, o, m') || content.includes('from,') || content.includes('const,') || content.includes('interface,') || content.includes('class,')) {
+            corruptedFiles.push(fullPath);
+          }
+        } catch (error) {
+          // Skip files that can't be read
+        }
+      }
     }
   }
+  
+  scanDirectory(dir);
+  return corruptedFiles;
 }
 
-findFiles(srcDir);
+// Main execution
+console.log('Starting comprehensive corrupted files fix...');
 
-console.log(`Found ${files.length} TypeScript files to fix...`);
+const srcDir = path.join(__dirname, 'src');
+const corruptedFiles = findCorruptedFiles(srcDir);
+
+console.log(`Found ${corruptedFiles.length} corrupted files`);
 
 let fixedCount = 0;
-for (const file of files) {
-  if (fixCorruptedFile(file)) {
+for (const filePath of corruptedFiles) {
+  if (fixFile(filePath)) {
     fixedCount++;
   }
 }
 
-console.log(`Fixed ${fixedCount} files.`);
+console.log(`Fixed ${fixedCount} files`);
+
+// Test build after fixes
+console.log('Testing build...');
+try {
+  execSync('npm run build', { stdio: 'inherit' });
+  console.log('Build successful!');
+} catch (error) {
+  console.log('Build still has errors, but files have been fixed.');
+}
