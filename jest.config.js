@@ -8,9 +8,17 @@ export default {
       'ts-jest',
       {
         useESM: true,
+        tsconfig: {
+          jsx: 'react-jsx',
+          esModuleInterop: true,
+          allowSyntheticDefaultImports: true,
+        },
       },
     ],
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-error-boundary|@testing-library|react-helmet-async|framer-motion)/)',
+  ],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',

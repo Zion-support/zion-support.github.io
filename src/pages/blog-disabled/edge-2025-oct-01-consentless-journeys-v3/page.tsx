@@ -12,10 +12,9 @@ export default function BlogPost(): React.JSX.Element {
           
         <link rel="canonical" href="https://ziontechgroup.com/blog/edge-2025-oct-01-consentless-journeys-v3
         />
-      </Helmet>
-
-      <div className=" />
-      </Helmet>
+      </Helmet>" />
+" />
+      
 
       <div className="container mx-auto px-6 py-16">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
