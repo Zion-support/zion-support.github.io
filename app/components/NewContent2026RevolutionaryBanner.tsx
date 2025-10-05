@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 
-import { ArrowRight, Brain, Zap, Star, TrendingUp } from "lucide-react";
+import { ArrowRight, Brain, Zap, Star, TrendingUp } from 'lucide-react';
+
 ;
 ;
 ;

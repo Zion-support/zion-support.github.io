@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Factory, Cogs, TrendingUp, ArrowRight, Zap } from "lucide-react";
+import { Factory, Cogs, TrendingUp, ArrowRight, Zap } from 'lucide-react';
+
 import Link from 'next/link';
 
 ;

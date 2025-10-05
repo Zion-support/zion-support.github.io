@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 
-import { ArrowRight, Zap, Brain, Cpu, Sparkles } from "lucide-react";
+import { ArrowRight, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
+
 ;
 ;
 ;

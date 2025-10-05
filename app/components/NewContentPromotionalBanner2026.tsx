@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from "lucide-react";
+import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
+
 import Link from 'next/link';
 
 ;

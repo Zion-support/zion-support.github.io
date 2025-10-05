@@ -1,7 +1,8 @@
 
 import React from 'react';
 
-import { ArrowRight, TrendingUp, Users, Award, CheckCircle, Star } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Award, CheckCircle, Star } from 'lucide-react';
+
 ;
 ;
 ;

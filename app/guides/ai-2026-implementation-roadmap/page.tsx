@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 
-import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from "lucide-react";
+import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
+
 ;
 ;
 ;

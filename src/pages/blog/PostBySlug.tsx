@@ -1,12 +1,12 @@
 import React from "react";
+import { ArrowLeft, Calendar, Clock } from 'lucide-react';
+
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { posts as staticPosts } from "../../content/posts";
 import { latestArticles } from "../../content/latest-articles";
 import { blogPosts } from "../../content/blog-posts";
 import Header from "../../components/Header";
-import { ArrowLeft, Calendar, Clock } from "lucide-react";
-
 export default function PostBySlug(): React.JSX.Element {
   const { slug } = useParams();
 

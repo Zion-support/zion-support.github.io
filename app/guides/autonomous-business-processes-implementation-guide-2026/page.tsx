@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 
-import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp } from "lucide-react";
+import { ArrowLeft, BookOpen, CheckCircle, Clock, Target, Users, Zap, TrendingUp } from 'lucide-react';
+
 ;
 ;
 ;

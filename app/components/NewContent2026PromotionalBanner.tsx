@@ -1,7 +1,8 @@
 import Link from 'next/link';
 
 
-import { ArrowRight, Lock, Brain, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight, Lock, Brain, TrendingUp, Zap } from 'lucide-react';
+
 ;
 ;
 ;

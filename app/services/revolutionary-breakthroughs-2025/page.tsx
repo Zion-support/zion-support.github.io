@@ -1,7 +1,8 @@
 import React from 'react';
 
 
-import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from "lucide-react";
+import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from 'lucide-react';
+
 ;
 ;
 ;
