@@ -8,4 +8,3 @@
   tags: string[];
   author: string;
   publishedAt: string;
-];

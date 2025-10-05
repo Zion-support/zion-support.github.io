@@ -1,5 +1,0 @@
-            </ol>
-          </div>
-        </div>
-      </section>
- }

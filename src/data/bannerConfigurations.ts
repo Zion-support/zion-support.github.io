@@ -4,4 +4,3 @@
   imageUrl: string;
   linkUrl: string;
   priority: number;
-};

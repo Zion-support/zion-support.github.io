@@ -2,7 +2,6 @@ import React{ lazySuspenseuseStateuseEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-  'january2026-revolutionary': lazy(
 };
 
 export type BannerKey = keyof typeof bannerComponents;

@@ -1,3 +1,0 @@
-  );
-};
-exportdefaultOctober2025BreakthroughBanner;
