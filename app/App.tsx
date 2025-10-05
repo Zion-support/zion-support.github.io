@@ -12,8 +12,7 @@ import PerformanceDashboard from './components/PerformanceDashboard';
 import HomePage from './page';
 
 // Utils
-import { logError } from '../utils/errorHandling';
-import { measurePerformance } from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -24,7 +23,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    measurePerformance();
+    performanceOptimizer.clearMetrics();
 
     console.log('Performance monitoring initialized');
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');

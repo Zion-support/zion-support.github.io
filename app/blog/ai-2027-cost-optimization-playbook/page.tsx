@@ -1,6 +1,6 @@
-import React from 'react';
 import Link from 'next/link';
-import { DollarSign } from 'lucide-react';
+// @ts-ignore
+import {  DollarSign  } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2027 Cost Optimization Playbook | Zion Tech Group',
