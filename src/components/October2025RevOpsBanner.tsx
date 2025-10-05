@@ -5,7 +5,9 @@ const October2025RevOpsBanner = () => {
     <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}</div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+      </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breaking News Badge */}
@@ -114,7 +116,8 @@ const October2025RevOpsBanner = () => {
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"</svg>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
               <div>
                 <div className="font-bold text-white">Intelligent Pipeline Management</div>
@@ -124,7 +127,8 @@ const October2025RevOpsBanner = () => {
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"</svg>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
               <div>
                 <div className="font-bold text-white">Autonomous Forecasting</div>
@@ -134,7 +138,8 @@ const October2025RevOpsBanner = () => {
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"</svg>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
               <div>
                 <div className="font-bold text-white">Revenue Intelligence Platform</div>
@@ -144,7 +149,8 @@ const October2025RevOpsBanner = () => {
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"</svg>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
               <div>
                 <div className="font-bold text-white">Automated Workflows</div>
@@ -154,7 +160,8 @@ const October2025RevOpsBanner = () => {
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"</svg>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
               <div>
                 <div className="font-bold text-white">Cross-Functional Alignment</div>
@@ -164,7 +171,8 @@ const October2025RevOpsBanner = () => {
             <div className="flex items-start">
               <div className="bg-emerald-500 rounded-full p-1 mr-3 mt-1">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"</svg>
+                  <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                </svg>
               </div>
               <div>
                 <div className="font-bold text-white">90-Day Implementation</div>

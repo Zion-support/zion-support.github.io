@@ -35,7 +35,7 @@ key={item.id}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                   {isNew(item.date) && (
-                    
+                    <span className="text-green-400">●</span>
                   )}
                 </div>
                 <div className="flex items-center gap-2">
