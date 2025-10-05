@@ -1,10 +1,11 @@
 import React from 'react';
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
+
 import { Link } from 'react-router-dom';
 
 const October2025OperationalExcellenceBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl">
-      {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>

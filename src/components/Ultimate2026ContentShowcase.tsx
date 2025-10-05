@@ -152,7 +152,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
 
         {/* Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
-          {showcaseContent.map((content, index) => (
+          {showcaseContent.map((content, index) = > (
             <motion.div
               key={content.id}
               initial={{ opacity: 0, y: 30 }}
@@ -167,8 +167,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                   <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold shadow-xl">
 
                   </div>
-                </div>
-              )}
+                </div > )}
 
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover:from-blue-500/15 group-hover:via-purple-500/15 group-hover:to-cyan-500/15 transition-all duration-700 rounded-3xl"></div>
@@ -183,8 +182,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                     {content.trending && (
                       <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">
 
-                      </div>
-                    )}
+                      </div > )}
                     <span className="px-4 py-2 rounded-full bg-blue-500/25 text-blue-300 text-xs font-bold border border-blue-500/40">
                       MASTERCLASS
                     </span>
@@ -210,7 +208,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
 
                 {/* Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
-                  {Object.entries(content.stats).map(([key, value], idx) => (
+                  {Object.entries(content.stats).map(([key, value], idx) = > (
                     <div key={idx} className="text-center p-3 bg-white/5 rounded-xl border border-white/10">
                       <div className="text-lg font-bold text-blue-400 mb-1">{value}</div>
                       <div className="text-xs text-gray-400 capitalize">{key}</div>

@@ -17,8 +17,7 @@ const October2025CognitiveOrchestrationShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {/* Blog Post Card */}
+        <div className="grid md:grid-cols-3 gap-8 mb-12" > {/* Blog Post Card */}
           <div className="bg-gradient-to-br from-blue-600 to-cyan-600 rounded-2xl p-8 transform hover:scale-105 transition-all shadow-2xl hover:shadow-cyan-500/50">
             <div className="bg-white/20 backdrop-blur-sm rounded-lg px-4 py-2 inline-block mb-4">
               <span className="font-bold text-sm">📖 COMPREHENSIVE GUIDE</span>

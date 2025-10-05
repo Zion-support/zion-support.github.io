@@ -69,7 +69,7 @@ export default function ContentPromotionBanner() {
 
         {/* Featured Content Cards */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {featuredContent.map((item, index) => (
+          {featuredContent.map((item, index) = > (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
@@ -78,8 +78,7 @@ export default function ContentPromotionBanner() {
                 {item.isNew && (
                   <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                     NEW
-                  </span>
-                )}
+                  </span > )}
               </div>
               <h3 className="font-bold text-white mb-2 line-clamp-2">
                 {item.title}

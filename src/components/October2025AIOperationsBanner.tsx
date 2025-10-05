@@ -54,7 +54,7 @@ const October2025AIOperationsBanner = () => {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {newArticles.map((article, index) => {
+          {newArticles.map((article, index) = > {
             const Icon = article.icon;
             return (
               <Link
@@ -66,8 +66,7 @@ const October2025AIOperationsBanner = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${article.color} opacity-0 group-hover:opacity-10 rounded-2xl transition-opacity duration-300`}></div>
                 
                 {/* Content */}
-                <div className="relative z-10">
-                  {/* Icon */}
+                <div className="relative z-10" > {/* Icon */}
                   <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <Icon className="w-6 h-6 text-white"</div>
 

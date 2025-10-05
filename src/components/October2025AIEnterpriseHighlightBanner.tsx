@@ -137,8 +137,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default October2025AIEnterpriseHighlightBanner;

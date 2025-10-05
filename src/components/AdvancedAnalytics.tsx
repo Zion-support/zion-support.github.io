@@ -7,7 +7,7 @@ interface AdvancedAnalyticsProps {
 }
 
 export default function AdvancedAnalytics(props: AdvancedAnalyticsProps): React.JSX.Element {
-  useEffect(() => {
+  useEffect(() = > {
     void props;
   }, [props]);
   return <></>;

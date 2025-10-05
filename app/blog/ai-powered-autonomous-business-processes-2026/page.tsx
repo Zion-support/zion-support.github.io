@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, User, TrendingUp, CheckCircle, Share2, Tag, Brain, Zap, BookOpen } from 'lucide-react';
 
+=======
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import User from 'lucide-react/dist/esm/icons/user';
@@ -10,9 +10,11 @@ import BookOpen from 'lucide-react/dist/esm/icons/book-open';
 import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import Brain from 'lucide-react/dist/esm/icons/brain';
-import Zap from 'lucide-react/dist/esm/icons/zap';
+import Zap from 'lucide-react/dist/esm/icons/zap';>>>>>>> origin/merge-pr-25212
 
 import { Metadata } from 'next';
+import { ArrowLeft, Brain, TrendingUp, Clock, Zap, CheckCircle, User, Tag, BookOpen, Share2 } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',

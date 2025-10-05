@@ -2,8 +2,7 @@ import { Link } from "react-router-dom";
 
 const October2025NewAutonomousSystemsBanner = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden">
-      {/* Animated background effects */}
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden" > {/* Animated background effects */}
       <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       
       {/* Floating particles effect */}

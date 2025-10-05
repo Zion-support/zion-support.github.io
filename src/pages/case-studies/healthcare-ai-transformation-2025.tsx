@@ -1,16 +1,8 @@
 
 
-
-
-
-
-
 ;
 import { ArrowLeft, CheckCircle, DollarSign, Heart, Target, TrendingUp, Users, Zap } from 'lucide-react';
-import { Link } from "react-router-dom";
-
-
-import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 
 const HealthcareAITransformation = () => {

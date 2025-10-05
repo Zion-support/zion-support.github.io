@@ -1,10 +1,8 @@
 import Link from 'next/link';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import Brain from 'lucide-react/dist/esm/icons/brain';
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import { Brain, TrendingUp, Clock } from 'lucide-react';
 
 
-import { Clock, TrendingUp, Brain } from 'lucide-react';
+import { Clock, Brain, TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence Mega Success 2026: $750M ROI Case Study',

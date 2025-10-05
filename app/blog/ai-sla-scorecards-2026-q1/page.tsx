@@ -1,9 +1,13 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Gauge, ShieldCheck, Activity } from 'lucide-react';
+
 =======
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0f15
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import Gauge from 'lucide-react/dist/esm/icons/gauge';
+import ShieldCheck from 'lucide-react/dist/esm/icons/shieldcheck';
+import Activity from 'lucide-react/dist/esm/icons/activity';
+import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Clock, Calendar, Shield } from 'lucide-react';
 
 
 export const metadata = {

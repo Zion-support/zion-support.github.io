@@ -73,6 +73,5 @@ export default function October2025AIObservabilitySpotlightBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

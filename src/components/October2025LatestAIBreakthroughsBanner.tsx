@@ -135,6 +135,5 @@ export default function October2025LatestAIBreakthroughsBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
+
 import { octoberNewBreakthroughContent, octoberContentStats } from "../content/october-2025-new-breakthrough-content";
 
 const October2025NewBreakthroughBanner = () => {

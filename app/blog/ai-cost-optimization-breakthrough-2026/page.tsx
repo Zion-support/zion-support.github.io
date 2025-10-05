@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { ArrowRight, Calendar, Clock, Users, DollarSign, TrendingUp, Target, CheckCircle } from 'lucide-react';
 
+=======
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Calendar from 'lucide-react/dist/esm/icons/calendar';
 import Clock from 'lucide-react/dist/esm/icons/clock';
@@ -8,7 +8,9 @@ import Users from 'lucide-react/dist/esm/icons/users';
 import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
 import DollarSign from 'lucide-react/dist/esm/icons/dollar-sign';
 import Target from 'lucide-react/dist/esm/icons/target';
-import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
+import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';>>>>>>> origin/merge-pr-25212
+import { ArrowRight, Target, Users, DollarSign, TrendingUp, Clock, CheckCircle, Calendar, User } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Cost Optimization Breakthrough 2026: Cut AI Spending by 90% | Zion Tech Group',

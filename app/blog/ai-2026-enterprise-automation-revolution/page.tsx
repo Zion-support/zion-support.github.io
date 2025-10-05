@@ -1,9 +1,13 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-import { Log, BarChart3 } from 'lucide-react';
+
 =======
-import { Users, TrendingUp, Zap, BarChart3 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0f15
+import Cog from 'lucide-react/dist/esm/icons/file-text';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
+import Shield from 'lucide-react/dist/esm/icons/shield';
+import Users from 'lucide-react/dist/esm/icons/users';
+import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';>>>>>>> origin/merge-pr-25212
+import { Users, TrendingUp, Zap, User, BarChart3, Shield } from 'lucide-react';
 
 
 export const metadata = {

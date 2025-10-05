@@ -180,25 +180,28 @@ export default function BlogIndexPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {posts.map((post) => (
           <a key={post.href} href={post.href} className='group'>
-            <article className='bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:bg-white/10'>
-              <div className='text-sm text-gray-400 mb-3 flex items-center'>
+<article `}>
+              <div `}>
                 {post.date}
                 {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
               </div>
-              <h2 className='text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors'>
+              <h2 `}>
                 {post.title}
               </h2>
-              <p className='text-gray-300 text-sm leading-relaxed mb-4'>
+              <p `}>                {post.title}
+              </h2>
+              <p className='text-gray-300 mb-4 line-clamp-3'>
+>>>>>>> origin/merge-pr-25212
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>
                 {post.tags.map((tag) => (
-                  <span key={tag} className='bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs'>
+<span key={tag} `}>>>>>>>> origin/merge-pr-25212
                     {tag}
                   </span>
                 ))}
               </div>
-              <div className='text-purple-400 text-sm font-medium mt-4 group-hover:text-purple-300 transition-colors'>
+<div `}>>>>>>>> origin/merge-pr-25212
                 Read more →
               </div>
             </article>

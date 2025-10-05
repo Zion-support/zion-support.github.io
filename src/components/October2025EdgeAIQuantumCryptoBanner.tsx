@@ -4,8 +4,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
   return (
     <section className="bg-gradient-to-r from-cyan-900/30 via-purple-900/30 to-pink-900/30 border-y border-cyan-500/30 py-12">
       <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
+        <div className="max-w-7xl mx-auto" > {/* Header */}
           <div className="flex items-center justify-center gap-3 mb-6">
 
             <span className="text-lg md:text-xl font-bold text-cyan-400 uppercase tracking-wider">

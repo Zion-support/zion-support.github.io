@@ -116,8 +116,7 @@ const January2026RevolutionaryAIBanner = () => {
         <span className="bg-green-100/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-300/20">95% Efficiency</span>
         
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default January2026RevolutionaryAIBanner;

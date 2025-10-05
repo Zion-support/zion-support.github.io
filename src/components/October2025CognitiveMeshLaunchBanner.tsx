@@ -13,8 +13,7 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
     <section 
       className="relative bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 overflow-hidden"
       aria-label="Cognitive Mesh Platform Launch Announcement"
-    >
-      {/* Animated background elements - purely decorative */}
+     > {/* Animated background elements - purely decorative */}
       <div className="absolute inset-0 overflow-hidden opacity-20" aria-hidden="true">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"></div>
         <div 

@@ -1,12 +1,14 @@
 import Link from 'next/link';
-import { Clock, Users, Target, Zap, Globe } from 'lucide-react';
 
+=======
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Globe from 'lucide-react/dist/esm/icons/globe';
 import Users from 'lucide-react/dist/esm/icons/users';
 import Zap from 'lucide-react/dist/esm/icons/zap';
-import Target from 'lucide-react/dist/esm/icons/target';
+import Target from 'lucide-react/dist/esm/icons/target';>>>>>>> origin/merge-pr-25212
+import { Target, Users, Clock, Zap, User, Globe } from 'lucide-react';
+
 
 export const metadata = {
   title: 'AI Metaverse Enterprise Transformation 2026: The Future of Virtual Business Operations',

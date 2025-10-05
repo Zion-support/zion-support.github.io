@@ -1,13 +1,17 @@
 import { FileText } from 'lucide-react';
 import { Link } from "react-router-dom";
+import { FileText } from "lucide-react";
+
+import { FileText } from 'lucide-react';
+
+;
 
 
 ;
 
 const October2025DocumentAutomationBanner = () => {
   return (
-    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />

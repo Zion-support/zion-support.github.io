@@ -117,6 +117,5 @@ export default function January2027ContentAdvertisingBanner() {
           </a>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

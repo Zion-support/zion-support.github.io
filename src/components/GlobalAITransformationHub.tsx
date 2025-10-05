@@ -7,7 +7,10 @@ const GlobalAITransformationHub = () => {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -15,7 +18,10 @@ const GlobalAITransformationHub = () => {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -23,7 +29,10 @@ const GlobalAITransformationHub = () => {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -31,7 +40,10 @@ const GlobalAITransformationHub = () => {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }
@@ -61,7 +73,7 @@ const GlobalAITransformationHub = () => {
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {transformationAreas.map((area, index) => (
+        {transformationAreas.map((area, index) = > (
           <Link 
             key={index} 
             to={area.link}
@@ -84,7 +96,7 @@ const GlobalAITransformationHub = () => {
           <span className="text-xl font-bold text-green-400">Global Success Metrics</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {successMetrics.map((item, index) => (
+          {successMetrics.map((item, index) = > (
             <div key={index}>
               <div className="text-3xl font-bold text-white">{item.metric}</div>
               <div className="text-sm text-gray-300">{item.label}</div>

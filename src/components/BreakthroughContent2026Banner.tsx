@@ -7,8 +7,7 @@ const BreakthroughContent2026Banner: React.FC = () => {
         <div className="text-sm font-semibold mb-1">Featured 2026 Content</div>
         <div className="text-lg font-bold">Explore our latest 2026 breakthroughs</div>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default BreakthroughContent2026Banner;

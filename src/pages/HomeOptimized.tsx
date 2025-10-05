@@ -1,17 +1,8 @@
 
 
-
-
-
-
-
-
 ;
 import { ArrowRight, CheckCircle, Globe, Rocket, Shield, Star, Target, Users, Zap } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-
-
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";import { Link } from "react-router-dom";
 import { lazy, Suspense } from "react";
 import Header from "../components/Header";
 import BannerRotationManager from "../components/BannerRotationManager";

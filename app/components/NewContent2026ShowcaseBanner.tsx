@@ -1,9 +1,6 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, TrendingUp, Users } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight, Users, TrendingUp, User } from 'lucide-react';
 
-
-
-import { ArrowRight, Users, TrendingUp, Star } from 'lucide-react';
 
 export default function NewContent2026ShowcaseBanner() {
   return (
@@ -31,7 +28,7 @@ export default function NewContent2026ShowcaseBanner() {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Featured Article 1 */}
-          <ArrowRight href="/blog/ai-future-workforce-2026" className="group">
+          <Link href="/blog/ai-future-workforce-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -61,10 +58,10 @@ export default function NewContent2026ShowcaseBanner() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
-          </ArrowRight>
+          </Link>
 
           {/* Featured Article 2 */}
-          <ArrowRight href="/blog/ai-cybersecurity-2026" className="group">
+          <Link href="/blog/ai-cybersecurity-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-red-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -94,10 +91,10 @@ export default function NewContent2026ShowcaseBanner() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
-          </ArrowRight>
+          </Link>
 
           {/* Featured Case Study */}
-          <ArrowRight href="/case-studies/ai-finance-automation-success-2026" className="group">
+          <Link href="/case-studies/ai-finance-automation-success-2026" className="group">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:scale-105">
               <div className="flex items-center gap-2 mb-4">
                 <span className="bg-gradient-to-r from-green-400 to-teal-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
@@ -127,7 +124,7 @@ export default function NewContent2026ShowcaseBanner() {
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
-          </ArrowRight>
+          </Link>
         </div>
 
         {/* Stats Section */}
@@ -161,20 +158,20 @@ export default function NewContent2026ShowcaseBanner() {
               practical implementations, and proven business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight
+              <Link
                 href="/blog"
                 className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <TrendingUp className="w-5 h-5 mr-2" />
                 Explore All Content
-              </ArrowRight>
-              <ArrowRight
+              </Link>
+              <Link
                 href="/case-studies"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors inline-flex items-center"
               >
                 <Users className="w-5 h-5 mr-2" />
                 View Case Studies
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>
