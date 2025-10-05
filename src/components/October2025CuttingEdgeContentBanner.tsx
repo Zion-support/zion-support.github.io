@@ -4,9 +4,9 @@ const October2025CuttingEdgeContentBanner = () => {
   const featuredArticles = [
     {
       title: "Next-Gen Autonomous Orchestration — Self-Healing Systems at Scale",
-      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",",
+      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",
       category: "Autonomous Systems",
-      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",",
+      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
       gradient: "from-cyan-500 to-blue-600",
 <<<<<<< HEAD
 icon: '🚀',=======
@@ -16,11 +16,11 @@ icon: '🚀',=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
-    {",
+    {
       title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",
-      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",",
+      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",
       category: "LLM Engineering",
-      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",",
+      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
       gradient: "from-purple-500 to-pink-600",
 <<<<<<< HEAD
 icon: '🚀',=======
@@ -30,11 +30,11 @@ icon: '🚀',=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
-    {",
+    {
       title: "Real-Time AI Personalization at Scale — 100M+ Users",
-      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",",
+      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",
       category: "ML at Scale",
-      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",",
+      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
       gradient: "from-orange-500 to-red-600",
 <<<<<<< HEAD
 icon: '🚀',=======

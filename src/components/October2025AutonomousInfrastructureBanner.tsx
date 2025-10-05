@@ -94,11 +94,16 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-cyan-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Activity className="w-6 h-6 text-cyan-400"</div>
 =======
                 <Activity className="w-6 h-6 text-cyan-400" />
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                <Activity className="w-6 h-6 text-cyan-400" />
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
               <div>
                 <div className="font-semibold text-white mb-1">Predictive Incident Prevention</div>
                 <div className="text-sm text-gray-300">
@@ -265,12 +270,17 @@ const October2025AutonomousInfrastructureBanner = () => {
           >
             <div className="flex items-center justify-between mb-3">
 <<<<<<< HEAD
+<<<<<<< HEAD
               <Cpu className="w-8 h-8"</div>
 =======
               <Cpu className="w-8 h-8" />
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
             </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+              <Cpu className="w-8 h-8" />
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
             <div className="text-sm text-cyan-100">
               18-min read: Complete architecture, ML models, Python code examples, implementation roadmap

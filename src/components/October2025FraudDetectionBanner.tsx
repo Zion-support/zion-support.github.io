@@ -108,11 +108,16 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Eye className="w-6 h-6 text-purple-400"</div>
 =======
                 <Eye className="w-6 h-6 text-purple-400" />
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                <Eye className="w-6 h-6 text-purple-400" />
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
               <div>
                 <div className="font-semibold text-white mb-1">Behavioral Biometrics</div>
                 <div className="text-sm text-gray-300">
@@ -124,11 +129,16 @@ const October2025FraudDetectionBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Network className="w-6 h-6 text-blue-400"</div>
 =======
                 <Network className="w-6 h-6 text-blue-400" />
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                <Network className="w-6 h-6 text-blue-400" />
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
               <div>
                 <div className="font-semibold text-white mb-1">Graph Intelligence</div>
                 <div className="text-sm text-gray-300">

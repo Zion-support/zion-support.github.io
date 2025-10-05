@@ -41,11 +41,16 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-blue-500/20 rounded-xl">
 <<<<<<< HEAD
+<<<<<<< HEAD
                   <Building2 className="w-8 h-8 text-blue-400"</div>
 =======
                   <Building2 className="w-8 h-8 text-blue-400" />
                 </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                  <Building2 className="w-8 h-8 text-blue-400" />
+                </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
                 <div>
                   <h3 className="text-2xl font-bold text-white">Global Manufacturing Corp</h3>
                   <p className="text-gray-400">Fortune 500 • Manufacturing</p>

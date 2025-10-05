@@ -34,11 +34,16 @@ export default function October2025LatestAIBreakthroughsBanner() {
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-lg">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Server className="h-6 w-6 text-purple-400"</div>
 =======
                 <Server className="h-6 w-6 text-purple-400" />
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                <Server className="h-6 w-6 text-purple-400" />
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
               <span className="px-3 py-1 bg-purple-500/30 text-purple-300 rounded-full text-xs font-bold">
                 Infrastructure AI
               </span>
@@ -89,11 +94,16 @@ export default function October2025LatestAIBreakthroughsBanner() {
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-lg">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Search className="h-6 w-6 text-indigo-400"</div>
 =======
                 <Search className="h-6 w-6 text-indigo-400" />
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                <Search className="h-6 w-6 text-indigo-400" />
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
               <span className="px-3 py-1 bg-indigo-500/30 text-indigo-300 rounded-full text-xs font-bold">
                 Cognitive AI
               </span>

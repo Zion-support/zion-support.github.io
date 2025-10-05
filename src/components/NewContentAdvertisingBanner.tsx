@@ -99,6 +99,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
 
   const achievements = [
 <<<<<<< HEAD
+<<<<<<< HEAD
     { value: '500K+', label: 'Monthly Readers', icon: '🚀','
     { value: '98%', label: 'Customer Satisfaction', icon: '🚀','
     { value: '200+', label: 'Expert Articles', icon: '🚀',',
@@ -109,6 +110,12 @@ const NewContentAdvertisingBanner: React.FC = () => {
     { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
     { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+    { value: '500K+', label: 'Monthly Readers', icon: '🚀' },
+    { value: '98%', label: 'Customer Satisfaction', icon: '🚀' },
+    { value: '200+', label: 'Expert Articles', icon: '🚀' },
+    { value: '50+', label: 'Industry Awards', icon: '🚀' }
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
   ];
 
   return (

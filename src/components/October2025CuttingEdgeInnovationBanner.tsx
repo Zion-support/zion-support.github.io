@@ -7,9 +7,15 @@ export default function October2025CuttingEdgeInnovationBanner() {
 
         <div className="absolute inset-0" style={{
           backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), 
+<<<<<<< HEAD
                            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,",
       backgroundSize: '50px 50px'
 
+=======
+                           linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
+          backgroundSize: '50px 50px'
+        }}></div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

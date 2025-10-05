@@ -86,11 +86,16 @@ const October2025AdvancedAIInnovationsBanner = () => {
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl group-hover:bg-purple-500/30 transition-colors">
 <<<<<<< HEAD
+<<<<<<< HEAD
                 <Database className="w-8 h-8 text-purple-300"</div>
 =======
                 <Database className="w-8 h-8 text-purple-300" />
               </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-619a
+=======
+                <Database className="w-8 h-8 text-purple-300" />
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">Data Engineering</span>
               </div>
