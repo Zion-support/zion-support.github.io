@@ -1,8 +1,8 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ErrorBoundary from './components/ErrorBoundary';
-import SEO from './components/SEO';
-import Loading from './components/Loading';
+import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+import EnhancedSEO from './components/EnhancedSEO';
+import { LoadingPage } from './components/EnhancedLoading';
 import performanceOptimizer from './utils/performance-optimizer';
 import errorHandler from './utils/advanced-error-handler';
 import securityEnhancer from './utils/security-enhancer';
@@ -10,6 +10,7 @@ import seoOptimizer from './utils/seo-optimizer';
 import cacheSystem from './utils/advanced-caching';
 import analyticsOptimizer from './utils/analytics-optimizer';
 import SystemMonitor from './components/SystemMonitor';
+import performanceMonitor from './utils/advanced-performance-monitor';
 import './index.css';
 
 // Lazy load pages for better performance
@@ -29,6 +30,7 @@ function App() {
       try {
         // Initialize performance monitoring
         performanceOptimizer.startPerformanceMonitoring();
+        performanceMonitor.startMonitoring();
         
         // Initialize security enhancements
         securityEnhancer.setupSecurityMonitoring();
@@ -63,14 +65,15 @@ function App() {
     // Cleanup on unmount
     return () => {
       performanceOptimizer.cleanup();
+      performanceMonitor.stopMonitoring();
     };
   }, []);
 
   return (
-    <ErrorBoundary>
-      <SEO />
+    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
+      <EnhancedSEO />
       <Router>
-        <Suspense fallback={<Loading />}>
+        <Suspense fallback={<LoadingPage />}>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
@@ -84,7 +87,7 @@ function App() {
         </Suspense>
       </Router>
       <SystemMonitor />
-    </ErrorBoundary>
+    </EnhancedErrorBoundary>
   );
 }
 
