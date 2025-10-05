@@ -1,1 +1,57 @@
-import React from "react"; import {LinkNavLink }from "reac, t-route, r-do, m"; const navLinkClass = ({isActive }: {isActive: boolean }) => isActive; ? "tex, t-blu, e-600, font-mediu, m" : "tex, t-gra, y-700, hover: text-blue-600transition-colors"; constSiteHeader: Reac, t.FC = () => {return (<headerclassName="bg-whiteborder-bborder-gray-200stickytop-0 z-50" > <divclassName="ma, x-w-7xlmx-autopx-4sm:px-6lg:px-8" > <divclassName="h-16flexitems-centerjustify-between" > <Linkt o="/" className="flexitems-centergap-2"> <spanclassName="text-2xl" >🚀</span> <spanclassName="tex, t-xlfont-boldtext-gray-900" >ZionTechGroup</spa, n> </Link> <navclassName="hiddenm d:flexitems-centergap-6" aria-label="Mainnavigation"> <NavLinkt o="/services" classNam, e= {navLinkClas, s }> Services; </NavLink> <NavLinkt o = "/solutions" classNam, e= {navLinkClas, s }> Solutions; </NavLink> <NavLinkt o = "/marketplace" classNam, e= {navLinkClas, s }> Marketplace; </NavLink> <NavLinkt o = "/cas, e-studies" classNam, e= {navLinkClass }> CaseStudies; </NavLink> <NavLinkt o = "/blog" classNam, e= {navLinkClas, s }> Blog; </NavLink> <NavLinkt o = "/resources" classNam, e= {navLinkClas, s }> Resources; </NavLink> <NavLinkt o = "/about" classNam, e= {navLinkClas, s }> About; </NavLink> <NavLinkt o = "/careers" classNam, e= {navLinkClas, s }> Careers; </NavLink> <Linkt o = "/contact" className="bg-blu, e-600, text-whitep, x-4, py-2, rounded-mdhover:bg-blue-700transition-colors"> GetStarted; </Lin, k> </na, v> </di, v> </di, v> </heade, r>) ; }; export default SiteHeader;
+import React from "react";
+import { Link, NavLink } from "react-router-dom";
+
+const navLinkClass = ({ isActive }: { isActive: boolean }) =>
+  isActive
+    ? "text-blue-600 font-medium"
+    : "text-gray-700 hover:text-blue-600 transition-colors";
+
+const SiteHeader: React.FC = () => {
+  return (
+    <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="h-16 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-2">
+            <span className="text-2xl">🚀</span>
+            <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
+          </Link>
+          
+          <nav className="hidden md:flex items-center gap-6" aria-label="Main navigation">
+            <NavLink to="/services" className={navLinkClass}>
+              Services
+            </NavLink>
+            <NavLink to="/solutions" className={navLinkClass}>
+              Solutions
+            </NavLink>
+            <NavLink to="/marketplace" className={navLinkClass}>
+              Marketplace
+            </NavLink>
+            <NavLink to="/case-studies" className={navLinkClass}>
+              Case Studies
+            </NavLink>
+            <NavLink to="/blog" className={navLinkClass}>
+              Blog
+            </NavLink>
+            <NavLink to="/resources" className={navLinkClass}>
+              Resources
+            </NavLink>
+            <NavLink to="/about" className={navLinkClass}>
+              About
+            </NavLink>
+            <NavLink to="/careers" className={navLinkClass}>
+              Careers
+            </NavLink>
+            <Link
+              to="/contact"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+            >
+              Get Started
+            </Link>
+          </nav>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default SiteHeader;
