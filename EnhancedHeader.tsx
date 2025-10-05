@@ -1,44 +1,22 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { Menu, X } from 'lucide-react'
-=======
-<<<<<<< HEAD
-import { Menu, X } from 'lucide-react'
-=======
-import {Menu, X } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
 const EnhancedHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const navigationItems = [
     { name: 'Home', href: '/' },
-<<<<<<< HEAD
     { name: 'Services', href: '/services' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
-=======
-<<<<<<< HEAD
-    { name: 'Services', href: '/services' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-=======
-    {name: 'Services', href: '/services' },
-    {name: 'About', href: '/about' },
-    {name: 'Contact', href: '/contact' },
->>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
   ];
   const closeMobileMenu = () => {
     setIsOpen(false);
-    setActiveDropdown(null);
   };
   return (
     <header className="bg-white shadow-lg">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link href="/" className="text-2xl font-bold text-blue-600">
+          <Link to="/" className="text-2xl font-bold text-blue-600">
             Zion Tech Group
           </Link>
           {/* Desktop Navigation */}
@@ -46,7 +24,7 @@ const EnhancedHeader: React.FC = () => {
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-gray-700 hover:text-blue-600 transition-colors"
               >
                 {item.name}
@@ -67,7 +45,7 @@ const EnhancedHeader: React.FC = () => {
             {navigationItems.map((item) => (
               <div key={item.name}>
                 <Link
-                  href={item.href}
+                  to={item.href}
                   className="block text-gray-700 hover:text-blue-600 py-2"
                   onClick={closeMobileMenu}
                 >

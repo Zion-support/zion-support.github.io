@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-=======
-import React, {useState, useMemo } from 'react'
-import { motion  } from 'framer-motion'
-import { Link  } from 'react-router-dom'
->>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
 import {CheckCircle,
   Star,
   Zap,
@@ -246,8 +240,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0} y: 20 }}
-            whileInView={{ opacity: 1} y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
           >
@@ -257,9 +251,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             {marketInsights.map((insight, index) => (
               <motion.div
                 key={insight.title}
-                initial={{ opacity: 0} y: 20 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1} y: 0 }}
-                transition={{ duration: 0.6} delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
@@ -278,8 +272,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       <section className="py-16 bg-slate-900/50">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0} y: 20 }}
-            whileInView={{ opacity: 1} y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
           >
@@ -289,9 +283,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             {pricingTiers.map((tier, index) => (
               <motion.div
                 key={tier.name}
-                initial={{ opacity: 0} y: 20 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1} y: 0 }}
-                transition={{ duration: 0.6} delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
                 className={`relative bg-slate-900/60 backdrop-blur border rounded-2xl p-8 ${
                   tier.popular
                     ? 'border-cyan-400/40 shadow-2xl shadow-cyan-400/20'
@@ -341,8 +335,8 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
       <section className="py-16">
         <div className="container mx-auto px-4">
           <motion.h2
-            initial={{ opacity: 0} y: 20 }}
-            whileInView={{ opacity: 1} y: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-3xl font-bold text-center mb-12"
           >
@@ -353,9 +347,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {categories.map(category  => (
+              {categories.map(category => (
                 <option key={category} value={category} className="bg-slate-800 text-white">
                   {category === 'all' ? 'All Categories' : category}
                 </option>
@@ -364,9 +358,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
             <select
               value={selectedPricingModel}
               onChange={(e) => setSelectedPricingModel(e.target.value)}
-              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus: anyborder-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
+              className="px-4 py-2 rounded-lg bg-slate-800 border border-cyan-400/20 focus:border-cyan-400 focus:ring-2 focus:ring-cyan-400/20 outline-none text-white"
             >
-              {pricingModels.map(model  => (
+              {pricingModels.map(model => (
                 <option key={model} value={model} className="bg-slate-800 text-white">
                   {model === 'all' ? 'All Pricing Models' : model.charAt(0).toUpperCase() + model.slice(1)}
                 </option>
@@ -381,9 +375,9 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               return (
                 <motion.div
                   key={service.id}
-                  initial={{ opacity: 0} y: 20 }}
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1} y: 0 }}
-                  transition={{ duration: 0.6} delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="group bg-slate-900/60 backdrop-blur border border-cyan-400/15 hover:border-cyan-400/40 transition-all duration-300 rounded-2xl p-6 hover:shadow-2xl hover:shadow-cyan-400/10"
                 >
                   {/* Header */}

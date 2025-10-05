@@ -1,30 +1,12 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
 import { Home, User, Settings, Menu, X } from 'lucide-react'
-=======
-<<<<<<< HEAD
-import { Home, User, Settings, Menu, X } from 'lucide-react'
-=======
-import {Home, User, Settings, Menu, X } from 'lucide-react'
->>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
 const SidebarNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
     { name: 'Home', href: '/', icon: Home },
-<<<<<<< HEAD
     { name: 'Profile', href: '/profile', icon: User },
     { name: 'Settings', href: '/settings', icon: Settings }
-=======
-<<<<<<< HEAD
-    { name: 'Profile', href: '/profile', icon: User },
-    { name: 'Settings', href: '/settings', icon: Settings }
-=======
-    {name: 'Profile', href: '/profile', icon: User },
-    {name: 'Settings', href: '/settings', icon: Settings }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a8c
->>>>>>> cursor/fix-errors-and-merge-to-main-2368
   ];
   return (
     <div className="flex h-screen bg-gray-100">
@@ -42,7 +24,7 @@ const SidebarNavigation: React.FC = () => {
           {navigationItems.map((item) => (
             <Link
               key={item.name}
-              href={item.href}
+              to={item.href}
               className={`flex items-center p-3 rounded-lg hover:bg-gray-100 transition-colors mb-2 ${
                 isOpen ? 'justify-start' : 'justify-center'
               }`}
