@@ -6,7 +6,10 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",",
       metrics: [
@@ -19,7 +22,10 @@ const SuccessStoriesShowcase: React.FC = () => {
     {",
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",",
       metrics: [
@@ -32,7 +38,10 @@ const SuccessStoriesShowcase: React.FC = () => {
     {",
       company: "FinanceFirst Bank",
       industry: "Financial Services",
+icon: '🚀',=======
       icon: '🚀',
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
+>>>>>>> origin/merge-pr-25212
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",",
       metrics: [
@@ -57,7 +66,7 @@ const SuccessStoriesShowcase: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
-          {stories.map((story, index) => (
+          {stories.map((story, index) = > (
             <div
 
 key={index}
@@ -79,7 +88,7 @@ key={index}
                 <p className="text-gray-600 mb-6">{story.description}</p>
                 
                 <div className="space-y-2 mb-6">
-                  {story.metrics.map((metric, idx) => (
+                  {story.metrics.map((metric, idx) = > (
                     <div key={idx} className="flex items-center gap-2">
                       <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                       <span className="text-sm text-gray-700">{metric}</span>

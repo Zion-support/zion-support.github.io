@@ -4,8 +4,7 @@ import { Link } from 'react-router-dom';
 const CognitiveOrchestrationMegaBanner: React.FC = () => {
   return (
     <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 px-4 mb-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Announcement Badge */}
+      <div className="max-w-7xl mx-auto" > {/* Announcement Badge */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full animate-pulse">
 

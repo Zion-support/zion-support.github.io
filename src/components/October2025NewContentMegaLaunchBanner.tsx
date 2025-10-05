@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const October2025NewContentMegaLaunchBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden">
-      {/* Animated background effect */}
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden" > {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 -left-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 -right-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse delay-1000"></div>

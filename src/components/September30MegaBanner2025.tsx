@@ -123,7 +123,7 @@ const September30MegaBanner2025 = () => {
 
         {/* Article Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          {breakthroughArticles.map((article, index) => (
+          {breakthroughArticles.map((article, index) = > (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 30 }}
@@ -132,8 +132,7 @@ const September30MegaBanner2025 = () => {
               whileHover={{ scale: 1.05, translateY: -8 }}
               className="group relative"
             >
-              <Link to={`/blog/${article.slug}`}>
-                <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 shadow-xl hover:shadow-3xl`}>
+              <Link to={`/blog/${article.slug}`} > <div className={`relative bg-gradient-to-br ${article.gradient} rounded-2xl p-6 h-full border-2 border-white/30 hover:border-white/60 transition-all duration-300 shadow-xl hover:shadow-3xl`}>
                   {/* Icon Badge */}
                   <div className="absolute -top-4 -right-4 w-14 h-14 bg-white rounded-full flex items-center justify-center text-3xl shadow-2xl group-hover:rotate-12 group-hover:scale-110 transition-all duration-300">
                     {article.icon}
@@ -265,7 +264,7 @@ const September30MegaBanner2025 = () => {
               "95%+ Accuracy",
               "10,000x Performance",
               "Enterprise Scale"
-            ].map((topic) => (
+            ].map((topic) = > (
               <span key={topic} className="px-5 py-2.5 bg-white/15 backdrop-blur-md rounded-full text-sm font-bold text-white border-2 border-white/30 hover:bg-white/25 hover:scale-105 transition-all cursor-pointer shadow-lg">
                 {topic}
               </span>

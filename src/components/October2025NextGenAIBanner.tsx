@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const October2025NextGenAIBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl">
-      {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-cyan-900 via-blue-900 to-purple-900 py-20 px-6 rounded-3xl mb-12 shadow-2xl" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>

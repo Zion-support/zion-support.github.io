@@ -52,7 +52,7 @@ const October2025LatestContentBanner = () => {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {articles.map((article, idx) => {
+          {articles.map((article, idx) = > {
             const IconComponent = article.icon;
             return (
               <Link

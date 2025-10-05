@@ -71,6 +71,5 @@ export default function October2025SelfHealingSpotlightBanner() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

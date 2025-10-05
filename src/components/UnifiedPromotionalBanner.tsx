@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Sparkles, Zap, Rocket, Star, ArrowRight } from 'lucide-react';
 
 export interface FeaturedItem {
   title: string;
@@ -104,8 +105,7 @@ className={`
             {date && (
               <span className="text-sm text-gray-300 font-medium">{date}</span>
             )}
-          </div>
-        )}
+          </div>)}
 
         {/* Title */}
         <h2 className={`
@@ -117,11 +117,9 @@ className={`
         `}>
           {title}
         </h2>
-
+        
         {/* Description */}
-        <p className={`
-          text-gray-200 mb-6
-          ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
+        <p className={`text-gray-200 mb-6 ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
             variant === 'compact' ? 'text-sm' : 
             'text-base md:text-lg'}
         `}>
@@ -130,9 +128,7 @@ className={`
 
         {/* Featured Items */}
         {visibleItems.length > 0 && (
-          <div className={`
-            grid gap-4 mb-6
-            ${variant === 'mega' ? 'md:grid-cols-3' : 
+          <div className={`grid gap-4 mb-6 ${variant === 'mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
               'md:grid-cols-1'}
           `}>
@@ -155,7 +151,6 @@ className={`
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
-
                 </div>
               </Link>
             ))}

@@ -138,11 +138,9 @@ const October2025FeaturedContentBanner = () => {
                     <span className="text-sm text-gray-400">Published October 1, 2025</span>
                     <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
                       Read Full Article
-
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Effect Overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
               </Link>

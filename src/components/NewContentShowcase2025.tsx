@@ -44,7 +44,7 @@ const NewContentShowcase2025: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((item, index) => (
+          {highlights.map((item, index) = > (
             <Link
               key={index}
               to={item.link}

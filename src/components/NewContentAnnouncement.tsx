@@ -25,8 +25,7 @@ const NewContentAnnouncement: React.FC = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default NewContentAnnouncement;

@@ -21,8 +21,7 @@ export default function January2027NewContentShowcaseBanner() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-          {/* Neuromorphic Edge Computing */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12" > {/* Neuromorphic Edge Computing */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-green-500/50 transition-all duration-300 group">
             <div className="text-center mb-6">
               <div className="text-6xl mb-4 group-hover:scale-110 transition-transform duration-300">🧠</div>

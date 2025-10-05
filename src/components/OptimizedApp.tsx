@@ -27,9 +27,7 @@ const ErrorFallback: React.FC<{ error: Error;
           <summary className='cursor-pointer text-sm text-gray-500'>
             Error details
           </summary>
-          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>
-            {error.message}
-          </pre>
+          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>{error.message}</pre>
         </details>
       )}
       <button
@@ -113,7 +111,7 @@ const MainContent: React.FC = () => {
               </div>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🔄</div>
-                
+                <h3 className='text-xl font-bold mb-3'>Automation</h3>
                 <p className='text-gray-600'>
                   Complete automation suites for enterprise operations and
                   workflows.

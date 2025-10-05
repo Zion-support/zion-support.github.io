@@ -58,7 +58,7 @@ const UltimateAIRevolutionShowcase2025 = () => {
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {revolutionaryFeatures.map((feature, index) => (
+        {revolutionaryFeatures.map((feature, index) = > (
           <div key={index} className={`bg-gradient-to-br ${feature.color} rounded-xl p-6 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}>
             <div className="text-4xl mb-3">{feature.icon}</div>
             <h3 className="text-xl font-bold mb-3">{feature.title}</h3>

@@ -184,7 +184,7 @@ const LatestContentBanner2025: React.FC = () => {
 
         {/* Featured highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {latestArticles.map((article, index) => (
+          {latestArticles.map((article, index) = > (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 20 }}
@@ -206,8 +206,7 @@ const LatestContentBanner2025: React.FC = () => {
                     {article.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
 
-                      </div>
-                    )}
+                      </div > )}
                     <span className="px-3 py-1.5 rounded-full bg-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
                       NEW
                     </span>
