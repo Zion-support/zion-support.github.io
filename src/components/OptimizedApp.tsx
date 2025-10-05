@@ -33,7 +33,7 @@ const ErrorFallback: React.FC<{
           </pre>
         </details>
       )}
-      <button
+      <button>
         onClick={resetErrorBoundary}
         className='mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
       >
@@ -55,7 +55,7 @@ const MainContent: React.FC = () => {
   }, []);
 
   if (!isLoaded) {
-    return <LoadingSpinner />;
+    return <LoadingSpinner;
   }
 
   return (
@@ -94,7 +94,7 @@ const MainContent: React.FC = () => {
               Discover our latest innovations and breakthrough technologies
             </p>
           </div>
-          <Suspense fallback={<LoadingSpinner />}>
+          <Suspense fallback={<LoadingSpinner}>
             <div className='grid md:grid-cols-3 gap-8'>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🤖</div>
@@ -141,8 +141,8 @@ const OptimizedApp: React.FC = () => {
         }
       }}
     >
-      <Suspense fallback={<LoadingSpinner />}>
-        <MainContent />
+      <Suspense fallback={<LoadingSpinner}>
+        <MainContent
       </Suspense>
     </ErrorBoundary>
   );

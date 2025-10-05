@@ -50,7 +50,7 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   if (!isVisible) return null;
 
   return (
-    <div style={{
+    <div style={{>
       position: 'fixed',
       top: '10px',
       right: '10px',

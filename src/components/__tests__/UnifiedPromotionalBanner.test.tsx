@@ -167,7 +167,7 @@ describe('UnifiedPromotionalBanner', () => {
             {...defaultProps} 
             featuredItems={featuredItems} 
             showCount={2}
-          />
+
         </RouterWrapper>
       );
 
@@ -183,7 +183,7 @@ describe('UnifiedPromotionalBanner', () => {
             {...defaultProps} 
             featuredItems={featuredItems} 
             showCount={2}
-          />
+
         </RouterWrapper>
       );
 
@@ -239,7 +239,7 @@ describe('UnifiedPromotionalBanner', () => {
             {...defaultProps} 
             badge="NEW" 
             date="October 1, 2025" 
-          />
+
         </RouterWrapper>
       );
 
@@ -367,7 +367,7 @@ describe('UnifiedPromotionalBanner', () => {
             {...defaultProps} 
             featuredItems={featuredItems} 
             showCount={10}
-          />
+
         </RouterWrapper>
       );
 

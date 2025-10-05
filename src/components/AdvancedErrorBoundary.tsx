@@ -43,7 +43,7 @@ export class AdvancedErrorBoundary extends Component<Props, State> {
           <h2>Something went wrong.</h2>
           <details style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
-            <br />
+            <br
             {this.state.errorInfo?.componentStack}
           </details>
         </div>

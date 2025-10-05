@@ -48,6 +48,7 @@ const SEO: React.FC<SEOProps> = ({
         name='robots'
         content={noIndex ? 'noindex,nofollow' : 'index,follow'}
       />
+
       <meta name='googlebot' content='index,follow' />
 
       {/* Open Graph */}

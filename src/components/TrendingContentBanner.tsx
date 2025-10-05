@@ -115,7 +115,7 @@ const TrendingContentBanner: React.FC = () => {
         <div className="flex-1">
           <div className="flex items-center gap-3 mb-3">
             <div className="flex items-center gap-2">
-               />
+
               <span className="text-sm font-semibold text-zion-cyan">TRENDING NOW</span>
             </div>
             <div className={`px-2 py-1 rounded-full text-xs font-bold ${getBadgeColor(currentItem.badge)} animate-bounce`}>
@@ -149,11 +149,11 @@ const TrendingContentBanner: React.FC = () => {
                   <span>{currentItem.views} views</span>
                 </div>
                 <div className="flex items-center gap-1">
-                   />
+
                   <span>{currentItem.readTime} read</span>
                 </div>
                 <div className="flex items-center gap-1">
-                   />
+
                   <span>4.9/5</span>
                 </div>
               </div>
@@ -166,15 +166,15 @@ const TrendingContentBanner: React.FC = () => {
             to={currentItem.link}
             className="bg-zion-cyan text-white hover:bg-zion-blue-light px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2 group/btn"
           >
-             />
+
             Read Now
-             />
+
           </Link>
 
           {/* Navigation dots */}
           <div className="flex gap-2">
             {trendingItems.map((_, index) => (
-              <button
+              <button>
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
@@ -182,7 +182,7 @@ const TrendingContentBanner: React.FC = () => {
                     ? 'bg-zion-cyan scale-125' 
                     : 'bg-white/30 hover:bg-white/50'
                 }`}
-              />
+
             ))}
           </div>
         </div>
@@ -190,10 +190,10 @@ const TrendingContentBanner: React.FC = () => {
 
       {/* Progress bar */}
       <div className="mt-4 w-full bg-white/10 rounded-full h-1">
-        <div 
+        <div>
           className="bg-gradient-to-r from-zion-cyan to-zion-blue-light h-1 rounded-full transition-all duration-100 ease-linear"
           style={{ width: `${((currentIndex + 1) / trendingItems.length) * 100}%` }}
-        />
+
       </div>
     </div>
   );

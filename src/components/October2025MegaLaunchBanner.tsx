@@ -93,9 +93,9 @@ const October2025MegaLaunchBanner = () => {
             className="inline-flex items-center gap-3 mb-6"
           >
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 rounded-full shadow-lg">
-               />
+
               <span className="text-white font-bold text-sm md:text-base">🎉 OCTOBER 2025 MEGA LAUNCH 🎉</span>
-               />
+
             </div>
           </motion.div>
 
@@ -157,7 +157,7 @@ const October2025MegaLaunchBanner = () => {
                   {/* Read More Arrow */}
                   <div className="mt-4 flex items-center gap-2 text-white font-semibold text-sm group-hover:gap-3 transition-all">
                     <span>Read Full Article</span>
-                     />
+
                   </div>
                 </div>
               </Link>
@@ -195,7 +195,7 @@ const October2025MegaLaunchBanner = () => {
         <div className="grid md:grid-cols-4 gap-6 mb-8">
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-purple-500/30 flex items-center justify-center">
-               />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Production-Ready</h4>
@@ -205,7 +205,7 @@ const October2025MegaLaunchBanner = () => {
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-pink-500/30 flex items-center justify-center">
-               />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Measurable ROI</h4>
@@ -215,7 +215,7 @@ const October2025MegaLaunchBanner = () => {
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-cyan-500/30 flex items-center justify-center">
-               />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Expert Insights</h4>
@@ -225,7 +225,7 @@ const October2025MegaLaunchBanner = () => {
           
           <div className="flex flex-col items-center text-center gap-3 bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 transition-all">
             <div className="w-12 h-12 rounded-full bg-green-500/30 flex items-center justify-center">
-               />
+
             </div>
             <div>
               <h4 className="font-bold text-white mb-1">Cutting-Edge</h4>
@@ -240,9 +240,9 @@ const October2025MegaLaunchBanner = () => {
             to="/blog"
             className="group bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 hover:from-pink-400 hover:via-purple-400 hover:to-blue-400 text-white px-12 py-5 rounded-full font-bold text-lg shadow-2xl hover:shadow-pink-500/50 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-3"
           >
-             />
+
             <span>Explore All 7 Articles Now</span>
-             />
+
           </Link>
           
           <Link
@@ -257,9 +257,9 @@ const October2025MegaLaunchBanner = () => {
         {/* Featured Topics */}
         <div className="pt-6 border-t border-white/20">
           <p className="text-center text-purple-200 text-sm mb-4 font-bold flex items-center justify-center gap-2">
-             />
+
             FEATURED TOPICS & TECHNOLOGIES
-             />
+
           </p>
           <div className="flex flex-wrap gap-2 justify-center">
             {[
@@ -277,7 +277,7 @@ const October2025MegaLaunchBanner = () => {
               "GDPR Compliant",
               "Production-Ready"
             ].map((topic) => (
-              <span 
+              <span>
                 key={topic} 
                 className="px-4 py-2 bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-full text-sm text-white border border-white/30 hover:border-white/50 hover:bg-white/20 transition-all cursor-pointer"
               >

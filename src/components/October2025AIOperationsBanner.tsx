@@ -93,7 +93,7 @@ const October2025AIOperationsBanner = () => {
                   {/* CTA */}
                   <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
-                     />
+
                   </div>
                 </div>
               </Link>
@@ -109,7 +109,7 @@ const October2025AIOperationsBanner = () => {
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group"
             >
               <span>Explore All AI Insights</span>
-               />
+
             </Link>
             <Link
               to="/contact"

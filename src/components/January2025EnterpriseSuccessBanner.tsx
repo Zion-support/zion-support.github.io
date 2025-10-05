@@ -12,7 +12,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-blue-500/20 text-blue-400 px-6 py-3 rounded-full text-sm font-medium mb-8">
-             />
+
             <span>ENTERPRISE SUCCESS STORIES</span>
           </div>
           
@@ -20,7 +20,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
               Real Results
             </span>
-            <br />
+            <br
             <span className="text-white">From Real Companies</span>
           </h2>
           
@@ -67,7 +67,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
                 className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 font-medium transition-colors"
               >
                 Read Full Case Study
-                 />
+
               </Link>
             </div>
           </div>
@@ -78,7 +78,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-emerald-500/20 rounded-xl">
-                   />
+
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Global Financial Services</h3>
@@ -107,7 +107,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
                 className="inline-flex items-center gap-2 text-emerald-400 hover:text-emerald-300 font-medium transition-colors"
               >
                 Read Full Case Study
-                 />
+
               </Link>
             </div>
           </div>
@@ -119,7 +119,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-400/50 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-purple-500/20 rounded-lg">
-                 />
+
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Regional Healthcare</h4>
@@ -132,7 +132,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-purple-400 font-bold">$1.5B Value</span>
               <Link to="/case-studies/healthcare-ai-diagnostic-system" className="text-purple-400 hover:text-purple-300">
-                 />
+
               </Link>
             </div>
           </div>
@@ -141,7 +141,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-400/50 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-blue-500/20 rounded-lg">
-                 />
+
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Global Retail Corp</h4>
@@ -154,7 +154,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-blue-400 font-bold">2,800% ROI</span>
               <Link to="/case-studies/retail-supply-chain-optimization" className="text-blue-400 hover:text-blue-300">
-                 />
+
               </Link>
             </div>
           </div>
@@ -163,7 +163,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-emerald-400/50 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-emerald-500/20 rounded-lg">
-                 />
+
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white">Energy Utility</h4>
@@ -176,7 +176,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <div className="flex items-center justify-between">
               <span className="text-emerald-400 font-bold">1,600% ROI</span>
               <Link to="/case-studies/energy-sector-smart-grid" className="text-emerald-400 hover:text-emerald-300">
-                 />
+
               </Link>
             </div>
           </div>
@@ -185,7 +185,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
         {/* Call to Action */}
         <div className="text-center bg-white/5 backdrop-blur-lg rounded-3xl p-12 border border-white/10">
           <div className="flex items-center justify-center gap-2 mb-6">
-             />
+
             <h3 className="text-3xl font-bold text-white">Ready to Transform Your Enterprise?</h3>
           </div>
           
@@ -199,7 +199,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
               to="/contact"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-full font-semibold hover:from-blue-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
             >
-               />
+
               Start Your AI Transformation
             </Link>
             <Link
@@ -207,7 +207,7 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
               View All Success Stories
-               />
+
             </Link>
           </div>
         </div>

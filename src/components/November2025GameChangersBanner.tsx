@@ -8,11 +8,11 @@ const November2025GameChangersBanner = () => {
           {/* Header */}
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-3 bg-yellow-500/20 border border-yellow-500/40 rounded-full px-6 py-3 mb-6">
-               />
+
               <span className="text-yellow-300 font-bold text-lg tracking-wide">
                 🚨 BREAKING: NOVEMBER 2025 GAME-CHANGERS JUST RELEASED! 🚨
               </span>
-               />
+
             </div>
             
             <h2 className="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-200 to-purple-200 mb-4 leading-tight">
@@ -31,7 +31,7 @@ const November2025GameChangersBanner = () => {
             <div className="bg-gradient-to-br from-blue-900/50 to-indigo-900/50 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-6 hover:border-blue-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/20 group">
               <div className="flex items-start gap-3 mb-4">
                 <div className="bg-blue-500/20 p-3 rounded-xl group-hover:bg-blue-500/30 transition-colors">
-                   />
+
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-bold text-blue-400 uppercase tracking-wider mb-2">
@@ -73,7 +73,7 @@ const November2025GameChangersBanner = () => {
                 className="inline-flex items-center gap-2 text-blue-300 hover:text-white font-semibold group/link transition-colors"
               >
                 <span>Read Full Guide</span>
-                 />
+
               </Link>
             </div>
 
@@ -81,7 +81,7 @@ const November2025GameChangersBanner = () => {
             <div className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 backdrop-blur-sm border border-purple-500/30 rounded-2xl p-6 hover:border-purple-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-purple-500/20 group">
               <div className="flex items-start gap-3 mb-4">
                 <div className="bg-purple-500/20 p-3 rounded-xl group-hover:bg-purple-500/30 transition-colors">
-                   />
+
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-bold text-purple-400 uppercase tracking-wider mb-2">
@@ -123,7 +123,7 @@ const November2025GameChangersBanner = () => {
                 className="inline-flex items-center gap-2 text-purple-300 hover:text-white font-semibold group/link transition-colors"
               >
                 <span>Discover Neural Commerce</span>
-                 />
+
               </Link>
             </div>
 
@@ -131,7 +131,7 @@ const November2025GameChangersBanner = () => {
             <div className="bg-gradient-to-br from-red-900/50 to-orange-900/50 backdrop-blur-sm border border-red-500/30 rounded-2xl p-6 hover:border-red-400/60 transition-all duration-300 hover:shadow-2xl hover:shadow-red-500/20 group">
               <div className="flex items-start gap-3 mb-4">
                 <div className="bg-red-500/20 p-3 rounded-xl group-hover:bg-red-500/30 transition-colors">
-                   />
+
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-bold text-red-400 uppercase tracking-wider mb-2">
@@ -173,7 +173,7 @@ const November2025GameChangersBanner = () => {
                 className="inline-flex items-center gap-2 text-red-300 hover:text-white font-semibold group/link transition-colors"
               >
                 <span>Secure Your Future</span>
-                 />
+
               </Link>
             </div>
           </div>
@@ -184,9 +184,9 @@ const November2025GameChangersBanner = () => {
               to="/blog"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 hover:from-blue-500 hover:via-purple-500 hover:to-pink-500 text-white font-bold px-10 py-5 rounded-2xl shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 transform hover:scale-105 text-lg"
             >
-               />
+
               <span>Explore All November 2025 Breakthroughs</span>
-               />
+
             </Link>
             
             <p className="mt-6 text-blue-300 text-sm">

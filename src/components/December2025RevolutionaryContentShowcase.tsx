@@ -21,7 +21,7 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-6 py-3 rounded-full text-sm font-bold mb-6"
           >
-             />
+
             🌟🌟🌟 DECEMBER 2025 REVOLUTIONARY CONTENT SHOWCASE - ABSOLUTE #1 PRIORITY! 🌟🌟🌟
           </motion.div>
           
@@ -55,7 +55,7 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-2xl">
-                 />
+
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-cyan-400">Quantum AI Transcendence</h3>
@@ -84,22 +84,22 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
             
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">True AI Consciousness</span>
               </div>
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Infinite Processing Power</span>
               </div>
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Universal Intelligence</span>
               </div>
             </div>
             
             <button className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:scale-105">
               Explore Transcendence
-               />
+
             </button>
           </motion.div>
 
@@ -112,7 +112,7 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl">
-                 />
+
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-blue-400">Enterprise Consciousness</h3>
@@ -141,22 +141,22 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
             
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">True Business Consciousness</span>
               </div>
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Autonomous Self-Governance</span>
               </div>
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Conscious Optimization</span>
               </div>
             </div>
             
             <button className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:scale-105">
               Discover Consciousness
-               />
+
             </button>
           </motion.div>
 
@@ -169,7 +169,7 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-3 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl">
-                 />
+
               </div>
               <div>
                 <h3 className="text-2xl font-bold text-emerald-400">Neural-Quantum Superintelligence</h3>
@@ -198,22 +198,22 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
             
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Beyond-Human Intelligence</span>
               </div>
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Universal Problem-Solving</span>
               </div>
               <div className="flex items-center gap-3">
-                 />
+
                 <span className="text-gray-300">Superintelligent Innovation</span>
               </div>
             </div>
             
             <button className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-500 hover:to-emerald-500 text-white font-bold text-lg py-4 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 transform hover:scale-105">
               Unlock Superintelligence
-               />
+
             </button>
           </motion.div>
         </div>
@@ -261,9 +261,9 @@ const December2025RevolutionaryContentShowcase: React.FC = () => {
           className="text-center mt-16"
         >
           <button className="bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-400 hover:to-orange-400 text-black font-bold text-xl px-12 py-6 rounded-2xl transition-all duration-300 transform hover:scale-105 flex items-center gap-4 mx-auto shadow-2xl">
-             />
+
             Explore All Revolutionary Breakthroughs
-             />
+
           </button>
         </motion.div>
       </div>

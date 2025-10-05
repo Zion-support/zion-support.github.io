@@ -21,13 +21,13 @@ const LatestInsights: React.FC = () => {
             className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-             />
+
           </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
-            <div
+            <div>
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
@@ -56,7 +56,7 @@ const LatestInsights: React.FC = () => {
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-                 />
+
               </Link>
             </div>
           ))}
@@ -68,7 +68,7 @@ const LatestInsights: React.FC = () => {
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-             />
+
           </Link>
         </div>
       </div>

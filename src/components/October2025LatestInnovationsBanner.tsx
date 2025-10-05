@@ -13,11 +13,11 @@ const October2025LatestInnovationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-4">
-             />
+
             <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
               BREAKING OCTOBER 1, 2025: LATEST AI INNOVATIONS
             </span>
-             />
+
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -43,7 +43,7 @@ const October2025LatestInnovationsBanner = () => {
             className="group relative bg-gradient-to-br from-emerald-900/30 to-blue-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
           >
             <div className="absolute top-4 right-4">
-               />
+
             </div>
             
             <div className="mb-4">
@@ -71,7 +71,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-emerald-400 font-semibold group-hover:gap-3 transition-all">
-              Read Full Guide  />
+              Read Full Guide
             </div>
           </Link>
 
@@ -81,7 +81,7 @@ const October2025LatestInnovationsBanner = () => {
             className="group relative bg-gradient-to-br from-violet-900/30 to-cyan-900/30 border border-violet-500/30 rounded-xl p-6 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
           >
             <div className="absolute top-4 right-4">
-               />
+
             </div>
             
             <div className="mb-4">
@@ -109,7 +109,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-violet-400 font-semibold group-hover:gap-3 transition-all">
-              Explore Quantum AI  />
+              Explore Quantum AI
             </div>
           </Link>
 
@@ -147,7 +147,7 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-indigo-400 font-semibold group-hover:gap-3 transition-all">
-              Discover Platform  />
+              Discover Platform
             </div>
           </Link>
         </div>
@@ -159,7 +159,7 @@ const October2025LatestInnovationsBanner = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50"
           >
             <span>Explore All Latest AI Innovations</span>
-             />
+
           </Link>
         </div>
 

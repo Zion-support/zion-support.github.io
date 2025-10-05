@@ -3,32 +3,32 @@ import React from 'react';
 const ModernFeatures: React.FC = () => {
   const features = [
     {
-      icon:  />,
+      icon: "🔮",
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
     },
     {
-      icon:  />,
+      icon: "🔮",
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
     },
     {
-      icon:  />,
+      icon: "🔮",
       title: "Proven Results",
       description: "Average 300% ROI within 6 months across all client implementations."
     },
     {
-      icon:  />,
+      icon: "🔮",
       title: "Expert Support",
       description: "Dedicated team of AI specialists providing 24/7 support and guidance."
     },
     {
-      icon:  />,
+      icon: "🔮",
       title: "Global Scale",
       description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
     },
     {
-      icon:  />,
+      icon: "🔮",
       title: "Award Winning",
       description: "Recognized industry leader with 15+ awards for innovation and excellence."
     }
@@ -48,7 +48,7 @@ const ModernFeatures: React.FC = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <div
+            <div>
               key={index}
               className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
             >

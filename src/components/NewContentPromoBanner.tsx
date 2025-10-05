@@ -121,9 +121,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-3">
-               />
+
               <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
-               />
+
             </div>
             
             <h3 className="text-xl font-bold mb-2">
@@ -166,16 +166,16 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                 to="/blog"
                 className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                 />
+
                 Read All Articles
-                 />
+
               </Link>
               
               <Link
                 to="/case-studies"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                 />
+
                 View Case Studies
               </Link>
 
@@ -183,7 +183,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                 to="/services"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                 />
+
                 Explore Services
               </Link>
             </div>
@@ -206,10 +206,10 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
           </div>
 
           {/* Dismiss button */}
-          <button
+          <button>
             onClick={() => setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
-            aria-label="Dismiss banner"
+
           >
             <X className="w-5 h-5" />
           </button>

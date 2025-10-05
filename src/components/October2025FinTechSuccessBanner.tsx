@@ -14,7 +14,7 @@ export default function October2025FinTechSuccessBanner() {
         {/* Header */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-blue-500/30 border-2 border-blue-400 rounded-full px-5 py-2 backdrop-blur-sm">
-             />
+
             <span className="text-yellow-300 font-black text-sm tracking-wider">
               💎 NEW CASE STUDY • OCTOBER 2025 • FORTUNE 100 SUCCESS 💎
             </span>
@@ -36,7 +36,7 @@ export default function October2025FinTechSuccessBanner() {
             </p>
 
             <div className="flex items-center gap-3 mb-6">
-               />
+
               <p className="text-xl text-blue-200 font-semibold">
                 $22.8B Business Value • 96% Automation • 47M Customers
               </p>
@@ -45,19 +45,19 @@ export default function October2025FinTechSuccessBanner() {
             {/* Key Results */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
-                 />
+
                 <span className="text-blue-100 font-semibold">
                   18,400% ROI • $14.1B Annual Cost Savings
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
-                 />
+
                 <span className="text-blue-100 font-semibold">
                   47M Active Users • 92% Customer Satisfaction
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-blue-800/40 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
-                 />
+
                 <span className="text-blue-100 font-semibold">
                   99.8% Fraud Detection Accuracy • $2.3B Prevented
                 </span>
@@ -71,7 +71,7 @@ export default function October2025FinTechSuccessBanner() {
             >
               <Building2 className="w-6 h-6" />
               <span>Read Full Case Study</span>
-               />
+
             </Link>
           </div>
 
@@ -105,7 +105,7 @@ export default function October2025FinTechSuccessBanner() {
             {/* Customer Impact */}
             <div className="bg-gradient-to-br from-purple-800/60 to-blue-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-xl p-4 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
-                 />
+
                 <div className="text-lg font-bold text-blue-200">Customer Success</div>
               </div>
               <div className="text-2xl font-black text-purple-300">47M Active Users</div>
@@ -115,7 +115,7 @@ export default function October2025FinTechSuccessBanner() {
             {/* Security Impact */}
             <div className="bg-gradient-to-br from-green-800/60 to-blue-900/60 backdrop-blur-md border-2 border-green-400/50 rounded-xl p-4 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
-                 />
+
                 <div className="text-lg font-bold text-blue-200">Security Excellence</div>
               </div>
               <div className="text-2xl font-black text-green-300">99.8% Accuracy</div>

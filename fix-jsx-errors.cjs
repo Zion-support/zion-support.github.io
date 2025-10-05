@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
+const fs = require('fs');
+const path = require('path');
+const { glob } = require('glob');
 
 // Patterns to fix
 const fixes = [
@@ -64,17 +64,21 @@ function fixFile(filePath) {
   }
 }
 
-// Find all TypeScript/TSX files in src/components
-const pattern = 'src/components/**/*.{ts,tsx}';
-const files = await glob(pattern);
+async function main() {
+  // Find all TypeScript/TSX files in src/components
+  const pattern = 'src/components/**/*.{ts,tsx}';
+  const files = await glob(pattern);
 
-console.log(`Found ${files.length} files to check...`);
+  console.log(`Found ${files.length} files to check...`);
 
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixFile(file)) {
-    fixedCount++;
-  }
-});
+  let fixedCount = 0;
+  files.forEach(file => {
+    if (fixFile(file)) {
+      fixedCount++;
+    }
+  });
 
-console.log(`Fixed ${fixedCount} files`);
+  console.log(`Fixed ${fixedCount} files`);
+}
+
+main().catch(console.error);

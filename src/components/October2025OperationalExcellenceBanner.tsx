@@ -15,11 +15,11 @@ const October2025OperationalExcellenceBanner = () => {
         {/* Breaking News Badge */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-emerald-500/30 via-teal-500/30 to-cyan-500/30 border-2 border-emerald-400/50 rounded-full px-8 py-3 mb-6 shadow-lg backdrop-blur-sm">
-             />
+
             <span className="text-emerald-200 font-bold text-lg uppercase tracking-wider">
               🚀 October 2025 — Operational Excellence Revolution
             </span>
-             />
+
           </div>
           
           <h2 className="text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 bg-clip-text text-transparent leading-tight">
@@ -88,15 +88,15 @@ const October2025OperationalExcellenceBanner = () => {
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-emerald-300 text-sm">
-                 />
+
                 <span className="font-semibold">$8.7B in annual savings</span>
               </div>
               <div className="flex items-center gap-2 text-emerald-300 text-sm">
-                 />
+
                 <span className="font-semibold">94% downtime reduction</span>
               </div>
               <div className="flex items-center gap-2 text-emerald-300 text-sm">
-                 />
+
                 <span className="font-semibold">450% ROI within 18 months</span>
               </div>
             </div>
@@ -107,7 +107,7 @@ const October2025OperationalExcellenceBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>
               </div>
-               />
+
             </div>
           </Link>
 
@@ -139,15 +139,15 @@ const October2025OperationalExcellenceBanner = () => {
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-teal-300 text-sm">
-                 />
+
                 <span className="font-semibold">$6.4B enterprise value</span>
               </div>
               <div className="flex items-center gap-2 text-teal-300 text-sm">
-                 />
+
                 <span className="font-semibold">95% incident auto-resolution</span>
               </div>
               <div className="flex items-center gap-2 text-teal-300 text-sm">
-                 />
+
                 <span className="font-semibold">550% ROI within 12 months</span>
               </div>
             </div>
@@ -158,7 +158,7 @@ const October2025OperationalExcellenceBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>
               </div>
-               />
+
             </div>
           </Link>
 
@@ -169,7 +169,7 @@ const October2025OperationalExcellenceBanner = () => {
           >
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-cyan-500/30 rounded-2xl group-hover:bg-cyan-500/40 transition-colors shadow-lg">
-                 />
+
               </div>
               <div className="flex-1">
                 <span className="text-xs text-cyan-300 font-bold uppercase tracking-wider bg-cyan-500/20 px-3 py-1 rounded-full">
@@ -190,15 +190,15 @@ const October2025OperationalExcellenceBanner = () => {
 
             <div className="space-y-2 mb-6">
               <div className="flex items-center gap-2 text-cyan-300 text-sm">
-                 />
+
                 <span className="font-semibold">$9.3B revenue growth</span>
               </div>
               <div className="flex items-center gap-2 text-cyan-300 text-sm">
-                 />
+
                 <span className="font-semibold">850% conversion increase</span>
               </div>
               <div className="flex items-center gap-2 text-cyan-300 text-sm">
-                 />
+
                 <span className="font-semibold">680% ROI in 6 months</span>
               </div>
             </div>
@@ -209,7 +209,7 @@ const October2025OperationalExcellenceBanner = () => {
                 <span>•</span>
                 <span className="font-medium">Oct 1, 2025</span>
               </div>
-               />
+
             </div>
           </Link>
         </div>
@@ -230,7 +230,7 @@ const October2025OperationalExcellenceBanner = () => {
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-400 hover:to-teal-400 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Explore All Innovations</span>
-               />
+
             </Link>
             
             <Link
@@ -238,7 +238,7 @@ const October2025OperationalExcellenceBanner = () => {
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm border-2 border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
             >
               <span>Get Started Today</span>
-               />
+
             </Link>
           </div>
         </div>
@@ -247,15 +247,15 @@ const October2025OperationalExcellenceBanner = () => {
         <div className="mt-10 text-center">
           <div className="flex flex-wrap gap-6 justify-center items-center text-teal-300 text-sm">
             <div className="flex items-center gap-2">
-               />
+
               <span className="font-semibold">1,200+ Global Deployments</span>
             </div>
             <div className="flex items-center gap-2">
-               />
+
               <span className="font-semibold">99.2% Average Accuracy</span>
             </div>
             <div className="flex items-center gap-2">
-               />
+
               <span className="font-semibold">$24.4B Value Created</span>
             </div>
           </div>

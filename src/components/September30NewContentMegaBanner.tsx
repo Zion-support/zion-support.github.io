@@ -53,9 +53,9 @@ const September30NewContentMegaBanner = () => {
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20">
-             />
+
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
-             />
+
           </div>
           
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
@@ -99,12 +99,12 @@ const September30NewContentMegaBanner = () => {
             to="/blog"
             className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center"
           >
-             />
+
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now
-               />
+
             </div>
           </Link>
         </div>
@@ -141,15 +141,15 @@ const September30NewContentMegaBanner = () => {
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
           >
-             />
+
             Explore All Breakthroughs
-             />
+
           </Link>
           <Link
             to="/contact"
             className="border-2 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
           >
-             />
+
             Get Started Today
           </Link>
         </div>

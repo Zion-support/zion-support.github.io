@@ -83,7 +83,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
                 <div className="flex items-center gap-2 mb-1">
-                   />
+
                   <span className="text-xs font-medium">Data Engineering</span>
                 </div>
                 <div className="text-xs opacity-90">Real-Time Data Pipelines Guide</div>
@@ -91,7 +91,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
                 <div className="flex items-center gap-2 mb-1">
-                   />
+
                   <span className="text-xs font-medium">Platform Engineering</span>
                 </div>
                 <div className="text-xs opacity-90">Scorecards That Drive Adoption</div>
@@ -99,8 +99,7 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               
               <div className="bg-white/10 rounded-lg p-3 border border-white/20">
                 <div className="flex items-center gap-2 mb-1">
-                   />
-                  
+
                 </div>
                 <div className="text-xs opacity-90">Production Deployment Patterns</div>
               </div>
@@ -111,15 +110,15 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
               className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-medium text-sm transition-all duration-300 hover:scale-105 border border-white/30"
             >
               {ctaText}
-               />
+
             </Link>
           </div>
 
           {dismissible && (
-            <button
+            <button>
               onClick={handleDismiss}
               className="ml-4 p-1 rounded-full hover:bg-white/20 transition-colors"
-              aria-label="Dismiss banner"
+
             >
               <X className="w-5 h-5 opacity-75 hover:opacity-100" />
             </button>

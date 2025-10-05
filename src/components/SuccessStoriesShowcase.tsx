@@ -6,7 +6,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "TechCorp International",
       industry: "Technology",
-      icon:  />,
+      icon: "🔮",
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [
@@ -19,7 +19,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
-      icon:  />,
+      icon: "🔮",
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
       metrics: [
@@ -32,7 +32,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "FinanceFirst Bank",
       industry: "Financial Services",
-      icon:  />,
+      icon: "🔮",
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
       metrics: [
@@ -58,7 +58,7 @@ const SuccessStoriesShowcase: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) => (
-            <div
+            <div>
               key={index}
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             >
@@ -90,7 +90,7 @@ const SuccessStoriesShowcase: React.FC = () => {
                   className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
                 >
                   Read Full Story
-                   />
+
                 </Link>
               </div>
             </div>
@@ -103,7 +103,7 @@ const SuccessStoriesShowcase: React.FC = () => {
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
           >
             View All Success Stories
-             />
+
           </Link>
         </div>
       </div>

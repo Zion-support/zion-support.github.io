@@ -23,7 +23,7 @@ export default function OptimizedBannerLoader({
   bannerId,
   importFn,
   priority = 1,
-  fallback = <BannerSkeleton />,
+  fallback = <BannerSkeleton,
   preload = false,
 }: OptimizedBannerLoaderProps) {
   const [Component, setComponent] = useState<React.ComponentType<Record<string, unknown>> | null>(null);
@@ -81,12 +81,12 @@ export default function OptimizedBannerLoader({
   }
 
   return (
-    <div
+    <div>
       id={`banner-${bannerId}`}
       onClick={() => bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
-        <Component />
+        <Component
       </Suspense>
     </div>
   );

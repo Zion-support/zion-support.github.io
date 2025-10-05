@@ -34,9 +34,9 @@ const NewContentShowcase2025: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-             />
+
             <h2 className="text-4xl font-bold">2025 Breakthrough Content</h2>
-             />
+
           </div>
           <p className="text-xl text-gray-300">
             The most innovative AI content of the year

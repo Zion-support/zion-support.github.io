@@ -43,7 +43,7 @@ const October2025InfrastructureExcellenceBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-500/10 px-4 py-2 mb-4">
-             />
+
             <span className="text-sm font-semibold text-blue-400">
               NEW OCTOBER 2025 CONTENT
             </span>
@@ -89,7 +89,7 @@ const October2025InfrastructureExcellenceBanner = () => {
                   {/* Metrics */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {article.metrics.map((metric, idx) => (
-                      <span
+                      <span>
                         key={idx}
                         className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/5 text-xs font-medium text-gray-300 border border-white/10"
                       >
@@ -101,7 +101,7 @@ const October2025InfrastructureExcellenceBanner = () => {
                   {/* Read more link */}
                   <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover:gap-3 transition-all">
                     <span>Read Full Guide</span>
-                     />
+
                   </div>
                 </div>
               </Link>
@@ -117,7 +117,7 @@ const October2025InfrastructureExcellenceBanner = () => {
               className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 px-8 py-3 text-base font-semibold text-white shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               <span>Explore All Articles</span>
-               />
+
             </Link>
             <Link
               to="/contact"

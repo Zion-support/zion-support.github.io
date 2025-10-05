@@ -15,11 +15,11 @@ const October2025NewAutonomousSystemsBanner = () => {
         {/* Header with badge */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full px-4 py-2">
-             />
+
             <span className="text-yellow-300 font-bold text-sm uppercase tracking-wider">
               🚀 BREAKING: October 1, 2025
             </span>
-             />
+
           </div>
         </div>
         
@@ -43,7 +43,7 @@ const October2025NewAutonomousSystemsBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg shadow-purple-500/50 group-hover:shadow-purple-400/70 transition-all">
-                   />
+
                 </div>
               </div>
               <div className="flex-1">
@@ -78,14 +78,14 @@ const October2025NewAutonomousSystemsBanner = () => {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     Read Blog Post
-                     />
+
                   </Link>
                   <Link
                     to="/case-studies/ai-2025-oct-01-global-manufacturing-enterprise-mesh-847m-success"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     View Case Study
-                     />
+
                   </Link>
                 </div>
               </div>
@@ -97,7 +97,7 @@ const October2025NewAutonomousSystemsBanner = () => {
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-cyan-500/50 group-hover:shadow-cyan-400/70 transition-all">
-                   />
+
                 </div>
               </div>
               <div className="flex-1">
@@ -132,14 +132,14 @@ const October2025NewAutonomousSystemsBanner = () => {
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     Read Blog Post
-                     />
+
                   </Link>
                   <Link
                     to="/case-studies/ai-2025-oct-01-automotive-manufacturer-predictive-maintenance-127m-success"
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-4 py-2 rounded-lg font-bold transition-all group-hover:shadow-lg"
                   >
                     View Case Study
-                     />
+
                   </Link>
                 </div>
               </div>
@@ -153,9 +153,9 @@ const October2025NewAutonomousSystemsBanner = () => {
             to="/blog"
             className="inline-flex items-center gap-3 bg-gradient-to-r from-yellow-500 via-orange-500 to-red-500 hover:from-yellow-400 hover:via-orange-400 hover:to-red-400 text-white px-8 py-4 rounded-xl font-black text-lg shadow-2xl shadow-orange-500/50 hover:shadow-orange-400/70 transform hover:scale-105 transition-all duration-300"
           >
-             />
+
             Explore All Revolutionary Content
-             />
+
           </Link>
         </div>
         

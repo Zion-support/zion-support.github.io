@@ -51,7 +51,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
-             />
+
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               January 2026 • Revolutionary Content Launch
             </span>
@@ -69,7 +69,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {revolutionaryContent.map((content, index) => (
-            <div 
+            <div>
               key={index} 
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
@@ -100,7 +100,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
               {/* Impact Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
-                   />
+
                   <span className="text-green-400 font-bold text-sm">
                     Impact: {content.impact}
                   </span>
@@ -113,7 +113,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
               >
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
-                 />
+
               </Link>
             </div>
           ))}

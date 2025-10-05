@@ -81,9 +81,9 @@ const October2025FeaturedContentBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-bold mb-6 animate-pulse">
-             />
+
             🚀 NEW CONTENT RELEASE - October 1, 2025
-             />
+
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Latest AI Solutions & Insights
@@ -138,7 +138,7 @@ const October2025FeaturedContentBanner = () => {
                     <span className="text-sm text-gray-400">Published October 1, 2025</span>
                     <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
                       Read Full Article
-                       />
+
                     </div>
                   </div>
                 </div>
@@ -158,14 +158,14 @@ const October2025FeaturedContentBanner = () => {
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 inline-flex items-center"
             >
               Explore All Articles
-               />
+
             </Link>
             <Link
               to="/contact"
               className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all border border-blue-500/30 inline-flex items-center"
             >
               Get a Free Consultation
-               />
+
             </Link>
           </div>
         </div>

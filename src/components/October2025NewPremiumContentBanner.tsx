@@ -14,9 +14,9 @@ const October2025NewPremiumContentBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-6 py-2 rounded-full text-sm font-bold mb-4 animate-pulse">
-             />
+
             <span>🚀 JUST PUBLISHED - OCTOBER 2025 PREMIUM CONTENT 🚀</span>
-             />
+
           </div>
           <h2 className="text-5xl font-extrabold text-white mb-4 leading-tight">
             Revolutionary AI Platforms
@@ -53,19 +53,19 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">99.99% uptime</strong> with intelligent self-healing</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">92% faster</strong> incident response time</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">$340M+</strong> annual value creation</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-cyan-300">87% cost savings</strong> in operations</span>
               </div>
             </div>
@@ -74,7 +74,7 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/ai-autonomous-devops-platform-2025-october"
               className="flex items-center gap-2 text-cyan-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article  />
+              Read Full Article
             </Link>
           </div>
 
@@ -99,19 +99,19 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-purple-300">99.99% threat prevention</strong> rate</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"> cryptographic vulnerabilities</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-purple-300">$247M+</strong> in avoided breach costs</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-purple-300">94% faster</strong> threat response</span>
               </div>
             </div>
@@ -120,7 +120,7 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/quantum-safe-ai-security-framework-2025-october"
               className="flex items-center gap-2 text-purple-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article  />
+              Read Full Article
             </Link>
           </div>
 
@@ -145,19 +145,19 @@ const October2025NewPremiumContentBanner: React.FC = () => {
             
             <div className="space-y-3 mb-6">
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-green-300">87% faster</strong> decision making</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-green-300">340% ROI</strong> in first year</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-green-300">$427M+</strong> incremental revenue</span>
               </div>
               <div className="flex items-start gap-2">
-                 />
+
                 <span className="text-white text-sm"><strong className="text-green-300">95%+</strong> prediction accuracy</span>
               </div>
             </div>
@@ -166,7 +166,7 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/blog/real-time-cognitive-business-intelligence-2025-october"
               className="flex items-center gap-2 text-green-300 hover:text-white font-semibold group-hover:gap-3 transition-all"
             >
-              Read Full Article  />
+              Read Full Article
             </Link>
           </div>
         </div>
@@ -184,13 +184,13 @@ const October2025NewPremiumContentBanner: React.FC = () => {
               to="/contact"
               className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl inline-flex items-center gap-2"
             >
-              Schedule Free Consultation  />
+              Schedule Free Consultation
             </Link>
             <Link 
               to="/blog"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all duration-300 hover:scale-105 border-2 border-cyan-400/50 hover:border-cyan-400 inline-flex items-center gap-2"
             >
-              Explore All Articles  />
+              Explore All Articles
             </Link>
           </div>
         </div>

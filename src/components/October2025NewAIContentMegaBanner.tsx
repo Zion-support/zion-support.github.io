@@ -13,7 +13,7 @@ const October2025NewAIContentMegaBanner = () => {
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
           <div className="p-3 bg-gradient-to-br from-purple-500 to-cyan-500 rounded-xl">
-             />
+
           </div>
           <div>
             <div className="flex items-center gap-2 mb-1">
@@ -42,7 +42,7 @@ const October2025NewAIContentMegaBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
-                 />
+
               </div>
               
             </div>
@@ -54,7 +54,7 @@ const October2025NewAIContentMegaBanner = () => {
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
               <span className="flex items-center gap-1">
-                 />
+
                 $4.7B Value
               </span>
               <span>•</span>
@@ -62,7 +62,7 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
             <div className="flex items-center text-purple-400 font-semibold group-hover:text-purple-300">
               Read Full Guide
-               />
+
             </div>
           </Link>
 
@@ -73,7 +73,7 @@ const October2025NewAIContentMegaBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors">
-                 />
+
               </div>
               
             </div>
@@ -85,7 +85,7 @@ const October2025NewAIContentMegaBanner = () => {
             </p>
             <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
               <span className="flex items-center gap-1">
-                 />
+
                 99.8% Prevention
               </span>
               <span>•</span>
@@ -93,7 +93,7 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
             <div className="flex items-center text-red-400 font-semibold group-hover:text-red-300">
               Read Security Guide
-               />
+
             </div>
           </Link>
 
@@ -124,7 +124,7 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
             <div className="flex items-center text-cyan-400 font-semibold group-hover:text-cyan-300">
               Read Implementation Guide
-               />
+
             </div>
           </Link>
         </div>
@@ -145,7 +145,7 @@ const October2025NewAIContentMegaBanner = () => {
               className="flex-shrink-0 inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-bold hover:from-purple-600 hover:to-cyan-600 transition-all shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               Explore All Insights
-               />
+
             </Link>
           </div>
         </div>
