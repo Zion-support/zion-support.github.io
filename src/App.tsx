@@ -7,10 +7,6 @@ import performanceOptimizer from './utils/performance-optimizer';
 import errorHandler from './utils/advanced-error-handler';
 import securityEnhancer from './utils/security-enhancer';
 import seoOptimizer from './utils/seo-optimizer';
-import cacheSystem from './utils/advanced-caching';
-import analyticsOptimizer from './utils/analytics-optimizer';
-import SystemMonitor from './components/SystemMonitor';
-import "./index.css";
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));

@@ -131,18 +131,6 @@ const AdvancedDashboard: React.FC = () => {
             }
           ).memory?.jsHeapSizeLimit || 0,
       },
-      accessibility: {
-        // Get accessibility stats from manager
-        features: "Active", // Fallback value
-      },
-      security: {
-        // Get security stats from manager
-        status: "Active", // Fallback value
-      },
-      ux: {
-        // Get UX stats from manager
-        status: "Active", // Fallback value
-      },
     });
   };
 
