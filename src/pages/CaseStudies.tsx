@@ -1,9 +1,28 @@
-import, React, from 'rea, c, t';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export, default, function CaseStudi, e, s(): Rea, c, t.J, S, X.Eleme, n, t {
-  retu, r, n (
-    <main, styl, e = {{ paddi, n, g: '2r, e, m' }}>
-      <h1>Case, Studie, s</h1>
-    </ma, i, n>
+const CaseStudies: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Our success stories and case studies" />
+      </Helmet>
+      <div className="min-h-screen bg-gray-50 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">Case Studies</h1>
+            <p className="text-xl text-gray-600 mb-8">
+              Our success stories and case studies
+            </p>
+            <div className="bg-white rounded-lg shadow-md p-8">
+              <p className="text-gray-600">Case studies coming soon...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
-}
+};
+
+export default CaseStudies;
