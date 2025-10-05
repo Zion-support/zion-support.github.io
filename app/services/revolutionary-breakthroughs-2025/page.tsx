@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 
 import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, CheckCircle } from "lucide-react";
 ;
@@ -12,6 +13,12 @@ import { Brain, Atom, Bot, ArrowRight, Sparkles, TrendingUp, Star, Zap, Rocket, 
 ;
 ;
 ;
+=======
+import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Brain from 'lucide-react';
+import CheckCircle from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];

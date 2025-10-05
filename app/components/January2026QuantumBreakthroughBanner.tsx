@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+<<<<<<< HEAD
 
 import { ArrowRight, Zap, Brain, TrendingUp, Star } from "lucide-react";
 ;
@@ -7,6 +8,12 @@ import { ArrowRight, Zap, Brain, TrendingUp, Star } from "lucide-react";
 ;
 ;
 ;
+=======
+import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Brain from 'lucide-react';
+import Zap from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 export default function January2026QuantumBreakthroughBanner() {
   return (

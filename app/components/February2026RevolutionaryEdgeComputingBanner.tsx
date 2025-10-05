@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import { ArrowRight, Zap, Cpu, Shield, TrendingUp } from "lucide-react";
 import Link from 'next/link';
@@ -8,6 +9,13 @@ import Link from 'next/link';
 ;
 ;
 ;
+=======
+import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Zap from 'lucide-react';
+
+import Link from 'next/link';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 const February2026RevolutionaryEdgeComputingBanner: React.FC = () => {
   return (
