@@ -160,6 +160,7 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-left">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
@@ -221,6 +222,7 @@ const NewestContent2025Banner = () => {
                   <span>Read Full Article</span>
                   <span className="text-left">→</span>
                 </div>
+              </div>
             </div>
           </Link>
 
