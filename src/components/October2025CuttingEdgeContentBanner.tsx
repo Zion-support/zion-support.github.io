@@ -4,32 +4,29 @@ const October2025CuttingEdgeContentBanner = () => {
   const featuredArticles = [
     {
       title: "Next-Gen Autonomous Orchestration — Self-Healing Systems at Scale",
-      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",",
+      subtitle: "99.99% Uptime, 85% Cost Reduction, Zero-Touch Operations",
       category: "Autonomous Systems",
-      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",",
+      link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
       gradient: "from-cyan-500 to-blue-600",
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
-    {",
+    {
       title: "Advanced Prompt Engineering Mastery — 10x LLM Performance",
-      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",",
+      subtitle: "95%+ Accuracy, 80% Cost Reduction, Production-Grade Techniques",
       category: "LLM Engineering",
-      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",",
+      link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
       gradient: "from-purple-500 to-pink-600",
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
-    {",
+    {
       title: "Real-Time AI Personalization at Scale — 100M+ Users",
-      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",",
+      subtitle: "340% Revenue Lift, Sub-50ms Latency, 10M Decisions/Second",
       category: "ML at Scale",
-      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",",
+      link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
       gradient: "from-orange-500 to-red-600",
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -66,18 +63,18 @@ icon: '🚀',=======
 
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {featuredArticles.map((article, index) = > (
+          {featuredArticles.map((article, index) => (
             <Link
               key={index}
               to={article.link}
-              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
-            >
+              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               {/* Card gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
               <div className="relative p-6">
                 {/* Icon and Category */}
-                <div className="flex items-center justify-between mb-4" > <div className={`p-3 rounded-xl bg-gradient-to-br ${article.gradient} text-white shadow-lg`}>
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`p-3 rounded-xl bg-gradient-to-br ${article.gradient} text-white shadow-lg`}>
                     {article.icon}
                   </div>
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30">
@@ -97,13 +94,10 @@ icon: '🚀',=======
 
                 {/* Metrics */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {article.metrics.map((metric, idx) = > (
+                  {article.metrics.map((metric, idx) => (
                     <span
-
 key={idx}
-
-                      className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50"
-                    >
+                      className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50">
                       {metric}
                     </span>
                   ))}
@@ -124,8 +118,7 @@ key={idx}
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <Link
               to="/blog"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
-            >
+              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105">
               <span className="flex items-center gap-2">
                 Explore All Latest Content
 
@@ -134,8 +127,7 @@ key={idx}
             
             <Link
               to="/contact"
-              className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover:border-purple-500 hover:bg-slate-700/80 transition-all duration-300"
-            >
+              className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover:border-purple-500 hover:bg-slate-700/80 transition-all duration-300">
               Schedule Expert Consultation
             </Link>
           </div>
@@ -149,14 +141,14 @@ key={idx}
         </div>
       </div>
 
-      <style > {`
+      <style>{`
         @keyframes blob {
           0%, 100% { transform: translate(0, 0) scale(1); }
           33% { transform: translate(30px, -50px) scale(1.1); }
           66% { transform: translate(-20px, 20px) scale(0.9); }
         }
-        .animate-blob {",
-      animation: blob 7s infinite;
+        .animate-blob {
+          animation: blob 7s infinite;
         }
         .animation-delay-2000 {
           animation-delay: 2s;

@@ -1,6 +1,4 @@
-
 import Link from 'next/link';
-import { Brain } from "lucide-react";
 
 export default function AI2026FuturePredictionsMegaTrends() {
   return (

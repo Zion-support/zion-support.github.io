@@ -1,5 +1,9 @@
 import React from 'react';
-import { ArrowRight,Brain,TrendingUp,Zap } from "lucide-react";
+import Link from 'next/link';
+import Brain from 'lucide-react';
+import Zap from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import ArrowRight from 'lucide-react';
 
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (

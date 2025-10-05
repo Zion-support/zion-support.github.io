@@ -1,10 +1,10 @@
-
-import { ArrowRight, Award, CheckCircle, TrendingUp, Users } from 'lucide-react';
-
 import React from 'react';
-import { ArrowRight,Award,CheckCircle,TrendingUp,Users } from "lucide-react";
-
-import { ArrowRight, Users, TrendingUp, CheckCircle, Award, Star } from 'lucide-react';
+import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Users from 'lucide-react';
+import Award from 'lucide-react';
+import CheckCircle from 'lucide-react';
+import Star from 'lucide-react';
 
 export default function Fortune500TransformationShowcaseBanner() {
   return (

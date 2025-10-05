@@ -11,7 +11,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '180K+',
       badge: 'BREAKTHROUGH',
       gradient: 'from-emerald-500 to-teal-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/ai-2026-feb-autonomous-neural-networks',
       description: 'Self-evolving neural architectures achieving 99.97% accuracy in autonomous decision-making'
     },
@@ -24,7 +24,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '156K+',
       badge: 'FEATURED',
       gradient: 'from-blue-500 to-cyan-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/edge-2026-feb-quantum-computing',
       description: 'Ultra-low latency quantum processing delivering sub-millisecond response times'
     },
@@ -37,7 +37,7 @@ const February2026ContentShowcaseBanner = () => {
       readers: '203K+',
       badge: 'REVOLUTIONARY',
       gradient: 'from-purple-500 to-pink-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/ai-2026-feb-meta-cognitive-systems',
       description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
     }
@@ -48,8 +48,8 @@ const February2026ContentShowcaseBanner = () => {
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -75,10 +75,10 @@ const February2026ContentShowcaseBanner = () => {
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
-              { value: '500K+', label: 'Monthly Readers', icon: '👥' },
-              { value: '99.9%', label: 'Content Accuracy', icon: '🎯' },
-              { value: '200+', label: 'Expert Articles', icon: '📚' },
-              { value: '50+', label: 'Industry Awards', icon: '🏆' }
+              { value: '500K+', label: 'Monthly Readers', icon: '>, color'
+              { value: '99.9%', label: 'Content Accuracy', icon: '>, color'
+              { value: '200+', label: 'Expert Articles', icon: '>, color'
+              { value: '50+', label: 'Industry Awards', icon: '>, color'
             ].map((achievement, index) => (
               <div key={index} className="text-center">
                 <div className={`${achievement.color} mb-2 flex justify-center`}>
@@ -98,13 +98,9 @@ const February2026ContentShowcaseBanner = () => {
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
-
-            <div
+<div
 key={content.id}
-
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20">
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
@@ -196,15 +192,13 @@ key={content.id}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/subscribe"
-                  className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
 
                   <span>Get Premium Access</span>
                 </a>
                 <a
                   href="/contact"
-                  className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                   <span>Contact Sales</span>
 
                 </a>
@@ -228,8 +222,7 @@ key={content.id}
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300"
-/>
+                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300">
 
 <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
 

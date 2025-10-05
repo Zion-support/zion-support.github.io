@@ -5,7 +5,7 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
+<title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
         <meta 
           name="description" 
           content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." 

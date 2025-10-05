@@ -24,7 +24,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -36,7 +36,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -48,7 +48,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -60,7 +60,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -72,16 +72,16 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: '🚀',
+      icon: '>,',
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon: '🚀','
-    { value: '98%', label: 'Customer Satisfaction', icon: '🚀','
-    { value: '200+', label: 'Expert Articles', icon: '🚀',',
-    { value: '50+', label: 'Industry Awards', icon: '🚀''
+    { value: '500K+', label: 'Monthly Readers', icon: '📊'
+    { value: '98%', label: 'Customer Satisfaction', icon: '📊'
+    { value: '200+', label: 'Expert Articles', icon: '📊'
+    { value: '50+', label: 'Industry Awards', icon: '📊'
   ];
 
   return (
@@ -89,8 +89,8 @@ const NewContentAdvertisingBanner: React.FC = () => {
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -134,13 +134,9 @@ const NewContentAdvertisingBanner: React.FC = () => {
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
-
-            <div
+<div
 key={content.id}
-
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
-              style={{ animationDelay: `${index * 200}ms` }}
-            >
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20">
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
@@ -227,15 +223,13 @@ key={content.id}
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/subscribe"
-                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
 
                   <span>Get Premium Access</span>
                 </a>
                 <a
                   href="/contact"
-                  className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                   <span>Contact Sales</span>
 
                 </a>
@@ -259,8 +253,7 @@ key={content.id}
                 <input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
-/>
+                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300">
 
 <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
 

@@ -7,8 +7,7 @@ const GlobalAITransformationHub = () => {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
     },
@@ -16,8 +15,7 @@ icon: '🚀',=======
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
     },
@@ -25,8 +23,7 @@ icon: '🚀',=======
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
     },
@@ -34,8 +31,7 @@ icon: '🚀',=======
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
-icon: '🚀',=======
-      icon: '🚀',
+      icon: '>,',
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }
@@ -65,7 +61,7 @@ icon: '🚀',=======
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {transformationAreas.map((area, index) = > (
+        {transformationAreas.map((area, index) => (
           <Link 
             key={index} 
             to={area.link}
@@ -88,7 +84,7 @@ icon: '🚀',=======
           <span className="text-xl font-bold text-green-400">Global Success Metrics</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {successMetrics.map((item, index) = > (
+          {successMetrics.map((item, index) => (
             <div key={index}>
               <div className="text-3xl font-bold text-white">{item.metric}</div>
               <div className="text-sm text-gray-300">{item.label}</div>
@@ -106,8 +102,7 @@ icon: '🚀',=======
           <p className="text-gray-300 mb-4">Latest AI innovations achieving unprecedented accuracy and consciousness integration.</p>
           <Link 
             to="/blog/ai-2026-revolutionary-breakthrough-announcement" 
-            className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2"
-          >
+            className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2">
             Explore Breakthroughs</Link>
         </div>
 
@@ -119,8 +114,7 @@ icon: '🚀',=======
           <p className="text-gray-300 mb-4">Real-world transformations delivering billions in value creation and operational excellence.</p>
           <Link 
             to="/case-studies" 
-            className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-2"
-          >
+            className="text-emerald-400 hover:text-emerald-300 font-semibold flex items-center gap-2">
             View Case Studies</Link>
         </div>
 
@@ -132,8 +126,7 @@ icon: '🚀',=======
           <p className="text-gray-300 mb-4">Comprehensive AI transformation services tailored to your specific business needs.</p>
           <Link 
             to="/services" 
-            className="text-orange-400 hover:text-orange-300 font-semibold flex items-center gap-2"
-          >
+            className="text-orange-400 hover:text-orange-300 font-semibold flex items-center gap-2">
             Get Started</Link>
         </div>
       </div>
@@ -141,8 +134,7 @@ icon: '🚀',=======
       <div className="text-center">
         <Link 
           to="/contact" 
-          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:from-blue-600 hover:to-emerald-600 transition-all duration-300 hover:scale-105 shadow-lg"
-        >
+          className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-emerald-500 text-white px-8 py-4 rounded-xl font-bold hover:from-blue-600 hover:to-emerald-600 transition-all duration-300 hover:scale-105 shadow-lg">
 
           Start Your AI Transformation Journey
 

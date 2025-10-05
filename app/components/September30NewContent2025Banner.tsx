@@ -1,6 +1,11 @@
 import React from 'react';
-import { ArrowRight,Rocket,Tag,TrendingUp,Zap } from "lucide-react";
-
+import Link from 'next/link';
+import Sparkles from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import ArrowRight from 'lucide-react';
+import Zap from 'lucide-react';
+import Rocket from 'lucide-react';
+import Star from 'lucide-react';
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -129,7 +134,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
+                  <span  text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
                 </div>
@@ -168,7 +173,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
         {/* Second Row */}
         <div className="grid md:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
-          {newArticles.slice(3).map((article) => (
+          {newArticles.slice(3).map((article, index) => (
             <div 
               key={article.id}
               className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30"
@@ -192,7 +197,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span className="inline-block bg-gradient-to-r from-purple-500 to-blue-500 px-3 py-1 rounded-full text-white text-sm font-semibold shadow-lg">
+                  <span  text-white text-sm font-semibold shadow-lg`}>
                     {article.category}
                   </span>
                 </div>

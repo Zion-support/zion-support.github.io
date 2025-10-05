@@ -11,7 +11,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '300%',
       savings: '$2M+',
-      icon: '🤖',
+      icon: '>,',
       gradient: 'from-blue-500 to-cyan-500',
       badge: 'BEST SELLER',
       features: ['Workflow Automation', 'Intelligent Routing', 'Process Optimization']
@@ -25,7 +25,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '250%',
       savings: '$5M+',
-      icon: '🤖',
+      icon: '>,',
       gradient: 'from-purple-500 to-indigo-500',
       badge: 'ENTERPRISE',
       features: ['Quantum Encryption', 'Zero-Trust Architecture', 'Threat Detection']
@@ -39,7 +39,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Technology, Retail, Manufacturing',
       roi: '400%',
       savings: '$3M+',
-      icon: '🤖',
+      icon: '>,',
       gradient: 'from-green-500 to-emerald-500',
       badge: 'CLOUD-FIRST',
       features: ['Multi-Cloud Deployment', 'Auto-Scaling', 'Cost Optimization']
@@ -53,7 +53,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Retail, Finance, Healthcare',
       roi: '350%',
       savings: '$4M+',
-      icon: '🤖',
+      icon: '>,',
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       features: ['Trend Forecasting', 'Risk Analysis', 'Customer Insights']
@@ -67,7 +67,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'All Industries',
       roi: '500%',
       savings: '$10M+',
-      icon: '🤖',
+      icon: '>,',
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'TRANSFORMATION',
       features: ['Strategy Consulting', 'Implementation', 'Change Management']
@@ -81,7 +81,7 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       industry: 'Finance, Healthcare, Government',
       roi: '200%',
       savings: '$1.5M+',
-      icon: '🤖',
+      icon: '>,',
       gradient: 'from-pink-500 to-purple-500',
       badge: 'GOVERNANCE',
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']
@@ -89,10 +89,10 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
   ];
 
   const successMetrics = [
-    { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
-    { value: '$2B+', label: 'Cost Savings Generated', icon: '💰' },
-    { value: '98%', label: 'Client Satisfaction', icon: '⭐' },
-    { value: '24/7', label: 'Enterprise Support', icon: '🛠️' }
+    { value: '500+', label: 'Enterprise Clients', icon: '📊'
+    { value: '$2B+', label: 'Cost Savings Generated', icon: '📊'
+    { value: '98%', label: 'Client Satisfaction', icon: '📊'
+    { value: '24/7', label: 'Enterprise Support', icon: '📊'
   ];
 
   return (
@@ -100,8 +100,8 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -145,13 +145,9 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
         {/* Enterprise Solutions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {enterpriseSolutions.map((solution, index) => (
-
-            <div
+<div
 key={solution.id}
-
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
@@ -171,8 +167,8 @@ key={solution.id}
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
                     {solution.category}
                   </span>
-                  <div className="text-xs text-gray-500">",
-      Industries: {solution.industry}
+                  <div className="text-xs text-gray-500">
+                    Industries: {solution.industry}
                   </div>
                 </div>
 
@@ -237,15 +233,13 @@ key={solution.id}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
                   href="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2"
-                >
+                  className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">
 
                   <span>Schedule Enterprise Demo</span>
                 </a>
                 <a
                   href="/case-studies"
-                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
-                >
+                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
                   <span>View Success Stories</span>
 
                 </a>

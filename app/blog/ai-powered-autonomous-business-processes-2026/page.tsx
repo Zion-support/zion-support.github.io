@@ -1,18 +1,14 @@
 import Link from 'next/link';
-import { ArrowLeft,BookOpen,Brain,CheckCircle,Clock,Share2,Tag,TrendingUp,User,Zap } from "lucide-react";
-
-=======
-import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import User from 'lucide-react/dist/esm/icons/user';
-import Tag from 'lucide-react/dist/esm/icons/tag';
-import Share2 from 'lucide-react/dist/esm/icons/share-2';
-import BookOpen from 'lucide-react/dist/esm/icons/book-open';
-import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
-import Brain from 'lucide-react/dist/esm/icons/brain';
-import Zap from 'lucide-react/dist/esm/icons/zap';>>>>>>> origin/merge-pr-25212
-
+import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
+import Clock from 'lucide-react/dist/esm/icons/lock';
+import User from 'lucide-react/dist/esm/icons/ser';
+import Tag from 'lucide-react/dist/esm/icons/ag';
+import Share2 from 'lucide-react/dist/esm/icons/hare2';
+import BookOpen from 'lucide-react/dist/esm/icons/ookopen';
+import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
+import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import Brain from 'lucide-react/dist/esm/icons/rain';
+import Zap from 'lucide-react/dist/esm/icons/ap';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

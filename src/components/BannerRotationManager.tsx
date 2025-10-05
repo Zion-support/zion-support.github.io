@@ -80,10 +80,8 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
           const BannerComponent = bannerComponents[bannerKey];
           return (
             <Suspense key={bannerKey} fallback={<LoadingFallback />}>
-
-              <BannerComponent />
+<BannerComponent />
             </Suspense>
-
           );
         })}
       </div>
@@ -97,8 +95,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   return (
     <div className="relative">
       <Suspense fallback={<LoadingFallback />}>
-
-        <CurrentBanner />
+<CurrentBanner />
       </Suspense>
 
       {/* Rotation controls (if multiple banners) */}
@@ -106,7 +103,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
         <div className="flex justify-center gap-2 mt-4">
           {visibleBanners.map((_, index) => (
             <button
-              key={index}
+key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all ${
                 index === currentIndex
@@ -114,7 +111,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
                   : 'bg-white/30 hover:bg-white/50'
               }`}
               aria-label={`Go to banner ${index + 1}`}
-            />
+
           ))}
         </div>
       )}

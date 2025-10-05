@@ -78,10 +78,8 @@ const March2026InnovationSpotlightBanner = () => {
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {innovations.map((innovation, index) => (
-
-            <div
+<div
 key={index}
-
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
@@ -106,8 +104,8 @@ key={index}
 
                 {/* Impact */}
                 <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>",
-      Impact: {innovation.impact}
+                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
+                    Impact: {innovation.impact}
                   </div>
                 </div>
 
@@ -153,7 +151,7 @@ key={index}
                 company: 'Reality Synthesis Corp',
                 achievement: '$5.2B Market Creation',
                 revenue: '98% Customer Satisfaction',
-      icon: '>'
+                icon: '>'
               }
             ].map((story, index) => (
               <div key={index} className="text-center">
