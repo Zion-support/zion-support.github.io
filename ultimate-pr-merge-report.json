@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-10-05T11:16:21.658Z",
+  "timestamp": "2025-10-05T11:43:45.642Z",
   "summary": {
     "totalPRs": 4,
     "merged": 1,
@@ -49,6 +49,6 @@
   "repository": {
     "branch": "main",
     "status": "clean",
-    "lastCommit": "cc6ad4e25680 Merge branch 'main' of https://github.com/Zion-Holdings/zion.app"
+    "lastCommit": "beebe44a3892 Merge remote-tracking branch 'origin/cursor/fix-errors-and-merge-to-main-afbc'"
   }
 }
