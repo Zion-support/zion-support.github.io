@@ -1,223 +1,279 @@
 import React, { useState, useEffect } from 'react';
+import PerformanceMonitor from '../utils/performance-monitor';
+import SEOOptimizer from '../utils/seo-optimizer';
+import ErrorHandler from '../utils/error-handler';
 
-interface AnalyticsData {
-  pageViews: number;
-  uniqueVisitors: number;
-  bounceRate: number;
-  averageSessionDuration: number;
-  conversionRate: number;
-  topPages: Array<{
-    path: string;
-    views: number;
-    uniqueViews: number;
-  }>;
-  trafficSources: Array<{
-    source: string;
-    visitors: number;
-    percentage: number;
-  }>;
-  deviceBreakdown: Array<{
-    device: string;
-    visitors: number;
-    percentage: number;
-  }>;
-  hourlyData: Array<{
-    hour: number;
-    visitors: number;
-  }>;
+interface DashboardProps {
+  isVisible?: boolean;
+  onClose?: () => void;
 }
 
-const AnalyticsDashboard: React.FC = () => {
-  const [data, setData] = useState<AnalyticsData | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [selectedPeriod, setSelectedPeriod] = useState('7d');
+const AnalyticsDashboard: React.FC<DashboardProps> = ({ isVisible = false, onClose }) => {
+  const [activeTab, setActiveTab] = useState<'performance' | 'seo' | 'errors'>('performance');
+  const [performanceMetrics, setPerformanceMetrics] = useState<any>(null);
+  const [seoAnalytics, setSeoAnalytics] = useState<any>(null);
+  const [errorMetrics, setErrorMetrics] = useState<any>(null);
 
   useEffect(() => {
-    const loadAnalyticsData = async () => {
-      try {
-        setIsLoading(true);
-        
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1000));
+    if (isVisible) {
+      updateMetrics();
+      const interval = setInterval(updateMetrics, 5000); // Update every 5 seconds
+      return () => clearInterval(interval);
+    }
+  }, [isVisible]);
 
-        // Mock data
-        const mockData: AnalyticsData = {
-          pageViews: 125430,
-          uniqueVisitors: 45620,
-          bounceRate: 0.32,
-          averageSessionDuration: 245,
-          conversionRate: 0.045,
-          topPages: [
-            { path: '/', views: 15420, uniqueViews: 12350 },
-            { path: '/services', views: 12300, uniqueViews: 9800 },
-            { path: '/about', views: 8900, uniqueViews: 7200 },
-            { path: '/contact', views: 5600, uniqueViews: 4500 },
-            { path: '/blog', views: 4200, uniqueViews: 3800 }
-          ],
-          trafficSources: [
-            { source: 'Organic Search', visitors: 18500, percentage: 40.5 },
-            { source: 'Direct', visitors: 12300, percentage: 27.0 },
-            { source: 'Social Media', visitors: 8900, percentage: 19.5 },
-            { source: 'Referral', visitors: 4200, percentage: 9.2 },
-            { source: 'Email', visitors: 1720, percentage: 3.8 }
-          ],
-          deviceBreakdown: [
-            { device: 'Desktop', visitors: 22810, percentage: 50.0 },
-            { device: 'Mobile', visitors: 18248, percentage: 40.0 },
-            { device: 'Tablet', visitors: 4562, percentage: 10.0 }
-          ],
-          hourlyData: Array.from({ length: 24 }, (_, i) => ({
-            hour: i,
-            visitors: Math.floor(Math.random() * 1000) + 500
-          }))
-        };
+  const updateMetrics = () => {
+    const performanceMonitor = PerformanceMonitor.getInstance();
+    const seoOptimizer = SEOOptimizer.getInstance();
+    const errorHandler = ErrorHandler.getInstance();
 
-        setData(mockData);
-      } catch (error) {
-        console.error('Failed to load analytics data:', error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
+    setPerformanceMetrics({
+      metrics: performanceMonitor.getMetrics(),
+      score: performanceMonitor.getPerformanceScore(),
+      interactions: performanceMonitor.getInteractions()
+    });
 
-    loadAnalyticsData();
-  }, [selectedPeriod]);
+    setSeoAnalytics(seoOptimizer.getAnalytics());
+    setErrorMetrics(errorHandler.getErrorMetrics());
+  };
 
-  if (isLoading) {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        <span className="ml-2 text-gray-600">Loading analytics...</span>
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+        <div className="flex items-center justify-between p-4 border-b">
+          <h2 className="text-xl font-bold text-gray-800">Analytics Dashboard</h2>
+          <button
+            onClick={onClose}
+            className="text-gray-500 hover:text-gray-700 text-2xl"
+          >
+            ×
+          </button>
+        </div>
+
+        <div className="flex border-b">
+          {['performance', 'seo', 'errors'].map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setActiveTab(tab as any)}
+              className={`px-4 py-2 font-medium capitalize ${
+                activeTab === tab
+                  ? 'text-blue-600 border-b-2 border-blue-600'
+                  : 'text-gray-500 hover:text-gray-700'
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+
+        <div className="p-4 overflow-y-auto max-h-[calc(90vh-120px)]">
+          {activeTab === 'performance' && <PerformanceTab metrics={performanceMetrics} />}
+          {activeTab === 'seo' && <SEOTab analytics={seoAnalytics} />}
+          {activeTab === 'errors' && <ErrorsTab metrics={errorMetrics} />}
+        </div>
       </div>
-    );
-  }
+    </div>
+  );
+};
 
-  if (!data) {
-    return (
-      <div className="text-center p-8 text-gray-500">
-        No analytics data available
-      </div>
-    );
-  }
+const PerformanceTab: React.FC<{ metrics: any }> = ({ metrics }) => {
+  if (!metrics) return <div>Loading performance metrics...</div>;
+
+  const { metrics: data, score, interactions } = metrics;
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold text-gray-900">Analytics Dashboard</h2>
-        <select
-          value={selectedPeriod}
-          onChange={(e) => setSelectedPeriod(e.target.value)}
-          className="px-3 py-2 border border-gray-300 rounded-md text-sm"
-        >
-          <option value="1d">Last 24 hours</option>
-          <option value="7d">Last 7 days</option>
-          <option value="30d">Last 30 days</option>
-          <option value="90d">Last 90 days</option>
-        </select>
-      </div>
-
-      {/* Key Metrics */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Page Views</h3>
-          <p className="text-3xl font-bold text-blue-600">{data.pageViews.toLocaleString()}</p>
-          <p className="text-sm text-green-600 mt-1">+12.5% from last period</p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-blue-800">Performance Score</h3>
+          <div className="text-3xl font-bold text-blue-600">{score}/100</div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Unique Visitors</h3>
-          <p className="text-3xl font-bold text-green-600">{data.uniqueVisitors.toLocaleString()}</p>
-          <p className="text-sm text-green-600 mt-1">+8.3% from last period</p>
+        <div className="bg-green-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-green-800">Total Interactions</h3>
+          <div className="text-3xl font-bold text-green-600">{interactions.length}</div>
         </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Bounce Rate</h3>
-          <p className="text-3xl font-bold text-red-600">{(data.bounceRate * 100).toFixed(1)}%</p>
-          <p className="text-sm text-red-600 mt-1">+2.1% from last period</p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-sm font-medium text-gray-500">Conversion Rate</h3>
-          <p className="text-3xl font-bold text-purple-600">{(data.conversionRate * 100).toFixed(2)}%</p>
-          <p className="text-sm text-green-600 mt-1">+0.3% from last period</p>
-        </div>
-      </div>
-
-      {/* Charts and Tables */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Top Pages */}
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-semibold mb-4">Top Pages</h3>
-          <div className="space-y-3">
-            {data.topPages.map((page, index) => (
-              <div key={index} className="flex justify-between items-center">
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-gray-900">{page.path}</p>
-                  <p className="text-xs text-gray-500">{page.uniqueViews.toLocaleString()} unique views</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm font-bold text-gray-900">{page.views.toLocaleString()}</p>
-                  <p className="text-xs text-gray-500">views</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Traffic Sources */}
-        <div className="bg-white p-6 rounded-lg shadow">
-          <h3 className="text-lg font-semibold mb-4">Traffic Sources</h3>
-          <div className="space-y-3">
-            {data.trafficSources.map((source, index) => (
-              <div key={index} className="flex justify-between items-center">
-                <div className="flex-1">
-                  <p className="text-sm font-medium text-gray-900">{source.source}</p>
-                  <div className="w-full bg-gray-200 rounded-full h-2 mt-1">
-                    <div
-                      className="bg-blue-600 h-2 rounded-full"
-                      style={{ width: `${source.percentage}%` }}
-                    ></div>
-                  </div>
-                </div>
-                <div className="text-right ml-4">
-                  <p className="text-sm font-bold text-gray-900">{source.visitors.toLocaleString()}</p>
-                  <p className="text-xs text-gray-500">{source.percentage.toFixed(1)}%</p>
-                </div>
-              </div>
-            ))}
+        <div className="bg-purple-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-purple-800">Load Time</h3>
+          <div className="text-3xl font-bold text-purple-600">
+            {data.loadTime ? `${data.loadTime.toFixed(0)}ms` : 'N/A'}
           </div>
         </div>
       </div>
 
-      {/* Device Breakdown */}
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h3 className="text-lg font-semibold mb-4">Device Breakdown</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {data.deviceBreakdown.map((device, index) => (
-            <div key={index} className="text-center">
-              <div className="text-2xl font-bold text-gray-900">{device.visitors.toLocaleString()}</div>
-              <div className="text-sm text-gray-500">{device.device}</div>
-              <div className="text-xs text-gray-400">{device.percentage.toFixed(1)}%</div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Core Web Vitals</h3>
+          <div className="space-y-2">
+            <div className="flex justify-between">
+              <span>LCP (Largest Contentful Paint):</span>
+              <span className={getVitalColor(data.lcp, 2500, 4000)}>
+                {data.lcp ? `${data.lcp.toFixed(0)}ms` : 'N/A'}
+              </span>
             </div>
-          ))}
+            <div className="flex justify-between">
+              <span>FID (First Input Delay):</span>
+              <span className={getVitalColor(data.fid, 100, 300)}>
+                {data.fid ? `${data.fid.toFixed(0)}ms` : 'N/A'}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>CLS (Cumulative Layout Shift):</span>
+              <span className={getVitalColor(data.cls, 0.1, 0.25)}>
+                {data.cls ? data.cls.toFixed(4) : 'N/A'}
+              </span>
+            </div>
+            <div className="flex justify-between">
+              <span>FCP (First Contentful Paint):</span>
+              <span className={getVitalColor(data.fcp, 1800, 3000)}>
+                {data.fcp ? `${data.fcp.toFixed(0)}ms` : 'N/A'}
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">User Interactions</h3>
+          <div className="space-y-2">
+            <div className="flex justify-between">
+              <span>Clicks:</span>
+              <span>{interactions.filter((i: any) => i.type === 'click').length}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Scrolls:</span>
+              <span>{interactions.filter((i: any) => i.type === 'scroll').length}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Keydowns:</span>
+              <span>{interactions.filter((i: any) => i.type === 'keydown').length}</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Resizes:</span>
+              <span>{interactions.filter((i: any) => i.type === 'resize').length}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const SEOTab: React.FC<{ analytics: any }> = ({ analytics }) => {
+  if (!analytics) return <div>Loading SEO analytics...</div>;
+
+  const totalPageViews = Array.from(analytics.values()).reduce((sum: number, data: any) => sum + data.pageViews, 0);
+  const totalPages = analytics.size;
+
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-blue-800">Total Page Views</h3>
+          <div className="text-3xl font-bold text-blue-600">{totalPageViews}</div>
+        </div>
+        <div className="bg-green-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-green-800">Pages Tracked</h3>
+          <div className="text-3xl font-bold text-green-600">{totalPages}</div>
         </div>
       </div>
 
-      {/* Hourly Traffic */}
-      <div className="bg-white p-6 rounded-lg shadow">
-        <h3 className="text-lg font-semibold mb-4">Hourly Traffic</h3>
-        <div className="grid grid-cols-12 gap-1">
-          {data.hourlyData.map((hour, index) => (
-            <div key={index} className="text-center">
-              <div
-                className="bg-blue-600 rounded-t"
-                style={{ height: `${(hour.visitors / 1000) * 100}px` }}
-              ></div>
-              <div className="text-xs text-gray-500 mt-1">{hour.hour}:00</div>
+      <div>
+        <h3 className="text-lg font-semibold mb-3">Page Performance</h3>
+        <div className="space-y-2">
+          {Array.from(analytics.entries()).map(([page, data]: [string, any]) => (
+            <div key={page} className="flex justify-between items-center p-2 bg-gray-50 rounded">
+              <span className="font-medium">{page || '/'}</span>
+              <div className="text-sm text-gray-600">
+                {data.pageViews} views
+                <span className="ml-2 text-xs">
+                  (Last: {new Date(data.lastUpdated).toLocaleTimeString()})
+                </span>
+              </div>
             </div>
           ))}
         </div>
       </div>
     </div>
   );
+};
+
+const ErrorsTab: React.FC<{ metrics: any }> = ({ metrics }) => {
+  if (!metrics) return <div>Loading error metrics...</div>;
+
+  return (
+    <div className="space-y-6">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+        <div className="bg-red-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-red-800">Total Errors</h3>
+          <div className="text-3xl font-bold text-red-600">{metrics.totalErrors}</div>
+        </div>
+        <div className="bg-orange-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-orange-800">Critical</h3>
+          <div className="text-3xl font-bold text-orange-600">
+            {metrics.errorsBySeverity.critical || 0}
+          </div>
+        </div>
+        <div className="bg-yellow-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-yellow-800">High</h3>
+          <div className="text-3xl font-bold text-yellow-600">
+            {metrics.errorsBySeverity.high || 0}
+          </div>
+        </div>
+        <div className="bg-blue-50 p-4 rounded-lg">
+          <h3 className="font-semibold text-blue-800">Error Rate</h3>
+          <div className="text-3xl font-bold text-blue-600">
+            {metrics.errorRate.toFixed(4)}/s
+          </div>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Errors by Type</h3>
+          <div className="space-y-2">
+            {Object.entries(metrics.errorsByType).map(([type, count]) => (
+              <div key={type} className="flex justify-between">
+                <span className="capitalize">{type}:</span>
+                <span className="font-medium">{count as number}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-lg font-semibold mb-3">Errors by Severity</h3>
+          <div className="space-y-2">
+            {Object.entries(metrics.errorsBySeverity).map(([severity, count]) => (
+              <div key={severity} className="flex justify-between">
+                <span className="capitalize">{severity}:</span>
+                <span className={`font-medium ${getSeverityColor(severity)}`}>
+                  {count as number}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const getVitalColor = (value: number | null, good: number, poor: number) => {
+  if (value === null) return 'text-gray-500';
+  if (value <= good) return 'text-green-600';
+  if (value <= poor) return 'text-yellow-600';
+  return 'text-red-600';
+};
+
+const getSeverityColor = (severity: string) => {
+  switch (severity) {
+    case 'critical': return 'text-red-600';
+    case 'high': return 'text-orange-600';
+    case 'medium': return 'text-yellow-600';
+    case 'low': return 'text-green-600';
+    default: return 'text-gray-600';
+  }
 };
 
 export default AnalyticsDashboard;

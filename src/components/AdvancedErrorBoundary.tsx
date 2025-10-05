@@ -1,56 +1,80 @@
-import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface, Prop, s { 
-  childr, e, n: ReactNo, d, e;
-  fallba, c, k ?  : ReactN, o, d, e;
- }
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+}
 
-interface, Stat, e { 
-  hasErr, o, r: boolean;
-  err, o, r?: Err, o, r;
-  errorIn, f, o ?  : ErrorI, n, f, o;
- }
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
 
-export, class, AdvancedErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> {
-  construct, o, r(pro, p, s: Pro, p, s) {
-    sup, e, r(pro, p, s);
-    th, i, s.sta, t, e = { hasErr, o, r: f, a, l, s, e };
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
   }
 
-  static, getDerivedStateFromErro, r(err, o, r: Err, o, r): Sta, t, e {
-    retu, r, n { hasErr, o, r: t, r, u, e, err, o, r };
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
   }
 
-  componentDidCat, c, h(err, o, r: Er, r, o, r, errorIn, f, o: ErrorIn, f, o) {
-    th, i, s.setSta, t, e({ er, r, o, r, errorIn, f, o });
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo,
+    });
 
-    // Log error to monitoring service console.err o r('Error caught by bounda r y:' err o r errorIn f o);
+    // Log error to console
+    console.error('Error caught by boundary:', error, errorInfo);
 
-    // Send to error tracking service if (typeof windo w !== 'undefin e d' && 'gt a g' in windo w) {
-      (window, as, any).gt, a, g('eve, n, t', 'excepti, o, n', {
-        description: err, o, r.toStr, i, n, g(),
-        fat, a, l: fa, l, s, e,
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Send to error tracking service if available
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.toString(),
+        fatal: false,
       });
     }
   }
 
-  rend, e, r() { 
-    if (th, i, s.sta, t, e.hasErr, o, r) {
-      retu, r, n (
-        th, i, s.pro, p, s.fallba, c, k || (
-          <div, classNam, e = 'err, o, r-bounda, r, y'>
-            <h2>Something, went, wrong.</h2 > <details, styl, e={{ whiteSpa, c, e: 'p, r, e-wr, a, p'  }}>
-              { th, i, s.sta, t, e.err, o, r  && th, i, s.sta, t, e.err, o, r.toStri, n, g() }
-              <br />
-              {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
-            </detai, l, s>
-          </d, i, v>
+  render() {
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || (
+          <div className="error-boundary p-8 text-center">
+            <h2 className="text-2xl font-bold text-red-600 mb-4">
+              Something went wrong
+            </h2>
+            <details className="text-left bg-gray-100 p-4 rounded">
+              <summary className="cursor-pointer font-semibold">
+                Error Details
+              </summary>
+              <pre className="mt-2 text-sm text-gray-700 whitespace-pre-wrap">
+                {this.state.error && this.state.error.toString()}
+                {this.state.errorInfo && this.state.errorInfo.componentStack}
+              </pre>
+            </details>
+            <button
+              onClick={() => window.location.reload()}
+              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              Reload Page
+            </button>
+          </div>
         )
       );
     }
 
-    return, thi, s.pro, p, s.childr, e, n;
+    return this.props.children;
   }
 }
 
-export, default, AdvancedErrorBoundary;
+export default AdvancedErrorBoundary;
