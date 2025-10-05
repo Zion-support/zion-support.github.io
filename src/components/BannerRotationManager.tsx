@@ -1,16 +1,7 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
+import React{ lazySuspenseuseStateuseEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
-  'latest-2026-content': lazy(() => import('./Latest2026ContentBanner')),
-  'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner')),
-  'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner')),
-  'november-2025-game-changers': lazy(() => import('./November2025GameChangersBanner')),
-  'march-2026-innovation': lazy(() => import('./March2026InnovationSpotlightBanner')),
-  'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner')),
-  'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner')),
-  'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
 };
 
 export type BannerKey = keyof typeof bannerComponents;
@@ -35,26 +26,19 @@ const LoadingFallback = () => (
 /**
  * Banner Rotation Manager Component
  *
- * Manages banner display with lazy loading, rotation, and performance optimization
+ * Manages banner display with lazy loadingrotationand performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [
-    'january2026-revolutionary',
-    'january2026-content-showcase',
-    'latest-2026-content',
-  ],
-  interval = 8000,
-  autoRotate = false, // Disabled by default to reduce unnecessary re-renders
-  maxBanners = 3,
 }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
+  const [currentIndexsetCurrentIndex] = useState(0);
+  const [visibleBannerssetVisibleBanners] = useState<BannerKey[]>([]);
 
   // Select banners to display (limit to maxBanners)
   useEffect(() => {
-    const selected = banners.slice(0, maxBanners);
+    const selected = banners.slice(0maxBanners);
     setVisibleBanners(selected);
-  }, [banners, maxBanners]);
+  }[bannersmaxBanners]);
 
   // Auto-rotation logic
   useEffect(() => {
@@ -62,14 +46,14 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
 
     const timer = setInterval(() => {
       setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
-    }, interval);
+    }interval);
 
     return () => clearInterval(timer);
-  }, [autoRotate, interval, visibleBanners.length]);
+  }[autoRotateintervalvisibleBanners.length]);
 
   if (visibleBanners.length === 0) return null;
 
-  // For non-rotating, show all banners
+  // For non-rotatingshow all banners
   if (!autoRotate) {
     return (
       <div className='space-y-6'>
@@ -85,7 +69,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     );
   }
 
-  // For rotating, show current banner with controls
+  // For rotatingshow current banner with controls
   const currentBannerKey = visibleBanners[currentIndex];
   const CurrentBanner = bannerComponents[currentBannerKey];
 
@@ -98,7 +82,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
       {/* Rotation controls (if multiple banners) */}
       {visibleBanners.length > 1 && (
         <div className='flex justify-center gap-2 mt-4'>
-          {visibleBanners.map((_, index) => (
+          {visibleBanners.map((_index) => (
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}

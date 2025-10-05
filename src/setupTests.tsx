@@ -64,21 +64,8 @@ Object.defineProperty(window, 'performance', {
   },
 });
 
-// Mock PerformanceObserver
-global.PerformanceObserver = class PerformanceObserver {
-  constructor() {}
-  observe() {}
-  disconnect() {}
-  takeRecords() {
-    return [];
-  }
-} as unknown as typeof PerformanceObserver;
-
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
-  ErrorBoundary: ({ children }: { children: React.ReactNode }) => {
-    return children;
-  },
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
@@ -159,7 +146,6 @@ jest.mock('lucide-react', () => {
     Pause: () => mockIcon('pause-icon'),
     SkipForward: () => mockIcon('skip-forward-icon'),
     SkipBack: () => mockIcon('skip-back-icon'),
-    Volume2: () => mockIcon('volume2-icon'),
     VolumeX: () => mockIcon('volume-x-icon'),
     Maximize: () => mockIcon('maximize-icon'),
     Minimize: () => mockIcon('minimize-icon'),
@@ -266,7 +252,6 @@ jest.mock('lucide-react', () => {
     Route: () => mockIcon('route-icon'),
     Flag: () => mockIcon('flag-icon'),
     Building: () => mockIcon('building-icon'),
-    Building2: () => mockIcon('building2-icon'),
     Factory: () => mockIcon('factory-icon'),
     Warehouse: () => mockIcon('warehouse-icon'),
     Store: () => mockIcon('store-icon'),
@@ -277,7 +262,6 @@ jest.mock('lucide-react', () => {
     Museum: () => mockIcon('museum-icon'),
     Theater: () => mockIcon('theater-icon'),
     Cinema: () => mockIcon('cinema-icon'),
-    Music2: () => mockIcon('music2-icon'),
     Headphones: () => mockIcon('headphones-icon'),
     Mic: () => mockIcon('mic-icon'),
     MicOff: () => mockIcon('mic-off-icon'),
@@ -290,14 +274,6 @@ jest.mock('lucide-react', () => {
     VideoOff: () => mockIcon('video-off-icon'),
     Webcam: () => mockIcon('webcam-icon'),
     WebcamOff: () => mockIcon('webcam-off-icon'),
-    Gamepad2: () => mockIcon('gamepad2-icon'),
-    Joystick: () => mockIcon('joystick-icon'),
-    Dice1: () => mockIcon('dice1-icon'),
-    Dice2: () => mockIcon('dice2-icon'),
-    Dice3: () => mockIcon('dice3-icon'),
-    Dice4: () => mockIcon('dice4-icon'),
-    Dice5: () => mockIcon('dice5-icon'),
-    Dice6: () => mockIcon('dice6-icon'),
     Puzzle: () => mockIcon('puzzle-icon'),
     PuzzlePiece: () => mockIcon('puzzle-piece-icon'),
     Chess: () => mockIcon('chess-icon'),
@@ -309,7 +285,6 @@ jest.mock('lucide-react', () => {
     ChessPawn: () => mockIcon('chess-pawn-icon'),
     Cards: () => mockIcon('cards-icon'),
     Spade: () => mockIcon('spade-icon'),
-    Heart2: () => mockIcon('heart2-icon'),
     Diamond: () => mockIcon('diamond-icon'),
     Club: () => mockIcon('club-icon'),
     Crown: () => mockIcon('crown-icon'),
@@ -319,13 +294,10 @@ jest.mock('lucide-react', () => {
     Earrings: () => mockIcon('earrings-icon'),
     Bracelet: () => mockIcon('bracelet-icon'),
     Watch: () => mockIcon('watch-icon'),
-    Clock2: () => mockIcon('clock2-icon'),
     Timer: () => mockIcon('timer-icon'),
     TimerOff: () => mockIcon('timer-off-icon'),
     Stopwatch: () => mockIcon('stopwatch-icon'),
     Hourglass: () => mockIcon('hourglass-icon'),
-    Calendar2: () => mockIcon('calendar2-icon'),
-    AlertTriangle: () => mockIcon('alert-triangle-icon'),
   };
 });
 

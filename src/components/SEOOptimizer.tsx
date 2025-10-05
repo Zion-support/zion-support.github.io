@@ -1,1 +1,0 @@
-import React from ' react ' ; interface SEOOptimizerProps { childr e n: Rea c t.ReactN o d e; } const SEOOptimizer: React.FC<SEOOptimizerProps> = ( { child r e n } ) = > { retu r n < > { childr e n } < / > ; }; export default SEOOptimizer; $ $ 

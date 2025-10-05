@@ -1,0 +1,8 @@
+
+exportconstoctoberLatestBreakthroughContent = [
+  {
+ };
+
+exportconstgetAllOctoberLatestContent = () => {
+  returnoctoberLatestBreakthroughContent;
+};

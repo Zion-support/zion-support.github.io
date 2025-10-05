@@ -1,0 +1,8 @@
+ };
+
+exportconstgetAllOctoberNewContent = () => {
+  returnoctoberNewBreakthroughContent;
+};
+
+  };
+};

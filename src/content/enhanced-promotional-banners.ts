@@ -1,0 +1,11 @@
+  id: string;
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  variant: 'success' | 'warning' | 'info' | 'error';
+  icon?: string;
+  featured: boolean;
+  priority: number;
+  startDate: string;
+);

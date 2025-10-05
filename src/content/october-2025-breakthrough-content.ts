@@ -1,0 +1,6 @@
+  );
+ };
+
+exportconstgetAllOctoberContent = () => {
+  returnoctoberBreakthroughContent;
+};

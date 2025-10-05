@@ -1,0 +1,12 @@
+  id: string;
+  name: string;
+  title: string;
+  description: string;
+  benefits: string[];
+  features: string[];
+  category: string;
+  pricing: string;
+  link: string;
+  icon: string;
+  featured: boolean;
+);
