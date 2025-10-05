@@ -280,14 +280,12 @@ export default function AI2025JanuaryQuantumNeuralSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/blog/ai-2025-january-quantum-neural-revolution" 
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
+                href="/blog/ai-2025-january-quantum-neural-<revolution" className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
               >
                 Read Technical Details
               </a>
@@ -298,14 +296,12 @@ export default function AI2025JanuaryQuantumNeuralSuccess() {
           <div className="mt-12 pt-8 border-t border-slate-800">
             <div className="flex justify-between items-center">
               <a 
-                href="/case-studies/ai-2025-december-autonomous-systems-500-million-success"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                href="/case-studies/ai-2025-december-autonomous-systems-500-million-<success" className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 ← Previous: $500M December Success
               </a>
               <a 
-                href="/case-studies"
-                className="text-blue-400 hover:text-blue-300 transition-colors"
+                href="/case-<studies" className="text-blue-400 hover:text-blue-300 transition-colors"
               >
                 All Case Studies →
               </a>

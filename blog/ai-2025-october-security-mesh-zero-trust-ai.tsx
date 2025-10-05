@@ -20,7 +20,7 @@ export default function AISecurityMeshZeroTrust2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -322,8 +322,7 @@ export default function AISecurityMeshZeroTrust2025() {
                   Zion Tech Group's security experts will design a comprehensive AI Security Mesh tailored to your organization's unique requirements and risk profile.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Get Your Security Assessment →
                 </a>

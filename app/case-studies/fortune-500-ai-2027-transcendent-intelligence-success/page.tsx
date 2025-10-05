@@ -38,14 +38,12 @@ export default function Fortune500AI2027Success() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Replicate This Success
             </Link>
             <Link 
-              href="/services/enterprise-ai" 
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+              href="/services/enterprise-<ai" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               View Enterprise Solutions
             </Link>
@@ -284,14 +282,12 @@ export default function Fortune500AI2027Success() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Schedule Free Assessment
               </Link>
               <Link 
-                href="/services/enterprise-ai" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/services/enterprise-<ai" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Enterprise Solutions
               </Link>
@@ -303,7 +299,7 @@ export default function Fortune500AI2027Success() {
         <div className="mt-16">
           <h2 className="text-2xl font-bold text-white mb-8 text-center">Related Success Stories</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" className="group">
+            <Link href="/case-studies/fortune-500-ai-2026-breakthrough-mega-<success" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
                 <div className="text-4xl mb-4">💰</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors">
@@ -315,7 +311,7 @@ export default function Fortune500AI2027Success() {
               </div>
             </Link>
             
-            <Link href="/blog/ai-2027-transcendent-intelligence-breakthrough" className="group">
+            <Link href="/blog/ai-2027-transcendent-intelligence-<breakthrough" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -327,7 +323,7 @@ export default function Fortune500AI2027Success() {
               </div>
             </Link>
             
-            <Link href="/blog/autonomous-enterprise-operations-2027" className="group">
+            <Link href="/blog/autonomous-enterprise-operations-<2027" className="group">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">

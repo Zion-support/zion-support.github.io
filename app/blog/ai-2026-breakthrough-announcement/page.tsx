@@ -248,14 +248,12 @@ export default function AI2026BreakthroughAnnouncement() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Schedule a Demo
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   View Case Studies
                 </a>
@@ -271,8 +269,8 @@ export default function AI2026BreakthroughAnnouncement() {
                 <p>Last updated: January 2026</p>
               </div>
               <div className="flex gap-4">
-                <a href="/blog" className="hover:text-blue-400 transition-colors">← Back to Blog</a>
-                <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+                <a href="/<blog" className="hover:text-blue-400 transition-colors">← Back to Blog</a>
+                <a href="/<contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
               </div>
             </div>
           </footer>

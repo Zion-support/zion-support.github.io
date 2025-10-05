@@ -251,20 +251,17 @@ export default function March2026BreakthroughConsultingPage() {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   Get Free Consultation
                 </a>
                 <a
-                  href="/case-studies/ai-2026-march-breakthrough-mega-success"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                  href="/case-studies/ai-2026-march-breakthrough-mega-<success" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                 >
                   View $3.2B Success Story
                 </a>
                 <a
-                  href="/blog/ai-2026-march-revolutionary-breakthroughs"
-                  className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/blog/ai-2026-march-revolutionary-<breakthroughs" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   Read March Breakthroughs
                 </a>

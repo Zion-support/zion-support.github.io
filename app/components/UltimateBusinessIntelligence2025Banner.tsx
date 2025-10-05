@@ -151,8 +151,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 Read {currentContent.type}
               </Link>
               <Link
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
+                href="/<contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
               >
                 Get Consultation
               </Link>

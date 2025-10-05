@@ -339,14 +339,12 @@ export default function QuantumConsciousnessBreakthrough2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors"
+                href="/<contact" className="bg-white text-indigo-600 px-8 py-3 rounded-xl font-bold hover:bg-gray-100 transition-colors"
               >
                 Explore Conscious AI Solutions
               </a>
               <a 
-                href="/research" 
-                className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-colors"
+                href="/<research" className="border-2 border-white text-white px-8 py-3 rounded-xl font-bold hover:bg-white hover:text-indigo-600 transition-colors"
               >
                 Learn About Our Research
               </a>

@@ -35,14 +35,12 @@ export default function SustainableAISuccessPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="/blog/ai-2026-sustainable-ai-revolution-breakthrough" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-sustainable-ai-revolution-<breakthrough" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Breakthrough Details
               </a>
               <a 
-                href="/services/ai-2026-sustainable-ai-solutions" 
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+                href="/services/ai-2026-sustainable-ai-<solutions" className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Get Sustainable AI Solutions →
               </a>
@@ -312,15 +310,15 @@ export default function SustainableAISuccessPage() {
             <div className="bg-gradient-to-br from-slate-900/20 to-slate-800/20 rounded-xl p-6 border border-slate-500/20">
               <h3 className="text-xl font-bold text-white mb-4">Related Success Stories</h3>
               <div className="space-y-4">
-                <Link href="/case-studies/ai-2026-ultimate-consciousness-breakthrough-847-billion-success" className="block p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 hover:border-purple-400/40 transition-colors">
+                <Link href="/case-studies/ai-2026-ultimate-consciousness-breakthrough-847-billion-<success" className="block p-3 rounded-lg bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 hover:border-purple-400/40 transition-colors">
                   <div className="text-white font-semibold">$847B Consciousness Success</div>
                   <div className="text-sm text-gray-400">Fortune 50 Transformation</div>
                 </Link>
-                <Link href="/case-studies/ai-2026-neural-architecture-1-trillion-success" className="block p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-400/40 transition-colors">
+                <Link href="/case-studies/ai-2026-neural-architecture-1-trillion-<success" className="block p-3 rounded-lg bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 hover:border-blue-400/40 transition-colors">
                   <div className="text-white font-semibold">$1T Neural Architecture Success</div>
                   <div className="text-sm text-gray-400">Revolutionary AI</div>
                 </Link>
-                <Link href="/case-studies/ai-2026-ultimate-autonomous-revolution-100-billion-success" className="block p-3 rounded-lg bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/20 hover:border-emerald-400/40 transition-colors">
+                <Link href="/case-studies/ai-2026-ultimate-autonomous-revolution-100-billion-<success" className="block p-3 rounded-lg bg-gradient-to-r from-emerald-500/10 to-green-500/10 border border-emerald-500/20 hover:border-emerald-400/40 transition-colors">
                   <div className="text-white font-semibold">$100B Autonomous Success</div>
                   <div className="text-sm text-gray-400">Ultimate Revolution</div>
                 </Link>
@@ -334,8 +332,7 @@ export default function SustainableAISuccessPage() {
                 Transform your business with our revolutionary sustainable AI solutions.
               </p>
               <a 
-                href="/contact" 
-                className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Your Transformation
               </a>

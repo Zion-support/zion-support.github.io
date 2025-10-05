@@ -302,14 +302,12 @@ const RAGAtScaleEnterpriseImplementation2025: React.FC = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule RAG Architecture Consultation
               </a>
               <a
-                href="/services/rag-systems"
-                className="text-left"
+                href="/services/rag-<systems" className="text-left"
               ></a>
                 Explore RAG Solutions
               </a>

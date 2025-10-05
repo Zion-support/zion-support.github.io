@@ -38,14 +38,12 @@ export default function MetaCognitiveSuccessPage() {
             
             <div className="flex flex-wrap justify-center gap-4">
               <a 
-                href="#case-study-details" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="#case-study-<details" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 Read Full Case Study →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Similar Results
               </a>
@@ -55,7 +53,7 @@ export default function MetaCognitiveSuccessPage() {
       </section>
 
       {/* Main Content */}
-      <section id="case-study-details" className="py-20 bg-slate-900">
+      <section id="case-study-<details" className="py-20 bg-slate-900">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto prose prose-lg prose-invert">
             <h2 className="text-4xl font-bold text-white mb-8">Client Overview</h2>
@@ -252,14 +250,12 @@ export default function MetaCognitiveSuccessPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Get Free Consultation
             </a>
             <a 
-              href="/blog" 
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              href="/<blog" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Read More Case Studies →
             </a>

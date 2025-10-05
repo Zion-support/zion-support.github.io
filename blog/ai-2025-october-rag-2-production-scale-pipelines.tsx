@@ -20,7 +20,7 @@ export default function RAG2ProductionScalePipelines2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -325,8 +325,7 @@ export default function RAG2ProductionScalePipelines2025() {
                   Zion Tech Group's AI engineers will architect and deploy enterprise RAG pipelines optimized for your specific use case, data, and performance requirements.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Start Your RAG Project →
                 </a>

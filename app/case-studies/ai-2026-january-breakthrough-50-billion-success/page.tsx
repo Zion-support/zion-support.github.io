@@ -35,14 +35,12 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#results" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="#<results" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Results
               </a>
               <a 
-                href="/blog/ai-2026-january-breakthrough-innovations" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-january-breakthrough-<innovations" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Read Breakthrough Guide →
               </a>
@@ -149,7 +147,7 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
           </section>
 
           {/* Results Section */}
-          <section id="results" className="mb-16">
+          <section id="<results" className="mb-16">
             <div className="bg-gradient-to-r from-green-500/10 to-emerald-500/10 backdrop-blur-lg rounded-2xl p-8 border border-green-500/30">
               <h2 className="text-3xl font-bold text-white mb-6">Transformational Results</h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -283,14 +281,12 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   Get Your Implementation Plan
                 </a>
                 <a 
-                  href="/blog/ai-2026-january-breakthrough-innovations" 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                  href="/blog/ai-2026-january-breakthrough-<innovations" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                 >
                   Read Breakthrough Guide →
                 </a>
@@ -306,13 +302,13 @@ export default function AI2026JanuaryBreakthrough50BillionSuccess() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More Success Stories</h3>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/case-studies" className="text-green-400 hover:text-green-300 transition-colors">
+              <Link href="/case-<studies" className="text-green-400 hover:text-green-300 transition-colors">
                 All Case Studies →
               </Link>
-              <Link href="/blog" className="text-blue-400 hover:text-blue-300 transition-colors">
+              <Link href="/<blog" className="text-blue-400 hover:text-blue-300 transition-colors">
                 AI Innovation Blog →
               </Link>
-              <Link href="/contact" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <Link href="/<contact" className="text-purple-400 hover:text-purple-300 transition-colors">
                 Start Your Transformation →
               </Link>
             </div>

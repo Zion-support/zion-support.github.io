@@ -38,8 +38,7 @@ export default function Revolutionary2029ContentMegaBanner() {
               <li>• Moral reasoning with ethical decision-making</li>
             </ul>
             <Link 
-              href="/blog/ai-2029-quantum-neural-fusion-breakthrough"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
+              href="/blog/ai-2029-quantum-neural-fusion-<breakthrough" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all shadow-lg hover:shadow-xl"
             >
               Discover Consciousness →
             </Link>
@@ -60,8 +59,7 @@ export default function Revolutionary2029ContentMegaBanner() {
               <li>• Quantum entanglement for instant information transfer</li>
             </ul>
             <Link 
-              href="/case-studies/ai-2029-quantum-neural-fusion-mega-success"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
+              href="/case-studies/ai-2029-quantum-neural-fusion-mega-<success" className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl"
             >
               View $10B Success →
             </Link>

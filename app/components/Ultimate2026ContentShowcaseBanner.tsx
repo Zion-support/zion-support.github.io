@@ -34,7 +34,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
               <p className="text-gray-300">Latest AI technologies transforming enterprise operations</p>
             </div>
             
-            <Link href="/blog/ai-future-enterprise-2026" className="group block rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-900/40 to-indigo-900/40 p-8 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-future-enterprise-<2026" className="group block rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-900/40 to-indigo-900/40 p-8 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">ENTERPRISE BLUEPRINT</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">$2.8B ROI</span>
@@ -49,7 +49,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-2026-next-generation-automation-revolution" className="group block rounded-xl border border-green-500/30 bg-gradient-to-br from-green-900/40 to-emerald-900/40 p-8 hover:border-green-400/60 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2026-next-generation-automation-<revolution" className="group block rounded-xl border border-green-500/30 bg-gradient-to-br from-green-900/40 to-emerald-900/40 p-8 hover:border-green-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">99% AUTOMATION</span>
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">REVOLUTIONARY</span>
@@ -64,7 +64,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
               </div>
             </Link>
 
-            <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group block rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-900/40 to-pink-900/40 p-8 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
+            <Link href="/blog/ai-2027-quantum-consciousness-fusion-<breakthrough" className="group block rounded-xl border border-purple-500/30 bg-gradient-to-br from-purple-900/40 to-pink-900/40 p-8 hover:border-purple-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-bold">QUANTUM AI</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">100,000x</span>
@@ -87,7 +87,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
               <p className="text-gray-300">Real-world AI transformation results</p>
             </div>
             
-            <Link href="/case-studies/ai-revolutionary-transformation-2026" className="group block rounded-xl border border-orange-500/30 bg-gradient-to-br from-orange-900/40 to-red-900/40 p-8 hover:border-orange-400/60 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-revolutionary-transformation-<2026" className="group block rounded-xl border border-orange-500/30 bg-gradient-to-br from-orange-900/40 to-red-900/40 p-8 hover:border-orange-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">$100M ROI</span>
                 <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">MEGA SUCCESS</span>
@@ -102,7 +102,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-2026-neural-optimization-mega-success" className="group block rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 p-8 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2026-neural-optimization-mega-<success" className="group block rounded-xl border border-blue-500/30 bg-gradient-to-br from-blue-900/40 to-indigo-900/40 p-8 hover:border-blue-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">$200M ROI</span>
                 <span className="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold">NEURAL AI</span>
@@ -117,7 +117,7 @@ export default function Ultimate2026ContentShowcaseBanner() {
               </div>
             </Link>
 
-            <Link href="/case-studies/ai-2027-consciousness-fusion-mega-success" className="group block rounded-xl border border-green-500/30 bg-gradient-to-br from-green-900/40 to-emerald-900/40 p-8 hover:border-green-400/60 transition-all duration-300 hover:scale-105">
+            <Link href="/case-studies/ai-2027-consciousness-fusion-mega-<success" className="group block rounded-xl border border-green-500/30 bg-gradient-to-br from-green-900/40 to-emerald-900/40 p-8 hover:border-green-400/60 transition-all duration-300 hover:scale-105">
               <div className="flex items-center gap-3 mb-4">
                 <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">$2.5B ROI</span>
                 <span className="bg-gradient-to-r from-purple-400 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-bold">CONSCIOUSNESS</span>
@@ -146,14 +146,12 @@ export default function Ultimate2026ContentShowcaseBanner() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-5 rounded-lg font-semibold text-xl hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+                href="/<contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-10 py-5 rounded-lg font-semibold text-xl hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
               >
                 🚀 Start Your Transformation
               </Link>
               <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-lg font-semibold text-xl hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
+                href="/<blog" className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-lg font-semibold text-xl hover:from-green-700 hover:to-emerald-700 transition-all shadow-lg hover:shadow-xl"
               >
                 📚 Explore All Content
               </Link>

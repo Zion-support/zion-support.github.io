@@ -337,14 +337,12 @@ export default function Fortune500SuperintelligenceSuccessPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-white text-green-600 hover:bg-green-50 font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Get Free Consultation
                 </a>
                 <a 
-                  href="/blog/ai-2026-consensus-intelligence-breakthrough" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                  href="/blog/ai-2026-consensus-intelligence-<breakthrough" className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Learn More About AI 2026
                 </a>

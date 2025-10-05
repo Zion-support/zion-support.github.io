@@ -20,7 +20,7 @@ export default function GenerativeAISecurityBestPractices2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -297,7 +297,7 @@ export default function GenerativeAISecurityBestPractices2025() {
                   monitoring to protect your GenAI applications. Our team brings expertise in adversarial ML, security
                   architecture, and compliance.
                 </p>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Security Consultation →
                 </a>
               </div>

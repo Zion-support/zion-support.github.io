@@ -294,15 +294,13 @@ spec:
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Consultation
                 <span>→<
               </a>
               <a
-                href="/services/ai-solutions"
-                className="text-left"
+                href="/services/ai-<solutions" className="text-left"
               ></a>
                 Explore AI Services
               </a>

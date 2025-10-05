@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025CuttingEdgeRevolutionBanner() {
@@ -37,8 +36,7 @@ export default function October2025CuttingEdgeRevolutionBanner() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Card 1 - Cognitive Security Mesh */}
           <Link 
-            to="/blog/ai-2025-oct-01-cognitive-security-mesh-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
+            to="/blog/ai-2025-oct-01-cognitive-security-mesh-<revolution" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-blue-500/20 text-blue-300 rounded-full text-sm font-bold mb-4">
@@ -61,8 +59,7 @@ export default function October2025CuttingEdgeRevolutionBanner() {
 
           {/* Card 2 - Hyper-Personalization */}
           <Link 
-            to="/blog/ai-2025-oct-01-hyper-personalization-engines-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+            to="/blog/ai-2025-oct-01-hyper-personalization-engines-<revolution" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4">
@@ -85,8 +82,7 @@ export default function October2025CuttingEdgeRevolutionBanner() {
 
           {/* Card 3 - Autonomous FinOps */}
           <Link 
-            to="/blog/ai-2025-oct-01-autonomous-finops-platform-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+            to="/blog/ai-2025-oct-01-autonomous-finops-platform-<revolution" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4">
@@ -133,8 +129,7 @@ export default function October2025CuttingEdgeRevolutionBanner() {
         {/* CTA */}
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50"
+            to="/<blog" className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-blue-600 hover:via-purple-600 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50"
           >
             <span>Explore Revolutionary AI Innovations</span>
             <span className="text-2xl">→</span>

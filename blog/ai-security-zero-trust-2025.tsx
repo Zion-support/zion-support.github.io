@@ -16,7 +16,7 @@ export default function AISecurityZeroTrust2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -175,10 +175,10 @@ export default function AISecurityZeroTrust2025() {
                   Written by Zion Tech Group Security Research Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Secure Your Enterprise →
                   </a>
                 </div>

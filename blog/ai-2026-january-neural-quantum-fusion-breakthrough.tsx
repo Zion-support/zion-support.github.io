@@ -235,10 +235,10 @@ const AI2026JanuaryNeuralQuantumFusionBreakthrough = () =>
                 unprecedented capabilities for your organization.
               </p>
               <div className="text-left"></div>
-                <a href="/services/neural-quantum-fusion" className="text-left"></a>
+                <a href="/services/neural-quantum-<fusion" className="text-left"></a>
                   Explore Solutions
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Consultation
                 </a>
               </div>

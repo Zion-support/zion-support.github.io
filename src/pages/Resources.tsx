@@ -22,8 +22,7 @@ const Resources: React.FC = () => {
               Complete API documentation, integration guides, and technical specifications.
             </p>
             <a 
-              href="/docs" 
-              className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/<docs" className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               View Docs →
             </a>
@@ -36,8 +35,7 @@ const Resources: React.FC = () => {
               Industry best practices, optimization techniques, and implementation strategies.
             </p>
             <a 
-              href="/best-practices" 
-              className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/best-<practices" className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Learn More →
             </a>
@@ -50,8 +48,7 @@ const Resources: React.FC = () => {
               Development tools, SDKs, and libraries to accelerate your AI implementation.
             </p>
             <a 
-              href="/tools" 
-              className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/<tools" className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Get Tools →
             </a>
@@ -64,8 +61,7 @@ const Resources: React.FC = () => {
               Step-by-step tutorials and hands-on guides for getting started with our AI solutions.
             </p>
             <a 
-              href="/tutorials" 
-              className="inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/<tutorials" className="inline-block bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-400 hover:to-red-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Start Learning →
             </a>
@@ -78,8 +74,7 @@ const Resources: React.FC = () => {
               Real-world examples and use cases demonstrating AI implementation success stories.
             </p>
             <a 
-              href="/use-cases" 
-              className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/use-<cases" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Explore Cases →
             </a>
@@ -92,8 +87,7 @@ const Resources: React.FC = () => {
               Technical support, community forums, and expert assistance for your AI journey.
             </p>
             <a 
-              href="/support" 
-              className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/<support" className="inline-block bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Get Support →
             </a>
@@ -111,14 +105,12 @@ const Resources: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Start Your Project
               </a>
               <a 
-                href="/blog" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<blog" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Read Our Blog
               </a>

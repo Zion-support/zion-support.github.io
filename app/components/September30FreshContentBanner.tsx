@@ -35,8 +35,7 @@ export default function September30FreshContentBanner() {
               Bridging logic and learning for 300% accuracy improvements. Explainable AI with 100% transparency.
             </p>
             <Link 
-              href="/blog/ai-neural-symbolic-reasoning-2026"
-              className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
+              href="/blog/ai-neural-symbolic-reasoning-<2026" className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
             >
               Read Article →
             </Link>
@@ -49,8 +48,7 @@ export default function September30FreshContentBanner() {
               Unified intelligence across vision, language & audio. 400% improvement in contextual understanding.
             </p>
             <Link 
-              href="/blog/ai-multimodal-fusion-systems-2026"
-              className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
+              href="/blog/ai-multimodal-fusion-systems-<2026" className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
             >
               Discover More →
             </Link>
@@ -63,8 +61,7 @@ export default function September30FreshContentBanner() {
               Never-ending adaptation without forgetting. 500% improvement in model adaptability.
             </p>
             <Link 
-              href="/blog/ai-continual-learning-systems-2026"
-              className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
+              href="/blog/ai-continual-learning-systems-<2026" className="inline-flex items-center text-sm font-semibold text-white hover:text-cyan-200 transition-colors"
             >
               Learn More →
             </Link>
@@ -110,27 +107,24 @@ export default function September30FreshContentBanner() {
         <div className="text-center mt-10">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services"
-              className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-50 transition-all duration-300 hover:scale-105 shadow-xl"
+              href="/<services" className="bg-white text-indigo-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-cyan-50 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Explore AI Services
             </Link>
             <Link
-              href="/blog"
-              className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
+              href="/<blog" className="bg-white/10 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition-all duration-300 hover:scale-105"
             >
               Read All Articles
             </Link>
             <a
-              href="tel:+13024640950"
-              className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 shadow-xl"
+              href="tel:+<13024640950" className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-cyan-600 hover:to-teal-600 transition-all duration-300 hover:scale-105 shadow-xl"
             >
               Call +1 302 464 0950
             </a>
           </div>
           <p className="mt-6 text-white/80">
             Ready to implement these breakthrough technologies? 
-            <a href="mailto:kleber@ziontechgroup.com" className="underline hover:text-cyan-200 ml-1">
+            <a href="mailto:kleber@ziontechgroup.<com" className="underline hover:text-cyan-200 ml-1">
               Schedule a free consultation
             </a>
           </p>

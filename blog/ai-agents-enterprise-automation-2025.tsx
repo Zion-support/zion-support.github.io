@@ -16,7 +16,7 @@ export default function AIAgentsEnterpriseAutomation2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -289,8 +289,7 @@ export default function AIAgentsEnterpriseAutomation2025() {
                   Our proven methodology ensures rapid time-to-value and sustained performance improvements.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Start Your AI Agent Journey
                 </a>

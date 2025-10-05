@@ -42,14 +42,12 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a 
-                  href="#consultation" 
-                  className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                  href="#<consultation" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
                 >
                   Get Free Consultation
                 </a>
                 <a 
-                  href="#services" 
-                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                  href="#<services" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   View Services →
                 </a>
@@ -59,7 +57,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         </section>
 
         {/* Key Features */}
-        <section id="features" className="py-20 bg-slate-900">
+        <section id="<features" className="py-20 bg-slate-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -117,7 +115,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         </section>
 
         {/* Services */}
-        <section id="services" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+        <section id="<services" className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
@@ -139,7 +137,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Custom transformation roadmap</li>
                   <li>• ROI projections</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a href="#<consultation" className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -154,7 +152,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Performance monitoring</li>
                   <li>• Optimization protocols</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a href="#<consultation" className="block w-full bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -169,7 +167,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Advanced operations</li>
                   <li>• Self-improving ecosystem</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a href="#<consultation" className="block w-full bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-400 hover:to-rose-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -184,7 +182,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                   <li>• Capability enhancements</li>
                   <li>• 24/7 expert support</li>
                 </ul>
-                <a href="#consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
+                <a href="#<consultation" className="block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center">
                   Get Started
                 </a>
               </div>
@@ -193,7 +191,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
         </section>
 
         {/* Consultation Form */}
-        <section id="consultation" className="py-20 bg-slate-900">
+        <section id="<consultation" className="py-20 bg-slate-900">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
@@ -237,19 +235,19 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                     <form className="space-y-6">
                       <div>
                         <label className="block text-white font-bold mb-2">Company Name</label>
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Company" />
+                        <input type="<text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Company" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Your Name</label>
-                        <input type="text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Name" />
+                        <input type="<text" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="Your Name" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Email</label>
-                        <input type="email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="your@email.com" />
+                        <input type="<email" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="your@email.com" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Phone</label>
-                        <input type="tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567" />
+                        <input type="<tel" className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500" placeholder="+1 (555) 123-4567" />
                       </div>
                       <div>
                         <label className="block text-white font-bold mb-2">Company Size</label>
@@ -261,7 +259,7 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
                           <option value="fortune500">Fortune 500</option>
                         </select>
                       </div>
-                      <button type="submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">
+                      <button type="<submit" className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50">
                         Schedule Free Consultation
                       </button>
                     </form>
@@ -277,10 +275,10 @@ const QuantumConsciousnessAIConsulting: React.FC = () => {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold text-white mb-8">Ready to Transform Your Enterprise?</h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <a href="tel:1-800-QUANTUM-AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+              <a href="tel:1-800-QUANTUM-<AI" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 📞 1-800-QUANTUM-AI
               </a>
-              <a href="mailto:consciousness@ziontechgroup.com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+              <a href="mailto:consciousness@ziontechgroup.<com" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                 ✉️ consciousness@ziontechgroup.com
               </a>
             </div>

@@ -33,14 +33,12 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Experience Consciousness AI
               </a>
               <a
-                href="/case-studies/autonomous-consciousness-enterprise-750-billion-success"
-                className="text-left"
+                href="/case-studies/autonomous-consciousness-enterprise-750-billion-<success" className="text-left"
               ></a>
                 View $750B Success Story →
               </a>
@@ -274,14 +272,12 @@ export default function AutonomousConsciousnessEnterpriseSystems() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Start Consciousness Revolution
               </a>
               <a
-                href="/case-studies"
-                className="text-left"
+                href="/case-<studies" className="text-left"
               ></a>
                 View Success Stories
               </a>

@@ -150,14 +150,12 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-<success" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories →
               </a>
@@ -170,15 +168,13 @@ export default function AI2026JuneRevolutionaryBreakthrough() {
           <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <a 
-              href="/blog/ai-2026-quantum-neural-fusion-breakthrough"
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+              href="/blog/ai-2026-quantum-neural-fusion-<breakthrough" className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
             >
               <h3 className="text-lg font-bold text-white mb-2">Quantum-Neural Fusion Breakthrough</h3>
               <p className="text-gray-400 text-sm">Deep dive into the technical architecture and capabilities of quantum-neural fusion systems.</p>
             </a>
             <a 
-              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300"
+              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-<success" className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300"
             >
               <h3 className="text-lg font-bold text-white mb-2">$2.3B Fortune 500 Success Story</h3>
               <p className="text-gray-400 text-sm">Real-world case study showing measurable business value and ROI from AI implementation.</p>

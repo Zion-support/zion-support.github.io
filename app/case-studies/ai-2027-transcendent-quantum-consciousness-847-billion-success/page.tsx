@@ -448,14 +448,12 @@ export default function AI2027TranscendentQuantumConsciousness847BillionSuccess(
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-green-600 hover:to-emerald-600 transition-all"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/blog/ai-2027-transcendent-quantum-consciousness-breakthrough" 
-              className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
+              href="/blog/ai-2027-transcendent-quantum-consciousness-<breakthrough" className="bg-white border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-50 transition-all"
             >
               Learn More
             </Link>

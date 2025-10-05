@@ -129,8 +129,7 @@ const AIAgentsMultiAgentOrchestration2025: React.FC = () =>
             custom multi-agent system tailored to your unique business requirements.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Your Consultation →
           </a>

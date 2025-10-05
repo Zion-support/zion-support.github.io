@@ -174,14 +174,12 @@ export default function AISeptember302025GenerativeAIEnterpriseAdoption() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Consultation →
               </a>
               <a
-                href="/case-studies"
-                className="text-left"
+                href="/case-<studies" className="text-left"
               ></a>
                 View Case Studies
               </a>

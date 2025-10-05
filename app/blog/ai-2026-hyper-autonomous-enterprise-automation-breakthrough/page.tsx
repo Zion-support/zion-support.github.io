@@ -41,14 +41,12 @@ export default function AI2026HyperAutonomousEnterpriseAutomationBreakthrough() 
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#automation-details" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="#automation-<details" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Discover Automation
               </a>
               <a 
-                href="/case-studies/ai-2026-hyper-autonomous-enterprise-automation-300-billion-success" 
-                className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2026-hyper-autonomous-enterprise-automation-300-billion-<success" className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 View $300B Success Story →
               </a>
@@ -78,7 +76,7 @@ export default function AI2026HyperAutonomousEnterpriseAutomationBreakthrough() 
       </section>
 
       {/* Automation Details */}
-      <section id="automation-details" className="py-20">
+      <section id="automation-<details" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -302,14 +300,12 @@ export default function AI2026HyperAutonomousEnterpriseAutomationBreakthrough() 
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Start Your Automation Journey
             </a>
             <a 
-              href="/case-studies/ai-2026-hyper-autonomous-enterprise-automation-300-billion-success" 
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/case-studies/ai-2026-hyper-autonomous-enterprise-automation-300-billion-<success" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Story
             </a>

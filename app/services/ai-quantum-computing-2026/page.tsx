@@ -144,14 +144,12 @@ export default function AIQuantumComputingServices2026() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="inline-block bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
+                  href="/<contact" className="inline-block bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started Today
                 </a>
                 <a 
-                  href="/blog/ai-quantum-computing-2026" 
-                  className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all border border-white/20"
+                  href="/blog/ai-quantum-computing-<2026" className="inline-block bg-white/10 backdrop-blur-sm text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition-all border border-white/20"
                 >
                   Learn More
                 </a>

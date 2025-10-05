@@ -426,14 +426,12 @@ const RetrievalAugmentedGenerationEnterprise2025 = () =>
           </ul>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule RAG Architecture Review
             </a>
             <a
-              href="/services"
-              className="text-left"
+              href="/<services" className="text-left"
             ></a>
               Explore AI Engineering Services
             </a>

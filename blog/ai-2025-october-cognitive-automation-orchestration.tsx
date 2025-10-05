@@ -20,7 +20,7 @@ export default function CognitiveAutomationOrchestration2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -179,10 +179,10 @@ export default function CognitiveAutomationOrchestration2025() {
                   reduce costs; and unlock unprecedented operational efficiency.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/services/ai-automation" className="text-left"></a>
+                  <a href="/services/ai-<automation" className="text-left"></a>
                     Explore Our Solutions
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Consultation
                   </a>
                 </div>
@@ -193,7 +193,7 @@ export default function CognitiveAutomationOrchestration2025() {
         <div className="text-left"></div>
                   Published on October 1; 2025 by Zion Tech Group Research Team
                 </div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
               </div>

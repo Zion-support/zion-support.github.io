@@ -43,19 +43,19 @@ export default function AIFinTechTransformation2026() {
         <div className="bg-gray-50 rounded-lg p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2">
-            <li><a href="#overview" className="text-blue-600 hover:text-blue-700">FinTech AI Revolution Overview</a></li>
-            <li><a href="#digital-banking" className="text-blue-600 hover:text-blue-700">Digital Banking Transformation</a></li>
-            <li><a href="#ai-automation" className="text-blue-600 hover:text-blue-700">AI-Powered Automation</a></li>
-            <li><a href="#risk-management" className="text-blue-600 hover:text-blue-700">Intelligent Risk Management</a></li>
-            <li><a href="#customer-experience" className="text-blue-600 hover:text-blue-700">Enhanced Customer Experience</a></li>
-            <li><a href="#compliance" className="text-blue-600 hover:text-blue-700">Regulatory Compliance</a></li>
-            <li><a href="#implementation" className="text-blue-600 hover:text-blue-700">Implementation Strategy</a></li>
-            <li><a href="#case-studies" className="text-blue-600 hover:text-blue-700">Success Stories</a></li>
+            <li><a href="#<overview" className="text-blue-600 hover:text-blue-700">FinTech AI Revolution Overview</a></li>
+            <li><a href="#digital-<banking" className="text-blue-600 hover:text-blue-700">Digital Banking Transformation</a></li>
+            <li><a href="#ai-<automation" className="text-blue-600 hover:text-blue-700">AI-Powered Automation</a></li>
+            <li><a href="#risk-<management" className="text-blue-600 hover:text-blue-700">Intelligent Risk Management</a></li>
+            <li><a href="#customer-<experience" className="text-blue-600 hover:text-blue-700">Enhanced Customer Experience</a></li>
+            <li><a href="#<compliance" className="text-blue-600 hover:text-blue-700">Regulatory Compliance</a></li>
+            <li><a href="#<implementation" className="text-blue-600 hover:text-blue-700">Implementation Strategy</a></li>
+            <li><a href="#case-<studies" className="text-blue-600 hover:text-blue-700">Success Stories</a></li>
           </ul>
         </div>
 
         {/* Overview Section */}
-        <section id="overview" className="mb-12">
+        <section id="<overview" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">FinTech AI Revolution Overview</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -83,7 +83,7 @@ export default function AIFinTechTransformation2026() {
         </section>
 
         {/* Digital Banking Section */}
-        <section id="digital-banking" className="mb-12">
+        <section id="digital-<banking" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Digital Banking Transformation</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -142,7 +142,7 @@ const digitalBankingAI = {
         </section>
 
         {/* AI Automation Section */}
-        <section id="ai-automation" className="mb-12">
+        <section id="ai-<automation" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Powered Automation</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -211,7 +211,7 @@ const digitalBankingAI = {
         </section>
 
         {/* Risk Management Section */}
-        <section id="risk-management" className="mb-12">
+        <section id="risk-<management" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Intelligent Risk Management</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -282,7 +282,7 @@ const riskAssessment = {
         </section>
 
         {/* Customer Experience Section */}
-        <section id="customer-experience" className="mb-12">
+        <section id="customer-<experience" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Enhanced Customer Experience</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -333,7 +333,7 @@ const riskAssessment = {
         </section>
 
         {/* Compliance Section */}
-        <section id="compliance" className="mb-12">
+        <section id="<compliance" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Regulatory Compliance</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -390,7 +390,7 @@ const riskAssessment = {
         </section>
 
         {/* Implementation Strategy */}
-        <section id="implementation" className="mb-12">
+        <section id="<implementation" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Strategy</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -439,7 +439,7 @@ const riskAssessment = {
         </section>
 
         {/* Case Studies */}
-        <section id="case-studies" className="mb-12">
+        <section id="case-<studies" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Stories</h2>
           <div className="prose prose-lg max-w-none">
             <div className="grid md:grid-cols-2 gap-6">
@@ -485,14 +485,12 @@ const riskAssessment = {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="/services/ai-finance-automation"
-              className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/services/ai-finance-<automation" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore AI Finance Solutions
             </a>
             <a
-              href="/contact"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              href="/<contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Get Free Consultation
             </a>
@@ -503,7 +501,7 @@ const riskAssessment = {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-autonomous-operations-2026" className="group">
+            <a href="/blog/ai-autonomous-operations-<2026" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Autonomous Operations 2026: Self-Managing Infrastructure
@@ -514,7 +512,7 @@ const riskAssessment = {
               </div>
             </a>
             
-            <a href="/case-studies/fintech-ai-risk-compliance-2025" className="group">
+            <a href="/case-studies/fintech-ai-risk-compliance-<2025" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   FinTech AI Risk Compliance: 70% Risk Reduction Case Study

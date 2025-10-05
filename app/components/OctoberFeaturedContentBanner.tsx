@@ -9,8 +9,7 @@ export default function OctoberFeaturedContentBanner() {
 						New: Agentic Risk Mitigation 2026 — Safe Autonomy in Production
 					</h2>
 					<Link
-						href="/blog/agentic-risk-mitigation-2026"
-						className="inline-flex items-center gap-2 bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
+						href="/blog/agentic-risk-mitigation-<2026" className="inline-flex items-center gap-2 bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
 					>
 						Read the article
 						<span>→</span>
