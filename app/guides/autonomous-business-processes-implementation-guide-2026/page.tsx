@@ -6,6 +6,8 @@ import { ArrowLeft, ArrowRight, BookOpen, CheckCircle, Clock, Target, TrendingUp
 import { ArrowLeft, Clock, TrendingUp, Target, CheckCircle, Zap, BookOpen } from 'lucide-react';
 
 import { Metadata } from 'next';
+import { ArrowLeft, Target, TrendingUp, Clock, Zap, CheckCircle, BookOpen } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'Complete Guide to Implementing Autonomous Business Processes in 2026 | Zion Tech Group',
