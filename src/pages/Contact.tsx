@@ -13,7 +13,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </main>
-
+      
       {/* <Footer /> */}
     </div>
   );
