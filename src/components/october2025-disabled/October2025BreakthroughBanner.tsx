@@ -1,130 +1,130 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 const, October2025BreakthroughBanne, r = () => { 
-  retu, r, n (
-    <section, classNam, e = 'relative, p, y-20, overflo, w-hidd, e, n' > {/* Background, Effect, s */ }
-      <div, classNam, e='absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/20, vi, a-indi, g, o-9, 0, 0/20, t, o-emera, l, d-9, 0, 0/20' />
-      <div, classNam, e="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] opaci, t, y-10" />
-      <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
+  return (
+    <section, classNam, e = 'relativepy-20, overflo, w-hidden' > {/* Background, Effect, s */ }
+      <div, classNam, e='absolute, inse, t-0bg-gradient-to-r, fro, m-purple-900/20, vi, a-indigo-900/20to-emerald-900/20' />
+      <div, classNam, e="absolute, inse, t-0bg-[url('/grid.sv, g')] opacity-10" />
+      <div, classNam, e = 'containermx-autopx-6, relative, z-10'>
         {/* Main, Banne, r */}
-        <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/50, vi, a-indi, g, o-9, 0, 0/50, t, o-emera, l, d-9, 0, 0/50, rounde, d-2xl, borde, r-2, borde, r-purp, l, e-5, 0, 0/30, backdro, p-bl, u, r-s, m, p-8, m, d: p-12, m, b-8, shado, w-2, x, l'>
-          <div, classNam, e='flex, item, s-center, ga, p-3, m, b-6'>
-            <Sparkles, classNam, e='w-8 h-8, tex, t-purp, l, e-400, animat, e-pul, s, e' />
-            <span, classNam, e='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purp, l, e-4, 0, 0/30'>
+        <div, classNam, e='bg-gradient-to-br, fro, m-purple-900/50, vi, a-indigo-900/50to-emerald-900/50, rounde, d-2xl, borde, r-2, borde, r-purple-500/30, backdro, p-blur-smp-8md: p-12mb-8, shado, w-2xl'>
+          <div, classNam, e='flex, item, s-center, ga, p-3mb-6'>
+            <Sparkles, classNam, e='w-8 h-8, tex, t-purple-400, animat, e-pulse' />
+            <span, classNam, e='px-4py-2bg-purple-500/20, tex, t-purple-300, rounde, d-full, tex, t-sm, fon, t-bold, border, border-purple-400/30'>
               🔥 OCTOBER, 2025, BREAKTHROUGH
-            </sp, a, n>
-          </d, i, v>
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-300, vi, a-indi, g, o-300, t, o-emera, l, d-300, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+            </span>
+          </div>
+          <h2, classNam, e='text-4xlmd:text-5xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-purple-300, vi, a-indigo-300to-emerald-300bg-clip-text, tex, t-transparent'>
             Revolutionary, AI, Technologies Transforming, Enterprise, Operations
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-whi, t, e/80, m, b-8, ma, x-w-4xl, leadin, g-relax, e, d'>
+          <p, classNam, e='text-xl, tex, t-white/80mb-8, ma, x-w-4xl, leadin, g-relaxed'>
             Explore, three, groundbreaking AI, innovations, delivering unprecedented, result, s: Sovereign, Agents, with 94% decision, accur, a, c, y, Quantum, ML, achieving 1000x, speedu, p, and, Neuromorphic, Edge Computing, at, 10,000x, energy, efficiency.
           </p>
           {/* Featured, Articles, Grid */}
-          <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
-            {/* Articl, e, 1: Sovereign, Age, n, t, s */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/60, t, o-purp, l, e-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/30, hove, r: bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p'>
-              <div, classNam, e='flex, item, s-center, ga, p-2, m, b-3'>
-                <Brain, classNam, e='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
-                <span, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e'>
+          <div, classNam, e = 'gridmd: grid-cols-3, ga, p-6mb-8'>
+            {/* Article1: Sovereign, Age, n, t, s */}
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-purple-900/60to-purple-800/60p-6, rounde, d-xl, border, border-purple-400/30, hove, r: border-purple-400/60, transitio, n-all, hove, r:scale-105, grou, p'>
+              <div, classNam, e='flex, item, s-center, ga, p-2mb-3'>
+                <Brain, classNam, e='w-6 h-6, tex, t-purple-400' />
+                <span, classNam, e='text-xs, fon, t-semibold, tex, t-purple-300, uppercase, tracking-wide'>
                   AI, Sovereign, Agents
-                </sp, a, n>
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
+                </span>
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover:text-purple-300, transitio, n-colors'>
                 Autonomous, Decisio, n-Making, Revolutio, n
               </h3>
-              <p, classNam, e='te, x, t-whi, t, e/70, tex, t-sm, m, b-4'>
-                94% accura, c, y • $4, 5, M+ savin, g, s • 10x, efficiency, gains
+              <p, classNam, e='text-white/70, tex, t-smmb-4'>
+                94% accuracy • $45M+ savings • 10x, efficiency, gains
               </p>
-              <Link, t, o='/bl, o, g/ai-soverei, g, n-agen, t, s-enterpri, s, e-20, 2, 5'
-                classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, hove, r:te, x, t-purp, l, e-200, fon, t-semibold, tex, t-sm, grou, p-hov, e, r:g, a, p-3, transitio, n-a, l, l'
+              <Linkto='/blog/ai-sovereign-agents-enterprise-2025'
+                className='inline-flex, item, s-center, ga, p-2, tex, t-purple-300, hove, r:text-purple-200, fon, t-semibold, tex, t-sm, grou, p-hover:gap-3, transitio, n-all'
               >
                 Read, Articl, e <ArrowRight, classNam, e='w-4 h-4' />
-              </Li, n, k>
-            </d, i, v>
-            {/* Articl, e, 2: Quant, u, m , M, L */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-9, 0, 0/60, t, o-indi, g, o-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/30, hove, r: bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p'>
-              <div, classNam, e='flex, item, s-center, ga, p-2, m, b-3'>
-                <Zap, classNam, e='w-6 h-6, tex, t-indi, g, o-4, 0, 0' />
-                <span, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-indi, g, o-300, uppercase, tracking-wi, d, e'>
-                  Quantum, M, L
-                </sp, a, n>
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-indi, g, o-300, transitio, n-colo, r, s'>
-                1000x, Computational, Speed Breakthrou, g, h
+              </Link>
+            </div>
+            {/* Article2: Quantum , M, L */}
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-indigo-900/60to-indigo-800/60p-6, rounde, d-xl, border, border-indigo-400/30, hove, r: border-indigo-400/60, transitio, n-all, hove, r:scale-105, grou, p'>
+              <div, classNam, e='flex, item, s-center, ga, p-2mb-3'>
+                <Zap, classNam, e='w-6 h-6, tex, t-indigo-400' />
+                <span, classNam, e='text-xs, fon, t-semibold, tex, t-indigo-300, uppercase, tracking-wide'>
+                  QuantumML
+                </span>
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover:text-indigo-300, transitio, n-colors'>
+                1000x, Computational, Speed Breakthrough
               </h3>
-              <p, classNam, e='te, x, t-whi, t, e/70, tex, t-sm, m, b-4'>
+              <p, classNam, e='text-white/70, tex, t-smmb-4'>
                 1000x, speedu, p • $89M, saving, s • Impossible, problems, solved
               </p>
-              <Link, t, o='/bl, o, g/ai-quant, u, m-machi, n, e-learni, n, g-20, 2, 5'
-                classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, hove, r:te, x, t-indi, g, o-200, fon, t-semibold, tex, t-sm, grou, p-hov, e, r:g, a, p-3, transitio, n-a, l, l'
+              <Linkto='/blog/ai-quantum-machine-learning-2025'
+                className='inline-flex, item, s-center, ga, p-2, tex, t-indigo-300, hove, r:text-indigo-200, fon, t-semibold, tex, t-sm, grou, p-hover:gap-3, transitio, n-all'
               >
                 Read, Articl, e <ArrowRight, classNam, e='w-4 h-4' />
-              </Li, n, k>
-            </d, i, v>
-            {/* Articl, e, 3: Neuromorphic, E, d, g, e */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-emera, l, d-9, 0, 0/60, t, o-emera, l, d-8, 0, 0/6, 0, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/30, hove, r: bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-105, grou, p'>
-              <div, classNam, e='flex, item, s-center, ga, p-2, m, b-3'>
-                <Sparkles, classNam, e='w-6 h-6, tex, t-emera, l, d-4, 0, 0' />
-                <span, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-emera, l, d-300, uppercase, tracking-wi, d, e'>
+              </Link>
+            </div>
+            {/* Article3: NeuromorphicEd, g, e */}
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-emerald-900/60to-emerald-800/60p-6, rounde, d-xl, border, border-emerald-400/30, hove, r: border-emerald-400/60, transitio, n-all, hove, r:scale-105, grou, p'>
+              <div, classNam, e='flex, item, s-center, ga, p-2mb-3'>
+                <Sparkles, classNam, e='w-6 h-6, tex, t-emerald-400' />
+                <span, classNam, e='text-xs, fon, t-semibold, tex, t-emerald-300, uppercase, tracking-wide'>
                   Neuromorphic, Edg, e
-                </sp, a, n>
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r:te, x, t-emera, l, d-300, transitio, n-colo, r, s'>
-                Bra, i, n-Inspired, AI, at 0.001W, Powe, r
+                </span>
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover:text-emerald-300, transitio, n-colors'>
+                Brain-Inspired, AI, at 0.001W, Powe, r
               </h3>
-              <p, classNam, e='te, x, t-whi, t, e/70, tex, t-sm, m, b-4'>
-                , 1, 0,000x, energy, efficiency • 10, 0, M+ devic, e, s • Re, a, l-time, learnin, g
+              <p, classNam, e='text-white/70, tex, t-smmb-4'>
+                , 1, 0,000x, energy, efficiency • 100M+ devices • Real-time, learnin, g
               </p>
-              <Link, t, o = '/bl, o, g/ai-neuromorph, i, c-ed, g, e-computi, n, g-20, 2, 5'
-                classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, tex, t-emera, l, d-300, hove, r: te, x, t-emera, l, d-200, fon, t-semibold, tex, t-sm, grou, p-hov, e, r:g, a, p-3, transitio, n-a, l, l'
+              <Linkto = '/blog/ai-neuromorphic-edge-computing-2025'
+                className='inline-flex, item, s-center, ga, p-2, tex, t-emerald-300, hove, r: text-emerald-200, fon, t-semibold, tex, t-sm, grou, p-hover:gap-3, transitio, n-all'
               >
                 Read, Articl, e <ArrowRight, classNam, e='w-4 h-4' />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
+              </Link>
+            </div>
+          </div>
           {/* CTA, Sect, i, o, n */}
-          <div, classNam, e = 'flex, fle, x-wrap, ga, p-4, item, s-cent, e, r'>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-700, hove, r:to-indi, g, o-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, inlin, e-flex, item, s-center, ga, p-2'
+          <div, classNam, e = 'flex, fle, x-wrap, ga, p-4, item, s-center'>
+            <Linkto='/blog'
+              className='bg-gradient-to-r, fro, m-purple-600to-indigo-600, hove, r: from-purple-700, hove, r:to-indigo-700, tex, t-whitepx-8py-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, shado, w-lg, hove, r:shadow-purple-500/50, inlin, e-flex, item, s-center, ga, p-2'
             >
               Explore, All, Articles <ArrowRight, classNam, e='w-5 h-5' />
-            </Li, n, k>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='bg-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-sm, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, border, border-whi, t, e/20, hove, r:bord, e, r-whi, t, e/40, inlin, e-flex, item, s-center, ga, p-2'
+            </Link>
+            <Linkto='/contact'
+              className='bg-white/10, hove, r:bg-white/20, backdro, p-blur-sm, tex, t-whitepx-8py-4, rounde, d-lg, fon, t-bold, tex, t-lg, transitio, n-all, border, border-white/20, hove, r:border-white/40, inlin, e-flex, item, s-center, ga, p-2'
             >
               Schedule, Consultatio, n
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
+            </Link>
+          </div>
+        </div>
         {/* Stats, Ban, n, e, r */}
-        <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4'>
-          <div, classNam, e='bg-purp, l, e-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-purp, l, e-4, 0, 0/20, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'>
-              $17, 4, M+
-            </d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70, tex, t-sm'>Combined, Annual, Savings</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-indi, g, o-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-indi, g, o-4, 0, 0/20, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-extrabold, tex, t-indi, g, o-400, m, b-2'>
+        <div, classNam, e = 'grid, gri, d-cols-2md: grid-cols-4, ga, p-4'>
+          <div, classNam, e='bg-purple-900/30, backdro, p-blur-smp-6, rounde, d-xl, border, border-purple-400/20, tex, t-center'>
+            <div, classNam, e='text-3xlmd:text-4xl, fon, t-extrabold, tex, t-purple-400mb-2'>
+              $174M+
+            </div>
+            <div, classNam, e='text-white/70, tex, t-sm'>Combined, Annual, Savings</div>
+          </div>
+          <div, classNam, e='bg-indigo-900/30, backdro, p-blur-smp-6, rounde, d-xl, border, border-indigo-400/20, tex, t-center'>
+            <div, classNam, e='text-3xlmd:text-4xl, fon, t-extrabold, tex, t-indigo-400mb-2'>
               , 1, 0,00, 0, x
-            </d, i, v>
-            <div, classNam, e = 'te, x, t-whi, t, e/70, tex, t-sm'>Maximum, Efficiency, Gain</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-emera, l, d-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-emera, l, d-4, 0, 0/20, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-400, m, b-2'>
-              10, 0, M+
-            </d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70, tex, t-sm'>Devices, Deploye, d</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-cy, a, n-9, 0, 0/30, backdro, p-bl, u, r-s, m, p-6, rounde, d-xl, border, border-cy, a, n-4, 0, 0/20, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-3xl, m, d:te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-2'>
+            </div>
+            <div, classNam, e = 'text-white/70, tex, t-sm'>Maximum, Efficiency, Gain</div>
+          </div>
+          <div, classNam, e='bg-emerald-900/30, backdro, p-blur-smp-6, rounde, d-xl, border, border-emerald-400/20, tex, t-center'>
+            <div, classNam, e='text-3xlmd: text-4xl, fon, t-extrabold, tex, t-emerald-400mb-2'>
+              100M+
+            </div>
+            <div, classNam, e='text-white/70, tex, t-sm'>Devices, Deploye, d</div>
+          </div>
+          <div, classNam, e='bg-cyan-900/30, backdro, p-blur-smp-6, rounde, d-xl, border, border-cyan-400/20, tex, t-center'>
+            <div, classNam, e='text-3xlmd:text-4xl, fon, t-extrabold, tex, t-cyan-400mb-2'>
               94%
-            </d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70, tex, t-sm'>Decision, Accurac, y</d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </sec, t, i, o, n>
+            </div>
+            <div, classNam, e='text-white/70, tex, t-sm'>Decision, Accurac, y</div>
+          </div>
+        </div>
+      </div>
+    </secti, o, n>
   );
 };
 export, default, October2025BreakthroughBanner;

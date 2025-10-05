@@ -1,35 +1,35 @@
-import, React, from "rea, c, t";
-impo, r, t { Helm, e, t } fr, o, m "rea, c, t-helm, e, t-asy, n, c";
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+import, React, from "react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export, default, function BlogPo, s, t(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = "m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e">
-      <Helm, e, t>
-        <tit, l, e>Edge, Private, Personalization v2 — Ze, r, o‑PI, I, Glob, a, l &lt; 100, m, s</tit, l, e>
-        <meta, nam, e = "descripti, o, n" 
+export, default, function BlogPost(): React.JSX.Element { 
+  return (
+    <div, classNam, e = "min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white">
+      <Helmet>
+        <title>Edge, Private, Personalization v2 — Zero‑PI, I, Glob, a, l &lt; 100ms</title>
+        <meta, nam, e = "description" 
           
-        <link, re, l="canonic, a, l" hr, e, f="htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-priva, t, e-personalizati, o, n-v2
+        <link, re, l="canonical" href="https: //ziontechgroup.com/blog/edge-2025-sept-30-private-personalization-v2
         />
-      </Helm, e, t>" />
+      </Helmet>" />
 " />
       
 
-      <div, classNam, e="container, m, x-auto, p, x-6, p, y-16">
-        <h1, classNam, e="te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4">
+      <div, classNam, e="containermx-autopx-6py-16">
+        <h1, classNam, e="text-4xlmd:text-5xl, fon, t-boldmb-4">
           Edge, Private, Personalization v2
         </h1>
-        <p, classNam, e="te, x, t-zi, o, n-sla, t, e-light, m, b-8">Ze, r, o‑P, I, I, Glob, a, l &lt; 100, m, s</p>
-        <div, classNam, e = "prose, pros, e-invert, ma, x-w-3, x, l">
+        <p, classNam, e="text-zion-slate-lightmb-8">Zero‑PII, Global &lt; 100ms</p>
+        <div, classNam, e = "prose, pros, e-invert, ma, x-w-3xl">
           <p>
             This, is, a placeholder, for, the blog, post, content. The, original, content had, syntax, errors
-            that, prevented, proper parsi, n, g. Please, update, this content, with, the correct, informatio, n.
+            that, prevented, proper parsing. Please, update, this content, with, the correct, informatio, n.
           </p>
-        </d, i, v>
+        </div>
         
         <div, classNam, e="mt-8">
-          <Link, t, o="/<bl, o, g" classNa, m, e="te, x, t-cy, a, n-300, hove, r: underli, n, e">← Back, to, Blog</Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+          <Linkto="/<blog" className="text-cyan-300, hove, r: underline">← Back, to, Blog</Link>
+        </div>
+      </div>
+    </div > );
  }

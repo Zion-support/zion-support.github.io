@@ -1,262 +1,261 @@
-import, React, from 'rea, c, t';
-impo, r, t {
-  ArrowLe, f, t,
-  ArrowRig, h, t,
-  Awa, r, d,
-  Bra, i, n,
-  Calend, a, r,
-  CheckCirc, l, e,
-  Clo, c, k,
-  DollarSi, g, n,
-  Glo, b, e,
-  Rock, e, t,
-  Satelli, t, e,
-  Shar, e, 2,
-  Bookma, r, k,
-  T, a, g,
-  Targ, e, t,
-  Trending, U, p,
-  Use, r, s,
-  Us, e, r,
-  Z, a, p,
-  BarChar, t, 3,
-  BookOp, e, n,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, NewServicesPromoBanner202, 6: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, p, y-12, relative, overflow-hi, d, d, e, n' > {' ' }
+import React from 'react';
+import { ArrowLeft,
+  ArrowRight,
+  Award,
+  Brain,
+  Calendar,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Globe,
+  Rocket,
+  Satellite,
+  Share2,
+  Bookmark,
+  Tag,
+  Target,
+  TrendingUp,
+  Users,
+  User,
+  Zap,
+  BarChart3,
+  BookOpen,
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+const, NewServicesPromoBanner202, 6: React.FC = () => { 
+  return (
+    <div, classNam, e = 'bg-gradient-to-r, fro, m-emerald-900, vi, a-teal-900to-cyan-900py-12, relative, overflow-hidd, e, n' > {' ' }
       {/* Animated, background, elements */}
-      <div, classNam, e = 'absolute, inse, t-0, overflo, w-hidd, e, n'>
-        <div, classNam, e='absolu, t, e -t, o, p-20 -rig, h, t-2, 0, w-4, 0, h-40, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolu, t, e -bott, o, m-20 -le, f, t-2, 0, w-4, 0, h-40, b, g-te, a, l-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+      <div, classNam, e = 'absolute, inse, t-0, overflo, w-hidden'>
+        <div, classNam, e='absolute -top-20 -right-20w-40h-40bg-emerald-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute -bottom-20 -left-20w-40h-40bg-teal-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse'
+          style={{ animationDelay: ', 2, s' }}
          />
-        <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 0, h-60, b, g-cy, a, n-5, 0, 0/10, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 4, s' }}
+        <div, classNam, e = 'absolute, to, p-1/2, lef, t-1/2, transfor, m -translate-x-1/2 -translate-y-1/2 w-60h-60bg-cyan-500/10, rounde, d-full, blu, r-3xl, animat, e-pulse'
+          style={{ animationDelay: ', 4, s' }}
          />
-      </d, i, v>
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'>
-        <div, classNam, e='te, x, t-center, m, b-12'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, m, b-6'>
-            <Star, classNam, e='w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e' />
-            <span, classNam, e='te, x, t-2xl, fon, t-bold, uppercase, tracking-wider, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+      </div>
+      <div, classNam, e = 'max-w-7xlmx-autopx-4sm: px-6lg:px-8, relative, z-10'>
+        <div, classNam, e='text-centermb-12'>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-3mb-6'>
+            <Star, classNam, e='w-6 h-6, tex, t-yellow-400, animat, e-pulse' />
+            <span, classNam, e='text-2xl, fon, t-bold, uppercase, tracking-widerbg-gradient-to-r, fro, m-yellow-400to-orange-400bg-clip-text, tex, t-transparent'>
               🔥 NEW, SERVICES, LAUNCH - JANUARY, 202, 6
-            </sp, a, n>
-            <Star, classNam, e='w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e' />
-          </d, i, v>
-          <h2, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-white, vi, a-emera, l, d-200, t, o-te, a, l-200, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+            </span>
+            <Star, classNam, e='w-6 h-6, tex, t-yellow-400, animat, e-pulse' />
+          </div>
+          <h2, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-6bg-gradient-to-r, fro, m-white, vi, a-emerald-200to-teal-200bg-clip-text, tex, t-transparent'>
             Revolutionary, AI, Services That, Will, Transform Your, Busines, s
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-4xl, m, x-auto, m, b-8'>
-            Three, breakthrough, services that, are, already delive, r, i, n, g{' '}
-            <span, classNam, e = 'fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
+          <p, classNam, e='text-xl, tex, t-emerald-100, ma, x-w-4xlmx-automb-8'>
+            Three, breakthrough, services that, are, already deliveri, n, g{' '}
+            <span, classNam, e = 'font-bold, tex, t-yellow-300'>
               $2.8B+ in, enterprise, value
-            </sp, a, n>{' '}
+            </span>{' '}
             and, revolutionizing, how companies, operat, e. Join, the, AI revolution, toda, y.
           </p>
-        </d, i, v>
-        <div, classNam, e='grid, l, g: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          {/* Quantum, Edge, Fusion Plat, f, o, r, m */}
-          <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/60, t, o-purp, l, e-8, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/40, hove, r: bord, e, r-bl, u, e-4, 0, 0/70, transitio, n-all, duratio, n-500, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, grou, p'>
-            <div, classNam, e='te, x, t-center, m, b-6'>
-              <div, classNam, e='bg-bl, u, e-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r:bg-bl, u, e-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-bl, u, e-4, 0, 0/30, shado, w-lg'>
-                <Zap, classNam, e='w-1, 0, h-10, tex, t-bl, u, e-400, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0' />
-              </d, i, v>
-              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-                Quantum, Edge, Fusion Platfo, r, m
+        </div>
+        <div, classNam, e='gridlg: grid-cols-3, ga, p-8mb-12'>
+          {/* Quantum, Edge, Fusion Platfo, r, m */}
+          <div, classNam, e = 'bg-gradient-to-br, fro, m-blue-800/60to-purple-800/60, backdro, p-blur-sm, rounde, d-2xlp-8, borde, r-2, borde, r-blue-400/40, hove, r: border-blue-400/70, transitio, n-all, duratio, n-500, hove, r:scale-105, hove, r:shadow-2xl, grou, p'>
+            <div, classNam, e='text-centermb-6'>
+              <div, classNam, e='bg-blue-500/20w-20h-20, rounde, d-2xl, flex, items-center, justif, y-centermx-automb-4, grou, p-hover:bg-blue-500/30, transitio, n-colors, borde, r-2, borde, r-blue-400/30, shado, w-lg'>
+                <Zap, classNam, e='w-10h-10, tex, t-blue-400, grou, p-hover:scale-110, transitio, n-transform, duratio, n-300' />
+              </div>
+              <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
+                Quantum, Edge, Fusion Platform
               </h3>
-              <div, classNam, e='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
-                Starting, a, t $, 2, 5,0, 0, 0/mon, t, h
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'spa, c, e-y-4, m, b-6'>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>1000x, Speed, Improvement</sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>S, u, b-millisecond, Latenc, y</sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>99.99% Reliabili, t, y</sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>90% Energy, Reductio, n</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-4, m, b-6, border, border-bl, u, e-4, 0, 0/30'>
-              <div, classNam, e='te, x, t-cent, e, r'>
-                <div, classNam, e='te, x, t-bl, u, e-300, fon, t-bold, tex, t-lg, m, b-1'>
+              <div, classNam, e='text-blue-300, fon, t-semibold'>
+                Startingat $, 250, 0, 0/month
+              </div>
+            </div>
+            <div, classNam, e = 'space-y-4mb-6'>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>1000x, Speed, Improvement</span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>Sub-millisecond, Latenc, y</span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>99.99% Reliability</span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>90% Energy, Reductio, n</span>
+              </div>
+            </div>
+            <div, classNam, e='bg-blue-500/20, rounde, d-xlp-4mb-6, border, border-blue-400/30'>
+              <div, classNam, e='text-center'>
+                <div, classNam, e='text-blue-300, fon, t-bold, tex, t-lgmb-1'>
                   $2.8B, Revenue, Impact
-                </d, i, v>
-                <div, classNam, e='te, x, t-bl, u, e-200, tex, t-sm'>
+                </div>
+                <div, classNam, e='text-blue-200, tex, t-sm'>
                   Fortune, 500, Retail Case, Stud, y
-                </d, i, v>
-                <div, classNam, e='te, x, t-bl, u, e-200, tex, t-sm'>
+                </div>
+                <div, classNam, e='text-blue-200, tex, t-sm'>
                   67% Faster, Decision, Making
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o='/servic, e, s/quant, u, m-ed, g, e-fusi, o, n-platfo, r, m'
-              classNa, m, e='bloc, k, w-full, tex, t-center, b, g-bl, u, e-600, hove, r: bg-bl, u, e-700, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl'
+                </div>
+              </div>
+            </div>
+            <Linkto='/services/quantum-edge-fusion-platform'
+              className='blockw-full, tex, t-centerbg-blue-600, hove, r: bg-blue-700, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, hove, r:scale-105, shado, w-lg, hove, r:shadow-xl'
             >
               Get, Started, Today
-            </Li, n, k>
-          </d, i, v>
-          {/* Synthetic, Consciousness, AI Plat, f, o, r, m */}
-          <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-pi, n, k-8, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/40, hove, r: bord, e, r-purp, l, e-4, 0, 0/70, transitio, n-all, duratio, n-500, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, grou, p'>
-            <div, classNam, e='te, x, t-center, m, b-6'>
-              <div, classNam, e='bg-purp, l, e-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r:bg-purp, l, e-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-purp, l, e-4, 0, 0/30, shado, w-lg'>
-                <Brain, classNam, e='w-1, 0, h-10, tex, t-purp, l, e-400, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0' />
-              </d, i, v>
-              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+            </Link>
+          </div>
+          {/* Synthetic, Consciousness, AI Platfo, r, m */}
+          <div, classNam, e = 'bg-gradient-to-br, fro, m-purple-800/60to-pink-800/60, backdro, p-blur-sm, rounde, d-2xlp-8, borde, r-2, borde, r-purple-400/40, hove, r: border-purple-400/70, transitio, n-all, duratio, n-500, hove, r:scale-105, hove, r:shadow-2xl, grou, p'>
+            <div, classNam, e='text-centermb-6'>
+              <div, classNam, e='bg-purple-500/20w-20h-20, rounde, d-2xl, flex, items-center, justif, y-centermx-automb-4, grou, p-hover:bg-purple-500/30, transitio, n-colors, borde, r-2, borde, r-purple-400/30, shado, w-lg'>
+                <Brain, classNam, e='w-10h-10, tex, t-purple-400, grou, p-hover:scale-110, transitio, n-transform, duratio, n-300' />
+              </div>
+              <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
                 Synthetic, Consciousness, AI
               </h3>
-              <div, classNam, e='te, x, t-purp, l, e-300, fon, t-semibo, l, d'>
-                Starting, a, t $, 5, 0,0, 0, 0/mon, t, h
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'spa, c, e-y-4, m, b-6'>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>
+              <div, classNam, e='text-purple-300, fon, t-semibold'>
+                Startingat $, 500, 0, 0/month
+              </div>
+            </div>
+            <div, classNam, e = 'space-y-4mb-6'>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>
                   98.7% Consciousness, Accurac, y
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>
                   94% Emotional, Intelligenc, e
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>87% Creative, Originalit, y</sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>99.2% Ethical, Alignmen, t</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-4, m, b-6, border, border-purp, l, e-4, 0, 0/30'>
-              <div, classNam, e='te, x, t-cent, e, r'>
-                <div, classNam, e='te, x, t-purp, l, e-300, fon, t-bold, tex, t-lg, m, b-1'>
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>87% Creative, Originalit, y</span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>99.2% Ethical, Alignmen, t</span>
+              </div>
+            </div>
+            <div, classNam, e='bg-purple-500/20, rounde, d-xlp-4mb-6, border, border-purple-400/30'>
+              <div, classNam, e='text-center'>
+                <div, classNam, e='text-purple-300, fon, t-bold, tex, t-lgmb-1'>
                   $340M, Value, Creation
-                </d, i, v>
-                <div, classNam, e='te, x, t-purp, l, e-200, tex, t-sm'>
-                  Healthcare, Network, Case Stu, d, y
-                </d, i, v>
-                <div, classNam, e='te, x, t-purp, l, e-200, tex, t-sm'>
+                </div>
+                <div, classNam, e='text-purple-200, tex, t-sm'>
+                  Healthcare, Network, Case Study
+                </div>
+                <div, classNam, e='text-purple-200, tex, t-sm'>
                   89% Patient, Satisfactio, n
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o='/servic, e, s/synthet, i, c-consciousne, s, s-ai-platfo, r, m'
-              classNa, m, e='bloc, k, w-full, tex, t-center, b, g-purp, l, e-600, hove, r: bg-purp, l, e-700, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl'
+                </div>
+              </div>
+            </div>
+            <Linkto='/services/synthetic-consciousness-ai-platform'
+              className='blockw-full, tex, t-centerbg-purple-600, hove, r: bg-purple-700, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, hove, r:scale-105, shado, w-lg, hove, r:shadow-xl'
             >
               Explore, Platfor, m
-            </Li, n, k>
-          </d, i, v>
+            </Link>
+          </div>
           {/* Neuromorphic, Processing, Sui, t, e */}
-          <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-gre, e, n-8, 0, 0/60, t, o-te, a, l-8, 0, 0/60, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/40, hove, r: bord, e, r-gre, e, n-4, 0, 0/70, transitio, n-all, duratio, n-500, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, grou, p'>
-            <div, classNam, e='te, x, t-center, m, b-6'>
-              <div, classNam, e='bg-gre, e, n-5, 0, 0/2, 0, w-2, 0, h-20, rounde, d-2xl, flex, items-center, justif, y-center, m, x-auto, m, b-4, grou, p-hov, e, r:bg-gre, e, n-5, 0, 0/30, transitio, n-colors, borde, r-2, borde, r-gre, e, n-4, 0, 0/30, shado, w-lg'>
-                <Cpu, classNam, e='w-1, 0, h-10, tex, t-gre, e, n-400, grou, p-hov, e, r:sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0' />
-              </d, i, v>
-              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+          <div, classNam, e = 'bg-gradient-to-br, fro, m-green-800/60to-teal-800/60, backdro, p-blur-sm, rounde, d-2xlp-8, borde, r-2, borde, r-green-400/40, hove, r: border-green-400/70, transitio, n-all, duratio, n-500, hove, r:scale-105, hove, r:shadow-2xl, grou, p'>
+            <div, classNam, e='text-centermb-6'>
+              <div, classNam, e='bg-green-500/20w-20h-20, rounde, d-2xl, flex, items-center, justif, y-centermx-automb-4, grou, p-hover:bg-green-500/30, transitio, n-colors, borde, r-2, borde, r-green-400/30, shado, w-lg'>
+                <Cpu, classNam, e='w-10h-10, tex, t-green-400, grou, p-hover:scale-110, transitio, n-transform, duratio, n-300' />
+              </div>
+              <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
                 Neuromorphic, Processing, Suite
               </h3>
-              <div, classNam, e='te, x, t-gre, e, n-300, fon, t-semibo, l, d'>
-                Starting, a, t $, 1, 5,0, 0, 0/mon, t, h
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'spa, c, e-y-4, m, b-6'>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>1000x, Energy, Efficiency</sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>1, 0,000x, Speed, Improvement</sp, a, n>
-              </d, i, v>
-              <div, classNam, e = 'flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>Re, a, l-Time, Learnin, g</sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emera, l, d-1, 0, 0'>
-                <CheckCircle, classNam, e='w-5 h-5, tex, t-emera, l, d-400, fle, x-shri, n, k-0' />
-                <span, classNam, e='fo, n, t-semibo, l, d'>99.9% Cognitive, Accurac, y</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-gre, e, n-5, 0, 0/20, rounde, d-x, l, p-4, m, b-6, border, border-gre, e, n-4, 0, 0/30'>
-              <div, classNam, e='te, x, t-cent, e, r'>
-                <div, classNam, e='te, x, t-gre, e, n-300, fon, t-bold, tex, t-lg, m, b-1'>
+              <div, classNam, e='text-green-300, fon, t-semibold'>
+                Startingat $, 150, 0, 0/month
+              </div>
+            </div>
+            <div, classNam, e = 'space-y-4mb-6'>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>1000x, Energy, Efficiency</span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>1, 0,000x, Speed, Improvement</span>
+              </div>
+              <div, classNam, e = 'flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>Real-Time, Learnin, g</span>
+              </div>
+              <div, classNam, e='flex, item, s-center, ga, p-3, tex, t-emerald-100'>
+                <CheckCircle, classNam, e='w-5 h-5, tex, t-emerald-400, fle, x-shrink-0' />
+                <span, classNam, e='font-semibold'>99.9% Cognitive, Accurac, y</span>
+              </div>
+            </div>
+            <div, classNam, e='bg-green-500/20, rounde, d-xlp-4mb-6, border, border-green-400/30'>
+              <div, classNam, e='text-center'>
+                <div, classNam, e='text-green-300, fon, t-bold, tex, t-lgmb-1'>
                   $2.1B, Value, Creation
-                </d, i, v>
-                <div, classNam, e='te, x, t-gre, e, n-200, tex, t-sm'>
-                  Automotive, Manufacturer, Case Stu, d, y
-                </d, i, v>
-                <div, classNam, e='te, x, t-gre, e, n-200, tex, t-sm'>
+                </div>
+                <div, classNam, e='text-green-200, tex, t-sm'>
+                  Automotive, Manufacturer, Case Study
+                </div>
+                <div, classNam, e='text-green-200, tex, t-sm'>
                   78% Accident, Reductio, n
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o='/servic, e, s/neuromorph, i, c-processi, n, g-sui, t, e'
-              classNa, m, e='bloc, k, w-full, tex, t-center, b, g-gre, e, n-600, hove, r: bg-gre, e, n-700, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-xl'
+                </div>
+              </div>
+            </div>
+            <Linkto='/services/neuromorphic-processing-suite'
+              className='blockw-full, tex, t-centerbg-green-600, hove, r: bg-green-700, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, hove, r:scale-105, shado, w-lg, hove, r:shadow-xl'
             >
               Start, Free, Trial
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-        <div, classNam, e='te, x, t-cent, e, r'>
-          <div, classNam, e='bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-2, borde, r-yell, o, w-4, 0, 0/50, rounde, d-2x, l, p-8, m, b-8'>
-            <div, classNam, e='flex, item, s-center, justif, y-center, ga, p-3, m, b-4'>
-              <TrendingUp, classNam, e='w-8 h-8, tex, t-yell, o, w-400, animat, e-boun, c, e' />
-              <span, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-yell, o, w-3, 0, 0'>
-                EARLY, ACCESS, SPECIAL OFF, E, R
-              </sp, a, n>
-              <TrendingUp, classNam, e='w-8 h-8, tex, t-yell, o, w-400, animat, e-boun, c, e' />
-            </d, i, v>
-            <p, classNam, e='te, x, t-white, tex, t-xl, fon, t-semibold, m, b-2'>
-              🎯 Get, 4, 0% OFF, Your, First 6, Month, s + FREE, Implementatio, n
+            </Link>
+          </div>
+        </div>
+        <div, classNam, e='text-center'>
+          <div, classNam, e='bg-gradient-to-r, fro, m-yellow-500/20to-orange-500/20, borde, r-2, borde, r-yellow-400/50, rounde, d-2xlp-8mb-8'>
+            <div, classNam, e='flex, item, s-center, justif, y-center, ga, p-3mb-4'>
+              <TrendingUp, classNam, e='w-8 h-8, tex, t-yellow-400, animat, e-bounce' />
+              <span, classNam, e='text-2xl, fon, t-bold, tex, t-yellow-300'>
+                EARLY, ACCESS, SPECIAL OFFER
+              </span>
+              <TrendingUp, classNam, e='w-8 h-8, tex, t-yellow-400, animat, e-bounce' />
+            </div>
+            <p, classNam, e='text-white, tex, t-xl, fon, t-semiboldmb-2'>
+              🎯 Get40% OFF, Your, First 6, Month, s + FREE, Implementatio, n
             </p>
-            <p, classNam, e='te, x, t-yell, o, w-100, tex, t-lg'>
+            <p, classNam, e='text-yellow-100, tex, t-lg'>
               Limited, to, first 25, companie, s • Valid, until, March , 3, 1, 20, 2, 6 • No, setup, fees • Cancel, anytim, e
             </p>
-          </d, i, v>
-          <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, item, s-cent, e, r'>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, hove, r:fr, o, m-emera, l, d-700, hove, r:to-te, a, l-700, tex, t-white, p, x-10, p, y-4, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-xl, hove, r:shad, o, w-2, x, l'
+          </div>
+          <div, classNam, e = 'flex, fle, x-colsm: flex-row, ga, p-6, justif, y-center, item, s-center'>
+            <Linkto='/contact'
+              className='inline-flex, item, s-center, ga, p-3bg-gradient-to-r, fro, m-emerald-600to-teal-600, hove, r:from-emerald-700, hove, r:to-teal-700, tex, t-whitepx-10py-4, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:scale-105, shado, w-xl, hove, r:shadow-2xl'
             >
               <Shield, classNam, e='w-6 h-6' />
               Get, Started, Now
               <ArrowRight, classNam, e='w-6 h-6' />
-            </Li, n, k>
-            <Link, t, o='/servic, e, s'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-3, borde, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:te, x, t-emera, l, d-900, p, x-10, p, y-4, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'
+            </Link>
+            <Linkto='/services'
+              className='inline-flex, item, s-center, ga, p-3, borde, r-2, borde, r-white, tex, t-white, hove, r:bg-white, hove, r:text-emerald-900px-10py-4, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, hove, r:scale-105'
             >
               <Star, classNam, e='w-6 h-6' />
               View, All, Services
-            </Li, n, k>
-          </d, i, v>
-          <div, classNam, e='mt-8, tex, t-lg, tex, t-emera, l, d-2, 0, 0'>
-            <span, classNam, e='fo, n, t-bo, l, d'>
+            </Link>
+          </div>
+          <div, classNam, e='mt-8, tex, t-lg, tex, t-emerald-200'>
+            <span, classNam, e='font-bold'>
               Trusted, by, 500+ companies, worldwid, e
-            </sp, a, n>{' '}
+            </span>{' '}
             •
-            <span, classNam, e = 'fo, n, t-bold, tex, t-yell, o, w-3, 0, 0'>
+            <span, classNam, e = 'font-bold, tex, t-yellow-300'>
               {' '}
-              $1, 5, B+ in, value, created
-            </sp, a, n>{' '}
-            •<span, classNam, e='fo, n, t-bo, l, d'> 99.9% customer, satisfactio, n</sp, a, n> •
-            <span, classNam, e='fo, n, t-bo, l, d'> 24/7, expert, support</sp, a, n>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+              $15B+ in, value, created
+            </span>{' '}
+            •<span, classNam, e='font-bold'> 99.9% customer, satisfactio, n</span> •
+            <span, classNam, e='font-bold'> 24/7, expert, support</span>
+          </div>
+        </div>
+      </div>
     </di, v>
   );
 };

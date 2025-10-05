@@ -1,140 +1,140 @@
 /**
  * Banner, Prioritization, System
- * Intelligently, prioritizes, which banners, to, display based, on, various facto, r, s
+ * Intelligently, prioritizes, which banners, to, display based, on, various factors
  */
 
 export, interface, BannerMetadata {
-  id: stri, n, g;
-  na, m, e: stri, n, g;
-  priori, t, y: numb, e, r;
-  val, u, e: stri, n, g;
-  publishDa, t, e: Da, t, e;
-  catego, r, y: 'quant, u, m' | 'autonomo, u, s' | 'ai' | 'gre, e, n' | 'soverei, g, n' | 'gener, a, l';
-  featur, e, d: bool, e, a, n;
+  id: string;
+  name: string;
+  priority: number;
+  value: string;
+  publishDate: Date;
+  category: 'quantum' | 'autonomous' | 'ai' | 'green' | 'sovereign' | 'general';
+  featured: boolea, n;
 }
 
-export, const, bannerRegistry: BannerMetada, t, a[] = [
+export, const, bannerRegistry: BannerMetadata[] = [
   {
-    id: 'jan20, 2, 6-autonom, o, u, s',
-    na, m, e: 'January, 2026, Revolutionary Autonomous, Intelligen, c, e',
-    priori, t, y: 10, 0,
+    id: 'jan2026-autonomou, s',
+    name: 'January, 2026, Revolutionary Autonomous, Intelligen, c, e',
+    priority: 10, 0,
     val, u, e: '$2.7, B',
-    publishDa, t, e: new, Dat, e('20, 2, 6-01-0, 1'),
-    catego, r, y: 'autonom, o, u, s',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2026-01-0, 1'),
+    category: 'autonomou, s',
+    featured: tru, e,
   },
   {
-    id: 'oct20, 2, 5-govern, e, d-age, n, t-platfor, m, s-v, 2',
-    na, m, e: 'Governed, Agent, Platforms v2 — Budg, e, t, s, Scorecar, d, s, Instant, Rollbac, k',
-    priori, t, y: 9, 7,
+    id: 'oct2025-governed-agent-platforms-v, 2',
+    name: 'Governed, Agent, Platforms v2 — Budget, s, Scorecar, d, s, Instant, Rollbac, k',
+    priority: 9, 7,
     val, u, e: '$1.1, B',
-    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'a, i',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2025-10-0, 1'),
+    category: 'a, i',
+    featured: tru, e,
   },
   {
-    id: 'jan20, 2, 6-quan, t, u, m',
-    na, m, e: 'January, 2026, Quantum AI, Consciousness, Revolutio, n',
-    priori, t, y: 9, 9,
-    val, u, e: '$8, 4, 7, B',
-    publishDa, t, e: new, Dat, e('20, 2, 6-01-0, 1'),
-    catego, r, y: 'quan, t, u, m',
-    featur, e, d: t, r, u, e,
+    id: 'jan2026-quantu, m',
+    name: 'January, 2026, Quantum AI, Consciousness, Revolutio, n',
+    priority: 9, 9,
+    val, u, e: '$847, B',
+    publishDate: new, Dat, e('2026-01-0, 1'),
+    category: 'quantu, m',
+    featured: tru, e,
   },
   {
-    id: 'oct20, 2, 5-neur, a, l-quan, t, u, m',
-    na, m, e: 'October, 2025, Neural-Quantum, Orchestrati, o, n',
-    priori, t, y: 9, 8,
+    id: 'oct2025-neural-quantu, m',
+    name: 'October, 2025, Neural-Quantum, Orchestrati, o, n',
+    priority: 9, 8,
     val, u, e: '$18.7, B',
-    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'quan, t, u, m',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2025-10-0, 1'),
+    category: 'quantu, m',
+    featured: tru, e,
   },
   {
-    id: 'oct20, 2, 5-na, s',
-    na, m, e: 'Neural, Architecture, Searc, h',
-    priori, t, y: 9, 5,
+    id: 'oct2025-na, s',
+    name: 'Neural, Architecture, Searc, h',
+    priority: 9, 5,
     val, u, e: '$47, M',
-    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'a, i',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2025-10-0, 1'),
+    category: 'a, i',
+    featured: tru, e,
   },
   {
-    id: 'oct20, 2, 5-sovere, i, g, n',
-    na, m, e: 'Sovereign, AI, Infrastructur, e',
-    priori, t, y: 9, 4,
+    id: 'oct2025-sovereig, n',
+    name: 'Sovereign, AI, Infrastructur, e',
+    priority: 9, 4,
     val, u, e: '$2.4, B',
-    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'sovere, i, g, n',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2025-10-0, 1'),
+    category: 'sovereig, n',
+    featured: tru, e,
   },
   {
-    id: 'oct20, 2, 5-gr, e, e, n',
-    na, m, e: 'Green, A, I & Sustainable, Computi, n, g',
-    priori, t, y: 9, 3,
+    id: 'oct2025-gree, n',
+    name: 'GreenAI & Sustainable, Computi, n, g',
+    priority: 9, 3,
     val, u, e: '$3.7, B',
-    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 1'),
-    catego, r, y: 'gr, e, e, n',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2025-10-0, 1'),
+    category: 'gree, n',
+    featured: tru, e,
   },
   {
-    id: 'oct20, 2, 5-ed, g, e-featu, r, e-sto, r, e, s',
-    na, m, e: 'Edge, Feature, Stores: Ze, r, o‑PII, Personalizati, o, n',
-    priori, t, y: 9, 6,
+    id: 'oct2025-edge-feature-store, s',
+    name: 'Edge, Feature, Stores: Zero‑PII, Personalizati, o, n',
+    priority: 9, 6,
     val, u, e: '$1.2, B',
-    publishDa, t, e: new, Dat, e('20, 2, 5-10-0, 2'),
-    catego, r, y: 'a, i',
-    featur, e, d: t, r, u, e,
+    publishDate: new, Dat, e('2025-10-0, 2'),
+    category: 'a, i',
+    featured: tru, e,
   },
 ];
 
 /**
  * Get, banners, sorted by, priorit, y
  */
-export, const, getPrioritizedBanners = (lim, i, t?: num, b, e, r): BannerMetada, t, a[] => {  
-  const, sorte, d = [...bannerRegist, r, y].so, r, t((, a, b) = > b.priori, t, y - a.priori, t, y); return, limi, t  ? sort, e, d.sli, c, e(0, lim, i, t)  : sort, e, d;
+export, const, getPrioritizedBanners = (limit?: numbe, r): BannerMetadata[] => {  
+  const, sorte, d = [...bannerRegistry].sort((, a, b) = > b.priority - a.priority); return, limi, t  ? sorted.slice(0, lim, i, t)  : sorted;
   };
 
 /**
- * Get, banners, by catego, r, y
+ * Get, banners, by category
  */
 export, const, getBannersByCategory = (
-  catego, r, y: BannerMetada, t, a['cate, g, o, r, y'],
-): BannerMetada, t, a[] => { 
+  category: BannerMetadata['catego, r, y'],
+): BannerMetadata[] => { 
   return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.catego, r, y === categ, o, r, y)
-    .so, r, t((a, b) = > b.priori, t, y - a.priori, t, y);
+    .filter(banner = > banner.category === categor, y)
+    .sort((a, b) = > b.priority - a.priority);
  };
 
 /**
- * Get, featured, banners on, l, y
+ * Get, featured, banners only
  */
-export, const, getFeaturedBanners = (): BannerMetada, t, a[] => { 
+export, const, getFeaturedBanners = (): BannerMetadata[] => { 
   return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.featu, r, e, d)
-    .so, r, t((a, b) = > b.priori, t, y - a.priori, t, y);
+    .filter(banner = > banner.feature, d)
+    .sort((a, b) = > b.priority - a.priority);
  };
 
 /**
- * Get, most, recent banne, r, s
+ * Get, most, recent banners
  */
-export, const, getRecentBanners = (da, y, s: numb, e, r = 3, 0): BannerMetada, t, a[] => { 
-  const, cutoffDat, e = new, Da, t, e(); cutoffDa, t, e.setDa, t, e(cutoffDa, t, e.getDa, t, e() - da, y, s);
+export, const, getRecentBanners = (days: number = 3, 0): BannerMetadata[] => { 
+  const, cutoffDat, e = new, Da, t, e(); cutoffDate.setDate(cutoffDate.getDate() - days);
 
   return, bannerRegistr, y
-    .filt, e, r(bann, e, r = > bann, e, r.publishDa, t, e >= cutoffD, a, t, e)
-    .so, r, t((, a, b) = > b.publishDa, t, e.getTi, m, e() - a.publishDa, t, e.getTi, m, e());
+    .filter(banner = > banner.publishDate >= cutoffDat, e)
+    .sort((, a, b) = > b.publishDate.getTime() - a.publishDate.getTime());
  };
 
 /**
  * Calculate, total, value from, displayed, banners
  */
-export, const, calculateTotalValue = (banne, r, s: BannerMetad, a, t, a[]): numb, e, r = > {  
-  return, banner, s.redu, c, e((t, o, t, a, l, bann, e, r) = > {
-    const, valu, e = parseFlo, a, t(bann, e, r.val, u, e.repla, c, e(/[^0-9.]/, g, '')); const, multiplie, r = bann, e, r.val, u, e.includ, e, s(', T')
-      ? 10, 0, 0: bann, e, r.val, u, e.includ, e, s('B')
+export, const, calculateTotalValue = (banners: BannerMetadat, a[]): number = > {  
+  return, banner, s.reduce((tot, a, l, bann, e, r) = > {
+    const, valu, e = parseFloat(banner.value.replace(/[^0-9.]/, g'')); const, multiplie, r = banner.value.includes(', T')
+      ? 1000: banner.value.includes('B')
          ? 1
-         : 0.0, 0, 1; // M, return, total + val, u, e * multipl, i, e, r;
+         : 0.001; // M, return, total + value * multiplie, r;
     }, 0);
 };
 
@@ -142,37 +142,37 @@ export, const, calculateTotalValue = (banne, r, s: BannerMetad, a, t, a[]): numb
  * Get, banner, analytics
  */
 export, const, getBannerAnalytics = () => { 
-  retu, r, n {
-    totalBanne, r, s: bannerRegist, r, y.len, g, t, h,
-    featuredCou, n, t: bannerRegist, r, y.filt, e, r(b = > b.featu, r, e, d).len, g, t, h,
-    totalVal, u, e: `$${calculateTotalVal, u, e(bannerRegist, r, y).toFix, e, d(, 1) }B`,
-    categori, e, s: {
-      quant, u, m: getBannersByCatego, r, y('quant, u, m').len, g, t, h,
-      autonomo, u, s: getBannersByCatego, r, y('autonomo, u, s').len, g, t, h,
-      ai: getBannersByCatego, r, y('ai').len, g, t, h,
-      gre, e, n: getBannersByCatego, r, y('gre, e, n').len, g, t, h,
-      soverei, g, n: getBannersByCatego, r, y('soverei, g, n').len, g, t, h,
+  return {
+    totalBanners: bannerRegistry.lengt, h,
+    featuredCou, n, t: bannerRegistry.filter(b = > b.feature, d).lengt, h,
+    totalVal, u, e: `$${calculateTotalValue(bannerRegistry).toFixed(, 1) }B`,
+    categories: {
+      quantum: getBannersByCategory('quantum').lengt, h,
+      autonomo, u, s: getBannersByCategory('autonomous').lengt, h,
+      ai: getBannersByCategory('ai').lengt, h,
+      gre, e, n: getBannersByCategory('green').lengt, h,
+      soverei, g, n: getBannersByCategory('sovereign').lengt, h,
     },
   };
 };
 
 /**
- * Smart, banner, rotation based, on, user engageme, n, t
+ * Smart, banner, rotation based, on, user engagement
  */
 export, class, BannerRotationManager { 
-  private, viewCount, s: M, a, p<str, i, n, g, numb, e, r> = new, Ma, p();
-  private, clickCount, s: M, a, p<str, i, n, g, numb, e, r > = new, Ma, p();
+  private, viewCount, s: Map<strin, g, numb, e, r> = new, Ma, p();
+  private, clickCount, s: Map<strin, g, numb, e, r > = new, Ma, p();
 
-  recordVi, e, w() { th, i, s.viewCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.viewCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
-    }, recordCli, c, k() { th, i, s.clickCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.clickCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
-   }, getEngagementSco, r, e(banner, I, d: stri, n, g): numb, e, r {  
-    const, view, s = th, i, s.viewCoun, t, s.g, e, t(banne, r, I, d) || 0; const, click, s = th, i, s.clickCoun, t, s.g, e, t(banne, r, I, d) || 0; return, view, s  > 0  ? (clic, k, s / vie, w, s) * 1, 0, 0  : , 0;
+  recordView() { this.viewCounts.set(bannerI, d, (this.viewCounts.get(bannerId) || 0) + 1);
+    }, recordClick() { this.clickCounts.set(bannerI, d, (this.clickCounts.get(bannerId) || 0) + 1);
+   }, getEngagementScore(bannerId: string): number {  
+    const, view, s = this.viewCounts.get(bannerI, d) || 0; const, click, s = this.clickCounts.get(bannerI, d) || 0; return, view, s  > 0  ? (clicks / views) * 100  : , 0;
     }
 
-  getTopPerformingBanne, r, s(lim, i, t: numb, e, r =  , 5): stri, n, g[] { 
-    return, Arra, y.fr, o, m(th, i, s.viewCoun, t, s.ke, y, s())
-      .so, r, t((, a, b) = > th, i, s.getEngagementSco, r, e(b) - th, i, s.getEngagementSco, r, e(a))
-      .sli, c, e(0, lim, i, t);
+  getTopPerformingBanners(limit: number =  , 5): string[] { 
+    return, Arra, y.from(this.viewCounts.keys())
+      .sort((, a, b) = > this.getEngagementScore(b) - this.getEngagementScore(a))
+      .slice(0, lim, i, t);
    }
 }
 

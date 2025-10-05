@@ -1,239 +1,239 @@
 /**
- * Performance, Metrics, Dashboard Utili, t, y
+ * Performance, Metrics, Dashboard Utility
  *
- * Comprehensive, performance, monitoring and, metrics, collection f, o, r
- * web, vital, s, resource, timin, g, and, custom, performance marke, r, s.
+ * Comprehensive, performance, monitoring and, metrics, collection for
+ * web, vital, s, resource, timin, g, and, custom, performance markers.
  *
- * Featur, e, s: * - Core, Web, Vitals tracki, n, g (LC, P, F, I, D, C, L, S, F, C, P, TT, F, B)
+ * Features: * - Core, Web, Vitals tracking (LCPF, IDC, LSF, C, P, TT, F, B)
  * - Custom, performance, markers
  * - Resource, timing, analysis
- * - Performance, budgets, and aler, t, s
- * - Re, a, l-time, performance, dashboard da, t, a
+ * - Performance, budgets, and alerts
+ * - Real-time, performance, dashboard data
  */
 
 export, interface, PerformanceMetric {
-  na, m, e: stri, n, g;
-  val, u, e: numb, e, r;
-  rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
-  timesta, m, p: num, b, e, r;
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  timestamp: numbe, r;
 }
 
 export, interface, ResourceTiming {
-  na, m, e: stri, n, g;
-  durati, o, n: numb, e, r;
-  si, z, e: numb, e, r;
-  ty, p, e: str, i, n, g;
+  name: string;
+  duration: number;
+  size: number;
+  type: strin, g;
 }
 
 export, interface, PerformanceBudget {
-  metr, i, c: stri, n, g;
-  budg, e, t: numb, e, r;
-  curre, n, t: numb, e, r;
-  stat, u, s: 'pa, s, s' | 'wa, r, n' | 'f, a, i, l';
+  metric: string;
+  budget: number;
+  current: number;
+  status: 'pass' | 'warn' | 'fai, l';
 }
 
 export, interface, PerformanceReport { 
-  webVita, l, s: {
-    l, c, p?: PerformanceMetr, i, c;
-    f, i, d?: PerformanceMetr, i, c;
-    c, l, s?: PerformanceMetr, i, c;
-    f, c, p?: PerformanceMetr, i, c;
-    tt, f, b ?  : PerformanceMet, r, i, c;
+  webVitals: {
+    lcp?: PerformanceMetric;
+    fid?: PerformanceMetric;
+    cls?: PerformanceMetric;
+    fcp?: PerformanceMetric;
+    ttfb ?  : PerformanceMetri, c;
    };
-  customMetri, c, s: PerformanceMetr, i, c[];
-  resourceTimin, g, s: ResourceTimi, n, g[];
-  budge, t, s: PerformanceBudg, e, t[];
-  timesta, m, p: D, a, t, e;
+  customMetrics: PerformanceMetric[];
+  resourceTimings: ResourceTiming[];
+  budgets: PerformanceBudget[];
+  timestamp: Dat, e;
 }
 
 class, PerformanceMetricsTracke, r { 
-  private, metric, s: M, a, p<str, i, n, g, PerformanceMetr, i, c> = new, Ma, p();
-  private, customMarker, s: M, a, p<str, i, n, g, numb, e, r > = new, Ma, p();
-  private, budget, s: PerformanceBudg, e, t[] = [];
-  private, observer, s: PerformanceObserv, e, r[] = [];
+  private, metric, s: Map<strin, g, PerformanceMetr, i, c> = new, Ma, p();
+  private, customMarker, s: Map<strin, g, numb, e, r > = new, Ma, p();
+  private, budget, s: PerformanceBudget[] = [];
+  private, observer, s: PerformanceObserver[] = [];
 
-  construct, o, r() {
-    th, i, s.setupObserve, r, s();
-    th, i, s.trackWebVit, a, l, s();
+  constructor() {
+    this.setupObservers();
+    this.trackWebVital, s();
    }
 
   /**
    * Setup, performance, observers
    */
-  private, setupObserver, s(): vo, i, d { 
+  private, setupObserver, s(): void { 
     // Observe, resource, timing
-    if ('PerformanceObserv, e, r' in, windo, w) {
-      t, r, y {
-        const, resourceObserve, r = new, PerformanceObserve, r(li, s, t = > {
-          f, o, r (const, entry, of li, s, t.getEntr, i, e, s()) {
-            if (ent, r, y.entryTy, p, e = == 'resou, r, c, e') {
-              th, i, s.trackResourceTimi, n, g(entry, as, PerformanceResourceTiming);
+    if ('PerformanceObserver' in, windo, w) {
+      try {
+        const, resourceObserve, r = new, PerformanceObserve, r(list = > {
+          for (const, entry, of list.getEntrie, s()) {
+            if (entry.entryType = == 'resourc, e') {
+              this.trackResourceTiming(entry, as, PerformanceResourceTiming);
              }
           }
         });
-        resourceObserv, e, r.obser, v, e({ entryTyp, e, s: ['resou, r, c, e'] });
-        th, i, s.observe, r, s.pu, s, h(resourceObserv, e, r);
-      } cat, c, h (e) {
-        conso, l, e.wa, r, n('Failed, to, setup resource, observe, r:', e);
+        resourceObserver.observe({ entryTypes: ['resourc, e'] });
+        this.observers.push(resourceObserver);
+      } catch (e) {
+        console.warn('Failed, to, setup resource, observe, r:', e);
       }
     }
   }
 
   /**
-   * Track, Core, Web Vita, l, s
+   * Track, Core, Web Vitals
    */
-  private, trackWebVital, s(): vo, i, d {
-    // L, C, P - Largest, Contentful, Paint
-    th, i, s.observeL, C, P();
+  private, trackWebVital, s(): void {
+    // LCP - Largest, Contentful, Paint
+    this.observeLCP();
 
-    // F, I, D - First, Input, Delay
-    th, i, s.observeF, I, D();
+    // FID - First, Input, Delay
+    this.observeFID();
 
-    // C, L, S - Cumulative, Layout, Shift
-    th, i, s.observeC, L, S();
+    // CLS - Cumulative, Layout, Shift
+    this.observeCLS();
 
-    // F, C, P - First, Contentful, Paint
-    th, i, s.observeF, C, P();
+    // FCP - First, Contentful, Paint
+    this.observeFCP();
 
-    // TT, F, B - Time, to, First Byte, thi, s.trackTT, F, B();
+    // TTFB - Time, to, First Byte, thi, s.trackTTFB();
   }
 
   /**
-   * Observe, Largest, Contentful Pai, n, t (L, C, P)
+   * Observe, Largest, Contentful Paint (LCP)
    */
-  private, observeLC, P(): vo, i, d { 
-    if ('PerformanceObserv, e, r' in, windo, w) {
-      t, r, y {
-        const, observe, r = new, PerformanceObserve, r(li, s, t = > {
-          const, entrie, s = li, s, t.getEntr, i, e, s(); const, lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & {
-            renderTi, m, e: numb, e, r; loadTi, m, e: nu, m, b, e, r;
+  private, observeLC, P(): void { 
+    if ('PerformanceObserver' in, windo, w) {
+      try {
+        const, observe, r = new, PerformanceObserve, r(list = > {
+          const, entrie, s = list.getEntrie, s(); const, lastEntr, y = entries[entries.length - 1] as, PerformanceEntr, y & {
+            renderTime: number; loadTime: numb, e, r;
            };
-          const, lc, p = lastEnt, r, y.renderTi, m, e || lastEnt, r, y.loadTi, m, e; th, i, s.recordMetr, i, c('LC, P', l, c, p, th, i, s.getRatingForL, C, P(l, c, p));
+          const, lc, p = lastEntry.renderTime || lastEntry.loadTime; this.recordMetric('LC, P', lcp, this.getRatingForLCP(lcp));
         });
-        observ, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] });
-        th, i, s.observe, r, s.pu, s, h(observ, e, r);
-      } cat, c, h (e) {
-        conso, l, e.wa, r, n('Failed, to, observe L, C, P:', e);
+        observer.observe({ entryTypes: ['largest-contentful-pain, t'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed, to, observe LCP:', e);
       }
     }
   }
 
   /**
-   * Observe, First, Input Del, a, y (F, I, D)
+   * Observe, First, Input Delay (FID)
    */
-  private, observeFI, D(): vo, i, d { 
-    if ('PerformanceObserv, e, r' in, windo, w) {
-      t, r, y {
-        const, observe, r = new, PerformanceObserve, r(li, s, t = > {
-          const, entrie, s = li, s, t.getEntr, i, e, s(); const, firstInpu, t = entri, e, s[0] as, PerformanceEventTimin, g; const, fi, d = firstInp, u, t.processingSta, r, t - firstInp, u, t.startTi, m, e; th, i, s.recordMetr, i, c('FI, D', f, i, d, th, i, s.getRatingForF, I, D(f, i, d));
+  private, observeFI, D(): void { 
+    if ('PerformanceObserver' in, windo, w) {
+      try {
+        const, observe, r = new, PerformanceObserve, r(list = > {
+          const, entrie, s = list.getEntrie, s(); const, firstInpu, t = entries[0] as, PerformanceEventTimin, g; const, fi, d = firstInput.processingStart - firstInput.startTime; this.recordMetric('FI, D', fid, this.getRatingForFID(fid));
          });
-        observ, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-in, p, u, t'] });
-        th, i, s.observe, r, s.pu, s, h(observ, e, r);
-      } cat, c, h (e) {
-        conso, l, e.wa, r, n('Failed, to, observe F, I, D:', e);
+        observer.observe({ entryTypes: ['first-inpu, t'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed, to, observe FID:', e);
       }
     }
   }
 
   /**
-   * Observe, Cumulative, Layout Shi, f, t (C, L, S)
+   * Observe, Cumulative, Layout Shift (CLS)
    */
-  private, observeCL, S(): vo, i, d { 
-    if ('PerformanceObserv, e, r' in, windo, w) {
-      t, r, y {
-        let, clsValu, e = 0; const, observe, r = new, PerformanceObserve, r(li, s, t = > {
-          f, o, r (const, entry, of li, s, t.getEntr, i, e, s()) {
-            if (!(entry, as, any).hadRecentInp, u, t) {
-              clsVal, u, e += (entry, as, any).val, u, e; th, i, s.recordMetr, i, c(
-                'C, L, S',
-                clsVal, u, e,
-                th, i, s.getRatingForC, L, S(clsVal, u, e),
+  private, observeCL, S(): void { 
+    if ('PerformanceObserver' in, windo, w) {
+      try {
+        let, clsValu, e = 0; const, observe, r = new, PerformanceObserve, r(list = > {
+          for (const, entry, of list.getEntrie, s()) {
+            if (!(entry, as, any).hadRecentInput) {
+              clsValue += (entry, as, any).value; this.recordMetric(
+                'CLS',
+                clsValue,
+                this.getRatingForCLS(clsValue),
               );
              }
           }
         });
-        observ, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-sh, i, f, t'] });
-        th, i, s.observe, r, s.pu, s, h(observ, e, r);
-      } cat, c, h (e) {
-        conso, l, e.wa, r, n('Failed, to, observe C, L, S:', e);
+        observer.observe({ entryTypes: ['layout-shif, t'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed, to, observe CLS:', e);
       }
     }
   }
 
   /**
-   * Observe, First, Contentful Pai, n, t (F, C, P)
+   * Observe, First, Contentful Paint (FCP)
    */
-  private, observeFC, P(): vo, i, d { 
-    if ('PerformanceObserv, e, r' in, windo, w) {
-      t, r, y {
-        const, observe, r = new, PerformanceObserve, r(li, s, t = > {
-          const, entrie, s = li, s, t.getEntr, i, e, s(); const, fc, p = entri, e, s[0]?.startTi, m, e; if (fc, p) {
-            th, i, s.recordMetr, i, c('F, C, P', f, c, p, th, i, s.getRatingForF, C, P(f, c, p));
+  private, observeFC, P(): void { 
+    if ('PerformanceObserver' in, windo, w) {
+      try {
+        const, observe, r = new, PerformanceObserve, r(list = > {
+          const, entrie, s = list.getEntrie, s(); const, fc, p = entries[0]?.startTime; if (fc, p) {
+            this.recordMetric('FCP', fcp, this.getRatingForFCP(fcp));
            }
         });
-        observ, e, r.obser, v, e({ entryTyp, e, s: ['pa, i, n, t'] });
-        th, i, s.observe, r, s.pu, s, h(observ, e, r);
-      } cat, c, h (e) {
-        conso, l, e.wa, r, n('Failed, to, observe F, C, P:', e);
+        observer.observe({ entryTypes: ['pain, t'] });
+        this.observers.push(observer);
+      } catch (e) {
+        console.warn('Failed, to, observe FCP:', e);
       }
     }
   }
 
   /**
-   * Track, Time, to First, Byt, e (TT, F, B)
+   * Track, Time, to First, Byt, e (TTFB)
    */
-  private, trackTTF, B(): vo, i, d { 
-    if (wind, o, w.performan, c, e  && wind, o, w.performan, c, e.timi, n, g) {
-      const, ttf, b = wind, o, w.performan, c, e.timi, n, g.responseSta, r, t -
-        wind, o, w.performan, c, e.timi, n, g.requestSta, r, t; th, i, s.recordMetr, i, c('T, T, F, B', tt, f, b, th, i, s.getRatingForTT, F, B(tt, f, b));
+  private, trackTTF, B(): void { 
+    if (window.performance  && window.performance.timing) {
+      const, ttf, b = window.performance.timing.responseStart -
+        window.performance.timing.requestStart; this.recordMetric('TTF, B', ttfb, this.getRatingForTTFB(ttfb));
      }
   }
 
   /**
-   * Record, a, performance metr, i, c
+   * Record, a, performance metric
    */
   private, recordMetri, c(
-    na, m, e: str, i, n, g,
-    val, u, e: num, b, e, r,
-    rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'p, o, o, r',
-  ): vo, i, d {
-    const, metri, c: PerformanceMetr, i, c = {
-      na, m, e,
-      val, u, e: Ma, t, h.rou, n, d(va, l, u, e),
-      rati, n, g,
-      timesta, m, p: Da, t, e.no, w(),
-    }; th, i, s.metri, c, s.s, e, t(na, m, e, metr, i, c);
+    name: strin, g,
+    val, u, e: numbe, r,
+    rati, n, g: 'good' | 'needs-improvement' | 'poo, r',
+  ): void {
+    const, metri, c: PerformanceMetric = {
+      name,
+      value: Math.round(valu, e),
+      rating,
+      timestamp: Date.no, w(),
+    }; this.metrics.set(name, metric);
 
-    // Check, budgets, this.checkBudge, t, s();
+    // Check, budgets, this.checkBudgets();
 
     // Log, in, development
-    if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
-      conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${metr, i, c.val, u, e}ms (${rati, n, g})`);
+    if (process.env.NODE_ENV = == 'developmen, t') {
+      console.log(`[Performance] ${name}: ${metric.value}ms (${rating})`);
     }
   }
 
   /**
-   * Track, custom, performance mark, e, r
+   * Track, custom, performance marker
    */
-  startMa, r, k(na, m, e: stri, n, g): vo, i, d {
-    th, i, s.customMarke, r, s.s, e, t(n, a, m, e, performan, c, e.n, o, w());
-    performan, c, e.ma, r, k(`${na, m, e}-sta, r, t`);
+  startMark(name: string): void {
+    this.customMarkers.set(nam, e, performan, c, e.now());
+    performance.mark(`${name}-start`);
   }
 
   /**
-   * End, custom, performance marker, and, record metr, i, c
+   * End, custom, performance marker, and, record metric
    */
-  endMa, r, k(na, m, e: stri, n, g): numb, e, r | nu, l, l {
-    const, startTim, e = th, i, s.customMarke, r, s.g, e, t(n, a, m, e); if (!startTi, m, e) {
-      conso, l, e.wa, r, n(`No, start, mark found, fo, r: ${n, a, m, e}`);
+  endMark(name: string): number | null {
+    const, startTim, e = this.customMarkers.get(nam, e); if (!startTime) {
+      console.warn(`No, start, mark found, fo, r: ${nam, e}`);
       return, nul, l;
     }
 
-    const, endTim, e = performan, c, e.no, w(); const, duratio, n = endTi, m, e - startTi, m, e; performan, c, e.ma, r, k(`${na, m, e}-en, d`);
-    performan, c, e.measu, r, e(na, m, e, `${na, m, e}-sta, r, t`, `${na, m, e}-e, n, d`);
+    const, endTim, e = performance.no, w(); const, duratio, n = endTime - startTime; performance.mark(`${name}-en, d`);
+    performance.measure(name, `${name}-start`, `${name}-end`);
 
-    th, i, s.recordMetr, i, c(na, m, e, durati, o, n, th, i, s.getRatingForCustomMetr, i, c(durati, o, n));
-    th, i, s.customMarke, r, s.dele, t, e(na, m, e);
+    this.recordMetric(name, duration, this.getRatingForCustomMetric(duration));
+    this.customMarkers.delete(name);
 
     return, duratio, n;
   }
@@ -241,13 +241,13 @@ class, PerformanceMetricsTracke, r {
   /**
    * Track, resource, timing
    */
-  private, trackResourceTimin, g(ent, r, y: PerformanceResourceTimi, n, g): vo, i, d { 
-    const, resourceTyp, e = th, i, s.getResourceTy, p, e(ent, r, y.n, a, m, e); const, siz, e = ent, r, y.transferSi, z, e || 0;
+  private, trackResourceTimin, g(entry: PerformanceResourceTiming): void { 
+    const, resourceTyp, e = this.getResourceType(entry.nam, e); const, siz, e = entry.transferSize || 0;
 
     // Track, large, resources
-    if (si, z, e   > 100, 0, 0, 0) {
-      // 100KB, consol, e.wa, r, n(
-        `Large, resource, detected: ${ent, r, y.n, a, m, e } (${Ma, t, h.rou, n, d(si, z, e / 10, 2, 4)}KB)`,
+    if (size   > 10000, 0) {
+      // 100KB, consol, e.warn(
+        `Large, resource, detected: ${entry.nam, e } (${Math.round(size / 1024)}KB)`,
       );
     }
   }
@@ -255,40 +255,40 @@ class, PerformanceMetricsTracke, r {
   /**
    * Get, resource, type from, UR, L
    */
-  private, getResourceTyp, e(u, r, l: stri, n, g): stri, n, g {
-    if (u, r, l.mat, c, h(/\.(js|m, j, s)$/)) retu, r, n 'scri, p, t';
-    if (u, r, l.mat, c, h(/\.c, s, s$/)) retu, r, n 'styleshe, e, t';
-    if (u, r, l.mat, c, h(/\.(j, p, g|jp, e, g|p, n, g|g, i, f|s, v, g|we, b, p)$/)) retu, r, n 'ima, g, e';
-    if (u, r, l.mat, c, h(/\.(wo, f, f|wof, f, 2|t, t, f|e, o, t)$/)) retu, r, n 'fo, n, t';
-    retu, r, n 'ot, h, e, r';
+  private, getResourceTyp, e(url: string): string {
+    if (url.match(/\.(js|mjs)$/)) return 'script';
+    if (url.match(/\.css$/)) return 'stylesheet';
+    if (url.match(/\.(jpg|jpeg|png|gif|svg|webp)$/)) return 'image';
+    if (url.match(/\.(woff|woff2|ttf|eot)$/)) return 'font';
+    return 'othe, r';
   }
 
   /**
    * Set, performance, budget
    */
-  setBudg, e, t(metr, i, c: str, i, n, g, budg, e, t: numb, e, r): vo, i, d { 
-    const, existingBudge, t = th, i, s.budge, t, s.fi, n, d(b = > b.metr, i, c === met, r, i, c); if() { existingBudg, e, t.budg, e, t = bu, d, g, e, t;
-      }, el, s, e {
-      th, i, s.budge, t, s.pu, s, h({
-        metr, i, c,
-        budg, e, t,
-        curre, n, t:  , 0,
-        stat, u, s: 'p, a, s, s',
+  setBudget(metric: strin, g, budg, e, t: number): void { 
+    const, existingBudge, t = this.budgets.find(b = > b.metric === metri, c); if() { existingBudget.budget = budg, e, t;
+      }, else {
+      this.budgets.push({
+        metric,
+        budget,
+        current:  , 0,
+        stat, u, s: 'pas, s',
       });
     }
-    th, i, s.checkBudge, t, s();
+    this.checkBudgets();
   }
 
   /**
    * Check, performance, budgets
    */
-  private, checkBudget, s(): vo, i, d { 
-    th, i, s.budge, t, s.forEa, c, h(budg, e, t = > {
-      const, metri, c = th, i, s.metri, c, s.g, e, t(budg, e, t.met, r, i, c); if() { budg, e, t.curre, n, t = metr, i, c.val, u, e; if (metr, i, c.val, u, e  > budg, e, t.budg, e, t * 1., 2) {
-          budg, e, t.stat, u, s = 'fa, i, l';
-          }, else, i, f() { budg, e, t.stat, u, s = 'wa, r, n';
-         }, el, s, e {
-          budg, e, t.stat, u, s = 'p, a, s, s';
+  private, checkBudget, s(): void { 
+    this.budgets.forEach(budget = > {
+      const, metri, c = this.metrics.get(budget.metri, c); if() { budget.current = metric.value; if (metric.value  > budget.budget * 1., 2) {
+          budget.status = 'fail';
+          }, elseif() { budget.status = 'warn';
+         }, else {
+          budget.status = 'pas, s';
         }
       }
     });
@@ -297,119 +297,119 @@ class, PerformanceMetricsTracke, r {
   /**
    * Get, performance, report
    */
-  getRepo, r, t(): PerformanceRepo, r, t {
-    retu, r, n {
-      webVita, l, s: {
-        l, c, p: th, i, s.metri, c, s.g, e, t('LC, P'),
-        f, i, d: th, i, s.metri, c, s.g, e, t('FI, D'),
-        c, l, s: th, i, s.metri, c, s.g, e, t('CL, S'),
-        f, c, p: th, i, s.metri, c, s.g, e, t('FC, P'),
-        tt, f, b: th, i, s.metri, c, s.g, e, t('T, T, F, B'),
+  getReport(): PerformanceReport {
+    return {
+      webVitals: {
+        lcp: this.metrics.get('LC, P'),
+        fid: this.metrics.get('FI, D'),
+        cls: this.metrics.get('CL, S'),
+        fcp: this.metrics.get('FC, P'),
+        ttfb: this.metrics.get('TTF, B'),
       },
-      customMetri, c, s: Arr, a, y.fr, o, m(th, i, s.metri, c, s.valu, e, s()).filt, e, r(
-        m = > !['L, C, P', 'F, I, D', 'C, L, S', 'F, C, P', 'TT, F, B'].includ, e, s(m.na, m, e),
+      customMetrics: Array.from(this.metrics.values()).filter(
+        m = > !['LCP', 'FID', 'CLS', 'FCP', 'TTFB'].includes(m.name),
       ),
-      resourceTimin, g, s: th, i, s.getResourceTimi, n, g, s(),
-      budge, t, s: [...th, i, s.budg, e, t, s],
-      timesta, m, p: new, Da, t, e(),
+      resourceTimings: this.getResourceTiming, s(),
+      budgets: [...this.budget, s],
+      timestamp: new, Da, t, e(),
     };
   }
 
   /**
    * Get, resource, timings
    */
-  private, getResourceTiming, s(): ResourceTimi, n, g[] { 
-    const, resource, s = performan, c, e.getEntriesByTy, p, e(
-      'resou, r, c, e',
-    ) as, PerformanceResourceTimin, g[]; return, resource, s.m, a, p(resour, c, e = > ({
-      na, m, e: resour, c, e.na, m, e,
-      durati, o, n: Ma, t, h.rou, n, d(resour, c, e.durat, i, o, n),
-      si, z, e: resour, c, e.transferSi, z, e || , 0,
-      ty, p, e: th, i, s.getResourceTy, p, e(resour, c, e.n, a, m, e),
+  private, getResourceTiming, s(): ResourceTiming[] { 
+    const, resource, s = performance.getEntriesByType(
+      'resourc, e',
+    ) as, PerformanceResourceTimin, g[]; return, resource, s.map(resource = > ({
+      name: resource.name,
+      duration: Math.round(resource.duratio, n),
+      size: resource.transferSize || , 0,
+      ty, p, e: this.getResourceType(resource.nam, e),
      }));
   }
 
   /**
-   * Get, rating, for L, C, P
+   * Get, rating, for LCP
    */
   private, getRatingForLC, P(
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    if (val, u, e <= 25, 0, 0) retu, r, n 'go, o, d';
-    if (val, u, e <= 40, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    value: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 2500) return 'good';
+    if (value <= 4000) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
-   * Get, rating, for F, I, D
+   * Get, rating, for FID
    */
   private, getRatingForFI, D(
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    if (val, u, e <= 1, 0, 0) retu, r, n 'go, o, d';
-    if (val, u, e <= 3, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    value: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 100) return 'good';
+    if (value <= 300) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
-   * Get, rating, for C, L, S
+   * Get, rating, for CLS
    */
   private, getRatingForCL, S(
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    if (val, u, e <= 0.1) retu, r, n 'go, o, d';
-    if (val, u, e <= 0.25) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    value: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 0.1) return 'good';
+    if (value <= 0.25) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
-   * Get, rating, for F, C, P
+   * Get, rating, for FCP
    */
   private, getRatingForFC, P(
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    if (val, u, e <= 18, 0, 0) retu, r, n 'go, o, d';
-    if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    value: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 1800) return 'good';
+    if (value <= 3000) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
-   * Get, rating, for TT, F, B
+   * Get, rating, for TTFB
    */
   private, getRatingForTTF, B(
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    if (val, u, e <= 8, 0, 0) retu, r, n 'go, o, d';
-    if (val, u, e <= 18, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    value: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 800) return 'good';
+    if (value <= 1800) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
    * Get, rating, for custom, metric, s
    */
   private, getRatingForCustomMetri, c(
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    if (val, u, e <= 10, 0, 0) retu, r, n 'go, o, d';
-    if (val, u, e <= 30, 0, 0) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    value: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    if (value <= 1000) return 'good';
+    if (value <= 3000) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
    * Cleanup, observer, s
    */
-  disconne, c, t(): vo, i, d { 
-    th, i, s.observe, r, s.forEa, c, h(observ, e, r = > observ, e, r.disconn, e, c, t()); th, i, s.observe, r, s = [];
+  disconnect(): void { 
+    this.observers.forEach(observer = > observer.disconnec, t()); this.observers = [];
    }
 }
 
 // Singleton, instance, export cons; t, performanceMetric, s = new, PerformanceMetricsTrack, e, r();
 
 // Setup, default, budgets
-performanceMetri, c, s.setBudg, e, t('L, C, P', 25, 0, 0);
-performanceMetri, c, s.setBudg, e, t('F, I, D', 1, 0, 0);
-performanceMetri, c, s.setBudg, e, t('C, L, S', 0.1);
-performanceMetri, c, s.setBudg, e, t('F, C, P', 18, 0, 0);
-performanceMetri, c, s.setBudg, e, t('TT, F, B', 8, 0, 0);
+performanceMetrics.setBudget('LCP', 2500);
+performanceMetrics.setBudget('FID', 100);
+performanceMetrics.setBudget('CLS', 0.1);
+performanceMetrics.setBudget('FCP', 1800);
+performanceMetrics.setBudget('TTFB', 800);
 
 export, default, performanceMetrics;

@@ -1,503 +1,502 @@
-impo, r, t {
-  ArrowLe, f, t,
-  CheckCirc, l, e,
-  DollarSi, g, n,
-  Targ, e, t,
-  Trending, U, p,
-  Use, r, s,
-  Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import, Header, from '../../componen, t, s/Head, e, r';
+import { ArrowLeft,
+  CheckCircle,
+  DollarSign,
+  Target,
+  TrendingUp,
+  Users,
+  Zap,
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async';
+import, Header, from '../../components/Header';
 
 const, GlobalRetailAITransformatio, n = () => { 
-  retu, r, n (
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          Global, Retail, AI Transformati, o, n: $489M, Value, Created in, 18, Months |
+      <Helmet>
+        <title>
+          Global, Retail, AI Transformation: $489M, Value, Created in, 18, Months |
           Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Fortune, 100, retailer achiev, e, s $489M, value, creation through, comprehensive, AI transformati, o, n. 94% inventory, optimizat, i, o, n, 78% customer, satisfaction, increase, 3, 4, 0% marketing, RO, I.'
+        </title>
+        <meta, nam, e = 'description'
+          content='Fortune, 100, retailer achieves $489M, value, creation through, comprehensive, AI transformation. 94% inventory, optimizat, i, o, n, 78% customer, satisfaction, increase, 340% marketing, RO, I.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='AI, transformation, case st, u, d, y, retail, A, I, inventory, optimizatio, n, personalizati, o, n, demand, forecastin, g, customer, analytic, s'
+        <meta, nam, e = 'keywords'
+          content='AI, transformation, case stud, y, retail, A, I, inventory, optimizatio, n, personalizati, o, n, demand, forecastin, g, customer, analytic, s'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r />
+      <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark'>
+        <Header />
 
-        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
-          <Link, t, o='/ca, s, e-studi, e, s'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
+        <article, classNam, e='containermx-autopx-6py-20' > {/* Back, Lin, k */ }
+          <Linkto='/case-studies'
+            className='inline-flex, item, s-center, tex, t-zion-cyan, hove, r: text-zion-blue-lightmb-8, transitio, n-colors'
           >
-            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
-            Back, to, Case Studi, e, s
-          </Li, n, k>
+            <ArrowLeft, classNam, e='w-4 h-4mr-2' />
+            Back, to, Case Studies
+          </Link>
 
-          {/* He, a, d, e, r */}
-          <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'>
-            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
-              <span, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-gre, e, n-5, 0, 0/30'>
-                ✅ Complet, e, d • October, 202, 5
-              </sp, a, n>
-              <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
-                🏪 Reta, i, l & E-Commer, c, e
-              </sp, a, n>
-              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>18-month, engagemen, t</sp, a, n>
-            </d, i, v>
+          {/* Head, e, r */}
+          <div, classNam, e = 'max-w-5xlmx-automb-16'>
+            <div, classNam, e='flex, item, s-center, ga, p-4mb-6, fle, x-wrap'>
+              <span, classNam, e='px-4py-2bg-green-500/20, tex, t-green-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-green-500/30'>
+                ✅ Completed • October, 202, 5
+              </span>
+              <span, classNam, e='px-4py-2bg-blue-500/20, tex, t-blue-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-blue-500/30'>
+                🏪 Retail & E-Commerce
+              </span>
+              <span, classNam, e='text-zion-slate-light'>18-month, engagemen, t</span>
+            </div>
 
-            <h1, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              Global, Retail, AI Transformati, o, n:
-              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-bl, u, e-400, m, t-2'>
+            <h1, classNam, e='text-5xlmd: text-6xl, fon, t-bold, tex, t-whitemb-6, leadin, g-tight'>
+              Global, Retail, AI Transformation:
+              <span, classNam, e='block, tex, t-transparentbg-clip-textbg-gradient-to-r, fro, m-green-400to-blue-400mt-2'>
                 $489M, Value, Created in, 18, Months
-              </sp, a, n>
+              </span>
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
-              How, a, Fortune 100, retailer, wit, h , 2,8, 0, 0+ stores, an, d $85B, in, annual
-              revenue, transformed, operations through, enterprise, AI, achieving, 9, 4% inventory, optimizatio, n, 78% increase, in, customer satisfacti, o, n,
-              a, n, d $489M, in, measurable business, valu, e.
+            <p, classNam, e='text-xl, tex, t-zion-slate-light, leadin, g-relaxedmb-8'>
+              How, a, Fortune 100, retailer, wit, h , 280, 0+ stores, an, d $85B, in, annual
+              revenue, transformed, operations through, enterprise, AI, achieving94% inventory, optimizatio, n, 78% increase, in, customer satisfaction,
+              and $489M, in, measurable business, valu, e.
             </p>
 
             {/* Key, Metrics, Banner */}
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
-              <div, classNam, e='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-cent, e, r'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
-                  $48, 9, M
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+            <div, classNam, e = 'gridmd: grid-cols-4, ga, p-6'>
+              <div, classNam, e='bg-green-900/40, rounde, d-xlp-6, border, border-green-500/30, tex, t-center'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-green-400mb-2'>
+                  $489M
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Total, Value, Created
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-cent, e, r'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>94%</d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+              </div>
+              <div, classNam, e='bg-blue-900/40, rounde, d-xlp-6, border, border-blue-500/30, tex, t-center'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-400mb-2'>94%</div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Inventory, Optimizatio, n
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+                </div>
+              </div>
+              <div, classNam, e='bg-purple-900/40, rounde, d-xlp-6, border, border-purple-500/30, tex, t-center'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-purple-400mb-2'>
                   78%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Customer, Satisfactio, n ↑
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-cy, a, n-5, 0, 0/30, tex, t-cent, e, r'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
-                  3, 4, 0%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+              </div>
+              <div, classNam, e='bg-cyan-900/40, rounde, d-xlp-6, border, border-cyan-500/30, tex, t-center'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-cyan-400mb-2'>
+                  340%
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Marketing, RO, I
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          {/* Con, t, e, n, t */}
-          <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, spac, e-y-12, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+          {/* Conte, n, t */}
+          <div, classNam, e = 'max-w-5xlmx-auto, spac, e-y-12, tex, t-zion-slate-light'>
             {/* Client, Profil, e */}
-            <secti, o, n>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+            <section>
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6'>
                 🏢 Client, Profil, e
               </h2>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
-                  <d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-zion-cyan/30'>
+                <div, classNam, e='gridmd: grid-cols-2, ga, p-8'>
+                  <div>
+                    <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4'>
                       Company, Overvie, w
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-2'>
+                    <ul, classNam, e='space-y-2'>
                       <li>
-                        <strong, classNam, e='te, x, t-zi, o, n-cy, a, n'>Indust, r, y:</st, r, o, n, g>{' '}
-                        Reta, i, l & E-Commer, c, e
+                        <strong, classNam, e='text-zion-cyan'>Industry:</stro, n, g>{' '}
+                        Retail & E-Commerce
                       </li>
                       <li>
-                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Si, z, e: </st, r, o, n, g>{' '}
-                        Fortune, 10, 0 (2,8, 0, 0+ stor, e, s)
+                        <strong, classNam, e = 'text-zion-cyan'>Size: </stro, n, g>{' '}
+                        Fortune, 10, 0 (280, 0+ stores)
                       </li>
                       <li>
-                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Reven, u, e: </st, r, o, n, g>{' '}
+                        <strong, classNam, e = 'text-zion-cyan'>Revenue: </stro, n, g>{' '}
                         $85B, annuall, y
                       </li>
                       <li>
-                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Employe, e, s: </st, r, o, n, g>{' '}
-                        4, 5, 0,0, 0, 0+ worldwi, d, e
+                        <strong, classNam, e = 'text-zion-cyan'>Employees: </stro, n, g>{' '}
+                        450,000+ worldwide
                       </li>
                       <li>
-                        <strong, classNam, e = 'te, x, t-zi, o, n-cy, a, n'>Marke, t, s: </stro, n, g> 28, countr, i, e, s, 6, continent, s
+                        <strong, classNam, e = 'text-zion-cyan'>Markets: </strong> 28, countr, i, es6, continent, s
                       </li>
                     </ul>
-                  </d, i, v>
-                  <d, i, v>
-                    <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                  </div>
+                  <div>
+                    <h3, classNam, e = 'text-xl, fon, t-bold, tex, t-whitemb-4'>
                       Business, Challenge, s
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-2'>
+                    <ul, classNam, e='space-y-2'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                        <sp, a, n>18% inventory, wast, e ($2.3B, annual, l, y)</sp, a, n>
+                        <span, classNam, e='text-red-400mt-1'>•</span>
+                        <span>18% inventory, wast, e ($2.3B, annual, l, y)</span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                        <sp, a, n>Declining, market, share (-4.2% Yo, Y)</sp, a, n>
+                        <span, classNam, e='text-red-400mt-1'>•</span>
+                        <span>Declining, market, share (-4.2% Yo, Y)</span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                        <sp, a, n>Poor, demand, forecasting (67% accur, a, c, y)</sp, a, n>
+                        <span, classNam, e='text-red-400mt-1'>•</span>
+                        <span>Poor, demand, forecasting (67% accurac, y)</span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                        <sp, a, n>Generic, customer, experience</sp, a, n>
+                        <span, classNam, e='text-red-400mt-1'>•</span>
+                        <span>Generic, customer, experience</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                        <sp, a, n>Inefficient, marketing, spend ($89, 0, M/y, e, a, r)</sp, a, n>
+                        <span, classNam, e='text-red-400mt-1'>•</span>
+                        <span>Inefficient, marketing, spend ($890M/yea, r)</span>
                       </li>
                     </ul>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             {/* Solution, Overvie, w */}
-            <secti, o, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+            <section>
+              <h2, classNam, e = 'text-3xl, fon, t-bold, tex, t-whitemb-6'>
                 🎯 AI, Transformation, Solution
               </h2>
-              <p, classNam, e='te, x, t-lg, leadin, g-relaxed, m, b-6'>
+              <p, classNam, e='text-lg, leadin, g-relaxedmb-6'>
                 Zion, Tech, Group designed, and, deployed a, comprehensive, AI
-                platform, spanning, demand forecast, i, n, g, inventory, optimizatio, n,
+                platform, spanning, demand forecastin, g, inventory, optimizatio, n,
                 personalized, customer, experiences, and, intelligent, marketing
-                across, all, 2,8, 0, 0+ stores, and, digital channe, l, s.
+                across, all, 2,800+ stores, and, digital channels.
               </p>
-              <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
-                    <Zap, classNam, e='w-6 h-6, tex, t-bl, u, e-4, 0, 0' />
+              <div, classNam, e = 'gridmd: grid-cols-2, ga, p-6'>
+                <div, classNam, e='bg-gradient-to-br, fro, m-blue-900/40to-cyan-900/40, rounde, d-xlp-6, border, border-blue-500/30'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4, flex, items-center, ga, p-2'>
+                    <Zap, classNam, e='w-6 h-6, tex, t-blue-400' />
                     AI, Demand, Forecasting
                   </h3>
                   <p, classNam, e='mb-4'>
-                    ML, models, analyzing 5, 0, 0+ signa, l, s (wea, t, h, e, r, even, t, s, tren, d, s,
-                    seasonali, t, y) to, predict, demand at, SK, U-sto, r, e-day, granularity, with 96% accura, c, y.
+                    ML, models, analyzing 500+ signals (weath, e, r, even, t, s, tren, d, s,
+                    seasonali, t, y) to, predict, demand at, SK, U-store-day, granularity, with 96% accuracy.
                   </p>
-                  <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm'>
+                  <ul, classNam, e = 'space-y-2, tex, t-sm'>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>96% forecast, accurac, y (up, from, 6, 7%)</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>96% forecast, accurac, y (up, from, 6, 7%)</span>
                     </li>
                     <li, classNam, e = 'flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>$2.1B, reduction, in inventory, wast, e</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>$2.1B, reduction, in inventory, wast, e</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>87% fewer, stockout, s</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>87% fewer, stockout, s</span>
                     </li>
                   </ul>
-                </d, i, v>
+                </div>
 
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
-                    <Users, classNam, e='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
-                    Hyp, e, r-Personalization, Engin, e
+                <div, classNam, e='bg-gradient-to-br, fro, m-purple-900/40to-pink-900/40, rounde, d-xlp-6, border, border-purple-500/30'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4, flex, items-center, ga, p-2'>
+                    <Users, classNam, e='w-6 h-6, tex, t-purple-400' />
+                    Hyper-Personalization, Engin, e
                   </h3>
                   <p, classNam, e='mb-4'>
-                    Re, a, l-time, customer, personalization across, w, e, b, mobi, l, e,
-                    in-sto, r, e, and, email, using collaborative, filterin, g, deep, learnin, g, and, behavioral, analysis.
+                    Real-time, customer, personalization acrosswe, b, mobi, l, e,
+                    in-store, and, email, using collaborative, filterin, g, deep, learnin, g, and, behavioral, analysis.
                   </p>
-                  <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm'>
+                  <ul, classNam, e = 'space-y-2, tex, t-sm'>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>78% increase, in, customer satisfacti, o, n</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>78% increase, in, customer satisfaction</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>$1.8B, incremental, revenue</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>$1.8B, incremental, revenue</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>3, 4, 0% improvement, in, conversion ra, t, e</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>340% improvement, in, conversion rate</span>
                     </li>
                   </ul>
-                </d, i, v>
+                </div>
 
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
-                    <Target, classNam, e='w-6 h-6, tex, t-gre, e, n-4, 0, 0' />
+                <div, classNam, e='bg-gradient-to-br, fro, m-green-900/40to-teal-900/40, rounde, d-xlp-6, border, border-green-500/30'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4, flex, items-center, ga, p-2'>
+                    <Target, classNam, e='w-6 h-6, tex, t-green-400' />
                     Intelligent, Marketing, Platform
                   </h3>
                   <p, classNam, e='mb-4'>
                     AI-powered, marketing, optimization with, predictive, audience
-                    target, i, n, g, dynamic, creative, generation, and, rea, l-time, budget, allocation.
+                    targetin, g, dynamic, creative, generation, and, rea, l-time, budget, allocation.
                   </p>
-                  <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm'>
+                  <ul, classNam, e = 'space-y-2, tex, t-sm'>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>3, 4, 0% marketing, ROI, improvement</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>340% marketing, ROI, improvement</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>$340M, additional, revenue</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>$340M, additional, revenue</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>92% reduction, in, wasted ad, spen, d</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>92% reduction, in, wasted ad, spen, d</span>
                     </li>
                   </ul>
-                </d, i, v>
+                </div>
 
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-oran, g, e-9, 0, 0/40, t, o-r, e, d-9, 0, 0/40, rounde, d-x, l, p-6, border, border-oran, g, e-5, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, flex, items-center, ga, p-2'>
-                    <DollarSign, classNam, e='w-6 h-6, tex, t-oran, g, e-4, 0, 0' />
+                <div, classNam, e='bg-gradient-to-br, fro, m-orange-900/40to-red-900/40, rounde, d-xlp-6, border, border-orange-500/30'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4, flex, items-center, ga, p-2'>
+                    <DollarSign, classNam, e='w-6 h-6, tex, t-orange-400' />
                     Dynamic, Pricing, Engine
                   </h3>
                   <p, classNam, e='mb-4'>
-                    Re, a, l-time, pricing, optimization considering, dema, n, d,
+                    Real-time, pricing, optimization considering, dema, n, d,
                     competiti, o, n, inventory, level, s, and, customer, segments to, maximize, revenue and, margi, n.
                   </p>
-                  <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm'>
+                  <ul, classNam, e = 'space-y-2, tex, t-sm'>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>$890M, incremental, revenue</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>$890M, incremental, revenue</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>4.2% gross, margin, improvement</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>4.2% gross, margin, improvement</span>
                     </li>
                     <li, classNam, e='flex, item, s-center, ga, p-2'>
-                      <CheckCircle, classNam, e='w-4 h-4, tex, t-gre, e, n-4, 0, 0' />
-                      <sp, a, n>94% optimal, price, achievement</sp, a, n>
+                      <CheckCircle, classNam, e='w-4 h-4, tex, t-green-400' />
+                      <span>94% optimal, price, achievement</span>
                     </li>
                   </ul>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                </div>
+              </div>
+            </section>
 
             {/* Implementation, Timelin, e */}
-            <secti, o, n>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+            <section>
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6'>
                 📅 18-Month, Implementation, Journey
               </h2>
-              <div, classNam, e='spa, c, e-y-4'>
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-bl, u, e-4, 0, 0'>
+              <div, classNam, e='space-y-4'>
+                <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, borde, r-l-4, borde, r-blue-400'>
                   <div, classNam, e='flex, item, s-start, ga, p-4'>
-                    <div, classNam, e='bg-bl, u, e-5, 0, 0/20, p, x-3, p, y-1, rounded, text-sm, fon, t-bold, tex, t-bl, u, e-400, border, border-bl, u, e-5, 0, 0/30'>
-                      Month, s, 1-3
-                    </d, i, v>
-                    <div, classNam, e='fl, e, x-1'>
-                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
-                        Discove, r, y & Foundati, o, n
+                    <div, classNam, e='bg-blue-500/20px-3py-1, rounded, text-sm, fon, t-bold, tex, t-blue-400, border, border-blue-500/30'>
+                      Months1-3
+                    </div>
+                    <div, classNam, e='flex-1'>
+                      <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
+                        Discovery & Foundation
                       </h3>
-                      <p, classNam, e='te, x, t-sm, m, b-3'>
+                      <p, classNam, e='text-smmb-3'>
                         Data, infrastructure, assessmen, t, AI, platform, selection,
-                        pilot, use, case identificati, o, n, and, initial, model
-                        development, for, demand forecasti, n, g.
+                        pilot, use, case identification, and, initial, model
+                        development, for, demand forecasting.
                       </p>
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gre, e, n-4, 0, 0'>
-                        ✓ Demand, forecasting, pilot: 94% accuracy, in, 50 stor, e, s
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
+                      <div, classNam, e = 'text-xs, tex, t-green-400'>
+                        ✓ Demand, forecasting, pilot: 94% accuracy, in, 50 stores
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-purp, l, e-4, 0, 0'>
+                <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, borde, r-l-4, borde, r-purple-400'>
                   <div, classNam, e='flex, item, s-start, ga, p-4'>
-                    <div, classNam, e='bg-purp, l, e-5, 0, 0/20, p, x-3, p, y-1, rounded, text-sm, fon, t-bold, tex, t-purp, l, e-400, border, border-purp, l, e-5, 0, 0/30'>
-                      Month, s, 4-9
-                    </d, i, v>
-                    <div, classNam, e='fl, e, x-1'>
-                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
-                        Sca, l, e & Expa, n, d
+                    <div, classNam, e='bg-purple-500/20px-3py-1, rounded, text-sm, fon, t-bold, tex, t-purple-400, border, border-purple-500/30'>
+                      Months4-9
+                    </div>
+                    <div, classNam, e='flex-1'>
+                      <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
+                        Scale & Expand
                       </h3>
-                      <p, classNam, e='te, x, t-sm, m, b-3'>
-                        Roll, out, demand forecasting, to, all st, o, r, e, s, deploy, personalization, engine, launch, dynamic, pricing in, 500, stores, and, implement, marketing optimizati, o, n.
+                      <p, classNam, e='text-smmb-3'>
+                        Roll, out, demand forecasting, to, all stor, e, s, deploy, personalization, engine, launch, dynamic, pricing in, 500, stores, and, implement, marketing optimization.
                       </p>
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gre, e, n-4, 0, 0'>
+                      <div, classNam, e = 'text-xs, tex, t-green-400'>
                         ✓ $156M, value, created by, month, 9
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r-l-4, borde, r-gre, e, n-4, 0, 0'>
+                <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, borde, r-l-4, borde, r-green-400'>
                   <div, classNam, e='flex, item, s-start, ga, p-4'>
-                    <div, classNam, e='bg-gre, e, n-5, 0, 0/20, p, x-3, p, y-1, rounded, text-sm, fon, t-bold, tex, t-gre, e, n-400, border, border-gre, e, n-5, 0, 0/30'>
-                      Months, 1, 0-18
-                    </d, i, v>
-                    <div, classNam, e='fl, e, x-1'>
-                      <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
-                        Optimi, z, e & Integra, t, e
+                    <div, classNam, e='bg-green-500/20px-3py-1, rounded, text-sm, fon, t-bold, tex, t-green-400, border, border-green-500/30'>
+                      Months10-18
+                    </div>
+                    <div, classNam, e='flex-1'>
+                      <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
+                        Optimize & Integrate
                       </h3>
-                      <p, classNam, e='te, x, t-sm, m, b-3'>
-                        Full, enterprise, deployment across, al, l , 2,8, 0, 0+ stores, and, channels, model, refinement, based on, feedbac, k, and, integration, with all, business, processes.
+                      <p, classNam, e='text-smmb-3'>
+                        Full, enterprise, deployment across, al, l , 280, 0+ stores, and, channels, model, refinement, based on, feedbac, k, and, integration, with all, business, processes.
                       </p>
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gre, e, n-4, 0, 0'>
+                      <div, classNam, e = 'text-xs, tex, t-green-400'>
                         ✓ $489M, total, valu, e, full, ROI, achieved
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-            {/* Resul, t, s & Impa, c, t */}
-            <secti, o, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
-                📊 Business, Impac, t & Resul, t, s
+            {/* Results & Impact */}
+            <section>
+              <h2, classNam, e = 'text-3xl, fon, t-bold, tex, t-whitemb-6'>
+                📊 Business, Impac, t & Results
               </h2>
-              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30'>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-10'>
-                  <d, i, v>
-                    <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
+              <div, classNam, e='bg-gradient-to-r, fro, m-green-900/40to-blue-900/40, rounde, d-2xlp-10, border, border-green-500/30'>
+                <div, classNam, e='gridmd: grid-cols-2, ga, p-10'>
+                  <div>
+                    <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-6'>
                       Financial, Impac, t
                     </h3>
-                    <div, classNam, e='spa, c, e-y-4'>
-                      <d, i, v>
-                        <div, classNam, e='flex, justif, y-between, item, s-center, m, b-2'>
-                          <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                    <div, classNam, e='space-y-4'>
+                      <div>
+                        <div, classNam, e='flex, justif, y-between, item, s-centermb-2'>
+                          <span, classNam, e='text-zion-slate-light'>
                             Revenue, Increas, e:
-                          </sp, a, n>
-                          <span, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
+                          </span>
+                          <span, classNam, e='text-2xl, fon, t-bold, tex, t-green-400'>
                             +$3.2B
-                          </sp, a, n>
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                          </span>
+                        </div>
+                        <div, classNam, e='text-xs, tex, t-zion-slate-light'>
                           From, personalizat, i, o, n, prici, n, g, and, marketin, g
-                        </d, i, v>
-                      </d, i, v>
-                      <d, i, v>
-                        <div, classNam, e = 'flex, justif, y-between, item, s-center, m, b-2'>
-                          <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                            Cost, Reductio, n: </sp, a, n>
-                          <span, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
+                        </div>
+                      </div>
+                      <div>
+                        <div, classNam, e = 'flex, justif, y-between, item, s-centermb-2'>
+                          <span, classNam, e='text-zion-slate-light'>
+                            Cost, Reductio, n: </span>
+                          <span, classNam, e='text-2xl, fon, t-bold, tex, t-green-400'>
                             -$2.4B
-                          </sp, a, n>
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                          </span>
+                        </div>
+                        <div, classNam, e='text-xs, tex, t-zion-slate-light'>
                           Inventory, optimization, and operational, efficienc, y
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bord, e, r-t, borde, r-whi, t, e/20, p, t-4'>
-                        <div, classNam, e='flex, justif, y-between, item, s-center, m, b-2'>
-                          <strong, classNam, e='te, x, t-whi, t, e'>
+                        </div>
+                      </div>
+                      <div, classNam, e='border-t, borde, r-white/20pt-4'>
+                        <div, classNam, e='flex, justif, y-between, item, s-centermb-2'>
+                          <strong, classNam, e='text-white'>
                             Net, Value, Created:
-                          </stro, n, g>
-                          <strong, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
-                            $48, 9, M
-                          </stro, n, g>
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                          </strong>
+                          <strong, classNam, e='text-3xl, fon, t-bold, tex, t-green-400'>
+                            $489M
+                          </strong>
+                        </div>
+                        <div, classNam, e='text-xs, tex, t-zion-slate-light'>
                           18-month, perio, d (Oct, 202, 3 - Mar, 20, 2, 5)
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                  <d, i, v>
-                    <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <h3, classNam, e = 'text-2xl, fon, t-bold, tex, t-whitemb-6'>
                       Operational, Improvement, s
                     </h3>
-                    <div, classNam, e='spa, c, e-y-3'>
-                      <div, classNam, e='bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-gre, e, n-4, 0, 0/30'>
-                        <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                          <sp, a, n>Inventory, Optimizatio, n:</sp, a, n>
-                          <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>94%</stro, n, g>
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-bl, u, e-4, 0, 0/30'>
-                        <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                          <sp, a, n>Forecast, Accurac, y:</sp, a, n>
-                          <strong, classNam, e='te, x, t-bl, u, e-4, 0, 0'>96%</stro, n, g>
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-purp, l, e-4, 0, 0/30'>
-                        <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                          <sp, a, n>Customer, Satisfactio, n:</sp, a, n>
-                          <strong, classNam, e='te, x, t-purp, l, e-4, 0, 0'>+78%</stro, n, g>
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-cy, a, n-4, 0, 0/30'>
-                        <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                          <sp, a, n>Marketing, RO, I:</sp, a, n>
-                          <strong, classNam, e='te, x, t-cy, a, n-4, 0, 0'>3, 4, 0%</stro, n, g>
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-whi, t, e/5, rounde, d-l, g, p-3, border, border-oran, g, e-4, 0, 0/30'>
-                        <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                          <sp, a, n>Conversion, Rat, e:</sp, a, n>
-                          <strong, classNam, e='te, x, t-oran, g, e-4, 0, 0'>+3, 4, 0%</stro, n, g>
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                <div, classNam, e='mt-8, p, t-8, borde, r-t, borde, r-whi, t, e/20, tex, t-cent, e, r'>
-                  <div, classNam, e='te, x, t-xl, tex, t-white, m, b-2'>
-                    R, O, I:{' '}
-                    <strong, classNam, e = 'te, x, t-4xl, tex, t-gre, e, n-4, 0, 0'>8, 2, 3%</stro, n, g>
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                    Investme, n, t: $59.5M • Value, Create, d: $48, 9, M • Payback, Perio, d:
+                    <div, classNam, e='space-y-3'>
+                      <div, classNam, e='bg-white/5, rounde, d-lgp-3, border, border-green-400/30'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center'>
+                          <span>Inventory, Optimizatio, n:</span>
+                          <strong, classNam, e='text-green-400'>94%</strong>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-white/5, rounde, d-lgp-3, border, border-blue-400/30'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center'>
+                          <span>Forecast, Accurac, y:</span>
+                          <strong, classNam, e='text-blue-400'>96%</strong>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-white/5, rounde, d-lgp-3, border, border-purple-400/30'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center'>
+                          <span>Customer, Satisfactio, n:</span>
+                          <strong, classNam, e='text-purple-400'>+78%</strong>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-white/5, rounde, d-lgp-3, border, border-cyan-400/30'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center'>
+                          <span>Marketing, RO, I:</span>
+                          <strong, classNam, e='text-cyan-400'>340%</strong>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-white/5, rounde, d-lgp-3, border, border-orange-400/30'>
+                        <div, classNam, e='flex, justif, y-between, item, s-center'>
+                          <span>Conversion, Rat, e:</span>
+                          <strong, classNam, e='text-orange-400'>+340%</strong>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div, classNam, e='mt-8pt-8, borde, r-t, borde, r-white/20, tex, t-center'>
+                  <div, classNam, e='text-xl, tex, t-whitemb-2'>
+                    ROI:{' '}
+                    <strong, classNam, e = 'text-4xl, tex, t-green-400'>823%</strong>
+                  </div>
+                  <div, classNam, e='text-sm, tex, t-zion-slate-light'>
+                    Investment: $59.5M • Value, Create, d: $489M • Payback, Perio, d:
                     4.3, month, s
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             {/* Client, Testimon, i, a, l */}
-            <secti, o, n>
-              <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-bl, u, e-5, 0, 0/30'>
-                <div, classNam, e='te, x, t-center, m, b-8'>
-                  <div, classNam, e='te, x, t-6xl, m, b-4'>"</d, i, v>
-                  <p, classNam, e='te, x, t-2xl, tex, t-white, leadin, g-relaxed, m, b-6'>
-                    Zion, Tech, Group's, AI, transformation has, been, nothing short, of, revolutionary for, our, business. T, h, e $489M, in, value
-                    creation, exceeded, our most, optimistic, projections. More, important, l, y, we've, fundamentally, changed how, we, operate—from, reactive, to predicti, v, e, from, generic, to hyp, e, r-personaliz, e, d,
-                    from, gu, t-feel, to, data-driv, e, n.
+            <section>
+              <div, classNam, e = 'bg-gradient-to-r, fro, m-blue-900/40to-purple-900/40, rounde, d-2xlp-10, border, border-blue-500/30'>
+                <div, classNam, e='text-centermb-8'>
+                  <div, classNam, e='text-6xlmb-4'>"</div>
+                  <p, classNam, e='text-2xl, tex, t-white, leadin, g-relaxedmb-6'>
+                    Zion, Tech, Group's, AI, transformation has, been, nothing short, of, revolutionary for, our, business. The $489M, in, value
+                    creation, exceeded, our most, optimistic, projections. More, important, l, y, we've, fundamentally, changed how, we, operate—from, reactive, to predictive, from, generic, to hyper-personalized,
+                    from, gu, t-feel, to, data-driven.
                   </p>
-                  <div, classNam, e = 'inli, n, e-blo, c, k'>
-                    <div, classNam, e='fo, n, t-bold, tex, t-xl, tex, t-whi, t, e'>
+                  <div, classNam, e = 'inline-block'>
+                    <div, classNam, e='font-bold, tex, t-xl, tex, t-white'>
                       Jennifer, Martine, z
-                    </d, i, v>
-                    <div, classNam, e='te, x, t-zi, o, n-cy, a, n'>Chief, Digital, Officer</d, i, v>
-                    <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                      Fortune, 100, Retail Corporati, o, n
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                    </div>
+                    <div, classNam, e='text-zion-cyan'>Chief, Digital, Officer</div>
+                    <div, classNam, e='text-sm, tex, t-zion-slate-light'>
+                      Fortune, 100, Retail Corporation
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-            {/* C, T, A */}
-            <section, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-bl, u, e-600, rounde, d-2x, l, p-10, tex, t-cent, e, r'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
+            {/* CTA */}
+            <section, classNam, e='bg-gradient-to-r, fro, m-purple-600to-blue-600, rounde, d-2xlp-10, tex, t-center'>
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-4'>
                 Ready, to, Transform Your, Enterprise, with AI?
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-whi, t, e/90, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
-                Join, Fortune, 100 companies, achievin, g $48, 9, M+ in, value, creation
-                through, comprehensive, AI transformati, o, n. Schedule, your, free
-                consultation, to, explore wh, a, t's, possible, for your, organizatio, n.
+              <p, classNam, e='text-xl, tex, t-white/90mb-8, ma, x-w-3xlmx-auto'>
+                Join, Fortune, 100 companies, achievin, g $489M+ in, value, creation
+                through, comprehensive, AI transformation. Schedule, your, free
+                consultation, to, explore what's, possible, for your, organizatio, n.
               </p>
-              <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='bg-white, tex, t-purp, l, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'
+              <div, classNam, e='flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center'>
+                <Linkto='/contact'
+                  className='bg-white, tex, t-purple-600, hove, r:bg-zion-slate-lightpx-8py-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'
                 >
                   <TrendingUp, classNam, e='w-6 h-6' />
                   Schedule, Free, Consultation
-                </Li, n, k>
-                <Link, t, o='/servic, e, s'
-                  classNa, m, e='bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-whi, t, e/10, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, tex, t-lg'
+                </Link>
+                <Linkto='/services'
+                  className='border-2, borde, r-white, tex, t-white, hove, r:bg-white/10px-8py-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:scale-105, tex, t-lg'
                 >
-                  View, All, AI Servic, e, s
-                </Li, n, k>
-              </d, i, v>
-            </secti, o, n>
-          </d, i, v>
-        </artic, l, e>
-      </d, i, v>
+                  View, All, AI Services
+                </Link>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
     </>
   );
 };

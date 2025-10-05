@@ -1,245 +1,245 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 interface, FeaturedConten, t {
-  id: numb, e, r;
-  tit, l, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  readTi, m, e: stri, n, g;
-  rati, n, g: numb, e, r;
-  reade, r, s: stri, n, g;
-  bad, g, e: stri, n, g;
-  gradie, n, t: stri, n, g;
-  ic, o, n: Rea, c, t.ReactNo, d, e;
-  li, n, k: str, i, n, g;
+  id: number;
+  title: string;
+  category: string;
+  readTime: string;
+  rating: number;
+  readers: string;
+  badge: string;
+  gradient: string;
+  icon: React.ReactNode;
+  link: strin, g;
 }
-const, NewContentAdvertisingBanne, r: Rea, c, t.FC = () => { 
-  const, featuredConten, t: FeaturedConte, n, t[] = [
+const, NewContentAdvertisingBanne, r: React.FC = () => { 
+  const, featuredConten, t: FeaturedContent[] = [
     {
       id: , 0,
       tit, l, e: 'Governed, Agent, Rollback, s',
-      catego, r, y: 'AI, Operatio, n, s',
-      readTi, m, e: '7, m, i, n',
-      rati, n, g: 5., 0,
+      category: 'AI, Operatio, n, s',
+      readTime: '7mi, n',
+      rating: 5., 0,
       reade, r, s: '25, K+',
-      bad, g, e: 'NE, W',
-      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-r, e, d-50, 0',
-      ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-03-govern, e, d-age, n, t-rollba, c, k, s'
+      badge: 'NE, W',
+      gradient: 'from-pink-500to-red-50, 0',
+      icon: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/ai-2025-oct-03-governed-agent-rollback, s'
      },
     { 
       id:  , 7,
-      tit, l, e: 'Consentless, Personalizatio, n (E, d, g, e)',
-      catego, r, y: 'Edge, Computi, n, g',
-      readTi, m, e: '6, m, i, n',
-      rati, n, g: 4., 9,
+      tit, l, e: 'Consentless, Personalizatio, n (Edg, e)',
+      category: 'Edge, Computi, n, g',
+      readTime: '6mi, n',
+      rating: 4., 9,
       reade, r, s: '19, K+',
-      bad, g, e: 'FEATU, R, E, D',
-      gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-50, 0',
-      ic, o, n: <TrendingUp, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 5-o, c, t-02-consentle, s, s-personalizati, o, n-bluepr, i, n, t'
+      badge: 'FEATURE, D',
+      gradient: 'from-teal-500to-cyan-50, 0',
+      icon: <TrendingUp, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/edge-2025-oct-02-consentless-personalization-blueprin, t'
      },
     { 
       id:  , 1,
       tit, l, e: 'AI, 202, 7: Operational, Trust, Blueprin, t',
-      catego, r, y: 'AI, Strate, g, y',
-      readTi, m, e: '8, m, i, n',
-      rati, n, g: 4., 9,
+      category: 'AI, Strate, g, y',
+      readTime: '8mi, n',
+      rating: 4., 9,
       reade, r, s: '58, K+',
-      bad, g, e: 'NE, W',
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
-      ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 7-operation, a, l-tru, s, t-bluepr, i, n, t'
+      badge: 'NE, W',
+      gradient: 'from-blue-500to-purple-50, 0',
+      icon: <Star, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/ai-2027-operational-trust-blueprin, t'
      },
     { 
       id:  , 2,
       tit, l, e: 'Edge, 202, 6: Private, Feature, Flag, s',
-      catego, r, y: 'Architect, u, r, e',
-      readTi, m, e: '7, m, i, n',
-      rati, n, g: 4., 8,
+      category: 'Architectur, e',
+      readTime: '7mi, n',
+      rating: 4., 8,
       reade, r, s: '41, K+',
-      bad, g, e: 'TREND, I, N, G',
-      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
-      ic, o, n: <TrendingUp, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-priva, t, e-featu, r, e-fl, a, g, s'
+      badge: 'TRENDIN, G',
+      gradient: 'from-cyan-500to-blue-50, 0',
+      icon: <TrendingUp, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/edge-2026-private-feature-flag, s'
      },
     { 
       id:  , 3,
-      tit, l, e: 'GenAI, Quality, Tiers v2 (2, 0, 2, 6)',
-      catego, r, y: 'Ge, n, A, I',
-      readTi, m, e: '8, m, i, n',
-      rati, n, g: 4., 9,
+      tit, l, e: 'GenAI, Quality, Tiers v2 (202, 6)',
+      category: 'GenA, I',
+      readTime: '8mi, n',
+      rating: 4., 9,
       reade, r, s: '47, K+',
-      bad, g, e: 'FEATU, R, E, D',
-      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
-      ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/gen, a, i-quali, t, y-tie, r, s-v2-2, 0, 2, 6'
+      badge: 'FEATURE, D',
+      gradient: 'from-green-500to-emerald-50, 0',
+      icon: <Award, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/genai-quality-tiers-v2-202, 6'
      }
   ]; const, achievement, s = [
-    {  val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / >  },
-    {  val, u, e: '9, 8%', lab, e, l: 'Customer, Satisfacti, o, n', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / >  },
-    {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / >  },
-    {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / >  }
-  ]; retu, r, n (
-    <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, relative, overflow-hidd, e, n">
+    {  value: '500K+', label: 'Monthly, Reade, r, s', icon: <Users, classNam, e = "w-8 , h-, 8" / >  },
+    {  value: '9, 8%', label: 'Customer, Satisfacti, o, n', icon: <Star, classNam, e = "w-8 , h-, 8" / >  },
+    {  value: '20, 0+', label: 'Expert, Articl, e, s', icon: <Award, classNam, e = "w-8 , h-, 8" / >  },
+    {  value: '5, 0+', label: 'Industry, Awar, d, s', icon: <Target, classNam, e = "w-8 , h-, 8" / >  }
+  ]; return (
+    <div, classNam, e = "py-20bg-gradient-to-br, fro, m-indigo-900, vi, a-purple-900to-pink-900, relative, overflow-hidden">
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-      </d, i, v>
-      <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-96h-96bg-indigo-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-96h-96bg-purple-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 2, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-96h-96bg-pink-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 4, s' }} />
+      </div>
+      <div, classNam, e = "containermx-autopx-6, relative, z-10">
         {/* Header, Sectio, n */}
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">
-            <Sparkles, classNam, e="w-5 h-5, tex, t-indi, g, o-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-indi, g, o-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
-              🚀 NEW, CONTENT, LAUNCH • Sep, t, 3, 0, 20, 2, 5
-            </sp, a, n>
-            <Sparkles, classNam, e = "w-5 h-5, tex, t-pi, n, k-400, animat, e-pul, s, e" />
-          </d, i, v>
-          <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
-            Revolutionary, New, Content H, u, b
+        <div, classNam, e="text-centermb-16">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-3px-6py-3, rounde, d-fullbg-gradient-to-r, fro, m-indigo-500/20to-pink-500/20, border, border-indigo-500/30mb-8, animat, e-fade-in">
+            <Sparkles, classNam, e="w-5 h-5, tex, t-indigo-400, animat, e-pulse" />
+            <span, classNam, e="text-indigo-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+              🚀 NEW, CONTENT, LAUNCH • Sept3, 0, 20, 2, 5
+            </span>
+            <Sparkles, classNam, e = "w-5 h-5, tex, t-pink-400, animat, e-pulse" />
+          </div>
+          <h2, classNam, e="text-5xlmd: text-6xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-indigo-400, vi, a-purple-400to-pink-400bg-clip-text, tex, t-transparent, animat, e-fade-in">
+            Revolutionary, New, Content Hub
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroug, h, s. 
+          <p, classNam, e="text-xl, tex, t-gray-300, ma, x-w-4xlmx-auto, leadin, g-relaxedmb-8">
+            Discover, groundbreaking, insigh, t, s, cutti, n, g-edge, researc, h, and, revolutionary, AI breakthroughs. 
             Join, 500, K+ professionals, who, trust our, content, to stay, ahead, of the, technology, curve.
           </p>
           {/* Achievement, Stat, s */}
-          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
-            { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
-              <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
-                <div, classNam, e="te, x, t-indi, g, o-400, m, b-2, flex, justify-cent, e, r">
-                  {achieveme, n, t.ic, o, n}
-                </d, i, v>
-                <div, classNam, e="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1">
-                  {achieveme, n, t.val, u, e}
-                </d, i, v>
-                <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">
-                  {achieveme, n, t.lab, e, l}
-                </d, i, v>
+          <div, classNam, e = "grid, gri, d-cols-2md: grid-cols-4, ga, p-6, ma, x-w-4xlmx-auto">
+            { achievements.map((achieveme, n, t, ind, e, x) = > (
+              <div, ke, y = { inde, x  }, className = "text-center">
+                <div, classNam, e="text-indigo-400mb-2, flex, justify-center">
+                  {achievement.icon}
+                </div>
+                <div, classNam, e="text-3xl, fon, t-extraboldbg-gradient-to-r, fro, m-indigo-400to-pink-400bg-clip-text, tex, t-transparentmb-1">
+                  {achievement.value}
+                </div>
+                <div, classNam, e="text-gray-400, tex, t-sm, fon, t-medium">
+                  {achievement.label}
+                </div>
               </di, v>
             ))}
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
         {/* Featured, Content, Cards */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
-            <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-8mb-16">
+          { featuredContent.map((conte, n, t, ind, e, x) = > (
+            <div, ke, y = { content.i, d  }, className = "group, relative, bg-white/5, backdro, p-blur-lg, rounde, d-2xl, border, border-white/10, hove, r: border-indigo-500/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-indigo-500/20"
+              style = { { animationDelay: `${index * 200 }, ms` }}
              > {/* Card, glow, effect */}
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
-              <div, classNam, e = "relativ, e, p-8">
-                {/* Bad, g, e */}
-                <div, classNam, e="flex, item, s-center, justif, y-between, m, b-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-indi, g, o-4, 0, 0">
-                    {conte, n, t.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
-                    {conte, n, t.bad, g, e}
-                  </d, i, v>
-                </d, i, v>
-                {/* Catego, r, y */}
+              <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${content.gradien, t }, opacity-0, grou, p-hover: opacity-10, transitio, n-all, duratio, n-50, 0`} />
+              <div, classNam, e = "relativep-8">
+                {/* Badge */}
+                <div, classNam, e="flex, item, s-center, justif, y-betweenmb-6">
+                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-indigo-400">
+                    {content.icon}
+                  </div > <div, classNam, e = { `px-3py-1.5, rounde, d-fullbg-gradient-to-r ${content.gradien, t }, text-white, tex, t-xs, fon, t-bold, border, border-white/30`}>
+                    {content.badge}
+                  </div>
+                </div>
+                {/* Category */}
                 <div, classNam, e = "mb-4">
-                  <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-indi, g, o-400, tex, t-xs, fon, t-semibold, border, border-indi, g, o-5, 0, 0/30">
-                    {conte, n, t.catego, r, y}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Tit, l, e */}
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-indi, g, o-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {conte, n, t.t, i, t, l, e}
+                  <span, classNam, e="inline-blockpx-3py-1, rounde, d-fullbg-gradient-to-r, fro, m-indigo-500/20to-purple-500/20, tex, t-indigo-400, tex, t-xs, fon, t-semibold, border, border-indigo-500/30">
+                    {content.category}
+                  </span>
+                </div>
+                {/* Title */}
+                <h3, classNam, e="text-2xl, fon, t-bold, tex, t-whitemb-4, grou, p-hover: text-indigo-400, transitio, n-colors, duratio, n-300, leadin, g-tight">
+                  {content.tit, l, e}
                 </h3>
                 {/* Meta, Inf, o */}
-                <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
+                <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gray-500mb-6pb-6, borde, r-b, borde, r-white/10">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
-                    <Zap, classNam, e="w-4 h-4, tex, t-indi, g, o-4, 0, 0" />
-                    {conte, n, t.readTi, m, e}
-                  </sp, a, n>
+                    <Zap, classNam, e="w-4 h-4, tex, t-indigo-400" />
+                    {content.readTime}
+                  </span>
                   <span, classNam, e="flex, item, s-center, ga, p-1">
-                    <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-                    {conte, n, t.rati, n, g}
-                  </sp, a, n>
-                </d, i, v>
+                    <Star, classNam, e="w-4 h-4, tex, t-yellow-400, fil, l-current" />
+                    {content.rating}
+                  </span>
+                </div>
                 {/* Reader, Coun, t */}
                 <div, classNam, e="mb-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
+                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gray-400">
                     <Users, classNam, e="w-4 h-4" />
-                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
-                  </d, i, v>
-                </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f = { conte, n, t.li, n, k || '/b, l, o, g' }, classNa, m, e={ `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t } hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hover:-transla, t, e-, y-, 1`}
+                    <span, classNam, e="text-sm">{content.readers} readers</span>
+                  </div>
+                </div > {/* CTA, Butto, n */}
+                <a, hre, f = { content.link || '/blo, g' }, className={ `group/btn, flex, items-center, justif, y-center, ga, p-2 w-fullbg-gradient-to-r ${content.gradient } hover: opacity-90, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-indigo-500/50, transform, hover:-translate-, y-, 1`}
                 >
-                  <sp, a, n>Read, No, w</sp, a, n>
-                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <span>Read, No, w</span>
+                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hover/btn: translate-x-1, transitio, n-transform, duratio, n-300" />
                 </a>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           ))}
-        </d, i, v>
+        </div>
         {/* Special, Offer, Section */}
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-indi, g, o-5, 0, 0/20, m, b-16">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
-              <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+        <div, classNam, e = "bg-gradient-to-r, fro, m-indigo-500/10to-purple-500/10, rounde, d-3xlp-8md: p-12, border, border-indigo-500/20mb-16">
+          <div, classNam, e="text-center">
+            <div, classNam, e="inline-flex, item, s-center, ga, p-2px-4py-2, rounde, d-fullbg-gradient-to-r, fro, m-yellow-500/20to-orange-500/20, border, border-yellow-500/30mb-6">
+              <Star, classNam, e="w-5 h-5, tex, t-yellow-400, fil, l-current" />
+              <span, classNam, e="text-yellow-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 LIMITED, TIME, OFFER
-              </sp, a, n>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
+              </span>
+            </div>
+            <h3, classNam, e="text-4xl, fon, t-extrabold, tex, t-whitemb-4">
               Get, Premium, Access to, All, Content
             </h3>
-            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
-              Unlock, exclusive, articl, e, s, early, access, to new, conten, t, and, premium, research repor, t, s. 
+            <p, classNam, e="text-xl, tex, t-gray-300mb-8, ma, x-w-2xlmx-auto">
+              Unlock, exclusive, articl, e, s, early, access, to new, conten, t, and, premium, research reports. 
               Join, our, elite community, of, technology leaders, and, innovators.
             </p>
-            <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">
-              <div, classNam, e="te, x, t-cent, e, r">
-                <div, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-indi, g, o-400, lin, e-through, opacit, y-50">$2, 9, 9/mon, t, h</d, i, v>
-                <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">$99/mon, t, h</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">First, 3, months</d, i, v>
-              </d, i, v>
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-                <a, hre, f="/subscri, b, e"
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
+            <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center, item, s-center">
+              <div, classNam, e="text-center">
+                <div, classNam, e="text-3xl, fon, t-extrabold, tex, t-indigo-400, lin, e-through, opacit, y-50">$299/month</div>
+                <div, classNam, e="text-2xl, fon, t-bold, tex, t-white">$99/month</div>
+                <div, classNam, e="text-sm, tex, t-gray-400">First, 3, months</div>
+              </div>
+              <div, classNam, e="flex, fle, x-colsm:flex-row, ga, p-4">
+                <a, hre, f="/subscribe"
+                  className="bg-gradient-to-r, fro, m-indigo-500to-purple-600, hove, r:from-indigo-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-indigo-500/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, classNam, e="w-5 h-5" />
-                  <sp, a, n>Get, Premium, Access</sp, a, n>
+                  <span>Get, Premium, Access</span>
                 </a>
-                <a, hre, f="/conta, c, t"
-                  classNa, m, e="bord, e, r-2, borde, r-indi, g, o-500, tex, t-indi, g, o-400, hove, r:bg-indi, g, o-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
+                <a, hre, f="/contact"
+                  className="border-2, borde, r-indigo-500, tex, t-indigo-400, hove, r:bg-indigo-500, hove, r:text-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <sp, a, n>Contact, Sale, s</sp, a, n>
+                  <span>Contact, Sale, s</span>
                   <ArrowRight, classNam, e="w-5 h-5" />
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Newsletter, Sig, n, u, p */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, classNam, e="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, vi, a-purp, l, e-500, t, o-pi, n, k-5, 0, 0">
-            <div, classNam, e="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
-              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
+        <div, classNam, e = "text-center">
+          <div, classNam, e="inline-blockp-1, rounde, d-2xlbg-gradient-to-r, fro, m-indigo-500, vi, a-purple-500to-pink-500">
+            <div, classNam, e="bg-slate-900, rounde, d-xlpx-12py-10">
+              <h3, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-4">
                 Stay, Ahead, with Our, Newslette, r
               </h3>
-              <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, classNam, e="text-gray-400mb-8, ma, x-w-2xlmx-auto">
                 Get, weekly, insight, s, exclusive, content, previews, and, early, access to, new, articles. 
                 Join, 100, K+ subscribers, who, never miss, a, breakthrough.
               </p>
-              <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-                <input, typ, e="ema, i, l"
-                  placehold, e, r="Enter, your, email"
-                  classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0" />
-                <button, classNam, e="bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
-                  <sp, a, n>Subscri, b, e</sp, a, n>
+              <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center, ma, x-w-mdmx-auto">
+                <input, typ, e="email"
+                  placeholder="Enter, your, email"
+                  className="flex-1px-6py-4, rounde, d-xlbg-white/10, border, border-white/20, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-indigo-500, focu, s:bg-white/20, transitio, n-all, duratio, n-300" />
+                <button, classNam, e="bg-gradient-to-r, fro, m-indigo-500to-purple-600, hove, r:from-indigo-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-indigo-500/50, flex, items-center, justif, y-center, ga, p-2">
+                  <span>Subscribe</span>
                   <ArrowRight, classNam, e="w-5 h-5" />
-                </butt, o, n>
-              </d, i, v>
-              <p, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, m, t-4">
-                No, s, p, a, m, unsubscribe, at, any ti, m, e. We, respect, your priva, c, y.
+                </button>
+              </div>
+              <p, classNam, e="text-xs, tex, t-gray-500mt-4">
+                Nosp, a, m, unsubscribe, at, any time. We, respect, your privacy.
               </p>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, NewContentAdvertisingBanner;

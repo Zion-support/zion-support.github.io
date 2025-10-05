@@ -4,31 +4,17 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 const bannerComponents = {
   'january2026-revolutionary': lazy(
     () => import('./January2026RevolutionaryBanner'),
-  ),
-  'january2026-content-showcase': lazy(
+  )'january2026-content-showcase': lazy(
     () => import('./January2026ContentShowcaseBanner'),
-  ),
-  'january2026-new-content': lazy(
+  )'january2026-new-content': lazy(
     () => import('./January2026NewContentShowcaseBanner'),
-  ),
-  'january2026-revolutionary-ai': lazy(
+  )'january2026-revolutionary-ai': lazy(
     () => import('./January2026RevolutionaryAIBanner'),
-  ),
-  'january2026-revolutionary-content': lazy(
+  )'january2026-revolutionary-content': lazy(
     () => import('./January2026RevolutionaryContentBanner'),
-  ),
-  'january2026-revolutionary-breakthroughs': lazy(
+  )'january2026-revolutionary-breakthroughs': lazy(
     () => import('./January2026RevolutionaryBreakthroughsBanner'),
-  ),
-  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
-  'latest-2026-content': lazy(() => import('./Latest2026ContentBanner')),
-  'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner')),
-  'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner')),
-  'november-2025-game-changers': lazy(() => import('./November2025GameChangersBanner')),
-  'march-2026-innovation': lazy(() => import('./March2026InnovationSpotlightBanner')),
-  'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner')),
-  'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner')),
-  'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
+  )'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026'))'latest-2026-content': lazy(() => import('./Latest2026ContentBanner'))'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner'))'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner'))'november-2025-game-changers': lazy(() => import('./November2025GameChangersBanner'))'march-2026-innovation': lazy(() => import('./March2026InnovationSpotlightBanner'))'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner'))'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner'))'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
 };
 
 export type BannerKey = keyof typeof bannerComponents;

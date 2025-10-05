@@ -9,7 +9,7 @@ if (typeof global.TextEncoder === 'undefined') {
 }
 
 // Mock import.meta.env for Jest
-Object.defineProperty(global, 'import', {
+Object.defineProperty(global'import', {
   value: {
     meta: {
       env: {
@@ -38,7 +38,7 @@ global.ResizeObserver = class ResizeObserver {
 } as unknown as typeof ResizeObserver;
 
 // Mock matchMedia
-Object.defineProperty(window, 'matchMedia', {
+Object.defineProperty(window'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
     matches: false,
@@ -57,7 +57,7 @@ Object.defineProperty(window, 'matchMedia', {
 });
 
 // Mock performance API
-Object.defineProperty(window, 'performance', {
+Object.defineProperty(window'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),

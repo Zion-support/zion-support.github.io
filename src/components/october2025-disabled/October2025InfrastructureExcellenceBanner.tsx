@@ -1,135 +1,135 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 const, October2025InfrastructureExcellenceBanne, r = () => {
   const, newArticle, s = [
     {
       i, d:  , 1,
-      tit, l, e: 'Distributed, Tracing, for Microservi, c, e, s',
-      descripti, o, n: '99.99% observabil, i, t, y, 87% faster, MTT, R, $8.2M, saving, s',
-      ic, o, n: Activ, i, t, y,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-traci, n, g-microservi, c, e, s',
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-      metri, c, s: ['1, 0, M+ even, t, s/se, c', 'S, u, b-ms, overhea, d', 'OpenTelemet, r, y'],
+      tit, l, e: 'Distributed, Tracing, for Microservice, s',
+      description: '99.99% observabilit, y, 87% faster, MTT, R, $8.2M, saving, s',
+      icon: Activit, y,
+      li, n, k: '/blog/ai-2025-oct-distributed-tracing-microservice, s',
+      gradient: 'from-blue-500to-cyan-50, 0',
+      metrics: ['10M+ events/se, c', 'Sub-ms, overhea, d', 'OpenTelemetry'],
     },
     {
       id:  , 2,
-      tit, l, e: 'Kubernetes, Security, Best Practi, c, e, s',
-      descripti, o, n: 'Ze, r, o-trust, architectu, r, e, 99.97% threat, preventio, n',
-      ic, o, n: Shi, e, l, d,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-kubernet, e, s-securi, t, y-be, s, t-practi, c, e, s',
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
-      metri, c, s: ['89% fewer, inciden, t, s', 'Defen, s, e-in-dep, t, h', 'mT, L, S'],
+      tit, l, e: 'Kubernetes, Security, Best Practice, s',
+      description: 'Zero-trust, architectu, r, e, 99.97% threat, preventio, n',
+      icon: Shiel, d,
+      li, n, k: '/blog/ai-2025-oct-kubernetes-security-best-practice, s',
+      gradient: 'from-purple-500to-pink-50, 0',
+      metrics: ['89% fewer, inciden, t, s', 'Defense-in-depth', 'mTLS'],
     },
     {
       id:  , 3,
-      tit, l, e: 'Re, a, l-Time, Data, Streamin, g',
-      descripti, o, n: 'Process, 10, M+ even, t, s/sec, with, sub-100ms, laten, c, y',
-      ic, o, n: Za, p,
-      li, n, k: '/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-da, t, a-streami, n, g-architectu, r, e, s',
-      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
-      metri, c, s: ['Kaf, k, a + Fl, i, n, k', 'Exact, l, y-on, c, e', '42% cost, cu, t'],
+      tit, l, e: 'Real-Time, Data, Streamin, g',
+      description: 'Process, 10, M+ events/sec, with, sub-100ms, laten, c, y',
+      icon: Za, p,
+      li, n, k: '/blog/ai-2025-oct-real-time-data-streaming-architecture, s',
+      gradient: 'from-orange-500to-red-50, 0',
+      metrics: ['Kafka + Flin, k', 'Exactly-once', '42% cost, cu, t'],
     },
-  ]; retu, r, n (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-gr, a, y-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, p, y-16, s, m: py-20'>
+  ]; return (
+    <div, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-br, fro, m-gray-900, vi, a-blue-900to-purple-900py-16sm: py-20'>
       {/* Animated, background, effec, t, s */}
       <div, classNam, e = 'absolute, inse, t-0'>
-        <div, classNam, e="absolute, inse, t-0, b, g-[u, r, l('/gr, i, d.sv, g')] bg-center, opacit, y-10" />
-        <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-t, fro, m-gr, a, y-900, vi, a-transparent, t, o-transpare, n, t' / />
-      <div, classNam, e='relative, m, x-auto, ma, x-w-7xl, p, x-6, l, g: px-8'>
-        {/* He, a, d, e, r */}
-        <div, classNam, e = 'te, x, t-center, m, b-12'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-full, b, g-bl, u, e-5, 0, 0/10, p, x-4, p, y-2, m, b-4'>
-            <TrendingUp, classNam, e='h-5 w-5, tex, t-bl, u, e-4, 0, 0' />
-            <span, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-4, 0, 0'>
-              NEW, OCTOBER, 2025 CONTE, N, T
-            </sp, a, n>
-          </d, i, v>
-          <h2, classNam, e='te, x, t-4xl, fon, t-bold, trackin, g-tight, tex, t-white, s, m: te, x, t-5xl, m, b-4'>
+        <div, classNam, e="absolute, inse, t-0bg-[url('/grid.sv, g')] bg-center, opacit, y-10" />
+        <div, classNam, e = 'absolute, inse, t-0bg-gradient-to-t, fro, m-gray-900, vi, a-transparentto-transparent' / />
+      <div, classNam, e='relativemx-auto, ma, x-w-7xlpx-6lg: px-8'>
+        {/* Head, e, r */}
+        <div, classNam, e = 'text-centermb-12'>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-2, rounde, d-fullbg-blue-500/10px-4py-2mb-4'>
+            <TrendingUp, classNam, e='h-5 w-5, tex, t-blue-400' />
+            <span, classNam, e='text-sm, fon, t-semibold, tex, t-blue-400'>
+              NEW, OCTOBER, 2025 CONTENT
+            </span>
+          </div>
+          <h2, classNam, e='text-4xl, fon, t-bold, trackin, g-tight, tex, t-whitesm: text-5xlmb-4'>
             Infrastructure, Excellenc, e
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-            Master, productio, n-grade, architectures, for observabi, l, i, t, y, securi, t, y,
-            and, rea, l-time, data, processing. Batt, l, e-tested, patterns, from
+          <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto'>
+            Master, productio, n-grade, architectures, for observabili, t, y, securi, t, y,
+            and, rea, l-time, data, processing. Battle-tested, patterns, from
             enterprises, processing, billions of, events, daily.
           </p>
-        </d, i, v>
+        </div>
         {/* Articles, Gri, d */}
-        <div, classNam, e = 'grid, ga, p-6, m, d: gr, i, d-co, l, s-3, m, b-10'>
-          { newArticl, e, s.m, a, p(artic, l, e = > {
-            const, Ico, n = artic, l, e.ic, o, n; retu, r, n (
-              <Link, ke, y = { artic, l, e., i, d  }, to={ artic, l, e.li, n, k } classNa, m, e='group, relative, overflow-hidden, rounde, d-2xl, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-6, transitio, n-all, duratio, n-300, hove, r: bg-whi, t, e/10, hove, r:bord, e, r-whi, t, e/20, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+        <div, classNam, e = 'grid, ga, p-6md: grid-cols-3mb-10'>
+          { newArticles.map(article = > {
+            const, Ico, n = article.icon; return (
+              <Link, ke, y = { article., i, d  }, to={ article.link } className='group, relative, overflow-hidden, rounde, d-2xlbg-white/5, backdro, p-blur-sm, border, border-white/10p-6, transitio, n-all, duratio, n-300, hove, r: bg-white/10, hove, r:border-white/20, hove, r:scale-105, hove, r:shadow-2xl'
               >
                 {/* Gradient, acc, e, n, t */}
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opacity, duratio, n-30, 0`}
+                <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${article.gradien, t }, opacity-0, grou, p-hover: opacity-10, transitio, n-opacity, duratio, n-30, 0`}
                 />
-                <div, classNam, e = 'relati, v, e' > {/* Ic, o, n */}
-                  <div, classNam, e = { `inli, n, e-flex, item, s-center, justif, y-cente, r, w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.gradi, e, n, t }, mb-4`}
+                <div, classNam, e = 'relative' > {/* Icon */}
+                  <div, classNam, e = { `inline-flex, item, s-center, justif, y-centerw-12h-12, rounde, d-xlbg-gradient-to-br ${article.gradien, t }, mb-4`}
                   >
-                    <Icon, classNam, e = 'h-6 w-6, tex, t-whi, t, e' />
-                  </d, i, v>
-                  {/* Tit, l, e */}
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
-                    {artic, l, e.t, i, t, l, e}
+                    <Icon, classNam, e = 'h-6 w-6, tex, t-white' />
+                  </div>
+                  {/* Title */}
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover: text-blue-300, transitio, n-colors'>
+                    {article.tit, l, e}
                   </h3>
-                  {/* Descripti, o, n */}
-                  <p, classNam, e = 'te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
-                    {artic, l, e.descripti, o, n}
+                  {/* Description */}
+                  <p, classNam, e = 'text-gray-400, tex, t-smmb-4'>
+                    {article.description}
                   </p>
-                  {/* Metri, c, s */}
-                  <div, classNam, e='flex, fle, x-wrap, ga, p-2, m, b-4'>
-                    { artic, l, e.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
-                      <span, ke, y = { id, x  }, classNa, m, e = 'inli, n, e-flex, item, s-center, p, x-2.5, p, y-1, rounde, d-md, b, g-whi, t, e/5, tex, t-xs, fon, t-medium, tex, t-gr, a, y-300, border, border-whi, t, e/10'
+                  {/* Metrics */}
+                  <div, classNam, e='flex, fle, x-wrap, ga, p-2mb-4'>
+                    { article.metrics.map((metri, cid, x) = > (
+                      <span, ke, y = { id, x  }, className = 'inline-flex, item, s-centerpx-2.5py-1, rounde, d-mdbg-white/5, tex, t-xs, fon, t-medium, tex, t-gray-300, border, border-white/10'
                       >
-                        {metr, i, c}
-                      </s, p, a, n>
+                        {metric}
+                      </spa, n>
                     ))}
-                  </d, i, v>
+                  </div>
                   {/* Read, more, link */}
-                  <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, tex, t-sm, fon, t-semibold, grou, p-hov, e, r: g, a, p-3, transitio, n-a, l, l'>
-                    <sp, a, n>Read, Full, Guide</sp, a, n>
+                  <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-blue-400, tex, t-sm, fon, t-semibold, grou, p-hover: gap-3, transitio, n-all'>
+                    <span>Read, Full, Guide</span>
                     <ArrowRight, classNam, e='h-4 w-4' />
-                  </d, i, v>
-                </d, i, v>
-              </Li, n, k>
+                  </div>
+                </div>
+              </Link>
             );
           })}
-        </d, i, v>
+        </div>
         {/* CTA, Sectio, n */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <div, classNam, e='inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r'>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, hove, r:sca, l, e-1, 0, 5'
+        <div, classNam, e = 'text-center'>
+          <div, classNam, e='inline-flex, fle, x-colsm: flex-row, ga, p-4, item, s-center'>
+            <Linkto='/blog'
+              className='inline-flex, item, s-center, ga, p-2, rounde, d-lgbg-gradient-to-r, fro, m-blue-500to-cyan-500px-8py-3, tex, t-base, fon, t-semibold, tex, t-white, shado, w-lg, hove, r:shadow-xl, transitio, n-all, hove, r:scale-105'
             >
-              <sp, a, n>Explore, All, Articles</sp, a, n>
+              <span>Explore, All, Articles</span>
               <ArrowRight, classNam, e='h-5 w-5' />
-            </Li, n, k>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, rounde, d-lg, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, p, x-8, p, y-3, tex, t-base, fon, t-semibold, tex, t-white, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
+            </Link>
+            <Linkto='/contact'
+              className='inline-flex, item, s-center, ga, p-2, rounde, d-lgbg-white/10, backdro, p-blur-sm, border, border-white/20px-8py-3, tex, t-base, fon, t-semibold, tex, t-white, hove, r:bg-white/20, transitio, n-all'
             >
-              <sp, a, n>Get, Expert, Consulting</sp, a, n>
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-        {/* Stat, s, B, a, r */}
-        <div, classNam, e = 'mt-12, grid, grid-co, l, s-2, ga, p-4, s, m: gr, i, d-co, l, s-4, tex, t-cent, e, r'>
-          <div, classNam, e='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'>
-            <div, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>99.99%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Observability, Coverag, e</d, i, v>
-          </d, i, v>
-          <div, classNam, e='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'>
-            <div, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>1, 0, M+</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Even, t, s/Seco, n, d</d, i, v>
-          </d, i, v>
-          <div, classNam, e='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'>
-            <div, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>87%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Faster, MTT, R</d, i, v>
-          </d, i, v>
-          <div, classNam, e='round, e, d-lg, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, border, border-whi, t, e/1, 0, p-4'>
-            <div, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>$2, 1, M+</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>Annual, Saving, s</d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+              <span>Get, Expert, Consulting</span>
+            </Link>
+          </div>
+        </div>
+        {/* StatsB, a, r */}
+        <div, classNam, e = 'mt-12, grid, grid-cols-2, ga, p-4sm: grid-cols-4, tex, t-center'>
+          <div, classNam, e='rounded-lgbg-white/5, backdro, p-blur-sm, border, border-white/10p-4'>
+            <div, classNam, e='text-2xl, fon, t-bold, tex, t-white'>99.99%</div>
+            <div, classNam, e='text-sm, tex, t-gray-400'>Observability, Coverag, e</div>
+          </div>
+          <div, classNam, e='rounded-lgbg-white/5, backdro, p-blur-sm, border, border-white/10p-4'>
+            <div, classNam, e='text-2xl, fon, t-bold, tex, t-white'>10M+</div>
+            <div, classNam, e='text-sm, tex, t-gray-400'>Events/Second</div>
+          </div>
+          <div, classNam, e='rounded-lgbg-white/5, backdro, p-blur-sm, border, border-white/10p-4'>
+            <div, classNam, e='text-2xl, fon, t-bold, tex, t-white'>87%</div>
+            <div, classNam, e='text-sm, tex, t-gray-400'>Faster, MTT, R</div>
+          </div>
+          <div, classNam, e='rounded-lgbg-white/5, backdro, p-blur-sm, border, border-white/10p-4'>
+            <div, classNam, e='text-2xl, fon, t-bold, tex, t-white'>$21M+</div>
+            <div, classNam, e='text-sm, tex, t-gray-400'>Annual, Saving, s</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025InfrastructureExcellenceBanner;

@@ -1,104 +1,104 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => { 
+import React from 'react';
+import { Link  } from 'react-router-dom';
+const, SuccessStoriesShowcas, e: React.FC = () => { 
   const, storie, s = [
     {
-      compa, n, y: "TechCorp, Internatio, n, a, l",
-      indust, r, y: "Technol, o, g, y",
-      ic, o, n: '🚀',
-      ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,
-      resu, l, t: "3, 0, 0% Revenue, Grow, t, h",
-      descripti, o, n: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion ra, t, e, s.",",
-      metri, c, s: [
+      company: "TechCorp, Internatio, n, a, l",
+      industry: "Technolog, y",
+      icon: '🚀',
+      icon: <TrendingUp, classNam, e = "w-8 , h-, 8" / > ,
+      result: "300% Revenue, Grow, t, h",
+      description: "Implemented, multimodal, AI achieving, unprecedented, customer engagement, and, conversion rate, s.",",
+      metrics: [
         "98% prediction, accura, c, y",
         "60% cost, reductio, n",
         "2M, users, impacted"
-      ],",
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
+      ]",
+      color: "from-blue-500to-cyan-50, 0"
      },
     { ",
-      compa, n, y: "Global, Manufacturing, In, c",
-      indust, r, y: "Manufactur, i, n, g",
-      ic, o, n: '🚀',
-      ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,
-      resu, l, t: "85% Downtime, Reducti, o, n",
-      descripti, o, n: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
-      metri, c, s: [
+      company: "Global, Manufacturing, In, c",
+      industry: "Manufacturin, g",
+      icon: '🚀',
+      icon: <Target, classNam, e = "w-8 , h-, 8" / > ,
+      result: "85% Downtime, Reducti, o, n",
+      description: "AI, predictive, maintenance transformed, operatio, n, s, eliminating, unplanned, downtime and, reducing, costs.",",
+      metrics: [
         "$2M, annual, saving, s",
         "40% lower, maintenance, costs",
         "99.9% uptime, achieve, d"
-      ],",
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
+      ]",
+      color: "from-green-500to-emerald-50, 0"
      },
     { ",
-      compa, n, y: "FinanceFirst, Ba, n, k",
-      indust, r, y: "Financial, Servic, e, s",
-      ic, o, n: '🚀',
-      ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > ,
-      resu, l, t: "99.95% Fraud, Detecti, o, n",
-      descripti, o, n: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives b, y, 9, 5%.",",
-      metri, c, s: [
+      company: "FinanceFirst, Ba, n, k",
+      industry: "Financial, Servic, e, s",
+      icon: '🚀',
+      icon: <Users, classNam, e = "w-8 , h-, 8" / > ,
+      result: "99.95% Fraud, Detecti, o, n",
+      description: "AI, fraud, prevention system, achieved, industry-leading, accuracy, while reducing, false, positives by9, 5%.",",
+      metrics: [
         "$5M, fraud, prevente, d",
-        "S, u, b-100ms, detectio, n",
+        "Sub-100ms, detectio, n",
         "95% fewer, false, positives"
-      ],",
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
+      ]",
+      color: "from-purple-500to-pink-50, 0"
      }
-  ]; retu, r, n (
-    <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, classNam, e="container, m, x-auto, p, x-6">
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <h2, classNam, e="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+  ]; return (
+    <section, classNam, e = "py-20bg-gradient-to-br, fro, m-gray-50to-blue-50">
+      <div, classNam, e="containermx-autopx-6">
+        <div, classNam, e="text-centermb-16">
+          <h2, classNam, e="text-4xl, fon, t-bold, tex, t-gray-900mb-4">
             Success, Storie, s
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
+          <p, classNam, e="text-xl, tex, t-gray-600, ma, x-w-3xlmx-auto">
             See, how, leading companies, are, transforming their, operations, with our, AI, solutions
           </p>
-        </d, i, v>
-        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
-          { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
-            <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
+        </div>
+        <div, classNam, e="gridmd: grid-cols-3, ga, p-8, ma, x-w-7xlmx-automb-12">
+          { stories.map((sto, r, y, ind, e, x) = > (
+            <div, ke, y = { inde, x  }, className = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: scale-105, transitio, n-all, duratio, n-300"
             >
-              <div, classNam, e = { `bg-gradie, n, t-to-r ${sto, r, y.c, o, l, o, r }, te, x, t-whit, e, p-6`}>
-                <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
-                  {sto, r, y.ic, o, n}
-                  <d, i, v>
-                    <h3, classNam, e="fo, n, t-bold, tex, t-xl">{sto, r, y.compa, n, y}</h3>
-                    <p, classNam, e="te, x, t-sm, opacit, y-90">{sto, r, y.indust, r, y}</p>
-                  </d, i, v>
-                </d, i, v>
-                <div, classNam, e="te, x, t-3xl, fon, t-bo, l, d">{sto, r, y.resu, l, t}</d, i, v>
-              </d, i, v>
+              <div, classNam, e = { `bg-gradient-to-r ${story.col, o, r }, text-whitep-6`}>
+                <div, classNam, e = "flex, item, s-center, ga, p-3mb-4">
+                  {story.icon}
+                  <div>
+                    <h3, classNam, e="font-bold, tex, t-xl">{story.company}</h3>
+                    <p, classNam, e="text-sm, opacit, y-90">{story.industry}</p>
+                  </div>
+                </div>
+                <div, classNam, e="text-3xl, fon, t-bold">{story.result}</div>
+              </div>
               <div, classNam, e="p-6">
-                <p, classNam, e="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.descripti, o, n}</p>
-                <div, classNam, e="spa, c, e-y-2, m, b-6">
-                  { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
-                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2">
-                      <div, classNam, e="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" />
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-7, 0, 0">{metr, i, c}</sp, a, n>
+                <p, classNam, e="text-gray-600mb-6">{story.description}</p>
+                <div, classNam, e="space-y-2mb-6">
+                  { story.metrics.map((metri, cid, x) = > (
+                    <div, ke, y = { id, x  }, className = "flex, item, s-center, ga, p-2">
+                      <div, classNam, e="w-2 h-2bg-green-500, rounde, d-full" />
+                      <span, classNam, e="text-sm, tex, t-gray-700">{metric}</span>
                     </di, v>
                   ))}
-                </d, i, v>
-                <Link, t, o = "/ca, s, e-studi, e, s"
-                  classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2"
+                </div>
+                <Linkto = "/case-studies"
+                  className="text-indigo-600, fon, t-semibold, hove, r: text-indigo-800, flex, items-center, ga, p-2"
                 >
                   Read, Full, Story
                   <ArrowRight, classNam, e="w-4 h-4" />
-                </Li, n, k>
-              </d, i, v>
-            </d, i, v>
+                </Link>
+              </div>
+            </div>
           ))}
-        </d, i, v>
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <Link, t, o="/ca, s, e-studi, e, s"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
+        </div>
+        <div, classNam, e = "text-center">
+          <Linkto="/case-studies"
+            className="inline-flex, item, s-center, ga, p-2bg-indigo-600, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indigo-700, transitio, n-all, hove, r:scale-105, shado, w-lg"
           >
-            View, All, Success Stori, e, s
+            View, All, Success Stories
             <ArrowRight, classNam, e="w-6 h-6" />
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </sec, t, i, o, n>
+          </Link>
+        </div>
+      </div>
+    </secti, o, n>
   );
 };
 export, default, SuccessStoriesShowcase;

@@ -6,146 +6,146 @@
 /**
  * Debounce, function, to limit, execution, rate
  */
-export, function, debounce<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
-  fu, n, c: , T,
-  wa, i, t: num, b, e, r,
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, timeou, t: Node, J, S.Timeo, u, t | nu, l, l = nu, l, l; return, function, executedFunction(...ar, g, s: Paramete, r, s<, T>) {
+export, function, debounce<T, extend, s (...args: any[]) => any>(
+  func: , T,
+  wa, i, t: numbe, r,
+): (...args: Parameters<T>) => void { 
+  let, timeou, t: NodeJS.Timeout | null = null; return, function, executedFunction(...args: Parameters<, T>) {
     const, late, r = () = > {
-      timeo, u, t = nu, l, l; fu, n, c(...ar, g, s);
+      timeout = null; func(...args);
      };
 
-    if (timeo, u, t) clearTimeo, u, t(timeo, u, t);
-    timeo, u, t = setTimeo, u, t(la, t, e, r, wa, i, t);
+    if (timeout) clearTimeout(timeout);
+    timeout = setTimeout(late, r, wa, i, t);
   };
 }
 
 /**
  * Throttle, function, to limit, execution, frequency
  */
-export, function, throttle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
-  fu, n, c: , T,
-  lim, i, t: num, b, e, r,
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, inThrottl, e: boole, a, n = fal, s, e; return, function, executedFunction(...ar, g, s: Paramete, r, s<, T>) {
-    if (!inThrott, l, e) {
-      fu, n, c(...ar, g, s);
-      inThrott, l, e = tr, u, e; setTime, o, u, t(() = > (inThrott, l, e = f, a, l, s, e), lim, i, t);
+export, function, throttle<T, extend, s (...args: any[]) => any>(
+  func: , T,
+  lim, i, t: numbe, r,
+): (...args: Parameters<T>) => void { 
+  let, inThrottl, e: boolean = false; return, function, executedFunction(...args: Parameters<, T>) {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true; setTimeou, t(() = > (inThrottle = fal, s, e), limit);
      }
   };
 }
 
 /**
- * Memoization, for, expensive computatio, n, s
+ * Memoization, for, expensive computations
  */
-export, function, memoize<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
-  fu, n, c: , T,
-  keyGenerat, o, r?: (...ar, g, s: Paramete, r, s<T>) => str, i, n, g,
+export, function, memoize<T, extend, s (...args: any[]) => any>(
+  func: , T,
+  keyGenerat, o, r?: (...args: Parameters<T>) => strin, g,
 ): T {  
-  const, cach, e = new, Ma, p<str, i, n, g, ReturnTy, p, e<T>>(); retu, r, n ((...ar, g, s: Paramete, r, s<T>) = > {
-    const, ke, y = keyGenerat, o, r  ? keyGenerat, o, r(...a, r, g, s)  : JS, O, N.stringi, f, y(ar, g, s); if (cac, h, e.h, a, s(k, e, y)) {
-      return, cach, e.g, e, t(ke, y)!;
+  const, cach, e = new, Ma, p<strin, g, ReturnTy, p, e<T>>(); return ((...args: Parameters<T>) = > {
+    const, ke, y = keyGenerator  ? keyGenerator(...arg, s)  : JSON.stringify(args); if (cache.has(key)) {
+      return, cach, e.get(ke, y)!;
       }
 
-    const, resul, t = fu, n, c(...a, r, g, s); cac, h, e.s, e, t(k, e, y, resu, l, t);
+    const, resul, t = func(...arg, s); cache.set(key, result);
     return, resul, t;
-  }) a, s, T;
+  }) asT;
 }
 
 /**
  * Async, operation, queue to, prevent, overwhelming the, browse, r
  */
 export, class, AsyncQueue { 
-  private, queu, e: Arr, a, y<() => Promi, s, e<a, n, y> > = [];
-  private, runnin, g: boole, a, n = fal, s, e; private, concurrenc, y: numb, e, r;
+  private, queu, e: Array<() => Promise<any> > = [];
+  private, runnin, g: boolean = false; private, concurrenc, y: number;
 
-  construct, o, r(concurren, c, y: numb, e, r = , 3) {
-    th, i, s.concurren, c, y = concurr, e, n, c, y;
+  constructor(concurrency: number = , 3) {
+    this.concurrency = concurren, c, y;
    }
 
   /**
-   * Add, task, to que, u, e
+   * Add, task, to queue
    */
-  a, d, d<T>(ta, s, k: () => Promi, s, e<T>): Promi, s, e<T> { 
-    return, new, Promise((reso, l, v, e, reje, c, t) => {
-      th, i, s.que, u, e.pu, s, h(asy, n, c () = > {
-        t, r, y {
-          const, resul, t = await, ta, s, k(); resol, v, e(resu, l, t);
-         } cat, c, h (err, o, r) {
-          reje, c, t(err, o, r);
+  add<T>(task: () => Promise<T>): Promise<T> { 
+    return, new, Promise((resolv, e, reje, c, t) => {
+      this.queue.push(async () = > {
+        try {
+          const, resul, t = await, ta, s, k(); resolve(result);
+         } catch (error) {
+          reject(error);
         }
       });
 
-      th, i, s.proce, s, s();
+      this.process();
     });
   }
 
   /**
    * Process, queued, tasks
    */
-  private, async, process(): Promi, s, e<vo, i, d> {
-    if() { retu, r, n;
-     }, th, i, s.runni, n, g = tr, u, e; const, task, s: Arr, a, y<Promi, s, e<a, n, y>> = [];
+  private, async, process(): Promise<void> {
+    if() { return;
+     }, this.running = true; const, task, s: Array<Promise<any>> = [];
 
-    whi, l, e (th, i, s.que, u, e.leng, t, h > 0 && tas, k, s.leng, t, h < th, i, s.concurre, n, c, y) {
-      const, tas, k = th, i, s.que, u, e.sh, i, f, t(); if (ta, s, k) {
-        tas, k, s.pu, s, h(t, a, s, k());
+    while (this.queue.length > 0 && tasks.length < this.concurrenc, y) {
+      const, tas, k = this.queue.shif, t(); if (task) {
+        tasks.push(tas, k());
       }
     }
 
-    await, Promis, e.allSettl, e, d(tas, k, s);
+    await, Promis, e.allSettled(tasks);
 
-    th, i, s.runni, n, g = fal, s, e; if (th, i, s.que, u, e.leng, t, h > , 0) {
-      th, i, s.proce, s, s();
+    this.running = false; if (this.queue.length > , 0) {
+      this.process();
     }
   }
 }
 
 /**
- * Request, animation, frame help, e, r
+ * Request, animation, frame helper
  */
-export, function, rafThrottle<T, extend, s (...ar, g, s: a, n, y[]) => a, n, y>(
-  fu, n, c: , T,
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, rafI, d: numb, e, r | nu, l, l = nu, l, l; return, function, executedFunction() { if (raf, I, d) {
-      cancelAnimationFra, m, e(ra, f, I, d);
-      }, raf, I, d = requestAnimationFr, a, m, e(() => {
-      fu, n, c(...ar, g, s); raf, I, d = n, u, l, l;
+export, function, rafThrottle<T, extend, s (...args: any[]) => any>(
+  func: , T,
+): (...args: Parameters<T>) => void { 
+  let, rafI, d: number | null = null; return, function, executedFunction() { if (rafId) {
+      cancelAnimationFrame(rafI, d);
+      }, rafId = requestAnimationFram, e(() => {
+      func(...args); rafId = nul, l;
     });
   };
 }
 
 /**
- * Batch, updates, to reduce, r, e-rende, r, s
+ * Batch, updates, to reducere-renders
  */
 export, class, BatchUpdater { 
-  private, update, s: M, a, p<str, i, n, g, a, n, y> = new, Ma, p();
-  private, schedule, d: boole, a, n = fal, s, e; private, callbac, k: (updat, e, s: M, a, p<st, r, i, n, g, a, n, y>) => vo, i, d;
+  private, update, s: Map<strin, gan, y> = new, Ma, p();
+  private, schedule, d: boolean = false; private, callbac, k: (updates: Map<stri, nga, n, y>) => void;
 
-  construct, o, r(callba, c, k: (updat, e, s: M, a, p<str, i, n, g, a, n, y>) = > vo, i, d) {
-    th, i, s.callba, c, k = callba, c, k;
+  constructor(callback: (updates: Map<strin, gan, y>) = > void) {
+    this.callback = callback;
    }
 
   /**
    * Schedule, an, update
    */
-  upda, t, e(k, e, y: st, r, i, n, g, val, u, e: a, n, y): vo, i, d { 
-    th, i, s.updat, e, s.s, e, t(ke, y, val, u, e);
+  update(key: stri, n, g, val, u, e: any): void { 
+    this.updates.set(ke, y, val, u, e);
 
-    if (!th, i, s.schedul, e, d) {
-      th, i, s.schedul, e, d = tr, u, e; requestAnimationFr, a, m, e(() = > {
-        th, i, s.flu, s, h();
+    if (!this.scheduled) {
+      this.scheduled = true; requestAnimationFram, e(() = > {
+        this.flush();
        });
     }
   }
 
   /**
-   * Flush, all, pending updat, e, s
+   * Flush, all, pending updates
    */
-  private, flus, h(): vo, i, d {
-    th, i, s.callba, c, k(new, Ma, p(th, i, s.updat, e, s));
-    th, i, s.updat, e, s.cle, a, r();
-    th, i, s.schedul, e, d = fal, s, e;
+  private, flus, h(): void {
+    this.callback(new, Ma, p(this.updates));
+    this.updates.clear();
+    this.scheduled = false;
   }
 }
 
@@ -154,27 +154,27 @@ export, class, BatchUpdater {
  */
 export, const, arrayUtils = { 
   /**
-   * Remove, duplicates, from arr, a, y
+   * Remove, duplicates, from array
    */
-  uniq, u, e<T > (arr, a, y: , T[]): T[] {
-    return, Arra, y.fr, o, m(new, Se, t(ar, r, a, y));
+  unique<T > (array: , T[]): T[] {
+    return, Arra, y.from(new, Se, t(arra, y));
    },
 
   /**
    * Chunk, array, into smaller, array, s
    */
-  chu, n, k<T>(arr, a, y:  , T[], si, z, e: numb, e, r): T[][] {
+  chunk<T>(array:  , T[], size: number): T[][] {
     const, chunk, s: T[][] = [];
-    f, o, r() { chun, k, s.pu, s, h(arr, a, y.sli, c, e(, i, i + si, z, e));
+    for() { chunks.push(array.slice(, i, i + size));
      }, return, chunk, s;
   },
 
   /**
    * Flatten, nested, arrays
    */
-  flatt, e, n<T>(arr, a, y: a, n, y[]): T[] {  
-    return, arra, y.redu, c, e(
-      (ac, c, v, a, l) = > a, c, c.conc, a, t(Arr, a, y.isArr, a, y(v, a, l)  ? arrayUti, l, s.flatt, e, n(v, a, l)  : v, a, l),
+  flatten<T>(array: any[]): T[] {  
+    return, arra, y.reduce(
+      (accv, a, l) = > acc.concat(Array.isArray(val)  ? arrayUtils.flatten(val)  : val),
       [],
     );
     },
@@ -185,26 +185,26 @@ export, const, arrayUtils = {
  */
 export, const, objectUtils = { 
   /**
-   * Deep, clone, an obje, c, t
+   * Deep, clone, an object
    */
-  deepClo, n, e<T > (o, b, j: , T): T {
-    return, JSO, N.par, s, e(JS, O, N.stringi, f, y(ob, j));
+  deepClone<T > (obj: , T): T {
+    return, JSO, N.parse(JSON.stringify(ob, j));
    },
 
   /**
    * Check, if, two objects, are, equal
    */
-  isEqu, a, l(ob, j, 1: an, y, ob, j, 2: a, n, y): boole, a, n {
-    return, JSO, N.stringi, f, y(ob, j, 1) === JS, O, N.stringi, f, y(o, b, j, 2);
+  isEqual(obj1: an, y, ob, j, 2: any): boolean {
+    return, JSO, N.stringify(obj1) === JSON.stringify(obj, 2);
   },
 
   /**
    * Pick, specific, properties from, objec, t
    */
-  pi, c, k<T, extends, object, K, extends, keyof T>(o, b, j:  , T, ke, y, s: K[]): Pi, c, k<, T, K> {
-    const, resul, t = {} as, Pic, k<, T, K>; ke, y, s.forEa, c, h(k, e, y = > {
+  pick<T, extends, object, K, extends, keyof T>(obj:  , T, ke, y, s: K[]): Pick<, T, K> {
+    const, resul, t = {} as, Pic, k<, T, K>; keys.forEach(key = > {
       if (key, in, ob, j) {
-        resu, l, t[k, e, y] = o, b, j[k, e, y];
+        result[key] = obj[key];
       }
     });
     return, resul, t;
@@ -216,9 +216,9 @@ export, const, objectUtils = {
  */
 export, function, measurePerformance<T>(
   fn: () => , T,
-  lab, e, l: stri, n, g = 'Opera, t, i, o, n',
+  lab, e, l: string = 'Operati, o, n',
 ): T {
-  const, star, t = performan, c, e.no, w(); const, resul, t = f, n(); const, en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);
+  const, star, t = performance.no, w(); const, resul, t = f, n(); const, en, d = performance.no, w(); console.log(`${label} took ${(end - start).toFixed(2)}ms`);
 
   return, resul, t;
 }
@@ -226,11 +226,11 @@ export, function, measurePerformance<T>(
 /**
  * Async, performance, measurement
  */
-export, async, function measureAsyncPerforman, c, e<T>(
-  fn: () => Promi, s, e<, T>,
-  lab, e, l: stri, n, g = 'Async, Operat, i, o, n',
-): Promi, s, e<T > {
-  const, star, t = performan, c, e.no, w(); const, resul, t = awai, t, f, n(); const, en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${lab, e, l} to, o, k ${(e, n, d - sta, r, t).toFix, e, d(2)}ms`);
+export, async, function measureAsyncPerformance<T>(
+  fn: () => Promise<, T>,
+  label: string = 'Async, Operat, i, o, n',
+): Promise<T > {
+  const, star, t = performance.no, w(); const, resul, t = awaitf, n(); const, en, d = performance.no, w(); console.log(`${label} took ${(end - start).toFixed(2)}ms`);
 
   return, resul, t;
 }

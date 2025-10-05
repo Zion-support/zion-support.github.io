@@ -1,81 +1,81 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 
-export, default, function October2025AIObservabilitySpotlightBann, e, r() { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-950, vi, a-indi, g, o-900, t, o-bl, u, e-950, tex, t-white, p, y-12, p, x-4'>
-      <div, classNam, e='m, a, x-w-6xl, m, x-au, t, o'>
-        <div, classNam, e='te, x, t-center, m, b-8'>
-          <div, classNam, e='inli, n, e-block, b, g-cy, a, n-400, tex, t-black, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4'>
-            👁️ BREAKTHROUGH, TECHNOLOG, Y - OCTOB, E, R , 2, 20, 2, 5
-          </d, i, v>
-          <h3, classNam, e = 'te, x, t-5xl, fon, t-bold, m, b-4'>
-            Ne, x, t-Gen, AI, Observability Platfo, r, m
+export, default, function October2025AIObservabilitySpotlightBanner() { 
+  return (
+    <div, classNam, e = 'bg-gradient-to-br, fro, m-blue-950, vi, a-indigo-900to-blue-950, tex, t-whitepy-12px-4'>
+      <div, classNam, e='max-w-6xlmx-auto'>
+        <div, classNam, e='text-centermb-8'>
+          <div, classNam, e='inline-blockbg-cyan-400, tex, t-blackpx-4py-2, rounde, d-full, tex, t-sm, fon, t-boldmb-4'>
+            👁️ BREAKTHROUGH, TECHNOLOG, Y - OCTOBER , 2, 20, 2, 5
+          </div>
+          <h3, classNam, e = 'text-5xl, fon, t-boldmb-4'>
+            Next-Gen, AI, Observability Platform
           </h3>
-          <p, classNam, e='te, x, t-2xl, tex, t-bl, u, e-200, m, b-2'>
-            Intelligent, Monitoring, That Predi, c, t, s, Preven, t, s & Resolves, Issues, Automatically
+          <p, classNam, e='text-2xl, tex, t-blue-200mb-2'>
+            Intelligent, Monitoring, That Predict, s, Preven, t, s & Resolves, Issues, Automatically
           </p>
-          <p, classNam, e = 'te, x, t-xl, tex, t-bl, u, e-3, 0, 0'>
+          <p, classNam, e = 'text-xl, tex, t-blue-300'>
             $3.7B, Enterprise, Value • 96% Faster, Resolutio, n • 87% Alert, Reductio, n
           </p>
-        </d, i, v>
+        </div>
 
-        <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, m, b-8'>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'>
-            <d, i, v>
-              <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>$3.7B</d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>Total, Value, Created</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+        <div, classNam, e='bg-white/10, backdro, p-blur-lg, rounde, d-2xlp-8mb-8'>
+          <div, classNam, e='gridmd: grid-cols-4, ga, p-6, tex, t-center'>
+            <div>
+              <div, classNam, e='text-4xl, fon, t-bold, tex, t-cyan-400mb-2'>$3.7B</div>
+              <div, classNam, e='text-sm, tex, t-gray-300'>Total, Value, Created</div>
+            </div>
+            <div>
+              <div, classNam, e='text-4xl, fon, t-bold, tex, t-green-400mb-2'>
                 8, mi, n
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>MT, T, R (fro, m, 3.5, hou, r, s)</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e = 'te, x, t-4xl, fon, t-bold, tex, t-yell, o, w-400, m, b-2'>98%</d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
+              </div>
+              <div, classNam, e='text-sm, tex, t-gray-300'>MTTR (from3.5, hou, r, s)</div>
+            </div>
+            <div>
+              <div, classNam, e = 'text-4xl, fon, t-bold, tex, t-yellow-400mb-2'>98%</div>
+              <div, classNam, e='text-sm, tex, t-gray-300'>
                 Anomaly, Detection, Accuracy
-              </d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>87%</d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-3, 0, 0'>
+              </div>
+            </div>
+            <div>
+              <div, classNam, e='text-4xl, fon, t-bold, tex, t-purple-400mb-2'>87%</div>
+              <div, classNam, e='text-sm, tex, t-gray-300'>
                 Alert, Volume, Reduction
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        <div, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, m, b-8'>
-          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-6, rounde, d-xl, border, border-cy, a, n-5, 0, 0/50'>
-            <h4, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>🎯 Core, Capabilitie, s</h4>
-            <ul, classNam, e='spa, c, e-y-2'>
-              <li>✅ Intelligent, anomaly, detection with, 9, 8% accura, c, y</li>
+        <div, classNam, e='gridmd:grid-cols-2, ga, p-8mb-8'>
+          <div, classNam, e='bg-gradient-to-br, fro, m-cyan-500/20to-blue-500/20p-6, rounde, d-xl, border, border-cyan-500/50'>
+            <h4, classNam, e='text-2xl, fon, t-boldmb-4'>🎯 Core, Capabilitie, s</h4>
+            <ul, classNam, e='space-y-2'>
+              <li>✅ Intelligent, anomaly, detection with98% accuracy</li>
               <li>✅ Automated, root, cause analysis, in, seconds</li>
-              <li>✅ Predictive, analytics, for capaci, t, y & failur, e, s</li>
+              <li>✅ Predictive, analytics, for capacity & failures</li>
               <li>✅ Smart, alerting, with 95% noise, reductio, n</li>
               <li>✅ AI-powered, dashboards, that adapt, automaticall, y</li>
             </ul>
-          </d, i, v>
-          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/2, 0, p-6, rounde, d-xl, border, border-purp, l, e-5, 0, 0/50'>
-            <h4, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>💰 Business, Impac, t</h4>
-            <ul, classNam, e='spa, c, e-y-2'>
-              <li>💎 $840M, infrastructure, cost optimizati, o, n</li>
+          </div>
+          <div, classNam, e='bg-gradient-to-br, fro, m-purple-500/20to-pink-500/20p-6, rounde, d-xl, border, border-purple-500/50'>
+            <h4, classNam, e='text-2xl, fon, t-boldmb-4'>💰 Business, Impac, t</h4>
+            <ul, classNam, e='space-y-2'>
+              <li>💎 $840M, infrastructure, cost optimization</li>
               <li>💎 $1.2B, prevented, revenue loss, from, outages</li>
-              <li>💎 $470M, reduced, operations overhe, a, d</li>
+              <li>💎 $470M, reduced, operations overhead</li>
               <li>💎 92% issues, predicted, before user, impac, t</li>
               <li>💎 99.98% availability, improvemen, t</li>
             </ul>
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
 
-        <div, classNam, e='te, x, t-cent, e, r'>
-          <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-ne, x, t-g, e, n-ai-observabili, t, y-<platfo, r, m'
-            classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, hove, r:fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, transitio, n-all, shado, w-2xl, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hover:sca, l, e-1, 0, 5'
+        <div, classNam, e='text-center'>
+          <Linkto='/blog/ai-2025-october-2-next-gen-ai-observability-<platform'
+            className='inline-blockbg-gradient-to-r, fro, m-cyan-500to-blue-500, tex, t-whitepx-10py-5, rounde, d-xl, fon, t-bold, tex, t-xl, hove, r:from-cyan-600, hove, r:to-blue-600, transitio, n-all, shado, w-2xl, hove, r:shadow-cyan-500/50, transform, hover:scale-105'
           >
-            🚀 Read, Complete, Platform Gui, d, e + Enterprise, Success, Story
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+            🚀 Read, Complete, Platform Guide + Enterprise, Success, Story
+          </Link>
+        </div>
+      </div>
+    </div > );
  }

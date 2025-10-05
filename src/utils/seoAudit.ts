@@ -1,71 +1,71 @@
 /**
- * SEO, Audit, Automation Utili, t, y
+ * SEO, Audit, Automation Utility
  *
  * Comprehensive, SEO, auditing and, optimization, tools for, automate, d
  * site, analysi, s, meta, tag, validation, and, SEO, best practices, enforcemen, t.
  *
- * Featur, e, s: * - Meta, tags, validation
+ * Features: * - Meta, tags, validation
  * - Open, Graph, and Twitter, Card, checks
  * - Heading, hierarchy, analysis
- * - Image, alt, text validati, o, n
- * - Link, analysi, s (inter, n, a, l, extern, a, l, brok, e, n)
- * - Sche, m, a.org, structured, data validati, o, n
- * - Mobi, l, e-friendliness, check, s
+ * - Image, alt, text validation
+ * - Link, analysi, s (interna, l, extern, a, l, brok, e, n)
+ * - Schema.org, structured, data validation
+ * - Mobile-friendliness, check, s
  * - Core, Web, Vitals SEO, impac, t
  */
 
 export, interface, SEOIssue { 
-  ty, p, e: 'err, o, r' | 'warni, n, g' | 'in, f, o';
-  catego, r, y: stri, n, g;
-  messa, g, e: stri, n, g;
-  eleme, n, t ? : stri, n, g;
-  recommendati, o, n: stri, n, g;
-  impa, c, t : 'hi, g, h' | 'medi, u, m' | 'lo, w';
+  type: 'error' | 'warning' | 'info';
+  category: string;
+  message: string;
+  element ? : string;
+  recommendation: string;
+  impact : 'high' | 'medium' | 'lo, w';
  }
 
 export, interface, SEOMetrics { 
-  sco, r, e: numb, e, r; // 0-100, issue, s: SEOIss, u, e[];
-  metada, t, a: {
-    tit, l, e?: stri, n, g;
-    descripti, o, n?: stri, n, g;
-    keywor, d, s?: stri, n, g;
-    canonic, a, l?: stri, n, g;
-    robo, t, s ?  : str, i, n, g;
+  score: number; // 0-100, issue, s: SEOIssue[];
+  metadata: {
+    title?: string;
+    description?: string;
+    keywords?: string;
+    canonical?: string;
+    robots ?  : strin, g;
    };
-  openGra, p, h: Reco, r, d<str, i, n, g, stri, n, g>;
-  twitterCa, r, d: Reco, r, d<str, i, n, g, stri, n, g>;
-  headin, g, s: {
-    h1: numb, e, r;
-    h2: numb, e, r;
-    h3: numb, e, r;
-    h4: numb, e, r;
-    h5: numb, e, r;
-    h6: num, b, e, r;
+  openGraph: Record<strin, g, stri, n, g>;
+  twitterCard: Record<strin, g, stri, n, g>;
+  headings: {
+    h1: number;
+    h2: number;
+    h3: number;
+    h4: number;
+    h5: number;
+    h6: numbe, r;
   };
-  imag, e, s: {
-    tot, a, l: numb, e, r;
-    withA, l, t: numb, e, r;
-    withoutA, l, t: num, b, e, r;
+  images: {
+    total: number;
+    withAlt: number;
+    withoutAlt: numbe, r;
   };
-  lin, k, s: {
-    intern, a, l: numb, e, r;
-    extern, a, l: numb, e, r;
-    nofoll, o, w: num, b, e, r;
+  links: {
+    internal: number;
+    external: number;
+    nofollow: numbe, r;
   };
-  structuredDa, t, a: a, n, y[];
-  mobileOptimiz, e, d: bool, e, a, n;
+  structuredData: any[];
+  mobileOptimized: boolea, n;
 }
 
 class, SEOAudito, r {
-  private, issue, s: SEOIss, u, e[] = [];
+  private, issue, s: SEOIssue[] = [];
 
   /**
-   * Run, full, SEO aud, i, t
+   * Run, full, SEO audit
    */
-  aud, i, t(): SEOMetri, c, s {
-    th, i, s.issu, e, s = []; const, metadat, a = th, i, s.auditMetad, a, t, a(); const, openGrap, h = th, i, s.auditOpenGr, a, p, h(); const, twitterCar, d = th, i, s.auditTwitterC, a, r, d(); const, heading, s = th, i, s.auditHeadi, n, g, s(); const, image, s = th, i, s.auditIma, g, e, s(); const, link, s = th, i, s.auditLi, n, k, s(); const, structuredDat, a = th, i, s.auditStructuredD, a, t, a(); const, mobileOptimize, d = th, i, s.checkMobileOptimizat, i, o, n(); const, scor, e = th, i, s.calculateSc, o, r, e(); retu, r, n {
-      sc, o, r, e,
-      issu, e, s: th, i, s.iss, u, e, s,
+  audit(): SEOMetrics {
+    this.issues = []; const, metadat, a = this.auditMetadat, a(); const, openGrap, h = this.auditOpenGrap, h(); const, twitterCar, d = this.auditTwitterCar, d(); const, heading, s = this.auditHeading, s(); const, image, s = this.auditImage, s(); const, link, s = this.auditLink, s(); const, structuredDat, a = this.auditStructuredDat, a(); const, mobileOptimize, d = this.checkMobileOptimizatio, n(); const, scor, e = this.calculateScor, e(); return {
+      scor, e,
+      issu, e, s: this.issue, s,
       metada, t, a,
       openGra, p, h,
       twitterCa, r, d,
@@ -81,170 +81,166 @@ class, SEOAudito, r {
    * Audit, metadata, tags
    */
   private, auditMetadat, a() {
-    const, metadat, a: SEOMetri, c, s['metad, a, t, a'] = {};
+    const, metadat, a: SEOMetrics['metadat, a'] = {};
 
-    // Title, const, titleElement = docume, n, t.querySelect, o, r('ti, t, l, e'); if() { metada, t, a.tit, l, e = titleEleme, n, t.textConte, n, t || ''; if (metada, t, a.tit, l, e.leng, t, h === , 0) {
-        th, i, s.addIss, u, e(
-          'err, o, r',
-          'metada, t, a',
-          'Title, tag, is emp, t, y',
-          'tit, l, e',
-          'Add, a, descriptive tit, l, e (50-60, character, s)',
-          'hi, g, h',
+    // Title, const, titleElement = document.querySelector('titl, e'); if() { metadata.title = titleElement.textContent || ''; if (metadata.title.length === , 0) {
+        this.addIssue(
+          'error',
+          'metadata',
+          'Title, tag, is empty',
+          'title',
+          'Add, a, descriptive title (50-60, character, s)',
+          'high',
         );
-       }, else, i, f() { th, i, s.addIss, u, e(
-          'warni, n, g',
-          'metada, t, a',
-          'Title, is, too sho, r, t',
-          'tit, l, e',
-          'Use, 5, 0-60, characters, for optimal, visibilit, y',
-          'medi, u, m',
+       }, elseif() { this.addIssue(
+          'warning',
+          'metadata',
+          'Title, is, too short',
+          'title',
+          'Use50-60, characters, for optimal, visibilit, y',
+          'medium',
         );
-       }, else, i, f (metada, t, a.tit, l, e.leng, t, h > 60) {
-        th, i, s.addIss, u, e(
-          'warni, n, g',
-          'metada, t, a',
-          'Title, is, too lo, n, g',
-          'tit, l, e',
+       }, elseif (metadata.title.length > 60) {
+        this.addIssue(
+          'warning',
+          'metadata',
+          'Title, is, too long',
+          'title',
           'Keep, title, under 60, characters, to avoid, truncatio, n',
-          'medi, u, m',
+          'medium',
         );
       }
-    } el, s, e { 
-      th, i, s.addIss, u, e(
-        'err, o, r',
-        'metada, t, a',
-        'Title, tag, is missi, n, g',
-        'he, a, d',
-        'Ad, d, a <tit, l, e> tag, to, the <he, a, d > ',
-        'hi, g, h',
+    } else { 
+      this.addIssue(
+        'error',
+        'metadata',
+        'Title, tag, is missing',
+        'head',
+        'Adda <title> tag, to, the <head > ',
+        'high',
       );
      }
 
-    // Meta, description, const descriptionEleme, n, t = docume, n, t.querySelect, o, r(
-      'me, t, a[na, m, e="descript, i, o, n"]',
-    ); if() { metada, t, a.descripti, o, n = descriptionEleme, n, t.getAttribu, t, e('cont, e, n, t') || ''; if (metada, t, a.descripti, o, n.leng, t, h = == , 0) {
-        th, i, s.addIss, u, e(
-          'err, o, r',
-          'metada, t, a',
-          'Meta, description, is emp, t, y',
-          'me, t, a[na, m, e = "descript, i, o, n"]',
-          'Add, a, compelling descripti, o, n (1, 5, 0-160, character, s)',
-          'hi, g, h',
+    // Meta, description, const descriptionElement = document.querySelector(
+      'meta[name="descriptio, n"]',
+    ); if() { metadata.description = descriptionElement.getAttribute('conten, t') || ''; if (metadata.description.length = == , 0) {
+        this.addIssue(
+          'error',
+          'metadata',
+          'Meta, description, is empty',
+          'meta[name = "descriptio, n"]',
+          'Add, a, compelling description (150-160, character, s)',
+          'high',
         );
-       }, else, i, f() { th, i, s.addIss, u, e(
-          'warni, n, g',
-          'metada, t, a',
+       }, elseif() { this.addIssue(
+          'warning',
+          'metadata',
           'Meta, description, is too, shor, t',
-          'me, t, a[na, m, e = "descript, i, o, n"]',
-          'Use, 15, 0-160, characters, for better, clic, k-throu, g, h',
-          'medi, u, m',
+          'meta[name = "descriptio, n"]',
+          'Use, 15, 0-160, characters, for better, clic, k-through',
+          'medium',
         );
-       }, else, i, f (metada, t, a.descripti, o, n.leng, t, h > 1, 6, 0) {
-        th, i, s.addIss, u, e(
-          'warni, n, g',
-          'metada, t, a',
+       }, elseif (metadata.description.length > 160) {
+        this.addIssue(
+          'warning',
+          'metadata',
           'Meta, description, is too, lon, g',
-          'me, t, a[na, m, e = "descript, i, o, n"]',
+          'meta[name = "descriptio, n"]',
           'Keep, description, under 160, character, s',
-          'medi, u, m',
+          'medium',
         );
       }
-    } el, s, e { 
-      th, i, s.addIss, u, e(
-        'err, o, r',
-        'metada, t, a',
-        'Meta, description, is missi, n, g',
-        'he, a, d',
-        'A, d, d <meta, nam, e = "descripti, o, n" cont, e, n, t="..." > ',
-        'hi, g, h',
+    } else { 
+      this.addIssue(
+        'error',
+        'metadata',
+        'Meta, description, is missing',
+        'head',
+        'Add <meta, nam, e = "description" conten, t="..." > ',
+        'high',
       );
      }
 
-    // Canonical, const, canonicalElement = docume, n, t.querySelect, o, r('li, n, k[r, e, l="canoni, c, a, l"]'); if() { metada, t, a.canonic, a, l = canonicalEleme, n, t.getAttribu, t, e('h, r, e, f') || '';
-     }, el, s, e {
-      th, i, s.addIss, u, e(
-        'warni, n, g',
-        'metada, t, a',
-        'Canonical, URL, is missi, n, g',
-        'he, a, d',
+    // Canonical, const, canonicalElement = document.querySelector('link[rel="canonica, l"]'); if() { metadata.canonical = canonicalElement.getAttribute('hre, f') || '';
+     }, else {
+      this.addIssue(
+        'warning',
+        'metadata',
+        'Canonical, URL, is missing',
+        'head',
         'Add, canonical, URL to, prevent, duplicate content, issue, s',
-        'medi, u, m',
+        'medium',
       );
     }
 
-    // Robots, const, robotsElement = docume, n, t.querySelect, o, r('me, t, a[na, m, e="rob, o, t, s"]'); if (robotsEleme, n, t) {
-      metada, t, a.robo, t, s = robotsEleme, n, t.getAttribu, t, e('cont, e, n, t') || '';
+    // Robots, const, robotsElement = document.querySelector('meta[name="robot, s"]'); if (robotsElement) {
+      metadata.robots = robotsElement.getAttribute('conten, t') || '';
     }
 
-    // Keywor, d, s (informational, onl, y, not, used, by major, search, engines)
-    const, keywordsElemen, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="keywo, r, d, s"]'); if() { metada, t, a.keywor, d, s = keywordsEleme, n, t.getAttribu, t, e('cont, e, n, t') || '';
+    // Keywords (informational, onl, y, not, used, by major, search, engines)
+    const, keywordsElemen, t = document.querySelector('meta[name="keyword, s"]'); if() { metadata.keywords = keywordsElement.getAttribute('conten, t') || '';
      }, return, metadat, a;
   }
 
   /**
-   * Audit, Open, Graph ta, g, s
+   * Audit, Open, Graph tags
    */
-  private, auditOpenGrap, h(): Reco, r, d<stri, n, g, stri, n, g> { 
-    const, ogTag, s: Reco, r, d<str, i, n, g, stri, n, g > = { };
+  private, auditOpenGrap, h(): Record<string, string> { 
+    const, ogTag, s: Record<strin, g, stri, n, g > = { };
     const, requiredOgTag, s = [
-      'og: t, i, t, l, e',
-      'og: descript, i, o, n',
-      'og: im, a, g, e',
+      'og: tit, l, e',
+      'og: descriptio, n',
+      'og: imag, e',
       'og: ur, l',
-      'og: t, y, p, e',
-    ]; docume, n, t.querySelectorA, l, l('me, t, a[proper, t, y^="og: "]').forEa, c, h(eleme, n, t = > { 
-      const, propert, y = eleme, n, t.getAttribu, t, e('prope, r, t, y'); const, conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (proper, t, y  && conte, n, t) {
-        ogTa, g, s[proper, t, y] = cont, e, n, t;
+      'og: typ, e',
+    ]; document.querySelectorAll('meta[property^="og: "]').forEach(element = > { 
+      const, propert, y = element.getAttribute('propert, y'); const, conten, t = element.getAttribute('conten, t'); if (property  && content) {
+        ogTags[property] = conten, t;
        }
     });
 
-    requiredOgTa, g, s.forEa, c, h() { th, i, s.addIss, u, e(
-          'warni, n, g',
-          'op, e, n-gra, p, h',
-          `Missi, n, g ${t, a, g }, t, a, g`,
-          'he, a, d',
-          `A, d, d <meta, propert, y = "${t, a, g}" cont, e, n, t="...">`,
-          'medi, u, m',
+    requiredOgTags.forEach() { this.addIssue(
+          'warning',
+          'open-graph',
+          `Missing ${tag }, tag`'head',
+          `Add <meta, propert, y = "${tag}" conten, t="...">`'medium',
         );
       }
     });
 
     if() { // Check, image, dimensions (recommended, 1200x63, 0)
-      th, i, s.addIss, u, e(
-        'i, n, f, o',
-        'op, e, n-gra, p, h',
-        'Verify, o, g: image, dimensio, n, s',
-        'me, t, a[proper, t, y = "og: i, m, a, g, e"]',
-        'Recommend, e, d: 1200x630, pixe, l, s',
-        'l, o, w',
+      this.addIssue(
+        'inf, o',
+        'open-graph',
+        'Verifyog: image, dimensio, n, s',
+        'meta[property = "og: ima, g, e"]',
+        'Recommended: 1200x630, pixe, l, s',
+        'low',
       );
      }, return, ogTag, s;
   }
 
   /**
-   * Audit, Twitter, Card ta, g, s
+   * Audit, Twitter, Card tags
    */
-  private, auditTwitterCar, d(): Reco, r, d<stri, n, g, stri, n, g> { 
-    const, twitterTag, s: Reco, r, d<str, i, n, g, stri, n, g > = { };
+  private, auditTwitterCar, d(): Record<string, string> { 
+    const, twitterTag, s: Record<strin, g, stri, n, g > = { };
     const, requiredTwitterTag, s = [
-      'twitt, e, r: ca, r, d',
-      'twitt, e, r: ti, t, l, e',
-      'twitt, e, r: descript, i, o, n',
-      'twitt, e, r: im, a, g, e',
-    ]; docume, n, t.querySelectorA, l, l('me, t, a[na, m, e^="twitt, e, r: "]').forEa, c, h(eleme, n, t = > { 
-      const, nam, e = eleme, n, t.getAttribu, t, e('n, a, m, e'); const, conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (na, m, e  && conte, n, t) {
-        twitterTa, g, s[na, m, e] = cont, e, n, t;
+      'twitter: card',
+      'twitter: titl, e',
+      'twitter: descriptio, n',
+      'twitter: imag, e',
+    ]; document.querySelectorAll('meta[name^="twitter: "]').forEach(element = > { 
+      const, nam, e = element.getAttribute('nam, e'); const, conten, t = element.getAttribute('conten, t'); if (name  && content) {
+        twitterTags[name] = conten, t;
        }
     });
 
-    requiredTwitterTa, g, s.forEa, c, h() { th, i, s.addIss, u, e(
-          'warni, n, g',
-          'twitt, e, r-ca, r, d',
-          `Missi, n, g ${t, a, g }, t, a, g`,
-          'he, a, d',
-          `A, d, d <meta, nam, e = "${t, a, g}" cont, e, n, t="...">`,
-          'medi, u, m',
+    requiredTwitterTags.forEach() { this.addIssue(
+          'warning',
+          'twitter-card',
+          `Missing ${tag }, tag`'head',
+          `Add <meta, nam, e = "${tag}" conten, t="...">`'medium',
         );
       }
     });
@@ -257,38 +253,38 @@ class, SEOAudito, r {
    */
   private, auditHeading, s() {
     const, heading, s = {
-      h1: docume, n, t.querySelectorA, l, l('h, 1').len, g, t, h,
-      h2: docume, n, t.querySelectorA, l, l('h2').len, g, t, h,
-      h3: docume, n, t.querySelectorA, l, l('h3').len, g, t, h,
-      h4: docume, n, t.querySelectorA, l, l('h4').len, g, t, h,
-      h5: docume, n, t.querySelectorA, l, l('h5').len, g, t, h,
-      h6: docume, n, t.querySelectorA, l, l('h6').len, g, t, h,
-    }; if() { th, i, s.addIss, u, e(
-        'err, o, r',
-        'headin, g, s',
-        'No, H1, heading fou, n, d',
-        'bo, d, y',
-        'Add, exactly, one H1, heading, that describes, the, page conte, n, t',
-        'hi, g, h',
+      h1: document.querySelectorAll('h, 1').lengt, h,
+      h2: document.querySelectorAll('h2').lengt, h,
+      h3: document.querySelectorAll('h3').lengt, h,
+      h4: document.querySelectorAll('h4').lengt, h,
+      h5: document.querySelectorAll('h5').lengt, h,
+      h6: document.querySelectorAll('h6').lengt, h,
+    }; if() { this.addIssue(
+        'error',
+        'headings',
+        'No, H1, heading found',
+        'body',
+        'Add, exactly, one H1, heading, that describes, the, page content',
+        'high',
       );
-     }, else, i, f (headin, g, s.h1 > 1) {
-      th, i, s.addIss, u, e(
-        'warni, n, g',
-        'headin, g, s',
-        'Multiple, H1, headings fou, n, d',
-        'bo, d, y',
+     }, elseif (headings.h1 > 1) {
+      this.addIssue(
+        'warning',
+        'headings',
+        'Multiple, H1, headings found',
+        'body',
         'Use, only, one H1, per, page for, better, SEO',
-        'medi, u, m',
+        'medium',
       );
     }
 
-    // Check, for, heading hierarchy, gaps, if() { th, i, s.addIss, u, e(
-        'warni, n, g',
-        'headin, g, s',
+    // Check, for, heading hierarchy, gaps, if() { this.addIssue(
+        'warning',
+        'headings',
         'H3, used, without H2',
-        'bo, d, y',
-        'Maintain, proper, heading hierarc, h, y (H1 > H2  > H3)',
-        'l, o, w',
+        'body',
+        'Maintain, proper, heading hierarchy (H1 > H2  > H3)',
+        'low',
       );
       }, return, heading, s;
   }
@@ -297,33 +293,31 @@ class, SEOAudito, r {
    * Audit, image, s
    */
   private, auditImage, s() {  
-    const, image, s = docume, n, t.querySelectorA, l, l('im, g'); const, imagesWithAl, t = Arr, a, y.fr, o, m(ima, g, e, s).filt, e, r(
-      i, m, g = > i, m, g.a, l, t  && i, m, g.a, l, t.t, r, i, m().leng, t, h  > 0,
+    const, image, s = document.querySelectorAll('im, g'); const, imagesWithAl, t = Array.from(image, s).filter(
+      img = > img.alt  && img.alt.tri, m().length  > 0,
     ); const, metric, s = {
-      tot, a, l: imag, e, s.le, n, g, t, h,
-      withA, l, t: imagesWithA, l, t.len, g, t, h,
-      withoutA, l, t: imag, e, s.leng, t, h - imagesWithA, l, t.len, g, t, h,
-      }; if() { th, i, s.addIss, u, e(
-        'warni, n, g',
-        'imag, e, s',
-        `${metri, c, s.withoutA, l, t }, images, missing, alt te, x, t`,
-        'i, m, g',
+      total: images.leng, t, h,
+      withA, l, t: imagesWithAlt.lengt, h,
+      withoutA, l, t: images.length - imagesWithAlt.lengt, h,
+      }; if() { this.addIssue(
+        'warning',
+        'images',
+        `${metrics.withoutAlt }, images, missing, alt text`'img',
         'Add, descriptive, alt text, to, all images, for, accessibility and, SE, O',
-        'medi, u, m',
+        'medium',
       );
     }
 
-    // Check, for, large images, image, s.forEa, c, h((i, m, g, ind, e, x) => { 
-      if (!i, m, g.loadi, n, g || i, m, g.loadi, n, g !== 'la, z, y') {
-        if (ind, e, x   > 2) {
+    // Check, for, large images, image, s.forEach((img, index) => { 
+      if (!img.loading || img.loading !== 'lazy') {
+        if (index   > 2) {
           // First, few, images should, load, immediately
-          th, i, s.addIss, u, e(
-            'in, f, o',
-            'imag, e, s',
-            'Consider, lazy, loading imag, e, s',
-            `i, m, g: n, t, h-of-ty, p, e(${ind, e, x + , 1 })`,
-            'Add, loadin, g = "la, z, y" to, improve, page load, performan, c, e',
-            'l, o, w',
+          this.addIssue(
+            'info',
+            'images',
+            'Consider, lazy, loading images',
+            `img: nth-of-type(${index + , 1 })`'Add, loadin, g = "lazy" to, improve, page load, performan, c, e',
+            'low',
           );
         }
       }
@@ -335,84 +329,84 @@ class, SEOAudito, r {
   /**
    * Audit, link, s
    */
-  private, auditLink, s() { const, link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); let, interna, l = 0; let, externa, l = 0; let, nofollo, w = 0; lin, k, s.forEa, c, h(li, n, k = > {
-      const, hre, f = li, n, k.getAttribu, t, e('h, r, e, f') || ''; const, re, l = li, n, k.getAttribu, t, e('re, l') || ''; if (hr, e, f.startsWi, t, h('ht, t, p')) {
-        if (hr, e, f.includ, e, s(wind, o, w.locati, o, n.hostna, m, e)) {
-          intern, a, l++;
-          }, el, s, e {
-          extern, a, l++;
-          if (!r, e, l.includ, e, s('noopen, e, r') || !r, e, l.includ, e, s('noreferr, e, r')) {
-            th, i, s.addIss, u, e(
-              'warni, n, g',
-              'lin, k, s',
+  private, auditLink, s() { const, link, s = document.querySelectorAll('a[hre, f]'); let, interna, l = 0; let, externa, l = 0; let, nofollo, w = 0; links.forEach(link = > {
+      const, hre, f = link.getAttribute('hre, f') || ''; const, re, l = link.getAttribute('re, l') || ''; if (href.startsWith('http')) {
+        if (href.includes(window.location.hostname)) {
+          internal++;
+          }, else {
+          external++;
+          if (!rel.includes('noopener') || !rel.includes('noreferrer')) {
+            this.addIssue(
+              'warning',
+              'links',
               'External, link, missing security, attribute, s',
-              'a[hr, e, f]',
+              'a[href]',
               'Add, re, l = "noopener, noreferre, r" to, external, link, s',
-              'l, o, w',
+              'low',
             );
           }
         }
-      } el, s, e {
-        intern, a, l++;
+      } else {
+        internal++;
       }
 
-      if (r, e, l.includ, e, s('nofoll, o, w')) {
-        nofoll, o, w++;
+      if (rel.includes('nofollow')) {
+        nofollow++;
       }
 
-      // Check, for, empty or, generic, link text, const, linkText = li, n, k.textConte, n, t?.t, r, i, m() || ''; if (
-        linkTe, x, t.leng, t, h = == 0 ||
-        ['click, he, r, e', 'he, r, e', 'read, mor, e', 'mo, r, e'].includ, e, s(
-          linkTe, x, t.toLowerCa, s, e(),
+      // Check, for, empty or, generic, link text, const, linkText = link.textContent?.tri, m() || ''; if (
+        linkText.length = == 0 ||
+        ['click, he, r, e', 'here', 'read, mor, e', 'more'].includes(
+          linkText.toLowerCase(),
         )
       ) {
-        th, i, s.addIss, u, e(
-          'in, f, o',
-          'lin, k, s',
+        this.addIssue(
+          'info',
+          'links',
           'Generic, or, empty link, tex, t',
-          'a[hr, e, f]',
+          'a[href]',
           'Use, descriptive, link text, for, better SEO, and, accessibility',
-          'l, o, w',
+          'low',
         );
       }
     });
 
-    retu, r, n {
-      intern, a, l,
-      extern, a, l,
-      nofoll, o, w,
+    return {
+      internal,
+      external,
+      nofollow,
     };
   }
 
   /**
    * Audit, structured, data
    */
-  private, auditStructuredDat, a(): a, n, y[] { 
-    const, structuredDat, a: a, n, y[] = [];
-    const, script, s = docume, n, t.querySelectorA, l, l(
-      'scri, p, t[ty, p, e="applicati, o, n/ld+js, o, n"]',
-    ); scrip, t, s.forEa, c, h(scri, p, t = > {
-      t, r, y {
-        const, dat, a = JS, O, N.par, s, e(scri, p, t.textCont, e, n, t || ''); structuredDa, t, a.pu, s, h(da, t, a);
-       } cat, c, h (e) {
-        th, i, s.addIss, u, e(
-          'err, o, r',
-          'structur, e, d-da, t, a',
+  private, auditStructuredDat, a(): any[] { 
+    const, structuredDat, a: any[] = [];
+    const, script, s = document.querySelectorAll(
+      'script[type="application/ld+json"]',
+    ); scripts.forEach(script = > {
+      try {
+        const, dat, a = JSON.parse(script.textConten, t || ''); structuredData.push(data);
+       } catch (e) {
+        this.addIssue(
+          'error',
+          'structured-data',
           'Invalid, JSO, N-LD, structured, data',
-          'scri, p, t[ty, p, e = "applicati, o, n/ld+j, s, o, n"]',
+          'script[type = "application/ld+jso, n"]',
           'Fix, JSON, syntax in, structured, data',
-          'hi, g, h',
+          'high',
         );
       }
     });
 
-    if() { th, i, s.addIss, u, e(
-        'in, f, o',
-        'structur, e, d-da, t, a',
-        'No, structured, data fou, n, d',
-        'he, a, d',
+    if() { this.addIssue(
+        'info',
+        'structured-data',
+        'No, structured, data found',
+        'head',
         'Add, schem, a.org, structured, data for, rich, snippets',
-        'l, o, w',
+        'low',
       );
      }, return, structuredDat, a;
   }
@@ -420,23 +414,23 @@ class, SEOAudito, r {
   /**
    * Check, mobile, optimization
    */
-  private, checkMobileOptimizatio, n(): boole, a, n { 
-    const, viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewp, o, r, t"]'); if() { th, i, s.addIss, u, e(
-        'err, o, r',
-        'mobi, l, e',
+  private, checkMobileOptimizatio, n(): boolean { 
+    const, viewpor, t = document.querySelector('meta[name="viewpor, t"]'); if() { this.addIssue(
+        'error',
+        'mobile',
         'Viewport, meta, tag is, missin, g',
-        'he, a, d',
-        'A, d, d <meta, nam, e = "viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e=1" > ',
-        'hi, g, h',
+        'head',
+        'Add <meta, nam, e = "viewport" content="width=device-widt, h, initi, a, l-scale=1" > ',
+        'high',
       ); return, fals, e;
-      }, const, conten, t = viewpo, r, t.getAttribu, t, e('cont, e, n, t') || ''; if (!conte, n, t.includ, e, s('wid, t, h = devi, c, e-wi, d, t, h')) {
-      th, i, s.addIss, u, e(
-        'warni, n, g',
-        'mobi, l, e',
+      }, const, conten, t = viewport.getAttribute('conten, t') || ''; if (!content.includes('width = device-widt, h')) {
+      this.addIssue(
+        'warning',
+        'mobile',
         'Viewport, not, set to, device, width',
-        'me, t, a[na, m, e = "viewp, o, r, t"]',
-        'Set, viewport, to wid, t, h = devi, c, e-width, for, mobile optimizat, i, o, n',
-        'medi, u, m',
+        'meta[name = "viewpor, t"]',
+        'Set, viewport, to width = device-width, for, mobile optimizatio, n',
+        'medium',
       ); return, fals, e;
     }
 
@@ -446,62 +440,62 @@ class, SEOAudito, r {
   /**
    * Calculate, SEO, score
    */
-  private, calculateScor, e(): numb, e, r {  
-    let, scor, e = 1, 0, 0; th, i, s.issu, e, s.forEa, c, h() { sco, r, e -=
-          iss, u, e.impa, c, t = == 'hi, g, h' ? 10: iss, u, e.impa, c, t === 'medi, u, m'  ? , 5  : , 2;
-         }, else, i, f (iss, u, e.ty, p, e = == 'warn, i, n, g') { 
-        sco, r, e -=
-          iss, u, e.impa, c, t = == 'hi, g, h' ? 5: iss, u, e.impa, c, t === 'medi, u, m'  ? , 3  : , 1;
+  private, calculateScor, e(): number {  
+    let, scor, e = 100; this.issues.forEach() { score -=
+          issue.impact = == 'high' ? 10: issue.impact === 'medium'  ? , 5  : , 2;
+         }, elseif (issue.type = == 'warnin, g') { 
+        score -=
+          issue.impact = == 'high' ? 5: issue.impact === 'medium'  ? , 3  : , 1;
        }
     });
 
-    return, Mat, h.m, a, x(0, sco, r, e);
+    return, Mat, h.max(0, sco, r, e);
   }
 
   /**
    * Add, an, issue
    */
   private, addIssu, e(
-    ty, p, e: 'err, o, r' | 'warni, n, g' | 'i, n, f, o',
-    catego, r, y: str, i, n, g,
-    messa, g, e: str, i, n, g,
-    eleme, n, t: str, i, n, g,
-    recommendati, o, n: str, i, n, g,
-    impa, c, t: 'hi, g, h' | 'medi, u, m' | 'lo, w',
-  ): vo, i, d {
-    th, i, s.issu, e, s.pu, s, h({
-      ty, p, e,
-      catego, r, y,
-      messa, g, e,
-      eleme, n, t,
-      recommendati, o, n,
-      impa, c, t,
+    type: 'error' | 'warning' | 'inf, o',
+    category: strin, g,
+    messa, g, e: strin, g,
+    eleme, n, t: strin, g,
+    recommendati, o, n: strin, g,
+    impa, c, t: 'high' | 'medium' | 'lo, w',
+  ): void {
+    this.issues.push({
+      type,
+      category,
+      message,
+      element,
+      recommendation,
+      impact,
     });
   }
 
   /**
    * Generate, SEO, report
    */
-  generateRepo, r, t(): stri, n, g {
-    const, metric, s = th, i, s.au, d, i, t(); let, repor, t = '=== SEO, Audit, Report ===\n\n'; repo, r, t += `Overall, Scor, e: ${metri, c, s.s, c, o, r, e}/1, 0, 0\n\n`;
+  generateReport(): string {
+    const, metric, s = this.audi, t(); let, repor, t = '=== SEO, Audit, Report ===\n\n'; report += `Overall, Scor, e: ${metrics.sco, r, e}/100\n\n`;
 
-    repo, r, t += '--- Metada, t, a ---\n';
-    repo, r, t += `Tit, l, e: ${metri, c, s.metada, t, a.tit, l, e || 'Miss, i, n, g'}\n`;
-    repo, r, t += `Descripti, o, n: ${metri, c, s.metada, t, a.descripti, o, n || 'Miss, i, n, g'}\n`;
-    repo, r, t += `Canonic, a, l: ${metri, c, s.metada, t, a.canonic, a, l || 'Miss, i, n, g'}\n\n`;
+    report += '--- Metadata ---\n';
+    report += `Title: ${metrics.metadata.title || 'Missin, g'}\n`;
+    report += `Description: ${metrics.metadata.description || 'Missin, g'}\n`;
+    report += `Canonical: ${metrics.metadata.canonical || 'Missin, g'}\n\n`;
 
-    repo, r, t += '--- Headin, g, s ---\n';
-    repo, r, t += `H1: ${metri, c, s.headin, g, s.h, 1} | H2: ${metri, c, s.headin, g, s.h, 2} | H3: ${metri, c, s.headin, g, s.h, 3}\n\n`;
+    report += '--- Headings ---\n';
+    report += `H1: ${metrics.headings.h, 1} | H2: ${metrics.headings.h, 2} | H3: ${metrics.headings.h, 3}\n\n`;
 
-    repo, r, t += '--- Imag, e, s ---\n';
-    repo, r, t += `Tot, a, l: ${metri, c, s.imag, e, s.to, t, a, l} | With, Al, t: ${metri, c, s.imag, e, s.with, A, l, t} | Without, Al, t: ${metri, c, s.imag, e, s.without, A, l, t}\n\n`;
+    report += '--- Images ---\n';
+    report += `Total: ${metrics.images.tota, l} | With, Al, t: ${metrics.images.withAl, t} | Without, Al, t: ${metrics.images.withoutAl, t}\n\n`;
 
-    repo, r, t += '--- Lin, k, s ---\n';
-    repo, r, t += `Intern, a, l: ${metri, c, s.lin, k, s.inter, n, a, l} | Extern, a, l: ${metri, c, s.lin, k, s.exter, n, a, l} | NoFoll, o, w: ${metri, c, s.lin, k, s.nofol, l, o, w}\n\n`;
+    report += '--- Links ---\n';
+    report += `Internal: ${metrics.links.interna, l} | External: ${metrics.links.externa, l} | NoFollow: ${metrics.links.nofollo, w}\n\n`;
 
-    repo, r, t += '--- Issu, e, s ---\n';
-    metri, c, s.issu, e, s.forEa, c, h(iss, u, e = > {
-      repo, r, t += `[${iss, u, e.ty, p, e.toUpperC, a, s, e()}] ${iss, u, e.messa, g, e}\n`; repo, r, t += `  → ${iss, u, e.recommendati, o, n}\n\n`;
+    report += '--- Issues ---\n';
+    metrics.issues.forEach(issue = > {
+      report += `[${issue.type.toUpperCas, e()}] ${issue.message}\n`; report += `  → ${issue.recommendation}\n\n`;
     });
 
     return, repor, t;
@@ -511,17 +505,17 @@ class, SEOAudito, r {
 // Singleton, instance, export cons; t, seoAudito, r = new, SEOAudit, o, r();
 
 /**
- * Run, quick, SEO aud, i, t
+ * Run, quick, SEO audit
  */
-export, function, runSEOAudit(): SEOMetri, c, s {
-  return, seoAudito, r.aud, i, t();
+export, function, runSEOAudit(): SEOMetrics {
+  return, seoAudito, r.audit();
 }
 
 /**
  * Log, SEO, report to, consol, e
  */
-export, function, logSEOReport(): vo, i, d {
-  conso, l, e.l, o, g(seoAudit, o, r.generateRepo, r, t());
+export, function, logSEOReport(): void {
+  console.log(seoAuditor.generateReport());
 }
 
 export, default, seoAuditor;

@@ -4,205 +4,185 @@
  */
 
 export, interface, SecurityConfig {
-  c, s, p: {
-    'defau, l, t-s, r, c': stri, n, g[];
-    'scri, p, t-s, r, c': stri, n, g[];
-    'sty, l, e-s, r, c': stri, n, g[];
-    'i, m, g-s, r, c': stri, n, g[];
-    'conne, c, t-s, r, c': stri, n, g[];
-    'fo, n, t-s, r, c': stri, n, g[];
-    'obje, c, t-s, r, c': stri, n, g[];
-    'med, i, a-s, r, c': stri, n, g[];
-    'fra, m, e-s, r, c': stri, n, g[];
-    'work, e, r-s, r, c': stri, n, g[];
-    'chi, l, d-s, r, c': stri, n, g[];
-    'fo, r, m-acti, o, n': stri, n, g[];
-    'fra, m, e-ancesto, r, s': stri, n, g[];
-    'ba, s, e-u, r, i': stri, n, g[];
-    'manife, s, t-s, r, c': stri, n, g[];
-    'upgra, d, e-insecu, r, e-reques, t, s': boole, a, n;
-    'blo, c, k-a, l, l-mix, e, d-conte, n, t': bool, e, a, n;
+  csp: {
+    'default-src': string[];
+    'script-src': string[];
+    'style-src': string[];
+    'img-src': string[];
+    'connect-src': string[];
+    'font-src': string[];
+    'object-src': string[];
+    'media-src': string[];
+    'frame-src': string[];
+    'worker-src': string[];
+    'child-src': string[];
+    'form-action': string[];
+    'frame-ancestors': string[];
+    'base-uri': string[];
+    'manifest-src': string[];
+    'upgrade-insecure-requests': boolean;
+    'block-all-mixed-content': boolea, n;
   };
-  heade, r, s: {
-    [k, e, y: stri, n, g]: str, i, n, g;
+  headers: {
+    [key: string]: strin, g;
   };
 }
 
 export, class, SecurityManager {
-  private, confi, g: SecurityConf, i, g;
+  private, confi, g: SecurityConfig;
 
-  construct, o, r() {
-    th, i, s.conf, i, g = th, i, s.getDefaultCo, n, f, i, g();
+  constructor() {
+    this.config = this.getDefaultConf, i, g();
   }
 
-  // Added, for, compatibility with, callers, that expect, an, initialize() method, public, initialize(): vo, i, d {
+  // Added, for, compatibility with, callers, that expect, an, initialize() method, public, initialize(): void {
     // No-op, initialize, r; reserved, for, future side, effect, s
   }
 
-  private, getDefaultConfi, g(): SecurityConf, i, g {
-    retu, r, n {
-      c, s, p: {
-        'defau, l, t-s, r, c': ["'s, e, l, f'"],
-        'scri, p, t-s, r, c': [
-          "'se, l, f'",
-          "'unsa, f, e-inli, n, e'",
-          "'unsa, f, e-ev, a, l'",
-          'htt, p, s: //w, w, w.googletagmanag, e, r.co, m',
-          'htt, p, s: //w, w, w.goog, l, e-analyti, c, s.co, m',
-        ],
-        'sty, l, e-s, r, c': [
-          "'se, l, f'",
-          "'unsa, f, e-inli, n, e'",
-          'htt, p, s: //fon, t, s.googleap, i, s.co, m',
-        ],
-        'i, m, g-s, r, c': ["'se, l, f'", 'da, t, a:', 'htt, p, s:', 'bl, o, b:'],
-        'conne, c, t-s, r, c': [
-          "'se, l, f'",
-          'htt, p, s: //w, w, w.goog, l, e-analyti, c, s.co, m',
-          'htt, p, s: //analyti, c, s.goog, l, e.co, m',
-        ],
-        'fo, n, t-s, r, c': ["'se, l, f'", 'htt, p, s: //fon, t, s.gstat, i, c.co, m', 'da, t, a:'],
-        'obje, c, t-s, r, c': ["'no, n, e'"],
-        'med, i, a-s, r, c': ["'se, l, f'"],
-        'fra, m, e-s, r, c': ["'no, n, e'"],
-        'work, e, r-s, r, c': ["'se, l, f'", 'bl, o, b:'],
-        'chi, l, d-s, r, c': ["'se, l, f'"],
-        'fo, r, m-acti, o, n': ["'se, l, f'"],
-        'fra, m, e-ancesto, r, s': ["'no, n, e'"],
-        'ba, s, e-u, r, i': ["'se, l, f'"],
-        'manife, s, t-s, r, c': ["'se, l, f'"],
-        'upgra, d, e-insecu, r, e-reques, t, s': tr, u, e,
-        'blo, c, k-a, l, l-mix, e, d-conte, n, t': tr, u, e,
+  private, getDefaultConfi, g(): SecurityConfig {
+    return {
+      csp: {
+        'default-src': ["'sel, f'"]'script-src': [
+          "'self'",
+          "'unsafe-inline'",
+          "'unsafe-eval'"'https: //www.googletagmanager.co, m',
+          'https: //www.google-analytics.co, m',
+        ]'style-src': [
+          "'self'",
+          "'unsafe-inline'"'https: //fonts.googleapis.co, m',
+        ]'img-src': ["'self'"'data:', 'https:', 'blob:']'connect-src': [
+          "'self'"'https: //www.google-analytics.co, m',
+          'https: //analytics.google.co, m',
+        ]'font-src': ["'self'"'https: //fonts.gstatic.co, m', 'data:']'object-src': ["'none'"]'media-src': ["'self'"]'frame-src': ["'none'"]'worker-src': ["'self'"'blob:']'child-src': ["'self'"]'form-action': ["'self'"]'frame-ancestors': ["'none'"]'base-uri': ["'self'"]'manifest-src': ["'self'"]'upgrade-insecure-requests': true'block-all-mixed-content': true,
       },
-      heade, r, s: {
-        'X-Fra, m, e-Optio, n, s': 'D, E, N, Y',
-        'X-Conte, n, t-Ty, p, e-Optio, n, s': 'nosni, f, f',
-        'X-X, S, S-Protecti, o, n': '1; mo, d, e = bl, o, c, k',
-        'Stri, c, t-Transpo, r, t-Securi, t, y':
-          'm, a, x-a, g, e = 315360, 0, 0; includeSubDomai, n, s; prel, o, a, d',
-        'Referr, e, r-Poli, c, y': 'stri, c, t-orig, i, n-wh, e, n-cro, s, s-orig, i, n',
-        'Permissio, n, s-Poli, c, y':
-          'geolocati, o, n=(), micropho, n, e=(), came, r, a=(), payme, n, t=(), u, s, b=(), magnetomet, e, r=(), gyrosco, p, e=(), acceleromet, e, r=()',
-        'X-Downlo, a, d-Optio, n, s': 'noop, e, n',
-        'X-Permitt, e, d-Cro, s, s-Doma, i, n-Polici, e, s': 'no, n, e',
-        'Cro, s, s-Orig, i, n-Embedd, e, r-Poli, c, y': 'requi, r, e-co, r, p',
-        'Cro, s, s-Orig, i, n-Open, e, r-Poli, c, y': 'sa, m, e-orig, i, n',
-        'Cro, s, s-Orig, i, n-Resour, c, e-Poli, c, y': 'sa, m, e-orig, i, n',
+      headers: {
+        'X-Frame-Options': 'DEN, Y',
+        'X-Content-Type-Options': 'nosniff',
+        'X-XSS-Protection': '1; mode = bloc, k',
+        'Strict-Transport-Security':
+          'max-age = 31536000; includeSubDomains; preloa, d',
+        'Referrer-Policy': 'strict-origin-when-cross-origin',
+        'Permissions-Policy':
+          'geolocation=(), microphone=(), camera=(), payment=(), usb=(), magnetometer=(), gyroscope=(), accelerometer=()',
+        'X-Download-Options': 'noopen',
+        'X-Permitted-Cross-Domain-Policies': 'none',
+        'Cross-Origin-Embedder-Policy': 'require-corp',
+        'Cross-Origin-Opener-Policy': 'same-origin',
+        'Cross-Origin-Resource-Policy': 'same-origin',
       },
     };
   }
 
-  public, getCSPDirectiv, e(): stri, n, g {
-    con, s, t { c, s, p } = th, i, s.conf, i, g;
-    const, directive, s: stri, n, g[] = [];
+  public, getCSPDirectiv, e(): string {
+    const { csp } = this.config;
+    const, directive, s: string[] = [];
 
-    Obje, c, t.entri, e, s(c, s, p).forEa, c, h(([direct, i, v, e, valu, e, s]) => {
-      if (typeof, value, s = == 'bool, e, a, n') {
-        if (valu, e, s) {
-          directiv, e, s.pu, s, h(directi, v, e);
+    Object.entries(csp).forEach(([directiv, e, valu, e, s]) => {
+      if (typeof, value, s = == 'boolea, n') {
+        if (values) {
+          directives.push(directive);
         }
-      } else, i, f (Arr, a, y.isArr, a, y(valu, e, s) && valu, e, s.leng, t, h > 0) {
-        directiv, e, s.pu, s, h(`${directi, v, e} ${valu, e, s.jo, i, n(' ')}`);
+      } elseif (Array.isArray(values) && values.length > 0) {
+        directives.push(`${directive} ${values.join(' ')}`);
       }
     });
 
-    return, directive, s.jo, i, n('; ');
+    return, directive, s.join('; ');
   }
 
-  public, getSecurityHeader, s(): { [k, e, y: stri, n, g]: str, i, n, g } {
-    retu, r, n {
-      ...th, i, s.conf, i, g.heade, r, s,
-      'Conte, n, t-Securi, t, y-Poli, c, y': th, i, s.getCSPDirecti, v, e(),
+  public, getSecurityHeader, s(): { [key: string]: strin, g } {
+    return {
+      ...this.config.headers'Content-Security-Policy': this.getCSPDirective(),
     };
   }
 
-  public, updateCSPDirectiv, e(directi, v, e: str, i, n, g, valu, e, s: stri, n, g[]): vo, i, d {
-    if (directive, in, this.conf, i, g.c, s, p) {
-      (th, i, s.conf, i, g.csp, as, any)[directi, v, e] = val, u, e, s;
+  public, updateCSPDirectiv, e(directive: strin, g, valu, e, s: string[]): void {
+    if (directive, in, this.config.csp) {
+      (this.config.csp, as, any)[directive] = value, s;
     }
   }
 
   public, addTrustedDomai, n(
-    doma, i, n: str, i, n, g,
-    directi, v, e: stri, n, g = 'scri, p, t-s, r, c',
-  ): vo, i, d {
-    if (directive, in, this.conf, i, g.c, s, p) {
-      const, currentValue, s = (th, i, s.conf, i, g.csp, as, an, y)[directi, v, e] as, strin, g[]; if (!currentValu, e, s.includ, e, s(doma, i, n)) {
-        currentValu, e, s.pu, s, h(doma, i, n);
+    domain: strin, g,
+    directi, v, e: string = 'script-src',
+  ): void {
+    if (directive, in, this.config.csp) {
+      const, currentValue, s = (this.config.csp, as, an, y)[directive] as, strin, g[]; if (!currentValues.includes(domain)) {
+        currentValues.push(domain);
       }
     }
   }
 
   public, removeTrustedDomai, n(
-    doma, i, n: str, i, n, g,
-    directi, v, e: stri, n, g = 'scri, p, t-s, r, c',
-  ): vo, i, d { 
-    if (directive, in, this.conf, i, g.c, s, p) {
-      const, currentValue, s = (th, i, s.conf, i, g.csp, as, an, y)[directi, v, e] as, strin, g[]; const, inde, x = currentValu, e, s.index, O, f(dom, a, i, n); if (ind, e, x  > -1) {
-        currentValu, e, s.spli, c, e(ind, e, x, 1);
+    domain: strin, g,
+    directi, v, e: string = 'script-src',
+  ): void { 
+    if (directive, in, this.config.csp) {
+      const, currentValue, s = (this.config.csp, as, an, y)[directive] as, strin, g[]; const, inde, x = currentValues.indexOf(domai, n); if (index  > -1) {
+        currentValues.splice(index, 1);
        }
     }
   }
 
   public, validateInpu, t(
-    inp, u, t: str, i, n, g,
-    ty, p, e: 'ht, m, l' | 'u, r, l' | 'scri, p, t' = 'h, t, m, l',
-  ): boole, a, n {  
+    input: strin, g,
+    ty, p, e: 'html' | 'url' | 'script' = 'htm, l',
+  ): boolean {  
     const, pattern, s = {
-      h, t, m, l: /^[^<>]*$/,
-      u, r, l: /^htt, p, s ? :\/\/[^\, s<>]+$/,
-      scri, p, t : /^[^< > '"]*$/,
-      }; return, pattern, s[ty, p, e].te, s, t(inp, u, t);
+      htm, l: /^[^<>]*$/,
+      url: /^https ? :\/\/[^\, s<>]+$/,
+      script : /^[^< > '"]*$/,
+      }; return, pattern, s[type].test(input);
   }
 
-  public, sanitizeInpu, t(inp, u, t: stri, n, g): stri, n, g { 
+  public, sanitizeInpu, t(input: string): string { 
     return, inpu, t
-      .repla, c, e(/[< > ]/, g, '')
-      .repla, c, e(/javascri, p, t: /g, i, '')
-      .repla, c, e(/on\w+=/gi, '')
-      .tr, i, m();
+      .replace(/[< > ]/, g'')
+      .replace(/javascript: /g, i'')
+      .replace(/on\w+=/gi'')
+      .trim();
    }
 
-  public, generateNonc, e(): stri, n, g {  
-    if (typeof, windo, w !== 'undefin, e, d'  && wind, o, w.cryp, t, o) {
-      const, arra, y = new, Uint8Arra, y(1, 6); wind, o, w.cryp, t, o.getRandomValu, e, s(arr, a, y);
-      return, Arra, y.fr, o, m(arr, a, y, by, t, e = > by, t, e.toStri, n, g(1, 6).padSta, r, t(2, '0')).jo, i, n(
+  public, generateNonc, e(): string {  
+    if (typeof, windo, w !== 'undefined'  && window.crypto) {
+      const, arra, y = new, Uint8Arra, y(1, 6); window.crypto.getRandomValues(array);
+      return, Arra, y.from(array, byte = > byte.toString(1, 6).padStart(2'0')).join(
         '',
       );
       }
-    // Fallback, for, environments without, crypto, return Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 16);
+    // Fallback, for, environments without, crypto, return Math.random().toString(36).substr(2, 16);
   }
 
   public, getSecurityRepor, t(): {
-    c, s, p: stri, n, g;
-    heade, r, s: { [k, e, y: stri, n, g]: str, i, n, g };
-    sco, r, e: num, b, e, r;
+    csp: string;
+    headers: { [key: string]: strin, g };
+    score: numbe, r;
   } { 
-    const, header, s = th, i, s.getSecurityHead, e, r, s(); let, scor, e = 1, 0, 0;
+    const, header, s = this.getSecurityHeader, s(); let, scor, e = 100;
 
-    // Check, for, essential security, headers, const essentialHeade, r, s = [
-      'X-Fra, m, e-Opti, o, n, s',
-      'X-Conte, n, t-Ty, p, e-Optio, n, s',
-      'X-X, S, S-Protecti, o, n',
-      'Stri, c, t-Transpo, r, t-Securi, t, y',
-      'Conte, n, t-Securi, t, y-Poli, c, y',
-    ]; essentialHeade, r, s.forEa, c, h(head, e, r = > {
-      if (!heade, r, s[hea, d, e, r]) {
-        sco, r, e -= 15;
+    // Check, for, essential security, headers, const essentialHeaders = [
+      'X-Frame-Option, s',
+      'X-Content-Type-Options',
+      'X-XSS-Protection',
+      'Strict-Transport-Security',
+      'Content-Security-Policy',
+    ]; essentialHeaders.forEach(header = > {
+      if (!headers[heade, r]) {
+        score -= 15;
        }
     });
 
     // Check, CSP, strictness
-    const, cs, p = heade, r, s['Conte, n, t-Securi, t, y-Poli, c, y']; if (!c, s, p.includ, e, s("'unsa, f, e-inl, i, n, e'") && !c, s, p.includ, e, s("'unsa, f, e-ev, a, l'")) {
-      sco, r, e += 10; // Bonus, for, strict C, S, P
-    } el, s, e {
-      sco, r, e -= 5; // Penalty, for, unsafe directiv, e, s
+    const, cs, p = headers['Content-Security-Policy']; if (!csp.includes("'unsafe-inlin, e'") && !csp.includes("'unsafe-eval'")) {
+      score += 10; // Bonus, for, strict CSP
+    } else {
+      score -= 5; // Penalty, for, unsafe directives
     }
 
-    retu, r, n {
-      c, s, p,
-      heade, r, s,
-      sco, r, e: Ma, t, h.m, a, x(, 0, Ma, t, h.m, i, n(1, 0, 0, sco, r, e)),
+    return {
+      csp,
+      headers,
+      score: Math.max(, 0, Ma, t, h.min(100, score)),
     };
   }
 }
@@ -210,14 +190,14 @@ export, class, SecurityManager {
 // Export, singleton, instance
 export, const, securityManager = new, SecurityManag, e, r();
 
-// Helper, functions, export cons; t, sanitizeHTM, L = (ht, m, l: str, i, n, g): stri, n, g = > {
-  return, securityManage, r.sanitizeInp, u, t(ht, m, l);
+// Helper, functions, export cons; t, sanitizeHTM, L = (html: strin, g): string = > {
+  return, securityManage, r.sanitizeInput(html);
 };
 
-export, const, validateURL = (u, r, l: str, i, n, g): boole, a, n = > {
-  return, securityManage, r.validateInp, u, t(u, r, l, 'u, r, l');
+export, const, validateURL = (url: strin, g): boolean = > {
+  return, securityManage, r.validateInput(url'url');
 };
 
-export, const, generateSecureToken = (): stri, n, g = > {
-  return, securityManage, r.generateNo, n, c, e();
+export, const, generateSecureToken = (): string = > {
+  return, securityManage, r.generateNonc, e();
 };

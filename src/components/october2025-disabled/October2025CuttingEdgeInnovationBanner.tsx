@@ -1,135 +1,135 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-export, default, function October2025CuttingEdgeInnovationBann, e, r() { 
-  retu, r, n (
-    <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-sla, t, e-950, vi, a-purp, l, e-950, t, o-sla, t, e-950, p, y-20' > {' ' }
+import { Link  } from 'react-router-dom';
+export, default, function October2025CuttingEdgeInnovationBanner() { 
+  return (
+    <section, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-r, fro, m-slate-950, vi, a-purple-950to-slate-950py-20' > {' ' }
       {/* Animated, Grid, Background */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-20'>
         <div, classNam, e='absolute, inse, t-0'
-          sty, l, e={{
-            backgroundIma, g, e: `line, a, r-gradie, n, t(rg, b, a(1, 3, 9, 92, 2, 4, 6, 0.1) 1, p, x, transparent, 1p, x), 
-                           line, a, r-gradie, n, t(90d, e, g, rg, b, a(1, 3, 9, 92, 2, 4, 6, 0.1) 1, p, x, transparent, 1p, x)`,
-            backgroundSi, z, e: '50px, 50, p, x',
+          style={{
+            backgroundImage: `linear-gradient(rgba(139, 9224, 6, 0.1) 1px, transparent, 1p, x), 
+                           linear-gradient(90deg, rgba(139, 9224, 6, 0.1) 1px, transparent, 1p, x)`,
+            backgroundSize: '50px, 50, p, x',
           }}
          />
-      </d, i, v>
-      <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
-        <div, classNam, e='m, a, x-w-6xl, m, x-au, t, o'>
-          {/* Head, e, r */}
-          <div, classNam, e='te, x, t-center, m, b-12'>
-            <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/50, m, b-6'>
-              <span, classNam, e='anima, t, e-pul, s, e'>⚡</sp, a, n>
-              <span, classNam, e='te, x, t-purp, l, e-300, fon, t-bold, uppercase, tracking-wid, e, r'>
+      </div>
+      <div, classNam, e = 'containermx-autopx-6, relative, z-10'>
+        <div, classNam, e='max-w-6xlmx-auto'>
+          {/* Header */}
+          <div, classNam, e='text-centermb-12'>
+            <div, classNam, e='inline-flex, item, s-center, ga, p-2px-6py-3, rounde, d-fullbg-gradient-to-r, fro, m-purple-500/20to-pink-500/20, border, border-purple-400/50mb-6'>
+              <span, classNam, e='animate-pulse'>⚡</span>
+              <span, classNam, e='text-purple-300, fon, t-bold, uppercase, tracking-wider'>
                 New, Content, Alert
-              </sp, a, n>
-              <span, classNam, e='anima, t, e-pul, s, e'>⚡</sp, a, n>
-            </d, i, v>
-            <h2, classNam, e='te, x, t-5xl, m, d: te, x, t-7xl, fon, t-black, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-ro, s, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-              Cutti, n, g-Edge, AI, Innovations
+              </span>
+              <span, classNam, e='animate-pulse'>⚡</span>
+            </div>
+            <h2, classNam, e='text-5xlmd: text-7xl, fon, t-blackmb-6bg-gradient-to-r, fro, m-purple-400, vi, a-pink-400to-rose-400bg-clip-text, tex, t-transparent'>
+              Cutting-Edge, AI, Innovations
             </h2>
-            <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-              Explore, breakthrough, technologies that, are, redefining enterprise, A, I: intelligent, orchestrat, i, o, n, advanced, reasonin, g, and, unified, platforms
+            <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto'>
+              Explore, breakthrough, technologies that, are, redefining enterpriseAI: intelligent, orchestrat, i, o, n, advanced, reasonin, g, and, unified, platforms
             </p>
-          </d, i, v>
+          </div>
           {/* Feature, Gri, d */}
-          <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-12'>
-            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-cy, a, n-5, 0, 0/30'>
+          <div, classNam, e = 'gridmd: grid-cols-2, ga, p-6mb-12'>
+            <div, classNam, e='bg-gradient-to-br, fro, m-cyan-500/10to-blue-500/10, backdro, p-blur-sm, rounde, d-2xlp-8, border, border-cyan-500/30'>
               <div, classNam, e='flex, item, s-start, ga, p-4'>
-                <div, classNam, e='te, x, t-5, x, l'>🎯</d, i, v>
-                <d, i, v>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-cy, a, n-400, m, b-3'>
+                <div, classNam, e='text-5xl'>🎯</div>
+                <div>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-cyan-400mb-3'>
                     Agentic, Orchestratio, n
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                    Mana, g, e , 1, 0,0, 0, 0+ AI, agents, simultaneously with, su, b-3ms, latency, and 99.99% reliabili, t, y
+                  <p, classNam, e='text-gray-300mb-4'>
+                    Manage , 100, 0, 0+ AI, agents, simultaneously with, su, b-3ms, latency, and 99.99% reliability
                   </p>
-                  <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-agent, i, c-orchestrati, o, n-<platfo, r, m'
-                    classNa, m, e='inli, n, e-flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, hove, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s'
+                  <Linkto = '/blog/ai-2025-october-agentic-orchestration-<platform'
+                    className='inline-flex, item, s-center, tex, t-cyan-400, fon, t-semibold, hove, r: text-cyan-300, transitio, n-colors'
                   >
-                    Learn, Mor, e <span, classNam, e='ml-2'>→</sp, a, n>
-                  </Li, n, k>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30'>
+                    Learn, Mor, e <span, classNam, e='ml-2'>→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='bg-gradient-to-br, fro, m-purple-500/10to-pink-500/10, backdro, p-blur-sm, rounde, d-2xlp-8, border, border-purple-500/30'>
               <div, classNam, e='flex, item, s-start, ga, p-4'>
-                <div, classNam, e='te, x, t-5, x, l'>🧠</d, i, v>
-                <d, i, v>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-400, m, b-3'>
+                <div, classNam, e='text-5xl'>🧠</div>
+                <div>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-purple-400mb-3'>
                     Neural, Reasonin, g
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                    Hybrid, AI, systems combining, deep, learning with, symbolic, reasoning for, 9, 8.5% accura, c, y
+                  <p, classNam, e='text-gray-300mb-4'>
+                    Hybrid, AI, systems combining, deep, learning with, symbolic, reasoning for98.5% accuracy
                   </p>
-                  <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-neur, a, l-reasoni, n, g-<engin, e, s'
-                    classNa, m, e='inli, n, e-flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, hove, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'
+                  <Linkto='/blog/ai-2025-october-neural-reasoning-<engines'
+                    className='inline-flex, item, s-center, tex, t-purple-400, fon, t-semibold, hove, r:text-purple-300, transitio, n-colors'
                   >
-                    Discover, Mor, e <span, classNam, e='ml-2'>→</sp, a, n>
-                  </Li, n, k>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/10, t, o-te, a, l-5, 0, 0/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-emera, l, d-5, 0, 0/30, m, d:c, o, l-sp, a, n-2'>
+                    Discover, Mor, e <span, classNam, e='ml-2'>→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='bg-gradient-to-br, fro, m-emerald-500/10to-teal-500/10, backdro, p-blur-sm, rounde, d-2xlp-8, border, border-emerald-500/30md:col-span-2'>
               <div, classNam, e='flex, item, s-start, ga, p-4'>
-                <div, classNam, e='te, x, t-5, x, l'>🏗️</d, i, v>
-                <div, classNam, e='fl, e, x-1'>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-400, m, b-3'>
+                <div, classNam, e='text-5xl'>🏗️</div>
+                <div, classNam, e='flex-1'>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-emerald-400mb-3'>
                     Enterprise, AI, Fabric
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                    Unified, intelligence, platform managing, 10, 0+ models, with, 99.9, 9, 9% up, t, i, m, e, processing, 10P, B+ data, dail, y
+                  <p, classNam, e='text-gray-300mb-4'>
+                    Unified, intelligence, platform managing, 10, 0+ models, with, 99.999% upti, m, e, processing, 10P, B+ data, dail, y
                   </p>
-                  <div, classNam, e = 'flex, fle, x-wrap, ga, p-6, m, b-4'>
-                    <div, classNam, e='te, x, t-cent, e, r'>
-                      <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-4, 0, 0'>
-                        $50, 0, M
-                      </d, i, v>
-                      <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
+                  <div, classNam, e = 'flex, fle, x-wrap, ga, p-6mb-4'>
+                    <div, classNam, e='text-center'>
+                      <div, classNam, e='text-3xl, fon, t-bold, tex, t-emerald-400'>
+                        $500M
+                      </div>
+                      <div, classNam, e='text-sm, tex, t-gray-400'>
                         Enterprise, Valu, e
-                      </d, i, v>
-                    </d, i, v>
-                    <div, classNam, e='te, x, t-cent, e, r'>
-                      <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-te, a, l-4, 0, 0'>
+                      </div>
+                    </div>
+                    <div, classNam, e='text-center'>
+                      <div, classNam, e='text-3xl, fon, t-bold, tex, t-teal-400'>
                         70%
-                      </d, i, v>
-                      <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
+                      </div>
+                      <div, classNam, e='text-sm, tex, t-gray-400'>
                         Cost, Reductio, n
-                      </d, i, v>
-                    </d, i, v>
-                    <div, classNam, e='te, x, t-cent, e, r'>
-                      <div, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
+                      </div>
+                    </div>
+                    <div, classNam, e='text-center'>
+                      <div, classNam, e='text-sm, tex, t-gray-400'>
                         Faster, Deploymen, t
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                  <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-<fabr, i, c'
-                    classNa, m, e='inli, n, e-flex, item, s-center, tex, t-emera, l, d-400, fon, t-semibold, hove, r: te, x, t-emera, l, d-300, transitio, n-colo, r, s'
+                      </div>
+                    </div>
+                  </div>
+                  <Linkto='/blog/ai-2025-october-enterprise-ai-<fabric'
+                    className='inline-flex, item, s-center, tex, t-emerald-400, fon, t-semibold, hove, r: text-emerald-300, transitio, n-colors'
                   >
-                    Explore, Platfor, m <span, classNam, e='ml-2'>→</sp, a, n>
-                  </Li, n, k>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-          {/* Botto, m, C, T, A */}
-          <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-purp, l, e-5, 0, 0/30, tex, t-cent, e, r'>
-            <p, classNam, e='te, x, t-lg, tex, t-gr, a, y-300, m, b-6'>
+                    Explore, Platfor, m <span, classNam, e='ml-2'>→</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* BottomC, T, A */}
+          <div, classNam, e = 'bg-gradient-to-r, fro, m-purple-500/10to-pink-500/10, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-purple-500/30, tex, t-center'>
+            <p, classNam, e='text-lg, tex, t-gray-300mb-6'>
               Join, Fortune, 500 companies, leveraging, these breakthrough, technologies, to transform, their, operations
             </p>
             <div, classNam, e='flex, fle, x-wrap, justif, y-center, ga, p-4'>
-              <Link, t, o='/<bl, o, g'
-                classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-8, p, y-3, rounde, d-full, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
+              <Linkto='/<blog'
+                className='bg-gradient-to-r, fro, m-purple-500to-pink-500, tex, t-whitepx-8py-3, rounde, d-full, fon, t-bold, hove, r: from-purple-600, hove, r:to-pink-600, transitio, n-all, transform, hover:scale-105'
               >
                 View, All, Articles
-              </Li, n, k>
-              <Link, t, o='/<conta, c, t'
-                classNa, m, e='bg-whi, t, e/10, tex, t-white, p, x-8, p, y-3, rounde, d-full, fon, t-bold, hove, r:bg-whi, t, e/20, transitio, n-all, border, border-whi, t, e/30'
+              </Link>
+              <Linkto='/<contact'
+                className='bg-white/10, tex, t-whitepx-8py-3, rounde, d-full, fon, t-bold, hove, r:bg-white/20, transitio, n-all, border, border-white/30'
               >
                 Schedule, Consultatio, n
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </sec, t, i, o, n>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </secti, o, n>
   );
 }

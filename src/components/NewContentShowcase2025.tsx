@@ -1,56 +1,56 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, NewContentShowcase202, 5: Rea, c, t.FC = () => {
+import React from 'react';
+import { Link  } from 'react-router-dom';
+const, NewContentShowcase202, 5: React.FC = () => {
   const, highlight, s = [
     {
-      tit, l, e: "🎭 Multimodal, AI, Revoluti, o, n",
-      descripti, o, n: "Unified, visio, n-langua, g, e-audio, processing, with 98% accur, a, c, y",
-      li, n, k: "/bl, o, g/multimod, a, l-ai-revoluti, o, n-2, 0, 2, 5",
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
+      title: "🎭 Multimodal, AI, Revoluti, o, n",
+      description: "Unified, visio, n-language-audio, processing, with 98% accurac, y",
+      link: "/blog/multimodal-ai-revolution-202, 5",
+      color: "from-purple-500to-pink-50, 0"
     },
     {
-      tit, l, e: "⛓️ Blockcha, i, n-AI, Integrati, o, n",
-      descripti, o, n: "Trustless, intelligence, with decentralized, governan, c, e",
-      li, n, k: "/bl, o, g/blockcha, i, n-ai-integrati, o, n-2, 0, 2, 5",
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
+      title: "⛓️ Blockchain-AI, Integrati, o, n",
+      description: "Trustless, intelligence, with decentralized, governan, c, e",
+      link: "/blog/blockchain-ai-integration-202, 5",
+      color: "from-blue-500to-cyan-50, 0"
     },
     {
-      tit, l, e: "🌱 Green, A, I & Sustainabil, i, t, y",
-      descripti, o, n: "Carb, o, n-neutral, ML, with 90% emissions, reducti, o, n",
-      li, n, k: "/bl, o, g/gre, e, n-ai-sustainabili, t, y-2, 0, 2, 5",
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
+      title: "🌱 GreenAI & Sustainabilit, y",
+      description: "Carbon-neutral, ML, with 90% emissions, reducti, o, n",
+      link: "/blog/green-ai-sustainability-202, 5",
+      color: "from-green-500to-emerald-50, 0"
     },
     {
-      tit, l, e: "⚙️ AI, Predictive, Maintenanc, e",
-      descripti, o, n: "85% downtime, reduction, with 98% prediction, accura, c, y",
-      li, n, k: "/servic, e, s/ai-predicti, v, e-maintena, n, c, e",
-      col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0"
+      title: "⚙️ AI, Predictive, Maintenanc, e",
+      description: "85% downtime, reduction, with 98% prediction, accura, c, y",
+      link: "/services/ai-predictive-maintenanc, e",
+      color: "from-orange-500to-red-50, 0"
     }
-  ]; retu, r, n (
-    <section, classNam, e = "py-16, b, g-gr, a, y-900, tex, t-whi, t, e">
-      <div, classNam, e="container, m, x-auto, p, x-6">
-        <div, classNam, e="te, x, t-center, m, b-12">
-          <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2, m, b-4">
-            <Sparkles, classNam, e="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-            <h2, classNam, e="te, x, t-4xl, fon, t-bo, l, d">2025, Breakthrough, Content</h2>
-            <Sparkles, classNam, e="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-          </d, i, v>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-3, 0, 0">
+  ]; return (
+    <section, classNam, e = "py-16bg-gray-900, tex, t-white">
+      <div, classNam, e="containermx-autopx-6">
+        <div, classNam, e="text-centermb-12">
+          <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2mb-4">
+            <Sparkles, classNam, e="w-6 h-6, tex, t-yellow-400, animat, e-pulse" />
+            <h2, classNam, e="text-4xl, fon, t-bold">2025, Breakthrough, Content</h2>
+            <Sparkles, classNam, e="w-6 h-6, tex, t-yellow-400, animat, e-pulse" />
+          </div>
+          <p, classNam, e="text-xl, tex, t-gray-300">
             The, most, innovative AI, content, of the, yea, r
           </p>
-        </d, i, v>
-        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6">
-          { highligh, t, s.m, a, p((it, e, m, ind, e, x) = > (
-            <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e="group, relative, overflow-hidden, rounde, d-2x, l, p-6, b, g-gr, a, y-800, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
+        </div>
+        <div, classNam, e="gridmd: grid-cols-2lg:grid-cols-4, ga, p-6">
+          { highlights.map((item, index) = > (
+            <Link, ke, y = { inde, x  }, to={ item.link } className="group, relative, overflow-hidden, rounde, d-2xlp-6bg-gray-800, hove, r: scale-105, transitio, n-all, duratio, n-300"
             >
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${it, e, m.c, o, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-20, transitio, n-opac, i, t, y`} />
-              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-3, relative, z-10">{it, e, m.tit, l, e}</h3>
-              <p, classNam, e="te, x, t-gr, a, y-300, tex, t-sm, relative, z-10">{it, e, m.descripti, o, n}</p>
-            </L, i, n, k>
+              <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${item.col, o, r }, opacity-0, grou, p-hover: opacity-20, transitio, n-opacit, y`} />
+              <h3, classNam, e = "text-xl, fon, t-boldmb-3, relative, z-10">{item.title}</h3>
+              <p, classNam, e="text-gray-300, tex, t-sm, relative, z-10">{item.description}</p>
+            </Lin, k>
           ))}
-        </d, i, v>
-      </d, i, v>
-    </secti, o, n>
+        </div>
+      </div>
+    </section>
   );
 };
 export, default, NewContentShowcase2025;

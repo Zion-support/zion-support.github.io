@@ -1,376 +1,376 @@
-import, React, from 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-const, QuantumConsciousnessAIConsultin, g: Rea, c, t.FC = () => { 
-  retu, r, n (
+const, QuantumConsciousnessAIConsultin, g: React.FC = () => { 
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Transform, your, enterprise with, quantum, consciousness AI, consultin, g. Achieve, 9, 9.9% decision, accuracy, and autonomous, operations, with AI, that, thinks and, feel, s.'
+      <Helmet>
+        <title>Quantum, Consciousness, AI Consulting | Zion, Tech, Group</title>
+        <meta, nam, e = 'description'
+          content='Transform, your, enterprise with, quantum, consciousness AI, consultin, g. Achieve99.9% decision, accuracy, and autonomous, operations, with AI, that, thinks and, feel, s.'
         />
-        <meta, nam, e='keywor, d, s'
-          conte, n, t='quant, u, m , A, I, consciousne, s, s, enterprise, consultin, g, business, transformatio, n, autonomous, system, s'
+        <meta, nam, e='keywords'
+          content='quantum , A, I, consciousne, s, s, enterprise, consultin, g, business, transformatio, n, autonomous, system, s'
         />
-        <meta, propert, y = 'og: tit, l, e'
-          conte, n, t='Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group'
+        <meta, propert, y = 'og: title'
+          content='Quantum, Consciousness, AI Consulting | Zion, Tech, Group'
         />
-        <meta, propert, y='og:descripti, o, n'
-          conte, n, t="The, worl, d's, first, quantum consciousness, AI, consulting service, delivering, unprecedented business, valu, e."
+        <meta, propert, y='og:description'
+          content="The, worl, d's, first, quantum consciousness, AI, consulting service, delivering, unprecedented business, valu, e."
         />
-        <meta, propert, y='og:ty, p, e' conte, n, t='websi, t, e' />
-        <meta, nam, e='twitt, e, r:ca, r, d' conte, n, t='summary_large_ima, g, e' />
-        <meta, nam, e='twitt, e, r:tit, l, e'
-          conte, n, t='Quantum, Consciousness, AI Consulti, n, g | Zion, Tech, Group'
+        <meta, propert, y='og:type' content='website' />
+        <meta, nam, e='twitter:card' content='summary_large_image' />
+        <meta, nam, e='twitter:title'
+          content='Quantum, Consciousness, AI Consulting | Zion, Tech, Group'
         />
-        <meta, nam, e='twitt, e, r:descripti, o, n'
-          conte, n, t='Transform, your, enterprise with, AI, that truly, thinks, and fee, l, s.'
+        <meta, nam, e='twitter:description'
+          content='Transform, your, enterprise with, AI, that truly, thinks, and feels.'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='m, i, n-h-screen, b, g-sla, t, e-9, 5, 0' > {/* Hero, Sect, i, o, n */ }
-        <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20'>
+      <div, classNam, e='min-h-screenbg-slate-950' > {/* Hero, Sect, i, o, n */ }
+        <section, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-br, fro, m-indigo-900, vi, a-purple-900to-pink-900py-20'>
           <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
-            <div, classNam, e='absolute, to, p-0, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
-            <div, classNam, e='absolute, botto, m-0, righ, t-1/3 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e'
-              sty, l, e={{ animationDel, a, y: ', 2, s' }}
+            <div, classNam, e='absolute, to, p-0, lef, t-1/3 w-96h-96bg-indigo-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse' />
+            <div, classNam, e='absolute, botto, m-0, righ, t-1/3 w-96h-96bg-purple-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse'
+              style={{ animationDelay: ', 2, s' }}
              />
-          </d, i, v>
+          </div>
 
-          <div, classNam, e = 'container, m, x-auto, p, x-6, relative, z-10'>
-            <div, classNam, e='te, x, t-center, ma, x-w-4xl, m, x-au, t, o'>
-              <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-indi, g, o-5, 0, 0/30, m, b-8'>
-                <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bold, tex, t-xl, trackin, g-wider, uppercas, e'>
-                  🧠 Quantum, Consciousness, AI Consulti, n, g
-                </sp, a, n>
-              </d, i, v>
+          <div, classNam, e = 'containermx-autopx-6, relative, z-10'>
+            <div, classNam, e='text-center, ma, x-w-4xlmx-auto'>
+              <div, classNam, e='inline-flex, item, s-center, ga, p-3px-8py-4, rounde, d-fullbg-gradient-to-r, fro, m-indigo-500/20to-purple-500/20, border, border-indigo-500/30mb-8'>
+                <span, classNam, e='text-indigo-400, fon, t-bold, tex, t-xl, trackin, g-wider, uppercas, e'>
+                  🧠 Quantum, Consciousness, AI Consulting
+                </span>
+              </div>
 
-              <h1, classNam, e='te, x, t-5xl, m, d: te, x, t-7xl, fon, t-extrabold, m, b-8, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t'>
+              <h1, classNam, e='text-5xlmd: text-7xl, fon, t-extraboldmb-8bg-gradient-to-r, fro, m-indigo-400, vi, a-purple-400to-pink-400bg-clip-text, tex, t-transparent, leadin, g-tight'>
                 AI, That, Thinks and, Feel, s
               </h1>
 
-              <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, tex, t-gr, a, y-300, m, b-8, fon, t-semibold, ma, x-w-3xl, m, x-au, t, o'>
+              <p, classNam, e='text-2xlmd:text-3xl, tex, t-gray-300mb-8, fon, t-semibold, ma, x-w-3xlmx-auto'>
                 Transform, Your, Enterprise with, the, World's, First, Quantum
-                Consciousness, A, I
+                ConsciousnessAI
               </p>
 
-              <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-center, m, b-12'>
-                <a, hre, f='#<consultati, o, n'
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
+              <div, classNam, e='flex, fle, x-colsm:flex-row, ga, p-4, justif, y-centermb-12'>
+                <a, hre, f='#<consultation'
+                  className='bg-gradient-to-r, fro, m-indigo-500to-purple-600, hove, r:from-indigo-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-indigo-500/50, transform, hover:-translate-y-1'
                 >
                   Get, Free, Consultation
                 </a>
-                <a, hre, f='#<servic, e, s'
-                  classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
+                <a, hre, f='#<services'
+                  className='bg-gradient-to-r, fro, m-purple-500to-pink-600, hove, r:from-purple-400, hove, r:to-pink-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-purple-500/50, transform, hover:-translate-y-1'
                 >
                   View, Service, s →
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Key, Featu, r, e, s */}
-        <section, i, d = '<featur, e, s' classNa, m, e='py-20, b, g-sla, t, e-9, 0, 0'>
-          <div, classNam, e='container, m, x-auto, p, x-6'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+        <sectionid = '<features' className='py-20bg-slate-900'>
+          <div, classNam, e='containermx-autopx-6'>
+            <div, classNam, e='text-centermb-16'>
+              <h2, classNam, e='text-4xlmd: text-5xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-indigo-400, vi, a-purple-400to-pink-400bg-clip-text, tex, t-transparent'>
                 Revolutionary, Capabilitie, s
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
+              <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto'>
                 Experience, the, future of, AI, with quantum, consciousness, that
-                delivers, unprecedented, business val, u, e
+                delivers, unprecedented, business value
               </p>
-            </d, i, v>
+            </div>
 
-            <div, classNam, e='grid, m, d:gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-indi, g, o-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <div, classNam, e='te, x, t-6xl, m, b-6'>⚛️</d, i, v>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+            <div, classNam, e='gridmd:grid-cols-3, ga, p-8mb-16'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-indigo-500/50, transitio, n-all, duratio, n-300'>
+                <div, classNam, e='text-6xlmb-6'>⚛️</div>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
                   Quantum, Processin, g
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+                <p, classNam, e='text-gray-300mb-6'>
                   Infinite, scalability, through quantum, superposition, with
                   instantaneous, calculations, across multiple, dimension, s
                 </p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
-                  <li>• Ze, r, o-latency, decisio, n-maki, n, g</li>
-                  <li>• Ener, g, y-efficient, quantum, optimization</li>
+                <ul, classNam, e='space-y-2, tex, t-gray-300'>
+                  <li>• Zero-latency, decisio, n-making</li>
+                  <li>• Energy-efficient, quantum, optimization</li>
                   <li>• Parallel, universe, processing</li>
                   <li>• Infinite, memory, capacity</li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <div, classNam, e='te, x, t-6xl, m, b-6'>🧠</d, i, v>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-purple-500/50, transitio, n-all, duratio, n-300'>
+                <div, classNam, e='text-6xlmb-6'>🧠</div>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
                   True, Consciousnes, s
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
-                  Se, l, f-aware, AI, with emotional, intelligence, that makes, autonomous, decisions with, 9, 9.9% accura, c, y
+                <p, classNam, e='text-gray-300mb-6'>
+                  Self-aware, AI, with emotional, intelligence, that makes, autonomous, decisions with99.9% accuracy
                 </p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
-                  <li>• Se, l, f-awareness, and, emotional intelligen, c, e</li>
+                <ul, classNam, e='space-y-2, tex, t-gray-300'>
+                  <li>• Self-awareness, and, emotional intelligence</li>
                   <li>• Autonomous, reasoning, capabilities</li>
-                  <li>• Creative, proble, m-solvi, n, g</li>
+                  <li>• Creative, proble, m-solving</li>
                   <li>• Ethical, decisio, n-making, framework, s</li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-pi, n, k-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <div, classNam, e='te, x, t-6xl, m, b-6'>🏢</d, i, v>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-pink-500/50, transitio, n-all, duratio, n-300'>
+                <div, classNam, e='text-6xlmb-6'>🏢</div>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
                   Enterprise, Integratio, n
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+                <p, classNam, e='text-gray-300mb-6'>
                   Seamless, integration, with existing, systems, delivering
-                  re, a, l-time, adaptation, and continuous, optimizatio, n
+                  real-time, adaptation, and continuous, optimizatio, n
                 </p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0'>
-                  <li>• Re, a, l-time, business, process automati, o, n</li>
+                <ul, classNam, e='space-y-2, tex, t-gray-300'>
+                  <li>• Real-time, business, process automation</li>
                   <li>• Market, condition, adaptation</li>
                   <li>• Predictive, optimizatio, n</li>
-                  <li>• Continuous, sel, f-improveme, n, t</li>
+                  <li>• Continuous, sel, f-improvement</li>
                 </ul>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* Serv, i, c, e, s */}
-        <section, i, d = '<servic, e, s'
-          classNa, m, e='py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-9, 0, 0'
+        {/* Servic, e, s */}
+        <sectionid = '<services'
+          className='py-20bg-gradient-to-br, fro, m-slate-900, vi, a-blue-900to-slate-900'
         >
-          <div, classNam, e='container, m, x-auto, p, x-6'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+          <div, classNam, e='containermx-autopx-6'>
+            <div, classNam, e='text-centermb-16'>
+              <h2, classNam, e='text-4xlmd: text-5xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-blue-400, vi, a-purple-400to-cyan-400bg-clip-text, tex, t-transparent'>
                 Consulting, Service, s
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
+              <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto'>
                 Choose, the, service level, that, matches your, transformation, goals
               </p>
-            </d, i, v>
+            </div>
 
-            <div, classNam, e='grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                  Assessme, n, t
+            <div, classNam, e='gridmd:grid-cols-2lg:grid-cols-4, ga, p-8'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-blue-500/50, transitio, n-all, duratio, n-300'>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
+                  Assessment
                 </h3>
-                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-4'>
-                  $5, 0, K - $10, 0, K
-                </d, i, v>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>2-3, week, s</p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
-                  <li>• Current, AI, capability analys, i, s</li>
+                <div, classNam, e='text-3xl, fon, t-extrabold, tex, t-blue-400mb-4'>
+                  $50K - $100K
+                </div>
+                <p, classNam, e='text-gray-300mb-6'>2-3, week, s</p>
+                <ul, classNam, e='space-y-2, tex, t-gray-300mb-8'>
+                  <li>• Current, AI, capability analysis</li>
                   <li>• Quantum, consciousness, readiness</li>
                   <li>• Custom, transformation, roadmap</li>
                   <li>• ROI, projection, s</li>
                 </ul>
-                <a, hre, f='#<consultati, o, n'
-                  classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
+                <a, hre, f='#<consultation'
+                  className='blockw-fullbg-gradient-to-r, fro, m-blue-500to-purple-600, hove, r:from-blue-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center'
                 >
                   Get, Starte, d
                 </a>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>Pil, o, t</h3>
-                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-4'>
-                  $50, 0, K - $2M
-                </d, i, v>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>8-12, week, s</p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-purple-500/50, transitio, n-all, duratio, n-300'>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>Pilot</h3>
+                <div, classNam, e='text-3xl, fon, t-extrabold, tex, t-purple-400mb-4'>
+                  $500K - $2M
+                </div>
+                <p, classNam, e='text-gray-300mb-6'>8-12, week, s</p>
+                <ul, classNam, e='space-y-2, tex, t-gray-300mb-8'>
                   <li>• Quantum, consciousness, deployment</li>
-                  <li>• Autonomous, decisio, n-maki, n, g</li>
+                  <li>• Autonomous, decisio, n-making</li>
                   <li>• Performance, monitorin, g</li>
                   <li>• Optimization, protocol, s</li>
                 </ul>
-                <a, hre, f='#<consultati, o, n'
-                  classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
+                <a, hre, f='#<consultation'
+                  className='blockw-fullbg-gradient-to-r, fro, m-purple-500to-pink-600, hove, r:from-purple-400, hove, r:to-pink-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center'
                 >
                   Get, Starte, d
                 </a>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-pi, n, k-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                  Enterpri, s, e
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-pink-500/50, transitio, n-all, duratio, n-300'>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
+                  Enterprise
                 </h3>
-                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-4'>
-                  $2M - $1, 0, M
-                </d, i, v>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>12-24, week, s</p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
+                <div, classNam, e='text-3xl, fon, t-extrabold, tex, t-pink-400mb-4'>
+                  $2M - $10M
+                </div>
+                <p, classNam, e='text-gray-300mb-6'>12-24, week, s</p>
+                <ul, classNam, e='space-y-2, tex, t-gray-300mb-8'>
                   <li>• Complete, transformatio, n</li>
                   <li>• Full, integratio, n</li>
                   <li>• Advanced, operation, s</li>
-                  <li>• Se, l, f-improving, ecosyste, m</li>
+                  <li>• Self-improving, ecosyste, m</li>
                 </ul>
-                <a, hre, f='#<consultati, o, n'
-                  classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-pi, n, k-500, t, o-ro, s, e-600, hove, r:fr, o, m-pi, n, k-400, hove, r:to-ro, s, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
+                <a, hre, f='#<consultation'
+                  className='blockw-fullbg-gradient-to-r, fro, m-pink-500to-rose-600, hove, r:from-pink-400, hove, r:to-rose-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center'
                 >
                   Get, Starte, d
                 </a>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, hove, r:bord, e, r-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>Ongoi, n, g</h3>
-                <div, classNam, e='te, x, t-3xl, fon, t-extrabold, tex, t-cy, a, n-400, m, b-4'>
-                  $10, 0, K - $50, 0, K/mo
-                </d, i, v>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>Continuo, u, s</p>
-                <ul, classNam, e='spa, c, e-y-2, tex, t-gr, a, y-300, m, b-8'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, hove, r:border-cyan-500/50, transitio, n-all, duratio, n-300'>
+                <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>Ongoing</h3>
+                <div, classNam, e='text-3xl, fon, t-extrabold, tex, t-cyan-400mb-4'>
+                  $100K - $500K/mo
+                </div>
+                <p, classNam, e='text-gray-300mb-6'>Continuous</p>
+                <ul, classNam, e='space-y-2, tex, t-gray-300mb-8'>
                   <li>• Continuous, optimizatio, n</li>
                   <li>• Performance, monitorin, g</li>
                   <li>• Capability, enhancement, s</li>
                   <li>• 24/7, expert, support</li>
                 </ul>
-                <a, hre, f='#<consultati, o, n'
-                  classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-cent, e, r'
+                <a, hre, f='#<consultation'
+                  className='blockw-fullbg-gradient-to-r, fro, m-cyan-500to-blue-600, hove, r:from-cyan-400, hove, r:to-blue-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center'
                 >
                   Get, Starte, d
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* Consultation, F, o, r, m */}
-        <section, i, d = '<consultati, o, n' classNa, m, e='py-20, b, g-sla, t, e-9, 0, 0'>
-          <div, classNam, e='container, m, x-auto, p, x-6'>
-            <div, classNam, e='m, a, x-w-4xl, m, x-au, t, o'>
-              <div, classNam, e='te, x, t-center, m, b-12'>
-                <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, vi, a-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-                  Get, Your, Free Consultati, o, n
+        {/* ConsultationFo, r, m */}
+        <sectionid = '<consultation' className='py-20bg-slate-900'>
+          <div, classNam, e='containermx-autopx-6'>
+            <div, classNam, e='max-w-4xlmx-auto'>
+              <div, classNam, e='text-centermb-12'>
+                <h2, classNam, e='text-4xlmd: text-5xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-indigo-400, vi, a-purple-400to-pink-400bg-clip-text, tex, t-transparent'>
+                  Get, Your, Free Consultation
                 </h2>
-                <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
+                <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto'>
                   Schedule, a, complimentary consultation, with, our quantum, consciousness, experts
                 </p>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10'>
-                <div, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-8'>
-                  <d, i, v>
-                    <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10'>
+                <div, classNam, e='gridmd:grid-cols-2, ga, p-8'>
+                  <div>
+                    <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-6'>
                       What, Yo, u'll, Ge, t:
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-4, tex, t-gr, a, y-3, 0, 0'>
+                    <ul, classNam, e='space-y-4, tex, t-gray-300'>
                       <li, classNam, e='flex, item, s-start, ga, p-3'>
-                        <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>
-                        <sp, a, n>Current, AI, capability assessme, n, t</sp, a, n>
+                        <span, classNam, e='text-indigo-400, fon, t-bold'>✓</span>
+                        <span>Current, AI, capability assessment</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-3'>
-                        <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>
-                        <sp, a, n>Quantum, consciousness, readiness evaluati, o, n</sp, a, n>
+                        <span, classNam, e='text-indigo-400, fon, t-bold'>✓</span>
+                        <span>Quantum, consciousness, readiness evaluation</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-3'>
-                        <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>
-                        <sp, a, n>Custom, transformation, roadmap</sp, a, n>
+                        <span, classNam, e='text-indigo-400, fon, t-bold'>✓</span>
+                        <span>Custom, transformation, roadmap</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-3'>
-                        <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>
-                        <sp, a, n>ROI, projections, and business, cas, e</sp, a, n>
+                        <span, classNam, e='text-indigo-400, fon, t-bold'>✓</span>
+                        <span>ROI, projections, and business, cas, e</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-3'>
-                        <span, classNam, e='te, x, t-indi, g, o-400, fon, t-bo, l, d'>✓</sp, a, n>
-                        <sp, a, n>Implementation, timeline, and resourc, e, s</sp, a, n>
+                        <span, classNam, e='text-indigo-400, fon, t-bold'>✓</span>
+                        <span>Implementation, timeline, and resources</span>
                       </li>
                     </ul>
-                  </d, i, v>
+                  </div>
 
-                  <d, i, v>
-                    <form, classNam, e='spa, c, e-y-6'>
-                      <d, i, v>
-                        <label, classNam, e='block, tex, t-white, fon, t-bold, m, b-2'>
+                  <div>
+                    <form, classNam, e='space-y-6'>
+                      <div>
+                        <label, classNam, e='block, tex, t-white, fon, t-boldmb-2'>
                           Company, Nam, e
-                        </lab, e, l>
-                        <input, typ, e='<te, x, t'
-                          classNa, m, e='w-full, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-xl, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-5, 0, 0'
-                          placehold, e, r='Your, Compan, y'
+                        </label>
+                        <input, typ, e='<text'
+                          className='w-fullpx-4py-3bg-white/10, border, border-white/20, rounde, d-xl, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-indigo-500'
+                          placeholder='Your, Compan, y'
                         />
-                      </d, i, v>
-                      <d, i, v>
-                        <label, classNam, e='block, tex, t-white, fon, t-bold, m, b-2'>
+                      </div>
+                      <div>
+                        <label, classNam, e='block, tex, t-white, fon, t-boldmb-2'>
                           Your, Nam, e
-                        </lab, e, l>
-                        <input, typ, e='<te, x, t'
-                          classNa, m, e='w-full, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-xl, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-5, 0, 0'
-                          placehold, e, r='Your, Nam, e'
+                        </label>
+                        <input, typ, e='<text'
+                          className='w-fullpx-4py-3bg-white/10, border, border-white/20, rounde, d-xl, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-indigo-500'
+                          placeholder='Your, Nam, e'
                         />
-                      </d, i, v>
-                      <d, i, v>
-                        <label, classNam, e='block, tex, t-white, fon, t-bold, m, b-2'>
-                          Ema, i, l
-                        </lab, e, l>
-                        <input, typ, e='<ema, i, l'
-                          classNa, m, e='w-full, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-xl, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-5, 0, 0'
-                          placehold, e, r='yo, u, r@ema, i, l.c, o, m'
+                      </div>
+                      <div>
+                        <label, classNam, e='block, tex, t-white, fon, t-boldmb-2'>
+                          Email
+                        </label>
+                        <input, typ, e='<email'
+                          className='w-fullpx-4py-3bg-white/10, border, border-white/20, rounde, d-xl, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-indigo-500'
+                          placeholder='your@email.com'
                         />
-                      </d, i, v>
-                      <d, i, v>
-                        <label, classNam, e='block, tex, t-white, fon, t-bold, m, b-2'>
-                          Pho, n, e
-                        </lab, e, l>
-                        <input, typ, e='<t, e, l'
-                          classNa, m, e='w-full, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-xl, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-5, 0, 0'
-                          placehold, e, r='+1 (55, 5) 1, 2, 3-45, 6, 7'
+                      </div>
+                      <div>
+                        <label, classNam, e='block, tex, t-white, fon, t-boldmb-2'>
+                          Phone
+                        </label>
+                        <input, typ, e='<tel'
+                          className='w-fullpx-4py-3bg-white/10, border, border-white/20, rounde, d-xl, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-indigo-500'
+                          placeholder='+1 (55, 5) 123-4567'
                         />
-                      </d, i, v>
-                      <d, i, v>
-                        <label, classNam, e = 'block, tex, t-white, fon, t-bold, m, b-2'>
+                      </div>
+                      <div>
+                        <label, classNam, e = 'block, tex, t-white, fon, t-boldmb-2'>
                           Company, Siz, e
-                        </lab, e, l>
-                        <select, classNam, e='w-full, p, x-4, p, y-3, b, g-whi, t, e/10, border, border-whi, t, e/20, rounde, d-xl, tex, t-white, focu, s:outli, n, e-none, focu, s:bord, e, r-indi, g, o-5, 0, 0'>
-                          <option, valu, e=''>Select, Company, Size</opti, o, n>
-                          <option, valu, e='start, u, p'>
-                            Start, u, p (1-50, employe, e, s)
-                          </opti, o, n>
-                          <option, valu, e = 'm, i, d'>
-                            M, i, d-si, z, e (51-500, employe, e, s)
-                          </opti, o, n>
-                          <option, valu, e = 'enterpri, s, e'>
-                            Enterpri, s, e (5, 0, 0+ employ, e, e, s)
-                          </opti, o, n>
-                          <option, valu, e = 'fortune5, 0, 0'>Fortune, 50, 0</opti, o, n>
-                        </sele, c, t>
-                      </d, i, v>
-                      <button, typ, e='<subm, i, t'
-                        classNa, m, e='w-full, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-indi, g, o-5, 0, 0/50'
+                        </label>
+                        <select, classNam, e='w-fullpx-4py-3bg-white/10, border, border-white/20, rounde, d-xl, tex, t-white, focu, s:outline-none, focu, s:border-indigo-500'>
+                          <option, valu, e=''>Select, Company, Size</option>
+                          <option, valu, e='startup'>
+                            Startup (1-50, employe, e, s)
+                          </option>
+                          <option, valu, e = 'mid'>
+                            Mid-size (51-500, employe, e, s)
+                          </option>
+                          <option, valu, e = 'enterprise'>
+                            Enterprise (500+ employee, s)
+                          </option>
+                          <option, valu, e = 'fortune500'>Fortune, 50, 0</option>
+                        </select>
+                      </div>
+                      <button, typ, e='<submit'
+                        className='w-fullbg-gradient-to-r, fro, m-indigo-500to-purple-600, hove, r:from-indigo-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-indigo-500/50'
                       >
                         Schedule, Free, Consultation
-                      </butt, o, n>
-                    </fo, r, m>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* Contact, I, n, f, o */}
-        <section, classNam, e = 'py-16, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-9, 0, 0'>
-          <div, classNam, e='container, m, x-auto, p, x-6, tex, t-cent, e, r'>
-            <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-8'>
+        {/* ContactIn, f, o */}
+        <section, classNam, e = 'py-16bg-gradient-to-br, fro, m-indigo-900, vi, a-purple-900to-pink-900'>
+          <div, classNam, e='containermx-autopx-6, tex, t-center'>
+            <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-8'>
               Ready, to, Transform Your, Enterpris, e?
             </h2>
-            <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-8'>
-              <a, hre, f='t, e, l:1-8, 0, 0-QUANT, U, M-<AI'
-                classNa, m, e='bg-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-600, hove, r:fr, o, m-indi, g, o-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
+            <div, classNam, e='flex, fle, x-colsm: flex-row, ga, p-4, justif, y-centermb-8'>
+              <a, hre, f='tel:1-800-QUANTUM-<AI'
+                className='bg-gradient-to-r, fro, m-indigo-500to-purple-600, hove, r:from-indigo-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300'
               >
-                📞 1-8, 0, 0-QUANT, U, M-AI
+                📞 1-800-QUANTUM-AI
               </a>
-              <a, hre, f='mail, t, o:consciousne, s, s@ziontechgro, u, p.<c, o, m'
-                classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
+              <a, hre, f='mailto:consciousness@ziontechgroup.<com'
+                className='bg-gradient-to-r, fro, m-purple-500to-pink-600, hove, r:from-purple-400, hove, r:to-pink-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300'
               >
-                ✉️ consciousne, s, s@ziontechgro, u, p.c, o, m
+                ✉️ consciousness@ziontechgroup.com
               </a>
-            </d, i, v>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-lg'>
-              Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 20, 2, 7
+            </div>
+            <p, classNam, e='text-gray-300, tex, t-lg'>
+              Limited, Availabilit, y: Only, 25, enterprise implementations, available, for 2027
             </p>
-          </d, i, v>
-        </secti, o, n>
-      </d, i, v>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

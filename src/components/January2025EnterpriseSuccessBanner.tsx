@@ -1,193 +1,193 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, January2025EnterpriseSuccessBanne, r: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-gr, a, y-900, t, o-sla, t, e-8, 0, 0"  > {/* Background, Patt, e, r, n */ }
-      <div, classNam, e = "absolute, inse, t-0, b, g-[u, r, l('/imag, e, s/gr, i, d-patte, r, n.sv, g')] opaci, t, y-5" />
-      <div, classNam, e = "absolute, to, p-0, righ, t-0 w-9, 6, h-96, b, g-gradie, n, t-to-bl, fro, m-bl, u, e-5, 0, 0/10, t, o-transparent, rounde, d-full, blu, r-3, x, l" />
-      <div, classNam, e="absolute, botto, m-0, lef, t-0 w-9, 6, h-96, b, g-gradie, n, t-to-tr, fro, m-emera, l, d-5, 0, 0/10, t, o-transparent, rounde, d-full, blu, r-3, x, l" />
-      <div, classNam, e="relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-20">
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-400, p, x-6, p, y-3, rounde, d-full, tex, t-sm, fon, t-medium, m, b-8">
+import React from 'react';
+import { Link  } from 'react-router-dom';
+const, January2025EnterpriseSuccessBanne, r: React.FC = () => { 
+  return (
+    <div, classNam, e = "relative, overflo, w-hiddenbg-gradient-to-br, fro, m-slate-900, vi, a-gray-900to-slate-800"  > {/* Background, Patt, e, r, n */ }
+      <div, classNam, e = "absolute, inse, t-0bg-[url('/images/grid-pattern.sv, g')] opacity-5" />
+      <div, classNam, e = "absolute, to, p-0, righ, t-0 w-96h-96bg-gradient-to-bl, fro, m-blue-500/10to-transparent, rounde, d-full, blu, r-3xl" />
+      <div, classNam, e="absolute, botto, m-0, lef, t-0 w-96h-96bg-gradient-to-tr, fro, m-emerald-500/10to-transparent, rounde, d-full, blu, r-3xl" />
+      <div, classNam, e="relative, ma, x-w-7xlmx-autopx-4sm: px-6lg:px-8py-20">
+        <div, classNam, e="text-centermb-16">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-2bg-blue-500/20, tex, t-blue-400px-6py-3, rounde, d-full, tex, t-sm, fon, t-mediummb-8">
             <Award, classNam, e="w-5 h-5" />
-            <sp, a, n>ENTERPRISE, SUCCESS, STORIES</sp, a, n>
-          </d, i, v>
-          <h2, classNam, e="te, x, t-4xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t">
-            <span, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-emera, l, d-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+            <span>ENTERPRISE, SUCCESS, STORIES</span>
+          </div>
+          <h2, classNam, e="text-4xlmd:text-6xl, fon, t-bold, tex, t-whitemb-6, leadin, g-tight">
+            <span, classNam, e="bg-gradient-to-r, fro, m-blue-400, vi, a-emerald-400to-purple-400bg-clip-text, tex, t-transparent">
               Real, Result, s
-            </sp, a, n>
-            <br /> <span, classNam, e="te, x, t-whi, t, e">From, Real, Companies</sp, a, n>
+            </span>
+            <br /> <span, classNam, e="text-white">From, Real, Companies</span>
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, m, b-12">
-            Discover, how, Fortune 500, companies, are achieving, unprecedented, success with, A, I-powered, transformati, o, n, s, 
+          <p, classNam, e="text-xl, tex, t-gray-300, ma, x-w-4xlmx-automb-12">
+            Discover, how, Fortune 500, companies, are achieving, unprecedented, success withAI-powered, transformati, o, n, s, 
             generating, billions, in value, and, revolutionizing their, industrie, s.
           </p>
-        </d, i, v>
+        </div>
         {/* Success, Stories, Grid */}
-        <div, classNam, e = "grid, l, g: gr, i, d-co, l, s-2, ga, p-8, m, b-16">
+        <div, classNam, e = "gridlg: grid-cols-2, ga, p-8mb-16">
           {/* Manufacturing, Transformat, i, o, n */}
-          <div, classNam, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-[1.02]">
-            <div, classNam, e="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-bl, u, e-5, 0, 0/5, t, o-emera, l, d-5, 0, 0/5, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0" />
-            <div, classNam, e="relati, v, e">
-              <div, classNam, e="flex, item, s-center, ga, p-4, m, b-6">
-                <div, classNam, e="p-3, b, g-bl, u, e-5, 0, 0/20, rounde, d-xl">
-                  <Building2, classNam, e="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />
-                </d, i, v>
-                  <Building2, classNam, e="w-8 h-8, tex, t-bl, u, e-4, 0, 0" />
-                </d, i, v>
-                <d, i, v>
-                  <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Global, Manufacturing, Corp</h3>
-                  <p, classNam, e="te, x, t-gr, a, y-4, 0, 0">Fortune, 50, 0 • Manufacturi, n, g</p>
-                </d, i, v>
-              </d, i, v>
-              <p, classNam, e="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">
-                Complete, AI, transformation across, 450, global facili, t, i, e, s, achieving, 9, 9.99% operational, autonomy, and $3.7B, in, annual value, creatio, n.
+          <div, classNam, e = "group, relative, bg-white/5, backdro, p-blur-lg, rounde, d-3xlp-8, border, border-white/10, hove, r: border-blue-400/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-[1.02]">
+            <div, classNam, e="absolute, inse, t-0bg-gradient-to-br, fro, m-blue-500/5to-emerald-500/5, rounde, d-3xl, opacit, y-0, grou, p-hover:opacity-100, transitio, n-opacity, duratio, n-300" />
+            <div, classNam, e="relative">
+              <div, classNam, e="flex, item, s-center, ga, p-4mb-6">
+                <div, classNam, e="p-3bg-blue-500/20, rounde, d-xl">
+                  <Building2, classNam, e="w-8 h-8, tex, t-blue-400" />
+                </div>
+                  <Building2, classNam, e="w-8 h-8, tex, t-blue-400" />
+                </div>
+                <div>
+                  <h3, classNam, e="text-2xl, fon, t-bold, tex, t-white">Global, Manufacturing, Corp</h3>
+                  <p, classNam, e="text-gray-400">Fortune, 50, 0 • Manufacturing</p>
+                </div>
+              </div>
+              <p, classNam, e="text-gray-300mb-6, leadin, g-relaxed">
+                Complete, AI, transformation across, 450, global faciliti, e, s, achieving, 9, 9.99% operational, autonomy, and $3.7B, in, annual value, creatio, n.
               </p>
-              <div, classNam, e = "grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
-                <div, classNam, e="bg-whi, t, e/5, rounde, d-x, l, p-4">
-                  <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-400, m, b-1">99.99%</d, i, v>
-                  <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Operational, Uptim, e</d, i, v>
-                </d, i, v>
-                <div, classNam, e="bg-whi, t, e/5, rounde, d-x, l, p-4">
-                  <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-400, m, b-1">$3.7B</d, i, v>
-                  <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Annual, Valu, e</d, i, v>
-                </d, i, v>
-              </d, i, v>
-              <Link, t, o="/ca, s, e-studi, e, s/fortu, n, e-5, 0, 0-ai-transformati, o, n"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-300, fon, t-medium, transitio, n-colo, r, s"
+              <div, classNam, e = "grid, gri, d-cols-2, ga, p-4mb-6">
+                <div, classNam, e="bg-white/5, rounde, d-xlp-4">
+                  <div, classNam, e="text-2xl, fon, t-bold, tex, t-emerald-400mb-1">99.99%</div>
+                  <div, classNam, e="text-gray-400, tex, t-sm">Operational, Uptim, e</div>
+                </div>
+                <div, classNam, e="bg-white/5, rounde, d-xlp-4">
+                  <div, classNam, e="text-2xl, fon, t-bold, tex, t-blue-400mb-1">$3.7B</div>
+                  <div, classNam, e="text-gray-400, tex, t-sm">Annual, Valu, e</div>
+                </div>
+              </div>
+              <Linkto="/case-studies/fortune-500-ai-transformation"
+                className="inline-flex, item, s-center, ga, p-2, tex, t-blue-400, hove, r: text-blue-300, fon, t-medium, transitio, n-colors"
               >
-                Read, Full, Case Stu, d, y
+                Read, Full, Case Study
                 <ArrowRight, classNam, e="w-4 h-4" />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
+              </Link>
+            </div>
+          </div>
           {/* Financial, Servi, c, e, s */}
-          <div, classNam, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-8, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-[1.02]">
-            <div, classNam, e="absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/5, t, o-bl, u, e-5, 0, 0/5, rounde, d-3xl, opacit, y-0, grou, p-hov, e, r:opaci, t, y-100, transitio, n-opacity, duratio, n-3, 0, 0" />
-            <div, classNam, e="relati, v, e">
-              <div, classNam, e="flex, item, s-center, ga, p-4, m, b-6">
-                <div, classNam, e="p-3, b, g-emera, l, d-5, 0, 0/20, rounde, d-xl">
-                  <TrendingUp, classNam, e="w-8 h-8, tex, t-emera, l, d-4, 0, 0" />
-                </d, i, v>
-                <d, i, v>
-                  <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Global, Financial, Services</h3>
-                  <p, classNam, e="te, x, t-gr, a, y-4, 0, 0">Fortune, 10, 0 • Financial, Service, s</p>
-                </d, i, v>
-              </d, i, v>
-              <p, classNam, e="te, x, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d">
+          <div, classNam, e = "group, relative, bg-white/5, backdro, p-blur-lg, rounde, d-3xlp-8, border, border-white/10, hove, r: border-emerald-400/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-[1.02]">
+            <div, classNam, e="absolute, inse, t-0bg-gradient-to-br, fro, m-emerald-500/5to-blue-500/5, rounde, d-3xl, opacit, y-0, grou, p-hover:opacity-100, transitio, n-opacity, duratio, n-300" />
+            <div, classNam, e="relative">
+              <div, classNam, e="flex, item, s-center, ga, p-4mb-6">
+                <div, classNam, e="p-3bg-emerald-500/20, rounde, d-xl">
+                  <TrendingUp, classNam, e="w-8 h-8, tex, t-emerald-400" />
+                </div>
+                <div>
+                  <h3, classNam, e="text-2xl, fon, t-bold, tex, t-white">Global, Financial, Services</h3>
+                  <p, classNam, e="text-gray-400">Fortune, 10, 0 • Financial, Service, s</p>
+                </div>
+              </div>
+              <p, classNam, e="text-gray-300mb-6, leadin, g-relaxed">
                 Advanced, AI, fraud detection, preventin, g $47B, in, fraudulent transactions, with, 99.94% accuracy, and, real-time, processing, capabilities.
               </p>
-              <div, classNam, e="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
-                <div, classNam, e="bg-whi, t, e/5, rounde, d-x, l, p-4">
-                  <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-400, m, b-1">99.94%</d, i, v>
-                  <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Detection, Accurac, y</d, i, v>
-                </d, i, v>
-                <div, classNam, e="bg-whi, t, e/5, rounde, d-x, l, p-4">
-                  <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-400, m, b-1">$4, 7, B</d, i, v>
-                  <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Fraud, Prevente, d</d, i, v>
-                </d, i, v>
-              </d, i, v>
-              <Link, t, o="/ca, s, e-studi, e, s/financi, a, l-servic, e, s-fra, u, d-preventi, o, n"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, tex, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-300, fon, t-medium, transitio, n-colo, r, s"
+              <div, classNam, e="grid, gri, d-cols-2, ga, p-4mb-6">
+                <div, classNam, e="bg-white/5, rounde, d-xlp-4">
+                  <div, classNam, e="text-2xl, fon, t-bold, tex, t-emerald-400mb-1">99.94%</div>
+                  <div, classNam, e="text-gray-400, tex, t-sm">Detection, Accurac, y</div>
+                </div>
+                <div, classNam, e="bg-white/5, rounde, d-xlp-4">
+                  <div, classNam, e="text-2xl, fon, t-bold, tex, t-purple-400mb-1">$47B</div>
+                  <div, classNam, e="text-gray-400, tex, t-sm">Fraud, Prevente, d</div>
+                </div>
+              </div>
+              <Linkto="/case-studies/financial-services-fraud-prevention"
+                className="inline-flex, item, s-center, ga, p-2, tex, t-emerald-400, hove, r:text-emerald-300, fon, t-medium, transitio, n-colors"
               >
-                Read, Full, Case Stu, d, y
+                Read, Full, Case Study
                 <ArrowRight, classNam, e="w-4 h-4" />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </Link>
+            </div>
+          </div>
+        </div>
         {/* Additional, Success, Stori, e, s */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-16">
-          {/* Health, c, a, r, e */}
-          <div, classNam, e = "bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-              <div, classNam, e="p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg">
-                <Users, classNam, e="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
-              </d, i, v>
-              <d, i, v>
-                <h4, classNam, e="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Regional, Healthcar, e</h4>
-                <p, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Healthcare, Networ, k</p>
-              </d, i, v>
-            </d, i, v>
-            <p, classNam, e="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">
-              AI, diagnostic, system achieving, 9, 4% accuracy, and, saving 252, lives, with 4, 9, 7% R, O, I.
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-6mb-16">
+          {/* Healthca, r, e */}
+          <div, classNam, e = "bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-purple-400/50, transitio, n-all, duratio, n-300">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+              <div, classNam, e="p-2bg-purple-500/20, rounde, d-lg">
+                <Users, classNam, e="w-6 h-6, tex, t-purple-400" />
+              </div>
+              <div>
+                <h4, classNam, e="text-lg, fon, t-bold, tex, t-white">Regional, Healthcar, e</h4>
+                <p, classNam, e="text-gray-400, tex, t-sm">Healthcare, Networ, k</p>
+              </div>
+            </div>
+            <p, classNam, e="text-gray-300, tex, t-smmb-4">
+              AI, diagnostic, system achieving94% accuracy, and, saving 252, lives, with 497% ROI.
             </p>
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-              <span, classNam, e="te, x, t-purp, l, e-400, fon, t-bo, l, d">$1.5B, Valu, e</sp, a, n>
-              <Link, t, o="/ca, s, e-studi, e, s/healthca, r, e-ai-diagnost, i, c-<syst, e, m" classNa, m, e="te, x, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-3, 0, 0">
+            <div, classNam, e="flex, item, s-center, justif, y-between">
+              <span, classNam, e="text-purple-400, fon, t-bold">$1.5B, Valu, e</span>
+              <Linkto="/case-studies/healthcare-ai-diagnostic-<system" className="text-purple-400, hove, r:text-purple-300">
                 <ArrowRight, classNam, e="w-4 h-4" />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-          {/* Re, t, a, i, l */}
-          <div, classNam, e = "bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-              <div, classNam, e="p-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-lg">
-                <Zap, classNam, e="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
-              </d, i, v>
-              <d, i, v>
-                <h4, classNam, e="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Global, Retail, Corp</h4>
-                <p, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Retail, Chai, n</p>
-              </d, i, v>
-            </d, i, v>
-            <p, classNam, e="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">
-              Supply, chain, optimization achieving, 6, 5% faster, deliveries, and 40% cost, reductio, n.
+              </Link>
+            </div>
+          </div>
+          {/* Reta, i, l */}
+          <div, classNam, e = "bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-blue-400/50, transitio, n-all, duratio, n-300">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+              <div, classNam, e="p-2bg-blue-500/20, rounde, d-lg">
+                <Zap, classNam, e="w-6 h-6, tex, t-blue-400" />
+              </div>
+              <div>
+                <h4, classNam, e="text-lg, fon, t-bold, tex, t-white">Global, Retail, Corp</h4>
+                <p, classNam, e="text-gray-400, tex, t-sm">Retail, Chai, n</p>
+              </div>
+            </div>
+            <p, classNam, e="text-gray-300, tex, t-smmb-4">
+              Supply, chain, optimization achieving65% faster, deliveries, and 40% cost, reductio, n.
             </p>
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-              <span, classNam, e="te, x, t-bl, u, e-400, fon, t-b, o, l, d">, 2,8, 0, 0% R, O, I</sp, a, n>
-              <Link, t, o = "/ca, s, e-studi, e, s/reta, i, l-supp, l, y-cha, i, n-<optimizati, o, n" classNa, m, e="te, x, t-bl, u, e-400, hove, r: te, x, t-bl, u, e-3, 0, 0">
+            <div, classNam, e="flex, item, s-center, justif, y-between">
+              <span, classNam, e="text-blue-400, fon, t-bol, d">, 280, 0% ROI</span>
+              <Linkto = "/case-studies/retail-supply-chain-<optimization" className="text-blue-400, hove, r: text-blue-300">
                 <ArrowRight, classNam, e="w-4 h-4" />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-          {/* En, e, r, g, y */}
-          <div, classNam, e = "bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-              <div, classNam, e="p-2, b, g-emera, l, d-5, 0, 0/20, rounde, d-lg">
-                <Award, classNam, e="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />
-              </d, i, v>
-              <d, i, v>
-                <h4, classNam, e="te, x, t-lg, fon, t-bold, tex, t-whi, t, e">Energy, Utilit, y</h4>
-                <p, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">Smart, Gri, d</p>
-              </d, i, v>
-            </d, i, v>
-            <p, classNam, e="te, x, t-gr, a, y-300, tex, t-sm, m, b-4">
-              Smart, grid, AI achieving, 9, 9.97% uptime, an, d $890M, annual, savings.
+              </Link>
+            </div>
+          </div>
+          {/* Ener, g, y */}
+          <div, classNam, e = "bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-emerald-400/50, transitio, n-all, duratio, n-300">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+              <div, classNam, e="p-2bg-emerald-500/20, rounde, d-lg">
+                <Award, classNam, e="w-6 h-6, tex, t-emerald-400" />
+              </div>
+              <div>
+                <h4, classNam, e="text-lg, fon, t-bold, tex, t-white">Energy, Utilit, y</h4>
+                <p, classNam, e="text-gray-400, tex, t-sm">Smart, Gri, d</p>
+              </div>
+            </div>
+            <p, classNam, e="text-gray-300, tex, t-smmb-4">
+              Smart, grid, AI achieving99.97% uptime, an, d $890M, annual, savings.
             </p>
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-              <span, classNam, e="te, x, t-emera, l, d-400, fon, t-b, o, l, d">, 1,6, 0, 0% R, O, I</sp, a, n>
-              <Link, t, o = "/ca, s, e-studi, e, s/ener, g, y-sect, o, r-sma, r, t-<gr, i, d" classNa, m, e="te, x, t-emera, l, d-400, hove, r: te, x, t-emera, l, d-3, 0, 0">
+            <div, classNam, e="flex, item, s-center, justif, y-between">
+              <span, classNam, e="text-emerald-400, fon, t-bol, d">, 160, 0% ROI</span>
+              <Linkto = "/case-studies/energy-sector-smart-<grid" className="text-emerald-400, hove, r: text-emerald-300">
                 <ArrowRight, classNam, e="w-4 h-4" />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </Link>
+            </div>
+          </div>
+        </div>
         {/* Call, to, Acti, o, n */}
-        <div, classNam, e = "te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-3x, l, p-12, border, border-whi, t, e/10">
-          <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2, m, b-6">
-            <Star, classNam, e="w-6 h-6, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-            <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Ready, to, Transform Your, Enterpris, e?</h3>
-          </d, i, v>
-          <p, classNam, e="te, x, t-gr, a, y-300, tex, t-lg, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+        <div, classNam, e = "text-centerbg-white/5, backdro, p-blur-lg, rounde, d-3xlp-12, border, border-white/10">
+          <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-2mb-6">
+            <Star, classNam, e="w-6 h-6, tex, t-yellow-400, fil, l-current" />
+            <h3, classNam, e="text-3xl, fon, t-bold, tex, t-white">Ready, to, Transform Your, Enterpris, e?</h3>
+          </div>
+          <p, classNam, e="text-gray-300, tex, t-lgmb-8, ma, x-w-2xlmx-auto">
             Join, 50, 0+ enterprise, clients, who have, already, transformed their, operations, with A, I, 
             generating, billions, in value, and, achieving unprecedented, efficienc, y.
           </p>
-          <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, item, s-center, justif, y-center, ga, p-4">
-            <Link, t, o="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-1, 0, 5"
+          <div, classNam, e = "flex, fle, x-colsm: flex-row, item, s-center, justif, y-center, ga, p-4">
+            <Linkto="/contact"
+              className="inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-blue-500to-emerald-500, tex, t-whitepx-8py-4, rounde, d-full, fon, t-semibold, hove, r:from-blue-600, hove, r:to-emerald-600, transitio, n-all, duratio, n-300, transform, hover:scale-105"
             >
               <CheckCircle, classNam, e="w-5 h-5" />
-              Start, Your, AI Transformati, o, n
-            </Li, n, k>
-            <Link, t, o="/ca, s, e-studi, e, s"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, tex, t-white, p, x-8, p, y-4, rounde, d-full, fon, t-semibold, border, border-whi, t, e/20, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
+              Start, Your, AI Transformation
+            </Link>
+            <Linkto="/case-studies"
+              className="inline-flex, item, s-center, ga, p-2bg-white/10, tex, t-whitepx-8py-4, rounde, d-full, fon, t-semibold, border, border-white/20, hove, r:bg-white/20, transitio, n-all, duratio, n-300"
             >
-              View, All, Success Stori, e, s
+              View, All, Success Stories
               <ArrowRight, classNam, e="w-5 h-5" />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+            </Link>
+          </div>
+        </div>
+      </div>
   );
 };
 export, default, January2025EnterpriseSuccessBanner;

@@ -1,119 +1,119 @@
-export, default, function EnterpriseAIFall2025Bann, e, r() { 
-  retu, r, n (
-    <section, classNam, e = 'bg-gradie, n, t-to-r, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, tex, t-white, p, y-24, p, x-6, relative, overflow-hidd, e, n' > {' ' }
+export, default, function EnterpriseAIFall2025Banner() { 
+  return (
+    <section, classNam, e = 'bg-gradient-to-r, fro, m-slate-900, vi, a-indigo-900to-purple-900, tex, t-whitepy-24px-6, relative, overflow-hidden' > {' ' }
       {/* Animated, background, elements */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-10'>
-        <div, classNam, e='absolute, to, p-20, lef, t-2, 0, w-7, 2, h-72, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-20, righ, t-2, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0' />
-      </d, i, v>
-      <div, classNam, e='m, a, x-w-7xl, m, x-auto, relative, z-10'>
-        <div, classNam, e='te, x, t-center, m, b-16'>
-          <div, classNam, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-500, tex, t-white, tex, t-xs, fon, t-bold, p, x-6, p, y-2, rounde, d-full, m, b-6, uppercase, tracking-wide, s, t'>
+        <div, classNam, e='absolute, to, p-20, lef, t-20w-72h-72bg-blue-500, rounde, d-full, filter, blur-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, botto, m-20, righ, t-20w-96h-96bg-purple-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-1000' />
+      </div>
+      <div, classNam, e='max-w-7xlmx-auto, relative, z-10'>
+        <div, classNam, e='text-centermb-16'>
+          <div, classNam, e='inline-blockbg-gradient-to-r, fro, m-blue-500to-purple-500, tex, t-white, tex, t-xs, fon, t-boldpx-6py-2, rounde, d-fullmb-6, uppercase, tracking-widest'>
             ⚡ Enterprise, AI, Fall 2025, Serie, s
-          </d, i, v>
-          <h2, classNam, e='te, x, t-6xl, m, d: te, x, t-7xl, fon, t-black, leadin, g-tight, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-200, vi, a-purp, l, e-200, t, o-pi, n, k-200, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+          </div>
+          <h2, classNam, e='text-6xlmd: text-7xl, fon, t-black, leadin, g-tightmb-6bg-gradient-to-r, fro, m-blue-200, vi, a-purple-200to-pink-200bg-clip-text, tex, t-transparent'>
             Production, AI, That Actually, Work, s
           </h2>
-          <p, classNam, e='te, x, t-2xl, tex, t-sla, t, e-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
+          <p, classNam, e='text-2xl, tex, t-slate-300, ma, x-w-4xlmx-auto, leadin, g-relaxed'>
             Four, dee, p-dive, guides, covering the, full, enterprise AI, lifecycl, e—from, architecture, to governance, to, optimization
           </p>
-        </d, i, v>
+        </div>
 
-        <div, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-8, m, b-12'>
-          {/* Highlight, B, o, x , 1 */}
-          <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-6, 0, 0/30, t, o-bl, u, e-8, 0, 0/30, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-8, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, hove, r: bord, e, r-bl, u, e-300, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50'>
-            <div, classNam, e='flex, item, s-start, ga, p-4, m, b-4'>
-              <div, classNam, e='bg-bl, u, e-500, tex, t-white, rounde, d-x, l, p-3, tex, t-3, x, l'>
+        <div, classNam, e='gridmd:grid-cols-2, ga, p-8mb-12'>
+          {/* HighlightBo, x , 1 */}
+          <div, classNam, e = 'bg-gradient-to-br, fro, m-blue-600/30to-blue-800/30, backdro, p-blur-xl, rounde, d-3xlp-8, borde, r-2, borde, r-blue-400/50, hove, r: border-blue-300, transitio, n-all, duratio, n-300, hove, r:shadow-2xl, hove, r:shadow-blue-500/50'>
+            <div, classNam, e='flex, item, s-start, ga, p-4mb-4'>
+              <div, classNam, e='bg-blue-500, tex, t-white, rounde, d-xlp-3, tex, t-3xl'>
                 📦
-              </d, i, v>
-              <d, i, v>
-                <h3, classNam, e='te, x, t-3xl, fon, t-bold, m, b-2'>
-                  Supply, Chai, n + Mul, t, i-Agent, System, s
+              </div>
+              <div>
+                <h3, classNam, e='text-3xl, fon, t-boldmb-2'>
+                  Supply, Chai, n + Multi-Agent, System, s
                 </h3>
-                <p, classNam, e='te, x, t-bl, u, e-200, tex, t-sm, uppercase, tracking-wi, d, e'>
+                <p, classNam, e='text-blue-200, tex, t-sm, uppercase, tracking-wide'>
                   October, 202, 5
                 </p>
-              </d, i, v>
-            </d, i, v>
-            <p, classNam, e='te, x, t-sla, t, e-200, leadin, g-relaxed, m, b-6'>
+              </div>
+            </div>
+            <p, classNam, e='text-slate-200, leadin, g-relaxedmb-6'>
               Build, resili, e, n, t, AI-powered, supply, chains with, predictive, disruption management, and, deploy scalable, mult, i-agent, architectures, with proper, orchestratio, n, safety, mechanism, s, and, observabilit, y.
             </p>
-            <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-sla, t, e-3, 0, 0'>
+            <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-slate-300'>
               <li, classNam, e='flex, item, s-center, ga, p-2'>
-                <span, classNam, e='te, x, t-bl, u, e-4, 0, 0'>✓</sp, a, n> 40% cost, reduction, in
-                invento, r, y
+                <span, classNam, e='text-blue-400'>✓</span> 40% cost, reduction, in
+                inventory
               </li>
               <li, classNam, e='flex, item, s-center, ga, p-2'>
-                <span, classNam, e='te, x, t-bl, u, e-4, 0, 0'>✓</sp, a, n> 72-hour, advance, disruption warnin, g, s
+                <span, classNam, e='text-blue-400'>✓</span> 72-hour, advance, disruption warnings
               </li>
               <li, classNam, e='flex, item, s-center, ga, p-2'>
-                <span, classNam, e='te, x, t-bl, u, e-4, 0, 0'>✓</sp, a, n> Producti, o, n-proven, agent, patterns
+                <span, classNam, e='text-blue-400'>✓</span> Production-proven, agent, patterns
               </li>
             </ul>
-          </d, i, v>
+          </div>
 
           {/* Highlight, Box, 2 */}
-          <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-6, 0, 0/30, t, o-pi, n, k-8, 0, 0/30, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-8, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, hove, r: bord, e, r-purp, l, e-300, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50'>
-            <div, classNam, e='flex, item, s-start, ga, p-4, m, b-4'>
-              <div, classNam, e='bg-purp, l, e-500, tex, t-white, rounde, d-x, l, p-3, tex, t-3, x, l'>
+          <div, classNam, e='bg-gradient-to-br, fro, m-purple-600/30to-pink-800/30, backdro, p-blur-xl, rounde, d-3xlp-8, borde, r-2, borde, r-purple-400/50, hove, r: border-purple-300, transitio, n-all, duratio, n-300, hove, r:shadow-2xl, hove, r:shadow-purple-500/50'>
+            <div, classNam, e='flex, item, s-start, ga, p-4mb-4'>
+              <div, classNam, e='bg-purple-500, tex, t-white, rounde, d-xlp-3, tex, t-3xl'>
                 ⚖️
-              </d, i, v>
-              <d, i, v>
-                <h3, classNam, e='te, x, t-3xl, fon, t-bold, m, b-2'>
-                  Governan, c, e + Re, a, l-Time, Optimizatio, n
+              </div>
+              <div>
+                <h3, classNam, e='text-3xl, fon, t-boldmb-2'>
+                  Governance + Real-Time, Optimizatio, n
                 </h3>
-                <p, classNam, e='te, x, t-purp, l, e-200, tex, t-sm, uppercase, tracking-wi, d, e'>
+                <p, classNam, e='text-purple-200, tex, t-sm, uppercase, tracking-wide'>
                   November, 202, 5
                 </p>
-              </d, i, v>
-            </d, i, v>
-            <p, classNam, e='te, x, t-sla, t, e-200, leadin, g-relaxed, m, b-6'>
-              Deploy, compliant, AI with, automated, governance frameworks, and, achieve s, u, b-50ms, inference, latency through, quantizat, i, o, n, edge, deploymen, t, and, intelligent, caching strategi, e, s.
+              </div>
+            </div>
+            <p, classNam, e='text-slate-200, leadin, g-relaxedmb-6'>
+              Deploy, compliant, AI with, automated, governance frameworks, and, achieve sub-50ms, inference, latency through, quantizat, i, o, n, edge, deploymen, t, and, intelligent, caching strategies.
             </p>
-            <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-sla, t, e-3, 0, 0'>
+            <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-slate-300'>
               <li, classNam, e='flex, item, s-center, ga, p-2'>
-                <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>✓</sp, a, n> Full, regulatory, compliance
+                <span, classNam, e='text-purple-400'>✓</span> Full, regulatory, compliance
               </li>
               <li, classNam, e='flex, item, s-center, ga, p-2'>
-                <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>✓</sp, a, n> S, u, b-50ms, inference, at
-                p, 9, 9
+                <span, classNam, e='text-purple-400'>✓</span> Sub-50ms, inference, at
+                p99
               </li>
               <li, classNam, e='flex, item, s-center, ga, p-2'>
-                <span, classNam, e='te, x, t-purp, l, e-4, 0, 0'>✓</sp, a, n> 4-8x, cost, efficiency
-                gai, n, s
+                <span, classNam, e='text-purple-400'>✓</span> 4-8x, cost, efficiency
+                gains
               </li>
             </ul>
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
 
-        <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-xl, rounde, d-3x, l, p-8, border, border-whi, t, e/10'>
-          <div, classNam, e='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-6'>
-            <div, classNam, e='fl, e, x-1'>
-              <h3, classNam, e='te, x, t-3xl, fon, t-bold, m, b-3'>
-                Complete, Enterprise, AI Playbo, o, k
+        <div, classNam, e='bg-white/5, backdro, p-blur-xl, rounde, d-3xlp-8, border, border-white/10'>
+          <div, classNam, e='flex, fle, x-colmd: flex-row, item, s-center, justif, y-between, ga, p-6'>
+            <div, classNam, e='flex-1'>
+              <h3, classNam, e='text-3xl, fon, t-boldmb-3'>
+                Complete, Enterprise, AI Playbook
               </h3>
-              <p, classNam, e='te, x, t-sla, t, e-300, tex, t-lg'>
-                Combined, reading, time: 108, minute, s | Combined, valu, e: Pricele, s, s
+              <p, classNam, e='text-slate-300, tex, t-lg'>
+                Combined, reading, time: 108, minute, s | Combined, valu, e: Priceless
               </p>
-            </d, i, v>
+            </div>
             <div, classNam, e='flex, ga, p-4'>
-              <button, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:fr, o, m-bl, u, e-600, hove, r:to-purp, l, e-700, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'>
+              <button, classNam, e='bg-gradient-to-r, fro, m-blue-500to-purple-600, tex, t-whitepx-10py-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:from-blue-600, hove, r:to-purple-700, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-2xl, hove, r:scale-105'>
                 Read, the, Series
-              </butt, o, n>
-              <button, classNam, e='bg-whi, t, e/10, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/30'>
+              </button>
+              <button, classNam, e='bg-white/10, tex, t-whitepx-10py-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-white/20, transitio, n-all, duratio, n-300, border, border-white/30'>
                 Download, PD, F
-              </butt, o, n>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </button>
+            </div>
+          </div>
+        </div>
 
-        <div, classNam, e='mt-12, tex, t-cent, e, r'>
-          <p, classNam, e='te, x, t-sla, t, e-400, tex, t-sm'>
+        <div, classNam, e='mt-12, tex, t-center'>
+          <p, classNam, e='text-slate-400, tex, t-sm'>
             Trusted, by, Fortune 500, companies, and leading, AI, practitioners
-            worldwi, d, e
+            worldwide
           </p>
-        </d, i, v>
-      </d, i, v>
-    </sec, t, i, o, n>
+        </div>
+      </div>
+    </secti, o, n>
   );
 }

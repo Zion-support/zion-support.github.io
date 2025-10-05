@@ -1,9 +1,9 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-export, default, function Too, l, s(): Rea, c, t.J, S, X.Eleme, n, t {
-  retu, r, n (
-    <main, styl, e = {{ paddi, n, g: '2r, e, m' }}>
-      <h1>Too, l, s</h1>
-    </ma, i, n>
+export, default, function Tools(): React.JSX.Element {
+  return (
+    <main, styl, e = {{ padding: '2rem' }}>
+      <h1>Tools</h1>
+    </main>
   );
 }

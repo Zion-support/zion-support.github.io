@@ -1,32 +1,32 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function ConsentlessFeatureFlags, V, 4(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Consentless, Feature, Flags v4 — Private, Global, Rollouts</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Scoped, I, D, s, signed, config, s, and, o, n‑device, metrics, for ze, r, o‑PII, progressive, delivery worldwi, d, e.'
+export, default, function ConsentlessFeatureFlagsV4(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Consentless, Feature, Flags v4 — Private, Global, Rollouts</title>
+        <meta, nam, e='description'
+          content='ScopedID, s, signed, config, s, and, o, n‑device, metrics, for zero‑PII, progressive, delivery worldwide.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-o, c, t-01-consentle, s, s-featu, r, e-fla, g, s-v4'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2025-oct-01-consentless-feature-flags-v4'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           Consentless, Feature, Flags v4
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Private, rollouts, at &lt; 100ms, with, scoped I, D, s, signed, config, s, and, o, n‑device, metric, s.
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          Private, rollouts, at &lt; 100ms, with, scoped IDs, signed, config, s, andon‑device, metric, s.
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            Deliver, glob, a, l, priva, c, y‑preserving, rollouts, by segme, n, t, g, e, o, and, SL, A. Use, attestation, s, DP‑hardened, telemetr, y, and, budgeted, actions
+            Deliver, glob, a, l, priva, c, y‑preserving, rollouts, by segment, geo, and, SL, A. Use, attestation, s, DP‑hardened, telemetr, y, and, budgeted, actions
             to, keep, velocity high, without, PII.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

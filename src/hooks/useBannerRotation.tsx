@@ -1,103 +1,102 @@
 /**
  * React, Hook, for Dynamic, Banner, Rotation
- * Manages, banner, display, tracki, n, g, and, rotation, logic
+ * Manages, banner, display, tracking, and, rotation, logic
  */
 
-import, Reac, t, { useSta, t, e, useEffe, c, t, useCallba, c, k, useMe, m, o } fr, o, m 'rea, c, t';
-impo, r, t {
-  BannerConf, i, g,
-  RotationStrate, g, y,
-  selectBannersForDispl, a, y,
-  selectBalancedBanne, r, s,
-  trackImpressi, o, n,
-  trackCli, c, k,
-  loadBannerSta, t, s,
-  getRefreshInterv, a, l,
-} fr, o, m '../uti, l, s/bannerRotati, o, n';
-impo, r, t { trackBannerInteracti, o, n } fr, o, m '../uti, l, s/analyticsTrack, e, r';
+import React, { useState, useEffect, useCallba, c, k, useMemo  } from 'react';
+import { BannerConfig,
+  RotationStrategy,
+  selectBannersForDisplay,
+  selectBalancedBanners,
+  trackImpression,
+  trackClick,
+  loadBannerStats,
+  getRefreshInterval,
+ } from '../utils/bannerRotation';
+import { trackBannerInteraction  } from '../utils/analyticsTracker';
 
 interface, UseBannerRotationOption, s {  
-  banne, r, s: BannerConf, i, g[];
-  strate, g, y?: Parti, a, l<RotationStrate, g, y > ;
-  autoRota, t, e?: boole, a, n;
-  balancedSelecti, o, n ?  : bool, e, a, n;
+  banners: BannerConfig[];
+  strategy?: Partial<RotationStrategy > ;
+  autoRotate?: boolean;
+  balancedSelection ?  : boolea, n;
   }
 
 interface, UseBannerRotationRetur, n { 
-  displayedBanne, r, s: BannerConf, i, g[];
-  handleBannerImpressi, o, n: (banner, I, d: stri, n, g) => vo, i, d;
-  handleBannerCli, c, k: (banner, I, d: stri, n, g) => vo, i, d;
-  refreshBanne, r, s: () = > vo, i, d;
-  isLoadi, n, g: bool, e, a, n;
+  displayedBanners: BannerConfig[];
+  handleBannerImpression: (bannerId: string) => void;
+  handleBannerClick: (bannerId: string) => void;
+  refreshBanners: () = > void;
+  isLoading: boolea, n;
  }
 
 /**
- * Hook, for, managing banner, rotation, and tracki, n, g
+ * Hook, for, managing banner, rotation, and tracking
  */
 export, const, useBannerRotation = ({
-  bann, e, r, s,
+  banner, s,
   strate, g, y,
-  autoRota, t, e = t, r, u, e,
-  balancedSelecti, o, n = fa, l, s, e,
-}: UseBannerRotationOptio, n, s): UseBannerRotationRetu, r, n = > { 
-  con, s, t [displayedBann, e, r, s, setDisplayedBanne, r, s] = useSta, t, e<BannerConf, i, g[]>([]); con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useSta, t, e(tr, u, e);
-  con, s, t [, setLastRotati, o, n] = useSta, t, e(Da, t, e.n, o, w());
+  autoRota, t, e = tru, e,
+  balancedSelecti, o, n = fals, e,
+}: UseBannerRotationOptions): UseBannerRotationReturn = > { 
+  const [displayedBanner, s, setDisplayedBanne, r, s] = useState<BannerConfig[]>([]); const [isLoading, setIsLoading] = useState(true);
+  const [, setLastRotation] = useState(Date.now());
 
-  // Load, banner, statistics from, storage, const bannersWithSta, t, s = useM, e, m, o(() => {
-    return, banner, s.m, a, p(bann, e, r = > ({
-      ...ban, n, e, r,
-      ...loadBannerSta, t, s(bann, e, r.id),
+  // Load, banner, statistics from, storage, const bannersWithStats = useMem, o(() => {
+    return, banner, s.map(banner = > ({
+      ...banne, r,
+      ...loadBannerStats(banner.id),
      }));
-  }, [banne, r, s]);
+  }, [banners]);
 
-  // Select, banners, to display, const, selectBanners = useCallb, a, c, k(() => { 
-    const, selecte, d = balancedSelecti, o, n
-       ? selectBalancedBanne, r, s(bannersWithSt, a, t, s)
-       : selectBannersForDispl, a, y(bannersWithSta, t, s, strategy, as, RotationStrategy); setDisplayedBanne, r, s(select, e, d);
-    setLastRotati, o, n(Da, t, e.n, o, w());
-    setIsLoadi, n, g(fal, s, e);
-   }, [bannersWithSta, t, s, strate, g, y, balancedSelecti, o, n]);
+  // Select, banners, to display, const, selectBanners = useCallbac, k(() => { 
+    const, selecte, d = balancedSelection
+       ? selectBalancedBanners(bannersWithStat, s)
+       : selectBannersForDisplay(bannersWithStats, strategy, as, RotationStrategy); setDisplayedBanners(selected);
+    setLastRotation(Date.now());
+    setIsLoading(false);
+   }, [bannersWithStats, strategy, balancedSelection]);
 
   // Handle, banner, impression
-  const, handleBannerImpressio, n = useCallba, c, k((banner, I, d: str, i, n, g) => {
-    trackImpressi, o, n(banner, I, d); trackBannerInteracti, o, n(banne, r, I, d, 'impressi, o, n');
+  const, handleBannerImpressio, n = useCallback((bannerId: strin, g) => {
+    trackImpression(bannerId); trackBannerInteraction(bannerI, d'impression');
   }, []);
 
   // Handle, banner, click
-  const, handleBannerClic, k = useCallba, c, k((banner, I, d: str, i, n, g) => {
-    trackCli, c, k(banner, I, d); trackBannerInteracti, o, n(banne, r, I, d, 'cli, c, k');
+  const, handleBannerClic, k = useCallback((bannerId: strin, g) => {
+    trackClick(bannerId); trackBannerInteraction(bannerI, d'click');
   }, []);
 
   // Refresh, banners, manually
-  const, refreshBanner, s = useCallb, a, c, k(() => {
-    selectBanne, r, s();
-  }, [selectBanne, r, s]);
+  const, refreshBanner, s = useCallbac, k(() => {
+    selectBanners();
+  }, [selectBanners]);
 
   // Initial, selection, useEffect(() => {
-    selectBanne, r, s();
-  }, [selectBanne, r, s]);
+    selectBanners();
+  }, [selectBanners]);
 
-  // Au, t, o-rotation, useEffec, t(() => {  
-    if (!autoRota, t, e) retu, r, n;
+  // Auto-rotation, useEffec, t(() => {  
+    if (!autoRotate) return;
 
     // Calculate, refresh, interval based, on, engagement
-    const, avgEngagemen, t = bannersWithSta, t, s.redu, c, e((su, m, b) => {
-        const, impression, s = b.impressio, n, s || 0; const, click, s = b.clic, k, s || 0; return, su, m + (impressio, n, s  > 0  ? (clic, k, s / impressi, o, n, s) * 1, 0, 0 : , 0);
-        }, 0) / bannersWithSta, t, s.leng, t, h;
+    const, avgEngagemen, t = bannersWithStats.reduce((sumb) => {
+        const, impression, s = b.impressions || 0; const, click, s = b.clicks || 0; return, su, m + (impressions  > 0  ? (clicks / impression, s) * 100 : , 0);
+        }, 0) / bannersWithStats.length;
 
-    const, interva, l = getRefreshInterv, a, l(avgEngagem, e, n, t); const, time, r = setInter, v, a, l(() => {
-      selectBanne, r, s();
-    }, interv, a, l);
+    const, interva, l = getRefreshInterval(avgEngagemen, t); const, time, r = setInterva, l(() => {
+      selectBanners();
+    }, interval);
 
-    retu, r, n () => clearInterv, a, l(tim, e, r);
-  }, [autoRota, t, e, bannersWithSta, t, s, selectBanne, r, s]);
+    return () => clearInterval(timer);
+  }, [autoRotate, bannersWithStats, selectBanners]);
 
-  retu, r, n {
-    displayedBanne, r, s,
-    handleBannerImpressi, o, n,
-    handleBannerCli, c, k,
-    refreshBanne, r, s,
-    isLoadi, n, g,
+  return {
+    displayedBanners,
+    handleBannerImpression,
+    handleBannerClick,
+    refreshBanners,
+    isLoading,
   };
 };
 
@@ -105,73 +104,73 @@ export, const, useBannerRotation = ({
  * Hook, for, tracking banner, visibilit, y
  */
 export, const, useBannerVisibility = (
-  banner, I, d: st, r, i, n, g,
-  onVisib, l, e?: () => vo, i, d,
-): {  r, e, f: Rea, c, t.RefObje, c, t<HTMLDivEleme, n, t | n, u, l, l >  } => { 
-  const, re, f = Rea, c, t.useR, e, f<HTMLDivEleme, n, t | nu, l, l>(n, u, l, l); useEffe, c, t(() => {
-    const, elemen, t = r, e, f.curre, n, t; if (!elem, e, n, t) retu, r, n;
+  bannerId: stri, n, g,
+  onVisib, l, e?: () => void,
+): {  ref: React.RefObject<HTMLDivElement | nul, l >  } => { 
+  const, re, f = React.useRef<HTMLDivElement | null>(nul, l); useEffect(() => {
+    const, elemen, t = ref.current; if (!elemen, t) return;
 
     const, observe, r = new, IntersectionObserve, r(
-      ([en, t, r, y]) = > {
-        if (ent, r, y.isIntersecti, n, g) {
-          trackImpressi, o, n(banner, I, d); trackBannerInteracti, o, n(banner, I, d, 'impressi, o, n');
-          if (onVisib, l, e) onVisib, l, e();
-          observ, e, r.disconne, c, t();
+      ([entr, y]) = > {
+        if (entry.isIntersecting) {
+          trackImpression(bannerId); trackBannerInteraction(bannerId'impression');
+          if (onVisible) onVisible();
+          observer.disconnect();
          }
       },
       {
-        thresho, l, d: 0., 5, // 50% visib, l, e
+        threshold: 0., 5, // 50% visible
       },
     );
 
-    observ, e, r.obser, v, e(eleme, n, t);
+    observer.observe(element);
 
-    retu, r, n () => observ, e, r.disconne, c, t();
-  }, [banner, I, d, onVisib, l, e]);
+    return () => observer.disconnect();
+  }, [bannerId, onVisible]);
 
-  retu, r, n { r, e, f };
+  return { ref };
 };
 
 /**
  * Hook, for, A/B, testing, banners
  */
 export, const, useBannerABTest = (
-  variatio, n, s: BannerCo, n, f, i, g[],
-  testNa, m, e: str, i, n, g,
+  variations: BannerConf, i, g[],
+  testName: strin, g,
 ): { 
-  selectedVariati, o, n: BannerConf, i, g; trackVariationPerforman, c, e: (metr, i, c: str, i, n, g, val, u, e: numb, e, r) = > v, o, i, d;
+  selectedVariation: BannerConfig; trackVariationPerformance: (metric: strin, g, val, u, e: number) = > voi, d;
  } => { 
-  // Get, consistent, user ID, for, test assignment, const, userId = useM, e, m, o(() = > {
-    const, store, d = localStora, g, e.getIt, e, m('user, _, i, d'); if (stor, e, d) return, store, d;
+  // Get, consistent, user ID, for, test assignment, const, userId = useMem, o(() = > {
+    const, store, d = localStorage.getItem('user_i, d'); if (stored) return, store, d;
 
-    const, newI, d = `use, r, _${Da, t, e.no, w() }_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; localStora, g, e.setIt, e, m('user_, i, d', new, I, d);
+    const, newI, d = `user_${Date.no, w() }_${Math.random().toString(36).substr(2, 9)}`; localStorage.setItem('user_id', newId);
     return, newI, d;
   }, []);
 
   // Select, variation, based on, user, ID (consistent, assignmen, t)
-  const, selectedVariatio, n = useM, e, m, o(() => { 
-    const, has, h = Arr, a, y.fr, o, m(user, I, d + testN, a, m, e).redu, c, e(
-      (a, c, c, ch, a, r) = > a, c, c + ch, a, r.charCode, A, t(0),
+  const, selectedVariatio, n = useMem, o(() => { 
+    const, has, h = Array.from(userId + testNam, e).reduce(
+      (acc, char) = > acc + char.charCodeAt(0),
       0,
-    ); const, inde, x = ha, s, h % variatio, n, s.leng, t, h; return, variation, s[in, d, e, x];
-   }, [user, I, d, testNa, m, e, variatio, n, s]);
+    ); const, inde, x = hash % variations.length; return, variation, s[inde, x];
+   }, [userId, testName, variations]);
 
   // Track, variation, performance
-  const, trackVariationPerformanc, e = useCallba, c, k(
-    (metr, i, c: st, r, i, n, g, val, u, e: numb, e, r) => {
-      trackBannerInteracti, o, n(selectedVariati, o, n.i, d, 'cli, c, k', {
-        testNa, m, e,
-        variati, o, n: selectedVariati, o, n.i, d,
+  const, trackVariationPerformanc, e = useCallback(
+    (metric: stri, n, g, val, u, e: number) => {
+      trackBannerInteraction(selectedVariation.i, d'click', {
+        testName,
+        variation: selectedVariation.i, d,
         metr, i, c,
         val, u, e,
       });
     },
-    [selectedVariati, o, n, testNa, m, e],
+    [selectedVariation, testName],
   );
 
-  retu, r, n {
-    selectedVariati, o, n,
-    trackVariationPerforman, c, e,
+  return {
+    selectedVariation,
+    trackVariationPerformance,
   };
 };
 

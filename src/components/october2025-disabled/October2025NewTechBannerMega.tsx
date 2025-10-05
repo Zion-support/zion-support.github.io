@@ -1,199 +1,199 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 const, October2025NewTechBannerMeg, a = () => { 
-  retu, r, n (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-indi, g, o-900, t, o-bl, u, e-900, p, y-16, p, x-6, m, y-12, rounde, d-2xl, shado, w-2, x, l' > {' ' }
+  return (
+    <div, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-br, fro, m-purple-900, vi, a-indigo-900to-blue-900py-16px-6my-12, rounde, d-2xl, shado, w-2xl' > {' ' }
       {/* Animated, Background, Effects */}
-      <div, classNam, e='absolute, inse, t-0, overflo, w-hidd, e, n'>
-        <div, classNam, e='absolut, e, w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -t, o, p-48 -le, f, t-48, animat, e-pul, s, e' />
-        <div, classNam, e='absolut, e, w-9, 6, h-96, b, g-bl, u, e-5, 0, 0/30, rounde, d-full, blu, r-3, x, l -bott, o, m-48 -rig, h, t-48, animat, e-pulse, dela, y-10, 0, 0' />
-      </d, i, v>
-      <div, classNam, e='relative, ma, x-w-7xl, m, x-au, t, o'>
-        {/* Head, e, r */}
-        <div, classNam, e='te, x, t-center, m, b-12'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-4, 0, 0/20, tex, t-yell, o, w-300, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, m, b-4, animat, e-pul, s, e'>
+      <div, classNam, e='absolute, inse, t-0, overflo, w-hidden'>
+        <div, classNam, e='absolutew-96h-96bg-purple-500/30, rounde, d-full, blu, r-3xl -top-48 -left-48, animat, e-pulse' />
+        <div, classNam, e='absolutew-96h-96bg-blue-500/30, rounde, d-full, blu, r-3xl -bottom-48 -right-48, animat, e-pulse, dela, y-1000' />
+      </div>
+      <div, classNam, e='relative, ma, x-w-7xlmx-auto'>
+        {/* Header */}
+        <div, classNam, e='text-centermb-12'>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-2bg-yellow-400/20, tex, t-yellow-300px-4py-2, rounde, d-full, tex, t-sm, fon, t-semiboldmb-4, animat, e-pulse'>
             <Sparkles, classNam, e='w-4 h-4' />
             🔥 JUST, PUBLISHE, D: OCTOBER, 2025, AI BREAKTHROUGH, SERIE, S 🔥
             <Sparkles, classNam, e='w-4 h-4' />
-          </d, i, v>
-          <h2, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t'>
+          </div>
+          <h2, classNam, e='text-5xlmd:text-6xl, fon, t-bold, tex, t-whitemb-4, leadin, g-tight'>
             Revolutionary, AI, Solutions
             <, b, r />{' '}
-            <span, classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, vi, a-pi, n, k-400, t, o-purp, l, e-4, 0, 0'>
-              Transform, Your, Enterprise Tod, a, y
-            </sp, a, n>
+            <span, classNam, e = 'text-transparentbg-clip-textbg-gradient-to-r, fro, m-yellow-400, vi, a-pink-400to-purple-400'>
+              Transform, Your, Enterprise Today
+            </span>
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-200, ma, x-w-3xl, m, x-au, t, o'>
+          <p, classNam, e='text-xl, tex, t-gray-200, ma, x-w-3xlmx-auto'>
             Three, gam, e-changing, guides, delivering{' '}
-            <strong, classNam, e='te, x, t-yell, o, w-3, 0, 0'>$3.75, BILLIO, N</stro, n, g> in, proven, value. Master, multimodal, A, I, ze, r, o-trust, securit, y, and, production, RAG
-            syste, m, s.
+            <strong, classNam, e='text-yellow-300'>$3.75, BILLIO, N</strong> in, proven, value. Master, multimodal, A, I, ze, r, o-trust, securit, y, and, production, RAG
+            systems.
           </p>
-        </d, i, v>
+        </div>
         {/* Three, Content, Cards */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          {/* Car, d, 1: Multimod, a, l , A, I */}
-          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-purp, l, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'>
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, classNam, e='p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, rounde, d-lg'>
-                <Brain, classNam, e='w-6 h-6, tex, t-whi, t, e' />
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-purp, l, e-300, uppercase, tracking-wi, d, e'>
+        <div, classNam, e = 'gridmd: grid-cols-3, ga, p-8mb-12'>
+          {/* Card1: Multimodal , A, I */}
+          <div, classNam, e = 'bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, border, border-white/20, hove, r: border-purple-400, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'>
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <div, classNam, e='p-3bg-gradient-to-br, fro, m-purple-500to-pink-500, rounde, d-lg'>
+                <Brain, classNam, e='w-6 h-6, tex, t-white' />
+              </div>
+              <div, classNam, e='text-sm, fon, t-semibold, tex, t-purple-300, uppercase, tracking-wide'>
                 NEW, GUID, E #1
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
-              Multimodal, AI, Enterprise Breakthrou, g, h
+              </div>
+            </div>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
+              Multimodal, AI, Enterprise Breakthrough
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
+            <p, classNam, e='text-gray-300mb-4, tex, t-sm, leadin, g-relaxed'>
               Unify, vis, i, o, n, langua, g, e & audio, processin, g.{' '}
-              <strong, classNam, e = 'te, x, t-yell, o, w-3, 0, 0'>$2.8B, valu, e</stro, n, g> with, 9, 7%
+              <strong, classNam, e = 'text-yellow-300'>$2.8B, valu, e</strong> with97%
               accuracy, at, Fortune 500, scal, e.
             </p>
-            <div, classNam, e='spa, c, e-y-2, m, b-6'>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>94% automati, o, n</stro, n, g> of, complex, workflows
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>$47M, saving, s</stro, n, g> in, document, processing
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>3.7x, faste, r</stro, n, g> customer, servic, e
-                </sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o='/bl, o, g/ai-20, 2, 5-o, c, t-multimod, a, l-ai-enterpri, s, e-breakthrou, g, h'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2 w-full, justif, y-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, transitio, n-all, duratio, n-300, grou, p'
+            <div, classNam, e='space-y-2mb-6'>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>94% automation</strong> of, complex, workflows
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>$47M, saving, s</strong> in, document, processing
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>3.7x, faste, r</strong> customer, servic, e
+                </span>
+              </div>
+            </div>
+            <Linkto='/blog/ai-2025-oct-multimodal-ai-enterprise-breakthrough'
+              className='inline-flex, item, s-center, ga, p-2 w-full, justif, y-centerbg-gradient-to-r, fro, m-purple-500to-pink-500, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, hove, r: from-purple-600, hove, r:to-pink-600, transitio, n-all, duratio, n-300, grou, p'
             >
               Read, Full, Guide
-              <ArrowRight, classNam, e='w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            </Li, n, k>
-          </d, i, v>
-          {/* Car, d, 2: AI, Secur, i, t, y */}
-          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-bl, u, e-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'>
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, classNam, e='p-3, b, g-gradie, n, t-to-br, fro, m-bl, u, e-500, t, o-cy, a, n-500, rounde, d-lg'>
-                <Shield, classNam, e='w-6 h-6, tex, t-whi, t, e' />
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-bl, u, e-300, uppercase, tracking-wi, d, e'>
+              <ArrowRight, classNam, e='w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform' />
+            </Link>
+          </div>
+          {/* Card2: AI, Secur, i, t, y */}
+          <div, classNam, e = 'bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, border, border-white/20, hove, r: border-blue-400, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'>
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <div, classNam, e='p-3bg-gradient-to-br, fro, m-blue-500to-cyan-500, rounde, d-lg'>
+                <Shield, classNam, e='w-6 h-6, tex, t-white' />
+              </div>
+              <div, classNam, e='text-sm, fon, t-semibold, tex, t-blue-300, uppercase, tracking-wide'>
                 NEW, GUID, E #2
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
+              </div>
+            </div>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
               AI, Security, Zero Trust, Framewor, k
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
-              Pre, v, e, n, t{' '}
-              <strong, classNam, e = 'te, x, t-yell, o, w-3, 0, 0'>$1.8B, in, breaches</stro, n, g>{' '}
-              with, enterpris, e-grade, AI, security. Prote, c, t $127B, infrastructure, at
-              99.97% upti, m, e.
+            <p, classNam, e='text-gray-300mb-4, tex, t-sm, leadin, g-relaxed'>
+              Preve, n, t{' '}
+              <strong, classNam, e = 'text-yellow-300'>$1.8B, in, breaches</strong>{' '}
+              with, enterpris, e-grade, AI, security. Protect $127B, infrastructure, at
+              99.97% uptime.
             </p>
-            <div, classNam, e='spa, c, e-y-2, m, b-6'>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>Zero, breache, s</stro, n, g> in, 24, months
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>99.97% availabili, t, y</stro, n, g> maintain, e, d
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>7, 2, 5% R, O, I</stro, n, g> over, 3, years
-                </sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o='/bl, o, g/ai-20, 2, 5-o, c, t-ai-securi, t, y-ze, r, o-tru, s, t-framewo, r, k'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2 w-full, justif, y-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: fr, o, m-bl, u, e-600, hove, r:to-cy, a, n-600, transitio, n-all, duratio, n-300, grou, p'
+            <div, classNam, e='space-y-2mb-6'>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>Zero, breache, s</strong> in, 24, months
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>99.97% availability</strong> maintained
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>725% ROI</strong> over, 3, years
+                </span>
+              </div>
+            </div>
+            <Linkto='/blog/ai-2025-oct-ai-security-zero-trust-framework'
+              className='inline-flex, item, s-center, ga, p-2 w-full, justif, y-centerbg-gradient-to-r, fro, m-blue-500to-cyan-500, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, hove, r: from-blue-600, hove, r:to-cyan-600, transitio, n-all, duratio, n-300, grou, p'
             >
               Read, Full, Guide
-              <ArrowRight, classNam, e='w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            </Li, n, k>
-          </d, i, v>
-          {/* Car, d, 3: RAG, Architect, u, r, e */}
-          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/20, hove, r: bord, e, r-gre, e, n-400, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'>
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, classNam, e='p-3, b, g-gradie, n, t-to-br, fro, m-gre, e, n-500, t, o-emera, l, d-500, rounde, d-lg'>
-                <Sparkles, classNam, e='w-6 h-6, tex, t-whi, t, e' />
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-gre, e, n-300, uppercase, tracking-wi, d, e'>
+              <ArrowRight, classNam, e='w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform' />
+            </Link>
+          </div>
+          {/* Card3: RAG, Architect, u, r, e */}
+          <div, classNam, e = 'bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, border, border-white/20, hove, r: border-green-400, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'>
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <div, classNam, e='p-3bg-gradient-to-br, fro, m-green-500to-emerald-500, rounde, d-lg'>
+                <Sparkles, classNam, e='w-6 h-6, tex, t-white' />
+              </div>
+              <div, classNam, e='text-sm, fon, t-semibold, tex, t-green-300, uppercase, tracking-wide'>
                 NEW, GUID, E #3
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
-              Enterprise, RAG, Production Architectu, r, e
+              </div>
+            </div>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
+              Enterprise, RAG, Production Architecture
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, tex, t-sm, leadin, g-relax, e, d'>
-              Deploy, RAG, at sca, l, e. Pro, c, e, s, s{' '}
-              <strong, classNam, e = 'te, x, t-yell, o, w-3, 0, 0'>1, 0, M+ queri, e, s/d, a, y</stro, n, g> with, 9, 4% accuracy, deliverin, g $470M, valu, e.
+            <p, classNam, e='text-gray-300mb-4, tex, t-sm, leadin, g-relaxed'>
+              Deploy, RAG, at scale. Proce, s, s{' '}
+              <strong, classNam, e = 'text-yellow-300'>10M+ queries/day</strong> with94% accuracy, deliverin, g $470M, valu, e.
             </p>
-            <div, classNam, e='spa, c, e-y-2, m, b-6'>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>94% accura, c, y</stro, n, g> vs, 6, 7% pure, LL, M
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>$470M, annual, value</stro, n, g> Fortune, 50, 0
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gr, a, y-2, 0, 0'>
-                <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                <sp, a, n>
-                  <stro, n, g>, 2,8, 4, 0% R, O, I</stro, n, g> in, 3, years
-                </sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-r, a, g-producti, o, n-architectu, r, e-gui, d, e'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2 w-full, justif, y-center, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: fr, o, m-gre, e, n-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, grou, p'
+            <div, classNam, e='space-y-2mb-6'>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>94% accuracy</strong> vs67% pure, LL, M
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>$470M, annual, value</strong> Fortune, 50, 0
+                </span>
+              </div>
+              <div, classNam, e='flex, item, s-start, ga, p-2, tex, t-sm, tex, t-gray-200'>
+                <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                <span>
+                  <strong>, 284, 0% ROI</strong> in, 3, years
+                </span>
+              </div>
+            </div>
+            <Linkto = '/blog/ai-2025-oct-rag-production-architecture-guide'
+              className='inline-flex, item, s-center, ga, p-2 w-full, justif, y-centerbg-gradient-to-r, fro, m-green-500to-emerald-500, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, hove, r: from-green-600, hove, r:to-emerald-600, transitio, n-all, duratio, n-300, grou, p'
             >
               Read, Full, Guide
-              <ArrowRight, classNam, e='w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-        {/* Botto, m, C, T, A */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <div, classNam, e='inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4'>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:fr, o, m-yell, o, w-500, hove, r:to-oran, g, e-600, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shad, o, w-yell, o, w-5, 0, 0/50, hove, r:sca, l, e-1, 0, 5'
+              <ArrowRight, classNam, e='w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform' />
+            </Link>
+          </div>
+        </div>
+        {/* BottomC, T, A */}
+        <div, classNam, e = 'text-center'>
+          <div, classNam, e='inline-flex, fle, x-colsm: flex-row, ga, p-4'>
+            <Linkto='/contact'
+              className='inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-yellow-400to-orange-500, tex, t-gray-900px-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:from-yellow-500, hove, r:to-orange-600, transitio, n-all, duratio, n-300, shado, w-2xl, hove, r:shadow-yellow-500/50, hove, r:scale-105'
             >
               <Sparkles, classNam, e='w-6 h-6' />
-              Get, Free, Expert Consultati, o, n
+              Get, Free, Expert Consultation
               <ArrowRight, classNam, e='w-6 h-6' />
-            </Li, n, k>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, border, border-whi, t, e/30, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0'
+            </Link>
+            <Linkto='/blog'
+              className='inline-flex, item, s-center, ga, p-2bg-white/10, backdro, p-blur-lg, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, border, border-white/30, hove, r:bg-white/20, transitio, n-all, duratio, n-300'
             >
-              Explore, All, AI Insigh, t, s
+              Explore, All, AI Insights
               <ArrowRight, classNam, e='w-6 h-6' />
-            </Li, n, k>
-          </d, i, v>
-          <p, classNam, e='te, x, t-sm, tex, t-gr, a, y-300, m, t-6'>
-            Jo, i, n{' '}
-            <strong, classNam, e = 'te, x, t-yell, o, w-3, 0, 0'>
-              , 1,247, Fortune, 500 compani, e, s
-            </stro, n, g>{' '}
-            transforming, with, Zion Tech, Group, AI solutio, n, s
+            </Link>
+          </div>
+          <p, classNam, e='text-sm, tex, t-gray-300mt-6'>
+            Join{' '}
+            <strong, classNam, e = 'text-yellow-300'>
+              , 1,247, Fortune, 500 companies
+            </strong>{' '}
+            transforming, with, Zion Tech, Group, AI solutions
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025NewTechBannerMega;

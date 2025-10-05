@@ -1,191 +1,191 @@
-import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-interface, NewContentPromoBannerProp, s { 
-  varia, n, t?: 'in, f, o' | 'premi, u, m' | 'succe, s, s' | 'warni, n, g';
-  classNa, m, e ?  : stri, n, g;
+import React, { useState  } from 'react';
+import { Link  } from 'react-router-dom';
+interface, NewContentPromoBannerProps { 
+  variant?: 'info' | 'premium' | 'success' | 'warning';
+  className ?  : string;
  }
-const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = ({ 
-  varia, n, t = 'pre, m, i, u, m', 
-  classNa, m, e = '' 
+const, NewContentPromoBanne, r: React.FC<NewContentPromoBannerProps> = ({ 
+  variant = 'premi, u, m', 
+  className = '' 
 }) => {
-  con, s, t [isDismiss, e, d, setIsDismiss, e, d] = useSta, t, e(fal, s, e); const, variant, s = {
-    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-500, tex, t-white, borde, r-bl, u, e-4, 0, 0/, 3, 0',
-    premi, u, m: 'bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, borde, r-purp, l, e-4, 0, 0/3, 0',
-    succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, borde, r-gre, e, n-4, 0, 0/3, 0',
-    warni, n, g: 'bg-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, borde, r-oran, g, e-4, 0, 0/3, 0'
+  const [isDismissed, setIsDismissed] = useState(false); const, variant, s = {
+    info: 'bg-gradient-to-r, fro, m-blue-500to-cyan-500, tex, t-white, borde, r-blue-400/, 3, 0',
+    premium: 'bg-gradient-to-r, fro, m-purple-500to-pink-500, tex, t-white, borde, r-purple-400/3, 0',
+    success: 'bg-gradient-to-r, fro, m-green-500to-emerald-500, tex, t-white, borde, r-green-400/3, 0',
+    warning: 'bg-gradient-to-r, fro, m-orange-500to-red-500, tex, t-white, borde, r-orange-400/3, 0'
   }; const, featuredConten, t = [
     {
-      tit, l, e: "AI, Safety, Budgets 20, 2, 6",
-      descripti, o, n: "Guardrails, wired, to K, P, I, s, approva, l, s, rollbac, k, s",
-      ic, o, n: Shi, e, l, d,
-      li, n, k: "/bl, o, g/ai-safe, t, y-budge, t, s-2, 0, 2, 6",
-      catego, r, y: "AI, Strate, g, y"
+      title: "AI, Safety, Budgets 2026",
+      description: "Guardrails, wired, to KPI, s, approva, l, s, rollbac, k, s",
+      icon: Shiel, d,
+      li, n, k: "/blog/ai-safety-budgets-202, 6",
+      category: "AI, Strate, g, y"
     },
     {
-      tit, l, e: "Edge, Privacy, for ML, 20, 2, 6",
-      descripti, o, n: "On‑device, filters, and scoped, identifie, r, s",
-      ic, o, n: Cl, o, u, d,
-      li, n, k: "/bl, o, g/ed, g, e-priva, c, y-ml-2, 0, 2, 6",
-      catego, r, y: "E, d, g, e"
+      title: "Edge, Privacy, for ML, 20, 2, 6",
+      description: "On‑device, filters, and scoped, identifie, r, s",
+      icon: Clou, d,
+      li, n, k: "/blog/edge-privacy-ml-202, 6",
+      category: "Edg, e"
     },
     {
-      tit, l, e: "Agent, Evals, in Prod, 20, 2, 6",
-      descripti, o, n: "Online, checks, that predict, outcom, e, s",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/age, n, t-eva, l, s-in-pr, o, d-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      title: "Agent, Evals, in Prod, 20, 2, 6",
+      description: "Online, checks, that predict, outcom, e, s",
+      icon: TrendingU, p,
+      li, n, k: "/blog/agent-evals-in-prod-202, 6",
+      category: "GenA, I"
     },
     {
-      tit, l, e: "Co, s, t‑Aware, Inference, 202, 6",
-      descripti, o, n: "Warm, pools, and quality, tiers, under S, L, A, s",
-      ic, o, n: Za, p,
-      li, n, k: "/bl, o, g/ai-co, s, t-awa, r, e-inferen, c, e-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      title: "Cost‑Aware, Inference, 202, 6",
+      description: "Warm, pools, and quality, tiers, under SLA, s",
+      icon: Za, p,
+      li, n, k: "/blog/ai-cost-aware-inference-202, 6",
+      category: "GenA, I"
     },
     {
-      tit, l, e: "Platform, Golden, Paths 2, 0, 2, 6",
-      descripti, o, n: "Paved, roads, that move, KP, I, s",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/platfo, r, m-gold, e, n-pat, h, s-kp, i, s-2, 0, 2, 6",
-      catego, r, y: "Platf, o, r, m"
+      title: "Platform, Golden, Paths 202, 6",
+      description: "Paved, roads, that move, KP, I, s",
+      icon: TrendingU, p,
+      li, n, k: "/blog/platform-golden-paths-kpis-202, 6",
+      category: "Platfor, m"
     },
     {
-      tit, l, e: "Quali, t, y‑Tiered, GenAI, Routing 2, 0, 2, 6",
-      descripti, o, n: "Control, cost, with ti, e, r, s, cach, e, s, and, eval, signals",
-      ic, o, n: Za, p,
-      li, n, k: "/bl, o, g/gen, a, i-routi, n, g-und, e, r-budge, t, s-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      title: "Quality‑Tiered, GenAI, Routing 202, 6",
+      description: "Control, cost, with tier, s, cach, e, s, and, eval, signals",
+      icon: Za, p,
+      li, n, k: "/blog/genai-routing-under-budgets-202, 6",
+      category: "GenA, I"
     },
     {
-      tit, l, e: "On‑Device, Agents, 202, 6",
-      descripti, o, n: "Offli, n, e‑capable, too, l, s, private, cache, s, safe, fallback, s",
-      ic, o, n: Cl, o, u, d,
-      li, n, k: "/bl, o, g/on-devi, c, e-agen, t, s-offli, n, e-too, l, s-2, 0, 2, 6",
-      catego, r, y: "E, d, g, e"
+      title: "On‑Device, Agents, 202, 6",
+      description: "Offline‑capable, too, l, s, private, cache, s, safe, fallback, s",
+      icon: Clou, d,
+      li, n, k: "/blog/on-device-agents-offline-tools-202, 6",
+      category: "Edg, e"
     },
     {
-      tit, l, e: "Ze, r, o‑Trust, Observability, 202, 6",
-      descripti, o, n: "Signed, traces, and lea, s, t‑privilege, telemet, r, y",
-      ic, o, n: Shi, e, l, d,
-      li, n, k: "/bl, o, g/ze, r, o-tru, s, t-observabili, t, y-2, 0, 2, 6",
-      catego, r, y: "Secur, i, t, y"
+      title: "Zero‑Trust, Observability, 202, 6",
+      description: "Signed, traces, and least‑privilege, telemet, r, y",
+      icon: Shiel, d,
+      li, n, k: "/blog/zero-trust-observability-202, 6",
+      category: "Securit, y"
     },
     {
-      tit, l, e: "AI, Incident, Response Playbo, o, k, s",
-      descripti, o, n: "Contain, incidents, in under, 60, second, s",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/ai-incide, n, t-respon, s, e-playboo, k, s-2, 0, 2, 5",
-      catego, r, y: "Secur, i, t, y"
+      title: "AI, Incident, Response Playbook, s",
+      description: "Contain, incidents, in under, 60, second, s",
+      icon: TrendingU, p,
+      li, n, k: "/blog/ai-incident-response-playbooks-202, 5",
+      category: "Securit, y"
     },
     {
-      tit, l, e: "Agentic, Workflows, Blueprint 2, 0, 2, 6",
-      descripti, o, n: "Compose, mult, i‑tool, agents, with safe, tools, and policy, tests, in C, I",
-      ic, o, n: Trendin, g, U, p,
-      li, n, k: "/bl, o, g/agent, i, c-workflo, w, s-bluepri, n, t-2, 0, 2, 6",
-      catego, r, y: "Ge, n, A, I"
+      title: "Agentic, Workflows, Blueprint 202, 6",
+      description: "Compose, mult, i‑tool, agents, with safe, tools, and policy, tests, in C, I",
+      icon: TrendingU, p,
+      li, n, k: "/blog/agentic-workflows-blueprint-202, 6",
+      category: "GenA, I"
     },
     {
-      tit, l, e: "Edge, LLM, Cachin, g",
-      descripti, o, n: "S, u, b‑100ms, prompts, via tiere, d, K, V, signed, config, s, freshness, window, s",
-      ic, o, n: Za, p,
-      li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-2, 0, 2, 5",
-      catego, r, y: "Architect, u, r, e"
+      title: "Edge, LLM, Cachin, g",
+      description: "Sub‑100ms, prompts, via tieredK, V, signed, config, s, freshness, window, s",
+      icon: Za, p,
+      li, n, k: "/blog/edge-llm-caching-blueprint-202, 5",
+      category: "Architectur, e"
     },
     {
-      tit, l, e: "AI, Operational, Scorecards 2, 0, 2, 6",
-      descripti, o, n: "Guardrails, wired, to KPIs, with, PR che, c, k, s, canari, e, s, and, SLO, s",
-      ic, o, n: Br, a, i, n,
-      li, n, k: "/bl, o, g/ai-operation, a, l-scorecar, d, s-2, 0, 2, 6",
-      catego, r, y: "AI, Strate, g, y"
+      title: "AI, Operational, Scorecards 202, 6",
+      description: "Guardrails, wired, to KPIs, with, PR check, s, canari, e, s, and, SLO, s",
+      icon: Brai, n,
+      li, n, k: "/blog/ai-operational-scorecards-202, 6",
+      category: "AI, Strate, g, y"
     }
-  ]; if (isDismiss, e, d) return, nul, l;
-  retu, r, n (
-    <div, classNam, e = {`${varian, t, s[varia, n, t]} ${classNa, m, e} relative, overflo, w-hidd, e, n`}>
+  ]; if (isDismissed) return, nul, l;
+  return (
+    <div, classNam, e = {`${variants[variant]} ${className} relative, overflo, w-hidden`}>
       {/* Animated, background, elements */}
       <div, classNam, e="absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-3, 2, h-32, b, g-white, rounde, d-full, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-2, 4, h-24, b, g-white, rounde, d-full, animat, e-boun, c, e" />
-        <div, classNam, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-1, 6, h-16, b, g-white, rounde, d-full, animat, e-pi, n, g" />
-      </d, i, v>
-      <div, classNam, e="relativ, e, z-10, ma, x-w-7xl, m, x-auto, p, x-6, p, y-6">
-        <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-          <div, classNam, e="fl, e, x-1">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
-              <Sparkles, classNam, e="w-6 h-6, animat, e-pul, s, e" />
-              <span, classNam, e="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT</sp, a, n>
-              <Star, classNam, e="w-5 h-5, animat, e-sp, i, n" />
-            </d, i, v>
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-2">
-              Just, Publishe, d: New, Guides, for 20, 2, 6
+        <div, classNam, e="absolute, to, p-0, lef, t-0 w-32h-32bg-white, rounde, d-full, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-24h-24bg-white, rounde, d-full, animat, e-bounce" />
+        <div, classNam, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -translate-x-1/2 -translate-y-1/2 w-16h-16bg-white, rounde, d-full, animat, e-ping" />
+      </div>
+      <div, classNam, e="relativez-10, ma, x-w-7xlmx-autopx-6py-6">
+        <div, classNam, e="flex, item, s-center, justif, y-between">
+          <div, classNam, e="flex-1">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-3">
+              <Sparkles, classNam, e="w-6 h-6, animat, e-pulse" />
+              <span, classNam, e="text-lg, fon, t-bold">🚀 NEW, CONTENT, ALERT</span>
+              <Star, classNam, e="w-5 h-5, animat, e-spin" />
+            </div>
+            <h3, classNam, e="text-xl, fon, t-boldmb-2">
+              Just, Publishe, d: New, Guides, for 2026
             </h3>
-            <p, classNam, e="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
+            <p, classNam, e="text-white/90mb-4, tex, t-sm">
+              Discover, fresh, insights onon‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
               and, privac, y‑first, observabilit, y.
             </p>
             {/* Featured, content, grid */}
-            <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
-              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const, Ico, n = it, e, m.ic, o, n; retu, r, n (
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
+            <div, classNam, e = "grid, gri, d-cols-2md: grid-cols-4, ga, p-3mb-4">
+              { featuredContent.map((item, index) = > {
+                const, Ico, n = item.icon; return (
+                  <Link, ke, y = { inde, x  }, to={ item.link } className="bg-white/10, backdro, p-blur-sm, rounde, d-lgp-3, hove, r: bg-white/20, transitio, n-all, duratio, n-300, hove, r:scale-105, grou, p"
                   >
-                    <div, classNam, e="flex, item, s-center, ga, p-2, m, b-2">
-                      <Icon, classNam, e="w-4 h-4, tex, t-whi, t, e/80" />
-                      <span, classNam, e="te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80">{it, e, m.cate, g, o, r, y}</sp, a, n>
-                    </d, i, v>
-                    <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">
-                      {it, e, m.t, i, t, l, e}
+                    <div, classNam, e="flex, item, s-center, ga, p-2mb-2">
+                      <Icon, classNam, e="w-4 h-4, tex, t-white/80" />
+                      <span, classNam, e="text-xs, fon, t-medium, tex, t-white/80">{item.catego, r, y}</span>
+                    </div>
+                    <h4, classNam, e = "font-semibold, tex, t-white, tex, t-sm, grou, p-hover: text-yellow-300, transitio, n-colors">
+                      {item.tit, l, e}
                     </h4>
-                    <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
-                      {it, e, m.descripti, o, n}
+                    <p, classNam, e = "text-xs, tex, t-white/70mt-1, lin, e-clamp-2">
+                      {item.description}
                     </p>
-                  </L, i, n, k>
+                  </Lin, k>
                 );
               })}
-            </d, i, v>
+            </div>
             {/* Action, button, s */}
             <div, classNam, e = "flex, fle, x-wrap, ga, p-3">
-              <Link, t, o="/bl, o, g"
-                classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
+              <Linkto="/blog"
+                className="bg-white, tex, t-purple-600, hove, r: bg-white/90px-4py-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <BookOpen, classNam, e="w-4 h-4" />
                 Read, All, Articles
-                <ArrowRight, classNam, e="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-              </Li, n, k>
-              <Link, t, o="/ca, s, e-studi, e, s"
-                classNa, m, e="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
+                <ArrowRight, classNam, e="w-4 h-4, grou, p-hover:translate-x-1, transitio, n-transform" />
+              </Link>
+              <Linkto="/case-studies"
+                className="border, borde, r-white/30, tex, t-white, hove, r:bg-white/10px-4py-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <TrendingUp, classNam, e="w-4 h-4" />
                 View, Case, Studies
-              </Li, n, k>
-              <Link, t, o="/servic, e, s"
-                classNa, m, e="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
+              </Link>
+              <Linkto="/services"
+                className="border, borde, r-white/30, tex, t-white, hove, r:bg-white/10px-4py-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, ga, p-2"
               >
                 <Shield, classNam, e="w-4 h-4" />
                 Explore, Service, s
-              </Li, n, k>
-            </d, i, v>
-            {/* S, t, a, t, s */}
-            <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80">
+              </Link>
+            </div>
+            {/* Sta, t, s */}
+            <div, classNam, e = "flex, item, s-center, ga, p-6mt-4, tex, t-sm, tex, t-white/80">
               <div, classNam, e="flex, item, s-center, ga, p-1">
-                <sp, a, n>New, Article, s</sp, a, n>
-              </d, i, v>
+                <span>New, Article, s</span>
+              </div>
               <div, classNam, e="flex, item, s-center, ga, p-1">
-                <sp, a, n>New, Case, Studies</sp, a, n>
-              </d, i, v>
+                <span>New, Case, Studies</span>
+              </div>
               <div, classNam, e="flex, item, s-center, ga, p-1">
-                <span, classNam, e="fo, n, t-semibo, l, d">50+</sp, a, n>
-                <sp, a, n>Expert, Insight, s</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                <span, classNam, e="font-semibold">50+</span>
+                <span>Expert, Insight, s</span>
+              </div>
+            </div>
+          </div>
           {/* Dismiss, butto, n */}
-          <button, onCli, c, k = {  () = > setIsDismiss, e, d(tr, u, e)  }, classNa, m, e = "ml-4 p-2, hove, r: bg-whi, t, e/10, rounde, d-full, transitio, n-colo, r, s"
+          <button, onCli, c, k = {  () = > setIsDismissed(true)  }, className = "ml-4 p-2, hove, r: bg-white/10, rounde, d-full, transitio, n-colors"
           >
             <X, classNam, e="w-5 h-5" />
-          </butt, o, n>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
-export, default, React.me, m, o(NewContentPromoBann, e, r);
+export, default, React.memo(NewContentPromoBanner);

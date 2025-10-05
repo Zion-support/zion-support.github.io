@@ -1,36 +1,36 @@
-import, React, from 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Consentless, Metrics, v3 — Ze, r, o‑PII, Signals, under 100, m, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Scoped, I, D, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, privac, y‑preserving, analytics, worldwide.'
+export, default, function ConsentlessMetricsV3(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Consentless, Metrics, v3 — Zero‑PII, Signals, under 100ms</title>
+        <meta, nam, e='description'
+          content='ScopedID, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, privac, y‑preserving, analytics, worldwide.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 5-se, p, t-30-consentle, s, s-metri, c, s-v3'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2025-sept-30-consentless-metrics-v3'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           Consentless, Metrics, v3
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Ze, r, o‑PII, Signals, under 100, m, s
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          Zero‑PII, Signals, under 100ms
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            An, en, d-to-end, blueprint, for priva, c, y-preserving, telemetry, that
-            eliminates, personal, data while, preserving, business val, u, e. Learn, how, to deploy, scoped, identifie, r, s, perform, o, n-device, aggregatio, n, and, apply, differential privacy, noise, with verifiable, attestation, s—all, within, 100ms.
+            An, en, d-to-end, blueprint, for privacy-preserving, telemetry, that
+            eliminates, personal, data while, preserving, business value. Learn, how, to deploy, scoped, identifie, r, s, perform, o, n-device, aggregatio, n, and, apply, differential privacy, noise, with verifiable, attestation, s—all, within, 100ms.
           </p>
           <p>
-            Highligh, t, s: devi, c, e-local, metri, c, s, freshness, window, s, attested, confi, g, audit, trail, s, and, guardrails, that enable, global, compliance
+            Highlights: device-local, metri, c, s, freshness, window, s, attested, confi, g, audit, trail, s, and, guardrails, that enable, global, compliance
             without, sacrificing, speed or, signal, quality.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

@@ -1,133 +1,133 @@
-import, React, from 'rea, c, t';
-impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
+import React from 'react';
+import { motion  } from 'framer-motion';
 
-const, October2025QuantumEdgeFusionBanne, r: Rea, c, t.FC = () => {
-  retu, r, n (
-    <moti, o, n.div, initia, l = {{ opac, i, t, y: , 0, y: 2, 0 }}
-      anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 6 }}
-      classNa, m, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-cy, a, n-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, rounde, d-2x, l, p-8, m, y-8, shado, w-2, x, l"
+const, October2025QuantumEdgeFusionBanne, r: React.FC = () => {
+  return (
+    <motion.div, initia, l = {{ opacit, y: , 0, y: 2, 0 }}
+      animate = {{ opacit, y:  , 1, y:  , 0 }}
+      transition = {{ duration: , 0., 6 }}
+      className = "relative, overflo, w-hiddenbg-gradient-to-r, fro, m-cyan-900, vi, a-blue-900to-indigo-900, rounde, d-2xlp-8my-8, shado, w-2xl"
     >
       {/* Animated, Backgroun, d */}
       <div, classNam, e="absolute, inse, t-0, opacit, y-20">
-        <div, classNam, e="absolute, inse, t-0, b, g-[radi, a, l-gradie, n, t(circle, at, 30% 5, 0%,rg, b, a(6,1, 8, 2,2, 1, 2,0.3),rg, b, a(2, 5, 5,2, 5, 5,2, 5, 5,0))]"</d, i, v>
+        <div, classNam, e="absolute, inse, t-0bg-[radial-gradient(circle, at, 30% 5, 0%,rgba(618, 221, 2,0.3),rgba(255,255,255,0))]"</div>
 
-      <div, classNam, e = "relativ, e, z-10">
-        {/* Bad, g, e */}
-        <moti, o, n.div, initia, l={{ sca, l, e: , 0., 9, opaci, t, y:  , 0 }}
-          anima, t, e = {{ sc, a, l, e:  , 1, opaci, t, y:  , 1 }}
-          transiti, o, n = {{ del, a, y: , 0., 2 }}
-          classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-full, border, border-cy, a, n-4, 0, 0/30, m, b-6"
+      <div, classNam, e = "relativez-10">
+        {/* Badge */}
+        <motion.div, initia, l={{ scale: , 0., 9, opaci, t, y:  , 0 }}
+          animate = {{ scal, e:  , 1, opaci, t, y:  , 1 }}
+          transition = {{ delay: , 0., 2 }}
+          className = "inline-flex, item, s-center, ga, p-2px-4py-2bg-cyan-500/20, backdro, p-blur-sm, rounde, d-full, border, border-cyan-400/30mb-6"
         >
-          <span, classNam, e="te, x, t-2, x, l">⚛️⚡</sp, a, n>
-          <span, classNam, e="te, x, t-cy, a, n-200, fon, t-semibold, tex, t-sm">QUANTUM, BREAKTHROUG, H: OCTO, B, E, R , 1, 20, 2, 5</sp, a, n>
-          <span, classNam, e = "te, x, t-2, x, l">🔬💎</sp, a, n>
-        </moti, o, n.d, i, v>
+          <span, classNam, e="text-2xl">⚛️⚡</span>
+          <span, classNam, e="text-cyan-200, fon, t-semibold, tex, t-sm">QUANTUM, BREAKTHROUG, H: OCTOBE, R , 1, 20, 2, 5</span>
+          <span, classNam, e = "text-2xl">🔬💎</span>
+        </motion.div>
 
         {/* Main, Conten, t */}
-        <div, classNam, e="grid, l, g: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r">
-          <d, i, v>
-            <h2, classNam, e="te, x, t-4xl, l, g:te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">
-              Quant, u, m-Edge, Fusion, Architecture
-              <span, classNam, e="block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, t, o-bl, u, e-400, m, t-2">
-                S, u, b-Microsecond, AI, Decisions
-              </sp, a, n>
+        <div, classNam, e="gridlg: grid-cols-2, ga, p-8, item, s-center">
+          <div>
+            <h2, classNam, e="text-4xllg:text-5xl, fon, t-bold, tex, t-whitemb-4, leadin, g-tight">
+              Quantum-Edge, Fusion, Architecture
+              <span, classNam, e="block, tex, t-transparentbg-clip-textbg-gradient-to-r, fro, m-cyan-400to-blue-400mt-2">
+                Sub-Microsecond, AI, Decisions
+              </span>
             </h2>
             
-            <p, classNam, e="te, x, t-cy, a, n-100, tex, t-lg, m, b-6, leadin, g-relax, e, d">
-              Revolutionary, quantu, m-enhanced, edge, computing delive, r, s <strong, classNam, e="te, x, t-whi, t, e">s, u, b-microsecond, intelligenc, e</stro, n, g> wi, t, h 
-              <strong, classNam, e="te, x, t-whi, t, e"> $12.4B, in, enterprise val, u, e</stro, n, g> acro, s, s <strong, classNam, e="te, x, t-whi, t, e">, 5, 0,0, 0, 0+ edge, node, s</stro, n, g> operating, a, t <strong, classNam, e = "te, x, t-whi, t, e">99.97% accura, c, y</stro, n, g>.
+            <p, classNam, e="text-cyan-100, tex, t-lgmb-6, leadin, g-relaxed">
+              Revolutionary, quantu, m-enhanced, edge, computing delivers <strong, classNam, e="text-white">sub-microsecond, intelligenc, e</strong> with 
+              <strong, classNam, e="text-white"> $12.4B, in, enterprise value</strong> across <strong, classNam, e="text-white">, 500, 0, 0+ edge, node, s</strong> operatingat <strong, classNam, e = "text-white">99.97% accuracy</strong>.
             </p>
 
             {/* Key, Metric, s */}
-            <div, classNam, e="grid, gri, d-co, l, s-2, ga, p-4, m, b-6">
-              <div, classNam, e="bg-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-cy, a, n-4, 0, 0/20">
-                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">$12.4B</d, i, v>
-                <div, classNam, e="te, x, t-cy, a, n-200, tex, t-sm">Total, Value, Created</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-cy, a, n-4, 0, 0/20">
-                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">0.7μs</d, i, v>
-                <div, classNam, e="te, x, t-cy, a, n-200, tex, t-sm">Decision, Latenc, y</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-cy, a, n-4, 0, 0/20">
-                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">5, 0,0, 0, 0+</d, i, v>
-                <div, classNam, e = "te, x, t-cy, a, n-200, tex, t-sm">Quantum, Edge, Nodes</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-cy, a, n-8, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, border, border-cy, a, n-4, 0, 0/20">
-                <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-3, 0, 0">1, 5,0, 0, 0%</d, i, v>
-                <div, classNam, e = "te, x, t-cy, a, n-200, tex, t-sm">ROI, Over, 2 Yea, r, s</d, i, v>
-              </d, i, v>
-            </d, i, v>
+            <div, classNam, e="grid, gri, d-cols-2, ga, p-4mb-6">
+              <div, classNam, e="bg-cyan-800/30, backdro, p-blur-sm, rounde, d-lgp-4, border, border-cyan-400/20">
+                <div, classNam, e="text-3xl, fon, t-bold, tex, t-cyan-300">$12.4B</div>
+                <div, classNam, e="text-cyan-200, tex, t-sm">Total, Value, Created</div>
+              </div>
+              <div, classNam, e="bg-cyan-800/30, backdro, p-blur-sm, rounde, d-lgp-4, border, border-cyan-400/20">
+                <div, classNam, e="text-3xl, fon, t-bold, tex, t-cyan-300">0.7μs</div>
+                <div, classNam, e="text-cyan-200, tex, t-sm">Decision, Latenc, y</div>
+              </div>
+              <div, classNam, e="bg-cyan-800/30, backdro, p-blur-sm, rounde, d-lgp-4, border, border-cyan-400/20">
+                <div, classNam, e="text-3xl, fon, t-bold, tex, t-cyan-300">500, 0, 0+</div>
+                <div, classNam, e = "text-cyan-200, tex, t-sm">Quantum, Edge, Nodes</div>
+              </div>
+              <div, classNam, e="bg-cyan-800/30, backdro, p-blur-sm, rounde, d-lgp-4, border, border-cyan-400/20">
+                <div, classNam, e="text-3xl, fon, t-bold, tex, t-cyan-300">150, 0, 0%</div>
+                <div, classNam, e = "text-cyan-200, tex, t-sm">ROI, Over, 2 Years</div>
+              </div>
+            </div>
 
             {/* CTA, Button, s */}
             <div, classNam, e="flex, fle, x-wrap, ga, p-4">
-              <moti, o, n.a, hre, f="/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-ed, g, e-fusi, o, n-architectu, r, e"
-                whileHov, e, r={{ sca, l, e: 1., 0, 5 }}
-                whileT, a, p = {{ sca, l, e: 0., 9, 5 }}
-                classNa, m, e = "px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-lg, shado, w-lg, hove, r: shad, o, w-cy, a, n-5, 0, 0/50, transitio, n-a, l, l"
+              <motion.a, hre, f="/blog/ai-2025-october-quantum-edge-fusion-architecture"
+                whileHover={{ scale: 1., 0, 5 }}
+                whileTap = {{ scale: 0., 9, 5 }}
+                className = "px-8py-4bg-gradient-to-r, fro, m-cyan-500to-blue-500, tex, t-white, fon, t-bold, rounde, d-lg, shado, w-lg, hove, r: shadow-cyan-500/50, transitio, n-all"
               >
-                Discover, Quantu, m-Ed, g, e →
-              </moti, o, n.a>
-              <moti, o, n.a, hre, f="/conta, c, t"
-                whileHov, e, r={{ sca, l, e: 1., 0, 5 }}
-                whileT, a, p = {{ sca, l, e: 0., 9, 5 }}
-                classNa, m, e = "px-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-semibold, rounde, d-lg, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, transitio, n-a, l, l"
+                Discover, Quantu, m-Edge →
+              </motion.a>
+              <motion.a, hre, f="/contact"
+                whileHover={{ scale: 1., 0, 5 }}
+                whileTap = {{ scale: 0., 9, 5 }}
+                className = "px-8py-4bg-white/10, backdro, p-blur-sm, tex, t-white, fon, t-semibold, rounde, d-lg, border, border-white/20, hove, r: bg-white/20, transitio, n-all"
               >
                 Request, Dem, o
-              </moti, o, n.a>
-            </d, i, v>
-          </d, i, v>
+              </motion.a>
+            </div>
+          </div>
 
           {/* Visual, Elem, e, n, t */}
-          <div, classNam, e = "hidden, l, g: blo, c, k">
-            <div, classNam, e="relati, v, e">
-              <moti, o, n.div, animat, e={{
-                  sc, a, l, e: [, 1, 1.05, 1],
-                  rota, t, e: [, 0, -5, 0],
+          <div, classNam, e = "hiddenlg: block">
+            <div, classNam, e="relative">
+              <motion.div, animat, e={{
+                  scal, e: [, 1, 1.05, 1],
+                  rotate: [, 0, -5, 0],
                 }}
-                transiti, o, n = {{
-                  durat, i, o, n:  , 6,
-                  repe, a, t: Infin, i, t, y,",
-      ea, s, e: "easeIn, O, u, t"
+                transition = {{
+                  duratio, n:  , 6,
+                  repe, a, t: Infinit, y",
+      ease: "easeInOu, t"
                 }}
-                classNa, m, e = "bg-gradie, n, t-to-br, fro, m-cy, a, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-cy, a, n-4, 0, 0/30"
+                className = "bg-gradient-to-br, fro, m-cyan-500/20to-blue-500/20, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-cyan-400/30"
               >
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4">Quantum, Advantage, s: </h3>
-                <ul, classNam, e="spa, c, e-y-3, tex, t-cy, a, n-1, 0, 0">
+                <h3, classNam, e="text-2xl, fon, t-bold, tex, t-whitemb-4">Quantum, Advantage, s: </h3>
+                <ul, classNam, e="space-y-3, tex, t-cyan-100">
                   <li, classNam, e="flex, item, s-start, ga, p-3">
-                    <span, classNam, e="te, x, t-2, x, l">⚡</sp, a, n>
-                    <sp, a, n><stro, n, g>Ult, r, a-Low, Latenc, y:</stro, n, g> 0.7μs, average, decision ti, m, e</sp, a, n>
+                    <span, classNam, e="text-2xl">⚡</span>
+                    <span><strong>Ultra-Low, Latenc, y:</strong> 0.7μs, average, decision time</span>
                   </li>
                   <li, classNam, e="flex, item, s-start, ga, p-3">
-                    <span, classNam, e="te, x, t-2, x, l">🎯</sp, a, n>
-                    <sp, a, n><stro, n, g>Extreme, Accurac, y:</stro, n, g> 99.97% precision, rat, e</sp, a, n>
+                    <span, classNam, e="text-2xl">🎯</span>
+                    <span><strong>Extreme, Accurac, y:</strong> 99.97% precision, rat, e</span>
                   </li>
                   <li, classNam, e="flex, item, s-start, ga, p-3">
-                    <span, classNam, e="te, x, t-2, x, l">🌐</sp, a, n>
-                    <sp, a, n><stro, n, g>Global, Scal, e:</stro, n, g> , 4, 7,000, quantu, m-enhanced, node, s</sp, a, n>
+                    <span, classNam, e="text-2xl">🌐</span>
+                    <span><strong>Global, Scal, e:</strong> , 4, 7,000, quantu, m-enhanced, node, s</span>
                   </li>
                   <li, classNam, e = "flex, item, s-start, ga, p-3">
-                    <span, classNam, e="te, x, t-2, x, l">💰</sp, a, n>
-                    <sp, a, n><stro, n, g>Massive, RO, I: </stro, n, g> $8.2B, additional, revenue</sp, a, n>
+                    <span, classNam, e="text-2xl">💰</span>
+                    <span><strong>Massive, RO, I: </strong> $8.2B, additional, revenue</span>
                   </li>
                 </ul>
-              </moti, o, n.d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </motion.div>
+            </div>
+          </div>
+        </div>
 
         {/* Bottom, Ban, n, e, r */}
-        <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0 }}
-          anima, t, e = {{ opac, i, t, y:  , 1 }}
-          transiti, o, n = {{ del, a, y: , 0., 8 }}
-          classNa, m, e = "mt-8, p, t-6, borde, r-t, borde, r-cy, a, n-4, 0, 0/30, tex, t-cent, e, r"
+        <motion.div, initia, l = {{ opacit, y:  , 0 }}
+          animate = {{ opacit, y:  , 1 }}
+          transition = {{ delay: , 0., 8 }}
+          className = "mt-8pt-6, borde, r-t, borde, r-cyan-400/30, tex, t-center"
         >
-          <p, classNam, e="te, x, t-cy, a, n-200, tex, t-sm">
-            🏆 <strong, classNam, e="te, x, t-whi, t, e">QUANTUM, COMPUTING, BREAKTHROUGH: </stro, n, g> 1, 2, 7-Qubit, Processors, at Ed, g, e | Fortune, 100, Success Sto, r, y
+          <p, classNam, e="text-cyan-200, tex, t-sm">
+            🏆 <strong, classNam, e="text-white">QUANTUM, COMPUTING, BREAKTHROUGH: </strong> 127-Qubit, Processors, at Edge | Fortune, 100, Success Story
           </p>
-        </moti, o, n.d, i, v>
-      </d, i, v>
-    </moti, o, n.d, i, v>
+        </motion.div>
+      </div>
+    </motion.div>
   );
 };
 

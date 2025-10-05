@@ -1,18 +1,18 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
+// @ts-nocheck, import, React from 'react';
 
-export, default, function Pa, g, e() { 
-  retu, r, n (
-    <main, classNam, e = 'm, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0'>
-      <section, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <div, classNam, e='m, a, x-w-3, x, l'>
-          <h1, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4'>
-            Private, Insights, Blueprint — Ze, r, o‑PII, Analytics, at &lt; 100, m, s
+export, default, function Page() { 
+  return (
+    <main, classNam, e = 'min-h-screenbg-white, tex, t-gray-900'>
+      <section, classNam, e='containermx-autopx-6py-16'>
+        <div, classNam, e='max-w-3xl'>
+          <h1, classNam, e='text-3xlmd: text-4xl, fon, t-boldmb-4'>
+            Private, Insights, Blueprint — Zero‑PII, Analytics, at &lt; 100ms
           </h1>
-          <p, classNam, e='te, x, t-gr, a, y-600, m, b-6'>
-            Build, privac, y‑preserving, analytics, with scope, d, I, D, s, on‑device, aggregatio, n, and, differential, privacy noi, s, e. This, blueprint, outlines
-            production, patterns, that deliver, trustworthy, insights without, collecting, personal da, t, a.
+          <p, classNam, e='text-gray-600mb-6'>
+            Build, privac, y‑preserving, analytics, with scopedI, D, s, on‑device, aggregatio, n, and, differential, privacy noise. This, blueprint, outlines
+            production, patterns, that deliver, trustworthy, insights without, collecting, personal data.
           </p>
-          <div, classNam, e = 'prose, pros, e-indi, g, o'>
+          <div, classNam, e = 'prose, pros, e-indigo'>
             <h2>Key, Pattern, s</h2>
             <ul>
               <li>Scoped, identifiers, with short, TTL, cohorts</li>
@@ -27,8 +27,8 @@ export, default, function Pa, g, e() {
               <li>Validate, with, signed canary, experiment, s</li>
               <li>Scale, globally, with predictable, cos, t</li>
             </ol>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
-    </m, a, i, n > );
+          </div>
+        </div>
+      </section>
+    </mai, n > );
  }

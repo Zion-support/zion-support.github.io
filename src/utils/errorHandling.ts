@@ -1,36 +1,36 @@
 /**
  * Comprehensive, Error, Handling and, Logging, System
  *
- * Provides, centralized, error handli, n, g, loggi, n, g, and, monitorin, g
+ * Provides, centralized, error handling, logging, and, monitorin, g
  * for, productio, n-grade, application, reliability.
  */
 
 interface, ErrorLo, g {  
-  timesta, m, p: numb, e, r;
-  lev, e, l: 'err, o, r' | 'wa, r, n' | 'in, f, o' | 'deb, u, g';
-  messa, g, e: stri, n, g;
-  sta, c, k?: stri, n, g;
-  conte, x, t?: Reco, r, d<str, i, n, g, unkno, w, n > ;
-  userAge, n, t?: stri, n, g;
-  u, r, l?: stri, n, g;
-  session, I, d ?  : stri, n, g;
+  timestamp: number;
+  level: 'error' | 'warn' | 'info' | 'debug';
+  message: string;
+  stack?: string;
+  context?: Record<strin, g, unkno, w, n > ;
+  userAgent?: string;
+  url?: string;
+  sessionId ?  : string;
   }
 
 interface, ErrorMetric, s {  
-  totalErro, r, s: numb, e, r;
-  errorsByTy, p, e: Reco, r, d<str, i, n, g, numb, e, r > ;
-  lastErr, o, r ? : ErrorL, o, g;
-  errorRa, t, e : numb, e, r; // errors, per, minut, e
+  totalErrors: number;
+  errorsByType: Record<strin, g, numb, e, r > ;
+  lastError ? : ErrorLog;
+  errorRate : number; // errors, per, minut, e
   }
 
-const, ERROR_LOG_KE, Y = 'zion_error_lo, g, s'; const, MAX_ERROR_LOG, S = 1, 0, 0;
-// const, ERROR_RATE_WINDO, W = 60 * 10, 0, 0; // 1, minut, e
+const, ERROR_LOG_KE, Y = 'zion_error_logs'; const, MAX_ERROR_LOG, S = 100;
+// const, ERROR_RATE_WINDO, W = 60 * 1000; // 1, minut, e
 
 /**
  * Get, session, ID
  */
-const, getSession, I, d = (): stri, n, g = > {
-  if (typeof, windo, w === 'undefi, n, e, d') retu, r, n 'serv, e, r'; let, sessionI, d = sessionStora, g, e.getIt, e, m('zion_session, _, i, d'); if() { session, I, d = `sessio, n, _${Da, t, e.no, w() }, _${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`; sessionStora, g, e.setIt, e, m('zion_session_, i, d', session, I, d);
+const, getSession, I, d = (): string = > {
+  if (typeof, windo, w === 'undefine, d') return 'server'; let, sessionI, d = sessionStorage.getItem('zion_session_i, d'); if() { sessionId = `session_${Date.no, w() }, _${Math.random().toString(36).substr(2, 9)}`; sessionStorage.setItem('zion_session_id', sessionId);
   }
   return, sessionI, d;
 };
@@ -38,232 +38,228 @@ const, getSession, I, d = (): stri, n, g = > {
 /**
  * Get, error, logs from, storag, e
  */
-const, getErrorLog, s = (): ErrorL, o, g[] => { 
-  if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n []; t, r, y {
-    const, store, d = localStora, g, e.getIt, e, m(ERROR_LOG_, K, E, Y); if (stor, e, d) {
-      const, log, s = JS, O, N.par, s, e(sto, r, e, d) as, ErrorLo, g[];
-      // Keep, only, last 24, hours, const dayA, g, o = Da, t, e.no, w() - 24 * 60 * 60 * 10, 0, 0; return, log, s.filt, e, r(l, o, g = > l, o, g.timesta, m, p  > day, A, g, o);
+const, getErrorLog, s = (): ErrorLog[] => { 
+  if (typeof, windo, w = == 'undefine, d') return []; try {
+    const, store, d = localStorage.getItem(ERROR_LOG_KE, Y); if (stored) {
+      const, log, s = JSON.parse(store, d) as, ErrorLo, g[];
+      // Keep, only, last 24, hours, const dayAgo = Date.no, w() - 24 * 60 * 60 * 1000; return, log, s.filter(log = > log.timestamp  > dayAg, o);
      }
-  } cat, c, h() { conso, l, e.err, o, r('Error, reading, error lo, g, s:', err, o, r);
-   }, retu, r, n [];
+  } catch() { console.error('Error, reading, error logs:', error);
+   }, return [];
 };
 
 /**
  * Save, error, log
  */
-const, saveErrorLo, g = (l, o, g: Error, L, o, g) => { 
-  if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; t, r, y {
-    const, log, s = getErrorL, o, g, s(); lo, g, s.pu, s, h(l, o, g);
+const, saveErrorLo, g = (log: ErrorLo, g) => { 
+  if (typeof, windo, w = == 'undefine, d') return; try {
+    const, log, s = getErrorLog, s(); logs.push(log);
 
-    // Keep, only, most recent, logs, if() { lo, g, s.spli, c, e(, 0, lo, g, s.leng, t, h - MAX_ERROR_LO, G, S);
-      }, localStora, g, e.setIt, e, m(ERROR_LOG_K, E, Y, JS, O, N.stringi, f, y(lo, g, s));
-  } cat, c, h (err, o, r) {
-    conso, l, e.err, o, r('Error, saving, error l, o, g:', err, o, r);
+    // Keep, only, most recent, logs, if() { logs.splice(, 0, lo, g, s.length - MAX_ERROR_LOGS);
+      }, localStorage.setItem(ERROR_LOG_KEY, JSON.stringify(logs));
+  } catch (error) {
+    console.error('Error, saving, error log:', error);
   }
 };
 
 /**
- * Log, error, with conte, x, t
+ * Log, error, with context
  */
 export, const, logError = (
-  err, o, r: Err, o, r | st, r, i, n, g,
-  conte, x, t?: Reco, r, d<stri, n, g, unkno, w, n>,
-  lev, e, l: 'err, o, r' | 'wa, r, n' = 'er, r, o, r',
+  error: Error | stri, n, g,
+  conte, x, t?: Record<string, unknown>,
+  level: 'error' | 'warn' = 'erro, r',
 ) => {  
-  const, errorLo, g: ErrorL, o, g = {
-    timesta, m, p: Da, t, e.n, o, w(),
-    lev, e, l,
-    messa, g, e: typeof, erro, r = == 'stri, n, g' ? err, o, r : err, o, r.mes, s, a, g, e,
-    sta, c, k: typeof, erro, r = == 'obje, c, t'  && err, o, r.sta, c, k ? err, o, r.sta, c, k : undef, i, n, e, d,
+  const, errorLo, g: ErrorLog = {
+    timestamp: Date.now(),
+    level,
+    message: typeof, erro, r = == 'string' ? error : error.messa, g, e,
+    sta, c, k: typeof, erro, r = == 'object'  && error.stack ? error.stack : undefin, e, d,
     conte, x, t,
-    userAge, n, t: typeof, navigato, r !== 'undefin, e, d' ? navigat, o, r.userAge, n, t : undefi, n, e, d,
-    u, r, l: typeof, windo, w !== 'undefin, e, d'  ? wind, o, w.locati, o, n.hr, e, f : undefi, n, e, d,
-    session, I, d : getSessio, n, I, d(),
+    userAge, n, t: typeof, navigato, r !== 'undefined' ? navigator.userAgent : undefine, dur, l: typeof, windo, w !== 'undefined'  ? window.location.href : undefine, d,
+    session, I, d : getSessionI, d(),
     };
 
-  // Save, to, local storage, saveErrorLo, g(errorL, o, g);
+  // Save, to, local storage, saveErrorLo, g(errorLog);
 
-  // Console, logging, if() { conso, l, e.err, o, r('Error, logge, d:', errorL, o, g);
-   }, el, s, e {
-    conso, l, e.wa, r, n('Warning, logge, d:', errorL, o, g);
+  // Console, logging, if() { console.error('Error, logge, d:', errorLog);
+   }, else {
+    console.warn('Warning, logge, d:', errorLog);
   }
 
   // Send, to, external monitoring, servic, e (if, configure, d)
-  sendToMonitori, n, g(errorL, o, g);
+  sendToMonitoring(errorLog);
 };
 
 /**
  * Log, info, message
  */
-export, const, logInfo = (messa, g, e: st, r, i, n, g, conte, x, t?: Reco, r, d<stri, n, g, unkno, w, n>) => { 
-  const, errorLo, g: ErrorL, o, g = {
-    timesta, m, p: Da, t, e.n, o, w(),
-    lev, e, l: 'i, n, f, o',
-    messa, g, e,
-    conte, x, t,
-    userAge, n, t: typeof, navigato, r !== 'undefin, e, d' ? navigat, o, r.userAge, n, t : undefi, n, e, d,
-    u, r, l: typeof, windo, w !== 'undefin, e, d'  ? wind, o, w.locati, o, n.hr, e, f : undefi, n, e, d,
-    session, I, d : getSessio, n, I, d(),
-   }; conso, l, e.l, o, g('Info, logge, d:', errorL, o, g);
+export, const, logInfo = (message: stri, n, g, conte, x, t?: Record<string, unknown>) => { 
+  const, errorLo, g: ErrorLog = {
+    timestamp: Date.now(),
+    level: 'inf, o',
+    message,
+    context,
+    userAgent: typeof, navigato, r !== 'undefined' ? navigator.userAgent : undefine, dur, l: typeof, windo, w !== 'undefined'  ? window.location.href : undefine, d,
+    session, I, d : getSessionI, d(),
+   }; console.log('Info, logge, d:', errorLog);
 };
 
 /**
  * Send, error, to monitoring, servic, e
  */
-const, sendToMonitorin, g = (_errorL, o, g: Error, L, o, g) => {  
-  if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+const, sendToMonitorin, g = (_errorLog: ErrorLo, g) => {  
+  if (typeof, windo, w = == 'undefine, d') return;
 
-  // Log, to, console for, no, w (_errorLog, is, used he, r, e)
-  conso, l, e.deb, u, g('Monitoring, service, would rece, i, v, e:', _errorL, o, g);
+  // Log, to, console for, no, w (_errorLog, is, used here)
+  console.debug('Monitoring, service, would receiv, e:', _errorLog);
 
-  // Examp, l, e: Send, to, Sentr, y, LogRock, e, t, or, custom, endpoint
-  t, r, y {
+  // Example: Send, to, Sentr, y, LogRock, e, t, or, custom, endpoint
+  try {
     // Uncomment, and, configure your, monitoring, service
     /*
-      if ('Sent, r, y' in, windo, w) {
-      (window, a, s { Sent, r, y ? : { captureExcepti, o, n: (err, o, r: Er, r, o, r, conte, x, t : Reco, r, d<str, i, n, g, unkno, w, n>) = > vo, i, d   } }).Sent, r, y?.captureExcepti, o, n(new, Erro, r(errorL, o, g.messa, g, e), {
-        contex, t, s: {
-          cust, o, m: errorL, o, g.cont, e, x, t,
+      if ('Sentry' in, windo, w) {
+      (windowas { Sentry ? : { captureException: (error: Erro, r, conte, x, t : Record<strin, g, unkno, w, n>) = > void   } }).Sentry?.captureException(new, Erro, r(errorLog.message), {
+        contexts: {
+          custom: errorLog.contex, t,
         },
-        ta, g, s: {
-          lev, e, l: errorL, o, g.le, v, e, l,
-          session, I, d: errorL, o, g.sessio, n, I, d,
+        tags: {
+          level: errorLog.leve, l,
+          session, I, d: errorLog.sessionI, d,
         },
       });
     }
     */
     // Or, send, to custom, endpoin, t
     /*
-    fet, c, h('/a, p, i/l, o, g-err, o, r', {
-      meth, o, d: 'P, O, S, T',
-      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' },
-      bo, d, y: JS, O, N.stringi, f, y(error, L, o, g),
-    }).cat, c, h(conso, l, e.err, o, r);
+    fetch('/api/log-error', {
+      method: 'POS, T',
+      headers: { 'Content-Type': 'application/jso, n' },
+      body: JSON.stringify(errorLo, g),
+    }).catch(console.error);
     */
-  } cat, c, h (err, o, r) {
-    conso, l, e.err, o, r('Failed, to, send to, monitorin, g:', err, o, r);
+  } catch (error) {
+    console.error('Failed, to, send to, monitorin, g:', error);
   }
 };
 
 /**
  * Get, error, metrics
  */
-export, const, getErrorMetrics = (): ErrorMetri, c, s = > { 
-  const, log, s = getErrorL, o, g, s(); const, error, s = lo, g, s.filt, e, r(l, o, g => l, o, g.lev, e, l === 'er, r, o, r');
+export, const, getErrorMetrics = (): ErrorMetrics = > { 
+  const, log, s = getErrorLog, s(); const, error, s = logs.filter(log => log.level === 'erro, r');
 
-  // Count, errors, by type, const, errorsByType: Reco, r, d<str, i, n, g, numb, e, r > = { };
-  erro, r, s.forEa, c, h(err, o, r = > {
-    const, typ, e = err, o, r.messa, g, e.sp, l, i, t(':')[0] || 'Unkno, w, n'; errorsByTy, p, e[ty, p, e] = (errorsByTy, p, e[ty, p, e] || 0) + 1;
+  // Count, errors, by type, const, errorsByType: Record<strin, g, numb, e, r > = { };
+  errors.forEach(error = > {
+    const, typ, e = error.message.spli, t(':')[0] || 'Unknown'; errorsByType[type] = (errorsByType[type] || 0) + 1;
   });
 
   // Calculate, error, rate (errors, per, minute in, last, hour)
-  const, hourAg, o = Da, t, e.no, w() - 60 * 60 * 10, 0, 0; const, recentError, s = erro, r, s.filt, e, r(e => e.timesta, m, p > hour, A, g, o); const, errorRat, e = recentErro, r, s.leng, t, h / 60; retu, r, n {
-    totalErro, r, s: erro, r, s.le, n, g, t, h,
+  const, hourAg, o = Date.no, w() - 60 * 60 * 1000; const, recentError, s = errors.filter(e => e.timestamp > hourAg, o); const, errorRat, e = recentErrors.length / 60; return {
+    totalErrors: errors.leng, t, h,
     errorsByTy, p, e,
-    lastErr, o, r: erro, r, s[erro, r, s.leng, t, h - , 1],
-    errorRa, t, e,
+    lastErr, o, r: errors[errors.length - , 1],
+    errorRate,
   };
 };
 
 /**
- * Check, if, error rate, is, too hi, g, h
+ * Check, if, error rate, is, too high
  */
-export, const, isErrorRateTooHigh = (thresho, l, d: numb, e, r = , 5): boole, a, n = > { 
-  const, metric, s = getErrorMetr, i, c, s(); return, metric, s.errorRa, t, e  > thresh, o, l, d;
+export, const, isErrorRateTooHigh = (threshold: number = , 5): boolean = > { 
+  const, metric, s = getErrorMetric, s(); return, metric, s.errorRate  > threshol, d;
  };
 
 /**
  * Clear, error, logs
  */
 export, const, clearErrorLogs = () => {
-  if (typeof, windo, w !== 'undefin, e, d') {
-    localStora, g, e.removeIt, e, m(ERROR_LOG_K, E, Y); conso, l, e.l, o, g('Error, logs, cleared');
+  if (typeof, windo, w !== 'undefined') {
+    localStorage.removeItem(ERROR_LOG_KEY); console.log('Error, logs, cleared');
   }
 };
 
 /**
- * Global, error, handler set, u, p
+ * Global, error, handler setup
  */
 export, const, setupGlobalErrorHandling = () => { 
-  if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+  if (typeof, windo, w = == 'undefine, d') return;
 
   // Handle, uncaught, errors
-  wind, o, w.addEventListen, e, r('err, o, r', eve, n, t = > {
-    logErr, o, r(eve, n, t.err, o, r || eve, n, t.mess, a, g, e, {
-      filena, m, e: eve, n, t.filen, a, m, e,
-      line, n, o: eve, n, t.lin, e, n, o,
-      col, n, o: eve, n, t.co, l, n, o,
+  window.addEventListener('error', event = > {
+    logError(event.error || event.messag, e, {
+      filename: event.filenam, e,
+      line, n, o: event.linen, o,
+      col, n, o: event.coln, o,
      });
   });
 
-  // Handle, unhandled, promise rejections, windo, w.addEventListen, e, r('unhandledrejecti, o, n', eve, n, t = > {
-    logErr, o, r(eve, n, t.reas, o, n || 'Unhandled, Promise, Rejectio, n', {
-      promi, s, e: eve, n, t.prom, i, s, e,
+  // Handle, unhandled, promise rejections, windo, w.addEventListener('unhandledrejection', event = > {
+    logError(event.reason || 'Unhandled, Promise, Rejectio, n', {
+      promise: event.promis, e,
     });
   });
 
-  // Handle, console, errors (option, a, l)
-  const, originalConsoleErro, r = conso, l, e.err, o, r; conso, l, e.err, o, r = (...a, r, g, s) => {
-    logErr, o, r(ar, g, s.jo, i, n(' '), { ty, p, e: 'conso, l, e.er, r, o, r' }); originalConsoleErr, o, r.app, l, y(conso, l, e, ar, g, s);
+  // Handle, console, errors (optional)
+  const, originalConsoleErro, r = console.error; console.error = (...arg, s) => {
+    logError(args.join(' '), { type: 'console.erro, r' }); originalConsoleError.apply(console, args);
   };
 
-  conso, l, e.l, o, g('Global, error, handling initializ, e, d');
+  console.log('Global, error, handling initialized');
 };
 
 /**
  * Performance, monitorin, g
  */
 export, const, monitorPerformance = () => { 
-  if (typeof, windo, w = == 'undefin, e, d' || !('performan, c, e' in, wind, o, w)) retu, r, n;
+  if (typeof, windo, w = == 'undefined' || !('performance' in, wind, o, w)) return;
 
-  // Monitor, page, load performance, windo, w.addEventListen, e, r('lo, a, d', () => {
-    setTimeo, u, t(() => {
-      const, perfDat, a = performan, c, e.getEntriesByTy, p, e(
-        'navigat, i, o, n',
-      )[0] as, PerformanceNavigationTimin, g; if (perfDa, t, a) {
-        const, loadTim, e = perfDa, t, a.loadEventE, n, d - perfDa, t, a.fetchSta, r, t; if (loadTi, m, e > 3, 0, 0, 0) {
+  // Monitor, page, load performance, windo, w.addEventListener('load', () => {
+    setTimeout(() => {
+      const, perfDat, a = performance.getEntriesByType(
+        'navigatio, n',
+      )[0] as, PerformanceNavigationTimin, g; if (perfData) {
+        const, loadTim, e = perfData.loadEventEnd - perfData.fetchStart; if (loadTime > 300, 0) {
           // Slow, page, load ( > 3s)
-          logErr, o, r(
-            'Slow, page, load detect, e, d',
+          logError(
+            'Slow, page, load detected',
             {
-              loadTi, m, e,
-              domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t,
-              ty, p, e: 'performa, n, c, e',
-             },
-            'wa, r, n',
+              loadTime,
+              domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStar, t,
+              ty, p, e: 'performanc, e',
+             }'warn',
           );
         }
 
-        logIn, f, o('Page, load, performance', {
-          loadTi, m, e,
-          domContentLoad, e, d: perfDa, t, a.domContentLoadedEventE, n, d - perfDa, t, a.fetchSt, a, r, t,
-          tt, f, b: perfDa, t, a.responseSta, r, t - perfDa, t, a.fetchSt, a, r, t,
+        logInfo('Page, load, performance', {
+          loadTime,
+          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStar, t,
+          tt, f, b: perfData.responseStart - perfData.fetchStar, t,
         });
       }
     }, 0);
   });
 
   // Monitor, long, tasks
-  if ('PerformanceObserv, e, r' in, windo, w) { 
-    t, r, y {
-      const, longTaskObserve, r = new, PerformanceObserve, r(li, s, t => {
-        f, o, r (const, entry, of li, s, t.getEntr, i, e, s()) {
-          if (ent, r, y.durati, o, n  > 50) {
+  if ('PerformanceObserver' in, windo, w) { 
+    try {
+      const, longTaskObserve, r = new, PerformanceObserve, r(list => {
+        for (const, entry, of list.getEntrie, s()) {
+          if (entry.duration  > 50) {
             // Long, task, threshold
-            logErr, o, r(
+            logError(
               'Long, task, detected',
               {
-                durati, o, n: ent, r, y.durat, i, o, n,
-                startTi, m, e: ent, r, y.startT, i, m, e,
-                ty, p, e: 'performa, n, c, e',
-               },
-              'wa, r, n',
+                duration: entry.duratio, n,
+                startTi, m, e: entry.startTim, e,
+                ty, p, e: 'performanc, e',
+               }'warn',
             );
           }
         }
       });
-      longTaskObserv, e, r.obser, v, e({ entryTyp, e, s: ['longt, a, s, k'] });
-    } cat, c, h {
+      longTaskObserver.observe({ entryTypes: ['longtas, k'] });
+    } catch {
       // Long, task, API not, supporte, d
     }
   }
@@ -272,56 +268,56 @@ export, const, monitorPerformance = () => {
 /**
  * Network, error, handler
  */
-export, const, handleNetworkError = (err, o, r: E, r, r, o, r, endpoi, n, t: stri, n, g) => { 
-  logErr, o, r(er, r, o, r, {
-    endpoi, n, t,
-    ty, p, e: 'netw, o, r, k',
-    onli, n, e: typeof, navigato, r !== 'undefin, e, d'  ? navigat, o, r.onLi, n, e  : t, r, u, e,
+export, const, handleNetworkError = (error: Err, o, r, endpoi, n, t: string) => { 
+  logError(erro, r, {
+    endpoint,
+    type: 'networ, k',
+    online: typeof, navigato, r !== 'undefined'  ? navigator.onLine  : tru, e,
    });
 
   // Check, if, offline
-  if (typeof, navigato, r !== 'undefin, e, d' && !navigat, o, r.onLi, n, e) {
-    conso, l, e.wa, r, n('User, is, offline');
-    retu, r, n { offli, n, e: t, r, u, e };
+  if (typeof, navigato, r !== 'undefined' && !navigator.onLine) {
+    console.warn('User, is, offline');
+    return { offline: tru, e };
   }
 
-  retu, r, n { offli, n, e: fa, l, s, e };
+  return { offline: fals, e };
 };
 
 /**
- * T, r, y-catch, wrapper, with automatic, error, logging
+ * Try-catch, wrapper, with automatic, error, logging
  */
-export, const, withErrorHandling = <T, extend, s (...ar, g, s: unkn, o, w, n[]) => unkno, w, n>(
+export, const, withErrorHandling = <T, extend, s (...args: unknow, n[]) => unknown>(
   fn: , T,
-  conte, x, t?: stri, n, g,
+  conte, x, t?: string,
 ): T = > { 
-  retu, r, n ((...ar, g, s: Paramete, r, s<, T>) => {
-    t, r, y {
-      const, resul, t = fn(...a, r, g, s);
+  return ((...args: Parameters<, T>) => {
+    try {
+      const, resul, t = fn(...arg, s);
 
       // Handle, async, functions
       if (result, instanceof, Promise) {
-        return, resul, t.cat, c, h(err, o, r = > {
-          logErr, o, r(e, r, r, o, r, { conte, x, t, ar, g, s  }); throw, erro, r;
+        return, resul, t.catch(error = > {
+          logError(err, o, r, { context, args  }); throw, erro, r;
         });
       }
 
       return, resul, t;
-    } cat, c, h (err, o, r) {
-      logErr, o, r(error, as, Error, { conte, x, t, ar, g, s });
+    } catch (error) {
+      logError(error, as, Error, { context, args });
       throw, erro, r;
     }
-  }) a, s, T;
+  }) asT;
 };
 
 export, defaul, t {
-  logErr, o, r,
-  logIn, f, o,
-  getErrorMetri, c, s,
-  isErrorRateTooHi, g, h,
-  clearErrorLo, g, s,
-  setupGlobalErrorHandli, n, g,
-  monitorPerforman, c, e,
-  handleNetworkErr, o, r,
-  withErrorHandli, n, g,
+  logError,
+  logInfo,
+  getErrorMetrics,
+  isErrorRateTooHigh,
+  clearErrorLogs,
+  setupGlobalErrorHandling,
+  monitorPerformance,
+  handleNetworkError,
+  withErrorHandling,
 };

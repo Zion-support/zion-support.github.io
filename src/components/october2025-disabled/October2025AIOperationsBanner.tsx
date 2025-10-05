@@ -1,126 +1,126 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+import { Link } from "react-router-dom";
 const, October2025AIOperationsBanne, r = () => {
   const, newArticle, s = [
     {
-      tit, l, e: "AI-Powered, DevSecOps, Automati, o, n",
-      descripti, o, n: "Achieve, 9, 9.2% vulnerability, detection, with 87% au, t, o-remediation, and, 847% deployment, accelerati, o, n",
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-devseco, p, s-automati, o, n-revolut, i, o, n",
-      ic, o, n: Shi, e, l, d,
-      sta, t, s: "99.2% Detecti, o, n | , 7,7, 4, 7% R, O, I",
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0"
+      title: "AI-Powered, DevSecOps, Automati, o, n",
+      description: "Achieve99.2% vulnerability, detection, with 87% auto-remediation, and, 847% deployment, accelerati, o, n",
+      link: "/blog/ai-2025-oct-01-devsecops-automation-revolutio, n",
+      icon: Shiel, d,
+      sta, t, s: "99.2% Detection | , 774, 7% ROI",
+      color: "from-blue-500to-cyan-50, 0"
     },
     {
-      tit, l, e: "Autonomous, Cloud, Cost Optimizat, i, o, n",
-      descripti, o, n: "Sa, v, e $12, 7, M+ annually, with, 67% cost, reduction, and 99.3% optimization, accura, c, y",
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-clo, u, d-co, s, t-optimizat, i, o, n",
-      ic, o, n: TrendingD, o, w, n,
-      sta, t, s: "67% Savin, g, s | 1, 8,2, 8, 7% R, O, I",
-      col, o, r: "fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0"
+      title: "Autonomous, Cloud, Cost Optimizatio, n",
+      description: "Save $127M+ annually, with, 67% cost, reduction, and 99.3% optimization, accura, c, y",
+      link: "/blog/ai-2025-oct-01-autonomous-cloud-cost-optimizatio, n",
+      icon: TrendingDow, n,
+      sta, t, s: "67% Savings | 182, 8, 7% ROI",
+      color: "from-green-500to-emerald-50, 0"
     },
     {
-      tit, l, e: "Re, a, l-Time, AI, Observability Platf, o, r, m",
-      descripti, o, n: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impac, t",
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-re, a, l-ti, m, e-ai-observabili, t, y-platf, o, r, m",
-      ic, o, n: Activ, i, t, y,
-      sta, t, s: "98.7% Preventi, o, n | 1, 7,4, 8, 8% R, O, I",
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
+      title: "Real-Time, AI, Observability Platfor, m",
+      description: "99.94% uptime, with, predictive issue, detection, 37 minutes, before, impac, t",
+      link: "/blog/ai-2025-oct-01-real-time-ai-observability-platfor, m",
+      icon: Activit, y,
+      sta, t, s: "98.7% Prevention | 174, 8, 8% ROI",
+      color: "from-purple-500to-pink-50, 0"
     }
-  ]; retu, r, n (
-    <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-sla, t, e-900, p, y-16, p, x-4, s, m: px-6, l, g:px-8, relative, overflow-hidd, e, n">
+  ]; return (
+    <div, classNam, e = "bg-gradient-to-br, fro, m-slate-900, vi, a-blue-900to-slate-900py-16px-4sm: px-6lg:px-8, relative, overflow-hidden">
       {/* Animated, background, elemen, t, s */}
       <div, classNam, e = "absolute, inse, t-0, opacit, y-20">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0" />
-      </d, i, v>
-      <div, classNam, e="m, a, x-w-7xl, m, x-auto, relative, z-10">
-        {/* Head, e, r */}
-        <div, classNam, e="te, x, t-center, m, b-12">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, border, border-bl, u, e-4, 0, 0/30, m, b-4">
-            <Activity, classNam, e="w-4 h-4, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-bl, u, e-300, tex, t-sm, fon, t-semibo, l, d">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-96h-96bg-blue-500, rounde, d-full, filter, blur-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-96h-96bg-purple-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-1000" />
+      </div>
+      <div, classNam, e="max-w-7xlmx-auto, relative, z-10">
+        {/* Header */}
+        <div, classNam, e="text-centermb-12">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-2px-4py-2bg-blue-500/20, rounde, d-full, border, border-blue-400/30mb-4">
+            <Activity, classNam, e="w-4 h-4, tex, t-blue-400, animat, e-pulse" />
+            <span, classNam, e="text-blue-300, tex, t-sm, fon, t-semibold">
               OCTOBER, 202, 5 - BREAKTHROUGH, AI, OPERATIONS
-            </sp, a, n>
-          </d, i, v>
-          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4">
-            Transform, Your, Enterprise Operatio, n, s
+            </span>
+          </div>
+          <h2, classNam, e="text-4xlmd: text-5xl, fon, t-bold, tex, t-whitemb-4">
+            Transform, Your, Enterprise Operations
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o">
+          <p, classNam, e="text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto">
             Three, revolutionary, platforms delivering, unprecedented, R, O, I, securi, t, y, and, operational, excellence
           </p>
-        </d, i, v>
+        </div>
         {/* Articles, Gri, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > {
-            const, Ico, n = artic, l, e.ic, o, n; retu, r, n (
-              <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } classNa, m, e="group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-whi, t, e/30, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-6mb-8">
+          { newArticles.map((artic, l, e, ind, e, x) = > {
+            const, Ico, n = article.icon; return (
+              <Link, ke, y = { inde, x  }, to={ article.link } className="group, relative, bg-white/5, backdro, p-blur-sm, rounde, d-2xlp-6, border, border-white/10, hove, r: border-white/30, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl"
               >
                 {/* Gradient, over, l, a, y */}
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
-                {/* Conte, n, t */}
-                <div, classNam, e = "relativ, e, z-10" > <div, classNam, e = { `w-1, 2, h-12, rounde, d-xl, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
-                    <Icon, classNam, e = "w-6 h-6, tex, t-whi, t, e" />
-                  </d, i, v>
-                  {/* Tit, l, e */}
-                  <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
-                    {artic, l, e.t, i, t, l, e}
+                <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${article.colo, r }, opacity-0, grou, p-hover: opacity-10, rounde, d-2xl, transitio, n-opacity, duratio, n-30, 0`} />
+                {/* Content */}
+                <div, classNam, e = "relativez-10" > <div, classNam, e = { `w-12h-12, rounde, d-xlbg-gradient-to-br ${article.colo, r }, flex, item, s-center, justif, y-centermb-4, grou, p-hover: scale-110, transitio, n-transform, duratio, n-30, 0`}>
+                    <Icon, classNam, e = "w-6 h-6, tex, t-white" />
+                  </div>
+                  {/* Title */}
+                  <h3, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover: text-blue-300, transitio, n-colors">
+                    {article.tit, l, e}
                   </h3>
-                  {/* Descripti, o, n */}
-                  <p, classNam, e = "te, x, t-gr, a, y-400, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-                    {artic, l, e.descripti, o, n}
+                  {/* Description */}
+                  <p, classNam, e = "text-gray-400, tex, t-smmb-4, lin, e-clamp-3">
+                    {article.description}
                   </p>
-                  {/* Sta, t, s */}
-                  <div, classNam, e="flex, item, s-center, justif, y-between, m, b-4">
-                    <span, classNam, e="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-400, b, g-gre, e, n-4, 0, 0/10, p, x-3, p, y-1, rounde, d-fu, l, l">
-                      {artic, l, e.sta, t, s}
-                    </sp, a, n>
-                  </d, i, v>
-                  {/* C, T, A */}
-                  <div, classNam, e="flex, item, s-center, tex, t-bl, u, e-400, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s">
-                    <span, classNam, e="te, x, t-sm, fon, t-semibold, m, r-2">Read, Full, Guide</sp, a, n>
-                    <ArrowRight, classNam, e="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-                  </d, i, v>
-                </d, i, v>
-              </Li, n, k>
+                  {/* Stats */}
+                  <div, classNam, e="flex, item, s-center, justif, y-betweenmb-4">
+                    <span, classNam, e="text-xs, fon, t-semibold, tex, t-green-400bg-green-400/10px-3py-1, rounde, d-full">
+                      {article.stats}
+                    </span>
+                  </div>
+                  {/* CTA */}
+                  <div, classNam, e="flex, item, s-center, tex, t-blue-400, grou, p-hover: text-blue-300, transitio, n-colors">
+                    <span, classNam, e="text-sm, fon, t-semiboldmr-2">Read, Full, Guide</span>
+                    <ArrowRight, classNam, e="w-4 h-4, grou, p-hover:translate-x-1, transitio, n-transform" />
+                  </div>
+                </div>
+              </Link>
             );
           })}
-        </d, i, v>
+        </div>
         {/* Bottom, CT, A */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, classNam, e="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-cent, e, r">
-            <Link, t, o="/bl, o, g"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-bl, u, e-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-400, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, grou, p"
+        <div, classNam, e = "text-center">
+          <div, classNam, e="inline-flex, fle, x-colsm: flex-row, ga, p-4, item, s-center">
+            <Linkto="/blog"
+              className="inline-flex, item, s-center, ga, p-2px-8py-4bg-gradient-to-r, fro, m-blue-600to-blue-500, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:from-blue-500, hove, r:to-blue-400, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-blue-500/50, grou, p"
             >
-              <sp, a, n>Explore, All, AI Insigh, t, s</sp, a, n>
-              <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </Li, n, k>
-            <Link, t, o="/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, border, border-whi, t, e/20"
+              <span>Explore, All, AI Insights</span>
+              <ArrowRight, classNam, e="w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform" />
+            </Link>
+            <Linkto="/contact"
+              className="inline-flex, item, s-center, ga, p-2px-8py-4bg-white/10, backdro, p-blur-sm, tex, t-white, fon, t-bold, rounde, d-xl, hove, r:bg-white/20, transitio, n-all, duratio, n-300, border, border-white/20"
             >
-              <sp, a, n>Schedule, Expert, Consultation</sp, a, n>
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
+              <span>Schedule, Expert, Consultation</span>
+            </Link>
+          </div>
+        </div>
         {/* Trust, Indicat, o, r, s */}
-        <div, classNam, e = "mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r">
-          <d, i, v>
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.2%</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Security, Detectio, n</d, i, v>
-          </d, i, v>
-          <d, i, v>
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">67%</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Cost, Reductio, n</d, i, v>
-          </d, i, v>
-          <d, i, v>
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.94%</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">System, Uptim, e</d, i, v>
-          </d, i, v>
-          <d, i, v>
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$12, 7, M+</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">Annual, Saving, s</d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        <div, classNam, e = "mt-12, grid, grid-cols-2md: grid-cols-4, ga, p-6, tex, t-center">
+          <div>
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">99.2%</div>
+            <div, classNam, e="text-sm, tex, t-gray-400">Security, Detectio, n</div>
+          </div>
+          <div>
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">67%</div>
+            <div, classNam, e="text-sm, tex, t-gray-400">Cost, Reductio, n</div>
+          </div>
+          <div>
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">99.94%</div>
+            <div, classNam, e="text-sm, tex, t-gray-400">System, Uptim, e</div>
+          </div>
+          <div>
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">$127M+</div>
+            <div, classNam, e="text-sm, tex, t-gray-400">Annual, Saving, s</div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025AIOperationsBanner;

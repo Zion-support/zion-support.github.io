@@ -1,428 +1,428 @@
 /**
  * Enhanced, Analytics, System
- * Tracks, user, behavior, performan, c, e, and, business, metrics
+ * Tracks, user, behavior, performance, and, business, metrics
  */
 
-// impo, r, t { getPerformanceOptimiz, e, r } fr, o, m './performanceOptimiz, e, r';
+// import { getPerformanceOptimizer  } from './performanceOptimizer';
 
 interface, PageVie, w {
-  pa, t, h: stri, n, g;
-  tit, l, e: stri, n, g;
-  timesta, m, p: numb, e, r;
-  referr, e, r: stri, n, g;
-  userAge, n, t: str, i, n, g;
+  path: string;
+  title: string;
+  timestamp: number;
+  referrer: string;
+  userAgent: strin, g;
 }
 
 interface, UserEven, t { 
-  catego, r, y: stri, n, g;
-  acti, o, n: stri, n, g;
-  lab, e, l?: stri, n, g;
-  val, u, e ? : numb, e, r;
-  timesta, m, p : num, b, e, r;
+  category: string;
+  action: string;
+  label?: string;
+  value ? : number;
+  timestamp : numbe, r;
  }
 
 interface, ConversionEven, t {  
-  ty, p, e: 'le, a, d' | 'sign, u, p' | 'purcha, s, e' | 'downlo, a, d' | 'conta, c, t';
-  val, u, e: numb, e, r;
-  metada, t, a ? : Reco, r, d<str, i, n, g, a, n, y > ;
-  timesta, m, p : num, b, e, r;
+  type: 'lead' | 'signup' | 'purchase' | 'download' | 'contact';
+  value: number;
+  metadata ? : Record<strin, gan, y > ;
+  timestamp : numbe, r;
   }
 
 interface, SessionDat, a {
-  session, I, d: stri, n, g;
-  startTi, m, e: numb, e, r;
-  pageVie, w, s: PageVi, e, w[];
-  even, t, s: UserEve, n, t[];
-  conversio, n, s: ConversionEve, n, t[];
-  performanceMetri, c, s: an, y;
+  sessionId: string;
+  startTime: number;
+  pageViews: PageView[];
+  events: UserEvent[];
+  conversions: ConversionEvent[];
+  performanceMetrics: an, y;
 }
 
 class, EnhancedAnalytic, s {
-  private, sessio, n: SessionDa, t, a;
-  private, isInitialize, d = fal, s, e; private, performanceOptimize, r: a, n, y;
+  private, sessio, n: SessionData;
+  private, isInitialize, d = false; private, performanceOptimize, r: any;
 
-  construc, t, o, r() {
-    th, i, s.sessi, o, n = th, i, s.createNewSess, i, o, n(); if (typeof, windo, w !== 'undefin, e, d') {
-      th, i, s.performanceOptimiz, e, r = getPerformanceOptimi, z, e, r(); th, i, s.initial, i, z, e();
+  constructo, r() {
+    this.session = this.createNewSessio, n(); if (typeof, windo, w !== 'undefined') {
+      this.performanceOptimizer = getPerformanceOptimize, r(); this.initializ, e();
     }
   }
 
   /**
    * Initialize, analytics, system
    */
-  private, initializ, e(): vo, i, d {
-    if (th, i, s.isInitializ, e, d) retu, r, n;
+  private, initializ, e(): void {
+    if (this.isInitialized) return;
 
     // Track, page, views
-    th, i, s.trackPageVi, e, w();
+    this.trackPageView();
 
     // Setup, event, listeners
-    th, i, s.setupEventListene, r, s();
+    this.setupEventListeners();
 
     // Track, session, end
-    th, i, s.setupSessionTracki, n, g();
+    this.setupSessionTracking();
 
     // Periodic, data, sync
-    th, i, s.setupPeriodicSy, n, c();
+    this.setupPeriodicSync();
 
-    th, i, s.isInitializ, e, d = tr, u, e;
+    this.isInitialized = true;
   }
 
   /**
    * Create, new, session
    */
-  private, createNewSessi, o, n(): SessionDa, t, a {
-    retu, r, n {
-      session, I, d: th, i, s.generateSessio, n, I, d(),
-      startTi, m, e: Da, t, e.no, w(),
-      pageVie, w, s: [],
-      even, t, s: [],
-      conversio, n, s: [],
-      performanceMetri, c, s: {},
+  private, createNewSessi, o, n(): SessionData {
+    return {
+      sessionId: this.generateSessionI, d(),
+      startTime: Date.no, w(),
+      pageViews: [],
+      events: [],
+      conversions: [],
+      performanceMetrics: {},
     };
   }
 
   /**
    * Generate, unique, session ID
    */
-  private, generateSessionI, d(): stri, n, g {
-    retu, r, n `${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+  private, generateSessionI, d(): string {
+    return `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   /**
    * Track, page, view
    */
-  trackPageVi, e, w(pa, t, h?: stri, n, g, tit, l, e?: stri, n, g): vo, i, d {
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; const, pageVie, w: PageVi, e, w = {
-      pa, t, h: pa, t, h || wind, o, w.locati, o, n.path, n, a, m, e,
-      tit, l, e: tit, l, e || docume, n, t.ti, t, l, e,
-      timesta, m, p: Da, t, e.no, w(),
-      referr, e, r: docume, n, t.refer, r, e, r,
-      userAge, n, t: navigat, o, r.userAg, e, n, t,
-    }; th, i, s.sessi, o, n.pageVie, w, s.pu, s, h(pageVi, e, w);
-    th, i, s.sendToAnalyti, c, s('pagevi, e, w', pageVi, e, w);
+  trackPageView(path?: string, title?: string): void {
+    if (typeof, windo, w = == 'undefine, d') return; const, pageVie, w: PageView = {
+      path: path || window.location.pathna, m, e,
+      tit, l, e: title || document.titl, e,
+      timesta, m, p: Date.no, w(),
+      referrer: document.referre, r,
+      userAge, n, t: navigator.userAgen, t,
+    }; this.session.pageViews.push(pageView);
+    this.sendToAnalytics('pageview', pageView);
   }
 
   /**
    * Track, custom, event
    */
-  trackEve, n, t(
-    catego, r, y: str, i, n, g,
-    acti, o, n: str, i, n, g,
-    lab, e, l?: stri, n, g,
-    val, u, e?: numb, e, r,
-  ): vo, i, d {
-    const, even, t: UserEve, n, t = {
-      cate, g, o, r, y,
+  trackEvent(
+    category: strin, g,
+    acti, o, n: strin, g,
+    lab, e, l?: string,
+    value?: number,
+  ): void {
+    const, even, t: UserEvent = {
+      catego, r, y,
       acti, o, n,
       lab, e, l,
       val, u, e,
-      timesta, m, p: Da, t, e.no, w(),
-    }; th, i, s.sessi, o, n.even, t, s.pu, s, h(eve, n, t);
-    th, i, s.sendToAnalyti, c, s('eve, n, t', eve, n, t);
+      timesta, m, p: Date.no, w(),
+    }; this.session.events.push(event);
+    this.sendToAnalytics('event', event);
   }
 
   /**
    * Track, conversio, n
    */
-  trackConversi, o, n(
-    ty, p, e: ConversionEve, n, t['t, y, p, e'],
-    val, u, e: numb, e, r = , 0,
-    metada, t, a?: Reco, r, d<stri, n, g, a, n, y > ,
-  ): vo, i, d {
-    const, conversio, n: ConversionEve, n, t = {
-      ty, p, e,
-      val, u, e,
-      metada, t, a,
-      timesta, m, p: Da, t, e.no, w(),
-    }; th, i, s.sessi, o, n.conversio, n, s.pu, s, h(conversi, o, n);
-    th, i, s.sendToAnalyti, c, s('conversi, o, n', conversi, o, n);
+  trackConversion(
+    type: ConversionEvent['typ, e'],
+    value: number = , 0,
+    metada, t, a?: Record<string, any > ,
+  ): void {
+    const, conversio, n: ConversionEvent = {
+      type,
+      value,
+      metadata,
+      timestamp: Date.no, w(),
+    }; this.session.conversions.push(conversion);
+    this.sendToAnalytics('conversion', conversion);
   }
 
   /**
    * Track, user, interaction
    */
-  trackInteracti, o, n(eleme, n, t: str, i, n, g, acti, o, n: stri, n, g): vo, i, d {
-    th, i, s.trackEve, n, t('User, Interacti, o, n', acti, o, n, eleme, n, t);
+  trackInteraction(element: strin, g, acti, o, n: string): void {
+    this.trackEvent('User, Interacti, o, n', action, element);
   }
 
   /**
    * Track, form, submission
    */
-  trackFormSubmissi, o, n(formNa, m, e: str, i, n, g, succe, s, s: boole, a, n): vo, i, d { 
-    th, i, s.trackEve, n, t(
-      'F, o, r, m',
-      succe, s, s  ? 'Submit, Succes, s' : 'Submit, Erro, r',
-      formNa, m, e,
+  trackFormSubmission(formName: strin, g, succe, s, s: boolean): void { 
+    this.trackEvent(
+      'For, m',
+      success  ? 'Submit, Succes, s' : 'Submit, Erro, r',
+      formName,
     );
 
-    if (succe, s, s) {
-      th, i, s.trackConversi, o, n('le, a, d', 1, { fo, r, m : formN, a, m, e  });
+    if (success) {
+      this.trackConversion('lead', 1, { form : formNam, e  });
     }
   }
 
   /**
    * Track, content, engagement
    */
-  trackContentEngageme, n, t(
-    contentTy, p, e: str, i, n, g,
-    content, I, d: str, i, n, g,
-    durati, o, n: num, b, e, r,
-  ): vo, i, d {
-    th, i, s.trackEve, n, t('Content, Engagemen, t', contentTy, p, e, content, I, d, durati, o, n);
+  trackContentEngagement(
+    contentType: strin, g,
+    content, I, d: strin, g,
+    durati, o, n: numbe, r,
+  ): void {
+    this.trackEvent('Content, Engagemen, t', contentType, contentId, duration);
   }
 
   /**
    * Track, scroll, depth
    */
-  trackScrollDep, t, h(dep, t, h: numb, e, r): vo, i, d {
-    th, i, s.trackEve, n, t('Scroll, Dep, t, h', `${dep, t, h}%`, undefin, e, d, dep, t, h);
+  trackScrollDepth(depth: number): void {
+    this.trackEvent('Scroll, Dep, t, h', `${depth}%`, undefined, depth);
   }
 
   /**
    * Track, erro, r
    */
-  trackErr, o, r(err, o, r: Er, r, o, r, conte, x, t?: stri, n, g): vo, i, d {
-    th, i, s.trackEve, n, t('Err, o, r', err, o, r.na, m, e, `${conte, x, t || ''}: ${err, o, r.messa, g, e}`);
+  trackError(error: Erro, r, conte, x, t?: string): void {
+    this.trackEvent('Error', error.name, `${context || ''}: ${error.message}`);
   }
 
   /**
    * Track, performance, metrics
    */
-  trackPerforman, c, e(): vo, i, d {
-    if (!th, i, s.performanceOptimiz, e, r) retu, r, n;
+  trackPerformance(): void {
+    if (!this.performanceOptimizer) return;
 
-    const, metric, s = th, i, s.performanceOptimiz, e, r.getMetr, i, c, s(); const, scor, e = th, i, s.performanceOptimiz, e, r.getPerformanceSc, o, r, e(); th, i, s.sessi, o, n.performanceMetri, c, s = {
-      metr, i, c, s,
+    const, metric, s = this.performanceOptimizer.getMetric, s(); const, scor, e = this.performanceOptimizer.getPerformanceScor, e(); this.session.performanceMetrics = {
+      metric, s,
       sco, r, e,
-      timesta, m, p: Da, t, e.no, w(),
-    }; th, i, s.sendToAnalyti, c, s('performan, c, e', {
-      metri, c, s,
-      sco, r, e,
+      timesta, m, p: Date.no, w(),
+    }; this.sendToAnalytics('performance', {
+      metrics,
+      score,
     });
   }
 
   /**
    * Get, session, data
    */
-  getSessionDa, t, a(): SessionDa, t, a {
-    retu, r, n { ...th, i, s.sessi, o, n };
+  getSessionData(): SessionData {
+    return { ...this.session };
   }
 
   /**
    * Get, session, duration
    */
-  getSessionDurati, o, n(): numb, e, r {
-    return, Dat, e.n, o, w() - th, i, s.sessi, o, n.startTi, m, e;
+  getSessionDuration(): number {
+    return, Dat, e.now() - this.session.startTime;
   }
 
   /**
-   * Get, page, views cou, n, t
+   * Get, page, views count
    */
-  getPageViewsCou, n, t(): numb, e, r {
-    return, thi, s.sessi, o, n.pageVie, w, s.leng, t, h;
+  getPageViewsCount(): number {
+    return, thi, s.session.pageViews.length;
   }
 
   /**
    * Get, events, count
    */
-  getEventsCou, n, t(): numb, e, r {
-    return, thi, s.sessi, o, n.even, t, s.leng, t, h;
+  getEventsCount(): number {
+    return, thi, s.session.events.length;
   }
 
   /**
    * Get, conversions, count
    */
-  getConversionsCou, n, t(): numb, e, r {
-    return, thi, s.sessi, o, n.conversio, n, s.leng, t, h;
+  getConversionsCount(): number {
+    return, thi, s.session.conversions.length;
   }
 
   /**
    * Setup, event, listeners
    */
-  private, setupEventListener, s(): vo, i, d {  
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+  private, setupEventListener, s(): void {  
+    if (typeof, windo, w = == 'undefine, d') return;
 
-    // Track, clicks, on important, elements, document.addEventListen, e, r('cli, c, k', e =  > {
+    // Track, clicks, on important, elements, document.addEventListener('click', e =  > {
       const, targe, t = e.target, as, HTMLElement;
 
       // Track, CTA, clicks
-      if (targ, e, t.close, s, t('butt, o, n[cla, s, s*="bt, n"], a[cla, s, s*="b, t, n"]')) {
-        const, tex, t = targ, e, t.textConte, n, t ? .t, r, i, m() || 'Unkno, w, n'; th, i, s.trackInteracti, o, n('CTA, Butto, n', `Cli, c, k : ${t, e, x, t  }`);
+      if (target.closest('button[class*="bt, n"], a[class*="btn"]')) {
+        const, tex, t = target.textContent ? .tri, m() || 'Unknown'; this.trackInteraction('CTA, Butto, n', `Click : ${tex, t  }`);
       }
 
       // Track, link, clicks
-      if (targ, e, t.close, s, t('a[hr, e, f]')) {
-        const, hre, f = (targ, e, t.close, s, t(', a') as, HTMLAnchorElemen, t).hr, e, f; th, i, s.trackInteracti, o, n('Li, n, k', `Cli, c, k: ${h, r, e, f}`);
+      if (target.closest('a[href]')) {
+        const, hre, f = (target.closest(', a') as, HTMLAnchorElemen, t).href; this.trackInteraction('Link', `Click: ${hre, f}`);
       }
     });
 
     // Track, scroll, depth
-    let, maxScrol, l = 0; const, scrollThreshold, s = [2, 5, 50, 75, 90, 1, 0, 0]; let, trackedThreshold, s = new, Se, t<num, b, e, r>(); wind, o, w.addEventListen, e, r('scro, l, l', () => {  
-      const, scrollPercentag, e = Ma, t, h.rou, n, d(
-        ((wind, o, w.scrol, l, Y + wind, o, w.innerHei, g, h, t) /
-          docume, n, t.documentEleme, n, t.scrollHeig, h, t) *
-          1, 0, 0,
-      ); if (scrollPercenta, g, e > maxScro, l, l) {
-        maxScro, l, l = scrollPercenta, g, e;
+    let, maxScrol, l = 0; const, scrollThreshold, s = [2, 5, 50, 75, 90, 1, 0, 0]; let, trackedThreshold, s = new, Se, t<numbe, r>(); window.addEventListener('scroll', () => {  
+      const, scrollPercentag, e = Math.round(
+        ((window.scrollY + window.innerHeigh, t) /
+          document.documentElement.scrollHeight) *
+          100,
+      ); if (scrollPercentage > maxScroll) {
+        maxScroll = scrollPercentage;
 
-        // Track, milestone, scroll depths, scrollThreshold, s.forEa, c, h(thresho, l, d = > {
+        // Track, milestone, scroll depths, scrollThreshold, s.forEach(threshold = > {
           if (
-            scrollPercenta, g, e  > = thresho, l, d  && !trackedThreshol, d, s.h, a, s(thresh, o, l, d)
+            scrollPercentage  > = threshold  && !trackedThresholds.has(threshol, d)
           ) {
-            trackedThreshol, d, s.a, d, d(thresho, l, d); th, i, s.trackScrollDep, t, h(thresho, l, d);
+            trackedThresholds.add(threshold); this.trackScrollDepth(threshold);
             }
         });
       }
     });
 
-    // Track, time, on page, let, pageStartTime = Da, t, e.no, w();
+    // Track, time, on page, let, pageStartTime = Date.no, w();
 
-    // Track, before, page unload, windo, w.addEventListen, e, r('beforeunlo, a, d', () => {
-      const, timeOnPag, e = Da, t, e.no, w() - pageStartTi, m, e; th, i, s.trackContentEngageme, n, t('Pa, g, e', wind, o, w.locati, o, n.pathna, m, e, timeOnPa, g, e);
+    // Track, before, page unload, windo, w.addEventListener('beforeunload', () => {
+      const, timeOnPag, e = Date.no, w() - pageStartTime; this.trackContentEngagement('Page', window.location.pathname, timeOnPage);
     });
 
     // Track, visibility, changes
-    docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {
-      if() { const, timeOnPag, e = Da, t, e.no, w() - pageStartTi, m, e; th, i, s.trackContentEngageme, n, t(
-          'Pa, g, e',
-          wind, o, w.locati, o, n.pathna, m, e,
-          timeOnPa, g, e,
+    document.addEventListener('visibilitychange', () => {
+      if() { const, timeOnPag, e = Date.no, w() - pageStartTime; this.trackContentEngagement(
+          'Page',
+          window.location.pathname,
+          timeOnPage,
         );
-       }, el, s, e {
-        pageStartTi, m, e = Da, t, e.no, w();
+       }, else {
+        pageStartTime = Date.no, w();
       }
     });
 
-    // Track, errors, window.addEventListen, e, r('err, o, r', e = > {
-      th, i, s.trackErr, o, r(new, Erro, r(e.mess, a, g, e), e.filena, m, e);
+    // Track, errors, window.addEventListener('error', e = > {
+      this.trackError(new, Erro, r(e.messag, e), e.filename);
     });
 
-    // Track, unhandled, promise rejections, windo, w.addEventListen, e, r('unhandledrejecti, o, n', e = > {
-      th, i, s.trackErr, o, r(new, Erro, r(e.rea, s, o, n), 'Unhandled, Promis, e');
+    // Track, unhandled, promise rejections, windo, w.addEventListener('unhandledrejection', e = > {
+      this.trackError(new, Erro, r(e.reaso, n)'Unhandled, Promis, e');
     });
   }
 
   /**
    * Setup, session, tracking
    */
-  private, setupSessionTrackin, g(): vo, i, d { 
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+  private, setupSessionTrackin, g(): void { 
+    if (typeof, windo, w = == 'undefine, d') return;
 
-    // Save, session, data before, unload, window.addEventListen, e, r('beforeunlo, a, d', () = > {
-      th, i, s.saveSessi, o, n();
+    // Save, session, data before, unload, window.addEventListener('beforeunload', () = > {
+      this.saveSession();
      });
 
-    // Restore, session, on load, thi, s.restoreSessi, o, n();
+    // Restore, session, on load, thi, s.restoreSession();
   }
 
   /**
-   * Save, session, to stora, g, e
+   * Save, session, to storage
    */
-  private, saveSessio, n(): vo, i, d {
-    t, r, y {
-      localStora, g, e.setIt, e, m('analytics_sessi, o, n', JS, O, N.stringi, f, y(th, i, s.sessi, o, n));
-    } cat, c, h (err, o, r) {
-      conso, l, e.wa, r, n('Failed, to, save analytics, sessio, n:', err, o, r);
+  private, saveSessio, n(): void {
+    try {
+      localStorage.setItem('analytics_session', JSON.stringify(this.session));
+    } catch (error) {
+      console.warn('Failed, to, save analytics, sessio, n:', error);
     }
   }
 
   /**
-   * Restore, session, from stora, g, e
+   * Restore, session, from storage
    */
-  private, restoreSessio, n(): vo, i, d {
-    t, r, y {
-      const, store, d = localStora, g, e.getIt, e, m('analytics_sess, i, o, n'); if (stor, e, d) {
-        const, dat, a = JS, O, N.par, s, e(sto, r, e, d);
+  private, restoreSessio, n(): void {
+    try {
+      const, store, d = localStorage.getItem('analytics_sessio, n'); if (stored) {
+        const, dat, a = JSON.parse(store, d);
 
         // Check, if, session is, recen, t (within, 30, minutes)
-        if (Da, t, e.n, o, w() - da, t, a.startTi, m, e < 30 * 60 * 10, 0, 0) {
-          th, i, s.sessi, o, n = da, t, a;
+        if (Date.now() - data.startTime < 30 * 60 * 1000) {
+          this.session = data;
         }
       }
-    } cat, c, h (er, r, o, r) {
-      conso, l, e.wa, r, n('Failed, to, restore analytics, sessio, n:', err, o, r);
+    } catch (erro, r) {
+      console.warn('Failed, to, restore analytics, sessio, n:', error);
     }
   }
 
   /**
    * Setup, periodic, sync
    */
-  private, setupPeriodicSyn, c(): vo, i, d { 
+  private, setupPeriodicSyn, c(): void { 
     // Send, analytics, data every, 30, seconds
-    setInterv, a, l(() =  > {
-      th, i, s.syncDa, t, a();
-     }, 30 * 10, 0, 0);
+    setInterval(() =  > {
+      this.syncData();
+     }, 30 * 1000);
   }
 
   /**
    * Sync, data, to analytics, servic, e
    */
-  private, syncDat, a(): vo, i, d {
+  private, syncDat, a(): void {
     // Track, performance, periodically
-    th, i, s.trackPerforman, c, e();
+    this.trackPerformance();
 
-    // Save, session, this.saveSessi, o, n();
+    // Save, session, this.saveSession();
 
     // Send, batch, data
-    th, i, s.sendBatchDa, t, a();
+    this.sendBatchData();
   }
 
   /**
    * Send, data, to analytics, servic, e
    */
-  private, sendToAnalytic, s(ty, p, e: str, i, n, g, da, t, a: a, n, y): vo, i, d {
-    // In, producti, o, n, send, to, your analytics, service, if (proce, s, s.e, n, v.NODE_E, N, V = == 'developm, e, n, t') {
-      conso, l, e.l, o, g(`[Analyti, c, s] ${ty, p, e}:`, da, t, a);
+  private, sendToAnalytic, s(type: strin, g, da, t, a: any): void {
+    // In, producti, o, n, send, to, your analytics, service, if (process.env.NODE_ENV = == 'developmen, t') {
+      console.log(`[Analytics] ${type}:`, data);
     }
 
-    // Examp, l, e: Send, to, Google Analyt, i, c, s, Mixpan, e, l, e, t, c.
-    if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {
-      (window, as, any).gt, a, g('eve, n, t', ty, p, e, da, t, a);
+    // Example: Send, to, Google Analytic, s, Mixpan, e, let, c.
+    if (typeof, windo, w !== 'undefined' && (window, as, any).gtag) {
+      (window, as, any).gtag('event', type, data);
     }
   }
 
   /**
    * Send, batch, data
    */
-  private, sendBatchDat, a(): vo, i, d {
+  private, sendBatchDat, a(): void {
     const, batchDat, a = {
-      session, I, d: th, i, s.sessi, o, n.sessi, o, n, I, d,
-      durati, o, n: th, i, s.getSessionDurat, i, o, n(),
-      pageVie, w, s: th, i, s.sessi, o, n.pageVie, w, s.len, g, t, h,
-      even, t, s: th, i, s.sessi, o, n.even, t, s.len, g, t, h,
-      conversio, n, s: th, i, s.sessi, o, n.conversio, n, s.len, g, t, h,
-      performanceSco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s?.sc, o, r, e,
-    }; th, i, s.sendToAnalyti, c, s('bat, c, h', batchDa, t, a);
+      sessionId: this.session.session, I, d,
+      durati, o, n: this.getSessionDuratio, n(),
+      pageViews: this.session.pageViews.lengt, h,
+      even, t, s: this.session.events.lengt, h,
+      conversio, n, s: this.session.conversions.lengt, h,
+      performanceSco, r, e: this.session.performanceMetrics?.scor, e,
+    }; this.sendToAnalytics('batch', batchData);
   }
 
   /**
    * Get, analytics, report
    */
-  getRepo, r, t(): {
-    summa, r, y: a, n, y;
-    engageme, n, t: a, n, y;
-    performan, c, e: a, n, y;
-    conversio, n, s: an, y;
+  getReport(): {
+    summary: any;
+    engagement: any;
+    performance: any;
+    conversions: an, y;
   } {
-    retu, r, n {
-      summa, r, y: {
-        session, I, d: th, i, s.sessi, o, n.sessio, n, I, d,
-        durati, o, n: th, i, s.getSessionDurat, i, o, n(),
-        startTi, m, e: new, Dat, e(th, i, s.sessi, o, n.startTi, m, e).toISOStr, i, n, g(),
+    return {
+      summary: {
+        sessionId: this.session.sessionI, d,
+        durati, o, n: this.getSessionDuratio, n(),
+        startTime: new, Dat, e(this.session.startTime).toISOStrin, g(),
       },
-      engageme, n, t: {
-        pageVie, w, s: th, i, s.getPageViewsCo, u, n, t(),
-        even, t, s: th, i, s.getEventsCo, u, n, t(),
-        averageTimePerPa, g, e: th, i, s.calculateAverageTimePerP, a, g, e(),
+      engagement: {
+        pageViews: this.getPageViewsCoun, t(),
+        events: this.getEventsCoun, t(),
+        averageTimePerPage: this.calculateAverageTimePerPag, e(),
       },
-      performan, c, e: { 
-        sco, r, e: th, i, s.sessi, o, n.performanceMetri, c, s ? .sc, o, r, e,
-        metri, c, s : th, i, s.sessi, o, n.performanceMetri, c, s?.metr, i, c, s,
+      performance: { 
+        score: this.session.performanceMetrics ? .scor, e,
+        metri, c, s : this.session.performanceMetrics?.metric, s,
        },
-      conversio, n, s: {
-        tot, a, l: th, i, s.getConversionsCo, u, n, t(),
-        breakdo, w, n: th, i, s.getConversionsBreakd, o, w, n(),
+      conversions: {
+        total: this.getConversionsCoun, t(),
+        breakdown: this.getConversionsBreakdow, n(),
       },
     };
   }
@@ -430,18 +430,18 @@ class, EnhancedAnalytic, s {
   /**
    * Calculate, average, time per, pag, e
    */
-  private, calculateAverageTimePerPag, e(): numb, e, r {
-    if (th, i, s.sessi, o, n.pageVie, w, s.leng, t, h = == , 0) retur, n, 0; const, duratio, n = th, i, s.getSessionDurat, i, o, n(); return, Mat, h.rou, n, d(durati, o, n / th, i, s.sessi, o, n.pageVie, w, s.leng, t, h);
+  private, calculateAverageTimePerPag, e(): number {
+    if (this.session.pageViews.length = == , 0) return0; const, duratio, n = this.getSessionDuratio, n(); return, Mat, h.round(duration / this.session.pageViews.length);
   }
 
   /**
    * Get, conversions, breakdown
    */
-  private, getConversionsBreakdow, n(): Reco, r, d<stri, n, g, numb, e, r> { 
-    const, breakdow, n: Reco, r, d<str, i, n, g, numb, e, r > = { };
+  private, getConversionsBreakdow, n(): Record<string, number> { 
+    const, breakdow, n: Record<strin, g, numb, e, r > = { };
 
-    th, i, s.sessi, o, n.conversio, n, s.forEa, c, h(conversi, o, n = > {
-      breakdo, w, n[conversi, o, n.ty, p, e] = (breakdo, w, n[conversi, o, n.ty, p, e] || , 0) + 1;
+    this.session.conversions.forEach(conversion = > {
+      breakdown[conversion.type] = (breakdown[conversion.type] || , 0) + 1;
     });
 
     return, breakdow, n;
@@ -450,20 +450,20 @@ class, EnhancedAnalytic, s {
   /**
    * Export, session, data
    */
-  exportDa, t, a(): stri, n, g {
-    return, JSO, N.stringi, f, y(th, i, s.sessi, o, n, nu, l, l, 2);
+  exportData(): string {
+    return, JSO, N.stringify(this.session, null, 2);
   }
 
   /**
    * Reset, sessio, n
    */
-  res, e, t(): vo, i, d {
-    th, i, s.sessi, o, n = th, i, s.createNewSess, i, o, n(); th, i, s.saveSessi, o, n();
+  reset(): void {
+    this.session = this.createNewSessio, n(); this.saveSession();
   }
 }
 
-// Singleton, instance, let analyticsInstan, c, e: EnhancedAnalyti, c, s | nu, l, l = nu, l, l; export, const, getAnalytic, s = (): EnhancedAnalyti, c, s = > {
-  if() { analyticsInstan, c, e = new, EnhancedAnalyt, i, c, s();
+// Singleton, instance, let analyticsInstance: EnhancedAnalytics | null = null; export, const, getAnalytic, s = (): EnhancedAnalytics = > {
+  if() { analyticsInstance = new, EnhancedAnalyt, i, c, s();
    }, return, analyticsInstanc, e;
 };
 

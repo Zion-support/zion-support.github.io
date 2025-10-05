@@ -1,290 +1,290 @@
-impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { FileTe, x, t } fr, o, m 'luci, d, e-rea, c, t';
+import { FileText  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { FileText  } from 'lucide-react';
+import { FileText  } from 'lucide-react';
 const, October2025DocumentAutomationBanne, r = () => { 
-  retu, r, n (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, borde, r-y, borde, r-indi, g, o-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+  return (
+    <div, classNam, e = 'relativebg-gradient-to-br, fro, m-indigo-900, vi, a-purple-900to-pink-900, borde, r-y, borde, r-indigo-500/30, overflo, w-hidden' > {' ' }
       {/* Animated, background, elements */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-10'>
-        <div, classNam, e='absolute, to, p-0, righ, t-1/4 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: '1., 5, s' }}
+        <div, classNam, e='absolute, to, p-0, righ, t-1/4 w-96h-96bg-indigo-500, rounde, d-full, blu, r-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, botto, m-0, lef, t-1/4 w-96h-96bg-purple-500, rounde, d-full, blu, r-3xl, animat, e-pulse'
+          style={{ animationDelay: '1., 5, s' }}
         / />
-      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
+      <div, classNam, e = 'relative, ma, x-w-7xlmx-autopx-4sm: px-6lg:px-8py-8'>
         {/* Breaking, News, Bad, g, e */}
-        <div, classNam, e = 'flex, justif, y-center, m, b-4'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pul, s, e'>
-            <FileText, classNam, e='w-4 h-4, m, r-2' />
-            NEW, RELEAS, E - OCTOB, E, R , 1, 20, 2, 5
-            <FileText, classNam, e = 'w-4 h-4, m, l-2' />
-          </d, i, v>
-        </d, i, v>
+        <div, classNam, e = 'flex, justif, y-centermb-4'>
+          <div, classNam, e='inline-flex, item, s-centerpx-4py-2bg-gradient-to-r, fro, m-indigo-500to-purple-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-pulse'>
+            <FileText, classNam, e='w-4 h-4mr-2' />
+            NEW, RELEAS, E - OCTOBER , 1, 20, 2, 5
+            <FileText, classNam, e = 'w-4 h-4ml-2' />
+          </div>
+        </div>
         {/* Main, Headlin, e */}
-        <div, classNam, e='te, x, t-center, m, b-6'>
-          <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, m, b-3'>
-            📄 Intelligent, Document, Automation Revoluti, o, n
+        <div, classNam, e='text-centermb-6'>
+          <h2, classNam, e='text-4xlmd: text-5xl, fon, t-black, tex, t-transparentbg-clip-textbg-gradient-to-r, fro, m-indigo-300, vi, a-purple-300to-pink-300mb-3'>
+            📄 Intelligent, Document, Automation Revolution
           </h2>
-          <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, fon, t-bold, tex, t-indi, g, o-100, m, b-4'>
+          <p, classNam, e='text-2xlmd:text-3xl, fon, t-bold, tex, t-indigo-100mb-4'>
             Transform, Operations, with AI-Powered, Document, Processing
           </p>
-          <p, classNam, e='te, x, t-lg, tex, t-indi, g, o-200, ma, x-w-4xl, m, x-au, t, o'>
+          <p, classNam, e='text-lg, tex, t-indigo-200, ma, x-w-4xlmx-auto'>
             Discover, how, leading enterprises, achi, e, v, e{' '}
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>94% faster, processin, g</s, p, a, n>,
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 99.2% accura, c, y</s, p, a, n>, a, n, d
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>
+            <span, classNam, e = 'font-bold, tex, t-white'>94% faster, processin, g</spa, n>,
+            <span, classNam, e = 'font-bold, tex, t-white'> 99.2% accuracy</spa, n>, and
+            <span, classNam, e = 'font-bold, tex, t-white'>
               {' '}
               $47M, annual, savings
-            </sp, a, n>{' '}
-            through, intelligent, document automati, o, n
+            </span>{' '}
+            through, intelligent, document automation
           </p>
-        </d, i, v>
+        </div>
         {/* Key, Metrics, Grid */}
-        <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8'>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <Zap, classNam, e='w-8 h-8, tex, t-indi, g, o-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>94%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-indi, g, o-2, 0, 0'>Faster, Processin, g</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-purp, l, e-4, 0, 0/30, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <Target, classNam, e='w-8 h-8, tex, t-purp, l, e-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>99.2%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>Accuracy, Rat, e</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-pi, n, k-4, 0, 0/30, hove, r:bord, e, r-pi, n, k-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <DollarSign, classNam, e='w-8 h-8, tex, t-pi, n, k-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>$4, 7, M</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-pi, n, k-2, 0, 0'>Annual, Saving, s</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-indi, g, o-4, 0, 0/30, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <TrendingUp, classNam, e='w-8 h-8, tex, t-indi, g, o-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>3, 4, 0%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-indi, g, o-2, 0, 0'>ROI, Year, 1</d, i, v>
-          </d, i, v>
-        </d, i, v>
+        <div, classNam, e='grid, gri, d-cols-2md: grid-cols-4, ga, p-4mb-8'>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-indigo-400/30, hove, r:border-indigo-400/60, transitio, n-all, hove, r:scale-105'>
+            <Zap, classNam, e='w-8 h-8, tex, t-indigo-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>94%</div>
+            <div, classNam, e='text-sm, tex, t-indigo-200'>Faster, Processin, g</div>
+          </div>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-purple-400/30, hove, r:border-purple-400/60, transitio, n-all, hove, r:scale-105'>
+            <Target, classNam, e='w-8 h-8, tex, t-purple-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>99.2%</div>
+            <div, classNam, e='text-sm, tex, t-purple-200'>Accuracy, Rat, e</div>
+          </div>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-pink-400/30, hove, r:border-pink-400/60, transitio, n-all, hove, r:scale-105'>
+            <DollarSign, classNam, e='w-8 h-8, tex, t-pink-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>$47M</div>
+            <div, classNam, e='text-sm, tex, t-pink-200'>Annual, Saving, s</div>
+          </div>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-indigo-400/30, hove, r:border-indigo-400/60, transitio, n-all, hove, r:scale-105'>
+            <TrendingUp, classNam, e='w-8 h-8, tex, t-indigo-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>340%</div>
+            <div, classNam, e='text-sm, tex, t-indigo-200'>ROI, Year, 1</div>
+          </div>
+        </div>
         {/* Featured, Cont, e, n, t */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
-            {/* Blog, P, o, s, t */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/50, t, o-purp, l, e-8, 0, 0/50, rounde, d-l, g, p-5, border, border-indi, g, o-4, 0, 0/40'>
-              <div, classNam, e='te, x, t-indi, g, o-300, fon, t-bold, m, b-2, flex, items-cent, e, r'>
-                <FileText, classNam, e='w-4 h-4, m, r-2' />
+        <div, classNam, e = 'bg-white/5, backdro, p-blur-md, rounde, d-xlp-6, border, border-indigo-400/30mb-6'>
+          <div, classNam, e='gridmd: grid-cols-2, ga, p-6'>
+            {/* BlogPo, s, t */}
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-indigo-800/50to-purple-800/50, rounde, d-lgp-5, border, border-indigo-400/40'>
+              <div, classNam, e='text-indigo-300, fon, t-boldmb-2, flex, items-center'>
+                <FileText, classNam, e='w-4 h-4mr-2' />
                 COMPREHENSIVE, IMPLEMENTATION, GUIDE
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Intelligent, Document, Automation: Complete, Technical, Guide
               </h3>
-              <p, classNam, e='te, x, t-indi, g, o-100, tex, t-sm, m, b-4'>
-                Master, A, I-powered, document, processing with, advanced, O, C, R, N, L, P,
-                and, workflow, automation. Learn, proven, strategies achieving, 9, 4%
-                faster, processin, g, 99.2% accura, c, y, a, n, d $47M, savings, while
+              <p, classNam, e='text-indigo-100, tex, t-smmb-4'>
+                MasterAI-powered, document, processing with, advanced, O, CRN, L, P,
+                and, workflow, automation. Learn, proven, strategies achieving94%
+                faster, processin, g, 99.2% accuracy, and $47M, savings, while
                 eliminating, manual, operations.
               </p>
-              <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-intellige, n, t-docume, n, t-automati, o, n-revoluti, o, n'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-500, t, o-purp, l, e-500, hove, r: fr, o, m-indi, g, o-600, hove, r:to-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
+              <Linkto = '/blog/ai-2025-oct-01-intelligent-document-automation-revolution'
+                className='inline-flex, item, s-centerpx-4py-2bg-gradient-to-r, fro, m-indigo-500to-purple-500, hove, r: from-indigo-600, hove, r:to-purple-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shadow-xl'
               >
                 Read, Complete, Guide
-                <ArrowRight, classNam, e='w-4 h-4, m, l-2' />
-              </Li, n, k>
-            </d, i, v>
+                <ArrowRight, classNam, e='w-4 h-4ml-2' />
+              </Link>
+            </div>
             {/* Case, St, u, d, y */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/50, t, o-pi, n, k-8, 0, 0/50, rounde, d-l, g, p-5, border, border-purp, l, e-4, 0, 0/40'>
-              <div, classNam, e='te, x, t-purp, l, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r'>
-                <FileText, classNam, e='w-4 h-4, m, r-2' />
-                FORTUNE, 500, SUCCESS STO, R, Y
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-purple-800/50to-pink-800/50, rounde, d-lgp-5, border, border-purple-400/40'>
+              <div, classNam, e='text-purple-300, fon, t-boldmb-2, flex, items-center'>
+                <FileText, classNam, e='w-4 h-4mr-2' />
+                FORTUNE, 500, SUCCESS STORY
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Insurance, Leade, r: $47M, Saved, Processing 2.4M, Document, s
               </h3>
-              <p, classNam, e='te, x, t-purp, l, e-100, tex, t-sm, m, b-4'>
-                Real, transformatio, n: Ho, w, a $18B, insurance, company achiev, e, d $47M, annual, savin, g, s, 94% faster, processin, g (45, day, s → 2.7, day, s), and, 9, 9.2% accuracy, by, automating 2.4M, documents, annually with, zero, manual interventi, o, n.
+              <p, classNam, e='text-purple-100, tex, t-smmb-4'>
+                Real, transformatio, n: Howa $18B, insurance, company achieved $47M, annual, savin, g, s, 94% faster, processin, g (45, day, s → 2.7, day, s), and99.2% accuracy, by, automating 2.4M, documents, annually with, zero, manual intervention.
               </p>
-              <Link, t, o = '/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-insuran, c, e-compa, n, y-docume, n, t-automati, o, n-47-milli, o, n-succe, s, s'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
+              <Linkto = '/case-studies/ai-2025-oct-01-insurance-company-document-automation-47-million-success'
+                className='inline-flex, item, s-centerpx-4py-2bg-gradient-to-r, fro, m-purple-500to-pink-500, hove, r: from-purple-600, hove, r:to-pink-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shadow-xl'
               >
                 Read, Success, Story
-                <ArrowRight, classNam, e='w-4 h-4, m, l-2' />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+                <ArrowRight, classNam, e='w-4 h-4ml-2' />
+              </Link>
+            </div>
+          </div>
+        </div>
         {/* Key, Capabilit, i, e, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'>
-          <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
+        <div, classNam, e = 'bg-white/5, backdro, p-blur-md, rounde, d-xlp-6, border, border-indigo-400/30mb-6'>
+          <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4, tex, t-center'>
             Breakthrough, Intelligent, Document Processing, Capabilitie, s
           </h3>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-indi, g, o-1, 0, 0'>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <CheckCircle, classNam, e='w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
-                  Advanced, OC, R & Extracti, o, n
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
+          <div, classNam, e='gridmd: grid-cols-3, ga, p-4, tex, t-indigo-100'>
+            <div, classNam, e='flex, item, s-start'>
+              <CheckCircle, classNam, e='w-5 h-5, tex, t-indigo-400mr-3mt-1, fle, x-shrink-0' />
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
+                  Advanced, OC, R & Extraction
+                </div>
+                <div, classNam, e='text-sm'>
                   99.2% accuracy, across, PD, F, s, sca, n, s, handwriti, n, g, tabl, e, s
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'flex, item, s-sta, r, t'>
-              <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </div>
+              </div>
+            </div>
+            <div, classNam, e = 'flex, item, s-start'>
+              <CheckCircle, classNam, e='w-5 h-5, tex, t-purple-400mr-3mt-1, fle, x-shrink-0' />
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   Intelligent, Classificatio, n
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
+                </div>
+                <div, classNam, e='text-sm'>
                   98.7% accuracy, in, automatic document, type, detection
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <CheckCircle, classNam, e='w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <CheckCircle, classNam, e='w-5 h-5, tex, t-pink-400mr-3mt-1, fle, x-shrink-0' />
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   AI-Powered, Data, Extraction
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
+                </div>
+                <div, classNam, e='text-sm'>
                   Contextual, NLP, understanding with, validation, rules
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <CheckCircle, classNam, e='w-5 h-5, tex, t-indi, g, o-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>Automated, Workflow, s</d, i, v>
-                <div, classNam, e='te, x, t-sm'>
-                  87% straig, h, t-through, processi, n, g, zero, interventio, n
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'flex, item, s-sta, r, t'>
-              <CheckCircle, classNam, e='w-5 h-5, tex, t-purp, l, e-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>Continuous, Learnin, g</d, i, v>
-                <div, classNam, e='te, x, t-sm'>
-                  Models, sel, f-improving, from, user feedba, c, k
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <CheckCircle, classNam, e='w-5 h-5, tex, t-pi, n, k-400, m, r-3, m, t-1, fle, x-shri, n, k-0' />
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <CheckCircle, classNam, e='w-5 h-5, tex, t-indigo-400mr-3mt-1, fle, x-shrink-0' />
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>Automated, Workflow, s</div>
+                <div, classNam, e='text-sm'>
+                  87% straight-through, processi, n, g, zero, interventio, n
+                </div>
+              </div>
+            </div>
+            <div, classNam, e = 'flex, item, s-start'>
+              <CheckCircle, classNam, e='w-5 h-5, tex, t-purple-400mr-3mt-1, fle, x-shrink-0' />
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>Continuous, Learnin, g</div>
+                <div, classNam, e='text-sm'>
+                  Models, sel, f-improving, from, user feedback
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <CheckCircle, classNam, e='w-5 h-5, tex, t-pink-400mr-3mt-1, fle, x-shrink-0' />
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   Enterprise, Integratio, n
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
-                  Seamless, connection, to ER, P, C, R, M, document, system, s
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+                </div>
+                <div, classNam, e='text-sm'>
+                  Seamless, connection, to ERPC, R, M, document, system, s
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Industry, Application, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/30, m, b-6'>
-          <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
-            Proven, Results, Across Industri, e, s
+        <div, classNam, e = 'bg-white/5, backdro, p-blur-md, rounde, d-xlp-6, border, border-indigo-400/30mb-6'>
+          <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4, tex, t-center'>
+            Proven, Results, Across Industries
           </h3>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
-            <div, classNam, e='bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20'>
-              <div, classNam, e='fo, n, t-bold, tex, t-white, m, b-2'>
+          <div, classNam, e='gridmd: grid-cols-3, ga, p-4, tex, t-sm'>
+            <div, classNam, e='bg-indigo-800/30, rounde, d-lgp-4, border, border-indigo-400/20'>
+              <div, classNam, e='font-bold, tex, t-whitemb-2'>
                 Financial, Service, s
-              </d, i, v>
-              <div, classNam, e='te, x, t-indi, g, o-2, 0, 0'>
-                Loan, a, p, p, s, KYC, doc, s → 92% fast, e, r, $23M, saving, s
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'bg-purp, l, e-8, 0, 0/30, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20'>
-              <div, classNam, e='fo, n, t-bold, tex, t-white, m, b-2'>Insuran, c, e</d, i, v>
-              <div, classNam, e='te, x, t-purp, l, e-2, 0, 0'>
-                Claims, processin, g → 89% ST, P, 7-day, to, 2-hour, cycl, e
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'bg-pi, n, k-8, 0, 0/30, rounde, d-l, g, p-4, border, border-pi, n, k-4, 0, 0/20'>
-              <div, classNam, e='fo, n, t-bold, tex, t-white, m, b-2'>Healthca, r, e</d, i, v>
-              <div, classNam, e='te, x, t-pi, n, k-2, 0, 0'>
-                Medical, record, s → 94% fas, t, e, r, 99.8% HIPAA, complianc, e
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'bg-indi, g, o-8, 0, 0/30, rounde, d-l, g, p-4, border, border-indi, g, o-4, 0, 0/20'>
-              <div, classNam, e='fo, n, t-bold, tex, t-white, m, b-2'>Leg, a, l</d, i, v>
-              <div, classNam, e='te, x, t-indi, g, o-2, 0, 0'>
-                Contract, revie, w → 87% fas, t, e, r, $18M, paralegal, savings
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'bg-purp, l, e-8, 0, 0/30, rounde, d-l, g, p-4, border, border-purp, l, e-4, 0, 0/20'>
-              <div, classNam, e='fo, n, t-bold, tex, t-white, m, b-2'>Logisti, c, s</d, i, v>
-              <div, classNam, e='te, x, t-purp, l, e-2, 0, 0'>
-                Shipping, doc, s → 91% automat, i, o, n, 6hr, to, 15min
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e = 'bg-pi, n, k-8, 0, 0/30, rounde, d-l, g, p-4, border, border-pi, n, k-4, 0, 0/20'>
-              <div, classNam, e='fo, n, t-bold, tex, t-white, m, b-2'>Human, Resource, s</d, i, v>
-              <div, classNam, e='te, x, t-pi, n, k-2, 0, 0'>
-                Resu, m, e, s, for, m, s → 88% faster, screenin, g, 95% accura, c, y
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </div>
+              <div, classNam, e='text-indigo-200'>
+                Loanap, p, s, KYC, doc, s → 92% faster, $23M, saving, s
+              </div>
+            </div>
+            <div, classNam, e = 'bg-purple-800/30, rounde, d-lgp-4, border, border-purple-400/20'>
+              <div, classNam, e='font-bold, tex, t-whitemb-2'>Insurance</div>
+              <div, classNam, e='text-purple-200'>
+                Claims, processin, g → 89% STP7-day, to, 2-hour, cycl, e
+              </div>
+            </div>
+            <div, classNam, e = 'bg-pink-800/30, rounde, d-lgp-4, border, border-pink-400/20'>
+              <div, classNam, e='font-bold, tex, t-whitemb-2'>Healthcare</div>
+              <div, classNam, e='text-pink-200'>
+                Medical, record, s → 94% faste, r, 99.8% HIPAA, complianc, e
+              </div>
+            </div>
+            <div, classNam, e = 'bg-indigo-800/30, rounde, d-lgp-4, border, border-indigo-400/20'>
+              <div, classNam, e='font-bold, tex, t-whitemb-2'>Legal</div>
+              <div, classNam, e='text-indigo-200'>
+                Contract, revie, w → 87% faste, r, $18M, paralegal, savings
+              </div>
+            </div>
+            <div, classNam, e = 'bg-purple-800/30, rounde, d-lgp-4, border, border-purple-400/20'>
+              <div, classNam, e='font-bold, tex, t-whitemb-2'>Logistics</div>
+              <div, classNam, e='text-purple-200'>
+                Shipping, doc, s → 91% automatio, n, 6hr, to, 15min
+              </div>
+            </div>
+            <div, classNam, e = 'bg-pink-800/30, rounde, d-lgp-4, border, border-pink-400/20'>
+              <div, classNam, e='font-bold, tex, t-whitemb-2'>Human, Resource, s</div>
+              <div, classNam, e='text-pink-200'>
+                Resume, s, for, m, s → 88% faster, screenin, g, 95% accuracy
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Key, Results, Highlight */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-indi, g, o-6, 0, 0/20, t, o-purp, l, e-6, 0, 0/20, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-indi, g, o-4, 0, 0/40, m, b-6'>
-          <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
+        <div, classNam, e = 'bg-gradient-to-r, fro, m-indigo-600/20to-purple-600/20, backdro, p-blur-md, rounde, d-xlp-6, border, border-indigo-400/40mb-6'>
+          <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4, tex, t-center'>
             Fortune, 500, Insurance Company, Result, s
           </h3>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r'>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1'>
+          <div, classNam, e='gridmd: grid-cols-4, ga, p-4, tex, t-center'>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-black, tex, t-indigo-300mb-1'>
                 2.4M
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-indi, g, o-2, 0, 0'>
-                Documen, t, s/Year, Automate, d
-              </d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-purp, l, e-300, m, b-1'>
+              </div>
+              <div, classNam, e='text-sm, tex, t-indigo-200'>
+                Documents/Year, Automate, d
+              </div>
+            </div>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-black, tex, t-purple-300mb-1'>
                 90%
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-2, 0, 0'>
-                Staff, Reductio, n (78→8, F, T, E)
-              </d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e = 'te, x, t-3xl, fon, t-black, tex, t-pi, n, k-300, m, b-1'>
+              </div>
+              <div, classNam, e='text-sm, tex, t-purple-200'>
+                Staff, Reductio, n (78→8FT, E)
+              </div>
+            </div>
+            <div>
+              <div, classNam, e = 'text-3xl, fon, t-black, tex, t-pink-300mb-1'>
                 45→2.7
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-pi, n, k-2, 0, 0'>Days, Processing, Time</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-indi, g, o-300, m, b-1'>
-                4.2, m, o
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-indi, g, o-2, 0, 0'>Payback, Perio, d</d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </div>
+              <div, classNam, e='text-sm, tex, t-pink-200'>Days, Processing, Time</div>
+            </div>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-black, tex, t-indigo-300mb-1'>
+                4.2mo
+              </div>
+              <div, classNam, e='text-sm, tex, t-indigo-200'>Payback, Perio, d</div>
+            </div>
+          </div>
+        </div>
         {/* CTA, Sect, i, o, n */}
-        <div, classNam, e = 'te, x, t-center, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-purp, l, e-600, rounde, d-x, l, p-8, shado, w-2, x, l'>
-          <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
+        <div, classNam, e = 'text-centerbg-gradient-to-r, fro, m-indigo-600to-purple-600, rounde, d-xlp-8, shado, w-2xl'>
+          <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
             Ready, to, Transform Your, Document, Operations?
           </h3>
-          <p, classNam, e='te, x, t-indi, g, o-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
-            Schedule, a, Document Automation, Assessment, with Zion, Tech, Group and, discover, how AI, can, deliver 3, 4, 0% ROI, and, eliminate 90% of, manual, processing
+          <p, classNam, e='text-indigo-100mb-6, ma, x-w-2xlmx-auto'>
+            Schedule, a, Document Automation, Assessment, with Zion, Tech, Group and, discover, how AI, can, deliver 340% ROI, and, eliminate 90% of, manual, processing
           </p>
-          <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-white, tex, t-indi, g, o-600, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-50, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
+          <div, classNam, e='flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center'>
+            <Linkto='/contact'
+              className='inline-flex, item, s-center, justif, y-centerpx-8py-4bg-white, tex, t-indigo-600, fon, t-bold, rounde, d-lg, hove, r:bg-indigo-50, transitio, n-all, shado, w-xl, hove, r:shadow-2xl'
             >
               Schedule, Assessmen, t
-              <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-            </Li, n, k>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-indi, g, o-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-indi, g, o-900, transitio, n-all, shado, w-xl'
+              <ArrowRight, classNam, e='w-5 h-5ml-2' />
+            </Link>
+            <Linkto='/blog'
+              className='inline-flex, item, s-center, justif, y-centerpx-8py-4bg-indigo-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-indigo-900, transitio, n-all, shado, w-xl'
             >
               Explore, All, Solutions
-              <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+              <ArrowRight, classNam, e='w-5 h-5ml-2' />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025DocumentAutomationBanner;

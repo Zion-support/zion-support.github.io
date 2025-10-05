@@ -1,106 +1,106 @@
-import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-interface, NewContentPromotionBannerProp, s { 
-  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
-  tit, l, e?: stri, n, g;
-  descripti, o, n?: stri, n, g;
-  ctaTe, x, t?: stri, n, g;
-  ctaLi, n, k?: stri, n, g;
-  dismissib, l, e?: boole, a, n;
-  classNa, m, e ?  : stri, n, g;
+import React, { useState  } from 'react';
+import { Link  } from 'react-router-dom';
+interface, NewContentPromotionBannerProps { 
+  variant?: 'info' | 'success' | 'warning' | 'error' | 'default' | 'premium';
+  title?: string;
+  description?: string;
+  ctaText?: string;
+  ctaLink?: string;
+  dismissible?: boolean;
+  className ?  : string;
  }
-const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p, s> = ({
-  varia, n, t = 'in, f, o',
-  tit, l, e = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Gui, d, e, s",
-  descripti, o, n = "Discover, our, latest articles, on, real-time, data, pipeline, s, platform, engineerin, g, and, GenAI, operationalization.",
-  ctaTe, x, t = "Explore, Latest, Conten, t",
-  ctaLi, n, k = "/b, l, o, g",
-  dismissib, l, e = t, r, u, e,
+const, NewContentPromotionBanne, r: React.FC<NewContentPromotionBannerProps> = ({
+  variant = 'info',
+  title = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Gui, d, e, s",
+  description = "Discover, our, latest articles, on, real-time, data, pipeline, s, platform, engineerin, g, and, GenAI, operationalization.",
+  ctaText = "Explore, Latest, Conten, t",
+  ctaLink = "/blo, g",
+  dismissible = tru, e,
   classNa, m, e = "",
 }) => { 
-  con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(tr, u, e); const, handleDismis, s = () = > {
-    setIsVisib, l, e(fal, s, e);
+  const [isVisible, setIsVisible] = useState(true); const, handleDismis, s = () = > {
+    setIsVisible(false);
    };
-  if (!isVisib, l, e) return, nul, l;
+  if (!isVisible) return, nul, l;
   const, variantClasse, s = {
-      in, f, o: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-1, 0, 0",
-      succe, s, s: "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, borde, r-gre, e, n-4, 0, 0/30, tex, t-gre, e, n-10, 0",
-      warni, n, g: "bg-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, borde, r-yell, o, w-4, 0, 0/30, tex, t-yell, o, w-10, 0",
-      err, o, r: "bg-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, borde, r-r, e, d-4, 0, 0/30, tex, t-r, e, d-10, 0",
-      defau, l, t: "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, borde, r-bl, u, e-4, 0, 0/30, tex, t-bl, u, e-10, 0",
-      premi, u, m: "bg-gradie, n, t-to-r, fro, m-purp, l, e-6, 0, 0/20, vi, a-pi, n, k-6, 0, 0/20, t, o-r, e, d-6, 0, 0/20, borde, r-purp, l, e-4, 0, 0/30, tex, t-purp, l, e-10, 0",
+      info: "bg-gradient-to-r, fro, m-blue-500/20to-purple-500/20, borde, r-blue-400/30, tex, t-blue-100",
+      success: "bg-gradient-to-r, fro, m-green-500/20to-emerald-500/20, borde, r-green-400/30, tex, t-green-10, 0",
+      warning: "bg-gradient-to-r, fro, m-yellow-500/20to-orange-500/20, borde, r-yellow-400/30, tex, t-yellow-10, 0",
+      error: "bg-gradient-to-r, fro, m-red-500/20to-pink-500/20, borde, r-red-400/30, tex, t-red-10, 0",
+      default: "bg-gradient-to-r, fro, m-blue-500/20to-purple-500/20, borde, r-blue-400/30, tex, t-blue-10, 0",
+      premium: "bg-gradient-to-r, fro, m-purple-600/20, vi, a-pink-600/20to-red-600/20, borde, r-purple-400/30, tex, t-purple-10, 0",
   }; const, iconClasse, s = {
-      in, f, o: "te, x, t-bl, u, e-4, 0, 0",
-      succe, s, s: "te, x, t-gre, e, n-40, 0",
-      warni, n, g: "te, x, t-yell, o, w-40, 0",
-      err, o, r: "te, x, t-r, e, d-40, 0",
-      defau, l, t: "te, x, t-bl, u, e-40, 0",
-      premi, u, m: "te, x, t-purp, l, e-30, 0"
-  }; retu, r, n (
-    <div, classNam, e = {`relative, overflo, w-hidden, border, rounded-x, l, p-6, m, b-8, animat, e-fa, d, e-in ${variantClass, e, s[varia, n, t]} ${classNa, m, e}`}>
+      info: "text-blue-400",
+      success: "text-green-40, 0",
+      warning: "text-yellow-40, 0",
+      error: "text-red-40, 0",
+      default: "text-blue-40, 0",
+      premium: "text-purple-30, 0"
+  }; return (
+    <div, classNam, e = {`relative, overflo, w-hidden, border, rounded-xlp-6mb-8, animat, e-fade-in ${variantClasses[variant]} ${className}`}>
       {/* Background, Patter, n */}
       <div, classNam, e="absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-ful, l, h-full, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-transpare, n, t" />
-        <div, classNam, e="absolu, t, e -t, o, p-4 -rig, h, t-4 w-2, 0, h-20, b, g-whi, t, e/5, rounde, d-fu, l, l" />
-        <div, classNam, e="absolu, t, e -bott, o, m-4 -le, f, t-4 w-1, 6, h-16, b, g-whi, t, e/5, rounde, d-fu, l, l" />
-      </d, i, v>
-      <div, classNam, e="relativ, e, z-10">
-        <div, classNam, e="flex, item, s-start, justif, y-betwe, e, n">
-          <div, classNam, e="fl, e, x-1">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
-              <div, classNam, e="flex, item, s-center, ga, p-2" > <Sparkles, classNam, e = { `w-5 h-5 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-pul, s, e`} />
-                <span, classNam, e = "te, x, t-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
+        <div, classNam, e="absolute, to, p-0, lef, t-0 w-fullh-fullbg-gradient-to-br, fro, m-white/10to-transparent" />
+        <div, classNam, e="absolute -top-4 -right-4 w-20h-20bg-white/5, rounde, d-full" />
+        <div, classNam, e="absolute -bottom-4 -left-4 w-16h-16bg-white/5, rounde, d-full" />
+      </div>
+      <div, classNam, e="relativez-10">
+        <div, classNam, e="flex, item, s-start, justif, y-between">
+          <div, classNam, e="flex-1">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-3">
+              <div, classNam, e="flex, item, s-center, ga, p-2" > <Sparkles, classNam, e = { `w-5 h-5 ${iconClasses[varian, t] }, animate-pulse`} />
+                <span, classNam, e = "text-sm, fon, t-medium, uppercase, tracking-wider, opacit, y-90">
                   Fresh, Conten, t
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e="flex, item, s-center, ga, p-1" > <TrendingUp, classNam, e = { `w-4 h-4 ${iconClass, e, s[vari, a, n, t] }, anima, t, e-boun, c, e`} />
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, flex, items-center, ga, p-2">
-              {tit, l, e}
+                </span>
+              </div>
+              <div, classNam, e="flex, item, s-center, ga, p-1" > <TrendingUp, classNam, e = { `w-4 h-4 ${iconClasses[varian, t] }, animate-bounce`} />
+              </div>
+            </div>
+            <h3, classNam, e = "text-lg, fon, t-boldmb-2, flex, items-center, ga, p-2">
+              {title}
             </h3>
-            <p, classNam, e="te, x, t-sm, opacit, y-90, m, b-4, ma, x-w-2, x, l">
-              {descripti, o, n}
+            <p, classNam, e="text-sm, opacit, y-90mb-4, ma, x-w-2xl">
+              {description}
             </p>
             {/* Featured, Content, Preview */}
-            <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-3, m, b-4">
-              <div, classNam, e="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
-                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
+            <div, classNam, e="grid, gri, d-cols-1md: grid-cols-3, ga, p-3mb-4">
+              <div, classNam, e="bg-white/10, rounde, d-lgp-3, border, border-white/20">
+                <div, classNam, e="flex, item, s-center, ga, p-2mb-1">
                   <BookOpen, classNam, e="w-3 h-3" />
-                  <span, classNam, e="te, x, t-xs, fon, t-medi, u, m">Data, Engineerin, g</sp, a, n>
-                </d, i, v>
-                <div, classNam, e="te, x, t-xs, opacit, y-90">Re, a, l-Time, Data, Pipelines Gui, d, e</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
-                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
+                  <span, classNam, e="text-xs, fon, t-medium">Data, Engineerin, g</span>
+                </div>
+                <div, classNam, e="text-xs, opacit, y-90">Real-Time, Data, Pipelines Guide</div>
+              </div>
+              <div, classNam, e="bg-white/10, rounde, d-lgp-3, border, border-white/20">
+                <div, classNam, e="flex, item, s-center, ga, p-2mb-1">
                   <Zap, classNam, e="w-3 h-3" />
-                  <span, classNam, e="te, x, t-xs, fon, t-medi, u, m">Platform, Engineerin, g</sp, a, n>
-                </d, i, v>
-                <div, classNam, e="te, x, t-xs, opacit, y-90">Scorecards, That, Drive Adopti, o, n</d, i, v>
-              </d, i, v>
-              <div, classNam, e="bg-whi, t, e/10, rounde, d-l, g, p-3, border, border-whi, t, e/20">
-                <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
+                  <span, classNam, e="text-xs, fon, t-medium">Platform, Engineerin, g</span>
+                </div>
+                <div, classNam, e="text-xs, opacit, y-90">Scorecards, That, Drive Adoption</div>
+              </div>
+              <div, classNam, e="bg-white/10, rounde, d-lgp-3, border, border-white/20">
+                <div, classNam, e="flex, item, s-center, ga, p-2mb-1">
                   <Sparkles, classNam, e="w-3 h-3" />
-                  <span, classNam, e="te, x, t-xs, fon, t-medi, u, m">Gen, A, I</sp, a, n>
-                </d, i, v>
-                <div, classNam, e="te, x, t-xs, opacit, y-90">Production, Deployment, Patterns</d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <Link, t, o = { cta, L, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, b, g-whi, t, e/20, hove, r: bg-whi, t, e/30, tex, t-white, p, x-4, p, y-2, rounde, d-lg, fon, t-medium, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, border, border-whi, t, e/30"
+                  <span, classNam, e="text-xs, fon, t-medium">GenAI</span>
+                </div>
+                <div, classNam, e="text-xs, opacit, y-90">Production, Deployment, Patterns</div>
+              </div>
+            </div>
+            <Linkto = { ctaLi, n, k }, className = "inline-flex, item, s-center, ga, p-2bg-white/20, hove, r: bg-white/30, tex, t-whitepx-4py-2, rounde, d-lg, fon, t-medium, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:scale-105, border, border-white/30"
             >
-              {cta, T, e, x, t}
+              {ctaTe, x, t}
               <ArrowRight, classNam, e = "w-4 h-4" />
-            </Li, n, k>
-          </d, i, v>
-          { dismissib, l, e  && (
-            <button, onClic, k = { handleDism, i, s, s  }, classNa, m, e = "ml-4 p-1, rounde, d-full, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s"
+            </Link>
+          </div>
+          { dismissible  && (
+            <button, onClic, k = { handleDismis, s  }, className = "ml-4 p-1, rounde, d-full, hove, r: bg-white/20, transitio, n-colors"
             >
-                <X, classNam, e="w-5 h-5, opacit, y-75, hove, r:opaci, t, y-1, 0, 0" />
-              </bu, t, t, o, n>
+                <X, classNam, e="w-5 h-5, opacit, y-75, hove, r:opacity-100" />
+              </butt, o, n>
           )}
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, NewContentPromotionBanner;

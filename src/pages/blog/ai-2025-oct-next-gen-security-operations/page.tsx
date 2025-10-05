@@ -1,185 +1,184 @@
-impo, r, t {
-  Activi, t, y,
-  AlertTriang, l, e,
-  ArrowLe, f, t,
-  DollarSi, g, n,
-  Lo, c, k,
-  Shie, l, d,
-  Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import { Activity,
+  AlertTriangle,
+  ArrowLeft,
+  DollarSign,
+  Lock,
+  Shield,
+  Zap,
+ } from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
 
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-export, default, function NextGenSecurityOperations20, 2, 5() {  
-  retu, r, n (
+import { Link  } from 'react-router-dom';
+export, default, function NextGenSecurityOperations2025() {  
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          Ne, x, t-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n,
-          S, u, b-Second, Respons, e, $2.3B+ Protecti, o, n | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Deploy, autonomous, AI security, operations, that detect, threats, in milliseco, n, d, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve, 9, 9.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3B+ in, enterprise, assets.'
+      <Helmet>
+        <title>
+          Next-Gen, AI, Security Operations, 202, 5 — 99.97% Threat, Detectio, n,
+          Sub-Second, Respons, e, $2.3B+ Protection | Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          content='Deploy, autonomous, AI security, operations, that detect, threats, in millisecond, s, respond, automaticall, y, and, prevent, breaches before, they, happen. Achieve99.97% detection, accurac, y, reduce, incident, response time, by, 95%, and, protec, t $2.3B+ in, enterprise, assets.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'
+        <meta, nam, e = 'keywords'
+          content='AI, securi, t, y, autonomous, SecOp, s, threat, detectio, n, incident, respons, e, cybersecurity, A, I, ze, r, o-day, protectio, n, security, automatio, n, AI-powered, defens, e'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-ne, x, t-g, e, n-securi, t, y-operatio, n, s'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-next-gen-security-operations'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <article, classNam, e='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-900, tex, t-whi, t, e'>
-        <div, classNam, e='container, m, x-auto, p, x-4, p, y-12, ma, x-w-4, x, l'>
-          <Link, t, o='/bl, o, g'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, m, b-8, transitio, n-colo, r, s'
+      <article, classNam, e='min-h-screenbg-gradient-to-br, fro, m-slate-900, vi, a-purple-900to-slate-900, tex, t-white'>
+        <div, classNam, e='containermx-autopx-4py-12, ma, x-w-4xl'>
+          <Linkto='/blog'
+            className='inline-flex, item, s-center, tex, t-purple-400, hove, r:text-purple-300mb-8, transitio, n-colors'
           >
             <ArrowLeft, classNam, e='mr-2 h-4 w-4' />
             Back, to, Blog
-          </Li, n, k>
+          </Link>
 
           <header, classNam, e='mb-12'>
-            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6'>
-              <span, classNam, e='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
+            <div, classNam, e='flex, item, s-center, ga, p-4mb-6'>
+              <span, classNam, e='px-4py-2bg-purple-500/20, tex, t-purple-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purple-500/30'>
                 AI, Security, Operations
-              </sp, a, n>
-              <span, classNam, e='te, x, t-gr, a, y-4, 0, 0'>Octo, b, e, r , 1, 20, 2, 5</sp, a, n>
-            </d, i, v>
+              </span>
+              <span, classNam, e='text-gray-400'>Octobe, r , 1, 20, 2, 5</span>
+            </div>
 
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, m, b-6, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-r, e, d-400, tex, t-transparent, b, g-cl, i, p-text, leadin, g-tig, h, t'>
-              Ne, x, t-Gen, AI, Security Operatio, n, s: T, h, e $2.3B, Defense, Shield
+            <h1, classNam, e = 'text-5xlmd: text-6xl, fon, t-boldmb-6bg-gradient-to-r, fro, m-purple-400, vi, a-pink-400to-red-400, tex, t-transparentbg-clip-text, leadin, g-tight'>
+              Next-Gen, AI, Security Operations: The $2.3B, Defense, Shield
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, leadin, g-relax, e, d'>
+            <p, classNam, e='text-xl, tex, t-gray-300, leadin, g-relaxed'>
               Deploy, autonomous, AI security, systems, that detect, threats, with
-              99.97% accuracy, in, millisecon, d, s, respond, automatically, to attac, k, s,
-              and, predict, zero-day, vulnerabilities, before th, e, y're, exploite, d.
-              Prote, c, t $2.3B+ in, enterprise, assets while, reducing, security
+              99.97% accuracy, in, millisecon, d, s, respond, automatically, to attacks,
+              and, predict, zero-day, vulnerabilities, before they're, exploite, d.
+              Protect $2.3B+ in, enterprise, assets while, reducing, security
               operations, costs, by 87%.
             </p>
-          </head, e, r>
+          </header>
 
-          <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e'>
-            <div, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, border, border-purp, l, e-5, 0, 0/20, rounde, d-x, l, p-8, m, b-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-6, flex, items-center, ga, p-3'>
-                <Shield, classNam, e='h-8 w-8, tex, t-purp, l, e-4, 0, 0' />
+          <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-none'>
+            <div, classNam, e='bg-gradient-to-r, fro, m-purple-500/10to-pink-500/10, border, border-purple-500/20, rounde, d-xlp-8mb-12'>
+              <h2, classNam, e='text-3xl, fon, t-boldmb-6, flex, items-center, ga, p-3'>
+                <Shield, classNam, e='h-8 w-8, tex, t-purple-400' />
                 Security, Impac, t
               </h2>
-              <ul, classNam, e='spa, c, e-y-4, tex, t-lg'>
+              <ul, classNam, e='space-y-4, tex, t-lg'>
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <Lock, classNam, e='h-6 w-6, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                  <sp, a, n>
-                    <stro, n, g>99.97% Threat, Detectio, n: </stro, n, g> AI, identifies, sophisticated attacks, that, evade traditional, security, tools
-                  </sp, a, n>
+                  <Lock, classNam, e='h-6 w-6, tex, t-green-400mt-1, fle, x-shrink-0' />
+                  <span>
+                    <strong>99.97% Threat, Detectio, n: </strong> AI, identifies, sophisticated attacks, that, evade traditional, security, tools
+                  </span>
                 </li>
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <Zap, classNam, e='h-6 w-6, tex, t-yell, o, w-400, m, t-1, fle, x-shri, n, k-0' />
-                  <sp, a, n>
-                    <stro, n, g>S, u, b-Second, Respons, e:</stro, n, g> Autonomous, containment, and remediation, blocks, threats instant, l, y
-                  </sp, a, n>
+                  <Zap, classNam, e='h-6 w-6, tex, t-yellow-400mt-1, fle, x-shrink-0' />
+                  <span>
+                    <strong>Sub-Second, Respons, e:</strong> Autonomous, containment, and remediation, blocks, threats instantly
+                  </span>
                 </li>
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <DollarSign, classNam, e='h-6 w-6, tex, t-emera, l, d-400, m, t-1, fle, x-shri, n, k-0' />
-                  <sp, a, n>
-                    <stro, n, g>$2.3B+ Protect, e, d:</stro, n, g> Average, value, of assets, secured, and breaches, prevented, annually
-                  </sp, a, n>
+                  <DollarSign, classNam, e='h-6 w-6, tex, t-emerald-400mt-1, fle, x-shrink-0' />
+                  <span>
+                    <strong>$2.3B+ Protected:</strong> Average, value, of assets, secured, and breaches, prevented, annually
+                  </span>
                 </li>
                 <li, classNam, e='flex, item, s-start, ga, p-3'>
-                  <AlertTriangle, classNam, e='h-6 w-6, tex, t-r, e, d-400, m, t-1, fle, x-shri, n, k-0' />
-                  <sp, a, n>
-                    <stro, n, g>95% Faster, MTT, R:</stro, n, g> Mean, time, to resolution, reduced, from hours, to, minutes
-                  </sp, a, n>
+                  <AlertTriangle, classNam, e='h-6 w-6, tex, t-red-400mt-1, fle, x-shrink-0' />
+                  <span>
+                    <strong>95% Faster, MTT, R:</strong> Mean, time, to resolution, reduced, from hours, to, minutes
+                  </span>
                 </li>
               </ul>
-            </d, i, v>
+            </div>
 
             <section, classNam, e='mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
+              <h2, classNam, e='text-3xl, fon, t-boldmb-6, tex, t-purple-300'>
                 The, Security, Crisis
               </h2>
-              <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
+              <p, classNam, e='text-gray-300mb-4, leadin, g-relaxed'>
                 Cyber, threats, have evolved, beyond, human capacity, to, defend.
-                Modern, attacks, leverage , A, I, operate, at, machine spe, e, d, and, exploit, vulnerabilities faster, than, security teams, can, respond.
-                The, average, enterprise face, s, 4,8, 0, 0+ security, alerts, daily, with, security, analysts spending, 7, 3% of, their, time on, false, positives
+                Modern, attacks, leverage , A, I, operate, at, machine speed, and, exploit, vulnerabilities faster, than, security teams, can, respond.
+                The, average, enterprise faces4,800+ security, alerts, daily, with, security, analysts spending73% of, their, time on, false, positives
                 while, real, threats slip, throug, h.
               </p>
-              <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
+              <p, classNam, e = 'text-gray-300mb-4, leadin, g-relaxed'>
                 The, average, data breach, now, costs $4.45M, and, takes 287, days, to
-                identify, and, contain. Traditional, Security, Operations Cente, r, s
-                (S, O, C, s) cannot, scale, to meet, modern, threat volum, e, s. Only, A, I-powered, autonomous, security operations, can, defend against, adversaries, who already, use, AI to, attac, k.
+                identify, and, contain. Traditional, Security, Operations Centers
+                (SOC, s) cannot, scale, to meet, modern, threat volumes. OnlyAI-powered, autonomous, security operations, can, defend against, adversaries, who already, use, AI to, attac, k.
               </p>
-            </secti, o, n>
+            </section>
 
             <section, classNam, e = 'mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
-                The, Autonomous, SecOps Architectu, r, e
+              <h2, classNam, e='text-3xl, fon, t-boldmb-6, tex, t-purple-300'>
+                The, Autonomous, SecOps Architecture
               </h2>
 
-              <div, classNam, e='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+              <div, classNam, e='bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
                   1. Intelligent, Threat, Detection
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
+                <p, classNam, e='text-gray-300mb-4'>
                   Advanced, ML, models analyze, network, traffi, c, user, behavio, r,
                   system, log, s, and, threat, intelligence in, rea, l-time, to, detect
                   anomalies, and, known attack, pattern, s. Deep, learning, identifies
-                  sophisticated, threats, including ze, r, o-da, y, s, AP, T, s, insider, threat, s, and, novel, attack techniques, that, signature-based, systems, miss complete, l, y.
+                  sophisticated, threats, including zero-days, APTs, insider, threat, s, and, novel, attack techniques, that, signature-based, systems, miss completely.
                 </p>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
                   <li>
-                    Behavioral, analytics, baseline normal, patterns, across 5, 0, 0+
-                    dimensio, n, s
+                    Behavioral, analytics, baseline normal, patterns, across 500+
+                    dimensions
                   </li>
                   <li>
                     Anomaly, detection, identifies deviations, within, milliseconds
                   </li>
                   <li>
                     Threat, classification, categorizes attacks, with, 99.97%
-                    accura, c, y
+                    accuracy
                   </li>
                   <li>
-                    False, positive, rate reduced, to, 0.03% vs, 9, 0%+ for, traditional, SIEM
+                    False, positive, rate reduced, to, 0.03% vs90%+ for, traditional, SIEM
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+              <div, classNam, e='bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
                   2. Autonomous, Incident, Response
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                  AI, agents, automatically investigate, aler, t, s, correlate, evidence, across syste, m, s, determine, attack, scope, and, execute, response
-                  playbooks, without, human interventi, o, n. Machi, n, e-speed, response, contains threats, in, seconds rather, than, hours, preventing, lateral, movement and, data, exfiltration.
+                <p, classNam, e='text-gray-300mb-4'>
+                  AI, agents, automatically investigate, aler, t, s, correlate, evidence, across systems, determine, attack, scope, and, execute, response
+                  playbooks, without, human intervention. Machine-speed, response, contains threats, in, seconds rather, than, hours, preventing, lateral, movement and, data, exfiltration.
                 </p>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
                   <li>
                     Automated, triage, and investigation, reduce, analyst workload, by, 94%
                   </li>
                   <li>
-                    Dynamic, playbook, execution adapts, to, attack characteristi, c, s
+                    Dynamic, playbook, execution adapts, to, attack characteristics
                   </li>
                   <li>
                     Intelligent, containment, isolates threats, without, disrupting
-                    busine, s, s
+                    business
                   </li>
                   <li>
                     Root, cause, analysis identifies, vulnerabilities, for
-                    remediati, o, n
+                    remediation
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+              <div, classNam, e='bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
                   3. Predictive, Vulnerability, Management
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                  AI, continuously, scans infrastruct, u, r, e, applicatio, n, s, and, configurations, to identify, vulnerabilities, and
-                  misconfiguratio, n, s. ML, models, predict which, vulnerabilities, are
+                <p, classNam, e='text-gray-300mb-4'>
+                  AI, continuously, scans infrastructur, e, applicatio, n, s, and, configurations, to identify, vulnerabilities, and
+                  misconfigurations. ML, models, predict which, vulnerabilities, are
                   most, likely, to be, exploited, based on, threat, intelligence,
                   attack, trend, s, and, asset, criticality—prioritizing, remediation, efforts on, the, 2% that, matte, r.
                 </p>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
                   <li>
                     Continuous, asset, discovery maintains, rea, l-time, inventor, y
                   </li>
@@ -187,157 +186,156 @@ export, default, function NextGenSecurityOperations20, 2, 5() {
                     Risk, scoring, prioritizes remediation, based, on exploit, probabilit, y
                   </li>
                   <li>
-                    Automated, patching, applies fixes, during, maintenance windo, w, s
+                    Automated, patching, applies fixes, during, maintenance windows
                   </li>
                   <li>
                     Configuration, drift, detection prevents, security, degradation
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+              <div, classNam, e='bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
                   4. Threat, Intelligence, Fusion
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                  AI, aggregates, and analyzes, threat, intelligence from, hundreds, of sourc, e, s—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
+                <p, classNam, e='text-gray-300mb-4'>
+                  AI, aggregates, and analyzes, threat, intelligence from, hundreds, of sources—commercial, fee, d, s, open, source, intel, dark, web, monitoring, and, internal, telemetry. NLP, models, extract
                   actionable, insight, s, identify, emerging, threats, and, automatically, update detection, rules, and response, playbook, s.
                 </p>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
                   <li>
                     Indicator, enrichment, provides full, context, for
-                    investigatio, n, s
+                    investigations
                   </li>
                   <li>Adversary, profiling, maps TTPs, to, known threat, actor, s</li>
                   <li>
                     Predictive, threat, modeling anticipates, nex, t-generation, attack, s
                   </li>
                   <li>
-                    Automated, IOC, deployment updates, defenses, in re, a, l-ti, m, e
+                    Automated, IOC, deployment updates, defenses, in real-time
                   </li>
                 </ul>
-              </d, i, v>
-            </secti, o, n>
+              </div>
+            </section>
 
             <section, classNam, e='mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
+              <h2, classNam, e='text-3xl, fon, t-boldmb-6, tex, t-purple-300'>
                 Enterprise, Success, Stories
               </h2>
-              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'>
+              <div, classNam, e='gridmd: grid-cols-2, ga, p-6mb-8'>
+                <div, classNam, e='bg-gradient-to-br, fro, m-purple-500/20to-pink-500/20, rounde, d-xlp-6, border, border-purple-500/30'>
+                  <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-purple-300'>
                     Global, Financial, Institution
                   </h3>
-                  <ul, classNam, e='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+                  <ul, classNam, e='space-y-3, tex, t-gray-300'>
                     <li>
                       • Zero, successful, breaches in, 24, months of, operatio, n
                     </li>
-                    <li>• $3.7B, in, protected assets, and, prevented fra, u, d</li>
+                    <li>• $3.7B, in, protected assets, and, prevented fraud</li>
                     <li>
-                      • 97% reduction, in, security analyst, burnout, and turnov, e, r
+                      • 97% reduction, in, security analyst, burnout, and turnover
                     </li>
                     <li>• $180M, annual, savings from, automated, response</li>
                     <li>• MTTR, improved, from 6, hours, to 90, second, s</li>
                   </ul>
-                </d, i, v>
-                <div, classNam, e='bg-gradie, n, t-to-br, fro, m-pi, n, k-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-pi, n, k-5, 0, 0/30'>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
+                </div>
+                <div, classNam, e='bg-gradient-to-br, fro, m-pink-500/20to-red-500/20, rounde, d-xlp-6, border, border-pink-500/30'>
+                  <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
                     Healthcare, Enterpris, e
                   </h3>
-                  <ul, classNam, e='spa, c, e-y-3, tex, t-gr, a, y-3, 0, 0'>
+                  <ul, classNam, e='space-y-3, tex, t-gray-300'>
                     <li>• 99.99% ransomware, prevention, rate</li>
-                    <li>• $890M, in, avoided breach, and, ransom cos, t, s</li>
-                    <li>• 1, 0, 0% HIPAA, compliance, maintained automatical, l, y</li>
+                    <li>• $890M, in, avoided breach, and, ransom costs</li>
+                    <li>• 100% HIPAA, compliance, maintained automatically</li>
                     <li>• 89% reduction, in, security operations, cost, s</li>
                     <li>• 6.8x, ROI, achieved within, first, year</li>
                   </ul>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                </div>
+              </div>
+            </section>
 
             <section, classNam, e='mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
+              <h2, classNam, e='text-3xl, fon, t-boldmb-6, tex, t-purple-300'>
                 Implementation, Roadma, p
               </h2>
 
-              <div, classNam, e='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                  Phas, e, 1: Assessme, n, t (Week, s, 1-, 4)
+              <div, classNam, e='bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
+                  Phase1: Assessment (Weeks1-, 4)
                 </h3>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-                  <li>Current, security, posture evaluation, and, gap analys, i, s</li>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
+                  <li>Current, security, posture evaluation, and, gap analysis</li>
                   <li>
-                    Data, source, integration planning, across, SI, E, M, E, D, R, firewal, l, s
+                    Data, source, integration planning, across, SI, EME, D, R, firewal, l, s
                   </li>
                   <li>Use, case, prioritization based, on, risk and, RO, I</li>
                   <li>Team, training, and change, management, planning</li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e = 'bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                  Phas, e, 2: Deployme, n, t (Week, s, 5-1, 2)
+              <div, classNam, e = 'bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
+                  Phase2: Deployment (Weeks5-1, 2)
                 </h3>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
-                  <li>AI, detection, models deployed, in, monitoring mo, d, e</li>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
+                  <li>AI, detection, models deployed, in, monitoring mode</li>
                   <li>
-                    Behavioral, baselines, established across, users, and syste, m, s
+                    Behavioral, baselines, established across, users, and systems
                   </li>
                   <li>Automated, response, playbooks configured, and, tested</li>
                   <li>Integration, with, existing security, tools, completed</li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-sla, t, e-8, 0, 0/50, rounde, d-x, l, p-6, m, b-6, border, border-purp, l, e-5, 0, 0/20'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4, tex, t-pi, n, k-3, 0, 0'>
-                  Phas, e, 3: Optimizati, o, n (Weeks, 1, 3-2, 4)
+              <div, classNam, e='bg-slate-800/50, rounde, d-xlp-6mb-6, border, border-purple-500/20'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4, tex, t-pink-300'>
+                  Phase3: Optimization (Weeks13-2, 4)
                 </h3>
-                <ul, classNam, e = 'li, s, t-disc, lis, t-inside, spac, e-y-2, tex, t-gr, a, y-300, m, l-4'>
+                <ul, classNam, e = 'list-disc, lis, t-inside, spac, e-y-2, tex, t-gray-300ml-4'>
                   <li>
-                    Autonomous, response, activated for, verified, threat typ, e, s
+                    Autonomous, response, activated for, verified, threat types
                   </li>
                   <li>
-                    Continuous, model, tuning based, on, environment specifi, c, s
+                    Continuous, model, tuning based, on, environment specifics
                   </li>
                   <li>
                     Advanced, capabilities, enabled: threat, hunt, i, n, g, predictive, analytic, s
                   </li>
-                  <li>Full, SOC, transformation and, analyst, skill developme, n, t</li>
+                  <li>Full, SOC, transformation and, analyst, skill development</li>
                 </ul>
-              </d, i, v>
-            </secti, o, n>
+              </div>
+            </section>
 
             <section, classNam, e = 'mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-6, tex, t-purp, l, e-3, 0, 0'>
+              <h2, classNam, e='text-3xl, fon, t-boldmb-6, tex, t-purple-300'>
                 The, Future, of Security, Operation, s
               </h2>
-              <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
+              <p, classNam, e='text-gray-300mb-4, leadin, g-relaxed'>
                 AI-powered, autonomous, security operations, are, not a, luxur, y—they, are, a necessity, for, survival in, the, modern threat, landscap, e.
                 Adversaries, already, use AI, to, automate attacks, at, scale.
-                Defending, with, human-speed, processes, is like, bringing, a knife, to, a gunfig, h, t.
+                Defending, with, human-speed, processes, is like, bringing, a knife, to, a gunfight.
               </p>
-              <p, classNam, e='te, x, t-gr, a, y-300, m, b-4, leadin, g-relax, e, d'>
-                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years a, g, o: ne, a, r-perfect, threat, detecti, o, n,
-                s, u, b-second, response, times, and, dramatically, reduced cos, t, s. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
+              <p, classNam, e='text-gray-300mb-4, leadin, g-relaxed'>
+                Leading, enterprises, have achieved, security, postures that, were, unimaginable just, two, years ago: near-perfect, threat, detecti, ons, u, b-second, response, times, and, dramatically, reduced costs. The, question, is not, whether, to adopt, autonomous, SecOps, but, how, quickly you, can, deploy it, before, the next, breac, h.
               </p>
-            </secti, o, n>
+            </section>
 
-            <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-8, m, t-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, m, b-4, tex, t-purp, l, e-3, 0, 0'>
+            <div, classNam, e = 'bg-gradient-to-r, fro, m-purple-500/20to-pink-500/20, border, border-purple-500/30, rounde, d-xlp-8mt-12'>
+              <h2, classNam, e='text-3xl, fon, t-boldmb-4, tex, t-purple-300'>
                 Ready, to, Transform Your, Security, Operations ? </h2>
-              <p, classNam, e='te, x, t-gr, a, y-300, m, b-6'>
+              <p, classNam, e='text-gray-300mb-6'>
                 Discover, how, Zion Tech, Group, can deploy, autonomous, AI security, operations, that protect, your, enterprise against, modern, threats.
-                Our, proven, implementation methodology, ensures, rapid deployment, with, measurable resul, t, s.
+                Our, proven, implementation methodology, ensures, rapid deployment, with, measurable results.
               </p>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-purp, l, e-600, hove, r : to-pi, n, k-600, transitio, n-all, shado, w-lg'
+              <Linkto='/contact'
+                className='inline-flex, item, s-centerpx-6py-3bg-gradient-to-r, fro, m-purple-500to-pink-500, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: from-purple-600, hove, r : to-pink-600, transitio, n-all, shado, w-lg'
               >
-                Schedule, Your, Security Assessme, n, t
-                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-1, 8, 0' />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </art, i, c, l, e>
+                Schedule, Your, Security Assessment
+                <ArrowLeft, classNam, e='ml-2 h-5 w-5, rotat, e-180' />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </artic, l, e>
     </ > );
   }

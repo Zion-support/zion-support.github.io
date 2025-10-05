@@ -1,376 +1,375 @@
-impo, r, t {
-  ArrowRig, h, t,
-  CheckCirc, l, e,
-  Shie, l, d,
-  Trending, U, p,
-  Use, r, s,
-  Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-import, React, from 'rea, c, t';
+import { ArrowRight,
+  CheckCircle,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+ } from 'lucide-react';
+import React from 'react';
 
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Helmet  } from 'react-helmet-async';
+import { Link  } from 'react-router-dom';
 
 const, AIMLOpsAutomatio, n = () => { 
-  retu, r, n (
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>AI, MLOps, Automation Servic, e, s | Zion, Tech, Group</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Enterprise, MLOps, automation with, 9, 9.9% reliabili, t, y. Dep, l, o, y, monit, o, r, and, scale, ML models, with, automated pipelin, e, s, re, a, l-time, monitorin, g, and, intelligent, optimization.'
+      <Helmet>
+        <title>AI, MLOps, Automation Services | Zion, Tech, Group</title>
+        <meta, nam, e = 'description'
+          content='Enterprise, MLOps, automation with99.9% reliability. Deplo, y, monit, o, r, and, scale, ML models, with, automated pipelines, real-time, monitorin, g, and, intelligent, optimization.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='ML, O, p, s, AI, automatio, n, ML, deploymen, t, model, monitorin, g, CI/CD, for, ML, automated, ML, pipelines'
+        <meta, nam, e = 'keywords'
+          content='MLOp, s, AI, automatio, n, ML, deploymen, t, model, monitorin, g, CI/CD, for, ML, automated, ML, pipelines'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-b, fro, m-gr, a, y-50, t, o-white, dar, k: fr, o, m-gr, a, y-900, dar, k:to-gr, a, y-8, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        <section, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, p, y-20'>
-          <div, classNam, e='absolute, inse, t-0, b, g-black, opacit, y-10' />
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, relative, z-10'>
-            <div, classNam, e='te, x, t-cent, e, r'>
-              <h1, classNam, e='te, x, t-5xl, m, d:te, x, t-6xl, fon, t-bold, m, b-6'>
+      <div, classNam, e = 'min-h-screenbg-gradient-to-b, fro, m-gray-50to-white, dar, k: from-gray-900, dar, k:to-gray-800' > {/* Hero, Sect, i, o, n */ }
+        <section, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-r, fro, m-blue-600to-purple-600, tex, t-whitepy-20'>
+          <div, classNam, e='absolute, inse, t-0bg-black, opacit, y-10' />
+          <div, classNam, e='max-w-7xlmx-autopx-4sm: px-6lg:px-8, relative, z-10'>
+            <div, classNam, e='text-center'>
+              <h1, classNam, e='text-5xlmd:text-6xl, fon, t-boldmb-6'>
                 AI, MLOps, Automation
               </h1>
-              <p, classNam, e='te, x, t-xl, m, d:te, x, t-2xl, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
-                De, p, l, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliabili, t, y
+              <p, classNam, e='text-xlmd:text-2xlmb-8, ma, x-w-3xlmx-auto'>
+                Depl, o, y, monit, o, r, and, scale, ML models, with, enterprise-grade, automation, achieving 99.9% reliability
               </p>
               <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4'>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, p, x-8, p, y-3, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
+                <Linkto='/contact'
+                  className='inline-flex, item, s-centerpx-8py-3bg-white, tex, t-blue-600, rounde, d-lg, fon, t-semibold, hove, r: bg-gray-100, transitio, n-colors'
                 >
                   Get, Starte, d
                   <ArrowRight, classNam, e='ml-2 h-5 w-5' />
-                </Li, n, k>
-                <a, hre, f='#featur, e, s'
-                  classNa, m, e='inli, n, e-flex, item, s-center, p, x-8, p, y-3, b, g-transparent, borde, r-2, borde, r-white, tex, t-white, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:te, x, t-bl, u, e-600, transitio, n-colo, r, s'
+                </Link>
+                <a, hre, f='#features'
+                  className='inline-flex, item, s-centerpx-8py-3bg-transparent, borde, r-2, borde, r-white, tex, t-white, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:text-blue-600, transitio, n-colors'
                 >
                   Learn, Mor, e
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Key, Metr, i, c, s */}
-        <section, classNam, e = 'py-16, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-4, ga, p-8, tex, t-cent, e, r'>
+        <section, classNam, e = 'py-16bg-white, dar, k: bg-gray-800'>
+          <div, classNam, e='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+            <div, classNam, e='grid, gri, d-cols-1md:grid-cols-4, ga, p-8, tex, t-center'>
               <div, classNam, e='p-6'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-600mb-2'>
                   99.9%
-                </d, i, v>
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                </div>
+                <div, classNam, e='text-gray-600, dar, k:text-gray-300'>
                   Uptime, SL, A
-                </d, i, v>
-              </d, i, v>
+                </div>
+              </div>
               <div, classNam, e='p-6'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>85%</d, i, v>
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-600mb-2'>85%</div>
+                <div, classNam, e='text-gray-600, dar, k:text-gray-300'>
                   Faster, Deployment, s
-                </d, i, v>
-              </d, i, v>
+                </div>
+              </div>
               <div, classNam, e='p-6'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-600mb-2'>
                   $2.4M
-                </d, i, v>
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                </div>
+                <div, classNam, e='text-gray-600, dar, k:text-gray-300'>
                   Avg, Annual, Savings
-                </d, i, v>
-              </d, i, v>
+                </div>
+              </div>
               <div, classNam, e='p-6'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-600, m, b-2'>72%</d, i, v>
-                <div, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-600mb-2'>72%</div>
+                <div, classNam, e='text-gray-600, dar, k:text-gray-300'>
                   Cost, Reductio, n
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Features, Sect, i, o, n */}
-        <section, i, d = 'featur, e, s' classNa, m, e='py-20, b, g-gr, a, y-50, dar, k: bg-gr, a, y-9, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-4'>
+        <sectionid = 'features' className='py-20bg-gray-50, dar, k: bg-gray-900'>
+          <div, classNam, e='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+            <div, classNam, e='text-centermb-16'>
+              <h2, classNam, e='text-4xl, fon, t-boldmb-4'>
                 Comprehensive, MLOps, Platform
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
-                E, n, d-to-end, automation, for the, entire, ML lifecyc, l, e - from, development, to producti, o, n
+              <p, classNam, e='text-xl, tex, t-gray-600, dar, k:text-gray-300, ma, x-w-3xlmx-auto'>
+                End-to-end, automation, for the, entire, ML lifecycle - from, development, to production
               </p>
-            </d, i, v>
+            </div>
 
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8'>
+            <div, classNam, e='grid, gri, d-cols-1md:grid-cols-2lg:grid-cols-3, ga, p-8'>
               {/* Automated, Pipeli, n, e, s */}
-              <div, classNam, e = 'bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w'>
-                <Zap, classNam, e='h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>
-                  Automated, C, I/CD, Pipeline, s
+              <div, classNam, e = 'bg-white, dar, k: bg-gray-800p-8, rounde, d-xl, shado, w-lg, hove, r:shadow-2xl, transitio, n-shadow'>
+                <Zap, classNam, e='h-12w-12, tex, t-blue-600mb-4' />
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>
+                  AutomatedCI/CD, Pipeline, s
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, m, b-4'>
-                  Fully, automated, bui, l, d, te, s, t, and, deployment, pipelines with, integrated, quality gates, and, rollback capabiliti, e, s.
+                <p, classNam, e='text-gray-600, dar, k:text-gray-300mb-4'>
+                  Fully, automated, bui, l, d, te, s, t, and, deployment, pipelines with, integrated, quality gates, and, rollback capabilities.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0'>
-                      Automated, testing, and validati, o, n
-                    </sp, a, n>
+                <ul, classNam, e = 'space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k: text-gray-300'>
+                      Automated, testing, and validation
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Bl, u, e-green, deployment, s
-                    </sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
+                      Blue-green, deployment, s
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Instant, rollback, on failu, r, e
-                    </sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
+                      Instant, rollback, on failure
+                    </span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              {/* Re, a, l-time, Monitor, i, n, g */}
-              <div, classNam, e = 'bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w'>
-                <TrendingUp, classNam, e='h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>
-                  Re, a, l-time, Model, Monitoring
+              {/* Real-time, Monitor, i, n, g */}
+              <div, classNam, e = 'bg-white, dar, k: bg-gray-800p-8, rounde, d-xl, shado, w-lg, hove, r:shadow-2xl, transitio, n-shadow'>
+                <TrendingUp, classNam, e='h-12w-12, tex, t-blue-600mb-4' />
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>
+                  Real-time, Model, Monitoring
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, m, b-4'>
+                <p, classNam, e='text-gray-600, dar, k:text-gray-300mb-4'>
                   Continuous, monitoring, of model, performa, n, c, e, data, drif, t, and, prediction, quality with, automated, alerting.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0'>
+                <ul, classNam, e = 'space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k: text-gray-300'>
                       Performance, metrics, dashboard
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Data, drift, detection
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Automated, retraining, triggers
-                    </sp, a, n>
+                    </span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
               {/* Model, Regis, t, r, y */}
-              <div, classNam, e = 'bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w'>
-                <Shield, classNam, e='h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>
+              <div, classNam, e = 'bg-white, dar, k: bg-gray-800p-8, rounde, d-xl, shado, w-lg, hove, r:shadow-2xl, transitio, n-shadow'>
+                <Shield, classNam, e='h-12w-12, tex, t-blue-600mb-4' />
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>
                   Centralized, Model, Registry
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, m, b-4'>
-                  Versi, o, n-controlled, model, registry with, lineage, tracki, n, g,
+                <p, classNam, e='text-gray-600, dar, k:text-gray-300mb-4'>
+                  Version-controlled, model, registry with, lineage, tracki, n, g,
                   approval, workflow, s, and, compliance, auditing.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0'>
-                      Version, control, and linea, g, e
-                    </sp, a, n>
+                <ul, classNam, e = 'space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k: text-gray-300'>
+                      Version, control, and lineage
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Approval, workflow, s
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Compliance, audit, trails
-                    </sp, a, n>
+                    </span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
               {/* Feature, St, o, r, e */}
-              <div, classNam, e = 'bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w'>
-                <Users, classNam, e='h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>
+              <div, classNam, e = 'bg-white, dar, k: bg-gray-800p-8, rounde, d-xl, shado, w-lg, hove, r:shadow-2xl, transitio, n-shadow'>
+                <Users, classNam, e='h-12w-12, tex, t-blue-600mb-4' />
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>
                   Enterprise, Feature, Store
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, m, b-4'>
+                <p, classNam, e='text-gray-600, dar, k:text-gray-300mb-4'>
                   Centralized, feature, management with, version, i, n, g, shari, n, g, and, rea, l-time, serving, capabilities.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0'>
+                <ul, classNam, e = 'space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k: text-gray-300'>
                       Feature, reusabilit, y
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      L, o, w-latency, servin, g
-                    </sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
+                      Low-latency, servin, g
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Traini, n, g-serving, consistenc, y
-                    </sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
+                      Training-serving, consistenc, y
+                    </span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              {/* Au, t, o-sca, l, i, n, g */}
-              <div, classNam, e = 'bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w'>
-                <Zap, classNam, e='h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>
-                  Intelligent, Aut, o-scali, n, g
+              {/* Auto-scali, n, g */}
+              <div, classNam, e = 'bg-white, dar, k: bg-gray-800p-8, rounde, d-xl, shado, w-lg, hove, r:shadow-2xl, transitio, n-shadow'>
+                <Zap, classNam, e='h-12w-12, tex, t-blue-600mb-4' />
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>
+                  Intelligent, Aut, o-scaling
                 </h3>
-                <p, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, m, b-4'>
+                <p, classNam, e='text-gray-600, dar, k:text-gray-300mb-4'>
                   Predictive, aut, o-scaling, based, on traffic, patte, r, n, s, ensuring, optimal, performance and, cost, efficiency.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0'>
+                <ul, classNam, e = 'space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k: text-gray-300'>
                       Predictive, scalin, g
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Cost, optimizatio, n
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Zero, downtime, scaling
-                    </sp, a, n>
+                    </span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
               {/* Experiment, Track, i, n, g */}
-              <div, classNam, e = 'bg-white, dar, k: bg-gr, a, y-80, 0, p-8, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-2xl, transitio, n-shad, o, w'>
-                <TrendingUp, classNam, e='h-1, 2, w-12, tex, t-bl, u, e-600, m, b-4' />
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>Experiment, Trackin, g</h3>
-                <p, classNam, e='te, x, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-300, m, b-4'>
+              <div, classNam, e = 'bg-white, dar, k: bg-gray-800p-8, rounde, d-xl, shado, w-lg, hove, r:shadow-2xl, transitio, n-shadow'>
+                <TrendingUp, classNam, e='h-12w-12, tex, t-blue-600mb-4' />
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>Experiment, Trackin, g</h3>
+                <p, classNam, e='text-gray-600, dar, k:text-gray-300mb-4'>
                   Comprehensive, experiment, tracking with, parameter, loggi, n, g,
                   metric, visualizatio, n, and, model, comparison.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k: te, x, t-gr, a, y-3, 0, 0'>
+                <ul, classNam, e = 'space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k: text-gray-300'>
                       Parameter, loggin, g
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
                       Visual, compariso, n
-                    </sp, a, n>
+                    </span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-500, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <span, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                      Reproducibili, t, y
-                    </sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-500mr-2, fle, x-shrink-0mt-1' />
+                    <span, classNam, e='text-gray-700, dar, k:text-gray-300'>
+                      Reproducibility
+                    </span>
                   </li>
                 </ul>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Use, Ca, s, e, s */}
-        <section, classNam, e = 'py-20, b, g-white, dar, k: bg-gr, a, y-8, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m:px-6, l, g:px-8'>
-            <div, classNam, e='te, x, t-center, m, b-16'>
-              <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-4'>Proven, Use, Cases</h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, dar, k:te, x, t-gr, a, y-3, 0, 0'>
-                Re, a, l-world, results, from enterprise, deployment, s
+        <section, classNam, e = 'py-20bg-white, dar, k: bg-gray-800'>
+          <div, classNam, e='max-w-7xlmx-autopx-4sm:px-6lg:px-8'>
+            <div, classNam, e='text-centermb-16'>
+              <h2, classNam, e='text-4xl, fon, t-boldmb-4'>Proven, Use, Cases</h2>
+              <p, classNam, e='text-xl, tex, t-gray-600, dar, k:text-gray-300'>
+                Real-world, results, from enterprise, deployment, s
               </p>
-            </d, i, v>
+            </div>
 
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, ga, p-8'>
-              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-bl, u, e-50, t, o-purp, l, e-50, dar, k:fr, o, m-gr, a, y-700, dar, k:to-gr, a, y-60, 0, p-8, rounde, d-xl'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>Financial, Service, s</h3>
-                <p, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-200, m, b-4'>
-                  Leading, bank, deployed 4, 5, 0+ ML, models, with automated, monitoring, and complian, c, e
+            <div, classNam, e='grid, gri, d-cols-1md:grid-cols-2, ga, p-8'>
+              <div, classNam, e='bg-gradient-to-br, fro, m-blue-50to-purple-50, dar, k:from-gray-700, dar, k:to-gray-600p-8, rounde, d-xl'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>Financial, Service, s</h3>
+                <p, classNam, e='text-gray-700, dar, k:text-gray-200mb-4'>
+                  Leading, bank, deployed 450+ ML, models, with automated, monitoring, and compliance
                 </p>
-                <ul, classNam, e='spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <sp, a, n>99.97% uptime, across, all mode, l, s</sp, a, n>
+                <ul, classNam, e='space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-600mr-2, fle, x-shrink-0mt-1' />
+                    <span>99.97% uptime, across, all models</span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <sp, a, n>85% reduction, in, deployment ti, m, e</sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-600mr-2, fle, x-shrink-0mt-1' />
+                    <span>85% reduction, in, deployment time</span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <sp, a, n>Full, regulatory, compliance</sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-600mr-2, fle, x-shrink-0mt-1' />
+                    <span>Full, regulatory, compliance</span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-gre, e, n-50, t, o-bl, u, e-50, dar, k:fr, o, m-gr, a, y-700, dar, k:to-gr, a, y-60, 0, p-8, rounde, d-xl'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-4'>E-Commer, c, e</h3>
-                <p, classNam, e='te, x, t-gr, a, y-700, dar, k:te, x, t-gr, a, y-200, m, b-4'>
-                  Global, retailer, scaled recommendation, systems, to 5, 0, M+ daily, prediction, s
+              <div, classNam, e='bg-gradient-to-br, fro, m-green-50to-blue-50, dar, k:from-gray-700, dar, k:to-gray-600p-8, rounde, d-xl'>
+                <h3, classNam, e='text-2xl, fon, t-boldmb-4'>E-Commerce</h3>
+                <p, classNam, e='text-gray-700, dar, k:text-gray-200mb-4'>
+                  Global, retailer, scaled recommendation, systems, to 50M+ daily, prediction, s
                 </p>
-                <ul, classNam, e='spa, c, e-y-2'>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <sp, a, n>32% increase, in, conversion ra, t, e</sp, a, n>
+                <ul, classNam, e='space-y-2'>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-600mr-2, fle, x-shrink-0mt-1' />
+                    <span>32% increase, in, conversion rate</span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <sp, a, n>$4.2M, annual, cost savin, g, s</sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-600mr-2, fle, x-shrink-0mt-1' />
+                    <span>$4.2M, annual, cost savings</span>
                   </li>
-                  <li, classNam, e='flex, item, s-sta, r, t'>
-                    <CheckCircle, classNam, e='h-5 w-5, tex, t-gre, e, n-600, m, r-2, fle, x-shri, n, k-0, m, t-1' />
-                    <sp, a, n>S, u, b-100ms, prediction, latency</sp, a, n>
+                  <li, classNam, e='flex, item, s-start'>
+                    <CheckCircle, classNam, e='h-5 w-5, tex, t-green-600mr-2, fle, x-shrink-0mt-1' />
+                    <span>Sub-100ms, prediction, latency</span>
                   </li>
                 </ul>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* CTA, Sect, i, o, n */}
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-whi, t, e'>
-          <div, classNam, e='m, a, x-w-4xl, m, x-auto, tex, t-center, p, x-4, s, m: px-6, l, g:px-8'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, m, b-6'>
+        <section, classNam, e = 'py-20bg-gradient-to-r, fro, m-blue-600to-purple-600, tex, t-white'>
+          <div, classNam, e='max-w-4xlmx-auto, tex, t-centerpx-4sm: px-6lg:px-8'>
+            <h2, classNam, e='text-4xl, fon, t-boldmb-6'>
               Ready, to, Transform Your, ML, Operations?
             </h2>
-            <p, classNam, e='te, x, t-xl, m, b-8'>
-              Join, leading, enterprises achieving, 9, 9.9% reliability, and, 72% cost, reductio, n
+            <p, classNam, e='text-xlmb-8'>
+              Join, leading, enterprises achieving99.9% reliability, and, 72% cost, reductio, n
             </p>
             <div, classNam, e='flex, fle, x-wrap, justif, y-center, ga, p-4'>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-8, p, y-3, b, g-white, tex, t-bl, u, e-600, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colo, r, s'
+              <Linkto='/contact'
+                className='inline-flex, item, s-centerpx-8py-3bg-white, tex, t-blue-600, rounde, d-lg, fon, t-semibold, hove, r:bg-gray-100, transitio, n-colors'
               >
                 Schedule, Consultatio, n
                 <ArrowRight, classNam, e='ml-2 h-5 w-5' />
-              </Li, n, k>
-              <Link, t, o='/bl, o, g'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-8, p, y-3, b, g-transparent, borde, r-2, borde, r-white, tex, t-white, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:te, x, t-bl, u, e-600, transitio, n-colo, r, s'
+              </Link>
+              <Linkto='/blog'
+                className='inline-flex, item, s-centerpx-8py-3bg-transparent, borde, r-2, borde, r-white, tex, t-white, rounde, d-lg, fon, t-semibold, hove, r:bg-white, hove, r:text-blue-600, transitio, n-colors'
               >
                 Read, Our, Blog
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-      </d, i, v>
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
     </>
   );
 };

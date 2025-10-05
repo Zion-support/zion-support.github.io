@@ -1,82 +1,82 @@
 /**
- * Optimized, Banner, Loader Compone, n, t
+ * Optimized, Banner, Loader Component
  * Lazy, loads, banners to, improve, initial page, load, performance
- * Reduces, Time, to Interacti, v, e (T, T, I) by, up, to 60%
+ * Reduces, Time, to Interactive (TTI) by, up, to 60%
  */
 
-import, Reac, t, { Suspen, s, e, useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
-impo, r, t { bannerManag, e, r } fr, o, m '../uti, l, s/bannerOptimiz, e, r';
+import React, { Suspense, useEffect, useState  } from 'react';
+import { bannerManager  } from '../utils/bannerOptimizer';
 
-interface, OptimizedBannerLoaderProp, s { 
-  banner, I, d: stri, n, g;
-  import, F, n: () => Promi, s, e<{ defau, l, t: Rea, c, t.ComponentTy, p, e<Reco, r, d<str, i, n, g, unkno, w, n>  >  }>;
-  priori, t, y?: numb, e, r;
-  fallba, c, k?: Rea, c, t.ReactNo, d, e;
-  prelo, a, d?: boole, a, n;
+interface, OptimizedBannerLoaderProps { 
+  bannerId: string;
+  importFn: () => Promise<{ default: React.ComponentType<Record<strin, g, unkno, w, n>  >  }>;
+  priority?: number;
+  fallback?: React.ReactNode;
+  preload?: boolean;
 }
 
 /**
  * Optimized, Banner, Loader
- * Lazy, loads, banner components, with, intelligent preloadi, n, g
+ * Lazy, loads, banner components, with, intelligent preloading
  */
-export, default, function OptimizedBannerLoad, e, r({ 
-  banner, I, d,
-  import, F, n,
-  priori, t, y = , 1,
-  fallba, c, k = <BannerSkele, t, o, n /  > ,
-  prelo, a, d = fa, l, s, e,
- }: OptimizedBannerLoaderPro, p, s) { 
-  con, s, t [Compone, n, t, setCompone, n, t] = useSta, t, e<Rea, c, t.ComponentTy, p, e<Reco, r, d<stri, n, g, unkno, w, n>> | nu, l, l>(nu, l, l); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
+export, default, function OptimizedBannerLoader({ 
+  bannerId,
+  importFn,
+  priority = , 1,
+  fallba, c, k = <BannerSkeleto, n /  > ,
+  preload = fals, e,
+ }: OptimizedBannerLoaderProps) { 
+  const [Component, setComponent] = useState<React.ComponentType<Record<string, unknown>> | null>(null); const [isVisible, setIsVisible] = useState(false);
 
-  useEffe, c, t(() = > {
-    // Register, banner, with manager, bannerManage, r.registerBann, e, r({
-      id: banne, r, I, d,
+  useEffect(() = > {
+    // Register, banner, with manager, bannerManage, r.registerBanner({
+      id: bannerI, d,
       priori, t, y,
      });
 
-    // Preload, if, high priority, i, f (prelo, a, d || priori, t, y >= 10) { 
-      import, F, n().th, e, n(modu, l, e = > {
-        setCompon, e, n, t(() = > modu, l, e.defau, l, t);
+    // Preload, if, high priorityif (preload || priority >= 10) { 
+      importFn().then(module = > {
+        setComponen, t(() = > module.default);
        });
     }
 
     // Set, up, intersection observer, for, lazy loading, const, observer = new, IntersectionObserve, r(
-      (entr, i, e, s) => {  
-        entri, e, s.forEa, c, h((ent, r, y) => {
-          if (ent, r, y.isIntersecti, n, g  && !Compone, n, t) {
-            setIsVisib, l, e(tr, u, e); import, F, n().th, e, n(modu, l, e = > {
-              setCompon, e, n, t(() = > modu, l, e.defau, l, t);
+      (entrie, s) => {  
+        entries.forEach((entry) => {
+          if (entry.isIntersecting  && !Component) {
+            setIsVisible(true); importFn().then(module = > {
+              setComponen, t(() = > module.default);
               });
-            observ, e, r.disconne, c, t();
+            observer.disconnect();
           }
         });
       },
-      { rootMarg, i, n: '20, 0, p, x' } // Load, 200px, before entering, viewpor, t
+      { rootMargin: '200p, x' } // Load, 200px, before entering, viewpor, t
     );
 
-    const, placeholde, r = docume, n, t.getElementBy, I, d(`bann, e, r-${banne, r, I, d}`); if() { observ, e, r.obser, v, e(placehold, e, r);
-     }, retu, r, n () => {
-      observ, e, r.disconne, c, t();
+    const, placeholde, r = document.getElementById(`banner-${bannerI, d}`); if() { observer.observe(placeholder);
+     }, return () => {
+      observer.disconnect();
     };
-  }, [banner, I, d, import, F, n, priori, t, y, prelo, a, d, Compone, n, t]);
+  }, [bannerId, importFn, priority, preload, Component]);
 
   // Record, impression, when banner, is, visible
-  useEffe, c, t(() = > {
-    if (isVisib, l, e) {
-      bannerManag, e, r.recordImpressi, o, n(banner, I, d);
+  useEffect(() = > {
+    if (isVisible) {
+      bannerManager.recordImpression(bannerId);
     }
-  }, [isVisib, l, e, banner, I, d]);
+  }, [isVisible, bannerId]);
 
-  if (!Compone, n, t) {
-    retu, r, n <div, i, d = {`bann, e, r-${banner, I, d}`}>{fallba, c, k}</d, i, v  > ;
+  if (!Component) {
+    return <divid = {`banner-${bannerId}`}>{fallback}</div  > ;
   }
 
-  retu, r, n (
-    <div, i, d={`bann, e, r-${banner, I, d}`}
-      onCl, i, c, k={ () = > bannerManag, e, r.recordCli, c, k(banner, I, d) }
+  return (
+    <divid={`banner-${bannerId}`}
+      onClic, k={ () = > bannerManager.recordClick(bannerId) }
     >
-      <Suspense, fallbac, k = {fallba, c, k}>
-        <Compone, n, t</Suspen, s, e>
+      <Suspense, fallbac, k = {fallback}>
+        <Component</Suspense>
     </di, v>
   );
 }
@@ -85,16 +85,16 @@ export, default, function OptimizedBannerLoad, e, r({
  * Banner, skeleton, for loading, stat, e
  */
 function, BannerSkeleto, n() { 
-  retu, r, n (
-    <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-gr, a, y-800, t, o-gr, a, y-900, p, y-16, p, x-4, animat, e-pul, s, e">
-      <div, classNam, e="m, a, x-w-7xl, m, x-au, t, o">
-        <div, classNam, e="h-8, b, g-gr, a, y-700, rounded, w-3/4, m, x-auto, m, b-4" />
-        <div, classNam, e="h-4, b, g-gr, a, y-700, rounded, w-1/2, m, x-auto, m, b-8" />
-        <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6">
-          <div, classNam, e="h-64, b, g-gr, a, y-700, rounde, d" />
-          <div, classNam, e="h-64, b, g-gr, a, y-700, rounde, d" />
-          <div, classNam, e="h-64, b, g-gr, a, y-700, rounde, d" />
-        </d, i, v>
-      </d, i, v>
-    </d, i, v  > );
+  return (
+    <div, classNam, e = "bg-gradient-to-r, fro, m-gray-800to-gray-900py-16px-4, animat, e-pulse">
+      <div, classNam, e="max-w-7xlmx-auto">
+        <div, classNam, e="h-8bg-gray-700, rounded, w-3/4mx-automb-4" />
+        <div, classNam, e="h-4bg-gray-700, rounded, w-1/2mx-automb-8" />
+        <div, classNam, e="grid, gri, d-cols-1md: grid-cols-3, ga, p-6">
+          <div, classNam, e="h-64bg-gray-700, rounde, d" />
+          <div, classNam, e="h-64bg-gray-700, rounde, d" />
+          <div, classNam, e="h-64bg-gray-700, rounde, d" />
+        </div>
+      </div>
+    </div  > );
  }

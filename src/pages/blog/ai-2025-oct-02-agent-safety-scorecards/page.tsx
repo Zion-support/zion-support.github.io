@@ -1,32 +1,32 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function AgentSafetyScorecar, d, s(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>AI, 202, 5: Agent, Safety, Scorecards</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='KP, I, s, budge, t, s, and, rollback, triggers that, keep, autonomous agents, safe, at spe, e, d.'
+export, default, function AgentSafetyScorecards(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>AI, 202, 5: Agent, Safety, Scorecards</title>
+        <meta, nam, e='description'
+          content='KPIs, budgets, and, rollback, triggers that, keep, autonomous agents, safe, at speed.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-o, c, t-02-age, n, t-safe, t, y-scorecar, d, s'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-oct-02-agent-safety-scorecards'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           AI, 202, 5: Agent, Safety, Scorecards
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, classNam, e='text-zion-slate-lightmb-8'>
           Design, scorecards, for agents, with, KPI-linked, budg, e, t, s, canari, e, s, and, deterministic, rollback.
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            Keep, autonomous, agents safe, without, slowing tea, m, s. Wire, KPIs, to
-            scorecards, and, budgeted actio, n, s. Use, live, canaries to, detect, regressions and, trigger, instant rollback, when, thresholds are, crosse, d.
+            Keep, autonomous, agents safe, without, slowing teams. Wire, KPIs, to
+            scorecards, and, budgeted actions. Use, live, canaries to, detect, regressions and, trigger, instant rollback, when, thresholds are, crosse, d.
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </di, v > );
  }

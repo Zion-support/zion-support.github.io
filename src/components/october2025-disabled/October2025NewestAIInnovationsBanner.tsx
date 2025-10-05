@@ -1,90 +1,90 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 
-export, default, function October2025NewestAIInnovationsBann, e, r() { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, tex, t-white, p, y-16, p, x-4'>
-      <div, classNam, e='m, a, x-w-7xl, m, x-au, t, o'>
-        <div, classNam, e='te, x, t-center, m, b-8'>
-          <div, classNam, e='inli, n, e-block, b, g-yell, o, w-400, tex, t-black, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-bold, m, b-4, animat, e-pul, s, e'>
-            🚀 JUST, PUBLISHE, D - OCTOB, E, R , 2, 20, 2, 5 🚀
-          </d, i, v>
-          <h2, classNam, e = 'te, x, t-5xl, fon, t-bold, m, b-4'>
+export, default, function October2025NewestAIInnovationsBanner() { 
+  return (
+    <div, classNam, e = 'bg-gradient-to-r, fro, m-purple-900, vi, a-blue-900to-indigo-900, tex, t-whitepy-16px-4'>
+      <div, classNam, e='max-w-7xlmx-auto'>
+        <div, classNam, e='text-centermb-8'>
+          <div, classNam, e='inline-blockbg-yellow-400, tex, t-blackpx-4py-2, rounde, d-full, tex, t-sm, fon, t-boldmb-4, animat, e-pulse'>
+            🚀 JUST, PUBLISHE, D - OCTOBER , 2, 20, 2, 5 🚀
+          </div>
+          <h2, classNam, e = 'text-5xl, fon, t-boldmb-4'>
             Revolutionary, AI, Innovations: 3, Gam, e-Changing, Technologie, s
           </h2>
-          <p, classNam, e='te, x, t-2xl, tex, t-bl, u, e-200, m, b-6'>
-            $11.9B, Combined, Value Creati, o, n • 99.9, 9, 9% Upti, m, e • 94% Faster, Operation, s
+          <p, classNam, e='text-2xl, tex, t-blue-200mb-6'>
+            $11.9B, Combined, Value Creation • 99.999% Uptime • 94% Faster, Operation, s
           </p>
-        </d, i, v>
+        </div>
 
-        <div, classNam, e='grid, m, d:gr, i, d-co, l, s-3, ga, p-8, m, t-, 1, 2' > {' ' }
-          {/* Se, l, f-Healing, Infrastructur, e */}
-          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l'>
-            <div, classNam, e='te, x, t-4xl, m, b-4'>🔧</d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>
+        <div, classNam, e='gridmd:grid-cols-3, ga, p-8mt-, 1, 2' > {' ' }
+          {/* Self-Healing, Infrastructur, e */}
+          <div, classNam, e = 'bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, hove, r: bg-white/20, transitio, n-all'>
+            <div, classNam, e='text-4xlmb-4'>🔧</div>
+            <h3, classNam, e='text-2xl, fon, t-boldmb-3'>
               Agentic, Sel, f-Healing, Infrastructur, e
             </h3>
-            <ul, classNam, e='te, x, t-bl, u, e-100, spac, e-y-2, m, b-4'>
+            <ul, classNam, e='text-blue-100, spac, e-y-2mb-4'>
               <li>✅ $5.4B, Operational, Savings</li>
-              <li>✅ 99.9, 9, 9% Uptime, Achievemen, t</li>
-              <li>✅ 2.3, Min, MTTR (fro, m, 4.7, hou, r, s)</li>
-              <li>✅ 94% Au, t, o-Resolution, Rat, e</li>
-              <li>✅ Ze, r, o-Touch, Operation, s</li>
+              <li>✅ 99.999% Uptime, Achievemen, t</li>
+              <li>✅ 2.3, Min, MTTR (from4.7, hou, r, s)</li>
+              <li>✅ 94% Auto-Resolution, Rat, e</li>
+              <li>✅ Zero-Touch, Operation, s</li>
             </ul>
-            <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-2-agent, i, c-se, l, f-heali, n, g-infrastructu, r, e-<revoluti, o, n'
-              classNa, m, e='inli, n, e-block, b, g-yell, o, w-400, tex, t-black, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, hove, r:bg-yell, o, w-300, transitio, n-colo, r, s'
+            <Linkto = '/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution'
+              className='inline-blockbg-yellow-400, tex, t-blackpx-6py-3, rounde, d-lg, fon, t-bold, hove, r:bg-yellow-300, transitio, n-colors'
             >
               Read, Full, Guide →
-            </Li, n, k>
-          </d, i, v>
+            </Link>
+          </div>
           {/* AI, Observabil, i, t, y */}
-          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l'>
-            <div, classNam, e='te, x, t-4xl, m, b-4'>👁️</d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>
-              Ne, x, t-Gen, AI, Observability
+          <div, classNam, e = 'bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, hove, r: bg-white/20, transitio, n-all'>
+            <div, classNam, e='text-4xlmb-4'>👁️</div>
+            <h3, classNam, e='text-2xl, fon, t-boldmb-3'>
+              Next-Gen, AI, Observability
             </h3>
-            <ul, classNam, e='te, x, t-bl, u, e-100, spac, e-y-2, m, b-4'>
+            <ul, classNam, e='text-blue-100, spac, e-y-2mb-4'>
               <li>✅ $3.7B, Value, Creation</li>
-              <li>✅ 96% Faster, MTT, R (3.5h → 8, m, i, n)</li>
+              <li>✅ 96% Faster, MTT, R (3.5h → 8mi, n)</li>
               <li>✅ 87% Alert, Reductio, n</li>
               <li>✅ 98% Anomaly, Detection, Accuracy</li>
               <li>✅ Predictive, Analytic, s</li>
             </ul>
-            <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-2-ne, x, t-g, e, n-ai-observabili, t, y-<platfo, r, m'
-              classNa, m, e='inli, n, e-block, b, g-yell, o, w-400, tex, t-black, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, hove, r:bg-yell, o, w-300, transitio, n-colo, r, s'
+            <Linkto = '/blog/ai-2025-october-2-next-gen-ai-observability-<platform'
+              className='inline-blockbg-yellow-400, tex, t-blackpx-6py-3, rounde, d-lg, fon, t-bold, hove, r:bg-yellow-300, transitio, n-colors'
             >
               Explore, Platfor, m →
-            </Li, n, k>
-          </d, i, v>
+            </Link>
+          </div>
           {/* ML, Pipeline, Optimizati, o, n */}
-          <div, classNam, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l'>
-            <div, classNam, e='te, x, t-4xl, m, b-4'>🤖</d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Autonomous, ML, Pipelines</h3>
-            <ul, classNam, e='te, x, t-bl, u, e-100, spac, e-y-2, m, b-4'>
+          <div, classNam, e = 'bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, hove, r: bg-white/20, transitio, n-all'>
+            <div, classNam, e='text-4xlmb-4'>🤖</div>
+            <h3, classNam, e='text-2xl, fon, t-boldmb-3'>Autonomous, ML, Pipelines</h3>
+            <ul, classNam, e='text-blue-100, spac, e-y-2mb-4'>
               <li>✅ $2.8B, Operational, Savings</li>
               <li>✅ 94% Faster, Deploymen, t</li>
               <li>✅ 23% Accuracy, Improvemen, t</li>
               <li>✅ 78% Cost, Reductio, n</li>
-              <li>✅ Se, l, f-Improving, AI, Systems</li>
+              <li>✅ Self-Improving, AI, Systems</li>
             </ul>
-            <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-2-autonomo, u, s-ml-pipeli, n, e-<optimizati, o, n'
-              classNa, m, e='inli, n, e-block, b, g-yell, o, w-400, tex, t-black, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, hove, r:bg-yell, o, w-300, transitio, n-colo, r, s'
+            <Linkto='/blog/ai-2025-october-2-autonomous-ml-pipeline-<optimization'
+              className='inline-blockbg-yellow-400, tex, t-blackpx-6py-3, rounde, d-lg, fon, t-bold, hove, r:bg-yellow-300, transitio, n-colors'
             >
               Discover, Mor, e →
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
+            </Link>
+          </div>
+        </div>
 
-        <div, classNam, e='mt-12, tex, t-cent, e, r'>
-          <div, classNam, e='bg-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-400, tex, t-black, p, x-8, p, y-4, rounde, d-xl, inlin, e-blo, c, k'>
-            <p, classNam, e='te, x, t-2xl, fon, t-bold, m, b-2'>
-              💎 Total, Valu, e: $11.9B+ in, Proven, Enterprise Resul, t, s 💎
+        <div, classNam, e='mt-12, tex, t-center'>
+          <div, classNam, e='bg-gradient-to-r, fro, m-yellow-400to-orange-400, tex, t-blackpx-8py-4, rounde, d-xl, inlin, e-block'>
+            <p, classNam, e='text-2xl, fon, t-boldmb-2'>
+              💎 Total, Valu, e: $11.9B+ in, Proven, Enterprise Results 💎
             </p>
-            <p, classNam, e='te, x, t-lg'>
+            <p, classNam, e='text-lg'>
               Transform, your, operations with, these, revolutionary AI, technologie, s
             </p>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }

@@ -1,630 +1,629 @@
-impo, r, t {
-  ArrowLe, f, t,
-  CheckCirc, l, e,
-  Clo, c, k,
-  DollarSi, g, n,
-  FileTe, x, t,
-  Trending, U, p,
-  Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import, Header, from '../../componen, t, s/Head, e, r';
+import { ArrowLeft,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  FileText,
+  TrendingUp,
+  Zap,
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async';
+import, Header, from '../../components/Header';
 
 const, AIIntelligentDocumentProcessin, g = () => { 
-  retu, r, n (
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          AI, Intelligent, Document Processi, n, g | Automate, 9, 5% of, Document, Workflows | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Transform, document, processing with, AI, achieving 98.5% accur, a, c, y, 95% automati, o, n, a, n, d $2.8M+ annual, saving, s. Extra, c, t, classi, f, y, and, process, any document, type, at sca, l, e.'
+      <Helmet>
+        <title>
+          AI, Intelligent, Document Processing | Automate95% of, Document, Workflows | Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          content='Transform, document, processing with, AI, achieving 98.5% accurac, y, 95% automation, and $2.8M+ annual, saving, s. Extract, classify, and, process, any document, type, at scale.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='intelligent, document, processin, g, I, D, P, O, C, R, document, A, I, document, automatio, n, invoice, processin, g, contract, analysi, s, G, P, T-4, Visio, n, Claude, Visio, n'
+        <meta, nam, e = 'keywords'
+          content='intelligent, document, processin, gID, POC, R, document, A, I, document, automatio, n, invoice, processin, g, contract, analysi, sGP, T-4, Visio, n, Claude, Visio, n'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r />
+      <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark'>
+        <Header />
 
-        <div, classNam, e='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
-          <Link, t, o='/servic, e, s'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
+        <div, classNam, e='containermx-autopx-6py-20' > {/* Back, Lin, k */ }
+          <Linkto='/services'
+            className='inline-flex, item, s-center, tex, t-zion-cyan, hove, r: text-zion-blue-lightmb-8, transitio, n-colors'
           >
-            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            <ArrowLeft, classNam, e='w-4 h-4mr-2' />
             Back, to, Services
-          </Li, n, k>
+          </Link>
 
           {/* Hero, Sect, i, o, n */}
-          <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, tex, t-center, m, b-16'>
-            <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, rounde, d-full, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, tex, t-sm, fon, t-semibold, m, b-8, border, border-bl, u, e-5, 0, 0/30'>
-              <FileText, classNam, e='w-5 h-5, m, r-2' />
+          <div, classNam, e = 'max-w-5xlmx-auto, tex, t-centermb-16'>
+            <div, classNam, e='inline-flex, item, s-centerpx-6py-3, rounde, d-fullbg-blue-500/20, tex, t-blue-300, tex, t-sm, fon, t-semiboldmb-8, border, border-blue-500/30'>
+              <FileText, classNam, e='w-5 h-5mr-2' />
               🚀 Enterprise, Document, AI • October, 202, 5
-            </d, i, v>
+            </div>
 
-            <h1, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              AI, Intelligent, Document Processi, n, g
-              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, m, t-2'>
-                Automate, 9, 5% of, Document, Workflows
-              </sp, a, n>
+            <h1, classNam, e='text-5xlmd: text-6xl, fon, t-bold, tex, t-whitemb-6, leadin, g-tight'>
+              AI, Intelligent, Document Processing
+              <span, classNam, e='block, tex, t-transparentbg-clip-textbg-gradient-to-r, fro, m-blue-400to-cyan-400mt-2'>
+                Automate95% of, Document, Workflows
+              </span>
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8, ma, x-w-3xl, m, x-auto, leadin, g-relax, e, d'>
-              Transform, manual, document processing, with, AI achieving, 9, 8.5%
-              accu, r, a, c, y, 95% automati, o, n, a, n, d $2.8M+ annual, saving, s. Extra, c, t,
-              classi, f, y, and, process, any document, type, at scale, with, GPT-4, Vision, and Claude, A, I.
+            <p, classNam, e='text-xl, tex, t-zion-slate-lightmb-8, ma, x-w-3xlmx-auto, leadin, g-relaxed'>
+              Transform, manual, document processing, with, AI achieving98.5%
+              accura, c, y, 95% automation, and $2.8M+ annual, saving, s. Extract,
+              classify, and, process, any document, type, at scale, with, GPT-4, Vision, and ClaudeAI.
             </p>
 
             {/* Quick, Stat, s */}
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8'>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-bl, u, e-4, 0, 0/30'>
-                <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
+            <div, classNam, e = 'gridmd: grid-cols-4, ga, p-6mb-8'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-blue-400/30'>
+                <div, classNam, e='text-3xl, fon, t-bold, tex, t-blue-400mb-2'>
                   98.5%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Extraction, Accurac, y
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/30'>
-                <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>95%</d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+              </div>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-cyan-400/30'>
+                <div, classNam, e='text-3xl, fon, t-bold, tex, t-cyan-400mb-2'>95%</div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Process, Automatio, n
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-gre, e, n-4, 0, 0/30'>
-                <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                </div>
+              </div>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-green-400/30'>
+                <div, classNam, e='text-3xl, fon, t-bold, tex, t-green-400mb-2'>
                   $2.8M+
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Annual, Saving, s
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30'>
-                <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
-                  1, 0, x
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+              </div>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-purple-400/30'>
+                <div, classNam, e='text-3xl, fon, t-bold, tex, t-purple-400mb-2'>
+                  10x
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Faster, Processin, g
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
+                </div>
+              </div>
+            </div>
 
-            <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='bg-bl, u, e-600, hove, r:bg-bl, u, e-700, tex, t-white, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, shado, w-lg'
+            <div, classNam, e='flex, fle, x-colsm:flex-row, ga, p-4, justif, y-center'>
+              <Linkto='/contact'
+                className='bg-blue-600, hove, r:bg-blue-700, tex, t-whitepx-8py-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, shado, w-lg'
               >
                 <Zap, classNam, e='w-5 h-5' />
                 Start, Free, Trial
-              </Li, n, k>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='bord, e, r-2, borde, r-bl, u, e-400, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-4, 0, 0/10, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-1, 0, 5'
+              </Link>
+              <Linkto='/contact'
+                className='border-2, borde, r-blue-400, tex, t-blue-400, hove, r:bg-blue-400/10px-8py-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:scale-105'
               >
                 Schedule, Dem, o
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
+              </Link>
+            </div>
+          </div>
 
-          {/* Probl, e, m/Solu, t, i, o, n */}
-          <div, classNam, e = 'm, a, x-w-6xl, m, x-auto, m, b-20'>
-            <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
-              <div, classNam, e='bg-r, e, d-9, 0, 0/20, rounde, d-2x, l, p-8, border, border-r, e, d-5, 0, 0/30'>
-                <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                  ❌ The, Document, Processing Cris, i, s
+          {/* Problem/Soluti, o, n */}
+          <div, classNam, e = 'max-w-6xlmx-automb-20'>
+            <div, classNam, e='gridmd: grid-cols-2, ga, p-8'>
+              <div, classNam, e='bg-red-900/20, rounde, d-2xlp-8, border, border-red-500/30'>
+                <h2, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
+                  ❌ The, Document, Processing Crisis
                 </h2>
-                <ul, classNam, e='spa, c, e-y-3, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <ul, classNam, e='space-y-3, tex, t-zion-slate-light'>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                    <sp, a, n>
-                      Manual, data, entry costi, n, g $50-80, per, hour per, employe, e
-                    </sp, a, n>
+                    <span, classNam, e='text-red-400mt-1'>•</span>
+                    <span>
+                      Manual, data, entry costing $50-80, per, hour per, employe, e
+                    </span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                    <sp, a, n>23% error, rate, in manual, document, processing</sp, a, n>
+                    <span, classNam, e='text-red-400mt-1'>•</span>
+                    <span>23% error, rate, in manual, document, processing</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                    <sp, a, n>
+                    <span, classNam, e='text-red-400mt-1'>•</span>
+                    <span>
                       3-7, day, processing times, for, invoices and, contract, s
-                    </sp, a, n>
+                    </span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                    <sp, a, n>
-                      Bottlenecks, i, n , A, P, procureme, n, t, and, legal, workflows
-                    </sp, a, n>
+                    <span, classNam, e='text-red-400mt-1'>•</span>
+                    <span>
+                      Bottlenecksin , A, P, procureme, n, t, and, legal, workflows
+                    </span>
                   </li>
                   <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                    <span, classNam, e='te, x, t-r, e, d-400, m, t-1'>•</sp, a, n>
-                    <sp, a, n>Compliance, risks, from missed, informatio, n</sp, a, n>
+                    <span, classNam, e='text-red-400mt-1'>•</span>
+                    <span>Compliance, risks, from missed, informatio, n</span>
                   </li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-gre, e, n-9, 0, 0/20, rounde, d-2x, l, p-8, border, border-gre, e, n-5, 0, 0/30'>
-                <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4'>
-                  ✅ Our, A, I-Powered, Solutio, n
+              <div, classNam, e='bg-green-900/20, rounde, d-2xlp-8, border, border-green-500/30'>
+                <h2, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4'>
+                  ✅ OurAI-Powered, Solutio, n
                 </h2>
-                <ul, classNam, e='spa, c, e-y-3, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <ul, classNam, e='space-y-3, tex, t-zion-slate-light'>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                    <sp, a, n>98.5% accuracy, with, GPT-4, Visio, n + Claude, A, I</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400mt-1, fle, x-shrink-0' />
+                    <span>98.5% accuracy, with, GPT-4, Visio, n + ClaudeAI</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                    <sp, a, n>95% automation, reducing, manual work, by, 10x</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400mt-1, fle, x-shrink-0' />
+                    <span>95% automation, reducing, manual work, by, 10x</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                    <sp, a, n>S, u, b-5-second, processing, for most, document, types</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400mt-1, fle, x-shrink-0' />
+                    <span>Sub-5-second, processing, for most, document, types</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                    <sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400mt-1, fle, x-shrink-0' />
+                    <span>
                       Seamless, integration, with existing, ER, P/CRM, system, s
-                    </sp, a, n>
+                    </span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, m, t-1, fle, x-shri, n, k-0' />
-                    <sp, a, n>1, 0, 0% audit, trail, and compliance, trackin, g</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400mt-1, fle, x-shrink-0' />
+                    <span>100% audit, trail, and compliance, trackin, g</span>
                   </li>
                 </ul>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+              </div>
+            </div>
+          </div>
 
           {/* Core, Capabilitie, s */}
-          <div, classNam, e='m, a, x-w-6xl, m, x-auto, m, b-20'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r'>
+          <div, classNam, e='max-w-6xlmx-automb-20'>
+            <h2, classNam, e='text-4xl, fon, t-bold, tex, t-whitemb-12, tex, t-center'>
               🎯 Core, Capabilitie, s
             </h2>
-            <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-8'>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30, hove, r:sca, l, e-105, transitio, n-a, l, l'>
-                <div, classNam, e='bg-bl, u, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-bl, u, e-5, 0, 0/30'>
-                  <FileText, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
-                </d, i, v>
-                <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+            <div, classNam, e='gridmd: grid-cols-3, ga, p-8'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-blue-400/30, hove, r:scale-105, transitio, n-all'>
+                <div, classNam, e='bg-blue-500/20w-16h-16, rounde, d-lg, flex, items-center, justif, y-centermb-6, border, border-blue-500/30'>
+                  <FileText, classNam, e='w-8 h-8, tex, t-blue-400' />
+                </div>
+                <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4'>
                   Intelligent, Extractio, n
                 </h3>
-                <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
-                  Extract, structured, data from, any, document form, a, t—invo, i, c, e, s,
+                <p, classNam, e='text-zion-slate-lightmb-4'>
+                  Extract, structured, data from, any, document format—invoic, e, s,
                   contrac, t, s, for, m, s, receip, t, s, emai, l, s, and, mor, e. Handles, handwritin, g, poor, scan, s, and, complex, layouts.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                  <li>• 1, 5, 0+ supported, document, types</li>
-                  <li>• Mul, t, i-language, suppor, t (95+ langua, g, e, s)</li>
-                  <li>• Table, and, checkbox extracti, o, n</li>
-                  <li>• Signature, and, stamp detecti, o, n</li>
+                <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-zion-slate-light'>
+                  <li>• 150+ supported, document, types</li>
+                  <li>• Multi-language, suppor, t (95+ language, s)</li>
+                  <li>• Table, and, checkbox extraction</li>
+                  <li>• Signature, and, stamp detection</li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-purp, l, e-4, 0, 0/30, hove, r: sca, l, e-105, transitio, n-a, l, l'>
-                <div, classNam, e='bg-purp, l, e-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-purp, l, e-5, 0, 0/30'>
-                  <Zap, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                </d, i, v>
-                <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+              <div, classNam, e = 'bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-purple-400/30, hove, r: scale-105, transitio, n-all'>
+                <div, classNam, e='bg-purple-500/20w-16h-16, rounde, d-lg, flex, items-center, justif, y-centermb-6, border, border-purple-500/30'>
+                  <Zap, classNam, e='w-8 h-8, tex, t-purple-400' />
+                </div>
+                <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4'>
                   Smart, Classificatio, n
                 </h3>
-                <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
+                <p, classNam, e='text-zion-slate-lightmb-4'>
                   Automatically, classify, and route, documents, to appropriate, workflow, s. AI, learns, your document, types, and routing, ru, l, e, s,
-                  improving, accuracy, over ti, m, e.
+                  improving, accuracy, over time.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-zion-slate-light'>
                   <li>• 99.2% classification, accurac, y</li>
                   <li>• Custom, taxonomy, support</li>
                   <li>• Automatic, workflow, routing</li>
-                  <li>• Confiden, c, e-based, human, review</li>
+                  <li>• Confidence-based, human, review</li>
                 </ul>
-              </d, i, v>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-gre, e, n-4, 0, 0/30, hove, r: sca, l, e-105, transitio, n-a, l, l'>
-                <div, classNam, e='bg-gre, e, n-5, 0, 0/2, 0, w-1, 6, h-16, rounde, d-lg, flex, items-center, justif, y-center, m, b-6, border, border-gre, e, n-5, 0, 0/30'>
-                  <CheckCircle, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
-                </d, i, v>
-                <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
-                  Validati, o, n & Enrichme, n, t
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-green-400/30, hove, r: scale-105, transitio, n-all'>
+                <div, classNam, e='bg-green-500/20w-16h-16, rounde, d-lg, flex, items-center, justif, y-centermb-6, border, border-green-500/30'>
+                  <CheckCircle, classNam, e='w-8 h-8, tex, t-green-400' />
+                </div>
+                <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4'>
+                  Validation & Enrichment
                 </h3>
-                <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
+                <p, classNam, e='text-zion-slate-lightmb-4'>
                   Validate, extracted, data against, business, rul, e, s, databas, e, s, and, external, sources. Enrich, documents, with additional, context, and
-                  metada, t, a.
+                  metadata.
                 </p>
-                <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                  <li>• Re, a, l-time, validation, rules</li>
-                  <li>• Database, lookups, and matchi, n, g</li>
+                <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-zion-slate-light'>
+                  <li>• Real-time, validation, rules</li>
+                  <li>• Database, lookups, and matching</li>
                   <li>• Duplicate, detectio, n</li>
-                  <li>• Au, t, o-correction, and, suggestions</li>
+                  <li>• Auto-correction, and, suggestions</li>
                 </ul>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+              </div>
+            </div>
+          </div>
 
           {/* Use, Case, s */}
-          <div, classNam, e='m, a, x-w-6xl, m, x-auto, m, b-20'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r'>
+          <div, classNam, e='max-w-6xlmx-automb-20'>
+            <h2, classNam, e='text-4xl, fon, t-bold, tex, t-whitemb-12, tex, t-center'>
               💼 Enterprise, Use, Cases
             </h2>
-            <div, classNam, e='spa, c, e-y-6'>
-              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, border, border-bl, u, e-5, 0, 0/30'>
+            <div, classNam, e='space-y-6'>
+              <div, classNam, e='bg-gradient-to-r, fro, m-blue-900/40to-cyan-900/40, rounde, d-xlp-8, border, border-blue-500/30'>
                 <div, classNam, e='flex, item, s-start, ga, p-6'>
-                  <div, classNam, e='bg-bl, u, e-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-bl, u, e-5, 0, 0/30'>
-                    <DollarSign, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
-                  </d, i, v>
-                  <div, classNam, e='fl, e, x-1'>
-                    <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
+                  <div, classNam, e='bg-blue-500/20p-4, rounde, d-lg, border, border-blue-500/30'>
+                    <DollarSign, classNam, e='w-8 h-8, tex, t-blue-400' />
+                  </div>
+                  <div, classNam, e='flex-1'>
+                    <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
                       Accounts, Payable, Automation
                     </h3>
-                    <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
-                      Process, invoices, 10x faster, with, 98% accura, c, y. Extract, vend, o, r, line, item, s, PO, matchin, g, GL, codin, g, and, approval, routing automatical, l, y. Reduce, processing, costs fr, o, m $15-20, per, invoice to, unde, r $1.
+                    <p, classNam, e='text-zion-slate-lightmb-4'>
+                      Process, invoices, 10x faster, with, 98% accuracy. Extract, vend, o, r, line, item, s, PO, matchin, g, GL, codin, g, and, approval, routing automatically. Reduce, processing, costs from $15-20, per, invoice to, unde, r $1.
                     </p>
-                    <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
-                      <div, classNam, e='bg-bl, u, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-bl, u, e-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-bl, u, e-400, m, b-1'>
-                          92% Fast, e, r
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                    <div, classNam, e = 'gridmd: grid-cols-3, ga, p-4, tex, t-sm'>
+                      <div, classNam, e='bg-blue-900/30, rounde, d-lgp-3, border, border-blue-500/20'>
+                        <div, classNam, e='font-bold, tex, t-blue-400mb-1'>
+                          92% Faster
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Invoice, Processin, g
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-bl, u, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-bl, u, e-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-bl, u, e-400, m, b-1'>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-blue-900/30, rounde, d-lgp-3, border, border-blue-500/20'>
+                        <div, classNam, e='font-bold, tex, t-blue-400mb-1'>
                           $2.1M, Save, d
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                          Annual, l, y (per, 100K, invoice, s)
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e = 'bg-bl, u, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-bl, u, e-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-bl, u, e-400, m, b-1'>
-                          99.1% Touchle, s, s
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
+                          Annually (per, 100K, invoice, s)
+                        </div>
+                      </div>
+                      <div, classNam, e = 'bg-blue-900/30, rounde, d-lgp-3, border, border-blue-500/20'>
+                        <div, classNam, e='font-bold, tex, t-blue-400mb-1'>
+                          99.1% Touchless
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Processing, Rat, e
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'>
+              <div, classNam, e='bg-gradient-to-r, fro, m-purple-900/40to-pink-900/40, rounde, d-xlp-8, border, border-purple-500/30'>
                 <div, classNam, e='flex, item, s-start, ga, p-6'>
-                  <div, classNam, e='bg-purp, l, e-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-purp, l, e-5, 0, 0/30'>
-                    <FileText, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
-                  </d, i, v>
-                  <div, classNam, e='fl, e, x-1'>
-                    <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
+                  <div, classNam, e='bg-purple-500/20p-4, rounde, d-lg, border, border-purple-500/30'>
+                    <FileText, classNam, e='w-8 h-8, tex, t-purple-400' />
+                  </div>
+                  <div, classNam, e='flex-1'>
+                    <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
                       Contract, Intelligenc, e
                     </h3>
-                    <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
+                    <p, classNam, e='text-zion-slate-lightmb-4'>
                       Extract, key, ter, m, s, obligatio, n, s, dat, e, s, and, risks, from
-                      contracts, automaticall, y. Track, renewal, s, compliance, requirement, s, and, financial, commitments across, thousands, of agreemen, t, s.
+                      contracts, automaticall, y. Track, renewal, s, compliance, requirement, s, and, financial, commitments across, thousands, of agreements.
                     </p>
-                    <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
-                      <div, classNam, e='bg-purp, l, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-purp, l, e-400, m, b-1'>
-                          87% Fast, e, r
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                    <div, classNam, e = 'gridmd: grid-cols-3, ga, p-4, tex, t-sm'>
+                      <div, classNam, e='bg-purple-900/30, rounde, d-lgp-3, border, border-purple-500/20'>
+                        <div, classNam, e='font-bold, tex, t-purple-400mb-1'>
+                          87% Faster
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Contract, Revie, w
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-purp, l, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-purp, l, e-400, m, b-1'>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-purple-900/30, rounde, d-lgp-3, border, border-purple-500/20'>
+                        <div, classNam, e='font-bold, tex, t-purple-400mb-1'>
                           $890K, Save, d
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Legal, Review, Costs
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-purp, l, e-9, 0, 0/30, rounde, d-l, g, p-3, border, border-purp, l, e-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-purp, l, e-400, m, b-1'>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-purple-900/30, rounde, d-lgp-3, border, border-purple-500/20'>
+                        <div, classNam, e='font-bold, tex, t-purple-400mb-1'>
                           Zero, Misse, d
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Renewal, Deadline, s
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-te, a, l-9, 0, 0/40, rounde, d-x, l, p-8, border, border-gre, e, n-5, 0, 0/30'>
+              <div, classNam, e='bg-gradient-to-r, fro, m-green-900/40to-teal-900/40, rounde, d-xlp-8, border, border-green-500/30'>
                 <div, classNam, e='flex, item, s-start, ga, p-6'>
-                  <div, classNam, e='bg-gre, e, n-5, 0, 0/2, 0, p-4, rounde, d-lg, border, border-gre, e, n-5, 0, 0/30'>
-                    <Clock, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
-                  </d, i, v>
-                  <div, classNam, e='fl, e, x-1'>
-                    <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
+                  <div, classNam, e='bg-green-500/20p-4, rounde, d-lg, border, border-green-500/30'>
+                    <Clock, classNam, e='w-8 h-8, tex, t-green-400' />
+                  </div>
+                  <div, classNam, e='flex-1'>
+                    <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
                       Customer, Onboardin, g
                     </h3>
-                    <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
-                      Accelerat, e, K, Y, C, credit, check, s, and, compliance, verification
+                    <p, classNam, e='text-zion-slate-lightmb-4'>
+                      AccelerateK, Y, C, credit, check, s, and, compliance, verification
                       by, extracting, and validating, customer, documents
-                      automatical, l, y. Reduce, onboarding, time from, days, to
-                      minut, e, s.
+                      automatically. Reduce, onboarding, time from, days, to
+                      minutes.
                     </p>
-                    <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-sm'>
-                      <div, classNam, e='bg-gre, e, n-9, 0, 0/30, rounde, d-l, g, p-3, border, border-gre, e, n-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-gre, e, n-400, m, b-1'>
-                          94% Fast, e, r
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                    <div, classNam, e = 'gridmd: grid-cols-3, ga, p-4, tex, t-sm'>
+                      <div, classNam, e='bg-green-900/30, rounde, d-lgp-3, border, border-green-500/20'>
+                        <div, classNam, e='font-bold, tex, t-green-400mb-1'>
+                          94% Faster
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Customer, Onboardin, g
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-gre, e, n-9, 0, 0/30, rounde, d-l, g, p-3, border, border-gre, e, n-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-gre, e, n-400, m, b-1'>
-                          78% Mo, r, e
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-green-900/30, rounde, d-lgp-3, border, border-green-500/20'>
+                        <div, classNam, e='font-bold, tex, t-green-400mb-1'>
+                          78% More
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Customers, Approve, d
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='bg-gre, e, n-9, 0, 0/30, rounde, d-l, g, p-3, border, border-gre, e, n-5, 0, 0/20'>
-                        <div, classNam, e='fo, n, t-bold, tex, t-gre, e, n-400, m, b-1'>
+                        </div>
+                      </div>
+                      <div, classNam, e='bg-green-900/30, rounde, d-lgp-3, border, border-green-500/20'>
+                        <div, classNam, e='font-bold, tex, t-green-400mb-1'>
                           $1.4M, Adde, d
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                        </div>
+                        <div, classNam, e='text-zion-slate-light'>
                           Annual, Revenu, e
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* ROI, Calcula, t, o, r */}
-          <div, classNam, e = 'm, a, x-w-6xl, m, x-auto, m, b-20'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r'>
+          <div, classNam, e = 'max-w-6xlmx-automb-20'>
+            <h2, classNam, e='text-4xl, fon, t-bold, tex, t-whitemb-12, tex, t-center'>
               💰 ROI, Calculato, r
             </h2>
-            <div, classNam, e='bg-gradie, n, t-to-r, fro, m-gre, e, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-2x, l, p-10, border, border-gre, e, n-5, 0, 0/30'>
-              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-10'>
-                <d, i, v>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
+            <div, classNam, e='bg-gradient-to-r, fro, m-green-900/40to-blue-900/40, rounde, d-2xlp-10, border, border-green-500/30'>
+              <div, classNam, e='gridmd: grid-cols-2, ga, p-10'>
+                <div>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-6'>
                     Your, Investmen, t
                   </h3>
-                  <div, classNam, e='spa, c, e-y-4'>
+                  <div, classNam, e='space-y-4'>
                     <div, classNam, e='flex, justif, y-between, item, s-center, tex, t-lg'>
-                      <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                        Platfo, r, m (10K, doc, s/mo, n, t, h):
-                      </sp, a, n>
-                      <span, classNam, e = 'te, x, t-white, fon, t-semib, o, l, d'>
-                        $, 4,9, 9, 9/mo
-                      </sp, a, n>
-                    </d, i, v>
+                      <span, classNam, e='text-zion-slate-light'>
+                        Platform (10K, doc, s/mont, h):
+                      </span>
+                      <span, classNam, e = 'text-white, fon, t-semibol, d'>
+                        $, 499, 9/mo
+                      </span>
+                    </div>
                     <div, classNam, e = 'flex, justif, y-between, item, s-center, tex, t-lg'>
-                      <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                        Implementati, o, n: </sp, a, n>
-                      <span, classNam, e='te, x, t-white, fon, t-semibo, l, d'>
-                        $25K, on, e-ti, m, e
-                      </sp, a, n>
-                    </d, i, v>
+                      <span, classNam, e='text-zion-slate-light'>
+                        Implementation: </span>
+                      <span, classNam, e='text-white, fon, t-semibold'>
+                        $25K, on, e-time
+                      </span>
+                    </div>
                     <div, classNam, e='flex, justif, y-between, item, s-center, tex, t-lg'>
-                      <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                        Traini, n, g & suppo, r, t:
-                      </sp, a, n>
-                      <span, classNam, e='te, x, t-white, fon, t-semibo, l, d'>Includ, e, d</sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e='bord, e, r-t, borde, r-whi, t, e/20, p, t-4, flex, justify-between, item, s-center, tex, t-xl'>
-                      <strong, classNam, e='te, x, t-whi, t, e'>First, Year, Total:</stro, n, g>
-                      <strong, classNam, e='te, x, t-whi, t, e'>$8, 5, K</stro, n, g>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6'>
-                    Your, Saving, s (Ye, a, r , 1)
+                      <span, classNam, e='text-zion-slate-light'>
+                        Training & support:
+                      </span>
+                      <span, classNam, e='text-white, fon, t-semibold'>Included</span>
+                    </div>
+                    <div, classNam, e='border-t, borde, r-white/20pt-4, flex, justify-between, item, s-center, tex, t-xl'>
+                      <strong, classNam, e='text-white'>First, Year, Total:</strong>
+                      <strong, classNam, e='text-white'>$85K</strong>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-6'>
+                    Your, Saving, s (Year , 1)
                   </h3>
-                  <div, classNam, e = 'spa, c, e-y-4'>
+                  <div, classNam, e = 'space-y-4'>
                     <div, classNam, e='flex, justif, y-between, item, s-center, tex, t-lg'>
-                      <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                      <span, classNam, e='text-zion-slate-light'>
                         Labor, cost, reduction:
-                      </sp, a, n>
-                      <span, classNam, e='te, x, t-gre, e, n-400, fon, t-semibo, l, d'>
-                        $42, 0, K
-                      </sp, a, n>
-                    </d, i, v>
+                      </span>
+                      <span, classNam, e='text-green-400, fon, t-semibold'>
+                        $420K
+                      </span>
+                    </div>
                     <div, classNam, e='flex, justif, y-between, item, s-center, tex, t-lg'>
-                      <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                      <span, classNam, e='text-zion-slate-light'>
                         Error, reduction, savings:
-                      </sp, a, n>
-                      <span, classNam, e='te, x, t-gre, e, n-400, fon, t-semibo, l, d'>
-                        $18, 0, K
-                      </sp, a, n>
-                    </d, i, v>
+                      </span>
+                      <span, classNam, e='text-green-400, fon, t-semibold'>
+                        $180K
+                      </span>
+                    </div>
                     <div, classNam, e='flex, justif, y-between, item, s-center, tex, t-lg'>
-                      <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                      <span, classNam, e='text-zion-slate-light'>
                         Faster, processing, value:
-                      </sp, a, n>
-                      <span, classNam, e='te, x, t-gre, e, n-400, fon, t-semibo, l, d'>
-                        $29, 0, K
-                      </sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e='bord, e, r-t, borde, r-whi, t, e/20, p, t-4, flex, justify-between, item, s-center, tex, t-xl'>
-                      <strong, classNam, e='te, x, t-whi, t, e'>Total, Valu, e:</stro, n, g>
-                      <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>$89, 0, K</stro, n, g>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='mt-10, tex, t-cent, e, r'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
-                  9, 4, 7% R, O, I
-                </d, i, v>
-                <div, classNam, e='te, x, t-xl, tex, t-whi, t, e'>
-                  Payback, Perio, d: 1.2, month, s • Net, Valu, e: $80, 5, K/ye, a, r
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                      </span>
+                      <span, classNam, e='text-green-400, fon, t-semibold'>
+                        $290K
+                      </span>
+                    </div>
+                    <div, classNam, e='border-t, borde, r-white/20pt-4, flex, justify-between, item, s-center, tex, t-xl'>
+                      <strong, classNam, e='text-white'>Total, Valu, e:</strong>
+                      <strong, classNam, e='text-green-400'>$890K</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div, classNam, e='mt-10, tex, t-center'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-green-400mb-2'>
+                  947% ROI
+                </div>
+                <div, classNam, e='text-xl, tex, t-white'>
+                  Payback, Perio, d: 1.2, month, s • Net, Valu, e: $805K/year
+                </div>
+              </div>
+            </div>
+          </div>
 
-          {/* Pri, c, i, n, g */}
-          <div, classNam, e = 'm, a, x-w-6xl, m, x-auto, m, b-20'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-12, tex, t-cent, e, r'>
+          {/* Prici, n, g */}
+          <div, classNam, e = 'max-w-6xlmx-automb-20'>
+            <h2, classNam, e='text-4xl, fon, t-bold, tex, t-whitemb-12, tex, t-center'>
               💎 Transparent, Pricin, g
             </h2>
-            <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-8'>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-bl, u, e-4, 0, 0/30'>
-                <div, classNam, e='te, x, t-center, m, b-6'>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-                    Start, e, r
+            <div, classNam, e='gridmd: grid-cols-3, ga, p-8'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-blue-400/30'>
+                <div, classNam, e='text-centermb-6'>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
+                    Starter
                   </h3>
-                  <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-, 2'>
-                    $, 1,9, 9, 9
-                    <span, classNam, e = 'te, x, t-xl, tex, t-zi, o, n-sla, t, e-lig, h, t'>/mo</sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                    Up, t, o , 2,000, document, s/mon, t, h
-                  </d, i, v>
-                </d, i, v>
-                <ul, classNam, e = 'spa, c, e-y-3, tex, t-sm, tex, t-zi, o, n-sla, t, e-light, m, b-8'>
+                  <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-400mb-, 2'>
+                    $, 199, 9
+                    <span, classNam, e = 'text-xl, tex, t-zion-slate-light'>/mo</span>
+                  </div>
+                  <div, classNam, e='text-sm, tex, t-zion-slate-light'>
+                    Upto , 2,000, document, s/month
+                  </div>
+                </div>
+                <ul, classNam, e = 'space-y-3, tex, t-sm, tex, t-zion-slate-lightmb-8'>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>All, core, extraction featur, e, s</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>All, core, extraction features</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>50+ document, types, supported</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>50+ document, types, supported</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>A, P, I & webhook, integration, s</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>API & webhook, integration, s</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Email, suppor, t</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Email, suppor, t</span>
                   </li>
                 </ul>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='block, tex, t-center, b, g-bl, u, e-600, hove, r: bg-bl, u, e-700, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-a, l, l'
+                <Linkto='/contact'
+                  className='block, tex, t-centerbg-blue-600, hove, r: bg-blue-700, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, transitio, n-all'
                 >
                   Start, Free, Trial
-                </Li, n, k>
-              </d, i, v>
+                </Link>
+              </div>
 
-              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-400, relativ, e'>
-                <div, classNam, e='absolute, to, p-0, righ, t-0, b, g-purp, l, e-500, tex, t-white, p, x-4, p, y-1, rounde, d-bl-lg, rounde, d-tr-lg, tex, t-sm, fon, t-semibo, l, d'>
+              <div, classNam, e='bg-gradient-to-br, fro, m-purple-900/40to-blue-900/40, rounde, d-xlp-8, borde, r-2, borde, r-purple-400, relativ, e'>
+                <div, classNam, e='absolute, to, p-0, righ, t-0bg-purple-500, tex, t-whitepx-4py-1, rounde, d-bl-lg, rounde, d-tr-lg, tex, t-sm, fon, t-semibold'>
                   Most, Popula, r
-                </d, i, v>
-                <div, classNam, e='te, x, t-center, m, b-6'>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-                    Profession, a, l
+                </div>
+                <div, classNam, e='text-centermb-6'>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
+                    Professional
                   </h3>
-                  <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-, 2'>
-                    $, 4,9, 9, 9
-                    <span, classNam, e = 'te, x, t-xl, tex, t-zi, o, n-sla, t, e-lig, h, t'>/mo</sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                    Up, to, 1, 0,000, document, s/mon, t, h
-                  </d, i, v>
-                </d, i, v>
-                <ul, classNam, e = 'spa, c, e-y-3, tex, t-sm, tex, t-zi, o, n-sla, t, e-light, m, b-8'>
+                  <div, classNam, e='text-4xl, fon, t-bold, tex, t-purple-400mb-, 2'>
+                    $, 499, 9
+                    <span, classNam, e = 'text-xl, tex, t-zion-slate-light'>/mo</span>
+                  </div>
+                  <div, classNam, e='text-sm, tex, t-zion-slate-light'>
+                    Up, to, 1, 0,000, document, s/month
+                  </div>
+                </div>
+                <ul, classNam, e = 'space-y-3, tex, t-sm, tex, t-zion-slate-lightmb-8'>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Everything, in, Starte, r, pl, u, s: </sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Everything, in, Starte, r, pl, u, s: </span>
                   </li>
                   <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>1, 5, 0+ document, type, s</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>150+ document, type, s</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Custom, workflow, s & rul, e, s</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Custom, workflow, s & rules</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Priority, suppor, t + C, S, M</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Priority, suppor, t + CSM</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>99.9% SLA, guarante, e</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>99.9% SLA, guarante, e</span>
                   </li>
                 </ul>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='block, tex, t-center, b, g-purp, l, e-600, hove, r:bg-purp, l, e-700, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-a, l, l'
+                <Linkto='/contact'
+                  className='block, tex, t-centerbg-purple-600, hove, r:bg-purple-700, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, transitio, n-all'
                 >
                   Start, Free, Trial
-                </Li, n, k>
-              </d, i, v>
+                </Link>
+              </div>
 
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-gre, e, n-4, 0, 0/30'>
-                <div, classNam, e='te, x, t-center, m, b-6'>
-                  <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-                    Enterpri, s, e
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-green-400/30'>
+                <div, classNam, e='text-centermb-6'>
+                  <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
+                    Enterprise
                   </h3>
-                  <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
-                    Cust, o, m
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  <div, classNam, e='text-4xl, fon, t-bold, tex, t-green-400mb-2'>
+                    Custom
+                  </div>
+                  <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                     Unlimited, document, s
-                  </d, i, v>
-                </d, i, v>
-                <ul, classNam, e='spa, c, e-y-3, tex, t-sm, tex, t-zi, o, n-sla, t, e-light, m, b-8'>
+                  </div>
+                </div>
+                <ul, classNam, e='space-y-3, tex, t-sm, tex, t-zion-slate-lightmb-8'>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Everything, in, Profession, a, l, pl, u, s: </sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Everything, in, Profession, a, l, pl, u, s: </span>
                   </li>
                   <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Custom, AI, model traini, n, g</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Custom, AI, model training</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>On-premise, deployment, option</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>On-premise, deployment, option</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>Dedicated, infrastructur, e</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>Dedicated, infrastructur, e</span>
                   </li>
                   <li, classNam, e='flex, item, s-start, ga, p-2'>
-                    <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0' />
-                    <sp, a, n>24/7, premium, support</sp, a, n>
+                    <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0' />
+                    <span>24/7, premium, support</span>
                   </li>
                 </ul>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='block, tex, t-center, b, g-gre, e, n-600, hove, r:bg-gre, e, n-700, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, transitio, n-a, l, l'
+                <Linkto='/contact'
+                  className='block, tex, t-centerbg-green-600, hove, r:bg-green-700, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, transitio, n-all'
                 >
                   Contact, Sale, s
-                </Li, n, k>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                </Link>
+              </div>
+            </div>
+          </div>
 
-          {/* C, T, A */}
-          <div, classNam, e = 'm, a, x-w-4xl, m, x-auto, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-2x, l, p-12'>
-            <h2, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
+          {/* CTA */}
+          <div, classNam, e = 'max-w-4xlmx-auto, tex, t-centerbg-gradient-to-r, fro, m-blue-600to-purple-600, rounde, d-2xlp-12'>
+            <h2, classNam, e='text-4xl, fon, t-bold, tex, t-whitemb-4'>
               Ready, to, Automate Your, Document, Processing?
             </h2>
-            <p, classNam, e='te, x, t-xl, tex, t-whi, t, e/90, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-              Join, 50, 0+ enterprises, achieving, 98.5% accur, a, c, y, 95% automati, o, n,
-              a, n, d $2.8M+ in, annual, savings. Start, your, free 30-day, trial, today—no, credit, card requir, e, d.
+            <p, classNam, e='text-xl, tex, t-white/90mb-8, ma, x-w-2xlmx-auto'>
+              Join, 50, 0+ enterprises, achieving, 98.5% accurac, y, 95% automation,
+              and $2.8M+ in, annual, savings. Start, your, free 30-day, trial, today—no, credit, card required.
             </p>
-            <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='bg-white, tex, t-bl, u, e-600, hove, r:bg-zi, o, n-sla, t, e-light, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'
+            <div, classNam, e = 'flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center'>
+              <Linkto='/contact'
+                className='bg-white, tex, t-blue-600, hove, r:bg-zion-slate-lightpx-8py-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, justif, y-center, ga, p-2, tex, t-lg'
               >
                 <Zap, classNam, e='w-6 h-6' />
                 Start, Free, 30-Day, Tria, l
-              </Li, n, k>
-              <Link, t, o='/conta, c, t'
-                classNa, m, e='bord, e, r-2, borde, r-white, tex, t-white, hove, r:bg-whi, t, e/10, p, x-8, p, y-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, tex, t-lg'
+              </Link>
+              <Linkto='/contact'
+                className='border-2, borde, r-white, tex, t-white, hove, r:bg-white/10px-8py-4, rounde, d-lg, fon, t-semibold, transitio, n-all, duratio, n-300, hove, r:scale-105, tex, t-lg'
               >
                 Schedule, Dem, o
-              </Li, n, k>
-            </d, i, v>
-            <p, classNam, e='te, x, t-whi, t, e/70, tex, t-sm, m, t-6'>
-              ✓ No, credit, card requir, e, d ✓ Full, feature, access ✓ Cancel, anytim, e ✓
+              </Link>
+            </div>
+            <p, classNam, e='text-white/70, tex, t-smmt-6'>
+              ✓ No, credit, card required ✓ Full, feature, access ✓ Cancel, anytim, e ✓
               24/7, suppor, t
             </p>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,155 +1,155 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 const, October2025NewAIContentMegaBanne, r = () => { 
-  retu, r, n (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-2xl, shado, w-2xl, border, border-purp, l, e-5, 0, 0/30, m, y-12' > {' ' }
+  return (
+    <div, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-br, fro, m-purple-900, vi, a-blue-900to-cyan-900, rounde, d-2xl, shado, w-2xl, border, border-purple-500/30my-12' > {' ' }
       {/* Animated, background, effect */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-7, 0, 0' />
-      </d, i, v>
-      <div, classNam, e='relativ, e, p-8, m, d: p-12'>
-        {/* He, a, d, e, r */}
-        <div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-6'>
-          <div, classNam, e='p-3, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-cy, a, n-500, rounde, d-xl'>
-            <Sparkles, classNam, e='w-8 h-8, tex, t-whi, t, e' />
-          </d, i, v>
-          <d, i, v>
-            <div, classNam, e='flex, item, s-center, ga, p-2, m, b-1'>
-              <span, classNam, e='px-3, p, y-1, b, g-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, animate-pul, s, e'>
+        <div, classNam, e='absolute, to, p-0, lef, t-0 w-96h-96bg-purple-500, rounde, d-full, filter, blur-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, botto, m-0, righ, t-0 w-96h-96bg-cyan-500, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-700' />
+      </div>
+      <div, classNam, e='relativep-8md: p-12'>
+        {/* Head, e, r */}
+        <div, classNam, e = 'flex, item, s-center, ga, p-3mb-6'>
+          <div, classNam, e='p-3bg-gradient-to-br, fro, m-purple-500to-cyan-500, rounde, d-xl'>
+            <Sparkles, classNam, e='w-8 h-8, tex, t-white' />
+          </div>
+          <div>
+            <div, classNam, e='flex, item, s-center, ga, p-2mb-1'>
+              <span, classNam, e='px-3py-1bg-red-500, tex, t-white, tex, t-xs, fon, t-bold, rounde, d-full, uppercase, animate-pulse'>
                 🚀 Just, Publishe, d
-              </sp, a, n>
-              <span, classNam, e='te, x, t-purp, l, e-300, tex, t-sm, fon, t-semibo, l, d'>
-                Octob, e, r , 1, 20, 2, 5
-              </sp, a, n>
-            </d, i, v>
-            <h2, classNam, e = 'te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-whi, t, e'>
+              </span>
+              <span, classNam, e='text-purple-300, tex, t-sm, fon, t-semibold'>
+                October , 1, 20, 2, 5
+              </span>
+            </div>
+            <h2, classNam, e = 'text-3xlmd: text-4xl, fon, t-bold, tex, t-white'>
               Latest, AI, Revolution: 3, Breakthrough, Guides
             </h2>
-          </d, i, v>
-        </d, i, v>
-        <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-200, m, b-8, ma, x-w-3, x, l'>
+          </div>
+        </div>
+        <p, classNam, e='text-xl, tex, t-gray-200mb-8, ma, x-w-3xl'>
           Discover, the, cutting-edge, strategies, poweri, n, g{' '}
-          <span, classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, fon, t-bo, l, d'>
+          <span, classNam, e = 'text-transparentbg-clip-textbg-gradient-to-r, fro, m-purple-400to-cyan-400, fon, t-bold'>
             $13.7B, in, enterprise AI, deployment, s
-          </sp, a, n>
-          . Master, enterprise, AI age, n, t, s, LLM, securit, y, and, vector, databases with, proven, frameworks from, Fortune, 500 leade, r, s.
+          </span>
+          . Master, enterprise, AI agent, s, LLM, securit, y, and, vector, databases with, proven, frameworks from, Fortune, 500 leaders.
         </p>
         {/* Three, featured, articles */}
-        <div, classNam, e = 'grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
-          {/* Arti, c, l, e , 1 */}
-          <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-agen, t, s-automati, o, n-revoluti, o, n'
-            classNa, m, e='group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-purp, l, e-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-105, transform, duration-3, 0, 0'
+        <div, classNam, e = 'grid, gri, d-cols-1md: grid-cols-3, ga, p-6mb-8'>
+          {/* Articl, e , 1 */}
+          <Linkto = '/blog/ai-2025-october-enterprise-ai-agents-automation-revolution'
+            className='groupbg-slate-900/50, backdro, p-blur-sm, border, border-purple-500/30, rounde, d-xlp-6, hove, r: bg-slate-900/70, hove, r:border-purple-400/50, transitio, n-all, hove, r:scale-105, transform, duration-300'
           >
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, classNam, e='p-2, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r:bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s'>
-                <Bot, classNam, e='w-6 h-6, tex, t-purp, l, e-4, 0, 0' />
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-300, transitio, n-colo, r, s'>
-              Enterprise, AI, Agents Revoluti, o, n
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <div, classNam, e='p-2bg-purple-500/20, rounde, d-lg, grou, p-hover:bg-purple-500/30, transitio, n-colors'>
+                <Bot, classNam, e='w-6 h-6, tex, t-purple-400' />
+              </div>
+            </div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover:text-purple-300, transitio, n-colors'>
+              Enterprise, AI, Agents Revolution
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
+            <p, classNam, e='text-gray-300, tex, t-smmb-4'>
               Autonomous, agents, achieving 85% efficiency, gains, and $4.7B, in, proven value, creatio, n
             </p>
-            <div, classNam, e='flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4'>
+            <div, classNam, e='flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gray-400mb-4'>
               <span, classNam, e='flex, item, s-center, ga, p-1'>
                 <TrendingUp, classNam, e='w-3 h-3' />
                 $4.7B, Valu, e
-              </sp, a, n>
-              <sp, a, n>•</sp, a, n>
-              <sp, a, n>85% Efficien, c, y</sp, a, n>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-center, tex, t-purp, l, e-400, fon, t-semibold, grou, p-hov, e, r:te, x, t-purp, l, e-3, 0, 0'>
+              </span>
+              <span>•</span>
+              <span>85% Efficiency</span>
+            </div>
+            <div, classNam, e='flex, item, s-center, tex, t-purple-400, fon, t-semibold, grou, p-hover:text-purple-300'>
               Read, Full, Guide
-              <ArrowRight, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            </d, i, v>
-          </Li, n, k>
-          {/* Arti, c, l, e , 2 */}
-          <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-l, l, m-securi, t, y-prom, p, t-injecti, o, n-defen, s, e'
-            classNa, m, e='group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-r, e, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-105, transform, duration-3, 0, 0'
+              <ArrowRight, classNam, e='w-4 h-4ml-2, grou, p-hover:translate-x-1, transitio, n-transform' />
+            </div>
+          </Link>
+          {/* Articl, e , 2 */}
+          <Linkto = '/blog/ai-2025-october-llm-security-prompt-injection-defense'
+            className='groupbg-slate-900/50, backdro, p-blur-sm, border, border-red-500/30, rounde, d-xlp-6, hove, r: bg-slate-900/70, hove, r:border-red-400/50, transitio, n-all, hove, r:scale-105, transform, duration-300'
           >
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, classNam, e='p-2, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r:bg-r, e, d-5, 0, 0/30, transitio, n-colo, r, s'>
-                <Shield, classNam, e='w-6 h-6, tex, t-r, e, d-4, 0, 0' />
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-r, e, d-300, transitio, n-colo, r, s'>
-              LLM, Securit, y & Defen, s, e
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <div, classNam, e='p-2bg-red-500/20, rounde, d-lg, grou, p-hover:bg-red-500/30, transitio, n-colors'>
+                <Shield, classNam, e='w-6 h-6, tex, t-red-400' />
+              </div>
+            </div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover:text-red-300, transitio, n-colors'>
+              LLM, Securit, y & Defense
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
+            <p, classNam, e='text-gray-300, tex, t-smmb-4'>
               Advanced, prompt, injection defense, protectin, g $3.2B, in, enterprise
               AI, asset, s
             </p>
-            <div, classNam, e='flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4'>
+            <div, classNam, e='flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gray-400mb-4'>
               <span, classNam, e='flex, item, s-center, ga, p-1'>
                 <Shield, classNam, e='w-3 h-3' />
-                99.8% Preventi, o, n
-              </sp, a, n>
-              <sp, a, n>•</sp, a, n>
-              <sp, a, n>$3.2B, Protecte, d</sp, a, n>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-center, tex, t-r, e, d-400, fon, t-semibold, grou, p-hov, e, r:te, x, t-r, e, d-3, 0, 0'>
+                99.8% Prevention
+              </span>
+              <span>•</span>
+              <span>$3.2B, Protecte, d</span>
+            </div>
+            <div, classNam, e='flex, item, s-center, tex, t-red-400, fon, t-semibold, grou, p-hover:text-red-300'>
               Read, Security, Guide
-              <ArrowRight, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            </d, i, v>
-          </Li, n, k>
-          {/* Arti, c, l, e , 3 */}
-          <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-vect, o, r-databas, e, s-r, a, g-syste, m, s-enterpri, s, e'
-            classNa, m, e='group, b, g-sla, t, e-9, 0, 0/50, backdro, p-bl, u, r-sm, border, border-cy, a, n-5, 0, 0/30, rounde, d-x, l, p-6, hove, r: bg-sla, t, e-9, 0, 0/70, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-105, transform, duration-3, 0, 0'
+              <ArrowRight, classNam, e='w-4 h-4ml-2, grou, p-hover:translate-x-1, transitio, n-transform' />
+            </div>
+          </Link>
+          {/* Articl, e , 3 */}
+          <Linkto = '/blog/ai-2025-october-vector-databases-rag-systems-enterprise'
+            className='groupbg-slate-900/50, backdro, p-blur-sm, border, border-cyan-500/30, rounde, d-xlp-6, hove, r: bg-slate-900/70, hove, r:border-cyan-400/50, transitio, n-all, hove, r:scale-105, transform, duration-300'
           >
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <div, classNam, e='p-2, b, g-cy, a, n-5, 0, 0/20, rounde, d-lg, grou, p-hov, e, r:bg-cy, a, n-5, 0, 0/30, transitio, n-colo, r, s'>
-                <Database, classNam, e='w-6 h-6, tex, t-cy, a, n-4, 0, 0' />
-              </d, i, v>
-              <span, classNam, e='px-2, p, y-1, b, g-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-300, tex, t-xs, fon, t-semibold, rounde, d'>
-                ESSENTI, A, L
-              </sp, a, n>
-            </d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-cy, a, n-300, transitio, n-colo, r, s'>
-              Vector, Database, s & R, A, G
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <div, classNam, e='p-2bg-cyan-500/20, rounde, d-lg, grou, p-hover:bg-cyan-500/30, transitio, n-colors'>
+                <Database, classNam, e='w-6 h-6, tex, t-cyan-400' />
+              </div>
+              <span, classNam, e='px-2py-1bg-cyan-500/20, tex, t-cyan-300, tex, t-xs, fon, t-semibold, rounde, d'>
+                ESSENTIAL
+              </span>
+            </div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover:text-cyan-300, transitio, n-colors'>
+              Vector, Database, s & RAG
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
+            <p, classNam, e='text-gray-300, tex, t-smmb-4'>
               Enterprise, implementation, powering $5.8B, in, AI deployments, with, 92% accuracy, gain, s
             </p>
-            <div, classNam, e='flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gr, a, y-400, m, b-4'>
+            <div, classNam, e='flex, item, s-center, ga, p-4, tex, t-xs, tex, t-gray-400mb-4'>
               <span, classNam, e='flex, item, s-center, ga, p-1'>
                 <Database, classNam, e='w-3 h-3' />
                 $5.8B, Scal, e
-              </sp, a, n>
-              <sp, a, n>•</sp, a, n>
-              <sp, a, n>92% Accura, c, y</sp, a, n>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-center, tex, t-cy, a, n-400, fon, t-semibold, grou, p-hov, e, r:te, x, t-cy, a, n-3, 0, 0'>
+              </span>
+              <span>•</span>
+              <span>92% Accuracy</span>
+            </div>
+            <div, classNam, e='flex, item, s-center, tex, t-cyan-400, fon, t-semibold, grou, p-hover:text-cyan-300'>
               Read, Implementation, Guide
-              <ArrowRight, classNam, e='w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m' />
-            </d, i, v>
-          </Li, n, k>
-        </d, i, v>
+              <ArrowRight, classNam, e='w-4 h-4ml-2, grou, p-hover:translate-x-1, transitio, n-transform' />
+            </div>
+          </Link>
+        </div>
         {/* Total, Value, Bann, e, r */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-purp, l, e-4, 0, 0/30, rounde, d-x, l, p-6'>
-          <div, classNam, e='flex, fle, x-col, m, d: fl, e, x-row, item, s-center, justif, y-between, ga, p-4'>
-            <d, i, v>
-              <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+        <div, classNam, e = 'bg-gradient-to-r, fro, m-purple-500/20to-cyan-500/20, border, border-purple-400/30, rounde, d-xlp-6'>
+          <div, classNam, e='flex, fle, x-colmd: flex-row, item, s-center, justif, y-between, ga, p-4'>
+            <div>
+              <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2'>
                 Combined, Enterprise, Val, u, e:{' '}
-                <span, classNam, e = 'te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-4, 0, 0'>
+                <span, classNam, e = 'text-transparentbg-clip-textbg-gradient-to-r, fro, m-purple-400to-cyan-400'>
                   $13.7, Billio, n
-                </sp, a, n>
+                </span>
               </h3>
-              <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                Proven, strategies, from Fortune, 500, leaders • 99%+ Accura, c, y •
-                Producti, o, n-Ready, Framework, s
+              <p, classNam, e='text-gray-300'>
+                Proven, strategies, from Fortune, 500, leaders • 99%+ Accuracy •
+                Production-Ready, Framework, s
               </p>
-            </d, i, v>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='fl, e, x-shri, n, k-0, inlin, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r: fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl, transform, hover:sca, l, e-1, 0, 5'
+            </div>
+            <Linkto='/blog'
+              className='flex-shrink-0, inlin, e-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-purple-500to-cyan-500, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, hove, r: from-purple-600, hove, r:to-cyan-600, transitio, n-all, shado, w-lg, hove, r:shadow-xl, transform, hover:scale-105'
             >
               Explore, All, Insights
               <ArrowRight, classNam, e='w-5 h-5' />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025NewAIContentMegaBanner;

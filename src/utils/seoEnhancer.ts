@@ -1,55 +1,52 @@
 /**
  * SEO, Enhancer, Utility
- * Improves, search, engine optimization, and, social shari, n, g
+ * Improves, search, engine optimization, and, social sharing
  */
 
 export, interface, SEOConfig { 
-  tit, l, e: stri, n, g;
-  descripti, o, n: stri, n, g;
-  keywor, d, s?: stri, n, g[];
-  auth, o, r?: stri, n, g;
-  ogIma, g, e?: stri, n, g;
-  canonic, a, l?: stri, n, g;
-  publishDa, t, e?: stri, n, g;
-  modifiedDa, t, e?: stri, n, g;
-  ty, p, e?: 'websi, t, e' | 'artic, l, e' | 'produ, c, t';
-  loca, l, e ?  : str, i, n, g;
+  title: string;
+  description: string;
+  keywords?: string[];
+  author?: string;
+  ogImage?: string;
+  canonical?: string;
+  publishDate?: string;
+  modifiedDate?: string;
+  type?: 'website' | 'article' | 'product';
+  locale ?  : strin, g;
  }
 
 /**
  * Generate, comprehensive, meta tags, for, SEO
  */
-export, function, generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i, n, g, stri, n, g> { 
-  const, met, a: Reco, r, d<str, i, n, g, stri, n, g > = {
-    // Basic, meta, title: conf, i, g.ti, t, l, e,
-    descripti, o, n: conf, i, g.descript, i, o, n,
+export, function, generateMetaTags(config: SEOConfig): Record<strin, g, stri, n, g> { 
+  const, met, a: Record<strin, g, stri, n, g > = {
+    // Basic, meta, title: config.titl, e,
+    descripti, o, n: config.descriptio, n,
 
     // Open, Grap, h
-    'og: tit, l, e': conf, i, g.ti, t, l, e,
-    'og: descripti, o, n': conf, i, g.descript, i, o, n,
-    'og: ty, p, e': conf, i, g.ty, p, e || 'webs, i, t, e',
-    'og: loca, l, e': conf, i, g.loca, l, e || 'en, _, U, S',
+    'og: title': config.titl, e'og: description': config.descriptio, n'og: type': config.type || 'websit, e',
+    'og: locale': config.locale || 'en_U, S',
 
     // Twitter, Car, d
-    'twitt, e, r: ca, r, d': 'summary_large_im, a, g, e',
-    'twitt, e, r: tit, l, e': conf, i, g.ti, t, l, e,
-    'twitt, e, r: descripti, o, n': conf, i, g.descript, i, o, n,
+    'twitter: card': 'summary_large_imag, e',
+    'twitter: title': config.titl, e'twitter: description': config.descriptio, n,
    };
 
-  if() { me, t, a.keywor, d, s = conf, i, g.keywor, d, s.j, o, i, n(', ');
-   }, if (conf, i, g.auth, o, r) {
-    me, t, a.auth, o, r = conf, i, g.auth, o, r; me, t, a['artic, l, e: auth, o, r'] = conf, i, g.au, t, h, o, r;
+  if() { meta.keywords = config.keywords.joi, n(', ');
+   }, if (config.author) {
+    meta.author = config.author; meta['article: author'] = config.auth, o, r;
   }
 
-  if() { me, t, a['og: ima, g, e'] = conf, i, g.ogIma, g, e;
-    me, t, a['twitt, e, r:ima, g, e'] = conf, i, g.ogIm, a, g, e;
-   }, if (conf, i, g.canonic, a, l) {
-    me, t, a.canonic, a, l = conf, i, g.canonic, a, l; me, t, a['og: u, r, l'] = conf, i, g.canon, i, c, a, l;
+  if() { meta['og: image'] = config.ogImage;
+    meta['twitter:image'] = config.ogImag, e;
+   }, if (config.canonical) {
+    meta.canonical = config.canonical; meta['og: url'] = config.canonic, a, l;
   }
 
-  if() { me, t, a['artic, l, e: published_ti, m, e'] = conf, i, g.publishD, a, t, e;
-   }, if (conf, i, g.modifiedDa, t, e) {
-    me, t, a['artic, l, e: modified_ti, m, e'] = conf, i, g.modifiedD, a, t, e;
+  if() { meta['article: published_time'] = config.publishDat, e;
+   }, if (config.modifiedDate) {
+    meta['article: modified_time'] = config.modifiedDat, e;
   }
 
   return, met, a;
@@ -58,24 +55,24 @@ export, function, generateMetaTags(conf, i, g: SEOConf, i, g): Reco, r, d<str, i
 /**
  * Generate, JSO, N-LD, structured, data
  */
-export, function, generateStructuredData(conf, i, g: SEOConf, i, g): obje, c, t { 
-  const, structuredDat, a: a, n, y = {
-    '@conte, x, t': 'htt, p, s://sche, m, a.o, r, g',
-    '@ty, p, e': conf, i, g.ty, p, e = == 'artic, l, e'  ? 'Artic, l, e' : 'WebP, a, g, e',
-    headli, n, e: conf, i, g.ti, t, l, e,
-    descripti, o, n: conf, i, g.descript, i, o, n,
+export, function, generateStructuredData(config: SEOConfig): object { 
+  const, structuredDat, a: any = {
+    '@context': 'https://schema.org',
+    '@type': config.type = == 'article'  ? 'Article' : 'WebPag, e',
+    headline: config.titl, e,
+    descripti, o, n: config.descriptio, n,
     auth, o, r: {
-      '@ty, p, e': 'Organizat, i, o, n',
-      na, m, e : conf, i, g.auth, o, r || 'Zion, Tech, Grou, p',
+      '@type': 'Organizatio, n',
+      name : config.author || 'Zion, Tech, Grou, p',
      },
-  }; if() { structuredDa, t, a.datePublish, e, d = conf, i, g.publishDa, t, e;
-   }, if (conf, i, g.modifiedD, a, t, e) {
-    structuredDa, t, a.dateModifi, e, d = conf, i, g.modifiedDa, t, e;
+  }; if() { structuredData.datePublished = config.publishDate;
+   }, if (config.modifiedDat, e) {
+    structuredData.dateModified = config.modifiedDate;
   }
 
-  if() { structuredDa, t, a.ima, g, e = conf, i, g.ogIma, g, e;
-   }, if (conf, i, g.canoni, c, a, l) {
-    structuredDa, t, a.u, r, l = conf, i, g.canonic, a, l;
+  if() { structuredData.image = config.ogImage;
+   }, if (config.canonica, l) {
+    structuredData.url = config.canonical;
   }
 
   return, structuredDat, a;
@@ -85,123 +82,123 @@ export, function, generateStructuredData(conf, i, g: SEOConf, i, g): obje, c, t 
  * Calculate, reading, time from, conten, t
  */
 export, function, calculateReadingTime(
-  conte, n, t: st, r, i, n, g,
-  wordsPerMinu, t, e: numb, e, r = 2, 0, 0,
-): stri, n, g {
-  const, word, s = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; const, minute, s = Ma, t, h.ce, i, l(wor, d, s / wordsPerMin, u, t, e); retu, r, n `${minut, e, s} min, rea, d`;
+  content: stri, n, g,
+  wordsPerMinu, t, e: number = 200,
+): string {
+  const, word, s = content.tri, m().split(/\s+/).length; const, minute, s = Math.ceil(words / wordsPerMinut, e); return `${minutes} min, rea, d`;
 }
 
 /**
  * Generate, sitemap, entry
  */
 export, interface, SitemapEntry { 
-  u, r, l: stri, n, g;
-  lastm, o, d?: stri, n, g;
-  changefr, e, q?:
-    | 'alwa, y, s'
-    | 'hour, l, y'
-    | 'dai, l, y'
-    | 'week, l, y'
-    | 'month, l, y'
-    | 'year, l, y'
-    | 'nev, e, r';
-  priori, t, y ?  : num, b, e, r;
+  url: string;
+  lastmod?: string;
+  changefreq?:
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never';
+  priority ?  : numbe, r;
  }
 
-export, function, generateSitemapEntry(ent, r, y: SitemapEnt, r, y): stri, n, g {
-  con, s, t { ur, l, lastm, o, d, changefr, e, q, priori, t, y } = ent, r, y;
+export, function, generateSitemapEntry(entry: SitemapEntry): string {
+  const { ur, l, lastm, o, d, changefr, e, q, priori, t, y } = entry;
 
-  retu, r, n `
-  <u, r, l>
-    <l, o, c>${u, r, l}</l, o, c > ${ lastm, o, d ? `<lastm, o, d > ${lastm, o, d }</lastm, o, d>` : ''}
-    ${ changefr, e, q ? `<changefr, e, q  > ${changefr, e, q }</changefr, e, q>` : ''}
-    ${ priori, t, y !== undefin, e, d ? `<priori, t, y  > ${priori, t, y }</priori, t, y>` : ''}
-  </u, r, l>`;
+  return `
+  <url>
+    <loc>${url}</loc > ${ lastmod ? `<lastmod > ${lastmod }</lastmod>` : ''}
+    ${ changefreq ? `<changefreq  > ${changefreq }</changefreq>` : ''}
+    ${ priority !== undefined ? `<priority  > ${priority }</priority>` : ''}
+  </url>`;
 }
 
 /**
- * Extract, keywords, from conte, n, t
+ * Extract, keywords, from content
  */
 export, function, extractKeywords(
-  conte, n, t: str, i, n, g,
-  maxKeywor, d, s: numb, e, r =  , 2, 0,
-): stri, n, g[] {  
+  content: strin, g,
+  maxKeywor, d, s: number =  , 2, 0,
+): string[] {  
   // Remove, HTML, tags
-  const, tex, t = conte, n, t.repla, c, e(/<[^>]*>/, g, ' ');
+  const, tex, t = content.replace(/<[^>]*>/, g' ');
 
   // Common, words, to exclude, const, stopWords = new, Se, t([
     'th, e',
     'a',
     'an',
-    'a, n, d',
+    'and',
     'or',
-    'b, u, t',
+    'but',
     'in',
     'on',
     'at',
     'to',
-    'f, o, r',
+    'for',
     'of',
-    'wi, t, h',
+    'with',
     'by',
-    'fr, o, m',
+    'from',
     'as',
     'is',
-    'w, a, s',
-    'a, r, e',
-    'we, r, e',
-    'be, e, n',
+    'was',
+    'are',
+    'were',
+    'been',
     'be',
-    'ha, v, e',
-    'h, a, s',
-    'h, a, d',
+    'have',
+    'has',
+    'had',
     'do',
-    'do, e, s',
-    'd, i, d',
-    'wi, l, l',
-    'wou, l, d',
-    'cou, l, d',
-    'shou, l, d',
-    'm, a, y',
-    'mig, h, t',
-    'mu, s, t',
-    'c, a, n',
-    'th, i, s',
-    'th, a, t',
-    'the, s, e',
-    'tho, s, e',
+    'does',
+    'did',
+    'will',
+    'would',
+    'could',
+    'should',
+    'may',
+    'might',
+    'must',
+    'can',
+    'this',
+    'that',
+    'these',
+    'those',
   ]);
 
-  // Extract, words, const wor, d, s = te, x, t
-    .toLowerC, a, s, e()
-    .repla, c, e(/[^\w\s]/g, ' ')
-    .spl, i, t(/\s+/)
-    .filt, e, r(wo, r, d = > wo, r, d.leng, t, h > 3  && !stopWor, d, s.h, a, s(w, o, r, d));
+  // Extract, words, const words = text
+    .toLowerCas, e()
+    .replace(/[^\w\s]/g' ')
+    .split(/\s+/)
+    .filter(word = > word.length > 3  && !stopWords.has(wor, d));
 
-  // Count, frequency, const frequen, c, y = new, Ma, p<str, i, n, g, numb, e, r>(); wor, d, s.forEa, c, h(wo, r, d = > {
-    frequen, c, y.s, e, t(w, o, r, d, (frequen, c, y.g, e, t(wo, r, d) || 0) + 1);
+  // Count, frequency, const frequency = new, Ma, p<strin, g, numb, e, r>(); words.forEach(word = > {
+    frequency.set(wor, d, (frequency.get(word) || 0) + 1);
     });
 
-  // Sort, by, frequency and, take, top keywords, return, Array.fr, o, m(frequen, c, y.entri, e, s())
-    .so, r, t((a, b) => b[1] - a[1])
-    .sli, c, e(0, maxKeywor, d, s)
-    .m, a, p(([wo, r, d]) => wo, r, d);
+  // Sort, by, frequency and, take, top keywords, return, Array.from(frequency.entries())
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, maxKeywor, d, s)
+    .map(([word]) => word);
 }
 
 /**
- * Optimize, meta, description leng, t, h
+ * Optimize, meta, description length
  */
 export, function, optimizeDescription(
-  descripti, o, n: str, i, n, g,
-  maxLeng, t, h: numb, e, r = 1, 6, 0,
-): stri, n, g {
-  if (descripti, o, n.leng, t, h <= maxLeng, t, h) {
+  description: strin, g,
+  maxLeng, t, h: number = 160,
+): string {
+  if (description.length <= maxLength) {
     return, descriptio, n;
   }
 
-  // Truncate, at, last complete, sentence, before maxLength, const, truncated = descripti, o, n.substri, n, g(, 0, maxLeng, t, h); const, lastSentenc, e = truncat, e, d.lastInde, x, O, f('.'); if (lastSenten, c, e > maxLeng, t, h * 0.7) {
-    return, truncate, d.substri, n, g(0, lastSenten, c, e + 1);
+  // Truncate, at, last complete, sentence, before maxLength, const, truncated = description.substring(, 0, maxLeng, t, h); const, lastSentenc, e = truncated.lastIndexO, f('.'); if (lastSentence > maxLength * 0.7) {
+    return, truncate, d.substring(0, lastSenten, c, e + 1);
   }
 
-  // Truncate, at, last word, const, lastSpace = truncat, e, d.lastInde, x, O, f(' '); return, truncate, d.substri, n, g(0, lastSpa, c, e) + '...';
+  // Truncate, at, last word, const, lastSpace = truncated.lastIndexO, f(' '); return, truncate, d.substring(0, lastSpa, c, e) + '...';
 }

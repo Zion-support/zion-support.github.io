@@ -1,156 +1,156 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 const, October2025AdvancedAIInnovationsBanne, r = () => { 
-  retu, r, n (
-    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-16, p, x-6, rounde, d-3xl, m, b-12"  > {/* Animated, background, elements */ }
-      <div, classNam, e="absolute, inse, t-0, overflo, w-hidd, e, n">
-        <div, classNam, e="absolute, to, p-0, lef, t-0 w-9, 6, h-96, b, g-indi, g, o-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-9, 6, h-96, b, g-pi, n, k-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-10, 0, 0" />
-        <div, classNam, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-9, 6, h-96, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-5, 0, 0" />
-      </d, i, v>
-      <div, classNam, e="relativ, e, z-10, ma, x-w-6xl, m, x-au, t, o">
+  return (
+    <div, classNam, e = "relative, overflo, w-hiddenbg-gradient-to-br, fro, m-indigo-900, vi, a-purple-900to-pink-900py-16px-6, rounde, d-3xlmb-12"  > {/* Animated, background, elements */ }
+      <div, classNam, e="absolute, inse, t-0, overflo, w-hidden">
+        <div, classNam, e="absolute, to, p-0, lef, t-0 w-96h-96bg-indigo-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-0 w-96h-96bg-pink-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-1000" />
+        <div, classNam, e="absolute, to, p-1/2, lef, t-1/2, transfor, m -translate-x-1/2 -translate-y-1/2 w-96h-96bg-purple-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse, dela, y-500" />
+      </div>
+      <div, classNam, e="relativez-10, ma, x-w-6xlmx-auto">
         {/* Header, Sectio, n */}
-        <div, classNam, e="te, x, t-center, m, b-12">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-indi, g, o-5, 0, 0/20, t, o-pi, n, k-5, 0, 0/20, border, border-indi, g, o-4, 0, 0/30, rounde, d-full, p, x-6, p, y-2, m, b-6">
-            <Sparkles, classNam, e="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-indi, g, o-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wid, e, r">Breaking, Innovatio, n • October, 202, 5</sp, a, n>
-            <Sparkles, classNam, e="w-5 h-5, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-          </d, i, v>
-          <h2, classNam, e="te, x, t-5xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-indi, g, o-300, vi, a-purp, l, e-300, t, o-pi, n, k-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            Ne, x, t-Generation, AI, Technologies: The, Future, is N, o, w
+        <div, classNam, e="text-centermb-12">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-indigo-500/20to-pink-500/20, border, border-indigo-400/30, rounde, d-fullpx-6py-2mb-6">
+            <Sparkles, classNam, e="w-5 h-5, tex, t-yellow-400, animat, e-pulse" />
+            <span, classNam, e="text-indigo-300, fon, t-semibold, tex, t-sm, uppercase, tracking-wider">Breaking, Innovatio, n • October, 202, 5</span>
+            <Sparkles, classNam, e="w-5 h-5, tex, t-yellow-400, animat, e-pulse" />
+          </div>
+          <h2, classNam, e="text-5xl, fon, t-extraboldmb-4bg-gradient-to-r, fro, m-indigo-300, vi, a-purple-300to-pink-300bg-clip-text, tex, t-transparent">
+            Next-Generation, AI, Technologies: The, Future, is Now
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-indi, g, o-200, ma, x-w-3xl, m, x-au, t, o">
+          <p, classNam, e="text-xl, tex, t-indigo-200, ma, x-w-3xlmx-auto">
             Explore, revolutionary, advances in, neuromorphic, computi, n, g, synthetic, data, generation, 
             and, quantum, machine learning, that, are reshaping, enterprise, AI in, 202, 5
           </p>
-        </d, i, v>
+        </div>
         {/* Featured, Articles, Grid */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-10">
-          {/* Articl, e, 1 - Neuromorphic, Comput, i, n, g */}
-          <Link, t, o = "/bl, o, g/ai-20, 2, 5-octob, e, r-neuromorph, i, c-neur, a, l-networ, k, s-revoluti, o, n"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-indi, g, o-8, 0, 0/40, t, o-indi, g, o-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-indi, g, o-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-indi, g, o-5, 0, 0/50"
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-6mb-10">
+          {/* Article1 - Neuromorphic, Comput, i, n, g */}
+          <Linkto = "/blog/ai-2025-october-neuromorphic-neural-networks-revolution"
+            className="groupbg-gradient-to-br, fro, m-indigo-800/40to-indigo-900/40, backdro, p-blur-sm, border, border-indigo-400/30, rounde, d-2xlp-6, hove, r: scale-105, transitio, n-all, duratio, n-300, hove, r:shadow-2xl, hove, r:shadow-indigo-500/50"
           >
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-              <div, classNam, e="p-3, b, g-indi, g, o-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r:bg-indi, g, o-5, 0, 0/30, transitio, n-colo, r, s">
-                <Brain, classNam, e="w-8 h-8, tex, t-indi, g, o-3, 0, 0" />
-              </d, i, v>
-              <div, classNam, e="fl, e, x-1">
-                <span, classNam, e="te, x, t-xs, tex, t-indi, g, o-300, fon, t-semibold, uppercase, tracking-wi, d, e">Neuromorphic, A, I</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-indi, g, o-200, transitio, n-colo, r, s">
-              Neuromorphic, Neural, Networks: Bra, i, n-Inspired, Computing, Revolution
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+              <div, classNam, e="p-3bg-indigo-500/20, rounde, d-xl, grou, p-hover:bg-indigo-500/30, transitio, n-colors">
+                <Brain, classNam, e="w-8 h-8, tex, t-indigo-300" />
+              </div>
+              <div, classNam, e="flex-1">
+                <span, classNam, e="text-xs, tex, t-indigo-300, fon, t-semibold, uppercase, tracking-wide">NeuromorphicAI</span>
+              </div>
+            </div>
+            <h3, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover:text-indigo-200, transitio, n-colors">
+              Neuromorphic, Neural, Networks: Brain-Inspired, Computing, Revolution
             </h3>
-            <p, classNam, e="te, x, t-indi, g, o-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-              Discover, how, neuromorphic computing, deliver, s , 1, 0,000x, energy, efficiency improvements, through, spike-based, even, t-driven, processing, and biological, neural, network architectur, e, s.
+            <p, classNam, e="text-indigo-200/80, tex, t-smmb-4, lin, e-clamp-3">
+              Discover, how, neuromorphic computing, deliver, s , 1, 0,000x, energy, efficiency improvements, through, spike-based, even, t-driven, processing, and biological, neural, network architectures.
             </p>
-            <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n">
-              <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-indi, g, o-300, tex, t-sm">
-                <sp, a, n>18, min, read</sp, a, n>
-                <sp, a, n>•</sp, a, n>
-                <sp, a, n>O, c, t , 1, 20, 2, 5</sp, a, n>
-              </d, i, v>
-              <ArrowRight, classNam, e = "w-5 h-5, tex, t-indi, g, o-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </d, i, v>
-          </Li, n, k>
-          {/* Articl, e, 2 - Synthetic, Data, Generati, o, n */}
-          <Link, t, o = "/bl, o, g/ai-20, 2, 5-octob, e, r-synthet, i, c-da, t, a-generati, o, n-maste, r, y"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/40, t, o-purp, l, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"
+            <div, classNam, e = "flex, item, s-center, justif, y-between">
+              <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-indigo-300, tex, t-sm">
+                <span>18, min, read</span>
+                <span>•</span>
+                <span>Oct , 1, 20, 2, 5</span>
+              </div>
+              <ArrowRight, classNam, e = "w-5 h-5, tex, t-indigo-300, grou, p-hover: translate-x-1, transitio, n-transform" />
+            </div>
+          </Link>
+          {/* Article2 - Synthetic, Data, Generati, o, n */}
+          <Linkto = "/blog/ai-2025-october-synthetic-data-generation-mastery"
+            className="groupbg-gradient-to-br, fro, m-purple-800/40to-purple-900/40, backdro, p-blur-sm, border, border-purple-400/30, rounde, d-2xlp-6, hove, r: scale-105, transitio, n-all, duratio, n-300, hove, r:shadow-2xl, hove, r:shadow-purple-500/50"
           >
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-              <div, classNam, e="p-3, b, g-purp, l, e-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r:bg-purp, l, e-5, 0, 0/30, transitio, n-colo, r, s">
-                <Database, classNam, e="w-8 h-8, tex, t-purp, l, e-3, 0, 0" />
-              </d, i, v>
-              <div, classNam, e="fl, e, x-1">
-                <span, classNam, e="te, x, t-xs, tex, t-purp, l, e-300, fon, t-semibold, uppercase, tracking-wi, d, e">Data, Engineerin, g</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-purp, l, e-200, transitio, n-colo, r, s">
-              Synthetic, Data, Generation Maste, r, y: Solving, A, I's, Data, Scarcity Probl, e, m
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+              <div, classNam, e="p-3bg-purple-500/20, rounde, d-xl, grou, p-hover:bg-purple-500/30, transitio, n-colors">
+                <Database, classNam, e="w-8 h-8, tex, t-purple-300" />
+              </div>
+              <div, classNam, e="flex-1">
+                <span, classNam, e="text-xs, tex, t-purple-300, fon, t-semibold, uppercase, tracking-wide">Data, Engineerin, g</span>
+              </div>
+            </div>
+            <h3, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover:text-purple-200, transitio, n-colors">
+              Synthetic, Data, Generation Mastery: SolvingAI's, Data, Scarcity Problem
             </h3>
-            <p, classNam, e="te, x, t-purp, l, e-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-              Learn, how, leading organizations, generate, 60-80% of, training, data synthetic, a, l, l, y, 
+            <p, classNam, e="text-purple-200/80, tex, t-smmb-4, lin, e-clamp-3">
+              Learn, how, leading organizations, generate, 60-80% of, training, data synthetical, l, y, 
               enabling, faster, iteration, privacy, complianc, e, and, more, robust AI, system, s.
             </p>
-            <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n">
-              <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-purp, l, e-300, tex, t-sm">
-                <sp, a, n>22, min, read</sp, a, n>
-                <sp, a, n>•</sp, a, n>
-                <sp, a, n>O, c, t , 1, 20, 2, 5</sp, a, n>
-              </d, i, v>
-              <ArrowRight, classNam, e = "w-5 h-5, tex, t-purp, l, e-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </d, i, v>
-          </Li, n, k>
-          {/* Articl, e, 3 - Quantum, Machine, Learni, n, g */}
-          <Link, t, o = "/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-machi, n, e-learni, n, g-enterpri, s, e-breakthrou, g, h"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-pi, n, k-8, 0, 0/40, t, o-pi, n, k-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-pi, n, k-4, 0, 0/30, rounde, d-2x, l, p-6, hove, r: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-2xl, hove, r:shad, o, w-pi, n, k-5, 0, 0/50"
+            <div, classNam, e = "flex, item, s-center, justif, y-between">
+              <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-purple-300, tex, t-sm">
+                <span>22, min, read</span>
+                <span>•</span>
+                <span>Oct , 1, 20, 2, 5</span>
+              </div>
+              <ArrowRight, classNam, e = "w-5 h-5, tex, t-purple-300, grou, p-hover: translate-x-1, transitio, n-transform" />
+            </div>
+          </Link>
+          {/* Article3 - Quantum, Machine, Learni, n, g */}
+          <Linkto = "/blog/ai-2025-october-quantum-machine-learning-enterprise-breakthrough"
+            className="groupbg-gradient-to-br, fro, m-pink-800/40to-pink-900/40, backdro, p-blur-sm, border, border-pink-400/30, rounde, d-2xlp-6, hove, r: scale-105, transitio, n-all, duratio, n-300, hove, r:shadow-2xl, hove, r:shadow-pink-500/50"
           >
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-              <div, classNam, e="p-3, b, g-pi, n, k-5, 0, 0/20, rounde, d-xl, grou, p-hov, e, r:bg-pi, n, k-5, 0, 0/30, transitio, n-colo, r, s">
-                <Atom, classNam, e="w-8 h-8, tex, t-pi, n, k-3, 0, 0" />
-              </d, i, v>
-              <div, classNam, e="fl, e, x-1">
-                <span, classNam, e="te, x, t-xs, tex, t-pi, n, k-300, fon, t-semibold, uppercase, tracking-wi, d, e">Quantum, M, L</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r:te, x, t-pi, n, k-200, transitio, n-colo, r, s">
-              Quantum, Machine, Learning: Enterprise, Breakthrough, in 20, 2, 5
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+              <div, classNam, e="p-3bg-pink-500/20, rounde, d-xl, grou, p-hover:bg-pink-500/30, transitio, n-colors">
+                <Atom, classNam, e="w-8 h-8, tex, t-pink-300" />
+              </div>
+              <div, classNam, e="flex-1">
+                <span, classNam, e="text-xs, tex, t-pink-300, fon, t-semibold, uppercase, tracking-wide">QuantumML</span>
+              </div>
+            </div>
+            <h3, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover:text-pink-200, transitio, n-colors">
+              Quantum, Machine, Learning: Enterprise, Breakthrough, in 2025
             </h3>
-            <p, classNam, e="te, x, t-pi, n, k-2, 0, 0/80, tex, t-sm, m, b-4, lin, e-cla, m, p-3">
-              Explore, how, quantum ML, is, delivering exponential, speedups, for optimiza, t, i, o, n, drug, discover, y, 
-              financial, modelin, g, and, cryptography, with 1,0, 0, 0+ qubit, system, s.
+            <p, classNam, e="text-pink-200/80, tex, t-smmb-4, lin, e-clamp-3">
+              Explore, how, quantum ML, is, delivering exponential, speedups, for optimizati, o, n, drug, discover, y, 
+              financial, modelin, g, and, cryptography, with 100, 0+ qubit, system, s.
             </p>
-            <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n">
-              <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-pi, n, k-300, tex, t-sm">
-                <sp, a, n>24, min, read</sp, a, n>
-                <sp, a, n>•</sp, a, n>
-                <sp, a, n>O, c, t , 1, 20, 2, 5</sp, a, n>
-              </d, i, v>
-              <ArrowRight, classNam, e = "w-5 h-5, tex, t-pi, n, k-300, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </d, i, v>
-          </Li, n, k>
-        </d, i, v>
+            <div, classNam, e = "flex, item, s-center, justif, y-between">
+              <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-pink-300, tex, t-sm">
+                <span>24, min, read</span>
+                <span>•</span>
+                <span>Oct , 1, 20, 2, 5</span>
+              </div>
+              <ArrowRight, classNam, e = "w-5 h-5, tex, t-pink-300, grou, p-hover: translate-x-1, transitio, n-transform" />
+            </div>
+          </Link>
+        </div>
         {/* CTA, Sect, i, o, n */}
-        <div, classNam, e = "te, x, t-center, m, t-10">
-          <Link, t, o="/bl, o, g"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-pi, n, k-600, hove, r: fr, o, m-indi, g, o-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, tex, t-lg, p, x-10, p, y-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, hove, r:shad, o, w-2, x, l"
+        <div, classNam, e = "text-centermt-10">
+          <Linkto="/blog"
+            className="inline-flex, item, s-center, ga, p-3bg-gradient-to-r, fro, m-indigo-600to-pink-600, hove, r: from-indigo-700, hove, r:to-pink-700, tex, t-white, fon, t-bold, tex, t-lgpx-10py-4, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:scale-105, shado, w-lg, hove, r:shadow-2xl"
           >
-            <sp, a, n>Discover, More, Innovations</sp, a, n>
+            <span>Discover, More, Innovations</span>
             <ArrowRight, classNam, e="w-6 h-6" />
-          </Li, n, k>
-          <p, classNam, e="te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm, m, t-4">
-            Jo, i, n , 5, 0,0, 0, 0+ technology, leaders, pioneering the, next, wave of, AI, innovation
+          </Link>
+          <p, classNam, e="text-indigo-200/70, tex, t-smmt-4">
+            Join , 500, 0, 0+ technology, leaders, pioneering the, next, wave of, AI, innovation
           </p>
-        </d, i, v>
+        </div>
         {/* Stats, Ba, r */}
-        <div, classNam, e = "mt-12, grid, grid-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-indi, g, o-400, t, o-bl, u, e-400, b, g-cl, i, p-text, m, b-1">
+        <div, classNam, e = "mt-12, grid, grid-cols-2md: grid-cols-4, ga, p-6">
+          <div, classNam, e="text-center">
+            <div, classNam, e="text-3xl, fon, t-extrabold, tex, t-transparentbg-gradient-to-r, fro, m-indigo-400to-blue-400bg-clip-textmb-1">
               , 1, 0,00, 0, x
-            </d, i, v>
-            <div, classNam, e = "te, x, t-indi, g, o-2, 0, 0/70, tex, t-sm">Energy, Efficienc, y</d, i, v>
-          </d, i, v>
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, m, b-1">
+            </div>
+            <div, classNam, e = "text-indigo-200/70, tex, t-sm">Energy, Efficienc, y</div>
+          </div>
+          <div, classNam, e="text-center">
+            <div, classNam, e="text-3xl, fon, t-extrabold, tex, t-transparentbg-gradient-to-r, fro, m-purple-400to-pink-400bg-clip-textmb-1">
               60-80%
-            </d, i, v>
-            <div, classNam, e="te, x, t-purp, l, e-2, 0, 0/70, tex, t-sm">Synthetic, Data, Usage</d, i, v>
-          </d, i, v>
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-pi, n, k-400, t, o-r, e, d-400, b, g-cl, i, p-text, m, b-1">
-              , 1,0, 0, 0+
-            </d, i, v>
-            <div, classNam, e = "te, x, t-pi, n, k-2, 0, 0/70, tex, t-sm">Logical, Qubit, s</d, i, v>
-          </d, i, v>
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-1">
-              10, 0, x
-            </d, i, v>
-            <div, classNam, e="te, x, t-gre, e, n-2, 0, 0/70, tex, t-sm">Faster, Simulation, s</d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+            </div>
+            <div, classNam, e="text-purple-200/70, tex, t-sm">Synthetic, Data, Usage</div>
+          </div>
+          <div, classNam, e="text-center">
+            <div, classNam, e="text-3xl, fon, t-extrabold, tex, t-transparentbg-gradient-to-r, fro, m-pink-400to-red-400bg-clip-textmb-1">
+              , 100, 0+
+            </div>
+            <div, classNam, e = "text-pink-200/70, tex, t-sm">Logical, Qubit, s</div>
+          </div>
+          <div, classNam, e="text-center">
+            <div, classNam, e="text-3xl, fon, t-extrabold, tex, t-transparentbg-gradient-to-r, fro, m-green-400to-emerald-400bg-clip-textmb-1">
+              100x
+            </div>
+            <div, classNam, e="text-green-200/70, tex, t-sm">Faster, Simulation, s</div>
+          </div>
+        </div>
+      </div>
     </di, v>
   );
 };
-export, default, React.me, m, o(October2025AdvancedAIInnovationsBann, e, r);
+export, default, React.memo(October2025AdvancedAIInnovationsBanner);

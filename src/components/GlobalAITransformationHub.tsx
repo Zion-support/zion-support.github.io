@@ -1,137 +1,137 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { Targ, e, t, Bra, i, n, Z, a, p, Shie, l, d } fr, o, m 'luci, d, e-rea, c, t';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Target, Brain, Zap, Shield  } from 'lucide-react';
 const, GlobalAITransformationHu, b = () => { 
   const, transformationArea, s = [
     {
-      tit, l, e: 'Enterprise, Automat, i, o, n',
-      descripti, o, n: 'Complete, business, process automation, with, 95% efficiency, gai, n, s',
-      val, u, e: '$2.3, B',
-      ic, o, n: <Target, classNam, e = "w-8 , h-, 8" / > ,
-      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-      li, n, k: '/servic, e, s/enterpri, s, e-automati, o, n-transformat, i, o, n'
+      title: 'Enterprise, Automat, i, o, n',
+      description: 'Complete, business, process automation, with, 95% efficiency, gai, n, s',
+      value: '$2.3, B',
+      icon: <Target, classNam, e = "w-8 , h-, 8" / > ,
+      color: 'from-blue-500to-cyan-50, 0',
+      link: '/services/enterprise-automation-transformatio, n'
      },
     { 
-      tit, l, e: 'Quantum, Consciousness, A, I',
-      descripti, o, n: 'Revolutionary, AI, consciousness integration, with, infinite scalabil, i, t, y',
-      val, u, e: '$5, 0, 0, B',
-      ic, o, n: <Brain, classNam, e = "w-8 , h-, 8" / > ,
-      col, o, r: 'fr, o, m-purp, l, e-500, t, o-viol, e, t-50, 0',
-      li, n, k: '/servic, e, s/quant, u, m-consciousne, s, s-ai-servi, c, e, s'
+      title: 'Quantum, Consciousness, A, I',
+      description: 'Revolutionary, AI, consciousness integration, with, infinite scalabilit, y',
+      value: '$500, B',
+      icon: <Brain, classNam, e = "w-8 , h-, 8" / > ,
+      color: 'from-purple-500to-violet-50, 0',
+      link: '/services/quantum-consciousness-ai-service, s'
      },
     { 
-      tit, l, e: 'Autonomous, Operatio, n, s',
-      descripti, o, n: 'Se, l, f-managing, systems, with 99.99% uptime, and, zero human, interventi, o, n',
-      val, u, e: '$1, 5, 0, B',
-      ic, o, n: <Zap, classNam, e = "w-8 , h-, 8" / > ,
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
-      li, n, k: '/servic, e, s/autonomo, u, s-operatio, n, s-platf, o, r, m'
+      title: 'Autonomous, Operatio, n, s',
+      description: 'Self-managing, systems, with 99.99% uptime, and, zero human, interventi, o, n',
+      value: '$150, B',
+      icon: <Zap, classNam, e = "w-8 , h-, 8" / > ,
+      color: 'from-emerald-500to-teal-50, 0',
+      link: '/services/autonomous-operations-platfor, m'
      },
     { 
-      tit, l, e: 'Neural, Securi, t, y',
-      descripti, o, n: 'Advanced, A, I-powered, security, with 99.7% threat, preventi, o, n',
-      val, u, e: '$87, B',
-      ic, o, n: <Shield, classNam, e = "w-8 , h-, 8" / > ,
-      col, o, r: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
-      li, n, k: '/servic, e, s/neur, a, l-securi, t, y-framew, o, r, k'
+      title: 'Neural, Securi, t, y',
+      description: 'AdvancedAI-powered, security, with 99.7% threat, preventi, o, n',
+      value: '$87, B',
+      icon: <Shield, classNam, e = "w-8 , h-, 8" / > ,
+      color: 'from-orange-500to-red-50, 0',
+      link: '/services/neural-security-framewor, k'
      }
   ]; const, successMetric, s = [
-    { metr, i, c: '2., 5, M+', lab, e, l: 'Global, Use, r, s' },
-    { metr, i, c: '$15, B+', lab, e, l: 'Value, Creat, e, d' },
-    { metr, i, c: '99.9, 9%', lab, e, l: 'Success, Ra, t, e' },
-    { metr, i, c: '5, 0, 0, K+', lab, e, l: 'Enterprise, Clien, t, s' }
-  ]; retu, r, n (
-    <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-sla, t, e-900, border, border-bl, u, e-4, 0, 0/30, rounde, d-2x, l, p-8, m, b-12, animat, e-fa, d, e-in, shado, w-2, x, l">
-      <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-        <Globe, classNam, e="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-        <span, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-bl, u, e-4, 0, 0">🌍 GLOBAL, AI, TRANSFORMATION H, U, B</sp, a, n>
-        <Globe, classNam, e="w-8 h-8, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-      </d, i, v>
-      <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-extrabold, m, b-6, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-cy, a, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
-        Transforming, Business, Operations Worldwi, d, e
+    { metric: '2., 5, M+', label: 'Global, Use, r, s' },
+    { metric: '$15, B+', label: 'Value, Creat, e, d' },
+    { metric: '99.9, 9%', label: 'Success, Ra, t, e' },
+    { metric: '500, K+', label: 'Enterprise, Clien, t, s' }
+  ]; return (
+    <div, classNam, e = "bg-gradient-to-br, fro, m-slate-900, vi, a-blue-900/20to-slate-900, border, border-blue-400/30, rounde, d-2xlp-8mb-12, animat, e-fade-in, shado, w-2xl">
+      <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3mb-6">
+        <Globe, classNam, e="w-8 h-8, tex, t-blue-400, animat, e-pulse" />
+        <span, classNam, e="text-2xl, fon, t-bold, tex, t-blue-400">🌍 GLOBAL, AI, TRANSFORMATION HUB</span>
+        <Globe, classNam, e="w-8 h-8, tex, t-blue-400, animat, e-pulse" />
+      </div>
+      <h2, classNam, e="text-4xlmd: text-5xl, fon, t-extraboldmb-6, tex, t-centerbg-gradient-to-r, fro, m-blue-400, vi, a-cyan-400to-emerald-400bg-clip-text, tex, t-transparent">
+        Transforming, Business, Operations Worldwide
       </h2>
-      <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, tex, t-center, m, b-8, ma, x-w-4xl, m, x-au, t, o">
-        Leading, the, global AI, revolution, with cutti, n, g-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industri, e, s.
+      <p, classNam, e="text-xl, tex, t-gray-300, tex, t-centermb-8, ma, x-w-4xlmx-auto">
+        Leading, the, global AI, revolution, with cutting-edge, technologies, that deliver, unprecedented, business value, and, operational excellence, across, all industries.
       </p>
-      <div, classNam, e="grid, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-8">
-        { transformationAre, a, s.m, a, p((ar, e, a, ind, e, x) = > (
-          <Link, ke, y = { in, d, e, x  }, to={ ar, e, a.li, n, k } classNa, m, e = { `bg-gradie, n, t-to-br ${ar, e, a.co, l, o, r }, round, e, d-x, l, p-6, tex, t-white, transform, hover: sca, l, e-105, transitio, n-all, duratio, n-300, hove, r:shad, o, w-xl, gro, u, p`}
+      <div, classNam, e="gridmd:grid-cols-2lg:grid-cols-4, ga, p-6mb-8">
+        { transformationAreas.map((area, index) = > (
+          <Link, ke, y = { inde, x  }, to={ area.link } className = { `bg-gradient-to-br ${area.colo, r }, rounded-xlp-6, tex, t-white, transform, hover: scale-105, transitio, n-all, duratio, n-300, hove, r:shadow-xl, gro, u, p`}
           >
-            <div, classNam, e = "mb-4">{ar, e, a.ic, o, n}</d, i, v>
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">{ar, e, a.t, i, t, l, e}</h3>
-            <p, classNam, e = "te, x, t-sm, m, b-4, opacit, y-90">{ar, e, a.descripti, o, n}</p>
-            <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-              <span, classNam, e="te, x, t-lg, fon, t-bold, b, g-whi, t, e/20, p, x-3, p, y-1, rounde, d-fu, l, l">{ar, e, a.val, u, e}</sp, a, n>
-              <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r: transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </d, i, v>
-          </Li, n, k>
+            <div, classNam, e = "mb-4">{area.icon}</div>
+            <h3, classNam, e="text-xl, fon, t-boldmb-3, grou, p-hover: text-yellow-300, transitio, n-colors">{area.tit, l, e}</h3>
+            <p, classNam, e = "text-smmb-4, opacit, y-90">{area.description}</p>
+            <div, classNam, e="flex, item, s-center, justif, y-between">
+              <span, classNam, e="text-lg, fon, t-boldbg-white/20px-3py-1, rounde, d-full">{area.value}</span>
+              <ArrowRight, classNam, e="w-5 h-5, grou, p-hover: translate-x-1, transitio, n-transform" />
+            </div>
+          </Link>
         ))}
-      </d, i, v>
-      <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-emera, l, d-5, 0, 0/20, rounde, d-x, l, p-6, m, b-8, border, border-bl, u, e-4, 0, 0/30">
-        <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
-          <TrendingUp, classNam, e="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />
-          <span, classNam, e="te, x, t-xl, fon, t-bold, tex, t-gre, e, n-4, 0, 0">Global, Success, Metrics</sp, a, n>
-        </d, i, v>
-        <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, tex, t-cent, e, r">
-          { successMetri, c, s.m, a, p((it, e, m, ind, e, x) = > (
-            <div, ke, y = {ind, e, x }>
-              <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">{it, e, m.metr, i, c}</d, i, v>
-              <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">{it, e, m.lab, e, l}</d, i, v>
+      </div>
+      <div, classNam, e = "bg-gradient-to-r, fro, m-blue-500/20to-emerald-500/20, rounde, d-xlp-6mb-8, border, border-blue-400/30">
+        <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3mb-4">
+          <TrendingUp, classNam, e="w-6 h-6, tex, t-green-400" />
+          <span, classNam, e="text-xl, fon, t-bold, tex, t-green-400">Global, Success, Metrics</span>
+        </div>
+        <div, classNam, e="grid, gri, d-cols-2md: grid-cols-4, ga, p-4, tex, t-center">
+          { successMetrics.map((item, index) = > (
+            <div, ke, y = {index }>
+              <div, classNam, e="text-3xl, fon, t-bold, tex, t-white">{item.metric}</div>
+              <div, classNam, e="text-sm, tex, t-gray-300">{item.label}</div>
             </di, v>
           ))}
-        </d, i, v>
-      </d, i, v>
-      <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-        <div, classNam, e="bg-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/20, t, o-viol, e, t-5, 0, 0/20, rounde, d-x, l, p-6, border, border-purp, l, e-4, 0, 0/30">
-          <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-            <Rocket, classNam, e="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
-            <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0">Revolutionary, Breakthrough, s</h3>
-          </d, i, v>
-          <p, classNam, e="te, x, t-gr, a, y-300, m, b-4">Latest, AI, innovations achieving, unprecedented, accuracy and, consciousness, integration.</p>
-          <Link, t, o="/bl, o, g/ai-20, 2, 6-revolutiona, r, y-breakthrou, g, h-announceme, n, t" 
-            classNa, m, e="te, x, t-purp, l, e-400, hove, r:te, x, t-purp, l, e-300, fon, t-semibold, flex, items-center, ga, p-2"
+        </div>
+      </div>
+      <div, classNam, e = "gridmd: grid-cols-3, ga, p-6mb-8">
+        <div, classNam, e="bg-gradient-to-br, fro, m-purple-500/20to-violet-500/20, rounde, d-xlp-6, border, border-purple-400/30">
+          <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+            <Rocket, classNam, e="w-6 h-6, tex, t-purple-400" />
+            <h3, classNam, e="text-lg, fon, t-bold, tex, t-purple-400">Revolutionary, Breakthrough, s</h3>
+          </div>
+          <p, classNam, e="text-gray-300mb-4">Latest, AI, innovations achieving, unprecedented, accuracy and, consciousness, integration.</p>
+          <Linkto="/blog/ai-2026-revolutionary-breakthrough-announcement" 
+            className="text-purple-400, hove, r:text-purple-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
             Explore, Breakthrough, s <ArrowRight, classNam, e="w-4 h-4" />
-          </Li, n, k>
-        </d, i, v>
-        <div, classNam, e="bg-gradie, n, t-to-br, fro, m-emera, l, d-5, 0, 0/20, t, o-te, a, l-5, 0, 0/20, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30">
-          <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-            <Award, classNam, e="w-6 h-6, tex, t-emera, l, d-4, 0, 0" />
-            <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0">Success, Storie, s</h3>
-          </d, i, v>
-          <p, classNam, e="te, x, t-gr, a, y-300, m, b-4">Re, a, l-world, transformations, delivering billions, in, value creation, and, operational excellen, c, e.</p>
-          <Link, t, o="/ca, s, e-studi, e, s" 
-            classNa, m, e="te, x, t-emera, l, d-400, hove, r:te, x, t-emera, l, d-300, fon, t-semibold, flex, items-center, ga, p-2"
+          </Link>
+        </div>
+        <div, classNam, e="bg-gradient-to-br, fro, m-emerald-500/20to-teal-500/20, rounde, d-xlp-6, border, border-emerald-400/30">
+          <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+            <Award, classNam, e="w-6 h-6, tex, t-emerald-400" />
+            <h3, classNam, e="text-lg, fon, t-bold, tex, t-emerald-400">Success, Storie, s</h3>
+          </div>
+          <p, classNam, e="text-gray-300mb-4">Real-world, transformations, delivering billions, in, value creation, and, operational excellence.</p>
+          <Linkto="/case-studies" 
+            className="text-emerald-400, hove, r:text-emerald-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
             View, Case, Studies <ArrowRight, classNam, e="w-4 h-4" />
-          </Li, n, k>
-        </d, i, v>
-        <div, classNam, e="bg-gradie, n, t-to-br, fro, m-oran, g, e-5, 0, 0/20, t, o-r, e, d-5, 0, 0/20, rounde, d-x, l, p-6, border, border-oran, g, e-4, 0, 0/30">
-          <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-            <Users, classNam, e="w-6 h-6, tex, t-oran, g, e-4, 0, 0" />
-            <h3, classNam, e="te, x, t-lg, fon, t-bold, tex, t-oran, g, e-4, 0, 0">Expert, Service, s</h3>
-          </d, i, v>
-          <p, classNam, e="te, x, t-gr, a, y-300, m, b-4">Comprehensive, AI, transformation services, tailored, to your, specific, business nee, d, s.</p>
-          <Link, t, o="/servic, e, s" 
-            classNa, m, e="te, x, t-oran, g, e-400, hove, r:te, x, t-oran, g, e-300, fon, t-semibold, flex, items-center, ga, p-2"
+          </Link>
+        </div>
+        <div, classNam, e="bg-gradient-to-br, fro, m-orange-500/20to-red-500/20, rounde, d-xlp-6, border, border-orange-400/30">
+          <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+            <Users, classNam, e="w-6 h-6, tex, t-orange-400" />
+            <h3, classNam, e="text-lg, fon, t-bold, tex, t-orange-400">Expert, Service, s</h3>
+          </div>
+          <p, classNam, e="text-gray-300mb-4">Comprehensive, AI, transformation services, tailored, to your, specific, business needs.</p>
+          <Linkto="/services" 
+            className="text-orange-400, hove, r:text-orange-300, fon, t-semibold, flex, items-center, ga, p-2"
           >
             Get, Starte, d <ArrowRight, classNam, e="w-4 h-4" />
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-      <div, classNam, e="te, x, t-cent, e, r">
-        <Link, t, o="/conta, c, t" 
-          classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-emera, l, d-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, hove, r:fr, o, m-bl, u, e-600, hove, r:to-emera, l, d-600, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-lg"
+          </Link>
+        </div>
+      </div>
+      <div, classNam, e="text-center">
+        <Linkto="/contact" 
+          className="inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-blue-500to-emerald-500, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, hove, r:from-blue-600, hove, r:to-emerald-600, transitio, n-all, duratio, n-300, hove, r:scale-105, shado, w-lg"
         >
           <Sparkles, classNam, e="w-5 h-5" />
           Start, Your, AI Transformation, Journe, y
           <ArrowRight, classNam, e="w-5 h-5" />
-        </Li, n, k>
-        <p, classNam, e="mt-4, tex, t-gr, a, y-400, tex, t-sm">
-          🌍 Joi, n, 2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology
+        </Link>
+        <p, classNam, e="mt-4, tex, t-gray-400, tex, t-sm">
+          🌍 Join2.5M+ professionals, worldwide, transforming their, businesses, with revolutionary, AI, technology
         </p>
-      </d, i, v>
-    </d, i, v>
+      </div>
+    </div>
   );
 };
 export, default, GlobalAITransformationHub;

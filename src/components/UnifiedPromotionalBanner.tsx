@@ -1,183 +1,182 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { Sparkl, e, s, Z, a, p, Rock, e, t, St, a, r, ArrowRig, h, t } fr, o, m 'luci, d, e-rea, c, t';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { Sparkles, Zap, Rocket, Star, ArrowRight  } from 'lucide-react';
 export, interface, FeaturedItem { 
-  tit, l, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  li, n, k: stri, n, g;
-  metri, c, s ?  : str, i, n, g;
+  title: string;
+  category: string;
+  link: string;
+  metrics ?  : strin, g;
  }
 export, interface, UnifiedPromotionalBannerProps { 
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'he, r, o' | 'compa, c, t' | 'me, g, a';
-  tit, l, e: stri, n, g;
-  descripti, o, n: stri, n, g;
-  ctaTe, x, t: stri, n, g;
-  ctaLi, n, k: stri, n, g;
-  the, m, e?: 'bl, u, e' | 'purp, l, e' | 'gre, e, n' | 'oran, g, e' | 'r, e, d' | 'gradie, n, t' | 'cy, a, n';
-  featuredIte, m, s?: FeaturedIt, e, m[];
-  showCou, n, t?: numb, e, r;
-  classNa, m, e?: stri, n, g;
-  ic, o, n?: 'sparkl, e, s' | 'z, a, p' | 'rock, e, t' | 'st, a, r' | 'no, n, e';
-  animat, e, d?: boole, a, n;
-  bad, g, e?: stri, n, g;
-  da, t, e ?  : str, i, n, g;
+  variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
+  title: string;
+  description: string;
+  ctaText: string;
+  ctaLink: string;
+  theme?: 'blue' | 'purple' | 'green' | 'orange' | 'red' | 'gradient' | 'cyan';
+  featuredItems?: FeaturedItem[];
+  showCount?: number;
+  className?: string;
+  icon?: 'sparkles' | 'zap' | 'rocket' | 'star' | 'none';
+  animated?: boolean;
+  badge?: string;
+  date ?  : strin, g;
  }
-const, UnifiedPromotionalBanne, r: Rea, c, t.FC<UnifiedPromotionalBannerPro, p, s> = ({
-  varia, n, t = 'def, a, u, l, t',
-  tit, l, e,
-  descripti, o, n,
-  ctaTe, x, t,
-  ctaLi, n, k,
-  the, m, e = 'gradi, e, n, t',
-  featuredIte, m, s = [],
-  showCou, n, t =  , 3,
+const, UnifiedPromotionalBanne, r: React.FC<UnifiedPromotionalBannerProps> = ({
+  variant = 'defau, l, t',
+  title,
+  description,
+  ctaText,
+  ctaLink,
+  theme = 'gradien, t',
+  featuredItems = [],
+  showCount =  , 3,
   classNa, m, e = '',
-  ic, o, n = 'spark, l, e, s',
-  animat, e, d = t, r, u, e,
+  icon = 'sparkle, s',
+  animated = tru, e,
   bad, g, e,
   da, t, e,
 }) => {
-  // Theme, configurations, const themeClass, e, s = {
-    bl, u, e: 'fr, o, m-bl, u, e-5, 0, 0/10, t, o-bl, u, e-6, 0, 0/10, borde, r-bl, u, e-5, 0, 0/, 3, 0',
-    purp, l, e: 'fr, o, m-purp, l, e-5, 0, 0/10, t, o-purp, l, e-6, 0, 0/10, borde, r-purp, l, e-5, 0, 0/3, 0',
-    gre, e, n: 'fr, o, m-gre, e, n-5, 0, 0/10, t, o-gre, e, n-6, 0, 0/10, borde, r-gre, e, n-5, 0, 0/3, 0',
-    oran, g, e: 'fr, o, m-oran, g, e-5, 0, 0/10, t, o-oran, g, e-6, 0, 0/10, borde, r-oran, g, e-5, 0, 0/3, 0',
-    r, e, d: 'fr, o, m-r, e, d-5, 0, 0/10, t, o-r, e, d-6, 0, 0/10, borde, r-r, e, d-5, 0, 0/3, 0',
-    cy, a, n: 'fr, o, m-cy, a, n-5, 0, 0/10, t, o-cy, a, n-6, 0, 0/10, borde, r-cy, a, n-5, 0, 0/3, 0',
-    gradie, n, t: 'fr, o, m-bl, u, e-5, 0, 0/10, vi, a-purp, l, e-5, 0, 0/10, t, o-pi, n, k-5, 0, 0/10, borde, r-purp, l, e-5, 0, 0/3, 0',
+  // Theme, configurations, const themeClasses = {
+    blue: 'from-blue-500/10to-blue-600/10, borde, r-blue-500/, 3, 0',
+    purple: 'from-purple-500/10to-purple-600/10, borde, r-purple-500/3, 0',
+    green: 'from-green-500/10to-green-600/10, borde, r-green-500/3, 0',
+    orange: 'from-orange-500/10to-orange-600/10, borde, r-orange-500/3, 0',
+    red: 'from-red-500/10to-red-600/10, borde, r-red-500/3, 0',
+    cyan: 'from-cyan-500/10to-cyan-600/10, borde, r-cyan-500/3, 0',
+    gradient: 'from-blue-500/10, vi, a-purple-500/10to-pink-500/10, borde, r-purple-500/3, 0',
   }; const, buttonTheme, s = {
-    bl, u, e: 'fr, o, m-bl, u, e-500, t, o-bl, u, e-600, hove, r:fr, o, m-bl, u, e-600, hove, r:to-bl, u, e-7, 0, 0',
-    purp, l, e: 'fr, o, m-purp, l, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-purp, l, e-600, hove, r:to-purp, l, e-70, 0',
-    gre, e, n: 'fr, o, m-gre, e, n-500, t, o-gre, e, n-600, hove, r:fr, o, m-gre, e, n-600, hove, r:to-gre, e, n-70, 0',
-    oran, g, e: 'fr, o, m-oran, g, e-500, t, o-oran, g, e-600, hove, r:fr, o, m-oran, g, e-600, hove, r:to-oran, g, e-70, 0',
-    r, e, d: 'fr, o, m-r, e, d-500, t, o-r, e, d-600, hove, r:fr, o, m-r, e, d-600, hove, r:to-r, e, d-70, 0',
-    cy, a, n: 'fr, o, m-cy, a, n-500, t, o-cy, a, n-600, hove, r:fr, o, m-cy, a, n-600, hove, r:to-cy, a, n-70, 0',
-    gradie, n, t: 'fr, o, m-purp, l, e-500, vi, a-pi, n, k-500, t, o-bl, u, e-500, hove, r:fr, o, m-purp, l, e-600, hove, r:v, i, a-pi, n, k-600, hove, r:to-bl, u, e-60, 0',
+    blue: 'from-blue-500to-blue-600, hove, r:from-blue-600, hove, r:to-blue-700',
+    purple: 'from-purple-500to-purple-600, hove, r:from-purple-600, hove, r:to-purple-70, 0',
+    green: 'from-green-500to-green-600, hove, r:from-green-600, hove, r:to-green-70, 0',
+    orange: 'from-orange-500to-orange-600, hove, r:from-orange-600, hove, r:to-orange-70, 0',
+    red: 'from-red-500to-red-600, hove, r:from-red-600, hove, r:to-red-70, 0',
+    cyan: 'from-cyan-500to-cyan-600, hove, r:from-cyan-600, hove, r:to-cyan-70, 0',
+    gradient: 'from-purple-500, vi, a-pink-500to-blue-500, hove, r:from-purple-600, hove, r:via-pink-600, hove, r:to-blue-60, 0',
   };
-  // Icon, selection, const IconCompone, n, t = {
-    sparkl, e, s: Spar, k, l, e, s,
-    z, a, p: Za, p,
-    rock, e, t: Roc, k, e, t,
-    st, a, r: S, t, a, r,
-    no, n, e: n, u, l, l,
-  }[ic, o, n];
-  // Varia, n, t-specific, styles, const variantClass, e, s = {
-    defau, l, t: 'py-8 p, x-, 6',
-    premi, u, m: 'py-12, p, x-, 8',
-    he, r, o: 'py-16, p, x-1, 0',
-    compa, c, t: 'py-6, p, x-, 4',
-    me, g, a: 'py-20, p, x-1, 2',
-  }; const, visibleItem, s = featuredIte, m, s.sli, c, e(, 0, showCou, n, t); retu, r, n (
+  // Icon, selection, const IconComponent = {
+    sparkles: Sparkl, esz, a, p: Za, p,
+    rock, e, t: Rocke, t,
+    st, a, r: Sta, r,
+    no, n, e: nul, l,
+  }[icon];
+  // Variant-specific, styles, const variantClasses = {
+    default: 'py-8 p, x-, 6',
+    premium: 'py-12px-, 8',
+    hero: 'py-16px-1, 0',
+    compact: 'py-6px-, 4',
+    mega: 'py-20px-1, 2',
+  }; const, visibleItem, s = featuredItems.slice(, 0, showCou, n, t); return (
     <div, classNam, e = { `
-        bg-gradie, n, t-to-r ${themeClass, e, s[th, e, m, e] }, border, rounde, d-xl 
-        ${variantClass, e, s[varia, n, t]} 
-        ${ animat, e, d  ? 'transiti, o, n-all, duratio, n-300, hove, r: shad, o, w-2xl, hove, r:sca, l, e-[1.0, 1]'  : '' }
-        ${classNa, m, e}
+        bg-gradient-to-r ${themeClasses[them, e] }, border, rounde, d-xl 
+        ${variantClasses[variant]} 
+        ${ animated  ? 'transition-all, duratio, n-300, hove, r: shadow-2xl, hove, r:scale-[1.0, 1]'  : '' }
+        ${className}
       `}
     >
       {/* Header, Sectio, n */}
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-au, t, o'>
+      <div, classNam, e = 'max-w-7xlmx-auto'>
         {/* Badge, and, Date */}
-        {  (bad, g, e || d, a, t, e) && (
-          <div, classNam, e = 'flex, item, s-center, ga, p-3, m, b-4'>
-            {bad, g, e && (
-              <span, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-sm, fon, t-semibo, l, d'>
-                {IconCompone, n, t  && <IconComponent, classNam, e='w-4 h-4' / >   }
-                {bad, g, e}
-              </s, p, a, n>
+        {  (badge || dat, e) && (
+          <div, classNam, e = 'flex, item, s-center, ga, p-3mb-4'>
+            {badge && (
+              <span, classNam, e='inline-flex, item, s-center, ga, p-2px-4py-2, rounde, d-fullbg-white/10, backdro, p-blur-sm, border, border-white/20, tex, t-sm, fon, t-semibold'>
+                {IconComponent  && <IconComponent, classNam, e='w-4 h-4' / >   }
+                {badge}
+              </spa, n>
             )}
-            {  da, t, e  && (
-              <span, classNam, e = 'te, x, t-sm, tex, t-gr, a, y-300, fon, t-medi, u, m' > {da, t, e  }</s, p, a, n>
+            {  date  && (
+              <span, classNam, e = 'text-sm, tex, t-gray-300, fon, t-medium' > {date  }</spa, n>
             )}
-          </d, i, v > )}
-        {/* Tit, l, e */}
+          </div > )}
+        {/* Title */}
         <h2, classNam, e = { `
-          fo, n, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-white, vi, a-bl, u, e-100, t, o-purp, l, e-100, b, g-cl, i, p-text, tex, t-transpare, n, t
+          font-extraboldmb-4bg-gradient-to-r, fro, m-white, vi, a-blue-100to-purple-100bg-clip-text, tex, t-transparent
           ${
-            varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
-              ? 'te, x, t-4xl, m, d: te, x, t-5, x, l'
-              : varia, n, t === 'premi, u, m'
-                ? 'te, x, t-3xl, m, d:te, x, t-4, x, l'
-                : varia, n, t === 'compa, c, t'
-                   ? 'te, x, t-xl, m, d:te, x, t-2, x, l'
-                  : 'te, x, t-2xl, m, d : te, x, t-3, x, l'
+            variant === 'hero' || variant === 'mega'
+              ? 'text-4xlmd: text-5xl'
+              : variant === 'premium'
+                ? 'text-3xlmd:text-4xl'
+                : variant === 'compact'
+                   ? 'text-xlmd:text-2xl'
+                  : 'text-2xlmd : text-3xl'
            }
         `}
         >
-          {tit, l, e}
-        </h2 > {/* Descripti, o, n */}
-        <p, classNam, e = { `te, x, t-gr, a, y-200, m, b-6 ${
-            varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
-              ? 'te, x, t-lg, m, d: te, x, t-xl'
-              : varia, n, t === 'compa, c, t'
-                 ? 'te, x, t-sm'
-                : 'te, x, t-base, m, d : te, x, t-, l, g'
+          {title}
+        </h2 > {/* Description */}
+        <p, classNam, e = { `text-gray-200mb-6 ${
+            variant === 'hero' || variant === 'mega'
+              ? 'text-lgmd: text-xl'
+              : variant === 'compact'
+                 ? 'text-sm'
+                : 'text-basemd : text-, l, g'
            }
         `}
         >
-          {descripti, o, n}
+          {description}
         </p>
         {/* Featured, Item, s */}
-        {   visibleIte, m, s.leng, t, h   > 0  && (
-          <div, classNam, e = {`grid, ga, p-4, m, b-6 ${
-              varia, n, t === 'me, g, a'
-                ? 'md: gr, i, d-co, l, s-3'
-                : varia, n, t === 'he, r, o' || varia, n, t === 'premi, u, m'
-                   ? 'md:gr, i, d-co, l, s-2'
-                  : 'md : gr, i, d-c, o, l, s-, 1'
+        {   visibleItems.length   > 0  && (
+          <div, classNam, e = {`grid, ga, p-4mb-6 ${
+              variant === 'mega'
+                ? 'md: grid-cols-3'
+                : variant === 'hero' || variant === 'premium'
+                   ? 'md:grid-cols-2'
+                  : 'md : grid-col, s-, 1'
                }
           `}
           >
-            { visibleIte, m, s.m, a, p((it, e, m, ind, e, x) = > (
-              <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e='group, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, hove, r: bg-whi, t, e/10, border, border-whi, t, e/10, rounde, d-l, g, p-4, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-lg'
+            { visibleItems.map((item, index) = > (
+              <Link, ke, y = { inde, x  }, to={ item.link } className='groupbg-white/5, backdro, p-blur-sm, hove, r: bg-white/10, border, border-white/10, rounde, d-lgp-4, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-lg'
               >
                 <div, classNam, e='flex, item, s-start, ga, p-3'>
-                  <div, classNam, e='fl, e, x-shri, n, k-0 w-8 h-8, rounde, d-full, b, g-gradie, n, t-to-br, fro, m-purp, l, e-500, t, o-pi, n, k-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>
-                    {in, d, e, x + , 1}
-                  </d, i, v>
-                  <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
-                    <div, classNam, e='te, x, t-xs, fon, t-semibold, tex, t-purp, l, e-300, m, b-1'>
-                      {it, e, m.catego, r, y}
-                    </d, i, v>
-                    <div, classNam, e='te, x, t-sm, fon, t-bold, tex, t-white, m, b-1, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colors, lin, e-cla, m, p-2'>
-                      {it, e, m.t, i, t, l, e}
-                    </d, i, v>
-                    {  it, e, m.metri, c, s  && (
-                      <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-4, 0, 0' > {it, e, m.metri, c, s  }
+                  <div, classNam, e='flex-shrink-0 w-8 h-8, rounde, d-fullbg-gradient-to-br, fro, m-purple-500to-pink-500, flex, items-center, justif, y-center, tex, t-white, fon, t-bold, tex, t-sm'>
+                    {inde, x + , 1}
+                  </div>
+                  <div, classNam, e = 'flex-1, mi, n-w-0'>
+                    <div, classNam, e='text-xs, fon, t-semibold, tex, t-purple-300mb-1'>
+                      {item.category}
+                    </div>
+                    <div, classNam, e='text-sm, fon, t-bold, tex, t-whitemb-1, grou, p-hover: text-purple-300, transitio, n-colors, lin, e-clamp-2'>
+                      {item.tit, l, e}
+                    </div>
+                    {  item.metrics  && (
+                      <div, classNam, e = 'text-xs, tex, t-gray-400' > {item.metrics  }
                       </di, v>
                     )}
-                  </d, i, v>
-                  <ArrowRight, classNam, e = 'fl, e, x-shri, n, k-0 w-5 h-5, tex, t-purp, l, e-400, opacit, y-0, grou, p-hov, e, r: opaci, t, y-100, transitio, n-opaci, t, y' />
-                </d, i, v>
-              </Li, n, k>
+                  </div>
+                  <ArrowRight, classNam, e = 'flex-shrink-0 w-5 h-5, tex, t-purple-400, opacit, y-0, grou, p-hover: opacity-100, transitio, n-opacity' />
+                </div>
+              </Link>
             ))}
-          </d, i, v>
+          </div>
         )}
         {/* CTA, Butto, n */}
-        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Link, t, o = { ctaL, i, n, k }, classNa, m, e={ `
-              inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, rounde, d-lg, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${buttonThem, e, s[the, m, e] } transform, transitio, n-all, duratio, n-300, hove, r: sca, l, e-105, hove, r:shad, o, w-xl
+        <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-4' > <Linkto = { ctaLin, k }, className={ `
+              inline-flex, item, s-center, ga, p-2px-8py-4, rounde, d-lg, fon, t-bold, tex, t-whitebg-gradient-to-r ${buttonThemes[theme] } transform, transitio, n-all, duratio, n-300, hove, r: scale-105, hove, r:shadow-xl
               ${ 
-                varia, n, t === 'compa, c, t'
-                  ? 'px-6, p, y-3, tex, t-sm'
-                  : varia, n, t === 'he, r, o' || varia, n, t === 'me, g, a'
-                     ? 'px-10, p, y-5, tex, t-lg'
-                     : 'te, x, t-ba, s, e'
+                variant === 'compact'
+                  ? 'px-6py-3, tex, t-sm'
+                  : variant === 'hero' || variant === 'mega'
+                     ? 'px-10py-5, tex, t-lg'
+                     : 'text-base'
                }
             `}
-           > {ctaTe, x, t}
-            <ArrowRight, classNam, e = { `${varia, n, t === 'compa, c, t'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
+           > {ctaText}
+            <ArrowRight, classNam, e = { `${variant === 'compact'  ? 'w-4 h-4'  : 'w-5 h-5' }`}
             />
-          </Li, n, k>
-          {  featuredIte, m, s.leng, t, h  > showCou, n, t  && (
-            <Link, t, o = { ctaL, i, n, k   }, classNa, m, e = 'te, x, t-purp, l, e-300, hove, r: te, x, t-purp, l, e-200, fon, t-semibold, transitio, n-colors, tex, t-sm'
+          </Link>
+          {  featuredItems.length  > showCount  && (
+            <Linkto = { ctaLin, k   }, className = 'text-purple-300, hove, r: text-purple-200, fon, t-semibold, transitio, n-colors, tex, t-sm'
             >
-              +{featuredIte, m, s.leng, t, h - showC, o, u, n, t} more, breakthroug, h
-              { featuredIte, m, s.leng, t, h - showCou, n, t !== 1  ? 's'  : '' }
-            </Li, n, k>
+              +{featuredItems.length - showCou, n, t} more, breakthroug, h
+              { featuredItems.length - showCount !== 1  ? 's'  : '' }
+            </Link>
           )}
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, UnifiedPromotionalBanner;

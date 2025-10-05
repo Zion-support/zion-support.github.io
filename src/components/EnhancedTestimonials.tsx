@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-export, default, function EnhancedTestimonia, l, s(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n <section, ari, a-lab, e, l = 'Enhanced, Testimonia, l, s' / > ;
+export, default, function EnhancedTestimonials(): React.JSX.Element { 
+  return <section, ari, a-label = 'Enhanced, Testimonia, l, s' / > ;
  }

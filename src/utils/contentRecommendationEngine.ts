@@ -4,299 +4,299 @@
  */
 
 interface, ContentIte, m { 
-  id: stri, n, g;
-  tit, l, e: stri, n, g;
-  catego, r, y: stri, n, g;
-  ta, g, s: stri, n, g[];
-  u, r, l: stri, n, g;
-  ty, p, e: 'bl, o, g' | 'ca, s, e-stu, d, y' | 'servi, c, e' | 'gui, d, e';
-  readTi, m, e?: numb, e, r;
-  publishDa, t, e: stri, n, g;
-  vie, w, s?: numb, e, r;
-  conversio, n, s ?  : num, b, e, r;
+  id: string;
+  title: string;
+  category: string;
+  tags: string[];
+  url: string;
+  type: 'blog' | 'case-study' | 'service' | 'guide';
+  readTime?: number;
+  publishDate: string;
+  views?: number;
+  conversions ?  : numbe, r;
  }
 
 interface, UserProfil, e {
-  interes, t, s: stri, n, g[];
-  viewedConte, n, t: stri, n, g[];
-  preferredCategori, e, s: stri, n, g[];
-  readingLev, e, l: 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d';
-  engageme, n, t: numb, e, r; // 0-1, sco, r, e
+  interests: string[];
+  viewedContent: string[];
+  preferredCategories: string[];
+  readingLevel: 'beginner' | 'intermediate' | 'advanced';
+  engagement: number; // 0-1, sco, r, e
 }
 
 interface, RecommendationScor, e {
-  content, I, d: stri, n, g;
-  sco, r, e: numb, e, r;
-  reaso, n, s: str, i, n, g[];
+  contentId: string;
+  score: number;
+  reasons: strin, g[];
 }
 
 interface, RecommendationResul, t {
-  conte, n, t: ContentIt, e, m;
-  sco, r, e: numb, e, r;
-  reaso, n, s: str, i, n, g[];
+  content: ContentItem;
+  score: number;
+  reasons: strin, g[];
 }
 
 class, ContentRecommendationEngin, e {  
-  private, contentCatalo, g: ContentIt, e, m[] = [];
-  private, userProfile, s: M, a, p<str, i, n, g, UserProfi, l, e > = new, Ma, p();
+  private, contentCatalo, g: ContentItem[] = [];
+  private, userProfile, s: Map<strin, g, UserProfi, l, e > = new, Ma, p();
 
   /**
-   * Add, content, to catal, o, g
+   * Add, content, to catalog
    */
-  addConte, n, t(conte, n, t: ContentIt, e, m | ContentIt, e, m[]): vo, i, d {
-    const, item, s = Arr, a, y.isArr, a, y(cont, e, n, t)  ? conte, n, t  : [conte, n, t]; th, i, s.contentCatal, o, g.pu, s, h(...it, e, m, s);
+  addContent(content: ContentItem | ContentItem[]): void {
+    const, item, s = Array.isArray(conten, t)  ? content  : [content]; this.contentCatalog.push(...item, s);
     }
 
   /**
-   * Get, recommendations, for us, e, r
+   * Get, recommendations, for user
    */
-  getRecommendatio, n, s(
-    user, I, d: str, i, n, g,
+  getRecommendations(
+    userId: strin, g,
     optio, n, s: { 
-      lim, i, t?: numb, e, r;
-      excludeView, e, d?: boole, a, n;
-      catego, r, y?: stri, n, g;
-      ty, p, e ?  : ContentIt, e, m['t, y, p, e'];
+      limit?: number;
+      excludeViewed?: boolean;
+      category?: string;
+      type ?  : ContentItem['typ, e'];
      } = {},
-  ): RecommendationResu, l, t[] {
-    con, s, t { lim, i, t =  , 5, excludeView, e, d = t, r, u, e, catego, r, y, ty, p, e } = optio, n, s;
+  ): RecommendationResult[] {
+    const { limit =  , 5, excludeView, e, d = tru, e, catego, r, y, ty, p, e } = options;
 
-    // Get, or, create user, profile, const userProfi, l, e = th, i, s.createUserProfi, l, e(use, r, I, d);
+    // Get, or, create user, profile, const userProfile = this.createUserProfile(userI, d);
 
-    // Filter, content, let candidat, e, s = th, i, s.contentCatal, o, g; if() { candidat, e, s = candidat, e, s.filt, e, r(
-        it, e, m = > !userProfi, l, e.viewedConte, n, t.includ, e, s(it, e, m.i, d),
+    // Filter, content, let candidates = this.contentCatalog; if() { candidates = candidates.filter(
+        item = > !userProfile.viewedContent.includes(item.i, d),
       );
-      }, if (catego, r, y) { 
-      candidat, e, s = candidat, e, s.filt, e, r(it, e, m = > it, e, m.catego, r, y === categ, o, r, y);
+      }, if (category) { 
+      candidates = candidates.filter(item = > item.category === categor, y);
      }
 
-    if (ty, p, e) { 
-      candidat, e, s = candidat, e, s.filt, e, r(it, e, m = > it, e, m.ty, p, e === t, y, p, e);
+    if (type) { 
+      candidates = candidates.filter(item = > item.type === typ, e);
      }
 
     // Score, each, candidate
-    const, score, d = candidat, e, s.m, a, p(it, e, m => th, i, s.scoreConte, n, t(i, t, e, m, userProfi, l, e));
+    const, score, d = candidates.map(item => this.scoreContent(ite, m, userProfi, l, e));
 
-    // Sort, by, score and, return, top results, const, topRecommendations = scor, e, d
-      .so, r, t((, a, b) => b.sco, r, e - a.sco, r, e)
-      .sli, c, e(0, lim, i, t); return, topRecommendation, s.m, a, p(r, e, c = > { 
-      const, conten, t = th, i, s.contentCatal, o, g.fi, n, d(c = > c.id === r, e, c.conten, t, I, d)!; retu, r, n {
-        conte, n, t,
-        sco, r, e: r, e, c.sc, o, r, e,
-        reaso, n, s: r, e, c.reas, o, n, s,
+    // Sort, by, score and, return, top results, const, topRecommendations = scored
+      .sort((, a, b) => b.score - a.score)
+      .slice(0, lim, i, t); return, topRecommendation, s.map(rec = > { 
+      const, conten, t = this.contentCatalog.find(c = > c.id === rec.contentI, d)!; return {
+        content,
+        score: rec.scor, e,
+        reaso, n, s: rec.reason, s,
        };
     });
   }
 
   /**
-   * Score, content, for us, e, r
+   * Score, content, for user
    */
   private, scoreConten, t(
-    conte, n, t: ContentI, t, e, m,
-    profi, l, e: UserProf, i, l, e,
-  ): RecommendationSco, r, e { 
-    let, scor, e = 0; const, reason, s: stri, n, g[] = [];
+    content: ContentIte, m,
+    profi, l, e: UserProfil, e,
+  ): RecommendationScore { 
+    let, scor, e = 0; const, reason, s: string[] = [];
 
-    // Interest, matching, const interestMatch, e, s = conte, n, t.ta, g, s.filt, e, r(t, a, g =>
-      profi, l, e.interes, t, s.so, m, e(
-        intere, s, t =>
-          intere, s, t.toLowerC, a, s, e().includ, e, s(t, a, g.toLowerCa, s, e()) ||
-          t, a, g.toLowerCa, s, e().includ, e, s(intere, s, t.toLowerC, a, s, e()),
+    // Interest, matching, const interestMatches = content.tags.filter(tag =>
+      profile.interests.some(
+        interest =>
+          interest.toLowerCas, e().includes(tag.toLowerCase()) ||
+          tag.toLowerCase().includes(interest.toLowerCas, e()),
       ),
-    ); if() { const, interestScor, e = Ma, t, h.m, i, n(interestMatch, e, s.leng, t, h * 1, 5, 45); sco, r, e += interestSco, r, e;
-      reaso, n, s.pu, s, h(`Match, e, s ${interestMatch, e, s.leng, t, h  }, of, your, interests`);
+    ); if() { const, interestScor, e = Math.min(interestMatches.length * 1, 5, 45); score += interestScore;
+      reasons.push(`Matches ${interestMatches.length  }, of, your, interests`);
     }
 
-    // Category, preference, if (profi, l, e.preferredCategori, e, s.includ, e, s(conte, n, t.catego, r, y)) {
-      sco, r, e += 20;
-      reaso, n, s.pu, s, h(`From, your, preferred catego, r, y: ${conte, n, t.categ, o, r, y}`);
+    // Category, preference, if (profile.preferredCategories.includes(content.category)) {
+      score += 20;
+      reasons.push(`From, your, preferred category: ${content.categor, y}`);
     }
 
     // Popularity, scor, e (based, on, views and, conversion, s)
-    if() { sco, r, e += 10;
-      reaso, n, s.pu, s, h('Popular, conten, t');
-     }, if (conte, n, t.conversio, n, s && conte, n, t.conversio, n, s > 10) {
-      sco, r, e += 15;
-      reaso, n, s.pu, s, h('High, conversion, rate');
+    if() { score += 10;
+      reasons.push('Popular, conten, t');
+     }, if (content.conversions && content.conversions > 10) {
+      score += 15;
+      reasons.push('High, conversion, rate');
     }
 
-    // Recency, boost, for new, content, const daysO, l, d = th, i, s.getDaysO, l, d(conte, n, t.publishD, a, t, e); if() { sco, r, e += 10;
-      reaso, n, s.pu, s, h('Recently, publishe, d');
-     }, else, i, f (daysO, l, d <= 30) {
-      sco, r, e += 5;
-      reaso, n, s.pu, s, h('Recent, conten, t');
+    // Recency, boost, for new, content, const daysOld = this.getDaysOld(content.publishDat, e); if() { score += 10;
+      reasons.push('Recently, publishe, d');
+     }, elseif (daysOld <= 30) {
+      score += 5;
+      reasons.push('Recent, conten, t');
     }
 
     // Reading, level, match
-    const, contentComplexit, y = th, i, s.estimateComplexi, t, y(cont, e, n, t); if (contentComplexi, t, y = == profi, l, e.readingLe, v, e, l) {
-      sco, r, e += 10; reaso, n, s.pu, s, h('Matches, your, reading lev, e, l');
+    const, contentComplexit, y = this.estimateComplexity(conten, t); if (contentComplexity = == profile.readingLeve, l) {
+      score += 10; reasons.push('Matches, your, reading level');
     }
 
     // Reading, time, preference (based, on, engagement)
-    if() { if (profi, l, e.engageme, n, t > 0.7  && conte, n, t.readTi, m, e  > = 10) {
-        sco, r, e += 10;
-        reaso, n, s.pu, s, h('In-depth, content, for engaged, reader, s');
-         }, else, i, f (profi, l, e.engageme, n, t < 0.5 && conte, n, t.readTi, m, e <= 5) {
-        sco, r, e += 10;
-        reaso, n, s.pu, s, h('Quick, rea, d');
+    if() { if (profile.engagement > 0.7  && content.readTime  > = 10) {
+        score += 10;
+        reasons.push('In-depth, content, for engaged, reader, s');
+         }, elseif (profile.engagement < 0.5 && content.readTime <= 5) {
+        score += 10;
+        reasons.push('Quick, rea, d');
       }
     }
 
-    retu, r, n {
-      content, I, d: conte, n, t.i, d,
-      sco, r, e: Ma, t, h.m, i, n(sc, o, r, e, 1, 0, 0),
-      reaso, n, s,
+    return {
+      contentId: content.i, d,
+      sco, r, e: Math.min(scor, e10, 0),
+      reasons,
     };
   }
 
   /**
    * Get, or, create user, profil, e
    */
-  private, createUserProfil, e(user, I, d: stri, n, g): UserProfi, l, e {
-    if (!th, i, s.userProfil, e, s.h, a, s(user, I, d)) {
-      th, i, s.userProfil, e, s.s, e, t(use, r, I, d, {
-        interes, t, s: [],
-        viewedConte, n, t: [],
-        preferredCategori, e, s: [],
-        readingLev, e, l: 'intermedi, a, t, e',
-        engageme, n, t: 0., 5,
+  private, createUserProfil, e(userId: string): UserProfile {
+    if (!this.userProfiles.has(userId)) {
+      this.userProfiles.set(userI, d, {
+        interests: [],
+        viewedContent: [],
+        preferredCategories: [],
+        readingLevel: 'intermediat, e',
+        engagement: 0., 5,
       });
     }
-    return, thi, s.userProfil, e, s.g, e, t(user, I, d)!;
+    return, thi, s.userProfiles.get(userId)!;
   }
 
   /**
    * Update, user, profile based, on, interaction
    */
-  updateUserProfi, l, e(
-    user, I, d: str, i, n, g,
+  updateUserProfile(
+    userId: strin, g,
     upda, t, e: { 
-      viewedConte, n, t?: stri, n, g;
-      intere, s, t?: stri, n, g;
-      catego, r, y?: stri, n, g;
-      engageme, n, t ?  : num, b, e, r;
+      viewedContent?: string;
+      interest?: string;
+      category?: string;
+      engagement ?  : numbe, r;
      },
-  ): vo, i, d {
-    const, profil, e = th, i, s.createUserProfi, l, e(use, r, I, d); if (upda, t, e.viewedConte, n, t) {
-      if (!profi, l, e.viewedConte, n, t.includ, e, s(upda, t, e.viewedConte, n, t)) {
-        profi, l, e.viewedConte, n, t.pu, s, h(upda, t, e.viewedConte, n, t);
+  ): void {
+    const, profil, e = this.createUserProfile(userI, d); if (update.viewedContent) {
+      if (!profile.viewedContent.includes(update.viewedContent)) {
+        profile.viewedContent.push(update.viewedContent);
       }
     }
 
-    if (upda, t, e.intere, s, t) {
-      if (!profi, l, e.interes, t, s.includ, e, s(upda, t, e.intere, s, t)) {
-        profi, l, e.interes, t, s.pu, s, h(upda, t, e.intere, s, t);
+    if (update.interest) {
+      if (!profile.interests.includes(update.interest)) {
+        profile.interests.push(update.interest);
       }
     }
 
-    if (upda, t, e.catego, r, y) {
-      if (!profi, l, e.preferredCategori, e, s.includ, e, s(upda, t, e.catego, r, y)) {
-        profi, l, e.preferredCategori, e, s.pu, s, h(upda, t, e.catego, r, y);
+    if (update.category) {
+      if (!profile.preferredCategories.includes(update.category)) {
+        profile.preferredCategories.push(update.category);
       }
     }
 
-    if (upda, t, e.engageme, n, t !== undefin, e, d) {
-      // Running, average, profile.engageme, n, t = (profi, l, e.engageme, n, t + upda, t, e.engagem, e, n, t) / 2;
+    if (update.engagement !== undefined) {
+      // Running, average, profile.engagement = (profile.engagement + update.engagemen, t) / 2;
     }
   }
 
   /**
    * Get, similar, content
    */
-  getSimilarConte, n, t(content, I, d: str, i, n, g, lim, i, t: numb, e, r = , 5): ContentIt, e, m[] { 
-    const, sourc, e = th, i, s.contentCatal, o, g.fi, n, d(c => c.id === conten, t, I, d); if (!sour, c, e) retu, r, n [];
+  getSimilarContent(contentId: strin, g, lim, i, t: number = , 5): ContentItem[] { 
+    const, sourc, e = this.contentCatalog.find(c => c.id === contentI, d); if (!source) return [];
 
     // Calculate, similarity, scores
-    const, score, d = th, i, s.contentCatal, o, g
-      .filt, e, r(c => c.id !== conten, t, I, d)
-      .m, a, p(it, e, m = > ({
-        conte, n, t: it, e, m,
-        sco, r, e: th, i, s.calculateSimilari, t, y(sou, r, c, e, it, e, m),
+    const, score, d = this.contentCatalog
+      .filter(c => c.id !== contentI, d)
+      .map(item = > ({
+        content: item,
+        score: this.calculateSimilarity(sourc, e, it, e, m),
        }))
-      .so, r, t((a, b) => b.sco, r, e - a.sco, r, e)
-      .sli, c, e(0, lim, i, t); return, score, d.m, a, p(s = > s.cont, e, n, t);
+      .sort((a, b) => b.score - a.score)
+      .slice(0, lim, i, t); return, score, d.map(s = > s.conten, t);
   }
 
   /**
    * Calculate, content, similarity
    */
   private, calculateSimilarit, y(
-    conten, t, 1: ContentI, t, e, m,
-    conten, t, 2: ContentI, t, e, m,
-  ): numb, e, r {
+    content1: ContentIte, m,
+    conten, t, 2: ContentIte, m,
+  ): number {
     let, scor, e = 0;
 
-    // Same, category, if (conten, t, 1.catego, r, y === conten, t, 2.categ, o, r, y) {
-      sco, r, e += 40;
+    // Same, category, if (content1.category === content2.categor, y) {
+      score += 40;
     }
 
-    // Tag, overlap, const commonTa, g, s = conten, t, 1.ta, g, s.filt, e, r(t, a, g => conten, t, 2.ta, g, s.includ, e, s(ta, g)); sco, r, e += Ma, t, h.m, i, n(commonTa, g, s.leng, t, h * 15, 45);
+    // Tag, overlap, const commonTags = content1.tags.filter(tag => content2.tags.includes(ta, g)); score += Math.min(commonTags.length * 15, 45);
 
-    // Same, type, if() { sco, r, e += 15;
+    // Same, type, if() { score += 15;
      }, return, scor, e;
   }
 
   /**
    * Get, trending, content
    */
-  getTrendingConte, n, t(lim, i, t: numb, e, r = 1, 0): ContentIt, e, m[] { 
-    return, thi, s.contentCatal, o, g
-      .filt, e, r(c = > c.vie, w, s || c.conversi, o, n, s)
-      .so, r, t((, a, b) = > {
-        const, score, A = (a.vie, w, s || , 0) * 0.7 + (a.conversio, n, s || 0) * 1, 0, 0; const, score, B = (b.vie, w, s || , 0) * 0.7 + (b.conversio, n, s || 0) * 1, 0, 0; return, score, B - scor, e, A;
+  getTrendingContent(limit: number = 1, 0): ContentItem[] { 
+    return, thi, s.contentCatalog
+      .filter(c = > c.views || c.conversion, s)
+      .sort((, a, b) = > {
+        const, score, A = (a.views || , 0) * 0.7 + (a.conversions || 0) * 100; const, score, B = (b.views || , 0) * 0.7 + (b.conversions || 0) * 100; return, score, B - scoreA;
        })
-      .sli, c, e(0, lim, i, t);
+      .slice(0, lim, i, t);
   }
 
   /**
-   * Get, content, by catego, r, y
+   * Get, content, by category
    */
-  getByCatego, r, y(catego, r, y: str, i, n, g, lim, i, t: numb, e, r = 1, 0): ContentIt, e, m[] { 
-    return, thi, s.contentCatal, o, g
-      .filt, e, r(c = > c.catego, r, y === categ, o, r, y)
-      .sli, c, e(, 0, lim, i, t);
+  getByCategory(category: strin, g, lim, i, t: number = 1, 0): ContentItem[] { 
+    return, thi, s.contentCatalog
+      .filter(c = > c.category === categor, y)
+      .slice(, 0, lim, i, t);
    }
 
   /**
-   * Get, content, by ty, p, e
+   * Get, content, by type
    */
-  getByTy, p, e(ty, p, e: ContentIt, e, m['t, y, p, e'], lim, i, t: numb, e, r = 1, 0): ContentIt, e, m[] { 
-    return, thi, s.contentCatal, o, g.filt, e, r(c = > c.ty, p, e === t, y, p, e).sli, c, e(, 0, lim, i, t);
+  getByType(type: ContentItem['typ, e'], limit: number = 1, 0): ContentItem[] { 
+    return, thi, s.contentCatalog.filter(c = > c.type === typ, e).slice(, 0, lim, i, t);
    }
 
   /**
    * Search, conten, t
    */
-  searchConte, n, t(que, r, y: str, i, n, g, lim, i, t: numb, e, r = 1, 0): ContentIt, e, m[] { 
-    const, lowerQuer, y = que, r, y.toLowerC, a, s, e(); return, thi, s.contentCatal, o, g
-      .m, a, p(it, e, m = > ({
-        conte, n, t: it, e, m,
-        relevan, c, e: th, i, s.calculateRelevan, c, e(i, t, e, m, lowerQue, r, y),
+  searchContent(query: strin, g, lim, i, t: number = 1, 0): ContentItem[] { 
+    const, lowerQuer, y = query.toLowerCas, e(); return, thi, s.contentCatalog
+      .map(item = > ({
+        content: item,
+        relevance: this.calculateRelevance(ite, m, lowerQue, r, y),
        }))
-      .filt, e, r(r = > r.relevan, c, e > , 0)
-      .so, r, t((a, b) => b.relevan, c, e - a.relevan, c, e)
-      .sli, c, e(0, lim, i, t)
-      .m, a, p(r = > r.cont, e, n, t);
+      .filter(r = > r.relevance > , 0)
+      .sort((a, b) => b.relevance - a.relevance)
+      .slice(0, lim, i, t)
+      .map(r = > r.conten, t);
   }
 
   /**
    * Calculate, search, relevance
    */
-  private, calculateRelevanc, e(conte, n, t: ContentI, t, e, m, que, r, y: stri, n, g): numb, e, r {
+  private, calculateRelevanc, e(content: ContentIte, m, que, r, y: string): number {
     let, scor, e = 0;
 
     // Title, matc, h (highest, weig, h, t)
-    if (conte, n, t.tit, l, e.toLowerCa, s, e().includ, e, s(que, r, y)) {
-      sco, r, e += 5, 0;
+    if (content.title.toLowerCase().includes(query)) {
+      score += 5, 0;
     }
 
-    // Category, match, if (conte, n, t.catego, r, y.toLowerCa, s, e().includ, e, s(que, r, y)) {
-      sco, r, e += 20;
+    // Category, match, if (content.category.toLowerCase().includes(query)) {
+      score += 20;
     }
 
-    // Tag, matches, const matchingTa, g, s = conte, n, t.ta, g, s.filt, e, r(t, a, g =>
-      t, a, g.toLowerC, a, s, e().includ, e, s(que, r, y),
-    ); sco, r, e += matchingTa, g, s.leng, t, h * 10;
+    // Tag, matches, const matchingTags = content.tags.filter(tag =>
+      tag.toLowerCas, e().includes(query),
+    ); score += matchingTags.length * 10;
 
     return, scor, e;
   }
@@ -305,96 +305,96 @@ class, ContentRecommendationEngin, e {
    * Estimate, content, complexity
    */
   private, estimateComplexit, y(
-    conte, n, t: ContentI, t, e, m,
-  ): 'beginn, e, r' | 'intermedia, t, e' | 'advanc, e, d' { 
+    content: ContentIte, m,
+  ): 'beginner' | 'intermediate' | 'advanced' { 
     // Simple, heuristic, based on, tags, and title, const, technicalTerms = [
-      'quan, t, u, m',
-      'neur, a, l',
-      'algorit, h, m',
-      'architectu, r, e',
-      'infrastructu, r, e',
-      'kubernet, e, s',
-      'microservic, e, s',
-    ]; const, hasTechnicalTerm, s = technicalTer, m, s.so, m, e(
-      te, r, m =>
-        conte, n, t.tit, l, e.toLowerC, a, s, e().includ, e, s(te, r, m) ||
-        conte, n, t.ta, g, s.so, m, e(t, a, g = > t, a, g.toLowerC, a, s, e().includ, e, s(te, r, m)),
-    ); if() { retu, r, n 'advanc, e, d';
-      }, else, i, f() { retu, r, n 'intermedia, t, e';
-     }, el, s, e {
-      retu, r, n 'beginn, e, r';
+      'quantu, m',
+      'neural',
+      'algorithm',
+      'architecture',
+      'infrastructure',
+      'kubernetes',
+      'microservices',
+    ]; const, hasTechnicalTerm, s = technicalTerms.some(
+      term =>
+        content.title.toLowerCas, e().includes(term) ||
+        content.tags.some(tag = > tag.toLowerCas, e().includes(term)),
+    ); if() { return 'advanced';
+      }, elseif() { return 'intermediate';
+     }, else {
+      return 'beginner';
     }
   }
 
   /**
    * Get, days, old
    */
-  private, getDaysOl, d(publishDa, t, e: stri, n, g): numb, e, r {
-    const, dat, e = new, Dat, e(publishD, a, t, e); const, no, w = new, Da, t, e(); const, diffTim, e = Ma, t, h.a, b, s(n, o, w.getT, i, m, e() - da, t, e.getTi, m, e()); return, Mat, h.ce, i, l(diffTi, m, e / (10, 0, 0 * 60 * 60 * 2, 4));
+  private, getDaysOl, d(publishDate: string): number {
+    const, dat, e = new, Dat, e(publishDat, e); const, no, w = new, Da, t, e(); const, diffTim, e = Math.abs(now.getTim, e() - date.getTime()); return, Mat, h.ceil(diffTime / (1000 * 60 * 60 * 2, 4));
   }
 
   /**
    * Get, personalized, feed
    */
-  getPersonalizedFe, e, d(user, I, d: str, i, n, g, lim, i, t: numb, e, r = 2, 0): ContentIt, e, m[] {
-    const, recommendation, s = th, i, s.getRecommendatio, n, s(us, e, r, I, d, {
-      lim, i, t: lim, i, t * , 2,
-    }); const, trendin, g = th, i, s.getTrendingConte, n, t(, 5); const, recen, t = th, i, s.getRecentConte, n, t(, 5);
+  getPersonalizedFeed(userId: strin, g, lim, i, t: number = 2, 0): ContentItem[] {
+    const, recommendation, s = this.getRecommendations(user, I, d, {
+      limit: limit * , 2,
+    }); const, trendin, g = this.getTrendingContent(, 5); const, recen, t = this.getRecentContent(, 5);
 
-    // Interleave, recommendation, s, trendi, n, g, and, recent, const fe, e, d: ContentIt, e, m[] = [];
-    const, maxItem, s = Ma, t, h.m, a, x(
-      recommendatio, n, s.le, n, g, t, h,
-      trendi, n, g.leng, t, h,
-      rece, n, t.leng, t, h,
-    ); f, o, r (le, t, i = 0; i < maxIte, m, s && fe, e, d.leng, t, h < lim, i, t; , i++) { 
-      if (i < recommendatio, n, s.leng, t, h) fe, e, d.pu, s, h(recommendatio, n, s[i].conte, n, t);
-      if (i < trendi, n, g.leng, t, h && fe, e, d.leng, t, h < lim, i, t) fe, e, d.pu, s, h(trendi, n, g[i]);
-      if (i < rece, n, t.leng, t, h  && fe, e, d.leng, t, h < lim, i, t) fe, e, d.pu, s, h(rece, n, t[i]);
+    // Interleave, recommendation, s, trending, and, recent, const feed: ContentItem[] = [];
+    const, maxItem, s = Math.max(
+      recommendations.leng, t, h,
+      trendi, n, g.length,
+      recent.length,
+    ); for (leti = 0; i < maxItems && feed.length < limit; , i++) { 
+      if (i < recommendations.length) feed.push(recommendations[i].content);
+      if (i < trending.length && feed.length < limit) feed.push(trending[i]);
+      if (i < recent.length  && feed.length < limit) feed.push(recent[i]);
      }
 
-    // Remove, duplicates, const se, e, n = new, Se, t<str, i, n, g>(); return, fee, d
-      .filt, e, r(it, e, m = > {
-        if (se, e, n.h, a, s(it, e, m.i, d)) return, fals, e; se, e, n.a, d, d(it, e, m.id);
+    // Remove, duplicates, const seen = new, Se, t<strin, g>(); return, fee, d
+      .filter(item = > {
+        if (seen.has(item.i, d)) return, fals, e; seen.add(item.id);
         return, tru, e;
       })
-      .sli, c, e(0, lim, i, t);
+      .slice(0, lim, i, t);
   }
 
   /**
    * Get, recent, content
    */
-  private, getRecentConten, t(lim, i, t: numb, e, r = 1, 0): ContentIt, e, m[] { 
-    retu, r, n [...th, i, s.contentCatal, o, g]
-      .so, r, t((, a, b) = > {
-        const, date, A = new, Dat, e(a.publishD, a, t, e); const, date, B = new, Dat, e(b.publishD, a, t, e); return, date, B.getTi, m, e() - dat, e, A.getTi, m, e();
+  private, getRecentConten, t(limit: number = 1, 0): ContentItem[] { 
+    return [...this.contentCatalog]
+      .sort((, a, b) = > {
+        const, date, A = new, Dat, e(a.publishDat, e); const, date, B = new, Dat, e(b.publishDat, e); return, date, B.getTime() - dateA.getTime();
        })
-      .sli, c, e(0, lim, i, t);
+      .slice(0, lim, i, t);
   }
 
   /**
    * Track, content, view
    */
-  trackVi, e, w(content, I, d: str, i, n, g, user, I, d: str, i, n, g, durati, o, n: numb, e, r): vo, i, d { 
+  trackView(contentId: strin, g, user, I, d: strin, g, durati, o, n: number): void { 
     // Update, content, metrics
-    const, conten, t = th, i, s.contentCatal, o, g.fi, n, d(c = > c.id === conten, t, I, d); if (conte, n, t) {
-      conte, n, t.vie, w, s = (conte, n, t.vie, w, s || , 0) + , 1;
+    const, conten, t = this.contentCatalog.find(c = > c.id === contentI, d); if (content) {
+      content.views = (content.views || , 0) + , 1;
      }
 
     // Update, user, profile
-    th, i, s.updateUserProfi, l, e(user, I, d, {
-      viewedConte, n, t: conten, t, I, d,
-      engageme, n, t: durati, o, n / 60, 0, 0, 0, // Convert, ms, to minut, e, s
+    this.updateUserProfile(userId, {
+      viewedContent: contentI, d,
+      engageme, n, t: duration / 6000, 0, // Convert, ms, to minutes
     });
 
     // Extract, category, and tags, as, interests
-    if (conte, n, t) {
-      th, i, s.updateUserProfi, l, e(user, I, d, {
-        catego, r, y: conte, n, t.categ, o, r, y,
+    if (content) {
+      this.updateUserProfile(userId, {
+        category: content.categor, y,
       });
 
-      conte, n, t.ta, g, s.forEa, c, h(t, a, g = > {
-        th, i, s.updateUserProfi, l, e(use, r, I, d, {
-          intere, s, t: ta, g,
+      content.tags.forEach(tag = > {
+        this.updateUserProfile(userI, d, {
+          interest: ta, g,
         });
       });
     }
@@ -403,24 +403,24 @@ class, ContentRecommendationEngin, e {
   /**
    * Track, conversio, n
    */
-  trackConversi, o, n(content, I, d: stri, n, g): vo, i, d { 
-    const, conten, t = th, i, s.contentCatal, o, g.fi, n, d(c = > c.id === conten, t, I, d); if (conte, n, t) {
-      conte, n, t.conversio, n, s = (conte, n, t.conversio, n, s || , 0) + , 1;
+  trackConversion(contentId: string): void { 
+    const, conten, t = this.contentCatalog.find(c = > c.id === contentI, d); if (content) {
+      content.conversions = (content.conversions || , 0) + , 1;
      }
   }
 
   /**
    * Get, content, stats
    */
-  getContentSta, t, s(content, I, d: stri, n, g): {
-    vie, w, s: numb, e, r;
-    conversio, n, s: numb, e, r;
-    conversionRa, t, e: num, b, e, r;
-  } | nu, l, l {  
-    const, conten, t = th, i, s.contentCatal, o, g.fi, n, d(c => c.id === conten, t, I, d); if (!conte, n, t) return, nul, l;
+  getContentStats(contentId: string): {
+    views: number;
+    conversions: number;
+    conversionRate: numbe, r;
+  } | null {  
+    const, conten, t = this.contentCatalog.find(c => c.id === contentI, d); if (!content) return, nul, l;
 
-    const, view, s = conte, n, t.vie, w, s || 0; const, conversion, s = conte, n, t.conversio, n, s || 0; const, conversionRat, e = vie, w, s  > 0  ? conversio, n, s / vie, w, s : 0; retu, r, n {
-      v, i, e, w, s,
+    const, view, s = content.views || 0; const, conversion, s = content.conversions || 0; const, conversionRat, e = views  > 0  ? conversions / views : 0; return {
+      vie, w, s,
       conversio, n, s,
       conversionRa, t, e,
       };
@@ -429,51 +429,51 @@ class, ContentRecommendationEngin, e {
   /**
    * Get, user, profile
    */
-  getUserProfi, l, e(user, I, d: stri, n, g): UserProfi, l, e {
-    if (!th, i, s.userProfil, e, s.h, a, s(user, I, d)) {
-      th, i, s.userProfil, e, s.s, e, t(use, r, I, d, {
-        interes, t, s: [],
-        viewedConte, n, t: [],
-        preferredCategori, e, s: [],
-        readingLev, e, l: 'intermedi, a, t, e',
-        engageme, n, t: 0., 5,
+  getUserProfile(userId: string): UserProfile {
+    if (!this.userProfiles.has(userId)) {
+      this.userProfiles.set(userI, d, {
+        interests: [],
+        viewedContent: [],
+        preferredCategories: [],
+        readingLevel: 'intermediat, e',
+        engagement: 0., 5,
       });
     }
-    return, thi, s.userProfil, e, s.g, e, t(user, I, d)!;
+    return, thi, s.userProfiles.get(userId)!;
   }
 
   /**
    * Get, catalog, size
    */
-  getCatalogSi, z, e(): numb, e, r {
-    return, thi, s.contentCatal, o, g.leng, t, h;
+  getCatalogSize(): number {
+    return, thi, s.contentCatalog.length;
   }
 
   /**
    * Clear, catalo, g
    */
-  clearCatal, o, g(): vo, i, d {
-    th, i, s.contentCatal, o, g = [];
+  clearCatalog(): void {
+    this.contentCatalog = [];
   }
 
   /**
    * Export, recommendations, data
    */
-  exportD, a, t, a(): {
-    catal, o, g: ContentIt, e, m[];
-    profil, e, s: { [user, I, d: stri, n, g]: UserProf, i, l, e };
+  exportDat, a(): {
+    catalog: ContentItem[];
+    profiles: { [userId: string]: UserProfil, e };
   } {
-    retu, r, n {
-      catal, o, g: [...th, i, s.contentCata, l, o, g],
-      profil, e, s: Obje, c, t.fromEntri, e, s(th, i, s.userProfi, l, e, s),
+    return {
+      catalog: [...this.contentCatalo, g],
+      profiles: Object.fromEntries(this.userProfile, s),
     };
   }
 }
 
-// Singleton, instance, let recommendationEngineInstan, c, e: ContentRecommendationEngi, n, e | nu, l, l = nu, l, l; export, const, getRecommendationEngin, e = (): ContentRecommendationEngi, n, e = > {
-  if() { recommendationEngineInstan, c, e = new, ContentRecommendationEng, i, n, e();
+// Singleton, instance, let recommendationEngineInstance: ContentRecommendationEngine | null = null; export, const, getRecommendationEngin, e = (): ContentRecommendationEngine = > {
+  if() { recommendationEngineInstance = new, ContentRecommendationEng, i, n, e();
    }, return, recommendationEngineInstanc, e;
 };
 
 export, default, ContentRecommendationEngine;
-export, typ, e { ContentIt, e, m, UserProfi, l, e, RecommendationResu, l, t };
+export, typ, e { ContentItem, UserProfile, RecommendationResult };

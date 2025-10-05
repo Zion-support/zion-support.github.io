@@ -1,35 +1,35 @@
-import, React, from 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function EdgeZeroPIIAnalytics20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Ze, r, o‑PII, Edge, Analytics 20, 2, 6</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Scoped, I, D, s, on‑device, aggregatio, n, and, differential, privacy for, actionable, insights under, 100m, s—without, PI, I.'
+export, default, function EdgeZeroPIIAnalytics2026(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Zero‑PII, Edge, Analytics 2026</title>
+        <meta, nam, e='description'
+          content='ScopedID, s, on‑device, aggregatio, n, and, differential, privacy for, actionable, insights under, 100m, s—without, PI, I.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-ze, r, o-p, i, i-analyti, c, s-20, 2, 6'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-zero-pii-analytics-2026'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Ze, r, o‑PII, Edge, Analytics 20, 2, 6
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
+          Zero‑PII, Edge, Analytics 2026
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, classNam, e='text-zion-slate-lightmb-8'>
           Scoped, ID, s • Edge, Aggregatio, n • DP, Nois, e
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Ship, decisio, n‑grade, analytics, without collecting, personal, data. Use, scoped, identifie, r, s, on‑device, aggregatio, n, and, differential, privacy
-            noise, to, preserve utility, while, protecting use, r, s.
+            noise, to, preserve utility, while, protecting users.
           </p>
           <p>
-            We, cover, data flo, w, s, privacy, threat, models, and, verifiable, attestations that, keep, your pipelines, audi, t‑rea, d, y.
+            We, cover, data flows, privacy, threat, models, and, verifiable, attestations that, keep, your pipelines, audi, t‑ready.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

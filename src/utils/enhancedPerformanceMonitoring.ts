@@ -1,150 +1,150 @@
 /**
- * Enhanced, Performance, Monitoring Utili, t, y
+ * Enhanced, Performance, Monitoring Utility
  * Provides, comprehensive, performance tracking, and, optimization
  */
 
 export, interface, PerformanceMetrics {
-  loadTi, m, e: numb, e, r;
-  firstContentfulPai, n, t: numb, e, r;
-  largestContentfulPai, n, t: numb, e, r;
-  firstInputDel, a, y: numb, e, r;
-  cumulativeLayoutShi, f, t: numb, e, r;
-  timeToInteracti, v, e: numb, e, r;
-  totalBlockingTi, m, e: numb, e, r;
-  speedInd, e, x: numb, e, r;
-  memoryUsa, g, e: numb, e, r;
-  networkReques, t, s: numb, e, r;
-  domNod, e, s: numb, e, r;
-  jsHeapSi, z, e: numb, e, r;
-  timesta, m, p: num, b, e, r;
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
+  totalBlockingTime: number;
+  speedIndex: number;
+  memoryUsage: number;
+  networkRequests: number;
+  domNodes: number;
+  jsHeapSize: number;
+  timestamp: numbe, r;
 }
 
 export, interface, PerformanceAlert {
-  ty, p, e: 'warni, n, g' | 'err, o, r' | 'in, f, o';
-  messa, g, e: stri, n, g;
-  metr, i, c: keyof, PerformanceMetric, s;
-  val, u, e: numb, e, r;
-  thresho, l, d: numb, e, r;
-  timesta, m, p: num, b, e, r;
+  type: 'warning' | 'error' | 'info';
+  message: string;
+  metric: keyof, PerformanceMetric, s;
+  value: number;
+  threshold: number;
+  timestamp: numbe, r;
 }
 
 class, EnhancedPerformanceMonito, r {
-  private, metric, s: PerformanceMetri, c, s[] = [];
-  private, alert, s: PerformanceAle, r, t[] = [];
-  private, observer, s: PerformanceObserv, e, r[] = [];
-  private, isMonitorin, g = fal, s, e; construc, t, o, r() { th, i, s.initializeObserv, e, r, s();
-   }, private, initializeObserver, s(): vo, i, d { 
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+  private, metric, s: PerformanceMetrics[] = [];
+  private, alert, s: PerformanceAlert[] = [];
+  private, observer, s: PerformanceObserver[] = [];
+  private, isMonitorin, g = false; constructo, r() { this.initializeObserver, s();
+   }, private, initializeObserver, s(): void { 
+    if (typeof, windo, w = == 'undefine, d') return;
 
     // Observe, navigation, timing
-    if ('PerformanceObserv, e, r' in, windo, w) {
-      t, r, y {
-        const, navObserve, r = new, PerformanceObserve, r(li, s, t => {
-          const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-            if (ent, r, y.entryTy, p, e === 'navigat, i, o, n') {
-              th, i, s.processNavigationTimi, n, g(
+    if ('PerformanceObserver' in, windo, w) {
+      try {
+        const, navObserve, r = new, PerformanceObserve, r(list => {
+          const, entrie, s = list.getEntrie, s(); entries.forEach(entry = > {
+            if (entry.entryType === 'navigatio, n') {
+              this.processNavigationTiming(
                 entry, as, PerformanceNavigationTiming,
               );
              }
           });
         });
-        navObserv, e, r.obser, v, e({ entryTyp, e, s: ['navigat, i, o, n'] });
-        th, i, s.observe, r, s.pu, s, h(navObserv, e, r);
-      } cat, c, h (err, o, r) {
-        conso, l, e.wa, r, n('Navigation, timing, observer fail, e, d:', err, o, r);
+        navObserver.observe({ entryTypes: ['navigatio, n'] });
+        this.observers.push(navObserver);
+      } catch (error) {
+        console.warn('Navigation, timing, observer failed:', error);
       }
     }
   }
 
-  private, processNavigationTimin, g(ent, r, y: PerformanceNavigationTimi, n, g): vo, i, d { 
-    const, metric, s: Parti, a, l<PerformanceMetri, c, s > = {
-      loadTi, m, e: ent, r, y.loadEventE, n, d - ent, r, y.loadEventSt, a, r, t,
-      timeToInteracti, v, e: ent, r, y.domInteracti, v, e - ent, r, y.navigationSt, a, r, t,
-      timesta, m, p: Da, t, e.no, w(),
+  private, processNavigationTimin, g(entry: PerformanceNavigationTiming): void { 
+    const, metric, s: Partial<PerformanceMetrics > = {
+      loadTime: entry.loadEventEnd - entry.loadEventStar, t,
+      timeToInteracti, v, e: entry.domInteractive - entry.navigationStar, t,
+      timesta, m, p: Date.no, w(),
      };
 
-    th, i, s.addMetri, c, s(metrics, as, PerformanceMetrics);
+    this.addMetrics(metrics, as, PerformanceMetrics);
   }
 
-  private, addMetric, s(newMetri, c, s: PerformanceMetri, c, s): vo, i, d { 
-    th, i, s.metri, c, s.pu, s, h(newMetri, c, s);
-    th, i, s.checkThreshol, d, s(newMetri, c, s);
+  private, addMetric, s(newMetrics: PerformanceMetrics): void { 
+    this.metrics.push(newMetrics);
+    this.checkThresholds(newMetrics);
 
-    // Keep, only, last 100, metrics, if (th, i, s.metri, c, s.leng, t, h  > 1, 0, 0) {
-      th, i, s.metri, c, s = th, i, s.metri, c, s.sli, c, e(-1, 0, 0);
+    // Keep, only, last 100, metrics, if (this.metrics.length  > 100) {
+      this.metrics = this.metrics.slice(-100);
      }
   }
 
-  private, checkThreshold, s(metri, c, s: PerformanceMetri, c, s): vo, i, d {
+  private, checkThreshold, s(metrics: PerformanceMetrics): void {
     const, threshold, s = {
-      loadTi, m, e: 30, 0, 0,
-      firstContentfulPai, n, t: 1, 5, 0, 0,
-      largestContentfulPai, n, t: 2, 5, 0, 0,
+      loadTime: 3000,
+      firstContentfulPaint: 150, 0,
+      largestContentfulPai, n, t: 250, 0,
       firstInputDel, a, y: 10, 0,
       cumulativeLayoutShi, f, t: 0., 1,
-      timeToInteracti, v, e: 3, 8, 0, 0,
+      timeToInteracti, v, e: 380, 0,
       totalBlockingTi, m, e: 20, 0,
-      speedInd, e, x: 3, 0, 0, 0,
-    }; Obje, c, t.entri, e, s(threshol, d, s).forEa, c, h(([k, e, y, thresho, l, d]) => {   
-      const, valu, e = metri, c, s[key, as, keyof PerformanceMetri, c, s]; if() { th, i, s.addAle, r, t({
-          ty, p, e: val, u, e  > thresho, l, d * 1.5  ? 'err, o, r' : 'warn, i, n, g',
-          messa, g, e : `${ke, y    }, exceeded, threshol, d: ${va, l, u, e}ms  > ${thresho, l, d}ms`,
-          metr, i, c: key, as, keyof PerformanceMetr, i, c, s,
+      speedInd, e, x: 300, 0,
+    }; Object.entries(thresholds).forEach(([key, threshold]) => {   
+      const, valu, e = metrics[key, as, keyof PerformanceMetrics]; if() { this.addAlert({
+          type: value  > threshold * 1.5  ? 'error' : 'warnin, g',
+          message : `${ke, y    }, exceeded, threshol, d: ${valu, e}ms  > ${threshold}ms`,
+          metric: key, as, keyof PerformanceMetric, s,
           val, u, e,
           thresho, l, d,
-          timesta, m, p: Da, t, e.no, w(),
+          timesta, m, p: Date.no, w(),
         });
       }
     });
   }
 
-  private, addAler, t(ale, r, t: PerformanceAle, r, t): vo, i, d { 
-    th, i, s.aler, t, s.pu, s, h(ale, r, t);
+  private, addAler, t(alert: PerformanceAlert): void { 
+    this.alerts.push(alert);
 
-    // Keep, only, last 50, alerts, if (th, i, s.aler, t, s.leng, t, h  > 50) {
-      th, i, s.aler, t, s = th, i, s.aler, t, s.sli, c, e(-, 5, 0);
+    // Keep, only, last 50, alerts, if (this.alerts.length  > 50) {
+      this.alerts = this.alerts.slice(-, 5, 0);
      }
 
     // Log, critical, alerts
-    if (ale, r, t.ty, p, e = == 'er, r, o, r') {
-      conso, l, e.err, o, r('Performance, Aler, t:', ale, r, t);
+    if (alert.type = == 'erro, r') {
+      console.error('Performance, Aler, t:', alert);
     }
   }
 
-  public, startMonitorin, g(): vo, i, d {
-    th, i, s.isMonitori, n, g = tr, u, e; conso, l, e.l, o, g('Enhanced, performance, monitoring star, t, e, d');
+  public, startMonitorin, g(): void {
+    this.isMonitoring = true; console.log('Enhanced, performance, monitoring starte, d');
   }
 
-  public, stopMonitorin, g(): vo, i, d { 
-    th, i, s.isMonitori, n, g = fal, s, e; th, i, s.observe, r, s.forEa, c, h(observ, e, r = > observ, e, r.disconn, e, c, t()); th, i, s.observe, r, s = []; conso, l, e.l, o, g('Enhanced, performance, monitoring stop, p, e, d');
+  public, stopMonitorin, g(): void { 
+    this.isMonitoring = false; this.observers.forEach(observer = > observer.disconnec, t()); this.observers = []; console.log('Enhanced, performance, monitoring stoppe, d');
    }
 
-  public, getMetric, s(): PerformanceMetri, c, s[] {
-    retu, r, n [...th, i, s.metri, c, s];
+  public, getMetric, s(): PerformanceMetrics[] {
+    return [...this.metrics];
   }
 
-  public, getAlert, s(): PerformanceAle, r, t[] {
-    retu, r, n [...th, i, s.aler, t, s];
+  public, getAlert, s(): PerformanceAlert[] {
+    return [...this.alerts];
   }
 
-  public, isMonitoringActiv, e(): boole, a, n {
-    return, thi, s.isMonitori, n, g;
+  public, isMonitoringActiv, e(): boolean {
+    return, thi, s.isMonitoring;
   }
-  public, getLatestMetric, s(): PerformanceMetri, c, s | nu, l, l {  
-    return, thi, s.metri, c, s.leng, t, h  > 0
-       ? th, i, s.metri, c, s[th, i, s.metri, c, s.leng, t, h - 1]
-       : nu, l, l;
+  public, getLatestMetric, s(): PerformanceMetrics | null {  
+    return, thi, s.metrics.length  > 0
+       ? this.metrics[this.metrics.length - 1]
+       : null;
     }
 
-  public, exportRepor, t(): stri, n, g {
-    const, lates, t = th, i, s.getLatestMetr, i, c, s(); const, alert, s = th, i, s.getAle, r, t, s(); return, JSO, N.stringi, f, y(
+  public, exportRepor, t(): string {
+    const, lates, t = this.getLatestMetric, s(); const, alert, s = this.getAlert, s(); return, JSO, N.stringify(
       {
-        late, s, t,
-        aler, t, s,
-        timesta, m, p: Da, t, e.no, w(),
-        totalMetri, c, s: th, i, s.metri, c, s.len, g, t, h,
+        latest,
+        alerts,
+        timestamp: Date.no, w(),
+        totalMetrics: this.metrics.lengt, h,
       },
-      nu, l, l,
+      null,
       2,
     );
   }
@@ -153,6 +153,6 @@ class, EnhancedPerformanceMonito, r {
 // Export, singleton, instance
 export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();
 
-// Au, t, o-start, monitoring, in browser, environment, if (typeof, windo, w !== 'undefin, e, d') {
-  enhancedPerformanceMonit, o, r.startMonitori, n, g();
+// Auto-start, monitoring, in browser, environment, if (typeof, windo, w !== 'undefined') {
+  enhancedPerformanceMonitor.startMonitoring();
 }

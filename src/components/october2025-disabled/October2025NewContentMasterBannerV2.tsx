@@ -1,162 +1,162 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-export, default, function October2025NewContentMasterBanner, V, 2() { 
-  retu, r, n (
-    <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-ro, s, e-900, vi, a-oran, g, e-900, t, o-amb, e, r-900, borde, r-4, borde, r-oran, g, e-500, rounde, d-2xl, shado, w-2xl, m, b-8, animat, e-pul, s, e-sl, o, w' > {' ' }
+import React from 'react';
+import { Link  } from 'react-router-dom';
+export, default, function October2025NewContentMasterBannerV2() { 
+  return (
+    <div, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-br, fro, m-rose-900, vi, a-orange-900to-amber-900, borde, r-4, borde, r-orange-500, rounde, d-2xl, shado, w-2xlmb-8, animat, e-pulse-slow' > {' ' }
       {/* Animated, Backgroun, d */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-10, lef, t-1, 0, w-8, 0, h-80, b, g-oran, g, e-400, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-10, righ, t-1, 0, w-8, 0, h-80, b, g-ro, s, e-400, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0' />
-      </d, i, v>
-      <div, classNam, e='relativ, e, z-1, 0, p-8, m, d: p-12'>
-        {/* He, a, d, e, r */}
-        <div, classNam, e = 'te, x, t-center, m, b-8'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, b, g-oran, g, e-5, 0, 0/30, borde, r-2, borde, r-oran, g, e-400, rounde, d-full, p, x-6, p, y-3, backdro, p-bl, u, r-sm, m, b-4, animat, e-boun, c, e-sl, o, w'>
-            <Rocket, classNam, e='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
-            <span, classNam, e='te, x, t-yell, o, w-300, fon, t-black, tex, t-lg, trackin, g-wid, e, r'>
+        <div, classNam, e='absolute, to, p-10, lef, t-10w-80h-80bg-orange-400, rounde, d-full, filter, blur-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, botto, m-10, righ, t-10w-80h-80bg-rose-400, rounde, d-full, filter, blur-3xl, animat, e-pulse, dela, y-1000' />
+      </div>
+      <div, classNam, e='relativez-10p-8md: p-12'>
+        {/* Head, e, r */}
+        <div, classNam, e = 'text-centermb-8'>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-2bg-orange-500/30, borde, r-2, borde, r-orange-400, rounde, d-fullpx-6py-3, backdro, p-blur-smmb-4, animat, e-bounce-slow'>
+            <Rocket, classNam, e='w-6 h-6, tex, t-yellow-300, animat, e-pulse' />
+            <span, classNam, e='text-yellow-300, fon, t-black, tex, t-lg, trackin, g-wider'>
               🚀 MAJOR, CONTENT, LAUNCH • OCTOBER, 202, 5 • BREAKTHROUGH, INNOVATION, S
               🚀
-            </sp, a, n>
-            <Sparkles, classNam, e='w-6 h-6, tex, t-yell, o, w-300, animat, e-sp, i, n-sl, o, w' />
-          </d, i, v>
-          <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-6xl, fon, t-black, m, b-4, b, g-gradie, n, t-to-r, fro, m-oran, g, e-200, vi, a-yell, o, w-200, t, o-oran, g, e-200, b, g-cl, i, p-text, tex, t-transparent, leadin, g-tig, h, t'>
+            </span>
+            <Sparkles, classNam, e='w-6 h-6, tex, t-yellow-300, animat, e-spin-slow' />
+          </div>
+          <h2, classNam, e='text-4xlmd: text-6xl, fon, t-blackmb-4bg-gradient-to-r, fro, m-orange-200, vi, a-yellow-200to-orange-200bg-clip-text, tex, t-transparent, leadin, g-tight'>
             Revolutionary, AI, Solutions Just, Launche, d
           </h2>
-          <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, fon, t-bold, tex, t-oran, g, e-100, m, b-6'>
-            Two, Gam, e-Changing, Breakthroughs, Available N, o, w
+          <p, classNam, e='text-2xlmd:text-3xl, fon, t-bold, tex, t-orange-100mb-6'>
+            Two, Gam, e-Changing, Breakthroughs, Available Now
           </p>
-        </d, i, v>
-        {/* T, w, o-Column, Lay, o, u, t */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-8'>
+        </div>
+        {/* Two-Column, Lay, o, u, t */}
+        <div, classNam, e = 'gridmd: grid-cols-2, ga, p-6mb-8'>
           {/* Cognitive, Hyperautomat, i, o, n */}
-          <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-8, 0, 0/60, t, o-purp, l, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-purp, l, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0'>
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <Star, classNam, e='w-8 h-8, tex, t-purp, l, e-300, animat, e-pul, s, e' />
-              <h3, classNam, e='te, x, t-2xl, fon, t-black, tex, t-purp, l, e-2, 0, 0'>
+          <div, classNam, e = 'bg-gradient-to-br, fro, m-purple-800/60to-purple-900/60, backdro, p-blur-md, borde, r-2, borde, r-purple-400/50, rounde, d-2xlp-6, shado, w-2xl, hove, r: scale-105, transitio, n-all, duratio, n-300'>
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <Star, classNam, e='w-8 h-8, tex, t-purple-300, animat, e-pulse' />
+              <h3, classNam, e='text-2xl, fon, t-black, tex, t-purple-200'>
                 Cognitive, Hyperautomatio, n
               </h3>
-            </d, i, v>
-            <div, classNam, e='spa, c, e-y-3, m, b-6'>
-              <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-purp, l, e-300, fon, t-semibo, l, d'>
+            </div>
+            <div, classNam, e='space-y-3mb-6'>
+              <div, classNam, e='flex, justif, y-between, item, s-center'>
+                <span, classNam, e='text-purple-300, fon, t-semibold'>
                   Total, Valu, e:
-                </sp, a, n>
-                <span, classNam, e='te, x, t-3xl, fon, t-black, tex, t-purp, l, e-2, 0, 0'>
+                </span>
+                <span, classNam, e='text-3xl, fon, t-black, tex, t-purple-200'>
                   $38.5B
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-purp, l, e-300, fon, t-semibo, l, d'>R, O, I:</sp, a, n>
-                <span, classNam, e='te, x, t-3xl, fon, t-black, tex, t-purp, l, e-2, 0, 0'>
-                  , 1, 5,2, 0, 0%
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e = 'flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-purp, l, e-300, fon, t-semibo, l, d'>
-                  Automati, o, n: </sp, a, n>
-                <span, classNam, e='te, x, t-3xl, fon, t-black, tex, t-purp, l, e-2, 0, 0'>
+                </span>
+              </div>
+              <div, classNam, e='flex, justif, y-between, item, s-center'>
+                <span, classNam, e='text-purple-300, fon, t-semibold'>ROI:</span>
+                <span, classNam, e='text-3xl, fon, t-black, tex, t-purple-200'>
+                  , 152, 0, 0%
+                </span>
+              </div>
+              <div, classNam, e = 'flex, justif, y-between, item, s-center'>
+                <span, classNam, e='text-purple-300, fon, t-semibold'>
+                  Automation: </span>
+                <span, classNam, e='text-3xl, fon, t-black, tex, t-purple-200'>
                   98.9%
-                </sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-purp, l, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-purp, l, e-5, 0, 0/30'>
-              <p, classNam, e='te, x, t-purp, l, e-200, tex, t-sm, fon, t-semibold, m, b-2'>
+                </span>
+              </div>
+            </div>
+            <div, classNam, e='bg-purple-900/40, rounde, d-lgp-4mb-4, border, border-purple-500/30'>
+              <p, classNam, e='text-purple-200, tex, t-sm, fon, t-semiboldmb-2'>
                 Fortune, 50, Success:
               </p>
-              <p, classNam, e='te, x, t-purp, l, e-100, tex, t-lg'>
-                $14.7B, business, impact • , 2, 5,0, 0, 0+ AI, agent, s
+              <p, classNam, e='text-purple-100, tex, t-lg'>
+                $14.7B, business, impact • , 250, 0, 0+ AI, agent, s
               </p>
-            </d, i, v>
-            <Link, t, o = '/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-hyperautomati, o, n-platfo, r, m'
-              classNa, m, e='block, tex, t-center, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-pi, n, k-500, hove, r: fr, o, m-purp, l, e-600, hove, r:to-pi, n, k-600, tex, t-white, fon, t-black, tex, t-base, p, x-6, p, y-3, rounde, d-lg, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0'
+            </div>
+            <Linkto = '/blog/ai-2025-october-cognitive-hyperautomation-platform'
+              className='block, tex, t-centerbg-gradient-to-r, fro, m-purple-500to-pink-500, hove, r: from-purple-600, hove, r:to-pink-600, tex, t-white, fon, t-black, tex, t-basepx-6py-3, rounde, d-lg, shado, w-lg, hove, r:shadow-xl, transitio, n-all, duratio, n-300'
             >
               Explore, Platfor, m →
-            </Li, n, k>
-          </d, i, v>
+            </Link>
+          </div>
           {/* FinTech, Transformat, i, o, n */}
-          <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/60, t, o-bl, u, e-9, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-bl, u, e-4, 0, 0/50, rounde, d-2x, l, p-6, shado, w-2xl, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0'>
-            <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-              <Star, classNam, e='w-8 h-8, tex, t-bl, u, e-300, animat, e-pul, s, e' />
-              <h3, classNam, e='te, x, t-2xl, fon, t-black, tex, t-bl, u, e-2, 0, 0'>
+          <div, classNam, e = 'bg-gradient-to-br, fro, m-blue-800/60to-blue-900/60, backdro, p-blur-md, borde, r-2, borde, r-blue-400/50, rounde, d-2xlp-6, shado, w-2xl, hove, r: scale-105, transitio, n-all, duratio, n-300'>
+            <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+              <Star, classNam, e='w-8 h-8, tex, t-blue-300, animat, e-pulse' />
+              <h3, classNam, e='text-2xl, fon, t-black, tex, t-blue-200'>
                 FinTech, AI, Transformation
               </h3>
-            </d, i, v>
-            <div, classNam, e='spa, c, e-y-3, m, b-6'>
-              <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>
+            </div>
+            <div, classNam, e='space-y-3mb-6'>
+              <div, classNam, e='flex, justif, y-between, item, s-center'>
+                <span, classNam, e='text-blue-300, fon, t-semibold'>
                   Business, Valu, e:
-                </sp, a, n>
-                <span, classNam, e='te, x, t-3xl, fon, t-black, tex, t-bl, u, e-2, 0, 0'>
+                </span>
+                <span, classNam, e='text-3xl, fon, t-black, tex, t-blue-200'>
                   $22.8B
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e='flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>R, O, I:</sp, a, n>
-                <span, classNam, e='te, x, t-3xl, fon, t-black, tex, t-bl, u, e-2, 0, 0'>
-                  , 1, 8,4, 0, 0%
-                </sp, a, n>
-              </d, i, v>
-              <div, classNam, e = 'flex, justif, y-between, item, s-cent, e, r'>
-                <span, classNam, e='te, x, t-bl, u, e-300, fon, t-semibo, l, d'>Automati, o, n: </sp, a, n>
-                <span, classNam, e='te, x, t-3xl, fon, t-black, tex, t-bl, u, e-2, 0, 0'>96%</sp, a, n>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='bg-bl, u, e-9, 0, 0/40, rounde, d-l, g, p-4, m, b-4, border, border-bl, u, e-5, 0, 0/30'>
-              <p, classNam, e='te, x, t-bl, u, e-200, tex, t-sm, fon, t-semibold, m, b-2'>
+                </span>
+              </div>
+              <div, classNam, e='flex, justif, y-between, item, s-center'>
+                <span, classNam, e='text-blue-300, fon, t-semibold'>ROI:</span>
+                <span, classNam, e='text-3xl, fon, t-black, tex, t-blue-200'>
+                  , 184, 0, 0%
+                </span>
+              </div>
+              <div, classNam, e = 'flex, justif, y-between, item, s-center'>
+                <span, classNam, e='text-blue-300, fon, t-semibold'>Automation: </span>
+                <span, classNam, e='text-3xl, fon, t-black, tex, t-blue-200'>96%</span>
+              </div>
+            </div>
+            <div, classNam, e='bg-blue-900/40, rounde, d-lgp-4mb-4, border, border-blue-500/30'>
+              <p, classNam, e='text-blue-200, tex, t-sm, fon, t-semiboldmb-2'>
                 Fortune, 100, Success:
               </p>
-              <p, classNam, e='te, x, t-bl, u, e-100, tex, t-lg'>
-                47M, customer, s • 92% satisfacti, o, n • 72, countrie, s
+              <p, classNam, e='text-blue-100, tex, t-lg'>
+                47M, customer, s • 92% satisfaction • 72, countrie, s
               </p>
-            </d, i, v>
-            <Link, t, o='/ca, s, e-studi, e, s/finte, c, h-ai-transformati, o, n-20, 2, 5'
-              classNa, m, e='block, tex, t-center, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r:fr, o, m-bl, u, e-600, hove, r:to-indi, g, o-600, tex, t-white, fon, t-black, tex, t-base, p, x-6, p, y-3, rounde, d-lg, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-3, 0, 0'
+            </div>
+            <Linkto='/case-studies/fintech-ai-transformation-2025'
+              className='block, tex, t-centerbg-gradient-to-r, fro, m-blue-500to-indigo-500, hove, r:from-blue-600, hove, r:to-indigo-600, tex, t-white, fon, t-black, tex, t-basepx-6py-3, rounde, d-lg, shado, w-lg, hove, r:shadow-xl, transitio, n-all, duratio, n-300'
             >
               Read, Case, Study →
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
+            </Link>
+          </div>
+        </div>
         {/* Combined, Value, Propositi, o, n */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-oran, g, e-8, 0, 0/60, t, o-amb, e, r-8, 0, 0/60, backdro, p-bl, u, r-md, borde, r-2, borde, r-oran, g, e-4, 0, 0/50, rounde, d-2x, l, p-8, tex, t-center, shado, w-2, x, l'>
-          <h3, classNam, e='te, x, t-3xl, fon, t-black, tex, t-oran, g, e-200, m, b-4'>
+        <div, classNam, e = 'bg-gradient-to-r, fro, m-orange-800/60to-amber-800/60, backdro, p-blur-md, borde, r-2, borde, r-orange-400/50, rounde, d-2xlp-8, tex, t-center, shado, w-2xl'>
+          <h3, classNam, e='text-3xl, fon, t-black, tex, t-orange-200mb-4'>
             Combined, Innovation, Impact
           </h3>
-          <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-6'>
-            <d, i, v>
-              <div, classNam, e='te, x, t-4xl, fon, t-black, tex, t-oran, g, e-300, m, b-2'>
+          <div, classNam, e='grid, gri, d-cols-2md: grid-cols-4, ga, p-6mb-6'>
+            <div>
+              <div, classNam, e='text-4xl, fon, t-black, tex, t-orange-300mb-2'>
                 $61.3B
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-oran, g, e-2, 0, 0'>Total, Value, Created</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-4xl, fon, t-black, tex, t-yell, o, w-300, m, b-2'>
-                , 1, 6,8, 0, 0%
-              </d, i, v>
-              <div, classNam, e = 'te, x, t-sm, tex, t-oran, g, e-2, 0, 0'>Average, RO, I</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-4xl, fon, t-black, tex, t-ro, s, e-300, m, b-2'>
+              </div>
+              <div, classNam, e='text-sm, tex, t-orange-200'>Total, Value, Created</div>
+            </div>
+            <div>
+              <div, classNam, e='text-4xl, fon, t-black, tex, t-yellow-300mb-2'>
+                , 168, 0, 0%
+              </div>
+              <div, classNam, e = 'text-sm, tex, t-orange-200'>Average, RO, I</div>
+            </div>
+            <div>
+              <div, classNam, e='text-4xl, fon, t-black, tex, t-rose-300mb-2'>
                 97.5%
-              </d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-oran, g, e-2, 0, 0'>Avg, Automatio, n</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-sm, tex, t-oran, g, e-2, 0, 0'>
+              </div>
+              <div, classNam, e='text-sm, tex, t-orange-200'>Avg, Automatio, n</div>
+            </div>
+            <div>
+              <div, classNam, e='text-sm, tex, t-orange-200'>
                 Enterprise, Validate, d
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-          <p, classNam, e='te, x, t-xl, tex, t-oran, g, e-100, fon, t-semibold, m, b-4'>
+              </div>
+            </div>
+          </div>
+          <p, classNam, e='text-xl, tex, t-orange-100, fon, t-semiboldmb-4'>
             Two, revolutionary, solutions delivering, unprecedented, business
-            transformati, o, n
+            transformation
           </p>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-ro, s, e-500, tex, t-white, fon, t-black, tex, t-lg, p, x-8, p, y-4, rounde, d-xl, shado, w-lg, borde, r-2, borde, r-whi, t, e/20'>
-            <Sparkles, classNam, e='w-6 h-6, animat, e-sp, i, n-sl, o, w' />
-            <sp, a, n>Enterpri, s, e-Proven, AI, Innovation</sp, a, n>
-            <Rocket, classNam, e='w-6 h-6, animat, e-pul, s, e' />
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-3bg-gradient-to-r, fro, m-orange-500to-rose-500, tex, t-white, fon, t-black, tex, t-lgpx-8py-4, rounde, d-xl, shado, w-lg, borde, r-2, borde, r-white/20'>
+            <Sparkles, classNam, e='w-6 h-6, animat, e-spin-slow' />
+            <span>Enterprise-Proven, AI, Innovation</span>
+            <Rocket, classNam, e='w-6 h-6, animat, e-pulse' />
+          </div>
+        </div>
+      </div>
     </di, v>
   );
 }

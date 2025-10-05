@@ -1,533 +1,532 @@
-import, Reac, t, { useSta, t, e, useEffe, c, t, useCallba, c, k } fr, o, m "rea, c, t";
-impo, r, t {
-  performanceOptimiz, e, r,
-  PerformanceMetri, c, s,
-  OptimizationSuggesti, o, n,
-} fr, o, m "../uti, l, s/performanceOptimiz, e, r";
-impo, r, t {
-  accessibilityEnhanc, e, r,
-  AccessibilityMetri, c, s,
-  AccessibilityIss, u, e,
-} fr, o, m "../uti, l, s/accessibilityEnhanc, e, r";
-impo, r, t { seoOptimiz, e, r, SEOMetri, c, s, SEOIss, u, e } fr, o, m "../uti, l, s/seoOptimiz, e, r";
+import, Reac, t, { useState, useEffect, useCallba, c, k } from "react";
+import {
+  performanceOptimizer,
+  PerformanceMetrics,
+  OptimizationSuggestion,
+} from "../utils/performanceOptimizer";
+import {
+  accessibilityEnhancer,
+  AccessibilityMetrics,
+  AccessibilityIssue,
+} from "../utils/accessibilityEnhancer";
+import { seoOptimizer, SEOMetrics, SEOIssue } from "../utils/seoOptimizer";
 
 interface, SystemHealt, h {
-  performan, c, e: numb, e, r;
-  accessibili, t, y: numb, e, r;
-  s, e, o: numb, e, r;
-  overa, l, l: num, b, e, r;
+  performance: number;
+  accessibility: number;
+  seo: number;
+  overall: numbe, r;
 }
 
 interface, DashboardDat, a {
-  systemHeal, t, h: SystemHeal, t, h;
-  performanceMetri, c, s: PerformanceMetri, c, s | nu, l, l;
-  accessibilityMetri, c, s: AccessibilityMetri, c, s;
-  seoMetri, c, s: SEOMetri, c, s;
-  optimizationSuggestio, n, s: OptimizationSuggesti, o, n[];
-  accessibilityIssu, e, s: AccessibilityIss, u, e[];
-  seoIssu, e, s: SEOIss, u, e[];
-  lastUpdat, e, d: num, b, e, r;
+  systemHealth: SystemHealth;
+  performanceMetrics: PerformanceMetrics | null;
+  accessibilityMetrics: AccessibilityMetrics;
+  seoMetrics: SEOMetrics;
+  optimizationSuggestions: OptimizationSuggestion[];
+  accessibilityIssues: AccessibilityIssue[];
+  seoIssues: SEOIssue[];
+  lastUpdated: numbe, r;
 }
 
-const, ComprehensiveSystemDashboar, d: Rea, c, t.FC = () => { 
-  con, s, t [d, a, t, a, setDa, t, a] = useSta, t, e<DashboardDa, t, a | nu, l, l>(nu, l, l); con, s, t [isLoadi, n, g, setIsLoadi, n, g] = useSta, t, e(tr, u, e);
-  con, s, t [activeT, a, b, setActiveT, a, b] = useSta, t, e<
-    "overvi, e, w" | "performan, c, e" | "accessibili, t, y" | "s, e, o"
-  >("overvi, e, w");
-  con, s, t [isMonitori, n, g, setIsMonitori, n, g] = useSta, t, e(fal, s, e);
+const, ComprehensiveSystemDashboar, d: React.FC = () => { 
+  const [dat, a, setDa, t, a] = useState<DashboardData | null>(null); const [isLoading, setIsLoading] = useState(true);
+  const [activeTab, setActiveTab] = useState<
+    "overview" | "performance" | "accessibility" | "seo"
+  >("overview");
+  const [isMonitoring, setIsMonitoring] = useState(false);
 
   // Initialize, monitoring, systems
-  const, initializeMonitorin, g = useCallb, a, c, k(() = > {
-    t, r, y {
-     } cat, c, h (err, o, r) {
-      conso, l, e.err, o, r("Error, initializing, monitoring syste, m, s:", err, o, r);
+  const, initializeMonitorin, g = useCallbac, k(() = > {
+    try {
+     } catch (error) {
+      console.error("Error, initializing, monitoring systems:", error);
     }
   }, []);
 
   // Stop, monitoring, systems
-  const, stopMonitorin, g = useCallb, a, c, k(() => {
-    t, r, y {
-      performanceOptimiz, e, r.stopMonitori, n, g(); accessibilityEnhanc, e, r.stopMonitori, n, g();
-      seoOptimiz, e, r.stopMonitori, n, g();
-      setIsMonitori, n, g(fal, s, e);
-    } cat, c, h (err, o, r) {
-      conso, l, e.err, o, r("Error, stopping, monitoring syste, m, s:", err, o, r);
+  const, stopMonitorin, g = useCallbac, k(() => {
+    try {
+      performanceOptimizer.stopMonitoring(); accessibilityEnhancer.stopMonitoring();
+      seoOptimizer.stopMonitoring();
+      setIsMonitoring(false);
+    } catch (error) {
+      console.error("Error, stopping, monitoring systems:", error);
     }
   }, []);
 
   // Update, dashboard, data
-  const, updateDashboardDat, a = useCallb, a, c, k(() => {
-    t, r, y {
-      const, performanceMetric, s = performanceOptimiz, e, r.getMetr, i, c, s(); const, performanceRepor, t = performanceOptimiz, e, r.generateRep, o, r, t(); const, accessibilityMetric, s = accessibilityEnhanc, e, r.getMetr, i, c, s(); const, accessibilityIssue, s = accessibilityEnhanc, e, r.getIss, u, e, s(); const, seoMetric, s = seoOptimiz, e, r.getMetr, i, c, s(); const, seoIssue, s = seoOptimiz, e, r.getIss, u, e, s(); const, systemHealt, h: SystemHeal, t, h = {
-        performan, c, e: performanceRepo, r, t.s, c, o, r, e,
-        accessibili, t, y: accessibilityMetri, c, s.sc, o, r, e,
-        s, e, o: seoMetri, c, s.sc, o, r, e,
-        overa, l, l: Ma, t, h.rou, n, d(
-          (performanceRepo, r, t.sco, r, e +
-            accessibilityMetri, c, s.sco, r, e +
-            seoMetri, c, s.sco, r, e) /
+  const, updateDashboardDat, a = useCallbac, k(() => {
+    try {
+      const, performanceMetric, s = performanceOptimizer.getMetric, s(); const, performanceRepor, t = performanceOptimizer.generateRepor, t(); const, accessibilityMetric, s = accessibilityEnhancer.getMetric, s(); const, accessibilityIssue, s = accessibilityEnhancer.getIssue, s(); const, seoMetric, s = seoOptimizer.getMetric, s(); const, seoIssue, s = seoOptimizer.getIssue, s(); const, systemHealt, h: SystemHealth = {
+        performance: performanceReport.sco, r, e,
+        accessibili, t, y: accessibilityMetrics.scor, ese, o: seoMetrics.scor, e,
+        overa, l, l: Math.round(
+          (performanceReport.score +
+            accessibilityMetrics.score +
+            seoMetrics.score) /
             , 3,
         ),
-      }; setDa, t, a({
-        systemHeal, t, h,
-        performanceMetri, c, s,
-        accessibilityMetri, c, s,
-        seoMetri, c, s,
-        optimizationSuggestio, n, s: performanceRepo, r, t.suggesti, o, n, s,
+      }; setData({
+        systemHealth,
+        performanceMetrics,
+        accessibilityMetrics,
+        seoMetrics,
+        optimizationSuggestions: performanceReport.suggestion, s,
         accessibilityIssu, e, s,
         seoIssu, e, s,
-        lastUpdat, e, d: Da, t, e.no, w(),
+        lastUpdat, e, d: Date.no, w(),
       });
-    } cat, c, h (err, o, r) {
-      conso, l, e.err, o, r("Error, updating, dashboard da, t, a:", err, o, r);
+    } catch (error) {
+      console.error("Error, updating, dashboard data:", error);
     }
   }, []);
 
   // Load, initial, data
-  useEffe, c, t(() => { 
-    const, loadDat, a = as, y, n, c () => {
-      setIsLoadi, n, g(tr, u, e); initializeMonitori, n, g();
+  useEffect(() => { 
+    const, loadDat, a = asyn, c () => {
+      setIsLoading(true); initializeMonitoring();
 
       // Wait, a, bit for, monitoring, to initialize, setTimeou, t(() = > {
-        updateDashboardDa, t, a();
-        setIsLoadi, n, g(fal, s, e);
-       }, 10, 0, 0);
+        updateDashboardData();
+        setIsLoading(false);
+       }, 1000);
     };
 
-    loadDa, t, a();
+    loadData();
 
-    // Set, up, periodic updates, const, interval = setInterv, a, l(updateDashboardD, a, t, a, 50, 0, 0); retu, r, n () => {
-      clearInterv, a, l(interv, a, l);
-      stopMonitori, n, g();
+    // Set, up, periodic updates, const, interval = setInterval(updateDashboardDat, a, 50, 0, 0); return () => {
+      clearInterval(interval);
+      stopMonitoring();
     };
-  }, [initializeMonitori, n, g, updateDashboardDa, t, a, stopMonitori, n, g]);
+  }, [initializeMonitoring, updateDashboardData, stopMonitoring]);
 
   // Handle, tab, change
   const, handleTabChang, e = (
-    t, a, b: "overvi, e, w" | "performan, c, e" | "accessibili, t, y" | "s, e, o",
+    tab: "overview" | "performance" | "accessibility" | "seo",
   ) => {
-    setActiveT, a, b(t, a, b);
+    setActiveTab(tab);
   };
 
-  // Get, health, status color, const, getHealthColor = (sco, r, e: num, b, e, r): stri, n, g = > { 
-    if (sco, r, e >= 9, 0) retu, r, n "te, x, t-gre, e, n-6, 0, 0"; if (sco, r, e  > = 70) retu, r, n "te, x, t-yell, o, w-6, 0, 0";
-    retu, r, n "te, x, t-r, e, d-60, 0";
+  // Get, health, status color, const, getHealthColor = (score: numbe, r): string = > { 
+    if (score >= 9, 0) return "text-green-600"; if (score  > = 70) return "text-yellow-600";
+    return "text-red-60, 0";
    };
 
-  // Get, health, status text, const, getHealthStatus = (sco, r, e: num, b, e, r): stri, n, g = > { 
-    if (sco, r, e >= 9, 0) retu, r, n "Excelle, n, t"; if (sco, r, e >= 70) retu, r, n "Go, o, d";
-    if (sco, r, e  > = 50) retu, r, n "Needs, Improvemen, t";
-    retu, r, n "P, o, o, r";
+  // Get, health, status text, const, getHealthStatus = (score: numbe, r): string = > { 
+    if (score >= 9, 0) return "Excellent"; if (score >= 70) return "Good";
+    if (score  > = 50) return "Needs, Improvemen, t";
+    return "Poo, r";
    };
 
-  if() { retu, r, n (
-      <div, classNam, e = "flex, item, s-center, justif, y-cente, r, h-64">
-        <div, classNam, e="anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2, borde, r-bl, u, e-6, 0, 0" />
+  if() { return (
+      <div, classNam, e = "flex, item, s-center, justif, y-centerh-64">
+        <div, classNam, e="animate-spin, rounde, d-fullh-12w-12, borde, r-b-2, borde, r-blue-600" />
       </di, v > );
-    }, if (!da, t, a) { 
-    retu, r, n (
-      <div, classNam, e = "te, x, t-center, p, y-8">
-        <p, classNam, e="te, x, t-gr, a, y-5, 0, 0">Unable, to, load dashboard, dat, a</p>
+    }, if (!data) { 
+    return (
+      <div, classNam, e = "text-centerpy-8">
+        <p, classNam, e="text-gray-500">Unable, to, load dashboard, dat, a</p>
       </di, v > );
    }
 
-  retu, r, n (
-    <div, classNam, e = "m, a, x-w-7xl, m, x-aut, o, p-6">
-      {/* Head, e, r */}
+  return (
+    <div, classNam, e = "max-w-7xlmx-autop-6">
+      {/* Header */}
       <div, classNam, e="mb-8">
-        <h1, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">
+        <h1, classNam, e="text-3xl, fon, t-bold, tex, t-gray-900mb-2">
           Comprehensive, System, Dashboard
         </h1>
-        <p, classNam, e="te, x, t-gr, a, y-6, 0, 0">
-          Re, a, l-time, monitoring, of performa, n, c, e, accessibili, t, y, and, SEO, metrics
+        <p, classNam, e="text-gray-600">
+          Real-time, monitoring, of performanc, e, accessibili, t, y, and, SEO, metrics
         </p>
         <div, classNam, e = "mt-4, flex, items-center, spac, e-x-4">
-          <div, classNam, e={ `px-3, p, y-1, rounde, d-full, tex, t-sm, fon, t-medi, u, m ${
-              isMonitori, n, g
-                 ? "bg-gre, e, n-100, tex, t-gre, e, n-8, 0, 0"
-                 : "bg-r, e, d-100, tex, t-r, e, d-8, 0, 0"
+          <div, classNam, e={ `px-3py-1, rounde, d-full, tex, t-sm, fon, t-medium ${
+              isMonitoring
+                 ? "bg-green-100, tex, t-green-800"
+                 : "bg-red-100, tex, t-red-800"
              }`}
           >
-            { isMonitori, n, g  ? "Monitoring, Activ, e"  : "Monitoring, Inactiv, e" }
-          </d, i, v>
-          <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-5, 0, 0">
-            Last, update, d: {new, Dat, e(da, t, a.lastUpda, t, e, d).toLocaleTimeStr, i, n, g()}
-          </sp, a, n>
-        </d, i, v>
-      </d, i, v>
+            { isMonitoring  ? "Monitoring, Activ, e"  : "Monitoring, Inactiv, e" }
+          </div>
+          <span, classNam, e="text-sm, tex, t-gray-500">
+            Last, update, d: {new, Dat, e(data.lastUpdate, d).toLocaleTimeStrin, g()}
+          </span>
+        </div>
+      </div>
 
       {/* System, Health, Overview */}
-      <div, classNam, e = "grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-8">
+      <div, classNam, e = "grid, gri, d-cols-1md: grid-cols-4, ga, p-6mb-8">
         <div, classNam, e="bg-white, rounde, d-lg, shadow, p-6">
-          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-            <d, i, v>
-              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">
+          <div, classNam, e="flex, item, s-center, justif, y-between">
+            <div>
+              <p, classNam, e="text-sm, fon, t-medium, tex, t-gray-600">
                 Overall, Healt, h
-              </p > <p, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getHealthCol, o, r(da, t, a.systemHeal, t, h.ove, r, a, l, l)}`}
+              </p > <p, classNam, e={`text-2xl, fon, t-bold ${getHealthColor(data.systemHealth.overa, l, l)}`}
               >
-                {da, t, a.systemHeal, t, h.overa, l, l}%
+                {data.systemHealth.overall}%
               </p>
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-5, 0, 0">
-                {getHealthStat, u, s(da, t, a.systemHeal, t, h.over, a, l, l)}
+              <p, classNam, e = "text-sm, tex, t-gray-500">
+                {getHealthStatus(data.systemHealth.overal, l)}
               </p>
-            </d, i, v>
-            <div, classNam, e = "w-1, 2, h-12, b, g-bl, u, e-100, rounde, d-full, flex, items-center, justif, y-cent, e, r">
-              <svg, classNam, e="w-6 h-6, tex, t-bl, u, e-6, 0, 0"
-                fi, l, l="no, n, e"
-                stro, k, e="currentCol, o, r"
-                viewB, o, x="0, 0, 24 24"
+            </div>
+            <div, classNam, e = "w-12h-12bg-blue-100, rounde, d-full, flex, items-center, justif, y-center">
+              <svg, classNam, e="w-6 h-6, tex, t-blue-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0, 0, 24 24"
               >
-                <path, strokeLineca, p="rou, n, d"
-                  strokeLinejo, i, n="rou, n, d"
-                  strokeWid, t, h = { , 2 }, d = "M9, 19, v-6a2, 2, 0 00-2-2H5a2, 2, 0 00-2, 2v6a2, 2 0, 002, 2h2a2 2, 0, 002-2zm0, 0V9a2, 2 0, 01, 2-2h2a2, 2, 0 012, 2v10, m-6, 0a2, 2 0, 002, 2h2a2 2, 0, 002-2m0, 0V5a2, 2 0, 01, 2-2h2a2, 2, 0 012, 2v14a2, 2 0, 0, 1-2, 2, h-2a2, 2, 0 01-2-2z"
+                <path, strokeLineca, p="round"
+                  strokeLinejoin="round"
+                  strokeWidth = { , 2 }, d = "M9, 19, v-6a220 00-2-2H5a220 00-2, 2v6a2, 2 0, 002, 2h2a2 2, 0, 002-2zm0, 0V9a2, 2 0, 01, 2-2h2a220 012, 2v10, m-6, 0a2, 2 0, 002, 2h2a2 2, 0, 002-2m0, 0V5a2, 2 0, 01, 2-2h2a220 012, 2v14a2, 2 001-22h-2a220 01-2-2z"
                 />
-              </s, v, g>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </svg>
+            </div>
+          </div>
+        </div>
 
         <div, classNam, e="bg-white, rounde, d-lg, shadow, p-6">
-          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-            <d, i, v>
-              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Performan, c, e</p > <p, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getHealthCol, o, r(da, t, a.systemHeal, t, h.performa, n, c, e)}`}
+          <div, classNam, e="flex, item, s-center, justif, y-between">
+            <div>
+              <p, classNam, e="text-sm, fon, t-medium, tex, t-gray-600">Performance</p > <p, classNam, e={`text-2xl, fon, t-bold ${getHealthColor(data.systemHealth.performanc, e)}`}
               >
-                {da, t, a.systemHeal, t, h.performan, c, e}%
+                {data.systemHealth.performance}%
               </p>
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-5, 0, 0">
-                {getHealthStat, u, s(da, t, a.systemHeal, t, h.performa, n, c, e)}
+              <p, classNam, e = "text-sm, tex, t-gray-500">
+                {getHealthStatus(data.systemHealth.performanc, e)}
               </p>
-            </d, i, v>
-            <div, classNam, e = "w-1, 2, h-12, b, g-gre, e, n-100, rounde, d-full, flex, items-center, justif, y-cent, e, r">
-              <svg, classNam, e="w-6 h-6, tex, t-gre, e, n-6, 0, 0"
-                fi, l, l="no, n, e"
-                stro, k, e="currentCol, o, r"
-                viewB, o, x="0, 0, 24 24"
+            </div>
+            <div, classNam, e = "w-12h-12bg-green-100, rounde, d-full, flex, items-center, justif, y-center">
+              <svg, classNam, e="w-6 h-6, tex, t-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0, 0, 24 24"
               >
-                <path, strokeLineca, p="rou, n, d"
-                  strokeLinejo, i, n="rou, n, d"
-                  strokeWid, t, h = { , 2 }, d = "M13, 10V3L4, 14h7v7l9-1, 1, h-7z"
+                <path, strokeLineca, p="round"
+                  strokeLinejoin="round"
+                  strokeWidth = { , 2 }, d = "M13, 10V3L4, 14h7v7l9-11h-7z"
                 />
-              </s, v, g>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </svg>
+            </div>
+          </div>
+        </div>
 
         <div, classNam, e="bg-white, rounde, d-lg, shadow, p-6">
-          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-            <d, i, v>
-              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">Accessibili, t, y</p > <p, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getHealthCol, o, r(da, t, a.systemHeal, t, h.accessibil, i, t, y)}`}
+          <div, classNam, e="flex, item, s-center, justif, y-between">
+            <div>
+              <p, classNam, e="text-sm, fon, t-medium, tex, t-gray-600">Accessibility</p > <p, classNam, e={`text-2xl, fon, t-bold ${getHealthColor(data.systemHealth.accessibilit, y)}`}
               >
-                {da, t, a.systemHeal, t, h.accessibili, t, y}%
+                {data.systemHealth.accessibility}%
               </p>
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-5, 0, 0">
-                {getHealthStat, u, s(da, t, a.systemHeal, t, h.accessibil, i, t, y)}
+              <p, classNam, e = "text-sm, tex, t-gray-500">
+                {getHealthStatus(data.systemHealth.accessibilit, y)}
               </p>
-            </d, i, v>
-            <div, classNam, e = "w-1, 2, h-12, b, g-purp, l, e-100, rounde, d-full, flex, items-center, justif, y-cent, e, r">
-              <svg, classNam, e="w-6 h-6, tex, t-purp, l, e-6, 0, 0"
-                fi, l, l="no, n, e"
-                stro, k, e="currentCol, o, r"
-                viewB, o, x="0, 0, 24 24"
+            </div>
+            <div, classNam, e = "w-12h-12bg-purple-100, rounde, d-full, flex, items-center, justif, y-center">
+              <svg, classNam, e="w-6 h-6, tex, t-purple-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0, 0, 24 24"
               >
-                <path, strokeLineca, p="rou, n, d"
-                  strokeLinejo, i, n="rou, n, d"
-                  strokeWid, t, h = { , 2 }, d = "M15, 12a3, 3 0, 1, 1-6, 0, 3 3, 0, 016 0z"
+                <path, strokeLineca, p="round"
+                  strokeLinejoin="round"
+                  strokeWidth = { , 2 }, d = "M15, 12a3, 3 011-603 3, 0, 016 0z"
                 />
-                <path, strokeLineca, p="rou, n, d"
-                  strokeLinejo, i, n="rou, n, d"
-                  strokeWid, t, h = { , 2 }, d = "M2.458, 12C, 3.73, 2, 7.94, 3, 7.523, 5, 12 5, c, 4.478, 0, 8.26, 8, 2.94, 3, 9.54, 2, 7-1.27, 4, 4.0, 5, 7-5.06, 4, 7-9.54, 2, 7-4.47, 7, 0-8.2, 6, 8-2.9, 4, 3-9.5, 4, 2-7z"
+                <path, strokeLineca, p="round"
+                  strokeLinejoin="round"
+                  strokeWidth = { , 2 }, d = "M2.458, 12C, 3.7327.9437.523, 5, 12 5c4.47808.2682.9439.5427-1.2744.057-5.0647-9.5427-4.4770-8.268-2.943-9.542-7z"
                 />
-              </s, v, g>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </svg>
+            </div>
+          </div>
+        </div>
 
         <div, classNam, e="bg-white, rounde, d-lg, shadow, p-6">
-          <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-            <d, i, v>
-              <p, classNam, e="te, x, t-sm, fon, t-medium, tex, t-gr, a, y-6, 0, 0">S, E, O</p > <p, classNam, e={`te, x, t-2xl, fon, t-bo, l, d ${getHealthCol, o, r(da, t, a.systemHeal, t, h.se, o)}`}
+          <div, classNam, e="flex, item, s-center, justif, y-between">
+            <div>
+              <p, classNam, e="text-sm, fon, t-medium, tex, t-gray-600">SEO</p > <p, classNam, e={`text-2xl, fon, t-bold ${getHealthColor(data.systemHealth.se, o)}`}
               >
-                {da, t, a.systemHeal, t, h.s, e, o}%
+                {data.systemHealth.seo}%
               </p>
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-5, 0, 0">
-                {getHealthStat, u, s(da, t, a.systemHeal, t, h.se, o)}
+              <p, classNam, e = "text-sm, tex, t-gray-500">
+                {getHealthStatus(data.systemHealth.se, o)}
               </p>
-            </d, i, v>
-            <div, classNam, e = "w-1, 2, h-12, b, g-oran, g, e-100, rounde, d-full, flex, items-center, justif, y-cent, e, r">
-              <svg, classNam, e="w-6 h-6, tex, t-oran, g, e-6, 0, 0"
-                fi, l, l="no, n, e"
-                stro, k, e="currentCol, o, r"
-                viewB, o, x="0, 0, 24 24"
+            </div>
+            <div, classNam, e = "w-12h-12bg-orange-100, rounde, d-full, flex, items-center, justif, y-center">
+              <svg, classNam, e="w-6 h-6, tex, t-orange-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0, 0, 24 24"
               >
-                <path, strokeLineca, p="rou, n, d"
-                  strokeLinejo, i, n="rou, n, d"
-                  strokeWid, t, h = { , 2 }, d = "M21, 21, l-6-6, m, 2-5a7, 7, 0 11-14, 0, 7 7, 0, 0114 0z"
+                <path, strokeLineca, p="round"
+                  strokeLinejoin="round"
+                  strokeWidth = { , 2 }, d = "M21, 21, l-6-6m2-5a770 11-1407 7, 0, 0114 0z"
                 />
-              </s, v, g>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      {/* Ta, b, s */}
+      {/* Tabs */}
       <div, classNam, e="mb-6">
         <nav, classNam, e="flex, spac, e-x-8">
           {[
-            { id: "over, v, i, e, w", lab, e, l: "Overv, i, e, w" },
-            { id: "performa, n, c, e", lab, e, l: "Performa, n, c, e" },
-            { id: "accessibil, i, t, y", lab, e, l: "Accessibil, i, t, y" },
-            { id: "se, o", lab, e, l: "SE, O" },
-          ].m, a, p((t, a, b) => (
-            <button, ke, y = { t, a, b.i, d }, onCli, c, k={  () =  > handleTabChan, g, e(t, a, b.id, as, any)  } classNa, m, e = { `py-2, p, x-1, borde, r-b-2, fon, t-medium, tex, t-sm ${
-                activeT, a, b === t, a, b.id
-                   ? "bord, e, r-bl, u, e-500, tex, t-bl, u, e-6, 0, 0"
-                  : "bord, e, r-transparent, tex, t-gr, a, y-500, hove, r: te, x, t-gr, a, y-700, hove, r : bord, e, r-gr, a, y-3, 0, 0"
+            { id: "overvi, e, w", label: "Overvie, w" },
+            { id: "performanc, e", label: "Performanc, e" },
+            { id: "accessibilit, y", label: "Accessibilit, y" },
+            { id: "se, o", label: "SE, O" },
+          ].map((tab) => (
+            <button, ke, y = { tab.i, d }, onClick={  () =  > handleTabChange(tab.id, as, any)  } className = { `py-2px-1, borde, r-b-2, fon, t-medium, tex, t-sm ${
+                activeTab === tab.id
+                   ? "border-blue-500, tex, t-blue-600"
+                  : "border-transparent, tex, t-gray-500, hove, r: text-gray-700, hove, r : border-gray-300"
                }`}
             >
-              {t, a, b.lab, e, l}
-            </butt, o, n>
+              {tab.label}
+            </button>
           ))}
-        </n, a, v>
-      </d, i, v>
+        </nav>
+      </div>
 
       {/* Tab, Conten, t */}
       <div, classNam, e = "bg-white, rounde, d-lg, shado, w">
-        {  activeT, a, b === "overvi, e, w"  && (
+        {  activeTab === "overview"  && (
           <div, classNam, e="p-6">
-            <h2, classNam, e="te, x, t-xl, fon, t-semibold, m, b-4">System, Overvie, w</h2>
-            <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-6">
-              <d, i, v>
-                <h3, classNam, e="te, x, t-lg, fon, t-medium, m, b-3">Issues, Summar, y</h3>
-                <div, classNam, e="spa, c, e-y-2">
-                  <div, classNam, e="flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
+            <h2, classNam, e="text-xl, fon, t-semiboldmb-4">System, Overvie, w</h2>
+            <div, classNam, e="grid, gri, d-cols-1md: grid-cols-2, ga, p-6">
+              <div>
+                <h3, classNam, e="text-lg, fon, t-mediummb-3">Issues, Summar, y</h3>
+                <div, classNam, e="space-y-2">
+                  <div, classNam, e="flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">
                       Performance, Issue, s:
-                    </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m" > {da, t, a.optimizationSuggestio, n, s.le, n, g, t, h  }
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
-                      Accessibility, Issue, s: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.accessibilityIssu, e, s.le, n, g, t, h}
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">SEO, Issue, s: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.seoIssu, e, s.le, n, g, t, h}
-                    </sp, a, n>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-              <d, i, v>
-                <h3, classNam, e = "te, x, t-lg, fon, t-medium, m, b-3">Quick, Action, s</h3>
-                <div, classNam, e="spa, c, e-y-2">
-                  <button, onCli, c, k = {  () = > accessibilityEnhanc, e, r.fixCommonIssu, e, s()  }, classNa, m, e = "w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, b, g-bl, u, e-50, tex, t-bl, u, e-700, rounded, hover: bg-bl, u, e-1, 0, 0"
+                    </span>
+                    <span, classNam, e="text-sm, fon, t-medium" > {data.optimizationSuggestions.leng, t, h  }
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">
+                      Accessibility, Issue, s: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.accessibilityIssues.leng, t, h}
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">SEO, Issue, s: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.seoIssues.leng, t, h}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3, classNam, e = "text-lg, fon, t-mediummb-3">Quick, Action, s</h3>
+                <div, classNam, e="space-y-2">
+                  <button, onCli, c, k = {  () = > accessibilityEnhancer.fixCommonIssues()  }, className = "w-full, tex, t-leftpx-3py-2, tex, t-smbg-blue-50, tex, t-blue-700, rounded, hover: bg-blue-100"
                   >
-                    Fix, Common, Accessibility Issu, e, s
-                  </butt, o, n>
-                  <button, onCli, c, k = {  () = > seoOptimiz, e, r.optimizeP, a, g, e()  }, classNa, m, e = "w-full, tex, t-left, p, x-3, p, y-2, tex, t-sm, b, g-gre, e, n-50, tex, t-gre, e, n-700, rounded, hover: bg-gre, e, n-1, 0, 0"
+                    Fix, Common, Accessibility Issues
+                  </button>
+                  <button, onCli, c, k = {  () = > seoOptimizer.optimizePag, e()  }, className = "w-full, tex, t-leftpx-3py-2, tex, t-smbg-green-50, tex, t-green-700, rounded, hover: bg-green-100"
                   >
                     Optimize, SE, O
-                  </butt, o, n>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
 
-        {   activeT, a, b = == "performan, c, e"  && (
+        {   activeTab = == "performance"  && (
           <div, classNam, e="p-6">
-            <h2, classNam, e="te, x, t-xl, fon, t-semibold, m, b-4">Performance, Metric, s</h2>
-            {da, t, a.performanceMetri, c, s  ? (
-              <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-3, ga, p-6">
-                <d, i, v>
-                  <h3, classNam, e="te, x, t-lg, fon, t-medium, m, b-3">Core, Web, Vitals</h3>
-                  <div, classNam, e="spa, c, e-y-2">
-                    <div, classNam, e="flex, justif, y-betwe, e, n">
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">L, C, P : </sp, a, n>
-                      <span, classNam, e="te, x, t-sm, fon, t-medi, u, m" > {da, t, a.performanceMetri, c, s.largestContentfulPai, n, t.toFi, x, e, d(
+            <h2, classNam, e="text-xl, fon, t-semiboldmb-4">Performance, Metric, s</h2>
+            {data.performanceMetrics  ? (
+              <div, classNam, e="grid, gri, d-cols-1md: grid-cols-3, ga, p-6">
+                <div>
+                  <h3, classNam, e="text-lg, fon, t-mediummb-3">Core, Web, Vitals</h3>
+                  <div, classNam, e="space-y-2">
+                    <div, classNam, e="flex, justif, y-between">
+                      <span, classNam, e="text-sm, tex, t-gray-600">LCP : </span>
+                      <span, classNam, e="text-sm, fon, t-medium" > {data.performanceMetrics.largestContentfulPaint.toFixe, d(
                           , 0,
                         )   }
                         ms
-                      </sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e = "flex, justif, y-betwe, e, n">
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">F, I, D: </sp, a, n>
-                      <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                        {da, t, a.performanceMetri, c, s.firstInputDel, a, y.toFi, x, e, d(, 0)}ms
-                      </sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e = "flex, justif, y-betwe, e, n">
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">C, L, S: </sp, a, n>
-                      <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                        {da, t, a.performanceMetri, c, s.cumulativeLayoutShi, f, t.toFi, x, e, d(
+                      </span>
+                    </div>
+                    <div, classNam, e = "flex, justif, y-between">
+                      <span, classNam, e="text-sm, tex, t-gray-600">FID: </span>
+                      <span, classNam, e="text-sm, fon, t-medium">
+                        {data.performanceMetrics.firstInputDelay.toFixe, d(, 0)}ms
+                      </span>
+                    </div>
+                    <div, classNam, e = "flex, justif, y-between">
+                      <span, classNam, e="text-sm, tex, t-gray-600">CLS: </span>
+                      <span, classNam, e="text-sm, fon, t-medium">
+                        {data.performanceMetrics.cumulativeLayoutShift.toFixe, d(
                           , 3,
                         )}
-                      </sp, a, n>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v>
-                  <h3, classNam, e = "te, x, t-lg, fon, t-medium, m, b-3">Resource, Metric, s</h3>
-                  <div, classNam, e="spa, c, e-y-2">
-                    <div, classNam, e="flex, justif, y-betwe, e, n">
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Load, Tim, e: </sp, a, n>
-                      <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                        {da, t, a.performanceMetri, c, s.loadTi, m, e.toFi, x, e, d(, 0)}ms
-                      </sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e = "flex, justif, y-betwe, e, n">
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
-                        Memory, Usag, e: </sp, a, n>
-                      <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3, classNam, e = "text-lg, fon, t-mediummb-3">Resource, Metric, s</h3>
+                  <div, classNam, e="space-y-2">
+                    <div, classNam, e="flex, justif, y-between">
+                      <span, classNam, e="text-sm, tex, t-gray-600">Load, Tim, e: </span>
+                      <span, classNam, e="text-sm, fon, t-medium">
+                        {data.performanceMetrics.loadTime.toFixe, d(, 0)}ms
+                      </span>
+                    </div>
+                    <div, classNam, e = "flex, justif, y-between">
+                      <span, classNam, e="text-sm, tex, t-gray-600">
+                        Memory, Usag, e: </span>
+                      <span, classNam, e="text-sm, fon, t-medium">
                         {(
-                          da, t, a.performanceMetri, c, s.memoryUsa, g, e /
-                          10, 2, 4 /
-                          1, 0, 2, 4
-                        ).toFix, e, d(, 1)}
+                          data.performanceMetrics.memoryUsage /
+                          1024 /
+                          102, 4
+                        ).toFixed(, 1)}
                         MB
-                      </sp, a, n>
-                    </d, i, v>
-                    <div, classNam, e = "flex, justif, y-betwe, e, n">
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
-                        Network, Request, s: </sp, a, n>
-                      <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                        {da, t, a.performanceMetri, c, s.networkRequ, e, s, t, s}
-                      </sp, a, n>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                <d, i, v>
-                  <h3, classNam, e = "te, x, t-lg, fon, t-medium, m, b-3">
+                      </span>
+                    </div>
+                    <div, classNam, e = "flex, justif, y-between">
+                      <span, classNam, e="text-sm, tex, t-gray-600">
+                        Network, Request, s: </span>
+                      <span, classNam, e="text-sm, fon, t-medium">
+                        {data.performanceMetrics.networkReques, t, s}
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3, classNam, e = "text-lg, fon, t-mediummb-3">
                     Optimization, Suggestion, s
                   </h3>
-                  <div, classNam, e="spa, c, e-y-2, ma, x-h-48, overflo, w-y-au, t, o">
-                    { da, t, a.optimizationSuggestio, n, s.m, a, p((suggest, i, o, n, ind, e, x) = > (
-                      <div, ke, y = { in, d, e, x  }, classNa, m, e = "p-2, b, g-yell, o, w-50, rounded, text-sm"
+                  <div, classNam, e="space-y-2, ma, x-h-48, overflo, w-y-auto">
+                    { data.optimizationSuggestions.map((suggestio, n, ind, e, x) = > (
+                      <div, ke, y = { inde, x  }, className = "p-2bg-yellow-50, rounded, text-sm"
                       >
-                        <div, classNam, e="fo, n, t-medium, tex, t-yell, o, w-8, 0, 0">
-                          {suggesti, o, n.tit, l, e}
-                        </d, i, v>
-                        <div, classNam, e="te, x, t-yell, o, w-7, 0, 0">
-                          {suggesti, o, n.descripti, o, n}
-                        </d, i, v>
+                        <div, classNam, e="font-medium, tex, t-yellow-800">
+                          {suggestion.title}
+                        </div>
+                        <div, classNam, e="text-yellow-700">
+                          {suggestion.description}
+                        </div>
                       </di, v>
                     ))}
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                  </div>
+                </div>
+              </div>
             ) : (
-              <p, classNam, e = "te, x, t-gr, a, y-5, 0, 0">Performance, metrics, not availab, l, e</, p>
+              <p, classNam, e = "text-gray-500">Performance, metrics, not available</, p>
             )}
-          </d, i, v>
+          </div>
         )}
 
-        {  activeT, a, b = == "accessibili, t, y"  && (
+        {  activeTab = == "accessibility"  && (
           <div, classNam, e="p-6">
-            <h2, classNam, e="te, x, t-xl, fon, t-semibold, m, b-4">
+            <h2, classNam, e="text-xl, fon, t-semiboldmb-4">
               Accessibility, Metric, s
             </h2>
-            <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-6">
-              <d, i, v>
-                <h3, classNam, e="te, x, t-lg, fon, t-medium, m, b-3">Issues, Breakdow, n</h3>
-                <div, classNam, e="spa, c, e-y-2">
-                  <div, classNam, e="flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Total, Issue, s:</sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m" > {da, t, a.accessibilityMetri, c, s.totalIs, s, u, e, s  }
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-r, e, d-6, 0, 0">Erro, r, s: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.accessibilityMetri, c, s.er, r, o, r, s}
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-yell, o, w-6, 0, 0">Warnin, g, s: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.accessibilityMetri, c, s.warn, i, n, g, s}
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-bl, u, e-6, 0, 0">In, f, o: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.accessibilityMetri, c, s.in, f, o}
-                    </sp, a, n>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-              <d, i, v>
-                <h3, classNam, e = "te, x, t-lg, fon, t-medium, m, b-3">Recent, Issue, s</h3>
-                <div, classNam, e="spa, c, e-y-2, ma, x-h-48, overflo, w-y-au, t, o">
-                  { da, t, a.accessibilityIssu, e, s.sli, c, e(, 0, 5).m, a, p((iss, u, e, ind, e, x) = > (
-                    <div, ke, y = { in, d, e, x  }, classNa, m, e = "p-2, b, g-r, e, d-50, rounded, text-sm">
-                      <div, classNam, e="fo, n, t-medium, tex, t-r, e, d-8, 0, 0">
-                        {iss, u, e.messa, g, e}
-                      </d, i, v>
-                      <div, classNam, e="te, x, t-r, e, d-7, 0, 0">{iss, u, e.suggesti, o, n}</d, i, v>
+            <div, classNam, e="grid, gri, d-cols-1md: grid-cols-2, ga, p-6">
+              <div>
+                <h3, classNam, e="text-lg, fon, t-mediummb-3">Issues, Breakdow, n</h3>
+                <div, classNam, e="space-y-2">
+                  <div, classNam, e="flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">Total, Issue, s:</span>
+                    <span, classNam, e="text-sm, fon, t-medium" > {data.accessibilityMetrics.totalIssu, e, s  }
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-red-600">Errors: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.accessibilityMetrics.erro, r, s}
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-yellow-600">Warnings: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.accessibilityMetrics.warnin, g, s}
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-blue-600">Info: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.accessibilityMetrics.info}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3, classNam, e = "text-lg, fon, t-mediummb-3">Recent, Issue, s</h3>
+                <div, classNam, e="space-y-2, ma, x-h-48, overflo, w-y-auto">
+                  { data.accessibilityIssues.slice(, 0, 5).map((issue, index) = > (
+                    <div, ke, y = { inde, x  }, className = "p-2bg-red-50, rounded, text-sm">
+                      <div, classNam, e="font-medium, tex, t-red-800">
+                        {issue.message}
+                      </div>
+                      <div, classNam, e="text-red-700">{issue.suggestion}</div>
                     </di, v>
                   ))}
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
 
-        {  activeT, a, b = == "s, e, o"  && (
+        {  activeTab = == "seo"  && (
           <div, classNam, e="p-6">
-            <h2, classNam, e="te, x, t-xl, fon, t-semibold, m, b-4">SEO, Metric, s</h2>
-            <div, classNam, e="grid, gri, d-co, l, s-1, m, d: gr, i, d-co, l, s-2, ga, p-6">
-              <d, i, v>
-                <h3, classNam, e="te, x, t-lg, fon, t-medium, m, b-3">Page, Analysi, s</h3>
-                <div, classNam, e="spa, c, e-y-2">
-                  <div, classNam, e="flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Page, Titl, e:</sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medium, truncate, max-w-xs" > {da, t, a.seoMetri, c, s.pageT, i, t, l, e  }
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">
-                      Meta, Descriptio, n: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.seoMetri, c, s.metaDescripti, o, n.le, n, g, t, h} cha, r, s
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Imag, e, s: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.seoMetri, c, s.imageC, o, u, n, t}
-                    </sp, a, n>
-                  </d, i, v>
-                  <div, classNam, e = "flex, justif, y-betwe, e, n">
-                    <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-6, 0, 0">Lin, k, s: </sp, a, n>
-                    <span, classNam, e="te, x, t-sm, fon, t-medi, u, m">
-                      {da, t, a.seoMetri, c, s.linkC, o, u, n, t}
-                    </sp, a, n>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-              <d, i, v>
-                <h3, classNam, e = "te, x, t-lg, fon, t-medium, m, b-3">SEO, Issue, s</h3>
-                <div, classNam, e="spa, c, e-y-2, ma, x-h-48, overflo, w-y-au, t, o">
-                  { da, t, a.seoIssu, e, s.sli, c, e(, 0, 5).m, a, p((iss, u, e, ind, e, x) = > (
-                    <div, ke, y = { in, d, e, x  }, classNa, m, e = "p-2, b, g-oran, g, e-50, rounded, text-sm"
+            <h2, classNam, e="text-xl, fon, t-semiboldmb-4">SEO, Metric, s</h2>
+            <div, classNam, e="grid, gri, d-cols-1md: grid-cols-2, ga, p-6">
+              <div>
+                <h3, classNam, e="text-lg, fon, t-mediummb-3">Page, Analysi, s</h3>
+                <div, classNam, e="space-y-2">
+                  <div, classNam, e="flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">Page, Titl, e:</span>
+                    <span, classNam, e="text-sm, fon, t-medium, truncate, max-w-xs" > {data.seoMetrics.pageTit, l, e  }
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">
+                      Meta, Descriptio, n: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.seoMetrics.metaDescription.leng, t, h} chars
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">Images: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.seoMetrics.imageCou, n, t}
+                    </span>
+                  </div>
+                  <div, classNam, e = "flex, justif, y-between">
+                    <span, classNam, e="text-sm, tex, t-gray-600">Links: </span>
+                    <span, classNam, e="text-sm, fon, t-medium">
+                      {data.seoMetrics.linkCou, n, t}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h3, classNam, e = "text-lg, fon, t-mediummb-3">SEO, Issue, s</h3>
+                <div, classNam, e="space-y-2, ma, x-h-48, overflo, w-y-auto">
+                  { data.seoIssues.slice(, 0, 5).map((issue, index) = > (
+                    <div, ke, y = { inde, x  }, className = "p-2bg-orange-50, rounded, text-sm"
                     >
-                      <div, classNam, e="fo, n, t-medium, tex, t-oran, g, e-8, 0, 0">
-                        {iss, u, e.messa, g, e}
-                      </d, i, v>
-                      <div, classNam, e="te, x, t-oran, g, e-7, 0, 0">{iss, u, e.suggesti, o, n}</d, i, v>
+                      <div, classNam, e="font-medium, tex, t-orange-800">
+                        {issue.message}
+                      </div>
+                      <div, classNam, e="text-orange-700">{issue.suggestion}</div>
                     </di, v>
                   ))}
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                </div>
+              </div>
+            </div>
+          </div>
         )}
-      </d, i, v>
-    </d, i, v>
+      </div>
+    </div>
   );
 };
 

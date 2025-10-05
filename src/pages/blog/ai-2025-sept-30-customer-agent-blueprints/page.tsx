@@ -1,31 +1,31 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function CustomerAgentBlueprin, t, s(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Customer, Agent, Blueprints — Safe, Autonom, y</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Playbooks, for, CX agents, with, KPI scoreca, r, d, s, budgeted, action, s, canari, e, s, and, deterministic, rollback.'
+export, default, function CustomerAgentBlueprints(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Customer, Agent, Blueprints — Safe, Autonom, y</title>
+        <meta, nam, e='description'
+          content='Playbooks, for, CX agents, with, KPI scorecard, s, budgeted, action, s, canari, e, s, and, deterministic, rollback.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-custom, e, r-age, n, t-blueprin, t, s'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-sept-30-customer-agent-blueprints'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           Customer, Agent, Blueprints
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Safe, autonomy, with bud, g, e, t, s, K, P, I‑linked, canarie, s, and, instant, rollback.
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          Safe, autonomy, with budge, tsK, P, I‑linked, canarie, s, and, instant, rollback.
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Ship, customer, experience agents, that, teams can, trus, t. Use, budgeted, action, s, approval, gate, s, live, canaries, wired to, KPI, s, and, deterministic, rollback to, contain, incidents in, second, s.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

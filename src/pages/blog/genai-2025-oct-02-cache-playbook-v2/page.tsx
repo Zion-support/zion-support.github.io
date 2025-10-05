@@ -1,33 +1,33 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function CachePlaybook, V, 2(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>GenAI, 202, 5: Cache, Playbook, v2</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Tier, e, d + semantic, caches, with eval, gates, for 50–70% savings, and, stable UX.'
+export, default, function CachePlaybookV2(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>GenAI, 202, 5: Cache, Playbook, v2</title>
+        <meta, nam, e='description'
+          content='Tiered + semantic, caches, with eval, gates, for 50–70% savings, and, stable UX.'
         />
-        <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-02-cac, h, e-playbo, o, k-v2'
+        <link, re, l='canonical'
+          href='https://ziontechgroup.com/blog/genai-2025-oct-02-cache-playbook-v2'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           GenAI, 202, 5: Cache, Playbook, v2
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, classNam, e='text-zion-slate-lightmb-8'>
           A, practical, guide to, semantic, caching with, KP, I-linked, scorecards, and
-          rollba, c, k.
+          rollback.
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Deploy, mult, i-tier, caches, and semantic, retrieval, to cut, costs, while
             preserving, experienc, e. Gate, cache, routes with, evals, and trigger, rollback, when KPIs, regres, s.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

@@ -1,32 +1,32 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// Minimal, type, s; removets-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function BreakingEnterpriseAIBreakthroughs20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Sep, t, 3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroug, h, s</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='8, productio, n‑ready, pattern, s: roll, b, a, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e.'
+export, default, function BreakingEnterpriseAIBreakthroughs2025(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Sept3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroughs</title>
+        <meta, nam, e = 'description'
+          content='8, productio, n‑ready, pattern, s: rollba, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-breaki, n, g-enterpri, s, e-ai-breakthroug, h, s'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-sept-30-breaking-enterprise-ai-breakthroughs'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Se, p, t , 3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroug, h, s
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
+          Sept , 3, 0, 20, 2, 5: Breaking, Enterprise, AI Breakthroughs
         </h1>
-        <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          8, productio, n‑ready, pattern, s: roll, b, a, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e.
+        <p, classNam, e = 'text-zion-slate-lightmb-8'>
+          8, productio, n‑ready, pattern, s: rollba, c, k, scorecar, d, s, consentless, analytic, s, and, mor, e.
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollb, a, c, k, K, P, I‑linked, scorecard, s, consentless, analytic, s, budg, e, t‑aware, routin, g, on‑device, aggregatio, n, and, mor, e. Each, pattern, includes
+            Explore, eight, enterprise‑ready, patterns, you can, deploy, now: runtime, rollb, a, ckK, P, I‑linked, scorecard, s, consentless, analytic, s, budget‑aware, routin, g, on‑device, aggregatio, n, and, mor, e. Each, pattern, includes
             reference, architecture, notes and, rollout, guardrails.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

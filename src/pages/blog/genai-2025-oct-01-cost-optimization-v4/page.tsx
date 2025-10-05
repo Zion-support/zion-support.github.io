@@ -1,38 +1,38 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function GenAICostOptimization, V, 4(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>
-          GenAI, Cost, Optimization v4 — 60–80% Savi, n, g, s, Stable, Qualit, y
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Tiered, routi, n, g, semantic, cache, s, selective, distillatio, n, and, eva, l-gated, fallbacks, to slash, cost, while preserving, UX, KPIs.'
+export, default, function GenAICostOptimizationV4(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>
+          GenAI, Cost, Optimization v4 — 60–80% Saving, s, Stable, Qualit, y
+        </title>
+        <meta, nam, e = 'description'
+          content='Tiered, routi, n, g, semantic, cache, s, selective, distillatio, n, and, eva, l-gated, fallbacks, to slash, cost, while preserving, UX, KPIs.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-co, s, t-optimizati, o, n-v4'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/genai-2025-oct-01-cost-optimization-v4'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           GenAI, Cost, Optimization v4
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Tier, Routin, g • Semantic, Cache, s • Distillati, o, n • Ev, a, l-Gated, Fallback, s
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          Tier, Routin, g • Semantic, Cache, s • Distillation • Eval-Gated, Fallback, s
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            Cut, inference, spend by, 6, 0–80% while, preserving, product KP, I, s. This, blueprint, covers co, s, t-aware, rout, e, r, s, semantic, cache, s, selective, distillatio, n, and, eva, l-gated, fallbacks, that keep, quality, stable
+            Cut, inference, spend by60–80% while, preserving, product KPIs. This, blueprint, covers cost-aware, rout, e, r, s, semantic, cache, s, selective, distillatio, n, and, eva, l-gated, fallbacks, that keep, quality, stable
             under, variable, traffic.
           </p>
           <p>
             You, will, learn operational, guardrail, s, monitoring, signal, s, and, rollback, strategies to, keep, costs predictable, without, sacrificing
             customer, experienc, e.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

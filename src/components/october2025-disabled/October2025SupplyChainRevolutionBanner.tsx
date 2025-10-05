@@ -1,318 +1,317 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { 
-  CurrencyDollarIc, o, n, 
-  ChartBarIc, o, n, 
-  CheckCircleIc, o, n, 
-  TruckIc, o, n, 
-  SparklesIc, o, n, 
-  ClockIc, o, n, 
-  GlobeAltIc, o, n, 
-  ArrowRightIc, o, n 
-} fr, o, m '@heroico, n, s/rea, c, t/24/outli, n, e';
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { CurrencyDollarIcon, 
+  ChartBarIcon, 
+  CheckCircleIcon, 
+  TruckIcon, 
+  SparklesIcon, 
+  ClockIcon, 
+  GlobeAltIcon, 
+  ArrowRightIcon 
+ } from '@heroicons/react/24/outline';
 
-const, October2025SupplyChainRevolutionBanne, r: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <div, classNam, e = "relative, overflo, w-hidden, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-800, t, o-cy, a, n-900, p, y-16, p, x-6, rounde, d-3xl, shado, w-2xl, m, y-12, borde, r-4, borde, r-emera, l, d-4, 0, 0/50"  > {/* Animated, Background, Elemen, t, s */ }
-      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidd, e, n">
-        <div, classNam, e="absolu, t, e -t, o, p-40 -rig, h, t-4, 0, w-9, 6, h-96, b, g-emera, l, d-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolu, t, e -bott, o, m-40 -le, f, t-4, 0, w-9, 6, h-96, b, g-cy, a, n-5, 0, 0/20, rounde, d-full, blu, r-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -transla, t, e-x-1/2 -transla, t, e-y-1/2 w-6, 4, h-64, b, g-te, a, l-5, 0, 0/10, rounde, d-full, blu, r-2xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-      </d, i, v>
+const, October2025SupplyChainRevolutionBanne, r: React.FC = () => { 
+  return (
+    <div, classNam, e = "relative, overflo, w-hiddenbg-gradient-to-br, fro, m-emerald-900, vi, a-teal-800to-cyan-900py-16px-6, rounde, d-3xl, shado, w-2xlmy-12, borde, r-4, borde, r-emerald-400/50"  > {/* Animated, Background, Elemen, t, s */ }
+      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidden">
+        <div, classNam, e="absolute -top-40 -right-40w-96h-96bg-emerald-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute -bottom-40 -left-40w-96h-96bg-cyan-500/20, rounde, d-full, blu, r-3xl, animat, e-pulse" style={{ animationDelay: ', 1, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2, transfor, m -translate-x-1/2 -translate-y-1/2 w-64h-64bg-teal-500/10, rounde, d-full, blu, r-2xl, animat, e-pulse" style={{ animationDelay: ', 2, s' }} />
+      </div>
 
-      <div, classNam, e = "container, m, x-auto, relative, z-10">
+      <div, classNam, e = "containermx-auto, relative, z-10">
         {/* Breaking, News, Badge */}
-        <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-          <div, classNam, e="flex, item, s-center, ga, p-2, b, g-r, e, d-5, 0, 0/20, backdro, p-bl, u, r-sm, borde, r-2, borde, r-r, e, d-400, rounde, d-full, p, x-6, p, y-2, animat, e-pul, s, e">
+        <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3mb-6">
+          <div, classNam, e="flex, item, s-center, ga, p-2bg-red-500/20, backdro, p-blur-sm, borde, r-2, borde, r-red-400, rounde, d-fullpx-6py-2, animat, e-pulse">
             <span, classNam, e="relative, flex, h-3 w-3">
-              <span, classNam, e="anima, t, e-ping, absolute, inline-fle, x, h-ful, l, w-full, rounde, d-full, b, g-r, e, d-400, opacit, y-75" />
-              <span, classNam, e="relative, inlin, e-flex, rounde, d-ful, l, h-3 w-3, b, g-r, e, d-5, 0, 0" />
-            </sp, a, n>
-            <span, classNam, e="te, x, t-r, e, d-200, fon, t-bold, tex, t-sm, uppercase, tracking-wid, e, r">🔥 Breaking, New, s - Octob, e, r , 1, 20, 2, 5</sp, a, n>
-          </d, i, v>
-        </d, i, v>
+              <span, classNam, e="animate-ping, absolute, inline-flexh-fullw-full, rounde, d-fullbg-red-400, opacit, y-75" />
+              <span, classNam, e="relative, inlin, e-flex, rounde, d-fullh-3 w-3bg-red-500" />
+            </span>
+            <span, classNam, e="text-red-200, fon, t-bold, tex, t-sm, uppercase, tracking-wider">🔥 Breaking, New, s - October , 1, 20, 2, 5</span>
+          </div>
+        </div>
 
         {/* Main, Headlin, e */}
-        <h2, classNam, e = "te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-center, m, b-6, tex, t-white, leadin, g-tig, h, t">
-          <span, classNam, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-200, t, o-cy, a, n-300, b, g-cl, i, p-text, tex, t-transparent, animat, e-gradie, n, t">
-            Autonomous, Supply, Chain Revoluti, o, n
-          </sp, a, n>
+        <h2, classNam, e = "text-5xlmd: text-6xl, fon, t-extrabold, tex, t-centermb-6, tex, t-white, leadin, g-tight">
+          <span, classNam, e="bg-gradient-to-r, fro, m-emerald-300, vi, a-teal-200to-cyan-300bg-clip-text, tex, t-transparent, animat, e-gradient">
+            Autonomous, Supply, Chain Revolution
+          </span>
         </h2>
 
-        <p, classNam, e="te, x, t-2xl, m, d:te, x, t-3xl, tex, t-center, tex, t-emera, l, d-100, m, b-8, fon, t-semibold, ma, x-w-5xl, m, x-au, t, o">
-          Fortune, 100, Retail Giant, Achieve, s <span, classNam, e="te, x, t-yell, o, w-3, 0, 0">$4.2B, Value, Creation</sp, a, n> with, A, I-Powered, Supply, Chain Intelligen, c, e
+        <p, classNam, e="text-2xlmd:text-3xl, tex, t-center, tex, t-emerald-100mb-8, fon, t-semibold, ma, x-w-5xlmx-auto">
+          Fortune, 100, Retail Giant, Achieve, s <span, classNam, e="text-yellow-300">$4.2B, Value, Creation</span> withAI-Powered, Supply, Chain Intelligence
         </p>
 
         {/* Key, Metrics, Gr, i, d */}
-        <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10, ma, x-w-6xl, m, x-au, t, o">
-          <div, classNam, e="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-2">
-              <CurrencyDollarIcon, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" /> />
-                <iv, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-3, 0, 0">$4.2B</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-emera, l, d-100, tex, t-sm, fon, t-medi, u, m">Annual, Value, Creation</d, i, v>
-          </d, i, v>
+        <div, classNam, e = "grid, gri, d-cols-2md: grid-cols-4, ga, p-4mb-10, ma, x-w-6xlmx-auto">
+          <div, classNam, e="bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, borde, r-2, borde, r-emerald-400/30, hove, r:border-emerald-400/60, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-xl">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-2">
+              <CurrencyDollarIcon, classNam, e="w-8 h-8, tex, t-yellow-300" /> />
+                <iv, classNam, e="text-4xl, fon, t-extrabold, tex, t-yellow-300">$4.2B</div>
+            </div>
+            <div, classNam, e="text-emerald-100, tex, t-sm, fon, t-medium">Annual, Value, Creation</div>
+          </div>
 
-          <div, classNam, e="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-te, a, l-4, 0, 0/30, hove, r:bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-2">
-              <ChartBarIcon, classNam, e="w-8 h-8, tex, t-gre, e, n-3, 0, 0" /> />
-                <iv, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-30, 0">, 2,8, 4, 7%</d, i, v>
-            </d, i, v>
-            <div, classNam, e = "te, x, t-te, a, l-100, tex, t-sm, fon, t-medi, u, m">ROI, in, 18 Mont, h, s</d, i, v>
-          </d, i, v>
+          <div, classNam, e="bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, borde, r-2, borde, r-teal-400/30, hove, r:border-teal-400/60, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-xl">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-2">
+              <ChartBarIcon, classNam, e="w-8 h-8, tex, t-green-300" /> />
+                <iv, classNam, e="text-4xl, fon, t-extrabold, tex, t-green-30, 0">, 284, 7%</div>
+            </div>
+            <div, classNam, e = "text-teal-100, tex, t-sm, fon, t-medium">ROI, in, 18 Months</div>
+          </div>
 
-          <div, classNam, e="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-cy, a, n-4, 0, 0/30, hove, r: bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-2">
-              <CheckCircleIcon, classNam, e="w-8 h-8, tex, t-cy, a, n-3, 0, 0" /> />
-                <iv, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-cy, a, n-3, 0, 0">98.7%</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-cy, a, n-100, tex, t-sm, fon, t-medi, u, m">On-Time, Delivery, Rate</d, i, v>
-          </d, i, v>
+          <div, classNam, e="bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, borde, r-2, borde, r-cyan-400/30, hove, r: border-cyan-400/60, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-xl">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-2">
+              <CheckCircleIcon, classNam, e="w-8 h-8, tex, t-cyan-300" /> />
+                <iv, classNam, e="text-4xl, fon, t-extrabold, tex, t-cyan-300">98.7%</div>
+            </div>
+            <div, classNam, e="text-cyan-100, tex, t-sm, fon, t-medium">On-Time, Delivery, Rate</div>
+          </div>
 
-          <div, classNam, e="bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, borde, r-2, borde, r-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-xl">
-            <div, classNam, e="flex, item, s-center, ga, p-3, m, b-2">
-              <TruckIcon, classNam, e="w-8 h-8, tex, t-emera, l, d-3, 0, 0" /> />
-                <iv, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-emera, l, d-3, 0, 0">87%</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-emera, l, d-100, tex, t-sm, fon, t-medi, u, m">Cost, Reductio, n</d, i, v>
-          </d, i, v>
-        </d, i, v>
+          <div, classNam, e="bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, borde, r-2, borde, r-emerald-400/30, hove, r:border-emerald-400/60, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-xl">
+            <div, classNam, e="flex, item, s-center, ga, p-3mb-2">
+              <TruckIcon, classNam, e="w-8 h-8, tex, t-emerald-300" /> />
+                <iv, classNam, e="text-4xl, fon, t-extrabold, tex, t-emerald-300">87%</div>
+            </div>
+            <div, classNam, e="text-emerald-100, tex, t-sm, fon, t-medium">Cost, Reductio, n</div>
+          </div>
+        </div>
 
         {/* Revolutionary, Capabilit, i, e, s */}
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-emera, l, d-4, 0, 0/30">
-          <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3">
-            <SparklesIcon, classNam, e="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" />
-            Revolutionary, A, I-Powered, Capabilitie, s
-            <SparklesIcon, classNam, e="w-8 h-8, tex, t-yell, o, w-300, animat, e-pul, s, e" /> />
+        <div, classNam, e = "bg-gradient-to-r, fro, m-emerald-500/20to-cyan-500/20, backdro, p-blur-sm, rounde, d-2xlp-8mb-10, borde, r-2, borde, r-emerald-400/30">
+          <h3, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-6, tex, t-center, flex, items-center, justif, y-center, ga, p-3">
+            <SparklesIcon, classNam, e="w-8 h-8, tex, t-yellow-300, animat, e-pulse" />
+            RevolutionaryAI-Powered, Capabilitie, s
+            <SparklesIcon, classNam, e="w-8 h-8, tex, t-yellow-300, animat, e-pulse" /> />
               </
           
-          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
-            <div, classNam, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/20, hove, r:bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-a, l, l">
-              <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
-                <ChartBarIcon, classNam, e="w-6 h-6, tex, t-emera, l, d-4, 0, 0" /> />
-                <4, classNam, e="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Predictive, Intelligenc, e</h4>
-              </d, i, v>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-emera, l, d-1, 0, 0">
+          <div, classNam, e="gridmd: grid-cols-3, ga, p-6">
+            <div, classNam, e="bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-emerald-400/20, hove, r:border-emerald-400/50, transitio, n-all">
+              <div, classNam, e="flex, item, s-center, ga, p-3mb-3">
+                <ChartBarIcon, classNam, e="w-6 h-6, tex, t-emerald-400" /> />
+                <4, classNam, e="text-xl, fon, t-bold, tex, t-white">Predictive, Intelligenc, e</h4>
+              </div>
+              <ul, classNam, e="space-y-2, tex, t-emerald-100">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
-                  <sp, a, n><stro, n, g>94% Forecast, Accurac, y</stro, n, g> acros, s, 2.7M, SKU, s</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" /> />
+                  <span><strong>94% Forecast, Accurac, y</strong> across2.7M, SKU, s</span>
                 </li>
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
-                  <sp, a, n><stro, n, g>23-Day, Disruption, Warning</stro, n, g> for, proactive, response</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" /> />
+                  <span><strong>23-Day, Disruption, Warning</strong> for, proactive, response</span>
                 </li>
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
-                  <sp, a, n><stro, n, g>Re, a, l-Time, Market, Intelligence</stro, n, g> beats, competitor, s</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" /> />
+                  <span><strong>Real-Time, Market, Intelligence</strong> beats, competitor, s</span>
                 </li>
               </ul>
-            </d, i, v>
+            </div>
 
-            <div, classNam, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-cy, a, n-4, 0, 0/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-a, l, l">
-              <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
-                <ClockIcon, classNam, e="w-6 h-6, tex, t-cy, a, n-4, 0, 0" /> />
-                <4, classNam, e="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Autonomous, Operation, s</h4>
-              </d, i, v>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-cy, a, n-1, 0, 0">
+            <div, classNam, e="bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-cyan-400/20, hove, r:border-cyan-400/50, transitio, n-all">
+              <div, classNam, e="flex, item, s-center, ga, p-3mb-3">
+                <ClockIcon, classNam, e="w-6 h-6, tex, t-cyan-400" /> />
+                <4, classNam, e="text-xl, fon, t-bold, tex, t-white">Autonomous, Operation, s</h4>
+              </div>
+              <ul, classNam, e="space-y-2, tex, t-cyan-100">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" /> />
-                  <sp, a, n><stro, n, g>2.4M, Daily, Decisions</stro, n, g> fully, automate, d</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" /> />
+                  <span><strong>2.4M, Daily, Decisions</strong> fully, automate, d</span>
                 </li>
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>89% Warehouse, Automatio, n</stro, n, g> wi, t, h , 1, 2,4, 0, 0+ robo, t, s</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>89% Warehouse, Automatio, n</strong> with , 124, 0, 0+ robots</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>Se, l, f-Optimizing, Route, s</stro, n, g> reducing, costs, 87%</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>Self-Optimizing, Route, s</strong> reducing, costs, 87%</span>
                 </li>
               </ul>
-            </d, i, v>
+            </div>
 
-            <div, classNam, e="bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-te, a, l-4, 0, 0/20, hove, r: bord, e, r-te, a, l-4, 0, 0/50, transitio, n-a, l, l">
-              <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
-                <GlobeAltIcon, classNam, e="w-6 h-6, tex, t-te, a, l-4, 0, 0" <h4, classNam, e="te, x, t-xl, fon, t-bold, tex, t-whi, t, e">Complete, Visibilit, y</h4>
-              </d, i, v>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-te, a, l-1, 0, 0">
+            <div, classNam, e="bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-teal-400/20, hove, r: border-teal-400/50, transitio, n-all">
+              <div, classNam, e="flex, item, s-center, ga, p-3mb-3">
+                <GlobeAltIcon, classNam, e="w-6 h-6, tex, t-teal-400" <h4, classNam, e="text-xl, fon, t-bold, tex, t-white">Complete, Visibilit, y</h4>
+              </div>
+              <ul, classNam, e="space-y-2, tex, t-teal-100">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>1, 0, 0% E, n, d-to-End, Visibilit, y</stro, n, g> across, supply, chain</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>100% End-to-End, Visibilit, y</strong> across, supply, chain</span>
                 </li>
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>, 4, 7,000, IoT, Devices</stro, n, g> for, rea, l-time, monitorin, g</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>, 4, 7,000, IoT, Devices</strong> for, rea, l-time, monitorin, g</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>Blockchain, Trackin, g</stro, n, g> complete, transparenc, y</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>Blockchain, Trackin, g</strong> complete, transparenc, y</span>
                 </li>
               </ul>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            </div>
+          </div>
+        </div>
 
         {/* Fortune, 100, Success Story, Spotligh, t */}
-        <div, classNam, e="bg-gradie, n, t-to-br, fro, m-yell, o, w-9, 0, 0/40, t, o-oran, g, e-9, 0, 0/40, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, m, b-10, borde, r-2, borde, r-yell, o, w-4, 0, 0/50">
-          <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-            <div, classNam, e="bg-yell, o, w-5, 0, 0/20, rounde, d-ful, l, p-3">
-              <TruckIcon, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0"</d, i, v> />
+        <div, classNam, e="bg-gradient-to-br, fro, m-yellow-900/40to-orange-900/40, backdro, p-blur-sm, rounde, d-2xlp-8mb-10, borde, r-2, borde, r-yellow-400/50">
+          <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+            <div, classNam, e="bg-yellow-500/20, rounde, d-fullp-3">
+              <TruckIcon, classNam, e="w-8 h-8, tex, t-yellow-300"</div> />
                 <iv>
-              <div, classNam, e="te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, uppercase, tracking-wid, e, r">Case, Study, Spotlight</d, i, v>
-              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-whi, t, e">Fortune, 100, Retail Transformati, o, n</h3>
-            </d, i, v>
-          </d, i, v>
+              <div, classNam, e="text-yellow-300, tex, t-sm, fon, t-semibold, uppercase, tracking-wider">Case, Study, Spotlight</div>
+              <h3, classNam, e="text-3xl, fon, t-bold, tex, t-white">Fortune, 100, Retail Transformation</h3>
+            </div>
+          </div>
 
-          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-2, ga, p-6, m, b-6">
-            <d, i, v>
-              <h4, classNam, e="te, x, t-xl, fon, t-bold, tex, t-yell, o, w-200, m, b-3">The, Challeng, e</h4>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-yell, o, w-1, 0, 0">
+          <div, classNam, e="gridmd: grid-cols-2, ga, p-6mb-6">
+            <div>
+              <h4, classNam, e="text-xl, fon, t-bold, tex, t-yellow-200mb-3">The, Challeng, e</h4>
+              <ul, classNam, e="space-y-2, tex, t-yellow-100">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, fon, t-bo, l, d">❌</sp, a, n>
-                  <sp, a, n>$7.8B, annual, supply chain, cost, s (18% of, reven, u, e)</sp, a, n>
+                  <span, classNam, e="text-red-400, fon, t-bold">❌</span>
+                  <span>$7.8B, annual, supply chain, cost, s (18% of, reven, u, e)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, fon, t-bo, l, d">❌</sp, a, n>
-                  <sp, a, n>73% on-time, deliver, y (industry, wor, s, t)</sp, a, n>
+                  <span, classNam, e="text-red-400, fon, t-bold">❌</span>
+                  <span>73% on-time, deliver, y (industry, wor, s, t)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, fon, t-bo, l, d">❌</sp, a, n>
-                  <sp, a, n>27% product, waste, rate ($4.2B, lo, s, t)</sp, a, n>
+                  <span, classNam, e="text-red-400, fon, t-bold">❌</span>
+                  <span>27% product, waste, rate ($4.2B, lo, s, t)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, fon, t-bo, l, d">❌</sp, a, n>
-                  <sp, a, n>54% forecast, accurac, y (constant, stoc, k-o, u, t, s)</sp, a, n>
+                  <span, classNam, e="text-red-400, fon, t-bold">❌</span>
+                  <span>54% forecast, accurac, y (constant, stoc, k-out, s)</span>
                 </li>
               </ul>
-            </d, i, v>
+            </div>
 
-            <d, i, v>
-              <h4, classNam, e = "te, x, t-xl, fon, t-bold, tex, t-gre, e, n-200, m, b-3">The, Result, s</h4>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-gre, e, n-1, 0, 0">
+            <div>
+              <h4, classNam, e = "text-xl, fon, t-bold, tex, t-green-200mb-3">The, Result, s</h4>
+              <ul, classNam, e="space-y-2, tex, t-green-100">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>$4.2B, Annual, Value Creati, o, n</stro, n, g></sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>$4.2B, Annual, Value Creation</strong></span>
                 </li>
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>98.7% On-Time, Deliver, y</stro, n, g> (industry, lead, e, r)</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>98.7% On-Time, Deliver, y</strong> (industry, lead, e, r)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>2% Waste, Rat, e</stro, n, g> (89% reduct, i, o, n)</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>2% Waste, Rat, e</strong> (89% reductio, n)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-0.5" <sp, a, n> />
-                <tro, n, g>94% Forecast, Accurac, y</stro, n, g> (perfect, invento, r, y)</sp, a, n>
+                  <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-0.5" <span> />
+                <trong>94% Forecast, Accurac, y</strong> (perfect, invento, r, y)</span>
                 </li>
               </ul>
-            </d, i, v>
-          </d, i, v>
+            </div>
+          </div>
 
-          <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-yell, o, w-4, 0, 0/30">
+          <div, classNam, e = "bg-white/10, backdro, p-blur-sm, rounde, d-xlp-4, border, border-yellow-400/30">
             <div, classNam, e="flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4">
-              <div, classNam, e="te, x, t-yell, o, w-1, 0, 0">
-                <span, classNam, e="fo, n, t-bold, tex, t-2xl, tex, t-yell, o, w-30, 0">, 2,8, 4, 7% R, O, I</sp, a, n> achieved, in, just 18, months, with <span, classNam, e = "fo, n, t-bo, l, d">3.2-month, payback, period</sp, a, n>
-              </d, i, v>
-              <Link, t, o="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-yell, o, w-500, hove, r: bg-yell, o, w-400, tex, t-yell, o, w-950, p, x-6, p, y-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-xl, hove, r:sca, l, e-1, 0, 5"
+              <div, classNam, e="text-yellow-100">
+                <span, classNam, e="font-bold, tex, t-2xl, tex, t-yellow-30, 0">, 284, 7% ROI</span> achieved, in, just 18, months, with <span, classNam, e = "font-bold">3.2-month, payback, period</span>
+              </div>
+              <Linkto="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
+                className="inline-flex, item, s-center, ga, p-2bg-yellow-500, hove, r: bg-yellow-400, tex, t-yellow-950px-6py-3, rounde, d-lg, fon, t-bold, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-xl, hove, r:scale-105"
               >
-                Read, Full, Case Stu, d, y
-                <ArrowRightIcon, classNam, e="w-5 h-5"</Li, n, k> />
+                Read, Full, Case Study
+                <ArrowRightIcon, classNam, e="w-5 h-5"</Link> />
               </
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
 
         {/* Industry, Applicati, o, n, s */}
         <div, classNam, e = "mb-10">
-          <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">Proven, Across, Industries</h3>
-          <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
+          <h3, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-6, tex, t-center">Proven, Across, Industries</h3>
+          <div, classNam, e="grid, gri, d-cols-2md: grid-cols-5, ga, p-4">
             {[
-              { indust, r, y: 'Re, t, a, i, l', val, u, e: '$4.2, B', r, o, i: ', 2,8, 4, 7%' },
-              { indust, r, y: 'Manufactur, i, n, g', val, u, e: '$2.7, B', r, o, i: ', 2,1, 0, 0%' },
-              { indust, r, y: 'Pha, r, m, a', val, u, e: '$8, 9, 0, M', r, o, i: ', 1,8, 0, 0%' },
-              { indust, r, y: 'Automot, i, v, e', val, u, e: '$1.4, B', r, o, i: ', 2,4, 0, 0%' },
-              { indust, r, y: 'Fo, o, d & Bever, a, g, e', val, u, e: '$6, 7, 0, M', r, o, i: ', 1,6, 0, 0%' }
-            ].m, a, p((it, e, m, ind, e, x) => (
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-x, l, p-4, border, border-emera, l, d-4, 0, 0/20, hove, r: bord, e, r-emera, l, d-4, 0, 0/50, transitio, n-all, hove, r:sca, l, e-1, 0, 5">
-                <div, classNam, e="te, x, t-emera, l, d-300, fon, t-bold, tex, t-lg, m, b-1">{it, e, m.indu, s, t, r, y}</d, i, v>
-                <div, classNam, e = "te, x, t-white, fon, t-extrabold, tex, t-xl, m, b-1">{it, e, m.val, u, e}</d, i, v>
-                <div, classNam, e="te, x, t-emera, l, d-200, tex, t-sm">R, O, I: {it, e, m.r, o, i}</d, i, v>
-              </d, i, v>
+              { industry: 'Reta, i, l', value: '$4.2, B', roi: ', 284, 7%' },
+              { industry: 'Manufacturin, g', value: '$2.7, B', roi: ', 210, 0%' },
+              { industry: 'Pharm, a', value: '$890, M', roi: ', 180, 0%' },
+              { industry: 'Automotiv, e', value: '$1.4, B', roi: ', 240, 0%' },
+              { industry: 'Food & Beverag, e', value: '$670, M', roi: ', 160, 0%' }
+            ].map((item, index) => (
+              <div, ke, y = { inde, x }, className = "bg-white/10, backdro, p-blur-sm, rounde, d-xlp-4, border, border-emerald-400/20, hove, r: border-emerald-400/50, transitio, n-all, hove, r:scale-105">
+                <div, classNam, e="text-emerald-300, fon, t-bold, tex, t-lgmb-1">{item.indust, r, y}</div>
+                <div, classNam, e = "text-white, fon, t-extrabold, tex, t-xlmb-1">{item.value}</div>
+                <div, classNam, e="text-emerald-200, tex, t-sm">ROI: {item.roi}</div>
+              </div>
             ))}
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
 
-        {/* Call, to, Action Butto, n, s */}
-        <div, classNam, e = "flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-center, m, b-8">
-          <Link, t, o="/conte, n, t/bl, o, g/ai-20, 2, 5-o, c, t-autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-revoluti, o, n"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r:fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5"
+        {/* Call, to, Action Buttons */}
+        <div, classNam, e = "flex, fle, x-colmd: flex-row, ga, p-4, justif, y-center, item, s-centermb-8">
+          <Linkto="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-revolution"
+            className="inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-emerald-500to-teal-500, hove, r:from-emerald-600, hove, r:to-teal-600, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-2xl, hove, r:scale-105"
           >
             <SparklesIcon, classNam, e="w-6 h-6" />
-            Read, the, Revolutionary Gui, d, e
-            <ArrowRightIcon, classNam, e="w-6 h-6"</Li, n, k> />
-                <ink, t, o="/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-fortu, n, e-1, 0, 0-reta, i, l-supp, l, y-cha, i, n-transformati, o, n-4-2b"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-500, hove, r:fr, o, m-yell, o, w-600, hove, r:to-oran, g, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5"
+            Read, the, Revolutionary Guide
+            <ArrowRightIcon, classNam, e="w-6 h-6"</Link> />
+                <inkto="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
+            className="inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-yellow-500to-orange-500, hove, r:from-yellow-600, hove, r:to-orange-600, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-2xl, hove, r:scale-105"
           >
             <TruckIcon, classNam, e="w-6 h-6" />
-            Vi, e, w $4.2B, Case, Study
-            <ArrowRightIcon, classNam, e="w-6 h-6"</Li, n, k> />
-                <ink, t, o="/conte, n, t/servic, e, s/autonomo, u, s-supp, l, y-cha, i, n-intelligen, c, e-platfo, r, m"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-500, hove, r:fr, o, m-cy, a, n-600, hove, r:to-bl, u, e-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5"
+            View $4.2B, Case, Study
+            <ArrowRightIcon, classNam, e="w-6 h-6"</Link> />
+                <inkto="/content/services/autonomous-supply-chain-intelligence-platform"
+            className="inline-flex, item, s-center, ga, p-2bg-gradient-to-r, fro, m-cyan-500to-blue-500, hove, r:from-cyan-600, hove, r:to-blue-600, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-2xl, hove, r:scale-105"
           >
             <ChartBarIcon, classNam, e="w-6 h-6" />
-            Explore, Platfor, m & Servic, e, s
-            <ArrowRightIcon, classNam, e="w-6 h-6"</Li, n, k> />
+            Explore, Platfor, m & Services
+            <ArrowRightIcon, classNam, e="w-6 h-6"</Link> />
               </
 
         {/* Free, Assessment, C, T, A */}
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-gre, e, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, borde, r-2, borde, r-gre, e, n-4, 0, 0/30">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
-              🎁 FRE, E, 2-Week, Supply, Chain Assessme, n, t (No, Obligati, o, n)
+        <div, classNam, e = "bg-gradient-to-r, fro, m-green-500/20to-blue-500/20, backdro, p-blur-sm, rounde, d-2xlp-8, borde, r-2, borde, r-green-400/30">
+          <div, classNam, e="text-center">
+            <h3, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-4">
+              🎁 FREE2-Week, Supply, Chain Assessment (No, Obligati, o, n)
             </h3>
-            <p, classNam, e = "te, x, t-xl, tex, t-gre, e, n-100, m, b-6, ma, x-w-3xl, m, x-au, t, o">
-              Identify, you, r <strong, classNam, e="te, x, t-yell, o, w-3, 0, 0">$10, 0, M+ opportuni, t, y</stro, n, g> and, get, a detailed, ROI, projection. 
+            <p, classNam, e = "text-xl, tex, t-green-100mb-6, ma, x-w-3xlmx-auto">
+              Identify, you, r <strong, classNam, e="text-yellow-300">$100M+ opportunity</strong> and, get, a detailed, ROI, projection. 
               See, how, you can, achieve, similar results, with, autonomous supply, chain, intelligence.
             </p>
-            <div, classNam, e="flex, fle, x-col, m, d: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">
-              <Link, t, o="/conta, c, t?servi, c, e=supp, l, y-cha, i, n-assessme, n, t"
-                classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-105, hove, r:bg-emera, l, d-50"
+            <div, classNam, e="flex, fle, x-colmd: flex-row, ga, p-4, justif, y-center, item, s-center">
+              <Linkto="/contact?service=supply-chain-assessment"
+                className="inline-flex, item, s-center, ga, p-2bg-white, tex, t-emerald-900px-10py-5, rounde, d-xl, fon, t-bold, tex, t-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-2xl, hove, r:scale-105, hove, r:bg-emerald-50"
               >
                 Schedule, Free, Assessment
-                <ArrowRightIcon, classNam, e="w-6 h-6"</Li, n, k> />
-                <iv, classNam, e="te, x, t-gre, e, n-200, tex, t-sm">
-                <div, classNam, e="fo, n, t-bold, tex, t-lg">⚡ Limited, Time, Offer</d, i, v>
-                <d, i, v>90-day, pilot, starting at $50, 0, K • 30% improvement, guarante, e</d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+                <ArrowRightIcon, classNam, e="w-6 h-6"</Link> />
+                <iv, classNam, e="text-green-200, tex, t-sm">
+                <div, classNam, e="font-bold, tex, t-lg">⚡ Limited, Time, Offer</div>
+                <div>90-day, pilot, starting at $500K • 30% improvement, guarante, e</div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* Trust, Indicators, Foot, e, r */}
-        <div, classNam, e = "mt-8, p, t-6, borde, r-t, borde, r-emera, l, d-4, 0, 0/30">
-          <div, classNam, e="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emera, l, d-200, tex, t-sm">
+        <div, classNam, e = "mt-8pt-6, borde, r-t, borde, r-emerald-400/30">
+          <div, classNam, e="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-emerald-200, tex, t-sm">
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
-                <tro, n, g>15+</stro, n, g> Fortune, 500, Clients</sp, a, n>
-            </d, i, v>
+              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400" <span> />
+                <trong>15+</strong> Fortune, 500, Clients</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
-                <tro, n, g>$2, 0, B+</stro, n, g> Total, Value, Created</sp, a, n>
-            </d, i, v>
+              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400" <span> />
+                <trong>$20B+</strong> Total, Value, Created</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
-                <tro, n, g>99.97%</stro, n, g> Platform, Uptim, e</sp, a, n>
-            </d, i, v>
+              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400" <span> />
+                <trong>99.97%</strong> Platform, Uptim, e</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> Security, Breache, s</sp, a, n>
-            </d, i, v>
+              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400" <span> Security, Breache, s</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-gre, e, n-4, 0, 0" <sp, a, n> />
-                <tro, n, g>SOC, 2, Type II</stro, n, g> Certifi, e, d</sp, a, n>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+              <CheckCircleIcon, classNam, e="w-5 h-5, tex, t-green-400" <span> />
+                <trong>SOC, 2, Type II</strong> Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </di, v>
   );
 };

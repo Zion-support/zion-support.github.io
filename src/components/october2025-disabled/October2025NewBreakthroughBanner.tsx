@@ -1,231 +1,227 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t {
-  ArrowLe, f, t,
-  ArrowRig, h, t,
-  Awa, r, d,
-  Bra, i, n,
-  Calend, a, r,
-  CheckCirc, l, e,
-  Clo, c, k,
-  DollarSi, g, n,
-  Glo, b, e,
-  Rock, e, t,
-  Satelli, t, e,
-  Shar, e, 2,
-  Bookma, r, k,
-  T, a, g,
-  Targ, e, t,
-  Trending, U, p,
-  Use, r, s,
-  Us, e, r,
-  Z, a, p,
-  BarChar, t, 3,
-  BookOp, e, n,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t {
-  octoberNewBreakthroughConte, n, t,
-  octoberContentSta, t, s,
-} fr, o, m '../conte, n, t/octob, e, r-20, 2, 5-n, e, w-breakthrou, g, h-conte, n, t';
+import { Link  } from 'react-router-dom';
+import { ArrowLeft,
+  ArrowRight,
+  Award,
+  Brain,
+  Calendar,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Globe,
+  Rocket,
+  Satellite,
+  Share2,
+  Bookmark,
+  Tag,
+  Target,
+  TrendingUp,
+  Users,
+  User,
+  Zap,
+  BarChart3,
+  BookOpen,
+ } from 'lucide-react';
+import { octoberNewBreakthroughContent,
+  octoberContentStats,
+ } from '../content/october-2025-new-breakthrough-content';
 const, October2025NewBreakthroughBanne, r = () => { 
-  const, stat, s = octoberContentSta, t, s; const, iconMa, p: Reco, r, d<
-    st, r, i, n, g,
-    Rea, c, t.ComponentTy, p, e<Rea, c, t.SVGPro, p, s<SVGSVGEleme, n, t>>
+  const, stat, s = octoberContentStats; const, iconMa, p: Record<
+    stri, n, g,
+    React.ComponentType<React.SVGProps<SVGSVGElement>>
    > = {
-    '🧠': Bra, i, n,
-    '💰': DollarSi, g, n,
-    '🎨': E, y, e,
+    '🧠': Brain'💰': DollarSign'🎨': Eye,
    };
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-indi, g, o-900, vi, a-purp, l, e-900, t, o-pi, n, k-900, p, y-20, p, x-4, relative, overflow-hidd, e, n'>
+  return (
+    <div, classNam, e = 'bg-gradient-to-br, fro, m-indigo-900, vi, a-purple-900to-pink-900py-20px-4, relative, overflow-hidden'>
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-30'>
-        <div, classNam, e='absolute, to, p-10, lef, t-1, 0, w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, to, p-1/2, righ, t-1, 0, w-9, 6, h-96, b, g-pi, n, k-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 1, s' }}
+        <div, classNam, e='absolute, to, p-10, lef, t-10w-96h-96bg-purple-500, rounde, d-full, filter, blur-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, to, p-1/2, righ, t-10w-96h-96bg-pink-500, rounde, d-full, filter, blur-3xl, animat, e-pulse'
+          style={{ animationDelay: ', 1, s' }}
          />
-        <div, classNam, e = 'absolute, botto, m-10, lef, t-1/3 w-9, 6, h-96, b, g-indi, g, o-500, rounde, d-full, filter, blur-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 2, s' }}
+        <div, classNam, e = 'absolute, botto, m-10, lef, t-1/3 w-96h-96bg-indigo-500, rounde, d-full, filter, blur-3xl, animat, e-pulse'
+          style={{ animationDelay: ', 2, s' }}
          />
-      </d, i, v>
-      <div, classNam, e = 'm, a, x-w-7xl, m, x-auto, relative, z-10'>
+      </div>
+      <div, classNam, e = 'max-w-7xlmx-auto, relative, z-10'>
         {/* Header, Sectio, n */}
-        <div, classNam, e='te, x, t-center, m, b-16'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-whi, t, e/20, t, o-whi, t, e/10, backdro, p-bl, u, r-md, p, x-8, p, y-3, rounde, d-full, m, b-8, border, border-whi, t, e/30'>
-            <Zap, classNam, e='w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
-            <span, classNam, e='te, x, t-white, fon, t-bold, tex, t-lg, trackin, g-wi, d, e'>
-              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOB, E, R , 2, 20, 2, 5
-            </sp, a, n>
-            <Zap, classNam, e = 'w-6 h-6, tex, t-yell, o, w-300, animat, e-pul, s, e' />
-          </d, i, v>
-          <h2, classNam, e='te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-            Ne, x, t-Generation, Enterprise, AI
+        <div, classNam, e='text-centermb-16'>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-3bg-gradient-to-r, fro, m-white/20to-white/10, backdro, p-blur-mdpx-8py-3, rounde, d-fullmb-8, border, border-white/30'>
+            <Zap, classNam, e='w-6 h-6, tex, t-yellow-300, animat, e-pulse' />
+            <span, classNam, e='text-white, fon, t-bold, tex, t-lg, trackin, g-wide'>
+              🚀 NEW, BREAKTHROUGH, CONTENT · OCTOBER , 2, 20, 2, 5
+            </span>
+            <Zap, classNam, e = 'w-6 h-6, tex, t-yellow-300, animat, e-pulse' />
+          </div>
+          <h2, classNam, e='text-5xlmd: text-6xl, fon, t-extrabold, tex, t-whitemb-6, leadin, g-tight'>
+            Next-Generation, Enterprise, AI
             <, b, r />{' '}
-            <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-300, vi, a-pi, n, k-300, t, o-purp, l, e-300, tex, t-transparent, b, g-cl, i, p-te, x, t'>
-              Systems, That, Transform Operatio, n, s
-            </sp, a, n>
+            <span, classNam, e = 'bg-gradient-to-r, fro, m-yellow-300, vi, a-pink-300to-purple-300, tex, t-transparentbg-clip-text'>
+              Systems, That, Transform Operations
+            </span>
           </h2>
-          <p, classNam, e='te, x, t-2xl, tex, t-purp, l, e-200, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-            Master, contex, t-aware, agen, t, s, intelligent, cost, governance, and, multimodal, intelligence with, our, latest enterprise, implementation, guides. Achieve, 7, 9% cost, reductions, and 26x, performance, improvements.
+          <p, classNam, e='text-2xl, tex, t-purple-200, ma, x-w-4xlmx-auto, leadin, g-relaxed'>
+            Master, contex, t-aware, agen, t, s, intelligent, cost, governance, and, multimodal, intelligence with, our, latest enterprise, implementation, guides. Achieve79% cost, reductions, and 26x, performance, improvements.
           </p>
-        </d, i, v>
+        </div>
         {/* Content, Card, s */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-12'>
-          { octoberNewBreakthroughConte, n, t.m, a, p(conte, n, t = > {
-            const, Ico, n = iconM, a, p[conte, n, t.ic, o, n] || Bra, i, n; retu, r, n (
-              <Link, ke, y = { conte, n, t., i, d  }, to = {`/bl, o, g/${conte, n, t.sl, u, g}`}
-                classNa, m, e='group, b, g-gradie, n, t-to-br, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/20, rounde, d-2x, l, p-8, hove, r: fr, o, m-whi, t, e/20, hove, r:to-whi, t, e/10, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-5, 0, 0'
+        <div, classNam, e = 'gridmd: grid-cols-3, ga, p-8mb-12'>
+          { octoberNewBreakthroughContent.map(content = > {
+            const, Ico, n = iconMap[content.icon] || Brain; return (
+              <Link, ke, y = { content., i, d  }, to = {`/blog/${content.slug}`}
+                className='groupbg-gradient-to-br, fro, m-white/10to-white/5, backdro, p-blur-xl, border, border-white/20, rounde, d-2xlp-8, hove, r: from-white/20, hove, r:to-white/10, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-purple-500/50, transitio, n-all, duratio, n-500'
               >
-                <div, classNam, e='flex, item, s-start, ga, p-4, m, b-6' > <div, classNam, e = { `bg-gradie, n, t-to-br ${conte, n, t.grad, i, e, n, t }, p-4, rounde, d-xl, shado, w-lg`}
+                <div, classNam, e='flex, item, s-start, ga, p-4mb-6' > <div, classNam, e = { `bg-gradient-to-br ${content.gradie, n, t }, p-4, rounde, d-xl, shado, w-lg`}
                   >
-                    <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
-                  </d, i, v>
-                  <div, classNam, e='fl, e, x-1'>
-                    <div, classNam, e='te, x, t-xs, tex, t-purp, l, e-300, m, b-2, fon, t-semibold, uppercase, tracking-wid, e, r'>
-                      {conte, n, t.catego, r, y}
-                    </d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colors, leadin, g-tig, h, t'>
-                      {conte, n, t.t, i, t, l, e}
+                    <Icon, classNam, e = 'w-8 h-8, tex, t-white' />
+                  </div>
+                  <div, classNam, e='flex-1'>
+                    <div, classNam, e='text-xs, tex, t-purple-300mb-2, fon, t-semibold, uppercase, tracking-wider'>
+                      {content.category}
+                    </div>
+                    <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3, grou, p-hover: text-yellow-300, transitio, n-colors, leadin, g-tight'>
+                      {content.tit, l, e}
                     </h3>
-                  </d, i, v>
-                </d, i, v>
-                <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-200, m, b-6, leadin, g-relax, e, d'>
-                  {conte, n, t.descripti, o, n}
+                  </div>
+                </div>
+                <p, classNam, e = 'text-sm, tex, t-purple-200mb-6, leadin, g-relaxed'>
+                  {content.description}
                 </p>
                 {/* Key, Metric, s */}
-                <div, classNam, e='grid, gri, d-co, l, s-2, ga, p-3, m, b-6'>
-                  { Obje, c, t.entri, e, s(conte, n, t.metr, i, c, s)
-                    .sli, c, e(0, 4)
-                    .m, a, p(([k, e, y, val, u, e]) = > (
-                      <div, ke, y = { ke, y  }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, border, border-whi, t, e/10'
+                <div, classNam, e='grid, gri, d-cols-2, ga, p-3mb-6'>
+                  { Object.entries(content.metric, s)
+                    .slice(0, 4)
+                    .map(([key, value]) = > (
+                      <div, ke, y = { ke, y  }, className = 'bg-white/5, backdro, p-blur-sm, rounde, d-lgp-3, border, border-white/10'
                       >
-                        <div, classNam, e='te, x, t-2xl, fon, t-extrabold, tex, t-white, m, b-1'>
-                          {val, u, e}
-                        </d, i, v>
-                        <div, classNam, e='te, x, t-xs, tex, t-purp, l, e-300, capitalize, font-medi, u, m'>
-                          {k, e, y.repla, c, e(/([A-, Z])/g, ' $1').tr, i, m()}
-                        </d, i, v>
-                      </d, i, v>
+                        <div, classNam, e='text-2xl, fon, t-extrabold, tex, t-whitemb-1'>
+                          {value}
+                        </div>
+                        <div, classNam, e='text-xs, tex, t-purple-300, capitalize, font-medium'>
+                          {key.replace(/([A-, Z])/g' $1').trim()}
+                        </div>
+                      </div>
                     ))}
-                </d, i, v>
-                {/* Highligh, t, s */}
-                <ul, classNam, e = 'spa, c, e-y-3, m, b-6'>
-                  { conte, n, t.highligh, t, s.sli, c, e(, 0, 2).m, a, p((highlig, h, t, i, d, x) = > (
-                    <li, ke, y = { id, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purp, l, e-2, 0, 0'
+                </div>
+                {/* Highlights */}
+                <ul, classNam, e = 'space-y-3mb-6'>
+                  { content.highlights.slice(, 0, 2).map((highlight, idx) = > (
+                    <li, ke, y = { id, x  }, className = 'flex, item, s-start, ga, p-2, tex, t-xs, tex, t-purple-200'
                     >
-                      <TrendingUp, classNam, e='w-4 h-4, tex, t-gre, e, n-400, m, t-0.5, fle, x-shri, n, k-0' />
-                      <span, classNam, e='leadi, n, g-relax, e, d'>{highlig, h, t}</sp, a, n>
+                      <TrendingUp, classNam, e='w-4 h-4, tex, t-green-400mt-0.5, fle, x-shrink-0' />
+                      <span, classNam, e='leading-relaxed'>{highlight}</span>
                     </l, i>
                   ))}
                 </ul>
-                <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yell, o, w-300, fon, t-bold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l'>
+                <div, classNam, e = 'flex, item, s-center, ga, p-2, tex, t-sm, tex, t-yellow-300, fon, t-bold, grou, p-hover: gap-4, transitio, n-all'>
                   Read, Full, Guide
                   <ArrowRight, classNam, e='w-5 h-5' />
-                </d, i, v>
-              </Li, n, k>
+                </div>
+              </Link>
             );
           })}
-        </d, i, v>
+        </div>
         {/* CTA, Sectio, n */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-whi, t, e/10, t, o-whi, t, e/5, backdro, p-bl, u, r-xl, border, border-whi, t, e/30, rounde, d-2x, l, p-12, m, b-12, shado, w-2, x, l'>
-          <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, justif, y-cent, e, r'>
-            <Target, classNam, e='w-1, 0, h-10, tex, t-yell, o, w-3, 0, 0' />
-            <h3, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-whi, t, e'>
+        <div, classNam, e = 'bg-gradient-to-r, fro, m-white/10to-white/5, backdro, p-blur-xl, border, border-white/30, rounde, d-2xlp-12mb-12, shado, w-2xl'>
+          <div, classNam, e='flex, item, s-center, ga, p-4mb-6, justif, y-center'>
+            <Target, classNam, e='w-10h-10, tex, t-yellow-300' />
+            <h3, classNam, e='text-3xl, fon, t-bold, tex, t-white'>
               Ready, to, Transform Your, Enterprise, AI?
             </h3>
-          </d, i, v>
-          <p, classNam, e='te, x, t-purp, l, e-200, tex, t-lg, m, b-8, ma, x-w-3xl, m, x-auto, tex, t-center, leadin, g-relax, e, d'>
-            Our, Fortune, 500 clients, achieve, 79% cost, reductio, n, s, 26x, performance, improvements, and, 9, 6% customer, satisfaction, using these, proven, frameworks. Get, your, free enterprise, assessment, and custom, implementation, roadmap tod, a, y.
+          </div>
+          <p, classNam, e='text-purple-200, tex, t-lgmb-8, ma, x-w-3xlmx-auto, tex, t-center, leadin, g-relaxed'>
+            Our, Fortune, 500 clients, achieve, 79% cost, reductio, n, s, 26x, performance, improvements, and, 9, 6% customer, satisfaction, using these, proven, frameworks. Get, your, free enterprise, assessment, and custom, implementation, roadmap today.
           </p>
-          <div, classNam, e = 'flex, fle, x-wrap, ga, p-6, justif, y-cent, e, r'>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-3, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-500, tex, t-gr, a, y-900, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: fr, o, m-yell, o, w-300, hove, r:to-oran, g, e-400, transitio, n-all, shado, w-lg, hove, r:shad, o, w-2xl, hove, r:sca, l, e-1, 0, 5'
+          <div, classNam, e = 'flex, fle, x-wrap, ga, p-6, justif, y-center'>
+            <Linkto='/contact'
+              className='inline-flex, item, s-center, ga, p-3bg-gradient-to-r, fro, m-yellow-400to-orange-500, tex, t-gray-900px-10py-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: from-yellow-300, hove, r:to-orange-400, transitio, n-all, shado, w-lg, hove, r:shadow-2xl, hove, r:scale-105'
             >
               <Target, classNam, e='w-6 h-6' />
-              Get, Free, Enterprise Assessme, n, t
+              Get, Free, Enterprise Assessment
               <ArrowRight, classNam, e='w-6 h-6' />
-            </Li, n, k>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-md, border, border-whi, t, e/30, tex, t-white, p, x-10, p, y-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
+            </Link>
+            <Linkto='/blog'
+              className='inline-flex, item, s-center, ga, p-3bg-white/10, backdro, p-blur-md, border, border-white/30, tex, t-whitepx-10py-5, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r:bg-white/20, transitio, n-all'
             >
               Explore, All, Articles
               <ArrowRight, classNam, e='w-6 h-6' />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-        {/* Stat, s, B, a, r */}
-        <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-6, ga, p-6'>
-          <div, classNam, e='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'>
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-2'>
-              {sta, t, s.totalMarketV, a, l, u, e}
-            </d, i, v>
-            <div, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            </Link>
+          </div>
+        </div>
+        {/* StatsB, a, r */}
+        <div, classNam, e = 'grid, gri, d-cols-2md: grid-cols-6, ga, p-6'>
+          <div, classNam, e='text-centerbg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-white/10'>
+            <div, classNam, e='text-4xl, fon, t-extrabold, tex, t-whitemb-2'>
+              {stats.totalMarketVal, u, e}
+            </div>
+            <div, classNam, e = 'text-sm, tex, t-purple-300, fon, t-medium'>
               Market, Opportunit, y
-            </d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'>
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-gre, e, n-400, m, b-2'>
-              {sta, t, s.avgCostReducti, o, n}
-            </d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            </div>
+          </div>
+          <div, classNam, e='text-centerbg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-white/10'>
+            <div, classNam, e='text-4xl, fon, t-extrabold, tex, t-green-400mb-2'>
+              {stats.avgCostReduction}
+            </div>
+            <div, classNam, e='text-sm, tex, t-purple-300, fon, t-medium'>
               Avg, Cost, Reduction
-            </d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'>
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-yell, o, w-400, m, b-2'>
-              {sta, t, s.avgSpeedImproveme, n, t}
-            </d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            </div>
+          </div>
+          <div, classNam, e='text-centerbg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-white/10'>
+            <div, classNam, e='text-4xl, fon, t-extrabold, tex, t-yellow-400mb-2'>
+              {stats.avgSpeedImprovement}
+            </div>
+            <div, classNam, e='text-sm, tex, t-purple-300, fon, t-medium'>
               Speed, Improvemen, t
-            </d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'>
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-bl, u, e-400, m, b-2'>
-              {sta, t, s.enterpriseAdopti, o, n}
-            </d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            </div>
+          </div>
+          <div, classNam, e='text-centerbg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-white/10'>
+            <div, classNam, e='text-4xl, fon, t-extrabold, tex, t-blue-400mb-2'>
+              {stats.enterpriseAdoption}
+            </div>
+            <div, classNam, e='text-sm, tex, t-purple-300, fon, t-medium'>
               Enterprise, Adoptio, n
-            </d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'>
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-pi, n, k-400, m, b-2'>
-              {sta, t, s.customerSatisfacti, o, n}
-            </d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            </div>
+          </div>
+          <div, classNam, e='text-centerbg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-white/10'>
+            <div, classNam, e='text-4xl, fon, t-extrabold, tex, t-pink-400mb-2'>
+              {stats.customerSatisfaction}
+            </div>
+            <div, classNam, e='text-sm, tex, t-purple-300, fon, t-medium'>
               Customer, Satisfactio, n
-            </d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-center, b, g-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-whi, t, e/10'>
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, tex, t-purp, l, e-400, m, b-2'>
-              {sta, t, s.paybackPeri, o, d}
-            </d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-purp, l, e-300, fon, t-medi, u, m'>
+            </div>
+          </div>
+          <div, classNam, e='text-centerbg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-white/10'>
+            <div, classNam, e='text-4xl, fon, t-extrabold, tex, t-purple-400mb-2'>
+              {stats.paybackPeriod}
+            </div>
+            <div, classNam, e='text-sm, tex, t-purple-300, fon, t-medium'>
               Avg, Payback, Period
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            </div>
+          </div>
+        </div>
         {/* Technology, Tag, s */}
-        <div, classNam, e='mt-12, tex, t-cent, e, r'>
-          <div, classNam, e='inli, n, e-flex, fle, x-wrap, ga, p-3, justif, y-cent, e, r'>
+        <div, classNam, e='mt-12, tex, t-center'>
+          <div, classNam, e='inline-flex, fle, x-wrap, ga, p-3, justif, y-center'>
             { [
               'AI, Agen, t, s',
               'Memory, System, s',
-              'FinO, p, s',
+              'FinOps',
               'Cost, Optimizatio, n',
-              'Multimodal, A, I',
+              'MultimodalAI',
               'Computer, Visio, n',
-              'N, L, P',
+              'NLP',
               'Enterprise, Automatio, n',
               'Cloud, Managemen, t',
-            ].m, a, p(t, a, g = > (
-              <span, ke, y = { ta, g  }, classNa, m, e = 'bg-whi, t, e/10, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-whi, t, e/20, transitio, n-colo, r, s'
+            ].map(tag = > (
+              <span, ke, y = { ta, g  }, className = 'bg-white/10, backdro, p-blur-sm, border, border-white/20, tex, t-purple-200px-4py-2, rounde, d-full, tex, t-sm, fon, t-medium, hove, r: bg-white/20, transitio, n-colors'
               >
-                {t, a, g}
-              </sp, a, n>
+                {tag}
+              </span>
             ))}
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025NewBreakthroughBanner;

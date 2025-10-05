@@ -1,119 +1,119 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 
-const, October2025NewContentMegaLaunchBanne, r: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, vi, a-purp, l, e-600, t, o-pi, n, k-600, tex, t-white, p, y-16, p, x-4, relative, overflow-hi, d, d, e, n' > {' ' }
+const, October2025NewContentMegaLaunchBanne, r: React.FC = () => { 
+  return (
+    <div, classNam, e = 'bg-gradient-to-r, fro, m-blue-600, vi, a-purple-600to-pink-600, tex, t-whitepy-16px-4, relative, overflow-hidd, e, n' > {' ' }
       {/* Animated, background, effect */}
       <div, classNam, e = 'absolute, inse, t-0, opacit, y-20'>
-        <div, classNam, e='absolute, to, p-0 -le, f, t-4 w-9, 6, h-96, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-0 -rig, h, t-4 w-9, 6, h-96, b, g-white, rounde, d-full, mi, x-ble, n, d-overlay, filter, blur-3xl, animat, e-pulse, dela, y-10, 0, 0' />
-      </d, i, v>
-      <div, classNam, e='m, a, x-w-7xl, m, x-auto, relative, z-10'>
-        {/* Bad, g, e */}
-        <div, classNam, e='flex, justif, y-center, m, b-6'>
-          <span, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-2, rounde, d-full, tex, t-sm, fon, t-semibold, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, border, border-whi, t, e/30'>
-            🚀 JUST, PUBLISHE, D - OCTOB, E, R , 1, 20, 2, 5
-          </sp, a, n>
-        </d, i, v>
+        <div, classNam, e='absolute, to, p-0 -left-4 w-96h-96bg-white, rounde, d-full, mi, x-blend-overlay, filter, blur-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, botto, m-0 -right-4 w-96h-96bg-white, rounde, d-full, mi, x-blend-overlay, filter, blur-3xl, animat, e-pulse, dela, y-1000' />
+      </div>
+      <div, classNam, e='max-w-7xlmx-auto, relative, z-10'>
+        {/* Badge */}
+        <div, classNam, e='flex, justif, y-centermb-6'>
+          <span, classNam, e='inline-flex, item, s-centerpx-6py-2, rounde, d-full, tex, t-sm, fon, t-semiboldbg-white/20, backdro, p-blur-sm, border, border-white/30'>
+            🚀 JUST, PUBLISHE, D - OCTOBER , 1, 20, 2, 5
+          </span>
+        </div>
 
         {/* Main, headin, g */}
-        <h2, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-center, m, b-6, leadin, g-tig, h, t'>
+        <h2, classNam, e = 'text-5xlmd: text-6xl, fon, t-bold, tex, t-centermb-6, leadin, g-tight'>
           🌟 Breakthrough, AI, Content
           <, b, r />{' '}
-          <span, classNam, e = 'bg-gradie, n, t-to-r, fro, m-yell, o, w-300, t, o-oran, g, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t'>
+          <span, classNam, e = 'bg-gradient-to-r, fro, m-yellow-300to-orange-300bg-clip-text, tex, t-transparent'>
             LIVE, NO, W!
-          </sp, a, n>
+          </span>
         </h2>
 
-        {/* Subheadi, n, g */}
-        <p, classNam, e='te, x, t-xl, m, d: te, x, t-2xl, tex, t-center, m, b-12, tex, t-whi, t, e/90, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
-          Discover, the, latest enterprise, AI, innovations: Governance, frameworks, achieving 99.8% compli, a, n, c, e, multimodal, AI, with $89M, RO, I, and, edge, deployment revolutionizing, rea, l-time, intelligenc, e.
+        {/* Subheading */}
+        <p, classNam, e='text-xlmd: text-2xl, tex, t-centermb-12, tex, t-white/90, ma, x-w-4xlmx-auto, leadin, g-relaxed'>
+          Discover, the, latest enterprise, AI, innovations: Governance, frameworks, achieving 99.8% complian, c, e, multimodal, AI, with $89M, RO, I, and, edge, deployment revolutionizing, rea, l-time, intelligenc, e.
         </p>
 
         {/* Content, card, s */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-12'>
-          <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-ai-governan, c, e-<framewo, r, k'
-            classNa, m, e='bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+        <div, classNam, e = 'gridmd: grid-cols-3, ga, p-6mb-12'>
+          <Linkto='/blog/ai-2025-october-enterprise-ai-governance-<framework'
+            className='bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, border, border-white/20, hove, r:bg-white/20, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'
           >
-            <div, classNam, e='te, x, t-4xl, m, b-4'>🛡️</d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>AI, Governance, Framework</h3>
-            <p, classNam, e='te, x, t-whi, t, e/80, m, b-4, tex, t-lg'>
+            <div, classNam, e='text-4xlmb-4'>🛡️</div>
+            <h3, classNam, e='text-2xl, fon, t-boldmb-3'>AI, Governance, Framework</h3>
+            <p, classNam, e='text-white/80mb-4, tex, t-lg'>
               Enterprise, governance, achieving 99.8% compliance, rates, and $47M, cost, savings
             </p>
-            <div, classNam, e='flex, item, s-center, justif, y-betwe, e, n'>
-              <span, classNam, e='te, x, t-yell, o, w-300, fon, t-semibo, l, d'>
+            <div, classNam, e='flex, item, s-center, justif, y-between'>
+              <span, classNam, e='text-yellow-300, fon, t-semibold'>
                 Read, Full, Guide →
-              </sp, a, n>
-            </d, i, v>
-          </Li, n, k>
+              </span>
+            </div>
+          </Link>
 
-          <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-multimod, a, l-ai-enterpri, s, e-<deployme, n, t'
-            classNa, m, e='bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+          <Linkto='/blog/ai-2025-october-multimodal-ai-enterprise-<deployment'
+            className='bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, border, border-white/20, hove, r:bg-white/20, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'
           >
-            <div, classNam, e='te, x, t-4xl, m, b-4'>🧠</d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>
+            <div, classNam, e='text-4xlmb-4'>🧠</div>
+            <h3, classNam, e='text-2xl, fon, t-boldmb-3'>
               Multimodal, AI, Deployment
             </h3>
-            <p, classNam, e='te, x, t-whi, t, e/80, m, b-4, tex, t-lg'>
-              4, 5, 0% productivity, gains, and $89M, ROI, through integrated, AI, systems
+            <p, classNam, e='text-white/80mb-4, tex, t-lg'>
+              450% productivity, gains, and $89M, ROI, through integrated, AI, systems
             </p>
-            <div, classNam, e='flex, item, s-center, justif, y-betwe, e, n'>
-              <span, classNam, e='te, x, t-yell, o, w-300, fon, t-semibo, l, d'>
+            <div, classNam, e='flex, item, s-center, justif, y-between'>
+              <span, classNam, e='text-yellow-300, fon, t-semibold'>
                 Explore, No, w →
-              </sp, a, n>
-            </d, i, v>
-          </Li, n, k>
+              </span>
+            </div>
+          </Link>
 
-          <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-ed, g, e-ai-deployme, n, t-<revoluti, o, n'
-            classNa, m, e='bg-whi, t, e/10, backdro, p-bl, u, r-md, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r:bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
+          <Linkto='/blog/ai-2025-october-edge-ai-deployment-<revolution'
+            className='bg-white/10, backdro, p-blur-md, rounde, d-2xlp-6, border, border-white/20, hove, r:bg-white/20, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'
           >
-            <div, classNam, e='te, x, t-4xl, m, b-4'>⚡</d, i, v>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, m, b-3'>Edge, AI, Revolution</h3>
-            <p, classNam, e='te, x, t-whi, t, e/80, m, b-4, tex, t-lg'>
-              S, u, b-millisecond, inference, and $156M, savings, with distributed, A, I
+            <div, classNam, e='text-4xlmb-4'>⚡</div>
+            <h3, classNam, e='text-2xl, fon, t-boldmb-3'>Edge, AI, Revolution</h3>
+            <p, classNam, e='text-white/80mb-4, tex, t-lg'>
+              Sub-millisecond, inference, and $156M, savings, with distributedAI
             </p>
-            <div, classNam, e='flex, item, s-center, justif, y-betwe, e, n'>
-              <span, classNam, e='te, x, t-yell, o, w-300, fon, t-semibo, l, d'>
+            <div, classNam, e='flex, item, s-center, justif, y-between'>
+              <span, classNam, e='text-yellow-300, fon, t-semibold'>
                 Learn, Mor, e →
-              </sp, a, n>
-            </d, i, v>
-          </Li, n, k>
-        </d, i, v>
+              </span>
+            </div>
+          </Link>
+        </div>
 
-        {/* Stat, s, r, o, w */}
-        <div, classNam, e = 'grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, m, b-12'>
-          <div, classNam, e='te, x, t-cent, e, r'>
-            <div, classNam, e='te, x, t-4xl, fon, t-bold, m, b-2'>99.8%</d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70'>Compliance, Rat, e</d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-cent, e, r'>
-            <div, classNam, e='te, x, t-4xl, fon, t-bold, m, b-2'>$29, 2, M</d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70'>Combined, RO, I</d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-cent, e, r'>
-            <div, classNam, e='te, x, t-4xl, fon, t-bold, m, b-2'>4, 5, 0%</d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70'>Productivity, Gai, n</d, i, v>
-          </d, i, v>
-          <div, classNam, e='te, x, t-cent, e, r'>
-            <div, classNam, e='te, x, t-4xl, fon, t-bold, m, b-2'>&lt; 1, m, s</d, i, v>
-            <div, classNam, e='te, x, t-whi, t, e/70'>Edge, Latenc, y</d, i, v>
-          </d, i, v>
-        </d, i, v>
+        {/* Statsr, o, w */}
+        <div, classNam, e = 'grid, gri, d-cols-2md: grid-cols-4, ga, p-6mb-12'>
+          <div, classNam, e='text-center'>
+            <div, classNam, e='text-4xl, fon, t-boldmb-2'>99.8%</div>
+            <div, classNam, e='text-white/70'>Compliance, Rat, e</div>
+          </div>
+          <div, classNam, e='text-center'>
+            <div, classNam, e='text-4xl, fon, t-boldmb-2'>$292M</div>
+            <div, classNam, e='text-white/70'>Combined, RO, I</div>
+          </div>
+          <div, classNam, e='text-center'>
+            <div, classNam, e='text-4xl, fon, t-boldmb-2'>450%</div>
+            <div, classNam, e='text-white/70'>Productivity, Gai, n</div>
+          </div>
+          <div, classNam, e='text-center'>
+            <div, classNam, e='text-4xl, fon, t-boldmb-2'>&lt; 1ms</div>
+            <div, classNam, e='text-white/70'>Edge, Latenc, y</div>
+          </div>
+        </div>
 
-        {/* C, T, A */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <Link, t, o='/<bl, o, g'
-            classNa, m, e='inli, n, e-block, b, g-white, tex, t-purp, l, e-600, p, x-10, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gr, a, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, shado, w-2, x, l'
+        {/* CTA */}
+        <div, classNam, e = 'text-center'>
+          <Linkto='/<blog'
+            className='inline-blockbg-white, tex, t-purple-600px-10py-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-gray-100, transitio, n-all, duratio, n-300, hove, r:scale-105, shado, w-2xl'
           >
-            Explore, All, New Conte, n, t →
-          </Li, n, k>
-          <p, classNam, e='mt-4, tex, t-whi, t, e/70'>
-            Jo, i, n , 5, 0,0, 0, 0+ professionals, staying, ahead with, our, AI insigh, t, s
+            Explore, All, New Content →
+          </Link>
+          <p, classNam, e='mt-4, tex, t-white/70'>
+            Join , 500, 0, 0+ professionals, staying, ahead with, our, AI insights
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,304 +1,304 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 const, October2025FraudDetectionBanne, r = () => { 
-  retu, r, n (
-    <div, classNam, e = "relative, b, g-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/20, vi, a-purp, l, e-9, 0, 0/20, t, o-bl, u, e-9, 0, 0/20, borde, r-y, borde, r-r, e, d-5, 0, 0/30, overflo, w-hidd, e, n"  > {/* Animated, background, effects */ }
+  return (
+    <div, classNam, e = "relativebg-gradient-to-br, fro, m-red-900/20, vi, a-purple-900/20to-blue-900/20, borde, r-y, borde, r-red-500/30, overflo, w-hidden"  > {/* Animated, background, effects */ }
       <div, classNam, e="absolute, inse, t-0, opacit, y-10">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-r, e, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 1, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-      </d, i, v>
-      <div, classNam, e = "relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-12">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-96h-96bg-red-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-96h-96bg-purple-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 1, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-96h-96bg-blue-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 2, s' }} />
+      </div>
+      <div, classNam, e = "relative, ma, x-w-7xlmx-autopx-4sm: px-6lg:px-8py-12">
         {/* Header, Sect, i, o, n */}
-        <div, classNam, e = "te, x, t-center, m, b-10">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-full, m, b-4, animat, e-pul, s, e">
-            <Shield, classNam, e="w-5 h-5, tex, t-r, e, d-4, 0, 0" />
-            <span, classNam, e="te, x, t-r, e, d-300, fon, t-semibold, tex, t-sm">🚨 BREAKI, N, G: OCTO, B, E, R , 1, 20, 2, 5 — ENTERPRISE, FRAUD, CRISIS SOLV, E, D</sp, a, n>
-            <Shield, classNam, e = "w-5 h-5, tex, t-r, e, d-4, 0, 0" />
-          </d, i, v>
-          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4, leadin, g-tig, h, t">
+        <div, classNam, e = "text-centermb-10">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-2px-4py-2bg-red-500/20, border, border-red-500/30, rounde, d-fullmb-4, animat, e-pulse">
+            <Shield, classNam, e="w-5 h-5, tex, t-red-400" />
+            <span, classNam, e="text-red-300, fon, t-semibold, tex, t-sm">🚨 BREAKING: OCTOBE, R , 1, 20, 2, 5 — ENTERPRISE, FRAUD, CRISIS SOLVED</span>
+            <Shield, classNam, e = "w-5 h-5, tex, t-red-400" />
+          </div>
+          <h2, classNam, e="text-4xlmd: text-5xl, fon, t-bold, tex, t-whitemb-4, leadin, g-tight">
             AI-Powered, Rea, l-Time, Fraud, Detection
-            <br /> <span, classNam, e="te, x, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, vi, a-purp, l, e-400, t, o-bl, u, e-4, 0, 0">
-              $847B, in, Assets Protect, e, d | 99.7% Accura, c, y | S, u, b-50ms, Detectio, n
-            </sp, a, n>
+            <br /> <span, classNam, e="text-transparentbg-clip-textbg-gradient-to-r, fro, m-red-400, vi, a-purple-400to-blue-400">
+              $847B, in, Assets Protected | 99.7% Accuracy | Sub-50ms, Detectio, n
+            </span>
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d">
-            Revolutionary, AI, platform combini, n, g <strong, classNam, e="te, x, t-whi, t, e">Graph, Neural, Networ, k, s, Behavioral, Biometric, s & Mul, t, i-Model, M, L</stro, n, g> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, false, positives. <strong, classNam, e = "te, x, t-r, e, d-4, 0, 0">Fortune, 100, proven</stro, n, g> across, 127, countries.
+          <p, classNam, e="text-xl, tex, t-gray-300, ma, x-w-4xlmx-auto, leadin, g-relaxed">
+            Revolutionary, AI, platform combining <strong, classNam, e="text-white">Graph, Neural, Networ, k, s, Behavioral, Biometric, s & Multi-ModelML</strong> to, achieve, 96% fraud, reductio, n, 43x, RO, I, and, nea, r-zero, false, positives. <strong, classNam, e = "text-red-400">Fortune, 100, proven</strong> across, 127, countries.
           </p>
-        </d, i, v>
+        </div>
         {/* Key, Metrics, Grid */}
-        <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-10">
-          <div, classNam, e="bg-gradie, n, t-to-br, fro, m-r, e, d-9, 0, 0/40, t, o-r, e, d-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-r, e, d-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">
-            <Zap, classNam, e="w-8 h-8, tex, t-r, e, d-400, m, x-auto, m, b-2" />
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">S, u, b-50, m, s</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-r, e, d-2, 0, 0">Re, a, l-Time, Detectio, n</d, i, v>
-            <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-, 1">, 1,300x, faste, r</d, i, v>
-          </d, i, v>
-          <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, t, o-purp, l, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r: sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">
-            <Target, classNam, e="w-8 h-8, tex, t-purp, l, e-400, m, x-auto, m, b-2" />
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">99.7%</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-purp, l, e-2, 0, 0">Detection, Accurac, y</d, i, v>
-            <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">0.0, 0, 3% false, positive, s</d, i, v>
-          </d, i, v>
-          <div, classNam, e="bg-gradie, n, t-to-br, fro, m-bl, u, e-9, 0, 0/40, t, o-bl, u, e-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-bl, u, e-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">
-            <TrendingUp, classNam, e="w-8 h-8, tex, t-bl, u, e-400, m, x-auto, m, b-2" />
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">96%</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Fraud, Reductio, n</d, i, v>
-            <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$410M, saved, avg</d, i, v>
-          </d, i, v>
-          <div, classNam, e="bg-gradie, n, t-to-br, fro, m-gre, e, n-9, 0, 0/40, t, o-gre, e, n-8, 0, 0/40, backdro, p-bl, u, r-sm, border, border-gre, e, n-5, 0, 0/30, rounde, d-x, l, p-6, tex, t-center, hove, r:sca, l, e-105, transitio, n-transform, duratio, n-3, 0, 0">
-            <Shield, classNam, e="w-8 h-8, tex, t-gre, e, n-400, m, x-auto, m, b-2" />
-            <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-1">$84, 7, B</d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-gre, e, n-2, 0, 0">Assets, Protecte, d</d, i, v>
-            <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">Globally, deploye, d</d, i, v>
-          </d, i, v>
-        </d, i, v>
+        <div, classNam, e="grid, gri, d-cols-2md: grid-cols-4, ga, p-4mb-10">
+          <div, classNam, e="bg-gradient-to-br, fro, m-red-900/40to-red-800/40, backdro, p-blur-sm, border, border-red-500/30, rounde, d-xlp-6, tex, t-center, hove, r:scale-105, transitio, n-transform, duratio, n-300">
+            <Zap, classNam, e="w-8 h-8, tex, t-red-400mx-automb-2" />
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">Sub-50ms</div>
+            <div, classNam, e="text-sm, tex, t-red-200">Real-Time, Detectio, n</div>
+            <div, classNam, e="text-xs, tex, t-gray-400mt-, 1">, 1,300x, faste, r</div>
+          </div>
+          <div, classNam, e = "bg-gradient-to-br, fro, m-purple-900/40to-purple-800/40, backdro, p-blur-sm, border, border-purple-500/30, rounde, d-xlp-6, tex, t-center, hove, r: scale-105, transitio, n-transform, duratio, n-300">
+            <Target, classNam, e="w-8 h-8, tex, t-purple-400mx-automb-2" />
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">99.7%</div>
+            <div, classNam, e="text-sm, tex, t-purple-200">Detection, Accurac, y</div>
+            <div, classNam, e="text-xs, tex, t-gray-400mt-1">0.003% false, positive, s</div>
+          </div>
+          <div, classNam, e="bg-gradient-to-br, fro, m-blue-900/40to-blue-800/40, backdro, p-blur-sm, border, border-blue-500/30, rounde, d-xlp-6, tex, t-center, hove, r:scale-105, transitio, n-transform, duratio, n-300">
+            <TrendingUp, classNam, e="w-8 h-8, tex, t-blue-400mx-automb-2" />
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">96%</div>
+            <div, classNam, e="text-sm, tex, t-blue-200">Fraud, Reductio, n</div>
+            <div, classNam, e="text-xs, tex, t-gray-400mt-1">$410M, saved, avg</div>
+          </div>
+          <div, classNam, e="bg-gradient-to-br, fro, m-green-900/40to-green-800/40, backdro, p-blur-sm, border, border-green-500/30, rounde, d-xlp-6, tex, t-center, hove, r:scale-105, transitio, n-transform, duratio, n-300">
+            <Shield, classNam, e="w-8 h-8, tex, t-green-400mx-automb-2" />
+            <div, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-1">$847B</div>
+            <div, classNam, e="text-sm, tex, t-green-200">Assets, Protecte, d</div>
+            <div, classNam, e="text-xs, tex, t-gray-400mt-1">Globally, deploye, d</div>
+          </div>
+        </div>
         {/* Revolutionary, Capabilit, i, e, s */}
-        <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">
-          <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">
-            🔥 Revolutionary, AI, Technology Sta, c, k
+        <div, classNam, e = "bg-gradient-to-br, fro, m-gray-900/60to-gray-800/60, backdro, p-blur-sm, border, border-white/10, rounde, d-2xlp-8mb-10">
+          <h3, classNam, e="text-2xl, fon, t-bold, tex, t-whitemb-6, tex, t-center">
+            🔥 Revolutionary, AI, Technology Stack
           </h3>
-          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
+          <div, classNam, e="gridmd: grid-cols-3, ga, p-6">
             <div, classNam, e="flex, item, s-start, ga, p-4">
-              <div, classNam, e="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
-                <Brain, classNam, e="w-6 h-6, tex, t-r, e, d-4, 0, 0" />
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e="fo, n, t-semibold, tex, t-white, m, b-1">Mul, t, i-Model, ML, Ensemble</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
-                  Graph, Neural, Networks + Transforme, r, s + Isolation, Fores, t + Deep, Learning, working in, concert, for unmatched, accurac, y
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
+              <div, classNam, e="flex-shrink-0 w-12h-12bg-red-500/20, border, border-red-500/30, rounde, d-lg, flex, items-center, justif, y-center">
+                <Brain, classNam, e="w-6 h-6, tex, t-red-400" />
+              </div>
+              <div>
+                <div, classNam, e="font-semibold, tex, t-whitemb-1">Multi-Model, ML, Ensemble</div>
+                <div, classNam, e="text-sm, tex, t-gray-300">
+                  Graph, Neural, Networks + Transformers + Isolation, Fores, t + Deep, Learning, working in, concert, for unmatched, accurac, y
+                </div>
+              </div>
+            </div>
             <div, classNam, e="flex, item, s-start, ga, p-4">
-              <div, classNam, e="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-purp, l, e-5, 0, 0/20, border, border-purp, l, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
-                <Eye, classNam, e="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
-              </d, i, v>
-                <Eye, classNam, e="w-6 h-6, tex, t-purp, l, e-4, 0, 0" />
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e="fo, n, t-semibold, tex, t-white, m, b-1">Behavioral, Biometric, s</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
+              <div, classNam, e="flex-shrink-0 w-12h-12bg-purple-500/20, border, border-purple-500/30, rounde, d-lg, flex, items-center, justif, y-center">
+                <Eye, classNam, e="w-6 h-6, tex, t-purple-400" />
+              </div>
+                <Eye, classNam, e="w-6 h-6, tex, t-purple-400" />
+              </div>
+              <div>
+                <div, classNam, e="font-semibold, tex, t-whitemb-1">Behavioral, Biometric, s</div>
+                <div, classNam, e="text-sm, tex, t-gray-300">
                   Continuous, authentication, via keystroke, dynam, i, c, s, mouse, pattern, s, device, fingerprintin, g — 99.4% user, ID, accuracy
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
+                </div>
+              </div>
+            </div>
             <div, classNam, e = "flex, item, s-start, ga, p-4">
-              <div, classNam, e="fl, e, x-shri, n, k-0 w-1, 2, h-12, b, g-bl, u, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, rounde, d-lg, flex, items-center, justif, y-cent, e, r">
-                <Network, classNam, e="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
-              </d, i, v>
-                <Network, classNam, e="w-6 h-6, tex, t-bl, u, e-4, 0, 0" />
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e="fo, n, t-semibold, tex, t-white, m, b-1">Graph, Intelligenc, e</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">
-                  Detect, fraud, rings and, coordinated, attacks across, millions, of entiti, e, s — uncover, hidden, network patter, n, s
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-        {/* Fortune, 100, Success Sto, r, y */}
-        <div, classNam, e="bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/30, vi, a-purp, l, e-9, 0, 0/30, t, o-bl, u, e-9, 0, 0/30, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">
-          <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3, m, b-4">
-            <Shield, classNam, e="w-8 h-8, tex, t-r, e, d-4, 0, 0" />
-            <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">Fortune, 100, Transformation</h3>
-            <Shield, classNam, e="w-8 h-8, tex, t-r, e, d-4, 0, 0" />
-          </d, i, v>
-          <div, classNam, e="grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-6">
-            <d, i, v>
-              <div, classNam, e="te, x, t-r, e, d-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">
+              <div, classNam, e="flex-shrink-0 w-12h-12bg-blue-500/20, border, border-blue-500/30, rounde, d-lg, flex, items-center, justif, y-center">
+                <Network, classNam, e="w-6 h-6, tex, t-blue-400" />
+              </div>
+                <Network, classNam, e="w-6 h-6, tex, t-blue-400" />
+              </div>
+              <div>
+                <div, classNam, e="font-semibold, tex, t-whitemb-1">Graph, Intelligenc, e</div>
+                <div, classNam, e="text-sm, tex, t-gray-300">
+                  Detect, fraud, rings and, coordinated, attacks across, millions, of entities — uncover, hidden, network patterns
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Fortune, 100, Success Story */}
+        <div, classNam, e="bg-gradient-to-r, fro, m-red-900/30, vi, a-purple-900/30to-blue-900/30, backdro, p-blur-sm, border, border-white/10, rounde, d-2xlp-8mb-10">
+          <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3mb-4">
+            <Shield, classNam, e="w-8 h-8, tex, t-red-400" />
+            <h3, classNam, e="text-2xl, fon, t-bold, tex, t-white">Fortune, 100, Transformation</h3>
+            <Shield, classNam, e="w-8 h-8, tex, t-red-400" />
+          </div>
+          <div, classNam, e="gridmd: grid-cols-2, ga, p-8mb-6">
+            <div>
+              <div, classNam, e="text-red-400, fon, t-semiboldmb-2, flex, items-center, ga, p-2">
                 <AlertCircle, classNam, e="w-5 h-5" />
-                Befo, r, e: Crisis, Stat, e
-              </d, i, v>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
+                Before: Crisis, Stat, e
+              </div>
+              <ul, classNam, e="space-y-2, tex, t-gray-300">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-                  <sp, a, n>$427M, annual, fraud loss, e, s (0.34% of, volu, m, e)</sp, a, n>
+                  <span, classNam, e="text-red-400mt-1">✗</span>
+                  <span>$427M, annual, fraud losses (0.34% of, volu, m, e)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-                  <sp, a, n>82% false, positive, rate (massive, fricti, o, n)</sp, a, n>
+                  <span, classNam, e="text-red-400mt-1">✗</span>
+                  <span>82% false, positive, rate (massive, fricti, o, n)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-                  <sp, a, n>65-90, second, detection laten, c, y (too, sl, o, w)</sp, a, n>
+                  <span, classNam, e="text-red-400mt-1">✗</span>
+                  <span>65-90, second, detection latency (too, sl, o, w)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-                  <sp, a, n>18.7% customer, chur, n ($127M, revenue, los, s)</sp, a, n>
+                  <span, classNam, e="text-red-400mt-1">✗</span>
+                  <span>18.7% customer, chur, n ($127M, revenue, los, s)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-r, e, d-400, m, t-1">✗</sp, a, n>
-                  <sp, a, n>NPS, Scor, e: 14 (indust, r, y-wo, r, s, t)</sp, a, n>
+                  <span, classNam, e="text-red-400mt-1">✗</span>
+                  <span>NPS, Scor, e: 14 (industry-wors, t)</span>
                 </li>
               </ul>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e = "te, x, t-gre, e, n-400, fon, t-semibold, m, b-2, flex, items-center, ga, p-2">
+            </div>
+            <div>
+              <div, classNam, e = "text-green-400, fon, t-semiboldmb-2, flex, items-center, ga, p-2">
                 <CheckCircle, classNam, e="w-5 h-5" />
-                Aft, e, r: AI-Powered, Excellenc, e
-              </d, i, v>
-              <ul, classNam, e="spa, c, e-y-2, tex, t-gr, a, y-3, 0, 0">
+                After: AI-Powered, Excellenc, e
+              </div>
+              <ul, classNam, e="space-y-2, tex, t-gray-300">
                 <li, classNam, e="flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-                  <sp, a, n>$17M, fraud, losses (96% reduc, t, i, o, n, $410M, save, d)</sp, a, n>
+                  <span, classNam, e="text-green-400mt-1">✓</span>
+                  <span>$17M, fraud, losses (96% reducti, o, n, $410M, save, d)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-                  <sp, a, n>0.0, 0, 3% false, positive, s (2, 7,000x, improvemen, t)</sp, a, n>
+                  <span, classNam, e="text-green-400mt-1">✓</span>
+                  <span>0.003% false, positive, s (2, 7,000x, improvemen, t)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-                  <sp, a, n>S, u, b-50ms, detectio, n (, 1,300x, faste, r)</sp, a, n>
+                  <span, classNam, e="text-green-400mt-1">✓</span>
+                  <span>Sub-50ms, detectio, n (, 1,300x, faste, r)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-                  <sp, a, n>1.2% chu, r, n ($120M, revenue, protecte, d)</sp, a, n>
+                  <span, classNam, e="text-green-400mt-1">✓</span>
+                  <span>1.2% churn ($120M, revenue, protecte, d)</span>
                 </li>
                 <li, classNam, e = "flex, item, s-start, ga, p-2">
-                  <span, classNam, e="te, x, t-gre, e, n-400, m, t-1">✓</sp, a, n>
-                  <sp, a, n>NPS, Scor, e: 74 (indust, r, y-lea, d, i, n, g, +60, point, s)</sp, a, n>
+                  <span, classNam, e="text-green-400mt-1">✓</span>
+                  <span>NPS, Scor, e: 74 (industry-leadi, n, g, +60, point, s)</span>
                 </li>
               </ul>
-            </d, i, v>
-          </d, i, v>
-          <div, classNam, e = "te, x, t-cent, e, r">
-            <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounde, d-lg">
-              <TrendingUp, classNam, e="w-6 h-6, tex, t-gre, e, n-4, 0, 0" />
-              <d, i, v>
-                <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">43x, RO, I</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">6.2-week, payback, period</d, i, v>
-              </d, i, v>
-              <div, classNam, e="te, x, t-whi, t, e/30">|</d, i, v>
-              <d, i, v>
-                <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">$86, 0, M</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-3, 0, 0">Annual, value, created</d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            </div>
+          </div>
+          <div, classNam, e = "text-center">
+            <div, classNam, e="inline-flex, item, s-center, ga, p-3px-6py-3bg-gradient-to-r, fro, m-red-500/20to-purple-500/20, border, border-red-500/30, rounde, d-lg">
+              <TrendingUp, classNam, e="w-6 h-6, tex, t-green-400" />
+              <div>
+                <div, classNam, e="text-2xl, fon, t-bold, tex, t-white">43x, RO, I</div>
+                <div, classNam, e="text-sm, tex, t-gray-300">6.2-week, payback, period</div>
+              </div>
+              <div, classNam, e="text-white/30">|</div>
+              <div>
+                <div, classNam, e="text-2xl, fon, t-bold, tex, t-white">$860M</div>
+                <div, classNam, e="text-sm, tex, t-gray-300">Annual, value, created</div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Industry, Application, s */}
-        <div, classNam, e="bg-gradie, n, t-to-br, fro, m-gr, a, y-9, 0, 0/60, t, o-gr, a, y-8, 0, 0/60, backdro, p-bl, u, r-sm, border, border-whi, t, e/10, rounde, d-2x, l, p-8, m, b-10">
-          <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-6, tex, t-cent, e, r">
+        <div, classNam, e="bg-gradient-to-br, fro, m-gray-900/60to-gray-800/60, backdro, p-blur-sm, border, border-white/10, rounde, d-2xlp-8mb-10">
+          <h3, classNam, e="text-2xl, fon, t-bold, tex, t-whitemb-6, tex, t-center">
             🌍 Proven, Across, Industries — 127, Countries, Deployed
           </h3>
-          <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-4">
-            <div, classNam, e="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s">
-              <div, classNam, e="te, x, t-3xl, m, b-2">🏦</d, i, v>
-              <div, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">Financial, Service, s</d, i, v>
-              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$2.3B, protecte, d</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s">
-              <div, classNam, e="te, x, t-3xl, m, b-2">🛒</d, i, v>
-              <div, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-whi, t, e">E-Commer, c, e</d, i, v>
-              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">98.7% accura, c, y</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s">
-              <div, classNam, e="te, x, t-3xl, m, b-2">🏥</d, i, v>
-              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$78M, saving, s</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s">
-              <div, classNam, e="te, x, t-3xl, m, b-2">🏢</d, i, v>
-              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">$127M, saving, s</d, i, v>
-            </d, i, v>
-            <div, classNam, e="te, x, t-cente, r, p-4, b, g-whi, t, e/5, rounde, d-lg, hove, r:bg-whi, t, e/10, transitio, n-colo, r, s">
-              <div, classNam, e="te, x, t-3xl, m, b-2">📱</d, i, v>
-              <div, classNam, e="te, x, t-xs, tex, t-gr, a, y-400, m, t-1">99.2% detecti, o, n</d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-        {/* Call, to, Action Sec, t, i, o, n */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
-          <Link, t, o="/bl, o, g/ai-20, 2, 5-o, c, t-re, a, l-ti, m, e-fra, u, d-detecti, o, n-revoluti, o, n"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-r, e, d-600, t, o-r, e, d-700, hove, r:fr, o, m-r, e, d-500, hove, r:to-r, e, d-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"
+          <div, classNam, e="grid, gri, d-cols-2md: grid-cols-5, ga, p-4">
+            <div, classNam, e="text-centerp-4bg-white/5, rounde, d-lg, hove, r:bg-white/10, transitio, n-colors">
+              <div, classNam, e="text-3xlmb-2">🏦</div>
+              <div, classNam, e="text-sm, fon, t-semibold, tex, t-white">Financial, Service, s</div>
+              <div, classNam, e="text-xs, tex, t-gray-400mt-1">$2.3B, protecte, d</div>
+            </div>
+            <div, classNam, e="text-centerp-4bg-white/5, rounde, d-lg, hove, r:bg-white/10, transitio, n-colors">
+              <div, classNam, e="text-3xlmb-2">🛒</div>
+              <div, classNam, e="text-sm, fon, t-semibold, tex, t-white">E-Commerce</div>
+              <div, classNam, e="text-xs, tex, t-gray-400mt-1">98.7% accuracy</div>
+            </div>
+            <div, classNam, e="text-centerp-4bg-white/5, rounde, d-lg, hove, r:bg-white/10, transitio, n-colors">
+              <div, classNam, e="text-3xlmb-2">🏥</div>
+              <div, classNam, e="text-xs, tex, t-gray-400mt-1">$78M, saving, s</div>
+            </div>
+            <div, classNam, e="text-centerp-4bg-white/5, rounde, d-lg, hove, r:bg-white/10, transitio, n-colors">
+              <div, classNam, e="text-3xlmb-2">🏢</div>
+              <div, classNam, e="text-xs, tex, t-gray-400mt-1">$127M, saving, s</div>
+            </div>
+            <div, classNam, e="text-centerp-4bg-white/5, rounde, d-lg, hove, r:bg-white/10, transitio, n-colors">
+              <div, classNam, e="text-3xlmb-2">📱</div>
+              <div, classNam, e="text-xs, tex, t-gray-400mt-1">99.2% detection</div>
+            </div>
+          </div>
+        </div>
+        {/* Call, to, Action Secti, o, n */}
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-6">
+          <Linkto="/blog/ai-2025-oct-real-time-fraud-detection-revolution"
+            className="groupbg-gradient-to-br, fro, m-red-600to-red-700, hove, r:from-red-500, hove, r:to-red-600, rounde, d-xlp-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-red-500/50"
           >
-            <Brain, classNam, e="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
-            <div, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-              Read, Technical, Deep-Di, v, e
-            </d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-r, e, d-100, m, b-4">
+            <Brain, classNam, e="w-12h-12, tex, t-whitemx-automb-4" />
+            <div, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-2">
+              Read, Technical, Deep-Dive
+            </div>
+            <div, classNam, e="text-sm, tex, t-red-100mb-4">
               Complete, guide, to AI-powered, fraud, detection with, code, exampl, e, s, architectu, r, e, and, implementation, roadmap
-            </d, i, v>
-            <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
-              <sp, a, n>Explore, Technolog, y</sp, a, n>
+            </div>
+            <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: gap-4, transitio, n-all">
+              <span>Explore, Technolog, y</span>
               <ArrowRight, classNam, e="w-5 h-5" />
-            </d, i, v>
-          </Li, n, k>
-          <Link, t, o="/ca, s, e-studi, e, s/glob, a, l-financi, a, l-fra, u, d-detecti, o, n-84, 7, b-succe, s, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-purp, l, e-600, t, o-purp, l, e-700, hove, r:fr, o, m-purp, l, e-500, hove, r:to-purp, l, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/50"
+            </div>
+          </Link>
+          <Linkto="/case-studies/global-financial-fraud-detection-847b-success"
+            className="groupbg-gradient-to-br, fro, m-purple-600to-purple-700, hove, r:from-purple-500, hove, r:to-purple-600, rounde, d-xlp-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-purple-500/50"
           >
-            <Shield, classNam, e="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
-            <div, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
+            <Shield, classNam, e="w-12h-12, tex, t-whitemx-automb-4" />
+            <div, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-2">
               $847B, Success, Story
-            </d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-purp, l, e-100, m, b-4">
-              Fortune, 100, case stu, d, y: 96% fraud, reduct, i, o, n, 43x, RO, I, 6-week, paybac, k — complete, transformation, journey
-            </d, i, v>
-            <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
-              <sp, a, n>See, Result, s</sp, a, n>
+            </div>
+            <div, classNam, e="text-sm, tex, t-purple-100mb-4">
+              Fortune, 100, case study: 96% fraud, reduct, i, o, n, 43x, ROI6-week, paybac, k — complete, transformation, journey
+            </div>
+            <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: gap-4, transitio, n-all">
+              <span>See, Result, s</span>
               <ArrowRight, classNam, e="w-5 h-5" />
-            </d, i, v>
-          </Li, n, k>
-          <Link, t, o="/servic, e, s/ai-fra, u, d-detecti, o, n-servic, e, s"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-bl, u, e-600, t, o-bl, u, e-700, hove, r:fr, o, m-bl, u, e-500, hove, r:to-bl, u, e-600, rounde, d-x, l, p-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/50"
+            </div>
+          </Link>
+          <Linkto="/services/ai-fraud-detection-services"
+            className="groupbg-gradient-to-br, fro, m-blue-600to-blue-700, hove, r:from-blue-500, hove, r:to-blue-600, rounde, d-xlp-6, tex, t-center, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-blue-500/50"
           >
-            <Target, classNam, e="w-1, 2, h-12, tex, t-white, m, x-auto, m, b-4" />
-            <div, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2">
-              Our, Fraud, Detection Servic, e, s
-            </d, i, v>
-            <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-100, m, b-4">
+            <Target, classNam, e="w-12h-12, tex, t-whitemx-automb-4" />
+            <div, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-2">
+              Our, Fraud, Detection Services
+            </div>
+            <div, classNam, e="text-sm, tex, t-blue-100mb-4">
               Comprehensive, platf, o, r, m, managed, service, s, consulti, n, g — flexible, pricing, with guaranteed, ROI, and proven, result, s
-            </d, i, v>
-            <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hov, e, r: g, a, p-4, transitio, n-a, l, l">
-              <sp, a, n>Get, Protecte, d</sp, a, n>
+            </div>
+            <div, classNam, e = "flex, item, s-center, justif, y-center, ga, p-2, tex, t-white, fon, t-semibold, grou, p-hover: gap-4, transitio, n-all">
+              <span>Get, Protecte, d</span>
               <ArrowRight, classNam, e="w-5 h-5" />
-            </d, i, v>
-          </Li, n, k>
-        </d, i, v>
+            </div>
+          </Link>
+        </div>
         {/* Free, Assessment, C, T, A */}
-        <div, classNam, e = "mt-10, tex, t-cent, e, r">
-          <div, classNam, e="inli, n, e-flex, fle, x-col, item, s-center, ga, p-4 p-8, b, g-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/40, vi, a-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, backdro, p-bl, u, r-sm, border, border-whi, t, e/20, rounde, d-2, x, l">
-            <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">
-              🎁 FRE, E, 2-Week, Fraud, Assessment — No, Obligatio, n
-            </d, i, v>
-            <div, classNam, e="te, x, t-gr, a, y-300, ma, x-w-2, x, l">
-              Discover, your, fraud expos, u, r, e, quantify, potential, savings, and, receive, a custom, ROI, projection — completely, free, and confidenti, a, l
-            </d, i, v>
-            <Link, t, o = "/conta, c, t"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-purp, l, e-600, hove, r: fr, o, m-r, e, d-500, hove, r:to-purp, l, e-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-r, e, d-5, 0, 0/50"
+        <div, classNam, e = "mt-10, tex, t-center">
+          <div, classNam, e="inline-flex, fle, x-col, item, s-center, ga, p-4 p-8bg-gradient-to-r, fro, m-red-900/40, vi, a-purple-900/40to-blue-900/40, backdro, p-blur-sm, border, border-white/20, rounde, d-2xl">
+            <div, classNam, e="text-2xl, fon, t-bold, tex, t-white">
+              🎁 FREE2-Week, Fraud, Assessment — No, Obligatio, n
+            </div>
+            <div, classNam, e="text-gray-300, ma, x-w-2xl">
+              Discover, your, fraud exposur, e, quantify, potential, savings, and, receive, a custom, ROI, projection — completely, free, and confidential
+            </div>
+            <Linkto = "/contact"
+              className="inline-flex, item, s-center, ga, p-3px-8py-4bg-gradient-to-r, fro, m-red-600to-purple-600, hove, r: from-red-500, hove, r:to-purple-500, rounde, d-lg, tex, t-white, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-red-500/50"
             >
               <Shield, classNam, e="w-6 h-6" />
-              <sp, a, n>Schedule, Free, Assessment</sp, a, n>
+              <span>Schedule, Free, Assessment</span>
               <ArrowRight, classNam, e="w-6 h-6" />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
+            </Link>
+          </div>
+        </div>
         {/* Trust, Indicat, o, r, s */}
-        <div, classNam, e = "mt-10, p, t-8, borde, r-t, borde, r-whi, t, e/10">
-          <div, classNam, e="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gr, a, y-4, 0, 0">
+        <div, classNam, e = "mt-10pt-8, borde, r-t, borde, r-white/10">
+          <div, classNam, e="flex, fle, x-wrap, item, s-center, justif, y-center, ga, p-6, tex, t-sm, tex, t-gray-400">
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircle, classNam, e="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
-              <sp, a, n>Fortune, 100, Proven</sp, a, n>
-            </d, i, v>
+              <CheckCircle, classNam, e="w-4 h-4, tex, t-green-400" />
+              <span>Fortune, 100, Proven</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircle, classNam, e="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
-              <sp, a, n>127, Countries, Deployed</sp, a, n>
-            </d, i, v>
+              <CheckCircle, classNam, e="w-4 h-4, tex, t-green-400" />
+              <span>127, Countries, Deployed</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircle, classNam, e="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
-              <sp, a, n>99.99% Uptime, SL, A</sp, a, n>
-            </d, i, v>
+              <CheckCircle, classNam, e="w-4 h-4, tex, t-green-400" />
+              <span>99.99% Uptime, SL, A</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircle, classNam, e="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
-              <sp, a, n>1, 0, 0% Regulatory, Complianc, e</sp, a, n>
-            </d, i, v>
+              <CheckCircle, classNam, e="w-4 h-4, tex, t-green-400" />
+              <span>100% Regulatory, Complianc, e</span>
+            </div>
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <CheckCircle, classNam, e="w-4 h-4, tex, t-gre, e, n-4, 0, 0" />
-              <sp, a, n>90-Day, Rapid, Deployment</sp, a, n>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+              <CheckCircle, classNam, e="w-4 h-4, tex, t-green-400" />
+              <span>90-Day, Rapid, Deployment</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </di, v>
   );
 };

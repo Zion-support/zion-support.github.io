@@ -1,23 +1,23 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-const, RollbackGuardrailsBlueprint202, 5: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <article, classNam, e = 'prose, pros, e-invert, ma, x-w-3xl, m, x-auto, p, y-10'>
-      <h1>Runtime, Rollback, Guardrails: Ship, F, a, s, t, Revert, Instantl, y</h1>
+const, RollbackGuardrailsBlueprint202, 5: React.FC = () => { 
+  return (
+    <article, classNam, e = 'prose, pros, e-invert, ma, x-w-3xlmx-autopy-10'>
+      <h1>Runtime, Rollback, Guardrails: ShipFa, s, t, Revert, Instantl, y</h1>
       <p>
-        A, practical, guide to, implement, instant rollbac, k, s, canary, scorecard, s, and, objective, quality budgets, so, teams move, faster, with confiden, c, e.
+        A, practical, guide to, implement, instant rollbacks, canary, scorecard, s, and, objective, quality budgets, so, teams move, faster, with confidence.
       </p>
       <h2>Key, component, s</h2>
       <ul>
         <li>Immutable, artifact, promotion with, automatic, fallbacks</li>
         <li>Health, budgets, enforced via, policy, checks</li>
-        <li>Canary, scorecards, with au, t, o‑halt, on, regressions</li>
+        <li>Canary, scorecards, with auto‑halt, on, regressions</li>
       </ul>
       <h2>Reference, workflo, w</h2>
       <p>
-        Deploy, candidates, behind progressive, delivery, toggles, score, rea, l‑user, signal, s, and, promote, only when, SLOs, are sustain, e, d. On, breac, h, fa, i, l‑safe, routes, revert within, second, s.
+        Deploy, candidates, behind progressive, delivery, toggles, score, rea, l‑user, signal, s, and, promote, only when, SLOs, are sustained. On, breac, h, fail‑safe, routes, revert within, second, s.
       </p>
-    </artic, l, e > );
+    </article > );
  };
 
 export, default, RollbackGuardrailsBlueprint2025;

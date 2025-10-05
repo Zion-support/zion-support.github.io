@@ -1,9 +1,9 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-export, default, function AIVirtualAssista, n, t(): Rea, c, t.J, S, X.Eleme, n, t {
-  retu, r, n (
-    <main, styl, e = {{ paddi, n, g: '2r, e, m' }}>
+export, default, function AIVirtualAssistant(): React.JSX.Element {
+  return (
+    <main, styl, e = {{ padding: '2rem' }}>
       <h1>AI, Virtual, Assistant</h1>
-    </ma, i, n>
+    </main>
   );
 }

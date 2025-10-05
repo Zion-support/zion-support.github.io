@@ -1,133 +1,133 @@
-export, default, function January2027ContentAdvertisingBann, e, r() { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-8, border, border-viol, e, t-5, 0, 0/30, m, b-12'>
-      <div, classNam, e='te, x, t-cent, e, r'>
-        <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-viol, e, t-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-viol, e, t-5, 0, 0/30, m, b-6'>
-          <span, classNam, e='te, x, t-viol, e, t-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e'>
+export, default, function January2027ContentAdvertisingBanner() { 
+  return (
+    <div, classNam, e = 'bg-gradient-to-r, fro, m-violet-500/20to-purple-500/20, backdro, p-blur-sm, rounde, d-2xlp-8, border, border-violet-500/30mb-12'>
+      <div, classNam, e='text-center'>
+        <div, classNam, e='inline-flex, item, s-center, ga, p-3px-8py-4, rounde, d-fullbg-gradient-to-r, fro, m-violet-500/20to-purple-500/20, border, border-violet-500/30mb-6'>
+          <span, classNam, e='text-violet-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e'>
             🚀 NEW, 2027, BREAKTHROUGH CONTENT, NOW, LIVE!
-          </sp, a, n>
-        </d, i, v>
+          </span>
+        </div>
 
-        <h3, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
+        <h3, classNam, e='text-3xlmd: text-4xl, fon, t-bold, tex, t-whitemb-4'>
           Revolutionary, AI, Breakthroughs: Neuromorphic, Edge, Computing & Quantum, AI, Security
         </h3>
 
-        <p, classNam, e='te, x, t-viol, e, t-200, tex, t-lg, m, b-6, ma, x-w-4xl, m, x-au, t, o'>
-          Discover, the, most advanced, AI, technologies reshaping, enterprise, operations: 1000x, energy, efficiency with, neuromorphic, computi, n, g, $847B, asset, protection with, quantum, AI securi, t, y, and, proven, Fortune 500, success, stories wi, t, h $2.3B+ annual, saving, s.
+        <p, classNam, e='text-violet-200, tex, t-lgmb-6, ma, x-w-4xlmx-auto'>
+          Discover, the, most advanced, AI, technologies reshaping, enterprise, operations: 1000x, energy, efficiency with, neuromorphic, computi, n, g, $847B, asset, protection with, quantum, AI security, and, proven, Fortune 500, success, stories with $2.3B+ annual, saving, s.
         </p>
 
-        <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, tex, t-sm, m, b-6'>
-          <span, classNam, e='bg-gre, e, n-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-gre, e, n-300, fon, t-semibo, l, d'>
+        <div, classNam, e = 'flex, fle, x-wrap, justif, y-center, ga, p-4, tex, t-smmb-6'>
+          <span, classNam, e='bg-green-500/20px-4py-2, rounde, d-full, tex, t-green-300, fon, t-semibold'>
             1000x, Energy, Efficiency
-          </sp, a, n>
-          <span, classNam, e='bg-purp, l, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-purp, l, e-300, fon, t-semibo, l, d'>
+          </span>
+          <span, classNam, e='bg-purple-500/20px-4py-2, rounde, d-full, tex, t-purple-300, fon, t-semibold'>
             $847B, Assets, Protected
-          </sp, a, n>
-          <span, classNam, e='bg-bl, u, e-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-bl, u, e-300, fon, t-semibo, l, d'>
-            $2.3B, Fortune, 500 Savin, g, s
-          </sp, a, n>
-          <span, classNam, e='bg-cy, a, n-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-cy, a, n-300, fon, t-semibo, l, d'>
-            NI, S, T-Approved, Securit, y
-          </sp, a, n>
-          <span, classNam, e='bg-emera, l, d-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-emera, l, d-300, fon, t-semibo, l, d'>
+          </span>
+          <span, classNam, e='bg-blue-500/20px-4py-2, rounde, d-full, tex, t-blue-300, fon, t-semibold'>
+            $2.3B, Fortune, 500 Savings
+          </span>
+          <span, classNam, e='bg-cyan-500/20px-4py-2, rounde, d-full, tex, t-cyan-300, fon, t-semibold'>
+            NIST-Approved, Securit, y
+          </span>
+          <span, classNam, e='bg-emerald-500/20px-4py-2, rounde, d-full, tex, t-emerald-300, fon, t-semibold'>
             99.97% Threat, Preventio, n
-          </sp, a, n>
-          <span, classNam, e='bg-indi, g, o-5, 0, 0/20, p, x-4, p, y-2, rounde, d-full, tex, t-indi, g, o-300, fon, t-semibo, l, d'>
-            S, u, b-Microsecond, Latenc, y
-          </sp, a, n>
-        </d, i, v>
+          </span>
+          <span, classNam, e='bg-indigo-500/20px-4py-2, rounde, d-full, tex, t-indigo-300, fon, t-semibold'>
+            Sub-Microsecond, Latenc, y
+          </span>
+        </div>
 
-        <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-6, ma, x-w-5xl, m, x-auto, m, b-8'>
-          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r:bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-            <div, classNam, e='te, x, t-center, m, b-4'>
-              <div, classNam, e='te, x, t-4xl, m, b-3'>🧠</d, i, v>
-              <h4, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+        <div, classNam, e='gridmd: grid-cols-3, ga, p-6, ma, x-w-5xlmx-automb-8'>
+          <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-xlp-6, border, border-white/10, hove, r:border-green-500/50, transitio, n-all, duratio, n-300'>
+            <div, classNam, e='text-centermb-4'>
+              <div, classNam, e='text-4xlmb-3'>🧠</div>
+              <h4, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Neuromorphic, Edge, Computing
               </h4>
-              <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
-                1000x, energy, efficien, c, y, s, u, b-microsecond, latenc, y, $2.3B, saving, s
+              <p, classNam, e='text-gray-300, tex, t-smmb-4'>
+                1000x, energy, efficien, cys, u, b-microsecond, latenc, y, $2.3B, saving, s
               </p>
-            </d, i, v>
-            <div, classNam, e = 'spa, c, e-y-2'>
-              <a, hre, f='/bl, o, g/ai-20, 2, 7-neuromorph, i, c-ed, g, e-computi, n, g-<breakthrou, g, h'
-                classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-600, hove, r: fr, o, m-gre, e, n-400, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
+            </div>
+            <div, classNam, e = 'space-y-2'>
+              <a, hre, f='/blog/ai-2027-neuromorphic-edge-computing-<breakthrough'
+                className='blockw-fullbg-gradient-to-r, fro, m-green-500to-emerald-600, hove, r: from-green-400, hove, r:to-emerald-500, tex, t-white, fon, t-boldpy-2px-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
               >
                 Read, Full, Article →
               </a>
-              <a, hre, f='/ca, s, e-studi, e, s/fortu, n, e-5, 0, 0-neuromorph, i, c-ed, g, e-computi, n, g-2-3-billi, o, n-<succe, s, s'
-                classNa, m, e='bloc, k, w-full, border, border-gre, e, n-500, tex, t-gre, e, n-400, hove, r:bg-gre, e, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
+              <a, hre, f='/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-<success'
+                className='blockw-full, border, border-green-500, tex, t-green-400, hove, r:bg-green-500, hove, r:text-white, fon, t-boldpy-2px-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
               >
                 View, Case, Study →
               </a>
-            </d, i, v>
-          </d, i, v>
+            </div>
+          </div>
 
-          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r:bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-            <div, classNam, e='te, x, t-center, m, b-4'>
-              <div, classNam, e='te, x, t-4xl, m, b-3'>🔐</d, i, v>
-              <h4, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+          <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-xlp-6, border, border-white/10, hove, r:border-purple-500/50, transitio, n-all, duratio, n-300'>
+            <div, classNam, e='text-centermb-4'>
+              <div, classNam, e='text-4xlmb-3'>🔐</div>
+              <h4, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Quantum, AI, Security
               </h4>
-              <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
-                Quant, u, m-resista, n, t , A, I, $847B, protectio, n, NI, S, T-approv, e, d
+              <p, classNam, e='text-gray-300, tex, t-smmb-4'>
+                Quantum-resistant , A, I, $847B, protectio, n, NIST-approved
               </p>
-            </d, i, v>
-            <div, classNam, e = 'spa, c, e-y-2'>
-              <a, hre, f='/bl, o, g/ai-20, 2, 7-quant, u, m-ai-securi, t, y-<revoluti, o, n'
-                classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r: fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
+            </div>
+            <div, classNam, e = 'space-y-2'>
+              <a, hre, f='/blog/ai-2027-quantum-ai-security-<revolution'
+                className='blockw-fullbg-gradient-to-r, fro, m-purple-500to-indigo-600, hove, r: from-purple-400, hove, r:to-indigo-500, tex, t-white, fon, t-boldpy-2px-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
               >
                 Read, Full, Article →
               </a>
-              <a, hre, f='/servic, e, s/quant, u, m-ai-<securi, t, y'
-                classNa, m, e='bloc, k, w-full, border, border-purp, l, e-500, tex, t-purp, l, e-400, hove, r:bg-purp, l, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
+              <a, hre, f='/services/quantum-ai-<security'
+                className='blockw-full, border, border-purple-500, tex, t-purple-400, hove, r:bg-purple-500, hove, r:text-white, fon, t-boldpy-2px-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
               >
                 Get, Security, Assessment →
               </a>
-            </d, i, v>
-          </d, i, v>
+            </div>
+          </div>
 
-          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, border, border-whi, t, e/10, hove, r:bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-3, 0, 0'>
-            <div, classNam, e='te, x, t-center, m, b-4'>
-              <div, classNam, e='te, x, t-4xl, m, b-3'>💰</d, i, v>
-              <h4, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+          <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-xlp-6, border, border-white/10, hove, r:border-blue-500/50, transitio, n-all, duratio, n-300'>
+            <div, classNam, e='text-centermb-4'>
+              <div, classNam, e='text-4xlmb-3'>💰</div>
+              <h4, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Fortune, 500, Success
               </h4>
-              <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm, m, b-4'>
+              <p, classNam, e='text-gray-300, tex, t-smmb-4'>
                 320, facilit, i, e, s, 78% downtime, reductio, n, $2.3B, saving, s
               </p>
-            </d, i, v>
-            <div, classNam, e = 'spa, c, e-y-2'>
-              <a, hre, f='/ca, s, e-studi, e, s/fortu, n, e-5, 0, 0-neuromorph, i, c-ed, g, e-computi, n, g-2-3-billi, o, n-<succe, s, s'
-                classNa, m, e='bloc, k, w-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-cy, a, n-600, hove, r: fr, o, m-bl, u, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
+            </div>
+            <div, classNam, e = 'space-y-2'>
+              <a, hre, f='/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-<success'
+                className='blockw-fullbg-gradient-to-r, fro, m-blue-500to-cyan-600, hove, r: from-blue-400, hove, r:to-cyan-500, tex, t-white, fon, t-boldpy-2px-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
               >
-                View, Full, Case Stu, d, y →
+                View, Full, Case Study →
               </a>
-              <a, hre, f='/<conta, c, t'
-                classNa, m, e='bloc, k, w-full, border, border-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-2, p, x-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
+              <a, hre, f='/<contact'
+                className='blockw-full, border, border-blue-500, tex, t-blue-400, hove, r:bg-blue-500, hove, r:text-white, fon, t-boldpy-2px-4, rounde, d-lg, transitio, n-all, duratio, n-300, tex, t-center, tex, t-sm'
               >
                 Get, Your, Assessment →
               </a>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            </div>
+          </div>
+        </div>
 
-        <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-          <a, hre, f='/<conta, c, t'
-            classNa, m, e='bg-gradie, n, t-to-r, fro, m-viol, e, t-500, t, o-purp, l, e-600, hove, r:fr, o, m-viol, e, t-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-viol, e, t-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
+        <div, classNam, e='flex, fle, x-colsm:flex-row, ga, p-4, justif, y-center'>
+          <a, hre, f='/<contact'
+            className='bg-gradient-to-r, fro, m-violet-500to-purple-600, hove, r:from-violet-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-violet-500/50, transform, hover:-translate-y-1'
           >
             Get, Free, Consultation →
           </a>
-          <a, hre, f='/<bl, o, g'
-            classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-indi, g, o-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-indi, g, o-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
+          <a, hre, f='/<blog'
+            className='bg-gradient-to-r, fro, m-purple-500to-indigo-600, hove, r:from-purple-400, hove, r:to-indigo-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-purple-500/50, transform, hover:-translate-y-1'
           >
             Explore, All, Content →
           </a>
-          <a, hre, f='/ca, s, e-<studi, e, s'
-            classNa, m, e='bord, e, r-2, borde, r-viol, e, t-500, tex, t-viol, e, t-400, hove, r:bg-viol, e, t-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
+          <a, hre, f='/case-<studies'
+            className='border-2, borde, r-violet-500, tex, t-violet-400, hove, r:bg-violet-500, hove, r:text-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300'
           >
             View, Success, Stories
           </a>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

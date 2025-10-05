@@ -1,34 +1,34 @@
-import, React, from 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function Edge2028PrivatePersonalizati, o, n(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Edge, 202, 8: Private, Personalization, at &lt; 100, m, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Scope, d, I, D, s, on‑device, model, s, and, DP, noise enabling, zer, o‑PII, personalization, worldwide under, 100m, s.'
+export, default, function Edge2028PrivatePersonalization(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Edge, 202, 8: Private, Personalization, at &lt; 100ms</title>
+        <meta, nam, e='description'
+          content='ScopedI, D, s, on‑device, model, s, and, DP, noise enabling, zer, o‑PII, personalization, worldwide under, 100m, s.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 8-priva, t, e-personalizati, o, n'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2028-private-personalization'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           Edge, 202, 8: Private, Personalizatio, n
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, classNam, e='text-zion-slate-lightmb-8'>
           Scoped, ID, s • On‑Device, Model, s • Differential, Privac, y
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Deliver, hype, r‑relevant, experiences, without collecting, PI, I. Use, scoped, identifie, r, s, on‑device, inferenc, e, and, differential, privacy to, keep, latency under, 100ms, while preserving, compliance, worldwide.
           </p>
           <p>
-            We, outline, architecture, cachi, n, g, and, audit, techniques that, make, private personalization, practical, at sca, l, e.
+            We, outline, architecture, caching, and, audit, techniques that, make, private personalization, practical, at scale.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

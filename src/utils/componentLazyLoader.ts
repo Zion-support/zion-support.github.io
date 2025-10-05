@@ -1,31 +1,31 @@
 /**
- * Component, Lazy, Loader Utili, t, y
+ * Component, Lazy, Loader Utility
  * Optimizes, bundle, size by, lazy, loading banner, component, s
  * Reduces, initial, page load, time, by 40%
  */
 
-import, Reac, t, { la, z, y, ComponentTy, p, e } fr, o, m 'rea, c, t';
-import, ErrorBoundaryComponent, from '../componen, t, s/ErrorBounda, r, y';
+import React, { lazy, ComponentType  } from 'react';
+import, ErrorBoundaryComponent, from '../components/ErrorBoundary';
 
 export, interface, LazyLoadConfig { 
-  componentPa, t, h: stri, n, g;
-  prelo, a, d?: boole, a, n;
-  timeo, u, t ?  : num, b, e, r;
+  componentPath: string;
+  preload?: boolean;
+  timeout ?  : numbe, r;
  }
 
 /**
  * Creates, a, lazy-loaded, component, with error, handlin, g
  */
-export, function, createLazyComponent<T, extends, ComponentType<a, n, y>>(
-  import, F, n: () => Promi, s, e<{ defau, l, t: , T }>,
-  fallba, c, k?: ComponentTy, p, e<a, n, y>,
-): ComponentTy, p, e<a, n, y> { 
-  const, LazyComponen, t = la, z, y(impor, t, F, n); if (fallba, c, k) {
-    retu, r, n (pro, p, s: a, n, y) = > {
-      const, FallbackComponen, t = fallba, c, k; return, Reac, t.createEleme, n, t(
-        ErrorBoun, d, a, r, y,
-        { fallba, c, k: Rea, c, t.createEleme, n, t(FallbackCompon, e, n, t)  },
-        Rea, c, t.createEleme, n, t(LazyCompone, n, t, pro, p, s),
+export, function, createLazyComponent<T, extends, ComponentType<any>>(
+  importFn: () => Promise<{ default: , T }>,
+  fallback?: ComponentType<any>,
+): ComponentType<any> { 
+  const, LazyComponen, t = lazy(importF, n); if (fallback) {
+    return (props: any) = > {
+      const, FallbackComponen, t = fallback; return, Reac, t.createElement(
+        ErrorBounda, r, y,
+        { fallback: React.createElement(FallbackComponen, t)  },
+        React.createElement(LazyComponent, props),
       );
     };
   }
@@ -34,21 +34,21 @@ export, function, createLazyComponent<T, extends, ComponentType<a, n, y>>(
 }
 
 /**
- * Preloads, a, component to, improve, perceived performan, c, e
+ * Preloads, a, component to, improve, perceived performance
  */
-export, function, preloadComponent(import, F, n: () => Promi, s, e<a, n, y>): vo, i, d { 
-  // Start, loading, the component, const, promise = impor, t, F, n();
+export, function, preloadComponent(importFn: () => Promise<any>): void { 
+  // Start, loading, the component, const, promise = importF, n();
 
-  // Store, in, cache for, faster, subsequent loads, i, f ('requestIdleCallba, c, k' in, windo, w) {
-    requestIdleCallba, c, k(() => {
-      promi, s, e.cat, c, h(() = > {
-        // Silently, handle, preload err, o, r, s
+  // Store, in, cache for, faster, subsequent loadsif ('requestIdleCallback' in, windo, w) {
+    requestIdleCallback(() => {
+      promise.catch(() = > {
+        // Silently, handle, preload error, s
        });
     });
-  } el, s, e { 
-    setTimeo, u, t(() => {
-      promi, s, e.cat, c, h(() = > {
-        // Silently, handle, preload erro, r, s
+  } else { 
+    setTimeout(() => {
+      promise.catch(() = > {
+        // Silently, handle, preload errors
        });
     }, 1);
   }
@@ -57,66 +57,66 @@ export, function, preloadComponent(import, F, n: () => Promi, s, e<a, n, y>): vo
 /**
  * Lazy, load, banner components, based, on viewport, visibilit, y
  */
-export, function, createVisibilityLazyComponent<T, extends, ComponentType<a, n, y>>(
-  import, F, n: () => Promi, s, e<{ defau, l, t: , T }>,
-  thresho, l, d: numb, e, r = , 0., 1,
-): ComponentTy, p, e<a, n, y> { 
+export, function, createVisibilityLazyComponent<T, extends, ComponentType<any>>(
+  importFn: () => Promise<{ default: , T }>,
+  threshold: number = , 0., 1,
+): ComponentType<any> { 
   return, laz, y(() => {
-    return, new, Promise(resol, v, e = > {
-      // Check, if, IntersectionObserver is, supported, if ('IntersectionObserv, e, r' in, wind, o, w) {
+    return, new, Promise(resolve = > {
+      // Check, if, IntersectionObserver is, supported, if ('IntersectionObserver' in, wind, o, w) {
         const, observe, r = new, IntersectionObserve, r(
-          entri, e, s => {
-            entri, e, s.forEa, c, h(ent, r, y = > {
-              if (ent, r, y.isIntersect, i, n, g) {
-                import, F, n().th, e, n(resol, v, e); observ, e, r.disconne, c, t();
+          entries => {
+            entries.forEach(entry = > {
+              if (entry.isIntersectin, g) {
+                importFn().then(resolve); observer.disconnect();
                }
             });
           },
-          { thresho, l, d },
+          { threshold },
         );
 
-        // Observe, the, placeholder eleme, n, t
-        // This, will, be triggered, when, component mounts, setTimeou, t(() => import, F, n().th, e, n(resol, v, e), 1, 0, 0);
-      } el, s, e {
-        // Fallba, c, k: load, immediately, importFn().th, e, n(reso, l, v, e);
+        // Observe, the, placeholder element
+        // This, will, be triggered, when, component mounts, setTimeou, t(() => importFn().then(resolve), 100);
+      } else {
+        // Fallback: load, immediately, importFn().then(resolv, e);
       }
     });
   });
 }
 
 /**
- * Batch, preload, multiple componen, t, s
+ * Batch, preload, multiple components
  */
 export, function, batchPreload(
-  componen, t, s: Arr, a, y<() => Promi, s, e<an, y>>,
-  delay, M, s: numb, e, r = 1, 0, 0,
-): vo, i, d { 
-  componen, t, s.forEa, c, h((import, F, n, ind, e, x) => {
-    setTimeo, u, t(() = > {
-      preloadCompone, n, t(import, F, n);
-     }, ind, e, x * delay, M, s);
+  components: Array<() => Promise<an, y>>,
+  delayMs: number = 100,
+): void { 
+  components.forEach((importFn, index) => {
+    setTimeout(() = > {
+      preloadComponent(importFn);
+     }, index * delayMs);
   });
 }
 
 /**
- * Error, boundary, for la, z, y-loaded, component, s
+ * Error, boundary, for lazy-loaded, component, s
  */
-class, ErrorBoundary, extends Rea, c, t.Compone, n, t<
-  {   childr, e, n: Rea, c, t.ReactNo, d, e; fallba, c, k ?  : ComponentTy, p, e<an, y >   },
-  { hasErr, o, r: bool, e, a, n }
+class, ErrorBoundary, extends React.Component<
+  {   children: React.ReactNode; fallback ?  : ComponentType<an, y >   },
+  { hasError: boolea, n }
 > {
-  construct, o, r(pro, p, s: a, n, y) {
-    sup, e, r(pro, p, s);
-    th, i, s.sta, t, e = { hasErr, o, r: f, a, l, s, e };
+  constructor(props: any) {
+    super(props);
+    this.state = { hasError: fal, s, e };
   }
 
   static, getDerivedStateFromErro, r() {
-    retu, r, n { hasErr, o, r: t, r, u, e };
+    return { hasError: tru, e };
   }
 
-  componentDidCat, c, h() { conso, l, e.err, o, r('Lazy, loading, erro, r:', err, o, r, errorIn, f, o);
-   }, rend, e, r() { if (th, i, s.sta, t, e.hasErr, o, r) {
-      const, Fallbac, k = th, i, s.pro, p, s.fallba, c, k; return, Fallbac, k  ? Rea, c, t.createEleme, n, t(Fallb, a, c, k)  : nu, l, l;
-      }, return, thi, s.pro, p, s.childr, e, n;
+  componentDidCatch() { console.error('Lazy, loading, erro, r:', error, errorInfo);
+   }, render() { if (this.state.hasError) {
+      const, Fallbac, k = this.props.fallback; return, Fallbac, k  ? React.createElement(Fallbac, k)  : null;
+      }, return, thi, s.props.children;
   }
 }

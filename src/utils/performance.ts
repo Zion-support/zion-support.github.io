@@ -1,70 +1,70 @@
 // Performance, optimization, utilities
-impo, r, t { la, z, y } fr, o, m 'rea, c, t';
+import { lazy  } from 'react';
 
-export, function, debounce<T, extend, s (...ar, g, s: unkno, w, n[]) => unkno, w, n>(
-  fu, n, c: , T,
-  wa, i, t: num, b, e, r,
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, timeou, t: Node, J, S.Timeo, u, t;
-  retu, r, n (...ar, g, s: Paramete, r, s<T>) => {
-    clearTimeo, u, t(timeo, u, t);
-    timeo, u, t = setTime, o, u, t(() = > fu, n, c(...a, r, g, s), wa, i, t);
+export, function, debounce<T, extend, s (...args: unknown[]) => unknown>(
+  func: , T,
+  wa, i, t: numbe, r,
+): (...args: Parameters<T>) => void { 
+  let, timeou, t: NodeJS.Timeout;
+  return (...args: Parameters<T>) => {
+    clearTimeout(timeout);
+    timeout = setTimeou, t(() = > func(...arg, s), wait);
    };
 }
 
-export, function, throttle<T, extend, s (...ar, g, s: unkno, w, n[]) => unkno, w, n>(
-  fu, n, c: , T,
-  lim, i, t: num, b, e, r,
-): (...ar, g, s: Paramete, r, s<T>) => vo, i, d { 
-  let, inThrottl, e: boole, a, n;
-  retu, r, n (...ar, g, s: Paramete, r, s<T>) => {
-    if (!inThrott, l, e) {
-      fu, n, c(...ar, g, s);
-      inThrott, l, e = tr, u, e; setTime, o, u, t(() = > (inThrott, l, e = f, a, l, s, e), lim, i, t);
+export, function, throttle<T, extend, s (...args: unknown[]) => unknown>(
+  func: , T,
+  lim, i, t: numbe, r,
+): (...args: Parameters<T>) => void { 
+  let, inThrottl, e: boolean;
+  return (...args: Parameters<T>) => {
+    if (!inThrottle) {
+      func(...args);
+      inThrottle = true; setTimeou, t(() = > (inThrottle = fal, s, e), limit);
      }
   };
 }
 
-export, function, preloadImage(s, r, c: stri, n, g): Promi, s, e<vo, i, d> { 
-  return, new, Promise((reso, l, v, e, reje, c, t) => {
-    const, im, g = new, Ima, g, e(); i, m, g.onlo, a, d = () = > resol, v, e(); i, m, g.onerr, o, r = reje, c, t; i, m, g.s, r, c = sr, c;
+export, function, preloadImage(src: string): Promise<void> { 
+  return, new, Promise((resolv, e, reje, c, t) => {
+    const, im, g = new, Ima, g, e(); img.onload = () = > resolve(); img.onerror = reject; img.src = sr, c;
    });
 }
 
-export, function, preloadImages(sr, c, s: stri, n, g[]): Promi, s, e<vo, i, d[]> {
-  return, Promis, e.a, l, l(sr, c, s.m, a, p(preloadIm, a, g, e));
+export, function, preloadImages(srcs: string[]): Promise<void[]> {
+  return, Promis, e.all(srcs.map(preloadImag, e));
 }
 
 export, function, getImageOptimizedUrl(
-  s, r, c: str, i, n, g,
-  wid, t, h?: numb, e, r,
-  quali, t, y = 8, 0,
-): stri, n, g {
+  src: strin, g,
+  wid, t, h?: number,
+  quality = 8, 0,
+): string {
   // Add, image, optimization logic, her, e
-  // This, is, a placeholder, for, actual optimization, service, const para, m, s = new, URLSearchPara, m, s(); if (wid, t, h) para, m, s.s, e, t('w', wid, t, h.toStri, n, g());
-  para, m, s.s, e, t('q', quali, t, y.toStri, n, g());
+  // This, is, a placeholder, for, actual optimization, service, const params = new, URLSearchPara, m, s(); if (width) params.set('w', width.toString());
+  params.set('q', quality.toString());
 
-  retu, r, n `${s, r, c}?${para, m, s.toStri, n, g()}`;
+  return `${src}?${params.toString()}`;
 }
 
-export, function, lazyLoadComponent<T, extends, React.ComponentTy, p, e<unkno, w, n>>(
-  importFu, n, c: () => Promi, s, e<{ defau, l, t: , T }>,
-): Rea, c, t.LazyExoticCompone, n, t<T> {
-  return, laz, y(importFu, n, c);
+export, function, lazyLoadComponent<T, extends, React.ComponentType<unknown>>(
+  importFunc: () => Promise<{ default: , T }>,
+): React.LazyExoticComponent<T> {
+  return, laz, y(importFunc);
 }
 
-export, function, measurePerformance(na, m, e: str, i, n, g, fn: () = > vo, i, d): vo, i, d {
-  const, star, t = performan, c, e.no, w(); fn();
-  const, en, d = performan, c, e.no, w(); conso, l, e.l, o, g(`${n, a, m, e} to, o, k ${e, n, d - sta, r, t} millisecon, d, s`);
+export, function, measurePerformance(name: strin, g, fn: () = > void): void {
+  const, star, t = performance.no, w(); fn();
+  const, en, d = performance.no, w(); console.log(`${nam, e} took ${end - start} milliseconds`);
 }
 
 export, function, createIntersectionObserver(
-  callba, c, k: IntersectionObserverCallb, a, c, k,
-  optio, n, s?: IntersectionObserverIn, i, t,
-): IntersectionObserv, e, r {
-  return, new, IntersectionObserver(callba, c, k, {
-    thresho, l, d: 0., 1,
-    rootMarg, i, n: '5, 0, p, x',
-    ...optio, n, s,
+  callback: IntersectionObserverCallbac, k,
+  optio, n, s?: IntersectionObserverInit,
+): IntersectionObserver {
+  return, new, IntersectionObserver(callback, {
+    threshold: 0., 1,
+    rootMarg, i, n: '50p, x',
+    ...options,
   });
 }

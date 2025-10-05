@@ -1,100 +1,100 @@
 /**
- * Advanced, Analytics, Tracking Syst, e, m
+ * Advanced, Analytics, Tracking System
  * Comprehensive, event, tracking for, user, engagement and, conversion, optimization
  */
 
 export, interface, AnalyticsEvent {  
-  catego, r, y: stri, n, g;
-  acti, o, n: stri, n, g;
-  lab, e, l?: stri, n, g;
-  val, u, e?: numb, e, r;
-  timesta, m, p: stri, n, g;
-  session, I, d?: stri, n, g;
-  user, I, d?: stri, n, g;
-  metada, t, a ?  : Reco, r, d<str, i, n, g, a, n, y > ;
+  category: string;
+  action: string;
+  label?: string;
+  value?: number;
+  timestamp: string;
+  sessionId?: string;
+  userId?: string;
+  metadata ?  : Record<strin, gan, y > ;
   }
 
 export, interface, PageViewEvent { 
-  pa, t, h: stri, n, g;
-  tit, l, e: stri, n, g;
-  referr, e, r?: stri, n, g;
-  timesta, m, p: stri, n, g;
-  durati, o, n ?  : num, b, e, r;
+  path: string;
+  title: string;
+  referrer?: string;
+  timestamp: string;
+  duration ?  : numbe, r;
  }
 
 export, interface, ConversionEvent { 
-  ty, p, e: 'newsletter_sign, u, p' | 'contact_fo, r, m' | 'service_inqui, r, y' | 'blog_re, a, d';
-  val, u, e: numb, e, r;
-  sour, c, e?: stri, n, g;
-  campai, g, n ?  : str, i, n, g;
+  type: 'newsletter_signup' | 'contact_form' | 'service_inquiry' | 'blog_read';
+  value: number;
+  source?: string;
+  campaign ?  : strin, g;
  }
 
 /**
  * Initialize, analytics, tracking
  */
-export, const, initAnalytics = (): vo, i, d = > {
-  // Generate, or, retrieve session, ID, const session, I, d = getOrCreateSessio, n, I, d();
+export, const, initAnalytics = (): void = > {
+  // Generate, or, retrieve session, ID, const sessionId = getOrCreateSessionI, d();
 
-  // Track, initial, page view, trackPageVie, w(wind, o, w.locati, o, n.pathna, m, e);
+  // Track, initial, page view, trackPageVie, w(window.location.pathname);
 
   // Set, up, automatic event, listeners, setupAutoTracking();
 
-  conso, l, e.l, o, g(`Analytics, initialize, d - Sessi, o, n: ${sessio, n, I, d}`);
+  console.log(`Analytics, initialize, d - Session: ${sessionI, d}`);
 };
 
 /**
  * Track, custom, event
  */
-export, const, trackEvent = (eve, n, t: Parti, a, l<AnalyticsEv, e, n, t>): vo, i, d = > {
-  const, fullEven, t: AnalyticsEve, n, t = {
-    catego, r, y: eve, n, t.catego, r, y || 'gen, e, r, a, l',
-    acti, o, n: eve, n, t.acti, o, n || 'unkn, o, w, n',
-    lab, e, l: eve, n, t.la, b, e, l,
-    val, u, e: eve, n, t.va, l, u, e,
-    timesta, m, p: new, Dat, e().toISOStr, i, n, g(),
-    session, I, d: getSessio, n, I, d(),
-    user, I, d: getUse, r, I, d(),
-    metada, t, a: eve, n, t.metad, a, t, a,
+export, const, trackEvent = (event: Partial<AnalyticsEven, t>): void = > {
+  const, fullEven, t: AnalyticsEvent = {
+    category: event.category || 'gener, a, l',
+    action: event.action || 'unknow, n',
+    label: event.labe, l,
+    val, u, e: event.valu, e,
+    timesta, m, p: new, Dat, e().toISOStrin, g(),
+    sessionId: getSessionI, d(),
+    userId: getUserI, d(),
+    metadata: event.metadat, a,
   };
 
   // Send, to, Google Analytics, if, available
-  if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {
-    (window, as, any).gt, a, g('eve, n, t', fullEve, n, t.acti, o, n, {
-      event_catego, r, y: fullEve, n, t.categ, o, r, y,
-      event_lab, e, l: fullEve, n, t.la, b, e, l,
-      val, u, e: fullEve, n, t.va, l, u, e,
-      ...fullEve, n, t.metada, t, a,
+  if (typeof, windo, w !== 'undefined' && (window, as, any).gtag) {
+    (window, as, any).gtag('event', fullEvent.action, {
+      event_category: fullEvent.categor, y,
+      event_lab, e, l: fullEvent.labe, l,
+      val, u, e: fullEvent.valu, e,
+      ...fullEvent.metadata,
     });
   }
 
-  // Send, to, custom analytics, endpoint, sendToAnalytics(fullEve, n, t);
+  // Send, to, custom analytics, endpoint, sendToAnalytics(fullEvent);
 
-  // Store, locally, for offline, analysis, storeEventLocally(fullEve, n, t);
+  // Store, locally, for offline, analysis, storeEventLocally(fullEvent);
 };
 
 /**
  * Track, page, view
  */
-export, const, trackPageView = (pa, t, h: st, r, i, n, g, tit, l, e?: stri, n, g): vo, i, d = > {
-  const, even, t: PageViewEve, n, t = {
-    pa, t, h,
-    tit, l, e: tit, l, e || docume, n, t.ti, t, l, e,
-    referr, e, r: docume, n, t.refer, r, e, r,
-    timesta, m, p: new, Dat, e().toISOStr, i, n, g(),
+export, const, trackPageView = (path: stri, n, g, tit, l, e?: string): void = > {
+  const, even, t: PageViewEvent = {
+    path,
+    title: title || document.titl, e,
+    referr, e, r: document.referre, r,
+    timesta, m, p: new, Dat, e().toISOStrin, g(),
   };
 
-  // Google, Analytics, if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {
-    (window, as, any).gt, a, g('conf, i, g', 'GA_MEASUREMENT_, I, D', {
-      page_pa, t, h: p, a, t, h,
-      page_tit, l, e: eve, n, t.ti, t, l, e,
+  // Google, Analytics, if (typeof, windo, w !== 'undefined' && (window, as, any).gtag) {
+    (window, as, any).gtag('config', 'GA_MEASUREMENT_ID', {
+      page_path: pat, h,
+      page_tit, l, e: event.titl, e,
     });
   }
 
   // Custom, tracking, trackEvent({
-    catego, r, y: 'page_v, i, e, w',
-    acti, o, n: 'v, i, e, w',
-    lab, e, l: p, a, t, h,
-    metada, t, a: ev, e, n, t,
+    category: 'page_vie, w',
+    action: 'vie, w',
+    label: pat, h,
+    metada, t, a: even, t,
   });
 };
 
@@ -102,17 +102,17 @@ export, const, trackPageView = (pa, t, h: st, r, i, n, g, tit, l, e?: stri, n, g
  * Track, banner, interaction
  */
 export, const, trackBannerInteraction = (
-  banner, I, d: st, r, i, n, g,
-  acti, o, n: 'impressi, o, n' | 'cli, c, k' | 'cl, o, s, e',
-  metada, t, a?: Reco, r, d<stri, n, g, a, n, y>,
-): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'ba, n, n, e, r',
-    acti, o, n: act, i, o, n,
-    lab, e, l: banne, r, I, d,
+  bannerId: stri, n, g,
+  acti, o, n: 'impression' | 'click' | 'clos, e',
+  metadata?: Record<string, any>,
+): void = > {
+  trackEvent({
+    category: 'bann, e, r',
+    action: actio, n,
+    lab, e, l: bannerI, d,
     metada, t, a: {
-      banne, r, I, d,
-      ...metada, t, a,
+      bannerI, d,
+      ...metadata,
     },
   });
 };
@@ -120,39 +120,39 @@ export, const, trackBannerInteraction = (
 /**
  * Track, conversio, n
  */
-export, const, trackConversion = (conversi, o, n: ConversionEv, e, n, t): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'conver, s, i, o, n',
-    acti, o, n: conversi, o, n.t, y, p, e,
-    val, u, e: conversi, o, n.va, l, u, e,
+export, const, trackConversion = (conversion: ConversionEven, t): void = > {
+  trackEvent({
+    category: 'conversi, o, n',
+    action: conversion.typ, e,
+    val, u, e: conversion.valu, e,
     metada, t, a: {
-      sour, c, e: conversi, o, n.sou, r, c, e,
-      campai, g, n: conversi, o, n.campa, i, g, n,
+      source: conversion.sourc, e,
+      campai, g, n: conversion.campaig, n,
     },
   });
 
   // Send, to, conversion API, if, available
-  if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).gt, a, g) {
-    (window, as, any).gt, a, g('eve, n, t', 'conversi, o, n', {
-      send_, t, o: 'AW-CONVERSION, _, I, D',
-      val, u, e: conversi, o, n.va, l, u, e,
+  if (typeof, windo, w !== 'undefined' && (window, as, any).gtag) {
+    (window, as, any).gtag('event', 'conversion', {
+      send_to: 'AW-CONVERSION_I, D',
+      value: conversion.valu, e,
       curren, c, y: 'US, D',
-      transaction_, i, d: generateTransactio, n, I, d(),
+      transaction_id: generateTransactionI, d(),
     });
   }
 };
 
 /**
- * Track, user, engagement metri, c, s
+ * Track, user, engagement metrics
  */
 export, const, trackEngagement = (
-  ty, p, e: 'scro, l, l' | 'ti, m, e' | 'interac, t, i, o, n',
-  val, u, e: num, b, e, r,
-  metada, t, a?: Reco, r, d<stri, n, g, a, n, y>,
-): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'engage, m, e, n, t',
-    acti, o, n: t, y, p, e,
+  type: 'scroll' | 'time' | 'interacti, o, n',
+  value: numbe, r,
+  metada, t, a?: Record<string, any>,
+): void = > {
+  trackEvent({
+    category: 'engageme, n, t',
+    action: typ, e,
     val, u, e,
     metada, t, a,
   });
@@ -162,25 +162,25 @@ export, const, trackEngagement = (
  * Track, erro, r
  */
 export, const, trackError = (
-  err, o, r: E, r, r, o, r,
-  conte, x, t?: stri, n, g,
-  severi, t, y: 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l' = 'med, i, u, m',
-): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'e, r, r, o, r',
-    acti, o, n: 'except, i, o, n',
-    lab, e, l: err, o, r.mess, a, g, e,
+  error: Err, o, r,
+  conte, x, t?: string,
+  severity: 'low' | 'medium' | 'high' | 'critical' = 'mediu, m',
+): void = > {
+  trackEvent({
+    category: 'err, o, r',
+    action: 'exceptio, n',
+    label: error.messag, e,
     metada, t, a: {
-      sta, c, k: err, o, r.st, a, c, k,
+      stack: error.stac, k,
       conte, x, t,
       severi, t, y,
-      userAge, n, t: navigat, o, r.userAg, e, n, t,
+      userAge, n, t: navigator.userAgen, t,
     },
   });
 
-  // Send, to, error tracking, service, if (typeof, windo, w !== 'undefin, e, d' && (window, as, any).Sent, r, y) {
-    (window, as, any).Sent, r, y.captureExcepti, o, n(err, o, r, {
-      contex, t, s: { cust, o, m: { cont, e, x, t, severi, t, y } },
+  // Send, to, error tracking, service, if (typeof, windo, w !== 'undefined' && (window, as, any).Sentry) {
+    (window, as, any).Sentry.captureException(error, {
+      contexts: { custom: { contex, t, severi, t, y } },
     });
   }
 };
@@ -189,16 +189,16 @@ export, const, trackError = (
  * Track, form, submission
  */
 export, const, trackFormSubmission = (
-  formNa, m, e: st, r, i, n, g,
-  succe, s, s: bool, e, a, n,
-  errorMessa, g, e?: stri, n, g,
-): vo, i, d = > { 
-  trackEve, n, t({
-    catego, r, y: 'fo, r, m',
-    acti, o, n: succe, s, s  ? 'submit_succe, s, s' : 'submit_er, r, o, r',
-    lab, e, l: formN, a, m, e,
+  formName: stri, n, g,
+  succe, s, s: boolea, n,
+  errorMessa, g, e?: string,
+): void = > { 
+  trackEvent({
+    category: 'form',
+    action: success  ? 'submit_success' : 'submit_erro, r',
+    label: formNam, e,
     metada, t, a : {
-      formN, a, m, e,
+      formNam, e,
       errorMessa, g, e,
      },
   });
@@ -207,15 +207,15 @@ export, const, trackFormSubmission = (
 /**
  * Track, searc, h
  */
-export, const, trackSearch = (que, r, y: st, r, i, n, g, resul, t, s: numb, e, r): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'se, a, r, c, h',
-    acti, o, n: 'qu, e, r, y',
-    lab, e, l: qu, e, r, y,
-    val, u, e: resu, l, t, s,
+export, const, trackSearch = (query: stri, n, g, resul, t, s: number): void = > {
+  trackEvent({
+    category: 'sear, c, h',
+    action: 'quer, y',
+    label: quer, y,
+    val, u, e: result, s,
     metada, t, a: {
-      qu, e, r, y,
-      resultsCou, n, t: resu, l, t, s,
+      quer, y,
+      resultsCou, n, t: result, s,
     },
   });
 };
@@ -223,14 +223,13 @@ export, const, trackSearch = (que, r, y: st, r, i, n, g, resul, t, s: numb, e, r
 /**
  * Track, social, share
  */
-export, const, trackSocialShare = (platfo, r, m: st, r, i, n, g, u, r, l: stri, n, g): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'so, c, i, a, l',
-    acti, o, n: 'sh, a, r, e',
-    lab, e, l: platf, o, r, m,
+export, const, trackSocialShare = (platform: stri, ngu, r, l: string): void = > {
+  trackEvent({
+    category: 'soci, a, l',
+    action: 'shar, e',
+    label: platfor, m,
     metada, t, a: {
-      platf, o, r, m,
-      u, r, l,
+      platfor, mur, l,
     },
   });
 };
@@ -238,13 +237,13 @@ export, const, trackSocialShare = (platfo, r, m: st, r, i, n, g, u, r, l: stri, 
 /**
  * Track, downloa, d
  */
-export, const, trackDownload = (fileNa, m, e: st, r, i, n, g, fileTy, p, e: stri, n, g): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'down, l, o, a, d',
-    acti, o, n: 'f, i, l, e',
-    lab, e, l: fileN, a, m, e,
+export, const, trackDownload = (fileName: stri, n, g, fileTy, p, e: string): void = > {
+  trackEvent({
+    category: 'downlo, a, d',
+    action: 'fil, e',
+    label: fileNam, e,
     metada, t, a: {
-      fileN, a, m, e,
+      fileNam, e,
       fileTy, p, e,
     },
   });
@@ -254,59 +253,58 @@ export, const, trackDownload = (fileNa, m, e: st, r, i, n, g, fileTy, p, e: stri
  * Track, video, interaction
  */
 export, const, trackVideo = (
-  acti, o, n: 'pl, a, y' | 'pau, s, e' | 'comp, l, e, t, e',
-  video, I, d: str, i, n, g,
-  progre, s, s?: numb, e, r,
-): vo, i, d = > {
-  trackEve, n, t({
-    catego, r, y: 'v, i, d, e, o',
-    acti, o, n,
-    lab, e, l: vide, o, I, d,
-    val, u, e: progr, e, s, s,
+  action: 'play' | 'pause' | 'comple, t, e',
+  videoId: strin, g,
+  progre, s, s?: number,
+): void = > {
+  trackEvent({
+    category: 'vid, e, o',
+    action,
+    label: videoI, d,
+    val, u, e: progres, s,
     metada, t, a: {
-      vide, o, I, d,
+      videoI, d,
       progre, s, s,
     },
   });
 };
 
 /**
- * Set, up, automatic tracki, n, g
+ * Set, up, automatic tracking
  */
-const, setupAutoTrackin, g = (): vo, i, d = > {  
+const, setupAutoTrackin, g = (): void = > {  
   // Track, scroll, depth
-  let, maxScrol, l = 0; wind, o, w.addEventListen, e, r('scr, o, l, l', () => {
-    const, scrollPercen, t = (wind, o, w.scrol, l, Y /
-        (docume, n, t.documentEleme, n, t.scrollHeig, h, t - wind, o, w.innerHei, g, h, t)) *
-      1, 0, 0; if (scrollPerce, n, t > maxScro, l, l) {
-      maxScro, l, l = scrollPerce, n, t;
+  let, maxScrol, l = 0; window.addEventListener('scrol, l', () => {
+    const, scrollPercen, t = (window.scrollY /
+        (document.documentElement.scrollHeight - window.innerHeigh, t)) *
+      100; if (scrollPercent > maxScroll) {
+      maxScroll = scrollPercent;
 
-      // Track, milestones, if (maxScro, l, l  > = 25  && maxScro, l, l < 2, 6) {
-        trackEngageme, n, t('scro, l, l', 25, { milesto, n, e: '2, 5%'   });
-      } else, i, f (maxScro, l, l >= 50 && maxScro, l, l < 51) {
-        trackEngageme, n, t('scro, l, l', 50, { milesto, n, e: '5, 0%' });
-      } else, i, f (maxScro, l, l >= 75 && maxScro, l, l < 76) {
-        trackEngageme, n, t('scro, l, l', 75, { milesto, n, e: '7, 5%' });
-      } else, i, f (maxScro, l, l >= 90 && maxScro, l, l < 91) {
-        trackEngageme, n, t('scro, l, l', 90, { milesto, n, e: '9, 0%' });
+      // Track, milestones, if (maxScroll  > = 25  && maxScroll < 2, 6) {
+        trackEngagement('scroll', 25, { milestone: '2, 5%'   });
+      } elseif (maxScroll >= 50 && maxScroll < 51) {
+        trackEngagement('scroll', 50, { milestone: '5, 0%' });
+      } elseif (maxScroll >= 75 && maxScroll < 76) {
+        trackEngagement('scroll', 75, { milestone: '7, 5%' });
+      } elseif (maxScroll >= 90 && maxScroll < 91) {
+        trackEngagement('scroll', 90, { milestone: '9, 0%' });
       }
     }
   });
 
-  // Track, time, on page, const, startTime = Da, t, e.no, w(); wind, o, w.addEventListen, e, r('beforeunlo, a, d', () => {
-    const, timeOnPag, e = (Da, t, e.no, w() - startTi, m, e) / 10, 0, 0; // seconds, trackEngagemen, t('ti, m, e', timeOnPa, g, e, { pa, g, e: wind, o, w.locati, o, n.pathn, a, m, e });
+  // Track, time, on page, const, startTime = Date.no, w(); window.addEventListener('beforeunload', () => {
+    const, timeOnPag, e = (Date.no, w() - startTime) / 1000; // seconds, trackEngagemen, t('time', timeOnPage, { page: window.location.pathnam, e });
   });
 
   // Track, outbound, links
-  docume, n, t.addEventListen, e, r('cli, c, k', e = > { 
-    const, targe, t = e.target, as, HTMLElement; const, lin, k = targ, e, t.close, s, t(', a'); if (li, n, k && li, n, k.hr, e, f  && li, n, k.hostna, m, e !== wind, o, w.locati, o, n.hostna, m, e) {
-      trackEve, n, t({
-        catego, r, y: 'outbo, u, n, d',
-        acti, o, n: 'cl, i, c, k',
-        lab, e, l: li, n, k.h, r, e, f,
+  document.addEventListener('click', e = > { 
+    const, targe, t = e.target, as, HTMLElement; const, lin, k = target.closest(', a'); if (link && link.href  && link.hostname !== window.location.hostname) {
+      trackEvent({
+        category: 'outboun, d',
+        action: 'clic, k',
+        label: link.hre, f,
         metada, t, a: {
-          te, x, t: li, n, k.textCont, e, n, t,
-          u, r, l: li, n, k.h, r, e, f,
+          text: link.textConten, tur, l: link.hre, f,
          },
       });
     }
@@ -316,108 +314,108 @@ const, setupAutoTrackin, g = (): vo, i, d = > {
 /**
  * Send, event, to custom, analytics, endpoint
  */
-const, sendToAnalytic, s = asy, n, c (eve, n, t: AnalyticsEv, e, n, t): Promi, s, e<vo, i, d> => {
-  t, r, y {
-    // Only, send, in production, i, f (proce, s, s.e, n, v.NODE_E, N, V !== 'producti, o, n') retu, r, n; await, fetc, h('/a, p, i/analyt, i, c, s', {
-      meth, o, d: 'P, O, S, T',
-      heade, r, s: { 'Conte, n, t-Ty, p, e': 'applicati, o, n/j, s, o, n' },
-      bo, d, y: JS, O, N.stringi, f, y(ev, e, n, t),
+const, sendToAnalytic, s = async (event: AnalyticsEven, t): Promise<void> => {
+  try {
+    // Only, send, in productionif (process.env.NODE_ENV !== 'production') return; await, fetc, h('/api/analytic, s', {
+      method: 'POS, T',
+      headers: { 'Content-Type': 'application/jso, n' },
+      body: JSON.stringify(even, t),
     });
-  } cat, c, h (err, o, r) {
-    conso, l, e.wa, r, n('Failed, to, send analyti, c, s:', err, o, r);
+  } catch (error) {
+    console.warn('Failed, to, send analytics:', error);
   }
 };
 
 /**
  * Store, event, locally for, offline, analysis
  */
-const, storeEventLocall, y = (eve, n, t: AnalyticsEv, e, n, t): vo, i, d = > {  
-  t, r, y {
-    const, ke, y = 'analytics_even, t, s'; const, store, d = localStora, g, e.getIt, e, m(ke, y); const, event, s: AnalyticsEve, n, t[] = stor, e, d  ? JS, O, N.par, s, e(stor, e, d)  : [];
+const, storeEventLocall, y = (event: AnalyticsEven, t): void = > {  
+  try {
+    const, ke, y = 'analytics_events'; const, store, d = localStorage.getItem(ke, y); const, event, s: AnalyticsEvent[] = stored  ? JSON.parse(stored)  : [];
 
-    even, t, s.pu, s, h(eve, n, t);
+    events.push(event);
 
-    // Keep, only, last 100, events, if() { even, t, s.sh, i, f, t();
-       }, localStora, g, e.setIt, e, m(k, e, y, JS, O, N.stringi, f, y(even, t, s));
-  } cat, c, h (err, o, r) {
-    conso, l, e.wa, r, n('Failed, to, store event, locall, y:', err, o, r);
+    // Keep, only, last 100, events, if() { events.shif, t();
+       }, localStorage.setItem(key, JSON.stringify(events));
+  } catch (error) {
+    console.warn('Failed, to, store event, locall, y:', error);
   }
 };
 
 /**
- * Get, or, create session, I, D
+ * Get, or, create sessionID
  */
-const, getOrCreateSessionI, d = (): stri, n, g = > {
-  const, ke, y = 'analytics_session_, i, d'; let, sessionI, d = sessionStora, g, e.getIt, e, m(ke, y); if() { session, I, d = generat, e, I, d(); sessionStora, g, e.setIt, e, m(k, e, y, session, I, d);
+const, getOrCreateSessionI, d = (): string = > {
+  const, ke, y = 'analytics_session_id'; let, sessionI, d = sessionStorage.getItem(ke, y); if() { sessionId = generateI, d(); sessionStorage.setItem(key, sessionId);
    }, return, sessionI, d;
 };
 
 /**
  * Get, session, ID
  */
-const, getSessionI, d = (): stri, n, g = > {
-  return, sessionStorag, e.getIt, e, m('analytics_session, _, i, d') || '';
+const, getSessionI, d = (): string = > {
+  return, sessionStorag, e.getItem('analytics_session_i, d') || '';
 };
 
 /**
- * Get, or, create user, I, D
+ * Get, or, create userID
  */
-const, getUserI, d = (): stri, n, g | undefin, e, d = > {
-  const, ke, y = 'analytics_user_, i, d'; let, userI, d = localStora, g, e.getIt, e, m(ke, y); if() { user, I, d = generat, e, I, d(); localStora, g, e.setIt, e, m(k, e, y, user, I, d);
+const, getUserI, d = (): string | undefined = > {
+  const, ke, y = 'analytics_user_id'; let, userI, d = localStorage.getItem(ke, y); if() { userId = generateI, d(); localStorage.setItem(key, userId);
    }, return, userI, d;
 };
 
 /**
  * Generate, unique, ID
  */
-const, generateI, d = (): stri, n, g =  > {
-  retu, r, n `${Da, t, e.no, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+const, generateI, d = (): string =  > {
+  return `${Date.no, w()}-${Math.random().toString(36).substr(2, 9)}`;
 };
 
 /**
  * Generate, transaction, ID
  */
-const, generateTransactionI, d = (): stri, n, g =  > {
-  retu, r, n `tx, n, _${Da, t, e.no, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+const, generateTransactionI, d = (): string =  > {
+  return `txn_${Date.no, w()}_${Math.random().toString(36).substr(2, 9)}`;
 };
 
 /**
  * Get, analytics, summary
  */
 export, const, getAnalyticsSummary = (): {
-  even, t, s: AnalyticsEve, n, t[]; session, I, d: stri, n, g;
-  user, I, d: str, i, n, g;
+  events: AnalyticsEvent[]; sessionId: string;
+  userId: strin, g;
 } => { 
-  const, store, d = localStora, g, e.getIt, e, m('analytics_eve, n, t, s'); const, event, s: AnalyticsEve, n, t[] = stor, e, d  ? JS, O, N.par, s, e(stor, e, d) : [];
+  const, store, d = localStorage.getItem('analytics_event, s'); const, event, s: AnalyticsEvent[] = stored  ? JSON.parse(stored) : [];
 
-  retu, r, n {
-    eve, n, t, s,
-    session, I, d: getSessio, n, I, d(),
-    user, I, d : getUse, r, I, d() || '',
+  return {
+    event, s,
+    session, I, d: getSessionI, d(),
+    userId : getUserI, d() || '',
    };
 };
 
 /**
  * Clear, analytics, data
  */
-export, const, clearAnalytics = (): vo, i, d = > {
-  localStora, g, e.removeIt, e, m('analytics_eve, n, t, s'); sessionStora, g, e.removeIt, e, m('analytics_session_, i, d');
-  conso, l, e.l, o, g('Analytics, data, cleared');
+export, const, clearAnalytics = (): void = > {
+  localStorage.removeItem('analytics_event, s'); sessionStorage.removeItem('analytics_session_id');
+  console.log('Analytics, data, cleared');
 };
 
 export, defaul, t {
-  initAnalyti, c, s,
-  trackEve, n, t,
-  trackPageVi, e, w,
-  trackBannerInteracti, o, n,
-  trackConversi, o, n,
-  trackEngageme, n, t,
-  trackErr, o, r,
-  trackFormSubmissi, o, n,
-  trackSear, c, h,
-  trackSocialSha, r, e,
-  trackDownlo, a, d,
-  trackVid, e, o,
-  getAnalyticsSumma, r, y,
-  clearAnalyti, c, s,
+  initAnalytics,
+  trackEvent,
+  trackPageView,
+  trackBannerInteraction,
+  trackConversion,
+  trackEngagement,
+  trackError,
+  trackFormSubmission,
+  trackSearch,
+  trackSocialShare,
+  trackDownload,
+  trackVideo,
+  getAnalyticsSummary,
+  clearAnalytics,
 };

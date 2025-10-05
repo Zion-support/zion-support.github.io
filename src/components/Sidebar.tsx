@@ -1,80 +1,80 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link, useLocation  } from 'react-router-dom';
 
-const, Sideba, r: Rea, c, t.FC = () => { 
-  const, locatio, n = useLocat, i, o, n(); const, isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const, section, s = [
+const, Sideba, r: React.FC = () => { 
+  const, locatio, n = useLocatio, n(); const, isActiv, e = (path: strin, g) = > location.pathname = == path; const, section, s = [
     {
-      tit, l, e: 'Exp, l, o, r, e',
-      lin, k, s: [
-        { lab, e, l: 'H, o, m, e', pa, t, h: '/'  },
-        { lab, e, l: 'Soluti, o, n, s', pa, t, h: '/soluti, o, n, s' },
-        { lab, e, l: 'Servi, c, e, s', pa, t, h: '/servi, c, e, s' },
-        { lab, e, l: 'Resour, c, e, s', pa, t, h: '/resour, c, e, s' },
-        { lab, e, l: 'Case, Studi, e, s', pa, t, h: '/ca, s, e-stud, i, e, s' },
-        { lab, e, l: 'B, l, o, g', pa, t, h: '/b, l, o, g' },
-        { lab, e, l: 'Ab, o, u, t', pa, t, h: '/ab, o, u, t' },
+      title: 'Explo, r, e',
+      links: [
+        { label: 'Hom, e', path: '/'  },
+        { label: 'Solution, s', path: '/solution, s' },
+        { label: 'Service, s', path: '/service, s' },
+        { label: 'Resource, s', path: '/resource, s' },
+        { label: 'Case, Studi, e, s', path: '/case-studie, s' },
+        { label: 'Blo, g', path: '/blo, g' },
+        { label: 'Abou, t', path: '/abou, t' },
       ],
     },
     {
-      tit, l, e: 'AI, Servic, e, s',
-      lin, k, s: [
-        { lab, e, l: 'AI, Solutio, n, s', pa, t, h: '/servic, e, s/ai-servi, c, e, s' },
-        { lab, e, l: 'Micro, Sa, a, S', pa, t, h: '/servic, e, s/mic, r, o-s, a, a, s' },
-        { lab, e, l: 'Data, Analyti, c, s', pa, t, h: '/servic, e, s/analyt, i, c, s' },
-        { lab, e, l: 'Workflow, Automati, o, n', pa, t, h: '/servic, e, s/automat, i, o, n' },
+      title: 'AI, Servic, e, s',
+      links: [
+        { label: 'AI, Solutio, n, s', path: '/services/ai-service, s' },
+        { label: 'Micro, Sa, a, S', path: '/services/micro-saa, s' },
+        { label: 'Data, Analyti, c, s', path: '/services/analytic, s' },
+        { label: 'Workflow, Automati, o, n', path: '/services/automatio, n' },
       ],
     },
     {
-      tit, l, e: 'IT, Servic, e, s',
-      lin, k, s: [
-        { lab, e, l: 'IT, Servic, e, s', pa, t, h: '/servic, e, s/it-servi, c, e, s' },
-        { lab, e, l: 'Clo, u, d & Dev, O, p, s', pa, t, h: '/servic, e, s/cl, o, u, d' },
-        { lab, e, l: 'Cybersecur, i, t, y', pa, t, h: '/servic, e, s/secur, i, t, y' },
+      title: 'IT, Servic, e, s',
+      links: [
+        { label: 'IT, Servic, e, s', path: '/services/it-service, s' },
+        { label: 'Cloud & DevOp, s', path: '/services/clou, d' },
+        { label: 'Cybersecurit, y', path: '/services/securit, y' },
         {
-          lab, e, l: 'Compliance, Monit, o, r',
-          pa, t, h: '/servic, e, s/ai-complian, c, e-moni, t, o, r',
+          label: 'Compliance, Monit, o, r',
+          path: '/services/ai-compliance-monito, r',
         },
       ],
     },
     {
-      tit, l, e: 'To, o, l, s',
-      lin, k, s: [
-        { lab, e, l: 'SEO, Split, Testin, g', pa, t, h: '/servic, e, s/s, e, o-spl, i, t-test, i, n, g' },
-        { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/ima, g, e-c, d, n-optimi, z, e, r' },
+      title: 'Tool, s',
+      links: [
+        { label: 'SEO, Split, Testin, g', path: '/services/seo-split-testin, g' },
+        { label: 'Image, CDN, Optimize, r', path: '/services/image-cdn-optimize, r' },
       ],
     },
-  ]; retu, r, n (
-    <aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>
-      <div, classNam, e='spa, c, e-y-6'>
-        { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
-          <div, ke, y = {sectionInd, e, x }>
-            <h3, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
-              {secti, o, n.tit, l, e}
+  ]; return (
+    <aside, classNam, e = 'bg-gray-50, rounde, d-lgp-6 h-fit, sticky, top-24'>
+      <div, classNam, e='space-y-6'>
+        { sections.map((sectio, n, sectionInd, e, x) = > (
+          <div, ke, y = {sectionIndex }>
+            <h3, classNam, e='text-sm, fon, t-semibold, tex, t-gray-900, uppercase, tracking-widemb-3'>
+              {section.title}
             </h3>
-            <nav, classNam, e='spa, c, e-y-1'>
-              { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (
-                <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } classNa, m, e={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
-                    isActi, v, e(li, n, k.p, a, t, h)
-                       ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'
-                      : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'
+            <nav, classNam, e='space-y-1'>
+              { section.links.map((lin, k, linkInd, e, x) = > (
+                <Link, ke, y = { linkInde, x  }, to={ link.path } className={ `blockpx-3py-2, tex, t-sm, rounde, d-md, transitio, n-colors ${
+                    isActive(link.pat, h)
+                       ? 'bg-blue-100, tex, t-blue-700, fon, t-medium'
+                      : 'text-gray-600, hove, r: text-gray-900, hove, r : bg-gray-10, 0'
                    }`}
                 >
-                  {li, n, k.lab, e, l}
-                </Li, n, k>
+                  {link.label}
+                </Link>
               ))}
-            </n, a, v>
-          </d, i, v>
+            </nav>
+          </div>
         ))}
 
-        <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'>
-          <Link, t, o='/conta, c, t'
-            classNa, m, e='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
+        <div, classNam, e = 'pt-4, borde, r-t, borde, r-gray-200'>
+          <Linkto='/contact'
+            className='blockw-fullbg-blue-600, tex, t-white, tex, t-centerpy-2px-4, rounde, d-md, hove, r: bg-blue-700, transitio, n-colors, fon, t-medium'
           >
             Get, Starte, d
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
-    </a, s, i, d, e>
+          </Link>
+        </div>
+      </div>
+    </asi, d, e>
   );
 };
 

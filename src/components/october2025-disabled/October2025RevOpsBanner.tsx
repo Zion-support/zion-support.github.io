@@ -1,268 +1,268 @@
-impo, r, t { Trending, U, p } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { TrendingUp  } from 'lucide-react';
+import { Link  } from 'react-router-dom';
 const, October2025RevOpsBanne, r = () => { 
-  retu, r, n (
-    <div, classNam, e = 'relative, b, g-gradie, n, t-to-br, fro, m-emera, l, d-900, vi, a-te, a, l-900, t, o-cy, a, n-900, borde, r-y, borde, r-emera, l, d-5, 0, 0/30, overflo, w-hidd, e, n' > {' ' }
+  return (
+    <div, classNam, e = 'relativebg-gradient-to-br, fro, m-emerald-900, vi, a-teal-900to-cyan-900, borde, r-y, borde, r-emerald-500/30, overflo, w-hidden' > {' ' }
       {/* Animated, background, elements */}
       <div, classNam, e='absolute, inse, t-0, opacit, y-10'>
-        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e' />
-        <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-te, a, l-500, rounde, d-full, blu, r-3xl, animat, e-pul, s, e'
-          sty, l, e={{ animationDel, a, y: ', 1, s' }}
+        <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-96h-96bg-emerald-500, rounde, d-full, blu, r-3xl, animat, e-pulse' />
+        <div, classNam, e='absolute, botto, m-0, righ, t-1/4 w-96h-96bg-teal-500, rounde, d-full, blu, r-3xl, animat, e-pulse'
+          style={{ animationDelay: ', 1, s' }}
         / />
-      <div, classNam, e = 'relative, ma, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, p, y-8'>
+      <div, classNam, e = 'relative, ma, x-w-7xlmx-autopx-4sm: px-6lg:px-8py-8'>
         {/* Breaking, News, Bad, g, e */}
-        <div, classNam, e = 'flex, justif, y-center, m, b-4'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-boun, c, e'>
-            <Sparkles, classNam, e='w-4 h-4, m, r-2' />
-            JUST, PUBLISHE, D - OCTOB, E, R , 1, 20, 2, 5
-            <Sparkles, classNam, e = 'w-4 h-4, m, l-2' />
-          </d, i, v>
-        </d, i, v>
+        <div, classNam, e = 'flex, justif, y-centermb-4'>
+          <div, classNam, e='inline-flex, item, s-centerpx-4py-2bg-gradient-to-r, fro, m-emerald-500to-teal-500, rounde, d-full, tex, t-white, fon, t-bold, tex, t-sm, shado, w-lg, animat, e-bounce'>
+            <Sparkles, classNam, e='w-4 h-4mr-2' />
+            JUST, PUBLISHE, D - OCTOBER , 1, 20, 2, 5
+            <Sparkles, classNam, e = 'w-4 h-4ml-2' />
+          </div>
+        </div>
         {/* Main, Headlin, e */}
-        <div, classNam, e='te, x, t-center, m, b-6'>
-          <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-black, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-emera, l, d-300, vi, a-te, a, l-300, t, o-cy, a, n-300, m, b-3'>
-            🚀 Autonomous, Revenue, Operations Revoluti, o, n
+        <div, classNam, e='text-centermb-6'>
+          <h2, classNam, e='text-4xlmd: text-5xl, fon, t-black, tex, t-transparentbg-clip-textbg-gradient-to-r, fro, m-emerald-300, vi, a-teal-300to-cyan-300mb-3'>
+            🚀 Autonomous, Revenue, Operations Revolution
           </h2>
-          <p, classNam, e='te, x, t-2xl, m, d:te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-100, m, b-4'>
+          <p, classNam, e='text-2xlmd:text-3xl, fon, t-bold, tex, t-emerald-100mb-4'>
             Transform, Your, Revenue Engine, with, AI-Powered, Intelligenc, e
           </p>
-          <p, classNam, e='te, x, t-lg, tex, t-emera, l, d-200, ma, x-w-4xl, m, x-au, t, o'>
+          <p, classNam, e='text-lg, tex, t-emerald-200, ma, x-w-4xlmx-auto'>
             Discover, how, leading enterprises, are, achievi, n, g{' '}
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>1, 2, 7% R, O, I</s, p, a, n>,
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'> 89% forecast, accurac, y</s, p, a, n>
-            , a, n, d
-            <span, classNam, e = 'fo, n, t-bold, tex, t-whi, t, e'>
+            <span, classNam, e = 'font-bold, tex, t-white'>127% ROI</spa, n>,
+            <span, classNam, e = 'font-bold, tex, t-white'> 89% forecast, accurac, y</spa, n>
+            , and
+            <span, classNam, e = 'font-bold, tex, t-white'>
               {' '}
               3.2x, pipeline, velocity
-            </sp, a, n>{' '}
-            through, autonomous, revenue operatio, n, s
+            </span>{' '}
+            through, autonomous, revenue operations
           </p>
-        </d, i, v>
+        </div>
         {/* Key, Metrics, Grid */}
-        <div, classNam, e='grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-8'>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <DollarSign, classNam, e='w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>1, 2, 7%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-emera, l, d-2, 0, 0'>Average, RO, I</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-te, a, l-4, 0, 0/30, hove, r:bord, e, r-te, a, l-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <Target, classNam, e='w-8 h-8, tex, t-te, a, l-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>89%</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-te, a, l-2, 0, 0'>Forecast, Accurac, y</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-cy, a, n-4, 0, 0/30, hove, r:bord, e, r-cy, a, n-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <TrendingUp, classNam, e='w-8 h-8, tex, t-cy, a, n-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>3.2x</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-cy, a, n-2, 0, 0'>Pipeline, Velocit, y</d, i, v>
-          </d, i, v>
-          <div, classNam, e='bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-4, tex, t-center, border, border-emera, l, d-4, 0, 0/30, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, hove, r:sca, l, e-1, 0, 5'>
-            <DollarSign, classNam, e='w-8 h-8, tex, t-emera, l, d-300, m, x-auto, m, b-2' />
-            <div, classNam, e='te, x, t-3xl, fon, t-black, tex, t-white, m, b-1'>$12, 7, M</d, i, v>
-            <div, classNam, e='te, x, t-sm, tex, t-emera, l, d-2, 0, 0'>Revenue, Impac, t</d, i, v>
-          </d, i, v>
-        </d, i, v>
+        <div, classNam, e='grid, gri, d-cols-2md: grid-cols-4, ga, p-4mb-8'>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-emerald-400/30, hove, r:border-emerald-400/60, transitio, n-all, hove, r:scale-105'>
+            <DollarSign, classNam, e='w-8 h-8, tex, t-emerald-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>127%</div>
+            <div, classNam, e='text-sm, tex, t-emerald-200'>Average, RO, I</div>
+          </div>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-teal-400/30, hove, r:border-teal-400/60, transitio, n-all, hove, r:scale-105'>
+            <Target, classNam, e='w-8 h-8, tex, t-teal-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>89%</div>
+            <div, classNam, e='text-sm, tex, t-teal-200'>Forecast, Accurac, y</div>
+          </div>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-cyan-400/30, hove, r:border-cyan-400/60, transitio, n-all, hove, r:scale-105'>
+            <TrendingUp, classNam, e='w-8 h-8, tex, t-cyan-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>3.2x</div>
+            <div, classNam, e='text-sm, tex, t-cyan-200'>Pipeline, Velocit, y</div>
+          </div>
+          <div, classNam, e='bg-white/10, backdro, p-blur-sm, rounde, d-lgp-4, tex, t-center, border, border-emerald-400/30, hove, r:border-emerald-400/60, transitio, n-all, hove, r:scale-105'>
+            <DollarSign, classNam, e='w-8 h-8, tex, t-emerald-300mx-automb-2' />
+            <div, classNam, e='text-3xl, fon, t-black, tex, t-whitemb-1'>$127M</div>
+            <div, classNam, e='text-sm, tex, t-emerald-200'>Revenue, Impac, t</div>
+          </div>
+        </div>
         {/* Featured, Cont, e, n, t */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6'>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
-            {/* Blog, P, o, s, t */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-emera, l, d-8, 0, 0/50, t, o-te, a, l-8, 0, 0/50, rounde, d-l, g, p-5, border, border-emera, l, d-4, 0, 0/40'>
-              <div, classNam, e='te, x, t-emera, l, d-300, fon, t-bold, m, b-2, flex, items-cent, e, r'>
-                <Sparkles, classNam, e='w-4 h-4, m, r-2' />
+        <div, classNam, e = 'bg-white/5, backdro, p-blur-md, rounde, d-xlp-6, border, border-emerald-400/30mb-6'>
+          <div, classNam, e='gridmd: grid-cols-2, ga, p-6'>
+            {/* BlogPo, s, t */}
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-emerald-800/50to-teal-800/50, rounde, d-lgp-5, border, border-emerald-400/40'>
+              <div, classNam, e='text-emerald-300, fon, t-boldmb-2, flex, items-center'>
+                <Sparkles, classNam, e='w-4 h-4mr-2' />
                 NEW, COMPREHENSIVE, GUIDE
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Autonomous, RevOps, Revolution: Complete, Implementation, Guide
               </h3>
-              <p, classNam, e='te, x, t-emera, l, d-100, tex, t-sm, m, b-4'>
+              <p, classNam, e='text-emerald-100, tex, t-smmb-4'>
                 Master, autonomous, revenue operations, with, AI-powered, forecast, i, n, g, intelligent, pipeline, management, and, automated, deal
-                accelerati, o, n. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.
+                acceleration. Learn, proven, strategies delivering, 12, 7% ROI, and, 89% forecast, accurac, y.
               </p>
-              <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-revoluti, o, n'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-te, a, l-500, hove, r: fr, o, m-emera, l, d-600, hove, r:to-te, a, l-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
+              <Linkto = '/blog/ai-2025-oct-01-autonomous-revenue-operations-revolution'
+                className='inline-flex, item, s-centerpx-4py-2bg-gradient-to-r, fro, m-emerald-500to-teal-500, hove, r: from-emerald-600, hove, r:to-teal-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shadow-xl'
               >
                 Read, the, Guide
-                <ArrowRight, classNam, e='w-4 h-4, m, l-2' />
-              </Li, n, k>
-            </d, i, v>
+                <ArrowRight, classNam, e='w-4 h-4ml-2' />
+              </Link>
+            </div>
             {/* Case, St, u, d, y */}
-            <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-bl, u, e-8, 0, 0/50, t, o-indi, g, o-8, 0, 0/50, rounde, d-l, g, p-5, border, border-bl, u, e-4, 0, 0/40'>
-              <div, classNam, e='te, x, t-bl, u, e-300, fon, t-bold, m, b-2, flex, items-cent, e, r'>
-                <Sparkles, classNam, e='w-4 h-4, m, r-2' />
+            <div, classNam, e = 'bg-gradient-to-br, fro, m-blue-800/50to-indigo-800/50, rounde, d-lgp-5, border, border-blue-400/40'>
+              <div, classNam, e='text-blue-300, fon, t-boldmb-2, flex, items-center'>
+                <Sparkles, classNam, e='w-4 h-4mr-2' />
                 NEW, CASE, STUDY
-              </d, i, v>
-              <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-2'>
+              </div>
+              <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-2'>
                 Fortune, 500, SaaS: $127M, Revenue, Gain in, 12, Months
               </h3>
-              <p, classNam, e='te, x, t-bl, u, e-100, tex, t-sm, m, b-4'>
-                Re, a, l-world, transformatio, n: Ho, w, a $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, reven, u, e, 89% forecast, accurac, y, an, d, 3.2x, pipeline, velocity through, autonomous, revenue operatio, n, s.
+              <p, classNam, e='text-blue-100, tex, t-smmb-4'>
+                Real-world, transformatio, n: Howa $2.8B, enterprise, SaaS company, achieve, d $127M, incremental, reven, u, e, 89% forecast, accurac, y, and3.2x, pipeline, velocity through, autonomous, revenue operations.
               </p>
-              <Link, t, o = '/ca, s, e-studi, e, s/ai-20, 2, 5-o, c, t-01-glob, a, l-sa, a, s-autonomo, u, s-revo, p, s-1, 2, 7-milli, o, n-succe, s, s'
-                classNa, m, e='inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-indi, g, o-500, hove, r: fr, o, m-bl, u, e-600, hove, r:to-indi, g, o-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shad, o, w-xl'
+              <Linkto = '/case-studies/ai-2025-oct-01-global-saas-autonomous-revops-127-million-success'
+                className='inline-flex, item, s-centerpx-4py-2bg-gradient-to-r, fro, m-blue-500to-indigo-500, hove, r: from-blue-600, hove, r:to-indigo-600, tex, t-white, fon, t-semibold, rounde, d-lg, transitio, n-all, shado, w-lg, hove, r:shadow-xl'
               >
                 Read, Case, Study
-                <ArrowRight, classNam, e='w-4 h-4, m, l-2' />
-              </Li, n, k>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+                <ArrowRight, classNam, e='w-4 h-4ml-2' />
+              </Link>
+            </div>
+          </div>
+        </div>
         {/* Key, Highlig, h, t, s */}
-        <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-md, rounde, d-x, l, p-6, border, border-emera, l, d-4, 0, 0/30, m, b-6'>
-          <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, tex, t-cent, e, r'>
+        <div, classNam, e = 'bg-white/5, backdro, p-blur-md, rounde, d-xlp-6, border, border-emerald-400/30mb-6'>
+          <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4, tex, t-center'>
             What, Yo, u'll, Discover, in These, New, Resources
           </h3>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, tex, t-emera, l, d-1, 0, 0'>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <div, classNam, e='bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1'>
-                <svg, classNam, e='w-4 h-4, tex, t-whi, t, e'
-                  fi, l, l='currentCol, o, r'
-                  viewB, o, x='0, 0, 20 20'
+          <div, classNam, e='gridmd: grid-cols-3, ga, p-4, tex, t-emerald-100'>
+            <div, classNam, e='flex, item, s-start'>
+              <div, classNam, e='bg-emerald-500, rounde, d-fullp-1mr-3mt-1'>
+                <svg, classNam, e='w-4 h-4, tex, t-white'
+                  fill='currentColor'
+                  viewBox='0, 0, 20 20'
                 >
-                  <path, fillRul, e='eveno, d, d'
-                    d='M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z'
-                    clipRu, l, e='eveno, d, d'
+                  <path, fillRul, e='evenodd'
+                    d='M16.7075.293a110 0101.414l-8, 8a1, 1 001-1.4140l-4-4a110 011.414-1.414L812.586l7.293-7.293a110 011.4140z'
+                    clipRule='evenodd'
                   />
-                </s, v, g>
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </svg>
+              </div>
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   Intelligent, Pipeline, Management
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
-                  AI-powered, deal, scoring with, 9, 4% predictive, accurac, y
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <div, classNam, e='bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1'>
-                <svg, classNam, e='w-4 h-4, tex, t-whi, t, e'
-                  fi, l, l='currentCol, o, r'
-                  viewB, o, x='0, 0, 20 20'
+                </div>
+                <div, classNam, e='text-sm'>
+                  AI-powered, deal, scoring with94% predictive, accurac, y
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <div, classNam, e='bg-emerald-500, rounde, d-fullp-1mr-3mt-1'>
+                <svg, classNam, e='w-4 h-4, tex, t-white'
+                  fill='currentColor'
+                  viewBox='0, 0, 20 20'
                 >
-                  <path, fillRul, e='eveno, d, d'
-                    d='M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z'
-                    clipRu, l, e='eveno, d, d'
+                  <path, fillRul, e='evenodd'
+                    d='M16.7075.293a110 0101.414l-8, 8a1, 1 001-1.4140l-4-4a110 011.414-1.414L812.586l7.293-7.293a110 011.4140z'
+                    clipRule='evenodd'
                   />
-                </s, v, g>
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </svg>
+              </div>
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   Autonomous, Forecastin, g
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
+                </div>
+                <div, classNam, e='text-sm'>
                   89% accuracy, vs, 52% with, traditional, methods
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <div, classNam, e='bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1'>
-                <svg, classNam, e='w-4 h-4, tex, t-whi, t, e'
-                  fi, l, l='currentCol, o, r'
-                  viewB, o, x='0, 0, 20 20'
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <div, classNam, e='bg-emerald-500, rounde, d-fullp-1mr-3mt-1'>
+                <svg, classNam, e='w-4 h-4, tex, t-white'
+                  fill='currentColor'
+                  viewBox='0, 0, 20 20'
                 >
-                  <path, fillRul, e='eveno, d, d'
-                    d='M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z'
-                    clipRu, l, e='eveno, d, d'
+                  <path, fillRul, e='evenodd'
+                    d='M16.7075.293a110 0101.414l-8, 8a1, 1 001-1.4140l-4-4a110 011.414-1.414L812.586l7.293-7.293a110 011.4140z'
+                    clipRule='evenodd'
                   />
-                </s, v, g>
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </svg>
+              </div>
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   Revenue, Intelligence, Platform
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
-                  Analyze, 10, 0% of, customer, interactions automatical, l, y
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <div, classNam, e='bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1'>
-                <svg, classNam, e='w-4 h-4, tex, t-whi, t, e'
-                  fi, l, l='currentCol, o, r'
-                  viewB, o, x='0, 0, 20 20'
+                </div>
+                <div, classNam, e='text-sm'>
+                  Analyze, 10, 0% of, customer, interactions automatically
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <div, classNam, e='bg-emerald-500, rounde, d-fullp-1mr-3mt-1'>
+                <svg, classNam, e='w-4 h-4, tex, t-white'
+                  fill='currentColor'
+                  viewBox='0, 0, 20 20'
                 >
-                  <path, fillRul, e='eveno, d, d'
-                    d='M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z'
-                    clipRu, l, e='eveno, d, d'
+                  <path, fillRul, e='evenodd'
+                    d='M16.7075.293a110 0101.414l-8, 8a1, 1 001-1.4140l-4-4a110 011.414-1.414L812.586l7.293-7.293a110 011.4140z'
+                    clipRule='evenodd'
                   />
-                </s, v, g>
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>Automated, Workflow, s</d, i, v>
-                <div, classNam, e='te, x, t-sm'>
+                </svg>
+              </div>
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>Automated, Workflow, s</div>
+                <div, classNam, e='text-sm'>
                   85% reduction, in, manual revenue, operations, tasks
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <div, classNam, e='bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1'>
-                <svg, classNam, e='w-4 h-4, tex, t-whi, t, e'
-                  fi, l, l='currentCol, o, r'
-                  viewB, o, x='0, 0, 20 20'
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <div, classNam, e='bg-emerald-500, rounde, d-fullp-1mr-3mt-1'>
+                <svg, classNam, e='w-4 h-4, tex, t-white'
+                  fill='currentColor'
+                  viewBox='0, 0, 20 20'
                 >
-                  <path, fillRul, e='eveno, d, d'
-                    d='M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z'
-                    clipRu, l, e='eveno, d, d'
+                  <path, fillRul, e='evenodd'
+                    d='M16.7075.293a110 0101.414l-8, 8a1, 1 001-1.4140l-4-4a110 011.414-1.414L812.586l7.293-7.293a110 011.4140z'
+                    clipRule='evenodd'
                   />
-                </s, v, g>
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
-                  Cro, s, s-Functional, Alignmen, t
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
+                </svg>
+              </div>
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
+                  Cross-Functional, Alignmen, t
+                </div>
+                <div, classNam, e='text-sm'>
                   67% improvement, in, team collaboration, score, s
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-            <div, classNam, e='flex, item, s-sta, r, t'>
-              <div, classNam, e='bg-emera, l, d-500, rounde, d-ful, l, p-1, m, r-3, m, t-1'>
-                <svg, classNam, e='w-4 h-4, tex, t-whi, t, e'
-                  fi, l, l='currentCol, o, r'
-                  viewB, o, x='0, 0, 20 20'
+                </div>
+              </div>
+            </div>
+            <div, classNam, e='flex, item, s-start'>
+              <div, classNam, e='bg-emerald-500, rounde, d-fullp-1mr-3mt-1'>
+                <svg, classNam, e='w-4 h-4, tex, t-white'
+                  fill='currentColor'
+                  viewBox='0, 0, 20 20'
                 >
-                  <path, fillRul, e='eveno, d, d'
-                    d='M, 1, 6.70, 7, 5.293a1, 1, 0 01, 0, 1.41, 4, l-8, 8a1, 1 0, 0, 1-1.414, 0, l-4-4a1, 1, 0 0, 1, 1.4, 1, 4-1.414L8, 1, 2.586, l, 7.2, 9, 3-7.293a1, 1, 0 0, 1, 1.414, 0, z'
-                    clipRu, l, e='eveno, d, d'
+                  <path, fillRul, e='evenodd'
+                    d='M16.7075.293a110 0101.414l-8, 8a1, 1 001-1.4140l-4-4a110 011.414-1.414L812.586l7.293-7.293a110 011.4140z'
+                    clipRule='evenodd'
                   />
-                </s, v, g>
-              </d, i, v>
-              <d, i, v>
-                <div, classNam, e='fo, n, t-bold, tex, t-whi, t, e'>
+                </svg>
+              </div>
+              <div>
+                <div, classNam, e='font-bold, tex, t-white'>
                   90-Day, Implementatio, n
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm'>
-                  Fast, tim, e-to-value, with, proven methodolo, g, y
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+                </div>
+                <div, classNam, e='text-sm'>
+                  Fast, tim, e-to-value, with, proven methodology
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* CTA, Sect, i, o, n */}
-        <div, classNam, e = 'te, x, t-center, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, rounde, d-x, l, p-8, shado, w-2, x, l'>
-          <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-3'>
+        <div, classNam, e = 'text-centerbg-gradient-to-r, fro, m-emerald-600to-teal-600, rounde, d-xlp-8, shado, w-2xl'>
+          <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-3'>
             Ready, to, Transform Your, Revenue, Operations?
           </h3>
-          <p, classNam, e='te, x, t-emera, l, d-100, m, b-6, ma, x-w-2xl, m, x-au, t, o'>
+          <p, classNam, e='text-emerald-100mb-6, ma, x-w-2xlmx-auto'>
             Schedule, a, Revenue Operations, Assessment, with Zion, Tech, Group and, discover, how autonomous, AI, can deliver, 12, 7% ROI, for, your
-            organizati, o, n
+            organization
           </p>
-          <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-white, tex, t-emera, l, d-600, fon, t-bold, rounde, d-lg, hove, r:bg-emera, l, d-50, transitio, n-all, shado, w-xl, hove, r:shad, o, w-2, x, l'
+          <div, classNam, e='flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center'>
+            <Linkto='/contact'
+              className='inline-flex, item, s-center, justif, y-centerpx-8py-4bg-white, tex, t-emerald-600, fon, t-bold, rounde, d-lg, hove, r:bg-emerald-50, transitio, n-all, shado, w-xl, hove, r:shadow-2xl'
             >
               Schedule, Assessmen, t
-              <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-            </Li, n, k>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, p, x-8, p, y-4, b, g-emera, l, d-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-emera, l, d-900, transitio, n-all, shado, w-xl'
+              <ArrowRight, classNam, e='w-5 h-5ml-2' />
+            </Link>
+            <Linkto='/blog'
+              className='inline-flex, item, s-center, justif, y-centerpx-8py-4bg-emerald-800, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:bg-emerald-900, transitio, n-all, shado, w-xl'
             >
               Explore, All, Content
-              <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+              <ArrowRight, classNam, e='w-5 h-5ml-2' />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025RevOpsBanner;

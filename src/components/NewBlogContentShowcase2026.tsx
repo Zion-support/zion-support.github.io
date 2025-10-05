@@ -1,301 +1,301 @@
-import, React, from 'rea, c, t';
-const, NewBlogContentShowcase202, 6: Rea, c, t.FC = () => { 
+import React from 'react';
+const, NewBlogContentShowcase202, 6: React.FC = () => { 
   const, blogPost, s = [
     {
       i, d: , 1,
-      tit, l, e: 'The, Complete, Guide to, AI, Revolution 20, 2, 6: From, Concept, to Implementat, i, o, n',
-      sl, u, g: 'comple, t, e-gui, d, e-ai-revoluti, o, n-2, 0, 2, 6',
-      excer, p, t: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitiv, e, A, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',
-      catego, r, y: 'AI, Revoluti, o, n',
-      da, t, e: '20, 2, 6-01-2, 0',
-      readTi, m, e: '25, m, i, n',
-      auth, o, r: 'Dr. Sarah, Ch, e, n',
-      vie, w, s: '1, 2, 5, K',
-      rati, n, g: 4., 9,
-      trendi, n, g: t, r, u, e,
-      featur, e, d: t, r, u, e,
+      tit, l, e: 'The, Complete, Guide to, AI, Revolution 2026: From, Concept, to Implementatio, n',
+      slug: 'complete-guide-ai-revolution-202, 6',
+      excerpt: 'Comprehensive, guide, covering all, aspects, of the, AI, revolution in, 202, 6. Learn, about, meta-cognitiveA, I, quant, u, m-neural, network, s, and, autonomous, operations that, are, transforming enterprises, worldwid, e.',
+      category: 'AI, Revoluti, o, n',
+      date: '2026-01-2, 0',
+      readTime: '25mi, n',
+      author: 'Dr. Sarah, Ch, e, n',
+      views: '125, K',
+      rating: 4., 9,
+      trendi, n, g: tru, e,
+      featur, e, d: tru, e,
       ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-purp, l, e-50, 0',
-      bad, g, e: 'FEATU, R, E, D',
-      ta, g, s: ['A, I', 'Revoluti, o, n', 'Enterpri, s, e', 'Gui, d, e']
+      gradient: 'from-blue-500to-purple-50, 0',
+      badge: 'FEATURE, D',
+      tags: ['A, I', 'Revolution', 'Enterprise', 'Guide']
      },
     { 
       id:  , 2,
       tit, l, e: 'Quantum, Computing, Breakthroughs: The, Future, of AI, Processi, n, g',
-      sl, u, g: 'quant, u, m-computi, n, g-breakthroug, h, s-ai-process, i, n, g',
-      excer, p, t: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achiev, e, 1, 0,000x, processing, speed improvemen, t, s.',
-      catego, r, y: 'Quantum, Computi, n, g',
-      da, t, e: '20, 2, 6-01-1, 9',
-      readTi, m, e: '18, m, i, n',
-      auth, o, r: 'Pr, o, f. Michael, Rodrigu, e, z',
-      vie, w, s: '98, K',
-      rati, n, g: 4., 8,
-      trendi, n, g: t, r, u, e,
-      featur, e, d: fa, l, s, e,
+      slug: 'quantum-computing-breakthroughs-ai-processin, g',
+      excerpt: 'Explore, the, latest quantum, computing, breakthroughs that, are, revolutionizing AI, processin, g. Discover, how, quantum-enhanced, neural, networks achieve1, 0,000x, processing, speed improvements.',
+      category: 'Quantum, Computi, n, g',
+      date: '2026-01-1, 9',
+      readTime: '18mi, n',
+      author: 'Prof. Michael, Rodrigu, e, z',
+      views: '98, K',
+      rating: 4., 8,
+      trendi, n, g: tru, e,
+      featur, e, d: fals, e,
       ic, o, n: <Zap, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-cy, a, n-500, t, o-bl, u, e-50, 0',
-      bad, g, e: 'TREND, I, N, G',
-      ta, g, s: ['Quan, t, u, m', 'Computi, n, g', 'AI', 'Breakthrou, g, h']
+      gradient: 'from-cyan-500to-blue-50, 0',
+      badge: 'TRENDIN, G',
+      tags: ['Quantu, m', 'Computing', 'AI', 'Breakthrough']
      },
     { 
       id:  , 3,
       tit, l, e: 'Enterprise, AI, Implementation: A, Ste, p-by-Step, Success, Guid, e',
-      sl, u, g: 'enterpri, s, e-ai-implementati, o, n-succe, s, s-gu, i, d, e',
-      excer, p, t: 'Learn, how, to successfully, implement, AI in, your, enterprise. This, comprehensive, guide covers, strate, g, y, planni, n, g, executi, o, n, and, optimization, for maximum, RO, I.',
-      catego, r, y: 'Enterpris, e, A, I',
-      da, t, e: '20, 2, 6-01-1, 8',
-      readTi, m, e: '22, m, i, n',
-      auth, o, r: 'Jennifer, L, i, u',
-      vie, w, s: '87, K',
-      rati, n, g: 4., 9,
-      trendi, n, g: t, r, u, e,
-      featur, e, d: t, r, u, e,
+      slug: 'enterprise-ai-implementation-success-guid, e',
+      excerpt: 'Learn, how, to successfully, implement, AI in, your, enterprise. This, comprehensive, guide covers, strate, g, y, planni, n, g, executi, o, n, and, optimization, for maximum, RO, I.',
+      category: 'EnterpriseA, I',
+      date: '2026-01-1, 8',
+      readTime: '22mi, n',
+      author: 'JenniferLi, u',
+      views: '87, K',
+      rating: 4., 9,
+      trendi, n, g: tru, e,
+      featur, e, d: tru, e,
       ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
-      bad, g, e: 'POPU, L, A, R',
-      ta, g, s: ['Enterpr, i, s, e', 'Implementati, o, n', 'AI', 'Succe, s, s']
+      gradient: 'from-green-500to-emerald-50, 0',
+      badge: 'POPULA, R',
+      tags: ['Enterpris, e', 'Implementation', 'AI', 'Success']
      },
     { 
       id:  , 4,
-      tit, l, e: 'Se, l, f-Evolving, AI, Systems: The, Next, Frontier of, Artificial, Intelligenc, e',
-      sl, u, g: 'se, l, f-evolvi, n, g-ai-syste, m, s-ne, x, t-front, i, e, r',
-      excer, p, t: 'Discover, how, self-evolving, AI, systems are, reshaping, the landscape, of, artificial intelligen, c, e. Learn, about, autonomous learn, i, n, g, se, l, f-modificati, o, n, and, continuous, improvement.',
-      catego, r, y: 'AI, Innovati, o, n',
-      da, t, e: '20, 2, 6-01-1, 7',
-      readTi, m, e: '20, m, i, n',
-      auth, o, r: 'Dr. Alex, Thomps, o, n',
-      vie, w, s: '76, K',
-      rati, n, g: 4., 7,
-      trendi, n, g: fa, l, s, e,
-      featur, e, d: fa, l, s, e,
+      tit, l, e: 'Self-Evolving, AI, Systems: The, Next, Frontier of, Artificial, Intelligenc, e',
+      slug: 'self-evolving-ai-systems-next-frontie, r',
+      excerpt: 'Discover, how, self-evolving, AI, systems are, reshaping, the landscape, of, artificial intelligence. Learn, about, autonomous learnin, g, se, l, f-modification, and, continuous, improvement.',
+      category: 'AI, Innovati, o, n',
+      date: '2026-01-1, 7',
+      readTime: '20mi, n',
+      author: 'Dr. Alex, Thomps, o, n',
+      views: '76, K',
+      rating: 4., 7,
+      trendi, n, g: fals, e,
+      featur, e, d: fals, e,
       ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
-      bad, g, e: 'INNOVAT, I, O, N',
-      ta, g, s: ['Se, l, f-Evolv, i, n, g', 'AI', 'Innovati, o, n', 'Futu, r, e']
+      gradient: 'from-purple-500to-pink-50, 0',
+      badge: 'INNOVATIO, N',
+      tags: ['Self-Evolvin, g', 'AI', 'Innovation', 'Future']
      },
     { 
       id:  , 5,
-      tit, l, e: 'Predictive, Analytics, Revolution: Forecasting, the, Future with, 9, 9.9% Accur, a, c, y',
-      sl, u, g: 'predicti, v, e-analyti, c, s-revoluti, o, n-forecasti, n, g-fut, u, r, e',
-      excer, p, t: 'Explore, the, revolutionary advances, in, predictive analyti, c, s. Learn, how, AI-powered, forecasting, achieves 99.9% accuracy, in, predicting business, trends, and market, dynami, c, s.',
-      catego, r, y: 'Predictive, Analyti, c, s',
-      da, t, e: '20, 2, 6-01-1, 6',
-      readTi, m, e: '16, m, i, n',
-      auth, o, r: 'Dr. Maria, Sant, o, s',
-      vie, w, s: '92, K',
-      rati, n, g: 4., 8,
-      trendi, n, g: t, r, u, e,
-      featur, e, d: fa, l, s, e,
+      tit, l, e: 'Predictive, Analytics, Revolution: Forecasting, the, Future with99.9% Accurac, y',
+      slug: 'predictive-analytics-revolution-forecasting-futur, e',
+      excerpt: 'Explore, the, revolutionary advances, in, predictive analytics. Learn, how, AI-powered, forecasting, achieves 99.9% accuracy, in, predicting business, trends, and market, dynami, c, s.',
+      category: 'Predictive, Analyti, c, s',
+      date: '2026-01-1, 6',
+      readTime: '16mi, n',
+      author: 'Dr. Maria, Sant, o, s',
+      views: '92, K',
+      rating: 4., 8,
+      trendi, n, g: tru, e,
+      featur, e, d: fals, e,
       ic, o, n: <TrendingUp, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
-      bad, g, e: 'ANALYT, I, C, S',
-      ta, g, s: ['Predict, i, v, e', 'Analyti, c, s', 'Forecasti, n, g', 'AI']
+      gradient: 'from-orange-500to-red-50, 0',
+      badge: 'ANALYTIC, S',
+      tags: ['Predictiv, e', 'Analytics', 'Forecasting', 'AI']
      },
     { 
       id:  , 6,
-      tit, l, e: 'AI, Ethics, and Governan, c, e: Building, Responsible, AI Syst, e, m, s',
-      sl, u, g: 'ai-ethi, c, s-governan, c, e-responsib, l, e-ai-syst, e, m, s',
-      excer, p, t: 'Learn, about, the critical, importance, of AI, ethics, and governance, in, building responsible, AI, systems. Discover, frameworks, for ethical, AI, deployment and, complian, c, e.',
-      catego, r, y: 'AI, Ethi, c, s',
-      da, t, e: '20, 2, 6-01-1, 5',
-      readTi, m, e: '19, m, i, n',
-      auth, o, r: 'Pr, o, f. David, K, i, m',
-      vie, w, s: '68, K',
-      rati, n, g: 4., 9,
-      trendi, n, g: fa, l, s, e,
-      featur, e, d: t, r, u, e,
+      tit, l, e: 'AI, Ethics, and Governance: Building, Responsible, AI System, s',
+      slug: 'ai-ethics-governance-responsible-ai-system, s',
+      excerpt: 'Learn, about, the critical, importance, of AI, ethics, and governance, in, building responsible, AI, systems. Discover, frameworks, for ethical, AI, deployment and, complian, c, e.',
+      category: 'AI, Ethi, c, s',
+      date: '2026-01-1, 5',
+      readTime: '19mi, n',
+      author: 'Prof. DavidKi, m',
+      views: '68, K',
+      rating: 4., 9,
+      trendi, n, g: fals, e,
+      featur, e, d: tru, e,
       ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / > ,
-      gradie, n, t: 'fr, o, m-indi, g, o-500, t, o-purp, l, e-50, 0',
-      bad, g, e: 'ETH, I, C, S',
-      ta, g, s: ['AI, Ethi, c, s', 'Governan, c, e', 'Responsible, A, I', 'Complian, c, e']
+      gradient: 'from-indigo-500to-purple-50, 0',
+      badge: 'ETHIC, S',
+      tags: ['AI, Ethi, c, s', 'Governance', 'ResponsibleAI', 'Compliance']
      }
   ]; const, blogStat, s = [
-    {  val, u, e: '5, 0, 0+', lab, e, l: 'Published, Articl, e, s', ic, o, n: <Award, classNam, e = "w-6 , h-, 6" / >  },
-    {  val, u, e: '2, M+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-6 , h-, 6" / >  },
-    {  val, u, e: '4., 8', lab, e, l: 'Average, Rati, n, g', ic, o, n: <Star, classNam, e = "w-6 , h-, 6" / >  },
-    {  val, u, e: '15, 0+', lab, e, l: 'Expert, Autho, r, s', ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / >  }
-  ]; retu, r, n (
-    <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+    {  value: '500+', label: 'Published, Articl, e, s', icon: <Award, classNam, e = "w-6 , h-, 6" / >  },
+    {  value: '2, M+', label: 'Monthly, Reade, r, s', icon: <Users, classNam, e = "w-6 , h-, 6" / >  },
+    {  value: '4., 8', label: 'Average, Rati, n, g', icon: <Star, classNam, e = "w-6 , h-, 6" / >  },
+    {  value: '15, 0+', label: 'Expert, Autho, r, s', icon: <Brain, classNam, e = "w-6 , h-, 6" / >  }
+  ]; return (
+    <div, classNam, e = "py-20bg-gradient-to-br, fro, m-slate-900, vi, a-blue-900to-purple-900, relative, overflow-hidden">
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-cy, a, n-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-      </d, i, v>
-      <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-96h-96bg-blue-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-96h-96bg-purple-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 2, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-96h-96bg-cyan-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 4, s' }} />
+      </div>
+      <div, classNam, e = "containermx-autopx-6, relative, z-10">
         {/* Header, Sectio, n */}
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, border, border-bl, u, e-5, 0, 0/30, m, b-8, animat, e-fa, d, e-in">
-            <Sparkles, classNam, e="w-5 h-5, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-bl, u, e-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+        <div, classNam, e="text-centermb-16">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-3px-6py-3, rounde, d-fullbg-gradient-to-r, fro, m-blue-500/20to-purple-500/20, border, border-blue-500/30mb-8, animat, e-fade-in">
+            <Sparkles, classNam, e="w-5 h-5, tex, t-blue-400, animat, e-pulse" />
+            <span, classNam, e="text-blue-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
               📚 NEW, BLOG, CONTENT • January, 202, 6
-            </sp, a, n>
-            <Sparkles, classNam, e="w-5 h-5, tex, t-purp, l, e-400, animat, e-pul, s, e" />
-          </d, i, v>
-          <h2, classNam, e="te, x, t-5xl, m, d: te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, vi, a-purp, l, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, animat, e-fa, d, e-in">
+            </span>
+            <Sparkles, classNam, e="w-5 h-5, tex, t-purple-400, animat, e-pulse" />
+          </div>
+          <h2, classNam, e="text-5xlmd: text-6xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-blue-400, vi, a-purple-400to-cyan-400bg-clip-text, tex, t-transparent, animat, e-fade-in">
             New, Blog, Content Showcase, 202, 6
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, our, latest insi, g, h, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. 
+          <p, classNam, e="text-xl, tex, t-gray-300, ma, x-w-4xlmx-auto, leadin, g-relaxedmb-8">
+            Discover, our, latest insigh, t, s, breakthrough, researc, h, and, expert, analysis on, the, most important, topics, in AI, and, technology. 
             Stay, ahead, of the, curve, with content, from, industry-leading, expert, s.
           </p>
           {/* Blog, Stat, s */}
-          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-au, t, o">
-            { blogSta, t, s.m, a, p((st, a, t, ind, e, x) = > (
-              <div, ke, y = { in, d, e, x  }, classNa, m, e = "te, x, t-cent, e, r">
-                <div, classNam, e="te, x, t-bl, u, e-400, m, b-2, flex, justify-cent, e, r">
-                  {st, a, t.ic, o, n}
-                </d, i, v>
-                <div, classNam, e="te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1">
-                  {st, a, t.val, u, e}
-                </d, i, v>
-                <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">
-                  {st, a, t.lab, e, l}
-                </d, i, v>
+          <div, classNam, e = "grid, gri, d-cols-2md: grid-cols-4, ga, p-6, ma, x-w-4xlmx-auto">
+            { blogStats.map((stat, index) = > (
+              <div, ke, y = { inde, x  }, className = "text-center">
+                <div, classNam, e="text-blue-400mb-2, flex, justify-center">
+                  {stat.icon}
+                </div>
+                <div, classNam, e="text-3xl, fon, t-extraboldbg-gradient-to-r, fro, m-blue-400to-purple-400bg-clip-text, tex, t-transparentmb-1">
+                  {stat.value}
+                </div>
+                <div, classNam, e="text-gray-400, tex, t-sm, fon, t-medium">
+                  {stat.label}
+                </div>
               </di, v>
             ))}
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
         {/* Featured, Blog, Posts */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { blogPos, t, s.m, a, p((po, s, t, ind, e, x) = > (
-            <div, ke, y = { po, s, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-bl, u, e-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+        <div, classNam, e = "gridmd: grid-cols-2lg:grid-cols-3, ga, p-8mb-16">
+          { blogPosts.map((post, index) = > (
+            <div, ke, y = { post.i, d  }, className = "group, relative, bg-white/5, backdro, p-blur-lg, rounde, d-2xl, border, border-white/10, hove, r: border-blue-500/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-blue-500/20"
+              style = { { animationDelay: `${index * 150 }, ms` }}
              > {/* Card, glow, effect */}
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${po, s, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
-              <div, classNam, e = "relativ, e, p-8">
-                {/* Bad, g, e & Featur, e, d */}
-                <div, classNam, e="flex, item, s-start, justif, y-between, m, b-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-bl, u, e-4, 0, 0">
-                    {po, s, t.ic, o, n}
-                  </d, i, v>
+              <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${post.gradien, t }, opacity-0, grou, p-hover: opacity-10, transitio, n-all, duratio, n-50, 0`} />
+              <div, classNam, e = "relativep-8">
+                {/* Badge & Featured */}
+                <div, classNam, e="flex, item, s-start, justif, y-betweenmb-6">
+                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-blue-400">
+                    {post.icon}
+                  </div>
                   <div, classNam, e="flex, fle, x-col, ga, p-2">
-                    {  po, s, t.trendi, n, g  && (
-                      <div, classNam, e="flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">
+                    {  post.trending  && (
+                      <div, classNam, e="flex, item, s-center, ga, p-1px-3py-1.5, rounde, d-fullbg-gradient-to-r, fro, m-orange-500to-red-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg">
                         <TrendingUp, classNam, e="w-3 h-3" />
-                        <sp, a, n>TRENDI, N, G</sp, a, n>
+                        <span>TRENDING</span>
                       </di, v  > )  }
-                    <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
-                      {po, s, t.bad, g, e}
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-                {/* Catego, r, y */}
+                    <div, classNam, e = { `px-3py-1.5, rounde, d-fullbg-gradient-to-r ${post.gradien, t }, text-white, tex, t-xs, fon, t-bold, border, border-white/30`}>
+                      {post.badge}
+                    </div>
+                  </div>
+                </div>
+                {/* Category */}
                 <div, classNam, e = "mb-4">
-                  <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/20, t, o-purp, l, e-5, 0, 0/20, tex, t-bl, u, e-400, tex, t-xs, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30">
-                    {po, s, t.catego, r, y}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Tit, l, e */}
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-bl, u, e-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {po, s, t.t, i, t, l, e}
+                  <span, classNam, e="inline-blockpx-3py-1, rounde, d-fullbg-gradient-to-r, fro, m-blue-500/20to-purple-500/20, tex, t-blue-400, tex, t-xs, fon, t-semibold, border, border-blue-500/30">
+                    {post.category}
+                  </span>
+                </div>
+                {/* Title */}
+                <h3, classNam, e="text-2xl, fon, t-bold, tex, t-whitemb-4, grou, p-hover: text-blue-400, transitio, n-colors, duratio, n-300, leadin, g-tight">
+                  {post.tit, l, e}
                 </h3>
-                {/* Excer, p, t */}
-                <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, leadin, g-relaxed, tex, t-sm">
-                  {po, s, t.excer, p, t}
+                {/* Excerpt */}
+                <p, classNam, e = "text-gray-400mb-6, leadin, g-relaxed, tex, t-sm">
+                  {post.excerpt}
                 </p>
-                {/* Ta, g, s */}
+                {/* Tags */}
                 <div, classNam, e="mb-6">
                   <div, classNam, e="flex, fle, x-wrap, ga, p-1">
-                    { po, s, t.ta, g, s.m, a, p((ta, g, i, d, x) = > (
-                      <span, ke, y = { id, x  }, classNa, m, e = "px-2, p, y-1, rounded, bg-whi, t, e/10, tex, t-gr, a, y-300, tex, t-xs">
-                        #{t, a, g}
-                      </s, p, a, n>
+                    { post.tags.map((tagi, d, x) = > (
+                      <span, ke, y = { id, x  }, className = "px-2py-1, rounded, bg-white/10, tex, t-gray-300, tex, t-xs">
+                        #{tag}
+                      </spa, n>
                     ))}
-                  </d, i, v>
-                </d, i, v>
+                  </div>
+                </div>
                 {/* Meta, Inf, o */}
-                <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
+                <div, classNam, e = "flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gray-500mb-6pb-6, borde, r-b, borde, r-white/10">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
-                    <Clock, classNam, e="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />
-                    {po, s, t.readTi, m, e}
-                  </sp, a, n>
+                    <Clock, classNam, e="w-4 h-4, tex, t-blue-400" />
+                    {post.readTime}
+                  </span>
                   <span, classNam, e="flex, item, s-center, ga, p-1">
-                    <Eye, classNam, e="w-4 h-4, tex, t-bl, u, e-4, 0, 0" />
-                    {po, s, t.vie, w, s}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Auth, o, r & Rati, n, g */}
-                <div, classNam, e="flex, item, s-center, justif, y-between, m, b-6">
-                  <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm">
-                    By {po, s, t.auth, o, r}
-                  </d, i, v>
+                    <Eye, classNam, e="w-4 h-4, tex, t-blue-400" />
+                    {post.views}
+                  </span>
+                </div>
+                {/* Author & Rating */}
+                <div, classNam, e="flex, item, s-center, justif, y-betweenmb-6">
+                  <div, classNam, e="text-gray-400, tex, t-sm">
+                    By {post.author}
+                  </div>
                   <div, classNam, e="flex, item, s-center, ga, p-1">
-                    <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-                    <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm">{po, s, t.rati, n, g}</sp, a, n>
-                  </d, i, v>
-                </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f={`/bl, o, g/${po, s, t.sl, u, g}`}
-                  classNa, m, e = { `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${po, s, t.gradi, e, n, t }, hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, transform, hover:-transla, t, e-y-, 1`}
+                    <Star, classNam, e="w-4 h-4, tex, t-yellow-400, fil, l-current" />
+                    <span, classNam, e="text-yellow-400, fon, t-bold, tex, t-sm">{post.rating}</span>
+                  </div>
+                </div > {/* CTA, Butto, n */}
+                <a, hre, f={`/blog/${post.slug}`}
+                  className = { `group/btn, flex, items-center, justif, y-center, ga, p-2 w-fullbg-gradient-to-r ${post.gradien, t }, hover: opacity-90, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-blue-500/50, transform, hover:-translate-y-, 1`}
                 >
-                  <sp, a, n>Read, Articl, e</sp, a, n>
-                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <span>Read, Articl, e</span>
+                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hover/btn: translate-x-1, transitio, n-transform, duratio, n-300" />
                 </a>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           ))}
-        </d, i, v>
+        </div>
         {/* Newsletter, Signu, p */}
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-bl, u, e-5, 0, 0/10, t, o-purp, l, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-bl, u, e-5, 0, 0/20, m, b-16">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
-              <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+        <div, classNam, e = "bg-gradient-to-r, fro, m-blue-500/10to-purple-500/10, rounde, d-3xlp-8md: p-12, border, border-blue-500/20mb-16">
+          <div, classNam, e="text-center">
+            <div, classNam, e="inline-flex, item, s-center, ga, p-2px-4py-2, rounde, d-fullbg-gradient-to-r, fro, m-yellow-500/20to-orange-500/20, border, border-yellow-500/30mb-6">
+              <Star, classNam, e="w-5 h-5, tex, t-yellow-400, fil, l-current" />
+              <span, classNam, e="text-yellow-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 PREMIUM, CONTEN, T
-              </sp, a, n>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
-              Get, Exclusive, Blog Updat, e, s
+              </span>
+            </div>
+            <h3, classNam, e="text-4xl, fon, t-extrabold, tex, t-whitemb-4">
+              Get, Exclusive, Blog Updates
             </h3>
-            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+            <p, classNam, e="text-xl, tex, t-gray-300mb-8, ma, x-w-2xlmx-auto">
               Subscribe, to, our newsletter, and, get early, access, to new, artic, l, e, s, exclusive, insight, s, 
-              and, premium, content from, industry, experts. Join, 100, K+ subscribe, r, s.
+              and, premium, content from, industry, experts. Join, 100, K+ subscribers.
             </p>
-            <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-              <input, typ, e="ema, i, l"
-                  placehold, e, r="Enter, your, email"
-                  classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-bl, u, e-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
+            <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center, ma, x-w-mdmx-auto">
+              <input, typ, e="email"
+                  placeholder="Enter, your, email"
+                  className="flex-1px-6py-4, rounde, d-xlbg-white/10, border, border-white/20, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-blue-500, focu, s:bg-white/20, transitio, n-all, duratio, n-300"
                 />
-              <button, classNam, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
-                <sp, a, n>Subscri, b, e</sp, a, n>
+              <button, classNam, e="bg-gradient-to-r, fro, m-blue-500to-purple-600, hove, r:from-blue-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-blue-500/50, flex, items-center, justif, y-center, ga, p-2">
+                <span>Subscribe</span>
                 <ArrowRight, classNam, e="w-5 h-5" />
-              </butt, o, n>
-            </d, i, v>
-            <p, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, m, t-4">
-              No, s, p, a, m, unsubscribe, anytim, e. Get, premium, content delivered, weekl, y.
+              </button>
+            </div>
+            <p, classNam, e="text-xs, tex, t-gray-500mt-4">
+              Nosp, a, m, unsubscribe, anytim, e. Get, premium, content delivered, weekl, y.
             </p>
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
         {/* CTA, Sectio, n */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, classNam, e="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, vi, a-purp, l, e-500, t, o-cy, a, n-5, 0, 0">
-            <div, classNam, e="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
-              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
+        <div, classNam, e = "text-center">
+          <div, classNam, e="inline-blockp-1, rounde, d-2xlbg-gradient-to-r, fro, m-blue-500, vi, a-purple-500to-cyan-500">
+            <div, classNam, e="bg-slate-900, rounde, d-xlpx-12py-10">
+              <h3, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-4">
                 Explore, Our, Complete Blog, Librar, y
               </h3>
-              <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
+              <p, classNam, e="text-gray-400mb-8, ma, x-w-2xlmx-auto">
                 Discover, 50, 0+ articles, covering, A, I, machine, learnin, g, quantum, computin, g, and, enterprise, technology. 
-                Find, insights, that matter, to, your business, and, stay ahead, of, the competiti, o, n.
+                Find, insights, that matter, to, your business, and, stay ahead, of, the competition.
               </p>
-              <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r">
-                <a, hre, f="/bl, o, g"
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, hove, r:fr, o, m-bl, u, e-400, hove, r:to-purp, l, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-bl, u, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
+              <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center">
+                <a, hre, f="/blog"
+                  className="bg-gradient-to-r, fro, m-blue-500to-purple-600, hove, r:from-blue-400, hove, r:to-purple-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-blue-500/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, classNam, e="w-5 h-5" />
-                  <sp, a, n>Browse, All, Articles</sp, a, n>
+                  <span>Browse, All, Articles</span>
                 </a>
-                <a, hre, f="/conta, c, t"
-                  classNa, m, e="bord, e, r-2, borde, r-bl, u, e-500, tex, t-bl, u, e-400, hove, r:bg-bl, u, e-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
+                <a, hre, f="/contact"
+                  className="border-2, borde, r-blue-500, tex, t-blue-400, hove, r:bg-blue-500, hove, r:text-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <sp, a, n>Request, Custom, Content</sp, a, n>
+                  <span>Request, Custom, Content</span>
                   <ArrowRight, classNam, e="w-5 h-5" />
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, NewBlogContentShowcase2026;

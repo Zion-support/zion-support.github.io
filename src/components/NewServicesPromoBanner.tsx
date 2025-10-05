@@ -1,151 +1,151 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
-interface, NewServicesPromoBannerProp, s { 
-  varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
-  showCou, n, t?: numb, e, r;
-  featuredOn, l, y?: boole, a, n;
-  classNa, m, e ?  : stri, n, g;
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import { newServices2026  } from '../content/new-services-2026';
+interface, NewServicesPromoBannerProps { 
+  variant?: 'default' | 'showcase' | 'premium' | 'grid';
+  showCount?: number;
+  featuredOnly?: boolean;
+  className ?  : string;
  }
-const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
-  varia, n, t = 'def, a, u, l, t',
-  showCou, n, t =  , 3,
-  featuredOn, l, y = t, r, u, e,
+const, NewServicesPromoBanne, r: React.FC<NewServicesPromoBannerProps> = ({
+  variant = 'defau, l, t',
+  showCount =  , 3,
+  featuredOn, l, y = tru, e,
   classNa, m, e = ''
 }) => {  
-  const, service, s = featuredOn, l, y
-     ? newServices20, 2, 6.filt, e, r(s = > s.featu, r, e, d).sli, c, e(0, showCou, n, t)
-    : newServices20, 2, 6.sli, c, e(0, showCou, n, t); if (varia, n, t = == 'showc, a, s, e') {
-    retu, r, n (
-      <div, classNam, e = {`bg-gradie, n, t-to-br, fro, m-emera, l, d-600, vi, a-te, a, l-600, t, o-cy, a, n-600, rounde, d-3x, l, p-8, m, d : p-12, tex, t-whi, t, e ${class, N, a, m, e  }`}>
-        <div, classNam, e = "m, a, x-w-6xl, m, x-au, t, o">
-          <div, classNam, e="te, x, t-center, m, b-10">
-            <div, classNam, e="inli, n, e-flex, item, s-center, p, x-4, p, y-2, b, g-yell, o, w-4, 0, 0/20, rounde, d-full, tex, t-yell, o, w-300, m, b-6">
-              <Rocket, classNam, e="w-5 h-5, m, r-2" />
-              <span, classNam, e="fo, n, t-bo, l, d">NEW, SERVICES, LAUNCHED</sp, a, n>
-            </d, i, v>
-            <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4">
+  const, service, s = featuredOnly
+     ? newServices2026.filter(s = > s.feature, d).slice(0, showCou, n, t)
+    : newServices2026.slice(0, showCou, n, t); if (variant = == 'showcas, e') {
+    return (
+      <div, classNam, e = {`bg-gradient-to-br, fro, m-emerald-600, vi, a-teal-600to-cyan-600, rounde, d-3xlp-8md : p-12, tex, t-white ${classNa, m, e  }`}>
+        <div, classNam, e = "max-w-6xlmx-auto">
+          <div, classNam, e="text-centermb-10">
+            <div, classNam, e="inline-flex, item, s-centerpx-4py-2bg-yellow-400/20, rounde, d-full, tex, t-yellow-300mb-6">
+              <Rocket, classNam, e="w-5 h-5mr-2" />
+              <span, classNam, e="font-bold">NEW, SERVICES, LAUNCHED</span>
+            </div>
+            <h2, classNam, e="text-4xlmd: text-5xl, fon, t-boldmb-4">
               Revolutionary, AI, Services Now, Availabl, e
             </h2>
-            <p, classNam, e="te, x, t-xl, tex, t-emera, l, d-100, ma, x-w-3xl, m, x-au, t, o">
+            <p, classNam, e="text-xl, tex, t-emerald-100, ma, x-w-3xlmx-auto">
               Transform, your, business with, our, newest AI-powered, solutions, delivering unprecedented, result, s
             </p>
-          </d, i, v>
-          <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-            { servic, e, s.m, a, p((serv, i, c, e) = > (
-              <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
+          </div>
+          <div, classNam, e="gridmd:grid-cols-3, ga, p-6mb-8">
+            { services.map((servic, e) = > (
+              <div, ke, y = { service., i, d  }, className = "bg-white/10, backdro, p-blur-lg, rounde, d-2xlp-6, hove, r: bg-white/20, transitio, n-all, hove, r:scale-105"
               >
-                <div, classNam, e="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}</d, i, v>
-                <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3">
-                  <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.catego, r, y}</sp, a, n>
-                </d, i, v>
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>
-                <p, classNam, e="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.descripti, o, n}</p>
-                <div, classNam, e="spa, c, e-y-2, m, b-6">
-                  { servi, c, e.benefi, t, s.sli, c, e(, 0, 3).m, a, p((benef, i, t, i, d, x) = > (
-                    <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-start, ga, p-2">
-                      <Zap, classNam, e="w-4 h-4, tex, t-yell, o, w-300, fle, x-shri, n, k-0, m, t-1" />
-                      <span, classNam, e="te, x, t-sm, tex, t-whi, t, e">{benef, i, t}</sp, a, n>
+                <div, classNam, e="text-4xlmb-4">{service.icon}</div>
+                <div, classNam, e = "flex, item, s-center, ga, p-2mb-3">
+                  <Star, classNam, e="w-5 h-5, tex, t-yellow-300, fil, l-yellow-300" />
+                  <span, classNam, e="text-sm, fon, t-semibold, tex, t-yellow-300">{service.category}</span>
+                </div>
+                <h3, classNam, e="text-2xl, fon, t-boldmb-3">{service.name}</h3>
+                <p, classNam, e="text-emerald-100mb-4">{service.description}</p>
+                <div, classNam, e="space-y-2mb-6">
+                  { service.benefits.slice(, 0, 3).map((benefit, idx) = > (
+                    <div, ke, y = { id, x  }, className = "flex, item, s-start, ga, p-2">
+                      <Zap, classNam, e="w-4 h-4, tex, t-yellow-300, fle, x-shrink-0mt-1" />
+                      <span, classNam, e="text-sm, tex, t-white">{benefit}</span>
                     </di, v>
                   ))}
-                </d, i, v>
-                <div, classNam, e = "flex, item, s-center, justif, y-betwe, e, n">
-                  <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-emera, l, d-2, 0, 0">{servi, c, e.prici, n, g}</sp, a, n>
-                  <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "bg-white, tex, t-emera, l, d-600, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emera, l, d-50, transitio, n-colors, flex, items-center, ga, p-1"
+                </div>
+                <div, classNam, e = "flex, item, s-center, justif, y-between">
+                  <span, classNam, e="text-sm, fon, t-semibold, tex, t-emerald-200">{service.pricing}</span>
+                  <Linkto = { service.lin, k }, className = "bg-white, tex, t-emerald-600px-4py-2, rounde, d-lg, fon, t-semibold, hove, r: bg-emerald-50, transitio, n-colors, flex, items-center, ga, p-1"
                   >
                     Learn, Mor, e
                     <ArrowRight, classNam, e="w-4 h-4" />
-                  </Li, n, k>
-                </d, i, v>
-              </d, i, v>
+                  </Link>
+                </div>
+              </div>
             ))}
-          </d, i, v>
-          <div, classNam, e = "te, x, t-cent, e, r">
-            <Link, t, o="/servic, e, s"
-              classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-white, tex, t-emera, l, d-600, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emera, l, d-50, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
+          </div>
+          <div, classNam, e = "text-center">
+            <Linkto="/services"
+              className="inline-flex, item, s-center, ga, p-2bg-white, tex, t-emerald-600px-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-emerald-50, transitio, n-all, hove, r:scale-105"
             >
               View, All, Services
               <ArrowRight, classNam, e="w-6 h-6" />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v  > );
+            </Link>
+          </div>
+        </div>
+      </div  > );
   }
-  if (varia, n, t = == 'prem, i, u, m') {
-    retu, r, n (
-      <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-oran, g, e-600, t, o-r, e, d-600, rounde, d-2x, l, p-8, tex, t-whi, t, e ${classNa, m, e}`}>
-        <div, classNam, e="flex, item, s-center, ga, p-3, m, b-6">
-          <Rocket, classNam, e="w-8 h-8, tex, t-yell, o, w-3, 0, 0" />
-          <h2, classNam, e="te, x, t-3xl, fon, t-bo, l, d">New, Services, Available</h2>
-        </d, i, v>
-        <p, classNam, e="te, x, t-oran, g, e-100, tex, t-lg, m, b-8">
+  if (variant = == 'premiu, m') {
+    return (
+      <div, classNam, e = {`bg-gradient-to-r, fro, m-orange-600to-red-600, rounde, d-2xlp-8, tex, t-white ${className}`}>
+        <div, classNam, e="flex, item, s-center, ga, p-3mb-6">
+          <Rocket, classNam, e="w-8 h-8, tex, t-yellow-300" />
+          <h2, classNam, e="text-3xl, fon, t-bold">New, Services, Available</h2>
+        </div>
+        <p, classNam, e="text-orange-100, tex, t-lgmb-8">
           Discover, our, latest AI-powered, solutions, transforming businesses, worldwid, e
         </p>
-        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-6">
-          { servic, e, s.m, a, p((serv, i, c, e) = > (
-            <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
-              <div, classNam, e="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>
-              <h3, classNam, e = "te, x, t-xl, fon, t-bold, m, b-2">{servi, c, e.na, m, e}</h3>
-              <p, classNam, e="te, x, t-oran, g, e-100, tex, t-sm, m, b-4, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
+        <div, classNam, e="gridmd: grid-cols-3, ga, p-6">
+          { services.map((servic, e) = > (
+            <div, ke, y = { service., i, d  }, className = "bg-white/10, backdro, p-blur-lg, rounde, d-xlp-6, hove, r: bg-white/20, transitio, n-all">
+              <div, classNam, e="text-3xlmb-3">{service.icon}</div>
+              <h3, classNam, e = "text-xl, fon, t-boldmb-2">{service.name}</h3>
+              <p, classNam, e="text-orange-100, tex, t-smmb-4, lin, e-clamp-2">{service.description}</p>
               <div, classNam, e="mb-4">
-                <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.benefi, t, s[0]}</sp, a, n>
-              </d, i, v>
-              <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "inli, n, e-flex, item, s-center, ga, p-2, tex, t-yell, o, w-300, fon, t-semibold, hove, r: te, x, t-yell, o, w-2, 0, 0"
+                <span, classNam, e="text-sm, fon, t-semibold, tex, t-yellow-300">{service.benefits[0]}</span>
+              </div>
+              <Linkto = { service.lin, k }, className = "inline-flex, item, s-center, ga, p-2, tex, t-yellow-300, fon, t-semibold, hove, r: text-yellow-200"
               >
                 Learn, Mor, e <ArrowRight, classNam, e="w-4 h-4" />
-              </Li, n, k>
-            </d, i, v>
+              </Link>
+            </div>
           ))}
-        </d, i, v>
-      </d, i, v  > );
+        </div>
+      </div  > );
   }
-  if (varia, n, t = == 'g, r, i, d') {
-    retu, r, n (
-      <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-l, g, p-8 ${classNa, m, e}`}>
-        <div, classNam, e="flex, item, s-center, justif, y-between, m, b-6">
+  if (variant = == 'gri, d') {
+    return (
+      <div, classNam, e = {`bg-white, rounde, d-xl, shado, w-lgp-8 ${className}`}>
+        <div, classNam, e="flex, item, s-center, justif, y-betweenmb-6">
           <div, classNam, e="flex, item, s-center, ga, p-3">
-            <Rocket, classNam, e="w-7 h-7, tex, t-indi, g, o-6, 0, 0" />
-            <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-9, 0, 0">New, Service, s</h3>
-          </d, i, v>
-          <Link, t, o="/servic, e, s" classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-8, 0, 0">
+            <Rocket, classNam, e="w-7 h-7, tex, t-indigo-600" />
+            <h3, classNam, e="text-2xl, fon, t-bold, tex, t-gray-900">New, Service, s</h3>
+          </div>
+          <Linkto="/services" className="text-indigo-600, fon, t-semibold, hove, r: text-indigo-800">
             View, Al, l →
-          </Li, n, k>
-        </d, i, v>
-        <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6">
-          { servic, e, s.m, a, p((serv, i, c, e) = > (
-            <Link, ke, y = { servi, c, e., i, d  }, to={ servi, c, e.li, n, k } classNa, m, e="border, borde, r-gr, a, y-200, rounde, d-x, l, p-5, hove, r: shad, o, w-xl, hove, r:bord, e, r-indi, g, o-300, transitio, n-all, grou, p"
+          </Link>
+        </div>
+        <div, classNam, e="gridmd:grid-cols-3, ga, p-6">
+          { services.map((servic, e) = > (
+            <Link, ke, y = { service., i, d  }, to={ service.link } className="border, borde, r-gray-200, rounde, d-xlp-5, hove, r: shadow-xl, hove, r:border-indigo-300, transitio, n-all, grou, p"
             >
-              <div, classNam, e="te, x, t-3xl, m, b-3">{servi, c, e.ic, o, n}</d, i, v>
-              <h4, classNam, e = "fo, n, t-bold, tex, t-gr, a, y-900, m, b-2, grou, p-hov, e, r: te, x, t-indi, g, o-6, 0, 0">
-                {servi, c, e.na, m, e}
+              <div, classNam, e="text-3xlmb-3">{service.icon}</div>
+              <h4, classNam, e = "font-bold, tex, t-gray-900mb-2, grou, p-hover: text-indigo-600">
+                {service.name}
               </h4>
-              <p, classNam, e = "te, x, t-sm, tex, t-gr, a, y-600, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
-              <div, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-indi, g, o-6, 0, 0">{servi, c, e.prici, n, g}</d, i, v>
-            </L, i, n, k>
+              <p, classNam, e = "text-sm, tex, t-gray-600mb-3, lin, e-clamp-2">{service.description}</p>
+              <div, classNam, e="text-sm, fon, t-semibold, tex, t-indigo-600">{service.pricing}</div>
+            </Lin, k>
           ))}
-        </d, i, v>
-      </d, i, v  > );
+        </div>
+      </div  > );
   }
   // Default, variant, return (
-    <div, classNam, e = {`bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-te, a, l-600, rounde, d-x, l, p-6, tex, t-whi, t, e ${classNa, m, e}`}>
-      <div, classNam, e="flex, item, s-center, ga, p-3, m, b-4">
-        <Rocket, classNam, e="w-6 h-6, tex, t-yell, o, w-3, 0, 0" />
-        <h3, classNam, e="te, x, t-2xl, fon, t-bo, l, d">New, Services, Just Launch, e, d</h3>
-      </d, i, v>
-      <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-4">
-        { servic, e, s.m, a, p((serv, i, c, e) = > (
-          <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, rounde, d-l, g, p-4, hove, r: bg-whi, t, e/20, transitio, n-a, l, l">
-            <div, classNam, e="te, x, t-2xl, m, b-2">{servi, c, e.ic, o, n}</d, i, v>
-            <h4, classNam, e = "fo, n, t-semibold, m, b-2">{servi, c, e.na, m, e}</h4>
-            <p, classNam, e="te, x, t-sm, tex, t-gre, e, n-100, m, b-3, lin, e-cla, m, p-2">{servi, c, e.descripti, o, n}</p>
-            <Link, t, o = { servi, c, e.l, i, n, k }, classNa, m, e = "te, x, t-yell, o, w-300, tex, t-sm, fon, t-semibold, hove, r: underli, n, e">
+    <div, classNam, e = {`bg-gradient-to-r, fro, m-green-600to-teal-600, rounde, d-xlp-6, tex, t-white ${className}`}>
+      <div, classNam, e="flex, item, s-center, ga, p-3mb-4">
+        <Rocket, classNam, e="w-6 h-6, tex, t-yellow-300" />
+        <h3, classNam, e="text-2xl, fon, t-bold">New, Services, Just Launched</h3>
+      </div>
+      <div, classNam, e="gridmd: grid-cols-3, ga, p-4">
+        { services.map((servic, e) = > (
+          <div, ke, y = { service., i, d  }, className = "bg-white/10, rounde, d-lgp-4, hove, r: bg-white/20, transitio, n-all">
+            <div, classNam, e="text-2xlmb-2">{service.icon}</div>
+            <h4, classNam, e = "font-semiboldmb-2">{service.name}</h4>
+            <p, classNam, e="text-sm, tex, t-green-100mb-3, lin, e-clamp-2">{service.description}</p>
+            <Linkto = { service.lin, k }, className = "text-yellow-300, tex, t-sm, fon, t-semibold, hove, r: underline">
               Explore, Servic, e →
-            </Li, n, k>
-          </d, i, v>
+            </Link>
+          </div>
         ))}
-      </d, i, v>
-    </d, i, v>
+      </div>
+    </div>
   );
 };
 export, default, NewServicesPromoBanner;

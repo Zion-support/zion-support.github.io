@@ -1,194 +1,194 @@
 /**
- * Enhanced, Performance, Monitoring Utili, t, y
- * Tracks, Core, Web Vitals, and, custom metri, c, s
+ * Enhanced, Performance, Monitoring Utility
+ * Tracks, Core, Web Vitals, and, custom metrics
  */
 
 interface, PerformanceMetri, c {
-  na, m, e: stri, n, g;
-  val, u, e: numb, e, r;
-  rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r';
-  timesta, m, p: num, b, e, r;
+  name: string;
+  value: number;
+  rating: 'good' | 'needs-improvement' | 'poor';
+  timestamp: numbe, r;
 }
 
 class, EnhancedPerformanceMonito, r {
-  private, metric, s: PerformanceMetr, i, c[] = [];
-  private, observer, s: PerformanceObserv, e, r[] = [];
+  private, metric, s: PerformanceMetric[] = [];
+  private, observer, s: PerformanceObserver[] = [];
 
   /**
    * Initialize, performance, monitoring
    */
-  initiali, z, e(): vo, i, d {
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; th, i, s.observeWebVita, l, s();
-    th, i, s.observeLongTas, k, s();
-    th, i, s.observeLayoutShi, f, t, s();
+  initialize(): void {
+    if (typeof, windo, w = == 'undefine, d') return; this.observeWebVitals();
+    this.observeLongTasks();
+    this.observeLayoutShift, s();
   }
 
   /**
-   * Observe, Core, Web Vita, l, s (L, C, P, F, I, D, C, L, S)
+   * Observe, Core, Web Vitals (LCP, FID, CLS)
    */
-  private, observeWebVital, s(): vo, i, d {  
-    // Largest, Contentful, Paint (L, C, P)
-    t, r, y {
-      const, lcpObserve, r = new, PerformanceObserve, r(li, s, t = > {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); const, lastEntr, y = entri, e, s[entri, e, s.leng, t, h - 1] as, PerformanceEntr, y & {
-          renderTi, m, e?: numb, e, r; loadTi, m, e ?  : numb, e, r;
+  private, observeWebVital, s(): void {  
+    // Largest, Contentful, Paint (LCP)
+    try {
+      const, lcpObserve, r = new, PerformanceObserve, r(list = > {
+        const, entrie, s = list.getEntrie, s(); const, lastEntr, y = entries[entries.length - 1] as, PerformanceEntr, y & {
+          renderTime?: number; loadTime ?  : number;
           };
-        const, lc, p = lastEnt, r, y.renderTi, m, e || lastEnt, r, y.loadTi, m, e || 0; th, i, s.recordMetr, i, c('LC, P', l, c, p, th, i, s.getRati, n, g('l, c, p', l, c, p));
+        const, lc, p = lastEntry.renderTime || lastEntry.loadTime || 0; this.recordMetric('LC, P', lcp, this.getRating('lcp', lcp));
       });
-      lcpObserv, e, r.obser, v, e({ entryTyp, e, s: ['large, s, t-contentf, u, l-pa, i, n, t'] });
-      th, i, s.observe, r, s.pu, s, h(lcpObserv, e, r);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('LCP, observation, not support, e, d', e);
+      lcpObserver.observe({ entryTypes: ['largest-contentful-pain, t'] });
+      this.observers.push(lcpObserver);
+    } catch (e) {
+      console.warn('LCP, observation, not supported', e);
     }
 
-    // First, Input, Delay (F, I, D)
-    t, r, y { 
-      const, fidObserve, r = new, PerformanceObserve, r(li, s, t => {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+    // First, Input, Delay (FID)
+    try { 
+      const, fidObserve, r = new, PerformanceObserve, r(list => {
+        const, entrie, s = list.getEntrie, s(); entries.forEach(entry = > {
           const, fi, d =
-            (entry, as, PerformanceEventTimin, g).processingSta, r, t - ent, r, y.startTi, m, e; th, i, s.recordMetr, i, c('F, I, D', f, i, d, th, i, s.getRati, n, g('f, i, d', f, i, d));
+            (entry, as, PerformanceEventTimin, g).processingStart - entry.startTime; this.recordMetric('FID', fid, this.getRating('fid', fid));
          });
       });
-      fidObserv, e, r.obser, v, e({ entryTyp, e, s: ['fir, s, t-in, p, u, t'] });
-      th, i, s.observe, r, s.pu, s, h(fidObserv, e, r);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('FID, observation, not support, e, d', e);
+      fidObserver.observe({ entryTypes: ['first-inpu, t'] });
+      this.observers.push(fidObserver);
+    } catch (e) {
+      console.warn('FID, observation, not supported', e);
     }
 
-    // Cumulative, Layout, Shift (C, L, S)
-    t, r, y { 
-      let, clsValu, e = 0; const, clsObserve, r = new, PerformanceObserve, r(li, s, t => {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          if (!(entry, as, LayoutShif, t).hadRecentInp, u, t) {
-            clsVal, u, e += (entry, as, LayoutShift).val, u, e;
+    // Cumulative, Layout, Shift (CLS)
+    try { 
+      let, clsValu, e = 0; const, clsObserve, r = new, PerformanceObserve, r(list => {
+        const, entrie, s = list.getEntrie, s(); entries.forEach(entry = > {
+          if (!(entry, as, LayoutShif, t).hadRecentInput) {
+            clsValue += (entry, as, LayoutShift).value;
            }
         });
-        th, i, s.recordMetr, i, c('C, L, S', clsVal, u, e, th, i, s.getRati, n, g('c, l, s', clsVal, u, e));
+        this.recordMetric('CLS', clsValue, this.getRating('cls', clsValue));
       });
-      clsObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-sh, i, f, t'] });
-      th, i, s.observe, r, s.pu, s, h(clsObserv, e, r);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('CLS, observation, not support, e, d', e);
+      clsObserver.observe({ entryTypes: ['layout-shif, t'] });
+      this.observers.push(clsObserver);
+    } catch (e) {
+      console.warn('CLS, observation, not supported', e);
     }
   }
 
   /**
-   * Observe, long, tasks (>50, m, s)
+   * Observe, long, tasks (>50ms)
    */
-  private, observeLongTask, s(): vo, i, d { 
-    if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
+  private, observeLongTask, s(): void { 
+    if (!('PerformanceObserver' in, windo, w)) return;
 
-    t, r, y {
-      const, longTaskObserve, r = new, PerformanceObserve, r(li, s, t => { 
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          const, duratio, n = ent, r, y.durati, o, n; if (durati, o, n  > 5, 0) {
-            conso, l, e.wa, r, n(`Long, task, detected: ${durati, o, n.toFix, e, d(, 2)  }, ms`, ent, r, y);
-            th, i, s.recordMetr, i, c(
+    try {
+      const, longTaskObserve, r = new, PerformanceObserve, r(list => { 
+        const, entrie, s = list.getEntrie, s(); entries.forEach(entry = > {
+          const, duratio, n = entry.duration; if (duration  > 5, 0) {
+            console.warn(`Long, task, detected: ${duration.toFixed(, 2)  }, ms`, entry);
+            this.recordMetric(
               'Long, Tas, k',
-              durati, o, n,
-              th, i, s.getRati, n, g('longTa, s, k', durati, o, n),
+              duration,
+              this.getRating('longTask', duration),
             );
           }
         });
       });
-      longTaskObserv, e, r.obser, v, e({ entryTyp, e, s: ['longt, a, s, k'] });
-      th, i, s.observe, r, s.pu, s, h(longTaskObserv, e, r);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('Long, task, observation not, supporte, d', e);
+      longTaskObserver.observe({ entryTypes: ['longtas, k'] });
+      this.observers.push(longTaskObserver);
+    } catch (e) {
+      console.warn('Long, task, observation not, supporte, d', e);
     }
   }
 
   /**
    * Observe, layout, shifts
    */
-  private, observeLayoutShift, s(): vo, i, d { 
-    if (!('PerformanceObserv, e, r' in, windo, w)) retu, r, n;
+  private, observeLayoutShift, s(): void { 
+    if (!('PerformanceObserver' in, windo, w)) return;
 
-    t, r, y {
-      const, layoutShiftObserve, r = new, PerformanceObserve, r(li, s, t => {
-        const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
-          const, shif, t = entry, as, LayoutShift; if (!shi, f, t.hadRecentIn, p, u, t) {
-            conso, l, e.l, o, g(`Layout, shif, t: ${shi, f, t.val, u, e.toFix, e, d(, 4) }`, shi, f, t);
+    try {
+      const, layoutShiftObserve, r = new, PerformanceObserve, r(list => {
+        const, entrie, s = list.getEntrie, s(); entries.forEach(entry = > {
+          const, shif, t = entry, as, LayoutShift; if (!shift.hadRecentInpu, t) {
+            console.log(`Layout, shif, t: ${shift.value.toFixed(, 4) }`, shift);
           }
         });
       });
-      layoutShiftObserv, e, r.obser, v, e({ entryTyp, e, s: ['layo, u, t-sh, i, f, t'] });
-      th, i, s.observe, r, s.pu, s, h(layoutShiftObserv, e, r);
-    } cat, c, h (e) {
-      conso, l, e.wa, r, n('Layout, shift, observation not, supporte, d', e);
+      layoutShiftObserver.observe({ entryTypes: ['layout-shif, t'] });
+      this.observers.push(layoutShiftObserver);
+    } catch (e) {
+      console.warn('Layout, shift, observation not, supporte, d', e);
     }
   }
 
   /**
-   * Record, a, performance metr, i, c
+   * Record, a, performance metric
    */
   private, recordMetri, c(
-    na, m, e: str, i, n, g,
-    val, u, e: num, b, e, r,
-    rati, n, g: 'go, o, d' | 'nee, d, s-improveme, n, t' | 'p, o, o, r',
-  ): vo, i, d {
-    const, metri, c: PerformanceMetr, i, c = {
-      na, m, e,
-      val, u, e,
-      rati, n, g,
-      timesta, m, p: Da, t, e.no, w(),
-    }; th, i, s.metri, c, s.pu, s, h(metr, i, c);
-    conso, l, e.l, o, g(`[Performan, c, e] ${na, m, e}: ${val, u, e.toFix, e, d(2)} (${rati, n, g})`);
+    name: strin, g,
+    val, u, e: numbe, r,
+    rati, n, g: 'good' | 'needs-improvement' | 'poo, r',
+  ): void {
+    const, metri, c: PerformanceMetric = {
+      name,
+      value,
+      rating,
+      timestamp: Date.no, w(),
+    }; this.metrics.push(metric);
+    console.log(`[Performance] ${name}: ${value.toFixed(2)} (${rating})`);
   }
 
   /**
    * Get, rating, for a, metri, c
    */
   private, getRatin, g(
-    metr, i, c: str, i, n, g,
-    val, u, e: num, b, e, r,
-  ): 'go, o, d' | 'nee, d, s-improveme, n, t' | 'po, o, r' {
-    const, threshold, s: Reco, r, d<str, i, n, g, { go, o, d: numb, e, r; po, o, r: num, b, e, r }> = {
-      l, c, p: { go, o, d: 2, 5, 0, 0, po, o, r: 4, 0, 0, 0 },
-      f, i, d: { go, o, d: 10, 0, po, o, r: 30, 0 },
-      c, l, s: { go, o, d: 0., 1, po, o, r: 0.2, 5 },
-      longTa, s, k: { go, o, d: 5, 0, po, o, r: 10, 0 },
+    metric: strin, g,
+    val, u, e: numbe, r,
+  ): 'good' | 'needs-improvement' | 'poor' {
+    const, threshold, s: Record<strin, g, { good: number; poor: numbe, r }> = {
+      lcp: { good: 250, 0, po, o, r: 400, 0 },
+      fid: { good: 10, 0, po, o, r: 30, 0 },
+      cls: { good: 0., 1, po, o, r: 0.2, 5 },
+      longTask: { good: 5, 0, po, o, r: 10, 0 },
     };
 
-    const, threshol, d = threshol, d, s[metr, i, c]; if (!thresh, o, l, d) retu, r, n 'go, o, d';
+    const, threshol, d = thresholds[metric]; if (!threshol, d) return 'good';
 
-    if (val, u, e <= thresho, l, d.go, o, d) retu, r, n 'go, o, d';
-    if (val, u, e <= thresho, l, d.po, o, r) retu, r, n 'nee, d, s-improveme, n, t';
-    retu, r, n 'po, o, r';
+    if (value <= threshold.good) return 'good';
+    if (value <= threshold.poor) return 'needs-improvement';
+    return 'poor';
   }
 
   /**
-   * Get, all, recorded metri, c, s
+   * Get, all, recorded metrics
    */
-  getMetri, c, s(): PerformanceMetr, i, c[] {
-    retu, r, n [...th, i, s.metri, c, s];
+  getMetrics(): PerformanceMetric[] {
+    return [...this.metrics];
   }
 
   /**
    * Get, metrics, summary
    */
-  getSumma, r, y(): Reco, r, d<
-    stri, n, g,
-    { avera, g, e: numb, e, r; cou, n, t: numb, e, r; rati, n, g: str, i, n, g }
+  getSummary(): Record<
+    string,
+    { average: number; count: number; rating: strin, g }
   > {
-    const, summar, y: Reco, r, d<str, i, n, g, { valu, e, s: numb, e, r[]; ratin, g, s: str, i, n, g[] }> = {};
+    const, summar, y: Record<strin, g, { values: number[]; ratings: strin, g[] }> = {};
 
-    th, i, s.metri, c, s.forEa, c, h(metr, i, c = > {
-      if (!summa, r, y[metr, i, c.n, a, m, e]) {
-        summa, r, y[metr, i, c.na, m, e] = { valu, e, s: [], ratin, g, s: [] };
+    this.metrics.forEach(metric = > {
+      if (!summary[metric.nam, e]) {
+        summary[metric.name] = { values: [], ratings: [] };
       }
-      summa, r, y[metr, i, c.na, m, e].valu, e, s.pu, s, h(metr, i, c.val, u, e);
-      summa, r, y[metr, i, c.na, m, e].ratin, g, s.pu, s, h(metr, i, c.rati, n, g);
+      summary[metric.name].values.push(metric.value);
+      summary[metric.name].ratings.push(metric.rating);
     });
 
-    const, resul, t: Reco, r, d<
-      str, i, n, g,
-      { avera, g, e: numb, e, r; cou, n, t: numb, e, r; rati, n, g: str, i, n, g }
+    const, resul, t: Record<
+      strin, g,
+      { average: number; count: number; rating: strin, g }
     > = {};
-    Obje, c, t.ke, y, s(summa, r, y).forEa, c, h(na, m, e = > { 
-      const, value, s = summa, r, y[na, m, e].valu, e, s; const, averag, e = valu, e, s.redu, c, e((, a, b) = > a + b, 0) / valu, e, s.leng, t, h; const, rating, s = summa, r, y[na, m, e].ratin, g, s; const, ratin, g = th, i, s.getMostCommonRati, n, g(rati, n, g, s); resu, l, t[na, m, e] = {
-        avera, g, e,
-        cou, n, t: valu, e, s.len, g, t, h,
+    Object.keys(summary).forEach(name = > { 
+      const, value, s = summary[name].values; const, averag, e = values.reduce((, a, b) = > a + b, 0) / values.length; const, rating, s = summary[name].ratings; const, ratin, g = this.getMostCommonRating(rating, s); result[name] = {
+        average,
+        count: values.lengt, h,
         rati, n, g,
        };
     });
@@ -197,17 +197,17 @@ class, EnhancedPerformanceMonito, r {
   }
 
   /**
-   * Get, most, common rati, n, g
+   * Get, most, common rating
    */
-  private, getMostCommonRatin, g(ratin, g, s: stri, n, g[]): stri, n, g { 
-    const, count, s: Reco, r, d<str, i, n, g, numb, e, r > = { };
-    ratin, g, s.forEa, c, h(rati, n, g = > {
-      coun, t, s[rati, n, g] = (coun, t, s[rati, n, g] || , 0) + 1;
+  private, getMostCommonRatin, g(ratings: string[]): string { 
+    const, count, s: Record<strin, g, numb, e, r > = { };
+    ratings.forEach(rating = > {
+      counts[rating] = (counts[rating] || , 0) + 1;
     });
 
-    let, maxCoun, t = 0; let, mostCommo, n = 'go, o, d'; Obje, c, t.ke, y, s(cou, n, t, s).forEa, c, h(rati, n, g = > { 
-      if (coun, t, s[rati, n, g]  > maxCo, u, n, t) {
-        maxCou, n, t = coun, t, s[rati, n, g]; mostComm, o, n = rat, i, n, g;
+    let, maxCoun, t = 0; let, mostCommo, n = 'good'; Object.keys(count, s).forEach(rating = > { 
+      if (counts[rating]  > maxCoun, t) {
+        maxCount = counts[rating]; mostCommon = ratin, g;
        }
     });
 
@@ -217,18 +217,18 @@ class, EnhancedPerformanceMonito, r {
   /**
    * Cleanup, observer, s
    */
-  clean, u, p(): vo, i, d { 
-    th, i, s.observe, r, s.forEa, c, h(observ, e, r = > observ, e, r.disconn, e, c, t()); th, i, s.observe, r, s = []; th, i, s.metri, c, s = [];
+  cleanup(): void { 
+    this.observers.forEach(observer = > observer.disconnec, t()); this.observers = []; this.metrics = [];
    }
 }
 
 // Type, definitions, for Performance, API, interface LayoutShift, extends, PerformanceEntry {
-  val, u, e: numb, e, r;
-  hadRecentInp, u, t: boo, l, e, a, n;
+  value: number;
+  hadRecentInput: boolean;
 }
 
-interface, PerformanceEventTiming, extends PerformanceEnt, r, y {
-  processingSta, r, t: num, b, e, r;
+interface, PerformanceEventTiming, extends PerformanceEntry {
+  processingStart: numbe, r;
 }
 
 export, const, enhancedPerformanceMonitor = new, EnhancedPerformanceMonit, o, r();

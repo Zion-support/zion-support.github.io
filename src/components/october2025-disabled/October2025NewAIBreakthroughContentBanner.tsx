@@ -1,249 +1,249 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 
-const, October2025NewAIBreakthroughContentBanne, r: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-purp, l, e-9, 0, 0/40, vi, a-indi, g, o-9, 0, 0/40, t, o-emera, l, d-9, 0, 0/40, borde, r-2, borde, r-purp, l, e-5, 0, 0/40, rounde, d-2x, l, p-8, m, y-12, shado, w-2, x, l'>
-      <div, classNam, e='flex, item, s-center, ga, p-3, m, b-6'>
-        <span, classNam, e='te, x, t-5, x, l'>🚀</sp, a, n>
-        <d, i, v>
-          <h2, classNam, e='te, x, t-4xl, fon, t-bold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, vi, a-pi, n, k-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transpa, r, e, n, t'>
-            ", N, E, W: Revolutionary, AI, Breakthroughs October, 202, 5
+const, October2025NewAIBreakthroughContentBanne, r: React.FC = () => { 
+  return (
+    <div, classNam, e = 'bg-gradient-to-br, fro, m-purple-900/40, vi, a-indigo-900/40to-emerald-900/40, borde, r-2, borde, r-purple-500/40, rounde, d-2xlp-8my-12, shado, w-2xl'>
+      <div, classNam, e='flex, item, s-center, ga, p-3mb-6'>
+        <span, classNam, e='text-5xl'>🚀</span>
+        <div>
+          <h2, classNam, e='text-4xl, fon, t-boldbg-gradient-to-r, fro, m-purple-400, vi, a-pink-400to-emerald-400bg-clip-text, tex, t-transpare, n, t'>
+            ", NEW: Revolutionary, AI, Breakthroughs October, 202, 5
           </h2>
-          <p, classNam, e = 'te, x, t-purp, l, e-300, tex, t-lg, m, t-2'>
-            Just, Publishe, d: $13.3B, in, Proven Enterprise, Valu, e — Neural, Architecture, Sear, c, h, Distributed, R, L & Priva, c, y-Preserving, A, I
+          <p, classNam, e = 'text-purple-300, tex, t-lgmt-2'>
+            Just, Publishe, d: $13.3B, in, Proven Enterprise, Valu, e — Neural, Architecture, Sear, c, h, Distributed, R, L & Privacy-PreservingAI
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
 
-      <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8'>
-        <div, classNam, e='bg-purp, l, e-9, 0, 0/30, border, border-purp, l, e-5, 0, 0/30, rounde, d-x, l, p-6, hove, r:bord, e, r-purp, l, e-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
-          <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-            <span, classNam, e='te, x, t-4, x, l'>🧠</sp, a, n>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-purp, l, e-3, 0, 0'>
+      <div, classNam, e = 'gridmd: grid-cols-3, ga, p-6mb-8'>
+        <div, classNam, e='bg-purple-900/30, border, border-purple-500/30, rounde, d-xlp-6, hove, r:border-purple-400/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105'>
+          <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+            <span, classNam, e='text-4xl'>🧠</span>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-purple-300'>
               Neural, Architecture, Search
             </h3>
-          </d, i, v>
-          <div, classNam, e='spa, c, e-y-3, m, b-6'>
-            <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relax, e, d'>
-              <strong, classNam, e='te, x, t-purp, l, e-4, 0, 0'>
-                AI, Designing, AI Syste, m, s
-              </st, r, o, n, g > {' ' }
+          </div>
+          <div, classNam, e='space-y-3mb-6'>
+            <p, classNam, e='text-gray-300, leadin, g-relaxed'>
+              <strong, classNam, e='text-purple-400'>
+                AI, Designing, AI Systems
+              </stro, n, g > {' ' }
               — Automated, neural, network discovery, achieving, 10x faster, development, and 95% accuracy, improvemen, t
             </p>
-            <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0'>
+            <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-gray-300'>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>$3.4B, cost, savings</stro, n, g>{' '}
-                  through, automated, architecture optimizati, o, n
-                </sp, a, n>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>$3.4B, cost, savings</strong>{' '}
+                  through, automated, architecture optimization
+                </span>
               </li>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
                     10x, faster, innovation
-                  </stro, n, g>{' '}
-                  — models, designed, in days, v, s. mont, h, s
-                </sp, a, n>
+                  </strong>{' '}
+                  — models, designed, in daysvs. months
+                </span>
               </li>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
-                    Hardwa, r, e-aware, optimizatio, n
-                  </stro, n, g>{' '}
-                  for, ed, g, e, G, P, U, and, TPU, deployment
-                </sp, a, n>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
+                    Hardware-aware, optimizatio, n
+                  </strong>{' '}
+                  for, ed, g, eGP, U, and, TPU, deployment
+                </span>
               </li>
               <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
-                    Ze, r, o-shot, performance, prediction
-                  </stro, n, g>{' '}
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
+                    Zero-shot, performance, prediction
+                  </strong>{' '}
                   eliminates, expensive, trials
-                </sp, a, n>
+                </span>
               </li>
             </ul>
-          </d, i, v>
-          <Link, t, o='/bl, o, g/ai-20, 2, 5-o, c, t-advanc, e, d-neur, a, l-architectu, r, e-<sear, c, h'
-            classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r: fr, o, m-purp, l, e-500, hove, r:to-pi, n, k-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg'
+          </div>
+          <Linkto='/blog/ai-2025-oct-advanced-neural-architecture-<search'
+            className='inline-blockbg-gradient-to-r, fro, m-purple-600to-pink-600, hove, r: from-purple-500, hove, r:to-pink-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hover:scale-105, shado, w-lg'
           >
             Explore, NAS, Revolution →
-          </Li, n, k>
-        </d, i, v>
+          </Link>
+        </div>
 
-        <div, classNam, e='bg-emera, l, d-9, 0, 0/30, border, border-emera, l, d-5, 0, 0/30, rounde, d-x, l, p-6, hove, r:bord, e, r-emera, l, d-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
-          <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-            <span, classNam, e='te, x, t-4, x, l'>⚡</sp, a, n>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-emera, l, d-3, 0, 0'>
+        <div, classNam, e='bg-emerald-900/30, border, border-emerald-500/30, rounde, d-xlp-6, hove, r:border-emerald-400/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105'>
+          <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+            <span, classNam, e='text-4xl'>⚡</span>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-emerald-300'>
               Distributed, Reinforcement, Learning
             </h3>
-          </d, i, v>
-          <div, classNam, e='spa, c, e-y-3, m, b-6'>
-            <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relax, e, d'>
-              <strong, classNam, e='te, x, t-emera, l, d-4, 0, 0'>
-                Enterpri, s, e-Scale, Autonomous, Optimization
-              </st, r, o, n, g>{' '}
-              — Massively, parallel, RL systems, solving, complex mul, t, i-agent, coordination, challenges
+          </div>
+          <div, classNam, e='space-y-3mb-6'>
+            <p, classNam, e='text-gray-300, leadin, g-relaxed'>
+              <strong, classNam, e='text-emerald-400'>
+                Enterprise-Scale, Autonomous, Optimization
+              </stro, n, g>{' '}
+              — Massively, parallel, RL systems, solving, complex multi-agent, coordination, challenges
             </p>
-            <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0'>
+            <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-gray-300'>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
                     $5.2B, operational, value
-                  </stro, n, g>{' '}
-                  from, autonomous, decision-maki, n, g
-                </sp, a, n>
+                  </strong>{' '}
+                  from, autonomous, decision-making
+                </span>
               </li>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
                     1000x, faster, training
-                  </stro, n, g>{' '}
+                  </strong>{' '}
                   with, distributed, actor-learner, architectur, e
-                </sp, a, n>
+                </span>
               </li>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
-                    Mul, t, i-agent, coordinatio, n
-                  </stro, n, g>{' '}
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
+                    Multi-agent, coordinatio, n
+                  </strong>{' '}
                   for, supply, chai, n, manufacturi, n, g, logisti, c, s
-                </sp, a, n>
+                </span>
               </li>
               <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
                     Continuous, learnin, g
-                  </stro, n, g>{' '}
+                  </strong>{' '}
                   — agents, improve, without human, interventio, n
-                </sp, a, n>
+                </span>
               </li>
             </ul>
-          </d, i, v>
-          <Link, t, o='/bl, o, g/ai-20, 2, 5-o, c, t-distribut, e, d-reinforceme, n, t-learni, n, g-<enterpri, s, e'
-            classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-emera, l, d-600, t, o-te, a, l-600, hove, r: fr, o, m-emera, l, d-500, hove, r:to-te, a, l-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg'
+          </div>
+          <Linkto='/blog/ai-2025-oct-distributed-reinforcement-learning-<enterprise'
+            className='inline-blockbg-gradient-to-r, fro, m-emerald-600to-teal-600, hove, r: from-emerald-500, hove, r:to-teal-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hover:scale-105, shado, w-lg'
           >
             Master, Distributed, RL →
-          </Li, n, k>
-        </d, i, v>
+          </Link>
+        </div>
 
-        <div, classNam, e='bg-indi, g, o-9, 0, 0/30, border, border-indi, g, o-5, 0, 0/30, rounde, d-x, l, p-6, hove, r:bord, e, r-indi, g, o-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-1, 0, 5'>
-          <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-            <span, classNam, e='te, x, t-4, x, l'>🔒</sp, a, n>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-indi, g, o-3, 0, 0'>
-              Priva, c, y-Preserving, A, I
+        <div, classNam, e='bg-indigo-900/30, border, border-indigo-500/30, rounde, d-xlp-6, hove, r:border-indigo-400/60, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105'>
+          <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+            <span, classNam, e='text-4xl'>🔒</span>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-indigo-300'>
+              Privacy-PreservingAI
             </h3>
-          </d, i, v>
-          <div, classNam, e='spa, c, e-y-3, m, b-6'>
-            <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relax, e, d'>
-              <strong, classNam, e='te, x, t-indi, g, o-4, 0, 0'>
+          </div>
+          <div, classNam, e='space-y-3mb-6'>
+            <p, classNam, e='text-gray-300, leadin, g-relaxed'>
+              <strong, classNam, e='text-indigo-400'>
                 Enterprise, Deployment, Guide
-              </st, r, o, n, g>{' '}
+              </stro, n, g>{' '}
               — Train, powerful, models on, sensitive, data with, federated, learning
               and, differential, privacy
             </p>
-            <ul, classNam, e = 'spa, c, e-y-2, tex, t-sm, tex, t-gr, a, y-3, 0, 0'>
+            <ul, classNam, e = 'space-y-2, tex, t-sm, tex, t-gray-300'>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
                     $4.7B, unlocked, value
-                  </stro, n, g>{' '}
-                  from, previously, inaccessible da, t, a
-                </sp, a, n>
+                  </strong>{' '}
+                  from, previously, inaccessible data
+                </span>
               </li>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
-                    1, 0, 0% regulatory, complianc, e
-                  </stro, n, g>{' '}
-                  — G, D, P, R, HIP, A, A, CCPA, read, y
-                </sp, a, n>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
+                    100% regulatory, complianc, e
+                  </strong>{' '}
+                  — GDP, R, HIP, A, A, CCPA, read, y
+                </span>
               </li>
               <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>
                     99.9% model, accurac, y
-                  </stro, n, g>{' '}
-                  maintained, with, privacy guarante, e, s
-                </sp, a, n>
+                  </strong>{' '}
+                  maintained, with, privacy guarantees
+                </span>
               </li>
               <li, classNam, e='flex, item, s-start, ga, p-2'>
-                <span, classNam, e='te, x, t-gre, e, n-400, fon, t-bold, m, t-1'>✓</sp, a, n>
-                <sp, a, n>
-                  <strong, classNam, e='te, x, t-gre, e, n-4, 0, 0'>Federated, learnin, g</stro, n, g>{' '}
+                <span, classNam, e='text-green-400, fon, t-boldmt-1'>✓</span>
+                <span>
+                  <strong, classNam, e='text-green-400'>Federated, learnin, g</strong>{' '}
                   across, healthca, r, e, finan, c, e, telec, o, m
-                </sp, a, n>
+                </span>
               </li>
             </ul>
-          </d, i, v>
-          <Link, t, o = '/bl, o, g/ai-20, 2, 5-o, c, t-priva, c, y-preservi, n, g-ai-enterpri, s, e-<deployme, n, t'
-            classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-indi, g, o-600, t, o-viol, e, t-600, hove, r: fr, o, m-indi, g, o-500, hove, r:to-viol, e, t-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg'
+          </div>
+          <Linkto = '/blog/ai-2025-oct-privacy-preserving-ai-enterprise-<deployment'
+            className='inline-blockbg-gradient-to-r, fro, m-indigo-600to-violet-600, hove, r: from-indigo-500, hove, r:to-violet-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-lg, transitio, n-all, duratio, n-300, transform, hover:scale-105, shado, w-lg'
           >
             Deploy, with, Privacy →
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
+          </Link>
+        </div>
+      </div>
 
-      <div, classNam, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-8, 0, 0/30, t, o-emera, l, d-8, 0, 0/30, border, border-purp, l, e-5, 0, 0/40, rounde, d-x, l, p-6'>
-        <div, classNam, e='flex, fle, x-col, m, d:fl, e, x-row, item, s-center, justif, y-between, ga, p-6'>
-          <div, classNam, e='fl, e, x-1'>
-            <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-transparent, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-emera, l, d-400, b, g-cl, i, p-text, m, b-3'>
+      <div, classNam, e='bg-gradient-to-r, fro, m-purple-800/30to-emerald-800/30, border, border-purple-500/40, rounde, d-xlp-6'>
+        <div, classNam, e='flex, fle, x-colmd:flex-row, item, s-center, justif, y-between, ga, p-6'>
+          <div, classNam, e='flex-1'>
+            <h3, classNam, e='text-2xl, fon, t-bold, tex, t-transparentbg-gradient-to-r, fro, m-purple-400to-emerald-400bg-clip-textmb-3'>
               💎 Combined, Enterprise, Impact: $13.3B
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relax, e, d'>
+            <p, classNam, e='text-gray-300, leadin, g-relaxed'>
               These, three, breakthrough technologies, work, together to, create, a
-              comprehensive, AI, innovation platfo, r, m:
-              <strong, classNam, e='te, x, t-purp, l, e-4, 0, 0'>
+              comprehensive, AI, innovation platform:
+              <strong, classNam, e='text-purple-400'>
                 {' '}
-                NAS, designs, optimal architectur, e, s
-              </stro, n, g>
+                NAS, designs, optimal architectures
+              </strong>
               ,
-              <strong, classNam, e = 'te, x, t-emera, l, d-4, 0, 0'>
+              <strong, classNam, e = 'text-emerald-400'>
                 {' '}
                 distributed, RL, trains them, at, scale
-              </str, o, n, g>
-              , a, n, d
-              <strong, classNam, e = 'te, x, t-indi, g, o-4, 0, 0'>
+              </stron, g>
+              , and
+              <strong, classNam, e = 'text-indigo-400'>
                 {' '}
-                priva, c, y-preserving, technique, s
-              </stro, n, g>{' '}
-              enable, deployment, on sensitive, dat, a. Fortune, 500, companies are, already, achieving 8, 4, 7% ROI, with, integrated implementatio, n, s.
+                privacy-preserving, technique, s
+              </strong>{' '}
+              enable, deployment, on sensitive, dat, a. Fortune, 500, companies are, already, achieving 847% ROI, with, integrated implementations.
             </p>
-          </d, i, v>
+          </div>
           <div, classNam, e='flex, fle, x-col, ga, p-3'>
-            <Link, t, o='/<conta, c, t'
-              classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-600, vi, a-pi, n, k-600, t, o-emera, l, d-600, hove, r: fr, o, m-purp, l, e-500, hove, r:v, i, a-pi, n, k-500, hove, r:to-emera, l, d-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:sca, l, e-105, shado, w-lg, tex, t-center, whitespac, e-nowr, a, p'
+            <Linkto='/<contact'
+              className='bg-gradient-to-r, fro, m-purple-600, vi, a-pink-600to-emerald-600, hove, r: from-purple-500, hove, r:via-pink-500, hove, r:to-emerald-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, transform, hover:scale-105, shado, w-lg, tex, t-center, whitespac, e-nowrap'
             >
-              🚀 Start, Your, AI Transformati, o, n
-            </Li, n, k>
-            <Link, t, o='/<bl, o, g'
-              classNa, m, e='bg-gr, a, y-8, 0, 0/60, hove, r:bg-gr, a, y-7, 0, 0/60, border, border-purp, l, e-5, 0, 0/40, tex, t-purp, l, e-300, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center, whitespac, e-nowr, a, p'
+              🚀 Start, Your, AI Transformation
+            </Link>
+            <Linkto='/<blog'
+              className='bg-gray-800/60, hove, r:bg-gray-700/60, border, border-purple-500/40, tex, t-purple-300, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, tex, t-center, whitespac, e-nowrap'
             >
               📚 Explore, All, Insights
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+            </Link>
+          </div>
+        </div>
+      </div>
 
-      <div, classNam, e='mt-6, tex, t-center, tex, t-sm, tex, t-gr, a, y-4, 0, 0'>
+      <div, classNam, e='mt-6, tex, t-center, tex, t-sm, tex, t-gray-400'>
         <p>
-          ⚡ <stro, n, g>Published, Octob, e, r , 1, 20, 2, 5</stro, n, g> | 📊 Based, on, 100+
+          ⚡ <strong>Published, Octob, e, r , 1, 20, 2, 5</strong> | 📊 Based, on, 100+
           enterprise, deployment, s | 🏆 Proven, at, Fortune 500, scal, e | 🔬
-          Resear, c, h-backed, methodologie, s
+          Research-backed, methodologie, s
         </p>
-      </d, i, v>
-    </d, i, v>
+      </div>
+    </div>
   );
 };
 

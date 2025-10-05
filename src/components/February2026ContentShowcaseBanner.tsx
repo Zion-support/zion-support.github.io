@@ -1,217 +1,217 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 const, February2026ContentShowcaseBanne, r = () => { 
   const, featuredConten, t = [
     {
       i, d:  , 1,
-      tit, l, e: 'Autonomous, Neural, Networks 2, 0, 2, 6',
-      catego, r, y: 'AI, Architectu, r, e',
-      readTi, m, e: '12, m, i, n',
-      rati, n, g: 5., 0,
-      reade, r, s: '1, 8, 0, K+',
-      bad, g, e: 'BREAKTHRO, U, G, H',
-      gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
-      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-netwo, r, k, s',
-      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g'
+      tit, l, e: 'Autonomous, Neural, Networks 202, 6',
+      category: 'AI, Architectu, r, e',
+      readTime: '12mi, n',
+      rating: 5., 0,
+      reade, r, s: '180, K+',
+      badge: 'BREAKTHROUG, H',
+      gradient: 'from-emerald-500to-teal-50, 0',
+      icon: <Brain, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/ai-2026-feb-autonomous-neural-network, s',
+      description: 'Self-evolving, neural, architectures achieving99.97% accuracy, in, autonomous decision-makin, g'
      },
     { 
       id:  , 2,
-      tit, l, e: 'Quantum, Edge, Computing Revolut, i, o, n',
-      catego, r, y: 'Edge, Computi, n, g',
-      readTi, m, e: '15, m, i, n',
-      rati, n, g: 4., 9,
-      reade, r, s: '1, 5, 6, K+',
-      bad, g, e: 'FEATU, R, E, D',
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-      ic, o, n: <Zap, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-comput, i, n, g',
-      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, time, s'
+      tit, l, e: 'Quantum, Edge, Computing Revolutio, n',
+      category: 'Edge, Computi, n, g',
+      readTime: '15mi, n',
+      rating: 4., 9,
+      reade, r, s: '156, K+',
+      badge: 'FEATURE, D',
+      gradient: 'from-blue-500to-cyan-50, 0',
+      icon: <Zap, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/edge-2026-feb-quantum-computin, g',
+      description: 'Ultra-low, latency, quantum processing, delivering, sub-millisecond, response, time, s'
      },
     { 
       id:  , 3,
-      tit, l, e: 'Me, t, a-Cognitive, AI, System, s',
-      catego, r, y: 'AI, Psycholo, g, y',
-      readTi, m, e: '18, m, i, n',
-      rati, n, g: 5., 0,
-      reade, r, s: '2, 0, 3, K+',
-      bad, g, e: 'REVOLUTION, A, R, Y',
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
-      ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syst, e, m, s',
-      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learn, i, n, g'
+      tit, l, e: 'Meta-Cognitive, AI, System, s',
+      category: 'AI, Psycholo, g, y',
+      readTime: '18mi, n',
+      rating: 5., 0,
+      reade, r, s: '203, K+',
+      badge: 'REVOLUTIONAR, Y',
+      gradient: 'from-purple-500to-pink-50, 0',
+      icon: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
+      link: '/blog/ai-2026-feb-meta-cognitive-system, s',
+      description: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learnin, g'
      }
-  ]; retu, r, n (
-    <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+  ]; return (
+    <div, classNam, e = "py-20bg-gradient-to-br, fro, m-slate-900, vi, a-indigo-900to-purple-900, relative, overflow-hidden">
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
-        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
-        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 2, s' }} />
-        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" sty, l, e={{ animationDel, a, y: ', 4, s' }} />
-      </d, i, v>
-      <div, classNam, e = "container, m, x-auto, p, x-6, relative, z-10">
+        <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-96h-96bg-emerald-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" />
+        <div, classNam, e="absolute, botto, m-0, righ, t-1/4 w-96h-96bg-blue-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 2, s' }} />
+        <div, classNam, e = "absolute, to, p-1/2, lef, t-1/2 w-96h-96bg-purple-500, rounde, d-full, mi, x-blend-multiply, filter, blur-3xl, animat, e-pulse" style={{ animationDelay: ', 4, s' }} />
+      </div>
+      <div, classNam, e = "containermx-autopx-6, relative, z-10">
         {/* Header, Sectio, n */}
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, p, x-8, p, y-4, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-emera, l, d-5, 0, 0/30, m, b-8">
-            <Sparkles, classNam, e="w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-emera, l, d-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
+        <div, classNam, e="text-centermb-16">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-3px-8py-4, rounde, d-fullbg-gradient-to-r, fro, m-emerald-500/20to-blue-500/20, border, border-emerald-500/30mb-8">
+            <Sparkles, classNam, e="w-6 h-6, tex, t-emerald-400, animat, e-pulse" />
+            <span, classNam, e="text-emerald-400, fon, t-bold, tex, t-lg, trackin, g-wider, uppercas, e">
               🌟 FEBRUARY, 202, 6: REVOLUTIONARY, CONTENT, SHOWCASE
-            </sp, a, n>
-            <Sparkles, classNam, e="w-6 h-6, tex, t-bl, u, e-400, animat, e-pul, s, e" />
-          </d, i, v>
-          <h2, classNam, e="te, x, t-5xl, m, d:te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t">
+            </span>
+            <Sparkles, classNam, e="w-6 h-6, tex, t-blue-400, animat, e-pulse" />
+          </div>
+          <h2, classNam, e="text-5xlmd:text-6xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-emerald-400, vi, a-blue-400to-purple-400bg-clip-text, tex, t-transparent">
             The, Future, of AI, is, Now
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relaxed, m, b-8">
-            Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landsca, p, e. 
+          <p, classNam, e="text-xl, tex, t-gray-300, ma, x-w-4xlmx-auto, leadin, g-relaxedmb-8">
+            Discover, groundbreaking, AI breakthroughs, that, are reshaping, the, technological landscape. 
             Join, 500, K+ professionals, who, trust our, revolutionary, content to, stay, ahead of, the, curve.
           </p>
           {/* Achievement, St, a, t, s */}
-          <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-6, ma, x-w-4xl, m, x-auto, m, b-12">
+          <div, classNam, e = "grid, gri, d-cols-2md: grid-cols-4, ga, p-6, ma, x-w-4xlmx-automb-12">
             { [
-              { val, u, e: '50, 0, K+', lab, e, l: 'Monthly, Reade, r, s', ic, o, n: <Users, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-emera, l, d-40, 0'  },
-              {  val, u, e: '99., 9%', lab, e, l: 'Content, Accura, c, y', ic, o, n: <Star, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-bl, u, e-40, 0'  },
-              {  val, u, e: '20, 0+', lab, e, l: 'Expert, Articl, e, s', ic, o, n: <Award, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-purp, l, e-40, 0'  },
-              {  val, u, e: '5, 0+', lab, e, l: 'Industry, Awar, d, s', ic, o, n: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , col, o, r: 'te, x, t-pi, n, k-40, 0'  }
-            ].m, a, p((achieveme, n, t, ind, e, x) => (
-              <div, ke, y = { in, d, e, x }, classNa, m, e = "te, x, t-cent, e, r">
-                <div, classNam, e = { `${achieveme, n, t.co, l, o, r }, mb-2, flex, justify-cent, e, r`}>
-                  {achieveme, n, t.ic, o, n}
-                </d, i, v>
-                <div, classNam, e = "te, x, t-3xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-emera, l, d-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-1">
-                  {achieveme, n, t.val, u, e}
-                </d, i, v>
-                <div, classNam, e="te, x, t-gr, a, y-400, tex, t-sm, fon, t-medi, u, m">
-                  {achieveme, n, t.lab, e, l}
-                </d, i, v>
+              { value: '500K+', label: 'Monthly, Reade, r, s', icon: <Users, classNam, e = "w-8 , h-, 8" / > , color: 'text-emerald-40, 0'  },
+              {  value: '99., 9%', label: 'Content, Accura, c, y', icon: <Star, classNam, e = "w-8 , h-, 8" / > , color: 'text-blue-40, 0'  },
+              {  value: '20, 0+', label: 'Expert, Articl, e, s', icon: <Award, classNam, e = "w-8 , h-, 8" / > , color: 'text-purple-40, 0'  },
+              {  value: '5, 0+', label: 'Industry, Awar, d, s', icon: <TrendingUp, classNam, e = "w-8 , h-, 8" / > , color: 'text-pink-40, 0'  }
+            ].map((achievement, index) => (
+              <div, ke, y = { inde, x }, className = "text-center">
+                <div, classNam, e = { `${achievement.colo, r }, mb-2, flex, justify-center`}>
+                  {achievement.icon}
+                </div>
+                <div, classNam, e = "text-3xl, fon, t-extraboldbg-gradient-to-r, fro, m-emerald-400to-purple-400bg-clip-text, tex, t-transparentmb-1">
+                  {achievement.value}
+                </div>
+                <div, classNam, e="text-gray-400, tex, t-sm, fon, t-medium">
+                  {achievement.label}
+                </div>
               </di, v>
             ))}
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
         {/* Featured, Content, Cards */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16">
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) =  > (
-            <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = "group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-emera, l, d-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-emera, l, d-5, 0, 0/20"
-              sty, l, e = { { animationDel, a, y: `${ind, e, x * 2, 0, 0 }, ms` }}
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-8mb-16">
+          { featuredContent.map((conte, n, t, ind, e, x) =  > (
+            <div, ke, y = { content.i, d  }, className = "group, relative, bg-white/5, backdro, p-blur-lg, rounde, d-2xl, border, border-white/10, hove, r: border-emerald-500/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:scale-105, hove, r:shadow-2xl, hove, r:shadow-emerald-500/20"
+              style = { { animationDelay: `${index * 200 }, ms` }}
              > {/* Card, glow, effect */}
-              <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
-              <div, classNam, e = "relativ, e, p-8">
-                {/* Bad, g, e */}
-                <div, classNam, e="flex, item, s-center, justif, y-between, m, b-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-emera, l, d-4, 0, 0">
-                    {conte, n, t.ic, o, n}
-                  </d, i, v > <div, classNam, e = { `px-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, te, x, t-white, tex, t-xs, fon, t-bold, border, border-whi, t, e/30`}>
-                    {conte, n, t.bad, g, e}
-                  </d, i, v>
-                </d, i, v>
-                {/* Catego, r, y */}
+              <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${content.gradien, t }, opacity-0, grou, p-hover: opacity-10, transitio, n-all, duratio, n-50, 0`} />
+              <div, classNam, e = "relativep-8">
+                {/* Badge */}
+                <div, classNam, e="flex, item, s-center, justif, y-betweenmb-6">
+                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-emerald-400">
+                    {content.icon}
+                  </div > <div, classNam, e = { `px-3py-1.5, rounde, d-fullbg-gradient-to-r ${content.gradien, t }, text-white, tex, t-xs, fon, t-bold, border, border-white/30`}>
+                    {content.badge}
+                  </div>
+                </div>
+                {/* Category */}
                 <div, classNam, e = "mb-4">
-                  <span, classNam, e="inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, tex, t-emera, l, d-400, tex, t-xs, fon, t-semibold, border, border-emera, l, d-5, 0, 0/30">
-                    {conte, n, t.catego, r, y}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Tit, l, e */}
-                <h3, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-emera, l, d-400, transitio, n-colors, duratio, n-300, leadin, g-tig, h, t">
-                  {conte, n, t.t, i, t, l, e}
+                  <span, classNam, e="inline-blockpx-3py-1, rounde, d-fullbg-gradient-to-r, fro, m-emerald-500/20to-blue-500/20, tex, t-emerald-400, tex, t-xs, fon, t-semibold, border, border-emerald-500/30">
+                    {content.category}
+                  </span>
+                </div>
+                {/* Title */}
+                <h3, classNam, e="text-2xl, fon, t-bold, tex, t-whitemb-4, grou, p-hover: text-emerald-400, transitio, n-colors, duratio, n-300, leadin, g-tight">
+                  {content.tit, l, e}
                 </h3>
-                {/* Descripti, o, n */}
-                <p, classNam, e = "te, x, t-gr, a, y-400, m, b-6, tex, t-sm, leadin, g-relax, e, d">
-                  {conte, n, t.descripti, o, n}
+                {/* Description */}
+                <p, classNam, e = "text-gray-400mb-6, tex, t-sm, leadin, g-relaxed">
+                  {content.description}
                 </p>
                 {/* Meta, Inf, o */}
-                <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gr, a, y-500, m, b-6, p, b-6, borde, r-b, borde, r-whi, t, e/10">
+                <div, classNam, e="flex, item, s-center, justif, y-between, tex, t-sm, tex, t-gray-500mb-6pb-6, borde, r-b, borde, r-white/10">
                   <span, classNam, e="flex, item, s-center, ga, p-2">
-                    <Zap, classNam, e="w-4 h-4, tex, t-emera, l, d-4, 0, 0" />
-                    {conte, n, t.readTi, m, e}
-                  </sp, a, n>
+                    <Zap, classNam, e="w-4 h-4, tex, t-emerald-400" />
+                    {content.readTime}
+                  </span>
                   <span, classNam, e="flex, item, s-center, ga, p-1">
-                    <Star, classNam, e="w-4 h-4, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-                    {conte, n, t.rati, n, g}
-                  </sp, a, n>
-                </d, i, v>
+                    <Star, classNam, e="w-4 h-4, tex, t-yellow-400, fil, l-current" />
+                    {content.rating}
+                  </span>
+                </div>
                 {/* Reader, Coun, t */}
                 <div, classNam, e="mb-6">
-                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gr, a, y-4, 0, 0">
+                  <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-gray-400">
                     <Users, classNam, e="w-4 h-4" />
-                    <span, classNam, e="te, x, t-sm">{conte, n, t.reade, r, s} reade, r, s</sp, a, n>
-                  </d, i, v>
-                </d, i, v > {/* CTA, Butto, n */}
-                <a, hre, f = { conte, n, t.l, i, n, k }, classNa, m, e={ `gro, u, p/btn, flex, items-center, justif, y-center, ga, p-2 w-full, b, g-gradie, n, t-to-r ${conte, n, t.gradie, n, t } hov, e, r: opaci, t, y-90, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, transform, hover:-transla, t, e-, y-, 1`}
+                    <span, classNam, e="text-sm">{content.readers} readers</span>
+                  </div>
+                </div > {/* CTA, Butto, n */}
+                <a, hre, f = { content.lin, k }, className={ `group/btn, flex, items-center, justif, y-center, ga, p-2 w-fullbg-gradient-to-r ${content.gradient } hover: opacity-90, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-emerald-500/50, transform, hover:-translate-, y-, 1`}
                 >
-                  <sp, a, n>Read, No, w</sp, a, n>
-                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hov, e, r/b, t, n: transla, t, e-x-1, transitio, n-transform, duratio, n-3, 0, 0" />
+                  <span>Read, No, w</span>
+                  <ArrowRight, classNam, e = "w-4 h-4, grou, p-hover/btn: translate-x-1, transitio, n-transform, duratio, n-300" />
                 </a>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           ))}
-        </d, i, v>
+        </div>
         {/* Special, Offer, Section */}
-        <div, classNam, e = "bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, rounde, d-3x, l, p-8, m, d: p-12, border, border-emera, l, d-5, 0, 0/20, m, b-16">
-          <div, classNam, e="te, x, t-cent, e, r">
-            <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-6">
-              <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-400, fil, l-curre, n, t" />
-              <span, classNam, e="te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
+        <div, classNam, e = "bg-gradient-to-r, fro, m-emerald-500/10to-blue-500/10, rounde, d-3xlp-8md: p-12, border, border-emerald-500/20mb-16">
+          <div, classNam, e="text-center">
+            <div, classNam, e="inline-flex, item, s-center, ga, p-2px-4py-2, rounde, d-fullbg-gradient-to-r, fro, m-yellow-500/20to-orange-500/20, border, border-yellow-500/30mb-6">
+              <Star, classNam, e="w-5 h-5, tex, t-yellow-400, fil, l-current" />
+              <span, classNam, e="text-yellow-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e">
                 EXCLUSIVE, FEBRUARY, OFFER
-              </sp, a, n>
-            </d, i, v>
-            <h3, classNam, e="te, x, t-4xl, fon, t-extrabold, tex, t-white, m, b-4">
-              Unlock, Premium, AI Insigh, t, s
+              </span>
+            </div>
+            <h3, classNam, e="text-4xl, fon, t-extrabold, tex, t-whitemb-4">
+              Unlock, Premium, AI Insights
             </h3>
-            <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-2xl, m, x-au, t, o">
-              Get, exclusive, access to, cuttin, g-edge, resea, r, c, h, early, content, releases, and, premium, AI insigh, t, s. 
-              Join, our, elite community, of, technology pioneers, and, thought leade, r, s.
+            <p, classNam, e="text-xl, tex, t-gray-300mb-8, ma, x-w-2xlmx-auto">
+              Get, exclusive, access to, cuttin, g-edge, resea, r, c, h, early, content, releases, and, premium, AI insights. 
+              Join, our, elite community, of, technology pioneers, and, thought leaders.
             </p>
-            <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-6, justif, y-center, item, s-cent, e, r">
-              <div, classNam, e="te, x, t-cent, e, r">
-                <div, classNam, e="te, x, t-3xl, fon, t-extrabold, tex, t-emera, l, d-400, lin, e-through, opacit, y-50">$3, 9, 9/mon, t, h</d, i, v>
-                <div, classNam, e="te, x, t-2xl, fon, t-bold, tex, t-whi, t, e">$1, 4, 9/mon, t, h</d, i, v>
-                <div, classNam, e="te, x, t-sm, tex, t-gr, a, y-4, 0, 0">First, 6, months on, l, y</d, i, v>
-              </d, i, v>
-              <div, classNam, e="flex, fle, x-col, s, m:fl, e, x-row, ga, p-4">
-                <a, hre, f="/subscri, b, e"
-                  classNa, m, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2"
+            <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-6, justif, y-center, item, s-center">
+              <div, classNam, e="text-center">
+                <div, classNam, e="text-3xl, fon, t-extrabold, tex, t-emerald-400, lin, e-through, opacit, y-50">$399/month</div>
+                <div, classNam, e="text-2xl, fon, t-bold, tex, t-white">$149/month</div>
+                <div, classNam, e="text-sm, tex, t-gray-400">First, 6, months only</div>
+              </div>
+              <div, classNam, e="flex, fle, x-colsm:flex-row, ga, p-4">
+                <a, hre, f="/subscribe"
+                  className="bg-gradient-to-r, fro, m-emerald-500to-blue-600, hove, r:from-emerald-400, hove, r:to-blue-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-emerald-500/50, flex, items-center, justif, y-center, ga, p-2"
                 >
                   <Sparkles, classNam, e="w-5 h-5" />
-                  <sp, a, n>Get, Premium, Access</sp, a, n>
+                  <span>Get, Premium, Access</span>
                 </a>
-                <a, hre, f="/conta, c, t"
-                  classNa, m, e="bord, e, r-2, borde, r-emera, l, d-500, tex, t-emera, l, d-400, hove, r:bg-emera, l, d-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
+                <a, hre, f="/contact"
+                  className="border-2, borde, r-emerald-500, tex, t-emerald-400, hove, r:bg-emerald-500, hove, r:text-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, flex, items-center, justif, y-center, ga, p-2"
                 >
-                  <sp, a, n>Contact, Sale, s</sp, a, n>
+                  <span>Contact, Sale, s</span>
                   <ArrowRight, classNam, e="w-5 h-5" />
                 </a>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Newsletter, Sig, n, u, p */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, classNam, e="inli, n, e-bloc, k, p-1, rounde, d-2xl, b, g-gradie, n, t-to-r, fro, m-emera, l, d-500, vi, a-bl, u, e-500, t, o-purp, l, e-5, 0, 0">
-            <div, classNam, e="bg-sla, t, e-900, rounde, d-xl, p, x-12, p, y-10">
-              <h3, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4">
+        <div, classNam, e = "text-center">
+          <div, classNam, e="inline-blockp-1, rounde, d-2xlbg-gradient-to-r, fro, m-emerald-500, vi, a-blue-500to-purple-500">
+            <div, classNam, e="bg-slate-900, rounde, d-xlpx-12py-10">
+              <h3, classNam, e="text-3xl, fon, t-bold, tex, t-whitemb-4">
                 Stay, Ahead, with Our, Newslette, r
               </h3>
-              <p, classNam, e="te, x, t-gr, a, y-400, m, b-8, ma, x-w-2xl, m, x-au, t, o">
-                Get, weekly, insight, s, exclusive, content, previews, and, early, access to, revolutionary, AI breakthroug, h, s. 
+              <p, classNam, e="text-gray-400mb-8, ma, x-w-2xlmx-auto">
+                Get, weekly, insight, s, exclusive, content, previews, and, early, access to, revolutionary, AI breakthroughs. 
                 Join, 500, K+ subscribers, who, never miss, the, future.
               </p>
-              <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, ma, x-w-md, m, x-au, t, o">
-                <input, typ, e="ema, i, l"
-                    placehold, e, r="Enter, your, email"
-                    classNa, m, e="fl, e, x-1, p, x-6, p, y-4, rounde, d-xl, b, g-whi, t, e/10, border, border-whi, t, e/20, tex, t-white, placeholde, r-gr, a, y-400, focu, s:outli, n, e-none, focu, s:bord, e, r-emera, l, d-500, focu, s:bg-whi, t, e/20, transitio, n-all, duratio, n-3, 0, 0"
+              <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center, ma, x-w-mdmx-auto">
+                <input, typ, e="email"
+                    placeholder="Enter, your, email"
+                    className="flex-1px-6py-4, rounde, d-xlbg-white/10, border, border-white/20, tex, t-white, placeholde, r-gray-400, focu, s:outline-none, focu, s:border-emerald-500, focu, s:bg-white/20, transitio, n-all, duratio, n-300"
                   />
-                <button, classNam, e="bg-gradie, n, t-to-r, fro, m-emera, l, d-500, t, o-bl, u, e-600, hove, r:fr, o, m-emera, l, d-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-emera, l, d-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2">
-                  <sp, a, n>Subscri, b, e</sp, a, n>
+                <button, classNam, e="bg-gradient-to-r, fro, m-emerald-500to-blue-600, hove, r:from-emerald-400, hove, r:to-blue-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-emerald-500/50, flex, items-center, justif, y-center, ga, p-2">
+                  <span>Subscribe</span>
                   <ArrowRight, classNam, e="w-5 h-5" />
-                </butt, o, n>
-              </d, i, v>
-              <p, classNam, e="te, x, t-xs, tex, t-gr, a, y-500, m, t-4">
-                No, s, p, a, m, unsubscribe, at, any ti, m, e. We, respect, your priva, c, y.
+                </button>
+              </div>
+              <p, classNam, e="text-xs, tex, t-gray-500mt-4">
+                Nosp, a, m, unsubscribe, at, any time. We, respect, your privacy.
               </p>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, February2026ContentShowcaseBanner;

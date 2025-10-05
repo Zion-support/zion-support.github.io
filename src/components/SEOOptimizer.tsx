@@ -1,11 +1,11 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-interface, SEOOptimizerProp, s {
-  childr, e, n: Rea, c, t.ReactN, o, d, e;
+interface, SEOOptimizerProps {
+  children: React.ReactNod, e;
 }
 
-const, SEOOptimize, r: Rea, c, t.FC<SEOOptimizerPro, p, s> = ({ child, r, e, n }) => { 
-  retu, r, n < > {childr, e, n }</>;
+const, SEOOptimize, r: React.FC<SEOOptimizerProps> = ({ childre, n }) => { 
+  return < > {children }</>;
 };
 
 export, default, SEOOptimizer;

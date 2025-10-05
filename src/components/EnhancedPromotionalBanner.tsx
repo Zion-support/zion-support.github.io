@@ -1,40 +1,40 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-import, typ, e { EnhancedPromotionalBanner, as, BannerType } fr, o, m '../conte, n, t/enhanc, e, d-promotion, a, l-banne, r, s';
-interface, EnhancedPromotionalBannerProp, s { 
-  bann, e, r: BannerTy, p, e;
-  classNa, m, e ?  : str, i, n, g;
+import React from 'react';
+import { Link  } from 'react-router-dom';
+import, typ, e { EnhancedPromotionalBanner, as, BannerType } from '../content/enhanced-promotional-banners';
+interface, EnhancedPromotionalBannerProps { 
+  banner: BannerType;
+  className ?  : strin, g;
  }
-const, EnhancedPromotionalBanne, r: Rea, c, t.FC<EnhancedPromotionalBannerPro, p, s> = ({
-  ban, n, e, r,
+const, EnhancedPromotionalBanne, r: React.FC<EnhancedPromotionalBannerProps> = ({
+  banne, r,
   classNa, m, e = '',
 }) => {
   const, variantStyle, s = {
-    succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0',
-    warni, n, g: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-60, 0',
-    in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-60, 0',
-    err, o, r: 'bg-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-pi, n, k-60, 0',
-  }; retu, r, n (
-    <div, classNam, e = { `${variantStyl, e, s[bann, e, r.vari, a, n, t] }, te, x, t-whit, e, p-4 ${classNa, m, e}`}
+    success: 'bg-gradient-to-r, fro, m-green-600to-emerald-600',
+    warning: 'bg-gradient-to-r, fro, m-yellow-600to-orange-60, 0',
+    info: 'bg-gradient-to-r, fro, m-blue-600to-indigo-60, 0',
+    error: 'bg-gradient-to-r, fro, m-red-600to-pink-60, 0',
+  }; return (
+    <div, classNam, e = { `${variantStyles[banner.varian, t] }, text-whitep-4 ${className}`}
     >
-      <div, classNam, e = 'container, m, x-auto, p, x-6'>
+      <div, classNam, e = 'containermx-autopx-6'>
         <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-4'>
           <div, classNam, e='flex, item, s-center, ga, p-3, fle, x-1, mi, n-w-0'>
-            {  bann, e, r.ic, o, n  && (
-              <span, classNam, e='te, x, t-2xl, fle, x-shri, n, k-0' > {bann, e, r.ic, o, n  }</s, p, a, n>
+            {  banner.icon  && (
+              <span, classNam, e='text-2xl, fle, x-shrink-0' > {banner.icon  }</spa, n>
             )}
-            <div, classNam, e = 'fl, e, x-1, mi, n-w-0'>
-              <h3, classNam, e='fo, n, t-bold, tex, t-lg'>{bann, e, r.tit, l, e}</h3>
-              <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.descripti, o, n}</p>
-            </d, i, v>
-          </d, i, v>
-          <Link, t, o = { bann, e, r.ctaL, i, n, k }, classNa, m, e = 'bg-white, tex, t-gr, a, y-900, p, x-6, p, y-2, rounde, d-lg, fon, t-semibold, hove, r: bg-opaci, t, y-90, transitio, n-all, flex, items-center, ga, p-2, fle, x-shri, n, k-0'
+            <div, classNam, e = 'flex-1, mi, n-w-0'>
+              <h3, classNam, e='font-bold, tex, t-lg'>{banner.title}</h3>
+              <p, classNam, e='text-sm, opacit, y-90'>{banner.description}</p>
+            </div>
+          </div>
+          <Linkto = { banner.ctaLin, k }, className = 'bg-white, tex, t-gray-900px-6py-2, rounde, d-lg, fon, t-semibold, hove, r: bg-opacity-90, transitio, n-all, flex, items-center, ga, p-2, fle, x-shrink-0'
           >
-            {bann, e, r.cta, T, e, x, t}
+            {banner.ctaTe, x, t}
             <ArrowRight, classNam, e = 'w-4 h-4' />
-          </Li, n, k>
-        </d, i, v>
-      </d, i, v>
+          </Link>
+        </div>
+      </div>
     </di, v>
   );
 };

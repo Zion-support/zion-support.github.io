@@ -1,386 +1,385 @@
-impo, r, t {
-  AlertTriang, l, e,
-  ArrowLe, f, t,
-  Calend, a, r,
-  Clo, c, k,
-  Lo, c, k,
-  Shie, l, d,
-  ShieldChe, c, k,
-  Trending, U, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+import { AlertTriangle,
+  ArrowLeft,
+  Calendar,
+  Clock,
+  Lock,
+  Shield,
+  ShieldCheck,
+  TrendingUp,
+ } from 'lucide-react';
+import { Helmet  } from 'react-helmet-async';
 
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 const, ZeroTrustAISecurityFramework202, 5 = () => { 
-  retu, r, n (
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          Ze, r, o-Trust, AI, Security Framewo, r, k: Enterprise, Implementation, Guide |
+      <Helmet>
+        <title>
+          Zero-Trust, AI, Security Framework: Enterprise, Implementation, Guide |
           Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'
+        </title>
+        <meta, nam, e = 'description'
+          content='Comprehensive, zer, o-trust, security, framework for, AI, systems. Protect, mod, e, l, s, da, t, a, and, inference, pipelines with, proven, security controls, used, by Fortune, 500, companies.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'
+        <meta, nam, e = 'keywords'
+          content='AI, securi, t, y, zero, trus, t, model, securit, y, ML, securit, y, AI, governanc, e, enterprise, securit, y'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ze, r, o-tru, s, t-ai-securi, t, y-framewo, r, k-20, 2, 5'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/zero-trust-ai-security-framework-2025'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='m, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-r, e, d-9, 0, 0/30, t, o-sla, t, e-9, 0, 0' > {/* Hero, Sect, i, o, n */ }
-        <div, classNam, e = 'relative, overflo, w-hidden, b, g-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-600, p, y-16'>
-          <div, classNam, e='absolute, inse, t-0, b, g-bla, c, k/20' />
-          <div, classNam, e='container, m, x-auto, p, x-6, relative, z-10'>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='inli, n, e-flex, item, s-center, tex, t-whi, t, e/90, hove, r: te, x, t-white, m, b-8, transitio, n-colo, r, s'
+      <div, classNam, e='min-h-screenbg-gradient-to-br, fro, m-slate-900, vi, a-red-900/30to-slate-900' > {/* Hero, Sect, i, o, n */ }
+        <div, classNam, e = 'relative, overflo, w-hiddenbg-gradient-to-r, fro, m-red-600to-orange-600py-16'>
+          <div, classNam, e='absolute, inse, t-0bg-black/20' />
+          <div, classNam, e='containermx-autopx-6, relative, z-10'>
+            <Linkto='/blog'
+              className='inline-flex, item, s-center, tex, t-white/90, hove, r: text-whitemb-8, transitio, n-colors'
             >
-              <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+              <ArrowLeft, classNam, e='w-4 h-4mr-2' />
               Back, to, Blog
-            </Li, n, k>
+            </Link>
 
-            <div, classNam, e='m, a, x-w-4, x, l'>
-              <div, classNam, e='flex, fle, x-wrap, ga, p-3, m, b-6'>
-                <span, classNam, e='px-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-white, tex, t-sm, fon, t-medi, u, m'>
-                  🔒 Securi, t, y
-                </sp, a, n>
-                <span, classNam, e='px-4, p, y-2, b, g-whi, t, e/20, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-white, tex, t-sm, fon, t-medi, u, m'>
+            <div, classNam, e='max-w-4xl'>
+              <div, classNam, e='flex, fle, x-wrap, ga, p-3mb-6'>
+                <span, classNam, e='px-4py-2bg-white/20, backdro, p-blur-sm, rounde, d-full, tex, t-white, tex, t-sm, fon, t-medium'>
+                  🔒 Security
+                </span>
+                <span, classNam, e='px-4py-2bg-white/20, backdro, p-blur-sm, rounde, d-full, tex, t-white, tex, t-sm, fon, t-medium'>
                   🛡️ Zero, Trus, t
-                </sp, a, n>
-                <span, classNam, e='px-4, p, y-2, b, g-emera, l, d-5, 0, 0/30, backdro, p-bl, u, r-sm, rounde, d-full, tex, t-white, tex, t-sm, fon, t-medi, u, m'>
-                  ⭐ Featur, e, d
-                </sp, a, n>
-              </d, i, v>
+                </span>
+                <span, classNam, e='px-4py-2bg-emerald-500/30, backdro, p-blur-sm, rounde, d-full, tex, t-white, tex, t-sm, fon, t-medium'>
+                  ⭐ Featured
+                </span>
+              </div>
 
-              <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-                Ze, r, o-Trust, AI, Security Framewo, r, k: Protecting, Mod, e, l, s, Da, t, a &
+              <h1, classNam, e='text-4xlmd:text-5xl, fon, t-bold, tex, t-whitemb-6, leadin, g-tight'>
+                Zero-Trust, AI, Security Framework: Protecting, Mod, e, l, s, Da, t, a &
                 Inference, Pipeline, s
               </h1>
 
-              <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-6, tex, t-whi, t, e/90'>
-                <div, classNam, e='flex, item, s-cent, e, r'>
-                  <Calendar, classNam, e='w-5 h-5, m, r-2' />
-                  <sp, a, n>Octob, e, r , 1, 20, 2, 5</sp, a, n>
-                </d, i, v>
-                <div, classNam, e = 'flex, item, s-cent, e, r'>
-                  <Clock, classNam, e='w-5 h-5, m, r-2' />
-                  <sp, a, n>14, min, read</sp, a, n>
-                </d, i, v>
-                <div, classNam, e='flex, item, s-cent, e, r'>
-                  <TrendingUp, classNam, e='w-5 h-5, m, r-2' />
-                  <sp, a, n>Mission, Critica, l</sp, a, n>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              <div, classNam, e = 'flex, fle, x-wrap, item, s-center, ga, p-6, tex, t-white/90'>
+                <div, classNam, e='flex, item, s-center'>
+                  <Calendar, classNam, e='w-5 h-5mr-2' />
+                  <span>October , 1, 20, 2, 5</span>
+                </div>
+                <div, classNam, e = 'flex, item, s-center'>
+                  <Clock, classNam, e='w-5 h-5mr-2' />
+                  <span>14, min, read</span>
+                </div>
+                <div, classNam, e='flex, item, s-center'>
+                  <TrendingUp, classNam, e='w-5 h-5mr-2' />
+                  <span>Mission, Critica, l</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-        {/* Conte, n, t */}
-        <article, classNam, e='container, m, x-auto, p, x-6, p, y-16, ma, x-w-4, x, l'>
-          <div, classNam, e='prose, pros, e-invert, pros, e-lg, ma, x-w-no, n, e'>
+        {/* Content */}
+        <article, classNam, e='containermx-autopx-6py-16, ma, x-w-4xl'>
+          <div, classNam, e='prose, pros, e-invert, pros, e-lg, ma, x-w-none'>
             {/* Threat, Landscap, e */}
-            <div, classNam, e='bg-gradie, n, t-to-r, fro, m-r, e, d-5, 0, 0/10, t, o-oran, g, e-5, 0, 0/10, borde, r-l-4, borde, r-r, e, d-50, 0, p-6, rounde, d-r-lg, m, b-12'>
-              <h2, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, flex, items-cent, e, r'>
-                <AlertTriangle, classNam, e='w-6 h-6, m, r-2, tex, t-r, e, d-4, 0, 0' />
-                The, AI, Security Cris, i, s
+            <div, classNam, e='bg-gradient-to-r, fro, m-red-500/10to-orange-500/10, borde, r-l-4, borde, r-red-500p-6, rounde, d-r-lgmb-12'>
+              <h2, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-4, flex, items-center'>
+                <AlertTriangle, classNam, e='w-6 h-6mr-2, tex, t-red-400' />
+                The, AI, Security Crisis
               </h2>
-              <p, classNam, e='te, x, t-gr, a, y-300, leadin, g-relaxed, m, b-4'>
+              <p, classNam, e='text-gray-300, leadin, g-relaxedmb-4'>
                 AI, systems, face unprecedented, security, challenges: model, th, e, f, t,
                 data, poisonin, g, adversarial, attack, s, and, prompt, injection.
-                Traditional, perimeter, security fails, for, distributed AI, architecture, s. Ze, r, o-trust, frameworks, are now, mandatory, for
+                Traditional, perimeter, security fails, for, distributed AI, architecture, s. Zero-trust, frameworks, are now, mandatory, for
                 enterprise, AI, deployments.
               </p>
-              <div, classNam, e = 'bg-r, e, d-5, 0, 0/20, border, border-r, e, d-5, 0, 0/30, rounded, p-4'>
-                <p, classNam, e='te, x, t-r, e, d-300, fon, t-semibo, l, d'>
-                  🚨 67% of, enterprises, report AI-related, security, incidents in, 202, 5 (Gart, n, e, r)
+              <div, classNam, e = 'bg-red-500/20, border, border-red-500/30, rounded, p-4'>
+                <p, classNam, e='text-red-300, fon, t-semibold'>
+                  🚨 67% of, enterprises, report AI-related, security, incidents in, 202, 5 (Gartne, r)
                 </p>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
 
             {/* Core, Principle, s */}
             <section, classNam, e = 'mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <ShieldCheck, classNam, e='w-8 h-8, m, r-3, tex, t-emera, l, d-4, 0, 0' />
-                Ze, r, o-Trust, A, I: Core, Principle, s
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6, flex, items-center'>
+                <ShieldCheck, classNam, e='w-8 h-8mr-3, tex, t-emerald-400' />
+                Zero-TrustAI: Core, Principle, s
               </h2>
 
-              <div, classNam, e='spa, c, e-y-6'>
-                <div, classNam, e='bg-sla, t, e-8, 0, 0/5, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-semibold, tex, t-white, m, b-3, flex, items-cent, e, r'>
-                    <span, classNam, e='te, x, t-2xl, m, r-2'>1️⃣</sp, a, n>
+              <div, classNam, e='space-y-6'>
+                <div, classNam, e='bg-slate-800/50p-6, rounde, d-lg, border, border-slate-700'>
+                  <h3, classNam, e='text-xl, fon, t-semibold, tex, t-whitemb-3, flex, items-center'>
+                    <span, classNam, e='text-2xlmr-2'>1️⃣</span>
                     Never, Tr, u, s, t, Always, Verif, y
                   </h3>
-                  <p, classNam, e = 'te, x, t-gr, a, y-300, m, b-4'>
-                    Every, request, to mod, e, l, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorizati, o, n, and, continuous, validation—even, from, internal servic, e, s.
+                  <p, classNam, e = 'text-gray-300mb-4'>
+                    Every, request, to model, s, data, store, s, and, inference, endpoints requires, authenticatio, n, authorization, and, continuous, validation—even, from, internal services.
                   </p>
-                  <div, classNam, e = 'bg-sla, t, e-9, 0, 0/5, 0, p-4, rounded, border bord, e, r-sla, t, e-6, 0, 0'>
-                    <p, classNam, e='te, x, t-sm, tex, t-emera, l, d-400, fon, t-mono, m, b-1'>
-                      ✓ Mutual, TL, S (m, T, L, S) for, all, service-to-service, communicatio, n
+                  <div, classNam, e = 'bg-slate-900/50p-4, rounded, border border-slate-600'>
+                    <p, classNam, e='text-sm, tex, t-emerald-400, fon, t-monomb-1'>
+                      ✓ Mutual, TL, S (mTL, S) for, all, service-to-service, communicatio, n
                     </p>
-                    <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-400, fon, t-mono, m, b-1'>
-                      ✓ Sho, r, t-lived, JWT, tokens (5-15, minute, expir, y) with, refresh, rotation
+                    <p, classNam, e = 'text-sm, tex, t-emerald-400, fon, t-monomb-1'>
+                      ✓ Short-lived, JWT, tokens (5-15, minute, expir, y) with, refresh, rotation
                     </p>
-                    <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-400, fon, t-mo, n, o'>
+                    <p, classNam, e = 'text-sm, tex, t-emerald-400, fon, t-mono'>
                       ✓ Continuous, authentication, with behavioral, analysi, s
                     </p>
-                  </d, i, v>
-                </d, i, v>
+                  </div>
+                </div>
 
-                <div, classNam, e='bg-sla, t, e-8, 0, 0/5, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-semibold, tex, t-white, m, b-3, flex, items-cent, e, r'>
-                    <span, classNam, e='te, x, t-2xl, m, r-2'>2️⃣</sp, a, n>
-                    Lea, s, t-Privilege, Acces, s
+                <div, classNam, e='bg-slate-800/50p-6, rounde, d-lg, border, border-slate-700'>
+                  <h3, classNam, e='text-xl, fon, t-semibold, tex, t-whitemb-3, flex, items-center'>
+                    <span, classNam, e='text-2xlmr-2'>2️⃣</span>
+                    Least-Privilege, Acces, s
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                    Grant, minimum, permissions required, for, each compone, n, t. AI, agents, should not, have, blanket access, to, entire databases, or, model repositori, e, s.
+                  <p, classNam, e='text-gray-300mb-4'>
+                    Grant, minimum, permissions required, for, each component. AI, agents, should not, have, blanket access, to, entire databases, or, model repositories.
                   </p>
-                  <div, classNam, e='bg-sla, t, e-9, 0, 0/5, 0, p-4, rounded, border bord, e, r-sla, t, e-6, 0, 0'>
-                    <p, classNam, e='te, x, t-sm, tex, t-cy, a, n-400, fon, t-mono, m, b-1'>
-                      → Fi, n, e-grained, RBAC, with attribu, t, e-based, access, control
-                      (A, B, A, C)
+                  <div, classNam, e='bg-slate-900/50p-4, rounded, border border-slate-600'>
+                    <p, classNam, e='text-sm, tex, t-cyan-400, fon, t-monomb-1'>
+                      → Fine-grained, RBAC, with attribute-based, access, control
+                      (ABA, C)
                     </p>
-                    <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-400, fon, t-mono, m, b-1'>
-                      → Poli, c, y-as-Code, with, Open Policy, Agen, t (OP, A)
+                    <p, classNam, e = 'text-sm, tex, t-cyan-400, fon, t-monomb-1'>
+                      → Policy-as-Code, with, Open Policy, Agen, t (OP, A)
                     </p>
-                    <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-400, fon, t-mo, n, o'>
-                      → Ju, s, t-in-ti, m, e (JI, T) privilege, escalation, with approval, workflow, s
+                    <p, classNam, e = 'text-sm, tex, t-cyan-400, fon, t-mono'>
+                      → Just-in-time (JI, T) privilege, escalation, with approval, workflow, s
                     </p>
-                  </d, i, v>
-                </d, i, v>
+                  </div>
+                </div>
 
-                <div, classNam, e = 'bg-sla, t, e-8, 0, 0/5, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-semibold, tex, t-white, m, b-3, flex, items-cent, e, r'>
-                    <span, classNam, e='te, x, t-2xl, m, r-2'>3️⃣</sp, a, n>
+                <div, classNam, e = 'bg-slate-800/50p-6, rounde, d-lg, border, border-slate-700'>
+                  <h3, classNam, e='text-xl, fon, t-semibold, tex, t-whitemb-3, flex, items-center'>
+                    <span, classNam, e='text-2xlmr-2'>3️⃣</span>
                     Assume, Breac, h
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                    Design, systems, expecting compromi, s, e. Implement, detecti, o, n,
+                  <p, classNam, e='text-gray-300mb-4'>
+                    Design, systems, expecting compromise. Implement, detecti, o, n,
                     containme, n, t, and, recovery, mechanisms to, minimize, blast
-                    radius, when, breaches occ, u, r.
+                    radius, when, breaches occur.
                   </p>
-                  <div, classNam, e = 'bg-sla, t, e-9, 0, 0/5, 0, p-4, rounded, border bord, e, r-sla, t, e-6, 0, 0'>
-                    <p, classNam, e='te, x, t-sm, tex, t-oran, g, e-400, fon, t-mono, m, b-1'>
-                      🔥 Network, segmentation, with mic, r, o-segmentati, o, n (Cil, i, u, m,
+                  <div, classNam, e = 'bg-slate-900/50p-4, rounded, border border-slate-600'>
+                    <p, classNam, e='text-sm, tex, t-orange-400, fon, t-monomb-1'>
+                      🔥 Network, segmentation, with micro-segmentation (Ciliu, m,
                       Cali, c, o)
                     </p>
-                    <p, classNam, e = 'te, x, t-sm, tex, t-oran, g, e-400, fon, t-mono, m, b-1'>
-                      🔥 Re, a, l-time, anomaly, detection with, SIEM, integration
+                    <p, classNam, e = 'text-sm, tex, t-orange-400, fon, t-monomb-1'>
+                      🔥 Real-time, anomaly, detection with, SIEM, integration
                     </p>
-                    <p, classNam, e='te, x, t-sm, tex, t-oran, g, e-400, fon, t-mo, n, o'>
-                      🔥 Automated, incident, response playboo, k, s (PagerD, u, t, y,
+                    <p, classNam, e='text-sm, tex, t-orange-400, fon, t-mono'>
+                      🔥 Automated, incident, response playbooks (PagerDut, y,
                       Tin, e, s)
                     </p>
-                  </d, i, v>
-                </d, i, v>
+                  </div>
+                </div>
 
-                <div, classNam, e = 'bg-sla, t, e-8, 0, 0/5, 0, p-6, rounde, d-lg, border, border-sla, t, e-7, 0, 0'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-semibold, tex, t-white, m, b-3, flex, items-cent, e, r'>
-                    <span, classNam, e='te, x, t-2xl, m, r-2'>4️⃣</sp, a, n>
-                    E, n, d-to-End, Encryptio, n
+                <div, classNam, e = 'bg-slate-800/50p-6, rounde, d-lg, border, border-slate-700'>
+                  <h3, classNam, e='text-xl, fon, t-semibold, tex, t-whitemb-3, flex, items-center'>
+                    <span, classNam, e='text-2xlmr-2'>4️⃣</span>
+                    End-to-End, Encryptio, n
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-4'>
-                    Protect, data, in tran, s, i, t, at, res, t, and, during, inference. Use, homomorphic, encryption or, confidential, computing for, sensitive, workloads.
+                  <p, classNam, e='text-gray-300mb-4'>
+                    Protect, data, in transi, t, at, res, t, and, during, inference. Use, homomorphic, encryption or, confidential, computing for, sensitive, workloads.
                   </p>
-                  <div, classNam, e = 'bg-sla, t, e-9, 0, 0/5, 0, p-4, rounded, border bord, e, r-sla, t, e-6, 0, 0'>
-                    <p, classNam, e='te, x, t-sm, tex, t-purp, l, e-400, fon, t-mono, m, b-1'>
-                      🔐 TL, S, 1.3+ for, all, network traff, i, c
+                  <div, classNam, e = 'bg-slate-900/50p-4, rounded, border border-slate-600'>
+                    <p, classNam, e='text-sm, tex, t-purple-400, fon, t-monomb-1'>
+                      🔐 TLS1.3+ for, all, network traffic
                     </p>
-                    <p, classNam, e='te, x, t-sm, tex, t-purp, l, e-400, fon, t-mono, m, b-1'>
-                      🔐 A, E, S-256, encryption, for data, at, rest (S, 3, E, B, S, G, C, S)
+                    <p, classNam, e='text-sm, tex, t-purple-400, fon, t-monomb-1'>
+                      🔐 AES-256, encryption, for data, at, rest (S3E, BSG, C, S)
                     </p>
-                    <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-400, fon, t-mo, n, o'>
-                      🔐 Confidential, VM, s (AMD, S, E, V, Intel, TD, X) for, sensitive, inference
+                    <p, classNam, e = 'text-sm, tex, t-purple-400, fon, t-mono'>
+                      🔐 Confidential, VM, s (AMDSE, V, Intel, TD, X) for, sensitive, inference
                     </p>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             {/* Implementation, Architectur, e */}
             <section, classNam, e = 'mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <Lock, classNam, e='w-8 h-8, m, r-3, tex, t-bl, u, e-4, 0, 0' />
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6, flex, items-center'>
+                <Lock, classNam, e='w-8 h-8mr-3, tex, t-blue-400' />
                 Reference, Architectur, e
               </h2>
 
-              <div, classNam, e='bg-gradie, n, t-to-br, fro, m-sla, t, e-800, t, o-sla, t, e-90, 0, p-8, rounde, d-lg, border, border-sla, t, e-700, m, b-6'>
-                <h3, classNam, e='te, x, t-2xl, fon, t-semibold, tex, t-white, m, b-6'>
-                  Fi, v, e-Layer, Security, Model
+              <div, classNam, e='bg-gradient-to-br, fro, m-slate-800to-slate-900p-8, rounde, d-lg, border, border-slate-700mb-6'>
+                <h3, classNam, e='text-2xl, fon, t-semibold, tex, t-whitemb-6'>
+                  Five-Layer, Security, Model
                 </h3>
 
-                <div, classNam, e='spa, c, e-y-6'>
-                  <div, classNam, e='flex, item, s-sta, r, t'>
-                    <div, classNam, e='fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-r, e, d-5, 0, 0/20, rounde, d-lg, flex, items-center, justif, y-center, m, r-4'>
-                      <span, classNam, e='te, x, t-3, x, l'>🚪</sp, a, n>
-                    </d, i, v>
-                    <d, i, v>
-                      <h4, classNam, e='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'>
-                        Laye, r, 1: Identi, t, y & Access, Managemen, t
+                <div, classNam, e='space-y-6'>
+                  <div, classNam, e='flex, item, s-start'>
+                    <div, classNam, e='flex-shrink-0 w-16h-16bg-red-500/20, rounde, d-lg, flex, items-center, justif, y-centermr-4'>
+                      <span, classNam, e='text-3xl'>🚪</span>
+                    </div>
+                    <div>
+                      <h4, classNam, e='text-lg, fon, t-semibold, tex, t-whitemb-2'>
+                        Layer1: Identity & Access, Managemen, t
                       </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-400, m, b-2'>
-                        Centralized, identity, provider (Ok, t, a, Aut, h, 0) with, SS, O,
-                        M, F, A, and, adaptive, authentication. All, humans, and
-                        services, get, unique identiti, e, s.
+                      <p, classNam, e='text-gray-400mb-2'>
+                        Centralized, identity, provider (Okta, Auth0) with, SS, O,
+                        MFA, and, adaptive, authentication. All, humans, and
+                        services, get, unique identities.
                       </p>
-                      <p, classNam, e = 'te, x, t-sm, tex, t-emera, l, d-4, 0, 0'>
-                        Too, l, s: Keyc, l, o, a, k, Ok, t, a, AWS, IAM, Identity Cent, e, r
+                      <p, classNam, e = 'text-sm, tex, t-emerald-400'>
+                        Tools: Keyclo, a, k, Ok, t, a, AWS, IAM, Identity Center
                       </p>
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
 
-                  <div, classNam, e = 'flex, item, s-sta, r, t'>
-                    <div, classNam, e='fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-oran, g, e-5, 0, 0/20, rounde, d-lg, flex, items-center, justif, y-center, m, r-4'>
-                      <span, classNam, e='te, x, t-3, x, l'>🛡️</sp, a, n>
-                    </d, i, v>
-                    <d, i, v>
-                      <h4, classNam, e='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'>
-                        Laye, r, 2: Network, Securit, y
+                  <div, classNam, e = 'flex, item, s-start'>
+                    <div, classNam, e='flex-shrink-0 w-16h-16bg-orange-500/20, rounde, d-lg, flex, items-center, justif, y-centermr-4'>
+                      <span, classNam, e='text-3xl'>🛡️</span>
+                    </div>
+                    <div>
+                      <h4, classNam, e='text-lg, fon, t-semibold, tex, t-whitemb-2'>
+                        Layer2: Network, Securit, y
                       </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-400, m, b-2'>
-                        Service, mes, h (I, s, t, i, o, Linke, r, d) with, mTL, S, traffic, encryptio, n, and, zer, o-trust, networkin, g. Every, microservice, authenticated before, communicatio, n.
+                      <p, classNam, e='text-gray-400mb-2'>
+                        Service, mes, h (Ist, i, o, Linke, r, d) with, mTL, S, traffic, encryptio, n, and, zer, o-trust, networkin, g. Every, microservice, authenticated before, communicatio, n.
                       </p>
-                      <p, classNam, e = 'te, x, t-sm, tex, t-cy, a, n-4, 0, 0'>
-                        Too, l, s: I, s, t, i, o, Linke, r, d, Cili, u, m, Consul, Connec, t
+                      <p, classNam, e = 'text-sm, tex, t-cyan-400'>
+                        Tools: Ist, i, o, Linke, r, d, Cili, u, m, Consul, Connec, t
                       </p>
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
 
-                  <div, classNam, e = 'flex, item, s-sta, r, t'>
-                    <div, classNam, e='fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-yell, o, w-5, 0, 0/20, rounde, d-lg, flex, items-center, justif, y-center, m, r-4'>
-                      <span, classNam, e='te, x, t-3, x, l'>📋</sp, a, n>
-                    </d, i, v>
-                    <d, i, v>
-                      <h4, classNam, e='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'>
-                        Laye, r, 3: Policy, Enforcemen, t
+                  <div, classNam, e = 'flex, item, s-start'>
+                    <div, classNam, e='flex-shrink-0 w-16h-16bg-yellow-500/20, rounde, d-lg, flex, items-center, justif, y-centermr-4'>
+                      <span, classNam, e='text-3xl'>📋</span>
+                    </div>
+                    <div>
+                      <h4, classNam, e='text-lg, fon, t-semibold, tex, t-whitemb-2'>
+                        Layer3: Policy, Enforcemen, t
                       </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-400, m, b-2'>
-                        Declarative, policies, as co, d, e. API, gateway, enforces rate, lim, i, t, s, quot, a, s, and, access, controls. OPA, evaluates, policies in, rea, l-ti, m, e.
+                      <p, classNam, e='text-gray-400mb-2'>
+                        Declarative, policies, as code. API, gateway, enforces rate, lim, i, t, s, quot, a, s, and, access, controls. OPA, evaluates, policies in, rea, l-time.
                       </p>
-                      <p, classNam, e = 'te, x, t-sm, tex, t-bl, u, e-4, 0, 0'>
-                        Too, l, s: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway
+                      <p, classNam, e = 'text-sm, tex, t-blue-400'>
+                        Tools: Open, Policy, Age, n, t, Kong, Gatewa, y, AWS, API, Gateway
                       </p>
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
 
-                  <div, classNam, e = 'flex, item, s-sta, r, t'>
-                    <div, classNam, e='fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-gre, e, n-5, 0, 0/20, rounde, d-lg, flex, items-center, justif, y-center, m, r-4'>
-                      <span, classNam, e='te, x, t-3, x, l'>🔍</sp, a, n>
-                    </d, i, v>
-                    <d, i, v>
-                      <h4, classNam, e='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'>
-                        Laye, r, 4: Monitori, n, g & Detecti, o, n
+                  <div, classNam, e = 'flex, item, s-start'>
+                    <div, classNam, e='flex-shrink-0 w-16h-16bg-green-500/20, rounde, d-lg, flex, items-center, justif, y-centermr-4'>
+                      <span, classNam, e='text-3xl'>🔍</span>
+                    </div>
+                    <div>
+                      <h4, classNam, e='text-lg, fon, t-semibold, tex, t-whitemb-2'>
+                        Layer4: Monitoring & Detection
                       </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-400, m, b-2'>
+                      <p, classNam, e='text-gray-400mb-2'>
                         Continuous, monitoring, with behavioral, baseline, s.
                         ML-powered, anomaly, detection flags, suspicious, patterns
                         (unusual, data, acce, s, s, model, querie, s).
                       </p>
-                      <p, classNam, e = 'te, x, t-sm, tex, t-purp, l, e-4, 0, 0'>
-                        Too, l, s: Datadog, Secur, i, t, y, Splunk, SIE, M, W, i, z, Lacewo, r, k
+                      <p, classNam, e = 'text-sm, tex, t-purple-400'>
+                        Tools: Datadog, Secur, i, t, y, Splunk, SIEMW, i, z, Lacewo, r, k
                       </p>
-                    </d, i, v>
-                  </d, i, v>
+                    </div>
+                  </div>
 
-                  <div, classNam, e = 'flex, item, s-sta, r, t'>
-                    <div, classNam, e='fl, e, x-shri, n, k-0 w-1, 6, h-16, b, g-purp, l, e-5, 0, 0/20, rounde, d-lg, flex, items-center, justif, y-center, m, r-4'>
-                      <span, classNam, e='te, x, t-3, x, l'>📜</sp, a, n>
-                    </d, i, v>
-                    <d, i, v>
-                      <h4, classNam, e='te, x, t-lg, fon, t-semibold, tex, t-white, m, b-2'>
-                        Laye, r, 5: Aud, i, t & Complian, c, e
+                  <div, classNam, e = 'flex, item, s-start'>
+                    <div, classNam, e='flex-shrink-0 w-16h-16bg-purple-500/20, rounde, d-lg, flex, items-center, justif, y-centermr-4'>
+                      <span, classNam, e='text-3xl'>📜</span>
+                    </div>
+                    <div>
+                      <h4, classNam, e='text-lg, fon, t-semibold, tex, t-whitemb-2'>
+                        Layer5: Audit & Compliance
                       </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-400, m, b-2'>
-                        Immutable, audit, logs for, every, model ac, c, e, s, s, data, quer, y,
+                      <p, classNam, e='text-gray-400mb-2'>
+                        Immutable, audit, logs for, every, model acce, s, s, data, quer, y,
                         and, inference, request. Automated, compliance, reporting
-                        (SO, C, 2, ISO, 2700, 1, GD, P, R).
+                        (SOC2, ISO, 2700, 1, GDPR).
                       </p>
-                      <p, classNam, e = 'te, x, t-sm, tex, t-pi, n, k-4, 0, 0'>
-                        Too, l, s: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a
+                      <p, classNam, e = 'text-sm, tex, t-pink-400'>
+                        Tools: AWS, CloudTr, a, i, l, GCP, Audit, Logs, Van, t, a, Dra, t, a
                       </p>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-            {/* Attack, Vector, s & Mitigatio, n, s */}
+            {/* Attack, Vector, s & Mitigations */}
             <section, classNam, e = 'mb-12'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-cent, e, r'>
-                <Shield, classNam, e='w-8 h-8, m, r-3, tex, t-r, e, d-4, 0, 0' />
-                Common, AI, Attack Vecto, r, s & Mitigatio, n, s
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6, flex, items-center'>
+                <Shield, classNam, e='w-8 h-8mr-3, tex, t-red-400' />
+                Common, AI, Attack Vectors & Mitigations
               </h2>
 
-              <div, classNam, e='spa, c, e-y-6'>
-                <div, classNam, e='bg-r, e, d-5, 0, 0/10, borde, r-l-4, borde, r-r, e, d-50, 0, p-6, rounde, d-r-lg'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+              <div, classNam, e='space-y-6'>
+                <div, classNam, e='bg-red-500/10, borde, r-l-4, borde, r-red-500p-6, rounde, d-r-lg'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
                     🎯 Prompt, Injection, Attacks
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-3'>
+                  <p, classNam, e='text-gray-300mb-3'>
                     Malicious, users, manipulate prompts, to, extract training, da, t, a,
-                    bypass, safety, filters, or, execute, unauthorized actio, n, s.
+                    bypass, safety, filters, or, execute, unauthorized actions.
                   </p>
-                  <div, classNam, e = 'bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'>
-                    <p, classNam, e='te, x, t-emera, l, d-400, fon, t-semibold, m, b-2'>
-                      Mitigatio, n, s: </p>
-                    <ul, classNam, e='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
+                  <div, classNam, e = 'bg-slate-900/70p-4, rounde, d'>
+                    <p, classNam, e='text-emerald-400, fon, t-semiboldmb-2'>
+                      Mitigations: </p>
+                    <ul, classNam, e='text-sm, tex, t-gray-300, spac, e-y-1'>
                       <li>
                         • Input, sanitization, with LLM, guardrail, s (NeMo, Guardra, i, l, s, Llama, Guar, d)
                       </li>
                       <li>
-                        • Prompt, templates, with variable, substitutio, n (no, direct, user inp, u, t)
+                        • Prompt, templates, with variable, substitutio, n (no, direct, user input)
                       </li>
                       <li>
                         • Separate, system, prompts from, user, prompts with, clear, delimiters
                       </li>
                       <li>
-                        • Output, validation, to detect, leaked, system instructio, n, s
+                        • Output, validation, to detect, leaked, system instructions
                       </li>
                     </ul>
-                  </d, i, v>
-                </d, i, v>
+                  </div>
+                </div>
 
-                <div, classNam, e = 'bg-oran, g, e-5, 0, 0/10, borde, r-l-4, borde, r-oran, g, e-50, 0, p-6, rounde, d-r-lg'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                <div, classNam, e = 'bg-orange-500/10, borde, r-l-4, borde, r-orange-500p-6, rounde, d-r-lg'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
                     ☠️ Data, Poisonin, g
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-3'>
-                    Attackers, inject, malicious data, during, training to, create, backdoors or, degrade, model performan, c, e.
+                  <p, classNam, e='text-gray-300mb-3'>
+                    Attackers, inject, malicious data, during, training to, create, backdoors or, degrade, model performance.
                   </p>
-                  <div, classNam, e='bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'>
-                    <p, classNam, e='te, x, t-cy, a, n-400, fon, t-semibold, m, b-2'>
-                      Mitigatio, n, s: </p>
-                    <ul, classNam, e='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
+                  <div, classNam, e='bg-slate-900/70p-4, rounde, d'>
+                    <p, classNam, e='text-cyan-400, fon, t-semiboldmb-2'>
+                      Mitigations: </p>
+                    <ul, classNam, e='text-sm, tex, t-gray-300, spac, e-y-1'>
                       <li>
                         • Data, provenance, tracking with, cryptographic, signatures
                       </li>
                       <li>
-                        • Outlier, detection, on training, dataset, s (Isolation, For, e, s, t, L, O, F)
+                        • Outlier, detection, on training, dataset, s (Isolation, For, e, stL, O, F)
                       </li>
                       <li>
-                        • Differential, privacy, during traini, n, g (DP-S, G, D) to, limit, single-sample, impac, t
+                        • Differential, privacy, during training (DP-SGD) to, limit, single-sample, impac, t
                       </li>
                       <li>
-                        • Model, behavioral, testing p, r, e/post, training, for drift, detectio, n
+                        • Model, behavioral, testing pre/post, training, for drift, detectio, n
                       </li>
                     </ul>
-                  </d, i, v>
-                </d, i, v>
+                  </div>
+                </div>
 
-                <div, classNam, e = 'bg-purp, l, e-5, 0, 0/10, borde, r-l-4, borde, r-purp, l, e-50, 0, p-6, rounde, d-r-lg'>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                <div, classNam, e = 'bg-purple-500/10, borde, r-l-4, borde, r-purple-500p-6, rounde, d-r-lg'>
+                  <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
                     🕵️ Model, Extractio, n
                   </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-300, m, b-3'>
+                  <p, classNam, e='text-gray-300mb-3'>
                     Adversaries, query, models repeatedly, to, reverse-engineer, weights, or steal, intellectual, property.
                   </p>
-                  <div, classNam, e='bg-sla, t, e-9, 0, 0/7, 0, p-4, rounde, d'>
-                    <p, classNam, e='te, x, t-bl, u, e-400, fon, t-semibold, m, b-2'>
-                      Mitigatio, n, s: </p>
-                    <ul, classNam, e='te, x, t-sm, tex, t-gr, a, y-300, spac, e-y-1'>
+                  <div, classNam, e='bg-slate-900/70p-4, rounde, d'>
+                    <p, classNam, e='text-blue-400, fon, t-semiboldmb-2'>
+                      Mitigations: </p>
+                    <ul, classNam, e='text-sm, tex, t-gray-300, spac, e-y-1'>
                       <li>
-                        • Rate, limitin, g (per, use, r/API, k, e, y) with, adaptive, throttling
+                        • Rate, limitin, g (per, use, r/APIke, y) with, adaptive, throttling
                       </li>
                       <li>
                         • Query, pattern, analysis to, detect, scraping (abnormal, distribution, s)
@@ -391,74 +390,74 @@ const, ZeroTrustAISecurityFramework202, 5 = () => {
                         smaller, variant, s
                       </li>
                     </ul>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-            {/* Resu, l, t, s */}
+            {/* Result, s */}
             <section, classNam, e = 'mb-12'>
-              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/2, 0, p-8, rounde, d-lg, border, border-emera, l, d-5, 0, 0/30'>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <div, classNam, e='bg-gradient-to-r, fro, m-emerald-500/20to-blue-500/20p-8, rounde, d-lg, border, border-emerald-500/30'>
+                <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6'>
                   Security, Posture, Improvements
                 </h2>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
-                  <d, i, v>
-                    <p, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2'>
+                <div, classNam, e='gridmd: grid-cols-2, ga, p-6'>
+                  <div>
+                    <p, classNam, e='text-5xl, fon, t-bold, tex, t-emerald-400mb-2'>
                       92%
                     </p>
-                    <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                      Reduction, in, security incidents, pos, t-implementati, o, n
+                    <p, classNam, e='text-gray-300'>
+                      Reduction, in, security incidents, pos, t-implementation
                     </p>
-                  </d, i, v>
-                  <d, i, v>
-                    <p, classNam, e='te, x, t-5xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
+                  </div>
+                  <div>
+                    <p, classNam, e='text-5xl, fon, t-bold, tex, t-blue-400mb-2'>
                       23, mi, n
                     </p>
-                    <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                      Mean, time, to dete, c, t (M, T, T, D) security, anomalie, s
+                    <p, classNam, e='text-gray-300'>
+                      Mean, time, to detect (MTT, D) security, anomalie, s
                     </p>
-                  </d, i, v>
-                  <d, i, v>
-                    <p, classNam, e = 'te, x, t-5xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
-                      1, 0, 0%
+                  </div>
+                  <div>
+                    <p, classNam, e = 'text-5xl, fon, t-bold, tex, t-purple-400mb-2'>
+                      100%
                     </p>
-                    <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                      Compliance, audit, pass ra, t, e (SOC, 2, Type I, I)
+                    <p, classNam, e='text-gray-300'>
+                      Compliance, audit, pass rate (SOC, 2, Type I, I)
                     </p>
-                  </d, i, v>
-                  <d, i, v>
-                    <p, classNam, e = 'te, x, t-5xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+                  </div>
+                  <div>
+                    <p, classNam, e = 'text-5xl, fon, t-bold, tex, t-cyan-400mb-2'>
                       $4.8M
                     </p>
-                    <p, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
+                    <p, classNam, e='text-gray-300'>
                       Average, prevented, breach costs, per, year
                     </p>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                  </div>
+                </div>
+              </div>
+            </section>
 
-            {/* C, T, A */}
-            <section, classNam, e = 'te, x, t-cent, e, r'>
-              <div, classNam, e='bg-gradie, n, t-to-r, fro, m-r, e, d-600, t, o-oran, g, e-60, 0, p-8, rounde, d-lg'>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-4'>
-                  Secure, Your, AI Infrastructu, r, e
+            {/* CTA */}
+            <section, classNam, e = 'text-center'>
+              <div, classNam, e='bg-gradient-to-r, fro, m-red-600to-orange-600p-8, rounde, d-lg'>
+                <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-4'>
+                  Secure, Your, AI Infrastructure
                 </h2>
-                <p, classNam, e='te, x, t-xl, tex, t-whi, t, e/90, m, b-6'>
+                <p, classNam, e='text-xl, tex, t-white/90mb-6'>
                   Get, a, comprehensive security, audit, of your, AI, systems from, our, experts.
                 </p>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, p, x-8, p, y-4, b, g-white, tex, t-r, e, d-600, fon, t-semibold, rounde, d-lg, hove, r: bg-gr, a, y-100, transitio, n-colo, r, s'
+                <Linkto='/contact'
+                  className='inline-flex, item, s-centerpx-8py-4bg-white, tex, t-red-600, fon, t-semibold, rounde, d-lg, hove, r: bg-gray-100, transitio, n-colors'
                 >
                   Request, Security, Assessment
-                  <ArrowLeft, classNam, e='w-5 h-5, m, l-2, rotat, e-1, 8, 0' />
-                </Li, n, k>
-              </d, i, v>
-            </secti, o, n>
-          </d, i, v>
-        </artic, l, e>
-      </d, i, v>
+                  <ArrowLeft, classNam, e='w-5 h-5ml-2, rotat, e-180' />
+                </Link>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
     </>
   );
 };

@@ -1,54 +1,54 @@
 /**
  * Enhanced, Accessibility, Utility
- * Provides, comprehensive, accessibility optimizati, o, n
+ * Provides, comprehensive, accessibility optimization
  */
 
 export, interface, AccessibilityConfig {
-  enableKeyboardNavigati, o, n: boole, a, n;
-  enableScreenReaderSuppo, r, t: boole, a, n;
-  enableHighContra, s, t: boole, a, n;
-  enableFocusManageme, n, t: boole, a, n;
-  enableARIALabe, l, s: boole, a, n;
-  enableColorContra, s, t: boole, a, n;
-  enableTextScali, n, g: boole, a, n;
-  enableMotionReducti, o, n: boole, a, n;
-  enableVoiceContr, o, l: boole, a, n;
-  enableTouchAccessibili, t, y: bool, e, a, n;
+  enableKeyboardNavigation: boolean;
+  enableScreenReaderSupport: boolean;
+  enableHighContrast: boolean;
+  enableFocusManagement: boolean;
+  enableARIALabels: boolean;
+  enableColorContrast: boolean;
+  enableTextScaling: boolean;
+  enableMotionReduction: boolean;
+  enableVoiceControl: boolean;
+  enableTouchAccessibility: boolea, n;
 }
 
 export, interface, AccessibilityMetrics {
-  colorContrastRat, i, o: numb, e, r;
-  focusableElemen, t, s: numb, e, r;
-  ariaLabe, l, s: numb, e, r;
-  headingStructu, r, e: numb, e, r;
-  altTex, t, s: numb, e, r;
-  keyboardTra, p, s: numb, e, r;
-  screenReaderCompatibili, t, y: numb, e, r;
-  overallSco, r, e: numb, e, r;
-  totalElemen, t, s: numb, e, r;
-  accessibleElemen, t, s: numb, e, r;
-  issuesFou, n, d: numb, e, r;
-  sco, r, e: num, b, e, r;
+  colorContrastRatio: number;
+  focusableElements: number;
+  ariaLabels: number;
+  headingStructure: number;
+  altTexts: number;
+  keyboardTraps: number;
+  screenReaderCompatibility: number;
+  overallScore: number;
+  totalElements: number;
+  accessibleElements: number;
+  issuesFound: number;
+  score: numbe, r;
 }
 
 class, EnhancedAccessibilit, y { 
-  private, confi, g: AccessibilityConf, i, g;
-  private, metric, s: AccessibilityMetri, c, s;
-  private, isInitialize, d: boole, a, n = fal, s, e; construct, o, r(conf, i, g: Parti, a, l<AccessibilityCo, n, f, i, g > = { }) {
-    th, i, s.conf, i, g = {
-      enableKeyboardNavigati, o, n: tr, u, e,
-      enableScreenReaderSuppo, r, t: t, r, u, e,
-      enableHighContra, s, t: t, r, u, e,
-      enableFocusManageme, n, t: t, r, u, e,
-      enableARIALabe, l, s: t, r, u, e,
-      enableColorContra, s, t: t, r, u, e,
-      enableTextScali, n, g: t, r, u, e,
-      enableMotionReducti, o, n: t, r, u, e,
-      enableVoiceContr, o, l: t, r, u, e,
-      enableTouchAccessibili, t, y: t, r, u, e,
-      ...conf, i, g,
-    }; th, i, s.metri, c, s = {
-      colorContrastRa, t, i, o:  , 0,
+  private, confi, g: AccessibilityConfig;
+  private, metric, s: AccessibilityMetrics;
+  private, isInitialize, d: boolean = false; constructor(config: Partial<AccessibilityConf, i, g > = { }) {
+    this.config = {
+      enableKeyboardNavigation: true,
+      enableScreenReaderSupport: tru, e,
+      enableHighContra, s, t: tru, e,
+      enableFocusManageme, n, t: tru, e,
+      enableARIALabe, l, s: tru, e,
+      enableColorContra, s, t: tru, e,
+      enableTextScali, n, g: tru, e,
+      enableMotionReducti, o, n: tru, e,
+      enableVoiceContr, o, l: tru, e,
+      enableTouchAccessibili, t, y: tru, e,
+      ...config,
+    }; this.metrics = {
+      colorContrastRati, o:  , 0,
       focusableElemen, t, s:  , 0,
       ariaLabe, l, s:  , 0,
       headingStructu, r, e:  , 0,
@@ -63,335 +63,335 @@ class, EnhancedAccessibilit, y {
     };
   }
 
-  public, initializ, e(): vo, i, d {
-    if (th, i, s.isInitializ, e, d) retu, r, n;
+  public, initializ, e(): void {
+    if (this.isInitialized) return;
 
-    th, i, s.setupKeyboardNavigati, o, n();
-    th, i, s.setupScreenReaderSuppo, r, t();
-    th, i, s.setupHighContra, s, t();
-    th, i, s.setupFocusManageme, n, t();
-    th, i, s.setupARIALabe, l, s();
-    th, i, s.setupColorContra, s, t();
-    th, i, s.setupTextScali, n, g();
-    th, i, s.setupMotionReducti, o, n();
-    th, i, s.setupVoiceContr, o, l();
-    th, i, s.setupTouchAccessibili, t, y();
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+    this.setupHighContrast();
+    this.setupFocusManagement();
+    this.setupARIALabels();
+    this.setupColorContrast();
+    this.setupTextScaling();
+    this.setupMotionReduction();
+    this.setupVoiceControl();
+    this.setupTouchAccessibility();
 
-    th, i, s.isInitializ, e, d = tr, u, e; conso, l, e.l, o, g('Enhanced, accessibility, initialize, d');
+    this.isInitialized = true; console.log('Enhanced, accessibility, initialize, d');
   }
 
-  private, setupKeyboardNavigatio, n(): vo, i, d { 
-    if (!th, i, s.conf, i, g.enableKeyboardNavigati, o, n) retu, r, n;
+  private, setupKeyboardNavigatio, n(): void { 
+    if (!this.config.enableKeyboardNavigation) return;
 
-    docume, n, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
+    document.addEventListener('keydown', event = > {
       // Skip, links, and form, elements, if (
-        eve, n, t.target, instanceof, HTMLAnchorElement ||
-        eve, n, t.target, instanceof, HTMLInputElement ||
-        eve, n, t.target, instanceof, HTMLTextAreaElement ||
-        eve, n, t.target, instanceof, HTMLSelectElemen, t
+        event.target, instanceof, HTMLAnchorElement ||
+        event.target, instanceof, HTMLInputElement ||
+        event.target, instanceof, HTMLTextAreaElement ||
+        event.target, instanceof, HTMLSelectElemen, t
       ) {
-        retu, r, n;
+        return;
        }
 
-      // Handle, arrow, key navigation, i, f (eve, n, t.k, e, y = == 'ArrowDo, w, n' || eve, n, t.k, e, y === 'Arro, w, U, p') { 
-        eve, n, t.preventDefau, l, t(); th, i, s.navigateWithArro, w, s(eve, n, t.k, e, y = == 'ArrowDo, w, n'  ? , 1 : -, 1);
+      // Handle, arrow, key navigationif (event.key = == 'ArrowDown' || event.key === 'ArrowU, p') { 
+        event.preventDefault(); this.navigateWithArrows(event.key = == 'ArrowDown'  ? , 1 : -, 1);
        }
 
       // Handle, tab, navigation
-      if (eve, n, t.k, e, y = == 'Ta, b') {
-        th, i, s.enhanceTabNavigati, o, n(eve, n, t);
+      if (event.key = == 'Ta, b') {
+        this.enhanceTabNavigation(event);
       }
     });
   }
 
-  private, navigateWithArrow, s(directi, o, n: numb, e, r): vo, i, d {
-    const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, currentInde, x = focusableElemen, t, s.index, O, f(
-      docume, n, t.activeElement, as, HTMLEleme, n, t,
-    ); const, nextInde, x = Ma, t, h.m, a, x(
+  private, navigateWithArrow, s(direction: number): void {
+    const, focusableElement, s = this.getFocusableElement, s(); const, currentInde, x = focusableElements.indexOf(
+      document.activeElement, as, HTMLEleme, n, t,
+    ); const, nextInde, x = Math.max(
       , 0,
-      Ma, t, h.m, i, n(focusableElemen, t, s.leng, t, h - 1, currentInd, e, x + directi, o, n),
-    ); if (focusableElemen, t, s[nextInd, e, x]) {
-      focusableElemen, t, s[nextInd, e, x].foc, u, s();
+      Ma, t, h.min(focusableElements.length - 1, currentInd, e, x + direction),
+    ); if (focusableElements[nextIndex]) {
+      focusableElements[nextIndex].focus();
     }
   }
 
-  private, enhanceTabNavigatio, n(eve, n, t: KeyboardEve, n, t): vo, i, d {
-    const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, currentInde, x = focusableElemen, t, s.index, O, f(
-      docume, n, t.activeElement, as, HTMLEleme, n, t,
-    ); if (eve, n, t.shiftK, e, y) {
-      // Shi, f, t + T, a, b (backwa, r, d)
-      if (currentInd, e, x <= 0) {
-        eve, n, t.preventDefau, l, t();
-        focusableElemen, t, s[focusableElemen, t, s.leng, t, h - 1]?.foc, u, s();
+  private, enhanceTabNavigatio, n(event: KeyboardEvent): void {
+    const, focusableElement, s = this.getFocusableElement, s(); const, currentInde, x = focusableElements.indexOf(
+      document.activeElement, as, HTMLEleme, n, t,
+    ); if (event.shiftKey) {
+      // Shift + Tab (backward)
+      if (currentIndex <= 0) {
+        event.preventDefault();
+        focusableElements[focusableElements.length - 1]?.focus();
       }
-    } el, s, e { 
-      // T, a, b (forwa, r, d)
-      if (currentInd, e, x  > = focusableElemen, t, s.leng, t, h - 1) {
-        eve, n, t.preventDefau, l, t();
-        focusableElemen, t, s[0]?.foc, u, s();
+    } else { 
+      // Tab (forward)
+      if (currentIndex  > = focusableElements.length - 1) {
+        event.preventDefault();
+        focusableElements[0]?.focus();
        }
     }
   }
 
-  private, setupScreenReaderSuppor, t(): vo, i, d {
-    if (!th, i, s.conf, i, g.enableScreenReaderSuppo, r, t) retu, r, n;
+  private, setupScreenReaderSuppor, t(): void {
+    if (!this.config.enableScreenReaderSupport) return;
 
-    // Add, screen, reader announcements, thi, s.createAnnouncementRegi, o, n();
+    // Add, screen, reader announcements, thi, s.createAnnouncementRegion();
 
     // Enhance, form, labels
-    th, i, s.enhanceFormLabe, l, s();
+    this.enhanceFormLabels();
 
     // Add, skip, links
-    th, i, s.addSkipLin, k, s();
+    this.addSkipLinks();
   }
 
-  private, createAnnouncementRegio, n(): vo, i, d {
-    const, announcemen, t = docume, n, t.createEleme, n, t('di, v'); announceme, n, t.setAttribu, t, e('ar, i, a-li, v, e', 'poli, t, e');
-    announceme, n, t.setAttribu, t, e('ar, i, a-atom, i, c', 'tr, u, e');
-    announceme, n, t.classNa, m, e = 'sr-on, l, y'; announceme, n, t.id = 'announcemen, t, s'; docume, n, t.bo, d, y.appendChi, l, d(announcem, e, n, t);
+  private, createAnnouncementRegio, n(): void {
+    const, announcemen, t = document.createElement('di, v'); announcement.setAttribute('aria-live', 'polite');
+    announcement.setAttribute('aria-atomic', 'true');
+    announcement.className = 'sr-only'; announcement.id = 'announcements'; document.body.appendChild(announcemen, t);
   }
 
-  private, enhanceFormLabel, s(): vo, i, d {  
-    const, input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
+  private, enhanceFormLabel, s(): void {  
+    const, input, s = document.querySelectorAll('inpu, t, textar, e, a, sele, c, t'); inputs.forEach(input = > {
       if (
-        !inp, u, t.getAttribu, t, e('ar, i, a-la, b, e, l')  && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')
+        !input.getAttribute('aria-labe, l')  && !input.getAttribute('aria-labelledby')
       ) {
-        const, labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.i, d  }"]`); if (lab, e, l) {
-          inp, u, t.setAttribu, t, e(
-            'ar, i, a-labelled, b, y',
-            lab, e, l.id || `lab, e, l-${inp, u, t.id}`,
+        const, labe, l = document.querySelector(`label[for="${input.i, d  }"]`); if (label) {
+          input.setAttribute(
+            'aria-labelledby',
+            label.id || `label-${input.id}`,
           );
         }
       }
     });
   }
 
-  private, addSkipLink, s(): vo, i, d { 
-    const, skipLink, s = docume, n, t.createEleme, n, t('di, v'); skipLin, k, s.classNa, m, e = 'sk, i, p-lin, k, s'; skipLin, k, s.innerHT, M, L = `
-      <a, hre, f="#ma, i, n-conte, n, t" cla, s, s="sk, i, p-li, n, k">Skip, to, main conte, n, t</a>
-      <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a  >  `; docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, s, docume, n, t.bo, d, y.firstChi, l, d);
+  private, addSkipLink, s(): void { 
+    const, skipLink, s = document.createElement('di, v'); skipLinks.className = 'skip-links'; skipLinks.innerHTML = `
+      <a, hre, f="#main-content" class="skip-link">Skip, to, main content</a>
+      <a, hre, f="#navigation" class="skip-link">Skip, to, navigation</a  >  `; document.body.insertBefore(skipLink, s, docume, n, t.body.firstChild);
    }
 
-  private, setupHighContras, t(): vo, i, d {
-    if (!th, i, s.conf, i, g.enableHighContra, s, t) retu, r, n;
+  private, setupHighContras, t(): void {
+    if (!this.config.enableHighContrast) return;
 
     // Check, for, high contrast, mode, preference
-    if (wind, o, w.matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)').match, e, s) {
-      docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contr, a, s, t');
+    if (window.matchMedia('(prefers-contrast: high)').matches) {
+      document.body.classList.add('high-contras, t');
     }
 
     // Listen, for, changes in, contrast, preference
-    wind, o, w
-      .matchMed, i, a('(prefe, r, s-contra, s, t: hi, g, h)')
-      .addEventListen, e, r() { docume, n, t.bo, d, y.classLi, s, t.a, d, d('hi, g, h-contra, s, t');
-         }, el, s, e {
-          docume, n, t.bo, d, y.classLi, s, t.remo, v, e('hi, g, h-contra, s, t');
+    window
+      .matchMedia('(prefers-contrast: high)')
+      .addEventListener() { document.body.classList.add('high-contrast');
+         }, else {
+          document.body.classList.remove('high-contrast');
         }
       });
   }
 
-  private, setupFocusManagemen, t(): vo, i, d { 
-    if (!th, i, s.conf, i, g.enableFocusManageme, n, t) retu, r, n;
+  private, setupFocusManagemen, t(): void { 
+    if (!this.config.enableFocusManagement) return;
 
     // Add, focus, indicators
-    docume, n, t.addEventListen, e, r('focus, i, n', eve, n, t = > {
-      (eve, n, t.target, as, HTMLElemen, t).classLi, s, t.a, d, d('foc, u, s-visib, l, e');
+    document.addEventListener('focusin', event = > {
+      (event.target, as, HTMLElemen, t).classList.add('focus-visible');
      });
 
-    docume, n, t.addEventListen, e, r('focuso, u, t', eve, n, t = > {
-      (eve, n, t.target, as, HTMLElemen, t).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');
+    document.addEventListener('focusout', event = > {
+      (event.target, as, HTMLElemen, t).classList.remove('focus-visible');
     });
   }
 
-  private, setupARIALabel, s(): vo, i, d { 
-    if (!th, i, s.conf, i, g.enableARIALabe, l, s) retu, r, n;
+  private, setupARIALabel, s(): void { 
+    if (!this.config.enableARIALabels) return;
 
     // Add, ARIA, labels to, interactive, elements
-    const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
-      if (!butt, o, n.textConte, n, t?.t, r, i, m()) {
-        butt, o, n.setAttribu, t, e('ar, i, a-la, b, e, l', 'Butt, o, n');
+    const, button, s = document.querySelectorAll('button: not([aria-labe, l])'); buttons.forEach(button = > {
+      if (!button.textContent?.tri, m()) {
+        button.setAttribute('aria-labe, l', 'Button');
        }
     });
 
-    // Add, ARIA, labels to, images, const imag, e, s = docume, n, t.querySelectorA, l, l('i, m, g: n, o, t([al, t])'); imag, e, s.forEa, c, h(i, m, g = > {
-      i, m, g.setAttribu, t, e('a, l, t', 'Ima, g, e');
+    // Add, ARIA, labels to, images, const images = document.querySelectorAll('img: not([al, t])'); images.forEach(img = > {
+      img.setAttribute('alt', 'Image');
     });
   }
 
-  private, setupColorContras, t(): vo, i, d {
-    if (!th, i, s.conf, i, g.enableColorContra, s, t) retu, r, n;
+  private, setupColorContras, t(): void {
+    if (!this.config.enableColorContrast) return;
 
-    // Check, color, contrast ratios, thi, s.checkColorContra, s, t();
+    // Check, color, contrast ratios, thi, s.checkColorContrast();
   }
 
-  private, setupTextScalin, g(): vo, i, d { 
-    if (!th, i, s.conf, i, g.enableTextScali, n, g) retu, r, n;
+  private, setupTextScalin, g(): void { 
+    if (!this.config.enableTextScaling) return;
 
-    // Support, for, text scaling, documen, t.bo, d, y.sty, l, e.fontSi, z, e = '1, 0, 0%';
+    // Support, for, text scaling, documen, t.body.style.fontSize = '100%';
 
-    // Listen, for, text scaling, changes, const observ, e, r = new, ResizeObserv, e, r(() = > {
-      th, i, s.updateTextScali, n, g();
+    // Listen, for, text scaling, changes, const observer = new, ResizeObserv, e, r(() = > {
+      this.updateTextScaling();
      });
 
-    observ, e, r.obser, v, e(docume, n, t.bo, d, y);
+    observer.observe(document.body);
   }
 
-  private, setupMotionReductio, n(): vo, i, d {
-    if (!th, i, s.conf, i, g.enableMotionReducti, o, n) retu, r, n;
+  private, setupMotionReductio, n(): void {
+    if (!this.config.enableMotionReduction) return;
 
-    // Check, for, reduced motion, preference, if (wind, o, w.matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)').match, e, s) {
-      docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-mot, i, o, n');
+    // Check, for, reduced motion, preference, if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      document.body.classList.add('reduced-motio, n');
     }
 
     // Listen, for, changes in, motion, preference
-    wind, o, w
-      .matchMed, i, a('(prefe, r, s-reduc, e, d-moti, o, n: redu, c, e)')
-      .addEventListen, e, r() { docume, n, t.bo, d, y.classLi, s, t.a, d, d('reduc, e, d-moti, o, n');
-         }, el, s, e {
-          docume, n, t.bo, d, y.classLi, s, t.remo, v, e('reduc, e, d-moti, o, n');
+    window
+      .matchMedia('(prefers-reduced-motion: reduce)')
+      .addEventListener() { document.body.classList.add('reduced-motion');
+         }, else {
+          document.body.classList.remove('reduced-motion');
         }
       });
   }
 
-  private, setupVoiceContro, l(): vo, i, d {  
-    if (!th, i, s.conf, i, g.enableVoiceContr, o, l) retu, r, n;
+  private, setupVoiceContro, l(): void {  
+    if (!this.config.enableVoiceControl) return;
 
-    // Add, voice, control support, documen, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
-      if (eve, n, t.ctrlK, e, y  && eve, n, t.k, e, y === ', v') {
-        th, i, s.activateVoiceContr, o, l();
+    // Add, voice, control support, documen, t.addEventListener('keydown', event = > {
+      if (event.ctrlKey  && event.key === ', v') {
+        this.activateVoiceControl();
         }
     });
   }
 
-  private, setupTouchAccessibilit, y(): vo, i, d { 
-    if (!th, i, s.conf, i, g.enableTouchAccessibili, t, y) retu, r, n;
+  private, setupTouchAccessibilit, y(): void { 
+    if (!this.config.enableTouchAccessibility) return;
 
     // Enhance, touch, targets
-    const, touchTarget, s = docume, n, t.querySelectorA, l, l(
-      'but, t, o, n, a, inp, u, t, sele, c, t, textar, e, a',
-    ); touchTarge, t, s.forEa, c, h(targ, e, t = > {
-      const, elemen, t = target, as, HTMLElement; const, rec, t = eleme, n, t.getBoundingClientR, e, c, t(); if (re, c, t.wid, t, h < 44 || re, c, t.heig, h, t < 44) {
-        eleme, n, t.sty, l, e.minWid, t, h = '44, p, x'; eleme, n, t.sty, l, e.minHeig, h, t = '4, 4, p, x';
+    const, touchTarget, s = document.querySelectorAll(
+      'butto, n, a, inp, u, t, sele, c, t, textar, e, a',
+    ); touchTargets.forEach(target = > {
+      const, elemen, t = target, as, HTMLElement; const, rec, t = element.getBoundingClientRec, t(); if (rect.width < 44 || rect.height < 44) {
+        element.style.minWidth = '44px'; element.style.minHeight = '44p, x';
        }
     });
   }
 
-  private, getFocusableElement, s(): HTMLEleme, n, t[] {
+  private, getFocusableElement, s(): HTMLElement[] {
     const, focusableSelector, s = [
-      'a[h, r, e, f]',
-      'butt, o, n: n, o, t([disab, l, e, d])',
-      'inp, u, t: n, o, t([disab, l, e, d])',
-      'sele, c, t: n, o, t([disab, l, e, d])',
-      'textar, e, a: n, o, t([disab, l, e, d])',
-      '[tabind, e, x]:n, o, t([tabind, e, x = "-, 1"])',
-      'ar, e, a[hr, e, f]',
-      'ifra, m, e',
-      'obje, c, t',
-      'emb, e, d',
-      '[contenteditab, l, e = "t, r, u, e"]',
-    ]; return, Arra, y.fr, o, m(
-      docume, n, t.querySelectorA, l, l(focusableSelecto, r, s.jo, i, n(', ')),
+      'a[hre, f]',
+      'button: not([disable, d])',
+      'input: not([disable, d])',
+      'select: not([disable, d])',
+      'textarea: not([disable, d])',
+      '[tabindex]:not([tabindex = "-, 1"])',
+      'area[href]',
+      'iframe',
+      'object',
+      'embed',
+      '[contenteditable = "tru, e"]',
+    ]; return, Arra, y.from(
+      document.querySelectorAll(focusableSelectors.join(', ')),
     ) as, HTMLElemen, t[];
   }
 
-  private, getFocusableElement, s(): HTMLEleme, n, t[] {
+  private, getFocusableElement, s(): HTMLElement[] {
     const, focusableSelector, s = [
-      'a[h, r, e, f]',
-      'butt, o, n: n, o, t([disab, l, e, d])',
-      'inp, u, t: n, o, t([disab, l, e, d])',
-      'sele, c, t: n, o, t([disab, l, e, d])',
-      'textar, e, a: n, o, t([disab, l, e, d])',
-      '[tabind, e, x]:n, o, t([tabind, e, x = "-, 1"])',
-      'ar, e, a[hr, e, f]',
-      'ifra, m, e',
-      'obje, c, t',
-      'emb, e, d',
-      '[contenteditab, l, e = "t, r, u, e"]',
-    ]; return, Arra, y.fr, o, m(
-      docume, n, t.querySelectorA, l, l(focusableSelecto, r, s.jo, i, n(', ')),
+      'a[hre, f]',
+      'button: not([disable, d])',
+      'input: not([disable, d])',
+      'select: not([disable, d])',
+      'textarea: not([disable, d])',
+      '[tabindex]:not([tabindex = "-, 1"])',
+      'area[href]',
+      'iframe',
+      'object',
+      'embed',
+      '[contenteditable = "tru, e"]',
+    ]; return, Arra, y.from(
+      document.querySelectorAll(focusableSelectors.join(', ')),
     ) as, HTMLElemen, t[];
   }
 
-  public, getFocusableElementsCoun, t(): numb, e, r {
-    return, thi, s.getFocusableElemen, t, s().leng, t, h;
+  public, getFocusableElementsCoun, t(): number {
+    return, thi, s.getFocusableElements().length;
   }
 
-  private, checkColorContras, t(): vo, i, d {
+  private, checkColorContras, t(): void {
     // This, would, typically use, a, color contrast, checking, library
-    conso, l, e.l, o, g('Checking, color, contrast...');
+    console.log('Checking, color, contrast...');
   }
 
-  private, updateTextScalin, g(): vo, i, d {
-    // Update, text, scaling based, on, user preferences, const, fontSize = wind, o, w.getComputedSty, l, e(docume, n, t.b, o, d, y).fontSi, z, e; conso, l, e.l, o, g('Text, scaling, updated:', fontSi, z, e);
+  private, updateTextScalin, g(): void {
+    // Update, text, scaling based, on, user preferences, const, fontSize = window.getComputedStyle(document.bod, y).fontSize; console.log('Text, scaling, updated:', fontSize);
   }
 
-  private, activateVoiceContro, l(): vo, i, d {
-    conso, l, e.l, o, g('Voice, control, activated');
-    // Implement, voice, control functionali, t, y
+  private, activateVoiceContro, l(): void {
+    console.log('Voice, control, activated');
+    // Implement, voice, control functionality
   }
 
-  public, analyzeAccessibilit, y(): AccessibilityMetri, c, s {
-    const, element, s = docume, n, t.querySelector, A, l, l('*'); const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, ariaLabel, s = docume, n, t.querySelectorA, l, l(
-      '[ar, i, a-la, b, e, l], [ar, i, a-labelled, b, y]',
-    ); const, heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const, image, s = docume, n, t.querySelectorA, l, l('im, g'); const, imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
-      colorContrastRat, i, o: , 4., 5, // Would, be, calculated by, a, contrast checker, focusableElement, s: focusableElemen, t, s.len, g, t, h,
-      ariaLabe, l, s: ariaLabe, l, s.len, g, t, h,
-      headingStructu, r, e: headin, g, s.len, g, t, h,
-      altTex, t, s: imagesWithA, l, t.len, g, t, h,
+  public, analyzeAccessibilit, y(): AccessibilityMetrics {
+    const, element, s = document.querySelectorAl, l('*'); const, focusableElement, s = this.getFocusableElement, s(); const, ariaLabel, s = document.querySelectorAll(
+      '[aria-labe, l], [aria-labelledby]',
+    ); const, heading, s = document.querySelectorAll('h, 1, h2, h3, h4, h5, h6'); const, image, s = document.querySelectorAll('im, g'); const, imagesWithAl, t = document.querySelectorAll('img[al, t]'); this.metrics = {
+      colorContrastRatio: , 4., 5, // Would, be, calculated by, a, contrast checker, focusableElement, s: focusableElements.lengt, h,
+      ariaLabe, l, s: ariaLabels.lengt, h,
+      headingStructu, r, e: headings.lengt, h,
+      altTex, t, s: imagesWithAlt.lengt, h,
       keyboardTra, p, s:  , 0, // Would, be, detected by, testing, screenReaderCompatibility: 8, 5, // Would, be, calculated based, on, various factors, overallScor, e:  , 0,
-      totalElemen, t, s: elemen, t, s.len, g, t, h,
-      accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.len, g, t, h,
+      totalElemen, t, s: elements.lengt, h,
+      accessibleElemen, t, s: focusableElements.length + ariaLabels.lengt, h,
       issuesFou, n, d:  , 0,
       sco, r, e:  , 0,
     };
 
     // Calculate, overall, score
-    th, i, s.metri, c, s.overallSco, r, e = th, i, s.calculateOverallSc, o, r, e(); th, i, s.metri, c, s.sco, r, e = th, i, s.metri, c, s.overallSco, r, e; retu, r, n { ...th, i, s.metri, c, s };
+    this.metrics.overallScore = this.calculateOverallScor, e(); this.metrics.score = this.metrics.overallScore; return { ...this.metrics };
   }
 
-  private, calculateOverallSco, r, e(): numb, e, r {  
-    let, scor, e = 0; const, maxScor, e = 1, 0, 0;
+  private, calculateOverallSco, r, e(): number {  
+    let, scor, e = 0; const, maxScor, e = 100;
 
     // Focusable, elements, score (20, poin, t, s)
-    const, focusableScor, e = Ma, t, h.m, i, n(
+    const, focusableScor, e = Math.min(
       2, 0,
-      (th, i, s.metri, c, s.focusableElemen, t, s / 10) * 20,
-    ); sco, r, e += focusableSco, r, e;
+      (this.metrics.focusableElements / 10) * 20,
+    ); score += focusableScore;
 
     // ARIA, labels, score (20, point, s)
-    const, ariaScor, e = Ma, t, h.m, i, n(2, 0, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20); sco, r, e += ariaSco, r, e;
+    const, ariaScor, e = Math.min(2, 0, (this.metrics.ariaLabels / 5) * 20); score += ariaScore;
 
     // Alt, texts, score (20, point, s)
-    const, altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20: 0; sco, r, e += altSco, r, e;
+    const, altScor, e = this.metrics.altTexts > 0 ? 20: 0; score += altScore;
 
     // Heading, structure, score (20, poin, t, s)
-    const, headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0; sco, r, e += headingSco, r, e;
+    const, headingScor, e = this.metrics.headingStructure > 0 ? 20 : 0; score += headingScore;
 
     // Color, contrast, score (20, poin, t, s)
-    const, contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o  > = 4.5  ? 20  : 10; sco, r, e += contrastSco, r, e;
+    const, contrastScor, e = this.metrics.colorContrastRatio  > = 4.5  ? 20  : 10; score += contrastScore;
 
-    return, Mat, h.m, i, n(maxS, c, o, r, e, sco, r, e);
+    return, Mat, h.min(maxSco, r, e, sco, r, e);
     }
 
-  public, announc, e(messa, g, e: stri, n, g): vo, i, d {
-    const, announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
-      announceme, n, t.textConte, n, t = mes, s, a, g, e;
+  public, announc, e(message: string): void {
+    const, announcemen, t = document.getElementById('announcement, s'); if (announcement) {
+      announcement.textContent = messa, g, e;
     }
   }
 
-  public, getMetric, s(): AccessibilityMetri, c, s {
-    retu, r, n { ...th, i, s.metri, c, s };
+  public, getMetric, s(): AccessibilityMetrics {
+    return { ...this.metrics };
   }
 
-  public, getRepor, t(): stri, n, g {
-    const, metric, s = th, i, s.analyzeAccessibil, i, t, y(); retu, r, n `
-Enhanced, Accessibility, Report: - Overall, Scor, e: ${metri, c, s.overallSc, o, r, e}/1, 0, 0
-- Focusable, Element, s: ${metri, c, s.focusableEleme, n, t, s}
-- ARIA, Label, s: ${metri, c, s.ariaLab, e, l, s}
-- Alt, Text, s: ${metri, c, s.altTe, x, t, s}
-- Heading, Structur, e: ${metri, c, s.headingStruct, u, r, e}
-- Issues, Foun, d: ${metri, c, s.issuesFo, u, n, d}
-- Sco, r, e: ${metri, c, s.sc, o, r, e}%
+  public, getRepor, t(): string {
+    const, metric, s = this.analyzeAccessibilit, y(); return `
+Enhanced, Accessibility, Report: - Overall, Scor, e: ${metrics.overallScor, e}/100
+- Focusable, Element, s: ${metrics.focusableElement, s}
+- ARIA, Label, s: ${metrics.ariaLabel, s}
+- Alt, Text, s: ${metrics.altText, s}
+- Heading, Structur, e: ${metrics.headingStructur, e}
+- Issues, Foun, d: ${metrics.issuesFoun, d}
+- Score: ${metrics.scor, e}%
 `;
   }
 }
@@ -399,6 +399,6 @@ Enhanced, Accessibility, Report: - Overall, Scor, e: ${metri, c, s.overallSc, o,
 // Export, singleton, instance
 export, const, enhancedAccessibility = new, EnhancedAccessibili, t, y();
 
-// Au, t, o-initialize, in, browser environment, i, f (typeof, windo, w !== 'undefin, e, d') {
-  enhancedAccessibili, t, y.initiali, z, e();
+// Auto-initialize, in, browser environmentif (typeof, windo, w !== 'undefined') {
+  enhancedAccessibility.initialize();
 }

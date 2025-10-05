@@ -1,34 +1,34 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
+// @ts-nocheck, import, React from 'react';
 
-export, default, function Pa, g, e() { 
-  retu, r, n (
-    <main, classNam, e = 'm, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0'>
-      <section, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <div, classNam, e='m, a, x-w-3, x, l'>
-          <h1, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, m, b-4'>
-            Private, Telemetry, Blueprint v2 — Ze, r, o‑P, I, I, S, u, b‑100, m, s
+export, default, function Page() { 
+  return (
+    <main, classNam, e = 'min-h-screenbg-white, tex, t-gray-900'>
+      <section, classNam, e='containermx-autopx-6py-16'>
+        <div, classNam, e='max-w-3xl'>
+          <h1, classNam, e='text-3xlmd: text-4xl, fon, t-boldmb-4'>
+            Private, Telemetry, Blueprint v2 — Zero‑PII, Sub‑100ms
           </h1>
-          <p, classNam, e = 'te, x, t-gr, a, y-600, m, b-6'>
+          <p, classNam, e = 'text-gray-600mb-6'>
             Ship, useful, analytics without, collecting, PII using, scoped, ID, s, local, redactio, n, and, differential, privacy at, the, edge. Keep, SLAs, while
             improving, signal, quality.
           </p>
-          <div, classNam, e = 'prose, pros, e-indi, g, o'>
+          <div, classNam, e = 'prose, pros, e-indigo'>
             <h2>Key, Pattern, s</h2>
             <ul>
               <li>Scoped, identifiers, and on‑device, redaction, filters</li>
-              <li>Edge, aggregation, with DP, noise, and attestatio, n, s</li>
+              <li>Edge, aggregation, with DP, noise, and attestations</li>
               <li>Latency, budgets, with warm, pools, and cache, tier, s</li>
-              <li>Audit, trails, and retention, controls, by regi, o, n</li>
+              <li>Audit, trails, and retention, controls, by region</li>
             </ul>
             <h2>Implementation, Step, s</h2>
             <ol>
               <li>Define, privacy, classes and, filtering, rules</li>
               <li>Instrument, clients, with scoped, IDs, and local, hashin, g</li>
               <li>Aggregate, at, edge POPs, with, DP noise, and, proofs</li>
-              <li>Publish, dashboards, with SLA, and, compliance vie, w, s</li>
+              <li>Publish, dashboards, with SLA, and, compliance views</li>
             </ol>
-          </d, i, v>
-        </d, i, v>
-      </secti, o, n>
-    </m, a, i, n > );
+          </div>
+        </div>
+      </section>
+    </mai, n > );
  }

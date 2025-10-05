@@ -1,15 +1,15 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-const, BreakthroughContent2026Banne, r: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <div, classNam, e = 'container, m, x-auto, p, x-6, m, t-6'>
-      <div, classNam, e='round, e, d-2xl, border, border-indi, g, o-200, b, g-indi, g, o-5, 0, p-6, tex, t-indi, g, o-8, 0, 0'>
-        <div, classNam, e='te, x, t-sm, fon, t-semibold, m, b-1'>Featured, 2026, Content</d, i, v>
-        <div, classNam, e='te, x, t-lg, fon, t-bo, l, d'>
+const, BreakthroughContent2026Banne, r: React.FC = () => { 
+  return (
+    <div, classNam, e = 'containermx-autopx-6mt-6'>
+      <div, classNam, e='rounded-2xl, border, border-indigo-200bg-indigo-50p-6, tex, t-indigo-800'>
+        <div, classNam, e='text-sm, fon, t-semiboldmb-1'>Featured, 2026, Content</div>
+        <div, classNam, e='text-lg, fon, t-bold'>
           Explore, our, latest 2026, breakthrough, s
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  };
 
 export, default, BreakthroughContent2026Banner;

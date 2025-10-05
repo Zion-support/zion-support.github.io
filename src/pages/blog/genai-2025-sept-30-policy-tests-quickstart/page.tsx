@@ -1,31 +1,31 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// Minimal, type, s; removets-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>GenAI, 202, 5: Policy, Tests, Quickstart</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Lightweight, CI, policy tests, wired, to KPIs, to, ship faster, without, regressions.'
+export, default, function PolicyTestsQuickstart2025(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>GenAI, 202, 5: Policy, Tests, Quickstart</title>
+        <meta, nam, e='description'
+          content='Lightweight, CI, policy tests, wired, to KPIs, to, ship faster, without, regressions.'
         />
-        <link, re, l='canonic, a, l'
-          hr, e, f='htt, p, s://ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-se, p, t-30-poli, c, y-tes, t, s-quicksta, r, t'
+        <link, re, l='canonical'
+          href='https://ziontechgroup.com/blog/genai-2025-sept-30-policy-tests-quickstart'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           GenAI, 202, 5: Policy, Tests, Quickstart
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          K, P, I‑linked, CI, checks that, keep, teams fast, and, safe.
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          KPI‑linked, CI, checks that, keep, teams fast, and, safe.
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            Add, a, minim, a, l, pragmatic, layer, of CI, policy, tests mapped, to, measurable outcom, e, s. Catch, regressions, early without, blocking, delivery, using, budget, s, canari, e, s, and, rollback, triggers.
+            Add, a, minim, a, l, pragmatic, layer, of CI, policy, tests mapped, to, measurable outcomes. Catch, regressions, early without, blocking, delivery, using, budget, s, canaries, and, rollback, triggers.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

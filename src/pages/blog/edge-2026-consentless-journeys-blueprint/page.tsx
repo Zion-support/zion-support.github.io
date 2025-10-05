@@ -1,39 +1,39 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function EdgeConsentlessJourneysBlueprint20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>
-          Edge, 202, 6: Consentless, Journeys, Blueprint — Ze, r, o‑P, I, I, &lt; 100, m, s
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Scoped, I, D, s, on‑device, cohort, s, and, DP, noise for, complian, t, personalized, journeys, worldwide.'
+export, default, function EdgeConsentlessJourneysBlueprint2026(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>
+          Edge, 202, 6: Consentless, Journeys, Blueprint — Zero‑PII, &lt; 100ms
+        </title>
+        <meta, nam, e = 'description'
+          content='ScopedID, s, on‑device, cohort, s, and, DP, noise for, complian, t, personalized, journeys, worldwide.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 6-consentle, s, s-journe, y, s-bluepri, n, t'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2026-consentless-journeys-blueprint'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           Edge, 202, 6: Consentless, Journeys, Blueprint
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Scoped, ID, s • On‑device, cohort, s • DP, nois, e • &lt; 100, m, s
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          Scoped, ID, s • On‑device, cohort, s • DP, nois, e • &lt; 100ms
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
-            This, blueprint, outlines how, to, deliver personal, i, z, e, d,
+            This, blueprint, outlines how, to, deliver personaliz, e, d,
             priva, c, y‑preserving, journeys, without collecting, PI, I. It, uses, scoped
-            identifie, r, s, on‑device, cohortin, g, and, differential, privacy to, unlock, actionable insights, while, staying under, global, latency budge, t, s.
+            identifiers, on‑device, cohortin, g, and, differential, privacy to, unlock, actionable insights, while, staying under, global, latency budgets.
           </p>
           <p>
             You, will, learn cohort, desig, n, local, aggregatio, n, DP, configuratio, n,
             attestation, hook, s, and, rollout, patterns that, let, you A/B, test, features worldwide, with, confidence.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

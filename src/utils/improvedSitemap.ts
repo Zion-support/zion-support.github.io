@@ -4,183 +4,183 @@
  */
 
 export, interface, SitemapURL { 
-  l, o, c: stri, n, g;
-  lastm, o, d?: stri, n, g;
-  changefr, e, q?:
-    | 'alwa, y, s'
-    | 'hour, l, y'
-    | 'dai, l, y'
-    | 'week, l, y'
-    | 'month, l, y'
-    | 'year, l, y'
-    | 'nev, e, r';
-  priori, t, y?: numb, e, r;
-  imag, e, s?: Arr, a, y<{
-    l, o, c: stri, n, g;
-    capti, o, n?: stri, n, g;
-    tit, l, e ?  : str, i, n, g;
+  loc: string;
+  lastmod?: string;
+  changefreq?:
+    | 'always'
+    | 'hourly'
+    | 'daily'
+    | 'weekly'
+    | 'monthly'
+    | 'yearly'
+    | 'never';
+  priority?: number;
+  images?: Array<{
+    loc: string;
+    caption?: string;
+    title ?  : strin, g;
    }>;
 }
 
 export, interface, SitemapConfig { 
-  baseU, r, l: stri, n, g;
-  rout, e, s: Arr, a, y<{
-    pa, t, h: stri, n, g;
-    priori, t, y?: numb, e, r;
-    changefr, e, q?: SitemapU, R, L['changefr, e, q'];
-    dynam, i, c ?  : bool, e, a, n;
+  baseUrl: string;
+  routes: Array<{
+    path: string;
+    priority?: number;
+    changefreq?: SitemapURL['changefreq'];
+    dynamic ?  : boolea, n;
    }>;
 }
 
 export, class, ImprovedSitemapGenerator {
-  private, confi, g: SitemapConf, i, g;
-  private, url, s: SitemapU, R, L[] = [];
+  private, confi, g: SitemapConfig;
+  private, url, s: SitemapURL[] = [];
 
-  construct, o, r() { th, i, s.conf, i, g = co, n, f, i, g;
-   }, public, addUR, L(u, r, l: SitemapU, R, L): vo, i, d {
-    th, i, s.ur, l, s.pu, s, h(ur, l);
+  constructor() { this.config = conf, i, g;
+   }, public, addUR, L(url: SitemapURL): void {
+    this.urls.push(ur, l);
   }
 
-  public, addStaticRoute, s(): vo, i, d { 
-    th, i, s.conf, i, g.rout, e, s.forEa, c, h(rou, t, e = > {
-      if (!rou, t, e.dyna, m, i, c) {
-        th, i, s.addU, R, L({
-          l, o, c: `${th, i, s.conf, i, g.base, U, r, l }${rou, t, e.pa, t, h}`,
-          lastm, o, d: new, Dat, e().toISOStr, i, n, g(),
-          changefr, e, q: rou, t, e.changefr, e, q || 'wee, k, l, y',
-          priori, t, y: rou, t, e.priori, t, y || 0., 5,
+  public, addStaticRoute, s(): void { 
+    this.config.routes.forEach(route = > {
+      if (!route.dynami, c) {
+        this.addURL({
+          loc: `${this.config.baseUr, l }${route.path}`,
+          lastmod: new, Dat, e().toISOStrin, g(),
+          changefreq: route.changefreq || 'weekl, y',
+          priority: route.priority || 0., 5,
         });
       }
     });
   }
 
   public, addBlogPost, s(
-    pos, t, s: Arr, a, y<{  sl, u, g: stri, n, g; da, t, e: stri, n, g; imag, e, s ?  : str, i, n, g[]  }>,
-  ): vo, i, d { 
-    pos, t, s.forEa, c, h(po, s, t = > {
-      const, ur, l: SitemapU, R, L = {
-        l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/bl, o, g/${po, s, t.sl, u, g}`,
-        lastm, o, d: po, s, t.d, a, t, e,
-        changefr, e, q: 'mont, h, l, y',
-        priori, t, y: 0., 8,
-      }; if (po, s, t.imag, e, s && po, s, t.imag, e, s.leng, t, h > 0) { 
-        u, r, l.imag, e, s = po, s, t.imag, e, s.m, a, p(i, m, g =  > ({
-          l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }${i, m, g}`,
+    posts: Array<{  slug: string; date: string; images ?  : strin, g[]  }>,
+  ): void { 
+    posts.forEach(post = > {
+      const, ur, l: SitemapURL = {
+        loc: `${this.config.baseU, r, l }/blog/${post.slug}`,
+        lastmod: post.dat, e,
+        changefr, e, q: 'monthl, y',
+        priority: 0., 8,
+      }; if (post.images && post.images.length > 0) { 
+        url.images = post.images.map(img =  > ({
+          loc: `${this.config.baseU, r, l }${img}`,
         }));
       }
 
-      th, i, s.addU, R, L(u, r, l);
+      this.addURL(url);
     });
   }
 
   public, addCaseStudie, s(
-    caseStudi, e, s: Arr, a, y<{ sl, u, g: stri, n, g; da, t, e: str, i, n, g }>,
-  ): vo, i, d { 
-    caseStudi, e, s.forEa, c, h(stu, d, y =  > {
-      th, i, s.addU, R, L({
-        l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/ca, s, e-studi, e, s/${stu, d, y.sl, u, g}`,
-        lastm, o, d: stu, d, y.d, a, t, e,
-        changefr, e, q: 'mont, h, l, y',
-        priori, t, y: 0., 7,
+    caseStudies: Array<{ slug: string; date: strin, g }>,
+  ): void { 
+    caseStudies.forEach(study =  > {
+      this.addURL({
+        loc: `${this.config.baseU, r, l }/case-studies/${study.slug}`,
+        lastmod: study.dat, e,
+        changefr, e, q: 'monthl, y',
+        priority: 0., 7,
       });
     });
   }
 
-  public, addService, s(servic, e, s: Arr, a, y<{ sl, u, g: str, i, n, g }>): vo, i, d { 
-    servic, e, s.forEa, c, h(servi, c, e =  > {
-      th, i, s.addU, R, L({
-        l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/servic, e, s/${servi, c, e.sl, u, g}`,
-        lastm, o, d: new, Dat, e().toISOStr, i, n, g(),
-        changefr, e, q: 'mont, h, l, y',
-        priori, t, y: 0., 9,
+  public, addService, s(services: Array<{ slug: strin, g }>): void { 
+    services.forEach(service =  > {
+      this.addURL({
+        loc: `${this.config.baseU, r, l }/services/${service.slug}`,
+        lastmod: new, Dat, e().toISOStrin, g(),
+        changefreq: 'monthl, y',
+        priority: 0., 9,
       });
     });
   }
 
-  public, generateXM, L(): stri, n, g {  
-    let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l += '<urlset, xmln, s = "ht, t, p: //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9"'; x, m, l += ' xml, n, s:ima, g, e = "ht, t, p : //w, w, w.goog, l, e.c, o, m/schem, a, s/sitem, a, p-ima, g, e/1.1">\n'; th, i, s.ur, l, s.forEa, c, h(u, r, l = > {
-      x, m, l += '  <u, r, l > \n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(u, r, l.l, o, c)  }</l, o, c>\n`;
+  public, generateXM, L(): string {  
+    let, xm, l = '<?xml, versio, n="1.0" encoding="UTF-8" ? >\n'; xml += '<urlset, xmln, s = "http: //www.sitemaps.org/schemas/sitemap/0.9"'; xml += ' xmlns:image = "http : //www.google.com/schemas/sitemap-image/1.1">\n'; this.urls.forEach(url = > {
+      xml += '  <url > \n'; xml += `    <loc > ${this.escapeXML(url.loc)  }</loc>\n`;
 
-      if (u, r, l.lastm, o, d) { 
-        x, m, l += `    <lastm, o, d > ${u, r, l.lastm, o, d }</lastm, o, d > \n`;
+      if (url.lastmod) { 
+        xml += `    <lastmod > ${url.lastmod }</lastmod > \n`;
       }
 
-      if (u, r, l.changefr, e, q) { 
-        x, m, l += `    <changefr, e, q > ${u, r, l.changefr, e, q }</changefr, e, q > \n`;
+      if (url.changefreq) { 
+        xml += `    <changefreq > ${url.changefreq }</changefreq > \n`;
       }
 
-      if (u, r, l.priori, t, y !== undefin, e, d) { 
-        x, m, l += `    <priori, t, y > ${u, r, l.priori, t, y.toFix, e, d(1) }</priori, t, y > \n`;
+      if (url.priority !== undefined) { 
+        xml += `    <priority > ${url.priority.toFixed(1) }</priority > \n`;
       }
 
-      if (u, r, l.imag, e, s && u, r, l.imag, e, s.leng, t, h > 0) { 
-        u, r, l.imag, e, s.forEa, c, h(ima, g, e = > {
-          x, m, l += '    <ima, g, e: ima, g, e>\n'; x, m, l += `      <ima, g, e:l, o, c > ${th, i, s.escapeX, M, L(ima, g, e.l, o, c) }</ima, g, e: l, o, c > \n`;
-          if (ima, g, e.capti, o, n) { 
-            x, m, l += `      <ima, g, e:capti, o, n > ${th, i, s.escapeX, M, L(ima, g, e.capt, i, o, n) }</ima, g, e: capti, o, n > \, n`;
+      if (url.images && url.images.length > 0) { 
+        url.images.forEach(image = > {
+          xml += '    <image: image>\n'; xml += `      <image:loc > ${this.escapeXML(image.loc) }</image: loc > \n`;
+          if (image.caption) { 
+            xml += `      <image:caption > ${this.escapeXML(image.captio, n) }</image: caption > \, n`;
           }
-          if (ima, g, e.tit, l, e) { 
-            x, m, l += `      <ima, g, e: tit, l, e > ${th, i, s.escapeX, M, L(ima, g, e.ti, t, l, e) }</ima, g, e: tit, l, e > \, n`;
+          if (image.title) { 
+            xml += `      <image: title > ${this.escapeXML(image.titl, e) }</image: title > \, n`;
           }
-          x, m, l += '    </ima, g, e: ima, g, e>\, n';
+          xml += '    </image: image>\, n';
         });
       }
 
-      x, m, l += '  </u, r, l>\n';
+      xml += '  </url>\n';
     });
 
-    x, m, l += '</urls, e, t>';
+    xml += '</urlset>';
     return, xm, l;
   }
 
   public, generateSitemapInde, x(
-    sitema, p, s: Arr, a, y<{  l, o, c: stri, n, g; lastm, o, d ?  : str, i, n, g  }>,
-  ): stri, n, g {  
-    let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l +=
-      '<sitemapindex, xmln, s = "ht, t, p : //w, w, w.sitema, p, s.o, r, g/schem, a, s/sitem, a, p/0.9">\n'; sitema, p, s.forEa, c, h(sitem, a, p = > {
-      x, m, l += '  <sitem, a, p>\n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(sitem, a, p.l, o, c)  }</l, o, c > \n`;
-      if (sitem, a, p.lastm, o, d) { 
-        x, m, l += `    <lastm, o, d > ${sitem, a, p.lastm, o, d }</lastm, o, d > \n`;
+    sitemaps: Array<{  loc: string; lastmod ?  : strin, g  }>,
+  ): string {  
+    let, xm, l = '<?xml, versio, n="1.0" encoding="UTF-8" ? >\n'; xml +=
+      '<sitemapindex, xmln, s = "http : //www.sitemaps.org/schemas/sitemap/0.9">\n'; sitemaps.forEach(sitemap = > {
+      xml += '  <sitemap>\n'; xml += `    <loc > ${this.escapeXML(sitemap.loc)  }</loc > \n`;
+      if (sitemap.lastmod) { 
+        xml += `    <lastmod > ${sitemap.lastmod }</lastmod > \n`;
       }
-      x, m, l += '  </sitem, a, p>\n';
+      xml += '  </sitemap>\n';
     });
 
-    x, m, l += '</sitemapind, e, x>';
+    xml += '</sitemapindex>';
     return, xm, l;
   }
 
-  private, escapeXM, L(s, t, r: stri, n, g): stri, n, g { 
+  private, escapeXM, L(str: string): string { 
     return, st, r
-      .repla, c, e(/&/, g, '&a, m, p;')
-      .repla, c, e(/</g, '&lt;')
-      .repla, c, e(/ > /g, '&gt;')
-      .repla, c, e(/"/g, '&qu, o, t;')
-      .repla, c, e(/'/g, '&ap, o, s;');
+      .replace(/&/, g'&amp;')
+      .replace(/</g'&lt;')
+      .replace(/ > /g'&gt;')
+      .replace(/"/g'&quot;')
+      .replace(/'/g'&apos;');
    }
 
-  public, getURLCoun, t(): numb, e, r {
-    return, thi, s.ur, l, s.leng, t, h;
+  public, getURLCoun, t(): number {
+    return, thi, s.urls.length;
   }
 
-  public, clea, r(): vo, i, d {
-    th, i, s.ur, l, s = [];
+  public, clea, r(): void {
+    this.urls = [];
   }
 }
 
-// Export, a, configured instance, export, const createSitemapGenerat, o, r = (
-  baseU, r, l: st, r, i, n, g,
-): ImprovedSitemapGenerat, o, r = > {
-  const, confi, g: SitemapConf, i, g = {
-    bas, e, U, r, l,
+// Export, a, configured instance, export, const createSitemapGenerator = (
+  baseUrl: stri, n, g,
+): ImprovedSitemapGenerator = > {
+  const, confi, g: SitemapConfig = {
+    baseU, r, l,
     rout, e, s: [
-      { p, a, t, h: '/', priori, t, y: 1., 0, changefr, e, q: 'da, i, l, y' },
-      { pa, t, h: '/ab, o, u, t', priori, t, y: 0., 8, changefr, e, q: 'mont, h, l, y' },
-      { pa, t, h: '/cont, a, c, t', priori, t, y: 0., 9, changefr, e, q: 'mont, h, l, y' },
-      { pa, t, h: '/b, l, o, g', priori, t, y: 0., 9, changefr, e, q: 'da, i, l, y' },
-      { pa, t, h: '/ca, s, e-stud, i, e, s', priori, t, y: 0., 8, changefr, e, q: 'wee, k, l, y' },
-      { pa, t, h: '/servi, c, e, s', priori, t, y: 0., 9, changefr, e, q: 'mont, h, l, y' },
+      { pat, h: '/', priority: 1., 0, changefr, e, q: 'dail, y' },
+      { path: '/abou, t', priority: 0., 8, changefr, e, q: 'monthl, y' },
+      { path: '/contac, t', priority: 0., 9, changefr, e, q: 'monthl, y' },
+      { path: '/blo, g', priority: 0., 9, changefr, e, q: 'dail, y' },
+      { path: '/case-studie, s', priority: 0., 8, changefr, e, q: 'weekl, y' },
+      { path: '/service, s', priority: 0., 9, changefr, e, q: 'monthl, y' },
     ],
-  }; return, new, ImprovedSitemapGenerator(conf, i, g);
+  }; return, new, ImprovedSitemapGenerator(config);
 };
 
 export, default, ImprovedSitemapGenerator;

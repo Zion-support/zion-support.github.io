@@ -1,136 +1,136 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
-impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 const, October2025TechBannerNe, w = () => {
   const, newArticle, s = [
     {",
-      tit, l, e: "Ne, x, t-Gen, Autonomous, System, s",
-      descripti, o, n: "The, 2025, Enterprise Revolut, i, o, n",",
-      sl, u, g: "ai-20, 2, 5-o, c, t-17-ne, x, t-g, e, n-autonomo, u, s-syst, e, m, s",
-      ic, o, n: Br, a, i, n,",
-      col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0",
-      highlig, h, t: "NE, W"
+      title: "Next-Gen, Autonomous, System, s",
+      description: "The, 2025, Enterprise Revolutio, n",",
+      slug: "ai-2025-oct-17-next-gen-autonomous-system, s",
+      icon: Brai, n",
+      color: "from-purple-500to-pink-50, 0",
+      highlight: "NE, W"
     },
     {",
-      tit, l, e: "Generative, AI, Code Generat, i, o, n",
-      descripti, o, n: "Transforming, Software, Developmen, t",",
-      sl, u, g: "ai-20, 2, 5-o, c, t-17-generati, v, e-ai-co, d, e-generat, i, o, n",
-      ic, o, n: Co, d, e, 2,",
-      col, o, r: "fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0",
-      highlig, h, t: "HO, T"
+      title: "Generative, AI, Code Generatio, n",
+      description: "Transforming, Software, Developmen, t",",
+      slug: "ai-2025-oct-17-generative-ai-code-generatio, n",
+      icon: Code, 2",
+      color: "from-blue-500to-cyan-50, 0",
+      highlight: "HO, T"
     },
     {",
-      tit, l, e: "Re, a, l-Time, Personalization, Engine, s",
-      descripti, o, n: "Revolutionizing, Customer, Experienc, e",",
-      sl, u, g: "ai-20, 2, 5-o, c, t-17-re, a, l-ti, m, e-personalizati, o, n-engi, n, e, s",
-      ic, o, n: Za, p,",
-      col, o, r: "fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0",
-      highlig, h, t: "TREND, I, N, G"
+      title: "Real-Time, Personalization, Engine, s",
+      description: "Revolutionizing, Customer, Experienc, e",",
+      slug: "ai-2025-oct-17-real-time-personalization-engine, s",
+      icon: Za, p",
+      color: "from-orange-500to-red-50, 0",
+      highlight: "TRENDIN, G"
     }
-  ]; retu, r, n (
-    <moti, o, n.div, initia, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-      anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-      transiti, o, n = {{ durati, o, n: , 0., 6 }}
-      classNa, m, e = "relative, overflo, w-hidden, rounde, d-2xl, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-sla, t, e-90, 0, p-8, m, d: p-12, shado, w-2xl, m, y-12"
+  ]; return (
+    <motion.div, initia, l = {{ opacit, y:  , 0, y: 2, 0 }}
+      animate = {{ opacit, y:  , 1, y:  , 0 }}
+      transition = {{ duration: , 0., 6 }}
+      className = "relative, overflo, w-hidden, rounde, d-2xlbg-gradient-to-br, fro, m-slate-900, vi, a-purple-900to-slate-900p-8md: p-12, shado, w-2xlmy-12"
     >
       {/* Animated, background, effe, c, t */}
-      <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-pi, n, k-5, 0, 0/10, t, o-bl, u, e-5, 0, 0/10, animat, e-pul, s, e" />
+      <div, classNam, e = "absolute, inse, t-0bg-gradient-to-r, fro, m-purple-500/10, vi, a-pink-500/10to-blue-500/10, animat, e-pulse" />
       {/* Decorative, element, s */}
-      <div, classNam, e="absolute, to, p-0, righ, t-0 w-6, 4, h-64, b, g-purp, l, e-5, 0, 0/20, rounde, d-full, blu, r-3, x, l" />
-      <div, classNam, e="absolute, botto, m-0, lef, t-0 w-6, 4, h-64, b, g-bl, u, e-5, 0, 0/20, rounde, d-full, blu, r-3, x, l" />
-      <div, classNam, e="relativ, e, z-10">
-        {/* Head, e, r */}
-        <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3, m, b-6">
-          <moti, o, n.div, animat, e={{ rota, t, e: 3, 6, 0 }}
-            transiti, o, n = {{ durati, o, n: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+      <div, classNam, e="absolute, to, p-0, righ, t-0 w-64h-64bg-purple-500/20, rounde, d-full, blu, r-3xl" />
+      <div, classNam, e="absolute, botto, m-0, lef, t-0 w-64h-64bg-blue-500/20, rounde, d-full, blu, r-3xl" />
+      <div, classNam, e="relativez-10">
+        {/* Header */}
+        <div, classNam, e="flex, item, s-center, justif, y-center, ga, p-3mb-6">
+          <motion.div, animat, e={{ rotate: 360 }}
+            transition = {{ duration: , 2, 0, repe, a, t: Infinit, y, ea, s, e: "linea, r" }}
           >
-            <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
-          </moti, o, n.d, i, v>
-          <h2, classNam, e="te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, tex, t-cent, e, r">
+            <Sparkles, classNam, e = "w-8 h-8, tex, t-yellow-400" />
+          </motion.div>
+          <h2, classNam, e="text-3xlmd: text-4xl, fon, t-bold, tex, t-white, tex, t-center">
             Fresh, AI, Insights for, October, 2025
           </h2>
-          <moti, o, n.div, animat, e={{ rota, t, e: -3, 6, 0 }}
-            transiti, o, n = {{ durati, o, n: , 2, 0, repe, a, t: Infin, i, t, y, ea, s, e: "lin, e, a, r" }}
+          <motion.div, animat, e={{ rotate: -360 }}
+            transition = {{ duration: , 2, 0, repe, a, t: Infinit, y, ea, s, e: "linea, r" }}
           >
-            <Sparkles, classNam, e = "w-8 h-8, tex, t-yell, o, w-4, 0, 0" />
-          </moti, o, n.d, i, v>
-        </d, i, v>
-        <p, classNam, e="te, x, t-lg, m, d: te, x, t-xl, tex, t-purp, l, e-200, tex, t-center, m, b-10, ma, x-w-3xl, m, x-au, t, o">
+            <Sparkles, classNam, e = "w-8 h-8, tex, t-yellow-400" />
+          </motion.div>
+        </div>
+        <p, classNam, e="text-lgmd: text-xl, tex, t-purple-200, tex, t-centermb-10, ma, x-w-3xlmx-auto">
           Explore, the, latest breakthrough, technologies, transforming industries, worldwid, e. 
           Our, expert, team shares, cuttin, g-edge, insights, you can, implement, today.
         </p>
-        {/* Articles, G, r, i, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-3, ga, p-6, m, b-8">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
-            <moti, o, n.div, ke, y = { artic, l, e.s, l, u, g  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 5, del, a, y: ind, e, x * 0., 1 }}
-              whileHov, e, r = {{ sca, l, e: 1., 0, 5 }}
-              classNa, m, e = "relative, grou, p"
+        {/* ArticlesGr, i, d */}
+        <div, classNam, e = "gridmd: grid-cols-3, ga, p-6mb-8">
+          { newArticles.map((artic, l, e, ind, e, x) = > (
+            <motion.div, ke, y = { article.slu, g  }, initial = {{ opacit, y:  , 0, y: 2, 0 }}
+              animate = {{ opacit, y:  , 1, y:  , 0 }}
+              transition = {{ duration: , 0., 5, del, a, y: index * 0., 1 }}
+              whileHover = {{ scale: 1., 0, 5 }}
+              className = "relative, grou, p"
             >
-              <Link, t, o={`/bl, o, g/${artic, l, e.sl, u, g}`}>
-                <div, classNam, e="relative, b, g-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-x, l, p-6 h-full, border, border-whi, t, e/20, hove, r: bord, e, r-whi, t, e/40, transitio, n-all, duratio, n-3, 0, 0"  > {/* Highlight, Ba, d, g, e */}
-                  <div, classNam, e = {`absolute, to, p-4, righ, t-4, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-white, b, g-gradie, n, t-to-r ${artic, l, e.col, o, r}`}>
-                    {artic, l, e.highlig, h, t}
-                  </d, i, v  > {/* Ic, o, n */}
-                  <div, classNam, e = { `w-1, 4, h-14, rounde, d-lg, b, g-gradie, n, t-to-br ${artic, l, e.co, l, o, r }, flex, item, s-center, justif, y-center, m, b-4, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-30, 0`}>
-                    <artic, l, e.icon, classNam, e = "w-7 h-7, tex, t-whi, t, e"</d, i, v>
-                  {/* Conte, n, t */}
-                  <h3, classNam, e="te, x, t-xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-purp, l, e-300, transitio, n-colo, r, s">
-                    {artic, l, e.t, i, t, l, e}
+              <Linkto={`/blog/${article.slug}`}>
+                <div, classNam, e="relativebg-white/10, backdro, p-blur-lg, rounde, d-xlp-6 h-full, border, border-white/20, hove, r: border-white/40, transitio, n-all, duratio, n-300"  > {/* Highlight, Ba, d, g, e */}
+                  <div, classNam, e = {`absolute, to, p-4, righ, t-4px-3py-1, rounde, d-full, tex, t-xs, fon, t-bold, tex, t-whitebg-gradient-to-r ${article.color}`}>
+                    {article.highlight}
+                  </div  > {/* Icon */}
+                  <div, classNam, e = { `w-14h-14, rounde, d-lgbg-gradient-to-br ${article.colo, r }, flex, item, s-center, justif, y-centermb-4, grou, p-hover: scale-110, transitio, n-transform, duratio, n-30, 0`}>
+                    <article.icon, classNam, e = "w-7 h-7, tex, t-white"</div>
+                  {/* Content */}
+                  <h3, classNam, e="text-xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover: text-purple-300, transitio, n-colors">
+                    {article.tit, l, e}
                   </h3>
-                  <p, classNam, e = "te, x, t-purp, l, e-200, tex, t-sm, m, b-4">
-                    {artic, l, e.descripti, o, n}
+                  <p, classNam, e = "text-purple-200, tex, t-smmb-4">
+                    {article.description}
                   </p>
                   {/* Read, More, Link */}
-                  <div, classNam, e="flex, item, s-center, tex, t-purp, l, e-300, grou, p-hov, e, r: te, x, t-purp, l, e-100, transitio, n-colo, r, s">
-                    <span, classNam, e="te, x, t-sm, fon, t-semibo, l, d">Read, Articl, e</sp, a, n>
-                    <ArrowRight, classNam, e="w-4 h-4, m, l-2, grou, p-hov, e, r:transla, t, e-x-2, transitio, n-transfo, r, m" />
-                  </d, i, v>
-                </d, i, v>
-              </Li, n, k>
-            </moti, o, n.d, i, v>
+                  <div, classNam, e="flex, item, s-center, tex, t-purple-300, grou, p-hover: text-purple-100, transitio, n-colors">
+                    <span, classNam, e="text-sm, fon, t-semibold">Read, Articl, e</span>
+                    <ArrowRight, classNam, e="w-4 h-4ml-2, grou, p-hover:translate-x-2, transitio, n-transform" />
+                  </div>
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </d, i, v>
+        </div>
         {/* CTA, Sectio, n */}
-        <div, classNam, e = "te, x, t-cent, e, r">
-          <div, classNam, e="inli, n, e-flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, item, s-center, justif, y-cent, e, r">
-            <Link, t, o="/bl, o, g"
-              classNa, m, e="group, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-purp, l, e-600, t, o-pi, n, k-600, hove, r:fr, o, m-purp, l, e-700, hove, r:to-pi, n, k-700, tex, t-white, fon, t-bold, rounde, d-xl, shado, w-lg, hove, r:shad, o, w-xl, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2"
+        <div, classNam, e = "text-center">
+          <div, classNam, e="inline-flex, fle, x-colsm: flex-row, ga, p-4, item, s-center, justif, y-center">
+            <Linkto="/blog"
+              className="grouppx-8py-4bg-gradient-to-r, fro, m-purple-600to-pink-600, hove, r:from-purple-700, hove, r:to-pink-700, tex, t-white, fon, t-bold, rounde, d-xl, shado, w-lg, hove, r:shadow-xl, transitio, n-all, duratio, n-300, flex, items-center, ga, p-2"
             >
-              <sp, a, n>Explore, All, Articles</sp, a, n>
-              <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </Li, n, k>
-            <Link, t, o="/conta, c, t"
-              classNa, m, e="px-8, p, y-4, b, g-whi, t, e/10, hove, r:bg-whi, t, e/20, backdro, p-bl, u, r-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-whi, t, e/30, hove, r:bord, e, r-whi, t, e/50, transitio, n-all, duratio, n-3, 0, 0"
+              <span>Explore, All, Articles</span>
+              <ArrowRight, classNam, e="w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform" />
+            </Link>
+            <Linkto="/contact"
+              className="px-8py-4bg-white/10, hove, r:bg-white/20, backdro, p-blur-lg, tex, t-white, fon, t-bold, rounde, d-xl, borde, r-2, borde, r-white/30, hove, r:border-white/50, transitio, n-all, duratio, n-300"
             >
               Get, Expert, Consultation
-            </Li, n, k>
-          </d, i, v>
-          <p, classNam, e="mt-6, tex, t-purp, l, e-300, tex, t-sm">
-            💡 <stro, n, g>Jo, i, n , 1, 0,0, 0, 0+ tech, leader, s</stro, n, g> staying, ahead, with our, insight, s
+            </Link>
+          </div>
+          <p, classNam, e="mt-6, tex, t-purple-300, tex, t-sm">
+            💡 <strong>Join , 100, 0, 0+ tech, leader, s</strong> staying, ahead, with our, insight, s
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
       {/* Floating, particles, effect */}
-      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidden, pointe, r-even, t, s-no, n, e">
-        { [...Arr, a, y(2, 0)].m, a, p((_, i) =    > (
-          <moti, o, n.div, ke, y = { , i  }, classNa, m, e = "absolut, e, w-2 h-2, b, g-purp, l, e-4, 0, 0/30, rounde, d-fu, l, l"
-            sty, l, e={{
-              le, f, t: `${Ma, t, h.ran, d, o, m() * 10, 0}%`,
-              t, o, p: `${Ma, t, h.rand, o, m() * 10, 0}%`,
+      <div, classNam, e = "absolute, inse, t-0, overflo, w-hidden, pointe, r-events-none">
+        { [...Array(2, 0)].map((_, i) =    > (
+          <motion.div, ke, y = { , i  }, className = "absolutew-2 h-2bg-purple-400/30, rounde, d-full"
+            style={{
+              left: `${Math.rando, m() * 10, 0}%`,
+              top: `${Math.random() * 10, 0}%`,
             }}
-            anima, t, e = {{
+            animate = {{
               , y: [, 0, -30, 0],
-              opaci, t, y: [0., 2, 0.5, 0.2],
+              opacity: [0., 2, 0.5, 0.2],
             }}
-            transiti, o, n = {{
-              durati, o, n: 3 + Ma, t, h.ran, d, o, m() * , 2,
-              repe, a, t: Infin, i, t, y,",
-      del, a, y: Ma, t, h.rand, o, m() * , 2,
+            transition = {{
+              duration: 3 + Math.rando, m() * , 2,
+              repe, a, t: Infinit, y",
+      delay: Math.random() * , 2,
             }}
         ))}
-      </d, i, v>
-    </moti, o, n.d, i, v>
+      </div>
+    </motion.div>
   );
 };
 export, default, October2025TechBannerNew;

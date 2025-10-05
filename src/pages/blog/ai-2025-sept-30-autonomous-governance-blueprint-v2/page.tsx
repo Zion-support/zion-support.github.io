@@ -1,35 +1,35 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function AutonomousGovernanceBlueprint, V, 2(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>
-          Autonomous, Governance, Blueprint v2 — K, P, I, s, Policy, Test, s, Rollba, c, k
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='K, P, I-linked, scorecar, d, s, CI, policy, tests, and, instant, rollback for, safe, autonomy at, scal, e.'
+export, default, function AutonomousGovernanceBlueprintV2(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>
+          Autonomous, Governance, Blueprint v2 — KPI, s, Policy, Test, s, Rollba, c, k
+        </title>
+        <meta, nam, e = 'description'
+          content='KPI-linked, scorecar, d, s, CI, policy, tests, and, instant, rollback for, safe, autonomy at, scal, e.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ai-20, 2, 5-se, p, t-30-autonomo, u, s-governan, c, e-bluepri, n, t-v2'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/ai-2025-sept-30-autonomous-governance-blueprint-v2'
         />
-      </Helm, e, t>
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      </Helmet>
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
           Autonomous, Governance, Blueprint v2
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Scorecar, d, s • CI, Policy, Tests • Instant, Rollbac, k
+        <p, classNam, e='text-zion-slate-lightmb-8'>
+          Scorecards • CI, Policy, Tests • Instant, Rollbac, k
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Ship, autonomy, safely with, measurable, guardrails. Wire, KP, I-linked, scorecards, to CI, policy, tests and, live, canaries with, deterministic, rollback.
           </p>
           <p>
-            Adopti, o, n-friendly, governance, patterns that, accelerate, delivery while, preventing, regressions.
+            Adoption-friendly, governance, patterns that, accelerate, delivery while, preventing, regressions.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

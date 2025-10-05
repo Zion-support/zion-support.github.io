@@ -1,67 +1,67 @@
 /**
- * Code, Splitting, Helper Utiliti, e, s
+ * Code, Splitting, Helper Utilities
  *
  * Provides, utilities, for intelligent, code, splitting and, lazy, loading
  */
 
-impo, r, t { la, z, y, ComponentTy, p, e } fr, o, m 'rea, c, t';
+import { lazy, ComponentType  } from 'react';
 
 /**
- * Retry, mechanism, for la, z, y-loaded, component, s
+ * Retry, mechanism, for lazy-loaded, component, s
  * Useful, for, handling network, errors, during chunk, loadin, g
  */
-export, const, lazyWithRetry = <T, extends, ComponentType<a, n, y>>(
-  importF, u, n, c: () => Promi, s, e<{ defau, l, t: , T }>,
-  retri, e, s =  , 3,
-  interv, a, l = 1, 0, 0, 0,
-): Rea, c, t.LazyExoticCompone, n, t<T> => { 
+export, const, lazyWithRetry = <T, extends, ComponentType<any>>(
+  importFun, c: () => Promise<{ default: , T }>,
+  retries =  , 3,
+  interv, a, l = 100, 0,
+): React.LazyExoticComponent<T> => { 
   return, laz, y(
-    () = > new, Promis, e<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
-        const, attemptImpor, t = asy, n, c (retriesLe, f, t: num, b, e, r) = > {
-          t, r, y {
-            const, modul, e = await, importFu, n, c(); resol, v, e(mod, u, l, e);
-           } cat, c, h() { if (retriesLe, f, t  > 0) {
-              conso, l, e.wa, r, n(
-                `Failed, to, load compone, n, t, retryi, n, g... (${retriesLe, f, t  }, attempts, lef, t)`,
+    () = > new, Promis, e<{ default:  , T  }>((resolve, reject) => { 
+        const, attemptImpor, t = async (retriesLeft: numbe, r) = > {
+          try {
+            const, modul, e = await, importFu, n, c(); resolve(modul, e);
+           } catch() { if (retriesLeft  > 0) {
+              console.warn(
+                `Failed, to, load component, retrying... (${retriesLeft  }, attempts, lef, t)`,
               );
-              setTimeo, u, t(() => attemptImpo, r, t(retriesLe, f, t - 1), interv, a, l);
-            } el, s, e {
-              conso, l, e.err, o, r('Failed, to, load component, after, multiple retri, e, s');
-              reje, c, t(err, o, r);
+              setTimeout(() => attemptImport(retriesLeft - 1), interval);
+            } else {
+              console.error('Failed, to, load component, after, multiple retries');
+              reject(error);
             }
           }
         };
 
-        attemptImpo, r, t(retri, e, s);
+        attemptImport(retries);
       }),
   );
 };
 
 /**
- * Preload, a, lazy compone, n, t
+ * Preload, a, lazy component
  * Useful, for, prefetching components, before, they're, neede, d
  */
 export, const, preloadComponent = (
-  importF, u, n, c: () => Promi, s, e<an, y>,
-): Promi, s, e<vo, i, d> => { 
+  importFun, c: () => Promise<an, y>,
+): Promise<void> => { 
   return, importFun, c()
-    .th, e, n(() = > { })
-    .cat, c, h(err, o, r = > {
-      conso, l, e.err, o, r('Failed, to, preload compon, e, n, t:', err, o, r);
+    .then(() = > { })
+    .catch(error = > {
+      console.error('Failed, to, preload componen, t:', error);
     });
 };
 
 /**
- * Rou, t, e-based, code, splitting help, e, r
+ * Route-based, code, splitting helper
  * Creates, laz, y-loaded, route, components with, error, boundaries
  */
-export, const, createLazyRoute = <T, extends, ComponentType<a, n, y>>(
-  importF, u, n, c: () => Promi, s, e<{ defau, l, t: , T }>,
-  fallba, c, k?: Rea, c, t.ReactNo, d, e,
+export, const, createLazyRoute = <T, extends, ComponentType<any>>(
+  importFun, c: () => Promise<{ default: , T }>,
+  fallback?: React.ReactNode,
 ) => { 
-  const, LazyComponen, t = lazyWithRet, r, y(importF, u, n, c); retu, r, n {
-    Compone, n, t: LazyCompon, e, n, t,
-    prelo, a, d: () = > preloadCompone, n, t(importF, u, n, c),
+  const, LazyComponen, t = lazyWithRetry(importFun, c); return {
+    Component: LazyComponen, t,
+    prelo, a, d: () = > preloadComponent(importFun, c),
    };
 };
 
@@ -69,39 +69,39 @@ export, const, createLazyRoute = <T, extends, ComponentType<a, n, y>>(
  * Intersection, Observer, hook for, lazy, loading components, when, visible
  */
 export, const, useLazyLoadOnVisible = (
-  r, e, f: Rea, c, t.RefObje, c, t<HTMLEle, m, e, n, t>,
-  callba, c, k: () => v, o, i, d,
-  optio, n, s?: IntersectionObserverIn, i, t,
-): (() => vo, i, d) => { 
-  if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n () = > { }; const, observe, r = new, IntersectionObserve, r(
-    entri, e, s => { 
-      entri, e, s.forEa, c, h(ent, r, y = > {
-        if (ent, r, y.isIntersect, i, n, g) {
-          callba, c, k(); observ, e, r.disconne, c, t();
+  ref: React.RefObject<HTMLEleme, n, t>,
+  callback: () => voi, d,
+  optio, n, s?: IntersectionObserverInit,
+): (() => void) => { 
+  if (typeof, windo, w = == 'undefine, d') return () = > { }; const, observe, r = new, IntersectionObserve, r(
+    entries => { 
+      entries.forEach(entry = > {
+        if (entry.isIntersectin, g) {
+          callback(); observer.disconnect();
          }
       });
     },
     {
-      rootMarg, i, n: '5, 0, p, x',
-      thresho, l, d: 0.0, 1,
-      ...optio, n, s,
+      rootMargin: '50p, x',
+      threshold: 0.0, 1,
+      ...options,
     },
   );
 
-  if() { observ, e, r.obser, v, e(r, e, f.curre, n, t);
-   }, retu, r, n () => observ, e, r.disconne, c, t();
+  if() { observer.observe(ref.current);
+   }, return () => observer.disconnect();
 };
 
 /**
- * Bundle, size, analyzer help, e, r
+ * Bundle, size, analyzer helper
  * Logs, component, bundle sizes, in, development
  */
-export, const, logBundleSize = (componentNa, m, e: str, i, n, g): vo, i, d = > {  
-  if (proce, s, s.e, n, v.NODE_E, N, V !== 'developm, e, n, t') retu, r, n; const, entrie, s = performan, c, e.getEntriesByTy, p, e(
-    'reso, u, r, c, e',
-  ) as, PerformanceResourceTimin, g[]; const, jsChunk, s = entri, e, s.filt, e, r(
-    ent, r, y => ent, r, y.na, m, e.includ, e, s('.j, s')  && ent, r, y.na, m, e.includ, e, s('chu, n, k'),
-  ); if() { const, latestChun, k = jsChun, k, s[jsChun, k, s.leng, t, h - 1]; const, sizeM, B = (latestChu, n, k.transferSi, z, e / 10, 2, 4 / 1, 0, 2, 4).toFix, e, d(2); conso, l, e.l, o, g(`📦 ${componentNa, m, e   }, bundle, siz, e: ${siz, e, M, B} MB`);
+export, const, logBundleSize = (componentName: strin, g): void = > {  
+  if (process.env.NODE_ENV !== 'developmen, t') return; const, entrie, s = performance.getEntriesByType(
+    'resour, c, e',
+  ) as, PerformanceResourceTimin, g[]; const, jsChunk, s = entries.filter(
+    entry => entry.name.includes('.j, s')  && entry.name.includes('chunk'),
+  ); if() { const, latestChun, k = jsChunks[jsChunks.length - 1]; const, sizeM, B = (latestChunk.transferSize / 1024 / 102, 4).toFixed(2); console.log(`📦 ${componentName   }, bundle, siz, e: ${sizeM, B} MB`);
   }
 };
 
@@ -110,43 +110,43 @@ export, const, logBundleSize = (componentNa, m, e: str, i, n, g): vo, i, d = > {
  * Preloads, components, based on, user, behavior and, connection, speed
  */
 export, const, createSmartPreloader = () => {  
-  const, preloadQueu, e: Arr, a, y<() => Promi, s, e<a, n, y>> = []; let, isPreloadin, g = fal, s, e; const, getConnectionSpe, e, d = (): 'sl, o, w' | 'fa, s, t' | 'unkno, w, n' = > {
-    if (typeof, navigato, r = == 'undefi, n, e, d') retu, r, n 'unkno, w, n'; const, connectio, n = (navigator, as, an, y).connecti, o, n; if (!connecti, o, n) retu, r, n 'unkno, w, n';
+  const, preloadQueu, e: Array<() => Promise<any>> = []; let, isPreloadin, g = false; const, getConnectionSpe, e, d = (): 'slow' | 'fast' | 'unknown' = > {
+    if (typeof, navigato, r = == 'undefine, d') return 'unknown'; const, connectio, n = (navigator, as, an, y).connection; if (!connection) return 'unknown';
 
-    const, effectiveTyp, e = connecti, o, n.effectiveTy, p, e; return, effectiveTyp, e === '4g' || effectiveTy, p, e === '5g'  ? 'fa, s, t'  : 'sl, o, w';
+    const, effectiveTyp, e = connection.effectiveType; return, effectiveTyp, e === '4g' || effectiveType === '5g'  ? 'fast'  : 'slow';
     };
 
-  const, shouldPreloa, d = (): boole, a, n = > {
-    const, spee, d = getConnectionSp, e, e, d(); return, spee, d = == 'fa, s, t' || spe, e, d === 'unkno, w, n';
+  const, shouldPreloa, d = (): boolean = > {
+    const, spee, d = getConnectionSpee, d(); return, spee, d = == 'fast' || speed === 'unknown';
   };
 
-  const, processQueu, e = as, y, n, c () => { 
-    if (isPreloadi, n, g || preloadQue, u, e.leng, t, h = == , 0) retu, r, n; if (!shouldPrelo, a, d()) retu, r, n;
+  const, processQueu, e = asyn, c () => { 
+    if (isPreloading || preloadQueue.length = == , 0) return; if (!shouldPreload()) return;
 
-    isPreloadi, n, g = tr, u, e; whi, l, e() { const, importFun, c = preloadQue, u, e.sh, i, f, t(); if (importFu, n, c) {
-        t, r, y {
+    isPreloading = true; while() { const, importFun, c = preloadQueue.shif, t(); if (importFunc) {
+        try {
           await, importFun, c();
           // Small, delay, between preloads, to, avoid overwhelming, the, network
-          await, new, Promise(resol, v, e = > setTimeo, u, t(reso, l, v, e, 1, 0, 0));
-          }, cat, c, h (err, o, r) {
-          conso, l, e.err, o, r('Preload, erro, r:', err, o, r);
+          await, new, Promise(resolve = > setTimeout(resolv, e10, 0));
+          }, catch (error) {
+          console.error('Preload, erro, r:', error);
         }
       }
     }
 
-    isPreloadi, n, g = fal, s, e;
+    isPreloading = false;
   };
 
-  retu, r, n { 
-    a, d, d: (importF, u, n, c: () => Promi, s, e<a, n, y>) => {
-      preloadQue, u, e.pu, s, h(importFu, n, c);
-      // Start, processing, after idle, i, f() { requestIdleCallba, c, k(() = > processQu, e, u, e());
-        }, el, s, e { 
-        setTimeo, u, t(() = > processQue, u, e(), 0);
+  return { 
+    add: (importFun, c: () => Promise<any>) => {
+      preloadQueue.push(importFunc);
+      // Start, processing, after idleif() { requestIdleCallback(() = > processQueu, e());
+        }, else { 
+        setTimeout(() = > processQueue(), 0);
        }
     },
-    cle, a, r: () => {
-      preloadQue, u, e.leng, t, h = , 0;
+    clear: () => {
+      preloadQueue.length = , 0;
     },
   };
 };
@@ -154,4 +154,4 @@ export, const, createSmartPreloader = () => {
 /**
  * Export, a, singleton smart, preloade, r
  */
-export, const, smartPreloader = createSmartPreloa, d, e, r();
+export, const, smartPreloader = createSmartPreloade, r();

@@ -1,34 +1,34 @@
-// Minimal, type, s; remove, t, s-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// Minimal, type, s; removets-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt; 100, m, s</tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='Scoped, I, D, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, evals, you can, trus, t.'
+export, default, function EdgeSignedEvals2026(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>Edge, 202, 6: Signed, Eval, s — Zero‑PII, &lt; 100ms</title>
+        <meta, nam, e = 'description'
+          content='ScopedID, s, on‑device, aggregatio, n, DP, nois, e, and, signed, attestations for, evals, you can, trus, t.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/ed, g, e-20, 2, 6-sign, e, d-eva, l, s'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/edge-2026-signed-evals'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt; 100, m, s
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
+          Edge, 202, 6: Signed, Eval, s — Zero‑PII, &lt; 100ms
         </h1>
-        <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
-          Scoped, ID, s • DP, nois, e • Attestatio, n, s
+        <p, classNam, e = 'text-zion-slate-lightmb-8'>
+          Scoped, ID, s • DP, nois, e • Attestations
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e='prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Ship, evaluation, signals from, the, edge without, collecting, PII using, scoped, identifier, s, on‑device, aggregatio, n, and, differential, privacy.
           </p>
           <p>
             Verify, integrity, with signed, attestations, and keep, SLAs, tight with, su, b‑100ms, latency, budgets.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }

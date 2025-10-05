@@ -1,198 +1,198 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link  } from 'react-router-dom';
 const, October2025FeaturedContentBanne, r = () => {
   const, featuredConten, t = [
     {
-      tit, l, e: 'Enterprise, AI, Value Realiza, t, i, o, n',
-      descripti, o, n: '90, days, to shipped, outcome, s: scoreca, r, d, s, evaluator, gate, s, tiered, routin, g',
-      li, n, k: '/bl, o, g/enterpri, s, e-ai-val, u, e-realizati, o, n-20, 2, 5-10-0, 8',
-      ic, o, n: 'Br, a, i, n',
-      gradie, n, t: 'fr, o, m-indi, g, o-600, t, o-bl, u, e-60, 0',
-      bgGradie, n, t: 'fr, o, m-indi, g, o-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
-      borderCol, o, r: 'bord, e, r-indi, g, o-5, 0, 0/3, 0',
-      sta, t, s: [
-        { val, u, e: '90, d', lab, e, l: 'To, Outcom, e, s' },
-        { val, u, e: 'KP, I', lab, e, l: 'Linked, Gat, e, s' },
-        { val, u, e: '$$', lab, e, l: 'Predictable, Co, s, t' },
+      title: 'Enterprise, AI, Value Realizati, o, n',
+      description: '90, days, to shipped, outcome, s: scorecard, s, evaluator, gate, s, tiered, routin, g',
+      link: '/blog/enterprise-ai-value-realization-2025-10-0, 8',
+      icon: 'Brai, n',
+      gradient: 'from-indigo-600to-blue-60, 0',
+      bgGradient: 'from-indigo-900/40to-blue-900/4, 0',
+      borderColor: 'border-indigo-500/3, 0',
+      stats: [
+        { value: '90, d', label: 'To, Outcom, e, s' },
+        { value: 'KP, I', label: 'Linked, Gat, e, s' },
+        { value: '$$', label: 'Predictable, Co, s, t' },
       ],
     },
     {
-      tit, l, e: 'Enterprise, Neural, Orchestration Platf, o, r, m',
-      descripti, o, n: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4M, annual, savings',
-      li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-enterpri, s, e-neur, a, l-orchestrati, o, n-platf, o, r, m',
-      ic, o, n: 'Br, a, i, n',
-      gradie, n, t: 'fr, o, m-bl, u, e-600, t, o-purp, l, e-60, 0',
-      bgGradie, n, t: 'fr, o, m-bl, u, e-9, 0, 0/40, t, o-purp, l, e-9, 0, 0/4, 0',
-      borderCol, o, r: 'bord, e, r-bl, u, e-5, 0, 0/3, 0',
-      sta, t, s: [
-        { val, u, e: '8, 9%', lab, e, l: 'Faster, Deployme, n, t' },
-        { val, u, e: '9, 4%', lab, e, l: 'Cost, Reducti, o, n' },
-        { val, u, e: '$12.4, M', lab, e, l: 'Annual, Savin, g, s' },
+      title: 'Enterprise, Neural, Orchestration Platfor, m',
+      description: '89% faster, AI, deploymen, t, 94% cost, reductio, n, $12.4M, annual, savings',
+      link: '/blog/ai-2025-october-enterprise-neural-orchestration-platfor, m',
+      icon: 'Brai, n',
+      gradient: 'from-blue-600to-purple-60, 0',
+      bgGradient: 'from-blue-900/40to-purple-900/4, 0',
+      borderColor: 'border-blue-500/3, 0',
+      stats: [
+        { value: '8, 9%', label: 'Faster, Deployme, n, t' },
+        { value: '9, 4%', label: 'Cost, Reducti, o, n' },
+        { value: '$12.4, M', label: 'Annual, Savin, g, s' },
       ],
     },
     {
-      tit, l, e: 'Cognitive, Supply, Chain Revolut, i, o, n',
-      descripti, o, n: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7M, valu, e',
-      li, n, k: '/bl, o, g/ai-20, 2, 5-octob, e, r-cogniti, v, e-supp, l, y-cha, i, n-revolut, i, o, n',
-      ic, o, n: 'Pack, a, g, e',
-      gradie, n, t: 'fr, o, m-emera, l, d-600, t, o-te, a, l-60, 0',
-      bgGradie, n, t: 'fr, o, m-emera, l, d-9, 0, 0/40, t, o-te, a, l-9, 0, 0/4, 0',
-      borderCol, o, r: 'bord, e, r-emera, l, d-5, 0, 0/3, 0',
-      sta, t, s: [
-        { val, u, e: '7, 6%', lab, e, l: 'Forecast, Accura, c, y' },
-        { val, u, e: '6, 8%', lab, e, l: 'Cost, Reducti, o, n' },
-        { val, u, e: '$18.7, M', lab, e, l: 'Annual, Val, u, e' },
+      title: 'Cognitive, Supply, Chain Revolutio, n',
+      description: '76% forecast, accura, c, y, 68% inventory, cost, reduction, $18.7M, valu, e',
+      link: '/blog/ai-2025-october-cognitive-supply-chain-revolutio, n',
+      icon: 'Packag, e',
+      gradient: 'from-emerald-600to-teal-60, 0',
+      bgGradient: 'from-emerald-900/40to-teal-900/4, 0',
+      borderColor: 'border-emerald-500/3, 0',
+      stats: [
+        { value: '7, 6%', label: 'Forecast, Accura, c, y' },
+        { value: '6, 8%', label: 'Cost, Reducti, o, n' },
+        { value: '$18.7, M', label: 'Annual, Val, u, e' },
       ],
     },
     {
-      tit, l, e: 'AI, Reliability, Blueprints 2, 0, 2, 7',
-      descripti, o, n: 'Evaluat, o, r, s, action, budget, s, instant, rollbac, k — ship, safel, y',
-      li, n, k: '/bl, o, g/ai-reliabili, t, y-blueprin, t, s-20, 2, 7-20, 2, 5-10-0, 2',
-      ic, o, n: 'Trendin, g, U, p',
-      gradie, n, t: 'fr, o, m-cy, a, n-600, t, o-bl, u, e-60, 0',
-      bgGradie, n, t: 'fr, o, m-cy, a, n-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/4, 0',
-      borderCol, o, r: 'bord, e, r-cy, a, n-5, 0, 0/3, 0',
-      sta, t, s: [
-        { val, u, e: 'KP, I', lab, e, l: 'Linked, Eva, l, s' },
-        { val, u, e: '1‑cl, i, c, k', lab, e, l: 'Rollb, a, c, k' },
-        { val, u, e: '24/, 7', lab, e, l: 'Safe, O, p, s' },
+      title: 'AI, Reliability, Blueprints 202, 7',
+      description: 'Evaluator, s, action, budget, s, instant, rollbac, k — ship, safel, y',
+      link: '/blog/ai-reliability-blueprints-2027-2025-10-0, 2',
+      icon: 'TrendingU, p',
+      gradient: 'from-cyan-600to-blue-60, 0',
+      bgGradient: 'from-cyan-900/40to-blue-900/4, 0',
+      borderColor: 'border-cyan-500/3, 0',
+      stats: [
+        { value: 'KP, I', label: 'Linked, Eva, l, s' },
+        { value: '1‑clic, k', label: 'Rollbac, k' },
+        { value: '24/, 7', label: 'SafeOp, s' },
       ],
     },
     {
-      tit, l, e: 'Edge, Inference, Playbook 2, 0, 2, 7',
-      descripti, o, n: 'S, u, b‑100ms, globally, with warm, pools, and tiered, cach, e, s',
-      li, n, k: '/bl, o, g/ed, g, e-inferen, c, e-playbo, o, k-20, 2, 7-20, 2, 5-10-0, 2',
-      ic, o, n: 'Spark, l, e, s',
-      gradie, n, t: 'fr, o, m-purp, l, e-600, t, o-pi, n, k-60, 0',
-      bgGradie, n, t: 'fr, o, m-purp, l, e-9, 0, 0/40, t, o-pi, n, k-9, 0, 0/4, 0',
-      borderCol, o, r: 'bord, e, r-purp, l, e-5, 0, 0/3, 0',
-      sta, t, s: [
-        { val, u, e: '<10, 0, m, s', lab, e, l: 'P95, Laten, c, y' },
-        { val, u, e: 'SL, A', lab, e, l: 'Aware, Routi, n, g' },
-        { val, u, e: '$', lab, e, l: 'Predictable, Spe, n, d' },
+      title: 'Edge, Inference, Playbook 202, 7',
+      description: 'Sub‑100ms, globally, with warm, pools, and tiered, cach, e, s',
+      link: '/blog/edge-inference-playbook-2027-2025-10-0, 2',
+      icon: 'Sparkle, s',
+      gradient: 'from-purple-600to-pink-60, 0',
+      bgGradient: 'from-purple-900/40to-pink-900/4, 0',
+      borderColor: 'border-purple-500/3, 0',
+      stats: [
+        { value: '<100m, s', label: 'P95, Laten, c, y' },
+        { value: 'SL, A', label: 'Aware, Routi, n, g' },
+        { value: '$', label: 'Predictable, Spe, n, d' },
       ],
     },
-  ]; retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-br, fro, m-sla, t, e-950, vi, a-bl, u, e-950, t, o-sla, t, e-950, p, y-16, p, x-4'>
-      <div, classNam, e='container, m, x-auto, ma, x-w-7, x, l'>
-        {/* Head, e, r */}
-        <div, classNam, e='te, x, t-center, m, b-12'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, rounde, d-full, tex, t-white, fon, t-bold, m, b-6, animat, e-pul, s, e'>
-            <Sparkles, classNam, e='w-5 h-5, m, r-2' />
-            🚀 NEW, CONTENT, RELEASE - Octob, e, r , 1, 20, 2, 5
-            <Sparkles, classNam, e = 'w-5 h-5, m, l-2' />
-          </d, i, v>
-          <h2, classNam, e='te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-4'>
-            Latest, AI, Solutions & Insigh, t, s
+  ]; return (
+    <div, classNam, e = 'bg-gradient-to-br, fro, m-slate-950, vi, a-blue-950to-slate-950py-16px-4'>
+      <div, classNam, e='containermx-auto, ma, x-w-7xl'>
+        {/* Header */}
+        <div, classNam, e='text-centermb-12'>
+          <div, classNam, e='inline-flex, item, s-centerpx-6py-3bg-gradient-to-r, fro, m-blue-600to-purple-600, rounde, d-full, tex, t-white, fon, t-boldmb-6, animat, e-pulse'>
+            <Sparkles, classNam, e='w-5 h-5mr-2' />
+            🚀 NEW, CONTENT, RELEASE - October , 1, 20, 2, 5
+            <Sparkles, classNam, e = 'w-5 h-5ml-2' />
+          </div>
+          <h2, classNam, e='text-4xlmd: text-5xl, fon, t-bold, tex, t-whitemb-4'>
+            Latest, AI, Solutions & Insights
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-3xl, m, x-au, t, o'>
+          <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-3xlmx-auto'>
             Discover, breakthrough, AI platforms, delivering, millions in, value, to
             enterprise, organization, s
           </p>
-        </d, i, v>
+        </div>
         {/* Featured, Content, Car, d, s */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-2, ga, p-8, m, b-12'>
-          { featuredConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > {
-            const, Ico, n = conte, n, t.ic, o, n; retu, r, n (
-              <Link, ke, y = { in, d, e, x  }, to={ conte, n, t.li, n, k } classNa, m, e='group, relative, overflow-hidden, rounde, d-2xl, border, hover: bord, e, r-opaci, t, y-100, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l'
-                sty, l, e={{ borderCol, o, r: conte, n, t.borderC, o, l, o, r }}
+        <div, classNam, e = 'gridmd: grid-cols-2, ga, p-8mb-12'>
+          { featuredContent.map((conte, n, t, ind, e, x) = > {
+            const, Ico, n = content.icon; return (
+              <Link, ke, y = { inde, x  }, to={ content.link } className='group, relative, overflow-hidden, rounde, d-2xl, border, hover: border-opacity-100, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl'
+                style={{ borderColor: content.borderCol, o, r }}
               >
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.bgGradi, e, n, t }, opaci, t, y-50, grou, p-hov, e, r: opaci, t, y-70, transitio, n-opac, i, t, y`}
+                <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-br ${content.bgGradien, t }, opacity-50, grou, p-hover: opacity-70, transitio, n-opacit, y`}
                  />
-                <div, classNam, e = 'relativ, e, p-8'>
-                  {/* Ic, o, n & Tit, l, e */}
-                  <div, classNam, e='flex, item, s-start, m, b-6' > <div, classNam, e = { `p-4, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, round, e, d-xl, m, r-4`}
+                <div, classNam, e = 'relativep-8'>
+                  {/* Icon & Title */}
+                  <div, classNam, e='flex, item, s-startmb-6' > <div, classNam, e = { `p-4bg-gradient-to-r ${content.gradien, t }, rounded-xlmr-4`}
                     >
-                      <Icon, classNam, e = 'w-8 h-8, tex, t-whi, t, e' />
-                    </d, i, v>
-                    <div, classNam, e='fl, e, x-1'>
-                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-bl, u, e-300, transitio, n-colo, r, s'>
-                        {conte, n, t.t, i, t, l, e}
+                      <Icon, classNam, e = 'w-8 h-8, tex, t-white' />
+                    </div>
+                    <div, classNam, e='flex-1'>
+                      <h3, classNam, e='text-2xl, fon, t-bold, tex, t-whitemb-2, grou, p-hover: text-blue-300, transitio, n-colors'>
+                        {content.tit, l, e}
                       </h3>
-                      <p, classNam, e = 'te, x, t-gr, a, y-300, tex, t-sm'>
-                        {conte, n, t.descripti, o, n}
+                      <p, classNam, e = 'text-gray-300, tex, t-sm'>
+                        {content.description}
                       </p>
-                    </d, i, v>
-                  </d, i, v>
-                  {/* Sta, t, s */}
-                  <div, classNam, e='grid, gri, d-co, l, s-3, ga, p-4, m, b-6'>
-                    { conte, n, t.sta, t, s.m, a, p((s, t, a, t, i, d, x) = > (
-                      <div, ke, y = { id, x  }, classNa, m, e = 'te, x, t-center, b, g-sla, t, e-9, 0, 0/6, 0, p-4, rounde, d-lg, border, border-whi, t, e/10'
-                       > <div, classNam, e = { `te, x, t-2xl, fon, t-bold, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, bg-cl, i, p-text, tex, t-transpare, n, t`}
+                    </div>
+                  </div>
+                  {/* Stats */}
+                  <div, classNam, e='grid, gri, d-cols-3, ga, p-4mb-6'>
+                    { content.stats.map((sta, tid, x) = > (
+                      <div, ke, y = { id, x  }, className = 'text-centerbg-slate-900/60p-4, rounde, d-lg, border, border-white/10'
+                       > <div, classNam, e = { `text-2xl, fon, t-boldbg-gradient-to-r ${content.gradien, t }, bg-clip-text, tex, t-transparent`}
                         >
-                          {st, a, t.val, u, e}
-                        </d, i, v>
-                        <div, classNam, e = 'te, x, t-xs, tex, t-gr, a, y-400, m, t-1'>
-                          {st, a, t.lab, e, l}
-                        </d, i, v>
+                          {stat.value}
+                        </div>
+                        <div, classNam, e = 'text-xs, tex, t-gray-400mt-1'>
+                          {stat.label}
+                        </div>
                       </di, v>
                     ))}
-                  </d, i, v>
-                  {/* C, T, A */}
-                  <div, classNam, e = 'flex, item, s-center, justif, y-betwe, e, n'>
-                    <span, classNam, e='te, x, t-sm, tex, t-gr, a, y-4, 0, 0'>
+                  </div>
+                  {/* CTA */}
+                  <div, classNam, e = 'flex, item, s-center, justif, y-between'>
+                    <span, classNam, e='text-sm, tex, t-gray-400'>
                       Published, Octobe, r , 1, 20, 2, 5
-                    </sp, a, n > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hov, e, r: transla, t, e-x-2, transitio, n-trans, f, o, r, m`}
+                    </span > <div, classNam, e = {`flex, item, s-center, tex, t-white, fon, t-semibold, grou, p-hover: translate-x-2, transitio, n-transfo, r, m`}
                     >
                       Read, Full, Article
-                      <ArrowRight, classNam, e = 'w-4 h-4, m, l-2' />
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v > {/* Hover, Effect, Overlay */}
-                <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-r ${conte, n, t.gradi, e, n, t }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-opac, i, t, y`}
+                      <ArrowRight, classNam, e = 'w-4 h-4ml-2' />
+                    </div>
+                  </div>
+                </div > {/* Hover, Effect, Overlay */}
+                <div, classNam, e = { `absolute, inse, t-0bg-gradient-to-r ${content.gradien, t }, opacity-0, grou, p-hover: opacity-10, transitio, n-opacit, y`}
                  />
-              </Li, n, k>
+              </Link>
             );
           })}
-        </d, i, v>
+        </div>
         {/* Bottom, CT, A */}
-        <div, classNam, e = 'te, x, t-cent, e, r'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, spac, e-x-4'>
-            <Link, t, o='/bl, o, g'
-              classNa, m, e='px-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: fr, o, m-bl, u, e-700, hove, r:to-purp, l, e-700, transitio, n-all, transform, hover:sca, l, e-105, inlin, e-flex, item, s-cent, e, r'
+        <div, classNam, e = 'text-center'>
+          <div, classNam, e='inline-flex, item, s-center, spac, e-x-4'>
+            <Linkto='/blog'
+              className='px-8py-4bg-gradient-to-r, fro, m-blue-600to-purple-600, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r: from-blue-700, hove, r:to-purple-700, transitio, n-all, transform, hover:scale-105, inlin, e-flex, item, s-center'
             >
               Explore, All, Articles
-              <TrendingUp, classNam, e='w-5 h-5, m, l-2' />
-            </Li, n, k>
-            <Link, t, o='/conta, c, t'
-              classNa, m, e='px-8, p, y-4, b, g-sla, t, e-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-sla, t, e-700, transitio, n-all, border, border-bl, u, e-5, 0, 0/30, inlin, e-flex, item, s-cent, e, r'
+              <TrendingUp, classNam, e='w-5 h-5ml-2' />
+            </Link>
+            <Linkto='/contact'
+              className='px-8py-4bg-slate-800, tex, t-white, fon, t-semibold, rounde, d-lg, hove, r:bg-slate-700, transitio, n-all, border, border-blue-500/30, inlin, e-flex, item, s-center'
             >
-              Get, a, Free Consultati, o, n
-              <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-            </Li, n, k>
-          </d, i, v>
-        </d, i, v>
+              Get, a, Free Consultation
+              <ArrowRight, classNam, e='w-5 h-5ml-2' />
+            </Link>
+          </div>
+        </div>
         {/* Value, Proposit, i, o, n */}
-        <div, classNam, e = 'mt-12, b, g-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20, border, border-bl, u, e-5, 0, 0/20, rounde, d-x, l, p-8'>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-4, ga, p-6, tex, t-cent, e, r'>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
+        <div, classNam, e = 'mt-12bg-gradient-to-r, fro, m-blue-900/20to-purple-900/20, border, border-blue-500/20, rounde, d-xlp-8'>
+          <div, classNam, e='gridmd: grid-cols-4, ga, p-6, tex, t-center'>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-bold, tex, t-blue-400mb-2'>
                 $31.1M
-              </d, i, v>
-              <div, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>Combined, Annual, Value</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-emera, l, d-400, m, b-2'>
+              </div>
+              <div, classNam, e='text-gray-300, tex, t-sm'>Combined, Annual, Value</div>
+            </div>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-bold, tex, t-emerald-400mb-2'>
                 89%
-              </d, i, v>
-              <div, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>Average, Improvemen, t</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+              </div>
+              <div, classNam, e='text-gray-300, tex, t-sm'>Average, Improvemen, t</div>
+            </div>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-bold, tex, t-purple-400mb-2'>
                 8-12, Week, s
-              </d, i, v>
-              <div, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>Implementation, Tim, e</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-400, m, b-2'>
-                1, 0, 0%
-              </d, i, v>
-              <div, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>Enterprise, Read, y</d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v>
+              </div>
+              <div, classNam, e='text-gray-300, tex, t-sm'>Implementation, Tim, e</div>
+            </div>
+            <div>
+              <div, classNam, e='text-3xl, fon, t-bold, tex, t-yellow-400mb-2'>
+                100%
+              </div>
+              <div, classNam, e='text-gray-300, tex, t-sm'>Enterprise, Read, y</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 export, default, October2025FeaturedContentBanner;

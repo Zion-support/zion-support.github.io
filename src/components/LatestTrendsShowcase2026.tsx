@@ -1,199 +1,199 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
-const, LatestTrendsShowcase202, 6: Rea, c, t.FC = () => { 
-  retu, r, n (
-    <section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-9, 0, 0/20, t, o-purp, l, e-9, 0, 0/20'>
-      <div, classNam, e='container, m, x-aut, o, p, x-, 6' > {' ' }
-        {/* Head, e, r */}
-        <div, classNam, e = 'te, x, t-center, m, b-16'>
-          <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-6, p, y-3, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-cy, a, n-5, 0, 0/20, t, o-bl, u, e-5, 0, 0/20, border, border-cy, a, n-5, 0, 0/30, m, b-6'>
-            <span, classNam, e='te, x, t-cy, a, n-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
+const, LatestTrendsShowcase202, 6: React.FC = () => { 
+  return (
+    <section, classNam, e = 'py-20bg-gradient-to-br, fro, m-slate-900, vi, a-blue-900/20to-purple-900/20'>
+      <div, classNam, e='containermx-autop, x-, 6' > {' ' }
+        {/* Header */}
+        <div, classNam, e = 'text-centermb-16'>
+          <div, classNam, e='inline-flex, item, s-center, ga, p-2px-6py-3, rounde, d-fullbg-gradient-to-r, fro, m-cyan-500/20to-blue-500/20, border, border-cyan-500/30mb-6'>
+            <span, classNam, e='text-cyan-400, fon, t-bold, tex, t-sm, trackin, g-wider, uppercas, e'>
               🌟 TRENDING, NO, W - 2026, AI, BREAKTHROUGHS
-            </sp, a, n>
-          </d, i, v>
-          <h2, classNam, e='te, x, t-6xl, fon, t-extrabold, m, b-6, b, g-gradie, n, t-to-r, fro, m-cy, a, n-400, vi, a-bl, u, e-400, t, o-purp, l, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-            Latest, AI, Innovation Tren, d, s
+            </span>
+          </div>
+          <h2, classNam, e='text-6xl, fon, t-extraboldmb-6bg-gradient-to-r, fro, m-cyan-400, vi, a-blue-400to-purple-400bg-clip-text, tex, t-transparent'>
+            Latest, AI, Innovation Trends
           </h2>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, ma, x-w-4xl, m, x-auto, leadin, g-relax, e, d'>
+          <p, classNam, e='text-xl, tex, t-gray-300, ma, x-w-4xlmx-auto, leadin, g-relaxed'>
             Stay, ahead, of the, curve, with the, most, cutting-edge, AI, technologies
             and, revolutionary, breakthroughs shaping, the, future of, enterprise, automation.
           </p>
-        </d, i, v>
+        </div>
         {/* Trending, Technologies, Grid */}
-        <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-6, m, b-16'>
+        <div, classNam, e='gridmd: grid-cols-2lg:grid-cols-4, ga, p-6mb-16'>
           {/* Quantum, Comput, i, n, g */}
-          <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-cy, a, n-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p'>
-            <div, classNam, e='te, x, t-5xl, m, b-4, grou, p-hov, e, r:anima, t, e-sp, i, n'>⚛️</d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+          <div, classNam, e = 'bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-cyan-500/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105, grou, p'>
+            <div, classNam, e='text-5xlmb-4, grou, p-hover:animate-spin'>⚛️</div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
               Quantum, Computin, g
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
+            <p, classNam, e='text-gray-400, tex, t-smmb-4'>
               Revolutionary, quantum, processors delivering, 1000x, speed
               improvements, for, complex AI, computation, s.
             </p>
-            <div, classNam, e='te, x, t-cy, a, n-400, tex, t-sm, fon, t-semibo, l, d'>
-              +12, 0, 0% Grow, t, h
-            </d, i, v>
-          </d, i, v>
+            <div, classNam, e='text-cyan-400, tex, t-sm, fon, t-semibold'>
+              +1200% Growth
+            </div>
+          </div>
 
           {/* Neural, Architecture, Sear, c, h */}
-          <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-bl, u, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p'>
-            <div, classNam, e='te, x, t-5xl, m, b-4, grou, p-hov, e, r:anima, t, e-pul, s, e'>🔍</d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+          <div, classNam, e = 'bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-blue-500/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105, grou, p'>
+            <div, classNam, e='text-5xlmb-4, grou, p-hover:animate-pulse'>🔍</div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
               AutoML, Evolutio, n
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
-              Se, l, f-designing, neural, networks that, automatically, optimize
-              architecture, for, maximum performan, c, e.
+            <p, classNam, e='text-gray-400, tex, t-smmb-4'>
+              Self-designing, neural, networks that, automatically, optimize
+              architecture, for, maximum performance.
             </p>
-            <div, classNam, e='te, x, t-bl, u, e-400, tex, t-sm, fon, t-semibo, l, d'>
-              +8, 5, 0% Efficien, c, y
-            </d, i, v>
-          </d, i, v>
+            <div, classNam, e='text-blue-400, tex, t-sm, fon, t-semibold'>
+              +850% Efficiency
+            </div>
+          </div>
 
-          {/* Ed, g, e , A, I */}
-          <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p'>
-            <div, classNam, e='te, x, t-5xl, m, b-4, grou, p-hov, e, r:anima, t, e-boun, c, e'>📱</d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+          {/* Edge , A, I */}
+          <div, classNam, e = 'bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-green-500/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105, grou, p'>
+            <div, classNam, e='text-5xlmb-4, grou, p-hover:animate-bounce'>📱</div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
               Edge, AI, Revolution
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
-              Ult, r, a-fast, AI, processing at, the, edge with, 9, 9.9% accuracy, and, sub-millisecond, response, times.
+            <p, classNam, e='text-gray-400, tex, t-smmb-4'>
+              Ultra-fast, AI, processing at, the, edge with99.9% accuracy, and, sub-millisecond, response, times.
             </p>
-            <div, classNam, e='te, x, t-gre, e, n-400, tex, t-sm, fon, t-semibo, l, d'>
-              +20, 0, 0% Spe, e, d
-            </d, i, v>
-          </d, i, v>
+            <div, classNam, e='text-green-400, tex, t-sm, fon, t-semibold'>
+              +2000% Speed
+            </div>
+          </div>
 
-          {/* Explainab, l, e , A, I */}
-          <div, classNam, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:sca, l, e-105, grou, p'>
-            <div, classNam, e='te, x, t-5xl, m, b-4, grou, p-hov, e, r:anima, t, e-pul, s, e'>🔮</d, i, v>
-            <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-              Explainable, A, I
+          {/* Explainable , A, I */}
+          <div, classNam, e = 'bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-6, border, border-white/10, hove, r: border-purple-500/50, transitio, n-all, duratio, n-300, hove, r:transform, hove, r:scale-105, grou, p'>
+            <div, classNam, e='text-5xlmb-4, grou, p-hover:animate-pulse'>🔮</div>
+            <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-3'>
+              ExplainableAI
             </h3>
-            <p, classNam, e='te, x, t-gr, a, y-400, tex, t-sm, m, b-4'>
+            <p, classNam, e='text-gray-400, tex, t-smmb-4'>
               Transparent, AI, systems that, explain, their decisions, with, human-readable, reasonin, g.
             </p>
-            <div, classNam, e='te, x, t-purp, l, e-400, tex, t-sm, fon, t-semibo, l, d'>
-              +95% Tru, s, t
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+            <div, classNam, e='text-purple-400, tex, t-sm, fon, t-semibold'>
+              +95% Trust
+            </div>
+          </div>
+        </div>
         {/* Featured, Innovat, i, o, n */}
-        <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-bl, u, e-9, 0, 0/30, t, o-purp, l, e-9, 0, 0/30, rounde, d-2x, l, p-8, border, border-bl, u, e-5, 0, 0/20, m, b-16'>
-          <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8, item, s-cent, e, r'>
-            <d, i, v>
-              <div, classNam, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, border, border-yell, o, w-5, 0, 0/30, m, b-4'>
-                <span, classNam, e='te, x, t-yell, o, w-400, fon, t-bold, tex, t-sm'>
+        <div, classNam, e = 'bg-gradient-to-r, fro, m-blue-900/30to-purple-900/30, rounde, d-2xlp-8, border, border-blue-500/20mb-16'>
+          <div, classNam, e='gridmd: grid-cols-2, ga, p-8, item, s-center'>
+            <div>
+              <div, classNam, e='inline-flex, item, s-center, ga, p-2px-4py-2, rounde, d-fullbg-gradient-to-r, fro, m-yellow-500/20to-orange-500/20, border, border-yellow-500/30mb-4'>
+                <span, classNam, e='text-yellow-400, fon, t-bold, tex, t-sm'>
                   🏆 FEATURED, INNOVATIO, N
-                </sp, a, n>
-              </d, i, v>
-              <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, m, b-4, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-400, b, g-cl, i, p-text, tex, t-transpare, n, t'>
-                Me, t, a-Cognitive, AI, Framework
+                </span>
+              </div>
+              <h3, classNam, e='text-4xl, fon, t-extraboldmb-4bg-gradient-to-r, fro, m-yellow-400to-orange-400bg-clip-text, tex, t-transparent'>
+                Meta-Cognitive, AI, Framework
               </h3>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, m, b-6, leadin, g-relax, e, d'>
+              <p, classNam, e='text-xl, tex, t-gray-300mb-6, leadin, g-relaxed'>
                 The, worl, d's, first, AI system, that, thinks about, thinkin, g. Our, Met, a-Cognitive, AI, can reason, about, its own, reasoning, process, e, s,
                 identify, knowledge, gaps, and, autonomously, improve its, decisio, n-making, capabilitie, s.
               </p>
-              <div, classNam, e = 'spa, c, e-y-3, m, b-6'>
+              <div, classNam, e = 'space-y-3mb-6'>
                 <div, classNam, e='flex, item, s-center, ga, p-3'>
-                  <span, classNam, e='w-2 h-2, b, g-yell, o, w-400, rounde, d-fu, l, l' />
-                  <span, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                    Se, l, f-reflection, and, meta-reasoni, n, g
-                  </sp, a, n>
-                </d, i, v>
+                  <span, classNam, e='w-2 h-2bg-yellow-400, rounde, d-full' />
+                  <span, classNam, e='text-gray-300'>
+                    Self-reflection, and, meta-reasoning
+                  </span>
+                </div>
                 <div, classNam, e='flex, item, s-center, ga, p-3'>
-                  <span, classNam, e='w-2 h-2, b, g-yell, o, w-400, rounde, d-fu, l, l' />
-                  <span, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
-                    Autonomous, learning, and improveme, n, t
-                  </sp, a, n>
-                </d, i, v>
+                  <span, classNam, e='w-2 h-2bg-yellow-400, rounde, d-full' />
+                  <span, classNam, e='text-gray-300'>
+                    Autonomous, learning, and improvement
+                  </span>
+                </div>
                 <div, classNam, e='flex, item, s-center, ga, p-3'>
-                  <span, classNam, e='w-2 h-2, b, g-yell, o, w-400, rounde, d-fu, l, l' />
-                  <span, classNam, e='te, x, t-gr, a, y-3, 0, 0'>
+                  <span, classNam, e='w-2 h-2bg-yellow-400, rounde, d-full' />
+                  <span, classNam, e='text-gray-300'>
                     Cognitive, bias, detection and, correctio, n
-                  </sp, a, n>
-                </d, i, v>
-              </d, i, v>
-              <a, hre, f='/me, t, a-cogniti, v, e-<ai'
-                classNa, m, e='inli, n, e-block, b, g-gradie, n, t-to-r, fro, m-yell, o, w-500, t, o-oran, g, e-600, hove, r: fr, o, m-yell, o, w-400, hove, r:to-oran, g, e-500, tex, t-white, fon, t-bold, p, y-3, p, x-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-yell, o, w-5, 0, 0/50'
+                  </span>
+                </div>
+              </div>
+              <a, hre, f='/meta-cognitive-<ai'
+                className='inline-blockbg-gradient-to-r, fro, m-yellow-500to-orange-600, hove, r: from-yellow-400, hove, r:to-orange-500, tex, t-white, fon, t-boldpy-3px-6, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-yellow-500/50'
               >
-                Explore, Met, a-Cognitive, A, I →
+                Explore, Met, a-CognitiveAI →
               </a>
-            </d, i, v>
-            <div, classNam, e='te, x, t-cent, e, r'>
-              <div, classNam, e='te, x, t-8xl, m, b-4'>🧠</d, i, v>
-              <div, classNam, e='te, x, t-6xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-yell, o, w-400, t, o-oran, g, e-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
+            </div>
+            <div, classNam, e='text-center'>
+              <div, classNam, e='text-8xlmb-4'>🧠</div>
+              <div, classNam, e='text-6xl, fon, t-extraboldbg-gradient-to-r, fro, m-yellow-400to-orange-400bg-clip-text, tex, t-transparentmb-2'>
                 95%
-              </d, i, v>
-              <div, classNam, e='te, x, t-gr, a, y-400, tex, t-lg'>
+              </div>
+              <div, classNam, e='text-gray-400, tex, t-lg'>
                 Decision, Accuracy, Improvement
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+              </div>
+            </div>
+          </div>
+        </div>
         {/* Industry, Imp, a, c, t */}
-        <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-3, ga, p-8, m, b-16'>
-          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-5xl, m, b-4'>🏭</d, i, v>
+        <div, classNam, e = 'gridmd: grid-cols-3, ga, p-8mb-16'>
+          <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, tex, t-center'>
+            <div, classNam, e='text-5xlmb-4'>🏭</div>
 
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-bl, u, e-400, t, o-cy, a, n-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
+            <div, classNam, e='text-4xl, fon, t-extraboldbg-gradient-to-r, fro, m-blue-400to-cyan-400bg-clip-text, tex, t-transparentmb-2'>
               78%
-            </d, i, v>
-            <div, classNam, e='te, x, t-gr, a, y-400, m, b-4'>Efficiency, Increas, e</d, i, v>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>
+            </div>
+            <div, classNam, e='text-gray-400mb-4'>Efficiency, Increas, e</div>
+            <p, classNam, e='text-gray-300, tex, t-sm'>
               Autonomous, production, lines with, predictive, maintenance and, quality, optimization.
             </p>
-          </d, i, v>
+          </div>
 
-          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-5xl, m, b-4'>🏥</d, i, v>
+          <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, tex, t-center'>
+            <div, classNam, e='text-5xlmb-4'>🏥</div>
 
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-gre, e, n-400, t, o-emera, l, d-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
+            <div, classNam, e='text-4xl, fon, t-extraboldbg-gradient-to-r, fro, m-green-400to-emerald-400bg-clip-text, tex, t-transparentmb-2'>
               92%
-            </d, i, v>
-            <div, classNam, e='te, x, t-gr, a, y-400, m, b-4'>Diagnosis, Accurac, y</d, i, v>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>
-              AI-powered, diagnostic, systems with, early, disease detection, and, treatment optimizati, o, n.
+            </div>
+            <div, classNam, e='text-gray-400mb-4'>Diagnosis, Accurac, y</div>
+            <p, classNam, e='text-gray-300, tex, t-sm'>
+              AI-powered, diagnostic, systems with, early, disease detection, and, treatment optimization.
             </p>
-          </d, i, v>
+          </div>
 
-          <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-8, border, border-whi, t, e/10, tex, t-cent, e, r'>
-            <div, classNam, e='te, x, t-5xl, m, b-4'>💼</d, i, v>
+          <div, classNam, e='bg-white/5, backdro, p-blur-lg, rounde, d-2xlp-8, border, border-white/10, tex, t-center'>
+            <div, classNam, e='text-5xlmb-4'>💼</div>
 
-            <div, classNam, e='te, x, t-4xl, fon, t-extrabold, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-pi, n, k-400, b, g-cl, i, p-text, tex, t-transparent, m, b-2'>
+            <div, classNam, e='text-4xl, fon, t-extraboldbg-gradient-to-r, fro, m-purple-400to-pink-400bg-clip-text, tex, t-transparentmb-2'>
               $2.3B
-            </d, i, v>
-            <div, classNam, e='te, x, t-gr, a, y-400, m, b-4'>Cost, Saving, s</d, i, v>
-            <p, classNam, e='te, x, t-gr, a, y-300, tex, t-sm'>
+            </div>
+            <div, classNam, e='text-gray-400mb-4'>Cost, Saving, s</div>
+            <p, classNam, e='text-gray-300, tex, t-sm'>
               Automated, trad, i, n, g, risk, assessmen, t, and, fraud, detection with, quantu, m-enhanced, securit, y.
             </p>
-          </d, i, v>
-        </d, i, v>
+          </div>
+        </div>
         {/* CTA, Sectio, n */}
-        <div, classNam, e = 'te, x, t-center, b, g-gradie, n, t-to-r, fro, m-sla, t, e-8, 0, 0/50, t, o-bl, u, e-8, 0, 0/50, rounde, d-2x, l, p-12, border, border-bl, u, e-5, 0, 0/20'>
-          <h3, classNam, e='te, x, t-4xl, fon, t-extrabold, m, b-4, tex, t-whi, t, e'>
+        <div, classNam, e = 'text-centerbg-gradient-to-r, fro, m-slate-800/50to-blue-800/50, rounde, d-2xlp-12, border, border-blue-500/20'>
+          <h3, classNam, e='text-4xl, fon, t-extraboldmb-4, tex, t-white'>
             Ready, to, Lead the, AI, Revolution?
           </h3>
-          <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-300, m, b-8, ma, x-w-3xl, m, x-au, t, o'>
+          <p, classNam, e='text-xl, tex, t-gray-300mb-8, ma, x-w-3xlmx-auto'>
             Join, the, elite group, of, enterprises already, transforming, their
             operations, with, our breakthrough, AI, technologies.
           </p>
-          <div, classNam, e='flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-            <a, hre, f='/<conta, c, t'
-              classNa, m, e='bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-cy, a, n-5, 0, 0/50, transform, hover:-transla, t, e-y-1'
+          <div, classNam, e='flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center'>
+            <a, hre, f='/<contact'
+              className='bg-gradient-to-r, fro, m-cyan-500to-blue-600, hove, r:from-cyan-400, hove, r:to-blue-500, tex, t-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shadow-cyan-500/50, transform, hover:-translate-y-1'
             >
-              Start, Your, AI Journ, e, y
+              Start, Your, AI Journey
             </a>
-            <a, hre, f='/tren, d, s-<repo, r, t'
-              classNa, m, e='bord, e, r-2, borde, r-cy, a, n-500, tex, t-cy, a, n-400, hove, r:bg-cy, a, n-500, hove, r:te, x, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-3, 0, 0'
+            <a, hre, f='/trends-<report'
+              className='border-2, borde, r-cyan-500, tex, t-cyan-400, hove, r:bg-cyan-500, hove, r:text-white, fon, t-boldpy-4px-8, rounde, d-xl, transitio, n-all, duratio, n-300'
             >
               Download, Trends, Report
             </a>
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
-    </sec, t, i, o, n>
+          </div>
+        </div>
+      </div>
+    </secti, o, n>
   );
 };
 

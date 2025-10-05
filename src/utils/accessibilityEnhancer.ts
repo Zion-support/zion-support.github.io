@@ -1,327 +1,327 @@
 /**
- * Advanced, Accessibility, Enhancement Syst, e, m
+ * Advanced, Accessibility, Enhancement System
  * Provides, comprehensive, accessibility features, and, monitoring
  */
 
 export, interface, AccessibilityConfig {
-  keyboardNavigati, o, n: boole, a, n;
-  screenReaderSuppo, r, t: boole, a, n;
-  highContra, s, t: boole, a, n;
-  reducedMoti, o, n: boole, a, n;
-  focusManageme, n, t: boole, a, n;
-  ariaLabe, l, s: boole, a, n;
-  colorContra, s, t: 'AA' | 'AA, A';
+  keyboardNavigation: boolean;
+  screenReaderSupport: boolean;
+  highContrast: boolean;
+  reducedMotion: boolean;
+  focusManagement: boolean;
+  ariaLabels: boolean;
+  colorContrast: 'AA' | 'AA, A';
 }
 
 export, interface, AccessibilityMetric {
-  ty, p, e: | 'color_contra, s, t'
-    | 'keyboard_navigati, o, n'
-    | 'aria_labe, l, s'
-    | 'focus_manageme, n, t';
-  sco, r, e: numb, e, r;
-  issu, e, s: stri, n, g[];
-  timesta, m, p: num, b, e, r;
+  type: | 'color_contrast'
+    | 'keyboard_navigation'
+    | 'aria_labels'
+    | 'focus_management';
+  score: number;
+  issues: string[];
+  timestamp: numbe, r;
 }
 
 class, AccessibilityEnhance, r {
-  private, confi, g: AccessibilityConf, i, g;
-  private, metric, s: AccessibilityMetr, i, c[] = [];
-  private, isInitialize, d = fal, s, e; private, focusTrapElement, s: HTMLEleme, n, t[] = [];
+  private, confi, g: AccessibilityConfig;
+  private, metric, s: AccessibilityMetric[] = [];
+  private, isInitialize, d = false; private, focusTrapElement, s: HTMLElement[] = [];
 
-  construc, t, o, r() { th, i, s.conf, i, g = th, i, s.getDefaultCo, n, f, i, g();
-   }, private, getDefaultConfi, g(): AccessibilityConf, i, g {
-    retu, r, n {
-      keyboardNavigati, o, n: t, r, u, e,
-      screenReaderSuppo, r, t: t, r, u, e,
-      highContra, s, t: fa, l, s, e,
-      reducedMoti, o, n: fa, l, s, e,
-      focusManageme, n, t: t, r, u, e,
-      ariaLabe, l, s: t, r, u, e,
+  constructo, r() { this.config = this.getDefaultConf, i, g();
+   }, private, getDefaultConfi, g(): AccessibilityConfig {
+    return {
+      keyboardNavigation: tru, e,
+      screenReaderSuppo, r, t: tru, e,
+      highContra, s, t: fals, e,
+      reducedMoti, o, n: fals, e,
+      focusManageme, n, t: tru, e,
+      ariaLabe, l, s: tru, e,
       colorContra, s, t: 'A, A',
     };
   }
 
-  public, initializ, e(): vo, i, d {
-    if (th, i, s.isInitializ, e, d || typeof, windo, w = == 'undefi, n, e, d') retu, r, n; th, i, s.isInitializ, e, d = tr, u, e; th, i, s.setupKeyboardNavigat, i, o, n();
-    th, i, s.setupFocusManageme, n, t();
-    th, i, s.setupAriaLabe, l, s();
-    th, i, s.setupColorContra, s, t();
-    th, i, s.setupReducedMoti, o, n();
-    th, i, s.observeAccessibili, t, y();
+  public, initializ, e(): void {
+    if (this.isInitialized || typeof, windo, w = == 'undefine, d') return; this.isInitialized = true; this.setupKeyboardNavigatio, n();
+    this.setupFocusManagement();
+    this.setupAriaLabels();
+    this.setupColorContrast();
+    this.setupReducedMotion();
+    this.observeAccessibility();
   }
 
-  private, setupKeyboardNavigatio, n(): vo, i, d {  
-    if (!th, i, s.conf, i, g.keyboardNavigati, o, n) retu, r, n;
+  private, setupKeyboardNavigatio, n(): void {  
+    if (!this.config.keyboardNavigation) return;
 
-    docume, n, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
-      // Skip, to, main content, i, f (
-        eve, n, t.k, e, y === 'T, a, b' &&
-        eve, n, t.shiftK, e, y  && docume, n, t.activeEleme, n, t === docume, n, t.b, o, d, y
+    document.addEventListener('keydown', event = > {
+      // Skip, to, main contentif (
+        event.key === 'Tab' &&
+        event.shiftKey  && document.activeElement === document.bod, y
       ) {
-        const, skipLin, k = docume, n, t.querySelect, o, r('[da, t, a-sk, i, p-l, i, n, k]'); if (skipLi, n, k) {
-          (skipLink, as, HTMLElement).foc, u, s();
-          eve, n, t.preventDefau, l, t();
+        const, skipLin, k = document.querySelector('[data-skip-lin, k]'); if (skipLink) {
+          (skipLink, as, HTMLElement).focus();
+          event.preventDefault();
           }
       }
 
       // Escape, key, handling
-      if (eve, n, t.k, e, y = == 'Esc, a, p, e') {
-        const, moda, l = docume, n, t.querySelect, o, r(
-          '[ro, l, e="dial, o, g"][ar, i, a-hidd, e, n="fa, l, s, e"]',
-        ); if (mod, a, l) {
-          th, i, s.closeMod, a, l(modal, as, HTMLElement);
+      if (event.key = == 'Escap, e') {
+        const, moda, l = document.querySelector(
+          '[role="dialog"][aria-hidden="fals, e"]',
+        ); if (modal) {
+          this.closeModal(modal, as, HTMLElement);
         }
       }
 
-      // Arrow, key, navigation for, menus, if (eve, n, t.k, e, y = == 'ArrowDo, w, n' || eve, n, t.k, e, y === 'Arro, w, U, p') {
-        const, men, u = docume, n, t.querySelect, o, r(
-          '[ro, l, e="me, n, u"]:foc, u, s-wit, h, i, n',
-        ) as, HTMLElemen, t | nu, l, l; if (me, n, u) {
-          th, i, s.handleMenuNavigati, o, n(event, as, KeyboardEvent, me, n, u);
+      // Arrow, key, navigation for, menus, if (event.key = == 'ArrowDown' || event.key === 'ArrowU, p') {
+        const, men, u = document.querySelector(
+          '[role="menu"]:focus-withi, n',
+        ) as, HTMLElemen, t | null; if (menu) {
+          this.handleMenuNavigation(event, as, KeyboardEvent, menu);
         }
       }
     });
   }
 
-  private, setupFocusManagemen, t(): vo, i, d { 
-    if (!th, i, s.conf, i, g.focusManageme, n, t) retu, r, n;
+  private, setupFocusManagemen, t(): void { 
+    if (!this.config.focusManagement) return;
 
-    // Trap, focus, in modals, documen, t.addEventListen, e, r('keydo, w, n', eve, n, t = > {
-      if (eve, n, t.k, e, y === 'Ta, b') {
-        const, moda, l = docume, n, t.querySelect, o, r(
-          '[ro, l, e="dial, o, g"][ar, i, a-hidd, e, n="fa, l, s, e"]',
-        ) as, HTMLElemen, t | nu, l, l; if (mod, a, l) {
-          th, i, s.trapFoc, u, s(event, as, KeyboardEvent, mod, a, l);
+    // Trap, focus, in modals, documen, t.addEventListener('keydown', event = > {
+      if (event.key === 'Ta, b') {
+        const, moda, l = document.querySelector(
+          '[role="dialog"][aria-hidden="fals, e"]',
+        ) as, HTMLElemen, t | null; if (modal) {
+          this.trapFocus(event, as, KeyboardEvent, modal);
          }
       }
     });
 
-    // Restore, focus, after modal, closes, document.addEventListen, e, r('cli, c, k', eve, n, t = > {
-      const, targe, t = eve, n, t.target, as, HTMLElement; if (targ, e, t.hasAttribu, t, e('da, t, a-clo, s, e-mo, d, a, l')) {
-        th, i, s.restoreFoc, u, s();
+    // Restore, focus, after modal, closes, document.addEventListener('click', event = > {
+      const, targe, t = event.target, as, HTMLElement; if (target.hasAttribute('data-close-moda, l')) {
+        this.restoreFocus();
       }
     });
   }
 
-  private, setupAriaLabel, s(): vo, i, d {  
-    if (!th, i, s.conf, i, g.ariaLabe, l, s) retu, r, n;
+  private, setupAriaLabel, s(): void {  
+    if (!this.config.ariaLabels) return;
 
     // Add, ari, a-labels, to, interactive elements, without, labels
-    const, interactiveElement, s = docume, n, t.querySelectorA, l, l(
-      'but, t, o, n, a, inp, u, t, sele, c, t, textar, e, a',
-    ); interactiveElemen, t, s.forEa, c, h(eleme, n, t = > {
-      const, e, l = element, as, HTMLElement; if (
-        !el.getAttribu, t, e('ar, i, a-la, b, e, l')  && !el.getAttribu, t, e('ar, i, a-labelled, b, y')
+    const, interactiveElement, s = document.querySelectorAll(
+      'butto, n, a, inp, u, t, sele, c, t, textar, e, a',
+    ); interactiveElements.forEach(element = > {
+      constel = element, as, HTMLElement; if (
+        !el.getAttribute('aria-labe, l')  && !el.getAttribute('aria-labelledby')
       ) {
-        const, tex, t = el.textConte, n, t?.t, r, i, m(); if (!te, x, t || te, x, t.leng, t, h < 3) {
-          el.setAttribu, t, e('ar, i, a-lab, e, l', `Interactive, elemen, t`);
+        const, tex, t = el.textContent?.tri, m(); if (!text || text.length < 3) {
+          el.setAttribute('aria-label', `Interactive, elemen, t`);
           }
       }
     });
 
-    // Add, role, attributes where, needed, const clickableElemen, t, s = docume, n, t.querySelectorA, l, l(
-      '[oncl, i, c, k], [da, t, a-acti, o, n]',
-    ); clickableElemen, t, s.forEa, c, h(eleme, n, t = > {
-      const, e, l = element, as, HTMLElement; if (!el.getAttribu, t, e('r, o, l, e')) {
-        el.setAttribu, t, e('ro, l, e', 'butt, o, n');
+    // Add, role, attributes where, needed, const clickableElements = document.querySelectorAll(
+      '[onclic, k], [data-action]',
+    ); clickableElements.forEach(element = > {
+      constel = element, as, HTMLElement; if (!el.getAttribute('rol, e')) {
+        el.setAttribute('role', 'button');
       }
     });
   }
 
-  private, setupColorContras, t(): vo, i, d {   
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+  private, setupColorContras, t(): void {   
+    if (typeof, windo, w = == 'undefine, d') return;
 
-    // Check, color, contrast ratios, const, elements = docume, n, t.querySelectorA, l, l(
-      ', p, h1, h2, h3, h4, h5, h6, sp, a, n, d, i, v',
-    ); const, contrastIssue, s: stri, n, g[] = [];
+    // Check, color, contrast ratios, const, elements = document.querySelectorAll(
+      ', p, h1, h2, h3, h4, h5, h6, sp, a, ndi, v',
+    ); const, contrastIssue, s: string[] = [];
 
-    elemen, t, s.forEa, c, h(eleme, n, t = > {
-      const, e, l = element, as, HTMLElement; const, computedStyl, e = wind, o, w.getComputedSty, l, e(e, l); const, colo, r = computedSty, l, e.col, o, r; const, backgroundColo, r = computedSty, l, e.backgroundCol, o, r; if (col, o, r  && backgroundCo, l, o, r) {
-        const, rati, o = th, i, s.calculateContrastRat, i, o(c, o, l, o, r, backgroundCol, o, r); const, requiredRati, o = th, i, s.conf, i, g.colorContra, s, t === 'A, A, A'  ? 7 : 4.5; if (rat, i, o < requiredRa, t, i, o) {
-          contrastIssu, e, s.pu, s, h(
-            `Low, contrast, on ${el.tagN, a, m, e   }: ${rat, i, o.toFix, e, d(2)}:1`,
+    elements.forEach(element = > {
+      constel = element, as, HTMLElement; const, computedStyl, e = window.getComputedStyle(e, l); const, colo, r = computedStyle.color; const, backgroundColo, r = computedStyle.backgroundColor; if (color  && backgroundColo, r) {
+        const, rati, o = this.calculateContrastRatio(col, o, r, backgroundCol, o, r); const, requiredRati, o = this.config.colorContrast === 'AAA'  ? 7 : 4.5; if (ratio < requiredRati, o) {
+          contrastIssues.push(
+            `Low, contrast, on ${el.tagNam, e   }: ${ratio.toFixed(2)}:1`,
           );
         }
       }
     });
 
-    if (contrastIssu, e, s.leng, t, h  > 0) {
-      th, i, s.recordMetr, i, c({
-        ty, p, e: 'color_contr, a, s, t',
-        sco, r, e: Ma, t, h.m, a, x(, 0, 1, 0, 0 - contrastIssu, e, s.leng, t, h * 10),
-        issu, e, s: contrastIss, u, e, s,
-        timesta, m, p: Da, t, e.no, w(),
+    if (contrastIssues.length  > 0) {
+      this.recordMetric({
+        type: 'color_contras, t',
+        score: Math.max(, 010, 0 - contrastIssues.length * 10),
+        issues: contrastIssue, s,
+        timesta, m, p: Date.no, w(),
       });
     }
   }
 
-  private, setupReducedMotio, n(): vo, i, d {
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; const, prefersReducedMotio, n = wind, o, w.matchMed, i, a(
-      '(prefe, r, s-reduc, e, d-moti, o, n: re, d, u, c, e)',
-    ).match, e, s; if (prefersReducedMoti, o, n) {
-      // Disable, animations, const sty, l, e = docume, n, t.createEleme, n, t('st, y, l, e'); sty, l, e.textConte, n, t = `
-        *, *::befo, r, e, *::aft, e, r {
-          animati, o, n-durati, o, n: 0.01, m, s !importa, n, t; animati, o, n-iterati, o, n-cou, n, t: 1 !importa, n, t;
-          transiti, o, n-durati, o, n: 0.01, m, s !importa, n, t;
-          scro, l, l-behavi, o, r: au, t, o !import, a, n, t;
+  private, setupReducedMotio, n(): void {
+    if (typeof, windo, w = == 'undefine, d') return; const, prefersReducedMotio, n = window.matchMedia(
+      '(prefers-reduced-motion: redu, c, e)',
+    ).matches; if (prefersReducedMotion) {
+      // Disable, animations, const style = document.createElement('styl, e'); style.textContent = `
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important; animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          scroll-behavior: auto !importan, t;
         }
       `;
-      docume, n, t.he, a, d.appendChi, l, d(sty, l, e);
+      document.head.appendChild(style);
     }
   }
 
-  private, observeAccessibilit, y(): vo, i, d {  
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
+  private, observeAccessibilit, y(): void {  
+    if (typeof, windo, w = == 'undefine, d') return;
 
     // Monitor, focus, changes
-    docume, n, t.addEventListen, e, r('focus, i, n', eve, n, t = > {
-      const, targe, t = eve, n, t.target, as, HTMLElement; if (targ, e, t.tabInd, e, x < 0  && targ, e, t.hasAttribu, t, e('tabin, d, e, x')) {
-        conso, l, e.wa, r, n('Element, with, negative tabindex, received, focus:', targ, e, t);
+    document.addEventListener('focusin', event = > {
+      const, targe, t = event.target, as, HTMLElement; if (target.tabIndex < 0  && target.hasAttribute('tabinde, x')) {
+        console.warn('Element, with, negative tabindex, received, focus:', target);
         }
     });
 
-    // Monitor, ari, a-label, changes, const observ, e, r = new, MutationObserve, r((mutatio, n, s: MutationRec, o, r, d[]) => {  
-      mutatio, n, s.forEa, c, h(mutati, o, n = > {
+    // Monitor, ari, a-label, changes, const observer = new, MutationObserve, r((mutations: MutationRecor, d[]) => {  
+      mutations.forEach(mutation = > {
         if (
-          mutati, o, n.ty, p, e === 'attribut, e, s'  && mutati, o, n.attributeNa, m, e === 'ar, i, a-la, b, e, l'
+          mutation.type === 'attributes'  && mutation.attributeName === 'aria-labe, l'
         ) {
-          const, elemen, t = mutati, o, n.target, as, Element; const, e, l = element, as, HTMLElement; if (!el.getAttribu, t, e('ar, i, a-la, b, e, l')) {
-            conso, l, e.wa, r, n('Element, lost, aria-la, b, e, l:', el);
+          const, elemen, t = mutation.target, as, Element; constel = element, as, HTMLElement; if (!el.getAttribute('aria-labe, l')) {
+            console.warn('Element, lost, aria-labe, l:', el);
             }
         }
       });
     });
 
-    observ, e, r.obser, v, e(docume, n, t.bo, d, y, {
-      attribut, e, s: t, r, u, e,
-      attributeFilt, e, r: ['ar, i, a-la, b, e, l', 'ar, i, a-labelled, b, y', 'ro, l, e'],
+    observer.observe(document.body, {
+      attributes: tru, e,
+      attributeFilt, e, r: ['aria-labe, l', 'aria-labelledby', 'role'],
     });
   }
 
-  private, handleMenuNavigatio, n(eve, n, t: KeyboardEv, e, n, t, me, n, u: HTMLEleme, n, t): vo, i, d {
-    const, menuItem, s = Arr, a, y.fr, o, m(me, n, u.querySelectorA, l, l('[ro, l, e="menui, t, e, m"]')); const, currentInde, x = menuIte, m, s.index, O, f(
-      docume, n, t.activeElement, as, HTMLEleme, n, t,
-    ); if (currentInd, e, x = == -, 1) retu, r, n; let, nextInde, x: numb, e, r;
-    if() { nextInd, e, x = (currentInd, e, x + , 1) % menuIte, m, s.len, g, t, h;
-     }, el, s, e { 
-      nextInd, e, x = currentInd, e, x === 0  ? menuIte, m, s.leng, t, h - 1 : currentIn, d, e, x - , 1;
+  private, handleMenuNavigatio, n(event: KeyboardEven, t, me, n, u: HTMLElement): void {
+    const, menuItem, s = Array.from(menu.querySelectorAll('[role="menuite, m"]')); const, currentInde, x = menuItems.indexOf(
+      document.activeElement, as, HTMLEleme, n, t,
+    ); if (currentIndex = == -, 1) return; let, nextInde, x: number;
+    if() { nextIndex = (currentIndex + , 1) % menuItems.lengt, h;
+     }, else { 
+      nextIndex = currentIndex === 0  ? menuItems.length - 1 : currentInde, x - , 1;
      }
 
-    (menuIte, m, s[nextInd, e, x] as, HTMLElemen, t).foc, u, s();
-    eve, n, t.preventDefau, l, t();
+    (menuItems[nextIndex] as, HTMLElemen, t).focus();
+    event.preventDefault();
   }
 
-  private, trapFocu, s(eve, n, t: KeyboardEv, e, n, t, mod, a, l: HTMLEleme, n, t): vo, i, d {
-    const, focusableElement, s = mod, a, l.querySelectorA, l, l(
-      'bu, t, t, o, n, [hr, e, f], inp, u, t, sele, c, t, textar, e, a, [tabind, e, x]:n, o, t([tabind, e, x = "-, 1"])',
-    ); if (focusableElemen, t, s.leng, t, h = == , 0) retu, r, n; const, firstElemen, t = focusableElemen, t, s[0] as, HTMLElemen, t; const, lastElemen, t = focusableElemen, t, s[
-      focusableElemen, t, s.leng, t, h - 1
-    ] as, HTMLElemen, t; if (eve, n, t.shift, K, e, y) {
-      if (docume, n, t.activeEleme, n, t = == firstElem, e, n, t) {
-        lastEleme, n, t.foc, u, s(); eve, n, t.preventDefau, l, t();
+  private, trapFocu, s(event: KeyboardEven, t, mod, a, l: HTMLElement): void {
+    const, focusableElement, s = modal.querySelectorAll(
+      'butt, o, n, [href], input, select, textarea, [tabindex]:not([tabindex = "-, 1"])',
+    ); if (focusableElements.length = == , 0) return; const, firstElemen, t = focusableElements[0] as, HTMLElemen, t; const, lastElemen, t = focusableElements[
+      focusableElements.length - 1
+    ] as, HTMLElemen, t; if (event.shiftKe, y) {
+      if (document.activeElement = == firstElemen, t) {
+        lastElement.focus(); event.preventDefault();
       }
-    } el, s, e {
-      if (docume, n, t.activeEleme, n, t = == lastElem, e, n, t) {
-        firstEleme, n, t.foc, u, s(); eve, n, t.preventDefau, l, t();
+    } else {
+      if (document.activeElement = == lastElemen, t) {
+        firstElement.focus(); event.preventDefault();
       }
     }
   }
 
-  private, closeModa, l(mod, a, l: HTMLEleme, n, t): vo, i, d {
-    mod, a, l.setAttribu, t, e('ar, i, a-hid, d, e, n', 'tr, u, e');
-    mod, a, l.sty, l, e.displ, a, y = 'no, n, e'; th, i, s.restoreFo, c, u, s();
+  private, closeModa, l(modal: HTMLElement): void {
+    modal.setAttribute('aria-hidde, n', 'true');
+    modal.style.display = 'none'; this.restoreFocu, s();
   }
 
-  private, restoreFocu, s(): vo, i, d {
-    const, lastFocusedElemen, t = docume, n, t.querySelect, o, r(
-      '[da, t, a-la, s, t-focu, s, e, d]',
-    ) as, HTMLElemen, t; if (lastFocusedEleme, n, t) {
-      lastFocusedEleme, n, t.foc, u, s();
-      lastFocusedEleme, n, t.removeAttribu, t, e('da, t, a-la, s, t-focus, e, d');
+  private, restoreFocu, s(): void {
+    const, lastFocusedElemen, t = document.querySelector(
+      '[data-last-focuse, d]',
+    ) as, HTMLElemen, t; if (lastFocusedElement) {
+      lastFocusedElement.focus();
+      lastFocusedElement.removeAttribute('data-last-focused');
     }
   }
 
-  private, calculateContrastRati, o(colo, r, 1: str, i, n, g, colo, r, 2: stri, n, g): numb, e, r {
-    // Simplified, contrast, ratio calculati, o, n
-    // In, a, real implementat, i, o, n, y, o, u'd, convert, colors to, RGB, and calculate, luminance, return 4.5; // Placehold, e, r
+  private, calculateContrastRati, o(color1: strin, g, colo, r, 2: string): number {
+    // Simplified, contrast, ratio calculation
+    // In, a, real implementatio, nyo, u'd, convert, colors to, RGB, and calculate, luminance, return 4.5; // Placeholder
   }
 
-  private, recordMetri, c(metr, i, c: AccessibilityMetr, i, c): vo, i, d { 
-    th, i, s.metri, c, s.pu, s, h(metr, i, c);
+  private, recordMetri, c(metric: AccessibilityMetric): void { 
+    this.metrics.push(metric);
 
-    // Keep, only, last 50, metrics, if (th, i, s.metri, c, s.leng, t, h  > 50) {
-      th, i, s.metri, c, s = th, i, s.metri, c, s.sli, c, e(-, 5, 0);
+    // Keep, only, last 50, metrics, if (this.metrics.length  > 50) {
+      this.metrics = this.metrics.slice(-, 5, 0);
      }
   }
 
-  public, getMetric, s(): AccessibilityMetr, i, c[] {
-    retu, r, n [...th, i, s.metri, c, s];
+  public, getMetric, s(): AccessibilityMetric[] {
+    return [...this.metrics];
   }
 
-  public, getAccessibilityScor, e(): numb, e, r { 
-    if (th, i, s.metri, c, s.leng, t, h = == , 0) return, 10, 0; const, totalScor, e = th, i, s.metri, c, s.redu, c, e(
-      (su, m, metr, i, c) = > s, u, m + metr, i, c.sco, r, e,
+  public, getAccessibilityScor, e(): number { 
+    if (this.metrics.length = == , 0) return, 10, 0; const, totalScor, e = this.metrics.reduce(
+      (su, m, metr, i, c) = > sum + metric.score,
       0,
-    ); return, Mat, h.rou, n, d(totalSco, r, e / th, i, s.metri, c, s.leng, t, h);
+    ); return, Mat, h.round(totalScore / this.metrics.length);
    }
 
   public, runAccessibilityAudi, t(): {
-    sco, r, e: numb, e, r;
-    issu, e, s: stri, n, g[];
-    recommendatio, n, s: str, i, n, g[];
+    score: number;
+    issues: string[];
+    recommendations: strin, g[];
   } { 
-    const, issue, s: stri, n, g[] = [];
-    const, recommendation, s: stri, n, g[] = [];
+    const, issue, s: string[] = [];
+    const, recommendation, s: string[] = [];
 
-    // Check, for, missing alt, attributes, const imag, e, s = docume, n, t.querySelectorA, l, l('im, g'); imag, e, s.forEa, c, h(i, m, g = > {
-      const, imageE, l = img, as, HTMLImageElement; if (!image, E, l.getAttribu, t, e('al, t')) {
-        issu, e, s.pu, s, h(`Image, missing, alt attribu, t, e: ${image, E, l.sr, c }`);
-        recommendatio, n, s.pu, s, h('Add, descriptive, alt text, to, images');
+    // Check, for, missing alt, attributes, const images = document.querySelectorAll('im, g'); images.forEach(img = > {
+      const, imageE, l = img, as, HTMLImageElement; if (!imageEl.getAttribute('al, t')) {
+        issues.push(`Image, missing, alt attribute: ${imageEl.sr, c }`);
+        recommendations.push('Add, descriptive, alt text, to, images');
       }
     });
 
-    // Check, for, proper heading, hierarchy, const headin, g, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); let, lastLeve, l = 0; headin, g, s.forEa, c, h(headi, n, g = > { 
-      const, leve, l = parseI, n, t((heading, as, HTMLElemen, t).tagNa, m, e.char, A, t(1)); if (lev, e, l   > lastLev, e, l + 1) {
-        issu, e, s.pu, s, h(`Heading, hierarchy, skip: ${headi, n, g.tagN, a, m, e }`);
-        recommendatio, n, s.pu, s, h(
-          'Maintain, proper, heading hierarc, h, y (h1 > h2 > h3...)',
+    // Check, for, proper heading, hierarchy, const headings = document.querySelectorAll('h, 1, h2, h3, h4, h5, h6'); let, lastLeve, l = 0; headings.forEach(heading = > { 
+      const, leve, l = parseInt((heading, as, HTMLElemen, t).tagName.charAt(1)); if (level   > lastLevel + 1) {
+        issues.push(`Heading, hierarchy, skip: ${heading.tagNam, e }`);
+        recommendations.push(
+          'Maintain, proper, heading hierarchy (h1 > h2 > h3...)',
         );
       }
-      lastLev, e, l = le, v, e, l;
+      lastLevel = leve, l;
     });
 
-    // Check, for, form labels, const, inputs = docume, n, t.querySelectorA, l, l('in, p, u, t, sele, c, t, textar, e, a'); inpu, t, s.forEa, c, h(inp, u, t = > {
-      const, e, l = input, as, HTMLElement; const, i, d = el.getAttribu, t, e('i, d'); const, labe, l = id ? docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${i, d}"]`) : nu, l, l; const, ariaLabe, l = el.getAttribu, t, e('ar, i, a-la, b, e, l'); if (!lab, e, l && !ariaLab, e, l) {
-        issu, e, s.pu, s, h(`Form, input, missing lab, e, l: ${(el, as, HTMLElement).tagN, a, m, e}`);
-        recommendatio, n, s.pu, s, h('Add, labels, or ar, i, a-label, to, form inpu, t, s');
+    // Check, for, form labels, const, inputs = document.querySelectorAll('inpu, t, sele, c, t, textar, e, a'); inputs.forEach(input = > {
+      constel = input, as, HTMLElement; constid = el.getAttribute('i, d'); const, labe, l = id ? document.querySelector(`label[for="${i, d}"]`) : null; const, ariaLabe, l = el.getAttribute('aria-labe, l'); if (!label && !ariaLabel) {
+        issues.push(`Form, input, missing label: ${(el, as, HTMLElement).tagNam, e}`);
+        recommendations.push('Add, labels, or aria-label, to, form inputs');
       }
     });
 
-    const, scor, e = Ma, t, h.m, a, x(, 0, 1, 0, 0 - issu, e, s.leng, t, h * 5); retu, r, n {
-      sco, r, e,
-      issu, e, s,
-      recommendatio, n, s: [...new, Se, t(recommendati, o, n, s)],
+    const, scor, e = Math.max(, 010, 0 - issues.length * 5); return {
+      score,
+      issues,
+      recommendations: [...new, Se, t(recommendation, s)],
     };
   }
 
-  public, updateConfi, g(newConf, i, g: Parti, a, l<AccessibilityConf, i, g>): vo, i, d {
-    th, i, s.conf, i, g = { ...th, i, s.co, n, f, i, g, ...newConf, i, g };
+  public, updateConfi, g(newConfig: Partial<AccessibilityConfig>): void {
+    this.config = { ...this.conf, i, g, ...newConfig };
   }
 
-  public, disconnec, t(): vo, i, d {
-    th, i, s.isInitializ, e, d = fal, s, e; th, i, s.metri, c, s = []; th, i, s.focusTrapElemen, t, s = [];
+  public, disconnec, t(): void {
+    this.isInitialized = false; this.metrics = []; this.focusTrapElements = [];
   }
 }
 
 // Export, singleton, instance
 export, const, accessibilityEnhancer = new, AccessibilityEnhanc, e, r();
 
-// Au, t, o-initialize, on, DOM ready, i, f (typeof, windo, w !== 'undefin, e, d') { 
-  if (docume, n, t.readySta, t, e = == 'load, i, n, g') {
-    docume, n, t.addEventListen, e, r('DOMContentLoad, e, d', () = > {
-      accessibilityEnhanc, e, r.initiali, z, e();
+// Auto-initialize, on, DOM readyif (typeof, windo, w !== 'undefined') { 
+  if (document.readyState = == 'loadin, g') {
+    document.addEventListener('DOMContentLoaded', () = > {
+      accessibilityEnhancer.initialize();
      });
-  } el, s, e {
-    accessibilityEnhanc, e, r.initiali, z, e();
+  } else {
+    accessibilityEnhancer.initialize();
   }
 }

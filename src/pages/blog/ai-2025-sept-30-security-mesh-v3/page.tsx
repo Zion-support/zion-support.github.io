@@ -1,24 +1,24 @@
-// @ts-nocheck, impor, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+// @ts-nocheck, impor, t { Link } from 'react-router-dom';
 
 const, Pag, e = () => { 
-  retu, r, n (
-    <div, classNam, e = 'container, m, x-auto, p, x-6, p, y-12, tex, t-whi, t, e'>
-      <h1, classNam, e='te, x, t-3xl, fon, t-bold, m, b-4'>
+  return (
+    <div, classNam, e = 'containermx-autopx-6py-12, tex, t-white'>
+      <h1, classNam, e='text-3xl, fon, t-boldmb-4'>
         AI, Security, Mesh v3 — Signed, Outpu, t, s, Verifie, r, s, Rollba, c, k
       </h1>
-      <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-6'>
+      <p, classNam, e = 'text-zion-slate-lightmb-6'>
         Production, security, patterns for, AI, systems: signed, outp, u, t, s, runtime, verifier, s, budgeted, action, s, and, deterministic, rollback.
       </p>
-      <ul, classNam, e = 'li, s, t-disc, p, l-6, tex, t-zi, o, n-sla, t, e-light, spac, e-y-2'>
+      <ul, classNam, e = 'list-discpl-6, tex, t-zion-slate-light, spac, e-y-2'>
         <li>Prompt, firewalls, and egress, control, at every, boundar, y</li>
         <li>Verifier, stacks, with attestations, and, lineage</li>
-        <li>Budg, e, taware, actions, with K, P, Ilinked, canarie, s</li>
+        <li>Budgetaware, actions, with KPIlinked, canarie, s</li>
       </ul>
       <div, classNam, e='mt-8'>
-        <Link, t, o='/<bl, o, g' classNa, m, e='te, x, t-cy, a, n-300, underlin, e'>
+        <Linkto='/<blog' className='text-cyan-300, underlin, e'>
           Back, to, Blog
-        </Li, n, k>
-      </d, i, v>
+        </Link>
+      </div>
     </di, v > );
  };
 

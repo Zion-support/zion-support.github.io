@@ -1,159 +1,159 @@
-impo, r, t { Li, n, k } fr, o, m "rea, c, t-rout, e, r-d, o, m";
+import { Link } from "react-router-dom";
 const, September30NewContentMegaBanne, r = () => {
   const, newArticle, s = [
     {",
-      tit, l, e: "AI, Neural, Coding Breakthro, u, g, h",
-      descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accur, a, c, y",
-      ic, o, n: Br, a, i, n,",
-      li, n, k: "/bl, o, g/ai-neur, a, l-codi, n, g-breakthrou, g, h-2, 0, 2, 5",
-      catego, r, y: "Neura, l, A, I",",
-      impa, c, t: "95% faster, developme, n, t"
+      title: "AI, Neural, Coding Breakthroug, h",
+      description: "Programming, at, the speed, of, thought with99.7% accurac, y",
+      icon: Brai, n",
+      link: "/blog/ai-neural-coding-breakthrough-202, 5",
+      category: "NeuralA, I",",
+      impact: "95% faster, developme, n, t"
     },
     {",
-      tit, l, e: "AI, Holographic, Computin, g",
-      descripti, o, n: "Immersive, 3D, data visualization, with, zero late, n, c, y",
-      ic, o, n: Lay, e, r, s,",
-      li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-2, 0, 2, 5",
-      catego, r, y: "Spatia, l, A, I",",
-      impa, c, t: "10x, faster, insight, s"
+      title: "AI, Holographic, Computin, g",
+      description: "Immersive, 3D, data visualization, with, zero latenc, y",
+      icon: Layer, s",
+      link: "/blog/ai-holographic-computing-202, 5",
+      category: "SpatialA, I",",
+      impact: "10x, faster, insight, s"
     },
     {",
-      tit, l, e: "AI, Quantum, Consciousnes, s",
-      descripti, o, n: "1M, times, faster reasoning, with, emergent creativ, i, t, y",
-      ic, o, n: A, t, o, m,",
-      li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-2, 0, 2, 5",
-      catego, r, y: "Quantu, m, A, I",",
-      impa, c, t: "1M× performa, n, c, e"
+      title: "AI, Quantum, Consciousnes, s",
+      description: "1M, times, faster reasoning, with, emergent creativit, y",
+      icon: Ato, m",
+      link: "/blog/ai-quantum-consciousness-202, 5",
+      category: "QuantumA, I",",
+      impact: "1M× performanc, e"
     },
     {",
-      tit, l, e: "AI, Molecular, Manufacturin, g",
-      descripti, o, n: "Atom, i, c-precision, production, with zero, was, t, e",
-      ic, o, n: Za, p,",
-      li, n, k: "/bl, o, g/ai-molecul, a, r-manufacturi, n, g-2, 0, 2, 5",
-      catego, r, y: "NanoT, e, c, h",",
-      impa, c, t: "1, 0, 0% recycla, b, l, e"
+      title: "AI, Molecular, Manufacturin, g",
+      description: "Atomic-precision, production, with zero, was, t, e",
+      icon: Za, p",
+      link: "/blog/ai-molecular-manufacturing-202, 5",
+      category: "NanoTec, h",",
+      impact: "100% recyclabl, e"
     },
     {",
-      tit, l, e: "AI, Personalized, Educatio, n",
-      descripti, o, n: "10x, better, learning outcomes, for, every stud, e, n, t",
-      ic, o, n: Graduation, C, a, p,",
-      li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-2, 0, 2, 5",
-      catego, r, y: "EdTec, h, A, I",",
-      impa, c, t: "97% mastery, ra, t, e"
+      title: "AI, Personalized, Educatio, n",
+      description: "10x, better, learning outcomes, for, every studen, t",
+      icon: GraduationCa, p",
+      link: "/blog/ai-personalized-education-revolution-202, 5",
+      category: "EdTechA, I",",
+      impact: "97% mastery, ra, t, e"
     }
-  ]; retu, r, n (
-    <div, classNam, e = "bg-gradie, n, t-to-br, fro, m-purp, l, e-900, vi, a-bl, u, e-900, t, o-cy, a, n-900, rounde, d-3x, l, p-8, m, d: p-12, tex, t-white, shado, w-2xl, border, border-purp, l, e-5, 0, 0/20, relative, overflow-hidd, e, n">
+  ]; return (
+    <div, classNam, e = "bg-gradient-to-br, fro, m-purple-900, vi, a-blue-900to-cyan-900, rounde, d-3xlp-8md: p-12, tex, t-white, shado, w-2xl, border, border-purple-500/20, relative, overflow-hidden">
       {/* Animated, backgro, u, n, d */}
-      <div, classNam, e = "absolute, inse, t-0, b, g-gradie, n, t-to-r, fro, m-purp, l, e-5, 0, 0/10, vi, a-bl, u, e-5, 0, 0/10, t, o-cy, a, n-5, 0, 0/10, animat, e-pul, s, e" />
-      <div, classNam, e="relativ, e, z-10">
-        {/* Head, e, r */}
-        <div, classNam, e="te, x, t-center, m, b-10">
-          <div, classNam, e="inli, n, e-flex, item, s-center, ga, p-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, p, x-6, p, y-3, rounde, d-full, m, b-6, border, border-whi, t, e/20">
-            <Sparkles, classNam, e="w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-            <span, classNam, e="te, x, t-lg, fon, t-bo, l, d">SEPTEMBE, R, 3, 0, 20, 2, 5 • MEGA, BREAKTHROUGH, RELEASE</sp, a, n>
-            <Sparkles, classNam, e = "w-6 h-6, tex, t-yell, o, w-400, animat, e-pul, s, e" />
-          </d, i, v>
-          <h2, classNam, e="te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, m, b-4, b, g-gradie, n, t-to-r, fro, m-cy, a, n-300, vi, a-bl, u, e-300, t, o-purp, l, e-300, b, g-cl, i, p-text, tex, t-transpare, n, t">
-            🚀 5, Revolutionary, AI Breakthroug, h, s
+      <div, classNam, e = "absolute, inse, t-0bg-gradient-to-r, fro, m-purple-500/10, vi, a-blue-500/10to-cyan-500/10, animat, e-pulse" />
+      <div, classNam, e="relativez-10">
+        {/* Header */}
+        <div, classNam, e="text-centermb-10">
+          <div, classNam, e="inline-flex, item, s-center, ga, p-3bg-white/10, backdro, p-blur-smpx-6py-3, rounde, d-fullmb-6, border, border-white/20">
+            <Sparkles, classNam, e="w-6 h-6, tex, t-yellow-400, animat, e-pulse" />
+            <span, classNam, e="text-lg, fon, t-bold">SEPTEMBER3, 0, 20, 2, 5 • MEGA, BREAKTHROUGH, RELEASE</span>
+            <Sparkles, classNam, e = "w-6 h-6, tex, t-yellow-400, animat, e-pulse" />
+          </div>
+          <h2, classNam, e="text-4xlmd: text-5xl, fon, t-boldmb-4bg-gradient-to-r, fro, m-cyan-300, vi, a-blue-300to-purple-300bg-clip-text, tex, t-transparent">
+            🚀 5, Revolutionary, AI Breakthroughs
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-cy, a, n-100, ma, x-w-4xl, m, x-au, t, o">
-            Neural, coding, that programs, at, thought spe, e, d • Holographic, 3D, visualization • Quantum, consciousness, AI • 
+          <p, classNam, e="text-xl, tex, t-cyan-100, ma, x-w-4xlmx-auto">
+            Neural, coding, that programs, at, thought speed • Holographic, 3D, visualization • Quantum, consciousness, AI • 
             Molecular, manufacturing, at atomic, precisio, n • Personalized, education, revolution
           </p>
-        </d, i, v>
-        {/* Articles, G, r, i, d */}
-        <div, classNam, e = "grid, m, d: gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-3, ga, p-6, m, b-10">
-          { newArticl, e, s.m, a, p((art, i, c, l, e, ind, e, x) = > (
-            <Link, ke, y = { in, d, e, x  }, to={ artic, l, e.li, n, k } classNa, m, e="group, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, hove, r: bg-whi, t, e/20, hove, r:bord, e, r-cy, a, n-4, 0, 0/50, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2, x, l"
+        </div>
+        {/* ArticlesGr, i, d */}
+        <div, classNam, e = "gridmd: grid-cols-2lg:grid-cols-3, ga, p-6mb-10">
+          { newArticles.map((artic, l, e, ind, e, x) = > (
+            <Link, ke, y = { inde, x  }, to={ article.link } className="groupbg-white/10, backdro, p-blur-sm, rounde, d-2xlp-6, border, border-white/20, hove, r: bg-white/20, hove, r:border-cyan-400/50, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl"
             >
               <div, classNam, e="flex, item, s-start, ga, p-4">
-                <div, classNam, e="bg-gradie, n, t-to-br, fro, m-cy, a, n-500, t, o-bl, u, e-60, 0, p-3, rounde, d-xl, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m">
-                  <artic, l, e.icon, classNam, e="w-6 h-6"</d, i, v>
-                <div, classNam, e="fl, e, x-1">
-                  <div, classNam, e="te, x, t-xs, fon, t-semibold, tex, t-cy, a, n-300, m, b-2">{artic, l, e.cate, g, o, r, y}</d, i, v>
-                  <h3, classNam, e = "te, x, t-lg, fon, t-bold, m, b-2, grou, p-hov, e, r: te, x, t-cy, a, n-300, transitio, n-colo, r, s">
-                    {artic, l, e.t, i, t, l, e}
+                <div, classNam, e="bg-gradient-to-br, fro, m-cyan-500to-blue-600p-3, rounde, d-xl, grou, p-hover:scale-110, transitio, n-transform">
+                  <article.icon, classNam, e="w-6 h-6"</div>
+                <div, classNam, e="flex-1">
+                  <div, classNam, e="text-xs, fon, t-semibold, tex, t-cyan-300mb-2">{article.catego, r, y}</div>
+                  <h3, classNam, e = "text-lg, fon, t-boldmb-2, grou, p-hover: text-cyan-300, transitio, n-colors">
+                    {article.tit, l, e}
                   </h3>
-                  <p, classNam, e = "te, x, t-sm, tex, t-bl, u, e-200, m, b-3">{artic, l, e.descripti, o, n}</p>
-                  <div, classNam, e="te, x, t-xs, fon, t-semibold, tex, t-gre, e, n-300, b, g-gre, e, n-5, 0, 0/20, p, x-3, p, y-1, rounde, d-full, inlin, e-blo, c, k">
-                    {artic, l, e.impa, c, t}
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </L, i, n, k>
+                  <p, classNam, e = "text-sm, tex, t-blue-200mb-3">{article.description}</p>
+                  <div, classNam, e="text-xs, fon, t-semibold, tex, t-green-300bg-green-500/20px-3py-1, rounde, d-full, inlin, e-block">
+                    {article.impact}
+                  </div>
+                </div>
+              </div>
+            </Lin, k>
           ))}
           {/* Additional, promotional, card */}
-          <Link, t, o = "/bl, o, g"
-            classNa, m, e="group, b, g-gradie, n, t-to-br, fro, m-yell, o, w-5, 0, 0/20, t, o-oran, g, e-5, 0, 0/20, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-yell, o, w-4, 0, 0/30, hove, r: bord, e, r-yell, o, w-4, 0, 0/60, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, flex, flex-col, item, s-center, justif, y-center, tex, t-cent, e, r"
+          <Linkto = "/blog"
+            className="groupbg-gradient-to-br, fro, m-yellow-500/20to-orange-500/20, backdro, p-blur-sm, rounde, d-2xlp-6, border, border-yellow-400/30, hove, r: border-yellow-400/60, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl, flex, flex-col, item, s-center, justif, y-center, tex, t-center"
           >
-            <Sparkles, classNam, e="w-1, 2, h-12, tex, t-yell, o, w-400, m, b-4, grou, p-hov, e, r:sca, l, e-125, transitio, n-transfo, r, m" />
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-2">View, All, Articles</h3>
-            <p, classNam, e="te, x, t-sm, tex, t-yell, o, w-200, m, b-4">2, 0, 0+ groundbreaking, insight, s</p>
-            <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-yell, o, w-400, fon, t-semibo, l, d">
+            <Sparkles, classNam, e="w-12h-12, tex, t-yellow-400mb-4, grou, p-hover:scale-125, transitio, n-transform" />
+            <h3, classNam, e="text-xl, fon, t-boldmb-2">View, All, Articles</h3>
+            <p, classNam, e="text-sm, tex, t-yellow-200mb-4">200+ groundbreaking, insight, s</p>
+            <div, classNam, e="flex, item, s-center, ga, p-2, tex, t-yellow-400, fon, t-semibold">
               Explore, No, w
-              <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-            </d, i, v>
-          </Li, n, k>
-        </d, i, v>
+              <ArrowRight, classNam, e="w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform" />
+            </div>
+          </Link>
+        </div>
         {/* Stats, Ban, n, e, r */}
-        <div, classNam, e = "bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-2x, l, p-6, border, border-whi, t, e/20, m, b-8">
-          <div, classNam, e="grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-5, ga, p-6, tex, t-cent, e, r">
-            <d, i, v>
-              <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">New, Breakthrough, s</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-gre, e, n-400, m, b-1">10×</d, i, v>
-              <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Performance, Gain, s</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-purp, l, e-400, m, b-1">1M×</d, i, v>
-              <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Quantum, Speedu, p</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-yell, o, w-400, m, b-1">97%</d, i, v>
-              <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Success, Rat, e</d, i, v>
-            </d, i, v>
-            <d, i, v>
-              <div, classNam, e="te, x, t-3xl, fon, t-bold, tex, t-pi, n, k-400, m, b-1">$1, 5, T</d, i, v>
-              <div, classNam, e="te, x, t-sm, tex, t-bl, u, e-2, 0, 0">Market, Impac, t</d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+        <div, classNam, e = "bg-white/10, backdro, p-blur-sm, rounde, d-2xlp-6, border, border-white/20mb-8">
+          <div, classNam, e="grid, gri, d-cols-2md: grid-cols-5, ga, p-6, tex, t-center">
+            <div>
+              <div, classNam, e="text-sm, tex, t-blue-200">New, Breakthrough, s</div>
+            </div>
+            <div>
+              <div, classNam, e="text-3xl, fon, t-bold, tex, t-green-400mb-1">10×</div>
+              <div, classNam, e="text-sm, tex, t-blue-200">Performance, Gain, s</div>
+            </div>
+            <div>
+              <div, classNam, e="text-3xl, fon, t-bold, tex, t-purple-400mb-1">1M×</div>
+              <div, classNam, e="text-sm, tex, t-blue-200">Quantum, Speedu, p</div>
+            </div>
+            <div>
+              <div, classNam, e="text-3xl, fon, t-bold, tex, t-yellow-400mb-1">97%</div>
+              <div, classNam, e="text-sm, tex, t-blue-200">Success, Rat, e</div>
+            </div>
+            <div>
+              <div, classNam, e="text-3xl, fon, t-bold, tex, t-pink-400mb-1">$15T</div>
+              <div, classNam, e="text-sm, tex, t-blue-200">Market, Impac, t</div>
+            </div>
+          </div>
+        </div>
         {/* CTA, Butt, o, n, s */}
-        <div, classNam, e = "flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, item, s-cent, e, r">
-          <Link, t, o="/bl, o, g"
-            classNa, m, e="bg-gradie, n, t-to-r, fro, m-cy, a, n-500, t, o-bl, u, e-600, hove, r:fr, o, m-cy, a, n-400, hove, r:to-bl, u, e-500, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, inlin, e-flex, item, s-center, ga, p-3, grou, p"
+        <div, classNam, e = "flex, fle, x-colsm: flex-row, ga, p-4, justif, y-center, item, s-center">
+          <Linkto="/blog"
+            className="bg-gradient-to-r, fro, m-cyan-500to-blue-600, hove, r:from-cyan-400, hove, r:to-blue-500, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:scale-105, hove, r:shadow-2xl, inlin, e-flex, item, s-center, ga, p-3, grou, p"
           >
-            <Brain, classNam, e="w-6 h-6, grou, p-hov, e, r:rota, t, e-12, transitio, n-transfo, r, m" />
+            <Brain, classNam, e="w-6 h-6, grou, p-hover:rotate-12, transitio, n-transform" />
             Explore, All, Breakthroughs
-            <ArrowRight, classNam, e="w-5 h-5, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-          </Li, n, k>
-          <Link, t, o="/conta, c, t"
-            classNa, m, e="bord, e, r-2, borde, r-cy, a, n-400, hove, r:bg-cy, a, n-400, hove, r:te, x, t-gr, a, y-900, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-3"
+            <ArrowRight, classNam, e="w-5 h-5, grou, p-hover:translate-x-1, transitio, n-transform" />
+          </Link>
+          <Linkto="/contact"
+            className="border-2, borde, r-cyan-400, hove, r:bg-cyan-400, hove, r:text-gray-900, tex, t-whitepx-8py-4, rounde, d-xl, fon, t-bold, tex, t-lg, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, ga, p-3"
           >
             <Sparkles, classNam, e="w-5 h-5" />
             Get, Started, Today
-          </Li, n, k>
-        </d, i, v>
-        {/* Ta, g, s */}
-        <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-cent, e, r">
-          <span, classNam, e="bg-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purp, l, e-4, 0, 0/30">
+          </Link>
+        </div>
+        {/* Tags */}
+        <div, classNam, e = "mt-8, flex, flex-wrap, ga, p-3, justif, y-center">
+          <span, classNam, e="bg-purple-500/20, tex, t-purple-200px-4py-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-purple-400/30">
             🧠 Neural, Codin, g
-          </sp, a, n>
-          <span, classNam, e="bg-cy, a, n-5, 0, 0/20, tex, t-cy, a, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-cy, a, n-4, 0, 0/30">
-            📊 Holographic, A, I
-          </sp, a, n>
-          <span, classNam, e="bg-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-bl, u, e-4, 0, 0/30">
-            ⚛️ Quantum, A, I
-          </sp, a, n>
-          <span, classNam, e="bg-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-gre, e, n-4, 0, 0/30">
+          </span>
+          <span, classNam, e="bg-cyan-500/20, tex, t-cyan-200px-4py-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-cyan-400/30">
+            📊 HolographicAI
+          </span>
+          <span, classNam, e="bg-blue-500/20, tex, t-blue-200px-4py-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-blue-400/30">
+            ⚛️ QuantumAI
+          </span>
+          <span, classNam, e="bg-green-500/20, tex, t-green-200px-4py-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-green-400/30">
             🔬 Molecular, Manufacturin, g
-          </sp, a, n>
-          <span, classNam, e="bg-pi, n, k-5, 0, 0/20, tex, t-pi, n, k-200, p, x-4, p, y-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pi, n, k-4, 0, 0/30">
+          </span>
+          <span, classNam, e="bg-pink-500/20, tex, t-pink-200px-4py-2, rounde, d-full, tex, t-sm, fon, t-medium, border, border-pink-400/30">
             📚 AI, Educatio, n
-          </sp, a, n>
-        </d, i, v>
-      </d, i, v>
+          </span>
+        </div>
+      </div>
     </di, v>
   );
 };

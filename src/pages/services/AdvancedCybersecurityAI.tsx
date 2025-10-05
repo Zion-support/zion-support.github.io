@@ -1,433 +1,432 @@
-impo, r, t {
-  ArrowLe, f, t,
-  CheckCirc, l, e,
-  DollarSi, g, n,
-  Lo, c, k,
-  Shie, l, d,
-  Trending, U, p,
-  Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import, Header, from '../../componen, t, s/Head, e, r';
+import { ArrowLeft,
+  CheckCircle,
+  DollarSign,
+  Lock,
+  Shield,
+  TrendingUp,
+  Zap,
+ } from 'lucide-react';
+import { Link  } from 'react-router-dom';
+import { Helmet  } from 'react-helmet-async';
+import, Header, from '../../components/Header';
 
 const, AdvancedCybersecurityA, I = () => { 
-  retu, r, n (
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          Advanced, Cybersecurity, AI Platfo, r, m | Ne, x, t-Gen, Threat, Detection &
-          Respon, s, e | Zion, Tech, Group
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t='AI-powered, cybersecurity, platform with, 9, 9.92% threat, detection, accuracy. Re, a, l-time, protecti, o, n, autonomous, incident, response, and, predictive, security intelligen, c, e.'
+      <Helmet>
+        <title>
+          Advanced, Cybersecurity, AI Platform | Next-Gen, Threat, Detection &
+          Response | Zion, Tech, Group
+        </title>
+        <meta, nam, e = 'description'
+          content='AI-powered, cybersecurity, platform with99.92% threat, detection, accuracy. Real-time, protecti, o, n, autonomous, incident, response, and, predictive, security intelligence.'
         />
-        <meta, nam, e = 'keywor, d, s'
-          conte, n, t='cybersecurit, y, A, I, threat, detectio, n, incident, respons, e, SI, E, M, E, D, R, security, automatio, n, AI, securit, y'
+        <meta, nam, e = 'keywords'
+          content='cybersecurityA, I, threat, detectio, n, incident, respons, e, SI, E, MED, R, security, automatio, n, AI, securit, y'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
-        <Head, e, r />
+      <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark'>
+        <Header />
 
-        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
-          <Link, t, o='/servic, e, s'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
+        <article, classNam, e='containermx-autopx-6py-20' > {/* Back, Lin, k */ }
+          <Linkto='/services'
+            className='inline-flex, item, s-center, tex, t-zion-cyan, hove, r: text-zion-blue-lightmb-8, transitio, n-colors'
           >
-            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            <ArrowLeft, classNam, e='w-4 h-4mr-2' />
             Back, to, Services
-          </Li, n, k>
+          </Link>
 
-          {/* He, a, d, e, r */}
-          <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'>
-            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
-              <span, classNam, e='px-4, p, y-2, b, g-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-r, e, d-5, 0, 0/30'>
-                🔒 N, E, W! October, 202, 5
-              </sp, a, n>
-              <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
+          {/* Head, e, r */}
+          <div, classNam, e = 'max-w-5xlmx-automb-16'>
+            <div, classNam, e='flex, item, s-center, ga, p-4mb-6, fle, x-wrap'>
+              <span, classNam, e='px-4py-2bg-red-500/20, tex, t-red-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-red-500/30'>
+                🔒 NEW! October, 202, 5
+              </span>
+              <span, classNam, e='px-4py-2bg-blue-500/20, tex, t-blue-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-blue-500/30'>
                 🛡️ AI, Securit, y
-              </sp, a, n>
-              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                Starting, a, t $1, 2,9, 9, 9/mon, t, h
-              </sp, a, n>
-            </d, i, v>
+              </span>
+              <span, classNam, e='text-zion-slate-light'>
+                Startingat $129, 9, 9/month
+              </span>
+            </div>
 
-            <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
-              Advanced, Cybersecurity, AI Platfo, r, m
-              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-bl, u, e-400, m, t-2'>
-                Ne, x, t-Gen, Threat, Detection & Respon, s, e
-              </sp, a, n>
+            <h1, classNam, e = 'text-5xlmd: text-6xl, fon, t-bold, tex, t-whitemb-6, leadin, g-tight'>
+              Advanced, Cybersecurity, AI Platform
+              <span, classNam, e='block, tex, t-transparentbg-clip-textbg-gradient-to-r, fro, m-red-400to-blue-400mt-2'>
+                Next-Gen, Threat, Detection & Response
+              </span>
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
-              Protect, your, enterprise with, A, I-powered, cybersecurity, that
-              identifies, threats, 99.7% faster, than, traditional too, l, s. Re, a, l-time, detect, i, o, n, autonomous, respons, e, and, predictive, intelligence to, prevent, breaches before, they, occur.
+            <p, classNam, e='text-xl, tex, t-zion-slate-light, leadin, g-relaxedmb-8'>
+              Protect, your, enterprise withAI-powered, cybersecurity, that
+              identifies, threats, 99.7% faster, than, traditional tools. Real-time, detect, i, o, n, autonomous, respons, e, and, predictive, intelligence to, prevent, breaches before, they, occur.
             </p>
 
             {/* Key, Metrics, Banner */}
-            <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
-              <div, classNam, e='bg-r, e, d-9, 0, 0/40, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-r, e, d-400, m, b-2'>
+            <div, classNam, e = 'gridmd: grid-cols-4, ga, p-6'>
+              <div, classNam, e='bg-red-900/40, rounde, d-xlp-6, border, border-red-500/30, tex, t-center, hove, r:scale-105, transitio, n-transform'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-red-400mb-2'>
                   99.92%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   Threat, Detectio, n
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
-                  &lt; 50, m, s
-                </d, i, v>
-                <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+              </div>
+              <div, classNam, e='bg-blue-900/40, rounde, d-xlp-6, border, border-blue-500/30, tex, t-center, hove, r:scale-105, transitio, n-transform'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-blue-400mb-2'>
+                  &lt; 50ms
+                </div>
+                <div, classNam, e = 'text-sm, tex, t-zion-slate-light'>
                   Detection, Latenc, y
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                </div>
+              </div>
+              <div, classNam, e='bg-green-900/40, rounde, d-xlp-6, border, border-green-500/30, tex, t-center, hove, r:scale-105, transitio, n-transform'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-green-400mb-2'>
                   95%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, classNam, e='text-sm, tex, t-zion-slate-light'>
                   False, Positive, Reduction
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+                </div>
+              </div>
+              <div, classNam, e='bg-purple-900/40, rounde, d-xlp-6, border, border-purple-500/30, tex, t-center, hove, r:scale-105, transitio, n-transform'>
+                <div, classNam, e='text-4xl, fon, t-bold, tex, t-purple-400mb-2'>
                   &lt; 5s
-                </d, i, v>
-                <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, classNam, e = 'text-sm, tex, t-zion-slate-light'>
                   Response, Tim, e
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          {/* Con, t, e, n, t */}
-          <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, spac, e-y-12, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+          {/* Conte, n, t */}
+          <div, classNam, e = 'max-w-5xlmx-auto, spac, e-y-12, tex, t-zion-slate-light'>
             {/* Threat, Landscap, e */}
-            <secti, o, n>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                <Shield, classNam, e='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
-                The, Modern, Threat Landsca, p, e
+            <section>
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6, flex, items-center, ga, p-3'>
+                <Shield, classNam, e='w-8 h-8, tex, t-red-400' />
+                The, Modern, Threat Landscape
               </h2>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-r, e, d-5, 0, 0/30'>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
-                  <d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+              <div, classNam, e='bg-white/5, backdro, p-blur-sm, rounde, d-xlp-8, border, border-red-500/30'>
+                <div, classNam, e='gridmd: grid-cols-2, ga, p-8'>
+                  <div>
+                    <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4'>
                       🔴 Security, Challenge, s
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-3'>
+                    <ul, classNam, e='space-y-3'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, fon, t-bo, l, d'>
+                        <span, classNam, e='text-red-400, fon, t-bold'>
                           207, day, s:
-                        </sp, a, n>
-                        <sp, a, n>Average, breach, detection ti, m, e (indus, t, r, y)</sp, a, n>
+                        </span>
+                        <span>Average, breach, detection time (industr, y)</span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, fon, t-bo, l, d'>$4.4, 5, M:</sp, a, n>
-                        <sp, a, n>Average, cost, per data, breac, h</sp, a, n>
+                        <span, classNam, e='text-red-400, fon, t-bold'>$4.45M:</span>
+                        <span>Average, cost, per data, breac, h</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, fon, t-bo, l, d'>
+                        <span, classNam, e='text-red-400, fon, t-bold'>
                           60, second, s:
-                        </sp, a, n>
-                        <sp, a, n>Ransomware, encryption, time</sp, a, n>
+                        </span>
+                        <span>Ransomware, encryption, time</span>
                       </li>
                     </ul>
-                  </d, i, v>
-                  <d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                  </div>
+                  <div>
+                    <h3, classNam, e='text-xl, fon, t-bold, tex, t-whitemb-4'>
                       ✅ Our, Solutio, n
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-3'>
+                    <ul, classNam, e='space-y-3'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                        <sp, a, n>&lt; 50ms, detection, time (re, a, l-t, i, m, e)</sp, a, n>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                        <span>&lt; 50ms, detection, time (real-tim, e)</span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                        <sp, a, n>Prevent, breaches, before they, occu, r</sp, a, n>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                        <span>Prevent, breaches, before they, occu, r</span>
                       </li>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                        <sp, a, n>Autonomous, threat, containment</sp, a, n>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                        <span>Autonomous, threat, containment</span>
                       </li>
                     </ul>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             {/* Platform, Featu, r, e, s */}
-            <secti, o, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                <Lock, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
+            <section>
+              <h2, classNam, e = 'text-3xl, fon, t-bold, tex, t-whitemb-6, flex, items-center, ga, p-3'>
+                <Lock, classNam, e='w-8 h-8, tex, t-blue-400' />
                 Platform, Feature, s
               </h2>
-              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
+              <div, classNam, e='gridmd: grid-cols-2, ga, p-6'>
                 {[
                   {
-                    tit, l, e: 'AI-Powered, Threat, Detecti, o, n',
-                    descripti, o, n: '99.92% accuracy, with, behavioral analy, s, i, s, pattern, recognitio, n, and, zer, o-day, detectio, n. 95% fewer, false, positives.',
-                    ic, o, n: '🎯',
+                    title: 'AI-Powered, Threat, Detecti, o, n',
+                    description: '99.92% accuracy, with, behavioral analysi, s, pattern, recognitio, n, and, zer, o-day, detectio, n. 95% fewer, false, positives.',
+                    icon: '🎯',
                   },
                   {
-                    tit, l, e: 'Automated, Incident, Respons, e',
-                    descripti, o, n: '<5, second, response initiati, o, n. 99.7% faster, than, manual response, with, intelligent quarantine, and, self-heal, i, n, g.',
-                    ic, o, n: '⚡',
+                    title: 'Automated, Incident, Respons, e',
+                    description: '<5, second, response initiation. 99.7% faster, than, manual response, with, intelligent quarantine, and, self-healin, g.',
+                    icon: '⚡',
                   },
                   {
-                    tit, l, e: 'Predictive, Security, Intelligenc, e',
-                    descripti, o, n: 'Forecast, threats, before they, happen, with attack, path, analysi, s, vulnerability, predictio, n, and, risk, scoring.',
-                    ic, o, n: '🔮',
+                    title: 'Predictive, Security, Intelligenc, e',
+                    description: 'Forecast, threats, before they, happen, with attack, path, analysi, s, vulnerability, predictio, n, and, risk, scoring.',
+                    icon: '🔮',
                   },
                   {
-                    tit, l, e: 'Unified, Security, Platfor, m',
-                    descripti, o, n: 'S, I, E, M, E, D, R, N, D, R, SO, A, R, and, UEBA, in one, platfor, m. 5, 0, 0+ p, r, e-built, security, integrations.',
-                    ic, o, n: '🛡️',
+                    title: 'Unified, Security, Platfor, m',
+                    description: 'SIE, MED, RND, R, SO, A, R, and, UEBA, in one, platfor, m. 500+ pre-built, security, integrations.',
+                    icon: '🛡️',
                   },
                   {
-                    tit, l, e: 'Advanced, Analytic, s & Forens, i, c, s',
-                    descripti, o, n: 'Attack, timeline, reconstructio, n, root, cause, analysis, and, threat, hunting with, interactive, visualization.',
-                    ic, o, n: '🔬',
+                    title: 'Advanced, Analytic, s & Forensic, s',
+                    description: 'Attack, timeline, reconstructio, n, root, cause, analysis, and, threat, hunting with, interactive, visualization.',
+                    icon: '🔬',
                   },
                   {
-                    tit, l, e: 'Complian, c, e & Governa, n, c, e',
-                    descripti, o, n: 'Automated, monitoring, for G, D, P, R, HIP, A, A, PCI, DS, S, SO, C, 2, ISO, 27001, with re, a, l-time, compliance, reporting.',
-                    ic, o, n: '📋',
+                    title: 'Compliance & Governanc, e',
+                    description: 'Automated, monitoring, for GDP, R, HIP, A, A, PCI, DS, S, SO, C, 2, ISO, 27001, with real-time, compliance, reporting.',
+                    icon: '📋',
                   },
-                ].m, a, p((featu, r, e, ind, e, x) => (
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
+                ].map((feature, index) => (
+                  <div, ke, y = { inde, x }, className = 'bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-zion-cyan/20, hove, r: border-zion-cyan/50, transitio, n-all'
                   >
-                    <div, classNam, e='te, x, t-4xl, m, b-4'>{featu, r, e.ic, o, n}</d, i, v>
-                    <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
-                      {featu, r, e.tit, l, e}
+                    <div, classNam, e='text-4xlmb-4'>{feature.icon}</div>
+                    <h3, classNam, e = 'text-xl, fon, t-bold, tex, t-whitemb-3'>
+                      {feature.title}
                     </h3>
-                    <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
-                      {featu, r, e.descripti, o, n}
+                    <p, classNam, e='text-zion-slate-light'>
+                      {feature.description}
                     </p>
                   </di, v>
                 ))}
-              </d, i, v>
-            </secti, o, n>
+              </div>
+            </section>
 
             {/* Industry, Solution, s */}
-            <secti, o, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+            <section>
+              <h2, classNam, e = 'text-3xl, fon, t-bold, tex, t-whitemb-6'>
                 🏭 Industry, Solution, s
               </h2>
-              <div, classNam, e='spa, c, e-y-6'>
+              <div, classNam, e='space-y-6'>
                 {[
                   {
-                    indust, r, y: 'Financial, Servi, c, e, s',
-                    savin, g, s: '$8.4, M',
-                    resul, t, s: 'Zero, breach, e, s',
-                    highligh, t, s: [
-                      '96% reduction, in, fraud los, s, e, s',
-                      '1, 0, 0% PCI, complianc, e',
-                      'Re, a, l-time, transaction, monitoring',
+                    industry: 'Financial, Servi, c, e, s',
+                    savings: '$8.4, M',
+                    results: 'Zero, breach, e, s',
+                    highlights: [
+                      '96% reduction, in, fraud losse, s',
+                      '100% PCI, complianc, e',
+                      'Real-time, transaction, monitoring',
                     ],
                   },
                   {
-                    indust, r, y: 'Healthc, a, r, e',
-                    savin, g, s: '$6.2, M',
-                    resul, t, s: '1, 0, 0% HI, P, A, A',
-                    highligh, t, s: [
+                    industry: 'Healthcar, e',
+                    savings: '$6.2, M',
+                    results: '100% HIPA, A',
+                    highlights: [
                       'Zero, ransomware, infection, s',
-                      '92% reduction, in, security inciden, t, s',
+                      '92% reduction, in, security incidents',
                       'Patient, data, protection',
                     ],
                   },
                   {
-                    indust, r, y: 'Manufactur, i, n, g',
-                    savin, g, s: '$4.8, M',
-                    resul, t, s: 'Zero, disruptio, n, s',
-                    highligh, t, s: [
+                    industry: 'Manufacturin, g',
+                    savings: '$4.8, M',
+                    results: 'Zero, disruptio, n, s',
+                    highlights: [
                       'OT/IT, security, convergenc, e',
                       'Industrial, IoT, protection',
                       'IP, theft, prevention',
                     ],
                   },
                   {
-                    indust, r, y: 'Reta, i, l & E-comme, r, c, e',
-                    savin, g, s: '$5.6, M',
-                    resul, t, s: '94% fraud, reducti, o, n',
-                    highligh, t, s: [
+                    industry: 'Retail & E-commerc, e',
+                    savings: '$5.6, M',
+                    results: '94% fraud, reducti, o, n',
+                    highlights: [
                       'POS, security, monitorin, g',
                       'DDoS, mitigatio, n',
                       'Customer, data, protection',
                     ],
                   },
-                ].m, a, p((soluti, o, n, ind, e, x) => (
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
+                ].map((solution, index) => (
+                  <div, ke, y = { inde, x }, className = 'bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, border, border-zion-cyan/30'
                   >
-                    <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
-                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                        {soluti, o, n.indust, r, y}
+                    <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4mb-4'>
+                      <h3, classNam, e='text-2xl, fon, t-bold, tex, t-white'>
+                        {solution.industry}
                       </h3>
                       <div, classNam, e='flex, ga, p-4'>
-                        <div, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                          {soluti, o, n.savin, g, s} annual, saving, s
-                        </d, i, v>
-                        <div, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
-                          {soluti, o, n.resul, t, s}
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                    <ul, classNam, e='spa, c, e-y-2'>
-                      { soluti, o, n.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
-                        <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                          <sp, a, n>{highlig, h, t}</sp, a, n>
+                        <div, classNam, e='px-4py-2bg-green-500/20, tex, t-green-300, rounde, d-lg, tex, t-sm, fon, t-semibold'>
+                          {solution.savings} annual, saving, s
+                        </div>
+                        <div, classNam, e='px-4py-2bg-blue-500/20, tex, t-blue-300, rounde, d-lg, tex, t-sm, fon, t-semibold'>
+                          {solution.results}
+                        </div>
+                      </div>
+                    </div>
+                    <ul, classNam, e='space-y-2'>
+                      { solution.highlights.map((highligh, t, hInd, e, x) = > (
+                        <li, ke, y = { hInde, x  }, className = 'flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                          <span>{highlight}</span>
                         </l, i>
                       ))}
                     </ul>
-                  </d, i, v>
+                  </div>
                 ))}
-              </d, i, v>
-            </secti, o, n>
+              </div>
+            </section>
 
             {/* Pricing, Package, s */}
-            <secti, o, n>
-              <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                <DollarSign, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
-                Prici, n, g & Packag, e, s
+            <section>
+              <h2, classNam, e = 'text-3xl, fon, t-bold, tex, t-whitemb-6, flex, items-center, ga, p-3'>
+                <DollarSign, classNam, e='w-8 h-8, tex, t-green-400' />
+                Pricing & Packages
               </h2>
-              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
+              <div, classNam, e='gridmd: grid-cols-3, ga, p-6'>
                 {[
                   {
-                    na, m, e: 'Business, Protect, i, o, n',
-                    pri, c, e: '$1, 2,9, 9, 9',
-                    featur, e, s: [
-                      'Up, to, 100 endpoi, n, t, s',
-                      '10, TB, log stora, g, e/mon, t, h',
+                    name: 'Business, Protect, i, o, n',
+                    price: '$129, 9, 9',
+                    features: [
+                      'Up, to, 100 endpoint, s',
+                      '10, TB, log storage/month',
                       'Core, threat, detection',
-                      'Email, suppor, t (8, x, 5)',
-                      '99.5% S, L, A',
+                      'Email, suppor, t (8x5)',
+                      '99.5% SLA',
                     ],
                   },
                   {
-                    na, m, e: 'Enterprise, Securi, t, y',
-                    pri, c, e: '$2, 9,9, 9, 9',
-                    popul, a, r: t, r, u, e,
+                    name: 'Enterprise, Securi, t, y',
+                    price: '$299, 9, 9',
+                    popular: tru, e,
                     featur, e, s: [
-                      'Up, t, o , 1,000, endpoint, s',
-                      '50, TB, log stora, g, e/mon, t, h',
+                      'Upto , 1,000, endpoint, s',
+                      '50, TB, log storage/month',
                       'Advanced, threat, detection',
                       '24/7, suppor, t',
-                      '99.9% S, L, A',
+                      '99.9% SLA',
                     ],
                   },
                   {
-                    na, m, e: 'Managed, Securi, t, y',
-                    pri, c, e: '$5, 9,9, 9, 9',
-                    featur, e, s: [
+                    name: 'Managed, Securi, t, y',
+                    price: '$599, 9, 9',
+                    features: [
                       'Unlimited, endpoin, t, s',
                       'Unlimited, log, storage',
                       '24/7, SOC, monitoring',
                       'Dedicated, analyst, s',
-                      '99.97% S, L, A',
+                      '99.97% SLA',
                     ],
                   },
-                ].m, a, p((p, k, g, ind, e, x) => (
-                  <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-r, e, d-5, 0, 0/50, rin, g-2, rin, g-r, e, d-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
+                ].map((pkg, index) => (
+                  <div, ke, y = { inde, x }, className = { `bg-white/5, backdro, p-blur-sm, rounde, d-xlp-6, borde, r ${pkg.popular  ? 'border-red-500/50, rin, g-2, rin, g-red-500/30'  : 'border-zion-cyan/30' }`}
                   >
-                    {  p, k, g.popul, a, r  && (
-                      <div, classNam, e='bg-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
+                    {  pkg.popular  && (
+                      <div, classNam, e='bg-red-500/20, tex, t-red-300, tex, t-xs, fon, t-boldpx-3py-1, rounde, d-full, inlin, e-blockmb-4'>
                         MOST, POPULA, R
                       </di, v > )  }
-                    <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
-                      {p, k, g.na, m, e}
+                    <h3, classNam, e = 'text-2xl, fon, t-bold, tex, t-whitemb-2'>
+                      {pkg.name}
                     </h3>
-                    <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
-                      {p, k, g.pri, c, e}
-                      <span, classNam, e='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-                        /mon, t, h
-                      </sp, a, n>
-                    </d, i, v>
-                    <ul, classNam, e='spa, c, e-y-3'>
-                      { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
-                        <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                          <sp, a, n>{featu, r, e}</sp, a, n>
+                    <div, classNam, e='text-4xl, fon, t-bold, tex, t-green-400mb-6'>
+                      {pkg.price}
+                      <span, classNam, e='text-lg, tex, t-zion-slate-light'>
+                        /month
+                      </span>
+                    </div>
+                    <ul, classNam, e='space-y-3'>
+                      { pkg.features.map((featur, e, fInd, e, x) = > (
+                        <li, ke, y = { fInde, x  }, className = 'flex, item, s-start, ga, p-2'>
+                          <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                          <span>{feature}</span>
                         </l, i>
                       ))}
                     </ul>
-                  </d, i, v>
+                  </div>
                 ))}
-              </d, i, v>
-            </secti, o, n>
+              </div>
+            </section>
 
             {/* Limited, Time, Offer */}
-            <secti, o, n>
-              <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/40, vi, a-oran, g, e-9, 0, 0/40, t, o-yell, o, w-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-r, e, d-5, 0, 0/50'>
+            <section>
+              <div, classNam, e = 'bg-gradient-to-r, fro, m-red-900/40, vi, a-orange-900/40to-yellow-900/40, rounde, d-xlp-8, borde, r-2, borde, r-red-500/50'>
                 <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'>
-                  <div, classNam, e='fl, e, x-1'>
-                    <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-                      <Shield, classNam, e='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
-                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                        🛡️ October, 2025, Security Initiati, v, e
+                  <div, classNam, e='flex-1'>
+                    <div, classNam, e='flex, item, s-center, ga, p-3mb-4'>
+                      <Shield, classNam, e='w-8 h-8, tex, t-red-400' />
+                      <h3, classNam, e='text-2xl, fon, t-bold, tex, t-white'>
+                        🛡️ October, 2025, Security Initiative
                       </h3>
-                    </d, i, v>
-                    <p, classNam, e='te, x, t-xl, tex, t-r, e, d-200, m, b-4'>
-                      G, e, t <stro, n, g>60, Days, FREE</stro, n, g> when, you, start before, October, 3, 1, 20, 2, 5
+                    </div>
+                    <p, classNam, e='text-xl, tex, t-red-200mb-4'>
+                      Get <strong>60, Days, FREE</strong> when, you, start before, October, 3, 1, 20, 2, 5
                     </p>
-                    <ul, classNam, e = 'spa, c, e-y-2'>
+                    <ul, classNam, e = 'space-y-2'>
                       <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                        <sp, a, n>Free, security, assessment ($2, 5,000, valu, e)</sp, a, n>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                        <span>Free, security, assessment ($2, 5,000, valu, e)</span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                        <sp, a, n>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                        <span>
                           Complimentary, penetration, test ($3, 5,000, valu, e)
-                        </sp, a, n>
+                        </span>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
-                        <sp, a, n>90, days, extended suppo, r, t</sp, a, n>
+                        <CheckCircle, classNam, e='w-5 h-5, tex, t-green-400, fle, x-shrink-0mt-1' />
+                        <span>90, days, extended support</span>
                       </li>
                     </ul>
-                    <p, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-light, m, t-4'>
+                    <p, classNam, e='text-sm, tex, t-zion-slate-lightmt-4'>
                       Limited, to, first 25, customer, s. Annual, contract, required.
                     </p>
-                  </d, i, v>
-                  <d, i, v>
-                    <Link, t, o='/conta, c, t'
-                      classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-r, e, d-600, hove, r:to-oran, g, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
+                  </div>
+                  <div>
+                    <Linkto='/contact'
+                      className='inline-flex, item, s-center, ga, p-2px-8py-4bg-gradient-to-r, fro, m-red-500to-orange-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: from-red-600, hove, r:to-orange-600, transitio, n-all, transform, hover:scale-105'
                     >
                       Secure, Your, Enterprise
                       <Shield, classNam, e='w-5 h-5' />
-                    </Li, n, k>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
-            </secti, o, n>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </section>
 
             {/* CTA, Sect, i, o, n */}
-            <section, classNam, e = 'te, x, t-cent, e, r'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
-                Protect, Your, Enterprise Tod, a, y
+            <section, classNam, e = 'text-center'>
+              <h2, classNam, e='text-3xl, fon, t-bold, tex, t-whitemb-6'>
+                Protect, Your, Enterprise Today
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8'>
-                Schedule, a, security consultation, to, see how, AI, can revolutionize, your, cybersecurity postu, r, e.
+              <p, classNam, e='text-xl, tex, t-zion-slate-lightmb-8'>
+                Schedule, a, security consultation, to, see how, AI, can revolutionize, your, cybersecurity posture.
               </p>
-              <div, classNam, e='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-r, e, d-600, hove, r:to-oran, g, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
+              <div, classNam, e='flex, fle, x-wrap, ga, p-4, justif, y-center'>
+                <Linkto='/contact'
+                  className='inline-flex, item, s-center, ga, p-2px-8py-4bg-gradient-to-r, fro, m-red-500to-orange-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: from-red-600, hove, r:to-orange-600, transitio, n-all, transform, hover:scale-105'
                 >
                   Schedule, Security, Assessment
                   <Shield, classNam, e='w-5 h-5' />
-                </Li, n, k>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-r, e, d-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
+                </Link>
+                <Linkto='/contact'
+                  className='inline-flex, item, s-center, ga, p-2px-8py-4bg-white/10, backdro, p-blur-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-red-500/30, hove, r:bg-white/20, transitio, n-all'
                 >
                   Request, Platform, Demo
-                </Li, n, k>
-              </d, i, v>
-            </secti, o, n>
-          </d, i, v>
-        </artic, l, e>
-      </d, i, v>
+                </Link>
+              </div>
+            </section>
+          </div>
+        </article>
+      </div>
     </>
   );
 };

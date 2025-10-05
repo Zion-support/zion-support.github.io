@@ -1,171 +1,171 @@
-import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, TrendingContentBanne, r: Rea, c, t.FC = () => {
-  con, s, t [currentIn, d, e, x, setCurrentInd, e, x] = useSta, t, e(0); const, trendingItem, s = [
+import React, { useState, useEffect  } from 'react';
+import { Link  } from 'react-router-dom';
+const, TrendingContentBanne, r: React.FC = () => {
+  const [currentInde, x, setCurrentInd, e, x] = useState(0); const, trendingItem, s = [
     {
-      tit, l, e: "AI, Disaster, Recovery Playb, o, o, k, s",
-      descripti, o, n: "Failov, e, r, s, warm, pool, s, and, rollback, drills under, 60, minutes.",",
-      vie, w, s: "11.2, K",
-      readTi, m, e: "7, m, i, n",",
-      catego, r, y: "AI, Operatio, n, s",
-      ic, o, n: Trendin, g, U, p,",
-      li, n, k: "/bl, o, g/ai-disast, e, r-recove, r, y-playboo, k, s-2, 0, 2, 5",
-      bad, g, e: "NE, W"
+      title: "AI, Disaster, Recovery Playboo, k, s",
+      description: "Failover, s, warm, pool, s, and, rollback, drills under, 60, minutes.",",
+      views: "11.2, K",
+      readTime: "7mi, n",",
+      category: "AI, Operatio, n, s",
+      icon: TrendingU, p",
+      link: "/blog/ai-disaster-recovery-playbooks-202, 5",
+      badge: "NE, W"
     },
     {",
-      tit, l, e: "Private, Feature, Flags: Ze, r, o‑PII, Experimen, t, s",
-      descripti, o, n: "Signed, confi, g, s, scoped, ID, s, and, edge, analytics under, 100m, s.",",
-      vie, w, s: "13.6, K",
-      readTi, m, e: "8, m, i, n",",
-      catego, r, y: "Experimentat, i, o, n",
-      ic, o, n: Shi, e, l, d,",
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-pi, i",
-      bad, g, e: "NE, W"
+      title: "Private, Feature, Flags: Zero‑PII, Experimen, t, s",
+      description: "Signed, confi, g, s, scoped, ID, s, and, edge, analytics under, 100m, s.",",
+      views: "13.6, K",
+      readTime: "8mi, n",",
+      category: "Experimentatio, n",
+      icon: Shiel, d",
+      link: "/blog/ai-2025-oct-01-private-feature-flags-zero-pi, i",
+      badge: "NE, W"
     },
     {",
-      tit, l, e: "Runtime, Rollback, Guardrail, s",
-      descripti, o, n: "Canary, scorecar, d, s, kill, switche, s, and, instant, reversibility.",",
-      vie, w, s: "12.1, K",
-      readTi, m, e: "7, m, i, n",",
-      catego, r, y: "Reliabil, i, t, y",
-      ic, o, n: Trendin, g, U, p,",
-      li, n, k: "/bl, o, g/ai-20, 2, 5-o, c, t-01-runti, m, e-rollba, c, k-guardra, i, l, s",
-      bad, g, e: "TREND, I, N, G"
+      title: "Runtime, Rollback, Guardrail, s",
+      description: "Canary, scorecar, d, s, kill, switche, s, and, instant, reversibility.",",
+      views: "12.1, K",
+      readTime: "7mi, n",",
+      category: "Reliabilit, y",
+      icon: TrendingU, p",
+      link: "/blog/ai-2025-oct-01-runtime-rollback-guardrail, s",
+      badge: "TRENDIN, G"
     },
     {",
-      tit, l, e: "AI, Autonomous, Infrastructure 2, 0, 2, 6",
-      descripti, o, n: "Se, l, f‑heal, i, n, g, se, l, f‑optimizi, n, g, se, l, f‑scaling, platforms, with budge, t, s.",",
-      vie, w, s: "12.4, K",
-      readTi, m, e: "9, m, i, n",",
-      catego, r, y: "Platform, Engineeri, n, g",
-      ic, o, n: Trendin, g, U, p,",
-      li, n, k: "/bl, o, g/ai-autonomo, u, s-infrastructu, r, e-2, 0, 2, 6",
-      bad, g, e: "HO, T"
+      title: "AI, Autonomous, Infrastructure 202, 6",
+      description: "Self‑healin, g, se, l, f‑optimizing, self‑scaling, platforms, with budgets.",",
+      views: "12.4, K",
+      readTime: "9mi, n",",
+      category: "Platform, Engineeri, n, g",
+      icon: TrendingU, p",
+      link: "/blog/ai-autonomous-infrastructure-202, 6",
+      badge: "HO, T"
     },
     {",
-      tit, l, e: "Ze, r, o‑Trust, for, GenAI 2, 0, 2, 6",
-      descripti, o, n: "Prompt, firewal, l, s, egress, control, s, and, signed, outputs at, scal, e.",",
-      vie, w, s: "10.9, K",
-      readTi, m, e: "7, m, i, n",",
-      catego, r, y: "Secur, i, t, y",
-      ic, o, n: Shi, e, l, d,",
-      li, n, k: "/bl, o, g/ze, r, o-tru, s, t-f, o, r-gen, a, i-2, 0, 2, 6",
-      bad, g, e: "TREND, I, N, G"
+      title: "Zero‑Trust, for, GenAI 202, 6",
+      description: "Prompt, firewal, l, s, egress, control, s, and, signed, outputs at, scal, e.",",
+      views: "10.9, K",
+      readTime: "7mi, n",",
+      category: "Securit, y",
+      icon: Shiel, d",
+      link: "/blog/zero-trust-for-genai-202, 6",
+      badge: "TRENDIN, G"
     },
     {",
-      tit, l, e: "Quant, u, m‑AI, Hybrid, Blueprint 2, 0, 2, 6",
-      descripti, o, n: "Ne, a, r‑term, wins, by combining, QC, libs with, AI, orchestratio, n.",",
-      vie, w, s: "9.1, K",
-      readTi, m, e: "8, m, i, n",",
-      catego, r, y: "Quan, t, u, m",
-      ic, o, n: Br, a, i, n,",
-      li, n, k: "/bl, o, g/quant, u, m-ai-hybr, i, d-bluepri, n, t-2, 0, 2, 6",
-      bad, g, e: "NE, W"
+      title: "Quantum‑AI, Hybrid, Blueprint 202, 6",
+      description: "Near‑term, wins, by combining, QC, libs with, AI, orchestratio, n.",",
+      views: "9.1, K",
+      readTime: "8mi, n",",
+      category: "Quantu, m",
+      icon: Brai, n",
+      link: "/blog/quantum-ai-hybrid-blueprint-202, 6",
+      badge: "NE, W"
     },
     {",
-      tit, l, e: "Edge, LLM, Caching Blueprint, 20, 2, 6",
-      descripti, o, n: "S, u, b‑100ms, prompts, via tiered, caches, and freshness, windo, w, s.",",
-      vie, w, s: "8.9, K",
-      readTi, m, e: "6, m, i, n",",
-      catego, r, y: "Architect, u, r, e",
-      ic, o, n: Za, p,",
-      li, n, k: "/bl, o, g/ed, g, e-l, l, m-cachi, n, g-bluepri, n, t-2, 0, 2, 6",
-      bad, g, e: "POPU, L, A, R"
+      title: "Edge, LLM, Caching Blueprint, 20, 2, 6",
+      description: "Sub‑100ms, prompts, via tiered, caches, and freshness, windo, w, s.",",
+      views: "8.9, K",
+      readTime: "6mi, n",",
+      category: "Architectur, e",
+      icon: Za, p",
+      link: "/blog/edge-llm-caching-blueprint-202, 6",
+      badge: "POPULA, R"
     },
     {",
-      tit, l, e: "GenAI, Data, Governance Quickst, a, r, t",
-      descripti, o, n: "Policy, tes, t, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",",
-      vie, w, s: "9.8, K",
-      readTi, m, e: "6, m, i, n",",
-      catego, r, y: "AI, Governan, c, e",
-      ic, o, n: Shi, e, l, d,",
-      li, n, k: "/bl, o, g/gen, a, i-da, t, a-governan, c, e-quicksta, r, t-2, 0, 2, 5",
-      bad, g, e: "HO, T"
+      title: "GenAI, Data, Governance Quickstar, t",
+      description: "Policy, tes, t, s, linea, g, e, consent, scope, s, and, KP, I‑linked, check, s.",",
+      views: "9.8, K",
+      readTime: "6mi, n",",
+      category: "AI, Governan, c, e",
+      icon: Shiel, d",
+      link: "/blog/genai-data-governance-quickstart-202, 5",
+      badge: "HO, T"
     }
-  ]; useEffe, c, t(() => { 
-    const, interva, l = setInter, v, a, l(() => {
-      setCurrentInd, e, x((prevInd, e, x) = > (prevInd, e, x + 1) % trendingIte, m, s.leng, t, h);
-     }, 40, 0, 0);
-    retu, r, n () => clearInterv, a, l(interv, a, l);
-  }, [trendingIte, m, s.leng, t, h]);
-  const, currentIte, m = trendingIte, m, s[currentInd, e, x]; const, getBadgeColo, r = (bad, g, e: str, i, n, g) => {
-    swit, c, h (bad, g, e) {
-      ca, s, e 'H, O, T': retu, r, n 'bg-r, e, d-500, tex, t-whi, t, e'; ca, s, e 'N, E, W': retu, r, n 'bg-gre, e, n-500, tex, t-whi, t, e';
-      ca, s, e 'TRENDI, N, G': retu, r, n 'bg-bl, u, e-500, tex, t-whi, t, e';
-      ca, s, e 'POPUL, A, R': retu, r, n 'bg-purp, l, e-500, tex, t-wh, i, t, e';",
-      defau, l, t: retu, r, n 'bg-gr, a, y-500, tex, t-wh, i, t, e';
+  ]; useEffect(() => { 
+    const, interva, l = setInterva, l(() => {
+      setCurrentIndex((prevIndex) = > (prevIndex + 1) % trendingItems.length);
+     }, 4000);
+    return () => clearInterval(interval);
+  }, [trendingItems.length]);
+  const, currentIte, m = trendingItems[currentIndex]; const, getBadgeColo, r = (badge: strin, g) => {
+    switch (badge) {
+      case 'HOT': return 'bg-red-500, tex, t-white'; case 'NEW': return 'bg-green-500, tex, t-white';
+      case 'TRENDING': return 'bg-blue-500, tex, t-white';
+      case 'POPULAR': return 'bg-purple-500, tex, t-whit, e';",
+      default: return 'bg-gray-500, tex, t-whit, e';
     }
   };
-  const, Ico, n = currentIt, e, m.ic, o, n; retu, r, n (
-    <div, classNam, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-bl, u, e/20, t, o-zi, o, n-purp, l, e/20, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/1, 0, p-6, hove, r: shad, o, w-2xl, transitio, n-all, duratio, n-500, grou, p">
-      <div, classNam, e="flex, item, s-center, justif, y-betwe, e, n">
-        <div, classNam, e="fl, e, x-1">
-          <div, classNam, e="flex, item, s-center, ga, p-3, m, b-3">
+  const, Ico, n = currentItem.icon; return (
+    <div, classNam, e="bg-gradient-to-r, fro, m-zion-blue/20to-zion-purple/20, backdro, p-blur-lg, rounde, d-2xl, border, border-white/10p-6, hove, r: shadow-2xl, transitio, n-all, duratio, n-500, grou, p">
+      <div, classNam, e="flex, item, s-center, justif, y-between">
+        <div, classNam, e="flex-1">
+          <div, classNam, e="flex, item, s-center, ga, p-3mb-3">
             <div, classNam, e="flex, item, s-center, ga, p-2">
-              <TrendingUp, classNam, e="w-5 h-5, tex, t-zi, o, n-cyan, animat, e-pul, s, e" />
-              <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-zi, o, n-cy, a, n">TRENDING, NO, W</sp, a, n>
-            </d, i, v>
-            <div, classNam, e = { `px-2, p, y-1, rounde, d-full, tex, t-xs, fon, t-bo, l, d ${getBadgeCol, o, r(currentIt, e, m.b, a, d, g, e) }, anima, t, e-boun, c, e`}>
-              {currentIt, e, m.bad, g, e}
-            </d, i, v>
-          </d, i, v>
+              <TrendingUp, classNam, e="w-5 h-5, tex, t-zion-cyan, animat, e-pulse" />
+              <span, classNam, e="text-sm, fon, t-semibold, tex, t-zion-cyan">TRENDING, NO, W</span>
+            </div>
+            <div, classNam, e = { `px-2py-1, rounde, d-full, tex, t-xs, fon, t-bold ${getBadgeColor(currentItem.bad, g, e) }, animate-bounce`}>
+              {currentItem.badge}
+            </div>
+          </div>
           <div, classNam, e = "flex, item, s-start, ga, p-4">
-            <div, classNam, e="bg-zi, o, n-bl, u, e/2, 0, p-3, rounde, d-lg, grou, p-hov, e, r: bg-zi, o, n-bl, u, e/30, transitio, n-colo, r, s">
-              <Icon, classNam, e="w-6 h-6, tex, t-zi, o, n-cyan, grou, p-hov, e, r:sca, l, e-110, transitio, n-transfo, r, m"</d, i, v>
-            <div, classNam, e="fl, e, x-1">
-              <div, classNam, e="flex, item, s-center, ga, p-2, m, b-1">
-                <span, classNam, e="te, x, t-xs, fon, t-medium, tex, t-zi, o, n-sla, t, e-light, uppercase, tracking-wid, e, r">
-                  {currentIt, e, m.cate, g, o, r, y}
-                </sp, a, n>
-              </d, i, v>
-              <h3, classNam, e = "te, x, t-lg, fon, t-bold, tex, t-white, m, b-2, grou, p-hov, e, r: te, x, t-zi, o, n-cyan, transitio, n-colo, r, s">
-                {currentIt, e, m.t, i, t, l, e}
+            <div, classNam, e="bg-zion-blue/20p-3, rounde, d-lg, grou, p-hover: bg-zion-blue/30, transitio, n-colors">
+              <Icon, classNam, e="w-6 h-6, tex, t-zion-cyan, grou, p-hover:scale-110, transitio, n-transform"</div>
+            <div, classNam, e="flex-1">
+              <div, classNam, e="flex, item, s-center, ga, p-2mb-1">
+                <span, classNam, e="text-xs, fon, t-medium, tex, t-zion-slate-light, uppercase, tracking-wider">
+                  {currentItem.catego, r, y}
+                </span>
+              </div>
+              <h3, classNam, e = "text-lg, fon, t-bold, tex, t-whitemb-2, grou, p-hover: text-zion-cyan, transitio, n-colors">
+                {currentItem.tit, l, e}
               </h3>
-              <p, classNam, e = "te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-3">
-                {currentIt, e, m.descripti, o, n}
+              <p, classNam, e = "text-zion-slate-light, tex, t-smmb-3">
+                {currentItem.description}
               </p>
-              <div, classNam, e="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zi, o, n-sla, t, e-lig, h, t">
+              <div, classNam, e="flex, item, s-center, ga, p-4, tex, t-xs, tex, t-zion-slate-light">
                 <div, classNam, e="flex, item, s-center, ga, p-1">
                   <Eye, classNam, e="w-3 h-3" />
-                  <sp, a, n>{currentIt, e, m.vie, w, s} vie, w, s</sp, a, n>
-                </d, i, v>
+                  <span>{currentItem.views} views</span>
+                </div>
                 <div, classNam, e="flex, item, s-center, ga, p-1">
                   <Clock, classNam, e="w-3 h-3" />
-                  <sp, a, n>{currentIt, e, m.readTi, m, e} re, a, d</sp, a, n>
-                </d, i, v>
+                  <span>{currentItem.readTime} read</span>
+                </div>
                 <div, classNam, e="flex, item, s-center, ga, p-1">
-                  <Star, classNam, e="w-3 h-3, tex, t-yell, o, w-4, 0, 0" />
-                  <sp, a, n>4.9/5</sp, a, n>
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </d, i, v>
+                  <Star, classNam, e="w-3 h-3, tex, t-yellow-400" />
+                  <span>4.9/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div, classNam, e="flex, fle, x-col, item, s-end, ga, p-3">
-          <Link, t, o = { currentIt, e, m.l, i, n, k }, classNa, m, e = "bg-zi, o, n-cyan, tex, t-white, hove, r: bg-zi, o, n-bl, u, e-light, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/b, t, n"
+          <Linkto = { currentItem.lin, k }, className = "bg-zion-cyan, tex, t-white, hove, r: bg-zion-blue-lightpx-4py-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:scale-105, inlin, e-flex, item, s-center, ga, p-2, grou, p/btn"
           >
             <BookOpen, classNam, e="w-4 h-4" />
             Read, No, w
-            <ArrowRight, classNam, e="w-4 h-4, grou, p-hov, e, r/b, t, n:transla, t, e-x-1, transitio, n-transfo, r, m" />
-          </Li, n, k>
-          {/* Navigation, d, o, t, s */}
+            <ArrowRight, classNam, e="w-4 h-4, grou, p-hover/btn:translate-x-1, transitio, n-transform" />
+          </Link>
+          {/* Navigationdo, t, s */}
           <div, classNam, e = "flex, ga, p-2">
-            { trendingIte, m, s.m, a, p((, _, ind, e, x) = > (
-              <button, ke, y = { in, d, e, x  }, onCli, c, k={  () =  > setCurrentInd, e, x(ind, e, x)  } classNa, m, e = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-3, 0, 0 ${
-                  ind, e, x === currentInd, e, x 
-                     ? 'bg-zi, o, n-cyan, scal, e-1, 2, 5' 
-                    : 'bg-whi, t, e/30, hove, r : bg-whi, t, e/, 5, 0'
+            { trendingItems.map((, _, ind, e, x) = > (
+              <button, ke, y = { inde, x  }, onClick={  () =  > setCurrentIndex(index)  } className = { `w-2 h-2, rounde, d-full, transitio, n-all, duratio, n-300 ${
+                  index === currentIndex 
+                     ? 'bg-zion-cyan, scal, e-125' 
+                    : 'bg-white/30, hove, r : bg-white/, 5, 0'
                  }`}
             ))}
-          </d, i, v>
-        </d, i, v>
-      </d, i, v>
+          </div>
+        </div>
+      </div>
       {/* Progress, ba, r */}
-      <div, classNam, e = "mt-4 w-full, b, g-whi, t, e/10, rounde, d-ful, l, h-1">
-        <d, i, v > classNa, m, e="bg-gradie, n, t-to-r, fro, m-zi, o, n-cyan, t, o-zi, o, n-bl, u, e-ligh, t, h-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-line, a, r"
-          sty, l, e={{ wid, t, h: `${((currentInd, e, x + , 1) / trendingIte, m, s.leng, t, h) * 10, 0}%` }}
-      </d, i, v>
-    </d, i, v>
+      <div, classNam, e = "mt-4 w-fullbg-white/10, rounde, d-fullh-1">
+        <div > className="bg-gradient-to-r, fro, m-zion-cyanto-zion-blue-lighth-1, rounde, d-full, transitio, n-all, duratio, n-100, eas, e-linear"
+          style={{ width: `${((currentIndex + , 1) / trendingItems.length) * 10, 0}%` }}
+      </div>
+    </div>
   );
 };
 export, default, TrendingContentBanner;

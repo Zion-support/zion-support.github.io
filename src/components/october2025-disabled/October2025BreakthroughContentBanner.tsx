@@ -1,106 +1,106 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link  } from 'react-router-dom';
 const, October2025BreakthroughContentBanne, r = () => { 
-  retu, r, n (
-    <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-emera, l, d-5, 0, 0/20, t, o-cy, a, n-5, 0, 0/20, border, border-emera, l, d-4, 0, 0/30, rounde, d-x, l, p-6, m, b-8, animat, e-fa, d, e-in, shado, w-2, x, l'>
-      <div, classNam, e='flex, item, s-center, justif, y-center, ga, p-3, m, b-4'>
-        <Sparkles, classNam, e='w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e' />
-        <span, classNam, e='te, x, t-lg, fon, t-bold, tex, t-emera, l, d-4, 0, 0'>
-          🎉 OCTOB, E, R , 3, 20, 2, 5: NEWEST, AI, BREAKTHROUGHS
-        </sp, a, n>
-        <Sparkles, classNam, e = 'w-6 h-6, tex, t-emera, l, d-400, animat, e-pul, s, e' />
-      </d, i, v>
-      <p, classNam, e='te, x, t-white, tex, t-lg, fon, t-semibold, m, b-4, tex, t-cent, e, r'>
-        ⚡ 2, BRAND, NEW GUIDES, RELEASED, TODAY: Enterprise, AI, Automation (4, 0, 0%+
-        efficiency, ga, i, n, s, 70% cost, reductio, n) & Quant, u, m-AI, Hybrid, Systems (1000x, processing, speed, 99.9% accura, c, y)!
+  return (
+    <div, classNam, e = 'bg-gradient-to-r, fro, m-emerald-500/20to-cyan-500/20, border, border-emerald-400/30, rounde, d-xlp-6mb-8, animat, e-fade-in, shado, w-2xl'>
+      <div, classNam, e='flex, item, s-center, justif, y-center, ga, p-3mb-4'>
+        <Sparkles, classNam, e='w-6 h-6, tex, t-emerald-400, animat, e-pulse' />
+        <span, classNam, e='text-lg, fon, t-bold, tex, t-emerald-400'>
+          🎉 OCTOBER , 3, 20, 2, 5: NEWEST, AI, BREAKTHROUGHS
+        </span>
+        <Sparkles, classNam, e = 'w-6 h-6, tex, t-emerald-400, animat, e-pulse' />
+      </div>
+      <p, classNam, e='text-white, tex, t-lg, fon, t-semiboldmb-4, tex, t-center'>
+        ⚡ 2, BRAND, NEW GUIDES, RELEASED, TODAY: Enterprise, AI, Automation (400%+
+        efficiency, ga, i, n, s, 70% cost, reductio, n) & Quantum-AI, Hybrid, Systems (1000x, processing, speed, 99.9% accuracy)!
       </p>
-      <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, tex, t-sm, m, b-6, tex, t-center, ma, x-w-4xl, m, x-au, t, o'>
-        Master, comprehensive, enterprise automation, frameworks, and quant, u, m-AI, hybrid, implementations that, are, transforming Fortune, 500, companies
-        tod, a, y. Get, battl, e-tested, strategi, e, s, implementation, roadmap, s, and, rea, l-world, case, studies.
+      <p, classNam, e = 'text-zion-slate-light, tex, t-smmb-6, tex, t-center, ma, x-w-4xlmx-auto'>
+        Master, comprehensive, enterprise automation, frameworks, and quantum-AI, hybrid, implementations that, are, transforming Fortune, 500, companies
+        today. Get, battl, e-tested, strategi, e, s, implementation, roadmap, s, and, rea, l-world, case, studies.
       </p>
-      <div, classNam, e = 'flex, fle, x-col, s, m: fl, e, x-row, ga, p-4, justif, y-center, m, b-6'>
-        <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-breakthrou, g, h-enterpri, s, e-automati, o, n'
-          classNa, m, e='bg-emera, l, d-500, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-emera, l, d-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
+      <div, classNam, e = 'flex, fle, x-colsm: flex-row, ga, p-4, justif, y-centermb-6'>
+        <Linkto='/blog/ai-2025-october-breakthrough-enterprise-automation'
+          className='bg-emerald-500, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, hove, r:bg-emerald-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
         >
           <Zap, classNam, e='w-5 h-5' />
-          Read, Enterprise, Automation Gui, d, e
-        </Li, n, k>
-        <Link, t, o='/bl, o, g/ai-20, 2, 5-octob, e, r-quant, u, m-ai-hybr, i, d-syste, m, s'
-          classNa, m, e='bg-cy, a, n-500, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-cy, a, n-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
+          Read, Enterprise, Automation Guide
+        </Link>
+        <Linkto='/blog/ai-2025-october-quantum-ai-hybrid-systems'
+          className='bg-cyan-500, tex, t-whitepx-6py-3, rounde, d-lg, fon, t-semibold, hove, r:bg-cyan-600, transitio, n-colors, inlin, e-flex, item, s-center, justif, y-center, ga, p-2'
         >
           <Brain, classNam, e='w-5 h-5' />
           Explore, Quantu, m-AI, System, s
-        </Li, n, k>
-      </d, i, v>
-      <div, classNam, e='grid, m, d:gr, i, d-co, l, s-2, ga, p-6, m, b-6'>
-        <div, classNam, e='bg-whi, t, e/10, rounde, d-x, l, p-4'>
-          <h3, classNam, e='te, x, t-white, fon, t-semibold, m, b-2, flex, items-cent, e, r'>
-            <Zap, classNam, e='w-5 h-5, m, r-2, tex, t-emera, l, d-4, 0, 0' />
+        </Link>
+      </div>
+      <div, classNam, e='gridmd:grid-cols-2, ga, p-6mb-6'>
+        <div, classNam, e='bg-white/10, rounde, d-xlp-4'>
+          <h3, classNam, e='text-white, fon, t-semiboldmb-2, flex, items-center'>
+            <Zap, classNam, e='w-5 h-5mr-2, tex, t-emerald-400' />
             Enterprise, AI, Automation
           </h3>
-          <ul, classNam, e='spa, c, e-y-1, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-emera, l, d-4, 0, 0' />
-              <sp, a, n>4, 0, 0%+ efficiency, gain, s</sp, a, n>
+          <ul, classNam, e='space-y-1, tex, t-sm, tex, t-zion-slate-light'>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-emerald-400' />
+              <span>400%+ efficiency, gain, s</span>
             </li>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-emera, l, d-4, 0, 0' />
-              <sp, a, n>70% cost, reductio, n</sp, a, n>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-emerald-400' />
+              <span>70% cost, reductio, n</span>
             </li>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-emera, l, d-4, 0, 0' />
-              <sp, a, n>95% faster, decisio, n-maki, n, g</sp, a, n>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-emerald-400' />
+              <span>95% faster, decisio, n-making</span>
             </li>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-emera, l, d-4, 0, 0' />
-              <sp, a, n>Complete, implementation, framework</sp, a, n>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-emerald-400' />
+              <span>Complete, implementation, framework</span>
             </li>
           </ul>
-        </d, i, v>
-        <div, classNam, e='bg-whi, t, e/10, rounde, d-x, l, p-4'>
-          <h3, classNam, e='te, x, t-white, fon, t-semibold, m, b-2, flex, items-cent, e, r'>
-            <Brain, classNam, e='w-5 h-5, m, r-2, tex, t-cy, a, n-4, 0, 0' />
-            Quant, u, m-AI, Hybrid, Systems
+        </div>
+        <div, classNam, e='bg-white/10, rounde, d-xlp-4'>
+          <h3, classNam, e='text-white, fon, t-semiboldmb-2, flex, items-center'>
+            <Brain, classNam, e='w-5 h-5mr-2, tex, t-cyan-400' />
+            Quantum-AI, Hybrid, Systems
           </h3>
-          <ul, classNam, e='spa, c, e-y-1, tex, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-cy, a, n-4, 0, 0' />
-              <sp, a, n>1000x, processing, speed</sp, a, n>
+          <ul, classNam, e='space-y-1, tex, t-sm, tex, t-zion-slate-light'>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-cyan-400' />
+              <span>1000x, processing, speed</span>
             </li>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-cy, a, n-4, 0, 0' />
-              <sp, a, n>99.9% accuracy, improvement, s</sp, a, n>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-cyan-400' />
+              <span>99.9% accuracy, improvement, s</span>
             </li>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-cy, a, n-4, 0, 0' />
-              <sp, a, n>90% cost, reductio, n</sp, a, n>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-cyan-400' />
+              <span>90% cost, reductio, n</span>
             </li>
-            <li, classNam, e='flex, item, s-cent, e, r'>
-              <CheckCircle, classNam, e='w-4 h-4, m, r-2, tex, t-cy, a, n-4, 0, 0' />
-              <sp, a, n>Re, a, l-world, application, s</sp, a, n>
+            <li, classNam, e='flex, item, s-center'>
+              <CheckCircle, classNam, e='w-4 h-4mr-2, tex, t-cyan-400' />
+              <span>Real-world, application, s</span>
             </li>
           </ul>
-        </d, i, v>
-      </d, i, v>
-      <div, classNam, e='flex, fle, x-wrap, ga, p-2, justif, y-cent, e, r'>
-        <span, classNam, e='bg-emera, l, d-1, 0, 0/20, tex, t-emera, l, d-200, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-emera, l, d-3, 0, 0/20'>
+        </div>
+      </div>
+      <div, classNam, e='flex, fle, x-wrap, ga, p-2, justif, y-center'>
+        <span, classNam, e='bg-emerald-100/20, tex, t-emerald-200px-3py-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-emerald-300/20'>
           Enterprise, Automatio, n
-        </sp, a, n>
-        <span, classNam, e='bg-cy, a, n-1, 0, 0/20, tex, t-cy, a, n-200, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-cy, a, n-3, 0, 0/20'>
-          Quant, u, m-AI, Hybri, d
-        </sp, a, n>
-        <span, classNam, e='bg-purp, l, e-1, 0, 0/20, tex, t-purp, l, e-200, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-purp, l, e-3, 0, 0/20'>
+        </span>
+        <span, classNam, e='bg-cyan-100/20, tex, t-cyan-200px-3py-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-cyan-300/20'>
+          Quantum-AI, Hybri, d
+        </span>
+        <span, classNam, e='bg-purple-100/20, tex, t-purple-200px-3py-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-purple-300/20'>
           1000x, Spee, d
-        </sp, a, n>
-        <span, classNam, e='bg-bl, u, e-1, 0, 0/20, tex, t-bl, u, e-200, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-bl, u, e-3, 0, 0/20'>
-          4, 0, 0% R, O, I
-        </sp, a, n>
-        <span, classNam, e='bg-gre, e, n-1, 0, 0/20, tex, t-gre, e, n-200, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-gre, e, n-3, 0, 0/20'>
+        </span>
+        <span, classNam, e='bg-blue-100/20, tex, t-blue-200px-3py-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-blue-300/20'>
+          400% ROI
+        </span>
+        <span, classNam, e='bg-green-100/20, tex, t-green-200px-3py-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-green-300/20'>
           Fortune, 500, Proven
-        </sp, a, n>
-        <span, classNam, e='bg-oran, g, e-1, 0, 0/20, tex, t-oran, g, e-200, p, x-3, p, y-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-oran, g, e-3, 0, 0/20'>
+        </span>
+        <span, classNam, e='bg-orange-100/20, tex, t-orange-200px-3py-1, rounde, d-full, tex, t-xs, fon, t-medium, border, border-orange-300/20'>
           Implementation, Read, y
-        </sp, a, n>
-      </d, i, v>
-    </d, i, v > );
+        </span>
+      </div>
+    </div > );
  };
-export, default, React.me, m, o(October2025BreakthroughContentBann, e, r);
+export, default, React.memo(October2025BreakthroughContentBanner);

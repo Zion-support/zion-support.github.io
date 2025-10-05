@@ -1,32 +1,32 @@
-// @ts-nocheck, import, React fr, o, m 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
+// @ts-nocheck, import, React from 'react';
+import { Helmet  } from 'react-helmet-async';
 
-export, default, function GenAIE2EEvalPipelin, e, s(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
-    <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
-      <Helm, e, t>
-        <tit, l, e>E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s</tit, l, e>
-        <meta, nam, e='descripti, o, n'
-          conte, n, t='Eval, pipelines, wired to, KPIs, with budg, e, t, s, canari, e, s, and, instant, rollback hoo, k, s.'
+export, default, function GenAIE2EEvalPipelines(): React.JSX.Element { 
+  return (
+    <div, classNam, e = 'min-h-screenbg-gradient-to-br, fro, m-zion-blue-dark, vi, a-zion-blueto-zion-purple-dark, tex, t-white'>
+      <Helmet>
+        <title>E2E, Eval, Pipelines — KPI‑Linked, Gate, s</title>
+        <meta, nam, e='description'
+          content='Eval, pipelines, wired to, KPIs, with budget, s, canari, e, s, and, instant, rollback hooks.'
         />
-        <link, re, l = 'canonic, a, l'
-          hr, e, f='htt, p, s: //ziontechgro, u, p.c, o, m/bl, o, g/gen, a, i-20, 2, 5-o, c, t-01-e, 2, e-ev, a, l-pipelin, e, s'
+        <link, re, l = 'canonical'
+          href='https: //ziontechgroup.com/blog/genai-2025-oct-01-e2e-eval-pipelines'
         />
-      </Helm, e, t>
+      </Helmet>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
-          E2E, Eval, Pipelines — K, P, I‑Linked, Gate, s
+      <div, classNam, e='containermx-autopx-6py-16'>
+        <h1, classNam, e='text-4xlmd:text-5xl, fon, t-boldmb-4'>
+          E2E, Eval, Pipelines — KPI‑Linked, Gate, s
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, classNam, e='text-zion-slate-lightmb-8'>
           Design, eval, pipelines tied, to, outcomes with, cos, t/quality, budg, e, t, s,
           canari, e, s, and, rollback, triggers.
         </p>
-        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, classNam, e = 'prose, pros, e-invert, ma, x-w-3xl'>
           <p>
             Build, en, d‑to‑end, evaluation, pipelines that, correlate, with business, KPI, s. Use, budge, t‑aware, routi, n, g, live, canarie, s, and, rollback, hooks to, prevent, regressions while, preserving, velocity.
           </p>
-        </d, i, v>
-      </d, i, v>
-    </d, i, v > );
+        </div>
+      </div>
+    </div > );
  }
