@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import { Brain } from "lucide-react";
-
 export const metadata: Metadata = {
   title: 'AI 2027: Neuromorphic Computing Revolution - The Future of Brain-Inspired AI',
   description: 'Explore the revolutionary neuromorphic computing breakthrough of 2027 that mimics human brain architecture for unprecedented AI performance. Discover how brain-inspired chips are transforming enterprise operations.',

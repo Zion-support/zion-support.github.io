@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { Brain } from "lucide-react";
-
 export const metadata = {
   title: 'AI Neural Interfaces 2026 Service | Direct Brain-Computer Integration | Zion Tech Group',
   description: 'Transform your enterprise with AI neural interfaces. Achieve 99.7% accuracy, 10ms response time, and $12M ROI with direct brain-computer integration solutions.',

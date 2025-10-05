@@ -1,7 +1,5 @@
 import Link from 'next/link';
-// import { Brain } from "lucide-react";
-
-export default function RevolutionaryAI2027Banner() {
+// export default function RevolutionaryAI2027Banner() {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 rounded-2xl p-8 mb-12 border border-purple-500/20">
       {/* Animated Background */}

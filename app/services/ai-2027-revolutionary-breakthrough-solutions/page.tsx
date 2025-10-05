@@ -1,6 +1,4 @@
 import Link from 'next/link';
-import { Brain } from "lucide-react";
-
 export const metadata = {
   title: 'AI 2027 Revolutionary Breakthrough Solutions | Zion Tech Group',
   description: 'Transform your enterprise with our AI 2027 revolutionary breakthrough solutions. 95% automation, 1000x performance gains, 90% cost reduction. Limited availability.',

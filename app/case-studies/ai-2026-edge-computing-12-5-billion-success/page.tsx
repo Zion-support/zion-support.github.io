@@ -1,5 +1,4 @@
 import Link from 'next/link';
-// import { User } from "lucide-react";
 
 export const metadata = {
   title: 'AI 2026 Edge Computing $12.5B Success Case Study | Zion Tech Group',
