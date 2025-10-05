@@ -1,12 +1,4 @@
 import React from 'react';
-    ...props
-  }: {
-    children: React.ReactNode;
-    to: string;
-    [key: string]: unknown;
-  }) => (
-    expect(footer).toBeInTheDocument();
-   });
 import App from '../App';
 
 // Mock the components that App depends on

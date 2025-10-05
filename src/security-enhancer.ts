@@ -3,7 +3,6 @@
     meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
     document.head.appendChild(meta);
   }
-};
 
 }
 

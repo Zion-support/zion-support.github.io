@@ -1,11 +1,3 @@
-    left: 6px;
-    background: #000;
-    color: #fff;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 1000;
-  `;
-
     }
     return AccessibilityEnhancer.instance;
   }
@@ -20,13 +12,6 @@
     this.setupColorContrast();
     this.setupFocusManagement();
     
-      top: 6px;
-    }
-  `;
-  document.head.appendChild(style);
-};
-
-}
     this.isInitialized = true;
     console.log('Accessibility enhancer initialized');
   }

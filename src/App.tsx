@@ -3,13 +3,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import SEO from './components/SEO';
 import Loading from './components/Loading';
-import performanceOptimizer from './utils/performance-optimizer';
-import errorHandler from './utils/advanced-error-handler';
-import securityEnhancer from './utils/security-enhancer';
-import seoOptimizer from './utils/seo-optimizer';
-import cacheSystem from './utils/advanced-caching';
-import analyticsOptimizer from './utils/analytics-optimizer';
-import SystemMonitor from './components/SystemMonitor';
 
 // Lazy load pages for better performance
 const Home = lazy(() => import('./pages/Home'));
@@ -27,32 +20,10 @@ function App() {
     const initializeOptimizations = () => {
       try {
         // Initialize performance monitoring
-        performanceOptimizer.startPerformanceMonitoring();
-        
-        // Initialize security enhancements
-        securityEnhancer.setupSecurityMonitoring();
-        
-        // Initialize SEO tracking
-        seoOptimizer.trackPageView();
-        
-        // Set up error reporting
-        errorHandler.setReportingEnabled(true);
-        
-        // Initialize advanced caching
-        cacheSystem.loadFromStorage();
-        
-        // Initialize analytics optimization
-        analyticsOptimizer.trackPageView();
         
         console.log('All optimization systems initialized successfully');
       } catch (error) {
         console.error('Failed to initialize optimization systems:', error);
-        errorHandler.handleError({
-          type: 'Initialization Error',
-          message: 'Failed to initialize optimization systems',
-          error: error.message,
-          timestamp: new Date().toISOString()
-        });
       }
     };
 
@@ -61,7 +32,6 @@ function App() {
 
     // Cleanup on unmount
     return () => {
-      performanceOptimizer.cleanup();
     };
   }, []);
 
@@ -82,7 +52,6 @@ function App() {
           </Routes>
         </Suspense>
       </Router>
-      <SystemMonitor />
     </ErrorBoundary>
   );
 }

@@ -1,7 +1,56 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 
->>>>>>> e07ee42db21143a2294f98a4e73abb5451584632
+// Polyfill TextEncoder and TextDecoder for Node.js environment
+if (typeof global.TextEncoder === 'undefined') {
+  const { TextEncoder, TextDecoder } = require('util');
+  global.TextEncoder = TextEncoder;
+  global.TextDecoder = TextDecoder;
+}
+
+// Mock import.meta.env for Jest
+Object.defineProperty(global, 'import', {
+  value: {
+    meta: {
+      env: {
+        DEV: true,
+        PROD: false,
+        MODE: 'test',
+      },
+    },
+  },
+});
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof IntersectionObserver;
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+} as unknown as typeof ResizeObserver;
+
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation(query => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(), // deprecated
+    removeListener: jest.fn(), // deprecated
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-03e2
 });
 
 // Mock performance API
