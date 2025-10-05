@@ -31,10 +31,6 @@ jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -49,15 +45,10 @@ jest.mock('react-router-dom', () => ({
   useLocation: () => ({ pathname: '/' }),
 }));
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 // Mock lucide-react icons
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
 
 jest.mock('lucide-react', () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -326,7 +317,3 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
