@@ -74,6 +74,19 @@ global.PerformanceObserver = class PerformanceObserver {
   }
 } as unknown as typeof PerformanceObserver;
 
+// Mock react-error-boundary
+jest.mock('react-error-boundary', () => ({
+  ErrorBoundary: ({ children, fallback }: { children: React.ReactNode; fallback?: React.ComponentType<{ error: Error }> }) => {
+    return <div data-testid="error-boundary">{children}</div>;
+  },
+}));
+
+// Mock react-helmet-async
+jest.mock('react-helmet-async', () => ({
+  Helmet: ({ children }: { children: React.ReactNode }) => <div data-testid="helmet">{children}</div>,
+  HelmetProvider: ({ children }: { children: React.ReactNode }) => <div data-testid="helmet-provider">{children}</div>,
+}));
+
 // Mock lucide-react icons
 jest.mock('lucide-react', () => ({
   Menu: () => React.createElement('div', { 'data-testid': 'menu-icon' }),
