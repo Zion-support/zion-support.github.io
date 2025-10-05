@@ -6,6 +6,7 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Enterprise RAG Security v2 — Auth-Aware, Fresh, Signed</title>
+<<<<<<< HEAD
         <meta
           name="description"
           content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant."
@@ -14,6 +15,10 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
           rel="canonical"
           href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2"
         />
+=======
+        <meta name="description" content="Auth-scoped retrieval, freshness windows, prompt firewalls, and signed outputs that keep answers correct and compliant." />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-enterprise-rag-security-v2" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
@@ -34,5 +39,9 @@ export default function EnterpriseRAGSecurityV2(): React.JSX.Element {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-76c9
