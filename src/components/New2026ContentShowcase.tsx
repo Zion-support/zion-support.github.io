@@ -31,7 +31,7 @@ const New2026ContentShowcase: React.FC = () => {
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Hyperconscious Computing */}
-          <Link to="/blog/ai-2026-hyperconscious-computing-revolution" className="group block">
+          <Link to="/blog/ai-2026-hyperconscious-computing-<revolution" className="group block">
             <div className="bg-gradient-to-br from-purple-900/40 to-indigo-900/40 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-indigo-500 rounded-xl flex items-center justify-center">
@@ -65,7 +65,7 @@ const New2026ContentShowcase: React.FC = () => {
           </Link>
 
           {/* Quantum-Neural Fusion */}
-          <Link to="/blog/quantum-neural-fusion-2026-breakthrough" className="group block">
+          <Link to="/blog/quantum-neural-fusion-2026-<breakthrough" className="group block">
             <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 hover:border-blue-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center">
@@ -99,7 +99,7 @@ const New2026ContentShowcase: React.FC = () => {
           </Link>
 
           {/* Autonomous Enterprise Mesh */}
-          <Link to="/blog/autonomous-enterprise-mesh-2026" className="group block">
+          <Link to="/blog/autonomous-enterprise-mesh-<2026" className="group block">
             <div className="bg-gradient-to-br from-indigo-900/40 to-purple-900/40 backdrop-blur-sm rounded-2xl p-8 border border-indigo-500/30 hover:border-indigo-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20">
               <div className="flex items-center gap-3 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
@@ -146,7 +146,7 @@ const New2026ContentShowcase: React.FC = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             {/* Fortune 100 Case Study */}
-            <Link to="/case-studies/fortune-100-hyperconscious-transformation" className="group block">
+            <Link to="/case-studies/fortune-100-hyperconscious-<transformation" className="group block">
               <div className="bg-gradient-to-br from-green-900/40 to-emerald-900/40 backdrop-blur-sm rounded-xl p-6 border border-green-500/30 hover:border-green-400/60 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
@@ -177,7 +177,7 @@ const New2026ContentShowcase: React.FC = () => {
             </Link>
 
             {/* Manufacturing Case Study */}
-            <Link to="/case-studies/quantum-neural-fusion-manufacturing-success" className="group block">
+            <Link to="/case-studies/quantum-neural-fusion-manufacturing-<success" className="group block">
               <div className="bg-gradient-to-br from-emerald-900/40 to-green-900/40 backdrop-blur-sm rounded-xl p-6 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-500 rounded-lg flex items-center justify-center">
@@ -222,20 +222,17 @@ const New2026ContentShowcase: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              to="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </Link>
             <Link 
-              to="/blog" 
-              className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              to="/<blog" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Explore All Content
             </Link>
             <Link 
-              to="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              to="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
             </Link>

@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 
 export default function Page() {
@@ -7,7 +6,7 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-lime-50">
       <div className="max-w-4xl mx-auto px-6 py-16">
         <nav className="mb-8">
-          <Link href="/blog" className="text-emerald-700 hover:text-emerald-800">← Back to Blog</Link>
+          <Link href="/<blog" className="text-emerald-700 hover:text-emerald-800">← Back to Blog</Link>
         </nav>
         <header className="mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
@@ -32,7 +31,7 @@ export default function Page() {
           </p>
         </article>
         <div className="mt-12">
-          <Link href="/blog" className="text-emerald-700 font-semibold hover:text-emerald-800">Browse more articles →</Link>
+          <Link href="/<blog" className="text-emerald-700 font-semibold hover:text-emerald-800">Browse more articles →</Link>
         </div>
       </div>
     </div>

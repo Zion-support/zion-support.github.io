@@ -19,14 +19,12 @@ const BlogPromotionBanner: React.FC = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="/blog"
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
+              href="/<blog" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
             >
               Explore All Articles →
             </a>
             <a
-              href="/contact"
-              className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+              href="/<contact" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
             >
               Get AI Consultation
             </a>

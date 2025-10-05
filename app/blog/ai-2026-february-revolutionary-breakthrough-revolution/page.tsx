@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -36,14 +35,12 @@ export default function AI2026FebruaryRevolutionaryBreakthroughPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-<success" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View $3B Success Story →
               </Link>
@@ -284,14 +281,12 @@ export default function AI2026FebruaryRevolutionaryBreakthroughPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-success" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-studies/ai-2026-february-mega-breakthrough-3-billion-<success" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Story
               </Link>

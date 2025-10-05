@@ -1,15 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Truck as TruckIcon, 
-  BarChart3 as ChartBarIcon, 
-  DollarSign as CurrencyDollarIcon, 
-  CheckCircle as CheckCircleIcon, 
-  ArrowRight as ArrowRightIcon,
-  Sparkles as SparklesIcon,
-  Clock as ClockIcon,
-  Globe as GlobeAltIcon
-} from 'lucide-react';
+import { Truck } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 const October2025SupplyChainRevolutionBanner: React.FC = () => {
   return (
@@ -218,8 +214,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
                 <span className="font-bold text-2xl text-yellow-300">2,847% ROI</span> achieved in just 18 months with <span className="font-bold">3.2-month payback period</span>
               </div>
               <Link 
-                to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
-                className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-yellow-950 px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
+                to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-<2b" className="inline-flex items-center gap-2 bg-yellow-500 hover:bg-yellow-400 text-yellow-950 px-6 py-3 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 Read Full Case Study
                 <ArrowRightIcon className="w-5 h-5" />
@@ -251,8 +246,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         {/* Call to Action Buttons */}
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center mb-8">
           <Link
-            to="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-revolution"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+            to="/content/blog/ai-2025-oct-autonomous-supply-chain-intelligence-<revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
             <SparklesIcon className="w-6 h-6" />
             Read the Revolutionary Guide
@@ -260,8 +254,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
           </Link>
 
           <Link
-            to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-2b"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+            to="/case-studies/ai-2025-oct-fortune-100-retail-supply-chain-transformation-4-<2b" className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-500 to-orange-500 hover:from-yellow-600 hover:to-orange-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
             <TruckIcon className="w-6 h-6" />
             View $4.2B Case Study
@@ -269,8 +262,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
           </Link>
 
           <Link
-            to="/content/services/autonomous-supply-chain-intelligence-platform"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
+            to="/content/services/autonomous-supply-chain-intelligence-<platform" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105"
           >
             <ChartBarIcon className="w-6 h-6" />
             Explore Platform & Services
@@ -290,8 +282,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
               <Link
-                to="/contact?service=supply-chain-assessment"
-                className="inline-flex items-center gap-2 bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-emerald-50"
+                to="/contact?service=supply-chain-<assessment" className="inline-flex items-center gap-2 bg-white text-emerald-900 px-10 py-5 rounded-xl font-bold text-xl transition-all duration-300 shadow-lg hover:shadow-2xl hover:scale-105 hover:bg-emerald-50"
               >
                 Schedule Free Assessment
                 <ArrowRightIcon className="w-6 h-6" />

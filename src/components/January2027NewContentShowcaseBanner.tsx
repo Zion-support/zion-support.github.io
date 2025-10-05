@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function January2027NewContentShowcaseBanner() {
   return (
@@ -53,14 +52,12 @@ export default function January2027NewContentShowcaseBanner() {
             
             <div className="space-y-3">
               <a 
-                href="/blog/ai-2027-neuromorphic-edge-computing-breakthrough"
-                className="block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/blog/ai-2027-neuromorphic-edge-computing-<breakthrough" className="block w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Read Full Article →
               </a>
               <a 
-                href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-success"
-                className="block w-full border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-<success" className="block w-full border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 View Case Study →
               </a>
@@ -98,14 +95,12 @@ export default function January2027NewContentShowcaseBanner() {
             
             <div className="space-y-3">
               <a 
-                href="/blog/ai-2027-quantum-ai-security-revolution"
-                className="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/blog/ai-2027-quantum-ai-security-<revolution" className="block w-full bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Read Full Article →
               </a>
               <a 
-                href="/services/quantum-ai-security"
-                className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/services/quantum-ai-<security" className="block w-full border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Get Security Assessment →
               </a>
@@ -143,14 +138,12 @@ export default function January2027NewContentShowcaseBanner() {
             
             <div className="space-y-3">
               <a 
-                href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-success"
-                className="block w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/case-studies/fortune-500-neuromorphic-edge-computing-2-3-billion-<success" className="block w-full bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 View Full Case Study →
               </a>
               <a 
-                href="/contact"
-                className="block w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/<contact" className="block w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Get Your Assessment →
               </a>
@@ -169,8 +162,7 @@ export default function January2027NewContentShowcaseBanner() {
           
           <div className="grid md:grid-cols-4 gap-4">
             <a 
-              href="/blog"
-              className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 hover:from-indigo-500/30 hover:to-purple-500/30 rounded-xl p-4 border border-indigo-500/30 hover:border-indigo-500/50 transition-all duration-300 text-center group"
+              href="/<blog" className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 hover:from-indigo-500/30 hover:to-purple-500/30 rounded-xl p-4 border border-indigo-500/30 hover:border-indigo-500/50 transition-all duration-300 text-center group"
             >
               <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">📚</div>
               <div className="font-bold text-white">All Articles</div>
@@ -178,8 +170,7 @@ export default function January2027NewContentShowcaseBanner() {
             </a>
             
             <a 
-              href="/case-studies"
-              className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 rounded-xl p-4 border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 text-center group"
+              href="/case-<studies" className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 hover:from-purple-500/30 hover:to-pink-500/30 rounded-xl p-4 border border-purple-500/30 hover:border-purple-500/50 transition-all duration-300 text-center group"
             >
               <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">💼</div>
               <div className="font-bold text-white">Case Studies</div>
@@ -187,8 +178,7 @@ export default function January2027NewContentShowcaseBanner() {
             </a>
             
             <a 
-              href="/services"
-              className="bg-gradient-to-r from-pink-500/20 to-red-500/20 hover:from-pink-500/30 hover:to-red-500/30 rounded-xl p-4 border border-pink-500/30 hover:border-pink-500/50 transition-all duration-300 text-center group"
+              href="/<services" className="bg-gradient-to-r from-pink-500/20 to-red-500/20 hover:from-pink-500/30 hover:to-red-500/30 rounded-xl p-4 border border-pink-500/30 hover:border-pink-500/50 transition-all duration-300 text-center group"
             >
               <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">🚀</div>
               <div className="font-bold text-white">AI Services</div>
@@ -196,8 +186,7 @@ export default function January2027NewContentShowcaseBanner() {
             </a>
             
             <a 
-              href="/contact"
-              className="bg-gradient-to-r from-red-500/20 to-orange-500/20 hover:from-red-500/30 hover:to-orange-500/30 rounded-xl p-4 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 text-center group"
+              href="/<contact" className="bg-gradient-to-r from-red-500/20 to-orange-500/20 hover:from-red-500/30 hover:to-orange-500/30 rounded-xl p-4 border border-red-500/30 hover:border-red-500/50 transition-all duration-300 text-center group"
             >
               <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">💬</div>
               <div className="font-bold text-white">Consultation</div>

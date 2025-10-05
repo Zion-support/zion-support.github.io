@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Network, Shield, ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
   const breakthroughs = [
@@ -59,7 +60,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
           >
-            <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
+            <<<Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
           
@@ -162,15 +163,13 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/blog"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                href="/<blog" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore All Content
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <<<ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
-                href="/services"
-                className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
+                href="/<services" className="inline-flex items-center px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 hover:border-white/30 text-white font-semibold rounded-xl transition-all duration-300"
               >
                 View Services
               </a>

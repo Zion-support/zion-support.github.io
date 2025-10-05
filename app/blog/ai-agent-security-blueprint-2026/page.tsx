@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'AI Agent Security Blueprint 2026: Zero‑Trust for Autonomous Systems',
@@ -50,8 +49,7 @@ export default function Page() {
 
         <section className="mt-10">
           <a
-            href="/contact"
-            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-cyan-500"
+            href="/<contact" className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-cyan-500"
           >
             Talk to Security Experts
           </a>

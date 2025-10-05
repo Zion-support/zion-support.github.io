@@ -20,7 +20,7 @@ export default function AIRegulatoryCompliance2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -307,20 +307,17 @@ export default function AIRegulatoryCompliance2025() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Compliance Assessment
                   </a>
                   <a
-                    href="/case-studies/financial-services-compliance-transformation-2025"
-                    className="text-left"
+                    href="/case-studies/financial-services-compliance-transformation-<2025" className="text-left"
                   ></a>
                     View Case Studies
                   </a>
                   <a
-                    href="/services/ai-compliance-automation"
-                    className="text-left"
+                    href="/services/ai-compliance-<automation" className="text-left"
                   ></a>
                     Explore Platform
                   </a>
@@ -333,10 +330,10 @@ export default function AIRegulatoryCompliance2025() {
                   Written by Zion Tech Group Compliance & Governance Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/services/ai-compliance-automation" className="text-left"></a>
+                  <a href="/services/ai-compliance-<automation" className="text-left"></a>
                     Learn More
                   </a>
                 </div>

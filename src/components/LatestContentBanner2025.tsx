@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
@@ -159,11 +162,11 @@ const LatestContentBanner2025: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border border-cyan-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
+            <<<Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
               🔥 3 REVOLUTIONARY NEW ARTICLES PUBLISHED • January 30, 2026
             </span>
-            <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
+            <<<Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
@@ -206,7 +209,7 @@ const LatestContentBanner2025: React.FC = () => {
                   <div className="flex flex-col gap-2">
                     {article.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
+                        <<<TrendingUp className="w-3 h-3" />
                         <span>TRENDING</span>
                       </div>
                     )}
@@ -236,7 +239,7 @@ const LatestContentBanner2025: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-cyan-400" />
+                    <<<Zap className="w-4 h-4 text-cyan-400" />
                     {article.readTime}
                   </span>
                   <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
@@ -248,7 +251,7 @@ const LatestContentBanner2025: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <<<ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
             </motion.div>
@@ -268,18 +271,16 @@ const LatestContentBanner2025: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/blog"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
+                  href="/<blog" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-2"
                 >
-                  <Sparkles className="w-5 h-5" />
+                  <<<Sparkles className="w-5 h-5" />
                   <span>Explore All Articles</span>
                 </a>
                 <a
-                  href="/contact"
-                  className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                  href="/<contact" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Get Started with Zion AI</span>
-                  <ArrowRight className="w-5 h-5" />
+                  <<<ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>

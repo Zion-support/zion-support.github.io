@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -68,8 +67,8 @@ export default function AI2027OperationalRiskBudgetsPage() {
         <h3 className="text-2xl font-bold mb-3">Ready to adopt risk budgets?</h3>
         <p className="mb-6 opacity-90">We help enterprises stand up KPI-linked canaries and rollback-ready playbooks.</p>
         <div className="flex gap-3 flex-col sm:flex-row">
-          <Link href="/contact" className="bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</Link>
-          <Link href="/case-studies/ai-2027-revolutionary-breakthrough-success" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">See success stories</Link>
+          <Link href="/<contact" className="bg-white text-emerald-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</Link>
+          <Link href="/case-studies/ai-2027-revolutionary-breakthrough-<success" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">See success stories</Link>
         </div>
       </div>
     </div>

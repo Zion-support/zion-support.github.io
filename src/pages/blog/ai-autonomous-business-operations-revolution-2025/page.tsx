@@ -1,4 +1,8 @@
-import { ArrowRight, CheckCircle, Rocket, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -26,7 +30,7 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
             {/* Badge */}
             <div className="flex justify-center mb-6">
               <div className="inline-flex items-center px-6 py-3 rounded-full bg-green-500/20 border-2 border-green-400/50 text-green-300 text-sm font-bold uppercase tracking-wider animate-pulse">
-                <Rocket className="w-5 h-5 mr-2" />
+                <<<Rocket className="w-5 h-5 mr-2" />
                 🔥 JUST PUBLISHED - OCTOBER 1, 2025
               </div>
             </div>
@@ -72,7 +76,7 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
         <section className="container mx-auto px-6 py-16 max-w-5xl">
           <div className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-2xl p-8 md:p-12 border-2 border-blue-400/50 mb-12">
             <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-              <TrendingUp className="w-8 h-8 mr-3 text-blue-400" />
+              <<<TrendingUp className="w-8 h-8 mr-3 text-blue-400" />
               Executive Summary
             </h2>
             <p className="text-xl text-blue-100 mb-6 leading-relaxed">
@@ -82,42 +86,42 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
             {/* Key Highlights */}
             <div className="grid md:grid-cols-2 gap-6 mt-8">
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <<<CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-semibold mb-1">85% Cost Reduction</div>
                   <div className="text-blue-200 text-sm">Across finance, HR, and operations</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <<<CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-semibold mb-1">&lt;100ms Decision Latency</div>
                   <div className="text-blue-200 text-sm">For critical business processes</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <<<CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-semibold mb-1">$500M+ Annual Value</div>
                   <div className="text-blue-200 text-sm">For global enterprises</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <<<CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-semibold mb-1">300-500% ROI</div>
                   <div className="text-blue-200 text-sm">Achieved within 18 months</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <<<CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-semibold mb-1">40+ Autonomous Workflows</div>
                   <div className="text-blue-200 text-sm">Replacing manual operations</div>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
+                <<<CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0 mt-1" />
                 <div>
                   <div className="text-white font-semibold mb-1">24/7 Global Operations</div>
                   <div className="text-blue-200 text-sm">Without human intervention</div>
@@ -135,23 +139,23 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
 
             <ul className="space-y-3 mb-8 text-blue-100">
               <li className="flex items-start">
-                <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
+                <<<Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                 <span><strong>Self-Monitor:</strong> Continuously track performance, KPIs, and anomalies</span>
               </li>
               <li className="flex items-start">
-                <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
+                <<<Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                 <span><strong>Self-Optimize:</strong> Automatically adjust parameters for peak efficiency</span>
               </li>
               <li className="flex items-start">
-                <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
+                <<<Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                 <span><strong>Self-Heal:</strong> Detect and resolve issues before they impact operations</span>
               </li>
               <li className="flex items-start">
-                <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
+                <<<Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                 <span><strong>Self-Learn:</strong> Improve decision-making from every interaction</span>
               </li>
               <li className="flex items-start">
-                <Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
+                <<<Zap className="w-5 h-5 text-yellow-400 mr-3 mt-1 flex-shrink-0" />
                 <span><strong>Self-Scale:</strong> Dynamically adjust resources based on demand</span>
               </li>
             </ul>
@@ -199,29 +203,28 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 text-green-200">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400" />
                   <span>85% reduction in operational costs</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400" />
                   <span>10x faster processing times</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400" />
                   <span>99.7% accuracy rate</span>
                 </div>
                 <div className="flex items-center gap-2 text-green-200">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400" />
                   <span>40+ autonomous workflows deployed</span>
                 </div>
               </div>
               <div className="mt-6">
                 <Link 
-                  to="/case-studies/fortune-100-autonomous-operations-transformation-2025" 
-                  className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
+                  to="/case-studies/fortune-100-autonomous-operations-transformation-<2025" className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-lg font-semibold transition-all"
                 >
                   Read Full Case Study
-                  <ArrowRight className="w-5 h-5" />
+                  <<<ArrowRight className="w-5 h-5" />
                 </Link>
               </div>
             </div>
@@ -261,16 +264,14 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
-                to="/services/autonomous-business-operations"
-                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
+                to="/services/autonomous-business-<operations" className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all shadow-lg hover:shadow-xl"
               >
-                <Rocket className="w-5 h-5" />
+                <<<Rocket className="w-5 h-5" />
                 Explore Our Services
-                <ArrowRight className="w-5 h-5" />
+                <<<ArrowRight className="w-5 h-5" />
               </Link>
               <Link
-                to="/contact"
-                className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
+                to="/<contact" className="inline-flex items-center justify-center gap-2 border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all"
               >
                 Schedule Consultation
               </Link>
@@ -290,8 +291,7 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
           <h2 className="text-3xl font-bold text-white mb-8">Related Resources</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Link 
-              to="/case-studies/fortune-100-autonomous-operations-transformation-2025"
-              className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all group"
+              to="/case-studies/fortune-100-autonomous-operations-transformation-<2025" className="bg-gradient-to-br from-green-900/60 to-emerald-900/60 backdrop-blur-sm rounded-xl p-6 border border-green-400/30 hover:border-green-400/60 transition-all group"
             >
               <div className="text-green-400 text-sm font-semibold mb-2 uppercase">Case Study</div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
@@ -301,13 +301,12 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
                 Complete transformation journey with implementation details, results, and lessons learned
               </p>
               <div className="flex items-center text-green-300 font-semibold text-sm">
-                Read Case Study <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                Read Case Study <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
 
             <Link 
-              to="/services/autonomous-business-operations"
-              className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all group"
+              to="/services/autonomous-business-<operations" className="bg-gradient-to-br from-blue-900/60 to-purple-900/60 backdrop-blur-sm rounded-xl p-6 border border-blue-400/30 hover:border-blue-400/60 transition-all group"
             >
               <div className="text-blue-400 text-sm font-semibold mb-2 uppercase">Service</div>
               <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
@@ -317,7 +316,7 @@ const AutonomousBusinessOperationsRevolution2025 = () => {
                 Deploy 40+ autonomous workflows in 90 days with guaranteed ROI
               </p>
               <div className="flex items-center text-blue-300 font-semibold text-sm">
-                Explore Service <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                Explore Service <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
               </div>
             </Link>
           </div>

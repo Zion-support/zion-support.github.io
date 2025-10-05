@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025SelfHealingSpotlightBanner() {
@@ -36,8 +35,7 @@ export default function October2025SelfHealingSpotlightBanner() {
               </div>
             </div>
             <Link
-              to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-revolution"
-              className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl"
+              to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution" className="inline-block bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg hover:shadow-xl"
             >
               Read Complete Guide + Fortune 500 Case Study →
             </Link>

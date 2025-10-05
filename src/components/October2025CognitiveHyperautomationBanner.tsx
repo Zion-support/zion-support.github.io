@@ -1,5 +1,7 @@
-import React from 'react';
-import { Brain, Sparkles, TrendingUp, Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function October2025CognitiveHyperautomationBanner() {
@@ -15,7 +17,7 @@ export default function October2025CognitiveHyperautomationBanner() {
         {/* Header Badge */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-purple-500/30 border-2 border-purple-400 rounded-full px-5 py-2 backdrop-blur-sm animate-bounce-slow">
-            <Sparkles className="w-5 h-5 text-yellow-300 animate-spin-slow" />
+            <<<Sparkles className="w-5 h-5 text-yellow-300 animate-spin-slow" />
             <span className="text-yellow-300 font-black text-sm tracking-wider">
               🔥 REVOLUTIONARY BREAKTHROUGH • OCTOBER 2025 • JUST PUBLISHED 🔥
             </span>
@@ -35,7 +37,7 @@ export default function October2025CognitiveHyperautomationBanner() {
             </p>
 
             <div className="flex items-center gap-3 mb-6">
-              <Brain className="w-8 h-8 text-purple-300 animate-pulse" />
+              <<<Brain className="w-8 h-8 text-purple-300 animate-pulse" />
               <p className="text-xl text-purple-200 font-semibold">
                 98.9% Automation • 15,200% ROI • Fortune 50 Validated
               </p>
@@ -44,13 +46,13 @@ export default function October2025CognitiveHyperautomationBanner() {
             {/* Key Highlights */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 bg-purple-800/40 backdrop-blur-sm rounded-lg p-3 border border-purple-500/30">
-                <Zap className="w-6 h-6 text-yellow-400" />
+                <<<Zap className="w-6 h-6 text-yellow-400" />
                 <span className="text-purple-100 font-semibold">
                   25,000+ Autonomous AI Agents • Real-Time Cognitive Intelligence
                 </span>
               </div>
               <div className="flex items-center gap-3 bg-purple-800/40 backdrop-blur-sm rounded-lg p-3 border border-purple-500/30">
-                <TrendingUp className="w-6 h-6 text-green-400" />
+                <<<TrendingUp className="w-6 h-6 text-green-400" />
                 <span className="text-purple-100 font-semibold">
                   $14.7B Fortune 50 Success Story • 94% Process Automation
                 </span>
@@ -59,12 +61,11 @@ export default function October2025CognitiveHyperautomationBanner() {
 
             {/* CTA Button */}
             <Link
-              to="/blog/ai-2025-october-cognitive-hyperautomation-platform"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20"
+              to="/blog/ai-2025-october-cognitive-hyperautomation-<platform" className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20"
             >
-              <Brain className="w-6 h-6" />
+              <<<Brain className="w-6 h-6" />
               <span>Discover the Revolution</span>
-              <Sparkles className="w-6 h-6 animate-pulse" />
+              <<<Sparkles className="w-6 h-6 animate-pulse" />
             </Link>
           </div>
 
@@ -91,7 +92,7 @@ export default function October2025CognitiveHyperautomationBanner() {
 
             <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-green-400/50 rounded-xl p-4 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
-                <TrendingUp className="w-5 h-5 text-green-400" />
+                <<<TrendingUp className="w-5 h-5 text-green-400" />
                 <div className="text-lg font-bold text-purple-200">Fortune 50 Success</div>
               </div>
               <div className="text-2xl font-black text-green-300">$14.7B Business Impact</div>

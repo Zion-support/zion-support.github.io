@@ -1,6 +1,9 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Lock, Brain, TrendingUp, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 export default function NewContent2026PromotionalBanner() {
   return (
@@ -13,7 +16,7 @@ export default function NewContent2026PromotionalBanner() {
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 text-sm font-bold mb-6 animate-bounce">
-            <Zap className="w-4 h-4 mr-2" />
+            <<<Zap className="w-4 h-4 mr-2" />
             NEW OCTOBER 2026 CONTENT
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -27,12 +30,11 @@ export default function NewContent2026PromotionalBanner() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Federated Learning Card */}
           <Link 
-            href="/blog/ai-federated-learning-privacy-2026"
-            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            href="/blog/ai-federated-learning-privacy-<2026" className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="w-14 h-14 bg-gradient-to-br from-purple-400 to-blue-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Lock className="w-8 h-8 text-white" />
+                <<<Lock className="w-8 h-8 text-white" />
               </div>
               <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                 NEW GUIDE
@@ -64,18 +66,17 @@ export default function NewContent2026PromotionalBanner() {
             
             <div className="flex items-center text-yellow-300 font-semibold group-hover:text-yellow-200">
               Read Full Guide
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+              <<<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
           </Link>
 
           {/* Reinforcement Learning Card */}
           <Link 
-            href="/blog/ai-reinforcement-learning-robotics-2026"
-            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            href="/blog/ai-reinforcement-learning-robotics-<2026" className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="w-14 h-14 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <Brain className="w-8 h-8 text-white" />
+                <<<Brain className="w-8 h-8 text-white" />
               </div>
               <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                 NEW GUIDE
@@ -107,18 +108,17 @@ export default function NewContent2026PromotionalBanner() {
             
             <div className="flex items-center text-cyan-300 font-semibold group-hover:text-cyan-200">
               Read Full Guide
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+              <<<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
           </Link>
 
           {/* Retail Case Study Card */}
           <Link 
-            href="/case-studies/ai-retail-personalization-transformation-2026"
-            className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            href="/case-studies/ai-retail-personalization-transformation-<2026" className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="flex items-center justify-between mb-6">
               <div className="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-400 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <TrendingUp className="w-8 h-8 text-white" />
+                <<<TrendingUp className="w-8 h-8 text-white" />
               </div>
               <span className="bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                 CASE STUDY
@@ -150,7 +150,7 @@ export default function NewContent2026PromotionalBanner() {
             
             <div className="flex items-center text-green-300 font-semibold group-hover:text-green-200">
               Read Case Study
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
+              <<<ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
           </Link>
         </div>
@@ -158,12 +158,11 @@ export default function NewContent2026PromotionalBanner() {
         {/* CTA Section */}
         <div className="mt-12 text-center">
           <Link
-            href="/blog"
-            className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl"
+            href="/<blog" className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl"
           >
-            <Zap className="w-5 h-5 mr-2" />
+            <<<Zap className="w-5 h-5 mr-2" />
             Explore All Latest Content
-            <ArrowRight className="w-5 h-5 ml-2" />
+            <<<ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>

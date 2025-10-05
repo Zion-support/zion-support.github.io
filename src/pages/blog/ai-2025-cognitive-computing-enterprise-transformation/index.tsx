@@ -1,7 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Brain, Sparkles, TrendingUp, CheckCircle, ArrowRight, Award, Lightbulb } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Lightbulb } from 'lucide-react';
 import Header from '../../../components/Header';
 
 const CognitiveComputingTransformation: React.FC = () => {
@@ -32,7 +38,7 @@ const CognitiveComputingTransformation: React.FC = () => {
             <nav className="flex items-center space-x-2 text-sm mb-8">
               <Link to="/" className="text-purple-300 hover:text-white transition-colors">Home</Link>
               <span className="text-purple-400">/</span>
-              <Link to="/blog" className="text-purple-300 hover:text-white transition-colors">Blog</Link>
+              <Link to="/<blog" className="text-purple-300 hover:text-white transition-colors">Blog</Link>
               <span className="text-purple-400">/</span>
               <span className="text-white">Cognitive Computing</span>
             </nav>
@@ -41,11 +47,11 @@ const CognitiveComputingTransformation: React.FC = () => {
             <div className="max-w-4xl">
               <div className="flex items-center gap-3 mb-6 flex-wrap">
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-gradient-to-r from-pink-500 to-purple-500 text-white shadow-lg">
-                  <Brain className="w-4 h-4 mr-2" />
+                  <<<Brain className="w-4 h-4 mr-2" />
                   COGNITIVE AI
                 </span>
                 <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-bold bg-green-500 text-white shadow-lg">
-                  <Award className="w-4 h-4 mr-2" />
+                  <<<Award className="w-4 h-4 mr-2" />
                   $1.2B+ VALUE
                 </span>
                 <span className="text-purple-300 text-sm">Published: October 1, 2025</span>
@@ -101,7 +107,7 @@ const CognitiveComputingTransformation: React.FC = () => {
           <div className="prose prose-lg prose-invert max-w-none">
             <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-3">
-                <Lightbulb className="w-8 h-8 text-yellow-400" />
+                <<<Lightbulb className="w-8 h-8 text-yellow-400" />
                 What is Cognitive Computing?
               </h2>
               <p className="text-purple-100 leading-relaxed mb-4">
@@ -109,19 +115,19 @@ const CognitiveComputingTransformation: React.FC = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong className="text-white">Understand context</strong> through natural language processing</span>
                 </li>
                 <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong className="text-white">Learn continuously</strong> from interactions and feedback</span>
                 </li>
                 <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong className="text-white">Reason probabilistically</strong> to handle uncertainty</span>
                 </li>
                 <li className="flex items-start gap-3 text-purple-100">
-                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong className="text-white">Explain decisions</strong> with transparent logic</span>
                 </li>
               </ul>
@@ -130,7 +136,7 @@ const CognitiveComputingTransformation: React.FC = () => {
             <div className="space-y-12">
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <Sparkles className="w-8 h-8 text-yellow-400" />
+                  <<<Sparkles className="w-8 h-8 text-yellow-400" />
                   Core Capabilities
                 </h2>
                 
@@ -197,7 +203,7 @@ const CognitiveComputingTransformation: React.FC = () => {
               
               <section>
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <TrendingUp className="w-8 h-8 text-green-400" />
+                  <<<TrendingUp className="w-8 h-8 text-green-400" />
                   Enterprise Applications
                 </h2>
                 
@@ -240,7 +246,7 @@ const CognitiveComputingTransformation: React.FC = () => {
                           <h3 className="text-xl font-bold text-white mb-1">{app.title}</h3>
                           <p className="text-sm text-purple-300">{app.industry} Use Case</p>
                         </div>
-                        <Award className="w-8 h-8 text-yellow-400" />
+                        <<<Award className="w-8 h-8 text-yellow-400" />
                       </div>
                       
                       <div className="grid grid-cols-2 gap-3">
@@ -356,15 +362,13 @@ const CognitiveComputingTransformation: React.FC = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
+                to="/<contact" className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
               >
                 Schedule Assessment
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <<<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/services/cognitive-computing-transformation"
-                className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
+                to="/services/cognitive-computing-<transformation" className="inline-flex items-center px-8 py-4 rounded-xl font-bold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 transition-all duration-300 hover:scale-105"
               >
                 Explore Services
               </Link>
@@ -376,11 +380,10 @@ const CognitiveComputingTransformation: React.FC = () => {
             <h2 className="text-2xl font-bold text-white mb-6">Related Content</h2>
             <div className="grid md:grid-cols-2 gap-6">
               <Link 
-                to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution"
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
+                to="/blog/ai-2025-multiagent-enterprise-orchestration-<revolution" className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Brain className="w-6 h-6 text-blue-400" />
+                  <<<Brain className="w-6 h-6 text-blue-400" />
                   <span className="text-sm font-semibold text-purple-300">BLOG POST</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
@@ -392,11 +395,10 @@ const CognitiveComputingTransformation: React.FC = () => {
               </Link>
               
               <Link 
-                to="/case-studies/global-telecom-cognitive-transformation-4-7-billion"
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
+                to="/case-studies/global-telecom-cognitive-transformation-4-7-<billion" className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:border-purple-500/50 transition-all group"
               >
                 <div className="flex items-center gap-3 mb-3">
-                  <Award className="w-6 h-6 text-green-400" />
+                  <<<Award className="w-6 h-6 text-green-400" />
                   <span className="text-sm font-semibold text-purple-300">CASE STUDY</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">

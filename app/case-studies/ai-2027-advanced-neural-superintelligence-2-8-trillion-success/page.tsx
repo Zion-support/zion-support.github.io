@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -307,8 +306,7 @@ export default function AI2027AdvancedNeuralSuperintelligence28TrillionSuccess()
 
         <div className="text-center mb-8">
           <Link 
-            href="/contact" 
-            className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 inline-block"
+            href="/<contact" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-8 py-4 rounded-lg text-lg font-bold hover:from-green-700 hover:to-emerald-700 transition-all duration-300 inline-block"
           >
             🚀 Start Your $2.8T Transformation Today
           </Link>

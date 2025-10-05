@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -272,14 +271,12 @@ export default function AISpaceTechSuccess2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:+13024640950"
-              className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+              href="tel:+<13024640950" className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
+              href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors text-center"
             >
               Get Free Consultation
             </a>
@@ -289,11 +286,11 @@ export default function AISpaceTechSuccess2026() {
         <div className="border-t border-gray-200 pt-8">
           <h4 className="text-lg font-bold text-gray-900 mb-4">Related Case Studies</h4>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/case-studies/ai-autonomous-enterprise-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <Link href="/case-studies/ai-autonomous-enterprise-success-<2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h5 className="font-semibold text-gray-900 mb-2">AI Autonomous Enterprise Success 2026</h5>
               <p className="text-sm text-gray-600">$25M ROI with autonomous business operations</p>
             </Link>
-            <Link href="/case-studies/ai-fintech-transformation-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <Link href="/case-studies/ai-fintech-transformation-<2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h5 className="font-semibold text-gray-900 mb-2">AI FinTech Transformation 2026</h5>
               <p className="text-sm text-gray-600">$5M+ savings with AI financial automation</p>
             </Link>

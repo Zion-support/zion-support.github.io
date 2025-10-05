@@ -332,14 +332,12 @@ export default function AI2025OctoberAgentGovernanceSecurity() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Request Governance Assessment
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               View Compliance Success Stories
             </a>

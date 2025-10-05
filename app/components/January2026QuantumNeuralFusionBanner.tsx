@@ -47,8 +47,7 @@ const January2026QuantumNeuralFusionBanner: React.FC = () => {
               Revolutionary convergence of quantum computing and neural networks, delivering unprecedented processing power and infinite scalability for enterprise AI systems.
             </p>
             <a 
-              href="/blog/ai-2026-january-ultimate-quantum-neural-fusion-breakthrough"
-              className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/blog/ai-2026-january-ultimate-quantum-neural-fusion-<breakthrough" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Read Breakthrough →
             </a>
@@ -61,8 +60,7 @@ const January2026QuantumNeuralFusionBanner: React.FC = () => {
               Fortune 500 conglomerate achieves unprecedented transformation with $100 billion value creation through quantum-neural fusion implementation.
             </p>
             <a 
-              href="/case-studies/ai-2026-january-quantum-neural-fusion-100-billion-success"
-              className="inline-block bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/case-studies/ai-2026-january-quantum-neural-fusion-100-billion-<success" className="inline-block bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               View Case Study →
             </a>
@@ -75,8 +73,7 @@ const January2026QuantumNeuralFusionBanner: React.FC = () => {
               Complete implementation framework for quantum-neural fusion deployment, including infrastructure setup, neural enhancement, and global deployment strategies.
             </p>
             <a 
-              href="/services/quantum-neural-fusion-enterprise"
-              className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/services/quantum-neural-fusion-<enterprise" className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Get Started →
             </a>
@@ -94,20 +91,17 @@ const January2026QuantumNeuralFusionBanner: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Quantum AI Consultation
               </a>
               <a 
-                href="/resources/quantum-neural-fusion-guide" 
-                className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="/resources/quantum-neural-fusion-<guide" className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Download Implementation Guide
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View All Success Stories
               </a>

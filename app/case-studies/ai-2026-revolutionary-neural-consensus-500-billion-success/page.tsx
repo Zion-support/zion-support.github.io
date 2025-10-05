@@ -1,6 +1,4 @@
-import React from 'react';
 import { Metadata } from 'next';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 Revolutionary Neural Consensus: $500B Success Story - Fortune 100 Mega Transformation',
@@ -43,14 +41,12 @@ export default function AI2026RevolutionaryNeuralConsensus500BillionSuccess() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#success-details" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="#success-<details" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Success Details
               </a>
               <a 
-                href="/blog/ai-2026-revolutionary-neural-consensus-breakthrough" 
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-revolutionary-neural-consensus-<breakthrough" className="bg-gradient-to-r from-emerald-500 to-cyan-600 hover:from-emerald-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Read Technical Details →
               </a>
@@ -80,7 +76,7 @@ export default function AI2026RevolutionaryNeuralConsensus500BillionSuccess() {
       </section>
 
       {/* Success Overview */}
-      <section id="success-details" className="py-20">
+      <section id="success-<details" className="py-20">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-6">
@@ -357,14 +353,12 @@ export default function AI2026RevolutionaryNeuralConsensus500BillionSuccess() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
             </a>
             <a 
-              href="/blog/ai-2026-revolutionary-neural-consensus-breakthrough" 
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/blog/ai-2026-revolutionary-neural-consensus-<breakthrough" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Learn More
             </a>

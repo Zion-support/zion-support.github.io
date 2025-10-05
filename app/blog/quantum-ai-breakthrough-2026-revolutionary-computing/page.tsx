@@ -1,6 +1,9 @@
-import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Atom, Zap, Shield, Brain, TrendingUp, Target, CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Atom } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export default function QuantumAIBreakthrough2026() {
   return (
@@ -31,15 +34,15 @@ export default function QuantumAIBreakthrough2026() {
             
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
               <span className="flex items-center gap-2">
-                <Atom className="w-4 h-4" />
+                <<<Atom className="w-4 h-4" />
                 Quantum Computing
               </span>
               <span className="flex items-center gap-2">
-                <Brain className="w-4 h-4" />
+                <<<Brain className="w-4 h-4" />
                 Neural Networks
               </span>
               <span className="flex items-center gap-2">
-                <Zap className="w-4 h-4" />
+                <<<Zap className="w-4 h-4" />
                 Breakthrough Technology
               </span>
               <span>18 min read</span>
@@ -90,19 +93,19 @@ export default function QuantumAIBreakthrough2026() {
                 <h3 className="text-2xl font-bold mb-4 text-purple-400">🚀 Revolutionary Breakthrough Achievements</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <<<CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                     <span><strong>Quantum-Neural Fusion:</strong> First successful integration of quantum computing with neural networks</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <<<CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                     <span><strong>10^18 Operations/sec:</strong> Unprecedented computational power for complex problem solving</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <<<CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                     <span><strong>99.9% Accuracy:</strong> Solving problems previously considered computationally impossible</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
+                    <<<CheckCircle className="w-6 h-6 text-green-400 mt-1 flex-shrink-0" />
                     <span><strong>Commercial Viability:</strong> First quantum AI systems ready for enterprise deployment</span>
                   </li>
                 </ul>
@@ -235,14 +238,12 @@ export default function QuantumAIBreakthrough2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Join Early Access Program
             </Link>
             <Link 
-              href="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Quantum Success Stories
             </Link>
@@ -256,18 +257,16 @@ export default function QuantumAIBreakthrough2026() {
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
               <Link 
-                href="/blog" 
-                className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                href="/<blog" className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
               >
-                <ArrowRight className="w-4 h-4 rotate-180" />
+                <<<ArrowRight className="w-4 h-4 rotate-180" />
                 Back to Blog
               </Link>
               <Link 
-                href="/services" 
-                className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                href="/<services" className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Explore Quantum AI Services
-                <ArrowRight className="w-4 h-4" />
+                <<<ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>

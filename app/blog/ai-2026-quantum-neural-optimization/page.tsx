@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -295,14 +294,12 @@ export default function AI2026QuantumNeuralOptimizationPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Schedule Quantum AI Consultation
             </a>
             <a 
-              href="/services" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/<services" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Quantum AI Services
             </a>
@@ -313,11 +310,11 @@ export default function AI2026QuantumNeuralOptimizationPage() {
         <section className="mt-16">
           <h3 className="text-2xl font-bold mb-6 text-white">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-2027-quantum-neural-networks" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+            <a href="/blog/ai-2027-quantum-neural-<networks" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <h4 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">AI 2027: Quantum Neural Networks</h4>
               <p className="text-gray-400 text-sm">Explore the next generation of quantum neural networks and their revolutionary capabilities.</p>
             </a>
-            <a href="/blog/ai-2026-autonomous-agent-factories" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
+            <a href="/blog/ai-2026-autonomous-agent-<factories" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <h4 className="text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">AI 2026: Autonomous Agent Factories</h4>
               <p className="text-gray-400 text-sm">Discover how autonomous agent factories are revolutionizing enterprise automation.</p>
             </a>

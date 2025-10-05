@@ -1,4 +1,8 @@
-import { ArrowLeft, Shield, Zap, Lock, TrendingUp, CheckCircle, DollarSign } from "lucide-react";
+import { ArrowLeft } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
@@ -24,10 +28,9 @@ const AdvancedCybersecurityAI = () => {
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */}
           <Link
-            to="/services"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+            to="/<services" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <<<ArrowLeft className="w-4 h-4 mr-2" />
             Back to Services
           </Link>
 
@@ -81,7 +84,7 @@ const AdvancedCybersecurityAI = () => {
             {/* Threat Landscape */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Shield className="w-8 h-8 text-red-400" />
+                <<<Shield className="w-8 h-8 text-red-400" />
                 The Modern Threat Landscape
               </h2>
               <div className="bg-white/5 backdrop-blur-sm rounded-xl p-8 border border-red-500/30">
@@ -107,15 +110,15 @@ const AdvancedCybersecurityAI = () => {
                     <h3 className="text-xl font-bold text-white mb-4">✅ Our Solution</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                         <span>&lt;50ms detection time (real-time)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                         <span>Prevent breaches before they occur</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                         <span>Autonomous threat containment</span>
                       </li>
                     </ul>
@@ -127,7 +130,7 @@ const AdvancedCybersecurityAI = () => {
             {/* Platform Features */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <Lock className="w-8 h-8 text-blue-400" />
+                <<<Lock className="w-8 h-8 text-blue-400" />
                 Platform Features
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -217,7 +220,7 @@ const AdvancedCybersecurityAI = () => {
                     <ul className="space-y-2">
                       {solution.highlights.map((highlight, hIndex) => (
                         <li key={hIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                          <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                           <span>{highlight}</span>
                         </li>
                       ))}
@@ -230,7 +233,7 @@ const AdvancedCybersecurityAI = () => {
             {/* Pricing Packages */}
             <section>
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                <DollarSign className="w-8 h-8 text-green-400" />
+                <<<DollarSign className="w-8 h-8 text-green-400" />
                 Pricing & Packages
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
@@ -263,7 +266,7 @@ const AdvancedCybersecurityAI = () => {
                     <ul className="space-y-3">
                       {pkg.features.map((feature, fIndex) => (
                         <li key={fIndex} className="flex items-start gap-2">
-                          <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                          <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -279,7 +282,7 @@ const AdvancedCybersecurityAI = () => {
                 <div className="flex items-center justify-between flex-wrap gap-6">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-4">
-                      <Shield className="w-8 h-8 text-red-400" />
+                      <<<Shield className="w-8 h-8 text-red-400" />
                       <h3 className="text-2xl font-bold text-white">🛡️ October 2025 Security Initiative</h3>
                     </div>
                     <p className="text-xl text-red-200 mb-4">
@@ -287,15 +290,15 @@ const AdvancedCybersecurityAI = () => {
                     </p>
                     <ul className="space-y-2">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                         <span>Free security assessment ($25,000 value)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                         <span>Complimentary penetration test ($35,000 value)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
+                        <<<CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />
                         <span>90 days extended support</span>
                       </li>
                     </ul>
@@ -305,11 +308,10 @@ const AdvancedCybersecurityAI = () => {
                   </div>
                   <div>
                     <Link
-                      to="/contact"
-                      className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
+                      to="/<contact" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
                     >
                       Secure Your Enterprise
-                      <Shield className="w-5 h-5" />
+                      <<<Shield className="w-5 h-5" />
                     </Link>
                   </div>
                 </div>
@@ -324,15 +326,13 @@ const AdvancedCybersecurityAI = () => {
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
+                  to="/<contact" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-red-500 to-orange-500 text-white font-bold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all transform hover:scale-105"
                 >
                   Schedule Security Assessment
-                  <Shield className="w-5 h-5" />
+                  <<<Shield className="w-5 h-5" />
                 </Link>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-red-500/30 hover:bg-white/20 transition-all"
+                  to="/<contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-lg border border-red-500/30 hover:bg-white/20 transition-all"
                 >
                   Request Platform Demo
                 </Link>

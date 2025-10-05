@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
 import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
@@ -18,11 +18,10 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
             <Link
-            to="/insights"
-            className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+            to="/<insights" className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-            <ArrowRight className="w-4 h-4" />
+            <<<ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
@@ -53,11 +52,10 @@ const LatestInsights: React.FC = () => {
               <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
 
               <Link
-                to="/insights"
-                className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+                to="/<insights" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-                <ArrowRight className="w-4 h-4" />
+                <<<ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           ))}
@@ -65,11 +63,10 @@ const LatestInsights: React.FC = () => {
 
         <div className="mt-8 sm:hidden">
           <Link
-            to="/insights"
-            className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+            to="/<insights" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-            <ArrowRight className="w-4 h-4" />
+            <<<ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

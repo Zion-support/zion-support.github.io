@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -170,14 +169,12 @@ export default function AIAutonomousOperations2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+                href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View More Case Studies
               </a>
@@ -191,9 +188,9 @@ export default function AIAutonomousOperations2025() {
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-400 mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
           <div className="flex justify-center gap-6 text-sm">
-            <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-            <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+            <a href="/<privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <a href="/<terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
+            <a href="/<contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
           </div>
         </div>
       </footer>

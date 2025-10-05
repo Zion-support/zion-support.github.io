@@ -1,4 +1,5 @@
-import { ArrowRight, Shield, TrendingDown, Activity } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Activity } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const October2025AIOperationsBanner = () => {
@@ -41,7 +42,7 @@ const October2025AIOperationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
-            <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
+            <<<Activity className="w-4 h-4 text-blue-400 animate-pulse" />
             <span className="text-blue-300 text-sm font-semibold">
               OCTOBER 2025 - BREAKTHROUGH AI OPERATIONS
             </span>
@@ -94,7 +95,7 @@ const October2025AIOperationsBanner = () => {
                   {/* CTA */}
                   <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
-                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <<<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
               </Link>
@@ -106,15 +107,13 @@ const October2025AIOperationsBanner = () => {
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
             <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group"
+              to="/<blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-bold rounded-xl hover:from-blue-500 hover:to-blue-400 transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group"
             >
               <span>Explore All AI Insights</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <<<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
+              to="/<contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-bold rounded-xl hover:bg-white/20 transition-all duration-300 border border-white/20"
             >
               <span>Schedule Expert Consultation</span>
             </Link>

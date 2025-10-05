@@ -248,14 +248,12 @@ export default function AI2025OctoberAutonomousDatabaseOptimization() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Started
             </a>
             <a
-              href="/services/database-optimization"
-              className="text-left"
+              href="/services/database-<optimization" className="text-left"
             ></a>
               Learn More
             </a>

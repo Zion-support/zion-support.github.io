@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, Code2, Brain, Zap } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { motion } from "framer-motion";
 
 const October2025TechBannerNew = () => {
@@ -51,7 +52,7 @@ const October2025TechBannerNew = () => {
             animate={{ rotate: 360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
+            <<<Sparkles className="w-8 h-8 text-yellow-400" />
           </motion.div>
           <h2 className="text-3xl md:text-4xl font-bold text-white text-center">
             Fresh AI Insights for October 2025
@@ -60,7 +61,7 @@ const October2025TechBannerNew = () => {
             animate={{ rotate: -360 }}
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           >
-            <Sparkles className="w-8 h-8 text-yellow-400" />
+            <<<Sparkles className="w-8 h-8 text-yellow-400" />
           </motion.div>
         </div>
 
@@ -103,7 +104,7 @@ const October2025TechBannerNew = () => {
                   {/* Read More Link */}
                   <div className="flex items-center text-purple-300 group-hover:text-purple-100 transition-colors">
                     <span className="text-sm font-semibold">Read Article</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
+                    <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-2 transition-transform" />
                   </div>
                 </div>
               </Link>
@@ -115,15 +116,13 @@ const October2025TechBannerNew = () => {
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link
-              to="/blog"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
+              to="/<blog" className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center gap-2"
             >
               <span>Explore All Articles</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <<<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              to="/contact"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white font-bold rounded-xl border-2 border-white/30 hover:border-white/50 transition-all duration-300"
+              to="/<contact" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-lg text-white font-bold rounded-xl border-2 border-white/30 hover:border-white/50 transition-all duration-300"
             >
               Get Expert Consultation
             </Link>

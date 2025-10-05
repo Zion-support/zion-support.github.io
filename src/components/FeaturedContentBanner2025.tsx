@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function FeaturedContentBanner2025() {
   const featuredContent = [
@@ -102,14 +101,12 @@ export default function FeaturedContentBanner2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Get Free Assessment
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 View Success Stories
               </a>
@@ -124,14 +121,12 @@ export default function FeaturedContentBanner2025() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Join Innovation Lab
               </a>
               <a 
-                href="/services" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
+                href="/<services" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center"
               >
                 Explore Services
               </a>
@@ -149,9 +144,7 @@ export default function FeaturedContentBanner2025() {
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input 
               type="email" 
-              placeholder="Enter your email address"
-              className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
-            />
+              placeholder="Enter your email <<address className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none" />
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
               Subscribe
             </button>

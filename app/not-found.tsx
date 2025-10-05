@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import Link from 'next/link';
 
 export default function NotFound() {
@@ -108,8 +107,7 @@ export default function NotFound() {
             ← Back to Home
           </Link>
           <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+            href="tel:+<13024640950" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
           >
             Call Support: +1 302 464 0950
           </a>
@@ -125,15 +123,13 @@ export default function NotFound() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              href="mailto:kleber@ziontechgroup.<com" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               📧 Email: kleber@ziontechgroup.com
             </a>
             <span className="hidden sm:inline text-gray-400">|</span>
             <a
-              href="tel:+13024640950"
-              className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+              href="tel:+<13024640950" className="inline-flex items-center gap-2 text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
               📞 Phone: +1 302 464 0950
             </a>
@@ -146,8 +142,7 @@ export default function NotFound() {
           <p className="mt-2">
             If you believe this is an error, please{' '}
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-blue-600 hover:text-blue-700 font-semibold"
+              href="mailto:kleber@ziontechgroup.<com" className="text-blue-600 hover:text-blue-700 font-semibold"
             >
               contact our support team
             </a>

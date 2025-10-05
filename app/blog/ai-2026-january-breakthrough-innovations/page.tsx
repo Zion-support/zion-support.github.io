@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -36,14 +35,12 @@ export default function AI2026JanuaryBreakthroughInnovations() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#breakthroughs" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="#<breakthroughs" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Explore Breakthroughs
               </a>
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Implementation Guide →
               </a>
@@ -93,7 +90,7 @@ export default function AI2026JanuaryBreakthroughInnovations() {
           </section>
 
           {/* Breakthrough 1 */}
-          <section id="breakthroughs" className="mb-16">
+          <section id="<breakthroughs" className="mb-16">
             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 backdrop-blur-lg rounded-2xl p-8 border border-blue-500/30">
               <div className="flex items-center gap-4 mb-6">
                 <div className="text-4xl">🤖</div>
@@ -258,14 +255,12 @@ export default function AI2026JanuaryBreakthroughInnovations() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
                 >
                   Get Implementation Guide
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                  href="/case-<studies" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   View Success Stories →
                 </a>
@@ -281,13 +276,13 @@ export default function AI2026JanuaryBreakthroughInnovations() {
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">Explore More AI Innovations</h3>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link href="/blog/ai-2026-february-advanced-autonomous-systems" className="text-blue-400 hover:text-blue-300 transition-colors">
+              <Link href="/blog/ai-2026-february-advanced-autonomous-<systems" className="text-blue-400 hover:text-blue-300 transition-colors">
                 February Autonomous Systems →
               </Link>
-              <Link href="/blog/ai-2026-march-ultimate-breakthrough-revolution" className="text-purple-400 hover:text-purple-300 transition-colors">
+              <Link href="/blog/ai-2026-march-ultimate-breakthrough-<revolution" className="text-purple-400 hover:text-purple-300 transition-colors">
                 March Ultimate Breakthrough →
               </Link>
-              <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+              <Link href="/<blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                 All AI Content →
               </Link>
             </div>

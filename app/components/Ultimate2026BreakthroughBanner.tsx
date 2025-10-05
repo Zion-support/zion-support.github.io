@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 
 export default function Ultimate2026BreakthroughBanner() {
@@ -59,7 +58,7 @@ export default function Ultimate2026BreakthroughBanner() {
               Revolutionary AI systems achieving 99.8% autonomous enterprise operations with $25B+ ROI across Fortune 500 companies. Complete elimination of manual processes.
             </p>
             <div className="flex items-center justify-between mb-6">
-              <Link href="/blog/ai-2026-autonomous-enterprise-operations-revolution" className="text-purple-300 hover:text-purple-200 font-semibold transition-colors">
+              <Link href="/blog/ai-2026-autonomous-enterprise-operations-<revolution" className="text-purple-300 hover:text-purple-200 font-semibold transition-colors">
                 Read the Revolution →
               </Link>
               <div className="text-yellow-400 font-bold">$25B ROI</div>
@@ -91,7 +90,7 @@ export default function Ultimate2026BreakthroughBanner() {
               Revolutionary quantum neural networks achieving 50,000x performance improvements with consciousness-level AI capabilities transforming every industry.
             </p>
             <div className="flex items-center justify-between mb-6">
-              <Link href="/blog/ai-2026-quantum-neural-networks-breakthrough" className="text-blue-300 hover:text-blue-200 font-semibold transition-colors">
+              <Link href="/blog/ai-2026-quantum-neural-networks-<breakthrough" className="text-blue-300 hover:text-blue-200 font-semibold transition-colors">
                 Explore Quantum AI →
               </Link>
               <div className="text-yellow-400 font-bold">CONSCIOUSNESS</div>
@@ -115,7 +114,7 @@ export default function Ultimate2026BreakthroughBanner() {
 
         {/* Success Stories Showcase */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Link href="/case-studies/ai-2026-autonomous-operations-mega-success" className="group block rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-8 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
+          <Link href="/case-studies/ai-2026-autonomous-operations-mega-<success" className="group block rounded-2xl border border-green-500/30 bg-gradient-to-br from-green-900/30 to-emerald-900/30 p-8 hover:border-green-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-3 mb-6">
               <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full text-sm font-bold">$25B ROI SUCCESS</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">MEGA SUCCESS</span>
@@ -132,7 +131,7 @@ export default function Ultimate2026BreakthroughBanner() {
             </div>
           </Link>
 
-          <Link href="/case-studies/ai-2026-quantum-ai-transformation-success" className="group block rounded-2xl border border-orange-500/30 bg-gradient-to-br from-orange-900/30 to-red-900/30 p-8 hover:border-orange-400/50 transition-all duration-300 hover:scale-105">
+          <Link href="/case-studies/ai-2026-quantum-ai-transformation-<success" className="group block rounded-2xl border border-orange-500/30 bg-gradient-to-br from-orange-900/30 to-red-900/30 p-8 hover:border-orange-400/50 transition-all duration-300 hover:scale-105">
             <div className="flex items-center gap-3 mb-6">
               <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">$35B ROI SUCCESS</span>
               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">QUANTUM AI</span>
@@ -159,10 +158,10 @@ export default function Ultimate2026BreakthroughBanner() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl">
+            <Link href="/<contact" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl">
               Get Started Today
             </Link>
-            <Link href="/blog" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl">
+            <Link href="/<blog" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-blue-700 hover:to-cyan-700 transition-all shadow-lg hover:shadow-xl">
               Explore All Content
             </Link>
           </div>

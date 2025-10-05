@@ -1,4 +1,10 @@
-import { ArrowLeft, TrendingUp, DollarSign, Users, Zap, CheckCircle, Target } from "lucide-react";
+import { ArrowLeft } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Target } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
@@ -24,10 +30,9 @@ const GlobalRetailAITransformation = () => {
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */}
           <Link
-            to="/case-studies"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+            to="/case-<studies" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <<<ArrowLeft className="w-4 h-4 mr-2" />
             Back to Case Studies
           </Link>
 
@@ -134,7 +139,7 @@ const GlobalRetailAITransformation = () => {
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-gradient-to-br from-blue-900/40 to-cyan-900/40 rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-blue-400" />
+                    <<<Zap className="w-6 h-6 text-blue-400" />
                     AI Demand Forecasting
                   </h3>
                   <p className="mb-4">
@@ -143,15 +148,15 @@ const GlobalRetailAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>96% forecast accuracy (up from 67%)</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>$2.1B reduction in inventory waste</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>87% fewer stockouts</span>
                     </li>
                   </ul>
@@ -159,7 +164,7 @@ const GlobalRetailAITransformation = () => {
 
                 <div className="bg-gradient-to-br from-purple-900/40 to-pink-900/40 rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Users className="w-6 h-6 text-purple-400" />
+                    <<<Users className="w-6 h-6 text-purple-400" />
                     Hyper-Personalization Engine
                   </h3>
                   <p className="mb-4">
@@ -168,15 +173,15 @@ const GlobalRetailAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>78% increase in customer satisfaction</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>$1.8B incremental revenue</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>340% improvement in conversion rate</span>
                     </li>
                   </ul>
@@ -184,7 +189,7 @@ const GlobalRetailAITransformation = () => {
 
                 <div className="bg-gradient-to-br from-green-900/40 to-teal-900/40 rounded-xl p-6 border border-green-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-green-400" />
+                    <<<Target className="w-6 h-6 text-green-400" />
                     Intelligent Marketing Platform
                   </h3>
                   <p className="mb-4">
@@ -193,15 +198,15 @@ const GlobalRetailAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>340% marketing ROI improvement</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>$340M additional revenue</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>92% reduction in wasted ad spend</span>
                     </li>
                   </ul>
@@ -209,7 +214,7 @@ const GlobalRetailAITransformation = () => {
 
                 <div className="bg-gradient-to-br from-orange-900/40 to-red-900/40 rounded-xl p-6 border border-orange-500/30">
                   <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-                    <DollarSign className="w-6 h-6 text-orange-400" />
+                    <<<DollarSign className="w-6 h-6 text-orange-400" />
                     Dynamic Pricing Engine
                   </h3>
                   <p className="mb-4">
@@ -218,15 +223,15 @@ const GlobalRetailAITransformation = () => {
                   </p>
                   <ul className="space-y-2 text-sm">
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>$890M incremental revenue</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>4.2% gross margin improvement</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-400" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400" />
                       <span>94% optimal price achievement</span>
                     </li>
                   </ul>
@@ -395,15 +400,13 @@ const GlobalRetailAITransformation = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg"
+                  to="/<contact" className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2 text-lg"
                 >
-                  <TrendingUp className="w-6 h-6" />
+                  <<<TrendingUp className="w-6 h-6" />
                   Schedule Free Consultation
                 </Link>
                 <Link
-                  to="/services"
-                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg"
+                  to="/<services" className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 text-lg"
                 >
                   View All AI Services
                 </Link>

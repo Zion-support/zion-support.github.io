@@ -16,7 +16,7 @@ export default function SustainableAIGreenComputing2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -403,10 +403,10 @@ export default function SustainableAIGreenComputing2025() {
                   Schedule your sustainability assessment and discover your green AI potential.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Assessment
                   </a>
-                  <a href="/services" className="text-left"></a>
+                  <a href="/<services" className="text-left"></a>
                     Explore Green AI Solutions
                   </a>
                 </div>
@@ -418,10 +418,10 @@ export default function SustainableAIGreenComputing2025() {
                   Written by Zion Tech Group Sustainability & AI Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Get in Touch
                   </a>
                 </div>

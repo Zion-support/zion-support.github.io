@@ -288,14 +288,12 @@ const completion = await trace.llm.call(model: "gpt-4
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Request Demo
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               View Success Stories
             </a>

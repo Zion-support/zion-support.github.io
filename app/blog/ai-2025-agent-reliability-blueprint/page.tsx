@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
   title: 'AI 2025 Agent Reliability Blueprint: Ship Trustworthy Autonomous Workflows',
@@ -18,7 +17,7 @@ export default function AI2025AgentReliabilityBlueprint() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <a href="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
+          <a href="/<blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
             ← Back to Blog
           </a>
         </nav>
@@ -82,10 +81,10 @@ export default function AI2025AgentReliabilityBlueprint() {
                 Fortune 500 environments.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<contact" className="bg-gradient-to-r from-cyan-500 to-teal-600 hover:from-cyan-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
                   Talk to an Expert
                 </a>
-                <a href="/blog" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<blog" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
                   More Insights
                 </a>
               </div>
@@ -95,7 +94,7 @@ export default function AI2025AgentReliabilityBlueprint() {
           <footer className="mt-14 pt-8 border-t border-white/10">
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group Reliability Team</div>
-              <a href="/contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
+              <a href="/<contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
             </div>
           </footer>
         </article>

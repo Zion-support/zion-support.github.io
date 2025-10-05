@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -355,14 +354,12 @@ export default function Fortune500AI2026TransformationPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+              href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
             >
               Schedule Transformation Consultation
             </a>
             <a 
-              href="/case-studies" 
-              className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View More Success Stories
             </a>
@@ -373,11 +370,11 @@ export default function Fortune500AI2026TransformationPage() {
         <section className="mt-16">
           <h3 className="text-2xl font-bold mb-6 text-white">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-2026-autonomous-agent-factories" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
+            <a href="/blog/ai-2026-autonomous-agent-<factories" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
               <h4 className="text-xl font-bold mb-2 group-hover:text-green-400 transition-colors">AI 2026: Autonomous Agent Factories</h4>
               <p className="text-gray-400 text-sm">Deep dive into the autonomous agent factory technology that achieved 95% automation rates.</p>
             </a>
-            <a href="/blog/ai-2026-quantum-neural-optimization" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
+            <a href="/blog/ai-2026-quantum-neural-<optimization" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300">
               <h4 className="text-xl font-bold mb-2 group-hover:text-green-400 transition-colors">AI 2026: Quantum Neural Optimization</h4>
               <p className="text-gray-400 text-sm">Explore the quantum AI breakthrough that delivered 1000x performance improvements.</p>
             </a>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -47,8 +46,8 @@ export default function Page() {
         </div>
 
         <div className="mt-10 flex gap-3">
-          <Link href="/blog" className="bg-white text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-100">Back to Blog</Link>
-          <Link href="/content-hub" className="border border-white/30 text-white px-5 py-3 rounded-lg font-semibold hover:bg-white/10">Explore Content Hub</Link>
+          <Link href="/<blog" className="bg-white text-blue-700 px-5 py-3 rounded-lg font-semibold hover:bg-slate-100">Back to Blog</Link>
+          <Link href="/content-<hub" className="border border-white/30 text-white px-5 py-3 rounded-lg font-semibold hover:bg-white/10">Explore Content Hub</Link>
         </div>
       </div>
     </div>

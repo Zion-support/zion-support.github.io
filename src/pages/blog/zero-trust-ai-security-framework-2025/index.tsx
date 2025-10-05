@@ -1,15 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  Calendar,
-  Clock,
-  Lock,
-  Shield,
-  ShieldCheck,
-  TrendingUp,
-  AlertTriangle,
-} from "lucide-react";
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { ShieldCheck } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
 
 const ZeroTrustAISecurityFramework2025 = () => {
   return (
@@ -38,10 +36,9 @@ const ZeroTrustAISecurityFramework2025 = () => {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
             <Link
-              to="/blog"
-              className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
+              to="/<blog" className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <<<ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
 
@@ -64,15 +61,15 @@ const ZeroTrustAISecurityFramework2025 = () => {
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <<<Calendar className="w-5 h-5 mr-2" />
                   <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
+                  <<<Clock className="w-5 h-5 mr-2" />
                   <span>14 min read</span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" />
+                  <<<TrendingUp className="w-5 h-5 mr-2" />
                   <span>Mission Critical</span>
                 </div>
               </div>
@@ -86,7 +83,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Threat Landscape */}
             <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border-l-4 border-red-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
+                <<<AlertTriangle className="w-6 h-6 mr-2 text-red-400" />
                 The AI Security Crisis
               </h2>
               <p className="text-gray-300 leading-relaxed mb-4">
@@ -104,7 +101,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Core Principles */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
+                <<<ShieldCheck className="w-8 h-8 mr-3 text-emerald-400" />
                 Zero-Trust AI: Core Principles
               </h2>
 
@@ -202,7 +199,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Implementation Architecture */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Lock className="w-8 h-8 mr-3 text-blue-400" />
+                <<<Lock className="w-8 h-8 mr-3 text-blue-400" />
                 Reference Architecture
               </h2>
 
@@ -296,7 +293,7 @@ const ZeroTrustAISecurityFramework2025 = () => {
             {/* Attack Vectors & Mitigations */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Shield className="w-8 h-8 mr-3 text-red-400" />
+                <<<Shield className="w-8 h-8 mr-3 text-red-400" />
                 Common AI Attack Vectors & Mitigations
               </h2>
 
@@ -387,11 +384,10 @@ const ZeroTrustAISecurityFramework2025 = () => {
                   Get a comprehensive security audit of your AI systems from our experts.
                 </p>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                  to="/<contact" className="inline-flex items-center px-8 py-4 bg-white text-red-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Request Security Assessment
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
+                  <<<ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
               </div>
             </section>

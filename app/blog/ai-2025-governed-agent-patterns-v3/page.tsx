@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -25,7 +24,7 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <Link href="/blog" className="text-blue-600 hover:underline">Blog</Link>.
+          <Link href="/<blog" className="text-blue-600 hover:underline">Blog</Link>.
         </p>
       </section>
     </main>

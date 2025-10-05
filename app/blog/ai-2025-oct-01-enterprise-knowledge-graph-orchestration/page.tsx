@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -29,7 +28,7 @@ export default function Page() {
 			</section>
 
 			<div className="mt-10">
-				<Link href="/blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>
+				<Link href="/<blog" className="text-indigo-600 font-semibold hover:text-indigo-700">← Back to Blog</Link>
 			</div>
 		</main>
 	);

@@ -20,7 +20,7 @@ export default function AIPoweredDevOpsTransformation2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -317,7 +317,7 @@ export default function AIPoweredDevOpsTransformation2025() {
                   Zion Tech Group helps enterprises design and implement AI-powered DevOps transformations. Our team
                   brings expertise in AIOps platforms, ML model development, and organizational change management.
                 </p>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Your DevOps Transformation Consultation →
                 </a>
               </div>

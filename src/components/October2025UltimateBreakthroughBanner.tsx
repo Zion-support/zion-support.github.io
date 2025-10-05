@@ -1,4 +1,7 @@
-import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const October2025UltimateBreakthroughBanner = () => {
@@ -17,11 +20,11 @@ const October2025UltimateBreakthroughBanner = () => {
         {/* Header Badge */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 border border-yellow-400/50 rounded-full">
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <<<Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
             <span className="text-yellow-400 font-bold text-sm sm:text-base">
               🔥 BREAKING: OCTOBER 2025 — 5 REVOLUTIONARY AI BREAKTHROUGHS JUST RELEASED! 🔥
             </span>
-            <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
+            <<<Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
         </div>
 
@@ -40,12 +43,11 @@ const October2025UltimateBreakthroughBanner = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {/* Feature 1 */}
           <Link 
-            to="/blog/ai-agentic-mesh-networks-2025-oct"
-            className="group relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
+            to="/blog/ai-agentic-mesh-networks-2025-<oct" className="group relative bg-gradient-to-br from-purple-500/10 to-blue-500/10 backdrop-blur-sm border border-purple-400/30 rounded-xl p-6 hover:border-purple-400 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
-                <Zap className="w-5 h-5 text-purple-300" />
+                <<<Zap className="w-5 h-5 text-purple-300" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-purple-200 transition-colors">
@@ -57,18 +59,17 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-purple-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Explore Technology <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              Explore Technology <<<ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
           {/* Feature 2 */}
           <Link 
-            to="/blog/quantum-ai-optimization-breakthrough-2025-oct"
-            className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+            to="/blog/quantum-ai-optimization-breakthrough-2025-<oct" className="group relative bg-gradient-to-br from-blue-500/10 to-cyan-500/10 backdrop-blur-sm border border-blue-400/30 rounded-xl p-6 hover:border-blue-400 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
-                <TrendingUp className="w-5 h-5 text-blue-300" />
+                <<<TrendingUp className="w-5 h-5 text-blue-300" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-blue-200 transition-colors">
@@ -80,18 +81,17 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-blue-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Discover Innovation <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              Discover Innovation <<<ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
           {/* Feature 3 */}
           <Link 
-            to="/blog/cognitive-digital-twins-2025-oct"
-            className="group relative bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm border border-indigo-400/30 rounded-xl p-6 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
+            to="/blog/cognitive-digital-twins-2025-<oct" className="group relative bg-gradient-to-br from-indigo-500/10 to-purple-500/10 backdrop-blur-sm border border-indigo-400/30 rounded-xl p-6 hover:border-indigo-400 hover:shadow-lg hover:shadow-indigo-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors">
-                <Sparkles className="w-5 h-5 text-indigo-300" />
+                <<<Sparkles className="w-5 h-5 text-indigo-300" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-indigo-200 transition-colors">
@@ -103,18 +103,17 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-indigo-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              Learn More <<<ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
           {/* Feature 4 */}
           <Link 
-            to="/blog/neuromorphic-edge-ai-2025-oct"
-            className="group relative bg-gradient-to-br from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+            to="/blog/neuromorphic-edge-ai-2025-<oct" className="group relative bg-gradient-to-br from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                <Zap className="w-5 h-5 text-cyan-300" />
+                <<<Zap className="w-5 h-5 text-cyan-300" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-cyan-200 transition-colors">
@@ -126,18 +125,17 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-cyan-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Read Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              Read Guide <<<ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
           {/* Feature 5 */}
           <Link 
-            to="/blog/autonomous-security-orchestration-2025-oct"
-            className="group relative bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm border border-red-400/30 rounded-xl p-6 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300"
+            to="/blog/autonomous-security-orchestration-2025-<oct" className="group relative bg-gradient-to-br from-red-500/10 to-orange-500/10 backdrop-blur-sm border border-red-400/30 rounded-xl p-6 hover:border-red-400 hover:shadow-lg hover:shadow-red-500/20 transition-all duration-300"
           >
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors">
-                <TrendingUp className="w-5 h-5 text-red-300" />
+                <<<TrendingUp className="w-5 h-5 text-red-300" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1 group-hover:text-red-200 transition-colors">
@@ -149,7 +147,7 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-red-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              View Solution <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              View Solution <<<ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
 
@@ -157,7 +155,7 @@ const October2025UltimateBreakthroughBanner = () => {
           <div className="group relative bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border-2 border-yellow-400/50 rounded-xl p-6 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300">
             <div className="flex items-start gap-3 mb-3">
               <div className="p-2 bg-yellow-500/20 rounded-lg group-hover:bg-yellow-500/30 transition-colors">
-                <Sparkles className="w-5 h-5 text-yellow-300 animate-pulse" />
+                <<<Sparkles className="w-5 h-5 text-yellow-300 animate-pulse" />
               </div>
               <div className="flex-1">
                 <h3 className="font-bold text-white text-lg mb-1">
@@ -169,10 +167,9 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <Link 
-              to="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl"
+              to="/<blog" className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              View All Innovations <ArrowRight className="w-5 h-5" />
+              View All Innovations <<<ArrowRight className="w-5 h-5" />
             </Link>
           </div>
         </div>

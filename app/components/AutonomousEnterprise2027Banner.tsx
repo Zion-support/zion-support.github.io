@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function AutonomousEnterprise2027Banner() {
@@ -32,14 +31,12 @@ export default function AutonomousEnterprise2027Banner() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/blog/ai-2027-autonomous-enterprise-transformation"
-                className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center"
+                href="/blog/ai-2027-autonomous-enterprise-<transformation" className="px-8 py-4 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center"
               >
                 Explore 2027 Vision
               </Link>
               <Link 
-                href="/services/autonomous-enterprise"
-                className="px-8 py-4 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center"
+                href="/services/autonomous-<enterprise" className="px-8 py-4 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center"
               >
                 Start Your Journey
               </Link>

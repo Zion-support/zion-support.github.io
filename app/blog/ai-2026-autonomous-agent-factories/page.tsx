@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -192,14 +191,12 @@ export default function AI2026AutonomousAgentFactoriesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+              href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
             >
               Schedule Consultation
             </a>
             <a 
-              href="/case-studies" 
-              className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/case-<studies" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
             </a>
@@ -210,11 +207,11 @@ export default function AI2026AutonomousAgentFactoriesPage() {
         <section className="mt-16">
           <h3 className="text-2xl font-bold mb-6 text-white">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-2026-autonomous-business-intelligence" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+            <a href="/blog/ai-2026-autonomous-business-<intelligence" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <h4 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">AI 2026: Autonomous Business Intelligence</h4>
               <p className="text-gray-400 text-sm">Discover how autonomous BI systems are revolutionizing data insights and decision-making.</p>
             </a>
-            <a href="/blog/ai-2026-autonomous-enterprise-operations" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
+            <a href="/blog/ai-2026-autonomous-enterprise-<operations" className="group bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300">
               <h4 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors">AI 2026: Autonomous Enterprise Operations</h4>
               <p className="text-gray-400 text-sm">Learn about fully autonomous enterprise operations and their transformative impact.</p>
             </a>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -262,14 +261,12 @@ export default function AIFinanceAutomationSuccess2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
-              href="/contact"
-              className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
+              href="/<contact" className="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors text-center"
             >
               Get Finance Automation Consultation
             </Link>
             <Link
-              href="/services/ai-finance-automation"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
+              href="/services/ai-finance-<automation" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors text-center"
             >
               View Finance AI Services
             </Link>
@@ -280,7 +277,7 @@ export default function AIFinanceAutomationSuccess2026() {
       <div className="border-t border-gray-200 pt-8 mt-8">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Case Studies</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/case-studies/ai-sustainability-transformation-2026" className="group">
+          <Link href="/case-studies/ai-sustainability-transformation-<2026" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Sustainability Transformation 2026
@@ -290,7 +287,7 @@ export default function AIFinanceAutomationSuccess2026() {
               </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-quantum-optimization-2026" className="group">
+          <Link href="/case-studies/ai-quantum-optimization-<2026" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                 AI Quantum Optimization 2026

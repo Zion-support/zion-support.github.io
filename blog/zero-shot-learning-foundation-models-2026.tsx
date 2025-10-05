@@ -328,10 +328,10 @@ const ZeroShotLearningFoundationModels2026 = () =>
             Zion Tech Group has pioneered zero-shot AI deployment for 50+ Fortune 500 companies. Our experts will help you identify high-impact use cases, select optimal foundation models, and implement production-ready zero-shot systems that deliver immediate business value.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Start Your Zero-Shot Journey
             </a>
-            <a href="/services/ai-consulting" className="text-left"></a>
+            <a href="/services/ai-<consulting" className="text-left"></a>
               Explore AI Services
             </a>
           </div>

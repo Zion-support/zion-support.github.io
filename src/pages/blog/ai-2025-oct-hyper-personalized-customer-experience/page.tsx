@@ -1,6 +1,11 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Heart, Sparkles, TrendingUp, DollarSign, Users } from "lucide-react";
+import { ArrowLeft } from 'lucide-react';
+import { Heart } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Users } from 'lucide-react';
 
 export default function HyperPersonalizedCustomerExperience2025() {
   return (
@@ -21,10 +26,9 @@ export default function HyperPersonalizedCustomerExperience2025() {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link
-            to="/blog"
-            className="inline-flex items-center text-pink-400 hover:text-pink-300 mb-8 transition-colors"
+            to="/<blog" className="inline-flex items-center text-pink-400 hover:text-pink-300 mb-8 transition-colors"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <<<ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
 
@@ -48,24 +52,24 @@ export default function HyperPersonalizedCustomerExperience2025() {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-pink-500/10 to-rose-500/10 border border-pink-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Heart className="h-8 w-8 text-pink-400" />
+                <<<Heart className="h-8 w-8 text-pink-400" />
                 Customer Experience Impact
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <<<Sparkles className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
                   <span><strong>97.8% Satisfaction:</strong> AI creates experiences so personalized they feel magical</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                  <<<TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>12.4x Engagement Lift:</strong> Customers interact 1,140% more with hyper-personalized experiences</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <<<DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <span><strong>$3.2B+ Revenue Growth:</strong> Average annual revenue increase from personalization at scale</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <<<Users className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span><strong>89% Churn Reduction:</strong> Predictive intervention retains customers before they leave</span>
                 </li>
               </ul>
@@ -232,11 +236,10 @@ export default function HyperPersonalizedCustomerExperience2025() {
                 measurable results. Our proven methodology ensures rapid implementation and transformational outcomes.
               </p>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg"
+                to="/<contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-semibold rounded-lg hover:from-pink-600 hover:to-rose-600 transition-all shadow-lg"
               >
                 Schedule Your CX Transformation Assessment
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
+                <<<ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>
             </div>
           </div>

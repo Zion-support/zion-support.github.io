@@ -1,13 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Users, Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 const SuccessStoriesShowcase: React.FC = () => {
   const stories = [
     {
       company: "TechCorp International",
       industry: "Technology",
-      icon: <TrendingUp className="w-8 h-8" />,
+      icon: <<<TrendingUp className="w-8 h-8" />,
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [
@@ -20,7 +23,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
-      icon: <Target className="w-8 h-8" />,
+      icon: <<<Target className="w-8 h-8" />,
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",
       metrics: [
@@ -33,7 +36,7 @@ const SuccessStoriesShowcase: React.FC = () => {
     {
       company: "FinanceFirst Bank",
       industry: "Financial Services",
-      icon: <Users className="w-8 h-8" />,
+      icon: <<<Users className="w-8 h-8" />,
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",
       metrics: [
@@ -87,11 +90,10 @@ const SuccessStoriesShowcase: React.FC = () => {
                 </div>
                 
                 <Link
-                  to="/case-studies"
-                  className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
+                  to="/case-<studies" className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
                 >
                   Read Full Story
-                  <ArrowRight className="w-4 h-4" />
+                  <<<ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -100,11 +102,10 @@ const SuccessStoriesShowcase: React.FC = () => {
 
         <div className="text-center">
           <Link
-            to="/case-studies"
-            className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
+            to="/case-<studies" className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
           >
             View All Success Stories
-            <ArrowRight className="w-6 h-6" />
+            <<<ArrowRight className="w-6 h-6" />
           </Link>
         </div>
       </div>

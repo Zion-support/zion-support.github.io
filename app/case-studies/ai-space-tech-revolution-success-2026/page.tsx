@@ -1,6 +1,8 @@
-import React from 'react';
 import Link from 'next/link';
-import { Rocket, Satellite, Globe, Star, Zap, Award } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Satellite } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',
@@ -14,7 +16,7 @@ export default function AISpaceTechRevolutionSuccess() {
       {/* Header */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold mb-4">
-          <Rocket className="w-4 h-4" />
+          <<<Rocket className="w-4 h-4" />
           SPACE TECH REVOLUTION
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -40,17 +42,17 @@ export default function AISpaceTechRevolutionSuccess() {
           <div className="text-sm text-gray-600">Mission Value</div>
         </div>
         <div className="text-center bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
-          <Satellite className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+          <<<Satellite className="w-8 h-8 text-blue-600 mx-auto mb-2" />
           <div className="text-3xl font-bold text-blue-600 mb-1">99.9%</div>
           <div className="text-sm text-gray-600">Mission Success</div>
         </div>
         <div className="text-center bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
-          <Zap className="w-8 h-8 text-green-600 mx-auto mb-2" />
+          <<<Zap className="w-8 h-8 text-green-600 mx-auto mb-2" />
           <div className="text-3xl font-bold text-green-600 mb-1">500%</div>
           <div className="text-sm text-gray-600">Efficiency Gain</div>
         </div>
         <div className="text-center bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
-          <Globe className="w-8 h-8 text-orange-600 mx-auto mb-2" />
+          <<<Globe className="w-8 h-8 text-orange-600 mx-auto mb-2" />
           <div className="text-3xl font-bold text-orange-600 mb-1">12</div>
           <div className="text-sm text-gray-600">Months</div>
         </div>
@@ -154,7 +156,7 @@ export default function AISpaceTechRevolutionSuccess() {
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-                <Rocket className="w-6 h-6 text-white" />
+                <<<Rocket className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-3">Autonomous Navigation</h4>
               <p className="text-sm text-gray-600 mb-3">
@@ -167,7 +169,7 @@ export default function AISpaceTechRevolutionSuccess() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-                <Satellite className="w-6 h-6 text-white" />
+                <<<Satellite className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-3">Predictive Maintenance</h4>
               <p className="text-sm text-gray-600 mb-3">
@@ -180,7 +182,7 @@ export default function AISpaceTechRevolutionSuccess() {
             </div>
             <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-                <Zap className="w-6 h-6 text-white" />
+                <<<Zap className="w-6 h-6 text-white" />
               </div>
               <h4 className="font-semibold text-gray-900 mb-3">Real-time Analysis</h4>
               <p className="text-sm text-gray-600 mb-3">
@@ -394,14 +396,12 @@ export default function AISpaceTechRevolutionSuccess() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/blog/ai-space-tech-2026"
-            className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+            href="/blog/ai-space-tech-<2026" className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
           >
             Read Space Tech Guide
           </Link>
           <a
-            href="tel:+13024640950"
-            className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
+            href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
           >
             Discuss Your Mission
           </a>
@@ -412,7 +412,7 @@ export default function AISpaceTechRevolutionSuccess() {
       <div className="mt-12 pt-8 border-t border-gray-200">
         <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Space Technology Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-space-tech-2026" className="group">
+          <Link href="/blog/ai-space-tech-<2026" className="group">
             <div className="bg-gradient-to-r from-purple-50 to-blue-50 p-6 rounded-lg border border-purple-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-purple-600 mb-2">
                 AI Space Technology: The Future of Exploration
@@ -422,7 +422,7 @@ export default function AISpaceTechRevolutionSuccess() {
               </p>
             </div>
           </Link>
-          <Link href="/case-studies/ai-autonomous-spacecraft-success-2026" className="group">
+          <Link href="/case-studies/ai-autonomous-spacecraft-success-<2026" className="group">
             <div className="bg-gradient-to-r from-blue-50 to-green-50 p-6 rounded-lg border border-blue-200 hover:shadow-lg transition-shadow">
               <h4 className="font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                 Autonomous Spacecraft: Mission Success Story

@@ -20,7 +20,7 @@ export default function AutonomousEnterpriseOrchestration2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -292,10 +292,10 @@ export default function AutonomousEnterpriseOrchestration2025() {
                   Our proven methodology delivers measurable results in months, not years.
                 </p>
                 <div className="text-left"></div>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Schedule Strategy Session
                   </a>
-                  <a href="/services/autonomous-orchestration" className="text-left"></a>
+                  <a href="/services/autonomous-<orchestration" className="text-left"></a>
                     Explore Solutions
                   </a>
                 </div>

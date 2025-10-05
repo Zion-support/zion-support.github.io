@@ -306,8 +306,7 @@ class KnowledgeGraphBuilder:
             Zion Tech Group specializes in enterprise knowledge graph design and implementation. Let us help you build the semantic layer that powers your next-generation AI applications.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule a Consultation
             <Zap className="text-left" />

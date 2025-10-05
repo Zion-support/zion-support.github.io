@@ -17,7 +17,7 @@ export default function LLMCostOptimizationEnterprise2025() {
     <div className="text-left"></div>
       <main className="text-left">
         <nav className="text-left">
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             ← Back to Blog
           </a>
         </nav>
@@ -91,10 +91,10 @@ export default function LLMCostOptimizationEnterprise2025() {
                 We build cost-aware LLM platforms that scale with your business.
               </p>
               <div className="text-left"></div>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Get a Cost Review
                 </a>
-                <a href="/case-studies" className="text-left"></a>
+                <a href="/case-<studies" className="text-left"></a>
                   Read Client Results
                 </a>
               </div>
@@ -104,10 +104,10 @@ export default function LLMCostOptimizationEnterprise2025() {
             <div className="text-left"></div>
               <div className="text-left">Written by Zion Tech Group LLM Platform Team</div>
               <div className="text-left"></div>
-                <a href="/blog" className="text-left"></a>
+                <a href="/<blog" className="text-left"></a>
                   ← Back to Blog
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Get in Touch
                 </a>
               </div>
@@ -508,14 +508,12 @@ const LLMCostOptimizationEnterprise2025: React.FC = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Free Cost Assessment
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               View Optimization Case Studies
             </a>

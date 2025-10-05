@@ -1,14 +1,8 @@
-import {
-  ArrowRight,
-  CheckCircle,
-  Globe,
-  Rocket,
-  Shield,
-  Star,
-  Target,
-  Users,
-  Zap,
-} from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Target } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from "react";
@@ -83,9 +77,9 @@ const HomeOptimized = () => {
           <div className="text-center max-w-5xl mx-auto">
             {/* Badge */}
             <div className="inline-flex items-center px-6 py-3 rounded-full bg-zion-cyan/20 text-zion-cyan text-sm font-medium mb-8 animate-fade-in border border-zion-cyan/30 shadow-lg hover:shadow-xl transition-all duration-300">
-              <Rocket className="w-4 h-4 mr-2 animate-pulse" />
+              <<<Rocket className="w-4 h-4 mr-2 animate-pulse" />
               Trusted by 500+ companies worldwide
-              <Rocket className="w-4 h-4 ml-2 animate-bounce" />
+              <<<Rocket className="w-4 h-4 ml-2 animate-bounce" />
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-up">
@@ -118,13 +112,12 @@ const HomeOptimized = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/services"
-                className="btn-primary flex items-center justify-center gap-2 group"
+                to="/<services" className="btn-primary flex items-center justify-center gap-2 group"
               >
                 Explore Services
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <<<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link to="/contact" className="btn-secondary">
+              <Link to="/<contact" className="btn-secondary">
                 Get Started
               </Link>
             </div>
@@ -207,7 +200,7 @@ const HomeOptimized = () => {
                 <ul className="space-y-2 text-sm text-zion-slate">
                   {feature.features.map((item, i) => (
                     <li key={i} className="flex items-center">
-                      <CheckCircle className="w-4 h-4 mr-2 text-zion-cyan" />
+                      <<<CheckCircle className="w-4 h-4 mr-2 text-zion-cyan" />
                       {item}
                     </li>
                   ))}
@@ -221,7 +214,7 @@ const HomeOptimized = () => {
         <section className="container mx-auto px-6 py-16 relative z-10">
           <div className="flex items-center justify-between mb-8">
             <h3 className="text-3xl font-bold text-white">Latest Insights</h3>
-            <Link to="/insights" className="text-zion-cyan hover:underline">View all</Link>
+            <Link to="/<insights" className="text-zion-cyan hover:underline">View all</Link>
           </div>
           <div className="grid md:grid-cols-4 gap-6">
             {latestInsights.slice(0, 4).map((item) => (
@@ -318,15 +311,13 @@ const HomeOptimized = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
-                className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group"
+                to="/<contact" className="bg-white text-zion-blue hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 group"
               >
-                <Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                <<<Target className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                 Start Your Journey Today
               </Link>
               <Link
-                to="/contact"
-                className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                to="/<contact" className="border-2 border-white text-white hover:bg-white hover:text-zion-blue px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl"
               >
                 Schedule a Call
               </Link>

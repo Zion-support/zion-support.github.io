@@ -47,14 +47,12 @@ const AI2026JanuaryBreakthroughAnnouncement = () => {
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Early Access →
               </a>
               <a
-                href="#breakthrough-details"
-                className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold rounded-xl transition-all duration-300"
+                href="#breakthrough-<details" className="inline-flex items-center px-8 py-4 border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold rounded-xl transition-all duration-300"
               >
                 Learn More
               </a>
@@ -64,7 +62,7 @@ const AI2026JanuaryBreakthroughAnnouncement = () => {
       </section>
 
       {/* Breakthrough Details */}
-      <section id="breakthrough-details" className="py-20 bg-white">
+      <section id="breakthrough-<details" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -125,14 +123,12 @@ const AI2026JanuaryBreakthroughAnnouncement = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-white text-purple-900 hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+              href="/<contact" className="inline-flex items-center px-8 py-4 bg-white text-purple-900 hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
             >
               Schedule Consultation
             </a>
             <a
-              href="/case-studies"
-              className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-purple-900 font-bold rounded-xl transition-all duration-300"
+              href="/case-<studies" className="inline-flex items-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-purple-900 font-bold rounded-xl transition-all duration-300"
             >
               View Case Studies
             </a>

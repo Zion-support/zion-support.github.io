@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -25,7 +24,7 @@ export default function SustainableAIGreenComputing() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+        <Link href="/<blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
           ← Back to Blog
         </Link>
         <div className="flex items-center gap-2 mb-4">
@@ -334,14 +333,12 @@ export default function SustainableAIGreenComputing() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services/sustainable-ai"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/services/sustainable-<ai" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Green Solutions
             </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

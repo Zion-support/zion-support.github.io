@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -167,14 +166,12 @@ export default function AI2026EdgeComputingRevolution() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services/ai-edge-computing"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+              href="/services/ai-edge-<computing" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
             >
               Explore Edge AI Services
             </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+              href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>
@@ -185,7 +182,7 @@ export default function AI2026EdgeComputingRevolution() {
         <div className="mt-12">
           <h3 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-autonomous-business-systems" className="group">
+            <Link href="/blog/ai-2026-autonomous-business-<systems" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   AI 2026 Autonomous Business Systems
@@ -193,7 +190,7 @@ export default function AI2026EdgeComputingRevolution() {
                 <p className="text-gray-600">Discover how autonomous AI systems are transforming enterprise operations.</p>
               </div>
             </Link>
-            <Link href="/case-studies/ai-edge-computing-success-2026" className="group">
+            <Link href="/case-studies/ai-edge-computing-success-<2026" className="group">
               <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow border border-gray-200">
                 <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   Edge Computing Success Story

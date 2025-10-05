@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -19,9 +18,9 @@ export default function HomePage() {
             </div>
             <nav className="hidden md:flex space-x-8">
               <Link href="/" className="text-gray-700 hover:text-blue-600 transition-colors">Home</Link>
-              <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
-              <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+              <Link href="/<services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+              <Link href="/<blog" className="text-gray-700 hover:text-blue-600 transition-colors">Blog</Link>
+              <Link href="/case-<studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
             </nav>
           </div>
         </div>
@@ -42,14 +41,12 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                href="/services"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                href="/<services" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Explore Our Services
               </Link>
               <a
-                href="tel:+13024640950"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+                href="tel:+<13024640950" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Call +1 302 464 0950
               </a>
@@ -69,7 +66,7 @@ export default function HomePage() {
             </div>
             
             <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/blog/ai-enterprise-transformation-2026" className="group">
+              <Link href="/blog/ai-enterprise-transformation-<2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -89,7 +86,7 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              <Link href="/blog/ai-autonomous-systems-2026" className="group">
+              <Link href="/blog/ai-autonomous-systems-<2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -109,7 +106,7 @@ export default function HomePage() {
                 </div>
               </Link>
 
-              <Link href="/case-studies/manufacturing-ai-transformation-2026" className="group">
+              <Link href="/case-studies/manufacturing-ai-transformation-<2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow p-6 border border-gray-200">
                   <div className="flex items-center gap-2 mb-4">
                     <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-semibold">
@@ -145,16 +142,16 @@ export default function HomePage() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/services" className="hover:text-white">AI Solutions</Link></li>
-                <li><Link href="/services" className="hover:text-white">Automation</Link></li>
-                <li><Link href="/services" className="hover:text-white">Digital Transformation</Link></li>
+                <li><Link href="/<services" className="hover:text-white">AI Solutions</Link></li>
+                <li><Link href="/<services" className="hover:text-white">Automation</Link></li>
+                <li><Link href="/<services" className="hover:text-white">Digital Transformation</Link></li>
               </ul>
             </div>
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
-                <li><Link href="/case-studies" className="hover:text-white">Case Studies</Link></li>
+                <li><Link href="/<blog" className="hover:text-white">Blog</Link></li>
+                <li><Link href="/case-<studies" className="hover:text-white">Case Studies</Link></li>
               </ul>
             </div>
             <div>

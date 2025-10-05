@@ -374,14 +374,12 @@ const AIObservabilityMonitoring2025 = () =>
           </ul>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Request Observability Assessment
             </a>
             <a
-              href="/services"
-              className="text-left"
+              href="/<services" className="text-left"
             ></a>
               View AI Operations Services
             </a>

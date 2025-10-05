@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
 	title: 'AI Autonomous Enterprise Operations: Complete 2025 Implementation Guide | Zion Tech Group',
@@ -218,14 +217,12 @@ class AutonomousAgent {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<a 
-								href="/contact" 
-								className="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
+								href="/<contact" className="bg-white text-blue-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Free Assessment
 							</a>
 							<a 
-								href="/case-studies" 
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-blue-600 transition-colors"
+								href="/case-<studies" className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-blue-600 transition-colors"
 							>
 								View Success Stories
 							</a>

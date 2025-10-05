@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
 	title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',
@@ -267,14 +266,12 @@ const InnovationLabFramework = {
 						</p>
 						<div className="flex flex-col sm:flex-row gap-4 justify-center">
 							<a 
-								href="/contact" 
-								className="bg-white text-purple-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
+								href="/<contact" className="bg-white text-purple-600 font-bold py-3 px-8 rounded-xl hover:bg-gray-100 transition-colors"
 							>
 								Get Innovation Assessment
 							</a>
 							<a 
-								href="/services/ai-innovation-labs" 
-								className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-purple-600 transition-colors"
+								href="/services/ai-innovation-<labs" className="border-2 border-white text-white font-bold py-3 px-8 rounded-xl hover:bg-white hover:text-purple-600 transition-colors"
 							>
 								Explore Innovation Labs
 							</a>

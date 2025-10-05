@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -396,20 +395,17 @@ export default function AI2027TranscendentMetaIntelligenceSuccessStory() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/blog/ai-2027-transcendent-meta-intelligence-breakthrough"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/blog/ai-2027-transcendent-meta-intelligence-<breakthrough" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Read Technical Guide
             </Link>
             <Link 
-              href="/services/ai-2027-transcendent-meta-intelligence-solutions"
-              className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors border border-white"
+              href="/services/ai-2027-transcendent-meta-intelligence-<solutions" className="bg-green-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors border border-white"
             >
               Start Implementation
             </Link>
             <Link 
-              href="/contact"
-              className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white"
+              href="/<contact" className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors border border-white"
             >
               Contact Our Experts
             </Link>

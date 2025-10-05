@@ -1,5 +1,3 @@
-import React from 'react';
-import Link from 'next/link';
 
 export default function AI2026FuturePredictionsMegaTrends() {
   return (
@@ -40,14 +38,12 @@ export default function AI2026FuturePredictionsMegaTrends() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#mega-trends" 
-                className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+                href="#mega-<trends" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Explore Mega Trends →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Trend Analysis
               </a>
@@ -57,7 +53,7 @@ export default function AI2026FuturePredictionsMegaTrends() {
       </div>
 
       {/* Mega Trends Section */}
-      <section id="mega-trends" className="py-20 bg-slate-900/50">
+      <section id="mega-<trends" className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
@@ -362,14 +358,12 @@ export default function AI2026FuturePredictionsMegaTrends() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
+              href="/<contact" className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50"
             >
               Get Strategic Consultation
             </a>
             <a 
-              href="/blog" 
-              className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/<blog" className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore More Insights
             </a>
@@ -383,9 +377,9 @@ export default function AI2026FuturePredictionsMegaTrends() {
           <div className="text-center text-gray-400">
             <p className="mb-4">© 2026 Zion Tech Group. All rights reserved.</p>
             <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-indigo-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-indigo-400 transition-colors">Contact Us</a>
+              <a href="/<privacy" className="hover:text-indigo-400 transition-colors">Privacy Policy</a>
+              <a href="/<terms" className="hover:text-indigo-400 transition-colors">Terms of Service</a>
+              <a href="/<contact" className="hover:text-indigo-400 transition-colors">Contact Us</a>
             </div>
           </div>
         </div>

@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -269,14 +268,12 @@ export default function AI2026BreakthroughInnovationsPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
+              href="/<contact" className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
             </Link>
             <Link 
-              href="/case-studies" 
-              className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all"
+              href="/case-<studies" className="border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-all"
             >
               View Success Stories
             </Link>

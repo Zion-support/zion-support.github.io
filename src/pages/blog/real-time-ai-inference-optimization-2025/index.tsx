@@ -1,15 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  Calendar,
-  Clock,
-  Cpu,
-  Database,
-  Gauge,
-  TrendingUp,
-  Zap,
-} from "lucide-react";
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Gauge } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 const RealTimeAIInferenceOptimization2025 = () => {
   return (
@@ -38,10 +36,9 @@ const RealTimeAIInferenceOptimization2025 = () => {
           <div className="absolute inset-0 bg-black/20"></div>
           <div className="container mx-auto px-6 relative z-10">
             <Link
-              to="/blog"
-              className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
+              to="/<blog" className="inline-flex items-center text-white/90 hover:text-white mb-8 transition-colors"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <<<ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
 
@@ -64,15 +61,15 @@ const RealTimeAIInferenceOptimization2025 = () => {
 
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
-                  <Calendar className="w-5 h-5 mr-2" />
+                  <<<Calendar className="w-5 h-5 mr-2" />
                   <span>October 1, 2025</span>
                 </div>
                 <div className="flex items-center">
-                  <Clock className="w-5 h-5 mr-2" />
+                  <<<Clock className="w-5 h-5 mr-2" />
                   <span>10 min read</span>
                 </div>
                 <div className="flex items-center">
-                  <TrendingUp className="w-5 h-5 mr-2" />
+                  <<<TrendingUp className="w-5 h-5 mr-2" />
                   <span>High Impact</span>
                 </div>
               </div>
@@ -86,7 +83,7 @@ const RealTimeAIInferenceOptimization2025 = () => {
             {/* Executive Summary */}
             <div className="bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 border-l-4 border-indigo-500 p-6 rounded-r-lg mb-12">
               <h2 className="text-2xl font-bold text-white mb-4 flex items-center">
-                <Zap className="w-6 h-6 mr-2 text-yellow-400" />
+                <<<Zap className="w-6 h-6 mr-2 text-yellow-400" />
                 The Latency Challenge
               </h2>
               <p className="text-gray-300 leading-relaxed">
@@ -99,7 +96,7 @@ const RealTimeAIInferenceOptimization2025 = () => {
             {/* Performance Bottlenecks */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Gauge className="w-8 h-8 mr-3 text-red-400" />
+                <<<Gauge className="w-8 h-8 mr-3 text-red-400" />
                 Critical Performance Bottlenecks
               </h2>
 
@@ -164,7 +161,7 @@ const RealTimeAIInferenceOptimization2025 = () => {
             {/* Optimization Techniques */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
-                <Cpu className="w-8 h-8 mr-3 text-purple-400" />
+                <<<Cpu className="w-8 h-8 mr-3 text-purple-400" />
                 Production-Grade Optimization Techniques
               </h2>
 
@@ -248,7 +245,7 @@ const RealTimeAIInferenceOptimization2025 = () => {
                 {/* Caching Strategy */}
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
-                    <Database className="w-6 h-6 mr-3 text-emerald-400" />
+                    <<<Database className="w-6 h-6 mr-3 text-emerald-400" />
                     Intelligent Caching Layers
                   </h3>
                   <p className="text-gray-300 mb-4">
@@ -317,11 +314,10 @@ const RealTimeAIInferenceOptimization2025 = () => {
                   Our ML engineers have optimized inference systems handling 10B+ daily requests.
                 </p>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
+                  to="/<contact" className="inline-flex items-center px-8 py-4 bg-white text-indigo-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   Get Performance Audit
-                  <ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
+                  <<<ArrowLeft className="w-5 h-5 ml-2 rotate-180" />
                 </Link>
               </div>
             </section>

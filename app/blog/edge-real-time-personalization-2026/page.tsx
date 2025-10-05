@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -19,7 +18,7 @@ export default function EdgeRealTimePersonalization2026() {
     <div className="min-h-screen bg-gradient-to-br from-blue-950 via-indigo-950 to-purple-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
+          <Link href="/<blog" className="text-cyan-300 hover:text-cyan-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -68,10 +67,10 @@ export default function EdgeRealTimePersonalization2026() {
                 We build privacy-first edge personalization for global brands—fast, compliant, and measurable.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
                   Talk to an Expert
                 </a>
-                <a href="/blog" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<blog" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
                   More Insights
                 </a>
               </div>
@@ -81,7 +80,7 @@ export default function EdgeRealTimePersonalization2026() {
           <footer className="mt-14 pt-8 border-t border-white/10">
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group Edge Platforms Team</div>
-              <a href="/contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
+              <a href="/<contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
             </div>
           </footer>
         </article>

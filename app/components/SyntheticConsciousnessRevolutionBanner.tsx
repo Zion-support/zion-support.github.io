@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Brain, Zap, TrendingUp, ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (
@@ -18,7 +21,7 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-600/20 border border-purple-400/30">
-                <Brain className="w-5 h-5 text-purple-300 mr-2" />
+                <<<Brain className="w-5 h-5 text-purple-300 mr-2" />
                 <span className="text-purple-200 text-sm font-medium">Synthetic Consciousness AI</span>
               </div>
               
@@ -35,25 +38,25 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-purple-600/30 rounded-lg flex items-center justify-center">
-                  <Zap className="w-4 h-4 text-purple-300" />
+                  <<<Zap className="w-4 h-4 text-purple-300" />
                 </div>
                 <span className="text-gray-300">Autonomous Decision Making</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-blue-600/30 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-4 h-4 text-blue-300" />
+                  <<<TrendingUp className="w-4 h-4 text-blue-300" />
                 </div>
                 <span className="text-gray-300">Self-Evolving Intelligence</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-indigo-600/30 rounded-lg flex items-center justify-center">
-                  <Brain className="w-4 h-4 text-indigo-300" />
+                  <<<Brain className="w-4 h-4 text-indigo-300" />
                 </div>
                 <span className="text-gray-300">Ethical AI Framework</span>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="w-8 h-8 bg-purple-600/30 rounded-lg flex items-center justify-center">
-                  <ArrowRight className="w-4 h-4 text-purple-300" />
+                  <<<ArrowRight className="w-4 h-4 text-purple-300" />
                 </div>
                 <span className="text-gray-300">Creative Problem Solving</span>
               </div>
@@ -62,16 +65,14 @@ const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link 
-                href="/blog/ai-2026-synthetic-consciousness-revolution"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                href="/blog/ai-2026-synthetic-consciousness-<revolution" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
-                <Brain className="w-5 h-5 mr-2" />
+                <<<Brain className="w-5 h-5 mr-2" />
                 Explore Consciousness AI
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <<<ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link 
-                href="/case-studies/ai-2026-synthetic-consciousness-enterprise-transformation-75-billion-success"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-200 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
+                href="/case-studies/ai-2026-synthetic-consciousness-enterprise-transformation-75-billion-<success" className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-200 font-semibold rounded-lg hover:bg-purple-400/10 transition-all duration-300"
               >
                 $75B Success Story
               </Link>

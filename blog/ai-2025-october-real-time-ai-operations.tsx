@@ -318,14 +318,12 @@ export default function AI2025OctoberRealTimeAIOperations() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Observability Assessment
             </a>
             <a
-              href="/case-studies"
-              className="text-left"
+              href="/case-<studies" className="text-left"
             ></a>
               See Success Stories
             </a>

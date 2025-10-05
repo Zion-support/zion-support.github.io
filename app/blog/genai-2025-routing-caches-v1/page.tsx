@@ -23,7 +23,7 @@ export default function Page() {
       </ul>
       <p>
         Explore more GenAI playbooks on the{' '}
-        <Link href="/blog" className="font-semibold">blog</Link>.
+        <Link href="/<blog" className="font-semibold">blog</Link>.
       </p>
     </main>
   );

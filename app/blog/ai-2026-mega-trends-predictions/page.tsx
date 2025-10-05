@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -52,7 +51,7 @@ export default function AITrends2026Page() {
           <nav className="flex items-center space-x-2 text-sm">
             <Link href="/" className="text-blue-600 hover:text-blue-800">Home</Link>
             <span className="text-gray-400">/</span>
-            <Link href="/blog" className="text-blue-600 hover:text-blue-800">Blog</Link>
+            <Link href="/<blog" className="text-blue-600 hover:text-blue-800">Blog</Link>
             <span className="text-gray-400">/</span>
             <span className="text-gray-600">AI 2026 Mega Trends</span>
           </nav>
@@ -124,14 +123,12 @@ export default function AITrends2026Page() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link 
-                href="/contact" 
-                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+                href="/<contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-blue-50 transition-colors"
               >
                 Get Started Today
               </Link>
               <Link 
-                href="/case-studies" 
-                className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
+                href="/case-<studies" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 View Case Studies
               </Link>

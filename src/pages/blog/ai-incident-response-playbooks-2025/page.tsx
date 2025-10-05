@@ -73,8 +73,8 @@ const AIIncidentResponsePlaybooks2025: React.FC = () => {
             We help teams design budgeted actions, wire approvals, and ship safe automations fast.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Talk to an Expert</a>
-            <a href="/services/ai-autonomous-operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">Explore Services</a>
+            <a href="/<contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors">Talk to an Expert</a>
+            <a href="/services/ai-autonomous-<operations" className="border border-gray-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">Explore Services</a>
           </div>
         </div>
       </div>

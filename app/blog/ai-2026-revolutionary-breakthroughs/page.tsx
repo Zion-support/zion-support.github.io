@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -307,14 +306,12 @@ export default function AI2026RevolutionaryBreakthroughs() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
+                href="tel:+<13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors"
               >
                 Call +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+                href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Get Free Consultation
               </a>
@@ -332,7 +329,7 @@ export default function AI2026RevolutionaryBreakthroughs() {
           <div className="text-sm text-gray-500">
             <p>Published on January 20, 2026 by Zion Tech Group AI Research Team</p>
             <p className="mt-2">
-              <Link href="/blog" className="text-blue-600 hover:text-blue-700">
+              <Link href="/<blog" className="text-blue-600 hover:text-blue-700">
                 ← Back to Blog
               </Link>
             </p>

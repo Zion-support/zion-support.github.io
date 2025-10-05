@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [
@@ -52,7 +54,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
-            <Sparkles className="w-5 h-5 text-blue-400" />
+            <<<Sparkles className="w-5 h-5 text-blue-400" />
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               January 2026 • Revolutionary Content Launch
             </span>
@@ -101,7 +103,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
               {/* Impact Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
-                  <Target className="w-4 h-4 text-green-400" />
+                  <<<Target className="w-4 h-4 text-green-400" />
                   <span className="text-green-400 font-bold text-sm">
                     Impact: {content.impact}
                   </span>
@@ -114,7 +116,7 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
               >
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
-                <ArrowRight className="w-4 h-4" />
+                <<<ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           ))}
@@ -151,14 +153,12 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                to="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                to="/services" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                to="/<services" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Our Services
               </Link>

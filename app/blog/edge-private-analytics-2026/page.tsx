@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -36,7 +35,7 @@ export default function EdgePrivateAnalytics2026Page() {
 				</div>
 
 				<div className="mt-12">
-					<Link href="/blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
+					<Link href="/<blog" className="inline-block bg-white text-cyan-700 px-6 py-3 rounded-lg font-bold hover:bg-cyan-50">
 						← Back to Blog
 					</Link>
 				</div>

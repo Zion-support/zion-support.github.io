@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -27,7 +26,7 @@ export default function Page() {
 				then scale via golden paths and shared components.
 			</p>
 			<div className="mt-10">
-				<Link href="/blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
+				<Link href="/<blog" className="text-indigo-600 font-semibold">← Back to Blog</Link>
 			</div>
 		</div>
 	);

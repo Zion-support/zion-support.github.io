@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 import Link from 'next/link';
 
@@ -153,20 +152,17 @@ export default function AI2027UniversalConsciousnessIntegrationBreakthrough() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
               </Link>
               <Link 
-                href="/case-studies/ai-2027-universal-consciousness-mega-success" 
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2027-universal-consciousness-mega-<success" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 View Success Stories
               </Link>
               <Link 
-                href="/services" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<services" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Services
               </Link>
@@ -178,19 +174,19 @@ export default function AI2027UniversalConsciousnessIntegrationBreakthrough() {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-center mb-8 text-purple-400">Related Breakthroughs</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link href="/blog/ai-2027-quantum-consciousness-fusion-breakthrough" className="group">
+            <Link href="/blog/ai-2027-quantum-consciousness-fusion-<breakthrough" className="group">
               <div className="bg-gradient-to-r from-blue-800/50 to-purple-800/50 backdrop-blur-sm rounded-2xl p-6 border border-blue-700/50 hover:border-blue-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h3 className="text-xl font-semibold mb-3 text-blue-300 group-hover:text-blue-200">Quantum Consciousness Fusion</h3>
                 <p className="text-gray-400 group-hover:text-gray-300">Advanced quantum consciousness integration breakthrough</p>
               </div>
             </Link>
-            <Link href="/blog/ai-2027-meta-cognitive-superintelligence-breakthrough" className="group">
+            <Link href="/blog/ai-2027-meta-cognitive-superintelligence-<breakthrough" className="group">
               <div className="bg-gradient-to-r from-green-800/50 to-teal-800/50 backdrop-blur-sm rounded-2xl p-6 border border-green-700/50 hover:border-green-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h3 className="text-xl font-semibold mb-3 text-green-300 group-hover:text-green-200">Meta-Cognitive Superintelligence</h3>
                 <p className="text-gray-400 group-hover:text-gray-300">Revolutionary meta-cognitive AI capabilities</p>
               </div>
             </Link>
-            <Link href="/case-studies/ai-2027-universal-consciousness-mega-success" className="group">
+            <Link href="/case-studies/ai-2027-universal-consciousness-mega-<success" className="group">
               <div className="bg-gradient-to-r from-orange-800/50 to-red-800/50 backdrop-blur-sm rounded-2xl p-6 border border-orange-700/50 hover:border-orange-500/50 transition-all duration-300 group-hover:transform group-hover:scale-105">
                 <h3 className="text-xl font-semibold mb-3 text-orange-300 group-hover:text-orange-200">Success Stories</h3>
                 <p className="text-gray-400 group-hover:text-gray-300">Real-world implementations and results</p>

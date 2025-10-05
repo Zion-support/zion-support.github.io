@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 
@@ -118,14 +117,12 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
-                href="/services"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
+                href="/<services" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg hover:shadow-xl"
               >
                 Explore Our Services
               </Link>
               <a
-                href="tel:+13024640950"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+                href="tel:+<13024640950" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Call +1 302 464 0950
               </a>
@@ -175,9 +172,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start max-w-md mx-auto md:mx-0">
                   <input
                     type="email"
-                    placeholder="Enter your email"
-                    className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white"
-                  />
+                    placeholder="Enter your <<email className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-white" />
                   <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                     Subscribe
                   </button>
@@ -191,21 +186,21 @@ export default function HomePage() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6">
                 <h3 className="text-2xl font-bold mb-6">Latest Content Highlights</h3>
                 <div className="space-y-4">
-                  <a href="/blog/ai-2026-enterprise-rag-guardrails" className="flex items-start gap-3 group">
+                  <a href="/blog/ai-2026-enterprise-rag-<guardrails" className="flex items-start gap-3 group">
                     <div className="text-2xl">🛡️</div>
                     <div>
                       <h4 className="font-semibold mb-1 group-hover:underline">Enterprise RAG Guardrails 2026</h4>
                       <p className="text-sm opacity-90">Safe, reliable RAG with verifiable citations</p>
                     </div>
                   </a>
-                  <a href="/blog/ai-2026-autonomous-enterprise-operations" className="flex items-start gap-3 group">
+                  <a href="/blog/ai-2026-autonomous-enterprise-<operations" className="flex items-start gap-3 group">
                     <div className="text-2xl">🏭</div>
                     <div>
                       <h4 className="font-semibold mb-1 group-hover:underline">Autonomous Enterprise Operations 2026</h4>
                       <p className="text-sm opacity-90">90% efficiency, 300% ROI with guardrailed agents</p>
                     </div>
                   </a>
-                  <a href="/blog/ai-cloud-cost-optimization-2025" className="flex items-start gap-3 group">
+                  <a href="/blog/ai-cloud-cost-optimization-<2025" className="flex items-start gap-3 group">
                     <div className="text-2xl">💸</div>
                     <div>
                       <h4 className="font-semibold mb-1 group-hover:underline">AI Cloud Cost Optimization</h4>
@@ -215,8 +210,7 @@ export default function HomePage() {
                 </div>
                 <div className="mt-6 pt-4 border-t border-white/20">
                   <Link
-                    href="/blog"
-                    className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
+                    href="/<blog" className="inline-block bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
                   >
                     View All Content →
                   </Link>
@@ -237,14 +231,12 @@ export default function HomePage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+13024640950"
-                className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
+                href="tel:+<13024640950" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors shadow-lg"
               >
                 Call +1 302 464 0950
               </a>
               <a
-                href="mailto:kleber@ziontechgroup.com"
-                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+                href="mailto:kleber@ziontechgroup.<com" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
               >
                 Get Free Consultation
               </a>

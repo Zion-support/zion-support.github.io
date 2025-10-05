@@ -363,14 +363,12 @@ export default function SyntheticDataGenerationPrivacyPreservingAI2025() {
             </div>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Request Synthetic Data Pilot
               </a>
               <a
-                href="/services"
-                className="text-left"
+                href="/<services" className="text-left"
               ></a>
                 View Data Services
               </a>

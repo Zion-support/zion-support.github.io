@@ -1,5 +1,4 @@
 // @ts-nocheck
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -65,8 +64,8 @@ export default function Edge2027ConsentlessAnalyticsV4Page() {
         <h3 className="text-2xl font-bold mb-3">Ready to modernize analytics?</h3>
         <p className="mb-6 opacity-90">We deploy zero‑PII analytics with sub‑100ms global performance.</p>
         <div className="flex gap-3 flex-col sm:flex-row">
-          <Link href="/contact" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</Link>
-          <Link href="/services/ai-innovation-lab" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">Explore services</Link>
+          <Link href="/<contact" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold text-center">Talk to an expert</Link>
+          <Link href="/services/ai-innovation-<lab" className="border-2 border-white px-6 py-3 rounded-lg font-semibold text-center">Explore services</Link>
         </div>
       </div>
     </div>

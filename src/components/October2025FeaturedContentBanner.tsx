@@ -1,6 +1,7 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, TrendingUp, Package, Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 const October2025FeaturedContentBanner = () => {
   const featuredContent = [
@@ -82,9 +83,9 @@ const October2025FeaturedContentBanner = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-bold mb-6 animate-pulse">
-            <Sparkles className="w-5 h-5 mr-2" />
+            <<<Sparkles className="w-5 h-5 mr-2" />
             🚀 NEW CONTENT RELEASE - October 1, 2025
-            <Sparkles className="w-5 h-5 ml-2" />
+            <<<Sparkles className="w-5 h-5 ml-2" />
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Latest AI Solutions & Insights
@@ -139,7 +140,7 @@ const October2025FeaturedContentBanner = () => {
                     <span className="text-sm text-gray-400">Published October 1, 2025</span>
                     <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
                       Read Full Article
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <<<ArrowRight className="w-4 h-4 ml-2" />
                     </div>
                   </div>
                 </div>
@@ -155,18 +156,16 @@ const October2025FeaturedContentBanner = () => {
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
             <Link
-              to="/blog"
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 inline-flex items-center"
+              to="/<blog" className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 inline-flex items-center"
             >
               Explore All Articles
-              <TrendingUp className="w-5 h-5 ml-2" />
+              <<<TrendingUp className="w-5 h-5 ml-2" />
             </Link>
             <Link
-              to="/contact"
-              className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all border border-blue-500/30 inline-flex items-center"
+              to="/<contact" className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all border border-blue-500/30 inline-flex items-center"
             >
               Get a Free Consultation
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <<<ArrowRight className="w-5 h-5 ml-2" />
             </Link>
           </div>
         </div>

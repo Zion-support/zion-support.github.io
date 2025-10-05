@@ -35,7 +35,7 @@
             </p>
 
             <div className="mt-8">
-              <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
+              <Link to="/<blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>

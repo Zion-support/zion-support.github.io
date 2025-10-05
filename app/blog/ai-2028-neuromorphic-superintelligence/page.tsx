@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -145,8 +144,7 @@ export default function AI2028NeuromorphicSuperintelligence() {
             Discover how neuromorphic superintelligence can transform your enterprise operations and unlock unprecedented capabilities.
           </p>
           <Link 
-            href="/contact" 
-            className="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            href="/<contact" className="inline-block bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
             Schedule Your Neuromorphic Consultation
           </Link>
@@ -156,15 +154,13 @@ export default function AI2028NeuromorphicSuperintelligence() {
           <h4 className="text-xl font-bold text-gray-900 mb-4">Related Revolutionary Content</h4>
           <div className="grid md:grid-cols-2 gap-4">
             <Link 
-              href="/blog/ai-2028-next-generation-autonomous-enterprise" 
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+              href="/blog/ai-2028-next-generation-autonomous-<enterprise" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Autonomous Enterprise</h5>
               <p className="text-sm text-gray-600">99.9% autonomous operations breakthrough</p>
             </Link>
             <Link 
-              href="/case-studies/ai-2028-mega-transformation-success" 
-              className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
+              href="/case-studies/ai-2028-mega-transformation-<success" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors"
             >
               <h5 className="font-semibold text-blue-600 mb-2">AI 2028 Success Stories</h5>
               <p className="text-sm text-gray-600">Real-world transformation results</p>

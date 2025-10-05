@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function AINeuromorphicBreakthrough2026() {
@@ -295,14 +294,12 @@ export default function AINeuromorphicBreakthrough2026() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
                 >
                   Schedule Neuromorphic Demo
                 </Link>
                 <Link 
-                  href="/case-studies" 
-                  className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Neuromorphic Success Stories
                 </Link>
@@ -315,8 +312,7 @@ export default function AINeuromorphicBreakthrough2026() {
             <h2 className="text-3xl font-bold mb-8 text-white">Related Neuromorphic Breakthroughs</h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Link 
-                href="/blog/ai-2026-consciousness-fusion-breakthrough"
-                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                href="/blog/ai-2026-consciousness-fusion-<breakthrough" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="text-4xl mb-4">🧠</div>
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-purple-400 transition-colors">
@@ -328,8 +324,7 @@ export default function AINeuromorphicBreakthrough2026() {
               </Link>
               
               <Link 
-                href="/blog/ai-2026-quantum-consciousness-breakthrough"
-                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                href="/blog/ai-2026-quantum-consciousness-<breakthrough" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-cyan-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="text-4xl mb-4">⚛️</div>
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyan-400 transition-colors">
@@ -341,8 +336,7 @@ export default function AINeuromorphicBreakthrough2026() {
               </Link>
               
               <Link 
-                href="/blog/ai-2026-autonomous-operations"
-                className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                href="/blog/ai-2026-autonomous-<operations" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
                 <div className="text-4xl mb-4">🤖</div>
                 <h3 className="text-xl font-bold mb-3 text-white group-hover:text-green-400 transition-colors">
@@ -362,13 +356,13 @@ export default function AINeuromorphicBreakthrough2026() {
                 © 2026 Zion Tech Group. All rights reserved.
               </div>
               <div className="flex gap-6 text-sm">
-                <Link href="/privacy" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <Link href="/<privacy" className="text-gray-400 hover:text-emerald-400 transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <Link href="/<terms" className="text-gray-400 hover:text-emerald-400 transition-colors">
                   Terms of Service
                 </Link>
-                <Link href="/contact" className="text-gray-400 hover:text-emerald-400 transition-colors">
+                <Link href="/<contact" className="text-gray-400 hover:text-emerald-400 transition-colors">
                   Contact Us
                 </Link>
               </div>

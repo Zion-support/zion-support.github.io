@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -19,7 +18,7 @@ export default function AgentReleaseRunbooks2026() {
     <div className="min-h-screen bg-gradient-to-br from-fuchsia-950 via-purple-950 to-indigo-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">
+          <Link href="/<blog" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -68,10 +67,10 @@ export default function AgentReleaseRunbooks2026() {
                 We design and implement release guardrails for enterprise agent platforms with measurable outcomes.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<contact" className="bg-gradient-to-r from-fuchsia-500 to-purple-600 hover:from-fuchsia-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
                   Talk to an Expert
                 </a>
-                <a href="/blog" className="border-2 border-fuchsia-500 text-fuchsia-300 hover:bg-fuchsia-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<blog" className="border-2 border-fuchsia-500 text-fuchsia-300 hover:bg-fuchsia-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
                   More Insights
                 </a>
               </div>
@@ -81,7 +80,7 @@ export default function AgentReleaseRunbooks2026() {
           <footer className="mt-14 pt-8 border-t border-white/10">
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group AI Ops Team</div>
-              <a href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</a>
+              <a href="/<contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</a>
             </div>
           </footer>
         </article>

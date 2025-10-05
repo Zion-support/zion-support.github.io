@@ -1,18 +1,12 @@
 import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
-import {CheckCircle,
-  Zap,
-  TrendingUp,
-  Brain,
-  Server,
-  ArrowRight,
-  Mail,
-  Phone,
-  MapPin,
-  Rocket,
-  Cpu
-} from 'lucide-react'
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025'
 import { SEO } from '@/components/SEO'
 const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
@@ -198,15 +192,13 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               className="flex flex-wrap justify-center gap-4"
             >
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
+                to="/<contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Get Custom Quote
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <<<ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/innovative-services-showcase-2025"
-                className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
+                to="/innovative-services-showcase-<2025" className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
               >
                 View All Services
               </Link>
@@ -235,7 +227,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 className="bg-slate-900/60 backdrop-blur border border-cyan-400/15 rounded-2xl p-6 text-center"
               >
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${insight.color} flex items-center justify-center mx-auto mb-4`}>
-                  <TrendingUp className="w-8 h-8 text-white" />
+                  <<<TrendingUp className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">{insight.title}</h3>
                 <div className="text-3xl font-bold text-cyan-400 mb-1">{insight.value}</div>
@@ -289,14 +281,13 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 <ul className="space-y-3 mb-8">
                   {tier.features.map((feature: string, idx: number) => (
                     <li key={idx} className="flex items-center text-slate-300">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
                 <Link
-                  to="/contact"
-                  className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                  to="/<contact" className={`block w-full text-center py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
                     tier.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:opacity-90'
                       : 'border border-cyan-400/30 text-cyan-400 hover:bg-cyan-400/10'
@@ -404,7 +395,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                     <div className="space-y-1">
                       {service.benefits.slice(0, 2).map((benefit: string, idx: number) => (
                         <div key={idx} className="flex items-center text-xs text-slate-300">
-                          <TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
+                          <<<TrendingUp className="w-3 h-3 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
                         </div>
                       ))}
@@ -417,11 +408,10 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                       className="inline-flex items-center text-sm text-cyan-400 hover:text-cyan-300 transition-colors"
                     >
                       Learn More
-                      <ArrowRight className="ml-1 h-4 w-4" />
+                      <<<ArrowRight className="ml-1 h-4 w-4" />
                     </Link>
                     <Link
-                      to="/contact"
-                      className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
+                      to="/<contact" className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-medium hover:opacity-90 transition-opacity"
                     >
                       Get Quote
                     </Link>
@@ -488,11 +478,10 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
                 </div>
               </div>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
+                to="/<contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Get Personalized ROI Analysis
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <<<ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </motion.div>
           </div>
@@ -526,27 +515,25 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               className="grid md:grid-cols-3 gap-8 mb-12"
             >
               <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 text-cyan-400 mb-4" />
+                <<<Phone className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Call Us</div>
                 <a
-                  href="tel:+13024640950"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  href="tel:+<13024640950" className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   +1 302 464 0950
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 text-cyan-400 mb-4" />
+                <<<Mail className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Email Us</div>
                 <a
-                  href="mailto:kleber@ziontechgroup.com"
-                  className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  href="mailto:kleber@ziontechgroup.<com" className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 text-cyan-400 mb-4" />
+                <<<MapPin className="w-8 h-8 text-cyan-400 mb-4" />
                 <div className="text-white font-semibold mb-2">Visit Us</div>
                 <div className="text-slate-300 text-center">
                   364 E Main St STE 1008<br />
@@ -561,15 +548,13 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               className="flex flex-wrap justify-center gap-4"
             >
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
+                to="/<contact" className="inline-flex items-center px-8 py-4 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold hover:opacity-90 transition-opacity"
               >
                 Schedule a Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <<<ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/request-quote"
-                className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
+                to="/request-<quote" className="inline-flex items-center px-8 py-4 rounded-xl border border-cyan-400/30 text-cyan-400 font-semibold hover:bg-cyan-400/10 transition-colors"
               >
                 Request a Quote
               </Link>
@@ -587,8 +572,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
               <a
                 href="https://ziontechgroup.com"
                 target="_blank"
-                rel="noopener noreferrer"
-                className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                rel="noopener <noreferrer" className="text-cyan-400 hover:text-cyan-300 transition-colors"
               >
                 ziontechgroup.com
               </a>

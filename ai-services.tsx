@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
-import {MessageSquare, FileText, Users, CheckCircle } from 'lucide-react'
+import { CheckCircle } from 'lucide-react';
 export default function AIServices() {
   const title = 'AI Services — Zion Tech Group'
   const description = 'Cutting-edge AI solutions including autonomous systems, machine learning, natural language processing, and intelligent automation.'
@@ -91,7 +91,7 @@ export default function AIServices() {
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-slate-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <<<CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
                     </div>
                   ))}

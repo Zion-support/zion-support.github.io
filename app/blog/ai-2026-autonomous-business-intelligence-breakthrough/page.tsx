@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -173,14 +172,12 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services/ai-autonomous-business-intelligence"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/services/ai-autonomous-business-<intelligence" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Solutions
             </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+              href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>
@@ -192,7 +189,7 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
       <div className="mt-16 border-t border-gray-200 pt-8">
         <h3 className="text-2xl font-bold mb-6">Related Breakthrough Content</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="group">
+          <Link href="/blog/ai-2026-quantum-enhanced-<analytics" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
                 Quantum-Enhanced Analytics: 1000x Performance Gains
@@ -202,7 +199,7 @@ export default function AutonomousBusinessIntelligenceBreakthrough() {
               </p>
             </div>
           </Link>
-          <Link href="/case-studies/autonomous-bi-fortune-500-success" className="group">
+          <Link href="/case-studies/autonomous-bi-fortune-500-<success" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h4 className="font-bold text-lg mb-2 group-hover:text-blue-600 transition-colors">
                 Fortune 500 Autonomous BI Success: $50M ROI

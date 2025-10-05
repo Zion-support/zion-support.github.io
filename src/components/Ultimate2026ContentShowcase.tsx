@@ -1,6 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield, Target, Award, Users, DollarSign } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
 
 const Ultimate2026ContentShowcase: React.FC = () => {
   const showcaseContent = [
@@ -107,14 +118,14 @@ const Ultimate2026ContentShowcase: React.FC = () => {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
             >
-              <Sparkles className="w-10 h-10 text-yellow-400" />
+              <<<Sparkles className="w-10 h-10 text-yellow-400" />
             </motion.div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500/20 to-purple-500/20 backdrop-blur-sm rounded-full border border-blue-500/30">
-              <Award className="w-5 h-5 text-blue-400" />
+              <<<Award className="w-5 h-5 text-blue-400" />
               <span className="text-sm font-bold text-white">ULTIMATE 2026 CONTENT SHOWCASE</span>
             </div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
-              <Target className="w-5 h-5 text-yellow-400 animate-pulse" />
+              <<<Target className="w-5 h-5 text-yellow-400 animate-pulse" />
               <span className="text-sm font-bold text-yellow-300">6 MASTERCLASS GUIDES</span>
             </div>
           </div>
@@ -133,19 +144,19 @@ const Ultimate2026ContentShowcase: React.FC = () => {
 
           <div className="flex items-center justify-center gap-12 text-center flex-wrap">
             <div className="flex items-center gap-3">
-              <Brain className="w-8 h-8 text-purple-400" />
+              <<<Brain className="w-8 h-8 text-purple-400" />
               <span className="text-xl font-bold text-white">Meta-Cognitive AI</span>
             </div>
             <div className="flex items-center gap-3">
-              <Shield className="w-8 h-8 text-blue-400" />
+              <<<Shield className="w-8 h-8 text-blue-400" />
               <span className="text-xl font-bold text-white">Zero Trust Security</span>
             </div>
             <div className="flex items-center gap-3">
-              <Rocket className="w-8 h-8 text-cyan-400" />
+              <<<Rocket className="w-8 h-8 text-cyan-400" />
               <span className="text-xl font-bold text-white">Autonomous Systems</span>
             </div>
             <div className="flex items-center gap-3">
-              <Users className="w-8 h-8 text-green-400" />
+              <<<Users className="w-8 h-8 text-green-400" />
               <span className="text-xl font-bold text-white">Enterprise Scale</span>
             </div>
           </div>
@@ -166,7 +177,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
               {content.featured && (
                 <div className="absolute -top-4 -right-4 z-20">
                   <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-sm font-bold shadow-xl">
-                    <Star className="w-4 h-4 fill-current" />
+                    <<<Star className="w-4 h-4 fill-current" />
                     <span>FEATURED</span>
                   </div>
                 </div>
@@ -184,7 +195,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                   <div className="flex flex-col gap-3">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-4 py-2 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">
-                        <TrendingUp className="w-3 h-3" />
+                        <<<TrendingUp className="w-3 h-3" />
                         <span>TRENDING</span>
                       </div>
                     )}
@@ -231,7 +242,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-8 pb-6 border-b border-white/15">
                   <span className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-blue-400" />
+                    <<<Zap className="w-4 h-4 text-blue-400" />
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
@@ -243,7 +254,7 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                   className="group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/50 transform hover:-translate-y-2"
                 >
                   <span>Access Masterclass</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
+                  <<<ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
             </motion.div>
@@ -292,33 +303,31 @@ const Ultimate2026ContentShowcase: React.FC = () => {
               
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
                 <div className="flex items-center gap-3 text-blue-300">
-                  <DollarSign className="w-6 h-6" />
+                  <<<DollarSign className="w-6 h-6" />
                   <span className="text-lg font-semibold">$500M+ Proven Savings</span>
                 </div>
                 <div className="flex items-center gap-3 text-purple-300">
-                  <Users className="w-6 h-6" />
+                  <<<Users className="w-6 h-6" />
                   <span className="text-lg font-semibold">500+ Enterprise Clients</span>
                 </div>
                 <div className="flex items-center gap-3 text-cyan-300">
-                  <Award className="w-6 h-6" />
+                  <<<Award className="w-6 h-6" />
                   <span className="text-lg font-semibold">Industry Leading Results</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
-                  href="/contact"
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/50 flex items-center justify-center gap-3 text-lg"
+                  href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-xl hover:shadow-blue-500/50 flex items-center justify-center gap-3 text-lg"
                 >
-                  <Rocket className="w-6 h-6" />
+                  <<<Rocket className="w-6 h-6" />
                   <span>Start Your Transformation</span>
                 </a>
                 <a
-                  href="/blog"
-                  className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
+                  href="/<blog" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >
                   <span>Explore All Masterclasses</span>
-                  <ArrowRight className="w-6 h-6" />
+                  <<<ArrowRight className="w-6 h-6" />
                 </a>
               </div>
             </div>

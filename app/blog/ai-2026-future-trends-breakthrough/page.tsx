@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -18,7 +17,7 @@ export default function AI2026FutureTrendsBreakthrough() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link href="/<blog" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Blog
         </Link>
         
@@ -195,20 +194,17 @@ export default function AI2026FutureTrendsBreakthrough() {
           
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/services/ai-autonomous-operations-2026" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
+              href="/services/ai-autonomous-operations-<2026" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
             >
               Explore AI Services
             </Link>
             <Link 
-              href="/case-studies" 
-              className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200"
+              href="/case-<studies" className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200"
             >
               View Success Stories
             </Link>
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200"
+              href="/<contact" className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200"
             >
               Start Your Transformation
             </Link>
@@ -218,11 +214,11 @@ export default function AI2026FutureTrendsBreakthrough() {
         <div className="border-t border-gray-200 pt-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Content</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-2027-autonomous-enterprise-transformation" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <Link href="/blog/ai-2027-autonomous-enterprise-<transformation" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">AI 2027: Autonomous Enterprise Transformation</h4>
               <p className="text-sm text-gray-600">The complete guide to autonomous enterprise transformation</p>
             </Link>
-            <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <Link href="/case-studies/fortune-500-ai-transformation-mega-success-<2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">Fortune 500 AI Transformation Success</h4>
               <p className="text-sm text-gray-600">$300M ROI success story with AI implementation</p>
             </Link>

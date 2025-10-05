@@ -1,35 +1,40 @@
 import React from 'react';
-import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Award } from 'lucide-react';
 
 const ModernFeatures: React.FC = () => {
   const features = [
     {
-      icon: <Zap className="w-10 h-10" />,
+      icon: <<<Zap className="w-10 h-10" />,
       title: "Lightning Fast",
       description: "Deploy AI solutions 10x faster with our pre-built frameworks and automation tools."
     },
     {
-      icon: <Shield className="w-10 h-10" />,
+      icon: <<<Shield className="w-10 h-10" />,
       title: "Enterprise Security",
       description: "Bank-level security with SOC 2, GDPR compliance, and continuous monitoring."
     },
     {
-      icon: <TrendingUp className="w-10 h-10" />,
+      icon: <<<TrendingUp className="w-10 h-10" />,
       title: "Proven Results",
       description: "Average 300% ROI within 6 months across all client implementations."
     },
     {
-      icon: <Users className="w-10 h-10" />,
+      icon: <<<Users className="w-10 h-10" />,
       title: "Expert Support",
       description: "Dedicated team of AI specialists providing 24/7 support and guidance."
     },
     {
-      icon: <Globe className="w-10 h-10" />,
+      icon: <<<Globe className="w-10 h-10" />,
       title: "Global Scale",
       description: "Infrastructure spanning 50+ countries for low-latency worldwide access."
     },
     {
-      icon: <Award className="w-10 h-10" />,
+      icon: <<<Award className="w-10 h-10" />,
       title: "Award Winning",
       description: "Recognized industry leader with 15+ awards for innovation and excellence."
     }

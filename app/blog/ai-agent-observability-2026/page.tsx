@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -19,7 +18,7 @@ export default function AIAgentObservability2026Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-violet-900 to-slate-900 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">
+          <Link href="/<blog" className="text-violet-300 hover:text-violet-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -92,10 +91,10 @@ export default function AIAgentObservability2026Page() {
                 Launch safe autonomy with measurable ROI and audit-ready evidence.
               </p>
               <div className="flex justify-center gap-4">
-                <Link href="/contact" className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
+                <Link href="/<contact" className="bg-gradient-to-r from-violet-500 to-fuchsia-600 hover:from-violet-400 hover:to-fuchsia-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
                   Talk to an Expert
                 </Link>
-                <Link href="/case-studies" className="border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                <Link href="/case-<studies" className="border-2 border-violet-500 text-violet-300 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   View Case Studies
                 </Link>
               </div>
@@ -106,8 +105,8 @@ export default function AIAgentObservability2026Page() {
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group AI Reliability Team</div>
               <div className="flex gap-4">
-                <Link href="/blog" className="text-violet-300 hover:text-violet-200 transition-colors">← Back to Blog</Link>
-                <Link href="/contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</Link>
+                <Link href="/<blog" className="text-violet-300 hover:text-violet-200 transition-colors">← Back to Blog</Link>
+                <Link href="/<contact" className="text-fuchsia-300 hover:text-fuchsia-200 transition-colors">Get in Touch</Link>
               </div>
             </div>
           </footer>

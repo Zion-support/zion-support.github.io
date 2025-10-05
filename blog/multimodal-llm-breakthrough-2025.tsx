@@ -10,7 +10,7 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
           <div className="text-left" style={{ animationDelay: '2s' }}></div>
         </div>
         <div className="text-left"></div>
-          <a href="/blog" className="text-left"></a>
+          <a href="/<blog" className="text-left"></a>
             <ArrowLeft className="text-left" />
             <span>Back to Blog<
           </a>
@@ -163,8 +163,7 @@ const MultimodalLLMBreakthrough2025: React.FC = () =>
                 Transform your business with cutting-edge multimodal AI solutions from Zion Tech.
               </p>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Demo
               </a>

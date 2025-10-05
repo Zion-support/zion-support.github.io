@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -24,7 +23,7 @@ export default function Page() {
         </ul>
         <p>
           Start applying these practices today and measure impact weekly. For related topics, see{' '}
-          <Link href="/blog/genai-2025-routing-caches-v1" className="text-emerald-400 underline">GenAI Routing v1</Link>.
+          <Link href="/blog/genai-2025-routing-caches-<v1" className="text-emerald-400 underline">GenAI Routing v1</Link>.
         </p>
       </div>
     </main>

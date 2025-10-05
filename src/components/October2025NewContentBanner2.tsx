@@ -1,4 +1,5 @@
-import { ArrowRight, Bot, Brain, DollarSign, Leaf, Mic } from "lucide-react";
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const October2025NewContentBanner2 = () => {
@@ -49,7 +50,7 @@ const October2025NewContentBanner2 = () => {
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-blue-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-6">
-            <Brain className="w-5 h-5 text-purple-400 animate-pulse" />
+            <<<Brain className="w-5 h-5 text-purple-400 animate-pulse" />
             <span className="text-purple-300 font-semibold">FRESH INSIGHTS | October 2025</span>
           </div>
           
@@ -94,7 +95,7 @@ const October2025NewContentBanner2 = () => {
                 {/* Read More Link */}
                 <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-4 transition-all">
                   <span>Read Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  <<<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </div>
 
                 {/* Hover Gradient Effect */}
@@ -107,11 +108,10 @@ const October2025NewContentBanner2 = () => {
         {/* CTA Section */}
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105"
+            to="/<blog" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-2xl hover:shadow-purple-500/50 hover:scale-105"
           >
             <span>Explore All AI Insights</span>
-            <ArrowRight className="w-5 h-5" />
+            <<<ArrowRight className="w-5 h-5" />
           </Link>
         </div>
       </div>

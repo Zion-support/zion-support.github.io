@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -69,10 +68,10 @@ export default function AIDataContracts2026Page() {
             <h3 className="text-2xl font-bold mb-2">Need measurable, reliable data for AI?</h3>
             <p className="opacity-90 mb-4">We implement data contracts, observability, and scorecards end‑to‑end.</p>
             <div className="flex gap-3 flex-col sm:flex-row">
-              <a href="tel:+13024640950" className="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
+              <a href="tel:+<13024640950" className="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
                 Call +1 302 464 0950
               </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">
+              <a href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">
                 Get Consultation
               </a>
             </div>

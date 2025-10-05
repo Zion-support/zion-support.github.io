@@ -2,20 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
-  Brain, 
-  Rocket, 
-  Shield, 
-  Cloud, 
-  Code, 
-  Database, 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Users,
-  TrendingUp,
-  Zap
-} from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const Services: React.FC = () => {
   const services = [
@@ -265,8 +253,7 @@ const Services: React.FC = () => {
                   </ul>
 
                   <Link
-                    to="/contact"
-                    className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
+                    to="/<contact" className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-colors ${
                       service.popular
                         ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700'
                         : 'bg-blue-600 text-white hover:bg-blue-700'
@@ -333,15 +320,13 @@ const Services: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                  to="/<contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
                 >
                   Start Your Project
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
-                  to="/about"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  to="/<about" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Learn More About Us
                 </Link>

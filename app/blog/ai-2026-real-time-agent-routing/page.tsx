@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -19,7 +18,7 @@ export default function RealTimeAgentRouting2026() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-indigo-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <Link href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
+          <Link href="/<blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">
             ← Back to Blog
           </Link>
         </nav>
@@ -93,10 +92,10 @@ export default function RealTimeAgentRouting2026() {
                 Achieve reliable performance, lower spend, and compliant outputs.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
+                <a href="/<contact" className="bg-gradient-to-r from-indigo-500 to-cyan-600 hover:from-indigo-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
                   Talk to an Expert
                 </a>
-                <a href="/case-studies" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                <a href="/case-<studies" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   View Case Studies
                 </a>
               </div>
@@ -107,8 +106,8 @@ export default function RealTimeAgentRouting2026() {
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group AI Platform Team</div>
               <div className="flex gap-4">
-                <a href="/blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">← Back to Blog</a>
-                <a href="/contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
+                <a href="/<blog" className="text-indigo-300 hover:text-indigo-200 transition-colors">← Back to Blog</a>
+                <a href="/<contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
               </div>
             </div>
           </footer>
