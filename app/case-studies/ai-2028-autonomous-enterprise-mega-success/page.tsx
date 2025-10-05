@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 
 export const metadata = {
   title: 'AI 2028 Autonomous Enterprise: $100B Mega Success Story | Zion Tech Group',

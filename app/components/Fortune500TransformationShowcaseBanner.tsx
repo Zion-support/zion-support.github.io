@@ -2,6 +2,7 @@
 import { ArrowRight, Award, CheckCircle, TrendingUp, Users } from 'lucide-react';
 
 import React from 'react';
+import { ArrowRight,Award,CheckCircle,TrendingUp,Users } from "lucide-react";
 
 import { ArrowRight, Users, TrendingUp, CheckCircle, Award, Star } from 'lucide-react';
 

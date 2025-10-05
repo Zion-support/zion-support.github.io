@@ -1,4 +1,5 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+// @ts-ignore
 import { AlertTriangle } from 'lucide-react';
 
 interface Props {

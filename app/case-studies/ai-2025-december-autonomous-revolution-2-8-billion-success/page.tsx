@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { ArrowLeft, Brain, Calendar, CheckCircle, Clock, Shield, Tag, TrendingUp, User, Zap } from 'lucide-react';
+import { ArrowLeft, Brain, Calendar, CheckCircle, Clock, Shield, Tag, TrendingUp, User, Zap } from "lucide-react";
+
 
 export const metadata = {
   title: 'AI 2025 December Autonomous Revolution: $2.8B Success Story - Zion Tech Group',

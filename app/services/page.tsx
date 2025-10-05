@@ -1,5 +1,5 @@
-import { ArrowRight } from 'lucide-react';
-
+import Link from 'next/link';
+import { User } from "lucide-react";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -196,7 +196,7 @@ export default function ServicesPage() {
                     </li>
                   ))}
                 </ul>
-                <ArrowRight
+                <Link
                   href={service.href}
                   className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors group-hover:underline"
                 >
@@ -204,7 +204,7 @@ export default function ServicesPage() {
                   <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                   </svg>
-                </ArrowRight>
+                </Link>
               </div>
             ))}
           </div>

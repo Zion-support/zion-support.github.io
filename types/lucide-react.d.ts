@@ -4,27 +4,39 @@ declare module 'lucide-react' {
   export interface LucideProps extends SVGProps<SVGSVGElement> {
     size?: string | number;
     absoluteStrokeWidth?: boolean;
+    className?: string;
   }
   
   export type LucideIcon = ComponentType<LucideProps>;
   
-  export const Calendar: LucideIcon;
-  export const Clock: LucideIcon;
-  export const ListChecks: LucideIcon;
-  export const FileWarning: LucideIcon;
-  export const RefreshCw: LucideIcon;
-  export const ArrowLeft: LucideIcon;
-  export const User: LucideIcon;
-  export const Tag: LucideIcon;
-  export const DollarSign: LucideIcon;
-  export const Users: LucideIcon;
-  export const Target: LucideIcon;
-  export const Brain: LucideIcon;
+  // Re-export all icons as components that accept LucideProps
   export const ArrowRight: LucideIcon;
-  export const Cog: LucideIcon;
-  export const Award: LucideIcon;
   export const TrendingUp: LucideIcon;
+  export const Brain: LucideIcon;
   export const Zap: LucideIcon;
+  export const Target: LucideIcon;
+  export const Users: LucideIcon;
+  export const DollarSign: LucideIcon;
+  export const Award: LucideIcon;
+  export const Clock: LucideIcon;
+  export const Calendar: LucideIcon;
+  export const User: LucideIcon;
   export const CheckCircle: LucideIcon;
-  // Add more icons as needed
+  export const ArrowLeft: LucideIcon;
+  export const Share2: LucideIcon;
+  export const Bookmark: LucideIcon;
+  export const BookOpen: LucideIcon;
+  export const Rocket: LucideIcon;
+  export const Satellite: LucideIcon;
+  export const Globe: LucideIcon;
+  export const Tag: LucideIcon;
+  export const BarChart3: LucideIcon;
+  export const FileText: LucideIcon;
+  export const Cpu: LucideIcon;
+  export const Code2: LucideIcon;
+  export const Atom: LucideIcon;
+  export const Bot: LucideIcon;
+  export const Sparkles: LucideIcon;
+  export const Star: LucideIcon;
+  export const Shield: LucideIcon;
 }

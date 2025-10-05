@@ -1,8 +1,5 @@
-import ArrowRight from 'next/link';
-import { ArrowRight, CheckCircle, DollarSign, TrendingUp, Users } from 'lucide-react';
-
-
-import { ArrowRight, Users, DollarSign, TrendingUp, CheckCircle } from 'lucide-react';
+import Link from 'next/link';
+import { ArrowRight,CheckCircle,DollarSign,TrendingUp,Users } from "lucide-react";
 
 export default function Fortune500QuantumAITransformation2026() {
   return (
@@ -315,18 +312,18 @@ export default function Fortune500QuantumAITransformation2026() {
             Join the Fortune 500 companies achieving unprecedented success with Zion Tech Group's quantum AI solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
+            <Link 
               href="/contact" 
               className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
             >
               Start Your Transformation
-            </ArrowRight>
-            <ArrowRight 
+            </Link>
+            <Link 
               href="/services" 
               className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore Our Services
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </section>
@@ -336,20 +333,20 @@ export default function Fortune500QuantumAITransformation2026() {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <ArrowRight 
+              <Link 
                 href="/case-studies" 
                 className="flex items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
               >
                 <ArrowRight className="w-4 h-4 rotate-180" />
                 Back to Case Studies
-              </ArrowRight>
-              <ArrowRight 
+              </Link>
+              <Link 
                 href="/blog" 
                 className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 Read More Success Stories
                 <ArrowRight className="w-4 h-4" />
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

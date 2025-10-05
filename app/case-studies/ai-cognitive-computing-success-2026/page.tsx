@@ -1,7 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, Calendar, Clock, User, DollarSign, TrendingUp, Target, Share, Bookmark } from 'lucide-react';
-
-
+import { ArrowLeft,Bookmark,Calendar,Clock,DollarSign,Share2,Target,TrendingUp,User } from "lucide-react";
 
 export const metadata = {
   title: 'AI Cognitive Computing Success 2026: $25M Value Creation Case Study | Zion Tech Group',
@@ -301,7 +299,7 @@ export default function AICognitiveComputingSuccess2026() {
         {/* Article Actions */}
         <div className="flex flex-wrap gap-4 pt-8 border-t border-gray-200">
           <button className="flex items-center gap-2 bg-blue-50 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-100 transition-colors">
-            <Share className="w-4 h-4" />
+            <Share2 className="w-4 h-4" />
             Share Case Study
           </button>
           <button className="flex items-center gap-2 bg-gray-50 text-gray-600 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors">

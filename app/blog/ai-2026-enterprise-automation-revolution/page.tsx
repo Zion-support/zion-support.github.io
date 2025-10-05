@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { BarChart3,TrendingUp,Users,Zap } from "lucide-react";
 
 import Cog from 'lucide-react/dist/esm/icons/file-text';
 import Zap from 'lucide-react/dist/esm/icons/zap';

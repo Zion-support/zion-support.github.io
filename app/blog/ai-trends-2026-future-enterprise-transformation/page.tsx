@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { Brain } from "lucide-react";
 
 export const metadata: Metadata = {
   title: 'AI Trends 2026: Future Enterprise Transformation with Quantum Intelligence',

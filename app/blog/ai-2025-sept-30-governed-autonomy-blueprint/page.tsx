@@ -1,5 +1,6 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
+import { User } from "lucide-react";
 
 export const metadata = {
   title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',
@@ -102,12 +103,12 @@ export default function GovernedAutonomyBlueprint2025() {
   );
 }
 
-function RelatedCard({ title, href }: { title: string; href: string }) {
+function RelatedCard({ title, href, color }: { title: string; href: string; color: string }) {
   return (
-    <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
+    <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300 border">
       <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
       <span className="text-indigo-700 font-semibold">Read More →</span>
-    </ArrowRight>
+    </Link>
   );
 }
 

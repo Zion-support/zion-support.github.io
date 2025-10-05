@@ -2,6 +2,7 @@
 import { ArrowRight, Brain, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 
 import React from 'react';
+import { ArrowRight,Brain,TrendingUp,Users,Zap } from "lucide-react";
 
 import { ArrowRight, Users, TrendingUp, Brain, Zap } from 'lucide-react';
 
