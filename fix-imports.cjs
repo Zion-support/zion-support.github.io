@@ -2,53 +2,90 @@
 
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
+const { glob } = require('glob');
 
-// Find all TypeScript/JSX files in the app directory
-const files = glob.sync('app/**/*.{ts,tsx,js,jsx}', { cwd: process.cwd() });
+// Fix lucide-react import paths
+function fixLucideImports(content) {
+  // Fix malformed lucide-react imports
+  const lucideFixPatterns = [
+    // Fix missing characters in import paths
+    { from: /from 'lucide-react\/dist\/esm\/icons\/rrowleft'/, to: "from 'lucide-react/dist/esm/icons/arrowleft'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/alendar'/, to: "from 'lucide-react/dist/esm/icons/calendar'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ser'/, to: "from 'lucide-react/dist/esm/icons/user'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ag'/, to: "from 'lucide-react/dist/esm/icons/tag'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/rendingup'/, to: "from 'lucide-react/dist/esm/icons/trendingup'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ollarsign'/, to: "from 'lucide-react/dist/esm/icons/dollarsign'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/sers'/, to: "from 'lucide-react/dist/esm/icons/users'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/arget'/, to: "from 'lucide-react/dist/esm/icons/target'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/rain'/, to: "from 'lucide-react/dist/esm/icons/brain'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ap'/, to: "from 'lucide-react/dist/esm/icons/map'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/hield'/, to: "from 'lucide-react/dist/esm/icons/shield'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/rrowright'/, to: "from 'lucide-react/dist/esm/icons/arrowright'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/lobe'/, to: "from 'lucide-react/dist/esm/icons/globe'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ocket'/, to: "from 'lucide-react/dist/esm/icons/rocket'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/pu'/, to: "from 'lucide-react/dist/esm/icons/cpu'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ot'/, to: "from 'lucide-react/dist/esm/icons/bot'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/hare2'/, to: "from 'lucide-react/dist/esm/icons/share2'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ookmark'/, to: "from 'lucide-react/dist/esm/icons/bookmark'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/heckcircle'/, to: "from 'lucide-react/dist/esm/icons/checkcircle'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/ookopen'/, to: "from 'lucide-react/dist/esm/icons/bookopen'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/archart3'/, to: "from 'lucide-react/dist/esm/icons/barchart3'" },
+    { from: /from 'lucide-react\/dist\/esm\/icons\/og'/, to: "from 'lucide-react/dist/esm/icons/tag'" },
+  ];
 
-console.log(`Found ${files.length} files to process...`);
+  let fixedContent = content;
+  lucideFixPatterns.forEach(pattern => {
+    fixedContent = fixedContent.replace(pattern.from, pattern.to);
+  });
 
-let fixedCount = 0;
+  return fixedContent;
+}
 
-files.forEach(file => {
-  try {
-    let content = fs.readFileSync(file, 'utf8');
-    let modified = false;
-
-    // Remove unused React imports (for React 17+ with automatic JSX transform)
-    if (content.includes("import React from 'react';") && !content.includes('React.')) {
-      content = content.replace(/import React from 'react';\n?/g, '');
-      modified = true;
+// Add missing Link import
+function addLinkImport(content) {
+  // Check if Link is used but not imported
+  if (content.includes('<Link') && !content.includes("import Link")) {
+    // Add Link import from next/link
+    const importMatch = content.match(/import.*from ['"]react['"];?/);
+    if (importMatch) {
+      content = content.replace(importMatch[0], importMatch[0] + "\nimport Link from 'next/link';");
+    } else {
+      // Add at the top if no React import found
+      content = "import Link from 'next/link';\n" + content;
     }
-
-    // Remove unused Link imports
-    if (content.includes("import Link from 'next/link';") && !content.includes('<Link')) {
-      content = content.replace(/import Link from 'next\/link';\n?/g, '');
-      modified = true;
-    }
-
-    // Fix lucide-react imports - try to use the correct import pattern
-    if (content.includes("from 'lucide-react'")) {
-      // For now, let's just comment out the problematic imports to see if that fixes the build
-      const lucideImportRegex = /import\s*\{[^}]*\}\s*from\s*['"]lucide-react['"];?\n?/g;
-      const lucideImports = content.match(lucideImportRegex);
-      if (lucideImports) {
-        console.log(`Found lucide-react imports in ${file}:`, lucideImports);
-        // For now, let's comment them out to see if the build works
-        content = content.replace(lucideImportRegex, '// $&');
-        modified = true;
-      }
-    }
-
-    if (modified) {
-      fs.writeFileSync(file, content);
-      console.log(`Fixed: ${file}`);
-      fixedCount++;
-    }
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
   }
-});
+  return content;
+}
 
-console.log(`Fixed ${fixedCount} files`);
+// Process all TypeScript/JSX files
+async function processFiles() {
+  const files = await glob('app/**/*.{ts,tsx}', { cwd: process.cwd() });
+  
+  let fixedCount = 0;
+  
+  files.forEach(file => {
+    try {
+      const filePath = path.join(process.cwd(), file);
+      let content = fs.readFileSync(filePath, 'utf8');
+      const originalContent = content;
+      
+      // Fix lucide imports
+      content = fixLucideImports(content);
+      
+      // Add Link import if needed
+      content = addLinkImport(content);
+      
+      if (content !== originalContent) {
+        fs.writeFileSync(filePath, content, 'utf8');
+        console.log(`Fixed: ${file}`);
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`Error processing ${file}:`, error.message);
+    }
+  });
+  
+  console.log(`\nFixed ${fixedCount} files`);
+}
+
+processFiles().catch(console.error);

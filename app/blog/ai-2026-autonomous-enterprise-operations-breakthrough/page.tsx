@@ -1,4 +1,6 @@
 
+import ArrowRight from 'next/link';
+
 export default function AI2026AutonomousEnterpriseOperationsBreakthrough() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">

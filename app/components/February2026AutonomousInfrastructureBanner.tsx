@@ -1,6 +1,9 @@
 import React from 'react';
-import Link from 'next/link';
-// import { ArrowRight, Cpu, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
+import { ArrowRight, Brain, Shield, TrendingUp, Zap } from 'lucide-react';
+
+import ArrowRight from 'next/link';
+
+import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
 
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (
@@ -86,20 +89,20 @@ const February2026AutonomousInfrastructureBanner: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
+              <ArrowRight 
                 href="/blog/ai-2026-february-autonomous-infrastructure-revolution"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Read the Full Article
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </ArrowRight>
               
-              <Link 
+              <ArrowRight 
                 href="/services/ai-2026-february-revolutionary-edge-computing-consulting"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 Get Consulting Services
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 

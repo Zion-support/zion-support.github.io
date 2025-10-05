@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Revolutionary Autonomous Enterprise Systems - Zion Tech Group',
@@ -174,32 +174,32 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
             Our AI 2026 Revolutionary Autonomous Enterprise Systems are ready to transform your business operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link 
+            <ArrowRight 
               href="/services/ai-2026-revolutionary-autonomous-enterprise-systems" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all duration-200 text-center"
             >
               Get Revolutionary Solutions
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-revolutionary-autonomous-enterprise-success" 
               className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all duration-200 text-center"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t border-gray-200 pt-8">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Breakthrough Content</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-neural-architecture-search-breakthrough" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200">
+            <ArrowRight href="/blog/ai-2026-neural-architecture-search-breakthrough" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-300 hover:bg-purple-50 transition-all duration-200">
               <h4 className="font-semibold text-gray-900 mb-2">Neural Architecture Search Breakthrough</h4>
               <p className="text-gray-600 text-sm">Discover how NAS achieved $200M ROI for enterprise AI systems.</p>
-            </Link>
-            <Link href="/blog/ai-2026-federated-learning-enterprise-breakthrough" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2026-federated-learning-enterprise-breakthrough" className="block p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:bg-blue-50 transition-all duration-200">
               <h4 className="font-semibold text-gray-900 mb-2">Federated Learning Enterprise Breakthrough</h4>
               <p className="text-gray-600 text-sm">Privacy-first AI that delivered $150M in cost savings.</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </article>

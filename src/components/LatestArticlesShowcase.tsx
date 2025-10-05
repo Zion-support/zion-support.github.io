@@ -57,8 +57,8 @@ const LatestArticlesShowcase: React.FC = () => {
                 
                 <div className="flex flex-wrap gap-2 mt-4">
                   {article.tags.slice(0, 3).map((tag) => (
-                    <span>
-                      key={tag}
+                    <span
+key={tag}
                       className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
                     >
                       {tag}

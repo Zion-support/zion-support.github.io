@@ -81,8 +81,8 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
   const visibleItems = featuredItems.slice(0, showCount);
 
   return (
-    <div>
-      className={`
+    <div
+className={`
         bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
@@ -108,7 +108,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
         )}
 
         {/* Title */}
-        <h2 className={`>
+        <h2 className={`
           font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
           ${variant === 'hero' || variant === 'mega' ? 'text-4xl md:text-5xl' : 
             variant === 'premium' ? 'text-3xl md:text-4xl' : 
@@ -119,7 +119,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
         </h2>
 
         {/* Description */}
-        <p className={`>
+        <p className={`
           text-gray-200 mb-6
           ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
             variant === 'compact' ? 'text-sm' : 
@@ -130,7 +130,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
 
         {/* Featured Items */}
         {visibleItems.length > 0 && (
-          <div className={`>
+          <div className={`
             grid gap-4 mb-6
             ${variant === 'mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
@@ -176,7 +176,8 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
             `}
           >
             {ctaText}
-            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`}</Link>
+            <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />
+          </Link>
 
           {featuredItems.length > showCount && (
             <Link

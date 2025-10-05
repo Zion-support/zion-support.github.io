@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Executive Playbook 2027 | Zion Tech Group',
@@ -44,13 +44,13 @@ export default function AIExecutivePlaybook2027Page() {
             <li>Scale horizontally with shared guardrails and paved roads</li>
           </ol>
 
-          <p>For related operational guidance, see our <Link href="/blog/ai-2027-cost-optimization-playbook" className="text-indigo-300 hover:text-indigo-200">Cost Optimization Playbook 2027</Link>.</p>
+          <p>For related operational guidance, see our <ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="text-indigo-300 hover:text-indigo-200">Cost Optimization Playbook 2027</ArrowRight>.</p>
         </div>
 
         <div className="mt-12">
-          <Link href="/blog" className="inline-block bg-white text-indigo-700 px-6 py-3 rounded-lg font-bold hover:bg-indigo-50">
+          <ArrowRight href="/blog" className="inline-block bg-white text-indigo-700 px-6 py-3 rounded-lg font-bold hover:bg-indigo-50">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
         </div>
       </main>
     </div>

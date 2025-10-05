@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function BlogPost() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
+        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 transition-colors">
           ← Back to Blog
-        </Link>
+        </ArrowRight>
       </div>
       
       <article className="prose prose-lg max-w-none">
@@ -228,18 +228,18 @@ export default function BlogPost() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link 
+              <ArrowRight 
                 href="/services/ai-autonomous-operations" 
                 className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 text-center"
               >
                 Explore Autonomous AI Services
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies" 
                 className="border border-blue-500 text-blue-500 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-all duration-300 text-center"
               >
                 View Success Stories
-              </Link>
+              </ArrowRight>
             </div>
           </section>
         </div>

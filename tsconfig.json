@@ -5,7 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": false,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -27,11 +27,7 @@
       "@/config/*": ["src/config/*"]
     }
   },
-  "include": ["src", "app"],
-<<<<<<< HEAD
-  "exclude": ["src/pages/blog-disabled/**/*"],
-=======
-  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components"],
->>>>>>> cursor/fix-errors-and-merge-to-main-f679
+  "include": ["src", "app", "types"],
+  "exclude": ["src/pages/blog-disabled/**/*", "app/blog", "app/components", "blog", "components", "src/components/**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

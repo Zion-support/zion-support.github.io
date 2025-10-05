@@ -3,76 +3,76 @@ import { motion } from "framer-motion";
 
 const September30MegaBanner2025 = () => {
   const breakthroughArticles = [
-    {
+    {",
       title: "Real-Time AI Decision Engines",
-      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",
+      description: "10M decisions/sec with <1ms latency - Stream processing meets neural inference",",
       slug: "real-time-ai-decision-engines-2025",
-      category: "Real-Time AI",
+      category: "Real-Time AI",",
       icon: "⚡",
-      gradient: "from-yellow-500 to-orange-500",
+      gradient: "from-yellow-500 to-orange-500",",
       metric: "10,000x Faster"
     },
-    {
+    {",
       title: "Neural Code Synthesis",
-      description: "AI generates production apps from plain English with 95% accuracy & built-in security",
+      description: "AI generates production apps from plain English with 95% accuracy & built-in security",",
       slug: "neural-code-synthesis-2025",
-      category: "AI Development",
+      category: "AI Development",",
       icon: "💻",
-      gradient: "from-blue-500 to-cyan-500",
+      gradient: "from-blue-500 to-cyan-500",",
       metric: "90% Dev Time Cut"
     },
-    {
+    {",
       title: "Multimodal AI Fusion",
-      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",
+      description: "Unified understanding of text, images, audio & video - 98% cross-modal accuracy",",
       slug: "multimodal-ai-fusion-2025",
-      category: "Multimodal AI",
+      category: "Multimodal AI",",
       icon: "🎭",
-      gradient: "from-purple-500 to-pink-500",
+      gradient: "from-purple-500 to-pink-500",",
       metric: "98% Accuracy"
     },
-    {
+    {",
       title: "AI Supply Chain Revolution",
-      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",
+      description: "99.5% forecast accuracy + 85% inventory reduction through neural optimization",",
       slug: "ai-powered-supply-chain-2025",
-      category: "Supply Chain AI",
+      category: "Supply Chain AI",",
       icon: "📦",
-      gradient: "from-green-500 to-teal-500",
+      gradient: "from-green-500 to-teal-500",",
       metric: "85% Less Inventory"
     },
-    {
+    {",
       title: "Cognitive AI Assistants",
-      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",
+      description: "Human-level understanding & reasoning - 92% satisfaction with emotional intelligence",",
       slug: "cognitive-ai-assistants-2025",
-      category: "Conversational AI",
+      category: "Conversational AI",",
       icon: "🤖",
-      gradient: "from-indigo-500 to-purple-500",
+      gradient: "from-indigo-500 to-purple-500",",
       metric: "92% Satisfaction"
     },
-    {
+    {",
       title: "AI Cybersecurity Mesh",
-      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",
+      description: "Zero-trust distributed defense - 99.99% threat detection with sub-second response",",
       slug: "ai-cybersecurity-mesh-2025",
-      category: "Cybersecurity AI",
+      category: "Cybersecurity AI",",
       icon: "🛡️",
-      gradient: "from-red-500 to-orange-500",
+      gradient: "from-red-500 to-orange-500",",
       metric: "99.99% Detection"
     },
-    {
+    {",
       title: "Federated Learning Enterprise",
-      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",
+      description: "Train powerful AI with zero data sharing - 100% GDPR/HIPAA compliance",",
       slug: "federated-learning-enterprise-2025",
-      category: "Privacy AI",
+      category: "Privacy AI",",
       icon: "🔒",
-      gradient: "from-slate-600 to-slate-800",
+      gradient: "from-slate-600 to-slate-800",",
       metric: "100% Privacy"
     },
-    {
+    {",
       title: "AI Financial Modeling",
-      description: "95% market prediction accuracy - Real-time analysis of millions of signals",
+      description: "95% market prediction accuracy - Real-time analysis of millions of signals",",
       slug: "ai-financial-modeling-2025",
-      category: "FinTech AI",
+      category: "FinTech AI",",
       icon: "💰",
-      gradient: "from-emerald-500 to-green-600",
+      gradient: "from-emerald-500 to-green-600",",
       metric: "95% Accuracy"
     }
   ];

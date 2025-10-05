@@ -1,5 +1,5 @@
 // @ts-nocheck
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Edge Analytics 2026: Consent‑Safe Insights — Zion Tech Group',
@@ -42,8 +42,8 @@ export default function Page() {
       </div>
 
       <div className="mt-10 flex gap-4">
-        <Link href="/blog" className="inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700">Explore More Articles</Link>
-        <Link href="/contact" className="inline-block border-2 border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white">Talk to an Expert</Link>
+        <ArrowRight href="/blog" className="inline-block bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-700">Explore More Articles</ArrowRight>
+        <ArrowRight href="/contact" className="inline-block border-2 border-cyan-600 text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 hover:text-white">Talk to an Expert</ArrowRight>
       </div>
     </main>
   );

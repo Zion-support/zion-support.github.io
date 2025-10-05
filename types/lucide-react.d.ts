@@ -22,5 +22,9 @@ declare module 'lucide-react' {
   export const Brain: LucideIcon;
   export const ArrowRight: LucideIcon;
   export const Cog: LucideIcon;
+  export const Award: LucideIcon;
+  export const TrendingUp: LucideIcon;
+  export const Zap: LucideIcon;
+  export const CheckCircle: LucideIcon;
   // Add more icons as needed
 }

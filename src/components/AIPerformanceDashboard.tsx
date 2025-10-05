@@ -15,10 +15,9 @@ interface PerformanceMetrics {
 interface AIInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
+  errorTrends: Array<{ category: string;
     trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
+   }>;
 }
 
 interface ErrorReport {
@@ -45,15 +44,13 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       const loadPerformanceData = async () => {
         try {
           // Simulate API calls for performance data
-          const mockMetrics: PerformanceMetrics = {
-            errorRate: Math.random() * 5,
+          const mockMetrics: PerformanceMetrics = { errorRate: Math.random() * 5,
             avgResolutionTime: Math.random() * 30 + 10,
             criticalErrorsToday: Math.floor(Math.random() * 10),
             userImpactScore: Math.floor(Math.random() * 40 + 60)
-          };
+           };
 
-          const mockInsights: AIInsights = {
-            predictedHighRiskActions: [
+          const mockInsights: AIInsights = { predictedHighRiskActions: [
               'High memory usage detected in user authentication flow',
               'Potential race condition in data synchronization',
               'Slow database queries affecting user experience'
@@ -65,7 +62,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               'Consider implementing circuit breaker pattern'
             ],
             errorTrends: [
-              { category: 'authentication', trend: 'decreasing' },
+              { category: 'authentication', trend: 'decreasing'  },
               { category: 'database', trend: 'stable' },
               { category: 'ui', trend: 'increasing' }
             ]
@@ -150,10 +147,9 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
         <div className="p-6">
           <div className="flex justify-between items-center mb-6">
             <h2 className="text-2xl font-bold text-gray-800">🤖 AI Performance Dashboard</h2>
-            <button>
+            <button
               onClick={onClose}
               className="text-gray-500 hover:text-gray-700 text-2xl"
-
             >
               ×
             </button>
@@ -230,7 +226,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                       <span className="font-medium capitalize">{String(trend.category)}</span>
                       <span className="text-lg">{getTrendIcon(String(trend.trend))}</span>
                     </div>
-                    <div className={`text-sm mt-1 ${>
+                    <div className={`text-sm mt-1 ${
                       trend.trend === 'increasing' ? 'text-red-600' :
                       trend.trend === 'decreasing' ? 'text-green-600' : 'text-gray-600'
                     }`}>
@@ -262,8 +258,8 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
                         <h4 className="font-medium text-gray-800 mb-1">{error.message}</h4>
                         <div className="text-sm text-gray-600">
                           Component: {error.context.component || 'Unknown'} | 
-                          Action: {error.context.action || 'Unknown'} |
-                          Count: {String(error.occurrenceCount)}
+                          Action: {error.context.action || 'Unknown'} |",
+      Count: {String(error.occurrenceCount)}
                         </div>
                         {error.aiPredictedImpact && (
                           <div className="text-sm text-blue-600 mt-1">

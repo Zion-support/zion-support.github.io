@@ -32,7 +32,7 @@ const October2025NewBreakthroughBanner = () => {
           
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Next-Generation Enterprise AI
-            <br <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
+            <br /> <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
               Systems That Transform Operations
             </span>
           </h2>
@@ -56,7 +56,8 @@ const October2025NewBreakthroughBanner = () => {
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className={`bg-gradient-to-br ${content.gradient} p-4 rounded-xl shadow-lg`}>
-                    <Icon className="w-8 h-8 text-white"</div>
+                    <Icon className="w-8 h-8 text-white" />
+                  </div>
                   <div className="flex-1">
                     <div className="text-xs text-purple-300 mb-2 font-semibold uppercase tracking-wider">
                       {content.category}
@@ -167,8 +168,10 @@ const October2025NewBreakthroughBanner = () => {
           <div className="inline-flex flex-wrap gap-3 justify-center">
             {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI', 
               'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (
-              <span 
-                key={tag}
+
+              <span
+key={tag}
+
                 className="bg-white/10 backdrop-blur-sm border border-white/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors"
               >
                 {tag}

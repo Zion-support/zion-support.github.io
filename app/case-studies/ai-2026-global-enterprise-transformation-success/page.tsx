@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'Global Enterprise AI Transformation: $500M ROI Success Story 2026',
@@ -17,9 +17,9 @@ export default function GlobalEnterpriseAITransformationSuccess() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <ArrowRight href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Case Studies
-        </Link>
+        </ArrowRight>
         
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
@@ -351,38 +351,38 @@ export default function GlobalEnterpriseAITransformationSuccess() {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Link 
+            <ArrowRight 
               href="/services/ai-autonomous-operations-2026" 
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-200"
             >
               Start Your Transformation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/blog/ai-2026-future-trends-breakthrough" 
               className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-blue-700 transition-all duration-200"
             >
               Explore AI Trends
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-orange-600 to-red-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-orange-700 hover:to-red-700 transition-all duration-200"
             >
               Schedule Consultation
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t border-gray-200 pt-6">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Success Stories</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            <ArrowRight href="/case-studies/fortune-500-ai-transformation-mega-success-2026" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">Fortune 500 AI Transformation Success</h4>
               <p className="text-sm text-gray-600">$300M ROI success story with AI implementation</p>
-            </Link>
-            <Link href="/case-studies/ai-2027-neuromorphic-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2027-neuromorphic-breakthrough-success" className="block p-4 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors">
               <h4 className="font-semibold text-gray-900 mb-2">Neuromorphic AI Breakthrough Success</h4>
               <p className="text-sm text-gray-600">$750M success story with neuromorphic computing</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

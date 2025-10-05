@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Enterprise Autonomous Agents 2026 | Zion Tech Group',
@@ -17,7 +17,7 @@ export const metadata = {
 export default function AIEnterpriseAutonomousAgents2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
-      <Link href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</Link>
+      <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-800 mb-6 inline-block">← Back to Blog</ArrowRight>
       <h1 className="text-4xl font-bold text-gray-900 mb-3">AI Enterprise Autonomous Agents 2026</h1>
       <div className="text-gray-600 mb-8">Published: September 30, 2025 • 18 min read • Implementation Guide</div>
 
@@ -46,7 +46,7 @@ export default function AIEnterpriseAutonomousAgents2026() {
         <div className="bg-green-50 border-l-4 border-green-600 p-6 rounded">
           <h3 className="m-0">Need an accelerated rollout?</h3>
           <p className="m-0">We implement guardrails, evals, and scorecards to scale autonomous agents safely.</p>
-          <Link href="/services" className="inline-block mt-3 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded">Explore Services</Link>
+          <ArrowRight href="/services" className="inline-block mt-3 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded">Explore Services</ArrowRight>
         </div>
       </div>
     </div>

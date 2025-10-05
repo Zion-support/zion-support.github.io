@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2027: Autonomous Enterprise Transformation | Zion Tech Group',
@@ -152,18 +152,18 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                 design and implement the systems that will revolutionize your business operations.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <ArrowRight 
                   href="/contact" 
                   className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-teal-700 transition-all duration-300 text-center"
                 >
                   Start Transformation
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/services/autonomous-enterprise" 
                   className="px-8 py-3 border border-emerald-500 text-emerald-400 font-semibold rounded-xl hover:bg-emerald-500/10 transition-all duration-300 text-center"
                 >
                   Learn More
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
         <div className="mt-16">
           <h2 className="text-3xl font-bold text-white text-center mb-8">Related Content</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/blog/ai-2026-autonomous-enterprise-architecture" className="group">
+            <ArrowRight href="/blog/ai-2026-autonomous-enterprise-architecture" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   Autonomous Enterprise Architecture
@@ -261,9 +261,9 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                   Learn about the architectural foundations of autonomous enterprises.
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
 
-            <Link href="/blog/ai-2027-autonomous-governance" className="group">
+            <ArrowRight href="/blog/ai-2027-autonomous-governance" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   Autonomous Governance
@@ -272,9 +272,9 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                   Explore how AI systems can govern enterprise operations autonomously.
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
 
-            <Link href="/blog/ai-2027-self-optimizing-businesses" className="group">
+            <ArrowRight href="/blog/ai-2027-self-optimizing-businesses" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
                   Self-Optimizing Businesses
@@ -283,13 +283,13 @@ export default function AI2027AutonomousEnterpriseTransformation() {
                   Discover how businesses can optimize themselves autonomously.
                 </p>
               </div>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         {/* Back to Blog */}
         <div className="text-center mt-16">
-          <Link 
+          <ArrowRight 
             href="/blog" 
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-slate-700 to-slate-800 text-white font-semibold rounded-xl hover:from-slate-600 hover:to-slate-700 transition-all duration-300"
           >
@@ -297,7 +297,7 @@ export default function AI2027AutonomousEnterpriseTransformation() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to Blog
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </div>
