@@ -109,8 +109,7 @@ const October2025FeaturedContentBanner = () => {
                   {/* Icon & Title */}
                   <div className="flex items-start mb-6">
                     <div className={`p-4 bg-gradient-to-r ${content.gradient} rounded-xl mr-4`}>
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
+                      <Icon className="w-8 h-8 text-white"</div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                         {content.title}

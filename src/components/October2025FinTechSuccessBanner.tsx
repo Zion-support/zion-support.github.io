@@ -25,8 +25,7 @@ export default function October2025FinTechSuccessBanner() {
           {/* Left Column */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <Building2 className="w-12 h-12 text-blue-400 animate-pulse" />
-              <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
+              <Building2 className="w-12 h-12 text-blue-400 animate-pulse" <h2 className="text-3xl md:text-5xl font-black bg-gradient-to-r from-blue-200 via-indigo-200 to-purple-200 bg-clip-text text-transparent leading-tight">
                 Fortune 100 FinTech Transformation
               </h2>
             </div>
@@ -69,8 +68,7 @@ export default function October2025FinTechSuccessBanner() {
               to="/case-studies/fintech-ai-transformation-2025"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-white/20"
             >
-              <Building2 className="w-6 h-6" />
-              <span>Read Full Case Study</span>
+              <Building2 className="w-6 h-6" <span>Read Full Case Study</span>
 
             </Link>
           </div>

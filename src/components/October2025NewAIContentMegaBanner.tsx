@@ -104,8 +104,7 @@ const October2025NewAIContentMegaBanner = () => {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                <Database className="w-6 h-6 text-cyan-400" />
-              </div>
+                <Database className="w-6 h-6 text-cyan-400"</div>
               
             </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors">

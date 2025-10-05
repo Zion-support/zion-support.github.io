@@ -4,10 +4,7 @@ const October2025BreakthroughBanner = () => {
   return (
     <section className="relative py-20 overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" />
-      <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
-      
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" <div className="container mx-auto px-6 relative z-10">
         {/* Main Banner */}
         <div className="bg-gradient-to-br from-purple-900/50 via-indigo-900/50 to-emerald-900/50 rounded-2xl border-2 border-purple-500/30 backdrop-blur-sm p-8 md:p-12 mb-8 shadow-2xl">
           <div className="flex items-center gap-3 mb-6">
@@ -44,8 +41,7 @@ const October2025BreakthroughBanner = () => {
                 to="/blog/ai-sovereign-agents-enterprise-2025"
                 className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-semibold text-sm group-hover:gap-3 transition-all"
               >
-                Read Article
-              </Link>
+                Read Article</Link>
             </div>
             
             {/* Article 2: Quantum ML */}
@@ -64,8 +60,7 @@ const October2025BreakthroughBanner = () => {
                 to="/blog/ai-quantum-machine-learning-2025"
                 className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-semibold text-sm group-hover:gap-3 transition-all"
               >
-                Read Article
-              </Link>
+                Read Article</Link>
             </div>
             
             {/* Article 3: Neuromorphic Edge */}
@@ -84,8 +79,7 @@ const October2025BreakthroughBanner = () => {
                 to="/blog/ai-neuromorphic-edge-computing-2025"
                 className="inline-flex items-center gap-2 text-emerald-300 hover:text-emerald-200 font-semibold text-sm group-hover:gap-3 transition-all"
               >
-                Read Article
-              </Link>
+                Read Article</Link>
             </div>
           </div>
           
@@ -95,8 +89,7 @@ const October2025BreakthroughBanner = () => {
               to="/blog"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-purple-500/50 inline-flex items-center gap-2"
             >
-              Explore All Articles
-            </Link>
+              Explore All Articles</Link>
             <Link 
               to="/contact"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg transition-all border border-white/20 hover:border-white/40 inline-flex items-center gap-2"

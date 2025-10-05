@@ -114,8 +114,7 @@ export default function October2025NewAdvancedAIContentBanner() {
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/50 h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-3 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg">
-                    <Database className="w-6 h-6 text-white" />
-                  </div>
+                    <Database className="w-6 h-6 text-white"</div>
                   <span className="text-xs font-bold text-blue-300 uppercase tracking-wider">
                     Synthetic Data
                   </span>

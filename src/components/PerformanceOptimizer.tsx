@@ -123,8 +123,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           Performance Optimizer
         </h2>
         <button onClick={onClose} className='text-gray-400 hover:text-gray-600'>
-          <X className='h-6 w-6' />
-        </button>
+          <X className='h-6 w-6'</button>
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>

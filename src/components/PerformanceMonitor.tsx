@@ -77,8 +77,7 @@ const PerformanceMonitor: React.FC = () => {
         className='fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors z-50'
         title='Open Performance Monitor'
       >
-        <Activity className='h-5 w-5' />
-      </button>
+        <Activity className='h-5 w-5'</button>
     );
   }
 

@@ -26,7 +26,7 @@ const October2025UltimateBreakthroughBanner = () => {
 
         {/* Main Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight">
-          Ultimate AI Innovation Suite:<br
+          Ultimate AI Innovation Suite:<br />
           $945M+ Combined Value Creation
         </h2>
 
@@ -56,8 +56,7 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-purple-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Explore Technology
-            </div>
+              Explore Technology</div>
           </Link>
 
           {/* Feature 2 */}
@@ -79,8 +78,7 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-blue-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Discover Innovation
-            </div>
+              Discover Innovation</div>
           </Link>
 
           {/* Feature 3 */}
@@ -102,8 +100,7 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-indigo-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Learn More
-            </div>
+              Learn More</div>
           </Link>
 
           {/* Feature 4 */}
@@ -125,8 +122,7 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-cyan-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              Read Guide
-            </div>
+              Read Guide</div>
           </Link>
 
           {/* Feature 5 */}
@@ -148,8 +144,7 @@ const October2025UltimateBreakthroughBanner = () => {
               </div>
             </div>
             <div className="flex items-center text-red-300 text-sm font-semibold group-hover:gap-2 transition-all">
-              View Solution
-            </div>
+              View Solution</div>
           </Link>
 
           {/* CTA Card */}
@@ -171,8 +166,7 @@ const October2025UltimateBreakthroughBanner = () => {
               to="/blog"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-bold rounded-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
-              View All Innovations
-            </Link>
+              View All Innovations</Link>
           </div>
         </div>
 

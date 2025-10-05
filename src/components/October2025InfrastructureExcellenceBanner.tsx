@@ -35,9 +35,7 @@ const October2025InfrastructureExcellenceBanner = () => {
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16 sm:py-20">
       {/* Animated background effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
-      </div>
+        <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"</div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
@@ -68,13 +66,10 @@ const October2025InfrastructureExcellenceBanner = () => {
                 className="group relative overflow-hidden rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:scale-105 hover:shadow-2xl"
               >
                 {/* Gradient accent */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                
-                <div className="relative">
+                <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} <div className="relative">
                   {/* Icon */}
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${article.gradient} mb-4`}>
-                    <Icon className="h-6 w-6 text-white" />
-                  </div>
+                    <Icon className="h-6 w-6 text-white"</div>
 
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">

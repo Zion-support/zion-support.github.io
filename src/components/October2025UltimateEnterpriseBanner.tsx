@@ -26,8 +26,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Ultimate Enterprise AI
             </span>
-            <br
-            <span className="text-white">Revolution 2025</span>
+            <br <span className="text-white">Revolution 2025</span>
           </h2>
           
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-medium">
@@ -110,8 +109,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-                  <MessageSquare className="w-9 h-9 text-white" />
-                </div>
+                  <MessageSquare className="w-9 h-9 text-white"</div>
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-3">

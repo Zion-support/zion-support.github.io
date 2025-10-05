@@ -4,14 +4,10 @@ const October2025NewAutonomousSystemsBanner = () => {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden">
       {/* Animated background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
       
       {/* Floating particles effect */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header with badge */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full px-4 py-2">
@@ -52,20 +48,16 @@ const October2025NewAutonomousSystemsBanner = () => {
                 </h3>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-300 font-bold">97.3% Operational Automation</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <span className="text-green-300 font-bold">97.3% Operational Automation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-blue-300 font-bold">89% Infrastructure Cost Reduction</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" <span className="text-blue-300 font-bold">89% Infrastructure Cost Reduction</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" />
-                    <span className="text-purple-300 font-bold">$847M Annual Value Creation</span>
+                    <div className="w-2 h-2 bg-purple-400 rounded-full animate-pulse" <span className="text-purple-300 font-bold">$847M Annual Value Creation</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                    <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" <span className="text-yellow-300 font-bold">99.997% Availability Achieved</span>
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">
@@ -106,20 +98,16 @@ const October2025NewAutonomousSystemsBanner = () => {
                 </h3>
                 <div className="space-y-2 mb-4">
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <span className="text-green-300 font-bold">99.2% Failure Prediction Accuracy</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" <span className="text-green-300 font-bold">99.2% Failure Prediction Accuracy</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
-                    <span className="text-cyan-300 font-bold">87% Reduction in Downtime</span>
+                    <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" <span className="text-cyan-300 font-bold">87% Reduction in Downtime</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" />
-                    <span className="text-blue-300 font-bold">$127M Annual Value</span>
+                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" <span className="text-blue-300 font-bold">$127M Annual Value</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" />
-                    <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse" <span className="text-yellow-300 font-bold">30-Day Advance Warning</span>
                   </div>
                 </div>
                 <p className="text-blue-200 text-sm mb-4">

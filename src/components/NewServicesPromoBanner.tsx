@@ -38,7 +38,7 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
 
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {services.map((service) => (
-              <div>
+              <div
                 key={service.id}
                 className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all hover:scale-105"
               >
@@ -108,8 +108,7 @@ const NewServicesPromoBanner: React.FC<NewServicesPromoBannerProps> = ({
                 to={service.link}
                 className="inline-flex items-center gap-2 text-yellow-300 font-semibold hover:text-yellow-200"
               >
-                Learn More
-              </Link>
+                Learn More</Link>
             </div>
           ))}
         </div>

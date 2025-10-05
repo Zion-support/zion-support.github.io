@@ -101,8 +101,7 @@ const September30MegaBanner2025 = () => {
             className="inline-flex items-center gap-3 mb-8"
           >
             <div className="flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 rounded-full shadow-2xl animate-pulse">
-               style={{ animationDuration: "3s" }} />
-              <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
+               style={{ animationDuration: "3s" }} <span className="text-white font-black text-base tracking-wide">SEPTEMBER 30, 2025 — 8 REVOLUTIONARY BREAKTHROUGHS</span>
 
             </div>
           </motion.div>
@@ -245,8 +244,7 @@ const September30MegaBanner2025 = () => {
             to="/contact"
             className="group border-3 border-white hover:bg-white text-white hover:text-indigo-900 px-12 py-5 rounded-full font-black text-xl transition-all duration-300 hover:scale-110 flex items-center justify-center gap-4 shadow-xl hover:shadow-2xl"
           >
-            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" />
-            <span>Schedule AI Strategy Call</span>
+            <Lightbulb className="w-7 h-7 group-hover:animate-pulse" <span>Schedule AI Strategy Call</span>
           </Link>
         </div>
 
