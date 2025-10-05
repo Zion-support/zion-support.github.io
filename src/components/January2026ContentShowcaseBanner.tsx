@@ -220,12 +220,15 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </ul>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center">
             <Cpu className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4 text-indigo-400">Meta-Cognitive Reasoning</h3>
             <p className="text-gray-300 mb-6">
               Self-aware AI systems with introspection capabilities and the ability to reason about their own reasoning processes.
 =======
+=======
+>>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
           <div className='bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center'>
             <Cpu className='w-16 h-16 text-indigo-400 mx-auto mb-4' />
             <h3 className='text-2xl font-bold mb-4 text-indigo-400'>
@@ -234,7 +237,10 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             <p className='text-gray-300 mb-6'>
               Self-aware AI systems with introspection capabilities and the
               ability to reason about their own reasoning processes.
+<<<<<<< HEAD
 >>>>>>> b977547e5b27cdf8f529e0a11bdc4cef928db55f
+=======
+>>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
             </p>
             <ul className='space-y-2 text-sm text-gray-400'>
               <li>• 94% reasoning accuracy improvement</li>

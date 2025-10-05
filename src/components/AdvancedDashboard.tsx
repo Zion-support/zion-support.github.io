@@ -136,15 +136,23 @@ const AdvancedDashboard: React.FC = () => {
       },
       accessibility: {
         // Get accessibility stats from manager
+<<<<<<< HEAD
         features: "Accessibility features disabled", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
+=======
+        features: "Basic accessibility features", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
+>>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
       },
       security: {
         // Get security stats from manager
-        status: "Security features disabled", // AdvancedSecurityManager.getInstance() ? "Active" : "Inactive",
+        status: "Active", // AdvancedSecurityManager.getInstance() ? "Active" : "Inactive",
       },
       ux: {
         // Get UX stats from manager
+<<<<<<< HEAD
         status: "UX features disabled", // EnhancedUXManager.getInstance() ? "Active" : "Inactive",
+=======
+        status: "Inactive", // EnhancedUXManager.getInstance() ? "Active" : "Inactive",
+>>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
       },
     });
   };
