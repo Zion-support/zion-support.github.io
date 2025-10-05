@@ -2,16 +2,33 @@ import React, { lazy, Suspense, useState, useEffect } from 'react';
 
 // Define available banners with their import paths
 const bannerComponents = {
-  'ai-innovation': lazy(() => import('./AIInnovationAdvertisingBanner')),
-  'ai-trends': lazy(() => import('./AITrendsInsightsBanner2026')),
-  'ai-cost-optimization': lazy(() => import('./AICostOptimizationBanner')),
-  'breakthrough-content': lazy(() => import('./BreakthroughContent2026Banner')),
-  'comprehensive-promo': lazy(() => import('./ComprehensivePromoBanner')),
-  'advertising': lazy(() => import('./AdvertisingBanner')),
-  'content-showcase': lazy(() => import('./ContentShowcase')),
-  'content-value-testimonials': lazy(() => import('./ContentValueTestimonials')),
-  'december-revolutionary': lazy(() => import('./December2025RevolutionaryContentShowcase')),
-  'cognitive-orchestration': lazy(() => import('./CognitiveOrchestrationMegaBanner'))
+  'january2026-revolutionary': lazy(
+    () => import('./January2026RevolutionaryBanner'),
+  ),
+  'january2026-content-showcase': lazy(
+    () => import('./January2026ContentShowcaseBanner'),
+  ),
+  'january2026-new-content': lazy(
+    () => import('./January2026NewContentShowcaseBanner'),
+  ),
+  'january2026-revolutionary-ai': lazy(
+    () => import('./January2026RevolutionaryAIBanner'),
+  ),
+  'january2026-revolutionary-content': lazy(
+    () => import('./January2026RevolutionaryContentBanner'),
+  ),
+  'january2026-revolutionary-breakthroughs': lazy(
+    () => import('./January2026RevolutionaryBreakthroughsBanner'),
+  ),
+  'new-services-2026': lazy(() => import('./NewServicesPromoBanner2026')),
+  'latest-2026-content': lazy(() => import('./Latest2026ContentBanner')),
+  'breakthrough-content-2026': lazy(() => import('./BreakthroughContent2026Banner')),
+  'enterprise-ai-fall-2025': lazy(() => import('./EnterpriseAIFall2025Banner')),
+  'november-2025-game-changers': lazy(() => import('./November2025GameChangersBanner')),
+  'march-2026-innovation': lazy(() => import('./March2026InnovationSpotlightBanner')),
+  'february-2026-content': lazy(() => import('./February2026ContentShowcaseBanner')),
+  'january-2027-content': lazy(() => import('./January2027ContentAdvertisingBanner')),
+  'january-2027-new-content': lazy(() => import('./January2027NewContentShowcaseBanner')),
 };
 
 type BannerKey = keyof typeof bannerComponents;
@@ -24,19 +41,19 @@ interface BannerRotationManagerProps {
 }
 
 /**
- * BannerRotationManager - Manages the rotation and display of promotional banners
- * 
- * Features:
- * - Lazy loads banner components for better performance
- * - Rotates banners at specified intervals
- * - Limits the number of visible banners
- * - Provides fallback loading states
+ * Banner Rotation Manager Component
+ *
+ * Manages banner display with lazy loading rotation and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
-  banners = [],
+  banners = [
+    'january2026-revolutionary',
+    'january2026-content-showcase',
+    'latest-2026-content',
+  ],
+  interval = 8000,
+  autoRotate = false, // Disabled by default to reduce unnecessary re-renders
   maxBanners = 3,
-  rotationInterval = 10000,
-  className = ''
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
@@ -58,12 +75,27 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);
 
-  if (visibleBanners.length === 0) {
-    return null;
+  if (visibleBanners.length === 0) return null;
+
+  // For non-rotating show all banners
+  if (!autoRotate) {
+    return (
+      <div className='space-y-6'>
+        {visibleBanners.map(bannerKey => {
+          const BannerComponent = bannerComponents[bannerKey];
+          return (
+            <Suspense key={bannerKey} fallback={<LoadingFallback />}>
+              <BannerComponent />
+            </Suspense>
+          );
+        })}
+      </div>
+    );
   }
 
-  const currentBanner = visibleBanners[currentIndex];
-  const BannerComponent = bannerComponents[currentBanner];
+  // For rotating show current banner with controls
+  const currentBannerKey = visibleBanners[currentIndex];
+  const CurrentBanner = bannerComponents[currentBannerKey];
 
   return (
     <div className={`banner-rotation-manager ${className}`}>
@@ -77,7 +109,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
       
       {/* Banner indicators */}
       {visibleBanners.length > 1 && (
-        <div className="flex justify-center mt-4 space-x-2">
+        <div className='flex justify-center gap-2 mt-4'>
           {visibleBanners.map((_, index) => (
             <button
               key={index}

@@ -77,7 +77,7 @@ jest.mock('react-helmet-async', () => ({
 }));
 
 // Mock lucide-react icons
-const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
+const mockIcon = (name: string) => `[${name}]`;
 
 jest.mock('lucide-react', () => {
   return {

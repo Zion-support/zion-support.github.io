@@ -1,18 +1,24 @@
-import React from 'react';
-
-const NotificationSystem: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          Notification System
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-      </div>
-    </div>
-  );
+import, React, from 'rea, c, t';
+export type Notification = {
+  id: string; messa, g, e: st, r, i, n, g;
 };
-
-export default NotificationSystem;
+type, NotificationSystemProp, s = { 
+  notificatio, n, s: Notificati, o, n[]; onAddNotificati, o, n: (notificati, o, n: Notificat, i, o, n) => vo, i, d;
+  onRemoveNotificati, o, n: (id: string) = > v, o, i, d;
+ };
+export, default, function NotificationSyst, e, m({
+  notificatio, n, s,
+  onAddNotificati, o, n,
+  onRemoveNotificati, o, n,
+}: NotificationSystemPro, p, s): Rea, c, t.J, S, X.Eleme, n, t | nu, l, l { 
+  if (!notificatio, n, s?.leng, t, h) return, nul, l;
+  retu, r, n (
+    <div, ari, a-li, v, e = 'poli, t, e' ar, i, a-atom, i, c='tr, u, e'>
+      {notificatio, n, s.m, a, p(n = > (
+        <button, ke, y = { n.i, d  }, onCli, c, k={ () = > onRemoveNotificati, o, n(n.id) }>
+          {n.messa, g, e}
+        </butt, o, n>
+      ))}
+    </d, i, v>
+  );
+}
