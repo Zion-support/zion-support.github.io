@@ -1,9 +1,0 @@
-<<<<<<< HEAD:backup-merge-conflicts/ContactFormEnhanced.test.js.backup
-<<<<<<< HEAD
-const React from "react" import { render,screen,fireEvent } from "@testing-library/react" import "@testing-library/jest-dom import ContactFormEnhanced from "./components/ContactFormEnhanced" describe("ContactFormEnhanced",() => {" test("renders without crashing",() => {" render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();" }) test("displays correct content",() => {" render(<ContactFormEnhanced / / />) }) test("handles user interactions",() => {" render(<ContactFormEnhanced / / />) }) test("applies correct styling",() => {" render(<ContactFormEnhanced / / />) }) })'"'"
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
->>>>>>> main
-=======
-import _React from 'react"  import '@testing-library/jest-dom import ContactFormEnhanced from '../components/ContactFormEnhanced" describe('ContactFormEnhanced',() => {' test('renders without crashing',() => {' render(<ContactFormEnhanced / / />) expect(screen.getByTestId("contactformenhanced")).toBeInTheDocument();' }) test('displays correct content',() => {' render(<ContactFormEnhanced / / />) }) test('handles user interactions',() => {' render(<ContactFormEnhanced / / />) }) test('applies correct styling',() => {' render(<ContactFormEnhanced / / />) }) })
->>>>>>> 6f37999110c5d0bd56901bd8a1becc376a5bbb23:__tests__/ContactFormEnhanced.test.js
