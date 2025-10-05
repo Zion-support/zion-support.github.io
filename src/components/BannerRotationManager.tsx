@@ -43,9 +43,8 @@ const LoadingFallback = () => (
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   banners = [
-    'october2025-new-breakthrough',
-    'october2025-tech-breakthrough',
-    'october2025-next-gen-ai',
+    'january2026-revolutionary',
+    'new-services-2026',
   ],
   interval = 8000,
   autoRotate = false, // Disabled by default to reduce unnecessary re-renders
