@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Performance monitoring utilities
 export class PerformanceMonitor {
   private static instance: PerformanceMonitor;
@@ -32,9 +33,20 @@ export class PerformanceMonitor {
       } catch (error) {
         console.warn('PerformanceObserver not supported:', error);
       }
+=======
+// Performance Monitoring Script
+const performanceObserver = new PerformanceObserver(list => {
+  for (const entry of list.getEntries()) {
+    if (entry.entryType === 'navigation') {
+      console.log('Page Load Time:', entry.loadEventEnd - entry.loadEventStart);
+    }
+    if (entry.entryType === 'paint') {
+      console.log('Paint Time:', entry.startTime);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
     }
   }
 
+<<<<<<< HEAD
   private observeResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
@@ -98,3 +110,15 @@ export class PerformanceMonitor {
 }
 
 export default PerformanceMonitor;
+=======
+performanceObserver.observe({ entryTypes: ['navigation', 'paint'] });
+
+// Web Vitals
+import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+
+getCLS(console.log);
+getFID(console.log);
+getFCP(console.log);
+getLCP(console.log);
+getTTFB(console.log);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5

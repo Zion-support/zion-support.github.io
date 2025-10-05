@@ -9,10 +9,16 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+<<<<<<< HEAD
   errorInfo?: ErrorInfo;
 }
 
 class ErrorBoundary extends Component<Props, State> {
+=======
+}
+
+export class ErrorBoundary extends Component<Props, State> {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
   constructor(props: Props) {
     super(props);
     this.state = { hasError: false };
@@ -23,6 +29,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     this.setState({
       error,
       errorInfo
@@ -32,10 +39,14 @@ class ErrorBoundary extends Component<Props, State> {
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
+=======
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       if (this.props.fallback) {
         return this.props.fallback;
       }
@@ -79,6 +90,26 @@ class ErrorBoundary extends Component<Props, State> {
                 </details>
               )}
             </div>
+=======
+      return this.props.fallback || (
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
+            <div className="flex items-center mb-4">
+              <AlertTriangle className="h-8 w-8 text-red-500 mr-3" />
+              <h2 className="text-xl font-semibold text-gray-900">
+                Something went wrong
+              </h2>
+            </div>
+            <p className="text-gray-600 mb-4">
+              We're sorry, but something unexpected happened. Please try refreshing the page.
+            </p>
+            <button
+              onClick={() => window.location.reload()}
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors"
+            >
+              Refresh Page
+            </button>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-c2c5
           </div>
         </div>
       );
