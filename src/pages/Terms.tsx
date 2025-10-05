@@ -12,6 +12,9 @@ const Terms: React.FC = () => {
             <p>These are our terms of service. Please read them carefully.</p>
           </div>
         </div>
-      </main>
-
-      {/* <Footer /> */}
+        </main>
+      </div>
+    );
+  };
+  
+  export default Terms;

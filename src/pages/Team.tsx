@@ -14,7 +14,11 @@ const Team: React.FC = () => {
             <p>Meet the talented individuals behind Zion Tech Group.</p>
           </div>
         </div>
-      </main>
-      
-      {/* <Footer /> */}
-    </div>
+        </main>
+        
+        {/* <Footer /> */}
+      </div>
+    );
+  };
+  
+  export default Team;

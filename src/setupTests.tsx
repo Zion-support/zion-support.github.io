@@ -34,4 +34,3 @@ global.console = {
   warn: jest.fn(),
   error: jest.fn(),
 };
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d

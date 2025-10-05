@@ -15,3 +15,14 @@ const Home: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with cutting-edge artificial intelligence and innovative technology solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      {/* <Footer /> */}
+    </div>
+  );
+};
+
+export default Home;

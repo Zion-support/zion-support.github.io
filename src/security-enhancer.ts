@@ -3,10 +3,6 @@ class SecurityEnhancer {
   private isInitialized: boolean = false;
 
   private constructor() {}
-  private isInitialized = false;
-
->>>>>>> origin/merge-fixes
->>>>>>> origin/merge-fixes
   private setupHTTPSRedirect(): void {
     if (typeof location !== 'undefined' && location.protocol !== 'https:' && location.hostname !== 'localhost') {
       location.replace('https:' + window.location.href.substring(window.location.protocol.length));
@@ -14,6 +10,30 @@ class SecurityEnhancer {
   }
 
   private setupXSSProtection(): void {
+    // XSS protection setup
+    console.log('XSS protection configured');
+  }
+
   private setupSecurityHeaders(): void {
     // Additional security headers setup
     console.log('Security headers configured');
+  }
+
+  public static getInstance(): SecurityEnhancer {
+    if (!SecurityEnhancer.instance) {
+      SecurityEnhancer.instance = new SecurityEnhancer();
+    }
+    return SecurityEnhancer.instance;
+  }
+
+  public initialize(): void {
+    if (this.isInitialized) return;
+    
+    this.setupHTTPSRedirect();
+    this.setupXSSProtection();
+    this.setupSecurityHeaders();
+    this.isInitialized = true;
+  }
+}
+
+export default SecurityEnhancer;

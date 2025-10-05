@@ -28,9 +28,7 @@ const Header: React.FC = () => {
             </Link>
           </nav>
         </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/merge-fixes
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {isMenuOpen && (
           <div className="md:hidden">
@@ -49,5 +47,11 @@ const Header: React.FC = () => {
               </a>
             </div>
           </div>
-        )}
->>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
+          )}
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default Header;

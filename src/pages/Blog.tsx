@@ -12,6 +12,9 @@ const Blog: React.FC = () => {
             <p>Welcome to our blog. Stay tuned for the latest insights on AI and technology.</p>
           </div>
         </div>
-      </main>
-
-      {/* <Footer /> */}
+        </main>
+      </div>
+    );
+  };
+  
+  export default Blog;
