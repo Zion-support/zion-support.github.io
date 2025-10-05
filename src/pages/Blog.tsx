@@ -13,7 +13,6 @@ const Blog: React.FC = () => {
           </div>
         </div>
       </main>
-
       {/* <Footer /> */}
     </div>
   );

@@ -1,34 +1,11 @@
 import React from 'react';
-<<<<<<< HEAD
-
-const SuccessStoriesShowcase: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          Success Stories Showcase
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-      </div>
-    </div>
-  );
-};
-
-export default SuccessStoriesShowcase;
-=======
 import { Link } from 'react-router-dom';
 const SuccessStoriesShowcase: React.FC = () => {
   const stories = [
     {
       company: "TechCorp International",
       industry: "Technology",
-<<<<<<< HEAD
-      icon: '🚀',
-=======
       icon: <TrendingUp className="w-8 h-8" />,
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
       result: "300% Revenue Growth",
         description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",
       metrics: [
@@ -127,4 +104,3 @@ key={index}
   );
 };
 export default SuccessStoriesShowcase;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163

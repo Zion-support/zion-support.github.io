@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-const September30NewContentMegaBanner: React.FC = () => {
-  return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">
-          September30 New Content Mega Banner
-        </h2>
-        <p className="text-lg mb-6">
-          This component is being restored. Please check back later for full functionality.
-        </p>
-=======
 import { Link } from "react-router-dom";
 const September30NewContentMegaBanner = () => {
   const newArticles = [
@@ -86,13 +72,8 @@ const September30NewContentMegaBanner = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
-<<<<<<< HEAD
-                  <article.icon className="w-6 h-6" />
-                </div>
-=======
                     <article.icon className="w-6 h-6" />
                   </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-9d61
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
@@ -180,14 +161,8 @@ const September30NewContentMegaBanner = () => {
             📚 AI Education
           </span>
         </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163
       </div>
     </div>
   );
 };
-<<<<<<< HEAD
-
 export default September30NewContentMegaBanner;
-=======
-export default September30NewContentMegaBanner;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3163

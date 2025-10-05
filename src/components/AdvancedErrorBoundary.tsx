@@ -3,6 +3,32 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
@@ -25,23 +51,16 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo,
+      errorInfo
     });
 
-    // Log error to console
-    console.error('Error caught by boundary:', error, errorInfo);
-
-    // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Send to error tracking service if available
-    if (typeof window !== 'undefined' && 'gtag' in window) {
-      (window as any).gtag('event', 'exception', {
-        description: error.toString(),
-        fatal: false,
-      });
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
     }
   }
 
@@ -49,25 +68,32 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         this.props.fallback || (
-          <div className="error-boundary p-8 text-center">
-            <h2 className="text-2xl font-bold text-red-600 mb-4">
+          <div className="error-boundary p-6 bg-red-50 border border-red-200 rounded-lg">
+            <h2 className="text-lg font-semibold text-red-800 mb-2">
               Something went wrong
             </h2>
-            <details className="text-left bg-gray-100 p-4 rounded">
-              <summary className="cursor-pointer font-semibold">
-                Error Details
-              </summary>
-              <pre className="mt-2 text-sm text-gray-700 whitespace-pre-wrap">
-                {this.state.error && this.state.error.toString()}
-                {this.state.errorInfo && this.state.errorInfo.componentStack}
-              </pre>
+            <details className="text-sm text-red-700">
+              <summary className="cursor-pointer mb-2">Error details</summary>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
+            </detai, l, s>
+          </d, i, v>
+      errorInfo
+    });
+  }
+
+  render() { 
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || (
+          <div className="error-boundary">
+            <h2>Something went wrong.</h2>
+            <details style={{ whiteSpace: 'pre-wrap' }}>
+              {this.state.error && this.state.error.toString()}
+              <br />
+              {this.state.errorInfo?.componentStack}
             </details>
-            <button
-              onClick={() => window.location.reload()}
-              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              Reload Page
-            </button>
           </div>
         )
       );
@@ -77,4 +103,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 }
 
+    return this.props.children;
+  }
+}
+
+export default AdvancedErrorBoundary;
 export default AdvancedErrorBoundary;

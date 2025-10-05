@@ -1,5 +1,5 @@
 import React from 'react';
-// import Footer from '../components/Footer';
+      {/* <Footer /> */}
 
 const Contact: React.FC = () => {
   return (
@@ -13,7 +13,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </main>
-
       {/* <Footer /> */}
     </div>
   );
