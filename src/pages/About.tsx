@@ -1,349 +1,135 @@
-impo, r, t {
-  ArrowRig, h, t,
-  Awa, r, d,
-  CheckCirc, l, e,
-  Glo, b, e,
-  Lightbu, l, b,
-  Shie, l, d,
-  Targ, e, t,
-  Use, r, s,
-  Z, a, p,
-} fr, o, m 'luci, d, e-rea, c, t';
-import, React, from 'rea, c, t';
+import React from 'react';
+import { ArrowRight, Award, CheckCircle, Globe, Users } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-
-const, Abou, t: Rea, c, t.FC = () => {
-  const, value, s = [
-    {
-      ic, o, n: Light, b, u, l, b,
-      tit, l, e: 'Innovat, i, o, n',
-      descripti, o, n: 'We, stay, at the, forefront, of technol, o, g, y, constantly, exploring, new solutions, and, methodologies.',
-    },
-    {
-      ic, o, n: Shi, e, l, d,
-      tit, l, e: 'Tru, s, t & Secur, i, t, y',
-      descripti, o, n: 'Your, data, and projects, are, protected with, enterpris, e-grade, security, measures and, best, practice, s.',
-    },
-    {
-      ic, o, n: Us, e, r, s,
-      tit, l, e: 'Collaborat, i, o, n',
-      descripti, o, n: 'We, work, closely with, our, clients as, partne, r, s, ensuring, alignment, with your, business, goals.',
-    },
-    {
-      ic, o, n: Tar, g, e, t,
-      tit, l, e: 'Excelle, n, c, e',
-      descripti, o, n: 'We, deliver, high-quality, solutions, that exceed, expectations, and drive, measurable, result, s.',
-    },
-  ]; const, tea, m = [
-    {
-      na, m, e: 'Sarah, John, s, o, n',
-      ro, l, e: 'C, E, O & Foun, d, e, r',
-      experti, s, e: 'AI, Strateg, y & Business, Developme, n, t',
-      experien, c, e: '15+ years, in, AI and, technology, leadershi, p',
-    },
-    {
-      na, m, e: 'Michael, Ch, e, n',
-      ro, l, e: 'CT, O',
-      experti, s, e: 'Technical, Architectur, e & Innovat, i, o, n',
-      experien, c, e: '12+ years, in, software engineering, and, cloud technolog, i, e, s',
-    },
-    {
-      na, m, e: 'Emily, Rodrigu, e, z',
-      ro, l, e: 'Head, of, AI Soluti, o, n, s',
-      experti, s, e: 'Machine, Learnin, g & Data, Scien, c, e',
-      experien, c, e: '10+ years, in, AI research, and, implementatio, n',
-    },
-    {
-      na, m, e: 'David, Thomps, o, n',
-      ro, l, e: 'Lead, DevOps, Enginee, r',
-      experti, s, e: 'Cloud, Infrastructur, e & Automat, i, o, n',
-      experien, c, e: '8+ years, in, DevOps and, infrastructure, managemen, t',
-    },
-  ]; const, achievement, s = [
-    {
-      ic, o, n: A, w, a, r, d,
-      tit, l, e: 'Industry, Recogniti, o, n',
-      descripti, o, n: 'Award, e, d "Best, AI, Solutions Provid, e, r" by, Tech, Innovation Awards, 20, 2, 4',
-    },
-    {
-      ic, o, n: Us, e, r, s,
-      tit, l, e: 'Client, Succe, s, s',
-      descripti, o, n: '5, 0, 0+ successful, projects, delivered across, various, industrie, s',
-    },
-    {
-      ic, o, n: Gl, o, b, e,
-      tit, l, e: 'Global, Rea, c, h',
-      descripti, o, n: 'Serving, clients, in 25+ countries, worldwi, d, e',
-    },
-    {
-      ic, o, n: Za, p,
-      tit, l, e: 'Innovation, Lead, e, r',
-      descripti, o, n: 'First, to, market with, several, breakthrough AI, solutio, n, s',
-    },
-  ]; retu, r, n (
+const About: React.FC = () => {
+  return (
     <>
-      <Helm, e, t>
-        <tit, l, e>
-          About, U, s - Zion, Tech, Group | Leading, A, I & Technology, Solution, s
-        </tit, l, e>
-        <meta, nam, e = 'descripti, o, n'
-          conte, n, t="Learn, about, Zion Tech, Grou, p's, mission, to transform, businesses, through cutti, n, g-edge, AI, and technology, solution, s. Meet, our, expert team, and, discover our, value, s."
-        />
-        <meta, nam, e='keywor, d, s'
-          conte, n, t='abou, t, u, s, AI, compan, y, technology, tea, m, missi, o, n, valu, e, s, leadersh, i, p, innovati, o, n'
-        />
-      </Helm, e, t>
-
-      <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-bl, u, e-50, vi, a-white, t, o-te, a, l-50'>
-        {/* Header, Sectio, n */}
-        <section, classNam, e='bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-600, p, y-20'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r'>
-            <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 6 }}
-            >
-              <h1, classNam, e = 'te, x, t-4xl, m, d: te, x, t-5xl, fon, t-bold, tex, t-white, m, b-6'>
-                About, Zion, Tech Gro, u, p
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission to transform enterprises with AI-powered solutions and digital transformation services." />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* Hero Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-700 text-white py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+                About Zion Tech Group
               </h1>
-              <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, ma, x-w-3xl, m, x-au, t, o'>
-                We're, a, team of, passionate, technologists dedicated, to, transforming businesses, through, innovative AI, and, technology
-                solutions, that, drive real, result, s.
+              <p className="text-xl md:text-2xl mb-8">
+                Leading the transformation of enterprises through AI-powered solutions
+                and digital innovation.
               </p>
-            </moti, o, n.d, i, v>
-          </d, i, v>
-        </secti, o, n>
+            </div>
+          </div>
+        </section>
 
-        {/* Mission, Sect, i, o, n */}
-        <section, classNam, e = 'py-20'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <div, classNam, e='grid, gri, d-co, l, s-1, l, g:gr, i, d-co, l, s-2, ga, p-12, item, s-cent, e, r'>
-              <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, x: -2, 0 }}
-                anima, t, e = {{ opac, i, t, y:  , 1, x:  , 0 }}
-                transiti, o, n = {{ durati, o, n: , 0., 6 }}
-              >
-                <h2, classNam, e = 'te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6'>
-                  Our, Missio, n
-                </h2>
-                <p, classNam, e='te, x, t-lg, tex, t-gr, a, y-600, m, b-6'>
-                  At, Zion, Tech G, r, o, u, p, we, believe, that technology, should, empower
-                  businesses, to, achieve their, full, potential. Our, mission, is to, democratize, access to, cuttin, g-edge, AI, and technology, solution, s, making, them, accessible to, businesses, of all, size, s.
-                </p>
-                <p, classNam, e = 'te, x, t-lg, tex, t-gr, a, y-600, m, b-8'>
-                  We, combine, deep technical, expertise, with business, acumen, to
-                  deliver, solutions, that not, only, meet your, immediate, needs but, also, position you, for, long-term, success, in an, increasingly, digital wor, l, d.
-                </p>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, b, g-bl, u, e-600, tex, t-white, p, x-6, p, y-3, rounde, d-lg, fon, t-semibold, hove, r: bg-bl, u, e-700, transitio, n-colo, r, s'
-                >
-                  Start, Your, Journey
-                  <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-                </Li, n, k>
-              </moti, o, n.d, i, v>
-
-              <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, x: 2, 0 }}
-                anima, t, e = {{ opac, i, t, y:  , 1, x:  , 0 }}
-                transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: 0., 2 }}
-                classNa, m, e = 'bg-white, rounde, d-xl, shado, w-l, g, p-8'
-              >
-                <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-6'>
-                  Our, Visio, n
-                </h3>
-                <div, classNam, e='spa, c, e-y-4'>
-                  <div, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-6 h-6, tex, t-gre, e, n-600, fle, x-shri, n, k-0, m, t-1' />
-                    <d, i, v>
-                      <h4, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>
-                        Transform, Industrie, s
-                      </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>
-                        Revolutionize, how, businesses operate, through, AI and, automatio, n
-                      </p>
-                    </d, i, v>
-                  </d, i, v>
-                  <div, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-6 h-6, tex, t-gre, e, n-600, fle, x-shri, n, k-0, m, t-1' />
-                    <d, i, v>
-                      <h4, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>
-                        Empower, Innovatio, n
-                      </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>
-                        Enable, companies, to innovate, faster, and more, effectivel, y
-                      </p>
-                    </d, i, v>
-                  </d, i, v>
-                  <div, classNam, e='flex, item, s-start, ga, p-3'>
-                    <CheckCircle, classNam, e='w-6 h-6, tex, t-gre, e, n-600, fle, x-shri, n, k-0, m, t-1' />
-                    <d, i, v>
-                      <h4, classNam, e='fo, n, t-semibold, tex, t-gr, a, y-9, 0, 0'>
-                        Drive, Growt, h
-                      </h4>
-                      <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>
-                        Help, businesses, scale and, achieve, sustainable grow, t, h
-                      </p>
-                    </d, i, v>
-                  </d, i, v>
-                </d, i, v>
-              </moti, o, n.d, i, v>
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-
-        {/* Values, Sectio, n */}
-        <section, classNam, e='py-20, b, g-whi, t, e'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 6 }}
-              classNa, m, e = 'te, x, t-center, m, b-16'
-            >
-              <h2, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-                Our, Value, s
-              </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o'>
-                The, principles, that guide, everything, we do, and, shape our, relationships, with clients, and, partners
+        {/* Mission Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Mission</h2>
+              <p className="text-lg text-gray-600 text-center mb-8">
+                To empower enterprises with cutting-edge AI solutions that drive growth,
+                efficiency, and innovation. We believe in the transformative power of
+                technology to solve complex business challenges and create sustainable
+                competitive advantages.
               </p>
-            </moti, o, n.d, i, v>
+            </div>
+          </div>
+        </section>
 
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
-              { valu, e, s.m, a, p((v, a, l, u, e, ind, e, x) = > (
-                <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-                  anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-                  transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: ind, e, x * 0., 1 }}
-                  classNa, m, e = 'te, x, t-cent, e, r'
-                >
-                  <div, classNam, e='w-1, 6, h-16, b, g-bl, u, e-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
-                    <val, u, e.icon, classNam, e='w-8 h-8, tex, t-bl, u, e-6, 0, 0' />
-                  </d, i, v>
-                  <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-3'>
-                    {val, u, e.tit, l, e}
-                  </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-6, 0, 0'>{val, u, e.descripti, o, n}</p>
-                </moti, o, n.di, v>
-              ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-
-        {/* Team, Sectio, n */}
-        <section, classNam, e = 'py-20'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 6 }}
-              classNa, m, e = 'te, x, t-center, m, b-16'
-            >
-              <h2, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-                Meet, Our, Team
-              </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o'>
-                Experienced, professionals, passionate about, delivering, exceptional resul, t, s
-              </p>
-            </moti, o, n.d, i, v>
-
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
-              { te, a, m.m, a, p((me, m, b, e, r, ind, e, x) = > (
-                <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-                  anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-                  transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: ind, e, x * 0., 1 }}
-                  classNa, m, e = 'bg-white, rounde, d-xl, shado, w-l, g, p-6, tex, t-center, hove, r: shad, o, w-xl, transitio, n-shad, o, w'
-                >
-                  <div, classNam, e='w-2, 4, h-24, b, g-gradie, n, t-to-r, fro, m-bl, u, e-500, t, o-purp, l, e-600, rounde, d-full, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
-                    <span, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
-                      { memb, e, r.na, m, e
-                        .sp, l, i, t(' ')
-                        .m, a, p(n = > n[, 0])
-                        .j, o, i, n('') }
-                    </sp, a, n>
-                  </d, i, v>
-                  <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2'>
-                    {memb, e, r.na, m, e}
-                  </h3>
-                  <p, classNam, e='te, x, t-bl, u, e-600, fon, t-semibold, m, b-2'>
-                    {memb, e, r.ro, l, e}
+        {/* Values Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Values</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Globe className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Innovation</h3>
+                  <p className="text-gray-600">
+                    We stay at the forefront of technology, constantly exploring new
+                    ways to solve business challenges.
                   </p>
-                  <p, classNam, e='te, x, t-gr, a, y-600, tex, t-sm, m, b-2'>
-                    {memb, e, r.experti, s, e}
+                </div>
+                <div className="text-center">
+                  <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Collaboration</h3>
+                  <p className="text-gray-600">
+                    We work closely with our clients as partners, ensuring solutions
+                    that truly meet their needs.
                   </p>
-                  <p, classNam, e='te, x, t-gr, a, y-500, tex, t-xs'>{memb, e, r.experien, c, e}</p>
-                </moti, o, n.di, v>
-              ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
-
-        {/* Achievements, Sectio, n */}
-        <section, classNam, e = 'py-20, b, g-whi, t, e'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8'>
-            <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 6 }}
-              classNa, m, e = 'te, x, t-center, m, b-16'
-            >
-              <h2, classNam, e='te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4'>
-                Our, Achievement, s
-              </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-2xl, m, x-au, t, o'>
-                Recognition, and, milestones that, reflect, our commitment, to, excellence
-              </p>
-            </moti, o, n.d, i, v>
-
-            <div, classNam, e='grid, gri, d-co, l, s-1, m, d:gr, i, d-co, l, s-2, l, g:gr, i, d-co, l, s-4, ga, p-8'>
-              { achievemen, t, s.m, a, p((achieve, m, e, n, t, ind, e, x) = > (
-                <moti, o, n.div, ke, y = { in, d, e, x  }, initi, a, l = {{ opac, i, t, y:  , 0, y: 2, 0 }}
-                  anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-                  transiti, o, n = {{ durati, o, n: , 0., 6, del, a, y: ind, e, x * 0., 1 }}
-                  classNa, m, e = 'te, x, t-cent, e, r'
-                >
-                  <div, classNam, e='w-1, 6, h-16, b, g-gre, e, n-100, rounde, d-lg, flex, items-center, justif, y-center, m, x-auto, m, b-4'>
-                    <achieveme, n, t.icon, classNam, e='w-8 h-8, tex, t-gre, e, n-6, 0, 0' />
-                  </d, i, v>
-                  <h3, classNam, e='te, x, t-lg, fon, t-bold, tex, t-gr, a, y-900, m, b-2'>
-                    {achieveme, n, t.tit, l, e}
-                  </h3>
-                  <p, classNam, e='te, x, t-gr, a, y-600, tex, t-sm'>
-                    {achieveme, n, t.descripti, o, n}
+                </div>
+                <div className="text-center">
+                  <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-purple-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">Excellence</h3>
+                  <p className="text-gray-600">
+                    We deliver exceptional results through meticulous attention to
+                    detail and quality.
                   </p>
-                </moti, o, n.di, v>
-              ))}
-            </d, i, v>
-          </d, i, v>
-        </secti, o, n>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        {/* CTA, Sectio, n */}
-        <section, classNam, e = 'py-20, b, g-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-purp, l, e-6, 0, 0'>
-          <div, classNam, e='m, a, x-w-7xl, m, x-auto, p, x-4, s, m: px-6, l, g:px-8, tex, t-cent, e, r'>
-            <moti, o, n.div, initia, l={{ opac, i, t, y: , 0, y: 2, 0 }}
-              anima, t, e = {{ opac, i, t, y:  , 1, y:  , 0 }}
-              transiti, o, n = {{ durati, o, n: , 0., 6 }}
+        {/* Stats Section */}
+        <section className="py-16">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl font-bold text-center mb-12">Our Impact</h2>
+              <div className="grid md:grid-cols-4 gap-8 text-center">
+                <div>
+                  <div className="text-4xl font-bold text-blue-600 mb-2">500+</div>
+                  <div className="text-gray-600">Projects Delivered</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-green-600 mb-2">99.9%</div>
+                  <div className="text-gray-600">Uptime Guarantee</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-purple-600 mb-2">24/7</div>
+                  <div className="text-gray-600">Expert Support</div>
+                </div>
+                <div>
+                  <div className="text-4xl font-bold text-orange-600 mb-2">$2M+</div>
+                  <div className="text-gray-600">Cost Savings</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Work With Us?
+            </h2>
+            <p className="text-xl mb-8">
+              Let's discuss how we can help transform your enterprise.
+            </p>
+            <a
+              href="/contact"
+              className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg text-lg transition-colors duration-300 inline-flex items-center"
             >
-              <h2, classNam, e = 'te, x, t-3xl, m, d: te, x, t-4xl, fon, t-bold, tex, t-white, m, b-4'>
-                Ready, to, Work Togeth, e, r?
-              </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-bl, u, e-100, m, b-8, ma, x-w-2xl, m, x-au, t, o'>
-                L, e, t's, discuss, how we, can, help transform, your, business with, innovative, technology solutio, n, s.
-              </p>
-              <div, classNam, e='flex, fle, x-col, s, m:fl, e, x-row, ga, p-4, justif, y-cent, e, r'>
-                <Link, t, o='/conta, c, t'
-                  classNa, m, e='bg-white, tex, t-bl, u, e-600, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-gr, a, y-100, transitio, n-colors, flex, items-center, justif, y-cent, e, r'
-                >
-                  Get, in, Touch
-                  <ArrowRight, classNam, e='w-5 h-5, m, l-2' />
-                </Li, n, k>
-                <Link, t, o='/servic, e, s'
-                  classNa, m, e='border, borde, r-white, tex, t-white, p, x-8, p, y-3, rounde, d-lg, fon, t-semibold, hove, r:bg-bl, u, e-700, transitio, n-colo, r, s'
-                >
-                  View, Our, Services
-                </Li, n, k>
-              </d, i, v>
-            </moti, o, n.d, i, v>
-          </d, i, v>
-        </secti, o, n>
-      </d, i, v>
+              Get In Touch
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </section>
+      </div>
     </>
   );
 };
 
-export, default, About;
+export default About;
