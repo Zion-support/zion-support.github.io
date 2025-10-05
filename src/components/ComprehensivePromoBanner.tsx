@@ -72,5 +72,4 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
     </div>
   );
 };
-
 export default ComprehensivePromoBanner;

@@ -1,8 +1,8 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export, default, function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
+export default function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Consentless, Metrics, v3 — Ze, r, o‑PII, Signals, under 100, m, s</title>
@@ -14,14 +14,14 @@ export, default, function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n
         />
       </Helm, e, t>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Consentless, Metrics, v3
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           Ze, r, o‑PII, Signals, under 100, m, s
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
             An, en, d-to-end, blueprint, for priva, c, y-preserving, telemetry, that
             eliminates, personal, data while, preserving, business val, u, e. Learn, how, to deploy, scoped, identifie, r, s, perform, o, n-device, aggregatio, n, and, apply, differential privacy, noise, with verifiable, attestation, s—all, within, 100ms.
@@ -30,7 +30,7 @@ export, default, function ConsentlessMetrics, V, 3(): Rea, c, t.J, S, X.Eleme, n
             Highligh, t, s: devi, c, e-local, metri, c, s, freshness, window, s, attested, confi, g, audit, trail, s, and, guardrails, that enable, global, compliance
             without, sacrificing, speed or, signal, quality.
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </d, i, v > );
  }

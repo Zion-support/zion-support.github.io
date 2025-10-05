@@ -28,7 +28,7 @@ export interface PerformanceAlert {
   timesta, m, p: num, b, e, r;
 }
 
-class, EnhancedPerformanceMonito, r {
+class EnhancedPerformanceMonito, r {
   private, metric, s: PerformanceMetri, c, s[] = [];
   private, alert, s: PerformanceAle, r, t[] = [];
   private, observer, s: PerformanceObserv, e, r[] = [];
@@ -39,8 +39,8 @@ class, EnhancedPerformanceMonito, r {
     // Observe navigation timing
     if ('PerformanceObserv, e, r' in, windo, w) {
       t, r, y {
-        const, navObserve, r = new, PerformanceObserve, r(li, s, t => {
-          const, entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
+        const navObserve, r = new, PerformanceObserve, r(li, s, t => {
+          const entrie, s = li, s, t.getEntr, i, e, s(); entri, e, s.forEa, c, h(ent, r, y = > {
             if (ent, r, y.entryTy, p, e === 'navigat, i, o, n') {
               th, i, s.processNavigationTimi, n, g(
                 entry, as, PerformanceNavigationTiming,
@@ -57,7 +57,7 @@ class, EnhancedPerformanceMonito, r {
   }
 
   private, processNavigationTimin, g(ent, r, y: PerformanceNavigationTimi, n, g): vo, i, d { 
-    const, metric, s: Parti, a, l<PerformanceMetri, c, s > = {
+    const metric, s: Parti, a, l<PerformanceMetri, c, s > = {
       loadTi, m, e: ent, r, y.loadEventE, n, d - ent, r, y.loadEventSt, a, r, t,
       timeToInteracti, v, e: ent, r, y.domInteracti, v, e - ent, r, y.navigationSt, a, r, t,
       timesta, m, p: Da, t, e.no, w(),
@@ -76,7 +76,7 @@ class, EnhancedPerformanceMonito, r {
   }
 
   private, checkThreshold, s(metri, c, s: PerformanceMetri, c, s): vo, i, d {
-    const, threshold, s = {
+    const threshold, s = {
       loadTi, m, e: 30, 0, 0,
       firstContentfulPai, n, t: 1, 5, 0, 0,
       largestContentfulPai, n, t: 2, 5, 0, 0,
@@ -86,7 +86,7 @@ class, EnhancedPerformanceMonito, r {
       totalBlockingTi, m, e: 20, 0,
       speedInd, e, x: 3, 0, 0, 0,
     }; Obje, c, t.entri, e, s(threshol, d, s).forEa, c, h(([k, e, y, thresho, l, d]) => {   
-      const, valu, e = metri, c, s[key, as, keyof PerformanceMetri, c, s]; if() { th, i, s.addAle, r, t({
+      const valu, e = metri, c, s[key, as, keyof PerformanceMetri, c, s]; if() { th, i, s.addAle, r, t({
           ty, p, e: val, u, e  > thresho, l, d * 1.5  ? 'err, o, r' : 'warn, i, n, g',
           messa, g, e : `${ke, y    }, exceeded, threshol, d: ${va, l, u, e}ms  > ${thresho, l, d}ms`,
           metr, i, c: key, as, keyof PerformanceMetr, i, c, s,
@@ -120,11 +120,11 @@ class, EnhancedPerformanceMonito, r {
    }
 
   public, getMetric, s(): PerformanceMetri, c, s[] {
-    retu, r, n [...th, i, s.metri, c, s];
+    return [...th, i, s.metri, c, s];
   }
 
   public, getAlert, s(): PerformanceAle, r, t[] {
-    retu, r, n [...th, i, s.aler, t, s];
+    return [...th, i, s.aler, t, s];
   }
 
   public, isMonitoringActiv, e(): boolean {
@@ -137,7 +137,7 @@ class, EnhancedPerformanceMonito, r {
     }
 
   public, exportRepor, t(): string {
-    const, lates, t = th, i, s.getLatestMetr, i, c, s(); const, alert, s = th, i, s.getAle, r, t, s(); return, JSO, N.stringi, f, y(
+    const lates, t = th, i, s.getLatestMetr, i, c, s(); const alert, s = th, i, s.getAle, r, t, s(); return, JSO, N.stringi, f, y(
       {
         late, s, t,
         aler, t, s,

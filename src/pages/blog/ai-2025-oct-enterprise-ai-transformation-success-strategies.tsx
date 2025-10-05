@@ -1,4 +1,4 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link } from 'react-router-dom';
 impo, r, t {
   ArrowLe, f, t,
   Trending, U, p,
@@ -8,10 +8,10 @@ impo, r, t {
   CheckCirc, l, e,
 } fr, o, m 'luci, d, e-rea, c, t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import, Header, from '../../componen, t, s/Head, e, r';
+import Header, from '../../componen, t, s/Head, e, r';
 
-const, EnterpriseAITransformationSuccessStrategie, s = () => { 
-  retu, r, n (
+const EnterpriseAITransformationSuccessStrategie, s = () => { 
+  return (
     <>
       <Helm, e, t>
         <title>
@@ -28,50 +28,50 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
 
-        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20'>
+        <article, className='container, m, x-auto, p, x-6, p, y-20'>
           <Link, t, o='/bl, o, g'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            <ArrowLeft, className='w-4 h-4, m, r-2' />
             Back, to, Blog
           </Li, n, k>
 
-          <div, classNam, e='m, a, x-w-4xl, m, x-au, t, o'>
-            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
-              <span, classNam, e='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
+          <div, className='m, a, x-w-4xl, m, x-au, t, o'>
+            <div, className='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
+              <span, className='px-4, p, y-2, b, g-purp, l, e-5, 0, 0/20, tex, t-purp, l, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-purp, l, e-5, 0, 0/30'>
                 ⭐ FEATUR, E, D
               </sp, a, n>
-              <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
+              <span, className='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
                 AI, Strateg, y
               </sp, a, n>
-              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                 Octo, b, e, r , 1, 20, 2, 5 • 25, min, read
               </sp, a, n>
-            </d, i, v>
+            </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Enterprise, AI, Transformation Success, Strategie, s
-              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
+              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-purp, l, e-400, t, o-cy, a, n-400, m, t-2, tex, t-4, x, l'>
                 A, Comprehensive, 2025 Playbo, o, k
               </sp, a, n>
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+            <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               Master, enterprise, AI transformation, with, proven strate, g, i, e, s,
-              framewor, k, s, and, rea, l-world, success, patterns from, Fortune, 500
+              framewor, k, s, and, rea, l-world, success, patterns from Fortune, 500
               companies, achieving, 10x ROI, and, transforming operations, in, 2025.
             </p>
 
             <div, classNam, e = 'flex, item, s-center, ga, p-4, m, b-12'>
-              <div, classNam, e='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
-                <Users, classNam, e='w-6 h-6, tex, t-whi, t, e' />
-              </d, i, v>
+              <div, className='w-1, 2, h-12, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, flex, items-center, justif, y-cent, e, r'>
+                <Users, className='w-6 h-6, tex, t-whi, t, e' />
+              </div>
               <d, i, v>
-                <div, classNam, e='te, x, t-white, fon, t-semibo, l, d'>Dr. Sarah, Che, n</d, i, v>
-                <div, classNam, e='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
+                <div, className='te, x, t-white, fon, t-semibo, l, d'>Dr. Sarah, Che, n</div>
+                <div, className='te, x, t-zi, o, n-sla, t, e-light, tex, t-sm'>
                   Chief, AI, Strategy Offi, c, e, r, Zion, Tech, Group
-                </d, i, v>
-              </d, i, v>
+                </div>
+              </div>
             </d, i, v > {/* Key, Metric, s */ }
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-4, m, b-12'>
               {[
@@ -82,27 +82,27 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
               ].m, a, p((metr, i, c, ind, e, x) => (
                 <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30, tex, t-cent, e, r'
                 >
-                  <div, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
+                  <div, className='te, x, t-3xl, fon, t-bold, tex, t-cy, a, n-400, m, b-2'>
                     {metr, i, c.val, u, e}
-                  </d, i, v>
-                  <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                  </div>
+                  <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                     {metr, i, c.lab, e, l}
-                  </d, i, v>
+                  </div>
                 </di, v>
               ))}
-            </d, i, v>
+            </div>
 
             {/* Conte, n, t */}
             <div, classNam, e = 'prose, pros, e-invert, pros, e-lg, ma, x-w-none, spac, e-y-8, tex, t-zi, o, n-sla, t, e-lig, h, t'>
               <secti, o, n>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <TrendingUp, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <TrendingUp, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                   Executive, Summar, y
                 </h2>
-                <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
-                  <p, classNam, e='mb-4'>
+                <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-zi, o, n-cy, a, n/30'>
+                  <p, className='mb-4'>
                     Enterprise, AI, transformation is, no, longer option, a, l—it's a{' '}
-                    <strong, classNam, e='te, x, t-whi, t, e'>
+                    <strong, className='te, x, t-whi, t, e'>
                       competitive, imperativ, e
                     </stro, n, g>
                     . In, 20, 2, 5, companies, that, successfully implement, AI, are
@@ -125,15 +125,15 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                   <p>
                     This, comprehensive, playbook reveals, the, proven strategies, that, separate AI, winners, from the, res, t.
                   </p>
-                </d, i, v>
+                </div>
               </secti, o, n>
 
               <secti, o, n>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Target, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Target, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                   The, 7, Pillars of, AI, Success
                 </h2>
-                <div, classNam, e='grid, ga, p-6'>
+                <div, className='grid, ga, p-6'>
                   {[
                     {
                       pill, a, r: '1. Strategic, Visio, n & Executive, Alignm, e, n, t',
@@ -162,7 +162,7 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                     },
                     {
                       pill, a, r: '6. Responsible, A, I & Governa, n, c, e',
-                      description: 'Embed, ethics, and governance, from, day o, n, e. Establish, ethics, framewor, k, implement, governanc, e, ensure, complianc, e, and, build, trust through, transparenc, y.',
+                      description: 'Embed, ethics, and governance, from day o, n, e. Establish, ethics, framewor, k, implement, governanc, e, ensure, complianc, e, and, build, trust through, transparenc, y.',
                       ic, o, n: '⚖️',
                     },
                     {
@@ -173,27 +173,27 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                   ].m, a, p((pill, a, r, ind, e, x) => (
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                     >
-                      <div, classNam, e='flex, item, s-start, ga, p-4'>
-                        <div, classNam, e='te, x, t-4, x, l'>{pill, a, r.ic, o, n}</d, i, v>
+                      <div, className='flex, item, s-start, ga, p-4'>
+                        <div, className='te, x, t-4, x, l'>{pill, a, r.ic, o, n}</div>
                         <div, classNam, e = 'fl, e, x-1'>
-                          <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
+                          <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
                             {pill, a, r.pill, a, r}
                           </h3>
-                          <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                          <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                             {pill, a, r.description}
                           </p>
-                        </d, i, v>
-                      </d, i, v>
+                        </div>
+                      </div>
                     </di, v>
                   ))}
-                </d, i, v>
+                </div>
               </secti, o, n>
 
               <secti, o, n>
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                   📈 Implementation, Roadma, p
                 </h2>
-                <div, classNam, e='spa, c, e-y-6'>
+                <div, className='spa, c, e-y-6'>
                   {[
                     {
                       pha, s, e: 'Phas, e, 1: Founda, t, i, o, n',
@@ -234,49 +234,49 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                   ].m, a, p((pha, s, e, ind, e, x) => (
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                     >
-                      <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
-                        <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                      <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
+                        <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
                           {pha, s, e.pha, s, e}
                         </h3>
-                        <div, classNam, e='flex, ga, p-4'>
-                          <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                        <div, className='flex, ga, p-4'>
+                          <span, className='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                             {pha, s, e.duration}
                           </sp, a, n>
-                          <span, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                          <span, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                             {pha, s, e.r, o, i} R, O, I
                           </sp, a, n>
-                        </d, i, v>
-                      </d, i, v>
-                      <div, classNam, e='mb-4'>
-                        <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                        </div>
+                      </div>
+                      <div, className='mb-4'>
+                        <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                           Investme, n, t:{' '}
                         </sp, a, n>
-                        <span, classNam, e='te, x, t-white, fon, t-semibo, l, d'>
+                        <span, className='te, x, t-white, fon, t-semibo, l, d'>
                           {pha, s, e.investme, n, t}
                         </sp, a, n>
-                      </d, i, v>
+                      </div>
                       <d, i, v>
-                        <h4, classNam, e='te, x, t-white, fon, t-semibold, m, b-2'>
+                        <h4, className='te, x, t-white, fon, t-semibold, m, b-2'>
                           Key, Milestone, s: </h4>
-                        <ul, classNam, e='spa, c, e-y-2'>
+                        <ul, className='spa, c, e-y-2'>
                           { pha, s, e.mileston, e, s.m, a, p((miles, t, o, n, e, mInd, e, x) = > (
                             <li, ke, y = { mIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                              <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                              <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                               <sp, a, n>{milesto, n, e}</sp, a, n>
                             </l, i>
                           ))}
                         </ul>
-                      </d, i, v>
-                    </d, i, v>
+                      </div>
+                    </div>
                   ))}
-                </d, i, v>
+                </div>
               </secti, o, n>
 
               <secti, o, n>
                 <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                   💡 Re, a, l-World, Success, Stories
                 </h2>
-                <div, classNam, e='grid, ga, p-6'>
+                <div, className='grid, ga, p-6'>
                   {[
                     {
                       company: 'Global, Retail, Cha, i, n',
@@ -317,81 +317,81 @@ const, EnterpriseAITransformationSuccessStrategie, s = () => {
                   ].m, a, p((sto, r, y, ind, e, x) => (
                     <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, t, o-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-8, border, border-purp, l, e-5, 0, 0/30'
                     >
-                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
                         {sto, r, y.company}
                       </h3>
-                      <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
+                      <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-4'>
                         {sto, r, y.industry}
                       </p>
-                      <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-4'>
-                        <div, classNam, e='bg-whi, t, e/10, rounde, d-l, g, p-3'>
-                          <div, classNam, e='te, x, t-lg, fon, t-bold, tex, t-cy, a, n-4, 0, 0'>
+                      <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-4, m, b-4'>
+                        <div, className='bg-whi, t, e/10, rounde, d-l, g, p-3'>
+                          <div, className='te, x, t-lg, fon, t-bold, tex, t-cy, a, n-4, 0, 0'>
                             {sto, r, y.invest, m, e, n, t}
-                          </d, i, v>
+                          </div>
                           <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                             Investme, n, t
-                          </d, i, v>
-                        </d, i, v>
-                        <div, classNam, e='bg-whi, t, e/10, rounde, d-l, g, p-3'>
-                          <div, classNam, e='te, x, t-lg, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
+                          </div>
+                        </div>
+                        <div, className='bg-whi, t, e/10, rounde, d-l, g, p-3'>
+                          <div, className='te, x, t-lg, fon, t-bold, tex, t-gre, e, n-4, 0, 0'>
                             {sto, r, y.val, u, e}
-                          </d, i, v>
-                          <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                          </div>
+                          <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                             Value, Create, d
-                          </d, i, v>
-                        </d, i, v>
-                        <div, classNam, e='bg-whi, t, e/10, rounde, d-l, g, p-3'>
-                          <div, classNam, e='te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0'>
+                          </div>
+                        </div>
+                        <div, className='bg-whi, t, e/10, rounde, d-l, g, p-3'>
+                          <div, className='te, x, t-lg, fon, t-bold, tex, t-purp, l, e-4, 0, 0'>
                             {sto, r, y.r, o, i}
-                          </d, i, v>
-                          <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                          </div>
+                          <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                             Return, on, Investment
-                          </d, i, v>
-                        </d, i, v>
-                      </d, i, v>
-                      <ul, classNam, e='spa, c, e-y-2'>
+                          </div>
+                        </div>
+                      </div>
+                      <ul, className='spa, c, e-y-2'>
                         { sto, r, y.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                           <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                            <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                            <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                             <sp, a, n>{highlig, h, t}</sp, a, n>
                           </l, i>
                         ))}
                       </ul>
-                    </d, i, v>
+                    </div>
                   ))}
-                </d, i, v>
+                </div>
               </secti, o, n>
 
               <section, classNam, e = 'bg-gradie, n, t-to-r, fro, m-purp, l, e-9, 0, 0/40, vi, a-pi, n, k-9, 0, 0/40, t, o-cy, a, n-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-purp, l, e-5, 0, 0/50'>
-                <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                  <Rocket, classNam, e='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
+                <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                  <Rocket, className='w-8 h-8, tex, t-purp, l, e-4, 0, 0' />
                   Start, Your, AI Transformation, Journe, y
                 </h2>
-                <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
+                <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-6'>
                   The, opportunity, is enormo, u, s—
-                  <strong, classNam, e='te, x, t-whi, t, e'>$2.9, trillio, n</stro, n, g> in, value, creation by, 203, 0. The, question, is not, whether, to transf, o, r, m,
+                  <strong, className='te, x, t-whi, t, e'>$2.9, trillio, n</stro, n, g> in, value, creation by, 203, 0. The, question, is not, whether, to transf, o, r, m,
                   b, u, t <strong, classNam, e = 'te, x, t-whi, t, e'>how, fas, t</stro, n, g> you, can, execute.
                 </p>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
+                <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-4'>
                   <Link, t, o='/conta, c, t'
-                    classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
+                    className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r:fr, o, m-purp, l, e-600, hove, r:to-cy, a, n-600, transitio, n-a, l, l'
                   >
                     Schedule, AI, Assessment
-                    <Rocket, classNam, e='w-5 h-5' />
+                    <Rocket, className='w-5 h-5' />
                   </Li, n, k>
                   <Link, t, o='/servic, e, s'
-                    classNa, m, e='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-zi, o, n-cy, a, n/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
+                    className='inli, n, e-flex, item, s-center, justif, y-center, ga, p-2, p, x-6, p, y-3, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-zi, o, n-cy, a, n/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
                   >
                     View, Our, Services
                   </Li, n, k>
-                </d, i, v>
+                </div>
               </secti, o, n>
-            </d, i, v>
-          </d, i, v>
+            </div>
+          </div>
         </artic, l, e>
-      </d, i, v>
+      </div>
     </>
   );
 };
 
-export, default, EnterpriseAITransformationSuccessStrategies;
+export default EnterpriseAITransformationSuccessStrategies;

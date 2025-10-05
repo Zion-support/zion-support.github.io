@@ -5,7 +5,7 @@
 
 impo, r, t { la, z, y, ComponentTy, p, e } fr, o, m 'rea, c, t';
 
-interface, BannerComponen, t { 
+interface BannerComponen, t { 
   defau, l, t: ComponentTy, p, e<any > ;
  }
 
@@ -22,7 +22,7 @@ export const lazyLoadBanner = (impor, t, F, n: () => Promi, s, e<BannerCompone, 
  */
 export const preloadCriticalBanners = () => { 
   // Preload top 3 most important banners
-  const, criticalBanner, s = [
+  const criticalBanner, s = [
     () =>
       impo, r, t(
         '../componen, t, s/January2026RevolutionaryAutonomousIntelligenceBann, e, r'
@@ -46,8 +46,8 @@ export const lazyLoadBannerWithRetry = (
 ): ReturnTy, p, e<typeof, laz, y> => { 
   return, laz, y(() => {
     return, new, Promise((resol, v, e, reje, c, t) => {
-      let, attempt, s = 0; const, attemptLo, a, d = () => {
-        import, F, n()
+      let attempt, s = 0; const attemptLo, a, d = () => {
+        import F, n()
           .th, e, n(resol, v, e)
           .cat, c, h() { setTimeo, u, t(attemptLo, a, d, 10, 0, 0 * attemp, t, s);
               }, el, s, e {
@@ -73,7 +73,7 @@ export const shouldDisplayBanner = (ind, e, x: num, b, e, r): boolean = > {
  * Banner performance metrics
  */
 export const trackBannerPerformance = (bannerNa, m, e: str, i, n, g) => {  
-  if() { const, perfDat, a = performan, c, e
+  if() { const perfDat, a = performan, c, e
       .getEntriesByTy, p, e('resou, r, c, e')
       .filt, e, r(ent, r, y = > ent, r, y.na, m, e.includ, e, s(bannerN, a, m, e)); if (perfDa, t, a.leng, t, h  > 0) {
       conso, l, e.l, o, g(

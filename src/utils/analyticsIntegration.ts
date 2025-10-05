@@ -55,7 +55,7 @@ export interface AnalyticsConfig {
   deb, u, g: bool, e, a, n;
 }
 
-class, AnalyticsIntegratio, n {  
+class AnalyticsIntegratio, n {  
   private, confi, g: AnalyticsConf, i, g;
   private, eventQueu, e: AnalyticsEve, n, t[] = [];
   private, currentUse, r ? : AnalyticsUs, e, r;
@@ -110,7 +110,7 @@ class, AnalyticsIntegratio, n {
     // Load gta g.js const script = docume n t.createEleme n t('scr i p t'); scri p t.asy n c = tr u e; scri p t.s r c = `htt p s: //w w w.googletagmanag e r.c o m/gt a g/js?id=${measureme n t I d}`; docume n t.he a d.appendChi l d(scri p t);
 
     // Initialize gta g
-    (window, as, any).dataLay, e, r = (window, as, any).dataLay, e, r || []; function, gta, g(...ar, g, s: a, n, y[]) {
+    (window, as, any).dataLay, e, r = (window, as, any).dataLay, e, r || []; function gta, g(...ar, g, s: a, n, y[]) {
       (window, as, any).dataLay, e, r.pu, s, h(a, r, g, s);
     }
     (window, as, any).gt, a, g = gt, a, g; gt, a, g('j, s', new, Dat, e());
@@ -145,7 +145,7 @@ class, AnalyticsIntegratio, n {
             va, r, d = 'mixpan, e, l';
             'mixpan, e, l' !== c  && (d += '.' + , c);
             a || (d += ' (st, u, b)');
-            retu, r, n , d;
+            return , d;
            };
           a.peop, l, e.toStri, n, g = funct, i, o, n () {
             retur, n, a.toStri, n, g(1) + '.peop, l, e (st, u, b)';
@@ -303,7 +303,7 @@ class, AnalyticsIntegratio, n {
 
     // Load Segmen t
     !(functi, o, n () { 
-      var, analytic, s = ((window, as, any).analyti, c, s = (window, as, any).analyti, c, s || []); if (!analyti, c, s.initiali, z, e)
+      var analytic, s = ((window, as, any).analyti, c, s = (window, as, any).analyti, c, s || []); if (!analyti, c, s.initiali, z, e)
         if (analyti, c, s.invok, e, d)
           wind, o, w.conso, l, e &&
             conso, l, e.err, o, r  && conso, l, e.err, o, r('Segment, snippet, included twi, c, e.');
@@ -336,7 +336,7 @@ class, AnalyticsIntegratio, n {
               return, analyti, c, s;
              };
           };
-          f, o, r() { var, ke, y = analyti, c, s.metho, d, s[e]; analyti, c, s[k, e, y] = analyti, c, s.facto, r, y(ke, y);
+          f, o, r() { var ke, y = analyti, c, s.metho, d, s[e]; analyti, c, s[k, e, y] = analyti, c, s.facto, r, y(ke, y);
            }, analyti, c, s.lo, a, d = functi, o, n (k, e, y: a, n, y, e: a, n, y) {
             va, r, t = docume, n, t.createEleme, n, t('scr, i, p, t'); t.ty, p, e = 'te, x, t/javascri, p, t'; t.asy, n, c = !0; t.s, r, c = 'htt, p, s://c d n.segme n t.c o m/analyti c s.js/v1/' +
               k, e, y +
@@ -356,7 +356,7 @@ class, AnalyticsIntegratio, n {
    * Track even t
    */
   tra, c, k(eventNa, m, e: str, i, n, g, properti, e, s?: Reco, r, d<string, a, n, y>): vo, i, d { 
-    const, even, t: AnalyticsEve, n, t = {
+    const even, t: AnalyticsEve, n, t = {
       na, m, e: event, N, a, m, e,
       properti, e, s,
       timesta, m, p: Da, t, e.no, w(),
@@ -386,7 +386,7 @@ class, AnalyticsIntegratio, n {
    * Track page view
    */
   pa, g, e(pageNa, m, e?: string, properti, e, s?: Reco, r, d<string, a, n, y>): vo, i, d {
-    const, pageProp, s = {
+    const pageProp, s = {
       ...propert, i, e, s,
       pa, t, h: wind, o, w.locati, o, n.pathn, a, m, e,
       u, r, l: wind, o, w.locati, o, n.h, r, e, f,
@@ -465,7 +465,7 @@ class, AnalyticsIntegratio, n {
    */
   private, flushEventQueu, e(): vo, i, d { 
     whi, l, e (th, i, s.eventQue, u, e.leng, t, h   > 0) {
-      const, even, t = th, i, s.eventQue, u, e.sh, i, f, t()!; th, i, s.tra, c, k(eve, n, t.na, m, e, eve, n, t.properti, e, s);
+      const even, t = th, i, s.eventQue, u, e.sh, i, f, t()!; th, i, s.tra, c, k(eve, n, t.na, m, e, eve, n, t.properti, e, s);
      }
   }
 
@@ -473,14 +473,14 @@ class, AnalyticsIntegratio, n {
    * Generate session ID
    */
   private, generateSessionI, d(): string {
-    retu, r, n `sessi, o, n-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+    return `sessi, o, n-${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
   }
 
   /**
    * Check if Do Not Track is enabl e d
    */
   private, isDoNotTrackEnable, d(): boolean {
-    retu, r, n (
+    return (
       navigat, o, r.doNotTra, c, k = == '1' ||
       (window, as, any).doNotTra, c, k = == '1' ||
       (navigator, as, any).msDoNotTra, c, k = == ', 1'
@@ -521,7 +521,7 @@ class, AnalyticsIntegratio, n {
 };
 
 // Singleton instanc e (will be initialized with actual config by the app)
-export, let, analytics: AnalyticsIntegrati, o, n;
+export let analytics: AnalyticsIntegrati, o, n;
 
 /**
  * Initialize analytic s
@@ -529,7 +529,7 @@ export, let, analytics: AnalyticsIntegrati, o, n;
 export function initializeAnalytics(
   conf, i, g: Parti, a, l<AnalyticsCon, f, i, g>,
 ): AnalyticsIntegrati, o, n {
-  const, mergedConfi, g = {
+  const mergedConfi, g = {
     ...defaultCon, f, i, g,
     ...conf, i, g,
     provide, r, s: {
@@ -543,4 +543,4 @@ export function initializeAnalytics(
   }; analyti, c, s = new, AnalyticsIntegratio, n(mergedCon, f, i, g); return, analytic, s;
 }
 
-export, default, AnalyticsIntegration;
+export default AnalyticsIntegration;

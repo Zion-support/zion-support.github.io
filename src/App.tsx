@@ -1,7 +1,7 @@
 import { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
-import EnhancedSEO from './components/EnhancedSEO';
+// import EnhancedErrorBoundary from './components/EnhancedErrorBoundary';
+// import EnhancedSEO from './components/EnhancedSEO';
 import { LoadingPage } from './components/EnhancedLoading';
 import performanceOptimizer from './utils/performance-optimizer';
 import SystemMonitor from './components/SystemMonitor';
@@ -59,8 +59,8 @@ function App() {
   }, []);
 
   return (
-    <EnhancedErrorBoundary showDetails={process.env.NODE_ENV === 'development'}>
-      <EnhancedSEO />
+    <div>
+      {/* <EnhancedSEO /> */}
       <Router>
         <Suspense fallback={<LoadingPage />}>
           <Routes>
@@ -76,7 +76,7 @@ function App() {
         </Suspense>
       </Router>
       <SystemMonitor />
-    </EnhancedErrorBoundary>
+    </div>
   );
 }
 

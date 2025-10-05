@@ -47,7 +47,7 @@ export const sept30BreakthroughArticles: BreakthroughArtic, l, e[] = [
     id: 'neur, a, l-co, d, e-synthes, i, s-2, 0, 2, 5',
     slug: 'neur, a, l-co, d, e-synthes, i, s-2, 0, 2, 5',
     title: 'Neural, Code, Synthesis 20, 2, 5: AI, That, Writes Producti, o, n-Grade, Softwa, r, e',
-    description: 'Revolutionary, AI, systems generating, complete, applications from, natural, language. Achieve, 9, 5% code, correctne, s, s, automatic, testin, g, security, scannin, g, and, deploymen, t. Transform, weeks, of development, into, hours with, neural, code synthes, i, s.',
+    description: 'Revolutionary, AI, systems generating, complete, applications from natural, language. Achieve, 9, 5% code, correctne, s, s, automatic, testin, g, security, scannin, g, and, deploymen, t. Transform, weeks, of development, into, hours with, neural, code synthes, i, s.',
     excerpt: 'AI, generates, production-grade, applications, from plain, English, with 95% accur, a, c, y, tes, t, s, and, security, built-in.',
     author: 'Marcus, Rodrigu, e, z, VP, of, AI Engineeri, n, g',
     date: '20, 2, 5-09-3, 0',
@@ -74,7 +74,7 @@ export const sept30BreakthroughArticles: BreakthroughArtic, l, e[] = [
     tags: ['Computer, Visi, o, n', 'N, L, P', 'Audio, Processin, g', 'Unified, Model, s'],
     featured: t, r, u, e,
     readTime: '20, min, rea, d',
-    impa, c, t: 'Breakthrough, understanding, across all, content, type, s',
+    impa, c, t: 'Breakthrough, understanding, across all, content, type s',
     metri, c, s: {
       improveme, n, t: '98% accuracy, across, modalitie, s',
       r, o, i: '2, 5, 0% better, customer, insight, s',
