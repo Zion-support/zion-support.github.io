@@ -63,7 +63,7 @@
     {
       "branch": "cursor/fix-errors-and-merge-to-main-6ee3",
       "success": true,
-      "method": "direct"
+      "method": "already_merged"
     },
     {
       "branch": "cursor/fix-errors-and-merge-to-main-dc0f",
@@ -102,13 +102,13 @@
     "successful": 19,
     "failed": 0,
     "methods": {
-      "direct": 19,
+      "direct": 18,
       "theirs": 0,
       "ours": 0,
-      "already_merged": 0,
+      "already_merged": 1,
       "not_found": 0,
       "failed": 0
     }
   },
-  "timestamp": "2025-10-05T10:57:37.437Z"
+  "timestamp": "2025-10-05T11:04:47.927Z"
 }
