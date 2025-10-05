@@ -46,6 +46,7 @@ interface BannerRotationManagerProps {
  * Manages banner display with lazy loading rotation and performance optimization
  */
 export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
+<<<<<<< HEAD
   banners = [
     'january2026-revolutionary',
     'january2026-content-showcase',
@@ -54,6 +55,13 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   interval = 8000,
   autoRotate = false, // Disabled by default to reduce unnecessary re-renders
   maxBanners = 3,
+=======
+  banners = [],
+  maxBanners = 3,
+  interval = 5000,
+  autoRotate = true,
+  className = ''
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [visibleBanners, setVisibleBanners] = useState<BannerKey[]>([]);
@@ -68,9 +76,13 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   useEffect(() => {
     if (visibleBanners.length <= 1) return;
 
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % visibleBanners.length);
-    }, rotationInterval);
+    const timer = setInterval(() => {
+      setCurrentIndex(prev => (prev + 1) % visibleBanners.length);
+<<<<<<< HEAD
+    }, interval);
+=======
+      }, interval);
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 
     return () => clearInterval(interval);
   }, [visibleBanners.length, rotationInterval]);

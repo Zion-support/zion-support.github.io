@@ -2,14 +2,21 @@ import React from 'react';
 
 const CognitiveOrchestrationMegaBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-4">
-            Cognitive Orchestration Mega Platform
-          </h2>
-          <p className="text-xl mb-8">
-            Advanced AI orchestration for enterprise-scale operations
+<<<<<<< HEAD
+    <div className='bg-gradient-to-r from-purple-900/40 via-pink-900/40 to-rose-900/40 border-y border-purple-500/20 py-20'>
+      <div className='container mx-auto px-6'>
+        <div className='text-center mb-16'>
+          <div className='inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-rose-500/20 border border-purple-500/30 mb-8'>
+            <span className='text-purple-400 font-bold text-lg tracking-wider uppercase animate-pulse'>
+              🧠 COGNITIVE ORCHESTRATION
+            </span>
+          </div>
+          <h1 className='text-6xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent'>
+            The Future of AI Orchestration
+          </h1>
+          <p className='text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
+            Experience the next generation of AI orchestration that seamlessly coordinates multiple AI systems, 
+            creating intelligent workflows that adapt and evolve in real-time.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
@@ -32,6 +39,17 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
             </div>
           </div>
         </div>
+=======
+    <div className="cognitive-orchestration-mega-banner">
+      <div className="banner-content">
+        <h2>Cognitive Orchestration Mega Banner</h2>
+        <p>
+          Discover advanced cognitive orchestration solutions and AI-powered systems.
+        </p>
+        <Link to="/services/cognitive-orchestration">
+          Learn More
+        </Link>
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
       </div>
     </div>
   );

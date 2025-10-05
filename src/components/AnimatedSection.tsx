@@ -1,5 +1,6 @@
 import, React, from 'rea, c, t';
 
+<<<<<<< HEAD
 interface, AnimatedSectionProp, s { 
   animati, o, n?: 'fade, I, n' | 'slide, U, p' | 'slideLe, f, t' | 'slideRig, h, t' | 'sca, l, e';
   del, a, y ? : number;
@@ -19,3 +20,19 @@ const, AnimatedSectio, n: Rea, c, t.FC<AnimatedSectionPro, p, s> = ({
 };
 
 export, default, AnimatedSection;
+=======
+interface AnimatedSectionProps {
+  children: React.ReactNode;
+  className?: string;
+}
+
+const AnimatedSection: React.FC<AnimatedSectionProps> = ({ children, className = '' }) => {
+  return (
+    <div className={`animated-section ${className}`}>
+      {children}
+    </div>
+  );
+};
+
+export default AnimatedSection;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9

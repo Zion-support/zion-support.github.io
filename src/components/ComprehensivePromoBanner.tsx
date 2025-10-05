@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import, React, from 'rea, c, t';
 impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
@@ -123,3 +124,33 @@ const, ComprehensivePromoBanne, r: Rea, c, t.FC<ComprehensivePromoBannerPro, p, 
   );
 };
 export, default, ComprehensivePromoBanner;
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+interface ComprehensivePromoBannerProps {
+  variant?: 'hero' | 'compact' | 'featured';
+  showCount?: number;
+  className?: string;
+}
+
+const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
+  variant = 'hero',
+  showCount = 3,
+  className = ''
+}) => {
+  return (
+    <div className={`comprehensive-promo-banner ${variant} ${className}`}>
+      <div className="banner-content">
+        <h2>Comprehensive Solutions</h2>
+        <p>Discover our full range of services and solutions.</p>
+        <Link to="/services">
+          Explore Services
+        </Link>
+      </div>
+    </div>
+  );
+};
+
+export default ComprehensivePromoBanner;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9

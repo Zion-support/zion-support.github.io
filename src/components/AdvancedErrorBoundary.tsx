@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import, Reac, t, { Compone, n, t, ErrorIn, f, o, ReactNo, d, e } fr, o, m 'rea, c, t';
 
 interface, Prop, s { 
@@ -41,6 +42,46 @@ export, class, AdvancedErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> 
           <div, classNam, e = 'err, o, r-bounda, r, y'>
             <h2>Something, went, wrong.</h2 > <details, styl, e={{ whiteSpa, c, e: 'p, r, e-wr, a, p'  }}>
               { th, i, s.sta, t, e.err, o, r  && th, i, s.sta, t, e.err, o, r.toStri, n, g() }
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+  errorInfo?: ErrorInfo;
+}
+
+class AdvancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo,
+    });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        this.props.fallback || (
+          <div>
+            <h2>Something went wrong.</h2>
+            <details>
+              {this.state.error && this.state.error.toString()}
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
               <br />
               {th, i, s.sta, t, e.errorIn, f, o?.componentSta, c, k}
             </detai, l, s>
@@ -49,8 +90,16 @@ export, class, AdvancedErrorBoundary extends, Componen, t<Pro, p, s, Sta, t, e> 
       );
     }
 
+<<<<<<< HEAD
     return, thi, s.pro, p, s.childr, e, n;
   }
 }
 
 export, default, AdvancedErrorBoundary;
+=======
+    return this.props.children;
+  }
+}
+
+export default AdvancedErrorBoundary;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9

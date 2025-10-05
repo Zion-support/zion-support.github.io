@@ -1,1 +1,1 @@
-// This file appears to be empty or incomplete
+// React import removed as it's not used in this file

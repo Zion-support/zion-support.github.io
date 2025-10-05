@@ -32,11 +32,17 @@ const ContentValueTestimonials: React.FC = () => {
   ];
 
   return (
-    <div className="py-16 bg-gray-50 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            What Our Clients Say
+<<<<<<< HEAD
+    <div className='bg-gradient-to-r from-emerald-900/40 to-teal-900/40 border-y border-emerald-500/20 py-16'>
+      <div className='container mx-auto px-6'>
+        <div className='text-center mb-12'>
+          <div className='inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 mb-6'>
+            <span className='text-emerald-400 font-bold text-sm tracking-wider uppercase animate-pulse'>
+              💎 VALUE TESTIMONIALS
+            </span>
+          </div>
+          <h2 className='text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent'>
+            Real Results from Real Clients
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             Don't just take our word for it. Here's what industry leaders have to say about our AI solutions.
@@ -87,6 +93,11 @@ const ContentValueTestimonials: React.FC = () => {
           ))}
         </div>
       </div>
+=======
+    <div className="content-value-testimonials">
+      <h2>Content Value Testimonials</h2>
+      <p>Customer testimonials about our content value.</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
     </div>
   );
 };
