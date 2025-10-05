@@ -5,15 +5,9 @@ module.exports = {
       optimizePackageImports: ['@mui/material', '@mui/icons-material'],
       turbo: {
         rules: {
-<<<<<<< HEAD
           '*.svg': {
             loaders: ['@svgr/webpack'],
             as: '*.js'
-=======
-          "*.svg": {
-            loaders: ['@svgr/webpack'],
-            as: "*.js"
->>>>>>> cursor/fix-errors-and-merge-to-main-f69a
           }
         }
       }

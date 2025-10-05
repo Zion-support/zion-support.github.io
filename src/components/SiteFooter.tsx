@@ -9,11 +9,7 @@ const SiteFooter: React.FC = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <span className="text-2xl">🚀</span>
-<<<<<<< HEAD
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
-=======
-              <span className="text-xl font-bold text-white">ZionTechGroup</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-f69a
             </div>
             <p className="text-gray-400">
               Enterprise-grade AI micro SaaS and IT solutions. Transform your business with cutting-edge technology.
@@ -55,11 +51,7 @@ const SiteFooter: React.FC = () => {
         </div>
         
         <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center">
-<<<<<<< HEAD
           <p>© {new Date().getFullYear()} Zion Tech Group. All rights reserved.</p>
-=======
-          <p>© {new Date().getFullYear()} ZionTechGroup. All rights reserved.</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-f69a
         </div>
       </div>
     </footer>
