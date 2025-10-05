@@ -68,8 +68,8 @@ export default function EnterpriseAISafetyHighlights2025() {
   desc: 'Prebuilt controls for top risks' },
                 ].map((f, i) => (
                   <div key={i} className="bg-white rounded-xl p-6 border border-gray-200">
-                    <div className="text-2xl mb-2">{f.icon}</div>
-                    <div className="font-semibold text-gray-900 mb-1">{f.title}</div>
+                    <div className="text-2xl mb-2">{f}</div>
+                    <div className="font-semibold text-gray-900 mb-1">{f}</div>
                     <div className="text-gray-600">{f.desc}</div>
                   </div>
                 ))}

@@ -27,10 +27,10 @@ export default function June2026UltimateBreakthroughPage() {
             </span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
-            {data.title}
+            {data}
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            {data.description}
+            {data}
           </p>
           <div className="flex items-center gap-4 text-sm text-gray-500">
             <span>By {data.author}</span>
