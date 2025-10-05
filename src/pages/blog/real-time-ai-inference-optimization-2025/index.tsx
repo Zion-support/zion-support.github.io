@@ -1,5 +1,33 @@
+<<<<<<< HEAD
 import { ArrowLeft, Calendar, Clock, Cpu, Database, Gauge, TrendingUp, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
+=======
+import { Helmet } from "react-helmet-async";
+import ArrowLeft from 'lucide-react';
+import Calendar from 'lucide-react';
+import Clock from 'lucide-react';
+import Cpu from 'lucide-react';
+import Database from 'lucide-react';
+import Gauge from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Zap from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
 
 import { Link } from "react-router-dom";
 const RealTimeAIInferenceOptimization2025 = () => {
