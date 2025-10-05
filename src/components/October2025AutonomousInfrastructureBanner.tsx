@@ -6,7 +6,6 @@ const October2025AutonomousInfrastructureBanner = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Section */}
         <div className="text-center mb-10">
@@ -34,26 +33,21 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="text-3xl font-bold text-white mb-1">99.99%</div>
             <div className="text-sm text-cyan-200">Uptime Achieved</div>
             <div className="text-xs text-gray-400 mt-1">8.6 sec downtime/year</div>
-          </div>
           <div className="bg-gradient-to-br from-blue-900/40 to-blue-800/40 backdrop-blur-sm border border-blue-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
             <DollarSign className="w-8 h-8 text-blue-400 mx-auto mb-2" />
             <div className="text-3xl font-bold text-white mb-1">87%</div>
             <div className="text-sm text-blue-200">Cost Reduction</div>
             <div className="text-xs text-gray-400 mt-1">$111M avg savings</div>
-          </div>
           <div className="bg-gradient-to-br from-purple-900/40 to-purple-800/40 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
             <Zap className="w-8 h-8 text-purple-400 mx-auto mb-2" />
             <div className="text-3xl font-bold text-white mb-1">97%</div>
             <div className="text-sm text-purple-200">Zero-Touch Ops</div>
             <div className="text-xs text-gray-400 mt-1">Fully autonomous</div>
-          </div>
           <div className="bg-gradient-to-br from-green-900/40 to-green-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-300">
             <TrendingUp className="w-8 h-8 text-green-400 mx-auto mb-2" />
             <div className="text-3xl font-bold text-white mb-1">42x</div>
             <div className="text-sm text-green-200">Average ROI</div>
             <div className="text-xs text-gray-400 mt-1">1.8-month payback</div>
-          </div>
-        </div>
         {/* Revolutionary Capabilities */}
         <div className="bg-gradient-to-br from-gray-900/60 to-gray-800/60 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -71,8 +65,6 @@ const October2025AutonomousInfrastructureBanner = () => {
                 <div className="text-sm text-gray-300">
                   15-45 minute advance warning with 94% accuracy. Prevent incidents before user impact. AI analyzes 2.3M events/minute.
                 </div>
-              </div>
-            </div>
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
                 <Bot className="w-6 h-6 text-blue-400" />
@@ -82,8 +74,6 @@ const October2025AutonomousInfrastructureBanner = () => {
                 <div className="text-sm text-gray-300">
                   97% success rate in under 30 seconds. Automatic rollback on failure. 250+ built-in remediation patterns.
                 </div>
-              </div>
-            </div>
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-lg flex items-center justify-center">
                 <Cloud className="w-6 h-6 text-purple-400" />
@@ -93,9 +83,6 @@ const October2025AutonomousInfrastructureBanner = () => {
                 <div className="text-sm text-gray-300">
                   87% cost reduction through real-time right-sizing, idle resource cleanup, and predictive capacity planning.
                 </div>
-              </div>
-            </div>
-          </div>
         </div>
         {/* Fortune 500 Success Story */}
         <div className="bg-gradient-to-br from-cyan-900/30 to-blue-900/30 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 mb-10">
@@ -111,51 +98,40 @@ const October2025AutonomousInfrastructureBanner = () => {
                 $2.3T assets under management • 24/7 trading operations • 8,500 microservices • 47 countries
               </p>
             </div>
-          </div>
           <div className="grid md:grid-cols-3 gap-6 mb-6">
             <div className="bg-black/20 rounded-lg p-4">
               <div className="text-3xl font-bold text-cyan-400 mb-1">99.994%</div>
               <div className="text-sm text-gray-300">Uptime Achieved</div>
               <div className="text-xs text-gray-400 mt-1">3 minutes total downtime/year</div>
-            </div>
             <div className="bg-black/20 rounded-lg p-4">
               <div className="text-3xl font-bold text-blue-400 mb-1">$410M</div>
               <div className="text-sm text-gray-300">Annual Value Created</div>
               <div className="text-xs text-gray-400 mt-1">47x ROI in 12 months</div>
-            </div>
             <div className="bg-black/20 rounded-lg p-4">
               <div className="text-3xl font-bold text-purple-400 mb-1">96%</div>
               <div className="text-sm text-gray-300">Incident Prevention</div>
               <div className="text-xs text-gray-400 mt-1">396 incidents prevented</div>
-            </div>
-          </div>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">Zero critical incidents</strong> during Black Friday (5.2M transactions/second handled)
               </div>
-            </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">87% cost reduction</strong> — Operations cost from $127M to $16M annually
               </div>
-            </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">Team reduced 85 → 12 people</strong> — freed for strategic initiatives, zero layoffs
               </div>
-            </div>
             <div className="flex items-start gap-3">
               <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" />
               <div className="text-sm text-gray-300">
                 <strong className="text-white">2.8-minute MTTR</strong> — down from 4.7 hours (99% improvement)
               </div>
-            </div>
-          </div>
-        </div>
         {/* Industry Applications */}
         <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-10">
           <h3 className="text-2xl font-bold text-white mb-6 text-center">
@@ -166,26 +142,19 @@ const October2025AutonomousInfrastructureBanner = () => {
               <div className="text-2xl mb-2">🏦</div>
               <div className="font-semibold text-white text-sm mb-1">Financial Services</div>
               <div className="text-xs text-gray-400">$410M value, 99.994% uptime</div>
-            </div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">🛒</div>
               <div className="font-semibold text-white text-sm mb-1">E-Commerce</div>
               <div className="text-xs text-gray-400">$287M savings, 3x scale</div>
-            </div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">🏥</div>
               <div className="text-xs text-gray-400">99.99% uptime critical systems</div>
-            </div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">🏭</div>
               <div className="text-xs text-gray-400">Zero production downtime</div>
-            </div>
             <div className="bg-black/20 rounded-lg p-4 text-center hover:bg-black/30 transition-colors">
               <div className="text-2xl mb-2">📡</div>
               <div className="text-xs text-gray-400">Scale without team growth</div>
-            </div>
-          </div>
-        </div>
         {/* Call-to-Action Buttons */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Link
@@ -249,34 +218,25 @@ const October2025AutonomousInfrastructureBanner = () => {
               <Clock className="w-4 h-4 inline mr-1" />
               Typical assessment value: $75K • Yours free
             </div>
-          </div>
-        </div>
         {/* Trust Indicators */}
         <div className="mt-10 pt-8 border-t border-white/10 text-center">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm text-gray-400">
             <div>
               <div className="text-2xl font-bold text-white mb-1">12+</div>
               <div>Fortune 500 Deployments</div>
-            </div>
             <div>
               <div className="text-2xl font-bold text-white mb-1">$3.2B</div>
               <div>Total Value Created</div>
-            </div>
             <div>
               <div className="text-2xl font-bold text-white mb-1">99.99%</div>
               <div>Average Uptime Achieved</div>
-            </div>
-            <div>
-              <div>Average ROI</div>
-            </div>
+            <div>Average ROI</div>
             <div>
               <div className="text-2xl font-bold text-white mb-1">1.8mo</div>
               <div>Average Payback Period</div>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
   );
 };
 export default October2025AutonomousInfrastructureBanner;
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>

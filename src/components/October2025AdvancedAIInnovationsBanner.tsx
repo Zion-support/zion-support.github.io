@@ -7,7 +7,6 @@ const October2025AdvancedAIInnovationsBanner = () => {
         <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -38,7 +37,6 @@ const October2025AdvancedAIInnovationsBanner = () => {
               <div className="flex-1">
                 <span className="text-xs text-indigo-300 font-semibold uppercase tracking-wide">Neuromorphic AI</span>
               </div>
-            </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-indigo-200 transition-colors">
               Neuromorphic Neural Networks: Brain-Inspired Computing Revolution
             </h3>
@@ -67,7 +65,6 @@ const October2025AdvancedAIInnovationsBanner = () => {
               <div className="flex-1">
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">Data Engineering</span>
               </div>
-            </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
               Synthetic Data Generation Mastery: Solving AI's Data Scarcity Problem
             </h3>
@@ -96,7 +93,6 @@ const October2025AdvancedAIInnovationsBanner = () => {
               <div className="flex-1">
                 <span className="text-xs text-pink-300 font-semibold uppercase tracking-wide">Quantum ML</span>
               </div>
-            </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-200 transition-colors">
               Quantum Machine Learning: Enterprise Breakthrough in 2025
             </h3>
@@ -134,28 +130,24 @@ const October2025AdvancedAIInnovationsBanner = () => {
               10,000x
             </div>
             <div className="text-indigo-200/70 text-sm">Energy Efficiency</div>
-          </div>
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text mb-1">
               60-80%
             </div>
             <div className="text-purple-200/70 text-sm">Synthetic Data Usage</div>
-          </div>
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-pink-400 to-red-400 bg-clip-text mb-1">
               1,000+
             </div>
             <div className="text-pink-200/70 text-sm">Logical Qubits</div>
-          </div>
           <div className="text-center">
             <div className="text-3xl font-extrabold text-transparent bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text mb-1">
               100x
             </div>
             <div className="text-green-200/70 text-sm">Faster Simulations</div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 export default React.memo(October2025AdvancedAIInnovationsBanner);
+
+</div></div></div></div></div></div></div></div></div></div>

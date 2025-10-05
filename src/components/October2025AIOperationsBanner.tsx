@@ -32,7 +32,6 @@ const October2025AIOperationsBanner = () => {
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
-      </div>
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
@@ -85,7 +84,6 @@ const October2025AIOperationsBanner = () => {
                     <span className="text-sm font-semibold mr-2">Read Full Guide</span>
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
-                </div>
               </Link>
             );
           })}
@@ -107,28 +105,23 @@ const October2025AIOperationsBanner = () => {
               <span>Schedule Expert Consultation</span>
             </Link>
           </div>
-        </div>
         {/* Trust Indicators */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
             <div className="text-3xl font-bold text-white mb-1">99.2%</div>
             <div className="text-sm text-gray-400">Security Detection</div>
-          </div>
           <div>
             <div className="text-3xl font-bold text-white mb-1">67%</div>
             <div className="text-sm text-gray-400">Cost Reduction</div>
-          </div>
           <div>
             <div className="text-3xl font-bold text-white mb-1">99.94%</div>
             <div className="text-sm text-gray-400">System Uptime</div>
-          </div>
           <div>
             <div className="text-3xl font-bold text-white mb-1">$127M+</div>
             <div className="text-sm text-gray-400">Annual Savings</div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 export default October2025AIOperationsBanner;
+
+</div></div></div></div></div></div></div></div></div>

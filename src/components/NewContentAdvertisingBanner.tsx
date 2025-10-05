@@ -87,7 +87,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-      </div>
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -118,10 +117,8 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <div className="text-gray-400 text-sm font-medium">
                   {achievement.label}
                 </div>
-              </div>
             ))}
           </div>
-        </div>
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
@@ -141,7 +138,6 @@ key={content.id}
                   <div className={`px-3 py-1.5 rounded-full bg-gradient-to-r ${content.gradient} text-white text-xs font-bold border border-white/30`}>
                     {content.badge}
                   </div>
-                </div>
                 {/* Category */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400 text-xs font-semibold border border-indigo-500/30">
@@ -169,7 +165,6 @@ key={content.id}
                     <Users className="w-4 h-4" />
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
-                </div>
                 {/* CTA Button */}
                 <a
                   href={content.link || '/blog'}
@@ -179,7 +174,6 @@ key={content.id}
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
-            </div>
           ))}
         </div>
         {/* Special Offer Section */}
@@ -203,7 +197,6 @@ key={content.id}
                 <div className="text-3xl font-extrabold text-indigo-400 line-through opacity-50">$299/month</div>
                 <div className="text-2xl font-bold text-white">$99/month</div>
                 <div className="text-sm text-gray-400">First 3 months</div>
-              </div>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
                   href="/subscribe"
@@ -220,9 +213,6 @@ key={content.id}
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
-            </div>
-          </div>
-        </div>
         {/* Newsletter Signup */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -248,10 +238,8 @@ key={content.id}
                 No spam, unsubscribe at any time. We respect your privacy.
               </p>
             </div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
 export default NewContentAdvertisingBanner;
+</div></div></div></div></div></div></div></div></div></div></div></div></div>

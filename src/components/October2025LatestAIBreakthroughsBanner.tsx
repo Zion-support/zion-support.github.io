@@ -135,6 +135,5 @@ export default function October2025LatestAIBreakthroughsBanner() {
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
-      </div>
     </div > );
 }

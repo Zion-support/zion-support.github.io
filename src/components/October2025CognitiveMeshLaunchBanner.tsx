@@ -24,7 +24,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
           className="absolute top-1/2 left-1/2 w-60 h-60 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-float"
           style={{ animationDelay: '4s' }}
         ></div>
-      </div>
 
       <div className="container mx-auto px-6 py-12 relative z-10">
         {/* Header Section */}
@@ -142,7 +141,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                 <p className="text-sm text-blue-300 font-semibold">TECHNICAL DEEP DIVE</p>
                 <p className="text-xs text-white/60">Blog Post</p>
               </div>
-            </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-200 transition-colors">
               Cognitive Mesh Orchestration: The Future of Distributed AI
             </h3>
@@ -168,7 +166,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                 <p className="text-sm text-green-300 font-semibold">SUCCESS STORY</p>
                 <p className="text-xs text-white/60">Case Study</p>
               </div>
-            </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-green-200 transition-colors">
               Global FinTech: $12 Billion Value Creation in 18 Months
             </h3>
@@ -194,7 +191,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
                 <p className="text-sm text-purple-300 font-semibold">ENTERPRISE SOLUTION</p>
                 <p className="text-xs text-white/60">Service Offering</p>
               </div>
-            </div>
             <h3 className="text-lg font-bold text-white mb-2 group-hover:text-purple-200 transition-colors">
               Cognitive Mesh Platform Services
             </h3>
@@ -216,9 +212,9 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
               className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-purple-600 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105"
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
-               aria-hidden="true" />
+              <ArrowRight className="w-5 h-5" aria-hidden="true" />
               Schedule Free Consultation
-               aria-hidden="true"</Link>
+            </Link>
             
             <Link
               to="/blog"
@@ -235,7 +231,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
             Free 2-week assessment included. No commitment required.
           </p>
         </div>
-      </div>
     </section>
   );
 });
@@ -243,3 +238,5 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
 October2025CognitiveMeshLaunchBanner.displayName = 'October2025CognitiveMeshLaunchBanner';
 
 export default October2025CognitiveMeshLaunchBanner;
+
+</div></div></div></div></div>

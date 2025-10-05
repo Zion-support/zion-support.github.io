@@ -216,7 +216,6 @@ const AdvancedDashboard: React.FC = () => {
               </button>
             ))}
           </div>
-        </div>
 
         {/* Content */}
         <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
@@ -236,8 +235,6 @@ const AdvancedDashboard: React.FC = () => {
                   </div>
                   <div>Page Views: {data.analytics?.pageViews || 0}</div>
                   <div>Events: {data.analytics?.events?.length || 0}</div>
-                </div>
-              </div>
 
               <div className="bg-green-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-green-900 mb-2">Cache</h3>
@@ -248,8 +245,6 @@ const AdvancedDashboard: React.FC = () => {
                   <div>
                     Hit Rate: {((data.cache?.hitRate || 0) * 100).toFixed(1)}%
                   </div>
-                </div>
-              </div>
 
               <div className="bg-purple-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-purple-900 mb-2">
@@ -271,16 +266,12 @@ const AdvancedDashboard: React.FC = () => {
                     ).toFixed(1)}
                     %
                   </div>
-                </div>
-              </div>
 
               <div className="bg-yellow-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-yellow-900 mb-2">Security</h3>
                 <div className="space-y-1 text-sm">
                   <div>Status: {data.security?.status}</div>
                   <div>Protection: Active</div>
-                </div>
-              </div>
 
               <div className="bg-pink-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-pink-900 mb-2">
@@ -289,8 +280,6 @@ const AdvancedDashboard: React.FC = () => {
                 <div className="space-y-1 text-sm">
                   <div>Features: {data.accessibility?.features}</div>
                   <div>Compliance: WCAG 2.1 AA</div>
-                </div>
-              </div>
 
               <div className="bg-indigo-50 p-4 rounded-lg">
                 <h3 className="font-semibold text-indigo-900 mb-2">
@@ -299,9 +288,6 @@ const AdvancedDashboard: React.FC = () => {
                 <div className="space-y-1 text-sm">
                   <div>Status: {data.ux?.status}</div>
                   <div>Theme: Auto</div>
-                </div>
-              </div>
-            </div>
           )}
 
           {activeTab === "analytics" && data?.analytics && (
@@ -329,8 +315,6 @@ const AdvancedDashboard: React.FC = () => {
                       <strong>Page Views:</strong>{" "}
                       {data.analytics.pageViews || 0}
                     </div>
-                  </div>
-                </div>
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-3">Device Information</h3>
@@ -347,9 +331,6 @@ const AdvancedDashboard: React.FC = () => {
                       <strong>Timezone:</strong>{" "}
                       {data.analytics.deviceInfo?.timezone || "N/A"}
                     </div>
-                  </div>
-                </div>
-              </div>
 
               <div className="bg-gray-50 p-4 rounded-lg">
                 <h3 className="font-semibold mb-3">
@@ -377,9 +358,6 @@ const AdvancedDashboard: React.FC = () => {
                         </div>
                       ))}
                   </div>
-                </div>
-              </div>
-            </div>
           )}
 
           {activeTab === "performance" && data?.performance && (
@@ -402,9 +380,6 @@ const AdvancedDashboard: React.FC = () => {
                         width: `${(data.performance.memoryUsage / data.performance.memoryLimit) * 100}%`,
                       }}
                     ></div>
-                  </div>
-                </div>
-              </div>
             </div>
           )}
 
@@ -429,8 +404,6 @@ const AdvancedDashboard: React.FC = () => {
                       <strong>Hit Rate:</strong>{" "}
                       {((data.cache.hitRate || 0) * 100).toFixed(1)}%
                     </div>
-                  </div>
-                </div>
 
                 <div className="bg-gray-50 p-4 rounded-lg">
                   <h3 className="font-semibold mb-3">Cache Usage</h3>
@@ -455,11 +428,7 @@ const AdvancedDashboard: React.FC = () => {
                           width: `${((data.cache.totalSize || 0) / (data.cache.maxSize || 1)) * 100}%`,
                         }}
                       ></div>
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
           )}
 
           {activeTab === "security" && (
@@ -479,9 +448,6 @@ const AdvancedDashboard: React.FC = () => {
                     <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
                     <span>XSS Protection: Active</span>
                   </div>
-                </div>
-              </div>
-            </div>
           )}
 
           {activeTab === "accessibility" && (
@@ -505,9 +471,6 @@ const AdvancedDashboard: React.FC = () => {
                     <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
                     <span>WCAG 2.1 AA Compliance: Active</span>
                   </div>
-                </div>
-              </div>
-            </div>
           )}
         </div>
 
@@ -515,9 +478,9 @@ const AdvancedDashboard: React.FC = () => {
         <div className="bg-gray-100 p-4 text-center text-sm text-gray-600">
           Last updated: {new Date().toLocaleTimeString()}
         </div>
-      </div>
-    </div>
   );
 };
 
 export default AdvancedDashboard;
+
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div>
