@@ -117,6 +117,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 <div className="text-gray-400 text-sm font-medium">
                   {achievement.label}
                 </div>
+              </div>
             ))}
           </div>
         {/* Featured Content Cards */}
@@ -240,6 +241,5 @@ key={content.id}
             </div>
     </div>
   );
-};
-export default NewContentAdvertisingBanner;
-</div></div></div></div></div></div></div></div></div></div></div></div></div>
+  };
+  export default NewContentAdvertisingBanner;
