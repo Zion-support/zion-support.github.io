@@ -7,6 +7,27 @@ interface PerformanceMetrics {
   fcp?: number;
   ttfb?: number;
   inp?: number;
+  loadTime?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  cumulativeLayoutShift?: number;
+  firstInputDelay?: number;
+  memoryUsage?: number;
+}
+
+interface PerformanceThresholds {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  cumulativeLayoutShift: number;
+  firstInputDelay: number;
+  memoryUsage: number;
+}
+
+interface Alert {
+  id: string;
+  message: string;
+  resolved: boolean;
 }
 
 interface PerformanceThresholds {
@@ -141,16 +162,6 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   return (
     <div
       style={{
-        position: 'fixed'
-        top: '10px'
-        right: '10px'
-        background: 'rgba(0000.8)'
-        color: 'white'
-        padding: '10px'
-        borderRadius: '5px'
-        fontSize: '12px'
-        zIndex: 9999
-        fontFamily: 'monospace'
       }}
     >
       <h4>Performance Metrics</h4>

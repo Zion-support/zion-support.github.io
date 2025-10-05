@@ -1,10 +1,11 @@
 import '@testing-library/jest-dom';
 import React from 'react';
 
+>>>>>>> e07ee42db21143a2294f98a4e73abb5451584632
 });
 
 // Mock performance API
-Object.defineProperty(window, 'performance', {
+Object.defineProperty(window'performance', {
   writable: true,
   value: {
     now: jest.fn(() => Date.now()),
