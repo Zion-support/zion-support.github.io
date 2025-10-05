@@ -3,17 +3,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-import ErrorBoundary from './components/ErrorBoundary';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import PerformanceDashboard from './components/PerformanceDashboard';
+import ErrorBoundary from '../src/components/ErrorBoundary';
+import SEOOptimizer from '../src/components/EnhancedSEOHead';
+import AccessibilityEnhancer from '../src/components/AccessibilityEnhancer';
+import PerformanceDashboard from '../src/components/AIPerformanceDashboard';
 
 // Pages
 import HomePage from './page';
 
 // Utils
-import { logError } from '../utils/errorHandling';
-import { measurePerformance } from '../utils/performanceOptimizer';
+import performanceOptimizer from '../utils/performanceOptimizer';
 
 // Styles
 import '../index.css';
@@ -24,7 +23,7 @@ const App: React.FC = () => {
     console.log('App initialized');
 
     // Initialize performance monitoring
-    measurePerformance();
+    performanceOptimizer.getPerformanceSummary();
 
     console.log('Performance monitoring initialized');
     console.log('🚀 Zion Tech Group App initialized with comprehensive monitoring');
@@ -33,39 +32,41 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <ErrorBoundary>
-        <SEOOptimizer>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className='App'>
-                {/* Skip to main content link for accessibility */}
-                <a
-                  href='#main-content'
-                  className='skip-link'
-                  onClick={e => {
-                    e.preventDefault();
-                    const main =
-                      document.querySelector('main') ||
-                      document.querySelector('#main-content');
-                    if (main) {
-                      main.focus();
-                      main.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
-                >
-                  Skip to main content
-                </a>
+        <SEOOptimizer
+          title="Zion Tech Group - Revolutionary AI and IT Solutions"
+          description="Transform your enterprise with Zion Tech Group's revolutionary AI solutions."
+        />
+        <AccessibilityEnhancer>
+          <Router>
+            <div className='App'>
+              {/* Skip to main content link for accessibility */}
+              <a
+                href='#main-content'
+                className='skip-link'
+                onClick={e => {
+                  e.preventDefault();
+                  const main =
+                    document.querySelector('main') ||
+                    document.querySelector('#main-content');
+                  if (main) {
+                    main.focus();
+                    main.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Skip to main content
+              </a>
 
-                <Routes>
-                  <Route path='/' element={<HomePage />} />
-                  {/* Add more routes as needed */}
-                </Routes>
+              <Routes>
+                <Route path='/' element={<HomePage />} />
+                {/* Add more routes as needed */}
+              </Routes>
 
-                {/* Performance Dashboard */}
-                <PerformanceDashboard />
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
-        </SEOOptimizer>
+              {/* Performance Dashboard */}
+              <PerformanceDashboard isVisible={false} onClose={() => {}} />
+            </div>
+          </Router>
+        </AccessibilityEnhancer>
       </ErrorBoundary>
     </HelmetProvider>
   );

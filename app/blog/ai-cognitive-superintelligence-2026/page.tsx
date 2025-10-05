@@ -1,6 +1,30 @@
-import React from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence 2026: The Next Frontier of Human-AI Collaboration',
@@ -26,15 +50,15 @@ export default function AICognitiveSuperintelligence2026() {
         </h1>
         <div className="flex items-center gap-6 text-gray-600 mb-8">
           <div className="flex items-center gap-2">
-            <Clock className="w-5 h-5" />
+            🕐
             <span>35 min read</span>
           </div>
           <div className="flex items-center gap-2">
-            <Brain className="w-5 h-5" />
+            🧠
             <span>Cognitive AI</span>
           </div>
           <div className="flex items-center gap-2">
-            <TrendingUp className="w-5 h-5" />
+            📈
             <span>Advanced Research</span>
           </div>
         </div>
@@ -47,7 +71,7 @@ export default function AICognitiveSuperintelligence2026() {
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center text-white">
               <div className="w-24 h-24 mx-auto mb-6 bg-white bg-opacity-20 rounded-full flex items-center justify-center">
-                <Brain className="w-12 h-12" />
+                🧠
               </div>
               <h2 className="text-3xl font-bold mb-4">Cognitive Superintelligence</h2>
               <p className="text-xl opacity-90">The Future of Human-AI Collaboration</p>
@@ -142,7 +166,7 @@ export default function AICognitiveSuperintelligence2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
-                <Brain className="w-6 h-6 text-purple-600" />
+                🧠
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Scientific Discovery</h4>
             </div>
@@ -157,7 +181,7 @@ export default function AICognitiveSuperintelligence2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-blue-600" />
+                ⚡
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Creative Problem Solving</h4>
             </div>
@@ -172,7 +196,7 @@ export default function AICognitiveSuperintelligence2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                <Target className="w-6 h-6 text-green-600" />
+                🎯
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Strategic Planning</h4>
             </div>
@@ -187,7 +211,7 @@ export default function AICognitiveSuperintelligence2026() {
           <div className="bg-white border border-gray-200 rounded-xl p-6 shadow-sm">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
-                <TrendingUp className="w-6 h-6 text-orange-600" />
+                📈
               </div>
               <h4 className="text-xl font-semibold text-gray-900">Human-AI Collaboration</h4>
             </div>
