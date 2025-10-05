@@ -19,7 +19,6 @@ interface DashboardData {
 const AdvancedDashboard: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<DashboardData | null>(null);
-  const [activeTab, setActiveTab] = useState("overview");
 
   useEffect(() => {
     if (isOpen) {
@@ -78,6 +77,7 @@ const AdvancedDashboard: React.FC = () => {
             </svg>
           </button>
         </div>
+<<<<<<< HEAD
         
         <div className="p-4">
           <div className="flex space-x-2 mb-4">
@@ -183,6 +183,40 @@ const AdvancedDashboard: React.FC = () => {
               )}
             </div>
           )}
+=======
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold mb-2">Analytics</h3>
+            {data && (
+              <div className="space-y-2">
+                <p>Page Views: {data.analytics.pageViews}</p>
+                <p>Sessions: {data.analytics.sessions}</p>
+                <p>Bounce Rate: {(data.analytics.bounceRate * 100).toFixed(1)}%</p>
+              </div>
+            )}
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold mb-2">Performance</h3>
+            {data && (
+              <div className="space-y-2">
+                <p>Load Time: {data.performance.loadTime.toFixed(0)}ms</p>
+                <p>Response Time: {data.performance.responseTime.toFixed(0)}ms</p>
+              </div>
+            )}
+          </div>
+
+          <div className="bg-gray-50 p-4 rounded-lg">
+            <h3 className="text-lg font-semibold mb-2">Security</h3>
+            {data && (
+              <div className="space-y-2">
+                <p>Threats Blocked: {data.security.threatsBlocked}</p>
+                <p>Vulnerabilities: {data.security.vulnerabilities}</p>
+              </div>
+            )}
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-5246
         </div>
       </div>
     </div>
