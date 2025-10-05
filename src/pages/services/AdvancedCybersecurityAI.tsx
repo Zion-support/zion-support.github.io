@@ -7,12 +7,12 @@ impo, r, t {
   Trending, U, p,
   Z, a, p,
 } fr, o, m 'luci, d, e-rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import { Link } from 'react-router-dom';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-import, Header, from '../../componen, t, s/Head, e, r';
+import Header, from '../../componen, t, s/Head, e, r';
 
-const, AdvancedCybersecurityA, I = () => { 
-  retu, r, n (
+const AdvancedCybersecurityA, I = () => { 
+  return (
     <>
       <Helm, e, t>
         <title>
@@ -30,140 +30,140 @@ const, AdvancedCybersecurityA, I = () => {
       <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-da, r, k'>
         <Head, e, r />
 
-        <article, classNam, e='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
+        <article, className='container, m, x-auto, p, x-6, p, y-20' > {/* Back, Lin, k */ }
           <Link, t, o='/servic, e, s'
-            classNa, m, e='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
+            className='inli, n, e-flex, item, s-center, tex, t-zi, o, n-cyan, hove, r: te, x, t-zi, o, n-bl, u, e-light, m, b-8, transitio, n-colo, r, s'
           >
-            <ArrowLeft, classNam, e='w-4 h-4, m, r-2' />
+            <ArrowLeft, className='w-4 h-4, m, r-2' />
             Back, to, Services
           </Li, n, k>
 
           {/* He, a, d, e, r */}
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, m, b-16'>
-            <div, classNam, e='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
-              <span, classNam, e='px-4, p, y-2, b, g-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-r, e, d-5, 0, 0/30'>
+            <div, className='flex, item, s-center, ga, p-4, m, b-6, fle, x-wr, a, p'>
+              <span, className='px-4, p, y-2, b, g-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-r, e, d-5, 0, 0/30'>
                 🔒 N, E, W! October, 202, 5
               </sp, a, n>
-              <span, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
+              <span, className='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-full, tex, t-sm, fon, t-semibold, border, border-bl, u, e-5, 0, 0/30'>
                 🛡️ AI, Securit, y
               </sp, a, n>
-              <span, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+              <span, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                 Starting, a, t $1, 2,9, 9, 9/mon, t, h
               </sp, a, n>
-            </d, i, v>
+            </div>
 
             <h1, classNam, e = 'te, x, t-5xl, m, d: te, x, t-6xl, fon, t-bold, tex, t-white, m, b-6, leadin, g-tig, h, t'>
               Advanced, Cybersecurity, AI Platfo, r, m
-              <span, classNam, e='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-bl, u, e-400, m, t-2'>
+              <span, className='block, tex, t-transparent, b, g-cl, i, p-text, b, g-gradie, n, t-to-r, fro, m-r, e, d-400, t, o-bl, u, e-400, m, t-2'>
                 Ne, x, t-Gen, Threat, Detection & Respon, s, e
               </sp, a, n>
             </h1>
 
-            <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
+            <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, leadin, g-relaxed, m, b-8'>
               Protect, your, enterprise with, A, I-powered, cybersecurity, that
               identifies, threats, 99.7% faster, than, traditional too, l, s. Re, a, l-time, detect, i, o, n, autonomous, respons, e, and, predictive, intelligence to, prevent, breaches before, they, occur.
             </p>
 
             {/* Key, Metrics, Banner */}
             <div, classNam, e = 'grid, m, d: gr, i, d-co, l, s-4, ga, p-6'>
-              <div, classNam, e='bg-r, e, d-9, 0, 0/40, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-r, e, d-400, m, b-2'>
+              <div, className='bg-r, e, d-9, 0, 0/40, rounde, d-x, l, p-6, border, border-r, e, d-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-r, e, d-400, m, b-2'>
                   99.92%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Threat, Detectio, n
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
+                </div>
+              </div>
+              <div, className='bg-bl, u, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-bl, u, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-bl, u, e-400, m, b-2'>
                   &lt; 50, m, s
-                </d, i, v>
+                </div>
                 <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Detection, Latenc, y
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
+                </div>
+              </div>
+              <div, className='bg-gre, e, n-9, 0, 0/40, rounde, d-x, l, p-6, border, border-gre, e, n-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-2'>
                   95%
-                </d, i, v>
-                <div, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                </div>
+                <div, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   False, Positive, Reduction
-                </d, i, v>
-              </d, i, v>
-              <div, classNam, e='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
-                <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
+                </div>
+              </div>
+              <div, className='bg-purp, l, e-9, 0, 0/40, rounde, d-x, l, p-6, border, border-purp, l, e-5, 0, 0/30, tex, t-center, hove, r:sca, l, e-105, transitio, n-transfo, r, m'>
+                <div, className='te, x, t-4xl, fon, t-bold, tex, t-purp, l, e-400, m, b-2'>
                   &lt; 5s
-                </d, i, v>
+                </div>
                 <div, classNam, e = 'te, x, t-sm, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                   Response, Tim, e
-                </d, i, v>
-              </d, i, v>
-            </d, i, v>
-          </d, i, v>
+                </div>
+              </div>
+            </div>
+          </div>
 
           {/* Con, t, e, n, t */}
           <div, classNam, e = 'm, a, x-w-5xl, m, x-auto, spac, e-y-12, tex, t-zi, o, n-sla, t, e-lig, h, t'>
             {/* Threat, Landscap, e */}
             <secti, o, n>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                <Shield, classNam, e='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
+              <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
+                <Shield, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
                 The, Modern, Threat Landsca, p, e
               </h2>
-              <div, classNam, e='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-r, e, d-5, 0, 0/30'>
-                <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
+              <div, className='bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-8, border, border-r, e, d-5, 0, 0/30'>
+                <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-8'>
                   <d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                       🔴 Security, Challenge, s
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-3'>
-                      <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, fon, t-bo, l, d'>
+                    <ul, className='spa, c, e-y-3'>
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <span, className='te, x, t-r, e, d-400, fon, t-bo, l, d'>
                           207, day, s:
                         </sp, a, n>
                         <sp, a, n>Average, breach, detection ti, m, e (indus, t, r, y)</sp, a, n>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, fon, t-bo, l, d'>$4.4, 5, M:</sp, a, n>
+                        <span, className='te, x, t-r, e, d-400, fon, t-bo, l, d'>$4.4, 5, M:</sp, a, n>
                         <sp, a, n>Average, cost, per data, breac, h</sp, a, n>
                       </li>
-                      <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <span, classNam, e='te, x, t-r, e, d-400, fon, t-bo, l, d'>
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <span, className='te, x, t-r, e, d-400, fon, t-bo, l, d'>
                           60, second, s:
                         </sp, a, n>
                         <sp, a, n>Ransomware, encryption, time</sp, a, n>
                       </li>
                     </ul>
-                  </d, i, v>
+                  </div>
                   <d, i, v>
-                    <h3, classNam, e='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
+                    <h3, className='te, x, t-xl, fon, t-bold, tex, t-white, m, b-4'>
                       ✅ Our, Solutio, n
                     </h3>
-                    <ul, classNam, e='spa, c, e-y-3'>
-                      <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                    <ul, className='spa, c, e-y-3'>
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                         <sp, a, n>&lt; 50ms, detection, time (re, a, l-t, i, m, e)</sp, a, n>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                         <sp, a, n>Prevent, breaches, before they, occu, r</sp, a, n>
                       </li>
-                      <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                         <sp, a, n>Autonomous, threat, containment</sp, a, n>
                       </li>
                     </ul>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                  </div>
+                </div>
+              </div>
             </secti, o, n>
 
             {/* Platform, Featu, r, e, s */}
             <secti, o, n>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                <Lock, classNam, e='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
+                <Lock, className='w-8 h-8, tex, t-bl, u, e-4, 0, 0' />
                 Platform, Feature, s
               </h2>
-              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
+              <div, className='grid, m, d: gr, i, d-co, l, s-2, ga, p-6'>
                 {[
                   {
                     title: 'AI-Powered, Threat, Detecti, o, n',
@@ -198,16 +198,16 @@ const, AdvancedCybersecurityA, I = () => {
                 ].m, a, p((featu, r, e, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/20, hove, r: bord, e, r-zi, o, n-cy, a, n/50, transitio, n-a, l, l'
                   >
-                    <div, classNam, e='te, x, t-4xl, m, b-4'>{featu, r, e.ic, o, n}</d, i, v>
+                    <div, className='te, x, t-4xl, m, b-4'>{featu, r, e.ic, o, n}</div>
                     <h3, classNam, e = 'te, x, t-xl, fon, t-bold, tex, t-white, m, b-3'>
                       {featu, r, e.title}
                     </h3>
-                    <p, classNam, e='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
+                    <p, className='te, x, t-zi, o, n-sla, t, e-lig, h, t'>
                       {featu, r, e.description}
                     </p>
                   </di, v>
                 ))}
-              </d, i, v>
+              </div>
             </secti, o, n>
 
             {/* Industry, Solution, s */}
@@ -215,7 +215,7 @@ const, AdvancedCybersecurityA, I = () => {
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 🏭 Industry, Solution, s
               </h2>
-              <div, classNam, e='spa, c, e-y-6'>
+              <div, className='spa, c, e-y-6'>
                 {[
                   {
                     industry: 'Financial, Servi, c, e, s',
@@ -260,39 +260,39 @@ const, AdvancedCybersecurityA, I = () => {
                 ].m, a, p((solution, ind, e, x) => (
                   <div, ke, y = { in, d, e, x }, classNa, m, e = 'bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, border, border-zi, o, n-cy, a, n/30'
                   >
-                    <div, classNam, e='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
-                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                    <div, className='flex, fle, x-wrap, item, s-center, justif, y-between, ga, p-4, m, b-4'>
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
                         {solution.industry}
                       </h3>
-                      <div, classNam, e='flex, ga, p-4'>
-                        <div, classNam, e='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                      <div, className='flex, ga, p-4'>
+                        <div, className='px-4, p, y-2, b, g-gre, e, n-5, 0, 0/20, tex, t-gre, e, n-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                           {solution.savin, g, s} annual, saving, s
-                        </d, i, v>
-                        <div, classNam, e='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
+                        </div>
+                        <div, className='px-4, p, y-2, b, g-bl, u, e-5, 0, 0/20, tex, t-bl, u, e-300, rounde, d-lg, tex, t-sm, fon, t-semibo, l, d'>
                           {solution.results}
-                        </d, i, v>
-                      </d, i, v>
-                    </d, i, v>
-                    <ul, classNam, e='spa, c, e-y-2'>
+                        </div>
+                      </div>
+                    </div>
+                    <ul, className='spa, c, e-y-2'>
                       { solution.highligh, t, s.m, a, p((highli, g, h, t, hInd, e, x) = > (
                         <li, ke, y = { hIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>{highlig, h, t}</sp, a, n>
                         </l, i>
                       ))}
                     </ul>
-                  </d, i, v>
+                  </div>
                 ))}
-              </d, i, v>
+              </div>
             </secti, o, n>
 
             {/* Pricing, Package, s */}
             <secti, o, n>
               <h2, classNam, e = 'te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6, flex, items-center, ga, p-3'>
-                <DollarSign, classNam, e='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
+                <DollarSign, className='w-8 h-8, tex, t-gre, e, n-4, 0, 0' />
                 Prici, n, g & Packag, e, s
               </h2>
-              <div, classNam, e='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
+              <div, className='grid, m, d: gr, i, d-co, l, s-3, ga, p-6'>
                 {[
                   {
                     na, m, e: 'Business, Protect, i, o, n',
@@ -332,104 +332,104 @@ const, AdvancedCybersecurityA, I = () => {
                   <div, ke, y = { in, d, e, x }, classNa, m, e = { `bg-whi, t, e/5, backdro, p-bl, u, r-sm, rounde, d-x, l, p-6, borde, r ${p, k, g.popul, a, r  ? 'bord, e, r-r, e, d-5, 0, 0/50, rin, g-2, rin, g-r, e, d-5, 0, 0/30'  : 'bord, e, r-zi, o, n-cy, a, n/30' }`}
                   >
                     {  p, k, g.popul, a, r  && (
-                      <div, classNam, e='bg-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
+                      <div, className='bg-r, e, d-5, 0, 0/20, tex, t-r, e, d-300, tex, t-xs, fon, t-bold, p, x-3, p, y-1, rounde, d-full, inlin, e-block, m, b-4'>
                         MOST, POPULA, R
                       </di, v > )  }
                     <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-2'>
                       {p, k, g.na, m, e}
                     </h3>
-                    <div, classNam, e='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
+                    <div, className='te, x, t-4xl, fon, t-bold, tex, t-gre, e, n-400, m, b-6'>
                       {p, k, g.pri, c, e}
-                      <span, classNam, e='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
+                      <span, className='te, x, t-lg, tex, t-zi, o, n-sla, t, e-lig, h, t'>
                         /mon, t, h
                       </sp, a, n>
-                    </d, i, v>
-                    <ul, classNam, e='spa, c, e-y-3'>
+                    </div>
+                    <ul, className='spa, c, e-y-3'>
                       { p, k, g.featur, e, s.m, a, p((feat, u, r, e, fInd, e, x) = > (
                         <li, ke, y = { fIn, d, e, x  }, classNa, m, e = 'flex, item, s-start, ga, p-2'>
-                          <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                          <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                           <sp, a, n>{featu, r, e}</sp, a, n>
                         </l, i>
                       ))}
                     </ul>
-                  </d, i, v>
+                  </div>
                 ))}
-              </d, i, v>
+              </div>
             </secti, o, n>
 
             {/* Limited, Time, Offer */}
             <secti, o, n>
               <div, classNam, e = 'bg-gradie, n, t-to-r, fro, m-r, e, d-9, 0, 0/40, vi, a-oran, g, e-9, 0, 0/40, t, o-yell, o, w-9, 0, 0/40, rounde, d-x, l, p-8, borde, r-2, borde, r-r, e, d-5, 0, 0/50'>
-                <div, classNam, e='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'>
-                  <div, classNam, e='fl, e, x-1'>
-                    <div, classNam, e='flex, item, s-center, ga, p-3, m, b-4'>
-                      <Shield, classNam, e='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
-                      <h3, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
+                <div, className='flex, item, s-center, justif, y-between, fle, x-wrap, ga, p-6'>
+                  <div, className='fl, e, x-1'>
+                    <div, className='flex, item, s-center, ga, p-3, m, b-4'>
+                      <Shield, className='w-8 h-8, tex, t-r, e, d-4, 0, 0' />
+                      <h3, className='te, x, t-2xl, fon, t-bold, tex, t-whi, t, e'>
                         🛡️ October, 2025, Security Initiati, v, e
                       </h3>
-                    </d, i, v>
-                    <p, classNam, e='te, x, t-xl, tex, t-r, e, d-200, m, b-4'>
+                    </div>
+                    <p, className='te, x, t-xl, tex, t-r, e, d-200, m, b-4'>
                       G, e, t <stro, n, g>60, Days, FREE</stro, n, g> when, you, start before, October, 3, 1, 20, 2, 5
                     </p>
                     <ul, classNam, e = 'spa, c, e-y-2'>
-                      <li, classNam, e='flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                      <li, className='flex, item, s-start, ga, p-2'>
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                         <sp, a, n>Free, security, assessment ($2, 5,000, valu, e)</sp, a, n>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                         <sp, a, n>
                           Complimentary, penetration, test ($3, 5,000, valu, e)
                         </sp, a, n>
                       </li>
                       <li, classNam, e = 'flex, item, s-start, ga, p-2'>
-                        <CheckCircle, classNam, e='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
+                        <CheckCircle, className='w-5 h-5, tex, t-gre, e, n-400, fle, x-shri, n, k-0, m, t-1' />
                         <sp, a, n>90, days, extended suppo, r, t</sp, a, n>
                       </li>
                     </ul>
-                    <p, classNam, e='te, x, t-sm, tex, t-zi, o, n-sla, t, e-light, m, t-4'>
+                    <p, className='te, x, t-sm, tex, t-zi, o, n-sla, t, e-light, m, t-4'>
                       Limited, to, first 25, customer, s. Annual, contract, required.
                     </p>
-                  </d, i, v>
+                  </div>
                   <d, i, v>
                     <Link, t, o='/conta, c, t'
-                      classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-r, e, d-600, hove, r:to-oran, g, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
+                      className='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-r, e, d-600, hove, r:to-oran, g, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
                     >
                       Secure, Your, Enterprise
-                      <Shield, classNam, e='w-5 h-5' />
+                      <Shield, className='w-5 h-5' />
                     </Li, n, k>
-                  </d, i, v>
-                </d, i, v>
-              </d, i, v>
+                  </div>
+                </div>
+              </div>
             </secti, o, n>
 
             {/* CTA, Sect, i, o, n */}
             <section, classNam, e = 'te, x, t-cent, e, r'>
-              <h2, classNam, e='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
+              <h2, className='te, x, t-3xl, fon, t-bold, tex, t-white, m, b-6'>
                 Protect, Your, Enterprise Tod, a, y
               </h2>
-              <p, classNam, e='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8'>
+              <p, className='te, x, t-xl, tex, t-zi, o, n-sla, t, e-light, m, b-8'>
                 Schedule, a, security consultation, to, see how, AI, can revolutionize, your, cybersecurity postu, r, e.
               </p>
-              <div, classNam, e='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'>
+              <div, className='flex, fle, x-wrap, ga, p-4, justif, y-cent, e, r'>
                 <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-r, e, d-600, hove, r:to-oran, g, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
+                  className='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-gradie, n, t-to-r, fro, m-r, e, d-500, t, o-oran, g, e-500, tex, t-white, fon, t-bold, rounde, d-lg, hove, r: fr, o, m-r, e, d-600, hove, r:to-oran, g, e-600, transitio, n-all, transform, hover:sca, l, e-1, 0, 5'
                 >
                   Schedule, Security, Assessment
-                  <Shield, classNam, e='w-5 h-5' />
+                  <Shield, className='w-5 h-5' />
                 </Li, n, k>
                 <Link, t, o='/conta, c, t'
-                  classNa, m, e='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-r, e, d-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
+                  className='inli, n, e-flex, item, s-center, ga, p-2, p, x-8, p, y-4, b, g-whi, t, e/10, backdro, p-bl, u, r-sm, tex, t-white, fon, t-bold, rounde, d-lg, border, border-r, e, d-5, 0, 0/30, hove, r:bg-whi, t, e/20, transitio, n-a, l, l'
                 >
                   Request, Platform, Demo
                 </Li, n, k>
-              </d, i, v>
+              </div>
             </secti, o, n>
-          </d, i, v>
+          </div>
         </artic, l, e>
-      </d, i, v>
+      </div>
     </>
   );
 };
 
-export, default, AdvancedCybersecurityAI;
+export default AdvancedCybersecurityAI;

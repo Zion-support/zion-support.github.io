@@ -29,129 +29,61 @@ const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = ({
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isMonitoring, setIsMonitoring] = useState(false);
 
-interface PerformanceThresholds {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
-  memoryUsage: number;
-}
+  const measurePerformance = useCallback(() => {
+    if (typeof window === 'undefined' || !('performance' in window)) {
+      return;
+    }
 
-interface Alert {
-  id: string;
-  message: string;
-  resolved: boolean;
-}
-
-export const AdvancedPerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
-  const [alerts, setAlerts] = useState<Alert[]>([]);
-  const [thresholds, setThresholds] = useState<PerformanceThresholds>({
-    loadTime: 3000,
-    firstContentfulPaint: 1800,
-    largestContentfulPaint: 2500,
-    cumulativeLayoutShift: 0.1,
-    firstInputDelay: 100,
-    memoryUsage: 50 * 1024 * 1024 // 50MB
-  });
-
-  // Resolve alert
-  const resolveAlert = useCallback((alertId: string) => {
-    setAlerts((prev) =>
-      prev.map((alert) =>
-          alert.id === alertId ? { ...alert, resolved: true } : alert
-      )
-    );
-  }, []);
-
-  // Update thresholds
-  const updateThresholds = useCallback(
-    (newThresholds: Partial<PerformanceThresholds>) => {
-      setThresholds((prev) => ({ ...prev, ...newThresholds }));
-    },
-    []
-  );
-
-  // Calculate performance score
-  const performanceScore = useMemo(() => {
-    if (!metrics) return 0;
-
-    let score = 100;
-
-    // Deduct points for exceeding thresholds
-    if (metrics.lcp && metrics.lcp > thresholds.largestContentfulPaint) score -= 20;
-    if (metrics.fcp && metrics.fcp > thresholds.firstContentfulPaint) score -= 15;
-    if (metrics.cls && metrics.cls > thresholds.cumulativeLayoutShift) score -= 25;
-    if (metrics.fid && metrics.fid > thresholds.firstInputDelay) score -= 10;
-
-      return Math.max(0, score);
-    }, [metrics, thresholds]);
-
-  // Get performance grade
-  const getPerformanceGrade = useCallback((score: number) => {
-    if (score >= 90) return { grade: "A", color: "text-green-500" };
-    if (score >= 80) return { grade: "B", color: "text-yellow-500" };
-    if (score >= 70) return { grade: "C", color: "text-orange-500" };
-    if (score >= 60) return { grade: "D", color: "text-red-500" };
-    return { grade: "F", color: "text-red-700" };
-  }, []);
-
-  // Format time
-  const formatTime = useCallback((ms: number) => {
-    if (ms < 1000) return `${ms.toFixed(0)}ms`;
-      return `${(ms / 1000).toFixed(2)}s`;
-    }, []);
-
-  // Format bytes
-  const formatBytes = useCallback((bytes: number) => {
-    if (bytes < 1024) return `${bytes} B`;
-    if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
-    return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
-  }, []);
-
-  useEffect(() => {
-    // Only run in development
-    if (process.env.NODE_ENV !== 'development') return;
-
-    const observer = new PerformanceObserver(list => {
+    const observer = new PerformanceObserver((list) => {
       const entries = list.getEntries();
       
       entries.forEach((entry) => {
         if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
         } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({
-            ...prev,
-            fid: (entry as any).processingStart - entry.startTime
-          }));
-        } else if (
-          entry.entryType === 'layout-shift' &&
-          !(entry as any).hadRecentInput
-        ) {
-          setMetrics(prev => ({
-            ...prev,
-            cls: (prev.cls || 0) + (entry as any).value
-          }));
+          setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime }));
+        } else if (entry.entryType === 'layout-shift') {
+          if (!(entry as any).hadRecentInput) {
+            setMetrics(prev => ({ 
+              ...prev, 
+              cls: (prev.cls || 0) + (entry as any).value 
+            }));
+          }
         }
       });
     });
 
-    observer.observe({
-      entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift']
-    });
+    try {
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+    } catch (e) {
+      console.warn('Performance Observer not supported');
+    }
 
     return () => observer.disconnect();
   }, []);
 
-      window.addEventListener('keydown', handleKeyPress);
+  useEffect(() => {
+    if (isMonitoring) {
+      const cleanup = measurePerformance();
+      return cleanup;
+    }
+  }, [isMonitoring, measurePerformance]);
 
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('keydown', handleKeyPress);
-    };
-  }, []);
+  const performanceScore = useMemo(() => {
+    let score = 100;
+    
+    if (metrics.lcp && metrics.lcp > (threshold.lcp || 2500)) {
+      score -= 30;
+    }
+    if (metrics.fid && metrics.fid > (threshold.fid || 100)) {
+      score -= 20;
+    }
+    if (metrics.cls && metrics.cls > (threshold.cls || 0.1)) {
+      score -= 20;
+    }
+    
+    return Math.max(0, score);
+  }, [metrics, threshold]);
 
   const startMonitoring = useCallback(() => {
     setIsMonitoring(true);
@@ -162,26 +94,24 @@ export const AdvancedPerformanceMonitor: React.FC = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        position: 'fixed',
-        top: '20px',
-        right: '20px',
-        background: 'rgba(0, 0, 0, 0.8)',
-        color: 'white',
-        padding: '10px',
-        borderRadius: '5px',
-        fontSize: '12px',
-        zIndex: 9999
-      }}
-    >
-      <h4>Performance Metrics</h4>
-      <div>LCP: {metrics.lcp ? metrics.lcp.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>FID: {metrics.fid ? metrics.fid.toFixed(2) + 'ms' : 'N/A'}</div>
-      <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-      <div style={{ marginTop: '10px', fontSize: '10px' }}>
-        Press Ctrl+Shift+P to toggle
-      </div>
+    <div>
+      {children}
+      {process.env.NODE_ENV === 'development' && (
+        <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-sm">
+          <div>Performance Score: {performanceScore}/100</div>
+          <div>LCP: {metrics.lcp?.toFixed(0)}ms</div>
+          <div>FID: {metrics.fid?.toFixed(0)}ms</div>
+          <div>CLS: {metrics.cls?.toFixed(3)}</div>
+          <div className="mt-2 space-x-2">
+            <button
+              onClick={isMonitoring ? stopMonitoring : startMonitoring}
+              className="px-2 py-1 bg-blue-600 rounded text-xs"
+            >
+              {isMonitoring ? 'Stop' : 'Start'} Monitor
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

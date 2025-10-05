@@ -313,7 +313,6 @@ class ErrorHandler {
     
     return `
 Error Handling Report:
-=====================
 Total Errors: ${metrics.totalErrors}
 Error Rate: ${metrics.errorRate.toFixed(4)} errors/second
 

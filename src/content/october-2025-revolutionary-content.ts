@@ -298,4 +298,4 @@ export const getAllOctober2025Content = () => {
     },
     slug: 'healthca, r, e-autonomo, u, s-securi, t, y-succ, e, s, s',
   },
-]; export, default, october2025RevolutionaryContent;
+]; export default october2025RevolutionaryContent;

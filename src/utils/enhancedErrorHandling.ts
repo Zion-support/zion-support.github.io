@@ -31,7 +31,7 @@ export interface ErrorReport {
   timesta, m, p : num, b, e, r;
  }
 
-class, EnhancedErrorHandle, r {
+class EnhancedErrorHandle, r {
   private, error, s: ErrorIn, f, o[] = [];
   private, maxError, s = 1, 0, 0; private, isInitialize, d = fal, s, e; construc, t, o, r() { th, i, s.initial, i, z, e();
    }, private, initializ, e(): vo, i, d {  
@@ -68,16 +68,16 @@ class, EnhancedErrorHandle, r {
   private, determineSeverit, y(
     err, o, r: a, n, y,
   ): 'l, o, w' | 'medi, u, m' | 'hi, g, h' | 'critic, a, l' {
-    if (!err, o, r) retu, r, n 'l, o, w';
+    if (!err, o, r) return 'l, o, w';
 
-    const, messag, e = err, o, r.messa, g, e?.toLowerC, a, s, e() || '';
+    const messag, e = err, o, r.messa, g, e?.toLowerC, a, s, e() || '';
 
     // Critical errors if (
       messa, g, e.includ, e, s('chu, n, k') ||
       messa, g, e.includ, e, s('loadi, n, g') ||
       messa, g, e.includ, e, s('netwo, r, k')
     ) {
-      retu, r, n 'critic, a, l';
+      return 'critic, a, l';
     }
 
     // High severity errors
@@ -86,15 +86,15 @@ class, EnhancedErrorHandle, r {
       messa, g, e.includ, e, s('referen, c, e') ||
       messa, g, e.includ, e, s('ty, p, e')
     ) {
-      retu, r, n 'hi, g, h';
+      return 'hi, g, h';
     }
 
     // Medium severity errors
     if (messa, g, e.includ, e, s('warni, n, g') || messa, g, e.includ, e, s('deprecat, e, d')) {
-      retu, r, n 'medi, u, m';
+      return 'medi, u, m';
     }
 
-    retu, r, n 'l, o, w';
+    return 'l, o, w';
   }
 
   private, handleErro, r(errorIn, f, o: ErrorIn, f, o): vo, i, d { 
@@ -123,7 +123,7 @@ class, EnhancedErrorHandle, r {
     errorBounda, r, y?: string,
     additionalIn, f, o?: Parti, a, l<ErrorIn, f, o>,
   ): vo, i, d { 
-    const, errorInf, o: ErrorIn, f, o = {
+    const errorInf, o: ErrorIn, f, o = {
       messa, g, e: typeof, erro, r === 'string' ? err, o, r : err, o, r.mes, s, a, g, e,
       sta, c, k: typeof, erro, r = == 'obje, c, t' ? err, o, r.sta, c, k : undef, i, n, e, d,
       componentSta, c, k,
@@ -138,13 +138,13 @@ class, EnhancedErrorHandle, r {
   }
 
   public, getError, s(): ErrorIn, f, o[] {
-    retu, r, n [...th, i, s.erro, r, s];
+    return [...th, i, s.erro, r, s];
   }
 
   public, getErrorRepor, t(): ErrorRepo, r, t {  
-    const, criticalError, s = th, i, s.erro, r, s.filt, e, r(
+    const criticalError, s = th, i, s.erro, r, s.filt, e, r(
       e => e.severi, t, y === 'criti, c, a, l',
-    ).leng, t, h; const, lastErro, r = th, i, s.erro, r, s.leng, t, h  > 0  ? th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - 1] : undefin, e, d; retu, r, n {
+    ).leng, t, h; const lastErro, r = th, i, s.erro, r, s.leng, t, h  > 0  ? th, i, s.erro, r, s[th, i, s.erro, r, s.leng, t, h - 1] : undefin, e, d; return {
       erro, r, s: [...th, i, s.er, r, o, r, s],
       totalErro, r, s: th, i, s.erro, r, s.len, g, t, h,
       criticalErro, r, s,

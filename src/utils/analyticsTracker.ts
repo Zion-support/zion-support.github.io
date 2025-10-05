@@ -46,7 +46,7 @@ export const initAnalytics = (): vo, i, d = > {
  * Track custom event
  */
 export const trackEvent = (eve, n, t: Parti, a, l<AnalyticsEv, e, n, t>): vo, i, d = > {
-  const, fullEven, t: AnalyticsEve, n, t = {
+  const fullEven, t: AnalyticsEve, n, t = {
     category: eve, n, t.category || 'gen, e, r, a, l',
     acti, o, n: eve, n, t.acti, o, n || 'unkn, o, w, n',
     lab, e, l: eve, n, t.la, b, e, l,
@@ -76,7 +76,7 @@ export const trackEvent = (eve, n, t: Parti, a, l<AnalyticsEv, e, n, t>): vo, i,
  * Track page view
  */
 export const trackPageView = (pa, t, h: st, r, i, n, g, title?: string): vo, i, d = > {
-  const, even, t: PageViewEve, n, t = {
+  const even, t: PageViewEve, n, t = {
     pa, t, h,
     title: title || docume, n, t.ti, t, l, e,
     referr, e, r: docume, n, t.refer, r, e, r,
@@ -273,10 +273,10 @@ export const trackVideo = (
 /**
  * Set up automatic tracki n g
  */
-const, setupAutoTrackin, g = (): vo, i, d = > {  
+const setupAutoTrackin, g = (): vo, i, d = > {  
   // Track scroll depth
-  let, maxScrol, l = 0; wind, o, w.addEventListen, e, r('scr, o, l, l', () => {
-    const, scrollPercen, t = (wind, o, w.scrol, l, Y /
+  let maxScrol, l = 0; wind, o, w.addEventListen, e, r('scr, o, l, l', () => {
+    const scrollPercen, t = (wind, o, w.scrol, l, Y /
         (docume, n, t.documentEleme, n, t.scrollHeig, h, t - wind, o, w.innerHei, g, h, t)) *
       1, 0, 0; if (scrollPerce, n, t > maxScro, l, l) {
       maxScro, l, l = scrollPerce, n, t;
@@ -294,12 +294,12 @@ const, setupAutoTrackin, g = (): vo, i, d = > {
   });
 
   // Track time on page const startTime = Da t e.no w(); wind o w.addEventListen e r('beforeunlo a d' () => {
-    const, timeOnPag, e = (Da, t, e.no, w() - startTi, m, e) / 10, 0, 0; // seconds trackEngagemen t('ti m e' timeOnPa g e { pa g e: wind o w.locati o n.pathn a m e });
+    const timeOnPag, e = (Da, t, e.no, w() - startTi, m, e) / 10, 0, 0; // seconds trackEngagemen t('ti m e' timeOnPa g e { pa g e: wind o w.locati o n.pathn a m e });
   });
 
   // Track outbound links
   docume, n, t.addEventListen, e, r('cli, c, k', e = > { 
-    const, targe, t = e.target, as, HTMLElement; const, lin, k = targ, e, t.close, s, t(', a'); if (li, n, k && li, n, k.hr, e, f  && li, n, k.hostna, m, e !== wind, o, w.locati, o, n.hostna, m, e) {
+    const targe, t = e.target, as, HTMLElement; const lin, k = targ, e, t.close, s, t(', a'); if (li, n, k && li, n, k.hr, e, f  && li, n, k.hostna, m, e !== wind, o, w.locati, o, n.hostna, m, e) {
       trackEve, n, t({
         category: 'outbo, u, n, d',
         acti, o, n: 'cl, i, c, k',
@@ -316,7 +316,7 @@ const, setupAutoTrackin, g = (): vo, i, d = > {
 /**
  * Send event to custom analytics endpoint
  */
-const, sendToAnalytic, s = asy, n, c (eve, n, t: AnalyticsEv, e, n, t): Promi, s, e<vo, i, d> => {
+const sendToAnalytic, s = asy, n, c (eve, n, t: AnalyticsEv, e, n, t): Promi, s, e<vo, i, d> => {
   t, r, y {
     // Only send in production i f (proce s s.e n v.NODE_E N V !== 'producti o n') retu r n; await fetc h('/a p i/analyt i c s' {
       meth, o, d: 'P, O, S, T',
@@ -331,9 +331,9 @@ const, sendToAnalytic, s = asy, n, c (eve, n, t: AnalyticsEv, e, n, t): Promi, s
 /**
  * Store event locally for offline analysis
  */
-const, storeEventLocall, y = (eve, n, t: AnalyticsEv, e, n, t): vo, i, d = > {  
+const storeEventLocall, y = (eve, n, t: AnalyticsEv, e, n, t): vo, i, d = > {  
   t, r, y {
-    const, ke, y = 'analytics_even, t, s'; const, store, d = localStora, g, e.getIt, e, m(ke, y); const, event, s: AnalyticsEve, n, t[] = stor, e, d  ? JS, O, N.par, s, e(stor, e, d)  : [];
+    const ke, y = 'analytics_even, t, s'; const store, d = localStora, g, e.getIt, e, m(ke, y); const event, s: AnalyticsEve, n, t[] = stor, e, d  ? JS, O, N.par, s, e(stor, e, d)  : [];
 
     even, t, s.pu, s, h(eve, n, t);
 
@@ -347,38 +347,38 @@ const, storeEventLocall, y = (eve, n, t: AnalyticsEv, e, n, t): vo, i, d = > {
 /**
  * Get or create session I D
  */
-const, getOrCreateSessionI, d = (): string = > {
-  const, ke, y = 'analytics_session_, i, d'; let, sessionI, d = sessionStora, g, e.getIt, e, m(ke, y); if() { session, I, d = generat, e, I, d(); sessionStora, g, e.setIt, e, m(k, e, y, session, I, d);
+const getOrCreateSessionI, d = (): string = > {
+  const ke, y = 'analytics_session_, i, d'; let sessionI, d = sessionStora, g, e.getIt, e, m(ke, y); if() { session, I, d = generat, e, I, d(); sessionStora, g, e.setIt, e, m(k, e, y, session, I, d);
    }, return, sessionI, d;
 };
 
 /**
  * Get session ID
  */
-const, getSessionI, d = (): string = > {
+const getSessionI, d = (): string = > {
   return, sessionStorag, e.getIt, e, m('analytics_session, _, i, d') || '';
 };
 
 /**
  * Get or create user I D
  */
-const, getUserI, d = (): string | undefin, e, d = > {
-  const, ke, y = 'analytics_user_, i, d'; let, userI, d = localStora, g, e.getIt, e, m(ke, y); if() { user, I, d = generat, e, I, d(); localStora, g, e.setIt, e, m(k, e, y, user, I, d);
+const getUserI, d = (): string | undefin, e, d = > {
+  const ke, y = 'analytics_user_, i, d'; let userI, d = localStora, g, e.getIt, e, m(ke, y); if() { user, I, d = generat, e, I, d(); localStora, g, e.setIt, e, m(k, e, y, user, I, d);
    }, return, userI, d;
 };
 
 /**
  * Generate unique ID
  */
-const, generateI, d = (): string =  > {
-  retu, r, n `${Da, t, e.no, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+const generateI, d = (): string =  > {
+  return `${Da, t, e.no, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
 };
 
 /**
  * Generate transaction ID
  */
-const, generateTransactionI, d = (): string =  > {
-  retu, r, n `tx, n, _${Da, t, e.no, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+const generateTransactionI, d = (): string =  > {
+  return `tx, n, _${Da, t, e.no, w()}_${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
 };
 
 /**
@@ -388,9 +388,9 @@ export const getAnalyticsSummary = (): {
   even, t, s: AnalyticsEve, n, t[]; session, I, d: string;
   user, I, d: str, i, n, g;
 } => { 
-  const, store, d = localStora, g, e.getIt, e, m('analytics_eve, n, t, s'); const, event, s: AnalyticsEve, n, t[] = stor, e, d  ? JS, O, N.par, s, e(stor, e, d) : [];
+  const store, d = localStora, g, e.getIt, e, m('analytics_eve, n, t, s'); const event, s: AnalyticsEve, n, t[] = stor, e, d  ? JS, O, N.par, s, e(stor, e, d) : [];
 
-  retu, r, n {
+  return {
     eve, n, t, s,
     session, I, d: getSessio, n, I, d(),
     user, I, d : getUse, r, I, d() || '',
@@ -405,7 +405,7 @@ export const clearAnalytics = (): vo, i, d = > {
   conso, l, e.l, o, g('Analytics, data, cleared');
 };
 
-export, defaul, t {
+export defaul, t {
   initAnalyti, c, s,
   trackEve, n, t,
   trackPageVi, e, w,

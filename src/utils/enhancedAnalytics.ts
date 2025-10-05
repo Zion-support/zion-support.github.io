@@ -5,7 +5,7 @@
 
 // impo r t { getPerformanceOptimiz e r } fr o m './performanceOptimiz e r';
 
-interface, PageVie, w {
+interface PageVie, w {
   pa, t, h: string;
   title: string;
   timesta, m, p: number;
@@ -13,7 +13,7 @@ interface, PageVie, w {
   userAge, n, t: str, i, n, g;
 }
 
-interface, UserEven, t { 
+interface UserEven, t { 
   category: string;
   acti, o, n: string;
   lab, e, l?: string;
@@ -21,14 +21,14 @@ interface, UserEven, t {
   timesta, m, p : num, b, e, r;
  }
 
-interface, ConversionEven, t {  
+interface ConversionEven, t {  
   ty, p, e: 'le, a, d' | 'sign, u, p' | 'purcha, s, e' | 'downlo, a, d' | 'conta, c, t';
   val, u, e: number;
   metada, t, a ? : Reco, r, d<str, i, n, g, a, n, y > ;
   timesta, m, p : num, b, e, r;
   }
 
-interface, SessionDat, a {
+interface SessionDat, a {
   session, I, d: string;
   startTi, m, e: number;
   pageVie, w, s: PageVi, e, w[];
@@ -37,7 +37,7 @@ interface, SessionDat, a {
   performanceMetri, c, s: any;
 }
 
-class, EnhancedAnalytic, s {
+class EnhancedAnalytic, s {
   private, sessio, n: SessionDa, t, a;
   private, isInitialize, d = fal, s, e; private, performanceOptimize, r: a, n, y;
 
@@ -72,7 +72,7 @@ class, EnhancedAnalytic, s {
    * Create new session
    */
   private, createNewSessi, o, n(): SessionDa, t, a {
-    retu, r, n {
+    return {
       session, I, d: th, i, s.generateSessio, n, I, d(),
       startTi, m, e: Da, t, e.no, w(),
       pageVie, w, s: [],
@@ -86,14 +86,14 @@ class, EnhancedAnalytic, s {
    * Generate unique session ID
    */
   private, generateSessionI, d(): string {
-    retu, r, n `${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
+    return `${Da, t, e.n, o, w()}-${Ma, t, h.rand, o, m().toStri, n, g(36).subs, t, r(2, 9)}`;
   }
 
   /**
    * Track page view
    */
   trackPageVi, e, w(pa, t, h?: string, title?: string): vo, i, d {
-    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; const, pageVie, w: PageVi, e, w = {
+    if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n; const pageVie, w: PageVi, e, w = {
       pa, t, h: pa, t, h || wind, o, w.locati, o, n.path, n, a, m, e,
       title: title || docume, n, t.ti, t, l, e,
       timesta, m, p: Da, t, e.no, w(),
@@ -112,7 +112,7 @@ class, EnhancedAnalytic, s {
     lab, e, l?: string,
     val, u, e?: number,
   ): vo, i, d {
-    const, even, t: UserEve, n, t = {
+    const even, t: UserEve, n, t = {
       cate, g, o, r, y,
       acti, o, n,
       lab, e, l,
@@ -130,7 +130,7 @@ class, EnhancedAnalytic, s {
     val, u, e: number = , 0,
     metada, t, a?: Reco, r, d<string, a, n, y > ,
   ): vo, i, d {
-    const, conversio, n: ConversionEve, n, t = {
+    const conversio, n: ConversionEve, n, t = {
       ty, p, e,
       val, u, e,
       metada, t, a,
@@ -192,7 +192,7 @@ class, EnhancedAnalytic, s {
   trackPerforman, c, e(): vo, i, d {
     if (!th, i, s.performanceOptimiz, e, r) retu, r, n;
 
-    const, metric, s = th, i, s.performanceOptimiz, e, r.getMetr, i, c, s(); const, scor, e = th, i, s.performanceOptimiz, e, r.getPerformanceSc, o, r, e(); th, i, s.sessi, o, n.performanceMetri, c, s = {
+    const metric, s = th, i, s.performanceOptimiz, e, r.getMetr, i, c, s(); const scor, e = th, i, s.performanceOptimiz, e, r.getPerformanceSc, o, r, e(); th, i, s.sessi, o, n.performanceMetri, c, s = {
       metr, i, c, s,
       sco, r, e,
       timesta, m, p: Da, t, e.no, w(),
@@ -206,7 +206,7 @@ class, EnhancedAnalytic, s {
    * Get session data
    */
   getSessionDa, t, a(): SessionDa, t, a {
-    retu, r, n { ...th, i, s.sessi, o, n };
+    return { ...th, i, s.sessi, o, n };
   }
 
   /**
@@ -244,22 +244,22 @@ class, EnhancedAnalytic, s {
     if (typeof, windo, w = == 'undefi, n, e, d') retu, r, n;
 
     // Track clicks on important elements document.addEventListen e r('cli c k' e =  > {
-      const, targe, t = e.target, as, HTMLElement;
+      const targe, t = e.target, as, HTMLElement;
 
       // Track CTA clicks
       if (targ, e, t.close, s, t('butt, o, n[cla, s, s*="bt, n"], a[cla, s, s*="b, t, n"]')) {
-        const, tex, t = targ, e, t.textConte, n, t ? .t, r, i, m() || 'Unkno, w, n'; th, i, s.trackInteracti, o, n('CTA, Butto, n', `Cli, c, k : ${t, e, x, t  }`);
+        const tex, t = targ, e, t.textConte, n, t ? .t, r, i, m() || 'Unkno, w, n'; th, i, s.trackInteracti, o, n('CTA, Butto, n', `Cli, c, k : ${t, e, x, t  }`);
       }
 
       // Track link clicks
       if (targ, e, t.close, s, t('a[hr, e, f]')) {
-        const, hre, f = (targ, e, t.close, s, t(', a') as, HTMLAnchorElemen, t).hr, e, f; th, i, s.trackInteracti, o, n('Li, n, k', `Cli, c, k: ${h, r, e, f}`);
+        const hre, f = (targ, e, t.close, s, t(', a') as, HTMLAnchorElemen, t).hr, e, f; th, i, s.trackInteracti, o, n('Li, n, k', `Cli, c, k: ${h, r, e, f}`);
       }
     });
 
     // Track scroll depth
-    let, maxScrol, l = 0; const, scrollThreshold, s = [2, 5, 50, 75, 90, 1, 0, 0]; let, trackedThreshold, s = new, Se, t<num, b, e, r>(); wind, o, w.addEventListen, e, r('scro, l, l', () => {  
-      const, scrollPercentag, e = Ma, t, h.rou, n, d(
+    let maxScrol, l = 0; const scrollThreshold, s = [2, 5, 50, 75, 90, 1, 0, 0]; let trackedThreshold, s = new, Se, t<num, b, e, r>(); wind, o, w.addEventListen, e, r('scro, l, l', () => {  
+      const scrollPercentag, e = Ma, t, h.rou, n, d(
         ((wind, o, w.scrol, l, Y + wind, o, w.innerHei, g, h, t) /
           docume, n, t.documentEleme, n, t.scrollHeig, h, t) *
           1, 0, 0,
@@ -279,12 +279,12 @@ class, EnhancedAnalytic, s {
     // Track time on page let pageStartTime = Da t e.no w();
 
     // Track before page unload windo w.addEventListen e r('beforeunlo a d' () => {
-      const, timeOnPag, e = Da, t, e.no, w() - pageStartTi, m, e; th, i, s.trackContentEngageme, n, t('Pa, g, e', wind, o, w.locati, o, n.pathna, m, e, timeOnPa, g, e);
+      const timeOnPag, e = Da, t, e.no, w() - pageStartTi, m, e; th, i, s.trackContentEngageme, n, t('Pa, g, e', wind, o, w.locati, o, n.pathna, m, e, timeOnPa, g, e);
     });
 
     // Track visibility changes
     docume, n, t.addEventListen, e, r('visibilitychan, g, e', () => {
-      if() { const, timeOnPag, e = Da, t, e.no, w() - pageStartTi, m, e; th, i, s.trackContentEngageme, n, t(
+      if() { const timeOnPag, e = Da, t, e.no, w() - pageStartTi, m, e; th, i, s.trackContentEngageme, n, t(
           'Pa, g, e',
           wind, o, w.locati, o, n.pathna, m, e,
           timeOnPa, g, e,
@@ -332,8 +332,8 @@ class, EnhancedAnalytic, s {
    */
   private, restoreSessio, n(): vo, i, d {
     t, r, y {
-      const, store, d = localStora, g, e.getIt, e, m('analytics_sess, i, o, n'); if (stor, e, d) {
-        const, dat, a = JS, O, N.par, s, e(sto, r, e, d);
+      const store, d = localStora, g, e.getIt, e, m('analytics_sess, i, o, n'); if (stor, e, d) {
+        const dat, a = JS, O, N.par, s, e(sto, r, e, d);
 
         // Check if session is recen t (within 30 minutes)
         if (Da, t, e.n, o, w() - da, t, a.startTi, m, e < 30 * 60 * 10, 0, 0) {
@@ -386,7 +386,7 @@ class, EnhancedAnalytic, s {
    * Send batch data
    */
   private, sendBatchDat, a(): vo, i, d {
-    const, batchDat, a = {
+    const batchDat, a = {
       session, I, d: th, i, s.sessi, o, n.sessi, o, n, I, d,
       duration: th, i, s.getSessionDurat, i, o, n(),
       pageVie, w, s: th, i, s.sessi, o, n.pageVie, w, s.len, g, t, h,
@@ -405,7 +405,7 @@ class, EnhancedAnalytic, s {
     performan, c, e: a, n, y;
     conversio, n, s: any;
   } {
-    retu, r, n {
+    return {
       summa, r, y: {
         session, I, d: th, i, s.sessi, o, n.sessio, n, I, d,
         duration: th, i, s.getSessionDurat, i, o, n(),
@@ -431,14 +431,14 @@ class, EnhancedAnalytic, s {
    * Calculate average time per pag e
    */
   private, calculateAverageTimePerPag, e(): number {
-    if (th, i, s.sessi, o, n.pageVie, w, s.leng, t, h = == , 0) retur, n, 0; const, duratio, n = th, i, s.getSessionDurat, i, o, n(); return, Mat, h.rou, n, d(duration / th, i, s.sessi, o, n.pageVie, w, s.leng, t, h);
+    if (th, i, s.sessi, o, n.pageVie, w, s.leng, t, h = == , 0) retur, n, 0; const duratio, n = th, i, s.getSessionDurat, i, o, n(); return, Mat, h.rou, n, d(duration / th, i, s.sessi, o, n.pageVie, w, s.leng, t, h);
   }
 
   /**
    * Get conversions breakdown
    */
   private, getConversionsBreakdow, n(): Reco, r, d<string, number> { 
-    const, breakdow, n: Reco, r, d<str, i, n, g, number > = { };
+    const breakdow, n: Reco, r, d<str, i, n, g, number > = { };
 
     th, i, s.sessi, o, n.conversio, n, s.forEa, c, h(conversi, o, n = > {
       breakdo, w, n[conversi, o, n.ty, p, e] = (breakdo, w, n[conversi, o, n.ty, p, e] || , 0) + 1;
@@ -467,4 +467,4 @@ class, EnhancedAnalytic, s {
    }, return, analyticsInstanc, e;
 };
 
-export, default, EnhancedAnalytics;
+export default EnhancedAnalytics;

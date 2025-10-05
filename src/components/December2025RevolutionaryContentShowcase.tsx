@@ -1,182 +1,35 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const December2025RevolutionaryContentShowcase: React.FC = () => {
   return (
-    <div className='bg-gradient-to-r from-violet-900/40 via-purple-900/40 to-indigo-900/40 border-y border-violet-500/20 py-20'>
-      <div className='container mx-auto px-6'>
-        <div className='text-center mb-16'>
-          <div className='inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-indigo-500/20 border border-violet-500/30 mb-8'>
-            <span className='text-violet-400 font-bold text-lg tracking-wider uppercase animate-pulse'>
-              🚀 DECEMBER 2025 REVOLUTIONARY CONTENT
-            </span>
-          </div>
-          <h1 className='text-6xl font-extrabold mb-8 bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent'>
-            Revolutionary Content Showcase
-          </h1>
-          <p className='text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8'>
-            Experience the most advanced content generation and management system ever created. 
-            December 2025 marks the beginning of a new era in intelligent content orchestration.
+    <div className="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-16">
+      <div className="container mx-auto px-4">
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            December 2025 Revolutionary Content Showcase
+          </h2>
+          <p className="text-xl mb-8">
+            Discover the latest innovations and breakthrough technologies
           </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link to='/revolutionary-content-demo'
-              className='bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1 text-lg'
-            >
-              Experience the Revolution
-            </Link>
-            <Link to='/contact?offer=december-2025-revolutionary'
-              className='border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg'
-            >
-              Get Early Access
-            </Link>
-          </div>
-        </div>
-
-        {/* Revolutionary Features Grid */}
-        <div className='grid lg:grid-cols-3 gap-8 mb-16'>
-          {/* Central Feature */}
-          <div className='lg:col-span-2 bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-white/10'>
-            <div className='text-center mb-8'>
-              <div className='text-6xl mb-4'>🧠</div>
-              <h2 className='text-4xl font-bold text-white mb-4'>
-                Revolutionary Content AI
-              </h2>
-              <p className='text-xl text-gray-300'>
-                Next-generation AI that creates, manages, and optimizes content with unprecedented intelligence
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">AI Revolution</h3>
+              <p className="text-sm opacity-90">
+                Next-generation artificial intelligence solutions
               </p>
             </div>
-            
-            <div className='grid md:grid-cols-2 gap-6'>
-              {[
-                {
-                  title: 'Quantum Content Generation',
-                  description: 'AI that generates content 1000x faster with human-level quality',
-                  icon: '⚡'
-                },
-                {
-                  title: 'Predictive Content Strategy',
-                  description: 'AI that predicts content trends and creates accordingly',
-                  icon: '🔮'
-                },
-                {
-                  title: 'Autonomous Content Management',
-                  description: 'Self-managing content systems that optimize and update automatically',
-                  icon: '🤖'
-                },
-                {
-                  title: 'Multi-Language Mastery',
-                  description: 'Seamless content creation in 100+ languages with cultural context',
-                  icon: '🌐'
-                }
-              ].map((feature, index) => (
-                <div key={index} className='p-6 bg-white/5 rounded-xl border border-white/10 hover:border-violet-500/50 transition-all duration-300'>
-                  <div className='text-3xl mb-3'>{feature.icon}</div>
-                  <h3 className='text-xl font-bold text-white mb-2'>{feature.title}</h3>
-                  <p className='text-gray-400'>{feature.description}</p>
-                </div>
-              ))}
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
+              <p className="text-sm opacity-90">
+                Revolutionary quantum processing capabilities
+              </p>
             </div>
-          </div>
-
-          {/* Side Panel */}
-          <div className='space-y-8'>
-            <div className='bg-gradient-to-br from-violet-900/30 to-purple-900/30 rounded-2xl p-8 border border-violet-500/30'>
-              <h3 className='text-2xl font-bold text-white mb-6'>
-                Revolutionary Benefits
-              </h3>
-              <div className='space-y-4'>
-                {[
-                  '99% content creation automation',
-                  '500% increase in content quality',
-                  'Real-time trend adaptation',
-                  'Zero manual content management',
-                  'Global content synchronization',
-                  'AI-powered SEO optimization'
-                ].map((benefit, index) => (
-                  <div key={index} className='flex items-center gap-3'>
-                    <span className='text-violet-400'>✓</span>
-                    <span className='text-gray-300'>{benefit}</span>
-                  </div>
-                ))}
-              </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>
+              <p className="text-sm opacity-90">
+                Self-managing and self-optimizing technologies
+              </p>
             </div>
-
-            <div className='bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10'>
-              <h3 className='text-2xl font-bold text-white mb-6'>
-                Performance Metrics
-              </h3>
-              <div className='space-y-4'>
-                {[
-                  { metric: 'Content Speed', value: '1000x faster', color: 'text-green-400' },
-                  { metric: 'Quality Score', value: '99.8%', color: 'text-blue-400' },
-                  { metric: 'Uptime', value: '99.99%', color: 'text-violet-400' },
-                  { metric: 'Cost Reduction', value: '90%', color: 'text-purple-400' }
-                ].map((stat, index) => (
-                  <div key={index} className='flex justify-between items-center'>
-                    <span className='text-gray-300'>{stat.metric}</span>
-                    <span className={`font-bold ${stat.color}`}>{stat.value}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Use Cases */}
-        <div className='bg-white/5 backdrop-blur-lg rounded-3xl p-10 border border-white/10 mb-16'>
-          <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Revolutionary Applications
-          </h2>
-          <div className='grid md:grid-cols-3 gap-8'>
-            {[
-              {
-                title: 'Enterprise Content',
-                description: 'Complete content ecosystem for large organizations with intelligent automation',
-                icon: '🏢',
-                results: '95% content automation'
-              },
-              {
-                title: 'Media & Publishing',
-                description: 'Revolutionary content creation and distribution for media companies',
-                icon: '📰',
-                results: '1000x content output'
-              },
-              {
-                title: 'E-commerce',
-                description: 'Intelligent product descriptions, marketing content, and customer communications',
-                icon: '🛒',
-                results: '300% conversion increase'
-              }
-            ].map((useCase, index) => (
-              <div key={index} className='text-center p-6 bg-white/5 rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-300'>
-                <div className='text-5xl mb-4'>{useCase.icon}</div>
-                <h3 className='text-2xl font-bold text-white mb-4'>{useCase.title}</h3>
-                <p className='text-gray-300 mb-4'>{useCase.description}</p>
-                <div className='text-violet-400 font-bold text-lg'>{useCase.results}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
-        <div className='text-center'>
-          <h2 className='text-4xl font-bold text-white mb-6'>
-            Ready for the Content Revolution?
-          </h2>
-          <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
-            Join the December 2025 revolutionary content breakthrough and transform how your organization creates and manages content.
-          </p>
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-            <Link to='/contact?offer=december-2025-revolutionary'
-              className='bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1 text-lg'
-            >
-              Start Your Revolution
-            </Link>
-            <Link to='/december-2025-whitepaper'
-              className='border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 text-lg'
-            >
-              Download Whitepaper
-            </Link>
           </div>
         </div>
       </div>

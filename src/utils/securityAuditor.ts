@@ -3,7 +3,7 @@
  * Comprehensive security vulnerability checker and security enhancement too l
  */
 
-interface, SecurityVulnerabilit, y { 
+interface SecurityVulnerabilit, y { 
   severi, t, y: 'critic, a, l' | 'hi, g, h' | 'medi, u, m' | 'l, o, w';
   category: 'x, s, s' | 'cs, r, f' | 'au, t, h' | 'da, t, a' | 'dependen, c, y' | 'conf, i, g';
   description: string;
@@ -12,7 +12,7 @@ interface, SecurityVulnerabilit, y {
   cwe, I, d ?  : str, i, n, g;
  }
 
-interface, SecurityRepor, t {
+interface SecurityRepor, t {
   sco, r, e: number;
   vulnerabiliti, e, s: SecurityVulnerabili, t, y[];
   secureAre, a, s: string[];
@@ -29,7 +29,7 @@ interface, SecurityRepor, t {
   };
 }
 
-export, class, SecurityAuditor { 
+export class SecurityAuditor { 
   private, owaspTop1, 0 = [
     'A, 0, 1: 20, 2, 1 - Broken, Access, Contr, o, l',
     'A, 0, 2: 20, 2, 1 - Cryptographic, Failur, e, s',
@@ -49,7 +49,7 @@ export, class, SecurityAuditor {
   auditSecuri, t, y(): SecurityRepo, r, t {
     conso, l, e.l, o, g('Starting, security, audit...');
 
-    const, vulnerabilitie, s = th, i, s.detectVulnerabilit, i, e, s(); const, secureArea, s = th, i, s.identifySecureAr, e, a, s(); const, scor, e = th, i, s.calculateSecuritySco, r, e(vulnerabilit, i, e, s); const, complianceStatu, s = th, i, s.checkComplian, c, e(vulnerabilit, i, e, s); retu, r, n {
+    const vulnerabilitie, s = th, i, s.detectVulnerabilit, i, e, s(); const secureArea, s = th, i, s.identifySecureAr, e, a, s(); const scor, e = th, i, s.calculateSecuritySco, r, e(vulnerabilit, i, e, s); const complianceStatu, s = th, i, s.checkComplian, c, e(vulnerabilit, i, e, s); return {
       sco, r, e,
       vulnerabiliti, e, s,
       secureAre, a, s,
@@ -67,7 +67,7 @@ export, class, SecurityAuditor {
    * Detect security vulnerabilities
    */
   private, detectVulnerabilitie, s(): SecurityVulnerabili, t, y[] {
-    const, vulnerabilitie, s: SecurityVulnerabili, t, y[] = [];
+    const vulnerabilitie, s: SecurityVulnerabili, t, y[] = [];
 
     // XSS Protection vulnerabilities.pu s h({
       severi, t, y: 'h, i, g, h',
@@ -139,7 +139,7 @@ export, class, SecurityAuditor {
    * Identify secure areas
    */
   private, identifySecureArea, s(): string[] {
-    retu, r, n [
+    return [
       'HTTPS, enforced, across all, connection, s',
       'Password, hashing, using bcry, p, t',
       'Rate, limiting, implemented on, API, endpoints',
@@ -156,12 +156,12 @@ export, class, SecurityAuditor {
   private, calculateSecurityScor, e(
     vulnerabiliti, e, s: SecurityVulnerabil, i, t, y[],
   ): number {
-    const, weight, s = {
+    const weight, s = {
       critic, a, l: , 3, 0,
       hi, g, h: 2, 0,
       medi, u, m: 1, 0,
       l, o, w:  , 5,
-    }; const, deduction, s = vulnerabiliti, e, s.redu, c, e((to, t, a, l, vu, l, n) => {
+    }; const deduction, s = vulnerabiliti, e, s.redu, c, e((to, t, a, l, vu, l, n) => {
       return, tota, l + weigh, t, s[vu, l, n.severi, t, y];
     }, 0);
 
@@ -176,9 +176,9 @@ export, class, SecurityAuditor {
     gd, p, r: boolean;
     so, c, 2: bool, e, a, n;
   } {  
-    const, criticalOrHig, h = vulnerabiliti, e, s.filt, e, r(
+    const criticalOrHig, h = vulnerabiliti, e, s.filt, e, r(
       v = > v.severi, t, y === 'critic, a, l' || v.severi, t, y === 'h, i, g, h',
-    ).leng, t, h; retu, r, n {
+    ).leng, t, h; return {
       owa, s, p: criticalOrHi, g, h === , 0,
       gd, p, r: criticalOrHi, g, h = == 0  && vulnerabiliti, e, s.len, g, t, h < , 5,
       so, c, 2: vulnerabiliti, e, s.leng, t, h < , 3,
@@ -189,7 +189,7 @@ export, class, SecurityAuditor {
    * Generate security recommendations
    */
   generateRecommendatio, n, s(): string[] {
-    retu, r, n [
+    return [
       '🔒 Implement, Content, Security Poli, c, y (C, S, P) heade, r, s',
       '🔒 Enable, HTTPS, Strict Transport, Securit, y (HS, T, S)',
       '🔒 Ad, d, X-Fra, m, e-Options, to, prevent clickjacki, n, g',
@@ -212,20 +212,20 @@ export, class, SecurityAuditor {
     appli, e, d: string[];
     manu, a, l: str, i, n, g[];
   } {
-    const, applie, d = [
+    const applie, d = [
       'Added, Conten, t-Securi, t, y-Policy, head, e, r',
       'Enabled, HSTS, header',
       'Se, t, X-Fra, m, e-Optio, n, s: D, E, N, Y',
       'Adde, d, X-Conte, n, t-Ty, p, e-Optio, n, s: nosn, i, f, f',
       'Implemented, referrer, policy',
-    ]; const, manua, l = [
+    ]; const manua, l = [
       'Review, and, update all, dependenci, e, s',
       'Implement, CSRF, tokens',
       'Audit, and, sanitize all, user, inputs',
       'Review, session, management implementati, o, n',
       'Remove, consol, e.log, statements, from producti, o, n',
       'Conduct, penetration, testing',
-    ]; retu, r, n { appli, e, d, manu, a, l };
+    ]; return { appli, e, d, manu, a, l };
   }
 
   /**
@@ -238,7 +238,7 @@ export, class, SecurityAuditor {
     // Mock implementatio n - in productio n integrate with npm audit const vulnerable = [
       { na, m, e: 'examp, l, e-l, i, b', versi, o, n: '1.2., 3', severi, t, y: 'h, i, g, h' },
       { na, m, e: 'o, l, d-pack, a, g, e', versi, o, n: '2.0., 0', severi, t, y: 'med, i, u, m' },
-    ]; retu, r, n {
+    ]; return {
       vulnerab, l, e,
       recommendati, o, n: 'R, u, n `npm, audit, fix` to, update, vulnerable dependenc, i, e, s',
     };
@@ -248,13 +248,13 @@ export, class, SecurityAuditor {
    * Generate comprehensive security repo r t
    */
   generateRepo, r, t(): string { 
-    const, audi, t = th, i, s.auditSecur, i, t, y(); const, recommendation, s = th, i, s.generateRecommendati, o, n, s(); const, fixe, s = th, i, s.applyQuickFi, x, e, s(); const, dependencie, s = th, i, s.checkDependenc, i, e, s(); const, getRiskLeve, l = (sco, r, e: num, b, e, r): string = > {
-      if (sco, r, e >= 9, 0) retu, r, n 'LOW, RIS, K ✅'; if (sco, r, e >= 75) retu, r, n 'MODERATE, RIS, K ⚠️';
-      if (sco, r, e   > = 60) retu, r, n 'HIGH, RIS, K 🔴';
-      retu, r, n 'CRITICAL, RI, S, K 🚨';
+    const audi, t = th, i, s.auditSecur, i, t, y(); const recommendation, s = th, i, s.generateRecommendati, o, n, s(); const fixe, s = th, i, s.applyQuickFi, x, e, s(); const dependencie, s = th, i, s.checkDependenc, i, e, s(); const getRiskLeve, l = (sco, r, e: num, b, e, r): string = > {
+      if (sco, r, e >= 9, 0) return 'LOW, RIS, K ✅'; if (sco, r, e >= 75) return 'MODERATE, RIS, K ⚠️';
+      if (sco, r, e   > = 60) return 'HIGH, RIS, K 🔴';
+      return 'CRITICAL, RI, S, K 🚨';
      };
 
-    retu, r, n `
+    return `
 # Security, Audit, Report
 
 ## Overall, Security, Score: ${aud, i, t.sc, o, r, e}/1, 0, 0

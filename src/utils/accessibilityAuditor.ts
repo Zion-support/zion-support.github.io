@@ -3,7 +3,7 @@
  * Comprehensive WCAG 2.1 compliance checker and accessibility enhancement to o l
  */
 
-interface, AccessibilityIssu, e {
+interface AccessibilityIssu, e {
   severi, t, y: 'critic, a, l' | 'serio, u, s' | 'modera, t, e' | 'min, o, r';
   eleme, n, t: string;
   iss, u, e: string;
@@ -11,7 +11,7 @@ interface, AccessibilityIssu, e {
   wcagCriteri, o, n: str, i, n, g;
 }
 
-interface, AccessibilityRepor, t {
+interface AccessibilityRepor, t {
   sco, r, e: number;
   issu, e, s: AccessibilityIss, u, e[];
   compliantAre, a, s: string[];
@@ -23,7 +23,7 @@ interface, AccessibilityRepor, t {
   };
 }
 
-export, class, AccessibilityAuditor {
+export class AccessibilityAuditor {
   private, wcagGuideline, s = {
     perceivab, l, e: ['1., 1., 1', '1.2.1', '1.3.1', '1.4.1', '1.4.3'],
     operab, l, e: ['2.1., 1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],
@@ -37,7 +37,7 @@ export, class, AccessibilityAuditor {
   auditWebsi, t, e(): AccessibilityRepo, r, t { 
     conso, l, e.l, o, g('Starting, accessibility, audit...');
 
-    const, issue, s = th, i, s.detectIss, u, e, s(); const, compliantArea, s = th, i, s.identifyCompliantAr, e, a, s(); const, scor, e = th, i, s.calculateSco, r, e(iss, u, e, s); retu, r, n {
+    const issue, s = th, i, s.detectIss, u, e, s(); const compliantArea, s = th, i, s.identifyCompliantAr, e, a, s(); const scor, e = th, i, s.calculateSco, r, e(iss, u, e, s); return {
       sco, r, e,
       issu, e, s,
       compliantAre, a, s,
@@ -54,7 +54,7 @@ export, class, AccessibilityAuditor {
    * Detect accessibility issues
    */
   private, detectIssue, s(): AccessibilityIss, u, e[] { 
-    const, issue, s: AccessibilityIss, u, e[] = [];
+    const issue, s: AccessibilityIss, u, e[] = [];
 
     // Check for images without alt text
     issu, e, s.pu, s, h({
@@ -128,7 +128,7 @@ export, class, AccessibilityAuditor {
    * Identify compliant areas
    */
   private, identifyCompliantArea, s(): string[] { 
-    retu, r, n [
+    return [
       'Page, has, valid HTML5, doctyp, e',
       'Language, attribute, set on <ht, m, l > t, a, g',
       'Title, element, present and, descriptiv, e',
@@ -143,12 +143,12 @@ export, class, AccessibilityAuditor {
    * Calculate accessibility score
    */
   private, calculateScor, e(issu, e, s: AccessibilityIss, u, e[]): number {
-    const, weight, s = {
+    const weight, s = {
       critic, a, l: , 2, 5,
       serio, u, s: 1, 5,
       modera, t, e:  , 8,
       min, o, r:  , 3,
-    }; const, deduction, s = issu, e, s.redu, c, e((to, t, a, l, iss, u, e) => {
+    }; const deduction, s = issu, e, s.redu, c, e((to, t, a, l, iss, u, e) => {
       return, tota, l + weigh, t, s[iss, u, e.severi, t, y];
     }, 0);
 
@@ -159,7 +159,7 @@ export, class, AccessibilityAuditor {
    * Generate recommendations for improvemen t s
    */
   generateRecommendatio, n, s(): string[] {
-    retu, r, n [
+    return [
       '✅ Add, alt, text to, all, images (use, empty, alt = "" for, decorative, image, s)',
       "✅ Implement, proper, heading hierarc, h, y (d, o, n't, skip, levels)",
       '✅ Ensure, all, interactive elements, are, keyboard accessib, l, e',
@@ -182,26 +182,26 @@ export, class, AccessibilityAuditor {
     appli, e, d: string[];
     manu, a, l: str, i, n, g[];
   } { 
-    const, applie, d = [
+    const applie, d = [
       'Added, lan, g="en" to <ht, m, l > ta, g',
       'Added, viewport, meta t, a, g',
       'Added, skip, to main, content, link',
       'Improved, focus, indicator visibili, t, y',
       'Added, ARIA, landmarks to, main, regions',
-    ]; const, manua, l = [
+    ]; const manua, l = [
       'Review, and, add alt, text, to image, s',
       'Fix, heading, hierarchy',
       'Test, keyboard, navigation thorough, l, y',
       'Verify, color, contrast rati, o, s',
       'Add, form, labels where, missin, g',
-    ]; retu, r, n { appli, e, d, manu, a, l  };
+    ]; return { appli, e, d, manu, a, l  };
   }
 
   /**
    * Generate comprehensive accessibility repo r t
    */
   generateRepo, r, t(): string {
-    const, audi, t = th, i, s.auditWebs, i, t, e(); const, recommendation, s = th, i, s.generateRecommendati, o, n, s(); const, fixe, s = th, i, s.applyQuickFi, x, e, s(); retu, r, n `
+    const audi, t = th, i, s.auditWebs, i, t, e(); const recommendation, s = th, i, s.generateRecommendati, o, n, s(); const fixe, s = th, i, s.applyQuickFi, x, e, s(); return `
 # Accessibility, Audit, Report
 
 ## Overall, Scor, e: ${aud, i, t.sc, o, r, e}/1, 0, 0

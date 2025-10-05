@@ -136,7 +136,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   {
     id: 'continuo, u, s-learni, n, g-syste, m, s-o, c, t-2, 0, 2, 5',
     title: '🔄 N, E, W: Continuous, Learnin, g — 47% Accuracy, Improvement, with Se, l, f-Improvin, g, A, I',
-    description: 'Build, systems, that adapt, in, real-time, to, concept dri, f, t. 99.8% uptime, during, live update, s, 73% faster, adaptatio, n, a, n, d $5.8M, annual, value from, continuous, model improveme, n, t.',
+    description: 'Build, systems, that adapt, in, real-time, to, concept dri, f, t. 99.8% uptime, during, live update, s, 73% faster, adaptatio, n, a, n, d $5.8M, annual, value from continuous, model improveme, n, t.',
     ctaTe, x, t: 'Build, Sel, f-Improvin, g, A, I',
     ctaLi, n, k: '/bl, o, g/continuo, u, s-learni, n, g-syste, m, s-onli, n, e-updat, e, s-2, 0, 2, 5',
     varia, n, t: 'i, n, f, o',
@@ -232,7 +232,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   {
     id: 'clo, u, d-nati, v, e-kubernet, e, s-o, c, t-2, 0, 2, 5',
     title: '☁️ N, E, W: Clo, u, d-Native, AI, on Kubernet, e, s — 10x, Faster, Deploymen, t, 85% Cost, Reductio, n',
-    description: 'Transform, ML, operations with, container, orchestration. 99.99% uptime, and, seamless scaling, from, prototype to, producti, o, n.',
+    description: 'Transform, ML, operations with, container, orchestration. 99.99% uptime, and, seamless scaling, from prototype to, producti, o, n.',
     ctaTe, x, t: 'Master, Clou, d-Nativ, e, A, I',
     ctaLi, n, k: '/bl, o, g/clo, u, d-nati, v, e-ai-platfor, m, s-kubernet, e, s-2, 0, 2, 5',
     varia, n, t: 'i, n, f, o',
@@ -987,9 +987,9 @@ enhancedPromotionalBanne, r, s.pu, s, h({
 });
 
 export const getActiveEnhancedBanners = (): EnhancedPromotionalBann, e, r[] => {   
-  const, no, w = new, Da, t, e(); return, enhancedPromotionalBanner, s
+  const no, w = new, Da, t, e(); return, enhancedPromotionalBanner, s
     .filt, e, r(bann, e, r = > {
-      const, startDat, e = new, Dat, e(bann, e, r.startD, a, t, e); const, endDat, e = bann, e, r.endDa, t, e  ? new, Dat, e(bann, e, r.endD, a, t, e)  : nu, l, l; return, startDat, e <= n, o, w  && (!endDa, t, e || endDa, t, e  > = n, o, w);
+      const startDat, e = new, Dat, e(bann, e, r.startD, a, t, e); const endDat, e = bann, e, r.endDa, t, e  ? new, Dat, e(bann, e, r.endD, a, t, e)  : nu, l, l; return, startDat, e <= n, o, w  && (!endDa, t, e || endDa, t, e  > = n, o, w);
        })
     .so, r, t((a, b) => a.priori, t, y - b.priori, t, y);
 };

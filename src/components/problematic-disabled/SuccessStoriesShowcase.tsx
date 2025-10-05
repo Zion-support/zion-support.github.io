@@ -1,7 +1,7 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => { 
-  const, storie, s = [
+import React from 'react';
+import { Link } from 'react-router-dom';
+const SuccessStoriesShowcas, e: React.FC = () => { 
+  const storie, s = [
     {
       company: "TechCorp, Internatio, n, a, l",
       industry: "Technol, o, g, y",
@@ -44,18 +44,18 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
       ],",
       col, o, r: "fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0"
      }
-  ]; retu, r, n (
+  ]; return (
     <section, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-gr, a, y-50, t, o-bl, u, e-50">
-      <div, classNam, e="container, m, x-auto, p, x-6">
-        <div, classNam, e="te, x, t-center, m, b-16">
-          <h2, classNam, e="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
+      <div, className="container, m, x-auto, p, x-6">
+        <div, className="te, x, t-center, m, b-16">
+          <h2, className="te, x, t-4xl, fon, t-bold, tex, t-gr, a, y-900, m, b-4">
             Success, Storie, s
           </h2>
-          <p, classNam, e="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
+          <p, className="te, x, t-xl, tex, t-gr, a, y-600, ma, x-w-3xl, m, x-au, t, o">
             See, how, leading companies, are, transforming their, operations, with our, AI, solutions
           </p>
-        </d, i, v>
-        <div, classNam, e="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
+        </div>
+        <div, className="grid, m, d: gr, i, d-co, l, s-3, ga, p-8, ma, x-w-7xl, m, x-auto, m, b-12">
           { stori, e, s.m, a, p((s, t, o, r, y, ind, e, x) = > (
             <div, ke, y = { in, d, e, x  }, classNa, m, e = "bg-white, rounde, d-2xl, shado, w-xl, overflo, w-hidden, hove, r: sca, l, e-105, transitio, n-all, duratio, n-3, 0, 0"
             >
@@ -63,42 +63,42 @@ const, SuccessStoriesShowcas, e: Rea, c, t.FC = () => {
                 <div, classNam, e = "flex, item, s-center, ga, p-3, m, b-4">
                   {sto, r, y.ic, o, n}
                   <d, i, v>
-                    <h3, classNam, e="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
-                    <p, classNam, e="te, x, t-sm, opacit, y-90">{sto, r, y.industry}</p>
-                  </d, i, v>
-                </d, i, v>
-                <div, classNam, e="te, x, t-3xl, fon, t-bo, l, d">{sto, r, y.resu, l, t}</d, i, v>
-              </d, i, v>
-              <div, classNam, e="p-6">
-                <p, classNam, e="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.description}</p>
-                <div, classNam, e="spa, c, e-y-2, m, b-6">
+                    <h3, className="fo, n, t-bold, tex, t-xl">{sto, r, y.company}</h3>
+                    <p, className="te, x, t-sm, opacit, y-90">{sto, r, y.industry}</p>
+                  </div>
+                </div>
+                <div, className="te, x, t-3xl, fon, t-bo, l, d">{sto, r, y.resu, l, t}</div>
+              </div>
+              <div, className="p-6">
+                <p, className="te, x, t-gr, a, y-600, m, b-6">{sto, r, y.description}</p>
+                <div, className="spa, c, e-y-2, m, b-6">
                   { sto, r, y.metri, c, s.m, a, p((met, r, i, c, i, d, x) = > (
                     <div, ke, y = { id, x  }, classNa, m, e = "flex, item, s-center, ga, p-2">
-                      <div, classNam, e="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" />
-                      <span, classNam, e="te, x, t-sm, tex, t-gr, a, y-7, 0, 0">{metr, i, c}</sp, a, n>
+                      <div, className="w-2 h-2, b, g-gre, e, n-500, rounde, d-fu, l, l" />
+                      <span, className="te, x, t-sm, tex, t-gr, a, y-7, 0, 0">{metr, i, c}</sp, a, n>
                     </di, v>
                   ))}
-                </d, i, v>
+                </div>
                 <Link, t, o = "/ca, s, e-studi, e, s"
-                  classNa, m, e="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2"
+                  className="te, x, t-indi, g, o-600, fon, t-semibold, hove, r: te, x, t-indi, g, o-800, flex, items-center, ga, p-2"
                 >
                   Read, Full, Story
-                  <ArrowRight, classNam, e="w-4 h-4" />
+                  <ArrowRight, className="w-4 h-4" />
                 </Li, n, k>
-              </d, i, v>
-            </d, i, v>
+              </div>
+            </div>
           ))}
-        </d, i, v>
+        </div>
         <div, classNam, e = "te, x, t-cent, e, r">
           <Link, t, o="/ca, s, e-studi, e, s"
-            classNa, m, e="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
+            className="inli, n, e-flex, item, s-center, ga, p-2, b, g-indi, g, o-600, tex, t-white, p, x-8, p, y-4, rounde, d-xl, fon, t-bold, tex, t-lg, hove, r: bg-indi, g, o-700, transitio, n-all, hove, r:sca, l, e-105, shado, w-lg"
           >
             View, All, Success Stori, e, s
-            <ArrowRight, classNam, e="w-6 h-6" />
+            <ArrowRight, className="w-6 h-6" />
           </Li, n, k>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </sec, t, i, o, n>
   );
 };
-export, default, SuccessStoriesShowcase;
+export default SuccessStoriesShowcase;

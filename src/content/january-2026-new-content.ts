@@ -166,4 +166,4 @@ export const january2026NewContent = {
       duration: '4, mont, h, s',
     },
   ],
-}; export, default, january2026NewContent;
+}; export default january2026NewContent;
