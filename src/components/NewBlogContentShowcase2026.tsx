@@ -15,7 +15,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
+      icon: '>',
       gradient: 'from-blue-500 to-purple-500',
       badge: 'FEATURED',
       tags: ['AI', 'Revolution', 'Enterprise', 'Guide']
@@ -33,7 +33,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
+      icon: '>',
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'TRENDING',
       tags: ['Quantum', 'Computing', 'AI', 'Breakthrough']
@@ -51,7 +51,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: true,
       featured: true,
-      icon: '>,'
+      icon: '>',
       gradient: 'from-green-500 to-emerald-500',
       badge: 'POPULAR',
       tags: ['Enterprise', 'Implementation', 'AI', 'Success']
@@ -69,7 +69,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.7,
       trending: false,
       featured: false,
-      icon: '>,'
+      icon: '>',
       gradient: 'from-purple-500 to-pink-500',
       badge: 'INNOVATION',
       tags: ['Self-Evolving', 'AI', 'Innovation', 'Future']
@@ -87,7 +87,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.8,
       trending: true,
       featured: false,
-      icon: '>,'
+      icon: '>',
       gradient: 'from-orange-500 to-red-500',
       badge: 'ANALYTICS',
       tags: ['Predictive', 'Analytics', 'Forecasting', 'AI']
@@ -105,7 +105,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
       rating: 4.9,
       trending: false,
       featured: true,
-      icon: '>,'
+      icon: '>',
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'ETHICS',
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']
@@ -282,7 +282,7 @@ const NewBlogContentShowcase2026: React.FC = () => {
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300"
-
+              />
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">
 
               </button>

@@ -112,7 +112,7 @@ const January2026ContentShowcaseBanner: React.FC = () => {
         {/* Featured Articles Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {latestArticles.map((article, index) => (
-            <div>
+            <div
               key={article.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
@@ -208,7 +208,8 @@ const January2026ContentShowcaseBanner: React.FC = () => {
           </div>
 
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center">
-            <Cpu className="w-16 h-16 text-indigo-400 mx-auto mb-4" <h3 className="text-2xl font-bold mb-4 text-indigo-400">Meta-Cognitive Reasoning</h3>
+            <Cpu className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4 text-indigo-400">Meta-Cognitive Reasoning</h3>
             <p className="text-gray-300 mb-6">
               Self-aware AI systems with introspection capabilities and the ability to reason about their own reasoning processes.
             </p>

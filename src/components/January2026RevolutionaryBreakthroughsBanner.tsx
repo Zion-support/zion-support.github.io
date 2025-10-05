@@ -95,7 +95,8 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             >
               <div className="flex items-start space-x-4">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <breakthrough.icon className="w-6 h-6 text-white"</div>
+                  <breakthrough.icon className="w-6 h-6 text-white" />
+                </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                     {breakthrough.title}

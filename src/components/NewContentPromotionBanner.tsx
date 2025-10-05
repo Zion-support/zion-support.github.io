@@ -60,12 +60,14 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-3">
               <div className="flex items-center gap-2">
-                <Sparkles className={`w-5 h-5 ${iconClasses[variant]} animate-pulse`} <span className="text-sm font-medium uppercase tracking-wider opacity-90">
+                <Sparkles className={`w-5 h-5 ${iconClasses[variant]} animate-pulse`} />
+                <span className="text-sm font-medium uppercase tracking-wider opacity-90">
                   Fresh Content
                 </span>
               </div>
               <div className="flex items-center gap-1">
-                <TrendingUp className={`w-4 h-4 ${iconClasses[variant]} animate-bounce`}</div>
+                <TrendingUp className={`w-4 h-4 ${iconClasses[variant]} animate-bounce`} />
+              </div>
             </div>
 
             <h3 className="text-lg font-bold mb-2 flex items-center gap-2">
@@ -112,12 +114,12 @@ const NewContentPromotionBanner: React.FC<NewContentPromotionBannerProps> = ({
           </div>
 
           {dismissible && (
-            <button>
+            <button
               onClick={handleDismiss}
               className="ml-4 p-1 rounded-full hover:bg-white/20 transition-colors"
-
             >
-              <X className="w-5 h-5 opacity-75 hover:opacity-100"</button>
+              <X className="w-5 h-5 opacity-75 hover:opacity-100" />
+            </button>
           )}
         </div>
       </div>

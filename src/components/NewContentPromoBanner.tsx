@@ -146,7 +146,8 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                     className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                   >
                     <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-4 h-4 text-white/80" <span className="text-xs font-medium text-white/80">{item.category}</span>
+                      <Icon className="w-4 h-4 text-white/80" />
+                      <span className="text-xs font-medium text-white/80">{item.category}</span>
                     </div>
                     <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
                       {item.title}
@@ -208,9 +209,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
           <button>
             onClick={() => setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
-
           >
-            <X className="w-5 h-5"</button>
+            <X className="w-5 h-5" />
+          </button>
         </div>
       </div>
     </div>

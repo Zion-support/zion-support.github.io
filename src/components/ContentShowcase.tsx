@@ -33,7 +33,7 @@ const ContentShowcase: React.FC = () => {
         </h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {contentItems.map((item, index) => (
-            <div>
+            <div
               key={index}
               className='bg-white p-6 rounded-lg shadow-lg border hover:shadow-xl transition-shadow'
             >

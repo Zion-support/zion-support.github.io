@@ -20,7 +20,8 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-blue-400 via-emerald-400 to-purple-400 bg-clip-text text-transparent">
               Real Results
             </span>
-            <br <span className="text-white">From Real Companies</span>
+            <br />
+            <span className="text-white">From Real Companies</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12">
@@ -37,7 +38,8 @@ const January2025EnterpriseSuccessBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-blue-500/20 rounded-xl">
-                  <Building2 className="w-8 h-8 text-blue-400"</div>
+                  <Building2 className="w-8 h-8 text-blue-400" />
+                </div>
                 <div>
                   <h3 className="text-2xl font-bold text-white">Global Manufacturing Corp</h3>
                   <p className="text-gray-400">Fortune 500 • Manufacturing</p>

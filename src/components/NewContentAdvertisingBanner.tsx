@@ -24,7 +24,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon: '>,'
+      icon: '>',
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -36,7 +36,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon: '>,'
+      icon: '>',
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -48,7 +48,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon: '>,'
+      icon: '>',
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -60,7 +60,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon: '>,'
+      icon: '>',
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -72,7 +72,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon: '>,'
+      icon: '>',
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
@@ -258,7 +258,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
-
+                />
                 <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
 
                 </button>

@@ -27,7 +27,7 @@ const LatestInsights: React.FC = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
-            <div>
+            <div
               key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
@@ -35,7 +35,7 @@ const LatestInsights: React.FC = () => {
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                   {isNew(item.date) && (
-                    
+                    <span className="text-green-400 text-xs">NEW</span>
                   )}
                 </div>
                 <div className="flex items-center gap-2">
