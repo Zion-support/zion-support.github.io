@@ -17,12 +17,11 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
             <Link
-            to="/insights"
-            className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
-          >
-            View all
-
-          </Link>
+              to="/insights"
+              className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+            >
+              View all
+            </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">

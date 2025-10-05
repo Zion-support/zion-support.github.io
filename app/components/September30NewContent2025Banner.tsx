@@ -1,12 +1,24 @@
 import React from 'react';
+<<<<<<< HEAD
+
+import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
+
 import Link from 'next/link';
 
-import Sparkles from 'lucide-react';
-import TrendingUp from 'lucide-react';
+;
+;
+;
+;
+;
+;
+=======
 import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
 import Zap from 'lucide-react';
 import Rocket from 'lucide-react';
-import Star from 'lucide-react';
+
+import Link from 'next/link';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [

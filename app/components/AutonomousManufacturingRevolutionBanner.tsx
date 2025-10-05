@@ -1,11 +1,22 @@
 import React from 'react';
+<<<<<<< HEAD
+
+import { Factory, Cogs, TrendingUp, ArrowRight, Zap } from 'lucide-react';
+
 import Link from 'next/link';
 
-import Factory from 'lucide-react';
-import Cogs from 'lucide-react';
-import TrendingUp from 'lucide-react';
+;
+;
+;
+;
+;
+=======
 import ArrowRight from 'lucide-react';
+import TrendingUp from 'lucide-react';
 import Zap from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ec39
+
+import Link from 'next/link';
 
 const AutonomousManufacturingRevolutionBanner: React.FC = () => {
   return (

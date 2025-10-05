@@ -1,4 +1,9 @@
 import { Link } from "react-router-dom";
+import { FileText } from "lucide-react";
+
+import { FileText } from 'lucide-react';
+
+;
 
 const October2025DocumentAutomationBanner = () => {
   return (
@@ -42,9 +47,8 @@ const October2025DocumentAutomationBanner = () => {
             <div className="text-sm text-indigo-200">Faster Processing</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105">
-
             <div className="text-3xl font-black text-white mb-1">99.2%</div>
-            
+            <div className="text-sm text-purple-200">Accuracy Rate</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover:border-pink-400/60 transition-all hover:scale-105">
 
@@ -171,19 +175,19 @@ const October2025DocumentAutomationBanner = () => {
               <div className="text-indigo-200">Loan apps, KYC docs → 92% faster, $23M savings</div>
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">
-              
+              <div className="font-bold text-white mb-2">Insurance</div>
               <div className="text-purple-200">Claims processing → 89% STP, 7-day to 2-hour cycle</div>
             </div>
             <div className="bg-pink-800/30 rounded-lg p-4 border border-pink-400/20">
-              
+              <div className="font-bold text-white mb-2">Healthcare</div>
               <div className="text-pink-200">Medical records → 94% faster, 99.8% HIPAA compliance</div>
             </div>
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">
-              
+              <div className="font-bold text-white mb-2">Legal</div>
               <div className="text-indigo-200">Contract review → 87% faster, $18M paralegal savings</div>
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">
-              
+              <div className="font-bold text-white mb-2">Logistics</div>
               <div className="text-purple-200">Shipping docs → 91% automation, 6hr to 15min</div>
             </div>
             <div className="bg-pink-800/30 rounded-lg p-4 border border-pink-400/20">

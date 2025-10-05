@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 
+import { TrendingUp } from 'lucide-react';
+
+;
+
 const October2025RevOpsBanner = () => {
   return (
     <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden">
@@ -13,9 +17,9 @@ const October2025RevOpsBanner = () => {
         {/* Breaking News Badge */}
         <div className="flex justify-center mb-4">
           <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full text-white font-bold text-sm shadow-lg animate-bounce">
-
+            <TrendingUp className="w-4 h-4 mr-2" />
             JUST PUBLISHED - OCTOBER 1, 2025
-
+            <TrendingUp className="w-4 h-4 ml-2" />
           </div>
         </div>
 
@@ -64,7 +68,7 @@ const October2025RevOpsBanner = () => {
             {/* Blog Post */}
             <div className="bg-gradient-to-br from-emerald-800/50 to-teal-800/50 rounded-lg p-5 border border-emerald-400/40">
               <div className="text-emerald-300 font-bold mb-2 flex items-center">
-
+                <TrendingUp className="w-4 h-4 mr-2" />
                 NEW COMPREHENSIVE GUIDE
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
@@ -86,7 +90,7 @@ const October2025RevOpsBanner = () => {
             {/* Case Study */}
             <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 rounded-lg p-5 border border-blue-400/40">
               <div className="text-blue-300 font-bold mb-2 flex items-center">
-
+                <TrendingUp className="w-4 h-4 mr-2" />
                 NEW CASE STUDY
               </div>
               <h3 className="text-xl font-bold text-white mb-2">
