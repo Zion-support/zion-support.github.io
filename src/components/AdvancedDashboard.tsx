@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
 import { enhancedAccessibility as AdvancedAccessibilityManager } from '../utils/enhancedAccessibility';
-import { securityEnhancer as AdvancedSecurityManager } from '../utils/security-enhancer';
+import AdvancedSecurityManager from '../utils/security-enhancer';
 import { enhancedPerformanceMonitor as EnhancedUXManager } from '../utils/enhancedPerformanceMonitor';
 
 interface PerformanceData {
