@@ -1,4 +1,12 @@
 import React, { useState, useEffect } from "react";
+<<<<<<< HEAD
+=======
+// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
+// import AdvancedCacheManager from '../utils/advancedCache';
+import { enhancedAccessibility } from '../utils/enhancedAccessibility';
+import { securityAuditor } from '../utils/securityAuditor';
+// import EnhancedUXManager from '../utils/enhancedUXManager';
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 
 interface DashboardData {
   analytics: {
@@ -19,6 +27,10 @@ interface DashboardData {
 const AdvancedDashboard: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<DashboardData | null>(null);
+<<<<<<< HEAD
+=======
+  const [activeTab, setActiveTab] = useState("overview");
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
 
   useEffect(() => {
     if (isOpen) {
@@ -29,6 +41,7 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
+<<<<<<< HEAD
     // Mock data for demonstration
     const mockData: DashboardData = {
       analytics: {
@@ -47,6 +60,92 @@ const AdvancedDashboard: React.FC = () => {
     };
     
     setData(mockData);
+=======
+    // Mock analytics data for now
+    const events: Array<{ name: string; timestamp?: number }> = [];
+    const cacheStats = { hits: 0, misses: 0, size: 0 };
+
+    // Convert analytics events to analytics data format
+    const analyticsData: AnalyticsData = {
+      id: `session_${Date.now()}`,
+      startTime: Date.now() - 300000, // 5 minutes ago
+      lastActivity: Date.now(),
+      pageViews: events.filter((e) => e.name === "page_view").length,
+      events: events.map((e) => ({
+        event: e.name,
+        timestamp: e.timestamp || Date.now(),
+        properties: (e as any).properties || {}
+      })),
+      deviceInfo: {
+        screenResolution: `${window.screen.width}x${window.screen.height}`,
+        language: navigator.language,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      }
+    };
+
+    // Convert cache stats to proper format
+    const cache: CacheData = {
+      size:
+        typeof cacheStats === "object" && cacheStats !== null
+          ? ((cacheStats as Record<string, unknown>).size as number) || 0
+          : 0,
+      totalSize:
+        typeof cacheStats === "object" && cacheStats !== null
+          ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
+          : 0,
+      maxSize:
+        typeof cacheStats === "object" && cacheStats !== null
+          ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
+          : 0,
+      hitRate:
+        typeof cacheStats === "object" && cacheStats !== null
+          ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
+          : 0
+    };
+
+    setData({
+      analytics: analyticsData || {},
+      cache: cache || {},
+      performance: {
+        memoryUsage:
+          (
+            performance as Performance & {
+              memory?: { usedJSHeapSize?: number };
+            }
+          ).memory?.usedJSHeapSize || 0,
+        memoryLimit:
+          (
+            performance as Performance & {
+              memory?: { jsHeapSizeLimit?: number };
+            }
+          ).memory?.jsHeapSizeLimit || 0
+      },
+      security: {
+        vulnerabilities: 0,
+        threats: 0,
+        score: 100
+      },
+      ux: {
+        loadTime: 0,
+        interactivity: 0,
+        visualStability: 0
+      }
+    });
+  };
+
+  const formatBytes = (bytes: number): string => {
+    if (bytes === 0) return "0 Bytes";
+    const k = 1024;
+      const sizes = ["Bytes", "KB", "MB", "GB"];
+      const i = Math.floor(Math.log(bytes) / Math.log(k));
+      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
+  };
+
+  const formatDuration = (ms: number): string => {
+    if (ms < 1000) return `${ms}ms`;
+    if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
+    return `${(ms / 60000).toFixed(1)}m`;
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
   };
 
   if (!isOpen) {
@@ -77,6 +176,7 @@ const AdvancedDashboard: React.FC = () => {
             </svg>
           </button>
         </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         
         <div className="p-4">
@@ -122,6 +222,44 @@ const AdvancedDashboard: React.FC = () => {
                   <div className="bg-blue-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-blue-800">Page Views</h3>
                     <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
+=======
+
+        {/* Tabs */}
+        <div className="bg-gray-100 border-b">
+          <div className="flex space-x-1 p-2">
+              {[
+                { id: "overview", label: "Overview" },
+                { id: "analytics", label: "Analytics" },
+                { id: "performance", label: "Performance" },
+                { id: "cache", label: "Cache" },
+                { id: "security", label: "Security" },
+                { id: "accessibility", label: "Accessibility" }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  activeTab === tab.id
+                    ? "bg-blue-600 text-white"
+                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+          {activeTab === "overview" && data && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="bg-blue-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
+                <div className="space-y-1 text-sm">
+                  <div>
+                      Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
+>>>>>>> cursor/fix-errors-and-merge-to-main-99e9
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-green-800">Sessions</h3>
