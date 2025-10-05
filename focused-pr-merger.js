@@ -24,38 +24,44 @@ try {
 // Step 2: Define priority branches to merge
 const priorityBranches = [
   'add-new-2026-content',
-  'add-revolutionary-content-2026', 
+  'add-revolutionary-content-2026',
   'ai-2027-content-integration',
   'ai-dashboard-improvements',
   '0nylrk-codex-fix-footer-contact-link-resolved',
   '0parff-codex-centralize-api-error-handling-resolved',
-  '0smfo8-codex-fix-404-error-resolved'
+  '0smfo8-codex-fix-404-error-resolved',
 ];
 
 // Step 3: Get cursor branches (limit to most recent)
 console.log('🔍 Step 3: Finding recent cursor branches...');
 let cursorBranches = [];
 try {
-  const branchOutput = execSync('git branch -r | grep "cursor/" | tail -20', { encoding: 'utf8' });
+  const branchOutput = execSync('git branch -r | grep "cursor/" | tail -20', {
+    encoding: 'utf8',
+  });
   cursorBranches = branchOutput
     .split('\n')
     .filter(branch => branch.trim())
     .map(branch => branch.trim().replace('origin/', ''))
-    .filter(branch => branch.startsWith('cursor/') && !branch.includes('backup'));
+    .filter(
+      branch => branch.startsWith('cursor/') && !branch.includes('backup'),
+    );
 } catch (error) {
   console.log('⚠️  Could not fetch cursor branches:', error.message);
 }
 
-console.log(`📊 Found ${priorityBranches.length} priority branches and ${cursorBranches.length} cursor branches\n`);
+console.log(
+  `📊 Found ${priorityBranches.length} priority branches and ${cursorBranches.length} cursor branches\n`,
+);
 
 // Step 4: Enhanced conflict resolution function
 function resolveConflictsAndMerge(branchName) {
   console.log(`\n🔄 Processing ${branchName}...`);
-  
+
   try {
     // Fetch the branch
     execSync(`git fetch origin ${branchName}`, { stdio: 'inherit' });
-    
+
     // Check if branch exists and has commits
     try {
       execSync(`git rev-parse origin/${branchName}`, { stdio: 'pipe' });
@@ -63,47 +69,65 @@ function resolveConflictsAndMerge(branchName) {
       console.log(`⚠️  Branch ${branchName} does not exist, skipping...`);
       return { success: false, method: 'not_found' };
     }
-    
+
     // Try initial merge
-    execSync(`git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`, { stdio: 'inherit' });
-    
+    execSync(
+      `git merge origin/${branchName} --no-ff -m "Merge ${branchName} into main"`,
+      { stdio: 'inherit' },
+    );
+
     console.log(`✅ Successfully merged ${branchName}`);
     return { success: true, method: 'direct' };
-    
   } catch (error) {
-    console.log(`⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`);
-    
+    console.log(
+      `⚠️  Direct merge failed for ${branchName}, attempting conflict resolution...`,
+    );
+
     try {
       // Strategy 1: Auto-resolve with theirs for most conflicts
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-      execSync(`git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`, { stdio: 'inherit' });
-      console.log(`✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`);
+      execSync(
+        `git merge origin/${branchName} -X theirs --no-ff -m "Auto-merge ${branchName} (theirs strategy)"`,
+        { stdio: 'inherit' },
+      );
+      console.log(
+        `✅ Auto-resolved conflicts for ${branchName} using 'theirs' strategy`,
+      );
       return { success: true, method: 'theirs' };
     } catch (theirsError) {
       console.log(`⚠️  'Theirs' strategy failed, trying 'ours' strategy...`);
     }
-    
+
     try {
       // Strategy 2: Auto-resolve with ours
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-      execSync(`git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`, { stdio: 'inherit' });
-      console.log(`✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`);
+      execSync(
+        `git merge origin/${branchName} -X ours --no-ff -m "Auto-merge ${branchName} (ours strategy)"`,
+        { stdio: 'inherit' },
+      );
+      console.log(
+        `✅ Auto-resolved conflicts for ${branchName} using 'ours' strategy`,
+      );
       return { success: true, method: 'ours' };
     } catch (oursError) {
       console.log(`⚠️  'Ours' strategy failed, trying manual resolution...`);
     }
-    
+
     try {
       // Strategy 3: Manual conflict resolution
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
-      
+
       // Get conflicted files
-      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' })
+      const conflictedFiles = execSync('git diff --name-only --diff-filter=U', {
+        encoding: 'utf8',
+      })
         .split('\n')
         .filter(file => file.trim());
-      
-      console.log(`🔧 Manually resolving ${conflictedFiles.length} conflicted files...`);
-      
+
+      console.log(
+        `🔧 Manually resolving ${conflictedFiles.length} conflicted files...`,
+      );
+
       // For each conflicted file, try to resolve
       for (const file of conflictedFiles) {
         if (file.trim()) {
@@ -117,16 +141,17 @@ function resolveConflictsAndMerge(branchName) {
           }
         }
       }
-      
+
       // Complete the merge
-      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, { stdio: 'inherit' });
+      execSync(`git commit -m "Manual conflict resolution for ${branchName}"`, {
+        stdio: 'inherit',
+      });
       console.log(`✅ Manually resolved conflicts for ${branchName}`);
       return { success: true, method: 'manual' };
-      
     } catch (manualError) {
       console.log(`❌ Manual resolution failed for ${branchName}`);
     }
-    
+
     // If all strategies fail, abort and skip
     try {
       execSync('git merge --abort', { stdio: 'inherit' });
@@ -134,7 +159,7 @@ function resolveConflictsAndMerge(branchName) {
     } catch (abortError) {
       execSync('git reset --hard HEAD', { stdio: 'inherit' });
     }
-    
+
     return { success: false, method: 'failed' };
   }
 }
@@ -150,8 +175,15 @@ const results = {
     total: 0,
     successful: 0,
     failed: 0,
-    methods: { direct: 0, theirs: 0, ours: 0, manual: 0, failed: 0, not_found: 0 }
-  }
+    methods: {
+      direct: 0,
+      theirs: 0,
+      ours: 0,
+      manual: 0,
+      failed: 0,
+      not_found: 0,
+    },
+  },
 };
 
 // Merge priority branches first
@@ -197,7 +229,7 @@ results.timestamp = new Date().toISOString();
 results.branchCounts = {
   priority: priorityBranches.length,
   cursor: recentCursorBranches.length,
-  total: priorityBranches.length + recentCursorBranches.length
+  total: priorityBranches.length + recentCursorBranches.length,
 };
 
 fs.writeFileSync('focused-merge-report.json', JSON.stringify(results, null, 2));

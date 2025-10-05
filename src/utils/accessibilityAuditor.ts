@@ -28,7 +28,7 @@ export class AccessibilityAuditor {
     perceivable: ['1.1.1', '1.2.1', '1.3.1', '1.4.1', '1.4.3'],
     operable: ['2.1.1', '2.1.2', '2.4.1', '2.4.3', '2.4.7'],
     understandable: ['3.1.1', '3.2.1', '3.3.1'],
-    robust: ['4.1.1', '4.1.2']
+    robust: ['4.1.1', '4.1.2'],
   };
 
   /**
@@ -49,8 +49,8 @@ export class AccessibilityAuditor {
         critical: issues.filter(i => i.severity === 'critical').length,
         serious: issues.filter(i => i.severity === 'serious').length,
         moderate: issues.filter(i => i.severity === 'moderate').length,
-        minor: issues.filter(i => i.severity === 'minor').length
-      }
+        minor: issues.filter(i => i.severity === 'minor').length,
+      },
     };
   }
 
@@ -66,7 +66,7 @@ export class AccessibilityAuditor {
       element: '<img> tags',
       issue: 'Missing alt attributes on images',
       recommendation: 'Add descriptive alt text to all images',
-      wcagCriterion: '1.1.1 (Level A)'
+      wcagCriterion: '1.1.1 (Level A)',
     });
 
     // Check for proper heading structure
@@ -75,7 +75,7 @@ export class AccessibilityAuditor {
       element: '<h1>-<h6> tags',
       issue: 'Skipped heading levels detected',
       recommendation: 'Ensure heading hierarchy is logical (h1 → h2 → h3)',
-      wcagCriterion: '2.4.6 (Level AA)'
+      wcagCriterion: '2.4.6 (Level AA)',
     });
 
     // Check for keyboard navigation
@@ -83,8 +83,9 @@ export class AccessibilityAuditor {
       severity: 'critical',
       element: 'Interactive elements',
       issue: 'Some interactive elements not keyboard accessible',
-      recommendation: 'Ensure all interactive elements can be accessed via keyboard',
-      wcagCriterion: '2.1.1 (Level A)'
+      recommendation:
+        'Ensure all interactive elements can be accessed via keyboard',
+      wcagCriterion: '2.1.1 (Level A)',
     });
 
     // Check for color contrast
@@ -93,7 +94,7 @@ export class AccessibilityAuditor {
       element: 'Text elements',
       issue: 'Insufficient color contrast ratio on some text',
       recommendation: 'Ensure minimum 4.5:1 contrast ratio for normal text',
-      wcagCriterion: '1.4.3 (Level AA)'
+      wcagCriterion: '1.4.3 (Level AA)',
     });
 
     // Check for ARIA labels
@@ -102,7 +103,7 @@ export class AccessibilityAuditor {
       element: 'Banner components',
       issue: 'Missing ARIA labels on banner navigation',
       recommendation: 'Add aria-label to navigation regions',
-      wcagCriterion: '4.1.2 (Level A)'
+      wcagCriterion: '4.1.2 (Level A)',
     });
 
     // Check for focus indicators
@@ -110,8 +111,9 @@ export class AccessibilityAuditor {
       severity: 'moderate',
       element: 'Links and buttons',
       issue: 'Focus indicators not always visible',
-      recommendation: 'Ensure visible focus indicators on all focusable elements',
-      wcagCriterion: '2.4.7 (Level AA)'
+      recommendation:
+        'Ensure visible focus indicators on all focusable elements',
+      wcagCriterion: '2.4.7 (Level AA)',
     });
 
     // Check for form labels
@@ -120,7 +122,7 @@ export class AccessibilityAuditor {
       element: '<input> elements',
       issue: 'Form inputs missing associated labels',
       recommendation: 'Add <label> elements or aria-label to all form inputs',
-      wcagCriterion: '1.3.1 (Level A)'
+      wcagCriterion: '1.3.1 (Level A)',
     });
 
     // Check for semantic HTML
@@ -129,7 +131,7 @@ export class AccessibilityAuditor {
       element: 'Page structure',
       issue: 'Not using semantic HTML5 elements consistently',
       recommendation: 'Use <nav>, <main>, <article>, <aside> appropriately',
-      wcagCriterion: '1.3.1 (Level A)'
+      wcagCriterion: '1.3.1 (Level A)',
     });
 
     return issues;
@@ -146,7 +148,7 @@ export class AccessibilityAuditor {
       'Meta viewport tag properly configured',
       'Skip to main content link present',
       'Consistent navigation structure',
-      'Text can be resized up to 200% without loss of content'
+      'Text can be resized up to 200% without loss of content',
     ];
   }
 
@@ -158,7 +160,7 @@ export class AccessibilityAuditor {
       critical: 25,
       serious: 15,
       moderate: 8,
-      minor: 3
+      minor: 3,
     };
 
     const deductions = issues.reduce((total, issue) => {
@@ -174,7 +176,7 @@ export class AccessibilityAuditor {
   generateRecommendations(): string[] {
     return [
       '✅ Add alt text to all images (use empty alt="" for decorative images)',
-      '✅ Implement proper heading hierarchy (don\'t skip levels)',
+      "✅ Implement proper heading hierarchy (don't skip levels)",
       '✅ Ensure all interactive elements are keyboard accessible',
       '✅ Test color contrast with tools like WebAIM Contrast Checker',
       '✅ Add ARIA labels to navigation landmarks',
@@ -184,7 +186,7 @@ export class AccessibilityAuditor {
       '✅ Test with screen readers (NVDA, JAWS, VoiceOver)',
       '✅ Implement skip navigation links',
       '✅ Ensure error messages are announced to screen readers',
-      '✅ Make sure content is responsive and works with zoom'
+      '✅ Make sure content is responsive and works with zoom',
     ];
   }
 
@@ -200,7 +202,7 @@ export class AccessibilityAuditor {
       'Added viewport meta tag',
       'Added skip to main content link',
       'Improved focus indicator visibility',
-      'Added ARIA landmarks to main regions'
+      'Added ARIA landmarks to main regions',
     ];
 
     const manual = [
@@ -208,7 +210,7 @@ export class AccessibilityAuditor {
       'Fix heading hierarchy',
       'Test keyboard navigation thoroughly',
       'Verify color contrast ratios',
-      'Add form labels where missing'
+      'Add form labels where missing',
     ];
 
     return { applied, manual };
@@ -241,13 +243,17 @@ export class AccessibilityAuditor {
 
 ## Identified Issues
 
-${audit.issues.map((issue, index) => `
+${audit.issues
+  .map(
+    (issue, index) => `
 ### ${index + 1}. ${issue.element}
 - **Severity**: ${issue.severity.toUpperCase()}
 - **Issue**: ${issue.issue}
 - **Recommendation**: ${issue.recommendation}
 - **WCAG Criterion**: ${issue.wcagCriterion}
-`).join('\n')}
+`,
+  )
+  .join('\n')}
 
 ## Compliant Areas ✅
 ${audit.compliantAreas.map(area => `- ${area}`).join('\n')}
@@ -285,5 +291,6 @@ export const accessibilityAuditor = new AccessibilityAuditor();
 
 // Export convenience functions
 export const auditAccessibility = () => accessibilityAuditor.auditWebsite();
-export const getA11yRecommendations = () => accessibilityAuditor.generateRecommendations();
+export const getA11yRecommendations = () =>
+  accessibilityAuditor.generateRecommendations();
 export const generateA11yReport = () => accessibilityAuditor.generateReport();

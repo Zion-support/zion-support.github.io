@@ -54,7 +54,7 @@ class PerformanceMonitor {
   }
 
   private notifyListeners() {
-    this.listeners.forEach((listener) => listener(this.metrics));
+    this.listeners.forEach(listener => listener(this.metrics));
   }
 
   /**
@@ -62,10 +62,10 @@ class PerformanceMonitor {
    */
   subscribe(callback: (metrics: PerformanceMetrics) => void): () => void {
     this.listeners.push(callback);
-    
+
     // Return unsubscribe function
     return () => {
-      this.listeners = this.listeners.filter((l) => l !== callback);
+      this.listeners = this.listeners.filter(l => l !== callback);
     };
   }
 
@@ -94,25 +94,28 @@ class PerformanceMonitor {
         // Send to Google Analytics 4 (if available)
         if (typeof window !== 'undefined' && (window as any).gtag) {
           const gtag = (window as any).gtag;
-          
+
           // Send Core Web Vitals
           Object.entries(this.metrics).forEach(([key, value]) => {
             if (value !== undefined) {
               gtag('event', 'web_vitals', {
                 metric_name: key.toUpperCase(),
                 metric_value: Math.round(value),
-                metric_rating: this.getMetricRating(key as keyof PerformanceMetrics, value)
+                metric_rating: this.getMetricRating(
+                  key as keyof PerformanceMetrics,
+                  value,
+                ),
               });
             }
           });
-          
+
           // Send overall performance score
           gtag('event', 'performance_score', {
             score: this.getPerformanceScore(),
-            timestamp: Date.now()
+            timestamp: Date.now(),
           });
         }
-        
+
         // Send to custom analytics endpoint
         if (process.env.REACT_APP_ANALYTICS_ENDPOINT) {
           await fetch(process.env.REACT_APP_ANALYTICS_ENDPOINT, {
@@ -127,15 +130,18 @@ class PerformanceMonitor {
                 score: this.getPerformanceScore(),
                 timestamp: Date.now(),
                 url: window.location.href,
-                userAgent: navigator.userAgent
-              }
-            })
+                userAgent: navigator.userAgent,
+              },
+            }),
           });
         }
-        
+
         console.log('Performance metrics sent to analytics:', this.metrics);
       } catch (error) {
-        console.error('Failed to send performance metrics to analytics:', error);
+        console.error(
+          'Failed to send performance metrics to analytics:',
+          error,
+        );
       }
     }
   }
@@ -143,18 +149,41 @@ class PerformanceMonitor {
   /**
    * Get rating for a specific metric
    */
-  private getMetricRating(key: keyof PerformanceMetrics, value: number): string {
+  private getMetricRating(
+    key: keyof PerformanceMetrics,
+    value: number,
+  ): string {
     switch (key) {
       case 'cls':
-        return value <= 0.1 ? 'good' : value <= 0.25 ? 'needs-improvement' : 'poor';
+        return value <= 0.1
+          ? 'good'
+          : value <= 0.25
+            ? 'needs-improvement'
+            : 'poor';
       case 'fid':
-        return value <= 100 ? 'good' : value <= 300 ? 'needs-improvement' : 'poor';
+        return value <= 100
+          ? 'good'
+          : value <= 300
+            ? 'needs-improvement'
+            : 'poor';
       case 'lcp':
-        return value <= 2500 ? 'good' : value <= 4000 ? 'needs-improvement' : 'poor';
+        return value <= 2500
+          ? 'good'
+          : value <= 4000
+            ? 'needs-improvement'
+            : 'poor';
       case 'fcp':
-        return value <= 1800 ? 'good' : value <= 3000 ? 'needs-improvement' : 'poor';
+        return value <= 1800
+          ? 'good'
+          : value <= 3000
+            ? 'needs-improvement'
+            : 'poor';
       case 'ttfb':
-        return value <= 600 ? 'good' : value <= 1500 ? 'needs-improvement' : 'poor';
+        return value <= 600
+          ? 'good'
+          : value <= 1500
+            ? 'needs-improvement'
+            : 'poor';
       default:
         return 'unknown';
     }
@@ -163,7 +192,11 @@ class PerformanceMonitor {
   /**
    * Measure custom performance timing
    */
-  measureCustom(name: string, startMark: string, endMark: string): number | null {
+  measureCustom(
+    name: string,
+    startMark: string,
+    endMark: string,
+  ): number | null {
     try {
       performance.measure(name, startMark, endMark);
       const measure = performance.getEntriesByName(name)[0];
@@ -190,16 +223,16 @@ class PerformanceMonitor {
    */
   getPerformanceScore(): number {
     const { cls, fid, lcp, fcp, ttfb } = this.metrics;
-    
+
     let score = 100;
-    
+
     // Deduct points for poor metrics
     if (cls && cls > 0.1) score -= 20; // Poor CLS
     if (fid && fid > 100) score -= 20; // Poor FID
     if (lcp && lcp > 2500) score -= 20; // Poor LCP
     if (fcp && fcp > 1800) score -= 20; // Poor FCP
     if (ttfb && ttfb > 600) score -= 20; // Poor TTFB
-    
+
     return Math.max(0, score);
   }
 }

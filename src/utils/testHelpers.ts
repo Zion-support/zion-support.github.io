@@ -1,9 +1,9 @@
 /**
  * Testing Helpers and Utilities
- * 
+ *
  * Comprehensive testing utilities for React components, hooks,
  * and integration tests with support for async operations.
- * 
+ *
  * Features:
  * - Component rendering helpers
  * - Mock data generators
@@ -42,10 +42,10 @@ export const wait = (ms: number): Promise<void> => {
 export const waitFor = async (
   condition: () => boolean | Promise<boolean>,
   timeout = 5000,
-  interval = 50
+  interval = 50,
 ): Promise<void> => {
   const startTime = Date.now();
-  
+
   while (!(await Promise.resolve(condition()))) {
     if (Date.now() - startTime > timeout) {
       throw new Error(`Timeout waiting for condition after ${timeout}ms`);
@@ -59,7 +59,7 @@ export const waitFor = async (
  */
 export const waitForElement = async (
   selector: string,
-  timeout = 5000
+  timeout = 5000,
 ): Promise<Element> => {
   await waitFor(() => !!document.querySelector(selector), timeout);
   return document.querySelector(selector)!;
@@ -70,7 +70,7 @@ export const waitForElement = async (
  */
 export const waitForElementToBeRemoved = async (
   selector: string,
-  timeout = 5000
+  timeout = 5000,
 ): Promise<void> => {
   await waitFor(() => !document.querySelector(selector), timeout);
 };
@@ -90,16 +90,19 @@ export const click = (element: Element): void => {
 /**
  * Simulate user typing
  */
-export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: string): void => {
+export const type = (
+  element: HTMLInputElement | HTMLTextAreaElement,
+  text: string,
+): void => {
   element.focus();
   element.value = text;
-  
+
   const inputEvent = new Event('input', {
     bubbles: true,
     cancelable: true,
   });
   element.dispatchEvent(inputEvent);
-  
+
   const changeEvent = new Event('change', {
     bubbles: true,
     cancelable: true,
@@ -110,7 +113,9 @@ export const type = (element: HTMLInputElement | HTMLTextAreaElement, text: stri
 /**
  * Clear input value
  */
-export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => {
+export const clear = (
+  element: HTMLInputElement | HTMLTextAreaElement,
+): void => {
   element.value = '';
   const changeEvent = new Event('change', {
     bubbles: true,
@@ -122,7 +127,10 @@ export const clear = (element: HTMLInputElement | HTMLTextAreaElement): void => 
 /**
  * Select option in select element
  */
-export const selectOption = (element: HTMLSelectElement, value: string): void => {
+export const selectOption = (
+  element: HTMLSelectElement,
+  value: string,
+): void => {
   element.value = value;
   const changeEvent = new Event('change', {
     bubbles: true,
@@ -142,11 +150,15 @@ export class FetchMock {
     this.originalFetch = globalThis.fetch;
   }
 
-  mockResponse(url: string, response: any, options?: {
-    status?: number;
-    statusText?: string;
-    headers?: Record<string, string>;
-  }): void {
+  mockResponse(
+    url: string,
+    response: any,
+    options?: {
+      status?: number;
+      statusText?: string;
+      headers?: Record<string, string>;
+    },
+  ): void {
     this.responses.set(url, {
       response,
       status: options?.status || 200,
@@ -155,13 +167,17 @@ export class FetchMock {
     });
   }
 
-  mockResponseOnce(url: string, response: any, options?: {
-    status?: number;
-    statusText?: string;
-    headers?: Record<string, string>;
-  }): void {
+  mockResponseOnce(
+    url: string,
+    response: any,
+    options?: {
+      status?: number;
+      statusText?: string;
+      headers?: Record<string, string>;
+    },
+  ): void {
     this.mockResponse(url, response, options);
-    
+
     // Remove after first call
     const original = this.responses.get(url);
     if (original) {
@@ -173,7 +189,10 @@ export class FetchMock {
   }
 
   install(): void {
-    globalThis.fetch = async (input: RequestInfo | URL, init?: RequestInit): Promise<Response> => {
+    globalThis.fetch = async (
+      input: RequestInfo | URL,
+      init?: RequestInit,
+    ): Promise<Response> => {
       const url = typeof input === 'string' ? input : input.toString();
       const mockData = this.responses.get(url);
 
@@ -268,7 +287,9 @@ export class ConsoleMock {
  */
 export const generateMockData = {
   string: (length = 10): string => {
-    return Math.random().toString(36).substring(2, 2 + length);
+    return Math.random()
+      .toString(36)
+      .substring(2, 2 + length);
   },
 
   number: (min = 0, max = 100): number => {
@@ -288,14 +309,18 @@ export const generateMockData = {
   },
 
   date: (): Date => {
-    return new Date(Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000);
+    return new Date(
+      Date.now() - generateMockData.number(0, 365) * 24 * 60 * 60 * 1000,
+    );
   },
 
   array: <T>(generator: () => T, length = 5): T[] => {
     return Array.from({ length }, generator);
   },
 
-  object: <T extends Record<string, any>>(schema: { [K in keyof T]: () => T[K] }): T => {
+  object: <T extends Record<string, any>>(schema: {
+    [K in keyof T]: () => T[K];
+  }): T => {
     const result = {} as T;
     Object.keys(schema).forEach(key => {
       result[key as keyof T] = schema[key as keyof T]();
@@ -319,21 +344,21 @@ export class PerformanceTester {
   end(label: string): number {
     performance.mark(`${label}-end`);
     performance.measure(label, `${label}-start`, `${label}-end`);
-    
+
     const duration = performance.now() - this.startTime;
-    
+
     if (!this.measurements.has(label)) {
       this.measurements.set(label, []);
     }
     this.measurements.get(label)!.push(duration);
-    
+
     return duration;
   }
 
   getAverage(label: string): number {
     const measurements = this.measurements.get(label) || [];
     if (measurements.length === 0) return 0;
-    
+
     const sum = measurements.reduce((acc, val) => acc + val, 0);
     return sum / measurements.length;
   }
@@ -341,10 +366,10 @@ export class PerformanceTester {
   getMedian(label: string): number {
     const measurements = this.measurements.get(label) || [];
     if (measurements.length === 0) return 0;
-    
+
     const sorted = [...measurements].sort((a, b) => a - b);
     const mid = Math.floor(sorted.length / 2);
-    
+
     if (sorted.length % 2 === 0) {
       return (sorted[mid - 1] + sorted[mid]) / 2;
     }
@@ -363,7 +388,10 @@ export class PerformanceTester {
  */
 export const checkAccessibility = {
   hasAriaLabel: (element: Element): boolean => {
-    return element.hasAttribute('aria-label') || element.hasAttribute('aria-labelledby');
+    return (
+      element.hasAttribute('aria-label') ||
+      element.hasAttribute('aria-labelledby')
+    );
   },
 
   hasRole: (element: Element, role: string): boolean => {
@@ -383,7 +411,7 @@ export const checkAccessibility = {
     const computed = window.getComputedStyle(element);
     const color = computed.color;
     const background = computed.backgroundColor;
-    
+
     // This is a simplified check - real implementation would calculate contrast ratio
     return color !== background;
   },
@@ -392,7 +420,9 @@ export const checkAccessibility = {
 /**
  * Setup test environment
  */
-export const setupTestEnvironment = (options: TestSetupOptions = {}): {
+export const setupTestEnvironment = (
+  options: TestSetupOptions = {},
+): {
   cleanup: () => void;
   fetchMock: FetchMock;
   consoleMock: ConsoleMock;

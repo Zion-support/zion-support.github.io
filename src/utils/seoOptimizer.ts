@@ -77,7 +77,9 @@ export class SEOOptimizer {
 
     // Check for brand name
     if (!title.toLowerCase().includes('zion')) {
-      this.report.recommendations.push('Consider including brand name in title');
+      this.report.recommendations.push(
+        'Consider including brand name in title',
+      );
     }
   }
 
@@ -89,9 +91,13 @@ export class SEOOptimizer {
     if (!description) {
       this.report.issues.push('Missing meta description');
     } else if (description.length > 160) {
-      this.report.issues.push('Meta description too long (over 160 characters)');
+      this.report.issues.push(
+        'Meta description too long (over 160 characters)',
+      );
     } else if (description.length < 120) {
-      this.report.issues.push('Meta description too short (under 120 characters)');
+      this.report.issues.push(
+        'Meta description too short (under 120 characters)',
+      );
     }
   }
 
@@ -109,7 +115,7 @@ export class SEOOptimizer {
 
     // Check heading hierarchy
     let previousLevel = 0;
-    headings.forEach((heading) => {
+    headings.forEach(heading => {
       const level = parseInt(heading.tagName.charAt(1));
       if (level > previousLevel + 1) {
         this.report.issues.push('Heading hierarchy skipped');
@@ -128,21 +134,27 @@ export class SEOOptimizer {
       }
 
       if (!img.loading) {
-        this.report.recommendations.push(`Add lazy loading to image ${index + 1}`);
+        this.report.recommendations.push(
+          `Add lazy loading to image ${index + 1}`,
+        );
       }
 
       // Check image optimization
       if (img.src.includes('.jpg') || img.src.includes('.jpeg')) {
-        this.report.recommendations.push(`Consider converting image ${index + 1} to WebP format`);
+        this.report.recommendations.push(
+          `Consider converting image ${index + 1} to WebP format`,
+        );
       }
     });
   }
 
   private analyzeLinks(): void {
     const links = document.querySelectorAll('a[href]');
-    this.report.links = Array.from(links).map(link => (link as HTMLAnchorElement).href);
+    this.report.links = Array.from(links).map(
+      link => (link as HTMLAnchorElement).href,
+    );
 
-    links.forEach((link) => {
+    links.forEach(link => {
       const href = (link as HTMLAnchorElement).href;
 
       // Check for external links without rel="noopener"
@@ -162,13 +174,23 @@ export class SEOOptimizer {
   private analyzeKeywords(): void {
     const content = document.body.textContent || '';
     const commonKeywords = [
-      'ai', 'artificial intelligence', 'machine learning', 'automation',
-      'technology', 'solutions', 'services', 'consulting', 'development',
-      'zion', 'tech group', 'enterprise', 'business'
+      'ai',
+      'artificial intelligence',
+      'machine learning',
+      'automation',
+      'technology',
+      'solutions',
+      'services',
+      'consulting',
+      'development',
+      'zion',
+      'tech group',
+      'enterprise',
+      'business',
     ];
 
     this.report.keywords = commonKeywords.filter(keyword =>
-      content.toLowerCase().includes(keyword.toLowerCase())
+      content.toLowerCase().includes(keyword.toLowerCase()),
     );
 
     if (this.report.keywords.length < 5) {
@@ -183,11 +205,19 @@ export class SEOOptimizer {
     score -= this.report.issues.length * 10;
 
     // Bonus points for good practices
-    if (this.report.title && this.report.title.length >= 30 && this.report.title.length <= 60) {
+    if (
+      this.report.title &&
+      this.report.title.length >= 30 &&
+      this.report.title.length <= 60
+    ) {
       score += 5;
     }
 
-    if (this.report.description && this.report.description.length >= 120 && this.report.description.length <= 160) {
+    if (
+      this.report.description &&
+      this.report.description.length >= 120 &&
+      this.report.description.length <= 160
+    ) {
       score += 5;
     }
 
@@ -200,18 +230,26 @@ export class SEOOptimizer {
 
   private generateRecommendations(): void {
     if (this.report.score < 70) {
-      this.report.recommendations.push('Focus on improving page SEO fundamentals');
+      this.report.recommendations.push(
+        'Focus on improving page SEO fundamentals',
+      );
     }
 
     if (this.report.images.length > 0) {
-      this.report.recommendations.push('Optimize images for better performance');
+      this.report.recommendations.push(
+        'Optimize images for better performance',
+      );
     }
 
     if (this.report.links.length < 10) {
-      this.report.recommendations.push('Add more internal links to improve site structure');
+      this.report.recommendations.push(
+        'Add more internal links to improve site structure',
+      );
     }
 
-    this.report.recommendations.push('Use structured data markup for better search visibility');
+    this.report.recommendations.push(
+      'Use structured data markup for better search visibility',
+    );
     this.report.recommendations.push('Implement proper canonical URLs');
   }
 
@@ -244,21 +282,21 @@ export class SEOOptimizer {
     if (!this.config.enableStructuredData) return;
 
     const structuredData = {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "description": "Advanced AI and IT Solutions Provider",
-      "url": window.location.origin,
-      "logo": `${window.location.origin}/logo.png`,
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-0123",
-        "contactType": "customer service"
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      description: 'Advanced AI and IT Solutions Provider',
+      url: window.location.origin,
+      logo: `${window.location.origin}/logo.png`,
+      contactPoint: {
+        '@type': 'ContactPoint',
+        telephone: '+1-555-0123',
+        contactType: 'customer service',
       },
-      "sameAs": [
-        "https://linkedin.com/company/zion-tech-group",
-        "https://twitter.com/ziontechgroup"
-      ]
+      sameAs: [
+        'https://linkedin.com/company/zion-tech-group',
+        'https://twitter.com/ziontechgroup',
+      ],
     };
 
     const script = document.createElement('script');
@@ -276,17 +314,21 @@ export class SEOOptimizer {
       '/services',
       '/about',
       '/contact',
-      '/blog'
+      '/blog',
     ];
 
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
+${pages
+  .map(
+    page => `  <url>
     <loc>${window.location.origin}${page}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
-  </url>`).join('\n')}
+  </url>`,
+  )
+  .join('\n')}
 </urlset>`;
 
     return sitemap;
@@ -312,41 +354,67 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
 
   // Basic meta tags
   tags.push(`<title>${escapeHtml(metadata.title)}</title>`);
-  tags.push(`<meta name="description" content="${escapeHtml(metadata.description)}" />`);
+  tags.push(
+    `<meta name="description" content="${escapeHtml(metadata.description)}" />`,
+  );
 
   if (metadata.keywords && metadata.keywords.length > 0) {
-    tags.push(`<meta name="keywords" content="${metadata.keywords.join(', ')}" />`);
+    tags.push(
+      `<meta name="keywords" content="${metadata.keywords.join(', ')}" />`,
+    );
   }
 
   if (metadata.author) {
-    tags.push(`<meta name="author" content="${escapeHtml(metadata.author)}" />`);
+    tags.push(
+      `<meta name="author" content="${escapeHtml(metadata.author)}" />`,
+    );
   }
 
   // Canonical URL
   if (metadata.canonicalUrl) {
-    tags.push(`<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(
+      `<link rel="canonical" href="${escapeHtml(metadata.canonicalUrl)}" />`,
+    );
   }
 
   // Open Graph tags
-  tags.push(`<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`);
-  tags.push(`<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`);
-  tags.push(`<meta property="og:type" content="${metadata.ogType || 'website'}" />`);
+  tags.push(
+    `<meta property="og:title" content="${escapeHtml(metadata.ogTitle || metadata.title)}" />`,
+  );
+  tags.push(
+    `<meta property="og:description" content="${escapeHtml(metadata.ogDescription || metadata.description)}" />`,
+  );
+  tags.push(
+    `<meta property="og:type" content="${metadata.ogType || 'website'}" />`,
+  );
 
   if (metadata.ogImage) {
-    tags.push(`<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`);
+    tags.push(
+      `<meta property="og:image" content="${escapeHtml(metadata.ogImage)}" />`,
+    );
   }
 
   if (metadata.canonicalUrl) {
-    tags.push(`<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`);
+    tags.push(
+      `<meta property="og:url" content="${escapeHtml(metadata.canonicalUrl)}" />`,
+    );
   }
 
   // Twitter Card tags
-  tags.push(`<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`);
-  tags.push(`<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`);
-  tags.push(`<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`);
+  tags.push(
+    `<meta name="twitter:card" content="${metadata.twitterCard || 'summary_large_image'}" />`,
+  );
+  tags.push(
+    `<meta name="twitter:title" content="${escapeHtml(metadata.twitterTitle || metadata.title)}" />`,
+  );
+  tags.push(
+    `<meta name="twitter:description" content="${escapeHtml(metadata.twitterDescription || metadata.description)}" />`,
+  );
 
   if (metadata.twitterImage || metadata.ogImage) {
-    tags.push(`<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`);
+    tags.push(
+      `<meta name="twitter:image" content="${escapeHtml(metadata.twitterImage || metadata.ogImage || '')}" />`,
+    );
   }
 
   return tags.join('\n');
@@ -355,11 +423,14 @@ export const generateMetaTags = (metadata: SEOMetadata): string => {
 /**
  * Generate structured data (JSON-LD)
  */
-export const generateStructuredData = (type: string, data: Record<string, any>): string => {
+export const generateStructuredData = (
+  type: string,
+  data: Record<string, any>,
+): string => {
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': type,
-    ...data
+    ...data,
   };
 
   return `<script type="application/ld+json">${JSON.stringify(structuredData, null, 2)}</script>`;
@@ -382,7 +453,7 @@ export const generateArticleStructuredData = (article: {
     description: article.description,
     author: {
       '@type': 'Person',
-      name: article.author
+      name: article.author,
     },
     datePublished: article.publishDate,
     dateModified: article.modifiedDate || article.publishDate,
@@ -393,23 +464,25 @@ export const generateArticleStructuredData = (article: {
       name: 'Zion Tech Group',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://ziontechgroup.com/logo.png'
-      }
-    }
+        url: 'https://ziontechgroup.com/logo.png',
+      },
+    },
   });
 };
 
 /**
  * Generate breadcrumb structured data
  */
-export const generateBreadcrumbStructuredData = (breadcrumbs: Array<{ name: string; url: string }>): string => {
+export const generateBreadcrumbStructuredData = (
+  breadcrumbs: Array<{ name: string; url: string }>,
+): string => {
   return generateStructuredData('BreadcrumbList', {
     itemListElement: breadcrumbs.map((crumb, index) => ({
       '@type': 'ListItem',
       position: index + 1,
       name: crumb.name,
-      item: crumb.url
-    }))
+      item: crumb.url,
+    })),
   });
 };
 
@@ -421,48 +494,62 @@ export const generateOrganizationStructuredData = (): string => {
     name: 'Zion Tech Group',
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
-    description: 'Leading AI & IT Solutions provider transforming businesses worldwide',
+    description:
+      'Leading AI & IT Solutions provider transforming businesses worldwide',
     sameAs: [
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/zion-holdings'
+      'https://github.com/zion-holdings',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+1-800-ZION-TECH',
       contactType: 'Customer Service',
-      email: 'contact@ziontechgroup.com'
-    }
+      email: 'contact@ziontechgroup.com',
+    },
   });
 };
 
 /**
  * Generate FAQ structured data
  */
-export const generateFAQStructuredData = (faqs: Array<{ question: string; answer: string }>): string => {
+export const generateFAQStructuredData = (
+  faqs: Array<{ question: string; answer: string }>,
+): string => {
   return generateStructuredData('FAQPage', {
     mainEntity: faqs.map(faq => ({
       '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: faq.answer
-      }
-    }))
+        text: faq.answer,
+      },
+    })),
   });
 };
 
 /**
  * Generate sitemap XML
  */
-export const generateSitemapXML = (urls: Array<{ loc: string; lastmod?: string; changefreq?: string; priority?: number }>): string => {
-  const urlsXml = urls.map(url => `
+export const generateSitemapXML = (
+  urls: Array<{
+    loc: string;
+    lastmod?: string;
+    changefreq?: string;
+    priority?: number;
+  }>,
+): string => {
+  const urlsXml = urls
+    .map(
+      url => `
   <url>
     <loc>${escapeHtml(url.loc)}</loc>
     ${url.lastmod ? `<lastmod>${url.lastmod}</lastmod>` : ''}
     ${url.changefreq ? `<changefreq>${url.changefreq}</changefreq>` : ''}
     ${url.priority !== undefined ? `<priority>${url.priority}</priority>` : ''}
-  </url>`).join('');
+  </url>`,
+    )
+    .join('');
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -502,47 +589,61 @@ export const generateRobotsTxt = (config: {
 /**
  * Optimize title for SEO
  */
-export const optimizeTitle = (title: string, maxLength: number = 60): string => {
+export const optimizeTitle = (
+  title: string,
+  maxLength: number = 60,
+): string => {
   if (title.length <= maxLength) return title;
-  
+
   // Truncate at word boundary
   const truncated = title.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+
+  return lastSpace > 0
+    ? truncated.substring(0, lastSpace) + '...'
+    : truncated + '...';
 };
 
 /**
  * Optimize description for SEO
  */
-export const optimizeDescription = (description: string, maxLength: number = 160): string => {
+export const optimizeDescription = (
+  description: string,
+  maxLength: number = 160,
+): string => {
   if (description.length <= maxLength) return description;
-  
+
   // Truncate at word boundary
   const truncated = description.substring(0, maxLength);
   const lastSpace = truncated.lastIndexOf(' ');
-  
-  return lastSpace > 0 ? truncated.substring(0, lastSpace) + '...' : truncated + '...';
+
+  return lastSpace > 0
+    ? truncated.substring(0, lastSpace) + '...'
+    : truncated + '...';
 };
 
 /**
  * Extract keywords from content
  */
-export const extractKeywords = (content: string, maxKeywords: number = 10): string[] => {
+export const extractKeywords = (
+  content: string,
+  maxKeywords: number = 10,
+): string[] => {
   // Remove special characters and convert to lowercase
   const cleaned = content.toLowerCase().replace(/[^a-z0-9\s]/g, '');
-  
+
   // Split into words
   const words = cleaned.split(/\s+/);
-  
+
   // Count word frequency
   const frequency = new Map<string, number>();
   words.forEach(word => {
-    if (word.length > 3) { // Ignore short words
+    if (word.length > 3) {
+      // Ignore short words
       frequency.set(word, (frequency.get(word) || 0) + 1);
     }
   });
-  
+
   // Sort by frequency and return top keywords
   return Array.from(frequency.entries())
     .sort((a, b) => b[1] - a[1])
@@ -563,32 +664,34 @@ export const generateSlug = (title: string): string => {
 /**
  * Validate URL for SEO
  */
-export const validateSEOUrl = (url: string): { valid: boolean; issues: string[] } => {
+export const validateSEOUrl = (
+  url: string,
+): { valid: boolean; issues: string[] } => {
   const issues: string[] = [];
-  
+
   if (url.length > 100) {
     issues.push('URL is too long (>100 characters)');
   }
-  
+
   if (url.includes('_')) {
     issues.push('URL contains underscores (use hyphens instead)');
   }
-  
+
   if (/[A-Z]/.test(url)) {
     issues.push('URL contains uppercase letters');
   }
-  
+
   if (/\s/.test(url)) {
     issues.push('URL contains spaces');
   }
-  
+
   if (url.split('/').filter(Boolean).length > 5) {
     issues.push('URL has too many path segments (>5)');
   }
-  
+
   return {
     valid: issues.length === 0,
-    issues
+    issues,
   };
 };
 
@@ -601,7 +704,7 @@ function escapeHtml(text: string): string {
     '<': '&lt;',
     '>': '&gt;',
     '"': '&quot;',
-    "'": '&#039;'
+    "'": '&#039;',
   };
   return text.replace(/[&<>"']/g, m => map[m]);
 }
@@ -627,7 +730,7 @@ export const useSEOOptimizer = () => {
     observer.observe(document.body, {
       childList: true,
       subtree: true,
-      characterData: true
+      characterData: true,
     });
 
     return () => observer.disconnect();
@@ -638,7 +741,10 @@ export const useSEOOptimizer = () => {
 /**
  * Calculate reading time
  */
-export const calculateReadingTime = (content: string, wordsPerMinute: number = 200): number => {
+export const calculateReadingTime = (
+  content: string,
+  wordsPerMinute: number = 200,
+): number => {
   const words = content.trim().split(/\s+/).length;
   return Math.ceil(words / wordsPerMinute);
 };
@@ -646,7 +752,10 @@ export const calculateReadingTime = (content: string, wordsPerMinute: number = 2
 /**
  * Check content quality for SEO
  */
-export const checkContentQuality = (content: string, title: string): {
+export const checkContentQuality = (
+  content: string,
+  title: string,
+): {
   score: number;
   issues: string[];
   recommendations: string[];
@@ -654,36 +763,40 @@ export const checkContentQuality = (content: string, title: string): {
   const issues: string[] = [];
   const recommendations: string[] = [];
   let score = 100;
-  
+
   // Word count check
   const wordCount = content.trim().split(/\s+/).length;
   if (wordCount < 300) {
     issues.push('Content is too short (<300 words)');
     score -= 20;
   }
-  
+
   // Keyword density check (title in content)
   const titleWords = title.toLowerCase().split(/\s+/);
   const contentLower = content.toLowerCase();
   const titleInContent = titleWords.some(word => contentLower.includes(word));
-  
+
   if (!titleInContent) {
     issues.push('Title keywords not found in content');
     score -= 15;
   }
-  
+
   // Heading check
   if (!content.includes('#') && !content.includes('<h')) {
     recommendations.push('Add headings to improve content structure');
     score -= 10;
   }
-  
+
   // Link check
-  if (!content.includes('http') && !content.includes('[') && !content.includes('<a')) {
+  if (
+    !content.includes('http') &&
+    !content.includes('[') &&
+    !content.includes('<a')
+  ) {
     recommendations.push('Add internal/external links');
     score -= 5;
   }
-  
+
   return { score: Math.max(0, score), issues, recommendations };
 };
 
@@ -702,5 +815,5 @@ export default {
   generateSlug,
   validateSEOUrl,
   calculateReadingTime,
-  checkContentQuality
+  checkContentQuality,
 };

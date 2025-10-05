@@ -66,7 +66,7 @@ class AdvancedCacheManager<T = any> {
 
     // Update access count for LFU strategy
     entry.accessCount++;
-    
+
     // Update timestamp for LRU strategy
     if (this.config.strategy === 'LRU') {
       entry.timestamp = Date.now();
@@ -87,7 +87,7 @@ class AdvancedCacheManager<T = any> {
     }
 
     const size = this.estimateSize(value);
-    
+
     this.cache.set(key, {
       value,
       timestamp: Date.now(),
@@ -140,7 +140,7 @@ class AdvancedCacheManager<T = any> {
   async getOrSet(
     key: string,
     fetchFn: () => Promise<T>,
-    customMaxAge?: number
+    customMaxAge?: number,
   ): Promise<T> {
     const cached = this.get(key);
     if (cached !== null) {
@@ -354,11 +354,14 @@ const imageCache = new AdvancedCacheManager<string>({
 
 // Start periodic cleanup
 if (typeof window !== 'undefined') {
-  setInterval(() => {
-    apiCache.cleanExpired();
-    contentCache.cleanExpired();
-    imageCache.cleanExpired();
-  }, 5 * 60 * 1000); // Clean every 5 minutes
+  setInterval(
+    () => {
+      apiCache.cleanExpired();
+      contentCache.cleanExpired();
+      imageCache.cleanExpired();
+    },
+    5 * 60 * 1000,
+  ); // Clean every 5 minutes
 }
 
 export { AdvancedCacheManager, apiCache, contentCache, imageCache };
