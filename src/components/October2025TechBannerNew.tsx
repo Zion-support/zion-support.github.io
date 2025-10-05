@@ -70,7 +70,7 @@ const October2025TechBannerNew = () => {
 
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {newArticles.map((article, index) => (
+          {newArticles.map((article, index) = > (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 20 }}
@@ -80,13 +80,10 @@ const October2025TechBannerNew = () => {
               className="relative group"
             >
               <Link to={`/blog/${article.slug}`}>
-                <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300">
-                  {/* Highlight Badge */}
+                <div className="relative bg-white/10 backdrop-blur-lg rounded-xl p-6 h-full border border-white/20 hover:border-white/40 transition-all duration-300" > {/* Highlight Badge */}
                   <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${article.color}`}>
                     {article.highlight}
-                  </div>
-
-                  {/* Icon */}
+                  </div > {/* Icon */}
                   <div className={`w-14 h-14 rounded-lg bg-gradient-to-br ${article.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                     <article.icon className="w-7 h-7 text-white"</div>
 
@@ -135,7 +132,7 @@ const October2025TechBannerNew = () => {
 
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
+        {[...Array(20)].map((_, i) =  > (
           <motion.div
             key={i}
             className="absolute w-2 h-2 bg-purple-400/30 rounded-full"

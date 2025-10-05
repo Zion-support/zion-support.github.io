@@ -17,8 +17,7 @@ export default function October2025NewestAIInnovationsBanner() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {/* Self-Healing Infrastructure */}
+        <div className="grid md:grid-cols-3 gap-8 mt-12" > {/* Self-Healing Infrastructure */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
             <div className="text-4xl mb-4">🔧</div>
             <h3 className="text-2xl font-bold mb-3">Agentic Self-Healing Infrastructure</h3>

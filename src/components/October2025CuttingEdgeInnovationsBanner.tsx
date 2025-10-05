@@ -24,7 +24,7 @@ const October2025CuttingEdgeInnovationsBanner = () => {
             </h2>
             
             <p className="text-base sm:text-lg text-indigo-100/90 mb-4 leading-relaxed">
-              ⚡ <strong className="text-indigo-200">BRAND NEW TODAY:</strong> Deploy neuro-symbolic AI achieving{" "}
+              ⚡ <strong className="text-indigo-200">BRAND NEW TODAY:</strong > Deploy neuro-symbolic AI achieving{" "}
               <span className="text-green-400 font-bold">99.7% reasoning accuracy</span> with{" "}
               <span className="text-green-400 font-bold">89% fewer hallucinations</span>, implement spatial computing platforms delivering{" "}
               <span className="text-green-400 font-bold">12x productivity gains</span> and{" "}

@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const October2025CognitiveRevolutionBanner: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/20 overflow-hidden">
-      {/* Animated background effects */}
+    <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/20 overflow-hidden" > {/* Animated background effects */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_50%)]" <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.15),transparent_50%)]" />
       
       {/* Content */}

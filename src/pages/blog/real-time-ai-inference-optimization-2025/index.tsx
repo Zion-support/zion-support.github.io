@@ -1,5 +1,5 @@
-import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Calendar, Clock, Cpu, Database, Gauge, TrendingUp, Zap } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
 const RealTimeAIInferenceOptimization2025 = () => {

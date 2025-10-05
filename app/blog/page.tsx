@@ -180,7 +180,7 @@ export default function BlogIndexPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {posts.map((post) => (
           <a key={post.href} href={post.href} className='group'>
-            <article `}>
+<article `}>
               <div `}>
                 {post.date}
                 {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
@@ -188,17 +188,20 @@ export default function BlogIndexPage() {
               <h2 `}>
                 {post.title}
               </h2>
-              <p `}>
+              <p `}>                {post.title}
+              </h2>
+              <p className='text-gray-300 mb-4 line-clamp-3'>
+>>>>>>> origin/merge-pr-25212
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>
                 {post.tags.map((tag) => (
-                  <span key={tag} `}>
+<span key={tag} `}>>>>>>>> origin/merge-pr-25212
                     {tag}
                   </span>
                 ))}
               </div>
-              <div `}>
+<div `}>>>>>>>> origin/merge-pr-25212
                 Read more →
               </div>
             </article>

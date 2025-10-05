@@ -1,10 +1,7 @@
+import { Home, Menu, Settings, User, X } from 'lucide-react';
 import React, { useState } from 'react';
 
-import { Home, User, Settings, Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
-
-
-
 
 ;
 const SidebarNavigation: React.FC = () => {

@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const Sidebar: React.FC = () => {
   const location = useLocation();
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) = > location.pathname === path;
 
   const sections = [
     {
@@ -51,13 +51,13 @@ const Sidebar: React.FC = () => {
   return (
     <aside className='bg-gray-50 rounded-lg p-6 h-fit sticky top-24'>
       <div className='space-y-6'>
-        {sections.map((section, sectionIndex) => (
+        {sections.map((section, sectionIndex) = > (
           <div key={sectionIndex}>
             <h3 className='text-sm font-semibold text-gray-900 uppercase tracking-wide mb-3'>
               {section.title}
             </h3>
             <nav className='space-y-1'>
-              {section.links.map((link, linkIndex) => (
+              {section.links.map((link, linkIndex) = > (
                 <Link
                   key={linkIndex}
                   to={link.path}

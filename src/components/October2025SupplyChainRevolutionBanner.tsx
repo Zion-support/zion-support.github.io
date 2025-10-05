@@ -13,8 +13,7 @@ import {
 
 const October2025SupplyChainRevolutionBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-16 px-6 rounded-3xl shadow-2xl my-12 border-4 border-emerald-400/50">
-      {/* Animated Background Elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 py-16 px-6 rounded-3xl shadow-2xl my-12 border-4 border-emerald-400/50" > {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>

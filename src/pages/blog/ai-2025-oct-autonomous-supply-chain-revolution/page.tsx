@@ -1,5 +1,5 @@
+import { ArrowLeft, DollarSign, Globe, Package, TrendingUp, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, TrendingUp, Zap, DollarSign, Package, Globe } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 export default function AutonomousSupplyChainRevolution2025() {

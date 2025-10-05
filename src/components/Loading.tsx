@@ -20,7 +20,7 @@ const Loading: React.FC<LoadingProps> = ({
       <div
         className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}
       ></div>
-      {text && <p className='mt-4 text-sm text-gray-600'>{text}</p>}
+      {text && <p className='mt-4 text-sm text-gray-600' > {text}</p>}
     </div>
   );
 };

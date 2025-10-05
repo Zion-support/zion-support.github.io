@@ -57,7 +57,7 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-          {features.map((feature, index) => (
+          {features.map((feature, index) = > (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}

@@ -1,26 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-
-import { ArrowRight, Brain, TrendingUp, DollarSign, Users, Target, Award } from 'lucide-react';
-
-;
-;
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Target from 'lucide-react';
-import Users from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Award from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
-
 export const metadata = {
   title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',
   description: 'Discover how a Fortune 500 company achieved $10 billion in ROI through Zion Tech Group\'s synthetic consciousness AI implementation. Real results from real transformation.',

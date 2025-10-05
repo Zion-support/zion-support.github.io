@@ -4,8 +4,7 @@ const November2025GameChangersBanner = () => {
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 border-y border-purple-500/30 py-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
+        <div className="max-w-7xl mx-auto" > {/* Header */}
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-3 bg-yellow-500/20 border border-yellow-500/40 rounded-full px-6 py-3 mb-6">
 

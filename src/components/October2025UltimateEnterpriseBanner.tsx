@@ -5,8 +5,7 @@ const October2025UltimateEnterpriseBanner = () => {
   const [multiCloudContent, conversationalAIContent] = octoberUltimateEnterpriseContent;
 
   return (
-    <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden">
-      {/* Animated Background */}
+    <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
@@ -86,7 +85,7 @@ const October2025UltimateEnterpriseBanner = () => {
 
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
-              {multiCloudContent.highlights.slice(0, 4).map((highlight, index) => (
+              {multiCloudContent.highlights.slice(0, 4).map((highlight, index) = > (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
 
                   <span className="text-sm leading-relaxed">{highlight}</span>
@@ -151,7 +150,7 @@ const October2025UltimateEnterpriseBanner = () => {
 
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
-              {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) => (
+              {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) = > (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
 
                   <span className="text-sm leading-relaxed">{highlight}</span>

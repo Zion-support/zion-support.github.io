@@ -115,7 +115,9 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
             <button
               key={filter.id}
               onClick={() => setActiveFilter(filter.id)}
-              `}
+`}                  : 'bg-white/10 text-gray-300 hover:bg-white/20'
+              }`}
+>>>>>>> origin/merge-pr-25212
             >
               {filter.label} ({filter.count})
             </button>
@@ -132,7 +134,7 @@ const UltimateBusinessIntelligenceShowcase2025 = () => {
               {/* Content Type Badge */}
               <div className="p-4 pb-0">
                 <div className="flex items-center justify-between mb-3">
-                  <span `}>
+<span `}>>>>>>>> origin/merge-pr-25212
                     {item.type}
                   </span>
                   {item.featured && (

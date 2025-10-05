@@ -1,24 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
-
-import Link from 'next/link';
-
-;
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
-import Rocket from 'lucide-react';
-
-import Link from 'next/link';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -147,7 +127,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span  text-white text-sm font-semibold shadow-lg`}>
+<span  text-white text-sm font-semibold shadow-lg`}>>>>>>>> origin/merge-pr-25212
                     {article.category}
                   </span>
                 </div>
@@ -210,7 +190,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
                 {/* Category Tag */}
                 <div className="mb-4">
-                  <span  text-white text-sm font-semibold shadow-lg`}>
+<span  text-white text-sm font-semibold shadow-lg`}>>>>>>>> origin/merge-pr-25212
                     {article.category}
                   </span>
                 </div>

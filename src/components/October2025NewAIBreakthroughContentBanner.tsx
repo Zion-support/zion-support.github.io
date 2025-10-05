@@ -168,8 +168,7 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
           🔬 Research-backed methodologies
         </p>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default October2025NewAIBreakthroughContentBanner;

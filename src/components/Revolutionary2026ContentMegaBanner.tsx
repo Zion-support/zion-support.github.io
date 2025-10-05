@@ -139,7 +139,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
 
         {/* Featured Content Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {revolutionaryContent.map((content, index) => (
+          {revolutionaryContent.map((content, index) = > (
             <motion.div
               key={content.id}
               initial={{ opacity: 0, y: 20 }}
@@ -154,8 +154,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                   <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold shadow-lg">
 
                   </div>
-                </div>
-              )}
+                </div > )}
 
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500 rounded-2xl"></div>
@@ -170,8 +169,7 @@ const Revolutionary2026ContentMegaBanner: React.FC = () => {
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs font-bold shadow-lg">
 
-                      </div>
-                    )}
+                      </div > )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
                       REVOLUTIONARY
                     </span>

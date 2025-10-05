@@ -1,25 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-import { ArrowRight, Zap, Cpu, Shield, TrendingUp, Brain, Star, Rocket } from 'lucide-react';
-
-import Link from 'next/link';
-
-;
-;
-;
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import Rocket from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 import Link from 'next/link';
 

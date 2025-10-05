@@ -23,7 +23,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
   useEffect(() => {
     if (autoRotate && featuredArticles.length > 1) {
       const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % featuredArticles.length);
+        setCurrentIndex((prev) = > (prev + 1) % featuredArticles.length);
       }, rotationInterval);
       return () => clearInterval(interval);
     }
@@ -49,8 +49,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
             Read Now
           </Link>
         </div>
-      </div>
-    );
+      </div > );
   }
 
   if (variant === 'premium') {
@@ -62,7 +61,7 @@ const NewArticlesPromoBanner: React.FC<NewArticlesPromoBannerProps> = ({
             <h2 className="text-3xl font-bold">Breakthrough Articles Just Published</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {featuredArticles.map((article) => (
+            {featuredArticles.map((article) = > (
               <div
 
 key={article.id}
@@ -96,8 +95,7 @@ key={article.id}
             </Link>
           </div>
         </div>
-      </div>
-    );
+      </div > );
   }
 
   if (variant === 'featured') {
@@ -116,14 +114,14 @@ key={article.id}
         </div>
         <div className="p-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredArticles.map((article) => (
+            {featuredArticles.map((article) = > (
               <Link
                 key={article.id}
                 to={article.link}
                 className="group border border-gray-200 rounded-xl p-5 hover:shadow-xl hover:border-indigo-300 transition-all"
               >
                 <div className="flex flex-wrap gap-2 mb-3">
-                  {article.tags.slice(0, 2).map((tag) => (
+                  {article.tags.slice(0, 2).map((tag) = > (
                     <span
 
 key={tag}
@@ -146,8 +144,7 @@ key={tag}
             ))}
           </div>
         </div>
-      </div>
-    );
+      </div > );
   }
 
   // Default variant
@@ -158,7 +155,7 @@ key={tag}
         <h3 className="text-2xl font-bold">New Articles Available</h3>
       </div>
       <div className="grid md:grid-cols-3 gap-4">
-        {featuredArticles.map((article) => (
+        {featuredArticles.map((article) = > (
           <div key={article.id} className="bg-white/10 rounded-lg p-4 hover:bg-white/20 transition-all">
             <div className="text-sm text-blue-200 mb-2">{article.category}</div>
             <h4 className="font-semibold mb-2">{article.title}</h4>

@@ -180,7 +180,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((item, index) => (
               <div
                 key={item.id}
-                `}
+`}                    : 'bg-white/5 hover:bg-white/10 border border-transparent'
+                }`}
+>>>>>>> origin/merge-pr-25212
                 onClick={() => setCurrentSlide(index)}
               >
                 <div className="flex items-start justify-between">
@@ -208,7 +210,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              `}
+`}                  : 'bg-white/30 hover:bg-white/50'
+              }`}
+>>>>>>> origin/merge-pr-25212
               aria-label={`Go to slide ${index + 1}`}
             />
           ))}

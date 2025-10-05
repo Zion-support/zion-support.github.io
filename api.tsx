@@ -1,11 +1,7 @@
+import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
 import React from 'react'
 
-import { Code, Shield, Zap, ArrowRight, ExternalLink } from "lucide-react";
 import { Link } from 'react-router-dom'
-
-
-
-
 
 export default function API() {
   const endpoints = [
