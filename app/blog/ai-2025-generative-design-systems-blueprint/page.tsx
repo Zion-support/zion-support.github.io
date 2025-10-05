@@ -1,9 +1,10 @@
+import Link from 'next/link';
 import { Link } from 'react-router-dom';
 
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
@@ -48,14 +49,14 @@ export default function GenerativeDesignSystemsBlueprintPage() {
           <h3 className="text-2xl font-bold mb-3">Build Your Design Accelerator</h3>
           <p className="opacity-90 mb-6">We help enterprises ship safe, on-brand generative experiences.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/services" className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</Link>
-            <Link to="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors">Talk to Experts</Link>
+            <Link href="/services" className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Explore Services</Link>
+            <Link href="/contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors">Talk to Experts</Link>
           </div>
         </div>
       </article>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <Link to="/" className="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium">
+        <Link href="/" className="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium">
           <ArrowLeft /> Back to Home
         </Link>
       </div>
