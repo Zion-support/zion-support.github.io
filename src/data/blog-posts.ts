@@ -195,7 +195,8 @@ export const BLOG_POSTS: BlogPost[] = [
     id: '2',
     title: 'AI RFP Response Copilot: Win More, Write Less',
     slug: 'ai-rfp-response-copilot',
-    excerpt: 'How teams cut response time by 70% and boost win rates with our AI Copilot.',
+    excerpt:
+      'How teams cut response time by 70% and boost win rates with our AI Copilot.',
     content:
       'Procurement cycles are getting faster, not slower. Our AI RFP Response Copilot plugs into your existing knowledge base, extracts differentiators, enforces compliance, and drafts tailored responses in minutes. With human-in-the-loop review, teams ship polished proposals 70% faster while improving accuracy. In this article, we break down the architecture, data privacy controls, and field-proven prompts that drive measurable win-rate gains.',
     featuredImage: '/images/blog/ai-rfp-copilot.jpg',
@@ -209,7 +210,8 @@ export const BLOG_POSTS: BlogPost[] = [
     id: '3',
     title: 'SEO Change Monitor: Catch Drops Before Rankings Slip',
     slug: 'seo-change-monitor',
-    excerpt: 'Automated on-page diffs, alerts, and impact analysis keep SEO stable through releases.',
+    excerpt:
+      'Automated on-page diffs, alerts, and impact analysis keep SEO stable through releases.',
     content:
       'Small changes ship daily—title tweaks, internal links, robots rules. Our SEO Change Monitor snapshots critical pages, detects risky diffs (above-the-fold copy, canonical tags, internal link structure), and alerts the moment issues appear. With built-in Lighthouse deltas and Search Console annotations, teams correlate releases to traffic changes and fix problems before rankings slide.',
     featuredImage: '/images/blog/seo-change-monitor.jpg',
@@ -346,7 +348,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Modern zero-trust implementation with identity-centric policies, microsegmentation, and continuous verification.',
     content:
-      'Traditional perimeter-based security is obsolete in today\'s distributed environment. Zero-Trust Architecture 2.0 takes security to the next level with identity-first policies, device posture validation, microsegmentation at the workload level, and continuous risk assessment. This comprehensive guide covers implementation strategies including policy engine design, trust score calculation, adaptive access controls, and integration with modern cloud-native architectures. We showcase real deployment patterns from financial services, healthcare, and government sectors that have achieved 99.9% threat prevention rates while maintaining seamless user experiences.',
+      "Traditional perimeter-based security is obsolete in today's distributed environment. Zero-Trust Architecture 2.0 takes security to the next level with identity-first policies, device posture validation, microsegmentation at the workload level, and continuous risk assessment. This comprehensive guide covers implementation strategies including policy engine design, trust score calculation, adaptive access controls, and integration with modern cloud-native architectures. We showcase real deployment patterns from financial services, healthcare, and government sectors that have achieved 99.9% threat prevention rates while maintaining seamless user experiences.",
     featuredImage: '/images/blog/zero-trust-2025.jpg',
     category: 'Security',
     tags: ['Zero-Trust', 'Cybersecurity', 'Identity', 'Cloud Security'],
@@ -391,7 +393,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Practical strategies to cut AI training costs and carbon emissions by 60% without sacrificing performance.',
     content:
-      'AI training now accounts for a significant portion of global energy consumption. Sustainable AI practices are not just ethical imperatives—they\'re competitive advantages. This guide covers carbon-aware model training that schedules jobs during low-emission periods, model compression techniques (pruning, quantization, distillation) that reduce inference costs by 10x, efficient architecture search methods, and renewable energy integration strategies. We showcase case studies from companies that achieved 60% carbon reduction while improving model performance, and provide calculators to measure your AI\'s environmental impact and ROI of green ML investments.',
+      "AI training now accounts for a significant portion of global energy consumption. Sustainable AI practices are not just ethical imperatives—they're competitive advantages. This guide covers carbon-aware model training that schedules jobs during low-emission periods, model compression techniques (pruning, quantization, distillation) that reduce inference costs by 10x, efficient architecture search methods, and renewable energy integration strategies. We showcase case studies from companies that achieved 60% carbon reduction while improving model performance, and provide calculators to measure your AI's environmental impact and ROI of green ML investments.",
     featuredImage: '/images/blog/sustainable-ai.jpg',
     category: 'AI',
     tags: ['Sustainability', 'Green AI', 'Carbon', 'Efficiency'],
@@ -406,7 +408,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Comprehensive benchmarks and architectural trade-offs for choosing the right service mesh for your platform.',
     content:
-      'Service meshes add observability, security, and traffic management to microservices—but at what cost? This comprehensive analysis compares Istio and Linkerd across latency, resource consumption, operational complexity, and feature completeness. We provide detailed benchmarks at scale (1K, 10K, 100K pods), examine control plane architectures, evaluate mTLS performance impact, and analyze circuit breaker effectiveness. Includes decision matrices for different workload patterns, migration strategies from existing infrastructure, and operational runbooks for common scenarios. Whether you\'re building a new platform or enhancing existing Kubernetes deployments, this guide provides the data you need.',
+      "Service meshes add observability, security, and traffic management to microservices—but at what cost? This comprehensive analysis compares Istio and Linkerd across latency, resource consumption, operational complexity, and feature completeness. We provide detailed benchmarks at scale (1K, 10K, 100K pods), examine control plane architectures, evaluate mTLS performance impact, and analyze circuit breaker effectiveness. Includes decision matrices for different workload patterns, migration strategies from existing infrastructure, and operational runbooks for common scenarios. Whether you're building a new platform or enhancing existing Kubernetes deployments, this guide provides the data you need.",
     featuredImage: '/images/blog/service-mesh-comparison.jpg',
     category: 'Cloud',
     tags: ['Kubernetes', 'Service Mesh', 'Istio', 'Linkerd'],
@@ -421,7 +423,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt:
       'Move beyond conversational AI to autonomous agents that execute complex workflows end-to-end.',
     content:
-      'The next generation of AI doesn\'t just answer questions—it takes action. Agentic workflows combine LLMs with tool-use, planning algorithms, and execution engines to create autonomous systems that complete complex tasks. This guide explores agent architectures including ReAct patterns, chain-of-thought planning, tool selection strategies, and multi-step execution with error recovery. We cover real-world applications from automated customer service resolution to autonomous data analysis, examining how to balance autonomy with safety through approval gates, rollback mechanisms, and human oversight. Includes production-ready frameworks and deployment patterns from companies achieving 80% task completion rates.',
+      "The next generation of AI doesn't just answer questions—it takes action. Agentic workflows combine LLMs with tool-use, planning algorithms, and execution engines to create autonomous systems that complete complex tasks. This guide explores agent architectures including ReAct patterns, chain-of-thought planning, tool selection strategies, and multi-step execution with error recovery. We cover real-world applications from automated customer service resolution to autonomous data analysis, examining how to balance autonomy with safety through approval gates, rollback mechanisms, and human oversight. Includes production-ready frameworks and deployment patterns from companies achieving 80% task completion rates.",
     featuredImage: '/images/blog/agentic-workflows.jpg',
     category: 'AI',
     tags: ['Agents', 'Automation', 'LLM', 'Workflows'],
@@ -461,7 +463,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     id: '25',
-    title: 'Autonomous FinOps Playbook: Real-Time Guardrails That Cut Spend 40%',
+    title:
+      'Autonomous FinOps Playbook: Real-Time Guardrails That Cut Spend 40%',
     slug: 'autonomous-finops-playbook-2025-oct',
     excerpt:
       'Implement policy-driven budgets, adaptive model routing, and multi-tier caching to shrink LLM and cloud costs—without slowing teams.',

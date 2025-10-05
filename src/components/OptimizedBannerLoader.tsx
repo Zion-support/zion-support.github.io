@@ -86,7 +86,8 @@ export default function OptimizedBannerLoader({
       onClick={() => bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
-        <Component</Suspense>
+        <Component />
+      </Suspense>
     </div>
   );
 }

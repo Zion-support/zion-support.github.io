@@ -5,7 +5,6 @@ const PerformanceOptimizationBanner = () => {
       title: 'Lightning Fast Loading',
       description: 'Optimized bundle size with code splitting and lazy loading',
       improvement: '87% faster',
-      icon: '🚀',
       icon: <Zap className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-500'
     },
@@ -13,7 +12,6 @@ const PerformanceOptimizationBanner = () => {
       title: 'Enhanced Security',
       description: 'Advanced security headers and content security policies',
       improvement: '99.9% secure',
-      icon: '🚀',
       icon: <Shield className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500'
     },
@@ -21,7 +19,6 @@ const PerformanceOptimizationBanner = () => {
       title: 'SEO Optimized',
       description: 'Meta tags, structured data, and semantic HTML',
       improvement: '95% score',
-      icon: '🚀',
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500'
     },
@@ -29,7 +26,6 @@ const PerformanceOptimizationBanner = () => {
       title: 'Accessibility Enhanced',
       description: 'WCAG 2.1 AA compliant with screen reader support',
       improvement: '100% accessible',
-      icon: '🚀',
       icon: <CheckCircle className="w-6 h-6" />,
       color: 'from-purple-500 to-violet-500'
     }

@@ -8,16 +8,16 @@
  */
 export function debounce<T extends (...args: any[]) => any>(
   func: T,
-  wait: number
+  wait: number,
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout | null = null;
-  
+
   return function executedFunction(...args: Parameters<T>) {
     const later = () => {
       timeout = null;
       func(...args);
     };
-    
+
     if (timeout) clearTimeout(timeout);
     timeout = setTimeout(later, wait);
   };
@@ -28,10 +28,10 @@ export function debounce<T extends (...args: any[]) => any>(
  */
 export function throttle<T extends (...args: any[]) => any>(
   func: T,
-  limit: number
+  limit: number,
 ): (...args: Parameters<T>) => void {
   let inThrottle: boolean = false;
-  
+
   return function executedFunction(...args: Parameters<T>) {
     if (!inThrottle) {
       func(...args);
@@ -46,17 +46,17 @@ export function throttle<T extends (...args: any[]) => any>(
  */
 export function memoize<T extends (...args: any[]) => any>(
   func: T,
-  keyGenerator?: (...args: Parameters<T>) => string
+  keyGenerator?: (...args: Parameters<T>) => string,
 ): T {
   const cache = new Map<string, ReturnType<T>>();
-  
+
   return ((...args: Parameters<T>) => {
     const key = keyGenerator ? keyGenerator(...args) : JSON.stringify(args);
-    
+
     if (cache.has(key)) {
       return cache.get(key)!;
     }
-    
+
     const result = func(...args);
     cache.set(key, result);
     return result;
@@ -88,7 +88,7 @@ export class AsyncQueue {
           reject(error);
         }
       });
-      
+
       this.process();
     });
   }
@@ -104,7 +104,7 @@ export class AsyncQueue {
     this.running = true;
 
     const tasks: Array<Promise<any>> = [];
-    
+
     while (this.queue.length > 0 && tasks.length < this.concurrency) {
       const task = this.queue.shift();
       if (task) {
@@ -126,15 +126,15 @@ export class AsyncQueue {
  * Request animation frame helper
  */
 export function rafThrottle<T extends (...args: any[]) => any>(
-  func: T
+  func: T,
 ): (...args: Parameters<T>) => void {
   let rafId: number | null = null;
-  
+
   return function executedFunction(...args: Parameters<T>) {
     if (rafId) {
       cancelAnimationFrame(rafId);
     }
-    
+
     rafId = requestAnimationFrame(() => {
       func(...args);
       rafId = null;
@@ -159,7 +159,7 @@ export class BatchUpdater {
    */
   update(key: string, value: any): void {
     this.updates.set(key, value);
-    
+
     if (!this.scheduled) {
       this.scheduled = true;
       requestAnimationFrame(() => {
@@ -205,8 +205,9 @@ export const arrayUtils = {
    */
   flatten<T>(array: any[]): T[] {
     return array.reduce(
-      (acc, val) => acc.concat(Array.isArray(val) ? arrayUtils.flatten(val) : val),
-      []
+      (acc, val) =>
+        acc.concat(Array.isArray(val) ? arrayUtils.flatten(val) : val),
+      [],
     );
   },
 };
@@ -248,14 +249,14 @@ export const objectUtils = {
  */
 export function measurePerformance<T>(
   fn: () => T,
-  label: string = 'Operation'
+  label: string = 'Operation',
 ): T {
   const start = performance.now();
   const result = fn();
   const end = performance.now();
-  
+
   console.log(`${label} took ${(end - start).toFixed(2)}ms`);
-  
+
   return result;
 }
 
@@ -264,13 +265,13 @@ export function measurePerformance<T>(
  */
 export async function measureAsyncPerformance<T>(
   fn: () => Promise<T>,
-  label: string = 'Async Operation'
+  label: string = 'Async Operation',
 ): Promise<T> {
   const start = performance.now();
   const result = await fn();
   const end = performance.now();
-  
+
   console.log(`${label} took ${(end - start).toFixed(2)}ms`);
-  
+
   return result;
 }

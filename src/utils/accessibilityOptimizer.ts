@@ -62,13 +62,13 @@ export class AccessibilityOptimizer {
       colorContrast: {
         score: 0,
         issues: [],
-        recommendations: []
+        recommendations: [],
       },
       keyboardNavigation: {
         score: 0,
         issues: [],
-        recommendations: []
-      }
+        recommendations: [],
+      },
     };
   }
 
@@ -84,39 +84,58 @@ export class AccessibilityOptimizer {
   }
 
   private analyzeARIALabels(): void {
-    const elements = document.querySelectorAll('button, input, select, textarea, [role="button"]');
-    
-    elements.forEach((element) => {
+    const elements = document.querySelectorAll(
+      'button, input, select, textarea, [role="button"]',
+    );
+
+    elements.forEach(element => {
       const htmlElement = element as HTMLElement;
-      
+
       // Check for missing aria-label or aria-labelledby
-      if (!htmlElement.getAttribute('aria-label') && !htmlElement.getAttribute('aria-labelledby')) {
-        if (!htmlElement.textContent?.trim() && !htmlElement.getAttribute('title')) {
+      if (
+        !htmlElement.getAttribute('aria-label') &&
+        !htmlElement.getAttribute('aria-labelledby')
+      ) {
+        if (
+          !htmlElement.textContent?.trim() &&
+          !htmlElement.getAttribute('title')
+        ) {
           this.report.issues.push({
             type: 'error',
             message: 'Element missing accessible name',
             element: htmlElement,
             wcagCriterion: '4.1.2',
-            severity: 'high'
+            severity: 'high',
           });
         }
       }
 
       // Check for missing aria-describedby on form elements
-      if (htmlElement.tagName === 'INPUT' || htmlElement.tagName === 'SELECT' || htmlElement.tagName === 'TEXTAREA') {
-        if (!htmlElement.getAttribute('aria-describedby') && !htmlElement.getAttribute('aria-invalid')) {
-          this.report.recommendations.push('Consider adding aria-describedby for form validation messages');
+      if (
+        htmlElement.tagName === 'INPUT' ||
+        htmlElement.tagName === 'SELECT' ||
+        htmlElement.tagName === 'TEXTAREA'
+      ) {
+        if (
+          !htmlElement.getAttribute('aria-describedby') &&
+          !htmlElement.getAttribute('aria-invalid')
+        ) {
+          this.report.recommendations.push(
+            'Consider adding aria-describedby for form validation messages',
+          );
         }
       }
     });
   }
 
   private analyzeKeyboardNavigation(): void {
-    const interactiveElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex], [role="button"]');
-    
+    const interactiveElements = document.querySelectorAll(
+      'button, a, input, select, textarea, [tabindex], [role="button"]',
+    );
+
     // Check for proper tab order
     let tabIndexValues: number[] = [];
-    interactiveElements.forEach((element) => {
+    interactiveElements.forEach(element => {
       const tabIndex = parseInt(element.getAttribute('tabindex') || '0');
       if (tabIndex > 0) {
         tabIndexValues.push(tabIndex);
@@ -124,63 +143,83 @@ export class AccessibilityOptimizer {
     });
 
     // Check for duplicate tab indices
-    const duplicates = tabIndexValues.filter((item, index) => tabIndexValues.indexOf(item) !== index);
+    const duplicates = tabIndexValues.filter(
+      (item, index) => tabIndexValues.indexOf(item) !== index,
+    );
     if (duplicates.length > 0) {
       this.report.issues.push({
         type: 'error',
         message: 'Duplicate tabindex values found',
         wcagCriterion: '2.4.3',
-        severity: 'high'
+        severity: 'high',
       });
     }
 
     // Check for focusable elements without visible focus indicators
-    interactiveElements.forEach((element) => {
+    interactiveElements.forEach(element => {
       const htmlElement = element as HTMLElement;
       const computedStyle = window.getComputedStyle(htmlElement);
-      
+
       if (computedStyle.outline === 'none' && !computedStyle.boxShadow) {
         this.report.issues.push({
           type: 'warning',
           message: 'Focusable element without visible focus indicator',
           element: htmlElement,
           wcagCriterion: '2.4.7',
-          severity: 'medium'
+          severity: 'medium',
         });
       }
     });
 
-    this.report.keyboardNavigation.score = Math.max(0, 100 - (this.report.issues.length * 10));
+    this.report.keyboardNavigation.score = Math.max(
+      0,
+      100 - this.report.issues.length * 10,
+    );
   }
 
   private analyzeColorContrast(): void {
-    const textElements = document.querySelectorAll('p, h1, h2, h3, h4, h5, h6, span, div, a, button');
-    
-    textElements.forEach((element) => {
+    const textElements = document.querySelectorAll(
+      'p, h1, h2, h3, h4, h5, h6, span, div, a, button',
+    );
+
+    textElements.forEach(element => {
       const htmlElement = element as HTMLElement;
       const computedStyle = window.getComputedStyle(htmlElement);
-      
+
       const textColor = computedStyle.color;
       const backgroundColor = computedStyle.backgroundColor;
-      
-      if (textColor && backgroundColor && textColor !== 'rgba(0, 0, 0, 0)' && backgroundColor !== 'rgba(0, 0, 0, 0)') {
-        const contrast = this.calculateColorContrast(textColor, backgroundColor);
-        
+
+      if (
+        textColor &&
+        backgroundColor &&
+        textColor !== 'rgba(0, 0, 0, 0)' &&
+        backgroundColor !== 'rgba(0, 0, 0, 0)'
+      ) {
+        const contrast = this.calculateColorContrast(
+          textColor,
+          backgroundColor,
+        );
+
         if (contrast < 4.5) {
           this.report.issues.push({
             type: 'error',
             message: `Low color contrast ratio: ${contrast.toFixed(2)}:1`,
             element: htmlElement,
             wcagCriterion: '1.4.3',
-            severity: 'high'
+            severity: 'high',
           });
         } else if (contrast < 7) {
-          this.report.recommendations.push('Consider improving color contrast for better readability');
+          this.report.recommendations.push(
+            'Consider improving color contrast for better readability',
+          );
         }
       }
     });
 
-    this.report.colorContrast.score = Math.max(0, 100 - (this.report.issues.length * 15));
+    this.report.colorContrast.score = Math.max(
+      0,
+      100 - this.report.issues.length * 15,
+    );
   }
 
   private calculateColorContrast(color1: string, color2: string): number {
@@ -192,23 +231,28 @@ export class AccessibilityOptimizer {
   private analyzeFocusManagement(): void {
     // Check for proper focus management in modals and dropdowns
     const modals = document.querySelectorAll('[role="dialog"], [role="modal"]');
-    
-    modals.forEach((modal) => {
+
+    modals.forEach(modal => {
       const htmlModal = modal as HTMLElement;
-      
+
       // Check if modal has focus trap
       if (!htmlModal.querySelector('[data-focus-trap]')) {
-        this.report.recommendations.push('Modal should implement focus trap for keyboard navigation');
+        this.report.recommendations.push(
+          'Modal should implement focus trap for keyboard navigation',
+        );
       }
-      
+
       // Check if modal has proper ARIA attributes
-      if (!htmlModal.getAttribute('aria-labelledby') && !htmlModal.getAttribute('aria-label')) {
+      if (
+        !htmlModal.getAttribute('aria-labelledby') &&
+        !htmlModal.getAttribute('aria-label')
+      ) {
         this.report.issues.push({
           type: 'error',
           message: 'Modal missing accessible name',
           element: htmlModal,
           wcagCriterion: '4.1.2',
-          severity: 'high'
+          severity: 'high',
         });
       }
     });
@@ -218,26 +262,26 @@ export class AccessibilityOptimizer {
     // Check for proper heading hierarchy
     const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
     let previousLevel = 0;
-    
-    headings.forEach((heading) => {
+
+    headings.forEach(heading => {
       const level = parseInt(heading.tagName.charAt(1));
-      
+
       if (level > previousLevel + 1) {
         this.report.issues.push({
           type: 'warning',
           message: 'Heading hierarchy skipped',
           element: heading as HTMLElement,
           wcagCriterion: '1.3.1',
-          severity: 'medium'
+          severity: 'medium',
         });
       }
-      
+
       previousLevel = level;
     });
 
     // Check for proper list structure
     const lists = document.querySelectorAll('ul, ol');
-    lists.forEach((list) => {
+    lists.forEach(list => {
       const listItems = list.querySelectorAll('li');
       if (listItems.length === 0) {
         this.report.issues.push({
@@ -245,17 +289,20 @@ export class AccessibilityOptimizer {
           message: 'Empty list found',
           element: list as HTMLElement,
           wcagCriterion: '1.3.1',
-          severity: 'low'
+          severity: 'low',
         });
       }
     });
 
     // Check for proper form labels
     const formInputs = document.querySelectorAll('input, select, textarea');
-    formInputs.forEach((input) => {
+    formInputs.forEach(input => {
       const htmlInput = input as HTMLInputElement;
-      
-      if (!htmlInput.getAttribute('aria-label') && !htmlInput.getAttribute('aria-labelledby')) {
+
+      if (
+        !htmlInput.getAttribute('aria-label') &&
+        !htmlInput.getAttribute('aria-labelledby')
+      ) {
         const label = document.querySelector(`label[for="${htmlInput.id}"]`);
         if (!label) {
           this.report.issues.push({
@@ -263,7 +310,7 @@ export class AccessibilityOptimizer {
             message: 'Form input missing label',
             element: htmlInput,
             wcagCriterion: '1.3.1',
-            severity: 'high'
+            severity: 'high',
           });
         }
       }
@@ -272,9 +319,9 @@ export class AccessibilityOptimizer {
 
   private calculateScore(): void {
     let score = 100;
-    
+
     // Deduct points based on issue severity
-    this.report.issues.forEach((issue) => {
+    this.report.issues.forEach(issue => {
       switch (issue.severity) {
         case 'critical':
           score -= 20;
@@ -318,30 +365,30 @@ export class AccessibilityOptimizer {
       z-index: 1000;
       transition: top 0.3s;
     `;
-    
+
     skipLink.addEventListener('focus', () => {
       skipLink.style.top = '6px';
     });
-    
+
     skipLink.addEventListener('blur', () => {
       skipLink.style.top = '-40px';
     });
-    
+
     document.body.insertBefore(skipLink, document.body.firstChild);
   }
 
   private optimizeImages(): void {
     const images = document.querySelectorAll('img');
-    
-    images.forEach((img) => {
+
+    images.forEach(img => {
       const htmlImg = img as HTMLImageElement;
-      
+
       // Add alt text if missing
       if (!htmlImg.alt) {
         htmlImg.alt = 'Image';
         this.report.recommendations.push('Added default alt text to image');
       }
-      
+
       // Add loading attribute
       if (!htmlImg.loading) {
         htmlImg.loading = 'lazy';
@@ -351,21 +398,21 @@ export class AccessibilityOptimizer {
 
   private optimizeForms(): void {
     const formInputs = document.querySelectorAll('input, select, textarea');
-    
-    formInputs.forEach((input) => {
+
+    formInputs.forEach(input => {
       const htmlInput = input as HTMLInputElement;
-      
+
       // Add aria-invalid for validation
       if (htmlInput.required && !htmlInput.getAttribute('aria-invalid')) {
         htmlInput.setAttribute('aria-invalid', 'false');
       }
-      
+
       // Add aria-describedby for help text
       const helpText = htmlInput.getAttribute('data-help');
       if (helpText && !htmlInput.getAttribute('aria-describedby')) {
         const helpId = `help-${htmlInput.id || Math.random().toString(36).substr(2, 9)}`;
         htmlInput.setAttribute('aria-describedby', helpId);
-        
+
         const helpElement = document.createElement('div');
         helpElement.id = helpId;
         helpElement.textContent = helpText;
@@ -376,11 +423,13 @@ export class AccessibilityOptimizer {
   }
 
   private addARIALabels(): void {
-    const buttons = document.querySelectorAll('button:not([aria-label]):not([aria-labelledby])');
-    
-    buttons.forEach((button) => {
+    const buttons = document.querySelectorAll(
+      'button:not([aria-label]):not([aria-labelledby])',
+    );
+
+    buttons.forEach(button => {
       const htmlButton = button as HTMLButtonElement;
-      
+
       if (!htmlButton.textContent?.trim()) {
         htmlButton.setAttribute('aria-label', 'Button');
       }
@@ -443,7 +492,7 @@ export const useAccessibilityOptimizer = () => {
     observer.observe(document.body, {
       childList: true,
       subtree: true,
-      characterData: true
+      characterData: true,
     });
 
     return () => observer.disconnect();

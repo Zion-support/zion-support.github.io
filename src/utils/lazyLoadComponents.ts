@@ -6,26 +6,28 @@ import { lazy } from 'react';
 export const lazyLoadWithRetry = <T extends React.ComponentType<any>>(
   componentImport: () => Promise<{ default: T }>,
   retries = 3,
-  interval = 1000
+  interval = 1000,
 ): React.LazyExoticComponent<T> => {
   return lazy(() => {
     return new Promise<{ default: T }>((resolve, reject) => {
       const attemptLoad = (attemptsLeft: number) => {
         componentImport()
           .then(resolve)
-          .catch((error) => {
+          .catch(error => {
             if (attemptsLeft === 0) {
               reject(error);
               return;
             }
-            
+
             setTimeout(() => {
-              console.log(`Retrying component load... ${attemptsLeft} attempts left`);
+              console.log(
+                `Retrying component load... ${attemptsLeft} attempts left`,
+              );
               attemptLoad(attemptsLeft - 1);
             }, interval);
           });
       };
-      
+
       attemptLoad(retries);
     });
   });
@@ -42,22 +44,22 @@ export const preloadComponent = (componentImport: () => Promise<any>): void => {
  * Lazy load with prefetch on hover
  */
 export const createLazyLoadWithPrefetch = <T extends React.ComponentType<any>>(
-  componentImport: () => Promise<{ default: T }>
+  componentImport: () => Promise<{ default: T }>,
 ) => {
   let prefetchPromise: Promise<{ default: T }> | null = null;
-  
+
   const LazyComponent = lazy(() => {
     if (!prefetchPromise) {
       prefetchPromise = componentImport();
     }
     return prefetchPromise;
   });
-  
+
   const prefetch = () => {
     if (!prefetchPromise) {
       prefetchPromise = componentImport();
     }
   };
-  
+
   return { LazyComponent, prefetch };
 };
