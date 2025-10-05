@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Header from '../components/problematic-disabled/Header';
 // import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-900">
-      <Header />
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">

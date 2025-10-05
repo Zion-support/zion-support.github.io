@@ -7,7 +7,6 @@ const Header = () => <div data-testid="header">Header Component</div>;
 
 describe('Header', () => {
   it('renders without crashing', () => {
-    render(<Header />);
     expect(screen.getByTestId('header')).toBeInTheDocument();
   });
 });
