@@ -15,10 +15,9 @@ interface PerformanceMetrics {
 interface AIInsights {
   predictedHighRiskActions: string[];
   recommendedImprovements: string[];
-  errorTrends: Array<{
-    category: string;
+  errorTrends: Array<{ category: string;
     trend: 'increasing' | 'decreasing' | 'stable';
-  }>;
+   }>;
 }
 
 interface ErrorReport {
@@ -45,15 +44,13 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
       const loadPerformanceData = async () => {
         try {
           // Simulate API calls for performance data
-          const mockMetrics: PerformanceMetrics = {
-            errorRate: Math.random() * 5,
+          const mockMetrics: PerformanceMetrics = { errorRate: Math.random() * 5,
             avgResolutionTime: Math.random() * 30 + 10,
             criticalErrorsToday: Math.floor(Math.random() * 10),
             userImpactScore: Math.floor(Math.random() * 40 + 60)
-          };
+           };
 
-          const mockInsights: AIInsights = {
-            predictedHighRiskActions: [
+          const mockInsights: AIInsights = { predictedHighRiskActions: [
               'High memory usage detected in user authentication flow',
               'Potential race condition in data synchronization',
               'Slow database queries affecting user experience'
@@ -65,7 +62,7 @@ const AIPerformanceDashboard: React.FC<AIPerformanceDashboardProps> = ({ isVisib
               'Consider implementing circuit breaker pattern'
             ],
             errorTrends: [
-              { category: 'authentication', trend: 'decreasing' },
+              { category: 'authentication', trend: 'decreasing'  },
               { category: 'database', trend: 'stable' },
               { category: 'ui', trend: 'increasing' }
             ]

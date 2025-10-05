@@ -132,8 +132,8 @@ key={index}
             {[
               { value: '2.5M+', label: 'Global Readers', icon: '🚀 color'
               { value: '$15B+', label: 'Value Created', icon: '🚀 color'
-              { value: '99.9%', label: 'Content Accuracy', icon: '🚀 color'
-              { value: '150+', label: 'Countries Reached', icon: '🚀 color'
+              { value: '99.9%', label: 'Content Accuracy', icon: '🚀 color',
+    { value: '150+', label: 'Countries Reached', icon: '🚀 color'
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>

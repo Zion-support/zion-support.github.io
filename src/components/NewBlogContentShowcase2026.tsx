@@ -113,10 +113,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
   ];
 
   const blogStats = [
-    { value: '500+', label: 'Published Articles', icon: '🚀','
-    { value: '2M+', label: 'Monthly Readers', icon: '🚀','
-    { value: '4.8', label: 'Average Rating', icon: '🚀','
-    { value: '150+', label: 'Expert Authors', icon: '🚀''
+    { value: '500+', label: 'Published Articles', icon: '🚀' },
+    { value: '2M+', label: 'Monthly Readers', icon: '🚀' },
+    { value: '4.8', label: 'Average Rating', icon: '🚀' },
+    { value: '150+', label: 'Expert Authors', icon: '🚀' }
   ];
 
   return (

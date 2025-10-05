@@ -80,7 +80,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
   const achievements = [
     { value: '500K+', label: 'Monthly Readers', icon: '🚀','
     { value: '98%', label: 'Customer Satisfaction', icon: '🚀','
-    { value: '200+', label: 'Expert Articles', icon: '🚀','
+    { value: '200+', label: 'Expert Articles', icon: '🚀',',
     { value: '50+', label: 'Industry Awards', icon: '🚀''
   ];
 
