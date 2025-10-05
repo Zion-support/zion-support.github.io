@@ -13,9 +13,6 @@ const renderWithRouter = (component: React.ReactElement) => {
 
 describe('Header', () => {
   it('renders without crashing', () => {
-<<<<<<< HEAD
-    expect(screen.getByTestId('header')).toBeInTheDocument();
-=======
     renderWithRouter(<Header />);
     expect(screen.getByText('Zion Tech Group')).toBeInTheDocument();
   });
@@ -27,6 +24,5 @@ describe('Header', () => {
     expect(screen.getByText('Services')).toBeInTheDocument();
     expect(screen.getByText('Blog')).toBeInTheDocument();
     expect(screen.getByText('Contact')).toBeInTheDocument();
->>>>>>> de1caf7d55b2d66a44eca2a2d447e28ce810880d
   });
 });
