@@ -15,11 +15,17 @@ class SecurityEnhancer {
     }
 
     this.setupCSP();
+<<<<<<< HEAD
     this.setupSecurityHeaders();
     this.enableHTTPSRedirect();
     
     this.isInitialized = true;
     console.log('Security enhancer initialized');
+=======
+    this.setupHTTPSRedirect();
+    this.setupXSSProtection();
+    this.isInitialized = true;
+>>>>>>> origin/main
   }
 
   private setupCSP(): void {
@@ -29,6 +35,7 @@ class SecurityEnhancer {
     document.head.appendChild(meta);
   }
 
+<<<<<<< HEAD
   private setupSecurityHeaders(): void {
     // Set up additional security headers
     console.log('Security headers configured');
@@ -42,6 +49,19 @@ class SecurityEnhancer {
   cleanup(): void {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');
+=======
+  private setupHTTPSRedirect(): void {
+    if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
+      location.replace('https:' + window.location.href.substring(window.location.protocol.length));
+    }
+  }
+
+  private setupXSSProtection(): void {
+    const meta = document.createElement('meta');
+    meta.httpEquiv = 'X-Content-Type-Options';
+    meta.content = 'nosniff';
+    document.head.appendChild(meta);
+>>>>>>> origin/main
   }
 }
 

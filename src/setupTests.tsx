@@ -1,43 +1,6 @@
 import '@testing-library/jest-dom';
-import React from 'react';
 
-// Polyfill TextEncoder and TextDecoder for Node.js environment
-if (typeof global.TextEncoder === 'undefined') {
-  const { TextEncoder, TextDecoder } = require('util');
-  global.TextEncoder = TextEncoder;
-  global.TextDecoder = TextDecoder;
-}
-
-// Mock import.meta.env for Jest
-Object.defineProperty(global, 'import', {
-  value: {
-    meta: {
-      env: {
-        DEV: true,
-        PROD: false,
-        MODE: 'test',
-      },
-    },
-  },
-});
-
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof IntersectionObserver;
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-} as unknown as typeof ResizeObserver;
-
-// Mock matchMedia
+// Mock window.matchMedia
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(query => ({
@@ -63,12 +26,15 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
+<<<<<<< HEAD
 
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
   withErrorBoundary: (Component: React.ComponentType) => Component,
   useErrorHandler: () => jest.fn(),
 }));
+=======
+>>>>>>> origin/main
 
 // Mock react-helmet-async
 jest.mock('react-helmet-async', () => ({
@@ -76,13 +42,14 @@ jest.mock('react-helmet-async', () => ({
   HelmetProvider: ({ children }: { children: React.ReactNode }) => children,
 }));
 
-// Mock lucide-react icons
-jest.mock('lucide-react', () => {
-  const mockIcon = (testId: string) => {
-    const { createElement } = require('react');
-    return createElement('div', { 'data-testid': testId });
-  };
+// Mock react-router-dom
+jest.mock('react-router-dom', () => ({
+  ...jest.requireActual('react-router-dom'),
+  useNavigate: () => jest.fn(),
+  useLocation: () => ({ pathname: '/' }),
+}));
 
+<<<<<<< HEAD
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -332,3 +299,5 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
+=======
+>>>>>>> origin/main

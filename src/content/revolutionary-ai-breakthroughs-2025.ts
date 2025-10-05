@@ -1,4 +1,0 @@
-
-exportconstrevolutionaryBreakthroughs2025 = [
-  {
-];
