@@ -1,9 +1,5 @@
 import React from 'react';
-import {ArrowRight} from 'lucide-react';
-import {Shield} from 'lucide-react';
-import {Zap} from 'lucide-react';
-import {TrendingUp} from 'lucide-react';
-import {Brain} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (

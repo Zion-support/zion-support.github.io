@@ -1,15 +1,5 @@
 import React from 'react';
-
-import {Brain} from 'lucide-react';
-import {Atom} from 'lucide-react';
-import {Bot} from 'lucide-react';
-import {ArrowRight} from 'lucide-react';
-import {Sparkles} from 'lucide-react';
-import {TrendingUp} from 'lucide-react';
-import {Star} from 'lucide-react';
-import {Zap} from 'lucide-react';
-import {Rocket} from 'lucide-react';
-import {CheckCircle} from 'lucide-react';
+import { Brain } from 'lucide-react';
 
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];

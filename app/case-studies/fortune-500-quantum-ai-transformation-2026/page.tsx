@@ -1,12 +1,5 @@
 import Link from 'next/link';
-import {ArrowRight} from 'lucide-react';
-import {TrendingUp} from 'lucide-react';
-import {Target} from 'lucide-react';
-import {Users} from 'lucide-react';
-import {DollarSign} from 'lucide-react';
-import {Zap} from 'lucide-react';
-import {Shield} from 'lucide-react';
-import {CheckCircle} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function Fortune500QuantumAITransformation2026() {
   return (

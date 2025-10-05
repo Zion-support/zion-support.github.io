@@ -1,9 +1,5 @@
 import Link from 'next/link';
-
-import {ArrowRight} from 'lucide-react';
-import {Zap} from 'lucide-react';
-import {Brain} from 'lucide-react';
-import {TrendingUp} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function RevolutionaryContent2026Banner() {
   return (
