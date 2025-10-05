@@ -144,7 +144,7 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
               {
                 company: 'Leading Healthcare System',
                 result: '99.9% uptime achieved',
-                testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%'
+      testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%'
               }
             ].map((testimonial, index) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">

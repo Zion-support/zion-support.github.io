@@ -1,15 +1,5 @@
 import React from 'react';
-import Link from 'next/link';
-<<<<<<< HEAD
-// import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star } from 'lucide-react';
-=======
-import Sparkles from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
-import Rocket from 'lucide-react';
-import Star from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+
 
 const September30NewContent2025Banner: React.FC = () => {
   const newArticles = [
@@ -177,7 +167,7 @@ const September30NewContent2025Banner: React.FC = () => {
 
         {/* Second Row */}
         <div className="grid md:grid-cols-2 gap-8 mb-20 max-w-5xl mx-auto">
-          {newArticles.slice(3).map((article, index) => (
+          {newArticles.slice(3).map((article) => (
             <div 
               key={article.id}
               className="group relative bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/30"

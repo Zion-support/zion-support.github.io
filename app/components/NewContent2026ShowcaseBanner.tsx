@@ -1,12 +1,6 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowRight, Star, TrendingUp, Users } from 'lucide-react';
-=======
-import ArrowRight from 'lucide-react';
-import Star from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Users from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+
+
 
 export default function NewContent2026ShowcaseBanner() {
   return (

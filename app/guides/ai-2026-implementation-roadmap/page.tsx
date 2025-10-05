@@ -1,16 +1,6 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { ArrowLeft, Calendar, User, Clock, Tag, Target, CheckCircle, ArrowRight } from 'lucide-react';
-=======
-import ArrowLeft from 'lucide-react';
-import Calendar from 'lucide-react';
-import User from 'lucide-react';
-import Clock from 'lucide-react';
-import Tag from 'lucide-react';
-import Target from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import ArrowRight from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+
+
 
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',

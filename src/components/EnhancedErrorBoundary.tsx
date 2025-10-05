@@ -59,8 +59,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,
-      userId: this.getUserId(),
+      url: window.location.href,',
+      userId: this.getUserId(),',
       sessionId: this.getSessionId(),
     };
 
@@ -146,7 +146,8 @@ Stack Trace: ${this.state.error?.stack}
         <div className='min-h-screen bg-gray-50 flex items-center justify-center px-4'>
           <div className='max-w-2xl w-full bg-white rounded-lg shadow-lg p-8 text-center'>
             <div className='mb-6'>
-              <AlertTriangle className='w-16 h-16 text-red-500 mx-auto mb-4' <h1 className='text-2xl font-bold text-gray-900 mb-2'>
+              <AlertTriangle className='w-16 h-16 text-red-500 mx-auto mb-4' />
+              <h1 className='text-2xl font-bold text-gray-900 mb-2'>
                 Oops! Something went wrong
               </h1>
               <p className='text-gray-600 mb-4'>

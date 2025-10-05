@@ -10,10 +10,9 @@ const LoadingSpinner: React.FC = () => (
 );
 
 // Error fallback component
-const ErrorFallback: React.FC<{
-  error: Error;
+const ErrorFallback: React.FC<{ error: Error;
   resetErrorBoundary: () => void;
-}> = ({ error, resetErrorBoundary }) => (
+ }> = ({ error, resetErrorBoundary }) => (
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -34,11 +33,7 @@ const ErrorFallback: React.FC<{
         </details>
       )}
       <button
-<<<<<<< HEAD
         onClick={resetErrorBoundary}
-=======
-onClick={resetErrorBoundary}
->>>>>>> cursor/fix-errors-and-merge-to-main-3ccd
         className='mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700'
       >
         Try again
@@ -146,7 +141,8 @@ const OptimizedApp: React.FC = () => {
       }}
     >
       <Suspense fallback={<LoadingSpinner />}>
-        <MainContent</Suspense>
+        <MainContent />
+      </Suspense>
     </ErrorBoundary>
   );
 };

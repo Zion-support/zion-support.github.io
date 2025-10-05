@@ -6,33 +6,33 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
     {
       icon: Brain,
       title: "Synthetic Consciousness AI",
-      description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",
+      description: "Revolutionary AI achieving genuine consciousness and emotional intelligence",",
       stats: "$500B Enterprise Value",
-      color: "from-purple-500 to-pink-500",
+      color: "from-purple-500 to-pink-500",",
       bgColor: "bg-purple-500/10"
     },
     {
-      icon: Zap,
+      icon: Zap,",
       title: "Quantum Edge Computing",
-      description: "Sub-millisecond processing with 200-250x speed improvements",
+      description: "Sub-millisecond processing with 200-250x speed improvements",",
       stats: "200x Faster",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-cyan-500",",
       bgColor: "bg-blue-500/10"
     },
     {
-      icon: Network,
+      icon: Network,",
       title: "Autonomous Enterprise Mesh",
-      description: "Self-organizing AI networks achieving 99.7% operational efficiency",
+      description: "Self-organizing AI networks achieving 99.7% operational efficiency",",
       stats: "99.7% Efficiency",
-      color: "from-green-500 to-emerald-500",
+      color: "from-green-500 to-emerald-500",",
       bgColor: "bg-green-500/10"
     },
     {
-      icon: Shield,
+      icon: Shield,",
       title: "Quantum-Safe Security",
-      description: "Unbreakable protection systems with 99.99% threat prevention",
+      description: "Unbreakable protection systems with 99.99% threat prevention",",
       stats: "$2.8B Protected",
-      color: "from-orange-500 to-red-500",
+      color: "from-orange-500 to-red-500",",
       bgColor: "bg-orange-500/10"
     }
   ];

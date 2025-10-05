@@ -1,15 +1,16 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-// import { TrendingUp, DollarSign, Clock, Users, Award, ArrowRight } from 'lucide-react';
-=======
-import TrendingUp from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Clock from 'lucide-react';
-import Users from 'lucide-react';
-import Award from 'lucide-react';
-import ArrowRight from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-6e48
+import { ArrowRight, TrendingUp, Users, DollarSign, Award, Clock } from 'lucide-react';
 
+
+
+
+
+
+
+
+// @ts-ignore
+
+// @ts-ignore
 export const metadata = {
   title: 'AI 2026 Mega Transformation: $50M Revenue Increase Case Study',
   description: 'Discover how a Fortune 500 company achieved $50M additional revenue through comprehensive AI transformation. Learn the strategies, technologies, and results that made this mega success possible.',
