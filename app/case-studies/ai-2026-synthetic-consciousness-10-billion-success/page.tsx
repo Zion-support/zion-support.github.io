@@ -8,13 +8,11 @@ import Target from 'lucide-react';
 import TrendingUp from 'lucide-react';
 import Users from 'lucide-react';
 
-;
-;
-;
-;
-;
-;
-;
+
+
+
+
+
 
 export const metadata = {
   title: 'AI Synthetic Consciousness: $10B ROI Success Story - Fortune 500 Transformation',

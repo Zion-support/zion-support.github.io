@@ -1,12 +1,4 @@
-import Link from 'next/link';
-
-import CheckCircle from 'lucide-react';
-import Clock from 'lucide-react';
-import User from 'lucide-react';
-
-;
-;
-;
+import { Link } from 'next/link';
 
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
@@ -565,3 +557,4 @@ export default function AIEnterpriseAutomationSuccess2026() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

@@ -1,14 +1,4 @@
-import Link from 'next/link';
-
-import Globe from 'lucide-react';
-import Rocket from 'lucide-react';
-import Satellite from 'lucide-react';
-import Zap from 'lucide-react';
-
-;
-;
-;
-;
+import { Link } from 'next/link';
 
 export const metadata = {
   title: 'AI Space Tech Revolution: $100M Mission Success Case Study',
@@ -445,3 +435,4 @@ export default function AISpaceTechRevolutionSuccess() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

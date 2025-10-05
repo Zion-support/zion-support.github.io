@@ -1,22 +1,4 @@
-import Link from 'next/link';
-
-import ArrowLeft from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Calendar from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Clock from 'lucide-react';
-import Tag from 'lucide-react';
-import Target from 'lucide-react';
-import User from 'lucide-react';
-
-;
-;
-;
-;
-;
-;
-;
-;
+import { Link } from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Implementation Roadmap: Complete Guide to Enterprise AI Transformation',
@@ -420,3 +402,4 @@ export default function AI2026ImplementationRoadmap() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39

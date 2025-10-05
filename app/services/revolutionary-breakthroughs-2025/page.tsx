@@ -1,26 +1,4 @@
-import React from 'react';
-
-import ArrowRight from 'lucide-react';
-import Atom from 'lucide-react';
-import Bot from 'lucide-react';
-import Brain from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Rocket from 'lucide-react';
-import Sparkles from 'lucide-react';
-import Star from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
-
-;
-;
-;
-;
-;
-;
-;
-;
-;
-;
+import { React } from 'react';
 
 // Fallback: content module may be relocated; guard import
 let revolutionaryBreakthroughs2025: unknown[] = [];
@@ -406,3 +384,4 @@ export default function RevolutionaryBreakthroughs2025() {
     </div>
   );
 }
+>>>>>>> 5d2b3c81c55b794aac3492f27f2c7fa2daa0ca39
