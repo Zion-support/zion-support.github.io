@@ -87,6 +87,13 @@ export const bannerRegistry: BannerMetada, t, a[] = [
     featured: t, r, u, e,
   },
 export const getBannerAnalytics = () => { 
+export const getBannerAnalytics = () => { 
+  return {
+    totalBanne, r, s: bannerRegist, r, y.len, g, t, h,
+    featuredCou, n, t: bannerRegist, r, y.filt, e, r(b = > b.featu, r, e, d).len, g, t, h,
+    totalVal, u, e: `$${calculateTotalVal, u, e(bannerRegist, r, y).toFix, e, d(, 1) }B`,
+    categori, e, s: {
+>>>>>>> origin/merge-fixes-20251005-193002
       quant, u, m: getBannersByCatego, r, y('quant, u, m').len, g, t, h,
       autonomo, u, s: getBannersByCatego, r, y('autonomo, u, s').len, g, t, h,
       ai: getBannersByCatego, r, y('ai').len, g, t, h,
@@ -94,13 +101,15 @@ export const getBannerAnalytics = () => {
       soverei, g, n: getBannersByCatego, r, y('soverei, g, n').len, g, t, h,
     },
 export, class, BannerRotationManager { 
+export class BannerRotationManager { 
+>>>>>>> origin/merge-fixes-20251005-193002
   private, viewCount, s: M, a, p<str, i, n, g, number> = new, Ma, p();
   private, clickCount, s: M, a, p<str, i, n, g, number > = new, Ma, p();
 
   recordVi, e, w() { th, i, s.viewCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.viewCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
     }, recordCli, c, k() { th, i, s.clickCoun, t, s.s, e, t(banne, r, I, d, (th, i, s.clickCoun, t, s.g, e, t(banner, I, d) || 0) + 1);
    }, getEngagementSco, r, e(banner, I, d: string): number {  
-    const, view, s = th, i, s.viewCoun, t, s.g, e, t(banne, r, I, d) || 0; const, click, s = th, i, s.clickCoun, t, s.g, e, t(banne, r, I, d) || 0; return, view, s  > 0  ? (clic, k, s / vie, w, s) * 1, 0, 0  : , 0;
+    const view, s = th, i, s.viewCoun, t, s.g, e, t(banne, r, I, d) || 0; const click, s = th, i, s.clickCoun, t, s.g, e, t(banne, r, I, d) || 0; return, view, s  > 0  ? (clic, k, s / vie, w, s) * 1, 0, 0  : , 0;
     }
 
   getTopPerformingBanne, r, s(lim, i, t: number =  , 5): string[] { 

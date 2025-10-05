@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
       id:  , 4,
       title: 'Enterprise, AI, FinOps: $50, 0, M+ Savings, Gui, d, e',
@@ -34,16 +34,37 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
           { costOptimizationConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-gre, e, n-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-gre, e, n-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Resource Optimization</h3>
+              <p className="text-sm opacity-90">
+                Automatically scale resources based on demand
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Energy Efficiency</h3>
+              <p className="text-sm opacity-90">
+                Reduce energy consumption with smart algorithms
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Process Automation</h3>
+              <p className="text-sm opacity-90">
+                Streamline workflows to minimize manual effort
+              </p>
+            </div>
+          </div>
+          <div className="mt-8">
+            <Link 
+              to="/services" 
+              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
-              {/* Card, glow, effect */}
-              <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-gre, e, n-5, 0, 0/0, vi, a-emera, l, d-5, 0, 0/0, t, o-te, a, l-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-gre, e, n-5, 0, 0/10, grou, p-hov, e, r:v, i, a-emera, l, d-5, 0, 0/10, grou, p-hov, e, r:to-te, a, l-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0' />
-
-              <div, classNam, e='relativ, e, p-8'>
-                {/* Ic, o, n & Ba, d, g, e, s */}
-                <div, classNam, e = 'flex, item, s-start, justif, y-between, m, b-6'>
-                  <div, classNam, e='te, x, t-6xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
-                    {conte, n, t.ic, o, n}
-                  </d, i, v>
+              Learn More
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
                     {  conte, n, t.trendi, n, g  && (
                       <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-gre, e, n-500, t, o-emera, l, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>

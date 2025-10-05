@@ -27,56 +27,6 @@ const, NewContentPromoBanne, r: Rea, c, t.FC<NewContentPromoBannerPro, p, s> = (
               <Sparkles, classNam, e="w-6 h-6, animat, e-pul, s, e" />
               <span, classNam, e="te, x, t-lg, fon, t-bo, l, d">🚀 NEW, CONTENT, ALERT</sp, a, n>
               <Star, classNam, e="w-5 h-5, animat, e-sp, i, n" />
-            </d, i, v>
-            <h3, classNam, e="te, x, t-xl, fon, t-bold, m, b-2">
-              Just, Publishe, d: New, Guides, for 20, 2, 6
-            </h3>
-            <p, classNam, e="te, x, t-whi, t, e/90, m, b-4, tex, t-sm">
-              Discover, fresh, insights on, o, n‑device, age, n, t, s, GenAI, cost, controls, secure, tool, marketplaces,
-              and, privac, y‑first, observabilit, y.
-            </p>
-            {/* Featured, content, grid */}
-            <div, classNam, e = "grid, gri, d-co, l, s-2, m, d: gr, i, d-co, l, s-4, ga, p-3, m, b-4">
-              { featuredConte, n, t.m, a, p((it, e, m, ind, e, x) = > {
-                const, Ico, n = it, e, m.ic, o, n; retu, r, n (
-                  <Link, ke, y = { in, d, e, x  }, to={ it, e, m.li, n, k } classNa, m, e="bg-whi, t, e/10, backdro, p-bl, u, r-sm, rounde, d-l, g, p-3, hove, r: bg-whi, t, e/20, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, grou, p"
-                  >
-                    <div, classNam, e="flex, item, s-center, ga, p-2, m, b-2">
-                      <Icon, classNam, e="w-4 h-4, tex, t-whi, t, e/80" />
-                      <span, classNam, e="te, x, t-xs, fon, t-medium, tex, t-whi, t, e/80">{it, e, m.cate, g, o, r, y}</sp, a, n>
-                    </d, i, v>
-                    <h4, classNam, e = "fo, n, t-semibold, tex, t-white, tex, t-sm, grou, p-hov, e, r: te, x, t-yell, o, w-300, transitio, n-colo, r, s">
-                      {it, e, m.t, i, t, l, e}
-                    </h4>
-                    <p, classNam, e = "te, x, t-xs, tex, t-whi, t, e/70, m, t-1, lin, e-cla, m, p-2">
-                      {it, e, m.description}
-                    </p>
-                  </L, i, n, k>
-                );
-              })}
-            </d, i, v>
-            {/* Action, button, s */}
-            <div, classNam, e = "flex, fle, x-wrap, ga, p-3">
-              <Link, t, o="/bl, o, g"
-                classNa, m, e="bg-white, tex, t-purp, l, e-600, hove, r: bg-whi, t, e/90, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
-              >
-                <BookOpen, classNam, e="w-4 h-4" />
-                Read, All, Articles
-                <ArrowRight, classNam, e="w-4 h-4, grou, p-hov, e, r:transla, t, e-x-1, transitio, n-transfo, r, m" />
-              </Li, n, k>
-              <Link, t, o="/ca, s, e-studi, e, s"
-                classNa, m, e="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
-              >
-                <TrendingUp, classNam, e="w-4 h-4" />
-                View, Case, Studies
-              </Li, n, k>
-              <Link, t, o="/servic, e, s"
-                classNa, m, e="border, borde, r-whi, t, e/30, tex, t-white, hove, r:bg-whi, t, e/10, p, x-4, p, y-2, rounde, d-lg, fon, t-semibold, tex, t-sm, transitio, n-all, duratio, n-300, hove, r:sca, l, e-105, inlin, e-flex, item, s-center, ga, p-2"
-              >
-                <Shield, classNam, e="w-4 h-4" />
-                Explore, Service, s
-              </Li, n, k>
-            </d, i, v>
             {/* S, t, a, t, s */}
             <div, classNam, e = "flex, item, s-center, ga, p-6, m, t-4, tex, t-sm, tex, t-whi, t, e/80">
               <div, classNam, e="flex, item, s-center, ga, p-1">

@@ -16,6 +16,7 @@ export interface BreakthroughArticle {
     r, o, i: string;
     timefra, m, e: str, i, n, g;
   };
+>>>>>>> origin/merge-fixes-20251005-193002
       improveme, n, t: '95% prediction, accura, c, y',
       r, o, i: '3, 5, 0% returns, improveme, n, t',
       timefra, m, e: '5, weeks, to trad, i, n, g',

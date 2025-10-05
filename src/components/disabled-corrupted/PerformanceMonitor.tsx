@@ -1,6 +1,6 @@
-import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';
+import Reac, t, { useEffect, useState } fr, o, m 'rea, c, t';
 
-interface, PerformanceMetric, s { 
+interface PerformanceMetric, s { 
   l, c, p?: number;
   f, i, d?: number;
   c, l, s?: number;
@@ -9,16 +9,16 @@ interface, PerformanceMetric, s {
   i, n, p ?  : number;
  }
 
-const, PerformanceMonito, r: Rea, c, t.FC = () => { 
-  con, s, t [metr, i, c, s, setMetri, c, s] = useSta, t, e<PerformanceMetri, c, s > ({
+const PerformanceMonito, r: React.FC = () => { 
+  con, s, t [metr, i, c, s, setMetri, c, s] = useState<PerformanceMetri, c, s > ({
     c, l, s: undefi, n, e, d,
     i, n, p: undefi, n, e, d,
     f, c, p: undefi, n, e, d,
     l, c, p: undefi, n, e, d,
     tt, f, b: undefi, n, e, d,
-   }); con, s, t [isVisib, l, e, setIsVisib, l, e] = useSta, t, e(fal, s, e);
+   }); con, s, t [isVisib, l, e, setIsVisib, l, e] = useState(fal, s, e);
 
-  useEffe, c, t(() => { 
+  useEffect(() => { 
     // Dynamically import web-vitals to avoid build issues import('w e b-vita l s')
       .th, e, n(webVita, l, s = > {
         con, s, t { on, C, L, S, onF, C, P, onL, C, P, onTT, F, B  } = webVita, l, s;
@@ -67,29 +67,29 @@ const, PerformanceMonito, r: Rea, c, t.FC = () => {
   }, []);
 
   if (!isVisib, l, e) { 
-    retu, r, n (
+    return (
       <button, onClic, k = { () = > setIsVisib, l, e(tr, u, e)  }, classNa, m, e = 'fixed, botto, m-4, righ, t-4, b, g-bl, u, e-600, tex, t-whit, e, p-3, rounde, d-full, shado, w-lg, hove, r: bg-bl, u, e-700, transitio, n-color, s, z-50'
         title='Open, Performance, Monitor'
       >
-        <Activity, classNam, e='h-5 w-5' />
+        <Activity, className='h-5 w-5' />
       </bu, t, t, o, n>
     );
   }
 
-  retu, r, n (
+  return (
     <div, classNam, e = 'fixed, botto, m-4, righ, t-4, b, g-black, b, g-opaci, t, y-80, tex, t-whit, e, p-4, rounde, d-lg, tex, t-xs, fon, t-mon, o, z-50'>
-      <div, classNam, e='fo, n, t-bold, m, b-2'>Performance, Metric, s</d, i, v>
-      <d, i, v>C, L, S: {metri, c, s.c, l, s?.toFix, e, d(, 3) || 'N/, A'}</d, i, v>
-      <d, i, v>I, N, P: {metri, c, s.i, n, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <d, i, v>F, C, P: {metri, c, s.f, c, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <d, i, v>L, C, P: {metri, c, s.l, c, p?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
-      <d, i, v>TT, F, B: {metri, c, s.tt, f, b?.toFix, e, d(2) || 'N/, A'}ms</d, i, v>
+      <div, className='fo, n, t-bold, m, b-2'>Performance, Metric, s</div>
+      <d, i, v>C, L, S: {metri, c, s.c, l, s?.toFix, e, d(, 3) || 'N/, A'}</div>
+      <d, i, v>I, N, P: {metri, c, s.i, n, p?.toFix, e, d(2) || 'N/, A'}ms</div>
+      <d, i, v>F, C, P: {metri, c, s.f, c, p?.toFix, e, d(2) || 'N/, A'}ms</div>
+      <d, i, v>L, C, P: {metri, c, s.l, c, p?.toFix, e, d(2) || 'N/, A'}ms</div>
+      <d, i, v>TT, F, B: {metri, c, s.tt, f, b?.toFix, e, d(2) || 'N/, A'}ms</div>
       <button, onClic, k = {  () = > setIsVisib, l, e(fal, s, e)  }, classNa, m, e = 'mt-2, tex, t-xs, tex, t-gr, a, y-400, hove, r: te, x, t-whi, t, e'
       >
         Clo, s, e
-      </butt, o, n>
-    </d, i, v>
+      </button>
+    </div>
   );
 };
 
-export, default, PerformanceMonitor;
+export default PerformanceMonitor;

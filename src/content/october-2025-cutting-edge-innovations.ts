@@ -21,6 +21,7 @@ export const octoberCuttingEdgeInnovations = [
       'Proven, in, Fortune 500, financial, institutions',
     ],
   },
+>>>>>>> origin/merge-fixes-20251005-193002
       'Spiking, neural, networks (SN, N, s) with, biological, realis, m',
       'Intel, Loihi, 2 and, BrainChip, Akida deployment, guide, s',
       'Eve, n, t-driven, sensors, for ult, r, a-low, power, consumption',
@@ -28,6 +29,7 @@ export const octoberCuttingEdgeInnovations = [
       'Proven, in, BMW autonomous, driving, and NASA, rover, s',
     ],
   },
+>>>>>>> origin/merge-fixes-20251005-193002
       'Poli, c, y-as-code, with, Open Policy, Agen, t (OP, A)',
       'Mul, t, i-layered, safety, guardrails and, circuit, breakers',
       'Hum, a, n-in-t, h, e-lo, o, p (HI, T, L) intelligent, escalatio, n',

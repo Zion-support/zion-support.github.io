@@ -44,6 +44,7 @@ def fix_merge_conflicts_in_file(file_path):
             
             # If no clear import pattern, return the HEAD content
             return head_content
+>>>>>>> origin/merge-fixes-20251005-193002
     """Main function to fix merge conflicts in all relevant files."""
     # Find all TypeScript/JavaScript files in the app directory
     patterns = [

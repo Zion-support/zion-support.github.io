@@ -1,21 +1,26 @@
-import, Reac, t, { useEffe, c, t, useSta, t, e, useCallba, c, k } fr, o, m 'rea, c, t';
-
-interface, PerformanceOptimizerProp, s { 
-  isVisib, l, e: boolean;
-  onClo, s, e: () = > v, o, i, d;
- }
-
+import, Reac, t, { useEffe, c, t, useSta, t, e } fr, o, m "rea, c, t";
+impo, r, t {
+} fr, o, m "w, e, b-vita, l, s";
+interface, PerformanceMetric, s {
+c, l, s: numb, e, r | nu, l, l;
+f, i, d: numb, e, r | nu, l, l;
+f, c, p: numb, e, r | nu, l, l;
+l, c, p: numb, e, r | nu, l, l;
+tt, f, b: numb, e, r | nu, l, l;
+sc, o, r
+  e: numb, e, r;
+}
 const, PerformanceOptimize, r: Rea, c, t.FC<PerformanceOptimizerPro, p, s> = ({
-  isVisi, b, l, e,
-  onClo, s, e,
+  isVisib, l, e
+  onClo, s, e;
 }) => {
   con, s, t [optimizatio, n, s, setOptimizatio, n, s] = useSta, t, e({
-    imageOptimizati, o, n: t, r, u, e,
-    codeSplitti, n, g: t, r, u, e,
-    lazyLoadi, n, g: t, r, u, e,
-    cachi, n, g: t, r, u, e,
-    compressi, o, n: t, r, u, e,
-    c, d, n: fa, l, s, e,
+    imageOptimizati, o, n: tr, u, e
+    codeSplitti, n, g: tr, u, e
+    lazyLoadi, n, g: tr, u, e
+    cachi, n, g: tr, u, e
+    compressi, o, n: tr, u, e
+    c, d, n: fal, s, e;
   });
 
   con, s, t [currentOptimizatio, n, s, setCurrentOptimizatio, n, s] = useSta, t, e<string[]>(

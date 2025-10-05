@@ -1,27 +1,25 @@
-import, React, from 'rea, c, t';
-
-export, default, function FeaturedContentBanner20, 2, 5() {
+export, default, function FeaturedContentBanner20, 2, 5(): vo, i, d {
   const, featuredConten, t = [
     {
-      ty, p, e: 'bl, o, g',
-      title: 'AI, Autonomous, Enterprise Operatio, n, s: Complete, 2025, Guid, e',
-      excerpt: 'Master, autonomous, AI operations, with, proven frameworks, achieving, 95% automation, rat, e, s, $2M+ annual, saving, s, and, 9, 9.99% uptime, through, comprehensive implementation, strategie, s.',
-      hr, e, f: '/bl, o, g/ai-autonomo, u, s-enterpri, s, e-operatio, n, s-2, 0, 2, 5',
-      image: '🤖',
-      category: 'Latest, AI, Innovatio, n',
-      readTime: '45, min, rea, d',
-      publishDa, t, e: 'Ja, n, 3, 0, 20, 2, 5'
-    },
+      ty, p, e: 'bl, o, g','
+      tit, l, e: 'AI, Autonomous, Enterprise Operati, o, n
+  s: Complete, 2025, Guide','
+      excer, p, t: 'Master, autonomous, AI operations, with, proven frameworks, achieving, 95% automation, rate, s, $2M+ annual, saving, s, and, 9, 9.99% uptime, through, comprehensive implementation, strategie, s.','
+      hr, e, f: '/bl, o, g/ai-autonomo, u, s-enterpri, s, e-operatio, n, s-20, 2, 5','
+      ima, g, e: '🤖','
+      catego, r, y: 'Latest, AI, Innovation','
+      readTi, m, e: '45, min, read','
+      publishDa, t, e: 'Jan, 3, 0, 20, 2, 5}
     {
-      ty, p, e: 'b, l, o, g',
-      title: 'AI, Enterprise, Transformation: $50M, Annual, Savings Bluepr, i, n, t',
-      excerpt: 'Discover, how, Fortune 500, companies, achieve $50M, annual, saving, s, 95% process, automatio, n, and, 30, 0% ROI, through, comprehensive AI, transformation, strategies.',
-      hr, e, f: '/bl, o, g/ai-enterpri, s, e-transformati, o, n-2, 0, 2, 5',
-      image: '💰',
-      category: 'Success, Sto, r, y',
-      readTime: '50, min, rea, d',
-      publishDa, t, e: 'Ja, n, 2, 8, 20, 2, 5'
-    },
+      ty, p, e: 'bl, o, g','
+      tit, l, e: 'AI, Enterprise, Transformatio
+  n: $50M, Annual, Savings Bluepri, n, t','
+      excer, p, t: 'Discover, how, Fortune 500, companies, achieve $50M, annual, savings, 95% process, automatio, n, and, 30, 0% ROI, through, comprehensive AI, transformation, strategies.','
+      hr, e, f: '/bl, o, g/ai-enterpri, s, e-transformati, o, n-20, 2, 5','
+      ima, g, e: '💰','
+      catego, r, y: 'Success, Stor, y','
+      readTi, m, e: '50, min, read','
+      publishDa, t, e: 'Jan, 2, 8, 20, 2, 5}
     {
       ty, p, e: 'b, l, o, g',
       title: 'AI, Innovation, Labs: Product, Development, Revolutio, n',

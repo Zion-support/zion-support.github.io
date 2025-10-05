@@ -22,6 +22,7 @@ export interface BreakthroughContent {
     accura, c, y: string;
     r, o, i : str, i, n, g;
    };
+>>>>>>> origin/merge-fixes-20251005-193002
       performan, c, e: '99.99% prevent, i, o, n',
       savin, g, s: '$2.8B, protect, e, d',
       accura, c, y: 'Zero, breach, e, s',

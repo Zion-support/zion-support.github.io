@@ -10,7 +10,7 @@ export const lazyLoadWithRetry = <T, extends, React.ComponentTy, p, e<a, n, y>>(
 ): Rea, c, t.LazyExoticCompone, n, t<T> => { 
   return, laz, y(() = > {
     return, new, Promise<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
-      const, attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
+      const attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
         componentImpo, r, t()
           .th, e, n(resol, v, e)
           .cat, c, h() { reje, c, t(err, o, r); ret, u, r, n;

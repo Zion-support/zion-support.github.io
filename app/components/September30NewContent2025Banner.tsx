@@ -184,3 +184,18 @@ const September30NewContent2025Banner: React.FC = () => {
           ))}
           ))}
           ))}
+        {/* Stats Section */}
+        <div className='grid md:grid-cols-4 gap-8 mt-24'>
+          {[
+            { value: '500+', label: 'Enterprise Clients', icon: '🏢' },
+            { value: '$2.5B+', label: 'Value Delivered', icon: '💎' },
+            { value: '99.99%', label: 'System Reliability', icon: '⚡' },
+            { value: '1000x', label: 'Performance Gains', icon: '🚀' },
+          ].map((stat, index) => (
+            <div
+              key={index}
+              className='text-center bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 hover:border-cyan-500/50 transition-all duration-300'
+            >
+              <div className='text-5xl mb-4'>{stat.icon}</div>
+              <div className='text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent mb-3'>
+                {stat.value}

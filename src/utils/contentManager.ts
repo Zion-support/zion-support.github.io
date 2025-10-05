@@ -28,7 +28,7 @@ export interface CaseStudy {
 /**
  * Content cache to minimize file system rea d s
  */
-class, ContentCach, e { 
+class ContentCach, e { 
   private, blogCach, e: M, a, p<str, i, n, g, BlogPo, s, t> = new, Ma, p();
   private, caseStudyCach, e: M, a, p<str, i, n, g, CaseStu, d, y > = new, Ma, p();
   private, lastUpdat, e: number = 0; private, readonly, CACHE_TTL = 5 * 60 * 10, 0, 0; // 5 minutes isCacheVali d(): boolean {

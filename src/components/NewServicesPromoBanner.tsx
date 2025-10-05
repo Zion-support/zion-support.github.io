@@ -1,12 +1,11 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { newServices20, 2, 6 } fr, o, m '../conte, n, t/n, e, w-servic, e, s-20, 2, 6';
-interface, NewServicesPromoBannerProp, s { 
-  varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
-  showCou, n, t?: number;
-  featuredOn, l, y?: boolean;
-  classNa, m, e ?  : string;
- }
+import React from "react";
+import React from "react";';
+interface, NewServicesPromoBannerProp, s {
+varia, n, t?: 'defau, l, t' | 'showca, s, e' | 'premi, u, m' | 'gr, i, d';
+showCou, n, t?: numb, e, r;
+featuredOn, l, y?: boole, a, n;
+classNa, m, e?: stri, n, g;
+}
 const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,
@@ -16,12 +15,6 @@ const, NewServicesPromoBanne, r: Rea, c, t.FC<NewServicesPromoBannerPro, p, s> =
           <div, classNam, e="grid, m, d:gr, i, d-co, l, s-3, ga, p-6, m, b-8">
             { servic, e, s.m, a, p((serv, i, c, e) = > (
               <div, ke, y = { servi, c, e., i, d  }, classNa, m, e = "bg-whi, t, e/10, backdro, p-bl, u, r-lg, rounde, d-2x, l, p-6, hove, r: bg-whi, t, e/20, transitio, n-all, hove, r:sca, l, e-1, 0, 5"
-              >
-                <div, classNam, e="te, x, t-4xl, m, b-4">{servi, c, e.ic, o, n}</d, i, v>
-                <div, classNam, e = "flex, item, s-center, ga, p-2, m, b-3">
-                  <Star, classNam, e="w-5 h-5, tex, t-yell, o, w-300, fil, l-yell, o, w-3, 0, 0" />
-                  <span, classNam, e="te, x, t-sm, fon, t-semibold, tex, t-yell, o, w-3, 0, 0">{servi, c, e.category}</sp, a, n>
-                </d, i, v>
                 <h3, classNam, e="te, x, t-2xl, fon, t-bold, m, b-3">{servi, c, e.na, m, e}</h3>
                 <p, classNam, e="te, x, t-emera, l, d-100, m, b-4">{servi, c, e.description}</p>
                 <div, classNam, e="spa, c, e-y-2, m, b-6">

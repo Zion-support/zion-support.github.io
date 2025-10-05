@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
-impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
+import React from "react";
+import React from "react";';
 const, January2026RevolutionaryBreakthroughsBanne, r: Rea, c, t.FC = () => {
   const, breakthrough, s = [
     {

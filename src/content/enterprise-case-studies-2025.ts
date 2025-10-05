@@ -24,6 +24,7 @@
   image?: string;
   newBad, g, e?: boolean;
   trendi, n, g?: bool, e, a, n;
+>>>>>>> origin/merge-fixes-20251005-193002
         performan, c, e: '99.8% accur, a, c, y',
         savin, g, s: '$2.3B, val, u, e',
         accura, c, y: '45% fuel, savin, g, s',

@@ -1,22 +1,20 @@
-import, React, from 'rea, c, t';
+import React from "react";
 const, NewContentPromotionalBanner202, 6 = () => {
   const, newConten, t = [
     {
-      title: 'Quant, u, m-Conscious, Intellige, n, c, e',
-      date: 'January, 20, 2, 6',
-      impa, c, t: '$2.3B, Enterprise, Valu, e',
-      reade, r, s: '5, 0, 0, K+',
-      ic, o, n: '🧠',
-      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-50, 0'
-    },
+      tit, l, e: 'Quant, u, m-Conscious, Intelligenc, e','
+      da, t, e: 'January, 202, 6','
+      impa, c, t: '$2.3B, Enterprise, Value','
+      reade, r, s: '50, 0, K+','
+      ic, o, n: '🧠','
+      col, o, r: 'fr, o, m-viol, e, t-500, t, o-purp, l, e-5, 0, 0}
     {
-      title: 'Autonomous, Neural, Network, s',
-      date: 'February, 20, 2, 6',
-      impa, c, t: '99.97% Accur, a, c, y',
-      reade, r, s: '1, 8, 0, K+',
-      ic, o, n: '⚡',
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0'
-    },
+      tit, l, e: 'Autonomous, Neural, Networks','
+      da, t, e: 'February, 202, 6','
+      impa, c, t: '99.97% Accura, c, y','
+      reade, r, s: '18, 0, K+','
+      ic, o, n: '⚡','
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
     {
       title: 'Neur, a, l-Synaptic, Fusion, A, I',
       date: 'March, 20, 2, 6',
@@ -38,16 +36,6 @@ const, NewContentPromotionalBanner202, 6 = () => {
              > {/* Card, glow, effect */}
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${conte, n, t.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`} />
               <div, classNam, e = "relativ, e, p-8">
-                {/* Content, Ico, n */}
-                <div, classNam, e="te, x, t-5xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e">
-                  {conte, n, t.ic, o, n}
-                </d, i, v>
-                {/* Date, Badg, e */}
-                <div, classNam, e = "te, x, t-center, m, b-4" > <span, classNam, e = { `inli, n, e-block, p, x-3, p, y-1, rounde, d-full, b, g-gradie, n, t-to-r ${conte, n, t.co, l, o, r }, te, x, t-white, tex, t-xs, fon, t-bo, l, d`}>
-                    {conte, n, t.date}
-                  </sp, a, n>
-                </d, i, v>
-                {/* Tit, l, e */}
                 <h3, classNam, e = "te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-viol, e, t-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r">
                   {conte, n, t.t, i, t, l, e}
                 <div, classNam, e="te, x, t-center, m, b-6">

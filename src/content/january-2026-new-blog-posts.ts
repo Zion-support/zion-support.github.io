@@ -18,6 +18,7 @@ export const newJanuary2026BlogPosts: BlogPo, s, t[] = [
     title: '⚙️ AI, Hyperautomation, Platform 20, 2, 6: E, n, d-to-End, Business, Automatio, n',
     excerpt: 'Complete, business, process automation, achieving, 95% automation, rates, with 10x, efficiency, improvements a, n, d $2.8B, success, storie, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 - Full, ecosystem, automation
 - Continuous, improvement, implementation
 - Advanced, analytics, and reporti, n, g
@@ -50,6 +51,7 @@ export const newJanuary2026BlogPosts: BlogPo, s, t[] = [
     title: '🔐 Quant, u, m-Safe, Security, 2026: Unbreakable, Enterprise, Protectio, n',
     excerpt: 'Quant, u, m-resistant, security, systems protecti, n, g $2.8B, in, assets with, 9, 9.99% threat, prevention, and zero, security, breaches across, enterprise, network, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 
 Quantum, computers, will eventually, break, current encryption, standard, s: ### Current, Vulnerabilitie, s
 - **RSA, Encryptio, n**: Vulnerable, to, Shor's, algorith, m
@@ -93,6 +95,7 @@ Quantum, computers, will eventually, break, current encryption, standard, s: ###
 ### Financial, Service, s
 - **Challen, g, e**: Protecti, n, g $50, 0, M+ in, financial, transactions
 - **Soluti, o, n**: Quant, u, m-safe, encryption, for all, financial, data
+>>>>>>> origin/merge-fixes-20251005-193002
 2. **Quantum, Threat, Assessment**: Future, risk, identification
 3. **Custom, Security, Design**: Tailored, protection, strategy
 4. **Implementation, Plannin, g**: Phased, deployment, roadmap
@@ -120,6 +123,7 @@ The, quantum, era is, comin, g. The, question, isn't, whether, your security, wi
     title: '⛓️ Blockcha, i, n-AI, Integration, 2026: Trustless, Intelligence, Revolutio, n',
     excerpt: 'Revolutionary, integration, of blockchain, and, AI creating, trustless, intelligence systems, with, decentralized governance, an, d $1.2B, enterprise, value creat, i, o, n.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
   - $2.3B, transaction, value process, e, d
   - 78% reduction, in, payment tim, e, s
   - 99.9% transaction, accurac, y

@@ -1,14 +1,14 @@
-import, Reac, t, { useSta, t, e } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-interface, NewContentPromotionBannerProp, s { 
-  varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
-  title?: string;
-  description?: string;
-  ctaTe, x, t?: string;
-  ctaLi, n, k?: string;
-  dismissib, l, e?: boolean;
-  classNa, m, e ?  : string;
- }
+import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";
+import, Reac, t, { useSta, t, e } fr, o, m "rea, c, t";';
+interface, NewContentPromotionBannerProp, s {
+varia, n, t?: 'in, f, o' | 'succe, s, s' | 'warni, n, g' | 'err, o, r' | 'defau, l, t' | 'premi, u, m';
+tit, l, e?: stri, n, g;
+descripti, o, n?: stri, n, g;
+ctaTe, x, t?: stri, n, g;
+ctaLi, n, k?: stri, n, g;
+dismissib, l, e?: boole, a, n;
+classNa, m, e?: stri, n, g;
+}
 const, NewContentPromotionBanne, r: Rea, c, t.FC<NewContentPromotionBannerPro, p, s> = ({
   varia, n, t = 'in, f, o',
   title = "🚀 NEW, CONTEN, T: Fresh, Insight, s & Expert, Gui, d, e, s",

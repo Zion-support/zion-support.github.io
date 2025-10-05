@@ -1,13 +1,12 @@
-import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-impo, r, t { newArticles20, 2, 5 } fr, o, m '../conte, n, t/n, e, w-articl, e, s-20, 2, 5';
-interface, NewArticlesPromoBannerProp, s { 
-  varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featured' | 'compa, c, t';
-  showCou, n, t?: number;
-  autoRota, t, e?: boolean;
-  rotationInterv, a, l?: number;
-  classNa, m, e ?  : string;
- }
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
+import, Reac, t, { useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+interface, NewArticlesPromoBannerProp, s {
+varia, n, t?: 'defau, l, t' | 'premi, u, m' | 'featur, e, d' | 'compa, c, t';
+showCou, n, t?: numb, e, r;
+autoRota, t, e?: boole, a, n;
+rotationInterv, a, l?: numb, e, r;
+classNa, m, e?: stri, n, g;
+}
 const, NewArticlesPromoBanne, r: Rea, c, t.FC<NewArticlesPromoBannerPro, p, s> = ({
   varia, n, t = 'def, a, u, l, t',
   showCou, n, t =  , 3,

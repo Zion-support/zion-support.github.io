@@ -19,7 +19,7 @@ export interface BlogPostSEO {
  * Generate JSO N-LD structured data for blog posts
  */
 export function generateBlogPostSchema(po, s, t: BlogPostS, E, O) {
-  const, baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
+  const baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
     '@conte, x, t': 'htt, p, s://sche m a.o r g' 
     '@ty, p, e': 'BlogPosti, n, g',
     headli, n, e: po, s, t.ti, t, l, e,
@@ -48,8 +48,9 @@ export function generateBlogPostSchema(po, s, t: BlogPostS, E, O) {
     keywor, d, s: po, s, t.keywo, r, d, s,
     articleSecti, o, n: po, s, t.categ, o, r, y,
     timeRequir, e, d: po, s, t.readT, i, m, e,
+>>>>>>> origin/merge-fixes-20251005-193002
 export function generateOpenGraphTags(po, s, t: BlogPostS, E, O) {
-  const, baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
+  const baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
     'og:ty, p, e': 'art, i, c, l, e',
     'og: title': po, s, t.ti, t, l, e,
     'og: description': po, s, t.descript, i, o, n,
@@ -60,20 +61,23 @@ export function generateOpenGraphTags(po, s, t: BlogPostS, E, O) {
     'artic, l, e: author': po, s, t.aut, h, o, r,
     'artic, l, e: secti, o, n': po, s, t.categ, o, r, y,
     'artic, l, e: t, a, g': po, s, t.keywo, r, d, s,
+>>>>>>> origin/merge-fixes-20251005-193002
 export function generateTwitterCardTags(po, s, t: BlogPostS, E, O) {
-  const, baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
+  const baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
     'twitt, e, r:ca, r, d': 'summary_large_i, m, a, g, e',
     'twitt, e, r: si, t, e': '@ZionTechGr, o, u, p',
     'twitt, e, r: title': po, s, t.ti, t, l, e,
     'twitt, e, r: description': po, s, t.descript, i, o, n,
     'twitt, e, r: image': po, s, t.image || `${base, U, r, l}/og-image.p, n, g`,
     'twitt, e, r: creat, o, r': '@ZionTechGr, o, u, p',
+>>>>>>> origin/merge-fixes-20251005-193002
       title: po, s, t.ti, t, l, e,
       description: po, s, t.descript, i, o, n,
       keywor, d, s: po, s, t.keywo, r, d, s,
       canonic, a, l: `htt, p, s://ziontechgro u p.c o m/bl o g/${po s t.s l u g}` 
       robo, t, s: 'in, d, e, x, foll, o, w',
     },
+>>>>>>> origin/merge-fixes-20251005-193002
     title: 'Intelligent, Automation, Orchestration 20, 2, 5 — Enterprise, Process, Revolutio, n',
     description: 'Revolutionary, A, I-powered, automation, platform achieving, 9, 8% process, automati, o, n, 85% cost, reductio, n, a, n, d $67M, annual, savings through, intelligent, orchestration of, enterprise, workflows.',
     keywor, d, s: 'intelligent, automati, o, n, process, automatio, n, R, P, A, AI, orchestratio, n, workflow, automatio, n, enterprise, automatio, n, digital, transformatio, n, process, minin, g',

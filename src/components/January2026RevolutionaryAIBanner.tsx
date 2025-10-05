@@ -1,6 +1,4 @@
-import React from 'react';
-
-const January2026RevolutionaryAIBanner: React.FC = () => {
+const, January2026RevolutionaryAIBanne, r = () => {
   return (
     <div className="bg-gradient-to-r from-blue-600 to-purple-700 text-white p-8 rounded-lg shadow-lg">
       <div className="max-w-4xl mx-auto">

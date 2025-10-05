@@ -1,8 +1,33 @@
-import React, { lazy, Suspense, useState, useEffect } from 'react';
-
-// Define available banners with their import paths
-const bannerComponents = {
-  // Add banner components here as needed
+import, Reac, t, { la, z, y, Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
+// Define, available, banners with, their, import pat, h, s
+  const, bannerComponent, s = {
+  'october20, 2, 5-te, c, h-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025TechBreakthroughBann, e, r'))
+  'october20, 2, 5-ne, x, t-g, e, n-ai': la, z, y(() => impo, r, t('./October2025NextGenAIBann, e, r'))
+  'october20, 2, 5-operation, a, l-excellen, c, e': la, z, y(() => impo, r, t('./October2025OperationalExcellenceBann, e, r'))
+  'october20, 2, 5-ed, g, e-ai-quant, u, m': la, z, y(() => impo, r, t('./October2025EdgeAIQuantumCryptoBann, e, r'))
+  'october20, 2, 5-breakthrou, g, h-conte, n, t': la, z, y(() => impo, r, t('./October2025BreakthroughContentBann, e, r'))
+  'october20, 2, 5-ai-revoluti, o, n': la, z, y(() => impo, r, t('./October2025AIRevolutionBann, e, r'))
+  'october20, 2, 5-n, e, w-conte, n, t': la, z, y(() => impo, r, t('./October2025NewContentBann, e, r'))
+  'october20, 2, 5-n, e, w-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025NewBreakthroughBann, e, r'))
+  'october20, 2, 5-docume, n, t-automati, o, n': la, z, y(() => impo, r, t('./October2025DocumentAutomationBann, e, r'))
+  'october20, 2, 5-revo, p, s': la, z, y(() => impo, r, t('./October2025RevOpsBann, e, r'))
+  'january20, 2, 6-revolutiona, r, y': la, z, y(() => impo, r, t('./January2026RevolutionaryBann, e, r'))
+  'n, e, w-servic, e, s-20, 2, 6': la, z, y(() => impo, r, t('./NewServicesPromoBanner20, 2, 6'))
+import, Reac, t, { la, z, y, Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+// Define, available, banners with, their, import pat, h, s
+  const, bannerComponent, s = {
+  'october20, 2, 5-te, c, h-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025TechBreakthroughBann, e, r')),';
+  'october20, 2, 5-ne, x, t-g, e, n-ai': la, z, y(() => impo, r, t('./October2025NextGenAIBann, e, r')),';
+  'october20, 2, 5-operation, a, l-excellen, c, e': la, z, y(() => impo, r, t('./October2025OperationalExcellenceBann, e, r')),';
+  'october20, 2, 5-ed, g, e-ai-quant, u, m': la, z, y(() => impo, r, t('./October2025EdgeAIQuantumCryptoBann, e, r')),';
+  'october20, 2, 5-breakthrou, g, h-conte, n, t': la, z, y(() => impo, r, t('./October2025BreakthroughContentBann, e, r')),';
+  'october20, 2, 5-ai-revoluti, o, n': la, z, y(() => impo, r, t('./October2025AIRevolutionBann, e, r')),';
+  'october20, 2, 5-n, e, w-conte, n, t': la, z, y(() => impo, r, t('./October2025NewContentBann, e, r')),';
+  'october20, 2, 5-n, e, w-breakthrou, g, h': la, z, y(() => impo, r, t('./October2025NewBreakthroughBann, e, r')),';
+  'october20, 2, 5-docume, n, t-automati, o, n': la, z, y(() => impo, r, t('./October2025DocumentAutomationBann, e, r')),';
+  'october20, 2, 5-revo, p, s': la, z, y(() => impo, r, t('./October2025RevOpsBann, e, r')),';
+  'january20, 2, 6-revolutiona, r, y': la, z, y(() => impo, r, t('./January2026RevolutionaryBann, e, r')),';
+  'n, e, w-servic, e, s-20, 2, 6': la, z, y(() => impo, r, t('./NewServicesPromoBanner20, 2, 6')),';
 };
 
 export type BannerKey = keyof typeof bannerComponents;

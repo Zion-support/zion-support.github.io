@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 const EnhancedHeader: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigationItems = [
+>>>>>>> origin/merge-fixes-20251005-193002
   return (
     <header className='bg-white shadow-lg'>
       <div className='container mx-auto px-4'>
@@ -19,6 +20,7 @@ const EnhancedHeader: React.FC = () => {
                 key={item.name}
                 to={item.href}
                 className='text-gray-700 hover:text-blue-600 transition-colors'
+>>>>>>> origin/merge-fixes-20251005-193002
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -26,6 +28,10 @@ const EnhancedHeader: React.FC = () => {
           >
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
           </button>
+        {isOpen && (
+          <div className='md:hidden py-4 border-t'>
+            {navigationItems.map(item => (
+              <div key={item.name}>
         {isOpen && (
           <div className='md:hidden py-4 border-t'>
             {navigationItems.map(item => (

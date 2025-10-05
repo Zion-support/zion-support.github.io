@@ -1,25 +1,44 @@
-import, Reac, t, { Suspen, s, e, useSta, t, e, useEffe, c, t } fr, o, m 'rea, c, t';
-impo, r, t { ErrorBounda, r, y } fr, o, m 'rea, c, t-err, o, r-bounda, r, y';
-impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
-
-// Loading component const LoadingSpinn e r: Rea c t.FC = () => (
-  <div, classNam, e = 'flex, item, s-center, justif, y-center, mi, n-h-scre, e, n'>
-    <div, classNam, e='anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2, borde, r-bl, u, e-6, 0, 0' />
-  </di, v>
+import, Reac, t, { Suspen, s, e, la, z, y, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";
+impo, r, t { ErrorBounda, r, y } fr, o, m "rea, c, t-err, o, r-bounda, r, y";
+impo, r, t { moti, o, n } fr, o, m "fram, e, r-moti, o, n";
+import, Reac, t, { Suspen, s, e, la, z, y, useSta, t, e, useEffe, c, t } fr, o, m "rea, c, t";';
+impo, r, t {
+ErrorBounda, r, y;
+} fr, o, m "rea, c, t-err, o, r-bounda, r, y";';
+impo, r, t {
+moti, o, n;
+} fr, o, m "fram, e, r-moti, o, n";';
+// Lazy, load, components for, better, performance
+  const, UnifiedBannerSyste, m = la, z, y(() => impo, r, t('./UnifiedBannerSyst, e, m'));';
+const, EnhancedPerformanceMonito, r = la, z, y(() => impo, r, t('./EnhancedPerformanceMonit, o, r'));';
+const, SEOAccessibilityEnhance, r = la, z, y(() => impo, r, t('./SEOAccessibilityEnhanc, e, r'));';
+// Import, banner, configurations
+  impo, r, t { getFeaturedBanne, r, s } fr, o, m "../da, t, a/bannerConfiguratio, n, s";
+impo, r, t {
+getFeaturedBanne, r, s;
+} fr, o, m "../da, t, a/bannerConfiguratio, n, s";';
+// Loading, componen, t
+  const, LoadingSpinne, r: Rea, c, t.FC = () => (
+  <div, className="flex, item, s-center, justif, y-center, mi, n-h-scre, e, n">";
+    <div, className="anima, t, e-spin, rounde, d-ful, l, h-1, 2, w-12, borde, r-b-2, borde, r-bl, u, e-6, 0, 0"></d, i, v>";
+  </d, i, v>
 );
-
-// Error fallback component
-const, ErrorFallbac, k: Rea, c, t.FC<{ 
-  err, o, r: Err, o, r;
-  resetErrorBounda, r, y: () = > v, o, i, d;
- }> = ({ err, o, r, resetErrorBounda, r, y }) => (
-  <div, classNam, e = 'm, i, n-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50'>
-    <div, classNam, e='m, a, x-w-md, m, x-auto, tex, t-cente, r, p-6'>
-      <div, classNam, e='te, x, t-r, e, d-600, tex, t-6xl, m, b-4'>⚠️</d, i, v>
-      <h1, classNam, e='te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2'>
-        Something, went, wrong
-      </h1>
-      <p, classNam, e='te, x, t-gr, a, y-600, m, b-4'>
+// Error, fallback, component
+  const, ErrorFallbac, k: Rea, c, t.FC<{ err, o, r: Err, o, r; resetErrorBound, a, r
+  y: () => vo, i, d }> = ({ 
+  err, o, r
+  resetErrorBounda, r, y;
+}) => (
+  <div, className="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">
+    <div, className="m, a, x-w-md, m, x-auto, tex, t-cente, r, p-6">
+      <div, className="te, x, t-r, e, d-600, tex, t-6xl, m, b-4">⚠️</d, i, v>
+      <h1, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Something, went, wrong</h1>
+      <p, className="te, x, t-gr, a, y-600, m, b-4">We, encountered, an unexpected, erro, r. Please, try, refreshing the, pag, e.</p>
+  <div, className="m, i, n-h-screen, flex, items-center, justif, y-center, b, g-gr, a, y-50">";
+    <div, className="m, a, x-w-md, m, x-auto, tex, t-cente, r, p-6">";
+      <div, className="te, x, t-r, e, d-600, tex, t-6xl, m, b-4">⚠️</d, i, v>";
+      <h1, className="te, x, t-2xl, fon, t-bold, tex, t-gr, a, y-900, m, b-2">Something, went, wrong</h1>";
+      <p, className="te, x, t-gr, a, y-600, m, b-4">";
         We, encountered, an unexpected, erro, r. Please, try, refreshing the, pag, e.
       </p>
       {  proce, s, s.e, n, v.NODE_E, N, V === 'developme, n, t'  && (

@@ -1,4 +1,4 @@
-import, Reac, t, { useEffe, c, t } fr, o, m 'rea, c, t';
+import React, { useEffect, useState } from 'react';
 
 interface, AdvancedAnalyticsProp, s { 
   enableConversionTracki, n, g?: boolean;

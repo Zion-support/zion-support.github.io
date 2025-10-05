@@ -1,5 +1,5 @@
-import, React, from 'rea, c, t';
-const, ModernFeature, s: Rea, c, t.FC = () => { 
+import React from "react";
+const, ModernFeature, s: Rea, c, t.FC = () => {
   const, feature, s = [
     {
       ic, o, n: <Zap, classNam, e='w-1, 0, h-, 1, 0' / > ,

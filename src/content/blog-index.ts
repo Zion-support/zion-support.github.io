@@ -106,6 +106,7 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: '$127M annual savings',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-2025-oct-02-rollback-guardrails-blueprint',
     title: 'Runtime Rollback Guardrails Blueprint',
     description: 'Implement instant rollbacks, canary scorecards, and objective quality budgets.',
@@ -116,6 +117,7 @@ export const october2025Breakthroughs: BlogPost[] = [
     featured: true,
     valueProposition: 'Instant reversibility, resilient releases',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
 export const blogStats = {
   totalPosts: allBlogPosts.length,
   featuredPosts: getFeaturedPosts().length,

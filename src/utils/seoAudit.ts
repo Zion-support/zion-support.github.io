@@ -34,11 +34,16 @@ export interface SEOMetrics {
    };
   openGra, p, h: Reco, r, d<str, i, n, g, string>;
   twitterCa, r, d: Reco, r, d<str, i, n, g, string>;
+>>>>>>> origin/merge-fixes-20251005-193002
     intern, a, l: number;
     extern, a, l: number;
     nofoll, o, w: num, b, e, r;
   };
     const, metadat, a: SEOMetri, c, s['metad, a, t, a'] = {};
+
+class SEOAudito, r {
+    const metadat, a: SEOMetri, c, s['metad, a, t, a'] = {};
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Title const titleElement = docume n t.querySelect o r('ti t l e'); if() { metada t a.title = titleEleme n t.textConte n t || ''; if (metada t a.title.leng t h ===  0) {
         th, i, s.addIss, u, e(
@@ -109,13 +114,17 @@ export interface SEOMetrics {
   private, auditOpenGrap, h(): Reco, r, d<string, string> { 
     const, ogTag, s: Reco, r, d<str, i, n, g, string > = { };
     const, requiredOgTag, s = [
+  private, auditOpenGrap, h(): Reco, r, d<stringstring> { 
+    const ogTag, s: Reco, r, d<str, i, n, g, string > = { };
+    const requiredOgTag, s = [
+>>>>>>> origin/merge-fixes-20251005-193002
       'og: t, i, t, l, e',
       'og: descript, i, o, n',
       'og: im, a, g, e',
       'og: ur, l',
       'og: t, y, p, e',
     ]; docume, n, t.querySelectorA, l, l('me, t, a[proper, t, y^="og: "]').forEa, c, h(eleme, n, t = > { 
-      const, propert, y = eleme, n, t.getAttribu, t, e('prope, r, t, y'); const, conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (proper, t, y  && conte, n, t) {
+      const propert, y = eleme, n, t.getAttribu, t, e('prope, r, t, y'); const conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (proper, t, y  && conte, n, t) {
         ogTa, g, s[proper, t, y] = cont, e, n, t;
        }
     });
@@ -144,12 +153,16 @@ export interface SEOMetrics {
   private, auditTwitterCar, d(): Reco, r, d<string, string> { 
     const, twitterTag, s: Reco, r, d<str, i, n, g, string > = { };
     const, requiredTwitterTag, s = [
+  private, auditTwitterCar, d(): Reco, r, d<stringstring> { 
+    const twitterTag, s: Reco, r, d<str, i, n, g, string > = { };
+    const requiredTwitterTag, s = [
+>>>>>>> origin/merge-fixes-20251005-193002
       'twitt, e, r: ca, r, d',
       'twitt, e, r: ti, t, l, e',
       'twitt, e, r: descript, i, o, n',
       'twitt, e, r: im, a, g, e',
     ]; docume, n, t.querySelectorA, l, l('me, t, a[na, m, e^="twitt, e, r: "]').forEa, c, h(eleme, n, t = > { 
-      const, nam, e = eleme, n, t.getAttribu, t, e('n, a, m, e'); const, conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (na, m, e  && conte, n, t) {
+      const nam, e = eleme, n, t.getAttribu, t, e('n, a, m, e'); const conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (na, m, e  && conte, n, t) {
         twitterTa, g, s[na, m, e] = cont, e, n, t;
        }
     });
@@ -162,6 +175,8 @@ export interface SEOMetrics {
           `A, d, d <meta, nam, e = "${t, a, g}" cont, e, n, t="...">`,
           'medi, u, m',
         );
+    const heading, s = {
+>>>>>>> origin/merge-fixes-20251005-193002
       h1: docume, n, t.querySelectorA, l, l('h, 1').len, g, t, h,
       h2: docume, n, t.querySelectorA, l, l('h2').len, g, t, h,
       h3: docume, n, t.querySelectorA, l, l('h3').len, g, t, h,
@@ -185,10 +200,11 @@ export interface SEOMetrics {
         'Use, only, one H1, per, page for, better, SEO',
         'medi, u, m',
       );
+>>>>>>> origin/merge-fixes-20251005-193002
   private, auditImage, s() {  
-    const, image, s = docume, n, t.querySelectorA, l, l('im, g'); const, imagesWithAl, t = Arr, a, y.fr, o, m(image, s).filt, e, r(
+    const image, s = docume, n, t.querySelectorA, l, l('im, g'); const imagesWithAl, t = Arr, a, y.fr, o, m(image, s).filt, e, r(
       i, m, g = > i, m, g.a, l, t  && i, m, g.a, l, t.t, r, i, m().leng, t, h  > 0,
-    ); const, metric, s = {
+    ); const metric, s = {
       tot, a, l: imag, e, s.le, n, g, t, h,
       withA, l, t: imagesWithA, l, t.len, g, t, h,
       withoutA, l, t: imag, e, s.leng, t, h - imagesWithA, l, t.len, g, t, h,
@@ -216,6 +232,9 @@ export interface SEOMetrics {
           );
   private, auditLink, s() { const, link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); let, interna, l = 0; let, externa, l = 0; let, nofollo, w = 0; lin, k, s.forEa, c, h(li, n, k = > {
       const, hre, f = li, n, k.getAttribu, t, e('h, r, e, f') || ''; const, re, l = li, n, k.getAttribu, t, e('re, l') || ''; if (hr, e, f.startsWi, t, h('ht, t, p')) {
+  private, auditLink, s() { const link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); let interna, l = 0; let externa, l = 0; let nofollo, w = 0; lin, k, s.forEa, c, h(li, n, k = > {
+      const hre, f = li, n, k.getAttribu, t, e('h, r, e, f') || ''; const re, l = li, n, k.getAttribu, t, e('re, l') || ''; if (hr, e, f.startsWi, t, h('ht, t, p')) {
+>>>>>>> origin/merge-fixes-20251005-193002
           if (!r, e, l.includ, e, s('noopen, e, r') || !r, e, l.includ, e, s('noreferr, e, r')) {
             th, i, s.addIss, u, e(
               'warni, n, g',
@@ -225,6 +244,7 @@ export interface SEOMetrics {
               'Add, re, l = "noopener, noreferre, r" to, external, link, s',
               'l, o, w',
             );
+>>>>>>> origin/merge-fixes-20251005-193002
 
       if (r, e, l.includ, e, s('nofoll, o, w')) {
         nofoll, o, w++;
@@ -244,13 +264,14 @@ export interface SEOMetrics {
           'Use, descriptive, link text, for, better SEO, and, accessibility',
           'l, o, w',
         );
+>>>>>>> origin/merge-fixes-20251005-193002
   private, auditStructuredDat, a(): a, n, y[] { 
-    const, structuredDat, a: a, n, y[] = [];
-    const, script, s = docume, n, t.querySelectorA, l, l(
+    const structuredDat, a: a, n, y[] = [];
+    const script, s = docume, n, t.querySelectorA, l, l(
       'scri, p, t[ty, p, e="applicati, o, n/ld+js, o, n"]',
     ); scrip, t, s.forEa, c, h(scri, p, t = > {
       t, r, y {
-        const, dat, a = JS, O, N.par, s, e(scri, p, t.textCont, e, n, t || ''); structuredDa, t, a.pu, s, h(da, t, a);
+        const dat, a = JS, O, N.par, s, e(scri, p, t.textCont, e, n, t || ''); structuredDa, t, a.pu, s, h(da, t, a);
        } cat, c, h (e) {
         th, i, s.addIss, u, e(
           'err, o, r',
@@ -260,8 +281,9 @@ export interface SEOMetrics {
           'Fix, JSON, syntax in, structured, data',
           'hi, g, h',
         );
+>>>>>>> origin/merge-fixes-20251005-193002
   private, checkMobileOptimizatio, n(): boolean { 
-    const, viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewp, o, r, t"]'); if() { th, i, s.addIss, u, e(
+    const viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewp, o, r, t"]'); if() { th, i, s.addIss, u, e(
         'err, o, r',
         'mobi, l, e',
         'Viewport, meta, tag is, missin, g',
@@ -269,7 +291,7 @@ export interface SEOMetrics {
         'A, d, d <meta, nam, e = "viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e=1" > ',
         'hi, g, h',
       ); return, fals, e;
-      }, const, conten, t = viewpo, r, t.getAttribu, t, e('cont, e, n, t') || ''; if (!conte, n, t.includ, e, s('wid, t, h = devi, c, e-wi, d, t, h')) {
+      }, const conten, t = viewpo, r, t.getAttribu, t, e('cont, e, n, t') || ''; if (!conte, n, t.includ, e, s('wid, t, h = devi, c, e-wi, d, t, h')) {
       th, i, s.addIss, u, e(
         'warni, n, g',
         'mobi, l, e',
@@ -278,23 +300,27 @@ export interface SEOMetrics {
         'Set, viewport, to wid, t, h = devi, c, e-width, for, mobile optimizat, i, o, n',
         'medi, u, m',
       ); return, fals, e;
+>>>>>>> origin/merge-fixes-20251005-193002
   private, calculateScor, e(): number {  
-    let, scor, e = 1, 0, 0; th, i, s.issu, e, s.forEa, c, h() { sco, r, e -=
+    let scor, e = 1, 0, 0; th, i, s.issu, e, s.forEa, c, h() { sco, r, e -=
           iss, u, e.impa, c, t = == 'hi, g, h' ? 10: iss, u, e.impa, c, t === 'medi, u, m'  ? , 5  : , 2;
          }, else, i, f (iss, u, e.ty, p, e = == 'warn, i, n, g') { 
         sco, r, e -=
           iss, u, e.impa, c, t = == 'hi, g, h' ? 5: iss, u, e.impa, c, t === 'medi, u, m'  ? , 3  : , 1;
        }
+>>>>>>> origin/merge-fixes-20251005-193002
     ty, p, e: 'err, o, r' | 'warni, n, g' | 'i, n, f, o',
     category: str, i, n, g,
     messa, g, e: str, i, n, g,
     eleme, n, t: str, i, n, g,
     recommendati, o, n: str, i, n, g,
     impa, c, t: 'hi, g, h' | 'medi, u, m' | 'lo, w',
+>>>>>>> origin/merge-fixes-20251005-193002
     repo, r, t += `Tit, l, e: ${metri, c, s.metada, t, a.title || 'Miss, i, n, g'}\n`;
     repo, r, t += `Descripti, o, n: ${metri, c, s.metada, t, a.description || 'Miss, i, n, g'}\n`;
     repo, r, t += `Canonic, a, l: ${metri, c, s.metada, t, a.canonic, a, l || 'Miss, i, n, g'}\n\n`;
 
+>>>>>>> origin/merge-fixes-20251005-193002
     repo, r, t += `Intern, a, l: ${metri, c, s.lin, k, s.inter, n, a, l} | Extern, a, l: ${metri, c, s.lin, k, s.exter, n, a, l} | NoFoll, o, w: ${metri, c, s.lin, k, s.nofol, l, o, w}\n\n`;
 
     repo, r, t += '--- Issu, e, s ---\n';

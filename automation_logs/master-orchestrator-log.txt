@@ -22,3 +22,17 @@ npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quote
 npm error JSON.parse Failed to parse JSON data.
 npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
 npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3247 (line 73 column 1) while parsing near "...ase/ssr\": \"^0.6.1\",\n\n    \"@s..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.
+npm error JSON.parse Invalid package.json: JSONParseError: Expected double-quoted property name in JSON at position 3488 (line 79 column 1) while parsing near "...-query\": \"^5.85.5\",\n\n    \"@supaba..."
+npm error JSON.parse Failed to parse JSON data.

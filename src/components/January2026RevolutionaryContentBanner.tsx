@@ -1,42 +1,82 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
+import React from "react";
 const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
   const, revolutionaryConten, t = [
     {
-      title: 'Ne, x, t-Generation, Enterprise, Automation: The, 2026, AI Revolu, t, i, o, n',
-      description: '98% Automation, Ra, t, e, 1000x, Processing, Speed, $2.5B, Cost, Savings',
-      slug: 'ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automat, i, o, n',
-      category: 'AI, Innovati, o, n',
-      emo, j, i: '🚀',
-      highlig, h, t: 'BREAKTHRO, U, G, H',
-      impa, c, t: '98% Automat, i, o, n',
-      ty, p, e: 'b, l, o, g',
-      readTime: '15, m, i, n',
-    },
+      tit, l, e: "Ne, x, t-Generation, Enterprise, Automatio
+  n: The, 2026, AI Revoluti, o, n","
+      descripti, o, n: "98% Automation, Rat, e, 1000x, Processing, Speed, $2.5B, Cost, Savings","
+      sl, u, g: "ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automati, o, n","
+      catego, r, y: "AI, Innovatio, n","
+      emo, j, i: "🚀","
+      highlig, h, t: "BREAKTHROU, G, H","
+      impa, c, t: "98% Automati, o, n","
+      ty, p, e: "bl, o, g","
+      readTi, m, e: "15, mi, n"
+    }
     {
-      title: 'Quantum, AI, Breakthrough: Revolutionary, Computing, Paradig, m',
-      description: '10^18, Operation, s/se, c, 99.9% Accura, c, y, $10B, Market, Value',
-      slug: 'quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-comput, i, n, g',
-      category: 'Quantum, Computi, n, g',
-      emo, j, i: '⚛️',
-      highlig, h, t: 'REVOLUTION, A, R, Y',
-      impa, c, t: '10^18, Op, s/se, c',
-      ty, p, e: 'b, l, o, g',
-      readTime: '18, m, i, n',
-    },
+      tit, l, e: "Quantum, AI, Breakthroug
+  h: Revolutionary, Computing, Paradigm","
+      descripti, o, n: "10^18, Operation, s/s, e, c, 99.9% Accura, c, y, $10B, Market, Value","
+      sl, u, g: "quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-computi, n, g","
+      catego, r, y: "Quantum, Computin, g","
+      emo, j, i: "⚛️","
+      highlig, h, t: "REVOLUTIONA, R, Y","
+      impa, c, t: "10^18, Op, s/s, e, c","
+      ty, p, e: "bl, o, g","
+      readTi, m, e: "18, mi, n"
+    }
     {
-      title: 'Fortune, 500, Quantum AI, Transformatio, n: $10B, Revenue, Impac, t',
-      description: '5, 0, 0% Productivity, Increa, s, e, 95% Process, Automatio, n, Market, Leadershi, p',
-      slug: 'fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-2, 0, 2, 6',
-      category: 'Success, Sto, r, y',
-      emo, j, i: '🏆',
-      highlig, h, t: 'MEGA, SUCCE, S, S',
-      impa, c, t: '$10B, Reven, u, e',
-      ty, p, e: 'ca, s, e-st, u, d, y',
-      readTime: '12, m, i, n',
-    },
-  ]; retu, r, n (
-    <section, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n'>
+      tit, l, e: "Fortune, 500, Quantum AI, Transformati, o
+  n: $10B, Revenue, Impact","
+      descripti, o, n: "5, 0, 0% Productivity, Increas, e, 95% Process, Automatio, n, Market, Leadershi, p","
+      sl, u, g: "fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-20, 2, 6","
+      catego, r, y: "Success, Stor, y","
+      emo, j, i: "🏆","
+      highlig, h, t: "MEGA, SUCCES, S","
+      impa, c, t: "$10B, Revenu, e","
+      ty, p, e: "ca, s, e-stu, d, y","
+import React from "react";';
+const, January2026RevolutionaryContentBanne, r: Rea, c, t.FC = () => {
+  const, revolutionaryConten, t = [
+    {
+      tit, l, e: "Ne, x, t-Generation, Enterprise, Automatio
+  n: The, 2026, AI Revoluti, o, n",";
+      descripti, o, n: "98% Automation, Rat, e, 1000x, Processing, Speed, $2.5B, Cost, Savings",";
+      sl, u, g: "ai-20, 2, 6-ne, x, t-generati, o, n-enterpri, s, e-automati, o, n",";
+      catego, r, y: "AI, Innovatio, n",";
+      emo, j, i: "🚀",";
+      highlig, h, t: "BREAKTHROU, G, H",";
+      impa, c, t: "98% Automati, o, n",";
+      ty, p, e: "bl, o, g",";
+      readTi, m, e: "15, mi, n"
+    }
+    {
+      tit, l, e: "Quantum, AI, Breakthroug
+  h: Revolutionary, Computing, Paradigm",";
+      descripti, o, n: "10^18, Operation, s/s, e, c, 99.9% Accura, c, y, $10B, Market, Value",";
+      sl, u, g: "quant, u, m-ai-breakthrou, g, h-20, 2, 6-revolutiona, r, y-computi, n, g",";
+      catego, r, y: "Quantum, Computin, g",";
+      emo, j, i: "⚛️",";
+      highlig, h, t: "REVOLUTIONA, R, Y",";
+      impa, c, t: "10^18, Op, s/s, e, c",";
+      ty, p, e: "bl, o, g",";
+      readTi, m, e: "18, mi, n"
+    }
+    {
+      tit, l, e: "Fortune, 500, Quantum AI, Transformati, o
+  n: $10B, Revenue, Impact",";
+      descripti, o, n: "5, 0, 0% Productivity, Increas, e, 95% Process, Automatio, n, Market, Leadershi, p",";
+      sl, u, g: "fortu, n, e-5, 0, 0-quant, u, m-ai-transformati, o, n-20, 2, 6",";
+      catego, r, y: "Success, Stor, y",";
+      emo, j, i: "🏆",";
+      highlig, h, t: "MEGA, SUCCES, S",";
+      impa, c, t: "$10B, Revenu, e",";
+      ty, p, e: "ca, s, e-stu, d, y",";
+      readTi, m, e: "12, mi, n"
+    }
+  ];
+  return (
+    <section, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, Backgroun, d */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />

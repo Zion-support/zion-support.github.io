@@ -1,7 +1,7 @@
 // @ts-nocheck import React fr o m 'rea c t';
 
-export, default, function Pa, g, e() { 
-  retu, r, n (
+export default function Pa, g, e() { 
+  return (
     <main, classNam, e = 'm, i, n-h-screen, b, g-white, tex, t-gr, a, y-9, 0, 0'>
       <section, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
         <div, classNam, e='m, a, x-w-3, x, l'>

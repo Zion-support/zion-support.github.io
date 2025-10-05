@@ -1,45 +1,81 @@
-import { Link } from "react-router-dom";
-const September30NewContentMegaBanner = () => {
-  const newArticles = [
+const, September30NewContentMegaBanne, r = () => {
+  const, newArticle, s = [
     {
-      title: "AI Neural Coding Breakthrough",
-      description: "Programming at the speed of thought with 99.7% accuracy",
-      icon: Brain,
-      link: "/blog/ai-neural-coding-breakthrough-2025",
-      category: "Neural AI",
-      impact: "95% faster development"
-    },
+      tit, l, e: "AI, Neural, Coding Breakthrou, g, h","
+      descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accura, c, y","
+      ic, o, n: Bra, i, n
+      li, n, k: "/bl, o, g/ai-neur, a, l-codi, n, g-breakthrou, g, h-20, 2, 5","
+      catego, r, y: "Neural, A, I","
+      impa, c, t: "95% faster, developmen, t"
+    }
     {
-      title: "AI Holographic Computing",
-      description: "Immersive 3D data visualization with zero latency",
-      icon: Layers,
-      link: "/blog/ai-holographic-computing-2025",
-      category: "Spatial AI",
-      impact: "10x faster insights"
-    },
+      tit, l, e: "AI, Holographic, Computing","
+      descripti, o, n: "Immersive, 3D, data visualization, with, zero laten, c, y","
+      ic, o, n: Laye, r, s
+      li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-20, 2, 5","
+      catego, r, y: "Spatial, A, I","
+      impa, c, t: "10x, faster, insights"
+    }
     {
-      title: "AI Quantum Consciousness",
-      description: "1M times faster reasoning with emergent creativity",
-      icon: Atom,
-      link: "/blog/ai-quantum-consciousness-2025",
-      category: "Quantum AI",
-      impact: "1M× performance"
-    },
+      tit, l, e: "AI, Quantum, Consciousness","
+      descripti, o, n: "1M, times, faster reasoning, with, emergent creativi, t, y","
+      ic, o, n: At, o, m
+      li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-20, 2, 5","
+      catego, r, y: "Quantum, A, I","
+      impa, c, t: "1M× performan, c, e"
+    }
     {
-      title: "AI Molecular Manufacturing",
-      description: "Atomic-precision production with zero waste",
-      icon: Zap,
-      link: "/blog/ai-molecular-manufacturing-2025",
-      category: "NanoTech",
-      impact: "100% recyclable"
-    },
+      tit, l, e: "AI, Molecular, Manufacturing","
+      descripti, o, n: "Atom, i, c-precision, production, with zero, wast, e","
+      ic, o, n: Z, a, p
+      li, n, k: "/bl, o, g/ai-molecul, a, r-manufacturi, n, g-20, 2, 5","
+      catego, r, y: "NanoTe, c, h","
+      impa, c, t: "1, 0, 0% recyclab, l, e"
+    }
     {
-      title: "AI Personalized Education",
-      description: "10x better learning outcomes for every student",
-      icon: GraduationCap,
-      link: "/blog/ai-personalized-education-revolution-2025",
-      category: "EdTech AI",
-      impact: "97% mastery rate"
+      tit, l, e: "AI, Personalized, Education","
+      descripti, o, n: "10x, better, learning outcomes, for, every stude, n, t","
+      ic, o, n: GraduationC, a, p
+      li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-20, 2, 5","
+      catego, r, y: "EdTech, A, I","
+      tit, l, e: "AI, Neural, Coding Breakthrou, g, h",";
+      descripti, o, n: "Programming, at, the speed, of, thought with, 9, 9.7% accura, c, y",";
+      ic, o, n: Bra, i, n
+      li, n, k: "/bl, o, g/ai-neur, a, l-codi, n, g-breakthrou, g, h-20, 2, 5",";
+      catego, r, y: "Neural, A, I",";
+      impa, c, t: "95% faster, developmen, t"
+    }
+    {
+      tit, l, e: "AI, Holographic, Computing",";
+      descripti, o, n: "Immersive, 3D, data visualization, with, zero laten, c, y",";
+      ic, o, n: Laye, r, s
+      li, n, k: "/bl, o, g/ai-holograph, i, c-computi, n, g-20, 2, 5",";
+      catego, r, y: "Spatial, A, I",";
+      impa, c, t: "10x, faster, insights"
+    }
+    {
+      tit, l, e: "AI, Quantum, Consciousness",";
+      descripti, o, n: "1M, times, faster reasoning, with, emergent creativi, t, y",";
+      ic, o, n: At, o, m
+      li, n, k: "/bl, o, g/ai-quant, u, m-consciousne, s, s-20, 2, 5",";
+      catego, r, y: "Quantum, A, I",";
+      impa, c, t: "1M× performan, c, e"
+    }
+    {
+      tit, l, e: "AI, Molecular, Manufacturing",";
+      descripti, o, n: "Atom, i, c-precision, production, with zero, wast, e",";
+      ic, o, n: Z, a, p
+      li, n, k: "/bl, o, g/ai-molecul, a, r-manufacturi, n, g-20, 2, 5",";
+      catego, r, y: "NanoTe, c, h",";
+      impa, c, t: "1, 0, 0% recyclab, l, e"
+    }
+    {
+      tit, l, e: "AI, Personalized, Education",";
+      descripti, o, n: "10x, better, learning outcomes, for, every stude, n, t",";
+      ic, o, n: GraduationC, a, p
+      li, n, k: "/bl, o, g/ai-personaliz, e, d-educati, o, n-revoluti, o, n-20, 2, 5",";
+      catego, r, y: "EdTech, A, I",";
+      impa, c, t: "97% mastery, rat, e"
     }
   ];
   return (
@@ -111,15 +147,6 @@ const September30NewContentMegaBanner = () => {
           <Link
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
-          >
-            <Brain className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-            Explore All Breakthroughs
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <Link
-            to="/contact"
-            className="border-2 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
-          >
             <Sparkles className="w-5 h-5" />
             Get Started Today
           </Link>

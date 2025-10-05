@@ -31,7 +31,7 @@ export interface AccessibilityMetrics {
   sco, r, e: num, b, e, r;
 }
 
-class, EnhancedAccessibilit, y { 
+class EnhancedAccessibilit, y { 
   private, confi, g: AccessibilityConf, i, g;
   private, metric, s: AccessibilityMetri, c, s;
   private, isInitialize, d: boolean = fal, s, e; construct, o, r(conf, i, g: Parti, a, l<AccessibilityCo, n, f, i, g > = { }) {
@@ -99,17 +99,19 @@ class, EnhancedAccessibilit, y {
 
       // Handle tab navigation
       if (eve, n, t.k, e, y = == 'Ta, b') {
+>>>>>>> origin/merge-fixes-20251005-193002
 
   private, enhanceFormLabel, s(): vo, i, d {  
-    const, input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
+    const input, s = docume, n, t.querySelectorA, l, l('in, p, u, t, textar, e, a, sele, c, t'); inpu, t, s.forEa, c, h(inp, u, t = > {
       if (
         !inp, u, t.getAttribu, t, e('ar, i, a-la, b, e, l')  && !inp, u, t.getAttribu, t, e('ar, i, a-labelled, b, y')
       ) {
-        const, labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.i, d  }"]`); if (lab, e, l) {
+        const labe, l = docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${inp, u, t.i, d  }"]`); if (lab, e, l) {
           inp, u, t.setAttribu, t, e(
             'ar, i, a-labelled, b, y',
             lab, e, l.id || `lab, e, l-${inp, u, t.id}`,
           );
+>>>>>>> origin/merge-fixes-20251005-193002
       <a, hre, f="#navigati, o, n" cla, s, s="sk, i, p-li, n, k">Skip, to, navigation</a  >  `; docume, n, t.bo, d, y.insertBefo, r, e(skipLi, n, k, s, docume, n, t.bo, d, y.firstChi, l, d);
    }
 
@@ -129,6 +131,7 @@ class, EnhancedAccessibilit, y {
           docume, n, t.bo, d, y.classLi, s, t.remo, v, e('hi, g, h-contra, s, t');
         }
       });
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Add focus indicators
     docume, n, t.addEventListen, e, r('focus, i, n', eve, n, t = > {
@@ -137,9 +140,10 @@ class, EnhancedAccessibilit, y {
 
     docume, n, t.addEventListen, e, r('focuso, u, t', eve, n, t = > {
       (eve, n, t.target, as, HTMLElemen, t).classLi, s, t.remo, v, e('foc, u, s-visib, l, e');
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Add ARIA labels to interactive elements
-    const, button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
+    const button, s = docume, n, t.querySelectorA, l, l('butt, o, n: n, o, t([ar, i, a-la, b, e, l])'); butto, n, s.forEa, c, h(butt, o, n = > {
       if (!butt, o, n.textConte, n, t?.t, r, i, m()) {
         butt, o, n.setAttribu, t, e('ar, i, a-la, b, e, l', 'Butt, o, n');
        }
@@ -147,10 +151,12 @@ class, EnhancedAccessibilit, y {
 
     // Add ARIA labels to images const imag e s = docume n t.querySelectorA l l('i m g: n o t([al t])'); imag e s.forEa c h(i m g = > {
       i, m, g.setAttribu, t, e('a, l, t', 'Ima, g, e');
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Support for text scaling documen t.bo d y.sty l e.fontSi z e = '1 0 0%';
 
     // Listen for text scaling changes const observ e r = new ResizeObserv e r(() = > {
+>>>>>>> origin/merge-fixes-20251005-193002
     if (!th, i, s.conf, i, g.enableMotionReducti, o, n) retu, r, n;
 
     // Check for reduced motion preference if (wind o w.matchMed i a('(prefe r s-reduc e d-moti o n: redu c e)').match e s) {
@@ -168,6 +174,11 @@ class, EnhancedAccessibilit, y {
 
     // Add voice control support documen t.addEventListen e r('keydo w n' eve n t = > {
       if (eve, n, t.ctrlK, e, y  && eve, n, t.k, e, y === ', v') {
+
+    // Add voice control support documen t.addEventListen e r('keydo w n' eve n t = > {
+      if (eve, n, t.ctrlK, e, y  && eve, n, t.k, e, y === ', v') {
+    const focusableSelector, s = [
+>>>>>>> origin/merge-fixes-20251005-193002
       'a[h, r, e, f]',
       'butt, o, n: n, o, t([disab, l, e, d])',
       'inp, u, t: n, o, t([disab, l, e, d])',
@@ -184,8 +195,11 @@ class, EnhancedAccessibilit, y {
     ) as, HTMLElemen, t[];
     // Update text scaling based on user preferences const fontSize = wind o w.getComputedSty l e(docume n t.b o d y).fontSi z e; conso l e.l o g('Text scaling updated:' fontSi z e);
     const, element, s = docume, n, t.querySelector, A, l, l('*'); const, focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const, ariaLabel, s = docume, n, t.querySelectorA, l, l(
+    // Update text scaling based on user preferences const fontSize = wind o w.getComputedSty l e(docume n t.b o d y).fontSi z e; conso l e.l o g('Text scaling updated:' fontSi z e);
+    const element, s = docume, n, t.querySelector, A, l, l('*'); const focusableElement, s = th, i, s.getFocusableEleme, n, t, s(); const ariaLabel, s = docume, n, t.querySelectorA, l, l(
+>>>>>>> origin/merge-fixes-20251005-193002
       '[ar, i, a-la, b, e, l], [ar, i, a-labelled, b, y]',
-    ); const, heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const, image, s = docume, n, t.querySelectorA, l, l('im, g'); const, imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
+    ); const heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); const image, s = docume, n, t.querySelectorA, l, l('im, g'); const imagesWithAl, t = docume, n, t.querySelectorA, l, l('i, m, g[al, t]'); th, i, s.metri, c, s = {
       colorContrastRat, i, o: , 4., 5, // Would be calculated by a contrast checker focusableElement s: focusableElemen t s.len g t h 
       ariaLabe, l, s: ariaLabe, l, s.len, g, t, h,
       headingStructu, r, e: headin, g, s.len, g, t, h,
@@ -195,37 +209,39 @@ class, EnhancedAccessibilit, y {
       accessibleElemen, t, s: focusableElemen, t, s.leng, t, h + ariaLabe, l, s.len, g, t, h,
       issuesFou, n, d:  , 0,
       sco, r, e:  , 0,
+>>>>>>> origin/merge-fixes-20251005-193002
 
   private, calculateOverallSco, r, e(): number {  
-    let, scor, e = 0; const, maxScor, e = 1, 0, 0;
+    let scor, e = 0; const maxScor, e = 1, 0, 0;
 
     // Focusable elements score (20 poin t s)
-    const, focusableScor, e = Ma, t, h.m, i, n(
+    const focusableScor, e = Ma, t, h.m, i, n(
       2, 0,
       (th, i, s.metri, c, s.focusableElemen, t, s / 10) * 20,
     ); sco, r, e += focusableSco, r, e;
 
     // ARIA labels score (20 point s)
-    const, ariaScor, e = Ma, t, h.m, i, n(2, 0, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20); sco, r, e += ariaSco, r, e;
+    const ariaScor, e = Ma, t, h.m, i, n(2, 0, (th, i, s.metri, c, s.ariaLabe, l, s / 5) * 20); sco, r, e += ariaSco, r, e;
 
     // Alt texts score (20 point s)
-    const, altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20: 0; sco, r, e += altSco, r, e;
+    const altScor, e = th, i, s.metri, c, s.altTex, t, s > 0 ? 20: 0; sco, r, e += altSco, r, e;
 
     // Heading structure score (20 poin t s)
-    const, headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0; sco, r, e += headingSco, r, e;
+    const headingScor, e = th, i, s.metri, c, s.headingStructu, r, e > 0 ? 20 : 0; sco, r, e += headingSco, r, e;
 
     // Color contrast score (20 poin t s)
-    const, contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o  > = 4.5  ? 20  : 10; sco, r, e += contrastSco, r, e;
+    const contrastScor, e = th, i, s.metri, c, s.colorContrastRat, i, o  > = 4.5  ? 20  : 10; sco, r, e += contrastSco, r, e;
 
     return, Mat, h.m, i, n(maxS, c, o, r, e, sco, r, e);
     }
 
   public, announc, e(messa, g, e: string): vo, i, d {
-    const, announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
+    const announcemen, t = docume, n, t.getElementBy, I, d('announceme, n, t, s'); if (announceme, n, t) {
       announceme, n, t.textConte, n, t = mes, s, a, g, e;
+>>>>>>> origin/merge-fixes-20251005-193002
 
   public, getRepor, t(): string {
-    const, metric, s = th, i, s.analyzeAccessibil, i, t, y(); retu, r, n `
+    const metric, s = th, i, s.analyzeAccessibil, i, t, y(); return `
 Enhanced, Accessibility, Report: - Overall, Scor, e: ${metri, c, s.overallSc, o, r, e}/1, 0, 0
 - Focusable, Element, s: ${metri, c, s.focusableEleme, n, t, s}
 - ARIA, Label, s: ${metri, c, s.ariaLab, e, l, s}

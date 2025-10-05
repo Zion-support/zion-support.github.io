@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
-// import AdvancedCacheManager from '../utils/advancedCache';
-import { enhancedAccessibility } from '../utils/enhancedAccessibility';
-import { securityAuditor } from '../utils/securityAuditor';
-// import EnhancedUXManager from '../utils/enhancedUXManager';
 
 interface DashboardData {
   analytics: {
@@ -40,94 +35,7 @@ interface DashboardData {
     setData({
       analytics: analyticsData || {},
       cache: cache || {},
-      performance: {
-        memoryUsage:
-          (
-            performance as Performance & {
-              memory?: { usedJSHeapSize?: number };
-            }
-          ).memory?.usedJSHeapSize || 0,
-        memoryLimit:
-          (
-            performance as Performance & {
-              memory?: { jsHeapSizeLimit?: number };
-            }
-          ).memory?.jsHeapSizeLimit || 0
-      },
-      security: {
-        vulnerabilities: 0,
-        threats: 0,
-        score: 100
-      },
-      ux: {
-        loadTime: 0,
-        interactivity: 0,
-        visualStability: 0
-      }
       const sizes = ["Bytes", "KB", "MB", "GB"];
       const i = Math.floor(Math.log(bytes) / Math.log(k));
       return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
-        className="fixed bottom-4 right-4 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors"
-        title="Open Dashboard"
-      >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-        </svg>
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-hidden">
-        <div className="flex justify-between items-center p-4 border-b">
-          <h2 className="text-xl font-bold">Advanced Dashboard</h2>
-          <button
-            onClick={() => setIsOpen(false)}
-            className="text-gray-500 hover:text-gray-700"
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-        </div>
-        
-        <div className="p-4">
-          <div className="flex space-x-2 mb-4">
-            <button
-              onClick={() => setActiveTab("overview")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "overview" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Overview
-            </button>
-            <button
-              onClick={() => setActiveTab("analytics")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "analytics" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Analytics
-            </button>
-            <button
-              onClick={() => setActiveTab("performance")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "performance" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Performance
-            </button>
-            <button
-              onClick={() => setActiveTab("security")}
-              className={`px-4 py-2 rounded ${
-                activeTab === "security" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
-              }`}
-            >
-              Security
-            </button>
-          </div>
-          
-          {data && (
-            <div className="space-y-4">
-              {activeTab === "overview" && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="bg-blue-50 p-4 rounded-lg">
-                    <h3 className="font-semibold text-blue-800">Page Views</h3>
-                    <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
 >>>>>>> cursor/fix-errors-and-merge-to-main-99e9

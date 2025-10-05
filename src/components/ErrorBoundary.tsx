@@ -4,6 +4,7 @@ import { AlertTriangle } from 'lucide-react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+>>>>>>> origin/merge-fixes-20251005-193002
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {

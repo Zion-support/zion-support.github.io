@@ -8,3 +8,7 @@ find /workspace/src -type f \( -name "*.ts" -o -name "*.tsx" \) ! -name "*.backu
     
     # Remove conflict markers and choose the cleaner version
     sed -i 's///g' "$file"
+find /workspace/src -type f \( -name "*.ts" -o -name "*.tsx" \) ! -name "*.backup.*" -exec grep -l "\|\|    echo "Fixing: $file"
+    
+    # Remove conflict markers and choose the cleaner version
+    sed -i 's///g' "$file"

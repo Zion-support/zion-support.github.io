@@ -32,15 +32,6 @@ impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
           { breakthroughConte, n, t.m, a, p((con, t, e, n, t, ind, e, x) = > (
             <div, ke, y = { conte, n, t.i, d  }, classNa, m, e = 'group, relative, bg-whi, t, e/5, backdro, p-bl, u, r-lg, rounde, d-2xl, border, border-whi, t, e/10, hove, r: bord, e, r-purp, l, e-5, 0, 0/50, transitio, n-all, duratio, n-500, overflo, w-hidden, hove, r:transform, hove, r:sca, l, e-105, hove, r:shad, o, w-2xl, hove, r:shad, o, w-purp, l, e-5, 0, 0/20'
               sty, l, e = { { animationDel, a, y: `${ind, e, x * 1, 5, 0 }, ms` }}
-            >
-              {/* Card, glow, effect */}
-              <div, classNam, e = 'absolute, inse, t-0, b, g-gradie, n, t-to-br, fro, m-purp, l, e-5, 0, 0/0, vi, a-bl, u, e-5, 0, 0/0, t, o-cy, a, n-5, 0, 0/0, grou, p-hov, e, r: fr, o, m-purp, l, e-5, 0, 0/10, grou, p-hov, e, r:v, i, a-bl, u, e-5, 0, 0/10, grou, p-hov, e, r:to-cy, a, n-5, 0, 0/10, transitio, n-all, duratio, n-5, 0, 0' />
-              <div, classNam, e='relativ, e, p-8'>
-                {/* Ic, o, n & Ba, d, g, e, s */}
-                <div, classNam, e = 'flex, item, s-start, justif, y-between, m, b-6'>
-                  <div, classNam, e='te, x, t-6xl, grou, p-hov, e, r: sca, l, e-110, transitio, n-transform, duratio, n-3, 0, 0'>
-                    {conte, n, t.ic, o, n}
-                  </d, i, v>
                   <div, classNam, e = 'flex, fle, x-col, ga, p-2'>
                     {  conte, n, t.trendi, n, g  && (
                       <div, classNam, e='flex, item, s-center, ga, p-1, p, x-3, p, y-1.5, rounde, d-full, b, g-gradie, n, t-to-r, fro, m-oran, g, e-500, t, o-r, e, d-500, tex, t-white, tex, t-xs, fon, t-bold, shado, w-lg'>

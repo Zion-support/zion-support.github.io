@@ -1,4 +1,4 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 
       id:  , 6,
       title: 'AI, Ethics, and Governa, n, c, e',
@@ -77,3 +77,26 @@ import, React, from 'rea, c, t';
                 <a, hre, f='/insigh, t, s'
                   classNa, m, e='bg-gradie, n, t-to-r, fro, m-purp, l, e-500, t, o-cy, a, n-600, hove, r:fr, o, m-purp, l, e-400, hove, r:to-cy, a, n-500, tex, t-white, fon, t-bold, p, y-4, p, x-8, rounde, d-xl, transitio, n-all, duratio, n-300, shado, w-lg, hove, r:shad, o, w-purp, l, e-5, 0, 0/50, flex, items-center, justif, y-center, ga, p-2'
                 >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Autonomous Systems</h3>
+              <p className="text-sm opacity-90">
+                Self-managing AI systems that operate independently
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Quantum Computing</h3>
+              <p className="text-sm opacity-90">
+                Next-generation computing power for AI applications
+              </p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-2">Neural Networks</h3>
+              <p className="text-sm opacity-90">
+                Advanced machine learning architectures
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

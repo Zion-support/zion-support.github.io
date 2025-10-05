@@ -930,7 +930,7 @@ export const posts: BlogPo, s, t[] = [
   {
     slug: 'gen, a, i-platfo, r, m-bluepri, n, t-2, 0, 2, 5',
     title: 'GenAI, Platform, Blueprint: Shipping, Weekly, With Guardra, i, l, s',
-    description: 'Reference, architecture, for prom, p, t, s, too, l, s, eva, l, s, and, policy, tests that, let, teams move, fast, safely.',
+    description: 'Reference, architecture, for prom, p, t, s, too, l, s, eva, l, s, and, policy, tests that, let teams move, fast, safely.',
     category: 'Ge, n, A, I',
     published, A, t: '20, 2, 5-09-2, 9',
     featured: t, r, u, e,
@@ -1082,7 +1082,7 @@ export const posts: BlogPo, s, t[] = [
   },
   {
     slug: 'clo, u, d-migrati, o, n-be, s, t-practi, c, e, s',
-    title: 'Cloud, Migration, Best Practic, e, s: Lessons, from, 100+ Proje, c, t, s',
+    title: 'Cloud, Migration, Best Practic, e, s: Lessons, from 100+ Proje, c, t, s',
     description: 'Essential, strategies, for successful, cloud, migratio, n, including, risk, mitigation, cost, optimizatio, n, and, timeline, management.',
     category: 'Cloud, Strate, g, y',
     published, A, t: '20, 2, 5-01-1, 8',

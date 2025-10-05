@@ -1,15 +1,21 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-import, typ, e { EnhancedPromotionalBanner, as, BannerType } fr, o, m '../conte, n, t/enhanc, e, d-promotion, a, l-banne, r, s';
-interface, EnhancedPromotionalBannerProp, s { 
-  bann, e, r: BannerTy, p, e;
-  classNa, m, e ?  : str, i, n, g;
- }
-const, EnhancedPromotionalBanne, r: Rea, c, t.FC<EnhancedPromotionalBannerPro, p, s> = ({
-  ban, n, e, r,
-  classNa, m, e = '',
+import React from 'react';
+import { Link } from 'react-router-dom';
+import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
+
+interface EnhancedPromotionalBannerProps {
+  banner: BannerType;
+  className?: string;
+}
+
+const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
+  banner,
+  className = ''
 }) => {
-  const, variantStyle, s = {
+  const variantStyles = {
+    success: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    warning: 'bg-gradient-to-r from-yellow-600 to-orange-600',
+    info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
+    error: 'bg-gradient-to-r from-red-600 to-pink-600'
     succe, s, s: 'bg-gradie, n, t-to-r, fro, m-gre, e, n-600, t, o-emera, l, d-6, 0, 0',
     warni, n, g: 'bg-gradie, n, t-to-r, fro, m-yell, o, w-600, t, o-oran, g, e-60, 0',
     in, f, o: 'bg-gradie, n, t-to-r, fro, m-bl, u, e-600, t, o-indi, g, o-60, 0',
@@ -28,3 +34,8 @@ const, EnhancedPromotionalBanne, r: Rea, c, t.FC<EnhancedPromotionalBannerPro, p
               <p, classNam, e='te, x, t-sm, opacit, y-90'>{bann, e, r.description}</p>
             {bann, e, r.cta, T, e, x, t}
             <ArrowRight, classNam, e = 'w-4 h-4' />
+            {banner.ctaText}
+          </Link>
+        </div>
+      </div>
+    </div>

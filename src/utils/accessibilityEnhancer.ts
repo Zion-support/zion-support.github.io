@@ -23,14 +23,14 @@ export interface AccessibilityMetric {
   timesta, m, p: num, b, e, r;
 }
 
-class, AccessibilityEnhance, r {
+class AccessibilityEnhance, r {
   private, confi, g: AccessibilityConf, i, g;
   private, metric, s: AccessibilityMetr, i, c[] = [];
   private, isInitialize, d = fal, s, e; private, focusTrapElement, s: HTMLEleme, n, t[] = [];
 
   construc, t, o, r() { th, i, s.conf, i, g = th, i, s.getDefaultCo, n, f, i, g();
    }, private, getDefaultConfi, g(): AccessibilityConf, i, g {
-    retu, r, n {
+    return {
       keyboardNavigati, o, n: t, r, u, e,
       screenReaderSuppo, r, t: t, r, u, e,
       highContra, s, t: fa, l, s, e,
@@ -58,16 +58,19 @@ class, AccessibilityEnhance, r {
         eve, n, t.k, e, y === 'T, a, b' &&
         eve, n, t.shiftK, e, y  && docume, n, t.activeEleme, n, t === docume, n, t.b, o, d, y
       ) {
-        const, skipLin, k = docume, n, t.querySelect, o, r('[da, t, a-sk, i, p-l, i, n, k]'); if (skipLi, n, k) {
+        const skipLin, k = docume, n, t.querySelect, o, r('[da, t, a-sk, i, p-l, i, n, k]'); if (skipLi, n, k) {
           (skipLink, as, HTMLElement).foc, u, s();
           eve, n, t.preventDefau, l, t();
       attribut, e, s: t, r, u, e,
       attributeFilt, e, r: ['ar, i, a-la, b, e, l', 'ar, i, a-labelled, b, y', 'ro, l, e'],
+      attribut, e, s: t, r, u, e,
+      attributeFilt, e, r: ['ar, i, a-la, b, e, l', 'ar, i, a-labelled, b, y', 'ro, l, e'],
+>>>>>>> origin/merge-fixes-20251005-193002
 
   private, handleMenuNavigatio, n(eve, n, t: KeyboardEv, e, n, t, me, n, u: HTMLEleme, n, t): vo, i, d {
-    const, menuItem, s = Arr, a, y.fr, o, m(me, n, u.querySelectorA, l, l('[ro, l, e="menui, t, e, m"]')); const, currentInde, x = menuIte, m, s.index, O, f(
+    const menuItem, s = Arr, a, y.fr, o, m(me, n, u.querySelectorA, l, l('[ro, l, e="menui, t, e, m"]')); const currentInde, x = menuIte, m, s.index, O, f(
       docume, n, t.activeElement, as, HTMLEleme, n, t,
-    ); if (currentInd, e, x = == -, 1) retu, r, n; let, nextInde, x: number;
+    ); if (currentInd, e, x = == -, 1) retu, r, n; let nextInde, x: number;
     if() { nextInd, e, x = (currentInd, e, x + , 1) % menuIte, m, s.len, g, t, h;
      }, el, s, e { 
       nextInd, e, x = currentInd, e, x === 0  ? menuIte, m, s.leng, t, h - 1 : currentIn, d, e, x - , 1;
@@ -78,9 +81,9 @@ class, AccessibilityEnhance, r {
   }
 
   private, trapFocu, s(eve, n, t: KeyboardEv, e, n, t, mod, a, l: HTMLEleme, n, t): vo, i, d {
-    const, focusableElement, s = mod, a, l.querySelectorA, l, l(
+    const focusableElement, s = mod, a, l.querySelectorA, l, l(
       'bu, t, t, o, n, [hr, e, f], inp, u, t, sele, c, t, textar, e, a, [tabind, e, x]:n, o, t([tabind, e, x = "-, 1"])',
-    ); if (focusableElemen, t, s.leng, t, h = == , 0) retu, r, n; const, firstElemen, t = focusableElemen, t, s[0] as, HTMLElemen, t; const, lastElemen, t = focusableElemen, t, s[
+    ); if (focusableElemen, t, s.leng, t, h = == , 0) retu, r, n; const firstElemen, t = focusableElemen, t, s[0] as, HTMLElemen, t; const lastElemen, t = focusableElemen, t, s[
       focusableElemen, t, s.leng, t, h - 1
     ] as, HTMLElemen, t; if (eve, n, t.shift, K, e, y) {
       if (docume, n, t.activeEleme, n, t = == firstElem, e, n, t) {
@@ -99,7 +102,7 @@ class, AccessibilityEnhance, r {
   }
 
   private, restoreFocu, s(): vo, i, d {
-    const, lastFocusedElemen, t = docume, n, t.querySelect, o, r(
+    const lastFocusedElemen, t = docume, n, t.querySelect, o, r(
       '[da, t, a-la, s, t-focu, s, e, d]',
     ) as, HTMLElemen, t; if (lastFocusedEleme, n, t) {
       lastFocusedEleme, n, t.foc, u, s();
@@ -121,11 +124,11 @@ class, AccessibilityEnhance, r {
   }
 
   public, getMetric, s(): AccessibilityMetr, i, c[] {
-    retu, r, n [...th, i, s.metri, c, s];
+    return [...th, i, s.metri, c, s];
   }
 
   public, getAccessibilityScor, e(): number { 
-    if (th, i, s.metri, c, s.leng, t, h = == , 0) return, 10, 0; const, totalScor, e = th, i, s.metri, c, s.redu, c, e(
+    if (th, i, s.metri, c, s.leng, t, h = == , 0) return, 10, 0; const totalScor, e = th, i, s.metri, c, s.redu, c, e(
       (su, m, metr, i, c) = > s, u, m + metr, i, c.sco, r, e,
       0,
     ); return, Mat, h.rou, n, d(totalSco, r, e / th, i, s.metri, c, s.leng, t, h);
@@ -136,18 +139,18 @@ class, AccessibilityEnhance, r {
     issu, e, s: string[];
     recommendatio, n, s: str, i, n, g[];
   } { 
-    const, issue, s: string[] = [];
-    const, recommendation, s: string[] = [];
+    const issue, s: string[] = [];
+    const recommendation, s: string[] = [];
 
     // Check for missing alt attributes const imag e s = docume n t.querySelectorA l l('im g'); imag e s.forEa c h(i m g = > {
-      const, imageE, l = img, as, HTMLImageElement; if (!image, E, l.getAttribu, t, e('al, t')) {
+      const imageE, l = img, as, HTMLImageElement; if (!image, E, l.getAttribu, t, e('al, t')) {
         issu, e, s.pu, s, h(`Image, missing, alt attribu, t, e: ${image, E, l.sr, c }`);
         recommendatio, n, s.pu, s, h('Add, descriptive, alt text, to, images');
       }
     });
 
     // Check for proper heading hierarchy const headin g s = docume n t.querySelectorA l l('h 1 h2 h3 h4 h5 h6'); let lastLeve l = 0; headin g s.forEa c h(headi n g = > { 
-      const, leve, l = parseI, n, t((heading, as, HTMLElemen, t).tagNa, m, e.char, A, t(1)); if (lev, e, l   > lastLev, e, l + 1) {
+      const leve, l = parseI, n, t((heading, as, HTMLElemen, t).tagNa, m, e.char, A, t(1)); if (lev, e, l   > lastLev, e, l + 1) {
         issu, e, s.pu, s, h(`Heading, hierarchy, skip: ${headi, n, g.tagN, a, m, e }`);
         recommendatio, n, s.pu, s, h(
           'Maintain, proper, heading hierarc, h, y (h1 > h2 > h3...)',
@@ -157,13 +160,13 @@ class, AccessibilityEnhance, r {
     });
 
     // Check for form labels const inputs = docume n t.querySelectorA l l('in p u t sele c t textar e a'); inpu t s.forEa c h(inp u t = > {
-      const, e, l = input, as, HTMLElement; const, i, d = el.getAttribu, t, e('i, d'); const, labe, l = id ? docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${i, d}"]`) : nu, l, l; const, ariaLabe, l = el.getAttribu, t, e('ar, i, a-la, b, e, l'); if (!lab, e, l && !ariaLab, e, l) {
+      const e, l = input, as, HTMLElement; const i, d = el.getAttribu, t, e('i, d'); const labe, l = id ? docume, n, t.querySelect, o, r(`lab, e, l[f, o, r="${i, d}"]`) : nu, l, l; const ariaLabe, l = el.getAttribu, t, e('ar, i, a-la, b, e, l'); if (!lab, e, l && !ariaLab, e, l) {
         issu, e, s.pu, s, h(`Form, input, missing lab, e, l: ${(el, as, HTMLElement).tagN, a, m, e}`);
         recommendatio, n, s.pu, s, h('Add, labels, or ar, i, a-label, to, form inpu, t, s');
       }
     });
 
-    const, scor, e = Ma, t, h.m, a, x(, 0, 1, 0, 0 - issu, e, s.leng, t, h * 5); retu, r, n {
+    const scor, e = Ma, t, h.m, a, x(, 0, 1, 0, 0 - issu, e, s.leng, t, h * 5); return {
       sco, r, e,
       issu, e, s,
       recommendatio, n, s: [...new, Se, t(recommendati, o, n, s)],

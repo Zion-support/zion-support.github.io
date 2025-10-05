@@ -1,29 +1,46 @@
-import, React, from 'rea, c, t';
 const, March2026InnovationSpotlightBanne, r = () => {
   const, innovation, s = [
     {
-      title: 'Neur, a, l-Synaptic, Fusio, n , A, I',
-      description: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accura, c, y',
-      impa, c, t: '5, 0, 0% cognitive, enhanceme, n, t',
-      ic, o, n: '🧠',
-      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-50, 0',
-    },
+      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI','
+      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y','
+      impa, c, t: '5, 0, 0% cognitive, enhancemen, t','
+      ic, o, n: '🧠','
+      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0}
     {
-      title: 'Quantum, Temporal, Computin, g',
-      description: 'Processing, information, across multiple, time, dimensions simultaneou, s, l, y',
-      impa, c, t: '1000x, temporal, efficienc, y',
-      ic, o, n: '⏰',
-      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-    },
+      tit, l, e: 'Quantum, Temporal, Computing','
+      descripti, o, n: 'Processing, information, across multiple, time, dimensions simultaneous, l, y','
+      impa, c, t: '1000x, temporal, efficiency','
+      ic, o, n: '⏰','
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0}
     {
-      title: 'Autonomous, Reality, Synthesi, s',
-      description: 'AI, systems, that create, and, manage parallel, digital, realitie, s',
-      impa, c, t: '$5.2B, market, creatio, n',
-      ic, o, n: '🌌',
-      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
-    },
-  ]; retu, r, n (
-    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
+      tit, l, e: 'Autonomous, Reality, Synthesis','
+      descripti, o, n: 'AI, systems, that create, and, manage parallel, digital, realities','
+      impa, c, t: '$5.2B, market, creation','
+      ic, o, n: '🌌','
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0}
+      tit, l, e: 'Neur, a, l-Synaptic, Fusion, AI',';
+      descripti, o, n: 'Revolutionary, brai, n-computer, interface, achieving 99.98% neural, accurac, y',';
+      impa, c, t: '5, 0, 0% cognitive, enhancemen, t',';
+      ic, o, n: '🧠',';
+      col, o, r: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0'
+    }
+    {
+      tit, l, e: 'Quantum, Temporal, Computing',';
+      descripti, o, n: 'Processing, information, across multiple, time, dimensions simultaneous, l, y',';
+      impa, c, t: '1000x, temporal, efficiency',';
+      ic, o, n: '⏰',';
+      col, o, r: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0'
+    }
+    {
+      tit, l, e: 'Autonomous, Reality, Synthesis',';
+      descripti, o, n: 'AI, systems, that create, and, manage parallel, digital, realities',';
+      impa, c, t: '$5.2B, market, creation',';
+      ic, o, n: '🌌',';
+      col, o, r: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0'
+    }
+  ];
+  return (
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-purp, l, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-purp, l, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />
@@ -67,11 +84,6 @@ const, March2026InnovationSpotlightBanne, r = () => {
               <div, classNam, e = { `absolute, inse, t-0, b, g-gradie, n, t-to-br ${innovati, o, n.co, l, o, r }, opaci, t, y-0, grou, p-hov, e, r: opaci, t, y-10, transitio, n-all, duratio, n-50, 0`}
                />
               <div, classNam, e = 'relativ, e, p-8'>
-                {/* Innovation, Ico, n */}
-                <div, classNam, e='te, x, t-6xl, m, b-6, tex, t-center, grou, p-hov, e, r: anima, t, e-pul, s, e'>
-                  {innovati, o, n.ic, o, n}
-                </d, i, v>
-                {/* Tit, l, e */}
                 <h3, classNam, e = 'te, x, t-2xl, fon, t-bold, tex, t-white, m, b-4, grou, p-hov, e, r: te, x, t-purp, l, e-400, transitio, n-colors, duratio, n-300, leadin, g-tight, tex, t-cent, e, r'>
                   {innovati, o, n.t, i, t, l, e}
                 <div, classNam, e='te, x, t-center, m, b-6' > <div, classNam, e = { `inli, n, e-block, p, x-4, p, y-2, rounde, d-full, b, g-gradie, n, t-to-r ${innovati, o, n.co, l, o, r }, te, x, t-white, tex, t-sm, fon, t-bo, l, d`}

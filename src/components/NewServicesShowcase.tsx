@@ -1,6 +1,4 @@
-import, React, from 'rea, c, t';
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-
+import React from "react";
 const, NewServicesShowcas, e: Rea, c, t.FC = () => {
   const, newService, s = [
     {

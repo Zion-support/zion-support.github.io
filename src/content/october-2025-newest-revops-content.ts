@@ -55,7 +55,7 @@ export const octoberNewestRevOpsContent = [
     tags: ['Case, Stu, d, y', 'Sa, a, S', 'Revenue, Operation, s', 'Enterprise, A, I'],
     highligh, t, s: [
       '$127M, incremental, annual reve, n, u, e',
-      '89% forecast, accurac, y (from, 4, 9%)',
+      '89% forecast, accurac, y (from 4, 9%)',
       '42% increase, in, win rat, e, s',
       '3.2x, pipeline, velocity improveme, n, t',
       '12-month, transformation, timeline',

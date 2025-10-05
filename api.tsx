@@ -4,10 +4,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
       response: 'JSON array of content objects',
       description: 'Authenticate user credentials',
+      response: 'JSON array of content objects',
+      description: 'Authenticate user credentials',
+>>>>>>> origin/merge-fixes-20251005-193002
       description: 'Get analytics and metrics',
       parameters: ['date_range', 'metrics'],
       response: 'Analytics data object',
     },
+>>>>>>> origin/merge-fixes-20251005-193002
     <div className='min-h-screen bg-gray-50'>
       <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>
         <div className='container mx-auto px-4 text-center'>
@@ -16,18 +20,21 @@ import { Link } from 'react-router-dom';
             <span className='text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400'>
               Documentation
             </span>
+>>>>>>> origin/merge-fixes-20251005-193002
       <div className='py-16 bg-white'>
         <div className='container mx-auto px-4'>
           <div className='grid md:grid-cols-3 gap-8'>
             <div className='text-center'>
               <div className='w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4'>
                 <Code className='w-8 h-8 text-blue-600' />
+>>>>>>> origin/merge-fixes-20251005-193002
       <div className='py-16 bg-gray-50'>
         <div className='container mx-auto px-4'>
           <h2 className='text-3xl font-bold text-gray-900 text-center mb-12'>
             API Endpoints
           </h2>
           <div className='space-y-6'>
+>>>>>>> origin/merge-fixes-20251005-193002
       <div className='py-16 bg-white'>
         <div className='container mx-auto px-4'>
           <div className='max-w-3xl mx-auto text-center'>

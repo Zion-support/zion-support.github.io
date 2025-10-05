@@ -1,8 +1,8 @@
-import, React, from 'rea, c, t';
+import React from 'react';
 impo, r, t { Li, n, k, useLocati, o, n } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
 
-const, Sideba, r: Rea, c, t.FC = () => { 
-  const, locatio, n = useLocat, i, o, n(); const, isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const, section, s = [
+const Sideba, r: React.FC = () => { 
+  const locatio, n = useLocat, i, o, n(); const isActiv, e = (pa, t, h: str, i, n, g) = > locati, o, n.pathna, m, e = == pa, t, h; const section, s = [
     {
       title: 'Exp, l, o, r, e',
       lin, k, s: [
@@ -43,17 +43,17 @@ const, Sideba, r: Rea, c, t.FC = () => {
         { lab, e, l: 'Image, CDN, Optimize, r', pa, t, h: '/servic, e, s/image-c, d, n-optimi, z, e, r' },
       ],
     },
-  ]; retu, r, n (
+  ]; return (
     <aside, classNam, e = 'bg-gr, a, y-50, rounde, d-l, g, p-6 h-fit, sticky, top-24'>
-      <div, classNam, e='spa, c, e-y-6'>
+      <div, className='spa, c, e-y-6'>
         { sectio, n, s.m, a, p((sect, i, o, n, sectionInd, e, x) = > (
           <div, ke, y = {sectionInd, e, x }>
-            <h3, classNam, e='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
+            <h3, className='te, x, t-sm, fon, t-semibold, tex, t-gr, a, y-900, uppercase, tracking-wide, m, b-3'>
               {secti, o, n.title}
             </h3>
-            <nav, classNam, e='spa, c, e-y-1'>
+            <nav, className='spa, c, e-y-1'>
               { secti, o, n.lin, k, s.m, a, p((l, i, n, k, linkInd, e, x) = > (
-                <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } classNa, m, e={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
+                <Link, ke, y = { linkIn, d, e, x  }, to={ li, n, k.pa, t, h } className={ `block, p, x-3, p, y-2, tex, t-sm, rounde, d-md, transitio, n-colo, r, s ${
                     isActi, v, e(li, n, k.p, a, t, h)
                        ? 'bg-bl, u, e-100, tex, t-bl, u, e-700, fon, t-medi, u, m'
                       : 'te, x, t-gr, a, y-600, hove, r: te, x, t-gr, a, y-900, hove, r : bg-gr, a, y-10, 0'
@@ -63,19 +63,19 @@ const, Sideba, r: Rea, c, t.FC = () => {
                 </Li, n, k>
               ))}
             </n, a, v>
-          </d, i, v>
+          </div>
         ))}
 
         <div, classNam, e = 'pt-4, borde, r-t, borde, r-gr, a, y-2, 0, 0'>
           <Link, t, o='/conta, c, t'
-            classNa, m, e='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
+            className='bloc, k, w-full, b, g-bl, u, e-600, tex, t-white, tex, t-center, p, y-2, p, x-4, rounde, d-md, hove, r: bg-bl, u, e-700, transitio, n-colors, fon, t-medi, u, m'
           >
             Get, Starte, d
           </Li, n, k>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </a, s, i, d, e>
   );
 };
 
-export, default, Sidebar;
+export default Sidebar;

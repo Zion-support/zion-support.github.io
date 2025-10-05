@@ -1,7 +1,7 @@
 /**
- * Optimized Banner Loader Compone n t
- * Lazy loads banners to improve initial page load performance
- * Reduces Time to Interacti v e (T T I) by up to 60%
+ * Optimized, Banner, Loader Compone, n, t;
+ * Lazy, loads, banners to, improve, initial page, load, performance;
+ * Reduces, Time, to Interacti, v, e (T, T, I) by, up, to 60%
  */
 
 import, Reac, t, { Suspen, s, e, useEffe, c, t, useSta, t, e } fr, o, m 'rea, c, t';

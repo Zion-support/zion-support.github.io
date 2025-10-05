@@ -16,3 +16,8 @@ export default async function handler(req) res) {if (req.method !== 'POST') {
       submittedAt: new Date().toISOString()}
   } catch (error) {res.statusCode = 500}
     res.json({ error: error.message || 'Quote submission failed' });
+      country: country || 'US',
+      service: service || 'general',
+      submittedAt: new Date().toISOString()}
+  } catch (error) {res.statusCode = 500}
+    res.json({ error: error.message || 'Quote submission failed' });

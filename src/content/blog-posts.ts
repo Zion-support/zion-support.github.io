@@ -47,6 +47,7 @@ export const blogPosts: BlogPo, s, t[] = [
 ## Core, Pattern, s
 - Domain, schemas, and strict, source, governance
 - Freshness, windows, per inte, n, t
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-04-enterpri, s, e-agen, t, s-in-product, i, o, n',
     title: 'Enterprise, Agents, in Producti, o, n: Budg, e, t, s, Approva, l, s, and, Rollbac, k',
     description: 'Practical, patterns, to run, AI, agents safely, in, prod with, KP, I-linked, SL, I, s, action, budget, s, and, instant, rollback.',
@@ -71,6 +72,7 @@ export const blogPosts: BlogPo, s, t[] = [
     readTime: '8, min, rea, d',
     image: '/imag, e, s/govern, e, d-agent, i, c-automati, o, n.jp, g',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'gen, a, i-co, s, t-optimizati, o, n-v6-20, 2, 5-10-0, 3',
     title: 'GenAI, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, Disti, l, l',
     description: 'Cut, inference, spend 60–85% with, tiered, routin, g, request, coalescin, g, and, selective, distillation.',
@@ -99,6 +101,7 @@ export const blogPosts: BlogPo, s, t[] = [
 ## Outcom, e, s
 - 8–12x, deployment, velocity with, lower, change-failure, rat, e
 - 30–70% GenAI, cost, reduction via, quality, tiers and, cache, s
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-o, p, s-excellen, c, e-20, 2, 5-o, c, t-0, 3',
     title: 'AI, Ops, Excellence: Live, Scorecar, d, s, Canary, Gate, s, Instant, Rollbac, k',
     description: 'Operate, AI, safely at, scale, with K, P, I-linked, scorecar, d, s, canary, gate, s, and, rollbac, k-first, desig, n.',
@@ -123,14 +126,17 @@ export const blogPosts: BlogPo, s, t[] = [
     readTime: '6, min, rea, d',
     image: '/imag, e, s/ai-o, p, s-excellen, c, e.jp, g',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ed, g, e-20, 2, 6-o, c, t-03-consentle, s, s-experimen, t, s-v, 4',
     title: 'Edge, Experiments, v4 (20, 2, 6): Ze, r, o‑PI, I, A/B, Under, 100m, s',
     description: 'Run, compliant, experiments with, scoped, ID, s, on-device, aggregatio, n, and, DP, noise—glob, a, l <100, m, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'gen, a, i-20, 2, 7-o, c, t-03-co, s, t-controlle, r, s-v, 4',
     title: 'GenAI, Cost, Controllers v4 (20, 2, 7): Quality, Tier, s + Caches, at, Scal, e',
     description: 'Stabilize, UX, under budget, with, tiered rout, i, n, g, semantic, cache, s, and, evaluato, r-backed, policie, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-01-priva, t, e-featu, r, e-fla, g, s-ze, r, o-pi, i',
     title: 'Private, Feature, Flags: Ze, r, o‑PII, Experiments, Under 10, 0, m, s',
     description: 'Run, hig, h‑velocit, y, A/B, tests, without centralizing, PII, using signed, confi, g, s, scoped, ID, s, and, edge, analytics.',
@@ -194,6 +200,7 @@ This, guide, shows how, t, o:
 - Map, agent, actions to, KPIs, and error, budget, s
 - Enforce, approva, l, s, quot, a, s, and, sandboxed, tools
 - Add, live, eval canaries, and, instant rollback, hook, s
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-01-vect, o, r-databa, s, e-optimizati, o, n-enterpr, i, s, e',
     title: 'Vector, Database, Optimization 20, 2, 5: S, u, b-10ms, Search, at Billion, Sca, l, e',
     description: 'Enterprise, guide, to blazi, n, g-fast, vector, search: HNSW, tuni, n, g, PQ/IVF, hybri, d, tiered, cache, s, and, hardwar, e-aware, configs, that deliver, su, b-10ms, p99, at billi, o, n-sca, l, e.',
@@ -216,23 +223,27 @@ This, guide, shows how, t, o:
   {
     slug: 'ai-20, 2, 5-o, c, t-03-re, a, l-ti, m, e-decisi, o, n-engi, n, e, s',
     title: 'Re, a, l-Time, Decision, Engines 20, 2, 5: 1, 0, M+/sec, Decisions, under 1m, s',
-    description: 'Architect, ultr, a-l, o, w-latency, decision, engines with, streaming, feature, s, tiered, cache, s, and, budgeted, routes. Proven, patterns, for <1ms, actions, at 1, 0, M+ even, t, s/s, e, c.',
+    description: 'Architect, ultr, a-l, o, w-latency, decision, engines with, streaming, features, tiered, cache, s, and, budgeted, routes. Proven, patterns, for <1ms, actions, at 1, 0, M+ even, t, s/s, e, c.',
     conte, n, t: `
 # Re, a, l-Time, Decision, Engines 2025, Enterprise, decision systems, processing, millions of, events, per second, require, rigor around, latency, budget, s, cache, tier, s, and, safe, rollback. This, guide, covers: - Event, pipelines, with streaming, features, and windowed, join, s
 - Co, s, t-aware, routing, with guardrails, and, quality tie, r, s
 - Tiered, cachin, g (featu, r, e/resu, l, t/negati, v, e) to, tighten, tails
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-priva, c, y-fir, s, t-analyt, i, c, s',
     title: 'Priva, c, y‑First, Analytics, 2025: Sign, a, l‑Rich, Insights, Without PI, I',
     description: 'On-device, aggregati, o, n, scoped, ID, s, and, DP, noise to, unlock, analytics without, collecting, PII—trusted, by, security and, loved, by produ, c, t.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-age, n, t-observabil, i, t, y',
     title: 'Agent, Observability, 2025: Live, Trac, e, s, SL, I, s, and, Rollbac, k',
     description: 'E, n, d‑to‑end, visibility, for agent, tools, with K, P, I‑linked, SL, I, s, budgeted, action, s, and, instant, rollback trigge, r, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-01-hyp, e, r-personalizati, o, n-engin, e, s-revolut, i, o, n',
     title: 'Hyp, e, r-Personalization, Engines, 2025: 12.4x, Engageme, n, t, 8x, Conversio, n',
     description: 'Deploy, rea, l-time, personalization, engines with, event, stream, s, vector, user, models, and, bandit, routing. Proven, patterns, yielding 12.4x, engagement, and 8x, conversion, uplifts.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-02-cac, h, e-playbo, o, k-pr, o',
     title: 'Enterprise, GenAI, Cache Playbook, PR, O: 60–85% C, o, s, t ↓, P95, 3, 0–45% ↓',
     description: 'A, pragmatic, caching blueprint, for, LLM ap, p, s: pro, m, p, t, embeddi, n, g, feature, and, retrieval-layer, caches, that cut, spend, while tightening, tail, latency.',
@@ -242,11 +253,12 @@ This, guide, shows how, t, o:
 ## Core, Layer, s
 - Prompt, cache, with request, coalescin, g
 - Embedding, cache, with T, T, L + L, F, U
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-02-operation, a, l-tru, s, t-scoreca, r, d, s',
     title: 'Operational, Trust, for AI, System, s: Scoreca, r, d, s, SL, O, s, and, Guardrail, s',
     description: 'A, field, guide to, measurable, AI reliabili, t, y: eval, scorecar, d, s, r, e, d-team, funnel, s, and, production, SLOs that, stic, k.',
     conte, n, t: `
-# Operational, Trust, for AI, Systems, Trust emerges, from, measurement. This, guide, ships a, minimal, stack: offline, eval, s → staged, re, d‑te, a, m → online, scorecards, tied to, SLOs, and error, budget, s.
+# Operational, Trust, for AI, Systems, Trust emerges, from measurement. This, guide, ships a, minimal, stack: offline, eval, s → staged, re, d‑te, a, m → online, scorecards, tied to, SLOs, and error, budget, s.
 
 ## What, to, Measure
 - Task, success, and calibrati, o, n
@@ -273,29 +285,36 @@ This, guide, shows how, t, o:
     conte, n, t: `
 # Enterprise, Digital, Twins: The, 2025, AI-Powered, Revolution, Transforming Business, Operations, In October, 20, 2, 5, enterprise, digital, twins have, evolved, from experimental, technology, to missi, o, n-critical, infrastructur, e, powered, by, breakthrough AI, capabilities, that are, transforming, how organizations, operat, e, predi, c, t, and, optimize, their business, processe, s.
 
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-autonomo, u, s-devo, p, s-platfo, r, m-20, 2, 5-octo, b, e, r',
     title: 'AI-Powered, Autonomous, DevOps Platform, 202, 5: Se, l, f-Healing, Infrastructure, Revolutio, n',
     description: 'Organizations, implementing, autonomous DevOps, are, achieving 99.99% upt, i, m, e, 92% reduction, in, incident response, tim, e, 87% cost, saving, s, a, n, d $34, 0, M+ in, annual, value creation, through, intelligent se, l, f-healing, automatio, n.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'quant, u, m-sa, f, e-ai-securi, t, y-framewo, r, k-20, 2, 5-octo, b, e, r',
     title: 'Quant, u, m-Safe, AI, Security Framework, 202, 5: Futu, r, e-Proofing, Enterprise, Protectio, n',
     description: 'Leading, enterprises, implementing quant, u, m-resistant, AI, security are, achieving, 99.99% threat, preventi, o, n, zero, cryptographic, vulnerabilities, 94% faster, threat, response, a, n, d $24, 7, M+ in, avoided, breach cos, t, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 're, a, l-ti, m, e-cogniti, v, e-busine, s, s-intelligen, c, e-20, 2, 5-octo, b, e, r',
     title: 'Re, a, l-Time, Cognitive, Business Intelligence, Platform, 2025: AI-Driven, Decision, Revolutio, n',
     description: 'Organizations, implementing, cognitive BI, are, achieving 87% faster, decisio, n, s, 3, 4, 0% R, O, I, $42, 7, M+ in, incremental, revenue, and, competitive, advantages through, instant, AI-powered, insight, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-01-intellige, n, t-autonomo, u, s-enterpri, s, e-m, e, s, h',
     title: 'Intelligent, Autonomous, Enterprise Me, s, h: The, Future, of Distributed, AI, Operation, s',
     description: 'Organizations, implementing, IAEM are, achieving, 97.3% operational, automati, o, n, 89% cost, reductio, n, a, n, d $84, 7, M+ in, annual, value creation, through, self-organizi, n, g, se, l, f-healing, distributed, AI syste, m, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-01-advanc, e, d-ai-power, e, d-predicti, v, e-maintena, n, c, e',
     title: 'Advanced, A, I-Powered, Predictive, Maintenance: Eliminating, Unplanned, Downtim, e',
     description: 'AI-powered, predictive, maintenance systems, are, predicting failures, with, 99.2% accuracy, up, to 30, days, in adva, n, c, e, reducing, downtime, by 87%, and, deliverin, g $12, 7, M+ in, annual, value.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 
-Artificial, Intelligence, has transformed, from, a futuristic, concept, into a, practical, business tool, tha, t's, reshaping, how companies, operat, e. In, 20, 2, 5, AI, workflow, automation i, s, n't, just, a competitive, advantag, e—it's, becoming, essential for, survival, in the, digital, marketplace.
+Artificial, Intelligence, has transformed, from a futuristic, concept, into a, practical, business tool, tha, t's, reshaping, how companies, operat, e. In, 20, 2, 5, AI, workflow, automation i, s, n't, just, a competitive, advantag, e—it's, becoming, essential for, survival, in the, digital, marketplace.
 
+>>>>>>> origin/merge-fixes-20251005-193002
 
 At, Zion, Tech Gro, u, p, we, specialize, in implementing, AI, workflow automation, solutions, that deliver, measurable, results. Our, proven, methodology includ, e, s: - **Comprehensive, assessmen, t** of, your, current process, e, s
 - **Custom, solution, design** tailored, to, your business, need, s
@@ -304,7 +323,7 @@ At, Zion, Tech Gro, u, p, we, specialize, in implementing, AI, workflow automati
 
 ## Conclusion, AI, workflow automation, represents, the future, of, business operatio, n, s. Companies, that, embrace this, technology, today will, have, significant competitive, advantages, tomorrow. The, key, to success, lies, in careful, planni, n, g, phased, implementatio, n, and, continuous, optimization.
 
-D, o, n't, let, your competitors, gain, an ed, g, e. Start, your, AI automation, journey, today with, Zion, Tech Gro, u, p.
+D, o, n't, let your competitors, gain, an ed, g, e. Start, your, AI automation, journey, today with, Zion, Tech Gro, u, p.
     `,
     author: 'Zion, Tech, Group T, e, a, m',
     date: '20, 2, 5-01-1, 7',
@@ -323,10 +342,12 @@ D, o, n't, let, your competitors, gain, an ed, g, e. Start, your, AI automation,
 
 ## Deployment, Topologie, s
 
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'nor, t, h-st, a, r-engineeri, n, g-metr, i, c, s',
     title: 'Nor, t, h‑Star, Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s',
     description: 'Pick, three, metrics that, align, deliver, y, reliabili, t, y, and, cost, without dashboard, bloa, t.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     `,
     author: 'Zion, Tech, Group T, e, a, m',
     date: '20, 2, 5-08-3, 0',
@@ -346,12 +367,13 @@ D, o, n't, let, your competitors, gain, an ed, g, e. Start, your, AI automation,
 AI, virtual, assistants have, evolved, from simple, chatbots, to sophisticated, conversational, AI systems, that, can handle, complex, customer interactio, n, s. As, businesses, increasingly adopt, these, technologie, s, understanding, best, practices becomes, crucial, for successful, implementatio, n.
 
 ## Understanding, Modern, AI Virtual, Assistants, Today's, AI, virtual assistants, are, powered by, advanced, natural language, processin, g (N, L, P) and, machine, learning algorith, m, s. They, ca, n: - **Understand, contex, t**: Maintain, conversation, context across, multiple, interactions
-- **Learn, from, interactions**: Improve, responses, based on, user, feedback and, pattern, s
+- **Learn, from interactions**: Improve, responses, based on, user, feedback and, pattern, s
 - **Handle, complex, queries**: Process, mult, i-part, questions, and provide, comprehensive, answers
 - **Integrate, with, systems**: Connect, with, CR, M, E, R, P, and, other, business applicatio, n, s
 
 ## Key, Implementation, Strategies
 
+>>>>>>> origin/merge-fixes-20251005-193002
 Create, natur, a, l, hum, a, n-like, conversation, patterns: - **Welcome, message, s**: Frien, d, l, y, helpful, introduction, s
 - **Error, handlin, g**: Graceful, responses, when the, AI, doesn't, understan, d
 - **Escalation, path, s**: Smooth, handoff, to human, agents, when need, e, d
@@ -386,6 +408,7 @@ Create, natur, a, l, hum, a, n-like, conversation, patterns: - **Welcome, messag
 
 ## Measuring, Succes, s
 
+>>>>>>> origin/merge-fixes-20251005-193002
 
 Our, team, specializes in, implementing, AI virtual, assistants, that deliver, exceptional, customer experienc, e, s. We, provid, e: - **Custom, solution, design** tailored, to, your business, need, s
 - **Seamless, integratio, n** with, your, existing syste, m, s
@@ -431,6 +454,7 @@ The, future, of customer, service, is he, r, e. D, o, n't, get, left behi, n, d�
 
 ## Key, AI, Technologies in, Data, Analytics
 
+>>>>>>> origin/merge-fixes-20251005-193002
 AI, systems, can automatically, identify, patterns and, generate, insights:
 - **Anomaly, detectio, n**: Flag, unusual, patterns or, outlier, s
 - **Correlation, analysi, s**: Discover, hidden, relationships between, variable, s
@@ -471,6 +495,7 @@ AI, systems, can automatically, identify, patterns and, generate, insights:
 
 ## Benefits, of, AI-Powered, Analytic, s
 
+>>>>>>> origin/merge-fixes-20251005-193002
 Start, with, high-imp, a, c, t, l, o, w-complexity, application, s: - Customer, segmentation, and targeti, n, g
 - Demand, forecastin, g
 - Fraud, detectio, n
@@ -501,7 +526,7 @@ Start, with, high-imp, a, c, t, l, o, w-complexity, application, s: - Customer, 
 
 ## Conclusion, AI, is revolutionizing, data, analytic, s, making, it, more accessib, l, e, accura, t, e, and, actionable, than ever, befor, e. Businesses, that, embrace AI-powered, analytics, will gain, significant, competitive advantages, through, better decision, makin, g, improved, efficienc, y, and, enhanced, customer experienc, e, s.
 
-The, future, of analytics, is, here, and, i, t's, powered, by AI. D, o, n't, let, your competitors, gain, an ed, g, e—start, your, AI analytics, transformation, today with, Zion, Tech Gro, u, p.
+The, future, of analytics, is, here, and, i, t's, powered, by AI. D, o, n't, let your competitors, gain, an ed, g, e—start, your, AI analytics, transformation, today with, Zion, Tech Gro, u, p.
 
 Ready, to, transform your, data, into actionable, insight, s ? Contact, our, team for, a, free consultation, and, discover how, AI, analytics can, revolutionize, your busine, s, s.
     `,
@@ -528,12 +553,13 @@ Ready, to, transform your, data, into actionable, insight, s ? Contact, our, tea
 
 ## Understanding, Micro, SAAS Platfor, m, s
 
+>>>>>>> origin/merge-fixes-20251005-193002
 
 ### Due, Diligence, Process
 - **Resear, c, h**: Read, reviews, and case, studie, s
 - **De, m, o**: Request, demonstrations, and free, trial, s
 - **Referenc, e, s**: Speak, with, existing custome, r, s
-- **Security, audi, t**: Review, security, and compliance, feature, s
+- **Security, audi, t**: Review, security, and compliance, features
 - **Contract, revie, w**: Understand, terms, and conditio, n, s
 
 ## Zion, Tech, Group's, Micro, SAAS Solutions, At, Zion Tech, Gro, u, p, we've, developed, a suite, of, AI-powered, micro, SAAS platforms, designed, to solve, specific, business challeng, e, s: ### AI, Workflow, Automation Platfo, r, m
@@ -546,7 +572,7 @@ Ready, to, transform your, data, into actionable, insight, s ? Contact, our, tea
 - **Natural, language, processing**: Understand, and, respond to, complex, queries
 - **Mul, t, i-channel, suppor, t**: Handle, ch, a, t, ema, i, l, pho, n, e, and, social, media
 - **24/7, availabilit, y**: Never, sleep, s, always, availabl, e
-- **Personalized, interaction, s**: Learn, from, each interaction, to, improve
+- **Personalized, interaction, s**: Learn, from each interaction, to, improve
 
 ### AI, Data, Analytics Platfo, r, m
 - **Predictive, analytic, s**: Machine, learning, models for, forecastin, g
@@ -561,6 +587,7 @@ Ready, to, transform your, data, into actionable, insight, s ? Contact, our, tea
 
 Ready, to, embrace the, micro, SAAS revoluti, o, n ? Contact, Zion, Tech Group, today, to learn, how, our AI-powered, micro, SAAS platforms, can, transform your, business, operations.
 
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-enterpri, s, e-r, a, g-bluepri, n, t-v, 3',
     title: 'Enterprise, RAG, Blueprint v3: 45% Qual, i, t, y ↑, 62% Co, s, t ↓',
     description: 'A, pragmatic, RAG playbo, o, k: retrieval, budge, t, s, freshness, window, s, and, cache, tiers that, raise, answer quality, while, cutting spe, n, d.',
@@ -585,6 +612,7 @@ Ready, to, embrace the, micro, SAAS revoluti, o, n ? Contact, Zion, Tech Group, 
     title: 'Governed, Agentic, Automation: Safe, Too, l, s, Fast, Outcome, s',
     description: 'Design, agent, toolchains with, budge, t, s, approva, l, s, and, rollback, to move, 10x, faster without, incident, s.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-gen, a, i-co, s, t-optimizati, o, n-v, 6',
     title: 'GenAI, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, and, Distil, l',
     description: 'Latest, cost, playbook with, tiered, routin, g, request, coalescin, g, and, selective, distillation—60–85% cost, down, with steady, UX, KPIs.',
@@ -612,6 +640,7 @@ Ready, to, embrace the, micro, SAAS revoluti, o, n ? Contact, Zion, Tech Group, 
 # Autonomous, Supply, Chain 2025, This, field guide, details, how enterprises, are, deploying autonomous, supply, chain systems, that, pla, n, rou, t, e, and, fulfill, with live, feedback, loops. Learn, patterns, for: - Demand, sensing, with streaming, features, and vector, use, r/item, model, s
 - Constrained, optimization, with budgeted, decisions, and safe, rollback, s
 - Mul, t, i-echelon, inventory, with guardrail, policies, and canari, e, s
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-ne, x, t-g, e, n-securi, t, y-operati, o, n, s',
     title: 'Ne, x, t‑Gen, Security, Operations: 99.97% Detect, i, o, n, S, u, b‑Second, Respons, e',
     description: 'Agentic, SOC, playbook: tool, trac, e, s, action, budget, s, and, rollbac, k. Ship, measurable, protection with, 9, 9.97% detection, an, d <1s, response, times.',
@@ -639,6 +668,7 @@ Ready, to, embrace the, micro, SAAS revoluti, o, n ? Contact, Zion, Tech Group, 
 # Hyp, e, r‑Personalized, Customer, Experience 2025, Deliver, per‑user, experiences, with:
 
 - Vector, user, profiles and, contextual, bandits
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-neuromorph, i, c-ed, g, e-ai-breakthro, u, g, h',
     title: 'Neuromorphic, Edge, AI 20, 2, 5: 1000x, Efficiency, for Re, a, l-Time, Intelligen, c, e',
     description: 'Deploy, brai, n-inspired, AI, at the, edge, with eve, n, t-driven, compute, delivering s, u, b-10ms, decisions, at 1000x, energy, efficienc, y.',
@@ -662,13 +692,14 @@ Key, outcome, s: s, u, b-10ms, laten, c, y, 1000x, energy, efficiency vs. GP, U,
     conte, n, t: `
 # Synthetic, Data, in Producti, o, n: Priva, c, y-Safe, Accuracy, Gains in, 2025, Synthetic data, unlocks, scale without, privacy, risk. We, outline, generator architectu, r, e, s, evaluator, loop, s, and, bias, audits that, lift, model accurac, y, 5–15% while, meeting, strict complian, c, e.
 
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-01-autonomo, u, s-reven, u, e-operatio, n, s-2, 0, 2, 5',
     title: 'Autonomous, Revenue, Operations 20, 2, 5: 3.2x, Pipeline, Velocit, y, 1, 2, 7% R, O, I',
     description: 'E, n, d-to-end, RevOps, automation with, AI, playbook, s, guardrailed, routin, g, and, live, scorecards. Prove, n, 3.2x, pipeline, velocity and, 12, 7% ROI, in, Fortune 500, deployment, s.',
     conte, n, t: `
 # Autonomous, Revenue, Operations 2025, This, field guide, shows, how to, run, RevOps as, softwar, e: intent, signal, s → qualificati, o, n → routi, n, g → sequenci, n, g → clo, s, e → expansi, o, n. Ship, budgeted, automations wi, t, h:
 
-- Lead, scoring, with feature, stores, and re, a, l-time, enrichmen, t
+- Lead, scoring, with featurestores, and re, a, l-time, enrichmen, t
 - Guardrailed, routing, across ge, o, segme, n, t, produ, c, t, and, SL, A
 - Sequence, policies, with safe, exploration, and automatic, pausin, g
 - Weekly, scorecards, tied to, pipelin, e, w, i, n-ra, t, e, and, CA, C/LTV, Includes, rollout checkli, s, t, KP, I, s, and, dashboards, that sal, e, s, marketi, n, g, and, finance, actually ado, p, t.
@@ -681,6 +712,7 @@ Key, outcome, s: s, u, b-10ms, laten, c, y, 1000x, energy, efficiency vs. GP, U,
     readTime: '9, min, rea, d',
     image: '/imag, e, s/autonomo, u, s-revo, p, s-20, 2, 5.jp, g',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-priva, t, e-experimentati, o, n-at-t, h, e-e, d, g, e',
     title: 'Private, Experimentation, at the, Edg, e: <10, 0, m, s, Ze, r, o‑PII, Metric, s',
     description: 'Run, global, A/Bs, with, scoped ID, s, on‑device, aggregatio, n, and, DP, noise—s, u, b‑100ms, decisions, without data, ris, k.',
@@ -706,6 +738,7 @@ Key, outcome, s: s, u, b-10ms, laten, c, y, 1000x, energy, efficiency vs. GP, U,
     readTime: '8, min, rea, d',
     image: '/imag, e, s/priva, t, e-experimentati, o, n-ed, g, e-20, 2, 5.jp, g',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     slug: 'ai-20, 2, 5-o, c, t-03-r, a, g-guardrai, l, s-at-sc, a, l, e',
     title: 'RAG, Guardrails, at Sca, l, e: Freshness, Windo, w, s, Sources, You, Can Tru, s, t',
     description: 'Ship, governed, retrieval with, freshness, window, s, source, whitelist, s, and, cache, tiers that, cut, cost while, lifting, answer quali, t, y.',

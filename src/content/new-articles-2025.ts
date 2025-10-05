@@ -264,7 +264,7 @@ export const newArticles2025: NewArtic, l, e[] = [
   {
     id: 'ai-20, 2, 5-octob, e, r-synthet, i, c-da, t, a-generati, o, n-mast, e, r, y',
     title: '🎲 Synthetic, Data, Generation Mastery, 20, 2, 5',
-    description: 'Train, worl, d-class, AI, models without, privacy, risks using, GA, N, s, VA, E, s, and, diffusion, models. Achieve, 9, 5%+ model, accuracy, with zero, GDPR, violations and, 100x, cost savings, vs, real data, collectio, n.',
+    description: 'Train, worl, d-class AI, models without, privacy, risks using, GA, N, s, VA, E, s, and, diffusion, models. Achieve, 9, 5%+ model, accuracy, with zero, GDPR, violations and, 100x, cost savings, vs, real data, collectio, n.',
     category: 'AI, Traini, n, g',
     publishedDa, t, e: '20, 2, 5-10-0, 1',
     featured: t, r, u, e,
@@ -425,7 +425,7 @@ export const newArticles2025: NewArtic, l, e[] = [
   {
     id: 'quant, u, m-entangleme, n, t-ai-2, 0, 2, 5',
     title: '⚛️ Quantum, Entanglement, for AI: Ne, x, t-Generation, Computi, n, g',
-    description: 'Harness, quantum, entanglement for, AI, achieving computational, breakthrough, s. Solve, N, P-hard, problems, in polynomial, time, and unlock, unprecedented, AI capabilit, i, e, s.',
+    description: 'Harness, quantum, entanglement for, AI, achieving computational, breakthroughs. Solve, N, P-hard, problems, in polynomial, time, and unlock, unprecedented, AI capabilit, i, e, s.',
     category: 'Quantum, Computi, n, g',
     publishedDa, t, e: '20, 2, 5-09-3, 0',
     featured: t, r, u, e,

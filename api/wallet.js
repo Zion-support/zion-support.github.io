@@ -7,3 +7,4 @@ async function handler(req) res) {if (req.method !== 'GET') {
   }
   try {
 module.exports = withErrorLogging(handler);
+module.exports = withErrorLogging(handler);

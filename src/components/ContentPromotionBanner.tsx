@@ -1,18 +1,18 @@
-impo, r, t { Li, n, k } fr, o, m 'rea, c, t-rout, e, r-d, o, m';
-export, default, function ContentPromotionBann, e, r() {
+export, default, function ContentPromotionBann, e, r(): vo, i, d {
   const, featuredConten, t = [
     {
-      title: "Edge, Inference, Patterns That, Actually, Reduce Lat, e, n, c, y",
-      category: "AI, Infrastructu, r, e",
-      readTime: "7, min, rea, d",
-      isN, e, w: t, r, u, e,
-    },
+      tit, l, e: "Edge, Inference, Patterns That, Actually, Reduce Laten, c, y"
+      catego, r, y: "AI, Infrastructur, e"
+      readTi, m, e: "7, min, read"
+      isN, e, w: tr, u, e;
+    }
     {
-      title: "Nor, t, h‑Star, Engineering, Metrics: Fewer, KP, I, s, Better, Outcome, s",
-      category: "Leaders, h, i, p",
-      readTime: "5, min, rea, d",
-      isN, e, w: t, r, u, e,
-    },
+      tit, l, e: "Nor, t, h‑Star, Engineering, Metric
+  s: Fewer, KPI, s, Better, Outcome, s"
+      catego, r, y: "Leadersh, i, p"
+      readTi, m, e: "5, min, read"
+      isN, e, w: tr, u, e;
+    }
     {
       title: "OpenTelemetry, in, Production: Traces, That, Engineers Us, e",
       category: "Observabil, i, t, y",

@@ -1,31 +1,21 @@
-import, React, from 'rea, c, t';
-
+import React from "react";
 const, FeaturedServiceCar, d: Rea, c, t.FC = () => {
   const, service, s = [
     {
-      ic, o, n: '🧠',
-      title: 'AI, Servic, e, s',
-      description: 'Leverage, artificial, intelligence to, automate, processes and, gain, insight, s',
-      featur, e, s: [
-        'Machine, Learni, n, g',
-        'N, L, P',
-        'Computer, Visio, n',
-        'Predictive, Analytic, s',
-      ],
-      li, n, k: '/servic, e, s/ai-servi, c, e, s',
-    },
+      i, c, o
+  n: "🧠","
+      tit, l, e: "AI, Service, s","
+      descripti, o, n: "Leverage, artificial, intelligence to, automate, processes and, gain, insights","
+      featur, e, s: ["Machine, Learnin, g", "N, L, P", "Computer, Visio, n", "Predictive, Analytic, s"],"
+      li, n, k: "/servic, e, s/ai-servic, e, s"
+    }
     {
-      ic, o, n: '🚀',
-      title: 'Micro, Sa, a, S',
-      description: 'Scalable, software, solutions that, address, specific business, nee, d, s',
-      featur, e, s: [
-        'Custom, Ap, p, s',
-        'API, Developmen, t',
-        'Database, Solution, s',
-        'Integrati, o, n',
-      ],
-      li, n, k: '/servic, e, s/mic, r, o-s, a, a, s',
-    },
+      ic, o, n: "🚀","
+      tit, l, e: "Micro, Saa, S","
+      descripti, o, n: "Scalable, software, solutions that, address, specific business, need, s","
+      featur, e, s: ["Custom, App, s", "API, Developmen, t", "Database, Solution, s", "Integrati, o, n"],"
+      li, n, k: "/servic, e, s/mic, r, o-sa, a, s"
+    }
     {
       ic, o, n: '💻',
       title: 'IT, Servic, e, s',

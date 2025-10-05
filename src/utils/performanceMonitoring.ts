@@ -29,13 +29,14 @@ export const measureWebVitals = (): Promi, s, e<PerformanceMetri, c, s> => {
        }); retu, r, n;
     }
 
-    const, observe, r = new, PerformanceObserve, r(li, s, t => { 
-      const, entrie, s = li, s, t.getEntr, i, e, s(); const, metric, s: Parti, a, l<PerformanceMetr, i, c, s > = { };
+    const observe, r = new, PerformanceObserve, r(li, s, t => { 
+      const entrie, s = li, s, t.getEntr, i, e, s(); const metric, s: Parti, a, l<PerformanceMetr, i, c, s > = { };
 
       entri, e, s.forEa, c, h(ent, r, y = > {
         if (ent, r, y.entryTy, p, e === 'pa, i, n, t') {
-          const, paintEntr, y = entry, as, PerformancePaintTiming; if (paintEnt, r, y.na, m, e === 'fir, s, t-contentf, u, l-pa, i, n, t') {
+          const paintEntr, y = entry, as, PerformancePaintTiming; if (paintEnt, r, y.na, m, e === 'fir, s, t-contentf, u, l-pa, i, n, t') {
             metri, c, s.firstContentfulPai, n, t = paintEnt, r, y.startTi, m, e;
+>>>>>>> origin/merge-fixes-20251005-193002
 
       // Calculate TTI and TBT from navigation timing const navigation = performan c e.getEntriesByTy p e(
         'navigat, i, o, n',

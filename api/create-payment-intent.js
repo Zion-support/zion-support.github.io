@@ -13,3 +13,8 @@ async function handler(req) res) {if (req.method !== 'POST') {
     res.json({ paymentIntent });
   } catch (error) {res.statusCode = 500}
     res.json({ error: 'Failed to create payment intent' });
+      id: 'pi_' + Date.now(),
+    res.statusCode = 200;
+    res.json({ paymentIntent });
+  } catch (error) {res.statusCode = 500}
+    res.json({ error: 'Failed to create payment intent' });

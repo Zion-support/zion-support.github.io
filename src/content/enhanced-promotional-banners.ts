@@ -136,7 +136,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   {
     id: 'continuo, u, s-learni, n, g-syste, m, s-o, c, t-2, 0, 2, 5',
     title: '🔄 N, E, W: Continuous, Learnin, g — 47% Accuracy, Improvement, with Se, l, f-Improvin, g, A, I',
-    description: 'Build, systems, that adapt, in, real-time, to, concept dri, f, t. 99.8% uptime, during, live update, s, 73% faster, adaptatio, n, a, n, d $5.8M, annual, value from, continuous, model improveme, n, t.',
+    description: 'Build, systems, that adapt, in, real-time, to, concept dri, f, t. 99.8% uptime, during, live update, s, 73% faster, adaptatio, n, a, n, d $5.8M, annual, value from continuous, model improveme, n, t.',
     ctaTe, x, t: 'Build, Sel, f-Improvin, g, A, I',
     ctaLi, n, k: '/bl, o, g/continuo, u, s-learni, n, g-syste, m, s-onli, n, e-updat, e, s-2, 0, 2, 5',
     varia, n, t: 'i, n, f, o',
@@ -232,7 +232,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   {
     id: 'clo, u, d-nati, v, e-kubernet, e, s-o, c, t-2, 0, 2, 5',
     title: '☁️ N, E, W: Clo, u, d-Native, AI, on Kubernet, e, s — 10x, Faster, Deploymen, t, 85% Cost, Reductio, n',
-    description: 'Transform, ML, operations with, container, orchestration. 99.99% uptime, and, seamless scaling, from, prototype to, producti, o, n.',
+    description: 'Transform, ML, operations with, container, orchestration. 99.99% uptime, and, seamless scaling, from prototype to, producti, o, n.',
     ctaTe, x, t: 'Master, Clou, d-Nativ, e, A, I',
     ctaLi, n, k: '/bl, o, g/clo, u, d-nati, v, e-ai-platfor, m, s-kubernet, e, s-2, 0, 2, 5',
     varia, n, t: 'i, n, f, o',
@@ -673,6 +673,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     priori, t, y:  , 2,
     startDa, t, e: '20, 2, 5-10-0, 3',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'ed, g, e-priva, c, y-analyti, c, s-bann, e, r-2, 0, 2, 5',
     title: '🔐 N, E, W: Edge, Privac, y‑Preserving, Analytic, s — Zero, P, I, I',
     description: 'Scoped, I, D, s, on‑device, aggregatio, n, and, DP, noise deliver, insights, in <100, m, s—fully, compliant, by desi, g, n.',
@@ -684,6 +685,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     priori, t, y:  , 2,
     startDa, t, e: '20, 2, 5-10-0, 1',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'o, c, t-08-cac, h, e-stra, t, a-v, 5',
     title: '⚡ Cache, Strata, v5 — Featur, e, s → Chun, k, s → Answ, e, r, s',
     description: 'Tiered, caches, with freshness, windows, and coalesci, n, g. 45% qual, i, t, y ↑, 60–85% co, s, t ↓.',
@@ -695,6 +697,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
     priori, t, y:  , 3,
     startDa, t, e: '20, 2, 5-10-0, 8',
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'o, c, t-07-evaluat, o, r-pipelin, e, s-bluepr, i, n, t',
     title: '🛡️ N, E, W: Evaluator, Pipeline, s — Predict, Producti, o, n, Gate, Ris, k',
     description: 'Golden, tas, k, s, calibrated, metric, s, and, online, canaries with, rollback, hooks. Correlate, with, KPIs and, cut, regressions.',
@@ -719,6 +722,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 0,
   startDa, t, e: '20, 2, 5-10-0, 5',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'o, c, t-05-ed, g, e-experimen, t, s-v, 5',
   title: '⚡ N, E, W: Edge, Private, Experiments v5 — Ze, r, o‑PI, I, A/B <10, 0, m, s',
   description: 'Signed, confi, g, s, scoped, ID, s, DP, nois, e. Global, experiments, without data, ris, k.',
@@ -729,6 +733,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 1,
   startDa, t, e: '20, 2, 5-10-0, 5',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'o, c, t-05-cac, h, e-stra, t, a-v, 4',
   title: '🧠 N, E, W: Cache, Strata, v4 — 60–85% C, o, s, t ↓, Tighter, P9, 5',
   description: 'Featu, r, e → chu, n, k → answer, caches, with freshness, windows, and coalesc, i, n, g.',
@@ -739,6 +744,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 2,
   startDa, t, e: '20, 2, 5-10-0, 5',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'sept, 3, 0-fre, s, h-conte, n, t-2, 0, 2, 5',
   title: '🚀 Fresh, Dro, p: Governance, Guardrai, l, s, Edge, Inferenc, e, Agent, Observabilit, y',
   description: 'Three, new, deep-dives, just, landed. Ship, fast, with policy, chec, k, s, deliv, e, r <100ms, at, the ed, g, e, and, get, live traces, for, agents.',
@@ -762,6 +768,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 0,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'o, c, t-01-intellige, n, t-automati, o, n-2, 0, 2, 5',
   title: '🤖 N, E, W: Intelligent, Automatio, n — From, Tickets, to Outco, m, e, s',
   description: 'Approv, a, l, s, budge, t, s, ev, a, l‑gated, action, s, and, instant, rollback for, safe, autonomy.',
@@ -798,6 +805,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 0,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'digit, a, l-tw, i, n-manufacturi, n, g-o, c, t-2, 0, 2, 5',
   title: '🏭 N, E, W: AI-Powered, Digital, Twins - 92% Defect, Reducti, o, n, $320M, Saving, s',
   description: 'Revolutionary, digital, twin systems, transforming, manufacturing with, rea, l-time, simulation, and predictive, analytic, s. Achieve, 8, 7% faster, tim, e-to-market, and, unprecedented production, optimizati, o, n.',
@@ -808,6 +816,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 1,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'hyp, e, r-personalizati, o, n-o, c, t-2, 0, 2, 5',
   title: '🎯 N, E, W: Hyp, e, r-Personalization, A, I - 8x, Conversion, Rate, s, 94% Satisfacti, o, n',
   description: 'Ne, x, t-generation, personalization, engines delivering, individualized, experiences at, microsecond, scale. Dri, v, e $28, 0, M+ revenue, lift, through AI-powered, customer, engagemen, t.',
@@ -818,6 +827,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 2,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'autonomo, u, s-netwo, r, k-o, p, s-o, c, t-2, 0, 2, 5',
   title: '🌐 N, E, W: Autonomous, Network, Operations - 99.9, 9, 9% Uptime, Guarante, e, d',
   description: 'Se, l, f-managing, network, systems that, dete, c, t, diagno, s, e, and, resolve, issues autonomous, l, y. Achieve, 9, 6% faster, incident, resolution and, 8, 2% cost, reduction, with zero, human, intervention.',
@@ -828,6 +838,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 3,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'cogniti, v, e-proce, s, s-mini, n, g-o, c, t-2, 0, 2, 5',
   title: '🔍 N, E, W: Cognitive, Process, Mining - 73% Cost, Savin, g, s, 6x, Faster, Execution',
   description: 'AI-powered, process, discovery that, automatically, identifies bottlenecks, and, implements improvemen, t, s. Achie, v, e $19, 5, M+ annual, savings, through intelligent, automati, o, n.',
@@ -838,6 +849,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 4,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'decisi, o, n-intelligen, c, e-o, c, t-2, 0, 2, 5',
   title: '🧠 N, E, W: AI-Augmented, Decision, Intelligence - 10x, Fast, e, r, 97% Accura, c, y',
   description: 'Revolutionary, platforms, enabling executives, to, make complex, decisions, 10x faster, with, unprecedented accura, c, y. Crea, t, e $45, 0, M+ value, through, intelligent decision, suppo, r, t.',
@@ -848,6 +860,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 5,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
   id: 'intellige, n, t-docume, n, t-understandi, n, g-o, c, t-2, 0, 2, 5',
   title: '📄 N, E, W: Intelligent, Document, AI - Process, 1, M+ Documents, Daily, at 99.2% Accur, a, c, y',
   description: 'Ne, x, t-generation, document, understanding that, comprehends, context and, automates, workflows. Achieve, 9, 5% faster, processing, and $14, 0, M+ annual, savin, g, s.',
@@ -858,6 +871,7 @@ export const enhancedPromotionalBanners: EnhancedPromotionalBann, e, r[] = [
   featured: t, r, u, e,
   priori, t, y:  , 6,
   startDa, t, e: '20, 2, 5-10-0, 1',
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'o, c, t-06-evaluat, o, r-gat, e, s-2, 0, 2, 5',
     title: '✅ Evaluat, o, r-Driven, Release, Gates — Ship, Fast, e, r, Fewer, Regression, s',
     description: 'Live, evaluato, r, s, K, P, I‑linked, SLI, s, and, instant, rollback for, safe, velocity.',

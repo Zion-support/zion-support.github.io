@@ -2,8 +2,7 @@
 """
 Comprehensive merge conflict resolution script
 Resolves conflicts by preferring main branch version and cleaning up conflicts
-"""
-
+Script to automatically resolve merge conflicts by choosing the cleaner version
 import os
 import subprocess
 import sys
@@ -38,6 +37,9 @@ def resolve_conflicts_in_file(file_path):
         return True
     
         # Check if file has conflict markers
+    """Resolve merge conflicts in a file"""
+        # Skip if no merge conflicts
+>>>>>>> origin/merge-fixes-20251005-193002
         if '<<<<<<< HEAD' not in content:
             return True
         
@@ -70,68 +72,6 @@ def resolve_conflicts_in_file(file_path):
             f.write('\n'.join(resolved_lines))
         
         return True
-    except Exception as e:
-        print(f"Error resolving conflicts in {file_path}: {e}")
-        return False
-
-def resolve_all_conflicts():
-    """Resolve all merge conflicts in the current merge state"""
-    success, output, _ = run_command("git status --porcelain")
-    if not success:
-        return False
-    
-    conflicted_files = []
-    for line in output.strip().split('\n'):
-        if line.strip().startswith('UU') or line.strip().startswith('AA') or line.strip().startswith('DD'):
-            file_path = line[3:].strip()
-            conflicted_files.append(file_path)
-    
-    print(f"Found {len(conflicted_files)} conflicted files")
-    
-    for file_path in conflicted_files:
-        print(f"Resolving conflicts in: {file_path}")
-        if not resolve_conflicts_in_file(file_path):
-            print(f"Failed to resolve conflicts in: {file_path}")
-            return False
-    
-    return True
-
-def merge_branch(branch_name):
-    """Merge a specific branch with conflict resolution"""
-    print(f"\n=== Merging branch: {branch_name} ===")
-    
-    # Start merge
-    success, output, error = run_command(f"git merge origin/{branch_name}")
-    
-    if success:
-        print(f"Successfully merged {branch_name}")
-        return True
-    
-    # Check if there are conflicts
-    if "CONFLICT" in output or "CONFLICT" in error:
-        print(f"Conflicts detected in {branch_name}, resolving...")
-        
-        # Resolve conflicts
-        if resolve_all_conflicts():
-            # Add resolved files
-            run_command("git add .")
-            
-            # Commit the merge
-            success, _, _ = run_command(f"git commit -m 'Resolve merge conflicts for {branch_name}'")
-            if success:
-                print(f"Successfully resolved conflicts and merged {branch_name}")
-                return True
-            else:
-                print(f"Failed to commit resolved conflicts for {branch_name}")
-                return False
-        else:
-            print(f"Failed to resolve conflicts for {branch_name}")
-            return False
-    else:
-        print(f"Merge failed for {branch_name}: {error}")
-        return False
-
-def main():
     """Main function to merge all unmerged branches"""
     print("Starting comprehensive merge conflict resolution...")
     
@@ -141,6 +81,11 @@ def main():
     
     if not branches:
         print("No branches to merge")
+    # Get all files with merge conflicts
+    result = os.popen("git diff --name-only --diff-filter=U").read().strip()
+    if not result:
+        print("No merge conflicts found")
+>>>>>>> origin/merge-fixes-20251005-193002
         return
     
     # Merge each branch

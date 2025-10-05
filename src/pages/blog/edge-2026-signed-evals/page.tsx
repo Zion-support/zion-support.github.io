@@ -1,8 +1,8 @@
 // Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export, default, function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
+export default function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt; 100, m, s</title>
@@ -14,8 +14,8 @@ export, default, function EdgeSignedEvals20, 2, 6(): Rea, c, t.J, S, X.Eleme, n,
         />
       </Helm, e, t>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           Edge, 202, 6: Signed, Eval, s — Ze, r, o‑P, I, I, &lt; 100, m, s
         </h1>
         <p, classNam, e = 'te, x, t-zi, o, n-sla, t, e-light, m, b-8'>

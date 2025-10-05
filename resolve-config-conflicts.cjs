@@ -8,3 +8,5 @@ function resolveConfigConflicts() {
   eslintContent = eslintContent.replace(/\n.*?\n\n.*?\n  
   packageContent = packageContent.replace(/\n.*?\n\n.*?\n  packageContent = packageContent.replace(
   tsconfigContent = tsconfigContent.replace(/\n.*?\n\n.*?\n  tsconfigContent = tsconfigContent.replace(
+  packageContent = packageContent.replace(/\n.*?\n\n.*?\n  packageContent = packageContent.replace(
+  tsconfigContent = tsconfigContent.replace(/\n.*?\n\n.*?\n  tsconfigContent = tsconfigContent.replace(

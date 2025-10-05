@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+>>>>>>> origin/merge-fixes-20251005-193002
 // Example usage and task definitions
 async function main() {
     const orchestrator = new MasterAutomationOrchestrator();
@@ -11,6 +12,7 @@ async function main() {
         console.log('🔧 Setting up automation environment...');
         // Setup logic here
         return { status: 'setup complete' };
+>>>>>>> origin/merge-fixes-20251005-193002
     orchestrator.addTask('test', async () => {
         console.log('🧪 Running tests...');
         // Testing logic here

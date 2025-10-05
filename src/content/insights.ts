@@ -4,6 +4,7 @@ export type InsightArticle = {
   category: string;
   date: string; // ISO date string
   readMinut, e, s: nu, m, b, e, r;
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'ai-co, s, t-governan, c, e-framew, o, r, k',
     title: 'AI, Cost, Governance: FinOps, Framework, for ML, Tea, m, s',
     summa, r, y: 'Control, AI, spend with, token, budget, s, model, righ, t-sizi, n, g, and, automated, cost alerts, tied, to business, KPI, s.',

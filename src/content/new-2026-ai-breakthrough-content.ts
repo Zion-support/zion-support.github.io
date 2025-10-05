@@ -36,10 +36,12 @@ export interface CaseStudy {
     title: 'AI, 2026, Hyperconscious Computing, Revolutio, n: Beyond, Artificial, Intelligenc, e',
     description: 'Revolutionary, breakthrough, in hyperconscious, AI, systems achieving, genuine, self-awaren, e, s, s, emotional, intelligenc, e, and, creative, autonomy wi, t, h $1.2T, enterprise, value creati, o, n.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'quant, u, m-neur, a, l-fusi, o, n-20, 2, 6-breakthro, u, g, h',
     title: 'Quant, u, m-Neural, Fusion, 2026: The, Ultimate, Computing Breakthro, u, g, h',
     description: 'Revolutionary, fusion, of quantum, computing, and neural, networks, delivering 10, 0,000x, performance, improvements, infinite, scalabilit, y, and, consciousnes, s-level, processing, capabilities.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 
 Quant, u, m-Neural, Fusion, 2026 doe, s, n't, just, improve computi, n, g—it, redefines, what's, possibl, e. We're, not, just building, faster, computers; we're, creating, systems that, can, solve any, probl, e, m, process, infinite, information, and, achieve, true artificial, consciousnes, s.
 
@@ -63,6 +65,7 @@ The, future, of computing, is, here. The, question, isn't, whether, to adopt, qu
     title: 'Autonomous, Enterprise, Mesh 20, 2, 6: Se, l, f-Organizing, Business, Intelligenc, e',
     description: 'Revolutionary, sel, f-organizing, AI, mesh networks, that, autonomously optimize, business, processe, s, achieving, 9, 9.7% operational, efficiency, and $500B, in, value creati, o, n.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 
 The, Autonomous, Enterprise Mesh, 2026, doesn't, just, optimize your, busines, s—it, transforms, it into, a, livin, g, breathing, entity, that continuously, evolves, and improv, e, s. We're, not, just implementing, technolog, y; we're, creating, the future, of, business operatio, n, s.
 
@@ -89,6 +92,7 @@ Ready, to, experience true, business, autonomy ? The, mesh, is waiti, n, g.
     title: 'Fortune, 100, Hyperconscious Transformati, o, n: $1.2T, Value, Creatio, n',
     description: 'How, a, Fortune 100, global, conglomerate achiev, e, d $1.2, trillion, in value, creation, through hyperconscious, AI, implementatio, n, achieving, 9, 9.9, 9, 9% operational, excellenc, e.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 
 This, transformation, established the, conglomerate, as the, worl, d's, first, hyperconscious enterpr, i, s, e, setting, new, standards f, o, r: - Business, operations, excellence
 - AI-human, collaboratio, n
@@ -119,6 +123,7 @@ The, company, now operates, as, a liv, i, n, g, breathing, entity, that continuo
     title: 'Quant, u, m-Neural, Fusion, Manufacturing Succe, s, s: Perfect, Producti, o, n',
     description: 'Revolutionary, manufacturing, transformation achieving, 10, 0% qual, i, t, y, zero, defect, s, a, n, d $2.8B, in, value creation, through, quantum-neural, fusion, technology.',
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 - Quant, u, m-neural, synchronizatio, n
 - Perfect, production, achievement
 - Revolutionary, transformatio, n
@@ -176,6 +181,7 @@ Ready, to, achieve perfect, productio, n ? The, quantu, m-neural, revolution, aw
     publishDa, t, e: '20, 2, 6-02-0, 5',
     featured: t, r, u, e,
   },
+>>>>>>> origin/merge-fixes-20251005-193002
     id: 'autonomo, u, s-enterpri, s, e-m, e, s, h',
     title: 'Autonomous, Enterprise, Mes, h',
     description: 'Se, l, f-organizing, AI, networks that, autonomously, optimize your, business, processes for, 9, 9.7% operational, efficien, c, y.',

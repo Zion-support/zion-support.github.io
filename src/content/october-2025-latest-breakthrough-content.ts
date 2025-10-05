@@ -15,7 +15,7 @@ export const octoberLatestBreakthroughContent = [
     featured: t, r, u, e,
     tags: ['Digital, Twi, n, s', 'AI', 'Enterpri, s, e', 'I, o, T', 'Predictive, Analytic, s'],
     highligh, t, s: [
-      '$850M, success, story from, Fortune, 100 energy, company',
+      '$850M, success, story from Fortune, 100 energy, company',
       '99.2% accuracy, in, failure predicti, o, n',
       '89% reduction, in, unplanned downti, m, e',
       '$47B, in, aggregate business, value, created',

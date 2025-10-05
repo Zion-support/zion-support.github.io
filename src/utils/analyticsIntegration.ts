@@ -34,6 +34,7 @@ export interface AnalyticsConfig {
       measurement, I, d: string;
       enabl, e, d : bool, e, a, n;
      };
+>>>>>>> origin/merge-fixes-20251005-193002
     respectDoNotTra, c, k: boolean;
     anonymize, I, p: boolean;
     consentRequir, e, d: bool, e, a, n;
@@ -42,22 +43,26 @@ export interface AnalyticsConfig {
 }
 
 class, AnalyticsIntegratio, n {  
+>>>>>>> origin/merge-fixes-20251005-193002
 
     // Load gta g.js const script = docume n t.createEleme n t('scr i p t'); scri p t.asy n c = tr u e; scri p t.s r c = `htt p s: //w w w.googletagmanag e r.c o m/gt a g/js?id=${measureme n t I d}`; docume n t.he a d.appendChi l d(scri p t);
 
     // Initialize gta g
-    (window, as, any).dataLay, e, r = (window, as, any).dataLay, e, r || []; function, gta, g(...ar, g, s: a, n, y[]) {
+    (window, as, any).dataLay, e, r = (window, as, any).dataLay, e, r || []; function gta, g(...ar, g, s: a, n, y[]) {
       (window, as, any).dataLay, e, r.pu, s, h(a, r, g, s);
     }
     (window, as, any).gt, a, g = gt, a, g; gt, a, g('j, s', new, Dat, e());
     gt, a, g('conf, i, g', measurement, I, d, {
       anonymize_, i, p: th, i, s.conf, i, g.priva, c, y.anonymiz, e, I, p,
       send_page_vi, e, w: fa, l, s, e, // We'll handle this manual l y
+>>>>>>> origin/merge-fixes-20251005-193002
         v, a, r , e, g, i, h;
         wind, o, w.mixpan, e, l = b; b._i = []; b.in, i, t = functi, o, n (e: a, n, y, f: any, c: a, n, y) {
           functio, n, g(a: any, d: a, n, y) {
             va, r, b = d.sp, l, i, t('.'); 2 = = b.leng, t, h  && ((a = a[, b[, 0]]), (d = b[, 1])); a[d] = functi, o, n () {
             retu, r, n , d;
+            return , d;
+>>>>>>> origin/merge-fixes-20251005-193002
            };
           a.peop, l, e.toStri, n, g = funct, i, o, n () {
             retur, n, a.toStri, n, g(1) + '.peop, l, e (st, u, b)';
@@ -66,6 +71,7 @@ class, AnalyticsIntegratio, n {
               ' ',
             ); f, o, r (h = 0; h < i.leng, t, h; , h++) g(a, i[h]);
           va, r, j = 'set, set_once, union unset, remove, delete'.sp, l, i, t(' '); a.get_gro, u, p = funct, i, o, n () {
+>>>>>>> origin/merge-fixes-20251005-193002
               va, r, d = {},
                 e = ['get_gro, u, p'].conc, a, t(
                   Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argume, n, t, s, 0),
@@ -75,11 +81,16 @@ class, AnalyticsIntegratio, n {
       deb, u, g: th, i, s.conf, i, g.de, b, u, g,
       track_pagevi, e, w: fa, l, s, e,
       persisten, c, e: 'localStor, a, g, e',
+      deb, u, g: th, i, s.conf, i, g.de, b, u, g,
+      track_pagevi, e, w: fa, l, s, e,
+      persisten, c, e: 'localStor, a, g, e',
+>>>>>>> origin/merge-fixes-20251005-193002
       va, r, s: a, n, y = t.getElementsByTagNa, m, e('scr, i, p, t')[0]; s.parentNo, d, e.insertBefo, r, e(, r, s);
 
       functio, n, i(e: any, t: a, n, y) {
         e.prototy, p, e[t] = functi, o, n () {
           th, i, s._q.pu, s, h([t].conc, a, t(Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argume, n, t, s, 0)));
+>>>>>>> origin/merge-fixes-20251005-193002
       va, r, l = [
         'setProduc, t, I, d',
         'setQuanti, t, y',
@@ -123,6 +134,9 @@ class, AnalyticsIntegratio, n {
       ]; functio, n, v(e: a, n, y) {
         ipAddre, s, s: !th, i, s.conf, i, g.priva, c, y.anonymiz, e, I, p,
       },
+        ipAddre, s, s: !th, i, s.conf, i, g.priva, c, y.anonymiz, e, I, p,
+      },
+>>>>>>> origin/merge-fixes-20251005-193002
           analyti, c, s.invok, e, d = !0; analyti, c, s.metho, d, s = [
             'trackSub, m, i, t',
             'trackCli, c, k',
@@ -148,6 +162,10 @@ class, AnalyticsIntegratio, n {
             return, functio, n () {
               va, r, t = Arr, a, y.prototy, p, e.sli, c, e.ca, l, l(argume, n, t, s); t.unshi, f, t(e);
               '/analyti, c, s.m, i, n.js'; va, r, n: a, n, y = docume, n, t.getElementsByTagNa, m, e('scr, i, p, t')[0]; n.parentNo, d, e.insertBefo, r, e(, t, n);
+              '/analyti, c, s.m, i, n.js'; va, r, n: a, n, y = docume, n, t.getElementsByTagNa, m, e('scr, i, p, t')[0]; n.parentNo, d, e.insertBefo, r, e(, t, n);
+  tra, c, k(eventNa, m, e: str, i, n, g, properti, e, s?: Reco, r, d<string, a, n, y>): vo, i, d { 
+    const even, t: AnalyticsEve, n, t = {
+>>>>>>> origin/merge-fixes-20251005-193002
       na, m, e: event, N, a, m, e,
       properti, e, s,
       timesta, m, p: Da, t, e.no, w(),
@@ -155,6 +173,10 @@ class, AnalyticsIntegratio, n {
       session, I, d : th, i, s.sessio, n, I, d,
      }; if (!th, i, s.consentGiv, e, n || !th, i, s.initializ, e, d) {
       conso, l, e.l, o, g('[Analyti, c, s] Event, tracke, d:', eventNa, m, e, properti, e, s);
+      conso, l, e.l, o, g('[Analyti, c, s] Event, tracke, d:', eventNa, m, e, properti, e, s);
+  pa, g, e(pageNa, m, e?: string, properti, e, s?: Reco, r, d<string, a, n, y>): vo, i, d {
+    const pageProp, s = {
+>>>>>>> origin/merge-fixes-20251005-193002
       ...propert, i, e, s,
       pa, t, h: wind, o, w.locati, o, n.pathn, a, m, e,
       u, r, l: wind, o, w.locati, o, n.h, r, e, f,
@@ -162,20 +184,24 @@ class, AnalyticsIntegratio, n {
       referr, e, r: docume, n, t.refer, r, e, r,
     }; if() { (window, as, any).gt, a, g?.('eve, n, t', 'page_vi, e, w', pagePro, p, s);
      }, if (th, i, s.conf, i, g.provide, r, s.mixpan, e, l?.enabl, e, d) {
+>>>>>>> origin/merge-fixes-20251005-193002
       conso, l, e.l, o, g(
         '[Analyti, c, s] Page, viewe, d:',
         pageNa, m, e || docume, n, t.title,
         pagePro, p, s,
       );
+>>>>>>> origin/merge-fixes-20251005-193002
       id: us, e, r, I, d,
       trai, t, s,
     }; if() { retu, r, n;
      }, if (th, i, s.conf, i, g.provide, r, s.googleAnalyti, c, s?.enabl, e, d) { 
       (window, as, any).gt, a, g ? .('s, e, t', { user_, i, d : use, r, I, d  });
+>>>>>>> origin/merge-fixes-20251005-193002
 
     if() { (window, as, any).analyti, c, s?.identi, f, y(user, I, d, trai, t, s);
      }, if (th, i, s.conf, i, g.deb, u, g) {
       conso, l, e.l, o, g('[Analyti, c, s] User, identifie, d:', user, I, d, trai, t, s);
+>>>>>>> origin/merge-fixes-20251005-193002
   setConse, n, t(grant, e, d: boolean): vo, i, d { 
     th, i, s.consentGiv, e, n = grant, e, d; th, i, s.storeConse, n, t(gran, t, e, d);
 
@@ -183,12 +209,20 @@ class, AnalyticsIntegratio, n {
       }, if (th, i, s.conf, i, g.deb, u, g) { 
       conso, l, e.l, o, g('[Analyti, c, s] Conse, n, t:', grant, e, d  ? 'grant, e, d'  : 'revok, e, d');
      }
-  private, isDoNotTrackEnable, d(): boolean {
-    retu, r, n (
       navigat, o, r.doNotTra, c, k = == '1' ||
       (window, as, any).doNotTra, c, k = == '1' ||
       (navigator, as, any).msDoNotTra, c, k = == ', 1'
 
 // Singleton instanc e (will be initialized with actual config by the app)
+    ...defaultCon, f, i, g,
+    ...conf, i, g,
+
+// Singleton instanc e (will be initialized with actual config by the app)
+export let analytics: AnalyticsIntegrati, o, n;
+
+export function initializeAnalytics(
+  conf, i, g: Parti, a, l<AnalyticsCon, f, i, g>,
+): AnalyticsIntegrati, o, n {
+  const mergedConfi, g = {
     ...defaultCon, f, i, g,
     ...conf, i, g,

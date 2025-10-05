@@ -271,4 +271,3 @@ class SEOOptimizer {
     return `
 SEO Analytics Report:
 ====================
-export default SEOOptimizer;

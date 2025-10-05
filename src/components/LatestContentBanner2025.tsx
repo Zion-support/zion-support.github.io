@@ -1,5 +1,4 @@
-import, React, from 'rea, c, t';
-impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
+import React from "react";
 const, LatestContentBanner202, 5: Rea, c, t.FC = () => {
   const, latestArticle, s = [
     {

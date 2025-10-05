@@ -11,7 +11,7 @@ export function lazyRetry<T, extends, ComponentType<a, n, y>>(
 ): Rea, c, t.LazyExoticCompone, n, t<T> { 
   return, laz, y(() = > {
     return, new, Promise<{ defau, l, t:  , T  }>((resol, v, e, reje, c, t) => { 
-      const, attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
+      const attemptLoa, d = (attemptsLe, f, t: num, b, e, r) => {
         componentImpo, r, t()
           .th, e, n(resol, v, e)
           .cat, c, h(err, o, r = > {
@@ -24,6 +24,7 @@ export function lazyRetry<T, extends, ComponentType<a, n, y>>(
               conso, l, e.l, o, g(
                 `Retrying, component, load... (${attemptsLe, f, t - 1} attempts, lef, t)`,
               );
+>>>>>>> origin/merge-fixes-20251005-193002
 export function preloadComponent(
   componentImpo, r, t: () => Promi, s, e<{  defau, l, t: ComponentTy, p, e<any >  }>,
 ): vo, i, d { 

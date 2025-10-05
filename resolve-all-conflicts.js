@@ -25,3 +25,5 @@ function findConflictFiles(dir) {
           if (content.includes('            conflictFiles.push(filePath);
     if (content.includes('      // Split into sections
       const sections = content.split(/      
+    if (content.includes('      // Split into sections
+      const sections = content.split(/      

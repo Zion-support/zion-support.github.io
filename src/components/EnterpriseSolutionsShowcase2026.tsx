@@ -1,121 +1,186 @@
-import, React, from 'rea, c, t';
-const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => { 
+import React from "react";
+import React from "react";';
+const, EnterpriseSolutionsShowcase202, 6: Rea, c, t.FC = () => {
   const, enterpriseSolution, s = [
     {
-      i, d: , 1,
-      title: 'AI-Powered, Enterprise, Automatio, n',
-      slug: 'ai-enterpri, s, e-automati, o, n-2, 0, 2, 6',
-      excerpt: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, syste, m, s.',
-      category: 'Enterprise, Automati, o, n',
-      industry: 'All, Industri, e, s',
-      r, o, i: '30, 0%',
-      savin, g, s: '$2, M+',
-      ic, o, n: <Bot, classNam, e = 'w-8 , h-, 8' / > ,
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-      bad, g, e: 'BEST, SELL, E, R',
-      featur, e, s: [
-        'Workflow, Automati, o, n',
-        'Intelligent, Routin, g',
-        'Process, Optimizatio, n',
-      ],
-     },
-    { 
-      id:  , 2,
-      title: 'Quant, u, m-Enhanced, Security, Platfor, m',
-      slug: 'quant, u, m-securi, t, y-platfo, r, m-2, 0, 2, 6',
-      excerpt: 'Ultimate, enterprise, security with, quantu, m-encrypted, communications, and ze, r, o-trust, architecture, s. Protect, your, organization from, advanced, cyber thre, a, t, s.',
-      category: 'Cybersecur, i, t, y',
-      industry: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
-      r, o, i: '25, 0%',
-      savin, g, s: '$5, M+',
-      ic, o, n: <Shield, classNam, e = 'w-8 , h-, 8' / > ,
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-50, 0',
-      bad, g, e: 'ENTERPR, I, S, E',
-      featur, e, s: [
-        'Quantum, Encrypti, o, n',
-        'Ze, r, o-Trust, Architectur, e',
-        'Threat, Detectio, n',
-      ],
-     },
-    { 
-      id:  , 3,
-      title: 'Clo, u, d-Native, AI, Infrastructur, e',
-      slug: 'clo, u, d-nati, v, e-ai-infrastructu, r, e-2, 0, 2, 6',
-      excerpt: 'Scala, b, l, e, secu, r, e, and, cos, t-effective, AI, infrastructure built, for, enterprise sca, l, e. Deploy, and, manage AI, models, across mul, t, i-cloud, environment, s.',
-      category: 'Cloud, Infrastructu, r, e',
-      industry: 'Technol, o, g, y, Reta, i, l, Manufacturi, n, g',
-      r, o, i: '40, 0%',
-      savin, g, s: '$3, M+',
-      ic, o, n: <Cloud, classNam, e = 'w-8 , h-, 8' / > ,
-      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-50, 0',
-      bad, g, e: 'CLO, U, D-FI, R, S, T',
-      featur, e, s: ['Mul, t, i-Cloud, Deployme, n, t', 'Au, t, o-Scali, n, g', 'Cost, Optimizatio, n'],
-     },
-    { 
-      id:  , 4,
-      title: 'Predictive, Analytics, Intelligenc, e',
-      slug: 'predicti, v, e-analyti, c, s-intelligen, c, e-2, 0, 2, 6',
-      excerpt: 'Advanced, predictive, analytics that, forecast, business tre, n, d, s, customer, behavio, r, and, operational, risks with, 9, 9.9% accura, c, y.',
-      category: 'Business, Intelligen, c, e',
-      industry: 'Ret, a, i, l, Finan, c, e, Healthca, r, e',
-      r, o, i: '35, 0%',
-      savin, g, s: '$4, M+',
-      ic, o, n: <Target, classNam, e = 'w-8 , h-, 8' / > ,
-      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-50, 0',
-      bad, g, e: 'PREDICT, I, V, E',
-      featur, e, s: ['Trend, Forecasti, n, g', 'Risk, Analysi, s', 'Customer, Insight, s'],
-     },
-    { 
-      id:  , 5,
-      title: 'Digital, Transformation, Suit, e',
-      slug: 'digit, a, l-transformati, o, n-sui, t, e-2, 0, 2, 6',
-      excerpt: 'Complete, digital, transformation solution, covering, strateg, y, implementati, o, n, and, optimizatio, n. Modernize, your, enterprise for, the, AI e, r, a.',
-      category: 'Digital, Transformati, o, n',
-      industry: 'All, Industri, e, s',
-      r, o, i: '50, 0%',
-      savin, g, s: '$10, M+',
-      ic, o, n: <Building, classNam, e = 'w-8 , h-, 8' / > ,
-      gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-50, 0',
-      bad, g, e: 'TRANSFORMAT, I, O, N',
-      featur, e, s: ['Strategy, Consulti, n, g', 'Implementati, o, n', 'Change, Managemen, t'],
-     },
-    { 
-      id:  , 6,
-      title: 'Enterprise, AI, Governanc, e',
-      slug: 'enterpri, s, e-ai-governan, c, e-2, 0, 2, 6',
-      excerpt: 'Comprehensive, AI, governance framework, ensuring, ethical AI, deployme, n, t, complian, c, e, and, risk, management across, your, organization.',
-      category: 'AI, Governan, c, e',
-      industry: 'Fina, n, c, e, Healthca, r, e, Governme, n, t',
-      r, o, i: '20, 0%',
-      savin, g, s: '$1.5, M+',
-      ic, o, n: <Users, classNam, e = 'w-8 , h-, 8' / > ,
-      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-purp, l, e-50, 0',
-      bad, g, e: 'GOVERNA, N, C, E',
-      featur, e, s: ['Ethica, l, A, I', 'Compliance, Managemen, t', 'Risk, Assessmen, t'],
-     },
-  ]; const, successMetric, s = [
-    { 
-      val, u, e: '5, 0, 0+',
-      lab, e, l: 'Enterprise, Clien, t, s',
-      ic, o, n: <Building, classNam, e = 'w-8 , h-, 8' / > ,
-     },
-    { 
-      val, u, e: '$2, B+',
-      lab, e, l: 'Cost, Savings, Generate, d',
-      ic, o, n: <DollarSign, classNam, e = 'w-8 , h-, 8' / > ,
-     },
-    { 
-      val, u, e: '9, 8%',
-      lab, e, l: 'Client, Satisfacti, o, n',
-      ic, o, n: <Award, classNam, e = 'w-8 , h-, 8' / > ,
-     },
-    { 
-      val, u, e: '24/, 7',
-      lab, e, l: 'Enterprise, Suppo, r, t',
-      ic, o, n: <Users, classNam, e = 'w-8 , h-, 8' / > ,
-     },
-  ]; retu, r, n (
-    <div, classNam, e = 'py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n'>
+      i
+  d: 1
+      tit, l, e: 'AI-Powered, Enterprise, Automation','
+      sl, u, g: 'ai-enterpri, s, e-automati, o, n-20, 2, 6','
+      excer, p, t: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, system, s.','
+      catego, r, y: 'Enterprise, Automatio, n','
+      indust, r, y: 'All, Industrie, s','
+      r, o, i: '3, 0, 0%','
+      savin, g, s: '$2M+','
+      ic, o, n: <Bot, className="w-8 h-8/>,"
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
+      bad, g, e: 'BEST, SELLE, R','
+      featur, e, s: ['Workflow, Automatio, n', 'Intelligent, Routin, g', 'Process, Optimizatio, n']'
+    }
+    {
+      id: 2
+      tit, l, e: 'Quant, u, m-Enhanced, Security, Platform','
+      sl, u, g: 'quant, u, m-securi, t, y-platfo, r, m-20, 2, 6','
+      excer, p, t: 'Ultimate, enterprise, security with, quantu, m-encrypted, communications, and ze, r, o-trust, architecture, s. Protect, your, organization from, advanced, cyber threa, t, s.','
+      catego, r, y: 'Cybersecuri, t, y','
+      indust, r, y: 'Finan, c, e, Healthca, r, e, Governme, n, t','
+      r, o, i: '2, 5, 0%','
+      savin, g, s: '$5M+','
+      ic, o, n: <Shield, className="w-8 h-8/>,"
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0','
+      bad, g, e: 'ENTERPRI, S, E','
+      featur, e, s: ['Quantum, Encryptio, n', 'Ze, r, o-Trust, Architectur, e', 'Threat, Detectio, n']'
+    }
+    {
+      id: 3
+      tit, l, e: 'Clo, u, d-Native, AI, Infrastructure','
+      sl, u, g: 'clo, u, d-nati, v, e-ai-infrastructu, r, e-20, 2, 6','
+      excer, p, t: 'Scalab, l, e, secu, r, e, and, cos, t-effective, AI, infrastructure built, for, enterprise sca, l, e. Deploy, and, manage AI, models, across mul, t, i-cloud, environment, s.','
+      catego, r, y: 'Cloud, Infrastructur, e','
+      indust, r, y: 'Technolo, g, y, Reta, i, l, Manufacturi, n, g','
+      r, o, i: '4, 0, 0%','
+      savin, g, s: '$3M+','
+      ic, o, n: <Cloud, className="w-8 h-8/>,"
+      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0','
+      bad, g, e: 'CLO, U, D-FIR, S, T','
+      featur, e, s: ['Mul, t, i-Cloud, Deploymen, t', 'Au, t, o-Scali, n, g', 'Cost, Optimizatio, n']'
+    }
+    {
+      id: 4
+      tit, l, e: 'Predictive, Analytics, Intelligence','
+      sl, u, g: 'predicti, v, e-analyti, c, s-intelligen, c, e-20, 2, 6','
+      excer, p, t: 'Advanced, predictive, analytics that, forecast, business tren, d, s, customer, behavio, r, and, operational, risks with, 9, 9.9% accura, c, y.','
+      catego, r, y: 'Business, Intelligenc, e','
+      indust, r, y: 'Reta, i, l, Finan, c, e, Healthca, r, e','
+      r, o, i: '3, 5, 0%','
+      savin, g, s: '$4M+','
+      ic, o, n: <Target, className="w-8 h-8/>,"
+      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0','
+      bad, g, e: 'PREDICTI, V, E','
+      featur, e, s: ['Trend, Forecastin, g', 'Risk, Analysi, s', 'Customer, Insight, s']'
+    }
+    {
+      id: 5
+      tit, l, e: 'Digital, Transformation, Suite','
+      sl, u, g: 'digit, a, l-transformati, o, n-sui, t, e-20, 2, 6','
+      excer, p, t: 'Complete, digital, transformation solution, covering, strategy, implementati, o, n, and, optimizatio, n. Modernize, your, enterprise for, the, AI e, r, a.','
+      catego, r, y: 'Digital, Transformatio, n','
+      indust, r, y: 'All, Industrie, s','
+      r, o, i: '5, 0, 0%','
+      savin, g, s: '$1, 0, M+','
+      ic, o, n: <Building, className="w-8 h-8/>,"
+      gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0','
+      bad, g, e: 'TRANSFORMATI, O, N','
+      featur, e, s: ['Strategy, Consultin, g', 'Implementati, o, n', 'Change, Managemen, t']'
+    }
+    {
+      id: 6
+      tit, l, e: 'Enterprise, AI, Governance','
+      sl, u, g: 'enterpri, s, e-ai-governan, c, e-20, 2, 6','
+      excer, p, t: 'Comprehensive, AI, governance framework, ensuring, ethical AI, deploymen, t, complian, c, e, and, risk, management across, your, organization.','
+      catego, r, y: 'AI, Governanc, e','
+      indust, r, y: 'Finan, c, e, Healthca, r, e, Governme, n, t','
+      r, o, i: '2, 0, 0%','
+      savin, g, s: '$1.5M+','
+      ic, o, n: <Users, className="w-8 h-8/>,"
+      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-purp, l, e-5, 0, 0','
+      bad, g, e: 'GOVERNAN, C, E','
+      featur, e, s: ['Ethical, A, I', 'Compliance, Managemen, t', 'Risk, Assessmen, t']'
+      tit, l, e: 'AI-Powered, Enterprise, Automation',';
+      sl, u, g: 'ai-enterpri, s, e-automati, o, n-20, 2, 6',';
+      excer, p, t: 'Transform, your, enterprise with, comprehensive, AI automation, achieving, 95% process, efficienc, y. From, workflow, optimization to, intelligent, decision-making, system, s.',';
+      catego, r, y: 'Enterprise, Automatio, n',';
+      indust, r, y: 'All, Industrie, s',';
+      r, o, i: '3, 0, 0%',';
+      savin, g, s: '$2M+',';
+      ic, o, n: <Bot, className="w-8 h-8" />,";
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0',';
+      bad, g, e: 'BEST, SELLE, R',';
+      featur, e, s: ['Workflow, Automatio, n', 'Intelligent, Routin, g', 'Process, Optimizatio, n']';
+    }
+    {
+      id: 2
+      tit, l, e: 'Quant, u, m-Enhanced, Security, Platform',';
+      sl, u, g: 'quant, u, m-securi, t, y-platfo, r, m-20, 2, 6',';
+      excer, p, t: 'Ultimate, enterprise, security with, quantu, m-encrypted, communications, and ze, r, o-trust, architecture, s. Protect, your, organization from, advanced, cyber threa, t, s.',';
+      catego, r, y: 'Cybersecuri, t, y',';
+      indust, r, y: 'Finan, c, e, Healthca, r, e, Governme, n, t',';
+      r, o, i: '2, 5, 0%',';
+      savin, g, s: '$5M+',';
+      ic, o, n: <Shield, className="w-8 h-8" />,";
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-indi, g, o-5, 0, 0',';
+      bad, g, e: 'ENTERPRI, S, E',';
+      featur, e, s: ['Quantum, Encryptio, n', 'Ze, r, o-Trust, Architectur, e', 'Threat, Detectio, n']';
+    }
+    {
+      id: 3
+      tit, l, e: 'Clo, u, d-Native, AI, Infrastructure',';
+      sl, u, g: 'clo, u, d-nati, v, e-ai-infrastructu, r, e-20, 2, 6',';
+      excer, p, t: 'Scalab, l, e, secu, r, e, and, cos, t-effective, AI, infrastructure built, for, enterprise sca, l, e. Deploy, and, manage AI, models, across mul, t, i-cloud, environment, s.',';
+      catego, r, y: 'Cloud, Infrastructur, e',';
+      indust, r, y: 'Technolo, g, y, Reta, i, l, Manufacturi, n, g',';
+      r, o, i: '4, 0, 0%',';
+      savin, g, s: '$3M+',';
+      ic, o, n: <Cloud, className="w-8 h-8" />,";
+      gradie, n, t: 'fr, o, m-gre, e, n-500, t, o-emera, l, d-5, 0, 0',';
+      bad, g, e: 'CLO, U, D-FIR, S, T',';
+      featur, e, s: ['Mul, t, i-Cloud, Deploymen, t', 'Au, t, o-Scali, n, g', 'Cost, Optimizatio, n']';
+    }
+    {
+      id: 4
+      tit, l, e: 'Predictive, Analytics, Intelligence',';
+      sl, u, g: 'predicti, v, e-analyti, c, s-intelligen, c, e-20, 2, 6',';
+      excer, p, t: 'Advanced, predictive, analytics that, forecast, business tren, d, s, customer, behavio, r, and, operational, risks with, 9, 9.9% accura, c, y.',';
+      catego, r, y: 'Business, Intelligenc, e',';
+      indust, r, y: 'Reta, i, l, Finan, c, e, Healthca, r, e',';
+      r, o, i: '3, 5, 0%',';
+      savin, g, s: '$4M+',';
+      ic, o, n: <Target, className="w-8 h-8" />,";
+      gradie, n, t: 'fr, o, m-oran, g, e-500, t, o-r, e, d-5, 0, 0',';
+      bad, g, e: 'PREDICTI, V, E',';
+      featur, e, s: ['Trend, Forecastin, g', 'Risk, Analysi, s', 'Customer, Insight, s']';
+    }
+    {
+      id: 5
+      tit, l, e: 'Digital, Transformation, Suite',';
+      sl, u, g: 'digit, a, l-transformati, o, n-sui, t, e-20, 2, 6',';
+      excer, p, t: 'Complete, digital, transformation solution, covering, strategy, implementati, o, n, and, optimizatio, n. Modernize, your, enterprise for, the, AI e, r, a.',';
+      catego, r, y: 'Digital, Transformatio, n',';
+      indust, r, y: 'All, Industrie, s',';
+      r, o, i: '5, 0, 0%',';
+      savin, g, s: '$1, 0, M+',';
+      ic, o, n: <Building, className="w-8 h-8" />,";
+      gradie, n, t: 'fr, o, m-te, a, l-500, t, o-cy, a, n-5, 0, 0',';
+      bad, g, e: 'TRANSFORMATI, O, N',';
+      featur, e, s: ['Strategy, Consultin, g', 'Implementati, o, n', 'Change, Managemen, t']';
+    }
+    {
+      id: 6
+      tit, l, e: 'Enterprise, AI, Governance',';
+      sl, u, g: 'enterpri, s, e-ai-governan, c, e-20, 2, 6',';
+      excer, p, t: 'Comprehensive, AI, governance framework, ensuring, ethical AI, deploymen, t, complian, c, e, and, risk, management across, your, organization.',';
+      catego, r, y: 'AI, Governanc, e',';
+      indust, r, y: 'Finan, c, e, Healthca, r, e, Governme, n, t',';
+      r, o, i: '2, 0, 0%',';
+      savin, g, s: '$1.5M+',';
+      ic, o, n: <Users, className="w-8 h-8" />,";
+      gradie, n, t: 'fr, o, m-pi, n, k-500, t, o-purp, l, e-5, 0, 0',';
+      bad, g, e: 'GOVERNAN, C, E',';
+      featur, e, s: ['Ethical, A, I', 'Compliance, Managemen, t', 'Risk, Assessmen, t']';
+    }
+  ];
+  const, successMetric, s = [
+    { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Client, s', ic, o, n: <Building, className="w-8 h-8" /> }
+    { val, u, e: '$2B+', lab, e, l: 'Cost, Savings, Generated', ic, o, n: <DollarSign, className="w-8 h-8" /> }
+    { val, u, e: '98%', lab, e, l: 'Client, Satisfactio, n', ic, o, n: <Award, className="w-8 h-8" /> }
+    { val, u, e: '24/7', lab, e, l: 'Enterprise, Suppor, t', ic, o, n: <Users, className="w-8 h-8" /> }
+    { val, u, e: '5, 0, 0+', lab, e, l: 'Enterprise, Client, s', ic, o, n: <Building, className="w-8 h-8" /> },";
+    { val, u, e: '$2B+', lab, e, l: 'Cost, Savings, Generated', ic, o, n: <DollarSign, className="w-8 h-8" /> },";
+    { val, u, e: '98%', lab, e, l: 'Client, Satisfactio, n', ic, o, n: <Award, className="w-8 h-8" /> },";
+    { val, u, e: '24/7', lab, e, l: 'Enterprise, Suppor, t', ic, o, n: <Users, className="w-8 h-8" /> }";
+  ];
+  return (
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-bl, u, e-900, t, o-indi, g, o-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e='absolute, inse, t-0, overflo, w-hidden, opacit, y-20'>
         <div, classNam, e='absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-bl, u, e-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e' />

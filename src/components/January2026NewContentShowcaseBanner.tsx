@@ -1,5 +1,4 @@
-import, React, from 'rea, c, t';
-impo, r, t { moti, o, n } fr, o, m 'fram, e, r-moti, o, n';
+import React from "react";
 const, January2026NewContentShowcaseBanne, r: Rea, c, t.FC = () => {
   const, feature, s = [
     { ic, o, n: B, r, a, i, n, title: "Synthetic, Consciousne, s, s", de, s, c: "True, AI, awarenes, s" },

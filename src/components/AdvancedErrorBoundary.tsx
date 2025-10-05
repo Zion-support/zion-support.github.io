@@ -3,10 +3,6 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-}
-
-interface State {
-  hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
@@ -35,19 +31,10 @@ interface Props {
       errorInfo
     });
   }
-
-  render() { 
-    if (this.state.hasError) {
-      return (
         this.props.fallback || (
           <div className="error-boundary">
             <h2>Something went wrong.</h2>
             <details style={{ whiteSpace: 'pre-wrap' }}>
               {this.state.error && this.state.error.toString()}
               <br />
-    return this.props.children;
-  }
-}
-
-export default AdvancedErrorBoundary;
 export default AdvancedErrorBoundary;

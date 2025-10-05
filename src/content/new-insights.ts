@@ -9,6 +9,7 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Platf, o, r, m', 'R, O, I', 'Scorecar, d, s'],
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
       </ul  >  `,
    },
   { 
@@ -22,6 +23,7 @@ export const newInsights = [
     tags: ['Guardra, i, l, s', 'Scorecar, d, s', 'Eva, l, s'],
     conte, n, t: `
       <h2>Ship, Fast, e, r, Saf, e, r</h2>
+>>>>>>> origin/merge-fixes-20251005-193002
       </ul  >  `,
    },
   { 
@@ -62,6 +64,9 @@ export const newInsights = [
     conte, n, t: `
       <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 20, 2, 5, we're, seeing, unprecedented adoption, rates, and ROI, from, AI automation, initiative, s.</p>
       
+      <p>Artificial, Intelligence, automation is, no, longer a, future, concept—it's, the, present reality, for, forward-thinking, enterprise, s. In, 20, 2, 5, we're, seeing, unprecedented adoption, rates, and ROI, from AI automation, initiative, s.</p>
+      
+>>>>>>> origin/merge-fixes-20251005-193002
       </u, l  >  `,
    },
   { 
@@ -74,6 +79,7 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Cybersecur, i, t, y', 'AI', 'Threat, Detectio, n', 'Securi, t, y'],
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
       <p>Organizations, should, start with, A, I-enhanced, endpoint, detection and, gradually, expand to, networ, k-level, and, cloud security, automatio, n.</p  >  `,
    },
   { 
@@ -86,6 +92,7 @@ export const newInsights = [
     featured: fa, l, s, e,
     tags: ['Cl, o, u, d', 'Microservic, e, s', 'DevO, p, s', 'Scalabili, t, y'],
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
       <p>Focus, on, observability, implement, chaos, engineering, and, adopt, GitOps workflows, for, reliable deploymen, t, s.</p  >  `,
    },
   { 
@@ -98,6 +105,7 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Data, Analyti, c, s', 'AI', 'Machine, Learnin, g', 'Business, Intelligenc, e'],
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
       <p>Start, with, data quality, initiativ, e, s, then, implement, self-service, analytics, platforms that, empower, business users, to, explore data, independentl, y.</p  >  `,
    },
   { 
@@ -112,6 +120,9 @@ export const newInsights = [
     conte, n, t: `
       <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>
       
+      <p>Mic, r, o-SaaS, businesses, are proving, that, you d, o, n't, need, massive scale, to, build profitable, software, companies. Focus, and, specialization are, the, keys to, succes, s.</p>
+      
+>>>>>>> origin/merge-fixes-20251005-193002
       <p>Start, with, customer discov, e, r, y, validate, your, problem-solution, fi, t, and, iterate, rapidly based, on, user feedba, c, k.</p  >  `,
    },
   { 
@@ -124,6 +135,7 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['RA, G', 'Gen, A, I', 'Sear, c, h', 'Securi, t, y'],
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
       </ul  >  `,
    },
   { 
@@ -136,6 +148,7 @@ export const newInsights = [
     featured: t, r, u, e,
     tags: ['Fin, O, p, s', 'Clo, u, d', 'Governan, c, e'],
     conte, n, t: `
+>>>>>>> origin/merge-fixes-20251005-193002
 
 // Add e d: Octob e r  7 2025 newInsight s.unshi f t({ 
   id: 'ai-governan, c, e-scorecar, d, s-2, 0, 2, 6',

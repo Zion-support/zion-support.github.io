@@ -6,11 +6,6 @@ class SecurityEnhancer {
   private isInitialized = false;
 
 >>>>>>> origin/merge-fixes
-    this.setupCSP();
-    this.setupHTTPSRedirect();
-    this.setupXSSProtection();
-    this.setupSecurityHeaders();
-    
 >>>>>>> origin/merge-fixes
   private setupHTTPSRedirect(): void {
     if (typeof location !== 'undefined' && location.protocol !== 'https:' && location.hostname !== 'localhost') {
@@ -19,14 +14,6 @@ class SecurityEnhancer {
   }
 
   private setupXSSProtection(): void {
-    if (typeof document !== 'undefined') {
-      const meta = document.createElement('meta');
-      meta.httpEquiv = 'X-Content-Type-Options';
-      meta.content = 'nosniff';
-      document.head.appendChild(meta);
-    }
-  }
-
   private setupSecurityHeaders(): void {
     // Additional security headers setup
     console.log('Security headers configured');

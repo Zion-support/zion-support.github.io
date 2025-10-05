@@ -38,6 +38,12 @@ export interface Service {
   featur, e, s: string[];
     prima, r, y: string;
     seconda, r, y: str, i, n, g;
+    prima, r, y: string;
+    seconda, r, y: str, i, n, g;
+
+export const getRecentContent = (lim, i, t: number = , 3) => { 
+  const allConten, t = [
+>>>>>>> origin/merge-fixes-20251005-193002
     ...blogPos, t, s.m, a, p(po, s, t = > ({ ...po, s, t, ty, p, e: 'bl, o, g' as, con, s, t  })),
     ...caseStudi, e, s.m, a, p(stu, d, y = > ({ ...st, u, d, y, ty, p, e: 'ca, s, e-stu, d, y' as, con, s, t })),
     ...servic, e, s.m, a, p(servi, c, e = > ({ ...serv, i, c, e, ty, p, e: 'servi, c, e' as, con, s, t })),

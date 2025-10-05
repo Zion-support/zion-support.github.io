@@ -26,28 +26,6 @@ Object.defineProperty(window, 'performance', {
     getEntriesByName: jest.fn(() => []),
   },
 });
-// Mock lucide-react icons
-const mockIcon = (name: string) => `[${name}]`;
-// Mock IntersectionObserver
-global.IntersectionObserver = class IntersectionObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock ResizeObserver
-global.ResizeObserver = class ResizeObserver {
-  constructor() {}
-  disconnect() {}
-  observe() {}
-  unobserve() {}
-};
-
-// Mock fetch
-global.fetch = jest.fn();
-
-// Mock console methods to reduce noise in tests
 global.console = {
   ...console,
   log: jest.fn(),

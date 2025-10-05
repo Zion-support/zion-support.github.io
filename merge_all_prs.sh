@@ -37,3 +37,5 @@ merge_branch() {
                         echo "    🔄 Resolving merge conflicts in $file"
                         sed -i '//,/                        sed -i '//d' "$file" 2>/dev/null || true
                         
+                        sed -i '//,/                        sed -i '//d' "$file" 2>/dev/null || true
+                        

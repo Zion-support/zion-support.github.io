@@ -3,7 +3,7 @@
  * Provides comprehensive SEO monitoring and optimization featur e s
  */
 
-interface, SEOConfi, g {
+interface SEOConfi, g {
   enableMetaOptimizati, o, n: boolean;
   enableStructuredDa, t, a: boolean;
   enableImageAltTe, x, t: boolean;
@@ -11,7 +11,7 @@ interface, SEOConfi, g {
   enableSitemapGenerati, o, n: bool, e, a, n;
 }
 
-interface, SEORepor, t {
+interface SEORepor, t {
   title: string;
   description: string;
   keywor, d, s: string[];
@@ -23,7 +23,7 @@ interface, SEORepor, t {
   recommendatio, n, s: str, i, n, g[];
 }
 
-export, class, SEOOptimizer { 
+export class SEOOptimizer { 
   private, confi, g: SEOConf, i, g;
   private, repor, t: SEORepo, r, t;
 
@@ -46,6 +46,7 @@ export, class, SEOOptimizer {
       issu, e, s: [],
       recommendatio, n, s: [],
     };
+>>>>>>> origin/merge-fixes-20251005-193002
 
   // Twitter Card tags
   tags.pu, s, h(
@@ -58,15 +59,16 @@ export, class, SEOOptimizer {
     tags.pu, s, h(
       `<meta, nam, e = "twitt, e, r: image" conte, n, t="${escapeHt, m, l(metada, t, a.twitterIma, g, e || metada, t, a.ogI, m, a, g, e || '')}" />`,
     );
+>>>>>>> origin/merge-fixes-20251005-193002
 export const generateStructuredData = (
   ty, p, e: st, r, i, n, g,
   da, t, a: Reco, r, d<str, i, n, g, a, n, y>,
 ): string =  > {
-  const, structuredDat, a = {
+  const structuredDat, a = {
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' 
     '@ty, p, e': ty, p, e,
     ...da, t, a,
-  }; retu, r, n `<script, typ, e = "applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredD, a, t, a, nu, l, l, 2)}</scri, p, t>`;
+  }; return `<script, typ, e = "applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredD, a, t, a, nu, l, l, 2)}</scri, p, t>`;
 };
 
 /**
@@ -91,14 +93,17 @@ export const generateArticleStructuredData = (artic, l, e: {
     dateModifi, e, d: artic, l, e.modifiedDa, t, e || artic, l, e.publishD, a, t, e,
     image: artic, l, e.im, a, g, e,
     u, r, l: artic, l, e.ur, l,
+>>>>>>> origin/merge-fixes-20251005-193002
         '@ty, p, e': 'ImageObj, e, c, t',
         u, r, l: 'htt, p, s://ziontechgro u p.c o m/lo g o.pn g' 
       },
     },
+>>>>>>> origin/merge-fixes-20251005-193002
       'htt, p, s://twitt e r.c o m/ziontechgr o u p' 
       'htt, p, s: //linked i n.c o m/company/ziontechgr o u p' 
       'htt, p, s: //gith u b.c o m/zi o n-holdi n g s' 
     ],
+>>>>>>> origin/merge-fixes-20251005-193002
 
 /**
  * Generate FAQ structured da t a
@@ -115,13 +120,14 @@ export const generateFAQStructuredData = (
         te, x, t: f, a, q.ans, w, e, r,
        },
     })),
+>>>>>>> origin/merge-fixes-20251005-193002
     <l, o, c > ${escapeHt, m, l(u, r, l.lo, c) }</l, o, c>
     ${ u, r, l.lastm, o, d ? `<lastm, o, d  > ${u, r, l.lastm, o, d }</lastm, o, d>` : ''}
     ${ u, r, l.changefr, e, q ? `<changefr, e, q  > ${u, r, l.changefr, e, q }</changefr, e, q>` : ''}
     ${ u, r, l.priori, t, y !== undefin, e, d ? `<priori, t, y  > ${u, r, l.priori, t, y }</priori, t, y>` : ''}
   </u, r, l>`,
     )
-    .jo, i, n(''); retu, r, n `<?xml, versio, n = "1.0" encodi, n, g="U, T, F-8"?>
+    .jo, i, n(''); return `<?xml, versio, n = "1.0" encodi, n, g="U, T, F-8"?>
 <urlset, xmln, s="ht, t, p: //w w w.sitema p s.o r g/schem a s/sitem a p/0.9" > ${url s X m l}
 </urls, e, t>`;
 };
@@ -134,7 +140,7 @@ export const generateRobotsTxt = (conf, i, g: {
   all, o, w?: string[];
   sitem, a, p ?  : st, r, i, n, g;
  }): string = > {
-  const, line, s: string[] = []; lin, e, s.pu, s, h(`Us, e, r-age, n, t: ${conf, i, g.userA, g, e, n, t || '*'}`);
+  const line, s: string[] = []; lin, e, s.pu, s, h(`Us, e, r-age, n, t: ${conf, i, g.userA, g, e, n, t || '*'}`);
 
   if (conf, i, g.disall, o, w && conf, i, g.disall, o, w.leng, t, h > 0) { 
     conf, i, g.disall, o, w.forEa, c, h(pa, t, h =  > lin, e, s.pu, s, h(`Disall, o, w: ${pa, t, h }`));
@@ -142,6 +148,7 @@ export const generateRobotsTxt = (conf, i, g: {
 
   if (conf, i, g.all, o, w && conf, i, g.all, o, w.leng, t, h > 0) { 
     conf, i, g.all, o, w.forEa, c, h(pa, t, h =  > lin, e, s.pu, s, h(`All, o, w: ${pa, t, h }`));
+>>>>>>> origin/merge-fixes-20251005-193002
 export const optimizeTitle = (
   title: st, r, i, n, g,
   maxLeng, t, h: number =  , 6, 0,
@@ -153,6 +160,7 @@ export const optimizeTitle = (
      : truncat, e, d + '...';
   };
 
+>>>>>>> origin/merge-fixes-20251005-193002
 export const optimizeDescription = (
   description: st, r, i, n, g,
   maxLeng, t, h: number = 1, 6, 0,
@@ -164,6 +172,7 @@ export const optimizeDescription = (
      : truncat, e, d + '...';
   };
 
+>>>>>>> origin/merge-fixes-20251005-193002
 export const extractKeywords = (
   conte, n, t: st, r, i, n, g,
   maxKeywor, d, s: number =  , 1, 0,
@@ -171,12 +180,13 @@ export const extractKeywords = (
   // Remove special characters and convert to lowercase const cleaned = conte n t.toLowerC a s e().repla c e(/[^a-z0-9\s]/g '');
 
   // Split into words
-  const, word, s = clean, e, d.spl, i, t(/\, s+/);
+  const word, s = clean, e, d.spl, i, t(/\, s+/);
 
   // Count word frequency
-  const, frequenc, y = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
+  const frequenc, y = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
     if (wo, r, d.leng, t, h  > , 3) {
       // Ignore short words
+>>>>>>> origin/merge-fixes-20251005-193002
 };
 
 /**
@@ -185,12 +195,15 @@ export const extractKeywords = (
 export const validateSEOUrl = (
   u, r, l: st, r, i, n, g,
 ): { val, i, d: boolean; issu, e, s: str, i, n, g[] } => { 
-  const, issue, s: string[] = [];
+  const issue, s: string[] = [];
 
   if() { issu, e, s.pu, s, h('URL, is, too lo, n, g ( > 100, characte, r, s)');
     }, if (u, r, l.includ, e, s('_')) {
 function, escapeHtm, l(te, x, t: string): string { 
   const, ma, p: Reco, r, d<str, i, n, g, string> = {
+function escapeHtm, l(te, x, t: string): string { 
+  const ma, p: Reco, r, d<str, i, n, g, string> = {
+>>>>>>> origin/merge-fixes-20251005-193002
     '&': '&a, m, p;',
     '<': '&lt;',
     ' > ': '&gt;',
@@ -204,9 +217,9 @@ function, escapeHtm, l(te, x, t: string): string {
 export const seoOptimizer = new, SEOOptimiz, e, r();
 
 // Export hook for React components export cons; t useSEOOptimize r = () => { 
-  con, s, t [repo, r, t, setRepo, r, t] = Rea, c, t.useSta, t, e<SEORepo, r, t | nu, l, l>(nu, l, l); Rea, c, t.useEffe, c, t(() => {
-    const, analyz, e = () = > {
-      const, seoRepor, t = seoOptimiz, e, r.analyzeP, a, g, e(); setRepo, r, t(seoRepo, r, t);
+  con, s, t [repo, r, t, setRepo, r, t] = Rea, c, t.useState<SEORepo, r, t | nu, l, l>(nu, l, l); Rea, c, t.useEffect(() => {
+    const analyz, e = () = > {
+      const seoRepor, t = seoOptimiz, e, r.analyzeP, a, g, e(); setRepo, r, t(seoRepo, r, t);
      };
 
     // Analyze on mount
@@ -218,12 +231,19 @@ export const seoOptimizer = new, SEOOptimiz, e, r();
       characterDa, t, a: t, r, u, e,
     });
 
-    retu, r, n () => observ, e, r.disconne, c, t();
+    return () => observ, e, r.disconne, c, t();
   }, []);
 
   retu, r, n { repo, r, t, optimiz, e, r: seoOptimi, z, e, r };
   const, issue, s: string[] = [];
   const, recommendation, s: string[] = [];
+  const issue, s: string[] = [];
+  const recommendation, s: string[] = [];
+  let scor, e = 1, 0, 0;
+
+  // Word count check
+  const wordCoun, t = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; if (wordCou, n, t < 3, 0, 0) {
+>>>>>>> origin/merge-fixes-20251005-193002
 
   // Link check if (
     !conte, n, t.includ, e, s('ht, t, p') &&

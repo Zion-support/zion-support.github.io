@@ -1,17 +1,19 @@
-import, React, from 'rea, c, t';
-impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
-
-interface, SEOHeadProp, s { 
-  title?: string;
-  description?: string;
-  keywor, d, s?: string;
-  canonicalU, r, l?: string;
-  ogIma, g, e?: string;
-  ogTy, p, e?: string;
-  twitterCa, r, d?: string;
-  structuredDa, t, a ?  : obje, c, t;
- }
-
+import React from "react";
+import { Helmet } from "react-helmet-async";
+import React from "react";';
+impo, r, t {
+Helm, e, t;
+} fr, o, m "rea, c, t-helm, e, t-asy, n, c";';
+interface, SEOHeadProp, s {
+tit, l, e?: stri, n, g;
+descripti, o, n?: stri, n, g;
+keywor, d, s?: stri, n, g;
+canonicalU, r, l?: stri, n, g;
+ogIma, g, e?: stri, n, g;
+ogTy, p, e?: stri, n, g;
+twitterCa, r, d?: stri, n, g;
+structuredDa, t, a?: obje, c, t;
+}
 const, SEOHea, d: Rea, c, t.FC<SEOHeadPro, p, s> = ({
   title = 'Zion, Tech, Group — , A, I, Micro, Saa, S, and, IT, Services',
   description = 'Enterpri, s, e-grad, e, A, I, micro, Saa, S, and, IT, solutions. Transform, your, business with, cuttin, g-edge, technology, and automati, o, n.',

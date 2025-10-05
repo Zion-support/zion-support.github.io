@@ -1,47 +1,81 @@
-import, React, from 'rea, c, t';
-const, February2026ContentShowcaseBanne, r = () => { 
+const, February2026ContentShowcaseBanne, r = () => {
   const, featuredConten, t = [
     {
-      i, d:  , 1,
-      title: 'Autonomous, Neural, Networks 2, 0, 2, 6',
-      category: 'AI, Architectu, r, e',
-      readTime: '12, m, i, n',
-      rati, n, g: 5., 0,
-      reade, r, s: '1, 8, 0, K+',
-      bad, g, e: 'BREAKTHRO, U, G, H',
-      gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-50, 0',
-      ic, o, n: <Brain, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-netwo, r, k, s',
-      description: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-mak, i, n, g'
-     },
-    { 
-      id:  , 2,
-      title: 'Quantum, Edge, Computing Revolut, i, o, n',
-      category: 'Edge, Computi, n, g',
-      readTime: '15, m, i, n',
-      rati, n, g: 4., 9,
-      reade, r, s: '1, 5, 6, K+',
-      bad, g, e: 'FEATU, R, E, D',
-      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-50, 0',
-      ic, o, n: <Zap, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-comput, i, n, g',
-      description: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, time, s'
-     },
-    { 
-      id:  , 3,
-      title: 'Me, t, a-Cognitive, AI, System, s',
-      category: 'AI, Psycholo, g, y',
-      readTime: '18, m, i, n',
-      rati, n, g: 5., 0,
-      reade, r, s: '2, 0, 3, K+',
-      bad, g, e: 'REVOLUTION, A, R, Y',
-      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-50, 0',
-      ic, o, n: <Sparkles, classNam, e = "w-6 , h-, 6" / > ,
-      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syst, e, m, s',
-      description: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learn, i, n, g'
-     }
-  ]; retu, r, n (
-    <div, classNam, e = "py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">
+      id: 1
+      tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6','
+      catego, r, y: 'AI, Architectur, e','
+      readTi, m, e: '12, mi, n','
+      rati, n, g: 5.0
+      reade, r, s: '18, 0, K+','
+      bad, g, e: 'BREAKTHROU, G, H','
+      gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0','
+      ic, o, n: <Brain, className="w-6 h-6/>,"
+      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s','
+      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g}
+    {
+      id: 2
+      tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n','
+      catego, r, y: 'Edge, Computin, g','
+      readTi, m, e: '15, mi, n','
+      rati, n, g: 4.9
+      reade, r, s: '15, 6, K+','
+      bad, g, e: 'FEATUR, E, D','
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0','
+      ic, o, n: <Zap, className="w-6 h-6/>,"
+      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g','
+      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times}
+    {
+      id: 3
+      tit, l, e: 'Me, t, a-Cognitive, AI, Systems','
+      catego, r, y: 'AI, Psycholog, y','
+      readTi, m, e: '18, mi, n','
+      rati, n, g: 5.0
+      reade, r, s: '20, 3, K+','
+      bad, g, e: 'REVOLUTIONA, R, Y','
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0','
+      ic, o, n: <Sparkles, className="w-6 h-6/>,"
+      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s','
+      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g}
+      tit, l, e: 'Autonomous, Neural, Networks 20, 2, 6',';
+      catego, r, y: 'AI, Architectur, e',';
+      readTi, m, e: '12, mi, n',';
+      rati, n, g: 5.0
+      reade, r, s: '18, 0, K+',';
+      bad, g, e: 'BREAKTHROU, G, H',';
+      gradie, n, t: 'fr, o, m-emera, l, d-500, t, o-te, a, l-5, 0, 0',';
+      ic, o, n: <Brain, className="w-6 h-6" />,";
+      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-autonomo, u, s-neur, a, l-networ, k, s',';
+      descripti, o, n: 'Se, l, f-evolving, neural, architectures achieving, 9, 9.97% accuracy, in, autonomous decisi, o, n-maki, n, g'
+    }
+    {
+      id: 2
+      tit, l, e: 'Quantum, Edge, Computing Revoluti, o, n',';
+      catego, r, y: 'Edge, Computin, g',';
+      readTi, m, e: '15, mi, n',';
+      rati, n, g: 4.9
+      reade, r, s: '15, 6, K+',';
+      bad, g, e: 'FEATUR, E, D',';
+      gradie, n, t: 'fr, o, m-bl, u, e-500, t, o-cy, a, n-5, 0, 0',';
+      ic, o, n: <Zap, className="w-6 h-6" />,";
+      li, n, k: '/bl, o, g/ed, g, e-20, 2, 6-f, e, b-quant, u, m-computi, n, g',';
+      descripti, o, n: 'Ult, r, a-low, latency, quantum processing, delivering, sub-millisecond, response, times'
+    }
+    {
+      id: 3
+      tit, l, e: 'Me, t, a-Cognitive, AI, Systems',';
+      catego, r, y: 'AI, Psycholog, y',';
+      readTi, m, e: '18, mi, n',';
+      rati, n, g: 5.0
+      reade, r, s: '20, 3, K+',';
+      bad, g, e: 'REVOLUTIONA, R, Y',';
+      gradie, n, t: 'fr, o, m-purp, l, e-500, t, o-pi, n, k-5, 0, 0',';
+      ic, o, n: <Sparkles, className="w-6 h-6" />,";
+      li, n, k: '/bl, o, g/ai-20, 2, 6-f, e, b-me, t, a-cogniti, v, e-syste, m, s',';
+      descripti, o, n: 'AI, that, thinks about, thinkin, g - achieving, true, self-awareness, and, autonomous learni, n, g'
+    }
+  ];
+  return (
+    <div, className="py-20, b, g-gradie, n, t-to-br, fro, m-sla, t, e-900, vi, a-indi, g, o-900, t, o-purp, l, e-900, relative, overflow-hidd, e, n">";
       {/* Animated, background, effects */}
       <div, classNam, e="absolute, inse, t-0, overflo, w-hidden, opacit, y-20">
         <div, classNam, e="absolute, to, p-0, lef, t-1/4 w-9, 6, h-96, b, g-emera, l, d-500, rounde, d-full, mi, x-ble, n, d-multiply, filter, blur-3xl, animat, e-pul, s, e" />
