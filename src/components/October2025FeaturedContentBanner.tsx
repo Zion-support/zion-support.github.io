@@ -95,7 +95,7 @@ const October2025FeaturedContentBanner = () => {
 
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {featuredContent.map((content, index) = > {
+          {featuredContent.map((content, index) => {
             const Icon = content.icon;
             return (
               <Link
@@ -107,10 +107,10 @@ const October2025FeaturedContentBanner = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${content.bgGradient} opacity-50 group-hover:opacity-70 transition-opacity`}></div>
                 <div className="relative p-8">
                   {/* Icon & Title */}
-<div className="flex items-start mb-6" > <div className={`p-4 bg-gradient-to-r ${content.gradient} rounded-xl mr-4`}>
-                      <Icon className="w-8 h-8 text-white"</div>=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
+                  <div className="flex items-start mb-6">
+                    <div className={`p-4 bg-gradient-to-r ${content.gradient} rounded-xl mr-4`}>
+                      <Icon className="w-8 h-8 text-white" />
+                    </div>
                     <div className="flex-1">
                       <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                         {content.title}
@@ -123,8 +123,9 @@ const October2025FeaturedContentBanner = () => {
 
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
-                    {content.stats.map((stat, idx) = > (
-                      <div key={idx} className="text-center bg-slate-900/60 p-4 rounded-lg border border-white/10" > <div className={`text-2xl font-bold bg-gradient-to-r ${content.gradient} bg-clip-text text-transparent`}>
+                    {content.stats.map((stat, idx) => (
+                      <div key={idx} className="text-center bg-slate-900/60 p-4 rounded-lg border border-white/10">
+                        <div className={`text-2xl font-bold bg-gradient-to-r ${content.gradient} bg-clip-text text-transparent`}>
                           {stat.value}
                         </div>
                         <div className="text-xs text-gray-400 mt-1">{stat.label}</div>
@@ -134,12 +135,13 @@ const October2025FeaturedContentBanner = () => {
 
                   {/* CTA */}
                   <div className="flex items-center justify-between">
-                    <span className="text-sm text-gray-400">Published October 1, 2025</span > <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
+                    <span className="text-sm text-gray-400">Published October 1, 2025</span>
+                    <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
                       Read Full Article
-
                     </div>
                   </div>
-                </div > {/* Hover Effect Overlay */}
+                </div>
+                {/* Hover Effect Overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
               </Link>
             );

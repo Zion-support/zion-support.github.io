@@ -14,8 +14,6 @@ import HomePage from './page';
 // Utils
 import { performanceOptimizer } from '../src/utils/performanceOptimizer';
 
-import { performanceOptimizer } from '../utils/performanceOptimizer';
-
 // Styles
 import '../index.css';
 

@@ -12,12 +12,7 @@ const LoadingSpinner: React.FC = () => (
 // Error fallback component
 const ErrorFallback: React.FC<{ error: Error;
   resetErrorBoundary: () => void;
- }> = ({ error, resetErrorBoundary }) => (=======
-const ErrorFallback: React.FC<{ error: Error;
-  resetErrorBoundary: () => void;
  }> = ({ error, resetErrorBoundary }) => (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -32,8 +27,7 @@ const ErrorFallback: React.FC<{ error: Error;
           <summary className='cursor-pointer text-sm text-gray-500'>
             Error details
           </summary>
-          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto' > {error.message}
-          </pre>
+          <pre className='mt-2 text-xs text-red-600 bg-red-50 p-2 rounded overflow-auto'>{error.message}</pre>
         </details>
       )}
       <button
@@ -51,14 +45,14 @@ const MainContent: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() = > {
+    const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   if (!isLoaded) {
-    return <LoadingSpinner / > ;
+    return <LoadingSpinner />;
   }
 
   return (
@@ -97,7 +91,7 @@ const MainContent: React.FC = () => {
               Discover our latest innovations and breakthrough technologies
             </p>
           </div>
-          <Suspense fallback={<LoadingSpinner / > }>
+          <Suspense fallback={<LoadingSpinner />}>
             <div className='grid md:grid-cols-3 gap-8'>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🤖</div>
@@ -117,7 +111,7 @@ const MainContent: React.FC = () => {
               </div>
               <div className='text-center p-6'>
                 <div className='text-4xl mb-4'>🔄</div>
-                
+                <h3 className='text-xl font-bold mb-3'>Automation</h3>
                 <p className='text-gray-600'>
                   Complete automation suites for enterprise operations and
                   workflows.
@@ -136,7 +130,7 @@ const OptimizedApp: React.FC = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onError={(error, errorInfo) = > {
+      onError={(error, errorInfo) => {
         console.error('Application Error:', error, errorInfo);
         if (process.env.NODE_ENV === 'production') {
           // Send error to monitoring service in production
@@ -144,14 +138,9 @@ const OptimizedApp: React.FC = () => {
         }
       }}
     >
-<Suspense fallback={<LoadingSpinner />}>
-        <MainContent />
-      </Suspense>=======
       <Suspense fallback={<LoadingSpinner />}>
         <MainContent />
       </Suspense>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
     </ErrorBoundary>
   );
 };
