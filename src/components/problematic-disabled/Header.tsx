@@ -67,19 +67,19 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <a href="/" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              <a href="/" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Home
               </a>
-              <a href="/about" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              <a href="/about" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 About
               </a>
-              <a href="/services" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              <a href="/services" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Services
               </a>
-              <a href="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              <a href="/blog" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Blog
               </a>
-              <a href="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
+              <a href="/contact" className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">
                 Contact
               </a>
             </div>

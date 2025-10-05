@@ -165,7 +165,7 @@ class PerformanceOptimizer {
   }
 
   setupComponentSplitting() {
-    // Lazy load heavy components
+    // Lazy load heavy components that are not already statically imported
     const heavyComponents = [
       'Charts',
       'DataVisualization',
@@ -227,6 +227,19 @@ class PerformanceOptimizer {
 
   async loadComponent(componentName, element) {
     try {
+      // Only load components that are not already statically imported
+      const staticallyImportedComponents = [
+        'ErrorBoundary',
+        'SEO', 
+        'Loading',
+        'SystemMonitor'
+      ];
+      
+      if (staticallyImportedComponents.includes(componentName)) {
+        console.warn(`Component ${componentName} is already statically imported, skipping dynamic import`);
+        return;
+      }
+      
       const component = await import(`../components/${componentName}.tsx`);
       // Render component to element
       if (component.default) {
