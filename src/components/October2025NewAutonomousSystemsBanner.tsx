@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 const October2025NewAutonomousSystemsBanner = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden" > {/* Animated background effects */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]" <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/30 relative overflow-hidden">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:60px_60px]"></div>
+      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
       {/* Floating particles effect */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse" <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000" <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header with badge */}
         <div className="flex items-center justify-center gap-3 mb-6">
           <div className="flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 rounded-full px-4 py-2">

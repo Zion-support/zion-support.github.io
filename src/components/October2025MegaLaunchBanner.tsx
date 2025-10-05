@@ -2,67 +2,67 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 const October2025MegaLaunchBanner = () => {
   const topNewArticles = [
-    {",
+    {
       title: "Neuro-Symbolic AI in Production",
-      description: "10x Better Explainability & 5x Improved Accuracy with Hybrid Neural-Symbolic Systems",",
+      description: "10x Better Explainability & 5x Improved Accuracy with Hybrid Neural-Symbolic Systems",
       slug: "neuro-symbolic-ai-production-2025",
-      category: "AI Architecture",",
+      category: "AI Architecture",
       icon: "🧠",
-      gradient: "from-purple-600 to-pink-600",",
+      gradient: "from-purple-600 to-pink-600",
       badge: "BREAKTHROUGH"
     },
-    {",
+    {
       title: "AI-Powered DevOps Orchestration",
-      description: "85% Fewer Deployment Failures with Autonomous CI/CD & Predictive Intelligence",",
+      description: "85% Fewer Deployment Failures with Autonomous CI/CD & Predictive Intelligence",
       slug: "ai-powered-devops-orchestration-2025",
-      category: "DevOps AI",",
+      category: "DevOps AI",
       icon: "🚀",
-      gradient: "from-blue-600 to-cyan-600",",
+      gradient: "from-blue-600 to-cyan-600",
       badge: "FEATURED"
     },
-    {",
+    {
       title: "Federated Learning at Scale",
-      description: "100% Privacy-Compliant AI Across 1000+ Edge Devices with Zero Data Compromise",",
+      description: "100% Privacy-Compliant AI Across 1000+ Edge Devices with Zero Data Compromise",
       slug: "federated-learning-privacy-2026",
-      category: "Privacy AI",",
+      category: "Privacy AI",
       icon: "🔐",
-      gradient: "from-green-600 to-teal-600",",
+      gradient: "from-green-600 to-teal-600",
       badge: "ENTERPRISE"
     },
-    {",
+    {
       title: "Real-Time LLM Streaming",
-      description: "Sub-100ms Response Times with Edge-Optimized Inference & Intelligent Caching",",
+      description: "Sub-100ms Response Times with Edge-Optimized Inference & Intelligent Caching",
       slug: "real-time-llm-streaming-2025",
-      category: "LLM Performance",",
+      category: "LLM Performance",
       icon: "⚡",
-      gradient: "from-yellow-600 to-orange-600",",
+      gradient: "from-yellow-600 to-orange-600",
       badge: "PERFORMANCE"
     },
-    {",
+    {
       title: "Practical AI Ethics Framework",
-      description: "75% Bias Reduction with Production-Ready Governance & Automated Fairness",",
+      description: "75% Bias Reduction with Production-Ready Governance & Automated Fairness",
       slug: "ai-ethics-framework-2026",
-      category: "AI Governance",",
+      category: "AI Governance",
       icon: "⚖️",
-      gradient: "from-indigo-600 to-purple-600",",
+      gradient: "from-indigo-600 to-purple-600",
       badge: "COMPLIANCE"
     },
-    {",
+    {
       title: "Multi-Cloud AI Orchestration",
-      description: "50% Cost Savings with Intelligent Workload Distribution Across AWS, Azure & GCP",",
+      description: "50% Cost Savings with Intelligent Workload Distribution Across AWS, Azure & GCP",
       slug: "multi-cloud-ai-orchestration-2025",
-      category: "Cloud AI",",
+      category: "Cloud AI",
       icon: "☁️",
-      gradient: "from-sky-600 to-blue-600",",
+      gradient: "from-sky-600 to-blue-600",
       badge: "COST SAVINGS"
     },
-    {",
+    {
       title: "Conversational AI 2.0",
-      description: "95% User Satisfaction with Context-Aware Multi-Turn Dialogue in 50+ Languages",",
+      description: "95% User Satisfaction with Context-Aware Multi-Turn Dialogue in 50+ Languages",
       slug: "conversational-ai-breakthrough-2025",
-      category: "Conversational AI",",
+      category: "Conversational AI",
       icon: "💬",
-      gradient: "from-pink-600 to-rose-600",",
+      gradient: "from-pink-600 to-rose-600",
       badge: "UX LEADER"
     }
   ];
