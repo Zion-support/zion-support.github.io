@@ -3,32 +3,33 @@ export interface Banner {
   title: string;
   description: string;
   imageUrl: string;
-  linkU, r, l: string;
-  priori, t, y: number;
-  isActi, v, e: bool, e, a, n;
+  linkUrl: string;
+  priority: number;
+  isActive: boolean;
 }
 
-export const getFeaturedBanners = (cou, n, t: number = , 3): Bann, e, r[] => {
-  const, banner, s: Bann, e, r[] = [
+export const getFeaturedBanners = (count: number = 3): Banner[] => {
+  const banners: Banner[] = [
     {
-      id: 'ai-solution, s',
-      title: 'AI-Powered, Solutio, n, s',
-      description: 'Transform, your, business with, cuttin, g-edge, artificial, intelligence and, machine, learning technolog, i, e, s.',
-      imageUrl: '/imag, e, s/ai-solutio, n, s-bann, e, r.jp, g',
-      linkU, r, l: '/servic, e, s/ai-solution, s',
-      priori, t, y:  , 1,
-      isActi, v, e: t, r, u, e,
+      id: 'ai-solutions',
+      title: 'AI-Powered Solutions',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning technologies.',
+      imageUrl: '/images/ai-solutions-banner.jpg',
+      linkUrl: '/services/ai-solutions',
+      priority: 1,
+      isActive: true
     },
     {
-      id: 'quant, u, m-comput, i, n, g',
-      title: 'Quantum, Computi, n, g',
-      description: 'Revolutionary, quantu, m-enhanced, computing, platforms for, unprecedented, performance and, capabiliti, e, s.',
-      imageUrl: '/imag, e, s/quant, u, m-computi, n, g-bann, e, r.jp, g',
-      linkU, r, l: '/servic, e, s/quant, u, m-comput, i, n, g',
-      priori, t, y:  , 2,
-      isActi, v, e: t, r, u, e,
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure, and reliable cloud solutions for modern businesses.',
+      imageUrl: '/images/cloud-infrastructure-banner.jpg',
+      linkUrl: '/services/cloud-infrastructure',
+      priority: 2,
+      isActive: true
     },
     {
+<<<<<<< HEAD
       id: 'automat, i, o, n',
       title: 'Enterprise, Automati, o, n',
       description: 'Complete, automation, suites for, enterprise, operation, s, workflo, w, s, and, business, processes.',
@@ -58,3 +59,17 @@ export const getFeaturedBanners = (cou, n, t: number = , 3): Bann, e, r[] => {
   ]; return, banner, s
     .filt, e, r(bann, e, r = > bann, e, r.isAct, i, v, e)
     .so, r, t((a, b) => a.priori, t, y - b.priori, t, y)
+=======
+      id: 'data-analytics',
+      title: 'Data Analytics',
+      description: 'Unlock insights from your data with advanced analytics and visualization tools.',
+      imageUrl: '/images/data-analytics-banner.jpg',
+      linkUrl: '/services/data-analytics',
+      priority: 3,
+      isActive: true
+    }
+  ];
+
+  return banners.slice(0, count);
+};
+>>>>>>> origin/cursor/ad-creation-and-management-ac48

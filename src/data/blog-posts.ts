@@ -3,43 +3,44 @@ export interface BlogPost {
   title: string;
   slug: string;
   excerpt: string;
-  conte, n, t: string;
-  featuredIma, g, e: string;
+  content: string;
+  featuredImage: string;
   category: string;
   tags: string[];
   author: string;
-  published, A, t: string;
-  readTime: num, b, e, r;
+  publishedAt: string;
+  readTime: number;
 }
 
-export const BLOG_POSTS: BlogPo, s, t[] = [
+export const BLOG_POSTS: BlogPost[] = [
   {
-    id: '9, 9',
-    title: 'Governed, Agentic, Automation: Safe, Too, l, s, Fast, Outcome, s',
-    slug: 'govern, e, d-agent, i, c-automati, o, n-20, 2, 5-10-0, 3',
-    excerpt: 'Design, agent, toolchains with, budge, t, s, approva, l, s, and, rollback, to move, 10x, faster without, incident, s.',
-    conte, n, t: 'Ship, agent, automations your, SRE, and compliance, teams, endorse: signed, tools, with scopes, and, quota, s, action, budgets, and approva, l, s, live, traces, with K, P, I‑linked, SLI, s, and, rollback, hooks. Policy, templates, and dashboards, include, d.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/govern, e, d-agent, i, c-automati, o, n.jp, g',
-    category: 'A, I',
-    tags: ['Age, n, t, s', 'Governan, c, e', 'Guardrai, l, s', 'Rollba, c, k'],
-    author: 'Zion, Tech, Tea, m',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 8,
+    id: '1',
+    title: 'Governed, Agentic, Automation: Safe, Tools, Fast, Outcomes',
+    slug: 'governed-agentic-automation-2025-10-03',
+    excerpt: 'Design agent toolchains with budgets, approvals, and rollback to move 10x faster without incidents.',
+    content: 'Ship agent automations your SRE and compliance teams endorse: signed tools with scopes and quotas, action budgets and approvals, live traces with KPI-linked SLIs and rollback hooks. Policy templates and dashboards included.',
+    featuredImage: '/images/blog/governed-agentic-automation.jpg',
+    category: 'AI',
+    tags: ['Agents', 'Governance', 'Guardrails', 'Rollback'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-03',
+    readTime: 5
   },
   {
-    id: '9, 8',
-    title: 'Enterprise, RAG, Blueprint v3: 45% Qual, i, t, y ↑, 62% Co, s, t ↓',
-    slug: 'enterpri, s, e-r, a, g-bluepri, n, t-v3-20, 2, 5-10-0, 3',
-    excerpt: 'Retrieval, budge, t, s, freshness, window, s, and, cache, tiers that, raise, answer quality, while, cutting spe, n, d.',
-    conte, n, t: 'A, pragmatic, RAG playbo, o, k: strict, source, governanc, e, retrieval, budgets, and freshness, window, s, and, tiered, caches across, feature, s/chun, k, s/answe, r, s. Ev, a, l‑gated, rollouts, with kill, switche, s. Includes, reference, architectures and, KPI, scorecards.',
-    featuredIma, g, e: '/imag, e, s/bl, o, g/enterpri, s, e-r, a, g-bluepri, n, t-v3.jp, g',
-    category: 'RA, G',
-    tags: ['RA, G', 'Retriev, a, l', 'Cachi, n, g', 'Quali, t, y', 'Co, s, t'],
-    author: 'Zion, Tech, Group Knowledge, Syste, m, s',
-    published, A, t: '20, 2, 5-10-0, 3',
-    readTime:  , 9,
+    id: '2',
+    title: 'Advanced AI Solutions for Enterprise',
+    slug: 'advanced-ai-solutions-enterprise',
+    excerpt: 'Discover how our AI solutions can transform your business operations.',
+    content: 'Our comprehensive AI solutions help enterprises automate processes, improve efficiency, and drive innovation.',
+    featuredImage: '/images/blog/ai-solutions.jpg',
+    category: 'AI',
+    tags: ['Enterprise', 'Automation', 'Innovation'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-02',
+    readTime: 4
   },
   {
+<<<<<<< HEAD
     id: '9, 7',
     title: 'Cloud, Cost, Optimization v6: Quality, Tie, r, s, Coales, c, e, Disti, l, l',
     slug: 'gen, a, i-co, s, t-optimizati, o, n-v6-20, 2, 5-10-0, 3',
@@ -507,3 +508,18 @@ export const BLOG_POSTS: BlogPo, s, t[] = [
     published, A, t: '20, 2, 5-10-0, 3',
     readTime: 1, 0,
   },
+=======
+    id: '3',
+    title: 'The Future of IT Infrastructure',
+    slug: 'future-it-infrastructure',
+    excerpt: 'Exploring the latest trends in IT infrastructure and cloud computing.',
+    content: 'Modern IT infrastructure is evolving rapidly with cloud-native technologies, microservices, and edge computing.',
+    featuredImage: '/images/blog/it-infrastructure.jpg',
+    category: 'Infrastructure',
+    tags: ['Cloud', 'Microservices', 'Edge Computing'],
+    author: 'Zion Tech Team',
+    publishedAt: '2025-10-01',
+    readTime: 6
+  }
+];
+>>>>>>> origin/cursor/ad-creation-and-management-ac48

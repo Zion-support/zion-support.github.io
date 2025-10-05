@@ -32,4 +32,15 @@ const Services: React.FC = () => {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
       </main>
+=======
+      </main>
+      
+      {/* <Footer /> */}
+    </div>
+  );
+};
+
+export default Services;
+>>>>>>> origin/cursor/ad-creation-and-management-ac48

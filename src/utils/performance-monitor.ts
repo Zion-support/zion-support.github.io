@@ -209,7 +209,6 @@ class PerformanceMonitor {
 
     return `
 Performance Report:
-==================
 Overall Score: ${score}/100
 
 Core Web Vitals:

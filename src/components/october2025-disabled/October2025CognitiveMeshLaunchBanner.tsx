@@ -78,7 +78,6 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
               aria-label="Schedule a free consultation about Cognitive Mesh Platform"
             >
 
->>>>>>> cursor/fix-errors-and-merge-to-main-4daf
               Schedule Free Consultation
             </Link>
             <Link
@@ -98,4 +97,3 @@ const October2025CognitiveMeshLaunchBanner: React.FC = memo(() => {
     </section>
   );
 });
-

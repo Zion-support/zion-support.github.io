@@ -12,4 +12,15 @@ const Privacy: React.FC = () => {
             <p>This is our privacy policy. We respect your privacy and are committed to protecting your personal data.</p>
           </div>
         </div>
+<<<<<<< HEAD
       </main>
+=======
+      </main>
+      
+      {/* <Footer /> */}
+    </div>
+  );
+};
+
+export default Privacy;
+>>>>>>> origin/cursor/ad-creation-and-management-ac48
