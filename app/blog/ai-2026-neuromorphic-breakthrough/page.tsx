@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 
 export default function AINeuromorphicBreakthrough2026() {
   return (

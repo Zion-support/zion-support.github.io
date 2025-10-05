@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 
 export const metadata = {
   title: 'AI 2027: Neuromorphic Computing Enterprise Revolution - Brain-Inspired AI Systems',

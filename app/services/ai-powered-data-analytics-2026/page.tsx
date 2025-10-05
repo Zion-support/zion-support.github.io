@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { User } from "lucide-react";
 
 export const metadata = {
   title: 'AI-Powered Data Analytics 2026 | Real-Time Intelligence & Predictive Insights | Zion Tech',

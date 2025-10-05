@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 
 export const metadata = {
   title: 'AI Neuromorphic Enterprise Computing: Brain-Inspired Intelligence Revolution | Zion Tech Group',

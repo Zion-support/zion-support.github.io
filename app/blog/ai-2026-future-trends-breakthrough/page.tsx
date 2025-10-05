@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 
 export const metadata = {
   title: 'AI 2026: Revolutionary Future Trends and Breakthrough Technologies',

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Target } from "lucide-react";
 
 export const metadata = {
   title: 'AI Enterprise Autonomy Blueprint 2026 | Zion Tech Group',

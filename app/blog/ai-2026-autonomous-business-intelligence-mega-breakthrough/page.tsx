@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { User } from "lucide-react";
 import Link from 'next/link';
 
 export const metadata: Metadata = {

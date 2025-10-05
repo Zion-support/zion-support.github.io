@@ -1,5 +1,3 @@
-import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
-
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -49,9 +47,18 @@ export default function EnterprisePage() {
         </div>
       </header>
 
-      {/* Enterprise Solutions Banner */}
-      <section id="solutions">
-        <EnterpriseSolutionsBanner />
+      {/* Enterprise Solutions Section */}
+      <section id="solutions" className="py-20 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Enterprise AI Solutions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Comprehensive AI solutions designed for enterprise-scale operations
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}

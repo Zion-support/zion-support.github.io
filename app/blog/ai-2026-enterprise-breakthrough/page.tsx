@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {

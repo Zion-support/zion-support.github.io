@@ -1,5 +1,6 @@
 // @ts-nocheck
 import Link from 'next/link';
+import { User } from "lucide-react";
 
 export const metadata = {
   title: 'Governed Autonomy Blueprint (2025): Safe, Reliable, Cost-Aware AI',

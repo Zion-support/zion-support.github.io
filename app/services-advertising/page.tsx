@@ -1,5 +1,3 @@
-import ServicesAdvertisingPromo from '../../components/ServicesAdvertisingPromo';
-import AIAdvertisingBanner from '../../components/AIAdvertisingBanner';
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -51,13 +49,17 @@ export default function ServicesAdvertisingPage() {
       </header>
 
       {/* Services Section */}
-      <section id="services">
-        <ServicesAdvertisingPromo />
-      </section>
-
-      {/* AI Advertising Banner */}
-      <section>
-        <AIAdvertisingBanner />
+      <section id="services" className="py-20 bg-slate-900">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              AI Advertising Solutions
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Comprehensive AI-powered advertising services designed to maximize your ROI
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Footer */}

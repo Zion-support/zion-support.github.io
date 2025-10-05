@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight,Brain,CheckCircle,Target,TrendingUp,Users,Zap } from "lucide-react";
 
 =======
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';

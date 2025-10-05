@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Brain } from "lucide-react";
 
 export const metadata = {
   title: 'AI Revolutionary Transformation 2026: $100M ROI Success Story',

@@ -1,5 +1,6 @@
 // @ts-nocheck
 import Link from 'next/link';
+import { Target } from "lucide-react";
 
 export const metadata = {
   title: 'Edge Inference Warm Pools 2026: Sub-100ms Global with Predictable Cost',

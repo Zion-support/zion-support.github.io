@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Satellite } from "lucide-react";
 
 export const metadata = {
   title: 'AI Space Technology 2026 Service | Autonomous Space Operations | Zion Tech Group',

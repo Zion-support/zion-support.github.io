@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Tag } from "lucide-react";
 
 const NewestContent2025Banner = () => {
   return (

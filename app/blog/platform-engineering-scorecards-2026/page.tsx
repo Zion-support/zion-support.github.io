@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Target } from "lucide-react";
 
 export const metadata = {
   title: 'Platform Engineering Scorecards 2026: Measure What Matters',
