@@ -25,7 +25,7 @@ const filesToFix = [
   'src/data/blog-posts.ts',
   'src/router.tsx',
   'src/types/index.ts',
-  'src/types/next-stubs.d.ts'
+  'src/types/next-stubs.d.ts',
 ];
 
 function createBasicComponent(filePath) {
@@ -33,7 +33,7 @@ function createBasicComponent(filePath) {
   const componentName = fileName.replace(/\.(tsx?|jsx?)$/, '');
   const isTsx = fileName.endsWith('.tsx');
   const isTs = fileName.endsWith('.ts');
-  
+
   if (isTsx) {
     return `import React from 'react';
 
@@ -90,29 +90,30 @@ export default ${componentName};
 function fixFile(filePath) {
   try {
     const fullPath = path.join(__dirname, filePath);
-    
+
     if (!fs.existsSync(fullPath)) {
       console.log(`File not found: ${filePath}`);
       return;
     }
 
     const content = fs.readFileSync(fullPath, 'utf8');
-    
+
     // Check if file has severe corruption
-    if (content.includes('<<<<<<< HEAD') || 
-        content.includes('=======') || 
-        content.includes('>>>>>>> ') ||
-        content.includes('import, Reac, t') ||
-        content.includes('con, s, t') ||
-        content.includes('useSta, t, e') ||
-        content.includes('Declaration or statement expected') ||
-        content.includes('Unterminated string constant') ||
-        content.includes('impo, r, t') ||
-        content.includes('const,') ||
-        content.includes('{') && content.includes('expected')) {
-      
+    if (
+      content.includes('<<<<<<< HEAD') ||
+      content.includes('=======') ||
+      content.includes('>>>>>>> ') ||
+      content.includes('import, Reac, t') ||
+      content.includes('con, s, t') ||
+      content.includes('useSta, t, e') ||
+      content.includes('Declaration or statement expected') ||
+      content.includes('Unterminated string constant') ||
+      content.includes('impo, r, t') ||
+      content.includes('const,') ||
+      (content.includes('{') && content.includes('expected'))
+    ) {
       console.log(`Fixing corrupted file: ${filePath}`);
-      
+
       const newContent = createBasicComponent(filePath);
       fs.writeFileSync(fullPath, newContent);
       console.log(`✓ Fixed: ${filePath}`);

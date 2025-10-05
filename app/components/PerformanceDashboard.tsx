@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { performanceOptimizer } from '../../utils/performanceOptimizer';
-import { getErrorMetrics, isErrorRateTooHigh } from '../../utils/errorHandling';
+import {
+  getErrorMetrics,
+  isErrorRateTooHigh,
+} from '../../src/utils/errorHandling';
 
 interface DashboardData {
   performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
@@ -18,7 +21,8 @@ const PerformanceDashboard: React.FC = () => {
     const updateData = () => {
       const performance = performanceOptimizer.getPerformanceSummary();
       const errors = getErrorMetrics();
-      const isHealthy = !isErrorRateTooHigh(5) && performance.averageRenderTime < 16;
+      const isHealthy =
+        !isErrorRateTooHigh(5) && performance.averageRenderTime < 16;
 
       setData({
         performance,
@@ -142,7 +146,11 @@ const PerformanceDashboard: React.FC = () => {
             <div className='bg-gray-50 p-2 rounded'>
               <div className='text-gray-600'>Grade</div>
               <div className='font-semibold'>
-                {data.performance.averageRenderTime < 16 ? 'A' : data.performance.averageRenderTime < 32 ? 'B' : 'C'}
+                {data.performance.averageRenderTime < 16
+                  ? 'A'
+                  : data.performance.averageRenderTime < 32
+                    ? 'B'
+                    : 'C'}
               </div>
             </div>
             <div className='bg-gray-50 p-2 rounded'>
@@ -160,7 +168,9 @@ const PerformanceDashboard: React.FC = () => {
             <div className='bg-gray-50 p-2 rounded'>
               <div className='text-gray-600'>Memory</div>
               <div className='font-semibold'>
-                {data.performance.memoryUsage > 0 ? `${(data.performance.memoryUsage / 1024 / 1024).toFixed(1)}MB` : 'N/A'}
+                {data.performance.memoryUsage > 0
+                  ? `${(data.performance.memoryUsage / 1024 / 1024).toFixed(1)}MB`
+                  : 'N/A'}
               </div>
             </div>
           </div>
@@ -192,12 +202,15 @@ const PerformanceDashboard: React.FC = () => {
             <div className='space-y-1'>
               {data.performance.slowComponents > 0 && (
                 <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
-                  {data.performance.slowComponents} slow components detected. Consider optimizing render performance.
+                  {data.performance.slowComponents} slow components detected.
+                  Consider optimizing render performance.
                 </div>
               )}
               {data.performance.averageRenderTime > 16 && (
                 <div className='text-xs text-gray-600 bg-yellow-50 p-2 rounded'>
-                  Average render time is {data.performance.averageRenderTime.toFixed(1)}ms. Consider code splitting or memoization.
+                  Average render time is{' '}
+                  {data.performance.averageRenderTime.toFixed(1)}ms. Consider
+                  code splitting or memoization.
                 </div>
               )}
             </div>

@@ -4,7 +4,9 @@ interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
 
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+}) => {
   useEffect(() => {
     // Add accessibility enhancements
     const addSkipLinks = () => {
@@ -23,15 +25,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         z-index: 1000;
         transition: top 0.3s;
       `;
-      
+
       skipLink.addEventListener('focus', () => {
         skipLink.style.top = '6px';
       });
-      
+
       skipLink.addEventListener('blur', () => {
         skipLink.style.top = '-40px';
       });
-      
+
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
@@ -54,7 +56,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     // Add focus management
     const enhanceFocusManagement = () => {
-      document.addEventListener('keydown', (e) => {
+      document.addEventListener('keydown', e => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }
@@ -76,7 +78,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     observer.observe(document.body, {
       childList: true,
-      subtree: true
+      subtree: true,
     });
 
     return () => {

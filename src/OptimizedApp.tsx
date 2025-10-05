@@ -1,5 +1,5 @@
-import React from "react";
-import OptimizedApp from "./components/OptimizedApp";
+import React from 'react';
+import OptimizedApp from './components/OptimizedApp';
 
 // Main optimized application entry point
 const App: React.FC = () => {

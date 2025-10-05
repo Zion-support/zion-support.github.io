@@ -9,12 +9,13 @@ import {Brain,
   ArrowRight,
   DollarSign,
   Clock,
-  Star}
-  Smartphone;
+  Star,
+  Smartphone,
   Globe
 } from 'lucide-react'
-export default function AdditionalServices() {const title = 'Expanded Services Catalog — Zion Tech Group'
-  const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.'
+export default function AdditionalServices() {
+  const title = 'Expanded Services Catalog — Zion Tech Group';
+  const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';
   const sections = [
     {
       id: 'micro-saas',
@@ -36,7 +37,7 @@ export default function AdditionalServices() {const title = 'Expanded Services C
             'Compliance with CAN-SPAM and GDPR'
           ],
           link: '/contact',
-          marketSize: '$7.5B email marketing market'}
+          marketSize: '$7.5B email marketing market',
           roi: 'Average 23% increase in open rates'
         },
         {name: 'Smart Meeting Analytics Platform',
@@ -52,7 +53,7 @@ export default function AdditionalServices() {const title = 'Expanded Services C
             'Team productivity dashboards'
           ],
           link: '/contact',
-          marketSize: '$4.2B meeting software market'}
+          marketSize: '$4.2B meeting software market',
           roi: '35% reduction in meeting time waste'
         },
         {name: 'Healthcare Appointment Intelligence',

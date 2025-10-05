@@ -1,6 +1,6 @@
 /**
  * Comprehensive Error Handling and Logging System
- * 
+ *
  * Provides centralized error handling, logging, and monitoring
  * for production-grade application reliability.
  */
@@ -25,14 +25,14 @@ interface ErrorMetrics {
 
 const ERROR_LOG_KEY = 'zion_error_logs';
 const MAX_ERROR_LOGS = 100;
-const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
+// const ERROR_RATE_WINDOW = 60 * 1000; // 1 minute
 
 /**
  * Get session ID
  */
 const getSessionId = (): string => {
   if (typeof window === 'undefined') return 'server';
-  
+
   let sessionId = sessionStorage.getItem('zion_session_id');
   if (!sessionId) {
     sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -46,7 +46,7 @@ const getSessionId = (): string => {
  */
 const getErrorLogs = (): ErrorLog[] => {
   if (typeof window === 'undefined') return [];
-  
+
   try {
     const stored = localStorage.getItem(ERROR_LOG_KEY);
     if (stored) {
@@ -66,16 +66,16 @@ const getErrorLogs = (): ErrorLog[] => {
  */
 const saveErrorLog = (log: ErrorLog) => {
   if (typeof window === 'undefined') return;
-  
+
   try {
     const logs = getErrorLogs();
     logs.push(log);
-    
+
     // Keep only most recent logs
     if (logs.length > MAX_ERROR_LOGS) {
       logs.splice(0, logs.length - MAX_ERROR_LOGS);
     }
-    
+
     localStorage.setItem(ERROR_LOG_KEY, JSON.stringify(logs));
   } catch (error) {
     console.error('Error saving error log:', error);
@@ -88,7 +88,7 @@ const saveErrorLog = (log: ErrorLog) => {
 export const logError = (
   error: Error | string,
   context?: Record<string, any>,
-  level: 'error' | 'warn' = 'error'
+  level: 'error' | 'warn' = 'error',
 ) => {
   const errorLog: ErrorLog = {
     timestamp: Date.now(),
@@ -96,7 +96,8 @@ export const logError = (
     message: typeof error === 'string' ? error : error.message,
     stack: typeof error === 'object' && error.stack ? error.stack : undefined,
     context,
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
+    userAgent:
+      typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
     url: typeof window !== 'undefined' ? window.location.href : undefined,
     sessionId: getSessionId(),
   };
@@ -124,7 +125,8 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
     level: 'info',
     message,
     context,
-    userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
+    userAgent:
+      typeof navigator !== 'undefined' ? navigator.userAgent : undefined,
     url: typeof window !== 'undefined' ? window.location.href : undefined,
     sessionId: getSessionId(),
   };
@@ -135,8 +137,11 @@ export const logInfo = (message: string, context?: Record<string, any>) => {
 /**
  * Send error to monitoring service
  */
-const sendToMonitoring = (errorLog: ErrorLog) => {
+const sendToMonitoring = (_errorLog: ErrorLog) => {
   if (typeof window === 'undefined') return;
+
+  // Log to console for now (_errorLog is used here)
+  console.debug('Monitoring service would receive:', _errorLog);
 
   // Example: Send to Sentry, LogRocket, or custom endpoint
   try {
@@ -154,7 +159,6 @@ const sendToMonitoring = (errorLog: ErrorLog) => {
       });
     }
     */
-
     // Or send to custom endpoint
     /*
     fetch('/api/log-error', {
@@ -220,7 +224,7 @@ export const setupGlobalErrorHandling = () => {
   if (typeof window === 'undefined') return;
 
   // Handle uncaught errors
-  window.addEventListener('error', (event) => {
+  window.addEventListener('error', event => {
     logError(event.error || event.message, {
       filename: event.filename,
       lineno: event.lineno,
@@ -229,7 +233,7 @@ export const setupGlobalErrorHandling = () => {
   });
 
   // Handle unhandled promise rejections
-  window.addEventListener('unhandledrejection', (event) => {
+  window.addEventListener('unhandledrejection', event => {
     logError(event.reason || 'Unhandled Promise Rejection', {
       promise: event.promise,
     });
@@ -254,20 +258,29 @@ export const monitorPerformance = () => {
   // Monitor page load performance
   window.addEventListener('load', () => {
     setTimeout(() => {
-      const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const perfData = performance.getEntriesByType(
+        'navigation',
+      )[0] as PerformanceNavigationTiming;
       if (perfData) {
         const loadTime = perfData.loadEventEnd - perfData.fetchStart;
-        if (loadTime > 3000) { // Slow page load (>3s)
-          logError('Slow page load detected', {
-            loadTime,
-            domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
-            type: 'performance',
-          }, 'warn');
+        if (loadTime > 3000) {
+          // Slow page load (>3s)
+          logError(
+            'Slow page load detected',
+            {
+              loadTime,
+              domContentLoaded:
+                perfData.domContentLoadedEventEnd - perfData.fetchStart,
+              type: 'performance',
+            },
+            'warn',
+          );
         }
 
         logInfo('Page load performance', {
           loadTime,
-          domContentLoaded: perfData.domContentLoadedEventEnd - perfData.fetchStart,
+          domContentLoaded:
+            perfData.domContentLoadedEventEnd - perfData.fetchStart,
           ttfb: perfData.responseStart - perfData.fetchStart,
         });
       }
@@ -277,14 +290,19 @@ export const monitorPerformance = () => {
   // Monitor long tasks
   if ('PerformanceObserver' in window) {
     try {
-      const longTaskObserver = new PerformanceObserver((list) => {
+      const longTaskObserver = new PerformanceObserver(list => {
         for (const entry of list.getEntries()) {
-          if (entry.duration > 50) { // Long task threshold
-            logError('Long task detected', {
-              duration: entry.duration,
-              startTime: entry.startTime,
-              type: 'performance',
-            }, 'warn');
+          if (entry.duration > 50) {
+            // Long task threshold
+            logError(
+              'Long task detected',
+              {
+                duration: entry.duration,
+                startTime: entry.startTime,
+                type: 'performance',
+              },
+              'warn',
+            );
           }
         }
       });
@@ -319,20 +337,20 @@ export const handleNetworkError = (error: Error, endpoint: string) => {
  */
 export const withErrorHandling = <T extends (...args: any[]) => any>(
   fn: T,
-  context?: string
+  context?: string,
 ): T => {
   return ((...args: Parameters<T>) => {
     try {
       const result = fn(...args);
-      
+
       // Handle async functions
       if (result instanceof Promise) {
-        return result.catch((error) => {
+        return result.catch(error => {
           logError(error, { context, args });
           throw error;
         });
       }
-      
+
       return result;
     } catch (error) {
       logError(error as Error, { context, args });
