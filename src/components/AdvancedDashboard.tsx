@@ -134,13 +134,9 @@ const AdvancedDashboard: React.FC = () => {
             }
           ).memory?.jsHeapSizeLimit || 0,
       },
-      accessibility: {
-        // Get accessibility stats from manager
-<<<<<<< HEAD
-        features: "Accessibility features disabled", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
-=======
-        features: "Basic accessibility features", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
->>>>>>> 0656897c643a811305b6897781b33dc57b3f82b0
+        accessibility: {
+          // Get accessibility stats from manager
+          features: "Accessibility features disabled", // AdvancedAccessibilityManager.getInstance() ? "Active" : "Inactive",
       },
       security: {
         // Get security stats from manager
