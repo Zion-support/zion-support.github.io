@@ -9,13 +9,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+450%',
       growth: 'Rapid Growth',
       description: 'Enterprise adoption of generative AI has increased by 450% in Q1 2026, with 78% of Fortune 500 companies implementing AI-powered content generation.',
-<<<<<<< HEAD
-
       icon: '🚀',
-
-=======
-      icon: <Brain className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       gradient: 'from-purple-500 to-pink-500',
       badge: 'TRENDING',
       insights: ['78% Fortune 500 adoption', '450% growth rate', '$12B market size']
@@ -27,13 +21,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+300%',
       growth: 'Exponential',
       description: 'Quantum computing achieves practical applications in AI optimization, with 300% improvement in processing complex machine learning algorithms.',
-<<<<<<< HEAD
-
       icon: '🚀',
-
-=======
-      icon: <Target className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'BREAKTHROUGH',
       insights: ['1000x speed boost', '300% efficiency gain', 'Commercial viability']
@@ -45,13 +33,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+280%',
       growth: 'Accelerating',
       description: 'Business process automation reaches new heights with 95% autonomous operations across multiple industries, reducing operational costs by 60%.',
-<<<<<<< HEAD
-
       icon: '🚀',
-
-=======
-      icon: <Rocket className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       gradient: 'from-green-500 to-emerald-500',
       badge: 'AUTOMATION',
       insights: ['95% automation rate', '60% cost reduction', '24/7 operations']
@@ -63,13 +45,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+350%',
       growth: 'High Growth',
       description: 'Advanced predictive analytics using AI achieves 99.9% accuracy in forecasting business trends, customer behavior, and market dynamics.',
-<<<<<<< HEAD
-
       icon: '🚀',
-
-=======
-      icon: <TrendingUp className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       insights: ['99.9% accuracy', '350% adoption growth', '$8B market value']
@@ -81,13 +57,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+420%',
       growth: 'Rapid Expansion',
       description: 'Edge AI computing transforms real-time decision making with 420% increase in deployment, enabling instant AI processing at the network edge.',
-<<<<<<< HEAD
-
       icon: '🚀',
-
-=======
-      icon: <Globe className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'EDGE AI',
       insights: ['420% deployment growth', 'Real-time processing', 'IoT integration']
@@ -99,13 +69,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+380%',
       growth: 'Critical Growth',
       description: 'AI ethics and governance frameworks become essential with 380% increase in regulatory compliance requirements and ethical AI implementation.',
-<<<<<<< HEAD
-
       icon: '🚀',
-
-=======
-      icon: <Award className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'GOVERNANCE',
       insights: ['380% compliance growth', 'Ethical frameworks', 'Regulatory alignment']
@@ -113,17 +77,10 @@ const AITrendsInsightsBanner2026: React.FC = () => {
   ];
 
   const marketInsights = [
-<<<<<<< HEAD
     { value: '$2.5T', label: 'Global AI Market Size', icon: '📈' },
     { value: '85%', label: 'Enterprise AI Adoption', icon: '🏢' },
     { value: '500M+', label: 'AI-Powered Devices', icon: '📱' },
     { value: '2.3M', label: 'AI Job Openings', icon: '💼' }
-=======
-    { value: '$2.5T', label: 'Global AI Market Size', icon: <TrendingUp className="w-6 h-6" /> },
-    { value: '85%', label: 'Enterprise AI Adoption', icon: <Users className="w-6 h-6" /> },
-    { value: '500M+', label: 'AI-Powered Devices', icon: <Globe className="w-6 h-6" /> },
-    { value: '2.3M', label: 'AI Job Openings', icon: <Award className="w-6 h-6" /> }
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
   ];
 
   return (
@@ -139,19 +96,9 @@ const AITrendsInsightsBanner2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in">
-<<<<<<< HEAD
-
             <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
               📊 AI TRENDS & INSIGHTS • Q1 2026
             </span>
-
-=======
-            <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
-            <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
-              📊 AI TRENDS & INSIGHTS • Q1 2026
-            </span>
-            <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
@@ -247,11 +194,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${topic.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Trend</span>
-<<<<<<< HEAD
-
-=======
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>
@@ -262,11 +204,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {
         <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-<<<<<<< HEAD
-
-=======
-              <Clock className="w-5 h-5 text-yellow-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 REAL-TIME UPDATES
               </span>
@@ -288,12 +225,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
               />
 
               <button className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">
-<<<<<<< HEAD
-
-=======
                 <span>Subscribe</span>
-                <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </button>
             </div>
             <p className="text-xs text-gray-500 mt-4">
@@ -318,11 +250,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                   href="/insights"
                   className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-<<<<<<< HEAD
-
-=======
-                  <Sparkles className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span>Explore All Insights</span>
                 </a>
                 <a
@@ -330,11 +257,6 @@ const AITrendsInsightsBanner2026: React.FC = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Get Expert Consultation</span>
-<<<<<<< HEAD
-
-=======
-                  <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>

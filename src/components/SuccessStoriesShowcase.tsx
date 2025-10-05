@@ -1,17 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const SuccessStoriesShowcase: React.FC = () => {
   const stories = [
     {
       company: "TechCorp International",
       industry: "Technology",
-<<<<<<< HEAD
-icon: '🚀',=======
       icon: '🚀',
 =======
       icon: <TrendingUp className="w-8 h-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       result: "300% Revenue Growth",
       description: "Implemented multimodal AI achieving unprecedented customer engagement and conversion rates.",",
       metrics: [
@@ -24,12 +20,9 @@ icon: '🚀',=======
     {",
       company: "Global Manufacturing Inc",
       industry: "Manufacturing",
-<<<<<<< HEAD
-icon: '🚀',=======
       icon: '🚀',
 =======
       icon: <Target className="w-8 h-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       result: "85% Downtime Reduction",
       description: "AI predictive maintenance transformed operations, eliminating unplanned downtime and reducing costs.",",
       metrics: [
@@ -42,12 +35,9 @@ icon: '🚀',=======
     {",
       company: "FinanceFirst Bank",
       industry: "Financial Services",
-<<<<<<< HEAD
-icon: '🚀',=======
       icon: '🚀',
 =======
       icon: <Users className="w-8 h-8" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
       result: "99.95% Fraud Detection",
       description: "AI fraud prevention system achieved industry-leading accuracy while reducing false positives by 95%.",",
       metrics: [
@@ -58,7 +48,6 @@ icon: '🚀',=======
       color: "from-purple-500 to-pink-500"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
@@ -70,13 +59,10 @@ icon: '🚀',=======
             See how leading companies are transforming their operations with our AI solutions
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-12">
           {stories.map((story, index) = > (
             <div
-
 key={index}
-
               className="bg-white rounded-2xl shadow-xl overflow-hidden hover:scale-105 transition-all duration-300"
             >
               <div className={`bg-gradient-to-r ${story.color} text-white p-6`}>
@@ -89,10 +75,8 @@ key={index}
                 </div>
                 <div className="text-3xl font-bold">{story.result}</div>
               </div>
-              
               <div className="p-6">
                 <p className="text-gray-600 mb-6">{story.description}</p>
-                
                 <div className="space-y-2 mb-6">
                   {story.metrics.map((metric, idx) = > (
                     <div key={idx} className="flex items-center gap-2">
@@ -101,39 +85,28 @@ key={index}
                     </div>
                   ))}
                 </div>
-                
                 <Link
                   to="/case-studies"
                   className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2"
                 >
                   Read Full Story
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
           ))}
         </div>
-
         <div className="text-center">
           <Link
             to="/case-studies"
             className="inline-flex items-center gap-2 bg-indigo-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-700 transition-all hover:scale-105 shadow-lg"
           >
             View All Success Stories
-<<<<<<< HEAD
-
-=======
             <ArrowRight className="w-6 h-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>
     </section>
   );
 };
-
 export default SuccessStoriesShowcase;

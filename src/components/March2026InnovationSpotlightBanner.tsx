@@ -1,5 +1,4 @@
 import React from 'react';
-
 const March2026InnovationSpotlightBanner = () => {
   const innovations = [
     {
@@ -24,7 +23,6 @@ const March2026InnovationSpotlightBanner = () => {
       color: 'from-emerald-500 to-teal-500'
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -33,35 +31,23 @@ const March2026InnovationSpotlightBanner = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-indigo-500/20 border border-purple-500/30 mb-8">
-<<<<<<< HEAD
-
-            <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
-              🚀 MARCH 2026: INNOVATION SPOTLIGHT
-            </span>
-
-=======
             <Rocket className="w-6 h-6 text-purple-400 animate-pulse" />
             <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
               🚀 MARCH 2026: INNOVATION SPOTLIGHT
             </span>
             <Rocket className="w-6 h-6 text-indigo-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
             The Innovation Revolution
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Witness the most revolutionary technological breakthroughs of our time. These innovations 
             are reshaping reality itself and creating unprecedented opportunities for human advancement.
           </p>
-
           {/* Innovation Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
@@ -82,60 +68,47 @@ const March2026InnovationSpotlightBanner = () => {
             ))}
           </div>
         </div>
-
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {innovations.map((innovation, index) => (
-
             <div
 key={index}
-
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Innovation Icon */}
                 <div className="text-6xl mb-6 text-center group-hover:animate-pulse">
                   {innovation.icon}
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight text-center">
                   {innovation.title}
                 </h3>
-
                 {/* Description */}
                 <p className="text-gray-400 mb-6 text-center leading-relaxed">
                   {innovation.description}
                 </p>
-
                 {/* Impact */}
                 <div className="text-center mb-6">
                   <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>",
       Impact: {innovation.impact}
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/innovations/${innovation.title.toLowerCase().replace(/\s+/g, '-')}`}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${innovation.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Innovation</span>
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>
           ))}
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16">
           <div className="text-center mb-12">
@@ -146,38 +119,25 @@ key={index}
               See how our innovations are transforming industries and creating unprecedented value.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
                 company: 'NeuroTech Global',
                 achievement: '500% Cognitive Enhancement',
                 revenue: '$2.1B Revenue Growth',
-<<<<<<< HEAD
-                icon: '>'
-=======
                 icon: <Brain className="w-8 h-8" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               },
               {
                 company: 'Quantum Dynamics',
                 achievement: '1000x Processing Speed',
                 revenue: '$3.8B Market Value',
-<<<<<<< HEAD
-                icon: '>'
-=======
                 icon: <Zap className="w-8 h-8" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               },
               {
                 company: 'Reality Synthesis Corp',
                 achievement: '$5.2B Market Creation',
                 revenue: '98% Customer Satisfaction',
-<<<<<<< HEAD
-      icon: '>'
-=======
                 icon: <Sparkles className="w-8 h-8" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               }
             ].map((story, index) => (
               <div key={index} className="text-center">
@@ -191,7 +151,6 @@ key={index}
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500">
@@ -208,11 +167,7 @@ key={index}
                   href="/innovations"
                   className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-<<<<<<< HEAD
-
-=======
                   <Rocket className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span>Explore All Innovations</span>
                 </a>
                 <a
@@ -220,11 +175,7 @@ key={index}
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Partner With Us</span>
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>
@@ -234,5 +185,4 @@ key={index}
     </div>
   );
 };
-
 export default March2026InnovationSpotlightBanner;

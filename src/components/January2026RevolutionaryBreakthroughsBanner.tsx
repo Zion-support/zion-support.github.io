@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
   const breakthroughs = [
     {
@@ -36,7 +35,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       bgColor: "bg-orange-500/10"
     }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -48,7 +46,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
-
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
@@ -58,14 +55,9 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm border border-purple-500/30 rounded-full text-sm font-semibold mb-6"
           >
-<<<<<<< HEAD
-
-=======
             <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -74,7 +66,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
           >
             AI Revolution 2026
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -86,7 +77,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             are reshaping the future of enterprise AI and human-computer interaction.
           </motion.p>
         </div>
-
         {/* Breakthroughs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {breakthroughs.map((breakthrough, index) = > (
@@ -97,15 +87,10 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
               transition={{ delay: 0.5 + index * 0.1, duration: 0.6 }}
               className={`${breakthrough.bgColor} backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group hover:transform hover:scale-105`}
             >
-<<<<<<< HEAD
-              <div className="flex items-start space-x-4" > <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
-                  <breakthrough.icon className="w-6 h-6 text-white"</div>
-=======
               <div className="flex items-start space-x-4">
                 <div className={`p-3 rounded-xl bg-gradient-to-r ${breakthrough.color}`}>
                   <breakthrough.icon className="w-6 h-6 text-white" />
                 </div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                     {breakthrough.title}
@@ -123,7 +108,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Key Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -156,7 +140,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             <div className="text-sm text-gray-300">Automation Rate</div>
           </div>
         </motion.div>
-
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -174,11 +157,7 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Explore All Content
-<<<<<<< HEAD
-
-=======
                 <ArrowRight className="ml-2 w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </a>
               <a
                 href="/services"
@@ -190,7 +169,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Floating Particles */}
       <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000"></div>
@@ -199,5 +177,4 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
     </motion.div>
   );
 };
-
 export default January2026RevolutionaryBreakthroughsBanner;

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const NewContentShowcase2025: React.FC = () => {
   const highlights = [
     {
@@ -28,27 +27,19 @@ const NewContentShowcase2025: React.FC = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <section className="py-16 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center gap-2 mb-4">
-<<<<<<< HEAD
-
-            <h2 className="text-4xl font-bold">2025 Breakthrough Content</h2>
-
-=======
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
             <h2 className="text-4xl font-bold">2025 Breakthrough Content</h2>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
           <p className="text-xl text-gray-300">
             The most innovative AI content of the year
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {highlights.map((item, index) = > (
             <Link
@@ -66,5 +57,4 @@ const NewContentShowcase2025: React.FC = () => {
     </section>
   );
 };
-
 export default NewContentShowcase2025;

@@ -1,11 +1,8 @@
 import { Link } from 'react-router-dom';
-
 import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
-
 interface October2025AIRevolutionBannerProps {
   className?: string;
 }
-
 export default function October2025AIRevolutionBanner({ className = '' }: October2025AIRevolutionBannerProps) {
   return (
     <div className={`bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-cyan-900/40 border-y border-purple-500/30 ${className}`}>
@@ -13,32 +10,21 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 px-6 py-2 rounded-full border border-purple-500/30 mb-4">
-<<<<<<< HEAD
-
-            <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">
-              🚀 JUST PUBLISHED - October 1, 2025
-            </span>
-
-=======
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
             <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">
               🚀 JUST PUBLISHED - October 1, 2025
             </span>
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
             The Complete AI Revolution: 3 Essential Guides
           </h2>
-          
           <p className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
             <strong className="text-white">NEW TODAY:</strong> Master autonomous AI agents (94% task automation), 
             AI-powered development tools (5x faster coding), and enterprise AI safety (99.2% compliance). 
             The definitive guides for forward-thinking organizations transforming with AI in 2025.
           </p>
         </div>
-
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Article 1: Autonomous AI Agents */}
@@ -48,50 +34,35 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-xl border border-purple-400/30 group-hover:bg-purple-500/30 transition-colors">
-<<<<<<< HEAD
-
-=======
                 <Bot className="w-6 h-6 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <span className="px-3 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded-full border border-purple-500/30">
                 AUTONOMOUS AGENTS
               </span>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
               Autonomous AI Agents in Production 2025
             </h3>
-            
             <p className="text-white/70 mb-4 leading-relaxed">
               Deploy production-grade AI agents that automate 94% of routine tasks, reduce costs by 78%, 
               and deliver 10x productivity gains. Complete guide from planning to production.
             </p>
-            
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-purple-400">94%</div>
-                
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-green-400">78%</div>
                 <div className="text-xs text-white/60">Cost Cut</div>
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
-
               </div>
             </div>
-            
             <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
-
           {/* Article 2: LLM Development Tools */}
           <Link 
             to="/blog/ai-2025-october-llm-powered-development-tools-revolution"
@@ -105,19 +76,15 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
                 AI DEVELOPMENT
               </span>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
               LLM-Powered Development Tools Revolution
             </h3>
-            
             <p className="text-white/70 mb-4 leading-relaxed">
               Transform your engineering workflow with AI-native tools. Top teams achieve 5x faster development, 
               80% fewer bugs, and 92% developer satisfaction. The complete AI coding toolkit.
             </p>
-            
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3 text-center">
-                
                 <div className="text-xs text-white/60">Dev Speed</div>
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
@@ -126,20 +93,13 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-cyan-400">92%</div>
-                
               </div>
             </div>
-            
             <div className="flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
-
           {/* Article 3: AI Safety & Alignment */}
           <Link 
             to="/blog/ai-2025-october-ai-safety-alignment-enterprise-deployment"
@@ -147,30 +107,22 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-emerald-500/20 rounded-xl border border-emerald-400/30 group-hover:bg-emerald-500/30 transition-colors">
-<<<<<<< HEAD
-
-=======
                 <Shield className="w-6 h-6 text-emerald-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <span className="px-3 py-1 bg-emerald-500/20 text-emerald-300 text-xs font-semibold rounded-full border border-emerald-500/30">
                 AI SAFETY
               </span>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
               AI Safety & Alignment for Enterprise 2025
             </h3>
-            
             <p className="text-white/70 mb-4 leading-relaxed">
               Deploy AI safely and responsibly. Leading organizations achieve 99.2% safety compliance, 
               prevent costly failures, and build stakeholder trust. Your complete responsible AI framework.
             </p>
-            
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-emerald-400">99.2%</div>
-                
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-green-400">87%</div>
@@ -178,21 +130,14 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-cyan-400">4.7x</div>
-                
               </div>
             </div>
-            
             <div className="flex items-center gap-2 text-emerald-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <Link
@@ -200,11 +145,7 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:shadow-purple-500/30"
           >
             <span>Explore All Latest AI Insights</span>
-<<<<<<< HEAD
-
-=======
             <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>

@@ -1,23 +1,14 @@
 import { Link } from 'react-router-dom';
-
 export default function October2025CuttingEdgeInnovationBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-r from-slate-950 via-purple-950 to-slate-950 py-20" > {/* Animated Grid Background */}
       <div className="absolute inset-0 opacity-20">
-
         <div className="absolute inset-0" style={{
           backgroundImage: `linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), 
-<<<<<<< HEAD
-                           linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,",
-      backgroundSize: '50px 50px'
-
-=======
                            linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px)`,
           backgroundSize: '50px 50px'
         }}></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -27,17 +18,14 @@ export default function October2025CuttingEdgeInnovationBanner() {
               <span className="text-purple-300 font-bold uppercase tracking-wider">New Content Alert</span>
               <span className="animate-pulse">⚡</span>
             </div>
-            
             <h2 className="text-5xl md:text-7xl font-black mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-rose-400 bg-clip-text text-transparent">
               Cutting-Edge AI Innovations
             </h2>
-            
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore breakthrough technologies that are redefining enterprise AI: intelligent orchestration, 
               advanced reasoning, and unified platforms
             </p>
           </div>
-
           {/* Feature Grid */}
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30">
@@ -56,7 +44,6 @@ export default function October2025CuttingEdgeInnovationBanner() {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30">
               <div className="flex items-start gap-4">
                 <div className="text-5xl">🧠</div>
@@ -73,7 +60,6 @@ export default function October2025CuttingEdgeInnovationBanner() {
                 </div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-emerald-500/10 to-teal-500/10 backdrop-blur-sm rounded-2xl p-8 border border-emerald-500/30 md:col-span-2">
               <div className="flex items-start gap-4">
                 <div className="text-5xl">🏗️</div>
@@ -92,7 +78,6 @@ export default function October2025CuttingEdgeInnovationBanner() {
                       <div className="text-sm text-gray-400">Cost Reduction</div>
                     </div>
                     <div className="text-center">
-                      
                       <div className="text-sm text-gray-400">Faster Deployment</div>
                     </div>
                   </div>
@@ -105,7 +90,6 @@ export default function October2025CuttingEdgeInnovationBanner() {
               </div>
             </div>
           </div>
-
           {/* Bottom CTA */}
           <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 text-center">
             <p className="text-lg text-gray-300 mb-6">

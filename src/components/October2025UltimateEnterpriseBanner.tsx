@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import { octoberUltimateEnterpriseContent } from "../content/october-2025-ultimate-enterprise-content";
-
 const October2025UltimateEnterpriseBanner = () => {
   const [multiCloudContent, conversationalAIContent] = octoberUltimateEnterpriseContent;
-
   return (
     <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
@@ -11,36 +9,26 @@ const October2025UltimateEnterpriseBanner = () => {
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-bold text-sm mb-6 animate-bounce shadow-2xl">
-<<<<<<< HEAD
-
-            <span>OCTOBER 2025 - JUST PUBLISHED</span>
-
-=======
             <Sparkles className="w-5 h-5 animate-spin" />
             <span>OCTOBER 2025 - JUST PUBLISHED</span>
             <Sparkles className="w-5 h-5 animate-spin" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
-          
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Ultimate Enterprise AI
             </span>
             <br /> <span className="text-white">Revolution 2025</span>
           </h2>
-          
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-medium">
             Breakthrough solutions delivering <span className="text-cyan-400 font-bold">156%-184% ROI</span>, 
             <span className="text-purple-400 font-bold"> $262M+ savings</span>, and 
             <span className="text-blue-400 font-bold"> transformative results</span>
           </p>
         </div>
-
         {/* Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Multi-Cloud Intelligence Card */}
@@ -48,11 +36,7 @@ const October2025UltimateEnterpriseBanner = () => {
             <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-<<<<<<< HEAD
-
-=======
                   <Cloud className="w-9 h-9 text-white" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
               </div>
               <div className="flex-1">
@@ -72,7 +56,6 @@ const October2025UltimateEnterpriseBanner = () => {
                 </p>
               </div>
             </div>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-cyan-500/10 rounded-xl p-4 border border-cyan-500/20 hover:border-cyan-400/50 transition-colors">
@@ -92,46 +75,31 @@ const October2025UltimateEnterpriseBanner = () => {
                 <div className="text-sm text-gray-300 font-medium">Efficiency Gain</div>
               </div>
             </div>
-
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
               {multiCloudContent.highlights.slice(0, 4).map((highlight, index) = > (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
-<<<<<<< HEAD
-
-=======
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span className="text-sm leading-relaxed">{highlight}</span>
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
             <Link
               to={multiCloudContent.cta.link}
               className="flex items-center justify-center gap-2 w-full py-4 px-6 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 group"
             >
               <span className="text-lg">{multiCloudContent.cta.text}</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
           </div>
-
           {/* Conversational AI Card */}
           <div className="bg-gradient-to-br from-purple-600/20 via-pink-600/20 to-rose-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 group">
             <div className="flex items-start gap-4 mb-6">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-lg transform group-hover:rotate-12 transition-transform duration-300">
-<<<<<<< HEAD
-                  <MessageSquare className="w-9 h-9 text-white"</div>
-=======
                   <MessageSquare className="w-9 h-9 text-white" />
                 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-3">
@@ -150,7 +118,6 @@ const October2025UltimateEnterpriseBanner = () => {
                 </p>
               </div>
             </div>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-purple-500/10 rounded-xl p-4 border border-purple-500/20 hover:border-purple-400/50 transition-colors">
@@ -170,86 +137,58 @@ const October2025UltimateEnterpriseBanner = () => {
                 <div className="text-sm text-gray-300 font-medium">Annual Savings</div>
               </div>
             </div>
-
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
               {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) = > (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
-<<<<<<< HEAD
-
-=======
                   <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span className="text-sm leading-relaxed">{highlight}</span>
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
             <Link
               to={conversationalAIContent.cta.link}
               className="flex items-center justify-center gap-2 w-full py-4 px-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 group"
             >
               <span className="text-lg">{conversationalAIContent.cta.text}</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
           </div>
         </div>
-
         {/* Combined Value Proposition */}
         <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <div className="grid md:grid-cols-4 gap-6 text-center">
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-<<<<<<< HEAD
-
-=======
                 <Award className="w-10 h-10 text-yellow-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">340%+</div>
               <div className="text-sm text-gray-300 font-medium">Combined ROI</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-<<<<<<< HEAD
-
-=======
                 <TrendingUp className="w-10 h-10 text-green-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">$262M+</div>
               <div className="text-sm text-gray-300 font-medium">Total Savings</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-<<<<<<< HEAD
-
-=======
                 <Zap className="w-10 h-10 text-cyan-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">5.1x</div>
               <div className="text-sm text-gray-300 font-medium">Avg Efficiency</div>
             </div>
             <div className="group hover:scale-110 transition-transform duration-300">
               <div className="flex items-center justify-center mb-3">
-<<<<<<< HEAD
-
-=======
                 <Sparkles className="w-10 h-10 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="text-3xl font-extrabold text-white mb-2">Fortune 100</div>
               <div className="text-sm text-gray-300 font-medium">Proven Results</div>
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="text-xl text-gray-300 mb-6 font-medium">
@@ -274,5 +213,4 @@ const October2025UltimateEnterpriseBanner = () => {
     </div>
   );
 };
-
 export default October2025UltimateEnterpriseBanner;

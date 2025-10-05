@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const RevolutionaryBreakthrough2026Banner: React.FC = () => {
   const breakthroughContent = [
     {
@@ -52,7 +51,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
       metrics: { value: '95%', label: 'Automation' }
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -61,35 +59,23 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-8 animate-fade-in">
-<<<<<<< HEAD
-
-            <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
-              🔥 REVOLUTIONARY BREAKTHROUGH • January 30, 2026
-            </span>
-
-=======
             <Sparkles className="w-6 h-6 text-purple-400 animate-pulse" />
             <span className="text-purple-400 font-bold text-lg tracking-wider uppercase">
               🔥 REVOLUTIONARY BREAKTHROUGH • January 30, 2026
             </span>
             <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
-
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">
             Revolutionary AI Breakthroughs
           </h2>
-          
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover the most significant AI innovations of 2026: 10x performance gains, 
             $300M+ ROI success stories, and revolutionary technologies transforming Fortune 500 operations.
           </p>
-
           {/* Key Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
@@ -110,7 +96,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {breakthroughContent.map((content, index) => (
@@ -121,7 +106,6 @@ key={content.id}
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
-              
               <div className="relative p-8">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
@@ -131,12 +115,8 @@ key={content.id}
                   <div className="flex flex-col gap-2">
                     {content.trending && (
                       <div className="flex items-center gap-1 px-3 py-1.5 rounded-full bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold shadow-lg">
-<<<<<<< HEAD
-
-=======
                         <TrendingUp className="w-3 h-3" />
                         <span>BREAKTHROUGH</span>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                       </div>
                     )}
                     <span className="px-3 py-1.5 rounded-full bg-purple-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
@@ -144,24 +124,20 @@ key={content.id}
                     </span>
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
                     {content.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
                   {content.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {content.excerpt}
                 </p>
-
                 {/* Key Metric */}
                 <div className="mb-6">
                   <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg p-4 border border-purple-500/30">
@@ -175,37 +151,26 @@ key={content.id}
                     </div>
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-<<<<<<< HEAD
-
-=======
                     <Zap className="w-4 h-4 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                     {content.readTime}
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <Link
                   to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
                   className="group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                 >
                   <span>Read Full Article</span>
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
           ))}
         </div>
-
         {/* Call-to-Action Section */}
         <div className="text-center mt-20">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500">
@@ -222,11 +187,7 @@ key={content.id}
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
                 >
-<<<<<<< HEAD
-
-=======
                   <Sparkles className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   <span>Start Your AI Transformation</span>
                 </a>
                 <a
@@ -234,17 +195,12 @@ key={content.id}
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Call +1 302 464 0950</span>
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </a>
               </div>
             </div>
           </div>
         </div>
-
         {/* Success Indicators */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">
           {[
@@ -267,5 +223,4 @@ key={content.id}
     </div>
   );
 };
-
 export default RevolutionaryBreakthrough2026Banner;

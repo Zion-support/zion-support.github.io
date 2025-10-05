@@ -2,11 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
-
 const NewContentShowcase: React.FC = () => {
   const topArticles = newArticles2025.slice(0, 3);
   const topServices = newServices2026.slice(0, 3);
-
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-6">
@@ -21,15 +19,10 @@ const NewContentShowcase: React.FC = () => {
             Explore our latest breakthrough articles and revolutionary services
           </p>
         </div>
-
         <div className="grid lg:grid-cols-2 gap-12 mb-12" > {/* Articles Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-<<<<<<< HEAD
-
-=======
               <BookOpen className="w-8 h-8 text-indigo-600" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
             <div className="space-y-4">
@@ -45,12 +38,8 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">{article.readTime}</span>
                     <span className="text-indigo-600 font-semibold flex items-center gap-1">
-<<<<<<< HEAD
-                      Read More</span>
-=======
                       Read More <ArrowRight className="w-4 h-4" />
                     </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </div>
                 </Link>
               ))}
@@ -61,23 +50,14 @@ const NewContentShowcase: React.FC = () => {
                 className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
               >
                 View All Articles
-<<<<<<< HEAD
-
-=======
                 <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           </div>
-
           {/* Services Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-<<<<<<< HEAD
-
-=======
               <Rocket className="w-8 h-8 text-purple-600" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
             </div>
             <div className="space-y-4">
@@ -96,12 +76,8 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-700 font-semibold">{service.pricing}</span>
                     <span className="text-purple-600 font-semibold flex items-center gap-1">
-<<<<<<< HEAD
-                      Learn More</span>
-=======
                       Learn More <ArrowRight className="w-4 h-4" />
                     </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </div>
                 </Link>
               ))}
@@ -112,11 +88,7 @@ const NewContentShowcase: React.FC = () => {
                 className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
               >
                 View All Services
-<<<<<<< HEAD
-
-=======
                 <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           </div>
@@ -125,5 +97,4 @@ const NewContentShowcase: React.FC = () => {
     </section>
   );
 };
-
 export default NewContentShowcase;

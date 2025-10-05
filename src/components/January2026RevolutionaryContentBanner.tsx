@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [
     {
@@ -37,7 +36,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
       readTime: "12 min"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -46,30 +44,22 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
-<<<<<<< HEAD
-
-=======
             <Sparkles className="w-5 h-5 text-blue-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
               January 2026 • Revolutionary Content Launch
             </span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary AI Breakthroughs: The Future is Here
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the cutting-edge of AI innovation with our latest breakthrough content: 98% automation rates, quantum computing revolutions, and Fortune 500 transformations worth $10B.
           </p>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {revolutionaryContent.map((content, index) => (
@@ -87,7 +77,6 @@ key={index}
                   <span className="text-xs text-gray-400">{content.readTime}</span>
                 </div>
               </div>
-
               {/* Content Info */}
               <div className="mb-4">
                 <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">
@@ -100,39 +89,26 @@ key={index}
                   {content.description}
                 </p>
               </div>
-
               {/* Impact Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
-<<<<<<< HEAD
-
-                  <span className="text-green-400 font-bold text-sm">",
-      Impact: {content.impact}
-=======
                   <Target className="w-4 h-4 text-green-400" />
                   <span className="text-green-400 font-bold text-sm">
                     Impact: {content.impact}
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                   </span>
                 </div>
               </div>
-
               {/* CTA Button */}
               <Link 
                 to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
                 className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg group-hover:shadow-blue-500/25"
               >
                 {content.type === 'blog' ? 'Read Article' : 'View Case Study'}
-<<<<<<< HEAD
-
-=======
                 <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           ))}
         </div>
-
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
@@ -152,7 +128,6 @@ key={index}
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8">
@@ -182,5 +157,4 @@ key={index}
     </section>
   );
 };
-
 export default January2026RevolutionaryContentBanner;

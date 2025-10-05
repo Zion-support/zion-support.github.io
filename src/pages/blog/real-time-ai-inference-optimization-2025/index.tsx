@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { ArrowLeft, Calendar, Clock, Cpu, Database, Gauge, TrendingUp, Zap } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-=======
 import { Helmet } from "react-helmet-async";
 import ArrowLeft from 'lucide-react';
 import Calendar from 'lucide-react';
@@ -11,24 +7,7 @@ import Database from 'lucide-react';
 import Gauge from 'lucide-react';
 import TrendingUp from 'lucide-react';
 import Zap from 'lucide-react';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-ec17
-
 import { Link } from "react-router-dom";
 const RealTimeAIInferenceOptimization2025 = () => {
   return (
@@ -50,7 +29,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
           href="https://ziontechgroup.com/blog/real-time-ai-inference-optimization-2025"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-cyan-600 py-16">
@@ -63,7 +41,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
-
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
@@ -76,11 +53,9 @@ const RealTimeAIInferenceOptimization2025 = () => {
                   ⭐ Featured
                 </span>
               </div>
-
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Real-Time AI Inference Optimization: Achieving Sub-50ms Latency at Scale
               </h1>
-
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
@@ -98,7 +73,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Content */}
         <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div className="prose prose-invert prose-lg max-w-none">
@@ -114,14 +88,12 @@ const RealTimeAIInferenceOptimization2025 = () => {
                 inference latency by 85% while maintaining model accuracy and cutting infrastructure costs by 60%.
               </p>
             </div>
-
             {/* Performance Bottlenecks */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Gauge className="w-8 h-8 mr-3 text-red-400" />
                 Critical Performance Bottlenecks
               </h2>
-
               <div className="space-y-6">
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">1. Model Loading Overhead</h3>
@@ -141,7 +113,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">2. GPU Utilization</h3>
                   <p className="text-gray-300 mb-4">
@@ -159,7 +130,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">3. Network Latency</h3>
                   <p className="text-gray-300 mb-4">
@@ -179,14 +149,12 @@ const RealTimeAIInferenceOptimization2025 = () => {
                 </div>
               </div>
             </section>
-
             {/* Optimization Techniques */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Cpu className="w-8 h-8 mr-3 text-purple-400" />
                 Production-Grade Optimization Techniques
               </h2>
-
               <div className="space-y-8">
                 {/* Quantization */}
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
@@ -197,7 +165,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                   <p className="text-gray-300 mb-4">
                     Reduce model size by 75% and increase throughput by 3-4x with minimal accuracy loss.
                   </p>
-                  
                   <div className="bg-slate-900/50 p-5 rounded-lg border border-slate-600 mb-4">
                     <p className="text-sm text-emerald-400 font-semibold mb-3">Quantization Strategy:</p>
                     <ul className="space-y-2 text-sm text-gray-300">
@@ -206,7 +173,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                       <li>✓ <strong>Mixed precision</strong>: Keep critical layers in FP16, quantize rest to INT8</li>
                     </ul>
                   </div>
-
                   <div className="bg-blue-500/10 border border-blue-500/30 rounded p-4">
                     <p className="text-blue-300 text-sm">
                       <strong>Real Result:</strong> Llama-70B quantized to INT4 runs on single A100 (vs 4x A100 for FP16)
@@ -214,7 +180,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                     </p>
                   </div>
                 </div>
-
                 {/* Hardware Acceleration */}
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
@@ -224,7 +189,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                   <p className="text-gray-300 mb-4">
                     Choose the right hardware for your workload to maximize performance per dollar.
                   </p>
-
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
                       <p className="text-cyan-400 font-semibold mb-2">NVIDIA GPUs</p>
@@ -234,7 +198,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                         <li>• TensorRT for 5-10x speedup</li>
                       </ul>
                     </div>
-
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
                       <p className="text-purple-400 font-semibold mb-2">AWS Inferentia</p>
                       <ul className="text-sm text-gray-300 space-y-1">
@@ -243,7 +206,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                         <li>• AWS Neuron SDK required</li>
                       </ul>
                     </div>
-
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
                       <p className="text-emerald-400 font-semibold mb-2">Google TPUs</p>
                       <ul className="text-sm text-gray-300 space-y-1">
@@ -252,7 +214,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                         <li>• 2x faster than A100 for LLMs</li>
                       </ul>
                     </div>
-
                     <div className="bg-slate-900/50 p-4 rounded border border-slate-600">
                       <p className="text-orange-400 font-semibold mb-2">Edge Devices</p>
                       <ul className="text-sm text-gray-300 space-y-1">
@@ -263,7 +224,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Caching Strategy */}
                 <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-2xl font-semibold text-white mb-4 flex items-center">
@@ -273,7 +233,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                   <p className="text-gray-300 mb-4">
                     Cache 60-80% of requests with semantic similarity matching to avoid redundant inference.
                   </p>
-
                   <div className="bg-slate-900/50 p-5 rounded-lg border border-slate-600">
                     <p className="text-emerald-400 font-semibold mb-3">Multi-Tier Caching Strategy:</p>
                     <div className="space-y-3">
@@ -300,7 +259,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                 </div>
               </div>
             </section>
-
             {/* Results */}
             <section className="mb-12">
               <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 p-8 rounded-lg border border-emerald-500/30">
@@ -325,7 +283,6 @@ const RealTimeAIInferenceOptimization2025 = () => {
                 </div>
               </div>
             </section>
-
             {/* CTA */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-indigo-600 to-cyan-600 p-8 rounded-lg">
@@ -350,5 +307,4 @@ const RealTimeAIInferenceOptimization2025 = () => {
     </>
   );
 };
-
 export default RealTimeAIInferenceOptimization2025;
