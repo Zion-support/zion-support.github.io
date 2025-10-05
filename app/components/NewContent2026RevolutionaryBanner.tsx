@@ -3,6 +3,7 @@ import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
 
 
+import { ArrowRight, TrendingUp, Brain, Zap, Star } from 'lucide-react';
 
 export default function NewContent2026RevolutionaryBanner() {
   return (

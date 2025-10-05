@@ -3,6 +3,7 @@ import { ArrowRight, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-reac
 
 import ArrowRight from 'next/link';
 
+import { ArrowRight, TrendingUp, Target, Rocket, Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [

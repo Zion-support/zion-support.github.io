@@ -6,6 +6,7 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
+<<<<<<< HEAD
         <title>Ai 2025 Oct Enterprise Ai Platforms</title>
         <meta 
           name="description" 
@@ -15,6 +16,10 @@ export default function BlogPage(): React.JSX.Element {
           rel="canonical" 
           href="https://ziontechgroup.com/blog/ai-2025-oct-enterprise-ai-platforms" 
         />
+=======
+        <title>Ai 2025 Oct Enterprise Ai Platforms - Zion</title>
+        <meta name="description" content="Learn about ai 2025 oct enterprise ai platforms and how it can benefit your enterprise." />
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f15
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">

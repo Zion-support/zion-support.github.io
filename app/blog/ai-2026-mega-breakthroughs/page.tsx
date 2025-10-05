@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Target, Brain, Rocket, Zap } from 'lucide-react';
 
 import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
 import Zap from 'lucide-react/dist/esm/icons/zap';

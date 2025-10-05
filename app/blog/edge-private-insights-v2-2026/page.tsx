@@ -1,8 +1,16 @@
 
-import Calendar from 'lucide-react/dist/esm/icons/calendar';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import Shield from 'lucide-react/dist/esm/icons/shield';
-import Cpu from 'lucide-react/dist/esm/icons/cpu';
+<<<<<<< HEAD
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+=======
+import Calendar from 'lucide-react/dist/esm/icons/alendar';import { Calendar, Clock } from 'lucide-react';
+
+import Clock from 'lucide-react/dist/esm/icons/lock';
+import Shield from 'lucide-react/dist/esm/icons/hield';
+import Cpu from 'lucide-react/dist/esm/icons/pu';
+>>>>>>> cursor/fix-errors-and-merge-to-main-0f15
 
 export const metadata = {
   title: 'Edge Private Insights v2 (2026): Scoped IDs + DP + On-device | Zion',

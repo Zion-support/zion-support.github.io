@@ -3,6 +3,7 @@ import { ArrowRight, Brain, Cpu, Zap } from 'lucide-react';
 
 
 
+import { ArrowRight, Brain, Zap } from 'lucide-react';
 
 export default function Revolutionary2026ContentBanner() {
   return (

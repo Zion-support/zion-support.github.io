@@ -3,6 +3,7 @@ import { ArrowRight, Brain, Shield, TrendingUp, Zap } from 'lucide-react';
 
 import ArrowRight from 'next/link';
 
+import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
 
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (

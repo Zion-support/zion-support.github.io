@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import { Link } from 'react-router-dom';
+import { ArrowLeft, Calendar, Clock, User } from 'lucide-react';
 
-import Calendar from 'lucide-react/dist/esm/icons/calendar';
-import User from 'lucide-react/dist/esm/icons/user';
-import Clock from 'lucide-react/dist/esm/icons/clock';
-import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (

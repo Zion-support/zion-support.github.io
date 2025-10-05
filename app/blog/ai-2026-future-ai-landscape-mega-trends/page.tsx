@@ -1,4 +1,5 @@
-import { Metadata } from 'next';
+import { Metadata } from 'next';import { ArrowRight, Calendar, Clock, User, TrendingUp, Target, Brain, Zap, Globe } from 'lucide-react';
+
 import Link from 'next/link';
 
 import Calendar from 'lucide-react/dist/esm/icons/calendar';

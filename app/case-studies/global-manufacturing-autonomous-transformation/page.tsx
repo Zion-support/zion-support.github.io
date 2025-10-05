@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Award, BarChart3, CheckCircle, Clock, Target, Tr
 
 
 
+import { ArrowLeft, Clock, Users, TrendingUp, Target, CheckCircle, Zap, Award, BarChart3 } from 'lucide-react';
 
 import { Metadata } from 'next';
 

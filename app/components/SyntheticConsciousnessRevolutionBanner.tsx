@@ -3,6 +3,7 @@ import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
 
 import ArrowRight from 'next/link';
 
+import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
 
 const SyntheticConsciousnessRevolutionBanner: React.FC = () => {
   return (

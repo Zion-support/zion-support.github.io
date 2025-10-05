@@ -3,6 +3,7 @@ import { ArrowRight, Brain, CheckCircle, TrendingUp, Zap } from 'lucide-react';
 
 
 
+import { ArrowRight, TrendingUp, CheckCircle, Brain, Zap, Star } from 'lucide-react';
 
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (

@@ -3,6 +3,7 @@ import { ArrowRight, Brain, TrendingUp, Users } from 'lucide-react';
 
 
 
+import { ArrowRight, Users, TrendingUp, Brain } from 'lucide-react';
 
 export default function AIFutureWorkforceBanner2026() {
   return (

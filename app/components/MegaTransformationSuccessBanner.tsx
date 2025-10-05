@@ -3,6 +3,7 @@ import { ArrowRight, Award, DollarSign, TrendingUp, Users } from 'lucide-react';
 
 
 
+import { ArrowRight, Users, DollarSign, TrendingUp, Award, Star } from 'lucide-react';
 
 export default function MegaTransformationSuccessBanner() {
   return (

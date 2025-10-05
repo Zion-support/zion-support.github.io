@@ -3,6 +3,7 @@ import { ArrowRight, CheckCircle, Clock, DollarSign, Target, User } from 'lucide
 
 
 
+import { Clock, User, DollarSign, Target, CheckCircle } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
