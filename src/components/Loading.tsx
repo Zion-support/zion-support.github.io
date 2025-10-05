@@ -1,1 +1,30 @@
-import React from "react"; " constLoading: React.FC<LoadingProp s> = ({size = "md"text = "Loading..." }) => {'; const sizeClasses = {' sm: 'w-4 h-4"";' md: 'w-8 h-8"";' lg: "w-12h-12" }; return (<divclassName = "flexflex-colitems-centerjustify-centerp-8" >"; <divclassName = {`$ {sizeClasse, s [siz, e] }animat, e-spinrounded-fullborder-2border-gray-300border-t-blue-600` }></div>`;` {text && (<pclassName = "mt-4, text-smtext-gra, y-6, 0, 0" > {text }</p>";) }</div>) ; }; export default Loading;"
+import React from "react";
+
+interface LoadingProps {
+  size?: "sm" | "md" | "lg";
+  text?: string;
+}
+
+const Loading: React.FC<LoadingProps> = ({
+  size = "md",
+  text = "Loading..."
+}) => {
+  const sizeClasses = {
+    sm: "w-4 h-4",
+    md: "w-8 h-8",
+    lg: "w-12 h-12"
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center p-8">
+      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-blue-600`}></div>
+      {text && (
+        <p className="mt-4 text-sm text-gray-600">
+          {text}
+        </p>
+      )}
+    </div>
+  );
+};
+
+export default Loading;
