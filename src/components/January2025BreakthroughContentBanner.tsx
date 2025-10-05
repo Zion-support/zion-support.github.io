@@ -1,35 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const January2025BreakthroughContentBanner: React.FC = () => {
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900" > {/* Animated background elements */}
       <div className="absolute inset-0 bg-[url('/images/neural-network-bg.svg')] opacity-10 animate-pulse"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-<<<<<<< HEAD
-
-=======
             <Star className="w-4 h-4 fill-current" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span>JUST PUBLISHED: January 2025</span>
           </div>
-          
           <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary AI Breakthroughs
             </span>
             <br /> <span className="text-white">2025 Edition</span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Discover the latest AI innovations transforming enterprise operations with unprecedented performance, accuracy, and value creation.
           </p>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {/* Quantum-Neural Fusion */}
@@ -38,11 +29,7 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-emerald-500/20 rounded-lg">
-<<<<<<< HEAD
-
-=======
                   <Brain className="w-6 h-6 text-emerald-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
                 <span className="text-emerald-400 text-sm font-medium">Quantum AI</span>
               </div>
@@ -59,27 +46,18 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   to="/blog/ai-quantum-neural-fusion-2025"
                   className="text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
           </div>
-
           {/* Autonomous Enterprise Mesh */}
           <div className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-blue-400/50 transition-all duration-300 hover:transform hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-blue-500/20 rounded-lg">
-<<<<<<< HEAD
-
-=======
                   <Zap className="w-6 h-6 text-blue-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
                 <span className="text-blue-400 text-sm font-medium">Autonomous Systems</span>
               </div>
@@ -96,27 +74,18 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   to="/blog/autonomous-enterprise-mesh-2025"
                   className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
           </div>
-
           {/* Synthetic Consciousness */}
           <div className="group relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-purple-400/50 transition-all duration-300 hover:transform hover:scale-105">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-purple-500/20 rounded-lg">
-<<<<<<< HEAD
-
-=======
                   <Brain className="w-6 h-6 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
                 <span className="text-purple-400 text-sm font-medium">AI Consciousness</span>
               </div>
@@ -133,17 +102,12 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   to="/blog/synthetic-consciousness-ai-2025"
                   className="text-purple-400 hover:text-purple-300 transition-colors"
                 >
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </Link>
               </div>
             </div>
           </div>
         </div>
-
         {/* Success Metrics */}
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/20 mb-12">
           <h3 className="text-2xl font-bold text-white text-center mb-8">Proven Enterprise Results</h3>
@@ -166,7 +130,6 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
@@ -174,22 +137,14 @@ const January2025BreakthroughContentBanner: React.FC = () => {
               to="/case-studies"
               className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
-<<<<<<< HEAD
-
-=======
               <TrendingUp className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               View All Case Studies
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
-<<<<<<< HEAD
-
-=======
               <CheckCircle className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               Read Latest Articles
             </Link>
           </div>
@@ -201,5 +156,4 @@ const January2025BreakthroughContentBanner: React.FC = () => {
     </div>
   );
 };
-
 export default January2025BreakthroughContentBanner;

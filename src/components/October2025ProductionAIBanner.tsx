@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export default function October2025ProductionAIBanner() {
   return (
     <section className="py-16 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden" > {/* Animated background elements */}
@@ -7,15 +6,10 @@ export default function October2025ProductionAIBanner() {
         <div className="absolute top-10 left-10 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-sm font-semibold mb-4 animate-bounce">
-<<<<<<< HEAD
-
-=======
             <Rocket className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span>NEW: October 2025 Production AI Insights</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -26,7 +20,6 @@ export default function October2025ProductionAIBanner() {
             with our comprehensive October 2025 guides
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {/* Article 1: Production AI Agents */}
           <Link
@@ -35,11 +28,7 @@ export default function October2025ProductionAIBanner() {
           >
             <div className="flex items-start gap-4 mb-4">
               <div className="p-3 bg-indigo-500 rounded-lg group-hover:bg-indigo-400 transition-colors">
-<<<<<<< HEAD
-
-=======
                 <Rocket className="w-6 h-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
@@ -53,17 +42,6 @@ export default function October2025ProductionAIBanner() {
             </p>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-sm">
-<<<<<<< HEAD
-
-                <span>Multi-tier architecture patterns</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-
-                <span>60-80% cost optimization</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-
-=======
                 <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>Multi-tier architecture patterns</span>
               </div>
@@ -73,20 +51,14 @@ export default function October2025ProductionAIBanner() {
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <CheckCircle className="w-4 h-4 text-green-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span>Real-world Fortune 500 case studies</span>
               </div>
             </div>
             <div className="flex items-center gap-2 text-yellow-300 font-semibold group-hover:gap-3 transition-all">
               <span>Read Full Guide</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
-
           {/* Article 2: Real-Time AI Monitoring */}
           <Link
             to="/blog/ai-2025-october-realtime-ai-model-monitoring-enterprise"
@@ -94,11 +66,7 @@ export default function October2025ProductionAIBanner() {
           >
             <div className="flex items-start gap-4 mb-4">
               <div className="p-3 bg-purple-500 rounded-lg group-hover:bg-purple-400 transition-colors">
-<<<<<<< HEAD
-
-=======
                 <Shield className="w-6 h-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
@@ -112,17 +80,6 @@ export default function October2025ProductionAIBanner() {
             </p>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-sm">
-<<<<<<< HEAD
-
-                <span>Silent failure detection</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-
-                <span>Drift detection & alerting</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-
-=======
                 <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>Silent failure detection</span>
               </div>
@@ -132,20 +89,14 @@ export default function October2025ProductionAIBanner() {
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <CheckCircle className="w-4 h-4 text-green-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span>Complete observability stack</span>
               </div>
             </div>
             <div className="flex items-center gap-2 text-yellow-300 font-semibold group-hover:gap-3 transition-all">
               <span>Read Full Guide</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
-
           {/* Article 3: Multimodal RAG */}
           <Link
             to="/blog/ai-2025-october-multimodal-rag-systems-revolution"
@@ -153,11 +104,7 @@ export default function October2025ProductionAIBanner() {
           >
             <div className="flex items-start gap-4 mb-4">
               <div className="p-3 bg-pink-500 rounded-lg group-hover:bg-pink-400 transition-colors">
-<<<<<<< HEAD
-
-=======
                 <TrendingUp className="w-6 h-6" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-2 group-hover:text-yellow-300 transition-colors">
@@ -171,17 +118,6 @@ export default function October2025ProductionAIBanner() {
             </p>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-sm">
-<<<<<<< HEAD
-
-                <span>Images, video & audio search</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-
-                <span>68% higher retrieval accuracy</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-
-=======
                 <CheckCircle className="w-4 h-4 text-green-300" />
                 <span>Images, video & audio search</span>
               </div>
@@ -191,21 +127,15 @@ export default function October2025ProductionAIBanner() {
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <CheckCircle className="w-4 h-4 text-green-300" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span>Implementation architecture</span>
               </div>
             </div>
             <div className="flex items-center gap-2 text-yellow-300 font-semibold group-hover:gap-3 transition-all">
               <span>Read Full Guide</span>
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
         </div>
-
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <Link

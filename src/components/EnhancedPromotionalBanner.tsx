@@ -1,12 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
-
 interface EnhancedPromotionalBannerProps {
   banner: BannerType;
   className?: string;
 }
-
 const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
   banner,
   className = ''
@@ -17,7 +15,6 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
     info: 'bg-gradient-to-r from-blue-600 to-indigo-600',
     error: 'bg-gradient-to-r from-red-600 to-pink-600'
   };
-
   return (
     <div className={`${variantStyles[banner.variant]} text-white p-4 ${className}`}>
       <div className="container mx-auto px-6">
@@ -34,16 +31,11 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             {banner.ctaText}
-<<<<<<< HEAD
-
-=======
             <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>
     </div>
   );
 };
-
 export default EnhancedPromotionalBanner;

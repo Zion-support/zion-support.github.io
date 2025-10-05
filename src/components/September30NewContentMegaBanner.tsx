@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const September30NewContentMegaBanner = () => {
   const newArticles = [
     {",
@@ -43,37 +42,26 @@ const September30NewContentMegaBanner = () => {
       impact: "97% mastery rate"
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
-      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm px-6 py-3 rounded-full mb-6 border border-white/20">
-<<<<<<< HEAD
-
-            <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
-
-=======
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs
           </h2>
-          
           <p className="text-xl text-cyan-100 max-w-4xl mx-auto">
             Neural coding that programs at thought speed • Holographic 3D visualization • Quantum consciousness AI • 
             Molecular manufacturing at atomic precision • Personalized education revolution
           </p>
         </div>
-
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
           {newArticles.map((article, index) = > (
@@ -98,35 +86,24 @@ const September30NewContentMegaBanner = () => {
               </div>
             </Link>
           ))}
-
           {/* Additional promotional card */}
           <Link
             to="/blog"
             className="group bg-gradient-to-br from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-2xl p-6 border border-yellow-400/30 hover:border-yellow-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl flex flex-col items-center justify-center text-center"
           >
-<<<<<<< HEAD
-
-=======
             <Sparkles className="w-12 h-12 text-yellow-400 mb-4 group-hover:scale-125 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <h3 className="text-xl font-bold mb-2">View All Articles</h3>
             <p className="text-sm text-yellow-200 mb-4">200+ groundbreaking insights</p>
             <div className="flex items-center gap-2 text-yellow-400 font-semibold">
               Explore Now
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </Link>
         </div>
-
         {/* Stats Banner */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              
               <div className="text-sm text-blue-200">New Breakthroughs</div>
             </div>
             <div>
@@ -147,36 +124,24 @@ const September30NewContentMegaBanner = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
             to="/blog"
             className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl inline-flex items-center gap-3 group"
           >
-<<<<<<< HEAD
-
-            Explore All Breakthroughs
-
-=======
             <Brain className="w-6 h-6 group-hover:rotate-12 transition-transform" />
             Explore All Breakthroughs
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
           <Link
             to="/contact"
             className="border-2 border-cyan-400 hover:bg-cyan-400 hover:text-gray-900 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center gap-3"
           >
-<<<<<<< HEAD
-
-=======
             <Sparkles className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             Get Started Today
           </Link>
         </div>
-
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
@@ -199,5 +164,4 @@ const September30NewContentMegaBanner = () => {
     </div>
   );
 };
-
 export default September30NewContentMegaBanner;

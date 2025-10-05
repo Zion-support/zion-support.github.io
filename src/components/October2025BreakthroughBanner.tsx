@@ -1,49 +1,32 @@
 import { Link } from 'react-router-dom';
-
 const October2025BreakthroughBanner = () => {
   return (
-<<<<<<< HEAD
-    <section className="relative py-20 overflow-hidden" > {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" <div className="container mx-auto px-6 relative z-10">
-=======
     <section className="relative py-20 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-900/20 via-indigo-900/20 to-emerald-900/20" />
       <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
       <div className="container mx-auto px-6 relative z-10">
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-bc56
         {/* Main Banner */}
         <div className="bg-gradient-to-br from-purple-900/50 via-indigo-900/50 to-emerald-900/50 rounded-2xl border-2 border-purple-500/30 backdrop-blur-sm p-8 md:p-12 mb-8 shadow-2xl">
           <div className="flex items-center gap-3 mb-6">
-<<<<<<< HEAD
-
-=======
             <Sparkles className="w-8 h-8 text-purple-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold border border-purple-400/30">
               🔥 OCTOBER 2025 BREAKTHROUGH
             </span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-purple-300 via-indigo-300 to-emerald-300 bg-clip-text text-transparent">
             Revolutionary AI Technologies Transforming Enterprise Operations
           </h2>
-          
           <p className="text-xl text-white/80 mb-8 max-w-4xl leading-relaxed">
             Explore three groundbreaking AI innovations delivering unprecedented results: Sovereign Agents with 94% decision accuracy, 
             Quantum ML achieving 1000x speedup, and Neuromorphic Edge Computing at 10,000x energy efficiency.
           </p>
-          
           {/* Featured Articles Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             {/* Article 1: Sovereign Agents */}
             <div className="bg-gradient-to-br from-purple-900/60 to-purple-800/60 p-6 rounded-xl border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105 group">
               <div className="flex items-center gap-2 mb-3">
-<<<<<<< HEAD
-
-=======
                 <Brain className="w-6 h-6 text-purple-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="text-xs font-semibold text-purple-300 uppercase tracking-wide">AI Sovereign Agents</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
@@ -56,22 +39,13 @@ const October2025BreakthroughBanner = () => {
                 to="/blog/ai-sovereign-agents-enterprise-2025"
                 className="inline-flex items-center gap-2 text-purple-300 hover:text-purple-200 font-semibold text-sm group-hover:gap-3 transition-all"
               >
-<<<<<<< HEAD
-                Read Article</Link>
-=======
                 Read Article <ArrowRight className="w-4 h-4" />
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
-            
             {/* Article 2: Quantum ML */}
             <div className="bg-gradient-to-br from-indigo-900/60 to-indigo-800/60 p-6 rounded-xl border border-indigo-400/30 hover:border-indigo-400/60 transition-all hover:scale-105 group">
               <div className="flex items-center gap-2 mb-3">
-<<<<<<< HEAD
-
-=======
                 <Zap className="w-6 h-6 text-indigo-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="text-xs font-semibold text-indigo-300 uppercase tracking-wide">Quantum ML</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-indigo-300 transition-colors">
@@ -84,22 +58,13 @@ const October2025BreakthroughBanner = () => {
                 to="/blog/ai-quantum-machine-learning-2025"
                 className="inline-flex items-center gap-2 text-indigo-300 hover:text-indigo-200 font-semibold text-sm group-hover:gap-3 transition-all"
               >
-<<<<<<< HEAD
-                Read Article</Link>
-=======
                 Read Article <ArrowRight className="w-4 h-4" />
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
-            
             {/* Article 3: Neuromorphic Edge */}
             <div className="bg-gradient-to-br from-emerald-900/60 to-emerald-800/60 p-6 rounded-xl border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105 group">
               <div className="flex items-center gap-2 mb-3">
-<<<<<<< HEAD
-
-=======
                 <Sparkles className="w-6 h-6 text-emerald-400" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 <span className="text-xs font-semibold text-emerald-300 uppercase tracking-wide">Neuromorphic Edge</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-2 group-hover:text-emerald-300 transition-colors">
@@ -112,27 +77,18 @@ const October2025BreakthroughBanner = () => {
                 to="/blog/ai-neuromorphic-edge-computing-2025"
                 className="inline-flex items-center gap-2 text-emerald-300 hover:text-emerald-200 font-semibold text-sm group-hover:gap-3 transition-all"
               >
-<<<<<<< HEAD
-                Read Article</Link>
-=======
                 Read Article <ArrowRight className="w-4 h-4" />
               </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </div>
           </div>
-          
           {/* CTA Section */}
           <div className="flex flex-wrap gap-4 items-center">
             <Link 
               to="/blog"
               className="bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all shadow-lg hover:shadow-purple-500/50 inline-flex items-center gap-2"
             >
-<<<<<<< HEAD
-              Explore All Articles</Link>
-=======
               Explore All Articles <ArrowRight className="w-5 h-5" />
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <Link 
               to="/contact"
               className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-bold text-lg transition-all border border-white/20 hover:border-white/40 inline-flex items-center gap-2"
@@ -141,7 +97,6 @@ const October2025BreakthroughBanner = () => {
             </Link>
           </div>
         </div>
-        
         {/* Stats Banner */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           <div className="bg-purple-900/30 backdrop-blur-sm p-6 rounded-xl border border-purple-400/20 text-center">
@@ -165,5 +120,4 @@ const October2025BreakthroughBanner = () => {
     </section>
   );
 };
-
 export default October2025BreakthroughBanner;

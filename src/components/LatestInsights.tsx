@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
-
 function isNew(dateIso: string): boolean {
   const daysSince = (Date.now() - new Date(dateIso).getTime()) / (1000 * 60 * 60 * 24);
   return daysSince <= 7;
 }
-
 const LatestInsights: React.FC = () => {
   return (
     <section className="py-20 bg-white/5">
@@ -17,21 +15,12 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
             <Link
-<<<<<<< HEAD
-              to="/insights"
-              className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
-            >
-              View all
-            </Link>
-=======
             to="/<insights" className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
             <ArrowRight className="w-4 h-4" />
           </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
         </div>
-
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
             <div
@@ -56,42 +45,29 @@ key={item.id}
                   <span className="text-xs text-zion-slate-light">{new Date(item.date).toLocaleDateString()}</span>
                 </div>
               </div>
-
               <h3 className="text-xl font-semibold text-white mb-2">{item.title}</h3>
               <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
-
               <Link
                 to="/insights"
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-<<<<<<< HEAD
-
-=======
                 <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
               </Link>
             </div>
           ))}
         </div>
-
         <div className="mt-8 sm:hidden">
           <Link
             to="/insights"
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-<<<<<<< HEAD
-
-=======
             <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>
     </section>
   );
 };
-
 export default LatestInsights;
-

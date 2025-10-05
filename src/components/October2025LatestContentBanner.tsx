@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const October2025LatestContentBanner = () => {
   const articles = [
     {
@@ -24,7 +23,6 @@ const October2025LatestContentBanner = () => {
       gradient: "from-purple-600 to-pink-600"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden">
       {/* Animated background elements */}
@@ -32,28 +30,20 @@ const October2025LatestContentBanner = () => {
         <div className="absolute top-20 left-20 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600/20 to-cyan-600/20 border border-violet-500/30 rounded-full px-6 py-2 mb-6">
-<<<<<<< HEAD
-
-=======
             <Sparkles className="w-5 h-5 text-violet-400 animate-pulse" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             <span className="text-violet-300 font-semibold">NEW CONTENT - OCTOBER 2025</span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Latest AI Breakthroughs & Enterprise Strategies
           </h2>
-          
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Explore cutting-edge insights on GenAI orchestration, AI security frameworks, and real-time multimodal processing
           </p>
         </div>
-
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           {articles.map((article, idx) = > {
@@ -67,28 +57,20 @@ const October2025LatestContentBanner = () => {
                 <div className={`w-12 h-12 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
                   {article.title}
                 </h3>
-                
                 <p className="text-slate-400 mb-4 line-clamp-2">
                   {article.description}
                 </p>
-                
                 <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover:gap-4 transition-all">
                   <span>Read More</span>
-<<<<<<< HEAD
-
-=======
                   <ArrowRight className="w-4 h-4" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                 </div>
               </Link>
             );
           })}
         </div>
-
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
           <div className="text-center">
@@ -116,7 +98,6 @@ const October2025LatestContentBanner = () => {
             <div className="text-sm text-slate-400">Latest Strategies</div>
           </div>
         </div>
-
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
@@ -124,16 +105,11 @@ const October2025LatestContentBanner = () => {
             className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-purple-600 hover:from-violet-500 hover:to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all hover:shadow-lg hover:shadow-violet-500/50"
           >
             Explore All Articles
-<<<<<<< HEAD
-
-=======
             <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </Link>
         </div>
       </div>
     </section>
   );
 };
-
 export default October2025LatestContentBanner;

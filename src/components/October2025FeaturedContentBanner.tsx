@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 const October2025FeaturedContentBanner = () => {
   const featuredContent = [
     {
@@ -74,22 +73,15 @@ const October2025FeaturedContentBanner = () => {
       ]
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 py-16 px-4">
       <div className="container mx-auto max-w-7xl">
         {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-white font-bold mb-6 animate-pulse">
-<<<<<<< HEAD
-
-            🚀 NEW CONTENT RELEASE - October 1, 2025
-
-=======
             <Sparkles className="w-5 h-5 mr-2" />
             🚀 NEW CONTENT RELEASE - October 1, 2025
             <Sparkles className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Latest AI Solutions & Insights
@@ -98,7 +90,6 @@ const October2025FeaturedContentBanner = () => {
             Discover breakthrough AI platforms delivering millions in value to enterprise organizations
           </p>
         </div>
-
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {featuredContent.map((content, index) => {
@@ -126,7 +117,6 @@ const October2025FeaturedContentBanner = () => {
                       </p>
                     </div>
                   </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     {content.stats.map((stat, idx) => (
@@ -138,16 +128,12 @@ const October2025FeaturedContentBanner = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Published October 1, 2025</span>
                     <div className={`flex items-center text-white font-semibold group-hover:translate-x-2 transition-transform`}>
                       Read Full Article
-<<<<<<< HEAD
-=======
                       <ArrowRight className="w-4 h-4 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
                     </div>
                   </div>
                 </div>
@@ -157,7 +143,6 @@ const October2025FeaturedContentBanner = () => {
             );
           })}
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
@@ -166,26 +151,17 @@ const October2025FeaturedContentBanner = () => {
               className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 inline-flex items-center"
             >
               Explore All Articles
-<<<<<<< HEAD
-
-=======
               <TrendingUp className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
             <Link
               to="/contact"
               className="px-8 py-4 bg-slate-800 text-white font-semibold rounded-lg hover:bg-slate-700 transition-all border border-blue-500/30 inline-flex items-center"
             >
               Get a Free Consultation
-<<<<<<< HEAD
-
-=======
               <ArrowRight className="w-5 h-5 ml-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-619a
             </Link>
           </div>
         </div>
-
         {/* Value Proposition */}
         <div className="mt-12 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-xl p-8">
           <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -211,5 +187,4 @@ const October2025FeaturedContentBanner = () => {
     </div>
   );
 };
-
 export default October2025FeaturedContentBanner;
