@@ -1,20 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-
-import { Users, Brain, TrendingUp, ArrowRight } from 'lucide-react';
-
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Users from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
-
 export default function AIFutureWorkforceBanner2026() {
   return (
     <section className="py-16 bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white relative overflow-hidden">

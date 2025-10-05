@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { Calendar, Clock, User, ArrowRight, Tag, Search } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { User } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Tag } from 'lucide-react';
+import { Search } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-
-
-
 
 ;
 

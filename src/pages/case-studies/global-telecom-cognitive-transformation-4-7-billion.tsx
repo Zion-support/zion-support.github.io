@@ -1,15 +1,16 @@
 import React from 'react';
 
-import { Award, TrendingUp, Users, Zap, CheckCircle, ArrowRight, Brain, Target } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
-
-
-
-
-
 
 ;
 import Header from '../../components/Header';

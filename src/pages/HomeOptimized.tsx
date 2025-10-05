@@ -1,15 +1,17 @@
 
 
-
-
-
-
-
-
 ;
 import { Helmet } from "react-helmet-async";
 
-import { ArrowRight, CheckCircle, Globe, Rocket, Shield, Star, Target, Users, Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 import { lazy, Suspense } from "react";

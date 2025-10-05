@@ -1,5 +1,11 @@
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, Shield, Zap, AlertTriangle, DollarSign, Lock, Activity } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Activity } from 'lucide-react';
 
 import { Link } from "react-router-dom";
 export default function NextGenSecurityOperations2025() {

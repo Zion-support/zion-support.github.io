@@ -1,24 +1,6 @@
 import Link from 'next/link';
-
-<<<<<<< HEAD
-
 import { TrendingUp, DollarSign, Clock, Users, Award, ArrowRight } from 'lucide-react';
 
-// @ts-ignore
-
-
-
-
-
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Users from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Award from 'lucide-react';
-import Clock from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 // @ts-ignore
 export const metadata = {

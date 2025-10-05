@@ -1,20 +1,5 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-
-import { ArrowRight, Zap, Brain, Cpu, Sparkles } from 'lucide-react';
-
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
-
 export default function Revolutionary2026ContentBanner() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-20">
