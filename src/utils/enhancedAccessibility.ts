@@ -218,7 +218,16 @@ export class EnhancedAccessibility {
 
 
   public getFocusableElementsCount(): number {
-    return this.getFocusableElements().length;
+    const focusableSelectors = [
+      'button:not([disabled])',
+      'input:not([disabled])',
+      'select:not([disabled])',
+      'textarea:not([disabled])',
+      'a[href]',
+      '[tabindex]:not([tabindex="-1"])',
+    ].join(', ');
+
+    return document.querySelectorAll(focusableSelectors).length;
   }
 
   private checkColorContrast(): void {
