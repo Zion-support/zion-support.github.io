@@ -39,8 +39,6 @@ const October2025AIOperationsBanner = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 rounded-full border border-blue-400/30 mb-4">
             <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
             <span className="text-blue-300 text-sm font-semibold">
-            <Activity className="w-4 h-4 text-blue-400 animate-pulse" />
-            <span className="text-blue-300 text-sm font-semibold">
               OCTOBER 2025 - BREAKTHROUGH AI OPERATIONS
             </span>
           </div>

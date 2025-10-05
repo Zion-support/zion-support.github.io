@@ -42,14 +42,19 @@
     "allowJs": true,
     "forceConsistentCasingInFileNames": true
   },
-<<<<<<< HEAD
   "include": [
-    "src/**/*"
+    "src/**/*",
+    "app/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build"
+    "build",
+    "src/pages/blog-disabled/**/*",
+    "app/blog",
+    "blog",
+    "components",
+    "src/components/**/*"
   ],
   "references": [
     {
@@ -57,15 +62,3 @@
     }
   ]
 }
-=======
-  "include": ["src", "app"],
-  "exclude": [
-    "src/pages/blog-disabled/**/*",
-    "app/blog",
-    "blog",
-    "components",
-    "src/components/**/*"
-  ],
-  "references": [{ "path": "./tsconfig.node.json" }]
-}
->>>>>>> e52b5e0b7c7c (feat: Complete comprehensive improvements and final optimizations)
