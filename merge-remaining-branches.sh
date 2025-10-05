@@ -1,81 +1,77 @@
 #!/bin/bash
 
-# Script to merge all remaining cursor branches into main
+# Script to merge all remaining branches into main
 set -e
 
-echo "Starting comprehensive merge of remaining cursor branches..."
+echo "Starting merge of all remaining branches..."
 
-# Get all cursor branches that haven't been merged yet
-CURSOR_BRANCHES=($(git branch -r | grep "cursor/fix-errors-and-merge-to-main-" | sed 's/origin\///' | head -50))
+# Get list of all non-cursor branches that might have PRs
+REMAINING_BRANCHES=(
+    "add-new-2026-content"
+    "add-revolutionary-content-2026"
+    "ai-2027-content-integration"
+    "ai-dashboard-improvements"
+    "ai-dashboard-improvements-merged"
+    "auto-merge-main"
+)
 
-echo "Found ${#CURSOR_BRANCHES[@]} cursor branches to process"
-
-# Ensure we're on main and it's up to date
+# Ensure we're on main branch
 git checkout main
 git pull origin main
 
-SUCCESSFUL_MERGES=()
-FAILED_MERGES=()
+# Track merged branches
+MERGED_BRANCHES=()
+FAILED_BRANCHES=()
 
-for branch in "${CURSOR_BRANCHES[@]}"; do
+echo "Merging remaining branches into main..."
+
+for branch in "${REMAINING_BRANCHES[@]}"; do
     echo "Processing branch: $branch"
     
-    # Check if branch exists locally
-    if ! git show-ref --verify --quiet refs/remotes/origin/$branch; then
-        echo "Branch $branch does not exist, skipping..."
-        continue
-    fi
-    
-    # Check if branch is already merged
-    if git merge-base --is-ancestor origin/$branch main 2>/dev/null; then
-        echo "Branch $branch is already merged, skipping..."
-        continue
-    fi
-    
-    # Checkout the branch
-    git checkout $branch 2>/dev/null || {
-        echo "Failed to checkout $branch, skipping..."
-        FAILED_MERGES+=("$branch")
-        continue
-    }
-    
-    # Try to merge main into the branch
-    if git merge main --no-commit; then
-        echo "Successfully merged main into $branch"
-        git commit -m "Merge main into $branch" || true
-        git push origin $branch || echo "Failed to push $branch"
+    # Check if branch exists
+    if git show-ref --verify --quiet refs/remotes/origin/$branch; then
+        echo "  ✓ Branch exists, attempting merge..."
         
-        # Now merge the branch into main
-        git checkout main
-        if git merge $branch --no-commit; then
-            echo "Successfully merged $branch into main"
-            git commit -m "Merge $branch into main" || true
-            git push origin main || echo "Failed to push main"
-            SUCCESSFUL_MERGES+=("$branch")
+        # Try to merge the branch
+        if git merge origin/$branch --no-edit; then
+            echo "  ✅ Successfully merged $branch"
+            MERGED_BRANCHES+=("$branch")
         else
-            echo "Failed to merge $branch into main"
-            git merge --abort || true
-            FAILED_MERGES+=("$branch")
+            echo "  ❌ Failed to merge $branch due to conflicts"
+            FAILED_BRANCHES+=("$branch")
+            
+            # Reset to clean state
+            git merge --abort 2>/dev/null || true
         fi
     else
-        echo "Failed to merge main into $branch, skipping..."
-        git merge --abort || true
-        FAILED_MERGES+=("$branch")
+        echo "  ⚠️  Branch $branch does not exist, skipping..."
     fi
-    
-    echo "Completed processing $branch"
-    echo "---"
 done
 
-echo "Merge Summary:"
-echo "Successful merges: ${#SUCCESSFUL_MERGES[@]}"
-for branch in "${SUCCESSFUL_MERGES[@]}"; do
-    echo "  ✓ $branch"
+echo ""
+echo "=== MERGE SUMMARY ==="
+echo "Successfully merged branches:"
+for branch in "${MERGED_BRANCHES[@]}"; do
+    echo "  ✅ $branch"
 done
 
-echo "Failed merges: ${#FAILED_MERGES[@]}"
-for branch in "${FAILED_MERGES[@]}"; do
-    echo "  ✗ $branch"
+echo ""
+echo "Failed to merge branches (conflicts):"
+for branch in "${FAILED_BRANCHES[@]}"; do
+    echo "  ❌ $branch"
 done
 
-echo "Merge process completed!"
+echo ""
+echo "Total merged: ${#MERGED_BRANCHES[@]}"
+echo "Total failed: ${#FAILED_BRANCHES[@]}"
+
+# Push changes if any were merged
+if [ ${#MERGED_BRANCHES[@]} -gt 0 ]; then
+    echo ""
+    echo "Pushing merged changes to main..."
+    git push origin main
+    echo "✅ Changes pushed to main branch"
+fi
+
+echo ""
+echo "Remaining branches merge process completed!"
