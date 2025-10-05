@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-// Security Enhancement Script
-export const securityEnhancer = {
-  setupSecurityMonitoring: () => {
-    // Monitor for potential security issues
-    console.log('Security monitoring initialized');
-    
-    // Add Content Security Policy headers
-=======
 // Security enhancement utilities
 export class SecurityEnhancer {
   private static instance: SecurityEnhancer;
@@ -35,15 +26,11 @@ export class SecurityEnhancer {
 
   private setupCSP(): void {
     // Set up Content Security Policy
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
     const meta = document.createElement('meta');
     meta.httpEquiv = 'Content-Security-Policy';
     meta.content = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline';";
     document.head.appendChild(meta);
   }
-<<<<<<< HEAD
-};
-=======
 
   private setupHTTPS(): void {
     // Ensure HTTPS is used
@@ -122,4 +109,3 @@ export class SecurityEnhancer {
 }
 
 export default SecurityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-0af9
