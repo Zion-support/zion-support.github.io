@@ -1,10 +1,4 @@
 import Link from 'next/link';
-import { ArrowRight,Brain,Rocket,Target,Zap } from "lucide-react";
-
-import Zap from 'lucide-react/dist/esm/icons/zap';
-import Brain from 'lucide-react/dist/esm/icons/brain';
-import Shield from 'lucide-react/dist/esm/icons/shield';
-import Rocket from 'lucide-react/dist/esm/icons/rocket';
 import { Brain, Target, Zap, Rocket, Shield } from 'lucide-react';
 
 

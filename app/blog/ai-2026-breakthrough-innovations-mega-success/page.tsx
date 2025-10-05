@@ -1,12 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight,Brain,Target,TrendingUp,Users,Zap } from "lucide-react";
-
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
-import TrendingUp from 'lucide-react/dist/esm/icons/trending-up';
-import Brain from 'lucide-react/dist/esm/icons/brain';
-import Zap from 'lucide-react/dist/esm/icons/zap';
-import Target from 'lucide-react/dist/esm/icons/target';
-import { ArrowRight, Brain, Target, Users, TrendingUp, Zap, User } from 'lucide-react';
+import { ArrowRight, Brain, Target, Users, TrendingUp, Zap } from 'lucide-react';
 
 
 export const metadata = {
