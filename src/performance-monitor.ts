@@ -35,13 +35,6 @@ export class PerformanceMonitor {
     }
   }
 
-  cleanup(): void {
-    this.observers.forEach(observer => observer.disconnect());
-    this.observers = [];
-    this.metrics.clear();
-    console.log('Performance monitoring cleaned up');
-  }
-
   private observeResourceTiming(): void {
     if ('PerformanceObserver' in window) {
       const observer = new PerformanceObserver((list) => {
