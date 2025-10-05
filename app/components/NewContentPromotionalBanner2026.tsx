@@ -1,26 +1,5 @@
+import { ArrowRight, Link, Rocket, Shield, Sparkles, Target, TrendingUp, Zap } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
-
-import { Sparkles, TrendingUp, Rocket, Shield, Target, ArrowRight, Zap } from 'lucide-react';
-
-import Link from 'next/link';
-
-;
-;
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
-import Target from 'lucide-react';
-import Rocket from 'lucide-react';
-
-import Link from 'next/link';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [

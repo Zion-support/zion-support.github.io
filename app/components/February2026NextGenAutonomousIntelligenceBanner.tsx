@@ -1,22 +1,6 @@
 
+import { ArrowRight, Brain, Shield, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
-
-import { ArrowRight, Zap, Brain, TrendingUp, Users, Shield } from 'lucide-react';
-
-;
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import Users from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 export default function February2026NextGenAutonomousIntelligenceBanner() {
   return (

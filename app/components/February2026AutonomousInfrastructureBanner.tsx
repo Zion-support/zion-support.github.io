@@ -1,23 +1,5 @@
+import { ArrowRight, Brain, Link, Shield, TrendingUp, Zap } from 'lucide-react';
 import React from 'react';
-<<<<<<< HEAD
-
-import { ArrowRight, Shield, Zap, TrendingUp, Brain } from 'lucide-react';
-
-import Link from 'next/link';
-
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-
-import Link from 'next/link';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
 
 const February2026AutonomousInfrastructureBanner: React.FC = () => {
   return (
