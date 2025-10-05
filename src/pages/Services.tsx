@@ -1,27 +1,10 @@
 import { ArrowRight, Brain, CheckCircle, Cloud, Code, Database, Rocket, Shield, Star, TrendingUp, Users, Zap } from 'lucide-react';
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-import { Brain } from 'lucide-react';
-import { Rocket } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-;
 
 const Services: React.FC = () => {
   const services = [

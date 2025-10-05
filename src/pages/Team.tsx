@@ -1,24 +1,10 @@
 import { ArrowRight, Award, Github, Lightbulb, Linkedin, Mail, Target, Twitter, Users } from 'lucide-react';
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-import { Linkedin } from 'lucide-react';
-import { Twitter } from 'lucide-react';
-import { Github } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Lightbulb } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-;
 
 const Team: React.FC = () => {
   const teamMembers = [

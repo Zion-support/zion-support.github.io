@@ -1,24 +1,10 @@
 import { ArrowRight, Award, CheckCircle, Globe, Lightbulb, Shield, Target, Users, Zap } from 'lucide-react';
 import React from 'react';
 
-<<<<<<< HEAD
-=======
-import { Award } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { Lightbulb } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { ArrowRight } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Zap } from 'lucide-react';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-24db
 
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-;
 
 const About: React.FC = () => {
   const values = [
