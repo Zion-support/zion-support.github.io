@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 // import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
 // import AdvancedCacheManager from '../utils/advancedCache';
-import AdvancedAccessibilityManager from '../utils/advancedAccessibilityManager';
-import { AdvancedSecurityManager } from '../utils/advancedSecurityManager';
-import EnhancedUXManager from '../utils/enhancedUXManager';
+import { accessibilityEnhancer as AdvancedAccessibilityManager } from '../utils/accessibilityEnhancer';
+import { securityAuditor as AdvancedSecurityManager } from '../utils/securityAuditor';
+import { getAnalytics as EnhancedUXManager } from '../utils/enhancedAnalytics';
 
 interface PerformanceData {
   memoryUsage: number;

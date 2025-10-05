@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
+import { Bot, Target, DollarSign, Zap, TrendingUp, Activity, Cloud, Shield, CheckCircle, Cpu, ArrowRight, Clock } from 'lucide-react';
+
 const October2025AutonomousInfrastructureBanner = () => {
   return (
-    <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden" > {/* Animated background effects */}
+    <div className="relative bg-gradient-to-br from-cyan-900/30 via-blue-900/30 to-purple-900/30 border-y border-cyan-500/40 overflow-hidden">
+      {/* Animated background effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -195,8 +198,6 @@ const October2025AutonomousInfrastructureBanner = () => {
             <div className="flex items-center justify-between mb-3">
               <Cpu className="w-8 h-8" />
               <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-            </div>
-              <Cpu className="w-8 h-8" />
             </div>
             <div className="font-bold text-lg mb-2">Read Technical Deep Dive</div>
             <div className="text-sm text-cyan-100">
