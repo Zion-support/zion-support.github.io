@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowLeft,Bookmark,Calendar,Clock,Share2,User } from "lucide-react";
 
 import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 import Clock from 'lucide-react/dist/esm/icons/clock';

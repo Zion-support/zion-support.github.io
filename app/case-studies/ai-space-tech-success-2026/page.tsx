@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { Satellite } from "lucide-react";
 
 export const metadata = {
   title: 'AI Space Technology Success 2026: $50M ROI Case Study',

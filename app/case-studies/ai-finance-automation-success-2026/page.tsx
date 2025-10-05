@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { User } from "lucide-react";
 
 export const metadata = {
   title: 'AI Finance Automation Success 2026: $15M ROI Case Study',

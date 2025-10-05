@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { User } from "lucide-react";
 
 
 export const metadata: Metadata = {
