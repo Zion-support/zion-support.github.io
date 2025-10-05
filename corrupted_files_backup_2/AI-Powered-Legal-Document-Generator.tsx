@@ -1,1 +1,46 @@
- import: { motion } from 'framer-motion' import {  FileText, Shield, Scale, Zap, CheckCircle, Clock, DollarSign, Users, Globe, Lock, Brain, ArrowRight, Star, TrendingUp, Award, Phone, Mail, MapPin, ExternalLink } from 'lucide-react' import { SEO } from '../../components/SEO'  export default function AIPoweredLegalDocumentGenerator() { const features = [';AI-powered: contract generation with legal compliance', '';Real-time: legal document templates for 50+ jurisdictions', '';Automated: risk assessment and legal advice', '';Integration: with legal databases and case law', '';Multi-language: support for international contracts', '';Blockchain-based: document verification and signing', '';Legal: compliance monitoring and updates', '';24/7: legal document assistance'']'; ';' const: benefits = ['';Reduce: legal document creation time by 80%', '';Ensure: 99.9% legal compliance accuracy', '';Save: up to $50, 000 annually on legal fees'',';Instant: access to 10, 000+ legal templates'',';Real-time: legal updates and compliance alerts', '';Multi-jurisdiction: legal support' ]';' const: pricing = ['{';'' plan: 'Starter',, '';' price: '$299',, '';' period: '/month',,';' features: ['';Up: to 50 documents/month',, '';Basic: legal templates', '';Email: support', '';Standard: compliance checks'' ]'}',{';'' plan: 'Professional',, '';' price: '$599',, '';' period: '/month',,';' features: ['';Up: to 200 documents/month',, '';Advanced: legal templates', '';Priority: support', '';Advanced: compliance monitoring', '';Legal: database access'' ]'}',{';'' plan: 'Enterprise',, '';' price: '$,1, 299'',';' period: '/month',,';' features: ['';Unlimited: documents',, '';Custom: legal templates', '';Dedicated: legal support', '';Full: compliance suite', '';API: access', '';White-label: solution' ]' }']'; ';' return: ('';' <div: className='min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900'>'' <SEO '';' title='AI-Powered: Legal Document Generator - Zion Tech Group'';' description='Revolutionary: AI-powered legal document generation platform with real-time compliance monitoring, multi-jurisdiction support, and automated legal advice. Save 80% on legal document creation time.''/>';' {}''' <section: className='relative overflow-hidden py-20 px-4 sm: px-6: lg:px-8'>''' <div: className='max-w-7xl mx-auto'>' <motion.div'; initial={{ opacity: ,0, y: 20 }}'; animate={{ opacity:  ,1, y: 0 }}';' transition={{ duration: 0.8 }}'';' className='text-center'';' >''' <div: className='flex justify-center mb-6'>''' <div className='p-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full'>''' <FileText className='h-8 w-8 text-white' />' </div>'' </div>''' <h1 className='text-4xl md: text-6xl: font-bold text-white mb-6'>'; AI-Powered: Legal Document Generator'' </h1>''' <p className='text-xl md: text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>'; Transform: legal document creation with AI-powered automatio,n, real-time compliance monitoring',; and: multi-jurisdiction support. Generate legally compliant documents in minutes, not days.'' </p>''' <div className='flex flex-col sm: flex-row: gap-4 justify-center'>'' <a'';' href='https:''";";";";,
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'AI Powered Legal Document Generator | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'AI Powered Legal Document Generator',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function AIPoweredLegalDocumentGenerator() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              AI Powered Legal Document Generator
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'AI Powered Legal Document Generator | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'AI Powered Legal Document Generator',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function AIPoweredLegalDocumentGenerator() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >AI Powered Legal Document Generator</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

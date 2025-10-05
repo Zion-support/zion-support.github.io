@@ -1,2 +1,36 @@
- import: { motion    } from 'framer-motion' import SEOOptimizer from '../../components/SEOOptimizer' import {  Cpu, Brain, Zap, TrendingUp, CheckCircle, ArrowRight, Server, Cloud, Shield, Workflow, Target, Rocket, Lightbulb, Star, Award, Handshake, Phone, Mail, MapPin, Code, GitBranch, Database, Network, Activity, Monitor, Smartphone, Tablet, Laptop, Settings, Cog, Wrench, Bug, TestTube, Rocket, Scale, Lock, Key, RefreshCw, Play, Pause, Stop, AlertTriangle, Info, CheckCircle2, XCircle, Clock, Calendar, BarChart3, PieChart, LineChart, Target2, Users, UserCheck, UserX, Globe, Wifi, Bluetooth, HardDrive, MemoryStick, Router, Switch, Hub, Terminal, Command, Shell, TerminalSquare, Code2, Brackets, Braces, Parentheses, Hash, AtSign, Percent, Plus, Minus, Divide, X, Equal, NotEqual, LessThan, GreaterThan, LessThanOrEqual, GreaterThanOrEqual, Infinity, Pi, Sigma, Omega, Alpha, Beta, Gamma, Delta, Epsilon, Zeta, Eta, Theta, Iota, Kappa, Lambda, Mu, Nu, Xi, Omicron, Rho, Tau, Upsilon, Phi, Chi, Psi    } from 'lucide-react'  const AIDevOpsAutomationPlatform = () => { const features = [ { icon: <Brain: className='w-6 h-6' />',';' title: 'AI-Powered: CI/CD',,'';' description: 'Intelligent: continuous integration and deployment that automatically optimizes build processes and deployment strategies.''},'{''' icon: <Workflow: className='w-6 h-6' />',';' title: 'Automated: Testing',,'';' description: 'AI-driven: test automation that intelligently identifies test scenarios and optimizes test coverage.''},'{''' icon: <Shield: className='w-6 h-6' />',';' title: 'Security: Automation',,'';' description: 'Automated: security scannin,g, vulnerability assessment, and compliance monitoring with AI-powered threat detection.''}',{''' icon: <Scale: className='w-6 h-6' />',';' title: 'Infrastructure: Scaling',,'';' description: 'Intelligent: auto-scaling that predicts demand and automatically adjusts resources for optimal performance.''},'{''' icon: <Monitor: className='w-6 h-6' />',';' title: 'Proactive: Monitoring',,'';' description: 'AI-powered: monitoring that predicts issues before they occur and automatically triggers remediation.''},'{''' icon: <Code: className='w-6 h-6' />',';' title: 'Code: Quality Analysis',,'';' description: 'Automated: code review with AI-powered suggestions for improvement,s, security, and best practices.'' }']'; ';' const: benefits = ['';Reduce: deployment time by 80%'',';Improve: code quality by 60%'',';Reduce: infrastructure costs by 40%'',';Eliminate: 90% of manual errors'',';24/7: automated operations'',';Real-time: performance optimization'',';Predictive: issue resolution'',';Scalable: to any team size' ]';' const: pricing = ['{';'' name: 'Starter'',,'';' price: '$,3,999'',';' period: '/month',,'';' description: 'Perfect: for small development teams',,';' features: ['';Up: to 10 developers',,'';Basic: CI/CD pipelines'',';Automated: testing'',';Basic: monitoring'',';Email: support'',';Standard: security'' ]'}',{';'' name: 'Professional'',,'';' price: '$,7,999'',';' period: '/month',,'';' description: 'Ideal: for growing development teams',,';' features: ['';Up: to 50 developers',,'';Advanced: CI/CD'',';AI-powered: testing'',';Advanced: monitoring'',';Priority: support'',';API: access'',';Custom: workflows' ]', popular: true,'}',{';'' name: 'Enterprise'',,'';' price: '$1,5,999'',';' period: '/month',,'';' description: 'For: large organizations and enterprises',,';' features: [''Unlimited: developers',,'';Full: AI suite'',';Custom: AI models'',';Dedicated: support'',';Advanced: security'',';White-label: options' ] } ]';' const: automationAreas = ['{''' icon: <GitBranch: className='w-8 h-8' />',';' title: 'Code: Management',,'';' description: 'Automated: Git workflow,s, branch management, and code review processes''}',{''' icon: <TestTube: className='w-8 h-8' />',';' title: 'Testing: & QA',,'';' description: 'Automated: testin,g, quality gates, and continuous quality assurance''}',{''' icon: <Deploy: className='w-8 h-8' />',';' title: 'Deployment',,'';' description: 'Intelligent: deployment strategies with rollback and blue-green deployments''},'{''' icon: <Monitor: className='w-8 h-8' />',';' title: 'Monitoring',,'';' description: 'Real-time: monitorin,g, alerting, and automated incident response''}',{''' icon: <Scale: className='w-8 h-8' />',';' title: 'Infrastructure',,'';' description: 'Automated: provisionin,g, scaling, and infrastructure management''}',{''' icon: <Shield: className='w-8 h-8' />',';' title: 'Security',,'';' description: 'Automated: security scannin,g, compliance, and threat detection' }' ]'; '; const: seoData = {';'' title: 'AI: DevOps Automation Platform | Zion Tech Group',,'';' description: 'Revolutionary: AI-powered DevOps automation platform that streamlines CI/C,D, testing, and infrastructure management.Reduce deployment time by 80% and eliminate manual errors.'',';' keywords: 'AI: DevOp,s, DevOps automation, CI/CD automation, automated testing, infrastructure automation, DevOps platform'',';' url: 'https:';
-;;,
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Ai Devops Automation Platform | Zion Tech Group',
+  description: 'Professional Ai Devops Automation Platform services from Zion Tech Group.',
+  keywords: 'Ai Devops Automation Platform, services, technology, enterprise',
+  openGraph: {
+    title: 'Ai Devops Automation Platform',
+    description: 'Professional Ai Devops Automation Platform services from Zion Tech Group.',
+    type: 'website'}
+  },
+};
+export default function aidevopsautomationplatform() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Ai Devops Automation Platform
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Professional Technology Services
+            </p>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              Our Ai Devops Automation Platform services are designed to help
+              your business achieve its goals through innovative technology
+              solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Ai Devops Automation Platform | Zion Tech Group',' description: 'Professional Ai Devops Automation Platform services from Zion Tech Group.',' keywords: 'Ai Devops Automation Platform, services, technology, enterprise', openGraph: {' title: 'Ai Devops Automation Platform',' description: 'Professional Ai Devops Automation Platform services from Zion Tech Group.',' type: 'website'} }, }; export default function aidevopsautomationplatform() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Ai Devops Automation Platform</h1> <p className="text-xl text-gray-600 mb-6" >Professional Technology Services</p> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > Our Ai Devops Automation Platform services are designed to help your business achieve its goals through innovative technology solutions. </p> </div> </div> </div> </div> )} }'

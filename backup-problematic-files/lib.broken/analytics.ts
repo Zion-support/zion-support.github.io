@@ -1,6 +1,3 @@
 // Analytics and performance monitoring utilities;
-
-
-
-
-origin/main
+origin / main;
+// Analytics and performance monitoring utilities; origin/main

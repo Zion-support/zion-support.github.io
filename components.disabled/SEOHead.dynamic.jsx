@@ -1,3 +1,1 @@
-const SEOHead = dynamic(() => import("./SEOHead"),{'; loading: () => <p>Loading...</p,>,}) export: 'default SEOHead' ,'
-
-</p>'
+const SEOHead = dynamic(() => import("./SEOHead"),{'} loading: () => <p>Loading...</p>}}) export: 'default SEOHead' ,' ' </p>' '

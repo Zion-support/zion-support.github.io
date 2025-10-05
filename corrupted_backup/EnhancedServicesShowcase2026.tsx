@@ -1,24 +1,46 @@
-import React,{ useState,useEffect } from \'react\' import { motion } from \'framer-motion\' import { Brain,Shield,Cloud,Server,BarChart3,Users,ShoppingCart,MessageCircle,HelpCircle,DollarSign,Target,TrendingUp,Atom,Network,Eye,PenTool,Heart,Building,Truck,Lock,Smartphone,Mail,Video,Satellite,Leaf,Code,Zap,Star,Rocket,Globe,Cpu,ArrowRight,FileText,Workflow,Phone,MapPin,Mail as MailIcon,ExternalLink,CheckCircle,Clock,Users as UsersIcon,Zap as ZapIcon,Globe as GlobeIcon,Shield as ShieldIcon,TrendingUp as TrendingUpIcon } from \'lucide-react\' import { enhancedInnovativeServices2026,enhancedServiceCategories } from \'../data/enhancedInnovativeServices2026\' export default function EnhancedServicesShowcase2026() { const [selectedCategory,setSelectedCategory] = useState(\'all\') const [searchTerm,setSearchTerm] = useState(\'') const [sortBy,setSortBy] = useState(\'featured\') const filteredServices = enhancedInnovativeServices2026.filter(service => { const matchesCategory = selectedCategory === \'all\' || service.category === selectedCategory const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()) return matchesCategory && matchesSearch }) const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case \'price-low\': \"return\": parseFloat(a.price.replace(\'$\',\'').replace(\',\',\'')) - parseFloat(b.price.replace(\'$\',\'').replace(\',\',\'')) case \'price-high\': \"return\": parseFloat(b.price.replace(\'$\',\'').replace(\',\',\'')) - parseFloat(a.price.replace(\'$\',\'').replace(\',\',\'')) case \'roi\': \"return\": parseFloat(b.roi?.replace(\'%\',\'') || \'0\') - parseFloat(a.roi?.replace(\'%\',\'') || \'0\') case \'market-size\': \"return\": parseFloat(b.marketSize?.replace(\'$\',\'').replace(\'B\',\'000\') || \'0\') - parseFloat(a.marketSize?.replace(\'$\',\'').replace(\'B\',\'000\') || \'0\') \"default\": \'return: b.featured ? 1 : -1\'} }) const containerVariants = { \"hidden\": { opacity: 0},\"visible\": { opacity: 1,\"transition\": { staggerChildren: 0.1} } } const itemVariants = { \"hidden\": { y: 2,0,\"opacity\": \'0\'},\"visible\": { y: 0,\"opacity\": \'1\',\"transition\": { duration: 0.5} } } \"return\": ( <div className=\'min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900\'>\''; {}\''\' <\"div\": className=\'relative overflow-hidden\'>\''\' <div className=\'absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20\'></div>\''\' <div className=\'relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-24\'>\' <motion.div\'; initial={{ opacity: 0,\"y\": \'30\'}}\'; animate={{ \"opacity\": \'1\',\"y\": \'0\'}}\''; transition={{ \"duration\": \'0.8\'}}\''\'; className=\'text-center\''\'; >\''\' <\"h1\": className=\'text-5xl md: text-7xl: font-bold text-white mb-6\'>\''\' <span className=\'bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent\'>\'; Next-Generation\' </span>\'' <br: / / / / / />\''\' <span className=\'text-white\'>Technology Solutions</span>\'' </h1>\''\' <p className=\'text-xl md:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto\'>\'; Discover: cutting-edge micro SAA,S,AI solutions,and emerging technologies that drive innovation and transform businesses across industries.\'' </p>\''\' <div className=\'flex flex-col \"sm\": flex-row: gap-4 justify-center items-center\'>\'' <a\''\'; href=\"https:;\",;
-import _React,{ useState,useEffect } from 'react' import { motion } from 'framer-motion' import { Brain,Shield,Cloud,Server,BarChart3,Users,ShoppingCart,MessageCircle,HelpCircle,DollarSign,Target,TrendingUp,Atom,Network,Eye,PenTool,Heart,Building,Truck,Lock,Smartphone,Mail,Video,Satellite,Leaf,Code,Zap,Star,Rocket,Globe,Cpu,ArrowRight,FileText,Workflow,Phone,MapPin,Mail as MailIcon,ExternalLink,CheckCircle,Clock,Users as UsersIcon,Zap as ZapIcon,Globe as GlobeIcon,Shield as ShieldIcon,TrendingUp as TrendingUpIcon } from 'lucide-react' import { enhancedInnovativeServices2026,enhancedServiceCategories } from '../data/enhancedInnovativeServices2026' export default function EnhancedServicesShowcase2026() { const [selectedCategory,setSelectedCategory] = useState('all') const [searchTerm,setSearchTerm] = useState('') const [sortBy,setSortBy] = useState('featured') const filteredServices = enhancedInnovativeServices2026.filter(service => { const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()) return matchesCategory && matchesSearch }) const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case 'price-low': "return": parseFloat(a.price.replace('$','').replace(',','')) - parseFloat(b.price.replace('$','').replace(',','')) case 'price-high': "return": parseFloat(b.price.replace('$','').replace(',','')) - parseFloat(a.price.replace('$','').replace(',','')) case 'roi': "return": parseFloat(b.roi?.replace('%','') || '0') - parseFloat(a.roi?.replace('%','') || '0') case 'market-size': "return": parseFloat(b.marketSize?.replace('$','').replace('B','000') || '0') - parseFloat(a.marketSize?.replace('$','').replace('B','000') || '0') "default": 'return: b.featured ? 1 : -1'} }) const containerVariants = { "hidden": { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.1} } } const itemVariants = { "hidden": { y: 2,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.5} } } "return": ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>''; {}''' <"div": className='relative overflow-hidden'>''' <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'></div>''' <div className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-24'>' <motion.div'; initial={{ opacity: 0,"y": '30'}}'; animate={{ "opacity": '1',"y": '0'}}''; transition={{ "duration": '0.8'}}'''; className='text-center'''; >''' <"h1": className='text-5xl md: text-7xl: font-bold text-white mb-6'>''' <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>'; Next-Generation' </span>'' <br: / / / / / />''' <span className='text-white'>Technology Solutions</span>'' </h1>''' <p className='text-xl md:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>'; Discover: cutting-edge micro SAA,S,AI solutions,and emerging technologies that drive innovation and transform businesses across industries.'' </p>''' <div className='flex flex-col "sm": flex-row: gap-4 justify-center items-center'>'' <a'''; href="https:;",;
-
-import _React,{ useState,useEffect } from 'react' import { motion } from 'framer-motion' import { Brain,Shield,Cloud,Server,BarChart3,Users,ShoppingCart,MessageCircle,HelpCircle,DollarSign,Target,TrendingUp,Atom,Network,Eye,PenTool,Heart,Building,Truck,Lock,Smartphone,Mail,Video,Satellite,Leaf,Code,Zap,Star,Rocket,Globe,Cpu,ArrowRight,FileText,Workflow,Phone,MapPin,Mail as MailIcon,ExternalLink,CheckCircle,Clock,Users as UsersIcon,Zap as ZapIcon,Globe as GlobeIcon,Shield as ShieldIcon,TrendingUp as TrendingUpIcon } from 'lucide-react' import { enhancedInnovativeServices2026,enhancedServiceCategories } from '../data/enhancedInnovativeServices2026' export default function EnhancedServicesShowcase2026() { const [selectedCategory,setSelectedCategory] = useState('all') const [searchTerm,setSearchTerm] = useState('') const [sortBy,setSortBy] = useState('featured') const filteredServices = enhancedInnovativeServices2026.filter(service => { const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) || service.description.toLowerCase().includes(searchTerm.toLowerCase()) return matchesCategory && matchesSearch }) const sortedServices = [...filteredServices].sort((a,b) => { switch (sortBy) { case 'price-low': "return": parseFloat(a.price.replace('$','').replace(',','')) - parseFloat(b.price.replace('$','').replace(',','')) case 'price-high': "return": parseFloat(b.price.replace('$','').replace(',','')) - parseFloat(a.price.replace('$','').replace(',','')) case 'roi': "return": parseFloat(b.roi?.replace('%','') || '0') - parseFloat(a.roi?.replace('%','') || '0') case 'market-size': "return": parseFloat(b.marketSize?.replace('$','').replace('B','000') || '0') - parseFloat(a.marketSize?.replace('$','').replace('B','000') || '0') "default": 'return: b.featured ? 1 : -1'} }) const containerVariants = { "hidden": { opacity: 0},"visible": { opacity: 1,"transition": { staggerChildren: 0.1} } } const itemVariants = { "hidden": { y: 2,0,"opacity": '0'},"visible": { y: 0,"opacity": '1',"transition": { duration: 0.5} } } "return": ( <div className='min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900'>''; {}''' <"div": className='relative overflow-hidden'>''' <div className='absolute inset-0 bg-gradient-to-r from-blue-600/20 to-purple-600/20'></div>''' <div className='relative max-w-7xl mx-auto px-4 sm: px-6: lg:px-8: py-24'>' <motion.div'; initial={{ opacity: 0,"y": '30'}}'; animate={{ "opacity": '1',"y": '0'}}''; transition={{ "duration": '0.8'}}'''; className='text-center'''; >''' <"h1": className='text-5xl md: text-7xl: font-bold text-white mb-6'>''' <span className='bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent'>'; Next-Generation' </span>'' <br: / / / / / />''' <span className='text-white'>Technology Solutions</span>'' </h1>''' <p className='text-xl md:text-2xl: text-gray-300 mb-8 max-w-4xl mx-auto'>'; Discover: cutting-edge micro SAA,S,AI solutions,and emerging technologies that drive innovation and transform businesses across industries.'' </p>''' <div className='flex flex-col "sm": flex-row: gap-4 justify-center items-center'>'' <a'''; href="https:;",;
-
-class ErrorBoundary extends React.Component {
-  }
-  constructor(props) {
-    }
-    super(props);
-
-  }
-  
-  render() {
-    }
-    if (this.state.hasError) {
-      }
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'EnhancedServicesShowcase2026 | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'EnhancedServicesShowcase2026',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function EnhancedServicesShowcase2026() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              EnhancedServicesShowcase2026
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
 }
-
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'EnhancedServicesShowcase2026 | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'EnhancedServicesShowcase2026',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function EnhancedServicesShowcase2026() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >EnhancedServicesShowcase2026</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

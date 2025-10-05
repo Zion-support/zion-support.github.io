@@ -128,7 +128,7 @@ Once the merge is complete, the following improvements can be implemented:
 ## 📝 Technical Details
 
 ### Changes Made
-1. **Merge Conflict Resolution**: Removed all `<<<<<<< HEAD`, `=======`, and `>>>>>>> branch_name` markers
+1. **Merge Conflict Resolution**: Removed all ``, ``, and `ranch_name` markers
 2. **Syntax Error Fixes**: Fixed JavaScript parsing errors and template literal issues
 3. **Module System Updates**: Converted CommonJS `require()` to ES6 `import` statements
 4. **Code Cleanup**: Removed duplicate function declarations and imports

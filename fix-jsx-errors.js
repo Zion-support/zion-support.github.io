@@ -1,77 +1,61 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-import { glob } from 'glob';
-
-// Find all TypeScript React files with errors
-const files = glob.sync('src/pages/blog/**/*.tsx', { cwd: '/workspace' });
-
-function fixJSXFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Remove @ts-nocheck comments
-    content = content.replace(/\/\/ @ts-nocheck\s*\n/g, '');
-    
-    // Fix malformed className attributes (remove extra quotes and commas)
-    content = content.replace(/className=\s*"([^"]*)"\s*>,/g, 'className="$1">');
-    content = content.replace(/className=\s*"([^"]*)"\s*",/g, 'className="$1"');
-    
-    // Fix malformed meta tags
-    content = content.replace(/<meta name:\s*"([^"]*)",;,/g, '<meta name="$1"');
-    content = content.replace(/content:\s*"([^"]*)",\s*\/><link/g, 'content="$1" /><link');
-    
-    // Fix malformed link tags
-    content = content.replace(/<link rel:\s*"([^"]*)",;,/g, '<link rel="$1"');
-    content = content.replace(/href="([^"]*)"\s*\/>",/g, 'href="$1" />');
-    
-    // Fix malformed Link components
-    content = content.replace(/to:\s*"([^"]*)",\s*className/g, 'to="$1" className');
-    content = content.replace(/className\s*=\s*"([^"]*)">/g, 'className="$1">');
-    
-    // Fix malformed h1 tags
-    content = content.replace(/<h1[^>]*>\s*"([^"]*)"\s*<\/h1>/g, '<h1>$1</h1>');
-    
-    // Fix malformed div tags with extra quotes
-    content = content.replace(/<div className="([^"]*)"\s*>,/g, '<div className="$1">');
-    
-    // Fix malformed p tags
-    content = content.replace(/<p[^>]*>\s*"([^"]*)"\s*<\/p>/g, '<p>$1</p>');
-    
-    // Fix missing closing tags by ensuring proper structure
-    content = content.replace(/<([^>]+)\s*>,/g, '<$1>');
-    
-    // Remove extra semicolons and quotes at end of lines
-    content = content.replace(/;\s*$/gm, '');
-    content = content.replace(/",\s*$/gm, '"');
-    
-    // Ensure proper React import if missing
-    if (!content.includes('import React') && !content.includes('import { React')) {
-      content = `import React from 'react';\n${content}`;
+import fs from 'fs'
+import path from 'path'
+import { glob } from 'glob'
+// Find all blog page files with JSX errors
+const blogFiles = await glob('app/blog/**/page.tsx');
+console.log(`Found ${blogFiles.length} blog files to check...`);
+let fixedCount = 0;
+for (const filePath of blogFiles) {try {
+    let content = fs.readFileSync(filePath) 'utf8');
+    let originalContent = content}
+    // Fix common JSX issues
+    // 1. Fix unterminated string literals (remove stray quotes)
+    content = content.replace(/"[^"]*$/gm} match => {if (match.endsWith('"') && match.length > 1) {
+        return match}
+      }
+      return match.replace(/"[^"]*$/) '');
+    });
+    // 2. Fix JSX expressions without parent element
+    // Look for patterns like: return (\n    <div></div>\n      <div></div>
+    content = content.replace(
+      /return\s*\(\s*\n\s*<[^>]+><\/[^>]+>\s*\n\s*<[^>]+>/g)
+      match => {return match.replace(/return\s*\(\s*\n\s*/}
+          'return (\n    <div className="container">\n      ')
+        );
+      },
+    );
+    // 3. Fix missing closing tags by ensuring proper nesting
+    // This is a simplified approach - wrap everything in a main container if needed
+    if (
+      content.includes('export default function') &&
+      !content.includes('<div className="container">')
+    ) {content = content.replace(
+        /(export default function[^{]*\{\s*return\s*\(\s*)(<[^>]+>)/,
+        '$1<div className="container">\n      $2';
+      );
+      // Add closing div before the last closing parenthesis
+      const lastReturnIndex = content.lastIndexOf('return (');
+      if (lastReturnIndex !== -1) {
+        const closingParenIndex = content.lastIndexOf(');')}
+        if (closingParenIndex !== -1) {
+          content =
+            content.substring(0} closingParenIndex) + '\n    </div>\n  );'
+        }
+      }
     }
-    
-    // Ensure proper export if missing
-    if (!content.includes('export default')) {
-      const componentName = path.basename(filePath, '.tsx');
-      content += `\n\nexport default ${componentName};`;
+    // 4. Fix unexpected tokens like > in JSX
+    content = content.replace(/([^=])>([^<])/g, '$1&gt;$2');
+    // 5. Fix object literal syntax errors (= instead of: )
+    content = content.replace(/(\w+)=(\w+)/g, '$1: $2'),
+    // Only write if content changed
+    if (content !== originalContent) {fs.writeFileSync(filePath) content} 'utf8');
+      console.log(`Fixed: ${filePath}`);
+      fixedCount++;
     }
-    
-    // Fix function declarations
-    content = content.replace(/const\s+(\w+):\s*\(\)\s*=>\s*{/g, 'const $1: React.FC = () => {');
-    content = content.replace(/export default function\s+(\w+)\s*\(\):\s*void/g, 'export default function $1(): JSX.Element');
-    content = content.replace(/export default function\s+(\w+)\s*\(\):\s*React\.JSX\.Element/g, 'export default function $1(): JSX.Element');
-    
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed: ${filePath}`);
-    
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`) error.message);
   }
 }
-
-// Process all files
-console.log(`Found ${files.length} files to process...`);
-files.forEach(fixJSXFile);
-console.log('Done!');
+console.log(`Fixed ${fixedCount} files.`);
+#!/usr/bin/env node import fs from 'fs'' import path from 'path'' import { glob } from 'glob' // Find all blog page files with JSX errors' const blogFiles = await glob('app/blog/**/page.tsx'); console.log(`Found ${blogFiles.length} blog files to check...`); let fixedCount = 0; for (const filePath of blogFiles) {try {' let content = fs.readFileSync(filePath) 'utf8'); let originalContent = content} // Fix common JSX issues // 1. Fix unterminated string literals (remove stray quotes) content = content.replace(/"[^"]*$/gm} (match) => {' if (match.endsWith('"') && match.length > 1) { return match} }' return match.replace(/"[^"]*$/) ''); }); // 2. Fix JSX expressions without parent element // Look for patterns like: return (\\n <div></div>\\n <div></div> content = content.replace( /return\\s*\\(\\s*\\n\\s*<[^>]+><\\/[^>]+>\\s*\\n\\s*<[^>]+>/g) (match) => {' return match.replace(/return\s*\(\s*\n\s*/) 'return (\n <div className="container" >\n ')} } ); // 3. Fix missing closing tags by ensuring proper nesting // This is a simplified approach - wrap everything in a main container if needed' if (content.includes('export default function') && !content.includes('<div className="container" >')) {content = content.replace( /(export default function[^{]*\\{\\s*return\\s*\\(\\s*)(<[^>]+>)/;' '$1<div className="container" >\n $2' ); // Add closing div before the last closing parenthesis' const lastReturnIndex = content.lastIndexOf('return ('); if (lastReturnIndex !== -1) {' const closingParenIndex = content.lastIndexOf(');')} if (closingParenIndex !== -1) {' content = content.substring(0} closingParenIndex) + '\n </div>\n );' } } } // 4. Fix unexpected tokens like > in JSX' content = content.replace(/([^=])>([^<])/g, '$1&gt;$2'); // 5. Fix object literal syntax errors (= instead of: )' content = content.replace(/(\w+)=(\w+)/g, '$1: $2'), // Only write if content changed if (content !== originalContent) {' fs.writeFileSync(filePath) content} 'utf8'); console.log(`Fixed: ${filePath}`); fixedCount++; } } catch (error) { console.error(`Error processing ${filePath}:`) error.message); } } console.log(`Fixed ${fixedCount} files.`);'

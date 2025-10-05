@@ -1,10 +1,10 @@
-import Head from 'next/head.ts';
-import { motion  } from 'framer-motion';
-import { useState  } from 'react';
 import Head from 'next/head.ts'
 import { motion  } from 'framer-motion'
 import { useState  } from 'react'
-import { User,
+import Head from 'next/head.ts'
+import { motion  } from 'framer-motion'
+import { useState  } from 'react'
+import {User,
   Mail,
   Lock,
   Eye,
@@ -16,13 +16,11 @@ import { User,
   Globe,
   Shield,
   Zap,
-  Brain,
+  Brain}
   Cloud
  } from 'lucide-react'
 }
-
-export default function Signup() {
-  const [formData, setFormData] = useState({
+export default function Signup() {const [formData, setFormData] = useState({
     "firstName": '',
     "lastName": '',
     "email": '',
@@ -30,8 +28,8 @@ export default function Signup() {
     "confirmPassword": '',
     "comp": '',
     "phone": '',
-    "website": '',
-    "industry": '',
+    "website": '')
+    "industry": ''}
     "useCase": ''
   })
   const [showPassword, setShowPassword] = useState(false)
@@ -58,23 +56,18 @@ export default function Signup() {
     'Enterprise IT',
     'Other'
   ]
-      // // // // // // // 
-    } catch (error) {
-      // // // // // // // console.error('Signup "error": ', error)
-      // // // // 
-    } catch (error) {
-      // // // // console.error('Signup "error": ', error)
-    } finally {
-      setIsSubmitting(false)
+      // // // // // // //
+    } catch (error) {// // // // // // // console.error('Signup "error": '} error)
+      // // // //
+    } catch (error) {// // // // console.error('Signup "error": '} error)
+    } finally {setIsSubmitting(false)
   const title = 'Sign Up — Zion Tech Group'
-  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.'
-
-  return (
-    <>
+  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI} cloud; and cybersecurity solutions.'
+  return (<>
       <Helmet>
         <title>{title}</title>
         <meta name="description" content={description}  />
-        <meta name="viewport" content="width=device-width, initial-scale=1"  />
+        <meta name="viewport" content="width=device-width) initial-scale=1"  />
         <link rel="canonical" href=""https": //ziontechgroup.com/signup"  />
         {/* Open Graph */}
         <meta property=""og": titl e" content={title}  />
@@ -86,70 +79,68 @@ export default function Signup() {
         <meta name="twitter: titl e" content={title}  />
         <meta name=""twitter": descriptio n" content={description}  />
       </Helmet>
-      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
+      <main className="text-left">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+        <div className="text-left"></div>
+            <div className="text-left"></div>
           </div>
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8 relative z-10">
+          <div className="text-left"sm": p x-6 lg: p x-8 relative z-10">
             <motion.div
-
-import Head from 'next/head ;
-import {motion} from 'framer-motion';
-import {useState} from 'react';
-import {User,, Mail,, Lock,, Eye,, EyeOff,, CheckCircle,, AlertCircle,, Building,, Phone,, Globe,, Shield,, Zap,, Brain,, Cloud} from 'lucide-react';
+import Head from 'next/head ,
+import {motion} from 'framer-motion'
+import {useState} from 'react'
+import {User,, Mail,, Lock,, Eye,, EyeOff,, CheckCircle,, AlertCircle,, Building,, Phone,, Globe,, Shield,, Zap,) Brain}; Cloud} from 'lucide-react'
 export default function Signup() {;
-  const [formData, setFormData] = useState({;
-    "firstName": '',;
-    "lastName": '',;
-    "email": '',;
-    "password": '',;
-    "confirmPassword": '',;
-    "comp": '',;
-    "phone": '',;
-    "website": '',;
-    "industry": '',;
-    "useCase": '';
+  const [formData} setFormData] = useState({;
+    "firstName": '';
+    "lastName": '';
+    "email": '';
+    "password": '';
+    "confirmPassword": '';
+    "comp": '';
+    "phone": '';
+    "website": '';
+    "industry": '')
+    "useCase": ''}
   });
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, any>>({});
-  const industries = ['Technology',;
-    'Healthcare',;
-    'Finance',;
-    'Manufacturing',;
-    'Retail',;
-    'Education',;
-    'Government',;
-    'Non-profit',;
-    'Other';
+  const industries = ['Technology';
+    'Healthcare';
+    'Finance';
+    'Manufacturing';
+    'Retail';
+    'Education';
+    'Government';
+    'Non-profit';
+    'Other'
   ];
-  const useCases = ['AI & Machine Learning',;
-    'Cloud Infrastructure',;
-    'Cybersecurity',;
-    'Digital Transformation',;
-    'Data Analytics',;
-    'IoT Solutions',;
-    'Micro SaaS Development',;
-    'Enterprise IT',;
-    'Other';
+  const useCases = ['AI & Machine Learning';
+    'Cloud Infrastructure';
+    'Cybersecurity';
+    'Digital Transformation';
+    'Data Analytics';
+    'IoT Solutions';
+    'Micro SaaS Development';
+    'Enterprise IT';
+    'Other'
   ];
       // // // // // // // ;
     } catch (error) {;
-      // // // // // // // console && console.error('Signup "error": ', error);
+      // // // // // // // console && console.error('Signup "error": '} error);
       // // // // ;
     } catch (error) {;
-      // // // // console && console.error('Signup "error": ', error);
+      // // // // console && console.error('Signup "error": '} error);
     } finally {;
-      setIsSubmitting(false);
-  const title = 'Sign Up — Zion Tech Group';
-  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud, and cybersecurity solutions.';
-  return (
-    <>;
+      setIsSubmitting(false)}
+  const title = 'Sign Up — Zion Tech Group'
+  const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud} and cybersecurity solutions.'
+  return (<>;
       <Helmet>;
         <title>{title}</title>;
         <meta name="description" content={description}  />;
@@ -158,24 +149,23 @@ export default function Signup() {;
         {/* Open Graph */}
         <meta property=""og": titl e" content={title}  />;
         <meta property=""og": descriptio n" content={description}  />;
-        <meta property=""og": ur l" content="https://ziontechgroup && ziontechgroup.com/signup"  />;
-        <meta property="og: typ e" content="website"  />;
+        <meta property=""og": ur l" content="https: //ziontechgroup && ziontechgroup.com/signup"  />;
+        <meta property="og: typ e" content="website"  />,
         {/* Twitter */}
         <meta name=""twitter": car d" content="summary_large_image"  />;
         <meta name="twitter: titl e" content={title}  />;
         <meta name=""twitter": descriptio n" content={description}  />;
       </Helmet>;
-      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">;
+      <main className="text-left">;
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20">;
-          <div className="absolute inset-0 opacity-10">;
-            <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>;
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>;
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>;
-          </div>;
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8 relative z-10">;
+        <section className="text-left">;
+          <div className="text-left">;
+            <div className="text-left"></div>
+            <div className="text-left"></div>
+            <div className="text-left"></div>
+          </div>
+          <div className="text-left"sm": p x-6 lg: p x-8 relative z-10">,
             <motion&& motion.div
-
   return (
     <>
       <Helmet>
@@ -193,150 +183,135 @@ export default function Signup() {;
         <meta name="twitter: titl e" content={title}  />
         <meta name=""twitter": descriptio n" content={description}  />
       </Helmet>
-      <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white">
+      <main className="text-left">
         {/* Hero Section */}
-        <section className="relative overflow-hidden py-20">
-          <div className="absolute inset-0 opacity-10">
-            <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div>
-            <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div>
-            <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div>
+        <section className="text-left">
+          <div className="text-left">
+            <div className="text-left">
+        <div className="text-left"></div>
+            <div className="text-left"></div>
           </div>
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8 relative z-10">
+          <div className="text-left"sm": p x-6 lg: p x-8 relative z-10">
             <motion.div
-
-              initial = {
-
-  { opacity: 0,
-  "y": 2 0 
+              initial = {{ opacity: 0}
+  "y": 2 0
 }
-              animate = {
-  { "opacity": 1,
-  "y": 0 
+              animate = {{ "opacity": 1}
+  "y": 0
 }
-
               transition={ "duration": 0 && 0.6 }
-              className="text-center max-w-4xl mx-auto"
-              <h1 className="text-4xl "md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
+              className="text-left"
+              <h1 className="text-left"md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
                 Join Zion Tech Group;
-              </h1>;
-              <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">;
-                Unlock access to revolutionary AI autonomous systems, quantum computing solutions,;
+              </h1>
+              <p className="text-left">;
+                Unlock access to revolutionary AI autonomous systems, quantum computing solutions;
                 and enterprise-grade cybersecurity platforms.;
               </p>;
-              <div className="flex flex-wrap justify-center gap-6 mb-12">;
-                <div className="flex items-center gap-3 text-zion-cyan">;
-                  <Shield className="w-6 h-6"  />;
-                  <span className="text-lg">Enterprise Security</span>;
-                </div>;
-                <div className="flex items-center gap-3 text-zion-purple-light">;
-                  <Brain className="w-6 h-6"  />;
-                  <span className="text-lg">AI Innovation</span>;
-                </div>;
-                <div className="flex items-center gap-3 text-zion-cyan-light">;
-                  <Cloud className="w-6 h-6"  />;
-                  <span className="text-lg">Cloud Native</span>;
-                </div>;
-              </div>;
+              <div className="text-left">;
+                <div className="text-left">;
+                  <Shield className="text-left"  />;
+                  <span className="text-left">Enterprise Security<;
+                </div>
+                <div className="text-left">;
+                  <Brain className="text-left"  />;
+                  <span className="text-left">AI Innovation<;
+                </div>
+                <div className="text-left">;
+                  <Cloud className="text-left"  />;
+                  <span className="text-left">Cloud Native<;
+                </div>
+              </div>
             </motion && motion.div>;
-          </div>;
+          </div>
         </section>;
         {/* Signup Form Section */}
-        <section className="py-20 bg-white/5 backdrop-blur-sm">;
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">;
+        <section className="text-left">;
+          <div className="text-left"sm": p x-6 lg: p x-8">,
             <motion&& motion.div
-
               transition={ "duration": 0.6 }
-
-              className="text-center max-w-4xl mx-auto"
-              <h1 className="text-4xl "md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
+              className="text-left"
+              <h1 className="text-left"md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">
                 Join Zion Tech Group
               </h1>
-              <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">
+              <p className="text-left">
                 Unlock access to revolutionary AI autonomous systems, quantum computing solutions,
                 and enterprise-grade cybersecurity platforms.
               </p>
-              <div className="flex flex-wrap justify-center gap-6 mb-12">
-                <div className="flex items-center gap-3 text-zion-cyan">
-                  <Shield className="w-6 h-6"  />
-                  <span className="text-lg">Enterprise Security</span>
+              <div className="text-left">
+                <div className="text-left">
+                  <Shield className="text-left"  />
+                  <span className="text-left">Enterprise Security<
                 </div>
-                <div className="flex items-center gap-3 text-zion-purple-light">
-                  <Brain className="w-6 h-6"  />
-                  <span className="text-lg">AI Innovation</span>
+                <div className="text-left">
+                  <Brain className="text-left"  />
+                  <span className="text-left">AI Innovation<
                 </div>
-                <div className="flex items-center gap-3 text-zion-cyan-light">
-                  <Cloud className="w-6 h-6"  />
-                  <span className="text-lg">Cloud Native</span>
+                <div className="text-left">
+                  <Cloud className="text-left"  />
+                  <span className="text-left">Cloud Native<
                 </div>
               </div>
             </motion.div>
           </div>
         </section>
         {/* Signup Form Section */}
-        <section className="py-20 bg-white/5 backdrop-blur-sm">
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">
+        <section className="text-left">
+          <div className="text-left"sm": p x-6 lg: p x-8">
             <motion.div
-
               transition={ "duration": 0 && 0.6 }
-
-              className="text-center max-w-4xl mx-auto"
-              <h1 className="text-4xl "md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
+              className="text-left"
+              <h1 className="text-left"md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">;
                 Join Zion Tech Group;
-              </h1>;
-              <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">;
-                Unlock access to revolutionary AI autonomous systems, quantum computing solutions,;
+              </h1>
+              <p className="text-left">;
+                Unlock access to revolutionary AI autonomous systems, quantum computing solutions;
                 and enterprise-grade cybersecurity platforms.;
               </p>;
-              <div className="flex flex-wrap justify-center gap-6 mb-12">;
-                <div className="flex items-center gap-3 text-zion-cyan">;
-                  <Shield className="w-6 h-6"  />;
-                  <span className="text-lg">Enterprise Security</span>;
-                </div>;
-                <div className="flex items-center gap-3 text-zion-purple-light">;
-                  <Brain className="w-6 h-6"  />;
-                  <span className="text-lg">AI Innovation</span>;
-                </div>;
-                <div className="flex items-center gap-3 text-zion-cyan-light">;
-                  <Cloud className="w-6 h-6"  />;
-                  <span className="text-lg">Cloud Native</span>;
-                </div>;
-              </div>;
+              <div className="text-left">;
+                <div className="text-left">;
+                  <Shield className="text-left"  />;
+                  <span className="text-left">Enterprise Security<;
+                </div>
+                <div className="text-left">;
+                  <Brain className="text-left"  />;
+                  <span className="text-left">AI Innovation<;
+                </div>
+                <div className="text-left">;
+                  <Cloud className="text-left"  />;
+                  <span className="text-left">Cloud Native<;
+                </div>
+              </div>
             </motion && motion.div>;
-          </div>;
+          </div>
         </section>;
         {/* Signup Form Section */}
-        <section className="py-20 bg-white/5 backdrop-blur-sm">;
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">;
+        <section className="text-left">)
+          <div className="text-left"sm": p x-6 lg: p x-8">)
             <motion&& motion.div
-
-              initial = {
-
-  { opacity: 0,
-  "y": 2 0 
+              initial = {{ opacity: 0}
+  "y": 2 0
 }
-              animate = {
-  { "opacity": 1,
-  "y": 0 
+              animate = {{ "opacity": 1}
+  "y": 0
 }
-              transition = {
-
-  { "duration": 0 && 0.6,
-  "delay": 0 && 0.2 
+              transition = {{ "duration": 0 && 0.6}
+  "delay": 0 && 0.2
 }
-              className="max-w-2xl mx-auto"
-              <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 "md": p-12">;
-                <h2 className="text-3xl font-bold text-center mb-8 text-white">;
+              className="text-left"
+              <div className="text-left"md": p-12">;
+                <h2 className="text-left">;
                   Create Your Account;
-                </h2>;
-                <form onSubmit={handleSubmit} className="space-y-6">;
+                </h1>
+                <form onSubmit={handleSubmit} className="text-left">;
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">;
+                  <div className="text-left"md": gri d-cols-2 gap-6">;
                     <div>;
-                      <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="firstName" className="text-left">;
                         First Name *;
                       </label>;
-                      <div className="relative">;
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <User className="text-left"  />;
                         <inputtype="text"
                           id="firstName"
                           name="firstName"
@@ -347,20 +322,20 @@ export default function Signup() {;
                           }`}
                           placeholder="Enter your first name"
                          />;
-                      </div>;
+                      </div>
                       {errors && errors.firstName && (;
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                          <AlertCircle className="w-4 h-4"  />;
+                        <p className="text-left">;
+                          <AlertCircle className="text-left"  />}
                           {errors && errors.firstName}
-                        </p>;
+                        </p>)
                       )}
-                    </div>;
+                    </div>
                     <div>;
-                      <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="lastName" className="text-left">;
                         Last Name *;
                       </label>;
-                      <div className="relative">;
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <User className="text-left"  />;
                         <inputtype="text"
                           id="lastName"
                           name="lastName"
@@ -371,22 +346,22 @@ export default function Signup() {;
                           }`}
                           placeholder="Enter your last name"
                          />;
-                      </div>;
+                      </div>
                       {errors && errors.lastName && (;
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                          <AlertCircle className="w-4 h-4"  />;
+                        <p className="text-left">;
+                          <AlertCircle className="text-left"  />}
                           {errors && errors.lastName}
-                        </p>;
+                        </p>)
                       )}
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                   {/* Email */}
                   <div>;
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="email" className="text-left">;
                       Email Address *;
                     </label>;
-                    <div className="relative">;
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                    <div className="text-left">;
+                      <Mail className="text-left"  />;
                       <inputtype="email"
                         id="email"
                         name="email"
@@ -397,21 +372,21 @@ export default function Signup() {;
                         }`}
                         placeholder="Enter your email address"
                        />;
-                    </div>;
+                    </div>
                     {errors && errors.email && (;
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                        <AlertCircle className="w-4 h-4"  />;
+                      <p className="text-left">;
+                        <AlertCircle className="text-left"  />}
                         {errors && errors.email}
-                      </p>;
+                      </p>)
                     )}
-                  </div>;
+                  </div>
                   {/* Password */}
                   <div>;
-                    <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="password" className="text-left">;
                       Password *;
                     </label>;
-                    <div className="relative">;
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                    <div className="text-left">;
+                      <Lock className="text-left"  />;
                       <inputtype={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
@@ -425,24 +400,24 @@ export default function Signup() {;
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": tex t-white transition-colors";
-                        {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                        className="text-left"hover": tex t-white transition-colors"
+                        {showPassword ? <EyeOff className="text-left"  /> : <Eye className="text-left"  />}
                       </button>;
-                    </div>;
+                    </div>
                     {errors && errors.password && (;
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                        <AlertCircle className="w-4 h-4"  />;
+                      <p className="text-left">;
+                        <AlertCircle className="text-left"  />}
                         {errors && errors.password}
-                      </p>;
+                      </p>)
                     )}
-                  </div>;
+                  </div>
                   {/* Confirm Password */}
                   <div>;
-                    <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="confirmPassword" className="text-left">;
                       Confirm Password *;
                     </label>;
-                    <div className="relative">;
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                    <div className="text-left">;
+                      <Lock className="text-left"  />;
                       <inputtype={showConfirmPassword ? 'text' : 'password'}
                         id="confirmPassword"
                         name="confirmPassword"
@@ -456,92 +431,92 @@ export default function Signup() {;
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": tex t-white transition-colors";
-                        {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                        className="text-left"hover": tex t-white transition-colors"
+                        {showConfirmPassword ? <EyeOff className="text-left"  /> : <Eye className="text-left"  />}
                       </button>;
-                    </div>;
+                    </div>
                     {errors && errors.confirmPassword && (;
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                        <AlertCircle className="w-4 h-4"  />;
+                      <p className="text-left">;
+                        <AlertCircle className="text-left"  />}
                         {errors && errors.confirmPassword}
-                      </p>;
+                      </p>)
                     )}
-                  </div>;
+                  </div>
                   {/* Comp Information */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">;
+                  <div className="text-left"md": gri d-cols-2 gap-6">;
                     <div>;
-                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="comp" className="text-left">;
                         Comp Name;
                       </label>;
-                      <div className="relative">;
-                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <Building className="text-left"  />;
                         <inputtype="text"
                           id="comp"
                           name="comp"
                           value={formData && formData.comp}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter comp name"
                          />;
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                     <div>;
-                      <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="phone" className="text-left">;
                         Phone Number;
                       </label>;
-                      <div className="relative">;
-                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <Phone className="text-left"  />,
                         <inputtype="tel"
                           id="phone"
                           name="phone"
                           value={formData && formData.phone}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter phone number"
                          />;
-                      </div>;
-                    </div>;
-                  </div>;
+                      </div>
+                    </div>
+                  </div>
                   {/* Website and Industry */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">;
+                  <div className="text-left"md": gri d-cols-2 gap-6">;
                     <div>;
-                      <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="website" className="text-left">;
                         Website;
                       </label>;
-                      <div className="relative">;
-                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <Globe className="text-left"  />;
                         <inputtype="url"
                           id="website"
                           name="website"
                           value={formData && formData.website}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="https://yourcomp && yourcomp.com"
                          />;
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                     <div>;
-                      <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="industry" className="text-left">;
                         Industry;
-                      </label>;
+                      </label>,
                       <select
                         id="industry"
                         name="industry"
                         value={formData && formData.industry}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                        className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                         <option value="">Select industry</option>;
-                        {industries && industries.map(industry => (;
-                          <option key={industry} value={industry} className="bg-zion-blue-dark text-white">;
+                        {industries && industries.map(industry => (}
+                          <option key={industry} value={industry} className="text-left">;
                             {industry}
-                          </option>;
+                          </option>)
                         ))}
                       </select>;
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                   {/* Use Case */}
                   <div>;
-                    <label htmlFor="useCase" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="useCase" className="text-left">;
                       Primary Use Case;
                     </label>;
                     <select
@@ -549,34 +524,32 @@ export default function Signup() {;
                       name="useCase"
                       value={formData && formData.useCase}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                      className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                       <option value="">Select primary use case</option>;
-                      {useCases && useCases.map(useCase => (;
-                        <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white">;
+                      {useCases && useCases.map(useCase => (}
+                        <option key={useCase} value={useCase} className="text-left">;
                           {useCase}
-                        </option>;
+                        </option>)
                       ))}
                     </select>;
-                  </div>;
-
-  { "duration": 0.6,
-
-  "delay": 0.2 
+                  </div>
+  {"duration": 0.6}
+  "delay": 0.2
 }
-              className="max-w-2xl mx-auto"
-              <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 "md": p-12">
-                <h2 className="text-3xl font-bold text-center mb-8 text-white">
+              className="text-left"
+              <div className="text-left"md": p-12">
+                <h2 className="text-left">
                   Create Your Account
                 </h2>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="text-left">
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">
+                  <div className="text-left"md": gri d-cols-2 gap-6">
                     <div>
-                      <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label htmlFor="firstName" className="text-left">
                         First Name *
                       </label>
-                      <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <div className="text-left">
+                        <User className="text-left"  />
                         <input type="text"
                           id="firstName"
                           name="firstName"
@@ -589,18 +562,18 @@ export default function Signup() {;
                          />
                       </div>
                       {errors.firstName && (
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4"  />
+                        <p className="text-left">
+                          <AlertCircle className="text-left"  />
                           {errors.firstName}
                         </p>
                       )}
                     </div>
                     <div>
-                      <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label htmlFor="lastName" className="text-left">
                         Last Name *
                       </label>
-                      <div className="relative">
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <div className="text-left">
+                        <User className="text-left"  />
                         <input type="text"
                           id="lastName"
                           name="lastName"
@@ -613,8 +586,8 @@ export default function Signup() {;
                          />
                       </div>
                       {errors.lastName && (
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                          <AlertCircle className="w-4 h-4"  />
+                        <p className="text-left">
+                          <AlertCircle className="text-left"  />
                           {errors.lastName}
                         </p>
                       )}
@@ -622,11 +595,11 @@ export default function Signup() {;
                   </div>
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    <label htmlFor="email" className="text-left">
                       Email Address *
                     </label>
-                    <div className="relative">
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                    <div className="text-left">
+                      <Mail className="text-left"  />
                       <input type="email"
                         id="email"
                         name="email"
@@ -639,19 +612,19 @@ export default function Signup() {;
                        />
                     </div>
                     {errors.email && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4"  />
+                      <p className="text-left">
+                        <AlertCircle className="text-left"  />
                         {errors.email}
                       </p>
                     )}
                   </div>
                   {/* Password */}
                   <div>
-                    <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    <label htmlFor="password" className="text-left">
                       Password *
                     </label>
-                    <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                    <div className="text-left">
+                      <Lock className="text-left"  />
                       <input type={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
@@ -665,24 +638,24 @@ export default function Signup() {;
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": tex t-white transition-colors"
-                        {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                        className="text-left"hover": tex t-white transition-colors"
+                        {showPassword ? <EyeOff className="text-left"  /> : <Eye className="text-left"  />}
                       </button>
                     </div>
                     {errors.password && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4"  />
+                      <p className="text-left">
+                        <AlertCircle className="text-left"  />
                         {errors.password}
                       </p>
                     )}
                   </div>
                   {/* Confirm Password */}
                   <div>
-                    <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    <label htmlFor="confirmPassword" className="text-left">
                       Confirm Password *
                     </label>
-                    <div className="relative">
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                    <div className="text-left">
+                      <Lock className="text-left"  />
                       <input type={showConfirmPassword ? 'text' : 'password'}
                         id="confirmPassword"
                         name="confirmPassword"
@@ -696,72 +669,72 @@ export default function Signup() {;
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": tex t-white transition-colors"
-                        {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                        className="text-left"hover": tex t-white transition-colors"
+                        {showConfirmPassword ? <EyeOff className="text-left"  /> : <Eye className="text-left"  />}
                       </button>
                     </div>
                     {errors.confirmPassword && (
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">
-                        <AlertCircle className="w-4 h-4"  />
+                      <p className="text-left">
+                        <AlertCircle className="text-left"  />
                         {errors.confirmPassword}
                       </p>
                     )}
                   </div>
                   {/* Comp Information */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">
+                  <div className="text-left"md": gri d-cols-2 gap-6">
                     <div>
-                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label htmlFor="comp" className="text-left">
                         Comp Name
                       </label>
-                      <div className="relative">
-                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <div className="text-left">
+                        <Building className="text-left"  />
                         <input type="text"
                           id="comp"
                           name="comp"
                           value={formData.comp}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter comp name"
                          />
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label htmlFor="phone" className="text-left">
                         Phone Number
                       </label>
-                      <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <div className="text-left">
+                        <Phone className="text-left"  />
                         <input type="tel"
                           id="phone"
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter phone number"
                          />
                       </div>
                     </div>
                   </div>
                   {/* Website and Industry */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">
+                  <div className="text-left"md": gri d-cols-2 gap-6">
                     <div>
-                      <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label htmlFor="website" className="text-left">
                         Website
                       </label>
-                      <div className="relative">
-                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />
+                      <div className="text-left">
+                        <Globe className="text-left"  />
                         <input type="url"
                           id="website"
                           name="website"
                           value={formData.website}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="https://yourcomp.com"
                          />
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-light mb-2">
+                      <label htmlFor="industry" className="text-left">
                         Industry
                       </label>
                       <select
@@ -769,10 +742,10 @@ export default function Signup() {;
                         name="industry"
                         value={formData.industry}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                        className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                         <option value="">Select industry</option>
                         {industries.map(industry => (
-                          <option key={industry} value={industry} className="bg-zion-blue-dark text-white">
+                          <option key={industry} value={industry} className="text-left">
                             {industry}
                           </option>
                         ))}
@@ -781,7 +754,7 @@ export default function Signup() {;
                   </div>
                   {/* Use Case */}
                   <div>
-                    <label htmlFor="useCase" className="block text-sm font-medium text-zion-slate-light mb-2">
+                    <label htmlFor="useCase" className="text-left">
                       Primary Use Case
                     </label>
                     <select
@@ -789,34 +762,32 @@ export default function Signup() {;
                       name="useCase"
                       value={formData.useCase}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                      className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                       <option value="">Select primary use case</option>
                       {useCases.map(useCase => (
-                        <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white">
+                        <option key={useCase} value={useCase} className="text-left">
                           {useCase}
                         </option>
                       ))}
                     </select>
                   </div>
-
-  { "duration": 0 && 0.6,
-
-  "delay": 0 && 0.2 
+  {"duration": 0 && 0.6}
+  "delay": 0 && 0.2
 }
-              className="max-w-2xl mx-auto"
-              <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 "md": p-12">;
-                <h2 className="text-3xl font-bold text-center mb-8 text-white">;
+              className="text-left"
+              <div className="text-left"md": p-12">;
+                <h2 className="text-left">;
                   Create Your Account;
-                </h2>;
-                <form onSubmit={handleSubmit} className="space-y-6">;
+                </h1>
+                <form onSubmit={handleSubmit} className="text-left">;
                   {/* Personal Information */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">;
+                  <div className="text-left"md": gri d-cols-2 gap-6">;
                     <div>;
-                      <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="firstName" className="text-left">;
                         First Name *;
                       </label>;
-                      <div className="relative">;
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <User className="text-left"  />;
                         <inputtype="text"
                           id="firstName"
                           name="firstName"
@@ -827,20 +798,20 @@ export default function Signup() {;
                           }`}
                           placeholder="Enter your first name"
                          />;
-                      </div>;
+                      </div>
                       {errors && errors.firstName && (;
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                          <AlertCircle className="w-4 h-4"  />;
+                        <p className="text-left">;
+                          <AlertCircle className="text-left"  />}
                           {errors && errors.firstName}
-                        </p>;
+                        </p>)
                       )}
-                    </div>;
+                    </div>
                     <div>;
-                      <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="lastName" className="text-left">;
                         Last Name *;
                       </label>;
-                      <div className="relative">;
-                        <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <User className="text-left"  />;
                         <inputtype="text"
                           id="lastName"
                           name="lastName"
@@ -851,22 +822,22 @@ export default function Signup() {;
                           }`}
                           placeholder="Enter your last name"
                          />;
-                      </div>;
+                      </div>
                       {errors && errors.lastName && (;
-                        <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                          <AlertCircle className="w-4 h-4"  />;
+                        <p className="text-left">;
+                          <AlertCircle className="text-left"  />}
                           {errors && errors.lastName}
-                        </p>;
+                        </p>)
                       )}
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                   {/* Email */}
                   <div>;
-                    <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="email" className="text-left">;
                       Email Address *;
                     </label>;
-                    <div className="relative">;
-                      <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                    <div className="text-left">;
+                      <Mail className="text-left"  />;
                       <inputtype="email"
                         id="email"
                         name="email"
@@ -877,21 +848,21 @@ export default function Signup() {;
                         }`}
                         placeholder="Enter your email address"
                        />;
-                    </div>;
+                    </div>
                     {errors && errors.email && (;
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                        <AlertCircle className="w-4 h-4"  />;
+                      <p className="text-left">;
+                        <AlertCircle className="text-left"  />}
                         {errors && errors.email}
-                      </p>;
+                      </p>)
                     )}
-                  </div>;
+                  </div>
                   {/* Password */}
                   <div>;
-                    <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="password" className="text-left">;
                       Password *;
                     </label>;
-                    <div className="relative">;
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                    <div className="text-left">;
+                      <Lock className="text-left"  />;
                       <inputtype={showPassword ? 'text' : 'password'}
                         id="password"
                         name="password"
@@ -905,24 +876,24 @@ export default function Signup() {;
                       <button
                         type="button"
                         onClick={() => setShowPassword(!showPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": tex t-white transition-colors";
-                        {showPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                        className="text-left"hover": tex t-white transition-colors"
+                        {showPassword ? <EyeOff className="text-left"  /> : <Eye className="text-left"  />}
                       </button>;
-                    </div>;
+                    </div>
                     {errors && errors.password && (;
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                        <AlertCircle className="w-4 h-4"  />;
+                      <p className="text-left">;
+                        <AlertCircle className="text-left"  />}
                         {errors && errors.password}
-                      </p>;
+                      </p>)
                     )}
-                  </div>;
+                  </div>
                   {/* Confirm Password */}
                   <div>;
-                    <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="confirmPassword" className="text-left">;
                       Confirm Password *;
                     </label>;
-                    <div className="relative">;
-                      <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                    <div className="text-left">;
+                      <Lock className="text-left"  />;
                       <inputtype={showConfirmPassword ? 'text' : 'password'}
                         id="confirmPassword"
                         name="confirmPassword"
@@ -936,92 +907,92 @@ export default function Signup() {;
                       <button
                         type="button"
                         onClick={() => setShowConfirmPassword(!showConfirmPassword)}
-                        className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light "hover": tex t-white transition-colors";
-                        {showConfirmPassword ? <EyeOff className="w-5 h-5"  /> : <Eye className="w-5 h-5"  />}
+                        className="text-left"hover": tex t-white transition-colors"
+                        {showConfirmPassword ? <EyeOff className="text-left"  /> : <Eye className="text-left"  />}
                       </button>;
-                    </div>;
+                    </div>
                     {errors && errors.confirmPassword && (;
-                      <p className="mt-1 text-sm text-red-400 flex items-center gap-2">;
-                        <AlertCircle className="w-4 h-4"  />;
+                      <p className="text-left">;
+                        <AlertCircle className="text-left"  />}
                         {errors && errors.confirmPassword}
-                      </p>;
+                      </p>)
                     )}
-                  </div>;
+                  </div>
                   {/* Comp Information */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">;
+                  <div className="text-left"md": gri d-cols-2 gap-6">;
                     <div>;
-                      <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="comp" className="text-left">;
                         Comp Name;
                       </label>;
-                      <div className="relative">;
-                        <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <Building className="text-left"  />;
                         <inputtype="text"
                           id="comp"
                           name="comp"
                           value={formData && formData.comp}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter comp name"
                          />;
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                     <div>;
-                      <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="phone" className="text-left">;
                         Phone Number;
                       </label>;
-                      <div className="relative">;
-                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <Phone className="text-left"  />,
                         <inputtype="tel"
                           id="phone"
                           name="phone"
                           value={formData && formData.phone}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="Enter phone number"
                          />;
-                      </div>;
-                    </div>;
-                  </div>;
+                      </div>
+                    </div>
+                  </div>
                   {/* Website and Industry */}
-                  <div className="grid grid-cols-1 "md": gri d-cols-2 gap-6">;
+                  <div className="text-left"md": gri d-cols-2 gap-6">;
                     <div>;
-                      <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="website" className="text-left">;
                         Website;
                       </label>;
-                      <div className="relative">;
-                        <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light"  />;
+                      <div className="text-left">;
+                        <Globe className="text-left"  />;
                         <inputtype="url"
                           id="website"
                           name="website"
                           value={formData && formData.website}
                           onChange={handleInputChange}
-                          className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                          className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                           placeholder="https://yourcomp && yourcomp.com"
                          />;
-                      </div>;
-                    </div>;
+                      </div>
+                    </div>
                     <div>;
-                      <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                      <label htmlFor="industry" className="text-left">;
                         Industry;
-                      </label>;
+                      </label>,
                       <select
                         id="industry"
                         name="industry"
                         value={formData && formData.industry}
                         onChange={handleInputChange}
-                        className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                        className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                         <option value="">Select industry</option>;
-                        {industries && industries.map(industry => (;
-                          <option key={industry} value={industry} className="bg-zion-blue-dark text-white">;
+                        {industries && industries.map(industry => (}
+                          <option key={industry} value={industry} className="text-left">;
                             {industry}
-                          </option>;
+                          </option>)
                         ))}
                       </select>;
-                    </div>;
-                  </div>;
+                    </div>
+                  </div>
                   {/* Use Case */}
                   <div>;
-                    <label htmlFor="useCase" className="block text-sm font-medium text-zion-slate-light mb-2">;
+                    <label htmlFor="useCase" className="text-left">;
                       Primary Use Case;
                     </label>;
                     <select
@@ -1029,92 +1000,86 @@ export default function Signup() {;
                       name="useCase"
                       value={formData && formData.useCase}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
+                      className="text-left"focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all"
                       <option value="">Select primary use case</option>;
-                      {useCases && useCases.map(useCase => (;
-                        <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white">;
+                      {useCases && useCases.map(useCase => (}
+                        <option key={useCase} value={useCase} className="text-left">;
                           {useCase}
-                        </option>;
+                        </option>)
                       ))}
                     </select>;
-                  </div>;
-
+                  </div>
                   {/* Submit Button */}
-
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg "hover": fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none"
-                    {isSubmitting ? (
-
-                      <div className="flex items-center justify-center gap-3">;
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
-                        Creating Account...;
-                      </div>;
+                    className="text-left"hover": fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none"
+                    {isSubmitting ? (<div className="text-left">;
+                        <div className="text-left"></div>
+                        Creating Account...)
+                      </div>
                     ) : (;
-                      <div className="flex items-center justify-center gap-3">;
-                        <Zap className="w-5 h-5"  />;
-                        Create Account;
-                      </div>;
+                      <div className="text-left">;
+                        <Zap className="text-left"  />)
+                        Create Account}
+                      </div>
                     )}
                   </button>;
                 </form>;
                 {/* Additional Info */}
-                <div className="mt-8 text-center">;
-                  <p className="text-zion-slate-light text-sm">;
+                <div className="text-left">;
+                  <p className="text-left">;
                     Already have an account?{' '}
-                    <a href="/login" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors font-medium">;
+                    <a href="/login" className="text-left"hover": tex t-zion-cyan-light transition-colors font-medium">;
                       Sign in here;
                     </a>;
                   </p>;
-                  <p className="text-zion-slate-light text-xs mt-2">;
+                  <p className="text-left">;
                     By creating an account, you agree to our{' '}
-                    <a href="/terms" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors">;
+                    <a href="/terms" className="text-left"hover": tex t-zion-cyan-light transition-colors">;
                       Terms of Service;
                     </a>{' '}
                     and{' '}
-                    <a href="/privacy" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors">;
+                    <a href="/privacy" className="text-left"hover": tex t-zion-cyan-light transition-colors">;
                       Privacy Policy;
                     </a>;
                   </p>;
-                </div>;
-              </div>;
+                </div>
+              </div>
             </motion && motion.div>;
-          </div>;
+          </div>
         </section>;
         {/* Benefits Section */}
-        <section className="py-20">;
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">;
+        <section className="text-left">;
+          <div className="text-left"sm": p x-6 lg: p x-8">,
             <motion&& motion.div
-
-                      <div className="flex items-center justify-center gap-3">
-
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      <div className="text-left">
+                        <div className="text-left"></div>
                         Creating Account...
                       </div>
                     ) : (
-                      <div className="flex items-center justify-center gap-3">
-                        <Zap className="w-5 h-5"  />
+                      <div className="text-left">
+                        <Zap className="text-left"  />
                         Create Account
                       </div>
                     )}
                   </button>
                 </form>
                 {/* Additional Info */}
-                <div className="mt-8 text-center">
-                  <p className="text-zion-slate-light text-sm">
+                <div className="text-left">
+                  <p className="text-left">
                     Already have an account?{' '}
-                    <a href="/login" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors font-medium">
+                    <a href="/login" className="text-left"hover": tex t-zion-cyan-light transition-colors font-medium">
                       Sign in here
                     </a>
                   </p>
-                  <p className="text-zion-slate-light text-xs mt-2">
+                  <p className="text-left">
                     By creating an account, you agree to our{' '}
-                    <a href="/terms" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors">
+                    <a href="/terms" className="text-left"hover": tex t-zion-cyan-light transition-colors">
                       Terms of Service
                     </a>{' '}
                     and{' '}
-                    <a href="/privacy" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors">
+                    <a href="/privacy" className="text-left"hover": tex t-zion-cyan-light transition-colors">
                       Privacy Policy
                     </a>
                   </p>
@@ -1124,264 +1089,225 @@ export default function Signup() {;
           </div>
         </section>
         {/* Benefits Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">
+        <section className="text-left">
+          <div className="text-left"sm": p x-6 lg: p x-8">
             <motion.div
-
-                      <div className="flex items-center justify-center gap-3">;
-
-                        <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>;
+                      <div className="text-left">;
+                        <div className="text-left"></div>
                         Creating Account...;
-                      </div>;
+                      </div>
                     ) : (;
-                      <div className="flex items-center justify-center gap-3">;
-                        <Zap className="w-5 h-5"  />;
-                        Create Account;
-                      </div>;
+                      <div className="text-left">;
+                        <Zap className="text-left"  />;
+                        Create Account)
+                      </div>
                     )}
                   </button>;
                 </form>;
                 {/* Additional Info */}
-                <div className="mt-8 text-center">;
-                  <p className="text-zion-slate-light text-sm">;
+                <div className="text-left">;
+                  <p className="text-left">;
                     Already have an account?{' '}
-                    <a href="/login" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors font-medium">;
+                    <a href="/login" className="text-left"hover": tex t-zion-cyan-light transition-colors font-medium">;
                       Sign in here;
                     </a>;
                   </p>;
-                  <p className="text-zion-slate-light text-xs mt-2">;
+                  <p className="text-left">;
                     By creating an account, you agree to our{' '}
-                    <a href="/terms" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors">;
+                    <a href="/terms" className="text-left"hover": tex t-zion-cyan-light transition-colors">;
                       Terms of Service;
                     </a>{' '}
                     and{' '}
-                    <a href="/privacy" className="text-zion-cyan "hover": tex t-zion-cyan-light transition-colors">;
+                    <a href="/privacy" className="text-left"hover": tex t-zion-cyan-light transition-colors">;
                       Privacy Policy;
                     </a>;
                   </p>;
-                </div>;
-              </div>;
+                </div>
+              </div>
             </motion && motion.div>;
-          </div>;
+          </div>
         </section>;
         {/* Benefits Section */}
-        <section className="py-20">;
-          <div className="container mx-auto px-4 "sm": p x-6 lg: p x-8">;
+        <section className="text-left">;
+          <div className="text-left"sm": p x-6 lg: p x-8">,
             <motion&& motion.div
-
-              initial = {
-
-  { opacity: 0,
-  "y": 2 0 
+              initial = {{ opacity: 0}
+  "y": 2 0
 }
-              animate = {
-  { "opacity": 1,
-  "y": 0 
+              animate = {{ "opacity": 1}
+  "y": 0
 }
-              transition = {
-
-  { "duration": 0 && 0.6,
-  "delay": 0 && 0.4 
+              transition = {{ "duration": 0 && 0.6}
+  "delay": 0 && 0.4
 }
-              className="text-center mb-16"
-              <h2 className="text-3xl "md": tex t-4xl font-bold mb-6 text-white">;
+              className="text-left"
+              <h2 className="text-left"md": tex t-4xl font-bold mb-6 text-white">;
                 Why Join Zion Tech Group?;
-              </h2>;
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+              </h1>
+              <p className="text-left">;
                 Get exclusive access to cutting-edge technology solutions and expert support;
               </p>;
             </motion && motion.div>;
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">;
+            <div className="text-left">;
               <motion&& motion.div
-
-  { "duration": 0.6,
-
-  "delay": 0.4 
+  {"duration": 0.6}
+  "delay": 0.4
 }
-              className="text-center mb-16"
-              <h2 className="text-3xl "md": tex t-4xl font-bold mb-6 text-white">
+              className="text-left"
+              <h2 className="text-left"md": tex t-4xl font-bold mb-6 text-white">
                 Why Join Zion Tech Group?
               </h2>
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">
+              <p className="text-left">
                 Get exclusive access to cutting-edge technology solutions and expert support
               </p>
             </motion.div>
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">
+            <div className="text-left">
               <motion.div
-
-  { "duration": 0 && 0.6,
-
-  "delay": 0 && 0.4 
+  {"duration": 0 && 0.6}
+  "delay": 0 && 0.4
 }
-              className="text-center mb-16"
-              <h2 className="text-3xl "md": tex t-4xl font-bold mb-6 text-white">;
+              className="text-left"
+              <h2 className="text-left"md": tex t-4xl font-bold mb-6 text-white">;
                 Why Join Zion Tech Group?;
-              </h2>;
-              <p className="text-xl text-zion-slate-light max-w-3xl mx-auto">;
+              </h1>
+              <p className="text-left">;
                 Get exclusive access to cutting-edge technology solutions and expert support;
               </p>;
             </motion && motion.div>;
-            <div className="grid grid-cols-1 md: gri d-cols-3 gap-8">;
+            <div className="text-left">;
               <motion&& motion.div
-
-                initial = {
-
-  { opacity: 0,
-  "y": 2 0 
+                initial = {{ opacity: 0}
+  "y": 2 0
 }
-                animate = {
-  { "opacity": 1,
-  "y": 0 
+                animate = {{ "opacity": 1}
+  "y": 0
 }
-                transition = {
-
-  { "duration": 0 && 0.6,
-  "delay": 0 && 0.6 
+                transition = {{ "duration": 0 && 0.6}
+  "delay": 0 && 0.6
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Shield className="w-8 h-8 text-white"  />;
-                </div>;
-                <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3>;
-                <p className="text-zion-slate-light">;
+                className="text-left"
+                <div className="text-left">;
+                  <Shield className="text-left"  />;
+                </div>
+                <h3 className="text-left">Enterprise Security</h1>
+                <p className="text-left">;
                   Access to zero-trust cybersecurity platforms and advanced threat detection systems;
                 </p>;
               </motion && motion.div>;
               <motion&& motion.div
-
-  { "duration": 0.6,
-
-  "delay": 0.6 
+  {"duration": 0.6}
+  "delay": 0.6
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-white"  />
+                className="text-left"
+                <div className="text-left">
+                  <Shield className="text-left"  />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3>
-                <p className="text-zion-slate-light">
+                <h3 className="text-left">Enterprise Security</h3>
+                <p className="text-left">
                   Access to zero-trust cybersecurity platforms and advanced threat detection systems
                 </p>
               </motion.div>
               <motion.div
-
-  { "duration": 0 && 0.6,
-
-  "delay": 0 && 0.6 
+  {"duration": 0 && 0.6}
+  "delay": 0 && 0.6
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Shield className="w-8 h-8 text-white"  />;
-                </div>;
-                <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3>;
-                <p className="text-zion-slate-light">;
+                className="text-left"
+                <div className="text-left">;
+                  <Shield className="text-left"  />;
+                </div>
+                <h3 className="text-left">Enterprise Security</h1>
+                <p className="text-left">;
                   Access to zero-trust cybersecurity platforms and advanced threat detection systems;
                 </p>;
               </motion && motion.div>;
               <motion&& motion.div
-
-                initial = {
-
-  { "opacity": 0,
-  "y": 2 0 
+                initial = {{ "opacity": 0}
+  "y": 2 0
 }
-                animate = {
-  { "opacity": 1,
-  "y": 0 
+                animate = {{ "opacity": 1}
+  "y": 0
 }
-                transition = {
-
-  { "duration": 0 && 0.6,
-  "delay": 0 && 0.8 
+                transition = {{ "duration": 0 && 0.6}
+  "delay": 0 && 0.8
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Brain className="w-8 h-8 text-white"  />;
-                </div>;
-                <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3>;
-                <p className="text-zion-slate-light">;
+                className="text-left"
+                <div className="text-left">;
+                  <Brain className="text-left"  />;
+                </div>
+                <h3 className="text-left">AI Innovation</h1>
+                <p className="text-left">;
                   Leverage autonomous AI systems and machine learning platforms for business growth;
                 </p>;
               </motion && motion.div>;
               <motion&& motion.div
-
-  { "duration": 0.6,
-
-  "delay": 0.8 
+  {"duration": 0.6}
+  "delay": 0.8
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-8 h-8 text-white"  />
+                className="text-left"
+                <div className="text-left">
+                  <Brain className="text-left"  />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3>
-                <p className="text-zion-slate-light">
+                <h3 className="text-left">AI Innovation</h3>
+                <p className="text-left">
                   Leverage autonomous AI systems and machine learning platforms for business growth
                 </p>
               </motion.div>
               <motion.div
-
-  { "duration": 0 && 0.6,
-
-  "delay": 0 && 0.8 
+  {"duration": 0 && 0.6}
+  "delay": 0 && 0.8
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Brain className="w-8 h-8 text-white"  />;
-                </div>;
-                <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3>;
-                <p className="text-zion-slate-light">;
+                className="text-left"
+                <div className="text-left">;
+                  <Brain className="text-left"  />;
+                </div>
+                <h3 className="text-left">AI Innovation</h1>
+                <p className="text-left">;
                   Leverage autonomous AI systems and machine learning platforms for business growth;
                 </p>;
               </motion && motion.div>;
               <motion&& motion.div
-
-                initial = {
-
-  { "opacity": 0,
-  "y": 2 0 
+                initial = {{ "opacity": 0}
+  "y": 2 0
 }
-                animate = {
-  { "opacity": 1,
-  "y": 0 
+                animate = {{ "opacity": 1}
+  "y": 0
 }
-                transition = {
-
-  { "duration": 0 && 0.6,
-  "delay": 1 && 1.0 
+                transition = {{ "duration": 0 && 0.6}
+  "delay": 1 && 1.0
 }
-                className="text-center p-6"
-
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">;
-                  <Cloud className="w-8 h-8 text-white"  />;
-                </div>;
-                <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3>;
-                <p className="text-zion-slate-light">;
+                className="text-left"
+                <div className="text-left">;
+                  <Cloud className="text-left"  />;
+                </div>
+                <h3 className="text-left">Cloud Native</h1>
+                <p className="text-left">;
                   Scalable cloud infrastructure and DevOps solutions for modern applications;
                 </p>;
               </motion && motion.div>;
-
-  { "duration": 0.6,
-  "delay": 1.0 
+  {"duration": 0.6}
+  "delay": 1.0
 }
-                className="text-center p-6"
-                <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Cloud className="w-8 h-8 text-white"  />
+                className="text-left"
+                <div className="text-left">
+                  <Cloud className="text-left"  />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3>
-                <p className="text-zion-slate-light">
+                <h3 className="text-left">Cloud Native</h3>
+                <p className="text-left">
                   Scalable cloud infrastructure and DevOps solutions for modern applications
                 </p>
               </motion.div>;
-            </div>;
-          </div>;
+            </div>
+          </div>
         </section>;
       </main>;
     </>;
   )
 };
-import Head from 'next/head.ts' import { motion } from 'framer-motion' import { useState } from 'react' import { User,Mail,Lock,Eye,EyeOff,CheckCircle,AlertCircle,Building,Phone,Globe,Shield,Zap,Brain,Cloud } from 'lucide-react'
+import Head from 'next/head.ts' import { motion } from 'framer-motion' import { useState } from 'react' import {User,Mail,Lock,Eye,EyeOff,CheckCircle,AlertCircle,Building,Phone,Globe,Shield,Zap,Brain}Cloud } from 'lucide-react'
 }
-
-export default function Signup() { const [formData,setFormData] = useState({ firstName: '',lastName: '',email: '',password: '',confirmPassword: '',comp: '',phone: '',website: '',industry: '',useCase: '' }) const [showPassword,setShowPassword] = useState(false) const [showConfirmPassword,setShowConfirmPassword] = useState(false) const [isSubmitting,setIsSubmitting] = useState(false) const [errors,setErrors] = useState<Record<string,any>>({}) const industries = [ 'Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other' ] const useCases = [ 'AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other' ] } catch (error) { } catch (error) { } finally { setIsSubmitting(false) const title = 'Sign Up — Zion Tech Group' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI,cloud,and cybersecurity solutions.' return ( <> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="canonical" href="https: {} <meta property="og: titl e" content={title} /> <meta property="og: descriptio n" content={description} /> <meta property="og: ur l" content="https: <meta property="og: typ e" content="website" /> {} <meta name="twitter: car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name="twitter: descriptio n" content={description} /> </Helmet> <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white"> {} <section className="relative overflow-hidden py-20"> <div className="absolute inset-0 opacity-10"> <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div> <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div> <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div> </div> <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10"> <motion.div initial = { { opacity: 0,y: 2 0 }} animate = { { opacity: 1,y: 0 }} transition={{ duration: 0.6 }} className="text-center max-w-4xl mx-auto" <h1 className="text-4xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Join Zion Tech Group </h1> <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto"> Unlock access to revolutionary AI autonomous systems,quantum computing solutions,and enterprise-grade cybersecurity platforms. </p> <div className="flex flex-wrap justify-center gap-6 mb-12"> <div className="flex items-center gap-3 text-zion-cyan"> <Shield className="w-6 h-6" /> <span className="text-lg">Enterprise Security</span> </div> <div className="flex items-center gap-3 text-zion-purple-light"> <Brain className="w-6 h-6" /> <span className="text-lg">AI Innovation</span> </div> <div className="flex items-center gap-3 text-zion-cyan-light"> <Cloud className="w-6 h-6" /> <span className="text-lg">Cloud Native</span> </div> </div> </motion.div> </div> </section> {} <section className="py-20 bg-white/5 backdrop-blur-sm"> <div className="container mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial = { { opacity: 0,y: 2 0 }} animate = { { opacity: 1,y: 0 }} transition = { { duration: 0.6,delay: 0.2 }} className="max-w-2xl mx-auto" <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12"> <h2 className="text-3xl font-bold text-center mb-8 text-white"> Create Your Account </h2> <form onSubmit={handleSubmit} className="space-y-6"> {} <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> <div> <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2"> First Name * </label> <div className="relative"> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2"> Last Name * </label> <div className="relative"> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.lastName} </p> )} </div> </div> {} <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2"> Email Address * </label> <div className="relative"> <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.email} </p> )} </div> {} <div> <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2"> Password * </label> <div className="relative"> <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors" {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />} </button> </div> {errors.password && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.password} </p> )} </div> {} <div> <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2"> Confirm Password * </label> <div className="relative"> <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors" {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />} </button> </div> {errors.confirmPassword && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.confirmPassword} </p> )} </div> {} <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> <div> <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2"> Comp Name </label> <div className="relative"> <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2"> Phone Number </label> <div className="relative"> <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter phone number" /> </div> </div> </div> {} <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> <div> <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2"> Website </label> <div className="relative"> <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="https: /> </div> </div> <div> <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-light mb-2"> Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="bg-zion-blue-dark text-white"> {industry} </option> ))} </select> </div> </div> {} <div> <label htmlFor="useCase" className="block text-sm font-medium text-zion-slate-light mb-2"> Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white"> {useCase} </option> ))} </select> </div> {} <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none" {isSubmitting ? ( <div className="flex items-center justify-center gap-3"> <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Creating Account... </div> ) : ( <div className="flex items-center justify-center gap-3"> <Zap className="w-5 h-5" /> Create Account </div> )} </button> </form> {} <div className="mt-8 text-center"> <p className="text-zion-slate-light text-sm"> Already have an account?{' '} <a href="/login" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors font-medium"> Sign in here </a> </p> <p className="text-zion-slate-light text-xs mt-2"> By creating an account,you agree to our{' '} <a href="/terms" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors"> Terms of Service </a>{' '} and{' '} <a href="/privacy" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors"> Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {} <section className="py-20"> <div className="container mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial = { { opacity: 0,y: 2 0 }} animate = { { opacity: 1,y: 0 }} transition = { { duration: 0.6,delay: 0.4 }} className="text-center mb-16" <h2 className="text-3xl md: tex t-4xl font-bold mb-6 text-white"> Why Join Zion Tech Group? </h2> <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"> Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-3 gap-8"> <motion.div initial = { { opacity: 0,y: 2 0 }} animate = { { opacity: 1,y: 0 }} transition = { { duration: 0.6,delay: 0.6 }} className="text-center p-6" <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3> <p className="text-zion-slate-light"> Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div initial = { { opacity: 0,y: 2 0 }} animate = { { opacity: 1,y: 0 }} transition = { { duration: 0.6,delay: 0.8 }} className="text-center p-6" <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3> <p className="text-zion-slate-light"> Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div initial = { { opacity: 0,y: 2 0 }} animate = { { opacity: 1,y: 0 }} transition = { { duration: 0.6,delay: 1.0 }} className="text-center p-6" <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4"> <Cloud className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3> <p className="text-zion-slate-light"> Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div> </div>; </div>; </section>; </main>; </>; )};
+export default function Signup() {const [formData,setFormData] = useState({ firstName: '',lastName: '',email: '',password: '',confirmPassword: '',comp: '',phone: '',website: '')industry: ''}useCase: '' }) const [showPassword,setShowPassword] = useState(false) const [showConfirmPassword,setShowConfirmPassword] = useState(false) const [isSubmitting,setIsSubmitting] = useState(false) const [errors,setErrors] = useState<Record<string,any>>({}) const industries = [ 'Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other' ] const useCases = [ 'AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other' ] } catch (error) { } catch (error) { } finally {setIsSubmitting(false) const title = 'Sign Up — Zion Tech Group' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI,cloud}and cybersecurity solutions.' return (<> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="canonical" href="https: {} <meta property="og: titl e" content={title} /> <meta property="og: descriptio n" content={description} /> <meta property="og: ur l" content="https: <meta property="og: typ e" content="website" /> {} <meta name="twitter: car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name="twitter: descriptio n" content={description} /> </Helmet> <main className="text-left"> {} <section className="text-left"> <div className="text-left"> <div className="text-left">
+        <div className="text-left"></div> <div className="text-left"></div> </div> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition={{ duration: 0.6 }} className="text-left" <h1 className="text-left"> Join Zion Tech Group </h1> <p className="text-left"> Unlock access to revolutionary AI autonomous systems,quantum computing solutions)and enterprise-grade cybersecurity platforms. </p> <div className="text-left"> <div className="text-left"> <Shield className="text-left" /> <span className="text-left">Enterprise Security< </div> <div className="text-left"> <Brain className="text-left" /> <span className="text-left">AI Innovation< </div> <div className="text-left"> <Cloud className="text-left" /> <span className="text-left">Cloud Native< </div> </div> </motion.div> </div> </section> {} <section className="text-left"> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.2 }} className="text-left" <div className="text-left"> <h2 className="text-left"> Create Your Account </h2> <form onSubmit={handleSubmit} className="text-left"> {} <div className="text-left"> <div> <label htmlFor="firstName" className="text-left"> First Name * </label> <div className="text-left"> <User className="text-left" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="text-left"> Last Name * </label> <div className="text-left"> <User className="text-left" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.lastName} </p> )} </div> </div> {} <div> <label htmlFor="email" className="text-left"> Email Address * </label> <div className="text-left"> <Mail className="text-left" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.email} </p> )} </div> {} <div> <label htmlFor="password" className="text-left"> Password * </label> <div className="text-left"> <Lock className="text-left" /> <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.password && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.password} </p> )} </div> {} <div> <label htmlFor="confirmPassword" className="text-left"> Confirm Password * </label> <div className="text-left"> <Lock className="text-left" /> <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.confirmPassword && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.confirmPassword} </p> )} </div> {} <div className="text-left"> <div> <label htmlFor="comp" className="text-left"> Comp Name </label> <div className="text-left"> <Building className="text-left" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="text-left" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="text-left"> Phone Number </label> <div className="text-left"> <Phone className="text-left" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="text-left" placeholder="Enter phone number" /> </div> </div> </div> {} <div className="text-left"> <div> <label htmlFor="website" className="text-left"> Website </label> <div className="text-left"> <Globe className="text-left" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="text-left" placeholder="https: /> </div> </div> <div> <label htmlFor="industry" className="text-left"> Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="text-left" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="text-left"> {industry} </option> ))} </select> </div> </div> {} <div> <label htmlFor="useCase" className="text-left"> Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="text-left" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="text-left"> {useCase} </option> ))} </select> </div> {} <button type="submit" disabled={isSubmitting} className="text-left" {isSubmitting ? ( <div className="text-left"> <div className="text-left"></div> Creating Account... </div> ) : ( <div className="text-left"> <Zap className="text-left" /> Create Account </div> )} </button> </form> {} <div className="text-left"> <p className="text-left"> Already have an account?{' '} <a href="/login" className="text-left"> Sign in here </a> </p> <p className="text-left"> By creating an account,you agree to our{' '} <a href="/terms" className="text-left"> Terms of Service </a>{' '} and{' '} <a href="/privacy" className="text-left"> Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {} <section className="text-left"> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.4 }} className="text-left" <h2 className="text-left"> Why Join Zion Tech Group? </h2> <p className="text-left"> Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.6 }} className="text-left" <div className="text-left"> <Shield className="text-left" /> </div> <h3 className="text-left">Enterprise Security</h3> <p className="text-left"> Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.8 }} className="text-left" <div className="text-left"> <Brain className="text-left" /> </div> <h3 className="text-left">AI Innovation</h3> <p className="text-left"> Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 1.0 }} className="text-left" <div className="text-left"> <Cloud className="text-left" /> </div> <h3 className="text-left">Cloud Native</h3> <p className="text-left"> Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div> </div> </div> </section>; </main>; </>; )};
 }
-
-export default function Signup() { const [formData,setFormData] = useState({ firstName: '',lastName: '',email: '',password: '',confirmPassword: '',comp: '',phone: '',website: '',industry: '',useCase: '' }) const [showPassword,setShowPassword] = useState(false) const [showConfirmPassword,setShowConfirmPassword] = useState(false) const [isSubmitting,setIsSubmitting] = useState(false) const [errors,setErrors] = useState<Record<string,any>>({}) const industries = [ 'Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other' ] const useCases = [ 'AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other' ] } catch (error) { } catch (error) { } finally { setIsSubmitting(false) const title = 'Sign Up — Zion Tech Group' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI,cloud,and cybersecurity solutions.' return ( <> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="canonical" href="https: {} <meta property="og: titl e" content={title} /> <meta property="og: descriptio n" content={description} /> <meta property="og: ur l" content="https: <meta property="og: typ e" content="website" /> {} <meta name="twitter: car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name="twitter: descriptio n" content={description} /> </Helmet> <main className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark text-white"> {} <section className="relative overflow-hidden py-20"> <div className="absolute inset-0 opacity-10"> <div className="absolute top-20 left-20 w-32 h-32 border border-zion-cyan rounded-full"></div> <div className="absolute bottom-20 right-20 w-24 h-24 border border-zion-purple rounded-full"></div> <div className="absolute top-1/2 left-1/2 w-16 h-16 border border-zion-cyan-light rounded-full"></div> </div> <div className="container mx-auto px-4 sm: p x-6 lg: p x-8 relative z-10"> <motion.div initial = { { opacity: 0,y: 2 0 } animate = { { opacity: 1,y: 0 } transition={ duration: 0.6 } className="text-center max-w-4xl mx-auto" <h1 className="text-4xl md: tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Join Zion Tech Group </h1> <p className="text-xl md: tex t-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto"> Unlock access to revolutionary AI autonomous systems,quantum computing solutions,and enterprise-grade cybersecurity platforms. </p> <div className="flex flex-wrap justify-center gap-6 mb-12"> <div className="flex items-center gap-3 text-zion-cyan"> <Shield className="w-6 h-6" /> <span className="text-lg">Enterprise Security</span> </div> <div className="flex items-center gap-3 text-zion-purple-light"> <Brain className="w-6 h-6" /> <span className="text-lg">AI Innovation</span> </div> <div className="flex items-center gap-3 text-zion-cyan-light"> <Cloud className="w-6 h-6" /> <span className="text-lg">Cloud Native</span> </div> </div> </motion.div> </div> </section> {} <section className="py-20 bg-white/5 backdrop-blur-sm"> <div className="container mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial = { { opacity: 0,y: 2 0 } animate = { { opacity: 1,y: 0 } transition = { { duration: 0.6,delay: 0.2 } className="max-w-2xl mx-auto" <div className="bg-zion-blue-dark/50 backdrop-blur-md border border-zion-blue-light rounded-2xl p-8 md:p-12"> <h2 className="text-3xl font-bold text-center mb-8 text-white"> Create Your Account </h2> <form onSubmit={handleSubmit} className="space-y-6"> {} <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> <div> <label htmlFor="firstName" className="block text-sm font-medium text-zion-slate-light mb-2"> First Name * </label> <div className="relative"> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="block text-sm font-medium text-zion-slate-light mb-2"> Last Name * </label> <div className="relative"> <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.lastName} </p> )} </div> </div> {} <div> <label htmlFor="email" className="block text-sm font-medium text-zion-slate-light mb-2"> Email Address * </label> <div className="relative"> <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.email} </p> )} </div> {} <div> <label htmlFor="password" className="block text-sm font-medium text-zion-slate-light mb-2"> Password * </label> <div className="relative"> <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors" {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />} </button> </div> {errors.password && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.password} </p> )} </div> {} <div> <label htmlFor="confirmPassword" className="block text-sm font-medium text-zion-slate-light mb-2"> Confirm Password * </label> <div className="relative"> <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="absolute right-3 top-1/2 transform -translate-y-1/2 text-zion-slate-light hover: tex t-white transition-colors" {showConfirmPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />} </button> </div> {errors.confirmPassword && ( <p className="mt-1 text-sm text-red-400 flex items-center gap-2"> <AlertCircle className="w-4 h-4" /> {errors.confirmPassword} </p> )} </div> {} <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> <div> <label htmlFor="comp" className="block text-sm font-medium text-zion-slate-light mb-2"> Comp Name </label> <div className="relative"> <Building className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="block text-sm font-medium text-zion-slate-light mb-2"> Phone Number </label> <div className="relative"> <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter phone number" /> </div> </div> </div> {} <div className="grid grid-cols-1 md: gri d-cols-2 gap-6"> <div> <label htmlFor="website" className="block text-sm font-medium text-zion-slate-light mb-2"> Website </label> <div className="relative"> <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-zion-slate-light" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="https: /> </div> </div> <div> <label htmlFor="industry" className="block text-sm font-medium text-zion-slate-light mb-2"> Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="bg-zion-blue-dark text-white"> {industry} </option> ))} </select> </div> </div> {} <div> <label htmlFor="useCase" className="block text-sm font-medium text-zion-slate-light mb-2"> Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="w-full px-4 py-3 bg-zion-blue-light/20 border border-zion-blue-light rounded-lg text-white focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="bg-zion-blue-dark text-white"> {useCase} </option> ))} </select> </div> {} <button type="submit" disabled={isSubmitting} className="w-full bg-gradient-to-r from-zion-cyan to-zion-purple text-white py-4 px-8 rounded-lg font-semibold text-lg hover: fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none" {isSubmitting ? ( <div className="flex items-center justify-center gap-3"> <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Creating Account... </div> ) : ( <div className="flex items-center justify-center gap-3"> <Zap className="w-5 h-5" /> Create Account </div> )} </button> </form> {} <div className="mt-8 text-center"> <p className="text-zion-slate-light text-sm"> Already have an account?{' '} <a href="/login" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors font-medium"> Sign in here </a> </p> <p className="text-zion-slate-light text-xs mt-2"> By creating an account,you agree to our{' '} <a href="/terms" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors"> Terms of Service </a>{' '} and{' '} <a href="/privacy" className="text-zion-cyan hover: tex t-zion-cyan-light transition-colors"> Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {} <section className="py-20"> <div className="container mx-auto px-4 sm: p x-6 lg: p x-8"> <motion.div initial = { { opacity: 0,y: 2 0 } animate = { { opacity: 1,y: 0 } transition = { { duration: 0.6,delay: 0.4 } className="text-center mb-16" <h2 className="text-3xl md: tex t-4xl font-bold mb-6 text-white"> Why Join Zion Tech Group? </h2> <p className="text-xl text-zion-slate-light max-w-3xl mx-auto"> Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="grid grid-cols-1 md: gri d-cols-3 gap-8"> <motion.div initial = { { opacity: 0,y: 2 0 } animate = { { opacity: 1,y: 0 } transition = { { duration: 0.6,delay: 0.6 } className="text-center p-6" <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-full flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold mb-3 text-white">Enterprise Security</h3> <p className="text-zion-slate-light"> Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div initial = { { opacity: 0,y: 2 0 } animate = { { opacity: 1,y: 0 } transition = { { duration: 0.6,delay: 0.8 } className="text-center p-6" <div className="w-16 h-16 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold mb-3 text-white">AI Innovation</h3> <p className="text-zion-slate-light"> Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div initial = { { opacity: 0,y: 2 0 } animate = { { opacity: 1,y: 0 } transition = { { duration: 0.6,delay: 1.0 } className="text-center p-6" <div className="w-16 h-16 bg-gradient-to-r from-zion-cyan-light to-zion-purple-light rounded-full flex items-center justify-center mx-auto mb-4"> <Cloud className="w-8 h-8 text-white" /> </div> <h3 className="text-xl font-semibold mb-3 text-white">Cloud Native</h3> <p className="text-zion-slate-light"> Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div> </div>; </div>; </section>; </main>; </>; )};
+export default function Signup() {const [formData,setFormData] = useState({ firstName: '',lastName: '',email: '',password: '',confirmPassword: '',comp: '',phone: '',website: '')industry: ''}useCase: '' }) const [showPassword,setShowPassword] = useState(false) const [showConfirmPassword,setShowConfirmPassword] = useState(false) const [isSubmitting,setIsSubmitting] = useState(false) const [errors,setErrors] = useState<Record<string,any>>({}) const industries = [ 'Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other' ] const useCases = [ 'AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other' ] } catch (error) { } catch (error) { } finally {setIsSubmitting(false) const title = 'Sign Up — Zion Tech Group' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI,cloud}and cybersecurity solutions.' return (<> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="canonical" href="https: {} <meta property="og: titl e" content={title} /> <meta property="og: descriptio n" content={description} /> <meta property="og: ur l" content="https: <meta property="og: typ e" content="website" /> {} <meta name="twitter: car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name="twitter: descriptio n" content={description} /> </Helmet> <main className="text-left"> {} <section className="text-left"> <div className="text-left"> <div className="text-left">
+        <div className="text-left"></div> <div className="text-left"></div> </div> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition={ duration: 0.6 } className="text-left" <h1 className="text-left"> Join Zion Tech Group </h1> <p className="text-left"> Unlock access to revolutionary AI autonomous systems,quantum computing solutions)and enterprise-grade cybersecurity platforms. </p> <div className="text-left"> <div className="text-left"> <Shield className="text-left" /> <span className="text-left">Enterprise Security< </div> <div className="text-left"> <Brain className="text-left" /> <span className="text-left">AI Innovation< </div> <div className="text-left"> <Cloud className="text-left" /> <span className="text-left">Cloud Native< </div> </div> </motion.div> </div> </section> {} <section className="text-left"> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.2 } className="text-left" <div className="text-left"> <h2 className="text-left"> Create Your Account </h2> <form onSubmit={handleSubmit} className="text-left"> {} <div className="text-left"> <div> <label htmlFor="firstName" className="text-left"> First Name * </label> <div className="text-left"> <User className="text-left" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="text-left"> Last Name * </label> <div className="text-left"> <User className="text-left" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.lastName} </p> )} </div> </div> {} <div> <label htmlFor="email" className="text-left"> Email Address * </label> <div className="text-left"> <Mail className="text-left" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.email} </p> )} </div> {} <div> <label htmlFor="password" className="text-left"> Password * </label> <div className="text-left"> <Lock className="text-left" /> <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.password && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.password} </p> )} </div> {} <div> <label htmlFor="confirmPassword" className="text-left"> Confirm Password * </label> <div className="text-left"> <Lock className="text-left" /> <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.confirmPassword && ( <p className="text-left"> <AlertCircle className="text-left" /> {errors.confirmPassword} </p> )} </div> {} <div className="text-left"> <div> <label htmlFor="comp" className="text-left"> Comp Name </label> <div className="text-left"> <Building className="text-left" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="text-left" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="text-left"> Phone Number </label> <div className="text-left"> <Phone className="text-left" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="text-left" placeholder="Enter phone number" /> </div> </div> </div> {} <div className="text-left"> <div> <label htmlFor="website" className="text-left"> Website </label> <div className="text-left"> <Globe className="text-left" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="text-left" placeholder="https: /> </div> </div> <div> <label htmlFor="industry" className="text-left"> Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="text-left" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="text-left"> {industry} </option> ))} </select> </div> </div> {} <div> <label htmlFor="useCase" className="text-left"> Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="text-left" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="text-left"> {useCase} </option> ))} </select> </div> {} <button type="submit" disabled={isSubmitting} className="text-left" {isSubmitting ? ( <div className="text-left"> <div className="text-left"></div> Creating Account... </div> ) : ( <div className="text-left"> <Zap className="text-left" /> Create Account </div> )} </button> </form> {} <div className="text-left"> <p className="text-left"> Already have an account?{' '} <a href="/login" className="text-left"> Sign in here </a> </p> <p className="text-left"> By creating an account,you agree to our{' '} <a href="/terms" className="text-left"> Terms of Service </a>{' '} and{' '} <a href="/privacy" className="text-left"> Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {} <section className="text-left"> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.4 } className="text-left" <h2 className="text-left"> Why Join Zion Tech Group? </h2> <p className="text-left"> Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="text-left"> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.6 } className="text-left" <div className="text-left"> <Shield className="text-left" /> </div> <h3 className="text-left">Enterprise Security</h3> <p className="text-left"> Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.8 } className="text-left" <div className="text-left"> <Brain className="text-left" /> </div> <h3 className="text-left">AI Innovation</h3> <p className="text-left"> Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 1.0 } className="text-left" <div className="text-left"> <Cloud className="text-left" /> </div> <h3 className="text-left">Cloud Native</h3> <p className="text-left"> Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div> </div> </div> </section>; </main>; </>; )};
+import Head from 'next/head.ts'' import { motion } from 'framer-motion'' import { useState } from 'react'' import Head from 'next/head.ts'' import { motion } from 'framer-motion'' import { useState } from 'react' import {User, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle, Building, Phone, Globe, Shield, Zap, Brain} Cloud' } from 'lucide-react' } export default function Signup() {const [formData, setFormData] = useState({' "firstName": '',' "lastName": '',' "email": '',' "password": '',' "confirmPassword": '',' "comp": '',' "phone": '',' "website": '')' "industry": ''}' "useCase": '' }) const [showPassword, setShowPassword] = useState(false) const [showConfirmPassword, setShowConfirmPassword] = useState(false) const [isSubmitting, setIsSubmitting] = useState(false) const [errors, setErrors] = useState<Record<string, any>>({})' const industries = ['Technology',' 'Healthcare',' 'Finance',' 'Manufacturing',' 'Retail',' 'Education',' 'Government',' 'Non-profit',' 'Other' ]' const useCases = ['AI & Machine Learning',' 'Cloud Infrastructure',' 'Cybersecurity',' 'Digital Transformation',' 'Data Analytics',' 'IoT Solutions',' 'Micro SaaS Development',' 'Enterprise IT',' 'Other' ] // // // // // // // } catch (error) {' // // // // // // // console.error('Signup "error": '} error) // // // // } catch (error) {' // // // // console.error('Signup "error": '} error) } finally {setIsSubmitting(false)' const title = 'Sign Up — Zion Tech Group'' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI} cloud; and cybersecurity solutions.' return (<> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width) initial-scale=1" /> <link rel="canonical" href=""https": //ziontechgroup.com/signup" /> {/* Open Graph */} <meta property=""og": titl e" content={title} /> <meta property=""og": descriptio n" content={description} /> <meta property=""og": ur l" content="https://ziontechgroup.com/signup" /> <meta property="og: typ e" content="website" /> {/* Twitter */} <meta name=""twitter": car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name=""twitter": descriptio n" content={description} /> </Helmet> <main className="text-left" > {/* Hero Section */} <section className="text-left" > <div className="text-left" > <div></div> <div></div> <div></div> </div> <div className="text-left" sm": p x-6 lg: p x-8 relative z-10"> <motion.div ' import Head from 'next/head ,' import { motion } from 'framer-motion'' import { useState } from 'react'' import {User, Mail, Lock, Eye, EyeOff, CheckCircle, AlertCircle, Building, Phone, Globe, Shield) Zap} Brain; Cloud } from 'lucide-react' export default function Signup() {; const [formData, setFormData] = useState({;' "firstName": '',;' "lastName": '',;' "email": '',;' "password": '',;' "confirmPassword": '',;' "comp": '',;' "phone": '',)' "website": '')}' "industry": ''};' "useCase": ''; }); const [showPassword, setShowPassword] = useState(false); const [showConfirmPassword, setShowConfirmPassword] = useState(false); const [isSubmitting, setIsSubmitting] = useState(false); const [errors, setErrors] = useState<Record<string, any>>({});' const industries = ['Technology',;' 'Healthcare',;' 'Finance',;' 'Manufacturing',;' 'Retail',;' 'Education',;' 'Government',;' 'Non-profit',;' 'Other' ];' const useCases = ['AI & Machine Learning',;' 'Cloud Infrastructure',;' 'Cybersecurity',;' 'Digital Transformation',;' 'Data Analytics',;' 'IoT Solutions',;' 'Micro SaaS Development',;' 'Enterprise IT',;' 'Other' ]; // // // // // // // ; } catch (error) {;' // // // // // // // console && console.error('Signup "error": '} error); // // // // ; } catch (error) {;' // // // // console && console.error('Signup "error": '} error); } finally {; setIsSubmitting(false)}' const title = 'Sign Up — Zion Tech Group'' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI, cloud} and cybersecurity solutions.' return (<>; <Helmet>; <title>{title}</title>; <meta name="description" content={description} />; <meta name="viewport" content="width=device-width, initial-scale=1" />; <link rel="canonical" href=""https": //ziontechgroup && ziontechgroup.com/signup" />; {/* Open Graph */} <meta property=""og": titl e" content={title} />; <meta property=""og": descriptio n" content={description} />; <meta property=""og": ur l" content="https: //ziontechgroup && ziontechgroup.com/signup" />; <meta property="og: typ e" content="website" />, {/* Twitter */} <meta name=""twitter": car d" content="summary_large_image" />; <meta name="twitter: titl e" content={title} />; <meta name=""twitter": descriptio n" content={description} />; </Helmet>; <main className="text-left" >; {/* Hero Section */} <section className="text-left" >; <div className="text-left" >; <div></div> <div></div> <div></div> </div> <div className="text-left" sm": p x-6 lg: p x-8 relative z-10">, <motion&& motion.div return ( <> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href=""https": //ziontechgroup.com/signup" /> {/* Open Graph */} <meta property=""og": titl e" content={title} /> <meta property=""og": descriptio n" content={description} /> <meta property=""og": ur l" content="https://ziontechgroup.com/signup" /> <meta property="og: typ e" content="website" /> {/* Twitter */} <meta name=""twitter": car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name=""twitter": descriptio n" content={description} /> </Helmet> <main className="text-left" > {/* Hero Section */} <section className="text-left" > <div className="text-left" > <div></div> <div></div> <div></div> </div> <div className="text-left" sm": p x-6 lg: p x-8 relative z-10"> <motion.div initial = {{ opacity: 0} "y": 2 0 } animate = {{ "opacity": 1} "y": 0 } transition={ "duration": 0 && 0.6 } className="text-left" <h1 className="text-left"md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">; Join Zion Tech Group; </h1> <p className="text-left" >; Unlock access to revolutionary AI autonomous systems, quantum computing solutions,; and enterprise-grade cybersecurity platforms.; </p>; <div className="text-left" >; <div className="text-left" >; <Shield className="text-left" />; <span className="text-left" >Enterprise Security<; </div> <div className="text-left" >; <Brain className="text-left" />; <span className="text-left" >AI Innovation<; </div> <div className="text-left" >; <Cloud className="text-left" />; <span className="text-left" >Cloud Native<; </div> </div> </motion && motion.div>; </div> </section>; {/* Signup Form Section */} <section className="text-left" >; <div className="text-left" sm": p x-6 lg: p x-8">, <motion&& motion.div transition={ "duration": 0.6 } className="text-left" <h1 className="text-left"md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent"> Join Zion Tech Group </h1> <p className="text-left" > Unlock access to revolutionary AI autonomous systems, quantum computing solutions, and enterprise-grade cybersecurity platforms. </p> <div className="text-left" > <div className="text-left" > <Shield className="text-left" /> <span className="text-left" >Enterprise Security< </div> <div className="text-left" > <Brain className="text-left" /> <span className="text-left" >AI Innovation< </div> <div className="text-left" > <Cloud className="text-left" /> <span className="text-left" >Cloud Native< </div> </div> </motion.div> </div> </section> {/* Signup Form Section */} <section className="text-left" > <div className="text-left" sm": p x-6 lg: p x-8"> <motion.div transition={ "duration": 0 && 0.6 } className="text-left" <h1 className="text-left"md": tex t-6xl font-bold mb-6 bg-gradient-to-r from-zion-cyan via-zion-purple-light to-zion-purple bg-clip-text text-transparent">; Join Zion Tech Group; </h1> <p className="text-left" >; Unlock access to revolutionary AI autonomous systems, quantum computing solutions,; and enterprise-grade cybersecurity platforms.; </p>; <div className="text-left" >; <div className="text-left" >; <Shield className="text-left" />; <span className="text-left" >Enterprise Security<; </div> <div className="text-left" >; <Brain className="text-left" />; <span className="text-left" >AI Innovation<; </div> <div className="text-left" >; <Cloud className="text-left" />; <span className="text-left" >Cloud Native<; </div> </div> </motion && motion.div>; </div> </section>; {/* Signup Form Section */} <section className="text-left" >) <div className="text-left" sm": p x-6 lg: p x-8">) <motion&& motion.div initial = {{ opacity: 0} "y": 2 0 } animate = {{ "opacity": 1} "y": 0 } transition = {{ "duration": 0 && 0.6} "delay": 0 && 0.2 } className="text-left" <div className="text-left"md": p-12">; <h2 className="text-left" >; Create Your Account; </h1> <form onSubmit={handleSubmit} className="text-left" >; {/* Personal Information */} <div className="text-left" md": gri d-cols-2 gap-6">; <div>; <label htmlFor="firstName" className="text-left" >; First Name *; </label>; <div className="text-left" >; <User className="text-left" />; <inputtype="text" id="firstName" name="firstName" value={formData && formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" />; </div> {errors && errors.firstName && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.firstName} </p>) )} </div> <div>; <label htmlFor="lastName" className="text-left" >; Last Name *; </label>; <div className="text-left" >; <User className="text-left" />; <inputtype="text" id="lastName" name="lastName" value={formData && formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" />; </div> {errors && errors.lastName && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.lastName} </p>) )} </div> </div> {/* Email */} <div>; <label htmlFor="email" className="text-left" >; Email Address *; </label>; <div className="text-left" >; <Mail className="text-left" />; <inputtype="email" id="email" name="email" value={formData && formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" />; </div> {errors && errors.email && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.email} </p>) )} </div> {/* Password */} <div>; <label htmlFor="password" className="text-left" >; Password *; </label>; <div className="text-left" >; <Lock className="text-left" />;' <inputtype={showPassword ? 'text' : 'password'} id="password" name="password" value={formData && formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" />; <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" hover": tex t-white transition-colors" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button>; </div> {errors && errors.password && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.password} </p>) )} </div> {/* Confirm Password */} <div>; <label htmlFor="confirmPassword" className="text-left" >; Confirm Password *; </label>; <div className="text-left" >; <Lock className="text-left" />;' <inputtype={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData && formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" />; <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" hover": tex t-white transition-colors" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button>; </div> {errors && errors.confirmPassword && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.confirmPassword} </p>) )} </div> {/* Comp Information */} <div className="text-left" md": gri d-cols-2 gap-6">; <div>; <label htmlFor="comp" className="text-left" >; Comp Name; </label>; <div className="text-left" >; <Building className="text-left" />; <inputtype="text" id="comp" name="comp" value={formData && formData.comp} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter comp name" />; </div> </div> <div>; <label htmlFor="phone" className="text-left" >; Phone Number; </label>; <div className="text-left" >; <Phone className="text-left" />, <inputtype="tel" id="phone" name="phone" value={formData && formData.phone} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter phone number" />; </div> </div> </div> {/* Website and Industry */} <div className="text-left" md": gri d-cols-2 gap-6">; <div>; <label htmlFor="website" className="text-left" >; Website; </label>; <div className="text-left" >; <Globe className="text-left" />; <inputtype="url" id="website" name="website" value={formData && formData.website} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="https://yourcomp && yourcomp.com" />; </div> </div> <div>; <label htmlFor="industry" className="text-left" >; Industry; </label>, <select id="industry" name="industry" value={formData && formData.industry} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select industry</option>; {industries && industries.map(industry => (} <option key={industry} value={industry} className="text-left" >; {industry} </option>) ))} </select>; </div> </div> {/* Use Case */} <div>; <label htmlFor="useCase" className="text-left" >; Primary Use Case; </label>; <select id="useCase" name="useCase" value={formData && formData.useCase} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select primary use case</option>; {useCases && useCases.map(useCase => (} <option key={useCase} value={useCase} className="text-left" >; {useCase} </option>) ))} </select>; </div> {"duration": 0.6} "delay": 0.2 } className="text-left" <div className="text-left"md": p-12"> <h2 className="text-left" > Create Your Account </h2> <form onSubmit={handleSubmit} className="text-left" > {/* Personal Information */} <div className="text-left" md": gri d-cols-2 gap-6"> <div> <label htmlFor="firstName" className="text-left" > First Name * </label> <div className="text-left" > <User className="text-left" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="text-left" > Last Name * </label> <div className="text-left" > <User className="text-left" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.lastName} </p> )} </div> </div> {/* Email */} <div> <label htmlFor="email" className="text-left" > Email Address * </label> <div className="text-left" > <Mail className="text-left" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.email} </p> )} </div> {/* Password */} <div> <label htmlFor="password" className="text-left" > Password * </label> <div className="text-left" > <Lock className="text-left" />' <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" hover": tex t-white transition-colors" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.password && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.password} </p> )} </div> {/* Confirm Password */} <div> <label htmlFor="confirmPassword" className="text-left" > Confirm Password * </label> <div className="text-left" > <Lock className="text-left" />' <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" hover": tex t-white transition-colors" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.confirmPassword && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.confirmPassword} </p> )} </div> {/* Comp Information */} <div className="text-left" md": gri d-cols-2 gap-6"> <div> <label htmlFor="comp" className="text-left" > Comp Name </label> <div className="text-left" > <Building className="text-left" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="text-left" > Phone Number </label> <div className="text-left" > <Phone className="text-left" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter phone number" /> </div> </div> </div> {/* Website and Industry */} <div className="text-left" md": gri d-cols-2 gap-6"> <div> <label htmlFor="website" className="text-left" > Website </label> <div className="text-left" > <Globe className="text-left" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="https://yourcomp.com" /> </div> </div> <div> <label htmlFor="industry" className="text-left" > Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="text-left" > {industry} </option> ))} </select> </div> </div> {/* Use Case */} <div> <label htmlFor="useCase" className="text-left" > Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="text-left" > {useCase} </option> ))} </select> </div> {"duration": 0 && 0.6} "delay": 0 && 0.2 } className="text-left" <div className="text-left"md": p-12">; <h2 className="text-left" >; Create Your Account; </h1> <form onSubmit={handleSubmit} className="text-left" >; {/* Personal Information */} <div className="text-left" md": gri d-cols-2 gap-6">; <div>; <label htmlFor="firstName" className="text-left" >; First Name *; </label>; <div className="text-left" >; <User className="text-left" />; <inputtype="text" id="firstName" name="firstName" value={formData && formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" />; </div> {errors && errors.firstName && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.firstName} </p>) )} </div> <div>; <label htmlFor="lastName" className="text-left" >; Last Name *; </label>; <div className="text-left" >; <User className="text-left" />; <inputtype="text" id="lastName" name="lastName" value={formData && formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" />; </div> {errors && errors.lastName && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.lastName} </p>) )} </div> </div> {/* Email */} <div>; <label htmlFor="email" className="text-left" >; Email Address *; </label>; <div className="text-left" >; <Mail className="text-left" />; <inputtype="email" id="email" name="email" value={formData && formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" />; </div> {errors && errors.email && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.email} </p>) )} </div> {/* Password */} <div>; <label htmlFor="password" className="text-left" >; Password *; </label>; <div className="text-left" >; <Lock className="text-left" />;' <inputtype={showPassword ? 'text' : 'password'} id="password" name="password" value={formData && formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" />; <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" hover": tex t-white transition-colors" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button>; </div> {errors && errors.password && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.password} </p>) )} </div> {/* Confirm Password */} <div>; <label htmlFor="confirmPassword" className="text-left" >; Confirm Password *; </label>; <div className="text-left" >; <Lock className="text-left" />;' <inputtype={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData && formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light "focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${' errors && errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" />; <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" hover": tex t-white transition-colors" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button>; </div> {errors && errors.confirmPassword && (; <p className="text-left" >; <AlertCircle className="text-left" />} {errors && errors.confirmPassword} </p>) )} </div> {/* Comp Information */} <div className="text-left" md": gri d-cols-2 gap-6">; <div>; <label htmlFor="comp" className="text-left" >; Comp Name; </label>; <div className="text-left" >; <Building className="text-left" />; <inputtype="text" id="comp" name="comp" value={formData && formData.comp} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter comp name" />; </div> </div> <div>; <label htmlFor="phone" className="text-left" >; Phone Number; </label>; <div className="text-left" >; <Phone className="text-left" />, <inputtype="tel" id="phone" name="phone" value={formData && formData.phone} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="Enter phone number" />; </div> </div> </div> {/* Website and Industry */} <div className="text-left" md": gri d-cols-2 gap-6">; <div>; <label htmlFor="website" className="text-left" >; Website; </label>; <div className="text-left" >; <Globe className="text-left" />; <inputtype="url" id="website" name="website" value={formData && formData.website} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" placeholder="https://yourcomp && yourcomp.com" />; </div> </div> <div>; <label htmlFor="industry" className="text-left" >; Industry; </label>, <select id="industry" name="industry" value={formData && formData.industry} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select industry</option>; {industries && industries.map(industry => (} <option key={industry} value={industry} className="text-left" >; {industry} </option>) ))} </select>; </div> </div> {/* Use Case */} <div>; <label htmlFor="useCase" className="text-left" >; Primary Use Case; </label>; <select id="useCase" name="useCase" value={formData && formData.useCase} onChange={handleInputChange} className="text-left" focus": outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all" <option value="">Select primary use case</option>; {useCases && useCases.map(useCase => (} <option key={useCase} value={useCase} className="text-left" >; {useCase} </option>) ))} </select>; </div> {/* Submit Button */} <button type="submit" disabled={isSubmitting} className="text-left" hover": fro m-zion-cyan-dark hover: t o-zion-purple-dark transition-all duration-300 transform hover: scal e-105 disabled: opacit y-50 disabled: curso r-not-allowed disabled: transfor m-none" {isSubmitting ? (<div className="text-left">; <div></div> Creating Account...) </div> ) : (; <div className="text-left" >; <Zap className="text-left" />) Create Account} </div> )} </button>; </form>; {/* Additional Info */} <div className="text-left" >; <p className="text-left" >;' Already have an account?{' '} <a href="/login" className="text-left" hover": tex t-zion-cyan-light transition-colors font-medium">; Sign in here; </a>; </p>; <p className="text-left" >;' By creating an account, you agree to our{' '} <a href="/terms" className="text-left" hover": tex t-zion-cyan-light transition-colors">; Terms of Service;' </a>{' '}' and{' '} <a href="/privacy" className="text-left" hover": tex t-zion-cyan-light transition-colors">; Privacy Policy; </a>; </p>; </div> </div> </motion && motion.div>; </div> </section>; {/* Benefits Section */} <section className="text-left" >; <div className="text-left" sm": p x-6 lg: p x-8">, <motion&& motion.div <div className="text-left" > <div></div> Creating Account... </div> ) : ( <div className="text-left" > <Zap className="text-left" /> Create Account </div> )} </button> </form> {/* Additional Info */} <div className="text-left" > <p className="text-left" >' Already have an account?{' '} <a href="/login" className="text-left" hover": tex t-zion-cyan-light transition-colors font-medium"> Sign in here </a> </p> <p className="text-left" >' By creating an account, you agree to our{' '} <a href="/terms" className="text-left" hover": tex t-zion-cyan-light transition-colors"> Terms of Service' </a>{' '}' and{' '} <a href="/privacy" className="text-left" hover": tex t-zion-cyan-light transition-colors"> Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {/* Benefits Section */} <section className="text-left" > <div className="text-left" sm": p x-6 lg: p x-8"> <motion.div <div className="text-left" >; <div></div> Creating Account...; </div> ) : (; <div className="text-left" >; <Zap className="text-left" />; Create Account) </div> )} </button>; </form>; {/* Additional Info */} <div className="text-left" >; <p className="text-left" >;' Already have an account?{' '} <a href="/login" className="text-left" hover": tex t-zion-cyan-light transition-colors font-medium">; Sign in here; </a>; </p>; <p className="text-left" >;' By creating an account, you agree to our{' '} <a href="/terms" className="text-left" hover": tex t-zion-cyan-light transition-colors">; Terms of Service;' </a>{' '}' and{' '} <a href="/privacy" className="text-left" hover": tex t-zion-cyan-light transition-colors">; Privacy Policy; </a>; </p>; </div> </div> </motion && motion.div>; </div> </section>; {/* Benefits Section */} <section className="text-left" >; <div className="text-left" sm": p x-6 lg: p x-8">, <motion&& motion.div initial = {{ opacity: 0} "y": 2 0 } animate = {{ "opacity": 1} "y": 0 } transition = {{ "duration": 0 && 0.6} "delay": 0 && 0.4 } className="text-left" <h2 className="text-left"md": tex t-4xl font-bold mb-6 text-white">; Why Join Zion Tech Group?; </h1> <p className="text-left" >; Get exclusive access to cutting-edge technology solutions and expert support; </p>; </motion && motion.div>; <div className="text-left" >; <motion&& motion.div {"duration": 0.6} "delay": 0.4 } className="text-left" <h2 className="text-left"md": tex t-4xl font-bold mb-6 text-white"> Why Join Zion Tech Group? </h2> <p className="text-left" > Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="text-left" > <motion.div {"duration": 0 && 0.6} "delay": 0 && 0.4 } className="text-left" <h2 className="text-left"md": tex t-4xl font-bold mb-6 text-white">; Why Join Zion Tech Group?; </h1> <p className="text-left" >; Get exclusive access to cutting-edge technology solutions and expert support; </p>; </motion && motion.div>; <div className="text-left" >; <motion&& motion.div initial = {{ opacity: 0} "y": 2 0 } animate = {{ "opacity": 1} "y": 0 } transition = {{ "duration": 0 && 0.6} "delay": 0 && 0.6 } className="text-left" <div className="text-left">; <Shield className="text-left" />; </div> <h3 className="text-left" >Enterprise Security</h1> <p className="text-left" >; Access to zero-trust cybersecurity platforms and advanced threat detection systems; </p>; </motion && motion.div>; <motion&& motion.div {"duration": 0.6} "delay": 0.6 } className="text-left" <div className="text-left"> <Shield className="text-left" /> </div> <h3 className="text-left" >Enterprise Security</h3> <p className="text-left" > Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div {"duration": 0 && 0.6} "delay": 0 && 0.6 } className="text-left" <div className="text-left">; <Shield className="text-left" />; </div> <h3 className="text-left" >Enterprise Security</h1> <p className="text-left" >; Access to zero-trust cybersecurity platforms and advanced threat detection systems; </p>; </motion && motion.div>; <motion&& motion.div initial = {{ "opacity": 0} "y": 2 0 } animate = {{ "opacity": 1} "y": 0 } transition = {{ "duration": 0 && 0.6} "delay": 0 && 0.8 } className="text-left" <div className="text-left">; <Brain className="text-left" />; </div> <h3 className="text-left" >AI Innovation</h1> <p className="text-left" >; Leverage autonomous AI systems and machine learning platforms for business growth; </p>; </motion && motion.div>; <motion&& motion.div {"duration": 0.6} "delay": 0.8 } className="text-left" <div className="text-left"> <Brain className="text-left" /> </div> <h3 className="text-left" >AI Innovation</h3> <p className="text-left" > Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div {"duration": 0 && 0.6} "delay": 0 && 0.8 } className="text-left" <div className="text-left">; <Brain className="text-left" />; </div> <h3 className="text-left" >AI Innovation</h1> <p className="text-left" >; Leverage autonomous AI systems and machine learning platforms for business growth; </p>; </motion && motion.div>; <motion&& motion.div initial = {{ "opacity": 0} "y": 2 0 } animate = {{ "opacity": 1} "y": 0 } transition = {{ "duration": 0 && 0.6} "delay": 1 && 1.0 } className="text-left" <div className="text-left">; <Cloud className="text-left" />; </div> <h3 className="text-left" >Cloud Native</h1> <p className="text-left" >; Scalable cloud infrastructure and DevOps solutions for modern applications; </p>; </motion && motion.div>; {"duration": 0.6} "delay": 1.0 } className="text-left" <div className="text-left"> <Cloud className="text-left" /> </div> <h3 className="text-left" >Cloud Native</h3> <p className="text-left" > Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div>; </div> </div> </section>; </main>; </>; ) };' import Head from 'next/head.ts' import { motion } from 'framer-motion' import { useState } from 'react' import {User,Mail,Lock,Eye,EyeOff,CheckCircle,AlertCircle,Building,Phone,Globe,Shield,Zap,Brain}Cloud } from 'lucide-react' } ' export default function Signup() {const [formData,setFormData] = useState({ firstName: '',lastName: '',email: '',password: '',confirmPassword: '',comp: '',phone: '',website: '')industry: ''}useCase: '' }) const [showPassword,setShowPassword] = useState(false) const [showConfirmPassword,setShowConfirmPassword] = useState(false) const [isSubmitting,setIsSubmitting] = useState(false) const [errors,setErrors] = useState<Record<string,any>>({}) const industries = [ 'Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other' ] const useCases = [ 'AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other' ] } catch (error) {} catch (error) {} finally {setIsSubmitting(false) const title = 'Sign Up — Zion Tech Group' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI,cloud}and cybersecurity solutions.' return (<> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="canonical" href="https: {} <meta property="og: titl e" content={title} /> <meta property="og: descriptio n" content={description} /> <meta property="og: ur l" content="https: <meta property="og: typ e" content="website" /> {} <meta name="twitter: car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name="twitter: descriptio n" content={description} /> </Helmet> <main className="text-left" > {} <section className="text-left" > <div className="text-left" > <div></div> <div></div> <div></div> </div> <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition={{ duration: 0.6 }} className="text-left" <h1 className="text-left"> Join Zion Tech Group </h1> <p className="text-left" > Unlock access to revolutionary AI autonomous systems,quantum computing solutions)and enterprise-grade cybersecurity platforms. </p> <div className="text-left" > <div className="text-left" > <Shield className="text-left" /> <span className="text-left" >Enterprise Security< </div> <div className="text-left" > <Brain className="text-left" /> <span className="text-left" >AI Innovation< </div> <div className="text-left" > <Cloud className="text-left" /> <span className="text-left" >Cloud Native< </div> </div> </motion.div> </div> </section> {} <section className="text-left" > <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.2 }} className="text-left" <div className="text-left"> <h2 className="text-left" > Create Your Account </h2> <form onSubmit={handleSubmit} className="text-left" > {} <div className="text-left" > <div> <label htmlFor="firstName" className="text-left" > First Name * </label> <div className="text-left" > <User className="text-left" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="text-left" > Last Name * </label> <div className="text-left" > <User className="text-left" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.lastName} </p> )} </div> </div> {} <div> <label htmlFor="email" className="text-left" > Email Address * </label> <div className="text-left" > <Mail className="text-left" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.email} </p> )} </div> {} <div> <label htmlFor="password" className="text-left" > Password * </label> <div className="text-left" > <Lock className="text-left" /> <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.password && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.password} </p> )} </div> {} <div> <label htmlFor="confirmPassword" className="text-left" > Confirm Password * </label> <div className="text-left" > <Lock className="text-left" /> <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.confirmPassword && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.confirmPassword} </p> )} </div> {} <div className="text-left" > <div> <label htmlFor="comp" className="text-left" > Comp Name </label> <div className="text-left" > <Building className="text-left" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="text-left" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="text-left" > Phone Number </label> <div className="text-left" > <Phone className="text-left" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="text-left" placeholder="Enter phone number" /> </div> </div> </div> {} <div className="text-left" > <div> <label htmlFor="website" className="text-left" > Website </label> <div className="text-left" > <Globe className="text-left" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="text-left" placeholder="https: /> </div> </div> <div> <label htmlFor="industry" className="text-left" > Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="text-left" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="text-left" > {industry} </option> ))} </select> </div> </div> {} <div> <label htmlFor="useCase" className="text-left" > Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="text-left" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="text-left" > {useCase} </option> ))} </select> </div> {} <button type="submit" disabled={isSubmitting} className="text-left" {isSubmitting ? ( <div className="text-left"> <div></div> Creating Account... </div> ) : ( <div className="text-left" > <Zap className="text-left" /> Create Account </div> )} </button> </form> {} <div className="text-left" > <p className="text-left" > Already have an account?{' '} <a href="/login" className="text-left" > Sign in here </a> </p> <p className="text-left" > By creating an account,you agree to our{' '} <a href="/terms" className="text-left" > Terms of Service </a>{' '} and{' '} <a href="/privacy" className="text-left" > Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {} <section className="text-left" > <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.4 }} className="text-left" <h2 className="text-left"> Why Join Zion Tech Group? </h2> <p className="text-left" > Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.6 }} className="text-left" <div className="text-left"> <Shield className="text-left" /> </div> <h3 className="text-left" >Enterprise Security</h3> <p className="text-left" > Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 0.8 }} className="text-left" <div className="text-left"> <Brain className="text-left" /> </div> <h3 className="text-left" >AI Innovation</h3> <p className="text-left" > Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 }} animate = {{ opacity: 1}y: 0 }} transition = {{ duration: 0.6}delay: 1.0 }} className="text-left" <div className="text-left"> <Cloud className="text-left" /> </div> <h3 className="text-left" >Cloud Native</h3> <p className="text-left" > Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div> </div> </div> </section>; </main>; </>; )}; } ' export default function Signup() {const [formData,setFormData] = useState({ firstName: '',lastName: '',email: '',password: '',confirmPassword: '',comp: '',phone: '',website: '')industry: ''}useCase: '' }) const [showPassword,setShowPassword] = useState(false) const [showConfirmPassword,setShowConfirmPassword] = useState(false) const [isSubmitting,setIsSubmitting] = useState(false) const [errors,setErrors] = useState<Record<string,any>>({}) const industries = [ 'Technology','Healthcare','Finance','Manufacturing','Retail','Education','Government','Non-profit','Other' ] const useCases = [ 'AI & Machine Learning','Cloud Infrastructure','Cybersecurity','Digital Transformation','Data Analytics','IoT Solutions','Micro SaaS Development','Enterprise IT','Other' ] } catch (error) {} catch (error) {} finally {setIsSubmitting(false) const title = 'Sign Up — Zion Tech Group' const description = 'Join Zion Tech Group and unlock access to cutting-edge AI,cloud}and cybersecurity solutions.' return (<> <Helmet> <title>{title}</title> <meta name="description" content={description} /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <link rel="canonical" href="https: {} <meta property="og: titl e" content={title} /> <meta property="og: descriptio n" content={description} /> <meta property="og: ur l" content="https: <meta property="og: typ e" content="website" /> {} <meta name="twitter: car d" content="summary_large_image" /> <meta name="twitter: titl e" content={title} /> <meta name="twitter: descriptio n" content={description} /> </Helmet> <main className="text-left" > {} <section className="text-left" > <div className="text-left" > <div></div> <div></div> <div></div> </div> <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition={ duration: 0.6 } className="text-left" <h1 className="text-left"> Join Zion Tech Group </h1> <p className="text-left" > Unlock access to revolutionary AI autonomous systems,quantum computing solutions)and enterprise-grade cybersecurity platforms. </p> <div className="text-left" > <div className="text-left" > <Shield className="text-left" /> <span className="text-left" >Enterprise Security< </div> <div className="text-left" > <Brain className="text-left" /> <span className="text-left" >AI Innovation< </div> <div className="text-left" > <Cloud className="text-left" /> <span className="text-left" >Cloud Native< </div> </div> </motion.div> </div> </section> {} <section className="text-left" > <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.2 } className="text-left" <div className="text-left"> <h2 className="text-left" > Create Your Account </h2> <form onSubmit={handleSubmit} className="text-left" > {} <div className="text-left" > <div> <label htmlFor="firstName" className="text-left" > First Name * </label> <div className="text-left" > <User className="text-left" /> <input type="text" id="firstName" name="firstName" value={formData.firstName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.firstName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your first name" /> </div> {errors.firstName && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.firstName} </p> )} </div> <div> <label htmlFor="lastName" className="text-left" > Last Name * </label> <div className="text-left" > <User className="text-left" /> <input type="text" id="lastName" name="lastName" value={formData.lastName} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.lastName ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your last name" /> </div> {errors.lastName && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.lastName} </p> )} </div> </div> {} <div> <label htmlFor="email" className="text-left" > Email Address * </label> <div className="text-left" > <Mail className="text-left" /> <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} className={`w-full pl-10 pr-4 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.email ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Enter your email address" /> </div> {errors.email && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.email} </p> )} </div> {} <div> <label htmlFor="password" className="text-left" > Password * </label> <div className="text-left" > <Lock className="text-left" /> <input type={showPassword ? 'text' : 'password'} id="password" name="password" value={formData.password} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.password ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Create a strong password" /> <button type="button" onClick={() => setShowPassword(!showPassword)} className="text-left" {showPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.password && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.password} </p> )} </div> {} <div> <label htmlFor="confirmPassword" className="text-left" > Confirm Password * </label> <div className="text-left" > <Lock className="text-left" /> <input type={showConfirmPassword ? 'text' : 'password'} id="confirmPassword" name="confirmPassword" value={formData.confirmPassword} onChange={handleInputChange} className={`w-full pl-10 pr-12 py-3 bg-zion-blue-light/20 border rounded-lg text-white placeholder-zion-slate-light focus: outlin e-none focus: rin g-2 focus: rin g-zion-cyan transition-all ${ errors.confirmPassword ? 'border-red-500' : 'border-zion-blue-light' }`} placeholder="Confirm your password" /> <button type="button" onClick={() => setShowConfirmPassword(!showConfirmPassword)} className="text-left" {showConfirmPassword ? <EyeOff className="text-left" /> : <Eye className="text-left" />} </button> </div> {errors.confirmPassword && ( <p className="text-left" > <AlertCircle className="text-left" /> {errors.confirmPassword} </p> )} </div> {} <div className="text-left" > <div> <label htmlFor="comp" className="text-left" > Comp Name </label> <div className="text-left" > <Building className="text-left" /> <input type="text" id="comp" name="comp" value={formData.comp} onChange={handleInputChange} className="text-left" placeholder="Enter comp name" /> </div> </div> <div> <label htmlFor="phone" className="text-left" > Phone Number </label> <div className="text-left" > <Phone className="text-left" /> <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleInputChange} className="text-left" placeholder="Enter phone number" /> </div> </div> </div> {} <div className="text-left" > <div> <label htmlFor="website" className="text-left" > Website </label> <div className="text-left" > <Globe className="text-left" /> <input type="url" id="website" name="website" value={formData.website} onChange={handleInputChange} className="text-left" placeholder="https: /> </div> </div> <div> <label htmlFor="industry" className="text-left" > Industry </label> <select id="industry" name="industry" value={formData.industry} onChange={handleInputChange} className="text-left" <option value="">Select industry</option> {industries.map(industry => ( <option key={industry} value={industry} className="text-left" > {industry} </option> ))} </select> </div> </div> {} <div> <label htmlFor="useCase" className="text-left" > Primary Use Case </label> <select id="useCase" name="useCase" value={formData.useCase} onChange={handleInputChange} className="text-left" <option value="">Select primary use case</option> {useCases.map(useCase => ( <option key={useCase} value={useCase} className="text-left" > {useCase} </option> ))} </select> </div> {} <button type="submit" disabled={isSubmitting} className="text-left" {isSubmitting ? ( <div className="text-left"> <div></div> Creating Account... </div> ) : ( <div className="text-left" > <Zap className="text-left" /> Create Account </div> )} </button> </form> {} <div className="text-left" > <p className="text-left" > Already have an account?{' '} <a href="/login" className="text-left" > Sign in here </a> </p> <p className="text-left" > By creating an account,you agree to our{' '} <a href="/terms" className="text-left" > Terms of Service </a>{' '} and{' '} <a href="/privacy" className="text-left" > Privacy Policy </a> </p> </div> </div> </motion.div> </div> </section> {} <section className="text-left" > <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.4 } className="text-left" <h2 className="text-left"> Why Join Zion Tech Group? </h2> <p className="text-left" > Get exclusive access to cutting-edge technology solutions and expert support </p> </motion.div> <div className="text-left" > <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.6 } className="text-left" <div className="text-left"> <Shield className="text-left" /> </div> <h3 className="text-left" >Enterprise Security</h3> <p className="text-left" > Access to zero-trust cybersecurity platforms and advanced threat detection systems </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 0.8 } className="text-left" <div className="text-left"> <Brain className="text-left" /> </div> <h3 className="text-left" >AI Innovation</h3> <p className="text-left" > Leverage autonomous AI systems and machine learning platforms for business growth </p> </motion.div> <motion.div initial = {{ opacity: 0}y: 2 0 } animate = {{ opacity: 1}y: 0 } transition = {{ duration: 0.6}delay: 1.0 } className="text-left" <div className="text-left"> <Cloud className="text-left" /> </div> <h3 className="text-left" >Cloud Native</h3> <p className="text-left" > Scalable cloud infrastructure and DevOps solutions for modern applications </p> </motion.div> </div> </div> </section>; </main>; </>; )}; '

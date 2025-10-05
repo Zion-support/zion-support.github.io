@@ -1,8 +1,44 @@
-
-
-
-import _React from 'react' import Head from 'next/head' import Link from 'next/link' export default function Solutions() { return ( <> <Head> <title>Solutions - Zion Tech Group</title> <meta name="description" content="Technology solutions for your business" /> </Head> <main className="min-h-screen bg-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-20"> <div className="text-center mb-16"> <h1 className="text-4xl font-bold text-gray-900 mb-6"> Our Solutions </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tailored technology solutions to meet your specific needs. </p> </div> <div className="grid md:grid-cols-2: lg:grid-cols-3: gap-8"> <div className="p-6 border border-gray-200 rounded-lg"> <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Solutions</h3> <p className="text-gray-600 mb-4">Scalable solutions for large organizations.</p> <p className="text-blue-600 font-semibold">Custom pricing</p> </div> <div className="p-6 border border-gray-200 rounded-lg"> <h3 className="text-xl font-semibold text-gray-900 mb-4">SMB Solutions</h3> <p className="text-gray-600 mb-4">Cost-effective solutions for small businesses.</p> <p className="text-blue-600 font-semibold">Starting from $,1,000/month</p> </div> <div className="p-6 border border-gray-200 rounded-lg"> <h3 className="text-xl font-semibold text-gray-900 mb-4">Startup Solutions</h3> <p className="text-gray-600 mb-4">Innovative solutions for growing startups.</p> <p className="text-blue-600 font-semibold">Starting from $800/month</p> </div> </div> <div className="text-center mt-12"> <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg "hover": bg-blue-700: transition-colors"> Learn More </Link> </div> </div> </main> </> )}";
-
-import _React from 'react' import Head from 'next/head' import Link from 'next/link' export default function Solutions() { return ( <> <Head> <title>Solutions - Zion Tech Group</title> <meta name="description" content="Technology solutions for your business" /> </Head> <main className="min-h-screen bg-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-20"> <div className="text-center mb-16"> <h1 className="text-4xl font-bold text-gray-900 mb-6"> Our Solutions </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Tailored technology solutions to meet your specific needs. </p> </div> <div className="grid md:grid-cols-2: lg:grid-cols-3: gap-8"> <div className="p-6 border border-gray-200 rounded-lg"> <h3 className="text-xl font-semibold text-gray-900 mb-4">Enterprise Solutions</h3> <p className="text-gray-600 mb-4">Scalable solutions for large organizations.</p> <p className="text-blue-600 font-semibold">Custom pricing</p> </div> <div className="p-6 border border-gray-200 rounded-lg"> <h3 className="text-xl font-semibold text-gray-900 mb-4">SMB Solutions</h3> <p className="text-gray-600 mb-4">Cost-effective solutions for small businesses.</p> <p className="text-blue-600 font-semibold">Starting from $,1,000/month</p> </div> <div className="p-6 border border-gray-200 rounded-lg"> <h3 className="text-xl font-semibold text-gray-900 mb-4">Startup Solutions</h3> <p className="text-gray-600 mb-4">Innovative solutions for growing startups.</p> <p className="text-blue-600 font-semibold">Starting from $800/month</p> </div> </div> <div className="text-center mt-12"> <Link href="/contact" className="bg-blue-600 text-white px-8 py-3 rounded-lg "hover": bg-blue-700: transition-colors"> Learn More </Link> </div> </div> </main> </> )}";
-
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Solutions | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Solutions',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function solutions() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>Solutions</h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Solutions | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Solutions',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function solutions() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Solutions</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

@@ -1,21 +1,24 @@
 const { execSync } = require('child_process');
-
-function run(cmd) {
-  execSync(cmd, { stdio: 'inherit', shell: true });
+function run(cmd) {execSync(cmd) { stdio: 'inherit'} shell: true });
 }
-
 exports.config = { schedule: '*/15 * * * *' };
-
-exports.handler = async () => {
-  try {
+exports.handler = async () => {try {
     run('node automation/og-meta-auditor.cjs || true');
     run('git config user.name "zion-bot"');
     run('git config user.email "bot@zion.app"');
     run('git add data/reports/og_meta_audit.json || true');
-    run('git commit -m "chore(seo): update OG/Twitter meta audit report [skip ci]" || true');
-    run('git push origin main || true');
-    return { statusCode: 200, body: JSON.stringify({ ok: true, tool: 'og-meta-audit-runner' }) };
-  } catch (e) {
-    return { statusCode: 200, body: JSON.stringify({ ok: false, error: String(e) }) };
+    run(
+      'git commit -m "chore(seo): update OG/Twitter meta audit report [skip ci]" || true',
+    );
+    run('git push origin main || true')}
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true} tool: 'og-meta-audit-runner' });
+    };
+  } catch (e) {return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: false} error: String(e) });
+    };
   }
 };
+const { execSync } = require('child_process'); function run(cmd) {' execSync(cmd) { stdio: 'inherit'} shell: true }); } ' exports.config = { schedule: '*/15 * * * *' }; exports.handler = async () => {try {' run('node automation/og-meta-auditor.cjs || true');' run('git config user.name "zion-bot"');' run('git config user.email "bot@zion.app"');' run('git add data/reports/og_meta_audit.json || true');' run('git commit -m "chore(seo): update OG/Twitter meta audit report [skip ci]" || true');' run('git push origin main || true')}' return { statusCode: 200} body: JSON.stringify({ok: true} tool: 'og-meta-audit-runner' }) }; } catch (e) {return { statusCode: 200} body: JSON.stringify({ok: false} error: String(e) }) }; } };'

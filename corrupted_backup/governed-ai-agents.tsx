@@ -1,19 +1,46 @@
-import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function GovernedAIAgents() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>Governed AI Agents — Services — Zion</title> <meta name=\"description\" content=\"Deploy multi-agent systems with approvals,sandboxing,and audit logs to safely automate business processes.\" /> </Helmet> <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">Governed AI Agents</h1> <p className=\"mt-4 text-white/80\">Autonomous workflows for marketing ops,finance close,HR onboarding,and IT runbooks with human-in-the-loop controls.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Approval steps and change windows</li> <li>Sandboxed integrations with least-privilege</li> <li>Audit logs and policy guardrails</li> <li>Playbook authoring with version control</li> <li>API and UI for orchestration</li> </ul> <div className=\"mt-6 text-sm text-white/70\">Average market \"pricing\": \'$1\',000–$4,000/mo per department + setup.</div> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md \"hover\": b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}
-import React from 'react';
-interface GovernedaiagentsProps {
-  // Add props here as needed
-}
-export default function Governedaiagents({ }: GovernedaiagentsProps) {
-  return (
-import Head from \'next/head.ts\'; import Link from \'next/link\'; export default function GovernedAIAgents() { return ( <div className = \"relative min-h-screen overflow-hidden bg-slate-950 text-white\"> <Helmet> <title>Governed AI Agents — Services — Zion</title> <meta name=\"description\" content=\"Deploy multi-agent systems with approvals,sandboxing,and audit logs to safely automate business processes.\" />  <div aria-hidden className=\"pointer-events-none absolute inset-0 -z-10\"> <div className=\"absolute -top-24 -left-24 h-[38rem] w-[38rem] rounded-full bg-fuchsia-500/20 blur-3xl animate-float\" /> <div className=\"absolute top-1/4 -right-32 h-[30rem] w-[30rem] rounded-full bg-cyan-400/20 blur-3xl animate-float-slow\" /> <div className=\"absolute bottom-0 left-1/4 h-[26rem] w-[26rem] rounded-full bg-violet-400/10 blur-2xl animate-float-fast\" /> <div className=\"absolute inset-0 beams opacity-[0.06]\" /> </div> <main className=\"relative z-10 mx-auto max-w-3xl px-6 py-16\"> <h1 className=\"text-4xl \"md\": tex t-5xl font-extrabold gradient-text\">Governed AI Agents</h1> <p className=\"mt-4 text-white/80\">Autonomous workflows for marketing ops,finance close,HR onboarding,and IT runbooks with human-in-the-loop controls.</p> <ul className=\"mt-6 space-y-2 text-white/80 list-disc pl-5\"> <li>Approval steps and change windows</li> <li>Sandboxed integrations with least-privilege</li> <li>Audit logs and policy guardrails</li> <li>Playbook authoring with version control</li> <li>API and UI for orchestration</li> </ul> <div className=\"mt-6 text-sm text-white/70\">Average market \"pricing\": \'$1\',000–$4,000/mo per department + setup.</div> <div className=\"mt-8 flex gap-3\"> <Link href=\"/services\"><a className=\"rounded-xl border border-white/20 bg-white/5 px-6 py-3 font-semibold backdrop-blur-md \"hover\": b g-white/10\">Back to Services</a>></div> <Link href=\"/contact\"><a className=\"rounded-xl bg-white/90 px-6 py-3 font-semibold text-slate-900 hover: b g-white\">Get Started</a>></div> ></div> ></div> ></div> )}"
-    <div>
-</div>
-      <h1>Governedaiagents</h1>
-      <p>This component is currently under development.</p>
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Governed Ai Agents | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Governed Ai Agents',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function governedaiagents() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Governed Ai Agents
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
-  );
+  )}
 }
-}
-}
-}
-    </div>"
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Governed Ai Agents | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Governed Ai Agents',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function governedaiagents() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Governed Ai Agents</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

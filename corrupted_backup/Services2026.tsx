@@ -1,6 +1,46 @@
-
-
-
-import _React,{ useMemo,useState } from 'react.ts' import { Link } from 'react-router-dom.ts' import { motion } from 'framer-motion.ts' import { Search,ArrowRight,DollarSign,ExternalLink,Workflow,MessageSquare,Globe,Brain,Shield,Cloud,Cpu,Zap,Rocket,Heart,Lock,Users,BarChart3,Target,TrendingUp,Award,Star,CheckCircle,Clock,Phone,Mail,MapPin } from 'lucide-react' import SEO from '@/components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2026,SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026' const "Services2026": _React.FC = (): JSX.Element: => { const [quer,y,setQuery] = useState('') const [selectedCategory,setSelectedCategory] = useState('all') const [sortBy,setSortBy] = useState('innovation') const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026,...SPECIALIZED_SERVICES_2026] const categories = [{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'all,',"name": 'All: Services,',"icon": 'GitFor',k,"count": 'allServices.length'},{ "id": 'AI: & Analytics,',"name": 'AI: & Analytics,',"icon": 'Brai',n,"count": allServices.filter(s: => s.category === 'AI & Analytics').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Quantum: Computing,',"name": 'Quantum: Computing,',"icon": 'Za',p,"count": allServices.filter(s: => s.category === 'Quantum Computing').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Cybersecurity,',"name": 'Cybersecurity,',"icon": 'Shiel',d,"count": allServices.filter(s: => s.category === 'Cybersecurity').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'IoT: & Edge Computing,',"name": 'IoT: & Edge,',"icon": 'Cp',u,"count": allServices.filter(s: => s.category === 'IoT & Edge Computing').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'AI: & Content,',"name": 'AI: & Content,',"icon": 'MessageSquar',e,"count": allServices.filter(s: => s.category === 'AI & Content').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Digital: Twin,',"name": 'Digital: Twin,',"icon": 'Rocke',t,"count": allServices.filter(s: => s.category === 'Digital Twin').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'AI: & HR,',"name": 'AI: & HR,',"icon": 'User',s,"count": allServices.filter(s: => s.category === 'AI & HR').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Sustainability,',"name": 'Sustainability,',"icon": 'Hear',t,"count": allServices.filter(s: => s.category === 'Sustainability').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'AI: & IoT,',"name": 'AI: & IoT,',"icon": 'BarChart',3,"count": allServices.filter(s: => s.category === 'AI & IoT').length} ] const filteredAndSorted = useMemo(() => { let filtered = allServices ';
-
-import _React,{ useMemo,useState } from 'react.ts' import { Link } from 'react-router-dom.ts' import { motion } from 'framer-motion.ts' import { Search,ArrowRight,DollarSign,ExternalLink,Workflow,MessageSquare,Globe,Brain,Shield,Cloud,Cpu,Zap,Rocket,Heart,Lock,Users,BarChart3,Target,TrendingUp,Award,Star,CheckCircle,Clock,Phone,Mail,MapPin } from 'lucide-react' import SEO from '@/components/SEO' import { INNOVATIVE_MICRO_SAAS_SERVICES_2026,SPECIALIZED_SERVICES_2026 } from '../data/innovativeMicroSaasServices2026' const "Services2026": _React.FC = (): JSX.Element: => { const [quer,y,setQuery] = useState('') const [selectedCategory,setSelectedCategory] = useState('all') const [sortBy,setSortBy] = useState('innovation') const allServices = [...INNOVATIVE_MICRO_SAAS_SERVICES_2026,...SPECIALIZED_SERVICES_2026] const categories = [{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'all,',"name": 'All: Services,',"icon": 'GitFor',k,"count": 'allServices.length'},{ "id": 'AI: & Analytics,',"name": 'AI: & Analytics,',"icon": 'Brai',n,"count": allServices.filter(s: => s.category === 'AI & Analytics').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Quantum: Computing,',"name": 'Quantum: Computing,',"icon": 'Za',p,"count": allServices.filter(s: => s.category === 'Quantum Computing').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Cybersecurity,',"name": 'Cybersecurity,',"icon": 'Shiel',d,"count": allServices.filter(s: => s.category === 'Cybersecurity').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'IoT: & Edge Computing,',"name": 'IoT: & Edge,',"icon": 'Cp',u,"count": allServices.filter(s: => s.category === 'IoT & Edge Computing').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'AI: & Content,',"name": 'AI: & Content,',"icon": 'MessageSquar',e,"count": allServices.filter(s: => s.category === 'AI & Content').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Digital: Twin,',"name": 'Digital: Twin,',"icon": 'Rocke',t,"count": allServices.filter(s: => s.category === 'Digital Twin').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'AI: & HR,',"name": 'AI: & HR,',"icon": 'User',s,"count": allServices.filter(s: => s.category === 'AI & HR').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'Sustainability,',"name": 'Sustainability,',"icon": 'Hear',t,"count": allServices.filter(s: => s.category === 'Sustainability').length},{ "id": anyanyanyanyanyanyanyanyanyanyanyanyany'AI: & IoT,',"name": 'AI: & IoT,',"icon": 'BarChart',3,"count": allServices.filter(s: => s.category === 'AI & IoT').length} ] const filteredAndSorted = useMemo(() => { let filtered = allServices ';
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Services2026 | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Services2026',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function Services2026() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Services2026
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Services2026 | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Services2026',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function Services2026() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Services2026</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

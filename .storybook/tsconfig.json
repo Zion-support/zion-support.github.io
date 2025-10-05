@@ -2,8 +2,8 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     "noEmit": true,
-    "types": ["node", "jest"], 
-    "jsx": "react-jsx" 
+    "types": ["node", "jest"],
+    "jsx": "react-jsx"
   },
   "include": [
     "./*.ts",
