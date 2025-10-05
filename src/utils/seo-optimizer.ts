@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Advanced SEO Optimization System
  * Handles meta tags, structured data, sitemap generation, and SEO analytics
@@ -292,3 +293,12 @@ Last Updated: ${new Date().toISOString()}
 }
 
 export default SEOOptimizer;
+=======
+const seoOptimizer = {
+  trackPageView: () => {
+    console.log('Page view tracked');
+  }
+};
+
+export default seoOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d

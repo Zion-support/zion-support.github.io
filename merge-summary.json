@@ -1,7 +1,72 @@
 {
-  "timestamp": "2025-10-05T11:44:47.297Z",
-  "mergedBranches": 1,
-  "conflictedBranches": 0,
-  "totalProcessed": 4,
-  "status": "success"
+  "timestamp": "2025-10-05T14:35:46.217Z",
+  "totalBranches": 16,
+  "successfulMerges": 16,
+  "failedMerges": 0,
+  "results": [
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-0290",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-10c9",
+      "status": "success"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-2114",
+      "status": "success"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-4879",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-4daf",
+      "status": "success"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-5246",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-69cd",
+      "status": "success"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-6d9a",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-784b",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-852d",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-9e63",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-aca4",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-cf2c",
+      "status": "success"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-dbe0",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-df89",
+      "status": "success_with_resolution"
+    },
+    {
+      "branch": "cursor/fix-errors-and-merge-to-main-fad3",
+      "status": "success"
+    }
+  ]
 }

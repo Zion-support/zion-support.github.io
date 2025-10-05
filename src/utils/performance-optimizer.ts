@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Performance Optimizer Utility
  * Advanced performance monitoring and optimization tools
@@ -338,3 +339,16 @@ if (typeof window !== 'undefined') {
 }
 
 export default PerformanceOptimizer;
+=======
+const performanceOptimizer = {
+  startPerformanceMonitoring: () => {
+    console.log('Performance monitoring started');
+  },
+  
+  cleanup: () => {
+    console.log('Performance monitoring cleaned up');
+  }
+};
+
+export default performanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ca9d
