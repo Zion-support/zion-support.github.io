@@ -1,9 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
 import '@testing-library/jest-dom';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-10c9
 import { BrowserRouter } from 'react-router-dom';
 import Header from '../../components/Header';
 

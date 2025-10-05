@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-10c9
+
+
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -30,19 +25,7 @@ const Header: React.FC = () => {
             </Link>
             <Link to="/services" className="text-gray-300 hover:text-white transition-colors">
               Services
-<<<<<<< HEAD
-            </a>
-            <a href="/blog" className="text-gray-300 hover:text-white transition-colors">
-              Blog
-            </a>
-            <a href="/contact" className="text-gray-300 hover:text-white transition-colors">
-=======
-            </Link>
-            <Link to="/blog" className="text-gray-300 hover:text-white transition-colors">
-              Blog
-            </Link>
-            <Link to="/contact" className="text-gray-300 hover:text-white transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
+
               Contact
             </Link>
           </nav>
@@ -74,19 +57,7 @@ const Header: React.FC = () => {
               </Link>
               <Link to="/services" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
                 Services
-<<<<<<< HEAD
-              </a>
-              <a href="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                Blog
-              </a>
-              <a href="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-=======
-              </Link>
-              <Link to="/blog" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
-                Blog
-              </Link>
-              <Link to="/contact" className="block px-3 py-2 text-gray-300 hover:text-white transition-colors">
->>>>>>> cursor/fix-errors-and-merge-to-main-0290
+
                 Contact
               </Link>
             </div>
