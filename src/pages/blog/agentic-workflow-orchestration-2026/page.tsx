@@ -31,8 +31,5 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> resolve-pr-25168

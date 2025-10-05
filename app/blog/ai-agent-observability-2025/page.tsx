@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI Agent Observability 2025: Metrics, Traces, and Safety Signals | Zion Tech Group',
@@ -28,9 +28,9 @@ export default function AIAgentObservability2025Page() {
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <nav className="mb-8">
-            <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+            <ArrowRight href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
               ← Back to Blog
-            </Link>
+            </ArrowRight>
           </nav>
 
           <article className="max-w-4xl mx-auto">
@@ -118,12 +118,12 @@ export default function AIAgentObservability2025Page() {
                   <h3 className="text-xl font-bold mb-2">Get Implementation Support</h3>
                   <p className="text-white/80 mb-4">We help enterprises productionize agent telemetry in weeks, not months.</p>
                   <div className="flex gap-4">
-                    <Link href="/contact" className="px-6 py-3 rounded-lg bg-cyan-500 text-white font-semibold hover:bg-cyan-400">
+                    <ArrowRight href="/contact" className="px-6 py-3 rounded-lg bg-cyan-500 text-white font-semibold hover:bg-cyan-400">
                       Talk to an Expert
-                    </Link>
-                    <Link href="/blog" className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20">
+                    </ArrowRight>
+                    <ArrowRight href="/blog" className="px-6 py-3 rounded-lg bg-white/10 border border-white/20 hover:bg-white/20">
                       More Articles
-                    </Link>
+                    </ArrowRight>
                   </div>
                 </div>
               </section>
@@ -133,12 +133,12 @@ export default function AIAgentObservability2025Page() {
               <div className="flex items-center justify-between">
                 <div className="text-white/60 text-sm">Written by Zion Tech Group</div>
                 <div className="flex gap-4">
-                  <Link href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+                  <ArrowRight href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">
                     ← Back to Blog
-                  </Link>
-                  <Link href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
+                  </ArrowRight>
+                  <ArrowRight href="/contact" className="text-fuchsia-400 hover:text-fuchsia-300 transition-colors">
                     Get in Touch
-                  </Link>
+                  </ArrowRight>
                 </div>
               </div>
             </footer>

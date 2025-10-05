@@ -1,18 +1,19 @@
+import { ArrowRight, Brain, CheckCircle, Clock, Cloud, Code, DollarSign, Globe, MessageSquare, Server, Smartphone, Star } from 'lucide-react';
 import React from 'react'
+
 import { Helmet } from 'react-helmet-async'
-import {Brain,
-  Code,
-  Cloud,
-  Server,
-  MessageSquare,
-  CheckCircle,
-  ArrowRight,
-  DollarSign,
-  Clock,
-  Star,
-  Smartphone,
-  Globe
-} from 'lucide-react'
+
+
+
+
+
+
+
+
+
+
+
+
 export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';
   const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';

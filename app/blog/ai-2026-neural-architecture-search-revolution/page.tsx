@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function NeuralArchitectureSearchRevolutionPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <Link href="/blog" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Blog
-          </Link>
+          </ArrowRight>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-3 py-1 rounded-full text-xs font-bold">NAS REVOLUTION</span>
             <span className="bg-gradient-to-r from-green-400 to-emerald-500 text-black px-3 py-1 rounded-full text-xs font-bold">500x SPEED</span>
@@ -141,18 +141,18 @@ export default function NeuralArchitectureSearchRevolutionPage() {
               can help you achieve breakthrough performance in days instead of months.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <ArrowRight 
                 href="/services/ai-innovation-lab" 
                 className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all"
               >
                 Explore NAS Services
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/case-studies" 
                 className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 View NAS Success Stories
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </article>

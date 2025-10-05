@@ -1,13 +1,13 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function QuantumTransformationSuccessPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <Link href="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <ArrowRight href="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Case Studies
-          </Link>
+          </ArrowRight>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$10B ROI</span>
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">MEGA SUCCESS</span>
@@ -199,18 +199,18 @@ export default function QuantumTransformationSuccessPage() {
               Our team of experts is ready to help you achieve breakthrough results.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link 
+              <ArrowRight 
                 href="/services/ai-2026-quantum-enterprise-solutions" 
                 className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
               >
                 Start Your Transformation
-              </Link>
-              <Link 
+              </ArrowRight>
+              <ArrowRight 
                 href="/contact" 
                 className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 Schedule Consultation
-              </Link>
+              </ArrowRight>
             </div>
           </div>
         </article>

@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function OctoberFeaturedContentBanner() {
 	return (
@@ -8,13 +8,13 @@ export default function OctoberFeaturedContentBanner() {
 					<h2 className="text-2xl md:text-3xl font-bold">
 						New: Agentic Risk Mitigation 2026 — Safe Autonomy in Production
 					</h2>
-					<Link
+					<ArrowRight
 						href="/blog/agentic-risk-mitigation-2026"
 						className="inline-flex items-center gap-2 bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
 					>
 						Read the article
 						<span>→</span>
-					</Link>
+					</ArrowRight>
 				</div>
 			</div>
 		</section>

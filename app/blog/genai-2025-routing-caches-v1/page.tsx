@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'GenAI Routing v1 (2025): Tiered Models + Semantic Caches',
@@ -23,7 +23,7 @@ export default function Page() {
       </ul>
       <p>
         Explore more GenAI playbooks on the{' '}
-        <Link href="/blog" className="font-semibold">blog</Link>.
+        <ArrowRight href="/blog" className="font-semibold">blog</ArrowRight>.
       </p>
     </main>
   );

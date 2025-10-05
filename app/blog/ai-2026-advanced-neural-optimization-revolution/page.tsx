@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Advanced Neural Optimization Revolution - 1000x Performance Breakthrough',
@@ -168,32 +168,32 @@ export default function BlogPost() {
             Schedule a consultation to discover how your organization can achieve 1000x performance improvements.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link 
+            <ArrowRight 
               href="/contact" 
               className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
             >
               Schedule Consultation
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/case-studies/ai-2026-neural-optimization-mega-success" 
               className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
             >
               View Success Stories
-            </Link>
+            </ArrowRight>
           </div>
         </div>
 
         <div className="border-t border-gray-700 pt-8 mt-12">
           <h3 className="text-xl font-bold text-white mb-4">Related Content</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/blog/ai-2026-quantum-enhanced-analytics" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
+            <ArrowRight href="/blog/ai-2026-quantum-enhanced-analytics" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
               <h4 className="font-semibold text-white mb-2">Quantum-Enhanced Analytics: 1000x Speed</h4>
               <p className="text-gray-400 text-sm">Discover how quantum computing is revolutionizing data analytics</p>
-            </Link>
-            <Link href="/case-studies/ai-2026-neural-optimization-mega-success" className="block p-4 border border-gray-600 rounded-lg hover:border-green-500 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/case-studies/ai-2026-neural-optimization-mega-success" className="block p-4 border border-gray-600 rounded-lg hover:border-green-500 transition-colors">
               <h4 className="font-semibold text-white mb-2">$200M Neural Optimization Success</h4>
               <p className="text-gray-400 text-sm">Real-world case study of massive ROI achievement</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

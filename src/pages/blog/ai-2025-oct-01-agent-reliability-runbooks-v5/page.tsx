@@ -6,17 +6,10 @@ export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-<<<<<<< HEAD
-        <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
-        <meta 
-          name="description" 
-          content="Learn about agent reliability runbooks v5 and how it can benefit your enterprise." 
-=======
         <title>Ai 2025 Oct 01 Agent Reliability Runbooks V5</title>
         <meta 
           name="description" 
           content="Learn about ai 2025 oct 01 agent reliability runbooks v5 and how it can benefit your enterprise." 
->>>>>>> resolve-pr-25168
         />
         <link 
           rel="canonical" 
@@ -38,8 +31,5 @@ export default function BlogPage(): React.JSX.Element {
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> resolve-pr-25168

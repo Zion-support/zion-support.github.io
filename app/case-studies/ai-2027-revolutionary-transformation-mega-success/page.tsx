@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
   title: 'AI 2027 Revolutionary Transformation: $500M ROI Mega Success Story - Fortune 100 Case Study',
@@ -261,12 +261,12 @@ export default function AI2027RevolutionaryTransformationMegaSuccess() {
             Join the Fortune 100 companies already achieving revolutionary results with cutting-edge AI technologies.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <ArrowRight
               href="/services"
               className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our AI Services
-            </Link>
+            </ArrowRight>
             <a
               href="tel:+13024640950"
               className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
@@ -279,14 +279,14 @@ export default function AI2027RevolutionaryTransformationMegaSuccess() {
         <div className="mt-8 pt-8 border-t border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Resources</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <Link href="/blog/ai-2027-advanced-autonomous-systems" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            <ArrowRight href="/blog/ai-2027-advanced-autonomous-systems" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-bold text-gray-900">AI 2027 Advanced Autonomous Systems</h4>
               <p className="text-gray-600 text-sm">Complete guide to self-governing AI architectures</p>
-            </Link>
-            <Link href="/blog/ai-2027-quantum-enhanced-machine-learning" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+            </ArrowRight>
+            <ArrowRight href="/blog/ai-2027-quantum-enhanced-machine-learning" className="block p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
               <h4 className="font-bold text-gray-900">Quantum-Enhanced Machine Learning</h4>
               <p className="text-gray-600 text-sm">Revolutionary quantum AI technologies for enterprise</p>
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>

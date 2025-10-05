@@ -180,8 +180,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((item, index) => (
               <div
                 key={item.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 ${
-                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
+                className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                  currentSlide === index
+                    ? 'bg-gradient-to-r from-purple-600/30 to-blue-600/30 border border-purple-400/50'
+                    : 'bg-white/5 hover:bg-white/10 border border-transparent'
                 }`}
                 onClick={() => setCurrentSlide(index)}
               >
@@ -211,7 +213,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
+                currentSlide === index ? 'bg-purple-400' : 'bg-white/30'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

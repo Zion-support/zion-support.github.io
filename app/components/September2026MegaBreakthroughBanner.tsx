@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function September2026MegaBreakthroughBanner() {
   return (
@@ -54,18 +54,18 @@ export default function September2026MegaBreakthroughBanner() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link 
+                <ArrowRight 
                   href="/blog/ai-2026-september-mega-breakthrough-revolution" 
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
                 >
                   Read Mega Breakthrough →
-                </Link>
-                <Link 
+                </ArrowRight>
+                <ArrowRight 
                   href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" 
                   className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View $2.5T Success
-                </Link>
+                </ArrowRight>
               </div>
             </div>
 
@@ -79,9 +79,9 @@ export default function September2026MegaBreakthroughBanner() {
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">Transcendent Intelligence Systems</h3>
                 <p className="text-gray-400 text-sm mb-3">Revolutionary AI systems achieving 1,000,000x performance, universal consciousness, and transcendent automation capabilities.</p>
-                <Link href="/blog/ai-2026-september-mega-breakthrough-revolution" className="text-indigo-300 text-sm font-semibold hover:text-indigo-200">
+                <ArrowRight href="/blog/ai-2026-september-mega-breakthrough-revolution" className="text-indigo-300 text-sm font-semibold hover:text-indigo-200">
                   Read Full Breakthrough →
-                </Link>
+                </ArrowRight>
               </div>
 
               {/* Featured Case Study */}
@@ -92,9 +92,9 @@ export default function September2026MegaBreakthroughBanner() {
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">$2.5 Trillion ROI Success</h3>
                 <p className="text-gray-400 text-sm mb-3">How a Fortune 100 global conglomerate achieved $2.5 trillion ROI through transcendent intelligence and universal automation.</p>
-                <Link href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">
+                <ArrowRight href="/case-studies/ai-2026-september-mega-breakthrough-2-trillion-success" className="text-green-300 text-sm font-semibold hover:text-green-200">
                   View Success Story →
-                </Link>
+                </ArrowRight>
               </div>
 
               {/* Revolutionary Features */}

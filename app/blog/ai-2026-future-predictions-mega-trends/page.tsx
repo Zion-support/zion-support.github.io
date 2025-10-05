@@ -1,4 +1,6 @@
 
+import ArrowRight from 'next/link';
+
 export default function AI2026FuturePredictionsMegaTrends() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">

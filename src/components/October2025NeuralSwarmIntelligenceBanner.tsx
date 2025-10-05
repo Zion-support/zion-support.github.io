@@ -93,8 +93,8 @@ const October2025NeuralSwarmIntelligenceBanner: React.FC = () => {
                 }}
                 transition={{
                   duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  repeat: Infinity,",
+      ease: "easeInOut"
                 }}
                 className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30"
               >

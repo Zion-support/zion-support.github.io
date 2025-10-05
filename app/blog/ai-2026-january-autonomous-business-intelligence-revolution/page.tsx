@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata: Metadata = {
   title: 'January 2026 Autonomous Business Intelligence Revolution | Zion Tech Group',
@@ -241,18 +241,18 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
                   Transform your organization with self-driving BI that works 24/7 to optimize your business performance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link 
+                  <ArrowRight 
                     href="/contact" 
                     className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                   >
                     Contact Autonomous BI Specialists
-                  </Link>
-                  <Link 
+                  </ArrowRight>
+                  <ArrowRight 
                     href="/services" 
                     className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
                   >
                     Schedule Demo
-                  </Link>
+                  </ArrowRight>
                 </div>
               </div>
             </section>
@@ -263,18 +263,18 @@ export default function January2026AutonomousBusinessIntelligenceRevolution() {
         {/* Navigation */}
         <div className="max-w-4xl mx-auto mt-12">
           <div className="flex justify-between">
-            <Link 
+            <ArrowRight 
               href="/blog/ai-2026-january-quantum-neural-optimization-breakthrough" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               ← Previous Article
-            </Link>
-            <Link 
+            </ArrowRight>
+            <ArrowRight 
               href="/blog" 
               className="flex items-center text-blue-400 hover:text-blue-300 transition-colors"
             >
               Back to Blog →
-            </Link>
+            </ArrowRight>
           </div>
         </div>
       </div>
