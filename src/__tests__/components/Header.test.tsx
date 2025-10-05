@@ -1,9 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-
-// Mock Header component for testing
-const Header = () => <div data-testid="header">Header Component</div>;
+import Header from '../../components/Header';
 
 describe('Header', () => {
   it('renders without crashing', () => {

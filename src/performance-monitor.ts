@@ -39,7 +39,6 @@ class PerformanceMonitor {
     // Monitor Core Web Vitals
     console.log('Web Vitals monitoring setup');
   }
-
   cleanup(): void {
     this.isInitialized = false;
     console.log('Performance monitor cleaned up');
