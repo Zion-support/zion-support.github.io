@@ -1,11 +1,13 @@
 import Link from 'next/link';
+import { Clock, arrowright, Brain, Zap, Target, trendingup } from 'lucide-react';
 
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Target from 'lucide-react/dist/esm/icons/arget';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+
+
+
+
+
+
+
 
 export const metadata = {
   title: 'AI Cognitive Superintelligence 2026: The Next Frontier of Human-AI Collaboration',

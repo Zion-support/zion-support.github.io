@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import fs from 'fs';
-import path from 'path';
 import { execSync } from 'child_process';
 
 // Find all TypeScript files with lucide-react import issues
@@ -21,41 +20,37 @@ const fixLucideImports = (filePath) => {
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
-    // Common icon name mappings
-    const iconMappings = {
-      'rrowleft': 'arrowleft',
-      'alendar': 'calendar',
-      'ser': 'user',
-      'lock': 'clock',
-      'ag': 'tag',
-      'rendingup': 'trendingup',
-      'ollarsign': 'dollarsign',
-      'sers': 'users',
-      'arget': 'target',
-      'rain': 'brain',
-      'ap': 'zap',
-      'hield': 'shield',
-      'rrowright': 'arrowright',
-      'og': 'log',
-      'archart3': 'barchart3',
-      'lobe': 'globe',
-      'ocket': 'rocket',
-      'ot': 'bot',
-      'hare2': 'share2',
-      'ookmark': 'bookmark',
-      'ookopen': 'bookopen',
-      'pu': 'cpu',
-      'heckcircle': 'checkcircle'
-    };
-
-    // Fix each icon import
-    Object.entries(iconMappings).forEach(([wrong, correct]) => {
-      const regex = new RegExp(`lucide-react/dist/esm/icons/${wrong}`, 'g');
-      if (content.includes(`lucide-react/dist/esm/icons/${wrong}`)) {
-        content = content.replace(regex, `lucide-react/dist/esm/icons/${correct}`);
-        modified = true;
+    // Replace all lucide-react/dist/esm/icons/ imports with proper lucide-react imports
+    const lucideRegex = /import\s+(\w+)\s+from\s+['"]lucide-react\/dist\/esm\/icons\/([^'"]+)['"];?/g;
+    
+    const matches = [...content.matchAll(lucideRegex)];
+    
+    if (matches.length > 0) {
+      // Extract all unique icon names
+      const iconNames = [...new Set(matches.map(match => match[2]))];
+      
+      // Create a single import statement
+      const importStatement = `import { ${iconNames.join(', ')} } from 'lucide-react';`;
+      
+      // Remove all old import statements
+      content = content.replace(lucideRegex, '');
+      
+      // Add the new import statement at the top
+      const lines = content.split('\n');
+      let insertIndex = 0;
+      
+      // Find the last import statement
+      for (let i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith('import ')) {
+          insertIndex = i + 1;
+        }
       }
-    });
+      
+      lines.splice(insertIndex, 0, importStatement);
+      content = lines.join('\n');
+      
+      modified = true;
+    }
 
     if (modified) {
       fs.writeFileSync(filePath, content, 'utf8');

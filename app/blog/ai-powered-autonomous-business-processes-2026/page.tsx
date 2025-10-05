@@ -1,17 +1,19 @@
 import Link from 'next/link';
 
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Tag from 'lucide-react/dist/esm/icons/ag';
-import Share2 from 'lucide-react/dist/esm/icons/hare2';
-import BookOpen from 'lucide-react/dist/esm/icons/ookopen';
-import CheckCircle from 'lucide-react/dist/esm/icons/heckcircle';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
+
+
+
+
+
+
+
+
+
+
 
 import { Metadata } from 'next';
+import { arrowleft, Clock, User, Tag, share2, bookopen, checkcircle, trendingup, Brain, Zap } from 'lucide-react';
+
 
 export const metadata: Metadata = {
   title: 'AI-Powered Autonomous Business Processes: The 2026 Revolution | Zion Tech Group',
