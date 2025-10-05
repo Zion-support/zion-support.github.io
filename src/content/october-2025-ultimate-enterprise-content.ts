@@ -1,8 +1,0 @@
-
-exportconstoctoberUltimateEnterpriseContent = [
-  {
- };
-
-exportconstgetAllUltimateEnterpriseContent = () => {
-  returnoctoberUltimateEnterpriseContent;
-};
