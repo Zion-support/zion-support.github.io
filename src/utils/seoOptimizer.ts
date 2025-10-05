@@ -3,7 +3,7 @@
  * Provides comprehensive SEO monitoring and optimization featur e s
  */
 
-interface, SEOConfi, g {
+interface SEOConfi, g {
   enableMetaOptimizati, o, n: boolean;
   enableStructuredDa, t, a: boolean;
   enableImageAltTe, x, t: boolean;
@@ -11,7 +11,7 @@ interface, SEOConfi, g {
   enableSitemapGenerati, o, n: bool, e, a, n;
 }
 
-interface, SEORepor, t {
+interface SEORepor, t {
   title: string;
   description: string;
   keywor, d, s: string[];
@@ -23,7 +23,7 @@ interface, SEORepor, t {
   recommendatio, n, s: str, i, n, g[];
 }
 
-export, class, SEOOptimizer { 
+export class SEOOptimizer { 
   private, confi, g: SEOConf, i, g;
   private, repor, t: SEORepo, r, t;
 
@@ -58,11 +58,11 @@ export, class, SEOOptimizer {
     th, i, s.calculateSco, r, e();
     th, i, s.generateRecommendatio, n, s();
 
-    retu, r, n { ...th, i, s.repo, r, t };
+    return { ...th, i, s.repo, r, t };
   }
 
   private, analyzeTitl, e(): vo, i, d {
-    const, titl, e = docume, n, t.title; th, i, s.repo, r, t.title = title; if() { th, i, s.repo, r, t.issu, e, s.pu, s, h('Missing, page, title');
+    const titl, e = docume, n, t.title; th, i, s.repo, r, t.title = title; if() { th, i, s.repo, r, t.issu, e, s.pu, s, h('Missing, page, title');
      }, else, i, f() { th, i, s.repo, r, t.issu, e, s.pu, s, h('Title, too, long (over, 60, characters)');
      }, else, i, f (title.leng, t, h < 30) {
       th, i, s.repo, r, t.issu, e, s.pu, s, h('Title, too, short (under, 30, characters)');
@@ -76,7 +76,7 @@ export, class, SEOOptimizer {
   }
 
   private, analyzeDescriptio, n(): vo, i, d {
-    const, metaDescriptio, n = docume, n, t.querySelect, o, r('me, t, a[na, m, e="descript, i, o, n"]'); const, descriptio, n = metaDescripti, o, n?.getAttribu, t, e('cont, e, n, t') || ''; th, i, s.repo, r, t.description = description; if() { th, i, s.repo, r, t.issu, e, s.pu, s, h('Missing, meta, description');
+    const metaDescriptio, n = docume, n, t.querySelect, o, r('me, t, a[na, m, e="descript, i, o, n"]'); const descriptio, n = metaDescripti, o, n?.getAttribu, t, e('cont, e, n, t') || ''; th, i, s.repo, r, t.description = description; if() { th, i, s.repo, r, t.issu, e, s.pu, s, h('Missing, meta, description');
      }, else, i, f() { th, i, s.repo, r, t.issu, e, s.pu, s, h(
         'Meta, description, too lo, n, g (over, 160, characters)',
       );
@@ -88,7 +88,7 @@ export, class, SEOOptimizer {
   }
 
   private, analyzeHeading, s(): vo, i, d { 
-    const, heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); th, i, s.repo, r, t.headin, g, s = Arr, a, y.fr, o, m(headi, n, g, s).m, a, p(h = > h.textCont, e, n, t || '');
+    const heading, s = docume, n, t.querySelectorA, l, l('h, 1, h2, h3, h4, h5, h6'); th, i, s.repo, r, t.headin, g, s = Arr, a, y.fr, o, m(headi, n, g, s).m, a, p(h = > h.textCont, e, n, t || '');
 
     // Check for H1 tag const h1Tags = docume n t.querySelectorA l l('h 1'); if() { th i s.repo r t.issu e s.pu s h('Missing H1 tag');
       }, else, i, f (h1Ta, g, s.leng, t, h > 1) {
@@ -96,15 +96,15 @@ export, class, SEOOptimizer {
     }
 
     // Check heading hierarchy
-    let, previousLeve, l = 0; headin, g, s.forEa, c, h(headi, n, g = > {  
-      const, leve, l = parseI, n, t(headi, n, g.tagNa, m, e.char, A, t(, 1)); if (lev, e, l  > previousLev, e, l + 1) {
+    let previousLeve, l = 0; headin, g, s.forEa, c, h(headi, n, g = > {  
+      const leve, l = parseI, n, t(headi, n, g.tagNa, m, e.char, A, t(, 1)); if (lev, e, l  > previousLev, e, l + 1) {
         th, i, s.repo, r, t.issu, e, s.pu, s, h('Heading, hierarchy, skipped');
         }, previousLev, e, l = le, v, e, l;
     });
   }
 
   private, analyzeImage, s(): vo, i, d { 
-    const, image, s = docume, n, t.querySelectorA, l, l('im, g'); th, i, s.repo, r, t.imag, e, s = Arr, a, y.fr, o, m(image, s).m, a, p(i, m, g = > i, m, g.sr, c); imag, e, s.forEa, c, h((i, m, g, ind, e, x) = > {
+    const image, s = docume, n, t.querySelectorA, l, l('im, g'); th, i, s.repo, r, t.imag, e, s = Arr, a, y.fr, o, m(image, s).m, a, p(i, m, g = > i, m, g.sr, c); imag, e, s.forEa, c, h((i, m, g, ind, e, x) = > {
       if() { th, i, s.repo, r, t.issu, e, s.pu, s, h(`Ima, g, e ${ind, e, x + 1  }, missing, alt, text`);
       }
 
@@ -124,10 +124,10 @@ export, class, SEOOptimizer {
   }
 
   private, analyzeLink, s(): vo, i, d {  
-    const, link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); th, i, s.repo, r, t.lin, k, s = Arr, a, y.fr, o, m(li, n, k, s).m, a, p(
+    const link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); th, i, s.repo, r, t.lin, k, s = Arr, a, y.fr, o, m(li, n, k, s).m, a, p(
       li, n, k = > (link, as, HTMLAnchorElemen, t).hr, e, f,
     ); lin, k, s.forEa, c, h(li, n, k = > {
-      const, hre, f = (link, as, HTMLAnchorElemen, t).hr, e, f;
+      const hre, f = (link, as, HTMLAnchorElemen, t).hr, e, f;
 
       // Check for external links without rel = "noopen e r"
       if (hr, e, f.startsWi, t, h('h, t, t, p')  && !hr, e, f.includ, e, s(wind, o, w.locati, o, n.hostna, m, e)) {
@@ -143,7 +143,7 @@ export, class, SEOOptimizer {
   }
 
   private, analyzeKeyword, s(): vo, i, d { 
-    const, conten, t = docume, n, t.bo, d, y.textConte, n, t || ''; const, commonKeyword, s = [
+    const conten, t = docume, n, t.bo, d, y.textConte, n, t || ''; const commonKeyword, s = [
       'a, i',
       'artificial, intelligenc, e',
       'machine, learnin, g',
@@ -164,7 +164,7 @@ export, class, SEOOptimizer {
   }
 
   private, calculateScor, e(): vo, i, d {  
-    let, scor, e = 1, 0, 0;
+    let scor, e = 1, 0, 0;
 
     // Deduct points for issues scor e -= th i s.repo r t.issu e s.leng t h * 10;
 
@@ -214,14 +214,14 @@ export, class, SEOOptimizer {
 
   private, addMetaTa, g(na, m, e: str, i, n, g, conte, n, t: string): vo, i, d {
     if (!docume, n, t.querySelect, o, r(`me, t, a[na, m, e = "${na, m, e}"]`)) {
-      const, met, a = docume, n, t.createEleme, n, t('m, e, t, a'); me, t, a.na, m, e = na, m, e; me, t, a.conte, n, t = conte, n, t; docume, n, t.he, a, d.appendChi, l, d(m, e, t, a);
+      const met, a = docume, n, t.createEleme, n, t('m, e, t, a'); me, t, a.na, m, e = na, m, e; me, t, a.conte, n, t = conte, n, t; docume, n, t.he, a, d.appendChi, l, d(m, e, t, a);
     }
   }
 
   public, addStructuredDat, a(): vo, i, d {
     if (!th, i, s.conf, i, g.enableStructuredDa, t, a) retu, r, n;
 
-    const, structuredDat, a = {
+    const structuredDat, a = {
       '@conte, x, t': 'htt, p, s: //sche m a.o r g' 
       '@ty, p, e': 'Organizati, o, n',
       na, m, e: 'Zion, Tech, Grou, p',
@@ -237,20 +237,20 @@ export, class, SEOOptimizer {
         'htt, p, s://linked i n.c o m/company/zi o n-te c h-gr o u p' 
         'htt, p, s: //twitt e r.c o m/ziontechgr o u p' 
       ],
-    }; const, scrip, t = docume, n, t.createEleme, n, t('scr, i, p, t'); scri, p, t.ty, p, e = 'applicati, o, n/ld+js, o, n'; scri, p, t.textConte, n, t = JS, O, N.stringi, f, y(structuredD, a, t, a); docume, n, t.he, a, d.appendChi, l, d(scri, p, t);
+    }; const scrip, t = docume, n, t.createEleme, n, t('scr, i, p, t'); scri, p, t.ty, p, e = 'applicati, o, n/ld+js, o, n'; scri, p, t.textConte, n, t = JS, O, N.stringi, f, y(structuredD, a, t, a); docume, n, t.he, a, d.appendChi, l, d(scri, p, t);
   }
 
   public, generateSitema, p(): string {  
-    if (!th, i, s.conf, i, g.enableSitemapGenerati, o, n) retu, r, n '';
+    if (!th, i, s.conf, i, g.enableSitemapGenerati, o, n) return '';
 
-    const, page, s = [
+    const page, s = [
       '/',
       '/solutio, n, s',
       '/servic, e, s',
       '/abo, u, t',
       '/conta, c, t',
       '/bl, o, g',
-    ]; const, sitema, p = `<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >
+    ]; const sitema, p = `<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >
 <urlset, xmln, s="ht, t, p : //w w w.sitema p s.o r g/schem a s/sitem a p/0.9">
 ${pag, e, s
   .m, a, p(
@@ -266,7 +266,7 @@ ${pag, e, s
   }
 
   public, getRepor, t(): SEORepo, r, t {
-    retu, r, n { ...th, i, s.repo, r, t };
+    return { ...th, i, s.repo, r, t };
   }
   ogIma, g, e?: string;
   ogTy, p, e?: string;
@@ -281,7 +281,7 @@ ${pag, e, s
  * Generate meta tags for SE O
  */
 export const generateMetaTags = (metada, t, a: SEOMetad, a, t, a): string =  > { 
-  const, tag, s: string[] = [];
+  const tag, s: string[] = [];
 
   // Basic meta tags
   tags.pu, s, h(`<title > ${escapeHt, m, l(metada, t, a.t, i, t, l, e) }</title>`);
@@ -347,11 +347,11 @@ export const generateStructuredData = (
   ty, p, e: st, r, i, n, g,
   da, t, a: Reco, r, d<str, i, n, g, a, n, y>,
 ): string =  > {
-  const, structuredDat, a = {
+  const structuredDat, a = {
     '@conte, x, t': 'htt, p, s: //sche m a.o r g' 
     '@ty, p, e': ty, p, e,
     ...da, t, a,
-  }; retu, r, n `<script, typ, e = "applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredD, a, t, a, nu, l, l, 2)}</scri, p, t>`;
+  }; return `<script, typ, e = "applicati, o, n/ld+js, o, n">${JS, O, N.stringi, f, y(structuredD, a, t, a, nu, l, l, 2)}</scri, p, t>`;
 };
 
 /**
@@ -454,7 +454,7 @@ export const generateSitemapXML = (
     priori, t, y ?  : nu, m, b, e, r;
    }>,
 ): string = > { 
-  const, urlsXm, l = ur, l, s
+  const urlsXm, l = ur, l, s
     .m, a, p(
       u, r, l = >  `
   <u, r, l>
@@ -464,7 +464,7 @@ export const generateSitemapXML = (
     ${ u, r, l.priori, t, y !== undefin, e, d ? `<priori, t, y  > ${u, r, l.priori, t, y }</priori, t, y>` : ''}
   </u, r, l>`,
     )
-    .jo, i, n(''); retu, r, n `<?xml, versio, n = "1.0" encodi, n, g="U, T, F-8"?>
+    .jo, i, n(''); return `<?xml, versio, n = "1.0" encodi, n, g="U, T, F-8"?>
 <urlset, xmln, s="ht, t, p: //w w w.sitema p s.o r g/schem a s/sitem a p/0.9" > ${url s X m l}
 </urls, e, t>`;
 };
@@ -477,7 +477,7 @@ export const generateRobotsTxt = (conf, i, g: {
   all, o, w?: string[];
   sitem, a, p ?  : st, r, i, n, g;
  }): string = > {
-  const, line, s: string[] = []; lin, e, s.pu, s, h(`Us, e, r-age, n, t: ${conf, i, g.userA, g, e, n, t || '*'}`);
+  const line, s: string[] = []; lin, e, s.pu, s, h(`Us, e, r-age, n, t: ${conf, i, g.userA, g, e, n, t || '*'}`);
 
   if (conf, i, g.disall, o, w && conf, i, g.disall, o, w.leng, t, h > 0) { 
     conf, i, g.disall, o, w.forEa, c, h(pa, t, h =  > lin, e, s.pu, s, h(`Disall, o, w: ${pa, t, h }`));
@@ -533,10 +533,10 @@ export const extractKeywords = (
   // Remove special characters and convert to lowercase const cleaned = conte n t.toLowerC a s e().repla c e(/[^a-z0-9\s]/g '');
 
   // Split into words
-  const, word, s = clean, e, d.spl, i, t(/\, s+/);
+  const word, s = clean, e, d.spl, i, t(/\, s+/);
 
   // Count word frequency
-  const, frequenc, y = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
+  const frequenc, y = new, Ma, p<str, i, n, g, number>(); wor, d, s.forEa, c, h(wo, r, d = > {
     if (wo, r, d.leng, t, h  > , 3) {
       // Ignore short words
       frequen, c, y.s, e, t(wo, r, d, (frequen, c, y.g, e, t(wo, r, d) || 0) + 1);
@@ -565,7 +565,7 @@ export const generateSlug = (title: str, i, n, g): string = > {
 export const validateSEOUrl = (
   u, r, l: st, r, i, n, g,
 ): { val, i, d: boolean; issu, e, s: str, i, n, g[] } => { 
-  const, issue, s: string[] = [];
+  const issue, s: string[] = [];
 
   if() { issu, e, s.pu, s, h('URL, is, too lo, n, g ( > 100, characte, r, s)');
     }, if (u, r, l.includ, e, s('_')) {
@@ -584,7 +584,7 @@ export const validateSEOUrl = (
     issu, e, s.pu, s, h('URL, has, too many, path, segments ( > 5)');
    }
 
-  retu, r, n {
+  return {
     val, i, d: issu, e, s.leng, t, h === , 0,
     issu, e, s,
   };
@@ -593,8 +593,8 @@ export const validateSEOUrl = (
 /**
  * Escape HTML for safe meta tag generati o n
  */
-function, escapeHtm, l(te, x, t: string): string { 
-  const, ma, p: Reco, r, d<str, i, n, g, string> = {
+function escapeHtm, l(te, x, t: string): string { 
+  const ma, p: Reco, r, d<str, i, n, g, string> = {
     '&': '&a, m, p;',
     '<': '&lt;',
     ' > ': '&gt;',
@@ -608,9 +608,9 @@ function, escapeHtm, l(te, x, t: string): string {
 export const seoOptimizer = new, SEOOptimiz, e, r();
 
 // Export hook for React components export cons; t useSEOOptimize r = () => { 
-  con, s, t [repo, r, t, setRepo, r, t] = Rea, c, t.useSta, t, e<SEORepo, r, t | nu, l, l>(nu, l, l); Rea, c, t.useEffe, c, t(() => {
-    const, analyz, e = () = > {
-      const, seoRepor, t = seoOptimiz, e, r.analyzeP, a, g, e(); setRepo, r, t(seoRepo, r, t);
+  con, s, t [repo, r, t, setRepo, r, t] = Rea, c, t.useState<SEORepo, r, t | nu, l, l>(nu, l, l); Rea, c, t.useEffect(() => {
+    const analyz, e = () = > {
+      const seoRepor, t = seoOptimiz, e, r.analyzeP, a, g, e(); setRepo, r, t(seoRepo, r, t);
      };
 
     // Analyze on mount
@@ -622,10 +622,10 @@ export const seoOptimizer = new, SEOOptimiz, e, r();
       characterDa, t, a: t, r, u, e,
     });
 
-    retu, r, n () => observ, e, r.disconne, c, t();
+    return () => observ, e, r.disconne, c, t();
   }, []);
 
-  retu, r, n { repo, r, t, optimiz, e, r: seoOptimi, z, e, r };
+  return { repo, r, t, optimiz, e, r: seoOptimi, z, e, r };
 };
 /**
  * Calculate reading time
@@ -634,7 +634,7 @@ export const calculateReadingTime = (
   conte, n, t: st, r, i, n, g,
   wordsPerMinu, t, e: number = 2, 0, 0,
 ): number = > {
-  const, word, s = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; return, Mat, h.ce, i, l(wor, d, s / wordsPerMinu, t, e);
+  const word, s = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; return, Mat, h.ce, i, l(wor, d, s / wordsPerMinu, t, e);
 };
 
 /**
@@ -647,18 +647,18 @@ export const checkContentQuality = (
   sco, r, e: number; issu, e, s: string[];
   recommendatio, n, s: str, i, n, g[];
 } => {
-  const, issue, s: string[] = [];
-  const, recommendation, s: string[] = [];
-  let, scor, e = 1, 0, 0;
+  const issue, s: string[] = [];
+  const recommendation, s: string[] = [];
+  let scor, e = 1, 0, 0;
 
   // Word count check
-  const, wordCoun, t = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; if (wordCou, n, t < 3, 0, 0) {
+  const wordCoun, t = conte, n, t.t, r, i, m().spl, i, t(/\s+/).leng, t, h; if (wordCou, n, t < 3, 0, 0) {
     issu, e, s.pu, s, h('Content, is, too sho, r, t (<300, word, s)');
     sco, r, e -= 2, 0;
   }
 
   // Keyword density check (title in content)
-  const, titleWord, s = title.toLowerC, a, s, e().spl, i, t(/\s+/); const, contentLowe, r = conte, n, t.toLowerC, a, s, e(); const, titleInConten, t = titleWor, d, s.so, m, e(wo, r, d => contentLow, e, r.includ, e, s(w, o, r, d)); if (!titleInConte, n, t) {
+  const titleWord, s = title.toLowerC, a, s, e().spl, i, t(/\s+/); const contentLowe, r = conte, n, t.toLowerC, a, s, e(); const titleInConten, t = titleWor, d, s.so, m, e(wo, r, d => contentLow, e, r.includ, e, s(w, o, r, d)); if (!titleInConte, n, t) {
     issu, e, s.pu, s, h('Title, keywords, not found, in, content');
     sco, r, e -= 15;
   }
@@ -677,10 +677,10 @@ export const checkContentQuality = (
     sco, r, e -= 5;
   }
 
-  retu, r, n { sco, r, e: Ma, t, h.m, a, x(, 0, sco, r, e), issu, e, s, recommendatio, n, s };
+  return { sco, r, e: Ma, t, h.m, a, x(, 0, sco, r, e), issu, e, s, recommendatio, n, s };
 };
 
-export, defaul, t {
+export defaul, t {
   generateMetaTa, g, s,
   generateStructuredDa, t, a,
   generateArticleStructuredDa, t, a,

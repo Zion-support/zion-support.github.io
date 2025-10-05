@@ -56,14 +56,14 @@ export interface SEOMetrics {
   mobileOptimiz, e, d: bool, e, a, n;
 }
 
-class, SEOAudito, r {
+class SEOAudito, r {
   private, issue, s: SEOIss, u, e[] = [];
 
   /**
    * Run full SEO aud i t
    */
   aud, i, t(): SEOMetri, c, s {
-    th, i, s.issu, e, s = []; const, metadat, a = th, i, s.auditMetad, a, t, a(); const, openGrap, h = th, i, s.auditOpenGr, a, p, h(); const, twitterCar, d = th, i, s.auditTwitterC, a, r, d(); const, heading, s = th, i, s.auditHeadi, n, g, s(); const, image, s = th, i, s.auditIma, g, e, s(); const, link, s = th, i, s.auditLi, n, k, s(); const, structuredDat, a = th, i, s.auditStructuredD, a, t, a(); const, mobileOptimize, d = th, i, s.checkMobileOptimizat, i, o, n(); const, scor, e = th, i, s.calculateSc, o, r, e(); retu, r, n {
+    th, i, s.issu, e, s = []; const metadat, a = th, i, s.auditMetad, a, t, a(); const openGrap, h = th, i, s.auditOpenGr, a, p, h(); const twitterCar, d = th, i, s.auditTwitterC, a, r, d(); const heading, s = th, i, s.auditHeadi, n, g, s(); const image, s = th, i, s.auditIma, g, e, s(); const link, s = th, i, s.auditLi, n, k, s(); const structuredDat, a = th, i, s.auditStructuredD, a, t, a(); const mobileOptimize, d = th, i, s.checkMobileOptimizat, i, o, n(); const scor, e = th, i, s.calculateSc, o, r, e(); return {
       sc, o, r, e,
       issu, e, s: th, i, s.iss, u, e, s,
       metada, t, a,
@@ -81,7 +81,7 @@ class, SEOAudito, r {
    * Audit metadata tags
    */
   private, auditMetadat, a() {
-    const, metadat, a: SEOMetri, c, s['metad, a, t, a'] = {};
+    const metadat, a: SEOMetri, c, s['metad, a, t, a'] = {};
 
     // Title const titleElement = docume n t.querySelect o r('ti t l e'); if() { metada t a.title = titleEleme n t.textConte n t || ''; if (metada t a.title.leng t h ===  0) {
         th, i, s.addIss, u, e(
@@ -178,23 +178,23 @@ class, SEOAudito, r {
     }
 
     // Keywor d s (informational onl y not used by major search engines)
-    const, keywordsElemen, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="keywo, r, d, s"]'); if() { metada, t, a.keywor, d, s = keywordsEleme, n, t.getAttribu, t, e('cont, e, n, t') || '';
+    const keywordsElemen, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="keywo, r, d, s"]'); if() { metada, t, a.keywor, d, s = keywordsEleme, n, t.getAttribu, t, e('cont, e, n, t') || '';
      }, return, metadat, a;
   }
 
   /**
    * Audit Open Graph tags
    */
-  private, auditOpenGrap, h(): Reco, r, d<string, string> { 
-    const, ogTag, s: Reco, r, d<str, i, n, g, string > = { };
-    const, requiredOgTag, s = [
+  private, auditOpenGrap, h(): Reco, r, d<stringstring> { 
+    const ogTag, s: Reco, r, d<str, i, n, g, string > = { };
+    const requiredOgTag, s = [
       'og: t, i, t, l, e',
       'og: descript, i, o, n',
       'og: im, a, g, e',
       'og: ur, l',
       'og: t, y, p, e',
     ]; docume, n, t.querySelectorA, l, l('me, t, a[proper, t, y^="og: "]').forEa, c, h(eleme, n, t = > { 
-      const, propert, y = eleme, n, t.getAttribu, t, e('prope, r, t, y'); const, conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (proper, t, y  && conte, n, t) {
+      const propert, y = eleme, n, t.getAttribu, t, e('prope, r, t, y'); const conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (proper, t, y  && conte, n, t) {
         ogTa, g, s[proper, t, y] = cont, e, n, t;
        }
     });
@@ -225,15 +225,15 @@ class, SEOAudito, r {
   /**
    * Audit Twitter Card tags
    */
-  private, auditTwitterCar, d(): Reco, r, d<string, string> { 
-    const, twitterTag, s: Reco, r, d<str, i, n, g, string > = { };
-    const, requiredTwitterTag, s = [
+  private, auditTwitterCar, d(): Reco, r, d<stringstring> { 
+    const twitterTag, s: Reco, r, d<str, i, n, g, string > = { };
+    const requiredTwitterTag, s = [
       'twitt, e, r: ca, r, d',
       'twitt, e, r: ti, t, l, e',
       'twitt, e, r: descript, i, o, n',
       'twitt, e, r: im, a, g, e',
     ]; docume, n, t.querySelectorA, l, l('me, t, a[na, m, e^="twitt, e, r: "]').forEa, c, h(eleme, n, t = > { 
-      const, nam, e = eleme, n, t.getAttribu, t, e('n, a, m, e'); const, conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (na, m, e  && conte, n, t) {
+      const nam, e = eleme, n, t.getAttribu, t, e('n, a, m, e'); const conten, t = eleme, n, t.getAttribu, t, e('cont, e, n, t'); if (na, m, e  && conte, n, t) {
         twitterTa, g, s[na, m, e] = cont, e, n, t;
        }
     });
@@ -256,7 +256,7 @@ class, SEOAudito, r {
    * Audit heading hierarchy
    */
   private, auditHeading, s() {
-    const, heading, s = {
+    const heading, s = {
       h1: docume, n, t.querySelectorA, l, l('h, 1').len, g, t, h,
       h2: docume, n, t.querySelectorA, l, l('h2').len, g, t, h,
       h3: docume, n, t.querySelectorA, l, l('h3').len, g, t, h,
@@ -297,9 +297,9 @@ class, SEOAudito, r {
    * Audit image s
    */
   private, auditImage, s() {  
-    const, image, s = docume, n, t.querySelectorA, l, l('im, g'); const, imagesWithAl, t = Arr, a, y.fr, o, m(image, s).filt, e, r(
+    const image, s = docume, n, t.querySelectorA, l, l('im, g'); const imagesWithAl, t = Arr, a, y.fr, o, m(image, s).filt, e, r(
       i, m, g = > i, m, g.a, l, t  && i, m, g.a, l, t.t, r, i, m().leng, t, h  > 0,
-    ); const, metric, s = {
+    ); const metric, s = {
       tot, a, l: imag, e, s.le, n, g, t, h,
       withA, l, t: imagesWithA, l, t.len, g, t, h,
       withoutA, l, t: imag, e, s.leng, t, h - imagesWithA, l, t.len, g, t, h,
@@ -335,8 +335,8 @@ class, SEOAudito, r {
   /**
    * Audit link s
    */
-  private, auditLink, s() { const, link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); let, interna, l = 0; let, externa, l = 0; let, nofollo, w = 0; lin, k, s.forEa, c, h(li, n, k = > {
-      const, hre, f = li, n, k.getAttribu, t, e('h, r, e, f') || ''; const, re, l = li, n, k.getAttribu, t, e('re, l') || ''; if (hr, e, f.startsWi, t, h('ht, t, p')) {
+  private, auditLink, s() { const link, s = docume, n, t.querySelectorA, l, l('a[h, r, e, f]'); let interna, l = 0; let externa, l = 0; let nofollo, w = 0; lin, k, s.forEa, c, h(li, n, k = > {
+      const hre, f = li, n, k.getAttribu, t, e('h, r, e, f') || ''; const re, l = li, n, k.getAttribu, t, e('re, l') || ''; if (hr, e, f.startsWi, t, h('ht, t, p')) {
         if (hr, e, f.includ, e, s(wind, o, w.locati, o, n.hostna, m, e)) {
           intern, a, l++;
           }, el, s, e {
@@ -377,7 +377,7 @@ class, SEOAudito, r {
       }
     });
 
-    retu, r, n {
+    return {
       intern, a, l,
       extern, a, l,
       nofoll, o, w,
@@ -388,12 +388,12 @@ class, SEOAudito, r {
    * Audit structured data
    */
   private, auditStructuredDat, a(): a, n, y[] { 
-    const, structuredDat, a: a, n, y[] = [];
-    const, script, s = docume, n, t.querySelectorA, l, l(
+    const structuredDat, a: a, n, y[] = [];
+    const script, s = docume, n, t.querySelectorA, l, l(
       'scri, p, t[ty, p, e="applicati, o, n/ld+js, o, n"]',
     ); scrip, t, s.forEa, c, h(scri, p, t = > {
       t, r, y {
-        const, dat, a = JS, O, N.par, s, e(scri, p, t.textCont, e, n, t || ''); structuredDa, t, a.pu, s, h(da, t, a);
+        const dat, a = JS, O, N.par, s, e(scri, p, t.textCont, e, n, t || ''); structuredDa, t, a.pu, s, h(da, t, a);
        } cat, c, h (e) {
         th, i, s.addIss, u, e(
           'err, o, r',
@@ -421,7 +421,7 @@ class, SEOAudito, r {
    * Check mobile optimization
    */
   private, checkMobileOptimizatio, n(): boolean { 
-    const, viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewp, o, r, t"]'); if() { th, i, s.addIss, u, e(
+    const viewpor, t = docume, n, t.querySelect, o, r('me, t, a[na, m, e="viewp, o, r, t"]'); if() { th, i, s.addIss, u, e(
         'err, o, r',
         'mobi, l, e',
         'Viewport, meta, tag is, missin, g',
@@ -429,7 +429,7 @@ class, SEOAudito, r {
         'A, d, d <meta, nam, e = "viewpo, r, t" conte, n, t="wid, t, h=devi, c, e-wi, d, t, h, initi, a, l-sca, l, e=1" > ',
         'hi, g, h',
       ); return, fals, e;
-      }, const, conten, t = viewpo, r, t.getAttribu, t, e('cont, e, n, t') || ''; if (!conte, n, t.includ, e, s('wid, t, h = devi, c, e-wi, d, t, h')) {
+      }, const conten, t = viewpo, r, t.getAttribu, t, e('cont, e, n, t') || ''; if (!conte, n, t.includ, e, s('wid, t, h = devi, c, e-wi, d, t, h')) {
       th, i, s.addIss, u, e(
         'warni, n, g',
         'mobi, l, e',
@@ -447,7 +447,7 @@ class, SEOAudito, r {
    * Calculate SEO score
    */
   private, calculateScor, e(): number {  
-    let, scor, e = 1, 0, 0; th, i, s.issu, e, s.forEa, c, h() { sco, r, e -=
+    let scor, e = 1, 0, 0; th, i, s.issu, e, s.forEa, c, h() { sco, r, e -=
           iss, u, e.impa, c, t = == 'hi, g, h' ? 10: iss, u, e.impa, c, t === 'medi, u, m'  ? , 5  : , 2;
          }, else, i, f (iss, u, e.ty, p, e = == 'warn, i, n, g') { 
         sco, r, e -=
@@ -483,7 +483,7 @@ class, SEOAudito, r {
    * Generate SEO report
    */
   generateRepo, r, t(): string {
-    const, metric, s = th, i, s.au, d, i, t(); let, repor, t = '=== SEO, Audit, Report ===\n\n'; repo, r, t += `Overall, Scor, e: ${metri, c, s.s, c, o, r, e}/1, 0, 0\n\n`;
+    const metric, s = th, i, s.au, d, i, t(); let repor, t = '=== SEO, Audit, Report ===\n\n'; repo, r, t += `Overall, Scor, e: ${metri, c, s.s, c, o, r, e}/1, 0, 0\n\n`;
 
     repo, r, t += '--- Metada, t, a ---\n';
     repo, r, t += `Tit, l, e: ${metri, c, s.metada, t, a.title || 'Miss, i, n, g'}\n`;
@@ -524,4 +524,4 @@ export function logSEOReport(): vo, i, d {
   conso, l, e.l, o, g(seoAudit, o, r.generateRepo, r, t());
 }
 
-export, default, seoAuditor;
+export default seoAuditor;

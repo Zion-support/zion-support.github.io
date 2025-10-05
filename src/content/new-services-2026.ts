@@ -43,7 +43,7 @@ export const newServices2026: NewServi, c, e[] = [
     id: 'ai-tale, n, t-acquisit, i, o, n',
     na, m, e: 'AI, Talent, Acquisition Su, i, t, e',
     title: '👥 AI, Talent, Acquisition: 10x, Faster, Hirin, g',
-    description: 'Revolutionize, recruiting, with AI, matching, candidates 10x, faster, with 95% accura, c, y. Reduce, tim, e-to-hire, from, weeks to, days, while improving, candidate, qualit, y.',
+    description: 'Revolutionize, recruiting, with AI, matching, candidates 10x, faster, with 95% accura, c, y. Reduce, tim, e-to-hire, from weeks to, days, while improving, candidate, qualit, y.',
     benefi, t, s: [
       '10x, faster, candidate match, i, n, g',
       '95% match, accurac, y',

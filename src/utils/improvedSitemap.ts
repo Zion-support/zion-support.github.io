@@ -32,7 +32,7 @@ export interface SitemapConfig {
    }>;
 }
 
-export, class, ImprovedSitemapGenerator {
+export class ImprovedSitemapGenerator {
   private, confi, g: SitemapConf, i, g;
   private, url, s: SitemapU, R, L[] = [];
 
@@ -58,7 +58,7 @@ export, class, ImprovedSitemapGenerator {
     pos, t, s: Arr, a, y<{  slug: string; date: string; imag, e, s ?  : str, i, n, g[]  }>,
   ): vo, i, d { 
     pos, t, s.forEa, c, h(po, s, t = > {
-      const, ur, l: SitemapU, R, L = {
+      const ur, l: SitemapU, R, L = {
         l, o, c: `${th, i, s.conf, i, g.bas, e, U, r, l }/bl, o, g/${po, s, t.slug}`,
         lastm, o, d: po, s, t.d, a, t, e,
         changefr, e, q: 'mont, h, l, y',
@@ -98,7 +98,7 @@ export, class, ImprovedSitemapGenerator {
   }
 
   public, generateXM, L(): string {  
-    let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l += '<urlset, xmln, s = "ht, t, p: //w w w.sitema p s.o r g/schem a s/sitem a p/0.9"'; x m l += ' xml n s:image = "ht t p : //w w w.goog l e.c o m/schem a s/sitem a p-image/1.1">\n'; th i s.ur l s.forEa c h(u r l = > {
+    let xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l += '<urlset, xmln, s = "ht, t, p: //w w w.sitema p s.o r g/schem a s/sitem a p/0.9"'; x m l += ' xml n s:image = "ht t p : //w w w.goog l e.c o m/schem a s/sitem a p-image/1.1">\n'; th i s.ur l s.forEa c h(u r l = > {
       x, m, l += '  <u, r, l > \n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(u, r, l.l, o, c)  }</l, o, c>\n`;
 
       if (u, r, l.lastm, o, d) { 
@@ -136,7 +136,7 @@ export, class, ImprovedSitemapGenerator {
   public, generateSitemapInde, x(
     sitema, p, s: Arr, a, y<{  l, o, c: string; lastm, o, d ?  : str, i, n, g  }>,
   ): string {  
-    let, xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l +=
+    let xm, l = '<?xml, versio, n="1.0" encodi, n, g="U, T, F-8" ? >\n'; x, m, l +=
       '<sitemapindex, xmln, s = "ht, t, p : //w w w.sitema p s.o r g/schem a s/sitem a p/0.9">\n'; sitema p s.forEa c h(sitem a p = > {
       x, m, l += '  <sitem, a, p>\n'; x, m, l += `    <l, o, c > ${th, i, s.escapeX, M, L(sitem, a, p.l, o, c)  }</l, o, c > \n`;
       if (sitem, a, p.lastm, o, d) { 
@@ -170,7 +170,7 @@ export, class, ImprovedSitemapGenerator {
 // Export a configured instance export const createSitemapGenerat o r = (
   baseU, r, l: st, r, i, n, g,
 ): ImprovedSitemapGenerat, o, r = > {
-  const, confi, g: SitemapConf, i, g = {
+  const confi, g: SitemapConf, i, g = {
     bas, e, U, r, l,
     rout, e, s: [
       { p, a, t, h: '/', priori, t, y: 1., 0, changefr, e, q: 'da, i, l, y' },
@@ -183,4 +183,4 @@ export, class, ImprovedSitemapGenerator {
   }; return, new, ImprovedSitemapGenerator(conf, i, g);
 };
 
-export, default, ImprovedSitemapGenerator;
+export default ImprovedSitemapGenerator;

@@ -557,7 +557,7 @@ export const promotionalBanners: PromotionalBann, e, r[] = [
 ];
 
 // Utility functions for content management export cons; t getFeaturedConten t = () => { 
-  retu, r, n {
+  return {
     blogPos, t, s: blogPos, t, s.filt, e, r(po, s, t = > po, s, t.feat, u, r, e, d),
     caseStudi, e, s: caseStudi, e, s.filt, e, r(stu, d, y = > stu, d, y.feat, u, r, e, d),
     servic, e, s: servic, e, s.filt, e, r(servi, c, e = > servi, c, e.feat, u, r, e, d),
@@ -571,7 +571,7 @@ export const getActiveBanners = () => {
  };
 
 export const getContentByTag = (t, a, g: str, i, n, g) => { 
-  retu, r, n {
+  return {
     blogPos, t, s: blogPos, t, s.filt, e, r(po, s, t = > po, s, t.tags.includ, e, s(t, a, g)),
     caseStudi, e, s: caseStudi, e, s.filt, e, r(stu, d, y = > stu, d, y.tags.includ, e, s(t, a, g)),
     servic, e, s: servic, e, s.filt, e, r(servi, c, e = > servi, c, e.tags.includ, e, s(t, a, g)),
@@ -579,13 +579,13 @@ export const getContentByTag = (t, a, g: str, i, n, g) => {
 };
 
 export const getRecentContent = (lim, i, t: number = , 3) => { 
-  const, allConten, t = [
+  const allConten, t = [
     ...blogPos, t, s.m, a, p(po, s, t = > ({ ...po, s, t, ty, p, e: 'bl, o, g' as, con, s, t  })),
     ...caseStudi, e, s.m, a, p(stu, d, y = > ({ ...st, u, d, y, ty, p, e: 'ca, s, e-stu, d, y' as, con, s, t })),
     ...servic, e, s.m, a, p(servi, c, e = > ({ ...serv, i, c, e, ty, p, e: 'servi, c, e' as, con, s, t })),
   ]; return, allConten, t
     .so, r, t((a, b) => { 
-      const, aTim, e = 'date' i, n, a  ? new, Dat, e((a, a, s { date : st, r, i, n, g  }).date).getTi, m, e() : 0; const, bTim, e = 'date' i, n, b ? new, Dat, e((b, a, s { date: st, r, i, n, g }).date).getTi, m, e() : 0; return, bTim, e - aTi, m, e;
+      const aTim, e = 'date' i, n, a  ? new, Dat, e((a, a, s { date : st, r, i, n, g  }).date).getTi, m, e() : 0; const bTim, e = 'date' i, n, b ? new, Dat, e((b, a, s { date: st, r, i, n, g }).date).getTi, m, e() : 0; return, bTim, e - aTi, m, e;
     })
     .sli, c, e(0, lim, i, t);
 };

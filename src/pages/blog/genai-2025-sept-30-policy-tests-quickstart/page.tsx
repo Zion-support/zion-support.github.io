@@ -1,8 +1,8 @@
 // Minimal type s; remove t s-nocheck import React fr o m 'rea c t';
 impo, r, t { Helm, e, t } fr, o, m 'rea, c, t-helm, e, t-asy, n, c';
 
-export, default, function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t { 
-  retu, r, n (
+export default function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Eleme, n, t { 
+  return (
     <div, classNam, e = 'm, i, n-h-screen, b, g-gradie, n, t-to-br, fro, m-zi, o, n-bl, u, e-dark, vi, a-zi, o, n-blue, t, o-zi, o, n-purp, l, e-dark, tex, t-whi, t, e'>
       <Helm, e, t>
         <title>GenAI, 202, 5: Policy, Tests, Quickstart</title>
@@ -14,18 +14,18 @@ export, default, function PolicyTestsQuickstart20, 2, 5(): Rea, c, t.J, S, X.Ele
         />
       </Helm, e, t>
 
-      <div, classNam, e='container, m, x-auto, p, x-6, p, y-16'>
-        <h1, classNam, e='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
+      <div, className='container, m, x-auto, p, x-6, p, y-16'>
+        <h1, className='te, x, t-4xl, m, d:te, x, t-5xl, fon, t-bold, m, b-4'>
           GenAI, 202, 5: Policy, Tests, Quickstart
         </h1>
-        <p, classNam, e='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
+        <p, className='te, x, t-zi, o, n-sla, t, e-light, m, b-8'>
           K, P, I‑linked, CI, checks that, keep, teams fast, and, safe.
         </p>
-        <div, classNam, e='prose, pros, e-invert, ma, x-w-3, x, l'>
+        <div, className='prose, pros, e-invert, ma, x-w-3, x, l'>
           <p>
             Add, a, minim, a, l, pragmatic, layer, of CI, policy, tests mapped, to, measurable outcom, e, s. Catch, regressions, early without, blocking, delivery, using, budget, s, canari, e, s, and, rollback, triggers.
           </p>
-        </d, i, v>
-      </d, i, v>
+        </div>
+      </div>
     </d, i, v > );
  }

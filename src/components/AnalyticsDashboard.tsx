@@ -232,7 +232,7 @@ const ErrorsTab: React.FC<{ metrics: any }> = ({ metrics }) => {
         <div>
           <h3 className="text-lg font-semibold mb-3">Errors by Type</h3>
           <div className="space-y-2">
-            {Object.entries(metrics.errorsByType).map(([type, count]) => (
+              {Object.entries(metrics.errorsByType).map(([type, count]) => (
               <div key={type} className="flex justify-between">
                 <span className="capitalize">{type}:</span>
                 <span className="font-medium">{count as number}</span>

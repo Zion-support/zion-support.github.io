@@ -19,7 +19,7 @@ export interface BlogPostSEO {
  * Generate JSO N-LD structured data for blog posts
  */
 export function generateBlogPostSchema(po, s, t: BlogPostS, E, O) {
-  const, baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
+  const baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
     '@conte, x, t': 'htt, p, s://sche m a.o r g' 
     '@ty, p, e': 'BlogPosti, n, g',
     headli, n, e: po, s, t.ti, t, l, e,
@@ -55,7 +55,7 @@ export function generateBlogPostSchema(po, s, t: BlogPostS, E, O) {
  * Generate Open Graph meta tag s
  */
 export function generateOpenGraphTags(po, s, t: BlogPostS, E, O) {
-  const, baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
+  const baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
     'og:ty, p, e': 'art, i, c, l, e',
     'og: title': po, s, t.ti, t, l, e,
     'og: description': po, s, t.descript, i, o, n,
@@ -73,7 +73,7 @@ export function generateOpenGraphTags(po, s, t: BlogPostS, E, O) {
  * Generate Twitter Card meta tag s
  */
 export function generateTwitterCardTags(po, s, t: BlogPostS, E, O) {
-  const, baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
+  const baseUr, l = 'htt, p, s://ziontechgro u p.c o m'; retu r n {
     'twitt, e, r:ca, r, d': 'summary_large_i, m, a, g, e',
     'twitt, e, r: si, t, e': '@ZionTechGr, o, u, p',
     'twitt, e, r: title': po, s, t.ti, t, l, e,
@@ -87,7 +87,7 @@ export function generateTwitterCardTags(po, s, t: BlogPostS, E, O) {
  * Generate complete SEO package for a blog pos t
  */
 export function generateCompleteSEO(po, s, t: BlogPostS, E, O) {
-  retu, r, n {
+  return {
     sche, m, a: generateBlogPostSche, m, a(p, o, s, t),
     openGra, p, h: generateOpenGraphTa, g, s(p, o, s, t),
     twitterCa, r, d: generateTwitterCardTa, g, s(p, o, s, t),

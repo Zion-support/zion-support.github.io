@@ -1,9 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { advancedAnalytics as analytics } from '../utils/advancedAnalytics';
-// import AdvancedCacheManager from '../utils/advancedCache';
-import { enhancedAccessibility } from '../utils/enhancedAccessibility';
-import { securityAuditor } from '../utils/securityAuditor';
-// import EnhancedUXManager from '../utils/enhancedUXManager';
 
 interface DashboardData {
   analytics: {
@@ -24,7 +19,6 @@ interface DashboardData {
 const AdvancedDashboard: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState<DashboardData | null>(null);
-  const [activeTab, setActiveTab] = useState("overview");
 
   useEffect(() => {
     if (isOpen) {
@@ -35,90 +29,24 @@ const AdvancedDashboard: React.FC = () => {
   }, [isOpen]);
 
   const updateData = () => {
-    // Mock analytics data for now
-    const events: Array<{ name: string; timestamp?: number }> = [];
-    const cacheStats = { hits: 0, misses: 0, size: 0 };
-
-    // Convert analytics events to analytics data format
-    const analyticsData: AnalyticsData = {
-      id: `session_${Date.now()}`,
-      startTime: Date.now() - 300000, // 5 minutes ago
-      lastActivity: Date.now(),
-      pageViews: events.filter((e) => e.name === "page_view").length,
-      events: events.map((e) => ({
-        event: e.name,
-        timestamp: e.timestamp || Date.now(),
-        properties: (e as any).properties || {}
-      })),
-      deviceInfo: {
-        screenResolution: `${window.screen.width}x${window.screen.height}`,
-        language: navigator.language,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      }
-    };
-
-    // Convert cache stats to proper format
-    const cache: CacheData = {
-      size:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).size as number) || 0
-          : 0,
-      totalSize:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).totalSize as number) || 0
-          : 0,
-      maxSize:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).maxSize as number) || 0
-          : 0,
-      hitRate:
-        typeof cacheStats === "object" && cacheStats !== null
-          ? ((cacheStats as Record<string, unknown>).hitRate as number) || 0
-          : 0
-    };
-
-    setData({
-      analytics: analyticsData || {},
-      cache: cache || {},
+    // Mock data for demonstration
+    const mockData: DashboardData = {
+      analytics: {
+        pageViews: Math.floor(Math.random() * 1000) + 500,
+        sessions: Math.floor(Math.random() * 100) + 50,
+        bounceRate: Math.random() * 0.5 + 0.2
+      },
       performance: {
-        memoryUsage:
-          (
-            performance as Performance & {
-              memory?: { usedJSHeapSize?: number };
-            }
-          ).memory?.usedJSHeapSize || 0,
-        memoryLimit:
-          (
-            performance as Performance & {
-              memory?: { jsHeapSizeLimit?: number };
-            }
-          ).memory?.jsHeapSizeLimit || 0
+        loadTime: Math.random() * 2000 + 500,
+        responseTime: Math.random() * 500 + 100
       },
       security: {
-        vulnerabilities: 0,
-        threats: 0,
-        score: 100
-      },
-      ux: {
-        loadTime: 0,
-        interactivity: 0,
-        visualStability: 0
+        threatsBlocked: Math.floor(Math.random() * 10),
+        vulnerabilities: Math.floor(Math.random() * 5)
       }
-    });
-  };
-
-  const formatBytes = (bytes: number): string => {
-    if (bytes === 0) return "0 Bytes";
-    const k = 1024;
-      const sizes = ["Bytes", "KB", "MB", "GB"];
-      const i = Math.floor(Math.log(bytes) / Math.log(k));
-      return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + " " + sizes[i];
-  };
-
-  const formatDuration = (ms: number): string => {
-    if (ms < 1000) return `${ms}ms`;
-    if (ms < 60000) return `${(ms / 1000).toFixed(1)}s`;
-    return `${(ms / 60000).toFixed(1)}m`;
+    };
+    
+    setData(mockData);
   };
 
   if (!isOpen) {
@@ -149,42 +77,50 @@ const AdvancedDashboard: React.FC = () => {
             </svg>
           </button>
         </div>
-
-        {/* Tabs */}
-        <div className="bg-gray-100 border-b">
-          <div className="flex space-x-1 p-2">
-              {[
-                { id: "overview", label: "Overview" },
-                { id: "analytics", label: "Analytics" },
-                { id: "performance", label: "Performance" },
-                { id: "cache", label: "Cache" },
-                { id: "security", label: "Security" },
-                { id: "accessibility", label: "Accessibility" }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-                  activeTab === tab.id
-                    ? "bg-blue-600 text-white"
-                    : "text-gray-600 hover:text-gray-900 hover:bg-gray-200"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+        
+        <div className="p-4">
+          <div className="flex space-x-2 mb-4">
+            <button
+              onClick={() => setActiveTab("overview")}
+              className={`px-4 py-2 rounded ${
+                activeTab === "overview" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Overview
+            </button>
+            <button
+              onClick={() => setActiveTab("analytics")}
+              className={`px-4 py-2 rounded ${
+                activeTab === "analytics" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Analytics
+            </button>
+            <button
+              onClick={() => setActiveTab("performance")}
+              className={`px-4 py-2 rounded ${
+                activeTab === "performance" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Performance
+            </button>
+            <button
+              onClick={() => setActiveTab("security")}
+              className={`px-4 py-2 rounded ${
+                activeTab === "security" ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-700"
+              }`}
+            >
+              Security
+            </button>
           </div>
-        </div>
-
-        {/* Content */}
-        <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
-          {activeTab === "overview" && data && (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="bg-blue-50 p-4 rounded-lg">
-                <h3 className="font-semibold text-blue-900 mb-2">Analytics</h3>
-                <div className="space-y-1 text-sm">
-                  <div>
-                      Session: {data.analytics?.id?.substring(0, 12) || "N/A"}...
+          
+          {data && (
+            <div className="space-y-4">
+              {activeTab === "overview" && (
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h3 className="font-semibold text-blue-800">Page Views</h3>
+                    <p className="text-2xl font-bold text-blue-600">{data.analytics.pageViews}</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
                     <h3 className="font-semibold text-green-800">Sessions</h3>
@@ -246,38 +182,6 @@ const AdvancedDashboard: React.FC = () => {
               )}
             </div>
           )}
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Analytics</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Page Views: {data.analytics.pageViews}</p>
-                <p>Sessions: {data.analytics.sessions}</p>
-                <p>Bounce Rate: {(data.analytics.bounceRate * 100).toFixed(1)}%</p>
-              </div>
-            )}
-          </div>
-
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Performance</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Load Time: {data.performance.loadTime.toFixed(0)}ms</p>
-                <p>Response Time: {data.performance.responseTime.toFixed(0)}ms</p>
-              </div>
-            )}
-          </div>
-
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h3 className="text-lg font-semibold mb-2">Security</h3>
-            {data && (
-              <div className="space-y-2">
-                <p>Threats Blocked: {data.security.threatsBlocked}</p>
-                <p>Vulnerabilities: {data.security.vulnerabilities}</p>
-              </div>
-            )}
-          </div>
         </div>
       </div>
     </div>

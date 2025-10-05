@@ -22,7 +22,7 @@ export function convertNewContentPromoProps(legacyPro, p, s: {
   classNa, m, e?: string;
   varia, n, t?: string;
 }): UnifiedPromotionalBannerPro, p, s { 
-  retu, r, n {
+  return {
     varia, n, t: legacyPro, p, s.varia, n, t = == 'premi, u, m'  ? 'premi, u, m' : 'def, a, u, l, t',
     title: legacyPro, p, s.ti, t, l, e,
     description: legacyPro, p, s.descript, i, o, n,
@@ -88,7 +88,7 @@ export function createBannerConfig(
   pres, e, t: keyof, typeof, bannerPreset, s,
   overrid, e, s: Parti, a, l<UnifiedPromotionalBannerPr, o, p, s>,
 ): UnifiedPromotionalBannerPro, p, s {
-  retu, r, n {
+  return {
     ...bannerPrese, t, s[pres, e, t],
     ...overrid, e, s,
   } as, UnifiedPromotionalBannerProp, s;
