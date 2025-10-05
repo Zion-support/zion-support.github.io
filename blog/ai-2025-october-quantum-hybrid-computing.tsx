@@ -196,14 +196,12 @@ export default function AIQuantumHybridComputing2025() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Quantum Consultation
               </a>
               <a
-                href="/blog"
-                className="text-left"
+                href="/<blog" className="text-left"
               ></a>
                 Explore More AI Insights
               </a>

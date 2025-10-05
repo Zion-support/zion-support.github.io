@@ -263,10 +263,10 @@ export default function AI2025OctoberNeuralDataFabricRevolution() {
             and automatic governance at enterprise scale.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Schedule Data Assessment
             </a>
-            <a href="/services" className="text-left"></a>
+            <a href="/<services" className="text-left"></a>
               Explore Data Solutions
             </a>
           </div>

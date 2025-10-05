@@ -1,16 +1,21 @@
+import { Sparkles } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 export default function October2025EdgeAIQuantumCryptoBanner() {
   return (
     <section className="bg-gradient-to-r from-cyan-900/30 via-purple-900/30 to-pink-900/30 border-y border-cyan-500/30 py-12">
       <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto" > {/* Header */}
+        <div className="max-w-7xl mx-auto">
+          {/* Header */}
           <div className="flex items-center justify-center gap-3 mb-6">
-
+            <<<Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
             <span className="text-lg md:text-xl font-bold text-cyan-400 uppercase tracking-wider">
               🚀 JUST RELEASED OCTOBER 1, 2025: Revolutionary Technology Guides
             </span>
-
+            <<<Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
           </div>
 
           {/* Main Content */}
@@ -31,7 +36,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-cyan-500/20 p-3 rounded-lg">
-
+                  <<<Zap className="w-8 h-8 text-cyan-400" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-cyan-400">AI at the Edge with 5G</h3>
@@ -55,11 +60,10 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
                 <li>✓ 80% bandwidth cost reduction</li>
               </ul>
               <Link
-                to="/blog/ai-edge-computing-5g-networks-2025"
-                className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                to="/blog/ai-edge-computing-5g-networks-<2025" className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 Read Edge AI Guide
-
+                <<<ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -67,7 +71,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
                 <div className="bg-purple-500/20 p-3 rounded-lg">
-
+                  <<<Shield className="w-8 h-8 text-purple-400" />
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-purple-400">Quantum-Safe Cryptography</h3>
@@ -91,11 +95,10 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
                 <li>✓ 18-month migration roadmap included</li>
               </ul>
               <Link
-                to="/blog/quantum-safe-cryptography-implementation-2025"
-                className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
+                to="/blog/quantum-safe-cryptography-implementation-<2025" className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2 transition-all duration-300 hover:scale-105"
               >
                 Read Quantum Security Guide
-
+                <<<ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -111,7 +114,7 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
               <div className="text-blue-300 text-sm">Bandwidth Savings</div>
             </div>
             <div className="bg-purple-500/10 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30 text-center">
-              
+              <div className="text-3xl font-extrabold text-purple-400 mb-1">2030</div>
               <div className="text-purple-300 text-sm">Est. Q-Day Arrival</div>
             </div>
             <div className="bg-pink-500/10 backdrop-blur-sm rounded-xl p-4 border border-pink-500/30 text-center">
@@ -123,17 +126,15 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              to="/blog"
-              className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+              to="/<blog" className="bg-gradient-to-r from-cyan-500 to-purple-500 hover:from-cyan-600 hover:to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
             >
-
+              <<<Sparkles className="w-5 h-5" />
               Explore All Guides
             </Link>
             <Link
-              to="/contact"
-              className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+              to="/<contact" className="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
             >
-
+              <<<ArrowRight className="w-5 h-5" />
               Get Expert Consultation
             </Link>
           </div>

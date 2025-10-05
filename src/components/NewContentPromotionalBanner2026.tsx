@@ -1,4 +1,10 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [
@@ -33,19 +39,19 @@ const NewContentPromotionalBanner2026 = () => {
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-violet-500/20 to-purple-500/20 border border-violet-500/30 mb-6">
-
+            <<<Globe className="w-6 h-6 text-violet-400 animate-pulse" />
             <span className="text-violet-400 font-bold text-lg tracking-wider uppercase">
               🌍 NEW 2026 CONTENT REVOLUTION
             </span>
-
+            <<<Globe className="w-6 h-6 text-purple-400 animate-pulse" />
           </div>
 
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -61,9 +67,11 @@ const NewContentPromotionalBanner2026 = () => {
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {newContent.map((content, index) => (
-<div
-key={index}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20">
+            <div 
+              key={index}
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
+              style={{ animationDelay: `${index * 200}ms` }}
+            >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
@@ -95,7 +103,7 @@ key={index}
                 {/* Reader Count */}
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 text-gray-400">
-
+                    <<<Users className="w-4 h-4" />
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
@@ -106,7 +114,7 @@ key={index}
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.color} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
-
+                  <<<ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
             </div>
@@ -126,10 +134,10 @@ key={index}
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '2.5M+', label: 'Global Readers', icon: '>, color'
-              { value: '$15B+', label: 'Value Created', icon: '>, color'
-              { value: '99.9%', label: 'Content Accuracy', icon: '>, color'
-              { value: '150+', label: 'Countries Reached', icon: '>, color'
+              { value: '2.5M+', label: 'Global Readers', icon: <<<Users className="w-8 h-8" />, color: 'text-violet-400' },
+              { value: '$15B+', label: 'Value Created', icon: <<<TrendingUp className="w-8 h-8" />, color: 'text-purple-400' },
+              { value: '99.9%', label: 'Content Accuracy', icon: <<<Star className="w-8 h-8" />, color: 'text-blue-400' },
+              { value: '150+', label: 'Countries Reached', icon: <<<Globe className="w-8 h-8" />, color: 'text-emerald-400' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
@@ -159,16 +167,16 @@ key={index}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/blog"
-                  className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2">
-
+                  href="/<blog" className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-violet-500/50 flex items-center justify-center gap-2"
+                >
+                  <<<Rocket className="w-5 h-5" />
                   <span>Explore All Content</span>
                 </a>
                 <a
-                  href="/newsletter"
-                  className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                  href="/<newsletter" className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                >
                   <span>Subscribe to Updates</span>
-
+                  <<<ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>

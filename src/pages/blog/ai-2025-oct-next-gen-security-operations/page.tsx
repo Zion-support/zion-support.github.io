@@ -1,7 +1,12 @@
-import { Activity, AlertTriangle, ArrowLeft, DollarSign, Lock, Shield, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-
 import { Link } from "react-router-dom";
+import { ArrowLeft } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Lock } from 'lucide-react';
+
 export default function NextGenSecurityOperations2025() {
   return (
     <>
@@ -21,10 +26,9 @@ export default function NextGenSecurityOperations2025() {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link
-            to="/blog"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
+            to="/<blog" className="inline-flex items-center text-purple-400 hover:text-purple-300 mb-8 transition-colors"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <<<ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
 
@@ -48,24 +52,24 @@ export default function NextGenSecurityOperations2025() {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Shield className="h-8 w-8 text-purple-400" />
+                <<<Shield className="h-8 w-8 text-purple-400" />
                 Security Impact
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <Lock className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                  <<<Lock className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>99.97% Threat Detection:</strong> AI identifies sophisticated attacks that evade traditional security tools</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <<<Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
                   <span><strong>Sub-Second Response:</strong> Autonomous containment and remediation blocks threats instantly</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <<<DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <span><strong>$2.3B+ Protected:</strong> Average value of assets secured and breaches prevented annually</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0" />
+                  <<<AlertTriangle className="h-6 w-6 text-red-400 mt-1 flex-shrink-0" />
                   <span><strong>95% Faster MTTR:</strong> Mean time to resolution reduced from hours to minutes</span>
                 </li>
               </ul>
@@ -230,11 +234,10 @@ export default function NextGenSecurityOperations2025() {
                 against modern threats. Our proven implementation methodology ensures rapid deployment with measurable results.
               </p>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg"
+                to="/<contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-pink-600 transition-all shadow-lg"
               >
                 Schedule Your Security Assessment
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
+                <<<ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>
             </div>
           </div>

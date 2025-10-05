@@ -20,7 +20,7 @@ export default function IntelligentObservabilityUnifiedPlatform2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -173,8 +173,7 @@ export default function IntelligentObservabilityUnifiedPlatform2025() {
                   help you design and implement a unified platform tailored to your organization's needs.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Get Started Today
                 </a>

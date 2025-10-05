@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -23,7 +23,7 @@ export default function Page() {
           <p>Use this checklist to reduce time‑to‑value while preserving product quality and trust.</p>
 
           <div className="mt-10">
-            <ArrowRight href="/" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Home</ArrowRight>
+            <Link href="/" className="text-emerald-300 hover:text-emerald-200 font-semibold">← Back to Home</Link>
           </div>
         </div>
       </section>

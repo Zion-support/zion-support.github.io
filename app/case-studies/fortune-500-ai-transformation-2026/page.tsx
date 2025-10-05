@@ -297,14 +297,12 @@ export default function Fortune500AITransformation() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Get Free AI Assessment
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View More Success Stories
               </a>
@@ -316,7 +314,7 @@ export default function Fortune500AITransformation() {
         <aside className="mt-16 pt-8 border-t border-white/10">
           <h3 className="text-2xl font-bold text-white mb-6">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-2026-meta-cognitive-breakthrough" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
+            <a href="/blog/ai-2026-meta-cognitive-<breakthrough" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
               <h4 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors mb-2">
                 Meta-Cognitive AI: Technical Deep Dive
               </h4>
@@ -325,7 +323,7 @@ export default function Fortune500AITransformation() {
               </p>
             </a>
             
-            <a href="/case-studies" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
+            <a href="/case-<studies" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
               <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors mb-2">
                 More Success Stories
               </h4>

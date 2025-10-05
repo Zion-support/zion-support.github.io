@@ -234,10 +234,10 @@ const AI2026JanuaryQuantumConsciousnessBIBreakthrough = () =>
                 you implement this groundbreaking technology and unlock unprecedented insights from your data.
               </p>
               <div className="text-left"></div>
-                <a href="/services/quantum-consciousness-bi" className="text-left"></a>
+                <a href="/services/quantum-consciousness-<bi" className="text-left"></a>
                   Explore Solutions
                 </a>
-                <a href="/contact" className="text-left"></a>
+                <a href="/<contact" className="text-left"></a>
                   Schedule Demo
                 </a>
               </div>

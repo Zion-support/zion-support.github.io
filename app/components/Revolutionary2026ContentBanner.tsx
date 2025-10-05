@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
-import Brain from 'lucide-react';
-import Cpu from 'lucide-react';
-import Sparkles from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 export default function Revolutionary2026ContentBanner() {
   return (
@@ -18,7 +18,7 @@ export default function Revolutionary2026ContentBanner() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 mb-6">
-            <Sparkles className="w-5 h-5 text-purple-400 mr-2" />
+            <<<Sparkles className="w-5 h-5 text-purple-400 mr-2" />
             <span className="text-purple-200 font-medium">🚀 Revolutionary 2026 Content</span>
           </div>
           
@@ -44,7 +44,7 @@ export default function Revolutionary2026ContentBanner() {
             
             <div className="relative z-10">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-500 rounded-2xl mb-6">
-                <Zap className="w-8 h-8 text-white" />
+                <<<Zap className="w-8 h-8 text-white" />
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -72,11 +72,10 @@ export default function Revolutionary2026ContentBanner() {
               </div>
               
               <Link 
-                href="/blog/ai-2026-quantum-neural-fusion-revolutionary-breakthrough"
-                className="inline-flex items-center text-purple-300 hover:text-purple-200 font-medium group-hover:translate-x-1 transition-all duration-300"
+                href="/blog/ai-2026-quantum-neural-fusion-revolutionary-<breakthrough" className="inline-flex items-center text-purple-300 hover:text-purple-200 font-medium group-hover:translate-x-1 transition-all duration-300"
               >
                 Explore Quantum Fusion
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <<<ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -87,7 +86,7 @@ export default function Revolutionary2026ContentBanner() {
             
             <div className="relative z-10">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-2xl mb-6">
-                <Brain className="w-8 h-8 text-white" />
+                <<<Brain className="w-8 h-8 text-white" />
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -115,11 +114,10 @@ export default function Revolutionary2026ContentBanner() {
               </div>
               
               <Link 
-                href="/blog/ai-2026-synthetic-consciousness-enterprise-transformation"
-                className="inline-flex items-center text-blue-300 hover:text-blue-200 font-medium group-hover:translate-x-1 transition-all duration-300"
+                href="/blog/ai-2026-synthetic-consciousness-enterprise-<transformation" className="inline-flex items-center text-blue-300 hover:text-blue-200 font-medium group-hover:translate-x-1 transition-all duration-300"
               >
                 Discover Consciousness AI
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <<<ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -130,7 +128,7 @@ export default function Revolutionary2026ContentBanner() {
             
             <div className="relative z-10">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-2xl mb-6">
-                <Cpu className="w-8 h-8 text-white" />
+                <<<Cpu className="w-8 h-8 text-white" />
               </div>
               
               <h3 className="text-2xl font-bold text-white mb-4">
@@ -158,11 +156,10 @@ export default function Revolutionary2026ContentBanner() {
               </div>
               
               <Link 
-                href="/blog/ai-2026-autonomous-enterprise-operations-revolution"
-                className="inline-flex items-center text-indigo-300 hover:text-indigo-200 font-medium group-hover:translate-x-1 transition-all duration-300"
+                href="/blog/ai-2026-autonomous-enterprise-operations-<revolution" className="inline-flex items-center text-indigo-300 hover:text-indigo-200 font-medium group-hover:translate-x-1 transition-all duration-300"
               >
                 Explore Autonomous Ops
-                <ArrowRight className="w-4 h-4 ml-2" />
+                <<<ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -181,19 +178,17 @@ export default function Revolutionary2026ContentBanner() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/services/ai-2026-quantum-neural-fusion-enterprise-consulting"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                href="/services/ai-2026-quantum-neural-fusion-enterprise-<consulting" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-xl hover:from-purple-700 hover:to-blue-700 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
               >
-                <Zap className="w-5 h-5 mr-2" />
+                <<<Zap className="w-5 h-5 mr-2" />
                 Quantum Consulting
               </Link>
               
               <Link 
-                href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-300 font-semibold rounded-xl hover:bg-purple-400/10 hover:text-purple-200 transition-all duration-300"
+                href="/<contact" className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-purple-400 text-purple-300 font-semibold rounded-xl hover:bg-purple-400/10 hover:text-purple-200 transition-all duration-300"
               >
                 Schedule Consultation
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <<<ArrowRight className="w-5 h-5 ml-2" />
               </Link>
             </div>
           </div>

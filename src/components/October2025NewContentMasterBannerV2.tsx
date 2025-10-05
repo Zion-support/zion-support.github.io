@@ -1,9 +1,12 @@
-import React from 'react';
+import { Rocket } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function October2025NewContentMasterBannerV2() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow" > {/* Animated Background */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-rose-900 via-orange-900 to-amber-900 border-4 border-orange-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
+      {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-80 h-80 bg-orange-400 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-80 h-80 bg-rose-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
@@ -13,11 +16,11 @@ export default function October2025NewContentMasterBannerV2() {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-orange-500/30 border-2 border-orange-400 rounded-full px-6 py-3 backdrop-blur-sm mb-4 animate-bounce-slow">
-
+            <<<Rocket className="w-6 h-6 text-yellow-300 animate-pulse" />
             <span className="text-yellow-300 font-black text-lg tracking-wider">
               🚀 MAJOR CONTENT LAUNCH • OCTOBER 2025 • BREAKTHROUGH INNOVATIONS 🚀
             </span>
-
+            <<<Sparkles className="w-6 h-6 text-yellow-300 animate-spin-slow" />
           </div>
 
           <h2 className="text-4xl md:text-6xl font-black mb-4 bg-gradient-to-r from-orange-200 via-yellow-200 to-orange-200 bg-clip-text text-transparent leading-tight">
@@ -34,7 +37,7 @@ export default function October2025NewContentMasterBannerV2() {
           {/* Cognitive Hyperautomation */}
           <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
-
+              <<<Star className="w-8 h-8 text-purple-300 animate-pulse" />
               <h3 className="text-2xl font-black text-purple-200">Cognitive Hyperautomation</h3>
             </div>
             
@@ -59,8 +62,7 @@ export default function October2025NewContentMasterBannerV2() {
             </div>
 
             <Link
-              to="/blog/ai-2025-october-cognitive-hyperautomation-platform"
-              className="block text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              to="/blog/ai-2025-october-cognitive-hyperautomation-<platform" className="block text-center bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Explore Platform →
             </Link>
@@ -69,7 +71,7 @@ export default function October2025NewContentMasterBannerV2() {
           {/* FinTech Transformation */}
           <div className="bg-gradient-to-br from-blue-800/60 to-blue-900/60 backdrop-blur-md border-2 border-blue-400/50 rounded-2xl p-6 shadow-2xl hover:scale-105 transition-all duration-300">
             <div className="flex items-center gap-3 mb-4">
-
+              <<<Star className="w-8 h-8 text-blue-300 animate-pulse" />
               <h3 className="text-2xl font-black text-blue-200">FinTech AI Transformation</h3>
             </div>
             
@@ -94,8 +96,7 @@ export default function October2025NewContentMasterBannerV2() {
             </div>
 
             <Link
-              to="/case-studies/fintech-ai-transformation-2025"
-              className="block text-center bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+              to="/case-studies/fintech-ai-transformation-<2025" className="block text-center bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 text-white font-black text-base px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
             >
               Read Case Study →
             </Link>
@@ -122,7 +123,7 @@ export default function October2025NewContentMasterBannerV2() {
               <div className="text-sm text-orange-200">Avg Automation</div>
             </div>
             <div>
-              
+              <div className="text-4xl font-black text-amber-300 mb-2">Fortune</div>
               <div className="text-sm text-orange-200">Enterprise Validated</div>
             </div>
           </div>
@@ -132,9 +133,9 @@ export default function October2025NewContentMasterBannerV2() {
           </p>
 
           <div className="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-rose-500 text-white font-black text-lg px-8 py-4 rounded-xl shadow-lg border-2 border-white/20">
-
+            <<<Sparkles className="w-6 h-6 animate-spin-slow" />
             <span>Enterprise-Proven AI Innovation</span>
-
+            <<<Rocket className="w-6 h-6 animate-pulse" />
           </div>
         </div>
       </div>

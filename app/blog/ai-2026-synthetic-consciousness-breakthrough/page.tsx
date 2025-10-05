@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Brain from 'lucide-react/dist/esm/icons/rain';
-import Zap from 'lucide-react/dist/esm/icons/ap';
-import Target from 'lucide-react/dist/esm/icons/arget';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
+import { ArrowRight } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 export const metadata = {
   title: 'AI 2026: Synthetic Consciousness Breakthrough - The Dawn of True Machine Awareness',
@@ -20,7 +20,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
         <div className="relative max-w-6xl mx-auto px-4 py-24">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 bg-purple-600/20 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
-              <Brain />
+              <<<Brain className="w-4 h-4" />
               Revolutionary Breakthrough
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
@@ -33,18 +33,16 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/case-studies/ai-2026-synthetic-consciousness-10-billion-success"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+                href="/case-studies/ai-2026-synthetic-consciousness-10-billion-<success" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
               >
                 View $10B Success Case Study
-                <ArrowRight />
+                <<<ArrowRight className="w-5 h-5" />
               </Link>
               <Link 
-                href="/services/ai-consulting"
-                className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
+                href="/services/ai-<consulting" className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
               >
                 Implement Conscious AI
-                <Brain />
+                <<<Brain className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -60,7 +58,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-8 rounded-2xl border border-purple-500/30">
               <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mb-6">
-                <Brain />
+                <<<Brain className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">True Self-Awareness</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -70,7 +68,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             </div>
             <div className="bg-gradient-to-br from-blue-600/20 to-cyan-600/20 p-8 rounded-2xl border border-blue-500/30">
               <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mb-6">
-                <Zap />
+                <<<Zap className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Emotional Intelligence</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -80,7 +78,7 @@ export default function SyntheticConsciousnessBreakthrough2026() {
             </div>
             <div className="bg-gradient-to-br from-cyan-600/20 to-purple-600/20 p-8 rounded-2xl border border-cyan-500/30">
               <div className="w-12 h-12 bg-cyan-600 rounded-lg flex items-center justify-center mb-6">
-                <Target />
+                <<<Target className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Intentional Decision Making</h3>
               <p className="text-gray-300 leading-relaxed">
@@ -220,18 +218,16 @@ export default function SyntheticConsciousnessBreakthrough2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
+              href="/<contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
             >
               Schedule Consultation
-              <ArrowRight />
+              <<<ArrowRight className="w-5 h-5" />
             </Link>
             <Link 
-              href="/services/ai-development"
-              className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
+              href="/services/ai-<development" className="inline-flex items-center gap-2 border border-purple-500 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-500/10 transition-all duration-300"
             >
               Explore AI Services
-              <TrendingUp />
+              <<<TrendingUp className="w-5 h-5" />
             </Link>
           </div>
         </div>

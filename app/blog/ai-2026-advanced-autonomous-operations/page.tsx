@@ -1,13 +1,13 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function AIAdvancedAutonomousOperations2026() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
       <div className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <ArrowRight href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
+          <Link href="/" className="text-blue-400 hover:text-blue-300 transition-colors">
             ← Back to Home
-          </ArrowRight>
+          </Link>
         </nav>
 
         <article className="max-w-4xl mx-auto">
@@ -133,14 +133,12 @@ export default function AIAdvancedAutonomousOperations2026() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                  href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
                 >
                   Get Free Assessment
                 </a>
                 <a 
-                  href="/case-studies" 
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

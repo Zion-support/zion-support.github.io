@@ -113,20 +113,17 @@ export default function AutonomousAI2026RevolutionBanner() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link 
-            href="/services/ai-autonomous-operations-2026" 
-            className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
+            href="/services/ai-autonomous-operations-<2026" className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-8 py-4 rounded-lg font-bold hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105"
           >
             🚀 Explore Autonomous AI Services
           </Link>
           <Link 
-            href="/blog/ai-2026-next-generation-autonomous-systems" 
-            className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-300 border border-white border-opacity-30"
+            href="/blog/ai-2026-next-generation-autonomous-<systems" className="bg-white bg-opacity-20 backdrop-blur-sm text-white px-8 py-4 rounded-lg font-semibold hover:bg-opacity-30 transition-all duration-300 border border-white border-opacity-30"
           >
             📖 Read Technical Details
           </Link>
           <Link 
-            href="/case-studies" 
-            className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+            href="/case-<studies" className="bg-gradient-to-r from-green-400 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
           >
             💰 View Success Stories
           </Link>

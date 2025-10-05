@@ -45,14 +45,12 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
               </div>
               <div className="text-left"></div>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Achieve Similar Results →
                 </a>
                 <a
-                  href="#case-study-details"
-                  className="text-left"
+                  href="#case-study-<details" className="text-left"
                 ></a>
                   Read Full Case Study
                 </a>
@@ -61,7 +59,7 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
           </div>
         </section>
         {/* Case Study Details */}
-        <section id="case-study-details" className="text-left"></section>
+        <section id="case-study-<details" className="text-left"></section>
           <div className="text-left">
         <div className="text-left"></div>
               <div className="text-left"></div>
@@ -238,14 +236,12 @@ const Fortune500AI2026BreakthroughMegaSuccess = () =>
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Start Your Transformation
               </a>
               <a
-                href="/case-studies"
-                className="text-left"
+                href="/case-<studies" className="text-left"
               ></a>
                 View More Case Studies
               </a>

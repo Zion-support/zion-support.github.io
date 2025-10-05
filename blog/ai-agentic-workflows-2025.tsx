@@ -199,14 +199,12 @@ const AIAgenticWorkflows2025 = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule a Consultation
             </a>
             <a
-              href="/services"
-              className="text-left"
+              href="/<services" className="text-left"
             ></a>
               Explore Our Services
             </a>

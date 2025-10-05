@@ -1,7 +1,12 @@
-import { ArrowLeft, DollarSign, Globe, Package, TrendingUp, Zap } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
-
 import { Link } from "react-router-dom";
+import { ArrowLeft } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Package } from 'lucide-react';
+import { Globe } from 'lucide-react';
+
 export default function AutonomousSupplyChainRevolution2025() {
   return (
     <>
@@ -21,10 +26,9 @@ export default function AutonomousSupplyChainRevolution2025() {
       <article className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 text-white">
         <div className="container mx-auto px-4 py-12 max-w-4xl">
           <Link
-            to="/blog"
-            className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors"
+            to="/<blog" className="inline-flex items-center text-blue-400 hover:text-blue-300 mb-8 transition-colors"
           >
-            <ArrowLeft className="mr-2 h-4 w-4" />
+            <<<ArrowLeft className="mr-2 h-4 w-4" />
             Back to Blog
           </Link>
 
@@ -48,24 +52,24 @@ export default function AutonomousSupplyChainRevolution2025() {
           <div className="prose prose-invert prose-lg max-w-none">
             <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20 rounded-xl p-8 mb-12">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <Package className="h-8 w-8 text-blue-400" />
+                <<<Package className="h-8 w-8 text-blue-400" />
                 Transformational Impact
               </h2>
               <ul className="space-y-4 text-lg">
                 <li className="flex items-start gap-3">
-                  <TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
+                  <<<TrendingUp className="h-6 w-6 text-green-400 mt-1 flex-shrink-0" />
                   <span><strong>99.2% Forecast Accuracy:</strong> AI predicts demand with unprecedented precision across SKUs and regions</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
+                  <<<Zap className="h-6 w-6 text-yellow-400 mt-1 flex-shrink-0" />
                   <span><strong>78% Cost Reduction:</strong> Autonomous optimization eliminates waste and maximizes efficiency</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
+                  <<<DollarSign className="h-6 w-6 text-emerald-400 mt-1 flex-shrink-0" />
                   <span><strong>$1.8B+ Total Value:</strong> Average annual savings and revenue gains for enterprise deployments</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
+                  <<<Globe className="h-6 w-6 text-blue-400 mt-1 flex-shrink-0" />
                   <span><strong>$450M+ Disruption Prevention:</strong> Predictive risk management prevents costly supply chain failures</span>
                 </li>
               </ul>
@@ -230,11 +234,10 @@ export default function AutonomousSupplyChainRevolution2025() {
                 within months. Our proven implementation methodology ensures rapid time-to-value while minimizing risk.
               </p>
               <Link
-                to="/contact"
-                className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg"
+                to="/<contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-cyan-600 transition-all shadow-lg"
               >
                 Schedule Your Supply Chain AI Assessment
-                <ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
+                <<<ArrowLeft className="ml-2 h-5 w-5 rotate-180" />
               </Link>
             </div>
           </div>

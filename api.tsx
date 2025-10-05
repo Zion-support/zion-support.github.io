@@ -1,8 +1,10 @@
-import { ArrowRight, Code, ExternalLink, Shield, Zap } from 'lucide-react';
 import React from 'react'
-
 import { Link } from 'react-router-dom'
-
+import { Code } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 export default function API() {
   const endpoints = [
     {
@@ -44,21 +46,21 @@ export default function API() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Code className="w-8 h-8 text-blue-600" />
+                <<<Code className="w-8 h-8 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">RESTful APIs</h3>
               <p className="text-gray-600">Clean) intuitive REST endpoints for easy integration</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-green-600" />
+                <<<Shield className="w-8 h-8 text-green-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Secure</h3>
               <p className="text-gray-600">Enterprise-grade security with JWT authentication</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Zap className="w-8 h-8 text-purple-600" />
+                <<<Zap className="w-8 h-8 text-purple-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Fast</h3>
               <p className="text-gray-600">High-performance APIs with sub-100ms response times</p>
@@ -116,13 +118,13 @@ export default function API() {
               Ready to integrate with our APIs? Get your API key and start building amazing applications.
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center">
-              <Link href="/contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
+              <Link href="/<contact" className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300">
                 Get API Key
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <<<ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link href="/docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
+              <Link href="/<docs" className="inline-flex items-center px-8 py-3 border border-gray-300 text-gray-700 font-semibold rounded-lg hover:bg-gray-50 transition-all duration-300">
                 View Full Documentation
-                <ExternalLink className="ml-2 w-5 h-5" />
+                <<<ExternalLink className="ml-2 w-5 h-5" />
               </Link>
             </div>
           </div>

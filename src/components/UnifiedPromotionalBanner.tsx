@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Zap, Rocket, Star, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export interface FeaturedItem {
   title: string;
@@ -82,8 +82,8 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
   const visibleItems = featuredItems.slice(0, showCount);
 
   return (
-    <div
-className={`
+    <div 
+      className={`
         bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
@@ -105,7 +105,8 @@ className={`
             {date && (
               <span className="text-sm text-gray-300 font-medium">{date}</span>
             )}
-          </div>)}
+          </div>
+        )}
 
         {/* Title */}
         <h2 className={`
@@ -117,9 +118,11 @@ className={`
         `}>
           {title}
         </h2>
-        
+
         {/* Description */}
-        <p className={`text-gray-200 mb-6 ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
+        <p className={`
+          text-gray-200 mb-6
+          ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
             variant === 'compact' ? 'text-sm' : 
             'text-base md:text-lg'}
         `}>
@@ -128,7 +131,9 @@ className={`
 
         {/* Featured Items */}
         {visibleItems.length > 0 && (
-          <div className={`grid gap-4 mb-6 ${variant === 'mega' ? 'md:grid-cols-3' : 
+          <div className={`
+            grid gap-4 mb-6
+            ${variant === 'mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
               'md:grid-cols-1'}
           `}>
@@ -151,6 +156,7 @@ className={`
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
+                  <<<ArrowRight className="flex-shrink-0 w-5 h-5 text-purple-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </Link>
             ))}

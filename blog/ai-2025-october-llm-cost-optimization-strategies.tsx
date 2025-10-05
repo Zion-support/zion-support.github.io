@@ -306,8 +306,7 @@ class ModelRouter
             LLM costs by 70-90% while maintaining or improving quality.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule Cost Optimization Consultation
           </a>

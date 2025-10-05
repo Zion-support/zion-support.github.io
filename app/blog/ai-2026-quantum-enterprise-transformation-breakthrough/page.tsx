@@ -1,13 +1,13 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function QuantumEnterpriseTransformationPage() {
   return (
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <ArrowRight href="/blog" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <Link href="/<blog" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Blog
-          </ArrowRight>
+          </Link>
           <div className="flex items-center gap-2 mb-4">
             <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">QUANTUM BREAKTHROUGH</span>
             <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">1000x PERFORMANCE</span>
@@ -117,18 +117,16 @@ export default function QuantumEnterpriseTransformationPage() {
               is ready to help you achieve breakthrough performance improvements.
             </p>
             <div className="flex flex-wrap gap-4">
-              <ArrowRight 
-                href="/services/ai-2026-quantum-enterprise-solutions" 
-                className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
+              <Link 
+                href="/services/ai-2026-quantum-enterprise-<solutions" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
               >
                 Explore Quantum AI Services
-              </ArrowRight>
-              <ArrowRight 
-                href="/case-studies" 
-                className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
+              </Link>
+              <Link 
+                href="/case-<studies" className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 View Success Stories
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </article>

@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Data Contracts 2026: Shipping Reliable AI with Measurable Data Quality',
@@ -68,10 +68,10 @@ export default function AIDataContracts2026Page() {
             <h3 className="text-2xl font-bold mb-2">Need measurable, reliable data for AI?</h3>
             <p className="opacity-90 mb-4">We implement data contracts, observability, and scorecards end‑to‑end.</p>
             <div className="flex gap-3 flex-col sm:flex-row">
-              <a href="tel:+13024640950" className="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
+              <a href="tel:+<13024640950" className="bg-white text-indigo-700 px-5 py-3 rounded-lg font-semibold hover:bg-gray-100">
                 Call +1 302 464 0950
               </a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">
+              <a href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-5 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">
                 Get Consultation
               </a>
             </div>
@@ -107,11 +107,11 @@ export default function AIDataContracts2026Page() {
 
 function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
-    <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+    <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-lg font-bold text-gray-900 mb-2">{title}</h3>
       <p className="text-gray-600 mb-3">{description}</p>
       <span className="text-indigo-600 font-semibold">Read More →</span>
-    </ArrowRight>
+    </Link>
   );
 }
 

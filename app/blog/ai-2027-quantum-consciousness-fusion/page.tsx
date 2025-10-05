@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2027: Quantum Consciousness Fusion - 100,000x Performance Breakthrough',
@@ -240,12 +240,11 @@ export default function AI2027QuantumConsciousnessFusion() {
             Only 15 slots remaining
           </div>
           <br />
-          <ArrowRight 
-            href="/contact" 
-            className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all"
+          <Link 
+            href="/<contact" className="inline-block bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-indigo-600 transition-all"
           >
             Secure Your Quantum Access
-          </ArrowRight>
+          </Link>
         </div>
 
         <h3 className="text-2xl font-bold text-gray-900 mb-4">The Future is Quantum Conscious</h3>
@@ -263,18 +262,16 @@ export default function AI2027QuantumConsciousnessFusion() {
             Contact us today to secure your exclusive early access slot.
           </p>
           <div className="flex gap-4">
-            <ArrowRight 
-              href="/contact" 
-              className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
+            <Link 
+              href="/<contact" className="bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
             >
               Get Quantum Access
-            </ArrowRight>
-            <ArrowRight 
-              href="/case-studies/ai-2027-quantum-breakthrough-success" 
-              className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
+            </Link>
+            <Link 
+              href="/case-studies/ai-2027-quantum-breakthrough-<success" className="bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors"
             >
               View Success Stories
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>

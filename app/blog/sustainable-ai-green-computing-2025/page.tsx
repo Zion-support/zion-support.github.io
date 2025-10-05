@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Sustainable AI: Green Computing Solutions for Enterprise 2025',
@@ -24,9 +24,9 @@ export default function SustainableAIGreenComputing() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <ArrowRight href="/blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+        <Link href="/<blog" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
           ← Back to Blog
-        </ArrowRight>
+        </Link>
         <div className="flex items-center gap-2 mb-4">
           <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
             Sustainable Technology
@@ -332,15 +332,13 @@ export default function SustainableAIGreenComputing() {
             are not just compatible—they're synergistic.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight
-              href="/services/sustainable-ai"
-              className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            <Link
+              href="/services/sustainable-<ai" className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Green Solutions
-            </ArrowRight>
+            </Link>
             <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+              href="tel:+<13024640950" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
             >
               Call +1 302 464 0950
             </a>

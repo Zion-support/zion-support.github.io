@@ -19,7 +19,7 @@ export default function AINeural ArchitectureSearch2026()
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -177,14 +177,12 @@ export default function AINeural ArchitectureSearch2026()
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Schedule Consultation
                   </a>
                   <a
-                    href="/services/ai-data-analytics"
-                    className="text-left"
+                    href="/services/ai-data-<analytics" className="text-left"
                   ></a>
                     Explore AI Services
                   </a>
@@ -197,10 +195,10 @@ export default function AINeural ArchitectureSearch2026()
                   Written by Zion Tech Group AI Research Team
                 </div>
                 <div className="text-left"></div>
-                  <a href="/blog" className="text-left"></a>
+                  <a href="/<blog" className="text-left"></a>
                     ← Back to Blog
                   </a>
-                  <a href="/contact" className="text-left"></a>
+                  <a href="/<contact" className="text-left"></a>
                     Contact Us
                   </a>
                 </div>

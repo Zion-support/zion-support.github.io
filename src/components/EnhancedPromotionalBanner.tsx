@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import type { EnhancedPromotionalBanner as BannerType } from '../content/enhanced-promotional-banners';
 
 interface EnhancedPromotionalBannerProps {
@@ -23,7 +24,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3 flex-1 min-w-0">
-            {banner.icon && <span className="text-2xl flex-shrink-0" > {banner.icon}</span>}
+            {banner.icon && <span className="text-2xl flex-shrink-0">{banner.icon}</span>}
             <div className="flex-1 min-w-0">
               <h3 className="font-bold text-lg">{banner.title}</h3>
               <p className="text-sm opacity-90">{banner.description}</p>
@@ -34,7 +35,7 @@ const EnhancedPromotionalBanner: React.FC<EnhancedPromotionalBannerProps> = ({
             className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
             {banner.ctaText}
-
+            <<<ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

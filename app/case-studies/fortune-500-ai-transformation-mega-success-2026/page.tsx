@@ -424,14 +424,12 @@ export default function Fortune500AITransformationMegaSuccess2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/blog" 
-                className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                href="/<blog" className="bg-white text-green-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Read More Success Stories
               </Link>
               <Link 
-                href="/contact" 
-                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
+                href="/<contact" className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors"
               >
                 Start Your AI Transformation
               </Link>
@@ -443,7 +441,7 @@ export default function Fortune500AITransformationMegaSuccess2026() {
         <div className="max-w-4xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-white mb-8">More Success Stories</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/case-studies/enterprise-ai-transformation-mega-success-2026" className="group">
+            <Link href="/case-studies/enterprise-ai-transformation-mega-success-<2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-green-400 mb-2">
                   Enterprise AI Transformation Mega Success
@@ -453,7 +451,7 @@ export default function Fortune500AITransformationMegaSuccess2026() {
                 </p>
               </div>
             </Link>
-            <Link href="/case-studies/ai-quantum-breakthrough-success-2026" className="group">
+            <Link href="/case-studies/ai-quantum-breakthrough-success-<2026" className="group">
               <div className="bg-gradient-to-br from-slate-800/50 to-gray-800/50 rounded-xl p-6 hover:from-slate-700/50 hover:to-gray-700/50 transition-all">
                 <h4 className="text-lg font-semibold text-white group-hover:text-green-400 mb-2">
                   AI Quantum Breakthrough Success

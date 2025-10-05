@@ -129,8 +129,7 @@ export default function AutonomousBusinessProcessBanner() {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
-              href="/blog/ai-2026-autonomous-business-processes"
-              className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+              href="/blog/ai-2026-autonomous-business-<processes" className="group bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
             >
               <span className="flex items-center gap-2">
                 Learn About Autonomous Business
@@ -138,8 +137,7 @@ export default function AutonomousBusinessProcessBanner() {
               </span>
             </Link>
             <Link 
-              href="/case-studies/ai-2026-neural-optimization-success-story"
-              className="group bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
+              href="/case-studies/ai-2026-neural-optimization-success-<story" className="group bg-white/10 hover:bg-white/20 text-white border border-white/30 hover:border-white/50 px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300"
             >
               <span className="flex items-center gap-2">
                 View Success Stories

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025NewestAIInnovationsBanner() {
@@ -29,8 +28,7 @@ export default function October2025NewestAIInnovationsBanner() {
               <li>✅ Zero-Touch Operations</li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-revolution"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
             >
               Read Full Guide →
             </Link>
@@ -48,8 +46,7 @@ export default function October2025NewestAIInnovationsBanner() {
               <li>✅ Predictive Analytics</li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-2-next-gen-ai-observability-platform"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              to="/blog/ai-2025-october-2-next-gen-ai-observability-<platform" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
             >
               Explore Platform →
             </Link>
@@ -67,8 +64,7 @@ export default function October2025NewestAIInnovationsBanner() {
               <li>✅ Self-Improving AI Systems</li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-2-autonomous-ml-pipeline-optimization"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              to="/blog/ai-2025-october-2-autonomous-ml-pipeline-<optimization" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
             >
               Discover More →
             </Link>

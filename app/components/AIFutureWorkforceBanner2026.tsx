@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import Users from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import ArrowRight from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function AIFutureWorkforceBanner2026() {
   return (
@@ -22,7 +22,7 @@ export default function AIFutureWorkforceBanner2026() {
           {/* Left Column - Content */}
           <div>
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm text-sm font-medium mb-6">
-              <Brain className="w-4 h-4 mr-2" />
+              <<<Brain className="w-4 h-4 mr-2" />
               FUTURE OF WORK 2026
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -56,17 +56,15 @@ export default function AIFutureWorkforceBanner2026() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/blog/ai-future-workforce-2026"
-                className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
+                href="/blog/ai-future-workforce-<2026" className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
-                <Users className="w-5 h-5 mr-2" />
+                <<<Users className="w-5 h-5 mr-2" />
                 Read Full Article
               </Link>
               <Link
-                href="/services"
-                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center"
+                href="/<services" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center"
               >
-                <TrendingUp className="w-5 h-5 mr-2" />
+                <<<TrendingUp className="w-5 h-5 mr-2" />
                 Transform Your Workforce
               </Link>
             </div>
@@ -80,7 +78,7 @@ export default function AIFutureWorkforceBanner2026() {
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Users className="w-6 h-6 text-white" />
+                    <<<Users className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">AI-Augmented Roles</h4>
@@ -92,7 +90,7 @@ export default function AIFutureWorkforceBanner2026() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-400 to-teal-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Brain className="w-6 h-6 text-white" />
+                    <<<Brain className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Enhanced Skills</h4>
@@ -104,7 +102,7 @@ export default function AIFutureWorkforceBanner2026() {
 
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <TrendingUp className="w-6 h-6 text-white" />
+                    <<<TrendingUp className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h4 className="font-bold text-lg mb-1">Organizational Impact</h4>
@@ -117,11 +115,10 @@ export default function AIFutureWorkforceBanner2026() {
 
               <div className="mt-6 pt-6 border-t border-white/20">
                 <Link
-                  href="/blog/ai-future-workforce-2026"
-                  className="inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold"
+                  href="/blog/ai-future-workforce-<2026" className="inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold"
                 >
                   Learn More About Workforce Transformation
-                  <ArrowRight className="w-4 h-4 ml-2" />
+                  <<<ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
               </div>
             </div>

@@ -1,15 +1,20 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Brain } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
 
 const CognitiveOrchestrationMegaBanner: React.FC = () => {
   return (
     <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 px-4 mb-8">
-      <div className="max-w-7xl mx-auto" > {/* Announcement Badge */}
+      <div className="max-w-7xl mx-auto">
+        {/* Announcement Badge */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full animate-pulse">
-
+            <<<Zap className="w-5 h-5 text-yellow-300" />
             <span className="font-bold text-lg">🚀 JUST PUBLISHED: OCTOBER 1, 2025 — BIGGEST BREAKTHROUGH OF THE YEAR!</span>
-
+            <<<Zap className="w-5 h-5 text-yellow-300" />
           </div>
         </div>
 
@@ -41,7 +46,7 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
             <div className="text-sm font-semibold">Autonomous Accuracy</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border-2 border-white/20 hover:border-yellow-300 transition-all">
-            
+            <div className="text-4xl font-extrabold text-yellow-300 mb-2">287K</div>
             <div className="text-sm font-semibold">AI Agents Deployed</div>
           </div>
         </div>
@@ -49,17 +54,17 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
         {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/20">
-
+            <<<Brain className="w-12 h-12 text-yellow-300 mb-4" />
             <h3 className="text-xl font-bold mb-3">Neural Decision Engine</h3>
             <p className="text-white/90">500T parameter AI model making 287,000 decisions per second with 99.97% accuracy</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/20">
-
+            <<<TrendingUp className="w-12 h-12 text-yellow-300 mb-4" />
             <h3 className="text-xl font-bold mb-3">Fortune 50 Success</h3>
             <p className="text-white/90">$84.7B value delivered across 2,847 global facilities with 3.2-month payback</p>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/20">
-
+            <<<Globe className="w-12 h-12 text-yellow-300 mb-4" />
             <h3 className="text-xl font-bold mb-3">Global-Scale Operations</h3>
             <p className="text-white/90">847,000 systems integrated, 127 countries, 99.99% uptime, 24/7 autonomous</p>
           </div>
@@ -68,20 +73,17 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            to="/blog/ai-2025-oct-01-cognitive-orchestration-breakthrough"
-            className="bg-yellow-400 text-purple-900 hover:bg-yellow-300 font-bold py-4 px-8 rounded-xl text-lg shadow-2xl hover:shadow-yellow-400/50 transition-all transform hover:scale-105"
+            to="/blog/ai-2025-oct-01-cognitive-orchestration-<breakthrough" className="bg-yellow-400 text-purple-900 hover:bg-yellow-300 font-bold py-4 px-8 rounded-xl text-lg shadow-2xl hover:shadow-yellow-400/50 transition-all transform hover:scale-105"
           >
             📖 Read Complete Breakthrough Guide →
           </Link>
           <Link
-            to="/case-studies/cognitive-orchestration-84-billion-success"
-            className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl text-lg shadow-2xl hover:shadow-white/50 transition-all transform hover:scale-105"
+            to="/case-studies/cognitive-orchestration-84-billion-<success" className="bg-white text-purple-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl text-lg shadow-2xl hover:shadow-white/50 transition-all transform hover:scale-105"
           >
             💎 View $84.7B Success Story →
           </Link>
           <Link
-            to="/services/cognitive-orchestration-platform-services"
-            className="border-3 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-xl text-lg shadow-2xl transition-all transform hover:scale-105"
+            to="/services/cognitive-orchestration-platform-<services" className="border-3 border-white text-white hover:bg-white hover:text-purple-600 font-bold py-4 px-8 rounded-xl text-lg shadow-2xl transition-all transform hover:scale-105"
           >
             🚀 Get Started Today →
           </Link>

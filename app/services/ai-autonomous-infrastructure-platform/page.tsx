@@ -242,7 +242,7 @@ export default function AIAutonomousInfrastructurePlatform() {
                   Email support
                 </li>
               </ul>
-              <a href="/contact" className="block w-full text-center bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition-colors">
+              <a href="/<contact" className="block w-full text-center bg-orange-500 text-white py-3 rounded-lg hover:bg-orange-600 transition-colors">
                 Get Started
               </a>
             </div>
@@ -272,7 +272,7 @@ export default function AIAutonomousInfrastructurePlatform() {
                   Custom integrations
                 </li>
               </ul>
-              <a href="/contact" className="block w-full text-center bg-emerald-500 text-white py-3 rounded-lg hover:bg-emerald-600 transition-colors">
+              <a href="/<contact" className="block w-full text-center bg-emerald-500 text-white py-3 rounded-lg hover:bg-emerald-600 transition-colors">
                 Get Started
               </a>
             </div>
@@ -301,7 +301,7 @@ export default function AIAutonomousInfrastructurePlatform() {
                   SLA guarantees
                 </li>
               </ul>
-              <a href="/contact" className="block w-full text-center bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition-colors">
+              <a href="/<contact" className="block w-full text-center bg-red-500 text-white py-3 rounded-lg hover:bg-red-600 transition-colors">
                 Contact Sales
               </a>
             </div>
@@ -317,15 +317,13 @@ export default function AIAutonomousInfrastructurePlatform() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold rounded-full hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                href="/<contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold rounded-full hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
               >
                 Schedule Demo
                 <span className="ml-2">🚀</span>
               </a>
               <a 
-                href="/case-studies" 
-                className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
+                href="/case-<studies" className="inline-flex items-center px-8 py-4 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300"
               >
                 View Case Studies
                 <span className="ml-2">📊</span>

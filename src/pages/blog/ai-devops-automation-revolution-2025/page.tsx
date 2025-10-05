@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function AIDevOpsAutomationRevolution2025Page() {
   return (
@@ -208,10 +207,10 @@ export default function AIDevOpsAutomationRevolution2025Page() {
               Transform your DevOps operations with AI-powered automation. Our team of experts will help you design and implement a custom solution tailored to your infrastructure and business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
+              <a href="/<contact" className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all transform hover:scale-105 shadow-xl">
                 Schedule Consultation
               </a>
-              <a href="/demo" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">
+              <a href="/<demo" className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-all">
                 Request Demo
               </a>
             </div>

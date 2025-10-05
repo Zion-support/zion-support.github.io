@@ -1,19 +1,9 @@
-import { ArrowRight, Award, CheckCircle, Globe, Lightbulb, Shield, Target, Users, Zap } from 'lucide-react';
 import React from 'react';
-
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-
-
-
-
-
-
-
-;
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const About: React.FC = () => {
   const values = [
@@ -140,8 +130,7 @@ const About: React.FC = () => {
                   an increasingly digital world.
                 </p>
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  to="/<contact" className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   Start Your Journey
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -314,15 +303,13 @@ const About: React.FC = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+                  to="/<contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
                 >
                   Get in Touch
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
-                  to="/services"
-                  className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                  to="/<services" className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                 >
                   View Our Services
                 </Link>

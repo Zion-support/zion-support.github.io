@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2028: Autonomous FinOps Scorecards | Zion Tech Group',
@@ -68,12 +68,12 @@ export default function Page() {
         <div className="mt-10 p-6 rounded-2xl bg-emerald-900/40 border border-emerald-700/40">
           <div className="text-sm text-emerald-200 mb-2">Next up</div>
           <div className="flex flex-wrap gap-3">
-            <ArrowRight href="/blog/ai-2027-cost-optimization-playbook" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+            <Link href="/blog/ai-2027-cost-optimization-<playbook" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
               Cost Optimization Playbook 2027 →
-            </ArrowRight>
-            <ArrowRight href="/blog/genai-quality-tiers-v2-2026" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
+            </Link>
+            <Link href="/blog/genai-quality-tiers-v2-<2026" className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white transition-colors">
               GenAI Quality Tiers v2 →
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </article>

@@ -1,4 +1,3 @@
-import Link from 'next/link';
 
 export default function EnterpriseAITransformation2026CompleteGuide() {
   return (
@@ -39,14 +38,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="#transformation-framework" 
-                className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+                href="#transformation-<framework" className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Explore Framework →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Implementation Support
               </a>
@@ -56,7 +53,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
       </div>
 
       {/* Transformation Framework Section */}
-      <section id="transformation-framework" className="py-20 bg-slate-900/50">
+      <section id="transformation-<framework" className="py-20 bg-slate-900/50">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 to-blue-400 bg-clip-text text-transparent">
@@ -228,7 +225,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             ].map((metric, index) => (
               <div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
                 <div className="text-6xl mb-4">{metric.icon}</div>
-                <div `}>
+                <div className={`text-4xl font-extrabold mb-2 ${metric.color}`}>
                   {metric.value}
                 </div>
                 <div className="text-gray-400 text-sm font-medium">
@@ -246,14 +243,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Get Free Assessment
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Success Stories
               </a>
@@ -301,8 +296,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
               </div>
               <a 
-                href="/case-studies/financial-services-ai-transformation" 
-                className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
+                href="/case-studies/financial-services-ai-<transformation" className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
               >
                 Read Full Case Study →
               </a>
@@ -334,8 +328,7 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
                 </div>
               </div>
               <a 
-                href="/case-studies/manufacturing-ai-transformation" 
-                className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
+                href="/case-studies/manufacturing-ai-<transformation" className="inline-block text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
               >
                 Read Full Case Study →
               </a>
@@ -355,14 +348,12 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
+              href="/<contact" className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
             >
               Start Transformation
             </a>
             <a 
-              href="/blog" 
-              className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/<blog" className="border-2 border-emerald-500 text-emerald-400 hover:bg-emerald-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Explore More Guides
             </a>
@@ -376,9 +367,9 @@ export default function EnterpriseAITransformation2026CompleteGuide() {
           <div className="text-center text-gray-400">
             <p className="mb-4">© 2026 Zion Tech Group. All rights reserved.</p>
             <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-emerald-400 transition-colors">Contact Us</a>
+              <a href="/<privacy" className="hover:text-emerald-400 transition-colors">Privacy Policy</a>
+              <a href="/<terms" className="hover:text-emerald-400 transition-colors">Terms of Service</a>
+              <a href="/<contact" className="hover:text-emerald-400 transition-colors">Contact Us</a>
             </div>
           </div>
         </div>

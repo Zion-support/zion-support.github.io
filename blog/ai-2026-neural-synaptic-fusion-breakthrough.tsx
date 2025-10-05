@@ -274,20 +274,17 @@ export default function AI2026NeuralSynapticFusionBreakthrough() {
                 </p>
                 <div className="text-left"></div>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Get Started Today
                   </a>
                   <a
-                    href="/services/neural-synaptic-fusion-ai-services"
-                    className="text-left"
+                    href="/services/neural-synaptic-fusion-ai-<services" className="text-left"
                   ></a>
                     Explore Services →
                   </a>
                   <a
-                    href="/case-studies/ai-2026-neural-synaptic-fusion-2-4-billion-roi-success"
-                    className="text-left"
+                    href="/case-studies/ai-2026-neural-synaptic-fusion-2-4-billion-roi-<success" className="text-left"
                   ></a>
                     View Case Study
                   </a>

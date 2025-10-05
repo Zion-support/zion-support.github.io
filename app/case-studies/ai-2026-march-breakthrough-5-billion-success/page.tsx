@@ -41,20 +41,17 @@ export default function March2026CaseStudyPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#results" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                href="#<results" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Results
               </a>
               <a 
-                href="/blog/ai-2026-march-breakthrough-revolution" 
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                href="/blog/ai-2026-march-breakthrough-<revolution" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
               >
                 Read Full Guide →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Free Consultation
               </a>
@@ -179,7 +176,7 @@ export default function March2026CaseStudyPage() {
             </section>
 
             {/* Results Achieved */}
-            <section id="results" className="mb-16">
+            <section id="<results" className="mb-16">
               <h2 className="text-4xl font-bold text-white mb-8">Results Achieved</h2>
               
               <div className="grid md:grid-cols-2 gap-8 mb-8">
@@ -301,20 +298,17 @@ export default function March2026CaseStudyPage() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                   <a 
-                    href="/contact" 
-                    className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                    href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
                   >
                     Get Free Consultation
                   </a>
                   <a 
-                    href="/blog/ai-2026-march-breakthrough-revolution" 
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                    href="/blog/ai-2026-march-breakthrough-<revolution" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                   >
                     Read Full Guide →
                   </a>
                   <a 
-                    href="/services/ai-2026-march-breakthrough-consulting" 
-                    className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                    href="/services/ai-2026-march-breakthrough-<consulting" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                   >
                     Explore Services
                   </a>

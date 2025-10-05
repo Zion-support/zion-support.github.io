@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Governed Agent Patterns v3 (2025) — Zion Tech Group',
@@ -24,7 +24,7 @@ export default function Page() {
         </ul>
         <p>
           See related operational runbooks in the{' '}
-          <ArrowRight href="/blog" className="text-blue-600 hover:underline">Blog</ArrowRight>.
+          <Link href="/<blog" className="text-blue-600 hover:underline">Blog</Link>.
         </p>
       </section>
     </main>

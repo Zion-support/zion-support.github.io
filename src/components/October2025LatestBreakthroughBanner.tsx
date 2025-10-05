@@ -1,9 +1,13 @@
+import { ArrowRight } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { octoberLatestBreakthroughContent } from "../content/october-2025-latest-breakthrough-content";
 
 const October2025LatestBreakthroughBanner = () => {
   return (
-    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-16 px-4 relative overflow-hidden" > {/* Animated background effects */}
+    <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 py-16 px-4 relative overflow-hidden">
+      {/* Animated background effects */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -13,7 +17,7 @@ const October2025LatestBreakthroughBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-
+            <<<Zap className="w-5 h-5 text-yellow-400 animate-pulse" />
             <span className="text-white font-semibold text-sm">
               NEW BREAKTHROUGH CONTENT · OCTOBER 2025
             </span>
@@ -30,7 +34,7 @@ const October2025LatestBreakthroughBanner = () => {
 
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          {octoberLatestBreakthroughContent.map((content) = > {
+          {octoberLatestBreakthroughContent.map((content) => {
             const Icon = content.icon === "🚀" ? Zap : content.icon === "⚡" ? Database : Bot;
             
             return (
@@ -39,8 +43,10 @@ const October2025LatestBreakthroughBanner = () => {
                 to={`/blog/${content.slug}`}
                 className="group bg-white/10 backdrop-blur-md border border-white/20 rounded-xl p-6 hover:bg-white/20 hover:scale-105 transition-all duration-300"
               >
-                <div className="flex items-start gap-4 mb-4" > <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>
-                    <Icon className="w-6 h-6 text-white"</div>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className={`bg-gradient-to-br ${content.gradient} p-3 rounded-lg`}>
+                    <Icon className="w-6 h-6 text-white" />
+                  </div>
                   <div className="flex-1">
                     <div className="text-xs text-blue-300 mb-2">{content.category}</div>
                     <h3 className="text-lg font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
@@ -55,7 +61,7 @@ const October2025LatestBreakthroughBanner = () => {
 
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 gap-2 mb-4">
-                  {Object.entries(content.metrics).slice(0, 2).map(([key, value]) = > (
+                  {Object.entries(content.metrics).slice(0, 2).map(([key, value]) => (
                     <div key={key} className="bg-white/5 rounded-lg p-2">
                       <div className="text-2xl font-bold text-white">{value}</div>
                       <div className="text-xs text-blue-300 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
@@ -65,9 +71,9 @@ const October2025LatestBreakthroughBanner = () => {
 
                 {/* Highlights */}
                 <ul className="space-y-2 mb-4">
-                  {content.highlights.slice(0, 2).map((highlight, idx) = > (
+                  {content.highlights.slice(0, 2).map((highlight, idx) => (
                     <li key={idx} className="flex items-start gap-2 text-xs text-blue-200">
-
+                      <<<TrendingUp className="w-3 h-3 text-green-400 mt-0.5 flex-shrink-0" />
                       <span>{highlight}</span>
                     </li>
                   ))}
@@ -75,7 +81,7 @@ const October2025LatestBreakthroughBanner = () => {
 
                 <div className="flex items-center gap-2 text-sm text-blue-300 font-semibold group-hover:gap-4 transition-all">
                   Read Full Article
-
+                  <<<ArrowRight className="w-4 h-4" />
                 </div>
               </Link>
             );
@@ -93,15 +99,13 @@ const October2025LatestBreakthroughBanner = () => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              to="/contact"
-              className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+              to="/<contact" className="inline-flex items-center gap-2 bg-white text-blue-900 px-8 py-4 rounded-lg font-bold hover:bg-blue-50 transition-colors"
             >
               Schedule Free Consultation
-
+              <<<ArrowRight className="w-5 h-5" />
             </Link>
             <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors"
+              to="/<blog" className="inline-flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors"
             >
               Explore All Articles
             </Link>

@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
 
@@ -15,7 +18,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
   className = '' 
 }) => {
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
-  const latestServices = newServices2026.filter(s = > s.featured).slice(0, showCount);
+  const latestServices = newServices2026.filter(s => s.featured).slice(0, showCount);
 
   if (variant === 'compact') {
     return (
@@ -30,14 +33,14 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             </p>
           </div>
           <Link
-            to="/blog"
-            className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center gap-2"
+            to="/<blog" className="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors flex items-center gap-2"
           >
             Explore Now
-
+            <<<ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </div > );
+      </div>
+    );
   }
 
   if (variant === 'featured') {
@@ -45,7 +48,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
       <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
         <div className="bg-gradient-to-r from-purple-600 to-indigo-600 p-8">
           <div className="flex items-center gap-3 mb-4">
-
+            <<<Sparkles className="w-8 h-8 text-yellow-300" />
             <h2 className="text-3xl font-bold text-white">Latest Innovations</h2>
           </div>
           <p className="text-purple-100 text-lg">
@@ -53,17 +56,19 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 p-8">
-          {latestArticles.slice(0, 2).map((article) = > (
+          {latestArticles.slice(0, 2).map((article) => (
             <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
               <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
               <p className="text-gray-600 mb-4">{article.description}</p>
               <Link to={article.link} className="text-indigo-600 font-semibold hover:text-indigo-800 flex items-center gap-2">
-                Read More</Link>
+                Read More <<<ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           ))}
         </div>
-      </div > );
+      </div>
+    );
   }
 
   // Hero variant (default)
@@ -72,7 +77,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-10">
           <div className="inline-flex items-center px-4 py-2 bg-yellow-400/20 rounded-full text-yellow-300 mb-6">
-
+            <<<Zap className="w-5 h-5 mr-2" />
             <span className="font-bold">OCTOBER 2025: BREAKTHROUGH CONTENT RELEASE</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -87,11 +92,11 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-
+              <<<Sparkles className="w-6 h-6 text-yellow-300" />
               Latest Articles
             </h3>
             <div className="space-y-3">
-              {latestArticles.slice(0, 3).map((article) = > (
+              {latestArticles.slice(0, 3).map((article) => (
                 <Link
                   key={article.id}
                   to={article.link}
@@ -107,11 +112,11 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
 
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-
+              <<<Zap className="w-6 h-6 text-green-300" />
               New Services
             </h3>
             <div className="space-y-3">
-              {latestServices.slice(0, 3).map((service) = > (
+              {latestServices.slice(0, 3).map((service) => (
                 <Link
                   key={service.id}
                   to={service.link}
@@ -128,11 +133,10 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
 
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all hover:scale-105"
+            to="/<blog" className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-50 transition-all hover:scale-105"
           >
             Explore All Content
-
+            <<<ArrowRight className="w-6 h-6" />
           </Link>
         </div>
       </div>

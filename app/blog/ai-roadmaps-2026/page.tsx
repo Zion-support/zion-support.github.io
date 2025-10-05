@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Roadmaps 2026: What to Build Next and Why',
@@ -52,10 +52,10 @@ export default function Page() {
           <h3 className="text-xl font-semibold mb-2">Next up</h3>
           <ul className="list-disc pl-6 text-blue-700">
             <li>
-              <ArrowRight href="/content-hub">Explore the Content Hub</ArrowRight>
+              <Link href="/content-hub">Explore the Content Hub</Link>
             </li>
             <li>
-              <ArrowRight href="/blog/ai-value-stream-analytics-2026">AI Value Stream Analytics 2026</ArrowRight>
+              <Link href="/blog/ai-value-stream-analytics-2026">AI Value Stream Analytics 2026</Link>
             </li>
           </ul>
         </div>

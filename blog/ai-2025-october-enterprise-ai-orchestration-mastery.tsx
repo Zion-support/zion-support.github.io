@@ -152,14 +152,12 @@ export default function AIEnterpriseOrchestrationMastery2025() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Schedule Consultation
               </a>
               <a
-                href="/case-studies/fortune-500-ai-orchestration-3-2b-success"
-                className="text-left"
+                href="/case-studies/fortune-500-ai-orchestration-3-2b-<success" className="text-left"
               ></a>
                 View Case Study →
               </a>

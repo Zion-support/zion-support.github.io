@@ -1,3 +1,7 @@
+import { ArrowRight } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function ContentPromotionBanner() {
@@ -10,7 +14,7 @@ export default function ContentPromotionBanner() {
     },
     {
       title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
-      category: "Leadership",
+      category: "Leadership", 
       readTime: "5 min read",
       isNew: true,
     },
@@ -33,7 +37,7 @@ export default function ContentPromotionBanner() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-
+              <<<TrendingUp className="w-5 h-5 text-yellow-300" />
               <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
                 Fresh Content
               </span>
@@ -49,19 +53,17 @@ export default function ContentPromotionBanner() {
           
           <div className="flex flex-col gap-4">
             <Link 
-              to="/blog" 
-              className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              to="/<blog" className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-
+              <<<BookOpen className="w-5 h-5" />
               Explore All Articles
-
+              <<<ArrowRight className="w-5 h-5" />
             </Link>
             
             <Link 
-              to="/case-studies" 
-              className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
+              to="/case-<studies" className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
             >
-
+              <<<Zap className="w-5 h-5" />
               View Case Studies
             </Link>
           </div>
@@ -69,7 +71,7 @@ export default function ContentPromotionBanner() {
 
         {/* Featured Content Cards */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {featuredContent.map((item, index) = > (
+          {featuredContent.map((item, index) => (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
@@ -78,7 +80,8 @@ export default function ContentPromotionBanner() {
                 {item.isNew && (
                   <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                     NEW
-                  </span > )}
+                  </span>
+                )}
               </div>
               <h3 className="font-bold text-white mb-2 line-clamp-2">
                 {item.title}
@@ -87,7 +90,7 @@ export default function ContentPromotionBanner() {
                 <span className="text-sm text-white/70">
                   {item.readTime}
                 </span>
-
+                <<<ArrowRight className="w-4 h-4 text-white/70" />
               </div>
             </div>
           ))}
@@ -104,7 +107,7 @@ export default function ContentPromotionBanner() {
             <div className="text-sm text-white/80">Monthly Readers</div>
           </div>
           <div className="text-center">
-            
+            <div className="text-2xl font-bold text-white">15</div>
             <div className="text-sm text-white/80">Expert Authors</div>
           </div>
           <div className="text-center">

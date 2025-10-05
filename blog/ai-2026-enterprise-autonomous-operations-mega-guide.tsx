@@ -263,14 +263,12 @@ export default function AI2026EnterpriseAutonomousOperationsMegaGuide() {
             </p>
             <div className="text-left"></div>
               <a
-                href="/contact"
-                className="text-left"
+                href="/<contact" className="text-left"
               ></a>
                 Get Free Consultation
               </a>
               <a
-                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
-                className="text-left"
+                href="/case-studies/fortune-500-ai-2026-breakthrough-mega-<success" className="text-left"
               ></a>
                 View Success Stories
               </a>

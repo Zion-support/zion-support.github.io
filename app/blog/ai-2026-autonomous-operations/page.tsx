@@ -220,14 +220,12 @@ export default function AutonomousOperations() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
+                href="/<contact" className="bg-gradient-to-r from-green-500 to-blue-600 hover:from-green-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50"
               >
                 Start Automation Assessment
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Automation Success Stories
               </a>
@@ -239,7 +237,7 @@ export default function AutonomousOperations() {
         <aside className="mt-16 pt-8 border-t border-white/10">
           <h3 className="text-2xl font-bold text-white mb-6">Related Articles</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-2026-meta-cognitive-breakthrough" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
+            <a href="/blog/ai-2026-meta-cognitive-<breakthrough" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
               <h4 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors mb-2">
                 Meta-Cognitive AI: 95% Decision Accuracy
               </h4>
@@ -248,7 +246,7 @@ export default function AutonomousOperations() {
               </p>
             </a>
             
-            <a href="/blog/ai-2026-quantum-neural-networks" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
+            <a href="/blog/ai-2026-quantum-neural-<networks" className="group bg-slate-900/50 rounded-xl p-6 hover:bg-slate-800/50 transition-all duration-300">
               <h4 className="text-lg font-bold text-white group-hover:text-cyan-400 transition-colors mb-2">
                 Quantum-Neural Networks: 1000x Speed
               </h4>

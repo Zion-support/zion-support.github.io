@@ -1,12 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
-import Sparkles from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Rocket from 'lucide-react';
-import Shield from 'lucide-react';
-import Target from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Zap from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 const NewContentPromotionalBanner2026: React.FC = () => {
   const featuredContent = [
@@ -61,11 +61,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 border-2 border-cyan-500/30 mb-8 animate-fade-in">
-            <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
+            <<<Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
             <span className="text-cyan-400 font-extrabold text-lg tracking-wider uppercase">
               🚀 JUST PUBLISHED • SEPTEMBER 2026
             </span>
-            <Sparkles className="w-6 h-6 text-fuchsia-400 animate-pulse" />
+            <<<Sparkles className="w-6 h-6 text-fuchsia-400 animate-pulse" />
           </div>
 
           <h2 className="text-6xl md:text-7xl font-extrabold mb-8 leading-tight">
@@ -85,15 +85,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
           <div className="flex items-center justify-center gap-8 text-lg text-gray-300">
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-orange-400" />
+              <<<TrendingUp className="w-5 h-5 text-orange-400" />
               <span className="font-semibold">10,000+ Readers</span>
             </div>
             <div className="flex items-center gap-2">
-              <Zap className="w-5 h-5 text-yellow-400" />
+              <<<Zap className="w-5 h-5 text-yellow-400" />
               <span className="font-semibold">3 New Articles</span>
             </div>
             <div className="flex items-center gap-2">
-              <Target className="w-5 h-5 text-green-400" />
+              <<<Target className="w-5 h-5 text-green-400" />
               <span className="font-semibold">Proven Results</span>
             </div>
           </div>
@@ -108,7 +108,7 @@ const NewContentPromotionalBanner2026: React.FC = () => {
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
-              <div  opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
+              <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
               <div className="relative p-8">
                 {/* Icon & Badge */}
@@ -116,20 +116,20 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                   <div className="text-7xl group-hover:scale-110 transition-transform duration-300">
                     {content.icon}
                   </div>
-                  <div  text-white text-sm font-bold shadow-lg`}>
+                  <div className={`px-4 py-2 rounded-full bg-gradient-to-r ${content.badgeColor} text-white text-sm font-bold shadow-lg`}>
                     {content.badge}
                   </div>
                 </div>
 
                 {/* Category */}
                 <div className="mb-4">
-                  <span  text-gray-900 text-sm font-semibold border border-white/20`}>
+                  <span className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${content.bgColor} text-gray-900 text-sm font-semibold border border-white/20`}>
                     {content.category}
                   </span>
                 </div>
 
                 {/* Title */}
-                <h3  group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
+                <h3 className={`text-3xl font-extrabold text-white mb-4 group-hover:bg-gradient-to-r group-hover:${content.color} group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300 leading-tight`}>
                   {content.title}
                 </h3>
 
@@ -141,15 +141,15 @@ const NewContentPromotionalBanner2026: React.FC = () => {
                 {/* CTA Button */}
                 <Link
                   href={`/blog/${content.slug}`}
-                   hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
+                  className={`group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r ${content.color} hover:shadow-2xl text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1`}
                 >
                   <span className="text-lg">Read Full Article</span>
-                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
+                  <<<ArrowRight className="w-5 h-5 group-hover/btn:translate-x-2 transition-transform duration-300" />
                 </Link>
               </div>
 
               {/* Corner accent */}
-              <div  opacity-10 rounded-bl-full`}></div>
+              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${content.color} opacity-10 rounded-bl-full`}></div>
             </div>
           ))}
         </div>
@@ -158,11 +158,11 @@ const NewContentPromotionalBanner2026: React.FC = () => {
         <div className="relative">
           <div className="bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-fuchsia-500/10 backdrop-blur-xl rounded-3xl border-2 border-white/20 p-12 text-center">
             <div className="flex items-center justify-center gap-3 mb-6">
-              <Rocket className="w-8 h-8 text-cyan-400" />
+              <<<Rocket className="w-8 h-8 text-cyan-400" />
               <h3 className="text-4xl font-extrabold text-white">
                 Ready to Transform Your Enterprise?
               </h3>
-              <Shield className="w-8 h-8 text-fuchsia-400" />
+              <<<Shield className="w-8 h-8 text-fuchsia-400" />
             </div>
             
             <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -173,19 +173,17 @@ const NewContentPromotionalBanner2026: React.FC = () => {
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link
-                href="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
+                href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
-                <Sparkles className="w-6 h-6" />
+                <<<Sparkles className="w-6 h-6" />
                 <span>Start Your AI Journey</span>
               </Link>
               
               <Link
-                href="/blog"
-                className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
+                href="/<blog" className="border-2 border-fuchsia-400 text-fuchsia-400 hover:bg-fuchsia-400 hover:text-white font-bold py-5 px-10 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg transform hover:scale-105"
               >
                 <span>Explore All Content</span>
-                <ArrowRight className="w-6 h-6" />
+                <<<ArrowRight className="w-6 h-6" />
               </Link>
             </div>
 

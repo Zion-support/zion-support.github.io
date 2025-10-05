@@ -234,10 +234,10 @@ export default function AdvancedCybersecurityEvolutionBreakthrough() {
               Join industry leaders achieving 99.98% threat prevention and $1.8B in breach prevention savings.
             </p>
             <div className="text-left"></div>
-              <a href="/contact" className="text-left"></a>
+              <a href="/<contact" className="text-left"></a>
                 Get Security Assessment
               </a>
-              <a href="/services" className="text-left"></a>
+              <a href="/<services" className="text-left"></a>
                 Explore Solutions
               </a>
             </div>

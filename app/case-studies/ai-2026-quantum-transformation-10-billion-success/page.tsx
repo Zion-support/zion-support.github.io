@@ -5,7 +5,7 @@ export default function QuantumTransformationSuccessPage() {
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-4xl mx-auto px-4 py-16">
         <div className="mb-8">
-          <Link href="/case-studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <Link href="/case-<studies" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Case Studies
           </Link>
           <div className="flex items-center gap-2 mb-4">
@@ -200,14 +200,12 @@ export default function QuantumTransformationSuccessPage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="/services/ai-2026-quantum-enterprise-solutions" 
-                className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
+                href="/services/ai-2026-quantum-enterprise-<solutions" className="bg-gradient-to-r from-green-600 to-emerald-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-700 hover:to-emerald-700 transition-all"
               >
                 Start Your Transformation
               </Link>
               <Link 
-                href="/contact" 
-                className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
+                href="/<contact" className="border border-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all"
               >
                 Schedule Consultation
               </Link>

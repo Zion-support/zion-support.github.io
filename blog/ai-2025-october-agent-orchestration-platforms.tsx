@@ -20,7 +20,7 @@ export default function AIAgentOrchestrationPlatforms2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -184,8 +184,7 @@ const orchestrator = new AgentOrchestrator(
                   Fortune 500 companies deploy autonomous systems that deliver measurable results.
                 </p>
                 <a
-                  href="/contact"
-                  className="text-left"
+                  href="/<contact" className="text-left"
                 ></a>
                   Start Your Agent Transformation
                 </a>

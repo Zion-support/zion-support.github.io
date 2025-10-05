@@ -225,14 +225,12 @@ export default function HyperintelligenceMegaSuccess2026() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/services/ai-2026-hyperintelligence-breakthrough"
-                className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-bold hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
+                href="/services/ai-2026-hyperintelligence-<breakthrough" className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-8 py-3 rounded-lg font-bold hover:from-green-600 hover:to-emerald-600 transition-all duration-300"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/contact"
-                className="border border-green-500/50 text-green-300 px-8 py-3 rounded-lg font-bold hover:bg-green-500/10 transition-all duration-300"
+                href="/<contact" className="border border-green-500/50 text-green-300 px-8 py-3 rounded-lg font-bold hover:bg-green-500/10 transition-all duration-300"
               >
                 Schedule Consultation
               </a>

@@ -1,15 +1,11 @@
-import { ArrowRight, CheckCircle, Shield, TrendingUp, Users, Zap } from 'lucide-react';
-import React from 'react';
-
-
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-
-
-
-
-
-;
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
 
 const AIMLOpsAutomation = () => {
   return (
@@ -37,15 +33,13 @@ const AIMLOpsAutomation = () => {
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                  to="/<contact" className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
                 >
                   Get Started
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <<<ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
                 <a
-                  href="#features"
-                  className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                  href="#<features" className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
                 >
                   Learn More
                 </a>
@@ -79,7 +73,7 @@ const AIMLOpsAutomation = () => {
         </section>
 
         {/* Features Section */}
-        <section id="features" className="py-20 bg-gray-50 dark:bg-gray-900">
+        <section id="<features" className="py-20 bg-gray-50 dark:bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Comprehensive MLOps Platform</h2>
@@ -91,22 +85,22 @@ const AIMLOpsAutomation = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {/* Automated Pipelines */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                <Zap className="h-12 w-12 text-blue-600 mb-4" />
+                <<<Zap className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Automated CI/CD Pipelines</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Fully automated build, test, and deployment pipelines with integrated quality gates and rollback capabilities.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Automated testing and validation</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Blue-green deployments</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Instant rollback on failure</span>
                   </li>
                 </ul>
@@ -114,22 +108,22 @@ const AIMLOpsAutomation = () => {
 
               {/* Real-time Monitoring */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                <TrendingUp className="h-12 w-12 text-blue-600 mb-4" />
+                <<<TrendingUp className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Real-time Model Monitoring</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Continuous monitoring of model performance, data drift, and prediction quality with automated alerting.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Performance metrics dashboard</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Data drift detection</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Automated retraining triggers</span>
                   </li>
                 </ul>
@@ -137,22 +131,22 @@ const AIMLOpsAutomation = () => {
 
               {/* Model Registry */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                <Shield className="h-12 w-12 text-blue-600 mb-4" />
+                <<<Shield className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Centralized Model Registry</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Version-controlled model registry with lineage tracking, approval workflows, and compliance auditing.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Version control and lineage</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Approval workflows</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Compliance audit trails</span>
                   </li>
                 </ul>
@@ -160,22 +154,22 @@ const AIMLOpsAutomation = () => {
 
               {/* Feature Store */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                <Users className="h-12 w-12 text-blue-600 mb-4" />
+                <<<Users className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Enterprise Feature Store</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Centralized feature management with versioning, sharing, and real-time serving capabilities.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Feature reusability</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Low-latency serving</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Training-serving consistency</span>
                   </li>
                 </ul>
@@ -183,22 +177,22 @@ const AIMLOpsAutomation = () => {
 
               {/* Auto-scaling */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                <Zap className="h-12 w-12 text-blue-600 mb-4" />
+                <<<Zap className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Intelligent Auto-scaling</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Predictive auto-scaling based on traffic patterns, ensuring optimal performance and cost efficiency.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Predictive scaling</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Cost optimization</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Zero downtime scaling</span>
                   </li>
                 </ul>
@@ -206,22 +200,22 @@ const AIMLOpsAutomation = () => {
 
               {/* Experiment Tracking */}
               <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transition-shadow">
-                <TrendingUp className="h-12 w-12 text-blue-600 mb-4" />
+                <<<TrendingUp className="h-12 w-12 text-blue-600 mb-4" />
                 <h3 className="text-2xl font-bold mb-4">Experiment Tracking</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4">
                   Comprehensive experiment tracking with parameter logging, metric visualization, and model comparison.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Parameter logging</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Visual comparison</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-1" />
                     <span className="text-gray-700 dark:text-gray-300">Reproducibility</span>
                   </li>
                 </ul>
@@ -248,15 +242,15 @@ const AIMLOpsAutomation = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
                     <span>99.97% uptime across all models</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
                     <span>85% reduction in deployment time</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
                     <span>Full regulatory compliance</span>
                   </li>
                 </ul>
@@ -269,15 +263,15 @@ const AIMLOpsAutomation = () => {
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
                     <span>32% increase in conversion rate</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
                     <span>$4.2M annual cost savings</span>
                   </li>
                   <li className="flex items-start">
-                    <CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
+                    <<<CheckCircle className="h-5 w-5 text-green-600 mr-2 flex-shrink-0 mt-1" />
                     <span>Sub-100ms prediction latency</span>
                   </li>
                 </ul>
@@ -297,15 +291,13 @@ const AIMLOpsAutomation = () => {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/contact"
-                className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                to="/<contact" className="inline-flex items-center px-8 py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Schedule Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <<<ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/blog"
-                className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+                to="/<blog" className="inline-flex items-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >
                 Read Our Blog
               </Link>

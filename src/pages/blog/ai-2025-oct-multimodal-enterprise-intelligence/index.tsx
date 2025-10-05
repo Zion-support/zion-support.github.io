@@ -1,6 +1,9 @@
-import { ArrowLeft, Brain, CheckCircle, Shield, TrendingUp, Zap } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Link } from "react-router-dom";
-
 import { Helmet } from "react-helmet-async";
 import Header from "../../../components/Header";
 
@@ -25,10 +28,9 @@ const MultimodalEnterpriseIntelligence = () => {
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */}
           <Link
-            to="/blog"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+            to="/<blog" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <<<ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
 
@@ -56,7 +58,7 @@ const MultimodalEnterpriseIntelligence = () => {
 
             <div className="flex items-center gap-6 mt-8 text-zion-slate-light">
               <div className="flex items-center gap-2">
-                <Brain className="w-5 h-5 text-zion-cyan" />
+                <<<Brain className="w-5 h-5 text-zion-cyan" />
                 <span>Dr. Sarah Chen, AI Research Director</span>
               </div>
               <span>•</span>
@@ -107,7 +109,7 @@ const MultimodalEnterpriseIntelligence = () => {
               <div className="space-y-6">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-zion-cyan/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <<<CheckCircle className="w-5 h-5 text-green-400" />
                     Vision-Language Understanding
                   </h3>
                   <p className="mb-3">
@@ -122,7 +124,7 @@ const MultimodalEnterpriseIntelligence = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <<<CheckCircle className="w-5 h-5 text-green-400" />
                     Audio-Visual Intelligence
                   </h3>
                   <p className="mb-3">
@@ -137,7 +139,7 @@ const MultimodalEnterpriseIntelligence = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-400/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
+                    <<<CheckCircle className="w-5 h-5 text-green-400" />
                     Cross-Modal Generation
                   </h3>
                   <p className="mb-3">
@@ -159,28 +161,28 @@ const MultimodalEnterpriseIntelligence = () => {
                 <h3 className="text-xl font-bold text-white mb-4">Production-Ready Stack (Oct 2025)</h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
+                    <<<Zap className="w-5 h-5 text-zion-cyan mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-white">Vision Models:</strong> GPT-4V, Claude 3.5 Sonnet Vision, 
                       LLaVA 1.6, BLIP-2 for image understanding and generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                    <<<Zap className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-white">Language Models:</strong> GPT-4 Turbo, Claude 3.5 Sonnet, 
                       Llama 3.1 405B for text processing and reasoning
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0" />
+                    <<<Zap className="w-5 h-5 text-pink-400 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-white">Audio Models:</strong> Whisper v3, AudioCraft, MusicGen 
                       for speech, sound, and audio generation
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
-                    <Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                    <<<Zap className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-white">Orchestration:</strong> LangChain, LlamaIndex, custom 
                       pipelines for unified multimodal workflows
@@ -316,15 +318,13 @@ const MultimodalEnterpriseIntelligence = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
+                  to="/<contact" className="bg-white text-purple-600 hover:bg-zion-slate-light px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-2"
                 >
-                  <TrendingUp className="w-5 h-5" />
+                  <<<TrendingUp className="w-5 h-5" />
                   Schedule Free Consultation
                 </Link>
                 <Link
-                  to="/services"
-                  className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+                  to="/<services" className="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
                 >
                   View All AI Services
                 </Link>

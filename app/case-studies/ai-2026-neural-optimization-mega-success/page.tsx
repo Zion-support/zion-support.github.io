@@ -296,14 +296,12 @@ export default function CaseStudy() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
+              href="/<contact" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-indigo-700 transition-all"
             >
               Start Your Transformation
             </Link>
             <Link 
-              href="/blog/ai-2026-advanced-neural-optimization-revolution" 
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all"
+              href="/blog/ai-2026-advanced-neural-optimization-<revolution" className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-700 transition-all"
             >
               Learn More
             </Link>
@@ -313,11 +311,11 @@ export default function CaseStudy() {
         <div className="border-t border-gray-700 pt-8 mt-12">
           <h3 className="text-xl font-bold text-white mb-4">Related Case Studies</h3>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/case-studies/ai-2026-autonomous-business-intelligence-mega-success" className="block p-4 border border-gray-600 rounded-lg hover:border-blue-500 transition-colors">
+            <Link href="/case-studies/ai-2026-autonomous-business-intelligence-mega-<success" className="block p-4 border border-gray-600 rounded-lg hover:border-blue-500 transition-colors">
               <h4 className="font-semibold text-white mb-2">$3.5B Autonomous BI Success</h4>
               <p className="text-gray-400 text-sm">How another Fortune 500 achieved massive ROI with autonomous business intelligence</p>
             </Link>
-            <Link href="/case-studies/ai-2026-quantum-transformation-10-billion-success" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
+            <Link href="/case-studies/ai-2026-quantum-transformation-10-billion-<success" className="block p-4 border border-gray-600 rounded-lg hover:border-purple-500 transition-colors">
               <h4 className="font-semibold text-white mb-2">$10B Quantum Transformation</h4>
               <p className="text-gray-400 text-sm">Revolutionary quantum computing implementation case study</p>
             </Link>

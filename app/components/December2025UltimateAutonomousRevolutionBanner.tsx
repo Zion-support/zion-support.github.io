@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import ArrowRight from 'lucide-react';
-import Star from 'lucide-react';
-import CheckCircle from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 export default function December2025UltimateAutonomousRevolutionBanner() {
   return (
@@ -20,7 +20,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
         <div className="text-center mb-8">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 animate-pulse">
-            <Star className="w-4 h-4" />
+            <<<Star className="w-4 h-4" />
             REVOLUTIONARY BREAKTHROUGH
           </div>
 
@@ -64,7 +64,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
           <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
-                <Brain className="w-6 h-6 text-purple-300" />
+                <<<Brain className="w-6 h-6 text-purple-300" />
                 <h3 className="font-bold text-lg">Neural Autonomy Engine</h3>
               </div>
               <p className="text-purple-100 text-sm">
@@ -74,7 +74,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
-                <Zap className="w-6 h-6 text-yellow-300" />
+                <<<Zap className="w-6 h-6 text-yellow-300" />
                 <h3 className="font-bold text-lg">Quantum-Speed Processing</h3>
               </div>
               <p className="text-purple-100 text-sm">
@@ -84,7 +84,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
             
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
               <div className="flex items-center gap-3 mb-4">
-                <TrendingUp className="w-6 h-6 text-green-300" />
+                <<<TrendingUp className="w-6 h-6 text-green-300" />
                 <h3 className="font-bold text-lg">Predictive Intelligence</h3>
               </div>
               <p className="text-purple-100 text-sm">
@@ -96,7 +96,7 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
           {/* Success Stories */}
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/20">
             <h3 className="font-bold text-xl mb-4 flex items-center gap-2">
-              <CheckCircle className="w-6 h-6 text-green-300" />
+              <<<CheckCircle className="w-6 h-6 text-green-300" />
               Proven Results Across Fortune 500 Companies
             </h3>
             <div className="grid md:grid-cols-2 gap-6">
@@ -124,19 +124,17 @@ export default function December2025UltimateAutonomousRevolutionBanner() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link 
-              href="/blog/ai-2025-december-ultimate-autonomous-enterprise-revolution"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              href="/blog/ai-2025-december-ultimate-autonomous-enterprise-<revolution" className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
             >
-              <Brain className="w-5 h-5" />
+              <<<Brain className="w-5 h-5" />
               Discover the Revolution
-              <ArrowRight className="w-5 h-5" />
+              <<<ArrowRight className="w-5 h-5" />
             </Link>
             
             <Link 
-              href="/contact"
-              className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300"
+              href="/<contact" className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/30 transition-all duration-300"
             >
-              <Zap className="w-5 h-5" />
+              <<<Zap className="w-5 h-5" />
               Schedule Demo
             </Link>
           </div>

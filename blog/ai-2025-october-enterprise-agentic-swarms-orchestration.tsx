@@ -262,14 +262,12 @@ export default function EnterpriseAgenticSwarmsOrchestration2025() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Demo & Pilot
             </a>
             <a
-              href="/case-studies/agentic-swarms-manufacturing-success-2025"
-              className="text-left"
+              href="/case-studies/agentic-swarms-manufacturing-success-<2025" className="text-left"
             ></a>
               Read Success Stories
             </a>

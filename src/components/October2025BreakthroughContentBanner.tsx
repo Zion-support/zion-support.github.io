@@ -1,12 +1,16 @@
+import { Sparkles } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const October2025BreakthroughContentBanner = () => {
   return (
     <div className="bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-400/30 rounded-xl p-6 mb-8 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-4">
-
+        <<<Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
         <span className="text-lg font-bold text-emerald-400">🎉 OCTOBER 3, 2025: NEWEST AI BREAKTHROUGHS</span>
-
+        <<<Sparkles className="w-6 h-6 text-emerald-400 animate-pulse" />
       </div>
       
       <p className="text-white text-lg font-semibold mb-4 text-center">
@@ -21,17 +25,15 @@ const October2025BreakthroughContentBanner = () => {
       
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
         <Link
-          to="/blog/ai-2025-october-breakthrough-enterprise-automation"
-          className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2"
+          to="/blog/ai-2025-october-breakthrough-enterprise-<automation" className="bg-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-emerald-600 transition-colors inline-flex items-center justify-center gap-2"
         >
-
+          <<<Zap className="w-5 h-5" />
           Read Enterprise Automation Guide
         </Link>
         <Link
-          to="/blog/ai-2025-october-quantum-ai-hybrid-systems"
-          className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors inline-flex items-center justify-center gap-2"
+          to="/blog/ai-2025-october-quantum-ai-hybrid-<systems" className="bg-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors inline-flex items-center justify-center gap-2"
         >
-
+          <<<Brain className="w-5 h-5" />
           Explore Quantum-AI Systems
         </Link>
       </div>
@@ -39,24 +41,24 @@ const October2025BreakthroughContentBanner = () => {
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div className="bg-white/10 rounded-xl p-4">
           <h3 className="text-white font-semibold mb-2 flex items-center">
-
+            <<<Zap className="w-5 h-5 mr-2 text-emerald-400" />
             Enterprise AI Automation
           </h3>
           <ul className="space-y-1 text-sm text-zion-slate-light">
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
               <span>400%+ efficiency gains</span>
             </li>
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
               <span>70% cost reduction</span>
             </li>
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
               <span>95% faster decision-making</span>
             </li>
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-emerald-400" />
               <span>Complete implementation framework</span>
             </li>
           </ul>
@@ -64,24 +66,24 @@ const October2025BreakthroughContentBanner = () => {
         
         <div className="bg-white/10 rounded-xl p-4">
           <h3 className="text-white font-semibold mb-2 flex items-center">
-
+            <<<Brain className="w-5 h-5 mr-2 text-cyan-400" />
             Quantum-AI Hybrid Systems
           </h3>
           <ul className="space-y-1 text-sm text-zion-slate-light">
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
               <span>1000x processing speed</span>
             </li>
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
               <span>99.9% accuracy improvements</span>
             </li>
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
               <span>90% cost reduction</span>
             </li>
             <li className="flex items-center">
-
+              <<<CheckCircle className="w-4 h-4 mr-2 text-cyan-400" />
               <span>Real-world applications</span>
             </li>
           </ul>
@@ -96,7 +98,8 @@ const October2025BreakthroughContentBanner = () => {
         <span className="bg-green-100/20 text-green-200 px-3 py-1 rounded-full text-xs font-medium border border-green-300/20">Fortune 500 Proven</span>
         <span className="bg-orange-100/20 text-orange-200 px-3 py-1 rounded-full text-xs font-medium border border-orange-300/20">Implementation Ready</span>
       </div>
-    </div > );
+    </div>
+  );
 };
 
 export default React.memo(October2025BreakthroughContentBanner);

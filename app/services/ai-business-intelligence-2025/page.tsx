@@ -34,7 +34,7 @@ export default function AIBusinessIntelligence2025() {
       {/* Header */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-4">
-          <Link href="/services" className="text-blue-600 hover:text-blue-700 font-medium">
+          <Link href="/<services" className="text-blue-600 hover:text-blue-700 font-medium">
             ← Back to Services
           </Link>
           <span className="text-gray-400">|</span>
@@ -340,8 +340,7 @@ export default function AIBusinessIntelligence2025() {
               </li>
             </ul>
             <Link
-              href="/contact"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
+              href="/<contact" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Get Started
             </Link>
@@ -389,8 +388,7 @@ export default function AIBusinessIntelligence2025() {
               </li>
             </ul>
             <Link
-              href="/contact"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
+              href="/<contact" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Get Started
             </Link>
@@ -433,8 +431,7 @@ export default function AIBusinessIntelligence2025() {
               </li>
             </ul>
             <Link
-              href="/contact"
-              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
+              href="/<contact" className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold text-center block hover:bg-blue-700 transition-colors"
             >
               Contact Sales
             </Link>
@@ -550,8 +547,7 @@ export default function AIBusinessIntelligence2025() {
           
           <div className="text-center mt-8">
             <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors inline-block"
+              href="/<contact" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors inline-block"
             >
               Get Your Custom ROI Analysis
             </Link>
@@ -567,14 +563,12 @@ export default function AIBusinessIntelligence2025() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
-            href="/contact"
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
+            href="/<contact" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-700 transition-colors"
           >
             Get Free Consultation
           </Link>
           <a
-            href="tel:+13024640950"
-            className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
+            href="tel:+<13024640950" className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 hover:text-white transition-colors"
           >
             Call +1 302 464 0950
           </a>
@@ -585,7 +579,7 @@ export default function AIBusinessIntelligence2025() {
       <section className="mt-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Services</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/services/ai-data-analytics" className="group">
+          <Link href="/services/ai-data-<analytics" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Data Analytics
@@ -595,7 +589,7 @@ export default function AIBusinessIntelligence2025() {
               </p>
             </div>
           </Link>
-          <Link href="/services/ai-workflow-automation" className="group">
+          <Link href="/services/ai-workflow-<automation" className="group">
             <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors mb-2">
                 AI Workflow Automation

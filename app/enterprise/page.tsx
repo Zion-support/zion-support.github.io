@@ -1,3 +1,5 @@
+import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
+
 export default function EnterprisePage() {
   return (
     <div className="min-h-screen bg-slate-950">
@@ -31,14 +33,12 @@ export default function EnterprisePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Schedule Enterprise Demo
               </a>
               <a 
-                href="#solutions" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="#<solutions" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Solutions
               </a>
@@ -47,18 +47,9 @@ export default function EnterprisePage() {
         </div>
       </header>
 
-      {/* Enterprise Solutions Section */}
-      <section id="solutions" className="py-20 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Enterprise AI Solutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive AI solutions designed for enterprise-scale operations
-            </p>
-          </div>
-        </div>
+      {/* Enterprise Solutions Banner */}
+      <section id="solutions">
+        <EnterpriseSolutionsBanner />
       </section>
 
       {/* Footer */}
@@ -67,9 +58,9 @@ export default function EnterprisePage() {
           <div className="text-center text-gray-400">
             <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
             <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+              <a href="/<privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+              <a href="/<terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
+              <a href="/<contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
             </div>
           </div>
         </div>

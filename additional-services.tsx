@@ -1,8 +1,13 @@
-import { ArrowRight, Brain, CheckCircle, Clock, Cloud, Code, DollarSign, Globe, MessageSquare, Server, Smartphone, Star } from 'lucide-react';
 import React from 'react'
-
 import { Helmet } from 'react-helmet-async'
-
+import { MessageSquare } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Globe } from 'lucide-react';
 export default function AdditionalServices() {
   const title = 'Expanded Services Catalog — Zion Tech Group';
   const description = 'New micro SaaS, IT, and AI solutions added to our production-ready catalog with transparent pricing and fast delivery.';
@@ -2053,7 +2058,7 @@ export default function AdditionalServices() {
         <section className="container mx-auto px-6 py-16">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <DollarSign className="h-8 w-8 text-cyan-400 mr-3" />
+              <<<DollarSign className="h-8 w-8 text-cyan-400 mr-3" />
               <span className="text-lg font-semibold text-cyan-400">Expanded Catalog</span>
             </div>
             <h1 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent">
@@ -2064,15 +2069,15 @@ export default function AdditionalServices() {
             </p>
             <div className="flex items-center justify-center gap-6 text-sm text-blue-200">
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <<<CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                 <span>Fast Delivery</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <<<CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                 <span>Proven ROI</span>
               </div>
               <div className="flex items-center">
-                <CheckCircle className="h-4 w-4 text-green-400 mr-2" />
+                <<<CheckCircle className="h-4 w-4 text-green-400 mr-2" />
                 <span>Expert Support</span>
               </div>
             </div>
@@ -2115,7 +2120,7 @@ export default function AdditionalServices() {
                             className={`inline-flex items-center font-semibold text-${section.color}-400 hover:text-${section.color}-300 transition-colors`}
                           >
                             Learn more
-                            <ArrowRight className="ml-2 h-4 w-4" />
+                            <<<ArrowRight className="ml-2 h-4 w-4" />
                           </a>
                         </div>
                       </div>
@@ -2138,14 +2143,14 @@ export default function AdditionalServices() {
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div>
                 <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Clock className="w-6 h-6 text-cyan-400" />
+                  <<<Clock className="w-6 h-6 text-cyan-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Fast Quotes</h3>
                 <p className="text-sm text-slate-300">Most engagements start with a 30–60 minute call and a fixed-price proposal within 48 hours.</p>
               </div>
               <div>
                 <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Star className="w-6 h-6 text-blue-400" />
+                  <<<Star className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Contact</h3>
                 <p className="text-sm text-slate-300">
@@ -2155,7 +2160,7 @@ export default function AdditionalServices() {
               </div>
               <div>
                 <div className="w-12 h-12 bg-fuchsia-500/20 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Globe className="w-6 h-6 text-fuchsia-400" />
+                  <<<Globe className="w-6 h-6 text-fuchsia-400" />
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2">Address</h3>
                 <p className="text-sm text-slate-300">
@@ -2170,19 +2175,19 @@ export default function AdditionalServices() {
                   href={phoneHref}
                   className="inline-flex items-center gap-2 bg-white text-slate-900 px-6 py-3 rounded-lg font-semibold hover:bg-slate-100 transition-colors"
                 >
-                  <Smartphone className="w-4 h-4" />
+                  <<<Smartphone className="w-4 h-4" />
                   +1 302 464 0950
                 </a>
                 <a
                   href={emailHref}
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-6 py-3 rounded-lg font-semibold hover: bg-slate-600 transition-colors"
                 >
-                  <MessageSquare className="w-4 h-4" />
+                  <<<MessageSquare className="w-4 h-4" />
                   kleber@ziontechgroup.com
                 </a>
               </div>
               <p className="text-sm text-slate-400">
-                Visit our website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:underline">https://ziontechgroup.com</a>
+                Visit our website: <a href="https://ziontechgroup.<com" className="text-cyan-400 hover:underline">https://ziontechgroup.com</a>
               </p>
             </div>
           </div>

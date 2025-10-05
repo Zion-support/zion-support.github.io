@@ -75,8 +75,8 @@ export default function GovernedAutonomyBlueprint2025() {
             <h3 className="text-2xl font-bold mb-3">Ship Governed Autonomy with Confidence</h3>
             <p className="text-white/90 mb-6">We implement this blueprint in weeks using proven playbooks.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+13024640950" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Call +1 302 464 0950</a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">Get Consultation</a>
+              <a href="tel:+<13024640950" className="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Call +1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-700">Get Consultation</a>
             </div>
           </div>
 

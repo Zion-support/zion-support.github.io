@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Quantum Computing Breakthrough 2028: 1000x Performance Revolution - Zion Tech Group',
@@ -17,7 +17,7 @@ export default function AIQuantumComputingBreakthrough2028() {
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
         <div className="flex items-center gap-2 text-sm text-gray-600 mb-4">
-          <ArrowRight href="/blog" className="hover:text-blue-600">Blog</ArrowRight>
+          <Link href="/<blog" className="hover:text-blue-600">Blog</Link>
           <span>→</span>
           <span>AI Quantum Computing Breakthrough 2028</span>
         </div>
@@ -243,32 +243,30 @@ export default function AIQuantumComputingBreakthrough2028() {
             quantum-enhanced AI solutions that deliver unprecedented performance and business results.
           </p>
           <div className="flex gap-4 justify-center">
-            <ArrowRight 
-              href="/contact" 
-              className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+            <Link 
+              href="/<contact" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Get Quantum AI Consultation
-            </ArrowRight>
-            <ArrowRight 
-              href="/services/ai-quantum-computing" 
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
+            </Link>
+            <Link 
+              href="/services/ai-quantum-<computing" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
             >
               Explore Quantum Services
-            </ArrowRight>
+            </Link>
           </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200">
           <h3 className="text-xl font-bold text-gray-900 mb-4">Related Quantum AI Resources</h3>
           <div className="grid md:grid-cols-2 gap-4">
-            <ArrowRight href="/blog/ai-2028-autonomous-enterprise-revolution" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-500 transition-colors">
+            <Link href="/blog/ai-2028-autonomous-enterprise-<revolution" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-500 transition-colors">
               <h4 className="font-semibold text-gray-900">AI 2028: Autonomous Enterprise Revolution</h4>
               <p className="text-sm text-gray-600">How quantum AI enables fully autonomous enterprises</p>
-            </ArrowRight>
-            <ArrowRight href="/case-studies/quantum-ai-success-story-2028" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-500 transition-colors">
+            </Link>
+            <Link href="/case-studies/quantum-ai-success-story-<2028" className="block p-4 border border-gray-200 rounded-lg hover:border-purple-500 transition-colors">
               <h4 className="font-semibold text-gray-900">Case Study: $150M Quantum AI Success</h4>
               <p className="text-sm text-gray-600">Real-world quantum AI implementation results</p>
-            </ArrowRight>
+            </Link>
           </div>
         </div>
       </div>

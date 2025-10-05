@@ -1,8 +1,13 @@
+import { ArrowRight } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Building2 } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const October2025LatestInnovationsBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-y border-indigo-500/30" > {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-y border-indigo-500/30">
+      {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
@@ -12,11 +17,11 @@ const October2025LatestInnovationsBanner = () => {
         {/* Header */}
         <div className="text-center mb-8">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-400/30 rounded-full px-6 py-2 mb-4">
-
+            <<<Zap className="h-5 w-5 text-yellow-400 animate-pulse" />
             <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300">
               BREAKING OCTOBER 1, 2025: LATEST AI INNOVATIONS
             </span>
-
+            <<<Zap className="h-5 w-5 text-yellow-400 animate-pulse" />
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
@@ -38,11 +43,10 @@ const October2025LatestInnovationsBanner = () => {
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Card 1: AI Governance */}
           <Link
-            to="/blog/ai-2025-october-governance-compliance-framework-enterprise"
-            className="group relative bg-gradient-to-br from-emerald-900/30 to-blue-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
+            to="/blog/ai-2025-october-governance-compliance-framework-<enterprise" className="group relative bg-gradient-to-br from-emerald-900/30 to-blue-900/30 border border-emerald-500/30 rounded-xl p-6 hover:border-emerald-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
           >
             <div className="absolute top-4 right-4">
-
+              <<<Shield className="h-8 w-8 text-emerald-400 group-hover:animate-pulse" />
             </div>
             
             <div className="mb-4">
@@ -70,16 +74,16 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-emerald-400 font-semibold group-hover:gap-3 transition-all">
-              Read Full Guide</div>
+              Read Full Guide <<<ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </div>
           </Link>
 
           {/* Card 2: Quantum AI */}
           <Link
-            to="/blog/ai-2025-october-quantum-enhanced-ai-hybrid-systems"
-            className="group relative bg-gradient-to-br from-violet-900/30 to-cyan-900/30 border border-violet-500/30 rounded-xl p-6 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
+            to="/blog/ai-2025-october-quantum-enhanced-ai-hybrid-<systems" className="group relative bg-gradient-to-br from-violet-900/30 to-cyan-900/30 border border-violet-500/30 rounded-xl p-6 hover:border-violet-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
           >
             <div className="absolute top-4 right-4">
-
+              <<<Zap className="h-8 w-8 text-violet-400 group-hover:animate-pulse" />
             </div>
             
             <div className="mb-4">
@@ -107,16 +111,17 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-violet-400 font-semibold group-hover:gap-3 transition-all">
-              Explore Quantum AI</div>
+              Explore Quantum AI <<<ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </div>
           </Link>
 
           {/* Card 3: Enterprise Orchestration */}
           <Link
-            to="/blog/ai-2025-october-autonomous-enterprise-orchestration-platform"
-            className="group relative bg-gradient-to-br from-indigo-900/30 to-amber-900/30 border border-indigo-500/30 rounded-xl p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
+            to="/blog/ai-2025-october-autonomous-enterprise-orchestration-<platform" className="group relative bg-gradient-to-br from-indigo-900/30 to-amber-900/30 border border-indigo-500/30 rounded-xl p-6 hover:border-indigo-400/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
           >
             <div className="absolute top-4 right-4">
-              <Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse"</div>
+              <<<Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse" />
+            </div>
             
             <div className="mb-4">
               <span className="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
@@ -143,18 +148,18 @@ const October2025LatestInnovationsBanner = () => {
             </ul>
 
             <div className="flex items-center text-indigo-400 font-semibold group-hover:gap-3 transition-all">
-              Discover Platform</div>
+              Discover Platform <<<ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
+            </div>
           </Link>
         </div>
 
         {/* CTA Button */}
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50"
+            to="/<blog" className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold px-8 py-4 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50"
           >
             <span>Explore All Latest AI Innovations</span>
-
+            <<<ArrowRight className="h-5 w-5" />
           </Link>
         </div>
 

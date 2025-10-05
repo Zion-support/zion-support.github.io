@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { BookOpen } from 'lucide-react';
+import { Rocket } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
 
@@ -22,14 +25,15 @@ const NewContentShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-12" > {/* Articles Section */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-12">
+          {/* Articles Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-
+              <<<BookOpen className="w-8 h-8 text-indigo-600" />
               <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
             <div className="space-y-4">
-              {topArticles.map((article) = > (
+              {topArticles.map((article) => (
                 <Link
                   key={article.id}
                   to={article.link}
@@ -41,18 +45,18 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-500">{article.readTime}</span>
                     <span className="text-indigo-600 font-semibold flex items-center gap-1">
-                      Read More</span>
+                      Read More <<<ArrowRight className="w-4 h-4" />
+                    </span>
                   </div>
                 </Link>
               ))}
             </div>
             <div className="mt-6 text-center">
               <Link
-                to="/blog"
-                className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
+                to="/<blog" className="inline-flex items-center gap-2 text-indigo-600 font-bold hover:text-indigo-800"
               >
                 View All Articles
-
+                <<<ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -60,11 +64,11 @@ const NewContentShowcase: React.FC = () => {
           {/* Services Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-
+              <<<Rocket className="w-8 h-8 text-purple-600" />
               <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
             </div>
             <div className="space-y-4">
-              {topServices.map((service) = > (
+              {topServices.map((service) => (
                 <Link
                   key={service.id}
                   to={service.link}
@@ -79,18 +83,18 @@ const NewContentShowcase: React.FC = () => {
                   <div className="flex items-center justify-between text-sm">
                     <span className="text-gray-700 font-semibold">{service.pricing}</span>
                     <span className="text-purple-600 font-semibold flex items-center gap-1">
-                      Learn More</span>
+                      Learn More <<<ArrowRight className="w-4 h-4" />
+                    </span>
                   </div>
                 </Link>
               ))}
             </div>
             <div className="mt-6 text-center">
               <Link
-                to="/services"
-                className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
+                to="/<services" className="inline-flex items-center gap-2 text-purple-600 font-bold hover:text-purple-800"
               >
                 View All Services
-
+                <<<ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>

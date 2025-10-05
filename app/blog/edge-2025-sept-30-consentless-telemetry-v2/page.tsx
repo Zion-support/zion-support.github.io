@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -28,8 +28,8 @@ export default function Page() {
           </article>
 
           <div className="mt-12 flex gap-4">
-            <ArrowRight href="/blog" className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold">← All Posts</ArrowRight>
-            <ArrowRight href="/" className="px-4 py-2 rounded-lg border border-white/20">Home</ArrowRight>
+            <Link href="/<blog" className="px-4 py-2 rounded-lg bg-white text-slate-900 font-semibold">← All Posts</Link>
+            <Link href="/" className="px-4 py-2 rounded-lg border border-white/20">Home</Link>
           </div>
         </div>
       </section>

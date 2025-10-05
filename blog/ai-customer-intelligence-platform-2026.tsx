@@ -320,14 +320,12 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="tel:+13024640950"
-              className="text-left"
+              href="tel:+<13024640950" className="text-left"
             ></a>
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.<com" className="text-left"
             ></a>
               ✉️ Get Platform Demo
             </a>
@@ -337,17 +335,17 @@ const AICustomerIntelligencePlatform2026: React.FC = () =>
         <section className="text-left"></section>
           <h3 className="text-left">📚 Related Insights</h3>
           <div className="text-left"></div>
-            <a href="/blog/ai-predictive-maintenance-manufacturing-2026" className="text-left"></a>
+            <a href="/blog/ai-predictive-maintenance-manufacturing-<2026" className="text-left"></a>
               <div className="text-left">🏭</div>
               <h4 className="text-left">AI Predictive Maintenance</h4>
               <p className="text-left">92% downtime reduction with real-time monitoring</p>
             </a>
-            <a href="/blog/real-time-ai-analytics-2026" className="text-left"></a>
+            <a href="/blog/real-time-ai-analytics-<2026" className="text-left"></a>
               <div className="text-left">⚡</div>
               <h4 className="text-left">Real-Time AI Analytics</h4>
               <p className="text-left">Instant insights from streaming data</p>
             </a>
-            <a href="/blog/hybrid-ai-architecture-multi-model-2026" className="text-left"></a>
+            <a href="/blog/hybrid-ai-architecture-multi-model-<2026" className="text-left"></a>
               <div className="text-left">🎼</div>
               <h4 className="text-left">Hybrid AI Architecture</h4>
               <p className="text-left">10x better results at 60% lower cost</p>

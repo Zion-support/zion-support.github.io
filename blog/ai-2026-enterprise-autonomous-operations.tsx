@@ -257,20 +257,17 @@ export default function AI2026EnterpriseAutonomousOperations() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Get Free AI 2026 Consultation
             </a>
             <a
-              href="/blog/ai-2026-may-revolutionary-breakthrough"
-              className="text-left"
+              href="/blog/ai-2026-may-revolutionary-<breakthrough" className="text-left"
             ></a>
               Read Technical Details →
             </a>
             <a
-              href="/case-studies/fortune-500-ai-2026-may-mega-success"
-              className="text-left"
+              href="/case-studies/fortune-500-ai-2026-may-mega-<success" className="text-left"
             ></a>
               View Success Stories →
             </a>

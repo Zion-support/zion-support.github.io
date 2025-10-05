@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026: Ultra-Intelligent Autonomous Systems Breakthrough | Zion Tech Group',
@@ -34,18 +34,16 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <ArrowRight 
-                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-success" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              <Link 
+                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-<success" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 View $15.2B Success Story →
-              </ArrowRight>
-              <ArrowRight 
-                href="/contact" 
-                className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
+              </Link>
+              <Link 
+                href="/<contact" className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
-              </ArrowRight>
+              </Link>
             </div>
             
             {/* Key Metrics */}
@@ -227,18 +225,16 @@ export default function UltraIntelligentAutonomousSystemsPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ArrowRight 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              <Link 
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Schedule Consultation
-              </ArrowRight>
-              <ArrowRight 
-                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-success" 
-                className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+              </Link>
+              <Link 
+                href="/case-studies/ai-2026-ultra-intelligent-autonomous-systems-15-billion-<success" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
               >
                 View Success Story
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </article>
@@ -253,22 +249,20 @@ export default function UltraIntelligentAutonomousSystemsPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <ArrowRight 
-              href="/contact" 
-              className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+            <Link 
+              href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               Get Started Today
-            </ArrowRight>
+            </Link>
             <a 
-              href="tel:+13024640950" 
-              className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="tel:+<13024640950" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Call +1 302 464 0950
             </a>
           </div>
           
           <div className="mt-8 text-sm text-gray-400">
-            <p>Email: <a href="mailto:kleber@ziontechgroup.com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
+            <p>Email: <a href="mailto:kleber@ziontechgroup.<com" className="text-blue-400 hover:text-blue-300">kleber@ziontechgroup.com</a></p>
             <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
           </div>
         </div>

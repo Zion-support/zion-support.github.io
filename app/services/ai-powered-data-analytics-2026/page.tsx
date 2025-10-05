@@ -371,21 +371,19 @@ export default function AIPoweredDataAnalytics2026() {
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-              href="tel:+13024640950"
-              className="bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all hover:scale-105 shadow-2xl"
+              href="tel:+<13024640950" className="bg-white text-blue-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition-all hover:scale-105 shadow-2xl"
             >
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
+              href="mailto:kleber@ziontechgroup.<com" className="border-3 border-white text-white px-10 py-5 rounded-xl font-bold text-xl hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
             >
               📧 Schedule Consultation
             </a>
           </div>
 
           <p className="mt-8 text-lg opacity-90">
-            Or explore our <Link href="/case-studies" className="underline hover:text-yellow-300">success stories</Link> to see AI analytics in action
+            Or explore our <Link href="/case-<studies" className="underline hover:text-yellow-300">success stories</Link> to see AI analytics in action
           </p>
         </div>
       </section>
@@ -395,15 +393,15 @@ export default function AIPoweredDataAnalytics2026() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Related AI Services</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/services/ai-cybersecurity-2025" className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Link href="/services/ai-cybersecurity-<2025" className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <h3 className="font-bold text-gray-900 mb-2 text-lg">AI Cybersecurity 2025</h3>
               <p className="text-sm text-gray-600">99.99% threat detection with zero-trust architecture</p>
             </Link>
-            <Link href="/services/ai-cloud-infrastructure-2025" className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Link href="/services/ai-cloud-infrastructure-<2025" className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <h3 className="font-bold text-gray-900 mb-2 text-lg">AI Cloud Infrastructure</h3>
               <p className="text-sm text-gray-600">Self-healing systems with 99.999% uptime</p>
             </Link>
-            <Link href="/services/ai-blockchain-integration-2025" className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
+            <Link href="/services/ai-blockchain-integration-<2025" className="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105">
               <h3 className="font-bold text-gray-900 mb-2 text-lg">AI Blockchain Integration</h3>
               <p className="text-sm text-gray-600">10,000 TPS with intelligent smart contracts</p>
             </Link>

@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Edge AI Blueprint 2026: Building Sub-100ms Intelligent Systems',
@@ -76,8 +76,8 @@ export default function EdgeAIBlueprint2026Page() {
             <h3 className="text-2xl font-bold mb-4">Need sub-100ms experiences at the edge?</h3>
             <p className="text-lg mb-6 opacity-90">We implement hybrid inference with robust routing, caching, and evals.</p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:+13024640950" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Call +1 302 464 0950</a>
-              <a href="mailto:kleber@ziontechgroup.com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-700">Get Consultation</a>
+              <a href="tel:+<13024640950" className="bg-white text-cyan-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100">Call +1 302 464 0950</a>
+              <a href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-cyan-700">Get Consultation</a>
             </div>
           </div>
         </div>
@@ -99,11 +99,11 @@ export default function EdgeAIBlueprint2026Page() {
 
 function RelatedArticleCard({ title, description, href }: { title: string; description: string; href: string }) {
   return (
-    <ArrowRight href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
+    <Link href={href} className="block bg-white rounded-lg p-6 hover:shadow-lg transition-all duration-300">
       <h3 className="text-xl font-bold text-gray-900 mb-3">{title}</h3>
       <p className="text-gray-600 mb-4">{description}</p>
       <span className="text-cyan-700 font-semibold">Read More →</span>
-    </ArrowRight>
+    </Link>
   );
 }
 

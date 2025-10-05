@@ -50,8 +50,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               </li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-enterprise-ai-governance-framework"
-              className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all"
+              to="/blog/ai-2025-october-enterprise-ai-governance-<framework" className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all"
             >
               Read Framework →
             </Link>
@@ -80,8 +79,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               </li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-multimodal-ai-enterprise-deployment"
-              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
+              to="/blog/ai-2025-october-multimodal-ai-enterprise-<deployment" className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
             >
               Explore Guide →
             </Link>
@@ -110,8 +108,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               </li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-edge-ai-deployment-revolution"
-              className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all"
+              to="/blog/ai-2025-october-edge-ai-deployment-<revolution" className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all"
             >
               Discover More →
             </Link>

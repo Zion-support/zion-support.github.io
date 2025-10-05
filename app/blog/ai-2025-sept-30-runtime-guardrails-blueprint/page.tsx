@@ -1,5 +1,5 @@
 // @ts-nocheck
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export default function RuntimeGuardrailsBlueprint2025() {
   return (
@@ -38,20 +38,20 @@ export default function RuntimeGuardrailsBlueprint2025() {
           </ol>
         </section>
 
-        <hr />
+        <hr className="my-10 border-white/10" />
 
         <aside className="bg-emerald-500/10 border border-emerald-400/20 rounded-xl p-6">
           <h3 className="text-xl font-bold text-emerald-300 mb-2">Related</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-1">
             <li>
-              <ArrowRight href="/blog/ai-2026-safe-autonomy-scorecards" className="text-emerald-300 hover:text-emerald-200">
+              <Link href="/blog/ai-2026-safe-autonomy-<scorecards" className="text-emerald-300 hover:text-emerald-200">
                 AI 2026 Safe Autonomy Scorecards
-              </ArrowRight>
+              </Link>
             </li>
             <li>
-              <ArrowRight href="/blog/ai-governance-real-time-2026" className="text-emerald-300 hover:text-emerald-200">
+              <Link href="/blog/ai-governance-real-time-<2026" className="text-emerald-300 hover:text-emerald-200">
                 Real‑Time AI Governance 2026
-              </ArrowRight>
+              </Link>
             </li>
           </ul>
         </aside>

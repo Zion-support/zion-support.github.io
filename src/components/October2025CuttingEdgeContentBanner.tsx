@@ -1,3 +1,7 @@
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const October2025CuttingEdgeContentBanner = () => {
@@ -8,7 +12,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "Autonomous Systems",
       link: "/blog/ai-2025-oct-next-gen-autonomous-orchestration",
       gradient: "from-cyan-500 to-blue-600",
-      icon: '>,',
+      icon: <<<Zap className="w-6 h-6" />,
       metrics: ["99.99% Uptime", "85% Cost Cut", "95% Faster Recovery"]
     },
     {
@@ -17,7 +21,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "LLM Engineering",
       link: "/blog/ai-2025-oct-advanced-prompt-engineering-mastery",
       gradient: "from-purple-500 to-pink-600",
-      icon: '>,',
+      icon: <<<Sparkles className="w-6 h-6" />,
       metrics: ["10x Performance", "95%+ Accuracy", "$990K Savings"]
     },
     {
@@ -26,7 +30,7 @@ const October2025CuttingEdgeContentBanner = () => {
       category: "ML at Scale",
       link: "/blog/ai-2025-oct-real-time-personalization-at-scale",
       gradient: "from-orange-500 to-red-600",
-      icon: '>,',
+      icon: <<<TrendingUp className="w-6 h-6" />,
       metrics: ["340% Revenue", "Sub-50ms Latency", "100M+ Users"]
     }
   ];
@@ -44,7 +48,7 @@ const October2025CuttingEdgeContentBanner = () => {
         {/* Header Section */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-full border border-purple-500/30 mb-4">
-
+            <<<Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
             <span className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
               🔥 OCTOBER 1, 2025 — JUST PUBLISHED TODAY
             </span>
@@ -67,7 +71,8 @@ const October2025CuttingEdgeContentBanner = () => {
             <Link
               key={index}
               to={article.link}
-              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+              className="group relative overflow-hidden bg-slate-800/50 backdrop-blur-sm rounded-2xl border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+            >
               {/* Card gradient overlay */}
               <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
@@ -96,8 +101,9 @@ const October2025CuttingEdgeContentBanner = () => {
                 <div className="flex flex-wrap gap-2 mb-4">
                   {article.metrics.map((metric, idx) => (
                     <span
-key={idx}
-                      className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50">
+                      key={idx}
+                      className="text-xs px-2 py-1 rounded-md bg-slate-700/50 text-gray-300 border border-slate-600/50"
+                    >
                       {metric}
                     </span>
                   ))}
@@ -106,7 +112,7 @@ key={idx}
                 {/* Read More Link */}
                 <div className="flex items-center text-sm font-semibold text-purple-400 group-hover:text-cyan-400 transition-colors">
                   Read Full Article
-
+                  <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>
               </div>
             </Link>
@@ -117,17 +123,17 @@ key={idx}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <Link
-              to="/blog"
-              className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105">
+              to="/<blog" className="group px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-bold rounded-xl hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 shadow-lg hover:shadow-purple-500/50 hover:scale-105"
+            >
               <span className="flex items-center gap-2">
                 Explore All Latest Content
-
+                <<<ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
             
             <Link
-              to="/contact"
-              className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover:border-purple-500 hover:bg-slate-700/80 transition-all duration-300">
+              to="/<contact" className="px-8 py-4 bg-slate-800/80 backdrop-blur-sm text-white font-bold rounded-xl border border-purple-500/30 hover:border-purple-500 hover:bg-slate-700/80 transition-all duration-300"
+            >
               Schedule Expert Consultation
             </Link>
           </div>

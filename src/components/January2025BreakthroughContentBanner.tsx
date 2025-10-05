@@ -1,16 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const January2025BreakthroughContentBanner: React.FC = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900" > {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900">
+      {/* Animated background elements */}
       <div className="absolute inset-0 bg-[url('/images/neural-network-bg.svg')] opacity-10 animate-pulse"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-1"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 text-emerald-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
-
+            <<<Star className="w-4 h-4 fill-current" />
             <span>JUST PUBLISHED: January 2025</span>
           </div>
           
@@ -18,7 +25,8 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <span className="bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
               Revolutionary AI Breakthroughs
             </span>
-            <br /> <span className="text-white">2025 Edition</span>
+            <br />
+            <span className="text-white">2025 Edition</span>
           </h2>
           
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
@@ -34,7 +42,7 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-emerald-500/20 rounded-lg">
-
+                  <<<Brain className="w-6 h-6 text-emerald-400" />
                 </div>
                 <span className="text-emerald-400 text-sm font-medium">Quantum AI</span>
               </div>
@@ -48,10 +56,9 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   <span className="text-blue-400 font-medium">3,400% ROI</span>
                 </div>
                 <Link 
-                  to="/blog/ai-quantum-neural-fusion-2025"
-                  className="text-emerald-400 hover:text-emerald-300 transition-colors"
+                  to="/blog/ai-quantum-neural-fusion-<2025" className="text-emerald-400 hover:text-emerald-300 transition-colors"
                 >
-
+                  <<<ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -63,7 +70,7 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-blue-500/20 rounded-lg">
-
+                  <<<Zap className="w-6 h-6 text-blue-400" />
                 </div>
                 <span className="text-blue-400 text-sm font-medium">Autonomous Systems</span>
               </div>
@@ -77,10 +84,9 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   <span className="text-purple-400 font-medium">2,800% ROI</span>
                 </div>
                 <Link 
-                  to="/blog/autonomous-enterprise-mesh-2025"
-                  className="text-blue-400 hover:text-blue-300 transition-colors"
+                  to="/blog/autonomous-enterprise-mesh-<2025" className="text-blue-400 hover:text-blue-300 transition-colors"
                 >
-
+                  <<<ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -92,7 +98,7 @@ const January2025BreakthroughContentBanner: React.FC = () => {
             <div className="relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="p-2 bg-purple-500/20 rounded-lg">
-
+                  <<<Brain className="w-6 h-6 text-purple-400" />
                 </div>
                 <span className="text-purple-400 text-sm font-medium">AI Consciousness</span>
               </div>
@@ -106,10 +112,9 @@ const January2025BreakthroughContentBanner: React.FC = () => {
                   <span className="text-pink-400 font-medium">∞ ROI</span>
                 </div>
                 <Link 
-                  to="/blog/synthetic-consciousness-ai-2025"
-                  className="text-purple-400 hover:text-purple-300 transition-colors"
+                  to="/blog/synthetic-consciousness-ai-<2025" className="text-purple-400 hover:text-purple-300 transition-colors"
                 >
-
+                  <<<ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </div>
@@ -143,17 +148,15 @@ const January2025BreakthroughContentBanner: React.FC = () => {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
             <Link
-              to="/case-studies"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
+              to="/case-<studies" className="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-blue-500 text-white px-8 py-4 rounded-full font-semibold hover:from-emerald-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
-
+              <<<TrendingUp className="w-5 h-5" />
               View All Case Studies
             </Link>
             <Link
-              to="/blog"
-              className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
+              to="/<blog" className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
             >
-
+              <<<CheckCircle className="w-5 h-5" />
               Read Latest Articles
             </Link>
           </div>

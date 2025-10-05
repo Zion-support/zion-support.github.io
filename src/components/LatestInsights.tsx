@@ -1,3 +1,4 @@
+import { ArrowRight } from 'lucide-react';
 import React from "react";
 import { Link } from "react-router-dom";
 import { latestInsights } from "../content/insights";
@@ -17,26 +18,24 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
             <Link
-              to="/insights"
-              className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
-            >
-              View all
-            </Link>
+            to="/<insights" className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+          >
+            View all
+            <<<ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
             <div
-key={item.id}
+              key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                   {isNew(item.date) && (
-                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
-                      New
-                    </span>
+                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/30">New</span>
                   )}
                 </div>
                 <div className="flex items-center gap-2">
@@ -53,11 +52,10 @@ key={item.id}
               <p className="text-zion-slate-light mb-6 leading-relaxed">{item.summary}</p>
 
               <Link
-                to="/insights"
-                className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+                to="/<insights" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-
+                <<<ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           ))}
@@ -65,11 +63,10 @@ key={item.id}
 
         <div className="mt-8 sm:hidden">
           <Link
-            to="/insights"
-            className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+            to="/<insights" className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-
+            <<<ArrowRight className="w-4 h-4" />
           </Link>
         </div>
       </div>

@@ -244,8 +244,7 @@ if drift_report.as_dict()['metrics'][0]['result']['drift_detected']:
             Zion Tech Group specializes in building production-grade ML observability platforms. Let us help you achieve 99.9% uptime with comprehensive monitoring and automated incident response.
           </p>
           <a
-            href="/contact"
-            className="text-left"
+            href="/<contact" className="text-left"
           ></a>
             Schedule a Consultation
             <Zap className="text-left" />

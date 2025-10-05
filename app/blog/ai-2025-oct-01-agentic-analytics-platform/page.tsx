@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
 	title: 'Agentic Analytics Platform — October 2025',
@@ -31,7 +31,7 @@ export default function Page() {
 			</section>
 
 			<div className="mt-10">
-				<ArrowRight href="/blog" className="text-blue-600 font-semibold hover:text-blue-700">← Back to Blog</ArrowRight>
+				<Link href="/<blog" className="text-blue-600 font-semibold hover:text-blue-700">← Back to Blog</Link>
 			</div>
 		</main>
 	);

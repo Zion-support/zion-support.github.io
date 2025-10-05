@@ -1,15 +1,12 @@
-import { CheckCircle, Clock, Mail, MapPin, Phone, Send } from 'lucide-react';
 import React, { useState } from 'react';
-
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-
-
-
-
-
-;
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Send } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -177,7 +174,7 @@ const Contact: React.FC = () => {
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="<name" className="block text-sm font-medium text-gray-700 mb-2">
                             Full Name *
                           </label>
                           <input
@@ -192,7 +189,7 @@ const Contact: React.FC = () => {
                           />
                         </div>
                         <div>
-                          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="<email" className="block text-sm font-medium text-gray-700 mb-2">
                             Email Address *
                           </label>
                           <input
@@ -210,7 +207,7 @@ const Contact: React.FC = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="<company" className="block text-sm font-medium text-gray-700 mb-2">
                             Company
                           </label>
                           <input
@@ -224,7 +221,7 @@ const Contact: React.FC = () => {
                           />
                         </div>
                         <div>
-                          <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="<phone" className="block text-sm font-medium text-gray-700 mb-2">
                             Phone Number
                           </label>
                           <input
@@ -241,7 +238,7 @@ const Contact: React.FC = () => {
 
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                          <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="<service" className="block text-sm font-medium text-gray-700 mb-2">
                             Service Interest *
                           </label>
                           <select
@@ -262,7 +259,7 @@ const Contact: React.FC = () => {
                           </select>
                         </div>
                         <div>
-                          <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                          <label htmlFor="<budget" className="block text-sm font-medium text-gray-700 mb-2">
                             Project Budget
                           </label>
                           <select
@@ -283,7 +280,7 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label htmlFor="<message" className="block text-sm font-medium text-gray-700 mb-2">
                           Project Details *
                         </label>
                         <textarea

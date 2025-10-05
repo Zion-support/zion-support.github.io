@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import ArrowLeft from 'lucide-react/dist/esm/icons/rrowleft';
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import User from 'lucide-react/dist/esm/icons/ser';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import Tag from 'lucide-react/dist/esm/icons/ag';
+import { ArrowLeft } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { User } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Tag } from 'lucide-react';
 
 export const metadata = {
   title: 'Quantum AI 2026: Business Intelligence Revolution - Zion Tech Group',
@@ -21,7 +21,7 @@ export default function QuantumAIBusinessIntelligence() {
             href="/" 
             className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
           >
-            <ArrowLeft />
+            <<<ArrowLeft className="w-4 h-4 mr-2" />
             Back to Home
           </Link>
         </div>
@@ -33,15 +33,15 @@ export default function QuantumAIBusinessIntelligence() {
         <div className="mb-8">
           <div className="flex items-center gap-4 text-sm text-gray-600 mb-4">
             <div className="flex items-center gap-1">
-              <Calendar />
+              <<<Calendar className="w-4 h-4" />
               <span>January 20, 2026</span>
             </div>
             <div className="flex items-center gap-1">
-              <User />
+              <<<User className="w-4 h-4" />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock />
+              <<<Clock className="w-4 h-4" />
               <span>15 min read</span>
             </div>
           </div>
@@ -57,7 +57,7 @@ export default function QuantumAIBusinessIntelligence() {
           <div className="flex flex-wrap gap-2">
             {['Quantum AI', 'Business Intelligence', 'Data Analytics', '2026 Innovation', 'Strategic Intelligence'].map((tag) => (
               <span key={tag} className="inline-flex items-center gap-1 bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                <Tag />
+                <<<Tag className="w-3 h-3" />
                 {tag}
               </span>
             ))}
@@ -300,14 +300,12 @@ export default function QuantumAIBusinessIntelligence() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
-                href="/guides/quantum-ai-implementation-roadmap-2026"
-                className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
+                href="/guides/quantum-ai-implementation-roadmap-<2026" className="bg-white text-purple-600 px-8 py-4 rounded-full font-bold hover:bg-gray-100 transition-colors"
               >
                 Get Quantum AI Roadmap
               </Link>
               <Link 
-                href="/case-studies/fortune-500-quantum-bi-transformation"
-                className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition-colors"
+                href="/case-studies/fortune-500-quantum-bi-<transformation" className="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-purple-600 transition-colors"
               >
                 View Success Stories
               </Link>

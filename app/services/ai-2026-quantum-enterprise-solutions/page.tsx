@@ -5,7 +5,7 @@ export default function QuantumEnterpriseSolutionsPage() {
     <main className="min-h-screen bg-slate-950 text-white">
       <div className="max-w-6xl mx-auto px-4 py-16">
         <div className="mb-12">
-          <Link href="/services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
+          <Link href="/<services" className="text-blue-400 hover:text-blue-300 mb-4 inline-block">
             ← Back to Services
           </Link>
           <div className="flex items-center gap-2 mb-6">
@@ -261,14 +261,12 @@ export default function QuantumEnterpriseSolutionsPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-6">
             <Link 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
+              href="/<contact" className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-indigo-700 transition-all shadow-lg hover:shadow-xl"
             >
               Schedule Consultation
             </Link>
             <Link 
-              href="/case-studies" 
-              className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
+              href="/case-<studies" className="border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all"
             >
               View Success Stories
             </Link>

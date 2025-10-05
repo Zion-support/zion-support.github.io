@@ -15,7 +15,7 @@ const Page = () => {
         <li>Budgetaware actions with KPIlinked canaries</li>
       </ul>
       <div className="mt-8">
-        <Link to="/blog" className="text-cyan-300 underline">Back to Blog</Link>
+        <Link to="/<blog" className="text-cyan-300 underline">Back to Blog</Link>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ export default function RealTimePersonalization2025() {
       <div className="text-left"></div>
         <main className="text-left">
           <nav className="text-left">
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               ← Back to Blog
             </a>
           </nav>
@@ -307,8 +307,7 @@ export default function RealTimePersonalization2025() {
                     implementation roadmap—absolutely free.
                   </p>
                   <a
-                    href="/contact"
-                    className="text-left"
+                    href="/<contact" className="text-left"
                   ></a>
                     Get Your Free Assessment →
                   </a>

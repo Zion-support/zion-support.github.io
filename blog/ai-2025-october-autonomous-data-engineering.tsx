@@ -244,14 +244,12 @@ export default function AutonomousDataEngineering() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule DataOps Assessment
             </a>
             <a
-              href="/case-studies/ecommerce-autonomous-data-platform-success-2025"
-              className="text-left"
+              href="/case-studies/ecommerce-autonomous-data-platform-success-<2025" className="text-left"
             ></a>
               View E-Commerce Success Story →
             </a>

@@ -222,14 +222,12 @@ export default function October2025RealTimeIntelligenceRevolution() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Consultation
             </a>
             <a
-              href="/case-studies/fortune-500-real-time-intelligence-success-2025"
-              className="text-left"
+              href="/case-studies/fortune-500-real-time-intelligence-success-<2025" className="text-left"
             ></a>
               View Success Stories
             </a>

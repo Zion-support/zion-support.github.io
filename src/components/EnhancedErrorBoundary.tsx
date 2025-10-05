@@ -1,9 +1,13 @@
 import { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Mail } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) = > void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
 }
 
 interface State {
@@ -59,8 +63,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       componentStack: errorInfo.componentStack,
       timestamp: new Date().toISOString(),
       userAgent: navigator.userAgent,
-      url: window.location.href,',
-      userId: this.getUserId(),',
+      url: window.location.href,
+      userId: this.getUserId(),
       sessionId: this.getSessionId(),
     };
 
@@ -80,7 +84,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     return localStorage.getItem('userId');
   };
 
-  getSessionId = (): string = > {
+  getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId');
     if (!sessionId) {
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
@@ -106,7 +110,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     window.location.href = '/';
   };
 
-  handleReportError = () = > {
+  handleReportError = () => {
     // const errorReport = {
     //   errorId: this.state.errorId,
     //   message: this.state.error?.message,
@@ -171,21 +175,21 @@ Stack Trace: ${this.state.error?.stack}
 
             <div className='flex flex-col sm:flex-row gap-3 justify-center'>
               <button
-onClick={this.handleRetry}
+                onClick={this.handleRetry}
                 className='inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors'
               >
                 <RefreshCw className='w-4 h-4 mr-2' />
                 Try Again
               </button>
               <button
-onClick={this.handleGoHome}
+                onClick={this.handleGoHome}
                 className='inline-flex items-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors'
               >
                 <Home className='w-4 h-4 mr-2' />
                 Go Home
               </button>
               <button
-onClick={this.handleReload}
+                onClick={this.handleReload}
                 className='inline-flex items-center px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-50 transition-colors'
               >
                 <RefreshCw className='w-4 h-4 mr-2' />
@@ -198,7 +202,7 @@ onClick={this.handleReload}
                 If this problem persists, please report it to our support team.
               </p>
               <button
-onClick={this.handleReportError}
+                onClick={this.handleReportError}
                 className='inline-flex items-center px-4 py-2 text-blue-600 hover:text-blue-700 transition-colors'
               >
                 <Mail className='w-4 h-4 mr-2' />
@@ -211,7 +215,8 @@ onClick={this.handleReportError}
                 <summary className='cursor-pointer text-sm font-medium text-gray-700 hover:text-gray-900'>
                   Development Details
                 </summary>
-                <pre className='mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64' > {this.state.error?.stack}
+                <pre className='mt-2 text-xs text-gray-600 bg-gray-100 p-3 rounded overflow-auto max-h-64'>
+                  {this.state.error?.stack}
                   {this.state.errorInfo.componentStack}
                 </pre>
               </details>

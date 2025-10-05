@@ -245,14 +245,12 @@ const AIQuantumIntegrationEnterprise2025 = () =>
           </p>
           <div className="text-left"></div>
             <a
-              href="tel: +13024640950"
-              className="text-left"
+              href="tel: +<13024640950" className="text-left"
             ></a>
               📞 Schedule Quantum-AI Consultation
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="text-left"
+              href="mailto:kleber@ziontechgroup.<com" className="text-left"
             ></a>
               📧 Request Technical Whitepaper
             </a>
@@ -287,10 +285,10 @@ const AIQuantumIntegrationEnterprise2025 = () =>
             proven implementation methodologies.
           </p>
           <div className="text-left"></div>
-            <a href="/contact" className="text-left"></a>
+            <a href="/<contact" className="text-left"></a>
               Get Started
             </a>
-            <a href="/blog" className="text-left"></a>
+            <a href="/<blog" className="text-left"></a>
               More Articles
             </a>
           </div>

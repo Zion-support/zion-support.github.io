@@ -18,7 +18,7 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-900 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <a href="/blog" className="text-blue-300 hover:text-blue-200 transition-colors">
+          <a href="/<blog" className="text-blue-300 hover:text-blue-200 transition-colors">
             ← Back to Blog
           </a>
         </nav>
@@ -92,10 +92,10 @@ export default function Page() {
                 live red teaming and monitoring—so you ship fast without surprises.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
+                <a href="/<contact" className="bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg">
                   Talk to an Expert
                 </a>
-                <a href="/case-studies" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
+                <a href="/case-<studies" className="border-2 border-cyan-500 text-cyan-300 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300">
                   View Case Studies
                 </a>
               </div>
@@ -106,8 +106,8 @@ export default function Page() {
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group Security Engineering</div>
               <div className="flex gap-4">
-                <a href="/blog" className="text-blue-300 hover:text-blue-200 transition-colors">← Back to Blog</a>
-                <a href="/contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
+                <a href="/<blog" className="text-blue-300 hover:text-blue-200 transition-colors">← Back to Blog</a>
+                <a href="/<contact" className="text-cyan-300 hover:text-cyan-200 transition-colors">Get in Touch</a>
               </div>
             </div>
           </footer>

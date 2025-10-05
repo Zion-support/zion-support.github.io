@@ -217,14 +217,12 @@ export default function QuantumNeuralSuperintelligencePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-cyan-600 hover:bg-cyan-50 font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-white text-cyan-600 hover:bg-cyan-50 font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   Schedule Demo
                 </a>
                 <a 
-                  href="/case-studies/quantum-neural-superintelligence-success" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                  href="/case-studies/quantum-neural-superintelligence-<success" className="border-2 border-white text-white hover:bg-white hover:text-cyan-600 font-bold py-3 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

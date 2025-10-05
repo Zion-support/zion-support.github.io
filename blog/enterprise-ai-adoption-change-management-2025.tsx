@@ -266,14 +266,12 @@ export default function EnterpriseAIAdoptionChangeManagement2025() {
           </p>
           <div className="text-left"></div>
             <a
-              href="/contact"
-              className="text-left"
+              href="/<contact" className="text-left"
             ></a>
               Schedule Strategy Session
             </a>
             <a
-              href="/blog"
-              className="text-left"
+              href="/<blog" className="text-left"
             ></a>
               Explore More Guides
             </a>

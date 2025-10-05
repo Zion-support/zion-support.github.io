@@ -1,4 +1,4 @@
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Evidence‑Driven Evals 2025: Traceable Quality Linked to KPIs',
@@ -23,7 +23,7 @@ export default function Page() {
         </ul>
         <p>
           Start applying these practices today and measure impact weekly. For related topics, see{' '}
-          <ArrowRight href="/blog/genai-2025-routing-caches-v1" className="text-emerald-400 underline">GenAI Routing v1</ArrowRight>.
+          <Link href="/blog/genai-2025-routing-caches-<v1" className="text-emerald-400 underline">GenAI Routing v1</Link>.
         </p>
       </div>
     </main>

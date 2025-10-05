@@ -128,14 +128,12 @@ export default function AIEnterpriseAutomationRevolutionBanner() {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Link
-              href="/services/ai-automation"
-              className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
+              href="/services/ai-<automation" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 shadow-lg hover:shadow-xl"
             >
               Start Your Automation Revolution
             </Link>
             <Link
-              href="/case-studies/automation-success"
-              className="border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
+              href="/case-studies/automation-<success" className="border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-slate-900 transition-all duration-300"
             >
               View Success Stories
             </Link>

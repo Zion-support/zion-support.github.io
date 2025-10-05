@@ -1,16 +1,13 @@
-import { ArrowRight, Calendar, Clock, Search, Tag, User } from 'lucide-react';
 import React from 'react';
-
-
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-
-
-
-
-
-;
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { User } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Tag } from 'lucide-react';
+import { Search } from 'lucide-react';
 
 const Blog: React.FC = () => {
   const blogPosts = [
@@ -274,8 +271,7 @@ const Blog: React.FC = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600"
-              />
+                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-blue-600" />
               <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
                 Subscribe
               </button>

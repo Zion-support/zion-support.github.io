@@ -1,19 +1,8 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
-
-export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-b from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
         <title>Agent Reliability Runbooks v5 — Budgets, Canaries, Rollback</title>
-        <meta 
-          name="description" 
-content="Execute safe, budget-aware agent operations using KPI-linked playbooks, canary scorecards, and instant rollback."
-        />
-        <link 
-          rel="canonical" 
-          href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" 
-        />
+        <link rel="canonical" href="https://ziontechgroup.com/blog/ai-2025-oct-01-agent-reliability-runbooks-v5" />
       </Helmet>
 
       <div className="container mx-auto px-6 py-12">
@@ -24,7 +13,8 @@ content="Execute safe, budget-aware agent operations using KPI-linked playbooks,
             Practical runbooks for governing autonomous agents with budgeted actions, KPI‑linked canaries, and deterministic rollback
             that preserve customer experience while accelerating delivery.
           </p>
-<div className="space-y-6">
+
+          <div className="space-y-6">
             <h2 className="text-2xl font-semibold">Runbook Patterns</h2>
             <ul className="list-disc pl-6 text-zion-slate-light">
               <li>Budget guards per intent with escalation thresholds and approvals.</li>
@@ -40,11 +30,10 @@ content="Execute safe, budget-aware agent operations using KPI-linked playbooks,
             </p>
 
             <div className="mt-8">
-              <a href="/blog" className="text-cyan-300 hover:underline">← Back to Blog</a>
+              <Link to="/<blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
             </div>
           </div>
         </div>
       </div>
     </div>
   );
-}

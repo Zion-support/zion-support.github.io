@@ -1,6 +1,12 @@
-import { ArrowLeft, Brain, CheckCircle, Rocket, Shield, Target, TrendingUp, Zap } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Rocket } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { Link } from "react-router-dom";
-
 import { Helmet } from "react-helmet-async";
 import Header from "../../components/Header";
 
@@ -25,10 +31,9 @@ const CognitiveAutomationEnterpriseRevolution = () => {
         <article className="container mx-auto px-6 py-20">
           {/* Back Link */}
           <Link
-            to="/blog"
-            className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
+            to="/<blog" className="inline-flex items-center text-zion-cyan hover:text-zion-blue-light mb-8 transition-colors"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <<<ArrowLeft className="w-4 h-4 mr-2" />
             Back to Blog
           </Link>
 
@@ -115,7 +120,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
               <div className="space-y-4">
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-cyan-500/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <Brain className="w-6 h-6 text-cyan-400" />
+                    <<<Brain className="w-6 h-6 text-cyan-400" />
                     1. Contextual Understanding
                   </h3>
                   <p className="mb-4">
@@ -131,7 +136,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-purple-500/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <Target className="w-6 h-6 text-purple-400" />
+                    <<<Target className="w-6 h-6 text-purple-400" />
                     2. Decision-Making Capability
                   </h3>
                   <p className="mb-4">
@@ -146,7 +151,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-pink-500/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-pink-400" />
+                    <<<Zap className="w-6 h-6 text-pink-400" />
                     3. Continuous Learning
                   </h3>
                   <p className="mb-4">
@@ -161,7 +166,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
 
                 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-blue-500/30">
                   <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                    <Shield className="w-6 h-6 text-blue-400" />
+                    <<<Shield className="w-6 h-6 text-blue-400" />
                     4. Natural Language Interaction
                   </h3>
                   <p className="mb-4">
@@ -188,15 +193,15 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                   <h3 className="text-xl font-bold text-white mb-4">💰 Financial Services</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>94% reduction</strong> in loan processing time (from 3 weeks to 4 hours)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>$12M annual savings</strong> in back-office operations</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
                       <span><strong>98.7% accuracy</strong> in fraud detection with 75% fewer false positives</span>
                     </li>
                   </ul>
@@ -206,15 +211,15 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                   <h3 className="text-xl font-bold text-white mb-4">🏥 Healthcare</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                       <span><strong>87% faster</strong> insurance claims processing</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                       <span><strong>62% improvement</strong> in patient appointment scheduling efficiency</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
                       <span><strong>$8.4M reduction</strong> in administrative overhead annually</span>
                     </li>
                   </ul>
@@ -224,15 +229,15 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                   <h3 className="text-xl font-bold text-white mb-4">🏭 Manufacturing</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                       <span><strong>91% reduction</strong> in unplanned downtime through predictive maintenance</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                       <span><strong>35% improvement</strong> in supply chain optimization</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-purple-400 mt-1 flex-shrink-0" />
                       <span><strong>$15.7M annual savings</strong> from intelligent resource allocation</span>
                     </li>
                   </ul>
@@ -242,15 +247,15 @@ const CognitiveAutomationEnterpriseRevolution = () => {
                   <h3 className="text-xl font-bold text-white mb-4">🛒 Retail & E-Commerce</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                       <span><strong>83% improvement</strong> in customer service response time</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                       <span><strong>2.4x increase</strong> in customer satisfaction scores</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
+                      <<<CheckCircle className="w-5 h-5 text-cyan-400 mt-1 flex-shrink-0" />
                       <span><strong>$9.2M reduction</strong> in inventory carrying costs</span>
                     </li>
                   </ul>
@@ -396,7 +401,7 @@ const CognitiveAutomationEnterpriseRevolution = () => {
 
             {/* Call to Action */}
             <section className="bg-gradient-to-r from-purple-900/60 to-blue-900/60 rounded-2xl p-12 border-2 border-purple-500/40 text-center">
-              <Rocket className="w-16 h-16 text-purple-400 mx-auto mb-6" />
+              <<<Rocket className="w-16 h-16 text-purple-400 mx-auto mb-6" />
               <h2 className="text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Enterprise?
               </h2>
@@ -407,17 +412,15 @@ const CognitiveAutomationEnterpriseRevolution = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  to="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                  to="/<contact" className="inline-flex items-center justify-center gap-2 bg-purple-500 hover:bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
                 >
-                  <Rocket className="w-5 h-5" />
+                  <<<Rocket className="w-5 h-5" />
                   Schedule Consultation
                 </Link>
                 <Link
-                  to="/services"
-                  className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
+                  to="/<services" className="inline-flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 hover:bg-purple-500/20 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105"
                 >
-                  <TrendingUp className="w-5 h-5" />
+                  <<<TrendingUp className="w-5 h-5" />
                   Explore AI Services
                 </Link>
               </div>

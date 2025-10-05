@@ -1,4 +1,14 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Rocket } from 'lucide-react';
 
 const AITrendsInsightsBanner2026: React.FC = () => {
   const trendingTopics = [
@@ -9,7 +19,7 @@ const AITrendsInsightsBanner2026: React.FC = () => {
       trend: '+450%',
       growth: 'Rapid Growth',
       description: 'Enterprise adoption of generative AI has increased by 450% in Q1 2026, with 78% of Fortune 500 companies implementing AI-powered content generation.',
-icon: '🚀',
+      icon: <<<Brain className="w-6 h-6" />,
       gradient: 'from-purple-500 to-pink-500',
       badge: 'TRENDING',
       insights: ['78% Fortune 500 adoption', '450% growth rate', '$12B market size']
@@ -21,7 +31,7 @@ icon: '🚀',
       trend: '+300%',
       growth: 'Exponential',
       description: 'Quantum computing achieves practical applications in AI optimization, with 300% improvement in processing complex machine learning algorithms.',
-icon: '🚀',
+      icon: <<<Target className="w-6 h-6" />,
       gradient: 'from-cyan-500 to-blue-500',
       badge: 'BREAKTHROUGH',
       insights: ['1000x speed boost', '300% efficiency gain', 'Commercial viability']
@@ -33,7 +43,7 @@ icon: '🚀',
       trend: '+280%',
       growth: 'Accelerating',
       description: 'Business process automation reaches new heights with 95% autonomous operations across multiple industries, reducing operational costs by 60%.',
-icon: '🚀',
+      icon: <<<Rocket className="w-6 h-6" />,
       gradient: 'from-green-500 to-emerald-500',
       badge: 'AUTOMATION',
       insights: ['95% automation rate', '60% cost reduction', '24/7 operations']
@@ -45,7 +55,7 @@ icon: '🚀',
       trend: '+350%',
       growth: 'High Growth',
       description: 'Advanced predictive analytics using AI achieves 99.9% accuracy in forecasting business trends, customer behavior, and market dynamics.',
-icon: '🚀',
+      icon: <<<TrendingUp className="w-6 h-6" />,
       gradient: 'from-orange-500 to-red-500',
       badge: 'PREDICTIVE',
       insights: ['99.9% accuracy', '350% adoption growth', '$8B market value']
@@ -57,7 +67,7 @@ icon: '🚀',
       trend: '+420%',
       growth: 'Rapid Expansion',
       description: 'Edge AI computing transforms real-time decision making with 420% increase in deployment, enabling instant AI processing at the network edge.',
-icon: '🚀',
+      icon: <<<Globe className="w-6 h-6" />,
       gradient: 'from-indigo-500 to-purple-500',
       badge: 'EDGE AI',
       insights: ['420% deployment growth', 'Real-time processing', 'IoT integration']
@@ -69,7 +79,7 @@ icon: '🚀',
       trend: '+380%',
       growth: 'Critical Growth',
       description: 'AI ethics and governance frameworks become essential with 380% increase in regulatory compliance requirements and ethical AI implementation.',
-icon: '🚀',
+      icon: <<<Award className="w-6 h-6" />,
       gradient: 'from-teal-500 to-cyan-500',
       badge: 'GOVERNANCE',
       insights: ['380% compliance growth', 'Ethical frameworks', 'Regulatory alignment']
@@ -77,10 +87,10 @@ icon: '🚀',
   ];
 
   const marketInsights = [
-    { value: '$2.5T', label: 'Global AI Market Size', icon: '📊' },
-    { value: '85%', label: 'Enterprise AI Adoption', icon: '🏢' },
-    { value: '500M+', label: 'AI-Powered Devices', icon: '📱' },
-    { value: '2.3M', label: 'AI Job Openings', icon: '💼' }
+    { value: '$2.5T', label: 'Global AI Market Size', icon: <<<TrendingUp className="w-6 h-6" /> },
+    { value: '85%', label: 'Enterprise AI Adoption', icon: <<<Users className="w-6 h-6" /> },
+    { value: '500M+', label: 'AI-Powered Devices', icon: <<<Globe className="w-6 h-6" /> },
+    { value: '2.3M', label: 'AI Job Openings', icon: <<<Award className="w-6 h-6" /> }
   ];
 
   return (
@@ -88,17 +98,19 @@ icon: '🚀',
       {/* Animated background effects */}
       <div className="absolute inset-0 overflow-hidden opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30 mb-8 animate-fade-in">
-<span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
+            <<<Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
+            <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
               📊 AI TRENDS & INSIGHTS • Q1 2026
             </span>
+            <<<Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
@@ -131,9 +143,11 @@ icon: '🚀',
         {/* Trending Topics Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {trendingTopics.map((topic, index) => (
-<div
+            <div 
               key={topic.id}
-              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
+              className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+              style={{ animationDelay: `${index * 150}ms` }}
+            >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${topic.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
               
@@ -190,7 +204,7 @@ icon: '🚀',
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${topic.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Explore Trend</span>
-
+                  <<<ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
                 </a>
               </div>
             </div>
@@ -201,6 +215,7 @@ icon: '🚀',
         <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
+              <<<Clock className="w-5 h-5 text-yellow-400" />
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 REAL-TIME UPDATES
               </span>
@@ -217,11 +232,10 @@ icon: '🚀',
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300">
-
+                placeholder="Enter your <<email className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300" />
               <button className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">
-
+                <span>Subscribe</span>
+                <<<ArrowRight className="w-5 h-5" />
               </button>
             </div>
             <p className="text-xs text-gray-500 mt-4">
@@ -243,14 +257,16 @@ icon: '🚀',
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="/insights"
-                  className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2">
+                  href="/<insights" className="bg-gradient-to-r from-purple-500 to-cyan-600 hover:from-purple-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 flex items-center justify-center gap-2"
+                >
+                  <<<Sparkles className="w-5 h-5" />
                   <span>Explore All Insights</span>
                 </a>
                 <a
-                  href="/contact"
-                  className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2">
+                  href="/<contact" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
+                >
                   <span>Get Expert Consultation</span>
+                  <<<ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>

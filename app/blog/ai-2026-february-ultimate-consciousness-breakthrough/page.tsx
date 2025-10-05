@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import ArrowRight from 'next/link';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'AI 2026 February Ultimate Consciousness Breakthrough - Zion Tech Group',
@@ -35,20 +35,17 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#consciousness-details" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="#consciousness-<details" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Explore Consciousness
               </a>
               <a 
-                href="/case-studies/ai-2026-february-consciousness-breakthrough-100-billion-success" 
-                className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
+                href="/case-studies/ai-2026-february-consciousness-breakthrough-100-billion-<success" className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
               >
                 View $100B Success Story →
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Get Consciousness Guide
               </a>
@@ -78,7 +75,7 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
       </section>
 
       {/* Consciousness Details */}
-      <section id="consciousness-details" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <section id="consciousness-<details" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -282,20 +279,17 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </a>
               <a 
-                href="/case-studies" 
-                className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
+                href="/case-<studies" className="bg-gradient-to-r from-pink-500 to-cyan-600 hover:from-pink-400 hover:to-cyan-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-pink-500/50 transform hover:-translate-y-1"
               >
                 View All Success Stories →
               </a>
               <a 
-                href="/services/consciousness-systems" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/services/consciousness-<systems" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Services
               </a>
@@ -310,23 +304,23 @@ export default function AI2026FebruaryUltimateConsciousnessBreakthrough() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-white mb-8 text-center">Related Consciousness Breakthroughs</h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <ArrowRight href="/blog/ai-2026-march-ultimate-autonomous-revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300">
+              <Link href="/blog/ai-2026-march-ultimate-autonomous-<revolution" className="group block rounded-xl border border-purple-500/20 bg-gradient-to-br from-purple-900/20 to-indigo-900/20 p-6 hover:border-purple-400/40 transition-all duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-3 py-1 rounded-full text-xs font-bold">MARCH 2026</span>
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">Ultimate Autonomous Revolution</h3>
                 <p className="text-gray-400 text-sm mb-3">Discover how autonomous systems achieve 99.99% self-managing operations with $150B ROI potential.</p>
                 <div className="text-purple-300 text-sm font-semibold group-hover:text-purple-200">Read More →</div>
-              </ArrowRight>
+              </Link>
 
-              <ArrowRight href="/case-studies/ai-2026-february-consciousness-breakthrough-100-billion-success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300">
+              <Link href="/case-studies/ai-2026-february-consciousness-breakthrough-100-billion-<success" className="group block rounded-xl border border-green-500/20 bg-gradient-to-br from-green-900/20 to-emerald-900/20 p-6 hover:border-green-400/40 transition-all duration-300">
                 <div className="flex items-center gap-2 mb-3">
                   <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-3 py-1 rounded-full text-xs font-bold">$100B SUCCESS</span>
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2">Fortune 50 Consciousness Success</h3>
                 <p className="text-gray-400 text-sm mb-3">See how a Fortune 50 company achieved $100B ROI through consciousness implementation.</p>
                 <div className="text-green-300 text-sm font-semibold group-hover:text-green-200">View Case Study →</div>
-              </ArrowRight>
+              </Link>
             </div>
           </div>
         </div>

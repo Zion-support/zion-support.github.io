@@ -24,7 +24,7 @@ export default function AI2027BreakthroughSolutions() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="mb-8">
-        <Link href="/services" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
+        <Link href="/<services" className="text-blue-600 hover:text-blue-700 mb-4 inline-block">
           ← Back to Services
         </Link>
         <div className="flex items-center gap-2 mb-4">
@@ -455,7 +455,7 @@ export default function AI2027BreakthroughSolutions() {
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
-          <Link href="/case-studies/fortune-500-ai-transformation-2027" className="group">
+          <Link href="/case-studies/fortune-500-ai-transformation-<2027" className="group">
             <div className="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-2xl flex items-center justify-center">
@@ -514,14 +514,12 @@ export default function AI2027BreakthroughSolutions() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <a
-            href="tel:+13024640950"
-            className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
+            href="tel:+<13024640950" className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-colors shadow-lg"
           >
             Call +1 302 464 0950
           </a>
           <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
+            href="mailto:kleber@ziontechgroup.<com" className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-purple-600 transition-colors"
           >
             Get Free Consultation
           </a>

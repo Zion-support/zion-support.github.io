@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025CuttingEdgeInnovationBanner() {
@@ -44,8 +43,7 @@ export default function October2025CuttingEdgeInnovationBanner() {
                     Manage 10,000+ AI agents simultaneously with sub-3ms latency and 99.99% reliability
                   </p>
                   <Link 
-                    to="/blog/ai-2025-october-agentic-orchestration-platform" 
-                    className="inline-flex items-center text-cyan-400 font-semibold hover:text-cyan-300 transition-colors"
+                    to="/blog/ai-2025-october-agentic-orchestration-<platform" className="inline-flex items-center text-cyan-400 font-semibold hover:text-cyan-300 transition-colors"
                   >
                     Learn More <span className="ml-2">→</span>
                   </Link>
@@ -62,8 +60,7 @@ export default function October2025CuttingEdgeInnovationBanner() {
                     Hybrid AI systems combining deep learning with symbolic reasoning for 98.5% accuracy
                   </p>
                   <Link 
-                    to="/blog/ai-2025-october-neural-reasoning-engines" 
-                    className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors"
+                    to="/blog/ai-2025-october-neural-reasoning-<engines" className="inline-flex items-center text-purple-400 font-semibold hover:text-purple-300 transition-colors"
                   >
                     Discover More <span className="ml-2">→</span>
                   </Link>
@@ -94,8 +91,7 @@ export default function October2025CuttingEdgeInnovationBanner() {
                     </div>
                   </div>
                   <Link 
-                    to="/blog/ai-2025-october-enterprise-ai-fabric" 
-                    className="inline-flex items-center text-emerald-400 font-semibold hover:text-emerald-300 transition-colors"
+                    to="/blog/ai-2025-october-enterprise-ai-<fabric" className="inline-flex items-center text-emerald-400 font-semibold hover:text-emerald-300 transition-colors"
                   >
                     Explore Platform <span className="ml-2">→</span>
                   </Link>
@@ -111,14 +107,12 @@ export default function October2025CuttingEdgeInnovationBanner() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
-                to="/blog"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
+                to="/<blog" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:from-purple-600 hover:to-pink-600 transition-all transform hover:scale-105"
               >
                 View All Articles
               </Link>
               <Link
-                to="/contact"
-                className="bg-white/10 text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition-all border border-white/30"
+                to="/<contact" className="bg-white/10 text-white px-8 py-3 rounded-full font-bold hover:bg-white/20 transition-all border border-white/30"
               >
                 Schedule Consultation
               </Link>

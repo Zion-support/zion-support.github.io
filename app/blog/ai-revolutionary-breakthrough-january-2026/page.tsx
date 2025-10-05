@@ -1,10 +1,10 @@
 import Link from 'next/link';
-import ArrowRight from 'lucide-react/dist/esm/icons/rrowright';
-import Calendar from 'lucide-react/dist/esm/icons/alendar';
-import Clock from 'lucide-react/dist/esm/icons/lock';
-import TrendingUp from 'lucide-react/dist/esm/icons/rendingup';
-import Users from 'lucide-react/dist/esm/icons/sers';
-import Zap from 'lucide-react/dist/esm/icons/ap';
+import { ArrowRight } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Zap } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Revolutionary Breakthrough January 2026: 10x Performance Gains | Zion Tech Group',
@@ -45,7 +45,7 @@ export default function AIRevolutionaryBreakthrough2026() {
         <div className="container mx-auto px-6 relative z-10">
           <div className="max-w-5xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-8">
-              <TrendingUp />
+              <<<TrendingUp className="w-5 h-5 text-blue-400" />
               <span className="text-blue-400 font-bold text-sm tracking-wider uppercase">
                 🚀 BREAKTHROUGH TECHNOLOGY • January 30, 2026
               </span>
@@ -66,14 +66,12 @@ export default function AIRevolutionaryBreakthrough2026() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a 
-                href="#breakthrough-details" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+                href="#breakthrough-<details" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
               >
                 Explore Breakthrough Details
               </a>
               <a 
-                href="/contact" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/<contact" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Schedule Implementation Call
               </a>
@@ -110,15 +108,15 @@ export default function AIRevolutionaryBreakthrough2026() {
             {/* Article Meta */}
             <div className="flex items-center gap-6 mb-12 text-gray-600">
               <div className="flex items-center gap-2">
-                <Calendar />
+                <<<Calendar className="w-5 h-5" />
                 <span>January 30, 2026</span>
               </div>
               <div className="flex items-center gap-2">
-                <Clock />
+                <<<Clock className="w-5 h-5" />
                 <span>25 min read</span>
               </div>
               <div className="flex items-center gap-2">
-                <Users />
+                <<<Users className="w-5 h-5" />
                 <span>By Zion Tech Group AI Research Team</span>
               </div>
             </div>
@@ -143,7 +141,7 @@ export default function AIRevolutionaryBreakthrough2026() {
             </section>
 
             {/* Breakthrough Technologies Section */}
-            <section id="breakthrough-details" className="mb-16">
+            <section id="breakthrough-<details" className="mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-8">
                 Three Revolutionary Breakthrough Technologies
               </h2>
@@ -286,15 +284,15 @@ export default function AIRevolutionaryBreakthrough2026() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Manufacturing</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-green-500" />
                       <span>85% reduction in production downtime</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-green-500" />
                       <span>$120M annual cost savings</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-green-500" />
                       <span>99.5% quality improvement</span>
                     </li>
                   </ul>
@@ -304,15 +302,15 @@ export default function AIRevolutionaryBreakthrough2026() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Financial Services</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-blue-500" />
                       <span>95% faster fraud detection</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-blue-500" />
                       <span>$300M prevented losses</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-blue-500" />
                       <span>99.8% transaction accuracy</span>
                     </li>
                   </ul>
@@ -322,15 +320,15 @@ export default function AIRevolutionaryBreakthrough2026() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Healthcare</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-purple-500" />
                       <span>97% diagnostic accuracy</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-purple-500" />
                       <span>60% faster treatment decisions</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-purple-500" />
                       <span>$180M cost reduction</span>
                     </li>
                   </ul>
@@ -340,15 +338,15 @@ export default function AIRevolutionaryBreakthrough2026() {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Retail</h3>
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-orange-500" />
                       <span>90% inventory optimization</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-orange-500" />
                       <span>$250M revenue increase</span>
                     </li>
                     <li className="flex items-center gap-2">
-                      <Zap />
+                      <<<Zap className="w-5 h-5 text-orange-500" />
                       <span>98% customer satisfaction</span>
                     </li>
                   </ul>
@@ -367,14 +365,12 @@ export default function AIRevolutionaryBreakthrough2026() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
-                  href="tel:+13024640950"
-                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
+                  href="tel:+<13024640950" className="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all hover:scale-105 shadow-lg"
                 >
                   📞 Call +1 302 464 0950
                 </a>
                 <a
-                  href="/contact"
-                  className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
+                  href="/<contact" className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
                 >
                   Schedule Implementation Consultation
                 </a>
@@ -392,7 +388,7 @@ export default function AIRevolutionaryBreakthrough2026() {
               Related Breakthrough Technologies
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Link href="/blog/ai-quantum-computing-breakthrough-2026" className="group">
+              <Link href="/blog/ai-quantum-computing-breakthrough-<2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">⚛️</div>
@@ -404,13 +400,13 @@ export default function AIRevolutionaryBreakthrough2026() {
                     </p>
                     <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-700">
                       <span>Read More</span>
-                      <ArrowRight />
+                      <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/blog/ai-autonomous-enterprise-2026" className="group">
+              <Link href="/blog/ai-autonomous-enterprise-<2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏢</div>
@@ -422,13 +418,13 @@ export default function AIRevolutionaryBreakthrough2026() {
                     </p>
                     <div className="flex items-center text-green-600 font-semibold group-hover:text-green-700">
                       <span>Read More</span>
-                      <ArrowRight />
+                      <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>
               </Link>
               
-              <Link href="/case-studies/ai-mega-transformation-success-2026" className="group">
+              <Link href="/case-studies/ai-mega-transformation-success-<2026" className="group">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:scale-105">
                   <div className="p-8">
                     <div className="text-4xl mb-4">🏆</div>
@@ -440,7 +436,7 @@ export default function AIRevolutionaryBreakthrough2026() {
                     </p>
                     <div className="flex items-center text-purple-600 font-semibold group-hover:text-purple-700">
                       <span>Read More</span>
-                      <ArrowRight />
+                      <<<ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
                 </div>

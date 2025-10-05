@@ -39,14 +39,12 @@ export default function AIAutonomousOperationsService() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Get Started Today
               </a>
               <a 
-                href="#features" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="#<features" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 Explore Features
               </a>
@@ -81,7 +79,7 @@ export default function AIAutonomousOperationsService() {
           </div>
 
           {/* Key Features */}
-          <section id="features" className="mb-12">
+          <section id="<features" className="mb-12">
             <h2 className="text-3xl font-bold mb-8 text-white text-center">🚀 Key Features</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
@@ -230,8 +228,7 @@ export default function AIAutonomousOperationsService() {
                   </li>
                 </ul>
                 <a 
-                  href="/contact" 
-                  className="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
+                  href="/<contact" className="w-full bg-blue-500 hover:bg-blue-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
                 >
                   Get Started
                 </a>
@@ -266,8 +263,7 @@ export default function AIAutonomousOperationsService() {
                   </li>
                 </ul>
                 <a 
-                  href="/contact" 
-                  className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
+                  href="/<contact" className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
                 >
                   Get Started
                 </a>
@@ -299,8 +295,7 @@ export default function AIAutonomousOperationsService() {
                   </li>
                 </ul>
                 <a 
-                  href="/contact" 
-                  className="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
+                  href="/<contact" className="w-full bg-green-500 hover:bg-green-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 text-center block"
                 >
                   Contact Sales
                 </a>
@@ -316,14 +311,12 @@ export default function AIAutonomousOperationsService() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
               >
                 Get Free Consultation
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Case Studies
               </a>
@@ -337,9 +330,9 @@ export default function AIAutonomousOperationsService() {
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-400 mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
           <div className="flex justify-center gap-6 text-sm">
-            <a href="/privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
-            <a href="/terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
-            <a href="/contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
+            <a href="/<privacy" className="hover:text-blue-400 transition-colors">Privacy Policy</a>
+            <a href="/<terms" className="hover:text-blue-400 transition-colors">Terms of Service</a>
+            <a href="/<contact" className="hover:text-blue-400 transition-colors">Contact Us</a>
           </div>
         </div>
       </footer>

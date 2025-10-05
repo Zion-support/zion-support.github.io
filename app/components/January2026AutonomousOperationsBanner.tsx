@@ -39,14 +39,12 @@ export default function January2026AutonomousOperationsBanner() {
             
             <div className="flex flex-col sm:flex-row gap-3">
               <Link 
-                href="/blog/ai-2026-january-autonomous-enterprise-operations-revolution"
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
+                href="/blog/ai-2026-january-autonomous-enterprise-operations-<revolution" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105"
               >
                 Read Full Article
               </Link>
               <Link 
-                href="/contact"
-                className="bg-transparent border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
+                href="/<contact" className="bg-transparent border-2 border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
               >
                 Get Consultation
               </Link>

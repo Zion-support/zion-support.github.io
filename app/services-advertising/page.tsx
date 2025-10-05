@@ -1,3 +1,5 @@
+import ServicesAdvertisingPromo from '../../components/ServicesAdvertisingPromo';
+import AIAdvertisingBanner from '../../components/AIAdvertisingBanner';
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -32,14 +34,12 @@ export default function ServicesAdvertisingPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Start Free Consultation
               </a>
               <a 
-                href="#services" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                href="#<services" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
               >
                 View Our Services
               </a>
@@ -49,17 +49,13 @@ export default function ServicesAdvertisingPage() {
       </header>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-slate-900">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              AI Advertising Solutions
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Comprehensive AI-powered advertising services designed to maximize your ROI
-            </p>
-          </div>
-        </div>
+      <section id="services">
+        <ServicesAdvertisingPromo />
+      </section>
+
+      {/* AI Advertising Banner */}
+      <section>
+        <AIAdvertisingBanner />
       </section>
 
       {/* Footer */}
@@ -68,9 +64,9 @@ export default function ServicesAdvertisingPage() {
           <div className="text-center text-gray-400">
             <p className="mb-4">© 2025 Zion Tech Group. All rights reserved.</p>
             <div className="flex justify-center gap-6 text-sm">
-              <a href="/privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-purple-400 transition-colors">Terms of Service</a>
-              <a href="/contact" className="hover:text-purple-400 transition-colors">Contact Us</a>
+              <a href="/<privacy" className="hover:text-purple-400 transition-colors">Privacy Policy</a>
+              <a href="/<terms" className="hover:text-purple-400 transition-colors">Terms of Service</a>
+              <a href="/<contact" className="hover:text-purple-400 transition-colors">Contact Us</a>
             </div>
           </div>
         </div>

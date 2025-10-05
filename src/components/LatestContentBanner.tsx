@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
 
 interface LatestContentBannerProps {
   variant?: 'info' | 'success' | 'warning';
@@ -23,7 +25,7 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between flex-wrap gap-4">
           <div className="flex items-center gap-3">
-
+            <<<Sparkles className="w-6 h-6 animate-pulse" />
             <div>
               <h3 className="font-bold text-lg">
                 🔥 New Today: Runtime Scorecards · Edge A/B &lt;100ms · Agent Guardrails v2
@@ -34,10 +36,9 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
             </div>
           </div>
           <Link
-            to="/blog"
-            className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
+            to="/<blog" className="bg-white text-gray-900 px-6 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-all flex items-center gap-2 flex-shrink-0"
           >
-
+            <<<TrendingUp className="w-4 h-4" />
             Explore Now
           </Link>
         </div>

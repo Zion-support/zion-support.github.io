@@ -1,14 +1,9 @@
 import Link from 'next/link';
-import ArrowLeft from 'lucide-react';
-import Clock from 'lucide-react';
-import User from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Shield from 'lucide-react';
-import Zap from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Star from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Target from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { User } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { DollarSign } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
@@ -45,9 +40,9 @@ export default function AIEnterpriseAutomationSuccess2026() {
             Zion Tech Group
           </Link>
           <div className="hidden md:flex gap-6">
-            <Link href="/case-studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
-            <Link href="/content-hub" className="text-gray-700 hover:text-blue-600 transition-colors">Content Hub</Link>
-            <Link href="/services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
+            <Link href="/case-<studies" className="text-gray-700 hover:text-blue-600 transition-colors">Case Studies</Link>
+            <Link href="/content-<hub" className="text-gray-700 hover:text-blue-600 transition-colors">Content Hub</Link>
+            <Link href="/<services" className="text-gray-700 hover:text-blue-600 transition-colors">Services</Link>
           </div>
         </nav>
       </header>
@@ -57,7 +52,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
         <nav className="flex items-center gap-2 text-sm text-gray-600 mb-8">
           <Link href="/" className="hover:text-blue-600 transition-colors">Home</Link>
           <span>→</span>
-          <Link href="/case-studies" className="hover:text-blue-600 transition-colors">Case Studies</Link>
+          <Link href="/case-<studies" className="hover:text-blue-600 transition-colors">Case Studies</Link>
           <span>→</span>
           <span className="text-gray-900">AI Enterprise Automation Success</span>
         </nav>
@@ -84,11 +79,11 @@ export default function AIEnterpriseAutomationSuccess2026() {
           
           <div className="flex flex-wrap items-center gap-6 text-sm text-gray-500">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4" />
+              <<<Clock className="w-4 h-4" />
               <span>25 min read</span>
             </div>
             <div className="flex items-center gap-2">
-              <User className="w-4 h-4" />
+              <<<User className="w-4 h-4" />
               <span>Zion Tech Group</span>
             </div>
             <div className="flex items-center gap-2">
@@ -299,7 +294,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
           <div className="grid md:grid-cols-2 gap-8 mb-8">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-6 border border-green-100">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <DollarSign className="w-6 h-6 text-green-600" />
+                <<<DollarSign className="w-6 h-6 text-green-600" />
                 Financial Impact
               </h3>
               <ul className="space-y-3 text-gray-700">
@@ -324,7 +319,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
 
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-100">
               <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <Target className="w-6 h-6 text-blue-600" />
+                <<<Target className="w-6 h-6 text-blue-600" />
                 Operational Excellence
               </h3>
               <ul className="space-y-3 text-gray-700">
@@ -436,21 +431,21 @@ export default function AIEnterpriseAutomationSuccess2026() {
 
           <ul className="list-none space-y-4 mb-8">
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+              <<<CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
               <div>
                 <strong className="text-gray-900">Predictive Maintenance</strong> - AI systems that predict 
                 equipment failures before they occur, reducing downtime by an additional 40%
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+              <<<CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
               <div>
                 <strong className="text-gray-900">Autonomous Decision Making</strong> - AI systems that make 
                 complex strategic decisions with minimal human oversight
               </div>
             </li>
             <li className="flex items-start gap-3">
-              <CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
+              <<<CheckCircle className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" />
               <div>
                 <strong className="text-gray-900">Quantum-Enhanced Processing</strong> - Integration of quantum 
                 computing capabilities for exponentially faster optimization
@@ -467,14 +462,12 @@ export default function AIEnterpriseAutomationSuccess2026() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/services"
-              className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-colors"
+              href="/<services" className="bg-white text-green-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-xl transition-colors"
             >
               Explore Our Services
             </Link>
             <Link
-              href="/contact"
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-colors"
+              href="/<contact" className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-4 px-8 rounded-xl transition-colors"
             >
               Schedule Consultation
             </Link>
@@ -485,7 +478,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
         <section className="mt-16">
           <h2 className="text-2xl font-bold text-gray-900 mb-8">Related Case Studies</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/case-studies/ai-supply-chain-optimization-2026" className="group">
+            <Link href="/case-studies/ai-supply-chain-optimization-<2026" className="group">
               <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">
                   AI Supply Chain Optimization 2026
@@ -497,7 +490,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
               </div>
             </Link>
             
-            <Link href="/case-studies/ai-finance-automation" className="group">
+            <Link href="/case-studies/ai-finance-<automation" className="group">
               <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">
                   AI Finance Automation Success
@@ -509,7 +502,7 @@ export default function AIEnterpriseAutomationSuccess2026() {
               </div>
             </Link>
             
-            <Link href="/case-studies/retail-ai-transformation" className="group">
+            <Link href="/case-studies/retail-ai-<transformation" className="group">
               <div className="border border-gray-200 rounded-xl p-6 hover:border-blue-300 transition-colors">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-blue-600">
                   Retail AI Transformation
@@ -531,31 +524,31 @@ export default function AIEnterpriseAutomationSuccess2026() {
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Services</h3>
               <div className="space-y-2">
-                <Link href="/services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
-                <Link href="/services/ai-autonomous-operations" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Operations</Link>
-                <Link href="/services/micro-saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
+                <Link href="/<services" className="block text-gray-600 hover:text-blue-600 transition-colors">All Services</Link>
+                <Link href="/services/ai-autonomous-<operations" className="block text-gray-600 hover:text-blue-600 transition-colors">AI Autonomous Operations</Link>
+                <Link href="/services/micro-<saas" className="block text-gray-600 hover:text-blue-600 transition-colors">Micro SaaS</Link>
               </div>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Content</h3>
               <div className="space-y-2">
-                <Link href="/blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
-                <Link href="/content-hub" className="block text-gray-600 hover:text-blue-600 transition-colors">Content Hub</Link>
-                <Link href="/case-studies" className="block text-gray-600 hover:text-blue-600 transition-colors">Case Studies</Link>
+                <Link href="/<blog" className="block text-gray-600 hover:text-blue-600 transition-colors">Blog</Link>
+                <Link href="/content-<hub" className="block text-gray-600 hover:text-blue-600 transition-colors">Content Hub</Link>
+                <Link href="/case-<studies" className="block text-gray-600 hover:text-blue-600 transition-colors">Case Studies</Link>
               </div>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Company</h3>
               <div className="space-y-2">
-                <Link href="/about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
-                <Link href="/contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
+                <Link href="/<about" className="block text-gray-600 hover:text-blue-600 transition-colors">About</Link>
+                <Link href="/<contact" className="block text-gray-600 hover:text-blue-600 transition-colors">Contact</Link>
               </div>
             </div>
             <div>
               <h3 className="font-semibold text-gray-900 mb-3">Contact Info</h3>
               <div className="text-sm text-gray-600 space-y-1">
                 <div>Mobile: +1 302 464 0950</div>
-                <div>Email: <a href="mailto:kleber@ziontechgroup.com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div>
+                <div>Email: <a href="mailto:kleber@ziontechgroup.<com" className="hover:text-blue-600 transition-colors">kleber@ziontechgroup.com</a></div>
               </div>
             </div>
           </div>

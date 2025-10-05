@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 const October2025CognitiveRevolutionBanner: React.FC = () => {
   return (
     <div className="relative bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-b border-purple-500/20 overflow-hidden">
       {/* Animated background effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle at 30% 50%,rgba(139,92,246,0.15),transparent 50%)]"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(circle at 70% 50%,rgba(99,102,241,0.15),transparent 50%)]"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(139,92,246,0.15),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.15),transparent_50%)]" />
       
       {/* Content */}
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
@@ -15,8 +21,8 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {
           <div className="flex items-start gap-4 flex-1 min-w-0">
             <div className="flex-shrink-0 mt-1">
               <div className="relative">
-
-
+                <<<Brain className="w-12 h-12 text-purple-400 animate-pulse" />
+                <<<Sparkles className="w-5 h-5 text-yellow-400 absolute -top-1 -right-1 animate-bounce" />
               </div>
             </div>
             
@@ -26,11 +32,11 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {
                   🚀 BRAND NEW OCTOBER 2025
                 </span>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-yellow-500 text-black shadow-lg">
-
+                  <<<Award className="w-3 h-3 mr-1" />
                   BREAKTHROUGH CONTENT
                 </span>
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-green-500 text-white shadow-lg">
-
+                  <<<TrendingUp className="w-3 h-3 mr-1" />
                   $4.7B VALUE DELIVERED
                 </span>
               </div>
@@ -51,34 +57,31 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {
               {/* Featured content links */}
               <div className="flex flex-wrap gap-3 text-sm">
                 <Link 
-                  to="/blog/ai-2025-multiagent-enterprise-orchestration-revolution"
-                  className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
+                  to="/blog/ai-2025-multiagent-enterprise-orchestration-<revolution" className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
                 >
-
+                  <<<Zap className="w-4 h-4 mr-1 text-yellow-400 group-hover:animate-pulse" />
                   <span className="font-semibold">Multi-Agent Orchestration (97.8% Automation, $847M Value)</span>
-
+                  <<<ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
                 <span className="text-purple-400">•</span>
                 
                 <Link 
-                  to="/blog/ai-2025-cognitive-computing-enterprise-transformation"
-                  className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
+                  to="/blog/ai-2025-cognitive-computing-enterprise-<transformation" className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
                 >
-
+                  <<<Brain className="w-4 h-4 mr-1 text-pink-400 group-hover:animate-pulse" />
                   <span className="font-semibold">Cognitive AI Transformation (98.5% Accuracy, $1.2B Value)</span>
-
+                  <<<ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 
                 <span className="text-purple-400">•</span>
                 
                 <Link 
-                  to="/case-studies/global-telecom-cognitive-transformation-4-7-billion"
-                  className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
+                  to="/case-studies/global-telecom-cognitive-transformation-4-7-<billion" className="inline-flex items-center text-purple-200 hover:text-white transition-colors group"
                 >
-
+                  <<<Award className="w-4 h-4 mr-1 text-green-400 group-hover:animate-pulse" />
                   <span className="font-semibold">Fortune 20 Telecom Case Study ($4.7B Success, 3,602% ROI)</span>
-
+                  <<<ArrowRight className="w-3 h-3 ml-1 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -87,11 +90,10 @@ const October2025CognitiveRevolutionBanner: React.FC = () => {
           {/* Right side - CTA Button */}
           <div className="flex-shrink-0">
             <Link
-              to="/blog"
-              className="inline-flex items-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
+              to="/<blog" className="inline-flex items-center px-6 py-3 rounded-xl font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 group"
             >
               <span>Explore Cognitive AI Revolution</span>
-
+              <<<ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>

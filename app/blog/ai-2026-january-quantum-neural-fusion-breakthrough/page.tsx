@@ -178,20 +178,17 @@ export default function QuantumNeuralFusionBreakthroughPage() {
         <footer className="mt-12 pt-8 border-t border-slate-800">
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact"
-              className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-400 hover:to-indigo-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               Get Started Today
             </a>
             <a 
-              href="/case-studies/ai-2026-january-quantum-neural-fusion-75-billion-success"
-              className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/case-studies/ai-2026-january-quantum-neural-fusion-75-billion-<success" className="bg-gradient-to-r from-indigo-500 to-blue-600 hover:from-indigo-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               View Success Story
             </a>
             <a 
-              href="/blog"
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+              href="/<blog" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
             >
               More Articles
             </a>
