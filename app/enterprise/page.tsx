@@ -1,5 +1,3 @@
-import React from 'react';
-import EnterpriseSolutionsBanner from '../../components/EnterpriseSolutionsBanner';
 
 export default function EnterprisePage() {
   return (
@@ -52,7 +50,6 @@ export default function EnterprisePage() {
 
       {/* Enterprise Solutions Banner */}
       <section id="solutions">
-        <EnterpriseSolutionsBanner />
       </section>
 
       {/* Footer */}

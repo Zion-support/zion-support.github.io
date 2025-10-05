@@ -1,15 +1,16 @@
-import { ArrowRight, FileText, Zap, Target, DollarSign, TrendingUp, CheckCircle } from "lucide-react";
+import { FileText } from 'lucide-react';
 import { Link } from "react-router-dom";
-
+import { FileText } from "lucide-react";
+import { FileText } from 'lucide-react';
+;
+;
 const October2025DocumentAutomationBanner = () => {
   return (
-    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 border-y border-indigo-500/30 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1.5s' }} />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breaking News Badge */}
         <div className="flex justify-center mb-4">
@@ -19,7 +20,6 @@ const October2025DocumentAutomationBanner = () => {
             <FileText className="w-4 h-4 ml-2" />
           </div>
         </div>
-
         {/* Main Headline */}
         <div className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-purple-300 to-pink-300 mb-3">
@@ -34,7 +34,6 @@ const October2025DocumentAutomationBanner = () => {
             <span className="font-bold text-white"> $47M annual savings</span> through intelligent document automation
           </p>
         </div>
-
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover:border-indigo-400/60 transition-all hover:scale-105">
@@ -45,7 +44,7 @@ const October2025DocumentAutomationBanner = () => {
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105">
             <Target className="w-8 h-8 text-purple-300 mx-auto mb-2" />
             <div className="text-3xl font-black text-white mb-1">99.2%</div>
-            <div className="text-sm text-purple-200">Accuracy</div>
+            <div className="text-sm text-purple-200">Accuracy Rate</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover:border-pink-400/60 transition-all hover:scale-105">
             <DollarSign className="w-8 h-8 text-pink-300 mx-auto mb-2" />
@@ -58,7 +57,6 @@ const October2025DocumentAutomationBanner = () => {
             <div className="text-sm text-indigo-200">ROI Year 1</div>
           </div>
         </div>
-
         {/* Featured Content */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-indigo-400/30 mb-6">
           <div className="grid md:grid-cols-2 gap-6">
@@ -84,7 +82,6 @@ const October2025DocumentAutomationBanner = () => {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
-
             {/* Case Study */}
             <div className="bg-gradient-to-br from-purple-800/50 to-pink-800/50 rounded-lg p-5 border border-purple-400/40">
               <div className="text-purple-300 font-bold mb-2 flex items-center">
@@ -109,7 +106,6 @@ const October2025DocumentAutomationBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Key Capabilities */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-indigo-400/30 mb-6">
           <h3 className="text-2xl font-bold text-white mb-4 text-center">
@@ -160,7 +156,6 @@ const October2025DocumentAutomationBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Industry Applications */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-indigo-400/30 mb-6">
           <h3 className="text-xl font-bold text-white mb-4 text-center">
@@ -193,7 +188,6 @@ const October2025DocumentAutomationBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Key Results Highlight */}
         <div className="bg-gradient-to-r from-indigo-600/20 to-purple-600/20 backdrop-blur-md rounded-xl p-6 border border-indigo-400/40 mb-6">
           <h3 className="text-xl font-bold text-white mb-4 text-center">
@@ -218,7 +212,6 @@ const October2025DocumentAutomationBanner = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-8 shadow-2xl">
           <h3 className="text-2xl font-bold text-white mb-3">
@@ -249,5 +242,4 @@ const October2025DocumentAutomationBanner = () => {
     </div>
   );
 };
-
 export default October2025DocumentAutomationBanner;

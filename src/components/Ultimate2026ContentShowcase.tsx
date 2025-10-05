@@ -1,95 +1,92 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Rocket, Brain, Shield, Target, Award, Users, DollarSign } from 'lucide-react';
-
 const Ultimate2026ContentShowcase: React.FC = () => {
   const showcaseContent = [
     {
       id: 1,
       title: "Enterprise AI Transformation Playbook 2026",
-      description: "Complete guide to achieving 95% automation with Fortune 500 case studies and $100M+ savings strategies",
+      description: "Complete guide to achieving 95% automation with Fortune 500 case studies and $100M+ savings strategies",",
       slug: "enterprise-ai-transformation-playbook-2026",
-      category: "Enterprise Strategy",
+      category: "Enterprise Strategy",",
       date: "2026-01-20",
       readTime: "60 min",
-      trending: true,
+      trending: true,",
       icon: "📊",
       impact: "$100M+ Savings",
-      featured: true,
+      featured: true,",
       stats: { savings: "$100M+", automation: "95%", roi: "300%" }
     },
     {
-      id: 2,
+      id: 2,",
       title: "AI Security & Compliance Masterclass",
-      description: "Military-grade security protocols, GDPR compliance, and zero-trust architecture for enterprise AI systems",
+      description: "Military-grade security protocols, GDPR compliance, and zero-trust architecture for enterprise AI systems",",
       slug: "ai-security-compliance-masterclass-2026",
-      category: "Security & Compliance",
+      category: "Security & Compliance",",
       date: "2026-01-20",
       readTime: "55 min",
-      trending: true,
+      trending: true,",
       icon: "🔒",
       impact: "99.99% Security",
-      featured: true,
+      featured: true,",
       stats: { security: "99.99%", compliance: "100%", threats: "0" }
     },
     {
-      id: 3,
+      id: 3,",
       title: "Quantum-Neural Computing Implementation",
-      description: "Step-by-step guide to implementing quantum-neural networks with 1000x performance improvements",
+      description: "Step-by-step guide to implementing quantum-neural networks with 1000x performance improvements",",
       slug: "quantum-neural-computing-implementation-2026",
-      category: "Quantum Computing",
+      category: "Quantum Computing",",
       date: "2026-01-20",
       readTime: "70 min",
-      trending: true,
+      trending: true,",
       icon: "⚛️",
       impact: "1000x Performance",
-      featured: true,
+      featured: true,",
       stats: { performance: "1000x", efficiency: "95%", speed: "Lightning" }
     },
     {
-      id: 4,
+      id: 4,",
       title: "Autonomous Operations Framework",
-      description: "Build self-healing systems with 98% automation rates and predictive maintenance capabilities",
+      description: "Build self-healing systems with 98% automation rates and predictive maintenance capabilities",",
       slug: "autonomous-operations-framework-2026",
-      category: "Operations",
+      category: "Operations",",
       date: "2026-01-20",
       readTime: "48 min",
-      trending: true,
+      trending: true,",
       icon: "🤖",
       impact: "98% Automation",
-      featured: false,
+      featured: false,",
       stats: { automation: "98%", uptime: "99.9%", efficiency: "85%" }
     },
     {
-      id: 5,
+      id: 5,",
       title: "Edge AI Deployment at Enterprise Scale",
-      description: "Distributed AI processing across 10,000+ nodes with real-time decision making and local autonomy",
+      description: "Distributed AI processing across 10,000+ nodes with real-time decision making and local autonomy",",
       slug: "edge-ai-deployment-enterprise-scale-2026",
-      category: "Edge Computing",
+      category: "Edge Computing",",
       date: "2026-01-20",
       readTime: "42 min",
-      trending: true,
+      trending: true,",
       icon: "📡",
       impact: "10,000+ Nodes",
-      featured: false,
+      featured: false,",
       stats: { nodes: "10,000+", latency: "<1ms", reliability: "99.9%" }
     },
     {
-      id: 6,
+      id: 6,",
       title: "Meta-Cognitive AI Development Guide",
-      description: "Create AI systems that think about thinking with advanced reasoning and self-improvement capabilities",
+      description: "Create AI systems that think about thinking with advanced reasoning and self-improvement capabilities",",
       slug: "meta-cognitive-ai-development-guide-2026",
-      category: "Advanced AI",
+      category: "Advanced AI",",
       date: "2026-01-20",
       readTime: "65 min",
-      trending: true,
+      trending: true,",
       icon: "🧠",
       impact: "Meta-Thinking",
-      featured: false,
+      featured: false,",
       stats: { reasoning: "Advanced", learning: "Self-Improving", accuracy: "98%" }
     }
   ];
-
   return (
     <div className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -98,7 +95,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {
         <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-20">
@@ -118,19 +114,16 @@ const Ultimate2026ContentShowcase: React.FC = () => {
               <span className="text-sm font-bold text-yellow-300">6 MASTERCLASS GUIDES</span>
             </div>
           </div>
-
           <h2 className="text-7xl md:text-8xl font-extrabold mb-8 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
             Ultimate 2026
           </h2>
           <h3 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
             Content Showcase
           </h3>
-          
           <p className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Master the most advanced AI technologies with our comprehensive 2026 content library. 
             From quantum-neural computing to autonomous operations - everything you need to lead the AI revolution.
           </p>
-
           <div className="flex items-center justify-center gap-12 text-center flex-wrap">
             <div className="flex items-center gap-3">
               <Brain className="w-8 h-8 text-purple-400" />
@@ -150,10 +143,9 @@ const Ultimate2026ContentShowcase: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-20">
-          {showcaseContent.map((content, index) => (
+          {showcaseContent.map((content, index) = > (
             <motion.div
               key={content.id}
               initial={{ opacity: 0, y: 30 }}
@@ -169,12 +161,9 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                     <Star className="w-4 h-4 fill-current" />
                     <span>FEATURED</span>
                   </div>
-                </div>
-              )}
-
+                </div > )}
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 via-purple-500/0 to-cyan-500/0 group-hover:from-blue-500/15 group-hover:via-purple-500/15 group-hover:to-cyan-500/15 transition-all duration-700 rounded-3xl"></div>
-              
               <div className="relative bg-white/8 backdrop-blur-xl rounded-3xl p-10 border border-white/15 hover:border-blue-500/50 transition-all duration-500 h-full">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-8">
@@ -193,41 +182,35 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-6">
                   <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/25 to-blue-500/25 text-purple-300 text-sm font-bold border border-purple-500/40">
                     {content.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-3xl font-bold text-white mb-6 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                   {content.title}
                 </h3>
-
                 {/* Description */}
                 <p className="text-gray-300 mb-8 leading-relaxed text-base">
                   {content.description}
                 </p>
-
                 {/* Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 mb-8">
-                  {Object.entries(content.stats).map(([key, value], idx) => (
+                  {Object.entries(content.stats).map(([key, value], idx) = > (
                     <div key={idx} className="text-center p-3 bg-white/5 rounded-xl border border-white/10">
                       <div className="text-lg font-bold text-blue-400 mb-1">{value}</div>
                       <div className="text-xs text-gray-400 capitalize">{key}</div>
                     </div>
                   ))}
                 </div>
-
                 {/* Impact Badge */}
                 <div className="mb-8">
                   <div className="inline-block px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/25 to-purple-500/25 text-blue-200 text-lg font-bold border border-blue-500/40">
                     🚀 {content.impact}
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-400 mb-8 pb-6 border-b border-white/15">
                   <span className="flex items-center gap-2">
@@ -236,7 +219,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/blog/${content.slug}`}
@@ -249,7 +231,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Ultimate Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           <div className="text-center p-8 bg-white/8 backdrop-blur-xl rounded-2xl border border-white/15">
@@ -277,7 +258,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {
             <div className="text-gray-300 text-lg">Security Accuracy</div>
           </div>
         </div>
-
         {/* Ultimate Call-to-Action */}
         <div className="text-center">
           <div className="inline-block p-2 rounded-3xl bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500">
@@ -289,7 +269,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                 Join the elite group of AI leaders implementing these breakthrough technologies. 
                 Get exclusive access to implementation guides, expert consultations, and Fortune 500 case studies.
               </p>
-              
               <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
                 <div className="flex items-center gap-3 text-blue-300">
                   <DollarSign className="w-6 h-6" />
@@ -304,7 +283,6 @@ const Ultimate2026ContentShowcase: React.FC = () => {
                   <span className="text-lg font-semibold">Industry Leading Results</span>
                 </div>
               </div>
-
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
                 <a
                   href="/contact"
@@ -328,5 +306,4 @@ const Ultimate2026ContentShowcase: React.FC = () => {
     </div>
   );
 };
-
 export default Ultimate2026ContentShowcase;

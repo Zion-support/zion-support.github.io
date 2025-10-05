@@ -1,13 +1,9 @@
-import { ArrowRight, Shield, Brain, Workflow, TrendingUp, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025LatestPremiumContentBanner = () => {
   return (
-    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden">
-      {/* Animated background effects */}
+    <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-blue-900 border-y border-purple-500/30 py-6 px-4 sm:px-6 lg:px-8 shadow-2xl relative overflow-hidden" > {/* Animated background effects */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-transparent to-blue-500/10 animate-pulse"></div>
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1vcGFjaXR5PSIwLjA1IiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-20"></div>
-      
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
           <div className="flex-1">
@@ -19,15 +15,12 @@ const October2025LatestPremiumContentBanner = () => {
                 PREMIUM CONTENT
               </span>
             </div>
-            
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3 leading-tight">
               🚀 3 Revolutionary AI Breakthroughs — Transform Your Enterprise Today!
             </h2>
-            
             <p className="text-lg text-purple-100 mb-4 max-w-4xl leading-relaxed">
               ⚡ <strong>BRAND NEW RELEASES:</strong> Deploy Autonomous Data Governance achieving 99.98% compliance accuracy with $4.2B risk mitigation, implement Neural Fraud Detection preventing $8.7B in losses with sub-50ms response times, and master Cognitive Workflow Orchestration delivering 98.7% automation with $6.3B value creation!
             </p>
-
             {/* Featured Stats */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-4">
               <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/20">
@@ -47,7 +40,6 @@ const October2025LatestPremiumContentBanner = () => {
                 <div className="text-xs text-purple-200">Enterprises Transformed</div>
               </div>
             </div>
-
             {/* Featured Articles */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
               <Link
@@ -70,7 +62,6 @@ const October2025LatestPremiumContentBanner = () => {
                   </div>
                 </div>
               </Link>
-
               <Link
                 to="/blog/ai-2025-neural-fraud-detection-revolution"
                 className="group bg-gradient-to-br from-red-600/30 to-orange-600/30 backdrop-blur-sm border border-red-400/30 rounded-lg p-4 hover:border-red-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
@@ -91,12 +82,14 @@ const October2025LatestPremiumContentBanner = () => {
                   </div>
                 </div>
               </Link>
-
               <Link
                 to="/blog/ai-2025-cognitive-workflow-orchestration-mastery"
                 className="group bg-gradient-to-br from-blue-600/30 to-cyan-600/30 backdrop-blur-sm border border-blue-400/30 rounded-lg p-4 hover:border-blue-400 hover:shadow-xl hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-start gap-3 mb-2">
+                  <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
+                  <div>
+=======
                   <Workflow className="w-6 h-6 text-blue-300 flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold text-white text-sm mb-1 group-hover:text-blue-200 transition-colors">
@@ -113,7 +106,6 @@ const October2025LatestPremiumContentBanner = () => {
                 </div>
               </Link>
             </div>
-
             {/* Key Benefits */}
             <div className="flex flex-wrap gap-3">
               <div className="flex items-center gap-2 text-sm text-purple-100">
@@ -130,7 +122,6 @@ const October2025LatestPremiumContentBanner = () => {
               </div>
             </div>
           </div>
-
           <div className="flex flex-col gap-3 lg:ml-6">
             <Link
               to="/blog"
@@ -139,7 +130,6 @@ const October2025LatestPremiumContentBanner = () => {
               <span className="mr-2">Explore All 3 Breakthroughs</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
-            
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-3 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-lg border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300 whitespace-nowrap"
@@ -152,5 +142,4 @@ const October2025LatestPremiumContentBanner = () => {
     </div>
   );
 };
-
 export default October2025LatestPremiumContentBanner;

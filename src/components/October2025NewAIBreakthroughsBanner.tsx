@@ -1,10 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025NewAIBreakthroughsBanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 py-24">
-      {/* Animated Background */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 py-24" > {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-emerald-500/10 via-blue-500/10 to-violet-500/10 blur-3xl animate-pulse delay-1000"></div>
@@ -38,8 +36,7 @@ export default function October2025NewAIBreakthroughsBanner() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Card 1 */}
           <Link 
-            to="/blog/ai-2025-october-agentic-orchestration-platform"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+            to="/blog/ai-2025-october-agentic-orchestration-<platform" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4">
@@ -62,8 +59,7 @@ export default function October2025NewAIBreakthroughsBanner() {
 
           {/* Card 2 */}
           <Link 
-            to="/blog/ai-2025-october-neural-reasoning-engines"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+            to="/blog/ai-2025-october-neural-reasoning-<engines" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4">
@@ -86,8 +82,7 @@ export default function October2025NewAIBreakthroughsBanner() {
 
           {/* Card 3 */}
           <Link 
-            to="/blog/ai-2025-october-enterprise-ai-fabric"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
+            to="/blog/ai-2025-october-enterprise-ai-<fabric" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-emerald-500/30 hover:border-emerald-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-emerald-500/20 text-emerald-300 rounded-full text-sm font-bold mb-4">
@@ -121,7 +116,7 @@ export default function October2025NewAIBreakthroughsBanner() {
               <div className="text-gray-400 text-sm uppercase tracking-wider">Average Accuracy</div>
             </div>
             <div>
-              <div className="text-5xl font-black text-pink-400 mb-2">1000x</div>
+              
               <div className="text-gray-400 text-sm uppercase tracking-wider">Performance Gain</div>
             </div>
             <div>
@@ -134,8 +129,7 @@ export default function October2025NewAIBreakthroughsBanner() {
         {/* CTA */}
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50"
+            to="/<blog" className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-purple-500/50"
           >
             <span>Explore All Breakthroughs</span>
             <span className="text-2xl">→</span>

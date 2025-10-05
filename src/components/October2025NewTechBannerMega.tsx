@@ -1,16 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, Shield, Brain, TrendingUp, ArrowRight } from "lucide-react";
-
 const October2025NewTechBannerMega = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 px-6 my-12 rounded-2xl shadow-2xl">
-      {/* Animated Background Effects */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 py-16 px-6 my-12 rounded-2xl shadow-2xl" > {/* Animated Background Effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute w-96 h-96 bg-purple-500/30 rounded-full blur-3xl -top-48 -left-48 animate-pulse"></div>
         <div className="absolute w-96 h-96 bg-blue-500/30 rounded-full blur-3xl -bottom-48 -right-48 animate-pulse delay-1000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
@@ -19,21 +15,17 @@ const October2025NewTechBannerMega = () => {
             🔥 JUST PUBLISHED: OCTOBER 2025 AI BREAKTHROUGH SERIES 🔥
             <Sparkles className="w-4 h-4" />
           </div>
-          
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-4 leading-tight">
             Revolutionary AI Solutions
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
+            <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400">
               Transform Your Enterprise Today
             </span>
           </h2>
-          
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Three game-changing guides delivering <strong className="text-yellow-300">$3.75 BILLION</strong> in proven value.
             Master multimodal AI, zero-trust security, and production RAG systems.
           </p>
         </div>
-
         {/* Three Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {/* Card 1: Multimodal AI */}
@@ -46,15 +38,12 @@ const October2025NewTechBannerMega = () => {
                 NEW GUIDE #1
               </div>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3">
               Multimodal AI Enterprise Breakthrough
             </h3>
-            
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               Unify vision, language & audio processing. <strong className="text-yellow-300">$2.8B value</strong> with 97% accuracy at Fortune 500 scale.
             </p>
-            
             <div className="space-y-2 mb-6">
               <div className="flex items-start gap-2 text-sm text-gray-200">
                 <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
@@ -69,7 +58,6 @@ const October2025NewTechBannerMega = () => {
                 <span><strong>3.7x faster</strong> customer service</span>
               </div>
             </div>
-            
             <Link
               to="/blog/ai-2025-oct-multimodal-ai-enterprise-breakthrough"
               className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 group"
@@ -78,7 +66,6 @@ const October2025NewTechBannerMega = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-
           {/* Card 2: AI Security */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-blue-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
@@ -89,15 +76,12 @@ const October2025NewTechBannerMega = () => {
                 NEW GUIDE #2
               </div>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3">
               AI Security Zero Trust Framework
             </h3>
-            
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               Prevent <strong className="text-yellow-300">$1.8B in breaches</strong> with enterprise-grade AI security. Protect $127B infrastructure at 99.97% uptime.
             </p>
-            
             <div className="space-y-2 mb-6">
               <div className="flex items-start gap-2 text-sm text-gray-200">
                 <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
@@ -112,7 +96,6 @@ const October2025NewTechBannerMega = () => {
                 <span><strong>725% ROI</strong> over 3 years</span>
               </div>
             </div>
-            
             <Link
               to="/blog/ai-2025-oct-ai-security-zero-trust-framework"
               className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 group"
@@ -121,7 +104,6 @@ const October2025NewTechBannerMega = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-
           {/* Card 3: RAG Architecture */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-green-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
@@ -132,15 +114,12 @@ const October2025NewTechBannerMega = () => {
                 NEW GUIDE #3
               </div>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3">
               Enterprise RAG Production Architecture
             </h3>
-            
             <p className="text-gray-300 mb-4 text-sm leading-relaxed">
               Deploy RAG at scale. Process <strong className="text-yellow-300">10M+ queries/day</strong> with 94% accuracy delivering $470M value.
             </p>
-            
             <div className="space-y-2 mb-6">
               <div className="flex items-start gap-2 text-sm text-gray-200">
                 <TrendingUp className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
@@ -155,7 +134,6 @@ const October2025NewTechBannerMega = () => {
                 <span><strong>2,840% ROI</strong> in 3 years</span>
               </div>
             </div>
-            
             <Link
               to="/blog/ai-2025-oct-rag-production-architecture-guide"
               className="inline-flex items-center gap-2 w-full justify-center bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-600 transition-all duration-300 group"
@@ -165,7 +143,6 @@ const October2025NewTechBannerMega = () => {
             </Link>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4">
@@ -177,7 +154,6 @@ const October2025NewTechBannerMega = () => {
               Get Free Expert Consultation
               <ArrowRight className="w-6 h-6" />
             </Link>
-            
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-lg text-white px-8 py-4 rounded-xl font-bold text-lg border border-white/30 hover:bg-white/20 transition-all duration-300"
@@ -186,7 +162,6 @@ const October2025NewTechBannerMega = () => {
               <ArrowRight className="w-6 h-6" />
             </Link>
           </div>
-          
           <p className="text-sm text-gray-300 mt-6">
             Join <strong className="text-yellow-300">1,247 Fortune 500 companies</strong> transforming with Zion Tech Group AI solutions
           </p>
@@ -195,5 +170,4 @@ const October2025NewTechBannerMega = () => {
     </div>
   );
 };
-
 export default October2025NewTechBannerMega;

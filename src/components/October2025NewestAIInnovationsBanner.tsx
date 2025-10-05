@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025NewestAIInnovationsBanner() {
@@ -17,8 +16,7 @@ export default function October2025NewestAIInnovationsBanner() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {/* Self-Healing Infrastructure */}
+        <div className="grid md:grid-cols-3 gap-8 mt-12" > {/* Self-Healing Infrastructure */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all">
             <div className="text-4xl mb-4">🔧</div>
             <h3 className="text-2xl font-bold mb-3">Agentic Self-Healing Infrastructure</h3>
@@ -30,8 +28,7 @@ export default function October2025NewestAIInnovationsBanner() {
               <li>✅ Zero-Touch Operations</li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-revolution"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              to="/blog/ai-2025-october-2-agentic-self-healing-infrastructure-<revolution" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
             >
               Read Full Guide →
             </Link>
@@ -49,8 +46,7 @@ export default function October2025NewestAIInnovationsBanner() {
               <li>✅ Predictive Analytics</li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-2-next-gen-ai-observability-platform"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              to="/blog/ai-2025-october-2-next-gen-ai-observability-<platform" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
             >
               Explore Platform →
             </Link>
@@ -68,8 +64,7 @@ export default function October2025NewestAIInnovationsBanner() {
               <li>✅ Self-Improving AI Systems</li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-2-autonomous-ml-pipeline-optimization"
-              className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
+              to="/blog/ai-2025-october-2-autonomous-ml-pipeline-<optimization" className="inline-block bg-yellow-400 text-black px-6 py-3 rounded-lg font-bold hover:bg-yellow-300 transition-colors"
             >
               Discover More →
             </Link>

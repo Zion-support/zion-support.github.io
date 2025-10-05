@@ -1,19 +1,14 @@
-import { ArrowRight, Award, CheckCircle, Cloud, MessageSquare, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { octoberUltimateEnterpriseContent } from "../content/october-2025-ultimate-enterprise-content";
-
 const October2025UltimateEnterpriseBanner = () => {
   const [multiCloudContent, conversationalAIContent] = octoberUltimateEnterpriseContent;
-
   return (
-    <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden">
-      {/* Animated Background */}
+    <div className="relative py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 overflow-hidden" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-2000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -22,22 +17,18 @@ const October2025UltimateEnterpriseBanner = () => {
             <span>OCTOBER 2025 - JUST PUBLISHED</span>
             <Sparkles className="w-5 h-5 animate-spin" />
           </div>
-          
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
               Ultimate Enterprise AI
             </span>
-            <br />
-            <span className="text-white">Revolution 2025</span>
+            <br /> <span className="text-white">Revolution 2025</span>
           </h2>
-          
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto font-medium">
             Breakthrough solutions delivering <span className="text-cyan-400 font-bold">156%-184% ROI</span>, 
             <span className="text-purple-400 font-bold"> $262M+ savings</span>, and 
             <span className="text-blue-400 font-bold"> transformative results</span>
           </p>
         </div>
-
         {/* Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {/* Multi-Cloud Intelligence Card */}
@@ -65,7 +56,6 @@ const October2025UltimateEnterpriseBanner = () => {
                 </p>
               </div>
             </div>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-cyan-500/10 rounded-xl p-4 border border-cyan-500/20 hover:border-cyan-400/50 transition-colors">
@@ -85,17 +75,15 @@ const October2025UltimateEnterpriseBanner = () => {
                 <div className="text-sm text-gray-300 font-medium">Efficiency Gain</div>
               </div>
             </div>
-
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
-              {multiCloudContent.highlights.slice(0, 4).map((highlight, index) => (
+              {multiCloudContent.highlights.slice(0, 4).map((highlight, index) = > (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
                   <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{highlight}</span>
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
             <Link
               to={multiCloudContent.cta.link}
@@ -105,7 +93,6 @@ const October2025UltimateEnterpriseBanner = () => {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform" />
             </Link>
           </div>
-
           {/* Conversational AI Card */}
           <div className="bg-gradient-to-br from-purple-600/20 via-pink-600/20 to-rose-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 group">
             <div className="flex items-start gap-4 mb-6">
@@ -131,7 +118,6 @@ const October2025UltimateEnterpriseBanner = () => {
                 </p>
               </div>
             </div>
-
             {/* Metrics Grid */}
             <div className="grid grid-cols-2 gap-4 mb-6">
               <div className="bg-purple-500/10 rounded-xl p-4 border border-purple-500/20 hover:border-purple-400/50 transition-colors">
@@ -151,17 +137,15 @@ const October2025UltimateEnterpriseBanner = () => {
                 <div className="text-sm text-gray-300 font-medium">Annual Savings</div>
               </div>
             </div>
-
             {/* Key Highlights */}
             <div className="space-y-2 mb-6">
-              {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) => (
+              {conversationalAIContent.highlights.slice(0, 4).map((highlight, index) = > (
                 <div key={index} className="flex items-start gap-3 text-gray-200">
                   <CheckCircle className="w-5 h-5 text-purple-400 flex-shrink-0 mt-0.5" />
                   <span className="text-sm leading-relaxed">{highlight}</span>
                 </div>
               ))}
             </div>
-
             {/* CTA Button */}
             <Link
               to={conversationalAIContent.cta.link}
@@ -172,7 +156,6 @@ const October2025UltimateEnterpriseBanner = () => {
             </Link>
           </div>
         </div>
-
         {/* Combined Value Proposition */}
         <div className="bg-gradient-to-r from-cyan-600/20 via-purple-600/20 to-pink-600/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
           <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -206,7 +189,6 @@ const October2025UltimateEnterpriseBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center mt-12">
           <p className="text-xl text-gray-300 mb-6 font-medium">
@@ -231,5 +213,4 @@ const October2025UltimateEnterpriseBanner = () => {
     </div>
   );
 };
-
 export default October2025UltimateEnterpriseBanner;

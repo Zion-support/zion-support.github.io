@@ -1,4 +1,3 @@
-import React from 'react';
 
 export const metadata = {
 	title: 'Edge 2026: Privacy‑Preserving Evals (<100ms) | Zion Tech Group',
@@ -13,7 +12,7 @@ export default function Page() {
 					<p className="text-sm text-gray-500">Analytics • 2025-09-30</p>
 					<h1 className="text-3xl md:text-5xl font-bold mt-2">Edge 2026: Privacy‑Preserving Evals (&lt;100ms)</h1>
 					<p className="mt-4 text-lg text-gray-700">Design evaluators that run where users are—on device—with scoped identifiers, DP noise, and attestations for verifiable, zero‑PII signals.</p>
-					<hr className="my-8 border-gray-200" />
+					<hr />
 					<article className="prose prose-slate max-w-none">
 						<h2>Patterns</h2>
 						<ul>

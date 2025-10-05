@@ -1,60 +1,54 @@
-import React from 'react';
-import Link from 'next/link';
-
-export const metadata = {
+import React from 'react'
+export const metadata = {title: 'Ai Cognitive Computing 2026',
+  description: 'Discover the latest insights and breakthroughs in AI technology.',
+  keywords: 'AI, artificial intelligence, technology, innovation',
+  openGraph: {
+    title: 'Ai Cognitive Computing 2026',
+    description: 'Discover the latest insights and breakthroughs in AI technology.',
+    type: 'article'}
+  },
 };
-
-export default function AICognitiveComputing2026() {
+export default function BlogPage() {
   return (
-    <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <article className='bg-white rounded-lg shadow-md p-8'>
+          <header className='mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Ai Cognitive Computing 2026
+            </h1>
+            <div className='flex items-center text-gray-600'>
+              <span className='text-sm'>
+                Published on {new Date().toLocaleDateString()}
+              </span>
+            </div>
+          </header>
+          <div className='prose prose-lg max-w-none'>
+            <p className='text-lg text-gray-700 leading-relaxed'>
+              This article explores the latest developments and insights in AI
+              technology. Our team of experts has compiled comprehensive
+              information to help you understand the current landscape and
+              future possibilities.
+            </p>
+            <h2 className='text-2xl font-semibold text-gray-900 mt-8 mb-4'>
+              Key Insights
+            </h2>
+            <p className='text-gray-700 mb-4'>
+              The field of artificial intelligence continues to evolve rapidly;
+              bringing new opportunities and challenges for businesses and
+              individuals alike.
+            </p>
+            <h2 className='text-2xl font-semibold text-gray-900 mt-8 mb-4'>
+              Conclusion
+            </h2>
+            <p className='text-gray-700'>
+              As we continue to advance in AI technology; it's important to stay
+              informed and prepared for the changes ahead.
+            </p>
           </div>
-        </div>
-
-        <h3 className="text-2xl font-bold text-gray-900 mb-4">Success Metrics</h3>
-        <div className="grid md:grid-cols-4 gap-6 mb-8">
-          <div className="text-center bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-            <div className="text-3xl font-bold text-purple-600 mb-2">95%</div>
-            <div className="text-sm text-gray-600">Decision Accuracy</div>
-            <div className="text-xs text-gray-500 mt-1">Human-level reasoning</div>
-          </div>
-          <div className="text-center bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-            <div className="text-3xl font-bold text-blue-600 mb-2">80%</div>
-            <div className="text-sm text-gray-600">Faster Decisions</div>
-            <div className="text-xs text-gray-500 mt-1">Compared to humans</div>
-          </div>
-          <div className="text-center bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-            <div className="text-3xl font-bold text-green-600 mb-2">300%</div>
-            <div className="text-sm text-gray-600">Problem Solving</div>
-            <div className="text-xs text-gray-500 mt-1">Complex scenarios</div>
-          </div>
-          <div className="text-center bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-            <div className="text-3xl font-bold text-orange-600 mb-2">90%</div>
-            <div className="text-sm text-gray-600">Cost Reduction</div>
-            <div className="text-xs text-gray-500 mt-1">Decision making</div>
-          </div>
-        </div>
-
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white mb-8">
-          <h3 className="text-2xl font-bold mb-4">Ready to Transform Your Decision Making?</h3>
-          <p className="text-xl mb-6 opacity-90">
-            Discover how AI cognitive computing can revolutionize your business operations with human-like reasoning and decision-making capabilities.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors text-center"
-            >
-              Get Free Consultation
-            </Link>
-            <a
-              href="tel:+13024640950"
-              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors text-center"
-            >
-              Call +1 302 464 0950
-            </a>
-          </div>
-        </div>
-      </article>
+        </article>
+      </div>
     </div>
   );
 }
+import React from 'react' export const metadata = {' title: 'Ai Cognitive Computing 2026',' description: 'Discover the latest insights and breakthroughs in AI technology.',' keywords: 'AI, artificial intelligence, technology, innovation', openGraph: {' title: 'Ai Cognitive Computing 2026',' description: 'Discover the latest insights and breakthroughs in AI technology.',' type: 'article'} }, }; export default function BlogPage() { return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <article className="bg-white rounded-lg shadow-md p-8" > <header className="mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" > Ai Cognitive Computing 2026 </h1> <div className="flex items-center text-gray-600" > <span className="text-sm" >Published on {new Date().toLocaleDateString()}</span> </div> </header> <div className="prose prose-lg max-w-none" > <p className="text-lg text-gray-700 leading-relaxed" > This article explores the latest developments and insights in AI technology. Our team of experts has compiled comprehensive information to help you understand the current landscape and future possibilities. </p> <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4" > Key Insights </h2> <p className="text-gray-700 mb-4" > The field of artificial intelligence continues to evolve rapidly; bringing new opportunities and challenges for businesses and individuals alike. </p> <h2 className="text-2xl font-semibold text-gray-900 mt-8 mb-4" > Conclusion </h2> <p className="text-gray-700" >' As we continue to advance in AI technology; it's important to stay informed and prepared for the changes ahead. </p> </div> </article> </div> </div> ); }'

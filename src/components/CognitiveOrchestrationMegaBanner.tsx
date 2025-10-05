@@ -1,20 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, TrendingUp, Zap, Globe } from 'lucide-react';
-
 const CognitiveOrchestrationMegaBanner: React.FC = () => {
   return (
     <section className="w-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white py-12 px-4 mb-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Announcement Badge */}
+      <div className="max-w-7xl mx-auto" > {/* Announcement Badge */}
         <div className="flex justify-center mb-6">
           <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full animate-pulse">
-            <Zap className="w-5 h-5 text-yellow-300" />
             <span className="font-bold text-lg">🚀 JUST PUBLISHED: OCTOBER 1, 2025 — BIGGEST BREAKTHROUGH OF THE YEAR!</span>
-            <Zap className="w-5 h-5 text-yellow-300" />
           </div>
         </div>
-
         {/* Main Headline */}
         <div className="text-center mb-8">
           <h1 className="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
@@ -27,7 +21,6 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
             The Ultimate Enterprise AI Breakthrough: 287,000+ AI Agents, Sub-Millisecond Response, Fortune 50 Proven Success
           </p>
         </div>
-
         {/* Key Metrics */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border-2 border-white/20 hover:border-yellow-300 transition-all">
@@ -43,11 +36,9 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
             <div className="text-sm font-semibold">Autonomous Accuracy</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border-2 border-white/20 hover:border-yellow-300 transition-all">
-            <div className="text-4xl font-extrabold text-yellow-300 mb-2">287K</div>
             <div className="text-sm font-semibold">AI Agents Deployed</div>
           </div>
         </div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8 max-w-6xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border-2 border-white/20">
@@ -66,7 +57,6 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
             <p className="text-white/90">847,000 systems integrated, 127 countries, 99.99% uptime, 24/7 autonomous</p>
           </div>
         </div>
-
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
@@ -88,7 +78,6 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
             🚀 Get Started Today →
           </Link>
         </div>
-
         {/* Bottom Tagline */}
         <div className="text-center mt-8">
           <p className="text-lg font-semibold">
@@ -99,5 +88,4 @@ const CognitiveOrchestrationMegaBanner: React.FC = () => {
     </section>
   );
 };
-
 export default CognitiveOrchestrationMegaBanner;

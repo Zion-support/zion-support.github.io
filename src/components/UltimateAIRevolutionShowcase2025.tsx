@@ -1,7 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const UltimateAIRevolutionShowcase2025 = () => {
   const revolutionaryFeatures = [
     {
@@ -41,7 +39,6 @@ const UltimateAIRevolutionShowcase2025 = () => {
       rating: 4.8
     }
   ];
-
   return (
     <div className="bg-gradient-to-r from-slate-900 via-purple-900/20 to-slate-900 border border-purple-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
@@ -49,17 +46,14 @@ const UltimateAIRevolutionShowcase2025 = () => {
         <span className="text-2xl font-bold text-purple-400">🚀 ULTIMATE AI REVOLUTION SHOWCASE 2025</span>
         <Sparkles className="w-8 h-8 text-purple-400 animate-pulse" />
       </div>
-      
       <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-purple-400 via-violet-400 to-blue-400 bg-clip-text text-transparent">
         Revolutionary AI Breakthroughs
       </h2>
-      
       <p className="text-xl text-gray-300 text-center mb-8 max-w-4xl mx-auto">
         Experience the most advanced AI technologies transforming business operations with unprecedented accuracy, consciousness, and enterprise value creation.
       </p>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {revolutionaryFeatures.map((feature, index) => (
+        {revolutionaryFeatures.map((feature, index) = > (
           <div key={index} className={`bg-gradient-to-br ${feature.color} rounded-xl p-6 text-white transform hover:scale-105 transition-all duration-300 hover:shadow-xl`}>
             <div className="text-4xl mb-3">{feature.icon}</div>
             <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
@@ -75,7 +69,6 @@ const UltimateAIRevolutionShowcase2025 = () => {
           </div>
         ))}
       </div>
-
       <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-xl p-6 mb-8 border border-purple-400/30">
         <div className="flex items-center justify-center gap-3 mb-4">
           <TrendingUp className="w-6 h-6 text-green-400" />
@@ -100,7 +93,6 @@ const UltimateAIRevolutionShowcase2025 = () => {
           </div>
         </div>
       </div>
-
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <Link 
           to="/blog/ai-2026-revolutionary-breakthrough-announcement" 
@@ -127,7 +119,6 @@ const UltimateAIRevolutionShowcase2025 = () => {
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>
-
       <div className="mt-8 text-center">
         <p className="text-gray-400 text-sm">
           🚀 Join 2.5M+ professionals transforming their businesses with revolutionary AI technology
@@ -136,5 +127,4 @@ const UltimateAIRevolutionShowcase2025 = () => {
     </div>
   );
 };
-
 export default UltimateAIRevolutionShowcase2025;

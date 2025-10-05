@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Sparkles, TrendingUp, Zap } from 'lucide-react';
-
 const LatestContentBanner2025: React.FC = () => {
   const latestArticles = [
     {
@@ -12,6 +10,24 @@ const LatestContentBanner2025: React.FC = () => {
       emoji: "🚀",
       highlight: "BREAKTHROUGH",
       impact: "$50M+ Savings"
+    },
+    {
+      title: "Zero‑PII Telemetry v2",
+      description: "Decision‑grade signals without centralized IDs — privacy‑first analytics",
+      slug: "edge-2025-oct-01-zero-pii-telemetry-v2",
+      category: "Observability",
+      emoji: "🛡️",
+      highlight: "NEW",
+      impact: "Zero PII"
+    },
+    {
+      title: "Live Evals & Scorecards",
+      description: "Ship GenAI fast without regressions — KPI‑wired canaries",
+      slug: "genai-2025-oct-01-eval-scorecards-live-canaries",
+      category: "GenAI",
+      emoji: "📈",
+      highlight: "NEW",
+      impact: "No regressions"
     },
     {
       title: "AI 2026: Future Predictions & Mega Trends",
@@ -128,7 +144,6 @@ const LatestContentBanner2025: React.FC = () => {
       icon: '⚙️'
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -136,7 +151,6 @@ const LatestContentBanner2025: React.FC = () => {
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-fuchsia-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -147,27 +161,23 @@ const LatestContentBanner2025: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-fuchsia-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 via-blue-400 to-fuchsia-400 bg-clip-text text-transparent animate-fade-in">
             Latest Enterprise AI Guides
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Master revolutionary AI breakthroughs, explore future predictions, and transform your enterprise with proven frameworks. 
             Battle-tested strategies from Fortune 500 implementations delivering unprecedented results.
           </p>
         </div>
-
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
           🚀 BREAKTHROUGH: Revolutionary AI Technologies 2025!
         </h2>
         <p className="text-xl text-blue-100 mb-8 max-w-3xl">
           Experience <span className="font-bold text-yellow-300">3 REVOLUTIONARY breakthrough technologies</span> including our latest: "Meta-Cognitive AI: The Thinking AI Revolution" (95% decision accuracy, $2M+ savings), "Quantum-Neural Networks: 1000x Processing Speed" ($5M+ infrastructure savings), and "Autonomous Enterprise Operations: 98% Automation" ($10M+ annual savings) - plus comprehensive case studies and implementation guides!
         </p>
-
         {/* Featured highlights */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {latestArticles.map((article, index) => (
+          {latestArticles.map((article, index) = > (
             <motion.div
               key={article.slug}
               initial={{ opacity: 0, y: 20 }}
@@ -178,7 +188,6 @@ const LatestContentBanner2025: React.FC = () => {
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-fuchsia-500/0 to-cyan-500/0 group-hover:from-cyan-500/10 group-hover:via-fuchsia-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
-              
               <div className="relative p-8">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
@@ -197,24 +206,20 @@ const LatestContentBanner2025: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-fuchsia-500/20 text-fuchsia-400 text-xs font-semibold border border-fuchsia-500/30">
                     {article.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300 leading-tight">
                   {article.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {article.excerpt}
                 </p>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -223,7 +228,6 @@ const LatestContentBanner2025: React.FC = () => {
                   </span>
                   <span>{article.date ? new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }) : 'Recent'}</span>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/blog/${article.slug}`}
@@ -236,7 +240,6 @@ const LatestContentBanner2025: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Call-to-Action Section */}
         <div className="text-center mt-20">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-500 to-fuchsia-500">
@@ -267,11 +270,9 @@ const LatestContentBanner2025: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Stats */}
         <div className="mt-8 pt-6 border-t border-white/20 flex flex-wrap gap-8">
           <div className="text-center">
-            <div className="text-3xl font-bold text-yellow-300">3</div>
             <div className="text-sm text-blue-200">Revolutionary Breakthroughs</div>
           </div>
           <div className="text-center">
@@ -279,7 +280,6 @@ const LatestContentBanner2025: React.FC = () => {
             <div className="text-sm text-blue-200">Decision Accuracy Rate</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-purple-300">1000x</div>
             <div className="text-sm text-blue-200">Processing Speed Boost</div>
           </div>
           <div className="text-center">
@@ -291,5 +291,4 @@ const LatestContentBanner2025: React.FC = () => {
     </div>
   );
 };
-
 export default LatestContentBanner2025;

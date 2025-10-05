@@ -1,5 +1,46 @@
-
-
-
-import _React from 'react' import { motion } from 'framer-motion' import { Rocket,Brain,Shield,Heart,Link,Network,FileText,CheckCircle,ArrowRight,Star,TrendingUp,Award,Phone,Mail,MapPin,ExternalLink,Zap,Globe,Users,DollarSign,Clock } from 'lucide-react' import { SEO } from '../components/SEO' export default function InnovativeServicesShowcase2025() { const featuredServices = [{ "id": 'ai-legal-document-generator,','''; "title": 'AI-Powered: Legal Document Generator,','''; "description": 'Revolutionary: AI-powered legal document generation with real-time compliance monitoring and multi-jurisdiction support. Save 80% on legal document creation time.,','''; "category": 'AI: & Legal Tech,','''; "price": '$,2,999','''; "period": '/month,','''; "features": ['AI-powered: contract generation,','Real-time compliance monitoring','Multi-jurisdiction support','Automated legal advice'],'''; "benefits": ['80% faster: document creation,','99.9% compliance accuracy','Save $50K+ annually','24/7 legal assistance'],'''; "marketPrice": '$,2,500-6,000','''; "roi": '500% within: 6 months,','''; "link": "https:;",;
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Innovative Services Showcase 2025 | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Innovative Services Showcase 2025',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function InnovativeServicesShowcase2025() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+              Innovative Services Showcase 2025
+            </h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Innovative Services Showcase 2025 | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Innovative Services Showcase 2025',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function InnovativeServicesShowcase2025() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Innovative Services Showcase 2025</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

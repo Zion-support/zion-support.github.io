@@ -1,14 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, TrendingUp } from 'lucide-react';
-
 interface LatestContentBannerProps {
   variant?: 'info' | 'success' | 'warning';
   autoRotate?: boolean;
   rotationInterval?: number;
   className?: string;
 }
-
 const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
   variant = 'info',
   className = ''
@@ -18,7 +15,6 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
     success: 'bg-gradient-to-r from-green-600 to-emerald-600',
     warning: 'bg-gradient-to-r from-yellow-600 to-orange-600'
   };
-
   return (
     <div className={`${variantStyles[variant]} text-white p-4 ${className}`}>
       <div className="container mx-auto px-6">
@@ -46,5 +42,4 @@ const LatestContentBanner: React.FC<LatestContentBannerProps> = ({
     </div>
   );
 };
-
 export default LatestContentBanner;

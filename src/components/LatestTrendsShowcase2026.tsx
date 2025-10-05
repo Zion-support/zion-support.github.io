@@ -3,8 +3,7 @@ import React from 'react';
 const LatestTrendsShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900/20 to-purple-900/20">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+      <div className="container mx-auto px-6" > {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 mb-6">
             <span className="text-cyan-400 font-bold text-sm tracking-wider uppercase">
@@ -91,8 +90,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
                 </div>
               </div>
               <a 
-                href="/meta-cognitive-ai" 
-                className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
+                href="/meta-cognitive-<ai" className="inline-block bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-400 hover:to-orange-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
               >
                 Explore Meta-Cognitive AI →
               </a>
@@ -113,7 +111,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">🏭</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Manufacturing</h3>
+            
             <div className="text-4xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">
               78%
             </div>
@@ -125,7 +123,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">🏥</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Healthcare</h3>
+            
             <div className="text-4xl font-extrabold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">
               92%
             </div>
@@ -137,7 +135,7 @@ const LatestTrendsShowcase2026: React.FC = () => {
 
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10 text-center">
             <div className="text-5xl mb-4">💼</div>
-            <h3 className="text-2xl font-bold text-white mb-4">Finance</h3>
+            
             <div className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
               $2.3B
             </div>
@@ -158,14 +156,12 @@ const LatestTrendsShowcase2026: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
             >
               Start Your AI Journey
             </a>
             <a 
-              href="/trends-report" 
-              className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/trends-<report" className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               Download Trends Report
             </a>

@@ -7,8 +7,8 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
       <div className="flex items-center gap-3 mb-6">
         <span className="text-5xl">🚀</span>
         <div>
-          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">
-            NEW: Revolutionary AI Breakthroughs October 2025
+          <h2 className="text-4xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-emerald-400 bg-clip-text text-transparent">",
+      NEW: Revolutionary AI Breakthroughs October 2025
           </h2>
           <p className="text-purple-300 text-lg mt-2">
             Just Published: $13.3B in Proven Enterprise Value — Neural Architecture Search, Distributed RL & Privacy-Preserving AI
@@ -47,8 +47,7 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
             </ul>
           </div>
           <Link
-            to="/blog/ai-2025-oct-advanced-neural-architecture-search"
-            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            to="/blog/ai-2025-oct-advanced-neural-architecture-<search" className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Explore NAS Revolution →
           </Link>
@@ -84,8 +83,7 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
             </ul>
           </div>
           <Link
-            to="/blog/ai-2025-oct-distributed-reinforcement-learning-enterprise"
-            className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            to="/blog/ai-2025-oct-distributed-reinforcement-learning-<enterprise" className="inline-block bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Master Distributed RL →
           </Link>
@@ -121,8 +119,7 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
             </ul>
           </div>
           <Link
-            to="/blog/ai-2025-oct-privacy-preserving-ai-enterprise-deployment"
-            className="inline-block bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+            to="/blog/ai-2025-oct-privacy-preserving-ai-enterprise-<deployment" className="inline-block bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
           >
             Deploy with Privacy →
           </Link>
@@ -145,14 +142,12 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
           </div>
           <div className="flex flex-col gap-3">
             <Link
-              to="/contact"
-              className="bg-gradient-to-r from-purple-600 via-pink-600 to-emerald-600 hover:from-purple-500 hover:via-pink-500 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg text-center whitespace-nowrap"
+              to="/<contact" className="bg-gradient-to-r from-purple-600 via-pink-600 to-emerald-600 hover:from-purple-500 hover:via-pink-500 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg text-center whitespace-nowrap"
             >
               🚀 Start Your AI Transformation
             </Link>
             <Link
-              to="/blog"
-              className="bg-gray-800/60 hover:bg-gray-700/60 border border-purple-500/40 text-purple-300 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center whitespace-nowrap"
+              to="/<blog" className="bg-gray-800/60 hover:bg-gray-700/60 border border-purple-500/40 text-purple-300 font-bold py-4 px-8 rounded-xl transition-all duration-300 text-center whitespace-nowrap"
             >
               📚 Explore All Insights
             </Link>
@@ -168,8 +163,7 @@ const October2025NewAIBreakthroughContentBanner: React.FC = () => {
           🔬 Research-backed methodologies
         </p>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default October2025NewAIBreakthroughContentBanner;

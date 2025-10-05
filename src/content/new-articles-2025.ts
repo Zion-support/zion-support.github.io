@@ -12,6 +12,28 @@ export interface NewArticle {
 
 export const newArticles2025: NewArticle[] = [
   {
+    id: "ai-2025-oct-03-reliable-agent-ops",
+    title: "🤖 Reliable Agent Ops: Budgets, Approvals, and Live Evals",
+    description: "Ship agentic systems with budgeted tools, PR policy tests, and instant rollback—safely and fast.",
+    category: "GenAI",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-reliable-agent-ops",
+    readTime: "9 min read",
+    tags: ["Agents", "Evals", "Guardrails", "Budgets"]
+  },
+  {
+    id: "ai-2025-oct-03-risk-controlled-autonomy",
+    title: "🛡️ Risk‑Controlled Autonomy 2025",
+    description: "Govern agent tools with budgets, approvals, and live evals. Move 10x faster without incidents.",
+    category: "AI Operations",
+    publishedDate: "2025-10-03",
+    featured: true,
+    link: "/blog/ai-2025-oct-03-risk-controlled-autonomy",
+    readTime: "8 min read",
+    tags: ["Agents", "Governance", "Budgets", "Rollback"]
+  },
+  {
     id: "ai-2025-oct-03-risk-controlled-autonomy",
     title: "🛡️ Risk‑Controlled Autonomy 2025",
     description: "Govern agent tools with budgets, approvals, and live evals. Move 10x faster without incidents.",

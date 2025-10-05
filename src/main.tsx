@@ -1,52 +1,36 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { HelmetProvider } from "react-helmet-async";
-// Fallback: simple passthrough provider while ThemeContext is absent
-const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  return <>{children}</>;
-};
-import App from "./App";
-import "./index.css";
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './index.css';
 
-// Register enhanced service worker
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/sw-enhanced.js")
-      .then((registration) => {
-        // console.log("🚀 Enhanced Service Worker registered successfully:", registration.scope);
+async function reportWebVitals() {
+  try {
+    const { onCLS, onLCP, onFCP, onTTFB } = await import('web-vitals');
+    const log = (metric: { name: string; value: number }) => {
+      if (process.env.NODE_ENV === 'production') {
+        console.log('Web Vital:', metric);
+      }
+    };
 
-        // Check for updates
-        registration.addEventListener("updatefound", () => {
-          const newWorker = registration.installing;
-          if (newWorker) {
-            newWorker.addEventListener("statechange", () => {
-              if (
-                newWorker.state === "installed" &&
-                navigator.serviceWorker.controller
-              ) {
-                // console.log("🔄 New service worker available. Reloading...");
-                window.location.reload();
-              }
-            });
-          }
-        });
-      })
-      .catch((error) => {
-        // console.error("❌ Service Worker registration failed:", error);
-      });
-  });
+    onCLS(log);
+    onLCP(log);
+    onFCP(log);
+    onTTFB(log);
+  } catch (error) {
+    console.warn('Failed to load web-vitals:', error);
+  }
 }
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element not found');
+}
+
+const root = createRoot(container);
+root.render(
   <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <ThemeProvider>
-          <App />
-        </ThemeProvider>
-      </BrowserRouter>
-    </HelmetProvider>
+    <App />
   </React.StrictMode>,
 );
+
+reportWebVitals();

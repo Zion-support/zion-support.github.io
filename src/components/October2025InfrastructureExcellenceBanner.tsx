@@ -1,6 +1,4 @@
-import { ArrowRight, TrendingUp, Shield, Activity, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025InfrastructureExcellenceBanner = () => {
   const newArticles = [
     {
@@ -31,7 +29,6 @@ const October2025InfrastructureExcellenceBanner = () => {
       metrics: ["Kafka + Flink", "Exactly-once", "42% cost cut"],
     },
   ];
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 py-16 sm:py-20">
       {/* Animated background effects */}
@@ -39,7 +36,6 @@ const October2025InfrastructureExcellenceBanner = () => {
         <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center opacity-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent" />
       </div>
-
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">
@@ -57,7 +53,6 @@ const October2025InfrastructureExcellenceBanner = () => {
             Battle-tested patterns from enterprises processing billions of events daily.
           </p>
         </div>
-
         {/* Articles Grid */}
         <div className="grid gap-6 md:grid-cols-3 mb-10">
           {newArticles.map((article) => {
@@ -70,35 +65,30 @@ const October2025InfrastructureExcellenceBanner = () => {
               >
                 {/* Gradient accent */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
-                
                 <div className="relative">
                   {/* Icon */}
                   <div className={`inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br ${article.gradient} mb-4`}>
                     <Icon className="h-6 w-6 text-white" />
                   </div>
-
                   {/* Title */}
                   <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-300 transition-colors">
                     {article.title}
                   </h3>
-
                   {/* Description */}
                   <p className="text-gray-400 text-sm mb-4">
                     {article.description}
                   </p>
-
                   {/* Metrics */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {article.metrics.map((metric, idx) => (
                       <span
-                        key={idx}
+key={idx}
                         className="inline-flex items-center px-2.5 py-1 rounded-md bg-white/5 text-xs font-medium text-gray-300 border border-white/10"
                       >
                         {metric}
                       </span>
                     ))}
                   </div>
-
                   {/* Read more link */}
                   <div className="flex items-center gap-2 text-blue-400 text-sm font-semibold group-hover:gap-3 transition-all">
                     <span>Read Full Guide</span>
@@ -109,7 +99,6 @@ const October2025InfrastructureExcellenceBanner = () => {
             );
           })}
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center">
@@ -128,7 +117,6 @@ const October2025InfrastructureExcellenceBanner = () => {
             </Link>
           </div>
         </div>
-
         {/* Stats Bar */}
         <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4 text-center">
           <div className="rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 p-4">
@@ -152,5 +140,4 @@ const October2025InfrastructureExcellenceBanner = () => {
     </div>
   );
 };
-
 export default October2025InfrastructureExcellenceBanner;

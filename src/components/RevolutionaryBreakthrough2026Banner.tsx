@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Target, CheckCircle } from 'lucide-react';
-
 const RevolutionaryBreakthrough2026Banner: React.FC = () => {
   const breakthroughContent = [
     {
@@ -53,7 +51,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
       metrics: { value: '95%', label: 'Automation' }
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -62,7 +59,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -73,16 +69,13 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
             </span>
             <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
           </div>
-
           <h2 className="text-6xl md:text-7xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">
             Revolutionary AI Breakthroughs
           </h2>
-          
           <p className="text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover the most significant AI innovations of 2026: 10x performance gains, 
             $300M+ ROI success stories, and revolutionary technologies transforming Fortune 500 operations.
           </p>
-
           {/* Key Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
@@ -103,18 +96,16 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Content Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16 max-w-[1600px] mx-auto">
           {breakthroughContent.map((content, index) => (
-            <div 
-              key={content.id}
+            <div
+key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-blue-500/0 to-cyan-500/0 group-hover:from-purple-500/10 group-hover:via-blue-500/10 group-hover:to-cyan-500/10 transition-all duration-500"></div>
-              
               <div className="relative p-8">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
@@ -133,24 +124,20 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
                     {content.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
                   {content.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {content.excerpt}
                 </p>
-
                 {/* Key Metric */}
                 <div className="mb-6">
                   <div className="bg-gradient-to-r from-purple-500/20 to-blue-500/20 rounded-lg p-4 border border-purple-500/30">
@@ -164,7 +151,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -173,7 +159,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
                   </span>
                   <span>{new Date(content.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <Link
                   to={`/${content.slug.includes('case-studies') ? 'case-studies' : 'blog'}/${content.slug}`}
@@ -186,7 +171,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call-to-Action Section */}
         <div className="text-center mt-20">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500">
@@ -217,7 +201,6 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Indicators */}
         <div className="grid md:grid-cols-4 gap-8 mt-20">
           {[
@@ -240,5 +223,4 @@ const RevolutionaryBreakthrough2026Banner: React.FC = () => {
     </div>
   );
 };
-
 export default RevolutionaryBreakthrough2026Banner;

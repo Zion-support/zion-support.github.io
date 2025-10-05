@@ -1,6 +1,4 @@
 import React from 'react';
-import { Zap, Shield, TrendingUp, Users, Globe, Award } from 'lucide-react';
-
 const ModernFeatures: React.FC = () => {
   const features = [
     {
@@ -34,7 +32,6 @@ const ModernFeatures: React.FC = () => {
       description: "Recognized industry leader with 15+ awards for innovation and excellence."
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
@@ -46,12 +43,10 @@ const ModernFeatures: React.FC = () => {
             Industry-leading AI solutions backed by enterprise-grade infrastructure and expert support
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div
-              key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
+key={index}              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 group"
             >
               <div className="bg-gradient-to-br from-indigo-500 to-purple-600 text-white w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 {feature.icon}
@@ -69,5 +64,4 @@ const ModernFeatures: React.FC = () => {
     </section>
   );
 };
-
 export default ModernFeatures;

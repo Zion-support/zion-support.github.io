@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles } from 'lucide-react';
-
 const NewContentShowcase2025: React.FC = () => {
   const highlights = [
     {
@@ -29,7 +27,6 @@ const NewContentShowcase2025: React.FC = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <section className="py-16 bg-gray-900 text-white">
       <div className="container mx-auto px-6">
@@ -43,9 +40,8 @@ const NewContentShowcase2025: React.FC = () => {
             The most innovative AI content of the year
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {highlights.map((item, index) => (
+          {highlights.map((item, index) = > (
             <Link
               key={index}
               to={item.link}
@@ -61,5 +57,4 @@ const NewContentShowcase2025: React.FC = () => {
     </section>
   );
 };
-
 export default NewContentShowcase2025;

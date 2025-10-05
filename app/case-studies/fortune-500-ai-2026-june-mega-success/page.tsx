@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -311,14 +310,12 @@ export default function Fortune500AI2026JuneMegaSuccess() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+                href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-3 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/blog/ai-2026-june-revolutionary-breakthrough" 
-                className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
+                href="/blog/ai-2026-june-revolutionary-<breakthrough" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-3 px-8 rounded-xl transition-all duration-300"
               >
                 Learn More About AI 2026 →
               </a>
@@ -331,15 +328,13 @@ export default function Fortune500AI2026JuneMegaSuccess() {
           <h2 className="text-2xl font-bold text-white mb-6">Related Success Stories</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <a 
-              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success"
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300"
+              href="/case-studies/fortune-500-ai-2026-breakthrough-mega-<success" className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-green-500/50 transition-all duration-300"
             >
               <h3 className="text-lg font-bold text-white mb-2">$2.3B Fortune 500 Success Story</h3>
               <p className="text-gray-400 text-sm">Earlier implementation showing similar transformative results with AI breakthrough technologies.</p>
             </a>
             <a 
-              href="/case-studies/ai-2026-april-mega-breakthrough-10-billion-success"
-              className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
+              href="/case-studies/ai-2026-april-mega-breakthrough-10-billion-<success" className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300"
             >
               <h3 className="text-lg font-bold text-white mb-2">$10B April Mega Breakthrough Success</h3>
               <p className="text-gray-400 text-sm">Record-breaking AI transformation achieving unprecedented business value.</p>

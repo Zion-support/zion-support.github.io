@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Cpu } from 'lucide-react';
-
 const January2026ContentShowcaseBanner: React.FC = () => {
   const latestArticles = [
     {
@@ -43,7 +41,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
       gradient: 'from-indigo-500 to-purple-600'
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -52,7 +49,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -63,16 +59,13 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent animate-fade-in">
             AI 2026: The Future is Here
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover the three most revolutionary AI breakthroughs of 2026: Autonomous Agent Factories, Quantum Neural Optimization, 
             and Meta-Cognitive Reasoning. These cutting-edge technologies are already transforming Fortune 500 companies worldwide.
           </p>
-
           {/* Stats */}
           <div className="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10">
@@ -109,18 +102,16 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Featured Articles Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {latestArticles.map((article, index) => (
-            <div 
-              key={article.id}
+            <div
+key={article.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 via-cyan-500/0 to-indigo-500/0 group-hover:from-purple-500/10 group-hover:via-cyan-500/10 group-hover:to-indigo-500/10 transition-all duration-500"></div>
-              
               <div className="relative p-8">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
@@ -139,24 +130,20 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-indigo-500/20 text-cyan-400 text-xs font-semibold border border-cyan-500/30">
                     {article.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
                   {article.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {article.excerpt}
                 </p>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -165,7 +152,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
                   </span>
                   <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/blog/${article.slug}`}
@@ -178,7 +164,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Technology Highlights */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div className="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 rounded-2xl p-8 text-center">
@@ -194,7 +179,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               <li>• Real-time performance monitoring</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/30 rounded-2xl p-8 text-center">
             <Atom className="w-16 h-16 text-purple-400 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4 text-purple-400">Quantum Neural Optimization</h3>
@@ -208,8 +192,10 @@ const January2026ContentShowcaseBanner: React.FC = () => {
               <li>• Hybrid quantum-classical systems</li>
             </ul>
           </div>
-
           <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 border border-indigo-500/30 rounded-2xl p-8 text-center">
+            <Cpu className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold mb-4 text-indigo-400">Meta-Cognitive Reasoning</h3>
+=======
             <Cpu className="w-16 h-16 text-indigo-400 mx-auto mb-4" />
             <h3 className="text-2xl font-bold mb-4 text-indigo-400">Meta-Cognitive Reasoning</h3>
             <p className="text-gray-300 mb-6">
@@ -223,7 +209,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </ul>
           </div>
         </div>
-
         {/* Call-to-Action Section */}
         <div className="text-center mt-20">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-cyan-500 to-indigo-500">
@@ -254,7 +239,6 @@ const January2026ContentShowcaseBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Success Stories Preview */}
         <div className="mt-20 bg-gradient-to-r from-slate-800/50 to-slate-900/50 border border-white/10 rounded-2xl p-8">
           <h3 className="text-2xl font-bold mb-6 text-white text-center">Proven Results from Fortune 500 Companies</h3>
@@ -289,5 +273,4 @@ const January2026ContentShowcaseBanner: React.FC = () => {
     </div>
   );
 };
-
 export default January2026ContentShowcaseBanner;

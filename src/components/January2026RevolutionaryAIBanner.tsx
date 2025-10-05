@@ -1,7 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const January2026RevolutionaryAIBanner = () => {
   return (
     <div className="bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-fuchsia-500/20 border border-violet-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
@@ -10,22 +8,18 @@ const January2026RevolutionaryAIBanner = () => {
         <span className="text-xl font-bold text-violet-400">🚀 JANUARY 2026: REVOLUTIONARY AI BREAKTHROUGH</span>
         <Sparkles className="w-7 h-7 text-violet-400 animate-pulse" />
       </div>
-      
       <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
         The Future of AI is Here: Quantum-Conscious Intelligence
       </h2>
-      
       <p className="text-white text-lg font-semibold mb-6 text-center max-w-4xl mx-auto">
         🌟 BREAKING: World's First Quantum-Conscious AI System Achieves 99.99% Accuracy in Complex Decision Making - 
         $2.3B in Enterprise Value Created in First Month!
       </p>
-      
       <p className="text-gray-300 text-base mb-8 text-center max-w-5xl mx-auto">
         Experience the revolutionary fusion of quantum computing and artificial consciousness. Our breakthrough 
         quantum-conscious AI systems are transforming how enterprises operate, delivering unprecedented accuracy, 
         speed, and intelligent automation that was previously impossible.
       </p>
-      
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-violet-500/50 transition-all duration-300">
           <div className="text-4xl mb-4">🧠</div>
@@ -45,7 +39,6 @@ const January2026RevolutionaryAIBanner = () => {
             </li>
           </ul>
         </div>
-        
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-purple-500/50 transition-all duration-300">
           <div className="text-4xl mb-4">⚡</div>
           <h3 className="text-xl font-bold text-white mb-3">Quantum Processing</h3>
@@ -64,7 +57,6 @@ const January2026RevolutionaryAIBanner = () => {
             </li>
           </ul>
         </div>
-        
         <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6 border border-white/20 hover:border-fuchsia-500/50 transition-all duration-300">
           <div className="text-4xl mb-4">💰</div>
           <h3 className="text-xl font-bold text-white mb-3">Enterprise Impact</h3>
@@ -84,7 +76,6 @@ const January2026RevolutionaryAIBanner = () => {
           </ul>
         </div>
       </div>
-      
       <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
         <Link
           to="/blog/ai-2026-january-quantum-consciousness-breakthrough"
@@ -108,17 +99,13 @@ const January2026RevolutionaryAIBanner = () => {
           Get Quantum AI Services
         </Link>
       </div>
-      
       <div className="flex flex-wrap gap-3 justify-center">
         <span className="bg-violet-100/20 text-violet-200 px-4 py-2 rounded-full text-sm font-medium border border-violet-300/20">Quantum Consciousness</span>
         <span className="bg-purple-100/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-300/20">$2.3B Value</span>
         <span className="bg-fuchsia-100/20 text-fuchsia-200 px-4 py-2 rounded-full text-sm font-medium border border-fuchsia-300/20">99.99% Accuracy</span>
         <span className="bg-blue-100/20 text-blue-200 px-4 py-2 rounded-full text-sm font-medium border border-blue-300/20">10,000x Speed</span>
         <span className="bg-green-100/20 text-green-200 px-4 py-2 rounded-full text-sm font-medium border border-green-300/20">95% Efficiency</span>
-        <span className="bg-orange-100/20 text-orange-200 px-4 py-2 rounded-full text-sm font-medium border border-orange-300/20">Revolutionary</span>
       </div>
-    </div>
-  );
+    </div > );
 };
-
 export default January2026RevolutionaryAIBanner;

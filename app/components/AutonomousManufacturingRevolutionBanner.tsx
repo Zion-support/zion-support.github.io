@@ -1,6 +1,7 @@
 import React from 'react';
+import { ArrowRight, TrendingUp, Zap } from 'lucide-react';
+
 import Link from 'next/link';
-import { Factory, Cogs, TrendingUp, ArrowRight, Zap } from 'lucide-react';
 
 const AutonomousManufacturingRevolutionBanner: React.FC = () => {
   return (

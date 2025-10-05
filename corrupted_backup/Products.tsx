@@ -1,8 +1,44 @@
-
-
-
-import _React from 'react' export default Products const "Products": _React.FC = () : JSX.Element: => { return (<div className='min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900'> <div className='container mx - auto px - 4 py - 24 text - center text - white'> <h1 className='text - 6xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - purple - 400 bg - clip - text text - transparent'> Our Products </h1> <p className='text - xl mb - 8 max - w-3xl mx - auto text - gray - 300'> Revolutionary technology products designed to transform how you wor,k,create,and grow. </p> <div className='grid "md": grid: - cols - 2 gap - 8 mt - 16'> <div className='bg - white / 10 backdrop - blur - sm rounded - xl p - 8 border border - white / 20'> <h3 className='text - 2xl font - bold text - white mb - 4'>ZionAI Content Studio</h3> <p className='text - gray - 300 mb - 6'>AI - Powered Content Creation Platform</p> <p className='text - 2xl font - bold text - blue - 400 mb - 4'>$299 / month</p> </div> <div className='bg - white / 10 backdrop - blur - sm rounded - xl p - 8 border border - white / 20'> <h3 className='text - 2xl font - bold text - white mb - 4'>SmartLead Pro</h3> <p className='text - gray - 300 mb - 6'>Intelligent Lead Generation & CRM</p> <p className='text - 2xl font - bold text - blue - 400 mb - 4'>$199 / month</p> </div> </div> <div className='mt - 16'> <a href='tel:+13024640950' className='bg: - blue - 600 hover:bg: - blue - 700 text - white px - 8 py - 4 rounded - lg font - semibold text - lg transition - colors'> Call + 1 (302) 464 - 0950 </a> </div> </div> </div>) }'';
-
-import _React from 'react' export default Products const "Products": _React.FC = () : JSX.Element: => { return (<div className='min - h-screen bg - gradient - to - br from - blue - 900 via - purple - 900 to - indigo - 900'> <div className='container mx - auto px - 4 py - 24 text - center text - white'> <h1 className='text - 6xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 to - purple - 400 bg - clip - text text - transparent'> Our Products </h1> <p className='text - xl mb - 8 max - w-3xl mx - auto text - gray - 300'> Revolutionary technology products designed to transform how you wor,k,create,and grow. </p> <div className='grid "md": grid: - cols - 2 gap - 8 mt - 16'> <div className='bg - white / 10 backdrop - blur - sm rounded - xl p - 8 border border - white / 20'> <h3 className='text - 2xl font - bold text - white mb - 4'>ZionAI Content Studio</h3> <p className='text - gray - 300 mb - 6'>AI - Powered Content Creation Platform</p> <p className='text - 2xl font - bold text - blue - 400 mb - 4'>$299 / month</p> </div> <div className='bg - white / 10 backdrop - blur - sm rounded - xl p - 8 border border - white / 20'> <h3 className='text - 2xl font - bold text - white mb - 4'>SmartLead Pro</h3> <p className='text - gray - 300 mb - 6'>Intelligent Lead Generation & CRM</p> <p className='text - 2xl font - bold text - blue - 400 mb - 4'>$199 / month</p> </div> </div> <div className='mt - 16'> <a href='tel:+13024640950' className='bg: - blue - 600 hover:bg: - blue - 700 text - white px - 8 py - 4 rounded - lg font - semibold text - lg transition - colors'> Call + 1 (302) 464 - 0950 </a> </div> </div> </div>) }'';
-
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Products | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Products',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function Products() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>Products</h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Products | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Products',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function Products() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Products</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

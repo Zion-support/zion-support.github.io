@@ -1,16 +1,12 @@
 import React from 'react';
-import { Brain, Sparkles, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function October2025CognitiveHyperautomationBanner() {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 border-4 border-purple-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow">
-      {/* Animated Background Elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-purple-800 to-pink-900 border-4 border-purple-500 rounded-2xl shadow-2xl mb-8 animate-pulse-slow" > {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-10 left-10 w-72 h-72 bg-purple-400 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-pink-400 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="relative z-10 p-8 md:p-12">
         {/* Header Badge */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
@@ -21,7 +17,6 @@ export default function October2025CognitiveHyperautomationBanner() {
             </span>
           </div>
         </div>
-
         {/* Main Content */}
         <div className="grid md:grid-cols-2 gap-8 items-center">
           {/* Left Column - Main Message */}
@@ -29,18 +24,15 @@ export default function October2025CognitiveHyperautomationBanner() {
             <h2 className="text-4xl md:text-6xl font-black mb-4 bg-gradient-to-r from-purple-200 via-pink-200 to-purple-200 bg-clip-text text-transparent leading-tight animate-gradient">
               Cognitive Hyperautomation Platform
             </h2>
-            
             <p className="text-2xl md:text-3xl font-bold text-purple-100 mb-4">
               The Next Evolution in Enterprise Intelligence
             </p>
-
             <div className="flex items-center gap-3 mb-6">
               <Brain className="w-8 h-8 text-purple-300 animate-pulse" />
               <p className="text-xl text-purple-200 font-semibold">
                 98.9% Automation • 15,200% ROI • Fortune 50 Validated
               </p>
             </div>
-
             {/* Key Highlights */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 bg-purple-800/40 backdrop-blur-sm rounded-lg p-3 border border-purple-500/30">
@@ -56,7 +48,6 @@ export default function October2025CognitiveHyperautomationBanner() {
                 </span>
               </div>
             </div>
-
             {/* CTA Button */}
             <Link
               to="/blog/ai-2025-october-cognitive-hyperautomation-platform"
@@ -67,7 +58,6 @@ export default function October2025CognitiveHyperautomationBanner() {
               <Sparkles className="w-6 h-6 animate-pulse" />
             </Link>
           </div>
-
           {/* Right Column - Metrics */}
           <div className="space-y-4">
             <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-purple-400/50 rounded-2xl p-6 shadow-2xl transform hover:scale-105 transition-all duration-300">
@@ -77,7 +67,6 @@ export default function October2025CognitiveHyperautomationBanner() {
               <div className="text-xl font-bold text-purple-200">Total Value Creation</div>
               <div className="text-sm text-purple-300 mt-2">Validated across enterprise deployments</div>
             </div>
-
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-gradient-to-br from-pink-800/60 to-purple-900/60 backdrop-blur-md border-2 border-pink-400/50 rounded-xl p-4 shadow-xl">
                 <div className="text-3xl md:text-4xl font-black text-pink-300 mb-1">98.9%</div>
@@ -88,7 +77,6 @@ export default function October2025CognitiveHyperautomationBanner() {
                 <div className="text-sm font-bold text-purple-200">Average ROI</div>
               </div>
             </div>
-
             <div className="bg-gradient-to-br from-purple-800/60 to-purple-900/60 backdrop-blur-md border-2 border-green-400/50 rounded-xl p-4 shadow-xl">
               <div className="flex items-center gap-2 mb-2">
                 <TrendingUp className="w-5 h-5 text-green-400" />
@@ -99,7 +87,6 @@ export default function October2025CognitiveHyperautomationBanner() {
             </div>
           </div>
         </div>
-
         {/* Bottom Feature Highlights */}
         <div className="mt-8 pt-6 border-t-2 border-purple-500/30">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">

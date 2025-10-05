@@ -9,7 +9,7 @@ import { bannerManager } from '../utils/bannerOptimizer';
 
 interface OptimizedBannerLoaderProps {
   bannerId: string;
-  importFn: () => Promise<{ default: React.ComponentType<any> }>;
+  importFn: () => Promise<{ default: React.ComponentType<Record<string, unknown> > }>;
   priority?: number;
   fallback?: React.ReactNode;
   preload?: boolean;
@@ -23,13 +23,13 @@ export default function OptimizedBannerLoader({
   bannerId,
   importFn,
   priority = 1,
-  fallback = <BannerSkeleton />,
+  fallback = <BannerSkeleton / > ,
   preload = false,
 }: OptimizedBannerLoaderProps) {
-  const [Component, setComponent] = useState<React.ComponentType<any> | null>(null);
+  const [Component, setComponent] = useState<React.ComponentType<Record<string, unknown>> | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useEffect(() = > {
     // Register banner with manager
     bannerManager.registerBanner({
       id: bannerId,
@@ -39,7 +39,7 @@ export default function OptimizedBannerLoader({
     // Preload if high priority
     if (preload || priority >= 10) {
       importFn().then(module => {
-        setComponent(() => module.default);
+        setComponent(() = > module.default);
       });
     }
 
@@ -50,7 +50,7 @@ export default function OptimizedBannerLoader({
           if (entry.isIntersecting && !Component) {
             setIsVisible(true);
             importFn().then(module => {
-              setComponent(() => module.default);
+              setComponent(() = > module.default);
             });
             observer.disconnect();
           }
@@ -70,24 +70,23 @@ export default function OptimizedBannerLoader({
   }, [bannerId, importFn, priority, preload, Component]);
 
   // Record impression when banner is visible
-  useEffect(() => {
+  useEffect(() = > {
     if (isVisible) {
       bannerManager.recordImpression(bannerId);
     }
   }, [isVisible, bannerId]);
 
   if (!Component) {
-    return <div id={`banner-${bannerId}`}>{fallback}</div>;
+    return <div id={`banner-${bannerId}`}>{fallback}</div > ;
   }
 
   return (
     <div
       id={`banner-${bannerId}`}
-      onClick={() => bannerManager.recordClick(bannerId)}
+      onClick={() = > bannerManager.recordClick(bannerId)}
     >
       <Suspense fallback={fallback}>
-        <Component />
-      </Suspense>
+        <Component</Suspense>
     </div>
   );
 }
@@ -107,6 +106,5 @@ function BannerSkeleton() {
           <div className="h-64 bg-gray-700 rounded"></div>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

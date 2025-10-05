@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 const March2026InnovationSpotlightBanner = () => {
   const innovations = [
     {
@@ -26,7 +23,6 @@ const March2026InnovationSpotlightBanner = () => {
       color: 'from-emerald-500 to-teal-500'
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -35,7 +31,6 @@ const March2026InnovationSpotlightBanner = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -46,16 +41,13 @@ const March2026InnovationSpotlightBanner = () => {
             </span>
             <Rocket className="w-6 h-6 text-indigo-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-indigo-400 to-blue-400 bg-clip-text text-transparent">
             The Innovation Revolution
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Witness the most revolutionary technological breakthroughs of our time. These innovations 
             are reshaping reality itself and creating unprecedented opportunities for human advancement.
           </p>
-
           {/* Innovation Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
@@ -76,41 +68,35 @@ const March2026InnovationSpotlightBanner = () => {
             ))}
           </div>
         </div>
-
         {/* Innovation Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {innovations.map((innovation, index) => (
-            <div 
-              key={index}
+            <div
+key={index}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${innovation.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Innovation Icon */}
                 <div className="text-6xl mb-6 text-center group-hover:animate-pulse">
                   {innovation.icon}
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight text-center">
                   {innovation.title}
                 </h3>
-
                 {/* Description */}
                 <p className="text-gray-400 mb-6 text-center leading-relaxed">
                   {innovation.description}
                 </p>
-
                 {/* Impact */}
                 <div className="text-center mb-6">
-                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>
-                    Impact: {innovation.impact}
+                  <div className={`inline-block px-4 py-2 rounded-full bg-gradient-to-r ${innovation.color} text-white text-sm font-bold`}>",
+      Impact: {innovation.impact}
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/innovations/${innovation.title.toLowerCase().replace(/\s+/g, '-')}`}
@@ -123,7 +109,6 @@ const March2026InnovationSpotlightBanner = () => {
             </div>
           ))}
         </div>
-
         {/* Success Stories */}
         <div className="bg-gradient-to-r from-purple-500/10 to-indigo-500/10 rounded-3xl p-8 md:p-12 border border-purple-500/20 mb-16">
           <div className="text-center mb-12">
@@ -134,7 +119,6 @@ const March2026InnovationSpotlightBanner = () => {
               See how our innovations are transforming industries and creating unprecedented value.
             </p>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -167,7 +151,6 @@ const March2026InnovationSpotlightBanner = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-indigo-500 to-blue-500">
@@ -202,5 +185,4 @@ const March2026InnovationSpotlightBanner = () => {
     </div>
   );
 };
-
 export default March2026InnovationSpotlightBanner;

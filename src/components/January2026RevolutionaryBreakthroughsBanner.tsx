@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Brain, Zap, Network, Shield, ArrowRight, Sparkles } from 'lucide-react';
-
 const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
   const breakthroughs = [
     {
@@ -37,7 +35,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       bgColor: "bg-orange-500/10"
     }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -49,7 +46,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
-
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
@@ -62,7 +58,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             <Sparkles className="w-4 h-4 mr-2 text-yellow-400" />
             January 15, 2026 - Revolutionary Breakthroughs
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -71,7 +66,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
           >
             AI Revolution 2026
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -83,10 +77,9 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             are reshaping the future of enterprise AI and human-computer interaction.
           </motion.p>
         </div>
-
         {/* Breakthroughs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          {breakthroughs.map((breakthrough, index) => (
+          {breakthroughs.map((breakthrough, index) = > (
             <motion.div
               key={breakthrough.title}
               initial={{ opacity: 0, y: 30 }}
@@ -115,7 +108,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Key Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -148,7 +140,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
             <div className="text-sm text-gray-300">Automation Rate</div>
           </div>
         </motion.div>
-
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -178,7 +169,6 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
           </div>
         </motion.div>
       </div>
-
       {/* Floating Particles */}
       <div className="absolute top-20 left-20 w-4 h-4 bg-purple-400/30 rounded-full animate-pulse"></div>
       <div className="absolute top-40 right-32 w-6 h-6 bg-blue-400/30 rounded-full animate-pulse delay-1000"></div>
@@ -187,5 +177,4 @@ const January2026RevolutionaryBreakthroughsBanner: React.FC = () => {
     </motion.div>
   );
 };
-
 export default January2026RevolutionaryBreakthroughsBanner;

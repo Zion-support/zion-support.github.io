@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export const metadata = {
@@ -25,7 +24,7 @@ export default function AIQuantumBreakthroughSuccess2026() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-8">
       <div className="mb-8">
-        <Link href="/case-studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
+        <Link href="/case-<studies" className="text-blue-600 hover:text-blue-800 mb-4 inline-block">
           ← Back to Case Studies
         </Link>
         
@@ -297,8 +296,7 @@ export default function AIQuantumBreakthroughSuccess2026() {
             can help you achieve similar breakthrough results.
           </p>
           <Link 
-            href="/services/ai-quantum-computing-solutions" 
-            className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+            href="/services/ai-quantum-computing-<solutions" className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
             Explore Quantum AI Services
           </Link>
@@ -307,12 +305,12 @@ export default function AIQuantumBreakthroughSuccess2026() {
         <h2 className="text-3xl font-bold text-gray-900 mt-8 mb-4">Related Case Studies</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link href="/case-studies/ai-autonomous-business-systems-success-2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
+          <Link href="/case-studies/ai-autonomous-business-systems-success-<2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Autonomous Business Systems Success</h3>
             <p className="text-gray-600">See how another Fortune 500 company achieved 95% operational automation</p>
           </Link>
           
-          <Link href="/case-studies/ai-neural-interface-success-2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
+          <Link href="/case-studies/ai-neural-interface-success-<2026" className="block bg-gray-50 hover:bg-gray-100 p-6 rounded-lg transition-colors">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Neural Interface Success Story</h3>
             <p className="text-gray-600">Discover how neural interfaces revolutionized human-AI collaboration</p>
           </Link>

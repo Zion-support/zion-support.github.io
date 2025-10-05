@@ -1,12 +1,12 @@
 import React from 'react';
-import { Zap, TrendingUp, Clock, Shield, CheckCircle, Star } from 'lucide-react';
-
 const PerformanceOptimizationBanner = () => {
   const optimizations = [
     {
       title: 'Lightning Fast Loading',
       description: 'Optimized bundle size with code splitting and lazy loading',
       improvement: '87% faster',
+      icon: '🚀',
+=======
       icon: <Zap className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-500'
     },
@@ -14,6 +14,8 @@ const PerformanceOptimizationBanner = () => {
       title: 'Enhanced Security',
       description: 'Advanced security headers and content security policies',
       improvement: '99.9% secure',
+      icon: '🚀',
+=======
       icon: <Shield className="w-6 h-6" />,
       color: 'from-green-500 to-emerald-500'
     },
@@ -21,6 +23,8 @@ const PerformanceOptimizationBanner = () => {
       title: 'SEO Optimized',
       description: 'Meta tags, structured data, and semantic HTML',
       improvement: '95% score',
+      icon: '🚀',
+=======
       icon: <TrendingUp className="w-6 h-6" />,
       color: 'from-blue-500 to-cyan-500'
     },
@@ -28,24 +32,23 @@ const PerformanceOptimizationBanner = () => {
       title: 'Accessibility Enhanced',
       description: 'WCAG 2.1 AA compliant with screen reader support',
       improvement: '100% accessible',
+      icon: '🚀',
+=======
       icon: <CheckCircle className="w-6 h-6" />,
       color: 'from-purple-500 to-violet-500'
     }
   ];
-
   return (
     <div className="bg-gradient-to-r from-slate-800 via-blue-900/20 to-slate-800 border border-blue-400/30 rounded-2xl p-6 mb-8 animate-fade-in shadow-xl">
       <div className="flex items-center gap-3 mb-4">
         <Clock className="w-6 h-6 text-blue-400" />
         <h3 className="text-xl font-bold text-blue-400">⚡ Performance & Optimization Improvements</h3>
       </div>
-      
       <p className="text-gray-300 mb-6">
         Enhanced application performance with cutting-edge optimizations for better user experience and search engine visibility.
       </p>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        {optimizations.map((opt, index) => (
+        {optimizations.map((opt, index) = > (
           <div key={index} className={`bg-gradient-to-br ${opt.color} rounded-lg p-4 text-white`}>
             <div className="flex items-center gap-3 mb-3">
               {opt.icon}
@@ -59,7 +62,6 @@ const PerformanceOptimizationBanner = () => {
           </div>
         ))}
       </div>
-
       <div className="mt-6 p-4 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg border border-green-400/30">
         <div className="flex items-center gap-2 mb-2">
           <CheckCircle className="w-5 h-5 text-green-400" />
@@ -72,5 +74,4 @@ const PerformanceOptimizationBanner = () => {
     </div>
   );
 };
-
 export default PerformanceOptimizationBanner;

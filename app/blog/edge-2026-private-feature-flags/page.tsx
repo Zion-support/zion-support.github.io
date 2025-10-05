@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export const metadata = {
 	title: 'Edge Private Feature Flags (2026): Zero‑PII, Sub‑100ms, Signed Configs',
@@ -19,11 +19,11 @@ export default function Page() {
 				<li>Observability: edge traces, cohort metrics, KPI‑linked approvals</li>
 			</ul>
 			<p>
-				Related reads: <Link href="/blog/edge-2025-zero-pii-experiments">Edge Experiments 2025</Link>{' '}
-				and <Link href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization</Link>.
+				Related reads: <ArrowRight href="/blog/edge-2025-zero-pii-experiments">Edge Experiments 2025</ArrowRight>{' '}
+				and <ArrowRight href="/blog/ai-2027-cost-optimization-playbook">AI 2027 Cost Optimization</ArrowRight>.
 			</p>
 			<p>
-				Continue exploring in our <Link href="/blog">Blog</Link>.
+				Continue exploring in our <ArrowRight href="/blog">Blog</ArrowRight>.
 			</p>
 		</main>
 	);

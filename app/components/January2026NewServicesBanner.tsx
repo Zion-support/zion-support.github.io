@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function January2026NewServicesBanner() {
   return (
@@ -43,8 +42,7 @@ export default function January2026NewServicesBanner() {
               </div>
               <div className="text-lg font-bold text-emerald-400 mb-4">Starting at $12,000/month</div>
               <a 
-                href="/services/ai-autonomous-infrastructure-platform" 
-                className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
+                href="/services/ai-autonomous-infrastructure-<platform" className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
               >
                 Learn more
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -74,8 +72,7 @@ export default function January2026NewServicesBanner() {
               </div>
               <div className="text-lg font-bold text-emerald-400 mb-4">Starting at $25,000/month</div>
               <a 
-                href="/services/quantum-ai-acceleration-service" 
-                className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
+                href="/services/quantum-ai-acceleration-<service" className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
               >
                 Learn more
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -105,8 +102,7 @@ export default function January2026NewServicesBanner() {
               </div>
               <div className="text-lg font-bold text-emerald-400 mb-4">Starting at $7,500/month</div>
               <a 
-                href="/services/ai-multimodal-content-studio" 
-                className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
+                href="/services/ai-multimodal-content-<studio" className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
               >
                 Learn more
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -136,8 +132,7 @@ export default function January2026NewServicesBanner() {
               </div>
               <div className="text-lg font-bold text-emerald-400 mb-4">Starting at $6,500/month</div>
               <a 
-                href="/services/ai-autonomous-business-intelligence" 
-                className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
+                href="/services/ai-autonomous-business-<intelligence" className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
               >
                 Learn more
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -167,8 +162,7 @@ export default function January2026NewServicesBanner() {
               </div>
               <div className="text-lg font-bold text-emerald-400 mb-4">Starting at $9,000/month</div>
               <a 
-                href="/services/ai-neural-architecture-optimization" 
-                className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
+                href="/services/ai-neural-architecture-<optimization" className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
               >
                 Learn more
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -197,8 +191,7 @@ export default function January2026NewServicesBanner() {
                 </div>
               </div>
               <a 
-                href="/contact" 
-                className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
+                href="/<contact" className="inline-flex items-center text-white font-semibold hover:text-emerald-400 transition-colors"
               >
                 Get started today
                 <span className="ml-2 transition-transform group-hover:translate-x-1">→</span>
@@ -209,8 +202,7 @@ export default function January2026NewServicesBanner() {
 
         <div className="text-center mt-12">
           <a 
-            href="/services" 
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold rounded-full hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+            href="/<services" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-bold rounded-full hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
           >
             View All Services
             <span className="ml-2">🚀</span>

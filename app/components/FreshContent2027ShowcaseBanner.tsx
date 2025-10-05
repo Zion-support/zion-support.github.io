@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function FreshContent2027ShowcaseBanner() {
@@ -7,7 +6,7 @@ export default function FreshContent2027ShowcaseBanner() {
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/20 to-blue-500/20"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.1%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%222%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
       </div>
 
       <div className="relative z-10">
@@ -42,8 +41,7 @@ export default function FreshContent2027ShowcaseBanner() {
               Brain-inspired computing that delivers 100,000x faster processing with 99.7% energy reduction
             </p>
             <Link 
-              href="/blog/ai-2027-neuromorphic-computing-revolution"
-              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm group"
+              href="/blog/ai-2027-neuromorphic-computing-<revolution" className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold text-sm group"
             >
               Read More
               <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,8 +65,7 @@ export default function FreshContent2027ShowcaseBanner() {
               The convergence of quantum computing and AI solving previously intractable problems
             </p>
             <Link 
-              href="/blog/quantum-ai-hybrid-systems-2027"
-              className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm group"
+              href="/blog/quantum-ai-hybrid-systems-<2027" className="inline-flex items-center text-purple-400 hover:text-purple-300 font-semibold text-sm group"
             >
               Read More
               <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -92,8 +89,7 @@ export default function FreshContent2027ShowcaseBanner() {
               Self-managing organizations that operate with superhuman efficiency and continuous optimization
             </p>
             <Link 
-              href="/blog/autonomous-enterprise-operations-2027"
-              className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold text-sm group"
+              href="/blog/autonomous-enterprise-operations-<2027" className="inline-flex items-center text-emerald-400 hover:text-emerald-300 font-semibold text-sm group"
             >
               Read More
               <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -107,14 +103,12 @@ export default function FreshContent2027ShowcaseBanner() {
         <div className="text-center">
           <div className="inline-flex flex-wrap gap-4">
             <Link 
-              href="/blog"
-              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105"
+              href="/<blog" className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-500 hover:to-blue-500 transition-all duration-300 transform hover:scale-105"
             >
               Explore All Articles
             </Link>
             <Link 
-              href="/contact"
-              className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300"
+              href="/<contact" className="border-2 border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 hover:border-white/50 transition-all duration-300"
             >
               Get Expert Consultation
             </Link>

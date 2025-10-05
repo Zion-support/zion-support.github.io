@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight } from 'lucide-react';
-
 const NewContentAnnouncement: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-600 text-white py-3">
@@ -26,8 +24,6 @@ const NewContentAnnouncement: React.FC = () => {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 };
-
 export default NewContentAnnouncement;

@@ -18,8 +18,7 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* Left Side - Features */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12" > {/* Left Side - Features */}
           <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
             <h3 className="text-3xl font-bold text-white mb-6">What You'll Get:</h3>
             <div className="space-y-4">
@@ -101,14 +100,12 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
 
             <div className="space-y-4">
               <a 
-                href="/contact?offer=ai-innovation-50" 
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
+                href="/contact?offer=ai-innovation-<50" className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1 text-center block"
               >
                 Claim Your 50% Discount Now
               </a>
               <a 
-                href="/schedule-demo" 
-                className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block"
+                href="/schedule-<demo" className="w-full border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 text-center block"
               >
                 Schedule Free Demo
               </a>
@@ -144,7 +141,7 @@ const AIInnovationAdvertisingBanner: React.FC = () => {
               {
                 company: 'Leading Healthcare System',
                 result: '99.9% uptime achieved',
-                testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%'
+      testimonial: 'Meta-cognitive AI improved our decision-making accuracy by 95%'
               }
             ].map((testimonial, index) => (
               <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">

@@ -1,15 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
-
 interface ComprehensivePromoBannerProps {
   variant?: 'hero' | 'compact' | 'featured';
   showCount?: number;
   className?: string;
 }
-
 const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({ 
   variant = 'hero', 
   showCount = 4,
@@ -17,7 +14,6 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
 }) => {
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, showCount);
   const latestServices = newServices2026.filter(s => s.featured).slice(0, showCount);
-
   if (variant === 'compact') {
     return (
       <div className={`bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl p-6 ${className}`}>
@@ -38,10 +34,8 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
-      </div>
-    );
+      </div > );
   }
-
   if (variant === 'featured') {
     return (
       <div className={`bg-white rounded-2xl shadow-xl overflow-hidden ${className}`}>
@@ -55,7 +49,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
           </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6 p-8">
-          {latestArticles.slice(0, 2).map((article) => (
+          {latestArticles.slice(0, 2).map((article) = > (
             <div key={article.id} className="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-all">
               <div className="text-sm text-indigo-600 font-semibold mb-2">{article.category}</div>
               <h4 className="text-lg font-bold text-gray-900 mb-2">{article.title}</h4>
@@ -66,10 +60,8 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             </div>
           ))}
         </div>
-      </div>
-    );
+      </div > );
   }
-
   // Hero variant (default)
   return (
     <div className={`bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 rounded-3xl p-8 md:p-12 text-white ${className}`}>
@@ -87,7 +79,6 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             AI Talent Acquisition, Fraud Prevention & More!
           </p>
         </div>
-
         <div className="grid md:grid-cols-2 gap-6 mb-8">
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -95,7 +86,7 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
               Latest Articles
             </h3>
             <div className="space-y-3">
-              {latestArticles.slice(0, 3).map((article) => (
+              {latestArticles.slice(0, 3).map((article) = > (
                 <Link
                   key={article.id}
                   to={article.link}
@@ -108,14 +99,13 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
               ))}
             </div>
           </div>
-
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
               <Zap className="w-6 h-6 text-green-300" />
               New Services
             </h3>
             <div className="space-y-3">
-              {latestServices.slice(0, 3).map((service) => (
+              {latestServices.slice(0, 3).map((service) = > (
                 <Link
                   key={service.id}
                   to={service.link}
@@ -129,7 +119,6 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
             </div>
           </div>
         </div>
-
         <div className="text-center">
           <Link
             to="/blog"
@@ -143,5 +132,4 @@ const ComprehensivePromoBanner: React.FC<ComprehensivePromoBannerProps> = ({
     </div>
   );
 };
-
 export default ComprehensivePromoBanner;

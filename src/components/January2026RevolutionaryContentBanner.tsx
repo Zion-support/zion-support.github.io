@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Target } from 'lucide-react';
-
 const January2026RevolutionaryContentBanner: React.FC = () => {
   const revolutionaryContent = [
     {
@@ -38,7 +36,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
       readTime: "12 min"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated Background */}
@@ -47,7 +44,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
@@ -57,21 +53,18 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
               January 2026 • Revolutionary Content Launch
             </span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Revolutionary AI Breakthroughs: The Future is Here
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Experience the cutting-edge of AI innovation with our latest breakthrough content: 98% automation rates, quantum computing revolutions, and Fortune 500 transformations worth $10B.
           </p>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {revolutionaryContent.map((content, index) => (
-            <div 
-              key={index} 
+            <div
+key={index} 
               className="group bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
             >
               {/* Content Header */}
@@ -84,7 +77,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                   <span className="text-xs text-gray-400">{content.readTime}</span>
                 </div>
               </div>
-
               {/* Content Info */}
               <div className="mb-4">
                 <span className="text-blue-400 text-sm font-semibold uppercase tracking-wide">
@@ -97,7 +89,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                   {content.description}
                 </p>
               </div>
-
               {/* Impact Badge */}
               <div className="mb-6">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full">
@@ -107,7 +98,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
                   </span>
                 </div>
               </div>
-
               {/* CTA Button */}
               <Link 
                 to={`/${content.type === 'blog' ? 'blog' : 'case-studies'}/${content.slug}`}
@@ -119,7 +109,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Stats Section */}
         <div className="grid md:grid-cols-4 gap-6 mb-12">
           {[
@@ -139,7 +128,6 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-8">
@@ -169,5 +157,4 @@ const January2026RevolutionaryContentBanner: React.FC = () => {
     </section>
   );
 };
-
 export default January2026RevolutionaryContentBanner;

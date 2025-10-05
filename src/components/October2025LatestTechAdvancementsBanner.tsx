@@ -1,10 +1,8 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025LatestTechAdvancementsBanner() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 py-24">
-      {/* Animated Background */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 py-24" > {/* Animated Background */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-indigo-500/10 via-cyan-500/10 to-purple-500/10 blur-3xl animate-pulse"></div>
         <div className="absolute -bottom-1/2 -right-1/2 w-full h-full bg-gradient-to-tl from-pink-500/10 via-red-500/10 to-orange-500/10 blur-3xl animate-pulse delay-1000"></div>
@@ -38,8 +36,7 @@ export default function October2025LatestTechAdvancementsBanner() {
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {/* Card 1 - Neuromorphic Computing */}
           <Link 
-            to="/blog/ai-2025-october-neuromorphic-computing-revolution"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
+            to="/blog/ai-2025-october-neuromorphic-computing-<revolution" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-purple-500/30 hover:border-purple-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-purple-500/20 text-purple-300 rounded-full text-sm font-bold mb-4">
@@ -62,8 +59,7 @@ export default function October2025LatestTechAdvancementsBanner() {
 
           {/* Card 2 - Synthetic Data */}
           <Link 
-            to="/blog/ai-2025-october-synthetic-data-generation-mastery"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
+            to="/blog/ai-2025-october-synthetic-data-generation-<mastery" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-cyan-500/30 hover:border-cyan-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-cyan-500/20 text-cyan-300 rounded-full text-sm font-bold mb-4">
@@ -86,8 +82,7 @@ export default function October2025LatestTechAdvancementsBanner() {
 
           {/* Card 3 - AI Security Mesh */}
           <Link 
-            to="/blog/ai-2025-october-ai-powered-cybersecurity-mesh"
-            className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-red-500/30 hover:border-red-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
+            to="/blog/ai-2025-october-ai-powered-cybersecurity-<mesh" className="group bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-red-500/30 hover:border-red-400/60 transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-red-500/20"
           >
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-red-500/20 text-red-300 rounded-full text-sm font-bold mb-4">
@@ -153,8 +148,7 @@ export default function October2025LatestTechAdvancementsBanner() {
         {/* CTA */}
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 via-cyan-500 to-purple-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-indigo-600 hover:via-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-indigo-500/50"
+            to="/<blog" className="inline-flex items-center gap-3 bg-gradient-to-r from-indigo-500 via-cyan-500 to-purple-500 text-white px-12 py-5 rounded-full text-xl font-bold hover:from-indigo-600 hover:via-cyan-600 hover:to-purple-600 transition-all transform hover:scale-105 shadow-2xl hover:shadow-indigo-500/50"
           >
             <span>Explore Revolutionary Technology Breakthroughs</span>
             <span className="text-2xl">→</span>

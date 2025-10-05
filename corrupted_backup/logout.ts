@@ -1,3 +1,1 @@
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
+export default function handler(req: NextApiRequest) res: NextApiResponse) {

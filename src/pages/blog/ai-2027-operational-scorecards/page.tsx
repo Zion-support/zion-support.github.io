@@ -1,41 +1,34 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-export default function AIOperationalScorecards2027(): React.JSX.Element {
+export default function BlogPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark text-white">
       <Helmet>
-        <title>Operational AI Scorecards 2027 — KPIs, Budgets, Rollback</title>
-        <meta
-          name="description"
-          content="Live scorecards that link SLIs to product KPIs with budgeted actions and instant rollback."
+        <title>Ai 2027 Operational Scorecards</title>
+        <meta 
+          name="description" 
+          content="Learn about ai 2027 operational scorecards and how it can benefit your enterprise." 
         />
-        <link
-          rel="canonical"
-          href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards"
+        <link 
+          rel="canonical" 
+          href="https://ziontechgroup.com/blog/ai-2027-operational-scorecards" 
         />
       </Helmet>
 
       <div className="container mx-auto px-6 py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Operational AI Scorecards 2027 — KPIs, Budgets, Rollback
-        </h1>
-        <p className="text-zion-slate-light mb-8">
-          SLIs → KPIs • Budgeted Actions • Instant Rollback
-        </p>
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">Ai 2027 Operational Scorecards</h1>
+        <p className="text-zion-slate-light mb-8">Learn about ai 2027 operational scorecards and how it can benefit your enterprise.</p>
         <div className="prose prose-invert max-w-3xl">
           <p>
-            Ship faster with safety by wiring service-level indicators (SLIs) to
-            real business KPIs. Define budgets, trigger canaries, and apply
-            pre-approved rollback actions automatically when thresholds breach.
+            This comprehensive guide covers ai 2027 operational scorecards and provides practical insights for enterprise implementation.
           </p>
-          <p>
-            This guide covers scorecard design, alert budgets, CI policy tests,
-            and live canaries for GenAI and agentic systems.
-          </p>
+        </div>
+        <div className="mt-8">
+          <Link to="/blog" className="text-cyan-300 hover:underline">← Back to Blog</Link>
         </div>
       </div>
     </div>
   );
 }
-

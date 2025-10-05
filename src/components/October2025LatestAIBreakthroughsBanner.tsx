@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Zap, Search, Target, Server } from "lucide-react";
-
 export default function October2025LatestAIBreakthroughsBanner() {
   return (
     <div className="bg-gradient-to-r from-purple-900 via-indigo-900 to-rose-900 border-y border-white/10">
@@ -20,7 +18,6 @@ export default function October2025LatestAIBreakthroughsBanner() {
             multiplying conversions by 8.7x with $234M+ revenue impact. Essential insights for forward-thinking technology leaders!
           </p>
         </div>
-
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           <Link
             to="/blog/ai-2025-oct-autonomous-infrastructure-healing"
@@ -28,6 +25,9 @@ export default function October2025LatestAIBreakthroughsBanner() {
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-purple-500/20 rounded-lg">
+                <Server className="h-6 w-6 text-purple-400" />
+              </div>
+=======
                 <Server className="h-6 w-6 text-purple-400" />
               </div>
               <span className="px-3 py-1 bg-purple-500/30 text-purple-300 rounded-full text-xs font-bold">
@@ -56,13 +56,15 @@ export default function October2025LatestAIBreakthroughsBanner() {
               <ArrowRight className="h-4 w-4" />
             </div>
           </Link>
-
           <Link
             to="/blog/ai-2025-oct-cognitive-search-enterprise"
             className="group bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-xl p-6 border border-indigo-500/30 hover:border-indigo-400/50 transition-all hover:scale-105"
           >
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 bg-indigo-500/20 rounded-lg">
+                <Search className="h-6 w-6 text-indigo-400" />
+              </div>
+=======
                 <Search className="h-6 w-6 text-indigo-400" />
               </div>
               <span className="px-3 py-1 bg-indigo-500/30 text-indigo-300 rounded-full text-xs font-bold">
@@ -91,7 +93,6 @@ export default function October2025LatestAIBreakthroughsBanner() {
               <ArrowRight className="h-4 w-4" />
             </div>
           </Link>
-
           <Link
             to="/blog/ai-2025-oct-realtime-personalization-engine"
             className="group bg-gradient-to-br from-rose-500/20 to-purple-500/20 rounded-xl p-6 border border-rose-500/30 hover:border-rose-400/50 transition-all hover:scale-105"
@@ -127,7 +128,6 @@ export default function October2025LatestAIBreakthroughsBanner() {
             </div>
           </Link>
         </div>
-
         <div className="text-center">
           <Link
             to="/blog"
@@ -138,6 +138,5 @@ export default function October2025LatestAIBreakthroughsBanner() {
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

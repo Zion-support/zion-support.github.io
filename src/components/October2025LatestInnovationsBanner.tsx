@@ -1,15 +1,11 @@
-import { ArrowRight, Shield, Zap, Building2 } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025LatestInnovationsBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-y border-indigo-500/30">
-      {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-y border-indigo-500/30" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header */}
         <div className="text-center mb-8">
@@ -20,13 +16,11 @@ const October2025LatestInnovationsBanner = () => {
             </span>
             <Zap className="h-5 w-5 text-yellow-400 animate-pulse" />
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-black text-white mb-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
               3 Revolutionary AI Breakthroughs
             </span>
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto">
             🚀 <strong className="text-white">JUST RELEASED TODAY:</strong> Deploy enterprise-grade AI governance achieving 
             <span className="text-green-400 font-bold"> 99.9% compliance</span>, harness quantum-enhanced AI with 
@@ -35,7 +29,6 @@ const October2025LatestInnovationsBanner = () => {
             businesses worldwide!
           </p>
         </div>
-
         {/* Feature Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Card 1: AI Governance */}
@@ -46,7 +39,6 @@ const October2025LatestInnovationsBanner = () => {
             <div className="absolute top-4 right-4">
               <Shield className="h-8 w-8 text-emerald-400 group-hover:animate-pulse" />
             </div>
-            
             <div className="mb-4">
               <span className="inline-block bg-emerald-500/20 text-emerald-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
                 AI GOVERNANCE
@@ -55,7 +47,6 @@ const October2025LatestInnovationsBanner = () => {
                 AI Governance & Compliance Framework 2025
               </h3>
             </div>
-
             <ul className="space-y-2 mb-4 text-sm">
               <li className="flex items-start gap-2">
                 <span className="text-green-400 font-bold mt-0.5">✓</span>
@@ -70,12 +61,10 @@ const October2025LatestInnovationsBanner = () => {
                 <span className="text-gray-300"><strong className="text-white">$186M+ liability protection</strong> from compliance violations</span>
               </li>
             </ul>
-
             <div className="flex items-center text-emerald-400 font-semibold group-hover:gap-3 transition-all">
               Read Full Guide <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Card 2: Quantum AI */}
           <Link
             to="/blog/ai-2025-october-quantum-enhanced-ai-hybrid-systems"
@@ -84,7 +73,6 @@ const October2025LatestInnovationsBanner = () => {
             <div className="absolute top-4 right-4">
               <Zap className="h-8 w-8 text-violet-400 group-hover:animate-pulse" />
             </div>
-            
             <div className="mb-4">
               <span className="inline-block bg-violet-500/20 text-violet-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
                 QUANTUM AI
@@ -93,7 +81,6 @@ const October2025LatestInnovationsBanner = () => {
                 Quantum-Enhanced AI Hybrid Systems 2025
               </h3>
             </div>
-
             <ul className="space-y-2 mb-4 text-sm">
               <li className="flex items-start gap-2">
                 <span className="text-green-400 font-bold mt-0.5">✓</span>
@@ -108,12 +95,10 @@ const October2025LatestInnovationsBanner = () => {
                 <span className="text-gray-300"><strong className="text-white">$234M+ value creation</strong> through quantum power</span>
               </li>
             </ul>
-
             <div className="flex items-center text-violet-400 font-semibold group-hover:gap-3 transition-all">
               Explore Quantum AI <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Card 3: Enterprise Orchestration */}
           <Link
             to="/blog/ai-2025-october-autonomous-enterprise-orchestration-platform"
@@ -122,7 +107,6 @@ const October2025LatestInnovationsBanner = () => {
             <div className="absolute top-4 right-4">
               <Building2 className="h-8 w-8 text-indigo-400 group-hover:animate-pulse" />
             </div>
-            
             <div className="mb-4">
               <span className="inline-block bg-indigo-500/20 text-indigo-300 text-xs font-bold px-3 py-1 rounded-full mb-3">
                 ENTERPRISE AI
@@ -131,7 +115,6 @@ const October2025LatestInnovationsBanner = () => {
                 Autonomous Enterprise Orchestration Platform 2025
               </h3>
             </div>
-
             <ul className="space-y-2 mb-4 text-sm">
               <li className="flex items-start gap-2">
                 <span className="text-green-400 font-bold mt-0.5">✓</span>
@@ -146,13 +129,11 @@ const October2025LatestInnovationsBanner = () => {
                 <span className="text-gray-300"><strong className="text-white">$312M+ annual value</strong> from intelligent orchestration</span>
               </li>
             </ul>
-
             <div className="flex items-center text-indigo-400 font-semibold group-hover:gap-3 transition-all">
               Discover Platform <ArrowRight className="h-4 w-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
         </div>
-
         {/* CTA Button */}
         <div className="text-center">
           <Link
@@ -163,7 +144,6 @@ const October2025LatestInnovationsBanner = () => {
             <ArrowRight className="h-5 w-5" />
           </Link>
         </div>
-
         {/* Bottom Info */}
         <div className="mt-8 text-center">
           <p className="text-sm text-gray-400">
@@ -176,5 +156,4 @@ const October2025LatestInnovationsBanner = () => {
     </div>
   );
 };
-
 export default October2025LatestInnovationsBanner;

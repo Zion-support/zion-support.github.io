@@ -151,8 +151,7 @@ const UltimateBusinessIntelligence2025Banner = () => {
                 Read {currentContent.type}
               </Link>
               <Link
-                href="/contact"
-                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
+                href="/<contact" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-900 transition-all duration-300 text-center"
               >
                 Get Consultation
               </Link>
@@ -180,8 +179,10 @@ const UltimateBusinessIntelligence2025Banner = () => {
             {content.map((item, index) => (
               <div
                 key={item.id}
-                className={`bg-white/10 backdrop-blur-sm rounded-lg p-4 cursor-pointer transition-all duration-300 ${
-                  index === currentSlide ? 'ring-2 ring-yellow-400 bg-white/20' : 'hover:bg-white/15'
+                className={`p-4 rounded-lg cursor-pointer transition-all duration-300 ${
+                  currentSlide === index 
+                    ? 'bg-white/10 hover:bg-white/15 border border-white/20' 
+                    : 'bg-white/5 hover:bg-white/10 border border-transparent'
                 }`}
                 onClick={() => setCurrentSlide(index)}
               >
@@ -211,7 +212,9 @@ const UltimateBusinessIntelligence2025Banner = () => {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-400' : 'bg-white/30'
+                currentSlide === index 
+                  ? 'bg-white' 
+                  : 'bg-white/30 hover:bg-white/50'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />

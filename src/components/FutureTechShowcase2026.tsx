@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Atom, Bot, Shield, Rocket, Target } from 'lucide-react';
-
 const FutureTechShowcase2026: React.FC = () => {
   const futureTechArticles = [
     {
@@ -88,7 +86,6 @@ const FutureTechShowcase2026: React.FC = () => {
       stats: 'Autonomous Orchestration'
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -97,7 +94,6 @@ const FutureTechShowcase2026: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -108,28 +104,24 @@ const FutureTechShowcase2026: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-cyan-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-cyan-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
             Future Technology Showcase 2026
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
             Experience the next generation of AI and technology breakthroughs. From quantum-neural fusion to self-evolving AI ecosystems, 
             discover technologies that will reshape the future of enterprise computing.
           </p>
         </div>
-
         {/* Future Tech Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {futureTechArticles.map((article, index) => (
-            <div 
-              key={article.id}
+            <div
+key={article.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-purple-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${article.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Icon & Badges */}
                 <div className="flex items-start justify-between mb-6">
@@ -148,24 +140,20 @@ const FutureTechShowcase2026: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Category Tag */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-cyan-500/20 text-purple-400 text-xs font-semibold border border-purple-500/30">
                     {article.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-purple-400 transition-colors duration-300 leading-tight">
                   {article.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {article.excerpt}
                 </p>
-
                 {/* Stats */}
                 <div className="mb-6">
                   <div className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-500/30">
@@ -174,7 +162,6 @@ const FutureTechShowcase2026: React.FC = () => {
                     </span>
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -183,7 +170,6 @@ const FutureTechShowcase2026: React.FC = () => {
                   </span>
                   <span>{new Date(article.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/blog/${article.slug}`}
@@ -196,7 +182,6 @@ const FutureTechShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Revolutionary Stats Section */}
         <div className="grid md:grid-cols-4 gap-8 mb-16">
           {[
@@ -216,7 +201,6 @@ const FutureTechShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Call-to-Action Section */}
         <div className="text-center mt-20">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-purple-500 via-cyan-500 to-pink-500">
@@ -251,5 +235,4 @@ const FutureTechShowcase2026: React.FC = () => {
     </div>
   );
 };
-
 export default FutureTechShowcase2026;

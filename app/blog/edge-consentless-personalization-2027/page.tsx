@@ -1,5 +1,5 @@
 "use client";
-import Link from "next/link";
+import Link from 'next/link';
 
 export default function Page() {
   return (
@@ -28,10 +28,10 @@ export default function Page() {
           </p>
         </div>
         <div className="flex gap-3">
-          <Link href="/blog" className="text-emerald-700 font-semibold hover:underline">
+          <Link href="/<blog" className="text-emerald-700 font-semibold hover:underline">
             ← Back to Blog
           </Link>
-          <Link href="/contact" className="text-emerald-700 font-semibold hover:underline">
+          <Link href="/<contact" className="text-emerald-700 font-semibold hover:underline">
             Talk to an expert →
           </Link>
         </div>

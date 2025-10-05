@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function September30NewAIBreakthroughsBanner() {
@@ -19,7 +18,7 @@ export default function September30NewAIBreakthroughsBanner() {
 
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {/* Edge AI */}
-          <Link href="/blog/ai-edge-revolution-september-2025" className="group">
+          <Link href="/blog/ai-edge-revolution-september-<2025" className="group">
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
               <div className="bg-gradient-to-r from-green-500 to-emerald-500 p-6 text-center">
                 <div className="text-4xl mb-3">⚡</div>
@@ -53,7 +52,7 @@ export default function September30NewAIBreakthroughsBanner() {
           </Link>
 
           {/* Security Framework */}
-          <Link href="/blog/ai-enterprise-security-framework-2025" className="group">
+          <Link href="/blog/ai-enterprise-security-framework-<2025" className="group">
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
               <div className="bg-gradient-to-r from-red-500 to-pink-500 p-6 text-center">
                 <div className="text-4xl mb-3">🛡️</div>
@@ -87,7 +86,7 @@ export default function September30NewAIBreakthroughsBanner() {
           </Link>
 
           {/* Sustainable AI */}
-          <Link href="/blog/sustainable-ai-computing-2025" className="group">
+          <Link href="/blog/sustainable-ai-computing-<2025" className="group">
             <div className="bg-white rounded-xl shadow-2xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-3xl">
               <div className="bg-gradient-to-r from-green-500 to-teal-500 p-6 text-center">
                 <div className="text-4xl mb-3">🌱</div>
@@ -125,14 +124,12 @@ export default function September30NewAIBreakthroughsBanner() {
         <div className="text-center mt-12">
           <div className="inline-flex flex-col sm:flex-row gap-4">
             <a
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              href="tel:+<13024640950" className="bg-white text-purple-600 px-8 py-4 rounded-lg font-bold text-lg shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               📞 Call +1 302 464 0950
             </a>
             <a
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-purple-500 bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all"
+              href="mailto:kleber@ziontechgroup.<com" className="bg-purple-500 bg-opacity-20 backdrop-blur-sm border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-purple-600 transition-all"
             >
               ✉️ Email Us
             </a>

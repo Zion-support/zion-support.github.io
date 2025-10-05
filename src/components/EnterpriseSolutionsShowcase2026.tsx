@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Building, Shield, Cloud, Bot, Users, Award, Target, DollarSign } from 'lucide-react';
-
 const EnterpriseSolutionsShowcase2026: React.FC = () => {
   const enterpriseSolutions = [
     {
@@ -88,14 +86,12 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
       features: ['Ethical AI', 'Compliance Management', 'Risk Assessment']
     }
   ];
-
   const successMetrics = [
     { value: '500+', label: 'Enterprise Clients', icon: <Building className="w-8 h-8" /> },
     { value: '$2B+', label: 'Cost Savings Generated', icon: <DollarSign className="w-8 h-8" /> },
     { value: '98%', label: 'Client Satisfaction', icon: <Award className="w-8 h-8" /> },
     { value: '24/7', label: 'Enterprise Support', icon: <Users className="w-8 h-8" /> }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -104,7 +100,6 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -115,16 +110,13 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-indigo-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent animate-fade-in">
             Enterprise Solutions Showcase 2026
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Transform your enterprise with our comprehensive suite of AI-powered solutions. From automation to security, 
             we deliver measurable results that drive business growth and operational excellence.
           </p>
-
           {/* Success Metrics */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {successMetrics.map((metric, index) => (
@@ -142,18 +134,16 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Enterprise Solutions Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {enterpriseSolutions.map((solution, index) => (
-            <div 
-              key={solution.id}
+            <div
+key={solution.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${solution.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Icon & Badge */}
                 <div className="flex items-start justify-between mb-6">
@@ -164,39 +154,32 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                     {solution.badge}
                   </div>
                 </div>
-
                 {/* Category & Industry */}
                 <div className="mb-4 space-y-2">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-indigo-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
                     {solution.category}
                   </span>
-                  <div className="text-xs text-gray-500">
-                    Industries: {solution.industry}
+                  <div className="text-xs text-gray-500">",
+      Industries: {solution.industry}
                   </div>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                   {solution.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {solution.excerpt}
                 </p>
-
                 {/* ROI & Savings */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
                   <div className="text-center p-3 rounded-lg bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30">
                     <div className="text-green-400 font-bold text-lg">{solution.roi}</div>
-                    <div className="text-gray-400 text-xs">ROI</div>
                   </div>
                   <div className="text-center p-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30">
                     <div className="text-blue-400 font-bold text-lg">{solution.savings}</div>
-                    <div className="text-gray-400 text-xs">Savings</div>
                   </div>
                 </div>
-
                 {/* Features */}
                 <div className="mb-6">
                   <div className="text-gray-400 text-xs mb-2">Key Features:</div>
@@ -208,7 +191,6 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/solutions/${solution.slug}`}
@@ -221,7 +203,6 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Enterprise CTA Section */}
         <div className="text-center mt-20">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500">
@@ -256,5 +237,4 @@ const EnterpriseSolutionsShowcase2026: React.FC = () => {
     </div>
   );
 };
-
 export default EnterpriseSolutionsShowcase2026;

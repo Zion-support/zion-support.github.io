@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function AI2026InnovationShowcaseBanner() {
@@ -6,7 +5,7 @@ export default function AI2026InnovationShowcaseBanner() {
     <section className="py-20 bg-gradient-to-br from-violet-900 via-purple-900 to-indigo-900 text-white relative overflow-hidden">
       {/* Innovation Pattern */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_25%_25%,rgba(139,92,246,0.3),transparent_50%),radial-gradient(circle_at_75%_75%,rgba(59,130,246,0.3),transparent_50%)]"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle at 25% 25%,rgba(139,92,246,0.3),transparent 50%),radial-gradient(circle at 75% 75%,rgba(59,130,246,0.3),transparent 50%)]"></div>
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
@@ -191,14 +190,12 @@ export default function AI2026InnovationShowcaseBanner() {
         <div className="text-center">
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
             <Link
-              href="/services/ai-innovation-2026"
-              className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
+              href="/services/ai-innovation-<2026" className="bg-gradient-to-r from-violet-500 to-purple-500 text-white px-10 py-4 rounded-lg font-bold text-lg hover:from-violet-600 hover:to-purple-600 transition-all duration-300 shadow-lg"
             >
               Access Innovation 2026
             </Link>
             <Link
-              href="/blog/ai-innovation-showcase"
-              className="border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-violet-900 transition-all duration-300"
+              href="/blog/ai-innovation-<showcase" className="border-2 border-white/30 text-white px-10 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-violet-900 transition-all duration-300"
             >
               Explore Innovations
             </Link>

@@ -1,10 +1,8 @@
-import { ArrowRight, Bot, Code2, Shield, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
 interface October2025AIRevolutionBannerProps {
   className?: string;
 }
-
 export default function October2025AIRevolutionBanner({ className = '' }: October2025AIRevolutionBannerProps) {
   return (
     <div className={`bg-gradient-to-r from-purple-900/40 via-indigo-900/40 to-cyan-900/40 border-y border-purple-500/30 ${className}`}>
@@ -18,18 +16,15 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
             </span>
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-400 via-indigo-400 to-cyan-400 bg-clip-text text-transparent">
             The Complete AI Revolution: 3 Essential Guides
           </h2>
-          
           <p className="text-xl text-white/80 max-w-4xl mx-auto leading-relaxed">
             <strong className="text-white">NEW TODAY:</strong> Master autonomous AI agents (94% task automation), 
             AI-powered development tools (5x faster coding), and enterprise AI safety (99.2% compliance). 
             The definitive guides for forward-thinking organizations transforming with AI in 2025.
           </p>
         </div>
-
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Article 1: Autonomous AI Agents */}
@@ -45,37 +40,29 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
                 AUTONOMOUS AGENTS
               </span>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
               Autonomous AI Agents in Production 2025
             </h3>
-            
             <p className="text-white/70 mb-4 leading-relaxed">
               Deploy production-grade AI agents that automate 94% of routine tasks, reduce costs by 78%, 
               and deliver 10x productivity gains. Complete guide from planning to production.
             </p>
-            
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-purple-400">94%</div>
-                <div className="text-xs text-white/60">Automation</div>
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-green-400">78%</div>
                 <div className="text-xs text-white/60">Cost Cut</div>
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-cyan-400">10x</div>
-                <div className="text-xs text-white/60">Productivity</div>
               </div>
             </div>
-            
             <div className="flex items-center gap-2 text-purple-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
               <ArrowRight className="w-5 h-5" />
             </div>
           </Link>
-
           {/* Article 2: LLM Development Tools */}
           <Link 
             to="/blog/ai-2025-october-llm-powered-development-tools-revolution"
@@ -89,19 +76,15 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
                 AI DEVELOPMENT
               </span>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-indigo-300 transition-colors">
               LLM-Powered Development Tools Revolution
             </h3>
-            
             <p className="text-white/70 mb-4 leading-relaxed">
               Transform your engineering workflow with AI-native tools. Top teams achieve 5x faster development, 
               80% fewer bugs, and 92% developer satisfaction. The complete AI coding toolkit.
             </p>
-            
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3 text-center">
-                <div className="text-2xl font-bold text-indigo-400">5x</div>
                 <div className="text-xs text-white/60">Dev Speed</div>
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
@@ -110,16 +93,13 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-cyan-400">92%</div>
-                <div className="text-xs text-white/60">Satisfaction</div>
               </div>
             </div>
-            
             <div className="flex items-center gap-2 text-indigo-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
               <ArrowRight className="w-5 h-5" />
             </div>
           </Link>
-
           {/* Article 3: AI Safety & Alignment */}
           <Link 
             to="/blog/ai-2025-october-ai-safety-alignment-enterprise-deployment"
@@ -133,20 +113,16 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
                 AI SAFETY
               </span>
             </div>
-            
             <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-emerald-300 transition-colors">
               AI Safety & Alignment for Enterprise 2025
             </h3>
-            
             <p className="text-white/70 mb-4 leading-relaxed">
               Deploy AI safely and responsibly. Leading organizations achieve 99.2% safety compliance, 
               prevent costly failures, and build stakeholder trust. Your complete responsible AI framework.
             </p>
-            
             <div className="grid grid-cols-3 gap-3 mb-4">
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-emerald-400">99.2%</div>
-                <div className="text-xs text-white/60">Compliance</div>
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-green-400">87%</div>
@@ -154,17 +130,14 @@ export default function October2025AIRevolutionBanner({ className = '' }: Octobe
               </div>
               <div className="bg-black/30 rounded-lg p-3 text-center">
                 <div className="text-2xl font-bold text-cyan-400">4.7x</div>
-                <div className="text-xs text-white/60">Trust</div>
               </div>
             </div>
-            
             <div className="flex items-center gap-2 text-emerald-400 font-semibold group-hover:gap-3 transition-all">
               <span>Read Complete Guide</span>
               <ArrowRight className="w-5 h-5" />
             </div>
           </Link>
         </div>
-
         {/* Call to Action */}
         <div className="text-center">
           <Link

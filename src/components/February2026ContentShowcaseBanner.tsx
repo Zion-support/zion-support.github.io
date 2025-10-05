@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 const February2026ContentShowcaseBanner = () => {
   const featuredContent = [
     {
@@ -44,7 +41,6 @@ const February2026ContentShowcaseBanner = () => {
       description: 'AI that thinks about thinking - achieving true self-awareness and autonomous learning'
     }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-indigo-900 to-purple-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -53,7 +49,6 @@ const February2026ContentShowcaseBanner = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -64,16 +59,13 @@ const February2026ContentShowcaseBanner = () => {
             </span>
             <Sparkles className="w-6 h-6 text-blue-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-emerald-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
             The Future of AI is Now
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover groundbreaking AI breakthroughs that are reshaping the technological landscape. 
             Join 500K+ professionals who trust our revolutionary content to stay ahead of the curve.
           </p>
-
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
             {[
@@ -96,18 +88,16 @@ const February2026ContentShowcaseBanner = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
-            <div 
-              key={content.id}
+            <div
+key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-emerald-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Badge */}
                 <div className="flex items-center justify-between mb-6">
@@ -118,24 +108,20 @@ const February2026ContentShowcaseBanner = () => {
                     {content.badge}
                   </div>
                 </div>
-
                 {/* Category */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 to-blue-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
                     {content.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-emerald-400 transition-colors duration-300 leading-tight">
                   {content.title}
                 </h3>
-
                 {/* Description */}
                 <p className="text-gray-400 mb-6 text-sm leading-relaxed">
                   {content.description}
                 </p>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -147,7 +133,6 @@ const February2026ContentShowcaseBanner = () => {
                     {content.rating}
                   </span>
                 </div>
-
                 {/* Reader Count */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-400">
@@ -155,7 +140,6 @@ const February2026ContentShowcaseBanner = () => {
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={content.link}
@@ -168,7 +152,6 @@ const February2026ContentShowcaseBanner = () => {
             </div>
           ))}
         </div>
-
         {/* Special Offer Section */}
         <div className="bg-gradient-to-r from-emerald-500/10 to-blue-500/10 rounded-3xl p-8 md:p-12 border border-emerald-500/20 mb-16">
           <div className="text-center">
@@ -178,7 +161,6 @@ const February2026ContentShowcaseBanner = () => {
                 EXCLUSIVE FEBRUARY OFFER
               </span>
             </div>
-            
             <h3 className="text-4xl font-extrabold text-white mb-4">
               Unlock Premium AI Insights
             </h3>
@@ -186,7 +168,6 @@ const February2026ContentShowcaseBanner = () => {
               Get exclusive access to cutting-edge research, early content releases, and premium AI insights. 
               Join our elite community of technology pioneers and thought leaders.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <div className="text-center">
                 <div className="text-3xl font-extrabold text-emerald-400 line-through opacity-50">$399/month</div>
@@ -212,7 +193,6 @@ const February2026ContentShowcaseBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-emerald-500 via-blue-500 to-purple-500">
@@ -227,9 +207,7 @@ const February2026ContentShowcaseBanner = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300"
-                />
+                  placeholder="Enter your <<email className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-500 focus:bg-white/20 transition-all duration-300" />
                 <button className="bg-gradient-to-r from-emerald-500 to-blue-600 hover:from-emerald-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 flex items-center justify-center gap-2">
                   <span>Subscribe</span>
                   <ArrowRight className="w-5 h-5" />
@@ -245,5 +223,4 @@ const February2026ContentShowcaseBanner = () => {
     </div>
   );
 };
-
 export default February2026ContentShowcaseBanner;

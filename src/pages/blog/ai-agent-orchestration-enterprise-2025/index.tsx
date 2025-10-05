@@ -1,16 +1,14 @@
 import { Helmet } from "react-helmet-async";
+import ArrowLeft from 'lucide-react';
+import Calendar from 'lucide-react';
+import Clock from 'lucide-react';
+import GitBranch from 'lucide-react';
+import Network from 'lucide-react';
+import Shield from 'lucide-react';
+import TrendingUp from 'lucide-react';
+import Zap from 'lucide-react';
+;
 import { Link } from "react-router-dom";
-import {
-  ArrowLeft,
-  Calendar,
-  Clock,
-  GitBranch,
-  Network,
-  Shield,
-  TrendingUp,
-  Zap,
-} from "lucide-react";
-
 const AIAgentOrchestrationEnterprise2025 = () => {
   return (
     <>
@@ -31,7 +29,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
           href="https://ziontechgroup.com/blog/ai-agent-orchestration-enterprise-2025"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 py-16">
@@ -44,7 +41,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Blog
             </Link>
-
             <div className="max-w-4xl">
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
@@ -57,11 +53,9 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                   ⭐ Featured
                 </span>
               </div>
-
               <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
                 Enterprise AI Agent Orchestration: The 2025 Implementation Blueprint
               </h1>
-
               <div className="flex flex-wrap items-center gap-6 text-white/90">
                 <div className="flex items-center">
                   <Calendar className="w-5 h-5 mr-2" />
@@ -79,7 +73,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
             </div>
           </div>
         </div>
-
         {/* Content */}
         <article className="container mx-auto px-6 py-16 max-w-4xl">
           <div className="prose prose-invert prose-lg max-w-none">
@@ -95,14 +88,12 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                 used by Fortune 500 companies to scale multi-agent systems to billions of interactions.
               </p>
             </div>
-
             {/* Key Challenges */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Shield className="w-8 h-8 mr-3 text-red-400" />
                 Critical Challenges in 2025
               </h2>
-
               <div className="space-y-6">
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">1. Coordination Complexity</h3>
@@ -122,7 +113,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">2. Reliability at Scale</h3>
                   <p className="text-gray-300 mb-4">
@@ -141,7 +131,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                     </p>
                   </div>
                 </div>
-
                 <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700">
                   <h3 className="text-xl font-semibold text-white mb-3">3. Security & Governance</h3>
                   <p className="text-gray-300 mb-4">
@@ -162,20 +151,17 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                 </div>
               </div>
             </section>
-
             {/* Architecture Patterns */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <Network className="w-8 h-8 mr-3 text-purple-400" />
                 Production-Grade Architecture Patterns
               </h2>
-
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 p-8 rounded-lg border border-slate-700 mb-6">
                 <h3 className="text-2xl font-semibold text-white mb-4">Hierarchical Orchestration Model</h3>
                 <p className="text-gray-300 mb-6">
                   The most successful enterprise deployments use a three-tier hierarchy:
                 </p>
-
                 <div className="space-y-4">
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
@@ -189,7 +175,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                       </p>
                     </div>
                   </div>
-
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">⚡</span>
@@ -202,7 +187,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                       </p>
                     </div>
                   </div>
-
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-emerald-500/20 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-2xl">🛠️</span>
@@ -217,7 +201,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                   </div>
                 </div>
               </div>
-
               <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-6">
                 <p className="text-blue-300 font-semibold mb-2">💡 Pro Tip:</p>
                 <p className="text-gray-300">
@@ -227,14 +210,12 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                 </p>
               </div>
             </section>
-
             {/* Implementation Blueprint */}
             <section className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6 flex items-center">
                 <GitBranch className="w-8 h-8 mr-3 text-emerald-400" />
                 90-Day Implementation Blueprint
               </h2>
-
               <div className="space-y-6">
                 <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-emerald-500">
                   <h3 className="text-xl font-bold text-white mb-3">Phase 1: Foundation (Days 1-30)</h3>
@@ -246,7 +227,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                     <li>✓ Build first orchestrator with 3-5 specialist agents</li>
                   </ul>
                 </div>
-
                 <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-blue-500">
                   <h3 className="text-xl font-bold text-white mb-3">Phase 2: Scale (Days 31-60)</h3>
                   <ul className="space-y-2 text-gray-300">
@@ -257,7 +237,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                     <li>✓ Create runbooks for common failure scenarios</li>
                   </ul>
                 </div>
-
                 <div className="bg-slate-800/50 p-6 rounded-lg border-l-4 border-purple-500">
                   <h3 className="text-xl font-bold text-white mb-3">Phase 3: Production (Days 61-90)</h3>
                   <ul className="space-y-2 text-gray-300">
@@ -270,7 +249,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                 </div>
               </div>
             </section>
-
             {/* ROI Section */}
             <section className="mb-12">
               <div className="bg-gradient-to-r from-emerald-500/20 to-blue-500/20 p-8 rounded-lg border border-emerald-500/30">
@@ -295,7 +273,6 @@ const AIAgentOrchestrationEnterprise2025 = () => {
                 </div>
               </div>
             </section>
-
             {/* CTA */}
             <section className="text-center">
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-8 rounded-lg">
@@ -320,5 +297,4 @@ const AIAgentOrchestrationEnterprise2025 = () => {
     </>
   );
 };
-
 export default AIAgentOrchestrationEnterprise2025;

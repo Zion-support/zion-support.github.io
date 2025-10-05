@@ -1,14 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, Zap, Rocket, Star } from 'lucide-react';
-
+import { Sparkles, Zap, Rocket, Star, ArrowRight } from 'lucide-react';
 export interface FeaturedItem {
   title: string;
   category: string;
   link: string;
   metrics?: string;
 }
-
 export interface UnifiedPromotionalBannerProps {
   variant?: 'default' | 'premium' | 'hero' | 'compact' | 'mega';
   title: string;
@@ -24,7 +22,6 @@ export interface UnifiedPromotionalBannerProps {
   badge?: string;
   date?: string;
 }
-
 const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
   variant = 'default',
   title,
@@ -50,7 +47,6 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
     cyan: 'from-cyan-500/10 to-cyan-600/10 border-cyan-500/30',
     gradient: 'from-blue-500/10 via-purple-500/10 to-pink-500/10 border-purple-500/30'
   };
-
   const buttonThemes = {
     blue: 'from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700',
     purple: 'from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700',
@@ -60,7 +56,6 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
     cyan: 'from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700',
     gradient: 'from-purple-500 via-pink-500 to-blue-500 hover:from-purple-600 hover:via-pink-600 hover:to-blue-600'
   };
-
   // Icon selection
   const IconComponent = {
     sparkles: Sparkles,
@@ -69,7 +64,6 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
     star: Star,
     none: null
   }[icon];
-
   // Variant-specific styles
   const variantClasses = {
     default: 'py-8 px-6',
@@ -78,12 +72,10 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
     compact: 'py-6 px-4',
     mega: 'py-20 px-12'
   };
-
   const visibleItems = featuredItems.slice(0, showCount);
-
   return (
-    <div 
-      className={`
+    <div
+className={`
         bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
@@ -105,9 +97,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
             {date && (
               <span className="text-sm text-gray-300 font-medium">{date}</span>
             )}
-          </div>
-        )}
-
+          </div>)}
         {/* Title */}
         <h2 className={`
           font-extrabold mb-4 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent
@@ -118,22 +108,16 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
         `}>
           {title}
         </h2>
-
         {/* Description */}
-        <p className={`
-          text-gray-200 mb-6
-          ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
+        <p className={`text-gray-200 mb-6 ${variant === 'hero' || variant === 'mega' ? 'text-lg md:text-xl' : 
             variant === 'compact' ? 'text-sm' : 
             'text-base md:text-lg'}
         `}>
           {description}
         </p>
-
         {/* Featured Items */}
         {visibleItems.length > 0 && (
-          <div className={`
-            grid gap-4 mb-6
-            ${variant === 'mega' ? 'md:grid-cols-3' : 
+          <div className={`grid gap-4 mb-6 ${variant === 'mega' ? 'md:grid-cols-3' : 
               variant === 'hero' || variant === 'premium' ? 'md:grid-cols-2' : 
               'md:grid-cols-1'}
           `}>
@@ -162,7 +146,6 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
             ))}
           </div>
         )}
-
         {/* CTA Button */}
         <div className="flex flex-wrap items-center gap-4">
           <Link
@@ -179,7 +162,6 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
             {ctaText}
             <ArrowRight className={`${variant === 'compact' ? 'w-4 h-4' : 'w-5 h-5'}`} />
           </Link>
-
           {featuredItems.length > showCount && (
             <Link
               to={ctaLink}
@@ -193,5 +175,4 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
     </div>
   );
 };
-
 export default UnifiedPromotionalBanner;

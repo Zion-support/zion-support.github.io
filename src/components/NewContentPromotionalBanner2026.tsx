@@ -1,7 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket, Globe } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 const NewContentPromotionalBanner2026 = () => {
   const newContent = [
     {
@@ -29,7 +26,6 @@ const NewContentPromotionalBanner2026 = () => {
       color: 'from-blue-500 to-cyan-500'
     }
   ];
-
   return (
     <div className="py-16 bg-gradient-to-br from-slate-900 via-violet-900 to-purple-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -38,7 +34,6 @@ const NewContentPromotionalBanner2026 = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -49,53 +44,45 @@ const NewContentPromotionalBanner2026 = () => {
             </span>
             <Globe className="w-6 h-6 text-purple-400 animate-pulse" />
           </div>
-
           <h2 className="text-4xl md:text-5xl font-extrabold mb-6 bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400 bg-clip-text text-transparent">
             Revolutionary Content Just Released
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover the most groundbreaking AI innovations of 2026. Join millions of professionals 
             who are already experiencing the future of technology through our revolutionary content.
           </p>
         </div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {newContent.map((content, index) => (
-            <div 
-              key={index}
+            <div
+key={index}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-violet-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.color} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Content Icon */}
                 <div className="text-5xl mb-6 text-center group-hover:animate-pulse">
                   {content.icon}
                 </div>
-
                 {/* Date Badge */}
                 <div className="text-center mb-4">
                   <span className={`inline-block px-3 py-1 rounded-full bg-gradient-to-r ${content.color} text-white text-xs font-bold`}>
                     {content.date}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-violet-400 transition-colors duration-300 leading-tight text-center">
                   {content.title}
                 </h3>
-
                 {/* Impact */}
                 <div className="text-center mb-4">
                   <div className="text-violet-400 font-semibold text-lg">
                     {content.impact}
                   </div>
                 </div>
-
                 {/* Reader Count */}
                 <div className="text-center mb-6">
                   <div className="flex items-center justify-center gap-2 text-gray-400">
@@ -103,7 +90,6 @@ const NewContentPromotionalBanner2026 = () => {
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/blog/${content.title.toLowerCase().replace(/\s+/g, '-')}`}
@@ -116,7 +102,6 @@ const NewContentPromotionalBanner2026 = () => {
             </div>
           ))}
         </div>
-
         {/* Global Impact Stats */}
         <div className="bg-gradient-to-r from-violet-500/10 to-purple-500/10 rounded-3xl p-8 border border-violet-500/20 mb-12">
           <div className="text-center mb-8">
@@ -127,13 +112,17 @@ const NewContentPromotionalBanner2026 = () => {
               Our innovative content is transforming industries worldwide and creating unprecedented value.
             </p>
           </div>
-
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { value: '2.5M+', label: 'Global Readers', icon: <Users className="w-8 h-8" />, color: 'text-violet-400' },
               { value: '$15B+', label: 'Value Created', icon: <TrendingUp className="w-8 h-8" />, color: 'text-purple-400' },
               { value: '99.9%', label: 'Content Accuracy', icon: <Star className="w-8 h-8" />, color: 'text-blue-400' },
               { value: '150+', label: 'Countries Reached', icon: <Globe className="w-8 h-8" />, color: 'text-emerald-400' }
+=======
+              { value: '2.5M+', label: 'Global Readers', icon: '🚀', color: 'text-blue-400' },
+              { value: '$15B+', label: 'Value Created', icon: '🚀', color: 'text-green-400' },
+              { value: '99.9%', label: 'Content Accuracy', icon: '🚀', color: 'text-purple-400' },
+              { value: '150+', label: 'Countries Reached', icon: '🚀', color: 'text-pink-400' }
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className={`${stat.color} mb-2 flex justify-center`}>
@@ -149,7 +138,6 @@ const NewContentPromotionalBanner2026 = () => {
             ))}
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-violet-500 via-purple-500 to-blue-500">
@@ -184,5 +172,4 @@ const NewContentPromotionalBanner2026 = () => {
     </div>
   );
 };
-
-export default NewContentPromotionalBanner2026;
+export default React.memo(NewContentPromotionalBanner2026);

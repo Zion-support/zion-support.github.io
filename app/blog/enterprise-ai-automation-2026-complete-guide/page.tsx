@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -49,20 +48,20 @@ export default function EnterpriseAIAutomationGuide() {
             <h2 className="text-2xl font-bold text-white mb-6">Table of Contents</h2>
             <div className="bg-slate-800 rounded-xl p-6">
               <ul className="space-y-2 text-gray-300">
-                <li><a href="#introduction" className="text-blue-400 hover:text-blue-300">1. Introduction to Enterprise AI Automation</a></li>
-                <li><a href="#meta-cognitive" className="text-blue-400 hover:text-blue-300">2. Meta-Cognitive AI: The Game Changer</a></li>
-                <li><a href="#autonomous-ops" className="text-blue-400 hover:text-blue-300">3. Autonomous Operations Framework</a></li>
-                <li><a href="#implementation" className="text-blue-400 hover:text-blue-300">4. Implementation Strategy</a></li>
-                <li><a href="#case-studies" className="text-blue-400 hover:text-blue-300">5. Real-World Case Studies</a></li>
-                <li><a href="#best-practices" className="text-blue-400 hover:text-blue-300">6. Best Practices & Pitfalls</a></li>
-                <li><a href="#future-trends" className="text-blue-400 hover:text-blue-300">7. Future Trends & Predictions</a></li>
+                <li><a href="#<introduction" className="text-blue-400 hover:text-blue-300">1. Introduction to Enterprise AI Automation</a></li>
+                <li><a href="#meta-<cognitive" className="text-blue-400 hover:text-blue-300">2. Meta-Cognitive AI: The Game Changer</a></li>
+                <li><a href="#autonomous-<ops" className="text-blue-400 hover:text-blue-300">3. Autonomous Operations Framework</a></li>
+                <li><a href="#<implementation" className="text-blue-400 hover:text-blue-300">4. Implementation Strategy</a></li>
+                <li><a href="#case-<studies" className="text-blue-400 hover:text-blue-300">5. Real-World Case Studies</a></li>
+                <li><a href="#best-<practices" className="text-blue-400 hover:text-blue-300">6. Best Practices & Pitfalls</a></li>
+                <li><a href="#future-<trends" className="text-blue-400 hover:text-blue-300">7. Future Trends & Predictions</a></li>
               </ul>
             </div>
           </section>
 
           {/* Content Sections */}
           <div className="prose prose-lg prose-invert max-w-none">
-            <section id="introduction" className="mb-12">
+            <section id="<introduction" className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6">1. Introduction to Enterprise AI Automation</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Enterprise AI automation represents the pinnacle of business process optimization, where artificial intelligence 
@@ -96,7 +95,7 @@ export default function EnterpriseAIAutomationGuide() {
               </div>
             </section>
 
-            <section id="meta-cognitive" className="mb-12">
+            <section id="meta-<cognitive" className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6">2. Meta-Cognitive AI: The Game Changer</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Meta-cognitive AI represents a revolutionary approach where AI systems can think about their own thinking, 
@@ -121,7 +120,7 @@ export default function EnterpriseAIAutomationGuide() {
               </div>
             </section>
 
-            <section id="autonomous-ops" className="mb-12">
+            <section id="autonomous-<ops" className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6">3. Autonomous Operations Framework</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Our proprietary framework for implementing autonomous operations across enterprise systems, 
@@ -170,7 +169,7 @@ export default function EnterpriseAIAutomationGuide() {
               </div>
             </section>
 
-            <section id="case-studies" className="mb-12">
+            <section id="case-<studies" className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6">5. Real-World Case Studies</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 See how leading enterprises have achieved remarkable results with our AI automation solutions.
@@ -201,7 +200,7 @@ export default function EnterpriseAIAutomationGuide() {
               </div>
             </section>
 
-            <section id="best-practices" className="mb-12">
+            <section id="best-<practices" className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6">6. Best Practices & Common Pitfalls</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 Learn from our experience implementing AI automation across hundreds of enterprises.
@@ -231,7 +230,7 @@ export default function EnterpriseAIAutomationGuide() {
               </div>
             </section>
 
-            <section id="future-trends" className="mb-12">
+            <section id="future-<trends" className="mb-12">
               <h2 className="text-3xl font-bold text-white mb-6">7. Future Trends & Predictions</h2>
               <p className="text-gray-300 mb-6 leading-relaxed">
                 The future of enterprise AI automation is even more exciting, with emerging technologies 
@@ -269,14 +268,12 @@ export default function EnterpriseAIAutomationGuide() {
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="/contact" 
-                  className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-400 hover:to-emerald-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-green-500/50 transform hover:-translate-y-1"
                 >
                   Start Your Automation Journey
                 </a>
                 <a 
-                  href="/case-studies/fortune-500-ai-2026-breakthrough-mega-success" 
-                  className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+                  href="/case-studies/fortune-500-ai-2026-breakthrough-mega-<success" className="border-2 border-green-500 text-green-400 hover:bg-green-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>

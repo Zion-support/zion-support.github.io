@@ -1,6 +1,5 @@
-import React from 'react';
-import ServicesAdvertisingPromo from '../../components/ServicesAdvertisingPromo';
-import AIAdvertisingBanner from '../../components/AIAdvertisingBanner';
+// import ServicesAdvertisingPromo from '../../components/ServicesAdvertisingPromo';
+// import AIAdvertisingBanner from '../../components/AIAdvertisingBanner';
 
 export default function ServicesAdvertisingPage() {
   return (
@@ -53,12 +52,12 @@ export default function ServicesAdvertisingPage() {
 
       {/* Services Section */}
       <section id="services">
-        <ServicesAdvertisingPromo />
+        {/* <ServicesAdvertisingPromo /> */}
       </section>
 
       {/* AI Advertising Banner */}
       <section>
-        <AIAdvertisingBanner />
+        {/* <AIAdvertisingBanner /> */}
       </section>
 
       {/* Footer */}

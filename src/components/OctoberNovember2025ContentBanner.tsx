@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function OctoberNovember2025ContentBanner() {
   return (
@@ -17,8 +16,7 @@ export default function OctoberNovember2025ContentBanner() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-          {/* Article 1 */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12" > {/* Article 1 */}
           <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 cursor-pointer border border-white/20">
             <div className="text-blue-300 text-sm font-semibold mb-3 uppercase tracking-wide">
               October 2025

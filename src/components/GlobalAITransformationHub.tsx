@@ -1,13 +1,13 @@
 import React from 'react';
-import { ArrowRight, Sparkles, Zap, Brain, CheckCircle, Star, Users, Award, TrendingUp, Rocket, Globe, Shield, Target } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 const GlobalAITransformationHub = () => {
   const transformationAreas = [
     {
       title: 'Enterprise Automation',
       description: 'Complete business process automation with 95% efficiency gains',
       value: '$2.3B',
+      icon: '🚀',
+=======
       icon: <Target className="w-8 h-8" />,
       color: 'from-blue-500 to-cyan-500',
       link: '/services/enterprise-automation-transformation'
@@ -16,6 +16,8 @@ const GlobalAITransformationHub = () => {
       title: 'Quantum Consciousness AI',
       description: 'Revolutionary AI consciousness integration with infinite scalability',
       value: '$500B',
+      icon: '🚀',
+=======
       icon: <Brain className="w-8 h-8" />,
       color: 'from-purple-500 to-violet-500',
       link: '/services/quantum-consciousness-ai-services'
@@ -24,6 +26,8 @@ const GlobalAITransformationHub = () => {
       title: 'Autonomous Operations',
       description: 'Self-managing systems with 99.99% uptime and zero human intervention',
       value: '$150B',
+      icon: '🚀',
+=======
       icon: <Zap className="w-8 h-8" />,
       color: 'from-emerald-500 to-teal-500',
       link: '/services/autonomous-operations-platform'
@@ -32,19 +36,19 @@ const GlobalAITransformationHub = () => {
       title: 'Neural Security',
       description: 'Advanced AI-powered security with 99.7% threat prevention',
       value: '$87B',
+      icon: '🚀',
+=======
       icon: <Shield className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       link: '/services/neural-security-framework'
     }
   ];
-
   const successMetrics = [
     { metric: '2.5M+', label: 'Global Users' },
     { metric: '$15B+', label: 'Value Created' },
     { metric: '99.99%', label: 'Success Rate' },
     { metric: '500K+', label: 'Enterprise Clients' }
   ];
-
   return (
     <div className="bg-gradient-to-br from-slate-900 via-blue-900/20 to-slate-900 border border-blue-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
@@ -52,17 +56,14 @@ const GlobalAITransformationHub = () => {
         <span className="text-2xl font-bold text-blue-400">🌍 GLOBAL AI TRANSFORMATION HUB</span>
         <Globe className="w-8 h-8 text-blue-400 animate-pulse" />
       </div>
-      
       <h2 className="text-4xl md:text-5xl font-extrabold mb-6 text-center bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
         Transforming Business Operations Worldwide
       </h2>
-      
       <p className="text-xl text-gray-300 text-center mb-8 max-w-4xl mx-auto">
         Leading the global AI revolution with cutting-edge technologies that deliver unprecedented business value and operational excellence across all industries.
       </p>
-
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-        {transformationAreas.map((area, index) => (
+        {transformationAreas.map((area, index) = > (
           <Link 
             key={index} 
             to={area.link}
@@ -78,14 +79,13 @@ const GlobalAITransformationHub = () => {
           </Link>
         ))}
       </div>
-
       <div className="bg-gradient-to-r from-blue-500/20 to-emerald-500/20 rounded-xl p-6 mb-8 border border-blue-400/30">
         <div className="flex items-center justify-center gap-3 mb-4">
           <TrendingUp className="w-6 h-6 text-green-400" />
           <span className="text-xl font-bold text-green-400">Global Success Metrics</span>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-          {successMetrics.map((item, index) => (
+          {successMetrics.map((item, index) = > (
             <div key={index}>
               <div className="text-3xl font-bold text-white">{item.metric}</div>
               <div className="text-sm text-gray-300">{item.label}</div>
@@ -93,7 +93,6 @@ const GlobalAITransformationHub = () => {
           ))}
         </div>
       </div>
-
       <div className="grid md:grid-cols-3 gap-6 mb-8">
         <div className="bg-gradient-to-br from-purple-500/20 to-violet-500/20 rounded-xl p-6 border border-purple-400/30">
           <div className="flex items-center gap-3 mb-4">
@@ -108,7 +107,6 @@ const GlobalAITransformationHub = () => {
             Explore Breakthroughs <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-
         <div className="bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-xl p-6 border border-emerald-400/30">
           <div className="flex items-center gap-3 mb-4">
             <Award className="w-6 h-6 text-emerald-400" />
@@ -122,7 +120,6 @@ const GlobalAITransformationHub = () => {
             View Case Studies <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-
         <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-xl p-6 border border-orange-400/30">
           <div className="flex items-center gap-3 mb-4">
             <Users className="w-6 h-6 text-orange-400" />
@@ -137,7 +134,6 @@ const GlobalAITransformationHub = () => {
           </Link>
         </div>
       </div>
-
       <div className="text-center">
         <Link 
           to="/contact" 
@@ -154,5 +150,4 @@ const GlobalAITransformationHub = () => {
     </div>
   );
 };
-
 export default GlobalAITransformationHub;

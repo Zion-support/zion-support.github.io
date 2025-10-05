@@ -1,6 +1,4 @@
-import { Sparkles, ArrowRight, Brain, Shield, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025LatestContentBanner = () => {
   const articles = [
     {
@@ -25,7 +23,6 @@ const October2025LatestContentBanner = () => {
       gradient: "from-purple-600 to-pink-600"
     }
   ];
-
   return (
     <section className="py-20 bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 relative overflow-hidden">
       {/* Animated background elements */}
@@ -33,7 +30,6 @@ const October2025LatestContentBanner = () => {
         <div className="absolute top-20 left-20 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
@@ -41,19 +37,16 @@ const October2025LatestContentBanner = () => {
             <Sparkles className="w-5 h-5 text-violet-400 animate-pulse" />
             <span className="text-violet-300 font-semibold">NEW CONTENT - OCTOBER 2025</span>
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-400 via-cyan-400 to-purple-400 bg-clip-text text-transparent">
             Latest AI Breakthroughs & Enterprise Strategies
           </h2>
-          
           <p className="text-xl text-slate-300 max-w-3xl mx-auto">
             Explore cutting-edge insights on GenAI orchestration, AI security frameworks, and real-time multimodal processing
           </p>
         </div>
-
         {/* Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {articles.map((article, idx) => {
+          {articles.map((article, idx) = > {
             const IconComponent = article.icon;
             return (
               <Link
@@ -64,15 +57,12 @@ const October2025LatestContentBanner = () => {
                 <div className={`w-12 h-12 bg-gradient-to-r ${article.gradient} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                   <IconComponent className="w-6 h-6 text-white" />
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-violet-300 transition-colors">
                   {article.title}
                 </h3>
-                
                 <p className="text-slate-400 mb-4 line-clamp-2">
                   {article.description}
                 </p>
-                
                 <div className="flex items-center gap-2 text-violet-400 font-semibold group-hover:gap-4 transition-all">
                   <span>Read More</span>
                   <ArrowRight className="w-4 h-4" />
@@ -81,7 +71,6 @@ const October2025LatestContentBanner = () => {
             );
           })}
         </div>
-
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-xl p-8">
           <div className="text-center">
@@ -109,7 +98,6 @@ const October2025LatestContentBanner = () => {
             <div className="text-sm text-slate-400">Latest Strategies</div>
           </div>
         </div>
-
         {/* CTA */}
         <div className="text-center mt-12">
           <Link
@@ -124,5 +112,4 @@ const October2025LatestContentBanner = () => {
     </section>
   );
 };
-
 export default October2025LatestContentBanner;

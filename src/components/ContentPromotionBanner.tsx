@@ -1,6 +1,4 @@
-import { ArrowRight, BookOpen, TrendingUp, Zap } from 'lucide-react';
 import { Link } from 'react-router-dom';
-
 export default function ContentPromotionBanner() {
   const featuredContent = [
     {
@@ -11,7 +9,7 @@ export default function ContentPromotionBanner() {
     },
     {
       title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
-      category: "Leadership", 
+      category: "Leadership",
       readTime: "5 min read",
       isNew: true,
     },
@@ -22,19 +20,16 @@ export default function ContentPromotionBanner() {
       isNew: true,
     },
   ];
-
   return (
     <div className="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 rounded-2xl p-8 md:p-12 text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-white/20 to-transparent"></div>
       </div>
-      
       <div className="relative z-10">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-              <TrendingUp className="w-5 h-5 text-yellow-300" />
               <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
                 Fresh Content
               </span>
@@ -47,7 +42,6 @@ export default function ContentPromotionBanner() {
               Stay ahead with expert analysis and practical guides.
             </p>
           </div>
-          
           <div className="flex flex-col gap-4">
             <Link 
               to="/blog" 
@@ -57,7 +51,6 @@ export default function ContentPromotionBanner() {
               Explore All Articles
               <ArrowRight className="w-5 h-5" />
             </Link>
-            
             <Link 
               to="/case-studies" 
               className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
@@ -67,10 +60,9 @@ export default function ContentPromotionBanner() {
             </Link>
           </div>
         </div>
-
         {/* Featured Content Cards */}
         <div className="mt-10 grid gap-6 md:grid-cols-3">
-          {featuredContent.map((item, index) => (
+          {featuredContent.map((item, index) = > (
             <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs uppercase tracking-wider text-blue-200 bg-blue-500/20 px-3 py-1 rounded-full">
@@ -79,8 +71,7 @@ export default function ContentPromotionBanner() {
                 {item.isNew && (
                   <span className="bg-red-500 text-white text-xs px-2 py-1 rounded-full font-medium">
                     NEW
-                  </span>
-                )}
+                  </span > )}
               </div>
               <h3 className="font-bold text-white mb-2 line-clamp-2">
                 {item.title}
@@ -94,7 +85,6 @@ export default function ContentPromotionBanner() {
             </div>
           ))}
         </div>
-
         {/* Stats */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6 pt-8 border-t border-white/20">
           <div className="text-center">
@@ -106,7 +96,6 @@ export default function ContentPromotionBanner() {
             <div className="text-sm text-white/80">Monthly Readers</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-white">15</div>
             <div className="text-sm text-white/80">Expert Authors</div>
           </div>
           <div className="text-center">

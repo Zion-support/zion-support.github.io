@@ -1,55 +1,51 @@
-import { Sparkles, ArrowRight, Brain, Atom, Layers, GraduationCap, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const September30NewContentMegaBanner = () => {
   const newArticles = [
-    {
+    {",
       title: "AI Neural Coding Breakthrough",
       description: "Programming at the speed of thought with 99.7% accuracy",
-      icon: Brain,
+      icon: Brain,",
       link: "/blog/ai-neural-coding-breakthrough-2025",
-      category: "Neural AI",
+      category: "Neural AI",",
       impact: "95% faster development"
     },
-    {
+    {",
       title: "AI Holographic Computing",
       description: "Immersive 3D data visualization with zero latency",
-      icon: Layers,
+      icon: Layers,",
       link: "/blog/ai-holographic-computing-2025",
-      category: "Spatial AI",
+      category: "Spatial AI",",
       impact: "10x faster insights"
     },
-    {
+    {",
       title: "AI Quantum Consciousness",
       description: "1M times faster reasoning with emergent creativity",
-      icon: Atom,
+      icon: Atom,",
       link: "/blog/ai-quantum-consciousness-2025",
-      category: "Quantum AI",
+      category: "Quantum AI",",
       impact: "1M× performance"
     },
-    {
+    {",
       title: "AI Molecular Manufacturing",
       description: "Atomic-precision production with zero waste",
-      icon: Zap,
+      icon: Zap,",
       link: "/blog/ai-molecular-manufacturing-2025",
-      category: "NanoTech",
+      category: "NanoTech",",
       impact: "100% recyclable"
     },
-    {
+    {",
       title: "AI Personalized Education",
       description: "10x better learning outcomes for every student",
-      icon: GraduationCap,
+      icon: GraduationCap,",
       link: "/blog/ai-personalized-education-revolution-2025",
-      category: "EdTech AI",
+      category: "EdTech AI",",
       impact: "97% mastery rate"
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl border border-purple-500/20 relative overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-blue-500/10 to-cyan-500/10 animate-pulse"></div>
-      
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
@@ -58,20 +54,17 @@ const September30NewContentMegaBanner = () => {
             <span className="text-lg font-bold">SEPTEMBER 30, 2025 • MEGA BREAKTHROUGH RELEASE</span>
             <Sparkles className="w-6 h-6 text-yellow-400 animate-pulse" />
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-300 to-purple-300 bg-clip-text text-transparent">
             🚀 5 Revolutionary AI Breakthroughs
           </h2>
-          
           <p className="text-xl text-cyan-100 max-w-4xl mx-auto">
             Neural coding that programs at thought speed • Holographic 3D visualization • Quantum consciousness AI • 
             Molecular manufacturing at atomic precision • Personalized education revolution
           </p>
         </div>
-
         {/* Articles Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
-          {newArticles.map((article, index) => (
+          {newArticles.map((article, index) = > (
             <Link
               key={index}
               to={article.link}
@@ -79,8 +72,7 @@ const September30NewContentMegaBanner = () => {
             >
               <div className="flex items-start gap-4">
                 <div className="bg-gradient-to-br from-cyan-500 to-blue-600 p-3 rounded-xl group-hover:scale-110 transition-transform">
-                  <article.icon className="w-6 h-6" />
-                </div>
+                  <article.icon className="w-6 h-6"</div>
                 <div className="flex-1">
                   <div className="text-xs font-semibold text-cyan-300 mb-2">{article.category}</div>
                   <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-300 transition-colors">
@@ -94,7 +86,6 @@ const September30NewContentMegaBanner = () => {
               </div>
             </Link>
           ))}
-
           {/* Additional promotional card */}
           <Link
             to="/blog"
@@ -109,12 +100,10 @@ const September30NewContentMegaBanner = () => {
             </div>
           </Link>
         </div>
-
         {/* Stats Banner */}
         <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 mb-8">
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6 text-center">
             <div>
-              <div className="text-3xl font-bold text-cyan-400 mb-1">5</div>
               <div className="text-sm text-blue-200">New Breakthroughs</div>
             </div>
             <div>
@@ -135,7 +124,6 @@ const September30NewContentMegaBanner = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
@@ -154,7 +142,6 @@ const September30NewContentMegaBanner = () => {
             Get Started Today
           </Link>
         </div>
-
         {/* Tags */}
         <div className="mt-8 flex flex-wrap gap-3 justify-center">
           <span className="bg-purple-500/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium border border-purple-400/30">
@@ -177,5 +164,4 @@ const September30NewContentMegaBanner = () => {
     </div>
   );
 };
-
 export default September30NewContentMegaBanner;

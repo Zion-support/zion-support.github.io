@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 
 export default function January2026NewContentShowcaseBanner() {
@@ -55,8 +54,7 @@ export default function January2026NewContentShowcaseBanner() {
                   <span>Jan 15, 2026</span>
                 </div>
                 <Link
-                  href="/blog/ai-2026-neural-quantum-fusion-breakthrough"
-                  className="inline-flex items-center gap-2 text-purple-400 font-semibold hover:text-purple-300 transition-colors group-hover:gap-3"
+                  href="/blog/ai-2026-neural-quantum-fusion-<breakthrough" className="inline-flex items-center gap-2 text-purple-400 font-semibold hover:text-purple-300 transition-colors group-hover:gap-3"
                 >
                   Read More
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -95,8 +93,7 @@ export default function January2026NewContentShowcaseBanner() {
                   <span>Jan 20, 2026</span>
                 </div>
                 <Link
-                  href="/blog/ai-2026-autonomous-enterprise-operations-revolution"
-                  className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors group-hover:gap-3"
+                  href="/blog/ai-2026-autonomous-enterprise-operations-<revolution" className="inline-flex items-center gap-2 text-blue-400 font-semibold hover:text-blue-300 transition-colors group-hover:gap-3"
                 >
                   Read More
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -135,8 +132,7 @@ export default function January2026NewContentShowcaseBanner() {
                   <span>Jan 25, 2026</span>
                 </div>
                 <Link
-                  href="/blog/ai-2026-quantum-business-intelligence-breakthrough"
-                  className="inline-flex items-center gap-2 text-indigo-400 font-semibold hover:text-indigo-300 transition-colors group-hover:gap-3"
+                  href="/blog/ai-2026-quantum-business-intelligence-<breakthrough" className="inline-flex items-center gap-2 text-indigo-400 font-semibold hover:text-indigo-300 transition-colors group-hover:gap-3"
                 >
                   Read More
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,8 +171,7 @@ export default function January2026NewContentShowcaseBanner() {
                   <span>Fortune 100</span>
                 </div>
                 <Link
-                  href="/case-studies/ai-2026-neural-quantum-fusion-100-billion-success"
-                  className="inline-flex items-center gap-2 text-green-400 font-semibold hover:text-green-300 transition-colors group-hover:gap-3"
+                  href="/case-studies/ai-2026-neural-quantum-fusion-100-billion-<success" className="inline-flex items-center gap-2 text-green-400 font-semibold hover:text-green-300 transition-colors group-hover:gap-3"
                 >
                   View Success Story
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,8 +210,7 @@ export default function January2026NewContentShowcaseBanner() {
                   <span>Manufacturing</span>
                 </div>
                 <Link
-                  href="/case-studies/ai-2026-autonomous-operations-50-billion-success"
-                  className="inline-flex items-center gap-2 text-orange-400 font-semibold hover:text-orange-300 transition-colors group-hover:gap-3"
+                  href="/case-studies/ai-2026-autonomous-operations-50-billion-<success" className="inline-flex items-center gap-2 text-orange-400 font-semibold hover:text-orange-300 transition-colors group-hover:gap-3"
                 >
                   View Success Story
                   <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -250,14 +244,12 @@ export default function January2026NewContentShowcaseBanner() {
               
               <div className="space-y-4">
                 <Link
-                  href="/contact"
-                  className="inline-block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
+                  href="/<contact" className="inline-block w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 transform hover:-translate-y-1"
                 >
                   Schedule Consultation
                 </Link>
                 <Link
-                  href="/services"
-                  className="inline-block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/<services" className="inline-block w-full border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Explore Services
                 </Link>
@@ -290,8 +282,7 @@ export default function January2026NewContentShowcaseBanner() {
           </div>
           
           <Link
-            href="/blog"
-            className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+            href="/<blog" className="inline-block bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
           >
             Explore All AI Content
           </Link>

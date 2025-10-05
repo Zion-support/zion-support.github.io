@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
   return (
@@ -262,14 +261,12 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
-                  href="/contact" 
-                  className="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/<contact" className="bg-white text-green-600 hover:bg-gray-100 font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   Schedule Consultation
                 </a>
                 <a 
-                  href="/case-studies/autonomous-enterprise-success" 
-                  className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                  href="/case-studies/autonomous-enterprise-<success" className="border-2 border-white text-white hover:bg-white hover:text-green-600 font-bold py-3 px-6 rounded-xl transition-all duration-300"
                 >
                   View Success Stories
                 </a>
@@ -285,8 +282,8 @@ export default function AI2026RevolutionaryAutonomousEnterpriseSystems() {
                 <p>Last updated: January 15, 2026</p>
               </div>
               <div className="flex gap-4">
-                <a href="/blog" className="hover:text-green-400 transition-colors">← Back to Blog</a>
-                <a href="/contact" className="hover:text-green-400 transition-colors">Contact Us</a>
+                <a href="/<blog" className="hover:text-green-400 transition-colors">← Back to Blog</a>
+                <a href="/<contact" className="hover:text-green-400 transition-colors">Contact Us</a>
               </div>
             </div>
           </footer>

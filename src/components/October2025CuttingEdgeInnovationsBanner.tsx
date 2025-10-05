@@ -1,6 +1,4 @@
-import { ArrowRight, Brain, Sparkles, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025CuttingEdgeInnovationsBanner = () => {
   return (
     <div className="bg-gradient-to-r from-indigo-900/40 via-purple-900/40 to-pink-900/40 border-b border-indigo-500/30 backdrop-blur-sm">
@@ -9,7 +7,6 @@ const October2025CuttingEdgeInnovationsBanner = () => {
           <div className="hidden sm:flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex-shrink-0 shadow-lg shadow-indigo-500/50">
             <Sparkles className="w-8 h-8 text-white" />
           </div>
-          
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 mb-2">
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg">
@@ -19,13 +16,11 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 🔥 BREAKTHROUGH INNOVATIONS
               </span>
             </div>
-            
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 via-purple-200 to-pink-200 mb-3 leading-tight">
               3 Game-Changing AI Breakthroughs — Neuro-Symbolic Intelligence, Spatial Computing Revolution & Agentic Supply Chain
             </h2>
-            
             <p className="text-base sm:text-lg text-indigo-100/90 mb-4 leading-relaxed">
-              ⚡ <strong className="text-indigo-200">BRAND NEW TODAY:</strong> Deploy neuro-symbolic AI achieving{" "}
+              ⚡ <strong className="text-indigo-200">BRAND NEW TODAY:</strong > Deploy neuro-symbolic AI achieving{" "}
               <span className="text-green-400 font-bold">99.7% reasoning accuracy</span> with{" "}
               <span className="text-green-400 font-bold">89% fewer hallucinations</span>, implement spatial computing platforms delivering{" "}
               <span className="text-green-400 font-bold">12x productivity gains</span> and{" "}
@@ -33,7 +28,6 @@ const October2025CuttingEdgeInnovationsBanner = () => {
               <span className="text-green-400 font-bold">99.1% forecast accuracy</span> and{" "}
               <span className="text-green-400 font-bold">82% cost reduction</span>. Revolutionary innovations transforming enterprises worldwide!
             </p>
-
             <div className="grid sm:grid-cols-3 gap-3 mb-4">
               <Link
                 to="/blog/ai-2025-oct-neuro-symbolic-ai-enterprise-breakthrough"
@@ -55,7 +49,6 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                   <ArrowRight className="w-4 h-4 text-blue-400 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
-
               <Link
                 to="/blog/ai-2025-oct-spatial-computing-enterprise-revolution"
                 className="group bg-gradient-to-br from-cyan-600/20 to-blue-600/20 hover:from-cyan-600/30 hover:to-blue-600/30 border border-cyan-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25"
@@ -76,7 +69,6 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                   <ArrowRight className="w-4 h-4 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                 </div>
               </Link>
-
               <Link
                 to="/blog/ai-2025-oct-agentic-procurement-supply-chain-revolution"
                 className="group bg-gradient-to-br from-orange-600/20 to-red-600/20 hover:from-orange-600/30 hover:to-red-600/30 border border-orange-400/30 rounded-lg p-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-500/25"
@@ -98,7 +90,6 @@ const October2025CuttingEdgeInnovationsBanner = () => {
                 </div>
               </Link>
             </div>
-
             <Link
               to="/blog"
               className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold rounded-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl hover:shadow-indigo-500/50"
@@ -112,5 +103,4 @@ const October2025CuttingEdgeInnovationsBanner = () => {
     </div>
   );
 };
-
 export default October2025CuttingEdgeInnovationsBanner;

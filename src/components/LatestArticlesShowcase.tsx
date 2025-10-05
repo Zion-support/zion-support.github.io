@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Clock } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
-
 const LatestArticlesShowcase: React.FC = () => {
   const latestArticles = newArticles2025.filter(a => a.featured).slice(0, 6);
-
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
@@ -17,7 +14,6 @@ const LatestArticlesShowcase: React.FC = () => {
             Explore cutting-edge insights on AI, automation, and emerging technologies
           </p>
         </div>
-        
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {latestArticles.map((article) => (
             <Link
@@ -36,15 +32,12 @@ const LatestArticlesShowcase: React.FC = () => {
                     </span>
                   )}
                 </div>
-                
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
                   {article.title}
                 </h3>
-                
                 <p className="text-gray-600 text-sm mb-4 line-clamp-3">
                   {article.description}
                 </p>
-                
                 <div className="flex items-center justify-between text-sm">
                   <div className="flex items-center text-gray-500">
                     <Clock className="w-4 h-4 mr-1" />
@@ -55,11 +48,10 @@ const LatestArticlesShowcase: React.FC = () => {
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </div>
-                
                 <div className="flex flex-wrap gap-2 mt-4">
                   {article.tags.slice(0, 3).map((tag) => (
                     <span
-                      key={tag}
+key={tag}
                       className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full"
                     >
                       {tag}
@@ -70,7 +62,6 @@ const LatestArticlesShowcase: React.FC = () => {
             </Link>
           ))}
         </div>
-        
         <div className="text-center mt-12">
           <Link
             to="/blog"
@@ -84,5 +75,4 @@ const LatestArticlesShowcase: React.FC = () => {
     </section>
   );
 };
-
 export default LatestArticlesShowcase;

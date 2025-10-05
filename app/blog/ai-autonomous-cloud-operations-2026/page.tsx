@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -44,19 +43,19 @@ export default function AIAutonomousCloudOps2026() {
         <div className="bg-gray-50 rounded-lg p-6 mb-8">
           <h2 className="text-xl font-bold text-gray-900 mb-4">Table of Contents</h2>
           <ul className="space-y-2">
-            <li><a href="#overview" className="text-blue-600 hover:text-blue-700">Overview of Autonomous Cloud Operations</a></li>
-            <li><a href="#architecture" className="text-blue-600 hover:text-blue-700">AI-Powered Architecture</a></li>
-            <li><a href="#self-healing" className="text-blue-600 hover:text-blue-700">Self-Healing Infrastructure</a></li>
-            <li><a href="#predictive-maintenance" className="text-blue-600 hover:text-blue-700">Predictive Maintenance</a></li>
-            <li><a href="#cost-optimization" className="text-blue-600 hover:text-blue-700">Cost Optimization</a></li>
-            <li><a href="#implementation" className="text-blue-600 hover:text-blue-700">Implementation Guide</a></li>
-            <li><a href="#case-studies" className="text-blue-600 hover:text-blue-700">Real-World Case Studies</a></li>
-            <li><a href="#future-trends" className="text-blue-600 hover:text-blue-700">Future Trends</a></li>
+            <li><a href="#<overview" className="text-blue-600 hover:text-blue-700">Overview of Autonomous Cloud Operations</a></li>
+            <li><a href="#<architecture" className="text-blue-600 hover:text-blue-700">AI-Powered Architecture</a></li>
+            <li><a href="#self-<healing" className="text-blue-600 hover:text-blue-700">Self-Healing Infrastructure</a></li>
+            <li><a href="#predictive-<maintenance" className="text-blue-600 hover:text-blue-700">Predictive Maintenance</a></li>
+            <li><a href="#cost-<optimization" className="text-blue-600 hover:text-blue-700">Cost Optimization</a></li>
+            <li><a href="#<implementation" className="text-blue-600 hover:text-blue-700">Implementation Guide</a></li>
+            <li><a href="#case-<studies" className="text-blue-600 hover:text-blue-700">Real-World Case Studies</a></li>
+            <li><a href="#future-<trends" className="text-blue-600 hover:text-blue-700">Future Trends</a></li>
           </ul>
         </div>
 
         {/* Overview Section */}
-        <section id="overview" className="mb-12">
+        <section id="<overview" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Overview of Autonomous Cloud Operations</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -84,7 +83,7 @@ export default function AIAutonomousCloudOps2026() {
         </section>
 
         {/* Architecture Section */}
-        <section id="architecture" className="mb-12">
+        <section id="<architecture" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">AI-Powered Architecture</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -137,7 +136,7 @@ export default function AIAutonomousCloudOps2026() {
         </section>
 
         {/* Self-Healing Section */}
-        <section id="self-healing" className="mb-12">
+        <section id="self-<healing" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Self-Healing Infrastructure</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -201,7 +200,7 @@ const autonomousConfig = {
         </section>
 
         {/* Predictive Maintenance Section */}
-        <section id="predictive-maintenance" className="mb-12">
+        <section id="predictive-<maintenance" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Predictive Maintenance</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -267,7 +266,7 @@ const autonomousConfig = {
         </section>
 
         {/* Cost Optimization Section */}
-        <section id="cost-optimization" className="mb-12">
+        <section id="cost-<optimization" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Cost Optimization</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -336,7 +335,7 @@ const autonomousConfig = {
         </section>
 
         {/* Implementation Guide */}
-        <section id="implementation" className="mb-12">
+        <section id="<implementation" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Implementation Guide</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -385,7 +384,7 @@ const autonomousConfig = {
         </section>
 
         {/* Case Studies */}
-        <section id="case-studies" className="mb-12">
+        <section id="case-<studies" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Real-World Case Studies</h2>
           <div className="prose prose-lg max-w-none">
             <div className="grid md:grid-cols-2 gap-6">
@@ -421,7 +420,7 @@ const autonomousConfig = {
         </section>
 
         {/* Future Trends */}
-        <section id="future-trends" className="mb-12">
+        <section id="future-<trends" className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Future Trends</h2>
           <div className="prose prose-lg max-w-none">
             <p className="text-gray-700 mb-6">
@@ -465,14 +464,12 @@ const autonomousConfig = {
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="/services/ai-autonomous-operations"
-              className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              href="/services/ai-autonomous-<operations" className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
             >
               Explore Our Services
             </a>
             <a
-              href="/contact"
-              className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
+              href="/<contact" className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
             >
               Get Free Consultation
             </a>
@@ -483,7 +480,7 @@ const autonomousConfig = {
         <section className="mb-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Related Articles</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <a href="/blog/ai-platform-architecture-2026" className="group">
+            <a href="/blog/ai-platform-architecture-<2026" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI Platform Architecture 2026: Enterprise-Scale Infrastructure
@@ -494,7 +491,7 @@ const autonomousConfig = {
               </div>
             </a>
             
-            <a href="/blog/ai-finops-advanced-2026" className="group">
+            <a href="/blog/ai-finops-advanced-<2026" className="group">
               <div className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow">
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 mb-2">
                   AI FinOps Advanced 2026: Complete Financial Operations Automation

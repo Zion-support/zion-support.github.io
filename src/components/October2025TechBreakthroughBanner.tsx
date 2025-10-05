@@ -1,4 +1,11 @@
-import { ArrowRight, Lock, Shield, Zap, TrendingUp, Target, Award, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const October2025TechBreakthroughBanner = () => {
@@ -6,21 +13,21 @@ const October2025TechBreakthroughBanner = () => {
     <div className="relative bg-gradient-to-br from-cyan-900 via-blue-900 to-indigo-900 overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(120,219,255,0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(79,209,197,0.3),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(99,102,241,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 50% 50%,rgba(120,219,255,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 80% 20%,rgba(79,209,197,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle at 20% 80%,rgba(99,102,241,0.3),transparent_50%)]"></div>
       </div>
 
       {/* Animated Grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,#000,transparent)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse 80% 50% at 50% 50%,#000,transparent)]"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Breaking News Badge */}
         <div className="flex items-center justify-center gap-3 mb-8">
           <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold text-sm animate-pulse shadow-lg shadow-cyan-500/50">
-            <Sparkles className="w-5 h-5" />
+            <<<Sparkles className="w-5 h-5" />
             <span>BREAKTHROUGH OCTOBER 1, 2025</span>
-            <Sparkles className="w-5 h-5" />
+            <<<Sparkles className="w-5 h-5" />
           </div>
         </div>
 
@@ -69,7 +76,7 @@ const October2025TechBreakthroughBanner = () => {
           <div className="group bg-gradient-to-br from-cyan-900/80 to-cyan-950/80 backdrop-blur-sm rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 hover:scale-105">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 rounded-xl bg-cyan-500/20 group-hover:bg-cyan-500/30 transition-colors">
-                <Lock className="w-8 h-8 text-cyan-300" />
+                <<<Lock className="w-8 h-8 text-cyan-300" />
               </div>
               <div className="flex-1">
                 <div className="text-xs font-bold text-cyan-300 uppercase tracking-wide mb-1">Quantum Security</div>
@@ -81,28 +88,27 @@ const October2025TechBreakthroughBanner = () => {
             </h3>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Shield className="w-4 h-4 text-cyan-400" />
+                <<<Shield className="w-4 h-4 text-cyan-400" />
                 <span>99.97% Quantum Attack Protection</span>
               </div>
               <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Zap className="w-4 h-4 text-cyan-400" />
+                <<<Zap className="w-4 h-4 text-cyan-400" />
                 <span>67% Cost Reduction vs Legacy</span>
               </div>
               <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Target className="w-4 h-4 text-cyan-400" />
+                <<<Target className="w-4 h-4 text-cyan-400" />
                 <span>$78.3B Digital Assets Protected</span>
               </div>
               <div className="flex items-center gap-2 text-cyan-100 text-sm">
-                <Award className="w-4 h-4 text-cyan-400" />
+                <<<Award className="w-4 h-4 text-cyan-400" />
                 <span>845x ROI • 10-Year Future-Proofing</span>
               </div>
             </div>
             <Link 
-              to="/blog/ai-2025-oct-01-quantum-safe-cryptography-enterprise-systems"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 group-hover:scale-105"
+              to="/blog/ai-2025-oct-01-quantum-safe-cryptography-enterprise-<systems" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-cyan-500/50 group-hover:scale-105"
             >
               Read Full Analysis
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <<<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -110,7 +116,7 @@ const October2025TechBreakthroughBanner = () => {
           <div className="group bg-gradient-to-br from-blue-900/80 to-blue-950/80 backdrop-blur-sm rounded-2xl p-6 border border-blue-400/30 hover:border-blue-400 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:scale-105">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 rounded-xl bg-blue-500/20 group-hover:bg-blue-500/30 transition-colors">
-                <TrendingUp className="w-8 h-8 text-blue-300" />
+                <<<TrendingUp className="w-8 h-8 text-blue-300" />
               </div>
               <div className="flex-1">
                 <div className="text-xs font-bold text-blue-300 uppercase tracking-wide mb-1">Risk Intelligence</div>
@@ -122,28 +128,27 @@ const October2025TechBreakthroughBanner = () => {
             </h3>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Shield className="w-4 h-4 text-blue-400" />
+                <<<Shield className="w-4 h-4 text-blue-400" />
                 <span>98.9% Risk Prediction Accuracy</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Zap className="w-4 h-4 text-blue-400" />
+                <<<Zap className="w-4 h-4 text-blue-400" />
                 <span>84% Cost Reduction in Operations</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Target className="w-4 h-4 text-blue-400" />
+                <<<Target className="w-4 h-4 text-blue-400" />
                 <span>$127B Losses Prevented Annually</span>
               </div>
               <div className="flex items-center gap-2 text-blue-100 text-sm">
-                <Award className="w-4 h-4 text-blue-400" />
+                <<<Award className="w-4 h-4 text-blue-400" />
                 <span>2,836% ROI • 24/7 Monitoring</span>
               </div>
             </div>
             <Link 
-              to="/blog/ai-2025-oct-01-autonomous-risk-management-platform-revolution"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group-hover:scale-105"
+              to="/blog/ai-2025-oct-01-autonomous-risk-management-platform-<revolution" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-400 hover:to-indigo-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-blue-500/50 group-hover:scale-105"
             >
               Explore Platform
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <<<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
@@ -151,7 +156,7 @@ const October2025TechBreakthroughBanner = () => {
           <div className="group bg-gradient-to-br from-indigo-900/80 to-indigo-950/80 backdrop-blur-sm rounded-2xl p-6 border border-indigo-400/30 hover:border-indigo-400 transition-all duration-300 hover:shadow-2xl hover:shadow-indigo-500/30 hover:scale-105">
             <div className="flex items-center gap-3 mb-4">
               <div className="p-3 rounded-xl bg-indigo-500/20 group-hover:bg-indigo-500/30 transition-colors">
-                <Target className="w-8 h-8 text-indigo-300" />
+                <<<Target className="w-8 h-8 text-indigo-300" />
               </div>
               <div className="flex-1">
                 <div className="text-xs font-bold text-indigo-300 uppercase tracking-wide mb-1">Digital Intelligence</div>
@@ -163,28 +168,27 @@ const October2025TechBreakthroughBanner = () => {
             </h3>
             <div className="space-y-2 mb-4">
               <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Shield className="w-4 h-4 text-indigo-400" />
+                <<<Shield className="w-4 h-4 text-indigo-400" />
                 <span>99.4% Physical-Digital Accuracy</span>
               </div>
               <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Zap className="w-4 h-4 text-indigo-400" />
+                <<<Zap className="w-4 h-4 text-indigo-400" />
                 <span>87% Downtime Reduction</span>
               </div>
               <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Target className="w-4 h-4 text-indigo-400" />
+                <<<Target className="w-4 h-4 text-indigo-400" />
                 <span>$23.7B Annual Value Creation</span>
               </div>
               <div className="flex items-center gap-2 text-indigo-100 text-sm">
-                <Award className="w-4 h-4 text-indigo-400" />
+                <<<Award className="w-4 h-4 text-indigo-400" />
                 <span>5,575% ROI • 94% Failure Prediction</span>
               </div>
             </div>
             <Link 
-              to="/blog/ai-2025-oct-01-next-gen-digital-twins-enterprise-transformation"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-400 hover:to-purple-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 group-hover:scale-105"
+              to="/blog/ai-2025-oct-01-next-gen-digital-twins-enterprise-<transformation" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-400 hover:to-purple-400 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 group-hover:scale-105"
             >
               Discover Technology
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <<<ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -251,19 +255,17 @@ const October2025TechBreakthroughBanner = () => {
         <div className="text-center">
           <div className="inline-flex flex-col sm:flex-row gap-4 items-center justify-center">
             <Link 
-              to="/blog"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover:from-cyan-400 hover:via-blue-400 hover:to-indigo-400 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 text-lg"
+              to="/<blog" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 hover:from-cyan-400 hover:via-blue-400 hover:to-indigo-400 text-white font-bold rounded-xl transition-all duration-300 shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 text-lg"
             >
-              <Sparkles className="w-6 h-6" />
+              <<<Sparkles className="w-6 h-6" />
               Read All 3 Breakthrough Articles
-              <ArrowRight className="w-6 h-6" />
+              <<<ArrowRight className="w-6 h-6" />
             </Link>
             <Link 
-              to="/contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/60 hover:scale-105 text-lg"
+              to="/<contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white font-bold rounded-xl transition-all duration-300 border-2 border-white/30 hover:border-white/60 hover:scale-105 text-lg"
             >
               Get Free Assessment
-              <ArrowRight className="w-6 h-6" />
+              <<<ArrowRight className="w-6 h-6" />
             </Link>
           </div>
           <p className="text-cyan-200 text-sm mt-4">

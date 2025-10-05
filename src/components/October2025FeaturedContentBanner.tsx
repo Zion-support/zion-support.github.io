@@ -1,14 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, ArrowRight, TrendingUp, Package, Brain } from 'lucide-react';
-
 const October2025FeaturedContentBanner = () => {
   const featuredContent = [
+    {
+      title: "Enterprise AI Value Realization",
+      description: "90 days to shipped outcomes: scorecards, evaluator gates, tiered routing",
+      link: "/blog/enterprise-ai-value-realization-2025-10-08",
+      icon: "Brain",
+      gradient: "from-indigo-600 to-blue-600",
+      bgGradient: "from-indigo-900/40 to-blue-900/40",
+      borderColor: "border-indigo-500/30",
+      stats: [
+        { value: "90d", label: "To Outcomes" },
+        { value: "KPI", label: "Linked Gates" },
+        { value: "$$", label: "Predictable Cost" }
+      ]
+    },
     {
       title: "Enterprise Neural Orchestration Platform",
       description: "89% faster AI deployment, 94% cost reduction, $12.4M annual savings",
       link: "/blog/ai-2025-october-enterprise-neural-orchestration-platform",
-      icon: Brain,
+      icon: "Brain",
       gradient: "from-blue-600 to-purple-600",
       bgGradient: "from-blue-900/40 to-purple-900/40",
       borderColor: "border-blue-500/30",
@@ -22,7 +34,7 @@ const October2025FeaturedContentBanner = () => {
       title: "Cognitive Supply Chain Revolution",
       description: "76% forecast accuracy, 68% inventory cost reduction, $18.7M value",
       link: "/blog/ai-2025-october-cognitive-supply-chain-revolution",
-      icon: Package,
+      icon: "Package",
       gradient: "from-emerald-600 to-teal-600",
       bgGradient: "from-emerald-900/40 to-teal-900/40",
       borderColor: "border-emerald-500/30",
@@ -33,35 +45,34 @@ const October2025FeaturedContentBanner = () => {
       ]
     },
     {
-      title: "Autonomous FinOps Playbook",
-      description: "Policy guardrails, tiered caching, 30–50% cost reduction",
-      link: "/blog/autonomous-finops-playbook-2025-oct",
-      icon: TrendingUp,
+      title: "AI Reliability Blueprints 2027",
+      description: "Evaluators, action budgets, instant rollback — ship safely",
+      link: "/blog/ai-reliability-blueprints-2027-2025-10-02",
+      icon: "TrendingUp",
       gradient: "from-cyan-600 to-blue-600",
       bgGradient: "from-cyan-900/40 to-blue-900/40",
       borderColor: "border-cyan-500/30",
       stats: [
-        { value: "30–50%", label: "Spend Reduction" },
-        { value: "<200ms", label: "Cache Hit P95" },
-        { value: "Safe", label: "Rollback Ready" }
+        { value: "KPI", label: "Linked Evals" },
+        { value: "1‑click", label: "Rollback" },
+        { value: "24/7", label: "Safe Ops" }
       ]
     },
     {
-      title: "Production Agents Blueprint",
-      description: "Evals, rollbacks, approvals — safe autonomy that scales",
-      link: "/blog/production-agents-evals-rollbacks-approval-gates-2025-oct",
-      icon: Sparkles,
+      title: "Edge Inference Playbook 2027",
+      description: "Sub‑100ms globally with warm pools and tiered caches",
+      link: "/blog/edge-inference-playbook-2027-2025-10-02",
+      icon: "Sparkles",
       gradient: "from-purple-600 to-pink-600",
       bgGradient: "from-purple-900/40 to-pink-900/40",
       borderColor: "border-purple-500/30",
       stats: [
-        { value: "80%", label: "Task Completion" },
-        { value: "24/7", label: "Safe Ops" },
-        { value: "Eval", label: "Gated Releases" }
+        { value: "<100ms", label: "P95 Latency" },
+        { value: "SLA", label: "Aware Routing" },
+        { value: "$", label: "Predictable Spend" }
       ]
     }
   ];
-
   return (
     <div className="bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950 py-16 px-4">
       <div className="container mx-auto max-w-7xl">
@@ -79,7 +90,6 @@ const October2025FeaturedContentBanner = () => {
             Discover breakthrough AI platforms delivering millions in value to enterprise organizations
           </p>
         </div>
-
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {featuredContent.map((content, index) => {
@@ -107,7 +117,6 @@ const October2025FeaturedContentBanner = () => {
                       </p>
                     </div>
                   </div>
-
                   {/* Stats */}
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     {content.stats.map((stat, idx) => (
@@ -119,7 +128,6 @@ const October2025FeaturedContentBanner = () => {
                       </div>
                     ))}
                   </div>
-
                   {/* CTA */}
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-gray-400">Published October 1, 2025</span>
@@ -129,14 +137,12 @@ const October2025FeaturedContentBanner = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Hover Effect Overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-r ${content.gradient} opacity-0 group-hover:opacity-10 transition-opacity`}></div>
               </Link>
             );
           })}
         </div>
-
         {/* Bottom CTA */}
         <div className="text-center">
           <div className="inline-flex items-center space-x-4">
@@ -156,7 +162,6 @@ const October2025FeaturedContentBanner = () => {
             </Link>
           </div>
         </div>
-
         {/* Value Proposition */}
         <div className="mt-12 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-500/20 rounded-xl p-8">
           <div className="grid md:grid-cols-4 gap-6 text-center">
@@ -182,5 +187,4 @@ const October2025FeaturedContentBanner = () => {
     </div>
   );
 };
-
 export default October2025FeaturedContentBanner;

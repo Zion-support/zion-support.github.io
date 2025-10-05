@@ -1,18 +1,13 @@
-import { ArrowRight, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025UltimateBreakthroughBanner = () => {
   return (
-    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden border-b border-white/10">
-      {/* Animated Background */}
+    <div className="relative bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 overflow-hidden border-b border-white/10" > {/* Animated Background */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,.05)_50%,transparent_75%,transparent_100%)] bg-[length:250px_250px] animate-shimmer"></div>
       </div>
-      
       {/* Glowing Orbs */}
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-700"></div>
-      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {/* Header Badge */}
         <div className="flex justify-center mb-6">
@@ -24,18 +19,15 @@ const October2025UltimateBreakthroughBanner = () => {
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
         </div>
-
         {/* Main Headline */}
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent leading-tight">
           Ultimate AI Innovation Suite:<br />
           $945M+ Combined Value Creation
         </h2>
-
         {/* Subtitle */}
         <p className="text-center text-lg sm:text-xl text-blue-100 mb-10 max-w-4xl mx-auto">
           💎 Deploy 5 game-changing AI technologies transforming enterprises worldwide: Agentic Mesh Networks, Quantum-AI Optimization, Cognitive Digital Twins, Neuromorphic Edge AI, and Autonomous Security Orchestration — delivering unprecedented performance, efficiency, and competitive advantage!
         </p>
-
         {/* Feature Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
           {/* Feature 1 */}
@@ -60,7 +52,6 @@ const October2025UltimateBreakthroughBanner = () => {
               Explore Technology <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Feature 2 */}
           <Link 
             to="/blog/quantum-ai-optimization-breakthrough-2025-oct"
@@ -83,7 +74,6 @@ const October2025UltimateBreakthroughBanner = () => {
               Discover Innovation <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Feature 3 */}
           <Link 
             to="/blog/cognitive-digital-twins-2025-oct"
@@ -106,7 +96,6 @@ const October2025UltimateBreakthroughBanner = () => {
               Learn More <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Feature 4 */}
           <Link 
             to="/blog/neuromorphic-edge-ai-2025-oct"
@@ -129,7 +118,6 @@ const October2025UltimateBreakthroughBanner = () => {
               Read Guide <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Feature 5 */}
           <Link 
             to="/blog/autonomous-security-orchestration-2025-oct"
@@ -152,7 +140,6 @@ const October2025UltimateBreakthroughBanner = () => {
               View Solution <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* CTA Card */}
           <div className="group relative bg-gradient-to-br from-yellow-500/10 to-orange-500/10 backdrop-blur-sm border-2 border-yellow-400/50 rounded-xl p-6 hover:border-yellow-400 hover:shadow-lg hover:shadow-yellow-500/20 transition-all duration-300">
             <div className="flex items-start gap-3 mb-3">
@@ -176,7 +163,6 @@ const October2025UltimateBreakthroughBanner = () => {
             </Link>
           </div>
         </div>
-
         {/* Bottom Stats */}
         <div className="flex flex-wrap justify-center gap-8 pt-8 border-t border-white/10">
           <div className="text-center">
@@ -200,5 +186,4 @@ const October2025UltimateBreakthroughBanner = () => {
     </div>
   );
 };
-
 export default October2025UltimateBreakthroughBanner;

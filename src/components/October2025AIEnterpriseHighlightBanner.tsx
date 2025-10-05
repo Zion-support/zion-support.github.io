@@ -16,8 +16,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
 
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 leading-tight">
           Enterprise AI Transformation
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+          <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
             Implementation Guides
           </span>
         </h2>
@@ -31,7 +30,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
             <div className="flex items-center justify-between mb-4">
               <span className="text-3xl">🛡️</span>
-              <span className="px-3 py-1 bg-blue-500/30 rounded-lg text-xs font-bold">GOVERNANCE</span>
+              
             </div>
             <h3 className="text-xl font-bold mb-3">
               Enterprise AI Governance
@@ -51,8 +50,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               </li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-enterprise-ai-governance-framework"
-              className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all"
+              to="/blog/ai-2025-october-enterprise-ai-governance-<framework" className="block w-full text-center bg-gradient-to-r from-blue-500 to-cyan-500 px-6 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all"
             >
               Read Framework →
             </Link>
@@ -61,7 +59,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
           <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-white/30 transition-all">
             <div className="flex items-center justify-between mb-4">
               <span className="text-3xl">🧠</span>
-              <span className="px-3 py-1 bg-purple-500/30 rounded-lg text-xs font-bold">MULTIMODAL</span>
+              
             </div>
             <h3 className="text-xl font-bold mb-3">
               Multimodal AI Systems
@@ -81,8 +79,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               </li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-multimodal-ai-enterprise-deployment"
-              className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
+              to="/blog/ai-2025-october-multimodal-ai-enterprise-<deployment" className="block w-full text-center bg-gradient-to-r from-purple-500 to-pink-500 px-6 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all"
             >
               Explore Guide →
             </Link>
@@ -111,8 +108,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
               </li>
             </ul>
             <Link
-              to="/blog/ai-2025-october-edge-ai-deployment-revolution"
-              className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all"
+              to="/blog/ai-2025-october-edge-ai-deployment-<revolution" className="block w-full text-center bg-gradient-to-r from-green-500 to-teal-500 px-6 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-teal-600 transition-all"
             >
               Discover More →
             </Link>
@@ -133,13 +129,12 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
             <div className="h-10 w-px bg-white/20"></div>
             <div>
               <div className="text-2xl font-bold">50K+</div>
-              <div className="text-sm text-white/70">Professionals</div>
+              
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 };
 
 export default October2025AIEnterpriseHighlightBanner;

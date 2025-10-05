@@ -1,16 +1,13 @@
 import React from 'react';
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Brain, Database, Sparkles } from 'lucide-react';
-
 const October2025NewContentBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-16 px-6 rounded-3xl mb-12">
-      {/* Animated background elements */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 py-16 px-6 rounded-3xl mb-12" > {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
-
       <div className="relative z-10 max-w-6xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
@@ -19,17 +16,14 @@ const October2025NewContentBanner = () => {
             <span className="text-purple-300 font-semibold text-sm uppercase tracking-wider">Fresh Insights • October 2025</span>
             <Sparkles className="w-5 h-5 text-yellow-400 animate-pulse" />
           </div>
-          
           <h2 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-purple-300 via-blue-300 to-cyan-300 bg-clip-text text-transparent">
             Latest AI Breakthroughs & Enterprise Strategies
           </h2>
-          
           <p className="text-xl text-blue-200 max-w-3xl mx-auto">
             Discover cutting-edge insights on multimodal AI agents, zero-trust security architectures, 
             and production-scale RAG pipelines from industry leaders
           </p>
         </div>
-
         {/* Featured Articles Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-10">
           {/* Article 1 - Multimodal AI Agents */}
@@ -45,16 +39,13 @@ const October2025NewContentBanner = () => {
                 <span className="text-xs text-purple-300 font-semibold uppercase tracking-wide">AI Automation</span>
               </div>
             </div>
-            
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-200 transition-colors">
               Multimodal AI Agents: The Next Evolution in Enterprise Automation
             </h3>
-            
             <p className="text-blue-200/80 text-sm mb-4 line-clamp-3">
               Learn how multimodal AI systems deliver 10x productivity gains by seamlessly processing 
               text, images, audio, and video to automate complex workflows.
             </p>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-purple-300 text-sm">
                 <span>16 min read</span>
@@ -64,7 +55,6 @@ const October2025NewContentBanner = () => {
               <ArrowRight className="w-5 h-5 text-purple-300 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Article 2 - AI Security Mesh */}
           <Link 
             to="/blog/ai-2025-october-security-mesh-zero-trust-ai"
@@ -75,19 +65,15 @@ const October2025NewContentBanner = () => {
                 <Shield className="w-8 h-8 text-red-300" />
               </div>
               <div className="flex-1">
-                <span className="text-xs text-red-300 font-semibold uppercase tracking-wide">Security</span>
               </div>
             </div>
-            
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-200 transition-colors">
               AI Security Mesh Architecture: Zero Trust for AI Systems 2025
             </h3>
-            
             <p className="text-orange-200/80 text-sm mb-4 line-clamp-3">
               Discover how enterprises achieve 98% threat detection rates with distributed security 
               architectures and zero-trust principles for AI deployments.
             </p>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-red-300 text-sm">
                 <span>20 min read</span>
@@ -97,7 +83,6 @@ const October2025NewContentBanner = () => {
               <ArrowRight className="w-5 h-5 text-red-300 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Article 3 - RAG 2.0 */}
           <Link 
             to="/blog/ai-2025-october-rag-2-production-scale-pipelines"
@@ -111,16 +96,13 @@ const October2025NewContentBanner = () => {
                 <span className="text-xs text-blue-300 font-semibold uppercase tracking-wide">RAG Pipelines</span>
               </div>
             </div>
-            
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-200 transition-colors">
               RAG 2.0: Production-Scale Retrieval-Augmented Generation Pipelines
             </h3>
-            
             <p className="text-cyan-200/80 text-sm mb-4 line-clamp-3">
               Master advanced RAG architectures with 94% accuracy, sub-200ms latency, and seamless 
               scaling to 100M+ documents using hybrid search and continuous evaluation.
             </p>
-            
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2 text-blue-300 text-sm">
                 <span>22 min read</span>
@@ -131,7 +113,6 @@ const October2025NewContentBanner = () => {
             </div>
           </Link>
         </div>
-
         {/* CTA Section */}
         <div className="text-center mt-10">
           <Link 
@@ -141,12 +122,10 @@ const October2025NewContentBanner = () => {
             <span>Explore All Insights</span>
             <ArrowRight className="w-6 h-6" />
           </Link>
-          
           <p className="text-blue-200/70 text-sm mt-4">
             Join 50,000+ technology leaders staying ahead of the AI curve
           </p>
         </div>
-
         {/* Stats Bar */}
         <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="text-center">
@@ -178,5 +157,4 @@ const October2025NewContentBanner = () => {
     </div>
   );
 };
-
 export default October2025NewContentBanner;

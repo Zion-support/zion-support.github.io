@@ -216,6 +216,60 @@ export const newServices2026: NewService[] = [
   }
 ];
 
+// October 3, 2025 – New services to advertise prominently on homepage
+newServices2026.unshift(
+  {
+    id: "ai-guarded-agent-operations",
+    name: "AI Guarded Agent Operations",
+    title: "🛡️ AI Guarded Agent Ops: Safe Autonomy at Scale",
+    description: "Deploy agentic systems with budgeted tools, HIL approvals, live evals, and instant rollback. Ship 10x faster with zero incidents.",
+    benefits: [
+      "10x faster feature delivery",
+      "Zero Sev‑1 incidents",
+      "Budgeted, auditable actions",
+      "Automated rollback on regressions"
+    ],
+    features: [
+      "Per‑tool and per‑task budgets",
+      "Risk‑tiered approval workflows",
+      "Live policy tests on each PR",
+      "Action journals and tamper‑proof audit logs",
+      "One‑click rollback"
+    ],
+    category: "AI Operations",
+    pricing: "Custom — starts at $7,500/month",
+    link: "/services/ai-guarded-agent-operations",
+    icon: "🛡️",
+    featured: true,
+    launchDate: "2025-10-03"
+  },
+  {
+    id: "risk-controlled-autonomy-implementation",
+    name: "Risk‑Controlled Autonomy Implementation",
+    title: "🤖 Risk‑Controlled Autonomy: Budgets, Approvals, Live Evals",
+    description: "End‑to‑end implementation of safe autonomy: budgets, approvals, live evals, and rollback integrated into your SDLC and production ops.",
+    benefits: [
+      "92% reduction in risky changes reaching prod",
+      "78% cycle time reduction",
+      "Measurable reliability with eval KPIs",
+      "Compliance‑ready audit trails"
+    ],
+    features: [
+      "Budget enforcer and policy engine",
+      "Approval SLAs and escalation",
+      "PR policy tests and shadow runs",
+      "Progressive delivery with canaries",
+      "Automated rollback triggers"
+    ],
+    category: "Professional Services",
+    pricing: "Engagements from $65,000",
+    link: "/services/risk-controlled-autonomy-implementation",
+    icon: "🤖",
+    featured: true,
+    launchDate: "2025-10-03"
+  }
+);
+
 // Sept 30, 2025 – New service to advertise on the homepage
 newServices2026.push(
   {

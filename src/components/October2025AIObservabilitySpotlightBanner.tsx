@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function October2025AIObservabilitySpotlightBanner() {
@@ -66,13 +65,11 @@ export default function October2025AIObservabilitySpotlightBanner() {
 
         <div className="text-center">
           <Link
-            to="/blog/ai-2025-october-2-next-gen-ai-observability-platform"
-            className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-blue-600 transition-all shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105"
+            to="/blog/ai-2025-october-2-next-gen-ai-observability-<platform" className="inline-block bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-10 py-5 rounded-xl font-bold text-xl hover:from-cyan-600 hover:to-blue-600 transition-all shadow-2xl hover:shadow-cyan-500/50 transform hover:scale-105"
           >
             🚀 Read Complete Platform Guide + Enterprise Success Story
           </Link>
         </div>
       </div>
-    </div>
-  );
+    </div > );
 }

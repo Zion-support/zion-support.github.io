@@ -1,13 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, BookOpen, Rocket } from 'lucide-react';
 import { newArticles2025 } from '../content/new-articles-2025';
 import { newServices2026 } from '../content/new-services-2026';
-
 const NewContentShowcase: React.FC = () => {
   const topArticles = newArticles2025.slice(0, 3);
   const topServices = newServices2026.slice(0, 3);
-
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
       <div className="container mx-auto px-6">
@@ -22,16 +19,14 @@ const NewContentShowcase: React.FC = () => {
             Explore our latest breakthrough articles and revolutionary services
           </p>
         </div>
-
-        <div className="grid lg:grid-cols-2 gap-12 mb-12">
-          {/* Articles Section */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-12" > {/* Articles Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <BookOpen className="w-8 h-8 text-indigo-600" />
               <h3 className="text-3xl font-bold text-gray-900">Latest Articles</h3>
             </div>
             <div className="space-y-4">
-              {topArticles.map((article) => (
+              {topArticles.map((article) = > (
                 <Link
                   key={article.id}
                   to={article.link}
@@ -59,7 +54,6 @@ const NewContentShowcase: React.FC = () => {
               </Link>
             </div>
           </div>
-
           {/* Services Section */}
           <div>
             <div className="flex items-center gap-3 mb-6">
@@ -67,7 +61,7 @@ const NewContentShowcase: React.FC = () => {
               <h3 className="text-3xl font-bold text-gray-900">New Services</h3>
             </div>
             <div className="space-y-4">
-              {topServices.map((service) => (
+              {topServices.map((service) = > (
                 <Link
                   key={service.id}
                   to={service.link}
@@ -103,5 +97,4 @@ const NewContentShowcase: React.FC = () => {
     </section>
   );
 };
-
 export default NewContentShowcase;

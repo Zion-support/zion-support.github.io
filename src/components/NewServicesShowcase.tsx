@@ -72,16 +72,13 @@ const NewServicesShowcase: React.FC = () => {
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {newServices.map((service) => (
-            <Link key={service.id} to={`/services/${service.id}`} className="group block">
-              <div className={`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>
+          {newServices.map((service) = > (
+            <Link key={service.id} to={`/services/${service.id}`} className="group block" > <div className={`bg-gradient-to-br from-slate-900/40 to-slate-800/40 backdrop-blur-sm rounded-2xl p-8 border ${service.borderColor} ${service.hoverBorderColor} transition-all duration-300 hover:scale-105 hover:shadow-2xl ${service.shadowColor}`}>
                 {/* Service Header */}
-                <div className="flex items-center gap-4 mb-6">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center`}>
+                <div className="flex items-center gap-4 mb-6" > <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-xl flex items-center justify-center`}>
                     <span className="text-2xl">{service.icon}</span>
                   </div>
-                  <div className="flex-1">
-                    <div className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full text-sm font-bold mb-2`}>
+                  <div className="flex-1" > <div className={`bg-gradient-to-r ${service.gradient} text-white px-4 py-2 rounded-full text-sm font-bold mb-2`}>
                       {service.category}
                     </div>
                     <div className="text-2xl font-bold text-white">
@@ -104,9 +101,8 @@ const NewServicesShowcase: React.FC = () => {
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3">Key Features:</h4>
                   <ul className="space-y-2">
-                    {service.features.map((feature, index) => (
-                      <li key={index} className="flex items-center gap-2 text-gray-300">
-                        <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`}></div>
+                    {service.features.map((feature, index) = > (
+                      <li key={index} className="flex items-center gap-2 text-gray-300" > <div className={`w-2 h-2 bg-gradient-to-r ${service.gradient} rounded-full`}></div>
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -115,8 +111,7 @@ const NewServicesShowcase: React.FC = () => {
 
                 {/* CTA */}
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-400">Learn More</div>
-                  <div className={`text-purple-400 font-semibold group-hover:text-purple-300 transition-colors`}>
+                  <div className="text-sm text-gray-400">Learn More</div > <div className={`text-purple-400 font-semibold group-hover:text-purple-300 transition-colors`}>
                     Explore Service →
                   </div>
                 </div>
@@ -150,7 +145,7 @@ const NewServicesShowcase: React.FC = () => {
               <div className="text-gray-300 text-sm">Value Creation</div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-extrabold text-orange-400 mb-2">Zero</div>
+              
               <div className="text-gray-300 text-sm">Human Intervention</div>
             </div>
           </div>
@@ -169,20 +164,17 @@ const NewServicesShowcase: React.FC = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              to="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Schedule Consultation
             </Link>
             <Link 
-              to="/services" 
-              className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
+              to="/<services" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 transform hover:-translate-y-1"
             >
               View All Services
             </Link>
             <Link 
-              to="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              to="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               See Success Stories
             </Link>

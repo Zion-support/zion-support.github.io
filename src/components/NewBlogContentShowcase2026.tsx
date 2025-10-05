@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Brain, Clock, Users, Award, Star, Eye } from 'lucide-react';
-
 const NewBlogContentShowcase2026: React.FC = () => {
   const blogPosts = [
     {
@@ -112,14 +110,12 @@ const NewBlogContentShowcase2026: React.FC = () => {
       tags: ['AI Ethics', 'Governance', 'Responsible AI', 'Compliance']
     }
   ];
-
   const blogStats = [
     { value: '500+', label: 'Published Articles', icon: <Award className="w-6 h-6" /> },
     { value: '2M+', label: 'Monthly Readers', icon: <Users className="w-6 h-6" /> },
     { value: '4.8', label: 'Average Rating', icon: <Star className="w-6 h-6" /> },
     { value: '150+', label: 'Expert Authors', icon: <Brain className="w-6 h-6" /> }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -128,7 +124,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-cyan-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -139,16 +134,13 @@ const NewBlogContentShowcase2026: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-purple-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-fade-in">
             New Blog Content Showcase 2026
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover our latest insights, breakthrough research, and expert analysis on the most important topics in AI and technology. 
             Stay ahead of the curve with content from industry-leading experts.
           </p>
-
           {/* Blog Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {blogStats.map((stat, index) => (
@@ -166,18 +158,16 @@ const NewBlogContentShowcase2026: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Blog Posts */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {blogPosts.map((post, index) => (
-            <div 
-              key={post.id}
+            <div
+key={post.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Badge & Featured */}
                 <div className="flex items-start justify-between mb-6">
@@ -196,24 +186,20 @@ const NewBlogContentShowcase2026: React.FC = () => {
                     </div>
                   </div>
                 </div>
-
                 {/* Category */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-blue-400 text-xs font-semibold border border-blue-500/30">
                     {post.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300 leading-tight">
                   {post.title}
                 </h3>
-
                 {/* Excerpt */}
                 <p className="text-gray-400 mb-6 leading-relaxed text-sm">
                   {post.excerpt}
                 </p>
-
                 {/* Tags */}
                 <div className="mb-6">
                   <div className="flex flex-wrap gap-1">
@@ -224,7 +210,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
                     ))}
                   </div>
                 </div>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -236,7 +221,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
                     {post.views}
                   </span>
                 </div>
-
                 {/* Author & Rating */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="text-gray-400 text-sm">
@@ -247,7 +231,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
                     <span className="text-yellow-400 font-bold text-sm">{post.rating}</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={`/blog/${post.slug}`}
@@ -260,7 +243,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-blue-500/20 mb-16">
           <div className="text-center">
@@ -270,7 +252,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
                 PREMIUM CONTENT
               </span>
             </div>
-            
             <h3 className="text-4xl font-extrabold text-white mb-4">
               Get Exclusive Blog Updates
             </h3>
@@ -278,13 +259,10 @@ const NewBlogContentShowcase2026: React.FC = () => {
               Subscribe to our newsletter and get early access to new articles, exclusive insights, 
               and premium content from industry experts. Join 100K+ subscribers.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
               <input
                 type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300"
-              />
+                placeholder="Enter your <<email className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-blue-500 focus:bg-white/20 transition-all duration-300" />
               <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50 flex items-center justify-center gap-2">
                 <span>Subscribe</span>
                 <ArrowRight className="w-5 h-5" />
@@ -295,7 +273,6 @@ const NewBlogContentShowcase2026: React.FC = () => {
             </p>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500">
@@ -330,5 +307,4 @@ const NewBlogContentShowcase2026: React.FC = () => {
     </div>
   );
 };
-
 export default NewBlogContentShowcase2026;

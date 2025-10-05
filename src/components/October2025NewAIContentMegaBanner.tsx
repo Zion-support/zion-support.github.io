@@ -1,15 +1,11 @@
-import { Bot, Shield, Database, TrendingUp, Sparkles, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const October2025NewAIContentMegaBanner = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-2xl shadow-2xl border border-purple-500/30 my-12">
-      {/* Animated background effect */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-purple-900 via-blue-900 to-cyan-900 rounded-2xl shadow-2xl border border-purple-500/30 my-12" > {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>
       </div>
-
       <div className="relative p-8 md:p-12">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
@@ -28,12 +24,10 @@ const October2025NewAIContentMegaBanner = () => {
             </h2>
           </div>
         </div>
-
         <p className="text-xl text-gray-200 mb-8 max-w-3xl">
           Discover the cutting-edge strategies powering <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 font-bold">$13.7B in enterprise AI deployments</span>. 
           Master enterprise AI agents, LLM security, and vector databases with proven frameworks from Fortune 500 leaders.
         </p>
-
         {/* Three featured articles */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {/* Article 1 */}
@@ -45,7 +39,6 @@ const October2025NewAIContentMegaBanner = () => {
               <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
                 <Bot className="w-6 h-6 text-purple-400" />
               </div>
-              <span className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs font-semibold rounded">NEW</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
               Enterprise AI Agents Revolution
@@ -66,7 +59,6 @@ const October2025NewAIContentMegaBanner = () => {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Article 2 */}
           <Link
             to="/blog/ai-2025-october-llm-security-prompt-injection-defense"
@@ -76,7 +68,6 @@ const October2025NewAIContentMegaBanner = () => {
               <div className="p-2 bg-red-500/20 rounded-lg group-hover:bg-red-500/30 transition-colors">
                 <Shield className="w-6 h-6 text-red-400" />
               </div>
-              <span className="px-2 py-1 bg-red-500/20 text-red-300 text-xs font-semibold rounded">CRITICAL</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-300 transition-colors">
               LLM Security & Defense
@@ -97,7 +88,6 @@ const October2025NewAIContentMegaBanner = () => {
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </div>
           </Link>
-
           {/* Article 3 */}
           <Link
             to="/blog/ai-2025-october-vector-databases-rag-systems-enterprise"
@@ -129,7 +119,6 @@ const October2025NewAIContentMegaBanner = () => {
             </div>
           </Link>
         </div>
-
         {/* Total Value Banner */}
         <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 border border-purple-400/30 rounded-xl p-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
@@ -154,5 +143,4 @@ const October2025NewAIContentMegaBanner = () => {
     </div>
   );
 };
-
 export default October2025NewAIContentMegaBanner;

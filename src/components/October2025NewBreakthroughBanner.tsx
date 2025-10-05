@@ -1,16 +1,13 @@
-import { ArrowRight, Zap, Brain, DollarSign, Eye, TrendingUp, Target } from "lucide-react";
 import { Link } from "react-router-dom";
+import { ArrowLeft, ArrowRight, Award, Brain, Calendar, CheckCircle, Clock, DollarSign, Globe, Rocket, Satellite, Share2, Bookmark, Tag, Target, TrendingUp, Users, User, Zap, BarChart3, BookOpen } from 'lucide-react';
 import { octoberNewBreakthroughContent, octoberContentStats } from "../content/october-2025-new-breakthrough-content";
-
 const October2025NewBreakthroughBanner = () => {
   const stats = octoberContentStats;
-
-  const iconMap: Record<string, React.ComponentType<any>> = {
+  const iconMap: Record<string, React.ComponentType<React.SVGProps<SVGSVGElement>>> = {
     '🧠': Brain,
     '💰': DollarSign,
     '🎨': Eye
   };
-
   return (
     <div className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 py-20 px-4 relative overflow-hidden">
       {/* Animated background effects */}
@@ -19,7 +16,6 @@ const October2025NewBreakthroughBanner = () => {
         <div className="absolute top-1/2 right-10 w-96 h-96 bg-pink-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute bottom-10 left-1/3 w-96 h-96 bg-indigo-500 rounded-full filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
-
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -30,11 +26,9 @@ const October2025NewBreakthroughBanner = () => {
             </span>
             <Zap className="w-6 h-6 text-yellow-300 animate-pulse" />
           </div>
-          
           <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
             Next-Generation Enterprise AI
-            <br />
-            <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
+            <br /> <span className="bg-gradient-to-r from-yellow-300 via-pink-300 to-purple-300 text-transparent bg-clip-text">
               Systems That Transform Operations
             </span>
           </h2>
@@ -44,12 +38,10 @@ const October2025NewBreakthroughBanner = () => {
             performance improvements.
           </p>
         </div>
-
         {/* Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-12">
           {octoberNewBreakthroughContent.map((content) => {
             const Icon = iconMap[content.icon] || Brain;
-            
             return (
               <Link
                 key={content.id}
@@ -69,11 +61,9 @@ const October2025NewBreakthroughBanner = () => {
                     </h3>
                   </div>
                 </div>
-
                 <p className="text-sm text-purple-200 mb-6 leading-relaxed">
                   {content.description}
                 </p>
-
                 {/* Key Metrics */}
                 <div className="grid grid-cols-2 gap-3 mb-6">
                   {Object.entries(content.metrics).slice(0, 4).map(([key, value]) => (
@@ -85,7 +75,6 @@ const October2025NewBreakthroughBanner = () => {
                     </div>
                   ))}
                 </div>
-
                 {/* Highlights */}
                 <ul className="space-y-3 mb-6">
                   {content.highlights.slice(0, 2).map((highlight, idx) => (
@@ -95,7 +84,6 @@ const October2025NewBreakthroughBanner = () => {
                     </li>
                   ))}
                 </ul>
-
                 <div className="flex items-center gap-2 text-sm text-yellow-300 font-bold group-hover:gap-4 transition-all">
                   Read Full Guide
                   <ArrowRight className="w-5 h-5" />
@@ -104,7 +92,6 @@ const October2025NewBreakthroughBanner = () => {
             );
           })}
         </div>
-
         {/* CTA Section */}
         <div className="bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-xl border border-white/30 rounded-2xl p-12 mb-12 shadow-2xl">
           <div className="flex items-center gap-4 mb-6 justify-center">
@@ -136,7 +123,6 @@ const October2025NewBreakthroughBanner = () => {
             </Link>
           </div>
         </div>
-
         {/* Stats Bar */}
         <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
           <div className="text-center bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
@@ -164,14 +150,13 @@ const October2025NewBreakthroughBanner = () => {
             <div className="text-sm text-purple-300 font-medium">Avg Payback Period</div>
           </div>
         </div>
-
         {/* Technology Tags */}
         <div className="mt-12 text-center">
           <div className="inline-flex flex-wrap gap-3 justify-center">
             {['AI Agents', 'Memory Systems', 'FinOps', 'Cost Optimization', 'Multimodal AI', 
               'Computer Vision', 'NLP', 'Enterprise Automation', 'Cloud Management'].map((tag) => (
-              <span 
-                key={tag}
+              <span
+key={tag}
                 className="bg-white/10 backdrop-blur-sm border border-white/20 text-purple-200 px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors"
               >
                 {tag}
@@ -183,5 +168,4 @@ const October2025NewBreakthroughBanner = () => {
     </div>
   );
 };
-
 export default October2025NewBreakthroughBanner;

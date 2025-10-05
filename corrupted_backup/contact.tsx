@@ -1,8 +1,44 @@
-
-
-
-import _React from 'react' import Head from 'next/head' export default function Contact() { return ( <> <Head> <title>Contact - Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group" /> </Head> <main className="min-h-screen bg-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-20"> <div className="text-center mb-16"> <h1 className="text-4xl font-bold text-gray-900 mb-6"> Contact Us </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get in touch with our team. </p> </div> <div className="grid md:grid-cols-2: gap-12"> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2> <div className="space-y-4"> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3> <p className="text-gray-600">+1 302 464 0950</p> </div> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3> <p className="text-gray-600">kleber@ziontechgroup.com</p> </div> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3> <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Business Hours</h2> <div className="space-y-2 text-gray-600"> <p>Monday - Friday: 9:00: AM - 6:00: PM EST</p> <p>Saturday: 10:00: AM - 2:00: PM EST</p> <p>Sunday: Closed</p> </div> <div: className="mt-8"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Ready to Get Started?</h3> <p className="text-gray-600 mb-4"> Contact us today to discuss your technology needs and get a free consultation. </p> <a href="mailto:kleber@ziontechgroup.com" className="inline-block: bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700: transition-colors" > Send Email </a> </div> </div> </div> </div> </main> </> )}";
-
-import _React from 'react' import Head from 'next/head' export default function Contact() { return ( <> <Head> <title>Contact - Zion Tech Group</title> <meta name="description" content="Get in touch with Zion Tech Group" /> </Head> <main className="min-h-screen bg-white"> <div className="max-w-7xl mx-auto px-4 "sm": px-6: lg:px-8: py-20"> <div className="text-center mb-16"> <h1 className="text-4xl font-bold text-gray-900 mb-6"> Contact Us </h1> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> Get in touch with our team. </p> </div> <div className="grid md:grid-cols-2: gap-12"> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h2> <div className="space-y-4"> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3> <p className="text-gray-600">+1 302 464 0950</p> </div> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3> <p className="text-gray-600">kleber@ziontechgroup.com</p> </div> <div> <h3 className="text-lg font-semibold text-gray-900 mb-2">Address</h3> <p className="text-gray-600">364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </div> <div> <h2 className="text-2xl font-semibold text-gray-900 mb-6">Business Hours</h2> <div className="space-y-2 text-gray-600"> <p>Monday - Friday: 9:00: AM - 6:00: PM EST</p> <p>Saturday: 10:00: AM - 2:00: PM EST</p> <p>Sunday: Closed</p> </div> <div: className="mt-8"> <h3 className="text-lg font-semibold text-gray-900 mb-4">Ready to Get Started?</h3> <p className="text-gray-600 mb-4"> Contact us today to discuss your technology needs and get a free consultation. </p> <a href="mailto:kleber@ziontechgroup.com" className="inline-block: bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700: transition-colors" > Send Email </a> </div> </div> </div> </div> </main> </> )}";
-
-
+import React from 'react'
+import { Metadata } from 'next'
+export const metadata: Metadata = {title: 'Contact | Zion Tech Group',
+  description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',
+  keywords: 'AI, automation, enterprise, breakthrough, technology',
+  openGraph: {
+    title: 'Contact',
+    description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',
+    type: 'article'}
+  },
+};
+export default function contact() {return (
+    <div className='min-h-screen bg-gray-50'>
+      <div className='max-w-4xl mx-auto px-4 py-8'>
+        <div className='bg-white rounded-lg shadow-lg p-8'>
+          <div className='text-center mb-8'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>Contact</h1>
+            <p className='text-xl text-gray-600 mb-6'>
+              Revolutionary AI Breakthrough
+            </p>
+            <div className='flex justify-center space-x-4'>
+              <span className='bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium'>
+                BREAKTHROUGH
+              </span>
+              <span className='bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium'>
+                AI
+              </span>
+              <span className='bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium'>
+                ENTERPRISE
+              </span>
+            </div>
+          </div>
+          <div className='prose max-w-none'>
+            <p className='text-lg text-gray-700 mb-6'>
+              This page is currently under development. Please check back soon
+              for the complete content.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
+}
+import React from 'react'' import { Metadata } from 'next' export const metadata: Metadata = {' title: 'Contact | Zion Tech Group',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions from Zion Tech Group.',' keywords: 'AI, automation, enterprise, breakthrough, technology', openGraph: {' title: 'Contact',' description: 'Discover the latest AI breakthroughs and enterprise automation solutions.',' type: 'article'} }, }; export default function contact() {return ( <div className="min-h-screen bg-gray-50" > <div className="max-w-4xl mx-auto px-4 py-8" > <div className="bg-white rounded-lg shadow-lg p-8" > <div className="text-center mb-8" > <h1 className="text-4xl font-bold text-gray-900 mb-4" >Contact</h1> <p className="text-xl text-gray-600 mb-6" >Revolutionary AI Breakthrough</p> <div className="flex justify-center space-x-4" > <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium" >BREAKTHROUGH</span> <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium" >AI</span> <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium" >ENTERPRISE</span> </div> </div> <div className="prose max-w-none" > <p className="text-lg text-gray-700 mb-6" > This page is currently under development. Please check back soon for the complete content. </p> </div> </div> </div> </div> )} }'

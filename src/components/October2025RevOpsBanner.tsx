@@ -1,15 +1,13 @@
-import { ArrowRight, DollarSign, TrendingUp, Target, Sparkles } from "lucide-react";
+import { TrendingUp } from 'lucide-react';
 import { Link } from "react-router-dom";
-
+;
 const October2025RevOpsBanner = () => {
   return (
-    <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-br from-emerald-900 via-teal-900 to-cyan-900 border-y border-emerald-500/30 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-emerald-500 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-teal-500 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Breaking News Badge */}
         <div className="flex justify-center mb-4">
@@ -19,7 +17,6 @@ const October2025RevOpsBanner = () => {
             <Sparkles className="w-4 h-4 ml-2" />
           </div>
         </div>
-
         {/* Main Headline */}
         <div className="text-center mb-6">
           <h2 className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 via-teal-300 to-cyan-300 mb-3">
@@ -34,7 +31,6 @@ const October2025RevOpsBanner = () => {
             <span className="font-bold text-white"> 3.2x pipeline velocity</span> through autonomous revenue operations
           </p>
         </div>
-
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-emerald-400/30 hover:border-emerald-400/60 transition-all hover:scale-105">
@@ -58,7 +54,6 @@ const October2025RevOpsBanner = () => {
             <div className="text-sm text-emerald-200">Revenue Impact</div>
           </div>
         </div>
-
         {/* Featured Content */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-emerald-400/30 mb-6">
           <div className="grid md:grid-cols-2 gap-6">
@@ -83,7 +78,6 @@ const October2025RevOpsBanner = () => {
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
-
             {/* Case Study */}
             <div className="bg-gradient-to-br from-blue-800/50 to-indigo-800/50 rounded-lg p-5 border border-blue-400/40">
               <div className="text-blue-300 font-bold mb-2 flex items-center">
@@ -107,7 +101,6 @@ const October2025RevOpsBanner = () => {
             </div>
           </div>
         </div>
-
         {/* Key Highlights */}
         <div className="bg-white/5 backdrop-blur-md rounded-xl p-6 border border-emerald-400/30 mb-6">
           <h3 className="text-2xl font-bold text-white mb-4 text-center">
@@ -182,7 +175,6 @@ const October2025RevOpsBanner = () => {
             </div>
           </div>
         </div>
-
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-emerald-600 to-teal-600 rounded-xl p-8 shadow-2xl">
           <h3 className="text-2xl font-bold text-white mb-3">
@@ -213,5 +205,4 @@ const October2025RevOpsBanner = () => {
     </div>
   );
 };
-
 export default October2025RevOpsBanner;

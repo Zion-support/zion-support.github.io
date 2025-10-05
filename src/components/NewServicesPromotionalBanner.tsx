@@ -3,8 +3,7 @@ import React from 'react';
 const NewServicesPromotionalBanner: React.FC = () => {
   return (
     <section className="py-16 bg-gradient-to-r from-emerald-900/40 via-teal-900/40 to-cyan-900/40 border-y border-emerald-500/20">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+      <div className="container mx-auto px-6" > {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">
             <span className="text-emerald-400 font-bold text-sm tracking-wider uppercase animate-pulse">
@@ -44,8 +43,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
             </div>
             <div className="text-emerald-400 font-bold text-lg mb-4">Starting at $25,000/month</div>
             <a 
-              href="/services/quantum-ai-consulting" 
-              className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
+              href="/services/quantum-ai-<consulting" className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50"
             >
               Learn More →
             </a>
@@ -74,8 +72,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
             </div>
             <div className="text-blue-400 font-bold text-lg mb-4">Starting at $15,000/month</div>
             <a 
-              href="/services/ai-security-soc" 
-              className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+              href="/services/ai-security-<soc" className="inline-block bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-400 hover:to-cyan-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
             >
               Learn More →
             </a>
@@ -104,8 +101,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
             </div>
             <div className="text-purple-400 font-bold text-lg mb-4">Starting at $35,000/month</div>
             <a 
-              href="/services/autonomous-operations" 
-              className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
+              href="/services/autonomous-<operations" className="inline-block bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-400 hover:to-pink-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50"
             >
               Learn More →
             </a>
@@ -154,8 +150,7 @@ const NewServicesPromotionalBanner: React.FC = () => {
                 Save $30,000/month!
               </div>
               <a 
-                href="/contact?offer=bundle-services-40" 
-                className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
+                href="/contact?offer=bundle-services-<40" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-emerald-500/50 transform hover:-translate-y-1"
               >
                 Claim Bundle Offer
               </a>

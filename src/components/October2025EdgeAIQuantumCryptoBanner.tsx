@@ -1,12 +1,9 @@
-import { Sparkles, Zap, Shield, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function October2025EdgeAIQuantumCryptoBanner() {
   return (
     <section className="bg-gradient-to-r from-cyan-900/30 via-purple-900/30 to-pink-900/30 border-y border-cyan-500/30 py-12">
       <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto">
-          {/* Header */}
+        <div className="max-w-7xl mx-auto" > {/* Header */}
           <div className="flex items-center justify-center gap-3 mb-6">
             <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
             <span className="text-lg md:text-xl font-bold text-cyan-400 uppercase tracking-wider">
@@ -14,7 +11,6 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
             </span>
             <Sparkles className="w-6 h-6 text-cyan-400 animate-pulse" />
           </div>
-
           {/* Main Content */}
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -26,7 +22,6 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
               Build the future-proof infrastructure your organization needs today!
             </p>
           </div>
-
           {/* Feature Cards */}
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             {/* Edge AI + 5G Card */}
@@ -64,7 +59,6 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-
             {/* Quantum-Safe Cryptography Card */}
             <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 backdrop-blur-sm rounded-2xl p-8 border border-purple-500/30 hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <div className="flex items-center gap-4 mb-4">
@@ -101,7 +95,6 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
               </Link>
             </div>
           </div>
-
           {/* Key Metrics Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <div className="bg-cyan-500/10 backdrop-blur-sm rounded-xl p-4 border border-cyan-500/30 text-center">
@@ -113,7 +106,6 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
               <div className="text-blue-300 text-sm">Bandwidth Savings</div>
             </div>
             <div className="bg-purple-500/10 backdrop-blur-sm rounded-xl p-4 border border-purple-500/30 text-center">
-              <div className="text-3xl font-extrabold text-purple-400 mb-1">2030</div>
               <div className="text-purple-300 text-sm">Est. Q-Day Arrival</div>
             </div>
             <div className="bg-pink-500/10 backdrop-blur-sm rounded-xl p-4 border border-pink-500/30 text-center">
@@ -121,7 +113,6 @@ export default function October2025EdgeAIQuantumCryptoBanner() {
               <div className="text-pink-300 text-sm">Quantum Resistance</div>
             </div>
           </div>
-
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

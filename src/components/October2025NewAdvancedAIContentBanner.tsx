@@ -1,16 +1,12 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, Database, Shield, Sparkles, TrendingUp, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function October2025NewAdvancedAIContentBanner() {
   return (
-    <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden">
-      {/* Animated background elements */}
+    <div className="relative bg-gradient-to-br from-purple-900 via-indigo-800 to-blue-900 border-b border-white/10 overflow-hidden" > {/* Animated background elements */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-purple-500 rounded-full filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl animate-pulse delay-700"></div>
       </div>
-
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header Section */}
         <motion.div
@@ -24,15 +20,12 @@ export default function October2025NewAdvancedAIContentBanner() {
             OCTOBER 2025 BREAKTHROUGH
             <Sparkles className="w-5 h-5 animate-pulse" />
           </div>
-          
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4">
             🚀 3 Revolutionary AI Platform Breakthroughs
           </h2>
-          
           <p className="text-xl md:text-2xl text-blue-100 max-w-4xl mx-auto font-semibold">
             Privacy-First Federated AI • Unlimited Synthetic Data • Enterprise AI Governance
           </p>
-          
           <div className="flex flex-wrap justify-center gap-4 mt-6 text-yellow-300 font-bold">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5" />
@@ -48,7 +41,6 @@ export default function October2025NewAdvancedAIContentBanner() {
             </div>
           </div>
         </motion.div>
-
         {/* Content Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
           {/* Federated AI */}
@@ -70,15 +62,12 @@ export default function October2025NewAdvancedAIContentBanner() {
                     Federated AI
                   </span>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">
                   Advanced Federated AI Enterprise Revolution
                 </h3>
-                
                 <p className="text-blue-100 text-sm mb-4 leading-relaxed">
                   Privacy-first distributed intelligence across 250+ nodes. <span className="text-yellow-300 font-bold">$287M value</span>, 99.8% privacy compliance, 67% faster training — zero data movement.
                 </p>
-                
                 <div className="space-y-2 text-xs text-blue-200">
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
@@ -93,7 +82,6 @@ export default function October2025NewAdvancedAIContentBanner() {
                     <span>94.7% model accuracy matching centralized training</span>
                   </div>
                 </div>
-
                 <div className="mt-6 flex items-center text-purple-300 font-semibold group-hover:text-white transition-colors">
                   <span>Explore Privacy-First AI</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -101,7 +89,6 @@ export default function October2025NewAdvancedAIContentBanner() {
               </div>
             </Link>
           </motion.div>
-
           {/* Synthetic Data */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -121,15 +108,12 @@ export default function October2025NewAdvancedAIContentBanner() {
                     Synthetic Data
                   </span>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-300 transition-colors">
                   Synthetic Data Generation Enterprise Breakthrough
                 </h3>
-                
                 <p className="text-blue-100 text-sm mb-4 leading-relaxed">
                   Unlimited privacy-safe data generation. <span className="text-yellow-300 font-bold">$312M value</span>, 10x data availability, 99.4% statistical fidelity — solve data scarcity.
                 </p>
-                
                 <div className="space-y-2 text-xs text-blue-200">
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
@@ -144,7 +128,6 @@ export default function October2025NewAdvancedAIContentBanner() {
                     <span>100% privacy compliance across 67 countries</span>
                   </div>
                 </div>
-
                 <div className="mt-6 flex items-center text-blue-300 font-semibold group-hover:text-white transition-colors">
                   <span>Unlock Unlimited Data</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -152,7 +135,6 @@ export default function October2025NewAdvancedAIContentBanner() {
               </div>
             </Link>
           </motion.div>
-
           {/* AI Governance */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -172,15 +154,12 @@ export default function October2025NewAdvancedAIContentBanner() {
                     AI Governance
                   </span>
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-300 transition-colors">
                   AI Model Governance & Compliance Breakthrough
                 </h3>
-                
                 <p className="text-blue-100 text-sm mb-4 leading-relaxed">
                   Enterprise-scale AI risk management. <span className="text-yellow-300 font-bold">$421M value</span>, 100% audit compliance, 840+ models governed — complete accountability.
                 </p>
-                
                 <div className="space-y-2 text-xs text-blue-200">
                   <div className="flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-green-400 rounded-full"></div>
@@ -195,7 +174,6 @@ export default function October2025NewAdvancedAIContentBanner() {
                     <span>92% risk reduction with automated governance</span>
                   </div>
                 </div>
-
                 <div className="mt-6 flex items-center text-green-300 font-semibold group-hover:text-white transition-colors">
                   <span>Ensure AI Compliance</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -204,7 +182,6 @@ export default function October2025NewAdvancedAIContentBanner() {
             </Link>
           </motion.div>
         </div>
-
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -219,7 +196,6 @@ export default function October2025NewAdvancedAIContentBanner() {
             <span>Explore All October 2025 Breakthroughs</span>
             <ArrowRight className="w-5 h-5" />
           </Link>
-          
           <p className="mt-4 text-blue-200 text-sm">
             Join 127+ Fortune 500 companies transforming with privacy-first AI, synthetic data, and enterprise governance
           </p>

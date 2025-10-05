@@ -1,4 +1,3 @@
-import React from 'react';
 
 export default function QuantumEdgeAIRevolutionPage() {
   return (
@@ -229,14 +228,12 @@ export default function QuantumEdgeAIRevolutionPage() {
               </ul>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
+                  href="/<contact" className="inline-flex items-center justify-center px-8 py-4 font-bold text-white bg-gradient-to-r from-cyan-500 to-blue-600 rounded-xl hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 shadow-lg hover:shadow-cyan-500/50"
                 >
                   Schedule Consultation →
                 </a>
                 <a
-                  href="/case-studies/quantum-edge-ai-manufacturing-success-2025"
-                  className="inline-flex items-center justify-center px-8 py-4 font-bold text-cyan-300 border-2 border-cyan-500 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
+                  href="/case-studies/quantum-edge-ai-manufacturing-success-<2025" className="inline-flex items-center justify-center px-8 py-4 font-bold text-cyan-300 border-2 border-cyan-500 rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300"
                 >
                   View Success Story →
                 </a>
@@ -249,7 +246,7 @@ export default function QuantumEdgeAIRevolutionPage() {
         <footer className="mt-16 pt-8 border-t border-white/10">
           <div className="flex flex-wrap gap-4 items-center justify-between">
             <div className="flex gap-4">
-              <a href="/blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</a>
+              <a href="/<blog" className="text-cyan-400 hover:text-cyan-300 transition-colors">← Back to Blog</a>
             </div>
             <div className="flex gap-3">
               <span className="text-gray-400 text-sm">Share:</span>

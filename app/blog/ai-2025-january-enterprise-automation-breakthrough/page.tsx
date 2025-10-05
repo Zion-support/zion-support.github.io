@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-
 export const metadata: Metadata = {
   title: 'AI 2025: Enterprise Automation Breakthrough - Revolutionary Business Transformation',
   description: 'Discover how Fortune 500 companies achieved 95% operational efficiency gains through advanced AI automation systems. Learn practical deployment strategies and proven frameworks for enterprise transformation.',
@@ -246,14 +245,12 @@ export default function AI2025EnterpriseAutomationBreakthrough() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
-                href="/contact" 
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
+                href="/<contact" className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-400 hover:to-purple-500 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-blue-500/50"
               >
                 Start Your Transformation
               </a>
               <a 
-                href="/case-studies" 
-                className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
+                href="/case-<studies" className="border-2 border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
               >
                 View Success Stories
               </a>

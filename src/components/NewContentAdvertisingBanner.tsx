@@ -1,6 +1,4 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Zap, Star, Users, Award, Target } from 'lucide-react';
-
 interface FeaturedContent {
   id: number;
   title: string;
@@ -13,12 +11,11 @@ interface FeaturedContent {
   icon: React.ReactNode;
   link: string;
 }
-
 const NewContentAdvertisingBanner: React.FC = () => {
   const featuredContent: FeaturedContent[] = [
     {
       id: 0,
-      title: 'Autonomous Customer Service 2025',
+      title: 'Governed Agent Rollbacks',
       category: 'AI Operations',
       readTime: '7 min',
       rating: 5.0,
@@ -26,7 +23,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
       icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2025-oct-02-autonomous-customer-service-playbook'
+      link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
       id: 7,
@@ -42,86 +39,52 @@ const NewContentAdvertisingBanner: React.FC = () => {
     },
     {
       id: 1,
-      title: 'Neural Code Synthesis 2025',
-      category: 'AI Engineering',
-      readTime: '9 min',
-      rating: 5.0,
-      readers: '120K+',
+      title: 'AI 2027: Operational Trust Blueprint',
+      category: 'AI Strategy',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
       icon: <Star className="w-6 h-6" />,
-      link: '/blog/ai-2025-sept-30-neural-code-synthesis'
+      link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
       id: 2,
-      title: 'Edge 2026: Attested Analytics',
-      category: 'Analytics',
+      title: 'Edge 2026: Private Feature Flags',
+      category: 'Architecture',
       readTime: '7 min',
-      rating: 4.9,
-      readers: '87K+',
-      badge: 'FEATURED',
+      rating: 4.8,
+      readers: '41K+',
+      badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
       icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2026-attested-analytics'
+      link: '/blog/edge-2026-private-feature-flags'
     },
     {
       id: 3,
-      title: 'E2E AI Tracing 2026',
-      category: 'AI Operations',
-      readTime: '12 min',
-      rating: 5.0,
-      readers: '65K+',
-      badge: 'NEW',
+      title: 'GenAI Quality Tiers v2 (2026)',
+      category: 'GenAI',
+      readTime: '8 min',
+      rating: 4.9,
+      readers: '47K+',
+      badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
       icon: <Award className="w-6 h-6" />,
-      link: '/blog/ai-2026-e2e-ai-tracing'
-    },
-    {
-      id: 4,
-      title: 'Consentless Analytics v4 (2027)',
-      category: 'Analytics',
-      readTime: '6 min',
-      rating: 4.9,
-      readers: '52K+',
-      badge: 'FEATURED',
-      gradient: 'from-emerald-500 to-cyan-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2027-consentless-analytics-v4'
-    }
-    ,
-    {
-      id: 5,
-      title: 'Operational Trust Scorecards v3',
-      category: 'AI Operations',
-      readTime: '9 min',
-      rating: 5.0,
-      readers: '41K+',
-      badge: 'NEW',
-      gradient: 'from-purple-500 to-pink-500',
-      icon: <Sparkles className="w-6 h-6" />,
-      link: '/blog/ai-2025-oct-01-operational-trust-v3'
-    },
-    {
-      id: 6,
-      title: 'Consentless Experiments v3 (<100ms)',
-      category: 'Analytics',
-      readTime: '7 min',
-      rating: 4.9,
-      readers: '33K+',
-      badge: 'NEW',
-      gradient: 'from-teal-500 to-emerald-500',
-      icon: <TrendingUp className="w-6 h-6" />,
-      link: '/blog/edge-2025-oct-01-private-consentless-experiments'
+      link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
-
   const achievements = [
     { value: '500K+', label: 'Monthly Readers', icon: <Users className="w-8 h-8" /> },
     { value: '98%', label: 'Customer Satisfaction', icon: <Star className="w-8 h-8" /> },
     { value: '200+', label: 'Expert Articles', icon: <Award className="w-8 h-8" /> },
     { value: '50+', label: 'Industry Awards', icon: <Target className="w-8 h-8" /> }
+=======
+    { value: '500K+', label: 'Monthly Readers', icon: '🚀' },
+    { value: '98%', label: 'Customer Satisfaction', icon: '🚀' },
+    { value: '200+', label: 'Expert Articles', icon: '🚀' },
+    { value: '50+', label: 'Industry Awards', icon: '🚀' }
   ];
-
   return (
     <div className="py-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 relative overflow-hidden">
       {/* Animated background effects */}
@@ -130,7 +93,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
-
       <div className="container mx-auto px-6 relative z-10">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -141,16 +103,13 @@ const NewContentAdvertisingBanner: React.FC = () => {
             </span>
             <Sparkles className="w-5 h-5 text-pink-400 animate-pulse" />
           </div>
-
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
             Revolutionary New Content Hub
           </h2>
-          
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             Discover groundbreaking insights, cutting-edge research, and revolutionary AI breakthroughs. 
             Join 500K+ professionals who trust our content to stay ahead of the technology curve.
           </p>
-
           {/* Achievement Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {achievements.map((achievement, index) => (
@@ -168,18 +127,16 @@ const NewContentAdvertisingBanner: React.FC = () => {
             ))}
           </div>
         </div>
-
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
-            <div 
-              key={content.id}
+            <div
+key={content.id}
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
               {/* Card glow effect */}
               <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`}></div>
-              
               <div className="relative p-8">
                 {/* Badge */}
                 <div className="flex items-center justify-between mb-6">
@@ -190,19 +147,16 @@ const NewContentAdvertisingBanner: React.FC = () => {
                     {content.badge}
                   </div>
                 </div>
-
                 {/* Category */}
                 <div className="mb-4">
                   <span className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 text-indigo-400 text-xs font-semibold border border-indigo-500/30">
                     {content.category}
                   </span>
                 </div>
-
                 {/* Title */}
                 <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-indigo-400 transition-colors duration-300 leading-tight">
                   {content.title}
                 </h3>
-
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
@@ -214,7 +168,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
                     {content.rating}
                   </span>
                 </div>
-
                 {/* Reader Count */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-400">
@@ -222,7 +175,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
-
                 {/* CTA Button */}
                 <a
                   href={content.link || '/blog'}
@@ -235,7 +187,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
             </div>
           ))}
         </div>
-
         {/* Special Offer Section */}
         <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
           <div className="text-center">
@@ -245,7 +196,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 LIMITED TIME OFFER
               </span>
             </div>
-            
             <h3 className="text-4xl font-extrabold text-white mb-4">
               Get Premium Access to All Content
             </h3>
@@ -253,7 +203,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
               Unlock exclusive articles, early access to new content, and premium research reports. 
               Join our elite community of technology leaders and innovators.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <div className="text-center">
                 <div className="text-3xl font-extrabold text-indigo-400 line-through opacity-50">$299/month</div>
@@ -279,7 +228,6 @@ const NewContentAdvertisingBanner: React.FC = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="text-center">
           <div className="inline-block p-1 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
@@ -294,9 +242,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
                 <input
                   type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
-                />
+                  placeholder="Enter your <<email className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300" />
                 <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
                   <span>Subscribe</span>
                   <ArrowRight className="w-5 h-5" />
@@ -312,5 +258,4 @@ const NewContentAdvertisingBanner: React.FC = () => {
     </div>
   );
 };
-
 export default NewContentAdvertisingBanner;

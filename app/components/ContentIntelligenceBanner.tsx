@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { BookOpen, TrendingUp, Award, Zap, Globe, CheckCircle } from 'lucide-react';
+import { Award, BookOpen, CheckCircle, Globe, TrendingUp, Zap } from 'lucide-react';
 
 /**
  * Content Intelligence Revolution Banner

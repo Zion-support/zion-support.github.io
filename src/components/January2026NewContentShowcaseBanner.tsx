@@ -1,7 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Brain, Zap, Shield, Cpu, Network } from 'lucide-react';
-
 const January2026NewContentShowcaseBanner: React.FC = () => {
   const features = [
     { icon: Brain, title: "Synthetic Consciousness", desc: "True AI awareness" },
@@ -10,7 +8,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
     { icon: Shield, title: "Quantum Security", desc: "Unbreakable protection" },
     { icon: Cpu, title: "Neuromorphic AI", desc: "Brain-inspired computing" }
   ];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -22,7 +19,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent"></div>
       </div>
-
       <div className="relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
@@ -35,7 +31,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             <span className="mr-2">🚀</span>
             January 2026 - Revolutionary AI Breakthroughs
           </motion.div>
-          
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -44,7 +39,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
           >
             The Future of AI is Here
           </motion.h2>
-          
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -55,10 +49,9 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             from synthetic consciousness to quantum edge computing and autonomous mesh networks.
           </motion.p>
         </div>
-
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-          {features.map((feature, index) => (
+          {features.map((feature, index) = > (
             <motion.div
               key={feature.title}
               initial={{ opacity: 0, y: 20 }}
@@ -72,7 +65,6 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
             </motion.div>
           ))}
         </div>
-
         {/* Stats */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -82,10 +74,8 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
         >
           <div className="text-center">
             <div className="text-3xl font-bold text-purple-300 mb-1">99.7%</div>
-            <div className="text-sm text-blue-200">Efficiency</div>
           </div>
           <div className="text-center">
-            <div className="text-3xl font-bold text-blue-300 mb-1">200x</div>
             <div className="text-sm text-blue-200">Speed Boost</div>
           </div>
           <div className="text-center">
@@ -94,10 +84,8 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
           </div>
           <div className="text-center">
             <div className="text-3xl font-bold text-yellow-300 mb-1">95%</div>
-            <div className="text-sm text-blue-200">Automation</div>
           </div>
         </motion.div>
-
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -114,12 +102,10 @@ const January2026NewContentShowcaseBanner: React.FC = () => {
           </a>
         </motion.div>
       </div>
-
       {/* Floating Elements */}
       <div className="absolute top-10 left-10 w-20 h-20 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
       <div className="absolute bottom-10 right-10 w-32 h-32 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
     </motion.div>
   );
 };
-
 export default January2026NewContentShowcaseBanner;

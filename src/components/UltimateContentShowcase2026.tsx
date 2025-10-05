@@ -3,8 +3,7 @@ import React from 'react';
 const UltimateContentShowcase2026: React.FC = () => {
   return (
     <section className="py-20 bg-gradient-to-br from-purple-900/20 via-blue-900/20 to-slate-900/20">
-      <div className="container mx-auto px-6">
-        {/* Header */}
+      <div className="container mx-auto px-6" > {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
             <span className="text-purple-400 font-bold text-sm tracking-wider uppercase">
@@ -43,8 +42,7 @@ const UltimateContentShowcase2026: React.FC = () => {
               </div>
             </div>
             <a 
-              href="/quantum-ai" 
-              className="inline-block mt-6 text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
+              href="/quantum-<ai" className="inline-block mt-6 text-purple-400 hover:text-purple-300 font-semibold transition-colors duration-300"
             >
               Explore Quantum AI →
             </a>
@@ -72,8 +70,7 @@ const UltimateContentShowcase2026: React.FC = () => {
               </div>
             </div>
             <a 
-              href="/meta-cognitive-ai" 
-              className="inline-block mt-6 text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300"
+              href="/meta-cognitive-<ai" className="inline-block mt-6 text-blue-400 hover:text-blue-300 font-semibold transition-colors duration-300"
             >
               Learn About Meta-Cognition →
             </a>
@@ -101,8 +98,7 @@ const UltimateContentShowcase2026: React.FC = () => {
               </div>
             </div>
             <a 
-              href="/autonomous-operations" 
-              className="inline-block mt-6 text-green-400 hover:text-green-300 font-semibold transition-colors duration-300"
+              href="/autonomous-<operations" className="inline-block mt-6 text-green-400 hover:text-green-300 font-semibold transition-colors duration-300"
             >
               Discover Autonomy →
             </a>
@@ -138,14 +134,12 @@ const UltimateContentShowcase2026: React.FC = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
-              href="/contact" 
-              className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
+              href="/<contact" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-purple-500/50 transform hover:-translate-y-1"
             >
               Get Started Now
             </a>
             <a 
-              href="/case-studies" 
-              className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
+              href="/case-<studies" className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300"
             >
               View Success Stories
             </a>

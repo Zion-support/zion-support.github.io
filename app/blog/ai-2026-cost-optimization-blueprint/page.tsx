@@ -1,5 +1,4 @@
 // @ts-nocheck
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI 2026 Cost Optimization Blueprint: 30–70% Savings without Quality Loss',
@@ -19,7 +18,7 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-indigo-950 to-slate-950 text-white">
       <main className="container mx-auto px-6 py-12">
         <nav className="mb-8">
-          <a href="/blog" className="text-emerald-300 hover:text-emerald-200 transition-colors">
+          <a href="/<blog" className="text-emerald-300 hover:text-emerald-200 transition-colors">
             ← Back to Blog
           </a>
         </nav>
@@ -82,10 +81,10 @@ export default function Page() {
                 We implement cost control playbooks across global enterprises with measurable savings and reliability.
               </p>
               <div className="flex justify-center gap-4">
-                <a href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3 px-6 rounded-xl transition-all">
                   Talk to an Expert
                 </a>
-                <a href="/blog" className="border-2 border-emerald-500 text-emerald-300 hover:bg-emerald-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
+                <a href="/<blog" className="border-2 border-emerald-500 text-emerald-300 hover:bg-emerald-500 hover:text-white font-bold py-3 px-6 rounded-xl transition-all">
                   More Insights
                 </a>
               </div>
@@ -95,7 +94,7 @@ export default function Page() {
           <footer className="mt-14 pt-8 border-t border-white/10">
             <div className="flex items-center justify-between">
               <div className="text-white/60 text-sm">Written by Zion Tech Group FinOps Team</div>
-              <a href="/contact" className="text-emerald-300 hover:text-emerald-200 transition-colors">Get in Touch</a>
+              <a href="/<contact" className="text-emerald-300 hover:text-emerald-200 transition-colors">Get in Touch</a>
             </div>
           </footer>
         </article>

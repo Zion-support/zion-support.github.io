@@ -1,4 +1,3 @@
-import React from 'react';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -156,14 +155,12 @@ export default function AI2026HyperintelligenceBreakthrough() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="/services/ai-2026-hyperintelligence-breakthrough"
-                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
+                href="/services/ai-2026-hyperintelligence-<breakthrough" className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-bold hover:from-purple-600 hover:to-pink-600 transition-all duration-300"
               >
                 Learn More About Our Services
               </a>
               <a 
-                href="/case-studies/hyperintelligence-mega-success-2026"
-                className="border border-purple-500/50 text-purple-300 px-8 py-3 rounded-lg font-bold hover:bg-purple-500/10 transition-all duration-300"
+                href="/case-studies/hyperintelligence-mega-success-<2026" className="border border-purple-500/50 text-purple-300 px-8 py-3 rounded-lg font-bold hover:bg-purple-500/10 transition-all duration-300"
               >
                 View Success Stories
               </a>

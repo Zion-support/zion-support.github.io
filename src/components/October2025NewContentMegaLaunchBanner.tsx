@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 
 const October2025NewContentMegaLaunchBanner: React.FC = () => {
   return (
-    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden">
-      {/* Animated background effect */}
+    <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white py-16 px-4 relative overflow-hidden" > {/* Animated background effect */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 -left-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 -right-4 w-96 h-96 bg-white rounded-full mix-blend-overlay filter blur-3xl animate-pulse delay-1000"></div>
@@ -21,8 +20,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
         {/* Main heading */}
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight">
           🌟 Breakthrough AI Content
-          <br />
-          <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+          <br /> <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
             LIVE NOW!
           </span>
         </h2>
@@ -36,8 +34,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
         {/* Content cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
           <Link 
-            to="/blog/ai-2025-october-enterprise-ai-governance-framework"
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            to="/blog/ai-2025-october-enterprise-ai-governance-<framework" className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="text-4xl mb-4">🛡️</div>
             <h3 className="text-2xl font-bold mb-3">AI Governance Framework</h3>
@@ -46,13 +43,12 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-300 font-semibold">Read Full Guide →</span>
-              <span className="px-3 py-1 bg-green-500/20 rounded-full text-sm">NEW</span>
+              
             </div>
           </Link>
 
           <Link 
-            to="/blog/ai-2025-october-multimodal-ai-enterprise-deployment"
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            to="/blog/ai-2025-october-multimodal-ai-enterprise-<deployment" className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="text-4xl mb-4">🧠</div>
             <h3 className="text-2xl font-bold mb-3">Multimodal AI Deployment</h3>
@@ -61,13 +57,12 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-300 font-semibold">Explore Now →</span>
-              <span className="px-3 py-1 bg-green-500/20 rounded-full text-sm">NEW</span>
+              
             </div>
           </Link>
 
           <Link 
-            to="/blog/ai-2025-october-edge-ai-deployment-revolution"
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            to="/blog/ai-2025-october-edge-ai-deployment-<revolution" className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
             <div className="text-4xl mb-4">⚡</div>
             <h3 className="text-2xl font-bold mb-3">Edge AI Revolution</h3>
@@ -76,7 +71,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
             </p>
             <div className="flex items-center justify-between">
               <span className="text-yellow-300 font-semibold">Learn More →</span>
-              <span className="px-3 py-1 bg-green-500/20 rounded-full text-sm">NEW</span>
+              
             </div>
           </Link>
         </div>
@@ -104,8 +99,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
         {/* CTA */}
         <div className="text-center">
           <Link
-            to="/blog"
-            className="inline-block bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl"
+            to="/<blog" className="inline-block bg-white text-purple-600 px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-2xl"
           >
             Explore All New Content →
           </Link>
