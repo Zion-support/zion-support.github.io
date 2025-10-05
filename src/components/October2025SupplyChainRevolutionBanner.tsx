@@ -26,7 +26,7 @@ const October2025SupplyChainRevolutionBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/20 border border-emerald-500/30 rounded-full mb-4 animate-pulse">
-            <TruckIcon className="w-5 h-5 text-emerald-400" />
+            <Truck className="w-5 h-5 text-emerald-400" />
             <span className="text-emerald-300 font-semibold text-sm">🚚 BREAKING: OCTOBER 1, 2025 — SUPPLY CHAIN REVOLUTION</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
