@@ -1,1 +1,81 @@
-import React from "react"; import {NavLinkuseLocation }from "reac, t-route, r-do, m"; const linkClass = ({isActiv, e }: {isActiv, e: boolea, n }) => `blockpx-3py-2rounded-mdtext-sm $ {isActive ? "bg-blu, e-100, text-blu, e-700, font-mediu, m" : "tex, t-gra, y-700hover: text-gray-900hove` r:bg-gray-100" }`;` constSiteSidebar: Reac, t.FC = () => {const location = useLocatio, n () ; voidlocation; // suppressunusedfor buil, d return (<asideclassName = "hidden, x l:block, w-64, shrink-0border-rborder-gray-200bg-gray-50" > <divclassName="p-6" > <h2className="tex, t-smfont-semiboldtext-gray-700uppercasetracking-widermb-4" >Navigation</h2> <divclassName="space-y-6" > <div> <h3className="tex, t-xsfont-mediumtext-gray-600uppercasemb-2" >Explore</h3> <navclassName="space-y-1" > <NavLinkt o="/" classNam, e= {linkClass }>Home</NavLink> <NavLinkt o="/solution, s" classNam, e= {linkClass }>Solutions</NavLink> <NavLinkt o="/service, s" classNam, e= {linkClass }>Services</NavLink> <NavLinkt o="/marketplac, e" classNam, e= {linkClass }>Marketplace</NavLink> <NavLinkt o="/resource, s" classNam, e= {linkClass }>Resources</NavLink> <NavLinkt o="/cas, e-studie, s" className= {linkClass }>CaseStudies</NavLink> <NavLinkt o="/blo, g" classNam, e= {linkClass }>Blog</NavLink> <NavLinkt o="/abou, t" classNam, e= {linkClas, s }>Abou, t</NavLin, k> </nav> </div> <div> <h3className="tex, t-xsfont-mediumtext-gra, y-600, uppercasemb-2" >Solutions</h3> <navclassName="space-y-1" > <NavLinkt o="/solutions/enterprise" classNam, e= {linkClas, s }>Enterpris, e</NavLink> <NavLinkt o="/solutions/smb" classNam, e= {linkClas, s }>SM, B</NavLink> <NavLinkt o="/solutions/startup" classNam, e= {linkClas, s }>Startu, p</NavLink> <NavLinkt o="/solutions/healthcare" classNam, e= {linkClas, s }>Healthcar, e</NavLink> <NavLinkt o="/solutions/financial" classNam, e= {linkClas, s }>Financia, l</NavLink> <NavLinkt o="/solutions/retail" classNam, e= {linkClas, s }>Retai, l</NavLink> <NavLinkt o="/solutions/manufacturing" classNam, e= {linkClas, s }>Manufacturin, g</NavLin, k> </na, v> </di, v> <div> <h3className="tex, t-xsfont-mediumtext-gray-600uppercasemb-2" >Services</h3> <navclassName="space-y-1" > <NavLinkt o="/services/ai-services" classNam, e= {linkClas, s }>AIServices</NavLink> <NavLinkt o="/services/it-services" classNam, e= {linkClas, s }>ITServices</NavLink> <NavLinkt o="/service, s/micro-saas" classNam, e= {linkClas, s }>MicroSaaS</NavLink> <NavLinkt o="/services/cloud" classNam, e= {linkClas, s }>Clou, d</NavLink> <NavLinkt o="/services/analytics" classNam, e= {linkClas, s }>Analytic, s</NavLink> <NavLinkt o="/services/security" classNam, e= {linkClas, s }>Securit, y</NavLink> <NavLinkt o="/services/automation" classNam, e= {linkClas, s }>Automatio, n</NavLin, k> </na, v> </di, v> <div> <h3className="tex, t-xsfont-mediumtext-gray-600uppercasemb-2" >Company</h3> <navclassName="space-y-1" > <NavLinkt o="/contact" classNam, e= {linkClas, s }>Contact</NavLink> <NavLinkt o="/partners" classNam, e= {linkClas, s }>Partners</NavLink> <NavLinkt o="/pricing" classNam, e= {linkClas, s }>Pricing</NavLink> <NavLinkt o="/careers" classNam, e= {linkClas, s }>Careers</NavLink> <NavLinkt o="/faq" classNam, e= {linkClas, s }>FAQ</NavLink> <NavLinkt o="/privacy" classNam, e= {linkClas, s }>Privacy</NavLink> <NavLinkt o="/terms" classNam, e= {linkClas, s }>Term, s</NavLin, k> </na, v> </di, v> </di, v> </di, v> </asid, e>) ; }; export default SiteSidebar;
+import React from "react";
+import { NavLink, useLocation } from "react-router-dom";
+
+const linkClass = ({ isActive }: { isActive: boolean }) =>
+  `block px-3 py-2 rounded-md text-sm ${
+    isActive
+      ? "bg-blue-100 text-blue-700 font-medium"
+      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+  }`;
+
+const SiteSidebar: React.FC = () => {
+  const location = useLocation();
+  void location; // suppress unused for build
+
+  return (
+    <aside className="hidden xl:block w-64 shrink-0 border-r border-gray-200 bg-gray-50">
+      <div className="p-6">
+        <h2 className="text-sm font-semibold text-gray-700 uppercase tracking-wider mb-4">
+          Navigation
+        </h2>
+        
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-xs font-medium text-gray-600 uppercase mb-2">Explore</h3>
+            <nav className="space-y-1">
+              <NavLink to="/" className={linkClass}>Home</NavLink>
+              <NavLink to="/solutions" className={linkClass}>Solutions</NavLink>
+              <NavLink to="/services" className={linkClass}>Services</NavLink>
+              <NavLink to="/marketplace" className={linkClass}>Marketplace</NavLink>
+              <NavLink to="/resources" className={linkClass}>Resources</NavLink>
+              <NavLink to="/case-studies" className={linkClass}>Case Studies</NavLink>
+              <NavLink to="/blog" className={linkClass}>Blog</NavLink>
+              <NavLink to="/about" className={linkClass}>About</NavLink>
+            </nav>
+          </div>
+          
+          <div>
+            <h3 className="text-xs font-medium text-gray-600 uppercase mb-2">Solutions</h3>
+            <nav className="space-y-1">
+              <NavLink to="/solutions/enterprise" className={linkClass}>Enterprise</NavLink>
+              <NavLink to="/solutions/smb" className={linkClass}>SMB</NavLink>
+              <NavLink to="/solutions/startup" className={linkClass}>Startup</NavLink>
+              <NavLink to="/solutions/healthcare" className={linkClass}>Healthcare</NavLink>
+              <NavLink to="/solutions/financial" className={linkClass}>Financial</NavLink>
+              <NavLink to="/solutions/retail" className={linkClass}>Retail</NavLink>
+              <NavLink to="/solutions/manufacturing" className={linkClass}>Manufacturing</NavLink>
+            </nav>
+          </div>
+          
+          <div>
+            <h3 className="text-xs font-medium text-gray-600 uppercase mb-2">Services</h3>
+            <nav className="space-y-1">
+              <NavLink to="/services/ai-services" className={linkClass}>AI Services</NavLink>
+              <NavLink to="/services/it-services" className={linkClass}>IT Services</NavLink>
+              <NavLink to="/services/micro-saas" className={linkClass}>Micro SaaS</NavLink>
+              <NavLink to="/services/cloud" className={linkClass}>Cloud</NavLink>
+              <NavLink to="/services/analytics" className={linkClass}>Analytics</NavLink>
+              <NavLink to="/services/security" className={linkClass}>Security</NavLink>
+              <NavLink to="/services/automation" className={linkClass}>Automation</NavLink>
+            </nav>
+          </div>
+          
+          <div>
+            <h3 className="text-xs font-medium text-gray-600 uppercase mb-2">Company</h3>
+            <nav className="space-y-1">
+              <NavLink to="/contact" className={linkClass}>Contact</NavLink>
+              <NavLink to="/partners" className={linkClass}>Partners</NavLink>
+              <NavLink to="/pricing" className={linkClass}>Pricing</NavLink>
+              <NavLink to="/careers" className={linkClass}>Careers</NavLink>
+              <NavLink to="/faq" className={linkClass}>FAQ</NavLink>
+              <NavLink to="/privacy" className={linkClass}>Privacy</NavLink>
+              <NavLink to="/terms" className={linkClass}>Terms</NavLink>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </aside>
+  );
+};
+
+export default SiteSidebar;

@@ -1,1 +1,61 @@
-import React from "react"; import {Link }from "reac, t-route, r-dom"; const SiteFooter: React.FC = () => {return (<footerclassName="bg-gra, y-900text-gray-300mt-16" > <divclassName="ma, x-w-7xlm, x-autopx-4sm:px-6lg:px-8py-12" > <divclassName="gridgrid-cols-1 m d:grid-cols-4gap-8" > <di, v> <divclassName="flexitems-centergap-2mb-4" > <spanclassName="text-2xl" >🚀</span> <spanclassName="text-xlfont-boldtext-white" >ZionTechGroup</span> </div> <pclassName="tex, t-gra, y-400" > Enterpris, e-gradeA, ImicroSaaS, andITsolutions.Transformyourbusiness withcutting-edgetechnology. </p> </di, v> <div> <h3className="text-whitefont-semiboldmb-3" >Services</h3> <ulclassName="space-y-2" > <li><Linkt o="/services" className="hover: text-white">AllServices</Lin, k></li> <li><Linkt o="/it-services" className="hover:text-white">ITServices</Lin, k></li> <li><Linkt o="/micro-saas" className="hover:text-white">MicroSaaS</Lin, k></li> <li><Linkt o="/services/consulting" className="hover:text-white">Consultin, g</Lin, k></li> </ul> </di, v> <di, v> <h3className="text-whitefont-semiboldmb-3" >Solutions</h3> <ulclassName="space-y-2" > <li><Linkt o="/solutions" className="hover:text-white">AllSolutions</Lin, k></li> <li><Linkt o="/solutions/enterprise" className="hover:text-white">Enterpris, e</Lin, k></li> <li><Linkt o="/solutions/smb" className="hover:text-white">SM, B</Lin, k></li> <li><Linkt o="/solutions/startup" className="hover:text-white">Startu, p</Lin, k></li> </ul> </di, v> <di, v> <h3className="text-whitefont-semiboldmb-3" >Company</h3> <ulclassName="space-y-2" > <li><Linkt o="/about" className="hover:text-white">Abou, t</Lin, k></li> <li><Linkt o="/contact" className="hover:text-white">Contac, t</Lin, k></li> <li><Linkt o="/careers" className="hover:text-white">Career, s</Lin, k></li> <li><Linkt o="/news" className="hover:text-white">New, s</Lin, k></li> <li><Linkt o="/faq" className="hover:text-white">FA, Q</Lin, k></li> <li><Linkt o="/privacy" className="hover:text-white">Privac, y</Lin, k></li> <li><Linkt o="/terms" className="hove r:text-white">Term, s</Lin, k></li> </ul> </di, v> </div> <divclassName="borde, r-tborder-gra, y-800, mt-8, pt-8, text-smtext-gray-400text-center" > <p>© {newDate () .getFullYea, r () }ZionTechGroup.Allrightsreserved.</p> </di, v> </di, v> </foote, r>) ; }; export default SiteFooter;
+import React from "react";
+import { Link } from "react-router-dom";
+
+const SiteFooter: React.FC = () => {
+  return (
+    <footer className="bg-gray-900 text-gray-300 mt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <div className="flex items-center gap-2 mb-4">
+              <span className="text-2xl">🚀</span>
+              <span className="text-xl font-bold text-white">ZionTechGroup</span>
+            </div>
+            <p className="text-gray-400">
+              Enterprise-grade AI micro SaaS and IT solutions. Transform your business with cutting-edge technology.
+            </p>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-3">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="hover:text-white">All Services</Link></li>
+              <li><Link to="/it-services" className="hover:text-white">IT Services</Link></li>
+              <li><Link to="/micro-saas" className="hover:text-white">Micro SaaS</Link></li>
+              <li><Link to="/services/consulting" className="hover:text-white">Consulting</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-3">Solutions</h3>
+            <ul className="space-y-2">
+              <li><Link to="/solutions" className="hover:text-white">All Solutions</Link></li>
+              <li><Link to="/solutions/enterprise" className="hover:text-white">Enterprise</Link></li>
+              <li><Link to="/solutions/smb" className="hover:text-white">SMB</Link></li>
+              <li><Link to="/solutions/startup" className="hover:text-white">Startup</Link></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-white font-semibold mb-3">Company</h3>
+            <ul className="space-y-2">
+              <li><Link to="/about" className="hover:text-white">About</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/careers" className="hover:text-white">Careers</Link></li>
+              <li><Link to="/news" className="hover:text-white">News</Link></li>
+              <li><Link to="/faq" className="hover:text-white">FAQ</Link></li>
+              <li><Link to="/privacy" className="hover:text-white">Privacy</Link></li>
+              <li><Link to="/terms" className="hover:text-white">Terms</Link></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="border-t border-gray-800 mt-8 pt-8 text-sm text-gray-400 text-center">
+          <p>© {new Date().getFullYear()} ZionTechGroup. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default SiteFooter;

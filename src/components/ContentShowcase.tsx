@@ -1,1 +1,53 @@
-import React from "react"; const ContentShowcase: React.FC = () => {const contentItems = [{titl e: "LatestAIInnovations"" description: "Discoverthenewest AItechnologiesand theirapplicationsin business"" category: "AITechnology"" readTime: "5minread" }{title: "MicroSaaSTrends 2024"" description: "Explorethelatest trendsinmicro SaaSdevelopmentand deployment"" category: "SaaSSolutions"" readTime: "7minread" }{title: "CloudMigrationGuide"" description: "Comprehensiveguideto successfulcloudmigration strategies"" category: "ITServices"" <h2className="tex, t-3xlfont-boldmb-8text-center" >FeaturedContent</h2>"; <divclassName = "gridgrid-col, s-1md: grid-cols-3gap-6" >"; {contentItem, s.ma, p ( (item, index) => (<divkey = {index }className="bg-white, p-6, rounded-lgshadow-lgborderhover: shado, w-xltransition-shado, w">"; <divclassName = "mb-4" >"; <spanclassName = "bg-blu, e-100, text-blu, e-800, text-smpx-3py-1rounded-full" >"; {ite, m.category }</span> </div> <h3className = "tex, t-xlfont-boldm, b-3" > {item.title }</h3>"; <pclassName = "text-gray-600mb-4" > {ite, m.description }</p>"; <divclassName = "flexjustify-betweenitems-center" >"; <spanclassName = "text-smtext-gray-500" > {ite, m.readTim, e }</spa, n>"; <ahref = "/blog" className="tex, t-blu, e-600, hover: tex, t-blue-800font-semibold">"; ReadMore → </a> </div> </div>) ) }</div> </div>) ; }; export default ContentShowcase;"
+import React from "react";
+
+const ContentShowcase: React.FC = () => {
+  const contentItems = [
+    {
+      title: "Latest AI Innovations",
+      description: "Discover the newest AI technologies and their applications in business",
+      category: "AI Technology",
+      readTime: "5 min read"
+    },
+    {
+      title: "Micro SaaS Trends 2024",
+      description: "Explore the latest trends in micro SaaS development and deployment",
+      category: "SaaS Solutions",
+      readTime: "7 min read"
+    },
+    {
+      title: "Cloud Migration Guide",
+      description: "Comprehensive guide to successful cloud migration strategies",
+      category: "IT Services",
+      readTime: "6 min read"
+    }
+  ];
+
+  return (
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold mb-8 text-center">Featured Content</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {contentItems.map((item, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg border hover:shadow-xl transition-shadow">
+              <div className="mb-4">
+                <span className="bg-blue-100 text-blue-800 text-sm px-3 py-1 rounded-full">
+                  {item.category}
+                </span>
+              </div>
+              <h3 className="text-xl font-bold mb-3">{item.title}</h3>
+              <p className="text-gray-600 mb-4">{item.description}</p>
+              <div className="flex justify-between items-center">
+                <span className="text-sm text-gray-500">{item.readTime}</span>
+                <a href="/blog" className="text-blue-600 hover:text-blue-800 font-semibold">
+                  Read More →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ContentShowcase;
