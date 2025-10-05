@@ -1,6 +1,8 @@
 class AccessibilityEnhancer {
   private static instance: AccessibilityEnhancer;
-  private isInitialized = false;
+  private isInitialized: boolean = false;
+
+  private constructor() {}
 
   static getInstance(): AccessibilityEnhancer {
     if (!AccessibilityEnhancer.instance) {

@@ -1,6 +1,8 @@
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
-  private isInitialized = false;
+  private isInitialized: boolean = false;
+
+  private constructor() {}
 
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
@@ -20,7 +22,10 @@ class SecurityEnhancer {
     this.setupCSP();
     this.setupHTTPSRedirect();
     this.setupXSSProtection();
+    this.setupSecurityHeaders();
+    
     this.isInitialized = true;
+    console.log('Security enhancer initialized');
   }
 
   private setupCSP(): void {

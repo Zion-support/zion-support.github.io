@@ -1,18 +1,21 @@
-import React, { Suspense } from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Contact from './pages/Contact';
-import Blog from './pages/Blog';
-import Team from './pages/Team';
-import Privacy from './pages/Privacy';
-import Terms from './pages/Terms';
+import Loading from './components/Loading';
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Blog = lazy(() => import('./pages/Blog'));
+const Contact = lazy(() => import('./pages/Contact'));
+const Privacy = lazy(() => import('./pages/Privacy'));
+const Terms = lazy(() => import('./pages/Terms'));
+const Team = lazy(() => import('./pages/Team'));
 
 const AppRouter: React.FC = () => {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading />}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
@@ -22,6 +25,7 @@ const AppRouter: React.FC = () => {
           <Route path="/team" element={<Team />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/team" element={<Team />} />
         </Routes>
       </Suspense>
     </Router>

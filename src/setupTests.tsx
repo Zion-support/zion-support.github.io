@@ -79,7 +79,9 @@ jest.mock('react-helmet-async', () => ({
 // Mock lucide-react icons
 const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
 
+// Mock lucide-react icons
 jest.mock('lucide-react', () => {
+  const mockIcon = (name: string) => <span data-testid={`icon-${name}`}>{name}</span>;
   return {
     Menu: () => mockIcon('menu-icon'),
     X: () => mockIcon('x-icon'),
@@ -297,6 +299,25 @@ jest.mock('lucide-react', () => {
     Hourglass: () => mockIcon('hourglass-icon'),
   };
 });
+
+// Mock IntersectionObserver
+global.IntersectionObserver = class IntersectionObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock ResizeObserver
+global.ResizeObserver = class ResizeObserver {
+  constructor() {}
+  disconnect() {}
+  observe() {}
+  unobserve() {}
+};
+
+// Mock fetch
+global.fetch = jest.fn();
 
 // Mock console methods to reduce noise in tests
 const originalConsoleError = console.error;
