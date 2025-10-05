@@ -1,10 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight,Brain,CheckCircle,Target,TrendingUp,Zap } from "lucide-react";
-
-import ArrowRight from 'lucide-react/dist/esm/icons/arrow-right';
-import Atom from 'lucide-react/dist/esm/icons/atom';
-import Zap from 'lucide-react/dist/esm/icons/zap';
-import CheckCircle from 'lucide-react/dist/esm/icons/check-circle';
+import { Brain, CheckCircle, Zap } from 'lucide-react';
 
 export default function QuantumAIBreakthrough2026() {
   return (

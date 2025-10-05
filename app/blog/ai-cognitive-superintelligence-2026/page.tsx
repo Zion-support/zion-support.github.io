@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowRight,Brain,Clock,Target,TrendingUp,Zap } from "lucide-react";
+import { Brain, Clock, Target, TrendingUp, Zap } from "lucide-react";
 
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import Brain from 'lucide-react/dist/esm/icons/brain';
