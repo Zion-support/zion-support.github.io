@@ -1,7 +1,11 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-const October2025FraudDetectionBanner = () => {
+import { Shield, AlertTriangle, CheckCircle, TrendingUp, Network, Eye, Lock, Zap, ArrowRight } from 'lucide-react';
+
+const October2025FraudDetectionBanner: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden" > {/* Animated background effects */}
+    <div className="relative bg-gradient-to-br from-red-900/20 via-purple-900/20 to-blue-900/20 border-y border-red-500/30 overflow-hidden">
+      {/* Animated background effects */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
@@ -83,8 +87,6 @@ const October2025FraudDetectionBanner = () => {
             </div>
             <div className="flex items-start gap-4">
               <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 border border-blue-500/30 rounded-lg flex items-center justify-center">
-                <Network className="w-6 h-6 text-blue-400" />
-              </div>
                 <Network className="w-6 h-6 text-blue-400" />
               </div>
               <div>
