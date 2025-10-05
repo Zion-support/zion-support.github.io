@@ -216,17 +216,26 @@ export class EnhancedAccessibility {
     });
   }
 
-  public getFocusableElementsCount(): number {
+  private getFocusableElements(): HTMLElement[] {
     const focusableSelectors = [
+      'a[href]',
       'button:not([disabled])',
       'input:not([disabled])',
       'select:not([disabled])',
       'textarea:not([disabled])',
-      'a[href]',
       '[tabindex]:not([tabindex="-1"])',
-    ].join(', ');
+      'area[href]',
+      'iframe',
+      'object',
+      'embed',
+      '[contenteditable="true"]'
+    ];
+    
+    return Array.from(document.querySelectorAll(focusableSelectors.join(', '))) as HTMLElement[];
+  }
 
-    return document.querySelectorAll(focusableSelectors).length;
+  public getFocusableElementsCount(): number {
+    return this.getFocusableElements().length;
   }
 
   private checkColorContrast(): void {
