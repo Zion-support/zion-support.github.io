@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { Target } from 'lucide-react';
 
 export const metadata = {
   title: 'Enterprise Vector Database Optimization — October 2025',

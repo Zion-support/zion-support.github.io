@@ -17,25 +17,26 @@ const LatestInsights: React.FC = () => {
             <p className="text-zion-slate-light">Research, guides, and playbooks from our team.</p>
           </div>
             <Link
-            to="/insights"
-            className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
-          >
-            View all
-             />
-          </Link>
+              to="/insights"
+              className="hidden sm:inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
+            >
+              View all
+            </Link>
         </div>
 
         <div className="grid gap-6 md:grid-cols-3">
           {latestInsights.slice(0, 3).map((item) => (
             <div
-              key={item.id}
+key={item.id}
               className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zion-cyan/20 text-zion-cyan text-xs font-medium">
                   <span>{item.category}</span>
                   {isNew(item.date) && (
-                    
+                    <span className="inline-flex items-center gap-1 text-[10px] uppercase tracking-wide px-2 py-0.5 rounded-full bg-green-400/20 text-green-200 border border-green-300/30">
+                      New
+                    </span>
                   )}
                 </div>
                 <div className="flex items-center gap-2">
@@ -56,7 +57,7 @@ const LatestInsights: React.FC = () => {
                 className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
               >
                 Read more
-                 />
+
               </Link>
             </div>
           ))}
@@ -68,7 +69,7 @@ const LatestInsights: React.FC = () => {
             className="inline-flex items-center gap-2 text-zion-cyan hover:text-white transition-colors"
           >
             View all
-             />
+
           </Link>
         </div>
       </div>

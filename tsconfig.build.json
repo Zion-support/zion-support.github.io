@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noEmit": true,
+    "strict": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false
+  },
+  "exclude": [
+    "src/**/*",
+    "blog",
+    "components",
+    "app/blog/**/*",
+    "app/case-studies/**/*",
+    "app/components/**/*",
+    "app/guides/**/*",
+    "app/services/**/*",
+    "app/enterprise/**/*",
+    "app/services-advertising/**/*",
+    "app/page-optimized.tsx"
+  ]
+}

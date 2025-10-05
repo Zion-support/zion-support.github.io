@@ -5,25 +5,25 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
   const advertisingFeatures = [
     {
       icon: "🚀",
-      title: "Revolutionary AI Technologies",
+      title: "Revolutionary AI Technologies",",
       description: "Meta-cognitive AI, quantum-neural networks, and autonomous operations",
       highlight: "1000x Performance"
     },
-    {
+    {",
       icon: "💰",
-      title: "Proven Cost Savings",
+      title: "Proven Cost Savings",",
       description: "Fortune 500 case studies showing $500M+ in annual savings",
       highlight: "$500M+ Savings"
     },
-    {
+    {",
       icon: "🛡️",
-      title: "Military-Grade Security",
+      title: "Military-Grade Security",",
       description: "Zero-trust architecture with 99.99% threat detection",
       highlight: "99.99% Security"
     },
-    {
+    {",
       icon: "🤖",
-      title: "Autonomous Operations",
+      title: "Autonomous Operations",",
       description: "98% automation rates with self-healing systems",
       highlight: "98% Automation"
     }
@@ -53,14 +53,14 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
             >
-               />
+
             </motion.div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 backdrop-blur-sm rounded-full border border-purple-500/30">
-               />
+
               <span className="text-sm font-bold text-white">ULTIMATE CONTENT ADVERTISING</span>
             </div>
             <div className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-yellow-400/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-yellow-400/30">
-               />
+
               <span className="text-sm font-bold text-yellow-300">LIMITED TIME ACCESS</span>
             </div>
           </div>
@@ -80,7 +80,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
           {/* Urgency Banner */}
           <div className="inline-block px-8 py-4 bg-gradient-to-r from-red-500/20 to-orange-500/20 backdrop-blur-sm rounded-full border border-red-500/30 mb-12">
             <div className="flex items-center gap-3">
-               />
+
               <span className="text-lg font-bold text-white">LIMITED TIME: Exclusive Early Access to 2026 Content</span>
             </div>
           </div>
@@ -196,15 +196,15 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
               {/* Benefits List */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div className="flex items-center gap-3 text-green-400">
-                   />
+
                   <span className="text-lg font-semibold">Exclusive Early Access</span>
                 </div>
                 <div className="flex items-center gap-3 text-blue-400">
-                   />
+
                   <span className="text-lg font-semibold">Expert Consultations</span>
                 </div>
                 <div className="flex items-center gap-3 text-purple-400">
-                   />
+
                   <span className="text-lg font-semibold">Fortune 500 Case Studies</span>
                 </div>
               </div>
@@ -214,7 +214,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
                   href="/contact"
                   className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-400 hover:to-blue-500 text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 shadow-xl hover:shadow-purple-500/50 flex items-center justify-center gap-3 text-lg"
                 >
-                   />
+
                   <span>Get Started Today</span>
                 </a>
                 <a
@@ -222,7 +222,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
                   className="border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-bold py-6 px-12 rounded-xl transition-all duration-300 flex items-center justify-center gap-3 text-lg"
                 >
                   <span>Explore Content Library</span>
-                   />
+
                 </a>
               </div>
             </div>

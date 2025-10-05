@@ -1,4 +1,8 @@
+import { FileText } from 'lucide-react';
 import { Link } from "react-router-dom";
+
+
+;
 
 const October2025DocumentAutomationBanner = () => {
   return (
@@ -37,22 +41,21 @@ const October2025DocumentAutomationBanner = () => {
         {/* Key Metrics Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover:border-indigo-400/60 transition-all hover:scale-105">
-             />
+
             <div className="text-3xl font-black text-white mb-1">94%</div>
             <div className="text-sm text-indigo-200">Faster Processing</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-purple-400/30 hover:border-purple-400/60 transition-all hover:scale-105">
-             />
             <div className="text-3xl font-black text-white mb-1">99.2%</div>
-            
+            <div className="text-sm text-purple-200">Accuracy Rate</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-pink-400/30 hover:border-pink-400/60 transition-all hover:scale-105">
-             />
+
             <div className="text-3xl font-black text-white mb-1">$47M</div>
             <div className="text-sm text-pink-200">Annual Savings</div>
           </div>
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-center border border-indigo-400/30 hover:border-indigo-400/60 transition-all hover:scale-105">
-             />
+
             <div className="text-3xl font-black text-white mb-1">340%</div>
             <div className="text-sm text-indigo-200">ROI Year 1</div>
           </div>
@@ -80,7 +83,7 @@ const October2025DocumentAutomationBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-purple-500 hover:from-indigo-600 hover:to-purple-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Read Complete Guide
-                 />
+
               </Link>
             </div>
 
@@ -103,7 +106,7 @@ const October2025DocumentAutomationBanner = () => {
                 className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold rounded-lg transition-all shadow-lg hover:shadow-xl"
               >
                 Read Success Story
-                 />
+
               </Link>
             </div>
           </div>
@@ -116,42 +119,42 @@ const October2025DocumentAutomationBanner = () => {
           </h3>
           <div className="grid md:grid-cols-3 gap-4 text-indigo-100">
             <div className="flex items-start">
-               />
+
               <div>
                 <div className="font-bold text-white">Advanced OCR & Extraction</div>
                 <div className="text-sm">99.2% accuracy across PDFs, scans, handwriting, tables</div>
               </div>
             </div>
             <div className="flex items-start">
-               />
+
               <div>
                 <div className="font-bold text-white">Intelligent Classification</div>
                 <div className="text-sm">98.7% accuracy in automatic document type detection</div>
               </div>
             </div>
             <div className="flex items-start">
-               />
+
               <div>
                 <div className="font-bold text-white">AI-Powered Data Extraction</div>
                 <div className="text-sm">Contextual NLP understanding with validation rules</div>
               </div>
             </div>
             <div className="flex items-start">
-               />
+
               <div>
                 <div className="font-bold text-white">Automated Workflows</div>
                 <div className="text-sm">87% straight-through processing, zero intervention</div>
               </div>
             </div>
             <div className="flex items-start">
-               />
+
               <div>
                 <div className="font-bold text-white">Continuous Learning</div>
                 <div className="text-sm">Models self-improving from user feedback</div>
               </div>
             </div>
             <div className="flex items-start">
-               />
+
               <div>
                 <div className="font-bold text-white">Enterprise Integration</div>
                 <div className="text-sm">Seamless connection to ERP, CRM, document systems</div>
@@ -171,19 +174,19 @@ const October2025DocumentAutomationBanner = () => {
               <div className="text-indigo-200">Loan apps, KYC docs → 92% faster, $23M savings</div>
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">
-              
+              <div className="font-bold text-white mb-2">Insurance</div>
               <div className="text-purple-200">Claims processing → 89% STP, 7-day to 2-hour cycle</div>
             </div>
             <div className="bg-pink-800/30 rounded-lg p-4 border border-pink-400/20">
-              
+              <div className="font-bold text-white mb-2">Healthcare</div>
               <div className="text-pink-200">Medical records → 94% faster, 99.8% HIPAA compliance</div>
             </div>
             <div className="bg-indigo-800/30 rounded-lg p-4 border border-indigo-400/20">
-              
+              <div className="font-bold text-white mb-2">Legal</div>
               <div className="text-indigo-200">Contract review → 87% faster, $18M paralegal savings</div>
             </div>
             <div className="bg-purple-800/30 rounded-lg p-4 border border-purple-400/20">
-              
+              <div className="font-bold text-white mb-2">Logistics</div>
               <div className="text-purple-200">Shipping docs → 91% automation, 6hr to 15min</div>
             </div>
             <div className="bg-pink-800/30 rounded-lg p-4 border border-pink-400/20">
@@ -233,14 +236,14 @@ const October2025DocumentAutomationBanner = () => {
               className="inline-flex items-center justify-center px-8 py-4 bg-white text-indigo-600 font-bold rounded-lg hover:bg-indigo-50 transition-all shadow-xl hover:shadow-2xl"
             >
               Schedule Assessment
-               />
+
             </Link>
             <Link
               to="/blog"
               className="inline-flex items-center justify-center px-8 py-4 bg-indigo-800 text-white font-bold rounded-lg hover:bg-indigo-900 transition-all shadow-xl"
             >
               Explore All Solutions
-               />
+
             </Link>
           </div>
         </div>

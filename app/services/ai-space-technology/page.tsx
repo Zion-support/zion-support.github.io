@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+
+import { Satellite } from 'lucide-react';
 
 export const metadata = {
   title: 'AI Space Technology Services - Autonomous Space Operations',

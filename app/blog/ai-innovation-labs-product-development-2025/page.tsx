@@ -1,4 +1,5 @@
-import React from 'react';
+
+import { Brain, Share, User } from 'lucide-react';
 
 export const metadata = {
 	title: 'AI Innovation Labs: Product Development Revolution 2025 | Zion Tech Group',

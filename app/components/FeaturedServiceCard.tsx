@@ -1,5 +1,4 @@
-import React from 'react';
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 interface FeaturedServiceCardProps {
   title: string;
@@ -19,7 +18,7 @@ export default function FeaturedServiceCard({
   popular = false 
 }: FeaturedServiceCardProps) {
   return (
-    <div `}>
+    <div className="relative bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-8 border border-gray-100">
       {popular && (
         <div className="absolute top-4 right-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
           POPULAR
@@ -37,9 +36,9 @@ export default function FeaturedServiceCard({
       </ul>
       <div className="flex justify-between items-center">
         <div className="text-blue-600 font-bold">{price}</div>
-        <Link href={href} className="text-blue-600 font-semibold hover:text-blue-700">
+        <ArrowRight href={href} className="text-blue-600 font-semibold hover:text-blue-700">
           Learn More →
-        </Link>
+        </ArrowRight>
       </div>
     </div>
   );

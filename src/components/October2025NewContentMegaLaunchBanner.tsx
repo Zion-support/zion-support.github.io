@@ -21,8 +21,7 @@ const October2025NewContentMegaLaunchBanner: React.FC = () => {
         {/* Main heading */}
         <h2 className="text-5xl md:text-6xl font-bold text-center mb-6 leading-tight">
           🌟 Breakthrough AI Content
-          <br />
-          <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+          <br /> <span className="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
             LIVE NOW!
           </span>
         </h2>

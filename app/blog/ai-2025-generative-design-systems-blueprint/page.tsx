@@ -1,9 +1,9 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import Calendar from 'lucide-react';
-import User from 'lucide-react';
-import Clock from 'lucide-react';
-import ArrowLeft from 'lucide-react';
+
+import Calendar from 'lucide-react/dist/esm/icons/calendar';
+import User from 'lucide-react/dist/esm/icons/user';
+import Clock from 'lucide-react/dist/esm/icons/clock';
+import ArrowLeft from 'lucide-react/dist/esm/icons/arrow-left';
 
 export default function GenerativeDesignSystemsBlueprintPage() {
   return (
@@ -19,9 +19,9 @@ export default function GenerativeDesignSystemsBlueprintPage() {
               A comprehensive blueprint to architect, deploy, and govern enterprise-grade generative design systems.
             </p>
             <div className="flex flex-wrap justify-center items-center space-x-6 text-sm text-gray-200 mb-8">
-              <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /> September 30, 2025</div>
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /> Zion Tech Group</div>
-              <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /> 9 min read</div>
+              <div className="flex items-center"><Calendar /> September 30, 2025</div>
+              <div className="flex items-center"><User /> Zion Tech Group</div>
+              <div className="flex items-center"><Clock /> 9 min read</div>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function GenerativeDesignSystemsBlueprintPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Link to="/" className="inline-flex items-center text-pink-600 hover:text-pink-800 font-medium">
-          <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
+          <ArrowLeft /> Back to Home
         </Link>
       </div>
     </div>

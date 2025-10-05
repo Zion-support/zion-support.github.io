@@ -180,25 +180,25 @@ export default function BlogIndexPage() {
       <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
         {posts.map((post) => (
           <a key={post.href} href={post.href} className='group'>
-            <article `}>
-              <div `}>
+            <article className='bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300 h-full'>
+              <div className='text-sm text-gray-400 mb-3 flex items-center'>
                 {post.date}
                 {post.featured && <span className='ml-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-2 py-1 rounded-full text-xs font-bold'>FEATURED</span>}
               </div>
-              <h2 `}>
+              <h2 className='text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors'>
                 {post.title}
               </h2>
-              <p `}>
+              <p className='text-gray-300 mb-4 line-clamp-3'>
                 {post.description}
               </p>
               <div className='mt-4 flex gap-2 flex-wrap'>
                 {post.tags.map((tag) => (
-                  <span key={tag} `}>
+                  <span key={tag} className='bg-purple-500/20 text-purple-300 px-2 py-1 rounded-full text-xs'>
                     {tag}
                   </span>
                 ))}
               </div>
-              <div `}>
+              <div className='mt-4 text-purple-400 font-medium group-hover:text-purple-300 transition-colors'>
                 Read more →
               </div>
             </article>

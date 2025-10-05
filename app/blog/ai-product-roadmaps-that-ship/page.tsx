@@ -1,12 +1,12 @@
-import Link from 'next/link';
+import ArrowRight from 'next/link';
 
 export default function AIProductRoadmapsThatShipPage() {
 	return (
 		<div className='min-h-screen'>
 			<nav className='mb-6'>
-				<Link href='/blog' className='text-blue-600 hover:underline'>
+				<ArrowRight href='/blog' className='text-blue-600 hover:underline'>
 					← Back to Blog
-				</Link>
+				</ArrowRight>
 			</nav>
 			<article className='prose prose-lg max-w-none'>
 				<h1>AI Product Roadmaps That Actually Ship</h1>
@@ -31,7 +31,7 @@ export default function AIProductRoadmapsThatShipPage() {
 				</ul>
 				<p>
 					Want a roadmap tailored to your product?{' '}
-					<Link href='/contact' className='text-blue-600 hover:underline'>Talk to us</Link>.
+					<ArrowRight href='/contact' className='text-blue-600 hover:underline'>Talk to us</ArrowRight>.
 				</p>
 			</article>
 		</div>

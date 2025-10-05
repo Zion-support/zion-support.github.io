@@ -24,7 +24,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '25K+',
       badge: 'NEW',
       gradient: 'from-pink-500 to-red-500',
-      icon:  />,
+      icon: '🚀',
       link: '/blog/ai-2025-oct-03-governed-agent-rollbacks'
     },
     {
@@ -36,7 +36,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '19K+',
       badge: 'FEATURED',
       gradient: 'from-teal-500 to-cyan-500',
-      icon:  />,
+      icon: '🚀',
       link: '/blog/edge-2025-oct-02-consentless-personalization-blueprint'
     },
     {
@@ -48,7 +48,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '58K+',
       badge: 'NEW',
       gradient: 'from-blue-500 to-purple-500',
-      icon:  />,
+      icon: '🚀',
       link: '/blog/ai-2027-operational-trust-blueprint'
     },
     {
@@ -60,7 +60,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '41K+',
       badge: 'TRENDING',
       gradient: 'from-cyan-500 to-blue-500',
-      icon:  />,
+      icon: '🚀',
       link: '/blog/edge-2026-private-feature-flags'
     },
     {
@@ -72,16 +72,16 @@ const NewContentAdvertisingBanner: React.FC = () => {
       readers: '47K+',
       badge: 'FEATURED',
       gradient: 'from-green-500 to-emerald-500',
-      icon:  />,
+      icon: '🚀',
       link: '/blog/genai-quality-tiers-v2-2026'
     }
   ];
 
   const achievements = [
-    { value: '500K+', label: 'Monthly Readers', icon:  /> },
-    { value: '98%', label: 'Customer Satisfaction', icon:  /> },
-    { value: '200+', label: 'Expert Articles', icon:  /> },
-    { value: '50+', label: 'Industry Awards', icon:  /> }
+    { value: '500K+', label: 'Monthly Readers', icon: '🚀','
+    { value: '98%', label: 'Customer Satisfaction', icon: '🚀','
+    { value: '200+', label: 'Expert Articles', icon: '🚀',',
+    { value: '50+', label: 'Industry Awards', icon: '🚀''
   ];
 
   return (
@@ -97,11 +97,11 @@ const NewContentAdvertisingBanner: React.FC = () => {
         {/* Header Section */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-pink-500/20 border border-indigo-500/30 mb-8 animate-fade-in">
-             />
+
             <span className="text-indigo-400 font-bold text-sm tracking-wider uppercase">
               🚀 NEW CONTENT LAUNCH • Sept 30, 2025
             </span>
-             />
+
           </div>
 
           <h2 className="text-5xl md:text-6xl font-extrabold mb-6 bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-fade-in">
@@ -134,8 +134,10 @@ const NewContentAdvertisingBanner: React.FC = () => {
         {/* Featured Content Cards */}
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           {featuredContent.map((content, index) => (
-            <div 
-              key={content.id}
+
+            <div
+key={content.id}
+
               className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover:border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20"
               style={{ animationDelay: `${index * 200}ms` }}
             >
@@ -168,11 +170,11 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 {/* Meta Info */}
                 <div className="flex items-center justify-between text-sm text-gray-500 mb-6 pb-6 border-b border-white/10">
                   <span className="flex items-center gap-2">
-                     />
+
                     {content.readTime}
                   </span>
                   <span className="flex items-center gap-1">
-                     />
+
                     {content.rating}
                   </span>
                 </div>
@@ -180,7 +182,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                 {/* Reader Count */}
                 <div className="mb-6">
                   <div className="flex items-center gap-2 text-gray-400">
-                     />
+
                     <span className="text-sm">{content.readers} readers</span>
                   </div>
                 </div>
@@ -191,7 +193,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   className={`group/btn flex items-center justify-center gap-2 w-full bg-gradient-to-r ${content.gradient} hover:opacity-90 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 transform hover:-translate-y-1`}
                 >
                   <span>Read Now</span>
-                   />
+
                 </a>
               </div>
             </div>
@@ -202,7 +204,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
         <div className="bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-3xl p-8 md:p-12 border border-indigo-500/20 mb-16">
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 mb-6">
-               />
+
               <span className="text-yellow-400 font-bold text-sm tracking-wider uppercase">
                 LIMITED TIME OFFER
               </span>
@@ -227,7 +229,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   href="/subscribe"
                   className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2"
                 >
-                   />
+
                   <span>Get Premium Access</span>
                 </a>
                 <a
@@ -235,7 +237,7 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   className="border-2 border-indigo-500 text-indigo-400 hover:bg-indigo-500 hover:text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <span>Contact Sales</span>
-                   />
+
                 </a>
               </div>
             </div>
@@ -258,10 +260,10 @@ const NewContentAdvertisingBanner: React.FC = () => {
                   type="email"
                   placeholder="Enter your email"
                   className="flex-1 px-6 py-4 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:border-indigo-500 focus:bg-white/20 transition-all duration-300"
-                />
-                <button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
-                  
-                   />
+/>
+
+<button className="bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 hover:to-purple-500 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-lg hover:shadow-indigo-500/50 flex items-center justify-center gap-2">
+
                 </button>
               </div>
               <p className="text-xs text-gray-500 mt-4">

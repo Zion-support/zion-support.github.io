@@ -80,8 +80,10 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
           const BannerComponent = bannerComponents[bannerKey];
           return (
             <Suspense key={bannerKey} fallback={<LoadingFallback />}>
+
               <BannerComponent />
             </Suspense>
+
           );
         })}
       </div>
@@ -95,6 +97,7 @@ export const BannerRotationManager: React.FC<BannerRotationManagerProps> = ({
   return (
     <div className="relative">
       <Suspense fallback={<LoadingFallback />}>
+
         <CurrentBanner />
       </Suspense>
 

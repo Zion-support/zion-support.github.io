@@ -10,7 +10,6 @@ export default function EnhancedContactForm(): React.JSX.Element {
 			<input aria-label="Name" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} className="border p-2 rounded" />
 			<input aria-label="Email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} className="border p-2 rounded" />
 			<textarea aria-label="Message" placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)} className="border p-2 rounded" />
-			
 		</form>
 	);
 }

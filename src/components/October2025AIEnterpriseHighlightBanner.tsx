@@ -16,8 +16,7 @@ const October2025AIEnterpriseHighlightBanner: React.FC = () => {
 
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 leading-tight">
           Enterprise AI Transformation
-          <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
+          <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
             Implementation Guides
           </span>
         </h2>

@@ -3,7 +3,7 @@ import { performanceOptimizer } from '../../utils/performanceOptimizer';
 import {
   getErrorMetrics,
   isErrorRateTooHigh,
-} from '../../src/utils/errorHandling';
+} from '../../utils/errorHandling';
 
 interface DashboardData {
   performance: ReturnType<typeof performanceOptimizer.getPerformanceSummary>;
@@ -98,7 +98,11 @@ const PerformanceDashboard: React.FC = () => {
           <div className='flex items-center space-x-2'>
             <button
               onClick={() => setAutoRefresh(!autoRefresh)}
-              `}
+              className={`px-3 py-1 rounded text-sm font-medium ${
+                autoRefresh 
+                  ? 'bg-green-100 text-green-800' 
+                  : 'bg-gray-100 text-gray-800'
+              }`}
             >
               {autoRefresh ? 'Auto' : 'Manual'}
             </button>
@@ -124,7 +128,9 @@ const PerformanceDashboard: React.FC = () => {
         </div>
         <div className='flex items-center mt-2'>
           <div
-            `}
+            className={`w-2 h-2 rounded-full mr-2 ${
+              data.isHealthy ? 'bg-green-500' : 'bg-red-500'
+            }`}
           ></div>
           <span className='text-sm text-gray-600'>
             {data.isHealthy ? 'System Healthy' : 'Issues Detected'}

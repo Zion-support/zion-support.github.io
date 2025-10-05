@@ -23,84 +23,84 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
     {
       title: "AI Safety Budgets 2026",
       description: "Guardrails wired to KPIs, approvals, rollbacks",
-      icon: Shield,
+      icon: Shield,",
       link: "/blog/ai-safety-budgets-2026",
       category: "AI Strategy"
     },
-    {
+    {",
       title: "Edge Privacy for ML 2026",
       description: "On‑device filters and scoped identifiers",
-      icon: Cloud,
+      icon: Cloud,",
       link: "/blog/edge-privacy-ml-2026",
       category: "Edge"
     },
-    {
+    {",
       title: "Agent Evals in Prod 2026",
       description: "Online checks that predict outcomes",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/agent-evals-in-prod-2026",
       category: "GenAI"
     },
-    {
+    {",
       title: "Cost‑Aware Inference 2026",
       description: "Warm pools and quality tiers under SLAs",
-      icon: Zap,
+      icon: Zap,",
       link: "/blog/ai-cost-aware-inference-2026",
       category: "GenAI"
     },
-    {
+    {",
       title: "Platform Golden Paths 2026",
       description: "Paved roads that move KPIs",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/platform-golden-paths-kpis-2026",
       category: "Platform"
     },
-    {
+    {",
       title: "Quality‑Tiered GenAI Routing 2026",
       description: "Control cost with tiers, caches, and eval signals",
-      icon: Zap,
+      icon: Zap,",
       link: "/blog/genai-routing-under-budgets-2026",
       category: "GenAI"
     },
-    {
+    {",
       title: "On‑Device Agents 2026",
       description: "Offline‑capable tools, private caches, safe fallbacks",
-      icon: Cloud,
+      icon: Cloud,",
       link: "/blog/on-device-agents-offline-tools-2026",
       category: "Edge"
     },
-    {
+    {",
       title: "Zero‑Trust Observability 2026",
       description: "Signed traces and least‑privilege telemetry",
-      icon: Shield,
+      icon: Shield,",
       link: "/blog/zero-trust-observability-2026",
       category: "Security"
     },
-    {
+    {",
       title: "AI Incident Response Playbooks",
       description: "Contain incidents in under 60 seconds",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/ai-incident-response-playbooks-2025",
       category: "Security"
     },
-    {
+    {",
       title: "Agentic Workflows Blueprint 2026",
       description: "Compose multi‑tool agents with safe tools and policy tests in CI",
-      icon: TrendingUp,
+      icon: TrendingUp,",
       link: "/blog/agentic-workflows-blueprint-2026",
       category: "GenAI"
     },
-    {
+    {",
       title: "Edge LLM Caching",
       description: "Sub‑100ms prompts via tiered KV, signed configs, freshness windows",
-      icon: Zap,
+      icon: Zap,",
       link: "/blog/edge-llm-caching-blueprint-2025",
       category: "Architecture"
     },
-    {
+    {",
       title: "AI Operational Scorecards 2026",
       description: "Guardrails wired to KPIs with PR checks, canaries, and SLOs",
-      icon: Brain,
+      icon: Brain,",
       link: "/blog/ai-operational-scorecards-2026",
       category: "AI Strategy"
     }
@@ -121,9 +121,9 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
         <div className="flex items-center justify-between">
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-3">
-               />
+
               <span className="text-lg font-bold">🚀 NEW CONTENT ALERT</span>
-               />
+
             </div>
             
             <h3 className="text-xl font-bold mb-2">
@@ -146,8 +146,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                     className="bg-white/10 backdrop-blur-sm rounded-lg p-3 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                   >
                     <div className="flex items-center gap-2 mb-2">
-                      <Icon className="w-4 h-4 text-white/80" />
-                      <span className="text-xs font-medium text-white/80">{item.category}</span>
+                      <Icon className="w-4 h-4 text-white/80" <span className="text-xs font-medium text-white/80">{item.category}</span>
                     </div>
                     <h4 className="font-semibold text-white text-sm group-hover:text-yellow-300 transition-colors">
                       {item.title}
@@ -166,16 +165,16 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                 to="/blog"
                 className="bg-white text-purple-600 hover:bg-white/90 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                 />
+
                 Read All Articles
-                 />
+
               </Link>
               
               <Link
                 to="/case-studies"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                 />
+
                 View Case Studies
               </Link>
 
@@ -183,7 +182,7 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
                 to="/services"
                 className="border border-white/30 text-white hover:bg-white/10 px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-300 hover:scale-105 inline-flex items-center gap-2"
               >
-                 />
+
                 Explore Services
               </Link>
             </div>
@@ -207,12 +206,11 @@ const NewContentPromoBanner: React.FC<NewContentPromoBannerProps> = ({
 
           {/* Dismiss button */}
           <button
-            onClick={() => setIsDismissed(true)}
+onClick={() => setIsDismissed(true)}
             className="ml-4 p-2 hover:bg-white/10 rounded-full transition-colors"
-            aria-label="Dismiss banner"
+
           >
-            <X className="w-5 h-5" />
-          </button>
+            <X className="w-5 h-5"</button>
         </div>
       </div>
     </div>

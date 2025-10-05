@@ -1,10 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import ArrowRight from 'lucide-react';
-import Lock from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Zap from 'lucide-react';
+import ArrowRight from 'next/link';
+import { ArrowRight, Brain, TrendingUp, Zap } from 'lucide-react';
+
+
+
+import { ArrowRight, TrendingUp, Brain, Zap } from 'lucide-react';
 
 export default function NewContent2026PromotionalBanner() {
   return (
@@ -30,7 +29,7 @@ export default function NewContent2026PromotionalBanner() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Federated Learning Card */}
-          <Link 
+          <ArrowRight 
             href="/blog/ai-federated-learning-privacy-2026"
             className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
@@ -70,10 +69,10 @@ export default function NewContent2026PromotionalBanner() {
               Read Full Guide
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Reinforcement Learning Card */}
-          <Link 
+          <ArrowRight 
             href="/blog/ai-reinforcement-learning-robotics-2026"
             className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
@@ -113,10 +112,10 @@ export default function NewContent2026PromotionalBanner() {
               Read Full Guide
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
-          </Link>
+          </ArrowRight>
 
           {/* Retail Case Study Card */}
-          <Link 
+          <ArrowRight 
             href="/case-studies/ai-retail-personalization-transformation-2026"
             className="group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 hover:border-white/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl"
           >
@@ -156,19 +155,19 @@ export default function NewContent2026PromotionalBanner() {
               Read Case Study
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" />
             </div>
-          </Link>
+          </ArrowRight>
         </div>
 
         {/* CTA Section */}
         <div className="mt-12 text-center">
-          <Link
+          <ArrowRight
             href="/blog"
             className="inline-flex items-center bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:from-yellow-300 hover:to-orange-400 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl"
           >
             <Zap className="w-5 h-5 mr-2" />
             Explore All Latest Content
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          </ArrowRight>
         </div>
       </div>
     </section>

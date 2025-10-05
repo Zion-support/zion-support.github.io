@@ -10,7 +10,7 @@ export default function ContentPromotionBanner() {
     },
     {
       title: "North‑Star Engineering Metrics: Fewer KPIs, Better Outcomes",
-      category: "Leadership", 
+      category: "Leadership",
       readTime: "5 min read",
       isNew: true,
     },
@@ -33,7 +33,7 @@ export default function ContentPromotionBanner() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-2xl">
             <div className="flex items-center gap-2 mb-4">
-               />
+
               <span className="text-sm font-medium text-yellow-300 uppercase tracking-wide">
                 Fresh Content
               </span>
@@ -52,16 +52,16 @@ export default function ContentPromotionBanner() {
               to="/blog" 
               className="bg-white text-indigo-700 hover:bg-indigo-50 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
-               />
+
               Explore All Articles
-               />
+
             </Link>
             
             <Link 
               to="/case-studies" 
               className="border-2 border-white text-white hover:bg-white hover:text-indigo-700 px-8 py-4 rounded-lg font-semibold inline-flex items-center justify-center gap-2 transition-all duration-300 hover:scale-105"
             >
-               />
+
               View Case Studies
             </Link>
           </div>
@@ -88,7 +88,7 @@ export default function ContentPromotionBanner() {
                 <span className="text-sm text-white/70">
                   {item.readTime}
                 </span>
-                 />
+
               </div>
             </div>
           ))}

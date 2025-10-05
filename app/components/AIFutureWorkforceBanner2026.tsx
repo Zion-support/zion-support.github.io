@@ -1,9 +1,9 @@
-import React from 'react';
-import Link from 'next/link';
-import Users from 'lucide-react';
-import Brain from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import ArrowRight from 'lucide-react';
+import ArrowRight from 'next/link';
+import { ArrowRight, Brain, TrendingUp, Users } from 'lucide-react';
+
+
+
+import { ArrowRight, Users, TrendingUp, Brain } from 'lucide-react';
 
 export default function AIFutureWorkforceBanner2026() {
   return (
@@ -56,20 +56,20 @@ export default function AIFutureWorkforceBanner2026() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link
+              <ArrowRight
                 href="/blog/ai-future-workforce-2026"
                 className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors inline-flex items-center"
               >
                 <Users className="w-5 h-5 mr-2" />
                 Read Full Article
-              </Link>
-              <Link
+              </ArrowRight>
+              <ArrowRight
                 href="/services"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors inline-flex items-center"
               >
                 <TrendingUp className="w-5 h-5 mr-2" />
                 Transform Your Workforce
-              </Link>
+              </ArrowRight>
             </div>
           </div>
 
@@ -117,13 +117,13 @@ export default function AIFutureWorkforceBanner2026() {
               </div>
 
               <div className="mt-6 pt-6 border-t border-white/20">
-                <Link
+                <ArrowRight
                   href="/blog/ai-future-workforce-2026"
                   className="inline-flex items-center text-white hover:text-yellow-200 transition-colors font-semibold"
                 >
                   Learn More About Workforce Transformation
                   <ArrowRight className="w-4 h-4 ml-2" />
-                </Link>
+                </ArrowRight>
               </div>
             </div>
           </div>

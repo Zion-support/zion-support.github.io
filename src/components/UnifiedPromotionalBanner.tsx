@@ -81,8 +81,8 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
   const visibleItems = featuredItems.slice(0, showCount);
 
   return (
-    <div 
-      className={`
+    <div
+className={`
         bg-gradient-to-r ${themeClasses[theme]} 
         border rounded-xl 
         ${variantClasses[variant]} 
@@ -155,7 +155,7 @@ const UnifiedPromotionalBanner: React.FC<UnifiedPromotionalBannerProps> = ({
                       <div className="text-xs text-gray-400">{item.metrics}</div>
                     )}
                   </div>
-                   />
+
                 </div>
               </Link>
             ))}

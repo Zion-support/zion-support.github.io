@@ -5,9 +5,9 @@ const January2026RevolutionaryAIBanner = () => {
   return (
     <div className="bg-gradient-to-r from-violet-500/20 via-purple-500/20 to-fuchsia-500/20 border border-violet-400/30 rounded-2xl p-8 mb-12 animate-fade-in shadow-2xl">
       <div className="flex items-center justify-center gap-3 mb-6">
-         />
+
         <span className="text-xl font-bold text-violet-400">🚀 JANUARY 2026: REVOLUTIONARY AI BREAKTHROUGH</span>
-         />
+
       </div>
       
       <h2 className="text-3xl md:text-4xl font-extrabold mb-6 text-center bg-gradient-to-r from-violet-400 via-purple-400 to-fuchsia-400 bg-clip-text text-transparent">
@@ -31,15 +31,15 @@ const January2026RevolutionaryAIBanner = () => {
           <h3 className="text-xl font-bold text-white mb-3">Quantum Consciousness</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center">
-               />
+
               <span>99.99% decision accuracy</span>
             </li>
             <li className="flex items-center">
-               />
+
               <span>Real-time consciousness simulation</span>
             </li>
             <li className="flex items-center">
-               />
+
               <span>Self-evolving intelligence</span>
             </li>
           </ul>
@@ -50,15 +50,15 @@ const January2026RevolutionaryAIBanner = () => {
           <h3 className="text-xl font-bold text-white mb-3">Quantum Processing</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center">
-               />
+
               <span>10,000x faster than classical AI</span>
             </li>
             <li className="flex items-center">
-               />
+
               <span>Parallel universe processing</span>
             </li>
             <li className="flex items-center">
-               />
+
               <span>Zero-latency decision making</span>
             </li>
           </ul>
@@ -69,15 +69,15 @@ const January2026RevolutionaryAIBanner = () => {
           <h3 className="text-xl font-bold text-white mb-3">Enterprise Impact</h3>
           <ul className="space-y-2 text-sm text-gray-300">
             <li className="flex items-center">
-               />
+
               <span>$2.3B value created</span>
             </li>
             <li className="flex items-center">
-               />
+
               <span>95% operational efficiency gain</span>
             </li>
             <li className="flex items-center">
-               />
+
               <span>Fortune 500 proven</span>
             </li>
           </ul>
@@ -89,21 +89,21 @@ const January2026RevolutionaryAIBanner = () => {
           to="/blog/ai-2026-january-quantum-consciousness-breakthrough"
           className="bg-gradient-to-r from-violet-500 to-purple-600 hover:from-violet-400 hover:to-purple-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-violet-500/50 inline-flex items-center justify-center gap-2"
         >
-           />
+
           Read Quantum Consciousness Guide
         </Link>
         <Link
           to="/case-studies/quantum-consciousness-2-3-billion-success"
           className="bg-gradient-to-r from-purple-500 to-fuchsia-600 hover:from-purple-400 hover:to-fuchsia-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-lg hover:shadow-purple-500/50 inline-flex items-center justify-center gap-2"
         >
-           />
+
           View $2.3B Success Story
         </Link>
         <Link
           to="/services/quantum-consciousness-ai"
           className="border-2 border-violet-500 text-violet-400 hover:bg-violet-500 hover:text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 inline-flex items-center justify-center gap-2"
         >
-           />
+
           Get Quantum AI Services
         </Link>
       </div>
