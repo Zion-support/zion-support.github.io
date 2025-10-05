@@ -2,38 +2,16 @@ import React, { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import {CheckCircle,
-  Star,
   Zap,
-  Shield,
   TrendingUp,
   Brain,
   Server,
-  Globe,
   ArrowRight,
   Mail,
   Phone,
   MapPin,
-  ExternalLink,
-  DollarSign,
-  CreditCard,
-  Wallet,
-  Coins,
-  PiggyBank,
-  Calculator,
-  BarChart3,
-  Target,
-  Award,
-  Users,
-  Clock,
-  Calendar,
-  Check,
-  X,
-  Crown,
   Rocket,
-  Cpu,
-  Lock,
-  Heart,
-  Sparkles
+  Cpu
 } from 'lucide-react'
 import { INNOVATIVE_SERVICES_2025 } from '@/data/innovativeServices2025'
 import { SEO } from '@/components/SEO'
@@ -42,7 +20,7 @@ const ComprehensivePricingGuide2030: React.FC = (): JSX.Element => {
   const [selectedPricingModel, setSelectedPricingModel] = useState('all');
   const services = INNOVATIVE_SERVICES_2025;
   const categories = useMemo(() => {
-    const cats = services.reduce((acc: string[], service: any) => {
+    const cats = services.reduce((acc: string[], service: { category: string }) => {
       if (!acc.includes(service.category)) {
         acc.push(service.category);
       }

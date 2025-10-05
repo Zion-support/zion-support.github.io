@@ -25,7 +25,7 @@ const PerformanceDashboard: React.FC = () => {
         ? navigation.loadEventEnd - navigation.loadEventStart
         : 0;
 
-      const memory = (performance as any).memory;
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number } }).memory;
       const memoryUsage = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0;
 
       setMetrics(prev => ({
