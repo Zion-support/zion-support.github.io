@@ -1,20 +1,10 @@
 import Link from 'next/link';
 
-<<<<<<< HEAD
-
-import { ArrowRight, Brain, Zap, Star, TrendingUp } from 'lucide-react';
-
-;
-;
-;
-;
-;
-=======
-import ArrowRight from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Brain from 'lucide-react';
-import Zap from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ec39
+import {ArrowRight} from 'lucide-react';
+import {Brain} from 'lucide-react';
+import {Zap} from 'lucide-react';
+import {Star} from 'lucide-react';
+import {TrendingUp} from 'lucide-react';
 
 export default function NewContent2026RevolutionaryBanner() {
   return (
