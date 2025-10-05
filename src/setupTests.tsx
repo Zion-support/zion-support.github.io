@@ -74,6 +74,12 @@ global.PerformanceObserver = class PerformanceObserver {
   }
 } as unknown as typeof PerformanceObserver;
 
+// Mock react-helmet-async
+jest.mock('react-helmet-async', () => ({
+  HelmetProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  Helmet: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+}));
+
 // Mock lucide-react icons
 jest.mock('lucide-react', () => ({
   Menu: () => React.createElement('div', { 'data-testid': 'menu-icon' }),
