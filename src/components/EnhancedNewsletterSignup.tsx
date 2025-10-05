@@ -34,7 +34,6 @@ export default function EnhancedNewsletterSignup({ title = 'Stay Updated', subti
           onChange={(e) = > setEmail(e.target.value)}
           placeholder="Enter your email"
           className="flex-1 px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-
           required
         />
 
