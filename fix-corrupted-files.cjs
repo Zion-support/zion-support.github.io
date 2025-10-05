@@ -139,21 +139,6 @@ function removeDuplicateImports(content) {
   return cleanedLines.join('\n');
 }
 
-// Function to fix malformed JSX structure
-function fixMalformedJSX(content) {
-  // Fix common malformed patterns
-  content = content.replace(/\}\s*\)\s*;\s*const\s+/g, '});\nconst ');
-  content = content.replace(/\}\s*\)\s*;\s*export\s+/g, '});\nexport ');
-  content = content.replace(/\}\s*\)\s*;\s*<\/Helmet>/g, '});\n</Helmet>');
-  content = content.replace(/\}\s*\)\s*;\s*<div/g, '});\n<div');
-  content = content.replace(/\}\s*\)\s*;\s*<section/g, '});\n<section');
-  
-  // Fix missing closing tags
-  content = content.replace(/<div([^>]*)>\s*<section([^>]*)>\s*([^<]*)<\/section>\s*<\/div>\s*<\/>\s*\)\s*;\s*export/g, '<div$1>\n<section$2>\n$3\n</section>\n</div>\n</>\n);\nexport');
-  
-  return content;
-}
-
 // Function to fix a single file
 function fixFile(filePath) {
   try {
@@ -164,7 +149,6 @@ function fixFile(filePath) {
     content = fixCorruptedImports(content);
     content = fixCorruptedJSX(content);
     content = removeDuplicateImports(content);
-    content = fixMalformedJSX(content);
     
     // Only write if content changed
     if (content !== originalContent) {
@@ -196,7 +180,7 @@ function findCorruptedFiles(dir) {
       } else if (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.jsx') || item.endsWith('.js')) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('impo, r, t') || content.includes('import,') || content.includes('fr, o, m') || content.includes('from,') || content.includes('const,') || content.includes('interface,') || content.includes('class,')) {
+          if (content.includes('impo, r, t') || content.includes('import,') || content.includes('fr, o, m') || content.includes('from,')) {
             corruptedFiles.push(fullPath);
           }
         } catch (error) {
@@ -211,7 +195,7 @@ function findCorruptedFiles(dir) {
 }
 
 // Main execution
-console.log('Starting comprehensive corrupted files fix...');
+console.log('Starting corrupted files fix...');
 
 const srcDir = path.join(__dirname, 'src');
 const corruptedFiles = findCorruptedFiles(srcDir);
