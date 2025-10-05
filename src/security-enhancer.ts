@@ -1,12 +1,18 @@
 class SecurityEnhancer {
   private static instance: SecurityEnhancer;
 <<<<<<< HEAD
+<<<<<<< HEAD
   private isInitialized = false;
 =======
   private isInitialized: boolean = false;
 
   private constructor() {}
 >>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
+=======
+  private isInitialized: boolean = false;
+
+  private constructor() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca9d
 
   static getInstance(): SecurityEnhancer {
     if (!SecurityEnhancer.instance) {
@@ -19,6 +25,7 @@ class SecurityEnhancer {
     if (this.isInitialized) {
       return;
     }
+<<<<<<< HEAD
 
     this.setupCSP();
 <<<<<<< HEAD
@@ -31,6 +38,11 @@ class SecurityEnhancer {
     this.isInitialized = true;
     console.log('Security enhancer initialized');
 >>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
+=======
+    this.setupCSP();
+    this.isInitialized = true;
+    console.log('Security enhancer initialized');
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca9d
   }
 
   private setupCSP(): void {
@@ -40,6 +52,7 @@ class SecurityEnhancer {
     document.head.appendChild(meta);
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   private setupHTTPSRedirect(): void {
     if (location.protocol !== 'https:' && location.hostname !== 'localhost') {
@@ -62,6 +75,11 @@ class SecurityEnhancer {
     this.isInitialized = false;
     console.log('Security enhancer cleaned up');
 >>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
+=======
+  cleanup(): void {
+    this.isInitialized = false;
+    console.log('Security enhancer cleaned up');
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca9d
   }
 }
 

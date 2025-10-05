@@ -27,7 +27,10 @@ Object.defineProperty(window, 'performance', {
   },
 });
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca9d
 
 // Mock react-error-boundary
 jest.mock('react-error-boundary', () => ({
@@ -328,4 +331,7 @@ afterAll(() => {
   console.error = originalConsoleError;
   console.warn = originalConsoleWarn;
 });
+<<<<<<< HEAD
 >>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca9d

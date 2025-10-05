@@ -1,12 +1,18 @@
 class AccessibilityEnhancer {
   private static instance: AccessibilityEnhancer;
 <<<<<<< HEAD
+<<<<<<< HEAD
   private isInitialized = false;
 =======
   private isInitialized: boolean = false;
 
   private constructor() {}
 >>>>>>> 0c4a2002f1455a31be6ebb4d4edd54c74c65ff9d
+=======
+  private isInitialized: boolean = false;
+
+  private constructor() {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-ca9d
 
   static getInstance(): AccessibilityEnhancer {
     if (!AccessibilityEnhancer.instance) {
