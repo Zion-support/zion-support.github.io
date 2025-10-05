@@ -1,8 +1,6 @@
-import React from 'react';
-
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg';
-  color?: string;
+  color?: 'blue' | 'gray' | 'white';
   text?: string;
 }
 
@@ -11,13 +9,13 @@ export function LoadingSpinner({
   color = 'blue', 
   text = 'Loading...' 
 }: LoadingSpinnerProps) {
-  const sizeClasses = {
+  const sizeClasses: Record<string, string> = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
     lg: 'w-12 h-12'
   };
 
-  const colorClasses = {
+  const colorClasses: Record<string, string> = {
     blue: 'text-blue-600',
     gray: 'text-gray-600',
     white: 'text-white'

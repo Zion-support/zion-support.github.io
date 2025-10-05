@@ -27,6 +27,7 @@ const FeaturedServiceCard: React.FC = () => {
 
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -52,6 +53,17 @@ const FeaturedServiceCard: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 {service.description}
               </p>
+=======
+    <div className="py-16 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white p-8 rounded-xl shadow-lg border hover:shadow-xl transition-shadow">
+              <div className="text-5xl mb-4">{service.icon}</div>
+              <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+              <p className="text-gray-600 mb-6">{service.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-9427
               <ul className="space-y-2 mb-6">
                 {service.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-center text-gray-600">
@@ -60,8 +72,13 @@ const FeaturedServiceCard: React.FC = () => {
                   </li>
                 ))}
               </ul>
+<<<<<<< HEAD
               <a
                 href={service.link}
+=======
+              <a 
+                href={service.link} 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9427
                 className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-center block"
               >
                 Learn More
@@ -69,6 +86,7 @@ const FeaturedServiceCard: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
 =======
     <div className="py-12 px-4">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -94,6 +112,8 @@ const FeaturedServiceCard: React.FC = () => {
           </div>
         ))}
 >>>>>>> cursor/fix-errors-and-merge-to-main-2368
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-9427
       </div>
     </div>
   );
