@@ -26,7 +26,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         transition: top 0.3s;
       `;
 
-      skipLink.addEventListener('focus', () = > {
+      skipLink.addEventListener('focus', () => {
         skipLink.style.top = '6px';
       });
 
@@ -40,7 +40,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     // Add ARIA labels to interactive elements
     const enhanceInteractiveElements = () => {
       const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach(button = > {
+      buttons.forEach(button => {
         if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
           button.setAttribute('aria-label', 'Button');
         }
@@ -56,7 +56,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Add focus management
     const enhanceFocusManagement = () => {
-      document.addEventListener('keydown', e = > {
+      document.addEventListener('keydown', e => {
         if (e.key === 'Tab') {
           document.body.classList.add('keyboard-navigation');
         }

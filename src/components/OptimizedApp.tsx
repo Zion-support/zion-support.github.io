@@ -12,12 +12,7 @@ const LoadingSpinner: React.FC = () => (
 // Error fallback component
 const ErrorFallback: React.FC<{ error: Error;
   resetErrorBoundary: () => void;
- }> = ({ error, resetErrorBoundary }) => (=======
-const ErrorFallback: React.FC<{ error: Error;
-  resetErrorBoundary: () => void;
  }> = ({ error, resetErrorBoundary }) => (
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
   <div className='min-h-screen flex items-center justify-center bg-gray-50'>
     <div className='max-w-md mx-auto text-center p-6'>
       <div className='text-red-600 text-6xl mb-4'>⚠️</div>
@@ -51,14 +46,14 @@ const MainContent: React.FC = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() = > {
+    const timer = setTimeout(() => {
       setIsLoaded(true);
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
   if (!isLoaded) {
-    return <LoadingSpinner / > ;
+    return <LoadingSpinner />;
   }
 
   return (
@@ -136,7 +131,7 @@ const OptimizedApp: React.FC = () => {
   return (
     <ErrorBoundary
       FallbackComponent={ErrorFallback}
-      onError={(error, errorInfo) = > {
+      onError={(error, errorInfo) => {
         console.error('Application Error:', error, errorInfo);
         if (process.env.NODE_ENV === 'production') {
           // Send error to monitoring service in production
@@ -144,14 +139,9 @@ const OptimizedApp: React.FC = () => {
         }
       }}
     >
-<Suspense fallback={<LoadingSpinner />}>
-        <MainContent />
-      </Suspense>=======
       <Suspense fallback={<LoadingSpinner />}>
         <MainContent />
       </Suspense>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-3507
->>>>>>> origin/merge-pr-25212
     </ErrorBoundary>
   );
 };
