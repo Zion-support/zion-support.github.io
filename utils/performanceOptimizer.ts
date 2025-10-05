@@ -34,6 +34,13 @@ export class PerformanceOptimizer {
   }
 
   /**
+   * Start tracking a component (alias for startRender for compatibility)
+   */
+  startTracking(componentName: string): void {
+    this.startRender(componentName);
+  }
+
+  /**
    * End tracking a component render and record metrics
    */
   endRender(componentName: string): void {

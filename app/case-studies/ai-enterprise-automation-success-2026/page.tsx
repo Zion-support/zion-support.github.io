@@ -1,15 +1,16 @@
 import Link from 'next/link';
-
-import ArrowLeft from 'lucide-react';
-import Clock from 'lucide-react';
-import User from 'lucide-react';
-import TrendingUp from 'lucide-react';
-import Shield from 'lucide-react';
-import Zap from 'lucide-react';
-import CheckCircle from 'lucide-react';
-import Star from 'lucide-react';
-import DollarSign from 'lucide-react';
-import Target from 'lucide-react';
+import { 
+  ArrowLeft, 
+  Clock, 
+  User, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  DollarSign, 
+  Target 
+} from 'lucide-react';
 
 export const metadata = {
   title: 'AI Enterprise Automation Success: $2.3B Cost Savings & 99.97% Uptime | Zion Tech Group',
