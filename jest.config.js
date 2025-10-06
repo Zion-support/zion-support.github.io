@@ -1,6 +1,6 @@
 export default {
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/app/setupTests.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/src/setupTests.tsx'],
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   transform: {
     '^.+\\.(ts|tsx|js|jsx)$': [
