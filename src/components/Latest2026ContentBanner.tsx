@@ -28,20 +28,36 @@ const Latest2026ContentBanner: React.FC = () => {
             <div className='space-y-4'>
               {[
                 {
-                  icon: '📚'title: 'AI Implementation Guide 2026'description: 'Complete roadmap for enterprise AI adoption with practical examples and best practices.',
-                  readTime: '15 min read'category: 'AI Strategy'featured: true
+                  icon: '📚',
+                  title: 'AI Implementation Guide 2026',
+                  description: 'Complete roadmap for enterprise AI adoption with practical examples and best practices.',
+                  readTime: '15 min read',
+                  category: 'AI Strategy',
+                  featured: true
                 },
                 {
-                  icon: '🎯'title: 'ROI Optimization Strategies'description: 'Maximize returns on your AI investments with proven optimization techniques.',
-                  readTime: '12 min read'category: 'Business'featured: false
+                  icon: '🎯',
+                  title: 'ROI Optimization Strategies',
+                  description: 'Maximize returns on your AI investments with proven optimization techniques.',
+                  readTime: '12 min read',
+                  category: 'Business',
+                  featured: false
                 },
                 {
-                  icon: '🔧'title: 'Technical Deep Dive: Neural Networks'description: 'Advanced concepts for AI practitioners with hands-on examples and code.',
-                  readTime: '20 min read'category: 'Technical'featured: false
+                  icon: '🔧',
+                  title: 'Technical Deep Dive: Neural Networks',
+                  description: 'Advanced concepts for AI practitioners with hands-on examples and code.',
+                  readTime: '20 min read',
+                  category: 'Technical',
+                  featured: false
                 },
                 {
-                  icon: '📊'title: 'Industry Case Studies'description: 'Real-world AI success stories from leading companies across industries.',
-                  readTime: '10 min read'category: 'Case Studies'featured: false
+                  icon: '📊',
+                  title: 'Industry Case Studies',
+                  description: 'Real-world AI success stories from leading companies across industries.',
+                  readTime: '10 min read',
+                  category: 'Case Studies',
+                  featured: false
                 }
               ].map((content, index) => (
                 <div key={index} className='p-4 bg-white/5 rounded-xl border border-white/10 hover:border-emerald-500/50 transition-all duration-300'>
