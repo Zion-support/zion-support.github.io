@@ -4,7 +4,7 @@
  */
 
 import { useEffect, useCallback, useRef } from 'react';
-import performanceOptimizer from '../utils/performanceOptimizer';
+import { performanceOptimizer } from '../utils/performanceOptimizer';
 import analytics from '../utils/analytics';
 
 export interface PerformanceMetrics {
@@ -102,8 +102,8 @@ export const usePageLoadPerformance = () => {
             domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
             loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
             firstByte: navigation.responseStart - navigation.requestStart,
-            domInteractive: navigation.domInteractive - navigation.navigationStart,
-            totalLoadTime: navigation.loadEventEnd - navigation.navigationStart,
+            domInteractive: navigation.domInteractive - navigation.fetchStart,
+            totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
           };
 
           // Track each metric
@@ -150,6 +150,10 @@ export const useResourcePerformance = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  return {
+    // Return any necessary values or functions
+  };
 };
 
 /**
@@ -157,8 +161,8 @@ export const useResourcePerformance = () => {
  */
 export const useLongTaskMonitoring = () => {
   useEffect(() => {
-    const observer = performanceOptimizer.monitorLongTasks((entries) => {
-      entries.forEach((entry) => {
+    const observer = performanceOptimizer.monitorLongTasks((entries: any) => {
+      entries.forEach((entry: any) => {
         analytics.track('long_task', 'performance', 'detected', undefined, entry.duration);
       });
     });
