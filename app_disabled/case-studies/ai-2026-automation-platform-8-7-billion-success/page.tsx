@@ -393,7 +393,7 @@ export default function AI2026AutomationPlatform87BillionSuccess() {
             we can deliver similar results for your organization.
           </p>
           <div className="flex flex-wrap gap-4">
-            <ArrowRight href="/contact" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Start Your Automation Journey
             </Link>
             <Link
