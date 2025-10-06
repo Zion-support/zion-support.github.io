@@ -14,6 +14,7 @@ declare global {
     gtag?: (...args: unknown[]) => void;
   }
 }
+<<<<<<< HEAD
 =======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-3d1d
@@ -23,6 +24,8 @@ import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 =======
 import { onCLS, onFCP, onLCP, onTTFB, type Metric } from 'web-vitals';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 
 // Types
 interface PerformanceMetric {
@@ -181,10 +184,11 @@ export function measurePerformance(name: string, startTime: number): number {
  */
 export function markPerformance(name: string): void {
   if (typeof performance === 'undefined') return;
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   try {
     performance.mark(name);
   } catch (error) {
@@ -204,7 +208,10 @@ export function measureBetween(
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   try {
     performance.measure(name, startMark, endMark);
     const measure = performance.getEntriesByName(name)[0] as PerformanceEntry;
@@ -221,14 +228,20 @@ export function measureBetween(
 export function getNavigationTiming(): Record<string, number> | null {
   if (typeof performance === 'undefined' || !performance.timing) return null;
 <<<<<<< HEAD
+<<<<<<< HEAD
 const timing = performance.timing;
   const navigationStart = timing.navigationStart;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 
   const timing = performance.timing;
   const navigationStart = timing.navigationStart;
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   return {
     // DNS lookup
     dnsLookup: timing.domainLookupEnd - timing.domainLookupStart,
@@ -252,10 +265,11 @@ const timing = performance.timing;
  */
 export function getResourceTiming(): PerformanceResourceTiming[] {
   if (typeof performance === 'undefined') return [];
-<<<<<<< HEAD
-=======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   try {
     return performance.getEntriesByType('resource') as PerformanceResourceTiming[];
   } catch (error) {
@@ -284,8 +298,11 @@ export function getMemoryUsage(): Record<string, number> | null {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const memory = (performance as PerformanceWithMemory).memory!;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   const memory = (performance as any).memory;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return {
@@ -300,6 +317,7 @@ export function getMemoryUsage(): Record<string, number> | null {
  */
 export function generatePerformanceReport(): PerformanceReport | null {
   if (typeof window === 'undefined') return null;
+<<<<<<< HEAD
 
   const navigationTiming = getNavigationTiming();
   const metrics: PerformanceMetric[] = [];
@@ -307,6 +325,12 @@ export function generatePerformanceReport(): PerformanceReport | null {
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+
+  const navigationTiming = getNavigationTiming();
+  const metrics: PerformanceMetric[] = [];
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   // Add navigation timing metrics
   if (navigationTiming) {
     Object.entries(navigationTiming).forEach(([name, value]) => {
@@ -322,11 +346,15 @@ export function generatePerformanceReport(): PerformanceReport | null {
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   return {
     metrics,
     timestamp: new Date().toISOString(),
     url: window.location.href,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     userAgent: navigator.userAgent
@@ -345,10 +373,13 @@ export function generatePerformanceReport(): PerformanceReport | null {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+    userAgent: navigator.userAgent
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   };
 }
 /**
- * Get performance score based on metrics
+ * Monitor long tasks
  */
 export function getPerformanceScore(metrics: PerformanceMetric[]): number {
   if (metrics.length === 0) return 0;
@@ -373,7 +404,10 @@ export function monitorLongTasks(
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   try {
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
@@ -397,7 +431,10 @@ export function monitorLayoutShifts(
 <<<<<<< HEAD
 =======
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   try {
     const observer = new PerformanceObserver(list => {
       const entries = list.getEntries();
@@ -423,8 +460,11 @@ export function isSlowConnection(): boolean {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const connection = (navigator as NavigatorWithConnection).connection!;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   const connection = (navigator as any).connection;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   const slowTypes = ['slow-2g', '2g'];
@@ -446,13 +486,35 @@ export function getConnectionType(): string {
   }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const connection = (navigator as NavigatorWithConnection).connection!;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
   const connection = (navigator as any).connection;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-be22
   return connection.effectiveType || connection.type || 'unknown';
 }
 
+<<<<<<< HEAD
+=======
+/**
+ * Get performance score based on metrics
+ */
+export function getPerformanceScore(metrics: PerformanceMetric[]): number {
+  if (metrics.length === 0) return 0;
+  const scores = metrics.map(metric => {
+    switch (metric.rating) {
+      case 'good': return 100;
+      case 'needs-improvement': return 50;
+      case 'poor': return 0;
+      default: return 0;
+    }
+  });
+  return Math.round(scores.reduce((sum: number, score: number) => sum + score, 0) / scores.length);
+}
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
 export default {
   init: initPerformanceMonitoring,
   measure: measurePerformance,
@@ -467,6 +529,7 @@ export default {
   monitorLayoutShifts,
   isSlowConnection,
   getConnectionType,
+<<<<<<< HEAD
 <<<<<<< HEAD
   getPerformanceScore
 <<<<<<< HEAD
@@ -483,3 +546,7 @@ export default {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-4606
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2e3b
+=======
+  getPerformanceScore
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-7365
