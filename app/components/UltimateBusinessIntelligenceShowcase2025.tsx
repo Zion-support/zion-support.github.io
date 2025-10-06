@@ -1,174 +1,214 @@
-import React from 'react';
-import Link from 'next/link';
-import { Sparkles, TrendingUp, ArrowRight, Zap, Rocket, Star, BarChart3, Target, Users, Award } from 'lucide-react';
+'use client';
 
-const UltimateBusinessIntelligenceShowcase2025: React.FC = () => {
-  const showcaseItems = [
+import React, { useState } from 'react';
+import Link from 'next/link';
+
+const UltimateBusinessIntelligenceShowcase2025 = () => {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const content = [
     {
-      id: 1,
-      title: 'AI-Powered Predictive Analytics',
-      description: 'Transform raw data into actionable insights with 99.9% accuracy and real-time processing.',
-      icon: '📊',
+      id: 'ultimate-business-intelligence-revolution',
+      title: 'AI 2025: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,000% ROI',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-2025-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
-        accuracy: '99.9%',
-        speed: '10x faster',
-        roi: '300%'
+        roi: '30,000%',
+        savings: '$750B+',
+        accuracy: '99.99%',
+        speed: '5,000% faster'
       },
-      gradient: 'from-cyan-500 to-blue-600'
+      readingTime: '35 min read',
+      featured: true,
+      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Fortune 500', '30,000% ROI']
     },
     {
-      id: 2,
-      title: 'Autonomous Decision Making',
-      description: 'Self-optimizing systems that make intelligent decisions without human intervention.',
-      icon: '🤖',
+      id: 'fortune-500-business-intelligence-success',
+      title: 'Fortune 500 Ultimate Business Intelligence Success: $750B Annual Savings - 30,000% ROI Success Story',
+      description: 'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.',
+      url: '/case-studies/fortune-500-ultimate-business-intelligence-30000-roi-success-story',
+      type: 'Case Study',
+      category: 'case-study',
       metrics: {
-        automation: '95%',
-        efficiency: '400%',
-        cost: '60% reduction'
+        roi: '30,000%',
+        savings: '$750B',
+        company: '$15.2B',
+        timeline: '18 months'
       },
-      gradient: 'from-purple-500 to-fuchsia-600'
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['Fortune 500', 'Case Study', 'ROI', 'Success Story', 'Manufacturing']
     },
     {
-      id: 3,
-      title: 'Real-Time Intelligence Dashboard',
-      description: 'Live monitoring and analysis with instant insights across all business functions.',
-      icon: '📈',
+      id: 'business-intelligence-implementation-guide',
+      title: 'AI 2025 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,000% ROI',
+      description: 'Complete roadmap to 30,000% ROI through revolutionary AI-powered business intelligence transformation. Step-by-step implementation guide.',
+      url: '/resources/ai-2025-ultimate-business-intelligence-implementation-guide',
+      type: 'Implementation Guide',
+      category: 'guide',
       metrics: {
-        realtime: '100%',
-        uptime: '99.99%',
-        insights: '1000+ daily'
+        roi: '30,000%',
+        success: '99.8%',
+        timeline: '18 months',
+        efficiency: '500%'
       },
-      gradient: 'from-emerald-500 to-teal-600'
+      readingTime: '45 min read',
+      featured: true,
+      tags: ['Implementation', 'Guide', 'ROI', 'Roadmap', 'Transformation']
     }
   ];
 
+  const filteredContent = activeFilter === 'all' 
+    ? content 
+    : content.filter(item => item.category === activeFilter);
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-      {/* Animated Background Effects */}
+    <div className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 py-20">
+      {/* Animated background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-40 right-20 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute bottom-20 left-1/3 w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
+        {/* Header Section */}
         <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-cyan-400" />
-            <span className="text-cyan-400 font-bold text-xl">
+          <div className="flex items-center justify-center gap-2 mb-6">
+            <span className="text-2xl">🚀</span>
+            <span className="text-yellow-400 font-bold text-xl">
               ULTIMATE BUSINESS INTELLIGENCE SHOWCASE 2025
             </span>
-            <Sparkles className="w-6 h-6 text-cyan-400" />
+            <span className="text-2xl">⚡</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-6">
-            Revolutionary AI-Powered Business Intelligence
+            <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+              AI 2025: The Ultimate Business Intelligence Revolution
+            </span>
           </h2>
           
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Experience the future of enterprise intelligence with cutting-edge AI solutions that deliver unprecedented insights and competitive advantage.
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Discover the most comprehensive collection of AI-powered business intelligence resources. 
+            Transform your enterprise with proven strategies delivering 30,000% ROI.
           </p>
+
+          {/* Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {[
+              { key: 'all', label: 'All Content' },
+              { key: 'blog', label: 'Blog Posts' },
+              { key: 'case-study', label: 'Case Studies' },
+              { key: 'guide', label: 'Guides' }
+            ].map((filter) => (
+              <button
+                key={filter.key}
+                onClick={() => setActiveFilter(filter.key)}
+                className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  activeFilter === filter.key
+                    ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg'
+                    : 'bg-white/10 text-gray-300 hover:bg-white/20'
+                }`}
+              >
+                {filter.label}
+              </button>
+            ))}
+          </div>
         </div>
 
-        {/* Showcase Grid */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {showcaseItems.map((item, index) => (
-            <div 
-              key={item.id}
-              className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-white/10 transition-all duration-500 hover:scale-105"
-              style={{ animationDelay: `${index * 150}ms` }}
-            >
-              {/* Card glow effect */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500 rounded-2xl`}></div>
-              
-              <div className="relative z-10">
-                {/* Icon */}
-                <div className="text-5xl mb-4">{item.icon}</div>
+        {/* Content Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {filteredContent.map((item, index) => (
+            <Link key={item.id} href={item.url} className="group">
+              <div className="relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-500 hover:scale-105 h-full">
+                {/* Card glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-2xl"></div>
+                
+                <div className="relative z-10">
+                  {/* Type & Featured Badge */}
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm font-bold rounded-full">
+                      {item.type}
+                    </span>
+                    {item.featured && (
+                      <span className="px-3 py-1 bg-green-500 text-white text-sm font-bold rounded-full">
+                        FEATURED
+                      </span>
+                    )}
+                  </div>
 
-                {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-4 group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 group-hover:bg-clip-text group-hover:text-transparent transition-all duration-300">
-                  {item.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-300 transition-colors leading-tight">
+                    {item.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-gray-300 mb-6 leading-relaxed">
-                  {item.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {item.description}
+                  </p>
 
-                {/* Metrics */}
-                <div className="space-y-2 mb-6">
-                  {Object.entries(item.metrics).map(([key, value]) => (
-                    <div key={key} className="flex items-center justify-between">
-                      <span className="text-gray-400 text-sm capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</span>
-                      <span className="text-cyan-400 font-bold">{value}</span>
-                    </div>
-                  ))}
+                  {/* Metrics */}
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    {Object.entries(item.metrics).slice(0, 4).map(([key, value]) => (
+                      <div key={key} className="text-center">
+                        <div className="text-lg font-bold text-cyan-400">{value}</div>
+                        <div className="text-gray-400 text-xs capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {item.tags.slice(0, 3).map((tag) => (
+                      <span key={tag} className="px-2 py-1 bg-white/10 text-gray-300 text-xs rounded-full">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Meta Info */}
+                  <div className="flex items-center justify-between text-gray-400 text-sm">
+                    <span>⏱️ {item.readingTime}</span>
+                    <span className="group-hover:text-cyan-300 transition-colors">Read More →</span>
+                  </div>
                 </div>
-
-                {/* CTA Button */}
-                <Link
-                  href="/contact"
-                  className="group/btn flex items-center justify-center gap-3 w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:shadow-2xl text-white font-bold py-3 px-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Link>
               </div>
-
-              {/* Corner accent */}
-              <div className={`absolute top-0 right-0 w-32 h-32 bg-gradient-to-br ${item.gradient} opacity-10 rounded-bl-full`}></div>
-            </div>
-          ))}
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {[
-            { icon: BarChart3, value: '30,000%', label: 'Average ROI' },
-            { icon: Target, value: '99.9%', label: 'Accuracy Rate' },
-            { icon: Users, value: '500+', label: 'Enterprise Clients' },
-            { icon: Award, value: '100%', label: 'Success Rate' }
-          ].map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="flex items-center justify-center mb-4">
-                <stat.icon className="w-8 h-8 text-cyan-400" />
-              </div>
-              <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.value}</div>
-              <div className="text-gray-300">{stat.label}</div>
-            </div>
+            </Link>
           ))}
         </div>
 
         {/* Call-to-Action Section */}
-        <div className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-12">
+        <div className="text-center bg-white/5 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
           <h3 className="text-3xl font-bold text-white mb-6">
             Ready to Transform Your Business Intelligence?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Join 500+ enterprises achieving unprecedented results with AI-powered business intelligence. 
+          
+          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join 500+ enterprises achieving 30,000% ROI with AI-powered business intelligence. 
             Get expert guidance from Zion Tech Group's transformation specialists.
           </p>
+
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link
               href="/contact"
               className="group flex items-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl"
             >
-              <Sparkles className="w-5 h-5" />
               <span>Start Your Transformation</span>
             </Link>
             
             <Link
-              href="/enterprise"
-              className="group flex items-center gap-3 border-2 border-white/20 hover:border-white/40 text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1"
+              href="/blog"
+              className="group flex items-center gap-3 border-2 border-white/30 hover:border-white/60 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-300 hover:bg-white/10"
             >
-              <span>Explore Solutions</span>
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <span>Explore All Content</span>
+              <span className="group-hover:translate-x-1 transition-transform">→</span>
             </Link>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
