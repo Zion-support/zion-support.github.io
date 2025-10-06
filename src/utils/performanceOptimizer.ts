@@ -12,6 +12,18 @@ export interface WebVitalsMetrics {
   CLS?: number; // Cumulative Layout Shift
   TTFB?: number; // Time to First Byte
   INP?: number; // Interaction to Next Paint
+  loadTime?: number; // Page load time
+  interactiveTime?: number; // Time to interactive
+}
+
+/**
+ * Performance budget checker
+ */
+export interface PerformanceBudget {
+  maxBundleSize: number; // in KB
+  maxImageSize: number; // in KB
+  maxFirstLoad: number; // in ms
+  maxInteractive: number; // in ms
 }
 
 /**
@@ -54,9 +66,12 @@ export const lazyLoadImages = (): void => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
-        img.src = img.dataset['src'] || '';
-        img.removeAttribute('data-src');
-        imageObserver.unobserve(img);
+        const src = img.dataset['src'];
+        if (src) {
+          img.src = src;
+          img.removeAttribute('data-src');
+          imageObserver.unobserve(img);
+        }
       }
     });
   }, {
@@ -115,7 +130,9 @@ export const measurePageLoad = (): WebVitalsMetrics | null => {
   
   return {
     FCP: navigation?.responseStart - navigation?.fetchStart,
-    TTFB: perfData.responseStart - perfData.navigationStart
+    TTFB: perfData.responseStart - perfData.navigationStart,
+    loadTime: perfData.loadEventEnd - perfData.navigationStart,
+    interactiveTime: perfData.domInteractive - perfData.navigationStart
   };
 };
 
@@ -265,13 +282,6 @@ export const clearOldCaches = async (currentVersion: string): Promise<void> => {
 /**
  * Performance budget checker
  */
-export interface PerformanceBudget {
-  maxBundleSize: number; // in KB
-  maxImageSize: number; // in KB
-  maxFirstLoad: number; // in ms
-  maxInteractive: number; // in ms
-}
-
 export const checkPerformanceBudget = (budget: PerformanceBudget): {
   passed: boolean;
   violations: string[];
@@ -437,8 +447,6 @@ class PerformanceOptimizer {
   clearMetrics() {
     this.metrics.clear();
   }
-
-
   // Initialize all optimizations
   initialize(): void {
     this.measurePerformance('lazyLoadImages', () => this.lazyLoadImages());
@@ -449,3 +457,23 @@ class PerformanceOptimizer {
 
 // Export singleton instance
 export const performanceOptimizer = PerformanceOptimizer.getInstance();
+
+export default {
+  prefetchResources,
+  preconnectDomains,
+  lazyLoadImages,
+  debounce,
+  throttle,
+  measurePageLoad,
+  reportWebVitals,
+  shouldUseWebP,
+  getConnectionQuality,
+  shouldLoadHeavyAssets,
+  requestIdleCallback,
+  cancelIdleCallback,
+  preloadRoute,
+  monitorLongTasks,
+  cacheStaticAssets,
+  clearOldCaches,
+  checkPerformanceBudget
+};
