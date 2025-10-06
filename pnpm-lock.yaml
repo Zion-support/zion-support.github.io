@@ -171,12 +171,9 @@ importers:
       lighthouse:
         specifier: ^12.8.2
         version: 12.8.2
-<<<<<<< HEAD
       lightningcss:
         specifier: ^1.30.2
         version: 1.30.2
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-e42d
       lightningcss-linux-x64-gnu:
         specifier: ^1.30.2
         version: 1.30.2
